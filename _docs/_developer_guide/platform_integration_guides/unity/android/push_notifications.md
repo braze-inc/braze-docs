@@ -10,73 +10,13 @@ These instructions are for integrating push with [Firebase Cloud Messaging (FCM)
 
 For ADM integration instructions, see our [advanced use cases][61] documentation.
 
-In order to integrate Braze push notifications into your app, you need to:
-
-1. Enable Firebase
-2. Configure your Android Manifest
-3. Configure your braze.xml
-4. Set your API key on the Braze dashboard
-
 ## Step 1: Enable Firebase
 
-To get started, follow the instructions at [Add Firebase to Your Android Project][12].
-
-Next, add the Firebase Unity SDK to your app as described in the [Firebase Unity Setup Docs][11].
+To get started, follow the instructions at [Firebase Unity Setup Docs][11].
 
 Note that integrating the Firebase Unity SDK may cause your `AndroidManifest.xml` to be overriden. If that occurs, make sure to revert it to its original self.
 
-## Step 2: Configure your Android Manifest
-
-Once you have setup your Firebase project, it is time to configure your Android Manifest with required permissions for Braze push.
-
-1. Add the following permissions to your `AndroidManifest.xml`:
-
-```xml
-<uses-permission android:name="android.permission.INTERNET" />
-<uses-permission android:name="android.permission.WAKE_LOCK" />
-```
-
-## Step 3: Configure your braze.xml
-
-In order for a device to receive push notifications, it must register with the FCM server. The Braze SDK can handle the registration process for you.
-
-- To tell Braze to handle registration automatically, add the following configuration to your `braze.xml` file:
-
-```xml
-<!-- Whether or not Braze should handle registering the device to receive push notifications. Default is false. -->
-<bool name="com_appboy_firebase_cloud_messaging_registration_enabled">true</bool>
-```
-
-- Add the following configuration element to your `braze.xml` file and replace `REPLACE_WITH_YOUR_FCM_SENDER_ID` with your Firebase Sender ID:
-
-```xml
-<!-- Replace with your Firebase Sender ID -->
-<string name="com_appboy_firebase_cloud_messaging_sender_id">REPLACE_WITH_YOUR_FCM_SENDER_ID</string>
-```
-
-- **Recommended** To instruct Braze to handle deep links from push automatically, add the following configuration to your `braze.xml` file:
-
-```xml
-<!-- Whether to open push deep links from Braze automatically. -->
-<bool name="com_appboy_handle_push_deep_links_automatically">true</bool>
-```
-
-- **Recommended**: Specify the drawable resource that should be displayed in the push notification in your braze.xml file.
-
-```xml
-<!-- The drawable that should be displayed whenever a push notification is received. If no icon is given, the notification will use the application icon -->
-<drawable name="com_appboy_push_small_notification_icon">REPLACE_WITH_YOUR_ICON</drawable>
-```
-
-- **Optional**: Braze will broadcast Intents whenever a push notification is received or opened. If you need to perform custom logic upon push notifications open or receipt, you may create and register a custom broadcast receiver to listen to and respond to these intents. The names of the actions are:
-
-```
-REPLACE_WITH_YOUR_PACKAGE_NAME.intent.APPBOY_PUSH_RECEIVED
-REPLACE_WITH_YOUR_PACKAGE_NAME.intent.APPBOY_NOTIFICATION_OPENED
-REPLACE_WITH_YOUR_PACKAGE_NAME.intent.APPBOY_PUSH_DELETED
-```
-
-## Step 4: Set Your Firebase Credentials
+## Step 2: Set Your Firebase Credentials
 
 You need to input your Firebase Server Key and Sender ID into the Braze dashboard:
 
@@ -94,6 +34,88 @@ If you're not familiar with the location of your Firebase Server Key and Sender 
 
 3. Select Cloud Messaging under Settings and copy the Server Key and Sender ID:
 ![FirebaseServerKey][59]
+
+## Step 3: Implement Automatic Push Integration
+
+The Braze SDK can automatically handle push registration with the Firebase Cloud Messaging Servers in order to have devices receive push notifications.
+
+![AndroidPushSettings][62]
+
+- **"Automatic Firebase Cloud Messaging Registration Enabled"**
+
+Instructs the Braze SDK to automatically retrieve and send a FCM push token for a device. 
+
+- **"Firebase Cloud Messaging Sender ID"**
+
+The Sender ID from your Firebase console.
+
+- **"Handle Push Deeplinks Automatically"**
+
+Whether the SDK should handle opening deeplinks or the opening the app when push notifications are clicked.
+
+- **"Small Notification Icon Drawable"**
+
+The drawable that should be displayed as the small icon whenever a push notification is received. If no icon is given, the notification will use the application icon as the small icon.
+
+## Step 4: Set Push Listeners
+
+If you would like to pass push notification payloads to Unity or take additional steps when a user receives a push notification, Braze provides the option of setting push notification listeners.
+
+* On the **Settings** page (where your API keys are located), select your Android app.
+* Enter your Firebase Server Key in the **Firebase Cloud Messaging Server Key** field, under the Push Notification Settings section.
+* Enter your Firebase Sender ID in the **Firebase Cloud Messaging Sender ID** field, under the Push Notification Settings section.
+
+#### Push Received Listener
+
+The Push Received listener is fired when a user receives a push notification. To send the push payload to Unity, set the name of your Game Object and Push Received listener callback method under the "Set Push Received Listener".
+
+#### Push Opened Listener
+
+The Push Opened listener is fired when a user launches the app by clicking on a push notification. To send the push payload to Unity, set the name of your Game Object and Push Opened listener callback method under the "Set Push Opened Listener".
+
+#### Push Deleted Listener (Android Only)
+
+The Push Deleted listener is fired when a user swipes away or dismisses a push notification. To send the push payload to Unity, set the name of your Game Object and Push Deleted listener callback method under the "Set Push Deleted Listener".
+
+#### Push Listener Implementation Example
+
+The following example implements the `BrazeCallback` game object using a callback method name of `PushNotificationReceivedCallback`, `PushNotificationOpenedCallback`, and `PushNotificationDeletedCallback` respectively.
+
+![Game Object Linking][63]
+
+```csharp
+public class MainMenu : MonoBehaviour {
+  void PushNotificationReceivedCallback(string message) {
+#if UNITY_ANDROID
+    Debug.Log("PushNotificationReceivedCallback message: " + message);
+    PushNotification pushNotification = new PushNotification(message);
+    Debug.Log("Push Notification received: " + pushNotification);   
+#elif UNITY_IOS
+    ApplePushNotification pushNotification = new ApplePushNotification(message);
+    Debug.Log("Push received Notification event: " + pushNotification);   
+#endif  
+  }
+
+  void PushNotificationOpenedCallback(string message) {
+#if UNITY_ANDROID
+    Debug.Log("PushNotificationOpenedCallback message: " + message);
+    PushNotification pushNotification = new PushNotification(message);
+    Debug.Log("Push Notification opened: " + pushNotification);  
+#elif UNITY_IOS
+    ApplePushNotification pushNotification = new ApplePushNotification(message);
+    Debug.Log("Push opened Notification event: " + pushNotification);   
+#endif  
+  }
+
+  void PushNotificationDeletedCallback(string message) {
+#if UNITY_ANDROID
+    Debug.Log("PushNotificationDeletedCallback message: " + message);
+    PushNotification pushNotification = new PushNotification(message);
+    Debug.Log("Push Notification dismissed: " + pushNotification);  
+#endif
+  }
+}
+```
 
 ### Implementation Example
 
@@ -115,3 +137,5 @@ See Android's documentation on ["Deep Linking" to In-App Resources][26]
 [58]: https://console.firebase.google.com/
 [59]: {% image_buster /assets/img_archive/finding_firebase_server_key.png %} "FirebaseServerKey"
 [61]: {{site.baseurl}}/developer_guide/platform_integration_guides/unity/Advanced_Use_Cases/advanced_use_cases
+[62]: {% image_buster /assets/img/unity/android/unity_android_push_settings_config.png %} "Android Push Settings"
+[63]: {% image_buster /assets/img/unity/android/unity_android_full_push_listener.png %} "Android Full Listener Example"

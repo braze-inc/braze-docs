@@ -3,6 +3,8 @@ nav_title: Initial SDK Setup
 platform: Web
 page_order: 0
 
+page_type: reference
+description: "This article covers initial SDK setup for the Braze Web SDK."
 ---
 # Initial SDK Setup
 
@@ -58,7 +60,7 @@ Add the Braze Web SDK directly to your HTML by referencing our CDN-hosted script
 
 ## Step 2: Initialize Braze
 
-Once the Braze Web SDK is added to your website, initialize the library with the `API Key` and [SDK Endpoint URL]({{site.baseurl}}/user_guide/administrative/access_braze/sdk_endpoints) found in `Manage App Group > App Settings` within your Braze Dashboard.
+Once the Braze Web SDK is added to your website, initialize the library with the `API Key` and [SDK Endpoint URL]({{site.baseurl}}/user_guide/administrative/access_braze/sdk_endpoints) found in **Manage Settings** > **Settings** within your Braze Dashboard.
 
 **Note**: If you've configured your Braze initialization options in a Tag Manager, you can skip this step.
 

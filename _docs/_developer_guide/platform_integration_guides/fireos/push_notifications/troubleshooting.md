@@ -3,6 +3,9 @@ nav_title: Troubleshooting
 platform: FireOS
 page_order: 2
 
+page_type: solution
+description: "This article provides troubleshooting scenarios for possible issues you may experience with push notifications."
+channel: push
 ---
 ## Troubleshooting
 

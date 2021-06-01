@@ -1,7 +1,10 @@
 ---
 nav_title: Deliverability Pitfalls & Spam Traps
 page_order: 3
+
+page_type: reference
 description: "This reference article covers potential email deliverability pitfalls and spam traps."
+channel: email
 ---
 
 # Deliverability Pitfalls & Spam Traps

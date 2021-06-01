@@ -40,8 +40,8 @@ popular_topic_list:
     link: /docs/user_guide/administrative/access_braze/getting_your_account/
   - name: Create a Segment
     link: /docs/user_guide/engagement_tools/segments/creating_a_segment/
-  - name: News Feeds
-    link: /docs/user_guide/engagement_tools/news_feed/creating_a_news_feed_item/
+  - name: Content Cards
+    link: /docs/user_guide/message_building_by_channel/content_cards/
   - name: Email Templates
     link: /docs/user_guide/message_building_by_channel/email/creating_an_email_template/#creating-an-email-template
   - name: User Data Collection

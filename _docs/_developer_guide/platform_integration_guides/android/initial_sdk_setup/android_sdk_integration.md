@@ -2,6 +2,7 @@
 nav_title: Android SDK Integration
 page_order: 0
 platform: Android
+description: "This reference article covers how to integrate the Android SDK into your Android application."
 ---
 # Android SDK Integration
 
@@ -68,7 +69,7 @@ Note that as of December 2019, custom endpoints are no longer given out, if you 
 
 Now that the libraries have been integrated, you have to create an `braze.xml` file in your project's `res/values` folder. If you are on a [specific data cluster][66] or have a pre-existing custom endpoint, you need to specify the [endpoint][67] in your `braze.xml` file as well. The contents of that file should resemble the following code snippet:
 
->  Be sure to substitute your [App Identifier API Key]({{site.baseurl}}/api/api_key/#the-app-identifier-api-key) found within the Manage Settings page of the Braze dashboard for `YOUR_APP_IDENTIFIER_API_KEY`. To find out your specific cluster or endpoint, please ask your Customer Success Manager or [open a support ticket][68].
+>  Be sure to substitute your [App Identifier API Key]({{site.baseurl}}/api/api_key/#the-app-identifier-api-key) found within the  **Settings** page of the Braze dashboard for `YOUR_APP_IDENTIFIER_API_KEY`. To find out your specific cluster or endpoint, please ask your Customer Success Manager or [open a support ticket][68].
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>

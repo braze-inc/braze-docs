@@ -3,10 +3,15 @@ nav_title: Branching
 platform: Canvas
 subplatform: Create a Canvas
 page_order: 1
+
+page_type: reference
 description: "This reference article covers what branching is, and how it can be useful in your Canvases."
+tool: Canvas
 ---
 
 # Branching
+
+> This reference article covers what branching is, and how it can be useful in your Canvases.
 
 ## Create a Branch
 

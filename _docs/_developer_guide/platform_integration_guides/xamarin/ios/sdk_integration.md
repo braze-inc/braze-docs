@@ -26,7 +26,7 @@ The second integration method is to include the binding source found [here][3]. 
 
 Within your `AppDelegate.cs` file, add the following snippet within your `FinishedLaunching` method:
 
->  Be sure to update `YOUR-API-KEY` with the correct value from your [App Settings][5] page.
+>  Be sure to update `YOUR-API-KEY` with the correct value from your [Settings][5] page.
 
 ```csharp
  Appboy.StartWithApiKey ("YOUR-API-KEY", UIApplication.SharedApplication, options);
@@ -41,7 +41,7 @@ See the `AppDelegate.cs` file in the [TestApp.XamariniOS][10] sample app.
 
 Within your `Info.plist` file, add the following snippet:
 
->  Be sure to update `YOUR-SDK-ENDPOINT` with the correct value from your [App Settings][5] page.
+>  Be sure to update `YOUR-SDK-ENDPOINT` with the correct value from your [Settings][5] page.
 
 ```
 <key>Braze</key>
@@ -73,7 +73,7 @@ Braze should now be collecting data from your application and your basic integra
 
 
 [3]: https://github.com/Appboy/appboy-xamarin-bindings
-[5]: https://dashboard-01.braze.com/app_settings/app_settings/ "App Settings"
+[5]: https://dashboard-01.braze.com/app_settings/app_settings/ "Settings"
 [7]: https://github.com/Appboy/appboy-xamarin-bindings/tree/master/appboy-component/src/ios-unified
 [9]: https://www.nuget.org/
 [10]: https://github.com/Appboy/appboy-xamarin-bindings/tree/master/appboy-component/samples/ios-unified/TestApp.XamariniOS

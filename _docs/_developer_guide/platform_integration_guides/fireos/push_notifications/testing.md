@@ -3,6 +3,11 @@ nav_title: Testing
 platform: FireOS
 page_order: 1
 
+page_type: reference
+description: "This page provides information on testing in-app messages and push notificatsion via the command line."
+channel: 
+- push
+- in-app messages
 ---
 ## Testing From Command Line
 

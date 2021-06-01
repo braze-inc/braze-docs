@@ -3,6 +3,8 @@ nav_title: Setting User IDs
 platform: FireOS
 page_order: 1
 
+page_type: reference
+description: "This page covers seting user IDs for each of your users, including best practices and important considerations."
 ---
 
 ## Setting User IDs

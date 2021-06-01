@@ -1,6 +1,10 @@
 ---
 nav_title: Empty Content Card Feed
 page_order: 0
+
+page_type: solution
+description: "This help article describes why new users may not have content cards in their feed, and how to resolve this issue."
+channel: content cards
 ---
 
 # New Users Do Not Have Cards in Their Feed

@@ -3,7 +3,7 @@ nav_title: Change Your Canvas After Launch
 platform: Canvas
 subplatform: Create a Canvas
 page_order: 3
-description: "This reference article covers the different aspects of canvas that can be changed after the initial launch."
+description: "This reference article covers the different aspects of a Canvas that can be changed after the initial launch."
 page_type: reference
 tool:
   - Canvas
@@ -12,7 +12,7 @@ tool:
 
 # Changing Your Canvas After Launch
 
-> This reference article covers the different aspects of canvas that can be changed after the initial launch.
+> This reference article covers the different aspects of a Canvas that can be changed after the initial launch.
 
 ## Initial Conditions
 

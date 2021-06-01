@@ -2,6 +2,9 @@
 nav_title: News Feed
 platform: tvOS
 page_order: 2
+
+page_type: reference
+description: "This page describes how to fetch and display News Feed data in your tvOS application."
 ---
 # News Feed
 

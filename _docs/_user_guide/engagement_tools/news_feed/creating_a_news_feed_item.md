@@ -1,7 +1,11 @@
 ---
 nav_title: Creating a News Feed Item
 page_order: 3
-description: "News-Feed items allow you to insert permanent content directly into your app from our web dashboard. This reference article covers how to create a News Feed item. "
+
+page_type: reference
+description: "This reference article covers how to create a News Feed item. News-Feed items allow you to insert permanent content directly into your app from our web dashboard."
+tool: Dashboard
+channel: news feed
 ---
 # Creating a News Feed Item
 
@@ -47,16 +51,6 @@ Banner cards consist of:
 
 - 600x100 image
 - Link (In-App/Web)
-
-#### Cross Promotions Cards
-
-![CrossPromo][5]
-
-Cross-promotion cards allow you to showcase another app that's in the app store. 
-{% alert important %}
-You may not advertise apps which are the property of companies other than your own.
-{% endalert %}
-
 
 #### Image guidelines
 
@@ -116,7 +110,6 @@ You can re-order your cards within Braze's News Feed page.
 [2]: {% image_buster /assets/img_archive/classiccard.png %}
 [3]: {% image_buster /assets/img_archive/captionedimage.png %}
 [4]: {% image_buster /assets/img_archive/newsfeedbanner.png %}
-[5]: {% image_buster /assets/img_archive/crosspromo.png %}
 [6]: {% image_buster /assets/img_archive/news-feed-title-summary_new.png %}
 [7]: {{site.baseurl}}/developer_guide/platform_integration_guides/ios/advanced_use_cases/linking/#deep-linking-to-app-settings
 [8]: {% image_buster /assets/img_archive/newsfeed2_new.png %}

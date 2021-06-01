@@ -10,7 +10,7 @@ tool:
   - Campaigns
   - Canvas
 
-description: "This article lists and explains the Braze Content Card object."
+description: "This article explains the different components of Braze's Content Card object."
 ---
 # Content Card Object
 

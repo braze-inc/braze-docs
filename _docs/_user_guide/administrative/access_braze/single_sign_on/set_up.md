@@ -1,9 +1,14 @@
 ---
-nav_title: SAML SSO Set Up
+nav_title: SAML SSO Setup
 page_order: 0
+
+page_type: tutorial
+description: "This article will walk you through how to enable SAML single sign-on for your Braze account."
 ---
 
 # Service Provider (SP) Initiated Login
+
+> This article will walk you through how to enable SAML single sign-on for your Braze account.
 
 ## Requirements
 
@@ -16,7 +21,9 @@ Upon setup, you will be asked to provide a Sign-On URL and an Assertion Consumer
 | **Entity ID** | `braze_dashboard` |
 {: .reset-td-br-1 .reset-td-br-2}
 
-## Configure Your Identity Provider
+## SAML SSO Set Up
+
+### Configure Your Identity Provider
 
 First, you must set up Braze as a Service Provider (SP) in your Identity Provider (IdP) with the information below.
 
@@ -32,7 +39,7 @@ In addition, you’ll need to set up SAML attribute mapping.
 Braze only requires `email` in the SAML Assertion.
 {% endalert %}
 
-## Configure Braze
+### Configure Braze
 
 Once you have set up Braze within your IdP, they will provide a Target URL and `x.509` certificate which you will input into your Braze account.
 
@@ -60,7 +67,7 @@ When you save your Security Settings and log out, you should now be able to sign
 
 ![Login Page with SSO]({% image_buster /assets/img/sso1.png %}){: style="max-width:40%;"}
 
-## Create and Enable a Braze API Key for IdP Login (Optional)
+### Create and Enable a Braze API Key for IdP Login (Optional)
 
 To enable IdP initiated login, you will first need to create an API Key in `Developer Console` > `API Settings`.
 
@@ -68,6 +75,14 @@ To enable IdP initiated login, you will first need to create an API Key in `Deve
 
 Input the generated API Key as the `RelayState` parameter within your IdP, which will be used to identify which company the user is trying to log into.
 
-{% alert tip %}
-If you want your Braze account users to only sign in with SAML SSO, you can [restrict single sign-on authentication]({{site.baseurl}}/user_guide/administrative/access_braze/single_sign_on/restriction/) from the `Company Settings` page.
-{% endalert %}
+## SSO Behavior
+
+Members who opt to use SSO will __no longer be able to use their password as they did prior__. Users who continue to use their password will be able to unless restricted by the settings below. 
+
+## Restriction
+
+You can also choose to restrict the members of your organization to sign-in with either Google SSO or SAML SSO. In order to enable, go to `Company Settings` > `Security Settings` and select `Restrict Single Sign-On`.
+
+![SSO Restriction]({% image_buster /assets/img/sso3.png %})
+
+By enabling this option, your company's Braze users will no longer be able to log in using a password, even if they have logged in with a password before.

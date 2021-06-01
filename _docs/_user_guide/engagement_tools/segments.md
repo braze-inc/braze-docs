@@ -6,7 +6,7 @@ guide_top_header: "Segments"
 guide_top_text: "Audience segmentation is key to strategic marketing - it can keep you from over-targeting, bothering, or missing a potential connection with a customer. Check out the articles below to learn how to segment and filter your audience to your (and their) greatest benefit!"
 descriptions: "Audience segmentation is key to strategic marketing - it can keep you from over-targeting, bothering, or missing a potential connection with a customer. Check out this landing page to learn how to segment and filter your audience to your (and their) greatest benefit!"
 
-tools: segments
+tool: Segments
 page_type: landing
 description: "This is the landing page for Segmentation within Dashboard Campaigns. Here you can find information on how to set up and maintain effective Segments."
 

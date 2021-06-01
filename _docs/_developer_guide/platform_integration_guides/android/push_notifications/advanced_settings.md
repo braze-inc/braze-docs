@@ -1,7 +1,10 @@
 ---
 nav_title: Advanced Settings
 platform: Android
-page_order: 2
+page_order: 4
+description: "This reference article covers advanced Android push notification settings such as TTL, notification IDs, notification priority, and more."
+channel:
+  - push
 
 ---
 # Advanced Settings

@@ -1,6 +1,10 @@
 ---
 nav_title: Push Token Migration
 page_order: 1
+
+page_type: solution
+description: "This article covers how to migrate push tokens so you can continue sending push messages to your users after switching to Braze."
+channel: push
 ---
 
 # Push Token Migration
@@ -19,9 +23,10 @@ These campaigns will have to be configured with proper key value pairs to ensure
 
 Push tokens can either be uploaded for identified users or anonymous users. This means that either an `external_id` needs to present, or the anonymous users must have the `push_token_import` flag set to `true`. 
 
+The `app_id` required can be found in the **Developer Console**, under the **API Settings** tab in the **Identification** section. Each app (iOS, Android, Web, etc.) has its own `app_id` - be sure to use the correct platform's `app_id`.
+
 #### Migration if External ID is Present
 ```json
-"app_group_id" : "YOUR_APP_GROUP_ID",
 "attributes" : [
   {
 	"push_token_import" : false,
@@ -47,7 +52,6 @@ These tokens can be migrated by [importing them with our API]({{site.baseurl}}/a
 To do this, use the `users/track` endpoint and post the following information:
 
 ```json
-"app_group_id" : "YOUR_APP_GROUP_ID",
 "attributes" : [
   {
 	"push_token_import" : true,
@@ -61,7 +65,6 @@ To do this, use the `users/track` endpoint and post the following information:
 Example:
 
 ```json
-"app_group_id" : "YOUR_APP_GROUP_ID",
 "attributes": [ 
   {
     "push_token_import" : true,

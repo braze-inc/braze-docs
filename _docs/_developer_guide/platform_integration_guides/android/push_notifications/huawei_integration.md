@@ -2,6 +2,9 @@
 nav_title: Huawei Integration
 platform: Android
 page_order: 9
+description: "This article covers how to set up a Huawei Android integration."
+channel:
+  - push
 
 ---
 # Huawei Integration
@@ -14,7 +17,7 @@ This guide will show you how to set up your Huawei Android integration in order 
 
 Before getting started, you'll need to register and set up a [Huawei Developer account][2].
 
-In your Huawei account, go to `My Projects` > `Project Settings` > `App Information`, and take note of the `App ID` and `App secret`.
+In your Huawei account, go to **My Projects** > **Project Settings** > **App Information**, and take note of the `App ID` and `App secret`.
 
 ![Huawei App Credentials][3]
 
@@ -22,13 +25,13 @@ In the next step, you will enter these credentials in the Braze Dashboard which 
 
 ## Step 2: Create a new Huawei App in the Braze Dashboard
 
-In the Braze Dashboard, go to `Manage App Group` listed under the `App Settings` navigation.
+In the Braze Dashboard, go to **Manage Settings**, listed under the **Settings** navigation.
 
-Add a new App, provide a name (i.e. My Huawei App), select `Android` as the Platform, and choose `Huawei (HMS)` as the Push Provider.
-
-Once your new Braze App has been created, you will be shown an `API Key`, and a section for Push Notification Settings where you will enter your Huawei credentials from the previous step.
+Click **+ Add App**, provide a name (i.e. My Huawei App), select `Android` as the Platform, and choose `Huawei (HMS)` as the Push Provider.
 
 ![Create Huawei App in Braze Dashboard][4]
+
+Once your new Braze App has been created, you will be shown an `API Key`, and a section for **Push Notification Settings** where you will enter your Huawei credentials from the previous step.
 
 ## Step 3: Enter Huawei Credentials in the Braze Dashboard
 
@@ -97,7 +100,11 @@ After adding your custom push service, add the following to your `AndroidManifes
 </service>
 ```
 
+<<<<<<< HEAD
 ## Step 5: Sending Huawei Push
+=======
+## Step 5: Send a Huawei Push
+>>>>>>> 145fb5ac779b8d85dde3e9f449d8c78670e7d475
 
 At this point, you've created a new Huawei Android app in the Braze Dashboard, configured it with your Huawei Developer credentials, and have integrated the Braze and Huawei SDKs into your app.
 
@@ -105,9 +112,9 @@ Next, we can test out the integration by testing out a new Push campaign in Braz
 
 ### Create a new Push Notification Campaign
 
-In the Campaigns menu, create a new campaign, and choose Push Notification.
+In the **Campaigns** page, create a new campaign, and choose **Push Notification** as your message type.
 
-After you name your campaign, choose `Android Push` as the Push Platform.
+After you name your campaign, choose **Android Push** as the Push Platform.
 
 ![Choose Android Push Channel][5]
 
@@ -117,7 +124,7 @@ Next, compose your push campaign with a Title and Message.
 
 ### Send a Test Push
 
-In the Test tab, enter your user ID which you've set in your app using the [`changeUser(USER_ID_STRING)` method][9], and click to send the test push.
+In the **Test** tab, enter your user ID which you've set in your app using the [`changeUser(USER_ID_STRING)` method][9], and click **Send Test** to send the test push.
 
 ![Huawei Test Send][7]
 

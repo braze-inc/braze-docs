@@ -1,8 +1,14 @@
 ---
 nav_title: News Feed
 platform: React Native
-subplatform: Android and FireOS
+subplatform: 
+- Android
+- FireOS
 page_order: 3
+
+page_type: reference
+description: "This page covers resources for implementing Braze's News Feed in your Android or FireOS app running React Native."
+channel: news feed
 ---
 # News Feed
 

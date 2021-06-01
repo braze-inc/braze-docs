@@ -5,12 +5,6 @@ description: "Subscription Groups are the foundation for sending SMS & MMS throu
 page_type: reference
 tool:
   - Dashboard
-  - Docs
-  - Campaigns
-
-platform:
-  - iOS
-  - Android
 
 channel:
   - SMS

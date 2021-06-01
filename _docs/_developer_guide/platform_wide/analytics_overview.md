@@ -1,6 +1,8 @@
 ---
 nav_title: Analytics Overview
 page_order: 2
+description: "This reference article covers user data collection including what data is automatically collected, purchase events and custom events, as well as data collection best practices."
+
 ---
 # User Data Collection
 
@@ -178,8 +180,8 @@ Date filters using relative dates (e.g., more than 1 day ago, less than 2 days a
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
 
 #### Numbers {#integers}
-Numeric attributes have a wide variety of use-cases. Incrementing number custom attributes are useful for storing the number of times a given action or event has occurred. Standard numvers have all sorts of usages, for example : (Recording shoe size, waist size, number of times a user has viewed a certain product feature, or category).
->  Money spent in app should not be recorded by this method. Rather it should be recorded via our [purchase methods][4].
+Numeric attributes have a wide variety of use-cases. Incrementing number custom attributes are useful for storing the number of times a given action or event has occurred. Standard numbers have all sorts of usages, for example: recording shoe size, waist size, or number of times a user has viewed a certain product feature or category.
+>  Money spent should not be recorded by this method. Rather it should be recorded via our [purchase methods][4].
 
 | Segmentation Options | Dropdown Filter | Input Options |
 | ---------------------| --------------- | ------------- |

@@ -1,6 +1,9 @@
 ---
 nav_title: August
 page_order: 5
+
+page_type: update
+description: "This article contains release notes for August 2016."
 ---
 
 # August 2016

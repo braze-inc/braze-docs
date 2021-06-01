@@ -2,6 +2,7 @@
 nav_title: Setting Custom Attributes
 platform: Android
 page_order: 3
+description: "This reference article shows how to set custom attributes in your Android application."
 
 ---
 # Setting Custom Attributes
@@ -209,12 +210,14 @@ Appboy.getInstance(context).currentUser?.setCustomUserAttributeToSecondsFromEpoc
 {% endsubtabs %}
 
 {% alert warning %}
-  Dates passed to Braze with this method must either be in the [ISO 8601](http://en.wikipedia.org/wiki/ISO_8601) format (e.g `2013-07-16T19:20:30+01:00`) or in the `yyyy-MM-dd'T'HH:mm:ss:SSSZ` format (e.g `2016-12-14T13:32:31.601-0800`).
+Dates passed to Braze with this method must either be in the [ISO 8601](http://en.wikipedia.org/wiki/ISO_8601) format (e.g `2013-07-16T19:20:30+01:00`) or in the `yyyy-MM-dd'T'HH:mm:ss:SSSZ` format (e.g `2016-12-14T13:32:31.601-0800`).
 {% endalert %}
 
 {% endtab %}
 {% tab Array %}
-The maximum number of elements in Custom Attribute Arrays defaults to 25. The maximum for individual arrays can be increased to up to 100 in the Braze Dashboard, under "Manage App Group -> Custom Attributes". Arrays exceeding the maximum number of elements will be truncated to contain the maximum number of elements. For more information on Custom Attribute Arrays and their behavior, see our [documentation on Arrays]({{site.baseurl}}/developer_guide/platform_wide/analytics_overview/#arrays).
+
+The maximum number of elements in Custom Attribute Arrays defaults to 25. The maximum for individual arrays can be increased to up to 100 in the Braze Dashboard, under __Manage Settings__ -> __Custom Attributes__. Arrays exceeding the maximum number of elements will be truncated to contain the maximum number of elements. For more information on Custom Attribute Arrays and their behavior, see our [documentation on Arrays]({{site.baseurl}}/developer_guide/platform_wide/analytics_overview/#arrays).
+
 {% subtabs global %}
 {% subtab JAVA %}
 
@@ -226,7 +229,6 @@ Appboy.getInstance(context).getCurrentUser().addToCustomAttributeArray("your_att
 // Removing a value from an array type custom attribute
 Appboy.getInstance(context).getCurrentUser().removeFromCustomAttributeArray("your_attribute_key", "value_to_remove");
 ```
-
 {% endsubtab %}
 {% subtab KOTLIN %}
 

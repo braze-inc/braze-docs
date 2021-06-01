@@ -1,8 +1,11 @@
 ---
 nav_title: Read & Unread Indicators
 page_order: 2
-
 platform: Android
+description: "This reference article covers Android read and unread indicators and how to implement them in your Content Cards."
+channel:
+  - content cards
+
 ---
 
 ## Read/Unread Indicators {#read-indicators-for-android}

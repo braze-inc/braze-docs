@@ -1,6 +1,12 @@
 ---
 nav_title: Why are my conversions low?
 page_order: 1
+
+page_type: solution
+description: "This help article walks you through troubleshooting campaigns or Canvases with lower than expected conversion rates."
+tool:
+- Canvas
+- Campaigns
 ---
 
 # Why Are My Conversions Low?
@@ -15,7 +21,7 @@ To quickly troubleshoot why that is, we recommend that you...
 
 ## Ensure the Event is Tracking
 
-When a Campaign triggers a Session Start, or Custom Event, you want to ensure that this event, or session is happening frequently enough to trigger the message. Check this data on the [App Usage][1] (for session data) or [Custom events][2] pages:
+When a Campaign triggers a Session Start, or Custom Event, you want to ensure that this event, or session is happening frequently enough to trigger the message. Check this data on the [Overview][1] (for session data) or [Custom Events][2] pages:
 
 ![trouble17][43]
 

@@ -1,6 +1,9 @@
 ---
 nav_title: April
 page_order: 9
+
+page_type: update
+description: "This article contains release notes for April 2021."
 ---
 # April 2021
 

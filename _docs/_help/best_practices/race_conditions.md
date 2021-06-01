@@ -1,6 +1,12 @@
 ---
 nav_title: Race Conditions
 page_order: 9
+
+page_type: reference
+description: "This article covers best practices to avoid race conditions from affecting your messaging campaigns."
+tool:
+- Campaigns
+- Canvas
 ---
 
 # Race Conditions

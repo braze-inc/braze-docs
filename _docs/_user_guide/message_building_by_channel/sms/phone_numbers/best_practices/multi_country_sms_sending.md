@@ -1,17 +1,11 @@
 ---
 nav_title: "Multi-Country SMS Sending"
 page_order: 3
-description: "This reference article covers multi-country sending best practices."
+description: "This reference article covers multi-country sending best practices for SMS messaging."
 page_type: reference
 tool:
   - Dashboard
-  - Docs
-  - Campaigns
-
-platform:
-  - iOS
-  - Android
-
+  
 channel:
   - SMS
 ---

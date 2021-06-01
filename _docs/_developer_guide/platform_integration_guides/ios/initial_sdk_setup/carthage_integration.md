@@ -2,6 +2,7 @@
 nav_title: Carthage Integration
 platform: iOS
 page_order: 0
+description: "This reference article shows how to integrate the Braze SDK using Carthage for iOS."
 
 ---
 
@@ -63,7 +64,7 @@ __Note__: Braze's `sharedInstance` singleton will be nil before `startWithApiKey
 {% endtabs %}
 
 {% alert important %}
-Be sure to update `YOUR-API-KEY` with the correct value from your App Settings page.
+Be sure to update `YOUR-API-KEY` with the correct value from your **Settings** page.
 {% endalert %}
 
 {% alert warning %}

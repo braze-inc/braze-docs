@@ -2,7 +2,7 @@
 nav_title: SDK Authentication
 page_order: 5
 hidden: true
-description: "Verify the identity of SDK requests"
+description: "This reference article covers SDK authentication and how to enable this feature in the Braze SDK."
 platform:
   - ios
   - android
@@ -30,7 +30,7 @@ There are four high-level steps to get started:
 
 1. [Server-Side Integration][1] - Generate a public and private key-pair, and use your private key to create a JWT (_JSON Web Token_) for the current logged-in user.<br><br>
 2. [SDK Integration][2] - Enable this feature in the Braze SDK and request the JWT Token generated from your server.<br><br>
-3. [Adding Public Keys][3] - Add your _public key_ to the Braze Dashboard in the "Manage App Group" page.<br><br>
+3. [Adding Public Keys][3] - Add your _public key_ to the Braze Dashboard in the "Manage Settings" page.<br><br>
 4. [Toggle Enforcement within the Braze Dashboard][4] - Toggle this feature's enforcement within the Braze Dashboard on an app-by-app basis.
 
 ## Server-Side Integration {#server-side-integration}
@@ -81,7 +81,7 @@ To learn more about JSON Web Tokens, or to browse the [many open source librarie
 
 This feature is available as of the following [SDK versions]({{ site.baseurl }}/user_guide/engagement_tools/campaigns/ideas_and_strategies/new_features/#filtering-by-most-recent-app-versions):
 
-{% sdk_min_versions web:3.4.0 ios:4.2.0 android:14.0.0 %}
+{% sdk_min_versions web:3.3.0 ios:4.2.0 android:14.0.0 %}
 
 ### Enable this feature in the Braze SDK.
 
@@ -316,7 +316,7 @@ The `errorEvent` argument passed to this callback will contain the following inf
 
 ## Adding Public Keys {#key-management}
 
-In the "Manage App Group" page of the dashboard, add your Public Key to a specific app in the Braze Dashboard. Each app supports up to 3 Public Keys. Note that the same Public/Private keys may be used across apps.
+In the "Manage Settings" page of the dashboard, add your Public Key to a specific app in the Braze Dashboard. Each app supports up to 3 Public Keys. Note that the same Public/Private keys may be used across apps.
 
 To add a Public Key:
 1. Choose the app in the left-hand side menu
@@ -336,7 +336,7 @@ Should anything go wrong with your integration (i.e. your app is incorrectly pas
 
 ### Enforcement Options {#enforcement-options}
 
-In the Dashboard `App Settings` page, each app has three SDK Authentication states which control how Braze verifies requests.
+In the Dashboard `Settings` page, each app has three SDK Authentication states which control how Braze verifies requests.
 
 | Setting| Description|
 | ------ | ---------- |
@@ -383,21 +383,27 @@ If possible, you should push users to upgrade as you would for any other mandato
 
 We recommend using the higher value of: average session duration, session cookie/token expiration, or the frequency at which your application would otherwise refresh the current user's profile.
 
-#### What happens if a JWT expires in the middle of a user's session?
+#### What happens if a JWT expires in the middle of a user's session? {#faq-jwt-expiration}
 
 Should a user's token expire mid-session, the SDK has a [callback function][7] it will invoke to let your app know that a new JWT token is needed to continue sending data to Braze.
 
-#### What happens if my server-side integration breaks and I can no longer create a JWT?
+#### What happens if my server-side integration breaks and I can no longer create a JWT? {#faq-server-downtime}
 
 If your server is not able to provide JWT tokens or you notice some integration issue, you can always disable the feature in the Braze Dashboard.
 
 Once disabled, any pending failed SDK requests will eventually be retried by the SDK and accepted by Braze.
 
-#### Why does this feature use Public/Private keys instead of Shared Secrets?
+#### Why does this feature use Public/Private keys instead of Shared Secrets? {#faq-shared-secrets}
 
 When using Shared Secrets, anyone with access to that shared secret (i.e. the Braze Dashboard page) would be able to generate tokens and impersonate your end-users.
 
 Instead, we use Public/Private Keys so that not even Braze Employees (let alone your Dashboard users) have access to your Private Keys.
+
+#### How will rejected requests be retried? {#faq-retry-logic}
+
+When a request is rejected because of an authentication error, the SDKs will invoke a your callback used to refresh the user's JWT signature. 
+
+Requests will retry periodically using an exponential backoff approach. After 50 consecutive failed attempts, retries will be paused until the next session start. Each SDK also has a method to manually request a data flush.
 
 [1]: #server-side-integration
 [2]: #sdk-integration

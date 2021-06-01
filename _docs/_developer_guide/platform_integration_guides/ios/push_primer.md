@@ -2,9 +2,10 @@
 nav_title: "Push Primer"
 page_order: 6
 page_type: reference
-description: "This guide shows the steps developers must make to integrate Push Priming"
+description: "This article covers how to integrate iOS push primers."
 platform: iOS
-channel: Push
+channel:
+  - push
 ---
 
 # Push Primer Integration

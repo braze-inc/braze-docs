@@ -7,6 +7,7 @@ layout: featured
 
 guide_top_header: "Initial SDK Set Up"
 guide_top_text: "Installing the Braze iOS SDK will provide you with basic analytics functionality (session handling) as well as basic in-app messages. You must further customize your integration for additional channels and features. <br> <br> The Braze iOS SDK can be installed or updated using CocoaPods, Carthage, or a Manual integration."
+description: "This landing page covers Braze SDK integration guides for CocoaPods, Swift Package Manager, Carthage, and more."
 
 guide_featured_title: "Basic Integration Options"
 guide_featured_list:

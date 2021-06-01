@@ -9,7 +9,7 @@ platform: API
 tool:
   - Campaigns
 
-description: "This article outlines details about the Update Scheduled Campaigns Braze endpoint."
+description: "This article outlines details about the Schedule API Triggered Campaigns Braze endpoint."
 ---
 {% api %}
 # Schedule API Triggered Campaigns

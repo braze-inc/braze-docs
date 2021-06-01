@@ -6,10 +6,7 @@ description: "This reference article gives a brief overview of Push, provides re
 
 channel:
   - Push
-tool:
-  - Docs
-  - Dashboard
-  - Campaigns
+
 ---
 
 # What are Push Messages?

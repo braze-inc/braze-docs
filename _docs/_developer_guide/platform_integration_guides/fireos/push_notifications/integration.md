@@ -3,6 +3,9 @@ nav_title: Integration
 platform: FireOS
 page_order: 0
 
+page_type: solution
+description: "This article walks you through how to integrate Braze push notifications with your FireOS app."
+channel: push
 ---
 ## Integration
 
@@ -101,7 +104,7 @@ If you would like to custom handle deep links, you will need to create a `Broadc
 
 ### Step 5: Add Client Secret and Client ID to Braze Dashboard
 
-Lastly, you must add the Client Secret and Client ID you obtained in [Step 1][2] to the Braze dashboard's "Manage App Group" page as pictured below:
+Lastly, you must add the Client Secret and Client ID you obtained in [Step 1][2] to the Braze dashboard's "Manage Settings" page as pictured below:
 
 ![FireOS Dashboard][34]
 

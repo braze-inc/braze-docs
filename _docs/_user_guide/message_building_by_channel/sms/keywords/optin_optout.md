@@ -1,16 +1,10 @@
 ---
 nav_title: Opt-In / Opt-Out
 page_order: 0
-description: "This reference article covers how Braze processes certain keywords for SMS, as well as best practices."
+description: "This reference article covers how Braze processes basic opt-in and opt-out keywords for SMS messaging."
 page_type: reference
 tool:
   - Dashboard
-  - Docs
-  - Campaigns
-
-platform:
-  - iOS
-  - Android
 
 channel:
   - SMS

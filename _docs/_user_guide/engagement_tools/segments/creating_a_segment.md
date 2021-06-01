@@ -3,9 +3,8 @@ nav_title: Creating a Segment
 page_order: 1
 
 page_type: tutorial
-channel:
-
 description: "This how-to article will walk you through how to set up and create a segment using Braze."
+tool: Segments
 ---
 # Creating a Segment
 
@@ -38,6 +37,10 @@ Choose which apps or platforms you'd like to target by either selecting "Include
 
 Add at least one filter to your segment as depicted in the image below. You can combine as many filters as you want in order to make your segmentation more specific.
 
+{% alert note %}
+Braze doesn't generate profiles for users until they've used the app for the first time, so you can't target users who haven't opened your app yet.
+{% endalert %}
+
 ![segment_step4][3]
 
 Choosing "OR" for your filters means that your segment will contain users satisfying any combination of one, some, or all of those filters, while "AND" means that users who do not pass that filter will not be included in your segment. This logic can be combined, so that you can segment users who pass one filter "AND" either one of two other filters.
@@ -48,9 +51,21 @@ Notice that the statistics on your segment are changing in real-time as you add 
 Please note that segments already using the Segment Membership Filter cannot be further included/nested into other segments. 
 {% endalert %}
 
+### Single-user Segments
+
+You can create single user segments (or segments of a handful of users) using unique attributes that identify users, like a user name or a user ID.
+
+However, the segmentation stats or preview may not show this individual user because segment stats are calculated based on a random sample with a 95% confidence interval that the result is within +/- 1%. The larger your user base is, the more likely it is that the size of your segment is a rough estimate. To ensure that your segment contains the single user you are targeting, click **Calculate Exact Statistics** on the **Segment Details** page. This will calculate the exact number of users in your segment, without any rounding.
+
+Braze has testing filters to target specific users by user ID or email address.
+
 ## Step 5: Save Your Segment
 
 Once you've clicked "Save" you're ready to start sending messages to your users!
+
+## Segment Membership Calculation
+
+Braze updates the user’s segment membership as data is sent back to our servers and processed, typically instantaneously. A user’s segment membership will not change until that session has been processed. For example, a user who falls into a lapsed user segment when the session first starts will be immediately moved out of the lapsed user segment when the session is processed.
 
 ## Archiving Segments
 

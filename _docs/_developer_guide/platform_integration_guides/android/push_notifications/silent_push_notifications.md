@@ -2,6 +2,9 @@
 nav_title: Silent Push Notifications
 platform: Android
 page_order: 3
+description: "This article covers how to implement silent push notifications in your Android application."
+channel:
+  - push
 
 ---
 # Silent Push Notifications

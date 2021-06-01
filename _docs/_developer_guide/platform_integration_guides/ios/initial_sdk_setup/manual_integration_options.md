@@ -2,6 +2,7 @@
 nav_title: Manual Integration Options
 platform: iOS
 page_order: 2
+description: "This reference article shows how to manually integrate the Braze SDK for iOS."
 
 ---
 
@@ -84,7 +85,7 @@ Add the following line of code to your `AppDelegate.m` file:
 Within your `AppDelegate.m` file, add the following snippet within your `application:didFinishLaunchingWithOptions` method:
 
 {% alert important %}
-Be sure to update `YOUR-API-KEY` with the correct value from your App Settings page.
+Be sure to update `YOUR-API-KEY` with the correct value from your **Settings** page.
 {% endalert %}
 
 

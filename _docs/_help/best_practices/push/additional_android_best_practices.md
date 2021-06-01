@@ -1,6 +1,10 @@
 ---
 nav_title: Additional Android Push Best Practices
 page_order: 0
+
+page_type: reference
+description: "This article covers additional best practices for Android push messages, including priority, category, and visiblity."
+channel: push
 ---
 
 # Additional Android Push Best Practices

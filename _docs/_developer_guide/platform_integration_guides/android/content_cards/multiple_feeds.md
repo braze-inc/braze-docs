@@ -1,8 +1,11 @@
 ---
 nav_title: Multiple Feeds
 page_order: 5
-
 platform: Android
+description: "This reference article covers how to implement multiple Content Card feeds in your Android application."
+channel:
+  - content cards
+
 ---
 
 # Using Multiple Content Card Feeds

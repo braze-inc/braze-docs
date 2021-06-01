@@ -4,6 +4,8 @@ platform: iOS
 page_order: 7
 
 hidden: true
+description: "This article covers the deprecated customer feedback module."
+
 ---
 {% alert Update %}
 Customer Feedback is no longer supported. [Learn more about this and other deprecated features here]({{site.baseurl}}/help/release_notes/deprecations/#feedback).
@@ -162,7 +164,7 @@ Appboy.sharedInstance()?.logFeedbackDisplayed()
 
 Braze has easy integrations with both [Desk.com][13] and [Zendesk][14]. So long as you are collecting feedback through our ready-made UI or manually using the `submitFeedback` method, you can pass that feedback through to either third-party provider. This will afford you the benefit of having the entire user profile card available to the CSR handling the case, and allow you to segment based upon the number of feedback requests a user has submitted.
 
-To take advantage of these integrations, please visit the ["feedback" section within the "app settings" page][15].
+To take advantage of these integrations, please visit the ["Feedback" section within the "Settings" page][15].
 
 [1]: https://github.com/Appboy/appboy-ios-sdk/tree/master/Samples/Feedback/AppboyFeedbackSample/AppboyFeedbackSample
 [4]: https://github.com/Appboy/appboy-ios-sdk/tree/master/AppboyUI/ABKFeedbackViewController/FeedbackViewController

@@ -4,9 +4,11 @@ platform: Campaigns
 subplatform: Ideas and Strategies
 page_order: 7
 
-tools: campaigns
 page_type: reference
-description: "This reference article goes over the concept of user installs (install attribution tracking) and different ways to apply this information within your campaign."
+description: "This reference article describes user installs (install attribution tracking) and different ways to apply this information within your campaign."
+tool:
+- Campaigns
+- Segments
 ---
 # Understanding User Installs
 

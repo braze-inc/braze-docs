@@ -2,6 +2,9 @@
 nav_title: Locations & Geofences
 platform: Android
 page_order: 6
+description: "This reference article covers how to implement locations and geofences in your Android application."
+Tool:
+  - Location
 
 ---
 # Locations & Geofences
@@ -83,14 +86,14 @@ Add the following call to notify Braze when a user grants the location permissio
 {% tab JAVA %}
 
 ```java
-AppboyLocationService.requestInitialization(context);
+Braze.getInstance(context).requestLocationInitialization();
 ```
 
 {% endtab %}
 {% tab KOTLIN %}
 
 ```kotlin
-AppboyLocationService.requestInitialization(context)
+Braze.getInstance(context).requestLocationInitialization()
 ```
 
 {% endtab %}
@@ -116,7 +119,7 @@ public class RuntimePermissionUtils {
         if (areAllPermissionsGranted(grantResults)) {
           Log.i(TAG, "Required location permissions granted.");
           Toast.makeText(context, "Required location permissions granted.", Toast.LENGTH_SHORT).show();
-          AppboyLocationService.requestInitialization(context);
+          Braze.getInstance(context).requestLocationInitialization();
         } else {
           Log.i(TAG, "Required location permissions NOT granted.");
           Toast.makeText(context, "Required location permissions NOT granted.", Toast.LENGTH_SHORT).show();
@@ -154,7 +157,7 @@ object RuntimePermissionUtils {
         if (areAllPermissionsGranted(grantResults)) {
           Log.i(TAG, "Required location permissions granted.")
           Toast.makeText(context, "Required location permissions granted.", Toast.LENGTH_SHORT).show()
-          AppboyLocationService.requestInitialization(context)
+          Braze.getInstance(context).requestLocationInitialization()
         } else {
           Log.i(TAG, "Required location permissions NOT granted.")
           Toast.makeText(context, "Required location permissions NOT granted.", Toast.LENGTH_SHORT).show()
@@ -299,7 +302,7 @@ Braze Geofences can only be requested once per session, either automatically by 
 
 ![Braze Developer Console]({% image_buster /assets/img_archive/enable-geofences-locations-page.png %})
 
-##### Enable geofences from the App Settings page:
+##### Enable geofences from the Settings page:
 
 ![Braze Developer Console]({% image_buster /assets/img_archive/enable-geofences-app-settings-page.png %})
 

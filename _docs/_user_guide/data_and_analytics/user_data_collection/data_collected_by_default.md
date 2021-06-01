@@ -1,7 +1,10 @@
 ---
 nav_title: Data Collected by Default
 page_order: 1
+
+page_type: reference
 description: "This reference article addresses the data that is collected by default from the Braze SDK."
+tool: Dashboard
 ---
 
 # Data Collected by Default

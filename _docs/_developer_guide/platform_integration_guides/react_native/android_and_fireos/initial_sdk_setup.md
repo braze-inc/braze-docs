@@ -1,8 +1,13 @@
 ---
 nav_title: Initial SDK Setup
 platform: React Native
-subplatform: Android and FireOS
+subplatform: 
+- Android
+- FireOS
 page_order: 0
+
+page_type: reference
+description: "This article covers initial SDK setup steps for Android or FireOS apps using React Native."
 ---
 # Initial SDK Setup
 

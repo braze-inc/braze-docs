@@ -1,6 +1,10 @@
 ---
 nav_title: User Onboarding
 page_order: 5
+
+page_type: reference
+description: "This article provides best practices on user onboarding to ensure your app's onboarding process is turning new users into active ones."
+tool: Segments
 ---
 # User Onboarding
 

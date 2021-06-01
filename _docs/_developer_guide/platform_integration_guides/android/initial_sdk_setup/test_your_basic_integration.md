@@ -2,12 +2,15 @@
 nav_title: Test Your Basic Integration
 page_order: 1
 platform: Android
+description: "This article covers how to test your basic integration for your Android application."
+
 ---
 
 # Test your Basic Integration
 
 ## Confirm Session Tracking is Working
-To test that you have session tracking working, go to the `Overview` section of your dashboard, select your application from the select box (defaulted to `All Apps`), and set `Display Data For` to be `Today`. Then open your app and refresh the page - your main metrics should all have increased by 1.
+
+At this point, you should have session tracking working in your Braze integration.  To test this, go to **Overview**, select your application from the selected app name dropdown (defaulted to "All Apps"), and set **Display Data For** to "Today". Then open your app and refresh the page - your main metrics should all have increased by 1.
 
 ![Sessions working][55]
 

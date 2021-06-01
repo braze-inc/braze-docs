@@ -2,6 +2,7 @@
 nav_title: Sample Apps
 platform: iOS
 page_order: 9
+description: "This article covers iOS sample apps."
 
 ---
 # Sample Apps

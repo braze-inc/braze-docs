@@ -2,7 +2,9 @@
 nav_title: Segment Extension
 page_order: 3.1
 
+page_type: tutorial
 description: "This how-to article will walk you through how to use a Segment Extension with Braze Segments."
+tool: Segments
 ---
 # Creating and Using a Segment Extension
 
@@ -41,6 +43,8 @@ To increase targeting precision, select the “Add Property Filters” checkbox.
 ![Event Property][14]{: style="max-width:85%;"}
 
 ![Event Property][15]{: style="max-width:85%;"}
+
+{% alert note %} Using Event Properties within Segment Extentions does not impact data point usage.  {% endalert %}
 
 ### Extension Regeneration
 

@@ -2,7 +2,7 @@
 nav_title: Swift Package Manager
 platform: iOS
 page_order: 1
-description: "This tutorial covers how to install the SDK using Swift Package Manager"
+description: "This tutorial covers how to install the Braze SDK using Swift Package Manager for iOS"
 ---
 
 # Swift Package Manager Integration
@@ -106,7 +106,7 @@ __Note__: Braze's `sharedInstance` singleton will be `nil` before `startWithApiK
 {% endtabs %}
 
 {% alert important %}
-Be sure to update `YOUR-APP-IDENTIFIER-API-KEY` with the correct value from your App Settings page. For more information on where to find your App Identifier API key, check out our [API documentation]({{site.baseurl}}/api/api_key/#the-app-identifier-api-key).
+Be sure to update `YOUR-APP-IDENTIFIER-API-KEY` with the correct value from your **Settings** page. For more information on where to find your App Identifier API key, check out our [API documentation]({{site.baseurl}}/api/api_key/#the-app-identifier-api-key).
 {% endalert %}
 
 {% alert warning %}

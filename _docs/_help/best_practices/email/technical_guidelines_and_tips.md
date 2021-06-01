@@ -2,8 +2,8 @@
 nav_title: Technical Guidelines & Tips
 page_order: 9
 page_type: reference
-description: "This reference page covers technical guideslines and tips when dealing with email validation and HTML tags"
-channel: Email
+description: "This reference page covers technical guidelines and tips when dealing with email validation and HTML tags"
+channel: email
 ---
 
 # Technical Guidelines & Notes

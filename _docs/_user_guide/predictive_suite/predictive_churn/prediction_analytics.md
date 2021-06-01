@@ -1,8 +1,10 @@
 ---
 nav_title: Prediction Analytics
 title: Prediction Analytics
-description: "This reference article covers the different components included in the Churn Prediction Analytics Page and how they can be used to make insightful driven decisions."
+description: "This reference article covers the different components included in the Churn Prediction Analytics Page and how they can be used to make insightful, driven decisions."
 page_order: 2
+Tool:
+  - Dashboard
 ---
 
 # Prediction Analytics
@@ -17,7 +19,7 @@ __Analytics Components__<br>
 
 ## Overview
 
-The distribution of the scores for the entire Prediction Audience is displayed at the top of the page in a chart that you can view, by category, or by score. Users in bins further to the right have higher scores and are more likely to churn. Users in bins further to the left are less likely to churn. The slider beneath the chart will allow you to select a swath of users and estimate what the results would be of targeting users in the selected range of Churn Risk Score or Category.
+The distribution of the scores for the entire Prediction Audience is displayed at the top of the page in a chart that you can view, by category or by score. Users in bins further to the right have higher scores and are more likely to churn. Users in bins further to the left are less likely to churn. The slider beneath the chart will allow you to select a swath of users and estimate what the results would be of targeting users in the selected range of Churn Risk Score or Category.
 
 ![Churn Targeting][4]{: style="max-width:90%"}
 
@@ -25,7 +27,7 @@ As you move the slider, the bar in the left half of the lower panel will inform 
 
 ## Churn Score and Category {#churn_score}
 
-Users in the Prediction Audience will be assigned a Churn Score between 0 and 100. The higher the score, the greater the likelihood of Churn. Users with Churn Scores between 0 and 50 will be labeled in the Low Churn Risk category. Users with scores between 50 and 75, and 75 and 100 will be labeled in the Medium and High Churn Risk categories, respectively. The scores and the corresponding categories will be updated according to the schedule you chose in the model creation page. The number of users with Churn Scores in each of 20 equally sized buckets is displayed in the chart at the top of the page. This can help you determine what the churn risk looks like across the population according to this Prediction.
+Users in the Prediction Audience will be assigned a Churn Score between 0 and 100. The higher the score, the greater the likelihood of Churn. Users with Churn Scores between 0 and 50 will be labeled in the Low Churn Risk category. Users with scores between 50 and 75, and 75 and 100 will be labeled in the Medium and High Churn Risk categories, respectively. The scores and the corresponding categories will be updated according to the schedule you chose on the model creation page. The number of users with Churn Scores in each of 20 equally sized buckets is displayed in the chart at the top of the page. This can help you determine what the churn risk looks like across the population according to this Prediction.
 
 ## Targeting Users to Reduce Churn
 
@@ -33,7 +35,7 @@ Users in the Prediction Audience will be assigned a Churn Score between 0 and 10
 
 To measure the accuracy of your model, the __Prediction Quality__ metric will show you how effective this particular machine learning model appears to be when tested on historical data. Check out this doc to read more about what goes into [Prediction Quality]({{site.baseurl}}/user_guide/predictive_suite/predictive_churn/prediction_analytics/prediction_quality/).
 
-Here’s what we recommend for various ranges of Prediction Quality:
+Here's what we recommend for various ranges of Prediction Quality:
 
 | Prediction Quality Range (%) | Recommendation |
 | ---------------------- | -------------- |
@@ -55,7 +57,7 @@ In the right half of the panel beneath the chart, we show estimates of the expec
 
 2. An estimate of how many users who wouldn't have actually churned will be incorrectly targeted<br><br>All machine learning models make errors. There may be users in your selection who have a high Churn Risk Score but do not end up churning. They would not churn even if you took no action. They will be targeted anyway, so this is an error or "false positive." The full width of this second progress bar represents the expected number of users who will not churn, and the red portion is those who will be incorrectly targeted using the current slider position.
 
-Using this information, we encourage you to decide how many of the churners you want to capture, and what the cost of a false positive error is for your business. If you are sending out a valuable promo, you may want to keep non-churners targeted to a minimum while getting as many expected true churners as the model will allow. Or, if you're less sensitive to false positives and users receive extra messaging, you can message more of the audience to capture more expected churners and ignore the likely errors.
+Using this information, we encourage you to decide how many of the churners you want to capture and what the cost of a false positive error is for your business. If you are sending out a valuable promo, you may want to keep non-churners targeted to a minimum while getting as many expected true churners as the model will allow. Or, if you're less sensitive to false positives and users receive extra messaging, you can message more of the audience to capture more expected churners and ignore the likely errors.
 
 ## Churn Correlation Table {#correlation_table}
 

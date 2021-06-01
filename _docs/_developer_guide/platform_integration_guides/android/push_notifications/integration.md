@@ -2,6 +2,9 @@
 nav_title: Integration
 platform: Android
 page_order: 0
+description: "This article covers how to integrate push notifications in your Android application."
+channel:
+  - push
 
 ---
 # Overview
@@ -43,7 +46,7 @@ Braze push notifications won't work until a Firebase Cloud Messaging token (FCM 
 
 > Make sure to use your Firebase Sender ID. This is a unique numerical value created when you create your Firebase project, available in the Cloud Messaging tab of the Firebase console Settings pane. The sender ID is used to identify each sender that can send messages to the client app.
 
-#### Option 1: Automatic Registration
+##### Option 1: Automatic Registration
 
 To automatically register FCM registration tokens, enable automatic Firebase registration and set a Firebase Cloud Messaging Sender ID.
 
@@ -143,9 +146,9 @@ If migrating from using GCM to using Firebase with Braze, visit the [GCM Migrati
 
 You need to input your Firebase Server Key and Sender ID into the Braze dashboard:
 
-* On the app settings page (where your API keys are located), select your Android app.
-* Enter your Firebase Server Key in the field labeled "Firebase Cloud Messaging Server Key" under the Push Notification Settings section.
-* Enter your Firebase Sender ID in the field labeled "Firebase Cloud Messaging Sender ID" under the Push Notification Settings section.
+* On the **Settings** page (where your API keys are located), select your Android app.
+* Enter your Firebase Server Key in the **Firebase Cloud Messaging Server Key** field, under the Push Notification Settings section.
+* Enter your Firebase Sender ID in the **Firebase Cloud Messaging Sender ID** field, under the Push Notification Settings section.
 
 ![fcmimg][16]
 
@@ -155,7 +158,7 @@ If you're not familiar with the location of your Firebase Server Key and Sender 
 
 2. Select your Firebase project
 
-3. Select Cloud Messaging under Settings and copy the Server Key and Sender ID:
+3. Go to **Settings** > **Cloud Messaging** and copy the Server Key and Sender ID:
   ![FirebaseServerKey][59]
 
 ### Step 5: Remove Old Permissions
@@ -286,6 +289,12 @@ Setting a large notification icon is optional but recommended.
 
 ```xml
 <integer name="com_appboy_default_notification_accent_color">0xFFf33e3e</integer>
+```
+
+You may also optionally use a color reference, see:
+
+```xml
+<color name="com_appboy_default_notification_accent_color">@color/my_color_here</color>
 ```
 
 ### Step 4: Add Deep Links

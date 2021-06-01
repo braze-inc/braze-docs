@@ -2,6 +2,8 @@
 nav_title: Deep Linking
 platform: Android
 page_order: 0
+description: "This article covers how to implement the universal deep linking delegate for your Android app, as well as examples on how to deep link to app settings or a News Feed."
+
 ---
 # Android Deep Linking
 

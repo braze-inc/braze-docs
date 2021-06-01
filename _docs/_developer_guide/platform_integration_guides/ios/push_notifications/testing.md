@@ -2,6 +2,9 @@
 nav_title: Testing
 platform: iOS
 page_order: 2
+description: "This article covers command line push testing for your iOS push notifications."
+channel:
+  - push
 
 ---
 # Testing {#push-testing}

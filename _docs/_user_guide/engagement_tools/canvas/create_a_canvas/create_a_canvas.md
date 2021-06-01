@@ -3,7 +3,10 @@ nav_title: Create a Canvas
 platform: Canvas
 subplatform: Create a Canvas
 page_order: 0
+
+page_type: reference
 description: "This reference article covers the necessary steps involved in creating, maintaining, and testing a Canvas."
+tool: Canvas
 ---
 
 # Creating a Canvas
@@ -113,6 +116,8 @@ There are three ways in which users can enter your Canvas - a scheduled entry, a
 
   {% endtab %}
 {% endtabs %}
+
+<a id="important-edge-case"></a>
 
 {% alert important %}
 Should the window of re-eligibility be less than the maximum duration of the Canvas, a user will be allowed to re-enter and receive more than one step's messages. In the edge case where a user's re-entry reaches the same step as its previous entry, Braze will deduplicate that step's messages. In the event where a user re-enters the Canvas, reaches the same step as their previous entry, and is eligible for an in-app message for each entry, the user will get the message twice (depending on in-app message priority) as long as they re-open a session two times.
@@ -239,7 +244,7 @@ Once you've launched your Canvas, you'll be able to view analytics for your jour
 ![Canvas Analytics][19]
 
 
-[1]:{% image_buster /assets/img_archive/Canvas_Dropdown.png %}
+[1]:{% image_buster /assets/img_archive/canvas_dropdown.png %}
 [6b]: {{site.baseurl}}/user_guide/engagement_tools/campaigns/testing_and_more/rate-limiting/#rate-limiting
 [11]:{% image_buster /assets/img_archive/Canvas_Add_Variant.png %}
 [12]:{% image_buster /assets/img_archive/Canvas_Multiple_Variants.png %}

@@ -1,13 +1,17 @@
 ---
 nav_title: Custom Event and Attribute Management
 page_order: 1
+
+page_type: reference
+description: "This reference article covers managing custom events and attributes, as well as understanding data type comparisons."
+tool: Dashboard
 ---
 
 # Custom Event and Attribute Management
 
 ## Adding Custom Attributes, Custom Events, Products, and Event Properties
 
-To add a Custom attribute, event, or product, go to the Custom Attributes, Custom Events, or Products pages, respectively, under “Manage App Groups” by clicking the “Add ..” button on the upper right hand corner of the lists of data. This will enable tracking on it.
+To add a Custom attribute, event, or product, go to the Custom Attributes, Custom Events, or Products pages, respectively, under “Manage Settings” by clicking the “Add ..” button on the upper right hand corner of the lists of data. This will enable tracking on it.
 
 ![customattributessearch1.png][71]
 
@@ -58,7 +62,6 @@ If you elect to force the data type for an attribute, any data that comes in tha
 | Boolean | Inputs of `1`, `true`, `t` (not case sensitive) will be stored as `true` |
 | Boolean | Inputs of `0`, `false`, `f` (not case sensitive) will be stored as `false` |
 | Number | Integers or Floats (i.e. `1`, `1.5`) will be stored as numbers |
-| Array | Comma separated list of values, with or without square brackets (i.e.`[first, second, third]`, or `first,second,third`) will be stored as an Array |
 {: .reset-td-br-1 .reset-td-br-2}
 
 For more information on specific filter options exposed by different data type comparisons please see [Configuring Reporting article][43]. And for more information on the different available data types, please see the section on ["Custom Attribute Data Types"][44].
@@ -70,8 +73,8 @@ Please note that data sent to Braze is immutable and cannot be deleted or modifi
 
 [43]: {{site.baseurl}}/user_guide/data_and_analytics/configuring_reporting/#configuring-reporting
 [44]: {{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_attributes/#custom-attribute-data-types
-[71]: {% image_buster /assets/img_archive/customattributessearch1.png %}
-[72]: {% image_buster /assets/img_archive/customeventsview1.png %}
+[71]: {% image_buster /assets/img_archive/customattributessearch1.jpeg %}
+[72]: {% image_buster /assets/img_archive/customeventsview1.jpeg %}
 [73]: {% image_buster /assets/img_archive/manageproperties1.png %}
 [75]: {% image_buster /assets/img_archive/customeventsviewdatatypedropdown1.png %}
 [88]: {{site.baseurl}}/developer_guide/platform_integration_guides/sdk_primer/#blocking-data-collection

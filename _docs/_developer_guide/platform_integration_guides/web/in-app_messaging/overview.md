@@ -3,6 +3,9 @@ nav_title: Overview
 platform: Web
 page_order: 0
 
+page_type: reference
+description: "This reference article provides an overview of in-app messages, including best practices and use cases."
+channel: in-app messages
 ---
 # In-App Messages
 
@@ -30,9 +33,9 @@ To see examples of in-app messages, check out our [Client Integration Gallery][5
 
 ## In-App Message Types
 
-Braze currently offers the following default in-app message types: [`Slideup`][13], [`Modal`][17], and [`Full`][41] and [`HTML`][42].  Each in-app message type is customizable across content, images, icons, click actions, analytics, display, and delivery. 
+Braze currently offers the following default in-app message types: [`Slideup`][13], [`Modal`][17], and [`Full`][41] and [`HTML`][42].  Each in-app message type is customizable across content, images, icons, click actions, analytics, display, and delivery.
 
-All in-app messages inherit their prototype from [`appboy.InAppMessage`][2], which defines basic behavior and traits for all in-app messages. The protypical subclasses are [appboy.SlideUpMessage][3], [appboy.ModalMessage][6], [appboy.FullScreenMessage][7], and [appboy.HtmlMessage][12]. 
+All in-app messages inherit their prototype from [`appboy.InAppMessage`][2], which defines basic behavior and traits for all in-app messages. The protypical subclasses are [appboy.SlideUpMessage][3], [appboy.ModalMessage][6], [appboy.FullScreenMessage][7], and [appboy.HtmlMessage][12].
 
 ## Expected Behaviors by Message Types
 
@@ -42,7 +45,7 @@ These are what it looks like for your users to open one of our out-of-the-box in
   {% tab Slideup %}
 
   [`SlideUp`](https://js.appboycdn.com/web-sdk/latest/doc/ab.SlideUpMessage.html) in-app messages are so-named because traditionally on mobile platforms they "slide up" or "slide down" from the top or bottom of the screen. In the Braze Web SDK, these messages are displayed as more of a Growl or Toast style notification, to align with the web's dominant paradigm. They cover a small portion of the screen and provide an effective and non-intrusive messaging capability.
-  
+
   <br>
 
   ![Slideup Behavior]({% image_buster /assets/img/slideup-behavior.gif %}){: style="border:0px;"}
@@ -78,9 +81,9 @@ These are what it looks like for your users to open one of our out-of-the-box in
 
 {% alert important %}
 
-To enable HTML in-app messages, your SDK integration __must__ supply the `enableHtmlInAppMessages` initialization option to Braze, e.g. `appboy.initialize('YOUR-API_KEY', {enableHtmlInAppMessages: true})`. This is for security reasons - HTML in-app messages can execute JavaScript so we require a site maintainer to enable them.
+To enable HTML in-app messages, your SDK integration __must__ supply the `allowUserSuppliedJavascript` initialization option to Braze, e.g. `appboy.initialize('YOUR-API_KEY', {allowUserSuppliedJavascript: true})`. This is for security reasons - HTML in-app messages can execute JavaScript so we require a site maintainer to enable them.
 <br> <br>
-At Braze, the web SDK treats the "Email Web Capture Form" message type template as an HTML in-app message, therefore the same `enableHtmlInAppMessages` option must be set. 
+At Braze, the web SDK treats the "Email Web Capture Form" message type template as an HTML in-app message, therefore the same `allowUserSuppliedJavascript` option must be set.
 
 {% endalert %}
 

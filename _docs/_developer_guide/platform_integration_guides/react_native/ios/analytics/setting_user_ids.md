@@ -3,6 +3,9 @@ nav_title: Setting User IDs
 platform: React Native
 subplatform: iOS
 page_order: 0
+
+page_type: reference
+description: "This page provides resources and methods for setting user IDs for your iOS app running React Native."
 ---
 # Setting User IDs
 

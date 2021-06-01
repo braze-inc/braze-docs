@@ -1,7 +1,14 @@
 ---
 nav_title: Innovation Statement
 page_order: 9
+
+page_type: reference
+description: "Braze continually strives to enhance existing, and create new, features, functionality, products and services."
 ---
+
+<!--
+Warning! Don't make any changes to this document without approval from the legal department.
+-->
 
 # Braze Innovation Statement
 

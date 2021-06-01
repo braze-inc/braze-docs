@@ -2,7 +2,9 @@
 nav_title: Overview
 page_order: 0
 
-platform: Cordova
+platform: React Native
+page_type: reference
+description: "This page provides an overview of Content Cards. Review this page before you begin integrating Content Cards into your React Native app."
 ---
 
 # Content Cards 

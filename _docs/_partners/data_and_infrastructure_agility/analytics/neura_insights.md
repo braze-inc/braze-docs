@@ -3,7 +3,7 @@ nav_title: Neura Insights
 page_order: 0
 alias: /partners/neura_insights/
 
-description: "This article outlines the partnership between Braze and Neura Insights, which leads mobile brands drive higher customer engagement & retention."
+description: "This article outlines the partnership between Braze and Neura Insights, an analytics platform that allows you to uncover the relationships between each user’s real-world behavior and the actions they take in your app in order to find the best moment to engage with each user."
 page_type: partner
 
 ---

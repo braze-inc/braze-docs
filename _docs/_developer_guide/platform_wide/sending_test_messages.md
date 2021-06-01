@@ -1,6 +1,7 @@
 ---
 nav_title: Sending Test Messages
 page_order: 3
+description: "THis reference article covers sending test messages for different channels."
 ---
 # Sending Test Messages
 

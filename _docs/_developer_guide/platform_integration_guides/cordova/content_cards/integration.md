@@ -2,6 +2,9 @@
 nav_title: Integration
 platform: Cordova
 page_order: 1
+
+page_type: reference
+description: "This article covers how to get started with Content Cards for Cordova."
 ---
 
 # Content Cards for Cordova Integration

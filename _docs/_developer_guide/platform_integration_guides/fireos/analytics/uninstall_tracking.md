@@ -3,6 +3,8 @@ nav_title: Uninstall Tracking
 platform: FireOS
 page_order: 7
 
+page_type: reference
+description: "This article describes how Braze tracks uninstall counts for your app."
 ---
 ## Uninstall Tracking
 

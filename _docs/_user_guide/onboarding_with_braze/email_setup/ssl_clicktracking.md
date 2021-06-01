@@ -1,7 +1,10 @@
 ---
 nav_title: SSL Click Tracking
 page_order: 9
-description: "A fundamental part of SSL click-tracking for users who have HSTS, is getting a CDN configured to send the necessary security certificates required."
+
+page_type: reference
+description: "This reference article covers SSL click-tracking, best practices, and how to get started."
+channel: email
 ---
 
 # SSL Click Tracking

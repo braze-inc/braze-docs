@@ -2,6 +2,7 @@
 nav_title: Logging Purchases
 platform: Android
 page_order: 4
+description: "This reference article shows how to track in-app purchases and revenue and assign purchase properties in your Android application."
 
 ---
 # Logging Purchases

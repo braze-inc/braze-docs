@@ -1,8 +1,14 @@
 ---
 nav_title: In App Messages
 platform: React Native
-subplatform: Android and FireOS
+subplatform: 
+- Android
+- FireOS
 page_order: 2
+
+page_type: reference
+description: "This article covers in-app messages for Android or FireOS apps using React Native, including customizing and logging analytics."
+channel: in-app messages
 ---
 # In-App Messages
 
