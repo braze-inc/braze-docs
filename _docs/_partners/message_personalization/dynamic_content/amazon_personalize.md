@@ -15,7 +15,7 @@ Using machine learning, Amazon Personalize creates higher-quality recommendation
 
 This article will walk you through the process of configuring Amazon Personalize and integrating it into your Braze environment using Connected Content. This is done using a hands-on workshop that will walk you through all the steps required to deploy and train Amazon Personalize solutions, and then to integrate these solutions into a Braze email campaign using Connected Content. These examples are deployed in a fully-functional example eCommerce site called the Retail Demo Store. The resources and code for this tutorial are published in the [AWS Samples Retail Demo Store](https://github.com/aws-samples/retail-demo-store/). You can use this reference architecture implementation as an outline to implement Amazon Personalize in your own environment.
 
-## Pre-Requisites
+## Prerequisites
 
 You will need to clone the [Retail Demo Store repo](https://github.com/aws-samples/retail-demo-store/) and follow the steps outlined below to deploy the workshop environment to your AWS account. An AWS account is required to complete the workshop and to run the integration code.
 

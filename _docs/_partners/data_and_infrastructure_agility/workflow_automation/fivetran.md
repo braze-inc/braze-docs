@@ -8,7 +8,7 @@ description: "This article outlines the partnership between Braze and Fivetran, 
 
 [Fivetran](https://fivetran.com/) is a globally recognized brand whose analyst focused products and fully managed pipelines enable data-backed decisions by delivering ready-to-query data into your cloud warehouse. Now, as Braze's new technology partner, data-backed decision making has been made easier and more efficient than ever before, allowing you to spend more time on the difficult tasks.
 
-# Pre-Requisites
+## Prerequisites
 
 Requirement   |Source| Notes
 --------------|------|-------------
@@ -18,9 +18,9 @@ Braze Currents    | [Braze Currents](https://www.braze.com/product/data-agility-
 Braze API URL    | [Braze](https://dashboard.braze.com/sign_in) | Found in your Braze account.
 Braze API Key    | [Braze](https://dashboard.braze.com/sign_in) | Found in your Braze account.
 
-# Integration
+## Integration
 
-## Setting Up Braze Current
+### Setting Up Braze Current
 
 {% tabs %}
 {% tab Amazon S3 %}

@@ -14,7 +14,7 @@ page_type: partner
 
 Tealium AudienceStream visitor profiles are segmented by shared behaviors to create audiences, sets of visitors with common traits. These audiences fuel your marketing technology stack in real-time via connectors. For more information on AudienceStream, check out the Tealium Documentation [here](https://community.tealiumiq.com/t5/Customer-Data-Hub/Introduction-to-AudienceStream/ta-p/16087).
 
-## Pre-Requisites
+## Prerequisites
 
 | Name | Description |
 | ---- | ----------- |

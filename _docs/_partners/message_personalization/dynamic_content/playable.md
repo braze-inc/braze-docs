@@ -12,8 +12,7 @@ page_type: partner
 
 Expand Braze's email capabilities to deliver your best content (high-quality video) to your best audience (email) with Playable. Playable video emails allow you to increase your click-through and post-click metrics with exciting high-quality video content that plays automatically within the inbox.
 
-## Pre-Requisites
-
+## Prerequisites
 
 Requirement | Description
 ----------- | -----
