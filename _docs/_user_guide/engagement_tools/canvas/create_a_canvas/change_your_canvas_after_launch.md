@@ -59,10 +59,6 @@ There are a number of things to know if you plan to edit or add more steps to an
 - You cannot edit or delete existing connections nor can you insert a step between existing connected steps once a Canvas is launched.
 - Users already in the Canvas will fall out when a Canvas is stopped.
 
-{% alert important %}
-When a user receives a step, the next step will be queued. Once a step has been queued, it cannot be changed. As a result, you cannot make edits post lauch to a user's current and next step in their Canvas journey.
-{% endalert %}
-
 ## Canvas Variant Percentages
 
 In Canvas, if a variant percentage is modified, you will find that the users may be redistributed to other variants.
