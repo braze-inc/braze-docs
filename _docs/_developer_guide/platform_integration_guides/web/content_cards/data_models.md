@@ -10,6 +10,7 @@ channel: content cards
 ---
 
 # Content Card Types for Web
+
 The Braze Web SDK supports several unique Content Card card types, [ab.ClassicCard](https://js.appboycdn.com/web-sdk/latest/doc/ab.ClassicCard.html), [ab.Banner](https://js.appboycdn.com/web-sdk/latest/doc/ab.Banner.html), [ab.CaptionedImage](https://js.appboycdn.com/web-sdk/latest/doc/ab.CaptionedImage.html) which share a base model, [ab.Card](https://js.appboycdn.com/web-sdk/latest/doc/ab.Card.html).
 
 ## Requesting Unviewed Content Card Count for Web
@@ -28,5 +29,5 @@ Braze will not refresh Content Cards on new page loads (and so this function wil
 
 {% endcomment %}
 
-## Key Value Pairs
-`ab.Card` objects may optionally carry key value pairs as `extras`. These can be used to send data down along with a card for further handling by the application. Call [`card.extras`](https://js.appboycdn.com/web-sdk/latest/doc/ab.Card.html) to access these values.
+## Key-Value Pairs
+`ab.Card` objects may optionally carry key-value pairs as `extras`. These can be used to send data down along with a card for further handling by the application. Call [`card.extras`](https://js.appboycdn.com/web-sdk/latest/doc/ab.Card.html) to access these values.

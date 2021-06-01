@@ -26,7 +26,7 @@ When building out Content Cards, you should integrate them using a single `impor
 
 Much like a rocketship adding a booster, your own custom objects can be extended to function as Content Cards. Limited API surfaces such as this, provide flexibility to work with different data backends interchangeably. This can be done by conforming to the `ContentCardable` protocol and implementing the initializer (as seen below) and through the use of the `ContentCardData` struct, allows you to access the `ABKContentCard` data.
 
-The initializer also includes a `ContentCardClassType` enum. Through the use of key value pairs within the Braze dashboard, you can set an explicit `class_type` key that will be used to determine what object to initialize. Once you have a solid understanding of these code considerations, check out our [use cases](#sample-use-cases) below to get started implementing your own custom objects.
+The initializer also includes a `ContentCardClassType` enum. Through the use of key-value pairs within the Braze dashboard, you can set an explicit `class_type` key that will be used to determine what object to initialize. Once you have a solid understanding of these code considerations, check out our [use cases](#sample-use-cases) below to get started implementing your own custom objects.
 
 {% include video.html id="55KTZqYAl7Y" align="center" %}
 
@@ -113,7 +113,7 @@ __No `ABKContentCard` Dependencies__<br>
 {% tabs %}
 {% tab Swift %}
 __Custom Object Initializer__<br>
-MetaData from an `ABKContentCard` is used to populate your object's variables. The key value pairs set up in the Braze Dashboard are represented in the “extras” dictionary.
+MetaData from an `ABKContentCard` is used to populate your object's variables. The key-value pairs set up in the Braze Dashboard are represented in the “extras” dictionary.
 
 ```swift
 extension Tile: ContentCardable {
@@ -140,7 +140,7 @@ extension Tile: ContentCardable {
 {% endtab %}
 {% tab Objective-C %}
 __Custom Object Initializer__<br>
-MetaData from an `ABKContentCard` is used to populate your object's variables. The key value pairs set up the Braze Dashboard are represented in the “extras” dictionary.
+MetaData from an `ABKContentCard` is used to populate your object's variables. The key-value pairs set up the Braze Dashboard are represented in the “extras” dictionary.
 
 ```objc
 - (id _Nullable)initWithMetaData:(nonnull NSDictionary *)metaData classType:(enum ContentCardClassType)classType {
@@ -373,7 +373,7 @@ A semaphore is used to signal when the task is executed due to the notification 
 {% endtabs %}
 
 ### Content Cards in a Message Center
-Content Cards can be used in a message center format where each message is its own card. Each card contains additional key value pairs that power on-click UI/UX.
+Content Cards can be used in a message center format where each message is its own card. Each card contains additional key-value pairs that power on-click UI/UX.
 {% include video.html id="dmaT61p8kW8" align="center" %}
 
 {% tabs %}

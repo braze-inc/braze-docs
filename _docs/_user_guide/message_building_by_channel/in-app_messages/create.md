@@ -183,9 +183,9 @@ Some in-app message types do not have the option for styling beyond uploading cu
 
 ## Step 5: Configure Additional Settings
 
-### Key Value Pairs
+### Key-Value Pairs
 
-Add [key value pairs][19] to send extra custom fields to user devices.
+Add [key-value pairs][19] to send extra custom fields to user devices.
 
 ### Re-evaluate Campaign Eligibility and Liquid
 

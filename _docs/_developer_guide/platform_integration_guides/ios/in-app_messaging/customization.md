@@ -20,7 +20,7 @@ __Note that integration of `SDWebImage` is required if you plan on using our Bra
 
 ## Key Value Pair Extras
 
-`ABKInAppMessage` objects may carry key value pairs as `extras`. These are specified on the dashboard when creating a campaign. Key value pairs can be used to send data down along with an in-app message for further handling by your app.
+`ABKInAppMessage` objects may carry key-value pairs as `extras`. These are specified on the dashboard when creating a campaign. Key-value pairs can be used to send data down along with an in-app message for further handling by your app.
 
 ## Setting Delegates
 
@@ -445,7 +445,7 @@ By default, in-app messages are triggered by event types that are logged by the 
 
 To enable this feature you would send a silent push to the device which allows the device to log an SDK based event. This SDK event would subsequently trigger the user-facing in-app message.
 
-### Step 1: Handle Silent Push and Key Value Pairs
+### Step 1: Handle Silent Push and Key-Value Pairs
 Add the following code within the `application(_:didReceiveRemoteNotification:fetchCompletionHandler:)` method:
 
 {% tabs %}

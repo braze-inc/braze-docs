@@ -10,7 +10,7 @@ guide_featured_list:
   fa_icon: fab fa-android
   link: /docs/developer_guide/platform_integration_guides/android/initial_sdk_setup/android_sdk_integration/
 - name: iOS
-  link: /docs/developer_guide/platform_integration_guides/ios/
+  link: /docs/developer_guide/platform_integration_guides/ios/initial_sdk_setup/overview/
   fa_icon: fab fa-apple
 - name: Web
   link: /docs/developer_guide/platform_integration_guides/web/initial_sdk_setup/
@@ -45,9 +45,6 @@ guide_menu_list:
   - name: Windows Universal
     link: /docs/developer_guide/platform_integration_guides/windows_universal/initial_sdk_setup/
     fa_icon: fab fa-windows
-  - name: Zapier/Wordpress
-    link: /docs/partners/channel_extensions/workflow_automation/zapier_integration/
-    fa_icon: fab fa-wordpress
   - name: Xamarin Android and Fire OS
     link: /docs/developer_guide/platform_integration_guides/xamarin/android_and_fireos/initial_sdk_setup/
     fa_icon: fab fa-android
