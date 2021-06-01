@@ -2,6 +2,7 @@
 nav_title: Location Tracking
 platform: Windows_Universal
 page_order: 6
+
 ---
 
 # Location Tracking

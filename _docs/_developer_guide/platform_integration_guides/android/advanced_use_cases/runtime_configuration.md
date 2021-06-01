@@ -5,6 +5,7 @@ page_order: 4
 description: "This reference article covers how to set up runtime configuration for your Android application."
 
 ---
+
 # Runtime Configuration
 
 Runtime configuration is an optional way to configure your app at runtime in place of a `braze.xml`. The use of both runtime configuration and `braze.xml` configuration is still possible. Runtime configured values will always take precedence over the same value in the `braze.xml`. If the Braze SDK can find all values in the runtime configuration, then the `braze.xml` is no longer needed and can be removed. See the full documentation [here][1].

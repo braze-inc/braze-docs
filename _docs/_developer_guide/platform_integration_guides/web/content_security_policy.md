@@ -4,6 +4,7 @@ platform: Web
 page_order: 25
 page_type: reference
 description: "This article covers Content-Security-Policy headers needed with the Braze Web SDK"
+
 ---
 
 # Content Security Policy Headers

@@ -5,7 +5,9 @@ page_order: 4
 
 page_type: reference
 description: "This page describes methods to assign custom attributes to users via the Braze SDK."
+
 ---
+
 # Setting Custom Attributes
 
 Braze provides methods for assigning attributes to users. You'll be able to filter and segment your users according to these attributes on the dashboard.

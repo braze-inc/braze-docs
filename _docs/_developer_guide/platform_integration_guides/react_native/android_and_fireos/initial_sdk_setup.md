@@ -8,7 +8,9 @@ page_order: 0
 
 page_type: reference
 description: "This article covers initial SDK setup steps for Android or FireOS apps using React Native."
+
 ---
+
 # Initial SDK Setup
 
 ### Using react-native link

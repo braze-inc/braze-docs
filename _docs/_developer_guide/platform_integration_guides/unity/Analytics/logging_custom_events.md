@@ -3,6 +3,7 @@ nav_title: Logging Custom Events
 platform: Unity
 page_order: 1
 ---
+
 # Logging Custom Events
 
 You can record custom events in Braze to learn more about your app's usage patterns and to segment your users by their actions on the dashboard.

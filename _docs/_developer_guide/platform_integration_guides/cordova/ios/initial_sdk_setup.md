@@ -6,7 +6,9 @@ page_order: 0
 
 page_type: reference
 description: "This article describes initial SDK setup steps for iOS apps running on Cordova."
+
 ---
+
 # Initial SDK Setup
 
 Download the SDK from [Github][1] and run the following from the root your project:

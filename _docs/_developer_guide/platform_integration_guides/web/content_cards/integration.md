@@ -6,6 +6,7 @@ platform: Web
 page_type: reference
 description: "This article covers methods to toggle the display of content cards via the Braze Web SDK."
 channel: content cards
+
 ---
 
 # Content Cards for Web Integration

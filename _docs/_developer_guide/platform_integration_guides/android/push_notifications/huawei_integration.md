@@ -7,6 +7,7 @@ channel:
   - push
 
 ---
+
 # Huawei Integration
 
 Newer phones manufactured by [Huawei][1] come equipped with Huawei Mobile Services (HMS) - a service used to deliver push _instead of_ Google's Firebase Cloud Messaging (FCM).
@@ -100,11 +101,7 @@ After adding your custom push service, add the following to your `AndroidManifes
 </service>
 ```
 
-<<<<<<< HEAD
-## Step 5: Sending Huawei Push
-=======
 ## Step 5: Send a Huawei Push
->>>>>>> 145fb5ac779b8d85dde3e9f449d8c78670e7d475
 
 At this point, you've created a new Huawei Android app in the Braze Dashboard, configured it with your Huawei Developer credentials, and have integrated the Braze and Huawei SDKs into your app.
 

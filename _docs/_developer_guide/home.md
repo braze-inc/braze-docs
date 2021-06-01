@@ -25,7 +25,7 @@ guide_menu_list:
     link: /docs/developer_guide/platform_integration_guides/cordova/ios/initial_sdk_setup/
     fa_icon: fab fa-apple
   - name: Fire OS
-    link: /docs/developer_guide/platform_integration_guides/fireos/initial_sdk_setup/
+    link: /docs/developer_guide/platform_integration_guides/fireos/initial_sdk_setup/android_sdk_integration/
     fa_icon: fab fa-amazon
   - name: ReactNative Android and FireOS
     link: /docs/developer_guide/platform_integration_guides/react_native/android_and_fireos/initial_sdk_setup/

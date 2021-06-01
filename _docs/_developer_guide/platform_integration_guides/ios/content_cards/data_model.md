@@ -10,6 +10,7 @@ channel:
 ---
 
 # Content Cards Data Model
+
 The Content Cards data model is available in the iOS SDK.
 
 ## Getting the Data

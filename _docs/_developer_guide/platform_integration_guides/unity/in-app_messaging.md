@@ -2,7 +2,9 @@
 nav_title: In-App Messaging
 platform: Unity
 page_order: 2
+
 ---
+
 # In-App Messaging
 
 ## Configuring Default In-app Message Behavior

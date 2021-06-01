@@ -7,6 +7,7 @@ Tool:
   - Location
 
 ---
+
 # Location Tracking
 
 Add at least one of the following the following permission to your `AndroidManifest.xml` file to declare your app's intent to collect location data:

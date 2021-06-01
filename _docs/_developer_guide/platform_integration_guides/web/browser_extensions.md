@@ -5,6 +5,7 @@ page_order: 20
 
 page_type: reference
 description: "This article describes how to use the Braze Web SDK inside your Browser Extensions (Google Chrome, Firefox)."
+
 ---
 
 # Browser Extension Integration

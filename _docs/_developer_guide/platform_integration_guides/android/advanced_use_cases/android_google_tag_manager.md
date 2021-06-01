@@ -5,6 +5,7 @@ page_order: 8
 description: "This article covers how to initalize, configure, and implement the Google Tag manager into your Android app."
 
 ---
+
 # Google Tag Manager for Android
 
 ## Initializing the SDK {#initializing-android-google-tag-provider}

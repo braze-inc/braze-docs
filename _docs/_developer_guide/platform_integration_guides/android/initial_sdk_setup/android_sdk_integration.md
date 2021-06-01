@@ -3,7 +3,9 @@ nav_title: Android SDK Integration
 page_order: 0
 platform: Android
 description: "This reference article covers how to integrate the Android SDK into your Android application."
+
 ---
+
 # Android SDK Integration
 
 Installing the Braze SDK will provide you with basic analytics functionality as well as working in-app messages with which you can engage your users.

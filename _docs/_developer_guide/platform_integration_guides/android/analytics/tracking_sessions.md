@@ -3,7 +3,9 @@ nav_title: Tracking Sessions
 platform: Android
 page_order: 0
 description: "This reference article shows how to subscribe to session updates for your Android application."
+
 ---
+
 # Session Tracking
 
 The Braze SDK reports session data that is used by the Braze dashboard to calculate user engagement and other analytics integral to understanding your users. Based on the below session semantics, our SDK generates "start session" and "close session" data points that account for session length and session counts viewable within the Braze Dashboard.

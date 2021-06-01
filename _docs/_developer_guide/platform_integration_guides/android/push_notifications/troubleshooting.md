@@ -6,8 +6,8 @@ description: "This article covers potential troubleshooting topics for your Andr
 channel:
   - push
 
-
 ---
+
 # Troubleshooting
 
 ## Understanding the Braze Workflow

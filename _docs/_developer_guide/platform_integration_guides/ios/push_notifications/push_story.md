@@ -1,7 +1,7 @@
 ---
-nav_title: Push Story
+nav_title: Push Stories
 platform: iOS
-page_order: 5
+page_order: 28
 description: "This article shows how to set up push stories for your iOS application."
 channel:
   - push

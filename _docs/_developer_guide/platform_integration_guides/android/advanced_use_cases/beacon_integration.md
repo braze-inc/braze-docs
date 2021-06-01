@@ -3,7 +3,9 @@ nav_title: Beacon Integration
 platform: Android
 page_order: 2
 description: "This article covers how to log custom events using Gimbal Beacons for Android."
+
 ---
+
 # Beacon Integration
 
 Here we will walk through how to integrate specific kinds of beacons with Braze to allow for segmentation and messaging.

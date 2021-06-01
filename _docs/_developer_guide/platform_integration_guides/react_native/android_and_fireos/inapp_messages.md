@@ -9,7 +9,9 @@ page_order: 2
 page_type: reference
 description: "This article covers in-app messages for Android or FireOS apps using React Native, including customizing and logging analytics."
 channel: in-app messages
+
 ---
+
 # In-App Messages
 
 Native in-app messages display automatically on Android when using React Native.

@@ -7,6 +7,7 @@ channel:
   - push
 
 ---
+
 # Baidu Integration
 
 Braze is capable of sending push notifications to Android devices using [Baidu Cloud Push][14].

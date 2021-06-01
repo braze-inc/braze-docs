@@ -5,6 +5,7 @@ page_order: 3
 description: "This reference article covers how to integrate network offline mode for your Android application."
 
 ---
+
 # Network Offline Mode
 
 Network Offline Mode is an optional feature that pauses or resumes outbound network requests from the Braze SDK at any point during runtime. Events are not lost during the offline state. See the full documentation [here][1].

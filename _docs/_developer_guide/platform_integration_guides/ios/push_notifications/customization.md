@@ -2,12 +2,13 @@
 nav_title: Customization
 platform: iOS
 ex_push_payload: archive/apple/push_payload.json
-page_order: 1
+page_order: 2
 description: "This reference article covers iOS push notification customization options, such as badge count, actions buttons, and more."
 channel:
   - push
 
 ---
+
 # Customization {#push-customization}
 
 ## Badge Counts
@@ -42,16 +43,6 @@ In addition to providing a set of [default push categories][2], Braze supports c
 These categories can then be assigned to push notifications via our dashboard to trigger the action button configurations of your design. Here's an example that leverages the "LIKE_CATEGORY" displayed on the device!
 
 ![Push Example with Buttons][17]
-
-## Sample Braze Apple Push Payload
-
-When Braze sends a push notification, the payload will look like this. You should avoid handling a top-level dictionary called `ab` or `aps` in your application:
-
-{% include {{ page.ex_push_payload}} %}
-
->  the `alert` can also just be a string, which will be the push message text.
-
-In the case that your push notification does not have a campaign ID, the key `c` will have the value `NSNull`. This value is necessary and should not be sanitized or removed. Some cases where there is no campaign ID are sending a push from an API campaign, a test push from the dashboard, or a test curl.
 
 ## Custom Sounds and Push
 

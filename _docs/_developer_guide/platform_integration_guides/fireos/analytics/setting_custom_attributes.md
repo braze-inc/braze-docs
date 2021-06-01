@@ -5,14 +5,16 @@ page_order: 3
 
 page_type: reference
 description: "This article covers methods for assigning custom attributes to users."
+
 ---
-## Setting Custom Attributes
+
+# Setting Custom Attributes
 
 Braze provides methods for assigning attributes to users. You'll be able to filter and segment your users according to these attributes on the dashboard.
 
 Before implementation, be sure to review examples of the segmentation options afforded by Custom events vs. Custom attributes vs Purchase events in our [Analytics Overview][7], as well as our notes on [event naming conventions]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/event_naming_conventions/).
 
-### Assigning Standard User Attributes
+## Assigning Standard User Attributes
 
 To assign attributes to your users, call the `getCurrentUser()` method on your Braze instance to get a reference to the current user of your app. Once you have a reference to the current user, you can call methods to set predefined or custom attributes.
 
@@ -40,7 +42,7 @@ This is what setting a first name would look like in code:
 Appboy.getInstance(context).getCurrentUser().setFirstName("first_name");
 ```
 
-### Assigning Custom User Attributes
+## Assigning Custom User Attributes
 
 In addition to our predefined user attribute methods, Braze also provides custom attributes to track data from your applications. Braze Custom attributes can be set with the following data types:
 
@@ -55,13 +57,13 @@ In addition to our predefined user attribute methods, Braze also provides custom
 
 Full method specifications for custom attributes can be found here within the [AppboyUser class within the Javadocs][2].
 
-#### Setting a Custom Attribute with a String Value
+### Setting a Custom Attribute with a String Value
 
 ```java
 Appboy.getInstance(context).getCurrentUser().setCustomUserAttribute("your_attribute_key", "your_attribute_value");
 ```
 
-#### Setting a Custom Attribute with an Integer Value
+### Setting a Custom Attribute with an Integer Value
 
 ```java
 Appboy.getInstance(context).getCurrentUser().setCustomUserAttribute, "your_attribute_key", YOUR_INT_VALUE);
@@ -69,31 +71,31 @@ Appboy.getInstance(context).getCurrentUser().setCustomUserAttribute, "your_attri
 Appboy.getInstance(context).getCurrentUser().incrementCustomUserAttribute("your_attribute_key", YOUR_INCREMENT_VALUE);
 ```
 
-#### Setting a Custom Attribute with a Boolean Value
+### Setting a Custom Attribute with a Boolean Value
 
 ```java
 Appboy.getInstance(context).getCurrentUser().setCustomUserAttribute("your_attribute_key", YOUR_BOOLEAN_VALUE);
 ```
 
-#### Setting a Custom Attribute with a Long Value
+### Setting a Custom Attribute with a Long Value
 
 ```java
 Appboy.getInstance(context).getCurrentUser().setCustomUserAttribute("your_attribute_key", YOUR_LONG_VALUE);
 ```
 
-#### Setting a Custom Attribute with a Float Value
+### Setting a Custom Attribute with a Float Value
 
 ```java
 Appboy.getInstance(context).getCurrentUser().setCustomUserAttribute("your_attribute_key", YOUR_FLOAT_VALUE);
 ```
 
-#### Setting a Custom Attribute with a Double Value
+### Setting a Custom Attribute with a Double Value
 
 ```java
 Appboy.getInstance(context).getCurrentUser().setCustomUserAttribute("your_attribute_key", YOUR_DOUBLE_VALUE);
 ```
 
-#### Setting a Custom Attribute with a Date Value
+### Setting a Custom Attribute with a Date Value
 
 ```java
 Appboy.getInstance(context).getCurrentUser().setCustomUserAttribute("your_attribute_key", YOUR_DATE_VALUE);
@@ -107,7 +109,7 @@ Appboy.getInstance(context).getCurrentUser().setCustomUserAttributeToSecondsFrom
   Dates passed to Braze with this method must either be in the [ISO 8601](http://en.wikipedia.org/wiki/ISO_8601) format (e.g `2013-07-16T19:20:30+01:00`) or in the `yyyy-MM-dd'T'HH:mm:ss:SSSZ` format (e.g `2016-12-14T13:32:31.601-0800`).
 {% endalert %}
 
-#### Setting a Custom Attribute with an Array Value
+### Setting a Custom Attribute with an Array Value
 The maximum number of elements in Custom Attribute Arrays defaults to 25. The maximum for individual arrays can be increased to up to 100. If you would like this maximum increased, please reach out to your Customer Service Manager. Arrays exceeding the maximum number of elements will be truncated to contain the maximum number of elements. For more information on Custom Attribute Arrays and their behavior, see our [Documentation on Arrays][6].
 
 ```java

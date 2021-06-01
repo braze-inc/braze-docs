@@ -6,7 +6,9 @@ page_order: 0
 page_type: reference
 description: "This reference article provides an overview of in-app messages, including best practices and use cases."
 channel: in-app messages
+
 ---
+
 # In-App Messages
 
 __In-App Messages__ help you get content to your user without interrupting their day with a push notification. Customized and tailored in-app messages enhance the user experience and help your audience get the most value out of your app. With a variety of layouts and customization tools to choose from, in-app messages engage your users more than ever before.

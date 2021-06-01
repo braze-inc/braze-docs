@@ -2,7 +2,9 @@
 nav_title: Setting User IDs
 platform: Windows_Universal
 page_order: 1
+
 ---
+
 # Setting User IDs
 
 User IDs should be set for each of your users. These should be unchanging and accessible when a user opens the app. Naming your User IDs correctly from the start is one of the most __crucial__ steps when setting up User IDs. We strongly suggest using the Braze standard of UUIDs/GUIDs (detailed below). We also, strongly recommend providing this identifier as it will allow you to:

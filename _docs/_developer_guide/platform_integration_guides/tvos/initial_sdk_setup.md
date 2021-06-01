@@ -5,6 +5,7 @@ page_order: 0
 
 page_type: reference
 description: "This page covers initial setup steps for the tvOS Braze SDK."
+
 ---
 
 # Initial SDK Setup

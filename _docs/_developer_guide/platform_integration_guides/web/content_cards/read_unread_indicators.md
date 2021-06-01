@@ -6,6 +6,7 @@ platform: Web
 page_type: reference
 description: "This reference article covers read and unread indicators in content cards."
 channel: content cards
+
 ---
 
 # Read/Unread Indicators

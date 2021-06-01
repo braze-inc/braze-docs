@@ -5,6 +5,7 @@ page_order: 3
 description: "This reference article shows how to set custom attributes in your iOS application."
 
 ---
+
 # Setting Custom Attributes
 
 Braze provides methods for assigning attributes to users. You'll be able to filter and segment your users according to these attributes on the dashboard.

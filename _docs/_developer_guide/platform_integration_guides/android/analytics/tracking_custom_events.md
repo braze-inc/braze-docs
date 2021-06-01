@@ -5,6 +5,7 @@ page_order: 2
 description: "This reference article covers how to add and track custom events for your Android application."
 
 ---
+
 # Tracking Custom Events
 
 You can record custom events in Braze to learn more about your app's usage patterns and to segment your users by their actions on the dashboard.

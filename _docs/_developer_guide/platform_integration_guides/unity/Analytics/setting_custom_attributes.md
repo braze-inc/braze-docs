@@ -2,7 +2,9 @@
 nav_title: Setting Custom Attributes
 platform: Unity
 page_order: 2
+
 ---
+
 # Setting Custom Attributes
 
 Braze provides methods for assigning attributes to users. You'll be able to filter and segment your users according to these attributes on the dashboard.

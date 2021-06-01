@@ -3,11 +3,12 @@ nav_title: In App Messages
 platform: React Native
 subplatform: iOS
 page_order: 2
-
 page_type: reference
 description: "This article covers in-app messages for iOS apps using React Native, including customizing and logging analytics."
 channel: in-app messages
+
 ---
+
 # In-App Messages
 
 Native in-app messages display automatically on iOS when using React Native.

@@ -6,6 +6,7 @@ page_order: 3
 page_type: reference
 description: "This article covers customization of in-app messaging via the Braze SDK."
 channel: in-app messages
+
 ---
 
 # Customization {#in-app-message-customization}

@@ -1,5 +1,5 @@
 ---
-nav_title: CocoaPods
+nav_title: CocoaPods Integration
 platform: iOS
 page_order: 1
 description: "This reference article shows how to integrate the Braze SDK using CocoaPods for iOS."

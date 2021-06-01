@@ -4,6 +4,7 @@ platform: Web
 page_order: 3
 
 ---
+
 # Setting Custom Attributes
 
 Braze provides methods for assigning attributes to users. You'll be able to filter and segment your users according to these attributes on the dashboard.

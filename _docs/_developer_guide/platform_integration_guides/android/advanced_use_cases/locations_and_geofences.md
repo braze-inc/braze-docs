@@ -7,6 +7,7 @@ Tool:
   - Location
 
 ---
+
 # Locations & Geofences
 
 Geofences are only available in select Braze packages. For access please create a support ticket or speak with your Braze Customer Success Manager. Learn more in [Braze Docs]({{site.baseurl}}/developer_guide/platform_integration_guides/fireos/advanced_use_cases/locations_and_geofences/#locations--geofences).

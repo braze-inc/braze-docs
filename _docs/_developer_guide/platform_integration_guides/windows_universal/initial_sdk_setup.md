@@ -2,7 +2,9 @@
 nav_title: Initial SDK Setup
 platform: Windows_Universal
 page_order: 0
+
 ---
+
 # Initial SDK Integration
 
 The Braze SDK will provide you with an API to report information to be used in analytics, segmentation, and engagement, as well as the ability to register users for push and receive notifications.

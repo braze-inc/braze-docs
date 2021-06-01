@@ -2,7 +2,9 @@
 nav_title: Integration
 platform: Windows_Universal
 page_order: 0
+
 ---
+
 # Integration
 
 A push notification is an out-of-app alert that appears on the user's screen when an important update occurs. Push notifications are a valuable way to provide your users with time-sensitive and relevant content or to re-engage them with your app.

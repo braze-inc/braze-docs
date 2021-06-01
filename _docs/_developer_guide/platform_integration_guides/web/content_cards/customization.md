@@ -6,6 +6,7 @@ platform: Web
 page_type: reference
 description: "This article covers how to customize the default content cards style within the Braze SDK."
 channel: content cards
+
 ---
 
 # Content Cards Customization

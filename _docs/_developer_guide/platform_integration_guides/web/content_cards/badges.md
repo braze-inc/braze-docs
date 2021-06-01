@@ -6,6 +6,7 @@ platform: Web
 page_type: reference
 description: "This reference article describes how to request the number of unread content cards."
 channel: content cards
+
 ---
 
 # Requesting Unviewed Content Card Count for Web

@@ -8,13 +8,13 @@ channel:
 
 ---
 
-## Read/Unread Indicators {#read-indicators-for-android}
+# Read/Unread Indicators {#read-indicators-for-android}
 
 Braze allows you to optionally toggle on an Unread/Read indicator on Content Cards.
 
 ![Read & Unread Indicators][1]
 
-### Customizing the Indicators {#customizing-the-indicators-for-android}
+## Customizing the Indicators {#customizing-the-indicators-for-android}
 The color of these indicators can be customized by altering the values in `com_appboy_content_cards_unread_bar_color`.
 
 [1]: {% image_buster /assets/img/braze-content-cards-seen-unseen-behavior.png %}

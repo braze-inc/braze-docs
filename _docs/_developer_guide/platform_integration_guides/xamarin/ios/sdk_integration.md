@@ -3,7 +3,9 @@ nav_title: Initial SDK Setup
 platform: Xamarin
 subplatform: iOS
 page_order: 0
+
 ---
+
 # Initial SDK Setup
 
 Installing the Braze SDK will provide you with basic analytics functionality as well as working in-app messages with which you can engage your users.
