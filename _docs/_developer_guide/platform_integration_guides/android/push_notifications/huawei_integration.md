@@ -7,6 +7,7 @@ channel:
   - push
 
 ---
+
 # Huawei Integration
 
 Newer phones manufactured by [Huawei][1] come equipped with Huawei Mobile Services (HMS) - a service used to deliver push _instead of_ Google's Firebase Cloud Messaging (FCM).
@@ -126,7 +127,7 @@ In the **Test** tab, enter your user ID which you've set in your app using the [
 
 At this point, you should receive a test push notification on your Huawei (HMS) device from Braze!
 
-### Setting up Huawei Segmentation (optional)
+### Setting up Huawei Segmentation (Optional)
 
 Since your Huawei App in the Braze dashboard is built upon the Android Push platform, you have the flexibility to send push to all android users (Firebase Cloud Messaging and Huawei Mobile Services), or you can choose to segment your campaign audience to specific apps.
 
@@ -136,7 +137,7 @@ To send push to only Huawei apps, [create a new Segment][15] and select your Hua
 
 Of course, if you want to send the same push to all Android push providers, you can choose to not specify the app which will send to all Android apps configured within the current App Group.
 
-### Analytics
+## Analytics
 
 Once your campaign has been launched, you will see analytics for your campaign or canvas aggregated for Android Push. For more information on Android Push analytics and settings, see our [User Guide for Push][10].
 

@@ -6,8 +6,10 @@ page_order: 0
 
 page_type: reference
 description: "This page provides resources and methods for setting user IDs for your iOS app running React Native."
+
 ---
-## Setting User IDs
+
+# Setting User IDs
 
 See [the iOS integration instructions][1] for an in depth discussion of when to set and change a user ID.
 

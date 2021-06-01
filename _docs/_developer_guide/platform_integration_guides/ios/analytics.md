@@ -1,5 +1,5 @@
 ---
-page_order: 6
+page_order: 5
 nav_title: Analytics
 platform: iOS
 

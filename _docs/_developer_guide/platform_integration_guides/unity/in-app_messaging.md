@@ -2,18 +2,20 @@
 nav_title: In-App Messaging
 platform: Unity
 page_order: 2
+
 ---
+
 # In-App Messaging
 
 ## Configuring Default In-app Message Behavior
 
-#### Android
+### Android
 
 On Android, in-app messages from Braze are automatically displayed natively. To disable this functionality, deselect "Automatically Display In-App Messages" in the Braze configuration editor.
 
 You may alternatively set `com_appboy_inapp_show_inapp_messages_automatically` to `false` in your Unity project's `braze.xml`.
 
-#### iOS
+### iOS
 
 On iOS, in-app messages from Braze are automatically displayed natively. To disable this functionality, set game object listeners in the Braze configuration editor, and ensure "Braze Displays In-App Messages" is not selected.
 
@@ -29,7 +31,7 @@ Incoming `string` messages received in your in-app message game object callback 
 
 Use `InAppMessageFactory.BuildInAppMessage()` to parse your in-app message. The resulting object will either be an instance of [`IInAppMessage.cs`][13] or [`IInAppMessageImmersive.cs`][12] depending on its type.
 
-##### Example In-App Message Callback
+### Example In-App Message Callback
 
 ```csharp
 // Automatically logs a button click, if present.

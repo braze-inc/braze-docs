@@ -307,6 +307,11 @@ validurls['/docs/email_open_tracking_pixel/'] = '/docs/email_open_tracking/';
 validurls['/docs/#email_blacklist/'] = '/docs/blacklist/';
 validurls['/docs/partners/braze_currents/data_partner_integrations/amplitude/'] = '/docs/partners/insights/behavioral_analytics/amplitude_for_currents/';
 validurls['/docs/developer_guide/rest_api/email_sync/#changing-email-subscription-status'] = '/docs/api/endpoints/email/post_email_subscription_status/#change-users-email-subscription-status';
+validurls['/docs/developer_guide/platform_integration_guides/fireos/advanced_use_cases/deep_linking_to_in-app_resources/'] = '/docs/developer_guide/platform_integration_guides/fireos/advanced_use_cases/deep_linking/';
+validurls['/docs/developer_guide/platform_integration_guides/ios/push_primer/'] = '/docs/developer_guide/platform_integration_guides/ios/push_notifications/push_primer/';
+validurls['/docs/developer_guide/platform_integration_guides/ios/push_story/'] = '/docs/developer_guide/platform_integration_guides/ios/push_notifications/push_story/';
+
+
 
 validurls['/docs/hidden/private_betas/amphtml/'] = '/docs/amphtml/';
 validurls['/docs/hidden/private_betas/global_control_group/'] = '/docs/user_guide/engagement_tools/testing/global_control_group/';

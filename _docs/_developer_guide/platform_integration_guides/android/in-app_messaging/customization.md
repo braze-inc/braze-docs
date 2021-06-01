@@ -14,7 +14,7 @@ All of Braze’s in-app message types are highly customizable across messages, i
 
 ## Key Value Pair Extras
 
-In-app message objects may carry key value pairs as `extras`. They are specified on the dashboard under "Advanced Settings" when creating an in-app message campaign. These can be used to send data down along with an in-app message for further handling by the application.
+In-app message objects may carry key-value pairs as `extras`. They are specified on the dashboard under "Advanced Settings" when creating an in-app message campaign. These can be used to send data down along with an in-app message for further handling by the application.
 
 Call the following when you get an in-app message object to retrieve its extras:
 
@@ -61,7 +61,7 @@ Braze UI elements come with a default look and feel that matches the Android sta
 
 If you would prefer, you can override these styles to create a look and feel that better suits your app.
 
-To override a style, copy it in its entirety to the `styles.xml` file in your own project and make modifications. The whole style must be copied over to your local `styles.xml` file in order for all attributes to be correctly set. Please note that these custom styles are for changes to individual UI elements, not wholesale changes to layouts. Layout-level changes need to be handled with custom views.
+To override a style, copy it in its entirety to the `styles.xml` file in your project and make modifications. The whole style must be copied over to your local `styles.xml` file for all attributes to be correctly set. Please note that these custom styles are for changes to individual UI elements, not wholesale changes to layouts. Layout-level changes need to be handled with custom views.
 
 ### Using Custom Styling to Set a Custom Font
 
@@ -99,11 +99,11 @@ Before customizing in-app messages with custom listeners, it's important to unde
 - [`IHtmlInAppMessageActionListener`][86] - Implement to [custom manage HTML in-app message display and behavior](#setting-a-custom-html-in-app-message-action-listener).
 - [`IInAppMessageViewWrapperFactory`][88] - Implement to [custom manage in-app message view hierarchy interaction](#setting-a-custom-view-wrapper-factory).
 
-## Setting a Custom Manager Listener
+### Custom Manager Listener
 
 The `AppboyInAppMessageManager` automatically handles the display and lifecycle of in-app messages.  If you require more control over the lifecycle of a message, setting a custom manager listener will enable you to receive the in-app message object at various points in the in-app message lifecycle, allowing you to handle its display yourself, perform further processing, react to user behavior, process the object's [Extras][14], and much more.
 
-### Step 1: Implement an In-App Message Manager Listener
+#### Step 1: Implement an In-App Message Manager Listener
 
 Create a class that implements [`IInAppMessageManagerListener`][21].
 
@@ -113,7 +113,7 @@ For example, if you set a custom manager listener when an in-app message is rece
 
 `IInAppMessageManagerListener` also includes delegate methods for clicks on the message itself or one of the buttons.  A common use case would be intercepting a message when a button or message is clicked for further processing.
 
-### Step 2: Hook into In-App Message View Lifecycle Methods (Optional)
+#### Step 2: Hook into In-App Message View Lifecycle Methods (Optional)
 
 The [`IInAppMessageManagerListener`][21] interface has in-app message view methods that are called at distinct points in the in-app message view lifecycle. These methods are called in the following order:
 
@@ -128,7 +128,7 @@ For further context, the time between [afterInAppMessageViewOpened][93] and [bef
   No implementation of these methods is required. They are merely provided to track/inform of the in-app message view lifecycle. It is functionally acceptable to leave these method implementations empty.
 {% endalert %}
 
-### Step 3: Instruct Braze to use your In-App Message Manager Listener
+#### Step 3: Instruct Braze to use your In-App Message Manager Listener
 
 Once your `IInAppMessageManagerListener` is created, call `AppboyInAppMessageManager.getInstance().setCustomInAppMessageManagerListener()` to instruct `AppboyInAppMessageManager`
 to use your custom `IInAppMessageManagerListener` instead of the default listener.
@@ -185,7 +185,7 @@ On Android, this is done by calling `logClick` and `logImpression` on in-app mes
 Once an in-app message has been placed on the stack, you can request for it to be retrieved and displayed at any time by calling [`AppboyInAppMessageManager.getInstance().requestDisplayInAppMessage()`](https://appboy.github.io/appboy-android-sdk/javadocs/com/appboy/ui/inappmessage/AppboyInAppMessageManager.html#requestDisplayInAppMessage--). Calling this method requests Braze to display the next available in-app message from the stack.
 {% endalert %}
 
-### Step 4: Customizing Dark Theme Behavior (Optional) {#android-in-app-message-dark-theme-customization}
+#### Step 4: Customizing Dark Theme Behavior (Optional) {#android-in-app-message-dark-theme-customization}
 
 In the default `IInAppMessageManagerListener` logic, in `beforeInAppMessageDisplayed()`, the system settings are checked and conditionally enable Dark Theme styling on the message with the following code:
 
@@ -219,11 +219,11 @@ override fun beforeInAppMessageDisplayed(inAppMessage: IInAppMessage): InAppMess
 
 If you would like to use your own conditional logic, then you can call [`enableDarkTheme`][97] at any step in the pre-display process.
 
-## Setting a Custom View Factory
+### Custom View Factory
 
-Braze's suite of in-app messages types are versatile enough to cover the vast majority of custom use cases. However, if you would like to fully define the visual appearance of your in-app messages instead of using a default type, Braze makes this possible by setting a custom view factory.
+Braze's suite of in-app message types is versatile enough to cover the vast majority of custom use cases. However, if you would like to fully define the visual appearance of your in-app messages instead of using a default type, Braze makes this possible by setting a custom view factory.
 
-### Step 1: Implement an In-App Message View Factory
+#### Step 1: Implement an In-App Message View Factory
 
 Create a class that implements [`IInAppMessageViewFactory`][87].
 
@@ -276,7 +276,7 @@ class CustomInAppMessageViewFactory : IInAppMessageViewFactory {
 {% endtab %}
 {% endtabs %}
 
-### Step 2: Instruct Braze to use your In-App Message View Factory
+#### Step 2: Instruct Braze to use your In-App Message View Factory
 
 Once your `IInAppMessageViewFactory` is created, call `AppboyInAppMessageManager.getInstance().setCustomInAppMessageViewFactory()` to instruct `AppboyInAppMessageManager`
 to use your custom `IInAppMessageViewFactory` instead of the default view factory.
@@ -285,17 +285,17 @@ to use your custom `IInAppMessageViewFactory` instead of the default view factor
 We recommend setting your `IInAppMessageViewFactory` in your `Application.onCreate()` before any other calls to Braze. This will ensure that the custom view factory is set before any in-app message is displayed.
 {% endalert %}
 
-#### In-Depth: Implementing a Braze View Interface
+##### In-Depth: Implementing a Braze View Interface
 
 Braze's `slideup` in-app message view implements [`IInAppMessageView`][25].  Braze's `full` and `modal` type message views implement [`IInAppMessageImmersiveView`][24].  Implementing one of these classes will allow Braze to add click listeners to your custom view where appropriate.  All Braze view classes extend Android's [View][18] class.
 
 Implementing `IInAppMessageView` allows you to define a certain portion of your custom view as clickable. Implementing [`IInAppMessageImmersiveView`][24] allows you to define message button views and a close button view.
 
-## Setting a Custom Animation Factory
+### Custom Animation Factory
 
 In-app messages have preset animation behavior. `Slideup` type messages slide into the screen; `full` and `modal` messages fade in and out.  If you would like to define custom animation behaviors for your in-app messages, Braze makes this possible by setting a custom animation factory.
 
-### Step 1: Implement an In-App Message Animation Factory
+#### Step 1: Implement an In-App Message Animation Factory
 
 Create a class that implements [`IInAppMessageAnimationFactory`][20]
 
@@ -347,22 +347,22 @@ class CustomInAppMessageAnimationFactory : IInAppMessageAnimationFactory {
 {% endtab %}
 {% endtabs %}
 
-### Step 2: Instruct Braze to use your In-App Message View Factory
+#### Step 2: Instruct Braze to use your In-App Message View Factory
 
 Once your `IInAppMessageAnimationFactory` is created, call `AppboyInAppMessageManager.getInstance().setCustomInAppMessageAnimationFactory()` to instruct `AppboyInAppMessageManager`
 to use your custom `IInAppMessageAnimationFactory` instead of the default animation factory.
 
 We recommend setting your `IInAppMessageAnimationFactory` in your [`Application.onCreate()`][82] before any other calls to Braze. This will ensure that the custom animation factory is set before any in-app message is displayed.
 
-## Setting a Custom HTML In-App Message Action Listener
+### Custom HTML In-App Message Action Listener
 
 The Braze SDK has a default `AppboyDefaultHtmlInAppMessageActionListener` class that is used if no custom listener is defined and takes appropriate action automatically. If you require more control over how a user interacts with different buttons inside a custom HTML in-app message, implement a custom `IHtmlInAppMessageActionListener` class.
 
-### Step 1: Implement a Custom HTML In-App Message Action Listener
+#### Step 1: Implement a Custom HTML In-App Message Action Listener
 
 Create a class that implements [`IHtmlInAppMessageActionListener`][86].
 
-The callbacks in your `IHtmlInAppMessageActionListener` will be called whenever user initiates any of the following actions inside HTML in-app message:
+The callbacks in your `IHtmlInAppMessageActionListener` will be called whenever the user initiates any of the following actions inside the HTML in-app message:
 - Clicks on close button.
 - Clicks on news feed button.
 - Fires a custom event.
@@ -440,7 +440,7 @@ class CustomHtmlInAppMessageActionListener(private val mContext: Context) : IHtm
 {% endtab %}
 {% endtabs %}
 
-### Step 2: Instruct Braze to use your HTML In-App Message Action Listener
+#### Step 2: Instruct Braze to use your HTML In-App Message Action Listener
 
 Once your `IHtmlInAppMessageActionListener` is created, call `AppboyInAppMessageManager.getInstance().setCustomHtmlInAppMessageActionListener()` to instruct `AppboyInAppMessageManager` to use your custom `IHtmlInAppMessageActionListener` instead of the default action listener.
 
@@ -463,11 +463,11 @@ AppboyInAppMessageManager.getInstance().setCustomHtmlInAppMessageActionListener(
 {% endtab %}
 {% endtabs %}
 
-## Setting a Custom View Wrapper Factory
+### Custom View Wrapper Factory
 
 The `AppboyInAppMessageManager` automatically handles placing the in-app message model into the existing Activity view hierarchy by default using [`DefaultInAppMessageViewWrapper`][89]. If you need to customize how in-app messages are placed into the view hierarchy, you should use a custom [`IInAppMessageViewWrapperFactory`][88].
 
-### Step 1: Implement an In-App Message View Wrapper Factory
+#### Step 1: Implement an In-App Message View Wrapper Factory
 
 Create a class that implements [`IInAppMessageViewWrapperFactory`][88] and returns an [IInAppMessageViewWrapper][90].
 
@@ -540,7 +540,7 @@ class CustomInAppMessageViewWrapper(inAppMessageView: View,
 {% endtab %}
 {% endtabs %}
 
-### Step 2: Instruct Braze to use your Custom View Wrapper Factory
+#### Step 2: Instruct Braze to use your Custom View Wrapper Factory
 
 Once your [IInAppMessageViewWrapper][90] is created, call [`AppboyInAppMessageManager.getInstance().setCustomInAppMessageViewWrapperFactory()`][91] to instruct `AppboyInAppMessageManager` to use your custom [`IInAppMessageViewWrapperFactory`][88] instead of the default view wrapper factory.
 
@@ -647,19 +647,182 @@ AppboyInAppMessageManager.getInstance().setCustomInAppMessageManagerListener(obj
 {% endtabs %}
 
 {% alert note %}
-Note that if this functionality is disabled, the host Activity's hardware back button default behavior will be used instead. This may lead to the back button instead closing the application instead of the displayed in-app message.
+Note that if this functionality is disabled, the host Activity's hardware back button default behavior will be used instead. This may lead to the back button instead of closing the application instead of the displayed in-app message.
 {% endalert %}
 
 
 ## GIFs {#gifs-IAMs}
 
-{% include archive/android/gifs.md channel="in-app messages" %}
+Braze requires an external image library to display animated GIFs with {{ include.channel }}.
+
+### Custom Image Library Integration {#gifs-delegate-integration}
+
+Braze offers the ability to use a custom image library to display animated GIFs with {{ include.channel }}.
+
+__Note:__ Although the example below uses [Glide][gifs-67], any image library that supports GIFs is compatible.
+
+#### Step 1: Creating the Image Loader Delegate
+
+The Image Loader delegate must implement the following methods:
+
+* [`getInAppMessageBitmapFromUrl()`][gifs-71]
+* [`getPushBitmapFromUrl()`][gifs-72]
+* [`renderUrlIntoCardView()`][gifs-73]
+* [`renderUrlIntoInAppMessageView()`][gifs-74]
+* [`setOffline()`][gifs-70]
+
+The integration example below is taken from the [Glide Integration Sample App][gifs-65] included with the Braze Android SDK.
+
+{% tabs %}
+{% tab JAVA %}
+
+```java
+public class GlideAppboyImageLoader implements IAppboyImageLoader {
+  private static final String TAG = GlideAppboyImageLoader.class.getName();
+
+  private RequestOptions mRequestOptions = new RequestOptions();
+
+  @Override
+  public void renderUrlIntoCardView(Context context, Card card, String imageUrl, ImageView imageView, AppboyViewBounds viewBounds) {
+    renderUrlIntoView(context, imageUrl, imageView, viewBounds);
+  }
+
+  @Override
+  public void renderUrlIntoInAppMessageView(Context context, IInAppMessage inAppMessage, String imageUrl, ImageView imageView, AppboyViewBounds viewBounds) {
+    renderUrlIntoView(context, imageUrl, imageView, viewBounds);
+  }
+
+  @Override
+  public Bitmap getPushBitmapFromUrl(Context context, Bundle extras, String imageUrl, AppboyViewBounds viewBounds) {
+    return getBitmapFromUrl(context, imageUrl, viewBounds);
+  }
+
+  @Override
+  public Bitmap getInAppMessageBitmapFromUrl(Context context, IInAppMessage inAppMessage, String imageUrl, AppboyViewBounds viewBounds) {
+    return getBitmapFromUrl(context, imageUrl, viewBounds);
+  }
+
+  private void renderUrlIntoView(Context context, String imageUrl, ImageView imageView, AppboyViewBounds viewBounds) {
+    Glide.with(context)
+        .load(imageUrl)
+        .apply(mRequestOptions)
+        .into(imageView);
+  }
+
+  private Bitmap getBitmapFromUrl(Context context, String imageUrl, AppboyViewBounds viewBounds) {
+    try {
+      return Glide.with(context)
+          .asBitmap()
+          .apply(mRequestOptions)
+          .load(imageUrl).submit().get();
+    } catch (Exception e) {
+      Log.e(TAG, "Failed to retrieve bitmap at url: " + imageUrl, e);
+    }
+    return null;
+  }
+
+  @Override
+  public void setOffline(boolean isOffline) {
+    // If the loader is offline, then we should only be retrieving from the cache
+    mRequestOptions = mRequestOptions.onlyRetrieveFromCache(isOffline);
+  }
+}
+```
+
+{% endtab %}
+{% tab KOTLIN %}
+
+```kotlin
+class GlideAppboyImageLoader : IAppboyImageLoader {
+  companion object {
+    private val TAG = GlideAppboyImageLoader::class.qualifiedName
+  }
+
+  private var mRequestOptions = RequestOptions()
+
+  override fun renderUrlIntoCardView(context: Context, card: Card, imageUrl: String, imageView: ImageView, viewBounds: AppboyViewBounds) {
+    renderUrlIntoView(context, imageUrl, imageView, viewBounds)
+  }
+
+  override fun renderUrlIntoInAppMessageView(context: Context, inAppMessage: IInAppMessage, imageUrl: String, imageView: ImageView, viewBounds: AppboyViewBounds) {
+    renderUrlIntoView(context, imageUrl, imageView, viewBounds)
+  }
+
+  override fun getPushBitmapFromUrl(context: Context, extras: Bundle, imageUrl: String, viewBounds: AppboyViewBounds): Bitmap? {
+    return getBitmapFromUrl(context, imageUrl, viewBounds)
+  }
+
+  override fun getInAppMessageBitmapFromUrl(context: Context, inAppMessage: IInAppMessage, imageUrl: String, viewBounds: AppboyViewBounds): Bitmap? {
+    return getBitmapFromUrl(context, imageUrl, viewBounds)
+  }
+
+  private fun renderUrlIntoView(context: Context, imageUrl: String, imageView: ImageView, viewBounds: AppboyViewBounds) {
+    Glide.with(context)
+        .load(imageUrl)
+        .apply(mRequestOptions)
+        .into(imageView)
+  }
+
+  private fun getBitmapFromUrl(context: Context, imageUrl: String, viewBounds: AppboyViewBounds): Bitmap? {
+    try {
+      return Glide.with(context)
+          .asBitmap()
+          .apply(mRequestOptions)
+          .load(imageUrl).submit().get()
+    } catch (e: Exception) {
+      Log.e(TAG, "Failed to retrieve bitmap at url: $imageUrl", e)
+    }
+
+    return null
+  }
+
+  override fun setOffline(isOffline: Boolean) {
+    // If the loader is offline, then we should only be retrieving from the cache
+    mRequestOptions = mRequestOptions.onlyRetrieveFromCache(isOffline)
+  }
+}
+```
+
+{% endtab %}
+{% endtabs %}
+
+#### Step 2: Setting the Image Loader Delegate
+
+The Braze SDK will use any custom image loader set with [setAppboyImageLoader][gifs-66]. Note that we recommend setting the custom image loader in a custom application subclass.
+
+{% tabs %}
+{% tab JAVA %}
+
+```java
+public class GlideIntegrationApplication extends Application {
+  @Override
+  public void onCreate() {
+    super.onCreate();
+    Appboy.getInstance(context).setAppboyImageLoader(new GlideAppboyImageLoader());
+  }
+}
+```
+
+{% endtab %}
+{% tab KOTLIN %}
+
+```kotlin
+class GlideIntegrationApplication : Application() {
+  override fun onCreate() {
+    super.onCreate()
+    Appboy.getInstance(context).appboyImageLoader = GlideAppboyImageLoader()
+  }
+}
+```
+
+{% endtab %}
+{% endtabs %}
 
 ## Android Dialogs
 
 Braze doesn't support displaying in-app messages in [Android Dialogs][85] at this time.
 
-## Youtube in HTML in-app messages
+## Youtube in HTML In-App messages
 
 Youtube and other HTML5 content can play in HTML in-app messages. This requires hardware acceleration to be enabled in the Activity where the in-app message is being displayed, please see the [Android developer guide][84] for more details. Hardware acceleration is only available on Android API versions 11 and above.
 
@@ -708,3 +871,16 @@ The following is an example of an embedded Youtube video in an HTML snippet:
 [95]: https://appboy.github.io/appboy-android-sdk/javadocs/com/appboy/ui/inappmessage/listeners/IInAppMessageManagerListener.html#afterInAppMessageViewClosed-com.appboy.models.IInAppMessage-
 [96]: https://appboy.github.io/appboy-android-sdk/javadocs/com/appboy/ui/inappmessage/AppboyInAppMessageManagerBase.html#setBackButtonDismissesInAppMessageView-boolean-
 [97]: https://appboy.github.io/appboy-android-sdk/javadocs/com/appboy/models/IInAppMessageThemeable.html#enableDarkTheme--
+[gifs-56]: http://developer.android.com/reference/android/app/Application.html
+[gifs-59]: https://github.com/Appboy/appboy-android-sdk#version-support
+[gifs-60]: http://developer.android.com/guide/topics/manifest/application-element.html#nm
+[gifs-61]: https://github.com/Appboy/appboy-android-sdk/tree/master/droidboy
+[gifs-64]: https://github.com/Appboy/appboy-android-sdk/tree/master/droidboy
+[gifs-65]: https://github.com/Appboy/appboy-android-sdk/tree/master/samples/glide-image-integration
+[gifs-66]: https://appboy.github.io/appboy-android-sdk/javadocs/com/appboy/Appboy.html#setAppboyImageLoader-com.appboy.IAppboyImageLoader-
+[gifs-67]: https://bumptech.github.io/glide/
+[gifs-70]: https://appboy.github.io/appboy-android-sdk/javadocs/com/appboy/IAppboyImageLoader.html#setOffline-boolean-
+[gifs-71]: https://appboy.github.io/appboy-android-sdk/javadocs/com/appboy/IAppboyImageLoader.html#getInAppMessageBitmapFromUrl-android.content.Context-com.appboy.models.IInAppMessage-java.lang.String-com.appboy.enums.AppboyViewBounds-
+[gifs-72]: https://appboy.github.io/appboy-android-sdk/javadocs/com/appboy/IAppboyImageLoader.html#getPushBitmapFromUrl-android.content.Context-android.os.Bundle-java.lang.String-com.appboy.enums.AppboyViewBounds-
+[gifs-73]: https://appboy.github.io/appboy-android-sdk/javadocs/com/appboy/IAppboyImageLoader.html#renderUrlIntoCardView-android.content.Context-com.appboy.models.cards.Card-java.lang.String-android.widget.ImageView-com.appboy.enums.AppboyViewBounds-
+[gifs-74]: https://appboy.github.io/appboy-android-sdk/javadocs/com/appboy/IAppboyImageLoader.html#renderUrlIntoInAppMessageView-android.content.Context-com.appboy.models.IInAppMessage-java.lang.String-android.widget.ImageView-com.appboy.enums.AppboyViewBounds-

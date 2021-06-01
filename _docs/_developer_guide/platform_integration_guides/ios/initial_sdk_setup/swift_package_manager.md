@@ -3,6 +3,7 @@ nav_title: Swift Package Manager
 platform: iOS
 page_order: 1
 description: "This tutorial covers how to install the Braze SDK using Swift Package Manager for iOS"
+
 ---
 
 # Swift Package Manager Integration

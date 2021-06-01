@@ -9,7 +9,9 @@ page_order: 3
 page_type: reference
 description: "This page covers resources for implementing Braze's News Feed in your Android or FireOS app running React Native."
 channel: news feed
+
 ---
+
 # News Feed
 
 Follow [the Android integration instructions][1]. Alternatively, our React plugin does provide a method, `launchNewsFeed`, that will launch a modal News Feed without further integration.

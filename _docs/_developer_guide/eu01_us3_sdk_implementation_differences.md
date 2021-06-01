@@ -22,7 +22,7 @@ guide_featured_list:
 
 ---
 
-## SDK Implementation
+# SDK Implementation
 If you are on the EU-01 Instance when integrating any of our SDKs, please point your SDK endpoints to `https://sdk.fra-01.braze.eu`.
 
 Please note, if you have been set up with a custom endpoint your Customer Success Manager will advise you of the correct address. In that instance simply substitute the endpoint address listed above with the custom address supplied.

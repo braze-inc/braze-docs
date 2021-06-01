@@ -2,7 +2,9 @@
 nav_title: App Group Configuration
 page_order: 1
 description: "This reference article covers app group configuration and how to create your app group."
+
 ---
+
 # App Group Configuration
 
 Braze organizes your apps via "App Groups." Think of each of these app groups as an individual title. For example, you should group the iOS and Android versions of the same application or a free and paid versions. These two apps should be in the same group to allow for ease of navigation, segmentation, and messaging across both platforms.

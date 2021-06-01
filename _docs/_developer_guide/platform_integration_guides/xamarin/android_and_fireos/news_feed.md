@@ -3,7 +3,9 @@ nav_title: News Feed
 platform: Xamarin
 subplatform: Android and FireOS
 page_order: 3
+
 ---
+
 # News Feed
 
 See [the Android integration instructions][1] for information on how to integrate the News Feed into your Xamarin Android app.  Furthermore, you can look at the [sample application][2] implementation samples.

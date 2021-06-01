@@ -1,5 +1,5 @@
 ---
-page_order: 8
+page_order: 6
 nav_title: Advanced Use Cases
 layout: featured
 

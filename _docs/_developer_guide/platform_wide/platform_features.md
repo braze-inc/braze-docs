@@ -7,6 +7,7 @@ platform:
   - android
   - web
 ---
+
 # Platform Features
 
 Braze provides a comprehensive user engagement solution for your mobile and web applications. The Braze platform has three primary components - the SDK, the dashboard, and the data API.

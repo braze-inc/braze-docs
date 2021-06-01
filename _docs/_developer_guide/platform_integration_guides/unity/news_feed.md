@@ -2,7 +2,9 @@
 nav_title: News Feed
 platform: Unity
 page_order: 5
+
 ---
+
 # News Feed
 
 ## Receiving News Feed Data in Unity
@@ -21,7 +23,7 @@ Incoming `string` messages received in your Content Cards game object callback c
 
 See the following example for details:
 
-##### Example Content Cards Callback
+### Example Content Cards Callback
 
 ```csharp
 void FeedReceivedCallback(string message) {

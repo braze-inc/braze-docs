@@ -1,8 +1,9 @@
 ---
 nav_title: Android 11 Upgrade Guide
-page_order: 10
+page_order: 9
 platform: Android
 description: "This reference article covers the Android 11 SDK update, highlighting changes such as deep linking, SDK compatibility, and more."
+
 ---
 
 # Android 11 SDK Upgrade Guide
@@ -18,7 +19,6 @@ All apps that _target_ Android 11 (API 30) must upgrade to [Braze Android SDK v8
 {% alert important %}
 Due to changes in Android 11’s APIs, apps targeting Android 11 that do not upgrade to [Braze Android SDK v8.1.0+][1] will experience issues with deep linking from Braze UI components, and will not properly display custom HTML In-App Messages.
 {% endalert %}
-
 
 ### Deep Links
 
@@ -44,7 +44,6 @@ Users can now grant permissions, such as Location Collection, on a one-time basi
 
 Android 11 will require apps to first request the foreground location permission, and then after the app is backgrounded it may prompt the user again for Background Location permission. 
 Customers using Geofences should ensure their app follows Android’s recommendations on collecting Background Location permission. For more information, see the [Android Docs](https://developer.android.com/preview/privacy/location#background-location).
-
 
 [1]: https://github.com/Appboy/appboy-android-sdk/blob/master/CHANGELOG.md#810
 [3]: {% image_buster /assets/img/android/android-11-one-time-permission.svg %}

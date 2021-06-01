@@ -9,6 +9,7 @@ channel:
 ---
 
 # News Feed Integration Overview
+
 Integrating the view controller `ABKNewsFeedViewController` will display the Braze News Feed.
 
 You have a great deal of flexibility in how you choose to display the view controllers. There are different versions of the view controllers to accommodate different navigation structures.

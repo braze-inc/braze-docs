@@ -8,7 +8,9 @@ page_order: 3
 
 page_type: reference
 description: "This page provides resources and methods for logging purchases for your Android or FireOS app running React Native."
+
 ---
+
 ## Logging Purchases
 
 See [the Android integration instructions][1] for in depth discussion of revenue tracking best practices and interfaces.

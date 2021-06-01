@@ -5,6 +5,7 @@ page_order: 0
 platform: React Native
 page_type: reference
 description: "This page provides an overview of Content Cards. Review this page before you begin integrating Content Cards into your React Native app."
+
 ---
 
 # Content Cards 
@@ -20,7 +21,7 @@ Braze recommends that customers who use our News Feed tool, move over to our Con
 
 Content Cards typically sit in a feed of sorts (but not necessarily) and help you take advantage of the visual space by incorporating images and graphics that stand out. You can personalize the cards based on user actions, onboard your customers with a checklist, and much more!
 
-### Great Use Cases
+#### Great Use Cases
 
 - Showcase new content.
 - Coordinate with push messages to illustrate a persistent record of promotions.

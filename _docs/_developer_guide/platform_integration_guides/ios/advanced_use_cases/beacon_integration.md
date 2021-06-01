@@ -3,7 +3,9 @@ nav_title: Beacon Integration
 platform: iOS
 page_order: 4
 description: "This article covers how to log custom events using Gimbal Beacons for iOS."
+
 ---
+
 # Beacon Integration
 
 Here we will walk through how to integrate specific kinds of beacons with Braze to allow for segmentation and messaging.

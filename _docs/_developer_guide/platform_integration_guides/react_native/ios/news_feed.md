@@ -3,10 +3,10 @@ nav_title: News Feed
 platform: React Native
 subplatform: iOS
 page_order: 3
-
 page_type: reference
 description: "This page covers resources for implementing Braze's News Feed in your iOS app running React Native."
 channel: news feed
+
 ---
 # News Feed
 

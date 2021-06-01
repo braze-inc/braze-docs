@@ -5,6 +5,7 @@ page_order: 7
 description: "This article covers how to configure uninstall tracking for your iOS application."
 
 ---
+
 # Uninstall Tracking
 
 Uninstall Tracking utilizes background push notifications with a Braze flag in the payload. For more information, see our [Uninstall Tracking][6] page in our User Guide.
