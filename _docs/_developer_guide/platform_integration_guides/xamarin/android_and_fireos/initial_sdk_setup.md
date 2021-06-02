@@ -3,6 +3,7 @@ nav_title: Initial SDK Setup
 platform: Xamarin
 subplatform: Android and FireOS
 page_order: 0
+description: "This article covers the inital Android and FireOS SDK setup for the Xamarin platform."
 
 ---
 

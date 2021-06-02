@@ -1,8 +1,9 @@
 ---
-nav_title: In App Messages
+nav_title: In-App Messages
 platform: Xamarin
 subplatform: iOS
 page_order: 2
+description: "This article covers iOS in-app messaging for the Xamarin platform."
 
 ---
 

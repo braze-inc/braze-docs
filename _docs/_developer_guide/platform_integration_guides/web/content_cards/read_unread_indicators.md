@@ -1,5 +1,5 @@
 ---
-nav_title: Read/Unread Indicators
+nav_title: Read & Unread Indicators
 page_order: 2
 
 platform: Web
@@ -9,13 +9,13 @@ channel: content cards
 
 ---
 
-# Read/Unread Indicators
+# Read & Unread Indicators
 
 Braze provides indicators on Content Cards as pictured below:
 
 |Indicator|Example |
 |---|---|
-|Read | ![ReadContentCard][2] |
+| Read | ![ReadContentCard][2] |
 | Unread | ![UnreadContentCard][3] |
 {: .reset-td-br-1 .reset-td-br-2}
 

@@ -3,6 +3,8 @@ nav_title: News Feed
 platform: Xamarin
 subplatform: Android and FireOS
 page_order: 3
+description: "This article covers Android and FireOS News Feed integration for the Xamarin platform."
+
 
 ---
 

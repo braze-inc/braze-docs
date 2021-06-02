@@ -71,7 +71,7 @@ You can also populate a feed with a combination of categories as in the followin
 appboy.display.toggleFeed(undefined, undefined, [appboy.Card.Category.ANNOUNCEMENTS, appboy.Card.Category.NEWS]);
 ```
 
-## Read/Unread Indicators
+## Read & Unread Indicators
 
 Braze provides an Unread/Read indicator on News Feed cards as pictured below:
 

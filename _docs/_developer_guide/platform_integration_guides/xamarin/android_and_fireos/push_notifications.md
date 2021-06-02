@@ -3,6 +3,7 @@ nav_title: Push Notifications
 platform: Xamarin
 subplatform: Android and FireOS
 page_order: 1
+description: "This article covers Android and FireOS push notification integration for the Xamarin platform."
 
 ---
 

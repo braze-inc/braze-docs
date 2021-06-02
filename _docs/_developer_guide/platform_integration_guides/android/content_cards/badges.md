@@ -1,6 +1,6 @@
 ---
 nav_title: Badges
-page_order: 4
+page_order: 5
 platform: Android
 description: "This article covers how to add badges to your Content Cards in your Android application."
 channel:

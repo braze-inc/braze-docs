@@ -1,6 +1,6 @@
 ---
 nav_title: Multiple Feeds
-page_order: 5
+page_order: 6
 platform: Android
 description: "This reference article covers how to implement multiple Content Card feeds in your Android application."
 channel:

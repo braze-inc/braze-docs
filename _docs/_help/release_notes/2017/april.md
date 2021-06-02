@@ -9,7 +9,7 @@ description: "This article contains release notes for April 2017."
 # April 2017
 
 ## HTML In Browser Messages
-We now support interactive in-browser message types including custom HTML and email capture formats, enabling you to reach your customers wherever they are. Learn more about in app messages [here][48].
+We now support interactive in-browser message types including custom HTML and email capture formats, enabling you to reach your customers wherever they are. Learn more about in-app messages [here][48].
 
 ## Personalized In-App Message with Connected Content
 
