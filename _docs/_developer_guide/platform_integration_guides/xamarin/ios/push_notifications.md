@@ -3,6 +3,8 @@ nav_title: Push Notifications
 platform: Xamarin
 subplatform: iOS
 page_order: 1
+description: "This article covers iOS push notification integration for the Xamarin platform."
+
 
 ---
 
@@ -17,6 +19,7 @@ See [the iOS integration instructions][1] for information about setting up your 
 Set up push permissions by adding the following code to the ```FinishedLaunching``` section of your ```AppDelegate.cs```:
 
 ```csharp
+// C#
 UIUserNotificationSettings settings = UIUserNotificationSettings.GetSettingsForTypes(UIUserNotificationType.Badge | UIUserNotificationType.Alert | UIUserNotificationType.Sound, null);
 UIApplication.SharedApplication.RegisterForRemoteNotifications();
 UIApplication.SharedApplication.RegisterUserNotificationSettings(settings);
@@ -29,6 +32,7 @@ UIApplication.SharedApplication.RegisterUserNotificationSettings(settings);
 Register for your push tokens by adding the following code in the ```RegisteredForRemoteNotifications``` method of your ```AppDelegate.cs```:
 
 ```csharp
+// C#
 Appboy.SharedInstance().RegisterDeviceToken (deviceToken);
 ```
 
@@ -37,6 +41,7 @@ Appboy.SharedInstance().RegisterDeviceToken (deviceToken);
 Enable open tracking on push notifications by adding the following code to the `DidReceiveRemoteNotification` method of your `AppDelegate.cs`:
 
 ```csharp
+// C#
 public override void DidReceiveRemoteNotification (UIApplication application, NSDictionary userInfo, Action<UIBackgroundFetchResult> completionHandler)
   {
     Appboy.SharedInstance().RegisterApplicationWithFetchCompletionHandler(application, userInfo, completionHandler);
@@ -47,9 +52,8 @@ public override void DidReceiveRemoteNotification (UIApplication application, NS
 
 If [badge counts are enabled][2], Braze will display a badge when a customer has unread notifications. By default, this number is 1. Braze will only clear the badge count when the app is opened directly from a Braze push notification. To clear the badge count, you can refer to the [Xamarin documentation][3] and use the following code:
 
-**Xamarin C#**
-
-```
+```csharp
+// C#
 UIApplication.SharedApplication.ApplicationIconBadgeNumber = 0;
 ```
 

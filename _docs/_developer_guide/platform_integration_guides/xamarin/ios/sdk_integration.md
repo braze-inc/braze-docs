@@ -3,6 +3,7 @@ nav_title: Initial SDK Setup
 platform: Xamarin
 subplatform: iOS
 page_order: 0
+description: "This article covers the inital iOS SDK setup for the Xamarin platform."
 
 ---
 
@@ -31,6 +32,7 @@ Within your `AppDelegate.cs` file, add the following snippet within your `Finish
 >  Be sure to update `YOUR-API-KEY` with the correct value from your [Settings][5] page.
 
 ```csharp
+// C#
  Appboy.StartWithApiKey ("YOUR-API-KEY", UIApplication.SharedApplication, options);
  Appboy.SharedInstance.SdkFlavor = ABKSDKFlavor.Xamarin;
 ```
@@ -45,7 +47,8 @@ Within your `Info.plist` file, add the following snippet:
 
 >  Be sure to update `YOUR-SDK-ENDPOINT` with the correct value from your [Settings][5] page.
 
-```
+```csharp
+// C#
 <key>Braze</key>
 <dict>
  <key>Endpoint</key>
@@ -55,7 +58,8 @@ Within your `Info.plist` file, add the following snippet:
 
 You can optionally include verbose logging by including the following snippet:
 
-```
+```csharp
+// C#
 <key>Braze</key>
 <dict>
  <key>LogLevel</key>
@@ -72,7 +76,6 @@ Note that prior to Braze iOS SDK v4.0.2, the dictionary key `Appboy` must be use
 Braze should now be collecting data from your application and your basic integration should be complete. Please see the following sections in order to enable custom event tracking, push messaging, the news-feed and the complete suite of Braze features.
 
 >  Our current public Xamarin binding for the iOS SDK does not connect to the iOS Facebook SDK (linking social data) and does not include sending the IDFA to Braze.
-
 
 [3]: https://github.com/Appboy/appboy-xamarin-bindings
 [5]: https://dashboard-01.braze.com/app_settings/app_settings/ "Settings"

@@ -10,7 +10,11 @@ channel:
 
 # Action Buttons {#push-action-buttons-integration}
 
-Users may interact with your application via notification [categories][14]. Categories define a type of notification your application can send. Each category contains actions that a user can perform in response, which manifest as buttons on the push notification.
+In addition to providing a set of [default push categories][2], Braze supports custom notification categories and actions. Once you register categories in your application, you can use the Braze dashboard to send notification categories to your users.
+
+>  If you are not using the `UserNotifications` framework, please see this [alternative categories documentation][31].
+
+These categories can then be assigned to push notifications via our dashboard to trigger the action button configurations of your design. Here's an example that leverages the "LIKE_CATEGORY" displayed on the device!
 
 ![Illustration of Notification Action][13]
 
@@ -119,3 +123,5 @@ We strongly recommend that people using `handleActionWithIdentifier` begin using
 [36]: {{site.baseurl}}/developer_guide/platform_integration_guides/ios/push_notifications/integration/#step-4-register-push-tokens-with-braze
 [37]: {{site.baseurl}}/developer_guide/platform_integration_guides/ios/push_notifications/customization/#push-action-buttons-customization
 [39]: {{site.baseurl}}/developer_guide/platform_integration_guides/ios/push_notifications/integration/#step-5-enable-push-handling
+[31]: https://developer.apple.com/reference/uikit/uiusernotificationcategory
+[2]: {{site.baseurl}}/developer_guide/platform_integration_guides/ios/push_notifications/integration/#push-action-buttons-integration

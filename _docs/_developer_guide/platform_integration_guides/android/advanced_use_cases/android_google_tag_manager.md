@@ -30,7 +30,7 @@ Next, create a new Tag ("Function Call") and enter the Class Path of your [custo
 
 This tag will be triggered when you log the `played song` event we just created. 
 
-In our example tag's custom parameters (key value pairs), we've set `eventName` to `played song` - which will be the custom event name logged to Braze.
+In our example tag's custom parameters (key-value pairs), we've set `eventName` to `played song` - which will be the custom event name logged to Braze.
 
 {% alert important %}
 When sending a custom event, be sure to set `actionType` to `logEvent`, and set a value for `eventName` as shown in the screenshot below. 

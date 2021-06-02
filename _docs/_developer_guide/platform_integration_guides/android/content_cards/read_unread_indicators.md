@@ -1,6 +1,6 @@
 ---
 nav_title: Read & Unread Indicators
-page_order: 2
+page_order: 3
 platform: Android
 description: "This reference article covers Android read and unread indicators and how to implement them in your Content Cards."
 channel:
@@ -8,7 +8,7 @@ channel:
 
 ---
 
-# Read/Unread Indicators {#read-indicators-for-android}
+# Read/ & Unread Indicators {#read-indicators-for-android}
 
 Braze allows you to optionally toggle on an Unread/Read indicator on Content Cards.
 

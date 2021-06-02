@@ -33,7 +33,7 @@ Authorization: Bearer YOUR-REST-API-KEY
 ```json
 {
   "canvas_id": (required, string) see canvas identifier,
-  "canvas_entry_properties": (optional, object) personalization key value pairs that will apply to all users in this request,
+  "canvas_entry_properties": (optional, object) personalization key-value pairs that will apply to all users in this request,
   "broadcast": (optional, boolean) see Broadcast -- defaults to false on 8/31/17, must be set to true if `recipients` is omitted,
   "audience": (optional, connected audience object) see connected audience,
   // Including 'audience' will only send to users in the audience
@@ -42,7 +42,7 @@ Authorization: Bearer YOUR-REST-API-KEY
       // Either "external_user_id" or "user_alias" is required. Requests must specify only one.
       "user_alias": (optional, user alias object) user alias of user to receive message,
       "external_user_id": (optional, string) external identifier of user to receive message,
-      "canvas_entry_properties": (optional, object) personalization key value pairs that will apply to this user (these key value pairs will override any keys that conflict with `canvas_entry_properties` above)
+      "canvas_entry_properties": (optional, object) personalization key-value pairs that will apply to this user (these key-value pairs will override any keys that conflict with `canvas_entry_properties` above)
       "send_to_existing_only": (optional, boolean) defaults to true,
       "attributes": (optional, object) fields in the attributes object will create or update an attribute of that name with the given value on the specified user profile before the message is sent and existing values will be overwritten
     },
@@ -56,7 +56,7 @@ Authorization: Bearer YOUR-REST-API-KEY
 | Parameter | Required | Data Type | Description |
 | --------- | ---------| --------- | ----------- |
 |`canvas_id`|Required|String|See canvas identifier|
-|`canvas_entry_properties`|Optional|Object|Personalization key value pairs that will apply to all users in this request|
+|`canvas_entry_properties`|Optional|Object|Personalization key-value pairs that will apply to all users in this request|
 |`broadcast`|Optional|Boolean|See broadcast -- defaults to false on 8/31/17, must be set to true if `recipients` is omitted|
 |`audience`|Optional|Connected audience object|See connected audience|
 |`recipients`|Optional|Array|If not provided and broadcast is not set to `false`, message will send to the entire segment targeted by the Canvas|

@@ -40,7 +40,7 @@ URL : `https://rest.iad-01.braze.com/campaigns/trigger/send`
 Payload Type : JSON
 
 Data : `trigger_properties__name`, `api_key`, `campaign_id`
-These data fields are key value pairs that will for the data portion of the request.
+These data fields are key-value pairs that will for the data portion of the request.
 
 ![zapier5] [10]
 

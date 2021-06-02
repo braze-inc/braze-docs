@@ -2,6 +2,7 @@
 nav_title: Setting Custom Attributes
 platform: Unity
 page_order: 2
+description: "This reference article covers how to set custom attributes on Unity platform."
 
 ---
 
@@ -52,14 +53,17 @@ To assign user attributes, you need to call the appropriate method on the BrazeB
 Beyond the attributes above, Braze also allows you to define Custom attributes using a number of different data types:
 For more information regarding the segmentation options each of these attributes will afford you see our ["Best Practices" documentation][1] within this section.
 
+### Setting Custom Attribute Values
 
-### Custom Attribute with a Boolean Value
+{% tabs %}
+{% tab Boolean Value %}
 
 ```csharp
 AppboyBinding.SetCustomUserAttribute("custom boolean attribute key", 'boolean value');
 ```
 
-### Custom Attribute with an Integer Value
+{% endtab %}
+{% tab Integer %}
 
 ```csharp
 // Set Integer Attribute
@@ -68,19 +72,22 @@ AppboyBinding.SetCustomUserAttribute("custom int attribute key", 'integer value'
 AppboyBinding.IncrementCustomUserAttribute("key", increment(int))
 ```
 
-### Custom Attribute with a Double Value
+{% endtab %}
+{% tab Double %}
 
 ```csharp
 AppboyBinding.SetCustomUserAttribute("custom double attribute key", 'double value');
 ```
 
-### Custom Attribute with a String Value
+{% endtab %}
+{% tab String %}
 
 ```csharp
 AppboyBinding.SetCustomUserAttribute("custom string attribute key", "string custom attribute");
 ```
 
-### Custom Attribute with a Date Value
+{% endtab %}
+{% tab Date %}
 
 ```csharp
 AppboyBinding.SetCustomUserAttributeToNow("custom date attribute key");
@@ -90,7 +97,10 @@ AppboyBinding.SetCustomUserAttributeToNow("custom date attribute key");
 AppboyBinding.SetCustomUserAttributeToSecondsFromEpoch("custom date attribute key", 'integer value');
 ```
 
-### Custom Attribute with an Array Value
+>  Dates passed to Braze must either be in the [ISO 8601][2] format, e.g `2013-07-16T19:20:30+01:00` or in the `yyyy-MM-dd'T'HH:mm:ss:SSSZ` format e.g `2016-12-14T13:32:31.601-0800`
+
+{% endtab %}
+{% tab Array %}
 
 ```csharp
 // Setting An Array
@@ -100,9 +110,9 @@ AppboyBinding.AddToCustomUserAttributeArray("key", "Attribute")
 // Removing an item from an Array
 AppboyBinding.RemoveFromCustomUserAttributeArray("key", "Attribute")
 ```
-
->  Dates passed to Braze must either be in the [ISO 8601][2] format, e.g `2013-07-16T19:20:30+01:00` or in the `yyyy-MM-dd'T'HH:mm:ss:SSSZ` format e.g `2016-12-14T13:32:31.601-0800`
-
+{% endtab %}
+{% endtabs 
+	%}
 ### Unsetting a Custom Attribute
 
 Custom attributes can also be unset using the following method:

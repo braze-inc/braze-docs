@@ -16,23 +16,25 @@ Braze supports purchases in multiple currencies. Purchases that you report in a 
 
 Before implementation, be sure to review examples of the segmentation options afforded by Custom events vs. Custom attributes vs Purchase events in our [Best Practices section][3]. You should also check out our notes on [event naming conventions]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/event_naming_conventions/).
 
+## Tracking Purchases & Revenue
+
 To use this feature, add this method call after a successful purchase in your app:
 
-```
+```javascript
 m.Braze.logPurchase("PURCHASE_NAME", "CURRENCY_CODE", Double price, Integer quantity)
 ```
 
-## Adding Properties
+### Adding Properties
 
 You can add metadata about purchases by passing a properties dictionary with your purchase information.
 
-Properties are defined as key value pairs.  Keys are `String` objects and values can be `String` or `Integer`.
+Properties are defined as key-value pairs.  Keys are `String` objects and values can be `String` or `Integer`.
 
-```
+```javascript
 m.Braze.logPurchase("PURCHASE_NAME", "CURRENCY_CODE", Double price, Integer quantity, {"stringPropKey" : "stringPropValue", "intPropKey" : Integer intPropValue})
 ```
 
-## REST API
+### REST API
 
 You can also use our REST API to record purchases. Refer to the [user API documentation][2] for details.
 

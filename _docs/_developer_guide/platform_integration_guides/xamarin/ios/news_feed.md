@@ -3,6 +3,7 @@ nav_title: News Feed
 platform: Xamarin
 subplatform: iOS
 page_order: 3
+description: "This article covers iOS News Feed integration for the Xamarin platform."
 
 ---
 
@@ -13,6 +14,7 @@ See [the iOS integration instructions][1] for information on how to integrate th
 Of all the implementation options, the quickest to implement is the Modal, which can be added by doing
 
 ```csharp
+// C#
 ABKFeedViewControllerModalContext m = new ABKFeedViewControllerModalContext ();
 this.PresentViewController (m, true, null);
 ```

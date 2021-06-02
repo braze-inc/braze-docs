@@ -164,7 +164,7 @@ User export object (we will include the least data possible - if a field is miss
     "attributed_ad" : (string),
     "push_subscribe" : (string) "opted_in" | "subscribed" | "unsubscribed",
     "email_subscribe" : (string) "opted_in" | "subscribed" | "unsubscribed",
-    "custom_attributes" : (object) custom attribute key value pairs,
+    "custom_attributes" : (object) custom attribute key-value pairs,
     "custom_events" : [
         {
             "name" : (string),

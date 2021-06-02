@@ -129,7 +129,7 @@ If you need to handle ADM registration yourself, you should do the following:
 
 ## ADM Extras
 
-Users may send custom key value pairs with a Kindle push message as "extras" for ["Deep Linking"][29], tracking urls, etc.  Please note that unlike in Android push, Kindle push users may not use Braze reserved keys as keys when defining "extra" key value pairs.
+Users may send custom key-value pairs with a Kindle push message as "extras" for ["Deep Linking"][29], tracking urls, etc.  Please note that unlike in Android push, Kindle push users may not use Braze reserved keys as keys when defining "extra" key-value pairs.
 
 Reserved Keys Include:
 
