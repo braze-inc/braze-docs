@@ -55,7 +55,7 @@ We recommend setting a breakpoint or logging to ensure that the FCM-generated pu
 
 For FCM push to work, Google Play Services must be present on the device. If Google Play Services isn't on a device, push registration will not occur.
 
-__Note:__ Google Play Services is not installed on Genymotion emulators or Android emulators without Google APIs installed.
+__Note:__ Google Play Services is not installed on Android emulators without Google APIs installed.
 
 #### Device not connected to the internet
 
