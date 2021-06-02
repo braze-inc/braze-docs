@@ -4,6 +4,8 @@ platform: Message_Building_and_Personalization
 subplatform: In-App Messages
 page_order: 2
 description: "In addition to the out-of-the-box In-App Message templates, Braze also offers customized messaging templates that allow custom HTML, Modals with custom CSS, Video, and more."
+channel:
+  - in-app messages
 ---
 
 # Customization
@@ -25,7 +27,7 @@ While Braze’s out-of-the-box in-app messages can be customized in a variety of
 
 - Custom Fonts and Styles
 - Videos
-- Multiple Images 
+- Multiple Images
 - On-click behaviors
 - Interactive Components
 - Custom Animations
@@ -35,7 +37,7 @@ Custom HTML messages can use the [JavaScript Bridge](#javascript-bridge) methods
 Check out our [Github repository](https://github.com/Appboy/appboy-custom-html5-in-app-message-templates) which contains detailed instructions on how to use and customize HTML in-app messages for your needs, and for a set of HTML5 in-app messages templates to help you get started.
 
 {% alert note %}
-To enable HTML in-app messages in the Web SDK, your SDK integration must supply the `enableHtmlInAppMessages` initialization option to Braze: for example `appboy.initialize('YOUR-API_KEY', {enableHtmlInAppMessages: true})`. This is for security reasons - HTML in-app messages can execute javascript so we require a site maintainer to enable them.
+To enable HTML in-app messages in the Web SDK, your SDK integration must supply the `allowUserSuppliedJavascript` initialization option to Braze: for example `appboy.initialize('YOUR-API_KEY', {allowUserSuppliedJavascript: true})`. This is for security reasons - HTML in-app messages can execute javascript so we require a site maintainer to enable them.
 {% endalert %}
 
 
@@ -93,6 +95,10 @@ In addition to custom JavaScript, Braze SDKs can also send analytics data with t
 
 #### Button Click Tracking
 
+{% alert warning %}
+The use of `abButtonID` is no longer supported in new "HTML with Preview" message types. Please see our [upgrade guide]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/preview/#backward-incompatible-changes) for more information.
+{% endalert %}
+
 To log button clicks for in-app message analytics, you can add `abButtonId` as a query parameter to any deep link, redirect URL, or `<a>` tag.
 
 Use `?abButtonId=0` to log a "Button 1" click, and `?abButtonId=1` to log a "Button 2" click.
@@ -113,7 +119,7 @@ In-app messages support only Button 1 and Button 2 clicks. URLs which do not spe
 
 #### Open Link in New Window
 
-To open links in a new window, set `?abExternalOpen=true`. The message will be dismissed before opening the link. 
+To open links in a new window, set `?abExternalOpen=true`. The message will be dismissed before opening the link.
 
 For deep linking, Braze will open your URL regardless of the value of abExternalOpen.
 
@@ -121,7 +127,7 @@ For deep linking, Braze will open your URL regardless of the value of abExternal
 
 To have Braze handle your HTTP(S) link as a deep link, set `?abDeepLink=true`.
 
-When this query string parameter is absent or set to `false`, Braze will try to open the web link in an internal web browser inside the host app. 
+When this query string parameter is absent or set to `false`, Braze will try to open the web link in an internal web browser inside the host app.
 
 #### Custom Events (mobile only)
 
@@ -161,7 +167,7 @@ To navigate to this option, you must create an in-app messaging campaign. From t
 ![emailimage]({% image_buster /assets/img/email_capture.png %})
 
 {% alert note %}
-To enable Email Capture in-app messages, your SDK integration must supply the `enableHtmlInAppMessages` initialization option to Braze, e.g. `appboy.initialize('YOUR-API_KEY', {enableHtmlInAppMessages: true})`. This is for security reasons - HTML in-app messages can execute javascript so we require a site maintainer to enable them.
+To enable Email Capture in-app messages, your SDK integration must supply the `allowUserSuppliedJavascript` initialization option to Braze, e.g. `appboy.initialize('YOUR-API_KEY', {allowUserSuppliedJavascript: true})`. This is for security reasons - HTML in-app messages can execute javascript so we require a site maintainer to enable them.
 {% endalert %}
 
 #### Customizable Features
@@ -169,7 +175,7 @@ To enable Email Capture in-app messages, your SDK integration must supply the `e
 - An optional image
 - An optional "Terms of Service" link
 - Different colors for the header and body text, buttons and background
-- Key value pairs
+- Key-value pairs
 - Style for header and body text, buttons, button border color, background, and overlay
 
 ## Reusable Message Templates {#reusable-color-profiles}
@@ -249,7 +255,7 @@ You can also [duplicate]({{site.baseurl}}/user_guide/engagement_tools/templates_
 
 ## Video {#video}
 
-To play a video in an HTML In-App Message, include the following `<video>` element in your HTML, and replace the video names with your file's name (or the remote asset's URL). 
+To play a video in an HTML In-App Message, include the following `<video>` element in your HTML, and replace the video names with your file's name (or the remote asset's URL).
 
 To use a local video asset, be sure to include this file when uploading assets to your campaign.
 

@@ -1,6 +1,10 @@
 ---
 nav_title: Location Tracking
 page_order: 0
+
+page_type: reference
+description: "This reference article explains how to use location tracking and location targeting in your apps."
+tool: Location
 ---
 # Location Tracking
 
@@ -29,7 +33,7 @@ You can also use the [`users/track`][8] endpoint in our API to update the [`curr
 ```
 https://[your_braze_rest_endpoint]/users/track
 Content-Type: application/json
-Authorization: Bearer YOUR_REST_API_KEY
+Authorization: Bearer YOUR-REST-API-KEY
 {
   "attributes": [ 
  	{

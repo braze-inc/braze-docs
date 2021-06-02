@@ -3,6 +3,7 @@ nav_title: Adobe
 alias: /partners/adobe/
 description: "The Braze and Adobe CDP integration allows brands to connect and map their Adobe data (custom attributes and segments) to Braze in real-time. Brands can then act on this data, delivering personalized targeted experiences to those users."
 page_type: partner
+hidden: true
 ---
 
 {% alert note %}
@@ -15,7 +16,7 @@ The Adobe and Braze integration is currently in beta. Please contact your Braze 
 
 The Braze and Adobe CDP integration allows brands to connect and map their Adobe data (custom attributes and segments) to Braze in real-time. Brands can then act on this data, delivering personalized targeted experiences to those users. With Adobe, the integration is intuitive. Simply take any Adobe [identity](https://experienceleague.adobe.com/docs/experience-platform/identity/namespaces.html?lang=en), map it to a Braze external ID, and send it off to the Braze platform. All data sent will be accessible in Braze through a new `AdobeExperiencePlatformSegments` attribute. 
 
-## Pre-Requisites
+## Prerequisites
 
 | Requirement | Description |
 | ----------- | ----------- |
@@ -42,7 +43,7 @@ If a connection with Braze already exists, you will see an Activate button on th
 
 ### Step 2: Provide Braze Token
 ![Token][3]{: style="float:right;max-width:40%;margin-left:15px;"}
-In the account step, provide your Braze account token API key. For more information on how to obtain your API key in the Braze [REST API Key Overview](https://www.braze.com/docs/api/api_key/). Enter this key and click __Connect to destination__.
+In the account step, provide your Braze account token API key. For more information on how to obtain your API key in the Braze [REST API Key Overview]({{site.baseurl}}/api/api_key/). Enter this key and click __Connect to destination__.
 
 ### Step 3: Authentication
 

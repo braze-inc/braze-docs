@@ -1,7 +1,12 @@
 ---
 nav_title: Content Blocks
 page_order: 1
-description: "The Content Blocks Library allows you to manage your reusable, cross-channel content in a single, centralized location."
+
+page_type: reference
+description: "This reference article explains how to use the Content Blocks Library to manage your reusable, cross-channel content in a single, centralized location."
+tool: 
+- Templates
+- Media
 ---
 
 # Content Blocks

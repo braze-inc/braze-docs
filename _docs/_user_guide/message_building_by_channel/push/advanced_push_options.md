@@ -5,9 +5,7 @@ layout: featured
 
 page_type: landing
 channel: push
-platform: 
-  - android
-  - iOS
+
 description: "This landing page is a hub for several advanced Push options like Push stories and the Push action button."
 
 guide_top_header: "Advanced Push Options"

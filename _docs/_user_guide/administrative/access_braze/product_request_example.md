@@ -1,8 +1,10 @@
 ---
 nav_title: Product Request Example
-description: "This reference article shows an example of a product request."
 hidden: true
 alias: /product_request/
+
+page_type: reference
+description: "This reference article shows an example of a product request."
 ---
 
 # Product Request Example

@@ -1,9 +1,11 @@
 ---
-nav_title: Linking
+nav_title: Deep Linking
 platform: iOS
 page_order: 0
+description: "This article covers how to implement the universal deep linking delegate for your iOS app, as well as examples on how to deep link to app settings or a News Feed."
 
 ---
+
 # Linking
 
 ## Deep Links
@@ -324,7 +326,7 @@ func application(_ app: UIApplication, open url: URL, options: [UIApplicationOpe
 [2]: https://developer.apple.com/library/ios/DOCUMENTATION/Cocoa/Reference/Foundation/Classes/NSURL_Class/Reference/Reference.html#//apple_ref/doc/c_ref/NSURL
 [4]: {{site.baseurl}}/user_guide/personalization_and_dynamic_content/deep_linking_to_in-app_content/#what-is-deep-linking
 [5]: https://github.com/Appboy/appboy-ios-sdk/blob/master/AppboyKit/ABKModalWebViewController.m
-[6]: https://github.com/Appboy/appboy-ios-sdk/blob/master/AppboyKit/headers/AppboyKitLibrary/ABKModalWebViewController.h
+[6]: https://github.com/Appboy/appboy-ios-sdk/blob/master/AppboyKit/include/ABKModalWebViewController.h
 [8]: https://developer.apple.com/library/ios/documentation/Cocoa/Reference/Foundation/Classes/NSString_Class/index.html#//apple_ref/occ/instm/NSString/stringByRemovingPercentEncoding
 [10]: {% image_buster /assets/img_archive/Open_Deep_Link.png %}
 [11]: https://developer.apple.com/library/content/documentation/General/Conceptual/AppSearch/UniversalLinks.html
@@ -336,7 +338,7 @@ func application(_ app: UIApplication, open url: URL, options: [UIApplicationOpe
 [17]: http://timekl.com/blog/2015/08/21/shipping-an-app-with-app-transport-security/?utm_campaign=iOS+Dev+Weekly&utm_medium=email&utm_source=iOS_Dev_Weekly_Issue_213
 [19]: https://developer.apple.com/library/ios/documentation/General/Reference/InfoPlistKeyReference/Articles/CocoaKeys.html#//apple_ref/doc/uid/TP40009251-SW33
 [22]: #customizing-appboy-on-startup
-[23]: https://github.com/Appboy/appboy-ios-sdk/blob/master/AppboyKit/headers/AppboyKitLibrary/ABKURLDelegate.h
+[23]: https://github.com/Appboy/appboy-ios-sdk/blob/master/AppboyKit/include/ABKURLDelegate.h
 [25]: #deep-links
 [26]: #linking-customization
 [27]: #universal-links

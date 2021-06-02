@@ -4,7 +4,7 @@ platform: Campaigns
 subplatform: Scheduling and Organizing
 page_order: 1.9
 
-tools: campaigns
+tool: Campaigns
 page_type: reference
 description: "This reference article gives an overview of the result of editing certain aspects of a campaign post-launch."
 ---
@@ -29,8 +29,8 @@ If you edit your campaign's scheduled send time, or its audience, those changes 
 
 ## Send Rate
 
-Changes to message send rate limits go into effect __at the beginning of hour in the next time zone__ in which Braze has scheduled deliveries for the campaign.
+When using a send rate limit, Braze "schedules" your messages in minute-granularity time slots, so if you want to change the message sending rate, you should follow the process below for immediate changes. 
 
 # What if you need your changes in place immediately?
 
-If you need changes to take effect immediately, **stop the affected campaign**, duplicate it, and make edits on the duplicate campaign. Please note this resets eligibility for people who already received the original campaign, so you may need to filter the duplicate campaign for people who Did Not Receive the original.
+If you need changes to take effect immediately, **stop the affected campaign**, duplicate it, and make edits on the duplicate campaign. Please note this resets eligibility for people who already received the original campaign, so you may need to filter the duplicate campaign for people who did not receive the original.

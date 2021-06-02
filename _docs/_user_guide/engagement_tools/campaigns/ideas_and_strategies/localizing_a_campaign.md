@@ -4,9 +4,11 @@ platform: Campaigns
 subplatform: Ideas and Strategies
 page_order: 3
 
-tools: campaigns
 page_type: reference
 description: "This reference article goes over how user locale is retrieved and accessed by the Braze platform."
+tool:
+- Campaigns
+- Segments
 ---
 # Localizing a Campaign
 

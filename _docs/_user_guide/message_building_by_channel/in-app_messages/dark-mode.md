@@ -2,9 +2,12 @@
 nav_title: Dark Mode Themes
 page_order: 5.20
 description: "Braze in-app messages support adding an alternate Dark theme to help deliver the right color message to your users based on their preference, and helps provide consistency with your app's design."
+channel:
+  - in-app messages
+
 ---
 
-# Dark Mode for In App Messages
+# Dark Mode for In-App Messages
 
 Dark Mode offers users the opportunity to set a system-wide color preference (introduced on [Android 10](https://developer.android.com/guide/topics/ui/look-and-feel/darktheme) and [iOS 13](https://developer.apple.com/documentation/appkit/supporting_dark_mode_in_your_interface/)). The "Dark" themes are intended to conserve battery life, and reduce strain on users' eyes, while providing app developers an easier way to implement the dark color themes that users prefer.
 
@@ -42,9 +45,9 @@ Dark Mode apps were introduced with Android 10 and iOS 13. Users who have not up
 Campaigns will still be served to all users who are eligible for the audience you have selected, regardless of users' Dark Mode setting or OS version.
 {% endalert %}
 
-## Using HTML In App Messages
+## Using HTML In-App Messages
 
-To create a Dark and Light theme for HTML In App Messages, you can use the [`prefers-color-scheme`](https://developer.mozilla.org/en-US/docs/Web/CSS/@media/prefers-color-scheme) CSS media feature to detect the user's preference.
+To create a Dark and Light theme for HTML In-App Messages, you can use the [`prefers-color-scheme`](https://developer.mozilla.org/en-US/docs/Web/CSS/@media/prefers-color-scheme) CSS media feature to detect the user's preference.
 
 For example:
 

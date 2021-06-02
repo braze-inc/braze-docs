@@ -3,12 +3,16 @@ nav_title: Initial SDK Setup
 platform: Web
 page_order: 0
 
+page_type: reference
+description: "This article covers initial SDK setup for the Braze Web SDK."
+
 ---
+
 # Initial SDK Setup
 
 The Braze Web SDK lets you collect analytics and display rich In-App Messages, Push, and Content Card messages to your web users.
 
-For a complete technical reference, please see our [Javascript Documentation][9].
+For a complete technical reference, please see our [JavaScript Documentation][9].
 
 ## Step 1:  Install the Braze Library
 
@@ -34,7 +38,6 @@ import appboy from "@braze/web-sdk";
 const appboy = require("@braze/web-sdk");
 ```
 
-
 ### Option 2: Google Tag Manager {#install-gtm}
 
 The Braze Web SDK can be quickly installed from the Google Tag Manager Template Library. Two tags are supported:
@@ -59,11 +62,11 @@ Add the Braze Web SDK directly to your HTML by referencing our CDN-hosted script
 
 ## Step 2: Initialize Braze
 
-Once the Braze Web SDK is added to your website, initialize the library with the `API Key` and [SDK Endpoint URL]({{site.baseurl}}/user_guide/administrative/access_braze/sdk_endpoints) found in `Manage App Group > App Settings` within your Braze Dashboard.
+Once the Braze Web SDK is added to your website, initialize the library with the `API Key` and [SDK Endpoint URL]({{site.baseurl}}/user_guide/administrative/access_braze/sdk_endpoints) found in **Manage Settings** > **Settings** within your Braze Dashboard.
 
 **Note**: If you've configured your Braze initialization options in a Tag Manager, you can skip this step.
 
-For a complete list of options for `appboy.initialize()` please see our [Javascript Documentation](https://js.appboycdn.com/web-sdk/latest/doc/module-appboy.html#.initialize).
+For a complete list of options for `appboy.initialize()` please see our [JavaScript Documentation](https://js.appboycdn.com/web-sdk/latest/doc/module-appboy.html#.initialize).
 
 
 ```javascript
@@ -84,12 +87,11 @@ if (isLoggedIn){
 appboy.openSession();
 ```
 
-For all other Javascript methods, please see our complete [Javascript Reference Documentation][9].
+For all other JavaScript methods, please see our complete [JavaScript Reference Documentation][9].
 
 {% alert note %}
 Anonymous users on mobile or web devices may be counted towards your [MAU]({{site.baseurl}}/user_guide/data_and_analytics/your_reports/understanding_your_app_usage_data/#monthly-active-users). As a result, you may want to conditionally load or initialize the SDK to exclude these users from your MAU count.
 {% endalert %}
-
 
 ## Step 3: (Optional) Web Push
 

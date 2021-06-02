@@ -4,9 +4,14 @@ platform: Campaigns
 subplatform: Ideas and Strategies
 page_order: 5
 
-tools: campaigns
 page_type: reference
 description: "This reference article discusses best practices when using Braze to drive your customer platforms toward success."
+tool:
+- Segments
+- Campaigns
+channel:
+- in-app messages
+- news feed
 ---
 # Getting High Ratings
 

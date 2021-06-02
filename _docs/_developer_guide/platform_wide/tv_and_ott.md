@@ -37,7 +37,7 @@ Below is a list of features and messaging channels supported today.
         <tr>
             <th>Device Type</th>
             <th>Data and Analytics</th>
-            <th>In App Messages</th>
+            <th>In-App Messages</th>
             <th>Content Cards</th>
             <th>Push Notifications</th>
             <th>Canvas</th>
@@ -73,7 +73,7 @@ Below is a list of features and messaging channels supported today.
             <td for="data-analytics"><i class="fas fa-check text-success"></i></td>
             <td for="iam"><i class="fas fa-check text-success"></i></td>
             <td for="content-cards"><i class="fas fa-check text-success"></i></td>
-            <td for="push"><i class="fas fa-times text-warning"></i></td>
+            <td for="push">--</td>
             <td for="canvas"><i class="fas fa-check text-success"></i></td>
         </tr>
         <tr>
@@ -81,7 +81,7 @@ Below is a list of features and messaging channels supported today.
             <td for="data-analytics"><i class="fas fa-check text-success"></i></td>
             <td for="iam"><i class="fas fa-check text-success"></i></td>
             <td for="content-cards"><i class="fas fa-check text-success"></i></td>
-            <td for="push"><i class="fas fa-times text-warning"></i></td>
+            <td for="push">--</td>
             <td for="canvas"><i class="fas fa-check text-success"></i></td>
         </tr>
         <tr>
@@ -89,7 +89,7 @@ Below is a list of features and messaging channels supported today.
             <td for="data-analytics"><i class="fas fa-check text-success"></i></td>
             <td for="iam"><i class="fas fa-times text-warning"></i></td>
             <td for="content-cards"><i class="fas fa-times text-warning"></i></td>
-            <td for="push"><i class="fas fa-times text-warning"></i></td>
+            <td for="push">--</td>
             <td for="canvas">--</td>
         </tr>
         <tr>

@@ -1,6 +1,10 @@
 ---
 nav_title: Use Cases
 page_order: 10
+
+page_type: reference
+description: "This reference article covers some common use cases for selecting email as your messaging channel."
+channel: email
 ---
 
 # Use Cases {#email-use-cases}

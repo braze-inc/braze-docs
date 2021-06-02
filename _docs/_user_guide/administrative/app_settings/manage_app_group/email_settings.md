@@ -2,11 +2,14 @@
 nav_title: Email Settings
 page_type: reference
 page_order: 3
+
+description: "This reference article covers email settings in the Braze Dashboard."
+tool: Dashboard
 ---
 
 # Email Settings
 
-Email settings can be found within the Manage App Group page of the Dashboard. Here, Braze allows you to set specific outbound email settings like display name, reply-to address, custom footers, custom opt-in and opt-out pages, and more. Including features like these in your outbound emails make for a fluid and cohesive customer experience.
+Email settings can be found within the Manage Settings page of the Dashboard. Here, Braze allows you to set specific outbound email settings like display name, reply-to address, custom footers, custom opt-in and opt-out pages, and more. Including features like these in your outbound emails make for a fluid and cohesive customer experience.
 
 ## Outbound Email Settings
 
@@ -20,6 +23,8 @@ This feature allows you to:
 - Set Up Multiple Sending and Reply-To Email Addresses
 - Set Default Sending and Reply-To Address
 - Exclude Reply-To option and send replies to the "From" Address
+
+When setting your "From" addresses, make sure your "From" email domain, matches your sending domain (i.e. marketing.yourdomain.com), failure to do this may result in SPF and DKIM misalignment. All reply-to emails can be set to your root domain. 
 
 ### BCC Addresses
 
@@ -92,7 +97,7 @@ Learn more about best practices for e-mail list management [here][8].
 
 ### Include a List-Unsubscribe Header
 
-![list_unsub_1][00]{: style="float:right;max-width:90%;margin-left:15px;"}
+![list_unsub_1][00]{: style="float:right;max-width:60%;margin-left:15px;"}
 
 This feature allows you to automatically include a List-Unsubscribe email header for emails sent to subscribed or opted-in users. This List-Unsubscribe header allows email providers to include an "Unsubscribe" button when displaying an email.
 

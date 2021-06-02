@@ -2,6 +2,9 @@
 nav_title: Refreshing the Feed
 platform: iOS
 page_order: 4
+description: "This reference article covers how to implement Content Card refreshing in your iOS application."
+channel:
+  - content cards
 
 ---
 
@@ -28,4 +31,4 @@ Appboy.sharedInstance()?.requestContentCardsRefresh()
 {% endtab %}
 {% endtabs %}
 
-For more information see the [`Appboy.h` header file](https://github.com/Appboy/appboy-ios-sdk/blob/master/AppboyKit/headers/AppboyKitLibrary/Appboy.h).
+For more information see the [`Appboy.h` header file](https://github.com/Appboy/appboy-ios-sdk/blob/master/AppboyKit/include/Appboy.h).

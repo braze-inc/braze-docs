@@ -1,6 +1,9 @@
 ---
 nav_title: Apptimize Partnership
 page_order: 0
+
+page_type: update
+description: "This archived article covers the partnership between Apptimize and Braze. Braze has deprecated support for the Apptimize partnership as of September 2019."
 ---
 
 # Apptimize
@@ -58,8 +61,8 @@ Profiles for the following Apptimize data:
 In addition, this integration will log a Braze Custom Event for the first
 participation event of an experiment. This can be done in one of two ways:
 
-* A custom event is generated with property data denoting the experiment name, the experiment ID, the variant name and the variant ID. You can then retarget users via real-time triggering using Braze's Action-Based Delivery Campaigns and Canvases. Use these properties to identify the exact Apptimize Experiment that you want to trigger off of.
-* An attribute array is generated with entries for every participation that has occurred. Each participation is formatted as `experiment_id_EXPERIMENT_ID:variant_id_VARIANT_ID:experiment_name_EXPERIMENT_NAME:variant_name_VARIANT_NAME`
+* A custom event is generated out-of-the-box with property data denoting the experiment name, the experiment ID, the variant name and the variant ID. You can then retarget users via real-time triggering using Braze's Action-Based Delivery Campaigns and Canvases. Use these properties to identify the exact Apptimize Experiment that you want to trigger off of.
+* An attribute array is generated out-of-the-box with entries for every participation that has occurred. Each participation is formatted as `experiment_id_EXPERIMENT_ID:variant_id_VARIANT_ID:experiment_name_EXPERIMENT_NAME:variant_name_VARIANT_NAME`
 
 You can then use Braze’s Action-Based Delivery Campaigns or Canvases to send
 follow-on messages to users in real-time when these events are triggered.

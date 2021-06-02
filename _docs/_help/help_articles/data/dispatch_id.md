@@ -1,6 +1,9 @@
 ---
 nav_title: Dispatch ID Behavior
 page_order: 1
+
+page_type: solution
+description: "This article covers dispatch ID behavior, including it's usage, implications, and limitations."
 ---
 
 # Dispatch ID Behavior
@@ -22,8 +25,6 @@ If they are included in the audience of an API-triggered Campaign, they will hav
 {% alert warning %}
 Dispatch IDs are generated randomly for all Canvas Steps because Braze treats Canvas Steps as triggered events, even when they are "scheduled". This may result in inconsistencies generating the ids. Sometimes, a Canvas step will have unique `dispatch_ids` per user per send, or it may have shared `dispatch_ids` across users per send.
 {% endalert %}
-
-# More on Using Dispatch ID
 
 ## Template Dispatch ID into Messages with Liquid
 

@@ -1,7 +1,9 @@
 ---
 nav_title: Custom Attributes
 page_order: 3
-description: "Custom attributes are best for storing attributes about your users, or information about low-value actions within your application."
+
+page_type: reference
+description: "This reference article describes custom attributes, and explains the various custom attribute data types."
 ---
 
 # Custom Attributes
@@ -32,7 +34,7 @@ Boolean attributes are useful for storing subscription statuses, and other simpl
 Numeric attributes have a wide variety of use-cases. Incrementing number custom attributes are useful for storing the number of times a given action or event has occurred without counting against your data cap. Standard numbers have all sorts of usages, for example : (Recording shoe size, waist size, number of times a user has viewed a certain product feature, or category.
 
 {% alert tip %}
-Money spent in-app should not be recorded by this method. Rather it should be recorded via our purchase methods shown two sections below.
+Money spent should not be recorded by this method. Rather it should be recorded via our purchase methods shown two sections below.
 {% endalert %}
 
 | Segmentation Options | Dropdown Filter | Input Options |
@@ -46,7 +48,7 @@ Money spent in-app should not be recorded by this method. Rather it should be re
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
 
 ### Strings (Alpha-Numeric Characters)
-String attributes are useful for storing user input, such as a favorite brand, a phone number, or a last search string within your application.
+String attributes are useful for storing user input, such as a favorite brand, a phone number, or a last search string within your application. 
 
 | Segmentation Options | Dropdown Filter | Input Options |
 | ---------------------| --------------- | ------------- |
@@ -58,12 +60,13 @@ String attributes are useful for storing user input, such as a favorite brand, a
 | Check if the string attribute __does not exist__ on a user's profile | __BLANK__ | __N/A__ |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
 
+{% alert note %}
+A date string such as "12-1-2021" or "12/1/2021" will be converted to a datetime object and treated as a [time attribute]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_attributes/#time).
+{% endalert %}
+
 {% alert important %}
 &#42; When segmenting using the __DOES NOT MATCH REGEX__ filter, it is required that there already exists a custom attribute with a value assigned in that user profile. Braze suggests using "OR" logic to check if a custom attribute is blank in order to ensure users are being targetted properly.
-{% endalert %}
-{% alert tip %}
-For more on how to use our RegEx filter, check out this documentation on [Perl compatible regular expressions (PCRE)](http://www.regextester.com/pregsyntax.html).
-<br>
+
 More resources on RegEx:
 - [RegEx with Braze]({{site.baseurl}}/user_guide/engagement_tools/segments/regex/)
 - [RegEx Debugger and Tester](https://regex101.com/)

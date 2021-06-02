@@ -1,6 +1,9 @@
 ---
 nav_title: May
 page_order: 8
+
+page_type: update
+description: "This article contains release notes for May 2019."
 ---
 
 # May 2019
@@ -62,7 +65,7 @@ _Update noted in August 2019._
 
 In the effort to continue enhancing our Currents capabilities, we're adding `dispatch_id` as a field to Currents Email events across all connector types.
 
-The `dispatch_id` is the unique id generated for each transmission – or, dispatch – sent from the Braze platform.
+The `dispatch_id` is the unique out-of-the-box ID generated for each transmission – or, dispatch – sent from the Braze platform.
 
 While all customers who are sent a scheduled message get the same `dispatch_id`, customers who receive either action-based or API triggered messages will get a unique `dispatch_id` per message. The `dispatch_id` field enables you to identify which instance of a recurring campaign is responsible for conversion, thus equipping you with more insights and information on which types of campaigns are helping push the needle on your business goals.
 

@@ -27,13 +27,20 @@ We refer to both the REST API Key and App Group API Key as the `api_key`. The `a
 
 ### Where can I find it?
 
-Your API keys can always be found in the Braze Dashboard in the "Developer Console" under "App Settings". At the top of this new page, you will find the "REST API Keys" section. Here we list all of your available REST API/App Group API Keys as well as give you options to create new API keys. 
+Your API keys can always be found in the Braze Dashboard in the **Developer Console** under **Settings**. At the top of this new page, you will find the **REST API Keys** section. Here you can view all of your available REST API/App Group API Keys, and create new API keys.
 
 ### How can I use it?
 
 Prior to April 2020, API keys would be included as a part of the API request body or within the request URL as a parameter. Braze now has updated the way in which we read API keys. API keys are now set with the HTTP Authorization request header, making your API keys more secure.
 
 While the old way of passing API keys continues to work, after a period of time this will be permenatly removed so we urge users to update API calls accordingly. 
+
+{% alert important %}
+__Looking for the `api_key` parameter in your Braze endpoints?__<br>
+As of May 2020, Braze has changed how we read API keys to be more secure. Now API keys must be passed as a request header, please see YOUR-REST-API-KEY within each endpoint Example Requests.
+
+Braze will continue to support the `api_key` being passed through the request body and URL parameters, but will eventually be sunset. Please update your API calls accordingly.
+{% endalert %}
 
 ### REST API Key Permissions
 
@@ -227,13 +234,13 @@ Sometimes, you may find you are prompted for an `app_id` but you are not working
 ### Where can I find it?
 There are two ways to locate your `app_id`:
 
-1. You can find this `app_id` or application identifier by opening up the Braze Dashboard, and open "Developer Console" under "App Settings". On this new page, under "Identifiers", you will be able to see every `app_id` that exists for your apps.
+1. You can find this `app_id` or application identifier in the **Developer Console** under **Settings**. On this new page, under **Identification**, you will be able to see every `app_id` that exists for your apps.
 
-2. From the Braze Dashboard, open up "Manage App Group" under "App Settings". From this new page, in the "App Settings" tab, midway through the page you will find an "API key for __APP NAME__ on __PLATFORM__". (e.g "API Key for Ice Cream on iOS) This API key is your Application Identifier.
+2. Go to **Manage Settings** under **Settings**. From this new page, in the **Settings** tab, midway through the page you will find an "API key for __APP NAME__ on __PLATFORM__" (e.g "API Key for Ice Cream on iOS). This API key is your Application Identifier.
 
 ### Multiple App Identifier API keys
 
-During SDK set up, The most common use case for multiple App Identifier API keys is separating those keys for debug and release build variants.
+During SDK set up, the most common use case for multiple App Identifier API keys is separating those keys for debug and release build variants.
 To easily switch between multiple App Identifier API keys in your builds, we recommend creating a separate `braze.xml` file for each relevant [build variant][3]. A build variant is a combination of build type and product flavor. Note that by default, [a new Android project is configured with `debug` and `release` build types][8] and no product flavors.
 For each relevant build variant, create a new `braze.xml` for it in `src/<build variant name>/res/values/`:
 
@@ -252,6 +259,10 @@ Security is of the utmost importance at Braze. Given that REST API Keys allow ac
 A good security practice is to assign a user only as much access as is necessary to complete their job: this principle can also be applied to API Keys by assigning permissions to each key. These permissions give you better security and control over the different areas of your account. 
 
 With App identifiers, the `app_id` is assigned by Braze and permissions cannot be assigned or revoked. Because of the nature of the relationship between `app_id` and the SDK, keeping this identifier secure is __crucial__ in the security of your application.
+
+{% alert update %}
+Braze deprecated the Debug API keys in August 2014. As a result, you will no longer see “Braze is Working” when using any legacy debug API keys you may have. You should migrate your application to the API key on your **Settings** page in order to test messaging and recording functionality. The production key should be used with production provisioning profiles and apps that are live in the app store.
+{% endalert %} 
 
 [2]: {{site.baseurl}}/api/identifier_types/
 [3]: https://developer.android.com/studio/build/build-variants.html

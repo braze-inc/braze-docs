@@ -3,8 +3,8 @@ nav_title: Setting Up Currents
 page_order: 0
 
 page_type: tutorial
-description: "This page outlines and describes the generic process for integrating and configuring Braze Currents."
-tool: currents
+description: "This how-to article walks you through the process for integrating and configuring Braze Currents."
+tool: Currents
 ---
 
 # Setting Up Currents
@@ -26,10 +26,14 @@ The following requirements are the basic, minimum requirements to integrate with
 | Requirement | Origin | Access | Description
 |---|---|---|---|
 | Account with Partner | Arrange account with that partner or reach out to your Braze account manager for suggestions. | Check that Partner’s site or reach out to that Partner to sign up. | Braze will not send data to a Partner if you don’t have access to that data through your company’s account.
-| Partner API Key or Token | Usually the Partner’s dashboard. | Just copy and paste it into the designated Braze field. | Braze has a designated field for this in the Integrations page for that Partner. We need this to map where we are sending your data. It's important to keep your Partner Keys/Tokens up to date; invalid credentials may result in disabling your connector, and dropping events.
-| Authentication Code/Key, Secret Key, Certification File | Contact a representative for your account with that Partner. May also exist in the Partner’s dashboard. | Copy and paste keys into the designated Braze field. Generate and upload `.json` or other certification files into the appropriate place in Braze. | Braze has a designated field for this in the Integrations page for that Partner. This gives Braze credentials and authorizes us to write files to your Partner account. It's important to keep your authentication detials up to date; invalid credentials may result in disabling your connector, and dropping events.
+| Partner API Key or Token | Usually the Partner’s dashboard. | Just copy and paste it into the designated Braze field. | Braze has a designated field for this in the Integrations page for that Partner. We need this to map where we are sending your data. **It's important to keep your Partner Keys/Tokens up to date; invalid credentials may result in disabling your connector, and dropping events.**
+| Authentication Code/Key, Secret Key, Certification File | Contact a representative for your account with that Partner. May also exist in the Partner’s dashboard. | Copy and paste keys into the designated Braze field. Generate and upload `.json` or other certification files into the appropriate place in Braze. | Braze has a designated field for this in the Integrations page for that Partner. This gives Braze credentials and authorizes us to write files to your Partner account. **It's important to keep your authentication details up to date; invalid credentials may result in disabling your connector, and dropping events.**
 | Bucket, Folder Path | Some partners organize and sort data by buckets. This should be found in the Partner’s dashboard. | If this is required, be sure to copy the Bucket name or file path exactly into the designated space in Braze. We don’t want your data to get lost! | Though this is required for some Partners, it’s important to get right when you do need it. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
+
+{% alert important %}
+It's important to keep your Partner Keys/Tokens and authentication details up to date; if your connector's credentials expire, the connector will stop sending events. If this persists for more than **48 hours**, the connector's events will be dropped and data will be permanently lost.
+{% endalert %}
 
 
 ## Step 1: Choose Your Partner

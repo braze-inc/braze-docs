@@ -3,9 +3,15 @@ nav_title: Customization
 page_order: 1
 
 platform: Web
+page_type: reference
+description: "This article covers how to customize the default content cards style within the Braze SDK."
+channel: content cards
+
 ---
 
 # Content Cards Customization
+
+## Customizing The Default UI
 
 Braze UI elements come with a default look and feel that matches the composers within the Braze Dashboard and aims for consistency with other Braze mobile platforms. Braze's default styles are defined in CSS within the Braze SDK.
 
@@ -17,13 +23,48 @@ body .ab-feed {
 }
 ```
 
-## Other Methods to Note
+## Create a Custom UI
 
-|Method | Description | Link|
-|---|---|---|
-|`showContentCards`| Display the user's Content Cards. | [JS Docs for showContentCards](https://js.appboycdn.com/web-sdk/latest/doc/module-display.html#.showContentCards)|
-|`hideContentCards`| Hide any Braze content cards currently showing. | [JS Docs for hideContentCards](https://js.appboycdn.com/web-sdk/latest/doc/module-display.html#.hideContentCards)
-|`toggleContentCards`| Display the user's content cards. | [JS Docs for toggleContentCards](https://js.appboycdn.com/web-sdk/latest/doc/module-display.html#.toggleContentCards)
-|`getCachedContentCards()`|Get all currently available cards from the last content cards refresh.| [JS Docs for getCachedContentCards](https://js.appboycdn.com/web-sdk/latest/doc/module-appboy.html#.getCachedContentCards)|
-|`subscribeToContentCardsUpdates(subscriber)`| Subscribe to content cards updates. <br> The subscriber callback will be called whenever content cards are updated. |  [JS Docs for subscribeToContentCardsUpdates](https://js.appboycdn.com/web-sdk/latest/doc/module-appboy.html#.subscribeToContentCardsUpdates)|
-|`dismissCard()`|Dismiss the card programmatically (available in v2.4.1).| [JS Docs for dismissCard](https://js.appboycdn.com/web-sdk/latest/doc/ab.Card.html#dismissCard)|
+### Refreshing The Feed
+
+To refresh and sync a user's feed with Braze servers, use the [`requestContentCardsRefresh`](https://js.appboycdn.com/web-sdk/latest/doc/modules/appboy.html#requestcontentcardsrefresh) method.
+
+```javascript
+import braze from "@braze/web-sdk"
+
+function refresh(){
+  braze.requestContentCardsRefresh();    
+}
+```
+
+### Listening for card updates
+
+When cards are refreshed, a callback function can be subscribed to:
+
+```javascript
+import braze from "@braze/web-sdk"
+
+braze.subscribeToContentCardsUpdates(function(updates){
+  const cards = updates.cards;
+  // do something with the latest instance of `cards`
+});
+```
+
+### Logging Analytics Events
+
+Log impression events when cards are viewed by users.
+
+```javascript
+import braze from "@braze/web-sdk"
+
+braze.logCardImpressions(cards, true);
+```
+
+Log card click events when users interact with a card.
+
+```javascript
+import braze from "@braze/web-sdk"
+
+braze.logCardClick(card, true);
+```
+

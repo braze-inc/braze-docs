@@ -6,7 +6,7 @@ platform:
   - Web
 subplatform: Testing and More
 page_order: 1
-tools:
+tool:
   - Campaigns
   - Canvas
   - Segments
@@ -44,7 +44,7 @@ Consider the following example segment:
 
 ![Rate_Limit_Example][1]
 
-This is a standard re-engagement segment. If you have other more targeted segments receiving notifications recently, you may not want your users to be targeted by more generic campaigns directed at this segment. Appending the "Last Received Push Campaign" filter to this campaign, the user has ensured that if they've received another notification in the past 24 hours, they will slide out of this campaign for the next 24 hours. If they still meet the other criteria of the segment 24 hours later and haven't received any more notifications they will slide back into the segment.
+This is a standard re-engagement segment. If you have other more targeted segments receiving notifications recently, you may not want your users to be targeted by more generic campaigns directed at this segment. Appending the "Last Received Push Campaign" filter to this segment, the user has ensured that if they've received another notification in the past 24 hours, they will slide out of this campaign for the next 24 hours. If they still meet the other criteria of the segment 24 hours later and haven't received any more notifications they will slide back into the segment.
 
 Appending this filter to all segments targeted by campaigns would cause your users to receive a maximum of one push every 24 hours. You could then prioritize your messaging by ensuring that your most important messages are delivered before less important messages.
 
@@ -64,7 +64,7 @@ For example, let's say you have a game with an in-app message that triggers when
 
 ### Delivery Speed Rate-Limiting
 
-If you anticipate large campaigns driving a spike in user activity and overloading your servers, you may specify a per-minute rate limit for sending messages. While targeting users during campaign creation, you can navigate to Advanced Options to select a rate limit (in various increments from as low as 50 to as high as 500K messages per minute). Note that non-rate-limited campaigns may exceed these delivery limits.
+If you anticipate large campaigns driving a spike in user activity and overloading your servers, you may specify a per-minute rate limit for sending messages. While targeting users during campaign creation, you can navigate to Advanced Options to select a rate limit (in various increments from as low as 50 to as high as 500K messages per minute). Note that non-rate-limited campaigns may exceed these delivery limits. Be aware, however, that messages will be aborted if they are delayed 72 hours or more due to a low rate limit. The user who created the campaign will receive alerts in the dashboard and via email if the rate limit is too low.
 
 ![Per Minute Rate Limit Example][3]
 
@@ -104,13 +104,13 @@ As your user base continues to grow and your messaging scales to include life cy
 
 ### Feature Overview {#freq-cap-feat-over}
 
-Frequency Capping is applied at the Campaign/Canvas step send level nand can be set up for each app group by selecting __Global Campaign Settings__ found underneath the Engagement tab. From here, you can choose:
+Frequency Capping is applied at the Campaign/Canvas step send level and can be set up for each app group by selecting __Global Message Settings__ found underneath the **Engagement** tab. From here, you can choose:
 
-- Which messaging channel you would like to cap - push, email, SMS, webhook, or any of those four.
+- Which messaging channel you would like to cap: push, email, SMS, webhook, or any of those four.
 - How many times each user should receive Campaign/Canvas step sends from a channel within a certain time frame, which can be measured in minutes, days, weeks (7 days), and months.
 - Users can choose how many times each user should receive Campaign/Canvas step sends by [Tag](#frequency-capping-by-tag) within a certain time frame, which can be measured in minutes, days, weeks (7 days), and months. 
 
-Each line of frequency caps will be connected using an “AND,” and you’re able to add up to ten (10) reules per app group. In addition, you may include multiple caps for the same message types. For instance, you can cap users to no more than one (1) push per day and no more than three (3) pushes per week.
+Each line of frequency caps will be connected using an “AND,” and you’re able to add up to ten (10) rules per app group. In addition, you may include multiple caps for the same message types. For instance, you can cap users to no more than one (1) push per day and no more than three (3) pushes per week.
 
 ![Frequency Capping][14]
 
@@ -132,8 +132,8 @@ Different channels within a multi-channel campaign will individually count towar
 
 In-App Messages and Content Cards are __not__ counted as or towards caps on "Campaigns/Canvas Steps of any type".
 
-{% alert update %}
-Prior to July 30, 2019, In-App Messages counted towards “Campaigns/Canvas Steps of any type” rules when they were received but could not be frequency capped.
+{% alert important %}
+Please note that global frequency capping is based in the user's time zone, and are based on calendar days, not 24-hour periods. For example, if I set up a frequency capping rule of sending no more than 1 campaign a day, a user may receive a message at 11 pm in their local time zone, and they would be eligible to receive another message an hour later.
 {% endalert %}
 
 #### Examples

@@ -2,15 +2,12 @@
 nav_title: "Notification IDs"
 page_order: 3
 page_type: reference
-description: "This reference article briefly discusses Notification IDs."
+description: "This reference article briefly discusses notification IDs and how to assign them."
 
 platform: Android
 channel:
-  - Push
-tool:
-  - Docs
-  - Dashboard
-  - Campaigns
+  - push
+
 ---
 
 # Notification IDs

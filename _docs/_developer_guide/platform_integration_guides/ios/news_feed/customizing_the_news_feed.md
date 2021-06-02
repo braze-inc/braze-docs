@@ -2,6 +2,9 @@
 nav_title: Customization
 platform: iOS
 page_order: 5
+description: "This reference article covers how to customize your News Feed in your iOS  application."
+channel:
+  - news feed
 
 ---
 

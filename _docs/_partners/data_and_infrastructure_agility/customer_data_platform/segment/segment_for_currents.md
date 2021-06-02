@@ -23,6 +23,10 @@ Add this information to the Segment integration page on the dashboard, and press
 
 ![Segment]({% image_buster /assets/img_archive/currents-segment-edit.png %})
 
+{% alert important %}
+It's important to keep your Segment API Key up to date; if your connector's credentials expire, the connector will stop sending events. If this persists for more than **48 hours**, the connector's events will be dropped and data will be permanently lost.
+{% endalert %}
+
 All events sent to Segment will include the user's `external_user_id` as the `userId`. At this time, Braze does not send event data for users who do not have their `external_user_id` set.
 
 Segment's documentation is available [here](https://segment.com/docs/sources/cloud-apps/appboy/).
@@ -97,3 +101,4 @@ The behavior for `dispatch_id` differs between Canvas and Campaigns because Braz
 
 _Update noted in August 2019._
 {% endalert %}
+

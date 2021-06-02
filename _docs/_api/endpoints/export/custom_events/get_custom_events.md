@@ -6,7 +6,7 @@ layout: api_page
 
 page_type: reference
 platform: API
-description: "This article outlines details about the Custom events List Endpoint."
+description: "This article outlines details about the Custom Events List endpoint."
 ---
 {% api %}
 # Get Custom Events List
@@ -16,34 +16,26 @@ description: "This article outlines details about the Custom events List Endpoin
 
 This endpoint allows you to export a list of custom events that have been recorded for your app. The event names are returned in groups of 250, sorted alphabetically.
 
-{% apiref swagger %}https://www.braze.com/docs/api/interactive/#/Export/Custom%20events%20analytics%20export%20%20list%20example {% endapiref %}
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#93ecd8a5-305d-4b72-ae33-2d74983255c1 {% endapiref %}
 
-{% alert important %}
-__Looking for the `api_key` parameter?__<br>As of May 2020, Braze has changed how we read API keys to be more secure. Now API keys must be passed as a request header, please see `YOUR_REST_API_KEY` within the __Example Request__ below.<br><br>Braze will continue to support the `api_key` being passed through the request body and URL parameters, but will eventually be sunset. Please update your API calls accordingly.
-{% endalert %}
-
-## Request Parameter
+## Request Parameters
 
 | Parameter| Required | Data Type | Description |
 | -------- | -------- | --------- | ----------- |
 | `page`    | No | Integer | The page of event names to return, defaults to 0 (returns the first set of up to 250) |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
 
-### Example URL
-`https://rest.iad-01.braze.com/events/list?page=3`
-
-### Example Request
+## Example Request
 ```
 curl --location --request GET 'https://rest.iad-01.braze.com/events/list?page=3' \
---header 'Authorization: Bearer YOUR_REST_API_KEY'
+--header 'Authorization: Bearer YOUR-REST-API-KEY'
 ```
 
 ## Response
 
 ```json
 Content-Type: application/json
-Authorization: Bearer YOUR_REST_API_KEY
+Authorization: Bearer YOUR-REST-API-KEY
 {
     "message": (required, string) the status of the export, returns 'success' when completed without errors,
     "events" : [

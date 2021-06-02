@@ -6,7 +6,7 @@ glossary_top_header: "Segmentation Filters"
 glossary_top_text: Braze’s SDK provides you with a powerful arsenal of filters to segment and target your users based off of specific features and attributes. As you can see, you can search or narrow these filters by Filter Category.
 
 page_type: glossary
-tool: segments
+tool: Segments
 description: "This glossary lists available filters to segment and target your users."
 
 glossary_tag_name: Filter Category
@@ -100,7 +100,7 @@ glossaries:
     description: Segments your users by the median length of their sessions in your app.
     tags:
       - User Activity
-  - name: Money Spent In-App
+  - name: Money Spent
     description: Segments your users by the amount of money that they have spent in your app.
     tags:
       - User Activity
@@ -137,7 +137,7 @@ glossaries:
     tags:
       - User Activity
   - name: Uninstalled
-    description: Segments your users by whether they have uninstalled your app.
+    description: Segments your users by whether they have uninstalled your app and have not reinstalled it.
     tags:
       - User Activity
   - name: X Money Spent in Last Y Days
@@ -276,8 +276,8 @@ glossaries:
     description: Segments your users by their age, as they indicated from within your app.
     tags:
       - User Attributes
-  - name: Amplitude Cohorts
-    description: Clients who use Amplitude to supplement their segments may import and choose from those cohorts.
+  - name: Amplitude Extension
+    description: Clients who use Amplitude to supplement their segments may import and choose from those exntensions.
     tags:
       - User Attributes
   - name: Background Push Enabled
@@ -285,11 +285,11 @@ glossaries:
     tags:
       - User Attributes
   - name: Birthday
-    description: Segments your users by their birthday, as they indicated from within your app. <br> Users with a birthday on February 29th will be included in segments including March 1.
+    description: Segments your users by their birthday, as they indicated from within your app. <br> Users with a birthday on the 29th of February will be included in segments including March 1.
     tags:
       - User Attributes
-  - name: Braze Segment Cohorts
-    description: After creating Segment Cohorts in the Braze Dashboard, you can choose to include/exclude those cohorts in your segment.
+  - name: Braze Segment Extension
+    description: After creating a Segment Extension in the Braze Dashboard, you can choose to include/exclude those extensions in your segment.
     tags:
       - User Attributes
   - name: City
@@ -345,7 +345,7 @@ glossaries:
     tags:
       - User Attributes
   - name: Has App
-    description: Segments by whether or not a user has your app.
+    description: Segments by whether or not a user has ever installed your app. This will include users who currently have your app installed and those that have uninstalled in the past. 
     tags:
       - User Attributes
   - name: Language
@@ -373,7 +373,7 @@ glossaries:
     tags:
       - User Attributes
   - name: Push Enabled For App
-    description: Segments by whether or not your user has push enabled for your app on their device.
+    description: Segments by whether or not your user has push enabled for your app on their device. This count includes both foreground and background push.
     tags:
       - User Attributes
   - name: Push Opt-In Date

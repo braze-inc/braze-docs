@@ -2,6 +2,8 @@
 nav_title: Intelligent Selection
 page_order: 1
 description: "Intelligent Selection is a feature that analyzes the performance of a recurring campaign or Canvas twice a day and automatically adjusts the percentage of users that receive each message variant."
+Tool:
+  - Dashboard
 ---
 
 # Intelligent Selection {#intelligent-selection}

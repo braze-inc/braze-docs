@@ -1,11 +1,14 @@
 ---
 nav_title: Read & Unread Indicators
 page_order: 4
-
 platform: Android
+description: "This reference article covers how to implement read and unread indicators in your News Feed for your Android application."
+channel:
+  - news feed
+
 ---
 
-# Read/Unread Indicators
+# Read & Unread Indicators
 
 Braze allows you to optionally toggle on an Unread/Read indicator on News Feed cards as pictured below:
 

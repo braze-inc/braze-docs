@@ -1,8 +1,12 @@
 ---
-nav_title: Segment is Showing 0 Users
+nav_title: Segment is Showing No Users
 page_order: 0
+
+page_type: solution
+description: "This help article walks you through troubleshooting steps if zero users are showing in your segment, but you anticipate more."
+tool: Segments
 ---
-# Segment Is Showing 0 Users
+# Segment Is Showing No Users
 
 There are two possible solutions when you are seeing ```0``` users, but you anticipated more:
 * [Calculate Exact Statistics](#calculate-exact-statistics)

@@ -1,7 +1,14 @@
 ---
 nav_title: Security Qualifications
 page_order: 3
+
+page_type: reference
+description: "This page lists and describes Braze's security qualifications."
 ---
+
+<!--
+Warning! Don't make any changes to this document without approval from the legal department.
+-->
 
 # Security Qualifications
 
@@ -23,7 +30,7 @@ Any third party wishing to independently verify the status of Braze's certificat
 
 ![SOC 2 Examination][2]{: height="25%" width="25%" style="border:0px;"}
 
-_Review Date/Period: January 1, 2018 to June 30, 2018._
+_Last Review Date/Period: July 1,2019, to June 30,2020_
 
 Braze has successfully completed the Type 2 SOC 2 examination for _Security_, performed by independent CPA firm [Schellman & Company, LLC][8].
 

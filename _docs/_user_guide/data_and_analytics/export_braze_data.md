@@ -4,7 +4,10 @@ page_order: 6
 layout: dev_guide
 guide_top_header: "Exporting Braze Data"
 guide_top_text: "Braze provides CSV exports of Braze dashboard data, allowing you to analyze them with a variety of tools. Below are the different types of data you can export from the Dashboard, as well as tips for opening the data in Excel and performing exports with our API."
-description: "Braze provides CSV exports of Braze dashboard data, allowing you to analyze them with a variety of tools. Listed are the different types of data you can export from the Dashboard, as well as tips for opening the data in Excel and performing exports with our API."
+
+page_type: landing
+description: "This landing page is home to resources on exporting Braze data, such as reports and graphs."
+tool: Reports
 
 guide_featured_title: "Popular Articles"
 
@@ -21,21 +24,18 @@ guide_featured_list:
 
 guide_menu_title: "More Articles"
 guide_menu_list:
-  - name: Exporting App Usage Data
+  - name: Exporting Overview Data
     link: /docs/user_guide/data_and_analytics/export_braze_data/exporting_app_usage_data/
     fa_icon: far fa-dot-circle
-  - name: Revenue Data
+  - name: Exporting Revenue Data
     link: /docs/user_guide/data_and_analytics/export_braze_data/exporting_revenue_data/
     fa_icon: fas fa-hand-holding-usd
-  - name: News Feed Data
+  - name: Exporting News Feed Data
     link: /docs/user_guide/data_and_analytics/export_braze_data/export_news_feed_data/
     fa_icon: fas fa-newspaper
-  - name: Custom Event Data
+  - name: Exporting Custom Event Data
     link: /docs/user_guide/data_and_analytics/export_braze_data/export_custom_event_data/
     fa_icon: fas fa-cog
-  - name: Device and Carrier Data
-    link: /docs/user_guide/data_and_analytics/export_braze_data/export_device_and_carrier_data/
-    fa_icon: fas fa-mobile
   - name: Export APIs
     link: /docs/user_guide/data_and_analytics/export_braze_data/export_apis/
     fa_icon: fas fa-server

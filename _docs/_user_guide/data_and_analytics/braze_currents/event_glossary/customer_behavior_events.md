@@ -7,9 +7,9 @@ page_order: 4
 excerpt_separator: ""
 page_type: glossary
 
-description: "This glossary lists the various Customer Behavior and User Events that Braze can track and send to chosen Data Warehouses using our tool, Currents."
+description: "This glossary lists the various Customer Behavior and User Events that Braze can track and send to chosen Data Warehouses using Currents."
 
-tool: currents
+tool: Currents
 ---
 
 Please contact your Braze representative or [open a support ticket][support] if you need access to additional event entitlements. If you can't find what you need below, check out our [Message Engagement Events Library]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/message_engagement_events/) or our [Currents sample data examples](https://github.com/Appboy/currents-examples/tree/master/sample-data).
@@ -52,7 +52,7 @@ This event occurs when a specific custom event is triggered. Use this to track w
   "os_version": (string) os version of device used for the action,
   "device_model": (string) hardware model of the device,
   "device_id": (string) id of the device on which the event occurred,
-  "properties": (string) JSON encoded string of the custom properties for this event,
+  "properties": (string) JSON encoded string of the properties for this event,
   "ad_id": (string) advertising identifier,
   "ad_id_type": (string) One of 'ios_idfa', 'google_ad_id', 'windows_ad_id', OR 'roku_ad_id',
   "ad_tracking_enabled": (boolean) whether advertising tracking is enabled for the device

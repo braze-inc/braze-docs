@@ -1,6 +1,12 @@
 ---
 nav_title: Using Custom Event Properties
 page_order: 5
+
+page_type: solution
+description: "This help article walks you through three important checks to ensure your custom events are being logged as you expect."
+tool: 
+- Campaigns
+- Canvas
 ---
 
 # Are My Custom Event Properties Being Logged?
@@ -30,7 +36,7 @@ For further information see:
 
 ### Verify Log
 
-To confirm that the event properties are successfully tracked, you can view all event properties by going to the Manage App Groups page, clicking on the Custom Events tab, then clicking on Manage Properties. This will show you the names of all of the properties associated with an event.
+To confirm that the event properties are successfully tracked, you can view all event properties by going to the Manage Settings page, clicking on the Custom Events tab, then clicking on Manage Properties. This will show you the names of all of the properties associated with an event.
 
 ### Verify Values
 

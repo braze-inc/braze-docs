@@ -3,8 +3,8 @@ nav_title: Transferring Data to Redshift
 page_order: 8
 
 page_type: tutorial
-description: "This article will walk you through how to transfer data from Amazon S3 to Redshift via an ETL process."
-tool: currents
+description: "This how-to article will walk you through how to transfer data from Amazon S3 to Redshift via an ETL process."
+tool: Currents
 
 ---
 

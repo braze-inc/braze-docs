@@ -2,8 +2,12 @@
 nav_title: Location Tracking
 platform: iOS
 page_order: 6
+description: "This article shows how to configure location tracking for your iOS application."
+Tool:
+  - Location
 
 ---
+
 # Location Tracking
 
 By default, Braze disables location tracking. We enable location tracking after the host application has opted in to location tracking and gained permission from the user. Provided that users have opted into location tracking, Braze will log a single location for each user on session start.
@@ -13,7 +17,7 @@ In order for location tracking to work reliably in iOS 14 for users who give App
 {% endalert %}
 
 ## Enabling Automatic Location Tracking
-Starting with Braze iOS SDK `v3.17.0`, location tracking is disabled by default. You can enable automatic location tracking using the `Info.plist` file. Add the `Appboy` dictionary to your `Info.plist` file. Inside the `Appboy` dictionary, add the `EnableAutomaticLocationCollection` boolean subentry and set the value to `YES`.
+Starting with Braze iOS SDK `v3.17.0`, location tracking is disabled by default. You can enable automatic location tracking using the `Info.plist` file. Add the `Braze` dictionary to your `Info.plist` file. Inside the `Braze` dictionary, add the `EnableAutomaticLocationCollection` boolean subentry and set the value to `YES`. Note that prior to Braze iOS SDK v4.0.2, the dictionary key `Appboy` must be used in place of `Braze`.
 
  You can also enable automatic location tracking at app startup time via the [`startWithApiKey:inApplication:withLaunchOptions:withAppboyOptions`][4] method. In the `appboyOptions` dictionary, set `ABKEnableAutomaticLocationCollectionKey` to `YES`. For example:
 
@@ -80,4 +84,4 @@ Appboy.sharedInstance()?.user.setLastKnownLocationWithLatitude(latitude: latitud
 For more information, see [`ABKUser.h`][5].
 
 [4]: #customizing-appboy-on-startup
-[5]: https://github.com/Appboy/appboy-ios-sdk/blob/master/AppboyKit/headers/AppboyKitLibrary/ABKUser.h
+[5]: https://github.com/Appboy/appboy-ios-sdk/blob/master/AppboyKit/include/ABKUser.h

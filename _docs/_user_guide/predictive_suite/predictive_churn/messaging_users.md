@@ -1,14 +1,16 @@
 ---
 nav_title: Messaging Users
 title: Messaging Users
-description: "This reference article covers potential next steps after you have created a Churn Prediction."
+description: "This reference article covers potential next steps after you have created a Churn Prediction such as implementing filter and strategic considerations."
 page_order: 3
+Tool:
+  - Dashboard
 ---
 
 # Messaging Users {#what-do-next}
 
 {% alert note %}
-Preview and Demo Predictions will not allow users to be targeted for messaging, and the __Create Segment__ and __Create Campaign__ buttons will be disabled. To purchase this functionality, contact your Account Manager.
+Preview and Demo Predictions will not allow users to be targeted for messaging, and the __Create Segment__, and __Create Campaign__ buttons will be disabled. To purchase this functionality, contact your Account Manager.
 {% endalert %}
 
 ## Implementing Filters {#filters}
@@ -21,7 +23,7 @@ You can also use filters in campaigns or segments to target the users according 
 
 ## Strategic Considerations
 
-Now that you’ve identified and selected the group of users at risk of churn that you feel require some incentives or a new messaging series to keep them active and engaged, what do you do? Do you just add them proactively to your current passive user series? Or do you build out a brand new series of Canvases and Campaigns? 
+Now that you've identified and selected the group of users at risk of churn that you feel require some incentives or a new messaging series to keep them active and engaged, what do you do? Do you just add them proactively to your current passive user series? Or do you build out a brand new series of Canvases and Campaigns? 
 
 __Here are a few ideas to consider:__
 
@@ -29,8 +31,8 @@ __Here are a few ideas to consider:__
 - Drop these users into a daily Canvas for a week, delivering messages on the channel they prefer most, do a concentrated blast for three days, reaching customers on every channel, from email to Facebook, or send a message from a real person, asking for brand feedback or offering a pro tip.<br><br>
 - Maybe you just need a new, fun way to reiterate the value of your brand, and all the ways these customers have found value in yours before. This could look like a persona-specific weekly newsletter, a series of real stories from real users about your brand, or some other content marketing play.
 
-Keep in mind that you can message different levels of at-risk users differently! So the highest-risk customers could get higher discounts than the medium-risk customers, while the lowest-risk customers simply get new kinds of messaging or content but no larger incentive. You can also layer other filters into these segments, to further qualify who gets what offers, messages, etc.
+Keep in mind that you can message different levels of at-risk users differently! So the highest-risk customers could get higher discounts than the medium-risk customers, while the lowest-risk customers simply get new kinds of messaging or content but no larger incentive. You can also layer other filters into these segments to further qualify who gets what offers, messages, etc.
 
 
 
-[5]: {% image_buster /assets/img/churn/churnFilters.png %}
+[5]: {% image_buster /assets/img/purchasePrediction/purchaseFilters.png %}

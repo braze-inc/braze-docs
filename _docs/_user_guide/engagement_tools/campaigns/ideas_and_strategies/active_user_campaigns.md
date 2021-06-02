@@ -4,9 +4,11 @@ platform: Campaigns
 subplatform: Ideas and Strategies
 page_order: 0
 
-tools: campaigns
 page_type: tutorial
-description: "This how-to article will discuss Active User Campaigns within the Braze dashboard and the steps to create and set-up one."
+description: "This how-to article describes Active User Campaigns within the Braze dashboard and the steps to create and set up one."
+tool: 
+- Segments
+- Campaigns
 ---
 # Active User Campaigns
 
@@ -18,6 +20,14 @@ description: "This how-to article will discuss Active User Campaigns within the 
 Reaching out to already active users of your app can be a powerful tool in helping to build a dedicated following of consistent app users. A little bit of personalized recognition of your power users can turn them into evangelists for your app.
 
 You can also check out [our LAB course](http://lab.braze.com/quick-overview-segment-and-campaign-setup) on marketing strategy for email and recommended lifecycle campaigns!
+
+## Understanding Active Users
+
+Braze defines an "active user" for a given period of time as any user who has a session in that time period.
+
+If a user loses connectivity, we will cache the session data locally and upload it when the user regains a network connection. These sessions will also be applied to the active user count. Additionally, if your app has a registration process, Braze will count all users as active—registered or unregistered.
+
+If you set User IDs to identify users when a new user logs in they will be counted as a separate active user. Users who are updated via the API will also be counted as an active user in the time period that they are updated.
 
 ## Step 1: Identifying Your Top Users
 

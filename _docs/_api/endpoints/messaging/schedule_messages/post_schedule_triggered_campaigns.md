@@ -9,7 +9,7 @@ platform: API
 tool:
   - Campaigns
 
-description: "This article outlines details about the Update Scheduled Campaigns Braze endpoint."
+description: "This article outlines details about the Schedule API Triggered Campaigns Braze endpoint."
 ---
 {% api %}
 # Schedule API Triggered Campaigns
@@ -21,34 +21,28 @@ Use this endpoint to trigger API Triggered Campaigns, which are created on the D
 
 This endpoint allows you to send Campaign messages (up to 90 days in advance) via API Triggered delivery, allowing you to decide what action should trigger the message to be sent. Please note that to send messages with this endpoint, you must have a Campaign ID, created when you build an [API Triggered Campaign]({{site.baseurl}}/api/api_campaigns/).
 
-{% apiref swagger %}https://www.braze.com/docs/api/interactive/#/Messaging/CreateScheduledApiTriggeredCampaignExample {% endapiref %}
-{% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#2608e4a6-24eb-4d24-88b2-86382e62d6dc {% endapiref %}
-
-{% alert important %}
-__Looking for the `api_key` parameter?__<br>As of May 2020, Braze has changed how we read API keys to be more secure. Now API keys must be passed as a request header, please see `YOUR_REST_API_KEY` within the __Example Request__ below.<br><br>Braze will continue to support the `api_key` being passed through the request body and URL parameters, but will eventually be sunset. Please update your API calls accordingly.
-{% endalert %}
-
+{% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#b7e61de7-f2c2-49c9-9e46-b85a0aa01bba {% endapiref %}
 
 ## Request Body
 
 ```
 Content-Type: application/json
-Authorization: Bearer YOUR_REST_API_KEY
+Authorization: Bearer YOUR-REST-API-KEY
 ```
 
 ```json
 {
-  "campaign_id": (required, string) see Campaign Identifier,
-  "send_id": (optional, string) see Send Identifier,
+  "campaign_id": (required, string) see campaign identifier,
+  "send_id": (optional, string) see send identifier,
   // Including 'recipients' will send only to the provided user ids if they are in the campaign's segment
-  "recipients": (optional, Array of Recipient Object),
+  "recipients": (optional, array of recipient object),
   // for any keys that conflict between these trigger properties and those in a Recipient Object, the value from the Recipient Object will be used
-  "audience": (optional, Connected Audience Object) see Connected Audience,
+  "audience": (optional, connected audience object) see connected audience,
   // Including 'audience' will only send to users in the audience
   // If 'recipients' and 'audience' are not provided and broadcast is not set to 'false',
   // the message will send to entire segment targeted by the campaign
-  "broadcast": (optional, boolean) see Broadcast -- defaults to false on 8/31/17, must be set to true if "recipients" object is omitted,
-  "trigger_properties": (optional, object) personalization key value pairs for all users in this send; see Trigger Properties,
+  "broadcast": (optional, boolean) see broadcast -- defaults to false on 8/31/17, must be set to true if "recipients" object is omitted,
+  "trigger_properties": (optional, object) personalization key-value pairs for all users in this send; see trigger properties,
   "schedule": {
     "time": (required, datetime as ISO 8601 string) time to send the message (up to 90 days in the future),
     "in_local_time": (optional, bool),
@@ -56,38 +50,39 @@ Authorization: Bearer YOUR_REST_API_KEY
   }
 }
 ```
-### Request Parameters
+## Request Parameters
 
 | Parameter | Required | Data Type | Description |
 | --------- | ---------| --------- | ----------- |
-|`campaign_id`|Required|String| See Campaign Identifier|
-|`send_id` | Optional | String | See Send Identifier |
-|`recipients` | Optional | Array of Recipient Objects | See Recipients Object |
-|`audience` | Optional | Connected Audience Object | See Connected Audience |
-|`broadcast` | Optional | Boolean | See Broadcast -- defaults to false on 8/31/17, must be set to true if "recipients" object is omitted |
-| `trigger_properties` | Optional | Object | Personalization key value pairs for all users in this send; see Trigger Properties |
-| `schedule` | Required | Schedule Object | See Schedule Object |
+|`campaign_id`|Required|String| See campaign identifier|
+|`send_id` | Optional | String | See send identifier |
+|`recipients` | Optional | Array of recipient objects | See recipients object |
+|`audience` | Optional | Connected audience object | See connected audience |
+|`broadcast` | Optional | Boolean | See broadcast -- defaults to false on 8/31/17, must be set to true if "recipients" object is omitted |
+| `trigger_properties` | Optional | Object | Personalization key-value pairs for all users in this send; see trigger properties |
+| `schedule` | Required | Schedule object | See schedule object |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
 
-## Request Components
+### Request Components
 - [Campaign Identifier]({{site.baseurl}}/api/identifier_types/)
+- [Send Identifier]({{site.baseurl}}/api/identifier_types/)
 - [Recipients]({{site.baseurl}}/api/objects_filters/recipient_object/)
 - [Connected Audience]({{site.baseurl}}/api/objects_filters/connected_audience/)
 - [Broadcast]({{site.baseurl}}/api/parameters/#broadcast)
 - [Trigger Properties]({{site.baseurl}}/api/objects_filters/trigger_properties_object/)
 - [Schedule Object]({{site.baseurl}}/api/objects_filters/schedule_object/)
 
-### Example Request
+## Example Request
 ```
 curl --location --request POST 'https://rest.iad-01.braze.com/campaigns/trigger/schedule/create' \
 --header 'Content-Type: application/json' \
---header 'Authorization: Bearer YOUR_REST_API_KEY' \
+--header 'Authorization: Bearer YOUR-REST-API-KEY' \
 --data-raw '{
-  "campaign_id": "",
-  "send_id": "",
+  "campaign_id": "campaign_identifier",
+  "send_id": "send_identifier",
   "recipients": [{
-    "user_alias": "",
-    "external_user_id": "",
+    "user_alias": "example_alias",
+    "external_user_id": "external_user_identifier",
     "trigger_properties": {},
     "canvas_entry_properties": {}
   }],

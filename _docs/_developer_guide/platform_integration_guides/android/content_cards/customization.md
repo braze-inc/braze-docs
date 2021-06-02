@@ -1,8 +1,11 @@
 ---
 nav_title: Customization
-page_order: 1
-
+page_order: 2
 platform: Android
+description: "This article covers customization options for your Content Cards in your Android application."
+channel:
+  - content cards
+
 ---
 
 # Customization
@@ -81,7 +84,7 @@ To fully customize the network error behavior, you can extend the [AppboyContent
 
 ## Content Cards Style Elements {#content-cards-style-elements-for-android}
 
-### Setting A Custom Font {#setting-a-custom-font-for-android}
+### Custom Font {#setting-a-custom-font-for-android}
 
 Braze allows for setting a custom font using the [font family guide][40]. To use it, override a style for cards and use the `fontFamily` attribute to instruct Braze to use your custom font family.
 
@@ -98,7 +101,7 @@ Here is a truncated example with a custom font family, `my_custom_font_family`, 
   </style>
 ```
 
-### Setting A Custom Pinned Icon {#setting-a-custom-pinned-icon-for-android}
+### Custom Pinned Icon {#setting-a-custom-pinned-icon-for-android}
 
 To set a custom pinned icon, override the `Appboy.ContentCards.PinnedIcon` style. Your custom image asset should be declared in the `android:src` element.
 
@@ -106,7 +109,7 @@ To set a custom pinned icon, override the `Appboy.ContentCards.PinnedIcon` style
 
 The `AppboyContentCardsFragment` relies on a [`IContentCardsUpdateHandler`][44] to handle any sorting or modifications of Content Cards before they are displayed in the feed. A custom update handler can be set via [`setContentCardUpdateHandler`][45] on your [`AppboyContentCardsFragment`][47].
 
-Filtering out Content Cards before they reach the user's feed is a common use-case and could be achieved by reading the key value pairs set on the dashboard via [`Card.getExtras()`][36] and performing any logic you'd like in the update handler.
+Filtering out Content Cards before they reach the user's feed is a common use-case and could be achieved by reading the key-value pairs set on the dashboard via [`Card.getExtras()`][36] and performing any logic you'd like in the update handler.
 
 The following is the default `IContentCardsUpdateHandler` and can be used as a starting point for customizations.
 
@@ -369,7 +372,7 @@ public class DefaultContentCardsViewBindingHandler implements IContentCardsViewB
 class DefaultContentCardsViewBindingHandler : IContentCardsViewBindingHandler {
   // Interface that must be implemented and provided as a public CREATOR
   // field that generates instances of your Parcelable class from a Parcel.
-  val CREATOR: Parcelable.Creator<DefaultContentCardsViewBindingHandler> = object : Parcelable.Creator<DefaultContentCardsViewBindingHandler?> {
+  val CREATOR: Parcelable.Creator<DefaultContentCardsViewBindingHandler?> = object : Parcelable.Creator<DefaultContentCardsViewBindingHandler?> {
     override fun createFromParcel(`in`: Parcel): DefaultContentCardsViewBindingHandler? {
       return DefaultContentCardsViewBindingHandler()
     }
@@ -380,25 +383,27 @@ class DefaultContentCardsViewBindingHandler : IContentCardsViewBindingHandler {
   }
 
   /**
-   * A cache for the views used in binding the items in the [RecyclerView].
-   */
+    * A cache for the views used in binding the items in the [RecyclerView].
+    */
   private val mContentCardViewCache: MutableMap<CardType, BaseContentCardView<*>?> = HashMap()
 
-  fun onCreateViewHolder(context: Context?, cards: List<Card?>?, viewGroup: ViewGroup?, viewType: Int): ContentCardViewHolder? {
+  override fun onCreateViewHolder(context: Context?, cards: List<Card?>?, viewGroup: ViewGroup?, viewType: Int): ContentCardViewHolder? {
     val cardType = CardType.fromValue(viewType)
     return getContentCardsViewFromCache(context, cardType)!!.createViewHolder(viewGroup)
   }
 
-  fun onBindViewHolder(context: Context?, cards: List<Card>, viewHolder: ContentCardViewHolder?, adapterPosition: Int) {
+  override fun onBindViewHolder(context: Context?, cards: List<Card>, viewHolder: ContentCardViewHolder?, adapterPosition: Int) {
     if (adapterPosition < 0 || adapterPosition >= cards.size) {
       return
     }
     val cardAtPosition = cards[adapterPosition]
     val contentCardView = getContentCardsViewFromCache(context, cardAtPosition.cardType)
-    contentCardView!!.bindViewHolder(viewHolder, cardAtPosition)
+    if (viewHolder != null) {
+      contentCardView!!.bindViewHolder(viewHolder, cardAtPosition)
+    }
   }
 
-  fun getItemViewType(context: Context?, cards: List<Card>, adapterPosition: Int): Int {
+  override fun getItemViewType(context: Context?, cards: List<Card>, adapterPosition: Int): Int {
     if (adapterPosition < 0 || adapterPosition >= cards.size) {
       return -1
     }
@@ -407,16 +412,15 @@ class DefaultContentCardsViewBindingHandler : IContentCardsViewBindingHandler {
   }
 
   /**
-   * Gets a cached instance of a [BaseContentCardView] for view creation/binding for a given [CardType].
-   * If the [CardType] is not found in the cache, then a view binding implementation for that [CardType]
-   * is created and added to the cache.
-   */
+    * Gets a cached instance of a [BaseContentCardView] for view creation/binding for a given [CardType].
+    * If the [CardType] is not found in the cache, then a view binding implementation for that [CardType]
+    * is created and added to the cache.
+    */
   @VisibleForTesting
-  fun getContentCardsViewFromCache(context: Context?, cardType: CardType): BaseContentCardView<*>? {
+  fun getContentCardsViewFromCache(context: Context?, cardType: CardType): BaseContentCardView<Card>? {
     if (!mContentCardViewCache.containsKey(cardType)) {
       // Create the view here
-      val contentCardView: BaseContentCardView<*>
-      contentCardView = when (cardType) {
+      val contentCardView: BaseContentCardView<*> = when (cardType) {
         CardType.BANNER -> BannerImageContentCardView(context)
         CardType.CAPTIONED_IMAGE -> CaptionedImageContentCardView(context)
         CardType.SHORT_NEWS -> ShortNewsContentCardView(context)
@@ -425,16 +429,16 @@ class DefaultContentCardsViewBindingHandler : IContentCardsViewBindingHandler {
       }
       mContentCardViewCache[cardType] = contentCardView
     }
-    return mContentCardViewCache[cardType]
+    return mContentCardViewCache[cardType] as BaseContentCardView<Card>?
   }
 
   // Parcelable interface method
-  fun describeContents(): Int {
+  override fun describeContents(): Int {
     return 0
   }
 
   // Parcelable interface method
-  fun writeToParcel(dest: Parcel?, flags: Int) {
+  override fun writeToParcel(dest: Parcel?, flags: Int) {
     // Retaining views across a transition could lead to a
     // resource leak so the parcel is left unmodified
   }
@@ -473,7 +477,7 @@ fragment.setContentCardsViewBindingHandler(viewBindingHandler)
 
 There are additional relevant resources on this topic available [here](https://medium.com/google-developers/android-data-binding-recyclerview-db7c40d9f0e4).
 
-### Setting a Custom Content Cards Click Listener
+### Custom Content Cards Click Listener
 
 You can handle Content Cards clicks manually by setting a custom click listener. This enables use cases such as selectively using the native web browser to open web links.
 
@@ -631,9 +635,9 @@ If a card is already marked as dismissed, it cannot be marked as dismissed again
 
 Disabling swipe-to-dismiss functionality is done on a per-card basis via the [`card.setIsDismissibleByUser()`][48] method. Cards can be intercepted before display using the [`AppboyContentCardsFragment.setContentCardUpdateHandler()`][45] method.
 
-## Key Value Pairs
+## Key-Value Pairs
 
-`Card` objects may optionally carry key value pairs as `extras`. These can be used to send data down along with a `Card` for further handling by the application.
+`Card` objects may optionally carry key-value pairs as `extras`. These can be used to send data down along with a `Card` for further handling by the application.
 
 See the [Javadoc][36] for more information.
 

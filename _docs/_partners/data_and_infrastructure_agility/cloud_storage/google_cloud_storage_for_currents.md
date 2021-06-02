@@ -53,6 +53,10 @@ Create a key using the JSON format. Once created, this key will download to your
 
 On the **Braze Currents** integration page, upload that JSON key file as your **Credentials File**.
 
+{% alert important %}
+It's important to keep your Credentials File up to date; if your connector's credentials expire, the connector will stop sending events. If this persists for more than **48 hours**, the connector's events will be dropped and data will be permanently lost.
+{% endalert %}
+
 ### Step 7 - Finish Up
 
 Include your GCS bucket name in the appropriate field so we know where to stream Currents data.

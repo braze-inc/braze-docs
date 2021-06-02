@@ -1,7 +1,12 @@
 ---
 nav_title: Viewing and Understanding Segment Data
 page_order: 4
-description: "The Segments section of your Braze Dashboard contains a summary of all of your segments and allows you to examine detailed data for each one."
+
+page_type: reference
+description: "This reference article explains the Segments section of your Braze Dashboard, and includes a summary the statistics provided."
+tool: 
+- Segments
+- Reports
 ---
 # Viewing and Understanding Segment Data
 
@@ -46,7 +51,7 @@ On this page, you can view a number of user-specific attributes as shown below:
 
 ![User Preview][8]
 
-[1]: {% image_buster /assets/img_archive/Segments.png %}
+[1]: {% image_buster /assets/img_archive/segments.png %}
 [2]: {% image_buster /assets/img_archive/A_Tracking.png %}
 [3]: {{site.baseurl}}/user_guide/engagement_tools/segments/creating_a_segment/#creating-a-segment
 [4]: {% image_buster /assets/img_archive/Historical_Membership2.png %}

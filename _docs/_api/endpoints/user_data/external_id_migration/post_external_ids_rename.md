@@ -25,52 +25,49 @@ You can send up to 50 rename objects per request.
 
 You will need to create a new [API key]({{site.baseurl}}/api/api_key/) with permissions for this endpoint.
 
-{% alert important %}
-__Looking for the `api_key` parameter?__<br>As of May 2020, Braze has changed how we read API keys to be more secure. Now API keys must be passed as a request header, please see `YOUR_REST_API_KEY` within the __Example Request__ below.<br><br>Braze will continue to support the `api_key` being passed through the request body and URL parameters, but will eventually be sunset. Please update your API calls accordingly.
-{% endalert %}
+{% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#17682d2b-1546-4a3c-9703-aa5a12861d7c {% endapiref %}
 
 ## Request Body
 
 ```
 Content-Type: application/json
-Authorization: Bearer YOUR_REST_API_KEY
+Authorization: Bearer YOUR-REST-API-KEY
 ```
 
 ```json
 {
-  "external_id_renames" : (required, array of external ID Renames Object)
-  [
-    {
-      "current_external_id" : (required, string) existing external ID for the user,
-      "new_external_id" : (required, string) new external ID for the user, must be unique
-    },
-    ...
-  ]
+  "external_id_renames" : (required, array of external ID rename objects)
 }
 ```
 
-### Request Example
+## Request Parameters
+
+| Parameter | Required | Data Type | Description |
+| --------- | ---------| --------- | ----------- |
+| `external_id_renames` | Required | Array of external identifier rename objects | View request example and the following limitations for the structure of the external identifier rename object |
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
+
+- The `current_external_id` must be the user’s primary ID, and cannot be a deprecated ID
+- The `new_external_id` must not already be in use as either a primary ID or a deprecated ID
+- The `current_external_id` and `new_external_id` cannot be the same
+
+## Request Example
 ```
 curl --location --request POST 'https://rest.iad-01.braze.com/users/external_ids/rename' \
 --header 'Content-Type: application/json' \
---header 'Authorization: Bearer YOUR_REST_API_KEY' \
+--header 'Authorization: Bearer YOUR-REST-API-KEY' \
 --data-raw '{
   "external_id_renames" : 
   [
     {
-      "current_external_id": "your_existing_external_id",
-      "new_external_id" : "your_new_external_id"
+      "current_external_id": "existing_external_id",
+      "new_external_id" : "new_external_id"
     }
   ]
 }'
 ```
-{% alert important %}
-- The `current_external_id` must be the user’s primary ID, and cannot be a deprecated ID
-- The `new_external_id` must not already be in use as either a primary ID or a deprecated ID
-- The `current_external_id` and `new_external_id` cannot be the same
-{% endalert %}
 
-## Response Body
+## Response 
 The response will confirm all successful renames, as well as unsuccessful renames with any associated errors. Error messages in the `rename_errors` field will reference the index of the object in the array of the original request.
 
 ```
@@ -95,7 +92,7 @@ __Does this impact MAU?__
 - No, since the number of users will stay the same, they’ll just have a new `external_id`.
 
 __Does user behavior change historically?__
-- No, since the user is still the same user, and all their historical behavior is still connected to them.
+- No, since the user is still the same, and all their historical behavior is still connected to them.
 
 __Can it be run on dev/staging app groups?__
 - Yes. In fact, we highly recommend running a test migration on a staging or development app group, and ensuring everything has gone smoothly before executing on production data.

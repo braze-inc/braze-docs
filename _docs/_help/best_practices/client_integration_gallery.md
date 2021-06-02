@@ -5,6 +5,12 @@ layout: glossary_page
 glossary_top_header: "Customer Examples Library"
 glossary_top_text: "See some shining examples of real messages using our Campaigns and Canvas tools! <br> <br> Many of the examples you'll see below come from our Firebrands, a customer engagement community of movers and shakers using Braze to modernize their customer experience and marketing strategies. Interested in learning more? <a href='https://brazefirebrands.splashthat.com/'>Join now</a>."
 
+page_type: glossary
+description: "This glossary page showcases some shining examples of real messages Braze customers have sent using our Campaigns and Canvas tools!"
+tool:
+- Canvas
+- Campaigns
+
 glossary_tag_name: "Industry"
 glossary_filter_text: "Select tags below to narrow the library."
 
@@ -294,5 +300,10 @@ glossaries:
     tags:
       - Retail & eCommerce
       - Financial Services & Insurance
-
+  - name: Drive User Action by Nudging Users to Leave Reviews in the App Store
+    image: /docs/assets/img_archive/HTML5-1.gif
+    description: "<a href='https://soundcloud.com/'>SoundCloud</a> <br> <br> With the power of deep links and Braze in-app messages, you can create messages that nudge users to provide feedback. This HTML in-app message prompts users to rate their experience, allowing the application to directly collect valuable user feedback, and through the use of deep links, link to the app store to rate the application."
+    tags:
+      - Media & Entertainment
+      - Miscellaneous & Other
 ---

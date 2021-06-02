@@ -1,6 +1,10 @@
 ---
 nav_title: Managing Email Subscriptions
 page_order: 7
+
+page_type: reference
+description: "This article covers best practices for managing email subscriptions, such as unsubscribed, invalid, or duplicate emails."
+channel: email
 ---
    
 # Managing Email Subscriptions
@@ -9,7 +13,7 @@ Make sure you are familiar with the tools that Braze provides for [managing user
 
 ## Unsubscribed Email Addresses
 
-Braze will automatically unsubscribe any user that either manually unsubscribes from your email or marks an email as spam. These users won't be targeted by future emails.
+Braze will automatically unsubscribe any user that either manually unsubscribes from your email through a custom footer or marks an email as spam. These users won't be targeted by future emails. To read more about how to set up your custom footer, visit this [documentation]({{site.baseurl}}/user_guide/message_building_by_channel/email/managing_user_subscriptions/#changing-email-subscriptions).
 
 If a user unsubscribes and later changes their email, their new email will also be unsubscribed. In other words, once an external user ID is associated with an unsubscribe, future email addresses for that user ID will also be unsubscribed.
 

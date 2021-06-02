@@ -1,6 +1,9 @@
 ---
 nav_title: February
 page_order: 11
+
+page_type: update
+description: "This article contains release notes for February 2020."
 ---
 # February 2020
 

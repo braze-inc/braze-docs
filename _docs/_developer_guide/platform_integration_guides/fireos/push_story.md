@@ -3,6 +3,9 @@ nav_title: Push Story
 platform: FireOS
 page_order: 6
 
+page_type: reference
+description: "This page provides resources on Android Push Stories."
+
 ---
 
 # Push Stories Set Up for Android

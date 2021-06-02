@@ -3,6 +3,12 @@ nav_title: Modal
 platform: Message_Building_and_Personalization
 subplatform: In-App Messages
 page_order: 1
+channel:
+  - in-app messages
+tool:
+  - Media
+description: "This reference article covers the message and design requirements of modal in-app messages."
+
 ---
 # Modal In-App Messages
 
@@ -24,7 +30,7 @@ Modal in-app messages are designed to fit the device at the best and most fillin
 
 | Layout | Asset Size | Notes |
 |--- | --- | ------ |
-| Image + Text | 29:10 aspect ratio<br>Hi-Res 1200 x 415px<br> Min. 600 x 205px | Tall images will scale down and be horizontally centered. Wide images will be clipped on the left and right edges. |
+| Image + Text | 29:10 aspect ratio<br>Hi-Res 1450 x 500px<br> Min. 725 x 250px | Tall or narrow images will scale down and be horizontally centered. Wide images will be clipped on the left and right edges. |
 | Image Only | Nearly any aspect ratio<br>Hi-Res up to 1200 x 2000px<br> Min. 600 x 600px | The message will resize to fit images of most aspect ratios. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
 

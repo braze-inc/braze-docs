@@ -2,8 +2,9 @@
 nav_title: Customer Feedback
 platform: FireOS
 page_order: 5
-
 hidden: true
+page_type: reference
+
 ---
 
 {% alert Update %}
@@ -48,7 +49,7 @@ Braze has a [method][5] allows you to pass Feedback to Braze from a form or fiel
 
 Braze has easy integrations with both [Desk.com][13] and [Zendesk][14]. So long as you are collecting feedback through our ready-made UI or manually using the `submitFeedback` method, you can pass that feedback through to either third-party provider. This will afford you the benefit of having the entire user profile card available to the CSR handling the case, and allow you to segment based upon the number of feedback requests a user has submitted.
 
-To take advantage of these integrations, please visit the "Feedback" section within the "App Settings" page
+To take advantage of these integrations, please visit the "Feedback" section within the **Settings** page
 
 ## Theming the Braze Feedback UI
 

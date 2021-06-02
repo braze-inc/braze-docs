@@ -2,6 +2,9 @@
 nav_title: Silent Push Notifications
 platform: iOS
 page_order: 4
+description: "This article covers how to implement silent push notifications in your iOS application."
+channel:
+  - push
 
 ---
 
@@ -15,7 +18,7 @@ Silent push notifications are rate-limited, so don't be afraid of sending as man
 
 ## Sending Remote Notifications
 
-To send a remote notification, set the `content-available` flag in a push notification payload. When you're sending a Remote Notification, you might also want to include some data in the notification payload, so your application can reference the event. This could save you a few networking requests and increase the responsiveness of your app.
+To send a remote notification, set the `content-available` flag to 1 in a push notification payload. When you're sending a Remote Notification, you might also want to include some data in the notification payload, so your application can reference the event. This could save you a few networking requests and increase the responsiveness of your app.
 
 The `content-available` flag can be set in the Braze dashboard (pictured below) as well as within our [User API][1].
 

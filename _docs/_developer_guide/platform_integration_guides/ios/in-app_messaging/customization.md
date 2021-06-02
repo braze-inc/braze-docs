@@ -2,6 +2,9 @@
 nav_title: Customization
 platform: iOS
 page_order: 1
+description: "This reference article covers in-app messaging customization options for your iOS application."
+channel:
+  - in-app messages
 
 ---
 
@@ -17,17 +20,42 @@ __Note that integration of `SDWebImage` is required if you plan on using our Bra
 
 ## Key Value Pair Extras
 
-`ABKInAppMessage` objects may carry key value pairs as `extras`. These are specified on the dashboard when creating an in-app message campaign. Key value pairs can be used to send data down along with an in-app message for further handling by your app, allowing you to add custom behaviors on top of what Braze provides.
+`ABKInAppMessage` objects may carry key-value pairs as `extras`. These are specified on the dashboard when creating a campaign. Key-value pairs can be used to send data down along with an in-app message for further handling by your app.
 
 ## Setting Delegates
 
-In-app message display and delivery customizations can be accomplished in code by setting delegates. All of these customizations are entirely optional.
+In-app message display and delivery customizations can be accomplished in code by setting our optional delegates.
 
-### Core In-App Message Controller Delegate
+### In-App Message Delegate
 
-The [`ABKInAppMessageControllerDelegate`][16] delegate contains one method, [`beforeInAppMessageDisplayed:`][32], and is part of our [`Core`][33] subspec.
+The [`ABKInAppMessageUIDelegate`][34] delegate can be used to receive triggered in-app message payloads for further processing, receive display lifecycle events, and control display timing. 
 
-Set your `ABKInAppMessageControllerDelegate` delegate instance on the Braze `ABKInAppMessageController` by calling:
+Set your `ABKInAppMessageUIDelegate` delegate object on the Braze instance by calling:
+
+{% tabs %}
+{% tab OBJECTIVE-C %}
+
+```objc
+[[Appboy sharedInstance].inAppMessageController.inAppMessageUIController setInAppMessageUIDelegate:self];
+```
+
+{% endtab %}
+{% tab swift %}
+
+```swift
+Appboy.sharedInstance()?.inAppMessageController.inAppMessageUIController.setInAppMessageUIDelegate(self);
+```
+
+{% endtab %}
+{% endtabs %}
+
+See our [in-app message sample app][35] for an example. Note that if you are not including Braze's UI library in your project (uncommon), this delegate is unavailable.
+
+### Core In-App Message Delegate
+
+If you are not including Braze's UI library in your project and would like to receive triggered in-app message payloads for further processing or custom display in your app, implement the [`ABKInAppMessageControllerDelegate`][16] protocol.
+
+Set your `ABKInAppMessageControllerDelegate` delegate object on the Braze instance by calling:
 
 {% tabs %}
 {% tab OBJECTIVE-C %}
@@ -46,7 +74,7 @@ Appboy.sharedInstance()?.inAppMessageController.delegate = self
 {% endtab %}
 {% endtabs %}
 
-In some cases (e.g., on session start), the in-app message may be triggered and displayed before the in-app message delegate is set. To guard against this, you can also set the in-app message delegate in the `appboyOptions` with key `ABKInAppMessageControllerDelegateKey` in [`startWithApiKey:inApplication:withLaunchOptions:withAppboyOptions`][31].
+You can alternatively set your core in-app message delegate at initialization time via `appboyOptions` using the key `ABKInAppMessageControllerDelegateKey`.
 {% tabs %}
 {% tab OBJECTIVE-C %}
 
@@ -69,53 +97,6 @@ Appboy.start(withApiKey: "YOUR-API-KEY",
 {% endtab %}
 {% endtabs %}
 
-### In-App Message UI Controller Delegate
-
-The [`ABKInAppMessageUIDelegate`][34] delegate can be used with our `UI` and `InAppMessage` subspecs.
-
-Set your `ABKInAppMessageUIDelegate` delegate instance on the Braze `ABKInAppMessageUIController` by calling:
-
-
-{% tabs %}
-{% tab OBJECTIVE-C %}
-
-```objc
-[[Appboy sharedInstance].inAppMessageController.inAppMessageUIController setInAppMessageUIDelegate:self];
-```
-
-{% endtab %}
-{% tab swift %}
-
-```swift
-Appboy.sharedInstance()?.inAppMessageController.inAppMessageUIController.setInAppMessageUIDelegate(self);
-```
-
-{% endtab %}
-{% endtabs %}
-
-See our [in-app message sample app][35] for an example.
-
-### Migrate from Version 3.2.3 and Earlier
-
-To migrate from version 3.2.3 or earlier, change the code with your delegate methods to conform to the `ABKInAppMessageUIDelegate` protocol instead of `ABKInAppMessageControllerDelegate` and set the delegate by calling:
-
-{% tabs %}
-{% tab OBJECTIVE-C %}
-
-```objc
-[[Appboy sharedInstance].inAppMessageController.inAppMessageUIController setInAppMessageUIDelegate:self];
-```
-
-{% endtab %}
-{% tab swift %}
-
-```swift
-Appboy.sharedInstance()?.inAppMessageController.inAppMessageUIController.setInAppMessageUIDelegate(self);
-```
-
-{% endtab %}
-{% endtabs %}
-
 ## Customizing Orientation
 
 ### Setting Orientation For All In-App Messages
@@ -132,11 +113,6 @@ id<ABKInAppMessageUIControlling> inAppMessageUIController = [Appboy sharedInstan
 ((ABKInAppMessageUIController *)inAppMessageUIController).supportedOrientationMask = UIInterfaceOrientationMaskPortrait;
 ```
 
-{% alert update %}
-As of Braze's release of the [iOS SDK 3.4.0](https://github.com/Appboy/appboy-ios-sdk/blob/master/CHANGELOG.md#340), `supportedOrientationMasks` was renamed to `supportedOrientationMask`, as seen above.
-{% endalert %}
-
-
 {% endtab %}
 {% tab swift %}
 
@@ -147,11 +123,6 @@ if let controller = Appboy.sharedInstance()?.inAppMessageController.inAppMessage
   controller.supportedOrientationMask = .portrait
 }
 ```
-
-{% alert update %}
-As of Braze's release of the [iOS SDK 3.4.0](https://github.com/Appboy/appboy-ios-sdk/blob/master/CHANGELOG.md#340), `supportedOrientationMasks` was renamed to `supportedOrientationMask`, as seen above.
-{% endalert %}
-
 
 {% endtab %}
 {% endtabs %}
@@ -243,8 +214,6 @@ You can use the `beforeInAppMessageDisplayed:` delegate method to add in-app mes
 
 For an implementation example, see our [In-App Message Sample Application][36].
 
->  If you are using the `Core` subspec, this is the method where you should customize and display your in-app message, and then return `ABKDiscardInAppMessage`.
-
 ### Overriding In-App Messages Before Display
 
 If you would like to alter the display behavior of in-app messages, you should add any necessary display logic to your `beforeInAppMessageDisplayed:` delegate method. For example, you might want to display the in-app message from the top of the screen if the keyboard is currently being displayed, or take the in-app message data model and display the in-app message yourself.
@@ -253,8 +222,7 @@ If the IAM campaign is not displaying when the session has been started, make su
 
 ### Hiding the Status Bar During Display
 
-For `Full` and `HTML` in-app messages, the SDK will attempt to place the message over the status bar by default. However, in some cases the status bar may still appear on top of the in-app message. As of version [3.21.1 of the iOS SDK](https://github.com/Appboy/appboy-ios-sdk/blob/master/CHANGELOG.md#3211), you can force the status bar to hide when displaying `Full` and `HTML` in-app messages by setting `ABKInAppMessageHideStatusBarKey` to `YES` within `appboyOptions` in [`startWithApiKey:inApplication:withLaunchOptions:withAppboyOptions`][31].
-
+For `Full` and `HTML` in-app messages, the SDK will attempt to place the message over the status bar by default. However, in some cases the status bar may still appear on top of the in-app message. As of version [3.21.1 of the iOS SDK](https://github.com/Appboy/appboy-ios-sdk/blob/master/CHANGELOG.md#3211), you can force the status bar to hide when displaying `Full` and `HTML` in-app messages by setting `ABKInAppMessageHideStatusBarKey` to `YES` within the `appboyOptions` passed to `startWithApiKey:`.
 
 ### Logging Impressions and Clicks
 
@@ -334,9 +302,7 @@ The `inAppMessageClickActionType` can be set to one of the following values:
 
 ### Customizing In-App Message Body Clicks
 
->  This method cannot be used when using the `Core` subspec.
-
-The following UI delegate method is called when the in-app message is clicked and can be used to customize in-app message on-click behavior:
+The following [`ABKInAppMessageUIDelegate`][34] delegate method is called when an in-app message is clicked:
 
 {% tabs %}
 {% tab OBJECTIVE-C %}
@@ -357,9 +323,7 @@ func onInAppMessageClicked(inAppMessage: ABKInAppMessage!) -> Bool
 
 ### Customizing In-App Message Button Clicks
 
->  These methods cannot be used when using the `Core` subspec.
-
-For clicks on in-app message buttons and HTML in-app message buttons (*i.e.*, links), you can also use the following delegate methods for customization:
+For clicks on in-app message buttons and HTML in-app message buttons (*i.e.*, links), [`ABKInAppMessageUIDelegate`][34] includes the following delegate methods:
 
 {% tabs %}
 {% tab OBJECTIVE-C %}
@@ -425,12 +389,12 @@ if inAppMessage is ABKInAppMessageImmersive {
 
 The default value is `NO`. This determines if the modal in-app message will be dismissed when the user taps outside of the in-app message.
 
-To enable outside tap dismissals, add a dictionary named `Appboy` to your `Info.plist` file. Inside the `Appboy` Dictionary add the `DismissModalOnOutsideTap` boolean subentry and set the value to `YES`.
+To enable outside tap dismissals, add a dictionary named `Braze` to your `Info.plist` file. Inside the `Braze` Dictionary add the `DismissModalOnOutsideTap` boolean subentry and set the value to `YES`. Note that prior to Braze iOS SDK v4.0.2, the dictionary key `Appboy` must be used in place of `Braze`.
 
 Example `Info.plist` contents:
 
 ```
-<key>Appboy</key>
+<key>Braze</key>
 <dict>
 	<key>DismissModalOnOutsideTap</key>
 	<boolean>YES</boolean>
@@ -481,7 +445,7 @@ By default, in-app messages are triggered by event types that are logged by the 
 
 To enable this feature you would send a silent push to the device which allows the device to log an SDK based event. This SDK event would subsequently trigger the user-facing in-app message.
 
-### Step 1: Handle Silent Push and Key Value Pairs
+### Step 1: Handle Silent Push and Key-Value Pairs
 Add the following code within the `application(_:didReceiveRemoteNotification:fetchCompletionHandler:)` method:
 
 {% tabs %}
@@ -550,14 +514,12 @@ For additional information see the following header files:
 See [`AppDelegate.m`][36], [`ViewController.m`][35] and [`CustomInAppMessageViewController.m`][19] in the in-app message sample app.
 
 [13]: {{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/create/#creating-an-in-app-message
-[14]: https://github.com/Appboy/appboy-ios-sdk/blob/master/AppboyKit/headers/AppboyKitLibrary/ABKInAppMessage.h
-[15]: https://github.com/Appboy/appboy-ios-sdk/blob/master/AppboyKit/headers/AppboyKitLibrary/ABKInAppMessageController.h
-[16]: https://github.com/Appboy/appboy-ios-sdk/blob/master/AppboyKit/headers/AppboyKitLibrary/ABKInAppMessageControllerDelegate.h
+[14]: https://github.com/Appboy/appboy-ios-sdk/blob/master/AppboyKit/include/ABKInAppMessage.h
+[15]: https://github.com/Appboy/appboy-ios-sdk/blob/master/AppboyKit/include/ABKInAppMessageController.h
+[16]: https://github.com/Appboy/appboy-ios-sdk/blob/master/AppboyKit/include/ABKInAppMessageControllerDelegate.h
 [19]: https://github.com/Appboy/appboy-ios-sdk/blob/master/Samples/InAppMessage/BrazeInAppMessageSample/BrazeInAppMessageSample/CustomInAppMessageViewController.m
 [23]: #setting-delegates
 [26]: http://fortawesome.github.io/Font-Awesome/
-[31]: {{ site.baseurl  }}/developer_guide/platform_integration_guides/ios/initial_sdk_setup/cocoapods/#customizing-braze-on-startup
-[32]: https://github.com/Appboy/appboy-ios-sdk/blob/master/AppboyKit/headers/AppboyKitLibrary/ABKInAppMessageControllerDelegate.h
 [33]: {{site.baseurl}}/developer_guide/platform_integration_guides/ios/push_notifications/troubleshooting/#step-2-devices-register-for-apns-and-provide-braze-with-push-tokens
 [34]: https://github.com/Appboy/appboy-ios-sdk/blob/master/AppboyUI/ABKInAppMessage/ABKInAppMessageUIDelegate.h
 [35]: https://github.com/Appboy/appboy-ios-sdk/blob/master/Samples/InAppMessage/BrazeInAppMessageSample/BrazeInAppMessageSample/ViewController.m

@@ -1,7 +1,10 @@
 ---
 nav_title: Security Settings
 page_order: 2
-description: "This reference article can help you manage the generic, cross-company security settings, including authentication rules, IP whitelisting, and two-factor authentication."
+
+page_type: reference
+description: "This reference article covers generic cross-company security settings, including authentication rules, IP whitelisting, and two-factor authentication (2FA)."
+tool: Dashboard
 ---
 
 # Security Settings
@@ -37,6 +40,8 @@ Use the field shown to whitelist specific IP addresses and subnets from which us
 Two-factor authentication adds a second level of identity verification to an account log in making it more secure than just a username and password. Toggling this switch to __On__ will make two-factor authentication mandatory for all Braze account users in your company.
 
 When two-factor authentication is enabled, in addition to entering a password, users will be required to enter a verification code sent to their mobile device when logging in to their Braze account.
+
+{% alert tip %} Braze recommends setting up two-factor authentication via the Authy app rather than just SMS, in case you experience any issues receiving SMS in the future. {% endalert %}
 
 Two-factor authentication is optional by default. However, when enabled, users who fail to set up their two-factor authentication will be locked out of their Braze account. Braze account users also have the option to set up two-factor authentication on their own, even if not required by the administrator.
 

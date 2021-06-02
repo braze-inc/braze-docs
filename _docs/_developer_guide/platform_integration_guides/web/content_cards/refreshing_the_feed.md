@@ -3,6 +3,11 @@ nav_title: Refreshing the Feed
 page_order: 3
 
 platform: Web
+
+page_type: reference
+description: "This reference article describes how to queue a manual refresh of your content cards."
+channel: content cards
+
 ---
 
 # Refreshing Content Cards

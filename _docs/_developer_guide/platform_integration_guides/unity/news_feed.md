@@ -1,52 +1,61 @@
 ---
 nav_title: News Feed
 platform: Unity
-page_order: 4
+page_order: 5
+description: "This reference article covers News Feed integration for the Unity platform."
+
 ---
+
 # News Feed
 
-## Overview of the News Feed Models
+## Receiving News Feed Data in Unity
 
-- The News Feed is represented as a [Feed][11] object, which has a list of [Card][12] objects
-- Various [card models][13] extend the base Card object
-- Cards can additionally be grouped by [CardCategory][14]
+You may register Unity Game Objects to be notified of incoming News Feed cards. 
 
-## Retrieving the News Feed
+On iOS, we recommend setting game object listeners from the Braze configuration editor.
 
-To retrieve the News Feed from Braze, call either of the following methods:
+On Android, set `com_appboy_feed_listener_callback_method_name` and `com_appboy_feed_listener_game_object_name` in your Unity project's `braze.xml`.
 
-- [`AppboyBinding.RequestFeedRefresh()`][2] requests a News Feed refresh directly from BRaze's servers
-- [`AppboyBinding.RequestFeedRefreshFromCache()`][3] pulls the locally-stored News Feed
+- To configure your game object listener at runtime on either platform, use `AppboyBinding.ConfigureListener()` and specify `BrazeUnityMessageType.CONTENT_CARDS_UPDATED`.
+
+## Parsing Content Cards
+
+Incoming `string` messages received in your Content Cards game object callback can be parsed into our pre-supplied [Feed][11] object, which has a list of [Card][12] objects for convenience.
+
+See the following example for details:
+
+### Example Content Cards Callback
+
+```csharp
+void FeedReceivedCallback(string message) {
+  Feed feed = new Feed(message);
+  Debug.Log("Feed received: " + feed);
+  foreach (Card card in feed.Cards) {
+    Debug.Log("Card: " + card);
+  }
+}
+```
+
+## Refreshing the News Feed
+
+To refresh the News Feed from Braze, call either of the following methods:
+
+```csharp
+// results in a network request to Braze
+AppboyBinding.RequestFeedRefresh()
+
+AppboyBinding.RequestFeedRefreshFromCache()
+```
 
 Both methods will notify your News Feed listener and pass the News Feed along to your callback method.
 
-## Logging News Feed Analytics
+## Analytics
 
-If you wish to log News Feed analytics, you can do so using the following methods.
+Clicks and impressions must be manually logged for cards not displayed directly by Braze.
 
-### Logging Feed Displayed
+Use `LogClick()` and `LogImpression()` on [Card][12] to log clicks and impressions for specific cards.
 
-To log a Feed Displayed event whenever a user views the News Feed, use [`AppboyBinding.LogFeedDisplayed()`][1].
+To log that the user viewed the feed as a whole, call `AppboyBinding.LogFeedDisplayed()`.
 
-### Logging Card Impressions
-
-To log a News Feed Card impression and mark the card as viewed, call the [`LogImpression()`][15] method on the associated Card object.
-
-### Logging Card Clicks
-
-To log a News Feed Card click, call the [`LogClick()`][16] method on the associated Card object.
-
-## Implementation Example {#feed-implementation-example}
-
-Check out the [`FeedReceivedCallback`][7] implementation in `AppboyBindingTester.cs` for an implementation example.
-
-[1]: https://github.com/Appboy/appboy-unity-sdk/blob/master/Assets/Plugins/Appboy/AppboyBinding.cs#L330
-[2]: https://github.com/Appboy/appboy-unity-sdk/blob/master/Assets/Plugins/Appboy/AppboyBinding.cs#L680
-[3]: https://github.com/Appboy/appboy-unity-sdk/blob/master/Assets/Plugins/Appboy/AppboyBinding.cs#L684
-[7]: https://github.com/Appboy/unity-sdk/blob/develop/Assets/Plugins/Appboy/Tests/AppboyBindingTester.cs#L56
 [11]: https://github.com/Appboy/appboy-unity-sdk/blob/master/Assets/Plugins/Appboy/models/Feed.cs
 [12]: https://github.com/Appboy/appboy-unity-sdk/blob/master/Assets/Plugins/Appboy/models/Cards/Card.cs
-[13]: https://github.com/Appboy/appboy-unity-sdk/tree/master/Assets/Plugins/Appboy/models/Cards
-[14]: https://github.com/Appboy/appboy-unity-sdk/blob/master/Assets/Plugins/Appboy/models/CardCategory.cs
-[15]: https://github.com/Appboy/appboy-unity-sdk/blob/master/Assets/Plugins/Appboy/models/Cards/Card.cs#L55
-[16]: https://github.com/Appboy/appboy-unity-sdk/blob/master/Assets/Plugins/Appboy/models/Cards/Card.cs#L73

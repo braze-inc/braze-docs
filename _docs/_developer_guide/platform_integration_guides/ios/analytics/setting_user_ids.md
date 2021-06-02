@@ -2,8 +2,10 @@
 nav_title: Setting User IDs
 platform: iOS
 page_order: 1
+description: "This article shows how to set user IDs in your iOS app, suggested user ID naming conventions, and some best practices."
 
 ---
+
 # Setting User IDs
 
 User IDs should be set for each of your users. These should be unchanging and accessible when a user opens the app. Naming your User IDs correctly from the start is one of the most __crucial__ steps when setting up User IDs. We strongly suggest using the Braze standard of UUIDs/GUIDs (detailed below). We also, strongly recommend providing this identifier as it will allow you to:
@@ -93,6 +95,6 @@ Please note the following:
 
 [1]: {{site.baseurl}}/developer_guide/rest_api/user_data/#user-data
 [2]: {{site.baseurl}}/developer_guide/rest_api/messaging/
-[4]: https://github.com/Appboy/appboy-ios-sdk/blob/master/AppboyKit/headers/AppboyKitLibrary/Appboy.h
+[4]: https://github.com/Appboy/appboy-ios-sdk/blob/master/AppboyKit/include/Appboy.h
 [5]: http://appboy.github.io/appboy-ios-sdk/docs/interface_appboy.html#ac8b369b40e15860b0ec18c0f4b46ac69 "changeuser"
 [6]: http://developer.android.com/reference/java/util/Locale.html#default_locale "Android Developer Docs - Localization"

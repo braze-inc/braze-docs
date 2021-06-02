@@ -6,11 +6,8 @@ description: "This reference page briefly covers web push, and links out to the 
 
 platform: Web
 channel:
-  - Push
-tool:
-  - Docs
-  - Dashboard
-  - Campaigns
+  - push
+
 ---
 
 # Web Push

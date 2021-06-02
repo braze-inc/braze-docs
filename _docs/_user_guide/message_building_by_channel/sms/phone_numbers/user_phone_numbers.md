@@ -3,7 +3,8 @@ nav_title: "User Phone Numbers"
 page_order: 1
 description: "This reference article covers phone number formatting, how to importing phone numbers, as well as how to add users to SMS subscription groups."
 page_type: reference
-channel: SMS
+channel: 
+  - SMS
 ---
 
 # User Phone Numbers
@@ -20,7 +21,7 @@ You can import phone numbers by uploading a [CSV]({{site.baseurl}}/user_guide/da
 
 As a best practice, the best way to import a phone number is in [`E.164`](https://en.wikipedia.org/wiki/E.164) format. However, Braze will attempt to interpret or convert any U.S. number to the best of our ability.
 
-All U.S. numbers must be valid, 10-digit phone numbers with a valid area code. They can be inputted without the `+` and country code, as Braze will assume and map all valid, 10-digit phone numbers as U.S. numbers.
+All U.S. numbers must be valid, 10-digit phone numbers with a valid area code. They can be input without the `+` and country code, as Braze will assume and map all valid, 10-digit phone numbers as U.S. numbers.
 
 All international numbers should start with a `+`, followed by their country code and then the phone number. (e.g `+442071838750`)
 

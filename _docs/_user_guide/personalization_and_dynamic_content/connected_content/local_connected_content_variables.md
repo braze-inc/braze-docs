@@ -23,7 +23,7 @@ You can also specify `:save your_variable_name` after the url in order to save t
 
 Metaweather is a free weather API that uses a "Where-on-Earth ID" to return weather in an area. Use this code for testing / learning purposes only. For more information about this API, see [here](https://www.metaweather.com/api/ "Metaweather API Details").
 
->  The stored variable can only be accessed within the field which contains the `connected_content` request. For example, if you wanted to use the `localweather` variable in both the message and title field, you should make the `connected_content` request within both fields. If the request is identical, Braze will use the cached results, rather than making a second request to the destination server. However, Connected Content calls made via HTTP POST do not cache and will make a second request to the destination server.
+>  The stored variable can only be accessed within the field which contains the `connected_content` request. For example, if you wanted to use the `localweather` variable in both the message and title field, you should make the `connected_content` request within both fields. If the request is identical, Braze will use the cached results, rather than making a second request to the destination server. However, Connected Content calls made via HTTP POST do not cache by default and will make a second request to the destination server. If you wish to add caching to POST calls, refer to the "cache_max_age" option below.
 
 ### JSON Parsing
 
@@ -68,7 +68,7 @@ The following image illustrates the type of syntax highlighting you should see i
 
 ![Connected Content Syntax Example][6]
 
-If the API responded with `{{localweather.consolidated_weather[0].weather_state_name}}` returning `Rain`, the user would then receive this push.
+If the API responded with {%raw%}`{{localweather.consolidated_weather[0].weather_state_name}}`{%endraw%} returning `Rain`, the user would then receive this push.
 
 ![Connected Content Push Example][17]
 
@@ -92,6 +92,46 @@ You can optionally provide a POST body by specifying `:body` followed by a query
 ```
 {% endraw %}
 
+{% details Query String Serialization Example %}
+
+##### Example POST Body
+```json
+{
+  "sorts": [
+    {
+      "field": "startdate",
+      "direction": "asc"
+    }
+  ],
+  "filters": [
+    {
+      "field": "startdate",
+      "type": "range",
+      "rangeFilters": {
+        "time_zone": "-07:00",
+        "gte": "now+1d/d",
+        "lt": "now+2d/d"
+      }
+    }
+  ]
+}
+```
+##### Example POST Body Formatting
+{% raw %}
+```json
+{% connected_content 
+     https://example.com/api
+     :method post
+     :headers {
+       "Content-Type": "application/json"
+  }  
+     :body sorts[0][field]=startdate&sorts[0][direction]=asc&filters[0][field]=startdate&filters[0][type]=range&filters[0][rangeFilters][time_zone]=-07:00&filters[0][rangeFilters][gte]=now+1d/d&filters[0][rangeFilters][lt]=now+2d/d
+     :save result 
+%}
+```
+{% endraw %}
+{% enddetails %}
+
 ### HTTP Status Codes
 
 You can utilize the HTTP status from a Connected Content call by first saving it as a local variable and then using the `__http_status_code__` key. For example:
@@ -110,9 +150,11 @@ This key will only be automatically added to the Connected Content object if the
 {% endalert %}
 
 ### Configurable Caching
-Connected Content will cache the value it returns from GET endpoints for a minimum of 5 minutes.
+Connected Content will cache the value it returns from GET endpoints for a minimum of 5 minutes. If a cache time is not specified, the default cache time is 5 minutes. 
 
-If a cache time is not specified, the default cache time is 5 minutes. However, this cache time can be configured to be longer with `:cache_max_age`, as shown below. The maximum cache time is 4 hours.
+Connected Content cache time can be configured to be longer with `:cache_max_age`, as shown below. The minimum cache time is 5 minutes and the maximum cache time is 4 hours. Connected Content data is cached in-memory using a volatile cache system, such as memcached. As a result, regardless of the specified cache time, Connected Content data may be evicted from Braze's in-memory cache earlier than specified. This means the cache durations are suggestions and may not actually represent the duration that the data is guaranteed to be cached by Braze and you may see more Connected Content requests than you may expect with a given cache duration.
+
+By default, Connected Content does not cache POST calls. You can change this behavior by adding `:cache_max_age` to the Connected Content POST call. 
 
 #### Cache for Specified Seconds
 

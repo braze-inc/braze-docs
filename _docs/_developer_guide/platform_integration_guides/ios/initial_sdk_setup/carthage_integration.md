@@ -1,11 +1,13 @@
 ---
 nav_title: Carthage Integration
 platform: iOS
-page_order: 0
+page_order: 0.1
+description: "This reference article shows how to integrate the Braze SDK using Carthage for iOS."
 
 ---
 
 # Carthage Integration
+
 Starting from version 3.24.0 of the SDK, you can integrate the Braze SDK using Carthage by including the following in your `Cartfile`:
 ```
 binary "https://raw.githubusercontent.com/Appboy/appboy-ios-sdk/master/appboy_ios_sdk_full.json"
@@ -63,7 +65,7 @@ __Note__: Braze's `sharedInstance` singleton will be nil before `startWithApiKey
 {% endtabs %}
 
 {% alert important %}
-Be sure to update `YOUR-API-KEY` with the correct value from your App Settings page.
+Be sure to update `YOUR-API-KEY` with the correct value from your **Settings** page.
 {% endalert %}
 
 {% alert warning %}
@@ -96,7 +98,7 @@ Note that as of December 2019, custom endpoints are no longer given out, if you 
 {% endalert %}
 
 If given a pre-existing custom endpoint...
-- Starting with Braze iOS SDK v3.0.2, you can set a custom endpoint using the `Info.plist` file. Add the Appboy dictionary to your `Info.plist` file. Inside the `Appboy` dictionary, add the `Endpoint` string subentry and set the value to your custom endpoint URLs authority (for example, `sdk.iad-01.braze.com`, not `https://sdk.iad-01.braze.com`).
+- Starting with Braze iOS SDK v3.0.2, you can set a custom endpoint using the `Info.plist` file. Add the Braze dictionary to your `Info.plist` file. Inside the `Braze` dictionary, add the `Endpoint` string subentry and set the value to your custom endpoint URLs authority (for example, `sdk.iad-01.braze.com`, not `https://sdk.iad-01.braze.com`). Note that prior to Braze iOS SDK v4.0.2, the dictionary key `Appboy` must be used in place of `Braze`.
 
 ### Runtime Endpoint Configuration
 

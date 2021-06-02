@@ -2,9 +2,11 @@
 nav_title: Location Tracking
 platform: Windows_Universal
 page_order: 6
+description: "This reference article covers how add location tracking to your Windows Universal app."
+
 ---
 
-## Location Tracking
+# Location Tracking
 
 1. Ensure that within your `Package.appxmanifest` file the following option is checked:
   - Location

@@ -3,7 +3,10 @@ nav_title: Create a Canvas
 platform: Canvas
 subplatform: Create a Canvas
 page_order: 0
+
+page_type: reference
 description: "This reference article covers the necessary steps involved in creating, maintaining, and testing a Canvas."
+tool: Canvas
 ---
 
 # Creating a Canvas
@@ -114,6 +117,8 @@ There are three ways in which users can enter your Canvas - a scheduled entry, a
   {% endtab %}
 {% endtabs %}
 
+<a id="important-edge-case"></a>
+
 {% alert important %}
 Should the window of re-eligibility be less than the maximum duration of the Canvas, a user will be allowed to re-enter and receive more than one step's messages. In the edge case where a user's re-entry reaches the same step as its previous entry, Braze will deduplicate that step's messages. In the event where a user re-enters the Canvas, reaches the same step as their previous entry, and is eligible for an in-app message for each entry, the user will get the message twice (depending on in-app message priority) as long as they re-open a session two times.
 {% endalert %}
@@ -124,11 +129,11 @@ You can set the target audience for your Canvas here. Only the users who match y
 
 ![Canvas Target Audience][54]
 
-If you want to limit a particular journey to users who first used your app less than 3 weeks ago. You can also control settings such as whether messages should be sent to users who are subscribed or opted-in to your notifications.
+If you want to target new users, you can limit a particular journey to users who first used your app less than 3 weeks ago. You can also control settings such as whether messages should be sent to users who are subscribed or opted-in to your notifications.
 
 ### Select Your Send Settings
 
-Click "Send Settings" to select your Subscription Settings, turn on rate limiting, and to enable Quiet Hours.
+Click **Send Settings** to select your Subscription Settings, turn on rate limiting, and to enable Quiet Hours.
 
 ![Send Settings][55]
 
@@ -168,6 +173,8 @@ You can also apply Filters to each Step of a Canvas. Use this to add additional 
 
 ![Canvas Additional Engagement][15]
 
+{% alert note %} By default, Filters and Segments for **Full Steps** in Canvas are checked at send time. However, for [Decision Split Steps](57), audience evaluation occurs right after receiving the previous step, or after a delay (depending on your configuration). {% endalert %}
+
 #### Messages in Canvas
 
 Edit the Messages in a Canvas Step to control messages that a particular Step will send. Canvas can send Email, Mobile & Web Push messages, and Webhooks to integrate with other systems.
@@ -177,11 +184,11 @@ __Please see Canvas and Custom Event Properties below for limitations.__
 
 ![Canvas Message Edit][16]
 
-Select desired advancement behavior. Learn more about options [here]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/advancement/).
+Select your desired advancement behavior. Learn more about options [here]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/advancement/).
 
 ![Canvas Advancement Behavior][20]
 
-Press the "Done" button once you've finished configuring your Step.
+Click **Done** once you've finished configuring your Step.
 
 {% tabs local %}
 {% tab Canvas Entry Properties %}
@@ -237,7 +244,7 @@ Once you've launched your Canvas, you'll be able to view analytics for your jour
 ![Canvas Analytics][19]
 
 
-[1]:{% image_buster /assets/img_archive/Canvas_Dropdown.png %}
+[1]:{% image_buster /assets/img_archive/canvas_dropdown.png %}
 [6b]: {{site.baseurl}}/user_guide/engagement_tools/campaigns/testing_and_more/rate-limiting/#rate-limiting
 [11]:{% image_buster /assets/img_archive/Canvas_Add_Variant.png %}
 [12]:{% image_buster /assets/img_archive/Canvas_Multiple_Variants.png %}
@@ -268,3 +275,4 @@ Once you've launched your Canvas, you'll be able to view analytics for your jour
 [54]: {% image_buster /assets/img/entry-audience-canvas-1.gif %}
 [55]: {% image_buster /assets/img/canvas-send-settings-1.gif %}
 [56]: {{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/exception_events/
+[57]: {{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/decision_split/

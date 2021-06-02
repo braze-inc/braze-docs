@@ -2,6 +2,9 @@
 nav_title: Integration
 platform: iOS
 page_order: 0
+description: "This article covers how to integrate push notifications in your iOS application."
+channel:
+  - push
 
 
 local_redirect:
@@ -18,6 +21,7 @@ local_redirect:
   step-1-adding-braze-default-push-categories: '/docs/developer_guide/platform_integration_guides/ios/push_notifications/action_buttons/#step-1-adding-braze-default-push-categories'
 local_redirect:
   step-2-enable-interactive-push-handling: '/docs/developer_guide/platform_integration_guides/ios/push_notifications/action_buttons/#step-2-enable-interactive-push-handling'
+  
 ---
 
 # Push Integration
@@ -40,7 +44,7 @@ As described on [this page](https://help.apple.com/developer-account/#/devcdfbb5
 
 >  When you download the key, it is saved as a text file with a .p8 file extension. Save the file in a secure place because the key is **not saved in your developer account and you won’t be able to download it again**.
 
-6. Navigate to the [app settings page](https://dashboard-01.braze.com/app_settings/app_settings) in the dashboard and upload the .p8 file.
+6. Navigate to the [Settings page](https://dashboard-01.braze.com/app_settings/app_settings) in the dashboard and upload the .p8 file.
 7. When prompted, also enter your [app's Bundle Id](https://developer.apple.com/account/ios/identifier/bundle/), the [Key Id](https://developer.apple.com/account/ios/authkey), and your [Team Id](https://developer.apple.com/account/#/membership). Click `Save`.
 
   {% endtab %}
@@ -86,7 +90,7 @@ In your project settings, ensure that under the `Capabilities` tab your `Push No
 
 ![enable push notification][24]
 
->  If you are using Xcode 8 and have separate development and production push certificates, please make sure to uncheck the `Automatically manage signing` box in the `General` tab. This will allow you to choose different provisioning profiles for each of your build configurations, as Xcode's automatic code signing feature only does development signing.
+>  If you have separate development and production push certificates, please make sure to uncheck the `Automatically manage signing` box in the `General` tab. This will allow you to choose different provisioning profiles for each of your build configurations, as Xcode's automatic code signing feature only does development signing.
 ![xcode 8 auto signing][34]
 
 ## Step 3: Register for Push Notifications
@@ -251,15 +255,21 @@ Next, add the following code to your app's `(void)userNotificationCenter:didRece
 
 **Foreground Push Handling**
 
-In iOS 10, you can display a push notification while the app is in the foreground by implementing the following delegate method and returning `UNNotificationPresentationOptionAlert` to the `completionHandler`:
+To display a push notification while the app is in the foreground, implement `userNotificationCenter:willPresentNotification:withCompletionHandler:`:
 
 ```objc
 - (void)userNotificationCenter:(UNUserNotificationCenter *)center
        willPresentNotification:(UNNotification *)notification
-         withCompletionHandler:(void (^)(UNNotificationPresentationOptions options))completionHandler
+         withCompletionHandler:(void (^)(UNNotificationPresentationOptions options))completionHandler {
+  if (@available(iOS 14.0, *)) {
+    completionHandler(UNNotificationPresentationOptionList | UNNotificationPresentationOptionBanner);
+  } else {
+    completionHandler(UNNotificationPresentationOptionAlert);
+  }
+}
 ```
 
-In this case, if the user clicks the displayed foreground push, the new iOS 10 push delegate method `userNotificationCenter:didReceiveNotificationResponse:withCompletionHandler:` will be called and Braze will log a click for that push.
+If the foreground notification is clicked, the iOS 10 push delegate `userNotificationCenter:didReceiveNotificationResponse:withCompletionHandler:` will be called and Braze will log a push click event.
 
 {% endtab %}
 {% tab swift %}
@@ -282,18 +292,21 @@ Appboy.sharedInstance()?.userNotificationCenter(center,
 
 **Foreground Push Handling**
 
-In iOS 10, you can display a push notification while the app is in the foreground by implementing the following delegate method and returning `UNNotificationPresentationOptionAlert` to the `completionHandler` in the appropriate view controller class:
+To display a push notification while the app is in the foreground, implement `userNotificationCenter(_:willPresent:withCompletionHandler:)`:
 
 ```swift
 func userNotificationCenter(_ center: UNUserNotificationCenter,
-                willPresent notification: UNNotification,
-      withCompletionHandler completionHandler: @escaping (UNNotificationPresentationOptions) -> Void) {
-    completionHandler([.alert, .badge, .sound])
+                              willPresent notification: UNNotification,
+                              withCompletionHandler completionHandler: @escaping (UNNotificationPresentationOptions) -> Void) {
+  if #available(iOS 14.0, *) {
+    completionHandler([.list, .banner]);
+  } else {
+    completionHandler([.alert]);
+  }
 }
-
 ```
 
-In this case, if the user clicks the displayed foreground push, the new iOS 10 push delegate method `userNotificationCenter(_:didReceive:withCompletionHandler:)` will be called and Braze will log a click for that push.
+If the foreground notification is clicked, the iOS 10 push delegate `userNotificationCenter(_:didReceive:withCompletionHandler:)` will be called and Braze will log a push click event.
 
 {% endtab %}
 {% endtabs %}

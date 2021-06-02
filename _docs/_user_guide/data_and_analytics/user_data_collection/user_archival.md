@@ -1,7 +1,10 @@
 ---
 nav_title: User Archival Definitions
 page_order: 0
+
+page_type: reference
 description: "This reference article covers user archival definitions."
+tool: Dashboard
 ---
 # User Archival Definitions
 Each week, Braze runs a process to remove Inactive Users and Dormant Users from the Braze Services.
@@ -10,7 +13,7 @@ This process ensures that Braze provides accurate statistics regarding campaign 
 1. The storage limitation principle - personal data processed and stored should be kept for no longer than is necessary
 2. Having a legitimate business purpose to process personal data.
 
-That is, personal data processed and stored should be kept for no longer than is necessary and personal data should only be processed for legitimate business purposes.
+That is, personal data processed and stored should be kept for no longer than is necessary and personal data should only be processed for legitimate business purposes. Please note, archived users will also have their unsubscribe status deleted in compliance with GDPR.
 
 If you have a user profile in danger of being archived under these policies which needs to be retained, just register a single data point through our REST API for that user profile at least once every six months.
 
@@ -19,6 +22,7 @@ If you have a user profile in danger of being archived under these policies whic
 "Inactive Users" are users that are unreachable and have likely churned. Inactive Users are those that meet all of these criteria:
 
 - Cannot be sent email. For example, they do not have an email address or they are unsubscribed from all email lists.
+- Cannot be sent SMS. For example, they do not have a valid phone number or they are unsubscribed from all SMS subscription groups.
 - Cannot be sent push. For example, they have uninstalled the app or disabled push permissions.
 - Have not used any mobile app or visited a website in an app group in more than six months.
 - Have not received any messages from an app group in more than six months.

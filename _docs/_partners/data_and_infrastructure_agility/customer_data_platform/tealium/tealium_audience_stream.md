@@ -14,7 +14,7 @@ page_type: partner
 
 Tealium AudienceStream visitor profiles are segmented by shared behaviors to create audiences, sets of visitors with common traits. These audiences fuel your marketing technology stack in real-time via connectors. For more information on AudienceStream, check out the Tealium Documentation [here](https://community.tealiumiq.com/t5/Customer-Data-Hub/Introduction-to-AudienceStream/ta-p/16087).
 
-## Pre-Requisites
+## Prerequisites
 
 | Name | Description |
 | ---- | ----------- |
@@ -22,6 +22,10 @@ Tealium AudienceStream visitor profiles are segmented by shared behaviors to cre
 | Tealium Account & Account Information | You must have an active Tealium Account with both Server and Client-Side Access to utilize AudienceStream with Braze. |
 | [Braze REST Endpoint][6] | Your REST Endpoint URL. Your endpoint will depend on the Braze URL for your instance. |
 {: .reset-td-br-1 .reset-td-br-2}
+
+{% alert important %}
+Please note that Tealium AudienceStreams and EventStreams are batched according to Braze specifications so that our customers do not run the risk of exceeding the [/users/track]({{site.baseurl}}/api/endpoints/user_data/post_user_track/) rate limit. 
+{% endalert %}
 
 ## Step 1: Set up Attributes and Badges
 

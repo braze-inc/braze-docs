@@ -3,14 +3,19 @@ nav_title: Advanced Settings
 platform: FireOS
 page_order: 4
 
+page_type: reference
+description: "This article covers advanced settings available for Android and FireOS push notifications sent through the Braze dashboard."
+channel: push
+
 ---
-## Advanced Settings
+
+# Advanced Settings
 
 There are many advanced settings available for Android and Fire OS push notifications sent through the Braze dashboard. This article will describe these features and how to use them successfully.
 
 ![Advanced Settings][1]
 
-### Notification Priority
+## Notification Priority
 
 The priority level of a push notification affects how your notification is displayed in the notification tray relative to other notifications. It can also affect the speed and manner of delivery, as normal and lower priority messages may be sent with slightly higher latency or batched to preserve battery life whereas high priority messages are always sent immediately.
 
@@ -34,7 +39,7 @@ The priority levels that you can set on Android or Fire OS push notifications ar
 
 For more information, please consult [Google's documentation on Android notifications][2].
 
-### Delivery Options
+## Delivery Options
 
 Both Google and Amazon's push messaging services (FCM and ADM, respectively) allow you to set additional parameters for when and how your messages are delivered. FCM and ADM both follow roughly the same pattern in how these options are structured and utilized. The default behavior of these services is to send messages to devices as soon as they are received for delivery. However, depending on the use case, this may not be the best way to communicate to your users. To provide you with precise control over when your push messages are delivered, we have implemented ways to use FCM and ADM delivery options with Braze campaigns.
 
@@ -50,7 +55,7 @@ For example, say that a user of a sports news app had their device offline the d
 
 For more information on these delivery options, please see the [Firebase Cloud Messaging][7] and [Amazon Device Messaging][8] documentation.
 
-### Summary Text
+## Summary Text
 
 Summary text allows you to set additional text in the "Expanded Notification" view. It also serves as a caption for notifications with images.
 
@@ -62,7 +67,7 @@ For push notifications that include images, the message text will be shown in th
 
 ![Summary Text Behavior][15]
 
-### Custom URIs
+## Custom URIs
 
 The __"Custom URI"__ feature allows you to specify a Web URL or an Android resource to navigate to when the notification is clicked. If no custom URI is specified, clicking on the notification brings users into your app. You can use the custom URI to deep link inside your app as well as direct users to resources that exist outside of your app as well. This can be specified via our [Messaging API][13] or via our dashboard under "Advanced Settings" in the push composer wizard as pictured below:
 
@@ -70,7 +75,7 @@ The __"Custom URI"__ feature allows you to specify a Web URL or an Android resou
 
 ![Custom URI][12]
 
-### Sounds
+## Sounds
 
 In Android O, notification sounds became a property of notification channels. You will need to work with your developer to define the sound for a channel during its configuration, and then use the dashboard to select the proper channel when sending your notifications.
 

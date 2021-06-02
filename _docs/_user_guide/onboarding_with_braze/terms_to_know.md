@@ -4,6 +4,8 @@ nav_title: Terms to Know
 layout: glossary_page
 glossary_top_header: "Terms to Know"
 glossary_top_text: "These terms should help you as you begin your journey to better customer and user bonds with Braze! Give this a read before you begin your onboarding."
+
+page_type: glossary
 description: "This glossary covers important terms to know as you go through the Braze onboarding process."
 
 glossaries:
@@ -57,6 +59,8 @@ glossaries:
     description: Messaging a user across various mediums - like a combination of email, web push, and mobile push notifications. <a href="https://www.braze.com/docs/developer_guide/platform_wide/platform_features/#multi-channel-messaging">Messaging channels</a> are best used in concert and with regularity to re-engage lost users, retain active users, and energize your brand ambassadors.
   - name: News Feed
     description: The News Feed is a fully customizable in-app content feed for your users. Braze targeting and segmentation allows you to create a stream of content that is individually catered to the interests of each user for both <a href="https://www.braze.com/docs/developer_guide/platform_integration_guides/ios/news_feed/">iOS</a> and <a href="https://www.braze.com/docs/developer_guide/platform_integration_guides/android/news_feed/overview/#news-feed">Android</a>.
+  - name: New User
+    description: Braze considers a new user as anyone who has newly installed your app. Alternatively, a new user can also be defined as a user with a user ID that has not been previously identified within Braze.
   - name: Push Messages
     description: A <a href="https://www.braze.com/docs/user_guide/message_building_by_channel/push/">push</a> notification or push message is a notification that appears from a mobile application. Push notifications often appear as pop-up dialogs and banners for both iOS and Android.
   - name: Push Token
@@ -68,7 +72,7 @@ glossaries:
   - name: Tags
     description: <a href="https://www.braze.com/docs/user_guide/administrative/app_settings/tags/#tags">Tags</a> are a tool that help you categorize, organize, and sort your engagement across one or multiple Campaigns.
   - name: Segmentation
-    description: Dashboard <a href="https://www.braze.com/docs/user_guide/engagement_tools/segments/">Segmentation</a> allows you to create groups or cohorts of users based on powerful filters of their in-app behavior, demographic data, social data, etc.
+    description: Dashboard <a href="https://www.braze.com/docs/user_guide/engagement_tools/segments/">Segmentation</a> allows you to create groups or extensions of users based on powerful filters of their in-app behavior, demographic data, social data, etc.
   - name: "Software Development Kit (SDK)"
     description: <a href="https://www.braze.com/docs/developer_guide/platform_integration_guides/sdk_primer/">SDKs</a> are integrated into iOS and Android applications and provides powerful marketing, customer support, and analytics tools. Braze offers SDK integration for both <a href="https://www.braze.com/docs/developer_guide/platform_integration_guides/ios/initial_sdk_setup/">iOS</a> and <a href="https://www.braze.com/docs/developer_guide/platform_integration_guides/android/initial_sdk_setup/android_sdk_integration/#initial-sdk-setup">Android</a>.
   - name: User Archival

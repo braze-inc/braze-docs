@@ -6,11 +6,8 @@ description: "This reference article covers the iOS 10.3 update on Customizable 
 
 platform: iOS
 channel:
-  - Push
-tool:
-  - Docs
-  - Dashboard
-  - Campaigns
+  - push
+
 ---
 
 # iOS 10.3 Customizable App Icon Feature

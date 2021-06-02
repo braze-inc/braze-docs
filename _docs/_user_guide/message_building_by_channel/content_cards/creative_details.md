@@ -3,8 +3,8 @@ nav_title: Creative Details
 page_order: 1
 layout: featured
 guide_top_header: "Creative Details"
-guide_top_text: "Get creative with content cards! But you should know some of the guidelines, first! After all, you have to know the rules to break them! Check out the individual message type's Creative Specs or the global Creative Details below."
-description: "Get creative with content cards! But you should know some of the guidelines, first! After all, you have to know the rules to break them!"
+guide_top_text: "Get creative with content cards! But you should know some of the guidelines first! After all, you have to know the rules to break them! Check out the individual message type's Creative Specs or the global Creative Details below."
+description: "Get creative with Content Cards! This reference article covers creative details such as image size recommendations and dismissal behavior across the three Content Card types."
 
 guide_featured_title: "Message Type Creative Specs"
 guide_featured_list:
@@ -17,13 +17,16 @@ guide_featured_list:
 - name: Banner
   link: /docs/user_guide/message_building_by_channel/content_cards/creative_details/#banner
   image: /assets/img/icon-banner-cc.png
+
+channel:
+  - content cards
 ---
 
 ## Content Card Types
 
 ### Classic
 
-The Classic card is great for standard messaging and notifications, or even visually categorizing messages with icons. The image is optional, but it must be at a 1:1 ratio.  
+The Classic card is great for standard messaging and notifications or even visually categorizing messages with icons. The image is optional, but it must be at a 1:1 ratio.  
 
 ![Classic][1]{: height="50%" width="50%"}
 
@@ -64,7 +67,7 @@ If you want fancy, the Banner card is for you! This is completely custom to what
 
 ## Creative Details {#general}
 
-Content Cards come with great out-of-the-box functionality. At this time, card styling cannot be done natively in your Braze account, but you can style your Content Card by type and the Content Card feed during integration. Learn more on customizing Content Cards can be found on our [Customization page][4].
+Content Cards come with great out-of-the-box functionality. At this time, card styling cannot be done natively in your Braze account, but you can style your Content Card by type and the Content Card feed during integration. More information on Content Cards can be found on our [Customization page][4].
 
 ### Dismissal Behavior
 
@@ -86,8 +89,6 @@ If a user has dismissed all of their cards or you haven't pushed out any new upd
 [1]: {% image_buster /assets/img/classic-cc.png %}
 [2]: {% image_buster /assets/img/captioned-image-cc.png %}
 [3]: {% image_buster /assets/img/banner-cc.png %}
-
 [4]: {{site.baseurl}}/user_guide/message_building_by_channel/content_cards/customize/
-
 [5]: {% image_buster /assets/img/dismissal-cc.png %}
 [6]: {% image_buster /assets/img/empty-cc.png %}

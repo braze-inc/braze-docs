@@ -5,6 +5,8 @@ layout: dev_guide
 guide_top_header: "Email"
 guide_top_text: "With Braze Email, you can create completely custom and personalized email messages in either Campaigns or Canvas that will grab your user's attention fast. Check out the articles below to learn more."
 description: "With Braze Email, you can create completely custom and personalized email messages in either Campaigns or Canvas that will grab your user's attention fast. Check out the articles below to learn more."
+channel:
+  - email
 
 guide_featured_title: "Popular Articles"
 guide_featured_list:
@@ -12,7 +14,7 @@ guide_featured_list:
   link: /docs/user_guide/message_building_by_channel/email/creating_an_email_campaign/
   fa_icon: fas fa-envelope
 - name: Create an Email Template
-  link: /docs/user_guide/message_building_by_channel/email/creating_an_email_template/
+  link: /docs/user_guide/message_building_by_channel/email/templates/email_template/
   fa_icon: fas fa-table
 - name: CSS Inlining
   link: /docs/user_guide/message_building_by_channel/email/css_inline/
@@ -21,10 +23,10 @@ guide_featured_list:
 guide_menu_title: "More Articles"
 guide_menu_list:
 - name: Link Templates
-  link: /docs/user_guide/message_building_by_channel/email/link_templates/
+  link: /docs/user_guide/message_building_by_channel/email/templates/link_template/
   fa_icon: fas fa-link
 - name: Upload an HTML Email Template
-  link: /docs/user_guide/message_building_by_channel/email/creating_an_email_template/
+  link: /docs/user_guide/message_building_by_channel/email/templates/html_email_template/
   fa_icon: fas fa-upload
 - name: Inbox Vision
   link: /docs/user_guide/message_building_by_channel/email/inbox_vision/
@@ -44,5 +46,7 @@ guide_menu_list:
 - name: Apple Private Relay SSO
   link: /docs/user_guide/message_building_by_channel/email/email_private_relay_apple_sso/
   fa_icon: fab fa-apple
-
+- name: Frequently Asked Questions
+  link: /docs/user_guide/message_building_by_channel/email/faq/
+  fa_icon: fas fa-question
 ---

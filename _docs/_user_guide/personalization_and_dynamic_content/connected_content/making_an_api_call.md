@@ -40,11 +40,11 @@ If the endpoint returns JSON, you can detect that by checking if the `connected`
 {% raw %}
 ## Using Basic Authentication
 
-If the URL requires basic authentication, Braze can generate a basic authentication credential for you to use in your API call. In the Connected Content tab in Manage App Group, you can manage existing basic authentication credentials and add new ones.
+If the URL requires basic authentication, Braze can generate a basic authentication credential for you to use in your API call. In the **Connected Content** tab in **Manage Settings**, you can manage existing basic authentication credentials and add new ones.
 
 ![Basic Authentication Credential Management][34]
 
-To add a new credential, click Add Credential. You can then name your credential and put in the username and password.
+To add a new credential, click **Add Credential**. You can then name your credential and put in the username and password.
 
 ![Basic Authentication Credential Creation][35]
 
@@ -58,9 +58,9 @@ Hi there, here is fun some trivia for you!: {% connected_content https://yourweb
 
 {% endraw %}
 
-## Using Token Authentication 
+## Using Token Authentication
 
-When making use of Braze's Connected Content, you may find that certain APIs require a token instead of a username and password. Included below is a code snippet to reference and model your messages off of. 
+When making use of Braze's Connected Content, you may find that certain APIs require a token instead of a username and password. Included below is a code snippet to reference and model your messages off of.
 
 {% raw %}
 ```
@@ -79,6 +79,46 @@ When making use of Braze's Connected Content, you may find that certain APIs req
 ```
 {% endraw %}
 
+## Using Open Authentication (OAuth)
+
+Some API configurations require retrieval of an access token that can then be used to authenticate the API Endpoint that you want to access.
+
+#### Retrieve the Access Token
+The example below illustrates retrieving and saving an access token to a local variable which can then be used to authenticate the subsequent API call. A `:cache` parameter can be added to match the time that the access token is valid for and reduce the number of outbound Connected Content calls. See [Configurable Caching][36] for more information.
+
+{% raw %}
+```
+{% connected_content
+     https://your_API_access_token_endpoint_here/
+     :method post
+     :headers {
+       "Content-Type": "YOUR-CONTENT-TYPE",
+       "Authorization": "Bearer YOUR-APP-TOKEN"
+ 	}
+     :cache 900
+     :save token_response
+%}
+```
+{% endraw %}
+
+#### Authorize the API Using the Retrieved Access Token
+Now that the token is saved, it can be dynamically templated into the subsequent Connected Content call to authorize the request:
+
+{% raw %}
+```
+{% connected_content
+     https://your_API_endpoint_here/
+     :headers {
+       "Content-Type": "YOUR-CONTENT-TYPE",
+       "Authorization": "{{token_response}}"
+ 	}
+     :body key1=value1&key2=value2
+     :save response
+%}
+```
+{% endraw %}
+
+
 ## Connected Content IP Whitelisting
 
 When a message using Connected Content is sent from Braze, the Braze servers automatically make network requests to our customers’ or third parties’ servers to pull back data.  
@@ -87,7 +127,7 @@ With IP whitelisting, you can verify that Connected Content requests are actuall
 
 Braze will send Connected Content requests from the IP ranges below. Braze has a reserved a set of IPs that are used for all services, not all of which are active at a given time.  This ensures that if Braze needs to send from a different data center, or do maintenance, Braze can do so without impact to customers. Braze may use one, a subset or all of the IPs listed below when making Connected Content requests.
 
-| For Instances `US-01`, `US-02`, `US-03`, `US-04`, `US-06` and `US-08`: |
+| For Instances `US-01`, `US-02`, `US-03`, `US-04`, `US-05`, `US-06`: |
 |---|
 | `23.21.118.191`
 | `34.206.23.173`
@@ -104,10 +144,30 @@ Braze will send Connected Content requests from the IP ranges below. Braze has a
 | `52.29.193.121`
 | `35.158.29.228`
 
-
+| For Instance `US-08`: |
+|---|
+| `52.151.246.51`
+| `52.170.163.182`
+| `40.76.166.157`
+| `40.76.166.170`
+| `40.76.166.167`
+| `40.76.166.161`
+| `40.76.166.156`
+| `40.76.166.166`
+| `40.76.166.160`
+| `40.88.51.74`
+| `52.154.67.17`
+| `40.76.166.80`
+| `40.76.166.84`
+| `40.76.166.85`
+| `40.76.166.81`
+| `40.76.166.71`
+| `40.76.166.144`
+| `40.76.166.145`
 
 [1]: #aborting-connected-content
 [2]: {{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/using_liquid/#liquid-usage-use-cases--overview
 [16]: [success@braze.com](mailto:success@braze.com)
 [34]: {% image_buster /assets/img_archive/basic_auth_mgmt.png %}
 [35]: {% image_buster /assets/img_archive/basic_auth_token.png %}
+[36]: {{site.baseurl}}/user_guide/personalization_and_dynamic_content/connected_content/local_connected_content_variables/#configurable-caching

@@ -1,7 +1,9 @@
 ---
 nav_title: Integration
 page_order: 1
-description: "This reference articles briefly covers the integration steps required from your engineers/developers."
+
+page_type: reference
+description: "This reference article briefly covers the integration steps required from your engineers or developers."
 ---
 
 # Integration
