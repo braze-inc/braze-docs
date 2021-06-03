@@ -43,7 +43,7 @@ popular_topic_list:
   - name: Content Cards
     link: /docs/user_guide/message_building_by_channel/content_cards/
   - name: Email Templates
-    link: /docs/user_guide/message_building_by_channel/email/creating_an_email_template/#creating-an-email-template
+    link: /docs/user_guide/message_building_by_channel/email/templates/email_template/
   - name: User Data Collection
     link: /docs/user_guide/data_and_analytics/user_data_collection/overview/
 
