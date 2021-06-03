@@ -11,6 +11,12 @@ description: "This landing page is home to sections on frequently asked question
 
 guide_featured_title: "FAQ Articles"
 guide_featured_list:
+  - name: Canvas FAQs
+    link: /docs/user_guide/engagement_tools/canvas/faqs/
+    fa_icon: fas fa-brush
+  - name: Campaign FAQs
+    link: /docs/user_guide/engagement_tools/campaigns/faq/
+    fa_icon: fas fa-paper-plane
   - name: "Email and Link Templates FAQs"
     link: /docs/user_guide/message_building_by_channel/email/templates/faq/
     fa_icon: fas fa-link
