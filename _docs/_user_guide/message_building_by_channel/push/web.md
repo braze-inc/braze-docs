@@ -29,7 +29,7 @@ Private browsing windows do not currently support web push.
 {% endalert %}
 
 [1]: https://developer.mozilla.org/en-us/docs/web/api/push_api#browser_compatibility
-[2]: https://developer.microsoft.com/en-us/microsoft-edge/platform/status/pushapi/
+[2]: https://developer.microsoft.com/en-us/microsoft-edge/status/pushapi/
 [3]: https://developer.apple.com/notifications/safari-push-notifications/
 [11]: {{site.baseurl}}/user_guide/message_building_by_channel/push/creating_a_push_message/#creating-a-push-message
 [12]: {% image_buster /assets/img_archive/Macbook_Push.png %}

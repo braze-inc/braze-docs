@@ -104,7 +104,7 @@ The AppboyFirebaseMessagingService must be properly registered in `AndroidManife
 
 #### Firewall is Blocking Push
 
-If you are testing push over Wi-Fi, your firewall may be blocking ports necessary for FCM to receive messages. Please ensure that ports 5228, 5229, and 5230 are open. Additionally, since FCM doesn't specify its IPs, you must also allow your firewall to accept outgoing connections to all IP addresses contained in the IP blocks listed in [Google's ASN of 15169] [14].
+If you are testing push over Wi-Fi, your firewall may be blocking ports necessary for FCM to receive messages. Please ensure that ports 5228, 5229, and 5230 are open. Additionally, since FCM doesn't specify its IPs, you must also allow your firewall to accept outgoing connections to all IP addresses contained in the IP blocks listed in Google's ASN of 15169.
 
 #### Custom Notification Factory Returning Null
 
@@ -150,7 +150,6 @@ If the deep link [works correctly with ADB][17] but fails to work from Braze pus
 [4]: https://firebase.google.com/docs/reference/android/com/google/firebase/iid/FirebaseInstanceId
 [6]: https://firebase.google.com/docs/cloud-messaging/
 [11]: {% image_buster /assets/img_archive/message_activity_log.png %}
-[14]: http://tcpiputils.com/browse/as/15169
 [16]: #custom-displaying-notifications
 [17]: https://developer.android.com/training/app-indexing/deep-linking.html#testing-filters
 [18]: #custom-handling-push-receipts-and-opens
