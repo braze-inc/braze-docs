@@ -12,7 +12,7 @@ page_type: partner
 
 Use our Webhook and advanced segmentation, personalization, and triggering features to message your users in Facebook Messenger through the Messenger Platform API. We've included the Facebook Messenger Webhook template in the Braze platform under __Templates & Media__.
 
-The Facebook Messenger platform is intended for “non-promotional messages that facilitate a pre-existing transaction, provide other customer support actions, or deliver content requested by a person.” To read more, see [Facebook’s Platform Guidelines](https://developers.facebook.com/docs/messenger-platform/guidelines) and [Examples of Acceptable Use Cases](https://developers.facebook.com/docs/messenger-platform/app-review#examples_acceptable).
+The Facebook Messenger platform is intended for “non-promotional messages that facilitate a pre-existing transaction, provide other customer support actions, or deliver content requested by a person.” To read more, see [Facebook’s Platform Guidelines](https://developers.facebook.com/docs/messenger-platform) and [Examples of Acceptable Use Cases](https://developers.facebook.com/docs/messenger-platform/app-review#examples_acceptable).
 
 ## Prerequisites
 

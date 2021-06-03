@@ -96,7 +96,7 @@ If you hadn't created this in `Templates & Media`, you can go to `Campaigns`, th
 
 
 [1]: https://www.inkit.com
-[2]: https://support.inkit.com/en/articles/2542557-braze-inkit-integration
+[2]: https://help.inkit.com/hc/en-us/articles/360036546873-Braze-Inkit-Integration
 [3]: {{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_attributes/#custom-attributes
 [4]: {% image_buster /assets/img/inkit-use.png %}
 [5]: {% image_buster /assets/img/inkit-integration.png %}

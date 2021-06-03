@@ -54,4 +54,4 @@ Thread(Runnable {
 
 
 [1]: https://appboy.github.io/appboy-android-sdk/javadocs/com/appboy/Appboy.html#setGoogleAdvertisingId-java.lang.String-boolean-
-[2]: http://www.androiddocs.com/google/play-services/id.html
+[2]: https://support.google.com/googleplay/android-developer/answer/6048248/advertising-id?hl=en

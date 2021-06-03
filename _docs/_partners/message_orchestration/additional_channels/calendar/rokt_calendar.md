@@ -238,7 +238,7 @@ Complete the setup by navigating to the Compose tab and define the __Webhook URL
 
 {% alert tip %}
 
-For a list of valid timezones see [https://roktcalendar-api.readme.io/docs/timezones](https://roktcalendar.readme.io/docs/timezones).
+For a list of valid timezones see [https://roktcalendar-api.readme.io/docs/timezones](https://roktcalendar-api.readme.io/docs/timezones).
 
 {% endalert %}
 
