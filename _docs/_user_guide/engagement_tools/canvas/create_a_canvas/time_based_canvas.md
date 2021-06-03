@@ -16,14 +16,14 @@ description: "This reference article covers definitions, time zones, and example
 
 | Definition | Time Zone | Example | Notes |
 | ---------- | --------- | ------- | ----- |
-| Day of week + 1 calendar day + that specific time (see example) | Company's Time Zone | If a Canvas step is sent at 9pm on Monday, and the next step sends “In 1 Days at 9am”, is that going to be delivered at 9am on Tuesday or Wednesday?<br><br> Answer: Tuesday at 9am. The canvas calculates the delay as Monday + 1 calendar day = Tuesday. Then it adds on the time (9am) | "Send on the next Saturday at 3:15pm" <br><br>If a user enters the canvas on a Saturday, and the first step is to "send next Saturday" would be in 7 days. If they enter on a Friday, "next Saturday" would be in 1 day.  |
+| Day of week + 1 calendar day + that specific time (see example) | Company's Time Zone | If a Canvas step is sent at 9pm on Monday, and the next step sends “In 1 Days at 9am”, is that going to be delivered at 9am on Tuesday or Wednesday?<br><br> Answer: Tuesday at 9am. The Canvas calculates the delay as Monday + 1 calendar day = Tuesday. Then it adds on the time (9am) | "Send on the next Saturday at 3:15pm" <br><br>If a user enters the Canvas on a Saturday, and the first step is to "send next Saturday" would be in 7 days. If they enter on a Friday, "next Saturday" would be in 1 day.  |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
 
 ### Schedule Delay - Send "after x day" 
 
 | Definition | Time Zone | Example |
 | ---------- | --------- | ------- |
-| The 'after' clause allows the user to specify x seconds, minutes, hours and days. | Not Relevant | If canvas step is sent after 1 day, then the user will receive the step exactly 24 hours after |
+| The 'after' clause allows the user to specify x seconds, minutes, hours and days. | Not Relevant | If Canvas step is sent after 1 day, then the user will receive the step exactly 24 hours after |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
 
 ### Schedule Delay with Intelligent Timing 

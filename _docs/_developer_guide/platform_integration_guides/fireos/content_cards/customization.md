@@ -532,7 +532,7 @@ To override this behavior, override the `values-night` values in `android-sdk-ui
 
 ### Fully Custom Content Card Display {#fully-custom-content-card-display-for-android}
 
-If you would like to display the Content Cards in a completely custom manner, it is possible to do so by using your own views populated with data from our models. To obtain Braze’s content cards models, you will need to subscribe to content card updates and use the resulting model data to populate your views. You will also need to log analytics on the model objects as users interact with your views.
+If you would like to display the Content Cards in a completely custom manner, it is possible to do so by using your own views populated with data from our models. To obtain Braze’s Content Cards models, you will need to subscribe to content card updates and use the resulting model data to populate your views. You will also need to log analytics on the model objects as users interact with your views.
 
 #### Part 1: Subscribing to Content Card Updates
 

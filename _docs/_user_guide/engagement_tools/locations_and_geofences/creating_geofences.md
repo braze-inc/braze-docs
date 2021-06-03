@@ -67,7 +67,7 @@ The sample below represents the correct GeoJSON for specifying two geofences: on
 Once geofences have been configured, you can use them to enhance and enrich how you communicate with your users.
 
 ### Triggering
-To use geofence data as part of campaign and canvas triggers, choose "Action-based Delivery" for its delivery method. Next, add a trigger action of `Trigger a Geofence`. Finally, choose the geofence set and geofence transition event types for your message. You can also advance users through a Canvas using geofence events.
+To use geofence data as part of campaign and Canvas triggers, choose "Action-based Delivery" for its delivery method. Next, add a trigger action of `Trigger a Geofence`. Finally, choose the geofence set and geofence transition event types for your message. You can also advance users through a Canvas using geofence events.
 
 ![action_based_geofence_trigger][2]
 

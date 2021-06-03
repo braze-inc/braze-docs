@@ -16,7 +16,7 @@ There are three email subscription states for a user: __opted in__, __subscribed
 |Subscriber State | Description |
 |---|---|
 |Opted In| These customers have clicked on the link in a confirmation email and actively opted in to receiving your messages.|
-|Subscribed | By default, your customers are subscribed to email as long as they have a valid email address stored on their profile. Customers remain subscribed until they unsubscribe or opt in.|
+|Subscribed | By default, your customers are subscribed to email as long as they have a valid email address stored on their profile. Customers remain subscribed until they unsubscribe or opt-in.|
 |Unsubscribed|To be marked as unsubscribed, a customer has either unsubscribed explicitly from your emails or has marked an email as spam.|
 {: .reset-td-br-1 .reset-td-br-2}
 

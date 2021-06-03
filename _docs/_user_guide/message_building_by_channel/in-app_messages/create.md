@@ -255,9 +255,9 @@ A customer may trigger two in-app messages within your Canvas at the same time. 
 
 ![step_priority]({% image_buster /assets/img_archive/step_priority.png %}){: style="max-width:70%"}
 
-Navigate to the “send settings” of the canvas section to prioritize in-app messages from a canvas against in-app messages from other canvases and campaigns.
+Navigate to the “send settings” of the Canvas section to prioritize in-app messages from a Canvas against in-app messages from other Canvases and campaigns.
 
-By default, canvas step priority is set to medium with the most recently created steps having the highest relative priority. Canvas/campaign level priorities also default to medium with the highest relative priority defaulting to the most recently created items.
+By default, Canvas step priority is set to medium with the most recently created steps having the highest relative priority. Canvas/campaign level priorities also default to medium with the highest relative priority defaulting to the most recently created items.
 
 ![canvas_priority]({% image_buster /assets/img_archive/canvas_priority.png %}){: style="max-width:70%"}
 

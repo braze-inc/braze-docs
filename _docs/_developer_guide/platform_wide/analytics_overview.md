@@ -299,7 +299,7 @@ User IDs must be less than 512 characters long and should be private and not eas
 
 Good options for User IDs:
 
-- Hashed e-mail address or unique username
+- Hashed email address or unique username
 - Unique database identifier
 - Facebook ID
 

@@ -166,7 +166,7 @@ glossaries:
       - Media & Entertainment
   - name: "Newsfeed is a Great Place to Host Promotions!"
     image: /docs/assets/img/dominosvouchernewsfeedcoupon.png
-    description: "<a href='https://www.dominos.com/en/'>Domino's</a> <br> <br> This news feed item to permanent insert content directly into their app. This is a great way to make sure customers have access to your content when they want it. The text uses emojis to help make the message friendly and engaging."
+    description: "<a href='https://www.dominos.com/en/'>Domino's</a> <br> <br> This News Feed item to permanent insert content directly into their app. This is a great way to make sure customers have access to your content when they want it. The text uses emojis to help make the message friendly and engaging."
     tags:
       - Delivery & Transportation
       - Miscellaneous & Other
@@ -179,7 +179,7 @@ glossaries:
       - Miscellaneous & Other
   - name: "Remind Users of a Promotion in the Newsfeed!"
     image: /docs/assets/img/foodpandaalertsvoucherpcmnewsfeed.jpg
-    description: "<a href='https://www.foodora.com/'>Food Panda</a> <br> <br> If users don't immediately take advantage of a promotion, use the newsfeed to remind them of the special price later. This news feed shows all the details associated with a free delivery offer, including an indication of how expensive restaurant is and whether or not it's open. The news feed has a close 'X' button where users can click to close the feed without leaving the app and has a search tool."
+    description: "<a href='https://www.foodora.com/'>Food Panda</a> <br> <br> If users don't immediately take advantage of a promotion, use the newsfeed to remind them of the special price later. This News Feed shows all the details associated with a free delivery offer, including an indication of how expensive restaurant is and whether or not it's open. The News Feed has a close 'X' button where users can click to close the feed without leaving the app and has a search tool."
     tags:
       - Delivery & Transportation
       - Miscellaneous & Other

@@ -19,9 +19,9 @@ No, Braze does not offer this functionality. This is because an increasing major
 
 If multiple users with matching emails are all in-segment to receive a campaign, a random user profile with that email address is chosen at the time of send. This way the email is only sent once and is deduplicated, which ensures that it doesn’t hit the same email multiple times.
 
-Note that this deduplication occurs if the users targeted are included in the same dispatch. Therefore triggered campaigns may result in multiple sends to the same email address (even within a time period where users could be excluded due to reeligibility) if differing users with matching emails log the trigger event at different times. Users are not deduped by email on canvas entry, so it’s possible that users are not deduped beyond the first step of a canvas if they are progressing at slightly different times due to rate limited entry.
+Note that this deduplication occurs if the users targeted are included in the same dispatch. Therefore triggered campaigns may result in multiple sends to the same email address (even within a time period where users could be excluded due to reeligibility) if differing users with matching emails log the trigger event at different times. Users are not deduped by email on Canvas entry, so it’s possible that users are not deduped beyond the first step of a Canvas if they are progressing at slightly different times due to rate limited entry.
 
-When a user tied to a given email address opens or clicks an email, all user profiles which share that email address are marked as opening and clicking the campaign. You can identify targeted users from the user profile download within **User Search**. The user who actually received the e-mail will have a timestamp set for the “received_email” field in the associated campaign summary; other users won’t have this field, just “date”.
+When a user tied to a given email address opens or clicks an email, all user profiles which share that email address are marked as opening and clicking the campaign. You can identify targeted users from the user profile download within **User Search**. The user who actually received the email will have a timestamp set for the “received_email” field in the associated campaign summary; other users won’t have this field, just “date”.
 
 **Exception: API Triggered Campaigns**
 

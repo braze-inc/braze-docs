@@ -139,7 +139,7 @@ Of course, if you want to send the same push to all Android push providers, you 
 
 ## Analytics
 
-Once your campaign has been launched, you will see analytics for your campaign or canvas aggregated for Android Push. For more information on Android Push analytics and settings, see our [User Guide for Push][10].
+Once your campaign has been launched, you will see analytics for your campaign or Canvas aggregated for Android Push. For more information on Android Push analytics and settings, see our [User Guide for Push][10].
 
 [1]: https://huaweimobileservices.com/
 [2]: https://developer.huawei.com/consumer/en/console

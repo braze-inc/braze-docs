@@ -16,7 +16,7 @@ channel: in-app messages
 
 > In-App Messages can be added as part of your Canvas journey to show rich messaging when your customer engages with your app. This article describes features and nuances specific to Canvas In-App Messages.
 
-Once you've set up delay and audience options, you can add an in-app message to your Canvas by selecting in-app message from "messaging channels." Once a step's delay has passed and the audience options have been checked, the in-app message will be set live and users will see it __if they open the app__. Currently, in-app messages in canvas may only be triggered by the "start session" trigger event.
+Once you've set up delay and audience options, you can add an in-app message to your Canvas by selecting in-app message from "messaging channels." Once a step's delay has passed and the audience options have been checked, the in-app message will be set live and users will see it __if they open the app__. Currently, in-app messages in Canvas may only be triggered by the "start session" trigger event.
 
 You can customize [when your message will expire](#in-app-message-expiration) and which [advancement behavior](#advancement-behavior-options) it will have.
 

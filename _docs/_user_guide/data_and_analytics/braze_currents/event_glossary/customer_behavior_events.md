@@ -16,7 +16,7 @@ Please contact your Braze representative or [open a support ticket][support] if 
 
 {% details Explanation of Customer Behavior and User Event Structure %}
 <br>
-This Customer Behavior and User Events breakdown shows what type of information is generally included in a customer behavior or user event. With a solid understanding of its components, your developers and business intelligence strategy team can use the incoming currents event data to make data-driven reports, charts and take advantage of other valuable data metrics. 
+This Customer Behavior and User Events breakdown shows what type of information is generally included in a customer behavior or user event. With a solid understanding of its components, your developers and business intelligence strategy team can use the incoming Currents event data to make data-driven reports, charts and take advantage of other valuable data metrics. 
 
 ![image]({% image_buster /assets/img/customer_engagement_event.png %})
 
@@ -255,7 +255,7 @@ _Update noted in June 2020._
 Impression, News Feed
 {% endapitags %}
 
-This event occurs when the user views the entire news feed, not a specific News Feed Card. Use this to track users viewing the News Feed.
+This event occurs when the user views the entire News Feed, not a specific News Feed Card. Use this to track users viewing the News Feed.
 
 {% alert tip %}
 We do track other News Feed events; these are located in [Message Engagement Events]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/message_engagement_events/).

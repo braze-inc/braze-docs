@@ -32,7 +32,7 @@ Authorization: Bearer YOUR-REST-API-KEY
 
 ```json
 {
-  "canvas_id": (required, string) see canvas identifier,
+  "canvas_id": (required, string) see Canvas identifier,
   // Including 'recipients' will send only to the provided user ids if they are in the campaign's segment
   "recipients": (optional, array of recipient object),
   // for any keys that conflict between these trigger properties and those in a Recipient Object, the value from the
@@ -55,7 +55,7 @@ Authorization: Bearer YOUR-REST-API-KEY
 
 | Parameter | Required | Data Type | Description |
 | --------- | ---------| --------- | ----------- |
-|`canvas_id`|Required|String| See canvas identifier|
+|`canvas_id`|Required|String| See Canvas identifier|
 |`send_id` | Optional | String | See send identifier |
 |`recipients` | Optional | Array of recipient objects | See recipients object |
 |`audience` | Optional | Connected audience object | See connected audience |

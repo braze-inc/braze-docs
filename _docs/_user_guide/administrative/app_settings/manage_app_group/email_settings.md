@@ -91,9 +91,9 @@ The three email settings listed below are features that require no additional ac
 
 ### Resubscribe Users when Their Email Changes
 
-You may automatically resubscribe users when they change their e-mail address. For example, if a previously unsubscribed app group user changes their e-mail address to one that is not on Braze's unsubscribe list, they will automatically become resubscribed.
+You may automatically resubscribe users when they change their email address. For example, if a previously unsubscribed app group user changes their email address to one that is not on Braze's unsubscribe list, they will automatically become resubscribed.
 
-Learn more about best practices for e-mail list management [here][8].
+Learn more about best practices for email list management [here][8].
 
 ### Include a List-Unsubscribe Header
 

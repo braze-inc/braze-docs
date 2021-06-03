@@ -4,7 +4,7 @@ page_order: 0.2
 
 platform: Web
 page_type: reference
-description: "This article covers the content card integration for Web, including contend card types and how to request the number of unread content cards."
+description: "This article covers the content card integration for Web, including contend card types and how to request the number of unread Content Cards."
 channel: content cards
 
 ---
@@ -19,7 +19,7 @@ This method will toggle the visibility of the Content Cards. By default, if no a
 
 |Parameters | Description |
 |---|---|
-|`parentNode` | The HTML node to render the content cards into. If the parent node already has a Braze content cards view as a direct descendant, the existing content cards will be replaced. |
+|`parentNode` | The HTML node to render the Content Cards into. If the parent node already has a Braze Content Cards view as a direct descendant, the existing Content Cards will be replaced. |
 |`filterFunction` | A filter/sort function for cards displayed in this view. Invoked with the array of ab.Card objects, sorted by {pinned, date}. Expected to return an array of sorted ab.Card objects to render for this user. If omitted, all cards will be displayed. |
 {: .reset-td-br-1 .reset-td-br-2}
 
@@ -37,7 +37,7 @@ You can request the number of unread cards at any time by calling:
 appboy.getCachedContentCards().getUnviewedCardCount();
 ```
 
-This is often used to power badges signifying how many unread content cards there are. See the [JSDocs](https://js.appboycdn.com/web-sdk/latest/doc/ab.ContentCards.html#toc4) for more information.
+This is often used to power badges signifying how many unread Content Cards there are. See the [JSDocs](https://js.appboycdn.com/web-sdk/latest/doc/ab.ContentCards.html#toc4) for more information.
 
 {% comment %}
 Braze will not refresh Content Cards on new page loads (and so this function will return 0) until you show the feed or call `appboy.requestContentCardsRefresh();`.
@@ -68,9 +68,9 @@ function isControlCard(card) {
 |`logCardImpressions`| Logs an impression event for the given list of cards. This is required when using a customized UI and not the Braze UI.| [JS Docs for logCardImpressions](https://js.appboycdn.com/web-sdk/latest/doc/modules/appboy.html#logcardimpressions)|
 |`logCardClick`| Logs an click event for a given card. This is required when using a customized UI and not the Braze UI.| [JS Docs for logCardClick](https://js.appboycdn.com/web-sdk/latest/doc/modules/appboy.html#logcardclick)|
 |`showContentCards`| Display the user's Content Cards. | [JS Docs for showContentCards](https://js.appboycdn.com/web-sdk/latest/doc/module-display.html#.showContentCards)|
-|`hideContentCards`| Hide any Braze content cards currently showing. | [JS Docs for hideContentCards](https://js.appboycdn.com/web-sdk/latest/doc/module-display.html#.hideContentCards)
-|`toggleContentCards`| Display the user's content cards. | [JS Docs for toggleContentCards](https://js.appboycdn.com/web-sdk/latest/doc/module-display.html#.toggleContentCards)
-|`getCachedContentCards()`|Get all currently available cards from the last content cards refresh.| [JS Docs for getCachedContentCards](https://js.appboycdn.com/web-sdk/latest/doc/module-appboy.html#.getCachedContentCards)|
-|`subscribeToContentCardsUpdates(subscriber)`| Subscribe to content cards updates. <br> The subscriber callback will be called whenever content cards are updated. |  [JS Docs for subscribeToContentCardsUpdates](https://js.appboycdn.com/web-sdk/latest/doc/module-appboy.html#.subscribeToContentCardsUpdates)|
+|`hideContentCards`| Hide any Braze Content Cards currently showing. | [JS Docs for hideContentCards](https://js.appboycdn.com/web-sdk/latest/doc/module-display.html#.hideContentCards)
+|`toggleContentCards`| Display the user's Content Cards. | [JS Docs for toggleContentCards](https://js.appboycdn.com/web-sdk/latest/doc/module-display.html#.toggleContentCards)
+|`getCachedContentCards()`|Get all currently available cards from the last Content Cards refresh.| [JS Docs for getCachedContentCards](https://js.appboycdn.com/web-sdk/latest/doc/module-appboy.html#.getCachedContentCards)|
+|`subscribeToContentCardsUpdates(subscriber)`| Subscribe to Content Cards updates. <br> The subscriber callback will be called whenever Content Cards are updated. |  [JS Docs for subscribeToContentCardsUpdates](https://js.appboycdn.com/web-sdk/latest/doc/module-appboy.html#.subscribeToContentCardsUpdates)|
 |`dismissCard()`|Dismiss the card programmatically (available in v2.4.1).| [JS Docs for dismissCard](https://js.appboycdn.com/web-sdk/latest/doc/ab.Card.html#dismissCard)|
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
