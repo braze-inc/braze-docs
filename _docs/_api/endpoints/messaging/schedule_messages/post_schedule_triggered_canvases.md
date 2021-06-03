@@ -32,7 +32,7 @@ Authorization: Bearer YOUR-REST-API-KEY
 
 ```json
 {
-  "canvas_id": (required, string) see canvas identifier,
+  "canvas_id": (required, string) see Canvas identifier,
   // Including 'recipients' will send only to the provided user ids if they are in the campaign's segment
   "recipients": (optional, array of recipient object),
   // for any keys that conflict between these trigger properties and those in a Recipient Object, the value from the
@@ -42,7 +42,7 @@ Authorization: Bearer YOUR-REST-API-KEY
   // If 'recipients' and 'audience' are not provided and broadcast is not set to 'false',
   // the message will send to entire segment targeted by the Canvas
   "broadcast": (optional, boolean) see broadcast -- defaults to false on 8/31/17, must be set to true if "recipients" object is omitted,
-  "canvas_entry_properties": (optional, object) personalization key value pairs for the first step for all users in this send; see trigger properties,
+  "canvas_entry_properties": (optional, object) personalization key-value pairs for the first step for all users in this send; see trigger properties,
   "schedule": {
     "time": (required, datetime as ISO 8601 string) time to send the message (up to 90 days in the future),
     "in_local_time": (optional, bool),
@@ -55,12 +55,12 @@ Authorization: Bearer YOUR-REST-API-KEY
 
 | Parameter | Required | Data Type | Description |
 | --------- | ---------| --------- | ----------- |
-|`canvas_id`|Required|String| See canvas identifier|
+|`canvas_id`|Required|String| See Canvas identifier|
 |`send_id` | Optional | String | See send identifier |
 |`recipients` | Optional | Array of recipient objects | See recipients object |
 |`audience` | Optional | Connected audience object | See connected audience |
 |`broadcast` | Optional | Boolean | See broadcast -- defaults to false on 8/31/17, must be set to true if "recipients" object is omitted |
-| `trigger_properties` | Optional | Object | Personalization key value pairs for all users in this send; see trigger properties |
+| `trigger_properties` | Optional | Object | Personalization key-value pairs for all users in this send; see trigger properties |
 | `schedule` | Required | Schedule object | See schedule object |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
 

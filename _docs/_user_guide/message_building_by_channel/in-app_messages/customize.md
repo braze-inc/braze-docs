@@ -175,7 +175,7 @@ To enable Email Capture in-app messages, your SDK integration must supply the `a
 - An optional image
 - An optional "Terms of Service" link
 - Different colors for the header and body text, buttons and background
-- Key value pairs
+- Key-value pairs
 - Style for header and body text, buttons, button border color, background, and overlay
 
 ## Reusable Message Templates {#reusable-color-profiles}

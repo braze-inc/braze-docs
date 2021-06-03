@@ -2,6 +2,7 @@
 nav_title: Setting Custom Attributes
 platform: Windows_Universal
 page_order: 3
+description: "This reference article covers how to set custom attributes on the Windows Universal platform."
 
 ---
 
@@ -12,6 +13,8 @@ Braze provides methods for assigning attributes to users. You'll be able to filt
 Before implementation, be sure to review examples of the segmentation options afforded by Custom events vs. Custom attributes vs Purchase events in our [Best Practices section][7].
 
 User attributes can be assigned to the current `IAppboyUser`. To obtain a reference to the current `IAppboyUser`, call `Appboy.SharedInstance.AppboyUser`
+
+## Assigning Standard User Attributes
 
 The following attributes should be defined as properties of the `IAppboyUser`:
 

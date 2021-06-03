@@ -2,6 +2,7 @@
 nav_title: Logging Purchases
 platform: Windows_Universal
 page_order: 4
+description: "This reference article covers how to log purchases on the Windows Universal platform."
 
 ---
 

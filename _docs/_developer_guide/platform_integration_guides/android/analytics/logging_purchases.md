@@ -55,7 +55,7 @@ __If the product Identifier is empty, the purchase will not be logged to Braze._
 
 You can add metadata about purchases by passing a [Braze Properties][4] object with your purchase information.
 
-Properties are defined as key value pairs.  Keys are `String` objects and values can be `String`, `int`, `float`, `boolean`, or [`Date`][5] objects.
+Properties are defined as key-value pairs.  Keys are `String` objects and values can be `String`, `int`, `float`, `boolean`, or [`Date`][5] objects.
 
 {% tabs %}
 {% tab JAVA %}

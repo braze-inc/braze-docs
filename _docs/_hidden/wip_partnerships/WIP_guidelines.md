@@ -71,7 +71,7 @@ Note that we require you to fill out all metadata fields __except__ `page_order`
 
 {% endtab %}
 {% tab Content %}
-This information is the meat of the document. Here you cover the pre-requisites, integration steps, use cases, etc...
+This information is the meat of the document. Here you cover the prerequisites, integration steps, use cases, etc...
 For more information on what to include in the content, check out our Partnership [Template]({{site.baseurl}}/partners/your_partner_name/) that breaks down what should be included.
 ```
 # [Partner Name]
@@ -80,7 +80,7 @@ For more information on what to include in the content, check out our Partnershi
 
 In the second paragraph, you should explore and explain the relationship between Braze and this partner. This paragraph should explain how Braze and this partner work together to tighten the bond between the Braze User and their customer. Explain the "elevation" that occurs when a Braze User integrates with or leverages this partner and their services.
 
-## Requirements or Pre-Requisites
+## Requirements or Prerequisites
 
 This section is all about what you need to integrate with the partner and start using their services. The best way to deliver this information is with a quick instructional paragraph that describes any non-technical important details of "need to know" information, like whether or not your integration will be subject to additional security checks or clearances. Then, you should use a chart to describe the technical requirements of the integration.
 

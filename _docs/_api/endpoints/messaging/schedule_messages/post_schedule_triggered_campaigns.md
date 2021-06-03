@@ -42,7 +42,7 @@ Authorization: Bearer YOUR-REST-API-KEY
   // If 'recipients' and 'audience' are not provided and broadcast is not set to 'false',
   // the message will send to entire segment targeted by the campaign
   "broadcast": (optional, boolean) see broadcast -- defaults to false on 8/31/17, must be set to true if "recipients" object is omitted,
-  "trigger_properties": (optional, object) personalization key value pairs for all users in this send; see trigger properties,
+  "trigger_properties": (optional, object) personalization key-value pairs for all users in this send; see trigger properties,
   "schedule": {
     "time": (required, datetime as ISO 8601 string) time to send the message (up to 90 days in the future),
     "in_local_time": (optional, bool),
@@ -59,7 +59,7 @@ Authorization: Bearer YOUR-REST-API-KEY
 |`recipients` | Optional | Array of recipient objects | See recipients object |
 |`audience` | Optional | Connected audience object | See connected audience |
 |`broadcast` | Optional | Boolean | See broadcast -- defaults to false on 8/31/17, must be set to true if "recipients" object is omitted |
-| `trigger_properties` | Optional | Object | Personalization key value pairs for all users in this send; see trigger properties |
+| `trigger_properties` | Optional | Object | Personalization key-value pairs for all users in this send; see trigger properties |
 | `schedule` | Required | Schedule object | See schedule object |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
 

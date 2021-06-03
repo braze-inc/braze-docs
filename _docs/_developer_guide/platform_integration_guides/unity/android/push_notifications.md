@@ -3,6 +3,7 @@ nav_title: Push Notifications
 platform: Unity
 subplatform: Android
 page_order: 1
+description: "This reference article covers the Android push notification integration for the Unity platform."
 
 ---
 

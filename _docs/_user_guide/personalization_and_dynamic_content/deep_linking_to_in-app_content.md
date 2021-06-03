@@ -1,11 +1,13 @@
 ---
-nav_title: Deep-Linking to In-App Content
+nav_title: Deep Linking to In-App Content
 page_order: 2
 description: "Deep linking is a way of launching a native app and providing additional information telling it to do some specific action or show specific content. This reference article covers how to deep-link in your in-app message content."
----
-# Deep-Linking to In-App Content
 
-## What is Deep-Linking?
+---
+
+# Deep Linking to In-App Content
+
+## What is Deep Linking?
 
 Deep linking is a way of launching a native app and providing additional information telling it to do some specific action or show specific content.
 
@@ -39,7 +41,7 @@ UTM tags can be embedded into both regular HTTP (web) links and deep links and t
 
 ### Using UTM Tags with Braze
 
-If you want to use UTM tags with regular HTTP (web) links, for example to do campaign attribution for your e-mail campaigns, and your organization already uses Google Analytics, you can simply use [Google's URL builder][6] to generate UTM links. These links can be readily embedded into Braze campaign copy just like any other link.
+If you want to use UTM tags with regular HTTP (web) links, for example to do campaign attribution for your email campaigns, and your organization already uses Google Analytics, you can simply use [Google's URL builder][6] to generate UTM links. These links can be readily embedded into Braze campaign copy just like any other link.
 
 In order to use UTM tags in deep links to your app, your app must have the relevant [Google Analytics SDK][5] integrated and [correctly configured to handle deep links][7]. Check with your developers if you're unsure about this.
 
@@ -63,7 +65,7 @@ News Feed items deep linking into your app can be configured to use UTM tags as 
 
 #### Attributing In-App Message Clicks with UTM Tags
 
-Similarly to push notifications and news feed cards, you can include UTM tags in the deep links included within your in-app messages.
+Similarly to push notifications and News Feed cards, you can include UTM tags in the deep links included within your in-app messages.
 
 ![UTM Tags in In-App Message][10]
 

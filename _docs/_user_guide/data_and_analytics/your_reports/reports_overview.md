@@ -32,7 +32,7 @@ Use Campaign Analytics to get real-time updates on high-level results of each ca
 {% tab Canvas Analytics %}
 **Canvas Analytics**
 
-Use [Canvas Analytics]({{site.baseurl}}/user_guide/engagement_tools/canvas/get_started/measuring_and_testing_with_canvas_analytics/) to get topline statistics on your canvas to see how your messaging strategy is performing. Open any live Canvas to key performance stats such as:
+Use [Canvas Analytics]({{site.baseurl}}/user_guide/engagement_tools/canvas/get_started/measuring_and_testing_with_canvas_analytics/) to get topline statistics on your Canvas to see how your messaging strategy is performing. Open any live Canvas to key performance stats such as:
 
 - Number of messages sent within the Canvas
 - Total number of times customers have entered the Canvas

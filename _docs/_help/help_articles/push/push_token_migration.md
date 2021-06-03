@@ -16,7 +16,7 @@ Braze customers who were previously sending push notifications, either on their 
 To continue sending push messages to these users during the Braze SDK integration process, you can import these tokens into Braze and target those users using Braze's Campaign tool.
 
 {% comment %}
-These campaigns will have to be configured with proper key value pairs to ensure that the client’s existing push notification setup will recognize and display the push payload we send to users’ devices. While we will record the number of pushes we send, no data on open rates or conversion events is tracked as that requires the Braze’s SDK to be integrated.
+These campaigns will have to be configured with proper key-value pairs to ensure that the client’s existing push notification setup will recognize and display the push payload we send to users’ devices. While we will record the number of pushes we send, no data on open rates or conversion events is tracked as that requires the Braze’s SDK to be integrated.
 {% endcomment %}
 
 ## Migration via API
@@ -110,10 +110,10 @@ Web push tokens contain extra fields that other platforms do not. As a result, w
 Please note that this solution only applies for Android users. iOS users will not receive push with this method. iOS does not require these steps because there is only one framework for displaying push. Push notifications will render immediately as long as Braze has the necessary push tokens and certificates.
 {% endalert %}
 
-If you find that you must send a push notification to your users before the Braze SDK integration is complete, you can use key value pairs to validate push notifications.
+If you find that you must send a push notification to your users before the Braze SDK integration is complete, you can use key-value pairs to validate push notifications.
 
 __You must have a receiver to handle and display push payloads.__
 
-To notify the receiver of the push payload, add the necessary key value pairs to the push campaign. The values of these pairs is contingent on the specific push partner you used before Braze.
+To notify the receiver of the push payload, add the necessary key-value pairs to the push campaign. The values of these pairs is contingent on the specific push partner you used before Braze.
 
-_For some push notification providers, Braze will need to flatten the key value pairs so that they can be properly interpreted. To flatten key value pairs for a specific Android app, contact your Customer Onboarding/Success Manager._
+_For some push notification providers, Braze will need to flatten the key-value pairs so that they can be properly interpreted. To flatten key-value pairs for a specific Android app, contact your Customer Onboarding/Success Manager._

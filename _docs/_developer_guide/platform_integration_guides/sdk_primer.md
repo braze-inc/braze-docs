@@ -91,7 +91,7 @@ The Braze SDK caches data (sessions, custom events, etc) and uploads it periodic
 
 If there is no network connection, data is cached locally on the device until the network connection is re-established. When the connection is re-established, the data will be uploaded to Braze.
 
-Braze sends data to the SDK at the beginning of a session based on which segments the user falls into at the time of the session. The news feed or new in-app messages will not be updated during the session. However, user data during the session will be continually processed as it is sent from the client. For example, a lapsed user (last used the app more than 7 days ago) will still receive content targeted at lapsed users on their first session back in the app.
+Braze sends data to the SDK at the beginning of a session based on which segments the user falls into at the time of the session. The News Feed or new in-app messages will not be updated during the session. However, user data during the session will be continually processed as it is sent from the client. For example, a lapsed user (last used the app more than 7 days ago) will still receive content targeted at lapsed users on their first session back in the app.
 
 ## Blocking Data Collection
 
@@ -107,7 +107,7 @@ You may either simply not integrate certain parts of the SDK, or use [`stopWebTr
 
 ### Android SDK
 
-You can use [`setDeviceObjectAllowlist`](https://appboy.github.io/appboy-android-sdk/javadocs/com/appboy/configuration/AppboyConfig.Builder.html#setDeviceObjectAllowlist-java.util.EnumSet-) to configure to only send a subset of the device object keys or values according to a set allowlist. This must be enabled via [`setDeviceObjectAllowlistEnabled`](https://appboy.github.io/appboy-android-sdk/javadocs/com/appboy/configuration/AppboyConfig.Builder.html#setDeviceObjectAllowlistEnabled-boolean-).
+You can use [`setDeviceObjectAllowlist`](https://appboy.github.io/appboy-android-sdk/javadocs/) to configure to only send a subset of the device object keys or values according to a set allowlist. This must be enabled via `setDeviceObjectAllowlistEnabled`.
 
 {% alert important %}
 An empty allowlist will result in __no__ device data being sent to Braze.

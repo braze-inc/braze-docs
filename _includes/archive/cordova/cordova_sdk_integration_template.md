@@ -57,7 +57,7 @@ AppboyPlugin.logPurchase("testPurchaseWithNullCurrency", 10, null, 5, properties
 
 ## News Feed
 
-See [the {{ include.platform }} integration instructions][5] for information on how to integrate the news feed into your Cordova app. Alternatively, our Cordova plugin provides a method, `launchNewsFeed`, that will launch a modal news feed without further integration.
+See [the {{ include.platform }} integration instructions][5] for information on how to integrate the News Feed into your Cordova app. Alternatively, our Cordova plugin provides a method, `launchNewsFeed`, that will launch a modal News Feed without further integration.
 
 The Braze Cordova SDK has several methods to get the number of read/unread News Feed cards for different categories. See our [sample project implementation][4] for an example.
 

@@ -44,6 +44,9 @@ guide_featured_list:
 - name: Funnel Reports
   link: /docs/user_guide/engagement_tools/canvas/canvas_funnel_reports/
   fa_icon: fas fa-filter
+- name: Frequently Asked Questions
+  link: /docs/user_guide/engagement_tools/canvas/faqs/
+  fa_icon: fas fa-question
 
 guide_menu_title: "Canvas Components"
 guide_menu_list:

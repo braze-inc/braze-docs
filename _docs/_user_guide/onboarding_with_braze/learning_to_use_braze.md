@@ -29,7 +29,7 @@ _These reading paths assume that you've already completed your integration and s
 | 3 | [User Import]({{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/user_import/) | Import users into your Braze account. |
 | 4 | [Creating a Segment]({{site.baseurl}}/user_guide/engagement_tools/segments/creating_a_segment/) | Divide your user into specific audiences based on their attributes and actions within your site or app. |
 | 5 | [Create a Canvas]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/create_a_canvas/) | How to build out a basic campaign using Braze's Canvas tool. |
-| 6 | [Creating a News Feed Item]({{site.baseurl}}/user_guide/engagement_tools/news_feed/creating_a_news_feed_item/) | How to create an item to go in an integrated news feed. |
+| 6 | [Creating a News Feed Item]({{site.baseurl}}/user_guide/engagement_tools/news_feed/creating_a_news_feed_item/) | How to create an item to go in an integrated News Feed. |
 | 7 | [Creating an Email Campaign]({{site.baseurl}}/user_guide/message_building_by_channel/email/creating_an_email_campaign/) | How to create and send an email campaign. |
 | 8 | [Creating an In-App Message]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/create/) | How to create and send an in-app message. |
 | 9 | [Creating a Push Campaign]({{site.baseurl}}/user_guide/message_building_by_channel/push/creating_a_push_message/) | How to create and send an push message for web or your chosen app on iOS or Android. |
@@ -70,7 +70,7 @@ _These reading paths assume that you've already completed your integration and s
 | 3 | [Using Liquid]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/using_liquid/) | How to use Liquid to create personalization in your messages. |
 | 4 | [Supported Personalization Tags]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/supported_personalization_tags/) | A summary of supported personalization tags. |
 | 5 | [Connected Content]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/connected_content/about_connected_content/) | Utilizing resources outside of Braze to pull in dynamic content to up-level your content. |
-| 6 | [Key Value Pairs]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/key_value_pairs/) | How to send extra data payloads to user devices via key value pairs. |
+| 6 | [Key-Value Pairs]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/key_value_pairs/) | How to send extra data payloads to user devices via key-value pairs. |
 | 7 | [Deep-Linking to In-App Content]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/deep_linking_to_in-app_content/) | How to launch a native app and provide additional information from a message. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
 

@@ -16,7 +16,7 @@ Combine your beacon or geofence support with Braze’s targeting and messaging f
 - __Competitive Analysis:__ Set up triggers around competitive locations to understand consumer trends and patterns.
 - __Audience Insights:__ Understand your users' visitation behaviors and further segment based on those learnings.
 
-## Pre-Requisites
+## Prerequisites
 
 | Requirement| Origin| Access| Description|
 | ---| ---| ---|

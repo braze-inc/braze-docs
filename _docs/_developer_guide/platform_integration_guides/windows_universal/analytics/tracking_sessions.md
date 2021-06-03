@@ -1,7 +1,8 @@
 ---
 nav_title: Tracking Sessions
-platform: Windows
+platform: Windows_Universal
 page_order: 0
+description: "This reference article covers how to track sessions on the Windows Universal platform."
 
 ---
 

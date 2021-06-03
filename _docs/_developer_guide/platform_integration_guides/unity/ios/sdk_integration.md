@@ -3,6 +3,7 @@ nav_title: SDK Integration
 platform: Unity
 subplatform: iOS
 page_order: 0
+description: "This reference article covers the iOS SDK integration for the Unity platform."
 
 ---
 
