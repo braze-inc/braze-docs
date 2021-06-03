@@ -32,7 +32,7 @@ Authorization: Bearer YOUR-REST-API-KEY
 
 ```json
 {
-  "canvas_id": (required, string) see canvas identifier,
+  "canvas_id": (required, string) see Canvas identifier,
   "canvas_entry_properties": (optional, object) personalization key-value pairs that will apply to all users in this request,
   "broadcast": (optional, boolean) see Broadcast -- defaults to false on 8/31/17, must be set to true if `recipients` is omitted,
   "audience": (optional, connected audience object) see connected audience,
@@ -55,7 +55,7 @@ Authorization: Bearer YOUR-REST-API-KEY
 
 | Parameter | Required | Data Type | Description |
 | --------- | ---------| --------- | ----------- |
-|`canvas_id`|Required|String|See canvas identifier|
+|`canvas_id`|Required|String|See Canvas identifier|
 |`canvas_entry_properties`|Optional|Object|Personalization key-value pairs that will apply to all users in this request|
 |`broadcast`|Optional|Boolean|See broadcast -- defaults to false on 8/31/17, must be set to true if `recipients` is omitted|
 |`audience`|Optional|Connected audience object|See connected audience|

@@ -189,7 +189,7 @@ glossaries:
     tags:
       - Retargeting
   - name: Has Never Received A Campaign or Canvas Step
-    description: Segments your users by whether or not they have received any campaign or canvas step.
+    description: Segments your users by whether or not they have received any campaign or Canvas step.
     tags:
       - Retargeting
   - name: In Campaign Control Group
@@ -265,11 +265,11 @@ glossaries:
     tags:
       - Marketing Activity
   - name: Last Viewed News Feed
-    description: Segments your users by the last time that they have visited your app’s news feed interface.
+    description: Segments your users by the last time that they have visited your app’s News Feed interface.
     tags:
       - Marketing Activity
   - name: News Feed View Count
-    description: Segments your users by the number of times that they have viewed your app’s news feed interface.
+    description: Segments your users by the number of times that they have viewed your app’s News Feed interface.
     tags:
       - Marketing Activity
   - name: Age

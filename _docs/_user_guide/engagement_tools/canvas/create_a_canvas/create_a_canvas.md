@@ -137,7 +137,7 @@ Click **Send Settings** to select your Subscription Settings, turn on rate limit
 
 ![Send Settings][55]
 
-By turning on rate-limiting or Frequency Capping you can ease the marketing pressure placed on your users and ensure you aren't over messaging them. To learn more about the benefits of rate-limiting and Frequency Capping click [here][6b].
+By turning on rate limiting or Frequency Capping you can ease the marketing pressure placed on your users and ensure you aren't over messaging them. To learn more about the benefits of rate limiting and Frequency Capping click [here][6b].
 
 {% alert important %}
 Visit your __Global Campaign Settings__ page in your Braze account to manage your Frequency Capping rules.<br><br>For more information on the nuances of frequency capping and rate limiting, visit [this article]({{site.baseurl}}/user_guide/engagement_tools/campaigns/testing_and_more/rate-limiting/#frequency-capping).
@@ -192,7 +192,7 @@ Click **Done** once you've finished configuring your Step.
 
 {% tabs local %}
 {% tab Canvas Entry Properties %}
-Canvas Entry Properties are the properties mapped by you when triggering or scheduling a canvas via the API.
+Canvas Entry Properties are the properties mapped by you when triggering or scheduling a Canvas via the API.
 {% raw %}
 - For example, a request with `\"canvas_entry_properties\" : {\"product_name\" : \"shoes\", \"product_price\" : 79.99}` could add the word \"shoes\" to a message by adding the Liquid `{{canvas_entry_properties.${product_name}}}`.
 
@@ -202,9 +202,9 @@ For more information on the Canvas Entry Object and Properties, check out our [D
 {% endraw %}
 {% endtab %}
 {% tab Custom Event Properties %}
-Custom Event Properties are the properties set by you on custom events and purchases, used mainly in Action-Based Delivery campaigns. These properties are ephemeral and can only be used at the time when they happen. Event properties __don’t persist__ so if you are scheduling a canvas step, rather than using action-based delivery, you wouldn’t be able to use an event property as we don’t store that data. You can't reference the event property for an event that’s already happened.
+Custom Event Properties are the properties set by you on custom events and purchases, used mainly in Action-Based Delivery campaigns. These properties are ephemeral and can only be used at the time when they happen. Event properties __don’t persist__ so if you are scheduling a Canvas step, rather than using action-based delivery, you wouldn’t be able to use an event property as we don’t store that data. You can't reference the event property for an event that’s already happened.
 
-__Custom Event Properties can be referenced in the first step of a canvas - but only the first step__! 
+__Custom Event Properties can be referenced in the first step of a Canvas - but only the first step__! 
 
 For more information on Custom Event Properties, check out our [Documentation]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events/#custom-event-properties).
 

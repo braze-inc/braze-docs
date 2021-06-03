@@ -91,7 +91,7 @@ The Braze SDK caches data (sessions, custom events, etc) and uploads it periodic
 
 If there is no network connection, data is cached locally on the device until the network connection is re-established. When the connection is re-established, the data will be uploaded to Braze.
 
-Braze sends data to the SDK at the beginning of a session based on which segments the user falls into at the time of the session. The news feed or new in-app messages will not be updated during the session. However, user data during the session will be continually processed as it is sent from the client. For example, a lapsed user (last used the app more than 7 days ago) will still receive content targeted at lapsed users on their first session back in the app.
+Braze sends data to the SDK at the beginning of a session based on which segments the user falls into at the time of the session. The News Feed or new in-app messages will not be updated during the session. However, user data during the session will be continually processed as it is sent from the client. For example, a lapsed user (last used the app more than 7 days ago) will still receive content targeted at lapsed users on their first session back in the app.
 
 ## Blocking Data Collection
 

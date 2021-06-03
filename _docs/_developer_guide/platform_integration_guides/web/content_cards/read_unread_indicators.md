@@ -4,7 +4,7 @@ page_order: 2
 
 platform: Web
 page_type: reference
-description: "This reference article covers read and unread indicators in content cards."
+description: "This reference article covers read and unread indicators in Content Cards."
 channel: content cards
 
 ---

@@ -73,7 +73,7 @@ mNeuraApiClient.setExternalId(USER_ID)
 
 Neura's generic data import allows for two types of import methods:
 
-1. Export your currents data to Amazon S3. Our customer success team will work with you to translate the data to Neura.
+1. Export your Currents data to Amazon S3. Our customer success team will work with you to translate the data to Neura.
 
 2. Follow the instructions to use the Neura [Insights API][6].
 

@@ -98,7 +98,7 @@ Attribution data for Facebook, Snapchat, and Twitter campaigns is __not availabl
 
 For more information, please see AppsFlyer's [documentation][31].
 
-## Email Deep-Linking and Click Tracking
+## Email Deep Linking and Click Tracking
 
 Deep links, links that direct users toward a specific page or place within an app or website, are crucial in creating a tailored user experience. While widely used, often issues come up when using them in tandem with click tracking, another vital feature used in collecting user data. These issues are due to ESPs (Email Service Providers) wrapping deep links in their own click recording domain, breaking the original link. 
 

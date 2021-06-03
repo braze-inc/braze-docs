@@ -61,7 +61,7 @@ To get going with your Segment/Braze integration:
 |Enable Logging| On/Off (True/False) | [Log to the JavaScript](https://js.appboycdn.com/web-sdk/2.0/doc/module-appboy.html#.setLogger) console by default. |
 |Minimum Interval Between Trigger Actions In Seconds| Any Number | By default, trigger actions will only fire if 30 seconds have elapsed since the last trigger action. |
 |Open In-App Messages in New Tab | On/Off (True/False) | By default, links from in-app message clicks load in the current tab or a new tab as specified in the Braze platform. |
-|Open News Feed Cards in New Tab | On/Off (True/False) | By default, links from news feed cards or content cards load in the current tab or a new tab as specified in the Braze platform. |
+|Open News Feed Cards in New Tab | On/Off (True/False) | By default, links from News Feed cards or Content Cards load in the current tab or a new tab as specified in the Braze platform. |
 |Session Timeout In Seconds| Any Number | By default, sessions time out after 30 minutes of inactivity. |
 |Track All Pages | On/Off (True/False) | Sends all [Segment page calls](https://segment.com/docs/spec/page/){:target="_blank"} to Braze as Page Events.|
 |Track Only Named Pages | On/Off (True/False) | Sends all [named Segment page calls](https://segment.com/docs/spec/page/){:target="_blank"} to Braze

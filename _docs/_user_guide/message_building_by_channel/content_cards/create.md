@@ -41,7 +41,7 @@ If all of the messages in your campaign are going to be similar or have the same
 {% tab Canvas %}
 __Setup Your Canvas__
 
-Navigate to the Canvas Section of the Dashboard and click __Create Canvas__ to open the Canvas Wizard to begin setting up your Canvas. Then, follow the flow of the canvas wizard to quickly create and launch your Content Card.
+Navigate to the Canvas Section of the Dashboard and click __Create Canvas__ to open the Canvas Wizard to begin setting up your Canvas. Then, follow the flow of the Canvas wizard to quickly create and launch your Content Card.
 
 1. __Name your Canvas__ something clear and meaningful.<br><br>
 2. __Add Teams and Tags__, as necessary.<br><br>

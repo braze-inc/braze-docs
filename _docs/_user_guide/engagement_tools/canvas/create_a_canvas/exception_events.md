@@ -13,7 +13,7 @@ When scheduling a step for a [Canvas][2], you have the option to set up an excep
 
 ![Canvas Exception Events][1]
 
-Exception events will only trigger while a user is waiting to receive the canvas step it’s associated with. If a user performs the same action on a previous canvas step, the exception event will not trigger.
+Exception events will only trigger while a user is waiting to receive the Canvas step it’s associated with. If a user performs the same action on a previous Canvas step, the exception event will not trigger.
 
 Exception events for an action-based step will work during the step delay or window. Scheduled steps don't have a window, and as a result, the exception event will only work if it happens during the delay.
 

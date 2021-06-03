@@ -21,7 +21,7 @@ As with other Canvas messaging channels, Content Cards will be sent to a user's 
 Two options that will change how the Content Card step will interact with Canvas are its [Expiration](#content-card-expiration) and [Advancement Behavior](#advancement-behavior-options).
 
 ## Content Card Expiration {#content-card-expiration}
-When composing a new Content Card you have the option to choose when it should expire from the user's feed, based on its send time. The expiration time begins when a user reaches its canvas step and the card is sent.
+When composing a new Content Card you have the option to choose when it should expire from the user's feed, based on its send time. The expiration time begins when a user reaches its Canvas step and the card is sent.
 
 If a sent card expires before a user has viewed it in your app, it will be removed from their feed the next time their cards are refreshed.
 
