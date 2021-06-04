@@ -58,28 +58,28 @@ In your `braze.xml`:
 <string translatable="false" name="com_appboy_firebase_cloud_messaging_sender_id">your_fcm_sender_id_here</string>
 ```
 
-Or in your [AppboyConfig][68]:
+Or in your [BrazeConfig][68]:
 
 {% tabs %}
 {% tab JAVA %}
 
 ```java
-AppboyConfig appboyConfig = new AppboyConfig.Builder()
+BrazeConfig brazeConfig = new BrazeConfig.Builder()
   .setIsFirebaseCloudMessagingRegistrationEnabled(true)
   .setFirebaseCloudMessagingSenderIdKey("YOUR FIREBASE SENDER ID HERE")
   .build();
-Appboy.configure(this, appboyConfig);
+Braze.configure(this, brazeConfig);
 ```
 
 {% endtab %}
 {% tab KOTLIN %}
 
 ```kotlin
-val appboyConfig = AppboyConfig.Builder()
+val brazeConfig = BrazeConfig.Builder()
     .setIsFirebaseCloudMessagingRegistrationEnabled(true)
     .setFirebaseCloudMessagingSenderIdKey("YOUR FIREBASE SENDER ID HERE")
     .build()
-Appboy.configure(this, appboyConfig)
+Braze.configure(this, brazeConfig)
 ```
 
 {% endtab %}
@@ -314,20 +314,20 @@ This flag can also be set via [runtime configuration][65]:
 {% tab JAVA %}
 
 ```java
-AppboyConfig appboyConfig = new AppboyConfig.Builder()
+BrazeConfig brazeConfig = new BrazeConfig.Builder()
         .setHandlePushDeepLinksAutomatically(true)
         .build();
-Appboy.configure(this, appboyConfig);
+Braze.configure(this, brazeConfig);
 ```
 
 {% endtab %}
 {% tab KOTLIN %}
 
 ```kotlin
-val appboyConfig = AppboyConfig.Builder()
+val brazeConfig = BrazeConfig.Builder()
         .setHandlePushDeepLinksAutomatically(true)
         .build()
-Appboy.configure(this, appboyConfig)
+Braze.configure(this, brazeConfig)
 ```
 
 {% endtab %}
@@ -355,22 +355,22 @@ For example, to set an activity called `YourMainActivity` as the back stack acti
 {% tab JAVA %}
 
 ```java
-AppboyConfig appboyConfig = new AppboyConfig.Builder()
+BrazeConfig brazeConfig = new BrazeConfig.Builder()
         .setPushDeepLinkBackStackActivityEnabled(true)
         .setPushDeepLinkBackStackActivityClass(YourMainActivity.class)
         .build();
-Appboy.configure(this, appboyConfig);
+Braze.configure(this, brazeConfig);
 ```
 
 {% endtab %}
 {% tab KOTLIN %}
 
 ```kotlin
-val appboyConfig = AppboyConfig.Builder()
+val brazeConfig = BrazeConfig.Builder()
         .setPushDeepLinkBackStackActivityEnabled(true)
         .setPushDeepLinkBackStackActivityClass(YourMainActivity.class)
         .build()
-Appboy.configure(this, appboyConfig)
+Braze.configure(this, brazeConfig)
 ```
 
 {% endtab %}
@@ -387,9 +387,9 @@ See the equivalent configuration for your `braze.xml`. Note that the class name 
 
 The Braze Android SDK supports [Android Notification Channels][62]. In the case that a Braze notification does not contain the ID for a notification channel or that a Braze notification contains an invalid channel ID, Braze will display the notification with the default notification channel defined in the SDK. Braze users make use of [Android Notification Channels][61] within the platform to group notifications.
 
-To set the user facing name of the default Braze notification channel, please use [`AppboyConfig.setDefaultNotificationChannelName()`][72].
+To set the user facing name of the default Braze notification channel, please use [`BrazeConfig.setDefaultNotificationChannelName()`][72].
 
-To set the user facing description of the default Braze notification channel, please use [`AppboyConfig.setDefaultNotificationChannelDescription()`][73].
+To set the user facing description of the default Braze notification channel, please use [`BrazeConfig.setDefaultNotificationChannelDescription()`][73].
 
 You should ensure that any API campaigns with the [Android Push Object][63] parameter are updated to include the `notification_channel` field. If this field is not specified, Braze will send the notification payload with the [dashboard fallback][64] channel ID.
 
@@ -700,8 +700,8 @@ Braze push data keys are documented [here](https://appboy.github.io/appboy-andro
 [68]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/advanced_use_cases/runtime_configuration/#runtime-configuration
 [70]: https://github.com/Appboy/appboy-android-sdk/blob/master/samples/firebase-push/src/main/AndroidManifest.xml "AndroidManifest.xml"
 [71]: https://github.com/Appboy/appboy-android-sdk/blob/master/samples/custom-broadcast/src/main/AndroidManifest.xml "AndroidManifest.xml"
-[72]: https://appboy.github.io/appboy-android-sdk/javadocs/com/appboy/configuration/AppboyConfig.Builder.html#setDefaultNotificationChannelName-java.lang.String-
-[73]: https://appboy.github.io/appboy-android-sdk/javadocs/com/appboy/configuration/AppboyConfig.Builder.html#setDefaultNotificationChannelDescription-java.lang.String-
+[72]: https://appboy.github.io/appboy-android-sdk/javadocs/com/appboy/configuration/BrazeConfig.Builder.html#setDefaultNotificationChannelName-java.lang.String-
+[73]: https://appboy.github.io/appboy-android-sdk/javadocs/com/appboy/configuration/BrazeConfig.Builder.html#setDefaultNotificationChannelDescription-java.lang.String-
 [74]: https://appboy.github.io/appboy-android-sdk/javadocs/com/appboy/AppboyFirebaseMessagingService.html#handleBrazeRemoteMessage-android.content.Context-RemoteMessage-
 [75]: https://firebase.google.com/docs/reference/android/com/google/firebase/messaging/RemoteMessage
 [76]: https://developer.android.com/reference/android/app/Application
