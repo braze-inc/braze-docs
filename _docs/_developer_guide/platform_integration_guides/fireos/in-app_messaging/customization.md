@@ -482,13 +482,13 @@ public class CustomInAppMessageViewWrapper extends DefaultInAppMessageViewWrappe
   public CustomInAppMessageViewWrapper(View inAppMessageView,
                                        IInAppMessage inAppMessage,
                                        IInAppMessageViewLifecycleListener inAppMessageViewLifecycleListener,
-                                       AppboyConfigurationProvider appboyConfigurationProvider,
+                                       BrazeConfigurationProvider brazeConfigurationProvider,
                                        Animation openingAnimation,
                                        Animation closingAnimation, View clickableInAppMessageView) {
     super(inAppMessageView,
         inAppMessage,
         inAppMessageViewLifecycleListener,
-        appboyConfigurationProvider,
+        brazeConfigurationProvider,
         openingAnimation,
         closingAnimation,
         clickableInAppMessageView);
@@ -515,13 +515,13 @@ public class CustomInAppMessageViewWrapper extends DefaultInAppMessageViewWrappe
 class CustomInAppMessageViewWrapper(inAppMessageView: View,
                                     inAppMessage: IInAppMessage,
                                     inAppMessageViewLifecycleListener: IInAppMessageViewLifecycleListener,
-                                    appboyConfigurationProvider: AppboyConfigurationProvider,
+                                    brazeConfigurationProvider: BrazeConfigurationProvider,
                                     openingAnimation: Animation,
                                     closingAnimation: Animation, clickableInAppMessageView: View) : 
     DefaultInAppMessageViewWrapper(inAppMessageView, 
         inAppMessage, 
         inAppMessageViewLifecycleListener, 
-        appboyConfigurationProvider, 
+        brazeConfigurationProvider, 
         openingAnimation, 
         closingAnimation, 
         clickableInAppMessageView) {

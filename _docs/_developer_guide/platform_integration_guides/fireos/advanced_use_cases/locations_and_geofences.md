@@ -258,18 +258,18 @@ This can additionally be done at runtime via:
 {% tab JAVA %}
 
 ```java
-AppboyConfig.Builder appboyConfigBuilder = new AppboyConfig.Builder()
+BrazeConfig.Builder brazeConfigBuilder = new BrazeConfig.Builder()
     .setAutomaticGeofenceRequestsEnabled(false);
-Appboy.configure(getApplicationContext(), appboyConfigBuilder.build());
+Braze.configure(getApplicationContext(), brazeConfigBuilder.build());
 ```
 
 {% endtab %}
 {% tab KOTLIN %}
 
 ```kotlin
-val appboyConfigBuilder = AppboyConfig.Builder()
+val brazeConfigBuilder = BrazeConfig.Builder()
     .setAutomaticGeofenceRequestsEnabled(false)
-Appboy.configure(applicationContext, appboyConfigBuilder.build())
+Braze.configure(applicationContext, brazeConfigBuilder.build())
 ```
 
 {% endtab %}

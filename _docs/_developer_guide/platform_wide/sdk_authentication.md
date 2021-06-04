@@ -105,17 +105,17 @@ braze.initialize("YOUR-API-KEY-HERE", {
 {% tab Java %}
 When configuring the Appboy instance, call `setIsSdkAuthenticationEnabled` to `true`.
 ```java
-AppboyConfig.Builder appboyConfigBuilder = new AppboyConfig.Builder()
+BrazeConfig.Builder brazeConfigBuilder = new BrazeConfig.Builder()
     .setIsSdkAuthenticationEnabled(true);
-Appboy.configure(this, appboyConfigBuilder.build());
+Braze.configure(this, brazeConfigBuilder.build());
 ```
 {% endtab %}
 {% tab KOTLIN %}
 When configuring the Appboy instance, call `setIsSdkAuthenticationEnabled` to `true`.
 ```kotlin
-AppboyConfig.Builder appboyConfigBuilder = AppboyConfig.Builder()
+BrazeConfig.Builder brazeConfigBuilder = BrazeConfig.Builder()
     .setIsSdkAuthenticationEnabled(true)
-Appboy.configure(this, appboyConfigBuilder.build())
+Braze.configure(this, brazeConfigBuilder.build())
 ```
 {% endtab %}
 {% tab Objective-C %}
