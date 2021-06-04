@@ -99,10 +99,10 @@ Appboy.getInstance(context).getCurrentUser().setTwitterData(twitterUser);
 
 ```kotlin
 val facebookUser = FacebookUser("100000", "FirstName", "LastName", "email@email.com", "bio", "City", Gender.MALE, 3, listOf("like"),"04/13/1990")
-Appboy.getInstance(context).currentUser?.setFacebookData(facebookUser)
+Braze.getInstance(context).getCurrentUser<BrazeUser>().setFacebookData(facebookUser)
 
 val twitterUser = TwitterUser(100000, "handle", "Name", "description", 100, 50, 150, "image_url")
-Appboy.getInstance(context).currentUser?.setTwitterData(twitterUser)
+Braze.getInstance(context).getCurrentUser<BrazeUser>().setTwitterData(twitterUser)
 ```
 
 {% endtab %}
