@@ -229,7 +229,7 @@ There are three sample customer use cases provided. Each sample has video walkth
 
 ### Content Cards as Supplemental Content
 
-![Supplementary Content GIF][1]{: style="float:right;max-width:25%;margin-left:15px;border:0;"}
+![Supplementary Content PNG][1]{: style="float:right;max-width:25%;margin-left:15px;border:0;"}
 
 You can seamlessly blend Content Cards into an existing feed, allowing data from multiple feeds to load simultaneously. This creates a cohesive, harmonious experience with Braze Content Cards and existing feed content.
 
@@ -371,23 +371,18 @@ A semaphore is used to signal when the task is executed due to the notification 
 
 ### Content Cards in a Message Center
 
-![Message Center GIF][3]{: style="float:right;max-width:25%;margin-left:15px;border:0;"}
-
 Content Cards can be used in a message center format where each message is its own card. Each message in the message center is populated via a Content Card payload, and each card contains additional key-value pairs that power on-click UI/UX. In the example to the right, one message directs you to an arbitrary custom view, while another opens to a webview that displays custom HTML.
+
+![Message Center PNG][3]{: style="border:0;"}
 
 #### Dashboard Configuration
 
 For the following message types, key-value pairs `class_type` and `message_header` should be added to your dashboard configuration. The names assigned here are arbitrary but should be distinguishable between class types. These key-value pairs are the key identifiers that the application looks at when deciding where to go when the user clicks on an abridged inbox message. 
 
-__Arbitrary Custom View Message__<br>
-The key-value pairs for this use case include `message_header` set as `Full Page` and `class_type` set as `message_full_page`.
-
-![Message Center JPG1][4]{: style="max-width:60%;"} 
-
-__Webview Message__<br>
-The key-value pairs for this use case include `message_header` set as `HTML`, `class_type` set as `message_webview`, and `message_title`. This message also looks for an HTML key-value pair, but if you are working with a web domain, a URL key-value pair is also valid.
-
-![Message Center JPG2][5]{: style="max-width:60%;"} 
+| Arbitrary Custom View Message | Webview Message |
+| ---- | ---- |
+| <br>The key-value pairs for this use case include `message_header` set as `Full Page` and `class_type` set as `message_full_page`.<br><br><br>![Message Center JPG1][4]{: style="max-width:100%;"} | The key-value pairs for this use case include `message_header` set as `HTML`, `class_type` set as `message_webview`, and `message_title`.<br><br>This message also looks for an HTML key-value pair, but if you are working with a web domain, a URL key-value pair is also valid.<br><br>![Message Center JPG2][5] |
+{: .reset-td-br-1 .reset-td-br-2}
 
 #### Backend Explanation
 
@@ -432,9 +427,9 @@ When a message is clicked, the `ContentCardClassType` handles how the next scree
 
 ### Interactive Content Cards
 
-![Interactive Content GIF][6]{: style="float:right;max-width:25%;margin-left:15px;border:0;"}
-
 Content Cards can be leveraged to create interactive experiences for your users. In the example to the right, we have a Content Card pop-up appear at checkout providing users last-minute promotions. Well-placed cards like this are a great way to give users a "nudge" toward specific user actions.  
+
+![Interactive Content PNG][6]{: style="border:0;"}
 
 #### Dashboard Configuration
 
@@ -595,10 +590,10 @@ The [helper file](https://github.com/braze-inc/braze-growth-shares-ios-demo-app/
 For a control variant Content Card, a custom object should still be instantiated, and UI logic should set the object's corresponding view as hidden. The object can then log an impression to inform our analytics of when a user would have seen the control card.
 {% endalert %}
 
-[1]: {% image_buster /assets/img/cc_implementation/supplementary_content.gif %}
+[1]: {% image_buster /assets/img/cc_implementation/supplementary.png %}
 [2]: {% image_buster /assets/img/cc_implementation/supplementary_content.png %}
-[3]: {% image_buster /assets/img/cc_implementation/message_center.gif %}
+[3]: {% image_buster /assets/img/cc_implementation/message_center.png %}
 [4]: {% image_buster /assets/img/cc_implementation/full_page.png %}
 [5]: {% image_buster /assets/img/cc_implementation/html_webview.png %}
-[6]: {% image_buster /assets/img/cc_implementation/coupon.gif %}
+[6]: {% image_buster /assets/img/cc_implementation/discount2.png %}
 [7]: {% image_buster /assets/img/cc_implementation/discount.png %}
