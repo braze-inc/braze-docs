@@ -123,6 +123,10 @@ For information regarding when you should use a Custom Event vs a Custom Attribu
 
 Language values that are explicitly set via this API will take precedence over the locale information Braze automatically receives from the device.
 
+{% alert note %} 
+The above fields are case sensitive so be sure to reference these fields in lower case
+{% endalert %}
+
 {% alert update %}
 The Profile Field `bio` was removed several years ago and will not be processed as a custom attribute.
 {% endalert %}
