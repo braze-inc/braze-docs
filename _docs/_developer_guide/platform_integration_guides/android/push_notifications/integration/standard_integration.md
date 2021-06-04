@@ -700,8 +700,8 @@ Braze push data keys are documented [here](https://appboy.github.io/appboy-andro
 [68]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/advanced_use_cases/runtime_configuration/#runtime-configuration
 [70]: https://github.com/Appboy/appboy-android-sdk/blob/master/samples/firebase-push/src/main/AndroidManifest.xml "AndroidManifest.xml"
 [71]: https://github.com/Appboy/appboy-android-sdk/blob/master/samples/custom-broadcast/src/main/AndroidManifest.xml "AndroidManifest.xml"
-[72]: https://appboy.github.io/appboy-android-sdk/javadocs/com/appboy/configuration/BrazeConfig.Builder.html#setDefaultNotificationChannelName-java.lang.String-
-[73]: https://appboy.github.io/appboy-android-sdk/javadocs/com/appboy/configuration/BrazeConfig.Builder.html#setDefaultNotificationChannelDescription-java.lang.String-
+[72]: https://appboy.github.io/appboy-android-sdk/javadocs/com/braze/configuration/BrazeConfig.Builder.html#setDefaultNotificationChannelName-java.lang.String-
+[73]: https://appboy.github.io/appboy-android-sdk/javadocs/com/braze/configuration/BrazeConfig.Builder.html#setDefaultNotificationChannelDescription-java.lang.String-
 [74]: https://appboy.github.io/appboy-android-sdk/javadocs/com/appboy/AppboyFirebaseMessagingService.html#handleBrazeRemoteMessage-android.content.Context-RemoteMessage-
 [75]: https://firebase.google.com/docs/reference/android/com/google/firebase/messaging/RemoteMessage
 [76]: https://developer.android.com/reference/android/app/Application
