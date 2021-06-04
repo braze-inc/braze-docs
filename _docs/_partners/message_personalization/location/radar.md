@@ -12,7 +12,7 @@ page_type: partner
 > [Radar](https://www.onradar.com/) is a geofencing platform for mobile and web apps. Combining Braze's industry-leading engagement platform and Radar's industry-leading geofencing capabilities allows you to drive digital engagement and loyalty. 
 The Radar platform has three products: [Geofences](https://radar.io/product/geofencing), [Trip Tracking](https://radar.io/product/trip-tracking), and [Geo APIs](https://radar.io/product/api).
 
-Use the Radar and Braze integration to add location context and tracking to your iOS and Android apps in less than ten lines of code, allowing you to easily retarget your customers and augment your marketing with rich location data. Whenever Radar geofence or trip tracking events are generated, Radar will send custom events, and user attributes to Braze. You can use events, and user attributes to build location-based segments or trigger location-based campaigns.
+Use the Radar and Braze integration to add location context and tracking to your iOS and Android apps in less than ten lines of code, allowing you to easily retarget your customers and augment your marketing with rich location data. Whenever Radar geofence or trip tracking events are generated, Radar will send custom events and user attributes to Braze. You can use these events and attributes to build location-based segments or trigger location-based campaigns.
 
 Additionally, Radar Geo APIs can be leveraged to enrich or personalize your marketing campaigns through [Connected Content]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/connected_content/about_connected_content/). 
 
@@ -49,7 +49,7 @@ You can use custom events and user attributes to build location-based segments o
 
 ## Connected Content
 
-The following example shows how to run a promotion to drive users in-store if nearby with a digital offer. 
+The following example shows how to run a promotion to drive nearby users in-store with a digital offer. 
 
 ![Connected Content Example][1]{: style="float:right;max-width:30%;border:0;"}
 
@@ -108,7 +108,7 @@ Shown below is an example of what Radar will return as a JSON object from the AP
 }
 ```
 
-To construct the connected content targeted and personalized Braze message, you can leverage the Braze `most_recent_location` attribute as an input for the near parameter in the API request's URL. The `most_recent_location` attribute is collected via the Radar event integration or directly through the Braze SDK.
+To construct the Connected Content targeted and personalized Braze message, you can leverage the Braze `most_recent_location` attribute as an input for the `near` parameter in the API request's URL. The `most_recent_location` attribute is collected via the Radar event integration or directly through the Braze SDK.
 
 In the example below, the Radar chain filtering is applied for Target and Walmart locations, and the radius of the search for nearby locations is set to 2 km.
 
@@ -159,7 +159,7 @@ near you!
 {% endraw %}
 
 {% alert tip %}
-Visit [Radar documentation](https://radar.io/documentation/api) for all the Radar APIs that can be leveraged in connected content.
+Visit [Radar documentation](https://radar.io/documentation/api) for all the Radar APIs that can be leveraged in Connected Content.
 {% endalert %}
 
 [1]: {% image_buster /assets/img/radar_example.png %}
