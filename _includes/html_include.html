@@ -52,11 +52,51 @@
 
 <script type='text/javascript' src='{{site.baseurl}}/assets/js/algolia_search.js' ></script>
 
-
 <script type="text/javascript">
   const { autocomplete,getAlgoliaResults, createAutocomplete } = window['@algolia/autocomplete-js'];
+  const { createAlgoliaInsightsPlugin } = window['@algolia/autocomplete-plugin-algolia-insights'];
   const searchClient = algoliasearch('{{ site.algolia.application_id }}', '{{ site.algolia.algolia_api_key }}');
+  insightsClient('init', {
+    appId: '{{ site.algolia.application_id }}',
+    apiKey: '{{ site.algolia.algolia_api_key }}'
+  });
+  insightsClient('setUserToken', algolia_user);
 
+  const algoliaInsightsPluginHeader = createAlgoliaInsightsPlugin({
+    insightsClient,
+    onItemsChange({ insights, insightsEvents }) {
+      const events = insightsEvents.map((insightsEvent) => ({
+        ...insightsEvent,
+        eventName: 'Viewed from Header Search',
+      }));
+      insights.viewedObjectIDs(...events);
+    },
+    onSelect({ insights, insightsEvents }) {
+      const events = insightsEvents.map((insightsEvent) => ({
+        ...insightsEvent,
+        eventName: 'Clicked from Header Search',
+      }));
+      insights.clickedObjectIDsAfterSearch(...events);
+    },
+  });
+
+  const algoliaInsightsPluginMain = createAlgoliaInsightsPlugin({
+    insightsClient,
+    onItemsChange({ insights, insightsEvents }) {
+      const events = insightsEvents.map((insightsEvent) => ({
+        ...insightsEvent,
+        eventName: 'Viewed from Home Search',
+      }));
+      insights.viewedObjectIDs(...events);
+    },
+    onSelect({ insights, insightsEvents }) {
+      const events = insightsEvents.map((insightsEvent) => ({
+        ...insightsEvent,
+        eventName: 'Clicked from Home Search',
+      }));
+      insights.clickedObjectIDsAfterSearch(...events);
+    },
+  });
   const instant_search = instantsearch({
     indexName: '{{ site.algolia.index_name }}',
     searchClient,
