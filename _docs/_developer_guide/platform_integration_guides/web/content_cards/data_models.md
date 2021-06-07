@@ -13,11 +13,48 @@ channel: content cards
 
 The Braze Web SDK includes a Content Cards Feed UI to speed up your integration efforts. If you would prefer to build and your own UI instead, skip down to the [Data Models][#data-models] section.
 
-To toggle display of Content Cards through the Braze Web SDK, call:
+## Standard Feed UI
 
-[`appboy.display.toggleContentCards();`](https://js.appboycdn.com/web-sdk/latest/doc/module-display.html#.toggleContentCards)
+To use the included Content Cards UI, you'll need to specify where on your website to show the feed. 
 
-This method will toggle the visibility of the Content Cards. By default, if no arguments are provided, all Content Cards will be shown in a fixed-position sidebar on the right-hand side of the page.
+In this example, we have a `<div id="feed"></div>` in which we want to place the Content Cards feed. 
+
+We'll use three buttons to hide, show, or toggle (hide or show based on its current state) the feed.
+
+```html
+
+<button id="toggle" type="button">Toggle Cards Feed</button>
+<button id="hide" type="button">Hide Cards Feed</button>
+<button id="show" type="button">Show Cards Feed</button>
+
+<nav>
+    <h1>Your Personalized Feed</h1>
+    <div id="feed"></div>
+</nav>
+
+<script>
+   const toggle = document.getElementById("toggle");
+   const hide = document.getElementById("hide");
+   const show = document.getElementById("show");
+   const feed = document.getElementById("feed");
+    
+   toggle.onclick = function(){
+      appboy.display.toggleContentCards(feed);    
+   }
+    
+   hide.onclick = function(){
+      appboy.display.hideContentCards();
+   }
+    
+   show.onclick = function(){
+      appboy.display.showContentCards(feed);    
+   }
+</script>
+
+
+```
+
+When using the `toggleContentCards(parentNode, filterFunction)` and `showContentCards(parentNode, filterFunction)` methods, if no arguments are provided, all Content Cards will be shown in a fixed-position sidebar on the right-hand side of the page. Otherwise, the feed will be placed in the specified `parentNode` option.
 
 |Parameters | Description |
 |---|---|
