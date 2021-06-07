@@ -21,12 +21,12 @@ Additionally, Radar Geo APIs can be leveraged to enrich or personalize your mark
 To map data between the Braze and Radar SDKs, you will need to set the same user IDs in both systems. This can be done by using the `changeUser()` method in the Braze SDK and the `setUserId()` method in the Radar SDK.
 
 To enable the integration:
-- Visit the Braze __Developer Console__ page and copy your group identifier
-- On the Braze __Manage Settings__ page, copy your iOS API keys and Android API keys.
-- On the Radar [Integrations page](https://www.onradar.com/integrations) under Braze:
-	- Set __Enabled__ to `Yes`
+1. Visit the Braze __Developer Console__ page and copy your group identifier
+2. On the Braze __Manage Settings__ page, copy your iOS API keys and Android API keys.
+3. On the Radar [Integrations page](https://www.onradar.com/integrations) under Braze:
+	- Set __Enabled__ to __Yes__
 	- Set your Braze endpoint
-	- Paste in your group identifier and API keys.
+	- Paste in your group identifier and API keys
 	- Input any event or event attribute filtering to ensure only relevant data is sent to Braze for engagement marketing
 
 {% alert note %}
