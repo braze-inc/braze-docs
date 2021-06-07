@@ -3,17 +3,11 @@ function main_doc_submit(){
   return false;
 }
 $(document).ready(function () {
-  function string_to_slug(str) {
-    if (str) {
-      str = str.toLowerCase().replace(/\s/g, '-').replace(/[^\w-]/g, '');
-    }
-    return str;
-  }
-
   autocomplete({
     container: "#doc-search-home",
     panelContainer: "#doc-search-panel",
     debug: algolia_debug,
+    plugins: [algoliaInsightsPluginMain],
     placeholder: "Search everything",
     onSubmit(e){
       var query = e.state.query;
@@ -37,7 +31,8 @@ $(document).ready(function () {
                   params: {
                     hitsPerPage: 5,
                     attributesToSnippet: ["description:24"],
-                    snippetEllipsisText: " ..."
+                    snippetEllipsisText: " ...",
+                    clickAnalytics: true,
                   },
                 },
               ],
