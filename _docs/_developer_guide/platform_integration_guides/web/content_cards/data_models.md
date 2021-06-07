@@ -11,7 +11,7 @@ channel: content cards
 
 # Content Cards Integration
 
-The Braze Web SDK includes a Content Cards Feed UI to speed up your integration efforts. If you would prefer to build and your own UI instead, skip down to the [Data Models](#data-models) section.
+The Braze Web SDK includes a Content Cards Feed UI to speed up your integration efforts. If you would prefer to build and your own UI instead, see our [Customization Guide](/docs/developer_guide/platform_integration_guides/web/content_cards/customization/).
 
 ## Standard Feed UI
 
@@ -65,10 +65,6 @@ When using the `toggleContentCards(parentNode, filterFunction)` and `showContent
 {: .reset-td-br-1 .reset-td-br-2}
 
 [See the JS docs](https://js.appboycdn.com/web-sdk/latest/doc/module-display.html#.toggleContentCards) for more information on toggling Content Cards.
-
-## Content Card Data Models {#data-models}
-
-The Braze Web SDK supports several unique Content Card card types, [ab.ClassicCard](https://js.appboycdn.com/web-sdk/latest/doc/ab.ClassicCard.html), [ab.Banner](https://js.appboycdn.com/web-sdk/latest/doc/ab.Banner.html), [ab.CaptionedImage](https://js.appboycdn.com/web-sdk/latest/doc/ab.CaptionedImage.html) which share a base model, [ab.Card](https://js.appboycdn.com/web-sdk/latest/doc/ab.Card.html).
 
 ### Requesting Unviewed Content Card Count
 
