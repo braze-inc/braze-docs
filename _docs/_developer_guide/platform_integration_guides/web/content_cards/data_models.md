@@ -11,7 +11,7 @@ channel: content cards
 
 # Content Cards Integration
 
-The Braze Web SDK includes a Content Cards Feed UI to speed up your integration efforts. If you would prefer to build and your own UI instead, skip down to the [Data Models][#data-models] section.
+The Braze Web SDK includes a Content Cards Feed UI to speed up your integration efforts. If you would prefer to build and your own UI instead, skip down to the [Data Models](#data-models) section.
 
 ## Standard Feed UI
 
@@ -33,6 +33,10 @@ We'll use three buttons to hide, show, or toggle (hide or show based on its curr
 </nav>
 
 <script>
+   // we'll assume we have window.appboy
+   // you can also use our npm integration instead:
+   // import braze from "@braze/web-sdk";
+    
    const toggle = document.getElementById("toggle");
    const hide = document.getElementById("hide");
    const show = document.getElementById("show");
@@ -50,8 +54,6 @@ We'll use three buttons to hide, show, or toggle (hide or show based on its curr
       appboy.display.showContentCards(feed);    
    }
 </script>
-
-
 ```
 
 When using the `toggleContentCards(parentNode, filterFunction)` and `showContentCards(parentNode, filterFunction)` methods, if no arguments are provided, all Content Cards will be shown in a fixed-position sidebar on the right-hand side of the page. Otherwise, the feed will be placed in the specified `parentNode` option.
