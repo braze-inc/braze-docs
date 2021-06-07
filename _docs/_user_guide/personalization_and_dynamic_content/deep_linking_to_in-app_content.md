@@ -13,17 +13,19 @@ Deep linking is a way of launching a native app and providing additional informa
 
 There are three parts to this:
 
-- Identify which app to launch
-- Instruct the app which action to perform
-- Provide the action with any additional data it will need
+1. Identify which app to launch
+2. Instruct the app which action to perform
+3. Provide the action with any additional data it will need
 
-Deep links are custom URIs that link to a specific part of the app and contain all of the above parts. The key is defining a custom scheme. "http:" is the scheme with which almost everyone is familiar but schemes can begin with any word. A scheme must start with a letter, but can then contain letters, numbers, plus-signs, minus-signs or dots. Practically speaking, there is no central registry to prevent conflicts, so it is a best practice to include your domain name in the scheme. For example, "twitter://" is the iOS URI to launch Twitter's mobile app.
+Deep links are custom URIs that link to a specific part of the app and contain all of the above parts. The key is defining a custom scheme. `http:` is the scheme with which almost everyone is familiar but schemes can begin with any word. A scheme must start with a letter, but can then contain letters, numbers, plus-signs, minus-signs or dots. Practically speaking, there is no central registry to prevent conflicts, so it is a best practice to include your domain name in the scheme. For example, `twitter://` is the iOS URI to launch Twitter's mobile app.
 
-Everything after the colon within a deep link is free-form text. It is up to you to define its structure and interpretation, however, a common convention is to model it after "http:" urls, including a leading "//" and query parameters (e.g. "?foo=1&bar=2"). For the Twitter example, "twitter://user?screen_name=[id]" would be utilized to launch a specific profile in the app.
+Everything after the colon within a deep link is free-form text. It's up to you to define its structure and interpretation, however, a common convention is to model it after `http:` URLs, including a leading `//` and query parameters (e.g. `?foo=1&bar=2`). For the Twitter example, `twitter://user?screen_name=[id]` would be utilized to launch a specific profile in the app.
 
-These deep links are a powerful tool when used in tandem with the Braze News Feed. Providing deep links as the URI within News Feed items allows you to utilize the News Feed as an individualized navigation tool to direct users to content inside in your app. They can also be utilized to direct users from [push notifications][1] and in-app messages to relevant app sections and content.
+These deep links are a powerful tool when used in tandem with the Braze [News Feed][11]. Providing deep links as the URI within News Feed items allows you to use the News Feed as an individualized navigation tool to direct users to content inside in your app. They can also be used to direct users from [push notifications][1] and in-app messages to relevant app sections and content.
 
-Keep in mind that enabling these deep links requires some additional setup within your app. Please reference our documentation on [deep links][2] for iOS and on how to [deep link to the News Feed][3] for Android to understand the requirements for implementation.
+{% alert note %}
+Keep in mind that enabling these deep links requires some additional setup within your app. Please reference our documentation on [deep links for iOS]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/advanced_use_cases/linking/#deep-links) and on how to [deep link to the News Feed for Android]({{site.baseurl}}/developer_guide/platform_integration_guides/android/advanced_use_cases/deep_linking/#Android_Deep_Advance) to understand the requirements for implementation.
+{% endalert %}
 
 ## UTM Tags and Campaign Attribution
 
@@ -41,7 +43,7 @@ UTM tags can be embedded into both regular HTTP (web) links and deep links and t
 
 ### Using UTM Tags with Braze
 
-If you want to use UTM tags with regular HTTP (web) links, for example to do campaign attribution for your email campaigns, and your organization already uses Google Analytics, you can simply use [Google's URL builder][6] to generate UTM links. These links can be readily embedded into Braze campaign copy just like any other link.
+If you want to use UTM tags with regular HTTP (web) links—for example, to do campaign attribution for your email campaigns—and your organization already uses Google Analytics, you can simply use [Google's URL builder][6] to generate UTM links. These links can be readily embedded into Braze campaign copy just like any other link.
 
 In order to use UTM tags in deep links to your app, your app must have the relevant [Google Analytics SDK][5] integrated and [correctly configured to handle deep links][7]. Check with your developers if you're unsure about this.
 
@@ -79,3 +81,4 @@ Similarly to push notifications and News Feed cards, you can include UTM tags in
 [8]: {% image_buster /assets/img_archive/push_utm_tags.png %}
 [9]: {% image_buster /assets/img_archive/news_feed_utm_tags.png %}
 [10]: {% image_buster /assets/img_archive/iam_utm_tags.png %}
+[11]: {{site.baseurl}}/user_guide/engagement_tools/news_feed/creating_a_news_feed_item/
