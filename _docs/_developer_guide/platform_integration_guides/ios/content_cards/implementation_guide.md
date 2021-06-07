@@ -195,7 +195,6 @@ enum ContentCardClassType: Hashable {
 __Identifying Types__<br>
 The `ContentCardClassType` enum represents the `class_type` value in the Braze Dashboard. This value is also used as a filter identifier to display Content Cards in different places. 
 
-
 ```objc
 typedef NS_ENUM(NSInteger, ContentCardClassType) {
   ContentCardClassTypeNone = 0,
@@ -214,6 +213,156 @@ typedef NS_ENUM(NSInteger, ContentCardClassType) {
   } else {
     NSInteger value = [[self contentCardClassTypeArray] indexOfObject:rawValue];
     return (ContentCardClassType) value;
+  }
+}
+```
+{% endtab %}
+{% endtabs %}
+{% tabs %}
+{% tab Swift %}
+__Working with Content Cards__<br>
+
+```swift
+func handleContentCardsUpdated(_ notification: Notification, for classTypes: [ContentCardClassType]) -> [ContentCardable] {
+  guard let updateIsSuccessful = notification.userInfo?[ABKContentCardsProcessedIsSuccessfulKey] as? Bool, updateIsSuccessful, let cards = contentCards else { return [] }
+             
+  return convertContentCards(cards, for: classTypes)
+}
+```
+{% endtab %}
+{% tab Objective-C %}
+__Working with Content Cards__<br>
+
+```objc
+- (NSArray *)handleContentCardsUpdated:(NSNotification *)notification forClassType:(ContentCardClassType)classType {  
+  BOOL updateIsSuccessful = [notification.userInfo[ABKContentCardsProcessedIsSuccessfulKey] boolValue];
+  if (updateIsSuccessful) {
+    return [self convertContentCards:self.contentCards forClassType:classType];
+  } else {
+    return @[];
+  }
+}
+```
+{% endtab %}
+{% endtabs %}
+{% tabs %}
+{% tab Swift %}
+__Working with Payload Data__<br>
+
+```swift
+func convertContentCards(_ cards: [ABKContentCard], for classTypes: [ContentCardClassType]) -> [ContentCardable] {
+  var contentCardables: [ContentCardable] = []
+    
+  for card in cards {
+    let classTypeString = card.extras?[ContentCardKey.classType.rawValue] as? String
+    let classType = ContentCardClassType(rawType: classTypeString)
+    guard classTypes.contains(classType) else { continue }
+       
+    var metaData: [ContentCardKey: Any] = [:]
+    switch card {
+    case let banner as ABKBannerContentCard:
+      metaData[.image] = banner.image
+    case let captioned as ABKCaptionedImageContentCard:
+      metaData[.title] = captioned.title
+      metaData[.cardDescription] = captioned.cardDescription
+      metaData[.image] = captioned.image
+    case let classic as ABKClassicContentCard:
+      metaData[.title] = classic.title
+      metaData[.cardDescription] = classic.cardDescription
+    default:
+      break
+    }
+ 
+    metaData[.idString] = card.idString
+    metaData[.created] = card.created
+    metaData[.dismissible] = card.dismissible
+    metaData[.urlString] = card.urlString
+    metaData[.extras] = card.extras
+    ...
+    // other Content Card properties such as expiresAt, pinned, etc.
+      
+    if let contentCardable = contentCardable(with: metaData, for: classType) {
+      contentCardables.append(contentCardable)
+    }
+  }
+  return contentCardables
+}
+```
+{% endtab %}
+{% tab Objective-C %}
+__Working with Payload Data__<br>
+
+```objc
+- (NSArray *)convertContentCards:(NSArray<ABKContentCard*> *)cards forClassType:(ContentCardClassType)classType {
+  NSMutableArray *contentCardables = [[NSMutableArray alloc] init];      for (ABKContentCard *card in cards) {
+    NSString *classTypeString = [card.extras objectForKey:ContentCardKeyClassType];
+    ContentCardClassType cardClassType = [ContentCardData contentCardClassTypeForString: classTypeString];
+    if (cardClassType != classType) { continue; }
+     
+    NSMutableDictionary *metaData = [[NSMutableDictionary alloc] init];
+    if ([card isKindOfClass:[ABKBannerContentCard class]]) {
+      ABKBannerContentCard *banner = (ABKBannerContentCard *)card;
+      metaData[ContentCardKeyImage] = banner.image;
+    } else if ([card isKindOfClass:[ABKCaptionedImageContentCard class]]) {
+      ABKCaptionedImageContentCard *captioned = (ABKCaptionedImageContentCard *)card;
+      metaData[ContentCardKeyTitle] = captioned.title;
+      metaData[ContentCardKeyCardDescription] = captioned.cardDescription;
+      metaData[ContentCardKeyImage] = captioned.image;
+    } else if ([card isKindOfClass:[ABKClassicContentCard class]]) {
+      ABKClassicContentCard *classic = (ABKClassicContentCard *)card;
+      metaData[ContentCardKeyCardDescription] = classic.title;
+      metaData[ContentCardKeyImage] = classic.image;
+    }
+     
+    metaData[ContentCardKeyIdString] = card.idString;
+    metaData[ContentCardKeyCreated] = [NSNumber numberWithDouble:card.created];
+    metaData[ContentCardKeyDismissible] = [NSNumber numberWithBool:card.dismissible];
+    metaData[ContentCardKeyUrlString] = card.urlString;
+    metaData[ContentCardKeyExtras] = card.extras;
+    ...
+    // other Content Card properties such as expiresAt, pinned, etc.   
+ 
+    id<ContentCardable> contentCardable = [self contentCardableWithMetaData:metaData forClassType:classType];
+    if (contentCardable) {
+      [contentCardables addObject:contentCardable];
+    }
+  }
+ 
+  return contentCardables;
+}
+```
+{% endtab %}
+{% endtabs %}
+
+{% tabs %}
+{% tab Swift %}
+__Initalizing your Custom Objects from Content Card Payload Data__<br>
+```swift
+func contentCardable(with metaData: [ContentCardKey: Any], for classType: ContentCardClassType) -> ContentCardable? {
+  switch classType {
+  case .yourValue:
+    return CustomObject(metaData: metaData, classType: classType)
+  case .yourOtherValue:
+    return OtherCustomObject(metaData: metaData, classType: classType)
+  ...
+  default:
+    return nil
+  }
+}
+```
+{% endtab %}
+{% tab Objective-C %}
+__Initalizing your Custom Objects from Content Card Payload Data__<br>
+```obj-c
+- (id<ContentCardable>)contentCardableWithMetaData:(NSDictionary *)metaData forClassType:(ContentCardClassType)classType {
+  switch (classType) {
+    case ContentCardClassTypeYourValue:
+      return [[CustomObject alloc] initWithMetaData:metaData classType:classType];
+    case ContentCardClassTypeYourOtherValue:
+      return nil;
+    ...
+    default:
+      return nil;
   }
 }
 ```
@@ -507,6 +656,25 @@ The `logContentCardImpression()` method can only be called from an `ABKContentCa
 
 {% tabs %}
 {% tab Swift %}
+__Logging Analytics__<br>
+```swift
+customObject.logContentCardImpression()
+customObject.logContentCardClicked()
+customObject.logContentCardDismissed()
+```
+{% endtab %}
+{% tab Objective-C %}
+__Logging Analytics__<br>
+```objc
+[customObject logContentCardImpression];
+[customObject logContentCardClicked];
+[customObject logContentCardDismissed];
+```
+{% endtab %}
+{% endtabs %}
+
+{% tabs %}
+{% tab Swift %}
 __Custom Objects Call the Logging Methods__<br>
 For objects that conform to the `ContentCardable` protocol, the analytics methods can be called directly from the objects. As seen in the snippet below, the object is referenced to log the impression.
 ```swift
@@ -551,7 +719,7 @@ The `ContentCardable` protocol handles the heavy lifting of calling the helper f
 {% endtabs %}
 {% tabs %}
 {% tab Swift %}
-__Call `ABKContentCard` Functions__<br>
+__Retreive the `ABKContentCard`__<br>
 The [helper file](https://github.com/braze-inc/braze-growth-shares-ios-demo-app/blob/master/Braze-Demo/BrazeManager.swift#L171) can reference Braze SDK dependencies such as the `Appboy.sharedInstance()?.contentCardsController.contentCards` array to get the `ABKContentCard` to call our logging methods.
 ```swift
 extension BrazeManager {
@@ -568,7 +736,7 @@ extension BrazeManager {
 ```
 {% endtab %}
 {% tab Objective-C %}
-__Call `ABKContentCard` Functions__<br>
+__Retreive the `ABKContentCard`__<br>
 The [helper file](https://github.com/braze-inc/braze-growth-shares-ios-demo-app/blob/master/Braze-Demo/BrazeManager.swift#L171) can reference Braze SDK dependencies such as the `Appboy.sharedInstance()?.contentCardsController.contentCards` array to get the `ABKContentCard` to call our logging methods.
 ```objc
 - (void)logContentCardImpression:(NSString *)idString {
