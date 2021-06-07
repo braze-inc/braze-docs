@@ -58,7 +58,7 @@ __iOS Push States__<br>
 Push Enabled - If Braze has a push token for the device<br>
 Push Opt-In State - If the user has expressed a preference to send them push notifications.
 
-For iOS, to receive a push token, you must request whether the user would like to receive push. Dependent on the user's response, Braze will adjust the user's opt-in state to opted in or out. Before this, the opt-in state will be `subscribed`. Upon receiving a response, Braze will attempt to register the user for push. Upon successfully receiving a token, we will update the user's push-enabled state.
+For iOS, to receive a push token, you must request whether the user would like to receive push. Dependent on the user’s response, Braze will adjust the user’s push subscription state to `opted in` if accepted or keep the push subscription state as `subscribed` if rejected. Before this, the opt-in state will be `subscribed`. Upon receiving a response, Braze will attempt to register the user for push. After Braze successfully receives a token, we will update the user's push-enabled state.
 
 __Enabled State__<br>
 There exist two enabled states, Foreground push enabled (opted-in), and Background push enabled (opted-out). Regardless of the response to the opt-in prompt, the user will receive a __background__ push token (you must have "Remote Notifications" enabled in __Xcode__), allowing them to be sent silent push. If your app is provisionally authorized, or the user has opted into push, they will receive a __foreground__ push token as well, allowing them to be sent all types of push. Within Braze, we consider a user on iOS who is foreground push enabled to be 'push enabled', either explicitly (app-level) or provisionally (device-level).
