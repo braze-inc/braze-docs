@@ -396,6 +396,9 @@ Because this use case includes data from different sources, data must be harmoni
 
 Requesting Content Cards requires you to wait for the notification callback from the SDK. A semaphore could be used to handle this, waiting until the SDK posts the callback to update the barrier block. Note that custom objects will be returned and not Content Cards. The local data and the Content Card payload data are returned in the same array to be populated on-screen.
 
+##### Ready to log analytics?
+Visit the [following section](#logging-impressions-clicks-and-dismissals) to get a better understanding of how the flow of data should look.
+
 ### Content Cards in a Message Center
 
 Content Cards can be used in a message center format where each message is its own card. Each message in the message center is populated via a Content Card payload, and each card contains additional key-value pairs that power on-click UI/UX. In the example to the right, one message directs you to an arbitrary custom view, while another opens to a webview that displays custom HTML.
@@ -414,6 +417,9 @@ For the following message types, key-value pairs `class_type` and `message_heade
 #### Backend Explanation
 
 The message center logic is driven by the `contentCardClassType` that is provided by the key-value pairs from Braze. Using the `addContentCardToView` method, you are able to both filter and identify these class types.
+
+##### Ready to log analytics?
+Visit the [following section](#logging-impressions-clicks-and-dismissals) to get a better understanding of how the flow of data should look.
 
 ### Interactive Content Cards
 
@@ -484,6 +490,9 @@ The `class_type` is passed in as a filter to only return Content Cards that have
 ```
 {% endtab %}
 {% endtabs %}
+
+##### Ready to log analytics?
+Visit the [following section](#logging-impressions-clicks-and-dismissals) to get a better understanding of how the flow of data should look.
 
 ## Logging Impressions, Clicks, and Dismissals
 
