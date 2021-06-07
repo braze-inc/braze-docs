@@ -23,9 +23,9 @@ When building out Content Cards, it is recommended to integrate them using a sin
 
 Much like a rocketship adding a booster, your own custom objects can be extended to function as Content Cards. Limited API surfaces such as this provide flexibility to work with different data backends interchangeably. This can be done by conforming to the `ContentCardable` protocol and implementing the initializer (as seen below) and, through the use of the `ContentCardData` struct, allows you to access the `ABKContentCard` data. The `ABKContentCard` payload will be used to initialize the `ContentCardData` struct and the custom object itself, all from a `Dictionary` type via the initializer the protocol comes with.
 
-The initializer also includes a `ContentCardClassType` enum. This enum is used to decide which object to initialize. Through the use of key-value pairs within the Braze dashboard, you can set an explicit `class_type` key that will be used to determine what object to initialize. These key-value pairs for Content Cards come through in the `extras` variable on the `ABKContentCard`. Another core component of the initializer is the `metaData` dictionary parameter. The `metaData` includes everything from the `ABKContentCard` parsed out into a series of keys and values. Once the relevant cards are parsed and converted to your custom objects, the app is ready to begin working with them as if the objects were instantiated from JSON or any other source. 
+The initializer also includes a `ContentCardClassType` enum. This enum is used to decide which object to initialize. Through the use of key-value pairs within the Braze dashboard, you can set an explicit `class_type` key that will be used to determine what object to initialize. These key-value pairs for Content Cards come through in the `extras` variable on the `ABKContentCard`. Another core component of the initializer is the `metaData` dictionary parameter. The `metaData` includes everything from the `ABKContentCard` parsed out into a series of keys and values. Once the relevant cards are parsed and converted to your custom objects, the app is ready to begin working with them as if they were instantiated from JSON or any other source. 
 
-Once you have a solid understanding of these code considerations, check out our [use cases](#sample-use-cases) below to get started implementing your own custom objects.
+Once you have a solid understanding of these code considerations, check out our [use cases](#sample-use-cases) below to get started implementing your custom objects.
 
 {% tabs %}
 {% tab Swift %}
@@ -371,7 +371,7 @@ __Initalizing your Custom Objects from Content Card Payload Data__<br>
 
 ## Sample Use Cases
 
-There are three sample customer use cases provided. Each sample has video walkthroughs, code snippets, and a look into how Content Card variables may look and be used in the Braze dashboard:
+There are three sample customer use cases provided. Each use case offers a detailed explanation, relevant code snippets, and a look into how Content Card variables may look and be used in the Braze dashboard:
 - [Content Cards As Supplemental Content](#content-cards-as-supplemental-content)
 - [Content Cards in a Message Center](#content-cards-in-a-message-center)
 - [Interactive Content Cards](#interactive-content-cards)
@@ -382,7 +382,7 @@ There are three sample customer use cases provided. Each sample has video walkth
 
 You can seamlessly blend Content Cards into an existing feed, allowing data from multiple feeds to load simultaneously. This creates a cohesive, harmonious experience with Braze Content Cards and existing feed content.
 
-The example to the left shows a `UICollectionView` with a hybrid list of items - items that are populated via local data and also Content Cards powered by Braze. With this, Content Cards can be indistinguishable alongside existing content. Please visit our [repo](https://github.com/braze-inc/braze-growth-shares-ios-demo-app) to see examples of how to handle different types of Content Cards in the same feed.
+The example to the right shows a `UICollectionView` with a hybrid list of items that are populated via local data and Content Cards powered by Braze. With this, Content Cards can be indistinguishable alongside existing content. Please visit our [repo](https://github.com/braze-inc/braze-growth-shares-ios-demo-app) to see examples of how to handle different types of Content Cards in the same feed.
 
 #### Dashboard Configuration
 
@@ -392,131 +392,9 @@ This Content Card is delivered by an API triggered campaign with API triggered k
 
 #### Backend Explanation
 
-Because this use case includes data from different sources, data must be harmoniously fetched to display on screen without disrupting the user experience. This can be done with `OperationQueues`, where each operation is its own queue. As shown below, there is one queue for loading local data and one for loading Content Cards. There also exists a `BarrierBlock` that initiates the callback after both operations have been completed. 
+Because this use case includes data from different sources, data must be harmoniously fetched to display on screen without disrupting the user experience. This can be achieved through the use of [`OperationQueues`](https://developer.apple.com/documentation/foundation/operationqueue), where each operation is its own queue, one for loading local data and one for loading Content Cards. This used alongside a barrier block will ensure the call back is initiated after both operations are completed. 
 
-Requesting Content Cards requires you to wait for the notification callback from the SDK. A semaphore has been implemented here to wait until the SDK posts the notification callback so the barrier block knows when the Content Card operation is completed. Note that custom objects will be returned and not Content Cards. Both the local data and the Content Card payload data are returned in the same array to be populated on-screen.
-
-#### __Load Content Cards Alongside Existing Content__<br><br>
-
-{% tabs %}
-{% tab Swift %}
-__Load the data simultaneously with OperationQueues__<br>
-A `BarrierBlock` is used to synchronize the execution of the two tasks in the queue.
-```swift
-addOperation { [weak self] in
-  guard let self = self else { return }
-  self.loadTiles(self.tileCompletionHandler)
-}
-
-addOperation { [weak self] in
-  guard let self = self else { return }
-  self.loadContentCards()
-  self.semaphore.wait()
-}
-
-addBarrierBlock {
-  completion(tiles, ads)
-}
-```
-{% endtab %}
-{% tab Objective-C %}
-__Load the data simultaneously with OperationQueues__<br>
-A `BarrierBlock` is used to synchronize the execution of the two tasks in the queue.
-
-```objc
-HomeListOperationQueue * __weak weakSelf = self;
-
-[self addOperationWithBlock:^{
-  if (weakSelf) {
-    [weakSelf loadLocalTilesWithCompletion:^(NSMutableArray * localTiles, NSError*) {
-      [tiles addObjectsFromArray:localTiles];
-    }];
-  }
-}];
-
-[self addOperationWithBlock:^{
-  if (weakSelf) {
-    [weakSelf loadContentCards];
-    dispatch_semaphore_wait(semaphore, DISPATCH_TIME_FOREVER);
-  }
-}];
-    
-[self addBarrierBlock:^{
-  completion(tiles, ads);
-}];
-```
-{% endtab %}
-{% endtabs %}
-{% tabs %}
-{% tab Swift %}
-__Load Local Data Operation__<br>
-The corresponding `[Tile]` array will be seamlessly blended with an array of Content Cards.
-
-```swift
-func loadTiles(_ completion: @escaping ([Tile]) -> ()) {
-    switch result {
-    case .success(let metaData):
-      completion(metaData.tiles)
-    case .failure:
-      // handle error
-  }
-}
-```
-{% endtab %}
-{% tab Objective-C %}
-__Load Local Data Operation__<br>
-The corresponding `[Tile]` array will be seamlessly blended with an array of Content Cards.
-
-```objc
-- (void)loadTilesWithCompletion:(void (^)(NSMutableArray*, NSError *))completion {
-  [localDataCoordinator loadTilesFromLocalDataWithCompletion:^(NSMutableArray *tiles, NSError *error) {
-    if (error == nil) {
-      completion(tiles, error);
-    } else {
-      // handle error
-    }
-  }];
-}
-```
-{% endtab %}
-{% endtabs %}
-{% tabs %}
-{% tab Swift %}
-__Load Content Card Operation__<br>
-A semaphore is used to signal when the task is executed due to the notification callback from the Braze SDK. 
-
-```swift
-func loadContentCards() {
-    BrazeManager.shared.addObserverForContentCards(observer: self, selector: #selector(contentCardsUpdated))
-    BrazeManager.shared.requestContentCardsRefresh()
-}
-  
-  @objc private func contentCardsUpdated(_ notification: Notification) {
-    let contentCards = BrazeManager.shared.handleContentCardsUpdated(notification, for: [.item(.tile), .ad])
-    contentCardCompletionHandler(contentCards)
-    semaphore.signal()
-  }
-```
-{% endtab %}
-{% tab Objective-C %}
-__Load Content Card Operation__<br>
-A semaphore is used to signal when the task is executed due to the notification callback from the Braze SDK. 
-
-```objc
-- (void)loadContentCards {
-  [[BrazeManager shared] addObserverForContentCards:self selector:@selector(contentCardsUpdated:)];
-  [[BrazeManager shared] requestContentCardsRefresh];
-}
-
-- (void)contentCardsUpdated:(NSNotification *)notification {
-  NSArray *classTypes = @[@(ContentCardClassTypeHomeTile),@(ContentCardClassTypeAdBanner)];
-  NSArray *contentCards = [[BrazeManager shared] handleContentCardsUpdated:notification forClassTypes:classTypes];
-  contentCardCompletionHandler(contentCards);
-  dispatch_semaphore_signal(semaphore);
-}
-```
-{% endtab %}
-{% endtabs %}
+Requesting Content Cards requires you to wait for the notification callback from the SDK. A semaphore could be used to handle this, waiting until the SDK posts the callback to update the barrier block. Note that custom objects will be returned and not Content Cards. The local data and the Content Card payload data are returned in the same array to be populated on-screen.
 
 ### Content Cards in a Message Center
 
@@ -530,49 +408,12 @@ For the following message types, key-value pairs `class_type` and `message_heade
 
 | Arbitrary Custom View Message | Webview Message |
 | ---- | ---- |
-| <br>The key-value pairs for this use case include `message_header` set as `Full Page` and `class_type` set as `message_full_page`.<br><br><br>![Message Center JPG1][4]{: style="max-width:100%;"} | The key-value pairs for this use case include `message_header` set as `HTML`, `class_type` set as `message_webview`, and `message_title`.<br><br>This message also looks for an HTML key-value pair, but if you are working with a web domain, a URL key-value pair is also valid.<br><br>![Message Center JPG2][5] |
+| <br>The key-value pairs for this use case include:<br><br>- `message_header` set as `Full Page`<br>- `class_type` set as `message_full_page`<br><br><br>![Message Center JPG1][4]{: style="max-width:100%;"} | The key-value pairs for this use case include:<br><br>- `message_header` set as `HTML`<br>- `class_type` set as `message_webview`<br>- `message_title`<br><br>This message also looks for an HTML key-value pair, but if you are working with a web domain, a URL key-value pair is also valid.<br><br>![Message Center JPG2][5] |
 {: .reset-td-br-1 .reset-td-br-2}
 
 #### Backend Explanation
 
-The message center logic is driven by the `contentCardClassType` that is provided by the key-value pairs from Braze. Using the `addContentCardToView()` function, you are able to both filter and identify these class types.
-
-{% tabs %}
-{% tab Swift %}
-__Using `class_type` for On Click Behavior__<br>
-When a message is clicked, the `ContentCardClassType` handles how the next screen should be populated.
-```swift
-func addContentCardToView(with message: Message) {
-    switch message.contentCardData?.contentCardClassType {
-      case .message(.fullPage):
-        loadContentCardFullPageView(with: message as! FullPageMessage)
-      case .message(.webView):
-        loadContentCardWebView(with: message as! WebViewMessage)
-      default:
-        break
-    }
-}
-```
-{% endtab %}
-{% tab Objective-C %}
-__Using `class_type` for On Click Behavior__<br>
-When a message is clicked, the `ContentCardClassType` handles how the next screen should be populated.
-```objc
-- (void)addContentCardToView:(Message *)message {
-  switch (message.contentCardData.classType) {
-    case ContentCardClassTypeMessageFullPage:
-      [self loadContentCardFullPageView:(FullPageMessage *)message];
-      break;
-    case ContentCardClassTypeMessageWebview:
-      [self loadContentCardWebView:(WebViewMessage *)message];
-      break;
-    default:
-      break;
-  }
-}
-```
-{% endtab %}
-{% endtabs %}
+The message center logic is driven by the `contentCardClassType` that is provided by the key-value pairs from Braze. Using the `addContentCardToView` method, you are able to both filter and identify these class types.
 
 ### Interactive Content Cards
 
@@ -646,11 +487,11 @@ The `class_type` is passed in as a filter to only return Content Cards that have
 
 ## Logging Impressions, Clicks, and Dismissals
 
-After extending your own custom objects to function as Content Cards, logging valuable metrics like impressions, clicks, and dismissals is quick and simple. This can be done through the use of a `ContentCardable` protocol that references and provides data to a helper file to be logged by the Braze SDK.
+After extending your custom objects to function as Content Cards, logging valuable metrics like impressions, clicks, and dismissals is quick and simple. This can be done through the use of a `ContentCardable` protocol that references and provides data to a helper file to be logged by the Braze SDK.
 
 #### Backend Explanation 
 
-The `logContentCardImpression()` method can only be called from an `ABKContentCard`.To handle this, in the `ContentCardable` protocol, there exists a reference to the Content Card ID. The protocol has a `logContentCardImpression()` method that calls into the `BrazeManager.swift` helper file which only exposes an `idString` parameter. Once passed this off to the helper file, the Braze SDK has a public variable, `ContentCards`, that can be queried to get the Content Card from its own identifier that has been passed in. Once the Content Card has been obtained, impressions, click, and dismissals can be logged, all while successfully working with ABK objects only at the moment required.
+The `logContentCardImpression()` method can only be called from an `ABKContentCard`.To handle this, in the `ContentCardable` protocol, there exists a reference to the Content Card ID. The protocol has a `logContentCardImpression()` method that calls into the `BrazeManager.swift` helper file which only exposes an `idString` parameter. Once passed off to the helper file, the Braze SDK has a public variable, `ContentCards`, that can be queried to get the Content Card from its own identifier that has been passed in. Once the Content Card has been obtained, impressions, click, and dismissals can be logged, all while successfully working with ABK objects only at the moment required.
 
 #### __Implementation Components__<br><br>
 
@@ -672,54 +513,9 @@ __Logging Analytics__<br>
 ```
 {% endtab %}
 {% endtabs %}
-
 {% tabs %}
 {% tab Swift %}
-__Custom Objects Call the Logging Methods__<br>
-For objects that conform to the `ContentCardable` protocol, the analytics methods can be called directly from the objects. As seen in the snippet below, the object is referenced to log the impression.
-```swift
-func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
-  let message = messages[indexPath.row]
-  message.logContentCardImpression()
-}
-```
-{% endtab %}
-{% tab Objective-C %}
-__Custom Objects Call the Logging Methods__<br>
-For objects that conform to the `ContentCardable` protocol, the analytics methods can be called directly from the objects. As seen in the snippet below, the object is referenced to log the impression.
-```objc
--(void)tableView:(UITableView *)tableView willDisplayCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath {
-  Message *message = self.messages[indexPath.row];
-  [message logContentCardImpression];
-}
-```
-{% endtab %}
-{% endtabs %}
-{% tabs %}
-{% tab Swift %}
-__Retrieve the Content Card from the ContentCardId__<br>
-The `ContentCardable` protocol handles the heavy lifting of calling the helper file and passing the unique identifier from the Content Card associated with the custom object.
-```swift
-protocol ContentCardable {
-  func logContentCardImpression() {
-    BrazeManager.shared.logContentCardImpression(idString: contentCardData?.contentCardId)
-  }
-}
-```
-{% endtab %}
-{% tab Objective-C %}
-__Retrieve the Content Card from the ContentCardId__<br>
-The `ContentCardable` protocol handles the heavy lifting of calling the helper file and passing the unique identifier from the Content Card associated with the custom object.
-```objc
-- (void)logContentCardImpression {
-  [[BrazeManager shared] logContentCardImpression:self.contentCardData.contentCardId];
-}
-```
-{% endtab %}
-{% endtabs %}
-{% tabs %}
-{% tab Swift %}
-__Retreive the `ABKContentCard`__<br>
+__Retreiving the `ABKContentCard`__<br>
 The [helper file](https://github.com/braze-inc/braze-growth-shares-ios-demo-app/blob/master/Braze-Demo/BrazeManager.swift#L171) can reference Braze SDK dependencies such as the `Appboy.sharedInstance()?.contentCardsController.contentCards` array to get the `ABKContentCard` to call our logging methods.
 ```swift
 extension BrazeManager {
@@ -736,7 +532,7 @@ extension BrazeManager {
 ```
 {% endtab %}
 {% tab Objective-C %}
-__Retreive the `ABKContentCard`__<br>
+__Retreiving the `ABKContentCard`__<br>
 The [helper file](https://github.com/braze-inc/braze-growth-shares-ios-demo-app/blob/master/Braze-Demo/BrazeManager.swift#L171) can reference Braze SDK dependencies such as the `Appboy.sharedInstance()?.contentCardsController.contentCards` array to get the `ABKContentCard` to call our logging methods.
 ```objc
 - (void)logContentCardImpression:(NSString *)idString {
@@ -757,6 +553,38 @@ The [helper file](https://github.com/braze-inc/braze-growth-shares-ios-demo-app/
 {% alert important %}
 For a control variant Content Card, a custom object should still be instantiated, and UI logic should set the object's corresponding view as hidden. The object can then log an impression to inform our analytics of when a user would have seen the control card.
 {% endalert %}
+
+## Helper Files
+
+{% details ContentCardKey Helper File %}
+{% tabs %}
+{% tab Swift %}
+```swift
+enum ContentCardKey: String {
+  case idString
+  case created
+  case classType = "class_type"
+  case dismissible
+  case extras
+  ...
+}
+```
+{% endtab %}
+{% tab Objective-C %}
+```objc
+static NSString *const ContentCardKeyIdString = @"idString";
+static NSString *const ContentCardKeyCreated = @"created";
+static NSString *const ContentCardKeyClassType = @"class_type";
+static NSString *const ContentCardKeyDismissible = @"dismissible";
+static NSString *const ContentCardKeyExtras = @"extras";
+...
+```
+{% endtab %}
+{% endtabs %}
+{% enddetails %}
+{% details BrazeManager Helper File %}
+An example BrazeManager helper fie can be found [here](https://github.com/braze-inc/braze-growth-shares-ios-demo-app/blob/master/Braze-Demo/BrazeManager.swift).
+{% enddetails %}
 
 [1]: {% image_buster /assets/img/cc_implementation/supplementary.png %}
 [2]: {% image_buster /assets/img/cc_implementation/supplementary_content.png %}
