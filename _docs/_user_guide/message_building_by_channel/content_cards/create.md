@@ -41,7 +41,7 @@ If all of the messages in your campaign are going to be similar or have the same
 {% tab Canvas %}
 __Setup Your Canvas__
 
-Navigate to the Canvas Section of the Dashboard and click __Create Canvas__ to open the Canvas Wizard to begin setting up your Canvas. Then, follow the flow of the canvas wizard to quickly create and launch your Content Card.
+Navigate to the Canvas Section of the Dashboard and click __Create Canvas__ to open the Canvas Wizard to begin setting up your Canvas. Then, follow the flow of the Canvas wizard to quickly create and launch your Content Card.
 
 1. __Name your Canvas__ something clear and meaningful.<br><br>
 2. __Add Teams and Tags__, as necessary.<br><br>
@@ -101,9 +101,9 @@ Each user is eligible to receive up to 100 non-expired and non-dismissed Content
 
 ## Step 3: Configure Additional Settings
 
-Add [key value pairs][19] to your message, if needed.
+Add [key-value pairs][19] to your message, if needed.
 
-You can use key value pairs to create categories for your Cards, create multiple Content Card Feeds ([Android]({{site.baseurl}}/developer_guide/platform_integration_guides/android/content_cards/multiple_feeds/), [Web]({{site.baseurl}}/developer_guide/platform_integration_guides/web/content_cards/multiple_feeds/), [iOS]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/content_cards/multiple_feeds/), and customize how Cards are sorted.
+You can use key-value pairs to create categories for your Cards, create multiple Content Card Feeds ([Android]({{site.baseurl}}/developer_guide/platform_integration_guides/android/content_cards/multiple_feeds/), [Web]({{site.baseurl}}/developer_guide/platform_integration_guides/web/content_cards/multiple_feeds/), [iOS]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/content_cards/multiple_feeds/), and customize how Cards are sorted.
 
 ## Step 4: Build the Remainder of Your Campaign or Canvas.
 

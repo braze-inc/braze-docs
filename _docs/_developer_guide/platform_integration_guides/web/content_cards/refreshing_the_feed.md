@@ -3,6 +3,11 @@ nav_title: Refreshing the Feed
 page_order: 3
 
 platform: Web
+
+page_type: reference
+description: "This reference article describes how to queue a manual refresh of your Content Cards."
+channel: content cards
+
 ---
 
 # Refreshing Content Cards
@@ -11,7 +16,7 @@ platform: Web
 
 `requestContentCardsRefresh()`
 
-This will get all currently available cards from the last content cards refresh.
+This will get all currently available cards from the last Content Cards refresh.
 
 [JS Docs for getCachedContentCards](https://js.appboycdn.com/web-sdk/latest/doc/module-appboy.html#.getCachedContentCards)
 

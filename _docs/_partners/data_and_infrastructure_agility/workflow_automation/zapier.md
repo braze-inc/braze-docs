@@ -1,6 +1,7 @@
 ---
 nav_title: Zapier
 alias: /partners/zapier/
+description: "This article outlines the partnership between Braze and Zapier, an automation web tool that allows you to share data between web apps, and use that information to automate actions."
 ---
 # Zapier Integration
 
@@ -39,7 +40,7 @@ URL : `https://rest.iad-01.braze.com/campaigns/trigger/send`
 Payload Type : JSON
 
 Data : `trigger_properties__name`, `api_key`, `campaign_id`
-These data fields are key value pairs that will for the data portion of the request.
+These data fields are key-value pairs that will for the data portion of the request.
 
 ![zapier5] [10]
 

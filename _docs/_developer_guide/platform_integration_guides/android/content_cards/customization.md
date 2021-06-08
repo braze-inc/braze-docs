@@ -1,8 +1,11 @@
 ---
 nav_title: Customization
-page_order: 1
-
+page_order: 2
 platform: Android
+description: "This article covers customization options for your Content Cards in your Android application."
+channel:
+  - content cards
+
 ---
 
 # Customization
@@ -81,7 +84,7 @@ To fully customize the network error behavior, you can extend the [AppboyContent
 
 ## Content Cards Style Elements {#content-cards-style-elements-for-android}
 
-### Setting A Custom Font {#setting-a-custom-font-for-android}
+### Custom Font {#setting-a-custom-font-for-android}
 
 Braze allows for setting a custom font using the [font family guide][40]. To use it, override a style for cards and use the `fontFamily` attribute to instruct Braze to use your custom font family.
 
@@ -98,7 +101,7 @@ Here is a truncated example with a custom font family, `my_custom_font_family`, 
   </style>
 ```
 
-### Setting A Custom Pinned Icon {#setting-a-custom-pinned-icon-for-android}
+### Custom Pinned Icon {#setting-a-custom-pinned-icon-for-android}
 
 To set a custom pinned icon, override the `Appboy.ContentCards.PinnedIcon` style. Your custom image asset should be declared in the `android:src` element.
 
@@ -106,7 +109,7 @@ To set a custom pinned icon, override the `Appboy.ContentCards.PinnedIcon` style
 
 The `AppboyContentCardsFragment` relies on a [`IContentCardsUpdateHandler`][44] to handle any sorting or modifications of Content Cards before they are displayed in the feed. A custom update handler can be set via [`setContentCardUpdateHandler`][45] on your [`AppboyContentCardsFragment`][47].
 
-Filtering out Content Cards before they reach the user's feed is a common use-case and could be achieved by reading the key value pairs set on the dashboard via [`Card.getExtras()`][36] and performing any logic you'd like in the update handler.
+Filtering out Content Cards before they reach the user's feed is a common use-case and could be achieved by reading the key-value pairs set on the dashboard via [`Card.getExtras()`][36] and performing any logic you'd like in the update handler.
 
 The following is the default `IContentCardsUpdateHandler` and can be used as a starting point for customizations.
 
@@ -474,7 +477,7 @@ fragment.setContentCardsViewBindingHandler(viewBindingHandler)
 
 There are additional relevant resources on this topic available [here](https://medium.com/google-developers/android-data-binding-recyclerview-db7c40d9f0e4).
 
-### Setting a Custom Content Cards Click Listener
+### Custom Content Cards Click Listener
 
 You can handle Content Cards clicks manually by setting a custom click listener. This enables use cases such as selectively using the native web browser to open web links.
 
@@ -529,7 +532,7 @@ To override this behavior, override the `values-night` values in `android-sdk-ui
 
 ### Fully Custom Content Card Display {#fully-custom-content-card-display-for-android}
 
-If you would like to display the Content Cards in a completely custom manner, it is possible to do so by using your own views populated with data from our models. To obtain Braze’s content cards models, you will need to subscribe to content card updates and use the resulting model data to populate your views. You will also need to log analytics on the model objects as users interact with your views.
+If you would like to display the Content Cards in a completely custom manner, it is possible to do so by using your own views populated with data from our models. To obtain Braze’s Content Cards models, you will need to subscribe to content card updates and use the resulting model data to populate your views. You will also need to log analytics on the model objects as users interact with your views.
 
 #### Part 1: Subscribing to Content Card Updates
 
@@ -632,9 +635,9 @@ If a card is already marked as dismissed, it cannot be marked as dismissed again
 
 Disabling swipe-to-dismiss functionality is done on a per-card basis via the [`card.setIsDismissibleByUser()`][48] method. Cards can be intercepted before display using the [`AppboyContentCardsFragment.setContentCardUpdateHandler()`][45] method.
 
-## Key Value Pairs
+## Key-Value Pairs
 
-`Card` objects may optionally carry key value pairs as `extras`. These can be used to send data down along with a `Card` for further handling by the application.
+`Card` objects may optionally carry key-value pairs as `extras`. These can be used to send data down along with a `Card` for further handling by the application.
 
 See the [Javadoc][36] for more information.
 

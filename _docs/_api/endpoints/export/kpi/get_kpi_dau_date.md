@@ -7,7 +7,7 @@ layout: api_page
 page_type: reference
 platform: API
 tool: Segments
-description: "This article outlines details about the Daily Active Users endpoint."
+description: "This article outlines details about the Get Daily Active Users endpoint."
 ---
 {% api %}
 # Daily Active Users by Date Endpoint

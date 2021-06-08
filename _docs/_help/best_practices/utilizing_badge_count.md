@@ -36,4 +36,4 @@ Research shows that once the badge count increases past double digits, users gen
 When badging, you want to make the notifications as clear and direct as possible. By limiting the number of things that a badge notification can represent, you can provide your users with a sense of familiarity with your app's features and updates.
 
 ### News Feed and In-app Badging
-One of the most powerful features of badging is that it allows you to engage with your users without the immediacy of a push notification through the news feed and in-app updates. To ensure that your users stay interested in the in-app badging notifications, you should try to focus such badge updates on personalized or urgent messages.
+One of the most powerful features of badging is that it allows you to engage with your users without the immediacy of a push notification through the News Feed and in-app updates. To ensure that your users stay interested in the in-app badging notifications, you should try to focus such badge updates on personalized or urgent messages.

@@ -35,12 +35,12 @@ Please note that Tealium AudienceStreams and EventStreams are batched according 
 
 ## Set Up Overview
 
-1. Adhere to the requirements and pre-requisites
+1. Adhere to the requirements and prerequisites
 2. Pick your integration type
 4. Set up mappings for your integration
 5. [Test your integration](#step-3-test-your-integration) to ensure data is flowing smoothly between Braze and Tealium
 
-## Pre-Requisites
+## Prerequisites
 
 | Requirement| Origin| Access| Description|
 | ---| ---| ---|
@@ -116,7 +116,7 @@ This integration forwards data from Tealium to Braze's REST API.
 Server-to-Server integration does __not__ support Braze UI features such as In-App Messaging, News Feed, or Push notifications. There also exists automatically captured data (Sessions, First Used App, and Last Used App) that is not available through this method. <br>If you wish to use this data and these features, consider our [Side-by-Side]({{site.baseurl}}/partners/data_and_infrastructure_agility/customer_data_platform/tealium/#side-by-side-sdk-integration) SDK integration.
 {% endalert %} 
 
-### Pre-Requisites
+### Prerequisites
 
 | Name | Description |
 | ---- | ----------- |

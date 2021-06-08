@@ -1,7 +1,10 @@
 ---
 nav_title: Analytics Overview
 page_order: 2
+description: "This reference article covers user data collection including what data is automatically collected, purchase events and custom events, as well as data collection best practices."
+
 ---
+
 # User Data Collection
 
 Before completing your Braze implementation, ensure that you have a conversation between your marketing team and your development team regarding your marketing goals. When deciding what you want to track, and how you want to track it with Braze, it's useful to consider these goals and work backward from there. Please reference our case of a [Taxi/Ride-Sharing App][16] at the end of this guide for an example of this process.
@@ -296,7 +299,7 @@ User IDs must be less than 512 characters long and should be private and not eas
 
 Good options for User IDs:
 
-- Hashed e-mail address or unique username
+- Hashed email address or unique username
 - Unique database identifier
 - Facebook ID
 

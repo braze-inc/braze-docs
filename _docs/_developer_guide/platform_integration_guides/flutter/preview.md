@@ -2,6 +2,10 @@
 nav_title: Flutter SDK
 platform: Flutter
 page_order: 0
+
+page_type: reference
+description: "This page provides resources on integrating Braze's Flutter SDK."
+
 ---
 
 # Flutter SDK

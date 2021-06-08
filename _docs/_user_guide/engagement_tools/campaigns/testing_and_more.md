@@ -3,12 +3,13 @@ nav_title: Testing and More
 layout: dev_guide
 guide_top_header: "Testing & More"
 guide_top_text: "Before you send your campaigns, you should always test your messages. After, you should always look at the results to ensure your campaign went well and will affect your future campaigns positively. Choose any article below to learn more!"
+page_order: 3
 
 tool: 
 - Campaigns
 - Reports
 page_type: landing
-description: "This landing page is home to Campaign Testing and Tips. Here you can find resources on campaign preferences like rate-limiting, conversions, and A/B testing."
+description: "This landing page is home to Campaign Testing and Tips. Here you can find resources on campaign preferences like rate limiting, conversions, and A/B testing."
 
 guide_featured_title: "Section Articles"
 guide_featured_list:

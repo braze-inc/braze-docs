@@ -3,7 +3,10 @@ nav_title: Troubleshooting
 platform: Xamarin
 subplatform: Android and FireOS
 page_order: 6
+description: "This article covers iOS troubleshooting for the Xamarin platform."
+
 ---
+
 # Troubleshooting
 
 ### Push Doesn't Appear After App is Closed from Task Switcher

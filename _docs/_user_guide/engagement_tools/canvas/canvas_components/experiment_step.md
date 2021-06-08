@@ -31,7 +31,7 @@ In the default Experiment Step shown below, there are two default paths, __Path 
 
 You can add up to 4 paths by clicking **Add Path** and an optional control group by checking **Add a Control Group**. Using the percentage boxes above each path, you can specify the percentage of the audience that should go to each path and the control group. The provided percentages must add up to 100% to proceed. If you want to quickly set all the available paths (and control) to the same percentage, click **Distribute Paths Evenly**.
 
-> Note: If Canvas re-eligibility is enabled, users who enter the canvas and go down a randomly chosen path will go down the same path again if they become re-eligible and re-enter the Canvas. This maintains the validity of the experiment and associated analytics.
+> Note: If Canvas re-eligibility is enabled, users who enter the Canvas and go down a randomly chosen path will go down the same path again if they become re-eligible and re-enter the Canvas. This maintains the validity of the experiment and associated analytics.
 
 Optionally, you can add a description to explain to others what this Experiment Step intends to test or include other information that might be helpful to note.
 

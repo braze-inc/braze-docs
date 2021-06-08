@@ -3,7 +3,10 @@ nav_title: Push Notifications
 platform: Unity
 subplatform: Android
 page_order: 1
+description: "This reference article covers the Android push notification integration for the Unity platform."
+
 ---
+
 # Push Notifications
 
 These instructions are for integrating push with [Firebase Cloud Messaging (FCM)][9].
@@ -117,7 +120,7 @@ public class MainMenu : MonoBehaviour {
 }
 ```
 
-##### Implementation Example
+### Implementation Example
 
 The sample project in the [Braze Unity SDK repository][13] contains a full working sample app that includes FCM.
 

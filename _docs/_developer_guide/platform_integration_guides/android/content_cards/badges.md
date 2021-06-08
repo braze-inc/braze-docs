@@ -1,10 +1,14 @@
 ---
 nav_title: Badges
-page_order: 4
-
+page_order: 5
 platform: Android
+description: "This article covers how to add badges to your Content Cards in your Android application."
+channel:
+  - content cards
+
 ---
-## Adding a Badge
+
+# Adding a Badge
 
 You can [request the number of unread cards][1] at any time by calling:
 

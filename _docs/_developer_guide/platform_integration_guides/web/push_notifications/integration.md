@@ -2,7 +2,11 @@
 platform: Web
 page_order: 0
 
+page_type: reference
+description: "This article describes how to integrate Braze Web Push via the Braze SDK."
+
 ---
+
 # Integration
 
 A push notification is an alert that appears on the user's screen when an important update occurs. Push notifications can be received even when your web page is not currently open in the user's browser. Push notifications are a valuable way to provide your users with time-sensitive and relevant content or to re-engage them with your site.
@@ -42,7 +46,6 @@ While industry best practice is to make your whole site secure, customers who ca
 
 - Otherwise, if your site already registers a Service Worker, add the content below to the Service Worker file, and set the [```manageServiceWorkerExternally``` initialization option to ```true```](https://js.appboycdn.com/web-sdk/latest/doc/module-appboy.html#.initialize) when initializing the Web SDK.
 
-
 <script src="https://gist-it.appspot.com/https://github.com/Appboy/appboy-web-sdk/blob/master/sample-build/service-worker.js?footer=minimal"></script>
 
 ### What if I can't register a Service Worker in the root directory?
@@ -72,12 +75,13 @@ If you wish to support push notifications for Safari on Mac OS X, follow these a
 * In the Braze dashboard, on the **Settings** page (where your API keys are located), select your Web app. Click **Configure Safari Push** and follow the instructions, uploading the push certificate you just generated.
 * When you call ```appboy.initialize``` supply the optional `safariWebsitePushId` configuration option with the Website Push ID you used when generating your Safari Push Certificate. For example ```appboy.initialize('YOUR-API-KEY', {safariWebsitePushId: 'web.com.example.domain'})```
 
-### Common Issues
+## Common Issues
 
-1. __I followed the integration instructions but I'm still not receiving any push notifications.__
-    - Not all browsers can receive push messages. Please ensure that ```appboy.isPushSupported()``` returns true in the browser.
-    - Note that if a user has denied a site push access, they won't be prompted for permission again unless they remove the denied status from their browser preferences.
-    - Note that web push notifications require that your site be https.
+__I followed the integration instructions but I'm still not receiving any push notifications.__
+
+- Not all browsers can receive push messages. Please ensure that ```appboy.isPushSupported()``` returns true in the browser.
+- Note that if a user has denied a site push access, they won't be prompted for permission again unless they remove the denied status from their browser preferences.
+- Note that web push notifications require that your site be https.
 
 ## Soft Push Prompts
 

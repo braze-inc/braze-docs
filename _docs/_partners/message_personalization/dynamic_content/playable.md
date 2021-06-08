@@ -1,7 +1,7 @@
 ---
 nav_title: "Playable"
 page_order: 2
-description: "Playable allows you to add video content to your Braze email campaigns."
+description: "This article outlines the partnership between Braze and Playable, a video platform that allows you to add video content to your Braze email campaigns."
 alias: /partners/playable/
 page_type: partner
 ---
@@ -12,8 +12,7 @@ page_type: partner
 
 Expand Braze's email capabilities to deliver your best content (high-quality video) to your best audience (email) with Playable. Playable video emails allow you to increase your click-through and post-click metrics with exciting high-quality video content that plays automatically within the inbox.
 
-## Pre-Requisites
-
+## Prerequisites
 
 Requirement | Description
 ----------- | -----

@@ -3,7 +3,11 @@ nav_title: Sample Apps
 platform: FireOS
 page_order: 7
 
+page_type: reference
+description: "This page describes the sample apps provided within Braze's SDK repository."
+
 ---
+
 # Sample Apps
 
 Braze's SDKs each come with a sample application within the repository for your convenience. Each of these apps is fully buildable so you can test Braze features alongside implementing them within your own applications. Testing behavior within your own application versus expected behavior and codepaths within the sample applications is an excellent way to debug any problems you may run into.

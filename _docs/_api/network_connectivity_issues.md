@@ -25,11 +25,18 @@ If you are still having network issues with connecting to Braze's API Endpoint, 
 while experiencing an issue and submit that with your support request.
 Note that the test results must be obtained from a server that is having issues connecting to Braze's API endpoint, not from a development machine.  A network capture (tcpdump or .pcap file) will also be helpful if it can be obtained.
 
+For more information about MTR, check out these resources based on your operating system:
+
+- [GNU/Linux][4]
+- [macOS][5]
+
 ## Whitelisting Braze's API Endpoint IP Ranges
 
 To whitelist Braze's API endpoint through your firewall, our CDN provides access to the list of assigned IP ranges via a JSON dump. You can access the public list of Fastly IP ranges [here][3].
 
 
-[1]: https://www.privateinternetaccess.com/helpdesk/kb/articles/what-is-an-mtr-test-and-how-do-i-run-it
+[1]: https://www.privateinternetaccess.com/helpdesk/kb/articles/what-is-an-mtr-test-and-how-do-i-run-one-2
 [2]: http://www.fastly-debug.com/
 [3]: https://api.fastly.com/public-ip-list
+[4]: https://www.digitalocean.com/community/tutorials/how-to-use-traceroute-and-mtr-to-diagnose-network-issues
+[5]: https://formulae.brew.sh/formula/mtr

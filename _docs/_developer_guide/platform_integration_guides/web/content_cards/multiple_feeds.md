@@ -3,6 +3,10 @@ nav_title: Multiple Feeds
 page_order: 5
 
 platform: Web
+page_type: reference
+description: "This article describes how to set up and use multiple content card feeds."
+channel: content cards
+
 ---
 
 # Using Multiple Content Card Feeds
@@ -11,7 +15,7 @@ Content Cards can be filtered on the app to only display specific cards, which e
 
 The following documentation demonstrates an example implementation that can be changed to fit your specific integration.
 
-## Step 1: Setting Key Value Pairs on Cards
+## Step 1: Setting Key-Value Pairs on Cards
 
 When creating a Content Card campaign, key value pair data can be set on each Card. Our filtering logic will use this key-value pair data to categorize cards.
 
