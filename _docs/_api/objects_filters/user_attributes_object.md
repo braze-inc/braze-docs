@@ -105,6 +105,8 @@ For information regarding when you should use a Custom Event vs a Custom Attribu
 | dob | (date of birth) String in format "YYYY-MM-DD", e.g., 1980-12-21. |
 | email | (string) |
 | email_subscribe | (string) Available values are "opted_in" (explicitly registered to receive email messages), "unsubscribed" (explicitly opted out of email messages), and "subscribed" (neither opted in nor out).  |
+|email_open_tracking_disabled|(boolean) true or false accepted.  Set to true to disable the open tracking pixel from being added to all future emails sent to this user.|
+|email_click_tracking_disabled|(boolean) true or false accepted.  Set to true to disable the click tracking for all links within a future email, sent to this user.|
 | external_id | (string) Of the unique user identifier. |
 | facebook | hash containing any of `id` (string), `likes` (array of strings), `num_friends` (integer). |
 | first_name | (string) |
