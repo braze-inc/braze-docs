@@ -79,14 +79,6 @@ Braze's built-in user limiting feature serves as an useful tool to help you with
 
 ![Limit Users][18]
 
-## IP Warming notifications
-
-Braze takes your deliverability very seriously. As such, we’ve built a number of warnings and notifications throughout the dashboard to limit any issues during the IP warming process.  Braze will work very closely with you to define your IP Warming time frame as well as understand how many emails should be sent daily.
-
-During your established IP warming period, there will be numerous reminders in the Dashboard that your app group is going through IP Warming. Additionally, Braze will provide warnings throughout the Campaign or Canvas creation process if you accidentally go beyond your daily quota.
-
-As a last issue deterrent, Braze will automatically email a select number of individuals regarding any breach of your quota so that it can be addressed immediately.
-
 ## Subdomain Segmentation
 
 Many ISPs and email access providers no longer only filter by IP address reputation. These filtering technologies now also account for domain-based reputation.  This means that filters will look at all data associated with the sender's domain and not just single out the IP address. For this reason, in addition to warming up your email IP we also recommend having separate domains or subdomains for marketing, transactional, and corporate mail. We recommend segmenting your domains such that corporate mail is sent through your top level domain, and marketing and transactional mail are sent through different domains or subdomains.

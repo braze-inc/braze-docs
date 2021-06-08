@@ -107,7 +107,7 @@
         return d;
       });
     }
-    function hitTemplate(hit) {
+    function hitTemplate(hit, bindEvent) {
       var content = '';
       var title = '';
       var type = '';
@@ -164,7 +164,7 @@
       if (heading){
         url += '#' + string_to_slug(heading);
       }
-      return `<div class="hit"><a href="{{site.baseurl}}${url}"><div class="hit-content"><div><div class="hit-name">${title } </div> <div class="hit-subname">${subname} </div><div class="hit-description">${ content }</div></div></div></a><hr /></div>`;
+      return `<div class="hit"><a href="{{site.baseurl}}${url}" ${bindEvent('click', hit, 'Clicked from Page Search')} ><div class="hit-content"><div><div class="hit-name">${title } </div> <div class="hit-subname">${subname} </div><div class="hit-description">${ content }</div></div></div></a><hr /></div>`;
     }
     String.prototype.mapReplace = function(map) {
       var mstr = this;
@@ -199,6 +199,14 @@
       'mParticle' : 'mParticle'
     }
     const searchClient = algoliasearch('{{ site.algolia.application_id }}', '{{ site.algolia.algolia_api_key }}');
+    const insightsMiddleware = instantsearch.middlewares.createInsightsMiddleware({
+      insightsClient: window.insightsClient,
+      onEvent: (event, aa) => {
+        const { insightsMethod, payload, widgetType, eventType } = event;
+        // Send the event to Algolia
+        insightsClient(insightsMethod, payload);
+      }
+    });
     var instant_search = instantsearch({
       indexName: "{{ site.algolia.index_name }}",
       searchClient,
@@ -229,7 +237,7 @@
         }
       },
     });
-
+    instant_search.use(insightsMiddleware);
     instant_search.addWidgets([
       instantsearch.widgets.searchBox({
         container: searchbox,
@@ -259,8 +267,8 @@
         attributesToSnippet: ["description:24"],
         snippetEllipsisText: " [...]",
         templates: {
-          item: function(hit) {
-            return hitTemplate(hit);
+          item: function(hit, bindEvent) {
+            return hitTemplate(hit, bindEvent);
           },
         },
       }),

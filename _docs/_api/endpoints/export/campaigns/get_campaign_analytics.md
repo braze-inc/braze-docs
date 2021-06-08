@@ -108,7 +108,7 @@ Authorization: Bearer YOUR-REST-API-KEY
                   {
                     "sent": (int),
                     "delivered": (int),
-                    "undelivered": (int),
+                    "rejected": (int),
                     "delivery_failed": (int)
                   }
                 ]

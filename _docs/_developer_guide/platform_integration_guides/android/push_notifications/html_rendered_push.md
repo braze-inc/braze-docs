@@ -35,26 +35,26 @@ In your `braze.xml`:
 <bool translatable="false" name="com_appboy_push_notification_html_rendering_enabled">true</bool>
 ```
 
-Or in your [AppboyConfig][2]:
+Or in your [BrazeConfig][2]:
 
 {% tabs %}
 {% tab JAVA %}
 
 ```java
-AppboyConfig appboyConfig = new AppboyConfig.Builder()
+BrazeConfig brazeConfig = new BrazeConfig.Builder()
   .setPushHtmlRenderingEnabled(true)
   .build();
-Appboy.configure(this, appboyConfig);
+Braze.configure(this, brazeConfig);
 ```
 
 {% endtab %}
 {% tab KOTLIN %}
 
 ```kotlin
-val appboyConfig = AppboyConfig.Builder()
+val brazeConfig = BrazeConfig.Builder()
     .setPushHtmlRenderingEnabled(true)
     .build()
-Appboy.configure(this, appboyConfig)
+Braze.configure(this, brazeConfig)
 ```
 
 {% endtab %}

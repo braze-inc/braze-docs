@@ -758,12 +758,8 @@ $( document ).ready(function() {
     };
   });
 
-
-
   var droplist = ['ticket_topic','ticket_category','ticket_subcategory','ticket_type'];
   var result_div = 'ticket_result';
-
-
 
   function reset_page(ind = 1){
     for(var i = ind; i < droplist.length;i++){
@@ -1120,12 +1116,29 @@ $( document ).ready(function() {
     }
     return str;
   }
-
+  const algoliaInsightsPluginSupport = createAlgoliaInsightsPlugin({
+    insightsClient,
+    onItemsChange({ insights, insightsEvents }) {
+      const events = insightsEvents.map((insightsEvent) => ({
+        ...insightsEvent,
+        eventName: 'Viewed from Support Search',
+      }));
+      insights.viewedObjectIDs(...events);
+    },
+    onSelect({ insights, insightsEvents }) {
+      const events = insightsEvents.map((insightsEvent) => ({
+        ...insightsEvent,
+        eventName: 'Clicked from Support Search',
+      }));
+      insights.clickedObjectIDsAfterSearch(...events);
+    },
+  });
   autocomplete({
     container: "#support-search-div",
     panelContainer: "#support-search-panel",
     debug: true,
     placeholder: "Search",
+    plugins: [algoliaInsightsPluginSupport],
     detachedMediaQuery: 'none',
     onSubmit(e){
       var query = e.state.query;
@@ -1145,7 +1158,8 @@ $( document ).ready(function() {
                   params: {
                     hitsPerPage: 5,
                     attributesToSnippet: ["description:12"],
-                    snippetEllipsisText: " ..."
+                    snippetEllipsisText: " ...",
+                    clickAnalytics: true,
                   },
                 },
               ],

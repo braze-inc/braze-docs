@@ -11,6 +11,10 @@ channel: content cards
 
 # Content Cards Customization
 
+## Content Card Data Models {#data-models}
+
+The Braze Web SDK supports several unique Content Card card types, [ab.ClassicCard](https://js.appboycdn.com/web-sdk/latest/doc/ab.ClassicCard.html), [ab.Banner](https://js.appboycdn.com/web-sdk/latest/doc/ab.Banner.html), [ab.CaptionedImage](https://js.appboycdn.com/web-sdk/latest/doc/ab.CaptionedImage.html) which share a base model, [ab.Card](https://js.appboycdn.com/web-sdk/latest/doc/ab.Card.html).
+
 ## Customizing The Default UI
 
 Braze UI elements come with a default look and feel that matches the composers within the Braze Dashboard and aims for consistency with other Braze mobile platforms. Braze's default styles are defined in CSS within the Braze SDK.

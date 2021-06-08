@@ -1,17 +1,34 @@
-
-
 var query_str = window.location.search;
-$(document).ready(function() {
 
-  function string_to_slug(str) {
-    if (str) {
-      str = str.toLowerCase().replace(/\s/g, '-').replace(/[^\w-]/g, '');
-    }
-    return str;
+function generateUUID() { // Public Domain/MIT
+    var d = new Date().getTime();//Timestamp
+    var d2 = (performance && performance.now && (performance.now()*1000)) || 0;//Time in microseconds since page-load or 0 if unsupported
+    return 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function(c) {
+        var r = Math.random() * 16;//random number between 0 and 16
+        if(d > 0){//Use timestamp until depleted
+            r = (d + r)%16 | 0;
+            d = Math.floor(d/16);
+        } else {//Use microseconds since page-load if supported
+            r = (d2 + r)%16 | 0;
+            d2 = Math.floor(d2/16);
+        }
+        return (c === 'x' ? r : (r & 0x3 | 0x8)).toString(16);
+    });
+}
+function string_to_slug(str) {
+  if (str) {
+    str = str.toLowerCase().replace(/\s/g, '-').replace(/[^\w-]/g, '');
   }
+  return str;
+}
+let algolia_user = Cookies.get('__algolia_user');
+if (!algolia_user){
+  algolia_user = generateUUID();
+}
+// Set cookie to auto expire after 30 days of inactivity
+Cookies.set('__algolia_user', algolia_user, { expires: 30 });
 
-
-
+$(document).ready(function() {
   $('#toc').toc({
     headers: 'h2, h3',
     minimumHeaders: toc_minheaders
@@ -198,7 +215,7 @@ $(document).ready(function() {
       nav_bar.addClass('hide_sidebar');
       nav_icon.removeClass('fa-chevron-left');
       nav_icon.addClass('fa-bars');
-      Cookies.set('ln','1');
+      Cookies.set('ln','1',  { expires: 365 });
     }
   });
   if (Cookies.get('ln')) {

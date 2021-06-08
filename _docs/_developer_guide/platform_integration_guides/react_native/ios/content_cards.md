@@ -1,5 +1,5 @@
 ---
-nav_title: Integration
+nav_title: Content Cards
 platform: React Native
 page_order: 1
 
