@@ -26,3 +26,4 @@ You can use these additional methods to build a custom Content Cards Feed within
 |`AppboyPlugin.logContentCardsDisplayed()`|Logs a Content Content feed displayed event.|
 |`AppboyPlugin.logContentCardImpression(cardId)`|Logs an impression for the given Content Card ID.|
 |`AppboyPlugin.logContentCardDismissed(cardId)`|Logs a dismissal for the given Content Card ID.|
+{: .reset-td-br-1 .reset-td-br-2}

@@ -1,5 +1,5 @@
 ---
-nav_title: Push Story
+nav_title: Push Stories
 platform: FireOS
 page_order: 6
 
