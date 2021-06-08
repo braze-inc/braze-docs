@@ -1,5 +1,5 @@
 ---
-nav_title: Logging Custom Events
+nav_title: Tracking Custom Events
 platform: Unity
 page_order: 1
 description: "This reference article covers how to log custom events on Unity platform."
