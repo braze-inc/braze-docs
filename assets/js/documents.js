@@ -24,8 +24,9 @@ function string_to_slug(str) {
 let algolia_user = Cookies.get('__algolia_user');
 if (!algolia_user){
   algolia_user = generateUUID();
-  Cookies.set('__algolia_user', algolia_user);
 }
+// Set cookie to auto expire after 30 days of inactivity
+Cookies.set('__algolia_user', algolia_user, { expires: 30 });
 
 $(document).ready(function() {
   $('#toc').toc({
@@ -214,7 +215,7 @@ $(document).ready(function() {
       nav_bar.addClass('hide_sidebar');
       nav_icon.removeClass('fa-chevron-left');
       nav_icon.addClass('fa-bars');
-      Cookies.set('ln','1');
+      Cookies.set('ln','1',  { expires: 365 });
     }
   });
   if (Cookies.get('ln')) {
