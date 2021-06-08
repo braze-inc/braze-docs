@@ -56,7 +56,7 @@ Your treatment sample is a random selection of con-control users, approximately 
 
 When generating your report, you will choose an event - either sessions or any custom event - to compare across your treatment and control groups. You will also choose a time period for which to view data for. Keep in mind that if you’ve saved multiple control group experiments at different time periods, you should avoid including data from more than 1 experiment in your report. 
 
-Lastly, as with several other reports on our platform, this report displays a [confidence]({{site.baseurl}}/user_guide/engagement_tools/testing/multivariant_testing/#understanding-confidence) percentage for your change from control metric. Note that in cases where the conversion rate between your control and treatment are identical, a confidence is 0% is to be expected; this indicates that there is a 0% chance that there is a difference in performance between the two groups.
+Lastly, as with several other reports on our platform, this report displays a [confidence]({{site.baseurl}}/user_guide/engagement_tools/testing/multivariant_testing/#understanding-confidence) percentage for your change from control metric. Note that in cases where the conversion rate between your control and treatment are identical, a confidence of 0% is to be expected; this indicates that there is a 0% chance that there is a difference in performance between the two groups.
 
 Tooltips within the product also contain information related to the descriptions of each report metric.
 
