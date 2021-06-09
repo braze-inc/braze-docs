@@ -30,11 +30,15 @@ Boolean attributes are useful for storing subscription statuses, and other simpl
 | Check if the boolean value __does not exist__ on a user's profile | __DOES NOT EXIST__  | __N/A__ |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
 
-### Numbers {#integers}
-Numeric attributes have a wide variety of use-cases. Incrementing number custom attributes are useful for storing the number of times a given action or event has occurred without counting against your data cap. Standard numbers have all sorts of usages, for example : (Recording shoe size, waist size, number of times a user has viewed a certain product feature, or category.
+### Numbers {#numbers}
+Numeric attributes include [integers](https://en.wikipedia.org/wiki/Integer) and [floats](https://en.wikipedia.org/wiki/Floating-point_arithmetic), and have a wide variety of use-cases. Incrementing number custom attributes are useful for storing the number of times a given action or event has occurred without counting against your data cap. Standard numbers have all sorts of usages, such as recording:
+
+- Shoe size
+- Waist size
+- Number of times a user has viewed a certain product feature, or category
 
 {% alert tip %}
-Money spent should not be recorded by this method. Rather it should be recorded via our purchase methods shown two sections below.
+Money spent should not be recorded by this method. Rather it should be recorded via our [purchase methods](#purchase-revenue-tracking).
 {% endalert %}
 
 | Segmentation Options | Dropdown Filter | Input Options |
@@ -65,7 +69,7 @@ A date string such as "12-1-2021" or "12/1/2021" will be converted to a datetime
 {% endalert %}
 
 {% alert important %}
-&#42; When segmenting using the __DOES NOT MATCH REGEX__ filter, it is required that there already exists a custom attribute with a value assigned in that user profile. Braze suggests using "OR" logic to check if a custom attribute is blank in order to ensure users are being targetted properly.
+When segmenting using the __DOES NOT MATCH REGEX__ filter, you must already have a custom attribute with a value assigned in that user profile. Braze suggests using "OR" logic to check if a custom attribute is blank to ensure users are being targeted properly.<br>
 
 More resources on RegEx:
 - [RegEx with Braze]({{site.baseurl}}/user_guide/engagement_tools/segments/regex/)
@@ -117,26 +121,27 @@ The last date a custom event or purchase event occurred is automatically recorde
 | Check if the time attribute __does not exist__ on a user's profile | __DOES NOT EXIST__ | __N/A__ |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
 
-{% alert important %}
+{% alert update %}
 
-As of March 10, 2020, the behavior of "Day of Recurring Event", "Less than X Days Ago", and "Less than X Days in the Future" has changed. __If you use these filters in your segmentation, we recommend readjusting your segments to take these changes into account.__
+As of March 10, 2020, the behavior of "Day of Recurring Event", "Less than X Days Ago", and "Less than X Days in the Future" has changed. If you use these filters in your segmentation, we recommend readjusting your segments to take these changes into account.
 <br> <br>
 "Day of Recurring Event"
-- Change: Current date is now counted in this segmentation filter.
-- When using the "Day of Recurring Event" filter, and are then prompted to select the "Calendar Day of Recurring Event", __if you select `IS LESS THAN` or `IS MORE THAN`, the current date will be counted for that segmentation filter.__
-- For example, if on March 10, 2020, you selected the date of the attribute to be `LESS THAN ... March 10, 2020`, attributes will be considered for the days up to, and __including__ March 10, 2020. 
+
+- **Change:** Current date is now counted in this segmentation filter.
+- When using the "Day of Recurring Event" filter, and are then prompted to select the "Calendar Day of Recurring Event", if you select `IS LESS THAN` or `IS MORE THAN`, the current date will be counted for that segmentation filter.
+- For example, if on March 10, 2020, you selected the date of the attribute to be `LESS THAN ... March 10, 2020`, attributes will be considered for the days up to, and including March 10, 2020. 
 
 <br> 
 
 "Less than X Days Ago" and "Less than X Days in the Future"
-- Change: These filters used to include future dates for past date queries, and past dates for future queries. 
-- Less than X Days Ago: Includes dates between X days ago and the current date/time. We will __no longer include any dates in the future.__
-- Less than X Days in the Future: Includes dates between the current date/time and X days in the future. We will __no longer include any dates in the past.__
+- **Change:** These filters used to include future dates for past date queries, and past dates for future queries. 
+- Less than X Days Ago: Includes dates between X days ago and the current date/time. We will no longer include any dates in the future.
+- Less than X Days in the Future: Includes dates between the current date/time and X days in the future. We will no longer include any dates in the past.
 
 {% endalert %}
 
 
-## Purchases / Revenue Tracking
+## Purchase and Revenue Tracking {#purchase-revenue-tracking}
 
 Using our purchase methods to record in-app purchases establishes the Lifetime Value(LTV) for each individual user profile. This data is viewable within our revenue page in time-series.
 
@@ -158,15 +163,15 @@ Using our purchase methods to record in-app purchases establishes the Lifetime V
 If you would like to segment on the number of times a specific purchase has occurred, you should also record that purchase individually as an [incrementing custom attribute]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/analytics/setting_custom_attributes/#incrementingdecrementing-custom-attributes).
 {% endalert %}
 
-{% alert important %}
+{% alert update %}
 
 As of March 10, 2020, the behavior of "Day of Recurring Event" has changed, now including the current date in the filter.
 <br><br>
 Explanation:
-When using the "Day of Recurring Event" filter, and are then prompted to select the "Calendar Day of Recurring Event". __If you select `IS LESS THAN` or `IS MORE THAN`, the current date will be counted for that segmentation filter.__
+When using the "Day of Recurring Event" filter, and are then prompted to select the "Calendar Day of Recurring Event". If you select `IS LESS THAN` or `IS MORE THAN`, the current date will be counted for that segmentation filter.
 <br> 
 <br> 
-For example, if on March 10, 2020, you select the date of the attribute to be `LESS THAN ... March 10, 2020`, attributes will be considered for the days up to, and __including__ March 10, 2020. 
+For example, if on March 10, 2020, you select the date of the attribute to be `LESS THAN ... March 10, 2020`, attributes will be considered for the days up to, and including March 10, 2020. 
 {% endalert %}
 
 You can change the data type of your custom attribute, but you should be aware of [what other changes this action entails]({{site.baseurl}}/help/help_articles/data/change_custom_data_type/).
