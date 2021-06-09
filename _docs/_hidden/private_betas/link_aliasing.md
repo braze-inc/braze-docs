@@ -8,11 +8,12 @@ hidden: true
  
 ### Link Aliasing
 Goal: Identifying links set in an email message from Braze by a user generated friendly name.
-Goal: Having the ability to re-target users based on clicking a specific link sent in an Email.  
+Goal: Having the ability to re-target users based on clicking a specific link sent in an Email.
+Goal: Allow action-based trigger based on clicking any alias.
  
  
 #### How Link Alisaing works
-Link Aliasing works by decorating a Braze generated query parameter on links in the email channel.  For each known link that is present in the Email body, Braze will add a ‘lid={{somevalue}}’ when the client goes to the ‘Link Management’ section or hits ‘done’ on the editor (returning to the ‘compose’ section in campaigns or step overview in canvas).
+Link Aliasing works by decorating a Braze generated query parameter on links in the email channel.  For each known link that is present in the Email body, Braze will add a ‘lid={{somevalue}}, where {{somevalue}} is a unique liquid generated alpha-numeric value, when the client goes to the ‘Link Management’ section or hits ‘done’ on the editor (returning to the ‘compose’ section in campaigns or step overview in canvas).
  
 These query parameters are also added to content blocks as well, this way Links present in Content Blocks can also be tracked for segmentation purposes.
  
@@ -33,7 +34,7 @@ The process to enable link aliasing is simple and does not require any downtime.
 Client is okay with their message being modified by an HTML parser.  This could lead to the parser ‘correcting’ potentially incorrect HTML. (currently this already happening if you use features such as pre-header input field, liquid statements, or link templates)
 Client is okay with the implications of being in a partially migrated state (some messages will have aliasing, some will not (same with content blocks))
 Editing messages or content blocks prior to having the feature enabled will result in Braze editing links
-Link Aliasing is not supported for modifying links in 'mso commented elements'
+Link alias is only supported in href attributes within HTML anchor tags, where it is safe to append a query parameter.  It is a best practice to include a ? so Braze can append the lid value easily
 Updating a content block, such that it is now decorated with lid values, will only support propagating link documents to the first 50 'includers'.  An includer is equal to a message variant where the content block is used or another content block when nested.
 
 ##### What happens after the feature has been enabled
