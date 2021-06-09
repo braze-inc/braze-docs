@@ -8,7 +8,7 @@ description: "This reference article covers how to use and store local Connected
 
 # Local Connected Content Variables
 
-Braze makes a standard GET request at send time to the endpoint specified within the `connected_content` tag. If the endpoint returns JSON, it is automatically parsed and stored in a variable called `connected`.  If the endpoint returns text, it will be directly inserted into the message in place of the `connected_content` tag.
+Braze makes a standard GET request at send time to the endpoint specified within the `connected_content` tag. If the endpoint returns JSON, it's automatically parsed and stored in a variable called `connected`.  If the endpoint returns text, it will be directly inserted into the message in place of the `connected_content` tag.
 
 >  If you want to save your response to a variable, it’s recommended to return JSON objects. And if you want the response of Connected Content to replace the tag with the text, make sure the response is not valid JSON (as defined by [json.org][46])
 
@@ -21,9 +21,9 @@ You can also specify `:save your_variable_name` after the url in order to save t
 ```
 {% endraw %}
 
-Metaweather is a free weather API that uses a "Where-on-Earth ID" to return weather in an area. Use this code for testing / learning purposes only. For more information about this API, see [here](https://www.metaweather.com/api/ "Metaweather API Details").
+Metaweather is a free weather API that uses a "Where-on-Earth ID" to return weather in an area. Use this code for testing and learning purposes only. For more information about this API, see [here](https://www.metaweather.com/api/ "Metaweather API Details").
 
->  The stored variable can only be accessed within the field which contains the `connected_content` request. For example, if you wanted to use the `localweather` variable in both the message and title field, you should make the `connected_content` request within both fields. If the request is identical, Braze will use the cached results, rather than making a second request to the destination server. However, Connected Content calls made via HTTP POST do not cache by default and will make a second request to the destination server. If you wish to add caching to POST calls, refer to the "cache_max_age" option below.
+>  The stored variable can only be accessed within the field which contains the `connected_content` request. For example, if you wanted to use the `localweather` variable in both the message and title field, you should make the `connected_content` request within both fields. If the request is identical, Braze will use the cached results, rather than making a second request to the destination server. However, Connected Content calls made via HTTP POST do not cache by default and will make a second request to the destination server. If you wish to add caching to POST calls, refer to the [`cache_max_age`](#configurable-caching) option below.
 
 ### JSON Parsing
 
@@ -149,7 +149,8 @@ You can utilize the HTTP status from a Connected Content call by first saving it
 This key will only be automatically added to the Connected Content object if the endpoint returns a JSON object. If the endpoint returns an array or other type, then that key cannot be set automatically in the response.
 {% endalert %}
 
-### Configurable Caching
+### Configurable Caching {#configurable-caching}
+
 Connected Content will cache the value it returns from GET endpoints for a minimum of 5 minutes. If a cache time is not specified, the default cache time is 5 minutes. 
 
 Connected Content cache time can be configured to be longer with `:cache_max_age`, as shown below. The minimum cache time is 5 minutes and the maximum cache time is 4 hours. Connected Content data is cached in-memory using a volatile cache system, such as memcached. As a result, regardless of the specified cache time, Connected Content data may be evicted from Braze's in-memory cache earlier than specified. This means the cache durations are suggestions and may not actually represent the duration that the data is guaranteed to be cached by Braze and you may see more Connected Content requests than you may expect with a given cache duration.
