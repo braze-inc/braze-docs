@@ -345,3 +345,15 @@ validurls['/docs/services_handbook/'] = '/docs/handbooks/';
 
 validurls['/docs/frequency_capping_tag/'] = '/docs/user_guide/engagement_tools/campaigns/testing_and_more/rate-limiting/#frequency-capping';
 
+validurls['/docs/help/webinars/'] = '/docs/help/home/';
+validurls['/docs/help/webinars/ab_and_multivariate_testing/'] = '/docs/help/home/';
+validurls['/docs/help/webinars/building_a_strategy_for_android_oreo/'] = '/docs/help/home/';
+validurls['/docs/help/webinars/canvas_entry_steps_and_conditions/'] = '/docs/help/home/';
+validurls['/docs/help/webinars/canvas_lifecycle_testing/'] = '/docs/help/home/';
+validurls['/docs/help/webinars/creating_segments_and_sending_campaigns/'] = '/docs/help/home/';
+validurls['/docs/help/webinars/email_101/'] = '/docs/help/home/';
+validurls['/docs/help/webinars/importing_user_profiles/'] = '/docs/help/home/';
+validurls['/docs/help/webinars/measuring_success_with_braze_data/'] = '/docs/help/home/';
+validurls['/docs/help/webinars/personalization_and_liquid/'] = '/docs/help/home/';
+validurls['/docs/help/webinars/sending_test_messages/'] = '/docs/help/home/';
+validurls['/docs/help/webinars/troubleshooting_bootcamp/'] = '/docs/help/home/';
