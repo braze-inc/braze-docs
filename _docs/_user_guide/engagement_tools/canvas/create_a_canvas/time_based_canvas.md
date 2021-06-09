@@ -37,7 +37,7 @@ description: "This reference article covers definitions, time zones, and example
 
 | Definition | Time Zone | Example | Notes |
 | ---------- | --------- | ------- | ----- |
-| Calendar Day | User's Time Zone | I set up a frequency capping rule of sending no more than 1 campaign a day<br><br>If a user receives a message at 11 pm in their local time zone, he/she can receive another message an hour later.  | We use Company's Time Zone if User's Time Zone is not Set <br><br> It's possible a user does not have to wait 24 hours to get another message, since it's based on calendar days and not a 24-hour period.|
+| Calendar Day | User's Time Zone | I set up a frequency capping rule of sending no more than 1 campaign a day<br><br>If a user receives a message at 11 pm in their local time zone, they can receive another message an hour later.  | We use Company's Time Zone if User's Time Zone is not Set <br><br> It's possible a user does not have to wait 24 hours to get another message, since it's based on calendar days and not a 24-hour period.|
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
 
 ### Global Frequency Capping - Week

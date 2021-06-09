@@ -44,11 +44,19 @@ Please note that Segments created with custom event data cannot show previous hi
 
 All User Profile data, including Custom event metadata (first/last occurrence, total count, and X in Y over 30 days) is stored as long as each profile is active.
 
-# Custom Event Properties
+## Custom Event Properties
 
-With Custom Event Properties, you can set properties on Custom events and purchases. These properties can then be used for further qualifying trigger conditions, increasing personalization in messaging, and generating more sophisticated analytics through raw data export. Property values can be string, numeric, boolean, or time objects. However, property values cannot be array objects.
+With Custom Event Properties, you can set properties on Custom events and purchases. These properties can then be used for further qualifying trigger conditions, increasing personalization in messaging, and generating more sophisticated analytics through raw data export. 
 
-For example, if an eCommerce application wanted to send a message to a user when he/she abandons their cart, it could additionally improve its target audience and allow for increased campaign personalization by adding a Custom Event Property of the 'cart value' of users' carts.
+Property values can be:
+- String
+- Numeric ([integers](https://en.wikipedia.org/wiki/Integer) or [floats](https://en.wikipedia.org/wiki/Floating-point_arithmetic))
+- Boolean
+- Time objects
+
+However, property values cannot be array objects.
+
+For example, if an eCommerce application wanted to send a message to a user when they abandons their cart, it could additionally improve its target audience and allow for increased campaign personalization by adding a Custom Event Property of the 'cart value' of users' carts.
 
 {% alert important %}
 Each Custom event or purchase can have up to 256 distinct Custom event properties. If a Custom event or purchase is logged with more than 256 properties, only the first 256 will be captured and available for use.
