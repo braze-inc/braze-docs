@@ -2,7 +2,7 @@
 nav_title: Zendesk
 page_order: 9
 
-description: "Braze and Zendesk integration through webhooks. Send custom data from Braze to create a ticket in Zendesk Support Suite"
+description: "This article outlines the partnership between Braze and Zendesk, a popular support suite that allows you to utilize Braze webhooks that can sync support data between the two platforms."
 alias: /partners/zendesk/
 
 page_type: partner

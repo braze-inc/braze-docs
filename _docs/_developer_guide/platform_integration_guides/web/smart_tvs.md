@@ -2,7 +2,8 @@
 nav_title: Smart TV Integrations using the Web SDK
 platform: Web
 page_order: 20
-description: Use the Braze Web SDK to integrate with Smart TVs (Samsung and LG)
+description: "This article covers how to use the Braze Web SDK to integrate with Smart TVs (Samsung and LG)"
+
 ---
 
 # Smart TV Integration

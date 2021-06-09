@@ -1,7 +1,7 @@
 ---
 nav_title: Crowdin
 page_order: 1
-description: "Crowdin helps you automate the translation of your email templates and content blocks in Braze. Send your campaigns in multiple languages."
+description: "This article outlines the partnership between Braze and Crowdin, a cloud-based software platform that allows you to automate the translation of your email templates and content blocks in Braze."
 alias: /partners/crowdin/
 ---
 
@@ -11,7 +11,7 @@ alias: /partners/crowdin/
 
 Using Crowdin, you can translate your Android and iOS apps, website, store screenshots, and other content. Use features for improving translation quality, adding translation context, team cooperation, translation memory, workflow automation, integrations and plugins, and much more. You can translate your content with your in-house team, a translation agency, or using machine translation engines.
 
-## Pre-Requisites
+## Prerequisites
 
 To connect your Braze account with <a href="https://accounts.crowdin.com/register" target="_blank">Crowdin</a> or <a href="https://accounts.crowdin.com/register" target="_blank">Crowdin Enterprise</a>, you’ll first need to sign up and create your translation project.
 

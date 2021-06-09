@@ -27,6 +27,13 @@ The `braze_id` is automatically assigned by Braze, cannot be edited and will be 
 
 Once a user is recognizable in your app (by providing a form of user ID or email address) we suggest [assigning an external_id][23] to that user's profile. The purpose of this is to recognize the same user across multiple devices to a single user profile.
 
+More benefits of user IDs include: 
+
+- Provide a consistent user experience across multiple devices and platforms (e.g. not sending lapsing user notifications to a user’s Android tablet when they are a loyal user of the app on the iPhone).
+- Improve the accuracy of your analytics by ensuring users aren’t creating a new user profile every time they uninstall and reinstall, or install the app on a different device.
+- Enable import of user data from sources outside the app using our RESTful User API, and target users with transactional messages using our RESTful Messaging API.
+- Search for individual users using our “Testing” filters within the segmenter, and on the “User Search” page.
+
 {% alert warning %}
 Do not assign an `external_id` to a user profile before you are able to uniquely identify them. Once you identify a user, you cannot revert them to anonymous.
 {% endalert %} 

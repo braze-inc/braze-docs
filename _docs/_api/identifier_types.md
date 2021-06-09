@@ -43,7 +43,7 @@ You can find your Template ID one of two ways:
 
 ## Canvas API Identifier
 
-A [Canvas]({{site.baseurl}}/user_guide/engagement_tools/canvas/) API Identifier or Canvas ID is an out-of-the-box key by Braze for a given canvas within the Dashboard. Canvas IDs are unique to each canvas and can be used to reference canvases through the API. 
+A [Canvas]({{site.baseurl}}/user_guide/engagement_tools/canvas/) API Identifier or Canvas ID is an out-of-the-box key by Braze for a given Canvas within the Dashboard. Canvas IDs are unique to each Canvas and can be used to reference Canvases through the API. 
 
 Note that if you have a Canvas that has variants, there exists an overall Canvas ID as well as individual variant Canvas IDs nested under the main Canvas. 
 
@@ -57,7 +57,7 @@ You can find your Canvas ID one of two ways:
 - Track analytics on a specific message
 - Grab high-level aggregate stats on Canvas performance
 - Grab details on a specific Canvas
-- With currents to bring in user-level data for a "bigger picture" approach to canvases
+- With Currents to bring in user-level data for a "bigger picture" approach to canvases
 - With API trigger delivery in order to collect statistics for transactional messages
 
 <br>
@@ -80,7 +80,7 @@ You can find your Campaign ID one of two ways:
 - Track analytics on a specific message
 - Grab high-level aggregate stats on Campaign performance
 - Grab details on a specific Campaign
-- With currents to bring in user-level data for a "bigger picture" approach to campaigns
+- With Currents to bring in user-level data for a "bigger picture" approach to campaigns
 - With API trigger delivery in order to collect statistics for transactional messages
 
 <br>

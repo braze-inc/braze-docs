@@ -94,7 +94,7 @@ Because it's best practice to ask users for data after providing them with value
 
 ### Using Multi-Channel Messaging
 
-Use multi-channel messaging to create an engaging onboarding campaign. Combine in-app messages, push notifications and emails with News Feed content to capture your users' attention right away.
+Use multichannel messaging to create an engaging onboarding campaign. Combine in-app messages, push notifications and emails with News Feed content to capture your users' attention right away.
 
 #### In-App Messages {#user-onboarding-in-app-messages}
 

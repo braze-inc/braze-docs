@@ -35,7 +35,7 @@ Once Braze receives attribution data from Kochava, the status connection indicat
 __Note for [Android][29] and [Windows][30] Support__:<br>
 If you are planning to leverage the server-side integration between Braze and Kochava, you will need to ensure that you utilize the `IdentityLink` method of the Kochava SDK to capture the Braze ID. The 'Braze ID' can be retrieved using the following method:
 
-{% tabs %}
+{% tabs local %}
 {% tab JAVA %}
 The [Android](https://support.kochava.com/sdk-integration/sdk-kochavatracker-android/class-tracker?scrollto=marker_3) SDK generates a GUID as the Braze ID on session start. This is the identifier we recommend using to pass into the Kochava `IdentityLink` method as it allows Braze to reconcile the data back to the correct user profile. Please ensure that you instrument this method to pass the 'Braze ID' on SDK initialization to ensure it is available when Kochava is posting your data back to Braze via the server-side integration.
 
@@ -47,7 +47,7 @@ Apppboy.getInstance(context).getDeviceId();
 
 If you have an iOS app, your IDFV will be collected by Kochava and sent to Braze. This ID will then be mapped to a unique device ID in Braze.
 
-Braze will still store IDFA values for users that have opted-in if you are collecting the IDFA with Braze, as described in our [iOS 14 Upgrade Guide]({{site.bnaseurl}}/developer_guide/platform_integration_guides/ios/ios_14/#idfa). Otherwise, the IDFV will be used as a fallback identifier to map users.
+Braze will still store IDFA values for users that have opted-in if you are collecting the IDFA with Braze, as described in our [iOS 14 Upgrade Guide]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/ios_14/#idfa). Otherwise, the IDFV will be used as a fallback identifier to map users.
 
 {% endtab %}
 {% endtabs %}
@@ -62,7 +62,7 @@ Using click tracking links in your Braze campaigns will allow you to easily see 
 
 To get started with Kochava click tracking links, visit their [documentation](https://support.kochava.com/reference-information/attribution-overview/). You can insert the Kochava click tracking links into your Braze campaigns directly. Kochava will then use their [probabilistic attribution methodologies](https://www.kochava.com/getting-prepared-for-ios-14/) to attribute the user that has clicked on the link. To improve the accuracy of attributions from your Braze campaigns, we recommend appending your Kochava tracking links with a device identifier. This will deterministically attribute the user that has clicked on the link.
 
-{% tabs %}
+{% tabs local %}
 {% tab Android %}
 For Android, Braze allows customers to opt-in to [Google Advertising ID collection (GAID)]({{site.baseurl}}/developer_guide/platform_integration_guides/android/initial_sdk_setup/optional_gaid_collection/#optional-google-advertising-id). The GAID is also collected natively through the Kochava SDK integration. You can include the GAID in your Adjust click tracking links by utilizing the Liquid logic below:
 {% raw %}

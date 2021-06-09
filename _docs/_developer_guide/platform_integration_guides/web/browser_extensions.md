@@ -2,7 +2,10 @@
 nav_title: Browser Extensions
 platform: Web
 page_order: 20
-description: Use the Braze Web SDK inside your Browser Extensions (Google Chrome, Firefox)
+
+page_type: reference
+description: "This article describes how to use the Braze Web SDK inside your Browser Extensions (Google Chrome, Firefox)."
+
 ---
 
 # Browser Extension Integration
@@ -18,8 +21,7 @@ In general, since Extensions are simply HTML and Javascript, you can use Braze f
 * **Content Cards** Add a feed of native cards to your extension for onboarding or promotional content.
 * **Web Push** Send timely notifications even when your web page is not currently open.
 
-
-### Extension Types
+## Extension Types
 Braze can be included in the following areas of your extension:
 
 |Area|Details|What's supported|
@@ -29,13 +31,11 @@ Braze can be included in the following areas of your extension:
 |Options Pages|The [Options Page][3] lets your users toggle settings within your extension. It's a standalone HTML page that opens a new tab.|Analytics, In-App Messages, Content Cards| 
 {: .reset-td-br-1 .reset-td-br-2, .reset-td-br-3}
 
-
-### Permissions
+## Permissions
 
 No additional permissions are required in your `manifest.json` when integrating the Braze SDK (`appboy.min.js`) as a local file, bundled with your extension. 
 
 However, if you use [Google Tag Manager][8], or reference Braze's SDK from an external URL, or have set a strict Content Security Policy for your extension, you will need to adjust the [`content_security_policy`][6] setting in your `manifest.json` to allow remote script sources.
-
 
 ## Getting Started
 

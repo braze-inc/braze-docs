@@ -15,12 +15,12 @@ page_type: partner
 
 We offer [both](#integration-options) a side-by-side SDK integration for your Android, iOS, and web applications and a server-to-server integration for your backend services so that you can start building richer user profiles.
 
-If you're looking for information on the Currents integration with Segment, [click here]({{site.baseurl}}/partners/data_and_infrastructure_agility/customer_data_platform/segment_for_currents/). If you're looking for more information about [Segment Personas]({{site.baseurl}}/partners/data_and_infrastructure_agility/customer_data_platform/segment_personas/), which allows you to build segments in Segment and pass over to Braze as a Custom Attribute against a user profile.
+If you're looking for information on the Currents integration with Segment, [click here]({{site.baseurl}}/partners/data_and_infrastructure_agility/customer_data_platform/segment/segment_for_currents/). If you're looking for more information about [Segment Personas]({{site.baseurl}}/partners/data_and_infrastructure_agility/customer_data_platform/segment/segment_personas/), which allows you to build segments in Segment and pass over to Braze as a Custom Attribute against a user profile.
 
 ## Setup Overview
 
 To get going with your Segment/Braze integration:
-1. Take note of and prepare for your integration by [adhering to the requirements and pre-requisites](#pre-requisites).
+1. Take note of and prepare for your integration by [adhering to the requirements and prerequisites](#prerequisites).
 2. Set up [Braze as a Destination](#connection-settings) in accordance with [your chosen integration type](#integration-options).
 3. If you're a new-to-Braze customer, you can relay historical data to Braze using [Segment Replays](#segment-replays).
 4. Set up [mappings](#methods) for your integration.
@@ -61,7 +61,7 @@ To get going with your Segment/Braze integration:
 |Enable Logging| On/Off (True/False) | [Log to the JavaScript](https://js.appboycdn.com/web-sdk/2.0/doc/module-appboy.html#.setLogger) console by default. |
 |Minimum Interval Between Trigger Actions In Seconds| Any Number | By default, trigger actions will only fire if 30 seconds have elapsed since the last trigger action. |
 |Open In-App Messages in New Tab | On/Off (True/False) | By default, links from in-app message clicks load in the current tab or a new tab as specified in the Braze platform. |
-|Open News Feed Cards in New Tab | On/Off (True/False) | By default, links from news feed cards or content cards load in the current tab or a new tab as specified in the Braze platform. |
+|Open News Feed Cards in New Tab | On/Off (True/False) | By default, links from News Feed cards or Content Cards load in the current tab or a new tab as specified in the Braze platform. |
 |Session Timeout In Seconds| Any Number | By default, sessions time out after 30 minutes of inactivity. |
 |Track All Pages | On/Off (True/False) | Sends all [Segment page calls](https://segment.com/docs/spec/page/){:target="_blank"} to Braze as Page Events.|
 |Track Only Named Pages | On/Off (True/False) | Sends all [named Segment page calls](https://segment.com/docs/spec/page/){:target="_blank"} to Braze

@@ -125,9 +125,6 @@ hide_toc: true
 #ticket_search .algolia-docsearch-footer {
   padding-top: 5px;
 }
-#ticket_search_title {
-  display: none;
-}
 
 .gradient-line {
     background: linear-gradient(30deg,#3accdd,#f7918e 64%,#ff9349 90%);
@@ -276,12 +273,41 @@ a:hover {
   color: #3accdd;
   text-decoration: none;
 }
+#support-search-panel .aa-Panel {
+  top: 0px !important;
+  position: static;
+  box-shadow: none;
+}
+#support-search-panel .aa-Item {
+  top: 0px !important;
+  position: static;
+  box-shadow: none;
+  min-height: 1.8em;
+  line-height: 1.3em;
+}
+#support-search-panel .aa-PanelLayout {
+  padding-top: 0px;
+}
+#support-search-div {
+  padding-bottom: 15px;
+}
+#support-search-div .aa-Form {
+  box-shadow: none;
+  border-color: transparent;
+  border-radius: 0px;
+  border-bottom: solid 2px #c9c9c9;
+}
+#support-search-div .aa-Form button {
+  padding-top: 10px;
+}
 </style>
-
-<script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/2/docsearch.min.js"></script>
 
 
 <script type="text/javascript">
+function support_doc_submit(){
+  window.location = base_url + '/search/?query=' + encodeURIComponent($('#support-search-form .aa-Form .aa-Input').val());
+  return false;
+}
 
 String.prototype.mapReplace = function(map) {
   var mstr = this;
@@ -732,12 +758,8 @@ $( document ).ready(function() {
     };
   });
 
-
-
   var droplist = ['ticket_topic','ticket_category','ticket_subcategory','ticket_type'];
   var result_div = 'ticket_result';
-
-
 
   function reset_page(ind = 1){
     for(var i = ind; i < droplist.length;i++){
@@ -1088,60 +1110,132 @@ $( document ).ready(function() {
   $("#submit_ticket").trigger("change");
 
 
-
-     $('#search-input input').autocomplete({ hint: false ,debug: true}, [{
-         source: $.fn.autocomplete.sources.hits(index, { hitsPerPage: 5 }),
-         displayKey:  'nav_title',
-         dropdownMenuContainer: '#ticket_search',
-         cssClasses: {
-           root: 'algolia-autocomplete-block'
+  function string_to_slug(str) {
+    if (str) {
+      str = str.toLowerCase().replace(/\s/g, '-').replace(/[^\w-]/g, '');
+    }
+    return str;
+  }
+  const algoliaInsightsPluginSupport = createAlgoliaInsightsPlugin({
+    insightsClient,
+    onItemsChange({ insights, insightsEvents }) {
+      const events = insightsEvents.map((insightsEvent) => ({
+        ...insightsEvent,
+        eventName: 'Viewed from Support Search',
+      }));
+      insights.viewedObjectIDs(...events);
+    },
+    onSelect({ insights, insightsEvents }) {
+      const events = insightsEvents.map((insightsEvent) => ({
+        ...insightsEvent,
+        eventName: 'Clicked from Support Search',
+      }));
+      insights.clickedObjectIDsAfterSearch(...events);
+    },
+  });
+  autocomplete({
+    container: "#support-search-div",
+    panelContainer: "#support-search-panel",
+    debug: true,
+    placeholder: "Search",
+    plugins: [algoliaInsightsPluginSupport],
+    detachedMediaQuery: 'none',
+    onSubmit(e){
+      var query = e.state.query;
+      window.location = base_url + '/search/?query=' + encodeURIComponent(query);
+    },
+    getSources() {
+      return [{
+          sourceId: "querySuggestions",
+          getItemInputValue: ({ item }) => item.query,
+          getItems({ query }) {
+            return getAlgoliaResults({
+              searchClient,
+              queries: [
+                {
+                  indexName: "DocSearch",
+                  query,
+                  params: {
+                    hitsPerPage: 5,
+                    attributesToSnippet: ["description:12"],
+                    snippetEllipsisText: " ...",
+                    clickAnalytics: true,
+                  },
+                },
+              ],
+            });
+          },
+          getItemUrl({ item }) {
+           return base_url + item.url;
          },
-
          templates: {
-           suggestion: function(suggestion) {
-             var content = '';
-             var title = '';
-             var type = '';
-             var category = '';
-             var platform = '';
-             var subname = ''
+           noResults({createElement}) {
+             return createElement("div", {
+               dangerouslySetInnerHTML: {
+                 __html: '<div class="no_results">No results were found with your current search. Try to change the search query.</div>',
+                 },
+               })
+          },
 
-             if ('nav_title' in suggestion) {
-               title = suggestion.nav_title.replace(/\%20/g, ' ').replace(/\_/g, ' ');
-             }
-             else {
-               if ('title' in suggestion) {
-                 title = suggestion.title.replace(/\%20/g, ' ').replace(/\_/g, ' ');
-               }
-             }
-             if ('platform' in suggestion) {
-               if (Array.isArray(suggestion.platform)){
-                 platform = suggestion.platform.join(',').replace(/\%20/g, ' ').replace(/\_/g, ' ') + ' > ';
-               }
-               else {
-                 platform = suggestion.platform.replace(/\%20/g, ' ').replace(/\_/g, ' ') + ' > ';
-               }
-             }
+          item({ item, createElement }) {
+            var content = "";
+            var title = "";
+            var type = "";
+            var category = "";
+            var platform = "";
+            var subname = "";
+            var heading = "";
 
-             var resulttemplate = '<a href="' + base_url + suggestion.url + '"><div class="title"> * ' + platform  +
-               title + '</div></a>';
-             return resulttemplate;
-           },
-           empty: '<div class="no_results">No results were found with your current search. Try to change the search query.</div><hr />',
-           footer: ''
-         }
+            if ("nav_title" in item) {
+              title = item.nav_title.replaceUnder();
+            } else {
+              title = item.title.replaceUnder();
+            }
+            if ("type" in item) {
+              type = item.type.replaceUnder().upCaseWord();
+            }
+            if ("category" in item) {
+              category = item.category.replaceUnder();
+            }
 
-       }]
-     ).on('autocomplete:selected', function(event, suggestion, dataset) {
-     }).keydown(function(e){
-       if (e.which == 27) {
-         $(this).autocomplete('val', '');;
-       }
-     });
-     if (navigator.userAgent.toLowerCase().indexOf('firefox') > -1 ) {
-       var ff_div = $('#firefox_warning').detach();
-       ff_div.insertBefore($('#basic_page')).show();
-     }
+            if ("platform" in item) {
+              if (Array.isArray(item.platform)){
+                platform = item.platform.join(',').replace(/\%20/g, ' ').replace(/\_/g, ' ') + ' > ';
+              }
+              else {
+                platform = item.platform.replace(/\%20/g, ' ').replace(/\_/g, ' ') + ' > ';
+              }
+            }
+            if ("headings" in item) {
+              if (item["headings"]) {
+                heading = item["headings"][item["headings"].length - 1];
+              }
+            }
+
+            var url = item.url;
+            if (heading) {
+              url += "#" + string_to_slug(heading);
+            }
+            var resulttemplate = '<a href="' +
+                base_url + url + '"><div class="title"> * ' +
+                platform + title + ' <div class="category">' +
+                subname.replace(/\_/g, " ") +
+                "</div></div></a>";
+            return createElement("div", {
+              dangerouslySetInnerHTML: {
+                __html: resulttemplate,
+              },
+            });
+          },
+        },
+      }];
+    }
+  });
+
+ if (navigator.userAgent.toLowerCase().indexOf('firefox') > -1 ) {
+   var ff_div = $('#firefox_warning').detach();
+   ff_div.insertBefore($('#basic_page')).show();
+ }
 });
 </script>
 <div id="firefox_warning" style="display:none;">For Firefox users, please whitelist this site or check your <a href="https://developer.mozilla.org/en-US/docs/Mozilla/Firefox/Privacy/Tracking_Protection?utm_source=mozilla&utm_medium=firefox-console-errors&utm_campaign=default" target="_blank">Tracking Protection Settings</a>, or your ticket might not be submitted.</div>
@@ -1271,13 +1365,10 @@ $( document ).ready(function() {
               </form>
         </div>
         <div class="col-sm-5" id="ticket_resources">
-          <div id="search-input">
-          <input type="text" placeholder="Search">
-           </div>
+        <div id="support-search-div">
+         </div>
 
-           <div id="ticket_search_title">Search Result:</div>
-
-           <div id="ticket_search"></div>
+           <div id="support-search-panel"></div>
 
             <legend>Useful Resources</legend>
 

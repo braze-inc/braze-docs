@@ -2,6 +2,9 @@
 nav_title: Defining a News Feed Category
 platform: iOS
 page_order: 2
+description: "This reference article shows how to define a News Feed category in your iOS application."
+channel:
+  - news feed
 
 ---
 

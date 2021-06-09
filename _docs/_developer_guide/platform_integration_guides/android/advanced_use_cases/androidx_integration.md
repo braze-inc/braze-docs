@@ -2,9 +2,11 @@
 nav_title: AndroidX Integration
 platform: Android
 page_order: 3
+description: "This article covers how to integrate AndroidX."
 
 ---
-## AndroidX
+
+# AndroidX
 [AndroidX][1] is the project that Android uses to release libraries within [Jetpack][2].
 
 ## Braze AndroidX Module

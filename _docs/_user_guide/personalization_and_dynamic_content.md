@@ -18,7 +18,7 @@ guide_featured_list:
 - name: "Deep-Linking to In-App Content"
   link: /docs/user_guide/personalization_and_dynamic_content/deep_linking_to_in-app_content/
   fa_icon: fas fa-mobile
-- name: "Key Value Pairs"
+- name: "Key-Value Pairs"
   link: /docs/user_guide/personalization_and_dynamic_content/key_value_pairs/
   fa_icon: far fa-dot-circle
 - name: Emoji Messaging

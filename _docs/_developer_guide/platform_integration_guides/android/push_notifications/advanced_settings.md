@@ -2,20 +2,23 @@
 nav_title: Advanced Settings
 platform: Android
 page_order: 4
+description: "This reference article covers advanced Android push notification settings such as TTL, notification IDs, notification priority, and more."
+channel:
+  - push
 
 ---
+
 # Advanced Settings
 
 There are many advanced settings available for Android and Fire OS push notifications sent through the Braze dashboard. This article will describe these features and how to use them successfully.
 
 ![Advanced Settings][1]
 
-
 ## Delivery Options
 
 Both Google and Amazon's push messaging services (FCM and ADM, respectively) allow you to set additional parameters for when and how your messages are delivered. FCM and ADM both follow roughly the same pattern in how these options are structured and utilized. The default behavior of these services is to send messages to devices as soon as they are received for delivery. However, depending on the use case, this may not be the best way to communicate to your users. To provide you with precise control over when your push messages are delivered, we have implemented ways to use FCM and ADM delivery options with Braze campaigns.
 
-For example, say that a user of a sports news app had their device offline the duration of a football game. The app sends out updates after one of the competing teams score, for a total of 10 push notifications over that duration. When the user reconnects to the messaging service, we would not want them to receive 10 redundant notifications. We have a couple of options available to solve this problem.
+For example, say that a user of a sports news app had their device offline the duration of a football game. The app sends out updates after one of the competing teams score for a total of 10 push notifications over that duration. When the user reconnects to the messaging service, we would not want them to receive 10 redundant notifications. We have a couple of options available to solve this problem.
 
 ### Notification ID {#notification-id}
 
@@ -46,7 +49,7 @@ For push notifications that include images, the message text will be shown in th
 
 ### Custom URIs {#custom-uri}
 
-The __"Custom URI"__ feature allows you to specify a Web URL or an Android resource to navigate to when the notification is clicked. If no custom URI is specified, clicking on the notification brings users into your app. You can use the custom URI to deep link inside your app as well as direct users to resources that exist outside of your app as well. This can be specified via our [Messaging API][13] or via our dashboard under "Advanced Settings" in the push composer wizard as pictured below:
+The __"Custom URI"__ feature allows you to specify a Web URL or an Android resource to navigate to when the notification is clicked. If no custom URI is specified, clicking on the notification brings users into your app. You can use the custom URI to deep-link inside your app as well as direct users to resources that exist outside of your app as well. This can be specified via our [Messaging API][13] or via our dashboard under "Advanced Settings" in the push composer wizard as pictured below:
 
 > To enable Custom URI, your app's `BroadcastReceiver` must be configured to properly handle opening the URI.  This involves parsing incoming message contents for the custom URI and navigating to it.  Our [example receiver][14] provides a sample implementation.
 
@@ -76,7 +79,6 @@ The priority levels that you can set on Android or Fire OS push notifications ar
 | Low      | Information that you want users to know about, but does not require immediate action | `-1` |
 | Min      | Contextual or background information. | `-2` |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
-
 
 For more information, please consult [Google's documentation on Android notifications][2].
 

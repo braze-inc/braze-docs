@@ -2,10 +2,18 @@
 nav_title: News Feed Integration Overview
 platform: iOS
 page_order: 1
+description: "This article covers an overview of how to integrate the News Feed into your iOS application."
+channel:
+  - news feed
 
 ---
 
 # News Feed Integration Overview
+
+{% alert note %}
+Braze recommends that customers who use our News Feed tool move over to our Content Cards messaging channel - it is more flexible, customizable, and reliable. It is also easier to find and use in the Braze product. Contact your Braze account manager for more information.
+{% endalert %}
+
 Integrating the view controller `ABKNewsFeedViewController` will display the Braze News Feed.
 
 You have a great deal of flexibility in how you choose to display the view controllers. There are different versions of the view controllers to accommodate different navigation structures.

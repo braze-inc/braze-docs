@@ -3,6 +3,9 @@ nav_title: Disabling Android SDK Tracking
 platform: FireOS
 page_order: 8
 
+page_type: reference
+description: "This page covers disabling data collection, which may be required in order to comply with data privacy regulations."
+
 ---
 
 # Disabling Data Collection

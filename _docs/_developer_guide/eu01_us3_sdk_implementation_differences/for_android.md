@@ -1,6 +1,10 @@
 ---
 nav_title: For Android
 page_order: 0
+
+page_type: reference
+description: "This article describes extra Android implementation steps customers on the EU-01 instance will need to take."
+platform: Android
 ---
 
 # For Android

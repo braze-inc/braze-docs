@@ -1,10 +1,14 @@
 ---
 nav_title: Refreshing the Feed
-page_order: 3
-
+page_order: 4
 platform: Android
+description: "This reference article covers how to implement Content Card refreshing in your Android application."
+channel:
+  - content cards
+
 ---
-## Refreshing Content Cards
+
+# Refreshing Content Cards
 
 You can queue a manual refresh of Braze Content Cards at any time by calling:
 

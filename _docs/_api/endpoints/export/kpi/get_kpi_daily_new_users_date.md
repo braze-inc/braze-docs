@@ -7,7 +7,7 @@ layout: api_page
 page_type: reference
 platform: API
 tool: Segments
-description: "This article outlines details about the Daily New Users Endpoint."
+description: "This article outlines details about the Get Daily New Users endpoint."
 ---
 {% api %}
 # Daily New Users Endpoint

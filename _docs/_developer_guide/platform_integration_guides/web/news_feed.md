@@ -3,12 +3,17 @@ nav_title: News Feed
 platform: Web
 page_order: 3
 
+page_type: reference
+description: "This article covers how to interact with News Feeds via the Braze SDK."
+channel: news feed
+
 ---
+
 # News Feed
 
 The News Feed is a fully customizable in-app content feed for your users. Our targeting and segmentation allows you to create a stream of content that is individually catered to the interests of each user. Depending on their position in the user life cycle and the nature of your app, this could be an on-boarding content server, an advertisement center, an achievement center, or a generic news center.
 
-### Example News Feed
+## Example News Feed
 
 <img src="{% image_buster /assets/img_archive/WebNewsFeed.png %}" alt="Sample News Feed" height="600" />
 
@@ -66,7 +71,7 @@ You can also populate a feed with a combination of categories as in the followin
 appboy.display.toggleFeed(undefined, undefined, [appboy.Card.Category.ANNOUNCEMENTS, appboy.Card.Category.NEWS]);
 ```
 
-## Read/Unread Indicators
+## Read & Unread Indicators
 
 Braze provides an Unread/Read indicator on News Feed cards as pictured below:
 
@@ -82,6 +87,7 @@ In order to disable this functionality add the following style to your css:
 ```
 
 ## Card Types
+
 The Braze Web SDK supports 3 unique News Feed card types, [ab.ClassicCard][3], [ab.Banner][4], [ab.CaptionedImage][5] which share a base model, [ab.Card][1].
 
 ### Requesting Unread Card Count
@@ -94,8 +100,9 @@ appboy.getCachedFeed().getUnreadCardCount();
 
 This is often used to power badges signifying how many unread news-feed cards there are. See the [JSDocs][17] for more information. Note that Braze will not refresh News Feed cards on new page loads (and so this function will return 0) until you show the feed or call `appboy.requestFeedRefresh();`
 
-### Key Value Pairs
-`ab.Card` objects may optionally carry key value pairs as `extras`. These can be used to send data down along with a card for further handling by the application.  Simply call `card.extras` to access these values.
+### Key-Value Pairs
+
+`ab.Card` objects may optionally carry key-value pairs as `extras`. These can be used to send data down along with a card for further handling by the application.  Simply call `card.extras` to access these values.
 
 See the JSDocs for [ab.ClassicCard][3], [ab.Banner][4], or [ab.CaptionedImage][5] for more information.
 

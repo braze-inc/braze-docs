@@ -66,7 +66,7 @@ Uninstall Tracking is subject to restrictions placed on this information by FCM 
 
 For more on using Uninstall Tracking, see [this blog post][7].
 
-Uninstall statistics for campaigns are located on the Campaign Details page. For multi-channel and multivariate campaigns, uninstalls can be broken down by channel and variant, respectively.
+Uninstall statistics for campaigns are located on the Campaign Details page. For multichannel and multivariate campaigns, uninstalls can be broken down by channel and variant, respectively.
 
 ![Uninstall Campaign Level][6]
 

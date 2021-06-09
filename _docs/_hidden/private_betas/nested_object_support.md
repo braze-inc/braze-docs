@@ -3,6 +3,7 @@ nav_title: Nested Object Support
 permalink: "/nested_object_support/"
 hidden: true
 ---
+<br>
 {% alert note %}
 Nested Object Support is currently in beta. Please contact your Braze account manager if you are interested in participating in the beta.
 {% endalert %}
@@ -12,6 +13,7 @@ Nested Object Support is currently in beta. Please contact your Braze account ma
 Nested Object Support allows you to send arrays of data as properties of custom events and purchases. This nested data can be used for templating personalized information in API-triggered messages through the use of Liquid and dot notation.
 
 ## Limitations
+
 - Nested data can only be sent with __custom events and purchase events__. This is not yet supported with user attributes. 
 - The array data cannot be used for segmentation or in any other way on the platform outside of Liquid templating and triggering.
 - Available on events/purchases sent __via API only__, the Braze SDKs are not yet supported.
@@ -107,17 +109,13 @@ Triggering a campaign with nested properties from the "Ordered" event:
 
 ## Frequently Asked Questions
 
-{% details Does this consume additional data points? %}
+### Does this consume additional data points?
 
 Array properties are treated the same as other event type properties, so there is no change in how we charge data points as a result of adding the capability
 
-{% enddetails %}
+### How much data can be sent in the array?
 
-{% details How much data can be sent in the array? %}
-
-The maximum payload for all combined properties on an event is 50kb. Any request over that size limit will be rejected. 
-
-{% enddetails %}
+If one or more of the event's properties contains nested data, the maximum payload for all combined properties on an event is 50 KB. Any request over that size limit will be rejected.
 
 [1]: {% image_buster /assets/img/nested_object1.png %}
 [2]: {% image_buster /assets/img/nested_object2.png %}

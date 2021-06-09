@@ -2,7 +2,10 @@
 nav_title: Advanced Implementation (Optional)
 platform: iOS
 page_order: 7
-description: "This advanced implementation guide covers Content Card code considerations, three use cases built by our team, accompanying code snippets, and guidance on logging impressions, clicks, and dismissals."
+description: "This advanced implementation guide covers iOS Content Card code considerations, three use cases built by our team, accompanying code snippets, and guidance on logging impressions, clicks, and dismissals."
+channel:
+  - content cards
+
 ---
 
 {% alert important %}
@@ -144,6 +147,7 @@ extension CustomObject: ContentCardable {
 {% subtab Objective-C %}
 __Custom Object Initializer__<br>
 MetaData from an `ABKContentCard` is used to populate your object's variables. The key-value pairs set up in the Braze Dashboard are represented in the "extras" dictionary.
+
 
 ```objc
 - (id _Nullable)initWithMetaData:(nonnull NSDictionary *)metaData classType:(enum ContentCardClassType)classType {

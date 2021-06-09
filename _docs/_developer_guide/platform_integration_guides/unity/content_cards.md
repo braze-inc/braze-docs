@@ -2,7 +2,10 @@
 nav_title: Content Cards
 platform: Unity
 page_order: 4
+description: "This reference article covers Content Card implementation guidelines for the Unity platform."
+
 ---
+
 # Content Cards
 
 ## Receiving Content Card Data in Unity

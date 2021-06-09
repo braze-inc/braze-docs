@@ -17,7 +17,7 @@ Messages sent by Braze can retrieve content from a web server to be included in 
 Hi there, here is fun some trivia for you!: {{result.text}}
 ```
 
-You can also include user profile attributes as variables in the URL string when making Connected Content requests. As an example, you may have a web service that returns content based on a user's email address and ID. If you're passing attributes containing special characters, such as @, make sure to use the Liquid filter `url_param_escape` to replace any characters not allowed in URLs with their URL-friendly escaped versions, as shown in the e-mail address attribute below.
+You can also include user profile attributes as variables in the URL string when making Connected Content requests. As an example, you may have a web service that returns content based on a user's email address and ID. If you're passing attributes containing special characters, such as @, make sure to use the Liquid filter `url_param_escape` to replace any characters not allowed in URLs with their URL-friendly escaped versions, as shown in the email address attribute below.
 
 ```
 Hi, here are some articles that you might find interesting:
@@ -25,7 +25,7 @@ Hi, here are some articles that you might find interesting:
 {% connected_content http://www.yourwebsite.com/articles?email={{${email_address} | url_param_escape}}&user_id={{${user_id}}} %}
 ```
 
-If the URL is unavailable, Braze will render an empty string in its place. Because Braze delivers messages at a very fast rate, be sure that your server can handle thousands of concurrent connections so we do not overload your server when pulling down content. When using public APIs, ensure your usage will not violate any rate-limiting that the API provider may employ. Braze requires that server response time is less than 2 seconds for performance reasons; if the server takes longer than 2 seconds to respond, the content will not be inserted.
+If the URL is unavailable, Braze will render an empty string in its place. Because Braze delivers messages at a very fast rate, be sure that your server can handle thousands of concurrent connections so we do not overload your server when pulling down content. When using public APIs, ensure your usage will not violate any rate limiting that the API provider may employ. Braze requires that server response time is less than 2 seconds for performance reasons; if the server takes longer than 2 seconds to respond, the content will not be inserted.
 
 If the endpoint returns JSON, you can detect that by checking if the `connected` value is null, and then [conditionally abort the message][1]. Braze only allows URLs that communicate over port 80 (HTTP) and 443 (HTTPS).
 {% endraw %}

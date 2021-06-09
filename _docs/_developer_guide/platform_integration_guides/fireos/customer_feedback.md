@@ -2,8 +2,9 @@
 nav_title: Customer Feedback
 platform: FireOS
 page_order: 5
-
 hidden: true
+page_type: reference
+
 ---
 
 {% alert Update %}

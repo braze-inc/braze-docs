@@ -37,7 +37,7 @@ Below is a list of features and messaging channels supported today.
         <tr>
             <th>Device Type</th>
             <th>Data and Analytics</th>
-            <th>In App Messages</th>
+            <th>In-App Messages</th>
             <th>Content Cards</th>
             <th>Push Notifications</th>
             <th>Canvas</th>

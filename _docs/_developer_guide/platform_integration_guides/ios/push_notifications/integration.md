@@ -2,6 +2,9 @@
 nav_title: Integration
 platform: iOS
 page_order: 0
+description: "This article covers how to integrate push notifications in your iOS application."
+channel:
+  - push
 
 
 local_redirect:
@@ -18,6 +21,7 @@ local_redirect:
   step-1-adding-braze-default-push-categories: '/docs/developer_guide/platform_integration_guides/ios/push_notifications/action_buttons/#step-1-adding-braze-default-push-categories'
 local_redirect:
   step-2-enable-interactive-push-handling: '/docs/developer_guide/platform_integration_guides/ios/push_notifications/action_buttons/#step-2-enable-interactive-push-handling'
+  
 ---
 
 # Push Integration

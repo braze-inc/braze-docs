@@ -1,8 +1,9 @@
 ---
-nav_title: Android SDK Accessibility
+nav_title: Accessibility
 page_order: 4
-
 platform: Android
+description: "This reference article covers how to implement specific Android SDK accessibility features such as in-app message talkback into your Android application."
+
 ---
 
 # Accessibility
@@ -24,18 +25,18 @@ In order to have Android Talkback/"VoiceOver" not read the contents behind an in
 {% tab KOTLIN %}
 
 ```kotlin
-val appboyConfigBuilder = AppboyConfig.Builder()
-appboyConfigBuilder.setIsInAppMessageAccessibilityExclusiveModeEnabled(true)
-Appboy.configure(this, appboyConfigBuilder.build())
+val brazeConfigBuilder = BrazeConfig.Builder()
+brazeConfigBuilder.setIsInAppMessageAccessibilityExclusiveModeEnabled(true)
+Braze.configure(this, brazeConfigBuilder.build())
 ```
 
 {% endtab %}
 {% tab JAVA %}
 
 ```java
-AppboyConfig.Builder appboyConfigBuilder = new AppboyConfig.Builder()
-appboyConfigBuilder.setIsInAppMessageAccessibilityExclusiveModeEnabled(true);
-Appboy.configure(this, appboyConfigBuilder.build());
+BrazeConfig.Builder brazeConfigBuilder = new BrazeConfig.Builder()
+brazeConfigBuilder.setIsInAppMessageAccessibilityExclusiveModeEnabled(true);
+Braze.configure(this, brazeConfigBuilder.build());
 ```
 
 {% endtab %}

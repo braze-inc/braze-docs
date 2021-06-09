@@ -31,7 +31,7 @@ Example: Maybe your app is a game and you offer your users an in-game currency b
 
 For more information on re-engaging lapsed users, see our [Quick Wins page][23] on the topic.
 
-> Push should be formatted in plain-text. Key value pairs allow for ["Deep-linking"][3] to external URLs or in-app features.
+> Push should be formatted in plain-text. Key-value pairs allow for ["Deep-linking"][3] to external URLs or in-app features.
 
 
 [3]: {{site.baseurl}}/user_guide/personalization_and_dynamic_content/deep_linking_to_in-app_content/#deep-linking-to-in-app-content

@@ -3,7 +3,7 @@ nav_title: Neura Insights
 page_order: 0
 alias: /partners/neura_insights/
 
-description: "This article outlines the partnership between Braze and Neura Insights, which leads mobile brands drive higher customer engagement & retention."
+description: "This article outlines the partnership between Braze and Neura Insights, an analytics platform that allows you to uncover the relationships between each user’s real-world behavior and the actions they take in your app in order to find the best moment to engage with each user."
 page_type: partner
 
 ---
@@ -73,7 +73,7 @@ mNeuraApiClient.setExternalId(USER_ID)
 
 Neura's generic data import allows for two types of import methods:
 
-1. Export your currents data to Amazon S3. Our customer success team will work with you to translate the data to Neura.
+1. Export your Currents data to Amazon S3. Our customer success team will work with you to translate the data to Neura.
 
 2. Follow the instructions to use the Neura [Insights API][6].
 

@@ -1,6 +1,7 @@
 ---
 nav_title: Voucherify
 alias: /partners/voucherify/
+description: "This article outlines the partnership between Braze and Voucherify, an all-in-one promotional platform that allows users to automatically send personalized coupons, gift cards, loyalty cards, referral codes, and more – all through their Braze account while tracking redemptions and campaign growth at every step."
 ---
 
 # Voucherify
