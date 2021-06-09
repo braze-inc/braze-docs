@@ -356,4 +356,4 @@ validurls['/docs/help/webinars/importing_user_profiles/'] = '/docs/help/home/';
 validurls['/docs/help/webinars/measuring_success_with_braze_data/'] = '/docs/help/home/';
 validurls['/docs/help/webinars/personalization_and_liquid/'] = '/docs/help/home/';
 validurls['/docs/help/webinars/sending_test_messages/'] = '/docs/help/home/';
-validurls['/docs/help/webinars/troubleshooting_bootcamp/'] = 'docs/help/home/';
+validurls['/docs/help/webinars/troubleshooting_bootcamp/'] = '/docs/help/home/';
