@@ -56,7 +56,7 @@ Property values can be:
 
 However, property values cannot be array objects.
 
-For example, if an eCommerce application wanted to send a message to a user when they abandons their cart, it could additionally improve its target audience and allow for increased campaign personalization by adding a Custom Event Property of the 'cart value' of users' carts.
+For example, if an eCommerce application wanted to send a message to a user when they abandon their cart, it could additionally improve its target audience and allow for increased campaign personalization by adding a Custom Event Property of the 'cart value' of users' carts.
 
 {% alert important %}
 Each Custom event or purchase can have up to 256 distinct Custom event properties. If a Custom event or purchase is logged with more than 256 properties, only the first 256 will be captured and available for use.
