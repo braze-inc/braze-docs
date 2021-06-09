@@ -1,4 +1,5 @@
 ---
 layout: redirect
-redirect_to: /docs/help/webinars
+redirect_to: /docs/help
+hidden: true
 ---
