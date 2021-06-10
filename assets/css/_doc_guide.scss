@@ -292,8 +292,8 @@ $doc_transition_time : 0.25s;
     margin-left: 1.5%;
     margin-bottom: 2%;
   }
-  #doc_popular {
-    margin-bottom: 30px;
+  #doc_popular, #doc_helpful {
+    margin-bottom: 0px;
     margin-top: 0px;
     a {
       display: inline-block;
@@ -315,7 +315,7 @@ $doc_transition_time : 0.25s;
   }
 
   #gradient {
-    margin-top: 30px;
+    margin: 30px 0px 30px 10px;
     width: 70px;
     height: 3px;
     transform: matrix(-1, 0, 0, -1, 0, 0);

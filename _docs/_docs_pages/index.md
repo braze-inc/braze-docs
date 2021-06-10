@@ -39,8 +39,7 @@ doc_menu_list:
 popular_topic_list:
   - name: "Canvas: The Basics"
     link: /docs/user_guide/engagement_tools/canvas/get_started/the_basics/
-  - name: Innovation Statement
-    link: /docs/help/innovation_statement/
+
   - name: Create a Campaign
     link: /docs/user_guide/engagement_tools/campaigns/ideas_and_strategies/active_user_campaigns/
   - name: Locations and Geofences
@@ -55,6 +54,10 @@ popular_topic_list:
     link: /docs/user_guide/data_and_analytics/custom_data/custom_events/
   - name: Create a Segment
     link: /docs/user_guide/engagement_tools/segments/creating_a_segment/
+
+helpful_resources_list:
+  - name: Innovation Statement
+    link: /docs/help/innovation_statement/
   - name: Support & Success Services Handbook
     link: /docs/handbooks/
 ---

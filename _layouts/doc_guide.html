@@ -40,14 +40,14 @@ hide_breadcrumb: true
 
 
 <div class="col d-print-block " id="main_content" >
-  <div>{% include docs_search.html %} </div>  
+  <div>{% include docs_search.html %} </div>
   <div class="doc-container">
     <div class="row doc-row">
       <div id="doc-main" class="col-xl justify-content-between">
       <h2 class="doc_menu_title"> {{ page.doc_top_header }} </h2>
       <p>  {{ page.doc_top_text | markdownify }} </p>
-  
-  
+
+
       <div id="doc_list" class="row justify-content-between">
         {%- for doc_list in page.doc_menu_list  -%}
           {%- if doc_list.link -%}
@@ -79,7 +79,7 @@ hide_breadcrumb: true
       <div id="doc_bottom">
         <div id="doc_bottom_left" class="doc_bottom_full">
           <a href="https://lab.braze.com" target="_blank">
-  
+
           <div id="doc_lab">
             <div id="doc_lab_img"><img src="{{site.baseurl}}/assets/img/lab.png" /></div>
             <div id="doc_lab_info" class="doc_info">
@@ -89,12 +89,12 @@ hide_breadcrumb: true
               <div class="doc_description">
                 Technical terms and concepts explained through a mix of videos, lessons, and interactive exercises.
               </div>
-  
+
             </div>
-  
+
           </div>
           </a>
-  
+
           <!-- <div id="doc_help" class="doc_info">
             <div class="doc_name">
               Help
@@ -113,7 +113,7 @@ hide_breadcrumb: true
           </div> -->
         </div>
     </div>
-  
+
       </div>
     <!-- popular -->
     <div id="doc_right" class="col-xl">
@@ -126,15 +126,25 @@ hide_breadcrumb: true
           </div>
         {%- endfor -%}
       </div>
-      <div id="gradient"></div>
       </div>
+      <div id="doc_helpful" class="doc_info">
+        <div class="doc_name">Helpful Resources</div>
+        <div class="doc_description">
+        {%- for doc_list in page.helpful_resources_list  -%}
+          <div>
+          <a href="{{ doc_list.link }}">{{ doc_list.name }}</a>
+          </div>
+        {%- endfor -%}
+        </div>
+      </div>
+      <div id="gradient"></div>
       <a id="status-indicator" href="https://braze.statuspage.io" target="_blank">
         <div id="doc_status" class="doc_info">
             <div class="status-title">BRAZE SYSTEM STATUS</div>
             <div class="color-dot"></div><div class="color-description">Checking Status</div>
         </div>
       </a>
-  
+
       <script type="text/javascript">
         function loadStatusPage() {
           var lsp = document.createElement('script');
@@ -153,15 +163,15 @@ hide_breadcrumb: true
               });
             }
           };
-  
+
           var s = document.getElementsByTagName('script')[0];
           s.parentNode.insertBefore(lsp, s);
         };
-  
+
         window.addEventListener('load', loadStatusPage, false);
       </script>
-  
-  
+
+
     </div>
     </div>
     <div class="doc-row">
