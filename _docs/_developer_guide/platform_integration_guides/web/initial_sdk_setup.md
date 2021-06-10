@@ -18,6 +18,8 @@ For a complete technical reference, please see our [JavaScript Documentation][9]
 
 There are three easy ways to integrate the Web SDK, to include analytics and messaging components on your site. Be sure to view our [Push Integration Guide][16] if you plan to use Web Push features. 
 
+If your website uses a `Content-Security-Policy`, then please follow our [CSP Header Guide][19] as well.
+
 ### Option 1: NPM or Yarn {#install-npm}
 
 If your site uses NPM or Yarn package managers, you can add the [Braze NPM package](https://www.npmjs.com/package/@braze/web-sdk) as a dependency.
@@ -148,5 +150,6 @@ Braze may also be compatible with other tag management solutions by following ou
 [9]: https://js.appboycdn.com/web-sdk/latest/doc/module-appboy.html "JSDocs"
 [16]: {{site.baseurl}}/developer_guide/platform_integration_guides/web/push_notifications/integration/
 [17]: https://github.com/Appboy/appboy-web-sdk/blob/master/CHANGELOG.md#300
-[18]: {{site.baseurl}}/developer_guide/platform_integration_guides/web/google_tag_manager
+[18]: {{site.baseurl}}/developer_guide/platform_integration_guides/web/google_tag_manager/
+[19]: {{site.baseurl}}/developer_guide/platform_integration_guides/web/content_security_policy/
 <!-- wesley wanted an empty line at the end -->
