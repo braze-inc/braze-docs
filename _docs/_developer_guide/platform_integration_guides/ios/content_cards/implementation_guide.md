@@ -457,7 +457,7 @@ This Content Card is delivered by an API triggered campaign with API triggered k
 Visit the [following section](#logging-impressions-clicks-and-dismissals) to get a better understanding of how the flow of data should look.
 
 ### Content Cards in a Message Center
-
+<br>
 Content Cards can be used in a message center format where each message is its own card. Each message in the message center is populated via a Content Card payload, and each card contains additional key-value pairs that power on-click UI/UX. In the example to the right, one message directs you to an arbitrary custom view, while another opens to a webview that displays custom HTML.
 
 ![Message Center PNG][3]{: style="border:0;"}{: style="max-width:80%;border:0"}
@@ -515,12 +515,14 @@ When a message is clicked, the `ContentCardClassType` handles how the next scree
 ##### Ready to log analytics?
 Visit the [following section](#logging-impressions-clicks-and-dismissals) to get a better understanding of how the flow of data should look.
 
+![Interactive Content PNG][6]{: style="border:0;"}{: style="float:right;max-width:45%;border:0;margin-left:15px;"} 
+
 ### Interactive Content Cards
+<br>
+Content Cards can be leveraged to create dynamic and interactive experiences for your users. In the example below, we have a Content Card pop-up appear at checkout providing users last-minute promotions. 
 
-Content Cards can be leveraged to create dynamic and interactive experiences for your users. In the example below, we have a Content Card pop-up appear at checkout providing users last-minute promotions. Well-placed cards like this are a great way to give users a "nudge" toward specific user actions. 
-
-![Interactive Content PNG][6]{: style="border:0;"}{: style="max-width:50%;border:0;"} 
-
+Well-placed cards like this are a great way to give users a "nudge" toward specific user actions. 
+<br><br><br>
 #### Dashboard Configuration
 
 The dashboard configuration for interactive Content Cards is quick and straightforward. The key-value pairs for this use case include a `discount_percentage` set as the desired discount amount and `class_type` set as `coupon_code`. These key-value pairs are how type-specific Content Cards get filtered and displayed on the checkout screen.
