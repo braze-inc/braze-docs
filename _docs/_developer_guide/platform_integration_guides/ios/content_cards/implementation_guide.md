@@ -460,13 +460,13 @@ Visit the [following section](#logging-impressions-clicks-and-dismissals) to get
 
 Content Cards can be used in a message center format where each message is its own card. Each message in the message center is populated via a Content Card payload, and each card contains additional key-value pairs that power on-click UI/UX. In the example to the right, one message directs you to an arbitrary custom view, while another opens to a webview that displays custom HTML.
 
-![Message Center PNG][3]{: style="border:0;"}
+![Message Center PNG][3]{: style="border:0;"}{: style="max-width:80%;border:0"}
 
 #### Dashboard Configuration
 
 For the following message types, the key-value pair `class_type` should be added to your dashboard configuration. The values assigned here are arbitrary but should be distinguishable between class types. These key-value pairs are the key identifiers that the application looks at when deciding where to go when the user clicks on an abridged inbox message. 
 
-| Arbitrary Custom View Message | Webview Message |
+| Arbitrary Custom View Message (Full Page) | Webview Message (HTML) |
 | ---- | ---- |
 | <br>The key-value pairs for this use case include:<br><br>- `message_header` set as `Full Page`<br>- `class_type` set as `message_full_page`<br><br><br>![Message Center JPG1][4]{: style="max-width:100%;"} | The key-value pairs for this use case include:<br><br>- `message_header` set as `HTML`<br>- `class_type` set as `message_webview`<br>- `message_title`<br><br>This message also looks for an HTML key-value pair, but if you are working with a web domain, a URL key-value pair is also valid.<br><br>![Message Center JPG2][5] |
 {: .reset-td-br-1 .reset-td-br-2}
@@ -517,9 +517,9 @@ Visit the [following section](#logging-impressions-clicks-and-dismissals) to get
 
 ### Interactive Content Cards
 
-Content Cards can be leveraged to create interactive experiences for your users. In the example to the right, we have a Content Card pop-up appear at checkout providing users last-minute promotions. Well-placed cards like this are a great way to give users a "nudge" toward specific user actions.  
+Content Cards can be leveraged to create dynamic and interactive experiences for your users. In the example below, we have a Content Card pop-up appear at checkout providing users last-minute promotions. Well-placed cards like this are a great way to give users a "nudge" toward specific user actions. 
 
-![Interactive Content PNG][6]{: style="border:0;"}
+![Interactive Content PNG][6]{: style="border:0;"}{: style="max-width:50%;border:0;"} 
 
 #### Dashboard Configuration
 
