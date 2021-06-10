@@ -18,7 +18,7 @@ For a complete technical reference, please see our [JavaScript Documentation][9]
 
 There are three easy ways to integrate the Web SDK, to include analytics and messaging components on your site. Be sure to view our [Push Integration Guide][16] if you plan to use Web Push features. 
 
-If your website uses a `Content-Security-Policy`, then please follow our [CSP Header Guide][19] as well.
+If your website uses a `Content-Security-Policy`, then please follow our [CSP Header Guide][19] in addition to the integration steps below.
 
 ### Option 1: NPM or Yarn {#install-npm}
 
