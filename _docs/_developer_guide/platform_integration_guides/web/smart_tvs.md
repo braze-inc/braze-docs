@@ -20,7 +20,7 @@ There are two changes required when integrating with Smart TVs:
 
 1. When downloading or importing the Web SDK, be sure to use the "core" bundle which can be found here: [https://www.npmjs.com/package/@braze/web-sdk-core][6].
 
-2. When initializing the Web SDK, you must set the `disablePushTokenManagement` and `manageServiceWorkerExternally` initialization options to `true`.
+2. When initializing the Web SDK, you must set the `disablePushTokenMaintenance` and `manageServiceWorkerExternally` initialization options to `true`.
 
 ## Analytics
 

@@ -79,13 +79,17 @@ $search_offset: 65px;
       border-width: 1px;
       border-color: transparent;
       border-radius: 0px;
+      width: 106px;
       @media (max-width: $window-mobile-px) {
         margin-right: 0px;
         background-position: left 10px top 10px;
       }
+      @media (max-width: $window-small-px) {
+        width: 40px;
+      }
       box-shadow: none;
       font-size: $base_font_size;
-      width: 106px;
+
       &:focus {
         &::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
           color: $grey-ghost;
@@ -348,6 +352,9 @@ $search_offset: 65px;
         }
       }
     }
+    .aa-InputWrapperSuffix {
+      display: none;
+    }
   }
   #header-search-panel {
     z-index: 800;
@@ -451,7 +458,18 @@ $search_offset: 65px;
         overflow: hidden !important;
       }
     }
+    transition: all ease $search_transition_time;
+    -webkit-transition: all ease $search_transition_time;
+    -moz-transition: all ease $search_transition_time;
 
+    .aa-Panel {
+      left: calc(100vw - 430px) !important;
+    }
+    @media (max-width: $window-mobile-px) {
+      .aa-Panel {
+        left: calc(100vw - 360px) !important;
+      }
+    }
     #search-form_div {
       transition: all ease $search_transition_time;
       -webkit-transition: all ease $search_transition_time;
@@ -461,19 +479,23 @@ $search_offset: 65px;
       .aa-Form {
         background-color: white;
       }
-    }
-    #header-search-form {
-      transition: all ease $search_transition_time;
-      -webkit-transition: all ease $search_transition_time;
-      -moz-transition: all ease $search_transition_time;
-      width: 100%;
-      //padding-left: 1%;
+      #header-search-form {
+        transition: all ease $search_transition_time;
+        -webkit-transition: all ease $search_transition_time;
+        -moz-transition: all ease $search_transition_time;
+        width: 100%;
+        //padding-left: 1%;
+        .aa-InputWrapperSuffix {
+          display: flex;
+        }
+      }
     }
     .aa-Input {
       box-shadow: none;
       margin-bottom: 0px !important;
       padding-left: 0px !important;
       margin-left: 0px !important;
+      width: 100% !important;
     }
 
     .navbar-toggler {

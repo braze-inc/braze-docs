@@ -10,14 +10,16 @@ description: "This reference article covers how to make an Connected Content API
 
 {% raw %}
 
-Messages sent by Braze can retrieve content from a web server to be included in a message by using the `{% connected_content %}` tag. Using this tag, you can assign or declare variables by using `:save`. Aspects of these variables can be referenced later in the message with [Liquid][2]. For example, the following message body will access the url `http://numbersapi.com/random/trivia` and include a fun trivia fact in your message:
+Messages sent by Braze can retrieve content from a web server to be included in a message by using the `{% connected_content %}` tag. Using this tag, you can assign or declare variables by using `:save`. Aspects of these variables can be referenced later in the message with [Liquid][2]. 
+
+For example, the following message body will access the url `http://numbersapi.com/random/trivia` and include a fun trivia fact in your message:
 
 ```
 {% connected_content http://numbersapi.com/random/trivia :save result %}
 Hi there, here is fun some trivia for you!: {{result.text}}
 ```
 
-You can also include user profile attributes as variables in the URL string when making Connected Content requests. As an example, you may have a web service that returns content based on a user's email address and ID. If you're passing attributes containing special characters, such as @, make sure to use the Liquid filter `url_param_escape` to replace any characters not allowed in URLs with their URL-friendly escaped versions, as shown in the email address attribute below.
+You can also include user profile attributes as variables in the URL string when making Connected Content requests. As an example, you may have a web service that returns content based on a user's email address and ID. If you're passing attributes containing special characters, such as the at sign (@), make sure to use the Liquid filter `url_param_escape` to replace any characters not allowed in URLs with their URL-friendly escaped versions, as shown in the email address attribute below.
 
 ```
 Hi, here are some articles that you might find interesting:
@@ -40,11 +42,11 @@ If the endpoint returns JSON, you can detect that by checking if the `connected`
 {% raw %}
 ## Using Basic Authentication
 
-If the URL requires basic authentication, Braze can generate a basic authentication credential for you to use in your API call. In the **Connected Content** tab in **Manage Settings**, you can manage existing basic authentication credentials and add new ones.
+If the URL requires basic authentication, Braze can generate a basic authentication credential for you to use in your API call. You can manage existing basic authentication credentials and add new ones in the **Connected Content** tab of **Manage Settings**.
 
 ![Basic Authentication Credential Management][34]
 
-To add a new credential, click **Add Credential**. You can then name your credential and put in the username and password.
+To add a new credential, click **Add Credential**. Give your credential a name and enter the username and password.
 
 ![Basic Authentication Credential Creation][35]
 
@@ -53,10 +55,11 @@ You can then use this basic authentication credential in your API calls by refer
 ```
 Hi there, here is fun some trivia for you!: {% connected_content https://yourwebsite.com/random/trivia :basic_auth credential_name %}
 ```
-
->  If you delete a credential, keep in mind that any Connected Content calls trying to use it will be aborted.
-
 {% endraw %}
+
+{% alert note %}
+If you delete a credential, keep in mind that any Connected Content calls trying to use it will be aborted.
+{% endalert %}
 
 ## Using Token Authentication
 
