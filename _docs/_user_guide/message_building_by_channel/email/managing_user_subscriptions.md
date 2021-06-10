@@ -18,7 +18,7 @@ Braze has three global subscription states for email users (listed in the chart 
 
 | State | Definition |
 | ----- | ---------- |
-| Opted-in | User has explicitly confirmed he/she wants to receive email. We recommend an explicit opt-in process to acquire consent from users to send emails. |
+| Opted-in | User has explicitly confirmed they want to receive email. We recommend an explicit opt-in process to acquire consent from users to send emails. |
 | Subscribed | User has neither unsubscribed nor explicitly opted-in to receive emails. A user automatically gets set as Subscribed when a valid email address is added to their user profile. |
 | Unsubscribed | User has either explicitly unsubscribed from your emails. |
 {: .reset-td-br-1 .reset-td-br-2}
@@ -171,7 +171,7 @@ Braze's SDKs provide methods for changing a user's push message subscription. Pl
 - [Windows Universal][14]
 
 ### Manually Changing User Subscriptions {#manually-changing-subscriptions}
-You can manually change the subscription status for any user in his/her user profile. You can find individual user profiles by searching for a user's ID or email address on the "User Search" page. Under the user profile's "Engagement" tab, you'll find a user's current push and email subscription status. Clicking on the "Unsubscribed", "Subscribed", or "Opted In" buttons will allow you to change that user's subscription status. If available, the user profile also displays a timestamp for when the user's subscription was last changed.
+You can manually change the subscription status for any user in their user profile. You can find individual user profiles by searching for a user's ID or email address on the "User Search" page. Under the user profile's "Engagement" tab, you'll find a user's current push and email subscription status. Clicking on the "Unsubscribed", "Subscribed", or "Opted In" buttons will allow you to change that user's subscription status. If available, the user profile also displays a timestamp for when the user's subscription was last changed.
 
 ![User Profile Subscription UI][16]
 
