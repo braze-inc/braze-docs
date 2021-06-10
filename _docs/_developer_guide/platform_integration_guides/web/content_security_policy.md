@@ -43,7 +43,7 @@ braze.initialize(apiKey, {
 - `script-src 'nonce-...'` or `script-src 'unsafe-inline'` are required for certain In-App Messages (custom HTML, for example).
 
 ### img-src {#img-src}
-- `img-src: appboy-images.com` - required when using Braze CDN-hosted images.
+- `img-src: appboy-images.com braze-images.com cdn.braze.eu` - required when using Braze CDN-hosted images. These hostnames may vary based on dashboard cluster.
 
 ## Font Awesome {#font-awesome}
 
