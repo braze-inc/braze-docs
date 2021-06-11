@@ -107,6 +107,9 @@ $search_offset: 65px;
   }
   .aa-Autocomplete,
   .aa-DetachedFormContainer {
+    @media (min-width: $window-xxlarge-px) {
+      max-width: 1500px;
+    }
     .aa-Form {
       align-items: center;
       background-color: rgba(
@@ -121,6 +124,10 @@ $search_offset: 65px;
       @media (min-width: $window-medium-px) {
         border: 2px solid #000000;
         border-radius: 15px;
+      }
+      @media (min-width: $window-xxlarge-px) {
+        max-width: 100%;
+        min-width: 100%;
       }
       min-height:60px;
       min-width: 70vw;
@@ -142,6 +149,7 @@ $search_offset: 65px;
   }
   .aa-Panel {
     z-index: 800;
+    max-width: 1048px;
     @media (min-width: $window-medium-px) {
       top: 55px !important;
       border-top-left-radius: 0px;
