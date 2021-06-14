@@ -1,6 +1,6 @@
 ---
 nav_title: Link Aliasing
-alias: /linkaliasing/
+alias: /link_aliasing/
 description: "This article describes how Link Aliasing works and some of the nuances with the feature."
 hidden: true
 ---
