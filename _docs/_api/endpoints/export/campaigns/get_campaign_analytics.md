@@ -107,9 +107,12 @@ Authorization: Bearer YOUR-REST-API-KEY
                 "sms" : [
                   {
                     "sent": (int),
+                    "sent_to_carrier" : (int),
                     "delivered": (int),
                     "rejected": (int),
-                    "delivery_failed": (int)
+                    "delivery_failed": (int),
+                    "opt_out" : (int),
+                    "help" : (int)
                   }
                 ]
               },
