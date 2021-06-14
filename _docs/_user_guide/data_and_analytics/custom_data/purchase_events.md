@@ -72,7 +72,7 @@ In addition to tracking purchase metrics for segmentation, Braze also notes the 
 
 ![Purchase 3][3]
 
-## Purchase Event Properties
+## Purchase Event Properties {#purchase-properties}
 
 With purchase event properties, you can set properties on purchases that can be used to further qualify trigger conditions, increase personalization in messaging, and generate more sophisticated analytics through raw data export. Property value types (string, numeric, boolean, date) vary per platform, and are often assigned as key-value pairs.
 
