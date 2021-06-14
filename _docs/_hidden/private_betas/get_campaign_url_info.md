@@ -3,6 +3,8 @@ nav_title: "GET: Retrieve Link Aliases (Campaign)"
 layout: api_page
 page_type: reference
 hidden: true
+permalink: /get_campaign_link_alias/
+
 platform: API
 channel:
   - Email
@@ -13,12 +15,12 @@ tool:
 description: "This article outlines details about the GET Link Alias endpoint, which allows you to fetch the aliases set on a campaign message variant."
 ---
 {% api %}
-# GET Link Alias set for a URL
+# Campaign Link Alias Endpoint
 {% apimethod get %}
 /campaigns/url_info/details
 {% endapimethod %}
 
-This endpoint will list the alias set in a particular campaign message variant.
+Use this endpoint to list the link alias set in a particular campaign message variant.
 
 {% apiref postman %}  {% endapiref %}
 
@@ -26,9 +28,9 @@ This endpoint will list the alias set in a particular campaign message variant.
 
 | Parameter | Required | Data Type | Description |
 |---|---|---|---|
-| `campaign_id`  | Yes | String | Campaign API identifier |
-| `message_variation_id `  |  Yes | String | Message Variant API ID. |
-| `includes_link_id` | No | String | Value could be a specific link id, as assigned by Braze or ‘null’.  Purpose is to filter the results by a specific link_id. |
+| `campaign_id`  | Yes | String | Campaign API identifier. |
+| `message_variation_id `  |  Yes | String | Message variant API identifier. |
+| `includes_link_id` | No | String | A specific link identifier (as assigned by Braze) or `null`. This is used to filter the results by a specific `link_id`. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 }
 
 ## Example Request
@@ -58,9 +60,9 @@ Authorization: Bearer YOUR-REST-API-KEY
 ```
 
 ### Possible Errors
-- `Missing/Invalid Campaign ID` - The Campaign API ID must be an API identifier.  This is available via API using /campaigns/list or by logging into the Dashboard.
 
-- `Missing/Invalid Message Variant ID` - The Message Variant API ID must be an API identifier.  This is available via API using /campaigns/details or by logging into the Dashboard.
+- `Missing/Invalid Campaign ID` - The Campaign API ID must be an API identifier. You can find this using the [Campaigns List Endpoint]({{site.baseurl}}/api/endpoints/export/campaigns/get_campaigns/) or by logging into the Dashboard.
+- `Missing/Invalid Message Variant ID` - The Message Variant API ID must be an API identifier. You can find this using the [Campaign Details Endpoint]({{site.baseurl}}/api/endpoints/export/campaigns/get_campaign_details/) or by logging into the Dashboard.
 
 
 {% endapi %}

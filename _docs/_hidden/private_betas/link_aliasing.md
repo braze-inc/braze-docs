@@ -80,6 +80,7 @@ In addition to creating segment filters, you can also create action-based messag
 ## Tracking and Reporting
 
 ### Link Tracking
+
 For segmentation purposes, only 100 links can be tracked per app group by default. Links within messages that are archived will automatically be untracked. If archived messages are unarchived, links will need to be tracked again.
 
 ### Link Click Reporting
@@ -99,8 +100,13 @@ __API-Triggered__<br>
 This feature does not support any message variant where the customer passes data related to links. 
 
 __Extracting Data__<br>
-Endpoints are available to extract the `alias` set in each message variant in a campaign or an email Canvas step.
+The following endpoints are available to extract the `alias` set in each message variant in a campaign or an email Canvas step:
+
+- [Campaign Link Alias Endpoint][3]
+- [Canvas Link Alias Endpoint][4]
 
 
 [1]: {% image_buster /assets/img/link_aliasing_click_table.png %}
 [2]: {% image_buster /assets/img/link_aliasing_composer.png %}
+[3]: {{site.baseurl}}/get_campaign_link_alias/ 
+[4]: {{site.baseurl}}/get_canvas_link_alias/
