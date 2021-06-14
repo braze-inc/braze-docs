@@ -98,7 +98,7 @@ When calling `initialize`, set the optional `sdkAuthentication` property to `tru
 import braze from "@braze/web-sdk";
 braze.initialize("YOUR-API-KEY-HERE", {
   baseUrl: "YOUR-SDK-ENDPOINT-HERE",
-  sdkAuthentication: true,
+  enableSdkAuthentication: true,
 });
 ```
 {% endtab %}
