@@ -1,8 +1,8 @@
 $doc_transition_time : 0.25s;
 .doc-container {
-  position: absolute;
   top: 60px;
   max-width: calc(100% - 30px);
+  margin-left: 15px;
   @media (min-width: $window-medium-px) {
     max-width: calc(100% - 45px);
   }
@@ -276,17 +276,18 @@ $doc_transition_time : 0.25s;
       background-color: none;
     }
   }
-
-
-
 }
 
 #doc_right {
   margin-top: 15px;
-  max-width: 280px;
   display: flex;
   display: -webkit-flex; /* Safari */
   flex-direction: column;
+
+  @media (min-width:  $window-xlarge-px) {
+    max-width: 280px;
+  }
+
   @media (min-width:  $window-medium-px) {
     margin-right: 1.5%;
     margin-left: 1.5%;
@@ -377,7 +378,12 @@ $doc_transition_time : 0.25s;
     }
   }
 }
-
+#doc-main-search {
+  @media (min-width:  $window-xxlarge-px) {
+    max-width: 1500px;
+    margin: auto;
+  }
+}
 #footer_div {
   margin: auto;
   border-top: none !important;
