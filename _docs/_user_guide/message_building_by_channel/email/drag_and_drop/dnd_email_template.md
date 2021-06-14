@@ -1,10 +1,12 @@
 ---
-nav_title: Drag & Drop Editor Templates
-permalink: "/dnd/email_template/"
-hidden: true
+nav_title: Templates
+alias: "/dnd/email_template/"
+channel: email
+description: "This reference article covers how to create and customize Drag & Drop email templates."
+page_order: 0
 ---
 
-# Create an Email Template using the Drag & Drop Editor
+# Drag & Drop Editor Templates
 
 > Email messages are great for delivering content to the user on their terms. They are also wonderful tools to re-engage users who may have even uninstalled your app. With this email editing experience, you can quickly design and template beautiful emails with ease.
 

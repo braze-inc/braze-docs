@@ -1,10 +1,12 @@
 ---
-nav_title: Drag & Drop Editor Blocks
-permalink: "/dnd/editor_blocks/"
-hidden: true
+nav_title: Editor Blocks
+alias: "/dnd/editor_blocks/"
+channel: email
+page_order: 1
+description: "This reference article covers the different editor blocks that are provided in the email Drag & Drop editor."
 ---
 
-# Editor Blocks
+# Drag & Drop Editor Blocks
 
 Editor blocks are the various blocks available in the drag & drop editor under the 'Content' section.  This section includes a series of tiles that represent the different kinds of content you can use in your message. More will become available in the future.
 
