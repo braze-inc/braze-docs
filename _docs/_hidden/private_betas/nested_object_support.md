@@ -1,6 +1,6 @@
 ---
 nav_title: Nested Object Support
-permalink: "/nested_object_support/"
+alias: "/nested_object_support/"
 hidden: true
 ---
 <br>
