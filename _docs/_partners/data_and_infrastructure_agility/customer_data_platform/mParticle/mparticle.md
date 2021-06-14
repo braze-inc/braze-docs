@@ -15,7 +15,7 @@ page_type: partner
 
 You can improve your data flow by marrying mParticle and Braze for a seamless way to control the flow of information between systems. What's more, with Currents, Braze's real-time data export, connect data to mParticle, and make it actionable across the entire growth stack.
 
-If you're looking for information on the Currents integration with mParticle, [click here]({{site.baseurl}}/partners/data_and_infrastructure_agility/customer_data_platform/mparticle_for_currents/).
+If you're looking for information on the Currents integration with mParticle, [click here]({{site.baseurl}}/partners/data_and_infrastructure_agility/customer_data_platform/mParticle/mparticle_for_currents/).
 
 ## Prerequisites
 
