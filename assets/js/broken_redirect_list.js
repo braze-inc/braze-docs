@@ -128,7 +128,8 @@ validurls['/docs/partner_integrations/'] = '/docs/partners/home/';
 validurls['/docs/apptimize_integration/'] = '/docs/partners/channel_extensions/ab_testing/apptimize/';
 validurls['/docs/okta/'] = '/docs/user_guide/administrative/logging_in_and_security/single_sign_on/';
 validurls['/docs/email_spam_testing/'] = '/docs/user_guide/message_building_by_channel/email/inbox_vision/#spam-testing';
-validurls['/docs/link_templates/'] = '/docs/user_guide/message_building_by_channel/email/link_templates/';
+validurls['/docs/link_templates/'] = '/docs/user_guide/message_building_by_channel/email/templates/link_templates/';
+validurls['/docs/user_guide/message_building_by_channel/email/link_templates/'] = '/docs/user_guide/message_building_by_channel/email/templates/link_template/';
 
 validurls['/docs/app_settings/'] = '/docs/user_guide/administrative/app_settings/developer_console/api_settings_tab/#api-settings-tab';
 validurls['/docs/best_practices/'] = '/docs/help/home/';
@@ -358,3 +359,6 @@ validurls['/docs/help/webinars/measuring_success_with_braze_data/'] = '/docs/hel
 validurls['/docs/help/webinars/personalization_and_liquid/'] = '/docs/help/home/';
 validurls['/docs/help/webinars/sending_test_messages/'] = '/docs/help/home/';
 validurls['/docs/help/webinars/troubleshooting_bootcamp/'] = '/docs/help/home/';
+
+validurls['/docs/user_guide/message_building_by_channel/email/creating_an_email_template/'] = '/docs/user_guide/message_building_by_channel/email/templates/email_template/';
+validurls['/docs/user_guide/administrative/access_braze/single_sign_on/restriction/'] = '/docs/user_guide/administrative/access_braze/single_sign_on/set_up/#restriction';
