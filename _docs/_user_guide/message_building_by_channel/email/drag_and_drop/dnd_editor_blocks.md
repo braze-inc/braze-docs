@@ -2,7 +2,7 @@
 nav_title: Editor Blocks
 alias: "/dnd/editor_blocks/"
 channel: email
-page_order: 1
+page_order: 2
 description: "This reference article covers the different editor blocks that are provided in the email Drag & Drop editor."
 ---
 
