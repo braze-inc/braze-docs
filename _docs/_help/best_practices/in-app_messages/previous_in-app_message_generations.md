@@ -10,18 +10,18 @@ channel: in-app messages
 # Message Type Details
 
 {% alert important %}
-This section reviews previous information around our in-app messages. To see the most up-to date information on our current in-app message generation, see our [new in-app message overview documentation]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/overview/).
+This section reviews previous information around our in-app messages. To see the most up-to date information on our current in-app message generation, see our [new in-app message overview documentation]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/).
 {% endalert %}
 
 ## Universal
 
-This will review previous information around our in-app messages. To see the most up-to date information on our current in-app message generation, see our [in-app message overview documentation]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/overview/).
+This will review previous information around our in-app messages. To see the most up-to date information on our current in-app message generation, see our [in-app message overview documentation]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/).
 
 
 {% details Full-Screen %}
 These are the most engaging, but also the most intrusive since they cover your user’s entire screen. They are great for displaying large, rich images, and can be useful in conveying very important information, such as crucial new features and expiring promotions. Since they are more disruptive of the user experience, use these sparingly for top priority content.
 
-![Full-Screen Message]({% image_buster /assets/img_archive/braze_fullscreen.png %})
+![Full-Screen Message]({% image_buster /assets/img_archive/braze_fullscreen.png %}){: style="max-width:80%;"}
 
 __Customizable Features__
 
@@ -35,7 +35,7 @@ __Customizable Features__
 {% details  Modal %}
 These messages aren’t as intrusive as full-screen messages, as they still allow users to see part of your app’s UI. Since they still contain buttons and images, modal messages may be a better option than slideups if you desire a more interactive, visual campaign. These are great for medium priority content, such as app updates and non-urgent deals and events.
 
-![Modal Message]({% image_buster /assets/img_archive/braze_modal.png %})
+![Modal Message]({% image_buster /assets/img_archive/braze_modal.png %}){: style="max-width:80%;"}
 
 __Customizable Features__
 
@@ -50,7 +50,7 @@ __Customizable Features__
 {% details Traditional Slideup %}
 These are the least intrusive message type, though they can be more or less attention-grabbing depending on your usage of colors and badge icons. This may be the message format to use when onboarding new users and directing them towards particular in-app features, as they don’t pause the app experience and allow for continuous exploration.
 
-![Slideup Message]({% image_buster /assets/img_archive/stopwatch_slideup_IAM.gif %})
+![Slideup Message]({% image_buster /assets/img_archive/stopwatch_slideup_IAM.gif %}){: style="max-width:50%;"}
 
 __Customizable Features__
 
@@ -72,7 +72,7 @@ This will review previous information around more customized in-app messages. To
 {% details Email Capture Message %}
 Email capture messages allow you to easily prompt users of your site to submit their email address, after which it will be available within the Braze system for use in all your messaging campaigns.
 
-![Email Capture Message]({% image_buster /assets/img_archive/web-email-capture.png %})
+![Email Capture Message]({% image_buster /assets/img_archive/web-email-capture.png %}){: style="max-width:60%;"}
 
 >  To enable Email Capture in-app messages, your SDK integration must supply the `allowUserSuppliedJavascript` initialization option to Braze, e.g. `appboy.initialize('YOUR-API_KEY', {allowUserSuppliedJavascript: true})`. This is for security reasons - HTML in-app messages can execute JavaScript so we require a site maintainer to enable them.
 
