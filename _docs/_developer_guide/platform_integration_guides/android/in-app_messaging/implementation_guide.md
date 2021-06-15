@@ -179,13 +179,17 @@ The `IInAppMessage` object has an `extras` dictionary that we can query to find 
 {% tab Kotlin %}
 ```kotlin
 override fun createInAppMessageView(activity: Activity, inAppMessage: IInAppMessage): View {
-  return if (inAppMessage.extras?.get("view_type") == "picker") {
-      getCustomView(activity, inAppMessage)
-  } else {
-      //Defer to default
-      AppboyInAppMessageManager
-          .getInstance()
-          .getDefaultInAppMessageViewFactory(inAppMessage).createInAppMessageView(activity, inAppMessage)
+  return when {
+      inAppMessage.extras?.get("view_type") == "picker" -> {
+          getCustomPickerView(activity, inAppMessage)
+      }
+      //...
+      else -> {
+          //Defer to default
+          AppboyInAppMessageManager
+              .getInstance()
+              .getDefaultInAppMessageViewFactory(inAppMessage).createInAppMessageView(activity, inAppMessage)
+      }
   }
 }
 ```
@@ -239,7 +243,7 @@ private TeamPickerView getCustomView(Activity activity, IInAppMessage inAppMessa
 {% endtabs %}
 
 __Assign Custom Attribute__<br>
-Using the view subclass, after a user presses submit, pass the attribute with its corresponding selected value to Braze.
+Using the view subclass, after a user presses submit, pass the attribute with its corresponding selected value to Braze and dismiss the in-app message by calling `messageClickableView.performClick()`.
 
 {% tabs %}
 {% tab Kotlin %}
@@ -260,8 +264,120 @@ TODO
 {% endtabs %}
 
 ### Custom Full In-App Message
+Implementing a fully custom immersive (full screen) in-app message involves a similar approach outlined above for implementing a customized modal in-app message. In this instance, however, simply extend `AppboyInAppMessageFullView` and customize as needed. Just remember that the view will be displayed over the application UI and views in Android by default are transparent. This means you will need to define a background such that the in-app message obscures the content behind it. By extending `AppboyInAppMessageFullView`, the Braze SDK will handle intercepting touch events on the view and take the appropriate action. Like with the modal example, you can override this behavior for certain controls (like `Switch` controls) in order to collect feedback from the user.
 
+__Using `view_type` for UI Display Behavior__<br>
+We will add another `view_type` extra for our new immersive customization. Revisiting the `createInAppMessageView` method, add a option for the "switches" UI:
 
+{% tabs %}
+{% tab Kotlin %}
+```kotlin
+override fun createInAppMessageView(activity: Activity, inAppMessage: IInAppMessage): View {
+    return when {
+        inAppMessage.extras?.get("view_type") == "picker" -> {
+            getCustomPickerView(activity, inAppMessage)
+        }
+        inAppMessage.extras?.get("view_type") == "switches" -> {
+            getCustomImmersiveView(activity, inAppMessage) // new customization
+        }
+        else -> {
+            //Defer to default
+            AppboyInAppMessageManager
+                .getInstance()
+                .getDefaultInAppMessageViewFactory(inAppMessage).createInAppMessageView(activity, inAppMessage)
+        }
+    }
+}
+```
+{% endtab %}
+{% tab Java %}
+```java
+TODO
+```
+{% endtab %}
+{% endtabs %}
+
+__Override and Provide Custom View__<br>
+Provide a layout that mimics the standard modal in-app message, but supply your view as the root elment, and then inflate that layout 
+```xml
+<?xml version="1.0" encoding="utf-8"?>
+<com.braze.advancedsamples.immersive.CustomImmersiveInAppMessage
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+    <!-- giving the parent layout a white backround color will obscure the app behind the IAM. You could also do this within your custom view -->
+    <LinearLayout android:background="@color/white" android:layout_width="match_parent" android:layout_height="match_parent" android:gravity="center"> 
+        <!-- ... -->
+        <androidx.recyclerview.widget.RecyclerView android:layout_width="match_parent"
+                                                       android:layout_height="wrap_content"
+                                                       android:id="@+id/option_list"/>
+        <!-- ... -->
+    </LinearLayout>
+</com.braze.advancedsamples.immersive.CustomImmersiveInAppMessage>
+```
+
+__Inflate and Customize the View__<br>
+Before setting the options for the `RecyclerView` component, the `inAppMessage` message variable is output as a _String_. This message must be formatted as an array of items to be displayed correctly. As an example, this can be achieved using `String.split(",")`. The `title` and `subtitle` are also extracted from the `extras` bundle.
+{% tabs %}
+{% tab Kotlin %}
+```kotlin
+private fun getCustomImmersiveView(activity: Activity, inAppMessage: IInAppMessage): CustomImmersiveInAppMessage{
+    val view = activity.layoutInflater.inflate(R.layout.full_screen_iam, null) as CustomImmersiveInAppMessage
+    val options = inAppMessage.message.split(",")
+    view.setOptions(options)
+    inAppMessage.extras?.get("title").let { view.setTitle(it) }
+    inAppMessage.extras?.get("subtitle").let {view.setSubtitle(it) }
+    return view
+}
+```
+{% endtab %}
+{% tab Java %}
+```java
+//TODO
+```
+{% endtab %}
+{% endtabs %}
+
+__Assign Custom Attribute__<br>
+Using the view subclass, after a user toggles one of the swtiches, pass the associated attribute and the toggle status to Braze.
+
+{% tabs %}
+{% tab Kotlin %}
+
+```kotlin
+fun logClick(value:String, checked:Boolean){
+    Appboy.getInstance(ctx).logCustomEvent("SwitchChanged", BrazeProperties())
+}
+
+inner class OptionViewHolder(item: View): RecyclerView.ViewHolder(item), View.OnClickListener{
+
+    var value: String = ""
+
+    override fun onClick(p0: View?) {
+        if (p0 is Switch){
+            val checked = p0.isChecked
+            p0.isChecked = !p0.isChecked
+            logClick(value, checked)
+        }
+    }
+}
+override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): OptionViewHolder {
+    return OptionViewHolder(mInflater.inflate(R.layout.switch_cell, null))
+}
+
+override fun onBindViewHolder(holder: OptionViewHolder, position: Int) {
+    holder.itemView.findViewById<TextView>(R.id.label).text = options[position]
+    holder.value = options[position]
+}
+```
+{% endtab %}
+{% tab Java %}
+```java
+TODO
+```
+{% endtab %}
+{% endtabs %}
 
 #### Intercepting In-App Message Touches
 ![Touches][1]{: style="float:right;max-width:30%;margin-left:10px;border:0"}
