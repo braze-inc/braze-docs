@@ -25,15 +25,15 @@ Click on the __Templates & Media__ tab under __Engagement__ in the navigation ba
 
 ## Step 2: Create or Choose a Template
 
-Now, you can create a new template or edit an existing template (plain or [mobile responsive][8]) using either the Drag & Drop editing experience or standard HTML experience. If you'd like to create a new template, then you can choose from Braze's predesigned templates, or you can choose to create a new layout.
+Now, you can create a new template or edit an existing template (plain or [mobile responsive][8]) using either the drag & drop editing experience or standard HTML experience. If you'd like to create a new template, then you can choose from Braze's predesigned templates, or you can choose to create a new layout.
 
 ![New Template][2]
 
-_Note: Any existing custom HTML templates will need to be re-created using the Drag & Drop editor._
+_Note: Any existing custom HTML templates will need to be re-created using the Drag & Drop Editor._
 
 ## Step 3: Customize Your Template
 
-You can write your message within the rich-text editor or optionally flip over to our HTML editor or Drag & Drop editor to customize your content. Once selected, you will be guided to the editor experience you chose. An 'HTML Editor' or 'Drag & Drop Editor' badge will appear, indicating that you are about to use this editing experience for template creation.
+You can write your message within the rich-text editor or optionally flip over to our HTML editor or Drag & Drop Editor to customize your content. Once selected, you will be guided to the editor experience you chose. An 'HTML Editor' or 'Drag & Drop Editor' badge will appear, indicating that you are about to use this editing experience for template creation.
 
 ![dnd_badge_icon]({% image_buster /assets/img/dnd_badge_icon.png %})
 
@@ -63,7 +63,7 @@ Our editor supports **HTML Autocomplete** triggered by the 'Tab' key.  This feat
 {% endtab %}
 {% tab Drag & Drop Editor %}
 
-The Drag & Drop editing experience is broken out into 3 sections: __Sending Settings__, __Content__, and __Preview & Test__.
+The drag & drop editing experience is broken out into 3 sections: __Sending Settings__, __Content__, and __Preview & Test__.
 
 {% subtabs %}
 {% subtab Send Settings %}
@@ -97,7 +97,7 @@ Note: This user may or may not be part of your segmentation criteria. Segmentati
 _Note: Inbox Vision is currently unavailable during this testing phase and will be made available in the future_
 
 {% alert tip %}
-To read more about the different components of the Drag & Drop editing experiance, visit our Drag & Drop documentation articles [here]({{site.baseurl}}/user_guide/message_building_by_channel/email/drag_and_drop/). 
+To read more about the different components of the drag & drop editing experiance, visit our drag & drop documentation articles [here]({{site.baseurl}}/user_guide/message_building_by_channel/email/drag_and_drop/). 
 {% endalert %}
 
 {% endtab %}

@@ -24,7 +24,7 @@ Click __Create Campaign__ in the top right corner of the __Campaigns__ page.
 
 ## Step 2: Compose Your Email or Use a Template {#step-2-choose-your-template-and-compose-your-email}
 
-Click on the appropriate tile to choose select wether to use our Drag & Drop editing or our HTML editor. Once selected, you may either select an existing [HTML][10] or [ Drag & Drop][10] email template, [upload one from a file][18] (HTML editor only), or create one from scratch and then draft your message.
+Click on the appropriate tile to choose select wether to use our drag & drop editing or our HTML editor. Once selected, you may either select an existing [HTML][10] or [ drag & drop][10] email template, [upload one from a file][18] (HTML editor only), or create one from scratch and then draft your message.
 
 ![email1][3]
 

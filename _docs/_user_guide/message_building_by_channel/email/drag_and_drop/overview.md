@@ -1,6 +1,7 @@
 ---
 nav_title: Overview
 alias: "/dnd/email_template/"
+alias: "/dnd/overview/"
 channel: email
 page_order: 1
 description: "This reference article covers various creative details of Drag & Drop editor blocks."
@@ -8,7 +9,7 @@ description: "This reference article covers various creative details of Drag & D
 
 # Drag & Drop Editor Overview
 
-> With Braze Email, you can create completely custom and personalized email messages in either Campaigns or Canvas using a Drag & Drop editing experience.
+> With Braze Email, you can create completely custom and personalized email messages in either Campaigns or Canvas using a drag & drop editing experience.
 
 ## Create a Drag & Drop Email
 
@@ -23,7 +24,7 @@ Navigate to the email wizard and select your editing experience. Two editing opt
 
 ## Editing Experience
 
-The Drag & Drop editing experience is broken out into 3 sections: __Sending Settings__, __Content__, and __Preview & Test__.
+The drag & drop editing experience is broken out into 3 sections: __Sending Settings__, __Content__, and __Preview & Test__.
 
 {% tabs %}
 {% tab Send Settings %}
