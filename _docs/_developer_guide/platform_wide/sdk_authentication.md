@@ -81,7 +81,7 @@ To learn more about JSON Web Tokens, or to browse the [many open source librarie
 
 This feature is available as of the following [SDK versions]({{ site.baseurl }}/user_guide/engagement_tools/campaigns/ideas_and_strategies/new_features/#filtering-by-most-recent-app-versions):
 
-{% sdk_min_versions web:3.3.0 ios:4.2.1 android:14.0.0 %}
+{% sdk_min_versions web:3.3.0 ios:4.3.0 android:14.0.0 %}
 
 ### Enable this feature in the Braze SDK.
 
@@ -98,7 +98,7 @@ When calling `initialize`, set the optional `sdkAuthentication` property to `tru
 import braze from "@braze/web-sdk";
 braze.initialize("YOUR-API-KEY-HERE", {
   baseUrl: "YOUR-SDK-ENDPOINT-HERE",
-  sdkAuthentication: true,
+  enableSdkAuthentication: true,
 });
 ```
 {% endtab %}

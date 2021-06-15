@@ -1,6 +1,6 @@
 ---
 nav_title: Shopify
-alias: /partners/shopify/
+permalink: /partners/shopify/
 description: ""
 page_type: partner
 hidden: true
