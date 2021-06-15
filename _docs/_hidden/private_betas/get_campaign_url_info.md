@@ -3,7 +3,7 @@ nav_title: "GET: Retrieve Link Aliases (Campaign)"
 layout: api_page
 page_type: reference
 hidden: true
-alias: /get_campaign_link_alias/
+permalink: /get_campaign_link_alias/
 
 platform: API
 channel:

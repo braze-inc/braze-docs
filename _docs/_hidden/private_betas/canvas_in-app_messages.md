@@ -1,6 +1,6 @@
 ---
 nav_title: In-App Messages in Canvas
-alias: "/canvas_in-app_messages/"
+permalink: "/canvas_in-app_messages/"
 hidden: true
 ---
 

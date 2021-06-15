@@ -1,6 +1,6 @@
 ---
 nav_title: AMP for Email
-alias: /amphtml/
+permalink: /amphtml/
 hidden: true
 ---
 
