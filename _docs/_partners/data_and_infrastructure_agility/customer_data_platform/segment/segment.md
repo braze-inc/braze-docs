@@ -42,7 +42,7 @@ To get going with your Segment/Braze integration:
 | Name| Description |
 |---|---|
 | App Identifier| Previously called the API Key. Found in the [Developer Console](https://dashboard.braze.com/app_settings/developer_console) under the `API Settings` tab. |
-| REST API Key| Previously called the "App Group Identifier". Found in the [Developer Console](https://dashboard.braze.com/app_settings/developer_console) under the `API Settings` tab. <br> <br> __The REST API Key is not required for the Side-by-Side Integration.__ |
+| REST API Key| Previously called the "App Group Identifier". Found in the [Developer Console](https://dashboard.braze.com/app_settings/developer_console) under the `API Settings` tab. |
 | API Endpoint| Find and enter your [Braze SDK Endpoint]({{site.baseurl}}/user_guide/administrative/access_braze/braze_instances/) in our documentation. <br> <br> Format without the `https` as `sdk.iad-01.braze.com`. |
 | Appboy Datacenter| Your Braze cluster. Select and input your [Braze Instance]({{site.baseurl}}/user_guide/administrative/access_braze/braze_instances/) from the drop down. |
 | Log Purchase when Revenue is present | Choose when to log purchases. |
@@ -112,10 +112,6 @@ For Braze's Web SDK, [Segment's Analytics.js library](https://github.com/segment
 
 {% endtab %}
 {% endtabs %}
-
-{% alert important %}
-For the side-by-side integration, inputting the "Braze REST API Key" into your [Braze's Connection Settings](#connection-settings) in the Segment Dashboard is **not** necessary.
-{% endalert %}
 
 ### Server-to-Server Integration
 
