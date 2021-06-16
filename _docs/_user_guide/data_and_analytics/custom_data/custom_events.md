@@ -8,7 +8,9 @@ description: "This reference article describes custom events and properties, the
 
 # Custom Events
 
-Custom events are actions taken by, or updates about, your users; they're best suited for tracking high-value user interactions within your application. Logging a custom event can trigger any number/type of follow-up campaigns, and enables the listed segmentation filters on the recency and frequency of that event.
+Custom events are actions taken by, or updates about, your users. They're best suited for tracking high-value user interactions within your application. Logging a custom event can trigger any number and type of follow-up campaigns, and enables the listed segmentation filters on the recency and frequency of that event.
+
+> For more on using custom events in your messaging strategies, check out our LAB course on [Custom Events & Attributes](http://lab.braze.com/custom-events-and-attributes)!
 
 ## Custom Event Segmentation Filters
 
@@ -28,12 +30,12 @@ Custom events are actions taken by, or updates about, your users; they're best s
 
 ## Custom Event Analytics
 
-Braze notes the number of times these events have occurred as well as the last time they were performed by each user for segmentation. On the [custom events analytics page][7] you can view in aggregate how often each custom event occurs, as well as by segment over time for more detailed analysis. This is particularly useful to view how your campaigns have affected custom event activity by looking at the gray lines Braze overlays on the time series to indicate the last time a campaign was sent.
+Braze notes the number of times these events have occurred as well as the last time they were performed by each user for segmentation. On the [Custom Events][7] page in the Dashboard, you can view in aggregate how often each custom event occurs, as well as by segment over time for more detailed analysis. This is particularly useful to view how your campaigns have affected custom event activity by looking at the gray lines Braze overlays on the time series to indicate the last time a campaign was sent.
 
 ![custom_event_analytics_example.png][8]
 
 {% alert tip %}
-[Incrementing Custom attributes]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_attributes/#integers) can be used to keep a counter on a user action similar to a custom event. However, you will not be able to view custom attribute data in a time series. User actions that do not need to be analyzed in time series should be recorded via this method.
+[Incrementing custom attributes]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_attributes/#integers) can be used to keep a counter on a user action similar to a custom event. However, you will not be able to view custom attribute data in a time series. User actions that do not need to be analyzed in time series should be recorded via this method.
 {% endalert %}
 
 ### Custom Events Analytics Not Showing?
@@ -42,11 +44,11 @@ Please note that Segments created with custom event data cannot show previous hi
 
 ## Custom Event Storage
 
-All User Profile data, including Custom event metadata (first/last occurrence, total count, and X in Y over 30 days) is stored as long as each profile is active.
+All User Profile data, including custom event metadata (first/last occurrence, total count, and X in Y over 30 days) is stored as long as each profile is active.
 
 ## Custom Event Properties
 
-With Custom Event Properties, you can set properties on Custom events and purchases. These properties can then be used for further qualifying trigger conditions, increasing personalization in messaging, and generating more sophisticated analytics through raw data export. 
+With custom event properties, you can set properties on custom events and purchases. These properties can then be used for further qualifying trigger conditions, increasing personalization in messaging, and generating more sophisticated analytics through raw data export. 
 
 Property values can be:
 - String
@@ -64,22 +66,24 @@ Each Custom event or purchase can have up to 256 distinct Custom event propertie
 
 ![customEventProperties.png][16]
 
-Custom event properties can also be used for personalization within the messaging template. Any campaign using [Action-Based Delivery][19] with a trigger event can use custom event properties from that event for messaging personalization. If a gaming application wanted to send a message to users who had completed a level, it could further personalize the message with a property for the time it took users to complete that level. In this example, the message is personalized for three different segments using [conditional logic][18].  The Custom event property called ``time_spent``, can be included in the message by calling ``{% raw %} {{event_properties.${time_spent}}} {% endraw %}``.
+Custom event properties can also be used for personalization within the messaging template. Any campaign using [Action-Based Delivery][19] with a trigger event can use custom event properties from that event for messaging personalization. If a gaming application wanted to send a message to users who had completed a level, it could further personalize the message with a property for the time it took users to complete that level. In this example, the message is personalized for three different segments using [conditional logic][18].  The custom event property called ``time_spent``, can be included in the message by calling ``{% raw %} {{event_properties.${time_spent}}} {% endraw %}``.
 
 {% alert warning %}
-Triggered in-app messages with templated Custom event properties (for example, ``{event_properties.${time_spent}}}``) will fail and not display if there is no internet connectivity.
+Triggered in-app messages with templated custom event properties (for example, ``{event_properties.${time_spent}}}``) will fail and not display if there is no internet connectivity.
 {% endalert %}
 
-You can change the data type of your Custom event property, but please be aware of [the impacts of changing data types]({{site.baseurl}}/help/help_articles/data/change_custom_data_type/) after data has been collected.
+You can change the data type of your custom event property, but please be aware of [the impacts of changing data types]({{site.baseurl}}/help/help_articles/data/change_custom_data_type/) after data has been collected.
 
 {% alert important %}
 Please note that when making API calls and using the "is blank" filter, a specific custom event property is considered "blank" if excluded from the call. For example, if you were to include `"event_property": "` your users would be considered "not blank".
 {% endalert %}
 
 ## Custom Event Property Storage
+
 Custom event properties are designed to help you increase targeting precision and make messages feel even more personalized. Custom event properties can be stored within Braze in both the short and long term.
 
-If you would like to segment on the values of event properties, you have options:
+If you would like to segment on the values of event properties, you have two options:
+
 1. **Within 30 days:** Braze support personnel can enable event property segmentation based on the frequency and recency of specific event property values within Braze Segments. If you’d like to leverage event properties within Segments, please contact your Braze account executive or Customer Success Manager. Note that this option will impact data usage.<br><br>
 2. **Within and Beyond 30 days:** To cover both short-term and long-term event property segmentation, you can use [Segment Extensions]({{site.baseurl}}/user_guide/engagement_tools/segments/segment_extension/). This feature enables you to segment based on custom events and event properties tracked within the past year. Note that this option will not impact data usage.
 
