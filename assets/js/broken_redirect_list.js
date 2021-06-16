@@ -313,7 +313,7 @@ validurls['/docs/developer_guide/platform_integration_guides/fireos/advanced_use
 validurls['/docs/developer_guide/platform_integration_guides/ios/push_primer/'] = '/docs/developer_guide/platform_integration_guides/ios/push_notifications/push_primer/';
 validurls['/docs/developer_guide/platform_integration_guides/ios/push_story/'] = '/docs/developer_guide/platform_integration_guides/ios/push_notifications/push_story/';
 validurls['/docs/developer_guide/platform_integration_guides/web/content_cards/integration/'] = '/docs/developer_guide/platform_integration_guides/web/content_cards/data_models/';
-validurls['/docs/developer_guide/platform_integration_guides/android/push_notifications/integration/'] = '/docs/developer_guide/platform_integration_guides/android/push_notifications/integration/';
+validurls['/docs/developer_guide/platform_integration_guides/android/push_notifications/integration/'] = '/docs/developer_guide/platform_integration_guides/android/push_notifications/standard_integration/';
 validurls['/docs/developer_guide/platform_integration_guides/android/push_notifications/huawei_integration/'] = '/docs/developer_guide/platform_integration_guides/android/push_notifications/integration/huawei_integration/';
 validurls['/docs/developer_guide/platform_integration_guides/android/push_notifications/integration_baidu/'] = '/docs/developer_guide/platform_integration_guides/android/push_notifications/integration/baidu_integration/';
 
