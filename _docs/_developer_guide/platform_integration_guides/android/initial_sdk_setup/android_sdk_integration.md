@@ -69,7 +69,7 @@ Be sure to perform a Gradle Sync to build your project and incorporate the depen
 Note that as of December 2019, custom endpoints are no longer given out, if you have a pre-existing custom endpoint, you may continue to use it. For a list of our available endpoints, <a href="{{site.baseurl}}/api/basics/#endpoints">click here</a>.
 {% endalert %}
 
-Now that the libraries have been integrated, you have to create an `braze.xml` file in your project's `res/values` folder. If you are on a [specific data cluster][66] or have a pre-existing custom endpoint, you need to specify the [endpoint][67] in your `braze.xml` file as well. The contents of that file should resemble the following code snippet:
+Now that the libraries have been integrated, you have to create an `braze.xml` file in your project's `res/values` folder. If you are on a specific data cluster or have a pre-existing custom endpoint, you need to specify the endpoint in your `braze.xml` file as well. The contents of that file should resemble the following code snippet: 
 
 >  Be sure to substitute your [App Identifier API Key]({{site.baseurl}}/api/api_key/#the-app-identifier-api-key) found within the  **Settings** page of the Braze dashboard for `YOUR_APP_IDENTIFIER_API_KEY`. To find out your specific cluster or endpoint, please ask your Customer Success Manager or [open a support ticket][68].
 
@@ -172,7 +172,5 @@ Please see the following sections in order to enable [custom event tracking]({{s
 [60]: https://github.com/Appboy/appboy-android-sdk/releases
 [63]: https://appboy.github.io/appboy-android-sdk/javadocs/com/appboy/AppboyLifecycleCallbackListener.html#AppboyLifecycleCallbackListener-boolean-boolean-
 [64]: https://appboy.github.io/appboy-android-sdk/javadocs/com/appboy/ui/inappmessage/AppboyInAppMessageManager.html#ensureSubscribedToInAppMessageEvents-android.content.Context-
-[66]: {{site.baseurl}}/developer_guide/eu01_us3_sdk_implementation_differences/overview/
-[67]: {{site.baseurl}}/developer_guide/eu01_us3_sdk_implementation_differences/overview/#sdk-implementation
 [68]: {{site.baseurl}}/support_contact/
 [71]: https://appboy.github.io/appboy-android-sdk/sdk/com/appboy/android-sdk-ui/
