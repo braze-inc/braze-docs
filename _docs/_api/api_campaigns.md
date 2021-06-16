@@ -1,6 +1,8 @@
 ---
 nav_title: API Campaigns
-config_only: true
-layout: blank_config
 page_order: 5
+
+layout: redirect
+redirect_to: /docs/api/api_campaigns/api_campaigns/
+
 ---

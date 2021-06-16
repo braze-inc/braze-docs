@@ -10,6 +10,8 @@ tool:
   - Docs
 platform:
   - APIs
+
+alias: /api/api_campaigns/
 ---
 # API Campaigns
 
