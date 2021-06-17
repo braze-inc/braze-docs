@@ -20,7 +20,7 @@ Looking for the out-of-the-box Content Card developer integration guide? Find it
 
 ### Import Statements and Helper Files
 
-When building out Content Cards, it is recommended to integrate them using a single `import Appboy-iOS-SDK` statement with the use of a helper file. This approach limits issues that arise from excessive SDK imports, making it easier to track, debug, and alter code. An example helper file can be found [here](https://github.com/braze-inc/braze-growth-shares-ios-demo-app/blob/master/Braze-Demo/BrazeManager.swift).
+When working with custom implementation Content Cards, it is recommended to integrate them using a single `import Appboy-iOS-SDK` statement with the use of a helper file. This approach limits issues that arise from excessive SDK imports, making it easier to track, debug, and alter code. An example helper file can be found [here](https://github.com/braze-inc/braze-growth-shares-ios-demo-app/blob/master/Braze-Demo/BrazeManager.swift).
 
 ### Content Cards as Custom Objects
 
@@ -143,6 +143,30 @@ extension CustomObject: ContentCardable {
   }
 }
 ```
+
+__Identifying Types__<br>
+The `ContentCardClassType` enum represents the `class_type` value in the Braze Dashboard. This value is also used as a filter identifier to display Content Cards in different places. 
+
+```swift
+enum ContentCardClassType: Hashable {
+  case yourValue
+  case yourOtherValue
+  ...
+  case none
+ 
+  init(rawType: String?) {
+    switch rawType?.lowercased() {
+    case "your_value": // these values much match the value set in the Braze dashboard
+      self = .yourValue
+    case "your_other_value": // these values much match the value set in the Braze dashboard
+      self = .yourOtherValue
+    ...
+    default:
+      self = .none
+    }
+  }
+}
+```
 {% endsubtab %}
 {% subtab Objective-C %}
 __Custom Object Initializer__<br>
@@ -170,35 +194,7 @@ MetaData from an `ABKContentCard` is used to populate your object's variables. T
   return nil;
 }
 ```
-{% endsubtab %}
-{% endsubtabs %}
-{% subtabs global %}
-{% subtab Swift %}
-__Identifying Types__<br>
-The `ContentCardClassType` enum represents the `class_type` value in the Braze Dashboard. This value is also used as a filter identifier to display Content Cards in different places. 
 
-```swift
-enum ContentCardClassType: Hashable {
-  case yourValue
-  case yourOtherValue
-  ...
-  case none
- 
-  init(rawType: String?) {
-    switch rawType?.lowercased() {
-    case "your_value": // these values much match the value set in the Braze dashboard
-      self = .yourValue
-    case "your_other_value": // these values much match the value set in the Braze dashboard
-      self = .yourOtherValue
-    ...
-    default:
-      self = .none
-    }
-  }
-}
-```
-{% endsubtab %}
-{% subtab Objective-C %}
 __Identifying Types__<br>
 The `ContentCardClassType` enum represents the `class_type` value in the Braze Dashboard. This value is also used as a filter identifier to display Content Cards in different places. 
 
@@ -230,7 +226,28 @@ typedef NS_ENUM(NSInteger, ContentCardClassType) {
 {% tab Handling Content Cards %}
 {% subtabs global %}
 {% subtab Swift %}
+__Requesting Content Cards__<br>
+As long as the observer is still retained in memory, the notification callback from the Braze SDK can be expected.
+
+```swift
+func loadContentCards() {
+  BrazeManager.shared.addObserverForContentCards(observer: self, selector: #selector(contentCardsUpdated))
+  BrazeManager.shared.requestContentCardsRefresh()
+}
+```
+
+__Handling the Content Cards SDK Callback__<br>
+Forward the notification callback to the helper file to parse the payload data for your custom object(s).
+```swift
+@objc func contentCardsUpdated(_ notification: Notification) {
+  guard let contentCards = BrazeManager.shared.handleContentCardsUpdated(notification, for: [.yourValue]) as? [CustomObject],!contentCards.isEmpty else { return }
+ 
+ // do something with your array of custom objects
+}
+```
+
 __Working with Content Cards__<br>
+The `class_type` is passed in as a filter to only return Content Cards that have a matching `class_type`.
 
 ```swift
 func handleContentCardsUpdated(_ notification: Notification, for classTypes: [ContentCardClassType]) -> [ContentCardable] {
@@ -241,7 +258,29 @@ func handleContentCardsUpdated(_ notification: Notification, for classTypes: [Co
 ```
 {% endsubtab %}
 {% subtab Objective-C %}
+__Requesting Content Cards__<br>
+As long as the observer is still retained in memory, the notification callback from the Braze SDK can be expected.
+
+```objc
+- (void)loadContentCards {
+  [[BrazeManager shared] addObserverForContentCards:self selector:@selector(contentCardsUpdated:)];
+  [[BrazeManager shared] requestContentCardsRefresh];
+}
+```
+
+__Handling the Content Cards SDK Callback__<br>
+Forward the notification callback to the helper file to parse the payload data for your custom object(s).
+```objc
+- (void)contentCardsUpdated:(NSNotification *)notification {
+  NSArray *classTypes = @[@(ContentCardClassTypeYourValue)];
+  NSArray *contentCards = [[BrazeManager shared] handleContentCardsUpdated:notification forClassTypes:classTypes];
+ 
+  // do something with your array of custom objects
+}
+```
+
 __Working with Content Cards__<br>
+The `class_type` is passed in as a filter to only return Content Cards that have a matching `class_type`.
 
 ```objc
 - (NSArray *)handleContentCardsUpdated:(NSNotification *)notification forClassType:(ContentCardClassType)classType {  
@@ -255,59 +294,13 @@ __Working with Content Cards__<br>
 ```
 {% endsubtab %}
 {% endsubtabs %}
-{% subtabs global %}
-{% subtab Swift %}
-__Requesting Content Cards__<br>
-
-```swift
-func loadContentCards() {
-  BrazeManager.shared.addObserverForContentCards(observer: self, selector: #selector(contentCardsUpdated))
-  BrazeManager.shared.requestContentCardsRefresh()
-}
-```
-{% endsubtab %}
-{% subtab Objective-C %}
-__Requesting Content Cards__<br>
-
-```objc
-- (void)loadContentCards {
-  [[BrazeManager shared] addObserverForContentCards:self selector:@selector(contentCardsUpdated:)];
-  [[BrazeManager shared] requestContentCardsRefresh];
-}
-```
-{% endsubtab %}
-{% endsubtabs %}
-{% subtabs %}
-{% subtab Swift %}
-__Getting Type-Specific Content Cards__<br>
-The `class_type` is passed in as a filter to only return Content Cards that have a matching `class_type`.
-```swift
-@objc func contentCardsUpdated(_ notification: Notification) {
-  guard let contentCards = BrazeManager.shared.handleContentCardsUpdated(notification, for: [.yourValue]) as? [CustomObject],!contentCards.isEmpty else { return }
- 
- // do something with your array of custom objects
-}
-```
-{% endsubtab %}
-{% subtab Objective-C %}
-__Getting Type-Specific Content Cards__<br>
-The `class_type` is passed in as a filter to only return Content Cards that have a matching `class_type`.
-```objc
-- (void)contentCardsUpdated:(NSNotification *)notification {
-  NSArray *classTypes = @[@(ContentCardClassTypeYourValue)];
-  NSArray *contentCards = [[BrazeManager shared] handleContentCardsUpdated:notification forClassTypes:classTypes];
- 
-  // do something with your array of custom objects
-}
-```
-{% endsubtab %}
-{% endsubtabs %}
 {% endtab %}
 
 {% tab Working with Payload Data %}
 {% subtabs global %}
 {% subtab Swift %}
 __Working with Payload Data__<br>
+Loops through the array of Content Cards and only parses the cards with a matching `class_type`. The payload from an ABKContentCard is parsed into a `Dictionary`.
 
 ```swift
 func convertContentCards(_ cards: [ABKContentCard], for classTypes: [ContentCardClassType]) -> [ContentCardable] {
@@ -348,9 +341,27 @@ func convertContentCards(_ cards: [ABKContentCard], for classTypes: [ContentCard
   return contentCardables
 }
 ```
+
+__Initalizing your Custom Objects from Content Card Payload Data__<br>
+The `class_type` is used to determine which of your custom objects will be initialized from the payload data.
+
+```swift
+func contentCardable(with metaData: [ContentCardKey: Any], for classType: ContentCardClassType) -> ContentCardable? {
+  switch classType {
+  case .yourValue:
+    return CustomObject(metaData: metaData, classType: classType)
+  case .yourOtherValue:
+    return OtherCustomObject(metaData: metaData, classType: classType)
+  ...
+  default:
+    return nil
+  }
+}
+```
 {% endsubtab %}
 {% subtab Objective-C %}
 __Working with Payload Data__<br>
+Loops through the array of Content Cards and only parses the cards with a matching `class_type`. The payload from an ABKContentCard is parsed into a `Dictionary`.
 
 ```objc
 - (NSArray *)convertContentCards:(NSArray<ABKContentCard*> *)cards forClassType:(ContentCardClassType)classType {
@@ -391,27 +402,10 @@ __Working with Payload Data__<br>
   return contentCardables;
 }
 ```
-{% endsubtab %}
-{% endsubtabs %}
-{% subtabs global %}
-{% subtab Swift %}
+
 __Initalizing your Custom Objects from Content Card Payload Data__<br>
-```swift
-func contentCardable(with metaData: [ContentCardKey: Any], for classType: ContentCardClassType) -> ContentCardable? {
-  switch classType {
-  case .yourValue:
-    return CustomObject(metaData: metaData, classType: classType)
-  case .yourOtherValue:
-    return OtherCustomObject(metaData: metaData, classType: classType)
-  ...
-  default:
-    return nil
-  }
-}
-```
-{% endsubtab %}
-{% subtab Objective-C %}
-__Initalizing your Custom Objects from Content Card Payload Data__<br>
+The `class_type` is used to determine which of your custom objects will be initialized from the payload data.
+
 ```obj-c
 - (id<ContentCardable>)contentCardableWithMetaData:(NSDictionary *)metaData forClassType:(ContentCardClassType)classType {
   switch (classType) {
@@ -427,8 +421,6 @@ __Initalizing your Custom Objects from Content Card Payload Data__<br>
 ```
 {% endsubtab %}
 {% endsubtabs %}
-
-
 {% endtab %}
 {% endtabs %}
 
@@ -449,7 +441,7 @@ The example to the right shows a `UICollectionView` with a hybrid list of items 
 
 #### Dashboard Configuration
 
-This Content Card is delivered by an API triggered campaign with API triggered key-value pairs. This is ideal for campaigns where the card's values depend on external factors to determine what content to display to the user. Note that `class_type` should be known at set-up time, as seen here with the value of `class_type` set to `home_tile`, a variable that must remain consistent.
+This Content Card is delivered by an API triggered campaign with API triggered key-value pairs. This is ideal for campaigns where the card's values depend on external factors to determine what content to display to the user. Note that `class_type` should be known at set-up time.
 
 ![Supplementary Content PNG][2]{: style="max-width:60%;"}
 
@@ -458,7 +450,7 @@ Visit the [following section](#logging-impressions-clicks-and-dismissals) to get
 
 ### Content Cards in a Message Center
 <br>
-Content Cards can be used in a message center format where each message is its own card. Each message in the message center is populated via a Content Card payload, and each card contains additional key-value pairs that power on-click UI/UX. In the example to the right, one message directs you to an arbitrary custom view, while another opens to a webview that displays custom HTML.
+Content Cards can be used in a message center format where each message is its own card. Each message in the message center is populated via a Content Card payload, and each card contains additional key-value pairs that power on-click UI/UX. In the example below, one message directs you to an arbitrary custom view, while another opens to a webview that displays custom HTML.
 
 ![Message Center PNG][3]{: style="border:0;"}{: style="max-width:80%;border:0"}
 
@@ -519,7 +511,7 @@ Visit the [following section](#logging-impressions-clicks-and-dismissals) to get
 
 ### Interactive Content Cards
 <br>
-Content Cards can be leveraged to create dynamic and interactive experiences for your users. In the example below, we have a Content Card pop-up appear at checkout providing users last-minute promotions. 
+Content Cards can be leveraged to create dynamic and interactive experiences for your users. In the example to the right, we have a Content Card pop-up appear at checkout providing users last-minute promotions. 
 
 Well-placed cards like this are a great way to give users a "nudge" toward specific user actions. 
 <br><br><br>
@@ -536,8 +528,6 @@ Visit the [following section](#logging-impressions-clicks-and-dismissals) to get
 
 After extending your custom objects to function as Content Cards, logging valuable metrics like impressions, clicks, and dismissals is quick and simple. This can be done through the use of a `ContentCardable` protocol that references and provides data to a helper file to be logged by the Braze SDK.
 
-The `logContentCardImpression()` method can only be called from an `ABKContentCard`.To handle this, in the `ContentCardable` protocol, there exists a reference to the Content Card ID. The protocol has a `logContentCardImpression()` method that calls into the `BrazeManager.swift` helper file which only exposes an `idString` parameter. Once passed off to the helper file, the Braze SDK has a public variable, `ContentCards`, that can be queried to get the Content Card from its own identifier that has been passed in. Once the Content Card has been obtained, impressions, click, and dismissals can be logged, all while successfully working with ABK objects only at the moment required.
-
 #### __Implementation Components__<br><br>
 
 {% tabs %}
@@ -549,21 +539,10 @@ customObject.logContentCardImpression()
 customObject.logContentCardClicked()
 customObject.logContentCardDismissed()
 ```
-{% endtab %}
-{% tab Objective-C %}
-__Logging Analytics__<br>
-The logging methods can be called directly from objects conforming to the `ContentCardable` protocol.
-```objc
-[customObject logContentCardImpression];
-[customObject logContentCardClicked];
-[customObject logContentCardDismissed];
-```
-{% endtab %}
-{% endtabs %}
-{% tabs %}
-{% tab Swift %}
+
 __Retreiving the `ABKContentCard`__<br>
-The [helper file](https://github.com/braze-inc/braze-growth-shares-ios-demo-app/blob/master/Braze-Demo/BrazeManager.swift#L171) can reference Braze SDK dependencies such as the `Appboy.sharedInstance()?.contentCardsController.contentCards` array to get the `ABKContentCard` to call our logging methods.
+The `idString` passed in from your custom object is used to identify the associated Content Card to log analytics.
+
 ```swift
 extension BrazeManager {
   func logContentCardImpression(idString: String?) {
@@ -579,8 +558,17 @@ extension BrazeManager {
 ```
 {% endtab %}
 {% tab Objective-C %}
+__Logging Analytics__<br>
+The logging methods can be called directly from objects conforming to the `ContentCardable` protocol.
+```objc
+[customObject logContentCardImpression];
+[customObject logContentCardClicked];
+[customObject logContentCardDismissed];
+```
+
 __Retreiving the `ABKContentCard`__<br>
-The [helper file](https://github.com/braze-inc/braze-growth-shares-ios-demo-app/blob/master/Braze-Demo/BrazeManager.swift#L171) can reference Braze SDK dependencies such as the `Appboy.sharedInstance()?.contentCardsController.contentCards` array to get the `ABKContentCard` to call our logging methods.
+The `idString` passed in from your custom object is used to identify the associated Content Card to log analytics.
+
 ```objc
 - (void)logContentCardImpression:(NSString *)idString {
   ABKContentCard *contentCard = [self getContentCard:idString];
