@@ -1,64 +1,63 @@
 ---
-nav_title: Your Partner Page
+nav_title: Nexla
 page_order: 1
 
-description: "This is the Google Search and SEO description that will appear, try to make this informative and concise, yet brief."
-alias: /partners/your_partner_name/
+description: "Braze Currents and Nexla Make Data Accessible Across Your Entire Ecosystem to the Data Warehouse of Your Choice."
+alias: /partners/nexla/
 
 page_type: partner
 hidden: true
 ---
 
-# [Partner Name]
+# [Nexla]
 
-> Welcome to the Partner Page Template! Here, you'll find everything you need to create your partner page. In this first section, you should describe the partner in the first paragraph in a sentence or two. Also, include a link to that partner's main site.
+> Nexla is the leader in unified data operations and a 2021 Gartner Cool Vendor. Our platform makes it simple for anyone to create scalable data flows. Teams working with data get a no/low-code unified experience to integrate, transform, provision, and monitor data for any use case. Nexla lowers the technical expertise needed to understand and use data. It delivers zero-friction, governed data operations, better collaboration, and agility for business and data teams. To learn more, visit https://www.nexla.com.
 
-In the second paragraph, you should explore and explain the relationship between Braze and this partner. This paragraph should explain how Braze and this partner work together to tighten the bond between the Braze User and their customer. Explain the "elevation" that occurs when a Braze User integrates with or leverages this partner and their services.
+Utilize Currents to send data to your data warehouse of choice. Leverage Nexla to extract, transform, and load that data to other locations, making data easily accessible across your entire ecosystem. Nexla enables you to use Braze Currents to get data in a custom format delivered to your destination of choice by a simple point and click.
 
 ## Requirements or Prerequisites
 
-This section is all about what you need to integrate with the partner and start using their services. The best way to deliver this information is with a quick instructional paragraph that describes any non-technical important details of "need to know" information, like whether or not your integration will be subject to additional security checks or clearances. Then, you should use a chart to describe the technical requirements of the integration.
-
-{% alert important %}
-The requirements listed below are typical requirements you might need from Braze. We recommend using the attributed titling, origin, links, and phrasing as listed in the chart below. Be sure to adjust the description so that you know what each of these requirements is used to do.
-{% endalert %}
+The only requirements to integrate to Braze are a Nexla account and your data in Braze.
 
 | Requirement | Origin | Access | Description |
 |---|---|---|---|
-| Braze API Key | Braze | You will need to create a new API Key.<br><br>This can be created in the __Developer Console -> API Settings -> Create New API Key__ with __users.track__ permissions. | This description should tell you what to do with the Braze API Key. |
-| Braze REST Endpoint | Braze | [Braze REST Endpoint List][1] | Your REST Endpoint URL. Your endpoint will depend on the Braze URL for your instance. |
+| Braze API Key | Braze | You will need to create a new API Key.<br><br>This can be created in the __Developer Console -> API Settings -> Create New API Key__ with __users.track__ permissions. | Save this API key to input into Nexla as part of your Braze credentials. |
+| Braze REST Endpoint | Braze | [Braze REST Endpoint List][1] | Save your REST Endpoint to input into Nexla as part of your Braze credentials. |
+| Nexla Account | Nexla | Start your Free Trial [2] | Access to the Nexla platform and a Nexla account are required to use Braze connectors.
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
 
 ## [Type of Integration] Integration
 
-This is where you break down the integration into steps. Do not just write endless paragraphs - these are technical documents that will be used by marketers and developers alike to get the integration up and running. Your only goal for this section is to write descriptive documentation that helps the Braze User get the job done. By 'Type of Integration' in the section title, we mean to indicate whether or not this is a Side-by-Side integration, server-to-server, or Out-of-the-Box. This enables you to have multiple Integration Sections if there is more than one way to integrate with this partner.
+Integrating with Braze is simple on Nexla. Once you've created an account and logged onto the platform, Braze connectors come ready for production out of the box. Simply select, add your Braze credentials, and immediately begin integrating, preparing, and monitoring your data in any format.
 
-### Step 1: This Is a Short Description of Step One
+### Step 1: Create a Nexla Account
 
-Just break this down, including any code as necessary. Remember that you can offer several different sets of code - there's no need to only offer one way to integrate.
+If needed, head to our website www.nexla.com to request a free demo and trial so we can get you set up with a Nexla account. Log on to www.dataops.nexla.io and sign on with your new credentials.
 
-### Step 2: This Step Will Describe Images
+### Step 2: Add Your Source
 
-You have the option to put images in your documentation, so we recommend you do and do so mindfully.
+If Braze is your data source, navigate to Flows > Create a New Flow on the left toolbar. Click Create New Source, and select the Braze connector. Click Next, then Add a New Credential. Name the credential, and add your Braze API key and REST endpoint. Click Save, Next, select your data and click Save. Nexla will now search the source for any data it finds and generate a "Nexset" for transformation or sending to destination.
 
-### Step 3: How Many Steps
+If Braze is your destination, see connecting sources to Nexla: https://nexla.zendesk.com/hc/en-us/sections/115001685927-Create-a-Data-Source.
 
-Outline thorough usage of the integration - especially if it means inserting Liquid into our message composer.
+For more information on Nexsets, see: https://nexla.zendesk.com/hc/en-us/articles/360052999674-Dataset-Information
 
-## Customization
+### Step 3: Transform (Optional)
 
-This is an __optional__ section. Here, you could outline any specific ways to customize your integration between the two partners.
+If you want to perform any custom transformations on your data or use Nexla's prebuilt connectors, click the Transform button on the dataset to enter the Transform Builder. For more information: https://nexla.zendesk.com/hc/en-us/sections/115001686007-Transformations
+
+### Step 4: Send to Destination
+
+Similar to adding a source, click the Send to Destination arrow on the dataset, and select any of Nexla's destination connectors or Braze if you had a different source. Input your credentials, configure the destination options, and click Save. Data will instantly begin flowing in the format you specified to the destination of your choice.
 
 ## Using This Integration
 
-This should describe how to use the integration - let your reader know if they need to push a few buttons or if they don't need to do anything at all after the integration.
+Once the flow is set up, nothing more is required. Nexla will handle any changes in the source data and scale to any amount of new data, and notify you of any schema changes or errors for triage. If you'd like to make changes to transformations, the source, or destination, you can simply click and make the change and Nexla will update the flow instantly.
 
-### Step 1: This Is a Short Description of Step One
-
-Just your typical step by step how to.
 
 ## Use Cases
 
-This can be a critical part of your documentation. Though this is optional, this is a good place to outline typical or even novel use cases for the integration. This can be used as a way to sell or upsell the relationship - it provides context, ideas, and most importantly a way to visualize the capabilities of the integration.
+Nexla's data-as-a-product, Nexsets, make it easy to work with data of any format without worrying about metadata. When you set up your data flows to or from Braze with Nexla, no-code tools make it easy and available in minutes. Once the data flow is easily set up to any destination, Nexla will monitor your flow and scale to any amount of data. Our platform makes it simple for anyone to create scalable data flows. Teams working with data get a no/low-code unified experience to integrate, transform, provision, and monitor data for any use case. 
 
 [1]: {{site.baseurl}}/developer_guide/rest_api/basics/#endpoints)
+[2]: www.nexla.com/get-demo
