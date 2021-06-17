@@ -58,6 +58,7 @@ There are a number of things to know if you plan to edit or add more steps to an
 - Users who are currently in a Canvas, but have not reached the points where new steps are added __will__ be eligible to receive those new steps.
 - You cannot edit or delete existing connections nor can you insert a step between existing connected steps once a Canvas is launched.
 - Users already in the Canvas will fall out when a Canvas is stopped.
+- If you update the Delay or Window for a step, only new users entering the Canvas and users that haven't been queued for that step yet will receive the message at the updated delay.
 
 ## Canvas Variant Percentages
 

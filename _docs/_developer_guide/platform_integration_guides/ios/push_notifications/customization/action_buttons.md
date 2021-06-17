@@ -10,15 +10,11 @@ channel:
 
 # Action Buttons {#push-action-buttons-integration}
 
-In addition to providing a set of [default push categories][2], Braze supports custom notification categories and actions. Once you register categories in your application, you can use the Braze dashboard to send notification categories to your users.
-
->  If you are not using the `UserNotifications` framework, please see this [alternative categories documentation][31].
-
-These categories can then be assigned to push notifications via our dashboard to trigger the action button configurations of your design. Here's an example that leverages the "LIKE_CATEGORY" displayed on the device!
+The Braze iOS SDK supports default push categories, including URL handling support for each push action button. Currently, the default categories have four sets of push action buttons: `Accept`/`Decline`, `Yes`/`No`, `Confirm`/`Cancel` and `More`. 
 
 ![Illustration of Notification Action][13]
 
-The Braze iOS SDK supports default push categories, including URL handling support for each push action button. Currently, the default categories have four sets of push action buttons: `Accept`/`Decline`, `Yes`/`No`, `Confirm`/`Cancel` and `More`. To register Braze's default push categories, follow the integration instructions below:
+To register Braze's default push categories, follow the integration instructions below:
 
 ## Step 1: Adding Braze Default Push Categories
 
@@ -114,14 +110,22 @@ Appboy.sharedInstance()?.getActionWithIdentifier(identifier,
 We strongly recommend that people using `handleActionWithIdentifier` begin using UNNotification Framework. We recommend this due to the [deprecation of handleActionWithIdentifier](https://developer.apple.com/documentation/uikit/uiapplicationdelegate/1623068-application?language=objc).
 {% endalert %}
 
-<br>
+## Push Category Customization
 
+In addition to providing a set of [default push categories][2], Braze supports custom notification categories and actions. Once you register categories in your application, you can use the Braze dashboard to send notification categories to your users.
+
+>  If you are not using the `UserNotifications` framework, please see this [alternative categories documentation][31].
+
+These categories can then be assigned to push notifications via our dashboard to trigger the action button configurations of your design. Here's an example that leverages the "LIKE_CATEGORY" displayed on the device!
+
+![Push Category Customization Example][17]
 
 
 [13]: {% image_buster /assets/img_archive/iOS8Action.gif %}
 [14]: https://developer.apple.com/reference/usernotifications/unnotificationcategory "Categories Docs"
+[17]: {% image_buster /assets/img_archive/push_example_category.png %}
 [36]: {{site.baseurl}}/developer_guide/platform_integration_guides/ios/push_notifications/integration/#step-4-register-push-tokens-with-braze
-[37]: {{site.baseurl}}/developer_guide/platform_integration_guides/ios/push_notifications/customization/#push-action-buttons-customization
+[37]: {{site.baseurl}}/developer_guide/platform_integration_guides/ios/push_notifications/customization/action_buttons/#push-category-customization
 [39]: {{site.baseurl}}/developer_guide/platform_integration_guides/ios/push_notifications/integration/#step-5-enable-push-handling
 [31]: https://developer.apple.com/reference/uikit/uiusernotificationcategory
-[2]: {{site.baseurl}}/developer_guide/platform_integration_guides/ios/push_notifications/integration/#push-action-buttons-integration
+[2]: {{site.baseurl}}/developer_guide/platform_integration_guides/ios/push_notifications/customization/action_buttons/
