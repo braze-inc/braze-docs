@@ -17,7 +17,7 @@ You can improve your data flow by marrying mParticle and Braze for a seamless wa
 
 If you're looking for information on the Currents integration with mParticle, [click here]({{site.baseurl}}/partners/data_and_infrastructure_agility/customer_data_platform/mparticle_for_currents/).
 
-## Pre-Requisites
+## Prerequisites
 
 | Requirement| Origin| Access| Description|
 | ---| ---| ---|

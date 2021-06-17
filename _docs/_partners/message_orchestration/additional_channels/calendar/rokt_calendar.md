@@ -16,7 +16,7 @@ Customers can use the Braze Canvas to define journey targeting, a segment of you
 
 Rokt Calendar provides Braze customers the ability to align their personalized marketing initiatives and extend personalized content to the end user's Calendar. Thus, making it a more seamless experience for the end user and further develops stickiness with our customers' services. 
 
-## Pre-Requisites
+## Prerequisites
 
 | Requirement | Origin | Who | Description |
 | ----------- | -------| --- | ----------- |

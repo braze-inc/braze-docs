@@ -13,7 +13,7 @@ page_type: partner
 
 Use Liftigniter with Braze’s Connected Content to allow brands to recommend interesting topics such as news articles, clothing and other retail items, and videos.
 
-# Pre-Requisites
+# Prerequisites
 
 | Requirement| Origin| Access| Description|
 | ---| ---| ---|

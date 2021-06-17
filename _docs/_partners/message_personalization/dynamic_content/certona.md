@@ -13,7 +13,7 @@ page_type: partner
 
 Use Certona with Braze's Connected Content partner to easily insert content recommendations across multi-channel campaigns.
 
-# Pre-Requisites
+# Prerequisites
 
 | Requirement| Origin| Access| Description|
 | ---| ---| ---|

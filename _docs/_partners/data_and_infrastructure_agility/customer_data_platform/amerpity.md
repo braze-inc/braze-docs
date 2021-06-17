@@ -19,7 +19,7 @@ Amperity supports the Braze platform by providing a unified view of your custome
 - __Send Amperity data via AWS S3 Buckets to Braze:__ Use a serverless Lambda function to upload Amperity user segments to your AWS S3 bucket that will post user attribute data to Braze.
 - __Manually Upload Amperity data to Braze:__ Manually upload user CSV segments to the Braze platform through the dashboard.
 
-## Pre-Requisites
+## Prerequisites
 
 | Requirement | Origin | Access | Description |
 | ----------- | ------ | ------ | ----------- |

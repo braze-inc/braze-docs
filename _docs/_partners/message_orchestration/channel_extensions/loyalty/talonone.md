@@ -13,7 +13,7 @@ Coupled with the use of a flexible rules engine to boost your conversion and ret
 This partnership is in early access beta. All features may not perform as exactly described. Please reach out to your Braze Account Manager for more information.
 {% endalert %}
 
-## Pre-Requisites
+## Prerequisites
 
 | Requirement | Origin | Description |
 | --------- | ------------ | ---------- |

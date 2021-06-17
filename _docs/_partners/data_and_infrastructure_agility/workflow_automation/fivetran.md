@@ -7,7 +7,7 @@ alias: /partners/fivetran/
 
 [Fivetran](https://fivetran.com/) is a globally recognized brand whose analyst focused products and fully managed pipelines enable data-backed decisions by delivering ready-to-query data into your cloud warehouse. Now, as Braze's new technology partner, data-backed decision making has been made easier and more efficient than ever before, allowing you to spend more time on the difficult tasks.
 
-# Pre-Requisites
+# Prerequisites
 
 Requirement   |Source| Notes
 --------------|------|-------------

@@ -7,7 +7,7 @@ alias: /partners/transifex/
 
 Transifex enables powerful localization across your user base, no matter what the language is. Transifex and Braze's Connected Content feature empowers you to automate translation so your teams are freed up to focus on delivering brilliant customer experiences.
 
-# Pre-Requisites
+# Prerequisites
 
 | Requirement| Origin| Access| Description|
 | ---| ---| ---|
