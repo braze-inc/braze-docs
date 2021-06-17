@@ -48,6 +48,10 @@ While industry best practice is to make your whole site secure, customers who ca
 
 <script src="https://gist-it.appspot.com/https://github.com/Appboy/appboy-web-sdk/blob/master/sample-build/service-worker.js?footer=minimal"></script>
 
+{% alert important %}
+Your web server must return a `Content-Type: application/javascript` when serving your Service Worker file. 
+{% endalert %}
+
 ### What if I can't register a Service Worker in the root directory?
 
 By default, a Service Worker can only be used within the same directory it is registered in. For example, if your Service Worker file exists in `/assets/service-worker.js`, then it would only be possible to register it within `example.com/assets/*` or a subdirectory of the `assets` folder, but not on your homepage (`example.com/`). For this reason, it is recommended to host and register the Service Worker in the root directory (i.e. `https://example.com/service-worker.js`).
