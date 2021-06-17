@@ -9,7 +9,7 @@ page_type: partner
 hidden: true
 ---
 
-# [Nexla]
+# Nexla
 
 > Nexla is the leader in unified data operations and a 2021 Gartner Cool Vendor. Our platform makes it simple for anyone to create scalable data flows. Teams working with data get a no/low-code unified experience to integrate, transform, provision, and monitor data for any use case. Nexla lowers the technical expertise needed to understand and use data. It delivers zero-friction, governed data operations, better collaboration, and agility for business and data teams. To learn more, visit https://www.nexla.com.
 
@@ -23,7 +23,7 @@ The only requirements to integrate to Braze are a Nexla account and your data in
 |---|---|---|---|
 | Braze API Key | Braze | You will need to create a new API Key.<br><br>This can be created in the __Developer Console -> API Settings -> Create New API Key__ with __users.track__ permissions. | Save this API key to input into Nexla as part of your Braze credentials. |
 | Braze REST Endpoint | Braze | [Braze REST Endpoint List][1] | Save your REST Endpoint to input into Nexla as part of your Braze credentials. |
-| Nexla Account | Nexla | Start your Free Trial [2] | Access to the Nexla platform and a Nexla account are required to use Braze connectors.
+| Nexla Account | Nexla | [Start your Free Trial] [2] | Access to the Nexla platform and a Nexla account are required to use Braze connectors.
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
 
 ## [Type of Integration] Integration
