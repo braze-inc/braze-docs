@@ -3,7 +3,8 @@ nav_title: Amperity
 alias: /partners/amperity/
 description: "This article covers the Braze and Amperity integration. Amperity provides intelligent capabilities across data management unification, analytics and insights, and activation."
 page_type: partner
-hidden: true
+page_order: 2.1
+
 ---
 
 # Amperity
@@ -43,7 +44,7 @@ __Once the segment has run, you can either:__
 - [Set up Manual Upload](#manual-upload)
   - Manually upload user CSV segments to the Braze platform through the dashboard. 
 
-### Automatic Upload - Upload via AWS S3 Bucket
+### Automatic Upload - Upload via AWS S3 Bucket {#automatic-upload}
 
 #### Set Braze Destination
 
@@ -157,7 +158,7 @@ To run the function, drop a user attribute CSV file in the newly created S3 buck
 To read more about different aspects of the Lambda function such as monitoring and logging, updating an existing function, fatal errors, and more. Visit our [dedicated Lambda function article](https://www.braze.com/docs/user_csv_lambda/). 
 {% endalert %}
 
-### Manual Upload - Upload via CSV
+### Manual Upload - Upload via CSV {#manual-upload}
 
 #### Amperity Platform
 
