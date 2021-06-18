@@ -24,9 +24,8 @@ The only requirements to integrate to Braze are a Nexla account and your data in
 | Braze API Key | Braze | You will need to create a new API Key.<br><br>This can be created in the __Developer Console -> API Settings -> Create New API Key__ with __users.track__ permissions. | Save this API key to input into Nexla as part of your Braze credentials. |
 | Braze REST Endpoint | Braze | [Braze REST Endpoint List][1] | Save your REST Endpoint to input into Nexla as part of your Braze credentials. |
 | Nexla Account | Nexla | [Start your Free Trial] [2] | Access to the Nexla platform and a Nexla account are required to use Braze connectors.
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
 
-## [Type of Integration] Integration
+## Integration
 
 Integrating with Braze is simple on Nexla. Once you've created an account and logged onto the platform, Braze connectors come ready for production out of the box. Simply select, add your Braze credentials, and immediately begin integrating, preparing, and monitoring your data in any format.
 
