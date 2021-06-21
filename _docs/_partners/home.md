@@ -134,5 +134,7 @@ valid_partner_list:
   url: /docs/partners/data_and_infrastructure_agility/analytics/npaw/
 - name: Phrasee
   url: /docs/partners/data_and_infrastructure_agility/ab_testing/phrasee/
-
+- name: Amperity
+  url: /docs/partners/data_and_infrastructure_agility/customer_data_platform/amperity/
+  
 ---
