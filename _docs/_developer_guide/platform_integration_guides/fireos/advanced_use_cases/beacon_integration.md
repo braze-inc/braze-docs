@@ -14,9 +14,9 @@ Here we will walk through how to integrate specific kinds of beacons with Braze 
 
 ## Gimbal Beacons
 
-Once you have your Gimbal Beacons set up and integrated into your app, you can log Custom events for things like a visit starting or ending, or a beacon being sighted. You can also log properties for these events, like the Place name or the Dwell time.
+Once you have your Gimbal Beacons set up and integrated into your app, you can log custom events for things like a visit starting or ending, or a beacon being sighted. You can also log properties for these events, like the Place name or the Dwell time.
 
-In order to log a Custom Event when a user enters a place, input this code into the `onVisitStart` method:
+In order to log a custom Event when a user enters a place, input this code into the `onVisitStart` method:
 
 {% tabs %}
 {% tab JAVA %}

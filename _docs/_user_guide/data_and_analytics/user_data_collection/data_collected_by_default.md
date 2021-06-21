@@ -9,7 +9,7 @@ tool: Dashboard
 
 # Data Collected by Default
 
-The following events and attributes are captured and updated automatically by the Braze SDK as part of the Session Start and Session End data points, or by the Braze backend. You don't need to record them separately as Custom events or Custom attributes.
+The following events and attributes are captured and updated automatically by the Braze SDK as part of the Session Start and Session End data points, or by the Braze backend. You don't need to record them separately as custom events or custom attributes.
 
 ## Usage Information
 - First Used App (Date)

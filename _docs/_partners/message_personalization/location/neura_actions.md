@@ -21,7 +21,7 @@ See the [Neura Insights][4] Braze integration for further details on how to unco
 
 To get started, ensure that both the Braze and Neura SDKs are properly integrated for Android and iOS.
 
-To integrate the Neura SDK you simply add a few lines of code to your [AppDelegate on iOS][5] or [MainActivity class on Android][6]. You’ll then begin receiving [Neura Moments™][3] as Braze "Custom events". You’ll also gain the ability to segment users based on their real-world lifestyles and habits, [True Personas™][2], received as Braze "Custom attributes".
+To integrate the Neura SDK you simply add a few lines of code to your [AppDelegate on iOS][5] or [MainActivity class on Android][6]. You’ll then begin receiving [Neura Moments™][3] as Braze custom events. You’ll also gain the ability to segment users based on their real-world lifestyles and habits, [True Personas™][2], received as Braze custom attributes.
 
 ![neura-personas-moments.png][10]
 
@@ -76,11 +76,11 @@ mNeuraApiClient.setExternalId(USER_ID)
 
 ## Using Neura with Braze
 
-Once both SDKs are integrated, you can set up a Campaign or Canvas in the Braze Dashboard to be trigged by Neura Moments, which are available in the Braze platform as "Custom events".
+Once both SDKs are integrated, you can set up a campaign or Canvas in the Braze Dashboard to be trigged by Neura Moments, which are available in the Braze platform as custom events.
 
 ![action-based-delivery.png][13]
 
-In addition, Neura recognizes real-world behavioral traits for each individual user. Using Braze, you will be able to target specific users based on their True Personas™, which are available in the Braze platform as "Custom attributes".
+In addition, Neura recognizes real-world behavioral traits for each individual user. Using Braze, you will be able to target specific users based on their True Personas™, which are available in the Braze platform as custom attributes.
 
 ![segment-creation.png][14]
 

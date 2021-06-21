@@ -73,7 +73,7 @@ mFirebaseAnalytics!!logEvent("played song", params)
 
 ### Logging Custom Attributes
 
-Custom attributes are set via an `actionType` set to `customAttribute`. The Braze custom tag provider is expecting the custom attribute key/value to be set via `customAttributeKey` and `customAttributeValue`.
+Custom attributes are set via an `actionType` set to `customAttribute`. The Braze custom tag provider is expecting the custom attribute key-value to be set via `customAttributeKey` and `customAttributeValue`.
 
 {% tabs %}
 {% tab JAVA %}
