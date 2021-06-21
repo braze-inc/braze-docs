@@ -14,6 +14,5 @@ partner_top_header: "Surveys"
 valid_partner_list:
 - name: Iterate
   url: /docs/partners/message_orchestration/channel_extensions/surveys/iterate/
-- name: Digioh
-  url: /docs/partners/message_orchestration/channel_extensions/surveys/digioh/
+
 ---
