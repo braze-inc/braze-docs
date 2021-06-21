@@ -1,9 +1,13 @@
 ---
 nav_title: Troubleshooting
 platform: iOS
-page_order: 3
+page_order: 30
+description: "This article covers potential troubleshooting topics for your iOS push implementation."
+channel:
+  - push
 
 ---
+
 # Troubleshooting {#push-troubleshooting}
 
 ## Understanding the Braze/APNs workflow
@@ -24,7 +28,11 @@ When users open your app, they will be prompted to accept push notifications. If
 
 ### Step 3: Launching a Braze push campaign
 
-When a push campaign is launched, Braze will make requests to APNs to deliver your message. Braze will use the SSL push certificate uploaded in the dashboard to authenticate and verify that we are allowed to send push notifications to the push tokens provided. If a device is online, the notification should be received shortly after the campaign has been sent. Braze sets the default APNs [expiration date][14] for notifications to 30 days.
+When a push campaign is launched, Braze will make requests to APNs to deliver your message. Braze will use the SSL push certificate uploaded in the dashboard to authenticate and verify that we are allowed to send push notifications to the push tokens provided. If a device is online, the notification should be received shortly after the campaign has been sent. 
+
+{% alert note %}
+Braze sets the default APNs [expiration date](https://developer.apple.com/documentation/usernotifications/setting_up_a_remote_notification_server/sending_notification_requests_to_apns#2947607) for notifications to 30 days.
+{% endalert %}
 
 ### Step 4: Removing invalid tokens
 If APNs informs us that any of the push tokens we were attempting to send a message to are invalid, we remove those tokens from the user profiles they were associated with.

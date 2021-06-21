@@ -4,7 +4,12 @@ page_order: 5
 layout: featured
 guide_top_header: "Templates & Media"
 guide_top_text: "The Templates & Media feature of Braze allows you to manage templates and upload images for messages in a single, centralized location. You can consolidate and organize your templates across the dashboard for a coherent look and feel."
-description: "he Templates & Media feature of Braze allows you to manage templates and upload images for messages in a single, centralized location. You can consolidate and organize your templates across the dashboard for a coherent look and feel."
+
+page_type: landing
+tool: 
+- Templates
+- Media
+description: "This landing page is home to Templates and Media articles. Here you can find resources on how to manage templates, upload images, and create Content Blocks."
 
 guide_featured_title: "Popular Articles"
 guide_featured_list:

@@ -9,11 +9,11 @@ $search_transition_time: 0.25s;
 $search_footer_height: 50px;
 $search_offset: 65px;
 
-#doc-search-form_div {
+#doc-search-form_div, .algolia_overlay {
   justify-content: center;
   display: flex;
   margin: auto;
-  
+
   @media(max-width: $window-mobile-px) {
     //width: 25px;
     margin-right: 0px;
@@ -21,404 +21,195 @@ $search_offset: 65px;
   @media (max-width: $window-small-px) {
     margin-right: 10px;
   }
-  @media (min-width: $window-small-px) {
-    width: 115px;
-  }
+
   font-family: $braze-regular;
-  #search-form {
+  #doc-search-home {
     //padding-left: 1%;
-    font-size: $search_font_size;
-    border: 2px solid #000000;
-    border-radius: 15px;
     width: 100%;
-    min-height:60px;
-    min-width: 70vw;
-    z-index: 100;
     background-color: $white;
-    //width: 300px;
-    // @media (min-width: $window-small-px) {
-    //   width: 40%;
-    // }
-    // @media (min-width: $window-xlarge-px) {
-    //   width: 30%;
-    // };
     margin: 20px 15px;
-    /*  @media (min-width: $window-small-px) {
-      width: 40%;
-    }
-    @media (min-width: $window-large-px) {
-      right: 30%;
-    }
-    &.focused {
-      @media (min-width: $window-small-px) {
-        width: 80%;
-      }
-      @media (min-width: $window-large-px) {
-        right: 60%;
-      }
-    }
-  */
-    #doc_search_clear {
-      cursor: pointer;
-      color: $black-shark;
-      margin: auto 0 auto -30px;
-      padding-top: 10px;
-      z-index: 1;
-      display: block !important;
-      @media (min-width: $window-large-px) {
-        z-index: 501;
-      }
-      font-size: 18px;
-      //visibility: hidden;
-      width: 30px;
-      height: 100%;
-      i {
-        margin: auto;
-        padding: 5px;
-      }
-    }
-    #doc_menu_search {
-      background-image: url(#{$base_url}/assets/img/search_navy_cove.svg);
-      height: 38px;
-      background-position: left 10px top 9px;
-      background-size: 14px 14px;
-      background-repeat: no-repeat;
-      background-color: transparent;
-      color: $navy-cove;
-      padding-left: 32px;
-      padding-right: 0px;
-      margin-right: 10px;
-      border: 0;
-      //padding-right: 30px;
-      // border-width: 1px;
-      // border-color: transparent;
-      // border-radius: 0px;
-      @media (max-width: $window-mobile-px) {
-        margin-right: 0px;
-        background-position: left 10px top 10px;
-      }
 
-      font-size: $base_font_size;
-      &:focus {
-        &::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
-          color: $grey-ghost;
-        }
-        &:-ms-input-placeholder { /* Internet Explorer 10-11 */
-          color: $grey-ghost;
-        }
-
-        &::-ms-input-placeholder { /* Microsoft Edge */
-          color: $grey-ghost;
-        }
-        background-image:url(#{$base_url}/assets/img/search_black_shark.svg);
-        // background-color: $white;
-        color: $black-shark;
-        // border-color: $black-shark;
-        border: 0;
-        box-shadow: none;
-      }
-
-
-      @media (max-width:  $window-medium-px) {
-        color: transparent;
-        z-index: 501;
-        &::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
-          color: transparent;
-        }
-        &:-ms-input-placeholder { /* Internet Explorer 10-11 */
-          color: transparent;
-        }
-        &::-ms-input-placeholder { /* Microsoft Edge */
-          color: transparent;
-        }
-        &:hover {
-          color: transparent;
-          &::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
-            color: transparent;
-            opacity: 0; /* Firefox */
-          }
-
-          &:-ms-input-placeholder { /* Internet Explorer 10-11 */
-            color: transparent;
-          }
-
-          &::-ms-input-placeholder { /* Microsoft Edge */
-            color: transparent;
-          }
-        }
-        &:active , &:focus{
-          color: $black-shark;
-          &::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
-            color: $grey-ghost !important;
-          }
-          &:-ms-input-placeholder { /* Internet Explorer 10-11 */
-            color: $grey-ghost !important;
-          }
-
-          &::-ms-input-placeholder { /* Microsoft Edge */
-            color: $grey-ghost !important;
-          }
-        }
-      }
-
-      @media (min-width:  $window-small-px) {
-
-        &::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
-          color: $navy-cove;
-          opacity: 1; /* Firefox */
-        }
-
-        &:-ms-input-placeholder { /* Internet Explorer 10-11 */
-            color: $navy-cove;
-        }
-
-        &::-ms-input-placeholder { /* Microsoft Edge */
-          color: $navy-cove;
-        }
-
-      }
-      @media (min-width:  $window-medium-px) {
-        font-size: $search_font_size ;
-        padding-top: 2px;
-      }
-      @media (min-width:  $window-large-px) {
-        font-size: $search_font_size ;
-
-      }
-      @media (min-width:  $window-xlarge-px) {
-        font-size: $search_font_size;
-        padding-right: 15px;
-
-      }
-      // padding-right: 2rem;
-    }
     transition: all ease $search_transition_time;
     -webkit-transition: all ease $search_transition_time;
     -moz-transition: all ease $search_transition_time;
 
-    &.bz_expanded {
-      width: 100% !important;
-    }
-    // -webkit-transition: left $search_transition_time, width  $search_transition_time; /* For Safari 3.1 to 6.0 */
-    // transition: left $search_transition_time, width  $search_transition_time;
-    .input-group {
-      width: 100%;
-      //margin-bottom: 4px;
-      @media (min-width: $window-small-px) {
-        min-width: 30px;
+    font-size: $base_font_size;
+    &:focus {
+      &::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+        color: $grey-ghost;
       }
-      @media (min-width: $window-large-px) {
+      &:-ms-input-placeholder { /* Internet Explorer 10-11 */
+        color: $grey-ghost;
+      }
+
+      &::-ms-input-placeholder { /* Microsoft Edge */
+        color: $grey-ghost;
+      }
+      // background-color: $white;
+      color: $black-shark;
+      // border-color: $black-shark;
+      box-shadow: none;
+      border-color: #000000;
+      border-width: 2px;
+    }
+  }
+  #doc-search-panel {
+    border: none;
+    box-shadow: none;
+    #algolia_footer {
+      height: $search_footer_height;
+      border-top: 1px solid rgba($grey-ghost,0.7);
+      margin: 0 15px 0 15px;
+
+      .algolia-docsearch-footer {
+          height: $search_footer_height;
+          font-size: 0;
+          line-height: 0;
+          position: absolute;
+          left: 0;
+          margin: auto 10px;
+      }
+      #algolia-docsearch-advanced {
+          height: $search_footer_height;
+          font-size: 13px;
+          line-height: 50px;
+          font-family: $braze-black;
+          color: $navy-bay;
+          position: absolute;
+          right: 0;
+          margin: auto 15px auto 0;
+          cursor: pointer;
+          a {
+            color: $navy-bay;
+            &:hover {
+              color: $navy-bay;
+              text-decoration: none;
+            }
+          }
+      }
+      .algolia-docsearch-footer--logo {
+          background-image: url("#{$base_url}/assets/img/algolia.svg");
+          background-repeat: no-repeat;
+          background-position: 5px center;
+          background-size: 110px 16px;
+          overflow: hidden;
+          text-indent: -9000px;
+          padding: 0!important;
+          width: 120px;
+          height: 100%;
+          display: block;
+
+      }
+    }
+
+    z-index: 700;
+
+  }
+  .aa-Autocomplete,
+  .aa-DetachedFormContainer {
+    @media (min-width: $window-xxlarge-px) {
+      max-width: 1500px;
+    }
+    .aa-Form {
+      align-items: center;
+      background-color: rgba(
+        var(--aa-input-background-color-rgb),
+        var(--aa-input-background-color-alpha)
+      );
+      button{
+        &:focus {
+          outline: none;
+        }
+      }
+      @media (min-width: $window-medium-px) {
+        border: 2px solid #000000;
+        border-radius: 15px;
+      }
+      @media (min-width: $window-xxlarge-px) {
+        max-width: 100%;
         min-width: 100%;
       }
-    }
+      min-height:60px;
+      min-width: 70vw;
 
-    .btn {
-      height: 30px;
-      padding: 0.2rem 0.75rem;
-    }
-
-    .algolia-autocomplete {
-      // @media (min-width: $window-medium-px) {
-      //   width: 80%;
-      // }
+      display: flex;
+      line-height: 1em;
+      margin: 0;
+      position: relative;
       width: 100%;
-      .aa-input,
-      .algolia-autocomplete .aa-hint {
-        width: 100%;
-        height: 30px;
-        @media (min-width: $window-small-px) {
-          width: 100%;
-        }
-        @media (min-width: $window-medium-px) {
-          width: 100%;
-        }
-        @media (min-width: $window-large-px) {
-          width: 100%;
-        }
-        @media (min-width: $window-xlarge-px) {
-          width: 100%;
-        }
+      &:focus-within {
+        border-color: none;
+        box-shadow: none;
+        outline: currentColor none medium;
       }
-
-      .aa-hint {
-        color: #999;
+      .aa-InputWrapperPrefix {
+        margin-top: 10px;
       }
+    }
+  }
+  .aa-Panel {
+    z-index: 800;
+    max-width: 1048px;
+    @media (min-width: $window-medium-px) {
+      top: 55px !important;
+      border-top-left-radius: 0px;
+      border-top-right-radius: 0px;
+      border-width: 2px;
+      border-bottom-left-radius: 15px;
+      border-bottom-right-radius: 15px;
+      border-color: #000000;
+      border-style: solid;
+      border-top-style: none;
+      box-shadow: none;
+    }
 
-      .aa-dropdown-menu {
-        // width: 100%;
-        position: initial !important;
-        background-color: $white;
-        margin: 0 0 0;
-        border: none;
-        min-width: $search_min_width;
-        max-width: 100%;
-        right: -250px !important;
-        left: 0 !important;
-        @media (min-width: $window-small-px) {
-          left: 0 !important;
-        }
-        @media (min-width: $window-medium-px) {
-          right: 0 !important;
-          width: 100%;
-        }
-        @media (min-width: $window-large-px) {
-          width: 100%;
-        }
-        @media (min-width: $window-xlarge-px) {
-          width: 100%;
-        }
+    font-size: $search_font_size ;
+    .aa-Item {
+      hr {
+        margin-top: 15px;
+        border-width: 1px;
+        border-color: rgba($grey-ghost,0.7);
       }
-      //
-      // .aa-dropdown-menu:before {
-      //   position: absolute;
-      //   content: '';
-      //   width: 14px;
-      //   height: 14px;
-      //   background: #fff;
-      //   top: -7px;
-      //   border-top: 1px solid $search_border_color;
-      //   border-right: 1px solid $search_border_color;
-      //   transform: rotate(-45deg);
-      //   border-radius: 2px;
-      //   z-index: 201;
-      //   display: block;
-      //   right: 60%;
-      //   @media (min-width: $window-small-px) {
-      //     right: 50%;
-      //   }
-      //   @media (min-width: $window-medium-px) {
-      //     right: 10%;
-      //   }
-      //   @media (min-width: $window-large-px) {
-      //     right: 40%;
-      //   }
-      //   @media (min-width: $window-xlarge-px) {
-      //     right: 60%;
-      //   }
-      // }
-
-      .aa-dropdown-menu [class^="aa-dataset-"] {
-        position: relative;
-        margin-bottom: 10px;
-        min-width: $search_min_width;
-        max-height: calc(100vh - #{ $search_offset });
-
-      }
-
-      .aa-dropdown-menu .aa-suggestions {
-        max-width: 100%;
-        overflow-x: hidden;
-        max-height: calc(100vh - #{ $search_offset + $search_footer_height + 5px });
-
-      }
-      .no_results {
-        padding: 15px 5px 15px 15px;
-        width: 100%;
-      }
-      .aa-dropdown-menu .aa-suggestion {
+      &:last-child  {
         hr {
-          margin-top: 15px;
-          border-width: 1px;
-          border-color: rgba($grey-ghost,0.7);
-        }
-        &:last-child  {
-          hr {
-            border-color: transparent;
+          border-color: transparent;
 
-          }
         }
-        cursor: pointer;
-        padding: 15px 15px 0px 15px;
+      }
+    }
+
+    cursor: pointer;
+    padding: 15px 15px 0px 15px;
+    width: 100%;
+
+    a {
+      text-decoration: none;
+      &:hover {
+        color: inherit;
+      }
+    }
+
+    div {
+      &.title {
+        font-family: $black-shark;
+        font-size: 14px;
+        color: $search_color;
+        line-height: 1.5;
+      }
+
+      &.content {
+        display: block;
         width: 100%;
-
-        a {
-          text-decoration: none;
-
-          &:hover {
-            color: inherit;
-          }
-        }
-
-        div {
-
-
-          &.title {
-            font-family: $black-shark;
-            font-size: 14px;
-            color: $search_color;
-            line-height: 1.5;
-          }
-
-          &.content {
-            display: block;
-            width: 100%;
-            color: $grey-manatee;
-            font-size: 13px;
-            line-height: 1.5;
-          }
-
-          div {
-            &.category {
-
-              text-align: right;
-              display: inline;
-
-            }
-          }
-        }
+        color: $grey-manatee;
+        font-size: 13px;
+        line-height: 1.5;
       }
 
-      .aa-dropdown-menu .aa-suggestion.aa-cursor {
-        background-color: $grey-athens ;
-      }
+      div {
+        &.category {
 
-      .aa-dropdown-menu .aa-suggestion em {
-        font-family: $braze-black;
-        color: $black-shark;
-        font-style: normal;
-      }
-      #algolia_footer {
-        height: $search_footer_height;
-        border-top: 1px solid rgba($grey-ghost,0.7);
-        margin: 0 15px 0 15px;
-
-        .algolia-docsearch-footer {
-            height: $search_footer_height;
-            font-size: 0;
-            line-height: 0;
-            position: absolute;
-            left: 0;
-            margin: auto 10px;
-        }
-        #algolia-docsearch-advanced {
-            height: $search_footer_height;
-            font-size: 13px;
-            line-height: 50px;
-            font-family: $braze-black;
-            color: $navy-bay;
-            position: absolute;
-            right: 0;
-            margin: auto 15px auto 0;
-            cursor: pointer;
-            a {
-              color: $navy-bay;
-              &:hover {
-                color: $navy-bay;
-                text-decoration: none;
-              }
-            }
-        }
-        .algolia-docsearch-footer--logo {
-            background-image: url("#{$base_url}/assets/img/algolia.svg");
-            background-repeat: no-repeat;
-            background-position: 5px center;
-            background-size: 110px 16px;
-            overflow: hidden;
-            text-indent: -9000px;
-            padding: 0!important;
-            width: 120px;
-            height: 100%;
-            display: block;
+          text-align: right;
+          display: inline;
 
         }
       }

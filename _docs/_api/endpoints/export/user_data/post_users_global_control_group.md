@@ -11,7 +11,7 @@ tool:
   - Campaigns
   - Segment
 
-description: "This article outlines details about the Users in Gloabl Control Groups Braze endpoint."
+description: "This article outlines details about the Users in Global Control Groups Braze endpoint."
 ---
 {% api %}
 # Users by Global Control Group
@@ -168,7 +168,7 @@ User export object (we will include the least data possible - if a field is miss
     "attributed_source" : (string),
     "attributed_adgroup" : (string),
     "attributed_ad" : (string),
-    "custom_attributes" : (object) custom attribute key value pairs,
+    "custom_attributes" : (object) custom attribute key-value pairs,
     "custom_events" : [
         {
             "name" : (string),

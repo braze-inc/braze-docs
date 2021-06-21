@@ -1,6 +1,10 @@
 ---
 nav_title: In-App Messages Not Displaying
 page_order: 2
+
+page_type: solution
+description: "This help article walks you through troubleshooting issues with in-app messages not displaying or rendering properly."
+channel: in-app messages
 ---
 
 # In-App Messages Are Not Displaying
@@ -15,7 +19,7 @@ There are a number of approaches that you may try:
 
 ## Event Triggers
 
-If the Campaign is triggered by a Session Start or a custom event, you will want to ensure that this event or session is happening frequently enough to trigger the message. You can check this data on the App Usage (for session data) or Custom Events pages:
+If the campaign is triggered by a Session Start or a Custom Event, you want to ensure that this event or session is happening frequently enough to trigger the message. Check this data on the [Overview][1] (for session data) or [Custom Events][2] pages:
 
 ![trouble6][14]
 
@@ -52,6 +56,8 @@ These are customizable, however we have them in place to avoid over-messaging yo
 
 Still need help? [Open a support ticket]({{site.baseurl}}/support_contact/).
 
+[1]: {{site.baseurl}}/user_guide/data_and_analytics/your_reports/understanding_your_app_usage_data/#understanding-your-app-usage-data
+[2]: {{site.baseurl}}/user_guide/data_and_analytics/configuring_reporting/#configuring-reporting
 [14]: {% image_buster /assets/img_archive/trouble6.png %}
 [15]: {{site.baseurl}}/help/best_practices/in-app_messages/in-app_message_specs/
 [16]: {{site.baseurl}}/developer_guide/platform_integration_guides/ios/analytics/tracking_sessions/#customizing-session-timeout

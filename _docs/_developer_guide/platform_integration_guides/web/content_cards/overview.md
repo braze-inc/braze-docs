@@ -2,7 +2,11 @@
 nav_title: Overview
 page_order: 0
 platform: Web
+
 page_type: reference
+description: "This article provides an overview of Content Cards, including use cases and important considerations."
+channel: content cards
+
 ---
 
 # Content Cards 
@@ -18,7 +22,9 @@ Braze recommends that customers who use our News Feed tool, move over to our Con
 
 Content Cards typically sit in a feed of sorts (but not necessarily) and help you take advantage of the visual space by incorporating images and graphics that stand out. You can personalize the cards based on user actions, onboard your customers with a checklist, and much more!
 
-### Great Use Cases
+![Content Cards Feed]({% image_buster /assets/img/cc-feed_web.png %}){: style="float:right;max-width:25%;margin-left:15px;"}
+
+## Great Use Cases
 
 - Showcase new content.
 - Coordinate with push messages to illustrate a persistent record of promotions.
@@ -29,9 +35,7 @@ Content Cards typically sit in a feed of sorts (but not necessarily) and help yo
 ## Content Cards & Feed
 
 This is what it looks like for your users to open a basic Content Card feed. As you can see, there are three basic types of cards that can sit in the feed - a Banner Card, a Captioned Content Card, and a Classic Content Card.
-
-![Content Cards Feed]({% image_buster /assets/img/cc-feed_web.png %}){: height="50%" width="50%"}
-
+<br><br>
 {% alert note %}
 Content Cards have a maximum size of **2kb** (including images, links, and all content) - exceeding that amount will prevent the card from sending.
 {% endalert %}

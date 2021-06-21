@@ -3,6 +3,12 @@ nav_title: Slideups
 platform: Message_Building_and_Personalization
 subplatform: In-App Messages
 page_order: 2
+channel:
+  - in-app messages
+tool:
+  - Media
+description: "This reference article covers the message and design requirements of sliedup in-app messages."
+
 ---
 # Slideup In-App Messages
 

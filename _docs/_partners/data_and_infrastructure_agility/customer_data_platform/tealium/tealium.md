@@ -116,7 +116,7 @@ This integration forwards data from Tealium to Braze's REST API.
 Server-to-Server integration does __not__ support Braze UI features such as In-App Messaging, News Feed, or Push notifications. There also exists automatically captured data (Sessions, First Used App, and Last Used App) that is not available through this method. <br>If you wish to use this data and these features, consider our [Side-by-Side]({{site.baseurl}}/partners/data_and_infrastructure_agility/customer_data_platform/tealium/#side-by-side-sdk-integration) SDK integration.
 {% endalert %} 
 
-### prerequisites
+### Prerequisites
 
 | Name | Description |
 | ---- | ----------- |

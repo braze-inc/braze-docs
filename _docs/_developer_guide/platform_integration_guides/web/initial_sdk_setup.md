@@ -3,7 +3,11 @@ nav_title: Initial SDK Setup
 platform: Web
 page_order: 0
 
+page_type: reference
+description: "This article covers initial SDK setup for the Braze Web SDK."
+
 ---
+
 # Initial SDK Setup
 
 The Braze Web SDK lets you collect analytics and display rich In-App Messages, Push, and Content Card messages to your web users.
@@ -13,6 +17,8 @@ For a complete technical reference, please see our [JavaScript Documentation][9]
 ## Step 1:  Install the Braze Library
 
 There are three easy ways to integrate the Web SDK, to include analytics and messaging components on your site. Be sure to view our [Push Integration Guide][16] if you plan to use Web Push features. 
+
+If your website uses a `Content-Security-Policy`, then please follow our [CSP Header Guide][19] in addition to the integration steps below.
 
 ### Option 1: NPM or Yarn {#install-npm}
 
@@ -33,7 +39,6 @@ import appboy from "@braze/web-sdk";
 // or, using `require`
 const appboy = require("@braze/web-sdk");
 ```
-
 
 ### Option 2: Google Tag Manager {#install-gtm}
 
@@ -59,7 +64,7 @@ Add the Braze Web SDK directly to your HTML by referencing our CDN-hosted script
 
 ## Step 2: Initialize Braze
 
-Once the Braze Web SDK is added to your website, initialize the library with the `API Key` and [SDK Endpoint URL]({{site.baseurl}}/user_guide/administrative/access_braze/sdk_endpoints) found in `Manage App Group > App Settings` within your Braze Dashboard.
+Once the Braze Web SDK is added to your website, initialize the library with the `API Key` and [SDK Endpoint URL]({{site.baseurl}}/user_guide/administrative/access_braze/sdk_endpoints) found in **Manage Settings** > **Settings** within your Braze Dashboard.
 
 **Note**: If you've configured your Braze initialization options in a Tag Manager, you can skip this step.
 
@@ -89,7 +94,6 @@ For all other JavaScript methods, please see our complete [JavaScript Reference 
 {% alert note %}
 Anonymous users on mobile or web devices may be counted towards your [MAU]({{site.baseurl}}/user_guide/data_and_analytics/your_reports/understanding_your_app_usage_data/#monthly-active-users). As a result, you may want to conditionally load or initialize the SDK to exclude these users from your MAU count.
 {% endalert %}
-
 
 ## Step 3: (Optional) Web Push
 
@@ -146,5 +150,6 @@ Braze may also be compatible with other tag management solutions by following ou
 [9]: https://js.appboycdn.com/web-sdk/latest/doc/module-appboy.html "JSDocs"
 [16]: {{site.baseurl}}/developer_guide/platform_integration_guides/web/push_notifications/integration/
 [17]: https://github.com/Appboy/appboy-web-sdk/blob/master/CHANGELOG.md#300
-[18]: {{site.baseurl}}/developer_guide/platform_integration_guides/web/google_tag_manager
+[18]: {{site.baseurl}}/developer_guide/platform_integration_guides/web/google_tag_manager/
+[19]: {{site.baseurl}}/developer_guide/platform_integration_guides/web/content_security_policy/
 <!-- wesley wanted an empty line at the end -->

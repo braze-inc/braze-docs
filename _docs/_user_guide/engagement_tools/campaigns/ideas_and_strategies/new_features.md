@@ -4,9 +4,15 @@ platform: Campaigns
 subplatform: Ideas and Strategies
 page_order: 7
 
-tools: campaigns
 page_type: reference
 description: "This reference article discusses how to keep your users knowledgeable and excited about when you release new features or versions."
+tool: Campaigns
+platform: 
+- iOS
+- Android
+channel:
+- in-app messages
+- content cards
 ---
 # Feature Awareness and New App Version
 
@@ -86,7 +92,7 @@ For feature awareness campaigns, timing is also key.  Onboarding should familiar
 
 ### Use Non-intrusive Channels
 
-Because they are relatively intrusive, push notifications and emails that ask users to update can come off as needy if sent too often. Be sure to use a multi-channel strategy when making your request, focusing on in-app channels if possible. [In-app messages][5] and [Content Cards][6] cards are less disruptive and easily ignored if the user doesn’t wish to update immediately. Be sure to include deep links to the appropriate app store. Simple in-app messages pointing out new features can be a great way to expose users to new content without getting in their way and cluttering them with messages.
+Because they are relatively intrusive, push notifications and emails that ask users to update can come off as needy if sent too often. Be sure to use a multichannel strategy when making your request, focusing on in-app channels if possible. [In-app messages][5] and [Content Cards][6] cards are less disruptive and easily ignored if the user doesn’t wish to update immediately. Be sure to include deep links to the appropriate app store. Simple in-app messages pointing out new features can be a great way to expose users to new content without getting in their way and cluttering them with messages.
 
 
 [1]: {% image_buster /assets/img_archive/new_app_version.png %}

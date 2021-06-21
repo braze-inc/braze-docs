@@ -6,8 +6,7 @@ page_type: reference
 platform: API
 tool:
   - Campaigns
-hidden: true
-description: "This article outlines details about the Send Transactional Email message via API Triggered Delivery Braze endpoint."
+description: "This article outlines details about the Send Transactional Email Messages via API Triggered Delivery Braze endpoint."
 ---
 
 {% api %}
@@ -30,7 +29,7 @@ Authorization: Bearer YOUR-REST-API-KEY
 ```json
 {
   "external_send_id": (optional, string) see external_send_id below,
-  "trigger_properties": (optional, object) personalization key value pairs that will apply to the user in this request,
+  "trigger_properties": (optional, object) personalization key-value pairs that will apply to the user in this request,
   "recipient": (required, object)
     {
       // Either "external_user_id" or "user_alias" is required. Requests must specify only one.
@@ -46,7 +45,7 @@ Authorization: Bearer YOUR-REST-API-KEY
 | Parameter | Required | Data Type | Description |
 | --------- | ---------| --------- | ----------- |
 |`external_send_id`| Optional | String |  A Base64 compatible string. Validated against the following regex `/^[a-zA-Z0-9-_+\/=]+$/`. This optional field allows you to pass an internal identifier for this particular send which will be included in events sent from the Transactional HTTP event postback. When passed, this identifier will also be used as a deduplication key, which Braze will store for 24 hours. Passing the same identifier in another request will not result in a new instance of a send by Braze for 24 hours.|
-|`trigger_properties`|Optional|Object|Personalization key value pairs that will apply to the user in this request|
+|`trigger_properties`|Optional|Object|Personalization key-value pairs that will apply to the user in this request|
 |`recipient`|Required|Object|The user you are targeting this message to. Please note that given an external user ID that does not already exist in Braze, passing any fields to the `attributes` object will create this user profile in Braze and send it to the newly created user. Please note, if you send multiple requests to the same user with different data in the `attributes` object, Braze will ensure that `first_name`, `last_name`, and `email` attributes will be updated synchronously and templated into your message. Custom attributes do not have this same protection, so proceed with caution when updating a user through this API and passing different custom attribute values in quick succession.|
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
 
@@ -93,7 +92,7 @@ All Transactional Emails are complimented with event status postbacks sent as an
 
 In order to associate the incoming events to a particular instance of send, you can choose to either capture and store the Braze Dispatch ID returned in the API response as detailed above, or pass your own identifier to the `external_send_id` field. An example of a value you may choose to pass to that field may be an order ID, where after completing order 1234, an order confirmation message is triggered to the user through Braze, and `external_send_id : 1234` is included in the request. All following event postbacks such as `Sent` and `Delivered` will include `external_send_id : 1234` in the payload allowing you to confirm that user successfully received their order confirmation email.
 
-To get started using the Transactional HTTP Event Postback, navigate to Manage App Group > Email Settings > Transactional WebPush URL in your Braze dashboard and input your desired URL to receive postbacks.
+To get started using the Transactional HTTP Event Postback, navigate to Manage Settings > Email Settings > Transactional WebPush URL in your Braze dashboard and input your desired URL to receive postbacks.
 
 ![Transactional Webhook URL Update]({% image_buster /assets/img/transactional_webhook_url.png %})
 

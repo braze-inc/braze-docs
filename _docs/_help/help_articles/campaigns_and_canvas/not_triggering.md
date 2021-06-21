@@ -1,6 +1,12 @@
 ---
 nav_title: Why is my Campaign/Canvas Not Triggering?
 page_order: 4
+
+page_type: solution
+description: "This help article walks you through steps to resolve issues with campaigns or Canvases not triggering as expected."
+tool: 
+- Campaigns
+- Canvas
 ---
 
 # Why Is My Campaign/Canvas Not Triggering?

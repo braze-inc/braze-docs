@@ -28,23 +28,23 @@ user_menu_list:
     description: Are you ready to start building a customer journey? We'll guide you through it.
 
 popular_topic_list:
-  - name: "Canvas: The Basics"
-    link: /docs/user_guide/engagement_tools/canvas/get_started/the_basics/
-  - name: Create a Campaign
-    link: /docs/user_guide/engagement_tools/campaigns/ideas_and_strategies/active_user_campaigns/
-  - name: Locations and Geofences
-    link: /docs/user_guide/engagement_tools/locations_and_geofences/about/
-  - name: Personalized Messaging & Liquid
-    link: /docs/user_guide/personalization_and_dynamic_content/overview/
-  - name: Log Into Braze
-    link: /docs/user_guide/administrative/access_braze/getting_your_account/
-  - name: Create a Segment
-    link: /docs/user_guide/engagement_tools/segments/creating_a_segment/
-  - name: News Feeds
-    link: /docs/user_guide/engagement_tools/news_feed/creating_a_news_feed_item/
-  - name: Email Templates
-    link: /docs/user_guide/message_building_by_channel/email/creating_an_email_template/#creating-an-email-template
-  - name: User Data Collection
-    link: /docs/user_guide/data_and_analytics/user_data_collection/overview/
+  - name: User Import
+    link: /docs/user_guide/data_and_analytics/user_data_collection/user_import/
+  - name: Custom Events
+    link: /docs/user_guide/data_and_analytics/custom_data/custom_events/
+  - name: Customize In-App Messages
+    link: /docs/user_guide/message_building_by_channel/in-app_messages/customize/
+  - name: Custom Attributes
+    link: /docs/user_guide/data_and_analytics/custom_data/custom_attributes/
+  - name: Braze Currents
+    link: /docs/user_guide/data_and_analytics/braze_currents/
+  - name: Message Engagement Events
+    link: /docs/user_guide/data_and_analytics/braze_currents/event_glossary/message_engagement_events/
+  - name: Supported Personalization Tags
+    link: /docs/user_guide/personalization_and_dynamic_content/liquid/supported_personalization_tags/
+  - name: Managing User Subscriptions
+    link: /docs/user_guide/message_building_by_channel/email/managing_user_subscriptions/
+  - name: User Profile Lifecycle
+    link: /docs/user_guide/data_and_analytics/user_data_collection/user_profile_lifecycle/
 
 ---

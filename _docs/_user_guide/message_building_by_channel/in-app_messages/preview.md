@@ -4,6 +4,10 @@ platform: Message_Building_and_Personalization
 subplatform: In-App Messages
 page_order: 9
 description: "This reference article covers the new in-app messaging HTML Preview feature."
+channel:
+  - in-app messages
+tool:
+  - Dashboard
 ---
 
 # In-App Messages HTML Preview
@@ -33,7 +37,7 @@ We'll ensure that any [`appboyBridge`]({{site.baseurl}}/user_guide/message_build
 
 This new HTML message type now lets you create one message that can be sent to both mobile and web!
 
-![New HTML In App Message Cross Channel]({% image_buster /assets/img/iam-beta-html-cross-channel.png %})
+![New HTML In-App Message Cross Channel]({% image_buster /assets/img/iam-beta-html-cross-channel.png %})
 
 ### New Asset Uploader
 
@@ -61,7 +65,7 @@ The code editor now includes Syntax Highlighting with a number of different colo
 
 This helps to easily spot potential code errors directly in the message composer, and better organize your code (using spaces or tabs - whichever side of that argument you're on).
 
-![New HTML In App Message Syntax Highlighting]({% image_buster /assets/img/iam-beta-html-syntax-highlighting.png %})
+![New HTML In-App Message Syntax Highlighting]({% image_buster /assets/img/iam-beta-html-syntax-highlighting.png %})
 
 ### Button Tracking Improvements
 
@@ -125,7 +129,7 @@ Consider adopting this new message type once a significant portion of your user 
 
 When creating a "Custom Code" message, choose the new "HTML Upload with Preview" option as shown below:
 
-![New HTML In App Message Early Access Dropdown]({% image_buster /assets/img/iam-beta-html-dropdown.gif %})
+![New HTML In-App Message Early Access Dropdown]({% image_buster /assets/img/iam-beta-html-dropdown.gif %})
 
 Keep in mind that your mobile app users need to upgrade to the supported SDK versions to receive this message. 
 
@@ -144,7 +148,7 @@ To add _new_ assets to your campaign, use the Drag-and-Drop section to upload a 
 
 You can also add _existing_ assets to your campaign that you've already uploaded to Braze's Media Library.
 
-![New HTML In App Message Asset Uploader]({% image_buster /assets/img/iam-beta-html-asset-uploader.gif %})
+![New HTML In-App Message Asset Uploader]({% image_buster /assets/img/iam-beta-html-asset-uploader.gif %})
 
 Once your assets are added to a campaign, you can use the _Copy Link_ button to store the file's URL to your clipboard.
 

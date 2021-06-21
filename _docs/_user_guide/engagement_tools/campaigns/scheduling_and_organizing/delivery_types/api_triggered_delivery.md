@@ -2,9 +2,10 @@
 nav_title: API Triggered Delivery
 page_order: 2
 
-tools: campaigns
 page_type: reference
-description: "This reference article gives an overview of different ways to go about scheduling a campaign."
+description: "This reference article describes how to schedule an API-triggered campaign."
+tool: Campaigns
+platform: API
 ---
 
 # API Triggered Campaigns (Server Triggered Campaigns)
@@ -13,7 +14,7 @@ API Triggered Campaigns are ideal for more advanced transactional use-cases. Bra
 
 ## Setting up an API Triggered Campaign
 
-Setting up an API Triggered Campaign is easy. First, create a new multi-channel or single-channel campaign (with multivariate testing).
+Setting up an API Triggered Campaign is easy. First, create a new multichannel or single-channel campaign (with multivariate testing).
 
 {% alert note %}
 An API Triggered Campaign is different from an [API Campaign]({{site.baseurl}}/developer_guide/rest_api/api_campaigns/#api-campaigns).

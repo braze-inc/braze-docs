@@ -6,6 +6,7 @@ alias: /predictive_churn/
 
 guide_top_header: "Predictive Churn"
 guide_top_text: "Customer Churn, also known as customer turnover or client loss, is one of the most important metrics for growing businesses to consider. Having the right tools to address churn is crucial in minimizing loss and maximizing customer retention. To get a jump on these potentially churning users, Braze offers Predictive Churn, providing a proactive approach toward minimizing future churn."
+description: "With Predictive Churn, you can define what churn means for your business Churn Definition as well as the users you'd like to prevent from churning Prediction Audience."
 
 guide_featured_title: "Topics"
 guide_featured_list:
@@ -21,6 +22,10 @@ guide_featured_list:
 - name: Frequently Asked Questions
   link: /docs/user_guide/predictive_suite/predictive_churn/prediction_faq/
   fa_icon: fas fa-question
+
+Tool:
+  - Dashboard
+
 ---
 
 ## Overview

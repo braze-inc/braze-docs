@@ -1,8 +1,9 @@
 ---
-nav_title: CocoaPods
+nav_title: CocoaPods Integration
 platform: iOS
 page_order: 1
-description: "This tutorial covers how to install and use CocoaPods"
+description: "This reference article shows how to integrate the Braze SDK using CocoaPods for iOS."
+
 ---
 
 # CocoaPods Integration
@@ -98,7 +99,7 @@ __Note__: Braze's `sharedInstance` singleton will be nil before `startWithApiKey
 {% endtabs %}
 
 {% alert important %}
-Be sure to update `YOUR-APP-IDENTIFIER-API-KEY` with the correct value from your App Settings page. For more information on where to find your App Identifier API key, check out our [API documentation]({{site.baseurl}}/api/api_key/#the-app-identifier-api-key).
+Be sure to update `YOUR-APP-IDENTIFIER-API-KEY` with the correct value from your **Settings** page. For more information on where to find your App Identifier API key, check out our [API documentation]({{site.baseurl}}/api/api_key/#the-app-identifier-api-key).
 {% endalert %}
 
 {% alert warning %}

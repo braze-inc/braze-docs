@@ -15,7 +15,7 @@ tool:
   - Campaigns
   - Canvas
 
-description: "This article explains the different components of Braze's Kindle or FireOS Object."
+description: "This article explains the different components of Braze's Kindle and FireOS Push Object."
 ---
 
 # Kindle and FireOS Push Object

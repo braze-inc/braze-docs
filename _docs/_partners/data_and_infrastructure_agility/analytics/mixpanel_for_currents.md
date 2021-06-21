@@ -129,6 +129,15 @@ You can manage the Mixpanel Cohort Import process from the Technology Partners p
 }
 ```
 
+### Uninstall Events
+
+```json
+// Uninstall
+{
+  "app_id": (string) id for the app on which the user action occurred
+}
+```
+
 ## Message Engagement Events
 
 ### Push Notification Events
@@ -141,7 +150,7 @@ You can manage the Mixpanel Cohort Import process from the Technology Partners p
   "message_variation_id": (string) id of the message variation if from a campaign,
   "canvas_id": (string) id of the Canvas if from a Canvas,
   "canvas_name": (string) name of the Canvas,
-  "canvas_variation_id": (string) id of the canvas variation the user is in if from a Canvas,
+  "canvas_variation_id": (string) id of the Canvas variation the user is in if from a Canvas,
   "canvas_step_id": (string) id of the step for this message if from a Canvas,
   "send_id": (string) id of the message if specified for the campaign (See Send Identifier under API Identifier Types),
   "app_id": (string) id for the app on which the user action occurred,
@@ -211,7 +220,7 @@ You can manage the Mixpanel Cohort Import process from the Technology Partners p
   "message_variation_id": (string) id of the message variation if from a campaign,
   "canvas_id": (string) id of the Canvas if from a canvas,
   "canvas_name": (string) name of the Canvas,
-  "canvas_variation_id": (string) id of the canvas variation the user is in if from a Canvas,
+  "canvas_variation_id": (string) id of the Canvas variation the user is in if from a Canvas,
   "canvas_step_id": (string) id of the step for this message if from a Canvas,
   "send_id": (string) id of the message if specified for the campaign (See Send Identifier under API Identifier Types),
   "dispatch_id": (string) id of the message dispatch (unique id for each 'transmission' sent from the Braze platform). Users who are sent a schedule message get the same dispatch_id. Action-based or API triggered messages get a unique dispatch_id per user.,
@@ -237,8 +246,8 @@ _Update noted in August 2019._
   "message_variation_id": (string) id of the message variation if from a campaign,
   "canvas_id": (string) id of the Canvas if from a canvas,
   "canvas_name": (string) name of the Canvas,
-  "canvas_variation_id": (string) id of the canvas variation the user is in if from a Canvas,
-  "canvas_variation_name": (string) name of the canvas variation the user is in if from a Canvas,
+  "canvas_variation_id": (string) id of the Canvas variation the user is in if from a Canvas,
+  "canvas_variation_name": (string) name of the Canvas variation the user is in if from a Canvas,
   "canvas_step_id": (string) id of the step for this message if from a Canvas,
   "canvas_step_name": (string) name of the step for this message if from a Canvas,
   "send_id": (string) id of the message if specified for the campaign (See Send Identifier under API Identifier Types),
@@ -255,8 +264,8 @@ _Update noted in August 2019._
   "message_variation_id": (string) id of the message variation if from a campaign,
   "canvas_id": (string) id of the Canvas if from a canvas,
   "canvas_name": (string) name of the Canvas,
-  "canvas_variation_id": (string) id of the canvas variation the user is in if from a Canvas,
-  "canvas_variation_name": (string) name of the canvas variation the user is in if from a Canvas,
+  "canvas_variation_id": (string) id of the Canvas variation the user is in if from a Canvas,
+  "canvas_variation_name": (string) name of the Canvas variation the user is in if from a Canvas,
   "canvas_step_id": (string) id of the step for this message if from a Canvas,
   "canvas_step_name": (string) name of the step for this message if from a Canvas,
   "send_id": (string) id of the message if specified for the campaign (See Send Identifier under API Identifier Types),
@@ -274,8 +283,8 @@ _Update noted in August 2019._
   "message_variation_id": (string) id of the message variation if from a campaign,
   "canvas_id": (string) id of the Canvas if from a canvas,
   "canvas_name": (string) name of the Canvas,
-  "canvas_variation_id": (string) id of the canvas variation the user is in if from a Canvas,
-  "canvas_variation_name": (string) name of the canvas variation the user is in if from a Canvas,
+  "canvas_variation_id": (string) id of the Canvas variation the user is in if from a Canvas,
+  "canvas_variation_name": (string) name of the Canvas variation the user is in if from a Canvas,
   "canvas_step_id": (string) id of the step for this message if from a Canvas,
   "canvas_step_name": (string) name of the step for this message if from a Canvas,
   "send_id": (string) id of the message if specified for the campaign (See Send Identifier under API Identifier Types),
@@ -306,7 +315,7 @@ _Update noted in August 2019._
   "message_variation_id": (string) id of the message variation if from a campaign,
   "canvas_id": (string) id of the Canvas if from a canvas,
   "canvas_name": (string) name of the Canvas,
-  "canvas_variation_id": (string) id of the canvas variation the user is in if from a Canvas,
+  "canvas_variation_id": (string) id of the Canvas variation the user is in if from a Canvas,
   "canvas_step_id": (string) id of the step for this message if from a Canvas,
   "send_id": (string) id of the message if specified for the campaign (See Send Identifier under API Identifier Types),
   "email_address": (string) email address for this event,
@@ -430,15 +439,6 @@ _Update noted in August 2019._
   "platform": (string) platform of the device (iOS, Android, web, etc.),
   "os_version": (string) os version of device used for the action,
   "device_model": (string) hardware model of the device
-}
-```
-
-### Uninstall Events
-
-```json
-// Uninstall
-{
-  "app_id": (string) id for the app on which the user action occurred
 }
 ```
 

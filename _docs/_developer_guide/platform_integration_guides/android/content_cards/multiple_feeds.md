@@ -1,8 +1,11 @@
 ---
 nav_title: Multiple Feeds
-page_order: 5
-
+page_order: 6
 platform: Android
+description: "This reference article covers how to implement multiple Content Card feeds in your Android application."
+channel:
+  - content cards
+
 ---
 
 # Using Multiple Content Card Feeds
@@ -11,9 +14,9 @@ Content Cards can be filtered on the app to only display specific cards, which e
 
 The following documentation demonstrates an example implementation that can be changed to fit your specific integration.
 
-## Step 1: Setting Key Value Pairs on Cards
+## Step 1: Setting Key-Value Pairs on Cards
 
-When creating a Content Card campaign, key value pair data can be set on each Card. Our filtering logic will use this key-value pair data to categorize cards. Note that we do not recommend sending nested JSON values as key value pairs. Instead, in order for things to correctly, we recommend flattening the JSON before sending. 
+When creating a Content Card campaign, key value pair data can be set on each Card. Our filtering logic will use this key-value pair data to categorize cards. Note that we do not recommend sending nested JSON values as key-value pairs. Instead, in order for things to correctly, we recommend flattening the JSON before sending. 
 
 For the purposes of this example, we'll set a key-value pair with the key `feed_type` that will designate which Content Card feed the card should be displayed in. The value will be whatever your custom feeds will be, as in `Transactional`, `Marketing`, and more.
 

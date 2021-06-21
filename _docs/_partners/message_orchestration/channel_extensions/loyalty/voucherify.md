@@ -1,6 +1,7 @@
 ---
 nav_title: Voucherify
 alias: /partners/voucherify/
+description: "This article outlines the partnership between Braze and Voucherify, an all-in-one promotional platform that allows users to automatically send personalized coupons, gift cards, loyalty cards, referral codes, and more – all through their Braze account while tracking redemptions and campaign growth at every step."
 ---
 
 # Voucherify
@@ -61,7 +62,7 @@ After you copy the code to the email body, add your API keys and campaign id as 
 3. Lastly, add the {% raw %}`{{publication.voucher.code}}`{% endraw %} to the email body to display the published code, and select Preview and Test. In the preview, you should see a random code from your Voucherify Campaign. <br><br>We highly advise you not to depend on the Preview mode entirely and to send several test messages to confirm that everything works as it should.<br>![CONNECTED CONTENT PREVIEW]({% image_buster /assets/img/voucherify-cc-preview.png %})
  
 {% alert important %}
-The {% raw %}`{{source_id}}`{% endraw %} parameter in the email body ensures that each customer will receive only one unique code in a single Braze email campaign. It prevents sending other codes to the same customer. Even if Braze unintentionally multiplies messages, the user will receive the same code that was published to him/her in the first message. If you'd like to change this effect, [go here](https://support.voucherify.io/article/113-braze#sourceid) to see other {% raw %}`{{source_id}}`{% endraw %} configurations. 
+The {% raw %}`{{source_id}}`{% endraw %} parameter in the email body ensures that each customer will receive only one unique code in a single Braze email campaign. It prevents sending other codes to the same customer. Even if Braze unintentionally multiplies messages, the user will receive the same code that was published to them in the first message. If you'd like to change this effect, [go here](https://support.voucherify.io/article/113-braze#sourceid) to see other {% raw %}`{{source_id}}`{% endraw %} configurations. 
 {% endalert %}
 
 ### Step 3: Send Messages with Codes to your Users
@@ -147,7 +148,7 @@ When it's ready, you can see the code in your message preview.
 
 ### Step 4: Track Sent Codes in Voucherify
 
-Each time a code gets to the user, it is assigned to his/her profile in Voucherify.
+Each time a code gets to the user, it is assigned to their profile in Voucherify.
 
 When a user redeems the code, you’ll see the redemption details in your Voucherify Dashboard.
 

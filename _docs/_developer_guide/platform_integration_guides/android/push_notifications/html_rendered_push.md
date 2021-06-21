@@ -2,8 +2,13 @@
 nav_title: HTML Push Notifications
 platform: Android
 page_order: 6
+description: "This article covers hwo to implement HTML push notifications in your Android application."
+channel:
+  - push
+
 
 ---
+
 # HTML Push Notifications
 
 In Braze SDK version 3.1.1, HTML can be sent to a device to render multicolor text in push notifications.
@@ -30,26 +35,26 @@ In your `braze.xml`:
 <bool translatable="false" name="com_appboy_push_notification_html_rendering_enabled">true</bool>
 ```
 
-Or in your [AppboyConfig][2]:
+Or in your [BrazeConfig][2]:
 
 {% tabs %}
 {% tab JAVA %}
 
 ```java
-AppboyConfig appboyConfig = new AppboyConfig.Builder()
+BrazeConfig brazeConfig = new BrazeConfig.Builder()
   .setPushHtmlRenderingEnabled(true)
   .build();
-Appboy.configure(this, appboyConfig);
+Braze.configure(this, brazeConfig);
 ```
 
 {% endtab %}
 {% tab KOTLIN %}
 
 ```kotlin
-val appboyConfig = AppboyConfig.Builder()
+val brazeConfig = BrazeConfig.Builder()
     .setPushHtmlRenderingEnabled(true)
     .build()
-Appboy.configure(this, appboyConfig)
+Braze.configure(this, brazeConfig)
 ```
 
 {% endtab %}

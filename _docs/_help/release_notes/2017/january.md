@@ -1,6 +1,9 @@
 ---
 nav_title: January
 page_order: 12
+
+page_type: update
+description: "This article contains release notes for January 2017."
 ---
 # January 2017
 
@@ -22,7 +25,6 @@ You can now click a button to minimize the Canvas header for smaller screens and
 
 
 
-[16]: {{site.baseurl}}docs/user_guide/engagement_tools/campaigns/scheduling_and_organizing/delivery_types/
-[17]: {{site.baseurl}}/user_guide/data_and_analytics/exporting_dashboard_data/#exporting-dashboard-data
-[18]: {{site.baseurl}}/help/troubleshooting_guide/troubleshooting_guide/#email
-[98]:{{site.baseurl}}/user_guide/onboarding/platform_administrative_features/#authentication-rules
+[16]: {{site.baseurl}}/user_guide/engagement_tools/campaigns/scheduling_and_organizing/delivery_types/
+[17]: {{site.baseurl}}/user_guide/data_and_analytics/export_braze_data/
+[18]: {{site.baseurl}}/user_guide/message_building_by_channel/email/faq/

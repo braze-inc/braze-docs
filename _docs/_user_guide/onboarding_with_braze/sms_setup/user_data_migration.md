@@ -5,7 +5,6 @@ description: "This reference article runs through all the considerations you’l
 page_type: reference
 tool:
   - Dashboard
-  - Docs
   - Campaigns
 
 platform:

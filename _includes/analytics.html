@@ -11,7 +11,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
 appboy.initialize('{{ site.api_key }}', {
   enableLogging: false,
-  enableHtmlInAppMessages: true,
+  allowUserSuppliedJavascript: true,
   sessionTimeoutInSeconds: 300
 });
 var app_valid_paths = {

@@ -1,7 +1,14 @@
 ---
 nav_title: Security Qualifications
 page_order: 3
+
+page_type: reference
+description: "This page lists and describes Braze's security qualifications."
 ---
+
+<!--
+Warning! Don't make any changes to this document without approval from the legal department.
+-->
 
 # Security Qualifications
 

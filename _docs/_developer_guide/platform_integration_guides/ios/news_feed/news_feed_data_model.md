@@ -2,6 +2,9 @@
 nav_title: News Feed Data Model
 platform: iOS
 page_order: 6
+description: "This article covers the iOS News Feed data model, different card types, and the different card-specific properties available."
+channel:
+  - news feed
 
 ---
 

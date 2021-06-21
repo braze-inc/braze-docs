@@ -1,8 +1,14 @@
 $doc_transition_time : 0.25s;
 .doc-container {
-  position: absolute;
   top: 60px;
-  width: inherit;
+  max-width: calc(100% - 30px);
+  margin-left: 15px;
+  @media (min-width: $window-medium-px) {
+    max-width: calc(100% - 45px);
+  }
+  @media (min-width: $window-xxlarge-px) {
+    max-width: 100%;
+  }
   margin-top: 20px;
   z-index: 10;
   .doc-row {
@@ -270,24 +276,25 @@ $doc_transition_time : 0.25s;
       background-color: none;
     }
   }
-
-
-
 }
 
 #doc_right {
   margin-top: 15px;
-  max-width: 280px;
   display: flex;
   display: -webkit-flex; /* Safari */
   flex-direction: column;
+
+  @media (min-width:  $window-xlarge-px) {
+    max-width: 280px;
+  }
+
   @media (min-width:  $window-medium-px) {
     margin-right: 1.5%;
     margin-left: 1.5%;
     margin-bottom: 2%;
   }
-  #doc_popular {
-    margin-bottom: 30px;
+  #doc_popular, #doc_helpful {
+    margin-bottom: 0px;
     margin-top: 0px;
     a {
       display: inline-block;
@@ -309,7 +316,7 @@ $doc_transition_time : 0.25s;
   }
 
   #gradient {
-    margin-top: 30px;
+    margin: 30px 0px 30px 10px;
     width: 70px;
     height: 3px;
     transform: matrix(-1, 0, 0, -1, 0, 0);
@@ -371,7 +378,12 @@ $doc_transition_time : 0.25s;
     }
   }
 }
-
+#doc-main-search {
+  @media (min-width:  $window-xxlarge-px) {
+    max-width: 1500px;
+    margin: auto;
+  }
+}
 #footer_div {
   margin: auto;
   border-top: none !important;

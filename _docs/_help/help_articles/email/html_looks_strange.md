@@ -1,6 +1,10 @@
 ---
 nav_title: The HTML Looks Strange
 page_order: 0
+
+page_type: solution
+description: "This help article walks you through how to troubleshoot issues with HTML rendering in test emails."
+channel: email
 ---
 
 # The HTML Looks Strange When I Send A Test Email To Myself

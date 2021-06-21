@@ -3,14 +3,14 @@ nav_title: Event Delivery Semantics
 page_order: 3
 
 page_type: reference
-description: "This article outlines how event data from Currents manages flat file event data we send to Data Warehouse partners."
-tool: currents
+description: "This reference article outlines how Currents manages flat file event data we send to Data Warehouse partners."
+tool: Currents
 
 ---
 
 # Event Delivery Semantics
 
-> This article outlines how event data from Currents manages flat file event data we send to Data Warehouse partners.
+> This article outlines how Currents manages flat file event data we send to Data Warehouse partners.
 
 Currents for Data Storage is a continuous streams of data from our platform to a storage bucket on one of our [data warehouse partner connections]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/available_partners/).
 

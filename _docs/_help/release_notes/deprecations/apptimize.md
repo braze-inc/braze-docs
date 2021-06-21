@@ -1,6 +1,9 @@
 ---
 nav_title: Apptimize Partnership
 page_order: 0
+
+page_type: update
+description: "This archived article covers the partnership between Apptimize and Braze. Braze has deprecated support for the Apptimize partnership as of September 2019."
 ---
 
 # Apptimize

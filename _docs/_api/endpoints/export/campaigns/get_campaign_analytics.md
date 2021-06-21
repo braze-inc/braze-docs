@@ -7,7 +7,7 @@ layout: api_page
 page_type: reference
 platform: API
 tool: Segments
-description: "This article outlines details about the Campaign Analytics endpoint."
+description: "This article outlines details about the Get Campaign Analytics endpoint."
 ---
 {% api %}
 # Campaign Analytics Endpoint
@@ -107,9 +107,12 @@ Authorization: Bearer YOUR-REST-API-KEY
                 "sms" : [
                   {
                     "sent": (int),
+                    "sent_to_carrier" : (int),
                     "delivered": (int),
-                    "undelivered": (int),
-                    "delivery_failed": (int)
+                    "rejected": (int),
+                    "delivery_failed": (int),
+                    "opt_out" : (int),
+                    "help" : (int)
                   }
                 ]
               },

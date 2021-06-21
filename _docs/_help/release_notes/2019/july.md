@@ -1,6 +1,9 @@
 ---
 nav_title: July
 page_order: 6
+
+page_type: update
+description: "This article contains release notes for July 2019."
 ---
 
 # July 2019
@@ -71,7 +74,7 @@ Connected Content calls to external servers will happen when a Card is actually 
 
 Customers can now set a `null` value for an email messages's "Reply-To" address from the Email Settings page in Braze or using [the API]({{site.baseurl}}/api/endpoints/messaging/#email-object-specification).  When used, replies will be sent to the listed "From" address.  You can now personalize the "From" address field as `dan@emailaddress.com` and your customers will have the ability to reply directly back to Dan.
 
-To set a `null` value for an email messages's "Reply-To" address from Braze, go to `Manage App Group` in the navigation, then the `Email Settings` tab. Scroll to the `Outbound Email Settings` section, and select `Exclude “Reply-To” and send replies to “From”` as the default address.
+To set a `null` value for an email messages's "Reply-To" address from Braze, go to `Manage Settings` in the navigation, then the `Email Settings` tab. Scroll to the `Outbound Email Settings` section, and select `Exclude “Reply-To” and send replies to “From”` as the default address.
 
 ![Email Settings Reply-To]({% image_buster /assets/img/null_reply-to.png %})
 

@@ -1,13 +1,19 @@
 ---
 nav_title: Okta
 page_order: 4
+
+page_type: tutorial
+description: "This article will walk you through how to configure Braze to use Okta for single sign-on." 
 ---
 
 # Okta 
+
 ![Okta SAML]({% image_buster/assets/img/Okta/okta4.png %}){: style="float:right;height:200px;margin-left:15px;margin-bottom:15px;"}
 
+> This article will walk you through how to configure Braze to use Okta for single sign-on.
+
 Okta connects any person with any application on any device. It's an enterprise-grade, identity management service, built for the cloud, but compatible with many on-premises applications. With Okta, IT can manage any employee's access to any application or device.
-<br><br><br>
+<br>
 
 ## Requirements
 
@@ -45,7 +51,7 @@ Select `Save Changes` at the bottom of the page once completed.
 ## Step 2: Enable the IdP-initiated Flow
 
 Next, you must create your Braze API Key with `sso.saml.login` permission enabled.
-- If you do not already have such a Braze API Key, one can be created by going to the `Developer Console` in `App Settings`, then click `Create New API Key`.<br>From here, scroll down to the SSO section and check the `sso.saml.login` option and then __save__ the API Key.<br>
+- If you do not already have such a Braze API Key, one can be created by going to the `Developer Console` in `Settings`, then click `Create New API Key`.<br>From here, scroll down to the SSO section and check the `sso.saml.login` option and then __save__ the API Key.<br>
 
 ![SSO Set Up]({% image_buster /assets/img/sso2.png %}){: style="max-width:80%"}
 

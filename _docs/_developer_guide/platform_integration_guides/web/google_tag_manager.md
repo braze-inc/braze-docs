@@ -2,7 +2,8 @@
 nav_title: Google Tag Manager
 platform: Web
 page_order: 20
-description: Use Google Tag Manager to deploy Braze to your website
+description: "This article covers how to use Google Tag Manager to deploy Braze to your website."
+
 ---
 
 # Google Tag Manager
@@ -23,21 +24,21 @@ Both tags can be added to your workspace from [Google's Community Gallery][15], 
 
 Use the Initialization Tag to add the Braze Web SDK to your website.
 
-#### 1. Choose the "Initialization Tag" from the Community Gallery
+#### Step 1: Choose the "Initialization Tag" from the Community Gallery
 
 Search for "Braze" in the Community Template Gallery, and choose the Braze Initialization Tag as shown below:
 
 ![Initialization Tag Template][4]
 
-#### 2. Configure App Settings
+#### Step 2. Configure Settings
 
-Enter your Braze SDK API Key and SDK Endpoint, which can be found in your Dashboard's [App Settings][6].
+Enter your Braze SDK API Key and SDK Endpoint, which can be found in your Dashboard's [Settings][6] page.
 
-#### 3. Initialization Options
+#### Step 3. Choose Initialization Options
 
 Choose from the optional set of additional initialization options as described in the [Initial Setup][7] guide.
 
-#### 4. Verify and QA
+#### Step 4: Verify and QA
 
 Once you've deployed this tag, there are two ways you can verify a proper integration:
 

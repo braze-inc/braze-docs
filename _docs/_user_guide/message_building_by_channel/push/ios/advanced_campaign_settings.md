@@ -2,13 +2,12 @@
 nav_title: "Advanced Push Campaign Settings"
 page_type: reference
 page_order: 6
-description: "This reference article covers several advanced Push campaign setting such as Alert Options, Flags, Sounds, Expiry and more."
+description: "This reference article covers several advanced Push campaign setting such as alert options, flags, sounds, expiry, and more."
 
 platform: iOS
 channel:
-  - Push
+  - push
 tool:
-  - Docs
   - Dashboard
   - Campaigns
 ---

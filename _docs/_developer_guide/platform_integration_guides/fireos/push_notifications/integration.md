@@ -3,8 +3,13 @@ nav_title: Integration
 platform: FireOS
 page_order: 0
 
+page_type: solution
+description: "This article walks you through how to integrate Braze push notifications with your FireOS app."
+channel: push
+
 ---
-## Integration
+
+# Integration
 
 A push notification is an out-of-app alert that appears on the user's screen when an important update occurs. Push notifications are a valuable way to provide your users with time-sensitive and relevant content or to re-engage them with your app.
 
@@ -16,7 +21,7 @@ Braze sends push notifications to Amazon devices using [Amazon Device Messaging 
 
 >  Amazon Device Messaging (ADM) is __only__ supported on Fire phones and tablets (except for Kindle Fire 1st Generation). You cannot test ADM messaging on a regular Android device.
 
-### Step 1: Enable ADM
+## Step 1: Enable ADM
 
 - Create an account with the [Amazon Apps & Games Developer Portal][10] if you have not already done so.
 - Obtain OAuth credentials (Client ID and Client Secret) and an ADM API key by following the instructions in [Obtaining Amazon Device Messaging Credentials][11].
@@ -26,7 +31,7 @@ Braze sends push notifications to Amazon devices using [Amazon Device Messaging 
   <bool name="com_appboy_push_adm_messaging_registration_enabled">true</bool>
   ```
 
-### Step 2: Update AndroidManifest.xml
+## Step 2: Update AndroidManifest.xml
 
 - In your app's AndroidManifest.xml, add Amazon's namespace to the `<tt>manifest</tt>` tag.
 
@@ -81,15 +86,15 @@ Braze sends push notifications to Amazon devices using [Amazon Device Messaging 
   </receiver>
   ```
 
-### Step 3: Store Your ADM API Key
+## Step 3: Store Your ADM API Key
 
 - Save your ADM API key to a file named `api_key.txt` and save it in your project's `assets` folder.
 - For how to obtain an ADM API Key for your app, consult Amazon's documentation on [obtaining an ADM API Key][11].
 - Amazon will not recognize your key if `api_key.txt` contains any white space characters, such as a trailing line break.
 
-### Step 4: Add Deep Links
+## Step 4: Add Deep Links
 
-##### Enabling Automatic Deep Link Opening
+#### Enabling Automatic Deep Link Opening
 
 To enable Braze to automatically open your app and any deep links when a push notification is clicked, set `com_appboy_handle_push_deep_links_automatically` to `true` in your `braze.xml`:
 
@@ -99,13 +104,13 @@ To enable Braze to automatically open your app and any deep links when a push no
 
 If you would like to custom handle deep links, you will need to create a `BroadcastReceiver` that listens for push received and opened intents from Braze. See our section on [Custom Handling Push Receipts and Opens][52] in the Android push documentation for more information.
 
-### Step 5: Add Client Secret and Client ID to Braze Dashboard
+## Step 5: Add Client Secret and Client ID to Braze Dashboard
 
-Lastly, you must add the Client Secret and Client ID you obtained in [Step 1][2] to the Braze dashboard's "Manage App Group" page as pictured below:
+Lastly, you must add the Client Secret and Client ID you obtained in [Step 1][2] to the Braze dashboard's "Manage Settings" page as pictured below:
 
 ![FireOS Dashboard][34]
 
-### Manual Push Registration
+## Manual Push Registration
 If you need to handle ADM registration yourself, you should do the following:
 
 - Within [braze.xml][12] add the following:
@@ -122,9 +127,9 @@ If you need to handle ADM registration yourself, you should do the following:
 
 >  Braze does not recommend using manual registration if possible.
 
-### ADM Extras
+## ADM Extras
 
-Users may send custom key value pairs with a Kindle push message as "extras" for ["Deep Linking"][29], tracking urls, etc.  Please note that unlike in Android push, Kindle push users may not use Braze reserved keys as keys when defining "extra" key value pairs.
+Users may send custom key-value pairs with a Kindle push message as "extras" for ["Deep Linking"][29], tracking urls, etc.  Please note that unlike in Android push, Kindle push users may not use Braze reserved keys as keys when defining "extra" key-value pairs.
 
 Reserved Keys Include:
 

@@ -2,7 +2,7 @@
 nav_title: Certona
 alias: /partners/certona/
 
-description: "This article outlines the partnership between Braze and Certona, which drives personalization across the customer lifecycle."
+description: "This article outlines the partnership between Braze and Certona,a real-time, omnichannel personalization solution that offers personalization across the customer lifecycle. Use Certona with Braze's Connected Content partner to easily insert content recommendations across multichannel campaigns."
 page_type: partner
 
 ---
@@ -11,9 +11,9 @@ page_type: partner
 
 > Certona's platform drives personalization across the customer lifecycle. From highly individualized email campaigns to machine-learning-powered product recommendations, Certona ensures that you’re harnessing the power of personalization.
 
-Use Certona with Braze's Connected Content partner to easily insert content recommendations across multi-channel campaigns.
+Use Certona with Braze's Connected Content partner to easily insert content recommendations across multichannel campaigns.
 
-# Prerequisites
+## Prerequisites
 
 | Requirement| Origin| Access| Description|
 | ---| ---| ---|
@@ -21,7 +21,7 @@ Use Certona with Braze's Connected Content partner to easily insert content reco
 | Certona REST API Endpoint | Certona | https://manage.certona.com/ | This endpoint is used directly in your message (in the Braze Campaign Message Composer) to pull recommended content based on User ID. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
 
-# Integration
+## Integration
 
 Use Certona's REST API to insert personalized content into your messages. Once you have your Certona account and Certona is integrated into your app, use this template to call content into your messages.
 

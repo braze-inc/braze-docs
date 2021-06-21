@@ -3,9 +3,10 @@ nav_title: Segment Insights
 page_order: 4
 
 page_type: tutorial
-tool: segments
-
-description: "This how-to article will walk you through how to use, interpret and share Segment Insights."
+tool: 
+- Segments
+- Reports
+description: "This how-to article will walk you through how to use, interpret, and share Segment Insights."
 ---
 # Segment Insights
 
@@ -64,7 +65,7 @@ Getting users to convert to purchasers can be difficult, and trying to push new,
 
 We can see that relatively few users are currently signed up for the newsletter, but these users are generally more active. To keep new users engaged, it would be a good idea to include an invitation to order the newsletter in [onboarding campaigns][8]. To re-engage lapsed users, a good plan would be to send out a typical [lapsed user campaign][9] and [target users who converted][12] with a subsequent campaign to sign up for the newsletter.
 
-[1]: {% image_buster /assets/img_archive/Segment_Insights.png %}
+[1]: {% image_buster /assets/img_archive/segment_insights.png %}
 [2]: {% image_buster /assets/img_archive/Segment_Insights_Info.png %}
 [3]: {% image_buster /assets/img_archive/Segment_Segment_Insights.png %}
 [5]: {% image_buster /assets/img_archive/Segment_Language_Insights.png %}

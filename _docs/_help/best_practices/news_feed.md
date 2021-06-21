@@ -1,6 +1,10 @@
 ---
 nav_title: News Feed
 page_order: 3
+
+page_type: reference
+description: "This article provides best practices for designing and customizing News Feed cards."
+channel: news feed
 ---
 # News Feed
 
@@ -37,7 +41,7 @@ The content you choose to show through the News Feed can range widely and work i
 
 - Provide announcements that encourage interaction, highlight news and promote sales.
 - Develop a schedule for campaigns like onboarding etc., and determine the proper cadence and frequency of messaging.
-- Strengthen and reinforce campaigns by integrating other multi-channel messages in the News Feed
+- Strengthen and reinforce campaigns by integrating other multichannel messages in the News Feed
 
 ## Integration Example
 

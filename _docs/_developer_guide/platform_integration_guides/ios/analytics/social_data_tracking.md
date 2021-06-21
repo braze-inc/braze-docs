@@ -2,8 +2,10 @@
 nav_title: Social Data Tracking
 platform: iOS
 page_order: 5
+description: "This reference article shows how to implement social data tracking for your iOS application."
 
 ---
+
 # Social Data Tracking
 
 ## Collecting Social Account Data
@@ -92,5 +94,5 @@ Appboy.sharedInstance()?.user.twitterUser = twitterUser
 {% endtab %}
 {% endtabs %}
 
-[2]: https://developers.facebook.com/docs/ios "facebook ios sdk docs"
+[2]: https://developers.facebook.com/docs/ios "facebook iOS sdk docs"
 [10]: https://developers.facebook.com/docs/graph-api/reference/v4.0/user "facebook graph api docs"

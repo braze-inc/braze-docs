@@ -4,6 +4,10 @@ nav_title: Content Cards
 layout: dev_guide
 guide_top_header: "Content Cards Help Articles"
 
+page_type: landing
+description: "This landing page is home to help articles related to Content Cards."
+channel: content cards
+
 guide_menu_title: ""
 guide_menu_list:
   - name: No Cards New User Feeds

@@ -4,10 +4,14 @@ platform: Campaigns
 subplatform: Ideas and Strategies
 page_order: 2
 
-tools: campaigns
 page_type: reference
 description: "This reference article goes over how and why you should consider retargeting campaigns based on messages your users receive."
+tool:
+- Campaigns
+- Canvas
+- Segments
 ---
+
 # Retargeting Campaigns
 
 > This reference article goes over the concept of retargeting campaigns and how it can be a beneficial marketing strategy. 
@@ -116,7 +120,7 @@ Retargeting is particularly effective when the original segment also included a 
 - Money Spent in App is exactly 0
 - Last Used App less than 14 days ago
 
-The total number of users in the segment is 100,000 and you know from the news feed stats that 60,000 unique users viewed the card and 20,000 unique users clicked the card. Through the segmenter we can see how many of those users who clicked the card actually made a purchase:
+The total number of users in the segment is 100,000 and you know from the News Feed stats that 60,000 unique users viewed the card and 20,000 unique users clicked the card. Through the segmenter we can see how many of those users who clicked the card actually made a purchase:
 
 - Money Spent in App is more than 0
 - Clicked Card is {Name of Card}
@@ -126,7 +130,7 @@ After examining those stats, we can make a segment of users who clicked the card
 - Money Spent in App is exactly than 0
 - Clicked Card is {Name of Card}
 
-We can retarget this segment with additional messaging around the promotion or another in-app purchase. Retargeting can be done via another news feed card or through a messaging campaign. A multi-channel approach allows you to reach users where they’re most likely to respond, thus increasing the effectiveness of your campaigns.
+We can retarget this segment with additional messaging around the promotion or another in-app purchase. Retargeting can be done via another News Feed card or through a messaging campaign. A multichannel approach allows you to reach users where they’re most likely to respond, thus increasing the effectiveness of your campaigns.
 
 [1]: {% image_buster /assets/img_archive/retarget.png %}
 [2]: {% image_buster /assets/img_archive/clickedcard.png %}

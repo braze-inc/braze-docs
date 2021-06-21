@@ -38,7 +38,7 @@ The drag & drop editing experience is broken out into 3 sections: __Sending Sett
 #### __Sending Settings__
 The Sending Settings section allows you to configure your from and reply-to address as well as set the subject line or pre-header. 
 
-_Note: Advanced functionality will appear in the campaign or canvas step composer. In advanced functionality, you can modify your inline CSS setting, set a BCC email address, and enter in a header or extra key-value pairs (if configured)._
+_Note: Advanced functionality will appear in the campaign or Canvas step composer. In advanced functionality, you can modify your inline CSS setting, set a BCC email address, and enter in a header or extra key-value pairs (if configured)._
 
 {% endtab %}
 {% tab Content %}
@@ -73,7 +73,7 @@ Email errors are presented on the ‘compose’ tab of the message workflow. Err
 ![dnd_compose_error][3]{: style="max-width:80%;"}
 
 ## Step 5: Save Your Template
-Be sure to save your template by clicking the __Save Template__ button in the bottom right corner of the editor. You’re now ready to use this template in any campaign or canvas step you choose.
+Be sure to save your template by clicking the __Save Template__ button in the bottom right corner of the editor. You’re now ready to use this template in any campaign or Canvas step you choose.
 
 _Note: Edits made to an existing template will not be reflected in campaigns that were created using previous versions of that template._
 

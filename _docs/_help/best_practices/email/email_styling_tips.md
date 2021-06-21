@@ -1,6 +1,10 @@
 ---
 nav_title: Email Styling Tips
 page_order: 4
+
+page_type: reference
+description: "This article provides guidelines on styling your email messaging."
+channel: email
 ---
 
 # Style Guidelines

@@ -1,8 +1,12 @@
 ---
 nav_title: Decision Split Step
+title: Decision Split Step
 alias: /decision_split/
-description: "This reference article covers how to create and implement decision split steps within your Canvas."
 page_order: 0
+
+page_type: reference
+description: "This reference article covers how to create and implement decision split steps within your Canvas."
+tool: Canvas
 ---
 
 # Decision Split Step for Canvas
@@ -38,7 +42,7 @@ A filter step can only connect to one next step.
 
 | Metric | Description |
 |---|---|
-|Entered | The total number of times the step has been entered. If your canvas has re-eligibility and a user enters a decision split step twice, two entries will be recorded. |
+|Entered | The total number of times the step has been entered. If your Canvas has re-eligibility and a user enters a decision split step twice, two entries will be recorded. |
 |Yes | The number of entries that met the specified criteria and proceeded down the “yes” path. |
 |No | The number of entries that did not meet the specified criteria and proceeded down the “no” path. |
 {: .reset-td-br-1 .reset-td-br-2}

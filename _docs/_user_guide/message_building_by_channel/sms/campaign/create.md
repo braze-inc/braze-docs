@@ -1,16 +1,11 @@
 ---
 nav_title: Creating an SMS Campaign
 page_order: 5
-description: "This reference article covers the steps involved in creating and sending an SMS campaign."
+description: "This reference article covers the steps involved in building out and creating an SMS campaign."
 page_type: reference
 tool:
   - Dashboard
-  - Docs
   - Campaigns
-
-platform:
-  - iOS
-  - Android
 
 channel:
   - SMS

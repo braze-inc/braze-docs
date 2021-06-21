@@ -4,6 +4,10 @@ title: Creating A Purchase Prediction
 description: ""
 page_order: 1
 hidden: true
+
+description: "This article covers how to create a Purchase Prediction within the Braze dashboard."
+Tool:
+  - Dashboard
 ---
 
 # Creating A Purchase Prediction
@@ -42,7 +46,7 @@ Preview and Demo Predictions will never update users' risk of Purchase. Addition
 ### Step 4: Build Prediction
 Verify that the details you’ve provided are correct, and choose “Build Prediction.” You can also save your changes in draft form by selecting “Save As Draft” to return to this page and build the model later. Once you click __Build Prediction__, the process that generates the model will begin. This could take between 30 minutes to a few hours depending on data volumes. For this Prediction, you will see a page explaining that training is in progress for the duration of the model building process.
 
-Once it’s done, the page will switch to the Analytics view automatically, and you will also get an e-mail informing you that the Prediction and results are ready. In the event of an error, the page will return to the Editing mode with an explanation of what went wrong.
+Once it’s done, the page will switch to the Analytics view automatically, and you will also get an email informing you that the Prediction and results are ready. In the event of an error, the page will return to the Editing mode with an explanation of what went wrong.
 
 The Prediction will be rebuilt ("retrained") again every __two weeks automatically__ to keep it updated on the most recent data available. Note that this is a separate process from when users' Purchase Risk Scores, the output of the Prediction, are produced. The latter is determined by the update frequency you chose in Step 3.
 

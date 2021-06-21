@@ -57,6 +57,10 @@ Authorization: Bearer YOUR-REST-API-KEY
 
 This property should not be used for updating a user's profile information. Please use the [/users/track]({{site.baseurl}}/api/endpoints/user_data/post_user_track/) property instead.
 
+{% alert important %}
+When creating new users via the [/users/track]({{site.baseurl}}/api/endpoints/user_data/post_user_track/) endpoint, you should leave a delay of around 2 minutes before adding users to the relevant Subscription Group to allow Braze time to fully create the user profile.
+{% endalert %}
+
 ## Request Parameters
 
 | Parameter | Required | Data Type | Description |
@@ -65,7 +69,7 @@ This property should not be used for updating a user's profile information. Plea
 | `subscription_state` | Yes | String | Available values are “unsubscribed” (not in subscription group) or “subscribed” (in subscription group) |
 | `external_id` | Yes* | Array of strings | The external_id of the user or users, may include up to 50 ids. |
 | `email` | Yes* | String | The email address of the user, can be passed as an array of strings (must include at least one address and at most 50 addresses). |
-| `phone` | Yes* | String in E.164 format | Tags must already exist. |
+| `phone` | Yes* | String in E.164 format | The phone number of the user, can be passed as an array of strings (must include at least one phone number and at most 50 phone numbers). |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
 
 ## Example Requests Email

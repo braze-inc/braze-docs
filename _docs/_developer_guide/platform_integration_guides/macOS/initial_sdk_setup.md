@@ -2,11 +2,15 @@
 nav_title: Initial SDK Setup
 platform: MacOS
 page_order: 0
+
+page_type: reference
+description: "This page provides resources for initial SDK setup steps on macOS."
+
 ---
 
 # Initial SDK Setup
 
-As of version [3.32.0][1], the Braze SDK supports MacOS for apps using [Mac Catalyst][2] when integrating through Swift Package Manager. Currently, the SDK does not support Mac Catalyst when using Cocoapods or Carthage.
+As of version [3.32.0][1], the Braze SDK supports macOS for apps using [Mac Catalyst][2] when integrating through Swift Package Manager. Currently, the SDK does not support Mac Catalyst when using Cocoapods or Carthage.
 
 {% alert note %}
 To build your app with Mac Catalyst, please reference <a href="https://developer.apple.com/documentation/uikit/mac_catalyst">Apple's documentation here</a>.

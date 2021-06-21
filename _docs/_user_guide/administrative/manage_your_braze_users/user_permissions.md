@@ -1,7 +1,10 @@
 ---
 nav_title: Braze Account User Permissions
 page_order: 2
-description: "Braze’s user permission feature allows you to choose who can access your apps on the Braze dashboard by assigning different users with either admin or limited permission."
+
+page_type: reference
+description: "This reference article covers user permissions in Braze, such as choosing who can access your apps on the Braze Dashboard."
+tool: Dashboard
 ---
 
 # Setting User Permissions
@@ -31,9 +34,9 @@ You can manage user permissions by group or on an individual basis using the Use
 |Permission Name|Definition/Parameters|
 |---|---|
 |Admin|Has access to all available features, default setting for all new users. Can update company settings (company name and time zone), which Limited Users are unable to do.|
-|Access Campaigns, Canvases, Cards, Segments, Media Library| User can view campaign and canvas performance metrics, create drafts of campaigns and canvases, view news feed, segments, templates and media, create templates, upload media, and view engagement reports.<br><br>__Note: "Send Campaigns, Canvases" permissions must be turned to edit Delivery and Target settings during the campaign creation process.__ |
+|Access Campaigns, Canvases, Cards, Segments, Media Library| User can view campaign and Canvas performance metrics, create drafts of campaigns and canvases, view News Feed, segments, templates and media, create templates, upload media, and view engagement reports.<br><br>__Note: "Send Campaigns, Canvases" permissions must be turned to edit Delivery and Target settings during the campaign creation process.__ |
 |Send Campaigns, Canvases| Allows user to edit, archive, stop, duplicate campaigns and canvases, create campaigns, launch canvases. |
-|Publish Cards| Allows user to create and edit news feed cards. (You can still view cards without this permission).|
+|Publish Cards| Allows user to create and edit News Feed cards. (You can still view cards without this permission).|
 |Edit Segments| Allows users to create and edit segment. You can still create campaigns with existing segments and filters without this permission. You need this permission to generate a segment from users in a CSV or retarget the group of users in the CSV.|
 |Export User Data| Allows user to export your user data from Segments, campaigns and Canvases. |
 |View PII | Allows user to view personally identifiable information within the dashboard. Note that both email addresses and phone number will be visable. |
@@ -45,11 +48,11 @@ You can manage user permissions by group or on an individual basis using the Use
 |View Billing Details| Allows user to view subscriptions and billing. |
 |Access Dev Console| Allows access to Developer Console (where you can view API keys, API campaign activity log, event user log, and internal groups for testing messages).|
 |Manage External Integrations| Allows access to all tabs under Technology Partners and the ability to sync Braze with other platforms.|
-|Manage Apps| Allows user to edit app settings (under Manage App Group).|
-|Manage Teams|Allows user to manage teams which is under "Manage App Group". The ability to select this permission depends on your contract with Braze.|
-|Manage Events, Attributes, Purchases|Allows user to edit custom attributes, (users without this capability can still view custom attributes), edit and view properties of custom events, and edit and view properties of products (all under manage app group).|
-|Manage Tags|Allows users to edit or delete tags (under manage app group). You do not need this permission to add tags to campaigns or segments.|
-|Manage Email Settings|Allows user to save email configuration changes (email settings tab under "manage app group").|
+|Manage Apps| Allows user to edit settings (under Manage Settings).|
+|Manage Teams|Allows user to manage teams which is under "Manage Settings". The ability to select this permission depends on your contract with Braze.|
+|Manage Events, Attributes, Purchases|Allows user to edit custom attributes, (users without this capability can still view custom attributes), edit and view properties of custom events, and edit and view properties of products (all under Manage Settings).|
+|Manage Tags|Allows users to edit or delete tags (under Manage Settings). You do not need this permission to add tags to campaigns or segments.|
+|Manage Email Settings|Allows user to save email configuration changes (email settings tab under "Manage Settings").|
 |Manage Subscription Groups | Allows user to create and manage subscription groups. |
 {: .reset-td-br-1 .reset-td-br-2}
 

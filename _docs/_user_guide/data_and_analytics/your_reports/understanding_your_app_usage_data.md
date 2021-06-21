@@ -1,23 +1,30 @@
 ---
-nav_title: Understanding Your App Usage Data
+nav_title: Understanding Your Overview Data
 page_order: 3
-description: "The App Usage page on the dashboard provides key mobile metrics for you to track and understand the performance of your app and gives you an at-a-glance high-level understanding of your app's userbase."
+page_type: reference
+description: "This reference article describes the Overview page, and provides definitions for statistics available on this page."
+tool: 
+- Dashboard
+- Reports
+
 ---
-# Understanding Your App Usage Data
+# Understanding Your Overview Data
 
 ## Overview
 
-The App Usage page on the dashboard provides key mobile metrics for you to track and understand the performance of your app and gives you an at-a-glance high-level understanding of your app's userbase. Below are the definitions of these statistics, how we calculate them, and why they should be important to you.
+The **Overview** page on the dashboard provides key mobile metrics for you to track and understand the performance of your app and gives you an at-a-glance high-level understanding of your app's userbase. Below are the definitions of these statistics, how we calculate them, and why they should be important to you.
 
 ![Dashboard Screenshot][1]
 
->  You can click "Show Breakdown" located on the right side of all of the rows of the dashboard statistics to view each statistic's value per day for the time period specified under the "Display Data For:" section.
+>  You can click **Show Breakdown** located on the right side of all of the rows of the dashboard statistics to view each statistic's value per day for the time period specified under the **Display Data For** section.
 
 ![Expand][2]
 
 ## Lifetime Users
 
-This is simply the total number of users that we have recorded using your app at any point in time. Below this number is the percentage of how many of your lifetime users are represented as Monthly Active Users which is useful for seeing user retention over a long period of time. A low MAU/Lifetime User ratio may indicate that you need to diversify your messaging channels or increase your efforts in reaching out to lapsing users. See our [Quick Win on capturing lapsing users][3] for more info. In general, the MAU to lifetime ratio will inevitably decrease over time due to user churn, but Braze's tools can help you minimize this effect by keeping users engaged longer.
+This is simply the total number of users that we have recorded using your app at any point in time. Below this number is the percentage of how many of your lifetime users are represented as Monthly Active Users (MAU) which is useful for seeing user retention over a long period of time.
+
+A low MAU/Lifetime User ratio may indicate that you need to diversify your messaging channels or increase your efforts in reaching out to lapsing users. See our quick win on [capturing lapsing users][3] for more info. In general, the MAU to lifetime ratio will inevitably decrease over time due to user churn, but Braze's tools can help you minimize this effect by keeping users engaged longer.
 
 ## Lifetime Sessions
 
@@ -26,13 +33,13 @@ This is the total count of sessions that Braze has recorded since integration. S
 
 ## Monthly Active Users
 
-Monthly Active Users (or MAU) is the number of users that have recorded a session in your app in the last 30 days. MAU are calculated nightly with a rolling 30-day window. The percentage next to the MAU count will give you a comparison of today's MAU count to the MAU count recorded 31 days ago. MAU provides you with a good understanding of an app's health over an extended period of time as it smooths out the inconsistencies between days of varying usage intensity.
+Monthly Active Users (MAU) is the number of users that have recorded a session in your app in the last 30 days. MAU are calculated nightly with a rolling 30-day window. The percentage next to the MAU count will give you a comparison of today's MAU count to the MAU count recorded 31 days ago. MAU provides you with a good understanding of an app's health over an extended period of time as it smooths out the inconsistencies between days of varying usage intensity.
 
-Note that anonymous users will count towards your MAU as well. For mobile devices, anonymous users are device dependent. For web users, anonymous users are browser cache dependent. 
+Note that anonymous users will count towards your MAU as well. For mobile devices, anonymous users are device dependent. For web users, anonymous users are browser cache dependent.
 
 ## Daily Active Users
 
-Daily Active Users (or DAU) displays the number of unique users who record at least one session in your app on a given day. DAU can be a useful statistic for examining the day-to-day variability of usage of your app and tailoring your messaging campaigns to be as effective as possible. For example, your app's usage may see an appreciable spike on weekends - this would inform you that you could reach more users with in-app messages on these days as opposed to weekdays.
+Daily Active Users (DAU) displays the number of unique users who record at least one session in your app on a given day. DAU can be a useful statistic for examining the day-to-day variability of usage of your app and tailoring your messaging campaigns to be as effective as possible. For example, your app's usage may see an appreciable spike on weekends - this would inform you that you could reach more users with in-app messages on these days as opposed to weekdays.
 
 ## New Users
 
@@ -45,7 +52,7 @@ New Users tells you how many users who have previously never recorded a session 
 Your app's "Stickiness" value is a ratio of a given day's DAU to MAU. In essence, stickiness measures the percentage of your MAU that come back on a daily basis. For example, a ratio of 50% indicates that on average an active user is using the app for 15 out of 30 days or that about half of your active users come back on a daily basis. Stickiness is an important metric for app success because most users don't quit using an app because they actively hate it, but rather because it doesn't become a part of their daily routine. Therefore, you can use stickiness as a proxy for measuring how well you're engaging your users. 
 
 {% alert important %}
-The MAU value is still calculated nightly and will not update until the next day.
+The MAU value is calculated nightly and will not update until the next day.
 {% endalert %}
 
 ## Daily Sessions

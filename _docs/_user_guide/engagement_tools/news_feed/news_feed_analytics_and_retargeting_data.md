@@ -1,7 +1,13 @@
 ---
 nav_title: News Feed Analytics and Retargeting Data
 page_order: 10
+
+page_type: reference
 description: "This reference article covers News Feed analytics, and various related filters."
+tool: 
+- Dashboard
+- Reports
+channel: news feed
 ---
 
 # Analytics
@@ -25,7 +31,7 @@ Braze automatically tracks when users view the feed and how many times they have
 - Last Viewed News Feed
 - News Feed View Count
 
-'Last Viewed News Feed' is an effective way to use other channels to draw users back into the feed. This can be easily done with push and in-app notifications. Braze has seen over 100% increases in news feed impressions with effective targeting. As awareness of the feed increases, these benefits are sustained.
+'Last Viewed News Feed' is an effective way to use other channels to draw users back into the feed. This can be easily done with push and in-app notifications. Braze has seen over 100% increases in News Feed impressions with effective targeting. As awareness of the feed increases, these benefits are sustained.
 
 'News Feed View Count' can be used to target users who have never viewed the feed or seldom viewed the feed to encourage more impressions of your cards.
 

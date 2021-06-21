@@ -3,11 +3,19 @@ nav_title: Creating an Email Campaign
 platform: Message_Building_and_Personalization
 subplatform: Email
 page_order: 1
-description: "Email messages are great for delivering content to the user on their terms. This reference article covers how to create, build, and test your campaign within the Braze Dashboard."
+description: "This reference article covers how to create an email campaign using the Braze platform. Included are best practices on how to compose your messages, preview your content, and schedule your campaign."
+
+tool:
+  - Dashboard
+  - Campaigns
+
+channel:
+  - email
 ---
+
 # Creating an Email Campaign
 
-Email messages are great for delivering content to the user on their terms. They are also wonderful tools to re-engage users who may have even uninstalled your app! Customized and tailored email messages will enhance the user experience and help your user get the most value out of your app.
+Email messages are great for delivering content to the user on their terms. They are also excellent tools to re-engage users who may have even uninstalled your app! Customized and tailored email messages will enhance the user experience and help your user get the most value out of your app.
 
 To see examples of email campaigns, check out our [Client Integration Gallery][9].
 
@@ -22,13 +30,13 @@ Click on the appropriate tile to choose an [existing email template][10] or [upl
 
 ![email1][3]
 
-Once you choose a template for your email you'll see an overview of your email, where you can quickly jump to the fullscreen editor, change your sending info, and view warnings about deliverability or law compliance.
+Once you choose a template for your email, you'll see an overview of your email, where you can quickly jump to the fullscreen editor, change your sending info, and view warnings about deliverability or law compliance.
 
 ![newemailoverview][14]
 
 ### Step 2a: Adding Email Headers
 
-Email headers contain information about the email being sent.  These key:value pairs typically have information about the sender, recipient, authentication protocals and contain email routing information.  Braze automatically adds the necessary header information as required by the RFC and for emails to properly be delivered to your inbox provider.  However, Braze does allow our customers flexibility, to add additional email headers as needed for advanced use cases.  There are a few reserved fields that will be overwritten by the Braze platform during sending.  Avoid using the following keys:
+Email headers contain information about the email being sent.  These key-value pairs typically have information about the sender, recipient, authentication protocols, and contain email routing information.  Braze automatically adds the necessary header information required by the RFC for emails to be delivered to your inbox provider properly.  However, Braze does allow our customers flexibility to add additional email headers as needed for advanced use cases.  There are a few reserved fields that the Braze platform will overwrite during sending.  Avoid using the following keys:
 'x-sg-id', 'x-sg-eid', 'received', 'dkim-signature', 'Content-Type', 'Content-Transfer-Encoding', 'To', 'From', 'Subject', 'Reply-To', 'CC', 'BCC', 'Received', 'DKIM-Signature', 'MIME-Version'
 
 ### Step 2b: Preview and Test Your Message
@@ -39,16 +47,16 @@ After you finish composing your perfect email, you need to test it before sendin
 
 ### Step 2c: Check for Email Errors
 
-The new Email Editor will call out problems with your message before you send. Here's a list of errors that are accounted for in our editor:
+The new Email Editor will call out problems with your message before you send it. Here's a list of errors that are accounted for in our editor:
 
 - From Display Name and Header not specified together.
 - Invalid From and Reply-To Emails.
 - Duplicate Header Keys.
 - Liquid Syntax Problems.
-- [E-Mail bodies larger than 400kb; bodies are highly recommended to be smaller than 102kb.][16]
+- [Email bodies larger than 400kb; bodies are highly recommended to be smaller than 102kb.][16]
 - Emails with blank Bodies or Subjects.
 - Emails with no unsubscribe link.
-- The email that you are sending from is not whitelisted, thus sends will be highly limited to ensure deliverability.
+- The email you are sending from is not whitelisted, thus sends will be highly limited to ensure deliverability.
 
 
 ## Step 3: Schedule Your Messaging Campaign
@@ -62,9 +70,9 @@ You can schedule your campaigns against three types of delivery:
 
 {% tabs %}
   {% tab Scheduled Delivery %}
-Scheduled Delivery allows you to specify the time at which you want the message to send, either immediately or at a future time (you can also consider local time in your scheduling). You can also use Intelligent Timing to send the message at the time the user is most likely to engaged. Braze makes this calculation based on a statistical analysis of the user's interactions with your app.
+Scheduled Delivery allows you to specify the time at which you want the message to send, either immediately or at a future time (you can also consider local time in your scheduling). You can also use Intelligent Timing to send the message when the user is most likely to engage. Braze makes this calculation based on a statistical analysis of the user's interactions with your app.
 
-Messages can also be configured to recur on a daily, weekly (optionally on specific days), or monthly basis.
+Messages can also be configured to recur daily, weekly (optionally on specific days), or monthly.
 
 Unless you select the option to "Message Repeatedly", each user will only receive the contents of a campaign once, and only new users that meet the criteria will receive the campaign on subsequent deliveries.
 
@@ -74,7 +82,7 @@ Unless you select the option to "Message Repeatedly", each user will only receiv
   {% endtab %}
   {% tab Action-Based Delivery %}
 
-  Action-Based Delivery allows you to specify the time a message will send after a user takes a particular action (selected from the __New Trigger Action__ drop down.)
+  Action-Based Delivery allows you to specify the time a message will send after a user takes a particular action (selected from the __New Trigger Action__ dropdown.)
 
 ![Action]({% image_buster /assets/img_archive/action_delivery_new.png %}){: height="80%"" width="80%"}
 
@@ -98,7 +106,7 @@ Braze allows you to track how often users perform specific actions (Conversion E
 - Opens Email
 - Clicks Email
 
-You have the option of allowing up to a 30 day window during which a conversion will be counted if the user takes the specified action. While Braze automatically tracks opens and clicks for your campaign, you may wish to set the conversion event to be when a user opens or clicks on an email address to take advantage of Braze's [Intelligent Selection feature][13].
+You have the option of allowing up to a 30-day window during which a conversion will be counted if the user takes the specified action. While Braze automatically tracks opens and clicks for your campaign, you may wish to set the conversion event to be when a user opens or clicks on an email address to take advantage of Braze's [Intelligent Selection feature][13].
 
 ## Step 5: Choose Your Target Segment
 
@@ -106,7 +114,7 @@ Next, you need to choose the target segment from the dropdown menu. You'll autom
 
 ![Target Segment][5]
 
-Optionally, you can also choose to limit delivery to a specified number of users within the segment, or allow users to receive the same message twice upon a recurrence of the campaign as well.
+Optionally, you can also choose to limit delivery to a specified number of users within the segment or allow users to receive the same message twice upon a recurrence of the campaign.
 
 ## Step 6: Review and Deploy
 

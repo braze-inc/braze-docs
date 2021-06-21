@@ -1,8 +1,10 @@
 ---
 nav_title: Advanced Implementation (Optional)
 platform: iOS
-page_order: 7
-description: "This advanced implementation guide covers how to leverage push notification content app extensions to get the most out of your push messages. Also included are three use cases built by our team, accompanying code snippets, and guidance on logging analytics."
+page_order: 29
+description: "This advanced implementation guide covers how to leverage iOS push notification content app extensions to get the most out of your push messages. Also included are three use cases built by our team, accompanying code snippets, and guidance on logging analytics."
+channel:
+  - push
 ---
 
 {% alert important %}

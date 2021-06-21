@@ -22,7 +22,7 @@ Rokt Calendar provides Braze customers the ability to align their personalized m
 | ----------- | -------| --- | ----------- |
 | Rokt Calendar Account | Rokt Calendar | Rokt Calendar Account Manager | A client-specific Rokt Calendar account will be set up. |
 | Calendar Setup | Rokt Calendar | Rokt Calendar Account Manager |  A Calendar will be set up to reflect the needs of the client's context and settings: <br>- Merge Flag<br>- SubscriberID fallback flag<br>- Email Capture if Needed |
-| Rokt Calendar OAuth Credentials | Rokt Calendar | Rokt Calendar Account Manager | This key will enable you to connect your Braze and Rokt Calendar accounts. It’s set up for each new Braze client and added to ‘Connected Content’ in Braze. <br><br> `Manage App Group` > `Connected Content` > `+Add Credential` |
+| Rokt Calendar OAuth Credentials | Rokt Calendar | Rokt Calendar Account Manager | This key will enable you to connect your Braze and Rokt Calendar accounts. It’s set up for each new Braze client and added to ‘Connected Content’ in Braze. <br><br> `Manage Settings` > `Connected Content` > `+Add Credential` |
 | Braze API Key and Permissions | Braze | Customer | Each app has its own set of REST API Keys. You will need to create a new API Key can be created in the `Developer Console` > `API Settings` > `+Create New API Key` with `users.track` permissions. <br>The Braze API key will need to be provided to your Rokt Account Manager.|
 | External Subscriber ID | Customer | Customer | This is the identifier that will be used by the Rokt Calendar subscription process to match the calendar subscriber with the Braze user. This is something that is passed through by the client to Rokt Calendar or email is used.|
 | Webhook Setup | Rokt Calendar | Rokt Calendar Account Manager |  Add the Braze webhook type to the management center using your [Braze Endpoint]({{site.baseurl}}/api/basics?redirected=true#endpoints) and REST API Key |
@@ -109,7 +109,7 @@ Navigate to the settings tab and edit the __Request Header__ and __HTTP Method__
 
 | Request Headers         |
 | ----------------  | ---------------- |
-| Authorization  | {% raw %}Bearer {% connected_content https://api.roktcalendar.com/oauth2/token :method post :basic_auth Rokt-Calendar-API :body grant_type=client_credentials :save token :retry %}{{token.access_token}}{% endraw %} <br><br> Note: __Rokt-Calendar-API__ should be replaced with the credential name found in `Manage App Group` > `Connected Content` > `Credential` |
+| Authorization  | {% raw %}Bearer {% connected_content https://api.roktcalendar.com/oauth2/token :method post :basic_auth Rokt-Calendar-API :body grant_type=client_credentials :save token :retry %}{{token.access_token}}{% endraw %} <br><br> Note: __Rokt-Calendar-API__ should be replaced with the credential name found in `Manage Settings` > `Connected Content` > `Credential` |
 | Content-Type  | application/json |
 {: .reset-td-br-1 .reset-td-br-2}
 
@@ -191,7 +191,7 @@ Navigate to the settings tab and edit the __Request Header__ and __HTTP Method__
 
 | Request Headers       |        |
 | ----------------  | ---------------- |
-| Authorization  | {% raw %}Bearer {% connected_content https://api.roktcalendar.com/oauth2/token :method post :basic_auth Rokt-Calendar-API :body grant_type=client_credentials :save token :retry %}{{token.access_token}}{% endraw %} <br><br> Note: __Rokt-Calendar-API__ should be replaced with the credential name found in `Manage App Group` > `Connected Content` > `Credential` |
+| Authorization  | {% raw %}Bearer {% connected_content https://api.roktcalendar.com/oauth2/token :method post :basic_auth Rokt-Calendar-API :body grant_type=client_credentials :save token :retry %}{{token.access_token}}{% endraw %} <br><br> Note: __Rokt-Calendar-API__ should be replaced with the credential name found in `Manage Settings` > `Connected Content` > `Credential` |
 | Content-Type  | application/json |
 {: .reset-td-br-1 .reset-td-br-2}
 
@@ -238,7 +238,7 @@ Complete the setup by navigating to the Compose tab and define the __Webhook URL
 
 {% alert tip %}
 
-For a list of valid timezones see [https://roktcalendar-api.readme.io/docs/timezones](https://roktcalendar.readme.io/docs/timezones).
+For a list of valid timezones see [https://roktcalendar-api.readme.io/docs/timezones](https://roktcalendar-api.readme.io/docs/timezones).
 
 {% endalert %}
 

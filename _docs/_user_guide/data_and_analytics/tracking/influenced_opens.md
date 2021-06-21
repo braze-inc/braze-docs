@@ -1,8 +1,11 @@
 ---
 nav_title: Influenced Opens
 page_order: 7
-description: "Influenced Opens are a measure of the number of users who open the app after receiving a notification without clicking on the notification. Because there is no direct action linking the notification to the app open, Braze utilizes an algorithm that calculates the odds that an open following a push notification is related to the push."
 
+page_type: reference
+description: "This reference article explains Influenced Opens and how you can track them to provide a richer level of detail into the effect of your push campaigns."
+tool: Campaigns
+channel: push
 ---
 # Influenced Opens
 

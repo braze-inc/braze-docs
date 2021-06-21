@@ -6,24 +6,24 @@ platform:
   - Web
 subplatform: Testing and More
 page_order: 1
-tools:
+tool:
   - Campaigns
   - Canvas
   - Segments
 page_type: reference
-description: "This reference article discusses the concept of rate-limiting and frequency capping, and how you can apply marketing pressure to improve user experience."
+description: "This reference article discusses the concept of rate limiting and frequency capping, and how you can apply marketing pressure to improve user experience."
 ---
 
 # Rate-Limiting and Frequency Capping
 
-> This reference article discusses the concept of rate-limiting and frequency capping, and how you can apply that marketing pressure to improve user experience.
+> This reference article discusses the concept of rate limiting and frequency capping, and how you can apply that marketing pressure to improve user experience.
 > <br>
 > <br>
 > We all want our users to have the best experience possible, with rate limiting and frequency capping, you can make sure your users are getting the message they need to, and none of the ones they don't.
 
 ## Rate-Limiting
 
-Braze allows you to control marketing pressure by implementing two different types of rate-limiting for your campaigns. The first focuses on providing the best experience for the end user, while the second takes into consideration the bandwidth of your servers.
+Braze allows you to control marketing pressure by implementing two different types of rate limiting for your campaigns. The first focuses on providing the best experience for the end user, while the second takes into consideration the bandwidth of your servers.
 
 ### User Centric Rate-Limiting
 
@@ -68,10 +68,10 @@ If you anticipate large campaigns driving a spike in user activity and overloadi
 
 ![Per Minute Rate Limit Example][3]
 
-For instance, if you are trying to send out 75K messages with a 10K per minute rate limit, the delivery will be spread out over 8 minutes. Your campaign will deliver 10k for each of the first 7 minutes, and 5K over the last minute. Be wary of delaying time-sensitive messages, however, with this form of rate-limiting. If the segment contains 30M users but we set the rate limit to 10K per minute, a large portion of the user base won't receive the message until the following day.
+For instance, if you are trying to send out 75K messages with a 10K per minute rate limit, the delivery will be spread out over 8 minutes. Your campaign will deliver 10k for each of the first 7 minutes, and 5K over the last minute. Be wary of delaying time-sensitive messages, however, with this form of rate limiting. If the segment contains 30M users but we set the rate limit to 10K per minute, a large portion of the user base won't receive the message until the following day.
 
 {% alert important %}
-When sending a multi-channel campaign with a speed rate limit, each channel is sent independently of the others. The effect is that users could receive the different channels at different times, and it is not predictable which channel they will get first. For example, if you send a campaign that contains an email and a push notification, you may have 10K users with valid push tokens but 50K users with valid email addresses. If you set the campaign to send 100 messages per minute (a slow rate limit for the campaign size), a user could receive the push notification in the first batch of sends and the email in the last batch of sends, almost 9 hours later.
+When sending a multichannel campaign with a speed rate limit, each channel is sent independently of the others. The effect is that users could receive the different channels at different times, and it is not predictable which channel they will get first. For example, if you send a campaign that contains an email and a push notification, you may have 10K users with valid push tokens but 50K users with valid email addresses. If you set the campaign to send 100 messages per minute (a slow rate limit for the campaign size), a user could receive the push notification in the first batch of sends and the email in the last batch of sends, almost 9 hours later.
 {% endalert %}
 
 #### Rate Limiting and Connected Content Retries
@@ -104,7 +104,7 @@ As your user base continues to grow and your messaging scales to include life cy
 
 ### Feature Overview {#freq-cap-feat-over}
 
-Frequency Capping is applied at the Campaign/Canvas step send level and can be set up for each app group by selecting __Global Message Settings__ found underneath the Engagement tab. From here, you can choose:
+Frequency Capping is applied at the Campaign/Canvas step send level and can be set up for each app group by selecting __Global Message Settings__ found underneath the **Engagement** tab. From here, you can choose:
 
 - Which messaging channel you would like to cap: push, email, SMS, webhook, or any of those four.
 - How many times each user should receive Campaign/Canvas step sends from a channel within a certain time frame, which can be measured in minutes, days, weeks (7 days), and months.
@@ -128,7 +128,7 @@ Please note that this behavior changes the default behavior when you turn off Fr
 
 ![Frequency Capping Update][18]
 
-Different channels within a multi-channel campaign will individually count towards the frequency cap. For instance, if you create a multi-channel campaign with, say, both push and email, and have Frequency Capping set up for both of those channels, then the push will count toward 1 push campaign and the email message will count toward 1 email message campaign. The campaign will also count toward 1 "campaign of any type." If users are capped to 1 push and 1 email campaign per day and someone receives this multi-channel campaign, then she will no longer be eligible for push or email campaigns for the rest of the day (unless a campaign ignores Frequency Capping rules).
+Different channels within a multichannel campaign will individually count towards the frequency cap. For instance, if you create a multichannel campaign with, say, both push and email, and have Frequency Capping set up for both of those channels, then the push will count toward 1 push campaign and the email message will count toward 1 email message campaign. The campaign will also count toward 1 "campaign of any type." If users are capped to 1 push and 1 email campaign per day and someone receives this multichannel campaign, then she will no longer be eligible for push or email campaigns for the rest of the day (unless a campaign ignores Frequency Capping rules).
 
 In-App Messages and Content Cards are __not__ counted as or towards caps on "Campaigns/Canvas Steps of any type".
 

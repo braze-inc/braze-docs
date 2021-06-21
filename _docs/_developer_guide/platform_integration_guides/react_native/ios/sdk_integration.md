@@ -3,7 +3,12 @@ nav_title: Initial SDK Setup
 platform: React Native
 subplatform: iOS
 page_order: 0
+
+page_type: reference
+description: "This article covers initial SDK setup steps for iOS apps using React Native."
+
 ---
+
 # Initial SDK Setup
 
 Installing the Braze SDK will provide you with analytics functionality, as well as push and in-app messages.

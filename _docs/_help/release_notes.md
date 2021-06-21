@@ -6,6 +6,9 @@ guide_top_header: "Release Notes"
 guide_top_text: "This is where you can find all updates to the Braze platform, with the <a href='/docs/help/release_notes/#most-recent'>most recent platform updates</a>, listed below. You can also
 check out our <a href='/docs/developer_guide/platform_integration_guides/sdk_changelogs/'>SDK Changelogs</a>."
 
+page_type: landing
+description: "This landing page is home to Braze Release Notes. This is where you can find all updates to the Braze platform and SDKs, as well as a list of deprecated features."
+
 guide_featured_title: "Release Notes"
 guide_featured_list:
   - name: 2021
@@ -42,13 +45,42 @@ guide_featured_list:
 > <br>
 > For more information on any of the updates listed in this section, reach out to your account manager or [open a support ticket][support]. You can also check out [our SDK Changelogs]({{site.baseurl}}/developer_guide/platform_integration_guides/sdk_changelogs/) to see more information on our monthly SDK releases, updates, and improvements.
 
+## June 2021
+
+### Conversion Correlation
+
+This guide covers the [Conversion Correlation]({{site.baseurl}}/user_guide/engagement_tools/testing/conversion_correlation/) analysis on the Campaign Analytics page, which gives you insight into what user attributes and behaviors help or hurt the outcomes you set for campaigns. Covered is an overview of the analysis, what is checked, when it's available, and how Braze checks for significance.
+
+### Global Control Group Report
+
+We've updated the metrics on the [Global Control Groups]({{site.baseurl}}/user_guide/engagement_tools/testing/global_control_group/) report to better help you analyze the overall impact of your messaging efforts over time. Key changes include adding **Events per User** and **Estimated Group Size**, and adjusting the calculation for **Incremental Uplift** to reflect the difference in total events between your treatment and control groups.
+
+### Reports Overview
+
+Not sure where to start with analyzing your campaigns or Canvases? The [Reports Overview]({{site.baseurl}}/user_guide/data_and_analytics/your_reports/reports_overview/) provides guidance on which reports and analytics you can use to answer common marketing strategy questions.
+
+### New US-05 Cluster
+
+Braze supports a new US cluster, US-05. Refer to our list of Dashboard and REST [Endpoints]({{site.baseurl}}/api/basics/#endpoints) to see more.
+
+### Braze UI Updates
+
+In May 2021, Braze updated the following labels and terms in the Braze Dashboard:
+
+- App Usage --> Overview
+- App Settings --> Settings
+- Manage App Group --> Manage Settings
+- Money Spent In-App --> Money Spent
+- App Usage (User Profile) --> Sessions Overview
+- Import a CSV of user information to add and/or update users in this App Group --> Import a CSV of user information to add or update users
+
 ## May 2021
 
 ### iOS Push Advanced Implementation Guide
 This detailed guide covers how to leverage push notification content app extensions to get the most out of your push messages. Included are three custom use cases built by our team (interactive push, data capture push, and progress based push), accompanying code snippets, and guidance on logging analytics. Visit our documentation here to read [more](/docs/developer_guide/platform_integration_guides/ios/push_notifications/implementation_guide/).
 
 ### VFC support for Multimedia Message Service (MMS)
-vCards, also known as Virtual Contact Files (.VCF), are a standardized file format for sending business/contact information that can be easily imported into address/contact books. These VFC files can now be sent through MMS and added to the Braze media library. Visit our MMS documentation to [learn more]({{site.baseurl}}/docs/user_guide/message_building_by_channel/sms/mms/create/). 
+vCards, also known as Virtual Contact Files (.VCF), are a standardized file format for sending business/contact information that can be easily imported into address/contact books. These VFC files can now be sent through MMS and added to the Braze media library. Visit our MMS documentation to [learn more]({{site.baseurl}}/user_guide/message_building_by_channel/sms/mms/create/). 
 
 ### Updates to User Delete
 In October of 2020, we made improvements to how our user delete handles data subject's phone number or email address. More information about this can be found [here](https://www.braze.com/docs/help/release_notes/2020/october/)
@@ -56,16 +88,16 @@ In October of 2020, we made improvements to how our user delete handles data sub
 ### New Braze Partnerships
 
 #### Airbridge - Attribution Partner
-The Airbridge and Braze integration allow you to pass all organic and non-organic install attribution data to Braze to build more personalized marketing campaigns and understand exactly where users were acquired. Visit our Airbridge documentation [here]({{site.baseurl}}/docs/partners/message_orchestration/attribution/airbridge/).
+The Airbridge and Braze integration allow you to pass all organic and non-organic install attribution data to Braze to build more personalized marketing campaigns and understand exactly where users were acquired. Visit our Airbridge documentation [here]({{site.baseurl}}/partners/message_orchestration/attribution/airbridge/).
 
 #### Kubit - Analytics Partner
-Kubit is a no-code, self-service analytics platform that delivers instant product insights. Through the seamless no-code integration with Braze, you can import user Cohort information into Braze and launch engagement campaigns to target specific Cohorts. In addition, through the use of Snowflake Secure Data Sharing, you can integrate the raw campaign and impression data from Braze with product analytics in Kubit to measure the impact of these campaigns in real-time. Visit our Kubit documentation [here]({{site.baseurl}}/docs/partners/data_and_infrastructure_agility/analytics/kubit/).
+Kubit is a no-code, self-service analytics platform that delivers instant product insights. Through the seamless no-code integration with Braze, you can import user Cohort information into Braze and launch engagement campaigns to target specific Cohorts. In addition, through the use of Snowflake Secure Data Sharing, you can integrate the raw campaign and impression data from Braze with product analytics in Kubit to measure the impact of these campaigns in real-time. Visit our Kubit documentation [here]({{site.baseurl}}/partners/data_and_infrastructure_agility/analytics/kubit/).
 
 #### Census - Customer Data Platform Partner
-Census allows you to keep your customer success, sales, and marketing teams all on the same page by keeping your customer data in sync, all without ongoing help from your engineering department. Visit our Census documentation [here]({{site.baseurl}}/docs/partners/data_and_infrastructure_agility/customer_data_platform/census/)
+Census allows you to keep your customer success, sales, and marketing teams all on the same page by keeping your customer data in sync, all without ongoing help from your engineering department. Visit our Census documentation [here]({{site.baseurl}}/partners/data_and_infrastructure_agility/customer_data_platform/census/)
 
 #### Treasure Data - Customer Data Platform Partner
-Treasure Data helps drive relevant customer experiences by harmonizing data, insights, and engagement to work in perfect unison. Armed with actionable indicators, CX Teams, including marketing, sales, and customer service can effectively optimize spend, and personalize omnichannel interactions across the entire customer journey. Visit our Treasure Data documentation [here]({{site.baseurl}}/docs/partners/data_and_infrastructure_agility/customer_data_platform/treasure_data/).
+Treasure Data helps drive relevant customer experiences by harmonizing data, insights, and engagement to work in perfect unison. Armed with actionable indicators, CX Teams, including marketing, sales, and customer service can effectively optimize spend, and personalize omnichannel interactions across the entire customer journey. Visit our Treasure Data documentation [here]({{site.baseurl}}/partners/data_and_infrastructure_agility/customer_data_platform/treasure_data/).
 
 ### Phrasee - A/B Testing
 Braze customer engagement develops relationships through multichannel marketing. Working together with Phrasee, Braze can deploy brand language, at scale, across channels that are customized to your brand voice. Phrasee’s deep learning engine handles the testing, monitors the results, and generates new language based on what it’s learned. Visit our Phrasee documentation [here]({{site.baseurl}}/partners/data_and_infrastructure_agility/ab_testing/phrasee/).
@@ -136,19 +168,6 @@ RudderStack is an open-source Customer Data Infrastructure for collecting and ro
 ### Jebbit Partnership
 Jebbit is a PaaS to which you can build engaging experiences for users to capture first-party data. Jebbit has partnered with Braze so that you can pass user emails and attributes from your Jebbit campaigns as user data to Braze in real-time. This data can then be utilized to drive marketing initiatives like personalized email campaigns and triggers. For more information, check out our [Jebbit]({{site.baseurl}}/partners/data_and_infrastructure_agility/customer_data_platform/jebbit/#jebbit)  documentation.
 
-## November 2020
-
-### Tealium Partnership is live
-[Tealium]({{site.baseurl}}/partners/data_and_infrastructure_agility/customer_data_platform/tealium/#about-tealium) is a data hub that makes it easy to connect mobile, web, and alternative data from third-party sources. When connected with Braze, Tealium enables a data flow of custom events, user attributes, and purchases for real-time data action.
-
-### Braze Product Portal
-The [Braze Product Portal]({{site.baseurl}}/user_guide/administrative/access_braze/portal/#product-portal-) contains the Braze product roadmap and opportunity for users to submit ideas. You can also see which features have been recently released. The product portal can be found in the upper-right section of the Braze dashboard, under “Resources”.
-
-### iOS Content Card Implementation Guide
-Embracing developer-centered technical strategy, Braze has released its first implementation guide highlighting use-case-driven iOS Content Card guidelines and best practices. This comprehensive guide provides unique use cases, video walkthroughs, accompanying code snippets, and guidance on how to log valuable user metrics. To read more about how you can get started implementing iOS Content Cards like a pro, [click here]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/content_cards/implementation_guide/). 
-
-### Swift Package Manager
-The Swift Package Manager is integrated with the Swift build system and automatically will download, compile, and link dependencies. Installing the iOS SDK via Swift Package Manager will automate the majority of the installation process for you. For more information, take a look at the [documentation]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/initial_SDK_setup/swift_package_manager).
 
 [support]: {{site.baseurl}}/support_contact/
 [1]: {{site.baseurl}}/user_guide/engagement_tools/canvas/retention_reports/

@@ -2,15 +2,17 @@
 nav_title: Tracking Custom Events
 platform: Android
 page_order: 2
+description: "This reference article covers how to add and track custom events for your Android application."
 
 ---
-## Tracking Custom Events
+
+# Tracking Custom Events
 
 You can record custom events in Braze to learn more about your app's usage patterns and to segment your users by their actions on the dashboard.
 
 Before implementation, be sure to review examples of the segmentation options afforded by Custom events vs. Custom attributes vs Purchase events in our [Analytics Overview][0], as well as our notes on [event naming conventions]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/event_naming_conventions/).
 
-### Adding A Custom Event
+## Adding A Custom Event
 
 {% tabs %}
 {% tab JAVA %}
@@ -31,11 +33,11 @@ Appboy.getInstance(context).logCustomEvent(YOUR_EVENT_NAME)
 
 See the [Javadoc][2] for more information.
 
-#### Adding Properties
+### Adding Properties
 
 You can add metadata about custom events by passing a [Braze Properties][4] object with your custom event.
 
-Properties are defined as key value pairs.  Keys are `String` objects and values can be `String`, `int`, `float`, `boolean`, or [`Date`][3] objects.
+Properties are defined as key-value pairs.  Keys are `String` objects and values can be `String`, `int`, `float`, `boolean`, or [`Date`][3] objects.
 
 {% tabs %}
 {% tab JAVA %}
@@ -58,7 +60,7 @@ Appboy.getInstance(context).logCustomEvent(YOUR_EVENT_NAME, eventProperties)
 {% endtab %}
 {% endtabs %}
 
-#### Reserved Keys
+### Reserved Keys
 
 The following keys are __RESERVED__ and __CANNOT__ be used as Custom Event Properties:
 

@@ -2,8 +2,11 @@
 nav_title: Advancement Behaviors
 platform: Canvas
 page_order: 2
-description: "Braze’s Advancement Behavior feature allows you to choose the criteria for advancement through your Canvas step. This reference article covers various use cases and scenarios that may come up as you advance through a Canvas."
 alias: /auto_advance/
+
+page_type: reference
+description: "This reference article describes Braze's Advancement Behavior feature and covers various scenarios that may come up as you advance through a Canvas."
+tool: Canvas
 ---
 
 # Advancing Your Users through Canvas Steps
@@ -40,7 +43,7 @@ For action-based steps, users must perform the trigger action and meet the audie
   Customers who advance through a step without receiving messages will not be counted as a unique recipient for the step. Users must receive one or more messages from a step to be counted as a unique recipient.
 {% endalert %}
 
-When sending a multi-channel step with intelligent timing, we may send or attempt to send messages at different times for different channels. Braze will Auto-Advance users at the time that the first message in a step attempts to send.   
+When sending a multichannel step with intelligent timing, we may send or attempt to send messages at different times for different channels. Braze will Auto-Advance users at the time that the first message in a step attempts to send.   
 
 ## Using Canvas Advancement
 

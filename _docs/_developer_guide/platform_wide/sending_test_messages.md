@@ -1,7 +1,10 @@
 ---
 nav_title: Sending Test Messages
 page_order: 3
+description: "THis reference article covers sending test messages for different channels."
+
 ---
+
 # Sending Test Messages
 
 Before sending out a messaging campaign to your users, you may want to test it to make sure it looks right and operates in the intended manner. Creating and sending test messages to select devices or members of your team is very simple using the tools in the dashboard.

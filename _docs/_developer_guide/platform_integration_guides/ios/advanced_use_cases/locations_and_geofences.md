@@ -2,8 +2,12 @@
 nav_title: Locations & Geofences
 platform: iOS
 page_order: 6
+description: "This reference article covers how to implement locations and geofences in your iOS application."
+Tool:
+  - Location
 
 ---
+
 # Locations & Geofences
 
 Geofences are only available in select Braze packages. For access please create a support ticket or speak with your Braze Customer Success Manager. Learn more in [Docs]({{site.baseurl}}/developer_guide/platform_integration_guides/fireos/advanced_use_cases/locations_and_geofences/#locations--geofences).
@@ -95,7 +99,7 @@ For Braze's Locations product to work correctly, you should also ensure that you
 
 ![Appboy Developer Console]({% image_buster /assets/img_archive/enable-geofences-locations-page.png %})
 
-### Enable geofences from the App Settings page:
+### Enable geofences from the Settings page:
 
 ![Appboy Developer Console]({% image_buster /assets/img_archive/enable-geofences-app-settings-page.png %})
 

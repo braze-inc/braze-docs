@@ -1,7 +1,10 @@
 ---
 nav_title: IP Warming
 page_order: 5
+
+page_type: reference
 description: "This reference article covers the topic of IP warming and best practices."
+channel: email
 ---
 
 # IP Warming
@@ -75,14 +78,6 @@ Once warming is complete, and you've reached your desired daily volume you shoul
 Braze's built-in user limiting feature serves as an useful tool to help you with warming your IP address. After you choose your desired messaging segments during campaign creation (Step 3: Target Users), select the 'Advanced Options' dropdown in order to limit your users. As your warming schedule continues, you can gradually raise this limit to increase the volume of email you send.
 
 ![Limit Users][18]
-
-## IP Warming notifications
-
-Braze takes your deliverability very seriously. As such, we’ve built a number of warnings and notifications throughout the dashboard to limit any issues during the IP warming process.  Braze will work very closely with you to define your IP Warming time frame as well as understand how many emails should be sent daily.
-
-During your established IP warming period, there will be numerous reminders in the Dashboard that your app group is going through IP Warming. Additionally, Braze will provide warnings throughout the Campaign or Canvas creation process if you accidentally go beyond your daily quota.
-
-As a last issue deterrent, Braze will automatically email a select number of individuals regarding any breach of your quota so that it can be addressed immediately.
 
 ## Subdomain Segmentation
 

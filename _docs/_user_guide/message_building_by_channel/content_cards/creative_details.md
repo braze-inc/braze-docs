@@ -3,8 +3,8 @@ nav_title: Creative Details
 page_order: 1
 layout: featured
 guide_top_header: "Creative Details"
-guide_top_text: "Get creative with content cards! But you should know some of the guidelines, first! After all, you have to know the rules to break them! Check out the individual message type's Creative Specs or the global Creative Details below."
-description: "Get creative with content cards! But you should know some of the guidelines, first! After all, you have to know the rules to break them!"
+guide_top_text: "Get creative with Content Cards! But you should know some of the guidelines first! After all, you have to know the rules to break them! Check out the individual message type's Creative Specs or the global Creative Details below."
+description: "Get creative with Content Cards! This reference article covers creative details such as image size recommendations and dismissal behavior across the three Content Card types."
 
 guide_featured_title: "Message Type Creative Specs"
 guide_featured_list:
@@ -17,13 +17,16 @@ guide_featured_list:
 - name: Banner
   link: /docs/user_guide/message_building_by_channel/content_cards/creative_details/#banner
   image: /assets/img/icon-banner-cc.png
+
+channel:
+  - content cards
 ---
 
 ## Content Card Types
 
 ### Classic
 
-The Classic card is great for standard messaging and notifications, or even visually categorizing messages with icons. The image is optional, but it must be at a 1:1 ratio.  
+The Classic card is great for standard messaging and notifications or even visually categorizing messages with icons. The image is optional, but it must be at a 1:1 ratio.  
 
 ![Classic][1]{: height="50%" width="50%"}
 

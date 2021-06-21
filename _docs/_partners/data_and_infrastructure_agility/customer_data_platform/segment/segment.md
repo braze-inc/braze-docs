@@ -15,9 +15,9 @@ page_type: partner
 
 We offer [both](#integration-options) a side-by-side SDK integration for your Android, iOS, and web applications and a server-to-server integration for your backend services so that you can start building richer user profiles.
 
-If you're looking for information on the Currents integration with Segment, [click here]({{site.baseurl}}/partners/data_and_infrastructure_agility/customer_data_platform/segment_for_currents/). If you're looking for more information about [Segment Personas]({{site.baseurl}}/partners/data_and_infrastructure_agility/customer_data_platform/segment_personas/), which allows you to build segments in Segment and pass over to Braze as a Custom Attribute against a user profile.
+If you're looking for information on the Currents integration with Segment, [click here]({{site.baseurl}}/partners/data_and_infrastructure_agility/customer_data_platform/segment/segment_for_currents/). If you're looking for more information about [Segment Personas]({{site.baseurl}}/partners/data_and_infrastructure_agility/customer_data_platform/segment/segment_personas/), which allows you to build segments in Segment and pass over to Braze as a Custom Attribute against a user profile.
 
-## Set Up Overview
+## Setup Overview
 
 To get going with your Segment/Braze integration,
 1. Take note of and prepare for your integration by [adhering to the requirements and prerequisites](#prerequisites).
@@ -42,7 +42,7 @@ To get going with your Segment/Braze integration,
 | Name| Description |
 |---|---|
 | App Identifier| Previously called the API Key. Found in the [Developer Console](https://dashboard.braze.com/app_settings/developer_console) under the `API Settings` tab. |
-| REST API Key| Previously called the "App Group Identifier". Found in the [Developer Console](https://dashboard.braze.com/app_settings/developer_console) under the `API Settings` tab. <br> <br> __The REST API Key is not required for the Side-by-Side Integration.__ |
+| REST API Key| Previously called the "App Group Identifier". Found in the [Developer Console](https://dashboard.braze.com/app_settings/developer_console) under the `API Settings` tab. |
 | API Endpoint| Find and enter your [Braze SDK Endpoint]({{site.baseurl}}/user_guide/administrative/access_braze/braze_instances/) in our documentation. <br> <br> Format without the `https` as `sdk.iad-01.braze.com`. |
 | Appboy Datacenter| Your Braze cluster. Select and input your [Braze Instance]({{site.baseurl}}/user_guide/administrative/access_braze/braze_instances/) from the drop down. |
 | Log Purchase when Revenue is present | Choose when to log purchases. |
@@ -61,7 +61,7 @@ To get going with your Segment/Braze integration,
 |Enable Logging| On/Off (True/False) | [Log to the JavaScript](https://js.appboycdn.com/web-sdk/2.0/doc/module-appboy.html#.setLogger) console by default. |
 |Minimum Interval Between Trigger Actions In Seconds| Any Number | By default, trigger actions will only fire if 30 seconds have elapsed since the last trigger action. |
 |Open In-App Messages in New Tab | On/Off (True/False) | By default, links from in-app message clicks load in the current tab or a new tab as specified in the Braze platform. |
-|Open News Feed Cards in New Tab | On/Off (True/False) | By default, links from news feed cards or content cards load in the current tab or a new tab as specified in the Braze platform. |
+|Open News Feed Cards in New Tab | On/Off (True/False) | By default, links from News Feed cards or Content Cards load in the current tab or a new tab as specified in the Braze platform. |
 |Session Timeout In Seconds| Any Number | By default, sessions time out after 30 minutes of inactivity. |
 |Track All Pages | On/Off (True/False) | Sends all [Segment page calls](https://segment.com/docs/spec/page/){:target="_blank"} to Braze as Page Events.|
 |Track Only Named Pages | On/Off (True/False) | Sends all [named Segment page calls](https://segment.com/docs/spec/page/){:target="_blank"} to Braze
@@ -112,10 +112,6 @@ For Braze's Web SDK, [Segment's Analytics.js library](https://github.com/segment
 
 {% endtab %}
 {% endtabs %}
-
-{% alert important %}
-For the side-by-side integration, inputting the "Braze REST API Key" into your [Braze's Connection Settings](#connection-settings) in the Segment Dashboard is **not** necessary.
-{% endalert %}
 
 ### Server-to-Server Integration
 
@@ -204,11 +200,11 @@ The [page](https://segment.com/docs/spec/page/){:target="_blank"} call lets you 
 
 ## Step 3: Test Your Integration
 
-Most of your [app usage dashboard][27] (lifetime sessions, MAU, DAU, Stickiness, Daily Sessions, and Daily Sessions per MAU) will be blank even if Braze is receiving data from Segment.
+Most of your [Overview][27] metrics (lifetime sessions, MAU, DAU, Stickiness, Daily Sessions, and Daily Sessions per MAU) will be blank even if Braze is receiving data from Segment.
 
-You can view your data in the [custom event dashboard][22], the [revenue dashboard][28] or by [creating a segment][23]. The custom event dashboard allows you to view custom event counts over time. Note that you will not be able to use [formulas][24] that include MAU and DAU statistics.
+You can view your data in the [Custom Events][22] or [Revenue][28] pages, or by [creating a segment][23]. The **Custom Events** page of the dashboard allows you to view custom event counts over time. Note that you will not be able to use [formulas][24] that include MAU and DAU statistics.
 
-If you're sending purchase data to Braze (see [Completed Order](#completed-order)), the [revenue dashboard][28] allows you to view data on revenue or purchases over specific periods of time or your app's total revenue.
+If you're sending purchase data to Braze (see [Completed Order](#completed-order)), the [Revenue][28] page allows you to view data on revenue or purchases over specific periods of time or your app's total revenue.
 
 [Creating a segment][26] allows you to filter your users based on custom event data and custom attribute data.
 
@@ -268,7 +264,7 @@ To ensure that you input your Braze SDK Endpoint correctly, the proper format mu
 
 > ‘App Identifier’ vs. ‘REST API Key’
 
-The ‘App Identifier’ is the App API Key found in the `Manage App Group` or `Developer Console` page on the Braze Dashboard. This field is necessary for SDK integrations to work. The ‘REST API Key’ is the dashboard REST API Key for making API calls. Make sure the key has permission to access `users/track` endpoint.
+The ‘App Identifier’ is the App API Key found in the `Manage Settings` or `Developer Console` page on the Braze Dashboard. This field is necessary for SDK integrations to work. The ‘REST API Key’ is the dashboard REST API Key for making API calls. Make sure the key has permission to access `users/track` endpoint.
 
 {% enddetails %}
 
@@ -307,7 +303,7 @@ However, customizing when the Braze SDK is integrated or specifying initializati
 [24]: {{site.baseurl}}/user_guide/data_and_analytics/creating_a_formula/#creating-a-formula
 [25]: {{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/#user-data-collection
 [26]: {{site.baseurl}}/user_guide/engagement_tools/segments/creating_a_segment/#creating-a-segment
-[27]: {{site.baseurl}}/user_guide/data_and_analytics/your_reports/viewing_and_understanding_segment_data/#viewing-and-understanding-segment-data
+[27]: {{site.baseurl}}/user_guide/data_and_analytics/your_reports/understanding_your_app_usage_data/
 [28]: {{site.baseurl}}/user_guide/data_and_analytics/export_braze_data/exporting_revenue_data/#revenue-data
 [34]: {{site.baseurl}}/developer_guide/platform_integration_guides/ios/initial_sdk_setup/
 [35]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/initial_sdk_setup/android_sdk_integration/

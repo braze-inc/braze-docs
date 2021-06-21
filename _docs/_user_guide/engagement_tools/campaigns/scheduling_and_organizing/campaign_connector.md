@@ -4,7 +4,7 @@ platform: Campaigns
 subplatform: Scheduling and Organizing
 page_order: 5
 
-tools: campaigns
+tool: Campaigns
 page_type: tutorial
 description: "This how-to article goes over what Braze's Campaign Connector is and how to use it to deliver targeted, relevant content at the right time."
 ---
@@ -39,7 +39,7 @@ The Campaign Connector feature only works with active campaigns. In addition, yo
 - Set up and publish your follow-on campaign
 - Publish the original campaign
 
-These delivery rules are particularly pertinent if you are targeting users who are enrolled in a control group, receive an e-mail or receive a push notification. Because users will be enrolled in the control group as soon as you publish the original campaign, you must publish the follow-on campaign before you publish the original campaign. Similarly, if you publish the original campaign before the follow-on campaign, many users may receive your e-mail and/or push notification before the follow-on campaign is published.
+These delivery rules are particularly pertinent if you are targeting users who are enrolled in a control group, receive an email or receive a push notification. Because users will be enrolled in the control group as soon as you publish the original campaign, you must publish the follow-on campaign before you publish the original campaign. Similarly, if you publish the original campaign before the follow-on campaign, many users may receive your email and/or push notification before the follow-on campaign is published.
 
 ## How to Use the Campaign Connector Feature
 
@@ -63,7 +63,7 @@ Select action-based delivery and add the "Interact with Card" trigger. Then choo
 
 ### Step 3: Set Schedule Delay and Add Exceptions If Necessary
 
-If you choose to set a schedule delay, you can add an exception to the trigger action. For example, you might want to resend an e-mail campaign to users who did not open the original e-mail.  In this scenario, you can choose "Received e-mail" as the trigger and set a schedule delay of one week. Then you can add "Open e-mail" as an exception. Now, you’ll resend the e-mail to users who did not open the original e-mail within a week of receiving it.
+If you choose to set a schedule delay, you can add an exception to the trigger action. For example, you might want to resend an email campaign to users who did not open the original e-mail.  In this scenario, you can choose "Received e-mail" as the trigger and set a schedule delay of one week. Then you can add "Open e-mail" as an exception. Now, you’ll resend the email to users who did not open the original email within a week of receiving it.
 
 ![Schedule Delay][6]
 

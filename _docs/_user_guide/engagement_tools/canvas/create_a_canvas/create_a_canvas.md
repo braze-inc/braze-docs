@@ -3,7 +3,10 @@ nav_title: Create a Canvas
 platform: Canvas
 subplatform: Create a Canvas
 page_order: 0
+
+page_type: reference
 description: "This reference article covers the necessary steps involved in creating, maintaining, and testing a Canvas."
+tool: Canvas
 ---
 
 # Creating a Canvas
@@ -114,6 +117,8 @@ There are three ways in which users can enter your Canvas - a scheduled entry, a
   {% endtab %}
 {% endtabs %}
 
+<a id="important-edge-case"></a>
+
 {% alert important %}
 Should the window of re-eligibility be less than the maximum duration of the Canvas, a user will be allowed to re-enter and receive more than one step's messages. In the edge case where a user's re-entry reaches the same step as its previous entry, Braze will deduplicate that step's messages. In the event where a user re-enters the Canvas, reaches the same step as their previous entry, and is eligible for an in-app message for each entry, the user will get the message twice (depending on in-app message priority) as long as they re-open a session two times.
 {% endalert %}
@@ -132,7 +137,7 @@ Click **Send Settings** to select your Subscription Settings, turn on rate limit
 
 ![Send Settings][55]
 
-By turning on rate-limiting or Frequency Capping you can ease the marketing pressure placed on your users and ensure you aren't over messaging them. To learn more about the benefits of rate-limiting and Frequency Capping click [here][6b].
+By turning on rate limiting or Frequency Capping you can ease the marketing pressure placed on your users and ensure you aren't over messaging them. To learn more about the benefits of rate limiting and Frequency Capping click [here][6b].
 
 {% alert important %}
 Visit your __Global Campaign Settings__ page in your Braze account to manage your Frequency Capping rules.<br><br>For more information on the nuances of frequency capping and rate limiting, visit [this article]({{site.baseurl}}/user_guide/engagement_tools/campaigns/testing_and_more/rate-limiting/#frequency-capping).
@@ -187,7 +192,7 @@ Click **Done** once you've finished configuring your Step.
 
 {% tabs local %}
 {% tab Canvas Entry Properties %}
-Canvas Entry Properties are the properties mapped by you when triggering or scheduling a canvas via the API.
+Canvas Entry Properties are the properties mapped by you when triggering or scheduling a Canvas via the API.
 {% raw %}
 - For example, a request with `\"canvas_entry_properties\" : {\"product_name\" : \"shoes\", \"product_price\" : 79.99}` could add the word \"shoes\" to a message by adding the Liquid `{{canvas_entry_properties.${product_name}}}`.
 
@@ -197,9 +202,9 @@ For more information on the Canvas Entry Object and Properties, check out our [D
 {% endraw %}
 {% endtab %}
 {% tab Custom Event Properties %}
-Custom Event Properties are the properties set by you on custom events and purchases, used mainly in Action-Based Delivery campaigns. These properties are ephemeral and can only be used at the time when they happen. Event properties __don’t persist__ so if you are scheduling a canvas step, rather than using action-based delivery, you wouldn’t be able to use an event property as we don’t store that data. You can't reference the event property for an event that’s already happened.
+Custom Event Properties are the properties set by you on custom events and purchases, used mainly in Action-Based Delivery campaigns. These properties are ephemeral and can only be used at the time when they happen. Event properties __don’t persist__ so if you are scheduling a Canvas step, rather than using action-based delivery, you wouldn’t be able to use an event property as we don’t store that data. You can't reference the event property for an event that’s already happened.
 
-__Custom Event Properties can be referenced in the first step of a canvas - but only the first step__! 
+__Custom Event Properties can be referenced in the first step of a Canvas - but only the first step__! 
 
 For more information on Custom Event Properties, check out our [Documentation]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events/#custom-event-properties).
 
@@ -239,7 +244,7 @@ Once you've launched your Canvas, you'll be able to view analytics for your jour
 ![Canvas Analytics][19]
 
 
-[1]:{% image_buster /assets/img_archive/Canvas_Dropdown.png %}
+[1]:{% image_buster /assets/img_archive/canvas_dropdown.png %}
 [6b]: {{site.baseurl}}/user_guide/engagement_tools/campaigns/testing_and_more/rate-limiting/#rate-limiting
 [11]:{% image_buster /assets/img_archive/Canvas_Add_Variant.png %}
 [12]:{% image_buster /assets/img_archive/Canvas_Multiple_Variants.png %}

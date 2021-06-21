@@ -1,7 +1,10 @@
 ---
 nav_title: Analytics Overview
 page_order: 2
+description: "This reference article covers user data collection including what data is automatically collected, purchase events and custom events, as well as data collection best practices."
+
 ---
+
 # User Data Collection
 
 Before completing your Braze implementation, ensure that you have a conversation between your marketing team and your development team regarding your marketing goals. When deciding what you want to track, and how you want to track it with Braze, it's useful to consider these goals and work backward from there. Please reference our case of a [Taxi/Ride-Sharing App][16] at the end of this guide for an example of this process.
@@ -82,7 +85,7 @@ All User Profile data (Custom events, Custom attribute, Custom Data) is stored a
 
 With Custom event properties, Braze allows you to set properties on Custom events and purchases. These properties can then be used for further qualifying trigger conditions, increasing personalization in messaging, and generating more sophisticated analytics through raw data export. Property values can be string, number, boolean, or time objects. However, property values cannot be array objects.
 
-For example, if an eCommerce application wanted to send a message to a user when he/she abandons their cart, it could additionally improve its target audience and allow for increased campaign personalization by adding a Custom event property of the 'cart value' of users' carts.
+For example, if an eCommerce application wanted to send a message to a user when they abandon their cart, it could additionally improve its target audience and allow for increased campaign personalization by adding a Custom event property of the 'cart value' of users' carts.
 
 ![customEventProperties.png][18]
 
@@ -178,8 +181,8 @@ Date filters using relative dates (e.g., more than 1 day ago, less than 2 days a
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
 
 #### Numbers {#integers}
-Numeric attributes have a wide variety of use-cases. Incrementing number custom attributes are useful for storing the number of times a given action or event has occurred. Standard numvers have all sorts of usages, for example : (Recording shoe size, waist size, number of times a user has viewed a certain product feature, or category).
->  Money spent in app should not be recorded by this method. Rather it should be recorded via our [purchase methods][4].
+Numeric attributes have a wide variety of use-cases. Incrementing number custom attributes are useful for storing the number of times a given action or event has occurred. Standard numbers have all sorts of usages, for example: recording shoe size, waist size, or number of times a user has viewed a certain product feature or category.
+>  Money spent should not be recorded by this method. Rather it should be recorded via our [purchase methods][4].
 
 | Segmentation Options | Dropdown Filter | Input Options |
 | ---------------------| --------------- | ------------- |
@@ -296,7 +299,7 @@ User IDs must be less than 512 characters long and should be private and not eas
 
 Good options for User IDs:
 
-- Hashed e-mail address or unique username
+- Hashed email address or unique username
 - Unique database identifier
 - Facebook ID
 

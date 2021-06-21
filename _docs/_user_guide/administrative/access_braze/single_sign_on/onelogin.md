@@ -1,9 +1,14 @@
 ---
 nav_title: OneLogin
 page_order: 5
+
+page_type: tutorial
+description: "This article will walk you through how to configure Braze to use OneLogin for single sign-on."
 ---
 
 # OneLogin
+
+> This article will walk you through how to configure Braze to use OneLogin for single sign-on.
 
 [OneLogin](https://www.onelogin.com/) is a cloud identity platform that provides a comprehensive solution for managing user identities. OneLogin integrates with cloud and on-premise applications using SAML 2.0, for Single Sign-On (SSO), user provisioning, multi-factor authentication, and more.
 
@@ -13,7 +18,7 @@ Upon setup, you will be asked to provide a Sign-On URL and an Assertion Consumer
 
 | Requirement | Details |
 |---|---|
-| **Braze Domain** | You will need your Braze domain to setup Braze within OneLogin. If your instance is `US-01`, you will need to input your dashboard URL into the OneLogin dashboard. <br> For example, if your dashboard URL is `https://dashboard-01.braze.com`, you need to input `dashboard-01.braze.com`.  |
+| **Braze Domain** | You will need your Braze domain to set up Braze within OneLogin. If your instance is `US-01`, you will need to input your dashboard URL into the OneLogin dashboard. <br> For example, if your dashboard URL is `https://dashboard-01.braze.com`, you need to input `dashboard-01.braze.com`.  |
 {: .reset-td-br-1 .reset-td-br-2}
 
 
@@ -41,7 +46,7 @@ Upon setup, you will be asked to provide a Sign-On URL and an Assertion Consumer
 
 ### Step 2: Configure OneLogin within Braze
 
-Once you have setup Braze within your OneLogin, they will provide a Target URL (`SAML 2.0 Endpoint (HTTP)`) and `x.509` certificate which you will input into your Braze account.
+Once you have set up Braze within your OneLogin, they will provide a Target URL (`SAML 2.0 Endpoint (HTTP)`) and `x.509` certificate which you will input into your Braze account.
 
 After your Account Manager has enabled SAML SSO for your account, go to `Company Settings` > `Security Settings` and toggle the SAML SSO section to `ON`.
 

@@ -7,16 +7,16 @@ page_order: 5
 excerpt_separator: ""
 page_type: glossary
 
-description: "This glossary lists the various Message Engagement Events that Braze can track and send to chosen Data Warehouses using our tool, Currents."
+description: "This glossary lists the various Message Engagement Events that Braze can track and send to chosen Data Warehouses using Currents."
 
-tool: currents
+tool: Currents
 ---
 
 Please contact your Account Manager or [open a support ticket][support] if you need access to additional event entitlements. If you can't find what you need below, check out our [Customer Behavior Events Library]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/customer_behavior_events/) or our [Currents sample data examples](https://github.com/Appboy/currents-examples/tree/master/sample-data).
 
 {% details Explanation of Message Engagement Event Structure %}
 <br>
-This event breakdown shows what type of information is generally included in a message engagement event. With a solid understanding of its components, your developers and business intelligence strategy team can use the incoming currents event data to make data-driven reports, charts and take advantage of other valuable data metrics.
+This event breakdown shows what type of information is generally included in a message engagement event. With a solid understanding of its components, your developers and business intelligence strategy team can use the incoming Currents event data to make data-driven reports, charts and take advantage of other valuable data metrics.
 
 ![image]({% image_buster /assets/img/message_engagement_event.png %})
 
@@ -72,6 +72,10 @@ For `ad_id`, `ad_id_type` and `ad_tracking_enabled`, you will need to explicitly
 _Update noted in June 2020._
 {% endalert %}
 
+{% alert note %}
+If you are using Kafka to ingest [Currents]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/) data, reach out to your Customer Success Manager or Account Manager to enable the feature flipper for sending `ad_id`.
+{% endalert %}
+
 {% endapi %}
 {% api %}
 
@@ -119,6 +123,10 @@ For `ad_id`, `ad_id_type` and `ad_tracking_enabled`, you will need to explicitly
 _Update noted in June 2020._
 {% endalert %}
 
+{% alert note %}
+If you are using Kafka to ingest [Currents]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/) data, reach out to your Customer Success Manager or Account Manager to enable the feature flipper for sending `ad_id`.
+{% endalert %}
+
 {% endapi %}
 {% api %}
 
@@ -163,6 +171,10 @@ For `ad_id`, `ad_id_type` and `ad_tracking_enabled`, you will need to explicitly
 _Update noted in June 2020._
 {% endalert %}
 
+{% alert note %}
+If you are using Kafka to ingest [Currents]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/) data, reach out to your Customer Success Manager or Account Manager to enable the feature flipper for sending `ad_id`.
+{% endalert %}
+
 {% endapi %}
 {% api %}
 
@@ -188,7 +200,7 @@ This event occurs when an error is received from either Apple Push Notification 
   "message_variation_id": (string) id of the message variation if from a campaign,
   "canvas_id": (string) id of the Canvas if from a Canvas,
   "canvas_name": (string) name of the Canvas,
-  "canvas_variation_id": (string) id of the canvas variation the user is in if from a Canvas,
+  "canvas_variation_id": (string) id of the Canvas variation the user is in if from a Canvas,
   "canvas_variation_name": (string) name of the Canvas variation the user is in if from a Canvas,
   "canvas_step_id": (string) id of the step for this message if from a Canvas,
   "canvas_step_name": (string) name of the step for this message if from a Canvas,
@@ -201,6 +213,11 @@ This event occurs when an error is received from either Apple Push Notification 
   "ad_tracking_enabled": (boolean) whether advertising tracking is enabled for the device
 }
 ```
+
+{% alert note %}
+If you are using Kafka to ingest [Currents]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/) data, reach out to your Customer Success Manager or Account Manager to enable the feature flipper for sending `ad_id`.
+{% endalert %}
+
 {% endapi %}
 {% api %}
 
@@ -278,7 +295,7 @@ This event occurs when an email sent made it successfully to the end-users inbox
   "send_id": (string) id of the message if specified for the campaign (See Send Identifier under API Identifier Types),
   "dispatch_id": (string) id of the message dispatch (unique id for each 'transmission' sent from the Braze platform). Users who are sent a schedule message get the same dispatch_id. Action-based or API triggered messages get a unique dispatch_id per user.,
   "email_address": (string) email address for this event,
-  "sending_ip": (string) the IP address from which the message was sent (Email Delivery, Bounce, and SoftBounce events only),
+  "sending_ip": (string) the IP address from which the message was sent (Email Delivery, Bounce, and SoftBounce events only. Will only be shown on events if the message was actually attempted for delivery. For certain other bounces, the information could be lost if the recipient server has already accepted the mail and only later after the connection is closed decided it could not deliver the mail),
   "ip_pool": (string) IP pool used for message sending
 }
 ```
@@ -411,8 +428,8 @@ This event occurs when an Internet Service Provider returns a hard bounce. A har
   "send_id": (string) id of the message if specified for the campaign (See Send Identifier under API Identifier Types),
   "dispatch_id": (string) id of the message dispatch (unique id for each 'transmission' sent from the Braze platform). Users who are sent a schedule message get the same dispatch_id. Action-based or API triggered messages get a unique dispatch_id per user.,
   "email_address": (string) email address for this event,
-  "sending_ip": (string) the IP address from which the message was sent (Email Delivery, Deferrals, Bounce, and SoftBounce events only),
-  "ip_pool": (string) IP pool used for message sending,
+  "sending_ip": (string) the IP address from which the message was sent (Email Delivery, Bounce, and SoftBounce events only. Will only be shown on events if the message was actually attempted for delivery. For certain other bounces, the information could be lost if the recipient server has already accepted the mail and only later after the connection is closed decided it could not deliver the mail),
+  "ip_pool": (string) IP pool used for message sending (for certain bounce cases, IP pool will not be provided) ,
   "bounce_reason": (string) reason for bounce provided by server
 }
 ```
@@ -455,8 +472,8 @@ This event occurs when an Internet Service Provider returns a soft bounce. A sof
   "send_id": (string) id of the message if specified for the campaign (See Send Identifier under API Identifier Types),
   "dispatch_id": (string) id of the message dispatch (unique id for each 'transmission' sent from the Braze platform). Users who are sent a schedule message get the same dispatch_id. Action-based or API triggered messages get a unique dispatch_id per user.,
   "email_address": (string) email address for this event,
-  "sending_ip": (string) the IP address from which the message was sent (Email Delivery, Deferrals, Bounce, and SoftBounce events only),
-  "ip_pool": (string) IP pool used for message sending,
+  "sending_ip": (string) the IP address from which the message was sent (Email Delivery, Bounce, and SoftBounce events only. Will only be shown on events if the message was actually attempted for delivery. For certain other bounces, the information could be lost if the recipient server has already accepted the mail and only later after the connection is closed decided it could not deliver the mail),
+  "ip_pool": (string) IP pool used for message sending(for certain bounce cases, IP pool will not be provided),
   "bounce_reason": (string) reason for bounce provided by server
 }
 ```
@@ -587,7 +604,7 @@ Subscription groups are only available for email and SMS channels at this time.
   "message_variation_id": (string) id of the message variation if from a campaign,
   "canvas_id": (string) id of the Canvas if from a canvas,
   "canvas_name": (string) name of the Canvas,
-  "canvas_variation_id": (string) id of the canvas variation the user is in if from a Canvas,
+  "canvas_variation_id": (string) id of the Canvas variation the user is in if from a Canvas,
   "canvas_variation_name": (string) name of the Canvas variation the user is in if from a Canvas,
   "canvas_step_id": (string) id of the step for this message if from a Canvas,
   "canvas_step_name": (string) name of the step for this message if from a Canvas,
@@ -628,7 +645,7 @@ This event occurs when a user views an in-app message.
   "canvas_variation_name": (string) name of the Canvas variation the user is in if from a Canvas,
   "canvas_step_id": (string) id of the step for this message if from a Canvas,
   "canvas_step_name": (string) name of the step for this message if from a Canvas,
-  "card_id": (string) API ID of the card this in app message comes from,
+  "card_id": (string) API ID of the card this in-app message comes from,
   "send_id": (string) id of the message if specified for the campaign (See Send Identifier under API Identifier Types),
   "app_id": (string) id for the app on which the user action occurred,
   "platform": (string) platform of the device (iOS, Android, web, etc.),
@@ -647,8 +664,11 @@ For `ad_id`, `ad_id_type` and `ad_tracking_enabled`, you will need to explicitly
 _Update noted in June 2020._
 {% endalert %}
 
-{% endapi %}
+{% alert note %}
+If you are using Kafka to ingest [Currents]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/) data, reach out to your Customer Success Manager or Account Manager to enable the feature flipper for sending `ad_id`.
+{% endalert %}
 
+{% endapi %}
 
 {% api %}
 
@@ -678,7 +698,7 @@ This event occurs when a user clicks on an in-app message.
   "canvas_variation_name": (string) name of the Canvas variation the user is in if from a Canvas,
   "canvas_step_id": (string) id of the step for this message if from a Canvas,
   "canvas_step_name": (string) name of the step for this message if from a Canvas,
-  "card_id": (string) API ID of the card this in app message comes from,
+  "card_id": (string) API ID of the card this in-app message comes from,
   "send_id": (string) id of the message if specified for the campaign (See Send Identifier under API Identifier Types),
   "app_id": (string) id for the app on which the user action occurred,
   "platform": (string) platform of the device (iOS, Android, web, etc.),
@@ -695,6 +715,10 @@ This event occurs when a user clicks on an in-app message.
 For `ad_id`, `ad_id_type` and `ad_tracking_enabled`, you will need to explicitly collect the iOS idfa and Android Google adid through the native sdks. Learn more about them here: [iOS]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/initial_sdk_setup/optional_idfa_collection/#optional-idfa-collection/), [Android]({{site.baseurl}}/developer_guide/platform_integration_guides/android/initial_sdk_setup/optional_gaid_collection/#optional-google-advertising-id).
 
 _Update noted in June 2020._
+{% endalert %}
+
+{% alert note %}
+If you are using Kafka to ingest [Currents]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/) data, reach out to your Customer Success Manager or Account Manager to enable the feature flipper for sending `ad_id`.
 {% endalert %}
 
 {% endapi %}
@@ -811,6 +835,10 @@ For `ad_id`, `ad_id_type` and `ad_tracking_enabled`, you will need to explicitly
 _Update noted in June 2020._
 {% endalert %}
 
+{% alert note %}
+If you are using Kafka to ingest [Currents]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/) data, reach out to your Customer Success Manager or Account Manager to enable the feature flipper for sending `ad_id`.
+{% endalert %}
+
 {% endapi %}
 
 {% api %}
@@ -856,6 +884,10 @@ This event occurs when a user clicks a content card.
 For `ad_id`, `ad_id_type` and `ad_tracking_enabled`, you will need to explicitly collect the iOS idfa and Android Google adid through the native sdks. Learn more about them here: [iOS]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/initial_sdk_setup/optional_idfa_collection/#optional-idfa-collection/), [Android]({{site.baseurl}}/developer_guide/platform_integration_guides/android/initial_sdk_setup/optional_gaid_collection/#optional-google-advertising-id).
 
 _Update noted in June 2020._
+{% endalert %}
+
+{% alert note %}
+If you are using Kafka to ingest [Currents]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/) data, reach out to your Customer Success Manager or Account Manager to enable the feature flipper for sending `ad_id`.
 {% endalert %}
 
 {% endapi %}
@@ -904,6 +936,10 @@ This event occurs when a user dismisses a content card.
 For `ad_id`, `ad_id_type` and `ad_tracking_enabled`, you will need to explicitly collect the iOS idfa and Android Google adid through the native sdks. Learn more about them here: [iOS]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/initial_sdk_setup/optional_idfa_collection/#optional-idfa-collection/), [Android]({{site.baseurl}}/developer_guide/platform_integration_guides/android/initial_sdk_setup/optional_gaid_collection/#optional-google-advertising-id).
 
 _Update noted in June 2020._
+{% endalert %}
+
+{% alert note %}
+If you are using Kafka to ingest [Currents]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/) data, reach out to your Customer Success Manager or Account Manager to enable the feature flipper for sending `ad_id`.
 {% endalert %}
 
 {% endapi %}

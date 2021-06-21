@@ -1,7 +1,7 @@
 ---
 nav_title: Aborting Messages
 page_order: 7
-description: "Messages may now be aborted within conditional statements. In this reference article, we list some examples use cases for this functionality."
+description: "Messages may now be aborted within conditional statements. In this reference article, we list some example use cases for this functionality."
 ---
 
 # Aborting Messages

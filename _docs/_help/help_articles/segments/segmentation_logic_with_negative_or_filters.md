@@ -1,6 +1,10 @@
 ---
 nav_title: Segmentation Logic With Negative Or Filters
 page_order: 2
+
+page_type: solution
+description: "This article walks you through best practices on when to use or not use the OR operator, and when to use the AND operator."
+tool: Segments
 ---
 
 # Segmentation Logic With Negative OR Filters
@@ -39,7 +43,7 @@ Because there are no valid use cases for using "Or" operands with two or more ne
 
 ![targeting_error][48]
 
-If you received this warning message and aren't sure how to correct your campaign, canvas or segment, please get in touch with your Customer Success Manager or write to our support team.
+If you received this warning message and aren't sure how to correct your campaign, Canvas or segment, please get in touch with your Customer Success Manager or write to our support team.
 
 Still need help? [Open a support ticket]({{site.baseurl}}/support_contact/).
 

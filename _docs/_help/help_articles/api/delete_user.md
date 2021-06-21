@@ -1,6 +1,11 @@
 ---
 nav_title: Delete User via API
-page_order: 0	
+page_order: 0
+
+page_type: reference
+description: "This article describes the implications of deleting a user profile via the Braze REST API."
+tool: Dashboard
+platform: API
 ---
 
 # What happens when a user profile is deleted via the REST API?	

@@ -1,8 +1,10 @@
 ---
 nav_title: Product Request Example
-description: "This reference article shows an example of a product request."
 hidden: true
 alias: /product_request/
+
+page_type: reference
+description: "This reference article shows an example of a product request."
 ---
 
 # Product Request Example
@@ -15,7 +17,7 @@ Here is an example of a good product request submitted by a customer. It clearly
 Skyscanner would like to be able to indicate the priority of certain tags over others, in the context of frequency capping.
  
 ### What are some specific use cases? 
-_This is where links to campaigns and canvas can help as well as a description_
+_This is where links to campaigns and Canvas can help as well as a description_
  
 As we’ll be rolling out more and more triggered campaigns, based on users behaviors, there is a chance that some emails end up telescoping each other, and that the ones scheduled to send early in the day will take precedence over those of the afternoon, as we cap at one email per day. This is not ideal, for example, emails concerning the bottom of the funnel (retargeting) drive more results than their TOFU (for example newsletter) counterparts, and we would like to be able to prioritize them.
  

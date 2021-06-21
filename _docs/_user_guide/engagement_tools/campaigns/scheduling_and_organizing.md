@@ -3,8 +3,9 @@ nav_title: Scheduling and Organizing
 layout: dev_guide
 guide_top_header: "Scheduling and Organizing"
 guide_top_text: ""
+page_order: 1
 
-tools: campaigns
+tool: Campaigns
 page_type: landing
 description: "This landing page is home to Campaign Scheduling and Organizing. Here you can find resources on how to set up your campaign and the different options available."
 

@@ -2,9 +2,9 @@
 nav_title: Action-Based Delivery
 page_order: 1
 
-tools: campaigns
 page_type: reference
-description: "This reference article gives an overview of different ways to go about scheduling a campaign."
+description: "This reference article describes how to trigger campaigns to send after a user completes a certain event."
+tool: Campaigns
 ---
 
 # Action-Based Delivery (Event Triggered Campaigns)

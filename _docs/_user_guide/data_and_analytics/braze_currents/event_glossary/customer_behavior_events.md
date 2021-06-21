@@ -7,16 +7,16 @@ page_order: 4
 excerpt_separator: ""
 page_type: glossary
 
-description: "This glossary lists the various Customer Behavior and User Events that Braze can track and send to chosen Data Warehouses using our tool, Currents."
+description: "This glossary lists the various Customer Behavior and User Events that Braze can track and send to chosen Data Warehouses using Currents."
 
-tool: currents
+tool: Currents
 ---
 
 Please contact your Braze representative or [open a support ticket][support] if you need access to additional event entitlements. If you can't find what you need below, check out our [Message Engagement Events Library]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/message_engagement_events/) or our [Currents sample data examples](https://github.com/Appboy/currents-examples/tree/master/sample-data).
 
 {% details Explanation of Customer Behavior and User Event Structure %}
 <br>
-This Customer Behavior and User Events breakdown shows what type of information is generally included in a customer behavior or user event. With a solid understanding of its components, your developers and business intelligence strategy team can use the incoming currents event data to make data-driven reports, charts and take advantage of other valuable data metrics. 
+This Customer Behavior and User Events breakdown shows what type of information is generally included in a customer behavior or user event. With a solid understanding of its components, your developers and business intelligence strategy team can use the incoming Currents event data to make data-driven reports, charts and take advantage of other valuable data metrics. 
 
 ![image]({% image_buster /assets/img/customer_engagement_event.png %})
 
@@ -65,6 +65,10 @@ For `ad_id`, `ad_id_type` and `ad_tracking_enabled`, you will need to explicitly
 _Update noted in June 2020._
 {% endalert %}
 
+{% alert note %}
+If you are using Kafka to ingest [Currents]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/) data, reach out to your Customer Success Manager or Account Manager to enable the feature flipper for sending `ad_id`.
+{% endalert %}
+
 {% endapi %}
 {% api %}
 
@@ -106,6 +110,10 @@ Purchases are special custom events and come with a JSON encoded string of custo
 For `ad_id`, `ad_id_type` and `ad_tracking_enabled`, you will need to explicitly collect the iOS idfa and Android Google adid through the native sdks. Learn more about them here: [iOS]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/initial_sdk_setup/optional_idfa_collection/#optional-idfa-collection/), [Android]({{site.baseurl}}/developer_guide/platform_integration_guides/android/initial_sdk_setup/optional_gaid_collection/#optional-google-advertising-id).
 
 _Update noted in June 2020._
+{% endalert %}
+
+{% alert note %}
+If you are using Kafka to ingest [Currents]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/) data, reach out to your Customer Success Manager or Account Manager to enable the feature flipper for sending `ad_id`.
 {% endalert %}
 
 {% endapi %}
@@ -245,6 +253,10 @@ For `ad_id`, `ad_id_type` and `ad_tracking_enabled`, you will need to explicitly
 _Update noted in June 2020._
 {% endalert %}
 
+{% alert note %}
+If you are using Kafka to ingest [Currents]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/) data, reach out to your Customer Success Manager or Account Manager to enable the feature flipper for sending `ad_id`.
+{% endalert %}
+
 {% endapi %}
 
 {% api %}
@@ -255,7 +267,7 @@ _Update noted in June 2020._
 Impression, News Feed
 {% endapitags %}
 
-This event occurs when the user views the entire news feed, not a specific News Feed Card. Use this to track users viewing the News Feed.
+This event occurs when the user views the entire News Feed, not a specific News Feed Card. Use this to track users viewing the News Feed.
 
 {% alert tip %}
 We do track other News Feed events; these are located in [Message Engagement Events]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/message_engagement_events/).

@@ -2,8 +2,10 @@
 nav_title: Google Tag Manager
 platform: iOS
 page_order: 7
+description: "This article covers how to initalize, configure, and implement the Google Tag manager into your iOS app."
 
 ---
+
 # Google Tag Manager for iOS
 
 ## Initializing the SDK {#initializing-ios-google-tag-provider}
@@ -28,7 +30,7 @@ Next, create a new Tag ("Function Call") and enter the Class Path of your [custo
 
 This tag will be triggered when you log the `played song` event we just created. 
 
-In our example tag's custom parameters (key value pairs), we've set `eventName` to `played song` - which will be the custom event name logged to Braze.
+In our example tag's custom parameters (key-value pairs), we've set `eventName` to `played song` - which will be the custom event name logged to Braze.
 
 {% alert important %}
 When sending a custom event, be sure to set `actionType` to `logEvent`, and set a value for `eventName` as shown in the screenshot below. 

@@ -6,6 +6,7 @@ page_type: update
 platform: web
 
 description: "This page lists updates to Braze's Web SDK changelog."
+
 ---
 
 # Web SDK Changelog

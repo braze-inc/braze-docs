@@ -15,7 +15,7 @@ platform:
 
 >  This reference article covers two of the three main types of keys you will see at Braze, the REST API Key or App Group API Key, referred to as the `api_key`, and the App Identifier Key, known as the `app_id`, as well as what these keys are, how they are used at Braze, their permissions and how to keep them secure. 
 
-In addition to these keys, there also exists a third type of key called Identifier Keys that can be used to reference specific things like templates, canvases, campaigns, content cards, and segments from the API. Information on those API Identifier types/keys can be found [here][2].
+In addition to these keys, there also exists a third type of key called Identifier Keys that can be used to reference specific things like templates, Canvases, campaigns, Content Cards, and segments from the API. Information on those API Identifier types/keys can be found [here][2].
 
 ## What is a REST API Key/App Group API Key?
 
@@ -27,7 +27,7 @@ We refer to both the REST API Key and App Group API Key as the `api_key`. The `a
 
 ### Where can I find it?
 
-Your API keys can always be found in the Braze Dashboard in the "Developer Console" under "App Settings". At the top of this new page, you will find the "REST API Keys" section. Here we list all of your available REST API/App Group API Keys as well as give you options to create new API keys. 
+Your API keys can always be found in the Braze Dashboard in the **Developer Console** under **Settings**. At the top of this new page, you will find the **REST API Keys** section. Here you can view all of your available REST API/App Group API Keys, and create new API keys.
 
 ### How can I use it?
 
@@ -234,9 +234,9 @@ Sometimes, you may find you are prompted for an `app_id` but you are not working
 ### Where can I find it?
 There are two ways to locate your `app_id`:
 
-1. You can find this `app_id` or application identifier by opening up the Braze Dashboard, and open "Developer Console" under "App Settings". On this new page, under "Identifiers", you will be able to see every `app_id` that exists for your apps.
+1. You can find this `app_id` or application identifier in the **Developer Console** under **Settings**. On this new page, under **Identification**, you will be able to see every `app_id` that exists for your apps.
 
-2. From the Braze Dashboard, open up "Manage App Group" under "App Settings". From this new page, in the "App Settings" tab, midway through the page you will find an "API key for __APP NAME__ on __PLATFORM__". (e.g "API Key for Ice Cream on iOS) This API key is your Application Identifier.
+2. Go to **Manage Settings** under **Settings**. From this new page, in the **Settings** tab, midway through the page you will find an "API key for __APP NAME__ on __PLATFORM__" (e.g "API Key for Ice Cream on iOS). This API key is your Application Identifier.
 
 ### Multiple App Identifier API keys
 
@@ -259,6 +259,10 @@ Security is of the utmost importance at Braze. Given that REST API Keys allow ac
 A good security practice is to assign a user only as much access as is necessary to complete their job: this principle can also be applied to API Keys by assigning permissions to each key. These permissions give you better security and control over the different areas of your account. 
 
 With App identifiers, the `app_id` is assigned by Braze and permissions cannot be assigned or revoked. Because of the nature of the relationship between `app_id` and the SDK, keeping this identifier secure is __crucial__ in the security of your application.
+
+{% alert update %}
+Braze deprecated the Debug API keys in August 2014. As a result, you will no longer see “Braze is Working” when using any legacy debug API keys you may have. You should migrate your application to the API key on your **Settings** page in order to test messaging and recording functionality. The production key should be used with production provisioning profiles and apps that are live in the app store.
+{% endalert %} 
 
 [2]: {{site.baseurl}}/api/identifier_types/
 [3]: https://developer.android.com/studio/build/build-variants.html

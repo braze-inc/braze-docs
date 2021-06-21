@@ -1,8 +1,12 @@
 ---
 nav_title: Export Campaign Results Data
 page_order: 0
-description: "This reference article covers how to export campaign analytics."
 
+page_type: reference
+description: "This reference article covers how to export campaign analytics."
+tool: 
+- Campaigns
+- Reports
 ---
 
 # Campaign Results Data
@@ -11,7 +15,7 @@ All of the analytics from your Braze campaigns can be exported to a CSV. From th
 
 ## Multi-Channel Campaigns
 
-For multi-channel campaigns, the data that can be exported will depend on which messaging channels were used. Here's a list of all the data that can be exported from a campaign that used iOS push, Android push, email, and in-app messages:
+For multichannel campaigns, the data that can be exported will depend on which messaging channels were used. Here's a list of all the data that can be exported from a campaign that used iOS push, Android push, email, and in-app messages:
 
 - Messages Sent by Date
     - Total Messages Sent

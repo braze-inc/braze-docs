@@ -3,8 +3,13 @@ nav_title: Logging Purchases
 platform: React Native
 subplatform: iOS
 page_order: 3
+
+page_type: reference
+description: "This page provides resources and methods for logging purchases for your iOS app running React Native."
+
 ---
-## Logging Purchases
+
+# Logging Purchases
 
 See [the iOS integration instructions][1] for in depth discussion of revenue tracking best practices and interfaces.
 

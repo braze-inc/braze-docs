@@ -6,7 +6,7 @@ glossary_top_header: "Segmentation Filters"
 glossary_top_text: Braze’s SDK provides you with a powerful arsenal of filters to segment and target your users based off of specific features and attributes. As you can see, you can search or narrow these filters by Filter Category.
 
 page_type: glossary
-tool: segments
+tool: Segments
 description: "This glossary lists available filters to segment and target your users."
 
 glossary_tag_name: Filter Category
@@ -100,7 +100,7 @@ glossaries:
     description: Segments your users by the median length of their sessions in your app.
     tags:
       - User Activity
-  - name: Money Spent In-App
+  - name: Money Spent
     description: Segments your users by the amount of money that they have spent in your app.
     tags:
       - User Activity
@@ -189,7 +189,7 @@ glossaries:
     tags:
       - Retargeting
   - name: Has Never Received A Campaign or Canvas Step
-    description: Segments your users by whether or not they have received any campaign or canvas step.
+    description: Segments your users by whether or not they have received any campaign or Canvas step.
     tags:
       - Retargeting
   - name: In Campaign Control Group
@@ -265,11 +265,11 @@ glossaries:
     tags:
       - Marketing Activity
   - name: Last Viewed News Feed
-    description: Segments your users by the last time that they have visited your app’s news feed interface.
+    description: Segments your users by the last time that they have visited your app’s News Feed interface.
     tags:
       - Marketing Activity
   - name: News Feed View Count
-    description: Segments your users by the number of times that they have viewed your app’s news feed interface.
+    description: Segments your users by the number of times that they have viewed your app’s News Feed interface.
     tags:
       - Marketing Activity
   - name: Age
@@ -373,7 +373,7 @@ glossaries:
     tags:
       - User Attributes
   - name: Push Enabled For App
-    description: Segments by whether or not your user has push enabled for your app on their device.
+    description: Segments by whether or not your user has push enabled for your app on their device. This count includes both foreground and background push.
     tags:
       - User Attributes
   - name: Push Opt-In Date
