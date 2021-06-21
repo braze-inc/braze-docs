@@ -7,21 +7,30 @@ description: "This reference article describes custom attributes, and explains t
 ---
 
 # Custom Attributes
-Custom attributes are best for storing attributes about your users, or information about low-value actions within your application. You should keep in mind that we don't store time-series information for Custom attributes, so you won't be able to get any graphs based upon them like you can for Custom events.
 
-We get that Custom attributes can be confusing, so read closely and check out our [LAB course on Custom events and attributes](http://lab.braze.com/custom-events-and-attributes)!
+Custom attributes are a collection of your users' unique traits. Custom attributes are best for storing attributes about your users, or information about low-value actions within your application. You should keep in mind that we don't store time-series information for custom attributes, so you won't be able to get any graphs based upon them like you can for custom events.
+
+> We get that custom attributes can be confusing, so read closely and check out our LAB course on [Custom Events & Attributes](http://lab.braze.com/custom-events-and-attributes)!
 
 ## Custom Attribute Storage
-All data stored on the User Profile, including Custom Attribute data, is retained indefinitely as long as each profile is active.
+
+All data stored on the **User Profile**, including custom attribute data, is retained indefinitely as long as each profile is active.
 
 ## Custom Attribute Data Types
-Custom Attributes are extraordinarily flexible tools that allow for great targeting.
+
+Custom attributes are extraordinarily flexible tools that allow for great targeting.
 
 The following data types may be stored as custom attributes:
 
+- [Booleans](#booleans)
+- [Numbers](#numbers)
+- [Strings](#strings)
+- [Arrays](#arrays)
+- [Time](#time)
 
-### Booleans (True/False)
-Boolean attributes are useful for storing subscription statuses, and other simple binary data about your users. The input options that we provide allow you to find users that have explicitly had a variable set to a true/false value in addition to those that don't have any record of that attribute recorded yet.
+### Booleans (True/False) {#booleans}
+
+Boolean attributes are useful for storing simple binary data about your users, like subscription statuses. You can find users that explicitly have a variable set to a true or false value, in addition to those that don't have any record of that attribute recorded yet.
 
 | Segmentation Options | Dropdown Filter | Input Options |
 | ---------------------| --------------- | ------------- |
@@ -31,6 +40,7 @@ Boolean attributes are useful for storing subscription statuses, and other simpl
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
 
 ### Numbers {#numbers}
+
 Numeric attributes include [integers](https://en.wikipedia.org/wiki/Integer) and [floats](https://en.wikipedia.org/wiki/Floating-point_arithmetic), and have a wide variety of use-cases. Incrementing number custom attributes are useful for storing the number of times a given action or event has occurred without counting against your data cap. Standard numbers have all sorts of usages, such as recording:
 
 - Shoe size
@@ -51,7 +61,8 @@ Money spent should not be recorded by this method. Rather it should be recorded 
 | Check if the numeric attribute __does not exist__ on a user's profile | __DOES NOT EXIST__ | __N/A__ |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
 
-### Strings (Alpha-Numeric Characters)
+### Strings (Alpha-Numeric Characters) {#strings}
+
 String attributes are useful for storing user input, such as a favorite brand, a phone number, or a last search string within your application. 
 
 | Segmentation Options | Dropdown Filter | Input Options |
@@ -77,7 +88,8 @@ More resources on RegEx:
 - [RegEx Tutorial](https://medium.com/factory-mind/regex-tutorial-a-simple-cheatsheet-by-examples-649dc1c3f285)
 {% endalert %}
 
-### Arrays
+### Arrays {#arrays}
+
 Array attributes are good for storing related lists of information about your users. For example, storing the last 100 pieces of content a user watched within an array would allow specific interest segmentation.
 
 | Segmentation Options | Dropdown Filter | Input Options |
@@ -98,15 +110,16 @@ More resources on RegEx:
 - [RegEx Tutorial](https://medium.com/factory-mind/regex-tutorial-a-simple-cheatsheet-by-examples-649dc1c3f285)
 {% endalert %}
 
-### Time
+### Time {#time}
+
 Time attributes are useful for storing the last time a specific action was taken, so you can offer content specific re-engagement messaging to your users.
 
-Time filters using relative dates (e.g., more than 1 day ago, less than 2 days ago) measure 1 day as 24 hours. Any campaign that you run using these filters will include all users in 24-hour increments. For example, last used app more than 1 day ago will capture all users who "last used the app more than 24 hours" from the exact time the campaign runs. The same will be true for campaigns set with longer date ranges – so five days from activation will mean the prior 120 hours.
+Time filters using relative dates (e.g., more than 1 day ago, less than 2 days ago) measure 1 day as 24 hours. Any campaign that you run using these filters will include all users in 24-hour increments. For example, `last used app more than 1 day ago` will capture all users who "last used the app more than 24 hours" from the exact time the campaign runs. The same will be true for campaigns set with longer date ranges—so five days from activation will mean the prior 120 hours.
 
 For example, to build a segment that targets users with a time attribute between 24 and 48 hours in the future, apply the filters `in more than 1 day in the future` and `in less than 2 days in the future`.
 
 {% alert warning %}
-The last date a custom event or purchase event occurred is automatically recorded, and should not be recorded in duplicate via a custom time attribute.
+The last date a custom event or purchase event occurred is automatically recorded, and shouldn't be recorded again via a custom time attribute.
 {% endalert %}
 
 | Segmentation Options | Dropdown Filter | Input Options |
@@ -140,10 +153,9 @@ As of March 10, 2020, the behavior of "Day of Recurring Event", "Less than X Day
 
 {% endalert %}
 
-
 ## Purchase and Revenue Tracking {#purchase-revenue-tracking}
 
-Using our purchase methods to record in-app purchases establishes the Lifetime Value(LTV) for each individual user profile. This data is viewable within our revenue page in time-series.
+Using our purchase methods to record in-app purchases establishes the Lifetime Value (LTV) for each individual user profile. This data is viewable within our revenue page in time-series.
 
 | Segmentation Options | Dropdown Filter | Input Options |
 | ---------------------| --------------- | ------------- |

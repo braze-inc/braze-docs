@@ -106,3 +106,21 @@ Other than the maximum of 1000 user IDs per request in the User Cohort Endpoint,
 ## Cohort Filter
 
 Braze will add a filter that allows a dashboard user to include or exclude users from a targeted audience if they are in a partner cohort. The filter will provide a dropdown list of the names of all cohorts known to Braze for that client. This filter will only be visible to clients that partner and Braze have agreed to partner with in this integration.
+
+## Troubleshooting
+
+Refer to the following table for errors codes specific to the Cohort Import endpoints, and how to troubleshoot them.
+
+| Error Code | Description |
+| ----- | ---- |
+| `401` | Invalid Partner API key |
+|  | Invalid client secret |
+|  | Partner not enabled for client with client secret: **&#60;client secret&#62;** |
+| `400` | `cohort_id` must be a valid string |
+|  | `cohort_changes` must be an array of objects each with key `user_ids` and/or `device_ids` mapping to an array of strings, or an `aliases` object |
+|  | Only 1,000 `user_ids`, `device_ids`, and `aliases` are allowed per request |
+|  | `name` must be a non-empty string |
+|  | `created_at` must be a valid time as an [ISO-8601](https://en.wikipedia.org/wiki/ISO_8601) string |
+{: .reset-td-br-1 .reset-td-br-2}
+
+For additional troubleshooting, refer to [Errors & Responses]({{site.baseurl}}/api/errors/), which covers the various errors and server responses that can come up while using the Braze API.

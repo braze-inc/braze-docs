@@ -24,9 +24,7 @@ tool:
 On iOS SDK versions 3.13.0+, due to a change in how the SDK downloads images, a thumbnail of the first image will not show on the condensed view of the push. You should ensure that your message copy prompts users to expand the push to see the images.
 {% endalert %}
 
-## Prerequisites
-
-Users must update to the latest version of Android (version: 2.2.0+) and iOS (version: 3.2.0+).
+__Prerequisites__: Users must update to the latest version of Android(version:2.2.0+) and iOS (version: 3.2.0+)
 
 ## Dashboard Changes
 

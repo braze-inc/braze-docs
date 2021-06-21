@@ -19,7 +19,7 @@ If you're looking for information on the Currents integration with Segment, [cli
 
 ## Setup Overview
 
-To get going with your Segment/Braze integration:
+To get going with your Segment/Braze integration,
 1. Take note of and prepare for your integration by [adhering to the requirements and prerequisites](#prerequisites).
 2. Set up [Braze as a Destination](#connection-settings) in accordance with [your chosen integration type](#integration-options).
 3. If you're a new-to-Braze customer, you can relay historical data to Braze using [Segment Replays](#segment-replays).

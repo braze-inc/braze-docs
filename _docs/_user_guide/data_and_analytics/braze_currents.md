@@ -46,7 +46,8 @@ Currents allows you to…
 * Stream Braze event data into a data warehouse or to one of [our analytics partners]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/available_partners/) for detailed analysis.
 * Stream Braze event data continuously to power business intelligence tools, machine learning algorithms, and more.
 * Route Braze event data to a variety of other systems using [Segment]({{site.baseurl}}/partners/data_and_infrastructure_agility/customer_data_platform/segment_for_currents/) or [mParticle]({{site.baseurl}}/partners/data_and_infrastructure_agility/customer_data_platform/mParticle/mparticle_for_currents/).
-* There’s so much more you can do with event data, accessed by Currents. Trust us—[we use Currents, too]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/how_braze_uses_currents/)!
+
+There’s so much more you can do with event data, accessed by Currents. Trust us—[we use Currents too]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/how_braze_uses_currents/)!
 
 ## Access Currents
 
