@@ -21,7 +21,7 @@ A Conversion Event is a type of success metric that tracks whether a recipient o
 
 For more on conversions, check out our [Campaign Set Up LAB course](http://lab.braze.com/campaign-setup-delivery-targeting-conversions)!
 
-Along with "Make a Purchase,” events like "Start a Session,” "Upgrade App," or any of your Custom events can be selected as conversion events. Below are further details on the feature, as well as the steps needed to implement them.
+Along with "Make a Purchase,” events like "Start a Session,” "Upgrade App," or any of your custom events can be selected as conversion events. Below are further details on the feature, as well as the steps needed to implement them.
 
 ## Primary Conversion Event
 The Primary Conversion Event is the first event added during the campaign or Canvas creation, and it is the one that has the most bearing on your engagement and reporting. It is used to:
@@ -33,7 +33,7 @@ The Primary Conversion Event is the first event added during the campaign or Can
 ## Step 1: Create a Campaign with Conversion Tracking
 Navigate to the [Braze Campaigns page][1] in your company dashboard and click "Create Campaign," then select the type of campaign you'd like to create.
 
-After setting up your campaign's messages and—for non-API campaigns—schedule, you'll have the option to add up to four Conversion events for tracking. We highly recommend using as many as you feel is necessary, as the addition of a second (or third) Conversion Event can significantly enrich your reporting. For example, if you had a campaign or Canvas targeting lapsing users, although a retention-centric Conversion Event of "Starts Session" within 3 days is valuable, perhaps you also want to add a secondary Conversion Event of performing another high-value Custom Event. This way, you can dive back into the dashboard and understand not only the extent to which your campaign or Canvas is ushering users back into your application but also how involved and active these sessions are.
+After setting up your campaign's messages and—for non-API campaigns—schedule, you'll have the option to add up to four Conversion events for tracking. We highly recommend using as many as you feel is necessary, as the addition of a second (or third) Conversion Event can significantly enrich your reporting. For example, if you had a campaign or Canvas targeting lapsing users, although a retention-centric Conversion Event of "Starts Session" within 3 days is valuable, perhaps you also want to add a secondary Conversion Event of performing another high-value custom event. This way, you can dive back into the dashboard and understand not only the extent to which your campaign or Canvas is ushering users back into your application but also how involved and active these sessions are.
 
 ## Step 2: Add Conversion Events
 
