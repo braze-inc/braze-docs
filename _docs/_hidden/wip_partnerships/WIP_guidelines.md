@@ -175,9 +175,9 @@ Next, you can check your [localhost](http://localhost:4000/docs/).
 
 Here you can navigate to the page that you created through the alias you assigned earlier. Once you open the localhost, append the alias to access your page.
 
-Example: `http://localhost:4000/docs/` + `/partner/your_partner_name/`
+Example: `http://localhost:4000/docs/` + `/partners/your_partner_name/`
 
-Your page will be viewable at `http://localhost:4000/docs/partner/your_partner_name/`
+Your page will be viewable at `http://localhost:4000/docs/partners/your_partner_name/`
 
 Once you are done reviewing your edits, press Ctrl-C in the terminal, ending the rake command.
 

@@ -28,5 +28,5 @@ valid_partner_list:
   url: /docs/partners/message_orchestration/channel_extensions/loyalty/jebbit/
 - name: Iterate
   url: /docs/partners/message_orchestration/channel_extensions/surveys/iterate/
-
+  
 ---
