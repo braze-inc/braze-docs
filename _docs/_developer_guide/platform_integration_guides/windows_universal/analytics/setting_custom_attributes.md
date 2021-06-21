@@ -10,7 +10,7 @@ description: "This reference article covers how to set custom attributes on the 
 
 Braze provides methods for assigning attributes to users. You'll be able to filter and segment your users according to these attributes on the dashboard.
 
-Before implementation, be sure to review examples of the segmentation options afforded by Custom events vs. Custom attributes vs Purchase events in our [Best Practices section][7].
+Before implementation, be sure to review examples of the segmentation options afforded by custom events vs. custom attributes vs. purchase events in our [Best Practices section][7].
 
 User attributes can be assigned to the current `IAppboyUser`. To obtain a reference to the current `IAppboyUser`, call `Appboy.SharedInstance.AppboyUser`
 
@@ -37,7 +37,7 @@ Appboy.SharedInstance.AppboyUser.FirstName = "User's First Name"
 
 ## Assigning Custom User Attributes
 
-Beyond the attributes above, Braze also allows you to define Custom attributes using a number of different data types:
+Beyond the attributes above, Braze also allows you to define custom attributes using a number of different data types:
 For more information regarding the segmentation options, and how each of these attributes will affect you, see our ["Best Practices" documentation][1] within this section.
 
 ### Setting Custom Attribute Values

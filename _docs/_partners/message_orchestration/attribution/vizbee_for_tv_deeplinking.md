@@ -15,7 +15,7 @@ Vizbee with Braze allows you to use a single console to schedule your marketing 
 
 There are other beneficial user acquisition and retention flows for both mobile and CTV apps that can be enabled with the Vizbee and Braze joint integration.
 
-## Pre-requisites
+## Prerequisites
 
 Before performing the Vizbee and Braze joint integration, ensure that you have registered your app with Vizbee, and have an assigned your Vizbee app id. To get started and register with Vizbee, please visit [Vizbee][1].
 

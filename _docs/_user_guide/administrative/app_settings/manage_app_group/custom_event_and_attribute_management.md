@@ -37,11 +37,11 @@ All User Profile data (custom events, custom attribute, custom data) is stored a
 
 ## Blocklisting Custom Attributes, Custom Events, and Products
 
-If you want to stop tracking a specific Custom attribute, event, or product (e.g., accidental creation during testing, no longer useful), search for it in the **Custom Events** tab, then click **Blocklist**.
+If you want to stop tracking a specific custom attribute, event, or product (e.g., accidental creation during testing, no longer useful), search for it in the **Custom Events** tab, then click **Blocklist**.
 
 To prevent collecting certain device attributes, see our [SDK guide][88].
 
-Once a Custom event or attribute is blocklisted:
+Once a custom event or attribute is blocklisted:
 
 - No data will be collected regarding that event/attribute,
 - Existing data will not be wiped,

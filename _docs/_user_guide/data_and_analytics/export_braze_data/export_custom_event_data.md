@@ -9,7 +9,7 @@ tool: Reports
 
 # Custom Event Aggregates
 
-The Custom Events page of the Dashboard allows you to view the occurrences of one or more custom events over time. If you view Detailed Statistics for Custom events or Custom events by the hour, you'll have the option of also viewing the data by specific segments.
+The **Custom Events** page of the Dashboard allows you to view the occurrences of one or more custom events over time. If you view Detailed Statistics for custom events or custom events by the hour, you'll have the option of also viewing the data by specific segments.
 
 ![Custom events][14]
 

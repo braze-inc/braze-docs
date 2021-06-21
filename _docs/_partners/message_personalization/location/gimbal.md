@@ -34,7 +34,7 @@ You must have the Location SDK implemented & geofences (or beacons) set up, as w
 6.	Set up [Custom events][6] in the Braze SDK. You can integrate Gimbal with Braze for [Android][7], [iOS][8], and [FireOS][9].
 7.	Log properties for these events (Place Name, Dwell Time).
 
-The integrations for Android, FireOS, and iOS above will create a unique custom event for each new place that the user enters. So, if you anticipate creating more than fifty (50) places, we recommend you create one generic “Place Entered” Custom Event and include the place name as an event property.
+The integrations for Android, FireOS, and iOS above will create a unique custom event for each new place that the user enters. So, if you anticipate creating more than fifty (50) places, we recommend you create one generic “Place Entered” custom event and include the place name as an event property.
 
 [1]: https://manager.gimbal.com/login/users/sign_in
 [2]: https://manager.gimbal.com/sdk_downloads
