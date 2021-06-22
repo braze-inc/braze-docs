@@ -67,7 +67,7 @@ Authorization: Bearer YOUR-REST-API-KEY
 | --------- | ---------| --------- | ----------- |
 |`broadcast`| Optional | Boolean | See [broadcast]({{site.baseurl}}/api/parameters/#broadcast). This parameter defaults to false (as of August 31, 2017). <br><br> If `recipients` is omitted, `broadcast` must be set to true. However, use caution when setting `broadcast: true`, as unintentionally setting this flag may cause you to send your messages to a larger than expected audience. |
 |`external_user_ids` | Optional | Array of strings | See [external user ID]({{site.baseurl}}/api/parameters/#external-user-id). |
-|`user_aliases`| Optional | Array of user alias objects| See [User Alias Object]({{site.baseurl}}/api/objects_filters/user_alias_object/). |
+|`user_aliases`| Optional | Array of user alias objects| See [user alias object]({{site.baseurl}}/api/objects_filters/user_alias_object/). |
 |`segment_id `| Optional | String | See [segment identifier]({{site.baseurl}}/api/identifier_types/). |
 |`audience`| Optional | Connected audience object | See [connected audience]({{site.baseurl}}/api/objects_filters/connected_audience/). |
 |`campaign_id`| Optional* | String | See [campaign identifier]({{site.baseurl}}/api/identifier_types/) for more information. <br><br>*Required if you wish to track campaign stats (e.g. sends, clicks, bounces, etc) on the Braze dashboard. |
