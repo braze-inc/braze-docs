@@ -43,15 +43,15 @@ Authorization: Bearer YOUR-REST-API-KEY
 
 ## Request Parameters
 
-| Key | Requirement | Data Type | Details |
+| Parameter | Required | Data Type | Description |
 |-----|-----|-----|-----|
 |`external_ids` | Optional | Array of strings | External identifiers for users you wish export |
-|`user_aliases` | Optional | Array of user alias object | User aliases for users to export |
-|`device_id` | Optional | String | Device identifier as returned by various SDK methods such as `getDeviceId` |
-|`braze_id` | Optional | String | Braze identifier for a particular user |
-|`email_address` | Optional | String | Email address of user |
-|`phone` | Optional | String | Phone number of user |
-|`fields_to_export` | Optional | Array of strings | Name of user data fields to export. Defaults to all if not provided |
+|`user_aliases` | Optional | Array of user alias object | [User aliases]({{site.baseurl}}/api/objects_filters/user_alias_object/) for users to export. |
+|`device_id` | Optional | String | Device identifier, as returned by various SDK methods such as `getDeviceId`. |
+|`braze_id` | Optional | String | Braze identifier for a particular user. |
+|`email_address` | Optional | String | Email address of user. |
+|`phone` | Optional | String | Phone number of user. |
+|`fields_to_export` | Optional | Array of strings | Name of user data fields to export. Defaults to all if not provided. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
 
 ### Request Component

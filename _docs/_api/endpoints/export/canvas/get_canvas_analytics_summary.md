@@ -23,13 +23,13 @@ This endpoint allows you to export rollups of time series data for a Canvas, pro
 
 | Parameter | Required | Data Type | Description |
 | --------- | -------- | --------- | ----------- |
-| `canvas_id` | Yes | String | Canvas API identifier |
-| `ending_at` | Yes | DateTime (ISO 8601 string) | Date on which the data export should end - defaults to time of the request |
-| `starting_at` | No | DateTime (ISO 8601 string) | Date on which the data export should begin (either length or `starting_at` required) |
-| `length` | No | String | Max number of days before ending_at to include in the returned series - must be between 1 and 14 inclusive (either length or starting_at required) |
-| `include_variant_breakdown` | No | Boolean | Whether or not to include variant stats (defaults to false)  |
-| `include_step_breakdown`    | No | Boolean | Whether or not to include step stats (defaults to false) |
-| `include_deleted_step_data` | No | Boolean | Whether or not to include step stats for deleted steps (defaults to false) |
+| `canvas_id` | Required | String | See [Canvas API identifier]({{site.baseurl}}/api/identifier_types/). |
+| `ending_at` | Required | Datetime <br>([ISO-8601](https://en.wikipedia.org/wiki/ISO_8601) string) | Date on which the data export should end. Defaults to time of the request. |
+| `starting_at` | Optional* | Datetime <br>([ISO-8601](https://en.wikipedia.org/wiki/ISO_8601) string) | Date on which the data export should begin. <br><br>* Either `length` or `starting_at` is required. |
+| `length` | Optional* | String | Max number of days before `ending_at` to include in the returned series. Must be between 1 and 14 (inclusive). <br><br>* Either `length` or `starting_at` is required. |
+| `include_variant_breakdown` | Optional | Boolean | Whether or not to include variant stats (defaults to false).  |
+| `include_step_breakdown`    | Optional | Boolean | Whether or not to include step stats (defaults to false). |
+| `include_deleted_step_data` | Optional | Boolean | Whether or not to include step stats for deleted steps (defaults to false). |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
 
 ### Request Components

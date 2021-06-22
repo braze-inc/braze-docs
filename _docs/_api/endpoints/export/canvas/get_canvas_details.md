@@ -23,7 +23,7 @@ This endpoint allows you to export metadata about a Canvas, such as its name, wh
 
 | Parameter   | Required | Data Type | Description            |
 | ----------- | -------- | --------- | ---------------------- |
-| `canvas_id` | Yes      | String    | Canvas API identifier  |
+| `canvas_id` | Required | String | See [Canvas API Identifier]({{site.baseurl}}/api/identifier_types/) |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
 
 ### Request Components

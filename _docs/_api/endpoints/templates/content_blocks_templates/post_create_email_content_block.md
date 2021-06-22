@@ -45,11 +45,11 @@ Authorization: Bearer YOUR-REST-API-KEY
 
 | Parameter | Required | Data Type | Description |
 |---|---|---|---|
-| `name` | Yes | String | Must be less than 100 characters. |
-| `description` | No | String | The description of the content block. Must be less than 250 characters. |
-| `content` | Yes | String | HTML or text content within Content Block.
+| `name` | Required | String | Name of the content block. Must be less than 100 characters. |
+| `description` | Optional | String | Description of the content block. Must be less than 250 characters. |
+| `content` | Required | String | HTML or text content within the Content Block. |
 | `state` | Optional | String | Choose `active` or `draft`. Defaults to `active` if not specified. |
-| `tags` | No | Array of strings | Tags must already exist. |
+| `tags` | Optional | Array of strings | [Tags]({{site.baseurl}}/user_guide/administrative/app_settings/manage_app_group/tags/) must already exist. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
 
 ## Example Request

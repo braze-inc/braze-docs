@@ -42,8 +42,8 @@ Authorization: Bearer YOUR-REST-API-KEY
 
 | Parameter | Required | Data Type | Description |
 | --------- | ---------| --------- | ----------- |
-| `campaign_id`|Required|String| See campaign identifier|
-| `schedule_id` | Required | String | The `schedule_id` to delete (obtained from the response to create schedule) |
+| `campaign_id`| Required | String | See [campaign identifier]({{site.baseurl}}/api/identifier_types/). |
+| `schedule_id` | Required | String | The `schedule_id` to delete (obtained from the response to create schedule). |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
 
 ### Request Components

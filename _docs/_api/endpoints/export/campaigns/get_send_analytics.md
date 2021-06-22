@@ -30,10 +30,10 @@ Campaign conversions will be attributed towards the most recent send id that a g
 
 | Parameter | Required | Data Type | Description |
 | --------- | -------- | --------- |------------ |
-| `campaign_id` | Yes | String | Campaign API identifier. |
-| `send_id` | Yes | String | Send API identifier. |
-| `length` | Yes | Integer | Max number of days before `ending_at` to include in the returned series - must be between 1 and 100 inclusive. |
-| `ending_at` | No | DateTime (ISO 8601 string) | Date on which the data series should end - defaults to time of the request. |
+| `campaign_id` | Required | String | See [Campaign API identifier]({{site.baseurl}}/api/identifier_types/). |
+| `send_id` | Required | String | See [Send API identifier]({{site.baseurl}}/api/identifier_types/). |
+| `length` | Required | Integer | Max number of days before `ending_at` to include in the returned series. Must be between 1 and 100 (inclusive). |
+| `ending_at` | Optional | Datetime <br>([ISO-8601](https://en.wikipedia.org/wiki/ISO_8601) string) | Date on which the data series should end. Defaults to time of the request. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
 
 ### Request Components

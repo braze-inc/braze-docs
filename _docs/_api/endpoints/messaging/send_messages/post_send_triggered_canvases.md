@@ -59,7 +59,7 @@ Authorization: Bearer YOUR-REST-API-KEY
 |`canvas_entry_properties`| Optional | Object | Personalization key-value pairs that will apply to all users in this request. |
 |`broadcast`| Optional | Boolean | See [broadcast]({{site.baseurl}}/api/parameters/#broadcast). This parameter defaults to false (as of August 31, 2017). <br><br> If `recipients` is omitted, `broadcast` must be set to true. However, use caution when setting `broadcast: true`, as unintentionally setting this flag may cause you to send your Canvas to a larger than expected audience. |
 |`audience`| Optional| Connected audience object | See [connected audience]({{site.baseurl}}/api/objects_filters/connected_audience/). |
-|`recipients`| Optional | Array | If not provided and `broadcast` is set to true, the message will send to the entire segment targeted by the campaign. |
+|`recipients`| Optional | Array | If not provided and `broadcast` is set to true, the message will send to the entire segment targeted by the Canvas. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
 
 ### Request Components

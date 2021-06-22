@@ -23,7 +23,7 @@ This endpoint allows you to retrieve relevant information on a specified campaig
 
 | Parameter     | Required | Data Type | Description             |
 | ------------- | -------- | --------- | ----------------------- |
-| `campaign_id` | Yes      | String    | Campaign API identifier |
+| `campaign_id` | Required      | String    | See [Campaign API identifier]({{site.baseurl}}/api/identifier_types/). |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
 
 ### Request Components
