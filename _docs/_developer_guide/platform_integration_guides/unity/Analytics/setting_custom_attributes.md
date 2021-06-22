@@ -10,7 +10,7 @@ description: "This reference article covers how to set custom attributes on Unit
 
 Braze provides methods for assigning attributes to users. You'll be able to filter and segment your users according to these attributes on the dashboard.
 
-Before implementation, be sure to review examples of the segmentation options afforded by Custom events vs. Custom attributes vs Purchase events in our [Best Practices section][1].
+Before implementation, be sure to review examples of the segmentation options afforded by custom events vs. custom attributes vs. purchase events in our [Best Practices section][1].
 
 ## Assigning Standard User Attributes
 
@@ -50,7 +50,7 @@ To assign user attributes, you need to call the appropriate method on the BrazeB
 
 ## Assigning Custom User Attributes
 
-Beyond the attributes above, Braze also allows you to define Custom attributes using a number of different data types:
+Beyond the attributes above, Braze also allows you to define custom attributes using a number of different data types:
 For more information regarding the segmentation options each of these attributes will afford you see our ["Best Practices" documentation][1] within this section.
 
 ### Setting Custom Attribute Values

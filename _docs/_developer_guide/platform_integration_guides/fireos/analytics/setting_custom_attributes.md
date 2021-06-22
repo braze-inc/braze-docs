@@ -12,7 +12,7 @@ description: "This article covers methods for assigning custom attributes to use
 
 Braze provides methods for assigning attributes to users. You'll be able to filter and segment your users according to these attributes on the dashboard.
 
-Before implementation, be sure to review examples of the segmentation options afforded by Custom events vs. Custom attributes vs Purchase events in our [Analytics Overview][7], as well as our notes on [event naming conventions]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/event_naming_conventions/).
+Before implementation, be sure to review examples of the segmentation options afforded by custom events vs. custom attributes vs. purchase events in our [Analytics Overview][7], as well as our notes on [event naming conventions]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/event_naming_conventions/).
 
 ## Assigning Standard User Attributes
 
@@ -44,7 +44,7 @@ Appboy.getInstance(context).getCurrentUser().setFirstName("first_name");
 
 ## Assigning Custom User Attributes
 
-In addition to our predefined user attribute methods, Braze also provides custom attributes to track data from your applications. Braze Custom attributes can be set with the following data types:
+In addition to our predefined user attribute methods, Braze also provides custom attributes to track data from your applications. Braze custom attributes can be set with the following data types:
 
 - Strings
 - Arrays

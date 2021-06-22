@@ -30,7 +30,7 @@ It's important to keep your Mixpanel API Secret and Mixpanel Token up to date; i
 
 A list of the events that can be exported from Braze to Mixpanel is below. All events sent to Mixpanel will include the user's `external_user_id` as the Mixpanel Distinct ID. At this time, Braze does not send event data for users who do not have their `external_user_id` set.
 
-You can export two types of events events to Mixpanel: "Message Engagement Events" consisting of the Braze Events that are directly related to message sending, and "Customer Behavior Events" including other App or Website activity such as Sessions, Custom events, and Purchases tracked through the platform. All Custom events are prefixed with `[Braze Custom Event]`. Custom event properties and Purchase event properties are prefixed with `[Custom event property]` and `[Purchase property]`, respectively.
+You can export two types of events events to Mixpanel: "Message Engagement Events" consisting of the Braze Events that are directly related to message sending, and "Customer Behavior Events" including other App or Website activity such as Sessions, Custom events, and Purchases tracked through the platform. All custom events are prefixed with `[Braze Custom Event]`. Custom event properties and purchase event properties are prefixed with `[Custom event property]` and `[Purchase property]`, respectively.
 
 Please contact your Account Manager or [open a support ticket][support] if you need access to additional event entitlements.
 
