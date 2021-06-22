@@ -1,7 +1,7 @@
 ---
 nav_title: Styling Test Page
 page_order: 2
-hidden: true
+noindex: true
 ---
 
 # Styling Test Page
