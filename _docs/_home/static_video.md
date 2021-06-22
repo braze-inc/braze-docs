@@ -4,7 +4,7 @@ nav_title: Video Test Page
 layout: featured_video
 video_id: XY5uXoKIvFY
 video_source: youtube
-hidden: true
+noindex: true
 ---
 
 # User Data Collection
