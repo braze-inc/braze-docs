@@ -33,6 +33,10 @@ You can select a time frame for your report (within the past 6 months), and refi
 
 ![Funnel Report 5][6]{: style="max-width:80%;"}
 
+{% alert note %}
+If you set the window to complete the funnel to 1 day, then the funnel event must occur within 24 hours of message receipt. However, if you select multiple days, the timing window is then counted as calendar days in the company time zone.
+{% endalert %}
+
 ### Step 2: Select Events for Funnel Steps
 
 For every funnel report, the first event will be when the user receives your message. From there, the subsequent events you choose will funnel the number of users who performed those events, as well as the previous events. Please note that funnel report events for both campaign and Canvases funnels allow for start session, make a purchase, and custom events, while __only campaign funnels__ include message engagement events right now.
