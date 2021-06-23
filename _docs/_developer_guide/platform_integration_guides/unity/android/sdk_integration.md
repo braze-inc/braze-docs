@@ -104,7 +104,7 @@ The following dependencies are required:
 ```groovy
 implementation "androidx.appcompat:appcompat:+"
 
-// Both required if using the default Content Cards Activity on Android
+// Both are required if using the default Content Cards Activity on Android
 implementation "androidx.swiperefreshlayout:swiperefreshlayout:+"
 implementation "androidx.recyclerview:recyclerview:+"
 ```
