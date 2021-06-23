@@ -45,7 +45,7 @@ All Braze-related dependencies should be handled in the _BrazeManager.swift_ fil
 1. Create a new Swift file named BrazeManager to add to your project at your desired location. (Xcode -> New -> File)
 2. Replace `import Foundation` with `import Appboy-iOS-SDK`.
 3. Create the _BrazeManager_ class that will be used to host all Braze-related methods and variables. 
-
+ 
 - _BrazeManager_ is an _NSObject_ class and not a struct, so it can conform to ABK delegates such as the _ABKInAppMessageUIDelegate_.
 - The _BrazeManager_ object is a singleton by design to ensure that only one instance of this class will be used. This is done to provide a unified point of access to the object. 
 
