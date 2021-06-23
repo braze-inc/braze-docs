@@ -28,9 +28,9 @@ Use this endpoint to list the link alias set in a particular campaign message va
 
 | Parameter | Required | Data Type | Description |
 |---|---|---|---|
-| `campaign_id`  | Yes | String | See [campaign API identifier]({{site.baseurl}}/api/identifier_types/#campaign-api-identifier).|
-| `message_variation_id `  |  Yes | String | Message variant API identifier. You can find this on the campaign details page for a campaign, under the **API Identifier** section. |
-| `includes_link_id` | No | String | A specific link identifier (as assigned by Braze) or `null`. This is used to filter the results by a specific `link_id`. |
+| `campaign_id`  | Required | String | See [campaign API identifier]({{site.baseurl}}/api/identifier_types/#campaign-api-identifier).|
+| `message_variation_id `  |  Required | String | Message variant API identifier. You can find this on the campaign details page for a campaign, under the **API Identifier** section. |
+| `includes_link_id` | Optional | String | A specific link identifier (as assigned by Braze) or `null`. This is used to filter the results by a specific `link_id`. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4}
 
 ## Example Request
