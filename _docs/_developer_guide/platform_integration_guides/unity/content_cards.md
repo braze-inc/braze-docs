@@ -10,7 +10,7 @@ description: "This reference article covers Content Card implementation guidelin
 
 ## Displaying Content Cards Natively {#unity-content-cards-native-ui}
 
-You may optionally use the native UI for Content Cards using the following call:
+You can display the default UI for Content Cards using the following call:
 
 ```csharp
 Appboy.AppboyBinding.DisplayContentCards();
