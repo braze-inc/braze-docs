@@ -97,7 +97,43 @@ Your final `AndroidManifest.xml` should only contain a single Activity with `"an
 
 In your `AndroidManifest.xml`, all instances of `REPLACE_WITH_YOUR_PACKAGE_NAME` should be replaced with your `Package Name` from the previous step.
 
-## Step 4: Configure the SDK {#unity-static-configuration}
+## Step 4: Add Gradle Dependencies {#unity-android-gradle-configuration}
+
+The following dependencies are required:
+
+```groovy
+implementation "androidx.appcompat:appcompat:+"
+
+// Both required if using the default Content Cards Activity on Android
+implementation "androidx.swiperefreshlayout:swiperefreshlayout:+"
+implementation "androidx.recyclerview:recyclerview:+"
+```
+
+Examples on how to add these dependencies using Unity tools are provided below.
+
+### Custom Gradle Template
+
+[Custom Gradle Template][55]
+
+```groovy
+dependencies {
+  implementation "androidx.appcompat:appcompat:+"
+}
+```
+
+### External Dependency Manager for Unity
+
+[External Dependency Manager for Unity][56]
+
+```xml
+<dependencies>
+  <androidPackages>
+    <androidPackage spec="androidx.appcompat:appcompat:+" />
+  </androidPackages>
+</dependencies>
+```
+
+## Step 5: Configure the SDK {#unity-static-configuration}
 
 Braze provides a native Unity solution for automating the Unity Android integration. 
 
@@ -111,7 +147,7 @@ Braze provides a native Unity solution for automating the Unity Android integrat
 This automatic integration should not be used in conjunction with a manually created `braze.xml` file since the configuration values may conflict during project building. If you require the use of a manual `braze.xml`, please disable the automatic integration.
 {% endalert %}
 
-### Step 5: Basic SDK Integration Complete
+## Step 6: Basic SDK Integration Complete
 
 Braze should now be collecting data from your application and your basic integration should be complete.
 
@@ -171,3 +207,5 @@ You should now be able to package an `.apk` from the Unity IDE that is fully int
 [52]: {{site.baseurl}}/developer_guide/platform_integration_guides/unity/content_cards/
 [53]: {{site.baseurl}}/developer_guide/platform_integration_guides/unity/android/push_notifications/
 [54]: {{site.baseurl}}/developer_guide/platform_integration_guides/unity/Advanced_Use_Cases/advanced_use_cases
+[55]: https://docs.unity3d.com/Manual/android-gradle-overview.html
+[56]: https://github.com/googlesamples/unity-jar-resolver
