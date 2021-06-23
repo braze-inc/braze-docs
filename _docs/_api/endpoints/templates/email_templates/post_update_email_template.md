@@ -62,9 +62,6 @@ Authorization: Bearer YOUR-REST-API-KEY
 |`should_inline_css`|Optional|Boolean|Enables or disables the `inline_css` feature per template. If not provided, Braze will use the default setting for the AppGroup. One of `true` or `false` is expected.|
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
 
-### Request Components
-- [Template Identifier]({{site.baseurl}}/api/identifier_types/)
-
 ## Request Example
 ```
 curl --location --request POST 'https://rest.iad-01.braze.com/templates/email/update' \

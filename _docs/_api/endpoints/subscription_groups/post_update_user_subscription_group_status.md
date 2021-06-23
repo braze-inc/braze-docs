@@ -69,7 +69,7 @@ When creating new users via the [/users/track]({{site.baseurl}}/api/endpoints/us
 | `subscription_state` | Required | String | Available values are `unsubscribed` (not in subscription group) or `subscribed` (in subscription group). |
 | `external_id` | Required* | Array of strings | The `external_id` of the user or users, may include up to 50 `id`s. |
 | `email` | Required* | String | The email address of the user, can be passed as an array of strings. Must include at least one email address (with a max of 50). |
-| `phone` | Required* | String in `E.164` format | The phone number of the user, can be passed as an array of strings. Must include at least one phone number (with a max of 50). |
+| `phone` | Required* | String in [E.164](https://en.wikipedia.org/wiki/E.164) format | The phone number of the user, can be passed as an array of strings. Must include at least one phone number (with a max of 50). |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
 
 ## Example Requests Email

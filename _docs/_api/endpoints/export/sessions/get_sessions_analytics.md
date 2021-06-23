@@ -30,9 +30,6 @@ This endpoint allows you to retrieve a series of the number of sessions for your
 | `segment_id` | Optional       | String | See [Segment API identifier]({{site.baseurl}}/api/identifier_types/). Segment ID indicating the analytics-enabled segment for which sessions should be returned. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
 
-### Request Components
-- [Segment Identifier]({{site.baseurl}}/api/identifier_types/)
-
 ## Example Request
 {% raw %}
 ```

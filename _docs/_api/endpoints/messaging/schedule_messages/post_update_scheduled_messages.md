@@ -49,8 +49,6 @@ Authorization: Bearer YOUR-REST-API-KEY
 |`messages` | Optional | Object | See [available message objects](#available-message-objects), below. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
 
-### Request Components
-- [Schedule Object]({{site.baseurl}}/api/objects_filters/schedule_object/)
 
 ### Available Messaging Objects {#available-message-objects}
 You can use these objects in the [request body](#request-body) above.

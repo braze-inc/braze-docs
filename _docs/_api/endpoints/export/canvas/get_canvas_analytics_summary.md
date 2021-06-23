@@ -32,9 +32,6 @@ This endpoint allows you to export rollups of time series data for a Canvas, pro
 | `include_deleted_step_data` | Optional | Boolean | Whether or not to include step stats for deleted steps (defaults to false). |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
 
-### Request Components
-- [Canvas Identifier]({{site.baseurl}}/api/identifier_types/)
-
 ## Example Request
 {% raw %}
 ```

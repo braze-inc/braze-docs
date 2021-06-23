@@ -46,10 +46,6 @@ Authorization: Bearer YOUR-REST-API-KEY
 |`send_id`| Optional | String | See [send identifier]({{site.baseurl}}/api/identifier_types/). |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
 
-### Request Components
-- [Campaign Identifier]({{site.baseurl}}/api/identifier_types/)
-- [Send Identifier]({{site.baseurl}}/api/identifier_types/)
-
 ## Example Request
 ```
 curl --location --request POST 'https://rest.iad-01.braze.com/sends/id/create' \

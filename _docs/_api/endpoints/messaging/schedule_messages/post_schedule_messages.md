@@ -84,16 +84,6 @@ Authorization: Bearer YOUR-REST-API-KEY
 | `messages` | Optional | Messaging object | See [available messaging objects](#available-messaging-objects), below. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
 
-### Request Components
-- [Broadcast]({{site.baseurl}}/api/parameters/#broadcast)
-- [User Alias Object]({{site.baseurl}}/api/objects_filters/user_alias_object/)
-- [Connected Audience]({{site.baseurl}}/api/objects_filters/connected_audience/)
-- [Segment Identifier]({{site.baseurl}}/api/identifier_types/)
-- [Campaign Identifier]({{site.baseurl}}/api/identifier_types/)
-- [Send Identifier]({{site.baseurl}}/api/identifier_types/)
-- [Schedule Object]({{site.baseurl}}/api/objects_filters/schedule_object/)
-- [API Parameters]({{site.baseurl}}/api/parameters)
-
 ### Available Messaging Objects {#available-messaging-objects}
 
 You can use these objects in the [request body](#request-body) above.

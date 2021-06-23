@@ -38,10 +38,11 @@ If you want to see examples or test this endpoint for __SMS Subscription Groups_
 | `subscription_group_id`  | Required | String | The `id` of your subscription group. |
 | `external_id`  |  Required* | String | The `external_id` of the user (must include at least one and at most 50 `external_ids`). <br><br>When both an `external_id` and `email`/`phone` are submitted, only the `external_id`(s) provided will be applied to the result query. |
 | `email` | Required* | String | The email address of the user. It can be passed as an array of strings with a max of 50. Submitting both an email address and phone number (with no `external_id`) will result in an error. |
-| `phone` | Required* | String | The phone number of the user. If email is not included, you must include at least one phone number (with a max of 50). <br><br>Braze recommends providing this in `E.164 format`. Submitting both an email address and phone number (with no `external_id`) will result in an error. |
+| `phone` | Required* | String in [E.164](https://en.wikipedia.org/wiki/E.164) format | The phone number of the user. If email is not included, you must include at least one phone number (with a max of 50). <br><br> Submitting both an email address and phone number (with no `external_id`) will result in an error. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
 
-- One of `external_id` or `email` or `phone` is required for each user.
+*One of `external_id` or `email` or `phone` is required for each user.
+
 - For SMS subscription groups, either `external_id` or `phone` is required.  When both are submitted, only the `external_id` is used for querying and the phone number is applied to that user.
 - For email subscription groups, either `external_id` or `email` is required.  When both are submitted, only the `external_id` is used for the query and the email address is applied to that user.
 

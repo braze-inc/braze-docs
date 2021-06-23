@@ -23,15 +23,10 @@ This endpoint allows you to retrieve a daily series of various stats for a campa
 
 | Parameter | Required | Data Type | Description |
 | --------- | -------- | --------- | ----------- |
-| `campaign_id` | Required | String | See [Campaign API identifier]({{site.baseurl}}/api/identifier_types/). |
+| `campaign_id` | Required | String | See [Campaign API identifier]({{site.baseurl}}/api/identifier_types/).<br><br> The `campaign_id` for API campaigns can be found on the **Developer Console** and the **Campaign Details** page within your dashboard; or you can use the [Campaign List Endpoint](#campaign-list-endpoint). |
 | `length` | Required | Integer | Max number of days before `ending_at` to include in the returned series. Must be between 1 and 100 (inclusive). |
 | `ending_at` | Optional | Datetime <br>([ISO-8601](https://en.wikipedia.org/wiki/ISO_8601) string) | Date on which the data series should end. Defaults to time of the request. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
-
-### Request Components
-- [Campaign Identifier]({{site.baseurl}}/api/identifier_types/)
-<br><br>
-The `campaign_id` for API campaigns can be found on the Developer Console page and the campaign details page within your dashboard; or you can use the [Campaign List Endpoint](#campaign-list-endpoint).
 
 ## Example Request 
 {% raw %}

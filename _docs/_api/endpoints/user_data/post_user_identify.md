@@ -45,12 +45,8 @@ Authorization: Bearer YOUR-REST-API-KEY
 
 | Parameter | Required | Data Type | Description |
 | -----------|----------| --------|------- |
-| `aliases_to_identify` | Required | Array of aliases to identify object | See [alias to identify object]({{site.baseurl}}/api/objects_filters/aliases_to_identify/). |
+| `aliases_to_identify` | Required | Array of aliases to identify object | See [alias to identify object]({{site.baseurl}}/api/objects_filters/aliases_to_identify/) and [user alias object]({{site.baseurl}}/api/objects_filters/user_alias_object/). |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
-
-### Request Components
-- [Alias to Identify Object]({{site.baseurl}}/api/objects_filters/aliases_to_identify/)
-- [User Alias Object]({{site.baseurl}}/api/objects_filters/user_alias_object/)
 
 ## Request Example
 ```

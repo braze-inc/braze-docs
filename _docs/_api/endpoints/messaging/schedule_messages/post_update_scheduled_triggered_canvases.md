@@ -51,10 +51,6 @@ Authorization: Bearer YOUR-REST-API-KEY
 |`schedule` | Required | Object | See [schedule object]({{site.baseurl}}/api/objects_filters/schedule_object/). |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
 
-### Request Components
-- [Canvas ID]({{site.baseurl}}/api/identifier_types/)
-- [Schedule Object]({{site.baseurl}}/api/objects_filters/schedule_object/)
-
 ## Request Example
 ```
 curl --location --request POST 'https://rest.iad-01.braze.com/campaigns/trigger/schedule/update' \

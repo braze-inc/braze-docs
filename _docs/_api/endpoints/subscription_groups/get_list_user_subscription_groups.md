@@ -37,7 +37,7 @@ If you want to see examples or test this endpoint for __SMS Subscription Groups_
 |---|---|---|---|
 | `external_id`  | Required | String | The `external_id` of the user (must include at least one and at most 50 `external_ids`). |
 | `email`  |  Required* | String | The email address of the user, can be passed as an array of strings. Must include at least one email address (with a max of 50). |
-| `phone` | Required* | String | The phone number of the user. Must include at least one phone number (with a max of 50). Braze recommends providing this in `E.164` format. |
+| `phone` | Required* | String in [E.164](https://en.wikipedia.org/wiki/E.164) format | The phone number of the user. Must include at least one phone number (with a max of 50). |
 | `limit` | Optional | Integer | The limit on the maximum number of results returned. Default (and max) `limit` is 100. |
 | `offset`  |  Optional | Integer | Number of templates to skip before returning the rest of the templates that fit the search criteria. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}

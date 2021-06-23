@@ -88,9 +88,6 @@ Individual custom attributes cannot be exported. However, all custom attributes 
 |`output_format` | Optional | String | When using your own S3 bucket, allows to specify file format as `zip` or `gzip`. Defaults to ZIP file format. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
 
-### Request Components
-- [Segment Identifier]({{site.baseurl}}/api/identifier_types/)
-
 ## Example Request
 ```
 curl --location --request POST 'https://rest.iad-01.braze.com/users/export/segment' \

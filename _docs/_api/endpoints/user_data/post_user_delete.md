@@ -50,9 +50,6 @@ Authorization: Bearer YOUR-REST-API-KEY
 | `braze_ids` | Optional | Array of strings | Braze user identifiers for the users to delete. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
 
-### Request Components
-- [User Alias Object]({{site.baseurl}}/api/objects_filters/user_alias_object/)
-
 ## Example Request
 ```
 curl --location --request POST 'https://rest.iad-01.braze.com/users/delete' \
