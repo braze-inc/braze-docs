@@ -70,31 +70,21 @@ Authorization: Bearer YOUR-REST-API-KEY
 
 | Parameter | Required | Data Type | Description |
 | --------- | ---------| --------- | ----------- |
-| `broadcast` | Optional | Boolean | See broadcast -- defaults to false on 8/31/17, must be set to true if "recipients" object is omitted |
-| `external_user_ids` | Optional | Array of strings | See external user identifier |
-| `user_aliases` | Optional | Array of user alias objects | See user alias object |
-| `audience` | Optional | Connected audience object | See connected audience |
-| `segment_id` | Optional | String | See segment identifier |
-| `campaign_id`|Required|String| See campaign identifier|
-| `recipients` | Optional | Array of recipient objects | See recipients object |
-| `send_id` | Optional | String | See send identifier | 
+|`broadcast`| Optional | Boolean | See [broadcast]({{site.baseurl}}/api/parameters/#broadcast). This parameter defaults to false (as of August 31, 2017). <br><br> If `recipients` is omitted, `broadcast` must be set to true. However, use caution when setting `broadcast: true`, as unintentionally setting this flag may cause you to send your message to a larger than expected audience. |
+| `external_user_ids` | Optional | Array of strings | See [external user identifier]({{site.baseurl}}/api/parameters/#external-user-id). |
+| `user_aliases` | Optional | Array of user alias objects | See [user alias object]({{site.baseurl}}/api/objects_filters/user_alias_object/). |
+| `audience` | Optional | Connected audience object | See [connected audience]({{site.baseurl}}/api/objects_filters/connected_audience/). |
+| `segment_id` | Optional | String | See [segment identifier]({{site.baseurl}}/api/identifier_types/). |
+| `campaign_id`|Required|String| See [campaign identifier]({{site.baseurl}}/api/identifier_types/). |
+| `recipients` | Optional | Array of recipient objects | See [recipients object]({{site.baseurl}}/api/objects_filters/recipient_object/). |
+| `send_id` | Optional | String | See [send identifier]({{site.baseurl}}/api/identifier_types/). | 
 | `override_messaging_limits` | Optional | Boolean | Ignore global rate limits for campaigns, defaults to false |
-| `recipient_subscription_state` | Optional | String | Use this to send messages to only users who have opted in ('opted_in'), only users who have subscribed or are opted in ('subscribed') or to all users, including unsubscribed users ('all'), the latter being useful for transactional email messaging. Defaults to 'subscribed' |
-| `schedule` | Required | Schedule object | See schedule object |
-| `messages` | Optional | Messaging object | See messaging object |
+|`recipient_subscription_state`| Optional | String | Use this to send messages to only users who have opted in (`opted_in`), only users who have subscribed or are opted in (`subscribed`) or to all users, including unsubscribed users (`all`). <br><br>Using `all` users is useful for transactional email messaging. Defaults to `subscribed`. |
+| `schedule` | Required | Schedule object | See [schedule object]({{site.baseurl}}/api/objects_filters/schedule_object/) |
+| `messages` | Optional | Messaging object | See [available messaging objects](#available-messaging-objects), below. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
 
-### Request Components
-- [Broadcast]({{site.baseurl}}/api/parameters/#broadcast)
-- [User Alias Object]({{site.baseurl}}/api/objects_filters/user_alias_object/)
-- [Connected Audience]({{site.baseurl}}/api/objects_filters/connected_audience/)
-- [Segment Identifier]({{site.baseurl}}/api/identifier_types/)
-- [Campaign Identifier]({{site.baseurl}}/api/identifier_types/)
-- [Send Identifier]({{site.baseurl}}/api/identifier_types/)
-- [Schedule Object]({{site.baseurl}}/api/objects_filters/schedule_object/)
-- [API Parameters]({{site.baseurl}}/api/parameters)
-
-### Available Messaging Objects
+### Available Messaging Objects {#available-messaging-objects}
 
 You can use these objects in the [request body](#request-body) above.
 - [Android Objects]({{site.baseurl}}/api/objects_filters/android_objects/)

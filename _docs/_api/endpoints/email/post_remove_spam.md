@@ -39,7 +39,7 @@ Authorization: Bearer YOUR-REST-API-KEY
 
 | Parameter | Required | Data Type | Description |
 | ----------|-----------| --------|------- |
-| `email` | Yes | String or array | String email address to modify, or an array of up to 50 email addresses to modify. |
+| `email` | Required | String or array | String email address to modify, or an array of up to 50 email addresses to modify. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
 
 ## Example Request

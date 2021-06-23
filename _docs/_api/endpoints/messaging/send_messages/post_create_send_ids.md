@@ -42,13 +42,9 @@ Authorization: Bearer YOUR-REST-API-KEY
 
 | Parameter | Required | Data Type | Description |
 | --------- | ---------| --------- | ----------- |
-|`campaign_id`|Required|String| See campaign identifier|
-|`send_id`| Optional | String | See send identifier |
+|`campaign_id`|Required|String| See [campaign identifier]({{site.baseurl}}/api/identifier_types/). |
+|`send_id`| Optional | String | See [send identifier]({{site.baseurl}}/api/identifier_types/). |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
-
-### Request Components
-- [Campaign Identifier]({{site.baseurl}}/api/identifier_types/)
-- [Send Identifier]({{site.baseurl}}/api/identifier_types/)
 
 ## Example Request
 ```

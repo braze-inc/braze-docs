@@ -65,11 +65,11 @@ When creating new users via the [/users/track]({{site.baseurl}}/api/endpoints/us
 
 | Parameter | Required | Data Type | Description |
 |---|---|---|---|
-| `subscription_group_id` | Yes | String | The id of your subscription group, |
-| `subscription_state` | Yes | String | Available values are “unsubscribed” (not in subscription group) or “subscribed” (in subscription group) |
-| `external_id` | Yes* | Array of strings | The external_id of the user or users, may include up to 50 ids. |
-| `email` | Yes* | String | The email address of the user, can be passed as an array of strings (must include at least one address and at most 50 addresses). |
-| `phone` | Yes* | String in E.164 format | The phone number of the user, can be passed as an array of strings (must include at least one phone number and at most 50 phone numbers). |
+| `subscription_group_id` | Required | String | The `id` of your subscription group. |
+| `subscription_state` | Required | String | Available values are `unsubscribed` (not in subscription group) or `subscribed` (in subscription group). |
+| `external_id` | Required* | Array of strings | The `external_id` of the user or users, may include up to 50 `id`s. |
+| `email` | Required* | String | The email address of the user, can be passed as an array of strings. Must include at least one email address (with a max of 50). |
+| `phone` | Required* | String in [E.164](https://en.wikipedia.org/wiki/E.164) format | The phone number of the user, can be passed as an array of strings. Must include at least one phone number (with a max of 50). |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
 
 ## Example Requests Email
