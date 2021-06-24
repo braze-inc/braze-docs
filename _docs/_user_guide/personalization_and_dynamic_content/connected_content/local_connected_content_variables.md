@@ -97,23 +97,12 @@ You can optionally provide a POST body by specifying `:body` followed by a query
 ##### Example POST Body
 ```json
 {
-  "sorts": [
-    {
-      "field": "startdate",
-      "direction": "asc"
-    }
-  ],
-  "filters": [
-    {
-      "field": "startdate",
-      "type": "range",
-      "rangeFilters": {
-        "time_zone": "-07:00",
-        "gte": "now+1d/d",
-        "lt": "now+2d/d"
-      }
-    }
-  ]
+  "sorts[0][field]": "startdate",
+  "sorts[0][direction]": "asc",
+  "filters[0][field]": "startdate",
+  "filters[0][type]": "range",
+  "filters[0][rangeFilters][time_zone]": "-07:00",
+  "filters[0][rangeFilters][gte]": "now 1d/d",
 }
 ```
 ##### Example POST Body Formatting
@@ -125,7 +114,7 @@ You can optionally provide a POST body by specifying `:body` followed by a query
      :headers {
        "Content-Type": "application/json"
   }  
-     :body sorts[0][field]=startdate&sorts[0][direction]=asc&filters[0][field]=startdate&filters[0][type]=range&filters[0][rangeFilters][time_zone]=-07:00&filters[0][rangeFilters][gte]=now+1d/d&filters[0][rangeFilters][lt]=now+2d/d
+     :body sorts[0][field]=startdate&sorts[0][direction]=asc&filters[0][field]=startdate&filters[0][type]=range&filters[0][rangeFilters][time_zone]=-07:00&filters[0][rangeFilters][gte]=now+1d/d
      :save result 
 %}
 ```
