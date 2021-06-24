@@ -21,7 +21,6 @@ These partners can either act as warehouses (for flat file storage) or gateways 
 
 * [Microsoft Azure Blob Storage][3]
 
-
 ## Customer Data
 
 These customer data platforms collect and route information from multiple sources to a variety of other locations to empower you to utilize Braze data in the best ways possible.
@@ -42,8 +41,7 @@ These partners specialize in product analytics and business intelligence and can
 
 ## Integration Platforms
 
-These partners facilitate transforming data and coordinating between
-multiple systems
+These partners facilitate transforming data and coordinating between multiple systems
 
 * [AWS EventBridge][9]
 
@@ -56,5 +54,5 @@ multiple systems
 [5]: {{site.baseurl}}/partners/insights/behavioral_analytics/mixpanel_for_currents/
 [6]: {{site.baseurl}}/partners/data_and_infrastructure_agility/customer_data_platform/mParticle/mparticle_for_currents/
 [7]: {{site.baseurl}}/partners/data_and_infrastructure_agility/customer_data_platform/segment/segment_for_currents/
-[8]: {{site.baseurl}}/partners/data_and_infrastructure_agility/customer_data_platform/tealium/
+[8]: {{site.baseurl}}/partners/data_and_infrastructure_agility/customer_data_platform/tealium/tealium_currents_connector/
 [9]: {{site.baseurl}}/partners/data_and_infrastructure_agility/integration_platforms/eventbridge/
