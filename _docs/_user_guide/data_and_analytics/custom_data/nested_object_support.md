@@ -1,12 +1,11 @@
 ---
 nav_title: Nested Object Support
-permalink: "/nested_object_support/"
-hidden: true
+page_title: Nested Object Support for Custom Event Properties
+page_order: 4
+
+page_type: reference
+description: "This reference article describes nested object support for custom event properties, and includes example use cases, limitations, and frequently asked questions."
 ---
-<br>
-{% alert note %}
-Nested Object Support is currently in beta. Please contact your Braze account manager if you are interested in participating in the beta.
-{% endalert %}
 
 # Nested Object Support for Custom Event Properties
 
@@ -14,12 +13,12 @@ Nested Object Support allows you to send arrays of data as properties of custom 
 
 ## Limitations
 
-- Nested data can only be sent with [custom events]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events/) and [purchase events]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/purchase_events/). This is not yet supported with user attributes. 
+- Nested data can only be sent with [custom events]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events/) and [purchase events]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/purchase_events/). This is not yet supported with user attributes.
 - Array data cannot be used for segmentation or in any other way on the platform outside of Liquid templating and triggering.
 - Datetimes are not supported within the array.
 - Object data types will be ingested as strings.
 - Event property objects that contain array or object values can have an event property payload of up to 50KB.
-- Available on events/purchases sent __via API only__, the Braze SDKs are not yet supported.
+- Available on events/purchases sent via API only, the Braze SDKs are not yet supported.
 
 ## Usage Examples
 
