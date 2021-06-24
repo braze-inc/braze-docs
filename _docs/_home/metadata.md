@@ -1,6 +1,7 @@
 ---
 nav_title: Docs Metadata
 page_order: 0
+noindex: true
 ---
 # Docs Metadata
 

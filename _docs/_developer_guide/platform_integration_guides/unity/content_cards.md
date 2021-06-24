@@ -8,6 +8,14 @@ description: "This reference article covers Content Card implementation guidelin
 
 # Content Cards
 
+## Displaying Content Cards Natively {#unity-content-cards-native-ui}
+
+You can display the default UI for Content Cards using the following call:
+
+```csharp
+Appboy.AppboyBinding.DisplayContentCards();
+```
+
 ## Receiving Content Card Data in Unity
 
 You may register Unity Game Objects to be notified of incoming Content Cards. We recommend setting game object listeners from the Braze configuration editor.

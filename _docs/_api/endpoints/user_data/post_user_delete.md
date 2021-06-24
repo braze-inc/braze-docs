@@ -45,13 +45,10 @@ Authorization: Bearer YOUR-REST-API-KEY
 
 | Parameter | Required | Data Type | Description |
 | --------- | ---------| --------- | ----------- |
-| `external_ids` | Optional | Array of strings | External identifiers for the users to delete |
-| `user_aliases` | Optional | Array of user alias object | User aliases for the users to delete |
-| `braze_ids` | Optional | Array of strings | Braze user identifiers for the users to delete |
+| `external_ids` | Optional | Array of strings | External identifiers for the users to delete. |
+| `user_aliases` | Optional | Array of user alias object | [User aliases]({{site.baseurl}}/api/objects_filters/user_alias_object/) for the users to delete. |
+| `braze_ids` | Optional | Array of strings | Braze user identifiers for the users to delete. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
-
-### Request Components
-- [User Alias Object]({{site.baseurl}}/api/objects_filters/user_alias_object/)
 
 ## Example Request
 ```

@@ -22,16 +22,13 @@ This endpoint allows you to retrieve a series of the number of occurrences of a 
 
 | Parameter| Required | Data Type | Description |
 | -------- | -------- | --------- | ----------- |
-| `event`      | Yes      | String | The name of the custom event for which to return analytics                                                                   |
-| `length`     | Yes      | Integer | Max number of units (days or hours) before `ending_at` to include in the returned series - must be between 1 and 100 inclusive |
-| `unit`       | No       | String | Unit of time between data points - can be "day" or "hour" (defaults to "day")  |
-| `ending_at`  | No       | DateTime (ISO 8601 string) | Point in time when the data series should end - defaults to time of the request |
-| `app_id`     | No       | String | App API identifier retrieved from the Developer Console to limit analytics to a specific app |
-| `segment_id` | No       | String | Segment API identifier indicating the analytics enabled segment for which event analytics should be returned |
+| `event`      | Required      | String | The name of the custom event for which to return analytics. |
+| `length`     | Required      | Integer | Max number of units (days or hours) before `ending_at` to include in the returned series. Must be between 1 and 100 (inclusive). |
+| `unit`       | Optional       | String | Unit of time between data points. Can be `day` or `hour`, defaults to `day`.  |
+| `ending_at` | Optional | Datetime <br>([ISO-8601](https://en.wikipedia.org/wiki/ISO_8601) string) | Date on which the data series should end. Defaults to time of the request. |
+| `app_id`     | Optional       | String | App API identifier retrieved from the **Developer Console** to limit analytics to a specific app. |
+| `segment_id` | Optional       | String | See [Segment API identifier]({{site.baseurl}}/api/identifier_types/). Segment ID indicating the analytics-enabled segment for which event analytics should be returned. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
-
-### Request Components
-- [Segment Identifier]({{site.baseurl}}/api/identifier_types/)
 
 ## Example Request
 {% raw %}

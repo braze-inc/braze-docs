@@ -266,7 +266,7 @@ The `ABKURLDelegate` protocol can be used to customize the handling of URLs such
 {% tab swift %}
 
 ```swift
-func handleAppboyURL(_ url: URL, from channel: ABKChannel, withExtras extras: [AnyHashable : Any]) -> Bool {
+func handleAppboyURL(_ url: URL?, from channel: ABKChannel, withExtras extras: [AnyHashable : Any]?) -> Bool {
   if (url.host == "MY-DOMAIN.com") {
     // Custom handle link here
     return true;

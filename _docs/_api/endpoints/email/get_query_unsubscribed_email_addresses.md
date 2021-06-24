@@ -29,12 +29,12 @@ You must provide an `end_date`, as well as either an `email` or a `start_date` .
 
 | Parameter | Required | Data Type | Description |
 | ----------|-----------| ---------|------ |
-| `start_date` | No * | String in YYYY-MM-DD format| Start date of the range to retrieve unsubscribes, must be earlier than end_date. This is treated as midnight in UTC time by the API. |
-| `end_date` | No * | String in YYYY-MM-DD format | End date of the range to retrieve unsubscribes. This is treated as midnight in UTC time by the API. |
-| `limit` | No | Integer | Optional field to limit the number of results returned. Defaults to 100, maximum is 500. |
-| `offset` | No | Integer | Optional beginning point in the list to retrieve from |
-| `sort_direction` | No | String | Pass in the value `asc` to sort unsubscribes from oldest to newest. Pass in `desc` to sort from newest to oldest. If sort_direction is not included, the default order is newest to oldest. |
-| `email` | No * | String | If provided, we will return whether or not the user has unsubscribed |
+| `start_date` | Optional* | String in YYYY-MM-DD format| Start date of the range to retrieve unsubscribes, must be earlier than end_date. This is treated as midnight in UTC time by the API. |
+| `end_date` | Optional* | String in YYYY-MM-DD format | End date of the range to retrieve unsubscribes. This is treated as midnight in UTC time by the API. |
+| `limit` | Optional | Integer | Optional field to limit the number of results returned. Defaults to 100, maximum is 500. |
+| `offset` | Optional | Integer | Optional beginning point in the list to retrieve from |
+| `sort_direction` | Optional | String | Pass in the value `asc` to sort unsubscribes from oldest to newest. Pass in `desc` to sort from newest to oldest. If sort_direction is not included, the default order is newest to oldest. |
+| `email` | Optional* | String | If provided, we will return whether or not the user has unsubscribed |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
 
 If your date range has more than `limit` number of unsubscribes, you will need to make multiple API calls, each time increasing the `offset` until a call returns either fewer than `limit` or zero results.
