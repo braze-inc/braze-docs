@@ -98,6 +98,8 @@ Custom event properties are designed to help you personalize your messaging or b
 ## Custom Attributes
 Custom attributes are best for storing attributes about your users, or information about low-value actions within your application. You should keep in mind that we don't store time-series information for custom attributes, so you're not going to get any graphs based upon them like the above example for custom events.
 
+Avoid using Braze's reserved standard attributes as names for your custom attributes (i.e. `first_name` or `language`), as this will cause a conflict when using Liquid-based codes in your messages, and the Liquid will not generate.
+
 ### Custom Attribute Storage
 
 All User Profile data (custom events, custom attribute, custom data) is stored as long as those profiles are active. Custom event properties are stored and available for Segmentation for thirty (30) days. If you'd like to leverage event properties for Segmentation, please contact your Braze account or customer success manager.

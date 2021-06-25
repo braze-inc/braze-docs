@@ -69,6 +69,10 @@ In addition to our predefined user attribute methods, Braze also provides custom
 
 Full method specifications for custom attributes can be found here within the [AppboyUser class within the Javadocs][2].
 
+{% alert warning %}
+Avoid using Braze's reserved standard attributes as names for your custom attributes (i.e. `first_name` or `language`), as this will cause a conflict when using Liquid-based codes in your messages, and the Liquid will not generate.
+{% endalert %}
+
 ### Setting Custom Attribute Values
 
 {% tabs local %}
