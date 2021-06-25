@@ -77,7 +77,7 @@ The Liquid templating example below shows how to reference the nested properties
 Templating in Liquid in a message triggered by the "Liked Song" event:
 
 {% raw %}
-`{{event_properties.${songs}[0].album[0].name}}` - "Nevermind"<br>
+`{{event_properties.${songs}[0].album.name}}` - "Nevermind"<br>
 `{{event_properties.${songs}[0].title}}` - "Smells Like Teen Spirit"
 {% endraw %}
 
