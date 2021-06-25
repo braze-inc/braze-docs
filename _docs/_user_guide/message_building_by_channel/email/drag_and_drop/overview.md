@@ -9,6 +9,8 @@ description: "This reference article covers various creative details of Drag & D
 
 # Drag & Drop Editor Overview
 
+{% include video.html id="4dTrkxe8DLo" align="right" %}
+
 > With Braze Email, you can create completely custom and personalized email messages in either Campaigns or Canvas using a drag & drop editing experience.
 
 ## Create a Drag & Drop Email
