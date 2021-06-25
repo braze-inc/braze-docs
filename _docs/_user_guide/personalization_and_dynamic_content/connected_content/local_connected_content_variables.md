@@ -92,34 +92,12 @@ You can optionally provide a POST body by specifying `:body` followed by a query
 ```
 {% endraw %}
 
-{% details Query String Serialization Example %}
-
-##### Example POST Body
-```json
-{
-  "sorts[0][field]": "startdate",
-  "sorts[0][direction]": "asc",
-  "filters[0][field]": "startdate",
-  "filters[0][type]": "range",
-  "filters[0][rangeFilters][time_zone]": "-07:00",
-  "filters[0][rangeFilters][gte]": "now 1d/d",
-}
-```
-##### Example POST Body Formatting
+#### Object Serialization Example:
 {% raw %}
-```json
-{% connected_content 
-     https://example.com/api
-     :method post
-     :headers {
-       "Content-Type": "application/json"
-  }  
-     :body sorts[0][field]=startdate&sorts[0][direction]=asc&filters[0][field]=startdate&filters[0][type]=range&filters[0][rangeFilters][time_zone]=-07:00&filters[0][rangeFilters][gte]=now+1d/d
-     :save result 
-%}
+```
+foo=bar&baz=bang => { "foo" => "bar", "baz" => "bang" }
 ```
 {% endraw %}
-{% enddetails %}
 
 ### HTTP Status Codes
 
