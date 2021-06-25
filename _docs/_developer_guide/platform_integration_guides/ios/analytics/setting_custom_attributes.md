@@ -55,6 +55,10 @@ The following attributes should be set on the `ABKUser` object:
 Beyond the attributes above, Braze also allows you to define custom attributes using a number of different data types:
 For more information regarding the segmentation options, each of these attributes will afford you, see our ["Best Practices" documentation][1] within this section.
 
+{% alert warning %}
+Avoid using Braze's reserved standard attributes as names for your custom attributes (i.e. `first_name` or `language`), as this will cause a conflict when using Liquid-based codes in your messages, and the Liquid will not generate.
+{% endalert %}
+
 ### Custom Attribute with a String Value
 
 {% tabs %}
