@@ -52,6 +52,16 @@ div.alert {
       background-color: $yellow-cream;
     }
   }
+  &.alert-checkpoint{
+    b {
+      color: $yellow-gold;
+    }
+    border-color: $yellow-beige;
+    background-image: url(#{$base_url}/assets/img/message-update.png) ;
+    div.alert-msg {
+      background-color: $yellow-cream;
+    }
+  }
   &.alert-important{
     b {
       color: $purple-orchard;
