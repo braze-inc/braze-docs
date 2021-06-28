@@ -822,6 +822,10 @@ class GlideIntegrationApplication : Application() {
 
 Braze doesn't support displaying in-app messages in [Android Dialogs][85] at this time.
 
+## Google Play In-App Review Prompt
+
+Due to the limitations and restrictions set by Google, custom Google Play review prompts are not currently supported by Braze. While some users have been able to integrate these review prompts successfully, others have shown low success rates due to [Google Play quotas](https://developer.android.com/guide/playcore/in-app-review#quotas). Please integrate at your own risk. Documentation on Android in-app review prompts can be found [here](https://developer.android.com/guide/playcore/in-app-review).
+
 ## Youtube in HTML In-App messages
 
 Youtube and other HTML5 content can play in HTML in-app messages. This requires hardware acceleration to be enabled in the Activity where the in-app message is being displayed, please see the [Android developer guide][84] for more details. Hardware acceleration is only available on Android API versions 11 and above.
@@ -839,6 +843,8 @@ The following is an example of an embedded Youtube video in an HTML snippet:
     </div>
 </body>
 ```
+
+
 
 [5]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/in-app_messaging/integration/#step-1-braze-in-app-message-manager-registration
 [6]: https://github.com/Appboy/appboy-android-sdk/blob/master/android-sdk-ui/src/main/res/values/styles.xml
