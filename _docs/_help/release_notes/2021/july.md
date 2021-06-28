@@ -14,7 +14,7 @@ Transactional emails are those sent to facilitate an agreed-upon transaction bet
 
 ## Nested Object Support for Event Properties
 
-Braze now supports [nested object support]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/nested_object_support/) for custom events and purchase events. Nested object support allows you to send arrays of data as properties of custom events and purchases. This nested data can be used for templating personalized information in API-triggered messages through the use of Liquid and dot notation.
+Braze now supports [nested objects]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/nested_object_support/) for custom events and purchase events. Nested objects  allow you to send arrays of data as properties of custom events and purchases. This nested data can be used for templating personalized information in API-triggered messages through the use of Liquid and dot notation.
 
 ## New HMAC Liquid Filters
 
