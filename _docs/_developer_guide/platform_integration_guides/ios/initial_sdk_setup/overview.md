@@ -34,6 +34,6 @@ guide_featured_list:
 The iOS SDK will add 1MB to 2MB to the app IPA file, in addition to App File, and 30MB for the Framework.
 {% endalert %}
 
-After you have integrated using one of the three options above, as well as enabled other SDK Customizations (optional), move on to integrating, enabling, and customizing additional channels and features to fit the needs of your future campaigns.  
+After you have integrated using one of the options above, as well as enabled other SDK Customizations (optional), move on to integrating, enabling, and customizing additional channels and features to fit the needs of your future campaigns.  
 
 <br>
