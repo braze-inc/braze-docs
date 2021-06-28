@@ -824,7 +824,7 @@ Braze doesn't support displaying in-app messages in [Android Dialogs][85] at thi
 
 ## Google Play In-App Review Prompt
 
-Due to the limitations and restrictions set by Google, custom Google Play review prompts are not currently supported by Braze. While some users have been able to integrate these review prompts successfully, others have shown low success rates due to [Google Play quotas](https://developer.android.com/guide/playcore/in-app-review#quotas). Please integrate at your own risk. Documentation on Android in-app review prompts can be found [here](https://developer.android.com/guide/playcore/in-app-review).
+Due to the limitations and restrictions set by Google, custom Google Play review prompts are not currently supported by Braze. While some users have been able to integrate these prompts successfully, others have shown low success rates due to [Google Play quotas](https://developer.android.com/guide/playcore/in-app-review#quotas). Please integrate at your own risk. Documentation on Google Play in-app review prompts can be found [here](https://developer.android.com/guide/playcore/in-app-review).
 
 ## Youtube in HTML In-App messages
 
