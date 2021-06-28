@@ -86,9 +86,31 @@ Learn more about best practices for email list management [here][7].
 
 ## Email Open Tracking Pixel
 
+### What is an open tracking pixel?
+
 The email opening tracking pixel is an invisible 1px by 1px image that automatically gets inserted into your email HTML. This pixel helps Braze detect whether the end users have opened your email. Email open information can be very useful, helping our clients determine effective marketing strategies understanding and assess the corresponding open rates.
 
-For more information regarding the email open tracking pixel, check out our short [LAB course][6].
+### Where should I place the open tracking pixel?
+
+Braze's default behavior is to append the tracking pixel to the bottom of your email. For the vast majority of users, this is the ideal place to put the pixel. While the pixel is already styled to cause as few visual changes as possible, any unintentional visual changes would be the least visible at the bottom of an email. This is also the default for email providers such as SendGrid and SparkPost.
+
+However, a small subset of companies may prefer that the pixel get templated to a different location. One advantage of not placing the tracking pixel at the bottom is avoiding cases where it gets cut off by clients (e.g. Gmail) that truncate emails after a certain amount of kilobytes.
+
+
+### How do I change the location of the open tracking pixel?
+
+Braze currently supports overriding the ESP's default open tracking pixel location (the last tag in the <body> of an email) to move it to the first tag in the <body>.
+  ![open_pixel][13]
+In order to do so, please follow these steps:
+
+1. Go to Manage App Group, then Email Settings in your Braze account.
+2. Click the checkbox under Custom Open Tracking Pixel Settings. 
+3. Press Save.
+
+From then on, Braze will send special instructions to the ESP in order to place the open tracking pixel at the top of all HTML emails.
+  
+{% alert important %} SSL enablement will wrap the URL of the tracking pixel with https instead of http - if your SSL is misconfigured, it may affect the efficacy of the tracking pixel. {% endalert %}
+  
 
 ## Toggle-Capable Features
 
@@ -132,3 +154,4 @@ For more information, check out our CSS Inlining [Documentation][10]
 [10]: {{site.baseurl}}/user_guide/message_building_by_channel/email/css_inline/
 [11]: {% image_buster /assets/img/email_settings/bcc_address.png %}
 [12]: {% image_buster /assets/img/email_settings/require_bcc.png %}
+[13]: {% image_buster /assets/img/email_settings/open_pixel.png %}
