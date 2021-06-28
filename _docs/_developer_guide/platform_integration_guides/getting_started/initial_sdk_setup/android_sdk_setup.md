@@ -102,7 +102,7 @@ Calls to `openSession()`, `closeSession()`,[`ensureSubscribedToInAppMessageEvent
 #### Instructions
 Add the following code to the `onCreate()` method of your Application class:
 
-{% tabs %}
+{% tabs local %}
 {% tab JAVA %}
 
 ```java
@@ -161,13 +161,98 @@ If you would like to enable Braze location collection, update your `braze.xml` f
 Starting with Braze Android SDK version 3.6.0 Braze location collection is disabled by default.
 {% endalert %}
 
+## Accessibility
+
+The Braze Android SDK follows the [Android Accessibility Guidelines][1].
+
+### Optional: In-App Message Talkback
+
+In order to have Android Talkback/"VoiceOver" not read the contents behind an in-app message during display, enable the following SDK configuration:
+
+{% tabs local %}
+{% tab braze.xml %}
+
+```xml
+<bool name="com_appboy_device_in_app_message_accessibility_exclusive_mode_enabled">true</bool>
+```
+
+{% endtab %}
+{% tab KOTLIN %}
+
+```kotlin
+val brazeConfigBuilder = BrazeConfig.Builder()
+brazeConfigBuilder.setIsInAppMessageAccessibilityExclusiveModeEnabled(true)
+Braze.configure(this, brazeConfigBuilder.build())
+```
+
+{% endtab %}
+{% tab JAVA %}
+
+```java
+BrazeConfig.Builder brazeConfigBuilder = new BrazeConfig.Builder()
+brazeConfigBuilder.setIsInAppMessageAccessibilityExclusiveModeEnabled(true);
+Braze.configure(this, brazeConfigBuilder.build());
+```
+
+{% endtab %}
+{% endtabs %}
+
+## Optional: Google Advertising ID
+
+The Google Advertising ID is a user-specific, unique, resettable ID for advertising, provided by Google Play services. It gives users better controls and provides developers with a simple, standard system to continue to monetize their apps. It is an anonymous identifier for advertising purposes and enables users to reset their identifier or opt-out of interest-based ads within Google Play apps. See [here][2b] for more information.
+
+### Passing the Google Advertising ID to Braze
+
+The Google Advertising ID is not automatically collected by the Braze SDK and must be set manually via the [`Appboy.setGoogleAdvertisingId()`][1b] method.
+
+{% alert important %}
+Google requires the Advertising ID to be collected on a non-UI thread.
+{% endalert %}
+
+{% tabs local %}
+{% tab JAVA %}
+
+```java
+new Thread(new Runnable() {
+  @Override
+  public void run() {
+    try {
+      AdvertisingIdClient.Info idInfo = AdvertisingIdClient.getAdvertisingIdInfo(getApplicationContext());
+      Appboy.getInstance(getApplicationContext()).setGoogleAdvertisingId(idInfo.getId(), idInfo.isLimitAdTrackingEnabled());
+    } catch (Exception e) {
+      e.printStackTrace();
+    }
+  }
+}).start();
+```
+
+{% endtab %}
+{% tab KOTLIN %}
+
+```kotlin
+Thread(Runnable {
+  try {
+    val idInfo = AdvertisingIdClient.getAdvertisingIdInfo(getApplicationContext())
+    Appboy.getInstance(getApplicationContext()).setGoogleAdvertisingId(idInfo.id, idInfo.isLimitAdTrackingEnabled)
+  } catch (e: Exception) {
+    e.printStackTrace()
+  }
+}).start()
+```
+
+{% endtab %}
+{% endtabs %}
+
 ## SDK Integration Complete
 
 Braze will now be able to collect [specified data from your application]({{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/overview/) and your basic integration should be complete.
 
 Please see the following sections in order to enable [custom event tracking]({{site.baseurl}}/developer_guide/platform_integration_guides/android/analytics/tracking_custom_events/#tracking-custom-events), [push messaging]({{site.baseurl}}/developer_guide/platform_integration_guides/android/push_notifications/integration/), [Content Cards]({{site.baseurl}}/developer_guide/platform_integration_guides/android/content_cards/overview/) and the [complete suite]({{site.baseurl}}/developer_guide/platform_integration_guides/android/initial_sdk_setup/android_sdk_integration/) of Braze features.
 
+[1]: https://developer.android.com/guide/topics/ui/accessibility
 [2]: {{site.baseurl}}/user_guide/introduction/
+[1b]: https://appboy.github.io/appboy-android-sdk/javadocs/com/appboy/Appboy.html#setGoogleAdvertisingId-java.lang.String-boolean-
+[2b]: https://support.google.com/googleplay/android-developer/answer/6048248/advertising-id?hl=en
 [32]: {% image_buster /assets/img_archive/androidstudio2.png %}
 [38]: {% image_buster /assets/img_archive/androidstudio3.png %}
 [46]: https://developer.android.com/training/permissions/index.html

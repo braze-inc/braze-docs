@@ -1,7 +1,7 @@
 ---
 nav_title: Initial SDK Setup
 layout: dev_guide
-page_order: 1
+page_order: 0
 guide_top_header: "Initial SDK Setup"
 guide_top_text: "This landing page is home to initial SDK setup guides for supported Platforms."
 description: "This landing page is home to initial SDK setup guides for supported Platforms."

@@ -1,11 +1,10 @@
 ---
 nav_title: Test Your Basic Integration
-page_order: 2
+page_order: 1
 description: "This article covers how to test your basic integration for your application."
-
 ---
 
-# Test your Basic Integration
+# Test Your Basic Integration
 
 ## Confirm Session Tracking is Working
 
