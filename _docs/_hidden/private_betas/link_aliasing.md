@@ -75,7 +75,7 @@ For any email message variation set up before this feature was enabled, the exis
 ## Link Segmentation
 Two new segmentation filters are now available, allowing you to create segmentation filters based on clicking a specific tracked alias. The filter only displays campaigns or Canvases that have tracked aliases present.
  
-In addition to creating segment filters, you can also create action-based messages targeting any link (tracked or not tracked) across any email campaign or canvas step. 
+In addition to creating segment filters, you can also create action-based messages targeting any link (tracked or not tracked) across any email campaign or Canvas step. 
 
 ## Tracking and Reporting
 
