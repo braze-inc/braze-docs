@@ -103,6 +103,10 @@ Deleted survey choices will still appear in analytics, but will not be shown as 
 
 Check out [Reporting & Analytics][4] for a breakdown of your campaign metrics.
 
+### Currents {#currents}
+
+Selected choices will automatically flow through to Currents, under the __In-App Message Click Events__ `button_id` field. Each choice will be sent with its unique UUID.
+
 [1]: {{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/create/
 [2]: {{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_attributes/#custom-attribute-data-types
 [3]: {{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/user_profile_lifecycle/
