@@ -59,14 +59,14 @@ AppsFlyer.setAdditionalData(customData);
 
 ### Step 2: Getting the Braze Data Import Key
 
-In your Braze account, navigate to "Attribution" under "Technology Partners" and select "Appsflyer". Here, you will find the REST Endpoint and generate your Braze Data Import Key. Once generated, you will be able to create a new key, or invalidate an existing one. The Data Import Key and the REST Endpoint are used in the next step when setting up a postback in AppsFlyer's dashboard.<br><br>![Appsflyer Image][4]{: style="max-width:70%;"}
+In your Braze account, navigate to __Attribution__ under __Technology Partners__ and select __AppsFlyer__. Here, you will find the REST Endpoint and generate your Braze Data Import Key. Once generated, you will be able to create a new key, or invalidate an existing one. The Data Import Key and the REST Endpoint are used in the next step when setting up a postback in AppsFlyer's dashboard.<br><br>![AppsFlyer Image][4]{: style="max-width:70%;"}
 
 ### Step 3: Configure Braze in AppsFlyer's Dashboard
 
-In AppsFlyer's dashboard, navigate to the "Integrated Partners" page on the left bar. From here, search for Braze and click on Braze's logo to open up a configuration window.
+In AppsFlyer's dashboard, navigate to the __Integrated Partners__ page on the left bar. From here, search for __Braze__ and click on Braze's logo to open up a configuration window.
 ![AppsFlyer][1]{: style="float:right;max-width:30%;margin-left:15px;margin-bottom:15px;margin-top:15px"}
 
-Within the Integration tab, switch on Activate Partner, copy the Data Import Key into the `API_key` field, add your Braze REST Endpoint URL into the `REST Endpoint` field. Finally, save your configuration.
+Within the __Integration__ tab, switch on __Activate Partner__, copy the Data Import Key into the `API_key` field, add your Braze REST Endpoint URL into the `REST Endpoint` field. Finally, save your configuration.
 
 Additional information on these instructions is available in [AppsFlyer's documentation][16].
 
@@ -82,7 +82,7 @@ Once you have saved the configuration, AppsFlyer sends the following data to Bra
 
 ### Step 4: Confirming the Integration
 
-Once Braze receives attribution data from AppsFlyer, the status connection indicator on "Technology Partners", then "Attribution" will change to green and a timestamp of the last successful request will be included. Note that this will not happen until we receive data about an __attributed__ install. Organic installs, which should be excluded by the AppsFlyer integration, are ignored by our API and are not counted when determining if a successful connection was established.
+Once Braze receives attribution data from AppsFlyer, the status connection indicator on __Technology Partners__, then __Attribution__ will change to green and a timestamp of the last successful request will be included. Note that this will not happen until we receive data about an __attributed__ install. Organic installs, which should be excluded by the AppsFlyer integration, are ignored by our API and are not counted when determining if a successful connection was established.
 
 ### Step 5: Viewing User Attribution Data
 
@@ -94,7 +94,7 @@ Additionally, attribution data for a particular user is available on each userâ€
 
 ## Facebook, Snapchat, and Twitter Attribution Data
 
-Attribution data for Facebook, Snapchat, and Twitter campaigns is __not available through our partners__. These media sources do not permit their partners to share attribution data with third parties and, therefore, our partners __cannot send that data to Braze__.
+Attribution data for Facebook, Snapchat, and Twitter campaigns is not available through our partners. These media sources do not permit their partners to share attribution data with third parties and, therefore, our partners cannot send that data to Braze.
 
 For more information, please see AppsFlyer's [documentation][31].
 
@@ -106,9 +106,9 @@ There are, however, ESPs like Sendgrid that support both universal linking and c
 
 ### Click Tracking URLs in Braze (Optional)
 
-You can use AppsFlyer's [OneLink attribution links](https://support.appsflyer.com/hc/en-us/articles/360001294118) in Braze campaigns across push, email, and more. This allows you to be able to send back install or re-engagement attribution data from their Braze campaigns into AppsFlyer. As a result, you will be able to holistically see the impact of your paid and owned channels in a single platform.
+You can use AppsFlyer's [OneLink attribution links](https://support.AppsFlyer.com/hc/en-us/articles/360001294118) in Braze campaigns across push, email, and more. This allows you to be able to send back install or re-engagement attribution data from their Braze campaigns into AppsFlyer. As a result, you will be able to holistically see the impact of your paid and owned channels in a single platform.
 
-You can simply create your OneLink tracking URL in AppsFlyer and insert it into your Braze campaigns directly. AppsFlyer will then use their [probabilistic attribution methodologies](https://support.appsflyer.com/hc/en-us/articles/207447053-Attribution-model-explained#probabilistic-modeling) to attribute the user that has clicked on the link or deep link. To improve the accuracy of attributions from your Braze campaigns, we recommend appending your AppsFlyer tracking links with a device identifier. This will deterministically attribute the user that has clicked on the link.
+You can simply create your OneLink tracking URL in AppsFlyer and insert it into your Braze campaigns directly. AppsFlyer will then use their [probabilistic attribution methodologies](https://support.AppsFlyer.com/hc/en-us/articles/207447053-Attribution-model-explained#probabilistic-modeling) to attribute the user that has clicked on the link or deep link. To improve the accuracy of attributions from your Braze campaigns, we recommend appending your AppsFlyer tracking links with a device identifier. This will deterministically attribute the user that has clicked on the link.
 
 {% tabs %}
 {% tab Android %}
