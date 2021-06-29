@@ -49,7 +49,7 @@ There is no need to change the existing API request to include the address. Chec
 
 ### Custom Footer
 
-For commercial emails, the [CAN-SPAM Act][5] requires that all commercial emails include an unsubscribe option. With the custom footer settings, you are able to remain CAN-SPAM compliant while also customizing your email opt-out footer. Braze will append this footer to all emails sent as part of Campaigns for this App Group.
+For commercial emails, the [CAN-SPAM Act][5] requires that all commercial emails include an unsubscribe option. With the custom footer settings, you are able to remain CAN-SPAM compliant while also customizing your email opt-out footer. In order to remain compliant, you must add your custom footer to all emails sent as part of campaigns for this app group. To read more about custom footer Liquid templating, check out our [documentation]({{site.baseurl}}/user_guide/message_building_by_channel/email/managing_user_subscriptions/#changing-email-subscriptions).
 
 ![Custom Footer][0]
 
