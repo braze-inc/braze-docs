@@ -38,7 +38,7 @@ Has language - Default language
 
 {% endraw %}
 {% raw %}
-**Explanation:** Here we're using two grouped `If` statements, nested. The first `if` statement checks to see if the user has started a session by checking if the `last_used_app_date` is `nil`. This is because `{{${language}}}` is auto-collected by the SDK when a user logs a session. If the user hasn't logged a session, we won't have their language, so you'll need to manually track language as a custom attribute (here we've used `user_language`). 
+**Explanation:** Here we're using two grouped `if` statements, nested. The first `if` statement checks to see if the user has started a session by checking if the `last_used_app_date` is `nil`. This is because `{{${language}}}` is auto-collected by the SDK when a user logs a session. If the user hasn't logged a session, we won't have their language, so you'll need to manually track language as a custom attribute (here we've used `user_language`).
 
 {% endraw %}
 
@@ -66,8 +66,6 @@ It's been a while, here are some of our latest updates.
 
 {% endraw %}
 
-**Explanation:**
-
 ## Show a Different Message if a User Last Used the App Less Than Three Days Ago
 
 **Goal:** Personalize your messages based on how active a user is.
@@ -86,5 +84,3 @@ Message for a less active user
 ```
 
 {% endraw %}
-
-**Explanation:**

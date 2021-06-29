@@ -150,7 +150,7 @@ The date is correct
 
 ## Send a Different Message Each Day of the Month
 
-**Goal:**
+**Goal:** Send a different message for each day of the month.
 
 {% raw %}
 
@@ -178,7 +178,7 @@ Message for 2019-12-03
 
 ## Send a Different Message Each Day of the Week
 
-**Goal:** 
+**Goal:** Send a different message for each day of the week.
 
 {% raw %}
 
