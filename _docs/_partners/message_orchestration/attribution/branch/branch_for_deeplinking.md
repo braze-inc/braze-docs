@@ -5,7 +5,7 @@ alias: /partners/branch_for_deeplinking/
 page_type: partner
 description: "This article describes the partnership between Braze and Branch and how to use it to support your deep linking practices."
 ---
-# Branch for Deep-Linking {#branch}
+# Branch for Deep Linking {#branch}
 
 {% include video.html id="PwGKqfwV-Ss" align="right" %}
 

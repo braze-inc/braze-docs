@@ -43,19 +43,16 @@ Authorization: Bearer YOUR-REST-API-KEY
 
 ## Request Parameters
 
-| Key | Requirement | Data Type | Details |
+| Parameter | Required | Data Type | Description |
 |-----|-----|-----|-----|
-|`external_ids` | Optional | Array of strings | External identifiers for users you wish export |
-|`user_aliases` | Optional | Array of user alias object | User aliases for users to export |
-|`device_id` | Optional | String | Device identifier as returned by various SDK methods such as `getDeviceId` |
-|`braze_id` | Optional | String | Braze identifier for a particular user |
-|`email_address` | Optional | String | Email address of user |
-|`phone` | Optional | String | Phone number of user |
-|`fields_to_export` | Optional | Array of strings | Name of user data fields to export. Defaults to all if not provided |
+|`external_ids` | Optional | Array of strings | External identifiers for users you wish export. |
+|`user_aliases` | Optional | Array of user alias object | [User aliases]({{site.baseurl}}/api/objects_filters/user_alias_object/) for users to export. |
+|`device_id` | Optional | String | Device identifier, as returned by various SDK methods such as `getDeviceId`. |
+|`braze_id` | Optional | String | Braze identifier for a particular user. |
+|`email_address` | Optional | String | Email address of user. |
+|`phone` | Optional | String in [E.164](https://en.wikipedia.org/wiki/E.164) format | Phone number of user. |
+|`fields_to_export` | Optional | Array of strings | Name of user data fields to export. Defaults to all if not provided. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
-
-### Request Component
-- [User Alias Object]({{site.baseurl}}/api/objects_filters/user_alias_object/)
 
 ## Example Request
 ```
@@ -114,7 +111,7 @@ The following is a list of valid `fields_to_export`. Using `fields_to_export` to
 * `uninstalled_at`
 * `user_aliases`
 
-Please be aware that the `/users/export/ids` endpoint will pull together the entire user profile for this user, including data such as all campaigns and canvases received, all custom events performed, all purchases made, and all custom attributes. As a result, this endpoint is slower than other REST API endpoints.
+Please be aware that the `/users/export/ids` endpoint will pull together the entire user profile for this user, including data such as all campaigns and Canvases received, all custom events performed, all purchases made, and all custom attributes. As a result, this endpoint is slower than other REST API endpoints.
 
 Depending on the data requested, this API endpoint may have not be able to fulfill your hourly API rate limit. If you anticipate using this endpoint regularly to export users, instead consider exporting users by segment, which is asynchronous and more optimized for larger data pulls. Documentation on that endpoint is below.
 
@@ -164,7 +161,7 @@ User export object (we will include the least data possible - if a field is miss
     "attributed_ad" : (string),
     "push_subscribe" : (string) "opted_in" | "subscribed" | "unsubscribed",
     "email_subscribe" : (string) "opted_in" | "subscribed" | "unsubscribed",
-    "custom_attributes" : (object) custom attribute key value pairs,
+    "custom_attributes" : (object) custom attribute key-value pairs,
     "custom_events" : [
         {
             "name" : (string),

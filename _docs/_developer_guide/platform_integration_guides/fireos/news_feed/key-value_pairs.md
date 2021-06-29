@@ -1,5 +1,5 @@
 ---
-nav_title: Key Value Pairs
+nav_title: Key-Value Pairs
 page_order: 8
 platform: FireOS
 description: "This reference article covers how to use key-value pairs in your News Feed for your Android application."
@@ -8,9 +8,9 @@ channel:
 
 ---
 
-# Key Value Pairs
+# Key-Value Pairs
 
-`Card` objects may optionally carry key value pairs as `extras`. These can be used to send data down along with a `Card` for further handling by the application.
+`Card` objects may optionally carry key-value pairs as `extras`. These can be used to send data down along with a `Card` for further handling by the application.
 
 Call the following on a `Card` object to retrieve its extras:
 

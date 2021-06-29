@@ -33,12 +33,12 @@ Braze sends push notifications to Amazon devices using [Amazon Device Messaging 
 
 ## Step 2: Update AndroidManifest.xml
 
-- In your app's AndroidManifest.xml, add Amazon's namespace to the `<tt>manifest</tt>` tag.
+- In your app's AndroidManifest.xml, add Amazon's namespace to the `<>manifest</>` tag.
 
   ```xml
   xmlns:amazon="http://schemas.amazon.com/apk/res/android"
   ```
-- Declare permissions required to support ADM by adding `<tt>permission</tt>` and `<tt>uses-permission</tt>` elements after the `<tt>manifest</tt> element`.
+- Declare permissions required to support ADM by adding `<>permission</>` and `<>uses-permission</>` elements after the `<>manifest</> element`.
 
   ```xml
   <manifest xmlns:android="http://schemas.android.com/apk/res/android"
@@ -129,7 +129,7 @@ If you need to handle ADM registration yourself, you should do the following:
 
 ## ADM Extras
 
-Users may send custom key value pairs with a Kindle push message as "extras" for ["Deep Linking"][29], tracking urls, etc.  Please note that unlike in Android push, Kindle push users may not use Braze reserved keys as keys when defining "extra" key value pairs.
+Users may send custom key-value pairs with a Kindle push message as "extras" for ["Deep Linking"][29], tracking urls, etc.  Please note that unlike in Android push, Kindle push users may not use Braze reserved keys as keys when defining "extra" key-value pairs.
 
 Reserved Keys Include:
 

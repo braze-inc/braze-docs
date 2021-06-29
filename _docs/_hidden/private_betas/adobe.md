@@ -16,7 +16,7 @@ The Adobe and Braze integration is currently in beta. Please contact your Braze 
 
 The Braze and Adobe CDP integration allows brands to connect and map their Adobe data (custom attributes and segments) to Braze in real-time. Brands can then act on this data, delivering personalized targeted experiences to those users. With Adobe, the integration is intuitive. Simply take any Adobe [identity](https://experienceleague.adobe.com/docs/experience-platform/identity/namespaces.html?lang=en), map it to a Braze external ID, and send it off to the Braze platform. All data sent will be accessible in Braze through a new `AdobeExperiencePlatformSegments` attribute. 
 
-## Pre-Requisites
+## Prerequisites
 
 | Requirement | Description |
 | ----------- | ----------- |

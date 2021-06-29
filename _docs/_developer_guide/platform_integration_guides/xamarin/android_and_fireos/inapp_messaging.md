@@ -3,6 +3,7 @@ nav_title: In-App Messaging
 platform: Xamarin
 subplatform: Android and FireOS
 page_order: 2
+description: "This article covers Android and FireOS in-app messaging for the Xamarin platform."
 
 ---
 

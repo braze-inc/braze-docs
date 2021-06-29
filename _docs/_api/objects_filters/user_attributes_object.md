@@ -90,9 +90,9 @@ The following data types can be stored as a custom attribute:
 - Arrays
   - Custom attribute arrays are one-dimensional sets; multi-dimensional arrays are not supported. __Adding an element to a custom attribute array appends the element to the end of the array, unless it's already present, in which case it gets moved from its current position to the end of the array.__ For example, if an array `['hotdog','hotdog','hotdog','pizza']` were imported, it will show in the array attribute as `['hotdog', 'pizza']` because only unique values are supported. 
   - In addition to setting the values of an array by saying something like `"my_array_custom_attribute":[ "Value1", "Value2" ]` you may add to existing arrays by doing something like `"my_array_custom_attribute" : { "add" : ["Value3"] },` or remove values from an array by doing something like `"my_array_custom_attribute" : { "remove" : [ "Value1" ]}`
-  - The maximum number of elements in Custom Attribute Arrays defaults to 25. The maximum for individual arrays can be increased to up to 100. If you would like this maximum increased, please reach out to your Customer Service Manager. Arrays exceeding the maximum number of elements will be truncated to contain the maximum number of elements. For more information on Custom Attribute Arrays and their behavior, see our [Documentation on Arrays][6].
+  - The maximum number of elements in custom attribute arrays defaults to 25. The maximum for individual arrays can be increased to up to 100. If you would like this maximum increased, please reach out to your Customer Service Manager. Arrays exceeding the maximum number of elements will be truncated to contain the maximum number of elements. For more information on custom attribute arrays and their behavior, see our [Documentation on Arrays][6].
 
-For information regarding when you should use a Custom Event vs a Custom Attribute, see our [Best Practices - User Data Collection][15] documentation.
+For information regarding when you should use a custom event vs a custom attribute, see our [Best Practices - User Data Collection][15] documentation.
 
 #### Braze User Profile Fields
 
@@ -105,6 +105,8 @@ For information regarding when you should use a Custom Event vs a Custom Attribu
 | dob | (date of birth) String in format "YYYY-MM-DD", e.g., 1980-12-21. |
 | email | (string) |
 | email_subscribe | (string) Available values are "opted_in" (explicitly registered to receive email messages), "unsubscribed" (explicitly opted out of email messages), and "subscribed" (neither opted in nor out).  |
+|email_open_tracking_disabled|(boolean) true or false accepted.  Set to true to disable the open tracking pixel from being added to all future emails sent to this user.|
+|email_click_tracking_disabled|(boolean) true or false accepted.  Set to true to disable the click tracking for all links within a future email, sent to this user.|
 | external_id | (string) Of the unique user identifier. |
 | facebook | hash containing any of `id` (string), `likes` (array of strings), `num_friends` (integer). |
 | first_name | (string) |
@@ -123,8 +125,8 @@ For information regarding when you should use a Custom Event vs a Custom Attribu
 
 Language values that are explicitly set via this API will take precedence over the locale information Braze automatically receives from the device.
 
-{% alert update %}
-The Profile Field `bio` was removed several years ago and will not be processed as a custom attribute.
+{% alert note %} 
+The above user profile fields are case sensitive so be sure to reference these fields in lower case.
 {% endalert %}
 
 ####  User Attribute Example Request

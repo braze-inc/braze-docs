@@ -24,7 +24,7 @@ Their goal is straightforward in that they want users to hail taxi rides via the
 3. They need to attempt to hail a taxi.
 4. In order to hail a taxi, they must be available when they search.
 
-The above actions could then be tagged as the following Custom events:
+The above actions could then be tagged as the following custom events:
 
 - Began Registration
 - Completed Registration

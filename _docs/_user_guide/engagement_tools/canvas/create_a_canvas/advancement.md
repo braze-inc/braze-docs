@@ -43,7 +43,7 @@ For action-based steps, users must perform the trigger action and meet the audie
   Customers who advance through a step without receiving messages will not be counted as a unique recipient for the step. Users must receive one or more messages from a step to be counted as a unique recipient.
 {% endalert %}
 
-When sending a multi-channel step with intelligent timing, we may send or attempt to send messages at different times for different channels. Braze will Auto-Advance users at the time that the first message in a step attempts to send.   
+When sending a multichannel step with intelligent timing, we may send or attempt to send messages at different times for different channels. Braze will Auto-Advance users at the time that the first message in a step attempts to send.   
 
 ## Using Canvas Advancement
 

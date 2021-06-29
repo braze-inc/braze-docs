@@ -15,7 +15,7 @@ platform:
 
 >  This reference article covers two of the three main types of keys you will see at Braze, the REST API Key or App Group API Key, referred to as the `api_key`, and the App Identifier Key, known as the `app_id`, as well as what these keys are, how they are used at Braze, their permissions and how to keep them secure. 
 
-In addition to these keys, there also exists a third type of key called Identifier Keys that can be used to reference specific things like templates, canvases, campaigns, content cards, and segments from the API. Information on those API Identifier types/keys can be found [here][2].
+In addition to these keys, there also exists a third type of key called Identifier Keys that can be used to reference specific things like templates, Canvases, campaigns, Content Cards, and segments from the API. Information on those API Identifier types/keys can be found [here][2].
 
 ## What is a REST API Key/App Group API Key?
 
@@ -142,8 +142,8 @@ API key permissions are permissions you can assign a user or group to limit thei
 
 | Name | Description |
 |---|---|---|
-| `events.list` | Query for a list of Custom events. |
-| `events.data_series` | Query occurrences of a Custom Event over a time range. |
+| `events.list` | Query for a list of custom events. |
+| `events.data_series` | Query occurrences of a custom event over a time range. |
 {: .reset-td-br-1 .reset-td-br-2}
 
 {% endtab %}

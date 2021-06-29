@@ -1,6 +1,6 @@
 ---
 nav_title: Twilio
-alias: /partners/twilio/
+permalink: /partners/twilio/
 
 description: "This article outlines the partnership between Braze and Twilio."
 page_type: partner

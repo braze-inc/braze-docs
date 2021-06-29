@@ -56,13 +56,29 @@ Within the purchase object, The `product_id` is an identifier for the purchase, 
 
 ### Product_ID Naming Conventions
 At Braze, we offer some general naming conventions for the purchase object `product_id`.
-When choosing `product_id`, Braze suggests using simplistic names such as the product name or product category with the intention of grouping all logged items by this `product_id`.
+When choosing `product_id`, Braze suggests using simplistic names such as the product name or product category (instead of SKUs) with the intention of grouping all logged items by this `product_id`.
+
+This helps make products easy to identify for segmentation and triggering.
 
 ## Purchase Properties Object
-Custom events and purchases may have event properties. The “properties” values should be an object where the keys are the property names and the values are the property values. Property names must be non-empty strings less than or equal to 255 characters, with no leading dollar signs. Property values can be integers, floats, booleans, datetimes (as strings in ISO8601 or yyyy-MM-dd'T'HH:mm:ss:SSSZ format), or strings less than or equal to 255 characters.
+Custom events and purchases may have event properties. The “properties” values should be an object where the keys are the property names and the values are the property values. Property names must be non-empty strings less than or equal to 255 characters, with no leading dollar signs. 
+
+Property values can be any of the following data types:
+
+| Data Type | Description |
+| --- | --- |
+| Numbers | As either [integers](https://en.wikipedia.org/wiki/Integer) or [floats](https://en.wikipedia.org/wiki/Floating-point_arithmetic) |
+| Booleans |  |
+| Datetimes | Formatted as strings in [ISO-8601](https://en.wikipedia.org/wiki/ISO_8601) or `yyyy-MM-dd'T'HH:mm:ss:SSSZ` format. Not supported within arrays. |
+| Strings | 255 characters or fewer. |
+| Arrays | Arrays cannot include datetimes. |
+| Objects | Objects will be ingested as strings. |
+{: .reset-td-br-1 .reset-td-br-2}
+
+Event property objects that contain array or object values can have an event property payload of up to 50KB.
 
 ### Purchase Properties
-Purchase properties __do not__ persist and aren't saved on a user's profile. These properties can, however, be used to trigger messages and for personalization using Liquid, also allowing you to segment (up to 30 days) based on these properties. Braze allows you to "save" these properties for 30 days by turning on this feature flipper to keep these properties alive and useable for message personalization. To turn on this feature in your own app group, contact your customer service manager.
+[Purchase properties]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/purchase_events/#purchase-properties) __do not__ persist and aren't saved on a user's profile. These properties can, however, be used to trigger messages and for personalization using Liquid, also allowing you to segment (up to 30 days) based on these properties. Braze allows you to "save" these properties for 30 days by turning on this feature flipper to keep these properties alive and useable for message personalization. To turn on this feature in your own app group, contact your customer service manager.
 
 While uncommon, if you require these properties to persist past the 30-day limit, contact your Customer Success Manager, or, see our webhooks suggestion below to see how you can incorporate webhooks to save these properties as custom attributes.
 

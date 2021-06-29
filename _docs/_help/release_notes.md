@@ -45,6 +45,38 @@ guide_featured_list:
 > <br>
 > For more information on any of the updates listed in this section, reach out to your account manager or [open a support ticket][support]. You can also check out [our SDK Changelogs]({{site.baseurl}}/developer_guide/platform_integration_guides/sdk_changelogs/) to see more information on our monthly SDK releases, updates, and improvements.
 
+## July 2021
+
+### Transactional Email Campaigns
+
+Transactional emails are those sent to facilitate an agreed-upon transaction between a sender and the recipient. Braze's Transactional email campaign type is purpose-built for sending automated, non-promotional email messages like order confirmations, password resets, billing alerts, or other business-critical notifications. In addition, a corresponding [transactional email endpoint]({{site.baseurl}}/api/endpoints/messaging/send_messages/post_send_transactional_message/) has been created. Transactional emails and the new endpoint are only available as part of select Braze packages. Visit our [documentation]({{site.baseurl}}/api/api_campaigns/transactional_campaigns) to learn more. 
+
+### Nested Object Support for Event Properties
+
+Braze now supports [nested objects]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/nested_object_support/) for custom events and purchase events. Nested objects allow you to send arrays of data as properties of custom events and purchases. This nested data can be used for templating personalized information in API-triggered messages through the use of Liquid and dot notation.
+
+### New HMAC Liquid Encoding Filters
+
+New `hmac_sha1` and `hmac_sha256` Liquid encoding filters have been added to the Braze platform. Documentation on these new filters can be found [here]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/advanced_filters/).
+
+### Purchase Event Page
+
+Curious about the details of purchase events at Braze? Visit our dedicated [purchase event documentation]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/purchase_events/) to learn more.
+
+### New Partners 
+
+#### Nexla - Workflow Automation Partner
+[Nexla]({{site.baseurl}}/partners/nexla) is the leader in unified data operations and a 2021 Gartner Cool Vendor. Customers that use Currents to send data to data warehouses can leverage Nexla to extract, transform, and load that data to other locations, making data easily accessible across your entire ecosystem. Nexla enables you to use Braze Currents to get data in a custom format delivered to your destination of choice by a simple point and click. 
+
+#### Amperity - Customer Data Platform Partner
+[Amperity]({{site.baseurl}}/partners/amperity/) is a comprehensive enterprise customer data platform, helping brands get to know their customers, make strategic decisions, and consistently take the right course of action to serve their consumers better. Amperity supports the Braze platform by providing a unified view of your customers across its CDP and Braze allowing you to send valuable Amperity data to Braze.
+
+#### Digioh - Survey Partner
+[Digioh]({{site.baseurl}}/partners/digioh/) helps you grow your lists, capture first-party data, and put your data to use in your Braze campaigns. The drag-and-drop builder makes it easy to create on-brand forms, pop-ups, preference centers, landing pages, and surveys that connect you with your customers.
+
+#### AppsFlyer Audiences - Attribution/Analytics Partner
+[AppsFlyer]({{site.baseurl}}/partners/message_orchestration/attribution/appsflyer/) is a mobile marketing analytics and attribution platform that helps you analyze and optimize your apps through marketing analytics mobile attribution, and deep linking. [AppsFlyer Audiences]({{site.baseurl}}/partners/appsflyer_audiences/) allow you to build audience segments and pass these segments directly to Braze to create powerful customer engagement campaigns.
+
 ## June 2021
 
 ### Conversion Correlation
@@ -80,7 +112,7 @@ In May 2021, Braze updated the following labels and terms in the Braze Dashboard
 This detailed guide covers how to leverage push notification content app extensions to get the most out of your push messages. Included are three custom use cases built by our team (interactive push, data capture push, and progress based push), accompanying code snippets, and guidance on logging analytics. Visit our documentation here to read [more](/docs/developer_guide/platform_integration_guides/ios/push_notifications/implementation_guide/).
 
 ### VFC support for Multimedia Message Service (MMS)
-vCards, also known as Virtual Contact Files (.VCF), are a standardized file format for sending business/contact information that can be easily imported into address/contact books. These VFC files can now be sent through MMS and added to the Braze media library. Visit our MMS documentation to [learn more]({{site.baseurl}}/docs/user_guide/message_building_by_channel/sms/mms/create/). 
+vCards, also known as Virtual Contact Files (.VCF), are a standardized file format for sending business/contact information that can be easily imported into address/contact books. These VFC files can now be sent through MMS and added to the Braze media library. Visit our MMS documentation to [learn more]({{site.baseurl}}/user_guide/message_building_by_channel/sms/mms/create/). 
 
 ### Updates to User Delete
 In October of 2020, we made improvements to how our user delete handles data subject's phone number or email address. More information about this can be found [here](https://www.braze.com/docs/help/release_notes/2020/october/)
@@ -88,16 +120,16 @@ In October of 2020, we made improvements to how our user delete handles data sub
 ### New Braze Partnerships
 
 #### Airbridge - Attribution Partner
-The Airbridge and Braze integration allow you to pass all organic and non-organic install attribution data to Braze to build more personalized marketing campaigns and understand exactly where users were acquired. Visit our Airbridge documentation [here]({{site.baseurl}}/docs/partners/message_orchestration/attribution/airbridge/).
+The Airbridge and Braze integration allow you to pass all organic and non-organic install attribution data to Braze to build more personalized marketing campaigns and understand exactly where users were acquired. Visit our Airbridge documentation [here]({{site.baseurl}}/partners/message_orchestration/attribution/airbridge/).
 
 #### Kubit - Analytics Partner
-Kubit is a no-code, self-service analytics platform that delivers instant product insights. Through the seamless no-code integration with Braze, you can import user Cohort information into Braze and launch engagement campaigns to target specific Cohorts. In addition, through the use of Snowflake Secure Data Sharing, you can integrate the raw campaign and impression data from Braze with product analytics in Kubit to measure the impact of these campaigns in real-time. Visit our Kubit documentation [here]({{site.baseurl}}/docs/partners/data_and_infrastructure_agility/analytics/kubit/).
+Kubit is a no-code, self-service analytics platform that delivers instant product insights. Through the seamless no-code integration with Braze, you can import user Cohort information into Braze and launch engagement campaigns to target specific Cohorts. In addition, through the use of Snowflake Secure Data Sharing, you can integrate the raw campaign and impression data from Braze with product analytics in Kubit to measure the impact of these campaigns in real-time. Visit our Kubit documentation [here]({{site.baseurl}}/partners/data_and_infrastructure_agility/analytics/kubit/).
 
 #### Census - Customer Data Platform Partner
-Census allows you to keep your customer success, sales, and marketing teams all on the same page by keeping your customer data in sync, all without ongoing help from your engineering department. Visit our Census documentation [here]({{site.baseurl}}/docs/partners/data_and_infrastructure_agility/customer_data_platform/census/)
+Census allows you to keep your customer success, sales, and marketing teams all on the same page by keeping your customer data in sync, all without ongoing help from your engineering department. Visit our Census documentation [here]({{site.baseurl}}/partners/data_and_infrastructure_agility/customer_data_platform/census/)
 
 #### Treasure Data - Customer Data Platform Partner
-Treasure Data helps drive relevant customer experiences by harmonizing data, insights, and engagement to work in perfect unison. Armed with actionable indicators, CX Teams, including marketing, sales, and customer service can effectively optimize spend, and personalize omnichannel interactions across the entire customer journey. Visit our Treasure Data documentation [here]({{site.baseurl}}/docs/partners/data_and_infrastructure_agility/customer_data_platform/treasure_data/).
+Treasure Data helps drive relevant customer experiences by harmonizing data, insights, and engagement to work in perfect unison. Armed with actionable indicators, CX Teams, including marketing, sales, and customer service can effectively optimize spend, and personalize omnichannel interactions across the entire customer journey. Visit our Treasure Data documentation [here]({{site.baseurl}}/partners/data_and_infrastructure_agility/customer_data_platform/treasure_data/).
 
 ### Phrasee - A/B Testing
 Braze customer engagement develops relationships through multichannel marketing. Working together with Phrasee, Braze can deploy brand language, at scale, across channels that are customized to your brand voice. Phrasee’s deep learning engine handles the testing, monitors the results, and generates new language based on what it’s learned. Visit our Phrasee documentation [here]({{site.baseurl}}/partners/data_and_infrastructure_agility/ab_testing/phrasee/).
@@ -141,32 +173,6 @@ Zendesk Support Suite (ZSS) offers businesses the ability to have natural conver
 ### Crowdin Partnership is Live
 
 Crowdin is a cloud-based software for localization management. Braze integration with Crowdin allows you to translate email templates and content blocks. You can synchronize content from your Braze account to your Crowdin project and add translations back to Braze. To read more about our Crowdin integration, visit our article [here]({{site.baseurl}}/partners/crowdin/).
-
-## December 2020
-
-### Updates to Currents Messaging Event Properties
-Within Currents email messaging engagement events (linked below), the tracking property `ip_pool` has been added. The tracking properties `bounce_reason` and `bounce_code` have also been added to `users.messages.email.Bounce` and `users.messages.email.SoftBounce` events. <br>For the full list, check out the [Message Engagement Events Glossary]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/event_glossary/message_engagement_events/).
-
-### Predictive Churn FAQ
-A frequently asked questions article has been added to the existing Predictive Churn documentation. To read more about these potential errors, timing clarifications, and data considerations, check out our [Predictive Churn]({{site.baseurl}}/user_guide/predictive_suite/predictive_churn/prediction_faq/) FAQ documentation.
-
-### CSV and API Exports Troubleshooting Doc
-A troubleshooting doc detailing common CSV and API errors has been added to the Braze documentation. To read more about these errors as well as some frequently asked questions, check out our CSV and API export [troubleshooting]({{site.baseurl}}/user_guide/data_and_analytics/export_braze_data/export_troubleshooting/) documentation. 
-
-### EduMe Partnership
-EduMe is a mobile-based training tool that gives your workforce the knowledge they need to succeed. Use Connected Content in Braze to give your workforce or your customers access to lessons and courses in EduMe. They will be able to access this content seamlessly in their browser, and you will be able to follow their progress as a group or as individuals using the EduMe reporting functionality. For more information, check out our [EduMe]({{site.baseurl}}/partners/channel_extensions/learning/edume/) documentation.
-
-### Pypestream Partnership
-Pypestream is a full-stack, conversational AI platform offering patented, all-in-one cloud messaging to transform brands into “always-on” digital entities. With the Braze-Pypestream partnership, brands can seamlessly orchestrate the end-to-end customer lifecycle from initial outreach, routed into a conversational experience, and through to omnichannel follow-up(s) via intelligent retargeting. For more information, check out our [Pypestream]({{site.baseurl}}/partners/advertising_technologies/attribution/pypestream/) documentation.
-
-### Dyspatch Partnership
-With Dyspatch, use the intuitive drag and drop email builder to create beautiful, responsive, and engaging emails without needing to write code. Collaborate with your team to create and approve emails within Dyspatch and then upload them to use within Braze, all in a couple of quick steps! For more information, check out our [Dyspatch]({{site.baseurl}}/partners/channel_extensions/creative_and_personalization/email_orchestration/dyspatch/) documentation.
-
-### RudderStack Partnership
-RudderStack is an open-source Customer Data Infrastructure for collecting and routing customer event data to your preferred data warehouse and dozens of other analytics providers, such as Braze. It is enterprise-ready and offers a robust transformation framework to process your event data on the fly. For more information, check out our [RudderStack]({{site.baseurl}}/partners/data_and_infrastructure_agility/customer_data_platform/rudderstack/#rudderstack) documentation.
-
-### Jebbit Partnership
-Jebbit is a PaaS to which you can build engaging experiences for users to capture first-party data. Jebbit has partnered with Braze so that you can pass user emails and attributes from your Jebbit campaigns as user data to Braze in real-time. This data can then be utilized to drive marketing initiatives like personalized email campaigns and triggers. For more information, check out our [Jebbit]({{site.baseurl}}/partners/data_and_infrastructure_agility/customer_data_platform/jebbit/#jebbit)  documentation.
 
 
 [support]: {{site.baseurl}}/support_contact/

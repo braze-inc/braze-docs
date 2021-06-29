@@ -10,7 +10,7 @@ channel:
 
 # Customization
 
-In addition to the out-of-the-box [In-App Message templates](/docs/user_guide/message_building_by_channel/in-app_messages/creative_details/), you can also create customized message templates with the following features:
+In addition to the out-of-the-box [In-App Message templates][1], you can also create customized message templates with the following features:
 
 - [Custom HTML templates](#custom-html-messages) - create a customized template with HTML, JavaScript, and CSS.
 - [Modal with custom CSS (web only)](#web-modal-css) - add custom CSS to standard templates for more flexible styling options.
@@ -23,6 +23,7 @@ Additional customization of the appearance of your In-App Messages can be accomp
 {% endalert %}
 
 ## HTML In-App Messages {#custom-html-messages}
+
 While Braze’s out-of-the-box in-app messages can be customized in a variety of ways, you can gain even greater control over the look and feel of your campaigns using messages designed and built using HTML, CSS, and JavaScript. With some simple composition, you can unlock custom functionality and branding to match any of your needs. HTML in-app messages allow for greater control over the look and feel of a message, including:
 
 - Custom Fonts and Styles
@@ -34,7 +35,7 @@ While Braze’s out-of-the-box in-app messages can be customized in a variety of
 
 Custom HTML messages can use the [JavaScript Bridge](#javascript-bridge) methods to log events, set custom attributes, close the message, and more!
 
-Check out our [Github repository](https://github.com/Appboy/appboy-custom-html5-in-app-message-templates) which contains detailed instructions on how to use and customize HTML in-app messages for your needs, and for a set of HTML5 in-app messages templates to help you get started.
+Check out our [Github repository][2] which contains detailed instructions on how to use and customize HTML in-app messages for your needs, and for a set of HTML5 in-app messages templates to help you get started.
 
 {% alert note %}
 To enable HTML in-app messages in the Web SDK, your SDK integration must supply the `allowUserSuppliedJavascript` initialization option to Braze: for example `appboy.initialize('YOUR-API_KEY', {allowUserSuppliedJavascript: true})`. This is for security reasons - HTML in-app messages can execute javascript so we require a site maintainer to enable them.
@@ -45,7 +46,7 @@ To enable HTML in-app messages in the Web SDK, your SDK integration must supply 
 
 HTML in-app messages for Web, Android, and iOS support a JavaScript "bridge" interface to the Braze Web SDK, allowing you to trigger custom Braze actions when users click on elements with links or otherwise engage with your content. These methods exist with the global `appboyBridge` variable.
 
-For example, to log a custom attribute, custom event, and then close the message, you could use the following JavaScript within your HTML in-app message:
+For example, to log a custom attribute and custom event, then close the message, you could use the following JavaScript within your HTML in-app message:
 
 ```html
 <button id="button">Set Favorite Color</button>
@@ -91,7 +92,7 @@ The following JavaScript methods are supported within Braze's HTML in-app messag
 
 ### Link-Based Actions
 
-In addition to custom JavaScript, Braze SDKs can also send analytics data with these convenient URL shortcuts. Note that these query parameters and URL schemes are all **case sensitive**.
+In addition to custom JavaScript, Braze SDKs can also send analytics data with these convenient URL shortcuts. Note that these query parameters and URL schemes are all case sensitive.
 
 #### Button Click Tracking
 
@@ -103,7 +104,7 @@ To log button clicks for in-app message analytics, you can add `abButtonId` as a
 
 Use `?abButtonId=0` to log a "Button 1" click, and `?abButtonId=1` to log a "Button 2" click.
 
-As with other URL parameters, the first parameter should begin with a `?`, while subsequent parameters should be separated by `&`.
+As with other URL parameters, the first parameter should begin with a question mark `?`, while subsequent parameters should be separated by an ampersand `&`.
 
 **Examples**:
 
@@ -121,7 +122,7 @@ In-app messages support only Button 1 and Button 2 clicks. URLs which do not spe
 
 To open links in a new window, set `?abExternalOpen=true`. The message will be dismissed before opening the link.
 
-For deep linking, Braze will open your URL regardless of the value of abExternalOpen.
+For deep linking, Braze will open your URL regardless of the value of `abExternalOpen`.
 
 #### Open as Deeplink (mobile only)
 
@@ -131,13 +132,13 @@ When this query string parameter is absent or set to `false`, Braze will try to 
 
 #### Custom Events (mobile only)
 
-For mobile apps, you can log log a custom event by setting a link's URL to `appboy://customEvent` together with a `name` URL parameter parameter.
+For mobile apps, you can log log a custom event by setting a link's URL to `appboy://customEvent` together with a `name` URL parameter.
 
 For example, `appboy://customEvent?name=eventName` will log a custom event of `eventName`.
 
-Be sure to url encode spaces and other special characters as you would in any other URL. For example, `appboy://customEvent?name=event%20name` sends `event name`.
+Be sure to URL encode spaces and other special characters as you would in any other URL. For example, `appboy://customEvent?name=event%20name` sends `event name`.
 
-Additional query parameters will be passed as property key/value pairs.
+Additional query parameters will be passed as property key-value pairs.
 
 `appboy://customEvent?name=eventName&property1=value1&property2=value2` would log an event called `eventName` with the properties `property1`=`value1` and `property2`=`value2`.
 
@@ -155,28 +156,32 @@ For example, `<a href="appboy://close">Close</a>` will close the in-app message.
 
 ## Modal with CSS (Web Only) {#web-modal-css}
 
-If you choose to use a web-only, Web Modal with CSS message, you can [apply your own template](#css-template) or write your own CSS in the provided space. This space is already pre-filled with the CSS shown in your message preview, and you should feel free to adjust it slightly to meet your needs.
+If you choose to use a web-only Web Modal with CSS message, you can [apply your own template](#css-template) or write your own CSS in the provided space. This space is already pre-filled with the CSS shown in your message preview, but feel free to adjust it slightly to meet your needs.
 
 If you choose to apply your own template, click __Apply Template__ and choose from the In-App Message Template Gallery. If you don't have any options, you can upload a [CSS Template using the CSS Template builder](#in-app-message-templates).
 
 ## Web Email Capture Form {#email-capture-form}
+
 Email capture messages allow you to easily prompt users of your site to submit their email address, after which it will be available within the Braze system for use in all your messaging campaigns.
 
-To navigate to this option, you must create an in-app messaging campaign. From there, this message type can be found by selecting "Web Browsers" under "Send To" and "Web Email Capture Form" under "Message Type".
+To navigate to this option, you must create an in-app messaging campaign. From there, ensure **Send To** is set to **Web Browsers**, then select **Web Email Capture Form** for your **Message Type**.
 
-![emailimage]({% image_buster /assets/img/email_capture.png %})
+![Select Web Email Capture Form][4]
 
 {% alert note %}
 To enable Email Capture in-app messages, your SDK integration must supply the `allowUserSuppliedJavascript` initialization option to Braze, e.g. `appboy.initialize('YOUR-API_KEY', {allowUserSuppliedJavascript: true})`. This is for security reasons - HTML in-app messages can execute javascript so we require a site maintainer to enable them.
 {% endalert %}
 
 #### Customizable Features
+
 - Header, body, and submit button text
 - An optional image
 - An optional "Terms of Service" link
 - Different colors for the header and body text, buttons and background
-- Key value pairs
+- Key-value pairs
 - Style for header and body text, buttons, button border color, background, and overlay
+
+![emailimage][5]
 
 ## Reusable Message Templates {#reusable-color-profiles}
 
@@ -190,7 +195,7 @@ Click __Save Color Profile__ on the bottom right when you’re finished.
 
 #### Managing Color Profiles
 
-You can also [duplicate]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/duplicate/) and [archive]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/archive/) templates! Learn more about creating and managing templates and creative content in [Templates & Media]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/)
+You can also [duplicate][6] and [archive][7] templates! Learn more about creating and managing templates and creative content in [Templates & Media][8].
 
 ### CSS Template
 
@@ -250,7 +255,7 @@ As you can see, you can edit everything from the background color to font size a
 
 #### Managing CSS Templates
 
-You can also [duplicate]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/duplicate/) and [archive]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/archive/) templates! Learn more about creating and managing templates and creative content in [Templates & Media]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/)
+You can also [duplicate][6] and [archive][7] templates! Learn more about creating and managing templates and creative content in [Templates & Media][8].
 
 
 ## Video {#video}
@@ -261,7 +266,7 @@ To use a local video asset, be sure to include this file when uploading assets t
 
 To support iOS devices, you must include the `playsinline` attribute since full screen playback is not supported at this time.
 
-Other `<video>` options that can be used can be found [here](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/video).
+You can find other possible `<video>` options on [MDN Web Docs][9]
 
 ```
 <video class="video" autoplay muted playsinline controls>
@@ -278,3 +283,12 @@ Full screen videos will not render correctly on iOS and are not supported at thi
 {% alert note %}
 iOS does not support autoplay by default. To update this default option, you can modify the [`ABKInAppMessageHTMLViewController`](https://github.com/Appboy/appboy-ios-sdk/blob/master/AppboyUI/ABKInAppMessage/ViewControllers/ABKInAppMessageHTMLViewController.m)
 {% endalert %}
+
+[1]: {{site.baseurl}}/docs/user_guide/message_building_by_channel/in-app_messages/creative_details/
+[2]: https://github.com/Appboy/appboy-custom-html5-in-app-message-templates
+[4]: {% image_buster /assets/img/email_capture_config.png %}
+[5]: {% image_buster /assets/img/email_capture.png %}
+[6]: {{site.baseurl}}/user_guide/engagement_tools/templates_and_media/duplicate/
+[7]: {{site.baseurl}}/user_guide/engagement_tools/templates_and_media/archive/
+[8]: {{site.baseurl}}/user_guide/engagement_tools/templates_and_media/
+[9]: https://developer.mozilla.org/en-US/docs/Web/HTML/Element/video

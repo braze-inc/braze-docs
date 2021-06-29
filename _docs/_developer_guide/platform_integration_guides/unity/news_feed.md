@@ -2,6 +2,7 @@
 nav_title: News Feed
 platform: Unity
 page_order: 5
+description: "This reference article covers News Feed integration for the Unity platform."
 
 ---
 

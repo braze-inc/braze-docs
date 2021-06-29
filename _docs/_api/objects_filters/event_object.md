@@ -20,11 +20,11 @@ description: "This reference article goes over the event object, what it is, and
 
 ## What is the Event Object?
 
-An Event Object is an object that gets passed through the API when a specific event occurs. Events objects are housed in an events array. Each Event Object in the events array represents a single occurrence of a Custom Event by a particular user at the designated time value. The event object has many different fields that allow you to customize by setting and using event properties in messages, data collection, and personalization.
+An Event Object is an object that gets passed through the API when a specific event occurs. Events objects are housed in an events array. Each Event Object in the events array represents a single occurrence of a custom event by a particular user at the designated time value. The event object has many different fields that allow you to customize by setting and using event properties in messages, data collection, and personalization.
 
-You can check out how to set up custom events for a specific platform by reading the Platform Integration Guide within the [Developer Guide][1]. You can find this information housed within the "Tracking Custom events" page under the __analytics tab__ of the various platforms. We have linked several for you.
+You can check out how to set up custom events for a specific platform by reading the Platform Integration Guide within the [Developer Guide][1]. You can find this information housed within the **Tracking Custom Events** page under the __Analytics__ tab of the various platforms. We have linked several for you.
 
-- Tracking Custom events: <br>[Android][2]<br>[iOS][3]<br>[Web][4]
+- Tracking Custom Events: <br>[Android][2]<br>[iOS][3]<br>[Web][4]
 
 ### Event Object
 
@@ -45,7 +45,21 @@ You can check out how to set up custom events for a specific platform by reading
 ```
 
 ## Event Properties Object
-Custom events and purchases may have event properties. The “properties” values should be an object where the keys are the property names and the values are the property values. Property names must be non-empty strings less than or equal to 255 characters, with no leading dollar signs. Property values can be integers, floats, booleans, datetimes (as strings in ISO8601 or yyyy-MM-dd'T'HH:mm:ss:SSSZ format), or strings less than or equal to 255 characters.
+Custom events and purchases may have event properties. The “properties” values should be an object where the keys are the property names and the values are the property values. Property names must be non-empty strings less than or equal to 255 characters, with no leading dollar signs ($).
+
+Property values can be any of the following data types:
+
+| Data Type | Description |
+| --- | --- |
+| Numbers | As either [integers](https://en.wikipedia.org/wiki/Integer) or [floats](https://en.wikipedia.org/wiki/Floating-point_arithmetic) |
+| Booleans |  |
+| Datetimes | Formatted as strings in [ISO-8601](https://en.wikipedia.org/wiki/ISO_8601) or `yyyy-MM-dd'T'HH:mm:ss:SSSZ` format. Not supported within arrays. |
+| Strings | 255 characters or fewer. |
+| Arrays | Arrays cannot include datetimes. |
+| Objects | Objects will be ingested as strings. |
+{: .reset-td-br-1 .reset-td-br-2}
+
+Event property objects that contain array or object values can have an event property payload of up to 50KB.
 
 ### Event Property Persistence
 Event Properties are designed for filtering of, and Liquid personalization in, messages triggered by their parent Events. By default, they are not persisted on the Braze user profile. To use Event Property values in segmentation, please see our [Custom Event documentation][5] which details the various approaches to storing Event Property values long-term.

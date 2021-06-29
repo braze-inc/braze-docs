@@ -34,7 +34,7 @@ Authorization: Bearer YOUR-REST-API-KEY
 
 ```json
 {
-  "canvas_id": (required, string) see canvas identifier,
+  "canvas_id": (required, string) see Canvas identifier,
   "schedule_id": (required, string) the `schedule_id` to update (obtained from the response to create schedule),
   "schedule": {
     // required, see create schedule documentation
@@ -46,14 +46,10 @@ Authorization: Bearer YOUR-REST-API-KEY
 
 | Parameter | Required | Data Type | Description |
 | --------- | ---------| --------- | ----------- |
-|`canvas_id`|Required|String| See canvas identifier|
-|`schedule_id`| Optional | String | The `schedule_id` to update (obtained from the response to create schedule) |
-|`schedule` | Required | Object | See schedule object |
+|`canvas_id`|Required|String| See [Canvas identifier]({{site.baseurl}}/api/identifier_types/). |
+| `schedule_id` | Optional | String | The `schedule_id` to update (obtained from the response to create schedule). |
+|`schedule` | Required | Object | See [schedule object]({{site.baseurl}}/api/objects_filters/schedule_object/). |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
-
-### Request Components
-- [Canvas ID]({{site.baseurl}}/api/identifier_types/)
-- [Schedule Object]({{site.baseurl}}/api/objects_filters/schedule_object/)
 
 ## Request Example
 ```

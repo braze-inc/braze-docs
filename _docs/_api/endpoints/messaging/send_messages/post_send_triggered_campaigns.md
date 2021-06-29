@@ -34,7 +34,7 @@ Authorization: Bearer YOUR-REST-API-KEY
 {
   "campaign_id": (required, string) see campaign identifier,
   "send_id": (optional, string) see send identifier,
-  "trigger_properties": (optional, object) personalization key value pairs that will apply to all users in this request,
+  "trigger_properties": (optional, object) personalization key-value pairs that will apply to all users in this request,
   "broadcast": (optional, boolean) see broadcast -- defaults to false on 8/31/17, must be set to true if "recipients" is omitted,
   "audience": (optional, connected audience object) see connected audience,
   // Including 'audience' will only send to users in the audience
@@ -43,7 +43,7 @@ Authorization: Bearer YOUR-REST-API-KEY
       // Either "external_user_id" or "user_alias" is required. Requests must specify only one.
       "user_alias": (optional, user alias object) user alias of user to receive message,
       "external_user_id": (optional, string) external identifier of user to receive message,
-      "trigger_properties": (optional, object) personalization key value pairs that will apply to this user (these key value pairs will override any keys that conflict with trigger_properties above),
+      "trigger_properties": (optional, object) personalization key-value pairs that will apply to this user (these key-value pairs will override any keys that conflict with trigger_properties above),
       "send_to_existing_only": (optional, boolean) defaults to true, if set to `false`, an attributes object must also be included,
       "attributes": (optional, object) fields in the attributes object will create or update an attribute of that name with the given value on the specified user profile before the message is sent and existing values will be overwritten
     },
@@ -55,12 +55,12 @@ Authorization: Bearer YOUR-REST-API-KEY
 
 | Parameter | Required | Data Type | Description |
 | --------- | ---------| --------- | ----------- |
-|`campaign_id`|Required|String|See campaign identifier|
-|`send_id`| Optional | String | See send identifier |
-|`trigger_properties`|Optional|Object|Personalization key value pairs that will apply to all users in this request|
-|`broadcast`|Optional|Boolean|See broadcast -- defaults to false on 8/31/17, must be set to true if "recipients" is omitted|
-|`audience`|Optional|Connected audience object|See connected audience|
-|`recipients`|Optional|Array|If not provided and broadcast is not set to 'false', message will send to the entire segment targeted by the campaign|
+|`campaign_id`|Required|String|See [campaign identifier]({{site.baseurl}}/api/identifier_types/). |
+|`send_id`| Optional | String | See [send identifier]({{site.baseurl}}/api/identifier_types/). |
+|`trigger_properties`| Optional | Object | See [trigger properties]({{site.baseurl}}/api/objects_filters/trigger_properties_object/). Personalization key-value pairs that will apply to all users in this request. |
+|`broadcast`| Optional | Boolean | See [broadcast]({{site.baseurl}}/api/parameters/#broadcast). This parameter defaults to false (as of August 31, 2017). <br><br> If `recipients` is omitted, `broadcast` must be set to true. However, use caution when setting `broadcast: true`, as unintentionally setting this flag may cause you to send your campaign to a larger than expected audience. |
+|`audience`| Optional | Connected audience object| See [connected audience]({{site.baseurl}}/api/objects_filters/connected_audience/). |
+|`recipients`| Optional | Array | See [recipients object]({{site.baseurl}}/api/objects_filters/recipient_object/). If not provided and `broadcast` is set to true, the message will send to the entire segment targeted by the campaign. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
 
 ### Request Components

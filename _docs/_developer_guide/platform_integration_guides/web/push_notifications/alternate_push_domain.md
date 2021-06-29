@@ -93,7 +93,7 @@ At this point, `secure.com` will open a popup window in which you can initialize
 
 ## Step 3: Communicate between domains (optional)
 
-Now that users can opt in from this workflow originating on `insecure.com`, you may want to modify your site based on if the user is already opted-in or not. There's no point in asking the user to register for push if they already are.
+Now that users can opt-in from this workflow originating on `insecure.com`, you may want to modify your site based on if the user is already opted-in or not. There's no point in asking the user to register for push if they already are.
 
 You can use iFrames and the [`postMessage`][3] API to communicate between your two domains. 
 

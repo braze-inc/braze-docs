@@ -365,7 +365,7 @@ Create a class that implements [`IHtmlInAppMessageActionListener`][86].
 
 The callbacks in your `IHtmlInAppMessageActionListener` will be called whenever the user initiates any of the following actions inside the HTML in-app message:
 - Clicks on close button.
-- Clicks on news feed button.
+- Clicks on News Feed button.
 - Fires a custom event.
 - Clicks on a URL inside HTML in-app message.
 
@@ -482,13 +482,13 @@ public class CustomInAppMessageViewWrapper extends DefaultInAppMessageViewWrappe
   public CustomInAppMessageViewWrapper(View inAppMessageView,
                                        IInAppMessage inAppMessage,
                                        IInAppMessageViewLifecycleListener inAppMessageViewLifecycleListener,
-                                       AppboyConfigurationProvider appboyConfigurationProvider,
+                                       BrazeConfigurationProvider brazeConfigurationProvider,
                                        Animation openingAnimation,
                                        Animation closingAnimation, View clickableInAppMessageView) {
     super(inAppMessageView,
         inAppMessage,
         inAppMessageViewLifecycleListener,
-        appboyConfigurationProvider,
+        brazeConfigurationProvider,
         openingAnimation,
         closingAnimation,
         clickableInAppMessageView);
@@ -515,13 +515,13 @@ public class CustomInAppMessageViewWrapper extends DefaultInAppMessageViewWrappe
 class CustomInAppMessageViewWrapper(inAppMessageView: View,
                                     inAppMessage: IInAppMessage,
                                     inAppMessageViewLifecycleListener: IInAppMessageViewLifecycleListener,
-                                    appboyConfigurationProvider: AppboyConfigurationProvider,
+                                    brazeConfigurationProvider: BrazeConfigurationProvider,
                                     openingAnimation: Animation,
                                     closingAnimation: Animation, clickableInAppMessageView: View) : 
     DefaultInAppMessageViewWrapper(inAppMessageView, 
         inAppMessage, 
         inAppMessageViewLifecycleListener, 
-        appboyConfigurationProvider, 
+        brazeConfigurationProvider, 
         openingAnimation, 
         closingAnimation, 
         clickableInAppMessageView) {

@@ -14,7 +14,7 @@ guide_featured_list:
   - name: Apptimize Partnership
     link: /docs/help/release_notes/deprecations/apptimize/
     fa_icon: fas fa-vials
-  - name: Eclipse SDK Set Up
+  - name: Eclipse SDK Setup
     link: /docs/help/release_notes/deprecations/eclipse_setup_deprecated/
     fa_icon: fas fa-circle
   - name: "TLS 1.0 & 1.1 Deprecation"

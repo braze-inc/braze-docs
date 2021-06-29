@@ -2,10 +2,19 @@
 nav_title: Content Cards
 platform: Unity
 page_order: 4
+description: "This reference article covers Content Card implementation guidelines for the Unity platform."
 
 ---
 
 # Content Cards
+
+## Displaying Content Cards Natively {#unity-content-cards-native-ui}
+
+You can display the default UI for Content Cards using the following call:
+
+```csharp
+Appboy.AppboyBinding.DisplayContentCards();
+```
 
 ## Receiving Content Card Data in Unity
 

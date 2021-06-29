@@ -12,7 +12,7 @@ description: "This article covers how to track custom events via the Braze SDK."
 
 You can record custom events in Braze to learn more about your app's usage patterns and to segment your users by their actions on the dashboard.
 
-Before implementation, be sure to review examples of the segmentation options afforded by Custom events vs. Custom attributes vs Purchase events in our [Best Practices section][0]. You should also check out our notes on [event naming conventions]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/event_naming_conventions/).
+Before implementation, be sure to review examples of the segmentation options afforded by custom events vs. custom attributes vs. purchase events in our [Best Practices section][0]. You should also check out our notes on [event naming conventions]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/event_naming_conventions/).
 
 ```javascript
 appboy.logCustomEvent(YOUR_EVENT_NAME);
@@ -24,7 +24,7 @@ See the [logCustomEvent documentation][1] for more information.
 
 You can optionally add metadata about custom events by passing a properties object with your custom event.
 
-Properties are defined as key value pairs.  Keys are strings and values can be `string`, `numeric`, `boolean`, or [`Date`][2] objects.
+Properties are defined as key-value pairs.  Keys are strings and values can be `string`, `numeric`, `boolean`, or [`Date`][2] objects.
 
 ```javascript
 appboy.logCustomEvent(YOUR_EVENT_NAME, {key: 'value'});

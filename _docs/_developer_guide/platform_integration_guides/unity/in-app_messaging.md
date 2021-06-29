@@ -2,6 +2,7 @@
 nav_title: In-App Messaging
 platform: Unity
 page_order: 2
+description: "This reference article covers in-app messaging integration guidelines for the Unity platform."
 
 ---
 
@@ -9,15 +10,35 @@ page_order: 2
 
 ## Configuring Default In-app Message Behavior
 
-### Android
+{% tabs %}
+{% tab Android %}
 
 On Android, in-app messages from Braze are automatically displayed natively. To disable this functionality, deselect "Automatically Display In-App Messages" in the Braze configuration editor.
 
 You may alternatively set `com_appboy_inapp_show_inapp_messages_automatically` to `false` in your Unity project's `braze.xml`.
 
-### iOS
+{% endtab %}
+{% tab iOS %}
 
 On iOS, in-app messages from Braze are automatically displayed natively. To disable this functionality, set game object listeners in the Braze configuration editor, and ensure "Braze Displays In-App Messages" is not selected.
+
+{% endtab %}
+{% endtabs %}
+
+## Configuring In-App Message Display Behavior
+
+You may optionally change the display behavior of In-App Messages at runtime via the following:
+
+```csharp
+// Sets In-App Messages to display immediately when triggered.
+Appboy.AppboyBinding.SetInAppMessageDisplayAction(BrazeUnityInAppMessageDisplayActionType.IAM_DISPLAY_NOW);
+
+// Sets In-App Messages to display at a later time and be saved in a stack.
+Appboy.AppboyBinding.SetInAppMessageDisplayAction(BrazeUnityInAppMessageDisplayActionType.IAM_DISPLAY_LATER);
+
+// Sets In-App Messages to be discarded after being triggered.
+Appboy.AppboyBinding.SetInAppMessageDisplayAction(BrazeUnityInAppMessageDisplayActionType.IAM_DISCARD);
+```
 
 ## Receiving In-App Message Data in Unity
 

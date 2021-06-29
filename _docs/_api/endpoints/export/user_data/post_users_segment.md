@@ -80,16 +80,13 @@ Individual custom attributes cannot be exported. However, all custom attributes 
 
 ## Request Parameters
 
-| Key | Requirement | Data Type | Details |
+| Parameter | Required | Data Type | Description |
 |---|---|---|---|
-|`segment_id` | Required | String | Identifier for the segment to be exported |
-|`callback_endpoint` | Optional | String | Endpoint to post a download url to when the export is available |
-|`fields_to_export` | Required* | Array of Strings | Name of user data fields to export, you may also export custom attributes. *Beginning April 2021, new accounts must specify specific fields to export. |
-|`output_format` | Optional | String | When using your own S3 bucket, allows to specify file format as 'zip' or 'gzip'. Defaults to zip file format |
+|`segment_id` | Required | String | Identifier for the segment to be exported. See [segment identifier]({{site.baseurl}}/api/identifier_types/). |
+|`callback_endpoint` | Optional | String | Endpoint to post a download URL to when the export is available. |
+|`fields_to_export` | Required* | Array of Strings | Name of user data fields to export, you may also export custom attributes. <br><br>*Beginning April 2021, new accounts must specify specific fields to export. |
+|`output_format` | Optional | String | When using your own S3 bucket, allows to specify file format as `zip` or `gzip`. Defaults to ZIP file format. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
-
-### Request Components
-- [Segment Identifier]({{site.baseurl}}/api/identifier_types/)
 
 ## Example Request
 ```
@@ -188,7 +185,7 @@ User export object (we will include the least data possible - if a field is miss
     "attributed_ad" : (string),
     "push_subscribe" : (string) "opted_in" | "subscribed" | "unsubscribed",
     "email_subscribe" : (string) "opted_in" | "subscribed" | "unsubscribed",
-    "custom_attributes" : (object) custom attribute key value pairs,
+    "custom_attributes" : (object) custom attribute key-value pairs,
     "custom_events" : [
         {
             "name" : (string),

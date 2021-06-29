@@ -3,7 +3,7 @@ nav_title: Settings
 page_order: 0
 layout: dev_guide
 guide_top_header: "Settings"
-guide_top_text: "The App Group Settings are useful for customization per app group and troubleshooting. Within these settings, you can adjust features such as Email Settings, Tags, Push TTL Settings, Teams, Custom events, Custom attributes, and more."
+guide_top_text: "The App Group Settings are useful for customization per app group and troubleshooting. Within these settings, you can adjust features such as Email Settings, Tags, Push TTL Settings, Teams, Custom Events, Custom Attributes, and more."
 
 page_type: landing
 description: "This landing page includes resources for managing your App Groups in the Braze Dashboard."

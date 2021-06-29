@@ -23,13 +23,8 @@ This endpoint allows you to retrieve relevant information on a specified campaig
 
 | Parameter     | Required | Data Type | Description             |
 | ------------- | -------- | --------- | ----------------------- |
-| `campaign_id` | Yes      | String    | Campaign API identifier |
+| `campaign_id` | Required      | String    | See [Campaign API identifier]({{site.baseurl}}/api/identifier_types/).<br><br> The `campaign_id` for API campaigns can be found on the **Developer Console** and the **Campaign Details** page within your dashboard; or you can use the [Campaign List Endpoint](#campaign-list-endpoint).   |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
-
-### Request Components
-- [Campaign Identifier]({{site.baseurl}}/api/identifier_types/)
-<br><br>
-The `campaign_id` for API campaigns can be found on the Developer Console page and the campaign details page within your dashboard or you can use the [Campaign List Endpoint](#campaign-list-endpoint).
 
 ## Example Request 
 {% raw %}
@@ -80,7 +75,7 @@ The `messages` response will contain information about each message. Example mes
 {
     "channel": (string) description of the channel, such as "ios_push" or "android_push"
     "alert": (string) alert body text,
-    "extras": (hash) any key value pairs provided
+    "extras": (hash) any key-value pairs provided
 }
 ```
 
@@ -94,7 +89,7 @@ The `messages` response will contain information about each message. Example mes
     "from": (string) from address and display name,
     "reply_to": (string) reply-to for message, if different than "from" address,
     "title": (string) name of the email,
-    "extras": (hash) any key value pairs provided
+    "extras": (hash) any key-value pairs provided
 }
 ```
 
@@ -104,7 +99,7 @@ The `messages` response will contain information about each message. Example mes
 {
     "channel": "content_cards",
     "name": (string) name of variant,
-    "extras": (hash) any key value pairs provided; only present if at least one key-value pair has been set
+    "extras": (hash) any key-value pairs provided; only present if at least one key-value pair has been set
 }
 ```
 

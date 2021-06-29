@@ -13,18 +13,19 @@ resources_list:
     image: /assets/img/pencil-paper.png
   - name: LAB Login
     link: https://lab.braze.com
-    image: /assets/img/braze-logo-mark.png
+    image: /assets/img/icons/icon-lab.png
   - name: FAQs
     link: /docs/help/faqs/
     image: /assets/img/megaphone.png
   - name: Release Notes
     link: /docs/help/release_notes/most_recent/
     image: /assets/img/notebook.png
-  - name: Webinars
-    link: /docs/help/webinars/overview/
-    image: /assets/img/webinars.png
+  - name: Best Practices
+    link: /docs/help/best_practices/
+    image: /assets/img/icons/icon-document-ribbon.png
   - name: Data Protection Technical Assistance
     link: /docs/help/dp-technical-assistance/
+    image: /assets/img/icons/icon-news.png
 
 
 

@@ -1,6 +1,6 @@
 ---
 nav_title: Shopify
-alias: /partners/shopify/
+permalink: /partners/shopify/
 description: ""
 page_type: partner
 hidden: true
@@ -12,7 +12,7 @@ hidden: true
 
 Our Shopify integration allows brands to seamlessly connect their Shopify store with Braze to pass select Shopify webhooks into Braze. Leverage Braze's cross-channel strategies and Canvas to retarget your users with abandoned checkout messaging to nudge customers to complete their purchase, or retarget users based on their previous purchases. 
 
-## Pre-Requisites
+## Prerequisites
 
 | Requirement | Origin | Access | Description |
 | ----------- | ------ | ------ | ----------- |

@@ -1,5 +1,5 @@
 ---
-nav_title: In App Messages
+nav_title: In-App Messages
 platform: React Native
 subplatform: 
 - Android

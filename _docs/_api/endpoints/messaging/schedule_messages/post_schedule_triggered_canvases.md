@@ -32,7 +32,7 @@ Authorization: Bearer YOUR-REST-API-KEY
 
 ```json
 {
-  "canvas_id": (required, string) see canvas identifier,
+  "canvas_id": (required, string) see Canvas identifier,
   // Including 'recipients' will send only to the provided user ids if they are in the campaign's segment
   "recipients": (optional, array of recipient object),
   // for any keys that conflict between these trigger properties and those in a Recipient Object, the value from the
@@ -42,7 +42,7 @@ Authorization: Bearer YOUR-REST-API-KEY
   // If 'recipients' and 'audience' are not provided and broadcast is not set to 'false',
   // the message will send to entire segment targeted by the Canvas
   "broadcast": (optional, boolean) see broadcast -- defaults to false on 8/31/17, must be set to true if "recipients" object is omitted,
-  "canvas_entry_properties": (optional, object) personalization key value pairs for the first step for all users in this send; see trigger properties,
+  "canvas_entry_properties": (optional, object) personalization key-value pairs for the first step for all users in this send; see trigger properties,
   "schedule": {
     "time": (required, datetime as ISO 8601 string) time to send the message (up to 90 days in the future),
     "in_local_time": (optional, bool),
@@ -55,23 +55,14 @@ Authorization: Bearer YOUR-REST-API-KEY
 
 | Parameter | Required | Data Type | Description |
 | --------- | ---------| --------- | ----------- |
-|`canvas_id`|Required|String| See canvas identifier|
-|`send_id` | Optional | String | See send identifier |
-|`recipients` | Optional | Array of recipient objects | See recipients object |
-|`audience` | Optional | Connected audience object | See connected audience |
-|`broadcast` | Optional | Boolean | See broadcast -- defaults to false on 8/31/17, must be set to true if "recipients" object is omitted |
-| `trigger_properties` | Optional | Object | Personalization key value pairs for all users in this send; see trigger properties |
-| `schedule` | Required | Schedule object | See schedule object |
+|`canvas_id`|Required|String| See [Canvas identifier]({{site.baseurl}}/api/identifier_types/). |
+| `send_id` | Optional | String | See [send identifier]({{site.baseurl}}/api/identifier_types/). | 
+| `recipients` | Optional | Array of recipient objects | See [recipients object]({{site.baseurl}}/api/objects_filters/recipient_object/). |
+| `audience` | Optional | Connected audience object | See [connected audience]({{site.baseurl}}/api/objects_filters/connected_audience/). |
+|`broadcast`| Optional | Boolean | See [broadcast]({{site.baseurl}}/api/parameters/#broadcast). This parameter defaults to false (as of August 31, 2017). <br><br> If `recipients` is omitted, `broadcast` must be set to true. However, use caution when setting `broadcast: true`, as unintentionally setting this flag may cause you to send your message to a larger than expected audience. |
+| `trigger_properties` | Optional | Object | Personalization key-value pairs for all users in this send. See [trigger properties]({{site.baseurl}}/api/objects_filters/trigger_properties_object/). |
+| `schedule` | Required | Schedule object | See [schedule object]({{site.baseurl}}/api/objects_filters/schedule_object/). |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
-
-### Request Components
-- [Canvas Identifier]({{site.baseurl}}/api/identifier_types/)
-- [Send Identifier]({{site.baseurl}}/api/identifier_types/)
-- [Recipients]({{site.baseurl}}/api/objects_filters/recipient_object/)
-- [Connected Audience]({{site.baseurl}}/api/objects_filters/connected_audience/)
-- [Broadcast]({{site.baseurl}}/api/parameters/#broadcast)
-- [Trigger Properties]({{site.baseurl}}/api/objects_filters/trigger_properties_object/)
-- [Schedule Object]({{site.baseurl}}/api/objects_filters/schedule_object/)
 
 ## Example Request
 ```

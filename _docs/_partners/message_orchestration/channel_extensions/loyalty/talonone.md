@@ -14,7 +14,7 @@ Coupled with the use of a flexible rules engine to boost your conversion and ret
 This partnership is in early access beta. All features may not perform as exactly described. Please reach out to your Braze Account Manager for more information.
 {% endalert %}
 
-## Pre-Requisites
+## Prerequisites
 
 | Requirement | Origin | Description |
 | --------- | ------------ | ---------- |
@@ -106,7 +106,7 @@ curl https://demo.talon.one/v2/integration/braze/createcoupon \
 
 ## Using Talon.One in Your Braze Campaign
 
-To trigger the Talon.One coupon creation event, use Braze's [Connected Content feature]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/connected_content/about_connected_content/). However, the coupon creation event can still be used in any Campaign message body or any canvas message body.
+To trigger the Talon.One coupon creation event, use Braze's [Connected Content feature]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/connected_content/about_connected_content/). However, the coupon creation event can still be used in any Campaign message body or any Canvas message body.
 
 Place the code snippets below in your message body to configure your Campaign or Canvas to call Talon.One coupons into your message. 
 

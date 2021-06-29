@@ -41,7 +41,7 @@ You can manage the Amplitude Data Import process from the Technology Partners pa
 
 A list of the events that can be exported from Braze to Amplitude is below. All events sent to Amplitude will include the user's `external_user_id` as the Amplitude User ID. Braze will only send event data for users who either have their `external_user_id` set, or anonymous users who have their `device_id` set. Braze-specific event properties will be sent under the `event_properties` key in the data sent to Amplitude. The properties for each event type are listed below.
 
-You can export two types of events to Amplitude: "Message Engagement Events" consisting of the Braze Events that are directly related to message sending, and "Customer Behavior Events" including other App or Website activity such as Sessions, Custom events, and Purchases tracked through the platform. All regular events are prefixed with `[Appboy]`, and all Custom events are prefixed with `[Appboy] [Custom Event]`. Custom Event properties and Purchase Event properties are prefixed with `[Custom event property]` and `[Purchase property]`, respectively.
+You can export two types of events to Amplitude: "Message Engagement Events" consisting of the Braze Events that are directly related to message sending, and "Customer Behavior Events" including other App or Website activity such as Sessions, Custom events, and Purchases tracked through the platform. All regular events are prefixed with `[Appboy]`, and all custom events are prefixed with `[Appboy] [Custom Event]`. Custom event properties and purchase event properties are prefixed with `[Custom event property]` and `[Purchase property]`, respectively.
 
 All cohorts named and imported into Braze will be prefixed with `[Amplitude]` and suffixed with their `cohort_id`. This means that a cohort named "COHORT_NAME" with the `cohort_id` "cxyzz3hz" will be titled `[Amplitude] COHORT_NAME: cxyzz3hz` in Braze filters.
 
@@ -159,7 +159,7 @@ Devices should not report more than 60 events/second under normal circumstances,
   "message_variation_id": (string) id of the message variation if from a campaign,
   "canvas_id": (string) id of the Canvas if from a Canvas,
   "canvas_name": (string) name of the Canvas,
-  "canvas_variation_id": (string) id of the canvas variation the user is in if from a Canvas,
+  "canvas_variation_id": (string) id of the Canvas variation the user is in if from a Canvas,
   "canvas_step_id": (string) id of the step for this message if from a Canvas,
   "send_id": (string) id of the message if specified for the campaign (See Send Identifier under REST API Parameter Definitions),
   "app_id": (string) id for the app on which the user action occurred,
@@ -229,7 +229,7 @@ Devices should not report more than 60 events/second under normal circumstances,
   "message_variation_id": (string) id of the message variation if from a campaign,
   "canvas_id": (string) id of the Canvas if from a canvas,
   "canvas_name": (string) name of the Canvas,
-  "canvas_variation_id": (string) id of the canvas variation the user is in if from a Canvas,
+  "canvas_variation_id": (string) id of the Canvas variation the user is in if from a Canvas,
   "canvas_step_id": (string) id of the step for this message if from a Canvas,
   "send_id": (string) id of the message if specified for the campaign (See Send Identifier under REST API Parameter Definitions),
   "dispatch_id": (string) id of the message dispatch (unique id for each 'transmission' sent from the Braze platform). Users who are sent a schedule message get the same dispatch_id. Action-based or API triggered messages get a unique dispatch_id per user.,
@@ -317,7 +317,7 @@ _Update noted in August 2019._
   "message_variation_id": (string) id of the message variation if from a campaign,
   "canvas_id": (string) id of the Canvas if from a canvas,
   "canvas_name": (string) name of the Canvas,
-  "canvas_variation_id": (string) id of the canvas variation the user is in if from a Canvas,
+  "canvas_variation_id": (string) id of the Canvas variation the user is in if from a Canvas,
   "canvas_step_id": (string) id of the step for this message if from a Canvas,
   "send_id": (string) id of the message if specified for the campaign (See Send Identifier under REST API Parameter Definitions),
   "email_address": (string) email address for this event,

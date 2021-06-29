@@ -13,7 +13,7 @@ page_type: partner
 
 Use Liftigniter with Braze’s Connected Content to allow brands to recommend interesting topics such as news articles, clothing and other retail items, and videos.
 
-# Pre-Requisites
+## Prerequisites
 
 | Requirement| Origin| Access| Description|
 | ---| ---| ---|
@@ -21,7 +21,7 @@ Use Liftigniter with Braze’s Connected Content to allow brands to recommend in
 | Liftigniter API Integration | Liftigniter| https://support.liftigniter.com/support/solutions/articles/30000024667-api-integration-overview | You must integrate Liftigniter into your site or app to be able to pull recommendations from there. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
 
-# Integration
+## Integration
 
 Use [Liftigniter's REST API](https://documenter.getpostman.com/view/2166502/liftigniter/7TFGvSV#9bdf75da-edd6-45ec-9c28-a0edefad1389) to insert personalized content into your messages. Once you have your Liftigniter account and Liftigniter is integrated into your app, use this template to call content into your messages. Feel free to reach out to Liftigniter's support team with any questions.
 

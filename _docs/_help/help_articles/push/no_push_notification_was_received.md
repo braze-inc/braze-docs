@@ -23,7 +23,7 @@ Check your user profile within the [“Engagement” tab] [1] in the “User Pro
 
 ![trouble1][2]
 
-## Check Seqment
+## Check Segment
 
 Ensure you fall into the Segment that you are targeting (if this is a live campaign and not a test). In the “User Profile” you will see a list of segments that the user currently falls into. Remember, this is an ever-changing variable as segmentation is updated in real time.
 

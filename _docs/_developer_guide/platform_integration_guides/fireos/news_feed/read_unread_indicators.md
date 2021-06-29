@@ -8,7 +8,7 @@ channel:
 
 ---
 
-# Read/Unread Indicators
+# Read & Unread Indicators
 
 Braze allows you to optionally toggle on an Unread/Read indicator on News Feed cards as pictured below:
 

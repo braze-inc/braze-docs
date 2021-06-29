@@ -42,6 +42,9 @@ braze.initialize(apiKey, {
   - To avoid using this directive, integrate using NPM instead.
 - `script-src 'nonce-...'` or `script-src 'unsafe-inline'` are required for certain In-App Messages (custom HTML, for example).
 
+### img-src {#img-src}
+- `img-src: appboy-images.com braze-images.com cdn.braze.eu` - required when using Braze CDN-hosted images. These hostnames may vary based on dashboard cluster.
+
 ## Font Awesome {#font-awesome}
 
 To disable the automatic inclusion of Font Awesome, use the `doNotLoadFontAwesome` initialization option:

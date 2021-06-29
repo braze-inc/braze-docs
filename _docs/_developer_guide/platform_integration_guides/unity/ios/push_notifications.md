@@ -4,6 +4,7 @@ platform: Unity
 subplatform: iOS
 ex_push_payload: archive/apple/push_payload.json
 page_order: 1
+description: "This reference article covers iOS push notification integration for the Unity platform."
 
 ---
 

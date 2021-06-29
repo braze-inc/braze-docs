@@ -124,7 +124,7 @@ If you're testing an iOS Push campaign, you must set the delay to 1 minute to al
 
 ![Test Message Delivery][16]
 
-As described above, target the users as you would for testing using either a testing filter or simply targeting your own e-mail address and finish creating the campaign.
+As described above, target the users as you would for testing using either a testing filter or simply targeting your own email address and finish creating the campaign.
 
 ![Test Message Targeting][17]
 
@@ -132,7 +132,7 @@ Go into your app and complete the custom event, and the campaign will trigger, a
 
 ![Test Message Example][18]
 
-Alternatively, if you are saving custom user IDs, you can also test the campaign by sending a customized test message to yourself. After writing the copy for your campaign, click the eye icon on the upper right corner of the preview, then select "Customized User". Add the custom event property on the bottom of the page, add your user ID or e-mail address to the top box and click "Send Test". You should receive a message personalized with the property.
+Alternatively, if you are saving custom user IDs, you can also test the campaign by sending a customized test message to yourself. After writing the copy for your campaign, click the eye icon on the upper right corner of the preview, then select "Customized User". Add the custom event property on the bottom of the page, add your user ID or email address to the top box and click "Send Test". You should receive a message personalized with the property.
 
 ![Testing Using Customized User][22]
 

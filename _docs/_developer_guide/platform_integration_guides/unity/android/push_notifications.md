@@ -1,8 +1,9 @@
 ---
-nav_title: Push Notifications
+nav_title: Firebase Push Notifications
 platform: Unity
 subplatform: Android
 page_order: 1
+description: "This reference article covers the Android push notification integration for the Unity platform."
 
 ---
 
@@ -10,7 +11,7 @@ page_order: 1
 
 These instructions are for integrating push with [Firebase Cloud Messaging (FCM)][9].
 
-For ADM integration instructions, see our [advanced use cases][61] documentation.
+For ADM integration instructions, see our [Unity ADM][64] documentation.
 
 ## Step 1: Enable Firebase
 
@@ -138,6 +139,7 @@ See Android's documentation on ["Deep Linking" to In-App Resources][26]
 [26]: https://developer.android.com/training/app-links/deep-linking
 [58]: https://console.firebase.google.com/
 [59]: {% image_buster /assets/img_archive/finding_firebase_server_key.png %} "FirebaseServerKey"
-[61]: {{site.baseurl}}/developer_guide/platform_integration_guides/unity/Advanced_Use_Cases/advanced_use_cases
+[61]: {{site.baseurl}}/developer_guide/platform_integration_guides/unity/advanced_use_cases
 [62]: {% image_buster /assets/img/unity/android/unity_android_push_settings_config.png %} "Android Push Settings"
 [63]: {% image_buster /assets/img/unity/android/unity_android_full_push_listener.png %} "Android Full Listener Example"
+[64]: {{site.baseurl}}/developer_guide/platform_integration_guides/unity/android/adm_push_notifications/
