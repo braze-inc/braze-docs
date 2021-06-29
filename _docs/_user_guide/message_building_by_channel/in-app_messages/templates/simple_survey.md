@@ -105,10 +105,44 @@ Check out [Reporting & Analytics][4] for a breakdown of your campaign metrics.
 
 ### Currents {#currents}
 
-Selected choices will automatically flow through to Currents, under the [__In-App Message Click Events__](https://www.braze.com/docs/user_guide/data_and_analytics/braze_currents/event_glossary/message_engagement_events/#api_fzzdoylmrtwe) `button_id` field. Each choice will be sent with its universally unique identifier (UUID).
+Selected choices will automatically flow through to Currents, under the [__In-App Message Click Events__][6] `button_id` field. Each choice will be sent with its universally unique identifier (UUID).
+
+## Use Cases
+
+### User Satisfaction
+
+**Goal:** Measure customer satisfaction and send win-back campaigns to users who left low scores.
+
+Here we're using single-choice selection, with choices ranging from "Very Dissatisfied" to "Very Satisfied". Each choice has the custom attribute "customer_satisfaction" set to a number from 1 to 5.
+
+![User Satisfaction][7]
+
+### Identify Customer Goals
+
+**Goal:** Identify top reasons why users visit your app.
+
+![Identify Customer Goals][8]
+
+### Improve Conversion Rates
+
+**Goal:** Understand why customers aren’t upgrading or purchasing.
+
+![Improve Conversion Rates][9]
+
+### Favorite Features
+
+**Goal:** Understand which features customers enjoy using.
+
+![Favorite Features][10]
 
 [1]: {{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/create/
 [2]: {{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_attributes/#custom-attribute-data-types
 [3]: {{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/user_profile_lifecycle/
 [4]: {{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/reporting/
 [5]: {{site.baseurl}}/user_guide/administrative/app_settings/manage_app_group/custom_event_and_attribute_management/
+[6]: {{site.baseurl}}/user_guide/data_and_analytics/braze_currents/event_glossary/message_engagement_events/#api_fzzdoylmrtwe
+
+[7]: {% image_buster /assets/img_archive/simple_survey_use_case_1.png %}
+[8]: {% image_buster /assets/img_archive/simple_survey_use_case_2.png %}
+[9]: {% image_buster /assets/img_archive/simple_survey_use_case_3.png %}
+[10]: {% image_buster /assets/img_archive/simple_survey_use_case_4.png %}
