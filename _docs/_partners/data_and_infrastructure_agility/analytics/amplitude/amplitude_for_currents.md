@@ -62,6 +62,10 @@ Currents connects to Amplitude's HTTP API, which has a [Rate Limit](https://ampl
 
 Devices should not report more than 60 events/second under normal circumstances, and this event pattern should only occur due to a misconfigured integration. To avoid this type of delay, ensure that your SDK integration is reporting events at a normal rate as specified in our SDK integration instructions.
 
+## Amplitude User Profile API Endpoints
+
+To check out some of the common Amplitude API endpoints, view our dedicated [Amplitude API documentation]({{site.baseurl}}/partners/data_and_infrastructure_agility/analytics/amplitude/amplitude_user_profile_api/).
+
 ## Customer Behavior Events
 
 ### Custom Events
