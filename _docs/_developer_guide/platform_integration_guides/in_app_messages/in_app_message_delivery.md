@@ -5,3 +5,7 @@ description: ""
 ---
 
 # In-App Message Delivery
+
+> Combine Android, iOS, Web, and FireOS. 
+
+> Android and FireOS have extra steps for Server-Side Event Triggering.
