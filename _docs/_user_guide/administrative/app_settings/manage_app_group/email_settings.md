@@ -25,29 +25,31 @@ This feature allows you to:
 
 - Set up multiple sending and reply-to email addresses
 - Set a default sending and reply-to address
-- Exclude reply-to option and send replies to the "From" address
+- Exclude the reply-to option and send replies to the "From" address
 
-When setting your "From" addresses, make sure your "From" email domain matches your sending domain (i.e. marketing.yourdomain.com). Failure to do this may result in SPF and DKIM misalignment. All reply-to emails can be set to your root domain.
+When setting your "From" addresses, make sure your "From" email domain matches your sending domain (i.e., marketing.yourdomain.com). Failure to do this may result in SPF and DKIM misalignment. All reply-to emails can be set to your root domain.
 
 ### BCC Addresses
 
-The **BCC Address** settings allow you to add and manage BCC addresses that can be appended to outbound email messages sent from Braze. Appending a BCC address to a email message will send an identical copy of the message your user receives to your BCC inbox. This is a useful tool to retain copies of messages you sent your users for compliance requirements or customer support issues.
+The **BCC Address** settings allow you to add and manage BCC addresses that can be appended to outbound email messages sent from Braze. Appending a BCC address to an email message will send an identical copy of the message your user receives to your BCC inbox. This is a useful tool to retain copies of messages you sent your users for compliance requirements or customer support issues.
 
-{% alert important %} Appending a BCC address to your Campaign or Canvas step will result in your billable emails for the Campaign or Canvas step being doubled as Braze sends one message to your user, and one to your BCC address. Please contact your Customer Success Manager to enable this feature. {% endalert %}
+{% alert important %} 
+Appending a BCC address to your campaign or Canvas step will result in your billable emails for the campaign or Canvas step being doubled as Braze sends one message to your user and one to your BCC address. Please contact your Customer Success Manager to enable this feature. 
+{% endalert %}
 
 ![BCC Address][11]
 
 Once you add an address, the address will be made available to select when composing an email in either Campaigns or Canvas steps. Select **Make Default** next to an address to set this address to be selected by default when launching a new email Campaign or Canvas step. If you'd like to override this at the message level, you can select **No BCC** when setting up your message.
 
-If you require that all email messages sent from Braze have a BCC address included, you can check **Require a BCC address for all your email campaigns**. This will require you select a default address which will be automatically selected on new email Campaigns or Canvas steps. The default address will also be automatically added to all messages triggered through our REST API. 
+If you require that all email messages sent from Braze have a BCC address included, you can check **Require a BCC address for all your email campaigns**. This will require you to select a default address which will be automatically selected on new email Campaigns or Canvas steps. The default address will also be automatically added to all messages triggered through our REST API. 
 
-There is no need to change existing API request to include the address. Checking the box in the Braze dashboard to require BCC will set the address at the time of send.  
+There is no need to change the existing API request to include the address. Checking the box in the Braze dashboard to require BCC will set the address at the time of sending.  
 
 ![Require BCC][12]
 
 ### Custom Footer
 
-For commercial emails, the [CAN-SPAM Act][5] requires that all commercial emails include an unsubscribe option. With the custom footer settings, you are able to remain CAN-SPAM compliant, while also customizing your email opt-out footer. Braze will append this footer to all emails sent as part of Campaigns for this App Group.
+For commercial emails, the [CAN-SPAM Act][5] requires that all commercial emails include an unsubscribe option. With the custom footer settings, you are able to remain CAN-SPAM compliant while also customizing your email opt-out footer. In order to remain compliant, you must add your custom footer to all emails sent as part of campaigns for this app group. To read more about custom footer Liquid templating, check out our [documentation]({{site.baseurl}}/user_guide/message_building_by_channel/email/managing_user_subscriptions/#changing-email-subscriptions).
 
 ![Custom Footer][0]
 
@@ -86,10 +88,31 @@ Learn more about best practices for email list management [here][7].
 
 ## Email Open Tracking Pixel
 
-The email opening tracking pixel is an invisible 1px by 1px image that automatically gets inserted into your email HTML. This pixel helps Braze detect whether the end users have opened your email. Email open information can be very useful, helping our clients determine effective marketing strategies understanding and assess the corresponding open rates.
+The email opening tracking pixel is an invisible 1px by 1px image that automatically gets inserted into your email HTML. This pixel helps Braze detect whether the end-users have opened your email. Email open information can be very useful, helping users determine effective marketing strategies by understanding the corresponding open rates.
 
-For more information regarding the email open tracking pixel, check out our short [LAB course][6].
+### Placing the Tracking Pixel
 
+Braze's default behavior is to append the tracking pixel to the bottom of your email. For the vast majority of users, this is the ideal place to put the pixel. While the pixel is already styled to cause as few visual changes as possible, any unintentional visual changes would be the least visible at the bottom of an email. This is also the default for email providers such as SendGrid and SparkPost.
+
+However, a small subset of companies may prefer that the pixel get templated to a different location. One advantage of not placing the tracking pixel at the bottom is avoiding cases where it gets cut off by clients (e.g., Gmail) that truncate emails after a certain amount of kilobytes.
+
+### Changing Location of Tracking Pixel
+
+Braze currently supports overriding the ESP's default open tracking pixel location (the last tag in the <body> of an email) to move it to the first tag in the <body>.
+  
+![open_pixel][13]
+
+To change the location:
+1. Go to __Manage App Group__, then __Email Settings__ in your Braze account.
+2. Click the checkbox under __Custom Open Tracking Pixel Settings__. 
+3. Press __Save__.
+
+Once saved, Braze will send special instructions to the ESP in order to place the open tracking pixel at the top of all HTML emails.
+  
+{% alert important %} 
+SSL enablement will wrap the URL of the tracking pixel with HTTPS instead of HTTP - if your SSL is misconfigured, it may affect the efficacy of the tracking pixel. 
+{% endalert %}
+  
 ## Toggle-Capable Features
 
 ![switch][2]{: style="float:right;max-width:30%;margin-left:15px;"}
@@ -132,3 +155,4 @@ For more information, check out our CSS Inlining [Documentation][10]
 [10]: {{site.baseurl}}/user_guide/message_building_by_channel/email/css_inline/
 [11]: {% image_buster /assets/img/email_settings/bcc_address.png %}
 [12]: {% image_buster /assets/img/email_settings/require_bcc.png %}
+[13]: {% image_buster /assets/open_pixel.png %}
