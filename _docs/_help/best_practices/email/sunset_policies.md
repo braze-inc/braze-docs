@@ -5,6 +5,7 @@ page_order: 8
 page_type: reference
 description: "This article covers best practices surrounding sunset policies—understanding situations when it's better to discontinue messages to disengaged users."
 channel: email
+no_index: true
 ---
 
 # Sunset Policies

@@ -5,6 +5,7 @@ page_order: 1
 page_type: reference
 description: "This article covers best practices for creating detailed push preferences for your users."
 channel: push
+no_index: true
 ---
 
 # Detailed Push Preferences

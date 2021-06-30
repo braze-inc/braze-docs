@@ -8,6 +8,7 @@ platform: iOS
 channel: 
 - push
 - in-app messages
+no_index: true
 ---
 # Utilizing Badge Count
 

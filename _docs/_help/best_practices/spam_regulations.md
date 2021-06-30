@@ -8,6 +8,7 @@ channel:
 - email
 - push
 - SMS
+no_index: true
 ---
 # Spam Regulations
 
