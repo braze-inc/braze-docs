@@ -282,6 +282,7 @@ validurls['/docs/partners/channel_extensions/'] = '/docs/partners/home/';
 validurls['/docs/partners/data_augmentation/'] = '/docs/partners/home/';
 validurls['/docs/partners/insights/'] = '/docs/partners/home/';
 validurls['/docs/partners/advertising_technologies/social/canvas_steps/google_audience_sync/'] = '/docs/partners/canvas_steps/google_audience_sync/';
+validurls['/docs/partners/data_and_infrastructure_agility/analytics/amplitude_for_currents/'] = '/docs/partners/data_and_infrastructure_agility/analytics/amplitude/amplitude_for_currents/';
 
 validurls['/docs/help/release_notes/most_recent/'] = '/docs/help/release_notes/#most-recent/';
 validurls['/docs/help/best_practices/email/ip_warming/'] = '/docs/user_guide/onboarding_with_braze/email_setup/ip_warming/';
