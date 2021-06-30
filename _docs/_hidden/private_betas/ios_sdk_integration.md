@@ -6,31 +6,36 @@ hidden: true
 
 # Braze iOS SDK Integration Guide
 
-> This iOS integration guide takes you on a step-by-step journey on setup best practices when first integrating the iOS SDK and its core components into your application. This guide will help you build a `BrazeManager.swift` helper file that will decouple any dependencies on the Braze iOS SDK from the rest of your production code.
+> This iOS integration guide takes you on a step-by-step journey on setup best practices when first integrating the iOS SDK and its core components into your application. This guide will help you build a `BrazeManager.swift` helper file that will decouple any dependencies on the Braze iOS SDK from the rest of your production code which will result in one `import AppboyUI` in your entire application. This approach limits issues that arise from excessive SDK imports, making it easier to track, debug, and alter code.
 
-{% alert note %}
-Before building out your `BrazeManager.swift` helper file, make sure you have integrated the Braze iOS SDK. This integration guide is compatible with the following [CocoaPods integration]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/initial_sdk_setup/cocoapods/). 
-{% endalert %}
+## Integration Overview
 
-## BrazeManager.swift
+The following steps involve creating a `BrazeManager` helper file that your production code calls into. This helper file will deal with all Braze-related dependencies by adding various extensions for the following integration topics listed below. Each topic will include horizontal tab steps, and code snippets in both Swift and Objective-C. Please note that the Content Card and in-app message steps are not required for integration if you do not plan to utilize these channels in your app.
 
-All Braze-related dependencies should be handled in the `BrazeManager.swift` file your existing production code calls into. The `BrazeManager.swift` file demonstrates how to decouple any dependencies on the Braze iOS SDK from the rest of your production code. The overall objective is to have only one `import Appboy-iOS-SDK` in your entire application.
+- [Create BrazeManager.swift](#create-brazemanagerswift)
+- [Push Notifications](#push-notifications)
+- [Access User Varibales and Methods](#access-user-variables-and-methods)
+- [Log Analytics](#log-analytics)
+- [In-App Messages](#in-app-messages) (Optional)
+- [Content Cards](#content-cards) (Optional)
+- [Next Steps](#next-steps)
 
 ### Create BrazeManager.Swift
+
 {% tabs local %}
 {% tab Step 1: Create BrazeManager.swift %}
 
 ##### Create BrazeManager.swift
-To build out your `BrazeManager.swift` file, create a new Swift file named _BrazeManager_ to add to your project at your desired location. Next, Replace `import Foundation` with `import Appboy-iOS-SDK` and then create a `BrazeManager` class that will be used to host all Braze-related methods and variables. 
+To build out your `BrazeManager.swift` file, create a new Swift file named _BrazeManager_ to add to your project at your desired location. Next, Replace `import Foundation` with `import AppboyUI` and then create a `BrazeManager` class that will be used to host all Braze-related methods and variables. 
 
 {% alert note %}
 - `BrazeManager` is an `NSObject` class and not a struct, so it can conform to ABK delegates such as the `ABKInAppMessageUIDelegate`.
-- The `Brazemanager` object is a singleton by design to ensure that only one instance of this class will be used. This is done to provide a unified point of access to the object.
+- The `Brazemanager` is a singleton class by design to ensure that only one instance of this class will be used. This is done to provide a unified point of access to the object.
 {% endalert %} 
 
 1. Add a static variable named _shared_ that initializes the `BrazeManager` class. This is guaranteed to be lazily initiated only once.
-2. Navigate back to your app group in the Braze dashboard, and copy the __API Key__ value. Next, add a private constant variable named _apikey_ and set it as the API key value from your app group in the Braze dashboard.
-3. Add a private computed variable named _appboyOptions_, which will store configuration values for the SDK. It will be empty for now. The `apikey` must be a String object, and the _appboyOptions_ can be of any type.
+2. Next, add a private constant variable named _apiKey_ and set it as the API key value from your app group in the Braze dashboard.
+3. Add a private computed variable named _appboyOptions_, which will store configuration values for the SDK. It will be empty for now.
 
 {% subtabs global %}
 {% subtab Swift %}
@@ -59,7 +64,7 @@ class BrazeManager: NSObject {
 
 ##### Initialize SDK from BrazeManager.swift
 
-Add the `didFinishLaunching...` method from the `AppDelegate.swift` file sans return value in your `BrazeManager.swift` file. By creating a similar method in the `BrazeManager.swift` file, there will not be an `import Appboy-iOS-SDK` statement in your `AppDelegate.swift` file. 
+Add the `didFinishLaunching...` method from the `AppDelegate.swift` file sans return value in your `BrazeManager.swift` file. By creating a similar method in the `BrazeManager.swift` file, there will not be an `import AppboyUI` statement in your `AppDelegate.swift` file. 
 
 Next, initialize the SDK using your newly declared `apiKey` and `appboyOptions` variables; this should be done in the main thread.
 
@@ -78,7 +83,7 @@ func application(_ application: UIapplication, didFinishLaunchingWithOptions lau
 
 ##### Handle Appboy Initialization in the AppDelegate
 
-Next, navigate back to the `AppDelegate.swift` file and add the following code snippet in the AppDelegate's `didFinishLaunching...` method to handle the Appboy initialization from the `BrazeManager.swift` helper file. Remember, there is no need to add an `import Appboy-iOS-SDK` statement in the `AppDelegate.swift`.
+Next, navigate back to the `AppDelegate.swift` file and add the following code snippet in the AppDelegate's `didFinishLaunching...` method to handle the Appboy initialization from the `BrazeManager.swift` helper file. Remember, there is no need to add an `import AppboyUI` statement in the `AppDelegate.swift`.
 
 {% subtabs global %}
 {% subtab Swift %}
@@ -168,9 +173,9 @@ Next, you must forward the system push notifications methods from `AppDelegate.s
 
 ###### Step 1: Create Extension for Push Notificiation Code
 
-This step is optional, but creating an extension for your push notification code in your `BrazeManager.swift` file reads in a more organized manner as to what purpose is being served in the helper file, like so:
+Create an extension for your push notification code in your `BrazeManager.swift` file so it reads in a more organized manner as to what purpose is being served in the helper file, like so:
 
-1. Following the pattern of not including an `import Appboy-iOS-SDK` statement in your `AppDelegate`, we will handle the push notifications methods in the `BrazeManager.swift` file. User's device tokens will need to be passed to Braze from the `didRegisterForRemote...` method. Next, add the same method from the `AppDelegate` in your `BrazeManager` class.
+1. Following the pattern of not including an `import AppboyUI` statement in your `AppDelegate`, we will handle the push notifications methods in the `BrazeManager.swift` file. User's device tokens will need to be passed to Braze from the `didRegisterForRemote...` method. Next, add the same method from the `AppDelegate` in your `BrazeManager` class.
 2. Add the following line inside the method to register the device token to Braze. This is necessary for Braze to associate the token with the current device. 
 
 {% subtabs global %}
@@ -239,10 +244,10 @@ Proceed to Compile your code and run your application. <br><br>Try sending yours
 
 ### Access User Variables and Methods
 
-Next, you will want easy access to the `ABKUser` variables and methods. This step is optional, but creating an extension for your user code in your `Brazemanager.swift` file reads in a more organized manner as to what purpose is being served in the helper file, like so:
+Next, you will want easy access to the `ABKUser` variables and methods. Creating an extension for your user code in your `Brazemanager.swift` file so it reads in a more organized manner as to what purpose is being served in the helper file, like so:
 
-1. An `ABKUser` object represents a known or anonymous user in your iOS application. Add a computed variable to retrieve the `ABKUser`; this variable will be reused to retrieve variables about the user. The `ABKUser` object itself is _&#95;Nonnull_, but the computed value is optional due to the nullability of the `sharedInstance()`.
-2. Query the user variable to easily access the `userId`. Among the other variables, the `ABKUser` object is responsible for (firstName, lastName, phone, homeCity, etc.)
+1. An `ABKUser` object represents a known or anonymous user in your iOS application. Add a computed variable to retrieve the `ABKUser`; this variable will be reused to retrieve variables about the user.
+2. Query the user variable to easily access the `userId`. Among the other variables, the `ABKUser` object is responsible for (`firstName`, `lastName`, `phone`, `homeCity`, etc.)
 3. Set the user by calling `changeUser()` with a corresponding `userId`.
 
 {% tabs local %}
@@ -279,14 +284,14 @@ Proceed to compile your code and run your application.<br><br>Try identifying us
 
 ### Log Analytics
 
-Next, you must enable your production code to log crucial analytics metrics to Braze without the need for excessive `import Appboy-iOS-SDK` statements. Without an `import Appboy-iOS-SDK` statement, the production code should call into the `BrazeManager` to log all analytics. 
+Next, you must enable your production code to log crucial analytics metrics to Braze without the need for excessive `import AppboyUI` statements. The production code should call into the `BrazeManager` to log all analytics. 
 
 {% tabs local %}
 {% tab Step 1: Create Extension %}
 
 ##### Create Extension for Analytics Code
 
-This step is optional, but creating an extension for your analytics code in your `Brazemanager.swift` file reads in a more organized manner as to what purpose is being served in the helper file, like so:
+Create an extension for your analytics code in your `Brazemanager.swift` file so it reads in a more organized manner as to what purpose is being served in the helper file, like so:
 
 {% subtabs global %}
 {% subtab Swift %}
@@ -485,11 +490,11 @@ extension AppboyManager: ABKInAppMessageUIDelegate{
 Proceed to compile your code and run your application. <br><br>Try sending yourself an in-app message. <br><br>In the `Brazemanager.swift` file, set a breakpoint at the entry of the example _ABKInAppMessageUIDelegate_ method. Send yourself an in-app message and confirm the breakpoint is hit before advancing any further. 
 {% endalert %}
 
-### Content Cards Extension
+### Content Cards
 
-Next, enable your production code to display the Content Cards view controller without the need for unnecessary `import Appboy-iOS-SDK` statements. 
+Next, enable your production code to display the Content Cards view controller without the need for unnecessary `import AppboyUI` statements. 
 
-This step is optional, but creating an extension for your Content Cards code in your `BrazeManager.swift` file reads in a more organized manner as to what purpose is being served in the helper file, like so:
+Create an extension for your Content Cards code in your `BrazeManager.swift` file, so it reads in a more organized manner as to what purpose is being served in the helper file, like so:
 
 1. Display the `ABKContentCardsTableViewController`. An optional `navigationController` is the only parameter needed to present or push Braze's view controller.
 2. Initialize an `ABKContentCardsTableViewController` object and optionally change the title. You must also add the initialized view controller to the navigation stack.
