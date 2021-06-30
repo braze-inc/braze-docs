@@ -6,14 +6,15 @@ description: ""
 
 # In-App Message Templates
 
-## iOS Templates
-
-> This is currently only specific to iOS (only includes one template) but could be expanded on in the future.
-
-
-# In-App Message Templates
-
 ## Custom App Store Review Prompt
+
+{% tabs %}
+{% tab Android & FireOS %}
+
+Due to the limitations and restrictions set by Google, custom Google Play review prompts are not currently supported by Braze. While some users have been able to integrate these prompts successfully, others have shown low success rates due to [Google Play quotas](https://developer.android.com/guide/playcore/in-app-review#quotas). Please integrate at your own risk. Documentation on Google Play in-app review prompts can be found [here](https://developer.android.com/guide/playcore/in-app-review).
+
+{% endtab %}
+{% tab iOS %}
 
 {% alert note %}
 Once you implement this prompt, Braze stops automatically tracking impressions and you must log analytics with the methods found [here]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/in-app_messaging/customization/#logging-impressions-and-clicks).
@@ -22,10 +23,10 @@ Once you implement this prompt, Braze stops automatically tracking impressions a
 
 Creating a campaign to ask users for an App Store review is a popular usage of in-app messages.
 
-Start by [setting the In-App Message delegate][30] in your app. Next, implement the following delegate method to disable the default App Store review message:
+Start by [setting the In-App Message delegate](#in-app-message-controller-delegate) in your app. Next, implement the following delegate method to disable the default App Store review message:
 
-{% tabs %}
-{% tab OBJECTIVE-C %}
+{% subtabs global %}
+{% subtab OBJECTIVE-C %}
 
 ```objc
 - (ABKInAppMessageDisplayChoice)beforeInAppMessageDisplayed:(ABKInAppMessage *)inAppMessage {
@@ -38,8 +39,8 @@ Start by [setting the In-App Message delegate][30] in your app. Next, implement 
 }
 ```
 
-{% endtab %}
-{% tab swift %}
+{% endsubtab %}
+{% subtab swift %}
 
 ```swift
 func before(inAppMessageDisplayed inAppMessage: ABKInAppMessage) -> ABKInAppMessageDisplayChoice {
@@ -52,13 +53,13 @@ func before(inAppMessageDisplayed inAppMessage: ABKInAppMessage) -> ABKInAppMess
 }
 ```
 
-{% endtab %}
-{% endtabs %}
+{% endsubtab %}
+{% endsubtabs %}
 
 In your deep link handling code, you can then add the following code to process the `{YOUR-APP-SCHEME}:appstore-review` deep link. Note that you will need to import `StoreKit` to use `SKStoreReviewController`:
 
-{% tabs %}
-{% tab OBJECTIVE-C %}
+{% subtabs global %}
+{% subtab OBJECTIVE-C %}
 
 ```objc
 - (BOOL)application:(UIApplication *)app openURL:(NSURL *)url options:(NSDictionary<UIApplicationOpenURLOptionsKey, id> *)options {
@@ -71,8 +72,8 @@ In your deep link handling code, you can then add the following code to process 
 }
 ```
 
-{% endtab %}
-{% tab swift %}
+{% endsubtab %}
+{% subtab swift %}
 
 ```swift
 func application(_ app: UIApplication, open url: URL, options: [UIApplicationOpenURLOptionsKey : Any] = [:]) -> Bool {
@@ -85,8 +86,8 @@ func application(_ app: UIApplication, open url: URL, options: [UIApplicationOpe
 }
 ```
 
-{% endtab %}
-{% endtabs %}
+{% endsubtab %}
+{% endsubtabs %}
 
 {% raw %}
 
@@ -103,4 +104,6 @@ Next, create an In-App Messaging campaign with the following:
   Users may turn off App Store review prompts. As a result, your custom review prompt should not promise that a native App Store review prompt will appear, or directly ask for a review.
 {% endalert %}
 
-[30]: #in-app-message-controller-delegate
+{% endtab %}
+{% endtabs %}
+
