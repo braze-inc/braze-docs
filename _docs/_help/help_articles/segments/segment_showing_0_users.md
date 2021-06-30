@@ -5,6 +5,7 @@ page_order: 0
 page_type: solution
 description: "This help article walks you through troubleshooting steps if zero users are showing in your segment, but you anticipate more."
 tool: Segments
+no_index: true
 ---
 # Segment Is Showing No Users
 

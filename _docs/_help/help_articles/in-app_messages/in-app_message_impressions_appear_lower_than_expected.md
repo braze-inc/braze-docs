@@ -5,6 +5,7 @@ page_order: 1
 page_type: solution
 description: "This help article covers actions you can take if your in-app message impressions are lower than you'd like them to be."
 channel: in-app messages
+no_index: true
 ---
 # In-App Message Impressions Appear Lower Than Expected
 

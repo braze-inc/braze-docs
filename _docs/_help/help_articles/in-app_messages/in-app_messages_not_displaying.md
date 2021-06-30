@@ -5,6 +5,7 @@ page_order: 2
 page_type: solution
 description: "This help article walks you through troubleshooting issues with in-app messages not displaying or rendering properly."
 channel: in-app messages
+no_index: true
 ---
 
 # In-App Messages Are Not Displaying
