@@ -2,7 +2,7 @@
 nav_title: "Simple Survey"
 page_order: 1.5
 page_type: reference
-hidden: true
+hidden: false
 description: "This reference article covers how to collect user attributes, insights, and preferences to power your campaign strategy using the new in-app message surveys."
 channel:
   - in-app messages
@@ -59,15 +59,15 @@ Select **Log attributes upon submission** to collect attributes based on the use
 
 ![Custom Attributes]({% image_buster /assets/img/iam/collect-attributes.png %}){: style="max-width:70%"}
 
-To add a Custom Attribute to each choice, select an existing attribute name from the dropdown, and the value to set when this choice is submitted. You can create a new Custom Attribute in your [Settings Page][5].
+To add a custom attribute to each choice, select an existing attribute name from the dropdown, and the value to set when this choice is submitted. You can create a new custom attribute in your [Settings Page][5].
 
-For example, in a notification preferences survey, you might make each choice a boolean (true/false) attribute to allow users to select which topics they're interested in. If a user checks the "Promotions" choice, that will update their [User Profile][3] with the Custom Attribute `Promotions Topic` set to `true`. If they leave the choice unchecked, that same attribute will remain unchanged.
+For example, in a notification preferences survey, you might make each choice a boolean (true/false) attribute to allow users to select which topics they're interested in. If a user checks the "Promotions" choice, that will update their [User Profile][3] with the custom attribute `Promotions Topic` set to `true`. If they leave the choice unchecked, that same attribute will remain unchanged.
 
 ![Choice Custom Attributes]({% image_buster /assets/img/iam/iam-survey3.png %}){: style="max-width:70%"}
 
 You can then create a segment for users with `Promotions Topic = true` to make sure that only users interested in your promotions will receive the relevant campaigns.
 
-{% alert important %} When Custom Attribute collection is enabled, choices that share the same Custom Attribute Name will be combined into an Array.{% endalert %}
+{% alert important %} When custom attribute collection is enabled, choices that share the same custom attribute name will be combined into an array.{% endalert %}
 
 ### Step 4: Choose Submission Behavior
 
@@ -105,10 +105,56 @@ Check out [Reporting & Analytics][4] for a breakdown of your campaign metrics.
 
 ### Currents {#currents}
 
-Selected choices will automatically flow through to Currents, under the [__In-App Message Click Events__](https://www.braze.com/docs/user_guide/data_and_analytics/braze_currents/event_glossary/message_engagement_events/#api_fzzdoylmrtwe) `button_id` field. Each choice will be sent with its universally unique identifier (UUID).
+Selected choices will automatically flow through to Currents, under the [__In-App Message Click Events__][6] `button_id` field. Each choice will be sent with its universally unique identifier (UUID).
+
+## Use Cases
+
+### User Satisfaction
+
+**Goal:** Measure customer satisfaction and send win-back campaigns to users who left low scores.
+
+Here we're using single-choice selection, with choices ranging from "Very Dissatisfied" to "Very Satisfied". Each choice has the custom attribute `customer_satisfaction` set to a number from 1 to 5, with 1 being the least satisfied and 5 being the most satisfied. 
+
+After you've launched your survey, you can then target your win-back campaigns to users who reported being "Very Dissatisfied" or "Dissatisfied", which are users with `customer_satisfaction` set to 1 or 2.
+
+![User Satisfaction][7]
+
+### Identify Customer Goals
+
+**Goal:** Identify top reasons why users visit your app.
+
+Here we're using single-choice selection, with each choice being a common reason a user might be visiting your app. Each choice has the custom attribute `product_goal` set to the use case topic. 
+
+For example, if the user selects "Upgrading my account", that will set `product_goal = upgrade` on the user's profile.
+
+![Identify Customer Goals][8]
+
+### Improve Conversion Rates
+
+**Goal:** Understand why customers aren’t upgrading or purchasing.
+
+Here we're using single-choice selection, with each choice being a common reason why a user might not upgrade to a Premium account. Each choice has the custom attribute `upgrade_reason` set to the user's selection. 
+
+For example, if the user selects "Too Expensive", that will set `upgrade_reason = expensive` on the user's profile. You can then target these users for promotional campaigns, like discounts or free trials.
+
+![Improve Conversion Rates][9]
+
+### Favorite Features
+
+**Goal:** Understand which features customers enjoy using.
+
+Here we're using multiple-choice selection, with each choice being an app feature. Each choice has the custom attribute `favorite_features` set to the user's selection. Because this use case involves multiple choice, once the user has completed the survey, their profile will be updated with the `favorite_features` attribute set to an array of all selected options.
+
+![Favorite Features][10]
 
 [1]: {{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/create/
 [2]: {{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_attributes/#custom-attribute-data-types
 [3]: {{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/user_profile_lifecycle/
 [4]: {{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/reporting/
 [5]: {{site.baseurl}}/user_guide/administrative/app_settings/manage_app_group/custom_event_and_attribute_management/
+[6]: {{site.baseurl}}/user_guide/data_and_analytics/braze_currents/event_glossary/message_engagement_events/#api_fzzdoylmrtwe
+
+[7]: {% image_buster /assets/img_archive/simple_survey_use_case_1.png %}
+[8]: {% image_buster /assets/img_archive/simple_survey_use_case_2.png %}
+[9]: {% image_buster /assets/img_archive/simple_survey_use_case_3.png %}
+[10]: {% image_buster /assets/img_archive/simple_survey_use_case_4.png %}
