@@ -4,6 +4,7 @@ page_order: 9
 page_type: reference
 description: "This reference page covers technical guidelines and tips when dealing with email validation and HTML tags"
 channel: email
+no_index: true
 ---
 
 # Technical Guidelines & Notes

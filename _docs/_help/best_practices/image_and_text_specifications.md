@@ -5,6 +5,7 @@ page_order: 7
 page_type: reference
 description: "This article includes tips and tricks for ensuring your images and text are rendered just right."
 tool: Media
+no_index: true
 ---
 # Image and Text Specifications
 

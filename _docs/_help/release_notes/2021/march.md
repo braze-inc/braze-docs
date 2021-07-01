@@ -1,7 +1,7 @@
 ---
 nav_title: March
 page_order: 10
-
+no_index: true
 page_type: update
 description: "This article contains release notes for March 2021."
 ---

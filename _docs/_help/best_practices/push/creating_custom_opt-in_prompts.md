@@ -5,6 +5,7 @@ page_order: 2
 page_type: reference
 description: "This article covers best practices for creating custom opt-in prompts that clearly list and demonstrate the benefits of push messaging."
 channel: push
+no_index: true
 ---
 
 # Creating Custom Opt-In Prompts

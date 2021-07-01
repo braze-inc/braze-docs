@@ -5,6 +5,7 @@ page_order: 5
 page_type: reference
 description: "This article describes message and image formats for iOS, Android, and Windows push notifications."
 channel: push
+no_index: true
 ---
 # Message Format
 

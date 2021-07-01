@@ -5,6 +5,7 @@ page_order: 4
 page_type: reference
 description: "This article describes what it means to set a conversion event for a push campaign to 'opens app'."
 channel: push
+no_index: true
 ---
 
 # Conversion Tracking

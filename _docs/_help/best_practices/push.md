@@ -8,6 +8,7 @@ guide_top_text: "Being able to communicate with your users whether or not theyâ€
 page_type: landing
 description: "This landing page is home to best practices and use cases to make sure your push messages inspire engagement rather than annoyance."
 channel: push
+no_index: true
 
 guide_featured_title: "Popular Articles"
 guide_featured_list:
