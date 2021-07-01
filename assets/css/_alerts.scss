@@ -54,12 +54,12 @@ div.alert {
   }
   &.alert-checkpoint{
     b {
-      color: $yellow-gold;
+      color: $red-rose;
     }
-    border-color: $yellow-beige;
-    background-image: url(#{$base_url}/assets/img/message-update.png) ;
+    border-color: $pink-apricot;
+    background-image: url(#{$base_url}/assets/img/message-stop.png) ;
     div.alert-msg {
-      background-color: $yellow-cream;
+      background-color: $pink-cinderella;
     }
   }
   &.alert-important{
