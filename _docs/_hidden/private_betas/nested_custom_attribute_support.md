@@ -10,7 +10,7 @@ Nested custom attribute support is currently in beta. Please contact your Braze 
 
 # Nested Custom Attribute Support
 
-Nested custom attribute support allows you to send objects as a new data type for custom attributes. This nested data allows you to create segments using information from a custom attribute object, and personalize your API-triggered messages using a custom attribute object and Liquid.
+Nested custom attribute support allows you to send objects as a new data type for custom attributes. This nested data allows you to create segments using information from a custom attribute object, and personalize your messages using a custom attribute object and Liquid.
 
 Objects can contain existing [data types][1], such as:
 
@@ -24,7 +24,7 @@ Objects can contain existing [data types][1], such as:
 
 - Available on custom attributes sent via API only, the Braze SDKs are not yet supported.
 - Partners do not yet support nested custom attributes. Until this is supported, we recommend against using this feature with app groups that have partner integrations enabled.
-- Arrays do not currently support objects, coming soon. Looking for this feature? [Schedule a chat][4] with the product team.
+- Arrays of objects are not currently support, but they are coming soon. Looking for this feature? [Schedule a chat][4] with the product team.
 - Objects have a maximum size of 50KB.
 - Key names and string values have a size limit of 255 characters.
 
@@ -34,7 +34,7 @@ Objects can contain existing [data types][1], such as:
 
 {% tabs local %}
 {% tab Create %}
-Shown below is a `/users/track` example with a "Last Played Song" object. To capture the properties of the song, we'll send an API request that lists "last_played_song" as an object, and array of the nested properties of the song.
+Shown below is a `/users/track` example with a "Last Played Song" object. To capture the properties of the song, we'll send an API request that lists "last_played_song" as an object, along with a set of object properties.
 
 ```
 {
@@ -84,7 +84,7 @@ After the above request is received, the custom attribute object will now look l
 ```
 
 {% alert warning %}
-You must set `merge_objects` to true, or your objects will be overwritten. `_merge_objects` is false by default.
+You must set `_merge_objects` to true, or your objects will be overwritten. `_merge_objects` is false by default.
 {% endalert %}
 
 {% endtab %}
@@ -107,28 +107,29 @@ To delete a custom attribute object, send a POST to `users/track` with the custo
 
 ### Liquid Templating
 
-The Liquid templating example below shows how to reference the custom attribute object properties saved from the above API request and use them in your API-triggered Liquid messaging. 
+The Liquid templating example below shows how to reference the custom attribute object properties saved from the above API request and use them in your messaging.
 
-Use the `custom_attributes` personalization tag and dot notation to access properties on an object. Specify the name of the object, followed by a dot (period), followed by the property name.
+Use the `custom_attribute` personalization tag and dot notation to access properties on an object. Specify the name of the object, followed by a dot (period), followed by the property name.
 
 {% raw %}
-`{{custom_attribute.${last_played_song}.genre}}` - "Jazz"
-<br> `{{custom_attribute.${last_played_song}.artist_name}}` - "Miles Davis"
+`{{custom_attribute.${most_played_song}.artist_name}}` — "Miles Davis"
+<br> `{{custom_attribute.${most_played_song}.song_name}}` — "Solea"
+<br> `{{custom_attribute.${most_played_song}.play_analytics.count}}` — "50"
 {% endraw %}
 
-![Last Played Push Notification Example][2]
+![Last Played Push Notification Example][5]
 
 ### Segmentation
 
 You can build Segments based on nested custom attributes to further target your users. To do so, filter your Segment based on the custom attribute object, then specify the property name and associated value you want to segment on.
 
-![Last Played Song Segment][3]
+![Last Played Song Segment][6]
 
 > To do: Call out the comparator.
 
 ## Data Points
 
-Any key that is updated consumes a data point, including the parent custom attribute object. For example, this object initialized in the user profile counts as five (5) data points:
+Any key that is updated consumes a data point, including the initialization of a parent custom attribute object. For example, this object initialized in the user profile counts as five (5) data points:
 
 ```
 {
@@ -154,4 +155,6 @@ Updating a custom attribute object to `null` also consumes a data point.
 [1]: {{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_attributes/#custom-attribute-data-types
 [2]: {% image_buster /assets/img_archive/nca_liquid.png %}
 [3]: {% image_buster /assets/img_archive/nca_segmentation.png %}
-[4]: https://calendly.com/john-at-braze/meet-with-braze-data-ingestion 
+[4]: https://calendly.com/d/w9y6-qq9c/feedback-on-nested-custom-attributes?month=2021-07
+[5]: {% image_buster /assets/img_archive/nca_liquid_2.png %} 
+[6]: {% image_buster /assets/img_archive/nca_segmentation_2.png %}
