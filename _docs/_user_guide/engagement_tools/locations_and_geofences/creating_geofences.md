@@ -59,6 +59,7 @@ The sample below represents the correct GeoJSON for specifying two geofences: on
     }, ...
   ]
 ```
+>  The "coordinates" value in the JSON needs to be formatted [Longitude, Latitude]
 
 >  The maximum geofence radius that may be uploaded is 100000 meters (100km/62mi).
 
