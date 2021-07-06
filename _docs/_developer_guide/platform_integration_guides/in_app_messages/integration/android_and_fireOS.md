@@ -1,6 +1,6 @@
 ---
-nav_title: Android and FireOS
-page_title: Android and FireOS In-App Messages Integration
+nav_title: Android & FireOS
+page_title: Android & FireOS In-App Messages Integration
 page_order: 0
 
 channel: in-app messages
@@ -10,7 +10,7 @@ platform:
 description: "This reference article covers how to integrate in-app messaging in your Android or FireOS application."
 ---
 
-# Android and FireOS In-App Messages Integration {#in-app-messaging-integration}
+# Android & FireOS In-App Messages Integration {#in-app-messaging-integration}
 
 ## Step 1: Braze In-App Message Manager Registration
 

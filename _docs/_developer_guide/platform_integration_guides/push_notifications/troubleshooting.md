@@ -4,7 +4,7 @@ page_order: 6
 description: "This article covers potential troubleshooting topics for your push implementation."
 ---
 
-# Troubleshooting
+# Troubleshooting Push Notifications
 
 This article covers potential troubleshooting topics for your push implementation.
 

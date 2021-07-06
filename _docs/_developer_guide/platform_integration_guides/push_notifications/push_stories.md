@@ -11,7 +11,7 @@ Push Stories is a new type of Push Notification introduced by Braze. It allows c
 Check out our user guide to learn more about using [Push Stories]({{site.baseurl}}/user_guide/message_building_by_channel/push/advanced_push_options/push_stories/).
 
 {% tabs %}
-{% tab Android and FireOS %}
+{% tab Android & FireOS %}
 
 No extra integration for Android Push Stories is required. It's built into Braze already!
 
