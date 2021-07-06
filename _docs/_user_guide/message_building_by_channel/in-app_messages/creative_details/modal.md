@@ -40,13 +40,13 @@ You should __always__ [preview and test your messages]({{site.baseurl}}/user_gui
 
 Braze supports using [Font Awesome v4.3.0](https://fontawesome.com/v4.7.0/cheatsheet/) for modal in-app message icons.
 
-[1a]: {% image_buster /assets/img/modal-spec.png %}
-[1b]: {% image_buster /assets/img/modal-large-viewport.png %}
-
-
 ## Larger Screens
 
 On a tablet or desktop browser, a modal in-app message will still sit in the center of the app screen as shown below.
 
-
 ![Modal Viewport][1b]{: style="max-width: 800px; border: none;"}
+
+[1a]: {% image_buster /assets/img/modal-spec.png %}
+[1b]: {% image_buster /assets/img/modal-large-viewport.png %}
+
+
