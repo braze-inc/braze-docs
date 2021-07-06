@@ -24,6 +24,7 @@ You can use these additional methods to build a custom Content Cards Feed within
 |`AppboyPlugin.getContentCardsFromServer(successCallback, errorCallback)`|Retrieves Content Cards from the Braze SDK. This will return the latest list of cards from the server.|
 |`AppboyPlugin.getContentCardsFromCache(successCallback, errorCallback)`|Retrieves Content Cards from the Braze SDK. This will return the latest list of cards from the cache.|
 |`AppboyPlugin.logContentCardsDisplayed()`|Logs a Content Content feed displayed event.|
+|`AppboyPlugin.logContentCardClicked(cardId)`|Logs a click for the given Content Card ID.|
 |`AppboyPlugin.logContentCardImpression(cardId)`|Logs an impression for the given Content Card ID.|
 |`AppboyPlugin.logContentCardDismissed(cardId)`|Logs a dismissal for the given Content Card ID.|
 {: .reset-td-br-1 .reset-td-br-2}

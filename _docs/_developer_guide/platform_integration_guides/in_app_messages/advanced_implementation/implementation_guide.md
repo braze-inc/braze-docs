@@ -1,5 +1,5 @@
 ---
-nav_title: iOS (optional)
+nav_title: iOS Advanced Implementation (Optional)
 page_title: iOS In-App Messages Integration (optional)
 page_order: 1
 

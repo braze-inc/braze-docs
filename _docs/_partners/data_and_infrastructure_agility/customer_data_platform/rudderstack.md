@@ -45,7 +45,7 @@ Learn more about RudderStack's connection modes and the benefits of each [here](
 
 ### Step 2.1a: Side-by-Side Integration (Device Mode)
 
-With this mode, you can send your events to braze using the Braze SDK set up on your website or mobile app.
+With this mode, you can send your events to Braze using the Braze SDK set up on your website or mobile app.
 
 {% tabs %}
   {% tab Android %}

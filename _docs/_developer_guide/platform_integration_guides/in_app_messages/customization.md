@@ -1,9 +1,6 @@
 ---
 nav_title: Customization
+config_only: true
+layout: blank_config
 page_order: 2
-description: ""
 ---
-
-# Customization
-
-> Combine Android, iOS, Web, and FireOS. Combine with tabs and subtabs for code snippets?

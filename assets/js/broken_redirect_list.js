@@ -329,6 +329,7 @@ validurls['/docs/hidden/private_betas/frequency_capping_tag/'] = '/docs/frequenc
 validurls['/docs/hidden/private_betas/audience_sync_facebook/'] = '/docs/audience_sync_facebook/';
 validurls['/docs/hidden/private_betas/blacklist/'] = '/docs/blacklist/';
 validurls['/docs/hidden/private_betas/fb_app_review/'] = '/docs/fb_app_review/';
+validurls['/docs/hidden/private_betas/nested_object_support/'] = '/docs/user_guide/data_and_analytics/custom_data/nested_object_support/';
 validurls['/docs/services_handbook_21/'] = '/docs/assets/download_file/Braze_Success_and_Support_Services_Handbook_21.pdf';
 validurls['/docs/services_handbook_22/'] = '/docs/assets/download_file/Braze_Success_and_Support_Services_Handbook_22.pdf';
 

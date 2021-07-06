@@ -15,7 +15,7 @@ valid_partner_list:
 - name: Adjust
   url: /docs/partners/message_orchestration/attribution/adjust/
 - name: AppsFlyer
-  url: /docs/partners/message_orchestration/attribution/appsflyer/
+  url: /docs/partners/message_orchestration/attribution/appflyer/
 - name: Branch
   url: /docs/partners/message_orchestration/attribution/branch/branch_for_deeplinking/
 - name: Kochava
