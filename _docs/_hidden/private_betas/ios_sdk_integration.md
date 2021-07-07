@@ -13,6 +13,7 @@ hidden: true
 The following steps help you build a `BrazeManager` helper file that your production code calls into. This helper file will deal with all Braze-related dependencies by adding various extensions for the following integration topics listed below. Each topic will include horizontal tab steps and code snippets in both Swift and Objective-C. Please note that the Content Card and in-app message steps are not required for integration if you do not plan to utilize these channels in your application.
 
 - [Create BrazeManager.swift](#create-brazemanagerswift)
+- [Initialize SDK]()
 - [Push Notifications](#push-notifications)
 - [Access User Variables and Methods](#access-user-variables-and-methods)
 - [Log Analytics](#log-analytics)
@@ -60,9 +61,15 @@ class BrazeManager: NSObject {
 {% endsubtab %}
 {% endsubtabs %}
 {% endtab %}
-{% tab Step 2: Initialize SDK %}
+{% endtabs %}
+
+### Initalize the SDK
+
+{% tabs %}
+{% tab Step 1: Initialize SDK from BrazeManager.swift %}
 
 ##### Initialize SDK from BrazeManager.swift
+Next, you must initialize the SDK. This guide assumes you have already [integrated the SDK]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/initial_sdk_setup/overview/) into your Xcode project. 
 
 Add the `didFinishLaunching...` method from the `AppDelegate.swift` file sans return value in your `BrazeManager.swift` file. By creating a similar method in the `BrazeManager.swift` file, there will not be an `import AppboyUI` statement in your `AppDelegate.swift` file. 
 
@@ -85,8 +92,10 @@ func application(_ application: UIapplication, didFinishLaunchingWithOptions lau
 {% endsubtab %}
 {% endsubtabs %}
 
-##### Handle Appboy Initialization in the AppDelegate
+{% endtab %}
+{% tab Step 2: Handle Appboy Initalization %}
 
+##### Handle Appboy Initialization in the AppDelegate.swift
 Next, navigate back to the `AppDelegate.swift` file and add the following code snippet in the AppDelegate's `didFinishLaunching...` method to handle the Appboy initialization from the `BrazeManager.swift` helper file. Remember, there is no need to add an `import AppboyUI` statement in the `AppDelegate.swift`.
 
 {% subtabs global %}
@@ -100,6 +109,7 @@ func application(_ application: UIApplication, didFinishLaunchingWithOptions lau
   BrazeManager.shared.application(application, didFinishLaunchingWithOptions: launchOptions)
 
   return true
+}
 ```
 {% endsubtab %}
 {% subtab Objective-C %}
@@ -127,7 +137,7 @@ Navigate to your existing app group in the Braze dashboard. Under __Push Notific
 
 ##### Register for Push Notifications
 
-Next, you must register for push notifications. This guide assumes you have [set up your push credentials correctly]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/push_notifications/integration/) in your Apple developer portal and Xcode project. 
+Next, register for push notifications. This guide assumes you have [set up your push credentials correctly]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/push_notifications/integration/) in your Apple developer portal and Xcode project. 
 
 The code for registering push notifications will be added in the `didFinishLaunching...` method in the `BrazeManager.swift` file. Your initialization code should end up looking like the following:
 
@@ -173,7 +183,7 @@ Observe you are being prompted for push notifications before advancing any furth
 
 ##### Forward Push Notification Methods
 
-Next, you must forward the system push notifications methods from `AppDelegate.swift` to `BrazeManager.swift` to be handled by the Braze iOS SDK.
+Next, forward the system push notifications methods from `AppDelegate.swift` to `BrazeManager.swift` to be handled by the Braze iOS SDK.
 
 ###### Step 1: Create Extension for Push Notificiation Code
 
