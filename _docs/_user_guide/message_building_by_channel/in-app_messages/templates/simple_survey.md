@@ -99,6 +99,8 @@ Once your campaign has launched, you can analyze results in real-time to see the
 Deleted survey choices will still appear in analytics, but will not be shown as a choice to new users.
 {% endalert %}
 
+For definitions of survey metrics, refer to the [Report Metrics Glossary][11] and filter by "In-App Message".
+
 ![Analytics]({% image_buster /assets/img/iam/iam-survey-analytics.png %}){: style="max-width:90%"}
 
 Check out [Reporting & Analytics][4] for a breakdown of your campaign metrics.
@@ -158,3 +160,5 @@ Here we're using multiple-choice selection, with each choice being an app featur
 [8]: {% image_buster /assets/img_archive/simple_survey_use_case_2.png %}
 [9]: {% image_buster /assets/img_archive/simple_survey_use_case_3.png %}
 [10]: {% image_buster /assets/img_archive/simple_survey_use_case_4.png %}
+
+[11]: {{site.baseurl}}/user_guide/data_and_analytics/report_metrics/

@@ -256,4 +256,24 @@ glossaries:
       - Web Push
       - iOS Push
       - Android Push
+  - name: Choices Submitted
+    description: Total number of choices selected when the user clicks the submit button on the survey question page of a <a href='/docs/user_guide/message_building_by_channel/in-app_messages/templates/simple_survey/' target='_blank'>Simple Survey</a>.
+    tags: 
+      - In-App Message
+  - name: Confirmation Page Button
+    description: Total clicks on the call to action button on the confirmation page of a <a href='/docs/user_guide/message_building_by_channel/in-app_messages/templates/simple_survey/' target='_blank'>Simple Survey</a>.
+    tags:
+      - In-App Message
+  - name: Confirmation Page Dismissals
+    description: Total clicks on the close (x) button on the confirmation page of a <a href='/docs/user_guide/message_building_by_channel/in-app_messages/templates/simple_survey/' target='_blank'>Simple Survey</a>.
+    tags:
+      - In-App Message
+  - name: Survey Page Dismissals
+    description: Total clicks on the close (x) button on the survey question page of a <a href='/docs/user_guide/message_building_by_channel/in-app_messages/templates/simple_survey/' target='_blank'>Simple Survey</a>.
+    tags:
+      - In-App Message
+  - name: Survey Submissions
+    description: Total clicks on the submit button of a <a href='/docs/user_guide/message_building_by_channel/in-app_messages/templates/simple_survey/' target='_blank'>Simple Survey</a>.
+    tags:
+      - In-App Message
 ---
