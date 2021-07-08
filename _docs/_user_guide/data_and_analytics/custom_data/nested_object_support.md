@@ -90,7 +90,7 @@ Templating in Liquid in a message triggered by the "Played Song" event:
 Templating in Liquid in a message triggered by the "Ordered" event:
 
 {% raw %}
-`{{event_properties.${r_details}.location.city}}` - "Montclair"
+`{{event_properties.${r_details}.location.city}}`: "Montclair"
 {% endraw %}
 
 {% endtab %}
@@ -107,8 +107,7 @@ Triggering a campaign with nested properties from the "Played Song" event:
 
 ![Triggering Campaign]({% image_buster /assets/img/nested_object2.png %})
 
-Consider the trigger condition: `songs[].album.yearReleased` `is` `1968`<br>
-This will match an event where __any__ of the songs have an album released in 1968. We use the bracket notation `[]` for traversing through arrays, and currently match if any item in the traversed array matches.<br>
+The trigger condition: `songs[].album.yearReleased` `is` `1968` will match an event where any of the songs have an album released in 1968. We use the bracket notation `[]` for traversing through arrays, and match if __any__ item in the traversed array matches the event property.<br>
 {% endtab %}
 {% tab Restaurant Example %}
 
@@ -122,11 +121,11 @@ Triggering a campaign with nested properties from the "Ordered" event:
 {% endtabs %}
 
 {% alert note %} Triggering is not yet supported for In-App Messages.  {% endalert %}
-{% alert note %} If your event property contains the `[]` or `.` characters, you can escape them by wrapping the chunk in double-quotes. For instance, `"songs[].album".yearReleased` will match an event with the literal property `"songs[].album"`.  {% endalert %}
+{% alert note %} If your event property contains the `[]` or `.` characters, escape them by wrapping the chunk in double-quotes. For instance, `"songs[].album".yearReleased` will match an event with the literal property `"songs[].album"`.  {% endalert %}
 
 ### Segmentation
 
-Use [Segment Extensions]({{site.baseurl}}/user_guide/engagement_tools/segments/segment_extension/) to segment users based on nested event properties. The notation for segmentation is as described in triggering above.
+Use [Segment Extensions]({{site.baseurl}}/user_guide/engagement_tools/segments/segment_extension/) to segment users based on nested event properties. The notation for segmentation is the same as described in triggering above.
 
 ## Frequently Asked Questions
 
