@@ -108,6 +108,10 @@ Unless you check **Allow users to become re-eligible to receive campaign**, each
 
 ![Action]({% image_buster /assets/img_archive/action_delivery_new.png %}){: height="80%"" width="80%"}
 
+  {% alert note %}
+  When the trigger action is set to "Interact With Campaign", selecting a "Receive" option as the interaction will cause your new campaign to trigger as soon as Braze marks the selected campaign as sent, even if that message bounces or fails to be delivered.
+  {% endalert %}
+
   {% endtab %}
   {% tab API-Triggered Delivery %}
 Check out our [API-Triggered section of the Developer Guide]({{site.baseurl}}/developer_guide/rest_api/messaging/#sending-messages-via-api-triggered-delivery) for more on API-Triggered Delivery.
