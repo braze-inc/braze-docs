@@ -11,7 +11,7 @@ tool: Dashboard
 There are two approaches for importing customer data into your Braze dashboard: REST API and CSV.
 
 {% alert important %}
-Note: Braze does not sanitize data during ingestion time.  While importing data into Braze, specifically meant for personalization usage, ensure that it is stripped of HTML, javascript, or any other script tag that potentially could be leveraged maliciously.
+Note: Braze does not HTML sanitize data during ingestion time. When importing data into Braze, specifically meant for personalization usage in a web browser, ensure that it is stripped of HTML, JavaScript, or any other script tag that potentially could be leveraged maliciously when rendered in a web browser.
 {% endalert %}
 
 ## REST API
