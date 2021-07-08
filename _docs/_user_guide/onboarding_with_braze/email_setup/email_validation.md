@@ -35,9 +35,9 @@ The Microsoft address local part must follow these parameters:
 - Can start with a character (a-z), an underscore (_), or a number (0-9).  
 - Can contain any alphanumeric character (a-z or 0-9) or an underscore (_)
 - Can contain the following characters (.) or (-)
-- Can not start with a period (.) or hyphen (-)
-- Can not contain two or more consecutive periods (.)
-- Can not end with a period (.)
+- Cannot start with a period (.) or hyphen (-)
+- Cannot contain two or more consecutive periods (.)
+- Cannot end with a period (.)
 
 ### All Other Domains
 For all other domains, Braze allows email addresses matching the following regex for the local part:<br>
