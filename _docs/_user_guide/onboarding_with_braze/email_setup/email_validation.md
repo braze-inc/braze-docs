@@ -20,7 +20,7 @@ Validation is used for dashboard email addresses, end-user email addresses (your
 
 Email syntax validation looks at both the local and host part of an email address. The local part is anything before the @ symbol, and the host part is anything after the @ symbol. Note that this process is only validating the syntax of the email address and does not consider whether the domain has a valid MX server or if the user exists on the domain listed.
 
-__Note: If the domain part contains any non-ASCII characters, it will need to be Punycode-encoded before being supplied to Braze.__
+__Note: If the domain part contains any non-[ASCII](https://en.wikipedia.org/wiki/ASCII) characters, it will need to be [Punycode-encoded](https://www.punycoder.com/) before being supplied to Braze.__
 
 If Braze receives a request to add a user and the email address is considered invalid, you would see an error response in the API. When uploading via CSV, a user would be created, but the email address would not be added.
 
