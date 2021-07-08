@@ -89,7 +89,7 @@ Link reporting will now be indexed by the `alias` rather than top-level domains 
 ![link_aliasing_click_table][1]
 
 ### Current Event Changes
-
+{% api %}
 Email Clicks Events
 
 {% apitags %}
@@ -133,8 +133,6 @@ _Update noted in August 2019._
 {% endalert %}
 
 {% endapi %}
-
-{% api %}
 
 ## Things to Note
 
