@@ -3,7 +3,7 @@ nav_title: Platform Wide Features & Behaviors
 layout: dev_guide
 page_order: 1
 guide_top_header: "Platform Wide Features & Behaviors"
-guide_top_text: "Braze can do a lot! Check out are capabilities, from a developer frame of mind, below!"
+guide_top_text: "Braze can do a lot! Check out our capabilities, from a developer frame of mind, below!"
 description: "This landing page lists platform wide features and behaviors like app group configuration, analytics overview, sending test messages, and more!"
 
 guide_featured_title: "Section Articles"

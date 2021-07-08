@@ -336,7 +336,7 @@ validurls['/docs/services_handbook_22/'] = '/docs/assets/download_file/Braze_Suc
 validurls['/docs/hidden/private_betas/view_pii/'] = '/docs/view_pii';
 validurls['/docs/hidden/private_betas/partners/adobe/'] = '/docs/partners/adobe';
 validurls['/docs/hidden/private_betas/link_aliasing/'] = '/docs/link_aliasing/';
-validurls['/docs/hidden/private_betas/partners/shopify/'] = '/docs/partners/shopify/';
+validurls['/docs/hidden/private_betas/shopify/'] = '/docs/partners/shopify/';
 validurls['/docs/hidden/private_betas/twilio/'] = '/docs/partners/twilio/';
 
 validurls['/docs/api/tls_deprecation/'] = '/docs/help/release_notes/deprecations/tls_deprecation/';
