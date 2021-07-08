@@ -24,7 +24,7 @@ Nested Object Support allows you to send nested JSON data as properties of custo
 {% tabs %}
 {% tab Music Example %}
 
-Shown below is a `/users/track` example with a "Played Song" custom event. Once a song has been played, to capture the properties of the song, we will send an API request that lists "songs" as a property, and an array of the nested properties of the songs.
+Shown below is a `/users/track` example with a "Created Playlist" custom event. Once a playlist has been created, to capture the properties of the playlist, we will send an API request that lists "songs" as a property, and an array of the nested properties of the songs.
 
 ```
 ...
@@ -74,15 +74,15 @@ Shown below is a `/users/track` example with an "Ordered" custom event. Once an 
 
 ### Liquid Templating
 
-The Liquid templating example below shows how to reference the nested properties saved from the above API request and use them in your Liquid messaging. Using Liquid and dot notation, traverse the nested data to find the specific node you would like to include in your messages.
+The Liquid templating examples below show how to reference the nested properties saved from the above API request and use them in your Liquid messaging. Using Liquid and dot notation, traverse the nested data to find the specific node you would like to include in your messages.
 
 {% tabs local %}
 {% tab Music Example %}
-Templating in Liquid in a message triggered by the "Played Song" event:
+Templating in Liquid in a message triggered by the "Created Playlist" event:
 
 {% raw %}
 `{{event_properties.${songs}[0].album.name}}`: "Nevermind"<br>
-`{{event_properties.${songs}[0].title}}`: "Smells Like Teen Spirit"
+`{{event_properties.${songs}[1].title}}`: "While My Guitar Gently Weeps"
 {% endraw %}
 
 {% endtab %}
@@ -103,11 +103,11 @@ To use these properties to trigger a campaign, select your custom event or purch
 {% tabs %}
 {% tab Music Example %}
 
-Triggering a campaign with nested properties from the "Played Song" event:
+Triggering a campaign with nested properties from the "Created Playlist" event:
 
 ![Triggering Campaign]({% image_buster /assets/img/nested_object2.png %})
 
-The trigger condition: `songs[].album.yearReleased` `is` `1968` will match an event where any of the songs have an album released in 1968. We use the bracket notation `[]` for traversing through arrays, and match if __any__ item in the traversed array matches the event property.<br>
+The trigger condition `songs[].album.yearReleased` "is" "1968" will match an event where any of the songs have an album released in 1968. We use the bracket notation `[]` for traversing through arrays, and match if __any__ item in the traversed array matches the event property.<br>
 {% endtab %}
 {% tab Restaurant Example %}
 
@@ -125,7 +125,7 @@ Triggering a campaign with nested properties from the "Ordered" event:
 
 ### Segmentation
 
-Use [Segment Extensions]({{site.baseurl}}/user_guide/engagement_tools/segments/segment_extension/) to segment users based on nested event properties. The notation for segmentation is the same as described in triggering above.
+Use [Segment Extensions]({{site.baseurl}}/user_guide/engagement_tools/segments/segment_extension/) to segment users based on nested event properties. Segmentation uses the same notation as triggering (described above).
 
 ## Frequently Asked Questions
 
