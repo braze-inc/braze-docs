@@ -13,7 +13,7 @@ hidden: true
 The following steps help you build a `BrazeManager` helper file that your production code calls into. This helper file will deal with all Braze-related dependencies by adding various extensions for the following integration topics listed below. Each topic will include horizontal tab steps and code snippets in both Swift and Objective-C. Please note that the Content Card and in-app message steps are not required for integration if you do not plan to utilize these channels in your application.
 
 - [Create BrazeManager.swift](#create-brazemanagerswift)
-- [Initialize SDK]()
+- [Initialize the SDK](#initialize-the-sdk)
 - [Push Notifications](#push-notifications)
 - [Access User Variables and Methods](#access-user-variables-and-methods)
 - [Log Analytics](#log-analytics)
@@ -21,7 +21,7 @@ The following steps help you build a `BrazeManager` helper file that your produc
 - [Content Cards (Optional)](#content-cards)
 - [Next Steps](#next-steps)
 
-### Create BrazeManager.Swift
+### Create BrazeManager.swift
 
 {% tabs local %}
 {% tab Step 1: Create BrazeManager.swift %}
@@ -63,13 +63,13 @@ class BrazeManager: NSObject {
 {% endtab %}
 {% endtabs %}
 
-### Initalize the SDK
+### Initialize the SDK
 
 {% tabs %}
 {% tab Step 1: Initialize SDK from BrazeManager.swift %}
 
 ##### Initialize SDK from BrazeManager.swift
-Next, you must initialize the SDK. This guide assumes you have already [integrated the SDK]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/initial_sdk_setup/overview/) into your Xcode project. 
+Next, you must initialize the SDK. This guide assumes you have already [integrated the SDK]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/initial_sdk_setup/overview/) into your Xcode project. You must also have your [app group SDK endpoint]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/initial_sdk_setup/swift_package_manager/#step-4-specify-your-data-cluster) and [`LogLevel`]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/initial_sdk_setup/other_sdk_customizations/#braze-log-level) set in your `info.plist` file to log sessions. 
 
 Add the `didFinishLaunching...` method from the `AppDelegate.swift` file sans return value in your `BrazeManager.swift` file. By creating a similar method in the `BrazeManager.swift` file, there will not be an `import AppboyUI` statement in your `AppDelegate.swift` file. 
 
@@ -135,6 +135,10 @@ Navigate to your existing app group in the Braze dashboard. Under __Push Notific
 {% endtab %}
 {% tab Step 2: Register for Notifications %}
 
+{% alert important %}
+Don't miss the dedicated checkpoint at the end of this step!
+{% endalert %}
+
 ##### Register for Push Notifications
 
 Next, register for push notifications. This guide assumes you have [set up your push credentials correctly]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/push_notifications/integration/) in your Apple developer portal and Xcode project. 
@@ -142,7 +146,7 @@ Next, register for push notifications. This guide assumes you have [set up your 
 The code for registering push notifications will be added in the `didFinishLaunching...` method in the `BrazeManager.swift` file. Your initialization code should end up looking like the following:
 
 1. Configure the contents for requesting authorization to interact with the user. These options are listed as an example.
-2. Request authorization to send your users push notifications. The user's response to allow or deny push notifications is tracked in the form of the `granted` variable.
+2. Request authorization to send your users push notifications. The user's response to allow or deny push notifications is tracked in the `granted` variable.
 3. Forward the push authorization results to Braze after the user interacts with the notification prompt.
 4. Initiate the registration process with APNs; this should be done in the main thread. If the registration succeeds, the app calls your `AppDelegate` object's `didRegisterForRemoteNotificationsWithDeviceToken` method. 
 
@@ -189,7 +193,7 @@ Next, forward the system push notifications methods from `AppDelegate.swift` to 
 
 Create an extension for your push notification code in your `BrazeManager.swift` file so it reads in a more organized manner as to what purpose is being served in the helper file, like so:
 
-1. Following the pattern of not including an `import AppboyUI` statement in your `AppDelegate`, we will handle the push notifications methods in the `BrazeManager.swift` file. User's device tokens will need to be passed to Braze from the `didRegisterForRemote...` method. Next, add the same method from the `AppDelegate` in your `BrazeManager` class.
+1. Following the pattern of not including an `import AppboyUI` statement in your `AppDelegate`, we will handle the push notifications methods in the `BrazeManager.swift` file. User's device tokens will need to be passed to Braze from the `didRegisterForRemote...` method. This method is required to implement silent push notifications. Next, add the same method from the `AppDelegate` in your `BrazeManager` class.
 2. Add the following line inside the method to register the device token to Braze. This is necessary for Braze to associate the token with the current device. 
 
 {% subtabs global %}
@@ -253,7 +257,7 @@ func userNotificationCenter(_ center: UNUserNotificationCenter, didReceive respo
 {% endtabs %}
 
 {% alert checkpoint %}
-Proceed to Compile your code and run your application. <br><br>Try sending yourself a push notification from the Braze dashboard and observe that analytics are being logged from push notifications before advancing any further. 
+Proceed to compile your code and run your application. <br><br>Try sending yourself a push notification from the Braze dashboard and observe that analytics are being logged from push notifications before advancing any further. 
 {% endalert %}
 
 ### Access User Variables and Methods
@@ -261,9 +265,9 @@ Proceed to Compile your code and run your application. <br><br>Try sending yours
 {% tabs %}
 {% tab Step 1: Create Extension %}
 
-##### Create Extension
+##### Create Extension for User Code
 
-Next, you will want easy access to the `ABKUser` variables and methods. Creating an extension for your user code in your `Brazemanager.swift` file so it reads in a more organized manner as to what purpose is being served in the helper file, like so:
+Next, you will want easy access to the `ABKUser` variables and methods. Create an extension for your user code in the `Brazemanager.swift` file so it reads in a more organized manner as to what purpose is being served in the helper file, like so:
 
 1. An `ABKUser` object represents a known or anonymous user in your iOS application. Add a computed variable to retrieve the `ABKUser`; this variable will be reused to retrieve variables about the user.
 2. Query the user variable to easily access the `userId`. Among the other variables, the `ABKUser` object is responsible for (`firstName`, `lastName`, `phone`, `homeCity`, etc.)
@@ -520,7 +524,7 @@ extension AppboyManager: ABKInAppMessageUIDelegate{
 {% endtabs %}
 
 {% alert checkpoint %}
-Proceed to compile your code and run your application. <br><br>Try sending yourself an in-app message. <br><br>In the `Brazemanager.swift` file, set a breakpoint at the entry of the example _ABKInAppMessageUIDelegate_ method. Send yourself an in-app message and confirm the breakpoint is hit before advancing any further. 
+Proceed to compile your code and run your application. <br><br>Try sending yourself an in-app message. <br><br>In the `Brazemanager.swift` file, set a breakpoint at the entry of the example `ABKInAppMessageUIDelegate` method. Send yourself an in-app message and confirm the breakpoint is hit before advancing any further. 
 {% endalert %}
 
 ### Content Cards
@@ -532,7 +536,7 @@ Proceed to compile your code and run your application. <br><br>Try sending yours
 The following Content Card section is not required for integration if you do not plan to utilize this channel in your application.
 {% endalert %}
 
-##### Create Extension
+##### Create Extension for Content Cards
 
 Enable your production code to display the Content Cards view controller without the need for unnecessary `import AppboyUI` statements. 
 
