@@ -263,11 +263,6 @@ Once you've launched your Canvas, you'll be able to view analytics for your jour
 [25]:{% image_buster /assets/img_archive/Journey_6.png %}
 [28]:{% image_buster /assets/img_archive/Journey_9.png %}
 [29]:{% image_buster /assets/img_archive/Journey_10.png %}
-[31]:{% image_buster /assets/img_archive/Canvas_Branch_1.png %}
-[32]:{% image_buster /assets/img_archive/Canvas_Branch_2.png %}
-[33]:{% image_buster /assets/img_archive/Canvas_Branch_3.png %}
-[34]:{% image_buster /assets/img_archive/Canvas_Branch_4.png %}
-[35]:{% image_buster /assets/img_archive/Canvas_Branch_5.png %}
 [50]: {% image_buster /assets/img/quiet_hours.png %}
 [51]: {% image_buster /assets/img/Basics1.gif %}
 [52]: {% image_buster /assets/img/Conversions-canvas-1.gif %}
