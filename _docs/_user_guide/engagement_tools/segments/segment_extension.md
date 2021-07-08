@@ -32,7 +32,7 @@ Select between a Purchase or Custom Event criteria for targeting. Once you've se
 
 ### Event Property Segmentation
 
-To increase targeting precision, select the “Add Property Filters” checkbox. This will enable you to drill down based on the specific properties of your Purchase or Custom Event. We support event property segmentation based on string, numeric, boolean, and time objects. 
+To increase targeting precision, select the “Add Property Filters” checkbox. This will enable you to drill down based on the specific properties of your Purchase or Custom Event. We support event property segmentation based on string, numeric, boolean, and time objects. We also support segmentation based on [nested event properties]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/nested_object_support/).
 
 ![Event Property][12]
 

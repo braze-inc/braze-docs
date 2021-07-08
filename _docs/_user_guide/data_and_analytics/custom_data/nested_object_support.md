@@ -28,17 +28,25 @@ Shown below is a `/users/track` example with a "Played Song" custom event. Once 
 
 ```
 ...
-properties: {
-  ...
-  "songs" :[{
-    "title" : "Smells Like Teen Spirit",
-    "artist" : "Nirvana",
-    "album" : {
-      "name" : "Nevermind",
-      "yearReleased" : "1991"
+"properties": {
+  "songs": [
+    {
+      "title": "Smells Like Teen Spirit",
+      "artist": "Nirvana",
+      "album": {
+        "name": "Nevermind",
+        "yearReleased": "1991"
+      }
+    },
+    {
+      "title": "While My Guitar Gently Weeps",
+      "artist": "the Beatles",
+      "album": {
+        "name": "The Beatles",
+        "yearReleased": "1968"
+      }
     }
-  }],
-  ...
+  ]
 }
 ...
 ```
@@ -49,17 +57,15 @@ Shown below is a `/users/track` example with an "Ordered" custom event. Once an 
 
 ```
 ...
-properties:{
-  ...
-  "r_details" : {
-    "name" : "McDonalds",
-    "identifier" : "12345678",
+"properties": {
+  "r_details": {
+    "name": "McDonalds",
+    "identifier": "12345678",
     "location" ; {
-      "city" : "Montclair",
-      "state" : "NJ"
+      "city": "Montclair",
+      "state": "NJ"
     }
-  },
-  ...
+  }
 }
 ...
 ```
@@ -72,27 +78,37 @@ The Liquid templating example below shows how to reference the nested properties
 
 {% tabs local %}
 {% tab Music Example %}
-Templating in Liquid in a message triggered by the "Liked Song" event:
+Templating in Liquid in a message triggered by the "Played Song" event:
 
 {% raw %}
-`{{event_properties.${songs}[0].album.name}}` - "Nevermind"<br>
-`{{event_properties.${songs}[0].title}}` - "Smells Like Teen Spirit"
+`{{event_properties.${songs}[0].album.name}}`: "Nevermind"<br>
+`{{event_properties.${songs}[0].title}}`: "Smells Like Teen Spirit"
+{% endraw %}
+
+{% endtab %}
+{% tab Restaurant Example %}
+Templating in Liquid in a message triggered by the "Ordered" event:
+
+{% raw %}
+`{{event_properties.${r_details}.location.city}}` - "Montclair"
 {% endraw %}
 
 {% endtab %}
 {% endtabs %}
 
-### Campaign Triggering
+### Message Triggering
 
 To use these properties to trigger a campaign, select your custom event or purchase, and add a __Nested Property__ filter.
 
 {% tabs %}
 {% tab Music Example %}
 
-Triggering a campaign with nested properties from the "Liked Song" event:
+Triggering a campaign with nested properties from the "Played Song" event:
 
 ![Triggering Campaign]({% image_buster /assets/img/nested_object2.png %})
 
+Consider the trigger condition: `songs[].album.yearReleased` `is` `1968`<br>
+This will match an event where __any__ of the songs have an album released in 1968. We use the bracket notation `[]` for traversing through arrays, and currently match if any item in the traversed array matches.<br>
 {% endtab %}
 {% tab Restaurant Example %}
 
@@ -100,10 +116,17 @@ Triggering a campaign with nested properties from the "Ordered" event:
 
 ![Triggering Campaign]({% image_buster /assets/img/nested_object1.png %})
 
-`r_details.name` - "Mcdonalds"<br>
-`r_details.location.city` - "Montclair"
+`r_details.name`: "Mcdonalds"<br>
+`r_details.location.city`: "Montclair"
 {% endtab %}
 {% endtabs %}
+
+{% alert note %} Triggering is not yet supported for In-App Messages.  {% endalert %}
+{% alert note %} If your event property contains the `[]` or `.` characters, you can escape them by wrapping the chunk in double-quotes. For instance, `"songs[].album".yearReleased` will match an event with the literal property `"songs[].album"`.  {% endalert %}
+
+### Segmentation
+
+Use [Segment Extensions]({{site.baseurl}}/user_guide/engagement_tools/segments/segment_extension/) to segment users based on nested event properties. The notation for segmentation is as described in triggering above.
 
 ## Frequently Asked Questions
 
