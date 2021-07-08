@@ -36,10 +36,24 @@ For help with CSV and API exports, visit our troubleshooting article [here]({{si
 
 ## Direct Revenue
 
-You can view additional revenue metrics by generating a Campaign Comparison Report using the [Report Builder][1]. This report contains metrics based on last-click attribution, which means that in order for revenue to be attributed to a campaign, that campaign must:
+You can view the following additional revenue metrics by generating a Campaign Comparison Report using the [Report Builder][1]:
+
+- [Total Direct Revenue][2]
+- [Total Direct Purchases][3]
+- [Unique Direct Purchases][4]
+- [Revenue per Recipient][5]
+
+These metrics are based on last-click attribution, which means that in order for revenue to be attributed to a campaign, that campaign must:
 
 1. Be the last campaign the user clicked prior to purchasing, and
 2. Be clicked by the user less than 3 days prior to purchasing.
 
 [1]: {{site.baseurl}}/user_guide/data_and_analytics/your_reports/report_builder/
+[2]: {{site.baseurl}}/user_guide/data_and_analytics/report_metrics/#total-direct-revenue
+[3]: {{site.baseurl}}/user_guide/data_and_analytics/report_metrics/#total-direct-purchases
+[4]: {{site.baseurl}}/user_guide/data_and_analytics/report_metrics/#unique-direct-purchases
+[5]: {{site.baseurl}}/user_guide/data_and_analytics/report_metrics/#revenue-per-recipient
+
+
+
 [9]: {% image_buster /assets/img_archive/Export_revenue_graph.png %}
