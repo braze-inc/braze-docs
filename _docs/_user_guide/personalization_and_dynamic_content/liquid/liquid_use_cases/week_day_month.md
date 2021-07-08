@@ -10,21 +10,9 @@ description: "This reference article lists Liquid use cases based on the week, d
 
 Here are some examples of ways you can use Liquid to personalize messaging and delivery based on the current week, day, or month.
 
-## Add X Days to Today's Date
-
-**Goal:** Add a certain number of days to today's date, formatted as YYYY-mm-dd. The example below adds three days, calculated in seconds.
-
-{% raw %}
-
-```liquid
-{{ “now” | date:‘%s’ | plus: 259200 | date:“%F” }}
-```
-
-{% endraw %}
-
 ## Pull the Previous Month's Name into a Message
 
-**Goal:** Pull the name of the previous month into a message.
+This use case will take the current month and display the previous month to be used in messaging.
 
 {% raw %}
 
@@ -64,7 +52,7 @@ Here's an overview of what your spending looked like in {{month}}.
 
 ## Send a Campaign at the End of Every Month
 
-**Goal:** Send a campaign on the last day of each month.
+This use case will check if the current date falls under a list of dates, and depending on the date, will display a specific message.
 
 {% alert note %} This does not account for leap years (February 29). {% endalert %}
 
@@ -86,7 +74,9 @@ The date is correct
 
 ## Send a Campaign on the Last [Weekday] of the Month
 
-**Goal:** Schedule a campaign to send on the last weekday of the month, based on your desired day of the week. For example, you may want to send a survey to your users on the last Wednesday of the month asking for product feedback. 
+This use case captures the current month and day, and calculates if the current day falls within the last weekday of the month.
+
+For example, you may want to send a survey to your users on the last Wednesday of the month asking for product feedback.
 
 {% raw %}
 
@@ -150,7 +140,7 @@ The date is correct
 
 ## Send a Different Message Each Day of the Month
 
-**Goal:** Send a different message for each day of the month.
+This use case checks if the current date matches one on a list, and depending on the day, will display a distinct message.
 
 {% raw %}
 
@@ -178,7 +168,7 @@ Message for 2019-12-03
 
 ## Send a Different Message Each Day of the Week
 
-**Goal:** Send a different message for each day of the week.
+This use case checks the current day of the week, and depending on the day, will display a distinct message.
 
 {% raw %}
 

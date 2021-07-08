@@ -12,7 +12,7 @@ Here are some examples of how you can use Liquid to personalize your campaigns b
 
 ## Send Messages in a User's Language if They've Logged a Session
 
-**Goal:** Decide which language to display a campaign in. If they have logged a session use their automatically-collected `language` to decide. If they haven't logged a session, use a custom attribute (`user_language`, which would be logged prior to creating a campaign) to decide which language to display the campaign in.
+This use case checks the user's language set in the Braze dashboard and if it matches the language options provided, will display a message in their language. This use case also includes logic to display a message based on the language manually collected via a custom attribute, which can be used as a fallback if the user hasn’t logged a session yet.
 
 {% raw %}
 
@@ -49,7 +49,7 @@ The second `if` statement just checks for the default attribute, because the use
 
 ## Personalize Messages Based on When a User Last Opened the App
 
-**Goal:** Change the tone of your message depending on whether a user has recently opened up the app or not. For example, a message for a user who recently opened the app might say "Happy to see you again!", while a message for a user who hasn't opened the app in a while might say "It's been a while, here are some of our latest updates."
+This use case calculates the last time a user opened the app, and depending on the length of time, will display a different personalized message.
 
 {% raw %}
 
@@ -68,7 +68,7 @@ It's been a while, here are some of our latest updates.
 
 ## Show a Different Message if a User Last Used the App Less Than Three Days Ago
 
-**Goal:** Personalize your messages based on how active a user is.
+This use case calculates how long ago a user used an app, and depending on the length of time, will display a different personalized message.
 
 {% raw %}
 

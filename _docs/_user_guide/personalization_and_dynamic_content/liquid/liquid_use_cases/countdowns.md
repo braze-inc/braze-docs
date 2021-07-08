@@ -12,7 +12,7 @@ You can use Liquid to create countdowns both big and small—take a look through
 
 ## Add X Days to Today's Date
 
-**Goal:** Tell a user information about what's coming up a few days from now. For example, you may want to send a mid-week message that shows events in the area for the weekend, like "Here are the movies we're showing in 3 days!"
+This use case uses Liquid to add a specific number of days to the current date to reference and add in messages. For example, you may want to send a mid-week message that shows events in the area for the weekend, like “Here are the movies we’re showing in 3 days!”
 
 {% raw %}
 
@@ -21,12 +21,13 @@ You can use Liquid to create countdowns both big and small—take a look through
 ```
 
 {% endraw %}
+The `plus` value will always be in seconds, so we end with the filter `%F` to translate the seconds to days.
 
-{% alert important %} You may want to include a URL or Deeplink to a list of events in your message so you can send the user to a list of actions that are happening in the future. The `plus` value will always be in seconds. {% endalert %}
+{% alert important %} You may want to include a URL or deep link to a list of events in your message so you can send the user to a list of actions that are happening in the future. {% endalert %}
 
 ## Calculate a Countdown From a Set Point in Time
 
-**Goal:** Calculate the difference in days between today and a specific date.
+This use case calculates the difference in days between a specific date and today. This difference can be used to display a countdown to your users.
 
 {% raw %}
 
@@ -42,7 +43,7 @@ you have {{ difference_days }} days left!
 
 ## Create a Countdown for Specific Shipping Dates and Priorities
 
-**Goal:** Specify a countdown for standard, express, and overnight shipping for your users based on specific time frames.
+This use case captures different shipping options, calculates the length of time it would take to receive, and displays messages encouraging users to purchase in time to receive their package by a certain date.
 
 {% raw %}
 
@@ -88,7 +89,7 @@ This is the last day for overnight shipping so your order gets here on time for 
 
 ## Create a Countdown in Days
 
-**Goal:** Tell a user how many days until an event will happen, such as their order arriving or a coupon expiring.
+This use case calculates the time left between a specific event and today, and displays how many days left until the event.
 
 {% raw %}
 
@@ -102,11 +103,13 @@ Your order will arrive in {{ difference_days }} days!
 
 {% endraw %}
 
-{% alert important %} You will need a Custom Attribute field with a `date` value. {% endalert %}
+{% alert important %} You will need a custom attribute field with a `date` value. {% endalert %}
 
 ## Create a Countdown From Days to Hours to Minutes
 
-**Goal:** Tell a user how much time is left until an event will happen, and change the time value (days, hours, minutes) depending upon when the missage is sent relative to the expiration date. For example, if there's two days until the order arrives: "Your order will arrive in 2 days." If there's less than a day: "Your order will arrive in 17 hours."
+This use case calculates the time left between a specific event and today, and depending on the length left until the event, will change the time value (days, hours, minutes) and display different personalized messages.
+
+For example, if there’s two days until a customer's order arrives, you might say “Your order will arrive in 2 days.” Whereas if there’s less than a day, you could change it to “Your order will arrive in 17 hours.”
 
 {% raw %}
 
@@ -128,11 +131,11 @@ You have {{difference_days}} days left till your order arrives!
 
 {% endraw %}
 
-{% alert important %} You will need a Custom Attribute field with a `date` value. You will also need to set time thresholds of when you want the time to be displayed in days, hours, and minutes. {% endalert %}
+{% alert important %} You will need a custom attribute field with a `date` value. You will also need to set time thresholds of when you want the time to be displayed in days, hours, and minutes. {% endalert %}
 
 ## Create a Countdown to a Future Date
 
-**Goal:** Tell a user how much time (days, hours, or minutes) until a specific event starts. 
+This use case calculates the difference between today and a future date and displays a message noting how many days until the event.
 
 {% raw %}
 
@@ -141,43 +144,17 @@ You have {{difference_days}} days left till your order arrives!
 {% assign today = 'now' | date: "%s" %}
 {% assign difference = event_date | minus: today %}
 {% assign difference_days = difference | divided_by: 86400 %}
-you have {{ difference_days }} days left!
-There are difference_days until your birthday!
+There are {{difference_days}} until your birthday!
 {% endif %}
-```
-
-{% endraw %}
-
-## Display Different Messages Depending on Whether There are Minutes, Hours, or Days Left
-
-**Goal:** Have a countdown get increasingly granular by going from days to hours to minutes depending on how much time is left.
-
-<!---is this a duplicate of "Create a Countdown from Days to Hours to Minutes?" --> 
-
-{% raw %}
-
-```liquid
-{% assign today =  'now' | date: "%s"  %}
-{% assign scheme_finish = "2017-10-13T10:30:30" | date: "%s" %}
-{% assign difference_seconds =  scheme_finish | minus: today %}
-{% assign difference_minutes = difference_seconds | divided_by: 60 %}
-{% assign difference_hours = difference_seconds | divided_by: 3600 %}
-{% assign difference_days = difference_seconds | divided_by: 86400 %}
-{% if {{difference_minutes}} > 59 and {{difference_minutes}} < 1440 %}
-You have {{difference_hours}} hours left in the scheme!
-{% elsif {{difference_minutes}} < 59 %}
-You have {{difference_minutes}} minutes left in the scheme!
-{% else %}
-You have {{difference_days}} days left in the scheme!
-{% endif %}
-{{today]]
 ```
 
 {% endraw %}
 
 ## Display How Many Days Left Until a Custom Date Attribute Will Arrive
 
-**Goal:** Have a recurring campaign send every day that evaluates certain criteria, but aborts if certain logic is not met. In this example, a user will receive a message if it is within two days of the custom date attribute. Otherwise, the message will not send.
+This use case calculates the difference in days between today and a future date, and displays a message if the difference matches a set number.
+
+In this example, a user will receive a message if it is within two days of the custom date attribute. Otherwise, the message will not be sent.
 
 {% raw %}
 
@@ -197,7 +174,9 @@ Your surgery is in 2 days on {{custom_attribute.${surgery_date}}}
 
 ## Display How Much Time Is Left, and Abort the Message if There’s Only X Time Left
 
-**Goal:** Tell a user that they have a certain amount of time left, but don't send the message if it's within two hours of the event ending. For example, "You have 10 hours left to buy your ticket for London", but don't send the message if it's within two hours of flight time for London.
+This use case will calculate how long until a certain date, and depending on the length (skipping messaging if the date is too soon), will display different personalized messages. 
+
+For example, “You have x hours left to buy your ticket for London”, but don’t send the message if it’s within two hours of flight time for London.
 
 {% raw %}
 
@@ -216,11 +195,11 @@ Still traveling to {{event_properties.${toStation}}} in more than 24 hours? Book
 
 {% endraw %}
 
-{% alert important %} You will need a Custom Event Property. {% endalert %}
+{% alert important %} You will need a custom event property. {% endalert %}
 
 ## In-App Message to Send X Days Before Users' Membership Ends
 
-**Goal:** Nudge your users to renew or upgrade their membership before it expires using an in-app message.
+This use case captures your membership expiry date, calculates how long until it expires, and displays different messages based on how long until your membership expires.
 
 {% raw %}
 
@@ -248,14 +227,14 @@ You have few days left in your trial, make sure to upgrade!
 
 ## Personalize In-App Messages Based on Users' Date and Language
 
-**Goal:** Use Liquid logic to consolidate existing in-app message campaigns. For example, you might send a series of upsell messages to users once a month to let them know how long an offer is still valid with four in-app messages:
+This use case calculates a countdown to an event, and based on a user's language setting in the dashboard, will display this countdown in their language.
+
+For example, you might send a series of upsell messages to users once a month to let them know how long an offer is still valid with four in-app messages:
 
 - Initial
 - 2 days left
 - 1 day left
 - Final day
-
-These in-app messages are sent in multiple languages, depending on the user's language preference.
 
 {% raw %}
 
@@ -332,7 +311,7 @@ Hi, the offer is only valid today.
 
 ## Template in the Date 30 Days from Now, Formatted as Month and Day
 
-**Goal:** Display the date 30 days from now as "Month Day". For example: "Your membership expires in 30 days, on January 5." 
+This use case will display the date 30 days from now to use in messaging.
 
 {% raw %}
 

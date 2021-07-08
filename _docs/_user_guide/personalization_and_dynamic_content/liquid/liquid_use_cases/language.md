@@ -12,7 +12,7 @@ Here are some examples of how to use Liquid to personalize campaigns based on a 
 
 ## Display Month Names in a Different Language
 
-**Goal:** Display the name of the current month in a different language. The example provided uses Swedish.
+This use case will display the current date, month, and year, with the month in a different language. The example provided uses Swedish.
 
 {% raw %}
 
@@ -52,7 +52,9 @@ Here are some examples of how to use Liquid to personalize campaigns based on a 
 
 ## Personalize Messaging Based on Day of the Week and User's Language
 
-**Goal:** Use nesting `if` statements to send different messages based on the day of the week, and the user's language. The example provided stops at Tuesday, but can be repeated for each day of the week.
+This use case checks the current day of the week and based on the day, if the user's language is set to one of the language options provided, will display a specific message in their language.
+
+The example provided stops at Tuesday, but can be repeated for each day of the week.
 
 {% raw %}
 

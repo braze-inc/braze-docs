@@ -12,7 +12,9 @@ Here are some examples of how you can use Liquid to personalize your campaings b
 
 ## Abort Push Notification if a Custom Event is Within Two Hours of Now
 
-**Goal:** Prevent a push from going out if a Custom Event Property will pass in the next two hours. This example uses the scenario of an abandoned cart for a train ticket.
+This use case calculates the time until a specific event, and depending on the amount of time left, will display different personalized messages.
+
+For example, you may want to prevent a push from going out if a custom event property will pass in the next two hours. This example uses the scenario of an abandoned cart for a train ticket.
 
 {% raw %}
 
@@ -49,11 +51,11 @@ Did you forget something in your shopping cart?
 
 {% endraw %}
 
-{% alert important %} You must have an Event Property of the Custom Event count, or use a webhook to your Braze endpoint. This is so you can increment a Custom Attribute (`example_event_count`) every time the user performs the event. This example uses a cadence of three (1, 4, 7, 10, etc).{% endalert %}
+{% alert important %} You must have an event property of the custom event count, or use a webhook to your Braze endpoint. This is so you can increment a custom attribute (`example_event_count`) every time the user performs the event. This example uses a cadence of three (1, 4, 7, 10, etc).{% endalert %}
 
 ## Send a Message to Users Who Have Only Purchased from One Category
 
-**Goal:** Use a Custom Attributes array for categories that have duplicate values, and only send a message if a user has purchased something from only one category.
+This use case captures a list of the categories a user has purchased from, and if only one purchase category exists, will display a personalized message.
 
 {% raw %}
 

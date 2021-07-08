@@ -12,7 +12,7 @@ Here are some examples of how you can use Liquid to personalize your campaigns t
 
 ## Personalize Messages Based on a User's Anniversary Year {#anniversary-year}
 
-**Goal:** Calculate if it's the anniversary of a user's sign-up date, and display a different message depending on how many years they are celebrating.
+This use case shows how to calculate a user’s app anniversary based on their initial sign up date and display different messages based on how many years they are celebrating.
 
 {% raw %}
 
@@ -59,7 +59,7 @@ Then we repeat three more variable statements to get the `%B` and `%d` for the `
 
 ## Personalize Messages Based on a User's Birthday Week {#birthday-week}
 
-**Goal:** Use the week of a user's birthday to decide whether or not to send a birthday message.
+This use case shows how to find a user's birthday, compare it to the current date, and then display special birthday messages that will show before, during, and after their birthday week.
 
 {% raw %}
 
@@ -88,7 +88,7 @@ We also include statements for `last_week` and `next_week` to further personaliz
 
 ## Send Campaigns to Users in Their Birthday Month
 
-**Goal:** Use the month of a user's birthday to decide whether or not to send a birthday message.
+This use case shows how to calculate a user's birthday month, check if their birthday falls in the current month, and if so, send a special message.
 
 {% raw %}
 

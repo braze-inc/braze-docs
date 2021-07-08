@@ -12,7 +12,7 @@ Here are some more ways to personalize your campaigns using Liquid:
 
 ## Capitalize the First Letter of Every Word in a String
 
-**Goal:** Put user-stored data into a consistent format, such as capitalizing the first letter of every word in an address.
+This use case takes a string of words, splits them into an array, and capitalizes the first letter of each word.
 
 {% raw %}
 
@@ -27,7 +27,7 @@ Here are some more ways to personalize your campaigns using Liquid:
 
 ## Compare Custom Attribute Value Against an Array
 
-**Goal:** Compare the value of a custom attribute against an array of values. If the custom attribute matches any value in the array, display that match and then exit the loop. If no matches are found, the message will not send. 
+This use case takes a list of favorite stores, checks if any of a user's favorite stores are in that list, and if so, will display a special offer from those stores.
 
 {% raw %}
 
@@ -47,11 +47,11 @@ Today's offer from {{store}}
 
 {% endraw %}
 
-{% alert important %} This sequence has a `break` tag in the primary conditional statement. This causes the loop to stop when a match is found. If you want to display many or all matches, remove the `break` tag. {% endalert %}
+{% alert important %} This sequence has a `{% break %}` tag in the primary conditional statement. This causes the loop to stop when a match is found. If you want to display many or all matches, remove the `{% break %}` tag. {% endalert %}
 
 ## Create an Upcoming Event Reminder
 
-**Goal:** Allow users to set up upcoming reminders based on custom events. The example scenario allows a user sets a reminder for a policy renewal date that is 26 or more days away, where reminders are sent 26, 13, 7, or 2 days before the policy renewal date.
+This use case allows users to set up upcoming reminders based on custom events. The example scenario allows a user to set a reminder for a policy renewal date that is 26 or more days away, where reminders are sent 26, 13, 7, or 2 days before the policy renewal date.
 
 {% raw %}
 
@@ -191,17 +191,17 @@ Users are scheduled to enter the journey on day 2.
 
 {% endraw %}
 
-{% alert important %} You will need a Custom Event `reminder_capture`, and the Custom Event properties must include at least:
+{% alert important %} You will need a custom event `reminder_capture`, and the custom event properties must include at least:
 
-- `reminder-id`: Identifier of the Custom Event
+- `reminder-id`: Identifier of the custom event
 - `reminder_date`: User-submitted date when their reminder is due
-- `message_personalisation_X`: Ay properties needed to personalise the message at time of send
+- `message_personalisation_X`: Any properties needed to personalize the message at time of send
 
 {% endalert %}
 
 ## Find a String Within an Array
 
-**Goal:** Use "contains" to search for a string within an array.
+This use case checks if a custom attribute array contains a specific string, and if it exists, will display different messages.
 
 {% raw %}
 
@@ -221,7 +221,9 @@ Your account is all setup
 
 ## Find the Largest Value in an Array
 
-**Goal:** Show the highest value from a list of values, such as scores or monetary amounts. For example, you may want to show a user what the current high score is, or highest bid on an item.
+This use case calculates the highest value in a given custom attribute array to use in user messaging.
+
+For example, you may want to show a user what the current high score is, or highest bid on an item.
 
 {% raw %}
 
@@ -238,11 +240,13 @@ Your account is all setup
 
 {% endraw %}
 
-{% alert important %} You must use a Custom Attribute that has an integer value and is part of an array (list). {% endalert %}
+{% alert important %} You must use a custom attribute that has an integer value and is part of an array (list). {% endalert %}
 
 ## Find the Smallest Value in an Array
 
-**Goal:** Show the lowest value from a list of values, such as scores or monetary amounts. For example, you may want to show a user what the lowest score is, or the cheapest item.
+This use case calculates the lowest value in a given custom attribute array to use in user messaging.
+
+For example, you may want to show a user what the lowest score is, or the cheapest item.
 
 {% raw %}
 
@@ -259,30 +263,11 @@ Your account is all setup
 
 {% endraw %}
 
-{% alert important %} You must use a Custom Attribute that has an integer value and is part of an array (list). {% endalert %}
-
-## Match an Attribute Value to Another Attribute Value
-
-**Goal:** Send a message if two Custom Attribute values match one another.
-
-{% raw %}
-
-```liquid
-{% assign B = {{custom_attribute.${custom_attribute_name}}} %}
-{% if {{{custom_attribute.${custom_attribute_name_2}}} == B %}
-
-Print your text here
-
-{% else %}
-{% abort_message() %}
-{% endif %}
-```
-
-{% endraw %}
+{% alert important %} You must use a custom attribute that has an integer value and is part of an array (list). {% endalert %}
 
 ## Query the End of a String
 
-**Goal:** Query the end of a string to use that value in your messaging.
+This use case queries the end of a string to use in messaging.
 
 {% raw %}
 
@@ -302,7 +287,7 @@ Your last marketplace search was on {{custom_attribute.${Last marketplace buyer 
 
 ## Query Values in an Array From a Custom Attribute with Multiple Combinations
 
-**Goal:** Compare a custom array of shows against the larger Custom Attribute of shows to see if there is a match. If one or more matches are found, that entry will be templated into the message copy. 
+This use case takes a list of soon to be expired shows, checks if any of a user's favorite shows are in that list, and if so, will display a message notifying the user that they will expire soon.
 
 {% raw %} 
 

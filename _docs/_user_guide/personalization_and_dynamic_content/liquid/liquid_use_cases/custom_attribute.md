@@ -10,9 +10,9 @@ description: "This reference article lists Liquid use cases based on custom attr
 
 Here are some ways you can use Liquid to personalize your campaigns based on custom attributes:
 
-## Send a Message if a User Meets Two or More Custom Attributes
+## Personalize a Message Based on Matching Custom Attributes
 
-**Goal:** Use "if this AND that" logic to personalize a message based on multiple custom attributes.
+This use case checks if a user meets one or more custom attributes, and based on if they meet, will display different personalized messages.
 
 {% raw %}
 
@@ -34,7 +34,7 @@ There is a shovel here.
 
 ## Subtract Two Custom Attributes to Display the Difference as a Monetary Value
 
-**Goal:** Calculate the difference between two Custom Attributes as a monetary value to let a user know how far they have to reach a goal.
+This use case captures two monetary custom attributes, then calculates and displays the difference to let a user know how far they have to reach their goal.
 
 {% raw %}
 
@@ -50,7 +50,7 @@ You only have ${{ difference | round: 0 | number_with_delimiter }} left to raise
 
 ## Reference a User's First Name if Their Full Name is Stored in the first_name Field
 
-**Goal:** If a user has their first and last name stored in the `first_name` field, use this Liquid to only pull the first word listed.
+This use case captures a user's first name if both first and last name are stored in a single field, and then uses this first name to display a welcome message.
 
 {% raw %}
 
