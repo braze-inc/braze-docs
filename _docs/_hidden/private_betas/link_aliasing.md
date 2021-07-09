@@ -88,7 +88,7 @@ Link reporting will now be indexed by the `alias` rather than top-level domains 
 
 ![link_aliasing_click_table][1]
 
-### Current Event Changes
+### Currents Event Changes
 {% api %}
 Email Clicks Events
 
