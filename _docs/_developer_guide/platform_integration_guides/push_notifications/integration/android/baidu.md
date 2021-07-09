@@ -1,5 +1,5 @@
 ---
-nav_title: Baidu
+nav_title: Baidu Integration
 page_title: Baidu Push Notification Integration
 page_order: 0
 

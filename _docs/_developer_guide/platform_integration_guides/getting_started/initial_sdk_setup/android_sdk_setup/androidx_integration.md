@@ -1,7 +1,7 @@
 ---
 nav_title: AndroidX Integration (optional)
 platform: Android
-page_order: 1
+page_order: 2
 description: "This article covers how to integrate AndroidX."
 
 ---

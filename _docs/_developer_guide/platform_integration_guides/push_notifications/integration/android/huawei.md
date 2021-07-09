@@ -1,5 +1,5 @@
 ---
-nav_title: Huawei
+nav_title: Huawei Integration
 page_title: Huawei Push Notification Integration
 platform: Android
 page_order: 1

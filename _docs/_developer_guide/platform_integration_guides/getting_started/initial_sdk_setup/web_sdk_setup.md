@@ -1,7 +1,7 @@
 ---
 nav_title: Web
 page_title: Web Initial SDK Setup
-page_order: 2
+page_order: 3
 
 description: "This article covers initial SDK setup for the Braze Web SDK."
 platform: Web
