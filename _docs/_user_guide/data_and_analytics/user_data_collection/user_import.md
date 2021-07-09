@@ -11,7 +11,11 @@ tool: Dashboard
 There are two approaches for importing customer data into your Braze dashboard: REST API and CSV.
 
 {% alert important %}
-Braze does not HTML sanitize data during ingestion time. When importing data into Braze, specifically meant for personalization usage in a web browser, ensure that it is stripped of HTML, JavaScript, or any other script tag that potentially could be leveraged maliciously when rendered in a web browser.  Alternatively, for HTML, you can use Braze's Liquid filters (strip_html) to HTML escape rendered text. 
+Braze does not sanitize HTML data during ingestion time. When importing data into Braze, specifically meant for personalization usage in a web browser, ensure that it is stripped of HTML, JavaScript, or any other script tag that potentially could be leveraged maliciously when rendered in a web browser.  Alternatively, for HTML, you can use Braze's Liquid filters (strip_html) to HTML escape rendered text. 
+
+Input:  {{ "Have <em>you</em> read <strong>Ulysses</strong>?" | strip_html }}
+
+Output: Have you read Ulysses?
 {% endalert %}
 
 ## REST API
