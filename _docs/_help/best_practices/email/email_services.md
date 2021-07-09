@@ -5,6 +5,7 @@ page_order: 3
 page_type: reference
 description: "This article covers the types of email support available through Braze."
 channel: email
+no_index: true
 ---
 
 # Email Services {#email-services}

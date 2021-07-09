@@ -4,7 +4,7 @@ nav_title: In-App Messages
 layout: dev_guide
 guide_top_header: "In-App Messages"
 guide_top_text: ""
-
+no_index: true
 page_type: landing
 description: "This landing page is home to best practices for building and sending in-app messages."
 channel: in-app messages

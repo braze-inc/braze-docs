@@ -93,7 +93,8 @@ validurls['/docs/api/objects_filters/webhook_object/'] = '/docs/api/objects_filt
 validurls['/docs/api/objects_filters/windows_objects/'] = '/docs/api/objects_filters/messaging/windows_objects/';
 validurls['/docs/api/objects_filters/content_cards_object/'] = '/docs/api/objects_filters/messaging/content_cards_object/';
 
-validurls['/docs/rest_apis/'] = '/docs/developer_guide/rest_api/basics/';
+validurls['/docs/rest_api/'] = '/docs/api/basics/';
+validurls['/docs/rest_apis/'] = '/docs/api/basics/';
 validurls['/docs/web'] = '/docs/developer_guide/platform_integration_guides/web/initial_sdk_setup/';
 validurls['/docs/platform_wide/'] = '/docs/developer_guide/home/';
 validurls['/docs/home/'] = '/docs/user_guide/introduction/';
@@ -282,6 +283,7 @@ validurls['/docs/partners/channel_extensions/'] = '/docs/partners/home/';
 validurls['/docs/partners/data_augmentation/'] = '/docs/partners/home/';
 validurls['/docs/partners/insights/'] = '/docs/partners/home/';
 validurls['/docs/partners/advertising_technologies/social/canvas_steps/google_audience_sync/'] = '/docs/partners/canvas_steps/google_audience_sync/';
+validurls['/docs/partners/data_and_infrastructure_agility/analytics/amplitude_for_currents/'] = '/docs/partners/data_and_infrastructure_agility/analytics/amplitude/amplitude_for_currents/';
 
 validurls['/docs/help/release_notes/most_recent/'] = '/docs/help/release_notes/#most-recent/';
 validurls['/docs/help/best_practices/email/ip_warming/'] = '/docs/user_guide/onboarding_with_braze/email_setup/ip_warming/';
@@ -332,7 +334,11 @@ validurls['/docs/hidden/private_betas/fb_app_review/'] = '/docs/fb_app_review/';
 validurls['/docs/hidden/private_betas/nested_object_support/'] = '/docs/user_guide/data_and_analytics/custom_data/nested_object_support/';
 validurls['/docs/services_handbook_21/'] = '/docs/assets/download_file/Braze_Success_and_Support_Services_Handbook_21.pdf';
 validurls['/docs/services_handbook_22/'] = '/docs/assets/download_file/Braze_Success_and_Support_Services_Handbook_22.pdf';
-
+validurls['/docs/hidden/private_betas/view_pii/'] = '/docs/view_pii';
+validurls['/docs/hidden/private_betas/partners/adobe/'] = '/docs/partners/adobe';
+validurls['/docs/hidden/private_betas/link_aliasing/'] = '/docs/link_aliasing/';
+validurls['/docs/hidden/private_betas/shopify/'] = '/docs/partners/shopify/';
+validurls['/docs/hidden/private_betas/twilio/'] = '/docs/partners/twilio/';
 
 validurls['/docs/api/tls_deprecation/'] = '/docs/help/release_notes/deprecations/tls_deprecation/';
 validurls['/docs/help/gdpr_compliance/'] = '/docs/help/dp-technical-assistance/';

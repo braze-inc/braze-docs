@@ -5,6 +5,7 @@ page_order: 1
 page_type: solution
 description: "This article walks you through the difference between AND and OR operators, and how you can use them to build powerful segments."
 tool: Segments
+no_index: true
 ---
 
 # Using Segmentation Logic With And/Or

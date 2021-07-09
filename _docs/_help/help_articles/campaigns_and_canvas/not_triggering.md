@@ -7,6 +7,7 @@ description: "This help article walks you through steps to resolve issues with c
 tool: 
 - Campaigns
 - Canvas
+no_index: true
 ---
 
 # Why Is My Campaign/Canvas Not Triggering?
