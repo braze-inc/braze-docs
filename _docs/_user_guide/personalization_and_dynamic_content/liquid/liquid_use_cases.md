@@ -1,10 +1,11 @@
 ---
-nav_title: Liquid Use Cases
+nav_title: Liquid Use Case Library
 page_order: 10
 
+excerpt_separator: ""
 page_type: glossary
 layout: liquid_use_case_glossary
-description: "This landing page is home to sample liquid use cases organized by category, such as Anniversaries, App Usage, Countdowns, and more."
+description: "This landing page is home to sample Liquid use cases organized by category, such as Anniversaries, App Usage, Countdowns, and more."
 ---
 
 {% api %}
@@ -21,10 +22,9 @@ Anniversaries and Birthdays
 
 ### Personalize Messages Based on a User's Anniversary Year {#anniversary-year}
 
-This use case shows how to calculate a user’s app anniversary based on their initial sign up date and display different messages based on how many years they are celebrating.
+This use case shows how to calculate a user’s app anniversary based on their initial sign-up date and display different messages based on how many years they are celebrating.
 
 {% raw %}
-
 ```liquid
 {% assign this_month = 'now' | date: "%B" %}
 {% assign this_day = 'now' | date: "%d" %}
@@ -57,22 +57,20 @@ Happy seven year anniversary!
 {% endif %}
 {% endif %}
 ```
-
 {% endraw %}
 
 **Explanation:** Here, we use the reserved variable `now` to template in the current date and time in [ISO 8601](http://en.wikipedia.org/wiki/ISO_8601 "ISO 8601 Time Code Wiki") format. The filters `%B` (month, i.e. "May") and `%d` (day, i.e. "18") format the current month and day. We then use the same date and time filters on the `signup_date` values to ensure we can compare the two values using conditional tags and logic.
 
-Then we repeat three more variable statements to get the `%B` and `%d` for the `signup_date`, but also adding `%Y` (year, i.e. "2021"). This forms the date and time of the `signup_date` into just the year. Knowing the day and month lets us check if the user's anniversary is today, and knowing the year tells us how many years it's been—which lets us know how many years to congratulate them on!
+Then we repeat three more variable statements to get the `%B` and `%d` for the `signup_date`, but also adding `%Y` (year, i.e., "2021"). This forms the date and time of the `signup_date` into just the year. Knowing the day and month lets us check if the user's anniversary is today, and knowing the year tells us how many years it's been—which lets us know how many years to congratulate them on!
 
-{% alert tip %} You can create as many conditions as years you've been collecting signup dates. {% endalert %}  
+{% alert tip %} You can create as many conditions as years you've been collecting sign-up dates. {% endalert %}  
 
 ### Personalize Messages Based on a User's Birthday Week {#birthday-week}
 
-This use case shows how to find a user's birthday, compare it to the current date, and then display special birthday messages that will show before, during, and after their birthday week.
+This use case shows how to find a user's birthday, compare it to the current date, and then display special birthday messages before, during, and after their birthday week.
 
 {% raw %}
-
-``` liquid
+```liquid
 {% assign this_week = 'now' | date: '%W' %}
 {% assign birthday_week = ${date_of_birth}  | date: '%W' %}
 {% assign last_week = {{this_week}} | minus: 1 %}
@@ -88,10 +86,9 @@ Happy birthday for next week!
 No birthday for you!
 {% endif %}
 ```
-
 {% endraw %}
 
-**Explanation:** Similar to the [anniversary year](#anniversary-year) use case, here we take the reserved variable `now` and use the `%W` filter (week, i.e. week 12 out of 52 in a year) to get the number week of the year that the user's birthday falls within. If the user's birthday week matches the current week, we send them a message congratulating them! 
+**Explanation:** Similar to the [anniversary year](#anniversary-year) use case, here we take the reserved variable `now` and use the `%W` filter (week, i.e., week 12 out of 52 in a year) to get the number week of the year that the user's birthday falls within. If the user's birthday week matches the current week, we send them a message congratulating them! 
 
 We also include statements for `last_week` and `next_week` to further personalize your messaging.
 
@@ -100,7 +97,6 @@ We also include statements for `last_week` and `next_week` to further personaliz
 This use case shows how to calculate a user's birthday month, check if their birthday falls in the current month, and if so, send a special message.
 
 {% raw %}
-
 ```liquid
 {% assign this_month = ‘now’ | date: “%B” %}
 {% assign birth_month = {{${date_of_birth}}} | date: “%B” %}
@@ -110,10 +106,9 @@ Message body
 {% abort_message() %}
 {% endif %}
 ```
-
 {% endraw %}
 
-**Explanation:** Similar to the [birthday week](#birthday-week) use case, except here we use the `%B` filter (month, i.e. "May") to calculate which users have a birthday this month. A potential application could be addressing birthday users in a monthly email.
+**Explanation:** Similar to the [birthday week](#birthday-week) use case, except here we use the `%B` filter (month, i.e., "May") to calculate which users have a birthday this month. A potential application could be addressing birthday users in a monthly email.
 
 {% endapi %}
 
@@ -129,12 +124,11 @@ App Usage
 - [Personalize messages based on when a user last opened the app](#app-last-opened)
 - [Show a different message if a user last used the app less than three days ago](#app-last-opened-less-than)
 
-### Send Messages in a User's Language if They've Logged a Session {#app-session-language}
+### Send Messages in a User's Language if They Haven't Logged a Session {#app-session-language}
 
-This use case checks the user's language set in the Braze dashboard and if it matches the language options provided, will display a message in their language. This use case also includes logic to display a message based on the language manually collected via a custom attribute, which can be used as a fallback if the user hasn’t logged a session yet.
+This use case checks if a user has logged a session, and if not, includes logic to display a message based on the language manually collected via a custom attribute, if any. If there is no language information tied to their account, it will display the message in the default language. If a user has logged a session, it will pull any language information tied to the user and display the appropriate message. 
 
 {% raw %}
-
 ```liquid
 {% if {{${last_used_app_date}}} == nil %}
 {% if {{custom_attribute.${user_language}}} == 'en' %}
@@ -154,24 +148,23 @@ Has language - Default language
 {% endif %}
 {% endif %}
 ```
-
 {% endraw %}
+
 {% raw %}
-**Explanation:** Here we're using two grouped `if` statements, nested. The first `if` statement checks to see if the user has started a session by checking if the `last_used_app_date` is `nil`. This is because `{{${language}}}` is auto-collected by the SDK when a user logs a session. If the user hasn't logged a session, we won't have their language, so you'll need to manually track language as a custom attribute (here we've used `user_language`).
-
+**Explanation:** Here, we're using two grouped `if` statements, nested. The first `if` statement checks to see if the user has started a session by checking if the `last_used_app_date` is `nil`. This is because `{{${language}}}` is auto-collected by the SDK when a user logs a session. If the user hasn't logged a session, we won't have their language yet, so this checks if any language-related custom attributes have been saved, and based on that information, will display a message in that language, if possible. 
 {% endraw %}
 
-The second `if` statement just checks for the default attribute, because the user doesn't have `nil` for the `last_used_app_date`, which means they've logged a session and we have their language.
+The second `if` statement just checks for the default attribute because the user doesn't have `nil` for the `last_used_app_date`, which means they've logged a session, and we have their language.
 
-{% alert note %}[`Nil`](https://shopify.github.io/liquid/basics/types/#nil) is a reserved variable that is returned when Liquid code has no results. `Nil` is treated as `false` in an `if` block.
+{% alert note %}
+[`Nil`](https://shopify.github.io/liquid/basics/types/#nil) is a reserved variable that is returned when Liquid code has no results. `Nil` is treated as `false` in an `if` block.
 {% endalert %}
 
 ### Personalize Messages Based on When a User Last Opened the App {#app-last-opened}
 
-This use case calculates the last time a user opened the app, and depending on the length of time, will display a different personalized message.
+This use case calculates the last time a user opened your app and will display a different personalized message depending on the length of time.
 
 {% raw %}
-
 ```liquid
 {% assign last_used_date = {{${last_used_app_date}} | date: "%s" %}
 {% assign now = 'now' | date: "%s" %}
@@ -179,18 +172,16 @@ This use case calculates the last time a user opened the app, and depending on t
 {% if {{difference_in_days}} < 3 %}
 Happy to see you again!
 {% else %}
-It's been a while, here are some of our latest updates.
+It's been a while; here are some of our latest updates.
 {% endif %}
 ```
-
 {% endraw %}
 
 ### Show a Different Message if a User Last Used the App Less Than Three Days Ago {#app-last-opened-less-than}
 
-This use case calculates how long ago a user used an app, and depending on the length of time, will display a different personalized message.
+This use case calculates how long ago a user used your app, and depending on the length of time, will display a different personalized message.
 
 {% raw %}
-
 ```liquid
 {% assign last_used_date = {{${last_used_app_date}} | date: "%s" %}
 {% assign now = 'now' | date: "%s" %}
@@ -201,7 +192,6 @@ Message for a recently active user
 Message for a less active user
 {% endif %}
 ```
-
 {% endraw %}
 
 {% endapi %}
@@ -228,25 +218,25 @@ Countdowns
 
 ### Add X Days to Today's Date {#countdown-add-x-days}
 
-This use case uses Liquid to add a specific number of days to the current date to reference and add in messages. For example, you may want to send a mid-week message that shows events in the area for the weekend, like “Here are the movies we’re showing in 3 days!”
+This use case adds a specific number of days to the current date to reference and add in messages. For example, you may want to send a mid-week message that shows events in the area for the weekend, like “Here are the movies we’re showing in 3 days!”
 
 {% raw %}
-
 ```liquid
 {{ “now” | date:‘%s’ | plus:259200 | date:“%F” }}
 ```
-
 {% endraw %}
+
 The `plus` value will always be in seconds, so we end with the filter `%F` to translate the seconds to days.
 
-{% alert important %} You may want to include a URL or deep link to a list of events in your message so you can send the user to a list of actions that are happening in the future. {% endalert %}
+{% alert important %}
+You may want to include a URL or deep link to a list of events in your message so you can send the user to a list of actions that are happening in the future. 
+{% endalert %}
 
 ### Calculate a Countdown From a Set Point in Time {#countdown-difference-days}
 
-This use case calculates the difference in days between a specific date and today. This difference can be used to display a countdown to your users.
+This use case calculates the difference in days between a specific date and the current date. This difference can be used to display a countdown to your users.
 
 {% raw %}
-
 ```liquid
 {% assign event_date = '2020-08-19' | date: "%s" %}
 {% assign today = 'now' | date: "%s" %}
@@ -254,7 +244,6 @@ This use case calculates the difference in days between a specific date and toda
 {% assign difference_days = difference | divided_by: 86400 %}
 you have {{ difference_days }} days left!
 ```
-
 {% endraw %}
 
 ### Create a Countdown for Specific Shipping Dates and Priorities {#countdown-shipping-options}
@@ -262,7 +251,6 @@ you have {{ difference_days }} days left!
 This use case captures different shipping options, calculates the length of time it would take to receive, and displays messages encouraging users to purchase in time to receive their package by a certain date.
 
 {% raw %}
-
 ```liquid
 {% assign standard_shipping_start = "2019-12-10T00:00-05:00" | date: "%s" %}
 {% assign standard_shipping_end = "2019-12-20T13:00-05:00" | date: "%s" %}
@@ -281,16 +269,16 @@ difference e days: {{difference_e_days}}
 
 {% if today >= standard_shipping_start and today <= standard_shipping_end %}
 {% if difference_s_days == 0 %}
-This is the last day to order with standard shipping so your order gets here on time for Christmas Eve!
+This is the last day to order with standard shipping, so your order gets here on time for Christmas Eve!
 {% elsif difference_s_days == 1 %}
-There is {{difference_s_days}} day left to order with standard shipping so your order gets here on time for Christmas Eve!
+There is {{difference_s_days}} day left to order with standard shipping, so your order gets here on time for Christmas Eve!
 
 {% else %}
 There are {{difference_s_days}} days left to order with standard shipping so your order gets here on time for Christmas Eve!
 {% endif %}
 {% elsif today > standard_shipping_end and today < express_shipping_end %}
 {% if difference_e_days == 1 %}
-There is {{difference_e_days}} day left to order with express shipping so your order gets here on time for Christmas Eve!
+There is {{difference_e_days}} day left to order with express shipping, so your order gets here on time for Christmas Eve!
 {% else %}
 There are {{difference_e_days}} days left to order with express shipping so your order gets here on time for Christmas Eve!
 {% endif%}
@@ -300,15 +288,13 @@ This is the last day for overnight shipping so your order gets here on time for 
 {% abort_message() %}
 {% endif %}
 ```
-
 {% endraw %}
 
 ### Create a Countdown in Days {#countdown-days}
 
-This use case calculates the time left between a specific event and today, and displays how many days left until the event.
+This use case calculates the time left between a specific event and the current date and displays how many days are left until the event.
 
 {% raw %}
-
 ```liquid
 {% assign event_date = {{custom_attribute.${last_selected_event_date}}} | date: "%s" %}
 {% assign today =  'now' | date: "%s"  %}
@@ -316,19 +302,19 @@ This use case calculates the time left between a specific event and today, and d
 {% assign difference_days = difference | divided_by: 86400 %}
 Your order will arrive in {{ difference_days }} days!
 ```
-
 {% endraw %}
 
-{% alert important %} You will need a custom attribute field with a `date` value. {% endalert %}
+{% alert important %}
+You will need a custom attribute field with a `date` value.
+{% endalert %}
 
 ### Create a Countdown From Days to Hours to Minutes {#countdown-dynamic}
 
-This use case calculates the time left between a specific event and today, and depending on the length left until the event, will change the time value (days, hours, minutes) and display different personalized messages.
+This use case calculates the time left between a specific event and the current date. Depending on the time left until the event, it will change the time value (days, hours, minutes) to display different personalized messages.
 
-For example, if there’s two days until a customer's order arrives, you might say “Your order will arrive in 2 days.” Whereas if there’s less than a day, you could change it to “Your order will arrive in 17 hours.”
+For example, if there are two days until a customer's order arrives, you might say, “Your order will arrive in 2 days.” Whereas if there’s less than a day, you could change it to “Your order will arrive in 17 hours.”
 
 {% raw %}
-
 ```liquid
 {% assign today =  'now' | date: "%s"  %}
 {% assign scheme_finish = "2017-10-13T10:30:30" | date: "%s" %}
@@ -344,17 +330,17 @@ You have {{difference_minutes}} minutes left till your order arrives!
 You have {{difference_days}} days left till your order arrives!
 {% endif %}
 ```
-
 {% endraw %}
 
-{% alert important %} You will need a custom attribute field with a `date` value. You will also need to set time thresholds of when you want the time to be displayed in days, hours, and minutes. {% endalert %}
+{% alert important %}
+You will need a custom attribute field with a `date` value. You will also need to set time thresholds of when you want the time to be displayed in days, hours, and minutes.
+{% endalert %}
 
 ### Create a Countdown to a Future Date {#countdown-future-date}
 
-This use case calculates the difference between today and a future date and displays a message noting how many days until the event.
+This use case calculates the difference between the current date and future event date and displays a message noting how many days until the event.
 
 {% raw %}
-
 ```liquid
 {% assign event_date = '2019-02-19' | date: "%s" %}
 {% assign today = 'now' | date: "%s" %}
@@ -363,17 +349,15 @@ This use case calculates the difference between today and a future date and disp
 There are {{difference_days}} until your birthday!
 {% endif %}
 ```
-
 {% endraw %}
 
 ### Display How Many Days Left Until a Custom Date Attribute Will Arrive {#countdown-custom-date-attribute}
 
-This use case calculates the difference in days between today and a future date, and displays a message if the difference matches a set number.
+This use case calculates the difference in days between the current and future dates and displays a message if the difference matches a set number.
 
-In this example, a user will receive a message if it is within two days of the custom date attribute. Otherwise, the message will not be sent.
+In this example, a user will receive a message within two days of the custom date attribute. Otherwise, the message will not be sent.
 
 {% raw %}
-
 ```liquid
 {% assign today = 'now' | date: '%j' | plus: 0 %}
 {% assign surgery_date = {{custom_attribute.${surgery_date}}} | date: '%j' | plus: 0 %}
@@ -385,7 +369,6 @@ Your surgery is in 2 days on {{custom_attribute.${surgery_date}}}
 {% abort_message %}
 {% endif %}
 ```
-
 {% endraw %}
 
 ### Display How Much Time Is Left, and Abort the Message if There’s Only X Time Left {#countdown-abort-window}
@@ -395,7 +378,6 @@ This use case will calculate how long until a certain date, and depending on the
 For example, “You have x hours left to buy your ticket for London”, but don’t send the message if it’s within two hours of flight time for London.
 
 {% raw %}
-
 ```liquid
 {% assign today =  'now' | date: "%s"  %}
 {% assign dep_time = {{event_properties.${outboundDate}}} | date: "%s" %}
@@ -408,7 +390,6 @@ Don’t forget to buy your ticket to {{event_properties.${toStation}}} within ne
 Still traveling to {{event_properties.${toStation}}} in more than 24 hours? Book now!
 {% endif %}
 ```
-
 {% endraw %}
 
 {% alert important %} You will need a custom event property. {% endalert %}
@@ -418,7 +399,6 @@ Still traveling to {{event_properties.${toStation}}} in more than 24 hours? Book
 This use case captures your membership expiry date, calculates how long until it expires, and displays different messages based on how long until your membership expires.
 
 {% raw %}
-
 ```liquid
 {% assign membership_expiry = {{custom_attribute.${membership_expiry_date}}} | date: "%s" %}
 {% assign today = 'now' | date: "%s" %}
@@ -432,18 +412,17 @@ You have {{difference_days}} days left in your trial, make sure you upgrade!
 HURRY! You have {{difference_days}} days left in your trial, make sure you upgrade!
 
 {% elsif difference_days == 2 %}
-LAST CHANCE! You have {{difference_days}} days left in your trial, make sure you upgrade!
+LAST CHANCE! You have {{difference_days}} days left in your trial. Make sure you upgrade!
 
 {% else %}
-You have few days left in your trial, make sure to upgrade!
+You have few days left in your trial. Make sure to upgrade!
 {% endif %}
 ```
-
 {% endraw %}
 
 ### Personalize In-App Messages Based on Users' Date and Language {#countdown-personalize-language}
 
-This use case calculates a countdown to an event, and based on a user's language setting in the dashboard, will display this countdown in their language.
+This use case calculates a countdown to an event, and based on a user's language setting, will display the countdown in their language.
 
 For example, you might send a series of upsell messages to users once a month to let them know how long an offer is still valid with four in-app messages:
 
@@ -453,7 +432,6 @@ For example, you might send a series of upsell messages to users once a month to
 - Final day
 
 {% raw %}
-
 ```liquid
 {% assign today = 'now' | date: "%s" %}
 {% assign end_date = "2021-04-16T23:59:59" | date: "%s" %}
@@ -520,25 +498,23 @@ Hi, the offer is only valid today.
 {% abort_message('calculation failed') %}
 {% endif %}
 ```
-
 {% endraw %}
 
-{% alert important %} You will need to assign a `date` value and include abort logic if the given date falls outside of the date range. For exact day calculations, the assigned end date must include 23:59:59. {% endalert %}
+{% alert important %}
+You will need to assign a `date` value and include abort logic if the given date falls outside of the date range. For exact day calculations, the assigned end date must include 23:59:59.
+{% endalert %}
 
 ### Template in the Date 30 Days from Now, Formatted as Month and Day {#countdown-template-date}
 
 This use case will display the date 30 days from now to use in messaging.
 
 {% raw %}
-
 ```liquid
 {% assign today
  = 'now' | date: "%s" %}
 {% assign thirty_days = {{today}} | plus: 2592000 | date: "%B %d" %}
 ```
-
 {% endraw %}
-
 
 {% endapi %}
 
@@ -556,10 +532,9 @@ Custom Attribute
 
 ### Personalize a Message Based on Matching Custom Attributes {#attribute-matching}
 
-This use case checks if a user meets one or more custom attributes, and based on if they meet, will display different personalized messages.
+This use case checks if a user has specific custom attributes and, if so, will display different personalized messages. 
 
 {% raw %}
-
 ```liquid
 {% if custom_attribute.${hasShovel} == true and custom_attribute.${VisitToGroundTooTough} > 0 %}
 The ground is very hard. The dirt road goes East.
@@ -569,19 +544,17 @@ The dirt road goes East.
 The dirt road goes East.
 The shovel here.
 {% else %}
-You are at a dead end of a dirt road. The road goes to the east. In the distance you can see that it will eventually fork off. The trees here are very tall royal palms, and they are spaced equidistant from each other.
+You are at a dead-end of a dirt road. The road goes to the east. In the distance, you can see that it will eventually fork off. The trees here are very tall royal palms, and they are spaced equidistant from each other.
 There is a shovel here.
 {% endif %}
 ```
-
 {% endraw %}
 
 ### Subtract Two Custom Attributes to Display the Difference as a Monetary Value {#attribute-monetary-difference}
 
-This use case captures two monetary custom attributes, then calculates and displays the difference to let a user know how far they have to reach their goal.
+This use case captures two monetary custom attributes, then calculates and displays the difference to let users know how far they have to reach their goal.
 
 {% raw %}
-
 ```liquid
 {% assign event_goal = {{custom_attribute.${last_selected_event_personal_goal}}} %}
 {% assign current_raised =  {{custom_attribute.${last_selected_event_personal_amount_raised}}} %}
@@ -589,21 +562,18 @@ This use case captures two monetary custom attributes, then calculates and displ
 You only have ${{ difference | round: 0 | number_with_delimiter }} left to raise!
 {% endif %}
 ```
-
 {% endraw %}
 
 ### Reference a User's First Name if Their Full Name is Stored in the first_name Field {#attribute-first-name}
 
-This use case captures a user's first name if both first and last name are stored in a single field, and then uses this first name to display a welcome message.
+This use case captures a user's first name (if both first and last name are stored in a single field) and then uses this first name to display a welcome message.
 
 {% raw %}
-
 ```liquid
 {{${first_name} | truncatewords: 1, "" | default: 'hi'}}
 {% assign name = {{${first_name}}} | split: ' ' %}
 Hi {{name[0]}}, here's your message!
 ```
-
 {% endraw %}
 
 {% endapi %}
@@ -622,12 +592,11 @@ Custom Event
 
 ### Abort Push Notification if a Custom Event is Within Two Hours of Now {#event-abort-push}
 
-This use case calculates the time until a specific event, and depending on the amount of time left, will display different personalized messages.
+This use case calculates the time until an event, and depending on the amount of time left, will display different personalized messages.
 
 For example, you may want to prevent a push from going out if a custom event property will pass in the next two hours. This example uses the scenario of an abandoned cart for a train ticket.
 
 {% raw %}
-
 ```liquid
 {% assign today =  'now' | date: "%s"  %}
 {% assign dep_time = {{event_properties.${outboundDate_Time}}} | date: "%s" %}
@@ -640,15 +609,13 @@ Don’t forget to buy your ticket to {{event_properties.${toStation}}} within ne
 Still traveling to {{event_properties.${toStation}}} in more than 24 hours? Book now
 {% endif %}
 ```
-
 {% endraw %}
 
 ### Send a Campaign Each Time a User Performs a Custom Event Three Times {#event-three-times}
 
-**Goal:** Send a campaign to a user when they abandon their cart three times in a row.
+This use case checks if a user has performed a custom event three times, and if so, will display a message or send a campaign. 
 
 {% raw %}
-
 ```liquid
 {% assign cadence = custom_attribute.${example} | minus: 1 | modulo: 3 %}
 {% if custom_attribute.${example} == blank %}
@@ -658,17 +625,15 @@ Still traveling to {{event_properties.${toStation}}} in more than 24 hours? Book
 {% endif %}
 Did you forget something in your shopping cart?
 ```
-
 {% endraw %}
 
-{% alert important %} You must have an event property of the custom event count, or use a webhook to your Braze endpoint. This is so you can increment a custom attribute (`example_event_count`) every time the user performs the event. This example uses a cadence of three (1, 4, 7, 10, etc).{% endalert %}
+{% alert important %} You must have an event property of the custom event count or use a webhook to your Braze endpoint. This is to increment a custom attribute (`example_event_count`) every time the user performs the event. This example uses a cadence of three (1, 4, 7, 10, etc.).{% endalert %}
 
 ### Send a Message to Users Who Have Only Purchased from One Category {#event-purchased-one-category}
 
-This use case captures a list of the categories a user has purchased from, and if only one purchase category exists, will display a personalized message.
+This use case captures a list of the categories a user has purchased from, and if only one purchase category exists, it will display a message.
 
 {% raw %}
-
 ```liquid
 {% assign category = {{custom_attribute.${categories_purchased}}} %}
 {% assign uniq_cat = {{category | uniq }} %}
@@ -678,7 +643,6 @@ This use case captures a list of the categories a user has purchased from, and i
 {% abort_message() %}
 {% endif %}
 ```
-
 {% endraw %}
 
 {% endapi %}
@@ -699,7 +663,6 @@ Language
 This use case will display the current date, month, and year, with the month in a different language. The example provided uses Swedish.
 
 {% raw %}
-
 ```liquid
 {% assign day = 'now' | date: "%e" %}
 {% assign year =  'now' | date: "%Y" %}
@@ -731,17 +694,15 @@ This use case will display the current date, month, and year, with the month in 
 {{day}} December {{year}}
 {% endif %}
 ```
-
 {% endraw %}
 
 ### Personalize Messaging Based on Day of the Week and User's Language {#language-personalize-message}
 
-This use case checks the current day of the week and based on the day, if the user's language is set to one of the language options provided, will display a specific message in their language.
+This use case checks the current day of the week and, based on the day, if the user's language is set to one of the language options provided, it will display a specific message in their language.
 
-The example provided stops at Tuesday, but can be repeated for each day of the week.
+The example provided stops on Tuesday but can be repeated for each day of the week.
 
 {% raw %}
-
 ```liquid
 {% assign today  = 'now' | date: "%A" %}
 
@@ -756,7 +717,7 @@ Purchase today and take your language learning to the next level. 🚀
 今天就购买并将您的语言提高到一个新水平吧。🚀
 
 {% else %}
-It's monday but language doesn't match 
+It's Monday, but the language doesn't match 
 {% endif %}
 
 {% elsif today == 'Tuesday' %}
@@ -778,7 +739,6 @@ tuesday default
 {% endif %}
 {% endif %}
 ```
-
 {% endraw %}
 
 {% endapi %}
@@ -805,14 +765,12 @@ Miscellaneous
 This use case takes a string of words, splits them into an array, and capitalizes the first letter of each word.
 
 {% raw %}
-
 ```liquid
 {% assign words_array = {{custom_attribute.${address}}} | split: ' ' %}
 {% for words in {{words_array}} %}
 {{ words | capitalize | append: ' ' }}
 {% endfor %} 
 ```
-
 {% endraw %}
 
 ### Compare Custom Attribute Value Against an Array {#misc-compare-array}
@@ -820,7 +778,6 @@ This use case takes a string of words, splits them into an array, and capitalize
 This use case takes a list of favorite stores, checks if any of a user's favorite stores are in that list, and if so, will display a special offer from those stores.
 
 {% raw %}
-
 ```liquid
 {% assign favorite_stores = 'Target,Walmart,Costco' | split: ',' %}
 {% for store in favorite_stores %}
@@ -834,7 +791,6 @@ Today's offer from {{store}}
 {% endif %}
 {% endfor %}
 ```
-
 {% endraw %}
 
 {% alert important %} This sequence has a `break` tag in the primary conditional statement. This causes the loop to stop when a match is found. If you want to display many or all matches, remove the `break` tag. {% endalert %}
@@ -844,16 +800,15 @@ Today's offer from {{store}}
 This use case allows users to set up upcoming reminders based on custom events. The example scenario allows a user to set a reminder for a policy renewal date that is 26 or more days away, where reminders are sent 26, 13, 7, or 2 days before the policy renewal date.
 
 {% raw %}
-
 ```liquid
 {% comment %}
-Depending on how the reminder_capture property is passed to Braze, with/without a timestamp, then the number of days could have an impact on whether a user falls on either side of the 26/13/7/2-day windows.
+Depending on how the reminder_capture property is passed to Braze, with/without a timestamp, the number of days could impact whether a user falls on either side of the 26/13/7/2-day windows.
 Once users have been assigned to a Reminder journey/flow, they are then scheduled to enter a subsequent Canvas.
-This 'Event Listener' can be used to split out users into different journeys based on the Custom Event properties that are being sent to Braze.
+This 'Event Listener' can be used to split out users into different journeys based on the Custom Event properties sent to Braze.
 {% endcomment %}
 
 {% comment %}
-When testing, ensure the Campaign ID, Campaign API Endpoint or Canvas ID, Canvas API Endpoint are entered correctly. In this example, Canvas ID and Canvas API endpoint have been set up for sharing with client; in practice this can be testing using a Campaign ID and Campaign API endpoint..
+When testing, ensure the Campaign ID, Campaign API Endpoint, Canvas ID, Canvas API Endpoint are entered correctly. In this example, Canvas ID and Canvas API endpoint have been set up for sharing with the client; in practice, this can be testing using a Campaign ID and Campaign API endpoint.
 {% endcomment %}
 
 {% comment %}
@@ -865,7 +820,7 @@ The following step calculates how much there is between today's date and the Rem
 {% assign time_to_reminder = reminder_start_date | minus: today %}
 
 {% comment %}
-The following step checks if the time_to_reminder is more than 26 days away, if this is true, then the user is scheduled to enter the subsequent Canvas 26 days before the reminder_date.
+The following step checks if the time_to_reminder is more than 26 days away; if this is true, then the user is scheduled to enter the subsequent Canvas 26 days before the reminder_date.
 The time is converted from 'seconds from 1970' to the appropriate Reminder Date in the required ISO 8601 format.
 N.B. Additional time zones would need to be catered for by adding an additional API Schedule property of "in_local_time"
 {% endcomment %}
@@ -894,7 +849,7 @@ N.B. Additional time zones would need to be catered for by adding an additional 
 }
 
 {% comment %}
-The following step checks if the time_to_reminder is less than 26 days away, but more than 13 days away.
+The following step checks if the time_to_reminder is less than 26 days away but more than 13 days away.
 Users are scheduled to enter the journey on day 13.
 {% endcomment %}
 
@@ -922,7 +877,7 @@ Users are scheduled to enter the journey on day 13.
 }
 
 {% comment %}
-The following step checks if the time_to_reminder is less than 13 days away, but more than 7 days away.
+The following step checks if the time_to_reminder is less than 13 days away but more than seven days away.
 Users are scheduled to enter the journey on day 7.
 {% endcomment %}
 
@@ -950,7 +905,7 @@ Users are scheduled to enter the journey on day 7.
 }
 
 {% comment %}
-The following step checks if the time_to_reminder is less than 7 days away, but more than 2 days away.
+The following step checks if the time_to_reminder is less than seven days away but more than two days away.
 Users are scheduled to enter the journey on day 2.
 {% endcomment %}
 
@@ -978,23 +933,23 @@ Users are scheduled to enter the journey on day 2.
 }
 {% endif %}
 ```
-
 {% endraw %}
 
-{% alert important %} You will need a custom event `reminder_capture`, and the custom event properties must include at least:
+{% alert important %} 
+
+You will need a custom event `reminder_capture`, and the custom event properties must include at least:
 
 - `reminder-id`: Identifier of the custom event
 - `reminder_date`: User-submitted date when their reminder is due
-- `message_personalisation_X`: Any properties needed to personalize the message at time of send
+- `message_personalisation_X`: Any properties needed to personalize the message at the time of sending
 
 {% endalert %}
 
 ### Find a String Within an Array {#misc-string-in-array}
 
-This use case checks if a custom attribute array contains a specific string, and if it exists, will display different messages.
+This use case checks if a custom attribute array contains a specific string, and if it exists, will display a specific message.
 
 {% raw %}
-
 ```liquid
 {% if custom_attribute.${PartnershipProgramsNotLinked} contains 'Hertz' %}
 Link your Hertz account to use Hertz Fast Lane.
@@ -1006,17 +961,15 @@ Clear helps you breeze through airport security. Complete your one-time in-perso
 Your account is all setup
 {% endif %}
 ```
-
 {% endraw %}
 
 ### Find the Largest Value in an Array {#misc-largest-value}
 
 This use case calculates the highest value in a given custom attribute array to use in user messaging.
 
-For example, you may want to show a user what the current high score is, or highest bid on an item.
+For example, you may want to show a user what the current high score is or the highest bid on an item.
 
 {% raw %}
-
 ```liquid
 {% assign maxValue = 0 %}
 {% for attribute in {{custom_attribute.${array_attribute}}} %}
@@ -1027,19 +980,18 @@ For example, you may want to show a user what the current high score is, or high
 {% endfor %}
 {{maxValue}}
 ```
-
 {% endraw %}
 
-{% alert important %} You must use a custom attribute that has an integer value and is part of an array (list). {% endalert %}
+{% alert important %}
+You must use a custom attribute that has an integer value and is part of an array (list). {% endalert %}
 
 ### Find the Smallest Value in an Array {#misc-smallest-value}
 
 This use case calculates the lowest value in a given custom attribute array to use in user messaging.
 
-For example, you may want to show a user what the lowest score is, or the cheapest item.
+For example, you may want to show a user what the lowest score is or the cheapest item.
 
 {% raw %}
-
 ```liquid
 {% assign minValue = custom_attribute.${array_attribute}[0] | plus: 0 %}
 {% for attribute in {{custom_attribute.${array_attribute}}} %}
@@ -1050,7 +1002,6 @@ For example, you may want to show a user what the lowest score is, or the cheape
 {% endfor %}
 {{minValue}}
 ```
-
 {% endraw %}
 
 {% alert important %} You must use a custom attribute that has an integer value and is part of an array (list). {% endalert %}
@@ -1060,7 +1011,6 @@ For example, you may want to show a user what the lowest score is, or the cheape
 This use case queries the end of a string to use in messaging.
 
 {% raw %}
-
 ```liquid
 {% assign interest = {{custom_attribute.${Buyer Interest}} | first } %}
 {% assign marketplace = {{{{interest}} | split: "" | reverse | join: "" |  truncate: 4, ""}} %}
@@ -1072,15 +1022,13 @@ Your last marketplace search was on {{custom_attribute.${Last marketplace buyer 
 {% abort_message() %}
 {% endif %}
 ```
-
 {% endraw %}
 
 ### Query Values in an Array From a Custom Attribute with Multiple Combinations {#misc-query-array-values}
 
-This use case takes a list of soon to be expired shows, checks if any of a user's favorite shows are in that list, and if so, will display a message notifying the user that they will expire soon.
+This use case takes a list of soon-to-be-expired shows, checks if any of a user's favorite shows are in that list, and if so, will display a message notifying the user that they will expire soon.
 
 {% raw %} 
-
 ```liquid
 {% assign expired_shows = 'Modern Family,The Rookie,Body of Proof,Felicity' | split: ',' %}
 {% for show in expired_shows %}
@@ -1097,7 +1045,6 @@ All episodes of {{new_shows_clean | join: ', ' }} expire on 9/8 - watch them now
 {% abort_message("Not Found") %}
 {% endif %}
 ```
-
 {% endraw %}
 
 {% alert important %} You will need to find matches between the arrays first, then build logic at the end to split up the matches. {% endalert %}
@@ -1123,10 +1070,9 @@ Platform Targeting
 
 This use case checks what platform a user is on, and depending on their platform, will display specific messaging.
 
-For example, you may want to show mobile users shorter versions of message copy, while showing other users the regular, longer version of copy. You could also show mobile users certain messaging that is relevant to them, but wouldn’t be relevant to Web users. For example, iOS messaging might talk about Apple Pay, but Android messaging should mention Google Pay.
+For example, you may want to show mobile users shorter versions of message copy while showing other users the regular, longer version of the copy. You could also show mobile users certain messaging relevant to them but wouldn’t be relevant to Web users. For example, iOS messaging might talk about Apple Pay, but Android messaging should mention Google Pay.
 
 {% raw %}
-
 ```liquid
 {% if targeted_device.${platform} == "ios" or targeted_device.${platform} == "android" %}
 This is a shorter copy.
@@ -1135,19 +1081,21 @@ This is a shorter copy.
 This is the regular copy and much longer than the short version. 
 {% endif %}
 ```
-
 {% endraw %}
 
-{% alert note %} Liquid is case-sensitive, `targeted_device.${platform}` returns the value in all lowercase. {% endalert %}
+{% raw %}
+{% alert note %} 
+Liquid is case-sensitive, `targeted_device.${platform}` returns the value in all lowercase. 
+{% endalert %}
+{% endraw %}
 
 ### Target Only a Specific Platform {#platform-target}
 
-This use case will capture the users device platform, and depending on the platform, will display a message.
+This use case will capture the users' device platform, and depending on the platform, will display a message.
 
 For example, you may want to only send a message to Android users. This can be used as an alternative to selecting an app within the Segmentation tool.
 
 {% raw %}
-
 ```liquid
 {% if {{targeted_device.${platform}}} == 'android' %} 
 
@@ -1157,17 +1105,15 @@ This is a message for an Android user!
 {% abort_message %] 
 {% endif %}
 ```
-
 {% endraw %}
 
 ### Target Only iOS Devices with a Specific OS Version {#platform-target-ios-version}
 
-This use case checks if a user's OS version falls within a certain set, and if so, will display a specific message.
+This use case checks if a user's OS version falls within a certain set of versions and if so, will display a specific message.
 
 The example used sends a warning to users on iOS 10.0 or below that they are phasing out support for the user’s device OS.
 
 {% raw %}
-
 ```liquid
 {% if {{targeted_device.${os}}} == "10.0" or {{targeted_device.${os}}} == "10.0.1" or {{targeted_device.${os}}} == "10.0.2" or {{targeted_device.${os}}} == “10.0.3” or {{targeted_device.${os}}} == “10.1” or {{targeted_device.${os}}} == “10.2” or {{targeted_device.${os}}} == “10.2.1” or {{targeted_device.${os}}} == “10.3” or {{targeted_device.${os}}} == “10.3.1” or {{targeted_device.${os}}} == “10.3.2” or {{targeted_device.${os}}} == “10.3.3” or {{targeted_device.${os}}} == “10.3.4” or {{targeted_device.${os}}} == “9.3.1” or {{targeted_device.${os}}} == “9.3.2” or {{targeted_device.${os}}} == “9.3.3” or {{targeted_device.${os}}} == “9.3.4” or {{targeted_device.${os}}} == "9.3.5" %}
 
@@ -1177,15 +1123,13 @@ We are phasing out support for your device's operating system. Be sure to update
 {% abort_message%}
 {% endif %}
 ```
-
 {% endraw %}
 
 ### Target Only Web Browsers {#platform-target-web}
 
-This use case checks if a user's target device runs on Mac or Windows, and if so, will display a specific message.
+This use case checks if a user's target device runs on Mac or Windows and, if so, will display a specific message.
 
 {% raw %}
-
 ```liquid
 {% if {{targeted_device.${os}}} == 'Mac' OR {{targeted_device.${os}}} == 'Windows' %}
 
@@ -1195,7 +1139,6 @@ This message will display on your desktop web browser.
 {% abort_message %}
 {% endif %}
 ```
-
 {% endraw %}
 
 ### Target a Specific Mobile Carrier {#platform-target-carrier}
@@ -1205,7 +1148,6 @@ This use case checks if a user's device carrier is Verizon, and if so, will disp
 For push notifications and in-app message channels, you can specify the device carrier in your message body using Liquid. If the recipient’s device carrier doesn’t match, the message won’t be sent.
 
 {% raw %}
-
 ```liquid
 {%if {targeted_device.${carrier}} contains "verizon" or {targeted_device.${carrier}} contains "Verizon" %}
 
@@ -1215,7 +1157,6 @@ This is a message for Verizon users!
 {% abort_message %}
 {% endif %}
 ```
-
 {% endraw %}
 
 {% endapi %}
@@ -1231,8 +1172,8 @@ Time Zones
 - [Append the CST timezone to a custom attribute](#time-append-cst)
 - [Insert a timestamp](#time-insert-timestamp)
 - [Only send a Canvas push during a window of time in a user's local time zone](#time-canvas-window)
-- [Send a reoccuring in-app message campaign between a window of time in a user's local time zone](#time-reocurring-iam-window)
-- [Send different messages on weekdays vs weekends in a user's local time zone](#time-weekdays-vs-weekends)
+- [Send a reoccurring in-app message campaign between a window of time in a user's local time zone](#time-reocurring-iam-window)
+- [Send different messages on weekdays vs. weekends in a user's local time zone](#time-weekdays-vs-weekends)
 - [Send different messages based on time of day in a user's local time zone](#time-of-day)
 
 ### Append the CST Timezone to a Custom Attribute {#time-append-cst}
@@ -1241,42 +1182,35 @@ This use case displays a custom date attribute in a given time zone.
 
 Option 1:
 {% raw %}
-
 ```liquid
 {{custom_attribute.${application_expires_date} | time_zone: -0005 | date: '%B, %d %Y' }}
 ```
-
 {% endraw %}
 
 Option 2:
 {% raw %}
-
 ```liquid
 {{custom_attribute.${application_expires_date} | time_zone: 'America/Chicago' | date: '%B %d %Y %z' }}
 ```
-
 {% endraw %}
 
 ### Insert a Timestamp {#time-insert-timestamp}
 
-This use case displays a message that includes a timestamp in their current timezone.
+This use case displays a message that includes a timestamp in their current time zone.
 
 The example provided below will display the date as YYYY-mm-dd HH:MM:SS, such as 2021-05-03 10:41:04.
 
 {% raw %}
-
 ```liquid
 {{${user_id} | default: 'You'}} received a campaign, rendered at ({{ "now" | timezone: ${time_zone} | date: "%Y-%m-%d %H:%M:%S" }})
 ```
-
 {% endraw %}
 
 ### Only Send a Canvas Push During a Window of Time in a User's Local Time Zone {#time-canvas-window}
 
-This use case checks a user's time zone, and if it matches, will display a specific message.
+This use case checks a user's time in their local time zone, and if it falls within a set time, it will display a specific message.
 
 {% raw %}
-
 ```liquid
 {% assign time = 'now' | time_zone: ${time_zone} %}
 {% assign hour = time | date: '%H' | plus: 0 %}
@@ -1284,9 +1218,8 @@ This use case checks a user's time zone, and if it matches, will display a speci
 {% abort_message("Outside allowed time window") %}
 {% endif %}
 
-Here's a message that will send between 8am and 8pm!
+Here's a message that will send between 8 am and 8 pm!
 ```
-
 {% endraw %}
 
 ### Send a Reoccuring In-App Message Campaign Between a Window of Time in a User's Local Time Zone {#time-reocurring-iam-window}
@@ -1296,27 +1229,24 @@ This use case will display a message if a user's current time falls within a set
 For example, the scenario below lets a user know that a store is closed.
 
 {% raw %}
-
 ```liquid
 {% assign time = 'now' | time_zone: ${time_zone} %} 
 {% assign hour = time | date: '%H' | plus: 0 %}
 {% if hour > 21 or hour < 10 %}
 
-Store's closed. Come back between 11am and 9pm!
+Store's closed. Come back between 11 am and 9 pm!
 
 {% else%} 
 {% abort_message("not sent because the store is open") %}
 {% endif %}
 ```
-
 {% endraw %}
 
-### Send Different Messages on Weekdays vs Weekends in a User's Local Time Zone {#time-weekdays-vs-weekends}
+### Send Different Messages on Weekdays vs. Weekends in a User's Local Time Zone {#time-weekdays-vs-weekends}
 
 This use case will check if a user's current day of the week is Saturday or Sunday, and depending on the day, will display different messages.
 
 {% raw %}
-
 ```liquid
 {% assign today = 'now' | time_zone: ${time_zone} | date: "%A" %}
 {% if {{today}} == 'Saturday' or {{today}} == 'Sunday' %}
@@ -1326,17 +1256,15 @@ It’s {{today}}, why don’t you open the app for your transactions?
 It’s {{today}}, why don’t you visit the store?
 {% endif %}
 ```
-
 {% endraw %}
 
 ### Send Different Messages Based on Time of Day in a User's Local Time Zone {#time-of-day}
 
 This use case will display a message if a user's current time falls outside a set window.
 
-For example, you may want to tell a user about a time sensitive opportunity that depends on the time of day.
+For example, you may want to tell a user about a time-sensitive opportunity that depends on the time of day.
 
 {% raw %}
-
 ```liquid
 {% assign time = 'now' | time_zone: ${time_zone} %}
 {% assign hour = time | date: '%H' | plus: 0 %}
@@ -1346,11 +1274,9 @@ For example, you may want to tell a user about a time sensitive opportunity that
 
 Check out this new bar after work today. HH specials!
 ```
-
 {% endraw %}
 
 {% alert note %} This is the opposite of [Quiet Hours]({{site.baseurl}}/user_guide/engagement_tools/campaigns/scheduling_and_organizing/time_based_campaign/#time-based-functionalities-for-campaigns). {% endalert %}
-
 
 {% endapi %}
 
@@ -1373,7 +1299,6 @@ Week/Day/Month
 This use case will take the current month and display the previous month to be used in messaging.
 
 {% raw %}
-
 ```liquid
 {% assign today = 'now' | date: "%m" %}
 {% assign last_month = {{today}} | minus: 1 %}
@@ -1405,17 +1330,15 @@ This use case will take the current month and display the previous month to be u
 
 Here's an overview of what your spending looked like in {{month}}.
 ```
-
 {% endraw %}
 
 ### Send a Campaign at the End of Every Month {#month-end}
 
-This use case will check if the current date falls under a list of dates, and depending on the date, will display a specific message.
+This use case will check if the current date falls within a list of dates, and depending on the date, will display a specific message.
 
 {% alert note %} This does not account for leap years (February 29). {% endalert %}
 
 {% raw %}
-
 ```liquid
 {% assign current_date = 'now' | date: '%b %d' %}
 
@@ -1427,17 +1350,15 @@ The date is correct
 {% abort_message() %}
 {% endif %}
 ```
-
 {% endraw %}
 
 ### Send a Campaign on the Last (Weekday) of the Month {#day-of-month-last}
 
-This use case captures the current month and day, and calculates if the current day falls within the last weekday of the month.
+This use case captures the current month and day and calculates if the current day falls within the last weekday of the month.
 
 For example, you may want to send a survey to your users on the last Wednesday of the month asking for product feedback.
 
 {% raw %}
-
 ```liquid
 {% comment %}Pull the day, day name, month, and year from today's date.{% endcomment %}
 {% assign current_day = "now" | date: "%d" %}
@@ -1480,7 +1401,7 @@ For example, you may want to send a survey to your users on the last Wednesday o
 {% assign last_day_of_month = 28 %}
 {% endif %}
 
-{% comment %}Check that today's date is within a week of the last day of the month. If not, abort the message. If so, check that today is Wednesday. If not, abort message.{% endcomment %}
+{% comment %}Check that today's date is within a week of the last day of the month. If not, abort the message. If so, check that today is Wednesday. If not, abort the message.{% endcomment %}
 
 {% assign diff_in_days = last_day_of_month | minus: current_day | plus: 1%}
 {% if diff_in_days <= 7 %}
@@ -1493,7 +1414,6 @@ For example, you may want to send a survey to your users on the last Wednesday o
 
 
 ```
-
 {% endraw %}
 
 ### Send a Different Message Each Day of the Month {#day-of-month}
@@ -1501,7 +1421,6 @@ For example, you may want to send a survey to your users on the last Wednesday o
 This use case checks if the current date matches one on a list, and depending on the day, will display a distinct message.
 
 {% raw %}
-
 ```liquid
 {% assign today = 'now' | time_zone: {{${time_zone}}} | date: "%Y-%m-%d" %}
 {% assign day_1 = "2019-12-01" | time_zone: {{${time_zone}}} | date: "%Y-%m-%d" %}
@@ -1521,7 +1440,6 @@ Message for 2019-12-03
 {% abort_message() %}
 {% endif %}
 ```
-
 {% endraw %}
 
 ### Send a Different Message Each Day of the Week {#day-of-week}
@@ -1529,7 +1447,6 @@ Message for 2019-12-03
 This use case checks the current day of the week, and depending on the day, will display a distinct message.
 
 {% raw %}
-
 ```liquid
 {% assign today = 'now' | date: "%A" %}
 {% case ‘today' %}
@@ -1558,7 +1475,6 @@ Sunday copy
 Default copy
 {% endcase %}
 ```
-
 {% endraw %}
 
 {% alert note %} You can replace the line "default copy" with {% raw %}`{% abort_message() %}`{% endraw %} to prevent the message from sending if the day of the week is unknown. {% endalert %}
