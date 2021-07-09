@@ -10,6 +10,10 @@ tool: Dashboard
 
 There are two approaches for importing customer data into your Braze dashboard: REST API and CSV.
 
+{% alert important %}
+Braze does not sanitize HTML data during ingestion time, this means that script tags must be stripped for all import data meant for web personalization. [Read more](#html-data-stripping).
+{% endalert %}
+
 ## REST API
 You can use Braze’s User Track REST API endpoint to record custom events, user attributes, and purchases for users. See [User Track Endpoint][12] for more information.
 
@@ -144,6 +148,14 @@ The filter used to create the segment selects users who were created or updated 
 {% alert update %}
 As of 4/10/2018, for each user, only the last 100 CSVs the user was imported/updated in are cached. So, if you attempt to create a segment by filtering for members who were in an older import, the segment will not include users who have been in 100 or more imports since. Prior to 4/10/2018, Braze cached the last 10 CSVs that a user was imported/updated in.
 {% endalert %}
+
+## HTML Data Stripping
+
+Braze does not sanitize HTML data during ingestion time. When importing data into Braze, specifically meant for personalization usage in a web browser, ensure that it is stripped of HTML, JavaScript, or any other script tag that potentially could be leveraged maliciously when rendered in a web browser.  Alternatively, for HTML, you can use Braze's Liquid filters (strip_html) to HTML escape rendered text. 
+
+__Liquid Example:__<br>
+{% raw %}Input:  {{ "Have <em>you</em> read <strong>Ulysses</strong>?" &#124; strip_html }}{% endraw %}<br>
+Output: Have you read Ulysses?
 
 ## Troubleshooting
 

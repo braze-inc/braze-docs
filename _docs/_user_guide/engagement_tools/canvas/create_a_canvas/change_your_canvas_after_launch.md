@@ -16,20 +16,26 @@ tool:
 
 ## Initial Conditions
 
-| **Editable**                         | **Not-Editable**      |
+| **Editable**                     | **Not-Editable**  |
 |----------------------------------|-------------------|
-| Initial Condition                | Conversion Events |
+| Canvas Name and Description      | Conversion Events |
+| Teams and Tags                   |                   |
+| Entry Type                       |                   |
+| Entry Schedule                   |                   |
+| Entry Controls                   |                   |
+| Subscription Status              |                   |
+| Rate Limiting                    |                   |
+| Frequency Capping                |                   |
+| Quiet Hours                      |                   |
 | Target Audience                  |                   |
-| Stop / Resume Initial Condition |                   |
-| Workflow Name                    |                   |
 {: .reset-td-br-1 .reset-td-br-2}
 
 ## Canvas Graph
 
-| **Editable**                                     | **Not-Editable**         |
+| **Editable**                                   | **Not-Editable**     |
 |------------------------------------------------|----------------------|
-| Stop / Resume Execution of All Workflow Steps | Deleting Steps       |
-| Insert Workflow Steps                          | Deleting Variants    |
+| Stop / Resume Execution of All Canvas Steps    | Deleting Steps       |
+| Insert Canvas Steps                            | Deleting Variants    |
 | Add New Connections                            | Deleting Connections |
 | Add New Variants                               |                      |
 | Variant Distribution                           |                      |
@@ -37,7 +43,7 @@ tool:
 
 ## Individual Step
 
-| **Editable**                           | **Not-Editable**                                 |
+| **Editable**                        | **Not-Editable**                             |
 |-------------------------------------|----------------------------------------------|
 | Name                                | Schedule Type (change from delay to trigger) |
 | Message Content                     | Control Percentages                          |
