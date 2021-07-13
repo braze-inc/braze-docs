@@ -371,4 +371,5 @@ validurls['/docs/user_guide/message_building_by_channel/email/creating_an_email_
 validurls['/docs/user_guide/administrative/access_braze/single_sign_on/restriction/'] = '/docs/user_guide/administrative/access_braze/single_sign_on/set_up/#restriction';
 validurls['/docs/user_guide/message_building_by_channel/email/email_reporting/'] = '/docs/user_guide/message_building_by_channel/email/creating_an_email_campaign/#email-reporting';
 validurls['/docs/help/best_practices/client_integration_gallery/'] = '/docs/hidden/other/client_integration_gallery/';
+validurls['/docs/help/best_practices/user_onboarding/'] = '/docs/hidden/other/user_onboarding/';
 
