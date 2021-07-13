@@ -10,9 +10,6 @@ description: "This landing page is home to resources on best practices for your 
 
 guide_menu_title: "Popular Topics"
 guide_menu_list:
-- name: Customer Examples Library
-  link: /docs/help/best_practices/client_integration_gallery/
-  fa_icon: fas fa-user-circle
 - name: Email Best Practices
   link: /docs/help/best_practices/email/
   fa_icon: fas fa-envelope
