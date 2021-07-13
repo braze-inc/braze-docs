@@ -74,7 +74,32 @@ __Override and Return Custom Layout Parameters__<br>
 Within the `getLayoutParams` method, you can use the superclass method to access the original `LayoutParameters` for the in-app message. Then, you can adjust the position by adding or subtracting as desired.
 
 ```java
-TODO
+class CustomSlideUpInAppMessageViewWrapper extends DefaultInAppMessageViewWrapper {
+
+    public CustomInAppMessageViewWrapper(View inAppMessageView,
+                                           IInAppMessage inAppMessage,
+                                           IInAppMessageViewLifecycleListener inAppMessageViewLifecycleListener,
+                                           BrazeConfigurationProvider configurationProvider,
+                                           Animation openingAnimation,
+                                           Animation closingAnimation,
+                                           View clickableInAppMessageView){
+        super(inAppMessageView,
+                inAppMessage,
+                inAppMessageViewLifecycleListener,
+                configurationProvider,
+                openingAnimation,
+                closingAnimation,
+                clickableInAppMessageView)
+
+    }
+    
+    @Override
+    public ViewGroup.LayoutParams getLayoutParams(IInAppMessage inAppMessage){
+        FrameLayout.LayoutParams params = (FrameLayout.LayoutParams)super.getLayoutParams(inAppMessage)
+        params.bottomMargin = params.bottomMargin + 500 //move the view up by 500 pixels
+        return params
+    }
+}
 ```
 {% endtab %}
 {% tab Kotlin %}
@@ -208,7 +233,18 @@ __Using `view_type` for UI Display Behavior__<br>
 The `IInAppMessage` object has an `extras` dictionary that we can query to find the `view_type` key (if any) and display the correct type of view. It’s important to note that in-app messages are configured on a per-message basis, so custom and out-of-the-box modal views can work harmoniously.
 
 ```java
-TODO
+@Override
+public View createInAppMessageView(Activity activity, IInAppMessage inAppMessage) {
+    if("picker".equals(inAppMessage.getExtras().get("view_type"))){
+        return getCustomPickerView(activity, inAppMessage);
+    } else {
+        //Defer to default
+        AppboyInAppMessageManager
+          .getInstance()
+          .getDefaultInAppMessageViewFactory(inAppMessage)
+          .createInAppMessageView(activity, inAppMessage);
+    }
+}
 ```
 {% endtab %}
 {% endtabs %}
@@ -276,7 +312,12 @@ __Assign Custom Attribute__<br>
 Using the view subclass, after a user presses submit, pass the attribute with its corresponding selected value to Braze and dismiss the in-app message by calling `messageClickableView.performClick()`.
 
 ```java
-TODO
+    @Override
+    public void onClick(View v) {
+        String selectedTeam = (String)spinner.selectedItem ;
+        Appboy.getInstance(ctx).getCurrentUser().setCustomUserAttribute("FavoriteTeam", selectedTeam)
+        messageClickableView.performClick()
+    }
 ```
 {% endtab %}
 {% endtabs %}
@@ -313,7 +354,20 @@ __Using `view_type` for UI Display Behavior__<br>
 We will add another `view_type` extra for our new immersive customization. Revisiting the `createInAppMessageView` method, add a option for the "switches" UI:
 
 ```java
-TODO
+@Override
+public View createInAppMessageView(Activity activity, IInAppMessage inAppMessage) {
+    if("picker".equals(inAppMessage.getExtras().get("view_type"))){
+        return getCustomPickerView(activity, inAppMessage);
+    } else if ("switches".equals(inAppMessage.getExtras().get("view_type"))) {
+        return getCustomImmersiveView(activity, inAppMessage); // new customization
+    } else {
+        //Defer to default
+        AppboyInAppMessageManager
+          .getInstance()
+          .getDefaultInAppMessageViewFactory(inAppMessage)
+          .createInAppMessageView(activity, inAppMessage);
+    }
+}
 ```
 {% endtab %}
 {% endtabs %}
@@ -359,7 +413,16 @@ __Inflate and Customize the View__<br>
 Before setting the options for the `RecyclerView` component, the `inAppMessage` message variable is output as a _String_. This message must be formatted as an array of items to be displayed correctly. As an example, this can be achieved using `String.split(",")`. The `title` and `subtitle` are also extracted from the `extras` bundle.
 
 ```java
-//TODO
+private CustomImmersiveInAppMessage getCustomImmersiveView(Activity activity, IInAppMessage inAppMessage) {
+    CustomImmersiveInAppMessage view = (CustomImmersiveInAppMessage) activity.layoutInflater.inflate(R.layout.full_screen_iam, null);
+    String[] options = inAppMessage.message.split(",");
+    view.setOptions(options);
+    String title = inAppMessage.getExtras().get("title");
+    view.setTitle(title);
+    String subtitle = inAppMessage.getExtras().get("subtitle"); 
+    view.setSubtitle(subtitle);
+    return view;
+}
 ```
 {% endtab %}
 {% endtabs %}
@@ -401,7 +464,40 @@ __Assign Custom Attribute__<br>
 Using the view subclass, after a user toggles one of the switches, pass the associated attribute and the toggle status to Braze.
 
 ```java
-TODO
+private void logClick(String value, boolean checked){
+    Appboy.getInstance(ctx).logCustomEvent("SwitchChanged", new BrazeProperties());
+}
+
+private class OptionViewHolder extends RecyclerView.ViewHolder, implements View.OnClickListener{
+
+    private String value = "";
+
+    public OptionViewHolder(View item){
+        super(item);
+    }
+
+   
+    @Override
+    public void onClick(View view) {
+        if (view instanceof Switch){
+            Switch switchView = (Switch) view;
+            boolean checked = switchView.isChecked;
+            switchView.isChecked = !switchView.isChecked;
+            logClick(value, checked)
+        }
+    }
+}
+
+@Override
+public OptionViewHolder onCreateViewHolder(ViewGroup parent, Int viewType) {
+    return new OptionViewHolder(mInflater.inflate(R.layout.switch_cell, null));
+}
+
+@Override
+public void onBindViewHolder(OptionViewHolder holder, Int position) {
+    ((TextView)holder.getItemView().findViewById(R.id.label)).setText(options.get(position));
+    holder.value = options.get(position);
+}
 ```
 {% endtab %}
 {% endtabs %}
