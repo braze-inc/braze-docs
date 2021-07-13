@@ -125,8 +125,6 @@ You can build Segments based on nested custom attributes to further target your 
 
 ![Last Played Song Segment][6]
 
-> To do: Call out the comparator.
-
 ## Data Points
 
 Any key that is updated consumes a data point, including the initialization of a parent custom attribute object. For example, this object initialized in the user profile counts as five (5) data points:
