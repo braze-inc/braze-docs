@@ -14,7 +14,7 @@ tool:
 
 > Push notifications are wonderful for time-sensitive calls to action, as well as re-engaging users who haven't come into the app in a while. <br><br> Successful push campaigns drive the user directly to content and demonstrate the value of your app.
 
-_To see examples of push notifications, check out our [Client Integration Gallery][8]._
+_To see examples of push notifications, check out our [Case Studies][8]._
 
 ## Step 1: Create a New Push Campaign {#create-new-campaign-push}
 
@@ -131,7 +131,7 @@ For push notifications, you'll be able to view statistics for the number of mess
 [3]: {% image_buster /assets/img_archive/schedule.png %}
 [5]: {% image_buster /assets/img_archive/confirmation_page.png %}
 [6]: {% image_buster /assets/img_archive/push-results-statistics.png %}
-[8]: {{site.baseurl}}/help/best_practices/client_integration_gallery/#client-integration-push
+[8]: https://www.braze.com/customers
 [15]: {% image_buster /assets/img_archive/conversion_event_selection.png %}
 [24]: {% image_buster /assets/img_archive/multi_channel_footer.png %}
 [25]: {% image_buster /assets/img_archive/target_segmenter.png %}

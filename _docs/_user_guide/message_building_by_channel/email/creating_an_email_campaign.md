@@ -19,7 +19,7 @@ channel:
 
 Email messages are great for delivering content to your users on their terms. They are also excellent tools to re-engage users who may have even uninstalled your app. Sending customized and tailored email messages will enhance your users' experience, and help your users get the most value out of your app.
 
-To see examples of email campaigns, check out our [Client Integration Gallery][9].
+To see examples of email campaigns, check out our [Case Studies][9].
 
 ## Step 1: Create a New Campaign
 On the **Campaigns** page, click **Create Campaign** and select **Email** as your messaging channel.
@@ -189,7 +189,7 @@ On the **Funnel Report** page, you can analyze the journeys your customers take 
 [3]: {% image_buster /assets/img_archive/choose_email_creation.png %}
 [5]: {% image_buster /assets/img_archive/targetsegment_email_new.png %}
 [6]: {% image_buster /assets/img_archive/confirm_email.png %}
-[9]: {{site.baseurl}}/help/best_practices/client_integration_gallery/#client-integration-email
+[9]: https://www.braze.com/customers
 [10]: {{site.baseurl}}/user_guide/message_building_by_channel/email/creating_an_email_template/#creating-an-email-template
 [13]: {{site.baseurl}}/user_guide/engagement_tools/campaigns/testing_and_more/multivariate_testing/#intelligent-selection
 [14]: {% image_buster /assets/img/email.jpg %}

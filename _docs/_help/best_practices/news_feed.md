@@ -50,9 +50,9 @@ The content you choose to show through the News Feed can range widely and work i
 
 1-800-Flowers.com uses the News Feed to deliver relevant information to its users. The SDK integration remains entirely transparent: there is no mention of Braze in the app itself and the News Feed module has a design aesthetic that is consistent with the rest of the app.
 
-You can view more examples of News Feeds in our [Client Integration Gallery][3].
+You can view more examples of News Feeds in our [Case Studies][3].
 
 [1]: {{site.baseurl}}/developer_guide/platform_integration_guides/ios/news_feed/
 [2]: {% image_buster /assets/img_archive/18F_newsfeed.png %}
-[3]: {{site.baseurl}}/help/best_practices/client_integration_gallery/#client-integration-newsfeed
+[3]: https://www.braze.com/customers
 [4]: {{site.baseurl}}/user_guide/engagement_tools/news_feed/
