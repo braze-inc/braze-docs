@@ -41,7 +41,7 @@ You can find a breakdown of how Braze accumulates data points below, but there a
 |---|---|---|
 |Profile Data | First Name | Yes |
 |Profile Data | Last Name | Yes |
-|Profile Data | User ID | Yes |
+|Profile Data | User ID | No |
 |Profile Data | User Alias | No |
 |Profile Data | Email Address | Yes |
 |Profile Data | Gender | Yes |

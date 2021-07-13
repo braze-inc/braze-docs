@@ -8,6 +8,7 @@ guide_top_text: "Email is a tried and tested approach for communicating with you
 page_type: landing
 description: "This landing page is home to email best practices. Here you can find tips, use cases, and best practices to refine your email messaging."
 channel: email
+no_index: true
 
 guide_featured_title: "Popular Articles"
 guide_featured_list:

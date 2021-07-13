@@ -47,7 +47,7 @@ glossaries:
       - News Feed
       - Content Cards
   - name: Unique Impressions
-    description: The total number of users who received and viewed a given in-app message or card. The count should not increment the second time a user views an in-app message or card. This number is received from Braze.
+    description: The total number of users who received and viewed a given in-app message or card in a day. For in-app messages, unique impressions can be incremented again after 24 hours if re-eligibility is on and a user performs the trigger action. Conversely, the count should not increment the second time a user views a Content Card. This number is received from Braze.
     calculation: Count
     tags:
       - In-App Message
@@ -219,5 +219,24 @@ glossaries:
       - iOS Push
       - Android Push
       - SMS
-
+  - name: Choices Submitted
+    description: Total number of choices selected when the user clicks the submit button on the survey question page of a <a href='/docs/user_guide/message_building_by_channel/in-app_messages/templates/simple_survey/' target='_blank'>Simple Survey</a>.
+    tags: 
+      - In-App Message
+  - name: Confirmation Page Button
+    description: Total clicks on the call to action button on the confirmation page of a <a href='/docs/user_guide/message_building_by_channel/in-app_messages/templates/simple_survey/' target='_blank'>Simple Survey</a>.
+    tags:
+      - In-App Message
+  - name: Confirmation Page Dismissals
+    description: Total clicks on the close (x) button on the confirmation page of a <a href='/docs/user_guide/message_building_by_channel/in-app_messages/templates/simple_survey/' target='_blank'>Simple Survey</a>.
+    tags:
+      - In-App Message
+  - name: Survey Page Dismissals
+    description: Total clicks on the close (x) button on the survey question page of a <a href='/docs/user_guide/message_building_by_channel/in-app_messages/templates/simple_survey/' target='_blank'>Simple Survey</a>.
+    tags:
+      - In-App Message
+  - name: Survey Submissions
+    description: Total clicks on the submit button of a <a href='/docs/user_guide/message_building_by_channel/in-app_messages/templates/simple_survey/' target='_blank'>Simple Survey</a>.
+    tags:
+      - In-App Message
 ---

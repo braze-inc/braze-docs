@@ -5,6 +5,7 @@ page_order: 4
 page_type: reference
 description: "This article provides guidelines on styling your email messaging."
 channel: email
+no_index: true
 ---
 
 # Style Guidelines

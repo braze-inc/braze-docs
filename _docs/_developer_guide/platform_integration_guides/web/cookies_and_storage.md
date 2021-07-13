@@ -40,14 +40,14 @@ To stop Braze tracking in general, or to clear _all_ stored browser data, please
 
 ### List of Cookies
 
-|Cookie|Description|
-|---|----|---|
-|`ab.storage.userId.[your-api-key]`|Used to determine whether the currently-logged-in user has changed, and to associate events with the current user.|
-|`ab.storage.sessionId.[your-api-key]`|Out-of-the-box randomly generated string used to determine whether the user is starting a new or existing session, in order to sync messages and calculate session analytics.|
-|`ab.storage.deviceId.[your-api-key]`|Out-of-the-box randomly generated string used to identify anonymous users, and to differentiate users' devices and enables device-based messaging.|
-|`ab.optOut`|Used to store a user's opt-out preference|
-|`ab._gd`|Temporarily created (and then deleted) to determine the root-level cookie domain which allows the SDK to work properly across sub-domains.|
-{: .reset-td-br-1 .reset-td-br-2 }
+|Cookie|Description|Size|
+|---|----|---|---|
+|`ab.storage.userId.[your-api-key]`|Used to determine whether the currently-logged-in user has changed, and to associate events with the current user.|Based on the size of the value passed to `changeUser`|
+|`ab.storage.sessionId.[your-api-key]`|Out-of-the-box randomly generated string used to determine whether the user is starting a new or existing session, in order to sync messages and calculate session analytics.|~200 bytes|
+|`ab.storage.deviceId.[your-api-key]`|Out-of-the-box randomly generated string used to identify anonymous users, and to differentiate users' devices and enables device-based messaging.|~200 bytes|
+|`ab.optOut`|Used to store a user's opt-out preference when `stopWebTracking` is called|~40 bytes|
+|`ab._gd`|Temporarily created (and then deleted) to determine the root-level cookie domain which allows the SDK to work properly across sub-domains.|n/a|
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
 
 ## Device Properties
 

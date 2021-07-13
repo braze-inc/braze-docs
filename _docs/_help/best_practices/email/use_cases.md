@@ -5,6 +5,7 @@ page_order: 10
 page_type: reference
 description: "This reference article covers some common use cases for selecting email as your messaging channel."
 channel: email
+no_index: true
 ---
 
 # Use Cases {#email-use-cases}

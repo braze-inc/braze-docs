@@ -2,7 +2,7 @@
 nav_title: Nested Object Support
 page_title: Nested Object Support for Custom Event Properties
 page_order: 4
-
+alias: /nested_object_support/
 page_type: reference
 description: "This reference article describes nested object support for custom event properties, and includes example use cases, limitations, and frequently asked questions."
 ---
@@ -57,7 +57,7 @@ properties:{
   "r_details" : {
     "name" : "McDonalds",
     "identifier" : "12345678",
-    "location" ; {
+    "location" : {
       "city" : "Montclair",
       "state" : "NJ"
     }

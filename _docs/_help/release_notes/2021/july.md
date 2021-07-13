@@ -1,7 +1,7 @@
 --- 
 nav_title: July
 page_order: 6
-
+no_index: true
 page_type: update
 description: "This article contains release notes for July 2021."
 ---

@@ -58,6 +58,7 @@ $(document).ready(function () {
           },
           item({ item, createElement }) {
             var content = "";
+            var description = "";
             var title = "";
             var type = "";
             var category = "";
@@ -98,10 +99,16 @@ $(document).ready(function () {
                 .replaceUnder()
                 .replace(/<(.|\n)*?>/g, "");
             }
+            if ("description" in item) {
+              description = item.description
+                .replaceUnder()
+                .replace(/<(.|\n)*?>/g, "");
+            }
+            var search_msg = description || content;
 
-            if (content.length > 400) {
-              content = content.substring(0, 400);
-              content += "...";
+            if (search_msg.length > 400) {
+              search_msg = search_msg.substring(0, 400);
+              search_msg += "...";
             }
             var url = item.url;
             if (heading) {
@@ -112,7 +119,7 @@ $(document).ready(function () {
                 title + ' <div class="category">' +
                 subname.replace(/\_/g, " ") +
                 '</div></div> <div class="content">' +
-                content +
+                search_msg +
                 "</div><hr /></a>";
 
             return createElement("div", {

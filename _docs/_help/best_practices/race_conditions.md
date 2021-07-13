@@ -7,11 +7,14 @@ description: "This article covers best practices to avoid race conditions from a
 tool:
 - Campaigns
 - Canvas
+no_index: true
 ---
 
 # Race Conditions
 
 A **race condition** is a concept where an outcome is dependent on the sequence or timing of other events. For example, if the desired sequence of events is "Event A" and then "Event B", but sometimes "Event A" comes first and other times "Event B" comes first—that is known as a race condition.
+
+{% include video.html id="LyJaxDoMtMs" align="right" %}
 
 In the Braze platform, one of the most common race conditions occurs with messages that target newly created users. Here, the expected order of events is: (1) a user gets created; (2) the same user is immediately targeted for a message. However, in some cases, the second event will trigger first. This means that a message is attempting to be sent to a user that has not been created yet, and as a result, the user never receives it.
 
