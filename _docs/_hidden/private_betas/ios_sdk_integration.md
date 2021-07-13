@@ -6,7 +6,7 @@ hidden: true
 
 # Braze iOS SDK Integration Guide
 
-> This iOS integration guide takes you on a step-by-step journey on setup best practices when first integrating the iOS SDK and its core components into your application. This guide will help you build a `BrazeManager.swift` helper file that will decouple any dependencies on the Braze iOS SDK from the rest of your production code, resulting in one `import AppboyUI` in your entire application. This approach limits issues that arise from excessive SDK imports, making it easier to track, debug, and alter code.
+> This iOS integration guide takes you on a step-by-step journey on setup best practices when first integrating the iOS SDK and its core components into your application. This guide will help you build a `BrazeManager.swift` helper file that will decouple any dependencies on the Braze iOS SDK from the rest of your production code, resulting in one `import AppboyUI` in your entire application. This approach limits issues that arise from excessive SDK imports, making it easier to track, debug, and alter code. This guide also assumes you have already [added the SDK]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/initial_sdk_setup/overview/) into your Xcode project.
 
 ## Integration Overview
 
@@ -69,7 +69,7 @@ class BrazeManager: NSObject {
 {% tab Step 1: Initialize SDK from BrazeManager.swift %}
 
 ##### Initialize SDK from BrazeManager.swift
-Next, you must initialize the SDK. This guide assumes you have already [integrated the SDK]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/initial_sdk_setup/overview/) into your Xcode project. You must also have your [app group SDK endpoint]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/initial_sdk_setup/swift_package_manager/#step-4-specify-your-data-cluster) and [`LogLevel`]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/initial_sdk_setup/other_sdk_customizations/#braze-log-level) set in your `info.plist` file to log sessions. 
+Next, you must initialize the SDK. As mentioned above, this guide assumes you have already [added the SDK]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/initial_sdk_setup/overview/) into your Xcode project. You must also have your [app group SDK endpoint]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/initial_sdk_setup/swift_package_manager/#step-4-specify-your-data-cluster) and [`LogLevel`]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/initial_sdk_setup/other_sdk_customizations/#braze-log-level) set in your `info.plist` file. 
 
 Add the `didFinishLaunching...` method from the `AppDelegate.swift` file sans return value in your `BrazeManager.swift` file. By creating a similar method in the `BrazeManager.swift` file, there will not be an `import AppboyUI` statement in your `AppDelegate.swift` file. 
 
@@ -556,7 +556,7 @@ extension Brazemanager {
       
   // 2 
       let contentCardsVc = ABKContentCardsTableViewController()
-      contentCardsVs.title = "Content Cards"
+      contentCardsVc.title = "Content Cards"
       navigationController?.pushViewController(contentCardsVc, animated: true)
   }
 }
@@ -577,7 +577,7 @@ Proceed to compile your code and run your application.<br><br>Try displaying the
 
 Congratulations! You've completed this best practice integration guide! An example `BrazeManager` helper file can be found [here](https://github.com/braze-inc/braze-growth-shares-ios-demo-app/blob/master/Braze-Demo/BrazeManager.swift)
 
-Now that you have decoupled any dependencies on the Braze iOS SDK from the rest of your production code check out some of our optional advanced implementation guides:
+Now that you have decoupled any dependencies on the Braze iOS SDK from the rest of your production code, check out some of our optional advanced implementation guides:
 - [Advanced Push Notification Implementation Guide]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/push_notifications/implementation_guide/)
 - [Advanced In-App Messages Implementation Guide]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/in-app_messaging/implementation_guide/)
 - [Advanced Content Card Implementation Guide]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/content_cards/implementation_guide/)
