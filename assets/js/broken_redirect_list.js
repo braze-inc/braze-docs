@@ -369,5 +369,6 @@ validurls['/docs/help/webinars/troubleshooting_bootcamp/'] = '/docs/help/home/';
 
 validurls['/docs/user_guide/message_building_by_channel/email/creating_an_email_template/'] = '/docs/user_guide/message_building_by_channel/email/templates/email_template/';
 validurls['/docs/user_guide/administrative/access_braze/single_sign_on/restriction/'] = '/docs/user_guide/administrative/access_braze/single_sign_on/set_up/#restriction';
-
+validurls['/docs/user_guide/message_building_by_channel/email/email_reporting/'] = '/docs/user_guide/message_building_by_channel/email/creating_an_email_campaign/#email-reporting';
+validurls['/docs/help/best_practices/client_integration_gallery/'] = 'https://www.braze.com/customers';
 

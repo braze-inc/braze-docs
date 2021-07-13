@@ -6,6 +6,7 @@ page_type: reference
 description: "This article provides best practices on user onboarding to ensure your app's onboarding process is turning new users into active ones."
 tool: Segments
 no_index: true
+hidden: true
 ---
 # User Onboarding
 

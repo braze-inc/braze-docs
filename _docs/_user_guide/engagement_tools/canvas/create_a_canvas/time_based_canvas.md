@@ -10,40 +10,72 @@ description: "This reference article covers definitions, time zones, and example
 ---
 # Time-Based Functionalities for Canvas
 
-> This reference article covers time-based functionalities for Canvas to assist with customer questions, strategies, and troubleshooting. For each term or capability, it outlines the definition, the time zone it pertains to (if any), an example for clarity, and other additional notes.
+> This reference article covers time-based functionalities for Canvas to assist with strategies, troubleshooting, and to answer common questions.
 
-### Schedule Delay - Send "in x day(s) at y am/pm"
+## Schedule Delay
 
-| Definition | Time Zone | Example | Notes |
-| ---------- | --------- | ------- | ----- |
-| Day of week + 1 calendar day + that specific time (see example) | Company's Time Zone | If a Canvas step is sent at 9pm on Monday, and the next step sends “In 1 Days at 9am”, is that going to be delivered at 9am on Tuesday or Wednesday?<br><br> Answer: Tuesday at 9am. The Canvas calculates the delay as Monday + 1 calendar day = Tuesday. Then it adds on the time (9am) | "Send on the next Saturday at 3:15pm" <br><br>If a user enters the Canvas on a Saturday, and the first step is to "send next Saturday" would be in 7 days. If they enter on a Friday, "next Saturday" would be in 1 day.  |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
+### Send immediately
 
-### Schedule Delay - Send "after x day" 
-
-| Definition | Time Zone | Example |
-| ---------- | --------- | ------- |
-| The 'after' clause allows the user to specify x seconds, minutes, hours and days. | Not Relevant | If Canvas step is sent after 1 day, then the user will receive the step exactly 24 hours after |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
-
-### Schedule Delay with Intelligent Timing 
-
-| Definition | Notes |
-| ---------- | ----- |
-| The behavior is the same if using in/after with Intelligent Timing | Product Team is working on a solution here to either make the UI clearer or change the behavior |
+| Definition |  Time Zone |
+| --- | --- |
+| Send message immediately after the user receives the previous step, or if this is the first step, immediately after the user enters the Canvas. | N/A |
 {: .reset-td-br-1 .reset-td-br-2}
 
-### Global Frequency Capping
+![Send immediately][1]
 
-| Definition | Time Zone | Example | Notes |
-| ---------- | --------- | ------- | ----- |
-| Calendar Day | User's Time Zone | I set up a frequency capping rule of sending no more than 1 campaign a day<br><br>If a user receives a message at 11 pm in their local time zone, they can receive another message an hour later.  | We use Company's Time Zone if User's Time Zone is not Set <br><br> It's possible a user does not have to wait 24 hours to get another message, since it's based on calendar days and not a 24-hour period.|
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
+### Send after X days
 
-### Global Frequency Capping - Week
+| Definition |  Time Zone |
+| --- | --- |
+| Send message after a delay. You can specify a delay in seconds, minutes, hours, days, or weeks.  | N/A |
+{: .reset-td-br-1 .reset-td-br-2}
 
-| Definition | Time Zone | Example |
-| ---------- | --------- | ------- |
-| Rolling 7 days: now minus 7 days (now is constantly shifting) | User's Time Zone | Every 2 days will limit the capping to the previous and current calendar days in your user's local time (ending at midnight local time on the current calendar day) |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
+![Send after x days][2]
 
+### Send on the next [day of the week] at X time
+
+| Definition |  Time Zone |
+| --- | --- |
+| Send message on the next specified day of the week, at a selected time of day.  | Select between **user's local time** or **company time** |
+{: .reset-td-br-1 .reset-td-br-2}
+
+For example, suppose you select "Send on the next Saturday at 3:15pm". If a user enters the Canvas on a Saturday, they would receive that message on the next Saturday in 7 days. If they enter on a Friday, the next Saturday would be in 1 day.
+
+![Send on the next][3]
+
+### Send in X calendar days at Y time
+
+| Definition |  Time Zone |
+| --- | --- |
+| Send message in a specific number of days at a specified time. | Select between **user's local time** or **company time** |
+
+Canvas calculates the delay as `day of the week` + `calendar days`, then adds the `time`. For example, suppose a Canvas step is sent on Monday at 9pm, and the next step is scheduled to "Send in 1 day at 9am". That message will be delivered on Tuesday at 9am, because the Canvas calculates the delay as `Monday` + `1 calendar day`, then adds on `9am`.
+
+![Send in X days][4]
+
+### Intelligent Timing
+
+| Definition | Time Zone |
+| ---------- | ----- |
+| Braze calculates the optimal send time based on a statistical analysis of your user’s past interactions with your messaging (on a per channel basis) and app. [Learn more]({{site.baseurl}}/user_guide/intelligence/intelligent_timing/). | If you select **a specific time** as your [fallback]({{site.baseurl}}/user_guide/intelligence/intelligent_timing/#fallback-options), this will be sent in the user's local time. |
+{: .reset-td-br-1 .reset-td-br-2}
+
+![Intelligent Timing][5]
+
+## Global Frequency Capping
+
+| Definition | Time Zone |
+| --- | --- |
+| Limit how many times each user should receive the Canvas within a certain time frame, which can be measured in minutes, days, weeks (7 days), and months. [Learn more]({{site.baseurl}}/user_guide/engagement_tools/campaigns/testing_and_more/rate-limiting/#frequency-capping). | User's local time. If a user's time zone isn't set, this will fall back to company time zone. |
+{: .reset-td-br-1 .reset-td-br-2}
+
+Frequency capping is based on calendar days, not a 24-hour period. This means that you could set up a frequency capping rule of sending no more than one campaign a day, but if a user receives a message at 11pm in their local time, they can still receive another message an hour later (on midnight the next calendar day).
+
+![Frequency Capping][6]
+
+[1]: {% image_buster /assets/img_archive/schedule_delay_immediately.png %}
+[2]: {% image_buster /assets/img_archive/schedule_delay_after.png %}
+[3]: {% image_buster /assets/img_archive/schedule_delay_next.png %}
+[4]: {% image_buster /assets/img_archive/schedule_delay_in.png %}
+[5]: {% image_buster /assets/img_archive/schedule_delay_intelligent.png %}
+[6]: {% image_buster /assets/img_archive/schedule_frequency_capping.png %}

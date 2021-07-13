@@ -46,23 +46,29 @@ If you want to see examples or test this endpoint for __SMS Subscription Groups_
 If there are multiple users (multiple external ids) who share the same email address, all users will be returned as a separate user (even if they have the same email address or subscription group).
 {% endalert %}
 
-## Example Request for multiple users
-`https://rest.iad-03.braze.com/subscription/user/status?external_id[]=1&external_id[]=2`
+## Example Request 
 
-## Example Request for SMS
+{% tabs %}
+{% tab Multiple Users %}
+{% raw %}
+`https://rest.iad-03.braze.com/subscription/user/status?external_id[]=1&external_id[]=2`
+{% endraw %}
+{% endtab %}
+{% tab SMS %}
 {% raw %}
 ```
 curl --location -g --request GET 'https://rest.iad-01.braze.com/subscription/user/status?external_id={{external_id}}&limit=100&offset=1&phone=+11112223333' \
 --header 'Authorization: Bearer YOUR-REST-API-KEY'
 ```
 {% endraw %}
-
-## Example Request for Email
+{% endtab %}
+{% tab Email %}
 {% raw %}
 ```
 curl --location -g --request GET 'https://rest.iad-01.braze.com/subscription/user/status?external_id={{external_id}}&email=example@braze.com&limit=100&offset=1' \
 --header 'Authorization: Bearer YOUR-REST-API-KEY'
 ```
 {% endraw %}
-
+{% endtab %}
+{% endtabs %}
 {% endapi %}

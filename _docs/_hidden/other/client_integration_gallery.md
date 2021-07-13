@@ -2,6 +2,7 @@
 page_order: 20
 nav_title: Customer Examples Library
 layout: glossary_page
+hidden: true
 glossary_top_header: "Customer Examples Library"
 glossary_top_text: "See some shining examples of real messages using our Campaigns and Canvas tools! <br> <br> Many of the examples you'll see below come from our Firebrands, a customer engagement community of movers and shakers using Braze to modernize their customer experience and marketing strategies. Interested in learning more? <a href='https://brazefirebrands.splashthat.com/'>Join now</a>."
 

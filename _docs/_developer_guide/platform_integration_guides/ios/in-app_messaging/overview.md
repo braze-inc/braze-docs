@@ -28,7 +28,7 @@ In-app messages don't deliver outside of the user's app and won't intrude on the
 - Encouraging and rewarding discovery
 - [Permission Requests/Push Priming][30]
 
-To see examples of in-app messages, check out our [Client Integration Gallery][31].
+To see examples of in-app messages, check out our [Case Studies][31].
 
 [Create an in-app message]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/create/) now!
 
@@ -101,4 +101,4 @@ The following example shows a paginated HTML Full in-app message:
 
 [29]: {% image_buster /assets/img_archive/ABKInAppMessage-models.png %}
 [30]: {{site.baseurl}}/help/best_practices/push/creating_custom_opt-in_prompts/#creating-custom-opt-in-prompts
-[31]: {{site.baseurl}}/help/best_practices/client_integration_gallery/
+[31]: https://www.braze.com/customers
