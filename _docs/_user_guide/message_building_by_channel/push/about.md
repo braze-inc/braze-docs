@@ -26,8 +26,12 @@ Push Notifications are a great tool for attracting new users and making re-engag
 | Initial Onboarding | Until users take the initial steps towards using your app (such as registering an account), their value is severely limited. Use push notifications to urge users to complete these steps so they can begin using your app in full. |
 | First Purchases | After users are comfortable using your app, you can use push notifications to help convert them into in-app purchasers. |
 | New Features | Push notifications can be effective in notifying disengaged users about new features that might attract them back to your app. |
-| Time Sensitive Offers | If you have a clock ticking on an offer, sometimes Push is a great way to let your users know about it before it expires. These messages generally carry a high sense of urgency and are optimal for reminding recently-lapsed users about your app. |
+| Time Sensitive Offers | If you have a clock ticking on an offer, sometimes push is a great way to let your users know about it before it expires. These messages generally carry a high sense of urgency and are optimal for reminding recently-lapsed users about your app.<br><br> For example, suppose your app is a game and you offer your users an in-game currency bonus if they maintain a streak of playing the game daily. Alerting a user that that streak is in danger of being broken could be a reasonable push if they've exceeded a certain number of days. |
 {: .reset-td-br-1 .reset-td-br-2}
+
+For more information on re-engaging lapsed users, see our [Quick Wins][23] page on the topic.
+
+> Push should be formatted in plain-text. Key-value pairs allow for [deep linking][3] to external URLs or in-app features.
 
 ## Push Message Regulations
 
@@ -53,7 +57,8 @@ Your push messages must fall within the guidelines of the Apple App Store and Go
 
 [1]: {% image_buster /assets/img/red-dress.gif %}
 [2]: {% image_buster /assets/img/ios_push.png %}
+[3]: {{site.baseurl}}/user_guide/personalization_and_dynamic_content/deep_linking_to_in-app_content/#deep-linking-to-in-app-content
 [8]: https://www.braze.com/customers
 [9]: https://developer.apple.com/app-store/review/guidelines/
 [10]: https://play.google.com/about/developer-content-policy-print/
-
+[23]: {{site.baseurl}}/user_guide/engagement_tools/campaigns/ideas_and_strategies/capturing_lapsing_users/#capturing-lapsing-users
