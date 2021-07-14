@@ -57,7 +57,30 @@ class BrazeManager: NSObject {
 ```
 {% endsubtab %}
 {% subtab Objective-C %}
-
+```objc
+@implementation BrazeManager
+ 
+// 1
++ (instancetype)shared {
+    static BrazeManager *shared = nil;
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{
+        shared = [[BrazeManager alloc] init];
+        // Do any other initialisation stuff here
+    });
+    return shared;
+}
+ 
+// 2
+- (NSString *)apiKey {
+  return @"YOUR-API-KEY";
+}
+ 
+// 3
+- (NSDictionary *)appboyOptions {
+  return [NSDictionary dictionary];
+}
+```
 {% endsubtab %}
 {% endsubtabs %}
 {% endtab %}
@@ -65,7 +88,7 @@ class BrazeManager: NSObject {
 
 ### Initialize the SDK
 
-{% tabs %}
+{% tabs local %}
 {% tab Step 1: Initialize SDK from BrazeManager.swift %}
 
 ##### Initialize SDK from BrazeManager.swift
@@ -88,7 +111,11 @@ func application(_ application: UIapplication, didFinishLaunchingWithOptions lau
 ```
 {% endsubtab %}
 {% subtab Objective-C %}
-
+```objc
+- (void)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+  [Appboy startWithApiKey:[self apiKey] inApplication:application withLaunchOptions:launchOptions withAppboyOptions:[self appboyOptions]];
+}
+```
 {% endsubtab %}
 {% endsubtabs %}
 
@@ -113,7 +140,15 @@ func application(_ application: UIApplication, didFinishLaunchingWithOptions lau
 ```
 {% endsubtab %}
 {% subtab Objective-C %}
-
+```objc
+- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+  // Override point for customization after application launch
+ 
+  [[BrazeManager shared] application:application didFinishLaunchingWithOptions:launchOptions];
+   
+  return YES;
+}
+```
 {% endsubtab %}
 {% endsubtabs %}
 {% endtab %}
@@ -170,7 +205,23 @@ func application(_ application: UIapplication, didFinishLaunchingWithOptions lau
 ```
 {% endsubtab %}
 {% subtab Objective-C %}
-
+```objc
+- (void)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+  [Appboy startWithApiKey:[self apiKey] inApplication:application withLaunchOptions:launchOptions withAppboyOptions:[self appboyOptions]];
+   
+  // 1
+  UNAuthorizationOptions options = (UNAuthorizationOptionSound | UNAuthorizationOptionAlert | UNAuthorizationOptionBadge);
+   
+  // 2
+  [[UNUserNotificationCenter currentNotificationCenter] requestAuthorizationWithOptions:options completionHandler:^(BOOL granted, NSError * _Nullable error) {
+  // 3
+    [[Appboy sharedInstance] pushAuthorizationFromUserNotificationCenter:granted];
+  }];
+ 
+  // 4
+  [[UIApplication sharedApplication] registerForRemoteNotifications];
+}
+```
 {% endsubtab %}
 {% endsubtabs %}
 
@@ -213,7 +264,14 @@ didRegisterForRemoteNotificationsWithDeviceToken deviceToken: Data) {
 ```
 {% endsubtab %}
 {% subtab Objective-C %}
-
+```objc
+// MARK - Push Notifications
+  // 1
+ - (void)application:(UIApplication *)application didRegisterForRemoteNotificationsWithDeviceToken:(NSData *)deviceToken {
+  // 2
+  [[Appboy sharedInstance] registerDeviceToken:deviceToken];
+}
+```
 {% endsubtab %}
 {% endsubtabs %}
 
@@ -232,7 +290,11 @@ func application(_ application: UIApplication, didReceiveRemoteNotification user
 ```
 {% endsubtab %}
 {% subtab Objective-C %}
-
+```objc
+- (void)application:(UIApplication *)application didReceiveRemoteNotification:(NSDictionary *)userInfo fetchCompletionHandler:(void (^)(UIBackgroundFetchResult))completionHandler {
+  [[Appboy sharedInstance] registerApplication:application didReceiveRemoteNotification:userInfo fetchCompletionHandler:completionHandler];
+}
+```
 {% endsubtab %}
 {% endsubtabs %}
 
@@ -250,7 +312,11 @@ func userNotificationCenter(_ center: UNUserNotificationCenter, didReceive respo
 ```
 {% endsubtab %}
 {% subtab Objective-C %}
-
+```objc
+- (void)userNotificationCenter:(UNUserNotificationCenter *)center didReceiveNotificationResponse:(UNNotificationResponse *)response withCompletionHandler:(void (^)(void))completionHandler {
+  [[Appboy sharedInstance] userNotificationCenter:center didReceiveNotificationResponse:response withCompletionHandler:completionHandler];
+}
+```
 {% endsubtab %}
 {% endsubtabs %}
 {% endtab %}
@@ -262,7 +328,7 @@ Proceed to compile your code and run your application. <br><br>Try sending yours
 
 ### Access User Variables and Methods
 
-{% tabs %}
+{% tabs local %}
 {% tab Step 1: Create Extension %}
 
 ##### Create Extension for User Code
@@ -297,7 +363,23 @@ extension BrazeManager {
 ```
 {% endsubtab %}
 {% subtab Objective-C %}
-
+```objc
+// MARK: - User
+  // 1
+- (ABKUser *)user {
+  return [[Appboy sharedInstance] user];
+}
+   
+   // 2 
+- (NSString *)userId {
+  return [self user].userID;
+}
+ 
+  // 3
+- (void)changeUser:(NSString *)userId {
+  [[Appboy sharedInstance] changeUser:userId];
+}
+```
 {% endsubtab %}
 {% endsubtabs %}
 {% endtab %}
@@ -318,19 +400,12 @@ Next, you must enable your production code to log crucial analytics metrics to B
 
 Create an extension for your analytics code in your `Brazemanager.swift` file so it reads in a more organized manner as to what purpose is being served in the helper file, like so:
 
-{% subtabs global %}
-{% subtab Swift %}
 ```swift
 //MARK: -Analytics
 extension BrazeManager {
 
 }
 ```
-{% endsubtab %}
-{% subtab Objective-C %}
-
-{% endsubtab %}
-{% endsubtabs %}
 
 {% endtab %}
 {% tab Step 2: Custom Events %}
@@ -358,7 +433,11 @@ func logCustomEvent(_ eventName: String, withProperties properties: [AnyHashable
 ```
 {% endsubtab %}
 {% subtab Objective-C %}
-
+```objc
+- (void)logCustomEvent:(NSString *)eventName withProperties:(nullable NSDictionary *)properties {
+  [[Appboy sharedInstance] logCustomEvent:eventName withProperties:properties];
+}
+```
 {% endsubtab %}
 {% endsubtabs %}
 {% endtab %}
@@ -407,7 +486,23 @@ func setCustomAttributeWithKey<T: Equatable>(_ key: String?, andValue value: T?)
 ```
 {% endsubtab %}
 {% subtab Objective-C %}
-
+```objc
+- (void)setCustomAttributeWith:(NSString *)key andValue:(id)value {
+  if ([value isKindOfClass:[NSDate class]]) {
+    [[self user] setCustomAttributeWithKey:key andDateValue:value];
+  } else if ([value isKindOfClass:[NSString class]]) {
+    [[self user] setCustomAttributeWithKey:key andStringValue:value];
+  } else if ([value isKindOfClass:[NSNumber class]]) {
+    if (strcmp([value objCType], @encode(double)) == 0) {
+      [[self user] setCustomAttributeWithKey:key andDoubleValue:[value doubleValue]];
+    } else if (strcmp([value objCType], @encode(int)) == 0) {
+      [[self user] setCustomAttributeWithKey:key andIntegerValue:[value integerValue]];
+    } else if ([value boolValue]) {
+      [[self user] setCustomAttributeWithKey:key andBOOLValue:[value boolValue]];
+    }
+  }
+}
+```
 {% endsubtab %}
 {% endsubtabs %}
 {% endtab %}
@@ -439,7 +534,11 @@ String, withQuantity quantity: Int) {
 ```
 {% endsubtab %}
 {% subtab Objective-C %}
-
+```objc
+- (void)logPurchase:(NSString *)productIdentifier inCurrency:(nonnull NSString *)currencyCode atPrice:(nonnull NSDecimalNumber *)price withQuantity:(NSUInteger)quantity {
+  [[Appboy sharedInstance] logPurchase:productIdentifier inCurrency:currencyCode atPrice:price withQuantity:quantity];
+}
+```
 {% endsubtab %}
 {% endsubtabs %}
 {% endtab %}
@@ -481,7 +580,19 @@ func application(_ application: UIApplication, didFinishLaunchingWithOptions lau
 ```
 {% endsubtab %}
 {% subtab Objective-C %}
-
+```objc
+- (void)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+  [Appboy startWithApiKey:[self apiKey] inApplication:application withLaunchOptions:launchOptions withAppboyOptions:[self appboyOptions]];
+   
+  UNAuthorizationOptions options = (UNAuthorizationOptionSound | UNAuthorizationOptionAlert | UNAuthorizationOptionBadge);
+  [[UNUserNotificationCenter currentNotificationCenter] requestAuthorizationWithOptions:options completionHandler:^(BOOL granted, NSError * _Nullable error) {
+    [[Appboy sharedInstance] pushAuthorizationFromUserNotificationCenter:granted];
+  }];
+  [[UIApplication sharedApplication] registerForRemoteNotifications];
+   
+  [[Appboy sharedInstance].inAppMessageController.inAppMessageUIController setInAppMessageUIDelegate:self];
+}
+```
 {% endsubtab %}
 {% endsubtabs %}
 {% endtab %}
@@ -517,7 +628,21 @@ extension AppboyManager: ABKInAppMessageUIDelegate{
 ```
 {% endsubtab %}
 {% subtab Objective-C %}
-
+```objc
+// MARK: - ABKInAppMessage UI Delegate
+- (ABKInAppMessageViewController *)inAppMessageViewControllerWithInAppMessage:(ABKInAppMessage *)inAppMessage {
+  if ([inAppMessage isKindOfClass:[ABKInAppMessageSlideup class]]) {
+    return [[ABKInAppMessageSlideupViewController alloc] initWithInAppMessage:inAppMessage];
+  } else if ([inAppMessage isKindOfClass:[ABKInAppMessageModal class]]) {
+    return [[ABKInAppMessageModalViewController alloc] initWithInAppMessage:inAppMessage];
+  } else if ([inAppMessage isKindOfClass:[ABKInAppMessageFull class]]) {
+    return [[ABKInAppMessageFullViewController alloc] initWithInAppMessage:inAppMessage];
+  } else if ([inAppMessage isKindOfClass:[ABKInAppMessageHTML class]]) {
+    return [[ABKInAppMessageHTMLViewController alloc] initWithInAppMessage:inAppMessage];
+  }
+  return nil;
+}
+```
 {% endsubtab %}
 {% endsubtabs %}
 {% endtab %}
@@ -529,7 +654,7 @@ Proceed to compile your code and run your application. <br><br>Try sending yours
 
 ### Content Cards
 
-{% tabs %}
+{% tabs local %}
 {% tab Step 1: Create Extension %}
 
 {% alert important %}
@@ -563,7 +688,16 @@ extension Brazemanager {
 ```
 {% endsubtab %}
 {% subtab Objective-C %}
-
+```objc
+// MARK: - Content Cards
+  // 1
+- (void)displayContentCards:(UINavigationController *)navigationController {
+  // 2
+  ABKContentCardsTableViewController *contentCardsVc = [[ABKContentCardsTableViewController alloc] init];
+  contentCardsVc.title = @"Content Cards";
+  [navigationController pushViewController:contentCardsVc animated:YES];
+}
+```
 {% endsubtab %}
 {% endsubtabs %}
 {% endtab %}
