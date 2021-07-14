@@ -144,6 +144,14 @@ If the deep link fails to work, the deep link may be misconfigured. A misconfigu
 
 If the deep link [works correctly with ADB][17] but fails to work from Braze push, check whether any [custom push open handling][18] has been implemented. If so, verify that the custom handling code is properly handling the incoming deep link.
 
+#### Disable Back Stack Behavior
+
+If the deep link [works correctly with ADB][17] but fails to work from Braze push, try disabling [back stack][22]. To do so, update your **braze.xml** file to include:
+
+```xml
+<bool name="com_appboy_push_deep_link_back_stack_activity_enabled">false</bool>
+```
+
 [1]: https://firebase.google.com/docs/cloud-messaging/android/client
 [2]: #utilizing-the-push-error-log
 [3]: #scenario-1-no-push-registered-users-showing-in-the-appboy-dashboard-prior-to-sending-messages
@@ -155,3 +163,4 @@ If the deep link [works correctly with ADB][17] but fails to work from Braze pus
 [18]: #custom-handling-push-receipts-and-opens
 [20]: {% image_buster /assets/img_archive/finding_firebase_server_key.png %} "FirebaseServerKey"
 [21]: https://firebase.google.com/docs/cloud-messaging/android/client#retrieve-the-current-registration-token
+[22]: https://developer.android.com/guide/components/activities/tasks-and-back-stack
