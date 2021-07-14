@@ -34,18 +34,22 @@ Objects can contain existing [data types][1], such as:
 
 {% tabs local %}
 {% tab Create %}
-Shown below is a `/users/track` example with a "Last Played Song" object. To capture the properties of the song, we'll send an API request that lists "last_played_song" as an object, along with a set of object properties.
+Shown below is a `/users/track` example with a "Most Played Song" object. To capture the properties of the song, we'll send an API request that lists `most_played_song` as an object, along with a set of object properties.
 
 ```
 {
   "attributes": [
     {
       "external_id": "user_id",
-      "last_played_song" : {
-          "song_name":"Solea",
-          "artist_name" : "Miles Davis",
+      "most_played_song": {
+          "song_name": "Solea",
+          "artist_name": "Miles Davis",
           "album_name": "Sketches of Spain",
-          "genre" : "Jazz"
+          "genre": "Jazz",
+          "play_analytics": {
+              "count": 1000,
+              "top_10_listeners": true
+          }
       }
     }
   ]
@@ -54,17 +58,16 @@ Shown below is a `/users/track` example with a "Last Played Song" object. To cap
 
 {% endtab %}
 {% tab Update %}
-To update an existing object, send a POST to `users/track` with the `_merge_objects` parameter in the request. This will deep merge your update with the existing object data. In this example, we already have a `last_played_song` object in Braze, and now we're adding a new field, `year_released`, to the `last_played_song` object.
+To update an existing object, send a POST to `users/track` with the `_merge_objects` parameter in the request. This will deep merge your update with the existing object data. In this example, we already have a `most_played_song` object in Braze, and now we're adding a new field, `year_released`, to the `most_played_song` object.
 
 ```
-
 {
   "attributes": [
     {
       "external_id": "user_id",
-      "_merge_objects" : true,
-      "last_played_song" : {
-          "year_released" : 1960
+      "_merge_objects": true,
+      "most_played_song": {
+          "year_released": 1960
       }
     }
   ]
@@ -74,12 +77,15 @@ To update an existing object, send a POST to `users/track` with the `_merge_obje
 After the above request is received, the custom attribute object will now look like this:
 
 ```
-"last_played_song" : {
-    "song_name":"Solea",
+"most_played_song": {
+    "song_name": "Solea",
     "artist_name" : "Miles Davis",
     "album_name": "Sketches of Spain",
-    "genre" : "Jazz",
-    "year_released" : 1960
+    "year_released": 1960,
+    "genre": "Jazz",
+    "play_analytics": {
+        "count": 1000,
+        "top_10_listeners": true
 }
 ```
 
@@ -96,7 +102,7 @@ To delete a custom attribute object, send a POST to `users/track` with the custo
   "attributes": [
     {
       "external_id": "user_id",
-      "last_played_song" : null
+      "most_played_song": null
     }
   ]
 }
@@ -127,18 +133,22 @@ You can build Segments based on nested custom attributes to further target your 
 
 ## Data Points
 
-Any key that is updated consumes a data point, including the initialization of a parent custom attribute object. For example, this object initialized in the user profile counts as five (5) data points:
+Any key that is updated consumes a data point, including the initialization of a parent custom attribute object. For example, this object initialized in the user profile counts as nine (9) data points:
 
 ```
 {
   "attributes": [
     {
       "external_id": "user_id",
-      "last_played_song" : {
-          "song_name":"Solea",
-          "artist_name" : "Miles Davis",
+       "most_played_song": {
+          "song_name": "Solea",
+          "artist_name": "Miles Davis",
           "album_name": "Sketches of Spain",
-          "genre" : "Jazz"
+          "year_released": 1960,
+          "genre": "Jazz",
+          "play_analytics": {
+              "count": 1000,
+              "top_10_listeners": true
       }
     }
   ]
