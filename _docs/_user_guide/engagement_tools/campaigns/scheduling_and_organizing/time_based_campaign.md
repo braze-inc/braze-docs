@@ -2,7 +2,7 @@
 nav_title: Time-Based Functionalities for Campaigns
 platform: Campaigns
 subplatform: Scheduling and Organizing
-page_order: .9
+page_order: 0
 
 tool: Campaigns
 page_type: reference
