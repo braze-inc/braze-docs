@@ -32,19 +32,18 @@ popular_topic_list:
     link: /docs/user_guide/data_and_analytics/user_data_collection/user_import/
   - name: Custom Events
     link: /docs/user_guide/data_and_analytics/custom_data/custom_events/
+  - name: Braze Currents
+    link: /docs/user_guide/data_and_analytics/braze_currents/
   - name: Customize In-App Messages
     link: /docs/user_guide/message_building_by_channel/in-app_messages/customize/
   - name: Custom Attributes
     link: /docs/user_guide/data_and_analytics/custom_data/custom_attributes/
-  - name: Braze Currents
-    link: /docs/user_guide/data_and_analytics/braze_currents/
+  - name: Managing User Subscriptions
+    link: /docs/user_guide/message_building_by_channel/email/managing_user_subscriptions/
+  - name: Making an API Call
+    link: /docs/user_guide/personalization_and_dynamic_content/connected_content/making_an_api_call/
   - name: Message Engagement Events
     link: /docs/user_guide/data_and_analytics/braze_currents/event_glossary/message_engagement_events/
   - name: Supported Personalization Tags
     link: /docs/user_guide/personalization_and_dynamic_content/liquid/supported_personalization_tags/
-  - name: Managing User Subscriptions
-    link: /docs/user_guide/message_building_by_channel/email/managing_user_subscriptions/
-  - name: User Profile Lifecycle
-    link: /docs/user_guide/data_and_analytics/user_data_collection/user_profile_lifecycle/
-
 ---
