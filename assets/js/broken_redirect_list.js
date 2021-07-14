@@ -93,7 +93,8 @@ validurls['/docs/api/objects_filters/webhook_object/'] = '/docs/api/objects_filt
 validurls['/docs/api/objects_filters/windows_objects/'] = '/docs/api/objects_filters/messaging/windows_objects/';
 validurls['/docs/api/objects_filters/content_cards_object/'] = '/docs/api/objects_filters/messaging/content_cards_object/';
 
-validurls['/docs/rest_apis/'] = '/docs/developer_guide/rest_api/basics/';
+validurls['/docs/rest_api/'] = '/docs/api/basics/';
+validurls['/docs/rest_apis/'] = '/docs/api/basics/';
 validurls['/docs/web'] = '/docs/developer_guide/platform_integration_guides/web/initial_sdk_setup/';
 validurls['/docs/platform_wide/'] = '/docs/developer_guide/home/';
 validurls['/docs/home/'] = '/docs/user_guide/introduction/';
@@ -368,5 +369,6 @@ validurls['/docs/help/webinars/troubleshooting_bootcamp/'] = '/docs/help/home/';
 
 validurls['/docs/user_guide/message_building_by_channel/email/creating_an_email_template/'] = '/docs/user_guide/message_building_by_channel/email/templates/email_template/';
 validurls['/docs/user_guide/administrative/access_braze/single_sign_on/restriction/'] = '/docs/user_guide/administrative/access_braze/single_sign_on/set_up/#restriction';
-
+validurls['/docs/user_guide/message_building_by_channel/email/email_reporting/'] = '/docs/user_guide/message_building_by_channel/email/creating_an_email_campaign/#email-reporting';
+validurls['/docs/help/best_practices/client_integration_gallery/'] = 'https://www.braze.com/customers';
 

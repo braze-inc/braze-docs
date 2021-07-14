@@ -59,7 +59,7 @@ Archived subscription groups cannot be edited and will no longer appear in segme
 
 You can archive your group from the __Subscription Groups__ page. Find your group in the list, then click the gear and select **Archive** from the dropdown menu.
 
-Braze will not process any state changes for users in archived groups. For example, if you archive "Subscription Group A" while Susie is considered `subscribed` to it, she will remain "`subscribed`" to this group, even if she clicks an unsubscribe link (this shouldn't matter to Susie, "Subscription Group A" is archived and you can't send any messages using it).
+Braze will not process any state changes for users in archived groups. For example, if you archive "Subscription Group A" while Susie is considered `subscribed` to it, they will remain "`subscribed`" to this group, even if they clicks an unsubscribe link (this shouldn't matter to Susie, "Subscription Group A" is archived and you can't send any messages using it).
 
 #### Export User Subscription State Changes
 

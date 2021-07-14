@@ -16,6 +16,9 @@ tool:
   - Campaigns
 
 description: "This article outlines the usage of and parameters for using the Get [endpoint name] Braze endpoint."
+
+noindex: true
+#ATTENTION: remove noindex and this alert from template
 ---
 {% api %}
 # Query or List [Item Endpoint "Gets"]

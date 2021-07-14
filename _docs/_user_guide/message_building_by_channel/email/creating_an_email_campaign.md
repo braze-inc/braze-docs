@@ -19,7 +19,7 @@ channel:
 
 Email messages are great for delivering content to your users on their terms. They are also excellent tools to re-engage users who may have even uninstalled your app. Sending customized and tailored email messages will enhance your users' experience, and help your users get the most value out of your app.
 
-To see examples of email campaigns, check out our [Client Integration Gallery][9].
+To see examples of email campaigns, check out our [Case Studies][9].
 
 ## Step 1: Create a New Campaign
 On the **Campaigns** page, click **Create Campaign** and select **Email** as your messaging channel.
@@ -108,6 +108,10 @@ Unless you check **Allow users to become re-eligible to receive campaign**, each
 
 ![Action]({% image_buster /assets/img_archive/action_delivery_new.png %}){: height="80%"" width="80%"}
 
+  {% alert note %}
+  When the trigger action is set to "Interact With Campaign", selecting a "Receive" option as the interaction will cause your new campaign to trigger as soon as Braze marks the selected campaign as sent, even if that message bounces or fails to be delivered.
+  {% endalert %}
+
   {% endtab %}
   {% tab API-Triggered Delivery %}
 Check out our [API-Triggered section of the Developer Guide]({{site.baseurl}}/developer_guide/rest_api/messaging/#sending-messages-via-api-triggered-delivery) for more on API-Triggered Delivery.
@@ -145,27 +149,47 @@ Now just wait for all the data to roll in!
 
 ![email2][6]
 
-## Results Data
+## Email Reporting
 
-Braze will show you the number of emails sent, opened, clicked through, sent to spam, and bounced for each campaign you deploy. Additionally, Braze's email analytics tool helps you see how your users' clicks are divided across the links in an email campaign. Click on each variation to expands or collapses information on what percentage of users clicked on which link in an email campaign.
+Braze provides you with a detailed report of each of your email campaigns. Navigate to the **Campaigns** tab on your dashboard and select your desired campaign to open the **Details** page. This page is broken up into three tabs:
+
+- Campaign Analytics
+- Retention Report
+- Funnel Report
+
+### Campaign Analytics
+
+On the **Campaign Analytics** page, you can comprehensively view and analyze the success of your campaign in an organized format.
+
+Additionally, you can see how successful different links in a single email campaign are using heat maps. Under **Email Performance**, expand the **Total Clicks** dropdown and click **View Heat Map** to bring up a visual view of your email that shows the overall frequency and location of clicks within the lifespan of the campaign. 
+
+{% alert note %}
+Date ranges are not taken into consideration for email heat maps.
+{% endalert %}
 
 ![email_analytics][17]
 
-When looking at clicks for your variant, the clicks will reflect unique clicks. When you expand each variation, the clicks for each link within the variation will reflect total clicks (not unique). 
+When looking at clicks for your variant, the clicks will reflect unique clicks. When you expand each variation, the clicks for each link within the variation will reflect total clicks (not unique).
 
-Braze also gives you the ability to visualize where users are clicking within a given email campaign using heat maps. To view this data, expand the **Total Clicks** for a variant and click **View Heat Map**.
-
-If you want to see what our metrics mean, check out our [Email Analytics Glossary]({{site.baseurl}}/user_guide/message_building_by_channel/email/analytics_glossary/).
+For detailed definitions of the metrics on this page, check out our [Email Analytics Glossary]({{site.baseurl}}/user_guide/message_building_by_channel/email/analytics_glossary/).
 
 {% alert note %}
 Braze will de-duplicate sends by email address. However, opens are not de-duplicated to prevent the illusion that an email opened by a user with multiple [User Profiles]({{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/user_profile_lifecycle/) under a single email address would only be counted towards a single User Profile.
 {% endalert %}
 
+### Retention Report
+
+On the **Retention Report** page, you can run various reports to measure user retention for users who have performed a selected retention event in a specific campaign. [Learn more]({{site.baseurl}}/user_guide/engagement_tools/campaigns/testing_and_more/retention_reports/).
+
+### Funnel Report
+
+On the **Funnel Report** page, you can analyze the journeys your customers take after receiving your campaign. If your campaign uses a control group or multiple variants, you will be able to understand how the different variants have impacted the conversion funnel at a more granular level, and optimize based on this data. [Learn more]({{site.baseurl}}/user_guide/engagement_tools/campaigns/testing_and_more/campaign_funnel_report/).
+
 [1]: {% image_buster /assets/img_archive/newcampaign_new.png %}
 [3]: {% image_buster /assets/img_archive/choose_email_creation.png %}
 [5]: {% image_buster /assets/img_archive/targetsegment_email_new.png %}
 [6]: {% image_buster /assets/img_archive/confirm_email.png %}
-[9]: {{site.baseurl}}/help/best_practices/client_integration_gallery/#client-integration-email
+[9]: https://www.braze.com/customers
 [10]: {{site.baseurl}}/user_guide/message_building_by_channel/email/creating_an_email_template/#creating-an-email-template
 [13]: {{site.baseurl}}/user_guide/engagement_tools/campaigns/testing_and_more/multivariate_testing/#intelligent-selection
 [14]: {% image_buster /assets/img/email.jpg %}

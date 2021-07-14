@@ -15,7 +15,7 @@ channel:
 
 ![Push Message Example][1]{: height="400px"}  ![Push Message Example][2]{: height="400px"}
 
-_To see more examples of push notifications, check out our [Customer Examples Library][8]._
+_To see more examples of push notifications, check out our [Case Studies][8]._
 
 ## Potential Use Cases
 
@@ -53,7 +53,7 @@ Your push messages must fall within the guidelines of the Apple App Store and Go
 
 [1]: {% image_buster /assets/img/red-dress.gif %}
 [2]: {% image_buster /assets/img/ios_push.png %}
-[8]: {{site.baseurl}}/help/best_practices/client_integration_gallery/
+[8]: https://www.braze.com/customers
 [9]: https://developer.apple.com/app-store/review/guidelines/
 [10]: https://play.google.com/about/developer-content-policy-print/
 
