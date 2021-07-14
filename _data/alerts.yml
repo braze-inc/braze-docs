@@ -3,8 +3,6 @@ note: '<div class="alert alert-note" role="alert"><div class="alert-msg"><b>Note
 important: '<div class="alert alert-important" role="alert"><div class="alert-msg"><b>Important: </b>'
 warning: '<div class="alert alert-warning" role="alert"><div class="alert-msg"><b>Warning: </b>'
 update: '<div class="alert alert-update" role="alert"><div class="alert-msg"><b>Update: </b>'
-checkpoint: '<div class="alert alert-checkpoint" role="alert"><div class="alert-msg"><b>Checkpoint: </b>'
-
 end: '</div></div>'
 
 
