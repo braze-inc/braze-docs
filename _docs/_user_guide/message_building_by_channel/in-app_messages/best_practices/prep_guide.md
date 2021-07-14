@@ -19,6 +19,7 @@ Before you start building your in-app message, you should consider a few of the 
 - When would you like [your message to expire]({{site.baseurl}}/canvas_in-app_messages/)?
 
 ## Targeting Considerations
+
 - In-app messages are best for users who regularly visit your app, are you including this audience?
 - Where do you want your users to meet your message? In your Web app? In your mobile app?
 - Which event triggers this message?
@@ -26,6 +27,7 @@ Before you start building your in-app message, you should consider a few of the 
 - What type of device or devices are you building this message for? Remember, you can preview your message using [our Preview box or Test tab]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/testing/).
 
 ## Content Considerations
+
 - Which languages will you be using in this message?
 - What is your Header and Body copy? Are they eye-catching and relevant to your user?
 - Is your copy concise and memorable, as in-app messages only appear for a set amount of time?
@@ -34,6 +36,7 @@ Before you start building your in-app message, you should consider a few of the 
 
 
 ## Conversion Considerations
+
 - What is your goal for this message? How can you represent that in your message?
 - Do your button options offer options that make sense to your user? What is your [primary call to action]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/create/#buttons)?
 - Are you [deep-linking to other in-app content][1]? Are you using this in-app message to send and accept a [permission or push priming request][21]?

@@ -31,4 +31,7 @@ guide_featured_list:
 - name: "Advanced Campaign Settings"
   link: /docs/user_guide/message_building_by_channel/push/ios/advanced_campaign_settings/
   fa_icon: fas fa-chart-bar
+- name: "Utilizing Badge Count"
+  link: /docs/user_guide/message_building_by_channel/push/ios/utilizing_badge_count/
+  fa_icon: fas fa-bell
 ---

@@ -1,5 +1,6 @@
 ---
 nav_title: Reporting
+page_title: Push Reporting
 page_order: 7
 
 page_type: reference
