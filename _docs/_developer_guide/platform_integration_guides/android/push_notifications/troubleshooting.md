@@ -164,3 +164,4 @@ If the deep link [works correctly with ADB][17] but fails to work from Braze pus
 [20]: {% image_buster /assets/img_archive/finding_firebase_server_key.png %} "FirebaseServerKey"
 [21]: https://firebase.google.com/docs/cloud-messaging/android/client#retrieve-the-current-registration-token
 [22]: https://developer.android.com/guide/components/activities/tasks-and-back-stack
+[22]: https://developer.android.com/guide/components/activities/tasks-and-back-stack
