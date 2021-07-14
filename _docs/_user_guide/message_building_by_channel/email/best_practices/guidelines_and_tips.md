@@ -315,6 +315,15 @@ Make sure to limit your **Body Size**: Large E-Mail bodies (larger than 102kb) a
 
 If you are receiving this error in the editor, you likely have base64 encoded images that have been embedded in the email itself. This is not an effective way to send emails with images. We highly encourage you to use Braze's image uploader to host images and to reference these images by href.
 
+### Text Length
+
+**Text Specifications** | **Recommended Properties**
+--- | ---
+Subject Line Length | 35 characters maximum (for optimal mobile display) (6 to 10 words)
+Sender Name Length | 25 characters maximum (for optimal mobile display)
+Pre-Header Length | 85 characters maximum
+{: .reset-td-br-1 .reset-td-br-2}
+
 ### Image Size
 
 |     Size    | Header Image Width |  Body Image Width  |   File Types  |

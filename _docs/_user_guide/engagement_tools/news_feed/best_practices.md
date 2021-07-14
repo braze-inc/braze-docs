@@ -48,9 +48,9 @@ The content you choose to show through the News Feed can range widely and work i
 
 ## Integration Example
 
-![shapefeed][2]
-
 1-800-Flowers.com uses the News Feed to deliver relevant information to its users. The SDK integration remains entirely transparent: there is no mention of Braze in the app itself and the News Feed module has a design aesthetic that is consistent with the rest of the app.
+
+![shapefeed][2]{: style="max-width:50%;"}
 
 You can view more examples of News Feeds in our [Case Studies][3].
 

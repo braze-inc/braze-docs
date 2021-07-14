@@ -54,6 +54,81 @@ Your push messages must fall within the guidelines of the Apple App Store and Go
 |[We don’t allow apps or ads that mimic or interfere with system functionality, such as notifications or warnings.][10] System-level notifications may only be used for an app’s integral features, such as an airline app that notifies users of special deals, or a game that notifies users of in-game promotions.|
 {: .reset-td-br-1}
 
+## Image and Text Specifications
+
+### Native Mobile Push Notifications
+
+{% tabs local %}
+{% tab Images %}
+
+**Image Type** | **Recommended Image Size** | **Max Image Size** | **File Types**
+--- | --- | --- | ---
+(iOS) 2:1 *Recommended* | 500KB | 5MB | PNG, JPG, GIF
+(Android) Push Icon | 500KB | 5MB | PNG, JPG
+(Android) Expanded Notification | 500KB | 5MB | PNG, JPG
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
+
+{% endtab %}
+{% tab Text %}
+
+**Message Type** | **Max Message Length**
+--- | ---
+(iOS) Lock Screen | 110 Characters
+(iOS) Notification Center | 110 Characters
+(iOS) Banner Alert | 63 Characters
+(Android) Lock Screen | 49 Characters
+(Android) Notification Drawer | 597 Characters
+{: .reset-td-br-1 .reset-td-br-2}
+
+{% endtab %}
+{% tab Payload Size %}
+
+**Platform** | **Size**
+--- | ---
+pre iOS 8 | 0.256 KB
+post iOS 8 | 2 KB
+Android (FCM) | 4 KB
+{: .reset-td-br-1 .reset-td-br-2}
+
+{% endtab %}
+{% endtabs %}
+
+### Web Push Notifications
+
+{% tabs local %}
+{% tab Images %}
+
+| **Browser** | **Recommended Icon Size**
+| --- | ---
+Chrome | 192 x 192 ≥
+Firefox | 192 x 192 ≥
+Safari | Icons not configurable on a per-campaign basis
+Opera | 192x192 ≥
+{: .reset-td-br-1 .reset-td-br-2}
+
+| **Browser** | **Platform** | **Large Image Size**
+| --- | --- | ---
+Chrome | macOS | N/A
+Chrome | Android | 2 : 1 aspect ratio
+Chrome | Windows | 360 ≥ x 240
+Firefox | macOS| N/A
+Safari | macOS | N/A
+Opera | macOS | N/A
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
+
+{% endtab %}
+{% tab Text %}
+
+| **Browser** | **Platform** | **Maximum Title Length**  | **Maximum Message Body Length**
+| --- | --- | --- | ---
+Chrome | macOS | 35 | 50
+Safari | macOS | 38 | 84
+Firefox | macOS | 38 | 42
+Opera | macOS | 38 | 42
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
+
+{% endtab %}
+{% endtabs %}
 
 [1]: {% image_buster /assets/img/red-dress.gif %}
 [2]: {% image_buster /assets/img/ios_push.png %}
