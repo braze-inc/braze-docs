@@ -399,7 +399,7 @@ Other than the default notification channel, Braze will not create any channels.
 
 #### Testing Display
 
-At this point, you should be able to see notifications sent from Braze.  To test this, go to the `Campaigns` section of your Braze dashboard and create a `Push Notification` campaign.  Choose `Android Push` and design your message.  Then click the eyeball in the composer to get the test sender.  Enter the user id or email address of your current user and click `Send Test`.  You should see the push show up on your device.
+At this point, you should be able to see notifications sent from Braze.  To test this, go to the **Campaigns** page on your Braze dashboard and create a **Push Notification** campaign.  Choose **Android Push** and design your message. Then click the eye icon in the composer to get the test sender.  Enter the user ID or email address of your current user and click **Send Test**.  You should see the push show up on your device.
 
 ![Android push test][55]
 
@@ -407,7 +407,7 @@ For issues related to push display, see our [Troubleshooting Guide][57].
 
 #### Testing Analytics
 
-At this point, you should also have analytics logging for push notification opens.  To test this, see our [Docs on creating a push campaign][56].  Clicking on the notification when it arrives should result in the `Direct Opens` on your campaign results page to increase by 1.
+At this point, you should also have analytics logging for push notification opens.  To test this, see our [Docs on creating a push campaign][56].  Clicking on the notification when it arrives should result in the **Direct Opens** on your campaign results page to increase by 1.
 
 For issues related to push analytics, see our [Troubleshooting Guide][57].
 

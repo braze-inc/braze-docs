@@ -66,11 +66,11 @@ Whenever you send a message, their PSID will be included in the `recipient.id` p
 
 __What do I do with it?__
 
-Once you are confident that you are receiving PSIDs, send it to Braze as a Custom Attribute.
+Once you are confident that you are receiving PSIDs, send it to Braze as a custom attribute.
 
 ### Step 2: Send to Braze as a Custom Attribute
 
-Coordinate and share this with your developer to send the PSIDs to Braze as a [Custom Attribute]({{site.baseurl}}/user_guide/Data_and_Analytics/Custom_Data/Custom_Attributes/#custom-attributes). PSIDs are strings that can be accessed by making an [API call](https://developers.facebook.com/docs/messenger-platform/reference/send-api).
+Coordinate and share this with your developer to send the PSIDs to Braze as a [custom attribute]({{site.baseurl}}/user_guide/Data_and_Analytics/Custom_Data/Custom_Attributes/#custom-attributes). PSIDs are strings that can be accessed by making an [API call](https://developers.facebook.com/docs/messenger-platform/reference/send-api).
 
 ## Usage
 
@@ -78,7 +78,7 @@ From __Templates & Media__, go to Webhook Templates and choose the Facebook Mess
 
 1. Enter your Template Name, add teams, and add tags.
 2. Enter your message or choose a message template from [those made available by Facebook](https://developers.facebook.com/docs/messenger-platform/reference/webhook-events/messages). You can also choose your message [type](https://developers.facebook.com/docs/messenger-platform/send-messages#message_types) or [tag](https://developers.facebook.com/docs/messenger-platform/send-messages/message-tags).
-3. Include the PSID as a Custom Attribute (Hint: Use the blue and white + button in the corner of the __Request Body__ box.)
+3. Include the PSID as a custom attribute (Hint: Use the blue and white + button in the corner of the __Request Body__ box.)
 3. Put your Page Access Token in the Webhook URL (Hint: Replace the text `FACEBOOK_PAGE_ACCESS_TOKEN` in the URL with your Token.)
 
 #### Previewing and Testing Your Webhook

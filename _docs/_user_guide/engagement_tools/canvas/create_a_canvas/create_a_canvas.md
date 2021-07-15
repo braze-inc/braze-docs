@@ -187,7 +187,7 @@ You can also apply **Filters** to each Step of a Canvas. Use this to add additio
 
 Edit the Messages in a Canvas Step to control messages that a particular Step will send. Canvas can send Email, Mobile & Web Push messages, and Webhooks to integrate with other systems.
 
-Similar to campaign messages, you may use certain Liquid templating. Refer to the Canvas and Custom Event Properties tabs below for limitations.
+Similar to campaign messages, you may use certain Liquid templating. Refer to the tabs below for limitations.
 
 ![Canvas Message Edit][16]
 
@@ -210,11 +210,11 @@ For more information on the Canvas Entry Properties Object, check out our [docum
 {% endtab %}
 
 {% tab Custom Event Properties %}
-Custom Event Properties are the properties set by you on custom events and purchases, used mainly in Action-Based Delivery campaigns. These properties are ephemeral and can only be used at the time when they happen. <br><br>Event properties don’t persist, so if you are scheduling a Canvas step rather than using action-based delivery, you wouldn’t be able to use an event property (as we don’t store that data). You can't reference the event property for an event that’s already happened.
+Custom event properties are the properties set by you on custom events and purchases, used mainly in action-based delivery campaigns. These properties are ephemeral and can only be used at the time when they happen. <br><br>Event properties don’t persist, so if you are scheduling a Canvas step rather than using action-based delivery, you wouldn’t be able to use an event property (as we don’t store that data). You can't reference the event property for an event that’s already happened.
 
-__Custom Event Properties can be referenced in the first step of a Canvas - but only the first step__! 
+__Custom event properties can be referenced in the first step of a Canvas - but only the first step__! 
 
-For more information on Custom Event Properties, check out our [documentation]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events/#custom-event-properties).
+For more information on custom event properties, check out our [documentation]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events/#custom-event-properties).
 
 {% endtab %}
 {% endtabs %}

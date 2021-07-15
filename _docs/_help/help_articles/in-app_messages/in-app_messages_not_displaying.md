@@ -20,13 +20,13 @@ There are a number of approaches that you may try:
 
 ## Event Triggers
 
-If the campaign is triggered by a Session Start or a Custom Event, you want to ensure that this event or session is happening frequently enough to trigger the message. Check this data on the [Overview][1] (for session data) or [Custom Events][2] pages:
+If the campaign is triggered by a session start or a custom event, you want to ensure that this event or session is happening frequently enough to trigger the message. Check this data on the [Overview][1] (for session data) or [Custom Events][2] pages:
 
 ![trouble6][14]
 
 ## Message Impressions
 
-Customization of the In-App Message UI or delivery mechanisms within the SDK may require your developers to utilize our methods to manually log In-App message impressions. Check with your developers to see if you use In-App message customization.
+Customization of the in-app message UI or delivery mechanisms within the SDK may require your developers to utilize our methods to manually log in-app message impressions. Check with your developers to see if you use in-app message customization.
 
 
 ## Run Tests

@@ -38,7 +38,7 @@ Consider the following sample plan for creating segments of equal size for three
 
 ![Example filter][2]
 
-For each of your created segments, including the control group, turn on [Analytics Tracking][14]. When evaluating the success of variants relative to the control group, you will be able to go into your [Custom Events page][15] and view how often each segment has completed certain custom events.
+For each of your created segments, including the control group, turn on [Analytics Tracking][14]. When evaluating the success of variants relative to the control group, you will be able to go into your [Custom Events][15] page and view how often each segment has completed certain custom events.
 
 ## Step 2: Create your campaign variants
 

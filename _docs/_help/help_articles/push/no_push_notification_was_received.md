@@ -40,11 +40,11 @@ You can do this by checking [global frequency capping][4] within the dashboard. 
 
 ## Check Rate Limits
 
-If you have a rate limit set for your Campaign or Canvas, you might be falling out of receiving messaging due to exceeding this limit. Check out this section of Academy to learn more about [rate limits][47].
+If you have a rate limit set for your campaign or Canvas, you might be falling out of receiving messaging due to exceeding this limit. Check out this section of Academy to learn more about [rate limits][47].
 
 ## Check Control Group Status
 
-If this is a single channel Campaign or a Canvas with a control group, it’s possible you are falling into the control group.
+If this is a single channel campaign or a Canvas with a control group, it’s possible you are falling into the control group.
 
   * Check the [distribution][6] to see if there is a control group.
   * Additionally, create a segment [using this filter][7], and [export the segment][8] and see if your user ID is on this list.

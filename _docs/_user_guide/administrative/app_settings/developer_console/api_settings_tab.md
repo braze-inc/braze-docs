@@ -25,7 +25,7 @@ These identifiers are used to reference specific Apps in requests made to the Br
 
 ### Additional API Identifiers
 
-To integrate with our API, you can search for the identifiers related to any Segment, Campaigns or Cards that you want to access from Braze's external API. All messages should follow [UTF-8][12] encoding. Once you’ve selected any of them, the identifier will be displayed underneath the dropdown menu.
+To integrate with our API, you can search for the identifiers related to any Segment, campaigns or Cards that you want to access from Braze's external API. All messages should follow [UTF-8][12] encoding. Once you’ve selected any of them, the identifier will be displayed underneath the dropdown menu.
 
 [3]: {{site.baseurl}}/developer_guide/rest_api/user_data/
 [4]: {{site.baseurl}}/developer_guide/rest_api/messaging/

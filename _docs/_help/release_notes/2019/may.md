@@ -41,7 +41,7 @@ You can now retrieve data from Roku devices for data enrichment and custom event
 
 ## Notification Preferences for Canvas & Campaign Updates
 
-This new notification will alert you via email when a Campaign/Canvas is activated, updated, reactivated or deactivated. Activate this in Notification Preferences in your Braze account. [Learn more about this preference here.]({{site.baseurl}}/user_guide/administrative/company_settings/notification_preferences/#notification-preferences)  
+This new notification will alert you via email when a campaign/Canvas is activated, updated, reactivated or deactivated. Activate this in Notification Preferences in your Braze account. [Learn more about this preference here.]({{site.baseurl}}/user_guide/administrative/company_settings/notification_preferences/#notification-preferences)  
 
 ## Jampp Technology Partner Documentation
 
@@ -58,7 +58,7 @@ We've made it easier to select where your in-app messages are going and which pl
 ## Dispatch ID Currents Field for Email
 
 {% alert update %}
-Behavior for `dispatch_id` differs between Canvas and Campaigns because Braze treats Canvas steps (except for Entry Steps, which can be scheduled) as triggered events, even when they are "scheduled". [Learn more about `dispatch_id` behavior in Canvas and Campaigns here]({{site.baseurl}}/help/help_articles/data/dispatch_id/).
+Behavior for `dispatch_id` differs between Canvas and campaigns because Braze treats Canvas steps (except for Entry Steps, which can be scheduled) as triggered events, even when they are "scheduled". [Learn more about `dispatch_id` behavior in Canvas and campaigns here]({{site.baseurl}}/help/help_articles/data/dispatch_id/).
 
 _Update noted in August 2019._
 {% endalert %}
@@ -71,11 +71,11 @@ While all customers who are sent a scheduled message get the same `dispatch_id`,
 
 ## Only Show Mine - Campaign Sorting Feature
 
-When a user checks the `Only Show Mine` checkbox on the Campaign grid, the results will filter down to Campaigns show only created by the logged-in user. Additionally, the user can use the search bar by inputting `created_by_me:true`.
+When a user checks the `Only Show Mine` checkbox on the campaign grid, the results will filter down to campaigns show only created by the logged-in user. Additionally, the user can use the search bar by inputting `created_by_me:true`.
 
 ![Created by Me][cbm]{: height="50%" width="50%"}
 
-Also, the Campaign grid sidebar is now resizable!
+Also, the campaign grid sidebar is now resizable!
 
 ## Delete Users by Alias
 
@@ -92,7 +92,7 @@ Any users also using Mailjet will see a spike in these numbers, since the previo
 You can search for these updated terms in our [Report Metrics Glossary]({{site.baseurl }}/user_guide/data_and_analytics/report_metrics/).
 
 {% alert update %}
-Behavior for `dispatch_id` differs between Canvas and Campaigns because Braze treats Canvas steps (except for Entry Steps, which can be scheduled) as triggered events, even when they are "scheduled". [Learn more about `dispatch_id` behavior in Canvas and Campaigns here]({{site.baseurl}}/help/help_articles/data/dispatch_id/).
+Behavior for `dispatch_id` differs between Canvas and campaigns because Braze treats Canvas steps (except for Entry Steps, which can be scheduled) as triggered events, even when they are "scheduled". [Learn more about `dispatch_id` behavior in Canvas and campaigns here]({{site.baseurl}}/help/help_articles/data/dispatch_id/).
 
 _Update noted in August 2019._
 {% endalert %}
