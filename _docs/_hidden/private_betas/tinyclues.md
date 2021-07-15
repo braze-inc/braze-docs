@@ -26,9 +26,19 @@ To integrate Braze and Tinyclues, you must export an existing Tinyclues campaign
 - An active Braze account with the ability to use Tinyclues integration.
 - The API key corresponding to Tincylues' integration must be communicated to your Tinyclues Data Operation representative to set up the integration.
 
-< screenshot to show how to retrieve the API Key> 
-
 ## Implementation Process
+
+### Step 1: Get the Braze Data Import Key
+In your Braze account, naviagate to __Technology Partners__ and select __Tinyclues__. Here, you will find your REST Endpoint and generate your Braze data import key. 
+
+### Step 2: Share API Key with TinyClues Data Operations
+
+You will need to provide the data import key and your REST endpoint to the Tinyclues Data Operations Team for the integration to be complete. Tinyclues will then establish the connection and reach out to you once the setup is complete. 
+
+### Step 3: Use TinyClues 
+
+![Tinyclues][3]{: style="max-width:30%;"}
+![Tinyclues][4]{: style="max-width:30%;"}
 
 ### Step 1: Export a Campaign from the Tinyclues Platform
 Each time you want to activate a given campaign through Braze, you'll have to first export it from the Tinyclues platform.
@@ -40,9 +50,7 @@ On the Tinyclues platform, select the campaign(s) you want to export and click o
 Upon export, the audience will be automatically uploaded to your Braze account.
 
 ### Step 2: Retrieve your Audience in Braze
-Using the Braze platform, create a campaign and use the dedicated audience filtering option to target Tinyclues users. Select the cohort corresponding to the exported Tinyclues campaign and begin your campaign.
-
-< screenshot to be added once it is available on Braze>
+On the Braze platform, create a campaign and use the dedicated audience filtering option to target your Tinyclues users. Select the specific Tinyclues Cohort Segment that corresponds to your exported Tinyclues campaign and begin your Braze campaign.
 
 ## Troubleshooting
 Are you having trouble finding the right cohort within the list? Verify the name in Tinyclues UI by clicking on the campaign and checking the "Export File Name".
@@ -53,3 +61,5 @@ Still having trouble retrieving your audience, contact the Tinyclues Team for ad
 
 [1]: {% image_buster /assets/img/tinyclues/tinyclues_1.png %} 
 [2]: {% image_buster /assets/img/tinyclues/tinyclues_2.png %} 
+[3]: {% image_buster /assets/img/tinyclues/tinyclues_3.png %} 
+[4]: {% image_buster /assets/img/tinyclues/tinyclues_4.png %} 
