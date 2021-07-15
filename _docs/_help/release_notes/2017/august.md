@@ -23,7 +23,7 @@ You can now [personalize a message][69] based on:
 - OS, and
 - Platform
 
-## API Triggered Canvas
+## API-Triggered Canvas
 
 You can now trigger a [Canvas][68] via API endpoints (send, schedule, update, delete) that match the existing ones for campaigns, allowing you to further automate and optimize your marketing.
 

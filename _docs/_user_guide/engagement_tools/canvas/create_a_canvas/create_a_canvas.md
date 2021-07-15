@@ -35,7 +35,7 @@ The Entry Wizard will guide you through setting up your Canvas—everything from
     Here, you will decide how your users will enter your Canvas:
     - Scheduled: This is a time-based Canvas entry
     - Action-Based: Your user will enter your Canvas after they perform a defined action
-    - API Triggered: Use an API request to enter users into your Canvas
+    - API-Triggered: Use an API request to enter users into your Canvas
 
     [Learn more about the Entry Schedule step.](#set-your-canvas-entry-schedule)
   {% endtab %}
@@ -97,7 +97,7 @@ After you choose which you'll use, adjust those settings appropriately, and move
 {% tabs local %}
   {% tab Scheduled Delivery %}
     __Scheduled Delivery__<br>
-    With scheduled delivery, users will enter on a time schedule, similarly to how you would schedule a Campaign. You can enroll users in a Canvas as soon as it is launched, or enter them into your journey at some point in the future, or on a recurring basis.
+    With scheduled delivery, users will enter on a time schedule, similarly to how you would schedule a campaign. You can enroll users in a Canvas as soon as it is launched, or enter them into your journey at some point in the future, or on a recurring basis.
 
     ![Canvas Scheduled Delivery]({% image_buster /assets/img_archive/Canvas_Scheduled_Delivery.png %})
   {% endtab %}
@@ -116,9 +116,9 @@ After you choose which you'll use, adjust those settings appropriately, and move
     ![Canvas API-Triggered Delivery]({% image_buster /assets/img_archive/Canvas_API_Triggered_Delivery.png %})
 
     API-Triggered Delivery Endpoints:
-    - [POST: Send Canvas Messages via API Triggered Delivery]({{site.baseurl}}/api/endpoints/messaging/send_messages/post_send_triggered_canvases/)
-    - [POST: Schedule API Triggered Canvases]({{site.baseurl}}/api/endpoints/messaging/schedule_messages/post_schedule_triggered_canvases/)
-    - [POST: Update Scheduled API Triggered Canvases]({{site.baseurl}}/api/endpoints/messaging/schedule_messages/post_update_scheduled_triggered_canvases/)
+    - [POST: Send Canvas Messages via API-Triggered Delivery]({{site.baseurl}}/api/endpoints/messaging/send_messages/post_send_triggered_canvases/)
+    - [POST: Schedule API-Triggered Canvases]({{site.baseurl}}/api/endpoints/messaging/schedule_messages/post_schedule_triggered_canvases/)
+    - [POST: Update Scheduled API-Triggered Canvases]({{site.baseurl}}/api/endpoints/messaging/schedule_messages/post_update_scheduled_triggered_canvases/)
 
   {% endtab %}
 {% endtabs %}

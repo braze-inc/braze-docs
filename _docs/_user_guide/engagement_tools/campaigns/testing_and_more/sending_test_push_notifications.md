@@ -83,7 +83,7 @@ After adding the testing filters to your test segment, you can verify that you'v
 
 > Exporting the segment's User Data to CSV will give you the most accurate picture of who falls under that segment. The "Preview" tab is only a sample of the users in the segment - [see more details about this in our FAQ][7] - and therefore may appear to have not selected all intended members.
 
-Once you've confirmed that you're only targeting the users that you want to receive the test message, you can either select this segment in an existing campaign that you want to test or click the "Start Campaign" button in the segment menu.
+Once you've confirmed that you're only targeting the users that you want to receive the test message, you can either select this segment in an existing campaign that you want to test or click the **Start Campaign** button in the segment menu.
 
 ## Sending the Test Campaign
 

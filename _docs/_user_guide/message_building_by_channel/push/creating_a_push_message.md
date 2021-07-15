@@ -114,7 +114,7 @@ You have the option of allowing a conversion event within a time frame that is r
 
 ## Step 6: Review and Deploy {#review-and-deploy-push}
 
-The final page will give you a summary of the campaign you've just designed. Clicking "Launch Campaign" will enable it to send. Confirm all the relevant details and watch the data roll in!
+The final page will give you a summary of the campaign you've just designed. Clicking **Launch Campaign** will enable it to send. Confirm all the relevant details and watch the data roll in!
 
 ![Confirmation Page][5]
 

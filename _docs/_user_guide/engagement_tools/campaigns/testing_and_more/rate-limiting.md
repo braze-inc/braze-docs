@@ -130,7 +130,7 @@ Please note that this behavior changes the default behavior when you turn off Fr
 
 Different channels within a multichannel campaign will individually count towards the frequency cap. For instance, if you create a multichannel campaign with, say, both push and email, and have Frequency Capping set up for both of those channels, then the push will count toward 1 push campaign and the email message will count toward 1 email message campaign. The campaign will also count toward 1 "campaign of any type." If users are capped to 1 push and 1 email campaign per day and someone receives this multichannel campaign, then she will no longer be eligible for push or email campaigns for the rest of the day (unless a campaign ignores Frequency Capping rules).
 
-In-app messages and Content Cards are __not__ counted as or towards caps on "Campaigns/Canvas Steps of any type".
+In-app messages and Content Cards are __not__ counted as or towards caps on campaigns or Canvas steps of any type.
 
 {% alert important %}
 Please note that global frequency capping is based in the user's time zone, and are based on calendar days, not 24-hour periods. For example, if I set up a frequency capping rule of sending no more than 1 campaign a day, a user may receive a message at 11 pm in their local time zone, and they would be eligible to receive another message an hour later.
@@ -153,13 +153,13 @@ Using the following frequency capping rules:
 
 **And the following scenario occurs:**
 
-- A user triggers the same Campaign, Campaign ABC three times over the course of a week.
+- A user triggers the same campaign, Campaign ABC three times over the course of a week.
 - This user triggers Campaign ABC once on Monday, once on Wednesday, and once on Thursday.
 
 __Then, the expected behavior is that:__
 
-- This user will receive the Campaign sends that triggered on Monday and Wednesday.
-- This user will not receive the third Campaign send on Thursday because the user has already received two push Campaign sends that week.
+- This user will receive the campaign sends that triggered on Monday and Wednesday.
+- This user will not receive the third campaign send on Thursday because the user has already received two push campaign sends that week.
 
 {% endtab %}
 {% endtabs %}
@@ -173,10 +173,10 @@ You can combine regular Frequency Capping with Frequency Capping by Tags, as sho
 ![rule][12]
 
 The rules above ask that users receive:
-1. No more than three (3) push notification Campaigns/Canvas steps per week from __all__ Campaign/Canvas steps, __AND__
-2. No more than two (2) push notification Campaign/Canvas steps per week with the tag `promotional`.
+1. No more than three (3) push notification campaigns or Canvas steps per week from __all__ campaign and Canvas steps, __AND__
+2. No more than two (2) push notification campaign or Canvas steps per week with the tag `promotional`.
 
-As a result, your users will receive no more than three (3) Campaign sends per week over all Campaigns/Canvas steps and no more than two (2) push notification Campaigns/Canvas steps with the tag `promotional`.
+As a result, your users will receive no more than three (3) campaign sends per week over all campaigns and Canvas steps and no more than two (2) push notification campaigns or Canvas steps with the tag `promotional`.
 
 {% alert important %}
 Canvases are tagged at the Canvas level, as opposed to tagging by Step. So, each Canvas Step will inherit __all__ of the Canvas level tags.
@@ -188,14 +188,14 @@ When rules conflict, the most restrictive, applicable frequency capping rule wil
 
 ![global][11]
 
-In this example, your user will not receive more than one (1) push notification Campaign/Canvas steps with the tag "promotional" in a given week, because you've specified that users should not receive more than one (1) push notification Campaign/Canvas step from all Campaign/Canvas steps. In other words, the most restrictive applicable frequency rule is the rule that will be applied to a given user.
+In this example, your user will not receive more than one (1) push notification campaign or Canvas steps with the tag "promotional" in a given week, because you've specified that users should not receive more than one (1) push notification campaign or Canvas step from all campaigns and Canvas steps. In other words, the most restrictive applicable frequency rule is the rule that will be applied to a given user.
 
 #### Tag Count
-Frequency Capping by Tag rules compute at the time a message sends. This means that Frequency Capping by Tag only counts tags that are currently on the Campaigns/Canvases that a user received in the past. It does not count the tags that were on the Campaigns/Canvases during the time they were sent but have since been removed. It will count if a Tag is later added to a message that a user received in the past, but before the newest tagged message is sent.
+Frequency Capping by Tag rules compute at the time a message sends. This means that Frequency Capping by Tag only counts tags that are currently on the campaigns or Canvases that a user received in the past. It does not count the tags that were on the campaigns or Canvases during the time they were sent but have since been removed. It will count if a Tag is later added to a message that a user received in the past, but before the newest tagged message is sent.
 
 ##### Example
 
-Consider the following Campaigns and Frequency Capping by Tag rule:
+Consider the following campaigns and Frequency Capping by Tag rule:
 
 __Campaigns:__
 - __Campaign A__ is a push campaign tagged as `promotional`. It is slated to send at 9:00 AM on Monday.
@@ -212,21 +212,21 @@ __Frequency Capping by Tag Rule:__
 
 #### Sending at Large Scales
  
-If you send __more than one hundred (100) messages per channel__ from Campaigns/Canvas Steps with frequency capping turned on to a specific user over the duration of your frequency capping by tag rule (for example, over 1 week), the frequency capping by tag rule may not always be applied properly. 
+If you send __more than one hundred (100) messages per channel__ from campaigns or Canvas Steps with frequency capping turned on to a specific user over the duration of your frequency capping by tag rule (for example, over 1 week), the frequency capping by tag rule may not always be applied properly. 
 
 For example, if your frequency capping by tag rule is: 
 
-> No more than two (2) email Campaigns/Canvas Steps with the tag `Promotional` to a user every week.
+> No more than two (2) email campaigns or Canvas Steps with the tag `Promotional` to a user every week.
 
-And you send the user more than one hundred (100) emails from Campaigns/Canvas Steps with frequency capping turned on over the course of a week, more than two emails may be sent to the user. 
+And you send the user more than one hundred (100) emails from campaigns and Canvas Steps with frequency capping turned on over the course of a week, more than two emails may be sent to the user. 
 
 Because 100 messages per channel are more messages than most brands send to their users, it's unlikely that you will be impacted by this limitation. To avoid this limitation, you can simply set a cap for the maximum number of emails you'd like your users to receive over the course of a week. 
 
 For example, you might set up the following rule: 
 
-> No more than three (3) email Campaigns/Canvas steps per week from __all__ Campaign/Canvas Steps.
+> No more than three (3) email campaigns or Canvas steps per week from __all__ campaign and Canvas Steps.
 
-This rule will ensure that no users receive more than 100 emails per week because, at most, users will receive 3 emails per week from Campaigns/Canvas Steps with frequency capping turned on.
+This rule will ensure that no users receive more than 100 emails per week because, at most, users will receive 3 emails per week from campaigns or Canvas Steps with frequency capping turned on.
 
 
 

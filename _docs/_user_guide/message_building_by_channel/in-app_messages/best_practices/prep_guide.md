@@ -14,7 +14,7 @@ Before you start building your in-app message, you should consider a few of the 
 
 ## General Considerations
 
-- If you are building in Campaigns, how many variants of this message would you like to display?
+- If you are building in campaigns, how many variants of this message would you like to display?
 - If you are building in Canvas, will this message be paired with other messaging channels in that step?
 - When would you like [your message to expire]({{site.baseurl}}/canvas_in-app_messages/)?
 

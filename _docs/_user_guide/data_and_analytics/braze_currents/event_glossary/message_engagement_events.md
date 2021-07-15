@@ -59,7 +59,7 @@ This event occurs when Braze processes a push message for a user, communicating 
   "platform": (string) platform of the device (iOS, Android, web, etc.),
   "device_id": (string) id of the device that we made a delivery attempt to,
   "send_id": (string) id of the message if specified for the campaign (See Send Identifier under API Identifier Types),
-  "dispatch_id": (string) id of the message dispatch (unique id for each 'transmission' sent from the Braze platform). Users who are sent a schedule message get the same dispatch_id. Action-based or API triggered messages get a unique dispatch_id per user.,
+  "dispatch_id": (string) id of the message dispatch (unique id for each 'transmission' sent from the Braze platform). Users who are sent a schedule message get the same dispatch_id. Action-based or API-triggered messages get a unique dispatch_id per user.,
   "ad_id": (string) advertising identifier,
   "ad_id_type": (string) One of 'ios_idfa', 'google_ad_id', 'windows_ad_id', OR 'roku_ad_id',
   "ad_tracking_enabled": (boolean) whether advertising tracking is enabled for the device
@@ -110,7 +110,7 @@ This event occurs when a user directly clicks on the Push notification to open t
   "device_model": (string) hardware model of the device,
   "device_id": (string) id of the device that we made a delivery attempt to,
   "send_id": (string) id of the message if specified for the campaign (See Send Identifier under API Identifier Types),
-  "dispatch_id": (string) id of the message dispatch (unique id for each 'transmission' sent from the Braze platform). Users who are sent a schedule message get the same dispatch_id. Action-based or API triggered messages get a unique dispatch_id per user.,
+  "dispatch_id": (string) id of the message dispatch (unique id for each 'transmission' sent from the Braze platform). Users who are sent a schedule message get the same dispatch_id. Action-based or API-triggered messages get a unique dispatch_id per user.,
   "ad_id": (string) advertising identifier,
   "ad_id_type": (string) One of 'ios_idfa', 'google_ad_id', 'windows_ad_id', OR 'roku_ad_id',
   "ad_tracking_enabled": (boolean) whether advertising tracking is enabled for the device
@@ -159,7 +159,7 @@ This event occurs if a push was sent while the iOS app was in the foreground. Wh
   "platform": (string) platform of the device (iOS, Android, web, etc.),
   "device_id": (string) id of the device that we made a delivery attempt to,
   "send_id": (string) id of the message if specified for the campaign (See Send Identifier under API Identifier Types),
-  "dispatch_id": (string) id of the message dispatch (unique id for each 'transmission' sent from the Braze platform). Users who are sent a schedule message get the same dispatch_id. Action-based or API triggered messages get a unique dispatch_id per user.,
+  "dispatch_id": (string) id of the message dispatch (unique id for each 'transmission' sent from the Braze platform). Users who are sent a schedule message get the same dispatch_id. Action-based or API-triggered messages get a unique dispatch_id per user.,
   "ad_id": (string) advertising identifier,
   "ad_id_type": (string) One of 'ios_idfa', 'google_ad_id', 'windows_ad_id', OR 'roku_ad_id',
   "ad_tracking_enabled": (boolean) whether advertising tracking is enabled for the device
@@ -207,7 +207,7 @@ This event occurs when an error is received from either Apple Push Notification 
   "platform": (string) platform of the device (iOS, Android, web, etc.),
   "device_id": (string) id of the device that we made a delivery attempt to,
   "send_id": (string) id of the message if specified for the campaign (See Send Identifier under API Identifier Types),
-  "dispatch_id": (string) id of the message dispatch (unique id for each 'transmission' sent from the Braze platform). Users who are sent a schedule message get the same dispatch_id. Action-based or API triggered messages get a unique dispatch_id per user.,
+  "dispatch_id": (string) id of the message dispatch (unique id for each 'transmission' sent from the Braze platform). Users who are sent a schedule message get the same dispatch_id. Action-based or API-triggered messages get a unique dispatch_id per user.,
   "ad_id": (string) advertising identifier,
   "ad_id_type": (string) One of 'ios_idfa', 'google_ad_id', 'windows_ad_id', OR 'roku_ad_id',
   "ad_tracking_enabled": (boolean) whether advertising tracking is enabled for the device
@@ -250,7 +250,7 @@ This event occurs when an email send request was successfully communicated betwe
   "canvas_step_name": (string) name of the step for this message if from a Canvas,
   // Event Specific Properties
   "send_id": (string) id of the message if specified for the campaign (See Send Identifier under API Identifier Types),
-  "dispatch_id": (string) id of the message dispatch (unique id for each 'transmission' sent from the Braze platform). Users who are sent a schedule message get the same dispatch_id. Action-based or API triggered messages get a unique dispatch_id per user,
+  "dispatch_id": (string) id of the message dispatch (unique id for each 'transmission' sent from the Braze platform). Users who are sent a schedule message get the same dispatch_id. Action-based or API-triggered messages get a unique dispatch_id per user,
   "email_address": (string) email address for this event,
   "ip_pool": (string) IP pool used for message sending
 }
@@ -293,7 +293,7 @@ This event occurs when an email sent made it successfully to the end-users inbox
   "canvas_step_id": (string) id of the step for this message if from a Canvas,
   "canvas_step_name": (string) name of the step for this message if from a Canvas,
   "send_id": (string) id of the message if specified for the campaign (See Send Identifier under API Identifier Types),
-  "dispatch_id": (string) id of the message dispatch (unique id for each 'transmission' sent from the Braze platform). Users who are sent a schedule message get the same dispatch_id. Action-based or API triggered messages get a unique dispatch_id per user.,
+  "dispatch_id": (string) id of the message dispatch (unique id for each 'transmission' sent from the Braze platform). Users who are sent a schedule message get the same dispatch_id. Action-based or API-triggered messages get a unique dispatch_id per user.,
   "email_address": (string) email address for this event,
   "sending_ip": (string) the IP address from which the message was sent (Email Delivery, Bounce, and SoftBounce events only. Will only be shown on events if the message was actually attempted for delivery. For certain other bounces, the information could be lost if the recipient server has already accepted the mail and only later after the connection is closed decided it could not deliver the mail),
   "ip_pool": (string) IP pool used for message sending
@@ -337,7 +337,7 @@ This event occurs when a user opens an email. Multiple events may be generated f
   "canvas_step_id": (string) id of the step for this message if from a Canvas,
   "canvas_step_name": (string) name of the step for this message if from a Canvas,
   "send_id": (string) id of the message if specified for the campaign (See Send Identifier under API Identifier Types),
-  "dispatch_id": (string) id of the message dispatch (unique id for each 'transmission' sent from the Braze platform). Users who are sent a schedule message get the same dispatch_id. Action-based or API triggered messages get a unique dispatch_id per user.,
+  "dispatch_id": (string) id of the message dispatch (unique id for each 'transmission' sent from the Braze platform). Users who are sent a schedule message get the same dispatch_id. Action-based or API-triggered messages get a unique dispatch_id per user.,
   "email_address": (string) email address for this event,
   "user_agent": (string) description of the user's system and browser for the event (Email Click, Open, and MarkAsSpam events only),
   "ip_pool": (string) IP pool used for message sending
@@ -382,7 +382,7 @@ This event occurs when a user clicks an email. Multiple events may be generated 
   "canvas_step_id": (string) id of the step for this message if from a Canvas,
   "canvas_step_name": (string) name of the step for this message if from a Canvas,
   "send_id": (string) id of the message if specified for the campaign (See Send Identifier under API Identifier Types),
-  "dispatch_id": (string) id of the message dispatch (unique id for each 'transmission' sent from the Braze platform). Users who are sent a schedule message get the same dispatch_id. Action-based or API triggered messages get a unique dispatch_id per user.,
+  "dispatch_id": (string) id of the message dispatch (unique id for each 'transmission' sent from the Braze platform). Users who are sent a schedule message get the same dispatch_id. Action-based or API-triggered messages get a unique dispatch_id per user.,
   "email_address": (string) email address for this event,
   "url": (string) the url that was clicked (Email Click events only),
   "user_agent": (string) description of the user's system and browser for the event (Email Click, Open, and MarkAsSpam events only),
@@ -426,7 +426,7 @@ This event occurs when an Internet Service Provider returns a hard bounce. A har
   "canvas_step_id": (string) id of the step for this message if from a Canvas,
   "canvas_step_name": (string) name of the step for this message if from a Canvas,
   "send_id": (string) id of the message if specified for the campaign (See Send Identifier under API Identifier Types),
-  "dispatch_id": (string) id of the message dispatch (unique id for each 'transmission' sent from the Braze platform). Users who are sent a schedule message get the same dispatch_id. Action-based or API triggered messages get a unique dispatch_id per user.,
+  "dispatch_id": (string) id of the message dispatch (unique id for each 'transmission' sent from the Braze platform). Users who are sent a schedule message get the same dispatch_id. Action-based or API-triggered messages get a unique dispatch_id per user.,
   "email_address": (string) email address for this event,
   "sending_ip": (string) the IP address from which the message was sent (Email Delivery, Bounce, and SoftBounce events only. Will only be shown on events if the message was actually attempted for delivery. For certain other bounces, the information could be lost if the recipient server has already accepted the mail and only later after the connection is closed decided it could not deliver the mail),
   "ip_pool": (string) IP pool used for message sending (for certain bounce cases, IP pool will not be provided) ,
@@ -470,7 +470,7 @@ This event occurs when an Internet Service Provider returns a soft bounce. A sof
   "canvas_step_id": (string) id of the step for this message if from a Canvas,
   "canvas_step_name": (string) name of the step for this message if from a Canvas,
   "send_id": (string) id of the message if specified for the campaign (See Send Identifier under API Identifier Types),
-  "dispatch_id": (string) id of the message dispatch (unique id for each 'transmission' sent from the Braze platform). Users who are sent a schedule message get the same dispatch_id. Action-based or API triggered messages get a unique dispatch_id per user.,
+  "dispatch_id": (string) id of the message dispatch (unique id for each 'transmission' sent from the Braze platform). Users who are sent a schedule message get the same dispatch_id. Action-based or API-triggered messages get a unique dispatch_id per user.,
   "email_address": (string) email address for this event,
   "sending_ip": (string) the IP address from which the message was sent (Email Delivery, Bounce, and SoftBounce events only. Will only be shown on events if the message was actually attempted for delivery. For certain other bounces, the information could be lost if the recipient server has already accepted the mail and only later after the connection is closed decided it could not deliver the mail),
   "ip_pool": (string) IP pool used for message sending(for certain bounce cases, IP pool will not be provided),
@@ -514,7 +514,7 @@ This event occurs when the end-user hits the “spam” button on the email. Not
   "canvas_step_id": (string) id of the step for this message if from a Canvas,
   "canvas_step_name": (string) name of the step for this message if from a Canvas,
   "send_id": (string) id of the message if specified for the campaign (See Send Identifier under API Identifier Types),
-  "dispatch_id": (string) id of the message dispatch (unique id for each 'transmission' sent from the Braze platform). Users who are sent a schedule message get the same dispatch_id. Action-based or API triggered messages get a unique dispatch_id per user.,
+  "dispatch_id": (string) id of the message dispatch (unique id for each 'transmission' sent from the Braze platform). Users who are sent a schedule message get the same dispatch_id. Action-based or API-triggered messages get a unique dispatch_id per user.,
   "email_address": (string) email address for this event,
   "user_agent": (string) description of the user's system and browser for the event (Email Click, Open, and MarkAsSpam events only),
   "ip_pool": (string) IP pool used for message sending
@@ -562,7 +562,7 @@ Please note that the `Unsubscribe` event is actually a specialized click event t
   "canvas_step_id": (string) id of the step for this message if from a Canvas,
   "canvas_step_name": (string) name of the step for this message if from a Canvas,
   "send_id": (string) id of the message if specified for the campaign (See Send Identifier under API Identifier Types),
-  "dispatch_id": (string) id of the message dispatch (unique id for each 'transmission' sent from the Braze platform). Users who are sent a schedule message get the same dispatch_id. Action-based or API triggered messages get a unique dispatch_id per user.,
+  "dispatch_id": (string) id of the message dispatch (unique id for each 'transmission' sent from the Braze platform). Users who are sent a schedule message get the same dispatch_id. Action-based or API-triggered messages get a unique dispatch_id per user.,
   "email_address": (string) email address for this event,
   "ip_pool": (string) IP pool used for message sending
 }
@@ -1039,7 +1039,7 @@ This event occurs when a user sends an SMS.
   "canvas_variation_name": (string) name of the Canvas variation the user is in if from a Canvas,
   "canvas_step_id": (string) id of the step for this message if from a Canvas,
   "canvas_step_name": (string) name of the step for this message if from a Canvas,
-  "dispatch_id": (string) id of the message dispatch (unique id for each 'transmission' sent from the Braze platform and users who are sent a schedule message get the same dispatch_id. Action-based or API triggered messages get a unique dispatch_id per user
+  "dispatch_id": (string) id of the message dispatch (unique id for each 'transmission' sent from the Braze platform and users who are sent a schedule message get the same dispatch_id. Action-based or API-triggered messages get a unique dispatch_id per user
 }
 ```
 {% endapi %}
@@ -1074,7 +1074,7 @@ This event occurs when an SMS is sent to the carrier.
   "canvas_variation_name": (string) name of the Canvas variation the user is in if from a Canvas,
   "canvas_step_id": (string) id of the step for this message if from a Canvas,
   "canvas_step_name": (string) name of the step for this message if from a Canvas,
-  "dispatch_id": (string) id of the message dispatch (unique id for each 'transmission' sent from the Braze platform and users who are sent a schedule message get the same dispatch_id. Action-based or API triggered messages get a unique dispatch_id per user
+  "dispatch_id": (string) id of the message dispatch (unique id for each 'transmission' sent from the Braze platform and users who are sent a schedule message get the same dispatch_id. Action-based or API-triggered messages get a unique dispatch_id per user
 }
 ```
 {% endapi %}
@@ -1109,7 +1109,7 @@ This event occurs when an SMS was successfully delivered to the users mobile pho
   "canvas_variation_name": (string) name of the Canvas variation the user is in if from a Canvas,
   "canvas_step_id": (string) id of the step for this message if from a Canvas,
   "canvas_step_name": (string) name of the step for this message if from a Canvas,
-  "dispatch_id": (string) id of the message dispatch (unique id for each 'transmission' sent from the Braze platform and users who are sent a schedule message get the same dispatch_id. Action-based or API triggered messages get a unique dispatch_id per user
+  "dispatch_id": (string) id of the message dispatch (unique id for each 'transmission' sent from the Braze platform and users who are sent a schedule message get the same dispatch_id. Action-based or API-triggered messages get a unique dispatch_id per user
 }
 ```
 {% endapi %}
@@ -1144,7 +1144,7 @@ This event occurs when an SMS send gets rejected by the carrier, this can happen
   "canvas_variation_name": (string) name of the Canvas variation the user is in if from a Canvas,
   "canvas_step_id": (string) id of the step for this message if from a Canvas,
   "canvas_step_name": (string) name of the step for this message if from a Canvas,
-  "dispatch_id": (string) id of the message dispatch (unique id for each 'transmission' sent from the Braze platform and users who are sent a schedule message get the same dispatch_id. Action-based or API triggered messages get a unique dispatch_id per user,
+  "dispatch_id": (string) id of the message dispatch (unique id for each 'transmission' sent from the Braze platform and users who are sent a schedule message get the same dispatch_id. Action-based or API-triggered messages get a unique dispatch_id per user,
   "error": (string) the Braze provided error (Rejection and Delivery Failure events only),
   "provider_error_code": (string) the provider’s reason code as to why the message was not sent (Rejection and Delivery Failure events only)
 }
@@ -1182,7 +1182,7 @@ This event occurs when an SMS experiences delivery failure. Use this event and t
   "canvas_variation_name": (string) name of the Canvas variation the user is in if from a Canvas,
   "canvas_step_id": (string) id of the step for this message if from a Canvas,
   "canvas_step_name": (string) name of the step for this message if from a Canvas,
-  "dispatch_id": (string) id of the message dispatch (unique id for each 'transmission' sent from the Braze platform and users who are sent a schedule message get the same dispatch_id. Action-based or API triggered messages get a unique dispatch_id per user,
+  "dispatch_id": (string) id of the message dispatch (unique id for each 'transmission' sent from the Braze platform and users who are sent a schedule message get the same dispatch_id. Action-based or API-triggered messages get a unique dispatch_id per user,
   "error": (string) the Braze provided error (Rejection and Delivery Failure events only),
   "provider_error_code": (string) the provider’s reason code as to why the message was not sent (Rejection and Delivery Failure events only)
 }

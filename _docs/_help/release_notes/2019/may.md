@@ -67,7 +67,7 @@ In the effort to continue enhancing our Currents capabilities, we're adding `dis
 
 The `dispatch_id` is the unique out-of-the-box ID generated for each transmission – or, dispatch – sent from the Braze platform.
 
-While all customers who are sent a scheduled message get the same `dispatch_id`, customers who receive either action-based or API triggered messages will get a unique `dispatch_id` per message. The `dispatch_id` field enables you to identify which instance of a recurring campaign is responsible for conversion, thus equipping you with more insights and information on which types of campaigns are helping push the needle on your business goals.
+While all customers who are sent a scheduled message get the same `dispatch_id`, customers who receive either action-based or API-triggered messages will get a unique `dispatch_id` per message. The `dispatch_id` field enables you to identify which instance of a recurring campaign is responsible for conversion, thus equipping you with more insights and information on which types of campaigns are helping push the needle on your business goals.
 
 ## Only Show Mine - Campaign Sorting Feature
 

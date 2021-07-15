@@ -60,7 +60,7 @@ While your extension is processing, you will see a small animation next to the n
 
 ## Step 5: Using Your Extension in a Segment
 
-Once you have created an extension, you can use it as a filter when creating a segment or defining an audience for a Campaign or Canvas. Start by choosing "Braze Segment Extension" from the filter list under the "User Attributes" section.
+Once you have created an extension, you can use it as a filter when creating a segment or defining an audience for a campaign or Canvas. Start by choosing "Braze Segment Extension" from the filter list under the "User Attributes" section.
 
 ![Segment Extension as a Segment Filter][6]
 
