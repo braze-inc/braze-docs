@@ -59,7 +59,7 @@ Select **Log attributes upon submission** to collect attributes based on the use
 
 ![Custom Attributes]({% image_buster /assets/img/iam/collect-attributes.png %}){: style="max-width:70%"}
 
-To add a custom attribute to each choice, select an existing attribute name from the dropdown, and the value to set when this choice is submitted. You can create a new custom attribute in your [Settings Page][5].
+To add a custom attribute to each choice, select a custom attribute name from the dropdown (or create a new one), and then enter the value to set when this choice is submitted. You can create a new custom attribute in your [Settings Page][5].
 
 For example, in a notification preferences survey, you might make each choice a boolean (true/false) attribute to allow users to select which topics they're interested in. If a user checks the "Promotions" choice, that will update their [User Profile][3] with the custom attribute `Promotions Topic` set to `true`. If they leave the choice unchecked, that same attribute will remain unchanged.
 

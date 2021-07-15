@@ -14,7 +14,7 @@ Even if you keep best practices in mind when designing and sending push messages
 
 Furthermore, the legal environment surrounding electronic messaging in some locales is becoming increasingly strict. For example, [Canada's Anti-Spam Legislation][13] requires explicit consent from users to send them marketing-related messages. Other countries may make similar legislative moves, so acquiring that explicit consent from your users should be a priority. Not having a double opt-in system in place now may leave you with time-consuming migration to a compliant system in the future.
 
-Creating an opt-in prompt that clearly lists and demonstrates the benefits of push can only help you, given the evolving attitudes of both consumers and governments toward push messaging. Instead of ambushing your users with a permission request when they open the app for the first time, explain the benefits of your push messages and THEN ask for permission.
+Creating an opt-in prompt that clearly lists and demonstrates the benefits of push can only help you, given the evolving attitudes of both consumers and governments toward push messaging. Instead of ambushing your users with a permission request when they open the app for the first time, explain the benefits of your push messages, and then ask for permission.
 
 ![Breaking News 1][16]
 
@@ -30,11 +30,11 @@ Another example of an app that does a great job with custom opt-in prompts is te
 
 ![textplus_prompt][24]
 
-After the user clicks "Next," the user receives the real iOS push prompt. If the user doesn't enable push notifications at this stage, then he will have to enable them in Settings. textPlus makes this easier for users to do by featuring a reminder on their Inbox page.
+After the user taps **Next**, the user receives the real iOS push prompt. If the user doesn't enable push notifications at this stage, then he will have to enable them in Settings. textPlus makes this easier for users to do by featuring a reminder on their Inbox page.
 
 ![textplus_reminder][25]
 
-If users click "Turn on," they are presented with detailed steps for how to enable push notifications. This removes some of the effort involved in turning on push notifications
+If users taps **Turn on**, they are presented with detailed steps for how to enable push notifications. This removes some of the effort involved in turning on push notifications
 
 ![textplus_directions][26]
 
@@ -42,7 +42,7 @@ Another app that does a wonderful job of priming its' users to accept push notif
 
 > If you've implemented a custom push prompt as described above in an iOS app, make sure that you're [reregistering with APNs][44] every time the app runs after they grant push permissions to your app. Apple advises this as [device tokens can change arbitrarily][45].
 
-Additional information on managing user subscriptions is available [here][36].
+For additional information, refer to our article on [Managing User Subscriptions][36].
 
 [13]: {{site.baseurl}}/help/best_practices/spam_regulations/#can-spam
 [16]: {% image_buster /assets/img_archive/bn_push1.png %}

@@ -43,7 +43,7 @@ Set your `ABKInAppMessageUIDelegate` delegate object on the Braze instance by ca
 {% tab swift %}
 
 ```swift
-Appboy.sharedInstance()?.inAppMessageController.inAppMessageUIController.setInAppMessageUIDelegate(self);
+Appboy.sharedInstance()?.inAppMessageController.inAppMessageUIController?.setInAppMessageUIDelegate?(self)
 ```
 
 {% endtab %}

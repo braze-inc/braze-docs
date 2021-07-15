@@ -8,7 +8,7 @@ channel: email
 no_index: true
 ---
 
-# Sunset Policies
+# Sunset Policies for Email
 
 While you may be tempted to send campaigns to as many users as you can, there are situations where it's actually wise to discontinue messages to disengaged users.  For instance, in the case of emails, your sending IP has a reputation score that factors in engagement, spam reporting, blacklisting, etc. There are many free tools to monitor your IPs reputation score such as [Sender Score](https://www.senderscore.org/ "Sender Score") or [Outlook's Smart Network Data Service](https://postmaster.live.com/snds/ "Outlook's Smart Network Data Service"). If your reputation score is consistently low, ISP and mailbox filters might automatically sort your emails into a spam or low priority folder for all recipients, even engaged ones.  To prevent this from happening, you need to create a sunset policy that ensures your emails aren't delivered to inactive recipients. Braze's segmentation filters help prevent your messaging from appearing spammy or irrelevant by letting you easily implement sunset policies for emails, pushes, in-app notifications, and News Feed cards
 

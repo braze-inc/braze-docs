@@ -1,13 +1,15 @@
 ---
-nav_title: News Feed
-page_order: 3
+nav_title: Best Practices
+page_title: News Feed Best Practices
+page_order: 20
 
 page_type: reference
 description: "This article provides best practices for designing and customizing News Feed cards."
 channel: news feed
 no_index: true
 ---
-# News Feed
+
+# News Feed Best Practices
 
 The Braze News Feed is a targeted, dynamic stream of rich content. It offers a powerful way to reach users with continuously updated content that does not require additional development work. This content can be targeted at various segments and scheduled in the same way as other Braze messages. Each card consists of a title, a summary, an image, and optionally a URL. The feed also includes the ability to deep-link within the app, link directly to the App Store, Google Play, etc. or direct users to a web view. This unique Braze UI element must be enabled during [integration][1]. Make sure to discuss it with your developers.
 
@@ -46,9 +48,9 @@ The content you choose to show through the News Feed can range widely and work i
 
 ## Integration Example
 
-![shapefeed][2]
-
 1-800-Flowers.com uses the News Feed to deliver relevant information to its users. The SDK integration remains entirely transparent: there is no mention of Braze in the app itself and the News Feed module has a design aesthetic that is consistent with the rest of the app.
+
+![shapefeed][2]{: style="max-width:50%;"}
 
 You can view more examples of News Feeds in our [Case Studies][3].
 
