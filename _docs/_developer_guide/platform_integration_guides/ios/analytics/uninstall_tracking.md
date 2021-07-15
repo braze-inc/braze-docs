@@ -44,7 +44,7 @@ The above steps are a proxy for sending an uninstall tracking push from Braze. I
 
 Follow the instructions for enabling uninstall tracking using our [article on Uninstall Tracking][6].
 
-[4]: {{site.baseurl}}/developer_guide/platform_integration_guides/ios/push_notifications/customization/#ignoring-brazes-internal-push-notifications
+[4]: {{site.baseurl}}/developer_guide/platform_integration_guides/ios/push_notifications/customization/ignoring_internal_push/
 [5]: {{site.baseurl}}/developer_guide/platform_integration_guides/ios/push_notifications/silent_push_notifications/
 [6]: {{site.baseurl}}/user_guide/data_and_analytics/tracking/uninstall_tracking/#uninstall-tracking
 [7]: https://dashboard-01.braze.com/
