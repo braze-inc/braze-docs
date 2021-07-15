@@ -104,11 +104,11 @@ As your user base continues to grow and your messaging scales to include life cy
 
 ### Feature Overview {#freq-cap-feat-over}
 
-Frequency Capping is applied at the Campaign/Canvas step send level and can be set up for each app group by selecting __Global Message Settings__ found underneath the **Engagement** tab. From here, you can choose:
+Frequency Capping is applied at the campaign or Canvas step send level and can be set up for each app group by selecting __Global Message Settings__ found underneath the **Engagement** tab. From here, you can choose:
 
 - Which messaging channel you would like to cap: push, email, SMS, webhook, or any of those four.
-- How many times each user should receive Campaign/Canvas step sends from a channel within a certain time frame, which can be measured in minutes, days, weeks (7 days), and months.
-- Users can choose how many times each user should receive Campaign/Canvas step sends by [Tag](#frequency-capping-by-tag) within a certain time frame, which can be measured in minutes, days, weeks (7 days), and months. 
+- How many times each user should receive a campaign or Canvas step sends from a channel within a certain time frame, which can be measured in minutes, days, weeks (7 days), and months.
+- Users can choose how many times each user should receive a campaign or Canvas step sends by [Tag](#frequency-capping-by-tag) within a certain time frame, which can be measured in minutes, days, weeks (7 days), and months. 
 
 Each line of frequency caps will be connected using an “AND,” and you’re able to add up to ten (10) rules per app group. In addition, you may include multiple caps for the same message types. For instance, you can cap users to no more than one (1) push per day and no more than three (3) pushes per week.
 
@@ -118,19 +118,19 @@ Each line of frequency caps will be connected using an “AND,” and you’re a
 
 There may be some campaigns - transactional messages, in particular - that you wish to always reach the user, even if they have already reached their frequency cap. For example, a delivery app may wish to send an email or push when an item is delivered regardless of how many campaigns the user has received.
 
-If you want a particular campaign to override Frequency Capping rules, you can set this up in the Braze dashboard when scheduling that campaign's delivery by toggling Frequency Capping to "Off". After this, you will be asked if you still want this Campaign to count towards your Frequency Cap. Messages that count towards frequency capping are included in calculations for the Intelligent Channel filter. When sending [API campaigns][15], which are often transactional, you'll have the ability to specify that a campaign should ignore Frequency Capping rules [within the API request][16] by setting "override_messaging_limits" to "true."
+If you want a particular campaign to override Frequency Capping rules, you can set this up in the Braze dashboard when scheduling that campaign's delivery by toggling Frequency Capping to "Off". After this, you will be asked if you still want this campaign to count towards your Frequency Cap. Messages that count towards frequency capping are included in calculations for the Intelligent Channel filter. When sending [API campaigns][15], which are often transactional, you'll have the ability to specify that a campaign should ignore Frequency Capping rules [within the API request][16] by setting "override_messaging_limits" to "true."
 
-By default, new Campaigns/Canvases that do not obey Frequency Caps will also not count towards them. This is configurable for each Campaign/Canvas.
+By default, new campaigns and Canvases that do not obey Frequency Caps will also not count towards them. This is configurable for each campaign and Canvas.
 
 {% alert note %}
-Please note that this behavior changes the default behavior when you turn off Frequency Capping for a Campaign/Canvas; the changes are backward compatible and do not impact messages that are currently live right now.
+Please note that this behavior changes the default behavior when you turn off Frequency Capping for a campaign or Canvas; the changes are backward compatible and do not impact messages that are currently live right now.
 {% endalert %}
 
 ![Frequency Capping Update][18]
 
 Different channels within a multichannel campaign will individually count towards the frequency cap. For instance, if you create a multichannel campaign with, say, both push and email, and have Frequency Capping set up for both of those channels, then the push will count toward 1 push campaign and the email message will count toward 1 email message campaign. The campaign will also count toward 1 "campaign of any type." If users are capped to 1 push and 1 email campaign per day and someone receives this multichannel campaign, then she will no longer be eligible for push or email campaigns for the rest of the day (unless a campaign ignores Frequency Capping rules).
 
-In-App Messages and Content Cards are __not__ counted as or towards caps on "Campaigns/Canvas Steps of any type".
+In-app messages and Content Cards are __not__ counted as or towards caps on "Campaigns/Canvas Steps of any type".
 
 {% alert important %}
 Please note that global frequency capping is based in the user's time zone, and are based on calendar days, not 24-hour periods. For example, if I set up a frequency capping rule of sending no more than 1 campaign a day, a user may receive a message at 11 pm in their local time zone, and they would be eligible to receive another message an hour later.
@@ -140,7 +140,7 @@ Please note that global frequency capping is based in the user's time zone, and 
 {% tabs %}
 {% tab Example 1 %}
 
-Let's say that you set a Frequency Capping rule which asks that your user receive no more than three (3) push notification Campaigns/Canvas steps per week from __all__ Campaign/Canvas steps.
+Let's say that you set a Frequency Capping rule which asks that your user receive no more than three (3) push notification campaigns or Canvas steps per week from __all__ campaign or Canvas steps.
 
 If your user is slated to receive three (3) push notifications, two (2) in-app messages, and one (1) Content Card this week, they will receive all of those messages.
 
