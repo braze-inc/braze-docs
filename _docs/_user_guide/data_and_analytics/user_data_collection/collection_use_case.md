@@ -45,7 +45,7 @@ After implementing the events, you can now run the following campaigns:
 - The average rating they give to their drivers?
 - Unique Promo Codes for the user?
 
-The above characteristics could then be tagged as the following Custom Attributes:
+The above characteristics could then be tagged as the following custom attributes:
 
 - Promotional Credit Balance (Decimal Type)
 - Average Driver Rating (Integer Type)

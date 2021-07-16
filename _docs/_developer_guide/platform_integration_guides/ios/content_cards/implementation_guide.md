@@ -441,7 +441,7 @@ The example to the right shows a `UICollectionView` with a hybrid list of items 
 
 #### Dashboard Configuration
 
-This Content Card is delivered by an API triggered campaign with API triggered key-value pairs. This is ideal for campaigns where the card's values depend on external factors to determine what content to display to the user. Note that `class_type` should be known at set-up time.
+This Content Card is delivered by an API-triggered campaign with API-triggered key-value pairs. This is ideal for campaigns where the card's values depend on external factors to determine what content to display to the user. Note that `class_type` should be known at set-up time.
 
 ![Supplementary Content PNG][2]{: style="max-width:60%;"}
 

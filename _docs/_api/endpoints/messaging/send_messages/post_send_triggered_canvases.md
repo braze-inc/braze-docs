@@ -1,5 +1,5 @@
 ---
-nav_title: "POST: Send Canvas Messages via API Triggered Delivery"
+nav_title: "POST: Send Canvas Messages via API-Triggered Delivery"
 page_order: 4
 
 layout: api_page
@@ -9,17 +9,17 @@ platform: API
 tool:
   - Canvas
 
-description: "This article outlines details about the Send Canvas Messages via API Triggered Delivery Braze endpoint."
+description: "This article outlines details about the Send Canvas Messages via API-Triggered Delivery Braze endpoint."
 ---
 {% api %}
-# Sending Canvas Messages via API Triggered Delivery
+# Sending Canvas Messages via API-Triggered Delivery
 {% apimethod post core_endpoint|https://www.braze.com/docs/core_endpoints %} 
 /canvas/trigger/send
 {% endapimethod %}
 
-API Triggered Delivery allows you to house message content inside of the Braze dashboard while dictating when a message is sent, and to whom via your API.
+API-Triggered Delivery allows you to house message content inside of the Braze dashboard while dictating when a message is sent, and to whom via your API.
 
-This endpoint allows you to send Canvas messages via API Triggered delivery, allowing you to decide what action should trigger the message to be sent. Please note that to send messages with this endpoint, you must have a Canvas ID, created when you build a [Canvas]({{site.baseurl}}/api/identifier_types/#canvas-api-identifier).
+This endpoint allows you to send Canvas messages via API-Triggered delivery, allowing you to decide what action should trigger the message to be sent. Please note that to send messages with this endpoint, you must have a Canvas ID, created when you build a [Canvas]({{site.baseurl}}/api/identifier_types/#canvas-api-identifier).
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#c9a8a5fe-a101-4755-99f2-73aa8fc146fe {% endapiref %}
 
@@ -147,7 +147,7 @@ Message sending endpoint responses will include the message’s `dispatch_id` fo
 
 __Using the Attributes Object in Canvas__
 
-Braze has a Messaging Object called `Attributes` that allows you to add, create, or update attributes and values for a user before sending them an API Triggered Canvas using the `canvas/trigger/send` endpoint as this API call will process the User Attributes object before it processes and sends the Canvas. This helps minimize the risk of there being issues caused by [race conditions]({{site.baseurl}}/help/best_practices/race_conditions/).
+Braze has a Messaging Object called `Attributes` that allows you to add, create, or update attributes and values for a user before sending them an API-Triggered Canvas using the `canvas/trigger/send` endpoint as this API call will process the User Attributes object before it processes and sends the Canvas. This helps minimize the risk of there being issues caused by [race conditions]({{site.baseurl}}/help/best_practices/race_conditions/).
 
 {% alert important %}
 Looking for Create Send Endpoint for Campaigns? Check out the documentation [here]({{site.baseurl}}/api/endpoints/messaging/send_messages/post_send_triggered_campaigns/#create-send-endpoint).

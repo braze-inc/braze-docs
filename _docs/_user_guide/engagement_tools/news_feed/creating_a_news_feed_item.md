@@ -86,7 +86,7 @@ You can configure your News Feed Card to target any [segment][10] you've defined
 
 ## Step 5: Review Details and Publish
 
-Next, you will be taken to a page that displays all of the details about your card (and companion In-App message, if applicable). You can review any of the details about these items and edit them if you need to by clicking the pencil icon in any of the headers.
+Next, you will be taken to a page that displays all of the details about your card (and companion in-app message, if applicable). You can review any of the details about these items and edit them if you need to by clicking the pencil icon in any of the headers.
 
 ![News Feed Preview][12]
 

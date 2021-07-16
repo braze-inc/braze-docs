@@ -21,7 +21,7 @@ This reference article covers how to create a transational campaign in the Braze
 
 
 ## Create a New Campaign
-Navigate to the Campaigns page in your company Braze account and click the __Create Campaign__ button, then select __Transactional Email__ under the __Transactional__ section.
+Navigate to the **Campaigns** page in your company Braze account and click __Create Campaign__, then select __Transactional Email__ under the __Transactional__ section.
 
 ![Select Transactional Email Campaign][1]{: style="float:right;max-width:25%;margin-left:15px;"}
 

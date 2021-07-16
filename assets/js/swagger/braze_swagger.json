@@ -2352,7 +2352,7 @@
           "Messaging"
         ],
         "summary": "Send Message Immediately Example",
-        "description": "Example of sending a message using Braze's API that is not associated with any campaign. This uses the /messages/send endpoint and can use our API Campaigns (not to be confused with API-Triggered Campaigns) feature to track analytics.",
+        "description": "Example of sending a message using Braze's API that is not associated with any campaign. This uses the /messages/send endpoint and can use our API campaigns (not to be confused with API-triggered campaigns) feature to track analytics.",
         "operationId": "SendMessageImmediatelyExample",
         "requestBody": {
           "description": "The send endpoint allows you to send immediate, ad-hoc messages to designated users.",
@@ -2390,7 +2390,7 @@
           "Messaging"
         ],
         "summary": "Create Scheduled Message Example",
-        "description": "Example of scheduling a message using Braze's API that is not associated with any campaign and will be sent at some point in the future. It is possible to specify future scheduled messages to be sent in users' local time or using our Intelligent Delivery calculated optimal time with the \"in_local_time\" or \"at_optimal_time\" parameters in the \"schedule\" object (\"in_local_time\" is featured in this example). This uses the /messages/schedule/create endpoint and can use our API Campaigns (not to be confused with API-Triggered Campaigns) feature to track analytics. The parameter \"time\" under \"schedule\" is required (DateTime ISO 8601 format).",
+        "description": "Example of scheduling a message using Braze's API that is not associated with any campaign and will be sent at some point in the future. It is possible to specify future scheduled messages to be sent in users' local time or using our Intelligent Delivery calculated optimal time with the \"in_local_time\" or \"at_optimal_time\" parameters in the \"schedule\" object (\"in_local_time\" is featured in this example). This uses the /messages/schedule/create endpoint and can use our API campaigns (not to be confused with API-triggered ampaigns) feature to track analytics. The parameter \"time\" under \"schedule\" is required (DateTime ISO 8601 format).",
         "operationId": "CreateScheduledMessageExample",
         "requestBody": {
           "description": "Use this endpoint to send messages directly from the API.",
@@ -2465,7 +2465,7 @@
         "tags": [
           "Messaging"
         ],
-        "summary": "Send API Triggered Delivery Campaign Example",
+        "summary": "Send API-Triggered Delivery Campaign Example",
         "description": "Example of sending a campaign set up in the dashboard with API-Triggered Delivery. This example specifies a single user in the request with some properties that can be templated into the message using Liquid (e.g. {{api_trigger_properties.${some_property}}} will populate the value of \"some_property\" into the message). Uses the /campaigns/trigger/send endpoint. Either \"external_user_id\" OR \"user_aliases\" is required, requests must only specify one.",
         "operationId": "SendApiTriggeredDeliveryCampaignExample",
         "requestBody": {
@@ -2503,7 +2503,7 @@
         "tags": [
           "Messaging"
         ],
-        "summary": "Create Scheduled API Triggered Campaign Example",
+        "summary": "Create Scheduled API-Triggered Campaign Example",
         "description": "Example of scheduling a future send of a campaign set up in the dashboard with API-Triggered Delivery. It is possible to specify future scheduled messages to be sent in users' local time or using our Intelligent Delivery calculated optimal time with the \"in_local_time\" or \"at_optimal_time\" parameters in the \"schedule\" object (\"in_local_time\" is featured in this example). This example specifies a single user in the request with some properties that can be templated into the message using Liquid (e.g. {{api_trigger_properties.${some_property}}} will populate the value of \"some_property\" into the message). Uses the /campaigns/trigger/schedule/create endpoint.The parameter \"time\" under \"schedule\" is required (DateTime ISO 8601 format). When sending a message to a segment or campaign audience using an API endpoint, Braze requires you to explicitly define whether or not your message is a “broadcast” to a large group of users by including a “broadcast” boolean in the API call. That is, if you intend to send an API message to the entire segment that a campaign or Canvas targets, you must include “broadcast: true” in your API call. If the “broadcast” flag is not set to true and an explicit list of recipients it not provided, the API endpoint will return an error. Similarly, including “broadcast: true” and providing a recipient list will return an error. The “broadcast” flag is required in order to protect against accidental sends to large groups of users. In this example, there is a specific recipient and therefore broadcast does not have to be stated as it will default to false.",
         "operationId": "CreateScheduledApiTriggeredCampaignExample",
         "requestBody": {
@@ -2541,8 +2541,8 @@
         "tags": [
           "Messaging"
         ],
-        "summary": "Update Scheduled API Triggered Campaign Send Example",
-        "description": "Example of updating a scheduled send for an API-Triggered Campaign. Successful requests to /campaigns/trigger/schedule/create will return a \"schedule_id\" within the response. This can be saved for use with this /campaigns/trigger/schedule/update endpoint or the /campaigns/trigger/schedule/delete endpoint. The /campaigns/trigger/schedule/update endpoint can be used to update the scheduled time for a message, message data is changed from within the Braze dashboard.",
+        "summary": "Update Scheduled API-Triggered Campaign Send Example",
+        "description": "Example of updating a scheduled send for an API-triggered campaign. Successful requests to /campaigns/trigger/schedule/create will return a \"schedule_id\" within the response. This can be saved for use with this /campaigns/trigger/schedule/update endpoint or the /campaigns/trigger/schedule/delete endpoint. The /campaigns/trigger/schedule/update endpoint can be used to update the scheduled time for a message, message data is changed from within the Braze dashboard.",
         "operationId": "UpdateScheduledApiTriggeredCampaignSendExample",
         "requestBody": {
           "description": "Use this endpoint to send messages directly from the API.",
@@ -2579,7 +2579,7 @@
         "tags": [
           "Messaging"
         ],
-        "summary": "Send API Triggered Delivery Canvas Example",
+        "summary": "Send API-Triggered Delivery Canvas Example",
         "description": "Example of sending a canvas set up in the dashboard with API-Triggered Delivery. This example specifies a single user in the request with some properties that can be templated into the message using Liquid (e.g. {{api_trigger_properties.${some_property}}} will populate the value of \"some_property\" into the message). Uses the /canvas/trigger/send endpoint. Either \"external_user_id\" OR \"user_aliases\" is required, requests must only specify one. The recipient array may contain up to 75 objects, with each one containing a single \"external_user_id\" string and \"canvas_entry_properties\" object.",
         "operationId": "SendApiTriggeredDeliveryCanvasExample",
         "requestBody": {
@@ -2617,7 +2617,7 @@
         "tags": [
           "Messaging"
         ],
-        "summary": "Create Scheduled API Triggered Canvas Example",
+        "summary": "Create Scheduled API-Triggered Canvas Example",
         "description": "Example of scheduling a future send of a canvas set up in the dashboard with API-Triggered Delivery.The paramter \"canvas_id\" is required. You can pass in canvas_entry_properties that will be templated into the messages sent by the first steps of the Canvas. When sending a message to a segment or campaign audience using an API endpoint, Braze requires you to explicitly define whether or not your message is a “broadcast” to a large group of users by including a “broadcast” boolean in the API call. That is, if you intend to send an API message to the entire segment that a campaign or Canvas targets, you must include “broadcast: true” in your API call. If the “broadcast” flag is not set to true and an explicit list of recipients it not provided, the API endpoint will return an error. Similarly, including “broadcast: true” and providing a recipient list will return an error. The “broadcast” flag is required in order to protect against accidental sends to large groups of users.",
         "operationId": "CreateScheduledApiTriggeredCanvasExample",
         "requestBody": {
@@ -2655,8 +2655,8 @@
         "tags": [
           "Messaging"
         ],
-        "summary": "Update Scheduled API Triggered Campaign Send Example",
-        "description": "Example of updating a scheduled send for an API-Triggered Campaign. Successful requests to /canvas/trigger/schedule/create will return a \"schedule_id\" within the response. This can be saved for use with this /campaigns/trigger/schedule/update endpoint or the /canvas/trigger/schedule/delete endpoint. The /canvas/trigger/schedule/update endpoint can be used to update the scheduled time for a message, message data is changed from within the Braze dashboard.",
+        "summary": "Update Scheduled API-Triggered Campaign Send Example",
+        "description": "Example of updating a scheduled send for an API-triggered campaign. Successful requests to /canvas/trigger/schedule/create will return a \"schedule_id\" within the response. This can be saved for use with this /campaigns/trigger/schedule/update endpoint or the /canvas/trigger/schedule/delete endpoint. The /canvas/trigger/schedule/update endpoint can be used to update the scheduled time for a message, message data is changed from within the Braze dashboard.",
         "operationId": "UpdateScheduledApiTriggeredCanvasSendExample",
         "requestBody": {
           "description": "Use this endpoint to send messages directly from the API.",
@@ -2732,7 +2732,7 @@
           "Messaging"
         ],
         "summary": "Get Upcoming Scheduled Campaigns and Canvases",
-        "description": "You can view a JSON list of upcoming and scheduled Campaigns and Canvases using the following information and parameters. The endpoint will return information about scheduled Campaigns and entry Canvases between now and the designated end_time (ISO 8601 format) specified in the request. Daily, recurring messages will only appear once with their next occurrence. Results returned in this endpoint are only for Campaigns and Canvases created and scheduled in Braze.",
+        "description": "You can view a JSON list of upcoming and scheduled campaigns and Canvases using the following information and parameters. The endpoint will return information about scheduled campaigns and entry Canvases between now and the designated end_time (ISO 8601 format) specified in the request. Daily, recurring messages will only appear once with their next occurrence. Results returned in this endpoint are only for Campaigns and Canvases created and scheduled in Braze.",
         "operationId": "GetUpcomingScheduledCampaignsAndCanvases",
         "parameters": [
           {
