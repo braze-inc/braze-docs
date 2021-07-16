@@ -84,8 +84,8 @@ You can export the following data from Braze to mParticle:
 | SMS Inbound Received| Unbound Feed| An inbound SMS was received.| `inbound_phone_number`, `action`, `message_body` |
 | Subscription Group State Change| Unbound Feed| User's subscription group state changed to 'Subscribed' or 'Unsubscribed'| `campaign_id`, `canvas_step_id`, `canvas_id`, `canvas_variation_id`|
 | Webhook Sent| Unbound Feed| A webhook message was sent on behalf of a User.| `campaign_id`, `canvas_step_id`, `canvas_id`, `canvas_variation_id`|
-| Campaign Conversion Event| Unbound Feed| User performed the primary conversion event for a Campaign within its conversion window.  | `campaign_id`|
-| Campaign Enrollment in Control Group | Unbound Feed| User was enrolled in a Campaign control group.| `campaign_id`|
+| Campaign Conversion Event| Unbound Feed| User performed the primary conversion event for a campaign within its conversion window.  | `campaign_id`|
+| Campaign Enrollment in Control Group | Unbound Feed| User was enrolled in a campaign control group.| `campaign_id`|
 | Canvas Conversion Event| Unbound Feed| User performed the primary conversion event for a Canvas within its conversion window.| `canvas_step_id`, `canvas_id`, `canvas_variation_id`|
 | Canvas Entry| Unbound Feed | User was entered into a Canvas.| `in_control_group`, `canvas_id`, `canvas_variation_id`|
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}

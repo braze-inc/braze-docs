@@ -22,7 +22,7 @@ Campaigns sent through the <a href="{{site.baseurl}}/api/endpoints/messaging/"> 
 {% endalert %}
 
 ## Create a New Campaign
-Navigate to the Campaigns page in your company Braze account and click the __Create Campaign__ button, then select __API Campaigns__.
+Navigate to the **Campaigns** page in your company Braze account and click __Create Campaign__, then select __API Campaigns__.
 
 Now, you can move on to configuring your API campaign.
 

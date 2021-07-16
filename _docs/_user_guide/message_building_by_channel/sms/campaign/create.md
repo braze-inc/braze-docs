@@ -17,7 +17,7 @@ channel:
 
 ## Step 1: Choose Where to Build Your Message
 
-SMS is available in both Campaigns and Canvas.
+SMS is available in both campaigns and Canvas.
 
 {% tabs local %}
   {% tab Campaigns %}
@@ -25,7 +25,7 @@ SMS is available in both Campaigns and Canvas.
 
   ![Create SMS Campaign]({% image_buster /assets/img/sms_campaign_setup.gif %})
 
-1. Name your Campaign something clear and meaningful.
+1. Name your campaign something clear and meaningful.
 2. Add __Teams__ and __Tags__, as necessary.
 3. Add and name as many Variants as you need for this campaign.
   - You can choose different platforms, message types, and layouts for each of your added Variants.
@@ -107,6 +107,6 @@ You can also set custom conversion events based on your specific use case. Get c
 
 ## Step 7: Confirm Details and Launch!
 
-If you're using Campaigns, you'll have the opportunity to confirm its details. If you're using Canvas, be sure to confirm the details of each of the pieces.
+If you're using campaigns, you'll have the opportunity to confirm its details. If you're using Canvas, be sure to confirm the details of each of the pieces.
 
 ![SMS Confirm]({% image_buster /assets/img/sms_campaign_confirm.gif %})

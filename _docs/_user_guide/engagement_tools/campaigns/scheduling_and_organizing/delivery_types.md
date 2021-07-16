@@ -18,7 +18,7 @@ guide_featured_list:
   - name: Triggered Delivery
     link: /docs/user_guide/engagement_tools/campaigns/scheduling_and_organizing/delivery_types/triggered_delivery/
     fa_icon: fas fa-table
-  - name: API Triggered Delivery
+  - name: API-Triggered Delivery
     link: /docs/user_guide/engagement_tools/campaigns/scheduling_and_organizing/delivery_types/api_triggered_delivery/
     fa_icon: fas fa-exclamation
 

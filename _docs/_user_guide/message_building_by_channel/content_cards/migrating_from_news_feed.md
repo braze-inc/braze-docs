@@ -40,7 +40,7 @@ As you plan your migration from the News Feed to Content Cards, it will be impor
 ## Implementation
 
 - Content Cards and the News Feed are separate products, so a simple integration for your app or website is necessary in order to use Content Cards.
-- If desired, existing News Feed Cards will need to be manually migrated to Content Card Campaigns when you switch.
+- If desired, existing News Feed Cards will need to be manually migrated to Content Card campaigns when you switch.
 - Content Cards is not intended to be used at the same time as the News Feed, as it is a replacement for the News Feed.
 - Content Cards does not currently support categories - categories can be achieved via [customization and key-value pairs][1].
 

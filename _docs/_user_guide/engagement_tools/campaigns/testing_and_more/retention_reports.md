@@ -41,7 +41,7 @@ Once the report is generated, it can't be re-run with the same Retention event f
 
 ![Full Report][6]
 
-The report will only show days down the left column on which the campaign was sending messages. For some Campaigns, that may mean the report only shows one day if it was a one-and-done campaign. If it's recurring or triggered, you may/will see multiple days down the left. 
+The report will only show days down the left column on which the campaign was sending messages. For some campaigns, that may mean the report only shows one day if it was a one-and-done campaign. If it's recurring or triggered, you may/will see multiple days down the left. 
 
 ## Report Explanation
 
@@ -113,7 +113,7 @@ If you're looking for information on Canvas retention reports by variant, take a
 
 Retention Reports are easy to generate, yet challenging to interpret and act on. To help aid marketers, we have assembled a couple of topics/questions to consider when looking at your Retention Reports.
 
-- Day-of-week trends for recurring Campaigns (e.g Do Monday cohorts perform better than Saturday cohorts?)
+- Day-of-week trends for recurring campaigns (e.g Do Monday cohorts perform better than Saturday cohorts?)
 - Where does the impact start to decline? This could be a signal that a new campaign that targets users at that point in time is needed as another boost to retention. 
 - Am I seeing campaign fatigue? 
 - Did that optimization to this campaign I made X days ago have a positive impact?

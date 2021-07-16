@@ -65,7 +65,7 @@ Once you discover all of this information, share it with your engineer. They'll 
 
 ### Step 4: They Customize Based on What You Want
 
-If you want things like API Triggered launching and Connected Content, discuss that with both your Braze contact and your engineers to ensure that you'll be able to get data that lives outside of your app and Braze into your messages.
+If you want things like API-Triggered launching and Connected Content, discuss that with both your Braze contact and your engineers to ensure that you'll be able to get data that lives outside of your app and Braze into your messages.
 
 ### Step 5: QA Your Implementation
 

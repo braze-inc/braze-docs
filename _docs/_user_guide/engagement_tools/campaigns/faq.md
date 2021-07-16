@@ -10,7 +10,7 @@ tool: Campaigns
 
 # Campaign FAQs
 
-### Why is there a difference between the number of unique recipients and the number of sends for a given Campaign or Canvas?
+### Why is there a difference between the number of unique recipients and the number of sends for a given campaign or Canvas?
 
 One potential explanation for this difference could be due to the campaign or Canvas having re-eligibility turned on. By having this on, users who qualify for the segment and delivery settings will be able to receive the message more than once. If re-eligibility is not turned on, then the probable explanation for the difference between sends and unique recipients may be due to users having multiple devices, across platforms, associated with their profiles. 
 

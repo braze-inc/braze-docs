@@ -46,7 +46,7 @@ Customers looking to use the Audience Sync to Facebook step in Canvas will need 
 - [Ads Management][29]
 - [Ads Management Standard Access][28]
 
-Granting these permissions enables Braze to sync data seamlessly into Facebook. The Audience Sync to Facebook feature __will not__ have access to perform any of the following actions: <br>- Manage or edit a customer’s Facebook Campaigns<br>- Manage or edit a customer’s Facebook page<br>- Manage or edit a customer’s Facebook business assets 
+Granting these permissions enables Braze to sync data seamlessly into Facebook. The Audience Sync to Facebook feature __will not__ have access to perform any of the following actions: <br>- Manage or edit a customer’s Facebook campaigns<br>- Manage or edit a customer’s Facebook page<br>- Manage or edit a customer’s Facebook business assets 
 
 #### __Before you Begin the Facebook App Review Process__
 
