@@ -1,8 +1,8 @@
 ---
-nav_title: Your Partner Page
+nav_title: Transcend
 page_order: 1
 
-description: "This is the Google Search and SEO description that will appear, try to make this informative and concise, yet brief."
+description: "Transcend automates fulfillment of data subject requests by orchestrating data across dozens of data systems, including Braze."
 alias: /partners/transcend/
 
 page_type: partner
