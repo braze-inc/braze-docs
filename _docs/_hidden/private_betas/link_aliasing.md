@@ -75,11 +75,13 @@ For any email message variation set up before this feature was enabled, the exis
 
 ## Link Segmentation
 
-Retargeting of aliases is now available as a segmentation filter.  The two new segmentation filters allow you to create segmentation filters based on clicking a specific tracked alias, from either an email campaign or canvas step. The filter only displays Campaigns or Canvases that have tracked aliases present.
+Retargeting of aliases is now available as a segmentation filter.  The two new filters allow you to create segmentation filters based on your customers clicking a specific tracked alias, from either an email campaign or canvas step. The filter only displays Campaigns or Canvases that have tracked aliases present.
 
 ### Tracking a Link
 
-When composing your email message, a new column will be present in the "Link Management" tab.  You can now indicate to Braze which alias you would like to be 'tracked'.  Only aliases that you have indicated to be tracked will be present in segmentation filters.  
+When composing your email message, a new column will be present in the "Link Management" tab.  You can now indicate to Braze which alias you would like to be 'tracked' for segmentation purposes.  Only aliases that you have indicated to be tracked will be present in segmentation filters. 
+
+_Note: Tracked Aliases are only for segmentation purposes and have no impact on your link being 'tracked' for reporting purposes._
 
 ### Segment Filters
 
@@ -87,20 +89,20 @@ When composing your email message, a new column will be present in the "Link Man
 
 #### Click Alias in Campaign
 
-You can retarget users based on the specific alias that was clicked in a Campaign.
+You can retarget users based on the specific alias that was clicked in a Campaign.  Only the campaigns that have aliases which were tracked will be reflected here.
 
 #### Click Alias in Canvas Step
-You can retarget users based on the specific alias that was clicked in a Canvas Step.
+You can retarget users based on the specific alias that was clicked in a Canvas Step.  A pipe delimited filter option displays the Canvas and Canvas step, followed by the alias within Canvas Step.  Only Canvas Steps with tracked aliases will be shown here.
 
 {% alert tip%}
-Aliases are unique per Campaign Message Variant or Canvas Step.  Thus you must first select the Campaign or Canavas step prior to selecting your alias.
+Aliases are unique per Campaign Message Variant or Canvas Step.  Thus you must first select the Campaign or Canvas|Canavas Step prior to selecting your alias.
 {% endalert %}
 
 ### Action Based Filters
 
 ![link_aliasing_action_based_filters][6]
  
-In addition to creating segment filters, you can also create action-based messages targeting any link (tracked or not tracked) across any email campaign or Canvas step. 
+In addition to creating segment filters, you can also create action-based messages targeting any link (tracked or not tracked) across any email campaign or Canvas step.  
 
 ## Tracking and Reporting
 
