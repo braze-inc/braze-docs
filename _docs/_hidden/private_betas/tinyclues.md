@@ -52,21 +52,24 @@ Next on the Braze platform, navigate to __Segments__, name your Tinyclues cohort
 
 Having trouble locating your cohort? Check out our [troubleshooting](#troubleshooting) section for guidance. 
 
-![Tinyclues][3]{: style="max-width:70%;"}
+![Tinyclues][3]{: style="max-width:70%;"}<br><br>
 ![Tinyclues][4]{: style="max-width:70%;"}
 
 ### Step 5: Retrieve your Audience in Braze
 
 On the Braze platform, create a campaign or Canvas, and on the target audience step, select the Tinyclues cohort segment you just built.
 
+![Tinyclues][5]{: style="max-width:80%;"}
+
 ## Troubleshooting
 Are you having trouble finding the right cohort within the list? Verify the name in Tinyclues UI by clicking on the campaign and checking the "Export File Name".
 
 ![Tinyclues][2]{: style="max-width:30%;"}
 
-Still having trouble retrieving your audience, contact the Tinyclues team for additional support: support@tinyclues.com.
+Still having trouble retrieving your audience? Contact the Tinyclues team for additional support: support@tinyclues.com.
 
 [1]: {% image_buster /assets/img/tinyclues/tinyclues_1.png %} 
 [2]: {% image_buster /assets/img/tinyclues/tinyclues_2.png %} 
 [3]: {% image_buster /assets/img/tinyclues/tiny_clues3.png %} 
-[4]: {% image_buster /assets/img/tinyclues/tiny_clues4.png %} 
+[4]: {% image_buster /assets/img/tinyclues/tiny_clues4.png %}
+[5]: {% image_buster /assets/img/tinyclues/tinyclues_5.png %}  
