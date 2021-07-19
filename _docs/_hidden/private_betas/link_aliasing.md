@@ -72,8 +72,33 @@ For new message variants, any existing link template can be used from the __Link
 
 For any email message variation set up before this feature was enabled, the existing link templates will still be present. However, if the message variation is edited, the link templates will need to be reapplied.
 
+
 ## Link Segmentation
-Two new segmentation filters are now available, allowing you to create segmentation filters based on clicking a specific tracked alias. The filter only displays campaigns or Canvases that have tracked aliases present.
+
+Retargeting of aliases is now available as a segmentation filter.  The two new segmentation filters allow you to create segmentation filters based on clicking a specific tracked alias, from either an email campaign or canvas step. The filter only displays Campaigns or Canvases that have tracked aliases present.
+
+### Tracking a Link
+
+When composing your email message, a new column will be present in the "Link Management" tab.  You can now indicate to Braze which alias you would like to be 'tracked'.  Only aliases that you have indicated to be tracked will be present in segmentation filters.  
+
+### Segment Filters
+
+![link_aliasing_segmentation_filters][5]
+
+#### Click Alias in Campaign
+
+You can retarget users based on the specific alias that was clicked in a Campaign.
+
+#### Click Alias in Canvas Step
+You can retarget users based on the specific alias that was clicked in a Canvas Step.
+
+{% alert tip%}
+Aliases are unique per Campaign Message Variant or Canvas Step.  Thus you must first select the Campaign or Canavas step prior to selecting your alias.
+{% endalert %}
+
+### Action Based Filters
+
+![link_aliasing_action_based_filters][6]
  
 In addition to creating segment filters, you can also create action-based messages targeting any link (tracked or not tracked) across any email campaign or Canvas step. 
 
@@ -156,3 +181,5 @@ The following endpoints are available to extract the `alias` set in each message
 [2]: {% image_buster /assets/img/link_aliasing_composer.png %}
 [3]: {{site.baseurl}}/get_campaign_link_alias/ 
 [4]: {{site.baseurl}}/get_canvas_link_alias/
+[5]: {% image_buster /assets/img/link_aliasing_segmentation_filters.png %}
+[6]: {% image_buster /assets/img/link_aliasing_action_based_filters.png %}
