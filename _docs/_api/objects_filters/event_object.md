@@ -34,7 +34,7 @@ You can check out how to set up custom events for a specific platform by reading
   "external_id" : (optional, string), External User ID,
   "user_alias" : (optional, User Alias Object), User Alias Object,
   "braze_id" : (optional, string) Braze User Identifier,
-  "app_id" : (optional, string) see App Identifier below,
+  "app_id" : (required, string) see App Identifier below,
   "name" : (required, string) the name of the event,
   "time" : (required, datetime as string in ISO 8601 or in `yyyy-MM-dd'T'HH:mm:ss:SSSZ` format),
   "properties" : (optional, Properties Object) properties of the event
@@ -43,6 +43,9 @@ You can check out how to set up custom events for a specific platform by reading
   "_update_existing_only" : (optional, boolean)
 }
 ```
+
+- [ISO 8601 Time Code Wiki][22]
+- [App Identifier][21]
 
 ## Event Properties Object
 Custom events and purchases may have event properties. The “properties” values should be an object where the keys are the property names and the values are the property values. Property names must be non-empty strings less than or equal to 255 characters, with no leading dollar signs ($).
@@ -110,3 +113,5 @@ Using the example provided above, we can see that someone watched a trailer rece
 [4]: {{site.baseurl}}/developer_guide/platform_integration_guides/web/analytics/tracking_custom_events/
 [5]: {{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events/
 [19]: http://en.wikipedia.org/wiki/ISO_8601 "ISO 8601 Time Code Wiki"
+[21]: {{site.baseurl}}/api/api_key/#the-app-identifier-api-key
+[22]: https://en.wikipedia.org/wiki/ISO_8601 "ISO 8601 Time Code"
