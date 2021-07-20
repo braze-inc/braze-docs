@@ -20,7 +20,7 @@ With Hightouch, you're able to own your data and keep it in sync everywhere in y
 | Requirement | Origin | Access | Description |
 |---|---|---|---|
 | Braze API Key | Braze | You will need to create a new API Key.<br><br>This can be created in the __Developer Console -> API Settings -> Create New API Key__ with __users.track__ permissions. | You will use your Braze API Key to authenticate using Hightouch. |
-| Braze REST Endpoint | Braze | [Braze REST Endpoint List][1] | Your REST Endpoint URL.  |
+| Braze REST Endpoint | Braze | [Braze REST Endpoint List][2] | Your REST Endpoint URL.  |
 | Hightouch Account | Hightouch | Your Hightouch Workspace | An active Hightouch account |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
 
@@ -65,6 +65,7 @@ Hightouch supports syncing to the __User__ object and __Events__.
 ## Additional info
 
 If you want more information on our integration, feel free to visit our [docs][4].
+
 
 [1]: https://hightouch.io
 [2]: {{site.baseurl}}/developer_guide/rest_api/basics/#endpoints)
