@@ -43,6 +43,7 @@ __To get started__, make sure you're logged in to Transcend. If not, log in to T
 7. Next, while still in the Braze data silo, expand "Manage Identifiers". Check the respective boxes for which identifiers you'd like enabled. As an example, if you'd like Transcend to search users by email address, you'd check the box to enable the Email Address identifier. Note: if identifiers are not enabled correctly, we may not be able to process requests for certain users.
 8. Done!
 
+
 ### Step 2: Testing
 
 We recommend testing requests across your Data Map before you start processing requests from end-users. To do this:
