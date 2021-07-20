@@ -62,6 +62,11 @@ Hightouch supports syncing to the __User__ object and __Events__.
 * Automatically update your Braze segments with fresh data from your warehouse
 * Deliver better experiences by bringing in data from other customer touchpoints into Braze
 
+## Additional info
+
+If you want more information on our integration, feel free to visit our [docs][4].
+
 [1]: https://hightouch.io
 [2]: {{site.baseurl}}/developer_guide/rest_api/basics/#endpoints)
 [3]: {% image_buster /assets/img/hightouch/hightouch_braze_setup.png %}
+[4]: https://hightouch.io/docs/destinations/braze/
