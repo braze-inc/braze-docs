@@ -101,7 +101,11 @@ The `messages` response will contain information about each message. Example mes
     "data": {
         "pages": [
             {
-                "header": (hash) specified request headers,
+                "header": 
+                    {
+                         "text":(string) display text for the header of the survey
+                    }
+                   
                 "choices": [
                     {
                        "choice_id": (string) choice identifier,
