@@ -11,7 +11,7 @@ hidden: true
 
 # [Hightouch]
 
-> [Hightouch][1] is a Reverse ETL platform that enables you to sync customer, product, or proprietary data from your warehouse or data lake to any app of your choice.
+> [Hightouch][1] is a Modern Data Integration Platform that enables you to sync customer, product, or proprietary data from your warehouse or data lake to any app of your choice.
 
 With Hightouch, you're able to own your data and keep it in sync everywhere in your technology stack. As Braze's technology partner, Hightouch keeps your customer data in sync, without the assistance from your IT or engineering teams.
 
@@ -30,12 +30,12 @@ Hightouch allows you to build better campaigns on Braze with up-to-date customer
 
 ### Step 1: Create a Braze API Key
 
-Braze allows you to create multiple API keys, each with its own set of permissions. In most cases, the recommended practice is to create a new API key for Hightouch rather than reusing an existing one. However, if this not a requirement, you can skip to step 2 if you already have your key.
+Braze allows you to create multiple API keys, each with its own set of permissions. In most cases, the recommended practice is to create a new API key for Hightouch rather than reusing an existing one. However, this not a requirement, you can skip to step 2 if you already have your key.
 
 1. Within Braze, navigate to __Settings__ at the bottom of the left navigation bar and click __Developer Console__.
 2. In the __API Settings__ tab, under __Rest API Keys__, click __+ Create New API Key__.
 3. Name this API key, and select all User Data permissions relevant to this integration.  Next, select __Save API Key__.
-4. Lastly, copy API Key found under __Identifier__ to use when creating your Hightouch connection. 
+4. Lastly, copy the API Key found under __Identifier__ to use when creating your Hightouch connection. 
 
 ### Step 2: Find your Braze API Endpoint
 
