@@ -22,7 +22,7 @@ Engagement Reports may now be sent to multiple email addresses. To learn more ab
 
 ## Specify Time on Action-Based Delivery
 
-You now have the option, when using delayed action-based triggers, to send at a specific time after a delay. This functionality is available on both Canvas and Campaigns. Learn more about sending action-based delivery campaigns [here][24].
+You now have the option, when using delayed action-based triggers, to send at a specific time after a delay. This functionality is available on both Canvas and campaigns. Learn more about sending action-based delivery campaigns [here][24].
 
 
 [24]: {{site.baseurl}}/user_guide/engagement_tools/campaigns/scheduling_and_organizing/delivery_types/triggered_delivery/

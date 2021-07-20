@@ -26,7 +26,7 @@ Starting with Android O, push notifications require a valid channel to display. 
 Android supports localization for channel names, so in the code of your application, you can associate one channel ID with multiple translations of a channel name.
 {% endalert %}
 
-Once these channels are created, your engineers will need to pass on the associated channel IDs to your marketing team. Your team should enter your channel names and channel IDs into the Braze dashboard for use in your Campaigns and Canvases.
+Once these channels are created, your engineers will need to pass on the associated channel IDs to your marketing team. Your team should enter your channel names and channel IDs into the Braze dashboard for use in your campaigns and Canvases.
 
 To add a channel to the Braze dashboard, navigate to the Android push composer, select the notification channels field and then select "manage channels."
 {% alert important %}
@@ -49,13 +49,13 @@ Messages that do not have a channel selected will be sent with the dashboard fal
 
 Here's an example of the dashboard fallback channel expected behavior:
 
-Your dashboard fallback channel is called "Marketing" and you have 10 Android push messages that you have never selected a channel for. These Campaigns are sending through the "Marketing" channel because the "Marketing" Channel is the dashboard fallback channel.
+Your dashboard fallback channel is called "Marketing" and you have 10 Android push messages that you have never selected a channel for. These campaigns are sending through the "Marketing" channel because the "Marketing" Channel is the dashboard fallback channel.
 
 Additionally, you have 15 messages that you've selected to send through the "Social Notifications" channel and five messages that you've selected to send through the "Marketing" channel.
 
 You then decide to change your dashboard default channel from "Marketing" to "Updates".
 
-In this situation, all 10 Campaigns with no channel selection that were previously sent through the "Marketing" Channel will now send through the "Updates" channel because these messages send through the fallback channel. The 15 messages that were sent through the "Social Notifications" channel will continue to send through the "Social Notifications" channel. The five messages that were sent through the "Marketing" channel will continue to send through the "Marketing" channel.
+In this situation, all 10 campaigns with no channel selection that were previously sent through the "Marketing" Channel will now send through the "Updates" channel because these messages send through the fallback channel. The 15 messages that were sent through the "Social Notifications" channel will continue to send through the "Social Notifications" channel. The five messages that were sent through the "Marketing" channel will continue to send through the "Marketing" channel.
 
 In the event that an invalid channel ID is supplied to Braze (i.e., if you provide a channel ID that your developers did not create in the SDK), we will deliver the notification through your SDK default channel. Therefore, we highly encourage you to test your notification channels via Braze's dashboard during development.
 
@@ -72,9 +72,9 @@ To better understand the expected behavior for channels, please refer to the fol
 
 ## Adding Channels to Braze's Dashboard
 
-* Open any Campaign or Canvas that includes an Android push and click "Edit Campaign".
+* Open any campaign or Canvas that includes an Android push and click **Edit Campaign**.
 * Navigate to the Android Push message composer
-* Click "Manage Notification Channels". Note that any channels added here will be available globally for all Campaigns and Canvases and that you must have "manage apps" permissions for your app group to manage channels.
+* Click "Manage Notification Channels". Note that any channels added here will be available globally for all campaigns and Canvases and that you must have "manage apps" permissions for your app group to manage channels.
 
 
 ![click_here][6]
@@ -92,9 +92,9 @@ To better understand the expected behavior for channels, please refer to the fol
 
 ## Specifying your Fallback Channel
 
-Your fallback channel is the channel that Braze will attempt to send your android message with if you have not selected a channel for the message. The only Campaigns/Canvases that will have android messages without a channel selection are Campaigns/Canvases that were created before your team added channels to the Braze dashboard. If you change your fallback channel, the change will be applied globally to all Campaigns and Canvases without an explicit channel selection.
+Your fallback channel is the channel that Braze will attempt to send your android message with if you have not selected a channel for the message. The only campaigns and Canvases that will have android messages without a channel selection are campaigns and Canvases that were created before your team added channels to the Braze dashboard. If you change your fallback channel, the change will be applied globally to all campaigns and Canvases without an explicit channel selection.
 
-* Open any existing Campaign or Canvas
+* Open any existing campaign or Canvas
 
 * Navigate to the android push composer
 
@@ -110,11 +110,11 @@ Your fallback channel is the channel that Braze will attempt to send your androi
 
 ## Adding Channels to your Android Push Messages
 
-* Navigate to the Android Push composer on any Campaign or Canvas
+* Navigate to the Android Push composer on any campaign or Canvas
 
 ![choose_channel][11]
 
-* Select the channel you'd like to use from the dropdown. If you do not have a dropdown but rather have the below view, you'll need to add channels before selecting them for Campaigns 
+* Select the channel you'd like to use from the dropdown. If you do not have a dropdown but rather have the below view, you'll need to add channels before selecting them for campaigns 
 
 ![no_dropdown][10]
 

@@ -188,7 +188,7 @@ Appboy.sharedInstance()?.user.removeFromCustomAttributeArrayWithKey("array_name"
 
 ### Unsetting a Custom Attribute
 
-Custom Attributes can also be unset using the following method:
+Custom attributes can also be unset using the following method:
 
 {% tabs %}
 {% tab OBJECTIVE-C %}

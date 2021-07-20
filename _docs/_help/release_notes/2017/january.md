@@ -21,7 +21,7 @@ You can now use a newly created “Added Email Address” action-based trigger�
 You can now configureList-Unsubscribe headers that have a subscription status of "subscribed/opted in users" or "opted in users only." This adds an “Unsubscribe” link in Gmail next to the sender’s name, which can improve deliverability ratings.
 
 ## Usability Updates
-You can now click a button to minimize the Canvas header for smaller screens and hover over full names of your Canvases and Campaigns on your user profile in Braze.
+You can now click a button to minimize the Canvas header for smaller screens and hover over full names of your Canvases and campaigns on your user profile in Braze.
 
 
 

@@ -17,7 +17,7 @@ API-triggered campaigns or server-trigger campaigns are ideal for more advanced 
 Setting up an API-triggered campaign is easy. First, create a new multichannel or single-channel campaign (with multivariate testing).
 
 {% alert note %}
-An API-triggered campaign is different from an [API Campaign]({{site.baseurl}}/developer_guide/rest_api/api_campaigns/#api-campaigns).
+An API-triggered campaign is different from an [API campaign]({{site.baseurl}}/developer_guide/rest_api/api_campaigns/#api-campaigns).
 {% endalert %}
 
 ![API-Triggered Creation Step][45]

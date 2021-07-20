@@ -22,7 +22,7 @@ To quickly troubleshoot why that is, we recommend that you...
 
 ## Ensure the Event is Tracking
 
-When a Campaign triggers a Session Start, or Custom Event, you want to ensure that this event, or session is happening frequently enough to trigger the message. Check this data on the [Overview][1] (for session data) or [Custom Events][2] pages:
+When a campaign triggers a session start or custom event, you want to ensure that this event, or session is happening frequently enough to trigger the message. Check this data on the [Overview][1] (for session data) or [Custom Events][2] pages:
 
 ![trouble17][43]
 

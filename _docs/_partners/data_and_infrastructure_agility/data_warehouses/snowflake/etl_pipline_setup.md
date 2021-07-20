@@ -9,7 +9,7 @@ page_type: partner
 
 >  This partner page offers an example set up for an Email Clicks query to reference when setting up your own queries.
 
-You can use this Email Clicks query to analyze the interactions with specific emails in your Braze Campaigns and Canvases.
+You can use this Email Clicks query to analyze the interactions with specific emails in your Braze campaigns and Canvases.
 
 ## Set Up this Query
 

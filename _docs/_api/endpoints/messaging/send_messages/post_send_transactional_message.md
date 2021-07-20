@@ -1,16 +1,16 @@
 ---
-nav_title: "POST: Send Transactional Emails via API Triggered Delivery"
+nav_title: "POST: Send Transactional Emails via API-Triggered Delivery"
 page_order: 4
 layout: api_page
 page_type: reference
 platform: API
 tool:
   - Campaigns
-description: "This article outlines details about the Send Transactional Email Messages via API Triggered Delivery Braze endpoint."
+description: "This article outlines details about the Send Transactional Email Messages via API-Triggered Delivery Braze endpoint."
 ---
 
 {% api %}
-# Sending Transactional Email via API Triggered Delivery
+# Sending Transactional Email via API-Triggered Delivery
 {% apimethod post %}
 /transactional/v1/campaigns/YOUR_CAMPAIGN_ID_HERE/send
 {% endapimethod %}

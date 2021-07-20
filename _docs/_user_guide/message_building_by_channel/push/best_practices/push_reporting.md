@@ -11,7 +11,7 @@ channel: push
 
 # Push Reporting
 
-The Braze SDK provides you with a detailed report of each of your push campaigns. Navigate to the 'Campaigns' tab on your dashboard and click on the 'Details' tab of your desired campaign as shown below:
+The Braze SDK provides you with a detailed report of each of your push campaigns. Navigate to the **Campaigns** tab on your dashboard and select your desired campaign to open the **Details** tab, as shown below:
 
 ![Campaign Details][29]
 
