@@ -45,7 +45,7 @@ Locate and note your Braze REST API endpoint, this will be needed when creating 
 
 ## Supported Sync Behaviors in Census
 
-Census supports syncing your data to both the user and event object in Braze. To learn more about this integration and Census syncing behaviors, visit the [Census documentation](https://docs.getcensus.com/destinations/braze).
+Census supports syncing your data to both the user and event object in Braze. To learn more about this integration and Census syncing behaviors, visit the following [Census documentation](https://docs.getcensus.com/destinations/braze).
 
 
 [1]: https://www.getcensus.com/
