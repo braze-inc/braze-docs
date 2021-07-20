@@ -8,14 +8,20 @@ tool: Dashboard
 
 # Default and Minimum Data Collection
 
-Braze is designed to allow for flexible data collection via our SDKs and APIs. The Braze SDK can be integrated in 3 ways:
-- __Personalized Integration__; integrators can log custom data alongside automatically captured data. 
-- __Automatically Collected Integration__; integrators can benefit from automatically captured data without integrating additional data.
-- __Minimum Integration__; only strictly necessary data is integrated to enable communication channels. 
+Braze is designed to allow for flexible data collection via our SDKs and APIs. The Braze SDK can be integrated in three ways:
+- __Personalized Integration__; integrators have flexibility to collect data in addition to Automatically Collected Data.
+- __Automatically Collected Integration__; integrators can benefit from automatically captured data (this includes all the Minimum Integration data) without integrating additional data.
+- __Minimum Integration__; integrators can disable Automatically Collected Data to only receive data that is strictly necessary to enable communication with the Braze Services. 
+
+## Personalized Integration 
+
+To make the most out of the Braze Platform functionality, integrators most commonly implement the Braze SDKs and log [Custom Attributes]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_attributes/), [Custom Events]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events/) and [Purchase Events]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/purchase_events/) that are pertinent to their business on top of Automatically Collected Data (including Minimum Integration). 
+
+A personalized integration allows for a customised communication that is relevant to the user experience. 
 
 ## Automatically Collected Data
 
-Listed below are the automatically captured data generated and received by Braze when an integrator initializes the SDK; this includes the attributes found in the minimum integration table.
+Listed below are the automatically captured data generated and received by Braze when an integrator initializes the SDK; this includes properties found in the Minimum Integration table.
 
 | Attribute | Platform | Description | Why it's Collected |
 | --------- | -------- | ----------- | ------------------ |
