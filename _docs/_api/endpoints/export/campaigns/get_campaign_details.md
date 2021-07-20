@@ -103,9 +103,8 @@ The `messages` response will contain information about each message. Example mes
             {
                 "header": 
                     {
-                         "text":(string) display text for the header of the survey
+                         "text":(string) display text for the header of the survey,
                     }
-                   
                 "choices": [
                     {
                        "choice_id": (string) choice identifier,
