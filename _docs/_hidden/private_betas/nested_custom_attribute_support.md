@@ -131,6 +131,10 @@ You can build Segments based on nested custom attributes to further target your 
 
 ![Last Played Song Segment][6]
 
+When working with nested custom attributes segmentation, you'll have access to a new comparator grouped by data type. For example, since `play_analytics.count` is a number, you can select a comparator under the **Number** category.
+
+![NCA Segment Comparator][7]
+
 ## Data Points
 
 Any key that is updated consumes a data point, including the initialization of a parent custom attribute object. For example, this object initialized in the user profile counts as nine (9) data points:
@@ -166,3 +170,4 @@ Updating a custom attribute object to `null` also consumes a data point.
 [4]: https://calendly.com/d/w9y6-qq9c/feedback-on-nested-custom-attributes?month=2021-07
 [5]: {% image_buster /assets/img_archive/nca_liquid_2.png %} 
 [6]: {% image_buster /assets/img_archive/nca_segmentation_2.png %}
+[7]: {% image_buster /assets/img_archive/nca_comparator.png %}

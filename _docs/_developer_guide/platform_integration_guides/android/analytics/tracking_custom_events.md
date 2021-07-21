@@ -62,7 +62,7 @@ Appboy.getInstance(context).logCustomEvent(YOUR_EVENT_NAME, eventProperties)
 
 ### Reserved Keys
 
-The following keys are __RESERVED__ and __CANNOT__ be used as Custom Event Properties:
+The following keys are __RESERVED__ and __CANNOT__ be used as custom event properties:
 
 - `time`
 - `event_name`

@@ -38,8 +38,10 @@ tool:
 | Insert Canvas Steps                            | Deleting Variants    |
 | Add New Connections                            | Deleting Connections |
 | Add New Variants                               |                      |
-| Variant Distribution                           |                      |
+| Variant Distribution*                          |                      |
 {: .reset-td-br-1 .reset-td-br-2}
+
+*Control variant distribution may only be decreased after launch.
 
 ## Individual Step
 

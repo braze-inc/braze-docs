@@ -15,7 +15,7 @@ We filter our data from our email and push campaigns into a business insights to
 
 ## Step 1: Intake and Aggregate Event Data
 
-After launching campaigns using any of our Engagement Tools (like Campaigns or Canvas), we track event data using our own system as well as some from our email partners. Some of this data is aggregated and shown in the dashboard, but we were interested in diving deeper!
+After launching campaigns using any of our Engagement Tools (like campaigns or Canvas), we track event data using our own system as well as some from our email partners. Some of this data is aggregated and shown in the dashboard, but we were interested in diving deeper!
 
 ## Step 2: Send Event Data to a Data Storage Partner
 

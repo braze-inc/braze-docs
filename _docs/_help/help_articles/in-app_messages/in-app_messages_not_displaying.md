@@ -20,27 +20,27 @@ There are a number of approaches that you may try:
 
 ## Event Triggers
 
-If the campaign is triggered by a Session Start or a Custom Event, you want to ensure that this event or session is happening frequently enough to trigger the message. Check this data on the [Overview][1] (for session data) or [Custom Events][2] pages:
+If the campaign is triggered by a session start or a custom event, you want to ensure that this event or session is happening frequently enough to trigger the message. Check this data on the [Overview][1] (for session data) or [Custom Events][2] pages:
 
 ![trouble6][14]
 
 ## Message Impressions
 
-Customization of the In-App Message UI or delivery mechanisms within the SDK may require your developers to utilize our methods to manually log In-App message impressions. Check with your developers to see if you use In-App message customization.
+Customization of the in-app message UI or delivery mechanisms within the SDK may require your developers to utilize our methods to manually log in-app message impressions. Check with your developers to see if you use in-app message customization.
 
 
 ## Run Tests
 
 It is important to determine whether the trigger event is failing to occur, or the message itself is unable to display. To test, trigger the message using a different action (like a session start, or different custom event) and verify whether it displays. This will help isolate if this is potentially a data issue.
 
-Alternatively try using a different type of In-App message template or size of image. There are [specs][15] for In-App messages that must be followed. Sometimes, if an image is too large, it will prevent the In-App message from displaying.
+Alternatively try using a different type of in-app message template or size of image. There are [specs][15] for in-app messages that must be followed. Sometimes, if an image is too large, it will prevent the in-app message from displaying.
 
 
 ## Session Timeout
 
-Find out if you have customized your session timeout. By default, Braze retrieves In-App messages at the start of a session from the server.
+Find out if you have customized your session timeout. By default, Braze retrieves in-app messages at the start of a session from the server.
 
-If you have an extended the session timeout it will extended the period of time from which we can refresh the potential In-App messages you are eligible for. Additionally, if your campaign is set to trigger off of a session start, you’ll need to make sure the appropriate amount of time has passed for a new session to be registered. For example, the session timeout may have been customized to be 30 seconds. If you open and close the App in less than 30 seconds you will not be eligible to receive another In-App message triggered on session start. You can read more about that for:
+If you have an extended the session timeout it will extended the period of time from which we can refresh the potential in-app messages you are eligible for. Additionally, if your campaign is set to trigger off of a session start, you’ll need to make sure the appropriate amount of time has passed for a new session to be registered. For example, the session timeout may have been customized to be 30 seconds. If you open and close the App in less than 30 seconds you will not be eligible to receive another in-app message triggered on session start. You can read more about that for:
 
 * [iOS][16]
 * [Android][17]
@@ -48,7 +48,7 @@ If you have an extended the session timeout it will extended the period of time 
 
 ## Minimum Interval
 
-There is a minimum interval at which we’ll allow In-App messages to be consecutively triggered. You might be trying to trigger them too quickly. Review our documentation for more information on this:
+There is a minimum interval at which we’ll allow in-app messages to be consecutively triggered. You might be trying to trigger them too quickly. Review our documentation for more information on this:
 * [iOS][19]
 * [Android][20]
 * [Web][21]

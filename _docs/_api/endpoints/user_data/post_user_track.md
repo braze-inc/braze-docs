@@ -164,16 +164,6 @@ In the case of a success, any data that was not affected by an error in the _err
 }
 ```
 
-### Queued Responses
-
-During times of maintenance, Braze might pause the real-time processing of the API. In these situations, the server will return an HTTP Accepted 202 response code and the following body, which indicates that we have received and queued the API call but have not immediately processed it. All scheduled maintenance will be posted to [http://status.braze.com](http://status.braze.com) ahead of time.
-
-```json
-{
-  "message" : "queued"
-}
-```
-
 ### Fatal Error Response Codes
 
 The following status codes and associated error messages will be returned if your request encounters a fatal error. Any of these error codes indicate that no data will be processed.

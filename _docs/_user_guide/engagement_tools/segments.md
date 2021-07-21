@@ -8,7 +8,7 @@ descriptions: "Audience segmentation is key to strategic marketing - it can keep
 
 tool: Segments
 page_type: landing
-description: "This is the landing page for Segmentation within Dashboard Campaigns. Here you can find information on how to set up and maintain effective Segments."
+description: "This is the landing page for Segmentation within Dashboard campaigns. Here you can find information on how to set up and maintain effective Segments."
 
 guide_featured_title: "Popular Articles"
 guide_featured_list:

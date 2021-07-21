@@ -479,7 +479,7 @@ When the silent push is received an SDK recorded event "In-App Message Trigger" 
 
 ### Step 2: Create a Push Campaign
 
-Create a silent push campaign which is triggered via the server sent event. For details on how to create a silent push campaign please review this section of our [Docs][39].
+Create a silent push campaign which is triggered via the server sent event. For details on how to create a silent push campaign, refer to our article on [silent push notifications][39].
 
 ![serverEventTrigger][40]
 
