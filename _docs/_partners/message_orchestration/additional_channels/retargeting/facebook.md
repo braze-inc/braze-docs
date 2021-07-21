@@ -76,7 +76,7 @@ There are three possible user fields you can export:
 You can only select one user field within a single export. If you choose more than one data type, Braze will create a separate custom audience for each.
 {% endalert %}
 
-Once you have selected the user field, click on the __export__ button. Similar to CSV exports, you will receive an email when the segment has finished exporting into Facebook.
+Once you have selected the user field, click on the __Export__ button. Similar to CSV exports, you will receive an email when the segment has finished exporting into Facebook.
 
 You can view the custom audience on the [Facebook Ads Manager][13].
 
