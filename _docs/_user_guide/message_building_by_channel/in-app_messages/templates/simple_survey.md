@@ -10,10 +10,6 @@ tool:
   - Media
   - Templates
 ---
-<br>
-{% alert important %}
-This feature is in a closed _Early Access_ period. To request access, please submit your feedback in our [Product Portal](https://dashboard.braze.com/resources/roadmap).
-{% endalert %}
 
 # Simple Survey In-App Message
 
