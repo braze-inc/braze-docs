@@ -10,7 +10,6 @@ tool:
   - Media
   - Templates
 ---
-<br>
 
 # Simple Survey In-App Message
 
