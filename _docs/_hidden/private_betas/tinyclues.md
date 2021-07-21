@@ -31,6 +31,8 @@ To integrate Braze and Tinyclues, you must export an existing Tinyclues campaign
 ### Step 1: Get the Braze Data Import Key
 In your Braze account, navigate to __Technology Partners__ and select __Tinyclues__. Here, you will find your REST Endpoint and generate your Braze data import key. 
 
+![Tinyclues][6]{: style="max-width:70%;"}
+
 ### Step 2: Share API Key with TinyClues Data Operations
 
 You will need to provide the data import key and your REST endpoint to the Tinyclues Data Operations Team for the integration to be complete. Tinyclues will then establish the connection and reach out to you once the setup is complete. 
@@ -65,10 +67,11 @@ Are you having trouble finding the right cohort within the list? Verify the name
 
 ![Tinyclues][2]{: style="max-width:30%;"}
 
-Still having trouble retrieving your audience? Contact the Tinyclues team for additional support: support@tinyclues.com.
+Still having trouble retrieving your audience? Contact the Tinyclues team for additional support: [support@tinyclues.com](mailto:support@tinyclues.com).
 
 [1]: {% image_buster /assets/img/tinyclues/tinyclues_1.png %} 
 [2]: {% image_buster /assets/img/tinyclues/tinyclues_2.png %} 
 [3]: {% image_buster /assets/img/tinyclues/tiny_clues3.png %} 
 [4]: {% image_buster /assets/img/tinyclues/tiny_clues4.png %}
 [5]: {% image_buster /assets/img/tinyclues/tinyclues_5.png %}  
+[6]: {% image_buster /assets/img/tinyclues/tinyclues_6.png %}  
