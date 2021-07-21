@@ -34,15 +34,13 @@ You can export two types of events events to Mixpanel: "Message Engagement Event
 
 Please contact your Account Manager or [open a support ticket][support] if you need access to additional event entitlements.
 
-
-# Mixpanel Cohort Import
+## Mixpanel Cohort Import
 
 Use Braze and Mixpanel's partnership to configure your integration and import Mixpanel cohorts directly into Braze for retargeting, creating a full loop of data from one system to another. This allows you to perform a deeper analysis using Mixpanel and seamlessly execute on your strategies using Braze.
 
 You can manage the Mixpanel Cohort Import process from the Technology Partners page in your Braze account. Any integration that you set up will count towards your account's data point volume.
 
 ![Mixpanel cohort import]({% image_buster /assets/img_archive/currents-mixpanel-import.png %})
-
 
 ## Customer Behavior Events
 
