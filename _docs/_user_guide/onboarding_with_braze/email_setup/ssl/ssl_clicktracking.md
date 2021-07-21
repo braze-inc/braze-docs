@@ -23,9 +23,13 @@ A Secured Socket Layer (SSL) encrypts a URL with HTTPS instead of the less secur
 
 A Content Delivery Network (CDN) is a platform of servers that help ensure quick load times of high-quality content across multiple mediums while also handling security certificates. 
 
-At Braze, to do click and open tracking, our delivery partners transform links using a branded subdomain, and the CDN applies the SSL certificate to those newly transformed links. Often, our delivery partners are required to present valid and trusted certificates to your email recipient's browser for links and images to display correctly. Because Braze cannot request or manage such certificates, this must be set up on your end through a CDN. Below we have outlined and linked out to relevant CDN partner resources to help make this process easy. 
+At Braze, to do click and open tracking, our delivery partners transform links using a branded subdomain, and the CDN applies the SSL certificate to those newly transformed links. Often, our delivery partners are required to present valid and trusted certificates to your email recipient's browser for links and images to display correctly. Because Braze cannot request or manage such certificates, this must be set up on your end through a CDN. 
 
-__Please note that CDN configuration always follows after getting your DNS records validated by Braze__. If you have not yet initiated this step, reach out to your COM or CSM for more information on how to get started.
+Below we have outlined and linked out to relevant CDN partner resources to help make this process easy. 
+
+{% alert important %}
+Please note that CDN configuration always follows after getting your DNS records validated by Braze. If you have not yet initiated this step, reach out to your COM or CSM for more information on how to get started.
+{% endalert %}
 
 {% alert note %}
 If you are unable or do not wish to use the CDNs listed above when setting up SSL for click and open tracking, you may set up a custom SSL configuration. Note that alternate CDNs or custom proxies may result in a more complex and nuanced setup. Check out the [Sendgrid](https://sendgrid.com/docs/ui/account-and-settings/custom-ssl-configurations/) and [Sparkpost](https://www.sparkpost.com/docs/tech-resources/using-proxy-https-tracking-domain/) documentation on this topic.
@@ -33,7 +37,11 @@ If you are unable or do not wish to use the CDNs listed above when setting up SS
 
 ### CDN Resources
 
-Listed below are step-by-step guides written by Sendgrid and Sparkpost on how to configure certain CDNs. While your specific CDN may not be listed below, you must make sure your CDN has the ability to apply SSL certificates. It is also important to note that __Braze will be unable to help you troubleshoot your CDN configuration__. You must reach out to your CDN provider to help troubleshoot your CDN configuration.
+Listed below are step-by-step guides written by Sendgrid and Sparkpost on how to configure certain CDNs. While your specific CDN may not be listed below, you must make sure your CDN has the ability to apply SSL certificates.
+
+{% alert important %}
+Braze will be unable to help you troubleshoot your CDN configuration. You must reach out to your CDN provider to help troubleshoot your CDN configuration.
+{% endalert %}
 
 | Sendgrid Step-By-Step Guides | Sparkpost Step-By-Step Guides |
 | -------- | --------- |
