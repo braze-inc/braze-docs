@@ -27,13 +27,13 @@ This article is not intended to provide, nor may it be relied upon as providing 
 
 In general, we encourage using your best judgment when approaching SMS sending. Braze, as well as our sending partners, have checks in place that prevent most SMS abuses.
 
-__There are the six rules you should follow:__
+There are the six rules you should follow:
 
 1. __Obtain explicit consent from users before sending them SMS.__ Whenever users provide consent, it's your responsibility to log, update, and maintain that information in a compliant user database. According to basic legal guidelines, the most important information you need to retain regarding consent is:
-- __The time and date the user gave consent__
-- __The type of SMS messaging they consented to__
-- __The users' phone number__
-- __The language in which they opted-in__<br><br>
+  - The time and date the user gave consent
+  - The type of SMS messaging they consented to
+  - The users' phone number
+  - The language in which they opted-in<br><br>
 
 2. __Clearly communicate the types of SMS you'll be sending__. Users should understand what messages to expect from your brand in this channel and the kinds of information or offers they'll be receiving. Explicitly state the purpose of your future campaigns, message frequency, and remind users that message/data rates apply.<br><br>
 
@@ -61,13 +61,13 @@ A customer's privacy is key to a meaningful and respectful relationship. Respect
 
 Luckily for you, Braze follows the guidelines of [many security regulations]({{site.baseurl}}/developer_guide/disclosures/security_qualifications/#security-qualifications), including [GDPR]({{site.baseurl}}/help/dp-technical-assistance/).
 
-The CTIA recommends that you maintain and conspicuously display a clear and easy-to-understand privacy policy.
+The [CTIA](https://www.ctia.org/) (a trade association representing the wireless communications industry in the United States) recommends that you maintain and conspicuously display a clear and easy-to-understand privacy policy.
 
 ### Consent
 
 Opt-in, help, and opt-out options are an absolute must when creating SMS campaigns.
 
-The [TCPA](https://en.wikipedia.org/wiki/Telephone_Consumer_Protection_Act_of_1991) (Telephone Consumer Protection Act) mandates that a business must receive "express written consent" to send customers messages - you can do this in a multitude of ways, including web or mobile. You must be clear with the customer about how you intend to use SMS to communicate with them.
+The Telephone Consumer Protection Act ([TCPA](https://en.wikipedia.org/wiki/Telephone_Consumer_Protection_Act_of_1991)) mandates that a business must receive "express written consent" to send customers messages - you can do this in a multitude of ways, including web or mobile. You must be clear with the customer about how you intend to use SMS to communicate with them.
 
 Remember to comply with the [National Do Not Call Registry](https://www.donotcall.gov/).
 
@@ -81,9 +81,9 @@ Some spam considerations are built into SMS capabilities in general (long and sh
 
 ### Content
 
-This can be a tricky one, but when in doubt, avoid topics that involve violence, sex, drugs, tobacco, or other paraphernalia. Be wise when sending messages regarding these topics - you may still be charged for messages that are blocked by various carriers.
+This can be a tricky one, but when in doubt, avoid topics that involve violence, sex, drugs, tobacco, or other paraphernalia. Be wise when sending messages regarding these topics—you may still be charged for messages that are blocked by various carriers.
 
-The [CTIA](https://www.ctia.org/) (a trade association representing the wireless communications industry in the United States) recommends that you follow __SHAFT Compliance__, which defines the following topics as generally "illegal" when messaging in the United States:
+The [CTIA](https://www.ctia.org/) recommends that you ensure SHAFT compliance, which defines the following topics as generally "illegal" when messaging in the United States:
 
 - Sex
 - Hate
@@ -95,10 +95,8 @@ You can [read more about the CTIA's Messaging Principles and Best Practices for 
 
 ### Scheduling
 
-Please ensure you comply with the [TCPA](https://en.wikipedia.org/wiki/Telephone_Consumer_Protection_Act_of_1991) (Telephone Consumer Protection Act), which dictates that you shouldn't send messages during late hours (see the regulation's contents for exact hours). However, you shouldn't send messages that late anyway - don't you want high engagement?
+Please ensure you comply with the [TCPA](https://en.wikipedia.org/wiki/Telephone_Consumer_Protection_Act_of_1991), which dictates that you shouldn't send messages during late hours. Refer to the regulation's contents for exact hours. However, you shouldn't send messages that late anyway—don't you want high engagement?
 
 ### International
 
-Most of these best practices apply to guidelines set forth in the United States of America. If you are reaching customers outside of U.S. regions, _please research best practices and laws in those areas_. It is always best practice to act in a way that _adheres to the most stringent regulations_, which are usually applied in the United States, Canada, and countries part of the European Union.
-
-Better to be safe than sorry!
+Most of these best practices apply to guidelines set forth in the United States of America. If you're reaching customers outside of U.S. regions, please research best practices and laws in those areas. It's always a best practice to act in a way that adheres to the most stringent regulations, which are usually applied in the United States, Canada, and countries part of the European Union.
