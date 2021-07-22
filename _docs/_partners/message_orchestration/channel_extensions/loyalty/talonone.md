@@ -150,7 +150,7 @@ You can access Braze Attributes by using Liquid tags (e.g. {% raw %} {{${user_id
 {% endraw %}
 
 {% alert important %}
-Further details on how to generate a session token can be found [here](https://developers.talon.one/Management-API/Authentication).
+Further details on how to generate a session token can be found [in the Talon.One API docs](https://docs.talon.one/management-api/#section/Authentication).
 {% endalert %}
 
 #### Step Four: Add the Body of the Request Containing the Coupon Code Specs Mentioned Above
