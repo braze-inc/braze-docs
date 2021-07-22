@@ -369,7 +369,7 @@ glossaries:
     tags:
       - User Attributes
   - name: Push Enabled
-    description: Segments your users who have explicitly activated push notifications for any of the apps in your app group. After segmenting with this filter, you will be able to see a breakdown of who is in that segment for Android, iOS, and web in the bottom panel, called <em>Reachable Users</em>.
+    description: Segments your users who have explicitly activated push notifications for any of the apps in your app group. This count includes only foreground push, and does not include users who have unsubscribed. <br><br>After segmenting with this filter, you will be able to see a breakdown of who is in that segment for Android, iOS, and web in the bottom panel, called <em>Reachable Users</em>.
     tags:
       - User Attributes
   - name: Push Enabled For App
@@ -381,7 +381,7 @@ glossaries:
     tags:
       - User Attributes
   - name: Push Subscription Status
-    description: Segments your users by their <a href="/docs/help/best_practices/push/push_subscription_status/#push-subscription-status">subscription status</a> for push.
+    description: Segments your users by their <a href="/docs/user_guide/message_building_by_channel/push/users_and_subscriptions/#push-subscription-state">subscription status</a> for push.
     tags:
       - User Attributes
   - name: Push Unsubscribed Date
