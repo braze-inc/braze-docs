@@ -3,7 +3,7 @@ nav_title: Audience Sync to Google
 title: Audience Sync to Google
 alias: /google_audience_sync/
 description: "This reference article will cover how to use Braze Audience Sync to Google, to deliver advertisements based upon behavioral triggers, segmentation, and more."
-
+hidden: true
 Tool:
   - Dashboard
 ---
