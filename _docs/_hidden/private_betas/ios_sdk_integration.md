@@ -254,11 +254,12 @@ Create an extension for your push notification code in your `BrazeManager.swift`
 // MARK - Push Notifications
 extension BrazeManager {
   // 1 
-  func application(_ application: UIApplication,
-didRegisterForRemoteNotificationsWithDeviceToken deviceToken: Data) {
-
-  // 2 
-  Appboy.sharedInstance().?registerDeviceToken(deviceToken)
+  func application(
+    _ application: UIApplication,
+    didRegisterForRemoteNotificationsWithDeviceToken deviceToken: Data
+  ) {
+    // 2 
+    Appboy.sharedInstance().?registerDeviceToken(deviceToken)
   }
 }
 ```
