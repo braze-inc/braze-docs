@@ -677,12 +677,12 @@ Create an extension for your Content Cards code in your `BrazeManager.swift` fil
 extension Brazemanager {
 
   // 1 
-  func displayContentCards(navigationController: UINavigationController?){
+  func displayContentCards(navigationController: UINavigationController?) {
       
-  // 2 
-      let contentCardsVc = ABKContentCardsTableViewController()
-      contentCardsVc.title = "Content Cards"
-      navigationController?.pushViewController(contentCardsVc, animated: true)
+    // 2 
+    let contentCardsVc = ABKContentCardsTableViewController()
+    contentCardsVc.title = "Content Cards"
+    navigationController?.pushViewController(contentCardsVc, animated: true)
   }
 }
 ```
