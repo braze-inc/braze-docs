@@ -43,7 +43,7 @@ implementation "com.google.firebase:firebase-messaging:${FIREBASE_PUSH_MESSAGING
 
 ### Step 2: Configure Token Registration
 
-Braze push notifications won't work until a Firebase Cloud Messaging token (FCM registration token) is registered. FCM registration tokens can either be registered by the Braze SDK automatically (recommended) or manually registered. Tokens can be manually registered using the [`Appboy.registerAppboyPushMessages()`][35] method.
+Braze push notifications won't work until a Firebase Cloud Messaging token (FCM registration token) is registered. FCM registration tokens can either be registered by the Braze SDK automatically (recommended) or manually registered. Tokens can be manually registered using the [`Braze.registerAppboyPushMessages()`][35] method.
 
 > Make sure to use your Firebase Sender ID. This is a unique numerical value created when you create your Firebase project, available in the Cloud Messaging tab of the Firebase console Settings pane. The sender ID is used to identify each sender that can send messages to the client app.
 
@@ -89,7 +89,7 @@ If using a Firebase automatic registration, you can skip the manual options belo
 
 #### Option 2: Manual Registration
 
-We recommended you call [`Appboy.registerAppboyPushMessages()`][35] from within your application [`onCreate()`][67] method to ensure that push tokens are reliably delivered to Braze.
+We recommended you call [`Braze.registerAppboyPushMessages()`][35] from within your application [`onCreate()`][67] method to ensure that push tokens are reliably delivered to Braze.
 
 See the snippet below for an example:
 
@@ -109,7 +109,7 @@ public class MyApplication extends Application {
       }
 
       final String token = task.getResult();
-      Appboy.getInstance(applicationContext).registerAppboyPushMessages(token);
+      Braze.getInstance(applicationContext).registerAppboyPushMessages(token);
     });
   }
 }
@@ -128,7 +128,7 @@ class MyApplication: Application() {
         return@addOnCompleteListener
       }
       val token = task.result
-      Appboy.getInstance(applicationContext).registerAppboyPushMessages(token)
+      Braze.getInstance(applicationContext).registerAppboyPushMessages(token)
     }
   }
 }
@@ -182,10 +182,10 @@ If you have a custom [Application][76] subclass, ensure you do not have automati
 After completing this section, you should be able to receive and display push notifications sent by Braze.
 
 ### Step 1: Register Braze Firebase Messaging Service
-Braze includes a service to handle push receipt and open intents. Our `AppboyFirebaseMessagingService` class will need to be registered in your `AndroidManifest.xml`.
+Braze includes a service to handle push receipt and open intents. Our `BrazeFirebaseMessagingService` class will need to be registered in your `AndroidManifest.xml`.
 
 ```xml
-<service android:name="com.appboy.AppboyFirebaseMessagingService"
+<service android:name="com.appboy.BrazeFirebaseMessagingService"
   android:exported="false">
   <intent-filter>
     <action android:name="com.google.firebase.MESSAGING_EVENT" />
@@ -193,7 +193,7 @@ Braze includes a service to handle push receipt and open intents. Our `AppboyFir
 </service>
 ```
 
-Braze's notification code also uses `AppboyFirebaseMessagingService` to handle open and click action tracking. This service must be registered in the `AndroidManifest.xml` for that to function correctly. Also, keep in mind that Braze prefixes notifications from our system with a unique key to ensure we only render notifications sent from Braze's systems. You may register additional services separately to render notifications sent from other FCM services.
+Braze's notification code also uses `BrazeFirebaseMessagingService` to handle open and click action tracking. This service must be registered in the `AndroidManifest.xml` for that to function correctly. Also, keep in mind that Braze prefixes notifications from our system with a unique key to ensure we only render notifications sent from Braze's systems. You may register additional services separately to render notifications sent from other FCM services.
 
 {% alert important %}
 If you already have a Firebase Messaging Service registered, do not complete this step. Instead, proceed to [Using Your Own Firebase Messaging Service](#using-your-own-firebase-messaging-service) and complete the steps listed there.
@@ -209,7 +209,7 @@ Before Braze SDK 3.1.1, `AppboyFcmReceiver` was used to handle FCM push. The `Ap
 
 ##### Using Your Own Firebase Messaging Service
 
-If you already have a Firebase Messaging Service registered, you can pass [`RemoteMessage`][75] objects to Braze via [AppboyFirebaseMessagingService.handleBrazeRemoteMessage()][74]. This method will only display a notification if the [`RemoteMessage`][75] object originated from Braze and will safely ignore if not.
+If you already have a Firebase Messaging Service registered, you can pass [`RemoteMessage`][75] objects to Braze via [BrazeFirebaseMessagingService.handleBrazeRemoteMessage()][74]. This method will only display a notification if the [`RemoteMessage`][75] object originated from Braze and will safely ignore if not.
 
 {% tabs %}
 {% tab JAVA %}
@@ -219,7 +219,7 @@ public class MyFirebaseMessagingService extends FirebaseMessagingService {
   @Override
   public void onMessageReceived(RemoteMessage remoteMessage) {
     super.onMessageReceived(remoteMessage);
-    if (AppboyFirebaseMessagingService.handleBrazeRemoteMessage(this, remoteMessage)) {
+    if (BrazeFirebaseMessagingService.handleBrazeRemoteMessage(this, remoteMessage)) {
       // This Remote Message originated from Braze and a push notification was displayed.
       // No further action is needed.
     } else {
@@ -237,7 +237,7 @@ public class MyFirebaseMessagingService extends FirebaseMessagingService {
 class MyFirebaseMessagingService : FirebaseMessagingService() {
   override fun onMessageReceived(remoteMessage: RemoteMessage?) {
     super.onMessageReceived(remoteMessage)
-    if (AppboyFirebaseMessagingService.handleBrazeRemoteMessage(this, remoteMessage)) {
+    if (BrazeFirebaseMessagingService.handleBrazeRemoteMessage(this, remoteMessage)) {
       // This Remote Message originated from Braze and a push notification was displayed.
       // No further action is needed.
     } else {
@@ -259,7 +259,7 @@ Starting in Android N, you should update or remove small notification icon asset
 
 To properly create a notification small icon asset:
 - Remove all colors from the image except for white.
-- All other non-white regions of the asset should be transparent. 
+- All other non-white regions of the asset should be transparent.
 
 {% alert note %}
 A common symptom of an improper asset is the notification small icon rendering as a solid monochrome square. This is due to the Android system not being able to find any transparent regions in the notification small icon asset.
@@ -432,9 +432,9 @@ The above is an example for customers on the `US-01` instance. If you are not on
 
 #### Step 1: Create your Custom Notification Factory
 
-In some scenarios, you may wish to customize push notifications in ways that would be cumbersome or unavailable server side. To give you complete control of notification display, we've added the ability to define your own [`IAppboyNotificationFactory`][6] to create notification objects for display by Braze.
+In some scenarios, you may wish to customize push notifications in ways that would be cumbersome or unavailable server side. To give you complete control of notification display, we've added the ability to define your own [`IBrazeNotificationFactory`][6] to create notification objects for display by Braze.
 
-If a custom `IAppboyNotificationFactory` is set, Braze will call your factory's `createNotification()` method upon push receipt before the notification is displayed to the user. Braze will pass in a `Bundle` containing Braze push data and another `Bundle` containing custom key-value pairs sent either via the dashboard or the messaging APIs:
+If a custom `IBrazeNotificationFactory` is set, Braze will call your factory's `createNotification()` method upon push receipt before the notification is displayed to the user. Braze will pass in a `Bundle` containing Braze push data and another `Bundle` containing custom key-value pairs sent either via the dashboard or the messaging APIs:
 
 Braze will pass in a [`BrazeNotificationPayload`][77] containing data from the Braze push notification.
 
@@ -442,7 +442,7 @@ Braze will pass in a [`BrazeNotificationPayload`][77] containing data from the B
 {% tab JAVA %}
 
 ```java
-// Factory method implemented in your custom IAppboyNotificationFactory
+// Factory method implemented in your custom IBrazeNotificationFactory
 @Override
 public Notification createNotification(BrazeNotificationPayload brazeNotificationPayload) {
   // Example of getting notification title
@@ -457,7 +457,7 @@ public Notification createNotification(BrazeNotificationPayload brazeNotificatio
 {% tab KOTLIN %}
 
 ```kotlin
-// Factory method implemented in your custom IAppboyNotificationFactory
+// Factory method implemented in your custom IBrazeNotificationFactory
 override fun createNotification(brazeNotificationPayload: BrazeNotificationPayload): Notification {
   // Example of getting notification title
   val title = brazeNotificationPayload.getTitleText()
@@ -470,7 +470,7 @@ override fun createNotification(brazeNotificationPayload: BrazeNotificationPaylo
 {% endtab %}
 {% endtabs %}
 
-You can return `null` from your custom `createNotification()` method to not show the notification at all, use `AppboyNotificationFactory.getInstance().createNotification()` to obtain Braze's default `notification` object for that data and modify it before display, or generate a completely separate `notification` object for display.
+You can return `null` from your custom `createNotification()` method to not show the notification at all, use `BrazeNotificationFactory.getInstance().createNotification()` to obtain Braze's default `notification` object for that data and modify it before display, or generate a completely separate `notification` object for display.
 
 {% alert note %}
 Braze push data keys are documented [here](https://appboy.github.io/appboy-android-sdk/javadocs/com/appboy/Constants.html).
@@ -478,47 +478,47 @@ Braze push data keys are documented [here](https://appboy.github.io/appboy-andro
 
 #### Step 2: Set your Custom Notification Factory
 
-To instruct Braze to use your custom notification factory, use the [method on the Braze interface][5] to set your [`IAppboyNotificationFactory`][6]:
+To instruct Braze to use your custom notification factory, use the [method on the Braze interface][5] to set your [`IBrazeNotificationFactory`][6]:
 
 {% tabs %}
 {% tab JAVA %}
 
 
 ```java
-setCustomAppboyNotificationFactory(IAppboyNotificationFactory appboyNotificationFactory);
+setCustomBrazeNotificationFactory(IBrazeNotificationFactory brazeNotificationFactory);
 ```
 
 {% endtab %}
 {% tab KOTLIN %}
 
 ```kotlin
-setCustomAppboyNotificationFactory(appboyNotificationFactory: IAppboyNotificationFactory)
+setCustomBrazeNotificationFactory(brazeNotificationFactory: IBrazeNotificationFactory)
 ```
 
 {% endtab %}
 {% endtabs %}
 
-The recommended place to set your custom `IAppboyNotificationFactory` is in the `Application.onCreate()` application lifecycle method (not activity).  This will allow the notification factory to be set correctly whenever your app process is active.
+The recommended place to set your custom `IBrazeNotificationFactory` is in the `Application.onCreate()` application lifecycle method (not activity).  This will allow the notification factory to be set correctly whenever your app process is active.
 
 {% alert important %}
 Creating your own notification from scratch is an advanced use case and should be done only with thorough testing and a deep understanding of Braze's push functionality (you must, for example, ensure your notification logs push opens correctly).
 {% endalert %}
 
-To unset your custom [`IAppboyNotificationFactory`][6] and return to default Braze handling for push, pass in `null` to our custom notification factory setter:
+To unset your custom [`IBrazeNotificationFactory`][6] and return to default Braze handling for push, pass in `null` to our custom notification factory setter:
 
 {% tabs %}
 {% tab JAVA %}
 
 
 ```java
-setCustomAppboyNotificationFactory(null);
+setCustomBrazeNotificationFactory(null);
 ```
 
 {% endtab %}
 {% tab KOTLIN %}
 
 ```kotlin
-setCustomAppboyNotificationFactory(null)
+setCustomBrazeNotificationFactory(null)
 ```
 
 {% endtab %}
@@ -535,9 +535,9 @@ Register your custom `BroadcastReceiver` to listen for Braze push opened and rec
 ```xml
 <receiver android:name="YOUR-BROADCASTRECEIVER-NAME" android:exported="false" >
   <intent-filter>
-    <action android:name="${applicationId}.intent.APPBOY_PUSH_RECEIVED" />
-    <action android:name="${applicationId}.intent.APPBOY_NOTIFICATION_OPENED" />
-    <action android:name="${applicationId}.intent.APPBOY_PUSH_DELETED" />
+    <action android:name="com.braze.push.intent.NOTIFICATION_RECEIVED" />
+    <action android:name="com.braze.push.intent.NOTIFICATION_OPENED" />
+    <action android:name="com.braze.push.intent.NOTIFICATION_DELETED" />
   </intent-filter>
 </receiver>
 ```
@@ -548,9 +548,9 @@ Your receiver should handle intents broadcast by Braze and launch your activity 
 
 - It should subclass [`BroadcastReceiver`][53] and override `onReceive()`.
 - The `onReceive()` method should listen for intents broadcast by Braze.
-  - An `APPBOY_PUSH_RECEIVED` intent will be received when a push notification arrives.
-  - An `APPBOY_NOTIFICATION_OPENED` intent will be received when a push notification is clicked by the user.
-  - An `APPBOY_PUSH_DELETED` intent will be received when a push notification is dismissed (swiped away) by the user.
+  - A `NOTIFICATION_RECEIVED` intent will be received when a push notification arrives.
+  - A `NOTIFICATION_OPENED` intent will be received when a push notification is clicked by the user.
+  - An `NOTIFICATION_DELETED` intent will be received when a push notification is dismissed (swiped away) by the user.
 - The receiver should perform your custom logic for each of these cases.  If your receiver will open deep links, be sure to turn off automatic deep link opening by setting `com_appboy_handle_push_deep_links_automatically` to `false` in your `braze.xml`.
 
 For a detailed custom receiver example, please see the below:
@@ -564,10 +564,9 @@ public class CustomBroadcastReceiver extends BroadcastReceiver {
 
   @Override
   public void onReceive(Context context, Intent intent) {
-    String packageName = context.getPackageName();
-    String pushReceivedAction = packageName + AppboyNotificationUtils.APPBOY_NOTIFICATION_RECEIVED_SUFFIX;
-    String notificationOpenedAction = packageName + AppboyNotificationUtils.APPBOY_NOTIFICATION_OPENED_SUFFIX;
-    String notificationDeletedAction = packageName + AppboyNotificationUtils.APPBOY_NOTIFICATION_DELETED_SUFFIX;
+    String pushReceivedAction = Constants.BRAZE_PUSH_INTENT_NOTIFICATION_RECEIVED;
+    String notificationOpenedAction = Constants.BRAZE_PUSH_INTENT_NOTIFICATION_OPENED;
+    String notificationDeletedAction = Constants.BRAZE_PUSH_INTENT_NOTIFICATION_DELETED;
 
     String action = intent.getAction();
     Log.d(TAG, String.format("Received intent with action %s", action));
@@ -575,7 +574,7 @@ public class CustomBroadcastReceiver extends BroadcastReceiver {
     if (pushReceivedAction.equals(action)) {
       Log.d(TAG, "Received push notification.");
     } else if (notificationOpenedAction.equals(action)) {
-      AppboyNotificationUtils.routeUserWithNotificationOpenedIntent(context, intent);
+      BrazeNotificationUtils.routeUserWithNotificationOpenedIntent(context, intent);
     } else if (notificationDeletedAction.equals(action)) {
       Log.d(TAG, "Received push notification deleted intent.");
     } else {
@@ -591,10 +590,9 @@ public class CustomBroadcastReceiver extends BroadcastReceiver {
 ```kotlin
 class CustomBroadcastReceiver : BroadcastReceiver() {
   override fun onReceive(context: Context, intent: Intent) {
-    val packageName = context.packageName
-    val pushReceivedAction = packageName + AppboyNotificationUtils.APPBOY_NOTIFICATION_RECEIVED_SUFFIX
-    val notificationOpenedAction = packageName + AppboyNotificationUtils.APPBOY_NOTIFICATION_OPENED_SUFFIX
-    val notificationDeletedAction = packageName + AppboyNotificationUtils.APPBOY_NOTIFICATION_DELETED_SUFFIX
+    val pushReceivedAction = Constants.BRAZE_PUSH_INTENT_NOTIFICATION_RECEIVED
+    val notificationOpenedAction = Constants.BRAZE_PUSH_INTENT_NOTIFICATION_OPENED
+    val notificationDeletedAction = Constants.BRAZE_PUSH_INTENT_NOTIFICATION_DELETED
 
     val action = intent.action
     Log.d(TAG, String.format("Received intent with action %s", action))
@@ -604,7 +602,7 @@ class CustomBroadcastReceiver : BroadcastReceiver() {
         Log.d(TAG, "Received push notification.")
       }
       notificationOpenedAction -> {
-        AppboyNotificationUtils.routeUserWithNotificationOpenedIntent(context, intent)
+        BrazeNotificationUtils.routeUserWithNotificationOpenedIntent(context, intent)
       }
       notificationDeletedAction -> {
         Log.d(TAG, "Received push notification deleted intent.")
@@ -625,7 +623,7 @@ class CustomBroadcastReceiver : BroadcastReceiver() {
 {% endtabs %}
 
 {% alert tip %}
-With notification action buttons, `APPBOY_NOTIFICATION_OPENED` intents fire when buttons with `opens app` or `deep link` actions are clicked. Deep-link and extras handling remains the same. Buttons with `close` actions don't fire `APPBOY_NOTIFICATION_OPENED` intents and dismiss the notification automatically.
+With notification action buttons, `BRAZE_PUSH_INTENT_NOTIFICATION_OPENED` intents fire when buttons with `opens app` or `deep link` actions are clicked. Deep-link and extras handling remains the same. Buttons with `close` actions don't fire `BRAZE_PUSH_INTENT_NOTIFICATION_OPENED` intents and dismiss the notification automatically.
 {% endalert %}
 
 #### Step 3: Access Custom Key-Value Pairs
@@ -667,8 +665,8 @@ val myExtra = extras.getString("my_key")
 Braze push data keys are documented [here](https://appboy.github.io/appboy-android-sdk/javadocs/com/appboy/Constants.html).
 {% endalert %}
 
-[5]: https://appboy.github.io/appboy-android-sdk/javadocs/com/appboy/Appboy.html#setCustomAppboyNotificationFactory-com.appboy.IAppboyNotificationFactory-
-[6]: https://appboy.github.io/appboy-android-sdk/javadocs/com/appboy/IAppboyNotificationFactory.html
+[5]: https://appboy.github.io/appboy-android-sdk/javadocs/com/appboy/Appboy.html#setCustomBrazeNotificationFactory-com.braze.IBrazeNotificationFactory-
+[6]: https://appboy.github.io/appboy-android-sdk/javadocs/com/braze/IBrazeNotificationFactory.html
 [8]: {{site.baseurl}}/help/best_practices/push/overview/
 [16]: {% image_buster /assets/img_archive/fcm_api_insert.png %} "FCMKey"
 [22]: {{site.baseurl}}/developer_guide/rest_api/messaging/
@@ -702,7 +700,7 @@ Braze push data keys are documented [here](https://appboy.github.io/appboy-andro
 [71]: https://github.com/Appboy/appboy-android-sdk/blob/master/samples/custom-broadcast/src/main/AndroidManifest.xml "AndroidManifest.xml"
 [72]: https://appboy.github.io/appboy-android-sdk/javadocs/com/braze/configuration/BrazeConfig.Builder.html#setDefaultNotificationChannelName-java.lang.String-
 [73]: https://appboy.github.io/appboy-android-sdk/javadocs/com/braze/configuration/BrazeConfig.Builder.html#setDefaultNotificationChannelDescription-java.lang.String-
-[74]: https://appboy.github.io/appboy-android-sdk/javadocs/com/appboy/AppboyFirebaseMessagingService.html#handleBrazeRemoteMessage-android.content.Context-RemoteMessage-
+[74]: hhttps://appboy.github.io/appboy-android-sdk/javadocs/com/braze/push/BrazeFirebaseMessagingService.html#handleBrazeRemoteMessage-android.content.Context-RemoteMessage-
 [75]: https://firebase.google.com/docs/reference/android/com/google/firebase/messaging/RemoteMessage
 [76]: https://developer.android.com/reference/android/app/Application
 [77]: https://appboy.github.io/appboy-android-sdk/javadocs/com/appboy/models/push/BrazeNotificationPayload.html
