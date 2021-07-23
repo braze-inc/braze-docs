@@ -314,8 +314,12 @@ func userNotificationCenter(_ center: UNUserNotificationCenter, didReceive respo
 {% endsubtab %}
 {% subtab Objective-C %}
 ```objc
-- (void)userNotificationCenter:(UNUserNotificationCenter *)center didReceiveNotificationResponse:(UNNotificationResponse *)response withCompletionHandler:(void (^)(void))completionHandler {
-  [[Appboy sharedInstance] userNotificationCenter:center didReceiveNotificationResponse:response withCompletionHandler:completionHandler];
+- (void)userNotificationCenter:(UNUserNotificationCenter *)center
+didReceiveNotificationResponse:(UNNotificationResponse *)response 
+         withCompletionHandler:(void (^)(void))completionHandler {
+  [[Appboy sharedInstance] userNotificationCenter:center 
+                   didReceiveNotificationResponse:response 
+                            withCompletionHandler:completionHandler];
 }
 ```
 {% endsubtab %}
