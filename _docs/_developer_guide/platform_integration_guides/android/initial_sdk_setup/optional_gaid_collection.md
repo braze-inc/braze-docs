@@ -27,7 +27,7 @@ new Thread(new Runnable() {
   public void run() {
     try {
       AdvertisingIdClient.Info idInfo = AdvertisingIdClient.getAdvertisingIdInfo(getApplicationContext());
-      Appboy.getInstance(getApplicationContext()).setGoogleAdvertisingId(idInfo.getId(), idInfo.isLimitAdTrackingEnabled());
+      Braze.getInstance(getApplicationContext()).setGoogleAdvertisingId(idInfo.getId(), idInfo.isLimitAdTrackingEnabled());
     } catch (Exception e) {
       e.printStackTrace();
     }
@@ -42,7 +42,7 @@ new Thread(new Runnable() {
 Thread(Runnable {
   try {
     val idInfo = AdvertisingIdClient.getAdvertisingIdInfo(getApplicationContext())
-    Appboy.getInstance(getApplicationContext()).setGoogleAdvertisingId(idInfo.id, idInfo.isLimitAdTrackingEnabled)
+    Braze.getInstance(getApplicationContext()).setGoogleAdvertisingId(idInfo.id, idInfo.isLimitAdTrackingEnabled)
   } catch (e: Exception) {
     e.printStackTrace()
   }

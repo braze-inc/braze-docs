@@ -69,7 +69,7 @@ Be sure to perform a Gradle Sync to build your project and incorporate the depen
 Note that as of December 2019, custom endpoints are no longer given out, if you have a pre-existing custom endpoint, you may continue to use it. For a list of our available endpoints, <a href="{{site.baseurl}}/api/basics/#endpoints">click here</a>.
 {% endalert %}
 
-Now that the libraries have been integrated, you have to create an `braze.xml` file in your project's `res/values` folder. If you are on a specific data cluster or have a pre-existing custom endpoint, you need to specify the endpoint in your `braze.xml` file as well. The contents of that file should resemble the following code snippet: 
+Now that the libraries have been integrated, you have to create an `braze.xml` file in your project's `res/values` folder. If you are on a specific data cluster or have a pre-existing custom endpoint, you need to specify the endpoint in your `braze.xml` file as well. The contents of that file should resemble the following code snippet:
 
 >  Be sure to substitute your [App Identifier API Key]({{site.baseurl}}/api/api_key/#the-app-identifier-api-key) found within the  **Settings** page of the Braze dashboard for `YOUR_APP_IDENTIFIER_API_KEY`. To find out your specific cluster or endpoint, please ask your Customer Success Manager or [open a support ticket][68].
 
@@ -108,7 +108,7 @@ public class MyApplication extends Application {
   @Override
   public void onCreate() {
     super.onCreate();
-    registerActivityLifecycleCallbacks(new AppboyLifecycleCallbackListener(sessionHandlingEnabled, inAppMessagingRegistrationEnabled));
+    registerActivityLifecycleCallbacks(new BrazeActivityLifecycleCallbackListener(sessionHandlingEnabled, inAppMessagingRegistrationEnabled));
   }
 }
 ```
@@ -120,7 +120,7 @@ public class MyApplication extends Application {
 class MyApplication : Application() {
   override fun onCreate() {
     super.onCreate()
-    registerActivityLifecycleCallbacks(AppboyLifecycleCallbackListener(sessionHandlingEnabled, inAppMessagingRegistrationEnabled))
+    registerActivityLifecycleCallbacks(BrazeActivityLifecycleCallbackListener(sessionHandlingEnabled, inAppMessagingRegistrationEnabled))
   }
 }
 ```
