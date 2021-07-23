@@ -1,12 +1,15 @@
 ---
-nav_title: iOS SDK Integration
-permalink: "/ios_sdk/"
-hidden: true
+nav_title: SDK Integration Guide (Optional)
+alias: "/ios_sdk/"
+description: "This iOS integration guide takes you on a step-by-step journey on setup best practices when first integrating the iOS SDK and its core components into your application. This guide will help you build a BrazeManager.swift helper file."
+page_order: 10
+platform: iOS
+
 ---
 
 # Braze iOS SDK Integration Guide
 
-> This iOS integration guide takes you on a step-by-step journey on setup best practices when first integrating the iOS SDK and its core components into your application. This guide will help you build a `BrazeManager.swift` helper file that will decouple any dependencies on the Braze iOS SDK from the rest of your production code, resulting in one `import AppboyUI` in your entire application. This approach limits issues that arise from excessive SDK imports, making it easier to track, debug, and alter code. This guide also assumes you have already [added the SDK]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/initial_sdk_setup/overview/) into your Xcode project.
+> This optional iOS integration guide takes you on a step-by-step journey on setup best practices when first integrating the iOS SDK and its core components into your application. This guide will help you build a `BrazeManager.swift` helper file that will decouple any dependencies on the Braze iOS SDK from the rest of your production code, resulting in one `import AppboyUI` in your entire application. This approach limits issues that arise from excessive SDK imports, making it easier to track, debug, and alter code. This guide also assumes you have already [added the SDK]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/initial_sdk_setup/overview/) into your Xcode project.
 
 ## Integration Overview
 
@@ -27,7 +30,7 @@ The following steps help you build a `BrazeManager` helper file that your produc
 {% tab Step 1: Create BrazeManager.swift %}
 
 ##### Create BrazeManager.swift
-To build out your `BrazeManager.swift` file, create a new Swift file named _BrazeManager_ to add to your project at your desired location. Next, Replace `import Foundation` with `import AppboyUI` and then create a `BrazeManager` class that will be used to host all Braze-related methods and variables. 
+To build out your `BrazeManager.swift` file, create a new Swift file named _BrazeManager_ to add to your project at your desired location. Next, Replace `import Foundation` with `import AppboyUI` for SPM (`import Appboy_iOS_SDK` for cocoapods) and then create a `BrazeManager` class that will be used to host all Braze-related methods and variables. `Appboy_iOS_SDK`
 
 {% alert note %}
 - `BrazeManager` is an `NSObject` class and not a struct, so it can conform to ABK delegates such as the `ABKInAppMessageUIDelegate`.
@@ -94,7 +97,7 @@ class BrazeManager: NSObject {
 ##### Initialize SDK from BrazeManager.swift
 Next, you must initialize the SDK. As mentioned above, this guide assumes you have already [added the SDK]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/initial_sdk_setup/overview/) into your Xcode project. You must also have your [app group SDK endpoint]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/initial_sdk_setup/swift_package_manager/#step-4-specify-your-data-cluster) and [`LogLevel`]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/initial_sdk_setup/other_sdk_customizations/#braze-log-level) set in your `info.plist` file. 
 
-Add the `didFinishLaunching...` method from the `AppDelegate.swift` file sans return value in your `BrazeManager.swift` file. By creating a similar method in the `BrazeManager.swift` file, there will not be an `import AppboyUI` statement in your `AppDelegate.swift` file. 
+Add the `didFinishLaunchingWithOptions` method from the `AppDelegate.swift` file without a return type in your `BrazeManager.swift` file. By creating a similar method in the `BrazeManager.swift` file, there will not be an `import AppboyUI` statement in your `AppDelegate.swift` file. 
 
 Next, initialize the SDK using your newly declared `apiKey` and `appboyOptions` variables.
 
@@ -105,8 +108,8 @@ Initialization should be done in the main thread.
 {% subtabs global %}
 {% subtab Swift %}
 ```swift
-func application(_ application: UIapplication, didFinishLaunchingWithOptions launchOptions:[UIApplication.LaunchOptionsKey:Any]?) {
-  Appboy.start(withAPIKey: apikey, in: application, withLaunchOptions: launchOptions, withAppboyOptions: appboyOptions)
+func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) {
+  Appboy.start(withApiKey: apikey, in: application, withLaunchOptions: launchOptions, withAppboyOptions: appboyOptions)
 }
 ```
 {% endsubtab %}
@@ -123,14 +126,16 @@ func application(_ application: UIapplication, didFinishLaunchingWithOptions lau
 {% tab Step 2: Handle Appboy Initalization %}
 
 ##### Handle Appboy Initialization in the AppDelegate.swift
-Next, navigate back to the `AppDelegate.swift` file and add the following code snippet in the AppDelegate's `didFinishLaunching...` method to handle the Appboy initialization from the `BrazeManager.swift` helper file. Remember, there is no need to add an `import AppboyUI` statement in the `AppDelegate.swift`.
+Next, navigate back to the `AppDelegate.swift` file and add the following code snippet in the AppDelegate's `didFinishLaunchingWithOptions` method to handle the Appboy initialization from the `BrazeManager.swift` helper file. Remember, there is no need to add an `import AppboyUI` statement in the `AppDelegate.swift`.
 
 {% subtabs global %}
 {% subtab Swift %}
 
 ```swift
-func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions:
-[UIApplication.LaunchOptionsKey: Any]?) -> Bool {
+func application(
+  _ application: UIApplication, 
+  didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?
+) -> Bool {
   // Override point for customization after application launch
 
   BrazeManager.shared.application(application, didFinishLaunchingWithOptions: launchOptions)
@@ -188,13 +193,12 @@ The code for registering push notifications will be added in the `didFinishLaunc
 {% subtabs global %}
 {% subtab Swift %}
 ```swift
-func application(_ application: UIapplication, didFinishLaunchingWithOptions launchOptions:[UIApplication.LaunchOptionsKey:Any]?){
-  Appboy.start(withAPIKey: apikey, in: applciation, withLaunchOptions: launchOptions, withAppboyOptions: appboyOptions)
+func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions:[UIApplication.LaunchOptionsKey:Any]?) {
+  Appboy.start(withAPIKey: apikey, in: application, withLaunchOptions: launchOptions, withAppboyOptions: appboyOptions)
   // 1 
-  let options: UNAuthorizationOptions = [.alert, . sound, .bagde]
-
+  let options: UNAuthorizationOptions = [.alert, .sound, .badge]
   // 2 
-  UNUserNotificationCenter.current().requestAuthorization(option: options){ (granted, error) in
+  UNUserNotificationCenter.current().requestAuthorization(option: options) { (granted, error) in
   // 3 
     Appboy.sharedInstance()?.pushAuthorization(fromUserNotificationCenter: granted)
   }
@@ -254,11 +258,12 @@ Create an extension for your push notification code in your `BrazeManager.swift`
 // MARK - Push Notifications
 extension BrazeManager {
   // 1 
-  func application(_ application: UIApplication,
-didRegisterForRemoteNotificationsWithDeviceToken deviceToken: Data) {
-
-  // 2 
-  Appboy.sharedInstance().?registerDeviceToken(deviceToken)
+  func application(
+    _ application: UIApplication,
+    didRegisterForRemoteNotificationsWithDeviceToken deviceToken: Data
+  ) {
+    // 2 
+    Appboy.sharedInstance().?registerDeviceToken(deviceToken)
   }
 }
 ```
@@ -266,8 +271,8 @@ didRegisterForRemoteNotificationsWithDeviceToken deviceToken: Data) {
 {% subtab Objective-C %}
 ```objc
 // MARK - Push Notifications
-  // 1
- - (void)application:(UIApplication *)application didRegisterForRemoteNotificationsWithDeviceToken:(NSData *)deviceToken {
+// 1
+- (void)application:(UIApplication *)application didRegisterForRemoteNotificationsWithDeviceToken:(NSData *)deviceToken {
   // 2
   [[Appboy sharedInstance] registerDeviceToken:deviceToken];
 }
@@ -284,8 +289,16 @@ The Braze SDK can handle remote notifications that originate from Braze. Forward
 {% subtabs global %}
 {% subtab Swift %}
 ```swift
-func application(_ application: UIApplication, didReceiveRemoteNotification userInfo: [AnyHashable : Any], fetchCompletionHandler completionHandler: @escaping (UIBackgroundFetchResult) -> Void) {
-  Appboy.sharedInstance()?.register(application, didReceiveRemoteNotification: userInfo, fetchCompletiionHandler: completionHandler)
+func application(
+  _ application: UIApplication, 
+  didReceiveRemoteNotification userInfo: [AnyHashable : Any], 
+  fetchCompletionHandler completionHandler: @escaping (UIBackgroundFetchResult) -> Void
+) {
+  Appboy.sharedInstance()?.register(
+    application, 
+    didReceiveRemoteNotification: userInfo, 
+    fetchCompletionHandler: completionHandler
+  )
 }
 ```
 {% endsubtab %}
@@ -306,15 +319,27 @@ The Braze SDK can handle the response of push notifications that originate from 
 {% subtab Swift %}
 
 ```swift
-func userNotificationCenter(_ center: UNUserNotificationCenter, didReceive response: UNNotificationResponse, withCompletionHandler completionHandler: @escaping () -> Void) {
-  Appboy.sharedInstance()?.userNotificationCenter(center, didReceive: response, withCompletionHandler: completionHandler)
+func userNotificationCenter(
+  _ center: UNUserNotificationCenter, 
+  didReceive response: UNNotificationResponse, 
+  withCompletionHandler completionHandler: @escaping () -> Void
+) {
+  Appboy.sharedInstance()?.userNotificationCenter(
+    center, 
+    didReceive: response, 
+    withCompletionHandler: completionHandler
+  )
 }
 ```
 {% endsubtab %}
 {% subtab Objective-C %}
 ```objc
-- (void)userNotificationCenter:(UNUserNotificationCenter *)center didReceiveNotificationResponse:(UNNotificationResponse *)response withCompletionHandler:(void (^)(void))completionHandler {
-  [[Appboy sharedInstance] userNotificationCenter:center didReceiveNotificationResponse:response withCompletionHandler:completionHandler];
+- (void)userNotificationCenter:(UNUserNotificationCenter *)center
+didReceiveNotificationResponse:(UNNotificationResponse *)response 
+         withCompletionHandler:(void (^)(void))completionHandler {
+  [[Appboy sharedInstance] userNotificationCenter:center 
+                   didReceiveNotificationResponse:response 
+                            withCompletionHandler:completionHandler];
 }
 ```
 {% endsubtab %}
@@ -346,17 +371,17 @@ Next, you will want easy access to the `ABKUser` variables and methods. Create a
 // Mark: User
 extension BrazeManager {
   // 1
-  var user: ABKUser?{
+  var user: ABKUser? {
     return Appboy.sharedInstance()?.user
   }
 
   // 2 
-  var userId: String?{
+  var userId: String? {
     return user?.userID
   }
 
   // 3
-  func changeUser(_userId: String){
+  func changeUser(_ userId: String) {
     Appboy.sharedInstance()?.changeUser(userId)
   }
 }
@@ -401,7 +426,7 @@ Next, you must enable your production code to log crucial analytics metrics to B
 Create an extension for your analytics code in your `Brazemanager.swift` file so it reads in a more organized manner as to what purpose is being served in the helper file, like so:
 
 ```swift
-//MARK: -Analytics
+//MARK: - Analytics
 extension BrazeManager {
 
 }
@@ -427,7 +452,7 @@ Log custom events from the `Appboy` object to Braze. `Properties` is an optional
 {% subtabs global %}
 {% subtab Swift %}
 ```swift
-func logCustomEvent(_ eventName: String, withProperties properties: [AnyHashable: Any]? = nil){
+func logCustomEvent(_ eventName: String, withProperties properties: [AnyHashable: Any]? = nil) {
   Appboy.sharedInstance()?.logCustomEvent(eventName, withProperties: properties)
 }
 ```
@@ -674,7 +699,7 @@ Create an extension for your Content Cards code in your `BrazeManager.swift` fil
 {% subtab Swift %}
 ```swift
 // MARK: - Content Cards
-extension Brazemanager {
+extension BrazeManager {
 
   // 1 
   func displayContentCards(navigationController: UINavigationController?) {
