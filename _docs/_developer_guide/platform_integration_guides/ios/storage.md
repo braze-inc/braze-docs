@@ -9,7 +9,7 @@ description: "This reference article describes the device-level properties captu
 
 # Storage
 
-This article describes the different cookies used by the Braze iOS SDK.
+This article describes the different device-level properties captured when using the Braze iOS SDK.
 
 ## Device Properties
 
@@ -27,9 +27,7 @@ By default, Braze will collect the following [device-level properties](https://g
 * Push Auth Status
 * Ad Tracking Enabled
 
-You can disable or speicfy the properties you wish to collect by setting the 
-
-Configurable device fields are defined in the `ABKDeviceOptions` enum. To specify whitelisted device fields, assign the bitwise `OR` of desired fields to `ABKDeviceWhitelistKey` in the `appboyOptions` of `startWithApiKey:inApplication:withAppboyOptions:`.
+Configurable device fields are defined in the `ABKDeviceOptions` enum. To disable or specify the device field you'd like to whiteliste, assign the bitwise `OR` of desired fields to `ABKDeviceWhitelistKey` in the `appboyOptions` of `startWithApiKey:inApplication:withAppboyOptions:`.
 
 For example, to specify timezone and locale collection, to be whitelisted set:
 ```
