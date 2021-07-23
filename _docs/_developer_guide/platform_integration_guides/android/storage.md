@@ -9,7 +9,7 @@ description: "This reference article describes the device-level properties captu
 
 # Storage
 
-This article describes the different cookies used by the Braze Android SDK.
+This article describes the different device properties captured when using the Braze Android SDK.
 
 ## Device Properties
 
@@ -26,7 +26,7 @@ By default, Braze will collect the following [device-level properties](https://a
 * RESOLUTION
 * TIMEZONE
 
-Added the ability to optionally whitelist keys in the device object. See `AppboyConfig.Builder.setDeviceObjectWhitelistEnabled()` and `AppboyConfig.Builder.setDeviceObjectWhitelist()` for more information.
+You can disable or specify the properties you wish to collect by setting them using `AppboyConfig.Builder.setDeviceObjectWhitelistEnabled()` and `AppboyConfig.Builder.setDeviceObjectWhitelist()`.
 
 The following example showcases whitelisting the device object to only include the Android OS version and device locale in the device object:
 ```
