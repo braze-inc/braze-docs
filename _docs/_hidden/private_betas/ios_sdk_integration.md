@@ -428,7 +428,7 @@ Log custom events from the `Appboy` object to Braze. `Properties` is an optional
 {% subtabs global %}
 {% subtab Swift %}
 ```swift
-func logCustomEvent(_ eventName: String, withProperties properties: [AnyHashable: Any]? = nil){
+func logCustomEvent(_ eventName: String, withProperties properties: [AnyHashable: Any]? = nil) {
   Appboy.sharedInstance()?.logCustomEvent(eventName, withProperties: properties)
 }
 ```
