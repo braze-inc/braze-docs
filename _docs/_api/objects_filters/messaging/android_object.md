@@ -44,6 +44,7 @@ You must include an Android Push Object in `messages` if you want users you have
    "accent_color": (optional, integer) accent color to be applied by the standard Style templates when presenting this notification, an RGB integer value,
    "send_to_most_recent_device_only": (optional, boolean) defaults to false, if set to true, Braze will only send this push to a user's most recently used Android device, rather than all eligible Android devices,
    "buttons" : (optional, array of Android Push Action Button Objects) push action buttons to display
+   "conversation_data" : (optional, Android Conversation Push Object) the data to be displayed via Conversation Push.
 }
 ```
 
@@ -75,9 +76,44 @@ You can send "Big Picture" notifications by specifying the key `appboy_image_url
 }
 ```
 
+## Android Conversation Push Object
+
+{% sdk_min_versions android:15.0.0 %}
+
+The concepts in this message correspond to those in the [Android Conversation Push Documentation][46].
+
+```json
+{
+  "shortcut_id" : (required, string) the sharing shortcut identifier,
+  "reply_person_id" : (required, string) the identifier of the Person this push is replying to,
+  "messages" : (required, array of Android Conversation Push Message Object),
+  "persons" : (required, array of Android Conversation Push Person Object)
+}
+```
+
+### Android Conversation Push Message Object
+
+```json
+{
+  "text" : (required, string) the sharing shortcut identifier,
+  "timestamp" : (required, integer) the unix timestamp of when this message was sent,
+  "person_id" : (required, string) the identifier of the Person this push is replying to,
+}
+```
+
+### Android Conversation Push Person Object
+
+```json
+{
+  "id" : (required, string) the identifier of this Person,
+  "name" : (required, string) the display name of this Person
+}
+```
+
 [28]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/push_notifications/silent_push_notifications/#silent-push-notifications
 [29]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/advanced_use_cases/deep_linking/
 [35]: https://firebase.google.com/docs/cloud-messaging/concept-options#collapsible_and_non-collapsible_messages "collapse key documentation"
 [44]: {{site.baseurl}}/user_guide/message_building_by_channel/push/notification_channels/
 [43]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/push_notifications/integration/#step-4-define-notification-channels
 [45]: {{site.baseurl}}/user_guide/message_building_by_channel/push/notification_channels/#notification-channels
+[46]: https://developer.android.com/guide/topics/ui/conversations
