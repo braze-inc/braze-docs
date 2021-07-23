@@ -2,7 +2,6 @@
 nav_title: Storage
 platform: iOS
 page_order: 15
-
 page_type: reference
 description: "This reference article describes the device-level properties captured by the Braze iOS SDK."
 
@@ -14,7 +13,7 @@ This article describes the different cookies used by the Braze iOS SDK.
 
 ## Device Properties
 
-By default, Braze will collect the following device-level properties to allow device, language, and timezone based message personalization:
+By default, Braze will collect the following [device-level properties](https://github.com/Appboy/appboy-ios-sdk/blob/16e893f2677af7de905b927505d4101c6fb2091d/AppboyKit/headers/AppboyKitLibrary/Appboy.h#L181) to allow device, language, and timezone based message personalization:
 
 * Device Resolution
 * Device Carrier

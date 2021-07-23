@@ -13,7 +13,7 @@ This article describes the different cookies used by the Braze Android SDK.
 
 ## Device Properties
 
-By default, Braze will collect the following device-level properties to allow device, language, and timezone based message personalization:
+By default, Braze will collect the following [device-level properties](https://appboy.github.io/appboy-android-sdk/javadocs/com/appboy/enums/DeviceKey.html) to allow device, language, and timezone based message personalization:
 
 * AD_TRACKING_ENABLED
 * ANDROID_VERSION
