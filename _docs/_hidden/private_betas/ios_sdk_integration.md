@@ -50,7 +50,7 @@ class BrazeManager: NSObject {
   private let apikey = "YOUR-API-KEY"
   
   // 3
-  private var appboyOptions[String:Any]{
+  private var appboyOptions: [String:Any] {
     return [:]
   }
 }
