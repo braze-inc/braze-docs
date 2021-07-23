@@ -170,7 +170,7 @@ Please see the following sections in order to enable [custom event tracking]({{s
 [38]: {% image_buster /assets/img_archive/androidstudio3.png %}
 [46]: https://developer.android.com/training/permissions/index.html
 [60]: https://github.com/Appboy/appboy-android-sdk/releases
-[63]: https://appboy.github.io/appboy-android-sdk/javadocs/com/appboy/AppboyLifecycleCallbackListener.html#AppboyLifecycleCallbackListener-boolean-boolean-
+[63]: https://appboy.github.io/appboy-android-sdk/javadocs/com/braze/BrazeActivityLifecycleCallbackListener.html#BrazeActivityLifecycleCallbackListener-boolean-boolean-
 [64]: https://appboy.github.io/appboy-android-sdk/javadocs/com/appboy/ui/inappmessage/AppboyInAppMessageManager.html#ensureSubscribedToInAppMessageEvents-android.content.Context-
 [68]: {{site.baseurl}}/support_contact/
 [71]: https://appboy.github.io/appboy-android-sdk/sdk/com/appboy/android-sdk-ui/

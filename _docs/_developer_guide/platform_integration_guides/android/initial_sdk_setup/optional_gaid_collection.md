@@ -53,5 +53,5 @@ Thread(Runnable {
 {% endtabs %}
 
 
-[1]: https://appboy.github.io/appboy-android-sdk/javadocs/com/appboy/Appboy.html#setGoogleAdvertisingId-java.lang.String-boolean-
+[1]: https://appboy.github.io/appboy-android-sdk/javadocs/com/appboy/Braze.html#setGoogleAdvertisingId-java.lang.String-boolean-
 [2]: https://support.google.com/googleplay/android-developer/answer/6048248/advertising-id?hl=en
