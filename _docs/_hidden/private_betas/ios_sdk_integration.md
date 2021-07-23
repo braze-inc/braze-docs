@@ -307,8 +307,16 @@ The Braze SDK can handle the response of push notifications that originate from 
 {% subtab Swift %}
 
 ```swift
-func userNotificationCenter(_ center: UNUserNotificationCenter, didReceive response: UNNotificationResponse, withCompletionHandler completionHandler: @escaping () -> Void) {
-  Appboy.sharedInstance()?.userNotificationCenter(center, didReceive: response, withCompletionHandler: completionHandler)
+func userNotificationCenter(
+  _ center: UNUserNotificationCenter, 
+  didReceive response: UNNotificationResponse, 
+  withCompletionHandler completionHandler: @escaping () -> Void
+) {
+  Appboy.sharedInstance()?.userNotificationCenter(
+    center, 
+    didReceive: response, 
+    withCompletionHandler: completionHandler
+  )
 }
 ```
 {% endsubtab %}
