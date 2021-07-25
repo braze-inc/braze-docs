@@ -35,20 +35,20 @@ To disable automatic location tracking, set `com_appboy_enable_location_collecti
 <bool name="com_appboy_enable_location_collection">false</bool>
 ```
 
-Then you can manually log single location data points via the `setLastKnownLocation()` method on `AppboyUser` like this:
+Then you can manually log single location data points via the `setLastKnownLocation()` method on `BrazeUser` like this:
 
 {% tabs %}
 {% tab JAVA %}
 
 ```java
-Appboy.getInstance(context).getCurrentUser().setLastKnownLocation(LATITUDE_DOUBLE_VALUE, LONGITUDE_DOUBLE_VALUE, ALTITUDE_DOUBLE_VALUE, ACCURACY_DOUBLE_VALUE);
+Braze.getInstance(context).getCurrentUser().setLastKnownLocation(LATITUDE_DOUBLE_VALUE, LONGITUDE_DOUBLE_VALUE, ALTITUDE_DOUBLE_VALUE, ACCURACY_DOUBLE_VALUE);
 ```
 
 {% endtab %}
 {% tab KOTLIN %}
 
 ```kotlin
-Braze.getInstance(context).getCurrentUser<BrazeUser>().setLastKnownLocation(LATITUDE_DOUBLE_VALUE, LONGITUDE_DOUBLE_VALUE, ALTITUDE_DOUBLE_VALUE, ACCURACY_DOUBLE_VALUE)
+Braze.getInstance(context).getCurrentUser().setLastKnownLocation(LATITUDE_DOUBLE_VALUE, LONGITUDE_DOUBLE_VALUE, ALTITUDE_DOUBLE_VALUE, ACCURACY_DOUBLE_VALUE)
 ```
 
 {% endtab %}
@@ -57,4 +57,4 @@ Braze.getInstance(context).getCurrentUser<BrazeUser>().setLastKnownLocation(LATI
 See [here in our Javadocs][4] for more information on the `setLastKnownLocation()` method.
 
 [1]: https://stuff.mit.edu/afs/sipb/project/android/docs/guide/topics/location/strategies.html
-[4]: https://appboy.github.io/appboy-android-sdk/javadocs/com/appboy/AppboyUser.html#setLastKnownLocation-double-double-java.lang.Double-java.lang.Double-
+[4]: https://appboy.github.io/appboy-android-sdk/javadocs/com/braze/BrazeUser.html#setLastKnownLocation-double-double-java.lang.Double-java.lang.Double-
