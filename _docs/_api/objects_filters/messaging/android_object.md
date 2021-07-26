@@ -76,7 +76,7 @@ You can send "Big Picture" notifications by specifying the key `appboy_image_url
 }
 ```
 
-## Android Conversation Push Object
+## Android Conversation Push Object {##android-conversation-push-object}
 
 {% sdk_min_versions android:15.0.0 %}
 
