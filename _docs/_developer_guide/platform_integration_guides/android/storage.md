@@ -26,13 +26,13 @@ By default, Braze will collect the following [device-level properties](https://a
 * RESOLUTION
 * TIMEZONE
 
-Added the ability to optionally whitelist keys in the device object. See `AppboyConfig.Builder.setDeviceObjectWhitelistEnabled()` and `AppboyConfig.Builder.setDeviceObjectWhitelist()` for more information.
+Added the ability to optionally allowlist keys in the device object. See [`BrazeConfig.Builder.setDeviceObjectAllowlistEnabled()`](https://appboy.github.io/appboy-android-sdk/javadocs/com/braze/configuration/BrazeConfig.Builder.html#setDeviceObjectAllowlistEnabled-boolean-) and [`BrazeConfig.Builder.setDeviceObjectAllowlist()`](https://appboy.github.io/appboy-android-sdk/javadocs/com/braze/configuration/BrazeConfig.Builder.html#setDeviceObjectAllowlist-java.util.EnumSet-) for more information.
 
-The following example showcases whitelisting the device object to only include the Android OS version and device locale in the device object:
+The following example showcases allowlisting the device object to only include the Android OS version and device locale in the device object:
 ```
-  new AppboyConfig.Builder()
-      .setDeviceObjectWhitelistEnabled(true)
-      .setDeviceObjectWhitelist(EnumSet.of(DeviceKey.ANDROID_VERSION, DeviceKey.LOCALE));
+  new BrazeConfig.Builder()
+      .setDeviceObjectAllowlistEnabled(true)
+      .setDeviceObjectAllowlist(EnumSet.of(DeviceKey.ANDROID_VERSION, DeviceKey.LOCALE));
 
 ```
 By default, all fields are enabled. Note that without some properties, not all features will function properly. For instance, without the time zone, local timezone delivery will not function.

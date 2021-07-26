@@ -27,13 +27,11 @@ By default, Braze will collect the following [device-level properties](https://g
 * Push Auth Status
 * Ad Tracking Enabled
 
-You can disable or speicfy the properties you wish to collect by setting the 
+Configurable device fields are defined in the [`ABKDeviceOptions`](https://github.com/Appboy/appboy-ios-sdk/blob/4390e9eac8401bccdb81b053fa54eb87b1f6fcaa/Appboy-tvOS-SDK/AppboyTVOSKit.framework/Headers/Appboy.h#L179) enum. To disable or specify the device field you'd like to whitelist, assign the bitwise `OR` of desired fields to [`ABKDeviceAllowlistKey`](https://github.com/Appboy/appboy-ios-sdk/blob/fed071000722673754da288cace15c1ff8aca432/AppboyKit/include/Appboy.h#L148) in the `appboyOptions` of `startWithApiKey:inApplication:withAppboyOptions:`.
 
-Configurable device fields are defined in the `ABKDeviceOptions` enum. To specify whitelisted device fields, assign the bitwise `OR` of desired fields to `ABKDeviceWhitelistKey` in the `appboyOptions` of `startWithApiKey:inApplication:withAppboyOptions:`.
-
-For example, to specify timezone and locale collection, to be whitelisted set:
+For example, to specify timezone and locale collection, to be allowlisted set:
 ```
-appboyOptions[ABKDeviceWhitelistKey] = @(ABKDeviceOptionTimezone | ABKDeviceOptionLocale);
+appboyOptions[ABKDeviceAllowlistKey] = @(ABKDeviceOptionTimezone | ABKDeviceOptionLocale);
 ```
 
 By default, all fields are enabled. Note that without some properties, not all features will function properly. For instance, without the time zone, local timezone delivery will not function.
