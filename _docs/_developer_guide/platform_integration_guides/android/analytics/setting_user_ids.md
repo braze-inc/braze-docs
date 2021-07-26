@@ -114,7 +114,7 @@ Braze.getInstance(context).getCurrentUser().addAlias(ALIAS_NAME, ALIAS_LABEL);
 {% tab KOTLIN %}
 
 ```kotlin
-Braze.getInstance(context).getCurrentUser().addAlias(ALIAS_NAME, ALIAS_LABEL)
+Braze.getInstance(context).currentUser?.addAlias(ALIAS_NAME, ALIAS_LABEL)
 ```
 
 {% endtab %}
