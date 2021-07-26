@@ -54,13 +54,13 @@ public class CustomPushService extends HmsMessageService {
   @Override
   public void onNewToken(String token) {
     super.onNewToken(token);
-    Appboy.getInstance(this.getApplicationContext()).registerAppboyPushMessages(token);
+    Braze.getInstance(this.getApplicationContext()).registerAppboyPushMessages(token);
   }
 
   @Override
   public void onMessageReceived(RemoteMessage remoteMessage) {
     super.onMessageReceived(remoteMessage);
-    if (AppboyHuaweiPushHandler.handleHmsRemoteMessageData(this.getApplicationContext(), remoteMessage.getDataOfMap())) {
+    if (BrazeHuaweiPushHandler.handleHmsRemoteMessageData(this.getApplicationContext(), remoteMessage.getDataOfMap())) {
       // Braze has handled the Huawei push notification
     }
   }
@@ -74,12 +74,12 @@ public class CustomPushService extends HmsMessageService {
 class CustomPushService: HmsMessageService() {
   override fun onNewToken(token: String?) {
     super.onNewToken(token)
-    Appboy.getInstance(applicationContext).registerAppboyPushMessages(token!!)
+    Braze.getInstance(applicationContext).registerAppboyPushMessages(token!!)
   }
 
   override fun onMessageReceived(hmsRemoteMessage: RemoteMessage?) {
     super.onMessageReceived(hmsRemoteMessage)
-    if (AppboyHuaweiPushHandler.handleHmsRemoteMessageData(applicationContext, hmsRemoteMessage?.dataOfMap)) {
+    if (BrazeHuaweiPushHandler.handleHmsRemoteMessageData(applicationContext, hmsRemoteMessage?.dataOfMap)) {
       // Braze has handled the Huawei push notification
     }
   }

@@ -50,25 +50,25 @@ guide_featured_list:
   - name: "POST: Delete Scheduled Messages"
     link: /docs/api/endpoints/messaging/schedule_messages/post_delete_scheduled_messages/
     fa_icon: fas fa-calendar-minus
-  - name: "POST: Delete Scheduled API Triggered Messages"
+  - name: "POST: Delete Scheduled API-Triggered Messages"
     link: /docs/api/endpoints/messaging/schedule_messages/post_delete_scheduled_triggered_messages/
     fa_icon: fas fa-calendar-minus
   - name: "POST: Schedule Messages"
     link: /docs/api/endpoints/messaging/schedule_messages/post_schedule_messages/
     fa_icon: fas fa-calendar-plus
-  - name: "POST: Schedule API Triggered Campaign Messages"
+  - name: "POST: Schedule API-Triggered Campaign Messages"
     link: /docs/api/endpoints/messaging/schedule_messages/post_schedule_triggered_campaigns/
     fa_icon: fas fa-calendar-alt
-  - name: "POST: Schedule API Triggered Canvas Messages"
+  - name: "POST: Schedule API-Triggered Canvas Messages"
     link: /docs/api/endpoints/messaging/schedule_messages/post_schedule_triggered_canvases/
     fa_icon: fas fa-calendar-alt
   - name: "POST: Update Scheduled Messages"
     link: /docs/api/endpoints/messaging/schedule_messages/post_update_scheduled_messages/
     fa_icon: fas fa-calendar
-  - name: "POST: Update Scheduled API Triggered Campaign Messages"
+  - name: "POST: Update Scheduled API-Triggered Campaign Messages"
     link: /docs/api/endpoints/messaging/schedule_messages/post_update_scheduled_triggered_campaigns/
     fa_icon: fas fa-calendar
-  - name: "POST: Update Scheduled API Triggered Canvas Messages"
+  - name: "POST: Update Scheduled API-Triggered Canvas Messages"
     link: /docs/api/endpoints/messaging/schedule_messages/post_update_scheduled_triggered_canvases/
     fa_icon: fas fa-calendar-alt
 
@@ -80,10 +80,10 @@ guide_menu_list:
   - name: "POST: Send Messages Immediately"
     link: /docs/api/endpoints/messaging/send_messages/post_send_messages/
     fa_icon: fas fa-paper-plane
-  - name: "POST: Send API Triggered Campaign Messages Immediately"
+  - name: "POST: Send API-Triggered Campaign Messages Immediately"
     link: /docs/api/endpoints/messaging/send_messages/post_send_triggered_campaigns/
     fa_icon: fas fa-inbox
-  - name: "POST: Send API Triggered Canvas Messages Immediately"
+  - name: "POST: Send API-Triggered Canvas Messages Immediately"
     link: /docs/api/endpoints/messaging/send_messages/post_send_triggered_canvases/
     fa_icon: fas fa-inbox
 ---

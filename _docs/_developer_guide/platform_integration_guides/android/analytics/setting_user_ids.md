@@ -24,9 +24,9 @@ These User IDs should be private and not easily obtained (e.g. not a plain email
 
 ## Suggested User ID Naming Convention
 
-At Braze, we __strongly suggest__ naming User IDs also known as `external_user_ids`, in a [UUIDs/GUIDs](https://en.wikipedia.org/wiki/Universally_unique_identifier) format. UUIDs/GUIDs are Universally Unique Identifiers that consist of a 128-bit number used to identify information in computer systems. This means that these UUIDs are long, random and well distributed. If you choose a different method in which to name your User IDs, they must also be long, random and well distributed. It is also important to note, that User IDs are __case sensitive__. For example, "Abcdef" is a different user from "abcdef". 
+At Braze, we __strongly suggest__ naming User IDs also known as `external_user_ids`, in a [UUIDs/GUIDs](https://en.wikipedia.org/wiki/Universally_unique_identifier) format. UUIDs/GUIDs are Universally Unique Identifiers that consist of a 128-bit number used to identify information in computer systems. This means that these UUIDs are long, random and well distributed. If you choose a different method in which to name your User IDs, they must also be long, random and well distributed. It is also important to note, that User IDs are __case sensitive__. For example, "Abcdef" is a different user from "abcdef".
 
-If you find your `external_user_ids` include names, email addresses, timestamps, or incrementors we __strongly suggest__ picking up a new naming method that is more secure. We do not want names, email address, timestamps or incrementors included in your User IDs, because while it might be easy for people within your organization to quickly identify others, __it is not a secure method__. 
+If you find your `external_user_ids` include names, email addresses, timestamps, or incrementors we __strongly suggest__ picking up a new naming method that is more secure. We do not want names, email address, timestamps or incrementors included in your User IDs, because while it might be easy for people within your organization to quickly identify others, __it is not a secure method__.
 
 Providing this information to others may allow people outside your organization to glean information on how your User IDs are structured, opening up your organization to potentially malicious updates or removal of information. Choosing the correct naming convention from the start is one of the most important steps in setting up User IDs, however a migration is possible using our [External ID Migration API Endpoint]({{site.baseurl}}/api/endpoints/user_data/external_id_migration/).
 
@@ -47,14 +47,14 @@ You should make the following call as soon as the user is identified (generally 
 {% tab JAVA %}
 
 ```java
-Appboy.getInstance(context).changeUser(YOUR_USER_ID_STRING);
+Braze.getInstance(context).changeUser(YOUR_USER_ID_STRING);
 ```
 
 {% endtab %}
 {% tab KOTLIN %}
 
 ```kotlin
-Appboy.getInstance(context).changeUser(YOUR_USER_ID_STRING)
+Braze.getInstance(context).changeUser(YOUR_USER_ID_STRING)
 ```
 
 {% endtab %}
@@ -107,7 +107,7 @@ Each alias consists of two parts: a _name_ for the identifier itself, and a _lab
 {% tab JAVA %}
 
 ```java
-Appboy.getInstance(context).getCurrentUser().addAlias(ALIAS_NAME, ALIAS_LABEL);
+Braze.getInstance(context).getCurrentUser().addAlias(ALIAS_NAME, ALIAS_LABEL);
 ```
 
 {% endtab %}
@@ -122,4 +122,4 @@ Braze.getInstance(context).currentUser?.addAlias(ALIAS_NAME, ALIAS_LABEL)
 
 [1]: {{site.baseurl}}/developer_guide/rest_api/user_data/#user-data
 [2]: {{site.baseurl}}/developer_guide/rest_api/messaging/
-[4]: https://appboy.github.io/appboy-android-sdk/javadocs/com/appboy/Appboy.html#changeUser-java.lang.String- "Javadocs"
+[4]: https://appboy.github.io/appboy-android-sdk/javadocs/com/appboy/Appboy.html#changeUser-java.lang.String-

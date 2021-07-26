@@ -33,9 +33,9 @@ Campaign, Card, and Canvas attributes are only supported in their corresponding 
 
 {% alert update %}
 
-Please note that the behavior for the following tags differs between Canvas and Campaigns:<br><br>
+Please note that the behavior for the following tags differs between Canvas and campaigns:<br><br>
 
-`dispatch_id`  - Behavior differs between Canvas and Campaigns because Braze treats Canvas steps (except for Entry Steps, which can be scheduled) as triggered events, even when they are "scheduled". [Learn more about `dispatch_id` behavior in Canvas and Campaigns here]({{site.baseurl}}/help/help_articles/data/dispatch_id/).<br><br>
+`dispatch_id`  - Behavior differs between Canvas and campaigns because Braze treats Canvas steps (except for Entry Steps, which can be scheduled) as triggered events, even when they are "scheduled". [Learn more about `dispatch_id` behavior in Canvas and campaigns here]({{site.baseurl}}/help/help_articles/data/dispatch_id/).<br><br>
 {% raw %}
 `{{campaign.${name}}}` - When using this tag with Canvas, it will display the Canvas step name. When using this tag with campaigns, it will display the campaign name.
 {% endraw %}<br><br>

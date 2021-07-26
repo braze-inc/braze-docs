@@ -106,12 +106,12 @@ curl https://demo.talon.one/v2/integration/braze/createcoupon \
 
 ## Using Talon.One in Your Braze Campaign
 
-To trigger the Talon.One coupon creation event, use Braze's [Connected Content feature]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/connected_content/about_connected_content/). However, the coupon creation event can still be used in any Campaign message body or any Canvas message body.
+To trigger the Talon.One coupon creation event, use Braze's [Connected Content feature]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/connected_content/about_connected_content/). However, the coupon creation event can still be used in any campaign message body or any Canvas message body.
 
-Place the code snippets below in your message body to configure your Campaign or Canvas to call Talon.One coupons into your message. 
+Place the code snippets below in your message body to configure your campaign or Canvas to call Talon.One coupons into your message. 
 
 {% alert tip %}
-You can use Talon.One Coupon Codes in any Braze messaging channel (email, in-app message, push, Content Cards, News Feed) using any of our tools (Canvas or Campaigns). Get creative!
+You can use Talon.One Coupon Codes in any Braze messaging channel (email, in-app message, push, Content Cards, News Feed) using any of our tools (Canvas or campaigns). Get creative!
 {% endalert %}
 
 #### Step One: Add the Connected Content Tag to the Body of Your Message
@@ -150,7 +150,7 @@ You can access Braze Attributes by using Liquid tags (e.g. {% raw %} {{${user_id
 {% endraw %}
 
 {% alert important %}
-Further details on how to generate a session token can be found [here](https://developers.talon.one/Management-API/Authentication).
+Further details on how to generate a session token can be found [in the Talon.One API docs](https://docs.talon.one/management-api/#section/Authentication).
 {% endalert %}
 
 #### Step Four: Add the Body of the Request Containing the Coupon Code Specs Mentioned Above
@@ -221,6 +221,6 @@ You can also access the entire response from Talon.One by accessing `{% raw %} {
 
 # Troubleshooting
 
-Ensure your Connected Content syntax is correct (as in, using the right Liquid tags for either a Canvas or Campaign, as well as referencing the right value in the `json` response).
+Ensure your Connected Content syntax is correct (as in, using the right Liquid tags for either a Canvas or campaign, as well as referencing the right value in the `json` response).
 
-Be aware of the 500 messages/minute rate limit that you would want to implement into the Braze Campaign/Canvas. If the rate limit is not respected, it cannot be guaranteed that every code will be generated, nor that the response will be there in time.
+Be aware of the 500 messages/minute rate limit that you would want to implement into the Braze campaign or Canvas. If the rate limit is not respected, it cannot be guaranteed that every code will be generated, nor that the response will be there in time.

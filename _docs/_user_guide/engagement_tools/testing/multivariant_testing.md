@@ -95,7 +95,7 @@ Including a control group lets you know whether your messages have a greater imp
 
 ### Step 1: Create Your Campaign
 
-Click “Create Campaign” and select a channel for the campaign from the section that allows multivariate and A/B testing.
+Click **Create Campaign** and select a channel for the campaign from the section that allows multivariate and A/B testing.
 
 ![Create Your Campaign][160]
 

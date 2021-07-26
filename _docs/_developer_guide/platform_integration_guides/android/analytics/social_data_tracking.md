@@ -81,17 +81,17 @@ TwitterUser(
 {% endtab %}
 {% endtabs %}
 
-To pass data retrieved from social networks to Braze, you'll create a new FacebookUser or TwitterUser and then pass them to the method `AppboyUser.setFacebookData()`/`AppboyUser.setTwitterData()`. For example:
+To pass data retrieved from social networks to Braze, you'll create a new FacebookUser or TwitterUser and then pass them to the method `BrazeUser.setFacebookData()`/`BrazeUser.setTwitterData()`. For example:
 
 {% tabs %}
 {% tab JAVA %}
 
 ```java
 FacebookUser facebookUser = new FacebookUser("100000", "FirstName", "LastName", "email@email.com", "bio", "City", Gender.MALE, 3, Arrays.asList(new String[]{ "like" }), "04/13/1990");
-Appboy.getInstance(context).getCurrentUser().setFacebookData(facebookUser);
+Braze.getInstance(context).getCurrentUser().setFacebookData(facebookUser);
 
 TwitterUser twitterUser = new TwitterUser(100000, "handle", "Name", "description", 100, 50, 150, "image_url");
-Appboy.getInstance(context).getCurrentUser().setTwitterData(twitterUser);
+Braze.getInstance(context).getCurrentUser().setTwitterData(twitterUser);
 ```
 
 {% endtab %}

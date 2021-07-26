@@ -20,7 +20,7 @@ The examples below are for _individual_ events (i.e. they'd just be part of the 
 
 ### Campaign-Associated Events
 
-Here are some example event payloads for various events, as they would appear if associated with a Campaign:
+Here are some example event payloads for various events, as they would appear if associated with a campaign:
 
 ```
 // In-App Message Click: users.messages.inappmessage.Click
@@ -223,7 +223,7 @@ Here are some example event payloads for various events, as they would appear if
 
 ### Other Events
 
-Here are some example event payloads for various other events that are not associated with either Campaigns or Canvases:
+Here are some example event payloads for various other events that are not associated with either campaigns or Canvases:
 
 ```
 // Custom Event: users.behaviors.CustomEvent
