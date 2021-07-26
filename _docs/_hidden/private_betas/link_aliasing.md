@@ -132,7 +132,7 @@ This event occurs when a user clicks an email. Multiple events may be generated 
   "user_id": (string) Braze user id of the user,
   "external_user_id": (string) External ID of the user,
   "time": (int) UTC time of the event in seconds since the epoch,
-  "timezone": (string) IANA timezone of the user at the time of the event,
+  "timezone": (string) IANA time zone of the user at the time of the event,
   "campaign_id": (string) id of the campaign if from a campaign,
   "campaign_name": (string) name of the campaign,
   "message_variation_id": (string) id of the message variation if from a campaign,

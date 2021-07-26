@@ -51,7 +51,7 @@ To stop Braze tracking in general, or to clear _all_ stored browser data, please
 
 ## Device Properties
 
-By default, Braze will collect the following device-level properties to allow device, language, and time zone-based message personalization:
+By default, Braze will collect the following device-level properties to allow device, language, and time zone based message personalization:
 
 * BROWSER
 * BROWSER_VERSION
