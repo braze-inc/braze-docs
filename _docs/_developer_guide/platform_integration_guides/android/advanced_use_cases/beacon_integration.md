@@ -20,16 +20,16 @@ To log a custom event when a user enters a place, input this code into the `onVi
 {% tab JAVA %}
 
 ```java
-Appboy.getInstance(context).logCustomEvent("Entered " + visit.getPlace());
-Appboy.getInstance(context).requestImmediateDataFlush();
+Braze.getInstance(context).logCustomEvent("Entered " + visit.getPlace());
+Braze.getInstance(context).requestImmediateDataFlush();
 ```
 
 {% endtab %}
 {% tab KOTLIN %}
 
 ```kotlin
-Appboy.getInstance(context).logCustomEvent("Entered " + visit.getPlace())
-Appboy.getInstance(context).requestImmediateDataFlush()
+Braze.getInstance(context).logCustomEvent("Entered " + visit.getPlace())
+Braze.getInstance(context).requestImmediateDataFlush()
 ```
 
 {% endtab %}

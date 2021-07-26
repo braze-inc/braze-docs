@@ -22,7 +22,7 @@ To use this feature, add this method call after a successful purchase in your ap
 {% tab JAVA %}
 
 ```java
-Appboy.getInstance(context).logPurchase(
+Braze.getInstance(context).logPurchase(
    String productId,
    String currencyCode,
    BigDecimal price,
@@ -34,7 +34,7 @@ Appboy.getInstance(context).logPurchase(
 {% tab KOTLIN %}
 
 ```kotlin
-Appboy.getInstance(context).logPurchase(
+Braze.getInstance(context).logPurchase(
   productId: String,
   currencyCode: String,
   price: BigDecimal,
@@ -61,18 +61,18 @@ Properties are defined as key-value pairs.  Keys are `String` objects and values
 {% tab JAVA %}
 
 ```java
-AppboyProperties purchaseProperties = new AppboyProperties();
+BrazeProperties purchaseProperties = new BrazeProperties();
 purchaseProperties.addProperty("key", "value");
-Appboy.getInstance(context).logPurchase(..., purchaseProperties);
+Braze.getInstance(context).logPurchase(..., purchaseProperties);
 ```
 
 {% endtab %}
 {% tab KOTLIN %}
 
 ```kotlin
-val purchaseProperties = AppboyProperties()
+val purchaseProperties = BrazeProperties()
 purchaseProperties.addProperty("key", "value")
-Appboy.getInstance(context).logPurchase(..., purchaseProperties)
+Braze.getInstance(context).logPurchase(..., purchaseProperties)
 ```
 
 {% endtab %}
@@ -97,7 +97,7 @@ You can also use our REST API to record purchases. Refer to the [User API docume
 
 [1]: {{site.baseurl}}/developer_guide/rest_api/user_data/#user-data
 [3]: {{site.baseurl}}/developer_guide/platform_wide/analytics_overview/#user-data-collection
-[4]: https://appboy.github.io/appboy-android-sdk/javadocs/com/appboy/models/outgoing/AppboyProperties.html
+[4]: https://appboy.github.io/appboy-android-sdk/javadocs/com/braze/models/outgoing/BrazeProperties.html
 [5]: http://developer.android.com/reference/java/util/Date.html
-[6]: https://appboy.github.io/appboy-android-sdk/javadocs/com/appboy/Appboy.html#logPurchase(java.lang.String,%20java.lang.String,%20java.math.BigDecimal,%20int,%20com.appboy.models.outgoing.AppboyProperties)
+[6]: https://appboy.github.io/appboy-android-sdk/javadocs/com/appboy/Appboy.html#logPurchase-java.lang.String-java.lang.String-java.math.BigDecimal-int-com.braze.models.outgoing.BrazeProperties-
 [8]: https://appboy.github.io/appboy-android-sdk/javadocs/com/appboy/Appboy.html#logPurchase(java.lang.String,%20java.lang.String,%20java.math.BigDecimal,%20int)
