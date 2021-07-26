@@ -27,7 +27,7 @@ The following steps help you build a `BrazeManager` helper file that your produc
 ### Create BrazeManager.swift
 
 {% tabs local %}
-{% tab Step 1: Create BrazeManager.swift %}
+{% tab Create BrazeManager.swift %}
 
 ##### Create BrazeManager.swift
 To build out your `BrazeManager.swift` file, create a new Swift file named _BrazeManager_ to add to your project at your desired location. Next, Replace `import Foundation` with `import AppboyUI` for SPM (`import Appboy_iOS_SDK` for cocoapods) and then create a `BrazeManager` class that will be used to host all Braze-related methods and variables. `Appboy_iOS_SDK`
@@ -354,9 +354,9 @@ Proceed to compile your code and run your application. <br><br>Try sending yours
 ### Access User Variables and Methods
 
 {% tabs local %}
-{% tab Step 1: Create Extension %}
+{% tab Create User Variables and Methods %}
 
-##### Create Extension for User Code
+##### Create User Variables and Methods
 
 Next, you will want easy access to the `ABKUser` variables and methods. Create an extension for your user code in the `Brazemanager.swift` file so it reads in a more organized manner as to what purpose is being served in the helper file, like so:
 
@@ -417,23 +417,7 @@ Proceed to compile your code and run your application.<br><br>Try identifying us
 ### Log Analytics
 
 {% tabs local %}
-{% tab Step 1: Create Extension %}
-
-##### Create Extension for Analytics Code
-
-Next, you must enable your production code to log crucial analytics metrics to Braze without the need for excessive `import AppboyUI` statements. The production code should call into the `BrazeManager` to log all analytics. 
-
-Create an extension for your analytics code in your `Brazemanager.swift` file so it reads in a more organized manner as to what purpose is being served in the helper file, like so:
-
-```swift
-//MARK: - Analytics
-extension BrazeManager {
-
-}
-```
-
-{% endtab %}
-{% tab Step 2: Custom Events %}
+{% tab Step 1: Custom Events %}
 
 ##### Create Log Custom Event Method
 
@@ -466,7 +450,7 @@ func logCustomEvent(_ eventName: String, withProperties properties: [AnyHashable
 {% endsubtab %}
 {% endsubtabs %}
 {% endtab %}
-{% tab Step 3: Custom Attributes %}
+{% tab Step 2: Custom Attributes %}
 
 ##### Create Log Custom Attributes Method 
 
@@ -531,7 +515,7 @@ func setCustomAttributeWithKey<T: Equatable>(_ key: String?, andValue value: T?)
 {% endsubtab %}
 {% endsubtabs %}
 {% endtab %}
-{% tab Step 4: Purchases %}
+{% tab Step 3: Purchases %}
 
 ##### Create Log Purchase Method
 
@@ -621,9 +605,9 @@ func application(_ application: UIApplication, didFinishLaunchingWithOptions lau
 {% endsubtab %}
 {% endsubtabs %}
 {% endtab %}
-{% tab Step 2: Create Extension %}
+{% tab Step 2: Add Delegate Methods %}
 
-##### Create Extension that Conforms to ABKInAppMessageUIDelegate
+##### Add Delegate Methods
 Next, create an extension that conforms to the `ABKInAppMessageUIDelegate`.
 
 Add this snippet below the analytics section. Note that the `BrazeManager.swift` object is set as the delegate; this will be where the `BrazeManager.swift` file handles all the `ABKInAppMessageUIDelegate` methods. 
@@ -680,13 +664,13 @@ Proceed to compile your code and run your application. <br><br>Try sending yours
 ### Content Cards
 
 {% tabs local %}
-{% tab Step 1: Create Extension %}
+{% tab Create Content Card Variables and Methods %}
 
 {% alert important %}
 The following Content Card section is not required for integration if you do not plan to utilize this channel in your application.
 {% endalert %}
 
-##### Create Extension for Content Cards
+##### Create Content Card Variables and Methods
 
 Enable your production code to display the Content Cards view controller without the need for unnecessary `import AppboyUI` statements. 
 
