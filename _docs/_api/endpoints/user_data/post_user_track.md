@@ -177,10 +177,35 @@ The following status codes and associated error messages will be returned if you
 | `5XX` | Internal server error, you should retry with exponential backoff. |
 {: .reset-td-br-1 .reset-td-br-2}
 
-##  Importing Legacy User Data
+## Importing Legacy User Data
 
 You may submit data through the Braze API for a user who has not yet used your mobile app in order to generate a user profile. If the user subsequently uses the application all information following their identification via the SDK will be merged with the existing user profile you created via the API call. Any user behavior that is recorded anonymously by the SDK prior to identification will be lost upon merging with the existing API-generated user profile.
 
 The segmentation tool will include these users regardless of whether they have engaged with the app. If you want to exclude users uploaded via the User API who have not yet engaged with the app you should add the filter -- `Session Count > 0`.
+
+## Making Bulk Updates
+
+If you have a use case where you need to make batch updates to the `users/track` endpoint, we recommend adding the bulk update header so that Braze can properly identify, observe, and route your request.
+
+Refer to the following sample request with the `X-Braze-Bulk` header:
+
+```
+curl --location --request POST 'https://anna.braze.com/users/track' \
+--header 'Content-Type: application/json' \
+--header 'X-Braze-Bulk: true' \
+--header 'Authorization: Bearer YOUR-API-KEY-HERE' \
+--data-raw '{ "attributes": [ ], "events": [ ], "purchases": [ ], "partner": "PARTNER-NAME-HERE" }'
+```
+
+{% alert warning %}
+When the `X-Braze-Bulk` header is present with any value, Braze will consider the request a bulk request. Please set the value to `true`. Currently, setting the value to `false` does not disable the header—it will still be treated as if it were true.
+{% endalert %}
+
+### Use Cases
+
+Some use cases in which you might use the bulk update header include:
+
+- A daily job where multiple users' custom attributes are updated via the `/users/track` endpoint.
+- An ad-hoc user data backfill script which updates user information via the `/users/track` endpoint.
 
 {% endapi %}
