@@ -1040,6 +1040,7 @@ This event occurs when a user sends an SMS.
   "canvas_step_id": (string) id of the step for this message if from a Canvas,
   "canvas_step_name": (string) name of the step for this message if from a Canvas,
   "dispatch_id": (string) id of the message dispatch (unique id for each 'transmission' sent from the Braze platform and users who are sent a schedule message get the same dispatch_id. Action-based or API-triggered messages get a unique dispatch_id per user
+  "category" : (string) If the SMS was sent as a result of auto-response to one of your global SMS keywords, the Category will be reflected here (e.g Opt-In, Opt-Out, Help) 
 }
 ```
 {% endapi %}
@@ -1209,7 +1210,12 @@ This event occurs when one of your users sends an SMS to a phone number in one o
   "subscription_group_id": (string) id of the subscription group which the phone number the user messaged belongs to,
   "inbound_phone_number": (string) the phone number the message was sent to,
   "action" : (string) the subscription action Braze took as a result of this message (either `subscribed`, `unsubscribed` or `none` based on the message body. `None` indicates this inbound message did not match any of your keywords to opt-in or opt-out a user),
-  "message_body" : (string) the body of the message sent by the user
+  "message_body" : (string) the body of the message sent by the user,
+  "campaign_id": (string) id of the campaign if Braze identifies this inbound message is a reply to a campaign,
+  "message_variation_id": (string) id of the message variation if Braze identifies this inbound message is a reply to a campaign,
+  "canvas_id": (string) id of the Canvas if Braze identifies this inbound message is a reply to a Canvas step,
+  "canvas_variation_id": (string) id of the Canvas variation the user is in if Braze identifies this inbound message is a reply to a Canvas step,
+  "canvas_step_id": (string) id of the step for this message if Braze identifies this inbound message is a reply to a Canvas step.
 }
 ```
 {% endapi %}
