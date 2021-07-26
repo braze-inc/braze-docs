@@ -13,7 +13,7 @@ This article describes the different device-level properties captured when using
 
 ## Device Properties
 
-By default, Braze will collect the following [device-level properties](https://appboy.github.io/appboy-android-sdk/javadocs/com/appboy/enums/DeviceKey.html) to allow device, language, and timezone based message personalization:
+By default, Braze will collect the following [device-level properties](https://appboy.github.io/appboy-android-sdk/javadocs/com/appboy/enums/DeviceKey.html) to allow device, language, and time zone-based message personalization:
 
 * AD_TRACKING_ENABLED
 * ANDROID_VERSION
@@ -34,6 +34,6 @@ The following example showcases allowlisting the device object to only include t
       .setDeviceObjectAllowlistEnabled(true)
       .setDeviceObjectAllowlist(EnumSet.of(DeviceKey.ANDROID_VERSION, DeviceKey.LOCALE));
 ```
-By default, all fields are enabled. Note that without some properties, not all features will function properly. For instance, without the time zone, local timezone delivery will not function.
+By default, all fields are enabled. Note that without some properties, not all features will function properly. For instance, without the time zone, local time zone delivery will not function.
 
 To read more about the automatically collected device properties, visit our [SDK Data Collection Options]({{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/sdk_data_collection/) article. 
