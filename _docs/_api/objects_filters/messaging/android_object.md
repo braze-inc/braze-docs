@@ -95,9 +95,9 @@ The concepts in this message correspond to those in the [Android Conversation Pu
 
 ```json
 {
-  "text" : (required, string) the sharing shortcut identifier,
+  "text" : (required, string) the text of this message,
   "timestamp" : (required, integer) the unix timestamp of when this message was sent,
-  "person_id" : (required, string) the identifier of the Person this push is replying to,
+  "person_id" : (required, string) the Person identifier of this message's sender,
 }
 ```
 
