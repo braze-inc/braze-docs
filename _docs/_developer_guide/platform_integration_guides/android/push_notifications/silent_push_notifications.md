@@ -18,10 +18,10 @@ Silent notifications are also available within the dashboard. To send a silent n
 
 ![Android Silent Push Example][6]
 
-This message will cause an intent to be received with an action `.intent.APPBOY_PUSH_RECEIVED`. Handling of this intent to cause any action such as a refresh of app content must be defined within the broadcast receiver you defined in [Step 4 of Enabling Push Notifications - Android][4]. Please see [AppboyBroadcastReceiver.java][5] for an example of this receiver.
+This message will cause an intent to be received with an action `BRAZE_PUSH_INTENT_NOTIFICATION_RECEIVED`. Handling of this intent to cause any action such as a refresh of app content must be defined within the broadcast receiver you defined in [Step 4 of Enabling Push Notifications - Android][4]. Please see [CustomBroadcastReceiver.java][5] for an example of this receiver.
 
 [2]: {{site.baseurl}}/developer_guide/rest_api/messaging/
 [3]: {{site.baseurl}}/developer_guide/rest_api/messaging/#android-push-object
 [4]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/push_notifications/integration/#step-4-define-notification-channels
-[5]: https://github.com/Appboy/appboy-android-sdk/blob/master/samples/custom-broadcast/src/main/java/com/appboy/custombroadcast/AppboyBroadcastReceiver.java "AppboyBroadcastReceiver.java -- Sample Project"
+[5]: https://github.com/Appboy/appboy-android-sdk/blob/master/samples/custom-broadcast/src/main/java/com/braze/custombroadcast/CustomBroadcastReceiver.java
 [6]: {% image_buster /assets/img_archive/SilentPushExample.png %} "Silent Push Notification Example -- Android"
