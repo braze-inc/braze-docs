@@ -24,9 +24,9 @@ For example, a London-based company sending a campaign at 12pm will reach users 
 
 ### How does Braze recognize a user's time zone?
 
-Braze will automatically determine a user’s time zone from their device. This ensures time zone accuracy and full coverage of your users. Users created through the User API or otherwise without a timezone will have your company’s time zone as their default time zone until they are recognized in your app by the SDK. 
+Braze will automatically determine a user’s time zone from their device. This ensures time zone accuracy and full coverage of your users. Users created through the User API or otherwise without a time zone will have your company’s time zone as their default time zone until they are recognized in your app by the SDK. 
 
-To check your company’s timezone, look at your [Company Settings]({{site.baseurl}}/user_guide/administrative/manage_your_braze_users/company-wide_settings_management/) on the dashboard. Click on your name in the top toolbar and then click **Company Settings**.
+To check your company’s time zone, look at your [Company Settings]({{site.baseurl}}/user_guide/administrative/manage_your_braze_users/company-wide_settings_management/) on the dashboard. Click on your name in the top toolbar and then click **Company Settings**.
 
 ### How do I schedule a local time zone campaign?
 
@@ -76,4 +76,4 @@ Changing the send time on campaigns within this time can lead to undesired behav
 
 To ensure campaigns operate as desired, we recommend stopping the current campaign (this will abort any enqueued messages). You can then duplicate the campaign, making the changes as necessary and launch the new campaign. You may need to exclude users from this campaign who have already received the first campaign.
 
-Please ensure you re-adjust campaign schedule times to allow for timezone sending.
+Please ensure you re-adjust campaign schedule times to allow for time zone sending.

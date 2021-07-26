@@ -1169,14 +1169,14 @@ This is a message for Verizon users!
 Time Zones
 {% endapitags %}
 
-- [Append the CST timezone to a custom attribute](#time-append-cst)
+- [Append the CST time zone to a custom attribute](#time-append-cst)
 - [Insert a timestamp](#time-insert-timestamp)
 - [Only send a Canvas push during a window of time in a user's local time zone](#time-canvas-window)
 - [Send a reoccurring in-app message campaign between a window of time in a user's local time zone](#time-reocurring-iam-window)
 - [Send different messages on weekdays vs. weekends in a user's local time zone](#time-weekdays-vs-weekends)
 - [Send different messages based on time of day in a user's local time zone](#time-of-day)
 
-### Append the CST Timezone to a Custom Attribute {#time-append-cst}
+### Append the CST Time Zone to a Custom Attribute {#time-append-cst}
 
 This use case displays a custom date attribute in a given time zone.
 
