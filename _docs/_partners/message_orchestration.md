@@ -62,5 +62,7 @@ valid_partner_list:
   url: /docs/partners/message_orchestration/learning/edume/
 - name: optilyz
   url: /docs/partners/message_orchestration/additional_channels/direct_mail/optilyz/
-
+- name: Digioh
+  url: /docs/partners/message_orchestration/channel_extensions/surveys/digioh/
+  
 ---

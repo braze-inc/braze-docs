@@ -1,7 +1,7 @@
 ---
 nav_title: April
 page_order: 9
-
+no_index: true
 page_type: update
 description: "This article contains release notes for April 2017."
 ---
@@ -22,7 +22,7 @@ We’ve improved the UI for building News Feed cards, making it easier for you t
 Our preview notifications on iOS now display Rich notifications giving you a clear view of exactly what you are sending out to your customers, down to the font size. Learn more about iOS Rich notifications [here][32].
 
 ## Added “Influenced Opens” to Push Statistics
-We’ve added “Influenced Opens” to our list of standard Campaign and Canvas statistics offered in Braze, making it easier to know your campaigns breakdown of Influenced, Direct and Total Opens. Learn more about Influenced Opens [here][31].
+We’ve added “Influenced Opens” to our list of standard campaign and Canvas statistics offered in Braze, making it easier to know your campaigns breakdown of Influenced, Direct and Total Opens. Learn more about Influenced Opens [here][31].
 
 ## Upgrade to Internal Groups
 

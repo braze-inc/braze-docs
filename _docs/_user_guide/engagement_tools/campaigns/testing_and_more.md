@@ -9,7 +9,7 @@ tool:
 - Campaigns
 - Reports
 page_type: landing
-description: "This landing page is home to Campaign Testing and Tips. Here you can find resources on campaign preferences like rate limiting, conversions, and A/B testing."
+description: "This landing page is home to campaign testing and tips. Here you can find resources on campaign preferences like rate limiting, conversions, and A/B testing."
 
 guide_featured_title: "Section Articles"
 guide_featured_list:

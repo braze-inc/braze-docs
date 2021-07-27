@@ -1,7 +1,7 @@
 ---
 nav_title: October
 page_order: 3
-
+no_index: true
 page_type: update
 description: "This article contains release notes for October 2019."
 ---
@@ -14,7 +14,7 @@ Canvas has new and improved analytics to view the performance of each of your va
 
 ## SMS
 
-Braze now provides SMS with Campaigns, Canvas, and [Currents]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/message_engagement_events/)! Check out our [Set Up Guide]({{site.baseurl}}/user_guide/onboarding_with_braze/sms_setup/) to get started and our [SMS Sending Guide]({{site.baseurl}}/user_guide/message_building_by_channel/sms/) to learn more!
+Braze now provides SMS with campaigns, Canvas, and [Currents]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/message_engagement_events/)! Check out our [Set Up Guide]({{site.baseurl}}/user_guide/onboarding_with_braze/sms_setup/) to get started and our [SMS Sending Guide]({{site.baseurl}}/user_guide/message_building_by_channel/sms/) to learn more!
 
 ## Content Block Improvements
 

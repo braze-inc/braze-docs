@@ -1,7 +1,6 @@
 ---
 nav_title: "POST: [Endpoint Name]"
 page_order:
-
 layout: api_page
 excerpt_separator: ""
 
@@ -16,6 +15,9 @@ tool:
   - Campaigns
 
 description: "This article outlines details about and using this POST [endpoint name] Braze endpoint."
+
+noindex: true
+#ATTENTION: remove noindex and this alert from template
 ---
 {% api %}
 # [Endpoint Name]

@@ -35,7 +35,7 @@ guide_featured_list:
 
 ---
 
-To see examples of in-app messages, check out our [Client Integration Gallery][11].
+To see examples of in-app messages, check out our [Case Studies][11].
 
 ## When to Use In-App Messages
 
@@ -93,5 +93,5 @@ Full-Screen messages are exactly what you'd expect - they take up the whole scre
 {% endtab %}
 {% endtabs %}
 
-[11]: {{site.baseurl}}/help/best_practices/client_integration_gallery/#client-integration-iam
+[11]: https://www.braze.com/customers
 [21]: {{site.baseurl}}/help/best_practices/push/creating_custom_opt-in_prompts/#creating-custom-opt-in-prompts

@@ -91,13 +91,13 @@ API key permissions are permissions you can assign a user or group to limit thei
 
 | Name | Description |
 |---|---|---|
-| `campaigns.trigger.send` | Trigger the sending of an existing Campaign. |
-| `campaigns.trigger.schedule.create` | Schedule a future send of a Campaign with API-triggered delivery. |
-| `campaigns.trigger.schedule.update` | Update a Campaign scheduled with API-triggered delivery. |
-| `campaigns.trigger.schedule.delete` | Delete a Campaign scheduled with API-triggered delivery |
-| `campaigns.list` | Query for a list of Campaigns. |
-| `campaigns.data_series` | Query for Campaign analytics over a time range. |
-| `campaigns.details` | Query for details of a specific Campaign. |
+| `campaigns.trigger.send` | Trigger the sending of an existing campaign. |
+| `campaigns.trigger.schedule.create` | Schedule a future send of a campaign with API-triggered delivery. |
+| `campaigns.trigger.schedule.update` | Update a campaign scheduled with API-triggered delivery. |
+| `campaigns.trigger.schedule.delete` | Delete a campaign scheduled with API-triggered delivery |
+| `campaigns.list` | Query for a list of campaigns. |
+| `campaigns.data_series` | Query for campaign analytics over a time range. |
+| `campaigns.details` | Query for details of a specific campaign. |
 | `sends.data_series` | Query for message send analytics over a time range. |
 | `sends.id.create` | Create Send ID for message blast tracking. |
 {: .reset-td-br-1 .reset-td-br-2}
@@ -142,8 +142,8 @@ API key permissions are permissions you can assign a user or group to limit thei
 
 | Name | Description |
 |---|---|---|
-| `events.list` | Query for a list of Custom events. |
-| `events.data_series` | Query occurrences of a Custom Event over a time range. |
+| `events.list` | Query for a list of custom events. |
+| `events.data_series` | Query occurrences of a custom event over a time range. |
 {: .reset-td-br-1 .reset-td-br-2}
 
 {% endtab %}

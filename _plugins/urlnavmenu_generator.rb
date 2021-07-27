@@ -16,8 +16,6 @@
 module Jekyll
 
   class UrlNavMenu < Liquid::Tag
-    # @@logs = File.open('../log.txt', 'w')
-
     def initialize(tag_name, menu_root, tokens)
       @menu_root = menu_root.strip
 
@@ -68,6 +66,7 @@ module Jekyll
     def render(context)
       # save base url
       @baseurl = context.registers[:site].baseurl
+      @nav_expand_list = context.registers[:site].config['nav_expand_list']
 
       menu(context)
 
@@ -97,7 +96,6 @@ module Jekyll
           context['site']['documents'].find_all{|page| page.url.start_with?(root_string)}.each do |page|
             unless page.data[@page_hidden] == true
               path_parts = page.url.split('/')
-              Jekyll.logger.debug("Nav for: " + page.url)
 
               if path_parts.shift
                 path_url = '/'
@@ -158,7 +156,7 @@ module Jekyll
 
                         #puts path_part
                         unless page.data[@page_config_only]
-                          cur_hash[@menu_nav_pages][path_key] = page # "page"
+                          cur_hash[@menu_nav_pages][path_key] = page
                         end
                         # end loop
                         cnt = max_len
@@ -201,25 +199,24 @@ module Jekyll
             results = ''
             navclass = ''
             ariaexpanded = false
+
             # if less then 2, then always show
-            if level  < @minlevel
+            if (level < @minlevel)
                 navclass = ' show'
             end
-
 
             nextlevel = level + 1
 
             menu_hash[@menu_sorted_list].each do |ma|
-              #puts ma.to_s
               # Ignore plugin specific keys
               page_key =   ''
               curclass = ''
 
               curinfo  = nil
               item = nil
-              currentpage = false
-              isactive = false
-              # # @@logs << "#{ma }Menu Nav: #{menu_hash[@menu_nav_pages]} \n"
+              is_currentpage = false
+              is_active = false
+
               unless menu_hash[@menu_nav_list].nil?
                 page_title =  ma[@page_title_index]
 
@@ -233,20 +230,26 @@ module Jekyll
                     curinfo = menu_hash[@menu_nav_pages][ma[@page_key_index]]
                     # check if current page
                     if @currentpage.id == ma[@page_id_index]
-                      currentpage = true
+                      is_currentpage = true
                     end
                   end
                 end
 
-
                 # process child menu, also allow check if last item in branch
-                parentkey = page_key
+                parent_page_key = page_key
                 unless parent_key.empty?
-                  parentkey = parent_key + '_' + page_key
+                  parent_page_key = parent_key + '_' + page_key
                 else
                   parent_key = 'top'
                 end
-                item = build_menu_html(menu_hash[ma[@page_key_index]],(parentkey) ,nextlevel)
+
+                # if it's an auto expand page, set to expanded
+                if (@nav_expand_list.include?(ma[@page_id_index]))
+                  item = build_menu_html(menu_hash[ma[@page_key_index]], parent_page_key, (@minlevel - 1))
+                else
+                  item = build_menu_html(menu_hash[ma[@page_key_index]], parent_page_key, nextlevel)
+                end
+
                 ariaexpanded = false
                 # only set upto min level
 
@@ -262,59 +265,58 @@ module Jekyll
                     navclass = ' show'
                     ariaexpanded = true
                     curclass  << " #{@activeparentclass} "
-
                   end
                   if level >= (@minlevel - 1 )
                     if @currentpage.url == ma[@page_url_index]
                       #puts "#{ level } current page check #{@currentpage.id} #{ma[@page_id_index]} "
-
                       ariaexpanded = false
                     end
                   end
                 end
-
-
-
-                # build menu based on if item has a page or not. if it has a not page, just show title, else add link
+                # if it's an auto expand page, set to expanded
+                if (@nav_expand_list.include?(ma[@page_id_index]))
+                  ariaexpanded = true
+                end
+                # build menu based on if item has a page or not. if it has no page, just show title, else add link
                 unless curinfo.nil?
-                  # check if last item, if so just display list
-                  if currentpage
+                  # check if current item, if so just display list
+                  if is_currentpage
                     curclass << " #{@activeclass } "
-                    isactive = true
+                    is_active = true
                   end
 
                   cur_url = @baseurl + curinfo.url
                   if curinfo['redirect_to']
                     cur_url = curinfo['redirect_to']
                   end
-                  items << "<div class='#{@nav_item_class}  #{curclass}' id='parent_#{@nav_prefix}_#{parentkey}' data-parent='parent_#{@nav_prefix}_#{parent_key}'>"
+
+                  items << "<div class='#{@nav_item_class}  #{curclass}' id='parent_#{@nav_prefix}_#{parent_page_key}' data-parent='parent_#{@nav_prefix}_#{parent_key}'>"
                   # If last item, doesn't need to be collapsible
                   unless item.empty?
-                    items << "<div class='#{ @nav_active_page_class }'  data-parent='parent_#{@nav_prefix}_#{parent_key}'><a href='##{@nav_prefix}_#{parentkey}' data-toggle='collapse' data-target='##{@nav_prefix}_#{parentkey}' class='#{@nav_toggle_class} '  aria-expanded='#{ariaexpanded}' data-parent='parent_#{@nav_prefix}_#{parent_key}'><i class='#{@fa_class}'></i><div class='#{ @nav_title_block}'> "
+                    items << "<div class='#{ @nav_active_page_class }'  data-parent='parent_#{@nav_prefix}_#{parent_key}'><a href='##{@nav_prefix}_#{parent_page_key}' data-toggle='collapse' data-target='##{@nav_prefix}_#{parent_page_key}' class='#{@nav_toggle_class} '  aria-expanded='#{ariaexpanded}' data-parent='parent_#{@nav_prefix}_#{parent_key}'><i class='#{@fa_class}'></i><div class='#{ @nav_title_block}'> "
                   else
                     items << "<div class='#{ @nav_active_basic_class }'  data-parent='parent_#{@nav_prefix}_#{parent_key}'><div class='#{ @nav_title_block}'> "
                   end
-                  if isactive
+                  if is_active
                     items << "<div class='#{@nav_title_class}'  data-parent='parent_#{@nav_prefix}_#{parent_key}'>#{page_title} </div>"
                   else
                     items << "<a href='#{ cur_url }' class='#{@nav_item_link_class}' data-parent='parent_#{@nav_prefix}_#{parent_key}'> <div class='#{@nav_title_class}'>#{page_title}</div></a>"
                   end
                   items << "</div></div>\n</div>\n"
 
-                # Last item on the  so just display it as a list
+                # Last item on the so just display it as a list
                 else
-                  items << "<div class='#{@nav_item_class}  #{curclass}' id='parent_#{@nav_prefix}_#{parentkey}' data-parent='parent_#{@nav_prefix}_#{parent_key}'> "
+                  items << "<div class='#{@nav_item_class}  #{curclass}' id='parent_#{@nav_prefix}_#{parent_page_key}' data-parent='parent_#{@nav_prefix}_#{parent_key}'> "
 
                   # Last item, doesn't need to be collapsible
                   if item.empty?
                     items << " <div class='#{ @nav_title_block}'  data-parent='parent_#{@nav_prefix}_#{parent_key}'><div class='#{ @nav_active_basic_class } #{@nav_title_class}'>"
                     items << "#{page_title}"
                   else
-                    items << "<div class='#{ @nav_active_page_class }'  data-parent='parent_#{@nav_prefix}_#{parent_key}'><a href='##{@nav_prefix}_#{parentkey}' data-toggle='collapse' data-target='##{@nav_prefix}_#{parentkey}' class='#{@nav_toggle_class} ' aria-expanded='#{ariaexpanded}' data-parent='parent_#{@nav_prefix}_#{parent_key}'><i class='#{@fa_class}'></i><div class='#{ @nav_title_block}'><div class='#{@nav_title_class}'>#{page_title}</div></a>"
+                    items << "<div class='#{ @nav_active_page_class }'  data-parent='parent_#{@nav_prefix}_#{parent_key}'><a href='##{@nav_prefix}_#{parent_page_key}' data-toggle='collapse' data-target='##{@nav_prefix}_#{parent_page_key}' class='#{@nav_toggle_class} ' aria-expanded='#{ariaexpanded}' data-parent='parent_#{@nav_prefix}_#{parent_key}'><i class='#{@fa_class}'></i><div class='#{ @nav_title_block}'><div class='#{@nav_title_class}'>#{page_title}</div></a>"
                   end
                   items << "</div></div></div>\n"
                 end
-
                 # Append new items to previous list
                 unless item.empty?
                   #  puts item
@@ -325,14 +327,13 @@ module Jekyll
 
             end
 
-
             # Container html if there's items
             unless items.empty?
               results = "<div class='nav flex-column flex-nowrap "
               unless ariaexpanded
-                results << ' collapse '
+                results << 'collapse '
               end
-              results << " #{navclass} ' id='#{@nav_prefix}_#{parent_key}'  >\n"
+              results << "#{navclass}' id='#{@nav_prefix}_#{parent_key}'  >\n"
               results << items
               results << "</div>"
             end

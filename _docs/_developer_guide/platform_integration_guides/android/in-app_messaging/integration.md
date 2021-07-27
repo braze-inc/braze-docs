@@ -120,7 +120,7 @@ public class MyApplication extends Application {
     Set<Class> inAppMessageBlacklist = new HashSet<>();
     inAppMessageBlacklist.add(SplashActivity.class);
     inAppMessageBlacklist.add(SettingsActivity.class);
-    registerActivityLifecycleCallbacks(new AppboyLifecycleCallbackListener(inAppMessageBlacklist));
+    registerActivityLifecycleCallbacks(new BrazeActivityLifecycleCallbackListener(inAppMessageBlacklist));
   }
 }
 ```
@@ -135,7 +135,7 @@ class MyApplication : Application() {
     val inAppMessageBlacklist = HashSet<Class<*>>()
     inAppMessageBlacklist.add(SplashActivity::class.java)
     inAppMessageBlacklist.add(SettingsActivity::class.java)
-    registerActivityLifecycleCallbacks(AppboyLifecycleCallbackListener(inAppMessageBlacklist))
+    registerActivityLifecycleCallbacks(BrazeActivityLifecycleCallbackListener(inAppMessageBlacklist))
   }
 }
 ```
@@ -151,4 +151,4 @@ class MyApplication : Application() {
 [80]: https://appboy.github.io/appboy-android-sdk/javadocs/com/appboy/ui/inappmessage/AppboyInAppMessageManager.html#registerInAppMessageManager-android.app.Activity-
 [81]: https://appboy.github.io/appboy-android-sdk/javadocs/com/appboy/ui/inappmessage/AppboyInAppMessageManager.html#unregisterInAppMessageManager-android.app.Activity-
 [82]: https://developer.android.com/reference/android/app/Application.html#onCreate()
-[83]: https://appboy.github.io/appboy-android-sdk/javadocs/com/appboy/AppboyLifecycleCallbackListener.html#AppboyLifecycleCallbackListener-java.util.Set-
+[83]: https://appboy.github.io/appboy-android-sdk/javadocs/com/braze/BrazeActivityLifecycleCallbackListener.html#BrazeActivityLifecycleCallbackListener-java.util.Set-

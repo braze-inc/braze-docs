@@ -1,7 +1,7 @@
 ---
 nav_title: August
 page_order: 5
-
+no_index: true
 page_type: update
 description: "This article contains release notes for August 2017."
 ---
@@ -23,9 +23,9 @@ You can now [personalize a message][69] based on:
 - OS, and
 - Platform
 
-## API Triggered Canvas
+## API-Triggered Canvas
 
-You can now trigger a [Canvas][68] via API endpoints (send, schedule, update, delete) that match the existing ones for Campaigns, allowing you to further automate and optimize your marketing.
+You can now trigger a [Canvas][68] via API endpoints (send, schedule, update, delete) that match the existing ones for campaigns, allowing you to further automate and optimize your marketing.
 
 ## Web Push Action Buttons
 
@@ -33,7 +33,7 @@ We’ve added support for push action buttons on the web SDK for Chrome, allowin
 
 ## New API Endpoints
 
-We’ve exposed new API endpoints, /email/hard_bounces, that lets you pull hard bounces by email address or in a given date range, and /messages/scheduled_broadcasts, that lets you pull the next time that scheduled Campaigns and scheduled-entry Canvases will begin. These new endpoints allow you for further customization and optimization of your campaigns. Learn more about our API endpoints [here][65].
+We’ve exposed new API endpoints, /email/hard_bounces, that lets you pull hard bounces by email address or in a given date range, and /messages/scheduled_broadcasts, that lets you pull the next time that scheduled campaigns and scheduled-entry Canvases will begin. These new endpoints allow you for further customization and optimization of your campaigns. Learn more about our API endpoints [here][65].
 
 ## Geofences
 

@@ -136,5 +136,12 @@ valid_partner_list:
   url: /docs/partners/data_and_infrastructure_agility/ab_testing/phrasee/
 - name: optilyz
   url: /docs/partners/message_orchestration/additional_channels/direct_mail/optilyz/
+- name: Digioh
+  url: /docs/partners/message_orchestration/channel_extensions/surveys/digioh/
+- name: Nexla
+  url: /docs/partners/data_and_infrastructure_agility/workflow_automation/nexla/
+- name: Amperity
+  url: /docs/partners/data_and_infrastructure_agility/customer_data_platform/amperity/
+  
 
 ---

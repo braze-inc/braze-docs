@@ -21,7 +21,7 @@ channel:
 |---|---|
 |Subscribed| Default status.|
 |Opted-In| A user has explicitly allowed Braze will automatically move a user's opt-in state to "Opted-In". |
-|Unsubscribed| A user explicitly unsubscribed from push through your application UI or other methods that your brand provides. By default, Braze Push Campaigns only target users that are "Subscribed" or "Opted-in" for push.|
+|Unsubscribed| A user explicitly unsubscribed from push through your application UI or other methods that your brand provides. By default, Braze push campaigns only target users that are "Subscribed" or "Opted-in" for push.|
 {: .reset-td-br-1 .reset-td-br-2}
 
 Subscription states are helpful flags for brands to use when deciding which users to target for push notifications. Brands may provide simple toggles in their applications to make it simple for users to determine their push notification status. This helps prevent users from going into device settings and removing push tokens completely. 

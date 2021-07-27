@@ -5,6 +5,7 @@ page_order: 3
 page_type: solution
 description: "This help article describes why your control group might be larger than expected, and walks you through steps to fix this."
 tool: Canvas
+no_index: true
 ---
 
 # Why Is My Control Group So Large?

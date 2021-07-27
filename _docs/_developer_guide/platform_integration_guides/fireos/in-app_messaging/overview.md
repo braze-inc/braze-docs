@@ -13,7 +13,7 @@ channel: in-app messages
 
 __In-App Messages__ help you get content to your user without interrupting their day with a push notification. Customized and tailored in-app messages enhance the user experience and help your audience get the most value out of your app. With a variety of layouts and customization tools to choose from, in-app messages engage your users more than ever before.
 
-To see examples of in-app messages, check out our [Client Integration Gallery][83].
+To see examples of in-app messages, check out our [Case Studies][83].
 
 ## When to Use In-App Messages
 
@@ -107,5 +107,5 @@ Braze's `slideup` in-app message object extends [`InAppMessageBase`][27]. Braze'
 [50]: https://appboy.github.io/appboy-android-sdk/javadocs/com/appboy/models/MessageButton.html
 [51]: https://appboy.github.io/appboy-android-sdk/javadocs/com/appboy/models/InAppMessageHtmlFull.html
 [52]: https://appboy.github.io/appboy-android-sdk/javadocs/com/appboy/models/IInAppMessageHtml.html
-[83]: {{site.baseurl}}/help/best_practices/client_integration_gallery/#client-integration-iam
+[83]: https://www.braze.com/customers
 [84]: {{site.baseurl}}/help/best_practices/push/creating_custom_opt-in_prompts/#creating-custom-opt-in-prompts

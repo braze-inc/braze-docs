@@ -47,21 +47,18 @@ Customers using the API for server-to-server calls may need to whitelist `rest.i
 
 | Parameter | Required | Data Type | Description |
 | --------- | ---------| --------- | ----------- |
-| `attributes` | Optional | Array of attributes objects | See user attributes object |
-| `events` | Optional | Array of event objects | See events object |
-| `purchases` | Optional | Array of purchase objects | See purchase object |
+| `attributes` | Optional | Array of attributes objects | See [user attributes object]({{site.baseurl}}/api/objects_filters/user_attributes_object/) |
+| `events` | Optional | Array of event objects | See [events object]({{site.baseurl}}/api/objects_filters/event_object/) |
+| `purchases` | Optional | Array of purchase objects | See [purchases object]({{site.baseurl}}/api/objects_filters/purchase_object/) |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
 
-### Request Components
-Note that for each of the request components listed below, one of `external_id`, `user_alias`, or `braze_id` is __required__.
-- [User Attributes Object]({{site.baseurl}}/api/objects_filters/user_attributes_object/)
-- [Events Object]({{site.baseurl}}/api/objects_filters/event_object/)
-- [Purchases Object]({{site.baseurl}}/api/objects_filters/purchase_object/)
+{% alert important %}
+For each of the request components listed above, one of `external_id`, `user_alias`, or `braze_id` is required.
+{% endalert %}
 
 {% alert note %}
 - When creating alias-only users through this endpoint, you must explicitly set the `_update_existing_only` flag to `false`.
-<br><br>
-- Updating the subscription status with this endpoint will not only update the user-specified by their external_id (e.g User1), but it will also update the subscription status of any users with the same email as that user (User1).
+- Updating the subscription status with this endpoint will not only update the user-specified by their `external_id` (e.g User1), but it will also update the subscription status of any users with the same email as that user (User1).
 {% endalert %}
 
 ## Example Request Body for Event Tracking
@@ -164,16 +161,6 @@ In the case of a success, any data that was not affected by an error in the _err
       <fatal error message>
     }
   ]
-}
-```
-
-### Queued Responses
-
-During times of maintenance, Braze might pause the real-time processing of the API. In these situations, the server will return an HTTP Accepted 202 response code and the following body, which indicates that we have received and queued the API call but have not immediately processed it. All scheduled maintenance will be posted to [http://status.braze.com](http://status.braze.com) ahead of time.
-
-```json
-{
-  "message" : "queued"
 }
 ```
 

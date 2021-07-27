@@ -1,7 +1,7 @@
 ---
 nav_title: December
 page_order: 2
-
+no_index: true
 page_type: update
 description: "This article contains release notes for December 2018."
 ---

@@ -21,6 +21,15 @@ Braze recommends that customers who use our News Feed tool move over to our Cont
 
 Content Cards typically sit in a feed of sorts (but not necessarily), and help you take advantage of the visual space by incorporating images and graphics that stand out. You can personalize the cards based on user actions, onboard your customers with a checklist, and much more!
 
+### Advantages of Using Content Cards
+
+Wondering about the benefits of using Content Cards vs. having your tech team build content into your app? Here are some advantages of using Content Cards:
+
+- **Easier segmentation and personalization:** Your user data lives in Braze, which makes it easy to define your audience and personalize your messages with Content Cards.
+- **Centralized reporting:** Content Card analytics are tracked in Braze, so you have insight into all of your campaigns in one centralized location.
+- **Cohesive customer journeys:** You can combine Content Cards with other channels in Braze to create consistent customer experiences. A popular use case is sending a push notification, then saving that notification as a Content Card in your app for anyone who didn't engage with the push. If the content is built directly into your app by your tech team, then it's siloed from the rest of your messaging.
+- **More control over the messaging experience:** While you'll still need your tech team to help with the initial setup of Content Cards, after that you'll be able to control the message, recipients, timing, and more straight from your Braze dashboard.
+
 ### Great Use Cases
 
 - Showcase new content.

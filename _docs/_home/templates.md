@@ -55,5 +55,6 @@ guide_menu_list:
     link: /docs/home/templates/use_case/
     fa_icon: fas fa-user-edit
 
+noindex: true
 
 ---

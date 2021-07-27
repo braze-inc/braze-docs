@@ -15,11 +15,11 @@ page_type: partner
 
 We offer [both](#integration-options) a side-by-side SDK integration for your Android, iOS, and web applications and a server-to-server integration for your backend services so that you can start building richer user profiles.
 
-If you're looking for information on the Currents integration with Segment, [click here]({{site.baseurl}}/partners/data_and_infrastructure_agility/customer_data_platform/segment/segment_for_currents/). If you're looking for more information about [Segment Personas]({{site.baseurl}}/partners/data_and_infrastructure_agility/customer_data_platform/segment/segment_personas/), which allows you to build segments in Segment and pass over to Braze as a Custom Attribute against a user profile.
+If you're looking for information on the Currents integration with Segment, [click here]({{site.baseurl}}/partners/data_and_infrastructure_agility/customer_data_platform/segment/segment_for_currents/). If you're looking for more information about [Segment Personas]({{site.baseurl}}/partners/data_and_infrastructure_agility/customer_data_platform/segment/segment_personas/), which allows you to build segments in Segment and pass over to Braze as a custom attribute against a user profile.
 
 ## Setup Overview
 
-To get going with your Segment/Braze integration:
+To get going with your Segment/Braze integration,
 1. Take note of and prepare for your integration by [adhering to the requirements and prerequisites](#prerequisites).
 2. Set up [Braze as a Destination](#connection-settings) in accordance with [your chosen integration type](#integration-options).
 3. If you're a new-to-Braze customer, you can relay historical data to Braze using [Segment Replays](#segment-replays).
@@ -106,9 +106,9 @@ To complete the side-by-side integration, please refer to Segment's detailed ins
 {% endtab %}
 {% tab Web or Javascript %}
 
-See and set up [mappings](#methods) to Segment's SDK for [Web / Analytics.js (Segment's JavaScript SDK)](https://github.com/segment-integrations/analytics.js-integration-appboy) on Braze's Github.
+See and set up [mappings](#methods) to Segment's SDK for [Web / Analytics.js (Segment's JavaScript SDK)](https://github.com/segmentio/analytics.js-integrations/tree/master/integrations/appboy) on Braze's Github.
 
-For Braze's Web SDK, [Segment's Analytics.js library](https://github.com/segment-integrations/analytics.js-integration-appboy) dynamically pulls in and initializes our Web SDK when you add Braze as a destination on your Segment dashboard. However, to use Braze's browser notification capabilities, please refer to Segment's [Web](https://segment.com/docs/connections/destinations/catalog/braze/#web){:target="_blank"} documentation.
+For Braze's Web SDK, [Segment's Analytics.js library](https://github.com/segmentio/analytics.js-integrations/tree/master/integrations/appboy) dynamically pulls in and initializes our Web SDK when you add Braze as a destination on your Segment dashboard. However, to use Braze's browser notification capabilities, please refer to Segment's [Web](https://segment.com/docs/connections/destinations/catalog/braze/#web){:target="_blank"} documentation.
 
 {% endtab %}
 {% endtabs %}
@@ -137,7 +137,7 @@ Currently, Braze's server-to-server integration with Segment __does not__ suppor
 
 ## Step 2B: Map Methods {#methods}
 
-Braze supports the [Identify](https://segment.com/docs/spec/identify/){:target="_blank"}, [Track](https://segment.com/docs/spec/track/){:target="_blank"}, and [Page](https://segment.com/docs/connections/sources/catalog/libraries/website/javascript/#page){:target="_blank"} (web) Segment methods; however, our REST APIs require you to include a [user ID][41]{:target="_blank"} when making these calls. Braze also supports Custom Attribute mapping using Segment's [Group](https://segment.com/docs/spec/group/){:target="_blank"} method.
+Braze supports the [Identify](https://segment.com/docs/spec/identify/){:target="_blank"}, [Track](https://segment.com/docs/spec/track/){:target="_blank"}, and [Page](https://segment.com/docs/connections/sources/catalog/libraries/website/javascript/#page){:target="_blank"} (web) Segment methods; however, our REST APIs require you to include a [user ID][41]{:target="_blank"} when making these calls. Braze also supports custom attribute mapping using Segment's [Group](https://segment.com/docs/spec/group/){:target="_blank"} method.
 
 ### Identify
 

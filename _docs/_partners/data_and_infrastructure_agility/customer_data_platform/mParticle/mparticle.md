@@ -46,22 +46,11 @@ Integrate the appropriate mParticle SDKs into your app based on your platform ne
 
 ### 2. Complete mParticle's Braze Event Kit Integration
 
+While the Braze SDK is not required for this mParticle integation, the following mParticle Appboy Kit must be installed to be able to forward data from your app to Braze.
+
 mParticle's [Braze Event Kit Integration Guide](https://docs.mparticle.com/integrations/braze/event/#kit-integration) will walk you through custom mParticle:Braze alignment instructions based on your messaging needs (Push, Location Tracking, etc.).
 
-### 3. Integrate the Braze SDK
-
-Integrate the appropriate Braze SDKs into your app based on your messaging needs.
-
-| Messaging Need | Details |
-|---|---|
-| In-App Messaging | Works automatically when the Braze Event Kit Integration (above) is completed successfully. |
-| News Feed / Content Cards | Implemented directly via Braze SDK ([iOS]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/content_cards/overview/), [Android]({{site.baseurl}}/developer_guide/platform_integration_guides/android/content_cards/overview/), [Web]({{site.baseurl}}/developer_guide/platform_integration_guides/web/content_cards/overview/)).
-| Push for Android | Follow the [mParticle Android Push Notification Integration Documentation](https://docs.mparticle.com/developers/sdk/android/push-notifications). |
-| Push for iOS | Follow the [Braze iOS Push Notification Integration Documentation]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/push_notifications/integration/). |
-|Push for Web | Works automatically when the Braze Event Kit Integration (above) is completed successfully. |
-{: .reset-td-br-1 .reset-td-br-2}
-
-### 4. Configure your mParticle dashboard to enable the Braze Kit.
+### 3. Configure your mParticle dashboard to enable the Braze Kit.
 
 ![mParticle Event Config UI][3]
 
@@ -100,9 +89,9 @@ Custom REST Endpoint: Set this to your relevant [REST API endpoint]({{site.baseu
 
 On Data Mapping - Not all data types that are supported on mParticle are supported by Braze.
 
-[Custom Event Properties]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events/) support string, numeric, boolean, or Date objects. It does not support arrays or nested objects.
+[Custom event properties]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events/) support string, numeric, boolean, or Date objects. It does not support arrays or nested objects.
 
-[Custom Attributes]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_attributes/) support string, numerical, boolean, date objects and arrays, but does  not support objects or nested objects.  
+[Custom attributes]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_attributes/) support string, numerical, boolean, date objects and arrays, but does  not support objects or nested objects.  
 
 
 {% endalert %}

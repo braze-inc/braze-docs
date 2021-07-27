@@ -5,6 +5,7 @@ page_order: 0
 page_type: solution
 description: "This help article walks you through troubleshooting steps if zero users are showing in your segment, but you anticipate more."
 tool: Segments
+no_index: true
 ---
 # Segment Is Showing No Users
 
@@ -21,7 +22,7 @@ The Segment statistics could be providing an estimate. The estimation is calcula
 
 ## Verify Data Transfer
 
-It is possible that the data you are filtering on is not being sent to Braze. To check which Custom events are being sent to Braze, select “Custom Events” on the left hand menu in the “Data” section. Select the Custom event along with the specific dates and App to see what data is actually being transferred to Braze. If you notice that ```0``` data is being sent to Braze, the next step is to evaluate how you are sending the events to Braze.
+It is possible that the data you are filtering on is not being sent to Braze. To check which custom events are being sent to Braze, click **Custom Events** on the left hand menu in the **Data** section. Select the custom event along with the specific dates and App to see what data is actually being transferred to Braze. If you notice that ```0``` data is being sent to Braze, the next step is to evaluate how you are sending the events to Braze.
 
 ![trouble9][29]
 

@@ -29,7 +29,7 @@ glossaries:
     description: Unique Daily Recipients. The number of users who received a particular message in a day. This number is received from Braze.
     calculation: Count
   - name: Sends or Messages Sent
-    description: The total number of messages sent in an Email Campaign. This number is received from Braze.
+    description: The total number of messages sent in an email campaign. This number is received from Braze.
     calculation: Count
   - name: "Deliveries"
     description: The total number of messages (Sends) successfully sent to and received by emailable parties.

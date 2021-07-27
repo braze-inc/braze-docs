@@ -72,7 +72,7 @@ Braze updates the user’s segment membership as data is sent back to our server
 If you no longer need or wish to retire a specific segment, you can archive it by going to the __Segments__ page, clicking on the appropriate gear, then selecting "Archive" from the drop-down that appears.
 
 {% alert warning %}
-When you archive a segment, any Campaigns or Canvases (even if the segment is only used in a single Canvas step) using it will __also be archived__. You will get a warning listing which Campaigns and Canvases are about to be archived by archiving the associated segment.
+When you archive a segment, any campaigns or Canvases (even if the segment is only used in a single Canvas step) using it will __also be archived__. You will get a warning listing which Campaigns and Canvases are about to be archived by archiving the associated segment.
 {% endalert %}
 
 You can unarchive the segment by navigating to it within Segments, then selecting Unarchive from the top right corner of its page.

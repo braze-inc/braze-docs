@@ -1,7 +1,7 @@
 ---
 nav_title: November
 page_order: 3
-
+no_index: true
 page_type: update
 description: "This article contains release notes for November 2018."
 ---
@@ -9,7 +9,7 @@ description: "This article contains release notes for November 2018."
 
 ### Canvas Entry Settings Wizard
 
-The Canvas UI will be simplified to prevent missed tasks and resulting errors. Canvas configurations, specifically, will now be displayed in a wizard, similar to the design of the Campaigns wizard. See the [updated Canvas documentation here]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/create_a_canvas/)!
+The Canvas UI will be simplified to prevent missed tasks and resulting errors. Canvas configurations, specifically, will now be displayed in a wizard, similar to the design of the **Campaigns** wizard. See the [updated Canvas documentation here]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/create_a_canvas/)!
 
 Want more on this new feature? [Check out our LAB course on the Entry Wizard here](https://lab.braze.com/the-new-canvas-entry-step/264889/scorm/20z5ij5ublxbk)!
 

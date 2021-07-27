@@ -39,7 +39,7 @@ Multiple filter example:
 
 ## Connected Audience Filters
 
-Combining multiple Custom Attribute filters will create a Connected Audience Filter, which will create a Connected Audience Filter when combined with `AND` and `OR` operators.
+Combining multiple custom attribute filters will create a Connected Audience Filter, which will create a Connected Audience Filter when combined with `AND` and `OR` operators.
 
 ### Custom Attribute Filter
 

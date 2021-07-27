@@ -34,7 +34,7 @@ Data included in the exports:
     - User ID
     - First Name
     - Last Name
-    - Timezone
+    - Time zone
     - City
     - Gender
     - Email Address

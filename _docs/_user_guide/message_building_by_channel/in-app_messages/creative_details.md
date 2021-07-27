@@ -37,6 +37,8 @@ If you are using the newest generation of in-app messages (Generation 3), you'll
 ### Images
 Our guidelines for images are more structured than those for text, as we want to ensure your messages display as-intended, and beautifully across phones, tablets, and computers of all models and sizes.
 
+In general, Braze recommends using images that fit into a 16:10 screen.
+
 - __All images must be less than 5MB.__
 - We only accept `PNG`, `JPG`, and `GIF` file types.
 - We recommend hosting images in the [Braze Media Library]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/media_library/) to enable the Braze SDK to download assets from our CDN for offline message display.
@@ -62,7 +64,7 @@ Our guidelines for images are more structured than those for text, as we want to
 
   | Layout | Asset Size | Notes |
   |--- | --- | ------ |
-  | Image + Text | 29:10 aspect ratio<br>Hi-Res 1200 x 415px<br> Min. 600 x 205px | Tall images will scale down and be horizontally centered. Wide images will be clipped on the left and right edges. |
+  | Image + Text | 29:10 aspect ratio<br>Hi-Res 1450 x 500px<br> Min. 600 x 205px | Tall images will scale down and be horizontally centered. Wide images will be clipped on the left and right edges. |
   | Image Only | Nearly any aspect ratio<br>Hi-Res up to 1200 x 2000px<br> Min. 600 x 600px | The message will resize to fit images of most aspect ratios. |
   {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
 

@@ -9,7 +9,7 @@ description: "This landing page is home to help articles related to common issue
 tool:
 - Campaigns
 - Canvas
-
+no_index: true
 guide_featured_title: "Popular Topics"
 guide_featured_list:
   - name: Why isn’t my Canvas sending?

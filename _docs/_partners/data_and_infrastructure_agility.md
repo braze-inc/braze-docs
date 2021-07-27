@@ -60,5 +60,9 @@ valid_partner_list:
 - name: Neura
   url: /docs/partners/data_and_infrastructure_agility/analytics/neura_insights/
   title: Insights
+- name: Nexla
+  url: /docs/partners/data_and_infrastructure_agility/workflow_automation/nexla/
+- name: Amperity
+  url: /docs/partners/data_and_infrastructure_agility/customer_data_platform/amperity/
 
 ---

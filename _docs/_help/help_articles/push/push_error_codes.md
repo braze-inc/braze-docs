@@ -8,6 +8,7 @@ channel: push
 platform:
 - iOS
 - Android
+no_index: true
 ---
 
 # Common Push Related Error Messages

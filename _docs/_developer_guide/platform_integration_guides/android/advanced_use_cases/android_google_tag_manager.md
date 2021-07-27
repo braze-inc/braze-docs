@@ -26,14 +26,14 @@ To get started, create a trigger that looks for an "Event Name" that equals `pla
 
 ![Event Name Trigger for events][3]
 
-Next, create a new Tag ("Function Call") and enter the Class Path of your [custom tag provider](#adding-android-google-tag-provider) described later in this article. 
+Next, create a new Tag ("Function Call") and enter the Class Path of your [custom tag provider](#adding-android-google-tag-provider) described later in this article.
 
-This tag will be triggered when you log the `played song` event we just created. 
+This tag will be triggered when you log the `played song` event we just created.
 
 In our example tag's custom parameters (key-value pairs), we've set `eventName` to `played song` - which will be the custom event name logged to Braze.
 
 {% alert important %}
-When sending a custom event, be sure to set `actionType` to `logEvent`, and set a value for `eventName` as shown in the screenshot below. 
+When sending a custom event, be sure to set `actionType` to `logEvent`, and set a value for `eventName` as shown in the screenshot below.
 
 The custom tag provider in our example will use these key to determine what action to take, and what event name to send to Braze when it receives data from Google Tag Manager.
 {% endalert %}
@@ -73,7 +73,7 @@ mFirebaseAnalytics!!logEvent("played song", params)
 
 ### Logging Custom Attributes
 
-Custom attributes are set via an `actionType` set to `customAttribute`. The Braze custom tag provider is expecting the custom attribute key/value to be set via `customAttributeKey` and `customAttributeValue`.
+Custom attributes are set via an `actionType` set to `customAttribute`. The Braze custom tag provider is expecting the custom attribute key-value to be set via `customAttributeKey` and `customAttributeValue`.
 
 {% tabs %}
 {% tab JAVA %}
@@ -127,7 +127,7 @@ mFirebaseAnalytics!!.logEvent("changeUser", params)
 
 With the tags and triggers set up, you will also need to implement Google Tag Manager in your Android app which can be found in Google's [documentation][2]
 
-Once Google Tag Manager is installed in your app, add a custom tag provider to call Braze SDK methods based on the tags you've configured within Google Tag Manager. 
+Once Google Tag Manager is installed in your app, add a custom tag provider to call Braze SDK methods based on the tags you've configured within Google Tag Manager.
 
 Be sure to note the "Class Path" to the file which - this is what you'll enter when setting up a Tag in the [Google Tag Manager][5] console.
 
@@ -140,7 +140,7 @@ The `actionType` we've supported in our example are `logEvent`, `customAttribute
 
 ```java
 public class BrazeGtmTagProvider implements CustomTagProvider {
-  private static final String TAG = AppboyLogger.getAppboyLogTag(BrazeGtmTagProvider.class);
+  private static final String TAG = BrazeLogger.getBrazeLogTag(BrazeGtmTagProvider.class);
   private static final String ACTION_TYPE_KEY = "actionType";
 
   // Custom Events
@@ -172,15 +172,15 @@ public class BrazeGtmTagProvider implements CustomTagProvider {
 
   @Override
   public void execute(Map<String, Object> map) {
-    AppboyLogger.i(TAG, "Got google tag manager parameters map: " + map);
+    BrazeLogger.i(TAG, "Got google tag manager parameters map: " + map);
 
     if (sApplicationContext == null) {
-      AppboyLogger.w(TAG, "No application context provided to this tag provider.");
+      BrazeLogger.w(TAG, "No application context provided to this tag provider.");
       return;
     }
 
     if (!map.containsKey(ACTION_TYPE_KEY)) {
-      AppboyLogger.w(TAG, "Map does not contain the Braze action type key: " + ACTION_TYPE_KEY);
+      BrazeLogger.w(TAG, "Map does not contain the Braze action type key: " + ACTION_TYPE_KEY);
       return;
     }
     String actionType = String.valueOf(map.remove(ACTION_TYPE_KEY));
@@ -196,73 +196,73 @@ public class BrazeGtmTagProvider implements CustomTagProvider {
         changeUser(map);
         break;
       default:
-        AppboyLogger.w(TAG, "Got unknown action type: " + actionType);
+        BrazeLogger.w(TAG, "Got unknown action type: " + actionType);
         break;
     }
   }
 
   private void logEvent(Map<String, Object> tagParameterMap) {
     String eventName = String.valueOf(tagParameterMap.remove(EVENT_NAME_VARIABLE));
-    Appboy.getInstance(sApplicationContext).logCustomEvent(eventName, parseMapIntoProperties(tagParameterMap));
+    Braze.getInstance(sApplicationContext).logCustomEvent(eventName, parseMapIntoProperties(tagParameterMap));
   }
 
-  private AppboyProperties parseMapIntoProperties(Map<String, Object> map) {
-    AppboyProperties appboyProperties = new AppboyProperties();
+  private BrazeProperties parseMapIntoProperties(Map<String, Object> map) {
+    BrazeProperties brazeProperties = new BrazeProperties();
     for (Map.Entry<String, Object> entry : map.entrySet()) {
       final Object value = entry.getValue();
       final String key = entry.getKey();
       if (value instanceof Boolean) {
-        appboyProperties.addProperty(key, (Boolean) value);
+        brazeProperties.addProperty(key, (Boolean) value);
       } else if (value instanceof Integer) {
-        appboyProperties.addProperty(key, (Integer) value);
+        brazeProperties.addProperty(key, (Integer) value);
       } else if (value instanceof Date) {
-        appboyProperties.addProperty(key, (Date) value);
+        brazeProperties.addProperty(key, (Date) value);
       } else if (value instanceof Long) {
-        appboyProperties.addProperty(key, (Long) value);
+        brazeProperties.addProperty(key, (Long) value);
       } else if (value instanceof String) {
-        appboyProperties.addProperty(key, (String) value);
+        brazeProperties.addProperty(key, (String) value);
       } else if (value instanceof Double) {
-        appboyProperties.addProperty(key, (Double) value);
+        brazeProperties.addProperty(key, (Double) value);
       } else {
-        AppboyLogger.w(TAG, "Failed to parse value into an AppboyProperties "
+        BrazeLogger.w(TAG, "Failed to parse value into an BrazeProperties "
             + "accepted type. Key: '" + key + "' Value: '" + value + "'");
       }
     }
 
-    return appboyProperties;
+    return brazeProperties;
   }
 
   private void setCustomAttribute(Map<String, Object> tagParameterMap) {
     String key = String.valueOf(tagParameterMap.get(CUSTOM_ATTRIBUTE_KEY));
     Object value = tagParameterMap.get(CUSTOM_ATTRIBUTE_VALUE_KEY);
 
-    AppboyUser appboyUser = Appboy.getInstance(sApplicationContext).getCurrentUser();
-    if (appboyUser == null) {
-      AppboyLogger.w(TAG, "AppboyUser was null. Returning.");
+    BrazeUser brazeUser = Braze.getInstance(sApplicationContext).getCurrentUser();
+    if (brazeUser == null) {
+      BrazeLogger.w(TAG, "BrazeUser was null. Returning.");
       return;
     }
 
     if (value instanceof Boolean) {
-      appboyUser.setCustomUserAttribute(key, (Boolean) value);
+      brazeUser.setCustomUserAttribute(key, (Boolean) value);
     } else if (value instanceof Integer) {
-      appboyUser.setCustomUserAttribute(key, (Integer) value);
+      brazeUser.setCustomUserAttribute(key, (Integer) value);
     } else if (value instanceof Long) {
-      appboyUser.setCustomUserAttribute(key, (Long) value);
+      brazeUser.setCustomUserAttribute(key, (Long) value);
     } else if (value instanceof String) {
-      appboyUser.setCustomUserAttribute(key, (String) value);
+      brazeUser.setCustomUserAttribute(key, (String) value);
     } else if (value instanceof Double) {
-      appboyUser.setCustomUserAttribute(key, (Double) value);
+      brazeUser.setCustomUserAttribute(key, (Double) value);
     } else if (value instanceof Float) {
-      appboyUser.setCustomUserAttribute(key, (Float) value);
+      brazeUser.setCustomUserAttribute(key, (Float) value);
     } else {
-      AppboyLogger.w(TAG, "Failed to parse value into a custom "
+      BrazeLogger.w(TAG, "Failed to parse value into a custom "
           + "attribute accepted type. Key: '" + key + "' Value: '" + value + "'");
     }
   }
 
   private void changeUser(Map<String, Object> tagParameterMap) {
     String userId = String.valueOf(tagParameterMap.get(CHANGE_USER_ID_VARIABLE));
-    Appboy.getInstance(sApplicationContext).changeUser(userId);
+    Braze.getInstance(sApplicationContext).changeUser(userId);
   }
 }
 ```
@@ -274,15 +274,15 @@ public class BrazeGtmTagProvider implements CustomTagProvider {
 class BrazeGtmTagProvider : CustomTagProvider {
 
   override fun execute(map: MutableMap<String, Any>) {
-    AppboyLogger.i(TAG, "Got google tag manager parameters map: $map")
+    BrazeLogger.i(TAG, "Got google tag manager parameters map: $map")
 
     if (sApplicationContext == null) {
-      AppboyLogger.w(TAG, "No application context provided to this tag provider.")
+      BrazeLogger.w(TAG, "No application context provided to this tag provider.")
       return
     }
 
     if (!map.containsKey(ACTION_TYPE_KEY)) {
-      AppboyLogger.w(TAG, "Map does not contain the Braze action type key: $ACTION_TYPE_KEY")
+      BrazeLogger.w(TAG, "Map does not contain the Braze action type key: $ACTION_TYPE_KEY")
       return
     }
     val actionType = map.remove(ACTION_TYPE_KEY).toString()
@@ -291,64 +291,64 @@ class BrazeGtmTagProvider : CustomTagProvider {
       LOG_EVENT_ACTION_TYPE -> logEvent(map)
       CUSTOM_ATTRIBUTE_ACTION_TYPE -> setCustomAttribute(map)
       CHANGE_USER_ACTION_TYPE -> changeUser(map)
-      else -> AppboyLogger.w(TAG, "Got unknown action type: $actionType")
+      else -> BrazeLogger.w(TAG, "Got unknown action type: $actionType")
     }
   }
 
   private fun logEvent(tagParameterMap: MutableMap<String, Any>) {
     val eventName = tagParameterMap.remove(EVENT_NAME_VARIABLE).toString()
-    Appboy.getInstance(sApplicationContext).logCustomEvent(eventName, parseMapIntoProperties(tagParameterMap))
+    Braze.getInstance(sApplicationContext).logCustomEvent(eventName, parseMapIntoProperties(tagParameterMap))
   }
 
-  private fun parseMapIntoProperties(map: Map<String, Any>): AppboyProperties {
-    val appboyProperties = AppboyProperties()
+  private fun parseMapIntoProperties(map: Map<String, Any>): BrazeProperties {
+    val brazeProperties = BrazeProperties()
     map.forEach { param ->
       val key = param.key
       val value = param.value
       when (value) {
-        is Boolean -> appboyProperties.addProperty(key, value)
-        is Int -> appboyProperties.addProperty(key, value)
-        is Date -> appboyProperties.addProperty(key, value)
-        is Long -> appboyProperties.addProperty(key, value)
-        is String -> appboyProperties.addProperty(key, value)
-        is Double -> appboyProperties.addProperty(key, value)
-        else -> AppboyLogger.w(TAG, "Failed to parse value into an AppboyProperties "
+        is Boolean -> brazeProperties.addProperty(key, value)
+        is Int -> brazeProperties.addProperty(key, value)
+        is Date -> brazeProperties.addProperty(key, value)
+        is Long -> brazeProperties.addProperty(key, value)
+        is String -> brazeProperties.addProperty(key, value)
+        is Double -> brazeProperties.addProperty(key, value)
+        else -> BrazeLogger.w(TAG, "Failed to parse value into an BrazeProperties "
             + "accepted type. Key: '" + key + "' Value: '" + value + "'")
       }
     }
 
-    return appboyProperties
+    return brazeProperties
   }
 
   private fun setCustomAttribute(tagParameterMap: Map<String, Any>) {
     val key = tagParameterMap[CUSTOM_ATTRIBUTE_KEY].toString()
     val value = tagParameterMap[CUSTOM_ATTRIBUTE_VALUE_KEY]
 
-    val appboyUser = Appboy.getInstance(sApplicationContext).currentUser
-    if (appboyUser == null) {
-      AppboyLogger.w(TAG, "AppboyUser was null. Returning.")
+    val brazeUser = Braze.getInstance(sApplicationContext).currentUser
+    if (brazeUser == null) {
+      BrazeLogger.w(TAG, "BrazeUser was null. Returning.")
       return
     }
 
     when (value) {
-      is Boolean -> appboyUser.setCustomUserAttribute(key, (value as Boolean?)!!)
-      is Int -> appboyUser.setCustomUserAttribute(key, (value as Int?)!!)
-      is Long -> appboyUser.setCustomUserAttribute(key, (value as Long?)!!)
-      is String -> appboyUser.setCustomUserAttribute(key, value as String?)
-      is Double -> appboyUser.setCustomUserAttribute(key, (value as Double?)!!)
-      is Float -> appboyUser.setCustomUserAttribute(key, (value as Float?)!!)
-      else -> AppboyLogger.w(TAG, "Failed to parse value into a custom "
+      is Boolean -> brazeUser.setCustomUserAttribute(key, (value as Boolean?)!!)
+      is Int -> brazeUser.setCustomUserAttribute(key, (value as Int?)!!)
+      is Long -> brazeUser.setCustomUserAttribute(key, (value as Long?)!!)
+      is String -> brazeUser.setCustomUserAttribute(key, value as String?)
+      is Double -> brazeUser.setCustomUserAttribute(key, (value as Double?)!!)
+      is Float -> brazeUser.setCustomUserAttribute(key, (value as Float?)!!)
+      else -> BrazeLogger.w(TAG, "Failed to parse value into a custom "
           + "attribute accepted type. Key: '" + key + "' Value: '" + value + "'")
     }
   }
 
   private fun changeUser(tagParameterMap: Map<String, Any>) {
     val userId = tagParameterMap[CHANGE_USER_ID_VARIABLE].toString()
-    Appboy.getInstance(sApplicationContext).changeUser(userId)
+    Braze.getInstance(sApplicationContext).changeUser(userId)
   }
 
   companion object {
-    private val TAG = AppboyLogger.getAppboyLogTag(BrazeGtmTagProvider::class.java!!)
+    private val TAG = BrazeLogger.getBrazeLogTag(BrazeGtmTagProvider::class.java!!)
     private val ACTION_TYPE_KEY = "actionType"
 
     // Custom Events
