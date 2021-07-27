@@ -190,7 +190,7 @@ If you have a use case where you need to make batch updates to the `users/track`
 Refer to the following sample request with the `X-Braze-Bulk` header:
 
 ```
-curl --location --request POST 'https://anna.braze.com/users/track' \
+curl --location --request POST 'https://rest.iad-01.braze.com/users/track' \
 --header 'Content-Type: application/json' \
 --header 'X-Braze-Bulk: true' \
 --header 'Authorization: Bearer YOUR-API-KEY-HERE' \
