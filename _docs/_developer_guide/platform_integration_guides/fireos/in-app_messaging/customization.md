@@ -823,7 +823,7 @@ class GlideIntegrationApplication : Application() {
 
 Braze doesn't support displaying in-app messages in [Android Dialogs][85] at this time.
 
-## Youtube in HTML In-App messages
+## Youtube in HTML In-App Messages
 
 Youtube and other HTML5 content can play in HTML in-app messages. This requires hardware acceleration to be enabled in the Activity where the in-app message is being displayed, please see the [Android developer guide][84] for more details. Hardware acceleration is only available on Android API versions 11 and above.
 

@@ -21,6 +21,8 @@ description: "This article outlines details about the Users by Segment Braze end
 
 This endpoint allows you to export all the users within a segment. User data is exported as multiple files of user JSON objects separated by new lines (i.e. one JSON object per line).
 
+Note that a company may run at most one export per segment using this endpoint at a given time. Please wait for your export to complete before retrying. 
+
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#cfa6fa98-632c-4f25-8789-6c3f220b9457 {% endapiref %}
 
 {% alert important %}

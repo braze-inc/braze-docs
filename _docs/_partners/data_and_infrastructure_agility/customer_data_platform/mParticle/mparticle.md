@@ -89,9 +89,9 @@ Custom REST Endpoint: Set this to your relevant [REST API endpoint]({{site.baseu
 
 On Data Mapping - Not all data types that are supported on mParticle are supported by Braze.
 
-[Custom Event Properties]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events/) support string, numeric, boolean, or Date objects. It does not support arrays or nested objects.
+[Custom event properties]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events/) support string, numeric, boolean, or Date objects. It does not support arrays or nested objects.
 
-[Custom Attributes]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_attributes/) support string, numerical, boolean, date objects and arrays, but does  not support objects or nested objects.  
+[Custom attributes]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_attributes/) support string, numerical, boolean, date objects and arrays, but does  not support objects or nested objects.  
 
 
 {% endalert %}

@@ -19,4 +19,8 @@ guide_featured_list:
   - name: Segment Analytics Tracking
     link: /docs/user_guide/data_and_analytics/tracking/segment_analytics_tracking/
     fa_icon: fas fa-chart-bar
+  - name: Open Pixel and Click Tracking
+    link: /docs/user_guide/data_and_analytics/tracking/email_tracking/
+    fa_icon: fas fa-user
+    
 ---

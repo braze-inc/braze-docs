@@ -22,7 +22,7 @@ Attribute triggers allow you to send action-based messages when a user's subscri
 - Boolean, integer, string, or date custom attribute values change to any value.
 - Boolean, integer, or string custom attribute values change to a specific value.
 
-To start using attribute triggers, create a Campaign or Canvas step and select action-based delivery. Then, select the attribute trigger that you'd like to use.
+To start using attribute triggers, create a campaign or Canvas step and select action-based delivery. Then, select the attribute trigger that you'd like to use.
 
 ![attribute triggers][1]
 

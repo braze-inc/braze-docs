@@ -38,13 +38,13 @@ Some new partners have joined our Alloys program and have been added to our Docs
 
 ## Campaign Details Improvement
 
-Expanded Campaign details are now shown in the ... wait for it ... Campaign Details section of the Campaign Page!
+Expanded campaign details are now shown in the ... wait for it ... **Campaign Details** section of the **Campaign** Page!
 
 ![Campaign Details]({% image_buster /assets/img/campaign_details.png %})
 
 ## Show Only Mine in Segments & Canvas
 
-The "Only Show Mine" check filter on the Campaigns page has proven to be wildly popular! As a result, we're also adding this option to the Canvas and Segment lists!
+The "Only Show Mine" check filter on the **Campaigns** page has proven to be wildly popular! As a result, we're also adding this option to the Canvas and Segment lists!
 
 ### Advancement Behavior
 You can now choose [when a user advances]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/advancement/) from one Canvas step to the next - options are "Message Sent" and "Entire Audience After Delay".
@@ -85,14 +85,14 @@ Look at [multiple campaigns at one time to compare their relative performance]({
 ## Template Dispatch ID into Messages with Liquid
 
 {% alert update %}
-Behavior for `dispatch_id` differs between Canvas and Campaigns because Braze treats Canvas steps (except for Entry Steps, which can be scheduled) as triggered events, even when they are "scheduled". [Learn more about `dispatch_id` behavior in Canvas and Campaigns here]({{site.baseurl}}/help/help_articles/data/dispatch_id/).
+Behavior for `dispatch_id` differs between Canvas and campaigns because Braze treats Canvas steps (except for Entry Steps, which can be scheduled) as triggered events, even when they are "scheduled". [Learn more about `dispatch_id` behavior in Canvas and campaigns here]({{site.baseurl}}/help/help_articles/data/dispatch_id/).
 
 _Update noted in August 2019._
 {% endalert %}
 
 If you want to track the dispatch of a message from within the message (in a URL, for example), you can template in the `dispatch_id`. You can find the formatting for this in our list of Supported Personalization Tags, under [Canvas Attributes]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/supported_personalization_tags/).
 
-This behaves just like `api_id`, in that since the `api_id` isn't available at Campaign creation, it is templated in as a placeholder and will preview as `dispatch_id_for_unsent_campaign`. The id is generated before the message is sent, and will be included in as send time.
+This behaves just like `api_id`, in that since the `api_id` isn't available at campaign creation, it is templated in as a placeholder and will preview as `dispatch_id_for_unsent_campaign`. The id is generated before the message is sent, and will be included in as send time.
 
 {% alert warning %}
 Liquid templating of `dispatch_id_for_unsent_campaign` does not work with in-app messages, since in-app messages don't have a `dispatch_id`.
@@ -100,8 +100,8 @@ Liquid templating of `dispatch_id_for_unsent_campaign` does not work with in-app
 
 ## "Show Only Mine" Setting Persists
 
-The "Show Only Mine" filter on the Campaign grid will remain "on" any time you visit the Campaigns page.
+The "Show Only Mine" filter on the campaign grid will remain "on" any time you visit the **Campaigns** page.
 
 ## A/B Testing Updates
 
-You can send a one-time [A/B test]({{site.baseurl}}/user_guide/engagement_tools/campaigns/testing_and_more/multivariate_testing/) with up to eight variants (and optional control) to a user-specified percentage of a Campaign's audience, and then send the best variant to the remaining audience at a pre-scheduled time.
+You can send a one-time [A/B test]({{site.baseurl}}/user_guide/engagement_tools/campaigns/testing_and_more/multivariate_testing/) with up to eight variants (and optional control) to a user-specified percentage of a campaign's audience, and then send the best variant to the remaining audience at a pre-scheduled time.

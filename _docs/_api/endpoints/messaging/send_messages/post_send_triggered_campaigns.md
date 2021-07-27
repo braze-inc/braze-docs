@@ -1,5 +1,5 @@
 ---
-nav_title: "POST: Send Campaign Messages via API Triggered Delivery"
+nav_title: "POST: Send Campaign Messages via API-Triggered Delivery"
 page_order: 4
 
 layout: api_page
@@ -9,17 +9,17 @@ platform: API
 tool:
   - Campaigns
 
-description: "This article outlines details about the Send Campaign Messages via API Triggered Delivery Braze endpoint."
+description: "This article outlines details about the Send Campaign Messages via API-Triggered Delivery Braze endpoint."
 ---
 {% api %}
-# Sending Campaign Messages via API Triggered Delivery
+# Sending Campaign Messages via API-Triggered Delivery
 {% apimethod post core_endpoint|https://www.braze.com/docs/core_endpoints %} 
 /campaigns/trigger/send
 {% endapimethod %}
 
-API Triggered Delivery allows you to house message content inside of the Braze dashboard while dictating when a message is sent, and to whom via your API.
+API-triggered delivery allows you to house message content inside of the Braze dashboard while dictating when a message is sent, and to whom via your API.
 
-The send endpoint allows you to send immediate, ad-hoc messages to designated users. If you are targeting a segment, a record of your request will be stored in the [Developer Console](https://dashboard.braze.com/app_settings/developer_console/activitylog/). Please note that to send messages with this endpoint, you must have a Campaign ID, created when you build an [API Triggered Campaign]({{site.baseurl}}/api/api_campaigns/).
+The send endpoint allows you to send immediate, ad-hoc messages to designated users. If you are targeting a segment, a record of your request will be stored in the [Developer Console](https://dashboard.braze.com/app_settings/developer_console/activitylog/). Please note that to send messages with this endpoint, you must have a Campaign ID created when you build an [API-triggered campaign]({{site.baseurl}}/api/api_campaigns/).
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#aef185ae-f591-452a-93a9-61d4bc023b05 {% endapiref %}
 
@@ -155,7 +155,7 @@ Message sending endpoint responses will include the message’s `dispatch_id` fo
 
 __Using the Attributes Object in Campaigns__
 
-Braze has a Messaging Object called `Attributes` that will allow you to add, create, or update attributes and values for a user before you send them an API Triggered Campaigns using the `campaign/trigger/send` endpoint as this API call will process the User Attributes object before it processes and sends the campaign. This helps minimize the risk of there being issues caused by [race conditions]({{site.baseurl}}/help/best_practices/race_conditions/). 
+Braze has a Messaging Object called `Attributes` that will allow you to add, create, or update attributes and values for a user before you send them an API-triggered campaigns using the `campaign/trigger/send` endpoint as this API call will process the User Attributes object before it processes and sends the campaign. This helps minimize the risk of there being issues caused by [race conditions]({{site.baseurl}}/help/best_practices/race_conditions/). 
 
 {% alert important %}
 Looking for Create Send Endpoint for Canvases? Check out the documentation [here]({{site.baseurl}}/api/endpoints/messaging/send_messages/post_send_triggered_canvases/#create-send-endpoint).

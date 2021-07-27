@@ -31,7 +31,7 @@ In-app messages don't deliver outside of the user's app and won't intrude on the
 - App Upgrades/Updates
 - Giveaways & Sweepstakes
 
-To see examples of in-app messages, check out our [Client Integration Gallery][53].
+To see examples of in-app messages, check out our [Case Studies][53].
 
 ## In-App Message Types
 
@@ -105,4 +105,4 @@ The following example shows a paginated HTML in-app message:
 [17]: {{site.baseurl}}/developer_guide/platform_integration_guides/web/in_app_messaging/#modal-in-app-messages
 [41]: {{site.baseurl}}/developer_guide/platform_integration_guides/web/in_app_messaging/#full-in-app-messages
 [42]: {{site.baseurl}}/developer_guide/platform_integration_guides/web/in_app_messaging/#html-in-app-messages
-[53]: {{site.baseurl}}/help/best_practices/client_integration_gallery/#client-integration-iam
+[53]: https://www.braze.com/customers

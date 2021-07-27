@@ -72,10 +72,37 @@ For new message variants, any existing link template can be used from the __Link
 
 For any email message variation set up before this feature was enabled, the existing link templates will still be present. However, if the message variation is edited, the link templates will need to be reapplied.
 
+
 ## Link Segmentation
-Two new segmentation filters are now available, allowing you to create segmentation filters based on clicking a specific tracked alias. The filter only displays campaigns or Canvases that have tracked aliases present.
+
+Retargeting of aliases is now available as a segmentation filter. The two new filters allow you to create segmentation filters based on your customers clicking a specific tracked alias, from either an email campaign or Canvas step. The filter only displays campaigns or Canvases that have tracked aliases present.
+
+### Tracking a Link
+
+When composing your email message, a new column will be present in the __Link Management__ tab. Here, you can indicate to Braze which alias you would like to be 'tracked' for segmentation purposes. Only aliases that you have indicated to be tracked will be present in segmentation filters. Please note that tracked aliases are only for segmentation purposes and will have no impact on your link being tracked for reporting purposes. 
+
+#### Untracking a Link
+Untracking a link will not deallocate existing segments with the filter to the untracked alias. The old data will remain on the user profiles until they are evicted by newer data. The following segmentation filters will continue to exist but new segments cannot be created with that filter.
+
+### Segment Filters
+
+![link_aliasing_segmentation_filters][5]
+
+#### Clicked Alias in Campaign
+Retarget users based on the specific alias that was clicked in a campaign. Only the campaigns that have aliases which were tracked will be reflected here.
+
+#### Clicked Alias in Canvas Step
+Retarget users based on the specific alias that was clicked in a Canvas step. A pipe delimited filter option displays the Canvas and Canvas step, followed by the alias within the Canvas step. Only Canvas steps with tracked aliases will be shown here.
+
+{% alert tip%}
+Aliases are unique per campaign message variant or Canvas step. Thus, you must first select the campaign, Canvas, or Canavas Step prior to selecting your alias.
+{% endalert %}
+
+### Action Based Filters
+
+![link_aliasing_action_based_filters][6]
  
-In addition to creating segment filters, you can also create action-based messages targeting any link (tracked or not tracked) across any email campaign or Canvas step. 
+In addition to creating segment filters, you can also create action-based messages targeting any link (tracked or not tracked) across any email campaign or Canvas step.
 
 ## Tracking and Reporting
 
@@ -87,6 +114,52 @@ For segmentation purposes, only 100 links can be tracked per app group by defaul
 Link reporting will now be indexed by the `alias` rather than top-level domains and/or full URLs. 
 
 ![link_aliasing_click_table][1]
+
+### Currents Event Changes
+{% api %}
+Email Clicks Events
+
+{% apitags %}
+Email, Clicks
+{% endapitags %}
+
+This event occurs when a user clicks an email. Multiple events may be generated for the same campaign if a user clicks multiple times or clicks different links within the email.
+
+```json
+// Email Click: users.messages.email.Click
+{
+  "id": (string) unique id of this event,
+  "user_id": (string) Braze user id of the user,
+  "external_user_id": (string) External ID of the user,
+  "time": (int) UTC time of the event in seconds since the epoch,
+  "timezone": (string) IANA time zone of the user at the time of the event,
+  "campaign_id": (string) id of the campaign if from a campaign,
+  "campaign_name": (string) name of the campaign,
+  "message_variation_id": (string) id of the message variation if from a campaign,
+  "canvas_id": (string) id of the Canvas if from a Canvas,
+  "canvas_name": (string) name of the Canvas,
+  "canvas_variation_id": (string) id of the Canvas variation the user is in if from a Canvas,
+  "canvas_variation_name": (string) name of the Canvas variation the user is in if from a Canvas,
+  "canvas_step_id": (string) id of the step for this message if from a Canvas,
+  "canvas_step_name": (string) name of the step for this message if from a Canvas,
+  "send_id": (string) id of the message if specified for the campaign (See Send Identifier under API Identifier Types),
+  "dispatch_id": (string) id of the message dispatch (unique id for each 'transmission' sent from the Braze platform). Users who are sent a schedule message get the same dispatch_id. Action-based or API-triggered messages get a unique dispatch_id per user.,
+  "email_address": (string) email address for this event,
+  "url": (string) the url that was clicked (Email Click events only),
+  "user_agent": (string) description of the user's system and browser for the event (Email Click, Open, and MarkAsSpam events only),
+  "ip_pool": (string) IP pool used for message sending,
+  "link_id": (string) unique value generated by Braze for the URL,
+  "link_alias": (string) alias name set when the message was sent
+}
+```
+
+{% alert update %}
+The behavior for `dispatch_id` differs between Canvas and campaigns because Braze treats Canvas steps (except for Entry Steps, which can be scheduled) as triggered events, even when they are "scheduled". [Learn more about `dispatch_id` behavior in Canvas and campaigns here]({{site.baseurl}}/help/help_articles/data/dispatch_id/).
+
+_Update noted in August 2019._
+{% endalert %}
+
+{% endapi %}
 
 ## Things to Note
 
@@ -110,3 +183,5 @@ The following endpoints are available to extract the `alias` set in each message
 [2]: {% image_buster /assets/img/link_aliasing_composer.png %}
 [3]: {{site.baseurl}}/get_campaign_link_alias/ 
 [4]: {{site.baseurl}}/get_canvas_link_alias/
+[5]: {% image_buster /assets/img/link_aliasing_segmentation_filters.png %}
+[6]: {% image_buster /assets/img/link_aliasing_action_based_filters.png %}

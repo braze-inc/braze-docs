@@ -66,10 +66,10 @@ You can export the following data from Braze to Segment:
 | News Feed Card Viewed          | User viewed a Card within the native Braze News Feed. |
 | News Feed Card Clicked         | User clicked on a Card within the native Braze News Feed. |
 | Webhook Sent                   | A webhook message was sent. |
-| Campaign Converted             | User performed a conversion event for a Campaign within its conversion window. |
+| Campaign Converted             | User performed a conversion event for a campaign within its conversion window. |
 | Canvas Converted               | User performed a conversion event for a Canvas within its conversion window. |
 | Canvas Entered                 | User was entered into a Canvas. |
-| Campaign Control Group Entered | User was enrolled in a Campaign control group. |
+| Campaign Control Group Entered | User was enrolled in a campaign control group. |
 | Application Uninstalled        | User uninstalled the App. |
 {: .reset-td-br-1 .reset-td-br-2}
 
@@ -79,10 +79,10 @@ The following properties will be included with all Braze Events sent to Segment:
 | ---------------------- | -------- | ----        |
 | `app_id`               | `String` | The API Identifier of the App on which a user received a message or performed an action, if applicable. |
 | `send_id`              | `String` | The id of the message if specified for the campaign, if applicable. |
-| `dispatch_id`          | `String` | The id of the message dispatch (unique id for each 'transmission' sent from the Braze platform). Users who are sent a schedule message get the same dispatch_id. Action-based or API triggered messages get a unique dispatch_id per user. |
-| `campaign_id`          | `String` | The API Identifier of the Campaign associated with the event, if applicable. |
-| `campaign_name`        | `String` | The name of the Campaign associated with the event, if applicable. |
-| `message_variation_id` | `String` | The API Identifier of the Message Variation for the Campaign associated with the event, if applicable. |
+| `dispatch_id`          | `String` | The id of the message dispatch (unique id for each 'transmission' sent from the Braze platform). Users who are sent a schedule message get the same dispatch_id. Action-based or API-triggered messages get a unique dispatch_id per user. |
+| `campaign_id`          | `String` | The API Identifier of the campaign associated with the event, if applicable. |
+| `campaign_name`        | `String` | The name of the campaign associated with the event, if applicable. |
+| `message_variation_id` | `String` | The API Identifier of the Message Variation for the campaign associated with the event, if applicable. |
 | `canvas_id`            | `String` | The API Identifier of the Canvas associated with the event, if applicable. |
 | `canvas_name`          | `String` | The name of the Canvas associated with the event, if applicable. |
 | `canvas_variation_id`  | `String` | The API Identifier of the Canvas Variation associated with the event, if applicable.                           |
@@ -97,7 +97,7 @@ The following properties will be included with all Braze Events sent to Segment:
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
 
 {% alert update %}
-The behavior for `dispatch_id` differs between Canvas and Campaigns because Braze treats Canvas steps (except for Entry Steps, which can be scheduled) as triggered events, even when they are "scheduled". [Learn more about `dispatch_id` behavior in Canvas and Campaigns here]({{site.baseurl}}/help/help_articles/data/dispatch_id/).
+The behavior for `dispatch_id` differs between Canvas and campaigns because Braze treats Canvas steps (except for Entry Steps, which can be scheduled) as triggered events, even when they are "scheduled". [Learn more about `dispatch_id` behavior in Canvas and campaigns here]({{site.baseurl}}/help/help_articles/data/dispatch_id/).
 
 _Update noted in August 2019._
 {% endalert %}

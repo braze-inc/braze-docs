@@ -57,7 +57,7 @@ properties:{
   "r_details" : {
     "name" : "McDonalds",
     "identifier" : "12345678",
-    "location" ; {
+    "location" : {
       "city" : "Montclair",
       "state" : "NJ"
     }

@@ -16,6 +16,24 @@ Custom attributes are a collection of your users' unique traits. Custom attribut
 
 All data stored on the **User Profile**, including custom attribute data, is retained indefinitely as long as each profile is active.
 
+## Setting Custom Attributes
+
+Listed below are the methods across various platforms that are used to set custom attributes.
+
+- [Android]({{site.baseurl}}/developer_guide/platform_integration_guides/android/analytics/setting_custom_attributes/)
+- [iOS]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/analytics/setting_custom_attributes/)
+- [Web]({{site.baseurl}}/developer_guide/platform_integration_guides/web/analytics/setting_custom_attributes/)
+- [FireOS]({{site.baseurl}}/developer_guide/platform_integration_guides/fireos/analytics/setting_custom_attributes/)
+- **React Native**: 
+    - [Android/FireOS]({{site.baseurl}}/developer_guide/platform_integration_guides/react_native/android_and_fireos/analytics/attribute_tracking/)
+    - [iOS]({{site.baseurl}}/developer_guide/platform_integration_guides/react_native/ios/analytics/attribute_tracking/)
+- [Unity]({{site.baseurl}}/developer_guide/platform_integration_guides/unity/Analytics/setting_custom_attributes/)
+- [Windows Universal]({{site.baseurl}}/developer_guide/platform_integration_guides/windows_universal/analytics/setting_custom_attributes/)
+- **Xamarin**: 
+    - [Android/FireOS]({{site.baseurl}}/developer_guide/platform_integration_guides/xamarin/android_and_fireos/analytics/#setting-custom-attributes)
+    - [iOS]({{site.baseurl}}/developer_guide/platform_integration_guides/xamarin/ios/analytics/#setting-custom-attributes)
+- [Roku]({{site.baseurl}}/developer_guide/platform_integration_guides/roku/analytics/setting_custom_attributes/)
+
 ## Custom Attribute Data Types
 
 Custom attributes are extraordinarily flexible tools that allow for great targeting.
