@@ -58,4 +58,4 @@ AppboyReactUtils.sharedInstance()?.populateInitialUrl(fromLaunchOptions: launchO
 
 [1]: {{site.baseurl}}/developer_guide/platform_integration_guides/ios/initial_sdk_setup/cocoapods/#cocoapods-integration
 [2]: {{site.baseurl}}/developer_guide/platform_integration_guides/ios/advanced_use_cases/manual_sdk_integration/
-[3]: {{site.baseurl}}/developer_guide/platform_integration_guides/ios/initial_sdk_setup/
+[3]: {{site.baseurl}}/developer_guide/platform_integration_guides/ios/initial_sdk_setup/overview/

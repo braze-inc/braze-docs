@@ -51,9 +51,9 @@ Calendar Days are used when you select "days" or "weeks" under `Frequency Cappin
 
 ### Company & Local Time
 
-The current Calendar Day in the company timezone counts as day `0`.
+The current Calendar Day in the company time zone counts as day `0`.
 
-`Send in 1 Calendar days at 11:05AM company time` or `send in 1 Calendar days at 11:05AM local time` would add `1` day to the current calendar day in the company timezone or local timezone, respectively, then schedule the message at the next upcoming 11:05AM Company Time.
+`Send in 1 Calendar days at 11:05AM company time` or `send in 1 Calendar days at 11:05AM local time` would add `1` day to the current calendar day in the company time zone or local time zone, respectively, then schedule the message at the next upcoming 11:05AM Company Time.
 
 If the Company or Local time is Pacific Time, and the user enters the Canvas step at 8:00PM PT on 4/13, Braze will schedule this Canvas step for 11:05 am PT on 4/14.
 

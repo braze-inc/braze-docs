@@ -29,7 +29,7 @@ If your use cases require exactly-once delivery, you can use the unique identifi
 
 ## Timestamps
 
-All timestamps exported by Currents are sent in the UTC timezone. For some events where it is available, a timezone field is also included, which delivers the IANA format of the user's local timezone at the time of the event.
+All timestamps exported by Currents are sent in the UTC time zone. For some events where it is available, a time zone field is also included, which delivers the IANA format of the user's local time zone at the time of the event.
 
 ## Avro
 
