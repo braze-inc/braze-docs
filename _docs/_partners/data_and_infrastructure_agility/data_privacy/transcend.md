@@ -9,7 +9,7 @@ page_type: partner
 
 # Transcend
 
-> Transcend is the data privacy infrastructure that makes it simple for companies to give their users control over their personal data. Transcend automatically fulfills data subject requests inside companies across all of their data systems and vendors. Transcend also provides their end-users with a control panel, or "Privacy Center", hosted at `privacy.\<company\>.com` where users can manage their privacy preferences, export their data, or delete it. By making data subject requests painless for companies, Transcend puts users everywhere in the driver's seat of their personal data.
+> Transcend is a data privacy infrastructure that makes it simple for companies to give their users control over their personal data, automatically fullfiling data subject requests inside companies across all of their data systems and vendors. Transcend provides their end-users with a control panel, or "Privacy Center", hosted at `privacy.\<company\>.com` where users can manage their privacy preferences, export their data, or delete it. By making data subject requests painless for companies, Transcend puts users everywhere in the driver's seat of their personal data.
 
 The Braze and Transcend partnership helps users automate privacy requests by orchestrating data across dozens of data systems. Ultimately, this helps teams comply with regulations like GDPR and CCPA and puts individuals in the driver's seat when it comes to their data.
 
@@ -18,7 +18,7 @@ The Braze and Transcend partnership helps users automate privacy requests by orc
 | Prerequisites | Origin | Access | Description |
 |---|---|---|---|
 | Transcend Account & Account Information | Transcend | [https://app.transcend.io/](https://app.transcend.io/) | An active Transcend account with admin privileges is required to utilize the Braze integration. |
-| Braze API Key | Braze | You will need to create a new API key.<br><br>This can be created in the __Developer Console -> API Settings -> Create New API Key__ with __users.track__ permissions. | This API key will be used when connecting the Braze Data Silo to the Transcend platform. |
+| Braze API Key | Braze | You will need to create a new API key.<br><br>This can be created in the __Developer Console -> API Settings -> Create New API Key__ with __users.track__ permissions. | This API key will be used when connecting the Braze data silo to the Transcend platform. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
 
 ## Transcend and Braze Integration
@@ -43,14 +43,13 @@ Transcend recommends testing requests across your Data Map before you start proc
 
 1. Go to __Privacy Center__ and click __View your Privacy Center__.
 2. From your __Privacy Center__, click __Take Control__, then __Download my data__. You'll need to enter your email or login to authenticate yourself before submitting the request.
-3. Check your email for a message from Transcend. You'll be asked to click on a verification link to verify the request. Confirm your download request.
+3. Check your email for a message from Transcend. You'll be asked to click on a verification link to verify the request.
 4. Next, back in the __Admin Dashboard__, navigate to the __Incoming Requests__ tab, and select your request. If you don't see the request here, contact Transcend at [support@transcend.io](mailto:support@transcend.io).
 5. Once you've clicked into your request, navigate to the __Data Silos__ tab and select __Braze__. Inspect and confirm the data returned.
 6. Finally, navigate to the __Report tab__ and click __Approve and Send__. You should receive the report at the email address you submitted with the request.
 
 ### Step 3: Removing the Braze integration
 
-To remove the Braze data silo from your __Data Map__, navigate to your __Data Map__, and click into __Braze__. At the bottom of the screen, expand __Remove Braze__. Click __Remove Silo__. You'll be prompted to confirm that you'd like to remove the silo; click __Ok__. Confirm the silo has been removed by navigating back to your __Data Map__.
+To remove the Braze data silo from your __Data Map__, navigate to your __Data Map__, and click into __Braze__. At the bottom of the screen, expand __Remove Braze__, and click __Remove Silo__. You'll be prompted to confirm that you'd like to remove the silo; click __Ok__. Confirm the silo has been removed by navigating back to your __Data Map__.
 
 [1]: {{site.baseurl}}/developer_guide/rest_api/basics/#endpoints)
-{"mode":"full","isActive":false}
