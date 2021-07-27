@@ -653,7 +653,6 @@ This section applies to integrations which use the Braze SDK's default Content C
 
 {% include archive/android/gifs.md channel="Content Cards" %}
 
-
 [7]: https://appboy.github.io/appboy-android-sdk/javadocs/com/appboy/models/cards/Card.html#logClick--
 [8]: https://appboy.github.io/appboy-android-sdk/javadocs/com/appboy/models/cards/Card.html#logImpression--
 [36]: https://appboy.github.io/appboy-android-sdk/javadocs/com/appboy/models/cards/Card.html#getExtras--
