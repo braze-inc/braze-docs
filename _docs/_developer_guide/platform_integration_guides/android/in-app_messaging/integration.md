@@ -12,7 +12,7 @@ channel:
 
 ## Step 1: Braze In-App Message Manager Registration
 
-In-App Message display is managed by the [`AppboyInAppMessageManager`][34] class. Every activity in your app must be registered with the `AppboyInAppMessageManager` to allow it to add in-app message views to the view hierarchy. There are two ways to accomplish this:
+In-App Message display is managed by the [`BrazeInAppMessageManager`][34] class. Every activity in your app must be registered with the `BrazeInAppMessageManager` to allow it to add in-app message views to the view hierarchy. There are two ways to accomplish this:
 
 ### Activity Lifecycle Callback Integration (Recommended)
 
@@ -32,14 +32,14 @@ In your [`Application.onCreate()`][82], call [`ensureSubscribedToInAppMessageEve
 {% tab JAVA %}
 
 ```java
-AppboyInAppMessageManager.getInstance().ensureSubscribedToInAppMessageEvents(context);
+BrazeInAppMessageManager.getInstance().ensureSubscribedToInAppMessageEvents(context);
 ```
 
 {% endtab %}
 {% tab KOTLIN %}
 
 ```kotlin
-AppboyInAppMessageManager.getInstance().ensureSubscribedToInAppMessageEvents(context)
+BrazeInAppMessageManager.getInstance().ensureSubscribedToInAppMessageEvents(context)
 ```
 
 {% endtab %}
@@ -54,9 +54,9 @@ In every activity where in-app messages can be shown, [`registerInAppMessageMana
 @Override
 public void onResume() {
   super.onResume();
-  // Registers the AppboyInAppMessageManager for the current Activity. This Activity will now listen for
+  // Registers the BrazeInAppMessageManager for the current Activity. This Activity will now listen for
   // in-app messages from Braze.
-  AppboyInAppMessageManager.getInstance().registerInAppMessageManager(activity);
+  BrazeInAppMessageManager.getInstance().registerInAppMessageManager(activity);
 }
 ```
 
@@ -66,9 +66,9 @@ public void onResume() {
 ```kotlin
 public override fun onResume() {
   super.onResume()
-  // Registers the AppboyInAppMessageManager for the current Activity. This Activity will now listen for
+  // Registers the BrazeInAppMessageManager for the current Activity. This Activity will now listen for
   // in-app messages from Braze.
-  AppboyInAppMessageManager.getInstance().registerInAppMessageManager(this)
+  BrazeInAppMessageManager.getInstance().registerInAppMessageManager(this)
 }
 ```
 
@@ -84,8 +84,8 @@ In every activity where [`registerInAppMessageManager()`][80] was called, [`unre
 @Override
 public void onPause() {
   super.onPause();
-  // Unregisters the AppboyInAppMessageManager for the current Activity.
-  AppboyInAppMessageManager.getInstance().unregisterInAppMessageManager(activity);
+  // Unregisters the BrazeInAppMessageManager for the current Activity.
+  BrazeInAppMessageManager.getInstance().unregisterInAppMessageManager(activity);
 }
 ```
 
@@ -95,8 +95,8 @@ public void onPause() {
 ```kotlin
 public override fun onPause() {
   super.onPause()
-  // Unregisters the AppboyInAppMessageManager.
-  AppboyInAppMessageManager.getInstance().unregisterInAppMessageManager(this)
+  // Unregisters the BrazeInAppMessageManager.
+  BrazeInAppMessageManager.getInstance().unregisterInAppMessageManager(this)
 }
 ```
 
@@ -145,10 +145,10 @@ class MyApplication : Application() {
 
 > See the [`AppboyLifecycleCallbackListener`][83] constructor javadocs for more information.
 
-[34]: https://appboy.github.io/appboy-android-sdk/javadocs/com/appboy/ui/inappmessage/AppboyInAppMessageManager.html
+[34]: https://appboy.github.io/appboy-android-sdk/javadocs/com/braze/ui/inappmessage/BrazeInAppMessageManager.html
 [59]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/initial_sdk_setup/android_sdk_integration/#step-4-tracking-user-sessions-in-android
-[69]: https://appboy.github.io/appboy-android-sdk/javadocs/com/appboy/ui/inappmessage/AppboyInAppMessageManager.html#ensureSubscribedToInAppMessageEvents-android.content.Context-
-[80]: https://appboy.github.io/appboy-android-sdk/javadocs/com/appboy/ui/inappmessage/AppboyInAppMessageManager.html#registerInAppMessageManager-android.app.Activity-
-[81]: https://appboy.github.io/appboy-android-sdk/javadocs/com/appboy/ui/inappmessage/AppboyInAppMessageManager.html#unregisterInAppMessageManager-android.app.Activity-
+[69]: https://appboy.github.io/appboy-android-sdk/javadocs/com/braze/ui/inappmessage/BrazeInAppMessageManager.html#ensureSubscribedToInAppMessageEvents-android.content.Context-
+[80]: https://appboy.github.io/appboy-android-sdk/javadocs/com/braze/ui/inappmessage/BrazeInAppMessageManager.html#registerInAppMessageManager-android.app.Activity-
+[81]: https://appboy.github.io/appboy-android-sdk/javadocs/com/braze/ui/inappmessage/BrazeInAppMessageManager.html#unregisterInAppMessageManager-android.app.Activity-
 [82]: https://developer.android.com/reference/android/app/Application.html#onCreate()
 [83]: https://appboy.github.io/appboy-android-sdk/javadocs/com/braze/BrazeActivityLifecycleCallbackListener.html#BrazeActivityLifecycleCallbackListener-java.util.Set-
