@@ -1,7 +1,5 @@
 ---
 nav_title: Hightouch
-page_order: 1
-
 description: "This article details the partnership between Braze and Hightouch, a platform to sync your customer data from your warehouse to business tools."
 alias: /partners/hightouch/
 page_type: partner
@@ -44,7 +42,7 @@ Hightouch only requires everything after "https://rest." to specify your endpoin
 
 1. In the __Destinations__ section of Hightouch, click __Add destination__.
 2. Select __Braze__ in the list of destinations listed.
-3. Provide the Braze endpoint (excluding https://rest.) and your API Key.<br><br>![add_destination][3]
+3. Provide the Braze endpoint (excluding "https://rest.") and your API Key.<br><br>![add_destination][3]
 
 ## Supported Objects and Sync Modes
 
