@@ -68,13 +68,21 @@ All User Profile data, including custom event metadata (first/last occurrence, t
 
 With custom event properties, you can set properties on custom events and purchases. These properties can then be used for further qualifying trigger conditions, increasing personalization in messaging, and generating more sophisticated analytics through raw data export. 
 
-Property values can be:
-- String
-- Numeric ([integers](https://en.wikipedia.org/wiki/Integer) or [floats](https://en.wikipedia.org/wiki/Floating-point_arithmetic))
-- Boolean
-- Time objects
+The properties values should be an object where the keys are the property names and the values are the property values. Property names must be non-empty strings less than or equal to 255 characters, with no leading dollar signs ($).
 
-However, property values cannot be array objects.
+Property values can be any of the following data types:
+
+| Data Type | Description |
+| --- | --- |
+| Numbers | As either [integers](https://en.wikipedia.org/wiki/Integer) or [floats](https://en.wikipedia.org/wiki/Floating-point_arithmetic) |
+| Booleans |  |
+| Datetimes | Formatted as strings in [ISO-8601](https://en.wikipedia.org/wiki/ISO_8601) or `yyyy-MM-dd'T'HH:mm:ss:SSSZ` format. Not supported within arrays. |
+| Strings | 255 characters or fewer. |
+| Arrays | Arrays cannot include datetimes. |
+| Objects | Objects will be ingested as strings. |
+{: .reset-td-br-1 .reset-td-br-2}
+
+Event property objects that contain array or object values can have an event property payload of up to 50KB.
 
 For example, if an eCommerce application wanted to send a message to a user when they abandon their cart, it could additionally improve its target audience and allow for increased campaign personalization by adding a custom event property of the 'cart value' of users' carts.
 

@@ -402,3 +402,5 @@ validurls['/docs/help/best_practices/image_and_text_specifications/#news-feed-sp
 validurls['/docs/help/best_practices/image_and_text_specifications/#mms'] = '/docs/user_guide/message_building_by_channel/sms/mms/create/#image-specifications';
 validurls['/docs/help/best_practices/image_and_text_specifications/#email'] = '/docs/user_guide/message_building_by_channel/email/best_practices/guidelines_and_tips/#email-size';
 
+validurls['/docs/help/best_practices/in-app_messages/in-app_message_specs/'] = '/docs/user_guide/message_building_by_channel/in-app_messages/best_practices/previous_in-app_message_generations/#specs';
+
