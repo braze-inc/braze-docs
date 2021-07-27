@@ -29,7 +29,7 @@ The Braze and Hightouch integration allows you to build better campaigns on Braz
 
 1. Within Braze, navigate to __Settings__ at the bottom of the left navigation bar and click __Developer Console__.
 2. In the __API Settings__ tab, under __Rest API Keys__, click __+ Create New API Key__.
-3. Name this API key, and select all User Data permissions relevant to this integration.  Next, select __Save API Key__.
+3. Name this API key, and select all __users.track__ permissions.  Next, select __Save API Key__.
 4. Lastly, copy the API Key found under __Identifier__ to use when creating your Hightouch connection. 
 
 #### Find your Braze API Endpoint
