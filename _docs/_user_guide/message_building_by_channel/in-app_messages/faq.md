@@ -13,7 +13,7 @@ tool: In-App Messages
 
 ### Will an in-app message display if a device is offline?
 
-It depends. Because in-app messages are delivered at session start, the device is able to download the payload prior to going offline, the in-app message can still be displayed while offline. If the payload is not downloaded, then the in-app message will display.
+It depends. Because in-app messages are delivered at session start, the device is able to download the payload prior to going offline, the in-app message can still be displayed while offline. If the payload is not downloaded, then the in-app message will not display.
 
 ### If a user already has an in-app message payload on their device and the message expiration is changed, will the expiration be updated on their device?
 
@@ -23,7 +23,7 @@ When a user starts a session, Braze checks if changes have been made to any in-a
 
 The Quiet Hours feature isn't available for use with in-app message campaigns. This feature is used to prevent messages from being sent to your users during specific hours. For in-app message campaigns, your users will only receive in-app messages if they are active within the app. 
 
-As a workaround to send in-app messages during a specific time, use the following sample Liquid code. This allows the message to be aborted if the in-app message is displayed after 7:59 pm or 8 am at the specified timezone.
+As a workaround to send in-app messages during a specific time, use the following sample Liquid code. This allows the message to be aborted if the in-app message is displayed after 7:59 pm or before 8 am at the specified timezone.
 
 {% raw %}
 ```liquid
