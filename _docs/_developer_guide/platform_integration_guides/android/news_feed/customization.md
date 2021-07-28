@@ -112,7 +112,7 @@ Next, add the following code to subscribe to feed updates from Braze, typically 
 
 ```java
 // Remove the old subscription first
-Appboy.getInstance(context).removeSingleSubscription(mFeedUpdatedSubscriber, FeedUpdatedEvent.class);
+Braze.getInstance(context).removeSingleSubscription(mFeedUpdatedSubscriber, FeedUpdatedEvent.class);
 mFeedUpdatedSubscriber = new IEventSubscriber<FeedUpdatedEvent>() {
   @Override
   public void trigger(final FeedUpdatedEvent event) {
@@ -121,16 +121,16 @@ mFeedUpdatedSubscriber = new IEventSubscriber<FeedUpdatedEvent>() {
     // your logic here
   }
 };
-Appboy.getInstance(context).subscribeToFeedUpdates(mFeedUpdatedSubscriber);
+Braze.getInstance(context).subscribeToFeedUpdates(mFeedUpdatedSubscriber);
 
 // Request a refresh of feed data
-Appboy.getInstance(context).requestFeedRefresh();
+Braze.getInstance(context).requestFeedRefresh();
 ```
 
 We also recommend unsubscribing when your custom feed activity moves out of view. Add the following code to your activity's `onDestroy()` lifecycle method:
 
 ```
-Appboy.getInstance(context).removeSingleSubscription(mFeedUpdatedSubscriber, FeedUpdatedEvent.class);
+Braze.getInstance(context).removeSingleSubscription(mFeedUpdatedSubscriber, FeedUpdatedEvent.class);
 ```
 
 ### Part 2: Logging Analytics

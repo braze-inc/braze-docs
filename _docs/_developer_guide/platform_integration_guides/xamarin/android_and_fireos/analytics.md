@@ -12,7 +12,7 @@ description: "This article covers Android and FireOS analytics for the Xamarin p
 ## Setting User IDs
 
 ```csharp
-Appboy.GetInstance(context).ChangeUser("YOUR_USER_ID");
+Braze.getInstance(context).ChangeUser("YOUR_USER_ID");
 ```
 
 See [the Android integration instructions][5] for an in-depth discussion of when and how to set and change a user ID.
@@ -20,7 +20,7 @@ See [the Android integration instructions][5] for an in-depth discussion of when
 ## Tracking Custom Events
 
 ```csharp
-Appboy.GetInstance(context).LogCustomEvent("YOUR_EVENT_NAME");
+Braze.getInstance(context).LogCustomEvent("YOUR_EVENT_NAME");
 ```
 
 See [the Android integration instructions][3] for an in-depth discussion of event tracking best practices and interfaces.
@@ -28,7 +28,7 @@ See [the Android integration instructions][3] for an in-depth discussion of even
 ## Logging Purchases
 
 ```csharp
-Appboy.GetInstance(context).LogPurchase("YOUR_PURCHASE_NAME", 100);
+Braze.getInstance(context).LogPurchase("YOUR_PURCHASE_NAME", 100);
 ```
 
 See [the Android integration instructions][4] for an in-depth discussion of revenue tracking best practices and interfaces.
@@ -36,7 +36,7 @@ See [the Android integration instructions][4] for an in-depth discussion of reve
 ## Setting Custom Attributes
 
 ```csharp
-Appboy.GetInstance(context).CurrentUser.SetFirstName("FirstName");
+Braze.getInstance(context).CurrentUser.SetFirstName("FirstName");
 ```
 
 See [the Android integration instructions][1] for an in-depth discussion of attribute tracking best practices and interfaces.
@@ -52,11 +52,11 @@ You can see the Xamarin binding accessing these interfaces in the `HomeFragment.
 ```csharp
 // Record Facebook Data
 FacebookUser facebookUser = new FacebookUser("708379", "Test", "User", "test@braze.com", "Test", "Testtown", Gender.Male, new Java.Lang.Integer(100), new String[]{"Cats", "Dogs"}, "06/17/1987");
-Appboy.GetInstance(context).CurrentUser.SetFacebookData(facebookUser);
+Braze.getInstance(context).CurrentUser.SetFacebookData(facebookUser);
 
 // Record Twitter Data
 TwitterUser twitterUser = new TwitterUser(6253282, "Test", "User", "Tester",  new Java.Lang.Integer(100), new Java.Lang.Integer(100), new Java.Lang.Integer(100), "https://si0.twimg.com/profile_images/2685532587/fa47382ad67a0135acc62d4c6b49dbdc_bigger.jpeg");
-Appboy.GetInstance(context).CurrentUser.SetTwitterData(twitterUser);
+Braze.getInstance(context).CurrentUser.SetTwitterData(twitterUser);
 ```
 
 See [the Android integration instructions][6] for an in-depth discussion of social data best practices and interfaces.

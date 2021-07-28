@@ -52,8 +52,8 @@ Set a custom user attribue with the key-value pair `neura, true`
   {% endtab %}
   {% tab Android %}
 ```java
-Appboy.getInstance(YOUR_ACTIVITY.this).getCurrentUser().addAlias(NEURA_USER_ID, "neura_id");
-Appboy.getInstance(YOUR_ACTIVITY.this).getCurrentUser().setCustomUserAttribute("neura", true);
+Braze.getInstance(YOUR_ACTIVITY.this).getCurrentUser().addAlias(NEURA_USER_ID, "neura_id");
+Braze.getInstance(YOUR_ACTIVITY.this).getCurrentUser().setCustomUserAttribute("neura", true);
 ```
   {% endtab %}
 {% endtabs %}
