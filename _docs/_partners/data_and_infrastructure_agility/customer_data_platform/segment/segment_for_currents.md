@@ -36,7 +36,7 @@ Next, select the message engagement events you would like to export. Reference t
 Lastly, select __Launch Current__.
 
 {% alert warning %}
-Warning: If you intend to create multiple Segment Currents connectors, they must be in different app groups. Because the Braze Segment Currents integration cannot isolate events by different apps in a single app group, failure to do this will lead to unnecessary data deduping and lost data. 
+If you intend to create more than one of the same Currents connectors (for example, two message engagement event connectors), they must be in different app groups. Because the Braze Segment Currents integration cannot isolate events by different apps in a single app group, failure to do this will lead to unnecessary data deduping and lost data. 
 {% endalert %}
 
 ![Segment][2]
