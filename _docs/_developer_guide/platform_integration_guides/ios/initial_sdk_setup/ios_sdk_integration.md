@@ -619,7 +619,7 @@ The `ABKInAppMessageUIDelegate` does not come with any required methods, but lis
 {% subtabs global %}
 {% subtab Swift %}
 ```swift
-// Mark: - ABKInAppMessage UI Delegate
+// MARK: - ABKInAppMessage UI Delegate
 extension AppboyManager: ABKInAppMessageUIDelegate{
   func inAppMessageViewControllerWith(_ inAppMessage: ABKInAppMessage) -> ABKInAppMessageViewController {
     switch inAppMessage {
