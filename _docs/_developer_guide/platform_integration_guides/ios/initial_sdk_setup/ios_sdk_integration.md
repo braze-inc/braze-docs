@@ -358,7 +358,7 @@ Proceed to compile your code and run your application. <br><br>Try sending yours
 
 ##### Create User Variables and Methods
 
-Next, you will want easy access to the `ABKUser` variables and methods. Create an extension for your user code in the `Brazemanager.swift` file so it reads in a more organized manner as to what purpose is being served in the helper file, like so:
+Next, you will want easy access to the `ABKUser` variables and methods. Create an extension for your user code in the `BrazeManager.swift` file so it reads in a more organized manner as to what purpose is being served in the helper file, like so:
 
 1. An `ABKUser` object represents a known or anonymous user in your iOS application. Add a computed variable to retrieve the `ABKUser`; this variable will be reused to retrieve variables about the user.
 2. Query the user variable to easily access the `userId`. Among the other variables, the `ABKUser` object is responsible for (`firstName`, `lastName`, `phone`, `homeCity`, etc.)
