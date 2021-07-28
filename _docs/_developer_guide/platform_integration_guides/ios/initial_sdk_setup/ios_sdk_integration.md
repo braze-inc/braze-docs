@@ -368,7 +368,7 @@ Next, you will want easy access to the `ABKUser` variables and methods. Create a
 {% subtab Swift %}
 
 ```swift
-// Mark: User
+// MARK: - User
 extension BrazeManager {
   // 1
   var user: ABKUser? {
