@@ -34,7 +34,7 @@ To build out your `BrazeManager.swift` file, create a new Swift file named _Braz
 
 {% alert note %}
 - `BrazeManager` is an `NSObject` class and not a struct, so it can conform to ABK delegates such as the `ABKInAppMessageUIDelegate`.
-- The `Brazemanager` is a singleton class by design to ensure that only one instance of this class will be used. This is done to provide a unified point of access to the object.
+- The `BrazeManager` is a singleton class by design to ensure that only one instance of this class will be used. This is done to provide a unified point of access to the object.
 {% endalert %} 
 
 1. Add a static variable named _shared_ that initializes the `BrazeManager` class. This is guaranteed to be lazily initiated only once.
