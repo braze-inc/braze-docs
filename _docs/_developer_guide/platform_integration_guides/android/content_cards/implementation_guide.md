@@ -28,13 +28,14 @@ Your own custom objects already in use in your application can be extended to ca
 
 When initializing `ContentCardable` instances from the Braze SDK, we utilize the `class_type` extra to map the Content Card to a concrete subclass. We then use the additional key/value pairs set within the Braze Dashboard to populate the necessary fields.
 
- Once you have a solid understanding of these code considerations, check out our [use cases](#sample-use-cases) below to get started implementing your own custom objects.
+Once you have a solid understanding of these code considerations, check out our [use cases](#sample-use-cases) below to get started implementing your own custom objects.
 
+{% tabs local %}
+{% tab No Card Dependencies %}
+{% subtabs global %}
+{% subtab Kotlin %}
 __No `Card` Dependencies__<br>
 `ContentCardData` represents the parsed out, common values of an `Card`.
-{% tabs %}
-{% tab Kotlin %}
-
 
 ```kotlin
 abstract class ContentCardable (){
@@ -69,9 +70,10 @@ data class ContentCardData (var contentCardId: String,
                             var createdAt: Long,
                             var dismissable: Boolean)
 ```
-{% endtab %}
-{% tab Java %}
-
+{% endsubtab %}
+{% subtab Java %}
+__No `Card` Dependencies__<br>
+`ContentCardData` represents the parsed out, common values of an `Card`.
 
 ```java
 public abstract class ContentCardable{
@@ -111,8 +113,6 @@ public abstract class ContentCardable{
       BrazeManager.getInstance().logContentCardImpression(cardData.contentCardId)
     }
   }
-
-
 }
 
 public class ContentCardData{
@@ -122,12 +122,15 @@ public class ContentCardData{
   public boolean dismissable;
 }
 ```
+{% endsubtab %}
+{% endsubtabs %}
 {% endtab %}
-{% endtabs %}
+{% tab Custom Objects %}
+{% subtabs global %}
+{% subtab Kotlin %}
 __Custom Object Initializer__<br>
 MetaData from a `Card` is used to populate your concrete subclass's variables. Depending on the subclass, you may need to extract different values during initialization. The key value pairs set up in the Braze Dashboard are represented in the “extras” dictionary.
-{% tabs %}
-{% tab Kotlin %}
+
 ```kotlin
 class Tile: ContentCardable {
     constructor(metadata:Map<String, Any>):super(metadata){
@@ -144,17 +147,23 @@ class Tile: ContentCardable {
     }
   }
 ```
-{% endtab %}
-{% tab Java %}
+{% endsubtab %}
+{% subtab Java %}
+__Custom Object Initializer__<br>
+MetaData from a `Card` is used to populate your concrete subclass's variables. Depending on the subclass, you may need to extract different values during initialization. The key value pairs set up in the Braze Dashboard are represented in the “extras” dictionary.
+
 ```java
 TODO
 ```
+{% endsubtab %}
+{% endsubtabs %}
 {% endtab %}
-{% endtabs %}
+{% tab Identifying Types %}
+{% subtabs global %}
+{% subtab Kotlin %}
 __Identifying Types__<br>
 The `ContentCardClass` enum represents the `class_type` value in the Braze Dashboard and provides a method to initialize the enum from the Strings supplied by the SDK.
-{% tabs %}
-{% tab Kotlin %}
+
 ```kotlin
 enum class ContentCardClass{
     AD,
@@ -182,11 +191,16 @@ enum class ContentCardClass{
     }
 }
 ```
-{% endtab %}
-{% tab Java %}
+{% endsubtab %}
+{% subtab Java %}
+__Identifying Types__<br>
+The `ContentCardClass` enum represents the `class_type` value in the Braze Dashboard and provides a method to initialize the enum from the Strings supplied by the SDK.
+
 ```java
 TODO
 ```
+{% endsubtab %}
+{% endsubtabs %}
 {% endtab %}
 {% endtabs %}
 
@@ -202,12 +216,11 @@ There are three sample customer use cases provided. Each sample has video walkth
 You can seamlessly blend Content Cards into an existing feed, allowing data from multiple feeds to load simultaneously. This creates a cohesive, harmonious experience with Braze Content Cards and existing feed content.
 
 #### __Load Content Cards Alongside Existing Content__<br><br>
-
-
-__Load the data into a merged adapter__<br>
-In this example, we are loading primary data from a JSON resource file stored in the app, but in practice, you could load this data from anywhere.
 {% tabs %}
 {% tab Kotlin %}
+__Load the data into a merged adapter__<br>
+In this example, we are loading primary data from a JSON resource file stored in the app, but in practice, you could load this data from anywhere.
+
 ```kotlin
 class CardableTileDataProvider(private var ctx: Context) : BaseAdapter(),
     ContentCardableObserver {
@@ -239,16 +252,20 @@ class CardableTileDataProvider(private var ctx: Context) : BaseAdapter(),
 ```
 {% endtab %}
 {% tab Java %}
+__Load the data into a merged adapter__<br>
+In this example, we are loading primary data from a JSON resource file stored in the app, but in practice, you could load this data from anywhere.
+
 ```java
 TODO
 ```
 {% endtab %}
 {% endtabs %}
 
-__Receive Content Card updates from the Braze SDK__<br>
-A custom observer is used to notify any interested parties about Content Card updates. 
 {% tabs %}
 {% tab Kotlin %}
+__Receive Content Card updates from the Braze SDK__<br>
+A custom observer is used to notify any interested parties about Content Card updates. 
+
 ```kotlin
 interface ContentCardableObserver {
     fun onContentCardsChanged(cards: List<ContentCardable>)
@@ -263,15 +280,20 @@ class CardableTileDataProvider(private var ctx: Context) : BaseAdapter(),
 ```
 {% endtab %}
 {% tab Java %}
+__Receive Content Card updates from the Braze SDK__<br>
+A custom observer is used to notify any interested parties about Content Card updates. 
+
 ```java
 TODO
 ```
 {% endtab %}
+{% endtabs %}
 
 {% tabs %}
+{% tab Kotlin %}
 __Merge the data__<br>
 The corresponding `[Tile]` array will be seamlessly blended with an array of Content Cards. Because there are multiple content card subclasses that we could be seeing, we also filter out _only_ the instances of `Tile`
-{% tab Kotlin %}
+
 ```kotlin
 class CardableTileDataProvider(private var ctx: Context) : BaseAdapter(),
     ContentCardableObserver {
@@ -283,16 +305,18 @@ class CardableTileDataProvider(private var ctx: Context) : BaseAdapter(),
 ```
 {% endtab %}
 {% tab Java %}
+__Merge the data__<br>
+The corresponding `[Tile]` array will be seamlessly blended with an array of Content Cards. Because there are multiple content card subclasses that we could be seeing, we also filter out _only_ the instances of `Tile`
+
 ```java
 TODO
 ```
 {% endtab %}
 {% endtabs %}
 {% tabs %}
+{% tab Kotlin %}
 __Present a unified stream of data__<br>
 Because the adapter uses the merged list to supply data model information to the `ListView`, both the Content Card-based data and the API(or JSON)-based data will be displayed in unison to the user.
-
-{% tab Kotlin %}
 
 ```kotlin
     override fun getView(position: Int, convertView: View?, parent: ViewGroup?): View {
@@ -313,6 +337,9 @@ Because the adapter uses the merged list to supply data model information to the
 ```
 {% endtab %}
 {% tab Java %}
+__Present a unified stream of data__<br>
+Because the adapter uses the merged list to supply data model information to the `ListView`, both the Content Card-based data and the API(or JSON)-based data will be displayed in unison to the user.
+
 ```java
 TODO
 ```
@@ -322,11 +349,12 @@ TODO
 ### Content Cards in a Message Center
 Content Cards can be used in a message center format where each message is its own card. Each card contains additional key value pairs that power on-click UI/UX.<br>
 
+{% tabs %}
+{% tab Kotlin %}
 __Using `class_type` for On Click Behavior__<br>
 When we inflate the Content Card data into our custom classes, we use the `class_type` property of the data to determine which concrete subclass should be used to
 store the data.
-{% tabs %}
-{% tab Kotlin %}
+
 ```kotlin
  private fun createContentCardable(metadata: Map<String, Any>, type: ContentCardClass?): ContentCardable?{
         return when(type){
@@ -342,6 +370,10 @@ store the data.
 ```
 {% endtab %}
 {% tab Java %}
+__Using `class_type` for On Click Behavior__<br>
+When we inflate the Content Card data into our custom classes, we use the `class_type` property of the data to determine which concrete subclass should be used to
+store the data.
+
 ```java
 TODO
 ```
@@ -395,13 +427,11 @@ TODO
 ### Interactive Content Cards
 Content Cards can be leveraged to create interactive experiences for your users. In our demo application, we have a Content Card pop-up appear at checkout providing users last-minute promotions. Well-placed cards like this are a great way to give users a "nudge" toward specific user actions. 
 
-
 #### Interactable View<br><br>
-__Requesting Content Cards__<br>
-When we created our custom BrazeManager, we also defined a custom `ContentCardableObserver` interface to be called when Content Cards are updated. As long as the listener is still retained in memory, a notification callback from the Braze SDK can be expected. 
-
 {% tabs %}
 {% tab Kotlin %}
+__Requesting Content Cards__<br>
+When we created our custom BrazeManager, we also defined a custom `ContentCardableObserver` interface to be called when Content Cards are updated. As long as the listener is still retained in memory, a notification callback from the Braze SDK can be expected. 
 ```kotlin
 fun registerContentCardableObserver(observer: ContentCardableObserver){
         registerForContentCardUpdates()
@@ -414,17 +444,18 @@ fun registerContentCardableObserver(observer: ContentCardableObserver){
 ```
 {% endtab %}
 {% tab Java %}
+__Requesting Content Cards__<br>
+When we created our custom BrazeManager, we also defined a custom `ContentCardableObserver` interface to be called when Content Cards are updated. As long as the listener is still retained in memory, a notification callback from the Braze SDK can be expected. 
 ```java
 todo
 ```
 {% endtab %}
 {% endtabs %}
 
-__Getting Type-Specific Content Cards__<br>
-Similar to our other exampes, we can filter the cards to only retrieve the ones we're interested in for the shopping cart. In this case `Coupon` types.
-
 {% tabs %}
 {% tab Kotlin %}
+__Getting Type-Specific Content Cards__<br>
+Similar to our other exampes, we can filter the cards to only retrieve the ones we're interested in for the shopping cart. In this case `Coupon` types.
 
 ```kotlin
  override fun onContentCardsChanged(cards: List<ContentCardable>) {
@@ -433,6 +464,8 @@ Similar to our other exampes, we can filter the cards to only retrieve the ones 
 ```
 {% endtab %}
 {% tab Java %}
+__Getting Type-Specific Content Cards__<br>
+Similar to our other exampes, we can filter the cards to only retrieve the ones we're interested in for the shopping cart. In this case `Coupon` types.
 
 ```java
 @Override
@@ -449,11 +482,10 @@ After extending your own custom objects to function as Content Cards, logging va
 
 #### __Implementation Components__<br><br>
 
-__Custom Objects Call the Logging Methods__<br>
-Within your `ContentCardable` base class, you can call the BrazeManager directly, if appropriate. Remember, in this example, the `cardData` property will be nonnull if the object came from a content card. 
-
 {% tabs %}
 {% tab Kotlin %}
+__Custom Objects Call the Logging Methods__<br>
+Within your `ContentCardable` base class, you can call the BrazeManager directly, if appropriate. Remember, in this example, the `cardData` property will be nonnull if the object came from a content card. 
 
 ```swift
 override fun getView(position: Int, convertView: View?, parent: ViewGroup?): View {
@@ -462,47 +494,18 @@ override fun getView(position: Int, convertView: View?, parent: ViewGroup?): Vie
         ...
     }
 ```
-{% endtab %}
-{% tab Java %}
-```java
-@Override
-public View getView(int position, View convertView, ViewGroup parent) {
-        Tile tile = currentTiles.get(position);
-        tile.logContentCardImpression();
-        ...
-    }
-```
-{% endtab %}
-{% endtabs %}
 
 __Retrieve the Content Card from the ContentCardId__<br>
 The `ContentCardable` base class handles the heavy lifting of calling the `BrazeManager` and passing the unique identifier from the Content Card associated with the custom object.
-
-{% tabs %}
-{% tab Kotlin %}
 
 ```kotlin
     fun logContentCardImpression() {
         cardData?.let { BrazeManager.getInstance().logContentCardImpression(it.contentCardId) }
     }
 ```
-{% endtab %}
-{% tab Java %}
-```java
-    public void logContentCardImpression() {
-        if (cardData != null){
-            BrazeManager.getInstance().logContentCardImpression(cardData.getContentCardId());
-        }
-    }
-```
-{% endtab %}
-{% endtabs %}
 
 __Call `Card` Functions__<br>
 The [BrazeManager](insert) can reference Braze SDK dependencies such as the list of Content Card objects array to get the `Card` to call our logging methods.
-
-{% tabs %}
-{% tab Kotlin %}
 
 ```kotlin
     fun logContentCardClicked(idString: String?) {
@@ -513,13 +516,37 @@ The [BrazeManager](insert) can reference Braze SDK dependencies such as the list
         getContentCard(idString)?.logImpression()
     }
 
-
     private fun getContentCard(idString: String?): Card? {
         return cardList.find { it.id == idString }.takeIf { it != null }
     }
 ```
 {% endtab %}
 {% tab Java %}
+__Custom Objects Call the Logging Methods__<br>
+Within your `ContentCardable` base class, you can call the BrazeManager directly, if appropriate. Remember, in this example, the `cardData` property will be nonnull if the object came from a content card. 
+```java
+@Override
+public View getView(int position, View convertView, ViewGroup parent) {
+        Tile tile = currentTiles.get(position);
+        tile.logContentCardImpression();
+        ...
+    }
+```
+
+__Retrieve the Content Card from the `ContentCardId`__<br>
+The `ContentCardable` base class handles the heavy lifting of calling the `BrazeManager` and passing the unique identifier from the Content Card associated with the custom object.
+
+```java
+    public void logContentCardImpression() {
+        if (cardData != null){
+            BrazeManager.getInstance().logContentCardImpression(cardData.getContentCardId());
+        }
+    }
+```
+
+__Call `Card` Functions__<br>
+The [BrazeManager](insert) can reference Braze SDK dependencies such as the list of Content Card objects array to get the `Card` to call our logging methods.
+
 ```java
     public void logContentCardClicked(String idString) {
         getContentCard(idString).ifPresent(Card::logClick);
@@ -528,7 +555,6 @@ The [BrazeManager](insert) can reference Braze SDK dependencies such as the list
     public void logContentCardImpression(String idString) {
         getContentCard(idString).ifPresent(Card::logImpression);
     }
-
 
     private Optional<Card> getContentCard(String idString) {
         return cardList.filter(c -> c.id.equals(idString)).findAny();
