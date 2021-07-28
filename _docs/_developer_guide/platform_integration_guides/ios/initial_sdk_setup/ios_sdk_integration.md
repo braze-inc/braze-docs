@@ -658,7 +658,7 @@ extension AppboyManager: ABKInAppMessageUIDelegate{
 {% endtabs %}
 
 {% alert checkpoint %}
-Proceed to compile your code and run your application. <br><br>Try sending yourself an in-app message. <br><br>In the `Brazemanager.swift` file, set a breakpoint at the entry of the example `ABKInAppMessageUIDelegate` method. Send yourself an in-app message and confirm the breakpoint is hit before advancing any further. 
+Proceed to compile your code and run your application. <br><br>Try sending yourself an in-app message. <br><br>In the `BrazeManager.swift` file, set a breakpoint at the entry of the example `ABKInAppMessageUIDelegate` method. Send yourself an in-app message and confirm the breakpoint is hit before advancing any further. 
 {% endalert %}
 
 ### Content Cards
