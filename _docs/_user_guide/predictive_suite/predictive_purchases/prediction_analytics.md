@@ -18,11 +18,11 @@ __Analytics Components__<br>
 
 ## Purchase Likelihood Score {#purchase_score}
 
-Users in the Prediction Audience will be assigned a Purchase Likelihood Score between 0 and 100. The higher the score, the greater the likelihood of Purchase. Users with Purchase Likelihood Scores between 0 and 50 will be labeled in the Low Purchase Likelihood category. Users with scores between 50 and 75, and 75 and 100 will be labeled in the Medium and High Purchase Likelihood categories, respectively. The scores and the corresponding categories will be updated according to the schedule you chose in the Prediction creation page. The number of users with Purchase Likelihood Scores in each of 20 equally sized buckets or in each of the Purchase Likelihood Categories is displayed in the chart at the top of the page.
+Users in the Prediction Audience will be assigned a Purchase Likelihood Score between 0 and 100. The higher the score, the greater the likelihood of Purchase. Users with Purchase Likelihood Scores between 0 and 50 will be labeled in the Least Likely category. Users with scores between 50 and 75, and 75 and 100 will be labeled in the Somewhat and Most Likely categories, respectively. The scores and the corresponding categories will be updated according to the schedule you chose in the Prediction creation page. The number of users with Purchase Likelihood Scores in each of 20 equally sized buckets or in each of the Purchase Likelihood Categories is displayed in the chart at the top of the page.
 
-## Targeting Users {#target_users}
+## Audience Builder {#target_users}
 
-The distribution of the Purchase Likelihood Scores for the entire Prediction Audience is displayed at the top of the page in a chart that you can view, by category, or by score. Users in bins further to the right have higher scores and are more likely to purchase. Users in bins further to the left are less likely to purchase. The slider beneath the chart will allow you to select a swath of users and estimate what the results would be of targeting users in the selected range of Purchase Likelihood Score or Category.
+The distribution of the Purchase Likelihood Scores for the entire Prediction Audience is displayed at the top of the page. Users in bins further to the right have higher scores and are more likely to purchase. Users in bins further to the left are less likely to purchase. The slider beneath the chart will allow you to select a swath of users and estimate what the results would be of targeting users in the selected range.
 
 ![Churn Targeting][4]{: style="max-width:90%"} 
 
@@ -30,6 +30,8 @@ As you move the slider handles to different positions, the bar in the left half 
 
 
 ### Prediction Quality {#prediction_quality}
+
+![Estimated Results][6]
 
 To measure the accuracy of your model, the __Prediction Quality__ metric will show you how effective this particular machine learning model appears to be when tested on historical data. Check out this doc to read more about what goes into [Prediction Quality]({{site.baseurl}}/user_guide/predictive_suite/predictive_churn/prediction_analytics/prediction_quality/).
 
@@ -49,7 +51,6 @@ with When a Prediction is first created, the Prediction Quality will be based up
 
 ### Estimated Results {#estimated_results}
 
-![Estimated Results][6]{: style="float:right;max-width:30%;margin-left:15px;"}
 
 In the right half of the panel beneath the chart, we show estimates of the expected accuracy of targeting this swath of the Prediction Audience. Based on data about users in the Prediction Audience in the past, and the apparent accuracy for the model for discriminating between users who did and did not purchase in that past data, these progress bars estimate for a future potential message using the audience highlighted with the slider:
 
@@ -57,11 +58,11 @@ In the right half of the panel beneath the chart, we show estimates of the expec
 
 2. An estimate of how many users who wouldn't have actually purchased will be targeted in error<br><br>All machine learning models make errors. There may be users in your selection who have a high Purchase Likelihood Score but do not end up actually making a purchase. They would not make a purchase if you took no action. They will be targeted anyway, so this is an error or "false positive." The full width of this second progress bar represents the expected number of users who will not purchase, and the red portion is those who will be incorrectly targeted using the current slider position.
 
-Using this information, we encourage you to decide how many of the purchasers you want to capture, how many non-purchasers you want to target, and what the cost of errors is for your business. If you are sending out a valuable promo, you may want to target only non-purchasers by favoring the left side of the chart. Or, you may want to encourage buyers who often purchase to do so again by selecting a swath of users that favors the right side of the chart.
+Using this information, we encourage you to decide how many of the purchasers you want to capture, how many non-purchasers you can accept being targeted, and what the cost of errors is for your business. If you are sending out a valuable promo, you may want to target only non-purchasers by favoring the left side of the chart. Or, you may want to encourage buyers who often purchase to do so again by selecting a swath of users that favors the right side of the chart.
 
 ## Purchase Correlation Table {#correlation_table}
 
-This analysis displays any user attributes or behaviors that are correlated with purchases in the historical Prediction Audience. The tables are split into left and right for more and less likely to purchase, respectively. For each row, the ratio by which the users with the behavior or attribute in the left column are more or less likely to purchase is displayed in the right column. This number is the ratio of purchase likelihood of users with this behavior or attribute divided by the likelihood to purchase off the entire Prediction Audience.
+This analysis displays user attributes or behaviors that are correlated with purchases in the Prediction Audience. The attributes assessed are Age, Country, Gender, and Language. Behaviors that are analyzed include sessions, purchases, total dollars spent, custom events, and campaigns & canvas steps received in the last 30 days. The tables are split into left and right for more and less likely to purchase, respectively. For each row, the ratio by which the users with the behavior or attribute in the left column are more or less likely to purchase is displayed in the right column. This number is the ratio of purchase likelihood of users with this behavior or attribute divided by the likelihood to purchase off the entire Prediction Audience.
 
 This table is updated only when the Prediction retrains and not when user Purchase Likelihood Scores are updated.
 
@@ -70,4 +71,4 @@ Correlation data for Preview Predictions will be partially hidden. A purchase is
 {% endalert %}
 
 [6]: {% image_buster /assets/img/purchasePrediction/purchaseEstimatedResults.png %}
-[4]: {% image_buster /assets/img/purchasePrediction/purchaseTargeting.gif %}
+[4]: {% image_buster /assets/img/purchasePrediction/purchaseTargeting.png %}
