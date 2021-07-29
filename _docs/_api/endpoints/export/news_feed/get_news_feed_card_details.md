@@ -20,37 +20,26 @@ This endpoint allows you to retrieve relevant information on the card, which can
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#5b1401a6-f12c-4827-82c9-8dc604f1671e {% endapiref %}
 
-{% alert important %}
-__Looking for the `api_key` parameter?__<br>As of May 2020, Braze has changed how we read API keys to be more secure. Now API keys must be passed as a request header, please see `YOUR_REST_API_KEY` within the __Example Request__ below.<br><br>Braze will continue to support the `api_key` being passed through the request body and URL parameters, but will eventually be sunset. Please update your API calls accordingly.
-{% endalert %}
-
 ## Request Parameters
 
 | Parameter | Required | Data Type | Description            |
 | --------- | -------- | --------- | ---------------------- |
-| `card_id` | Yes      | String    | Card API Identifier    |
+| `card_id`   | Required      | String    | See [Card API identifier]({{site.baseurl}}/api/identifier_types/). <br><br> The `card_id` for a given card can be found in the **Developer Console** page and on the card details page within your dashboard, or you can use the [News Feed List Endpoint]({{site.baseurl}}/api/endpoints/export/news_feed/get_news_feed_cards/).|
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
 
-### Request Components
-- [Card ID](https://www.braze.com/docs/api/identifier_types/)
-- [News Feed List](https://www.braze.com/docs/api/endpoints/export/news_feed/get_news_feed_cards/)
-<br><br>
-The `card_id` for a given card can be found in the Developer Console page and on the card details page within your dashboard or you can use the [News Feed List Endpoint]({{site.baseurl}}/api/endpoints/export/news_feed/get_news_feed_cards/).
-
-### Example URL
-`https://rest.iad-01.braze.com/feed/details?card_id=3bbc4555-8fa0-4c9b-a5c0-4505edf3e064`
-
-### Example Request
+## Example Request
+{% raw %}
 ```
-curl --location --request GET 'https://rest.iad-01.braze.com/feed/details?card_id=3bbc4555-8fa0-4c9b-a5c0-4505edf3e064' \
---header 'Authorization: Bearer YOUR_REST_API_KEY'
+curl --location -g --request GET 'https://rest.iad-01.braze.com/feed/details?card_id={{card_identifier}}' \
+--header 'Authorization: Bearer YOUR-REST-API-KEY'
 ```
+{% endraw %}
 
 ## Response
 
 ```json
 Content-Type: application/json
-Authorization: Bearer YOUR_REST_API_KEY
+Authorization: Bearer YOUR-REST-API-KEY
 {
     "message": (required, string) The status of the export, returns 'success' when completed without errors,
     "created_at" : (string) Date created as ISO 8601 date,
@@ -67,5 +56,8 @@ Authorization: Bearer YOUR_REST_API_KEY
     "draft": (boolean) whether this Card is a draft,
 }
 ```
+{% alert tip %}
+For help with CSV and API exports, visit our troubleshooting article [here]({{site.baseurl}}/user_guide/data_and_analytics/export_braze_data/export_troubleshooting/).
+{% endalert %}
 
 {% endapi %}

@@ -2,6 +2,10 @@
 nav_title: Hacktober 2019
 page_order: 1
 permalink: /hacktober/
+
+page_type: update
+description: "This archived page covers Braze's Hacktober 2019."
+no_index: true
 ---
 
 # Hacktober 2019

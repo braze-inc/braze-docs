@@ -3,8 +3,12 @@ nav_title: Setting User IDs
 platform: Web
 page_order: 1
 
+page_type: reference
+description: "This article describes how to set user IDs for each of your users, including best practices and important points to consider before making any changes."
+
 ---
-## Setting User IDs
+
+# Setting User IDs
 
 User IDs should be set for each of your users. These should be unchanging and accessible when a user opens the app. Naming your User IDs correctly from the start is one of the most __crucial__ steps when setting up User IDs. We strongly suggest using the Braze standard of UUIDs/GUIDs (detailed below). We also, strongly recommend providing this identifier as it will allow you to:
 
@@ -31,12 +35,13 @@ Additionally, we recommend against changing the user ID when a user logs out, as
 
 Refer to the [changeUser documentation][4] for more information.
 
-### Automatic Preservation of Anonymous User History
+## Automatic Preservation of Anonymous User History
 
 | Identification Context | Preservation Behavior |
 | ---------------------- | -------------------------- |
 | User __has not__ been previously identified | Anonymous history __is merged__ with user profile upon identification |
 | User __has been__ previously identified in-app or via API | Anonymous history __is not merged__ with user profile upon identification |
+{: .reset-td-br-1 .reset-td-br-2}
 
 ## Suggested User ID Naming Convention
 
@@ -44,7 +49,7 @@ At Braze, we __strongly suggest__ naming User IDs also known as `external_user_i
 
 If you find your `external_user_ids` include names, email addresses, timestamps, or incrementors we __strongly suggest__ picking up a new and more secure naming method. We do not want names, email address, timestamps or incrementors included in your User IDs, because while it might be easy for people within your organization to quickly identify others, __it is not a secure method__. 
 
-Providing this information to others may allow people outside your organization to glean information on how your User IDs are structured, opening up your organization to potentially malicious updates or removal of information. In general, we do not support User ID migration, so if there is a breach, it is a very difficult and tedious process to recover from. Choosing the correct naming convention from the start is one of the most important steps in setting up User IDs.
+Providing this information to others may allow people outside your organization to glean information on how your User IDs are structured, opening up your organization to potentially malicious updates or removal of information. Choosing the correct naming convention from the start is one of the most important steps in setting up User IDs, however a migration is possible using our [External ID Migration API Endpoint]({{site.baseurl}}/api/endpoints/user_data/external_id_migration/).
 
 | User ID Naming |
 | Good Example | Bad Example |
@@ -53,6 +58,7 @@ Providing this information to others may allow people outside your organization 
 | 83nmas45-eks1-083m-mk36-426655440000 | Anna@email.com |
 | Mbfjla32-937z-09es-sbv6-064026245228 | CompanyName-1-2-19 |
 | k6twn923-8234-7354-lzpd-139317000652 | jon-doe-1-2-19 |
+{: .reset-td-br-1 .reset-td-br-2}
 
 ### Additional Notes and Best Practices
 Please note the following:
@@ -67,7 +73,16 @@ Please note the following:
 
 ## Aliasing Users
 
-{% include archive/aliasing.md platform="Web" %}
+An alias serves as an alternative unique user identifier. Use aliases to identify users along different dimensions than your core user ID:
+
+* Set a consistent identifier for analytics that will follow a given user both before and after they have logged in to a mobile app or website.
+* Add the identifiers used by a third-party vendor to your Braze users in order to more easily reconcile your data externally.
+
+Each alias consists of two parts: a _name_ for the identifier itself, and a _label_ indicating the type of alias. Users can have multiple aliases with _different_ labels, but only one name per label.
+
+```javascript
+appboy.getUser().addAlias(ALIAS_NAME, ALIAS_LABEL);
+```
 
 [1]: {{site.baseurl}}/developer_guide/rest_api/user_data/#user-data
 [2]: {{site.baseurl}}/developer_guide/rest_api/messaging/

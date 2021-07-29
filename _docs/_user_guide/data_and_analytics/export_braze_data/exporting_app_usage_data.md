@@ -1,11 +1,17 @@
 ---
-nav_title: Export App Usage Data
+nav_title: Export Overview Data
 page_order: 3
+
+page_type: reference
+description: "This reference article covers how to export app usage data."
+tool: 
+- Dashboard
+- Reports
 ---
 
-# Exporting App Usage Data
+# Exporting Overview Data
 
-The App Usage page of the Dashboard contains high-level data, as well as detailed statistics of different KPIs by date. To obtain CSVs of information from this page, first set the time frame you want to view, then go to the graph at the bottom of the page and choose what data to include in your export.
+The **Overview** page of the Dashboard contains high-level data of app usage, as well as detailed statistics of different KPIs by date. To obtain CSVs of information from this page, first set the time frame you want to view, then go to the graph at the bottom of the page and choose what data to include in your export.
 
 ![App usage graph][27]
 
@@ -38,5 +44,9 @@ You can export CSVs with the following data:
 - Session Count by Hour
 - Session Count per MAU by Date
 - Stickiness by Date
+
+{% alert tip %}
+For help with CSV and API exports, visit our troubleshooting article [here]({{site.baseurl}}/user_guide/data_and_analytics/export_braze_data/export_troubleshooting/).
+{% endalert %}
 
 [27]: {% image_buster /assets/img_archive/app_usage.png %}

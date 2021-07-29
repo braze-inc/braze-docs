@@ -4,7 +4,7 @@ platform: Campaigns
 subplatform: Scheduling and Organizing
 page_order: 5
 
-tools: campaigns
+tool: Campaigns
 page_type: tutorial
 description: "This how-to article goes over what Braze's Campaign Connector is and how to use it to deliver targeted, relevant content at the right time."
 ---
@@ -39,7 +39,7 @@ The Campaign Connector feature only works with active campaigns. In addition, yo
 - Set up and publish your follow-on campaign
 - Publish the original campaign
 
-These delivery rules are particularly pertinent if you are targeting users who are enrolled in a control group, receive an e-mail or receive a push notification. Because users will be enrolled in the control group as soon as you publish the original campaign, you must publish the follow-on campaign before you publish the original campaign. Similarly, if you publish the original campaign before the follow-on campaign, many users may receive your e-mail and/or push notification before the follow-on campaign is published.
+These delivery rules are particularly pertinent if you are targeting users who are enrolled in a control group, receive an email or receive a push notification. Because users will be enrolled in the control group as soon as you publish the original campaign, you must publish the follow-on campaign before you publish the original campaign. Similarly, if you publish the original campaign before the follow-on campaign, many users may receive your email and/or push notification before the follow-on campaign is published.
 
 ## How to Use the Campaign Connector Feature
 
@@ -63,9 +63,12 @@ Select action-based delivery and add the "Interact with Card" trigger. Then choo
 
 ### Step 3: Set Schedule Delay and Add Exceptions If Necessary
 
-If you choose to set a schedule delay, you can add an exception to the trigger action. For example, you might want to resend an e-mail campaign to users who did not open the original e-mail.  In this scenario, you can choose "Received e-mail" as the trigger and set a schedule delay of one week. Then you can add "Open e-mail" as an exception. Now, you’ll resend the e-mail to users who did not open the original e-mail within a week of receiving it.
+If you choose to set a schedule delay, you can add an exception to the trigger action. For example, you might want to resend an email campaign to users who did not open the original e-mail.  In this scenario, you can choose "Received e-mail" as the trigger and set a schedule delay of one week. Then you can add "Open e-mail" as an exception. Now, you’ll resend the email to users who did not open the original email within a week of receiving it.
 
 ![Schedule Delay][6]
+
+Exception events will only trigger while a user is waiting to receive the message it’s associated with. If a user performs the action before waiting for the message, the exception event will not trigger.
+
 
 ### Step 4: Proceed with Campaign Creation
 
@@ -81,11 +84,7 @@ Or, you might follow up with users who clicked a deep link in an onboarding in-a
 
 You can also use this feature to target users who receive a push notification reminding them that they have abandoned their cart. For example, you might want to resend the notification to users who did not directly open it. However, you'll likely want to exclude users that have made a purchase since you send the original notification, even if they did not directly open it. You can achieve this use case by adding a "Received push notification" trigger for the campaign "Abandoned Cart," setting a schedule delay and adding ‘Makes Purchase' and 'Directly opened push notifications' as exceptions.
 
-[1]: #overview
-[2]: #how-to
-[3]: #use-cases
 [4]: {% image_buster /assets/img_archive/Campaign_Connector1.png %}
 [5]: {% image_buster /assets/img_archive/Campaign_Connector2.png %}
 [6]: {% image_buster /assets/img_archive/Campaign_Connector3.png %}
-[7]: {{site.baseurl}}/user_guide/engagement_tools/campaigns/scheduling_and_organizing/scheduling_your_campaign/#action-based-delivery-event-triggered-campaigns
-[8]: #delivery-rules
+[7]: {{site.baseurl}}/user_guide/engagement_tools/campaigns/scheduling_and_organizing/delivery_types/triggered_delivery/

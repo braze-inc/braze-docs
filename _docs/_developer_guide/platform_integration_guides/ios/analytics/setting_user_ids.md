@@ -2,9 +2,11 @@
 nav_title: Setting User IDs
 platform: iOS
 page_order: 1
+description: "This article shows how to set user IDs in your iOS app, suggested user ID naming conventions, and some best practices."
 
 ---
-## Setting User IDs
+
+# Setting User IDs
 
 User IDs should be set for each of your users. These should be unchanging and accessible when a user opens the app. Naming your User IDs correctly from the start is one of the most __crucial__ steps when setting up User IDs. We strongly suggest using the Braze standard of UUIDs/GUIDs (detailed below). We also, strongly recommend providing this identifier as it will allow you to:
 
@@ -26,7 +28,7 @@ At Braze, we __strongly suggest__ naming User IDs also known as `external_user_i
 
 If you find your `external_user_ids` include names, email addresses, timestamps, or incrementors we __strongly suggest__ picking up a new and more secure naming method. We do not want names, email address, timestamps or incrementors included in your User IDs, because while it might be easy for people within your organization to quickly identify others, __it is not a secure method__. 
 
-Providing this information to others may allow people outside your organization to glean information on how your User IDs are structured, opening up your organization to potentially malicious updates or removal of information. In general, we do not support User ID migration, so if there is a breach, it is a very difficult and tedious process to recover from. Choosing the correct naming convention from the start is one of the most important steps in setting up User IDs.
+Providing this information to others may allow people outside your organization to glean information on how your User IDs are structured, opening up your organization to potentially malicious updates or removal of information. Choosing the correct naming convention from the start is one of the most important steps in setting up User IDs, however a migration is possible using our [External ID Migration API Endpoint]({{site.baseurl}}/api/endpoints/user_data/external_id_migration/).
 
 | User ID Naming |
 | Good Example | Bad Example |
@@ -57,14 +59,16 @@ Appboy.sharedInstance()?.changeUser("YOUR_USER_ID")
 {% endtab %}
 {% endtabs %}
 
+{% alert warning %}
+Be sure to call this method in your application's main thread. Calling the method asynchronously can lead to undefined behavior.
+{% endalert %}
+
 >  __Do not call `changeUser()` when a user logs out. `changeUser()` should only be called when the user logs into the application.__ Setting `changeUser()` to a static default value will associate ALL user activity with that default "user" until the user logs in again.
 Additionally, we recommend against changing the user ID when a user logs out, as it makes you unable to target the previously logged-in user with reengagement campaigns. If you anticipate multiple users on the same device, but only want to target one of them when your app is in a logged-out state, we recommend separately keeping track of the user ID you want to target while logged out and switching back to that user ID as part of your app's logout process.
 
-**Implementation Example**
+**Additional Information**
 
-`changeUser` is utilized in [`UserAttributesViewController.m` file][3] of the Stopwatch sample app.
-
-- Also, see the method declaration within the [`Appboy.h` file][4]. - In addition, you can refer to the [`changeUser` class documentation][5] for more information.
+- See the method declaration within the [`Appboy.h` file][4]. - In addition, you can refer to the [`changeUser` class documentation][5] for more information.
 
 ## Automatic Preservation of Anonymous User History
 
@@ -72,6 +76,7 @@ Additionally, we recommend against changing the user ID when a user logs out, as
 | ---------------------- | -------------------------- |
 | User __has not__ been previously identified | Anonymous history __is merged__ with user profile upon identification |
 | User __has been__ previously identified in-app or via API | Anonymous history __is not merged__ with user profile upon identification |
+{: .reset-td-br-1 .reset-td-br-2}
 
 ## Additional Notes and Best Practices
 Please note the following:
@@ -90,7 +95,6 @@ Please note the following:
 
 [1]: {{site.baseurl}}/developer_guide/rest_api/user_data/#user-data
 [2]: {{site.baseurl}}/developer_guide/rest_api/messaging/
-[3]: https://github.com/Appboy/appboy-ios-sdk/blob/master/Example/Stopwatch/UserAttributesViewController.m
-[4]: https://github.com/Appboy/appboy-ios-sdk/blob/master/AppboyKit/headers/AppboyKitLibrary/Appboy.h
+[4]: https://github.com/Appboy/appboy-ios-sdk/blob/master/AppboyKit/include/Appboy.h
 [5]: http://appboy.github.io/appboy-ios-sdk/docs/interface_appboy.html#ac8b369b40e15860b0ec18c0f4b46ac69 "changeuser"
 [6]: http://developer.android.com/reference/java/util/Locale.html#default_locale "Android Developer Docs - Localization"

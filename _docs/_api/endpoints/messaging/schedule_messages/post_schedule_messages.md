@@ -14,27 +14,21 @@ description: "This article outlines details about the Schedule Messages Braze en
 ---
 {% api %}
 # Create Scheduled Messages
-{% apimethod post %}
+{% apimethod post core_endpoint|https://www.braze.com/docs/core_endpoints %} 
 /messages/schedule/create
 {% endapimethod %}
 
-The create schedule endpoint allows you to schedule a Campaign, Canvas, or other message to be sent at a designated time and provides you with an identifier to reference that message for updates. If you are targeting a segment, a record of your request will be stored in the [Developer Console](https://dashboard.braze.com/app_settings/developer_console/activitylog/) after all scheduled messages have been sent.
-
 Use this endpoint to send messages directly from the API.
 
-{% apiref swagger %}https://www.braze.com/docs/api/interactive/#/Messaging/CreateScheduledMessageExample {% endapiref %}
-{% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#8f813eee-7db3-4a99-b2ec-e972235d55b9 {% endapiref %}
+The create schedule endpoint allows you to schedule a campaign, Canvas, or other message to be sent at a designated time (up to 90 days in the future) and provides you with an identifier to reference that message for updates. If you are targeting a segment, a record of your request will be stored in the [Developer Console](https://dashboard.braze.com/app_settings/developer_console/activitylog/) after all scheduled messages have been sent.
 
-{% alert important %}
-__Looking for the `api_key` parameter?__<br>As of May 2020, Braze has changed how we read API keys to be more secure. Now API keys must be passed as a request header, please see `YOUR_REST_API_KEY` within the __Example Request__ below.<br><br>Braze will continue to support the `api_key` being passed through the request body and URL parameters, but will eventually be sunset. Please update your API calls accordingly.
-{% endalert %}
-
+{% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#25272fb8-bc39-41df-9a41-07ecfd76cb1d {% endapiref %}
 
 ## Request Body
 
 ```
 Content-Type: application/json
-Authorization: Bearer YOUR_REST_API_KEY
+Authorization: Bearer YOUR-REST-API-KEY
 ```
 
 ```json
@@ -43,63 +37,54 @@ Authorization: Bearer YOUR_REST_API_KEY
   // Including 'segment_id' will send to members of that segment
   // Including 'external_user_ids' and/or 'user_aliases' will send to those users
   // Including both a Segment and users will send to the provided users if they are in the segment
-  "broadcast": (optional, boolean) see Broadcast -- defaults to false on 8/31/17, must be set to true if users are not specified,
-  "external_user_ids": (optional, array of strings) see External User ID,
-  "user_aliases": (optional, array of User Alias Object) see User Alias,
-  "audience": (optional, Connected Audience Object) see Connected Audience,
-  "segment_id": (optional, string) see Segment Identifier,
-  "campaign_id": (optional, string) see Campaign Identifier,
-  "send_id": (optional, string) see Send Identifier,
-  "override_messaging_limits": (optional, bool) ignore global rate limits for campaigns, defaults to false,
+  "broadcast": (optional, boolean) see broadcast -- defaults to false on 8/31/17, must be set to true if users are not specified,
+  "external_user_ids": (optional, array of strings) see external user identifier,
+  "user_aliases": (optional, array of user alias object) see user alias,
+  "audience": (optional, connected audience object) see connected audience,
+  "segment_id": (optional, string) see segment identifier,
+  "campaign_id": (optional, string) see campaign identifier,
+  "send_id": (optional, string) see send identifier,
+  "override_messaging_limits": (optional, bool) ignore frequency capping rules, defaults to false,
   "recipient_subscription_state": (optional, string) use this to send messages to only users who have opted in ('opted_in'), only users who have subscribed or are opted in ('subscribed') or to all users, including unsubscribed users ('all'), the latter being useful for transactional email messaging. Defaults to 'subscribed',
-  "schedule": {
-    "time": (required, datetime as ISO 8601 string) time to send the message,
+  "schedule": { 
+    "time": (required, datetime as ISO 8601 string) time to send the message, (up to 90 days in the future),
     "in_local_time": (optional, bool),
     "at_optimal_time": (optional, bool),
   },
   "messages": {
-    "apple_push": (optional, Apple Push Object),
-    "android_push": (optional, Android Push Object),
-    "windows_push": (optional, Windows Phone 8 Push Object),
-    "windows8_push": (optional, Windows Universal Push Object),
-    "kindle_push": (optional, Kindle/FireOS Push Object),
-    "web_push": (optional, Web Push Object),
-    "email": (optional, Email object),
-    "webhook": (optional, Webhook object),
-    "content_card": (optional, Content Card Object),
-    "sms": (optional, SMS Object)
+    "apple_push": (optional, apple push object),
+    "android_push": (optional, android push object),
+    "windows_push": (optional, windows Phone 8 push object),
+    "windows8_push": (optional, windows Universal push object),
+    "kindle_push": (optional, kindle/fireOS push object),
+    "web_push": (optional, web push object),
+    "email": (optional, email object),
+    "webhook": (optional, webhook object),
+    "content_card": (optional, content card object),
+    "sms": (optional, SMS object)
   }
 }
 ```
 
-### Request Parameters
+## Request Parameters
 
 | Parameter | Required | Data Type | Description |
 | --------- | ---------| --------- | ----------- |
-| `broadcast` | Optional | Boolean | See Broadcast -- defaults to false on 8/31/17, must be set to true if "recipients" object is omitted |
-| `external_user_ids` | Optional | Array of Strings | See External User ID |
-| `user_aliases` | Optional | Array of User Alias Objects | See User Alias Object |
-| `audience` | Optional | Connected Audience Object | See Connected Audience |
-| `segment_id` | Optional | String | See Segment Identifier |
-| `campaign_id`|Required|String| See Campaign Identifier|
-| `recipients` | Optional | Array of Recipient Objects | See Recipients Object |
-| `send_id` | Optional | String | See Send Identifier | 
+|`broadcast`| Optional | Boolean | See [broadcast]({{site.baseurl}}/api/parameters/#broadcast). This parameter defaults to false (as of August 31, 2017). <br><br> If `recipients` is omitted, `broadcast` must be set to true. However, use caution when setting `broadcast: true`, as unintentionally setting this flag may cause you to send your message to a larger than expected audience. |
+| `external_user_ids` | Optional | Array of strings | See [external user identifier]({{site.baseurl}}/api/parameters/#external-user-id). |
+| `user_aliases` | Optional | Array of user alias objects | See [user alias object]({{site.baseurl}}/api/objects_filters/user_alias_object/). |
+| `audience` | Optional | Connected audience object | See [connected audience]({{site.baseurl}}/api/objects_filters/connected_audience/). |
+| `segment_id` | Optional | String | See [segment identifier]({{site.baseurl}}/api/identifier_types/). |
+| `campaign_id`|Required|String| See [campaign identifier]({{site.baseurl}}/api/identifier_types/). |
+| `recipients` | Optional | Array of recipient objects | See [recipients object]({{site.baseurl}}/api/objects_filters/recipient_object/). |
+| `send_id` | Optional | String | See [send identifier]({{site.baseurl}}/api/identifier_types/). | 
 | `override_messaging_limits` | Optional | Boolean | Ignore global rate limits for campaigns, defaults to false |
-| `recipient_subscription_state` | Optional | String | Use this to send messages to only users who have opted in ('opted_in'), only users who have subscribed or are opted in ('subscribed') or to all users, including unsubscribed users ('all'), the latter being useful for transactional email messaging. Defaults to 'subscribed' |
-| `schedule` | Required | Schedule Object | See Schedule Object |
-| `messages` | Optional | Messaging Object | See Messaging Object |
+|`recipient_subscription_state`| Optional | String | Use this to send messages to only users who have opted in (`opted_in`), only users who have subscribed or are opted in (`subscribed`) or to all users, including unsubscribed users (`all`). <br><br>Using `all` users is useful for transactional email messaging. Defaults to `subscribed`. |
+| `schedule` | Required | Schedule object | See [schedule object]({{site.baseurl}}/api/objects_filters/schedule_object/) |
+| `messages` | Optional | Messaging object | See [available messaging objects](#available-messaging-objects), below. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
 
-### Request Components
-- [Broadcast]({{site.baseurl}}/api/parameters/#broadcast)
-- [User Alias Object]({{site.baseurl}}/api/objects_filters/user_alias_object/)
-- [Connected Audience]({{site.baseurl}}/api/objects_filters/connected_audience/)
-- [Segment Identifier]({{site.baseurl}}/api/identifier_types/)
-- [Campaign Identifier]({{site.baseurl}}/api/identifier_types/)
-- [Schedule Object]({{site.baseurl}}/api/objects_filters/schedule_object/)
-- [API Parameters]({{site.baseurl}}/api/parameters)
-
-### Available Messaging Objects
+### Available Messaging Objects {#available-messaging-objects}
 
 You can use these objects in the [request body](#request-body) above.
 - [Android Objects]({{site.baseurl}}/api/objects_filters/android_objects/)
@@ -109,22 +94,20 @@ You can use these objects in the [request body](#request-body) above.
 - [Kindle or FireOS Object]({{site.baseurl}}/api/objects_filters/kindle_and_fireos_object/)
 - [SMS Object]({{site.baseurl}}/api/objects_filters/sms_object/)
 - [Web Objects]({{site.baseurl}}/api/objects_filters/web_objects/)
-- [Webhook Object]({{site.baseurl}}/api/objects_filters/webhook_objects/)
+- [Webhook Object]({{site.baseurl}}/api/objects_filters/webhook_object/)
 - [Windows Objects]({{site.baseurl}}/api/objects_filters/windows_objects/)
 
-### Example Request
+## Example Request
 ```
 curl --location --request POST 'https://rest.iad-01.braze.com/messages/schedule/create' \
---header 'Content-Type: application/json' \
---header 'Authorization: Bearer YOUR_REST_API_KEY' \
 --data-raw '{
-    "broadcast": "",
-    "external_user_ids": "",
+    "broadcast": "false",
+    "external_user_ids": "external_user_identifiers",
     "user_aliases": {
-      "alias_name" : "",
-      "alias_label" : ""
+      "alias_name" : "example_name",
+      "alias_label" : "example_label"
     },
-    "segment_id": "",
+    "segment_id": "segment_identifiers",
   "audience": {
     "AND": [
       {
@@ -172,8 +155,8 @@ curl --location --request POST 'https://rest.iad-01.braze.com/messages/schedule/
       }
     ]
   },
-    "campaign_id": "",
-    "send_id": "",
+    "campaign_id": "campaign_identifier",
+    "send_id": "send_identifier",
     "override_messaging_limits": false,
   "recipient_subscription_state": "subscribed",
   "schedule": {
@@ -192,10 +175,9 @@ curl --location --request POST 'https://rest.iad-01.braze.com/messages/schedule/
     "webhook": (optional, Webhook object)
     "content_card": (optional, Content Card Object)
   }
-}'
+}'\'''
 ```
 
 
 {% endapi %}
 
-[41]: https://dashboard-01.braze.com/app_settings/developer_console/activitylog/

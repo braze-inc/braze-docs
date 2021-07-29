@@ -3,13 +3,14 @@ nav_title: Local Connected Content Variables
 platform: Message_Building_and_Personalization
 subplatform: Personalization
 page_order: 1
+description: "This reference article covers how to use and store local Connected Content variables."
 ---
 
 # Local Connected Content Variables
 
-Braze makes a standard GET request to the endpoint specified within the `connected_content` tag. If the endpoint returns JSON, it is automatically parsed and stored in a variable called `connected`.  If the endpoint returns text, it will be directly inserted into the message in place of the `connected_content` tag.
+Braze makes a standard GET request at send time to the endpoint specified within the `connected_content` tag. If the endpoint returns JSON, it's automatically parsed and stored in a variable called `connected`.  If the endpoint returns text, it will be directly inserted into the message in place of the `connected_content` tag.
 
->  If you want to save your response to a variable, it’s recommended to return JSON objects. And if you want the response of connected content to replace the tag with the text, make sure the response is not valid JSON (as defined by [json.org][46])
+>  If you want to save your response to a variable, it’s recommended to return JSON objects. And if you want the response of Connected Content to replace the tag with the text, make sure the response is not valid JSON (as defined by [json.org][46])
 
 You can also specify `:save your_variable_name` after the url in order to save the data as something else. For example, the following `connected_content` tag will store the response to a local variable called `localweather` (you can save multiple `connected_content` JSON variables):
 
@@ -20,9 +21,9 @@ You can also specify `:save your_variable_name` after the url in order to save t
 ```
 {% endraw %}
 
-Metaweather is a free weather API that uses a "Where-on-Earth ID" to return weather in an area. Use this code for testing / learning purposes only. For more information about this API, see [here](https://www.metaweather.com/api/ "Metaweather API Details").
+Metaweather is a free weather API that uses a "Where-on-Earth ID" to return weather in an area. Use this code for testing and learning purposes only. For more information about this API, see [here](https://www.metaweather.com/api/ "Metaweather API Details").
 
->  The stored variable can only be accessed within the field which contains the `connected_content` request. For example, if you wanted to use the `localweather` variable in both the message and title field, you should make the `connected_content` request within both fields. If the request is identical, Braze will use the cached results, rather than making a second request to the destination server. However, Connected Content calls made via HTTP POST do not cache and will make a second request to the destination server.
+>  The stored variable can only be accessed within the field which contains the `connected_content` request. For example, if you wanted to use the `localweather` variable in both the message and title field, you should make the `connected_content` request within both fields. If the request is identical, Braze will use the cached results, rather than making a second request to the destination server. However, Connected Content calls made via HTTP POST do not cache by default and will make a second request to the destination server. If you wish to add caching to POST calls, refer to the [`cache_max_age`](#configurable-caching) option below.
 
 ### JSON Parsing
 
@@ -67,7 +68,7 @@ The following image illustrates the type of syntax highlighting you should see i
 
 ![Connected Content Syntax Example][6]
 
-If the API responded with `{{localweather.consolidated_weather[0].weather_state_name}}` returning `Rain`, the user would then receive this push.
+If the API responded with {%raw%}`{{localweather.consolidated_weather[0].weather_state_name}}`{%endraw%} returning `Rain`, the user would then receive this push.
 
 ![Connected Content Push Example][17]
 
@@ -91,6 +92,13 @@ You can optionally provide a POST body by specifying `:body` followed by a query
 ```
 {% endraw %}
 
+#### Object Serialization Example:
+{% raw %}
+```
+foo=bar&baz=bang => { "foo" => "bar", "baz" => "bang" }
+```
+{% endraw %}
+
 ### HTTP Status Codes
 
 You can utilize the HTTP status from a Connected Content call by first saving it as a local variable and then using the `__http_status_code__` key. For example:
@@ -108,17 +116,20 @@ You can utilize the HTTP status from a Connected Content call by first saving it
 This key will only be automatically added to the Connected Content object if the endpoint returns a JSON object. If the endpoint returns an array or other type, then that key cannot be set automatically in the response.
 {% endalert %}
 
-### Configurable Caching
-Connected Content will cache the value it returns from GET endpoints for a minimum of 5 minutes.
+### Configurable Caching {#configurable-caching}
 
-If a cache time is not specified, the default cache time is 5 minutes. However, this cache time can be configured to be longer with `:cache_max_value`, as shown below.
+Connected Content will cache the value it returns from GET endpoints for a minimum of 5 minutes. If a cache time is not specified, the default cache time is 5 minutes. 
+
+Connected Content cache time can be configured to be longer with `:cache_max_age`, as shown below. The minimum cache time is 5 minutes and the maximum cache time is 4 hours. Connected Content data is cached in-memory using a volatile cache system, such as memcached. As a result, regardless of the specified cache time, Connected Content data may be evicted from Braze's in-memory cache earlier than specified. This means the cache durations are suggestions and may not actually represent the duration that the data is guaranteed to be cached by Braze and you may see more Connected Content requests than you may expect with a given cache duration.
+
+By default, Connected Content does not cache POST calls. You can change this behavior by adding `:cache_max_age` to the Connected Content POST call. 
 
 #### Cache for Specified Seconds
 
 This example will cache for 900 seconds (or 15 minutes).
 {% raw %}
 ```
-{% connected_content https://example.com/webservice.json :cache_max_value 900 %}
+{% connected_content https://example.com/webservice.json :cache_max_age 900 %}
 ```
 {% endraw %}
 
@@ -139,60 +150,7 @@ Be certain the provided Connected Content endpoint can handle large bursts of tr
 
 With a `POST` you don't need to cache bust, as Braze never caches the results from `POST` requests.
 
-[1]: #aborting-connected-content
 [6]: {% image_buster /assets/img_archive/Connected_Content_Syntax.png %} "Connected Content Syntax Usage Example"
-[7]: http://openweathermap.org/api
-[8]: http://developer.nytimes.com/docs/read/article_search_api_v2
-[9]: http://open-platform.theguardian.com/documentation/
-[10]: http://alchemyapi.readme.io/v1.0/docs/introduction
-[11]: http://platform.seatgeek.com/
-[12]: http://developer.tmsapi.com/docs/read/data_v1_1/movies/movie_showtimes
-[13]: http://www.bandsintown.com/api/overview
-[14]: http://www.last.fm/api
-[15]: http://developer.ebay.com/devzone/shopping/docs/concepts/shoppingapiguide.html
 [16]: [success@braze.com](mailto:success@braze.com)
 [17]: {% image_buster /assets/img_archive/connected_weather_push2.png %} "Connected Content Push Usage Example"
-[18]: http://numbersapi.com/
-[19]: http://developer.eventbrite.com/
-[20]: http://api.eventful.com/
-[21]: http://www.discogs.com/developers/
-[22]: http://www.songkick.com/developer
-[23]: http://www.enclout.com/api/v1/yahoo_finance
-[24]: http://www.apple.com/itunes/affiliates/resources/documentation/itunes-store-web-service-search-api.html
-[25]: http://www.semantics3.com/products/pull
-[26]: http://factual.com/products/cpg
-[27]: http://blog.clearbit.com/logo
-[28]: http://api.tfl.gov.uk/#Line
-[29]: http://datamine.mta.info/
-[30]: {{site.baseurl}}/user_guide/personalization_and_dynamic_content/connected_content/about_connected_content/
-[31]: https://docs.transifex.com/api/translation-strings
-[32]: {% image_buster /assets/img_archive/TransifexUI.png %}
-[33]: {% image_buster /assets/img_archive/terminal.png %}
-[34]: {% image_buster /assets/img_archive/basic_auth_mgmt.png %}
-[35]: {% image_buster /assets/img_archive/basic_auth_token.png %}
-[36]: https://www.barchartondemand.com/free
-[37]: https://www.coindesk.com/api/
-[38]: http://developer.ticketmaster.com/products-and-docs/apis/getting-started/
-[39]: https://sunrise-sunset.org/api
-[40]: http://www.brewerydb.com/
-[41]: https://developers.zomato.com/api
-[42]: https://airvisual.com/api
-[43]: https://developer.nutritionix.com/
-[44]: https://open.fda.gov/api/
-[45]: https://ndb.nal.usda.gov/ndb/doc/index
 [46]: http://www.json.org
-[47]: {{site.baseurl}}/user_guide/engagement_tools/campaigns/testing_and_more/rate-limiting/#delivery-speed-rate-limiting
-[48]: https://developer.accuweather.com/accuweather-locations-api/apis
-[49]: https://developer.accuweather.com/accuweather-forecast-api/apis
-[50]: https://developer.accuweather.com/accuweather-current-conditions-api/apis
-[51]: https://developer.accuweather.com/accuweather-indices-api/apis
-[52]: https://developer.accuweather.com/accuweather-weather-alarms-api/apis
-[53]: https://developer.accuweather.com/accuweather-alerts-api/apis
-[54]: https://developer.accuweather.com/accuweather-imagery-api/apis
-[55]: https://developer.accuweather.com/accuweather-tropical-api/apis
-[56]: https://developer.accuweather.com/accuweather-translations-api/apis
-[57]: https://developer.accuweather.com
-[58]: https://developer.accuweather.com/user/me/apps
-[59]: https://developer.accuweather.com/weather-alarm-thresholds
-[61]: https://developer.accuweather.com/weather-icons
-[62]: {{site.baseurl}}/user_guide/personalization_and_dynamic_content/connected_content/about_connected_content/

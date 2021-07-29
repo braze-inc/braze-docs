@@ -2,8 +2,10 @@
 nav_title: Fine Network Traffic Control
 platform: iOS
 page_order: 1
+description: "This article covers how to implement fine network traffic control for your iOS application"
 
 ---
+
 # Fine Network Traffic Control
 
 ## Request Processing Policies
@@ -143,10 +145,5 @@ Appboy.sharedInstance()?.shutdownServerCommunication();
 
 After calling this method, you must reset the request processing mode back to Automatic. For this reason, we only recommend calling this if the OS is forcing you to stop background tasks or something similar.
 
-
-### Implementation Examples
-[`MiscViewController.m`][2] in the Stopwatch sample application provides examples of changing the data request processing policy, as well as manually flushing data to Braze.
-
-[2]: https://github.com/Appboy/appboy-ios-sdk/blob/master/Example/Stopwatch/MiscViewController.m
 [3]: #customizing-appboy-on-startup
-[4]: https://github.com/Appboy/appboy-ios-sdk/blob/master/AppboyKit/headers/AppboyKitLibrary/Appboy.h
+[4]: https://github.com/Appboy/appboy-ios-sdk/blob/master/AppboyKit/include/Appboy.h

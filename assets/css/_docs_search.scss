@@ -1,0 +1,218 @@
+$search_border_color: #D9D9D9;
+$search_color: $navy-bay;
+$search_min_width: 250px;
+
+$search_title_width: 250px;
+$search_font_size: 14px;
+$search_transition_time: 0.25s;
+
+$search_footer_height: 50px;
+$search_offset: 65px;
+
+#doc-search-form_div, .algolia_overlay {
+  justify-content: center;
+  display: flex;
+  margin: auto;
+
+  @media(max-width: $window-mobile-px) {
+    //width: 25px;
+    margin-right: 0px;
+  }
+  @media (max-width: $window-small-px) {
+    margin-right: 10px;
+  }
+
+  font-family: $braze-regular;
+  #doc-search-home {
+    //padding-left: 1%;
+    width: 100%;
+    background-color: $white;
+    margin: 20px 15px;
+
+    transition: all ease $search_transition_time;
+    -webkit-transition: all ease $search_transition_time;
+    -moz-transition: all ease $search_transition_time;
+
+    font-size: $base_font_size;
+    &:focus {
+      &::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+        color: $grey-ghost;
+      }
+      &:-ms-input-placeholder { /* Internet Explorer 10-11 */
+        color: $grey-ghost;
+      }
+
+      &::-ms-input-placeholder { /* Microsoft Edge */
+        color: $grey-ghost;
+      }
+      // background-color: $white;
+      color: $black-shark;
+      // border-color: $black-shark;
+      box-shadow: none;
+      border-color: #000000;
+      border-width: 2px;
+    }
+  }
+  #doc-search-panel {
+    border: none;
+    box-shadow: none;
+    #algolia_footer {
+      height: $search_footer_height;
+      border-top: 1px solid rgba($grey-ghost,0.7);
+      margin: 0 15px 0 15px;
+
+      .algolia-docsearch-footer {
+          height: $search_footer_height;
+          font-size: 0;
+          line-height: 0;
+          position: absolute;
+          left: 0;
+          margin: auto 10px;
+      }
+      #algolia-docsearch-advanced {
+          height: $search_footer_height;
+          font-size: 13px;
+          line-height: 50px;
+          font-family: $braze-black;
+          color: $navy-bay;
+          position: absolute;
+          right: 0;
+          margin: auto 15px auto 0;
+          cursor: pointer;
+          a {
+            color: $navy-bay;
+            &:hover {
+              color: $navy-bay;
+              text-decoration: none;
+            }
+          }
+      }
+      .algolia-docsearch-footer--logo {
+          background-image: url("#{$base_url}/assets/img/algolia.svg");
+          background-repeat: no-repeat;
+          background-position: 5px center;
+          background-size: 110px 16px;
+          overflow: hidden;
+          text-indent: -9000px;
+          padding: 0!important;
+          width: 120px;
+          height: 100%;
+          display: block;
+
+      }
+    }
+
+    z-index: 700;
+
+  }
+  .aa-Autocomplete,
+  .aa-DetachedFormContainer {
+    @media (min-width: $window-xxlarge-px) {
+      max-width: 1500px;
+    }
+    .aa-Form {
+      align-items: center;
+      background-color: rgba(
+        var(--aa-input-background-color-rgb),
+        var(--aa-input-background-color-alpha)
+      );
+      button{
+        &:focus {
+          outline: none;
+        }
+      }
+      @media (min-width: $window-medium-px) {
+        border: 2px solid #000000;
+        border-radius: 15px;
+      }
+      @media (min-width: $window-xxlarge-px) {
+        max-width: 100%;
+        min-width: 100%;
+      }
+      min-height:60px;
+      min-width: 70vw;
+
+      display: flex;
+      line-height: 1em;
+      margin: 0;
+      position: relative;
+      width: 100%;
+      &:focus-within {
+        border-color: none;
+        box-shadow: none;
+        outline: currentColor none medium;
+      }
+      .aa-InputWrapperPrefix {
+        margin-top: 10px;
+      }
+    }
+  }
+  .aa-Panel {
+    z-index: 800;
+    max-width: 1048px;
+    @media (min-width: $window-medium-px) {
+      top: 55px !important;
+      border-top-left-radius: 0px;
+      border-top-right-radius: 0px;
+      border-width: 2px;
+      border-bottom-left-radius: 15px;
+      border-bottom-right-radius: 15px;
+      border-color: #000000;
+      border-style: solid;
+      border-top-style: none;
+      box-shadow: none;
+    }
+
+    font-size: $search_font_size ;
+    .aa-Item {
+      hr {
+        margin-top: 15px;
+        border-width: 1px;
+        border-color: rgba($grey-ghost,0.7);
+      }
+      &:last-child  {
+        hr {
+          border-color: transparent;
+
+        }
+      }
+    }
+
+    cursor: pointer;
+    padding: 15px 15px 0px 15px;
+    width: 100%;
+
+    a {
+      text-decoration: none;
+      &:hover {
+        color: inherit;
+      }
+    }
+
+    div {
+      &.title {
+        font-family: $black-shark;
+        font-size: 14px;
+        color: $search_color;
+        line-height: 1.5;
+      }
+
+      &.content {
+        display: block;
+        width: 100%;
+        color: $grey-manatee;
+        font-size: 13px;
+        line-height: 1.5;
+      }
+
+      div {
+        &.category {
+
+          text-align: right;
+          display: inline;
+
+        }
+      }
+    }
+  }
+}

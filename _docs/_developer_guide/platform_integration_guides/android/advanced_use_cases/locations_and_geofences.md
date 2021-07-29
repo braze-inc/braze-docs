@@ -2,8 +2,12 @@
 nav_title: Locations & Geofences
 platform: Android
 page_order: 6
+description: "This reference article covers how to implement locations and geofences in your Android application."
+Tool:
+  - Location
 
 ---
+
 # Locations & Geofences
 
 Geofences are only available in select Braze packages. For access please create a support ticket or speak with your Braze Customer Success Manager. Learn more in [Braze Docs]({{site.baseurl}}/developer_guide/platform_integration_guides/fireos/advanced_use_cases/locations_and_geofences/#locations--geofences).
@@ -11,12 +15,11 @@ Geofences are only available in select Braze packages. For access please create 
 To support geofences for Android:
 
 1. Your integration must support background push notifications.
-
 2. Braze geofences or location collection must be enabled.
 
-### Step 1: Update build.gradle
+## Step 1: Update build.gradle
 
-Add the [Google Play Services Location package][3] to your app level `build.gradle` using the [Google Play Services setup guide][10]:
+Add the [Google Play Services Location package][3] to your app-level `build.gradle` using the [Google Play Services setup guide][10]:
 
 ```
 dependencies {
@@ -24,9 +27,7 @@ dependencies {
 }
 ```
 
-See our sample application's [`build.gradle`][2] for an example implementation.
-
-### Step 2: Update the Manifest
+## Step 2: Update the Manifest
 
 Add boot, fine location, and background location permissions to your `AndroidManifest.xml`:
 
@@ -58,9 +59,9 @@ If you are using a version of the Android SDK less than `2.3.0`, the following m
 ```
 {% endalert %}
 
-### Step 3: Enable Braze Location Collection
+## Step 3: Enable Braze Location Collection
 
-If you have not yet enabled Braze location collection, update your `appboy.xml` file to include `com_appboy_enable_location_collection` and ensure its value is set to `true`.
+If you have not yet enabled Braze location collection, update your `braze.xml` file to include `com_appboy_enable_location_collection` and ensure its value is set to `true`.
 
 ```xml
 <bool name="com_appboy_enable_location_collection">true</bool>
@@ -70,13 +71,13 @@ If you have not yet enabled Braze location collection, update your `appboy.xml` 
 Starting with Braze Android SDK version 3.6.0 Braze location collection is disabled by default.
 {% endalert %}
 
-Braze geofences are enabled if Braze location collection is enabled. If you would like to opt-out of our default location collection but still want to use geofences, it can be enabled selectively by setting the value of key `com_appboy_geofences_enabled` to `true` in `appboy.xml`, independently of the value of `com_appboy_enable_location_collection`. 
+Braze geofences are enabled if Braze location collection is enabled. If you would like to opt-out of our default location collection but still want to use geofences, it can be enabled selectively by setting the value of key `com_appboy_geofences_enabled` to `true` in `braze.xml`, independently of the value of `com_appboy_enable_location_collection`.
 
 ```xml
 <bool name="com_appboy_geofences_enabled">true</bool>
 ```
 
-### Step 4: Obtain Location Permissions from the End User
+## Step 4: Obtain Location Permissions from the End-User
 
 For Android M and higher versions, you must request location permissions from the end user before gathering location information or registering geofences.
 
@@ -86,14 +87,14 @@ Add the following call to notify Braze when a user grants the location permissio
 {% tab JAVA %}
 
 ```java
-AppboyLocationService.requestInitialization(context);
+Braze.getInstance(context).requestLocationInitialization();
 ```
 
 {% endtab %}
 {% tab KOTLIN %}
 
 ```kotlin
-AppboyLocationService.requestInitialization(context)
+Braze.getInstance(context).requestLocationInitialization()
 ```
 
 {% endtab %}
@@ -108,7 +109,7 @@ See [`RuntimePermissionUtils.java`][4] in our sample application for an example 
 
 ```java
 public class RuntimePermissionUtils {
-  private static final String TAG = AppboyLogger.getAppboyLogTag(RuntimePermissionUtils.class);
+  private static final String TAG = BrazeLogger.getBrazeLogTag(RuntimePermissionUtils.class);
   public static final int DROIDBOY_PERMISSION_LOCATION = 40;
 
   public static void handleOnRequestPermissionsResult(Context context, int requestCode, int[] grantResults) {
@@ -119,7 +120,7 @@ public class RuntimePermissionUtils {
         if (areAllPermissionsGranted(grantResults)) {
           Log.i(TAG, "Required location permissions granted.");
           Toast.makeText(context, "Required location permissions granted.", Toast.LENGTH_SHORT).show();
-          AppboyLocationService.requestInitialization(context);
+          Braze.getInstance(context).requestLocationInitialization();
         } else {
           Log.i(TAG, "Required location permissions NOT granted.");
           Toast.makeText(context, "Required location permissions NOT granted.", Toast.LENGTH_SHORT).show();
@@ -146,7 +147,7 @@ public class RuntimePermissionUtils {
 
 ```kotlin
 object RuntimePermissionUtils {
-  private val TAG = AppboyLogger.getAppboyLogTag(RuntimePermissionUtils::class.java!!)
+  private val TAG = BrazeLogger.getBrazeLogTag(RuntimePermissionUtils::class.java!!)
   val DROIDBOY_PERMISSION_LOCATION = 40
 
   fun handleOnRequestPermissionsResult(context: Context, requestCode: Int, grantResults: IntArray) {
@@ -157,7 +158,7 @@ object RuntimePermissionUtils {
         if (areAllPermissionsGranted(grantResults)) {
           Log.i(TAG, "Required location permissions granted.")
           Toast.makeText(context, "Required location permissions granted.", Toast.LENGTH_SHORT).show()
-          AppboyLocationService.requestInitialization(context)
+          Braze.getInstance(context).requestLocationInitialization()
         } else {
           Log.i(TAG, "Required location permissions NOT granted.")
           Toast.makeText(context, "Required location permissions NOT granted.", Toast.LENGTH_SHORT).show()
@@ -212,7 +213,7 @@ if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
 ```kotlin
 if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
   if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.Q) {
-    val hasAllPermissions = PermissionUtils.hasPermission(applicationContext, Manifest.permission.ACCESS_BACKGROUND_LOCATION) 
+    val hasAllPermissions = PermissionUtils.hasPermission(applicationContext, Manifest.permission.ACCESS_BACKGROUND_LOCATION)
         && PermissionUtils.hasPermission(applicationContext, Manifest.permission.ACCESS_FINE_LOCATION)
     if (!hasAllPermissions) {
       // Request both BACKGROUND and FINE location permissions
@@ -232,19 +233,19 @@ if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
 {% endtab %}
 {% endtabs %}
 
-### Step 5: Enable Geofences on the Dashboard
+## Step 5: Enable Geofences on the Dashboard
 
 Android only allows up to 100 geofences to be stored for a given app. Braze's Locations product will use up to 20 of these geofence slots if available. To prevent accidental or unwanted disruption to other geofence-related functionality in your app, location geofences must be enabled for individual Apps on the Dashboard.
 
 For Braze's Locations product to work correctly, you should also ensure that your App is not using all available geofence spots.
 
-### Step 6: (Optional) Manually Request Geofence Updates
+## Step 6: (Optional) Manually Request Geofence Updates
 
 By default, Braze automatically retrieves the device's location and requests geofences based on that collected location. However, you can manually provide a GPS coordinate that will be used to retrieve proximal Braze Geofences instead. To manually request Braze Geofences, you must disable automatic Braze Geofence requests and provide a GPS coordinate for requests.
 
 #### Part 1: Disable Automatic Geofence Requests
 
-Automatic Braze Geofence requests can be disabled in your `appboy.xml` file by setting `com_appboy_automatic_geofence_requests_enabled` to `false`.
+Automatic Braze Geofence requests can be disabled in your `braze.xml` file by setting `com_appboy_automatic_geofence_requests_enabled` to `false`.
 
 ```xml
 <bool name="com_appboy_automatic_geofence_requests_enabled">false</bool>
@@ -256,18 +257,18 @@ This can additionally be done at runtime via:
 {% tab JAVA %}
 
 ```java
-AppboyConfig.Builder appboyConfigBuilder = new AppboyConfig.Builder()
+BrazeConfig.Builder brazeConfigBuilder = new BrazeConfig.Builder()
     .setAutomaticGeofenceRequestsEnabled(false);
-Appboy.configure(getApplicationContext(), appboyConfigBuilder.build());
+Braze.configure(getApplicationContext(), brazeConfigBuilder.build());
 ```
 
 {% endtab %}
 {% tab KOTLIN %}
 
 ```kotlin
-val appboyConfigBuilder = AppboyConfig.Builder()
+val brazeConfigBuilder = BrazeConfig.Builder()
     .setAutomaticGeofenceRequestsEnabled(false)
-Appboy.configure(applicationContext, appboyConfigBuilder.build())
+Braze.configure(applicationContext, brazeConfigBuilder.build())
 ```
 
 {% endtab %}
@@ -281,14 +282,14 @@ Braze Geofences are manually requested via the [`requestGeofences()`][11] method
 {% tab JAVA %}
 
 ```java
-Appboy.getInstance(getApplicationContext()).requestGeofences(latitude, longitude);
+Braze.getInstance(getApplicationContext()).requestGeofences(latitude, longitude);
 ```
 
 {% endtab %}
 {% tab KOTLIN %}
 
 ```kotlin
-Appboy.getInstance(applicationContext).requestGeofences(33.078947, -116.601356)
+Braze.getInstance(applicationContext).requestGeofences(33.078947, -116.601356)
 ```
 
 {% endtab %}
@@ -302,22 +303,17 @@ Braze Geofences can only be requested once per session, either automatically by 
 
 ![Braze Developer Console]({% image_buster /assets/img_archive/enable-geofences-locations-page.png %})
 
-##### Enable geofences from the App Settings page:
+##### Enable geofences from the Settings page:
 
 ![Braze Developer Console]({% image_buster /assets/img_archive/enable-geofences-app-settings-page.png %})
 
-### Note about Push to Sync
+## Note about Push to Sync
 
 Note that Braze syncs geofences to devices using background push. In most cases, this will involve no code changes, as this feature requires no further integration on the part of the app.
 
 However, note that if your application is stopped, receiving a background push will launch it in the background and its `Application.onCreate()` method will be called. If you have a custom Application.onCreate() implementation, you should defer automatic server calls and any other actions you would not want to be triggered by background push.
 
-[1]: https://github.com/Appboy/appboy-android-sdk/blob/master/droidboy/src/main/AndroidManifest.xml
-[2]: https://github.com/Appboy/appboy-android-sdk/blob/master/droidboy/build.gradle
 [3]: https://developers.google.com/android/reference/com/google/android/gms/location/package-summary
 [4]: https://github.com/Appboy/appboy-android-sdk/blob/91622eb6cd4bba2e625cc22f00ca38e6136a0596/droidboy/src/main/java/com/appboy/sample/util/RuntimePermissionUtils.java
-[5]: https://developer.android.com/training/location/geofencing.html
-[6]: {{site.baseurl}}/developer_guide/platform_integration_guides/ios/push_notifications/silent_push_notifications/#use-silent-remote-notifications-to-trigger-background-work
-[9]: https://developer.apple.com/library/content/documentation/UserExperience/Conceptual/LocationAwarenessPG/RegionMonitoring/RegionMonitoring.html
 [10]: https://developers.google.com/android/guides/setup
 [11]: https://appboy.github.io/appboy-android-sdk/javadocs/com/appboy/Appboy.html#requestGeofences-double-double-

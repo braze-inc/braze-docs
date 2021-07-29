@@ -3,8 +3,13 @@ nav_title: Integration
 platform: FireOS
 page_order: 0
 
+page_type: solution
+description: "This article walks you through how to integrate Braze push notifications with your FireOS app."
+channel: push
+
 ---
-## Integration
+
+# Integration
 
 A push notification is an out-of-app alert that appears on the user's screen when an important update occurs. Push notifications are a valuable way to provide your users with time-sensitive and relevant content or to re-engage them with your app.
 
@@ -16,26 +21,24 @@ Braze sends push notifications to Amazon devices using [Amazon Device Messaging 
 
 >  Amazon Device Messaging (ADM) is __only__ supported on Fire phones and tablets (except for Kindle Fire 1st Generation). You cannot test ADM messaging on a regular Android device.
 
-### Step 1: Enable ADM
+## Step 1: Enable ADM
 
 - Create an account with the [Amazon Apps & Games Developer Portal][10] if you have not already done so.
 - Obtain OAuth credentials (Client ID and Client Secret) and an ADM API key by following the instructions in [Obtaining Amazon Device Messaging Credentials][11].
-- Add the following line to your `res/values/appboy.xml` file to enable ADM:
+- Add the following line to your `res/values/braze.xml` file to enable ADM:
 
   ```xml
   <bool name="com_appboy_push_adm_messaging_registration_enabled">true</bool>
   ```
 
-  See [appboy.xml][17] within the Droidboy Sample app for an example implementation.
+## Step 2: Update AndroidManifest.xml
 
-### Step 2: Update AndroidManifest.xml
-
-- In your app's AndroidManifest.xml, add Amazon's namespace to the `<tt>manifest</tt>` tag.
+- In your app's AndroidManifest.xml, add Amazon's namespace to the `<>manifest</>` tag.
 
   ```xml
   xmlns:amazon="http://schemas.amazon.com/apk/res/android"
   ```
-- Declare permissions required to support ADM by adding `<tt>permission</tt>` and `<tt>uses-permission</tt>` elements after the `<tt>manifest</tt> element`.
+- Declare permissions required to support ADM by adding `<>permission</>` and `<>uses-permission</>` elements after the `<>manifest</> element`.
 
   ```xml
   <manifest xmlns:android="http://schemas.android.com/apk/res/android"
@@ -83,21 +86,17 @@ Braze sends push notifications to Amazon devices using [Amazon Device Messaging 
   </receiver>
   ```
 
-  #### Implementation Example
-
-  See the [`AndroidManifest.xml`][13] in the Droidboy sample app.
-
-### Step 3: Store Your ADM API Key
+## Step 3: Store Your ADM API Key
 
 - Save your ADM API key to a file named `api_key.txt` and save it in your project's `assets` folder.
 - For how to obtain an ADM API Key for your app, consult Amazon's documentation on [obtaining an ADM API Key][11].
 - Amazon will not recognize your key if `api_key.txt` contains any white space characters, such as a trailing line break.
 
-### Step 4: Add Deep Links
+## Step 4: Add Deep Links
 
-##### Enabling Automatic Deep Link Opening
+#### Enabling Automatic Deep Link Opening
 
-To enable Braze to automatically open your app and any deep links when a push notification is clicked, set `com_appboy_handle_push_deep_links_automatically` to `true` in your `appboy.xml`:
+To enable Braze to automatically open your app and any deep links when a push notification is clicked, set `com_appboy_handle_push_deep_links_automatically` to `true` in your `braze.xml`:
 
 ```
 <bool name="com_appboy_handle_push_deep_links_automatically">true</bool>
@@ -105,16 +104,16 @@ To enable Braze to automatically open your app and any deep links when a push no
 
 If you would like to custom handle deep links, you will need to create a `BroadcastReceiver` that listens for push received and opened intents from Braze. See our section on [Custom Handling Push Receipts and Opens][52] in the Android push documentation for more information.
 
-### Step 5: Add Client Secret and Client ID to Braze Dashboard
+## Step 5: Add Client Secret and Client ID to Braze Dashboard
 
-Lastly, you must add the Client Secret and Client ID you obtained in [Step 1][2] to the Braze dashboard's "Manage App Group" page as pictured below:
+Lastly, you must add the Client Secret and Client ID you obtained in [Step 1][2] to the Braze dashboard's "Manage Settings" page as pictured below:
 
 ![FireOS Dashboard][34]
 
-### Manual Push Registration
+## Manual Push Registration
 If you need to handle ADM registration yourself, you should do the following:
 
-- Within [appboy.xml][12] add the following:
+- Within [braze.xml][12] add the following:
 
   ```xml
   <!-- This will disable automatic registration for ADM via the Braze SDK-->
@@ -128,7 +127,7 @@ If you need to handle ADM registration yourself, you should do the following:
 
 >  Braze does not recommend using manual registration if possible.
 
-### ADM Extras
+## ADM Extras
 
 Users may send custom key-value pairs with a Kindle push message as "extras" for ["Deep Linking"][29], tracking urls, etc.  Please note that unlike in Android push, Kindle push users may not use Braze reserved keys as keys when defining "extra" key-value pairs.
 
@@ -148,18 +147,11 @@ If a Kindle reserved key is detected, Braze returns Status Code 400: Kindle Push
 
 [2]: #step-1-enable-adm
 [8]: {{site.baseurl}}/developer_guide/platform_integration_guides/fireos/push_notifications/troubleshooting/
-[9]: {{site.baseurl}}/developer_guide/platform_integration_guides/fireos/initial_sdk_setup/
 [10]: https://developer.amazon.com/public
 [11]: https://developer.amazon.com/public/apis/engage/device-messaging/tech-docs/02-obtaining-adm-credentials
 [12]: https://developer.amazon.com/public/apis/engage/device-messaging/tech-docs/03-setting-up-adm
-[13]: https://github.com/Appboy/appboy-android-sdk/blob/master/droidboy/src/main/AndroidManifest.xml "AndroidManifest.xml"
 [14]: https://developer.amazon.com/public/apis/engage/device-messaging
-[15]: https://developer.amazon.com/public/apis/engage/device-messaging/tech-docs/05-requesting-an-access-token"
-[16]: https://developer.amazon.com/public/apis/engage/device-messaging/tech-docs/06-sending-a-message
-[17]: https://github.com/Appboy/appboy-android-sdk/blob/master/droidboy/src/main/res/values/appboy.xml "appboy.xml"
-[20]: {{site.baseurl}}/download/amazon-device-messaging-1.0.1.jar
-[26]: http://www.compiletimeerror.com/2013/03/android-broadcast-receiver-in-detail.html#.U5nCZxYmbww "Android Receiver Tutorial"
-[29]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/advanced_use_cases/deep_linking_to_in-app_resources/
+[29]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/advanced_use_cases/deep_linking/
 [32]: https://developer.amazon.com/appsandservices/apis/engage/device-messaging/tech-docs/04-integrating-your-app-with-adm
 [34]: {% image_buster /assets/img_archive/fire_os_dashboard.png %}
 [37]: https://appboy.github.io/appboy-android-sdk/javadocs/com/appboy/Appboy.html#registerAppboyPushMessages(java.lang.String) "registerAppboyPushMessages()"

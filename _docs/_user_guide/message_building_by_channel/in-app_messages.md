@@ -1,9 +1,13 @@
 ---
 nav_title: "In-App Messages"
 page_order: 2
+alias: /in-app_messages/
 layout: featured
 guide_top_header: "In-App Messages"
 guide_top_text: "In-App Messages help you get content to your user without interrupting their day with a push notification. Customized and tailored in-app messages enhance the user experience and help your audience get the most value out of your app. With a variety of layouts and customization tools to choose from, in-app messages engage your users more than ever before."
+description: "In-App Messages help you get content to your user without interrupting their day with a push notification. Customized and tailored in-app messages enhance the user experience and help your audience get the most value out of your app."
+channel:
+  - in-app messages
 
 guide_featured_title: "Popular Articles"
 guide_featured_list:
@@ -25,16 +29,13 @@ guide_featured_list:
 - name: "Dark Mode"
   link: /docs/user_guide/message_building_by_channel/in-app_messages/dark-mode/
   fa_icon: fas fa-mobile
+- name: HTML Preview
+  link: /docs/user_guide/message_building_by_channel/in-app_messages/preview/
+  fa_icon: fas fa-file-code
 
 ---
 
-To see examples of in-app messages, check out our [Client Integration Gallery][11].
-
-{% alert note %}
-Braze has refreshed in-app messages! Though the creation process is very much the same, our in-app messages have a new, modern look and feel optimized for the best experiences for your customers and give you more options to personalize the experience. For more information on our most recent upgrades and how to apply them to your messages, check out our [Generation Comparison documentation]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/generations/)!
-{% endalert %}
-
-[Create an in-app message]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/create/) now!
+To see examples of in-app messages, check out our [Case Studies][11].
 
 ## When to Use In-App Messages
 
@@ -92,6 +93,5 @@ Full-Screen messages are exactly what you'd expect - they take up the whole scre
 {% endtab %}
 {% endtabs %}
 
-[1]: http://yuml.me/e4562a3d.png
-[11]: {{site.baseurl}}/help/best_practices/client_integration_gallery/#client-integration-iam
+[11]: https://www.braze.com/customers
 [21]: {{site.baseurl}}/help/best_practices/push/creating_custom_opt-in_prompts/#creating-custom-opt-in-prompts

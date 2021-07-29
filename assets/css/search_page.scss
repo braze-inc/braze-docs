@@ -103,7 +103,7 @@ $braze-black-oblique: 'Sailec W00 Bold Italic', Arial, Helvetica, sans-serif;
     max-width: 100%;
   }
 
-  .ais-refinement-list--label {
+  .ais-RefinementList-labelText {
     margin-bottom: 0px;
     color: $grey-dust;
   }
@@ -112,13 +112,30 @@ $braze-black-oblique: 'Sailec W00 Bold Italic', Arial, Helvetica, sans-serif;
   }
   #clear-all {
     padding: $search_padding $search_padding 0px $search_padding;
+    button {
+        color: #fff;
+        display: inline-block;
+        background: #3369e7;
+        border-radius: 4px;
+        font-size: 12px;
+        text-decoration: none;
+        padding: 4px 8px;
+        &.ais-ClearRefinements-button--disabled {
+          background: #697782;
+        }
+    }
   }
-
+  .search_refinement_title {
+    padding: $search_padding 0px 0px $search_padding;
+    font-size: .8em;
+    color: #212123;
+    text-transform: uppercase;
+  }
   #search_type {
-    padding: $search_padding $search_padding 0px $search_padding;
+    padding: 0 $search_padding 0px $search_padding;
   }
   #search_category {
-    padding: $search_padding $search_padding 0px $search_padding;
+    padding: 0 $search_padding 0px $search_padding;
   }
   #search_form {
     padding: $search_padding $search_padding 0px 0px;
@@ -127,13 +144,30 @@ $braze-black-oblique: 'Sailec W00 Bold Italic', Arial, Helvetica, sans-serif;
     padding: $search_padding $search_padding 0px 0px;
   }
   #search_pagination {
-    .ais-pagination {
+    padding-top: 10px;
+    .ais-Pagination-link {
       box-shadow: none;
       border: none;
-      padding: $search_padding/2 0px;
+      border-radius: 3px;
+      padding: $search_padding/2 10px;
+      color: #23263bcc;
+      &:hover {
+        background-image:linear-gradient(#3accddcc,#3accddcc);
+        text-decoration: none;
+      }
     }
-    .ais-pagination--item__active {
-      background-color: $blue-scooter;
+    .ais-Pagination-item {
+        padding: 3px;
+    }
+    .ais-Pagination-item--selected {
+      .ais-Pagination-link {
+        background-image:linear-gradient(#3accddcc,#3accddcc);
+      }
+    }
+    .ais-Pagination-item--disable {
+      .ais-Pagination-link {
+        background-color: transparent;
+      }
     }
   }
 
@@ -155,7 +189,11 @@ $braze-black-oblique: 'Sailec W00 Bold Italic', Arial, Helvetica, sans-serif;
       display: block;
 
   }
-
+  .ais-Hits-item, .ais-InfiniteHits-item {
+    padding: 0px;
+    border-style: none;
+    box-shadow: none;
+  }
   .hit {
     a {
       text-decoration: none;

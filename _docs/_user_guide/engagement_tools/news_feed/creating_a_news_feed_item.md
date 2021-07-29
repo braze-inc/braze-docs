@@ -1,12 +1,17 @@
 ---
 nav_title: Creating a News Feed Item
 page_order: 3
+
+page_type: reference
+description: "This reference article covers how to create a News Feed item. News-Feed items allow you to insert permanent content directly into your app from our web dashboard."
+tool: Dashboard
+channel: news feed
 ---
 # Creating a News Feed Item
 
-News-Feed items allow you to insert permanent content directly into your app from our web dashboard. Better yet, the news feed also is targetable to individual segments just like all of our other message types. This means what you see in the feed might be completely different from another individual. The possibilities for the news-feed are nearly limitless.
+News-Feed items allow you to insert permanent content directly into your app from our web dashboard. Better yet, the News Feed also is targetable to individual segments just like all of our other message types. This means what you see in the feed might be completely different from another individual. The possibilities for the news-feed are nearly limitless.
 
-To see examples of News Feeds and helpful tips, check out our [Client Integration Gallery][13], [use case][15], and [best practice][16] docs. 
+To see examples of News Feeds and helpful tips, check out our [Case Studies][13], and our [use case][15] and [best practice][16] docs.
 
 ## Step 1: Click Create Card
 
@@ -20,7 +25,7 @@ First, you must choose the type of News Feed item you want to send down to your 
 
 ![Classic Card][2]
 
-Standard news feed cards consist of:
+Standard News Feed cards consist of:
 
 - 110x110 image
 - Title
@@ -47,16 +52,6 @@ Banner cards consist of:
 - 600x100 image
 - Link (In-App/Web)
 
-#### Cross Promotions Cards
-
-![CrossPromo][5]
-
-Cross-promotion cards allow you to showcase another app that's in the app store. 
-{% alert important %}
-You may not advertise apps which are the property of companies other than your own.
-{% endalert %}
-
-
 #### Image guidelines
 
 |          Card type         |          Aspect Ratio         | Recommended Image Size | Maximum Image Size |   File Types  |
@@ -64,6 +59,7 @@ You may not advertise apps which are the property of companies other than your o
 |          Classic         | 1:1 (110 pixels wide minimum) |          500KB         |         1MB        | PNG, JPG, GIF |
 |          Captioned image         | 4:3 (600 pixels wide minimum) |          500KB         |         1MB        | PNG, JPG, GIF |
 |          Banner         | 6:1 (600 pixels wide minimum) |          500KB         |         1MB        | PNG, JPG, GIF |
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4}
 
 - PNG files are recommended.
 - A custom image loading library is required to display Gifs on Android. We recommend Glide.
@@ -90,7 +86,7 @@ You can configure your News Feed Card to target any [segment][10] you've defined
 
 ## Step 5: Review Details and Publish
 
-Next, you will be taken to a page that displays all of the details about your card (and companion In-App message, if applicable). You can review any of the details about these items and edit them if you need to by clicking the pencil icon in any of the headers.
+Next, you will be taken to a page that displays all of the details about your card (and companion in-app message, if applicable). You can review any of the details about these items and edit them if you need to by clicking the pencil icon in any of the headers.
 
 ![News Feed Preview][12]
 
@@ -100,7 +96,7 @@ That's it! You're done! You've published your first news-feed card!
 
 ![Linked In App][14]
 
-Multi-Channel campaigns often lead to better overall conversion and engagement rates, so Braze has made it easy to link an in-app message to a specific news feed card. After launching a news feed card, a button will appear in the new feed statistics page allowing you to "create an associated in-app message." Clicking on this will take you to the campaign composer for a new in-app message campaign. While you would input the copy, look, and feel of the in-app message, Braze automatically copies the delivery and targeting rules of the associated news feed card to make sure the campaigns launch together.
+Multi-Channel campaigns often lead to better overall conversion and engagement rates, so Braze has made it easy to link an in-app message to a specific News Feed card. After launching a News Feed card, a button will appear in the new feed statistics page allowing you to "create an associated in-app message." Clicking on this will take you to the campaign composer for a new in-app message campaign. While you would input the copy, look, and feel of the in-app message, Braze automatically copies the delivery and targeting rules of the associated News Feed card to make sure the campaigns launch together.
 
 ## Organizing your News Feed
 
@@ -114,14 +110,13 @@ You can re-order your cards within Braze's News Feed page.
 [2]: {% image_buster /assets/img_archive/classiccard.png %}
 [3]: {% image_buster /assets/img_archive/captionedimage.png %}
 [4]: {% image_buster /assets/img_archive/newsfeedbanner.png %}
-[5]: {% image_buster /assets/img_archive/crosspromo.png %}
 [6]: {% image_buster /assets/img_archive/news-feed-title-summary_new.png %}
 [7]: {{site.baseurl}}/developer_guide/platform_integration_guides/ios/advanced_use_cases/linking/#deep-linking-to-app-settings
 [8]: {% image_buster /assets/img_archive/newsfeed2_new.png %}
 [10]: {{site.baseurl}}/user_guide/engagement_tools/segments/creating_a_segment/#creating-a-segment
 [11]: {% image_buster /assets/img_archive/targetsegment_new.png %}
 [12]: {% image_buster /assets/img_archive/newsfeedpreview_new.png %}
-[13]: {{site.baseurl}}/help/best_practices/client_integration_gallery/#client-integration-newsfeed
+[13]: https://www.braze.com/customers
 [14]: {% image_buster /assets/img_archive/linked-in-app_new.png %}
 [15]: {{site.baseurl}}/user_guide/engagement_tools/news_feed/news_feed_use_cases/
 [16]: {{site.baseurl}}/help/best_practices/news_feed/#news-feed-best-practices

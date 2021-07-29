@@ -3,10 +3,15 @@ nav_title: Silent Push Notifications
 platform: FireOS
 page_order: 3
 
----
-## Silent Push Notifications
+page_type: reference
+description: "This article describes how to send silent push notifications, and potential use cases for when silent push notifications may be preferable."
+channel: push
 
-Silent notifications allow you to notify your app in the background when important events occur. You might have new instant messages to deliver, new issues of a magazine to publish, breaking news alerts to send, or the latest episode of your user’s favorite TV show ready for him or her to download for offline viewing. Silent notifications are great for sporadic but immediately important content, where the delay between background fetches might not be acceptable.
+---
+
+# Silent Push Notifications
+
+Silent notifications allow you to notify your app in the background when important events occur. You might have new instant messages to deliver, new issues of a magazine to publish, breaking news alerts to send, or the latest episode of your user’s favorite TV show ready for them to download for offline viewing. Silent notifications are great for sporadic but immediately important content, where the delay between background fetches might not be acceptable.
 
 Silent notifications are available through our [Messaging RESTful API][2]. You need only set the `send_to_sync` flag to `true` within the [Android Push Object][3]. You should ensure there are no `title` or `alert` fields set within the [Android Push Object][3] as it will cause errors when `send_to_sync` is set to `true`. You can however still include data `extras` within the [Android Push Object][3].
 

@@ -4,9 +4,9 @@ platform: Campaigns
 subplatform: Ideas and Strategies
 page_order: 4
 
-tools: campaigns
 page_type: tutorial
-description: "This how-to article will go over how to send messages in different languages from within Braze dashboard campaigns."
+description: "This how-to article will walk you through how to send messages in different languages from within Braze dashboard campaigns."
+tool: Campaigns
 ---
 
 # Campaigns in Multiple Languages
@@ -75,7 +75,7 @@ Anything entered outside of the template block will behave like normal content a
 ![Type Variations][6]
 
 ## Step 6: Preview Message
-Click the Personalized Preview button and enter a user's ID or email to see how the message would appear to that individual, depending on his or her language. In addition, you'll be able to see how your entire message looks as a whole and decide whether to add languages to more fields than the ones you had previously chosen.
+Click the Personalized Preview button and enter a user's ID or email to see how the message would appear to that individual, depending on their language. In addition, you'll be able to see how your entire message looks as a whole and decide whether to add languages to more fields than the ones you had previously chosen.
 
 ![Preview Message][7]
 
@@ -84,11 +84,10 @@ __Continue through the remaining steps of message creation.__ This includes fini
 
 {% endraw %}
 
-[1]: {% image_buster /assets/img_archive/languages_1.png %}
+[1]: {% image_buster /assets/img_archive/languages_1.jpg %}
 [2]: {% image_buster /assets/img_archive/languages_2.png %}
 [3]: {{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/conditional_logic/
 [4]: {% image_buster /assets/img_archive/languages_3.png %}
-[5]: http://www.loc.gov/standards/iso639-2/php/code_list.php
 [6]: {% image_buster /assets/img_archive/languages_5.png %}
 [7]: {% image_buster /assets/img_archive/languages_6.png %}
 [8]: {{site.baseurl}}/developer_guide/platform_integration_guides/ios/advanced_use_cases/localization/

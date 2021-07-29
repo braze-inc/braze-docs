@@ -1,8 +1,11 @@
 ---
 nav_title: Customization
-page_order: 1
-
+page_order: 2
 platform: Android
+description: "This article covers customization options for your Content Cards in your Android application."
+channel:
+  - content cards
+
 ---
 
 # Customization
@@ -81,7 +84,7 @@ To fully customize the network error behavior, you can extend the [AppboyContent
 
 ## Content Cards Style Elements {#content-cards-style-elements-for-android}
 
-### Setting A Custom Font {#setting-a-custom-font-for-android}
+### Custom Font {#setting-a-custom-font-for-android}
 
 Braze allows for setting a custom font using the [font family guide][40]. To use it, override a style for cards and use the `fontFamily` attribute to instruct Braze to use your custom font family.
 
@@ -98,7 +101,7 @@ Here is a truncated example with a custom font family, `my_custom_font_family`, 
   </style>
 ```
 
-### Setting A Custom Pinned Icon {#setting-a-custom-pinned-icon-for-android}
+### Custom Pinned Icon {#setting-a-custom-pinned-icon-for-android}
 
 To set a custom pinned icon, override the `Appboy.ContentCards.PinnedIcon` style. Your custom image asset should be declared in the `android:src` element.
 
@@ -115,6 +118,19 @@ The following is the default `IContentCardsUpdateHandler` and can be used as a s
 
 ```java
 public class DefaultContentCardsUpdateHandler implements IContentCardsUpdateHandler {
+
+  // Interface that must be implemented and provided as a public CREATOR
+  // field that generates instances of your Parcelable class from a Parcel.
+  public static final Parcelable.Creator<DefaultContentCardsUpdateHandler> CREATOR = new Parcelable.Creator<DefaultContentCardsUpdateHandler>() {
+    public DefaultContentCardsUpdateHandler createFromParcel(Parcel in) {
+      return new DefaultContentCardsUpdateHandler();
+    }
+
+    public DefaultContentCardsUpdateHandler[] newArray(int size) {
+      return new DefaultContentCardsUpdateHandler[size];
+    }
+  };
+
   @Override
   public List<Card> handleCardUpdate(ContentCardsUpdatedEvent event) {
     List<Card> sortedCards = event.getAllCards();
@@ -151,6 +167,18 @@ public class DefaultContentCardsUpdateHandler implements IContentCardsUpdateHand
 
     return sortedCards;
   }
+
+  // Parcelable interface method
+  @Override
+  public int describeContents() {
+    return 0;
+  }
+
+  // Parcelable interface method
+  @Override
+  public void writeToParcel(Parcel dest, int flags) {
+    // No state is kept in this class so the parcel is left unmodified
+  }
 }
 ```
 
@@ -163,32 +191,54 @@ class DefaultContentCardsUpdateHandler : IContentCardsUpdateHandler {
     val sortedCards = event.allCards
     // Sort by pinned, then by the 'updated' timestamp descending
     // Pinned before non-pinned
-    Collections.sort(sortedCards, Comparator { cardA, cardB ->
+    sortedCards.sortWith(Comparator sort@{ cardA: Card, cardB: Card ->
       // A displays above B
       if (cardA.isPinned && !cardB.isPinned) {
-        return@Comparator -1
+        return@sort -1
       }
 
       // B displays above A
       if (!cardA.isPinned && cardB.isPinned) {
-        return@Comparator 1
+        return@sort 1
       }
 
       // At this point, both A & B are pinned or both A & B are non-pinned
       // A displays above B since A is newer
       if (cardA.updated > cardB.updated) {
-        return@Comparator -1
+        return@sort -1
       }
 
       // B displays above A since A is newer
       if (cardA.updated < cardB.updated) {
-        1
-      } else 0
-
-      // At this point, every sortable field matches so keep the natural ordering
+        return@sort 1
+      }
+      0
     })
-
     return sortedCards
+  }
+
+  // Parcelable interface method
+  override fun describeContents(): Int {
+    return 0
+  }
+
+  // Parcelable interface method
+  override fun writeToParcel(dest: Parcel, flags: Int) {
+    // No state is kept in this class so the parcel is left unmodified
+  }
+
+  companion object {
+    // Interface that must be implemented and provided as a public CREATOR
+    // field that generates instances of your Parcelable class from a Parcel.
+    val CREATOR: Parcelable.Creator<DefaultContentCardsUpdateHandler?> = object : Parcelable.Creator<DefaultContentCardsUpdateHandler?> {
+      override fun createFromParcel(`in`: Parcel): DefaultContentCardsUpdateHandler? {
+        return DefaultContentCardsUpdateHandler()
+      }
+
+      override fun newArray(size: Int): Array<DefaultContentCardsUpdateHandler?> {
+        return arrayOfNulls(size)
+      }
+    }
   }
 }
 ```
@@ -232,6 +282,18 @@ Here's information on how to change how any card is rendered in the recyclerView
 
 ```java
 public class DefaultContentCardsViewBindingHandler implements IContentCardsViewBindingHandler {
+  // Interface that must be implemented and provided as a public CREATOR
+  // field that generates instances of your Parcelable class from a Parcel.
+  public static final Parcelable.Creator<DefaultContentCardsViewBindingHandler> CREATOR = new Parcelable.Creator<DefaultContentCardsViewBindingHandler>() {
+    public DefaultContentCardsViewBindingHandler createFromParcel(Parcel in) {
+      return new DefaultContentCardsViewBindingHandler();
+    }
+
+    public DefaultContentCardsViewBindingHandler[] newArray(int size) {
+      return new DefaultContentCardsViewBindingHandler[size];
+    }
+  };
+
   /**
    * A cache for the views used in binding the items in the {@link android.support.v7.widget.RecyclerView}.
    */
@@ -287,6 +349,19 @@ public class DefaultContentCardsViewBindingHandler implements IContentCardsViewB
     }
     return mContentCardViewCache.get(cardType);
   }
+
+  // Parcelable interface method
+  @Override
+  public int describeContents() {
+    return 0;
+  }
+
+  // Parcelable interface method
+  @Override
+  public void writeToParcel(Parcel dest, int flags) {
+    // Retaining views across a transition could lead to a
+    // resource leak so the parcel is left unmodified
+  }
 }
 ```
 
@@ -295,54 +370,85 @@ public class DefaultContentCardsViewBindingHandler implements IContentCardsViewB
 
 ```kotlin
 class DefaultContentCardsViewBindingHandler : IContentCardsViewBindingHandler {
-  /**
-   * A cache for the views used in binding the items in the [android.support.v7.widget.RecyclerView].
-   */
-  private val mContentCardViewCache = HashMap<CardType, BaseContentCardView<*>>()
+  // Interface that must be implemented and provided as a public CREATOR
+  // field that generates instances of your Parcelable class from a Parcel.
+  val CREATOR: Parcelable.Creator<DefaultContentCardsViewBindingHandler?> = object : Parcelable.Creator<DefaultContentCardsViewBindingHandler?> {
+    override fun createFromParcel(`in`: Parcel): DefaultContentCardsViewBindingHandler? {
+      return DefaultContentCardsViewBindingHandler()
+    }
 
-  override fun onCreateViewHolder(context: Context, cards: List<Card>, viewGroup: ViewGroup, viewType: Int): ContentCardViewHolder? {
-    val cardType = CardType.fromValue(viewType)
-    return getContentCardsViewFromCache(context, cardType)?.createViewHolder(viewGroup)
+    override fun newArray(size: Int): Array<DefaultContentCardsViewBindingHandler?> {
+      return arrayOfNulls(size)
+    }
   }
 
-  override fun onBindViewHolder(context: Context, cards: List<Card>, viewHolder: ContentCardViewHolder, adapterPosition: Int) {
+  /**
+    * A cache for the views used in binding the items in the [RecyclerView].
+    */
+  private val mContentCardViewCache: MutableMap<CardType, BaseContentCardView<*>?> = HashMap()
+
+  override fun onCreateViewHolder(context: Context?, cards: List<Card?>?, viewGroup: ViewGroup?, viewType: Int): ContentCardViewHolder? {
+    val cardType = CardType.fromValue(viewType)
+    return getContentCardsViewFromCache(context, cardType)!!.createViewHolder(viewGroup)
+  }
+
+  override fun onBindViewHolder(context: Context?, cards: List<Card>, viewHolder: ContentCardViewHolder?, adapterPosition: Int) {
+    if (adapterPosition < 0 || adapterPosition >= cards.size) {
+      return
+    }
     val cardAtPosition = cards[adapterPosition]
     val contentCardView = getContentCardsViewFromCache(context, cardAtPosition.cardType)
-    contentCardView?.bindViewHolder(viewHolder, cardAtPosition)
+    if (viewHolder != null) {
+      contentCardView!!.bindViewHolder(viewHolder, cardAtPosition)
+    }
   }
 
-  override fun getItemViewType(context: Context, cards: List<Card>, adapterPosition: Int): Int {
+  override fun getItemViewType(context: Context?, cards: List<Card>, adapterPosition: Int): Int {
+    if (adapterPosition < 0 || adapterPosition >= cards.size) {
+      return -1
+    }
     val card = cards[adapterPosition]
     return card.cardType.value
   }
 
   /**
-   * Gets a cached instance of a [BaseContentCardView] for view creation/binding for a given [CardType].
-   * If the [CardType] is not found in the cache, then a view binding implementation for that [CardType]
-   * is created and added to the cache.
-   */
+    * Gets a cached instance of a [BaseContentCardView] for view creation/binding for a given [CardType].
+    * If the [CardType] is not found in the cache, then a view binding implementation for that [CardType]
+    * is created and added to the cache.
+    */
   @VisibleForTesting
-  @NonNull
-  internal fun getContentCardsViewFromCache(context: Context, cardType: CardType): BaseContentCardView<*>? {
+  fun getContentCardsViewFromCache(context: Context?, cardType: CardType): BaseContentCardView<Card>? {
     if (!mContentCardViewCache.containsKey(cardType)) {
       // Create the view here
-      val contentCardView: BaseContentCardView<*>
-      when (cardType) {
-        CardType.BANNER -> contentCardView = BannerImageContentCardView(context)
-        CardType.CAPTIONED_IMAGE -> contentCardView = CaptionedImageContentCardView(context)
-        CardType.SHORT_NEWS -> contentCardView = ShortNewsContentCardView(context)
-        CardType.TEXT_ANNOUNCEMENT -> contentCardView = TextAnnouncementContentCardView(context)
-        else -> contentCardView = DefaultContentCardView(context)
+      val contentCardView: BaseContentCardView<*> = when (cardType) {
+        CardType.BANNER -> BannerImageContentCardView(context)
+        CardType.CAPTIONED_IMAGE -> CaptionedImageContentCardView(context)
+        CardType.SHORT_NEWS -> ShortNewsContentCardView(context)
+        CardType.TEXT_ANNOUNCEMENT -> TextAnnouncementContentCardView(context)
+        else -> DefaultContentCardView(context)
       }
       mContentCardViewCache[cardType] = contentCardView
     }
-    return mContentCardViewCache[cardType]
+    return mContentCardViewCache[cardType] as BaseContentCardView<Card>?
+  }
+
+  // Parcelable interface method
+  override fun describeContents(): Int {
+    return 0
+  }
+
+  // Parcelable interface method
+  override fun writeToParcel(dest: Parcel?, flags: Int) {
+    // Retaining views across a transition could lead to a
+    // resource leak so the parcel is left unmodified
   }
 }
 ```
 
 {% endtab %}
 {% endtabs %}
+
+> This code can also be found here, [DefaultContentCardsViewBindingHandler][56].
 
 And here's how to use the above class:
 
@@ -371,7 +477,7 @@ fragment.setContentCardsViewBindingHandler(viewBindingHandler)
 
 There are additional relevant resources on this topic available [here](https://medium.com/google-developers/android-data-binding-recyclerview-db7c40d9f0e4).
 
-### Setting a Custom Content Cards Click Listener
+### Custom Content Cards Click Listener
 
 You can handle Content Cards clicks manually by setting a custom click listener. This enables use cases such as selectively using the native web browser to open web links.
 
@@ -418,9 +524,15 @@ AppboyContentCardsManager.getInstance().contentCardsActionListener = object : IC
 {% endtab %}
 {% endtabs %}
 
+### Dark Theme Customization
+
+By default, Content Cards views will automatically respond to Dark Theme changes on the device with a set of themed colors and layout changes. 
+
+To override this behavior, override the `values-night` values in `android-sdk-ui/src/main/res/values-night/colors.xml` and `android-sdk-ui/src/main/res/values-night/dimens.xml`.
+
 ### Fully Custom Content Card Display {#fully-custom-content-card-display-for-android}
 
-If you would like to display the Content Cards in a completely custom manner, it is possible to do so by using your own views populated with data from our models. To obtain Braze’s content cards models, you will need to subscribe to content card updates and use the resulting model data to populate your views. You will also need to log analytics on the model objects as users interact with your views.
+If you would like to display the Content Cards in a completely custom manner, it is possible to do so by using your own views populated with data from our models. To obtain Braze’s Content Cards models, you will need to subscribe to content card updates and use the resulting model data to populate your views. You will also need to log analytics on the model objects as users interact with your views.
 
 #### Part 1: Subscribing to Content Card Updates
 
@@ -529,56 +641,35 @@ Disabling swipe-to-dismiss functionality is done on a per-card basis via the [`c
 
 See the [Javadoc][36] for more information.
 
-## GIFs {#gifs-news-content-cards}
-
 {% alert note %}
 Content Cards have a maximum size of **2kb** (including images, links, and all content) - exceeding that amount will prevent the card from sending.
 {% endalert %}
 
+## GIFs {#gifs-news-content-cards}
+
+{% alert note %}
+This section applies to integrations which use the Braze SDK's default Content Cards Fragment or Views to display Content Cards.
+{% endalert %}
+
 {% include archive/android/gifs.md channel="Content Cards" %}
 
-[2]: http://developer.android.com/guide/components/fragments.html
-[3]: http://developer.android.com/guide/components/fragments.html#Adding "Android Documentation: Fragments"
 
-[4]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/analytics/tracking_sessions/
-[5]: https://github.com/Appboy/appboy-android-sdk/blob/master/droidboy/src/main/java/com/appboy/sample/DroidBoyActivity.java
-[6]: https://appboy.github.io/appboy-android-sdk/javadocs/com/appboy/Appboy.html#logFeedDisplayed--
 [7]: https://appboy.github.io/appboy-android-sdk/javadocs/com/appboy/models/cards/Card.html#logClick--
 [8]: https://appboy.github.io/appboy-android-sdk/javadocs/com/appboy/models/cards/Card.html#logImpression--
-[9]: {{site.baseurl}}/developer_guide/platform_integration_guides/web/news_feed/#card-types
-[14]: {{site.baseurl}}/help/best_practices/news_feed/
-[16]: https://appboy.github.io/appboy-android-sdk/javadocs/com/appboy/Appboy.html#requestFeedRefresh()
-[18]: {% image_buster /assets/img_archive/Image27Theming.png %} "Android Feed"
-[19]: {% image_buster /assets/img_archive/Image28Theming.png %} "Android Cards"
-[20]: {% image_buster /assets/img_archive/Image29Theming.png %} "Android Empty"
-[21]: {% image_buster /assets/img_archive/Image30Theming.png %} "Android Network Error"
-[23]: {% image_buster /assets/img_archive/android_news_feed.png %}
-[25]: {% image_buster /assets/img_archive/UnreadvsReadNewsFeedCard.png %}
-[26]: https://github.com/Appboy/appboy-android-sdk/blob/master/android-sdk-ui/res/drawable-hdpi/icon_unread.png
-[27]: https://github.com/Appboy/appboy-android-sdk/blob/master/android-sdk-ui/res/drawable-hdpi/icon_read.png
-[28]: https://github.com/Appboy/appboy-android-sdk/blob/master/droidboy/src/main/AndroidManifest.xml "AndroidManifest.xml"
-[29]: https://appboy.github.io/appboy-android-sdk/javadocs/com/appboy/models/cards/Card.html
-[30]: https://appboy.github.io/appboy-android-sdk/javadocs/com/appboy/models/cards/BannerImageCard.html
-[31]: https://appboy.github.io/appboy-android-sdk/javadocs/com/appboy/models/cards/CaptionedImageCard.html
-[32]: https://appboy.github.io/appboy-android-sdk/javadocs/com/appboy/models/cards/TextAnnouncementCard.html
-[33]: https://appboy.github.io/appboy-android-sdk/javadocs/com/appboy/models/cards/ShortNewsCard.html
 [36]: https://appboy.github.io/appboy-android-sdk/javadocs/com/appboy/models/cards/Card.html#getExtras--
-[37]: https://github.com/Appboy/appboy-android-sdk/blob/master/android-sdk-ui/src/com/appboy/ui/feed/listeners/IFeedClickActionListener.java
-[38]: https://github.com/Appboy/appboy-android-sdk/blob/master/droidboy/src/main/java/com/appboy/sample/CustomFeedClickActionListener.java
-[39]: https://github.com/Appboy/appboy-android-sdk/blob/master/droidboy/src/main/java/com/appboy/sample/PreferencesActivity.java#L183
 [40]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/advanced_use_cases/font_customization/#font-customization
 [41]: https://appboy.github.io/appboy-android-sdk/javadocs/com/appboy/Appboy.html#logContentCardsDisplayed--
 [42]: https://github.com/Appboy/appboy-android-sdk/blob/master/android-sdk-ui/src/main/res/values/styles.xml
 [43]: https://appboy.github.io/appboy-android-sdk/javadocs/com/appboy/ui/contentcards/listeners/IContentCardsActionListener.html
 [44]: https://appboy.github.io/appboy-android-sdk/javadocs/com/appboy/ui/contentcards/handlers/IContentCardsUpdateHandler.html
 [45]: https://appboy.github.io/appboy-android-sdk/javadocs/com/appboy/ui/AppboyContentCardsFragment.html#setContentCardUpdateHandler-com.appboy.ui.contentcards.handlers.IContentCardsUpdateHandler-
-[46]: https://github.com/Appboy/appboy-android-sdk/blob/v3.4.0/android-sdk-ui/src/main/java/com/appboy/ui/contentcards/handlers/DefaultContentCardsUpdateHandler.java
+[46]: https://github.com/Appboy/appboy-android-sdk/blob/v11.0.0/android-sdk-ui/src/main/java/com/appboy/ui/contentcards/handlers/DefaultContentCardsUpdateHandler.java
 [47]: https://appboy.github.io/appboy-android-sdk/javadocs/com/appboy/ui/AppboyContentCardsFragment.html
 [48]: https://appboy.github.io/appboy-android-sdk/javadocs/com/appboy/models/cards/Card.html#setIsDismissibleByUser-boolean-
 [49]: https://appboy.github.io/appboy-android-sdk/javadocs/com/appboy/ui/AppboyContentCardsFragment.html
 [50]: https://appboy.github.io/appboy-android-sdk/javadocs/com/appboy/ui/contentcards/AppboyEmptyContentCardsAdapter.html
-[51]: https://github.com/Appboy/appboy-android-sdk/blob/master/android-sdk-ui/src/main/res/layout/com_appboy_content_cards_empty.xml
 [52]: https://github.com/Appboy/appboy-android-sdk/blob/master/android-sdk-ui/src/main/res/values/styles.xml#L552-L560
 [53]: https://appboy.github.io/appboy-android-sdk/javadocs/com/appboy/ui/contentcards/AppboyCardAdapter.html
 [54]: https://github.com/Appboy/appboy-android-sdk/blob/master/android-sdk-ui/src/main/java/com/appboy/ui/AppboyContentCardsFragment.java
 [55]: https://appboy.github.io/appboy-android-sdk/javadocs/com/appboy/models/cards/Card.html#isControl--
+[56]: https://github.com/Appboy/appboy-android-sdk/blob/v11.0.0/android-sdk-ui/src/main/java/com/appboy/ui/contentcards/handlers/DefaultContentCardsViewBindingHandler.java

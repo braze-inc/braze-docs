@@ -1,6 +1,10 @@
 ---
 nav_title: Generations
 hidden: true
+description: "This reference article covers in-app messaging generation support."
+channel:
+  - in-app messages
+  
 ---
 
 # In-App Messages Generations
@@ -18,4 +22,3 @@ This chart highlights the features and message types that are currently availabl
 
 ![Difference in Generations]({% image_buster /assets/img/iam-generations-of-modals.png %})
 
-[1]: {% image_buster /assets/pdf/IAM_Gen_Diff.xlsx %}

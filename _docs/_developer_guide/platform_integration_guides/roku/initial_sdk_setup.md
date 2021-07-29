@@ -2,9 +2,13 @@
 nav_title: Initial SDK Setup
 platform: Roku
 page_order: 0
+
+page_type: reference
+description: "This page describes initial setup steps for the Braze Roku SDK."
+
 ---
 
-# Initial SDK Integration
+# Initial Roku SDK Integration
 
 Installing the Braze Roku SDK will provide you with basic analytics and segmentation functionality.
 
@@ -49,4 +53,4 @@ m.Braze = getBrazeInstance(m.BrazeTask)
 
 ## Basic SDK Integration Complete
 
-Braze should now be collecting data from your application with the Braze Roku SDK. Please see the following sections on how to log attributes, events, and purchases to our SDK.
+Braze should now be collecting data from your application with the Braze Roku SDK. Please see the following sections on how to [log attributes]({{site.baseurl}}/developer_guide/platform_integration_guides/roku/analytics/setting_custom_attributes/), [events]({{site.baseurl}}/developer_guide/platform_integration_guides/roku/analytics/logging_custom_events/), and [purchases]({{site.baseurl}}/developer_guide/platform_integration_guides/roku/analytics/logging_purchases/) to our SDK.

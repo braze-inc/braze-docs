@@ -7,7 +7,7 @@ layout: api_page
 page_type: reference
 platform: API
 tool: Segments
-description: "This article outlines details about the Campaign Details endpoint."
+description: "This article outlines details about the Get Campaign Details endpoint."
 ---
 {% api %}
 # Campaign Details Endpoint
@@ -15,48 +15,40 @@ description: "This article outlines details about the Campaign Details endpoint.
 /campaigns/details
 {% endapimethod %}
 
-This endpoint allows you to retrieve relevant information on a specified campaign, which can be identified by the `campaign_id`.
+This endpoint allows you to retrieve relevant information on a specified campaign, which can be identified by the `campaign_id`. 
 
-{% apiref swagger %}https://www.braze.com/docs/api/interactive/#/Export/Campaign%20export%20%20details%20example {% endapiref %}
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#aad2a811-7237-43b1-9d64-32042eabecd9 {% endapiref %}
 
-{% alert important %}
-__Looking for the `api_key` parameter?__<br>As of May 2020, Braze has changed how we read API keys to be more secure. Now API keys must be passed as a request header, please see `YOUR_REST_API_KEY` within the __Example Request__ below.<br><br>Braze will continue to support the `api_key` being passed through the request body and URL parameters, but will eventually be sunset. Please update your API calls accordingly.
-{% endalert %}
-
-## Request Parameter
+## Request Parameters
 
 | Parameter     | Required | Data Type | Description             |
 | ------------- | -------- | --------- | ----------------------- |
-| `campaign_id` | Yes      | String    | Campaign API Identifier |
+| `campaign_id` | Required      | String    | See [Campaign API identifier]({{site.baseurl}}/api/identifier_types/).<br><br> The `campaign_id` for API campaigns can be found on the **Developer Console** and the **Campaign Details** page within your dashboard; or you can use the [Campaign List Endpoint](#campaign-list-endpoint).   |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
 
-### Request Components
-- [Campaign Identifier]({{site.baseurl}}/api/identifier_types/)
-<br><br>
-The `campaign_id` for API campaigns can be found on the Developer Console page and the campaign details page within your dashboard or you can use the [Campaign List Endpoint](#campaign-list-endpoint).
-
-### Example Request URL
-`https://rest.iad-01.braze.com/campaigns/details?campaign_id=3bbc4555-8fa0-4c9b-a5c0-4505edf3e064`
-
-### Example Request 
+## Example Request 
+{% raw %}
 ```
-curl --location --request GET 'https://rest.iad-01.braze.com/campaigns/details?campaign_id=3bbc4555-8fa0-4c9b-a5c0-4505edf3e064' \
---header 'Authorization: Bearer YOUR_REST_API_KEY' \
+curl --location -g --request GET 'https://rest.iad-01.braze.com/campaigns/details?campaign_id={{campaign_identifier}}' \
+--header 'Authorization: Bearer YOUR-REST-API-KEY'
 ```
+{% endraw %}
+
+## Responses
 
 ### Campaign Details Endpoint API Response
 
 ```json
 Content-Type: application/json
-Authorization: Bearer YOUR_REST_API_KEY
+Authorization: Bearer YOUR-REST-API-KEY
 {
     "message": (required, string) the status of the export, returns 'success' when completed without errors,
     "created_at" : (string) date created as ISO 8601 date,
     "updated_at" : (string) date last updated as ISO 8601 date,
-    "archived": (boolean) whether this Campaign is archived,
-    "draft": (boolean) whether this Campaign is a draft,
+    "archived": (boolean) whether this campaign is archived,
+    "draft": (boolean) whether this campaign is a draft,
     "name" : (string) campaign name,
+    "description" : (string) campaign description,
     "schedule_type" : (string) type of scheduling action,
     "channels" : (array) list of channels to send via,
     "first_sent" : (string) date and hour of first sent as ISO 8601 date,
@@ -73,11 +65,11 @@ Authorization: Bearer YOUR_REST_API_KEY
 }
 ```
 
-#### Messages
+### Messages
 
 The `messages` response will contain information about each message. Example message responses for channels are below:
 
-##### Push Channels
+#### Push Channels
 
 ```json
 {
@@ -87,7 +79,7 @@ The `messages` response will contain information about each message. Example mes
 }
 ```
 
-##### Email Channel
+#### Email Channel
 
 ```json
 {
@@ -101,7 +93,35 @@ The `messages` response will contain information about each message. Example mes
 }
 ```
 
-##### Content Card Channel
+#### In-App Message Channel
+
+```json
+{
+    "type": (string) description of in-app message type, such as "survey", "modal", and "fullscreen",
+    "data": {
+        "pages": [
+            {
+                "header": 
+                    {
+                         "text":(string) display text for the header of the survey,
+                    }
+                "choices": [
+                    {
+                       "choice_id": (string) choice identifier,
+                       "text": (string) display text, 
+                       "custom_attribute_key": (string) custom attribute key, 
+                       "custom_attribute_value": (sting) custom attribute value,
+                       "deleted": (boolean) deleted from live campaign, 
+                    },
+                    ...
+                ]
+            }
+        ]
+    }
+}
+```
+
+#### Content Card Channel
 
 ```json
 {
@@ -111,7 +131,7 @@ The `messages` response will contain information about each message. Example mes
 }
 ```
 
-##### Webhook Channel
+#### Webhook Channel
 
 ```json
 {
@@ -124,7 +144,7 @@ The `messages` response will contain information about each message. Example mes
 }
 ```
 
-##### SMS Channel
+#### SMS Channel
 
 ```json
 {
@@ -135,7 +155,7 @@ The `messages` response will contain information about each message. Example mes
 }
 ```
 
-##### Control Messages
+#### Control Messages
 
 ```json
 {
@@ -144,11 +164,11 @@ The `messages` response will contain information about each message. Example mes
 }
 ```
 
-#### Conversion Behaviors
+### Conversion Behaviors
 
 The `conversion_behaviors` array will contain information about each conversion event behavior set for the campaign. These behaviors are in order as set by the campaign. For example, Conversion Event A will be the first item in the array, Conversion Event B will be second, etc. Example conversion event behavior responses for are below:
 
-##### Clicks Email
+#### Clicks Email
 
 ```json
 {
@@ -157,7 +177,7 @@ The `conversion_behaviors` array will contain information about each conversion 
 }
 ```
 
-##### Opens Email
+#### Opens Email
 
 ```json
 {
@@ -166,7 +186,7 @@ The `conversion_behaviors` array will contain information about each conversion 
 }
 ```
 
-##### Makes Purchase (any purchase)
+#### Makes Purchase (any purchase)
 
 ```json
 {
@@ -175,7 +195,7 @@ The `conversion_behaviors` array will contain information about each conversion 
 }
 ```
 
-##### Makes Purchase (specific product)
+#### Makes Purchase (specific product)
 
 ```json
 {
@@ -185,7 +205,7 @@ The `conversion_behaviors` array will contain information about each conversion 
 }
 ```
 
-##### Performs Custom Event
+#### Performs Custom Event
 
 ```json
 {
@@ -195,7 +215,7 @@ The `conversion_behaviors` array will contain information about each conversion 
 }
 ```
 
-##### Upgrades App
+#### Upgrades App
 
 ```json
 {
@@ -205,7 +225,7 @@ The `conversion_behaviors` array will contain information about each conversion 
 }
 ```
 
-##### Uses App
+#### Uses App
 
 ```json
 {
@@ -214,6 +234,8 @@ The `conversion_behaviors` array will contain information about each conversion 
     "app_ids": (array|null) array of app ids, i.e. - ["12345", "67890"], or `null` if "Track sessions for any app" is selected in the UI
 }
 ```
-
+{% alert tip %}
+For help with CSV and API exports, visit our troubleshooting article [here]({{site.baseurl}}/user_guide/data_and_analytics/export_braze_data/export_troubleshooting/).
+{% endalert %}
 
 {% endapi %}

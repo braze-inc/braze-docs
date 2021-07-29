@@ -3,16 +3,16 @@ nav_title: Event Delivery Semantics
 page_order: 3
 
 page_type: reference
-description: "This article outlines how event data from Currents manages flat file event data we send to Data Warehouse partners."
-tool: currents
+description: "This reference article outlines how Currents manages flat file event data we send to Data Warehouse partners."
+tool: Currents
 
 ---
 
 # Event Delivery Semantics
 
-> This article outlines how event data from Currents manages flat file event data we send to Data Warehouse partners.
+> This article outlines how Currents manages flat file event data we send to Data Warehouse partners.
 
-Currents for Data Storage is a continuous streama of data from our platform to a storage bucket on one of our [data warehouse partner connections]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/available_partners/).
+Currents for Data Storage is a continuous streams of data from our platform to a storage bucket on one of our [data warehouse partner connections]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/available_partners/).
 
 Currents writes Avro files to your storage bucket at regular thresholds, allowing you to process and analyze the event data using your own Business Intelligence toolset.
 
@@ -29,7 +29,7 @@ If your use cases require exactly-once delivery, you can use the unique identifi
 
 ## Timestamps
 
-All timestamps exported by Currents are sent in the UTC timezone. For some events where it is available, a timezone field is also included, which delivers the IANA format of the user's local timezone at the time of the event.
+All timestamps exported by Currents are sent in the UTC time zone. For some events where it is available, a time zone field is also included, which delivers the IANA format of the user's local time zone at the time of the event.
 
 ## Avro
 
@@ -59,6 +59,7 @@ _Can't see the code because of the scroll bar? See how to fix that [here]({{site
 | `<zone>` | For internal use by Braze. Single letter. |
 | `<partition>` | For internal use by Braze. Integer. |
 | `<offset>`| For internal use by Braze. Integer. |
+{: .reset-td-br-1 .reset-td-br-2}
 
 {% alert tip %}
 File naming conventions may change in the future, Braze recommends searching all keys in your bucket that have a prefix of &lt;your-bucket-prefix&gt;.
@@ -73,6 +74,7 @@ Data files will be written to your storage bucket once you hit _any of the set t
 | Amazon AWS S3 | Every 5 minutes. <br> Every 15,000 events. |
 | Microsoft Azure Blob Storage | Every 5 minutes. <br> Every 15,000 events. |
 | Google Cloud Storage | Every 5 minutes. <br> Every 15,000 events. |
+{: .reset-td-br-1 .reset-td-br-2}
 
 {% alert important %}
 Currents will never write empty files.
@@ -84,7 +86,11 @@ From time to time, Braze may make changes to the Avro schema when fields are add
 
 #### Non-breaking Changes
 
-When a field is added to the Avro schema, we consider this a non-breaking change. Added fields will always be "optional" Avro fields (i.e. with a default value of `null`), so they will "match" older schemas according to the [Avro schema resolution spec](http://avro.apache.org/docs/current/spec.html#schema+resolution). These additions should not affect existing ETL processes as the field will simply be ignored until it is added to your ETL process. **We recommend that your ETL setup is explicit about the fields it processes to avoid breaking the flow when new fields are added.**
+When a field is added to the Avro schema, we consider this a non-breaking change. Added fields will always be "optional" Avro fields (i.e. with a default value of `null`), so they will "match" older schemas according to the [Avro schema resolution spec](http://avro.apache.org/docs/current/spec.html#schema+resolution). These additions should not affect existing ETL processes as the field will simply be ignored until it is added to your ETL process. 
+
+{% alert important %}
+We recommend that your ETL setup is explicit about the fields it processes to avoid breaking the flow when new fields are added.
+{% endalert %}
 
 While we will strive to give advance warning in the case of all changes, we may include non-breaking changes to the schema at any time.
 

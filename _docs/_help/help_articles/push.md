@@ -4,6 +4,10 @@ nav_title: Push
 layout: dev_guide
 guide_top_header: "Push Help Articles"
 
+page_type: landing
+description: "This landing page is home to help articles on common issues with push messages."
+channel: push
+no_index: true
 guide_menu_title: ""
 guide_menu_list:
   - name: No Push Notification Was Received

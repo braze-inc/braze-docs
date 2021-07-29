@@ -7,7 +7,7 @@ layout: api_page
 page_type: reference
 platform: API
 tool: Segments
-description: "This article outlines details about the Campaign Analytics endpoint."
+description: "This article outlines details about the Get Campaign Analytics endpoint."
 ---
 {% api %}
 # Campaign Analytics Endpoint
@@ -15,45 +15,34 @@ description: "This article outlines details about the Campaign Analytics endpoin
 /campaigns/data_series
 {% endapimethod %}
 
-This endpoint allows you to retrieve a daily series of various stats for a campaign over time.
+This endpoint allows you to retrieve a daily series of various stats for a campaign over time. Data returned includes how many messages were sent, opened, clicked, converted, etc., broken down by message channel. 
 
-{% apiref swagger %}https://www.braze.com/docs/api/interactive/#/Export/Campaign%20export%20%20analytics%20example {% endapiref %}
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#c07b5ebd-0246-471e-b154-416d63ae28a1 {% endapiref %}
-
-{% alert important %}
-__Looking for the `api_key` parameter?__<br>As of May 2020, Braze has changed how we read API keys to be more secure. Now API keys must be passed as a request header, please see `YOUR_REST_API_KEY` within the __Example Request__ below.<br><br>Braze will continue to support the `api_key` being passed through the request body and URL parameters, but will eventually be sunset. Please update your API calls accordingly.
-{% endalert %}
 
 ## Request Parameters
 
 | Parameter | Required | Data Type | Description |
 | --------- | -------- | --------- | ----------- |
-| `campaign_id` | Yes | String | Campaign API Identifier |
-| `length` | Yes | Integer | Max number of days before ending_at to include in the returned series - must be between 1 and 100 inclusive |
-| `ending_at` | No | DateTime (ISO 8601 string) | Date on which the data series should end - defaults to time of the request |
+| `campaign_id` | Required | String | See [Campaign API identifier]({{site.baseurl}}/api/identifier_types/).<br><br> The `campaign_id` for API campaigns can be found on the **Developer Console** and the **Campaign Details** page within your dashboard; or you can use the [Campaign List Endpoint](#campaign-list-endpoint). |
+| `length` | Required | Integer | Max number of days before `ending_at` to include in the returned series. Must be between 1 and 100 (inclusive). |
+| `ending_at` | Optional | Datetime <br>([ISO-8601](https://en.wikipedia.org/wiki/ISO_8601) string) | Date on which the data series should end. Defaults to time of the request. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
 
-### Request Components
-- [Campaign Identifier]({{site.baseurl}}/api/identifier_types/)
-<br><br>
-The `campaign_id` for API campaigns can be found on the Developer Console page and the campaign details page within your dashboard; or you can use the [Campaign List Endpoint](#campaign-list-endpoint).
-
-### Example URL
-`https://rest.iad-01.braze.com/campaigns/data_series?campaign_id=3bbc4555-8fa0-4c9b-a5c0-4505edf3e064&length=7&ending_at=2018-06-28T23:59:59-5:00`
-
-### Example Request 
+## Example Request 
+{% raw %}
 ```
-curl --location --request GET 'https://rest.iad-01.braze.com/campaigns/data_series?campaign_id=3bbc4555-8fa0-4c9b-a5c0-4505edf3e064&length=7&ending_at=2018-06-28T23:59:59-5:00' \
---header 'Authorization: Bearer YOUR_REST_API_KEY'
+curl --location -g --request GET 'https://rest.iad-01.braze.com/campaigns/data_series?campaign_id={{campaign_identifier}}&length=7&ending_at=2020-06-28T23:59:59-5:00' \
+--header 'Authorization: Bearer YOUR-REST-API-KEY'
 ```
+{% endraw %}
 
-### Responses
+## Response
 
-#### Multi-Channel Response
+### Multi-Channel Response
 
 ```json
 Content-Type: application/json
-Authorization: Bearer YOUR_REST_API_KEY
+Authorization: Bearer YOUR-REST-API-KEY
 {
     "message": (required, string) the status of the export, returns 'success' when completed without errors,
     "data" : [
@@ -113,9 +102,12 @@ Authorization: Bearer YOUR_REST_API_KEY
                 "sms" : [
                   {
                     "sent": (int),
+                    "sent_to_carrier" : (int),
                     "delivered": (int),
-                    "undelivered": (int),
-                    "delivery_failed": (int)
+                    "rejected": (int),
+                    "delivery_failed": (int),
+                    "opt_out" : (int),
+                    "help" : (int)
                   }
                 ]
               },
@@ -136,11 +128,11 @@ Authorization: Bearer YOUR_REST_API_KEY
 }
 ```
 
-#### Multivariate Response
+### Multivariate Response
 
 ```json
 Content-Type: application/json
-Authorization: Bearer YOUR_REST_API_KEY
+Authorization: Bearer YOUR-REST-API-KEY
 {
     "data" : [
         {
@@ -212,5 +204,9 @@ Authorization: Bearer YOUR_REST_API_KEY
 ```
 
 Possible message types are `email`, `in_app_message`, `webhook`, `android_push`, `apple_push`, `kindle_push`, `web_push`, `windows_phone8_push`, and `windows_universal_push`. All push message types will have the same statistics shown for `android_push` above.
+
+{% alert tip %}
+For help with CSV and API exports, visit our troubleshooting article [here]({{site.baseurl}}/user_guide/data_and_analytics/export_braze_data/export_troubleshooting/).
+{% endalert %}
 
 {% endapi %}

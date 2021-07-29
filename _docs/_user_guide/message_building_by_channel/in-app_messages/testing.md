@@ -1,6 +1,12 @@
 ---
 nav_title: Testing
 page_order: 3
+description: "It is extremely important to always test your in-app messages before sending your campaigns. Our preview and testing capabilities offer two ways to take a look at your in-app messages."
+channel:
+  - in-app messages
+tool:
+  - Dashboard
+  - Campaigns
 ---
 
 # Testing
@@ -40,7 +46,7 @@ You can also preview messages from the Test tab, as though you were a user. You 
 ### Test Checklist
 
 - Do the images and media show up and act as expected?
-- Does the liquid function as expected? Have you accounted for a [default attribute value]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/conditional_logic/#accounting-for-null-attribute-values) in the event that the liquid returns no information?
+- Does the Liquid function as expected? Have you accounted for a [default attribute value]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/conditional_logic/#accounting-for-null-attribute-values) in the event that the Liquid returns no information?
 - Is your copy clear, concise, and correct?
 - Do your buttons direct the user where they should go?
 

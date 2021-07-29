@@ -1,5 +1,5 @@
 ---
-nav_title: "POST: Schedule API Triggered Canvas Messages"
+nav_title: "POST: Schedule API-Triggered Canvas Messages"
 page_order: 4
 
 layout: api_page
@@ -9,86 +9,74 @@ platform: API
 tool:
   - Canvas
 
-description: "This article outlines details about the Update Scheduled Canvases Braze endpoint."
+description: "This article outlines details about the Schedule API-Triggered Canvases Braze endpoint."
 ---
 {% api %}
-# Schedule API Triggered Canvases
-{% apimethod post %}
+# Schedule API-Triggered Canvases
+{% apimethod post core_endpoint|https://www.braze.com/docs/core_endpoints %} 
 /canvas/trigger/schedule/create
 {% endapimethod %}
 
-Use this endpoint to trigger API Triggered Canvases, which are created on the Dashboard and initiated via the API. You can pass in `canvas_entry_properties` that will be templated into the messages sent by the first steps of the Canvas.
+Use this endpoint to trigger API-Triggered Canvases, which are created on the Dashboard and initiated via the API. You can pass in `canvas_entry_properties` that will be templated into the messages sent by the first steps of the Canvas.
 
-This endpoint allows you to schedule Canvas messages via API Triggered delivery, allowing you to decide what action should trigger the message to be sent. Please note that to send messages with this endpoint, you must have a Canvas ID, created when you build a [Canvas]({{site.baseurl}}/api/identifier_types/#canvas-api-identifier).
+This endpoint allows you to schedule Canvas messages (up to 90 days in advance) via API-Triggered delivery, allowing you to decide what action should trigger the message to be sent. Please note that to send messages with this endpoint, you must have a Canvas ID, created when you build a [Canvas]({{site.baseurl}}/api/identifier_types/#canvas-api-identifier).
 
-{% apiref swagger %}https://www.braze.com/docs/api/interactive/#/Messaging/CreateScheduledApiTriggeredCanvasExample {% endapiref %}
-{% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#2806cc2f-1ddf-4b84-a4c2-34aa9a53986c {% endapiref %}
-
-{% alert important %}
-__Looking for the `api_key` parameter?__<br>As of May 2020, Braze has changed how we read API keys to be more secure. Now API keys must be passed as a request header, please see `YOUR_REST_API_KEY` within the __Example Request__ below.<br><br>Braze will continue to support the `api_key` being passed through the request body and URL parameters, but will eventually be sunset. Please update your API calls accordingly.
-{% endalert %}
+{% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#4bc75890-b807-405d-b226-5aca284e6b7d {% endapiref %}
 
 ## Request Body
 
 ```
 Content-Type: application/json
-Authorization: Bearer YOUR_REST_API_KEY
+Authorization: Bearer YOUR-REST-API-KEY
 ```
 
 ```json
 {
-  "canvas_id": (required, string) see Canvas Identifier,
+  "canvas_id": (required, string) see Canvas identifier,
   // Including 'recipients' will send only to the provided user ids if they are in the campaign's segment
-  "recipients": (optional, Array of Recipient Object),
+  "recipients": (optional, array of recipient object),
   // for any keys that conflict between these trigger properties and those in a Recipient Object, the value from the
   // Recipient Object will be used
-  "audience": (optional, Connected Audience Object) see Connected Audience,
+  "audience": (optional, connected audience object) see connected audience,
   // Including 'audience' will only send to users in the audience
   // If 'recipients' and 'audience' are not provided and broadcast is not set to 'false',
   // the message will send to entire segment targeted by the Canvas
-  "broadcast": (optional, boolean) see Broadcast -- defaults to false on 8/31/17, must be set to true if "recipients" object is omitted,
-  "canvas_entry_properties": (optional, object) personalization key-value pairs for the first step for all users in this send; see Trigger Properties,
+  "broadcast": (optional, boolean) see broadcast -- defaults to false on 8/31/17, must be set to true if "recipients" object is omitted,
+  "canvas_entry_properties": (optional, object) personalization key-value pairs for the first step for all users in this send; see trigger properties,
   "schedule": {
-    "time": (required, datetime as ISO 8601 string) time to send the message,
+    "time": (required, datetime as ISO 8601 string) time to send the message (up to 90 days in the future),
     "in_local_time": (optional, bool),
     "at_optimal_time": (optional, bool),
   }
 }
 ```
 
-### Request Parameters
+## Request Parameters
 
 | Parameter | Required | Data Type | Description |
 | --------- | ---------| --------- | ----------- |
-|`canvas_id`|Required|String| See Canvas Identifier|
-|`recipients` | Optional | Array of Recipient Objects | See Recipients Object |
-|`audience` | Optional | Connected Audience Object | See Connected Audience | 
-|`broadcast` | Optional | Boolean | See Broadcast -- defaults to false on 8/31/17, must be set to true if "recipients" object is omitted |
-| `canvas_entry_properties` | Optional | Object | Personalization key-value pairs for all users in this send; see Trigger Properties |
-| `schedule` | Required | Schedule Object | See Schedule Object |
+|`canvas_id`|Required|String| See [Canvas identifier]({{site.baseurl}}/api/identifier_types/). |
+| `send_id` | Optional | String | See [send identifier]({{site.baseurl}}/api/identifier_types/). | 
+| `recipients` | Optional | Array of recipient objects | See [recipients object]({{site.baseurl}}/api/objects_filters/recipient_object/). |
+| `audience` | Optional | Connected audience object | See [connected audience]({{site.baseurl}}/api/objects_filters/connected_audience/). |
+|`broadcast`| Optional | Boolean | See [broadcast]({{site.baseurl}}/api/parameters/#broadcast). This parameter defaults to false (as of August 31, 2017). <br><br> If `recipients` is omitted, `broadcast` must be set to true. However, use caution when setting `broadcast: true`, as unintentionally setting this flag may cause you to send your message to a larger than expected audience. |
+| `trigger_properties` | Optional | Object | Personalization key-value pairs for all users in this send. See [trigger properties]({{site.baseurl}}/api/objects_filters/trigger_properties_object/). |
+| `schedule` | Required | Schedule object | See [schedule object]({{site.baseurl}}/api/objects_filters/schedule_object/). |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
 
-## Request Components
-- [Canvas Identifier]({{site.baseurl}}/api/identifier_types/)
-- [Recipients]({{site.baseurl}}/api/objects_filters/recipient_object/)
-- [Connected Audience]({{site.baseurl}}/api/objects_filters/connected_audience/)
-- [Broadcast]({{site.baseurl}}/api/parameters/#broadcast)
-- [Trigger Properties]({{site.baseurl}}/api/objects_filters/trigger_properties_object/)
-- [Schedule Object]({{site.baseurl}}/api/objects_filters/schedule_object/)
-
-### Example Request
+## Example Request
 ```
 curl --location --request POST 'https://rest.iad-01.braze.com/canvas/trigger/schedule/create' \
 --header 'Content-Type: application/json' \
---header 'Authorization: Bearer YOUR_REST_API_KEY' \
+--header 'Authorization: Bearer YOUR-REST-API-KEY' \
 --data-raw '{
-  "canvas_id": "",
-  "recipients": {
-    "user_alias": "",
-    "external_user_id": "",
+  "canvas_id": "canvas_identifier",
+  "recipients": [{
+    "user_alias": "example_alias",
+    "external_user_id": "external_user_identifier",
     "trigger_properties": "",
-    "canvas_entry_properties": ""
-  },
+    "canvas_entry_properties": {}
+  }],
   "audience": {
     "AND": [
       {
@@ -137,14 +125,14 @@ curl --location --request POST 'https://rest.iad-01.braze.com/canvas/trigger/sch
     ]
   },
   "broadcast": false,
-  "canvas_entry_properties": "",
+  "canvas_entry_properties": {},
   "schedule": {
     "time": "",
     "in_local_time": false,
     "at_optimal_time": false
   }
 }
-'
+ '
 ```
 
 {% endapi %}

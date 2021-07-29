@@ -1,7 +1,14 @@
 ---
 nav_title: Security Qualifications
 page_order: 3
+
+page_type: reference
+description: "This page lists and describes Braze's security qualifications."
 ---
+
+<!--
+Warning! Don't make any changes to this document without approval from the legal department.
+-->
 
 # Security Qualifications
 
@@ -23,7 +30,7 @@ Any third party wishing to independently verify the status of Braze's certificat
 
 ![SOC 2 Examination][2]{: height="25%" width="25%" style="border:0px;"}
 
-_Review Date/Period: January 1, 2018 to June 30, 2018._
+_Last Review Date/Period: July 1,2019, to June 30,2020_
 
 Braze has successfully completed the Type 2 SOC 2 examination for _Security_, performed by independent CPA firm [Schellman & Company, LLC][8].
 
@@ -34,8 +41,7 @@ Braze's HIPAA (Health Insurance Portability and Accountability Act of 1996) clus
 [1]: {% image_buster /assets/img/schellman_iso27001_seal_grey_CMYK_300dpi_jpg.png %}
 [2]: {% image_buster /assets/img/SOC2.png %}
 [3]: https://www.iso.org/isoiec-27001-information-security.html
-[4]: https://www.aicpa.org/interestareas/frc/assuranceadvisoryservices/aicpasoc2report.html
 [5]: https://www.schellman.com/certificate-directory
-[6]: https://cert.schellmanco.com/?certhash=8XMm2WAG7p9V
+[6]: https://www.schellman.com/certificate-directory?certificateNumber=1504855-3
 [7]: {{site_url}}/docs/assets/pdf/Braze_ISO_Cert.pdf
 [8]: https://www.schellman.com/

@@ -2,13 +2,12 @@
 nav_title: "Notification Options (iOS)"
 page_order: 2
 page_layout: reference
-description: "This reference article covers iOS Notification Options like critical alerts, quiet notifications, provisional push notifications, and more."
+description: "This reference article covers iOS notification options like critical alerts, quiet notifications, provisional push notifications, and more."
 
 platform: iOS
 channel:
-  - Push
+  - push
 tool:
-  - Docs
   - Dashboard
   - Campaigns
 ---
@@ -21,7 +20,7 @@ tool:
 
 If you want to categorize your messages and group them in your user's notification tray, you can utilize iOS's Notification Groups feature through Braze.
 
-Create your iOS Push Campaign, then look to the top of the composer. There, you'll see a dropdown labeled Notification Groups.
+Create your iOS push campaign, then look to the top of the composer. There, you'll see a dropdown labeled Notification Groups.
 
 ![notificationgroupsdropdown][26]
 
@@ -36,6 +35,10 @@ If you don't have any Notification Groups listed here, you can add one using the
 __Summary Arguments__
 
 In addition to grouping notifications by Thread IDs, Apple allows you to edit the summaries that appear when notifications are grouped. Braze Users can specify the summary category, summary count, and summary argument when composing a push campaign using our tool.
+
+{% alert tip %}
+Note that the way notifications with the same Thread ID are grouped in the notification tray is under the control of the OS. iOS may choose to display notifications with the same Thread ID separately or in groups depending on what it deems optimal.
+{% endalert %}
 
 Check the __Alert Options__ box in the __Push Composer__.
 
@@ -64,7 +67,7 @@ This will not require an SDK update.
 Please note that `%u` and `%@` are formatting strings for the summary count and summary argument, respectively. When the summary is shown, these placeholders will be replaced with the values for `summary-count` and `summary-arg`.
 {% endalert %}
 
-Once this is set up on your app, use the summary category by checking the __Notification Buttons__ box, and selecting __Enter Pre-registered iOS Category__.
+Once this is set up on your app, use the summary category by checking the __Notification Buttons__ box and selecting __Enter Pre-registered iOS Category__.
 
 Then, input the summary category identifier that you set in your app.
 
@@ -72,7 +75,7 @@ Then, input the summary category identifier that you set in your app.
 
 Apple allows brands the option to send quiet push notifications to their users' Notification Centers _before_ they officially, explicitly opt-in, giving you a chance to demonstrate the value of your messages early. All you need to do is [set up](#set-up-provisional-push-notifications) provisional push notifications in your app, then any user who has a provisional push token will receive your messages.
 
-Unlike a traditional iOS push token, a provisional push token acts as a “trial pass” that allows brands to reach out to new users before they’ve seen and clicked Apple’s native push opt-in prompt. With this feature, your push notification will be delivered directly to your new user's notification tray with the option to "Keep" or "Turn Off" future notifications. Instead of experiencing an "opt-in" journey, users will experience something more akin to an "opt-out" journey.
+Unlike a traditional iOS push token, a provisional push token acts as a "trial pass" that allows brands to reach out to new users before they've seen and clicked Apple's native push opt-in prompt. With this feature, your push notification will be delivered directly to your new user's notification tray with the option to "Keep" or "Turn Off" future notifications. Instead of experiencing an "opt-in" journey, users will experience something more akin to an "opt-out" journey.
 
 {% alert tip %}
 Provisional Authorization has the potential dramatically increase your opt-in rate, but only if users see value in your messages. Be sure to use our [user segmentation]({{site.baseurl}}/user_guide/engagement_tools/segments/creating_a_segment/), [location targeting]({{site.baseurl}}/user_guide/engagement_tools/locations_and_geofences/about/), and [personalization]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/supported_personalization_tags/) features to ensure that the appropriate users are getting these "trial" notifications at the right time. Then, you can encourage users to fully opt-in to your push notifications, knowing that they add value to your users' experience with your app.
@@ -87,7 +90,7 @@ You will be able to target your users based on whether they are provisionally au
 ![Provisionally Authorized Segment]({% image_buster /assets/img/segment-push-prov-auth.png %})
 
 {% alert tip %}
-If users choose to “Turn Off” provisional push from you, they won’t see any more provisional push messages from you. Be thoughtful about the message content and cadence sent using this functionality!
+If users choose to "Turn Off" provisional push from you, they won't see any more provisional push messages from you. Be thoughtful about the message content and cadence sent using this functionality!
 {% endalert %}
 
 {% alert important %}

@@ -1,6 +1,9 @@
 ---
 nav_title: Integration
 page_order: 1
+
+page_type: reference
+description: "This reference article briefly covers the integration steps required from your engineers or developers."
 ---
 
 # Integration
@@ -45,6 +48,7 @@ Be sure to tell your engineers which channels you want to use to ensure that imp
 | News Feed | This works upon proper implementation and is SDK required. |
 | Push | Requires SDK implementation to provide proper handling around messaging credentials and push tokens. |
 | Email | This is an entirely different process. Check that out in [our Email Setup section]({{site.baseurl}}/user_guide/onboarding_with_braze/email_setup/overview_and_requirements). |
+{: .reset-td-br-1 .reset-td-br-2}
 
 ### Step 3: They Set Up Your Data
 
@@ -61,7 +65,7 @@ Once you discover all of this information, share it with your engineer. They'll 
 
 ### Step 4: They Customize Based on What You Want
 
-If you want things like API Triggered launching and Connected Content, discuss that with both your Braze contact and your engineers to ensure that you'll be able to get data that lives outside of your app and Braze into your messages.
+If you want things like API-Triggered launching and Connected Content, discuss that with both your Braze contact and your engineers to ensure that you'll be able to get data that lives outside of your app and Braze into your messages.
 
 ### Step 5: QA Your Implementation
 

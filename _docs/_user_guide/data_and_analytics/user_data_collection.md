@@ -5,6 +5,9 @@ layout: featured
 guide_top_header: "User Data Collection"
 guide_top_text: "Before completing your Braze implementation, ensure that you have a conversation between your marketing team and your development team regarding your marketing goals. When deciding what you want to track, and how you want to track it with Braze, it's useful to consider these goals and work backwards from there."
 
+page_type: landing
+description: "This landing page is home to articles on user data collection. Here you can find resources on importing users, user profile lifecycle, use cases, and more."
+
 guide_featured_title: "Section Articles"
 guide_featured_list:
   - name: User Archival Definitions

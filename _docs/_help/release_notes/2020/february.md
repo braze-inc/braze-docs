@@ -1,12 +1,15 @@
 ---
 nav_title: February
 page_order: 11
+no_index: true
+page_type: update
+description: "This article contains release notes for February 2020."
 ---
 # February 2020
 
 ## Retention Reports
 
-Braze is proud to now offer Retention Reports for Campaigns. This feature helps measure user retention for users who have received any message in a specific campaign. Retention Reports can be found conveniently on the Campaign Analytics page within the Dashboard. 
+Braze is proud to now offer Retention Reports for campaigns. This feature helps measure user retention for users who have received any message in a specific campaign. Retention Reports can be found conveniently on the **Campaign Analytics** page within the Dashboard. 
 
 Information on this new feature can be found in our [documentation]({{site.baseurl}}/user_guide/engagement_tools/campaigns/testing_and_more/retention_reports/)
 

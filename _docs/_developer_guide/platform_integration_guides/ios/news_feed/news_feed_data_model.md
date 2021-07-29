@@ -2,6 +2,9 @@
 nav_title: News Feed Data Model
 platform: iOS
 page_order: 6
+description: "This article covers the iOS News Feed data model, different card types, and the different card-specific properties available."
+channel:
+  - news feed
 
 ---
 
@@ -113,31 +116,6 @@ In addition to the base card properties:
 - `URL` (optional) -The URL that will be opened after the card is clicked on. It can be a http(s) URL or a protocol URL
 - `domain` (optional) - The link text for the property URL, like @"blog.braze.com". It can be displayed on the card's UI to indicate the action/direction of clicking on the card.
 
-## Cross Promotion (Small) Properties
-In addition to the base card properties:
-
-- `mediaType` - The type of iTunes media
-    - `ItunesAlbum`
-    - `ItunesAudiobook`
-    - `ItunesCompilation`
-    - `ItunesEbook`
-    - `ItunesFeatureMovie`
-    - `ItunesPodcast`
-    - `ItunesSoftware`
-    - `ItunesSong`
-    - `ItunesTvEpisode`
-    - `ItunesTvSeason`
-- `title` - The title text for the card. This will be the promoted item's name.
-- `subtitle` - The text of the category of the promoted item
-- `image` - This property is the URL of the card's image.
-- `iTunesId` - The iTunes ID number of the promoted item
-- `rating` (required for mediaType ItunesSoftware, optional otherwise) - The rating of the promoted app. This property will be 0.0 unless the promoted item is an app, and the rating will be in the range of [0.0, 5.0];
-- `price` - The number of reviews of the promoted app. This property will be 0 unless the promoted item is an app.
-- `reviews` - This property is the text that will be displayed in the tag on the top of the small cross-promotion card.
-- `caption` - The iTunes URL of the promoted item which leads to the item's App Store page.
-- `url` - The iTunes URL of the promoted item which leads to the item's App Store page.
-- `universal` (optional) - This property indicates if the promoted item is universal or not.
-
 ## Card Methods:
 
 - `logCardImpression` - Manually log an impression to Braze for a particular card.
@@ -147,19 +125,21 @@ In addition to the base card properties:
 
 When displaying the News Feed in your own user interface, you can manually record News Feed impressions via `- (void)logFeedDisplayed;`. For example:
 
+{% tabs %}
+{% tab OBJECTIVE-C %}
+
 ```objc
 [[Appboy sharedInstance] logFeedDisplayed];
 ```
 
-[1]: {{site.baseurl}}/developer_guide/platform_integration_guides/ios/in-app_messaging/#setting-delegates
-[2]: {{site.baseurl}}/developer_guide/platform_integration_guides/ios/in-app_messaging/#customizing-in-app-message-behavior-on-click
-[3]: https://github.com/Appboy/appboy-ios-sdk/tree/master/Example/Stopwatch
-[4]: https://github.com/Appboy/appboy-ios-sdk/blob/master/Example/Stopwatch/FeedAndFeedbackUIViewController.m
-[10]: {% image_buster /assets/img_archive/UONewsFeed.png %} "Urban Outfitters News Feed"
-[11]: https://github.com/Appboy/appboy-ios-sdk/tree/master/Samples/NewsFeed/BrazeNewsFeedSample
-[15]: https://github.com/Appboy/appboy-ios-sdk/blob/master/AppboyKit/headers/AppboyKitLibrary/Appboy.h "Appboy.h Header File"
-[28]: https://github.com/Appboy/appboy-ios-sdk/blob/master/Example/Stopwatch/AppDelegate.m
-[40]: {{site.baseurl}}/help/best_practices/news_feed/
-[42]: {% image_buster /assets/img_archive/badge_example.png %} "Badge Example"
+{% endtab %}
+{% tab swift %}
+
+```swift
+Appboy.sharedInstance()?.logFeedDisplayed()
+```
+
+{% endtab %}
+{% endtabs %}
+
 [44]: http://appboy.github.io/appboy-ios-sdk/docs/interface_a_b_k_feed_controller.html "abk feed controller"
-[45]: {% image_buster /assets/img_archive/newsfeed_badges.png %}

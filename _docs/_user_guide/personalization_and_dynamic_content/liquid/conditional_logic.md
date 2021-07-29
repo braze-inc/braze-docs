@@ -1,6 +1,7 @@
 ---
 nav_title: Conditional Messaging Logic
 page_order: 6
+description: "Tags allow you to include programming logic in your messaging campaigns. This reference article covers how tags can and should be used in your campaigns."
 ---
 
 # Conditional Messaging Logic (Tags)
@@ -15,10 +16,10 @@ A tag must be wrapped in `{% %}`.
 Tags can be used for executing conditional statements as well as for advanced use cases, like assigning variables or iterating through a block of code.
 
 {% alert tip %}
-To make your life a bit easier, Braze has included color-formatting that will activate in green and purple if you correctly format your liquid syntax.
+To make your life a bit easier, Braze has included color-formatting that will activate in green and purple if you correctly format your Liquid syntax.
 
 
-If you're having a hard time using conditional messaging, try writing out the conditional syntax before you insert your custom attributes and other liquid elements.
+If you're having a hard time using conditional messaging, try writing out the conditional syntax before you insert your custom attributes and other Liquid elements.
 
 
 For example, add the following into the message field first:  
@@ -29,7 +30,7 @@ For example, add the following into the message field first:
 {% endif %}
 ```
 
-Be sure it highlights in green, then replace the `X` with your chosen liquid or connected content using the blue `+` in the message field corner, and the `0` with your desired value.
+Be sure it highlights in green, then replace the `X` with your chosen Liquid or Connected Content using the blue `+` in the message field corner, and the `0` with your desired value.
 
 
 Then, add your message variations as you need them between the `else` conditionals:
@@ -59,7 +60,7 @@ This is a message from Braze! This is going to go to anyone who did not match th
 {% endif %}
 ```
 
-## Conditional Logic: Step By Step
+### Step By Step Example
 
 In this example, we use tags with "if", "elsif" and "else" statements to deliver internationalized content.
 
@@ -94,7 +95,7 @@ The `{% endif %}`  tag signals that you've finished your conditional logic. You 
 
 {% endraw %}
 
-# Accounting For Null Attribute Values
+## Accounting For Null Attribute Values
 
 Conditional logic is a useful way to account for null attribute values. A null value occurs when the value of a custom attribute has not been set. For example, a user who has not yet set their first name will not have a first name in Braze's database.
 
@@ -111,10 +112,105 @@ The following tag allows you to specify a message for users with a null "first n
 ```
 {% endraw %}
 
-
 ![NullValues][36]
+
+## Referencing Custom Attributes
+
+After you have created [custom attributes][2] from **Manage Settings** > **Custom Attributes**, you can reference these custom attributes in your Liquid messaging. 
+
+When using conditional logic, you'll need to know the custom attribute's data type to ensure you're using the correct syntax. From the [Custom Attributes][4] page in the dashboard, look for the data type associated with your custom attribute, then reference the examples listed below for each data type.
+
+![Custom Attribute Data Type][20]{: style="max-width:80%;"}
+
+{% alert tip %}
+Strings and arrays require straight apostrophes around them, while booleans and integers will never have apostrophes.
+{% endalert %}
+
+#### Boolean
+
+[Booleans][9] are binary values, and can be set to either `true` or `false`, such as `registration_complete: true`. Boolean values don't have apostrophes around them.
+
+{% raw %}
+
+```liquid
+{% if {{custom_attribute.${registration_complete}}} == true %}
+```
+
+{% endraw %}
+
+#### Number
+
+[Numbers][10] are numeric values, which can be integers or floats. For example, a user may have `shoe_size: 10` or `levels_completed: 287`. Number values don't have apostrophes around them.
+
+{% raw %}
+
+```liquid
+{% if {{custom_attribute.${shoe_size}}} == 10 %}
+```
+
+{% endraw %}
+
+You can also use other [basic operators](https://shopify.dev/docs/themes/liquid/reference/basics/operators) such as less than (<) or greater than (>) for integers:
+
+{% raw %}
+
+```liquid
+{% if {{custom_attribute.${flyer_miles}}} >= 500 %}
+```
+
+{% endraw %}
+
+#### String
+
+A [string][11] is made up of alpha-numeric characters and stores a piece of data about your user. For example, you may have `favorite_color: red` or `phone_number: 3025981329`. String values must have apostrophes around them.
+
+{% raw %}
+
+```liquid
+{% if {{custom_attribute.${favorite_color}}} == 'blue' %}
+```
+
+{% endraw %}
+
+For strings, you can use both "==" or "contains" in your Liquid.
+
+#### Array
+
+An [array][12] is a list of information about your user. For example, a user may have `last_viewed_shows: stranger things, planet earth, westworld`. Array values must have apostrophes around them.
+
+{% raw %}
+
+```liquid
+{% if {{custom_attribute.${last_viewed_shows}}} contains 'homeland' %}
+```
+
+{% endraw %}
+
+For arrays, you must use "contains" and can't use "==". 
+
+#### Time
+
+A time stamp of when an event took place. [Time][13] values must have a [math filter][5] on them to be used in conditional logic.
+
+{% raw %}
+
+```liquid
+{% assign expire = {{custom_attribute.${subscription_end_date}}} | plus: 0 %} 
+```
+
+{% endraw %}
+
 
 [36]:{% image_buster /assets/img/value_null.png %}
 [1]: http://docs.shopify.com/themes/liquid-documentation/basics
+[2]: {{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_attributes/
+[4]: https://dashboard-01.braze.com/app_settings/app_settings/custom_attributes/ "Custom Attributes"
+[5]: {{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/filters/#math-filters
 [7]: https://docs.shopify.com/themes/liquid-documentation/tags
 [8]: http://docs.shopify.com/themes/liquid-documentation/tags/control-flow-tags "Control Flow Tags"
+[9]: {{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_attributes/#booleans
+[10]: {{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_attributes/#numbers
+[11]: {{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_attributes/#strings
+[12]: {{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_attributes/#arrays
+[13]: {{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_attributes/#time
+[20]: {% image_buster /assets/img_archive/custom_attribute_data_type.png %}

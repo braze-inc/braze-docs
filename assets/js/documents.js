@@ -1,17 +1,34 @@
-
-
 var query_str = window.location.search;
-$(document).ready(function() {
 
-  function string_to_slug(str) {
-    if (str) {
-      str = str.toLowerCase().replace(/\s/g, '-').replace(/[^\w-]/g, '');
-    }
-    return str;
+function generateUUID() { // Public Domain/MIT
+    var d = new Date().getTime();//Timestamp
+    var d2 = (performance && performance.now && (performance.now()*1000)) || 0;//Time in microseconds since page-load or 0 if unsupported
+    return 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function(c) {
+        var r = Math.random() * 16;//random number between 0 and 16
+        if(d > 0){//Use timestamp until depleted
+            r = (d + r)%16 | 0;
+            d = Math.floor(d/16);
+        } else {//Use microseconds since page-load if supported
+            r = (d2 + r)%16 | 0;
+            d2 = Math.floor(d2/16);
+        }
+        return (c === 'x' ? r : (r & 0x3 | 0x8)).toString(16);
+    });
+}
+function string_to_slug(str) {
+  if (str) {
+    str = str.toLowerCase().replace(/\s/g, '-').replace(/[^\w-]/g, '');
   }
+  return str;
+}
+let algolia_user = Cookies.get('__algolia_user');
+if (!algolia_user){
+  algolia_user = generateUUID();
+}
+// Set cookie to auto expire after 30 days of inactivity
+Cookies.set('__algolia_user', algolia_user, { expires: 30 });
 
-
-
+$(document).ready(function() {
   $('#toc').toc({
     headers: 'h2, h3',
     minimumHeaders: toc_minheaders
@@ -198,7 +215,7 @@ $(document).ready(function() {
       nav_bar.addClass('hide_sidebar');
       nav_icon.removeClass('fa-chevron-left');
       nav_icon.addClass('fa-bars');
-      Cookies.set('ln','1');
+      Cookies.set('ln','1',  { expires: 365 });
     }
   });
   if (Cookies.get('ln')) {
@@ -214,7 +231,6 @@ $(document).ready(function() {
     $('.tab_toggle_ul.ab-nav-tabs li.' + curtab).addClass('active');
     $('div.tab_toggle_div div.ab-tab-pane').removeClass('active');
     $('div.tab_toggle_div div.' + curtab + '_tab').addClass('active');
-
   });
   $('.tab_toggle_only').click(function(e){
     e.preventDefault();
@@ -228,138 +244,48 @@ $(document).ready(function() {
     $('#' + partab + ' div.ab-tab-pane').removeClass('active');
 
     $('#' + partab + ' div.' + curtab + '_tab').addClass('active');
-
   });
-  $('.ab-tab-content .ab-tab-pane:first-child').addClass('active')
+  $('.ab-tab-content .ab-tab-pane:first-child').addClass('active');
 
+  $('.sub_tab_toggle').click(function(e){
+    e.preventDefault();
+    var $this = $(this);
+    var curtab = $this.attr('data-sub_tab');
 
+    $('.sub_tab_toggle_ul.ab-sub_nav-sub_tabs li').removeClass('sub_active');
+    $('.sub_tab_toggle_ul.ab-sub_nav-sub_tabs li.' + curtab).addClass('sub_active');
+    $('div.sub_tab_toggle_div div.ab-sub_tab-pane').removeClass('sub_active');
+    $('div.sub_tab_toggle_div div.' + curtab).addClass('sub_active');
+  });
+
+  $('.sub_tab_toggle_only').click(function(e){
+    e.preventDefault();
+
+    var $this = $(this);
+    var curtab = $this.attr('data-sub_tab');
+    var partab = $this.attr('data-sub_tab-target');
+
+    $('#' + partab + '_nav li').removeClass('sub_active');
+    $('#' + partab + '_nav li.' + curtab).addClass('sub_active');
+    $('#' + partab + ' div.ab-sub_tab-pane').removeClass('sub_active');
+
+    $('#' + partab + ' div.' + curtab).addClass('sub_active');
+  });
+  $('.ab-sub_tab-content .ab-sub_tab-pane:first-child').addClass('sub_active');
 
   String.prototype.upCaseWord = function() {
     return this.toString().replace(/\b\w/g, function(l){ return l.toUpperCase() });
   };
-  $('#search-form input').autocomplete({ hint: false ,debug: algolia_debug}, [{
-      source: $.fn.autocomplete.sources.hits(index, { hitsPerPage: 5 }),
-      displayKey:  'nav_title',
-      templates: {
-        suggestion: function(suggestion) {
-          var content = '';
-          var title = '';
-          var type = '';
-          var category = '';
-          var platform = '';
-          var subname = '';
-          var heading = '';
-          //console.log(hit)
-          if ('nav_title' in suggestion) {
-            title = suggestion.nav_title.replace('%20', ' ').replace('_', ' ');
-          }
-          else {
-            title = suggestion.title.replace('%20', ' ').replace('_', ' ');
-          }
-          if ('type' in suggestion) {
-            type = suggestion.type.replace('%20', ' ').replace('_', ' ').upCaseWord();
-          }
-          if ('category' in suggestion) {
-            category =  suggestion.category.replace('%20', ' ').replace('_', ' ');
-          }
+  String.prototype.replaceUnder = function() {
+    return this.toString().replace(/\%20/g, ' ').replace(/\_/g, ' ');
+  };
+  Array.prototype.replaceUnder = function() {
+    return this.map(function(itm){ return itm.toString().replace(/\%20/g, ' ').replace(/\_/g, ' ')});
+  };
+  Array.prototype.upCaseWord = function() {
+    return this.map(function(itm){ return itm.toString().replace(/\b\w/g, function(l){ return l.toUpperCase() }) });
+  };
 
-
-          if ('platform' in suggestion) {
-            platform = suggestion.platform.replace('%20', ' ').replace('_', ' ');
-          }
-          if ('headings' in suggestion) {
-            if (suggestion['headings']) {
-              heading = suggestion['headings'][suggestion['headings'].length - 1];
-            }
-          }
-          if (platform || category) {
-            subname = '(' + type + ': '+ platform;
-            if (platform) {
-              subname += ' - ';
-            }
-            subname += category.upCaseWord() + ')';
-          }
-
-
-          if ('content' in suggestion._highlightResult){
-            if ('value' in suggestion._highlightResult.content){
-              content = suggestion._highlightResult.content.value.replace('%20', ' ').replace('_', ' ').replace(/<(.|\n)*?>/g, '');
-            }
-          }
-          if (content.length > 400) {
-            content = content.substring(0,400);
-            content += '...';
-          }
-          var url = suggestion.url;
-          if (heading){
-            url += '#' + string_to_slug(heading);
-          }
-          var resulttemplate = '<a href="' + base_url + url + '"><div class="title">' +
-            title + ' <div class="category">' + subname.replace(/\_/g,' ') + '</div></div> <div class="content">'  +
-            content + '</div><hr /></a>';
-          return resulttemplate;
-          //
-          //return  suggestion._highlightResult.title.value;
-        },
-        empty: '<div class="no_results">No results were found with your current search. Try to change the search query.</div><hr />',
-        footer: '<div id="algolia_footer">' +
-        '<div id="algolia-docsearch-advanced"><a href="#" onclick="$(\'#search-form\').submit();">Advanced Search</a></div></div>'
-      }
-
-    }]
-  ).on('autocomplete:cursorchanged', function() {
-  }).on('autocomplete:cursorremoved', function() {
-  }).on('autocomplete:selected', function(event, suggestion, dataset) {
-    var heading = '';
-
-    if ('headings' in suggestion) {
-      if (suggestion['headings']) {
-        heading = suggestion['headings'][suggestion['headings'].length - 1];
-      }
-    }
-    var url = suggestion.url;
-
-    if (heading){
-      url += '#' + string_to_slug(heading);
-    }
-
-    window.location = base_url + url;
-
-  }).keydown(function(e){
-    switch (e.which ) {
-      // esc, clear results
-      case 27:
-        $(this).autocomplete('val', '');
-        break;
-    }
-  });
-
-  $('#search_clear').on('click',function(e){
-    $('#search-form input').autocomplete('val', '');;
-  });
-
-  $('#menu_search').on('focusin',function(e){
-    if (  $('#menu_search').val().length ) {
-      $('#search-form input').autocomplete('open');
-    }
-  });
-
-  var sf_style = $('#search-form').attr('style') ?  $('#search-form').attr('style') : '';
-  var sfac_style = $('#search-form  .algolia-autocomplete').attr('style') ? $('#search-form  .algolia-autocomplete').attr('style') : '';
-  var header_style = $('#header_menu').attr('style') ? $('#header_menu').attr('style') : '';
-
-
-  $('#menu_search').on('focus',function(e){
-  //  if($(window).width() >= 768) {
-      $('#header_nav').addClass('search_focus');
-      $('#search_clear i').addClass('fa-times');
-  //  }
-  }).on('blur',function(e){
-  //  if($(window).width() >= 768) {
-      $('#header_nav').removeClass('search_focus');
-      $('#search_clear i').removeClass('fa-times');
-  //  }
-  });
   var external_ignore = ['braze.statuspage.io','www.braze.com']
   var links = $('#main_content a').filter(function() {
      var tofilter = this.hostname && this.hostname !== location.hostname && this.text && external_ignore.indexOf(this.hostname) < 0 ;

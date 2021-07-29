@@ -4,9 +4,12 @@ platform: Campaigns
 subplatform: Scheduling and Organizing
 page_order: 6
 
-tools: campaigns
 page_type: reference
 description: "This reference article gives an overview of campaign alerts, their benefits, as well as how to set them up to help provide you peace of mind."
+tool: Campaigns
+channel:
+- email
+- webhooks
 ---
 # Campaign Alerts
 
@@ -37,10 +40,10 @@ You can set up an email alert, a webhook alert or both. Webhook alerts can be ve
 The following is a sample payload for the body of a campaign alert webhook. This example uses an alert that is configured to send when messages sent falls below 500 for a given campaign send.
 
 ```
-{"text":"Your campaign 'Copy of Copy of Messages sent test' had fewer than 500 messages sent this run. It had 4 messages sent this run. See https://sweeney.braze.com/engagement/campaigns/5b44b00ffbe76a7024f242e6/51804f26dd365acfa700026a?page=-2",
-"data":{"url":"https://sweeney.braze.com/engagement/campaigns/5b44b00ffbe76a7024f242e6/51804f26dd365acfa700026a?page=-2",
-"app_group_name":"Stopwatch",
-"campaign_name":"Copy of Copy of Messages sent test",
+{"text":"Your campaign 'Sample campaign' had fewer than 500 messages sent this run. It had 4 messages sent this run. See https://dashboard-01.braze.com/engagement/campaigns/5b44b00ffbe76a7024f242e6/51804f26dd365acfa700026a?page=-2",
+"data":{"url":"https://dashboard-01.braze.com/engagement/campaigns/5b44b00ffbe76a7024f242e6/51804f26dd365acfa700026a?page=-2",
+"app_group_name":"Sample App Group",
+"campaign_name":"Sample campaign",
 "campaign_api_id":"fe787bc5-d13f-4123-b22f-3bd48f9fc407","upper_threshold":0,"lower_threshold":500,"value":4}}
 ```
 

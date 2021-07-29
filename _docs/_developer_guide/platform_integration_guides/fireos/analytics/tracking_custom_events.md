@@ -3,14 +3,18 @@ nav_title: Tracking Custom Events
 platform: FireOS
 page_order: 2
 
+page_type: reference
+description: "This article covers how to track custom events for your FireOS app."
+
 ---
-## Tracking Custom Events
+
+# Tracking Custom Events
 
 You can record custom events in Braze to learn more about your app's usage patterns and to segment your users by their actions on the dashboard.
 
-Before implementation, be sure to review examples of the segmentation options afforded by Custom Events vs. Custom Attributes vs Purchase Events in our [Analytics Overview][0], as well as our notes on [event naming conventions]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/event_naming_conventions/).
+Before implementation, be sure to review examples of the segmentation options afforded by custom events vs. custom attributes vs. purchase events in our [Analytics Overview][0], as well as our notes on [event naming conventions]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/event_naming_conventions/).
 
-### Adding A Custom Event
+## Adding A Custom Event
 
 ```java
 Appboy.getInstance(context).logCustomEvent(YOUR_EVENT_NAME);
@@ -18,7 +22,7 @@ Appboy.getInstance(context).logCustomEvent(YOUR_EVENT_NAME);
 
 See the [Javadoc][2] for more information.
 
-#### Adding Properties
+### Adding Properties
 
 You can add metadata about custom events by passing a [Braze Properties][4] object with your custom event.
 
@@ -30,9 +34,9 @@ eventProperties.addProperty("key", "value");
 Appboy.getInstance(context).logCustomEvent(YOUR_EVENT_NAME, eventProperties);
 ```
 
-#### Reserved Keys
+### Reserved Keys
 
-The following keys are __RESERVED__ and __CANNOT__ be used as Custom Event Properties:
+The following keys are __RESERVED__ and __CANNOT__ be used as custom event properties:
 
 - `time`
 - `product_id`

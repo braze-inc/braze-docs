@@ -1,14 +1,19 @@
 ---
 nav_title: Media Library
 page_order: 0
+
+page_type: reference
+description: "This reference article describes how to use the Media Library to manage your assets in a single, centralized location."
+tool: Media
 ---
 # Media Library
 
-> The Media Library allows you to manage your assets in a single, centralized location. To access this feature please go into the "Media Library" tab in the [Templates & Media][4] section of your dashboard.
+> The Media Library allows you to manage your assets in a single, centralized location. To access this feature please go into the **Media Library** tab in the [Templates & Media][4] section of your dashboard.
 
-The Library now allows you to:
+You can use the **Media Library** to:
 
 * Upload multiple images at one time
+* Upload Virtual Contact Files (.vcf)
 * Upload a folder with your images (max: 50 images)
 * Crop an existing image to create the right ratio for your messages
 * Add tags or teams to help further organize your images
@@ -28,26 +33,7 @@ Previously when composing a message, you would upload images for each respective
 
 You can also [duplicate]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/duplicate/) and [archive]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/archive/) templates! Learn more about creating and managing templates and creative content in [Templates & Media]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/).
 
-## FAQ
-
-### How do I crop an existing image?
-You can crop an existing image by selecting the image from the Media Library and clicking the button for "Save & Crop Image".  You will be redirected to a cropping composer where you can select your ratio type and edit the name of the new image.  Once you hit save, your new image can be used.
-
-![media_library_crop1][2]
-
-![media_library_crop2][3]
-
-### Can I crop all images?
-
-{% alert note %}
-The Media Library does not currently support cropping GIF images.
-{% endalert %}
-
-### Why can't I upload any image I want into the Push Composers?
-The reason for this is because most composers have restrictions on the image ratio size that is allowed.
-
-### My image keeps timing out when I try to upload it. What can I do about this? {#image-optimization}
-This can happen for a variety of reasons, but a common solution is to make sure your image is optimized before attempting to upload it. This means running your image through an image optimizer (such as [ImageOptim][5]). Additionally, if your image was built in Photoshop (or similar software) and has many layers, merging and reducing the number of layers can also help.
+{% alert tip %} For more help with the Media Library, check out our [Templates & Media FAQs]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/faqs). {% endalert %}
 
 [1]: {% image_buster /assets/img_archive/media_library_main.png %}
 [2]: {% image_buster /assets/img_archive/media_library_crop1.png %}

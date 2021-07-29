@@ -6,6 +6,7 @@ page_type: update
 platform: windows universal
 
 description: "This page lists updates to Braze's Windows Universal SDK changelog."
+
 ---
 
 # Windows SDK Changelog

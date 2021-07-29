@@ -39,7 +39,7 @@ Multiple filter example:
 
 ## Connected Audience Filters
 
-Combining multiple Custom Attribute filters will create a Connected Audience Filter, which will create a Connected Audience Filter when combined with `AND` and `OR` operators.
+Combining multiple custom attribute filters will create a Connected Audience Filter, which will create a Connected Audience Filter when combined with `AND` and `OR` operators.
 
 ### Custom Attribute Filter
 
@@ -67,11 +67,12 @@ The custom attribute's type determines the comparisons that are valid for a give
 | Time | `less_than_x_days_ago`, `greater_than_x_days_ago`, `less_than_x_days_in_the_future`, `greater_than_x_days_in_the_future`, `after`, `before`, `exists`, `does_not_exist` | 
 {: .reset-td-br-1 .reset-td-br-2}
 
-{% alert important %}
-The `value` is not required when using the `exists` or `does_not_exist` comparisons. `value` must be an ISO 8601 DateTime string when using the `before` and `after` comparisons.
-{% endalert %}
+#### Attribute Comparison Caveats
 
-### Custom Attribute Example
+| `value` - The `value` is not required when using the `exists` or `does_not_exist` comparisons. `value` must be an ISO 8601 DateTime string when using the `before` and `after` comparisons.<br><br>`matches_regex` - When using the `matches_regex` comparison, the value passed must be a string. To read more about using RegEx with Braze, check out our [RegEx]({{site.baseurl}}/user_guide/engagement_tools/segments/regex/#regex-with-braze) and custom attribute [data type]({{site.baseurl}}/developer_guide/platform_wide/analytics_overview/#custom-attribute-data-types) documentation. |
+{: .reset-td-br-1}
+
+#### Custom Attribute Example
 
 ```json
 {
@@ -101,7 +102,7 @@ The `value` is not required when using the `exists` or `does_not_exist` comparis
   }
 }
 ```
-#### Push Subscription Filter
+### Push Subscription Filter
 
 This filter allows you to segment based on a user's push subscription status.
 
@@ -120,8 +121,9 @@ This filter allows you to segment based on a user's push subscription status.
 | Allowed Comparisons | Allowed Values |
 | ---------------------| --------------- |
 | `is`, `is_not` | `opted_in`, `subscribed`, `unsubscribed` |
+{: .reset-td-br-1 .reset-td-br-2}
 
-#### Email Subscription Filter
+### Email Subscription Filter
 
 This filter allows you to segment based on a user's email subscription status.
 
@@ -140,6 +142,7 @@ This filter allows you to segment based on a user's email subscription status.
 | Allowed Comparisons | Allowed Values |
 | ---------------------| --------------- |
 | `is`, `is_not` | `opted_in`, `subscribed`, `unsubscribed` |
+{: .reset-td-br-1 .reset-td-br-2}
 
 ### Last Used App Filter
 
@@ -159,3 +162,4 @@ This filter allows you to segment based on when was the last time the user used 
 | Allowed Comparisons | Allowed Values |
 | ---------------------| --------------- |
 | `after`, `before` | DateTime (ISO 8601 string) |
+{: .reset-td-br-1 .reset-td-br-2}

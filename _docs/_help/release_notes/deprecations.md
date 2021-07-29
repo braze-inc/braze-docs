@@ -6,12 +6,15 @@ layout: featured
 guide_top_header: "Deprecations"
 guide_top_text: "Technology is always moving - inside Braze and outside it! And we do our best to keep up with it. Here, you'll find the origins of Braze and its technology - how we supported people in the 'before time' - before now, anyway... <br> <br> You might have gotten here from searching a term for an integration or feature that no longer exists. This is our attempt to keep you informed on our progress and movement within the technology industry. <br> <br> You can find a list of deprecated and unsupported features below. You can also read deprecated articles by clicking on the buttons below."
 
+page_type: landing
+description: "This landing page includes references to deprecated articles and provides a list of deprecated and unsupported features."
+
 guide_featured_title: "Deprecated Articles"
 guide_featured_list:
   - name: Apptimize Partnership
     link: /docs/help/release_notes/deprecations/apptimize/
     fa_icon: fas fa-vials
-  - name: Eclipse SDK Set Up
+  - name: Eclipse SDK Setup
     link: /docs/help/release_notes/deprecations/eclipse_setup_deprecated/
     fa_icon: fas fa-circle
   - name: "TLS 1.0 & 1.1 Deprecation"
@@ -47,7 +50,7 @@ Braze moved over to a new form of in-app messages with the following SDK release
 - Android: `1.13.0`
 - Web: `1.3.0`
 
-Prior to these releases, Braze supported "original in-app messages." Previously, support for original in-app messages was provided for any customer who ran an in-app campaign prior to the new release. All of the campaign stats were unaffected by the change, and those who had sent original in-app messages had the opportunity to send others via the "Create Campaign" button on the campaign screen.
+Prior to these releases, Braze supported "original in-app messages." Previously, support for original in-app messages was provided for any customer who ran an in-app campaign prior to the new release. All of the campaign stats were unaffected by the change, and those who had sent original in-app messages had the opportunity to send others via the **Create Campaign** button on the **Campaign** page.
 
 ![Choices][15]
 

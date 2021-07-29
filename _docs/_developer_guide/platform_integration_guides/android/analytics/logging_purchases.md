@@ -2,17 +2,19 @@
 nav_title: Logging Purchases
 platform: Android
 page_order: 4
+description: "This reference article shows how to track in-app purchases and revenue and assign purchase properties in your Android application."
 
 ---
-## Logging Purchases
+
+# Logging Purchases
 
 Record in-app purchases so that you can track your revenue over time and across revenue sources, as well as segment your users by their lifetime value.
 
 Braze supports purchases in multiple currencies. Purchases that you report in a currency other than USD will be shown in the dashboard in USD based on the exchange rate at the date they were reported.
 
-Before implementation, be sure to review examples of the segmentation options afforded by Custom Events vs. Custom Attributes vs Purchase Events in our [Analytics Overview][3].
+Before implementation, be sure to review examples of the segmentation options afforded by custom events vs. custom attributes vs. purchase events in our [Analytics Overview][3].
 
-### Tracking Purchases & Revenue
+## Tracking Purchases & Revenue
 
 To use this feature, add this method call after a successful purchase in your app:
 
@@ -20,7 +22,7 @@ To use this feature, add this method call after a successful purchase in your ap
 {% tab JAVA %}
 
 ```java
-Appboy.getInstance(context).logPurchase(
+Braze.getInstance(context).logPurchase(
    String productId,
    String currencyCode,
    BigDecimal price,
@@ -32,7 +34,7 @@ Appboy.getInstance(context).logPurchase(
 {% tab KOTLIN %}
 
 ```kotlin
-Appboy.getInstance(context).logPurchase(
+Braze.getInstance(context).logPurchase(
   productId: String,
   currencyCode: String,
   price: BigDecimal,
@@ -49,7 +51,7 @@ __If the product Identifier is empty, the purchase will not be logged to Braze._
   If you pass in a value of `10 USD`, and a quantity of `3` then that will log to the user's profile as 3 purchases of 10 dollars for a total of 30 dollars. Quantities must be less than or equal to 100. Values of purchases can be negative.
 {% endalert %}
 
-#### Adding Properties
+### Adding Properties
 
 You can add metadata about purchases by passing a [Braze Properties][4] object with your purchase information.
 
@@ -59,18 +61,18 @@ Properties are defined as key-value pairs.  Keys are `String` objects and values
 {% tab JAVA %}
 
 ```java
-AppboyProperties purchaseProperties = new AppboyProperties();
+BrazeProperties purchaseProperties = new BrazeProperties();
 purchaseProperties.addProperty("key", "value");
-Appboy.getInstance(context).logPurchase(..., purchaseProperties);
+Braze.getInstance(context).logPurchase(..., purchaseProperties);
 ```
 
 {% endtab %}
 {% tab KOTLIN %}
 
 ```kotlin
-val purchaseProperties = AppboyProperties()
+val purchaseProperties = BrazeProperties()
 purchaseProperties.addProperty("key", "value")
-Appboy.getInstance(context).logPurchase(..., purchaseProperties)
+Braze.getInstance(context).logPurchase(..., purchaseProperties)
 ```
 
 {% endtab %}
@@ -78,7 +80,7 @@ Appboy.getInstance(context).logPurchase(..., purchaseProperties)
 
 See the [Javadoc][6] for more information.
 
-#### Reserved Keys
+### Reserved Keys
 
 The following keys are __RESERVED__ and __CANNOT__ be used as Purchase Properties:
 
@@ -89,19 +91,13 @@ The following keys are __RESERVED__ and __CANNOT__ be used as Purchase Propertie
 - `price`
 - `currency`
 
-#### REST API
+### REST API
 
 You can also use our REST API to record purchases. Refer to the [User API documentation][1] for details.
 
-**Implementation Examples*
-
-See [`PreferencesActivity.java`][2] and [`MainFragment.java`][7] in the Droidboy sample app.
-
 [1]: {{site.baseurl}}/developer_guide/rest_api/user_data/#user-data
-[2]: https://github.com/Appboy/appboy-android-sdk/blob/master/droidboy/src/main/java/com/appboy/sample/PreferencesActivity.java
 [3]: {{site.baseurl}}/developer_guide/platform_wide/analytics_overview/#user-data-collection
-[4]: https://appboy.github.io/appboy-android-sdk/javadocs/com/appboy/models/outgoing/AppboyProperties.html
+[4]: https://appboy.github.io/appboy-android-sdk/javadocs/com/braze/models/outgoing/BrazeProperties.html
 [5]: http://developer.android.com/reference/java/util/Date.html
-[6]: https://appboy.github.io/appboy-android-sdk/javadocs/com/appboy/Appboy.html#logPurchase(java.lang.String,%20java.lang.String,%20java.math.BigDecimal,%20int,%20com.appboy.models.outgoing.AppboyProperties)
-[7]: https://github.com/Appboy/android-sdk/blob/develop/droidboy/src/main/java/com/appboy/sample/MainFragment.java
+[6]: https://appboy.github.io/appboy-android-sdk/javadocs/com/appboy/Appboy.html#logPurchase-java.lang.String-java.lang.String-java.math.BigDecimal-int-com.braze.models.outgoing.BrazeProperties-
 [8]: https://appboy.github.io/appboy-android-sdk/javadocs/com/appboy/Appboy.html#logPurchase(java.lang.String,%20java.lang.String,%20java.math.BigDecimal,%20int)

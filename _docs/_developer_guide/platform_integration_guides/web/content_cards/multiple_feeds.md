@@ -3,6 +3,10 @@ nav_title: Multiple Feeds
 page_order: 5
 
 platform: Web
+page_type: reference
+description: "This article describes how to set up and use multiple content card feeds."
+channel: content cards
+
 ---
 
 # Using Multiple Content Card Feeds
@@ -13,9 +17,9 @@ The following documentation demonstrates an example implementation that can be c
 
 ## Step 1: Setting Key-Value Pairs on Cards
 
-When creating a Content Card campaign, key-value pair data can be set on each Card. Our filtering logic will use this key-value pair data to categorize cards.
+When creating a Content Card campaign, key value pair data can be set on each Card. Our filtering logic will use this key-value pair data to categorize cards.
 
-For the purposes of this example, we'll set a key-value pair with the key `feed_type` that will designate which Content Card feed the card should be displayed in. The value will be whatever your custom feeds will be (`Transactional`, `Marketing`, or other custom feed name).
+For the purposes of this example, we'll set a key value pair with the key `feed_type` that will designate which Content Card feed the card should be displayed in. The value will be whatever your custom feeds will be (`Transactional`, `Marketing`, or other custom feed name).
 
 ## Step 2: Set Up Your Custom Feed
 
@@ -31,7 +35,7 @@ function showCardsByFeedType(feed_type) {
     return cards.filter(function(card) {
       return card.extras["feed_type"] === feed_type;
     });
-  }
+  })
 }
 ```
 

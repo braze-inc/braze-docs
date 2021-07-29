@@ -1,9 +1,16 @@
 ---
 nav_title: Collection Use Case
 page_order: 3
+
+page_type: reference
+description: "This reference article covers an example user data collection use case—how a ride-sharing app might decide what user data to collect."
+tool: Dashboard
 ---
 
+> This reference article covers an example user data collection use case—how a ride-sharing app might decide what user data to collect.
+
 # Taxi/Ride-Sharing App Use Case
+
 For this example case, let's consider a Taxi/Ride-Sharing app (such as Hailo, Uber, Lyft, etc.) wants to decide what user data to collect. The questions and brainstorming process below are a great model for marketing and development teams to follow. By the end of this exercise, both teams should have a solid understanding of what custom events and attributes make sense to collect in order to help meet their goal.
 
 ## Case Question #1: What is the goal?
@@ -17,7 +24,7 @@ Their goal is straightforward in that they want users to hail taxi rides via the
 3. They need to attempt to hail a taxi.
 4. In order to hail a taxi, they must be available when they search.
 
-The above actions could then be tagged as the following Custom Events:
+The above actions could then be tagged as the following custom events:
 
 - Began Registration
 - Completed Registration
@@ -38,7 +45,7 @@ After implementing the events, you can now run the following campaigns:
 - The average rating they give to their drivers?
 - Unique Promo Codes for the user?
 
-The above characteristics could then be tagged as the following Custom Attributes:
+The above characteristics could then be tagged as the following custom attributes:
 
 - Promotional Credit Balance (Decimal Type)
 - Average Driver Rating (Integer Type)

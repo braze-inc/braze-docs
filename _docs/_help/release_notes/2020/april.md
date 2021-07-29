@@ -1,6 +1,9 @@
 ---
 nav_title: April
 page_order: 9
+no_index: true
+page_type: update
+description: "This article contains release notes for April 2020."
 ---
 # April 2020
 

@@ -4,13 +4,15 @@ platform: Campaigns
 subplatform: Ideas and Strategies
 page_order: 1
 
-tools: campaigns
 page_type: tutorial
 description: "This how-to article addresses the issue of lapsing users and how to effectively use Braze Campaigns to re-engage those users."
+tool:
+- Segments
+- Campaigns
 ---
 # Capturing Lapsing Users
 
-> This how-to article addresses the issue of lapsing users and how to effectively use Braze Campaigns to re-engage those users.
+> This how-to article addresses the issue of lapsing users and how to effectively use Braze campaigns to re-engage those users.
 
 If your audience is dwindling, it’s crucial to try wooing them back. Recognizing this necessity, Braze makes it easy to set up automated recurring re-engagement campaigns to capture lapsing users. You can choose the re-engagement timeframe and recurrence that best suits your app, but to demonstrate, we'll get started with a 14 day (2 week) weekly re-engagement plan.
 
@@ -30,7 +32,7 @@ Don’t forget to name the segment something simple and memorable, like “Lapse
 
 ## Step 2: Campaign Creation
 
-Next, we’ll click 'Create Campaign' and choose what type of campaign we will be sending to this segment.
+Next, we’ll click **Create Campaign** and choose what type of campaign we will be sending to this segment.
 
 ![SCREENSHOT][5]
 
@@ -42,10 +44,10 @@ Step 2 is where we’ll create a recurring schedule. We’ll use [local time zon
 
 ![SCREENSHOT][3]
 
-Now, you’re ready to send the campaign. Confirm the settings on the last page of the wizard and click 'Launch Campaign'!
+Now, you’re ready to send the campaign. Confirm the settings on the last page of the wizard and click **Launch Campaign**!
 
 [1]: {% image_buster /assets/img_archive/2weeklapse1.png %}
-[2]: {% image_buster /assets/img_archive/2weeklapse3.png %}
+[2]: {% image_buster /assets/img_archive/2weeklapse3.jpg %}
 [3]: {% image_buster /assets/img_archive/2weeklapse4.png %}
 [4]: {{site.baseurl}}/help/faqs/#what-does-local-time-zone-delivery-offer
 [5]: {% image_buster /assets/img_archive/2weeklapse2.png %}

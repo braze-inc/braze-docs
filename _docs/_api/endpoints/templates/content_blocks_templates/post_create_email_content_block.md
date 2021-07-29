@@ -24,58 +24,54 @@ This endpoint will create an [Email Content Block]({{site.baseurl}}/user_guide/e
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#f1cefa8b-7a28-4e64-b579-198a4610d0a5 {% endapiref %}
 
-{% alert important %}
-__Looking for the `api_key` parameter?__<br>As of May 2020, Braze has changed how we read API keys to be more secure. Now API keys must be passed as a request header, please see `YOUR_REST_API_KEY` within the __Example Request__ below.<br><br>Braze will continue to support the `api_key` being passed through the request body and URL parameters, but will eventually be sunset. Please update your API calls accordingly.
-{% endalert %}
-
 ## Request Body
 
 ```
 Content-Type: application/json
-Authorization: Bearer YOUR_REST_API_KEY
+Authorization: Bearer YOUR-REST-API-KEY
 ```
 
 ```json
 {
-  "name": "content-block-1",
-  "description": "This is my content block",
-  "content": "HTML or text content within block",
-  "state": "draft",
-  "tags": ["",""]
+  "name": (required, string) Must be less than 100 characters,
+  "description": (optional, string) The description of the content block. Must be less than 250 character,
+  "content": (required, string) HTML or text content within Content Block,
+  "state": (optional, string) Choose `active` or `draft`. Defaults to `active` if not specified,
+  "tags": (optional, array of strings) Tags must already exist
 }
 ```
 
-### Request Parameters
+## Request Parameters
 
 | Parameter | Required | Data Type | Description |
 |---|---|---|---|
-| `name` | Yes | String | Must be less than 100 characters. |
-| `description` | No | String | The description of the content block. Must be less than 250 characters. |
-| `content` | Yes | String | HTML or text content within Content Block.
-| `state` | Optional | "active" or "draft" | Choose "active" or "draft". Defaults to `active` if not specified. |
-| `tags` | No | Array of Strings. | Tags must already exist. |
+| `name` | Required | String | Name of the content block. Must be less than 100 characters. |
+| `description` | Optional | String | Description of the content block. Must be less than 250 characters. |
+| `content` | Required | String | HTML or text content within the Content Block. |
+| `state` | Optional | String | Choose `active` or `draft`. Defaults to `active` if not specified. |
+| `tags` | Optional | Array of strings | [Tags]({{site.baseurl}}/user_guide/administrative/app_settings/manage_app_group/tags/) must already exist. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
 
-### Example Request
+## Example Request
 ```
 curl --location --request POST 'https://rest.iad-01.braze.com/content_blocks/create' \
 --header 'Content-Type: application/json' \
---header 'Authorization: Bearer YOUR_REST_API_KEY' \
+--header 'Authorization: Bearer YOUR-REST-API-KEY' \
 --data-raw '{
-  "name": "content-block-1",
+  "name": "content_block",
   "description": "This is my content block",
   "content": "HTML content within block",
   "state": "draft",
-  "tags": ["",""]
+  "tags": ["marketing"]
 }
 '
 ```
 
-### Successful Response Properties
+## Response
 
 ```json
 Content-Type: application/json
-Authorization: Bearer YOUR_REST_API_KEY
+Authorization: Bearer YOUR-REST-API-KEY
 {
   "content_block_id": "newly-generated-block-id",
   "liquid_tag": "generated-block-tag-from-content_block_name",
@@ -91,7 +87,7 @@ Authorization: Bearer YOUR_REST_API_KEY
 
 - `Content must be smaller than 50kb.` - The content in your content block must be less than 50kb total.
 
-- `Content contains malformed liquid.` - The liquid provided is not valid or parsable. Please try again or reach out to support.
+- `Content contains malformed liquid.` - The Liquid provided is not valid or parsable. Please try again or reach out to support.
 
 - `Content Block cannot be referenced within itself.`
 

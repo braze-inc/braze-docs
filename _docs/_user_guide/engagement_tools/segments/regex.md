@@ -2,11 +2,11 @@
 nav_title: "RegEx"
 page_order: 5
 
-description: "This reference article covers what RegEx is, how to begin using it at Braze, and offers debugger functionality."
+description: "This reference article covers what regular expressions are, how to begin using them, and offers debugger functionality to validate and test regular expressions."
 page_type: reference
 tool:
   - Dashboard
-  - Docs
+  - Testing Tools
 ---
 
 # RegEx with Braze
@@ -130,16 +130,21 @@ $( document ).ready(function() {
 
 {% details How do I filter for inbox specific email addresses when segmenting? %}
 
-Use the email address filter, set it to "matches regex". Reference the regex for email addresses, <font color="red">[a-zA-Z0-9.-+_]+ </font>@<font color="blue">[a-zA-Z0-9.-]+</font>\.<font color="green">[a-zA-Z.-]+</font> where:
-- <font color="red">[a-zA-Z0-9.-+_]+</font> is the beginning of the email address before the '@' character. So the "name" in "name@example.com".
+Use the email address filter, set it to "matches regex". Reference the regex for email addresses, <font color="red">[a-zA-Z0-9.+_-]+ </font>@<font color="blue">[a-zA-Z0-9.-]+</font>\.<font color="green">[a-zA-Z.-]+</font> where:
+- <font color="red">[a-zA-Z0-9.+_-]+</font> is the beginning of the email address before the '@' character. So the "name" in "name@example.com".
 - <font color="blue">[a-zA-Z0-9.-]+</font> is the first part of the domain. So the "example" in "name@example.com".
 - <font color="green">[a-zA-Z.-]+</font> is the last part of the domain. So the "com" in "name@example.com".
 
-__Example__<br>
-Say you want to filter for emails ending with @braze.com. You would use the email address filter, set it to matches regex, and enter [a-zA-Z0-9.-+_]+@braze\.com in the field.
+{% enddetails %}
+
+{% details How do I filter for email addresses associated to a specific domain? %}
+
+Say you want to filter for emails ending with @braze.com. You would use the email address filter, set it to matches regex, and enter "@braze.com" in the field.
 
 ![image1]({% image_buster /assets/img/regex/regeximg1.png %})
-{% enddetails %}
+
+{% enddetails%}
+
 {% details How can I use RegEx on number Strings to filter for values ≥ x or ≤ x? %}
 If you're searching for __values ≥ x__, the regex to use would be __^([x-y]|\d{z,})$__
 where x-y is the range of numbers (0-9) of the first digit, and z is the one more the number of digits of x.<br>__Example__<br>
@@ -157,7 +162,7 @@ If you're trying to target users who live in cities that start with "San", your 
 
 ![image2]({% image_buster /assets/img/regex/regeximg2.png %})
 {% enddetails %}
-{% details How to filter for certain pone numbers with RegEx %}
+{% details How to filter for certain phone numbers with RegEx %}
 
 Before using regex to filter phone numbers, please take note that numbers logged for user profiles should already be in an [E.164 format](https://en.wikipedia.org/wiki/E.164) as specified in our [documentation]({{site.baseurl}}/user_guide/message_building_by_channel/sms/phone_numbers/).
 
@@ -177,4 +182,3 @@ Let's say you wanted to filter users by phone number for a specific area code, 7
 [regex]: https://regex101.com/
 [cheatsheet]: {% image_buster /assets/download_file/regex-cheatsheet.pdf %}
 [dummydata]: {% image_buster /assets/download_file/regex-dummy-data.rtf %}
-[phonenumbers]: {{site.baseurl}}/user_guide/message_building_by_channel/sms/phone_numbers/

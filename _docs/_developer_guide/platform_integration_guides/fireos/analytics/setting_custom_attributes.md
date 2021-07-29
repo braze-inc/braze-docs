@@ -3,14 +3,18 @@ nav_title: Setting Custom Attributes
 platform: FireOS
 page_order: 3
 
+page_type: reference
+description: "This article covers methods for assigning custom attributes to users."
+
 ---
-## Setting Custom Attributes
+
+# Setting Custom Attributes
 
 Braze provides methods for assigning attributes to users. You'll be able to filter and segment your users according to these attributes on the dashboard.
 
-Before implementation, be sure to review examples of the segmentation options afforded by Custom Events vs. Custom Attributes vs Purchase Events in our [Analytics Overview][7], as well as our notes on [event naming conventions]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/event_naming_conventions/).
+Before implementation, be sure to review examples of the segmentation options afforded by custom events vs. custom attributes vs. purchase events in our [Analytics Overview][7], as well as our notes on [event naming conventions]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/event_naming_conventions/).
 
-### Assigning Standard User Attributes
+## Assigning Standard User Attributes
 
 To assign attributes to your users, call the `getCurrentUser()` method on your Braze instance to get a reference to the current user of your app. Once you have a reference to the current user, you can call methods to set predefined or custom attributes.
 
@@ -31,8 +35,6 @@ Braze provides predefined methods for setting the following user attributes with
 
 All string values such as first name, last name, country, and home city are limited to 255 characters. Avatar Image URLs are limited to 1024 characters.
 
-__We strongly recommend collecting email addresses__ even if you're not sending emails through Braze. Email makes it easier to search for individual user profiles and troubleshoot issues as they arise.
-
 **Implementation Example**
 This is what setting a first name would look like in code:
 
@@ -40,11 +42,9 @@ This is what setting a first name would look like in code:
 Appboy.getInstance(context).getCurrentUser().setFirstName("first_name");
 ```
 
-See [`UserProfileDialog.java`][1] in the Droidboy sample app.
+## Assigning Custom User Attributes
 
-### Assigning Custom User Attributes
-
-In addition to our predefined user attribute methods, Braze also provides custom attributes to track data from your applications. Braze Custom Attributes can be set with the following data types:
+In addition to our predefined user attribute methods, Braze also provides custom attributes to track data from your applications. Braze custom attributes can be set with the following data types:
 
 - Strings
 - Arrays
@@ -57,13 +57,13 @@ In addition to our predefined user attribute methods, Braze also provides custom
 
 Full method specifications for custom attributes can be found here within the [AppboyUser class within the Javadocs][2].
 
-#### Setting a Custom Attribute with a String Value
+### Setting a Custom Attribute with a String Value
 
 ```java
 Appboy.getInstance(context).getCurrentUser().setCustomUserAttribute("your_attribute_key", "your_attribute_value");
 ```
 
-#### Setting a Custom Attribute with an Integer Value
+### Setting a Custom Attribute with an Integer Value
 
 ```java
 Appboy.getInstance(context).getCurrentUser().setCustomUserAttribute, "your_attribute_key", YOUR_INT_VALUE);
@@ -71,31 +71,31 @@ Appboy.getInstance(context).getCurrentUser().setCustomUserAttribute, "your_attri
 Appboy.getInstance(context).getCurrentUser().incrementCustomUserAttribute("your_attribute_key", YOUR_INCREMENT_VALUE);
 ```
 
-#### Setting a Custom Attribute with a Boolean Value
+### Setting a Custom Attribute with a Boolean Value
 
 ```java
 Appboy.getInstance(context).getCurrentUser().setCustomUserAttribute("your_attribute_key", YOUR_BOOLEAN_VALUE);
 ```
 
-#### Setting a Custom Attribute with a Long Value
+### Setting a Custom Attribute with a Long Value
 
 ```java
 Appboy.getInstance(context).getCurrentUser().setCustomUserAttribute("your_attribute_key", YOUR_LONG_VALUE);
 ```
 
-#### Setting a Custom Attribute with a Float Value
+### Setting a Custom Attribute with a Float Value
 
 ```java
 Appboy.getInstance(context).getCurrentUser().setCustomUserAttribute("your_attribute_key", YOUR_FLOAT_VALUE);
 ```
 
-#### Setting a Custom Attribute with a Double Value
+### Setting a Custom Attribute with a Double Value
 
 ```java
 Appboy.getInstance(context).getCurrentUser().setCustomUserAttribute("your_attribute_key", YOUR_DOUBLE_VALUE);
 ```
 
-#### Setting a Custom Attribute with a Date Value
+### Setting a Custom Attribute with a Date Value
 
 ```java
 Appboy.getInstance(context).getCurrentUser().setCustomUserAttribute("your_attribute_key", YOUR_DATE_VALUE);
@@ -109,8 +109,8 @@ Appboy.getInstance(context).getCurrentUser().setCustomUserAttributeToSecondsFrom
   Dates passed to Braze with this method must either be in the [ISO 8601](http://en.wikipedia.org/wiki/ISO_8601) format (e.g `2013-07-16T19:20:30+01:00`) or in the `yyyy-MM-dd'T'HH:mm:ss:SSSZ` format (e.g `2016-12-14T13:32:31.601-0800`).
 {% endalert %}
 
-#### Setting a Custom Attribute with an Array Value
-The maximum number of elements in Custom Attribute Arrays defaults to 25. The maximum for individual arrays can be increased to up to 100. If you would like this maximum increased, please reach out to your Customer Service Manager. Arrays exceeding the maximum number of elements will be truncated to contain the maximum number of elements. For more information on Custom Attribute Arrays and their behavior, see our [Documentation on Arrays][6].
+### Setting a Custom Attribute with an Array Value
+The maximum number of elements in custom attribute arrays defaults to 25. The maximum for individual arrays can be increased to up to 100. If you would like this maximum increased, please reach out to your Customer Service Manager. Arrays exceeding the maximum number of elements will be truncated to contain the maximum number of elements. For more information on custom attribute arrays and their behavior, see our [documentation on arrays][6].
 
 ```java
 // Setting a custom attribute with an array value
@@ -123,7 +123,7 @@ Appboy.getInstance(context).getCurrentUser().removeFromCustomAttributeArray("you
 
 #### Unsetting a Custom Attribute
 
-Custom Attributes can also be unset using the following method:
+Custom attributes can also be unset using the following method:
 
 ```java
 Appboy.getInstance(context).getCurrentUser().unsetCustomUserAttribute("your_attribute_key");
@@ -148,6 +148,7 @@ To set up a subscription for your users (either email or push), call the functio
 | `OPTED_IN` | Subscribed, and explicitly opted in |
 | `SUBSCRIBED` | Subscribed, but not explicitly opted in |
 | `UNSUBSCRIBED` | Unsubscribed and/or explicitly opted out |
+{: .reset-td-br-1 .reset-td-br-2}
 
 
 {% alert important %}
@@ -168,9 +169,7 @@ Appboy.getInstance(context).getCurrentUser().setEmailNotificationSubscriptionTyp
 Appboy.getInstance(context).getCurrentUser().setPushNotificationSubscriptionType(pushNotificationSubscriptionType);
 ```
 
-[1]: https://github.com/Appboy/appboy-android-sdk/blob/master/droidboy/src/main/java/com/appboy/sample/UserProfileDialog.java
 [2]: https://appboy.github.io/appboy-android-sdk/javadocs/com/appboy/AppboyUser.html "Javadocs"
-[3]: http://en.wikipedia.org/wiki/ISO_8601
 [4]: {{site.baseurl}}/developer_guide/rest_api/user_data/#user-data
 [6]: {{site.baseurl}}/developer_guide/platform_wide/analytics_overview/#arrays
 [7]: {{site.baseurl}}/developer_guide/platform_wide/analytics_overview/#user-data-collection

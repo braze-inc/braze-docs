@@ -1,11 +1,19 @@
 ---
 nav_title: Email Analytics Glossary
 page_order: 20
-
-
 layout: glossary_page
 glossary_top_header: "Email Analytics Glossary"
 glossary_top_text: "These are terms you'll find in the analytics section of your Email Campaign or Canvas, post-launch. Search for the metrics you need below. <br>  <br> This glossary does not necessarily include metrics you might see in Currents or in other downloaded reports outside of your Braze account."
+
+description: "This glossary includes the terms you will find in the analytics section of your email campaign or canvas, post-launch. This glossary does not include Currents metrics."
+
+tool:
+  - Campaign
+  - Canvas
+  - Dashboard
+
+channel:
+  - email
 
 glossaries:
   - name: Variation
@@ -21,7 +29,7 @@ glossaries:
     description: Unique Daily Recipients. The number of users who received a particular message in a day. This number is received from Braze.
     calculation: Count
   - name: Sends or Messages Sent
-    description: The total number of messages sent in an Email Campaign. This number is received from Braze.
+    description: The total number of messages sent in an email campaign. This number is received from Braze.
     calculation: Count
   - name: "Deliveries"
     description: The total number of messages (Sends) successfully sent to and received by emailable parties.
@@ -30,7 +38,7 @@ glossaries:
     description: The total number of messages (Sends) successfully sent to and received by emailable parties.
     calculation: (Sends - Bounces) / (Sends)
   - name: Bounces
-    description: The total number of messages that were unsuccessfully sent or designated as 'returned' or 'not received' from send services used or not received by the intended emailable users. This could occur because there is not a valid push token, the email addresses were incorrect or deactivated, or the user unsubscribed after the campaign was launched. <br> <i> An email bounce for customers using Sendgrid consists of hard bounces, spam, and emails sent to invalid addresses. </i>
+    description: The total number of messages that were unsuccessfully sent or designated as 'returned' or 'not received' from send services used or not received by the intended emailable users. This could occur because there is not a valid push token, the email addresses were incorrect or deactivated, or the user unsubscribed after the campaign was launched. <br><br> <b>Hard Bounces</b>&#58; A hard bounce is an email message that has been returned to the sender because the recipient's address is invalid. A hard bounce might occur because the domain name doesn't exist or because the recipient is unknown. If an email has received a hard bounce, we will stop any future requests to this email address. <br><br><b>Soft Bounces</b>&#58; A soft bounce is an email message that gets as far as the recipient's mail server but is bounced back undelivered before it gets to the recipient. A soft bounce might occur because the recipient's inbox is full, the server was down, or the message was too large for the receipient's inbox. If an email has received a soft bounce, we will usually retry within a 72 hour period, but the number of retry attempts varies from receiver to receiver. <br><br> You can also track hard and soft bounces in the <a href='/docs/user_guide/administrative/app_settings/developer_console/message_activity_log_tab/#message-activity-log-tab'>Message Activity Log</a>. <br><br><i> An email bounce for customers using Sendgrid consists of hard bounces, spam, and emails sent to invalid addresses. </i>
     calculation: Count
   - name: "Bounces % or Bounce Rate"
     description: The percentage of messages that were unsuccessfully sent or designated as 'returned' or 'not received' from send services used or not received by the intended emailable users. This could occur because there is not a valid push token, the email addresses were incorrect or deactivated, or the user unsubscribed after the campaign was launched. <br> <i> An email bounce for customers using Sendgrid consists of hard bounces, spam (`spam_report_drops`), and emails sent to invalid addresses (`invalid_emails`). </i>

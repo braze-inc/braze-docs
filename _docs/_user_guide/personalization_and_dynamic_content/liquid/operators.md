@@ -1,6 +1,7 @@
 ---
 nav_title: Operators
 page_order: 2
+description: "This reference page notes the operators that Liquid supports, as well as relevant examples."
 ---
 
 # Operators

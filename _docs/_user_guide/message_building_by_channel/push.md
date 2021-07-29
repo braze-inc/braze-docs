@@ -4,6 +4,9 @@ page_order: 3
 layout: dev_guide
 guide_top_header: "Push"
 guide_top_text: "Push messages are a tried-and-true way to reach your customers via mobile or web. They're useful for driving a user to a specific place, but you should use them wisely! Read any article below to learn who you can send a push to, how to send it, and what advanced push capabilities Braze offers!"
+description: "Push messages are a tried-and-true way to reach your customers via mobile or web. They're useful for driving a user to a specific place, but you should use them wisely!"
+channel:
+  - push
 
 guide_featured_title: "Popular Articles"
 guide_featured_list:

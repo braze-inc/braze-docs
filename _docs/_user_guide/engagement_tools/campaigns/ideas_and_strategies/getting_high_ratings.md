@@ -4,9 +4,14 @@ platform: Campaigns
 subplatform: Ideas and Strategies
 page_order: 5
 
-tools: campaigns
 page_type: reference
 description: "This reference article discusses best practices when using Braze to drive your customer platforms toward success."
+tool:
+- Segments
+- Campaigns
+channel:
+- in-app messages
+- news feed
 ---
 # Getting High Ratings
 
@@ -44,11 +49,6 @@ Because they are relatively intrusive, push notifications and emails that ask us
 ![In-app message][9]
 
 
-[1]: #best-practices
-[2]: #power-users
-[3]: #right-time
-[4]: #channels
-[5]: #five-tricks
 [6]: {% image_buster /assets/img_archive/ratings_power_users.png %}
 [7]: {{site.baseurl}}/user_guide/message_building_by_channel/email/managing_user_subscriptions/#subscription-states
 [8]: http://info.appboy.com/rs/appboy/images/5%20Principles%20of%20User%20Conversion%20%282%29.pdf

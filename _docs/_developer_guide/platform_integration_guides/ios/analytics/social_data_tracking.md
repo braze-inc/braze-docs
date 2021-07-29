@@ -2,8 +2,10 @@
 nav_title: Social Data Tracking
 platform: iOS
 page_order: 5
+description: "This reference article shows how to implement social data tracking for your iOS application."
 
 ---
+
 # Social Data Tracking
 
 ## Collecting Social Account Data
@@ -40,6 +42,7 @@ Appboy.sharedInstance()?.user.facebookUser = facebookUser
 |`facebookUserProfile`| The dictionary returned from the endpoint "/me".|
 | `numberOfFriends`| The length of the friends array returned from the endpoint "/me/friends".|
 | `likes` | The array of user's Facebook likes from the endpoint "/me/likes". |
+{: .reset-td-br-1 .reset-td-br-2}
 
 >  For additional information regarding the Facebook Graph API, please refer to [the Facebook Graph API Developer Documentation][10].
 
@@ -91,11 +94,5 @@ Appboy.sharedInstance()?.user.twitterUser = twitterUser
 {% endtab %}
 {% endtabs %}
 
-[2]: https://developers.facebook.com/docs/ios "facebook ios sdk docs"
-[3]: https://developers.facebook.com/docs/getting-started/facebook-sdk-for-ios/ "create a facebook app"
-[7]: {{site.baseurl}}/developer_guide/platform_integration_guides/ios/initial_sdk_setup/
-[8]: {{site.baseurl}}/developer_guide/platform_integration_guides/ios/advanced_use_cases/manual_sdk_integration/
-[9]: {{site.baseurl}}/developer_guide/platform_integration_guides/ios/analytics/social_data_tracking/#social-data-tracking
+[2]: https://developers.facebook.com/docs/ios "facebook iOS sdk docs"
 [10]: https://developers.facebook.com/docs/graph-api/reference/v4.0/user "facebook graph api docs"
-[11]: https://github.com/Appboy/appboy-ios-sdk/blob/master/Samples/Feedback/AppboyFeedbackSample/AppboyFeedbackSample/CustomAppboyFeedbackViewController.m
-[12]: https://github.com/Appboy/appboy-ios-sdk/blob/master/AppboyUI/ABKContentCardsViewController/ContentCardsViewController/ABKContentCardsViewController.m

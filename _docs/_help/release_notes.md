@@ -5,9 +5,14 @@ layout: featured
 guide_top_header: "Release Notes"
 guide_top_text: "This is where you can find all updates to the Braze platform, with the <a href='/docs/help/release_notes/#most-recent'>most recent platform updates</a>, listed below. You can also
 check out our <a href='/docs/developer_guide/platform_integration_guides/sdk_changelogs/'>SDK Changelogs</a>."
+page_type: landing
+description: "This landing page is home to Braze Release Notes. This is where you can find all updates to the Braze platform and SDKs, as well as a list of deprecated features."
 
 guide_featured_title: "Release Notes"
 guide_featured_list:
+  - name: 2021
+    link: /docs/help/release_notes/2021/
+    fa_icon: fas fa-calendar-alt
   - name: 2020
     link: /docs/help/release_notes/2020/
     fa_icon: fas fa-calendar-alt
@@ -30,7 +35,6 @@ guide_featured_list:
     link: /docs/developer_guide/platform_integration_guides/sdk_changelogs/
     fa_icon: fas fa-file-code
 
-
 ---
 
 # Most Recent Braze Release Notes {#most-recent}
@@ -38,162 +42,145 @@ guide_featured_list:
 > Braze releases information on product updates on a monthly cadence, aligning with major Product Releases, though the product is updated with miscellaneous improvements week to week.
 > <br>
 > <br>
-> For more information on any of the updates listed in this section, reach out to your account manager or to [open a support ticket][support]. You can also check out [our SDK Changelogs]({{site.baseurl}}/developer_guide/platform_integration_guides/sdk_changelogs/) to see more information on our monthly SDK releases, updates, and improvements.
+> For more information on any of the updates listed in this section, reach out to your account manager or [open a support ticket][support]. You can also check out [our SDK Changelogs]({{site.baseurl}}/developer_guide/platform_integration_guides/sdk_changelogs/) to see more information on our monthly SDK releases, updates, and improvements.
 
-## May 2020
+## August 2021
 
-### Google Tag Manager
+### Simple Survey In-App Message
 
-Added documentation and examples of how to deploy and manage Braze's Android SDK using [Google Tag Manager]({{site.baseurl}}/developer_guide/platform_integration_guides/android/advanced_use_cases/android_google_tag_manager/).
+Use the new Simple Survey In-App Message template to collect user attributes, insights, and preferences that power your campaign strategy. For example, you can ask users how they’d like to use your app, learn more about their personal preferences, or even ask about their satisfaction with a particular feature. This survey template is supported for both mobile apps and web browsers. Visit our [documentation]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/templates/simple_survey/) to get started.
 
-### New Blacklist Email API Endpoint
-You can now [blacklist]({{site.baseurl}}/api/endpoints/email/post_blacklist/) email addresses via the Braze API. Blacklisting an email address will unsubscribe the user from email and mark them as hard bounced.
+### Liquid Use Case Library
 
-### API Key Change for Braze Endpoints
+Wondering how to do that one thing with Liquid? Just looking for inspiration? Check out our new [Liquid Use Case Library]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/liquid_use_cases/) for a collection of use cases ranging from Anniversaries and Birthdays to Platform Targeting and more.
 
-As of May 2020, Braze has changed how we read API keys to be more secure. Now API keys should be passed in as a request header. Examples can be found on individual endpoint pages under __Example Request__, as well as in the __API Key Explantion__ below.
+### Email Tracking
 
-Braze will continue to support the `api_key` being passed through the request body and URL parameters, but will eventually be sunset (TBD). __Please update your API calls accordingly.__ These changes have been updated within [Postman](https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#intro) and will soon be input into the Braze [Swagger UI](https://www.braze.com/docs/api/interactive). 
-{% details API Key Explanation %}
-{% tabs %}
-{% tab GET Request %}
-This example uses the /email/hard_bounces endpoint.
+Open pixel tracking and click tracking can now be disabled per user profile. This flexibility helps customers support regional privacy laws, where an individual user profile might indicate they no longer want to be tracked. Visit our [documentation]({{site.baseurl}}/user_guide/data_and_analytics/tracking/email_tracking/) to learn more.
 
-__Before: API Key in Request Body__
-```
-curl --location --request GET 'https://rest.iad-01.braze.com/email/hard_bounces?api_key=YOUR_REST_API_KEY&start_date=2019-01-01&end_date=2019-02-01&limit=100&offset=1&email=foo@braze.com' \
-```
-__Now: API Key in Header__
-```
-curl --location --request GET 'https://rest.iad-01.braze.com/email/hard_bounces?start_date=2019-01-01&end_date=2019-02-01&limit=100&offset=1&email=foo@braze.com' \
---header 'Authorization: Bearer YOUR_REST_API_KEY'
-```
-{% endtab %}
-{% tab POST Request %}
-This example uses the /user/track endpoint.
+### SDK Data Collection Options
 
-__Before: API Key in Request Body__
-```
-curl --location --request POST 'https://rest.iad-01.braze.com/users/track' \
---header 'Content-Type: application/json' \
---data-raw '{
-  "api_key": YOUR-API-KEY-HERE ,
-  "attributes": [ 
-  {
-    "external_id":"user_id",
-      "string_attribute": "sherman",
-      "boolean_attribute_1": true,
-      "integer_attribute": 25,
-      "array_attribute": ["banana", "apple"]
-    }
-    ]
-}'
-```
-__Now: API Key in Header__
-```
-curl --location --request POST 'https://rest.iad-01.braze.com/users/track' \
---header 'Content-Type: application/json' \
---header 'Authorization: Bearer YOUR-API-KEY-HERE' \
---data-raw '{
-  "attributes": [ 
-  {
-    "external_id":"user_id",
-      "string_attribute": "sherman",
-      "boolean_attribute_1": true,
-      "integer_attribute": 25,
-      "array_attribute": ["banana", "apple"]
-    }
-    ]
-}'
-```
-{% endtab %}
-{% endtabs %}
-{% enddetails %}
+Learn more about how the Braze SDK can be integrated to allow for flexible data collection in our new documentation on [SDK Data Collection Options]({{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/sdk_data_collection/).
 
-## April 2020
+### SSL Overview
 
-### Movable Ink Partnership
+Learn more about SSL at Braze, why SSL is important, and how you can acquire an SSL certificate in our new [SSL Overview]({{site.baseurl}}/user_guide/onboarding_with_braze/email_setup/ssl/) documentation.
 
-Movable Ink provides Braze customers the ability to use Intelligent Creative features like __Countdown Timers, Polls, and Scratch Offs in their Push, In-App Message and Content Card campaigns__. Movable Ink and Braze power a more well-rounded approach to dynamic data-driven messages, providing users with real-time elements about the things that matter.
+### Amplitude User Profile API Endpoints
 
-For more information on how to start integrating Movable Ink into your campaigns, check out our [documentation]({{site.baseurl}}/partners/channel_extensions/creative_and_personalization/intelligent_creative/movable_ink/).
+Amplitude’s User Profile API serves Amplitude user profiles. This includes user properties, computed user properties, a list of cohort IDs of cohorts that include the user, and recommendations. Refer to [Amplitude User Profile API Endpoints]({{site.baseurl}}/partners/data_and_infrastructure_agility/analytics/amplitude/amplitude_user_profile_api/) to learn more.
 
-### Intelligent Timing
+### Campaign Details Endpoint
 
-When scheduling a campaign, you can use Intelligent Timing (previously Intelligent Delivery) to deliver your message to each user at the time which Braze determines that an individual is most likely to engage.
+The GET [`/campaigns/details`]({{site.baseurl}}/api/endpoints/export/campaigns/get_campaign_details/) API endpoint has added a dedicated `message` response for the in-app message channel. Documentation on this can be found [here]({{site.baseurl}}/api/endpoints/export/campaigns/get_campaign_details/#messages).
 
-Updates to this feature include:
-- __Clarification of Quiet Hours__ - Quiet Hours functionality remains the same, but the UI has been adjusted for clarification.
-- __Addition of Preview Chart__ - you may now generate a chart to see how many users will receive messages for each hour of the day with Intelligent Timing, as well as what proportion of users have enough data to compute an optimal time.
-- __Addition of Custom Fallback__ - you may now choose the local time at which to send users a message when they lack sufficient engagement data to compute an optimal time
+## July 2021
 
-Check out our [documentation]({{site.baseurl}}/user_guide/intelligence/intelligent_timing/) for more information. 
+### Transactional Email Campaigns
 
-### Facebook Audience Export
+Transactional emails are those sent to facilitate an agreed-upon transaction between a sender and the recipient. Braze's Transactional email campaign type is purpose-built for sending automated, non-promotional email messages like order confirmations, password resets, billing alerts, or other business-critical notifications. In addition, a corresponding [transactional email endpoint]({{site.baseurl}}/api/endpoints/messaging/send_messages/post_send_transactional_message/) has been created. Transactional emails and the new endpoint are only available as part of select Braze packages. Visit our [documentation]({{site.baseurl}}/api/api_campaigns/transactional_campaigns) to learn more. 
 
-Braze provides the ability to manually export your users from the Braze Segments page to create Facebook Custom Audiences. This is a one-time, static audience export and will only create new Facebook Custom Audiences.
+### Nested Object Support for Event Properties
 
-__Currently available for all Clusters__, a new Braze Facebook Audience Export process exists, streamlining the process with simple integration steps. You will no longer need to whitelist OAuth Redirect URI's to send custom audiences or mess around within Facebook App Settings to integrate. 
+Braze now supports [nested objects]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/nested_object_support/) for custom events and purchase events. Nested objects allow you to send arrays of data as properties of custom events and purchases. This nested data can be used for templating personalized information in API-triggered messages through the use of Liquid and dot notation.
 
-{% alert important %}
-__Please note that all clients currently using Facebook Custom Audiences, MUST reintegrate their Braze Segments with these new steps.__
-{% endalert%}
+### New HMAC Liquid Encoding Filters
 
-For access to the new simplified Facebook Audience Export steps, check out our documentation [here]({{site.baseurl}}/partners/facebook/).
+New `hmac_sha1` and `hmac_sha256` Liquid encoding filters have been added to the Braze platform. Documentation on these new filters can be found [here]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/advanced_filters/).
 
-### Content Block and Email Template API Updates
+### Purchase Event Page
 
-The [template/email/list]({{site.baseurl}}/api/endpoints/templates/email_templates/get_list_email_templates/) and [content_block/list]({{site.baseurl}}/api/endpoints/templates/content_blocks_templates/get_list_email_content_blocks/) API endpoints have been updated to include a new `tags` field. This field will list as an array, any tags that apply to the current block or email template.
+Curious about the details of purchase events at Braze? Visit our dedicated [purchase event documentation]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/purchase_events/) to learn more.
 
-### Personalized From-Address
+### New Partners 
 
-When creating an email message within Braze, you can now personalize the From Address of the message in the "Sending Info" section of email composition. You can use any of [our supported personalization tags]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/supported_personalization_tags/)
+#### Nexla - Workflow Automation Partner
+[Nexla]({{site.baseurl}}/partners/nexla) is the leader in unified data operations and a 2021 Gartner Cool Vendor. Customers that use Currents to send data to data warehouses can leverage Nexla to extract, transform, and load that data to other locations, making data easily accessible across your entire ecosystem. Nexla enables you to use Braze Currents to get data in a custom format delivered to your destination of choice by a simple point and click. 
 
-![Personalized From Address][0]{: style="max-width:80%"}
+#### Amperity - Customer Data Platform Partner
+[Amperity]({{site.baseurl}}/partners/amperity/) is a comprehensive enterprise customer data platform, helping brands get to know their customers, make strategic decisions, and consistently take the right course of action to serve their consumers better. Amperity supports the Braze platform by providing a unified view of your customers across its CDP and Braze allowing you to send valuable Amperity data to Braze.
 
-## March 2020
+#### Digioh - Survey Partner
+[Digioh]({{site.baseurl}}/partners/digioh/) helps you grow your lists, capture first-party data, and put your data to use in your Braze campaigns. The drag-and-drop builder makes it easy to create on-brand forms, pop-ups, preference centers, landing pages, and surveys that connect you with your customers.
 
-### Custom Attribute Filter Behavior
+#### AppsFlyer Audiences - Attribution/Analytics Partner
+[AppsFlyer]({{site.baseurl}}/partners/message_orchestration/attribution/appsflyer/) is a mobile marketing analytics and attribution platform that helps you analyze and optimize your apps through marketing analytics mobile attribution, and deep linking. [AppsFlyer Audiences]({{site.baseurl}}/partners/appsflyer_audiences/) allow you to build audience segments and pass these segments directly to Braze to create powerful customer engagement campaigns.
 
-The Dashboard has improved filters to include more intuitive behaviors.
-There have been two significant changes to how certain custom attributes filters work. 
-The custom attribute filter changes are reflected in the filters: 
-- Less than __X__ Days Ago
-- Less than __X__ Days in the Future
-- Day of Recurring Event<br>
+## June 2021
 
-__If you use these filters in your segmentation, we recommend readjusting your segments to take these changes into account.__ 
+### Conversion Correlation
 
-Check out our [documentation]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_attributes/#dates) for an explanation of the new behaviors.
+This guide covers the [Conversion Correlation]({{site.baseurl}}/user_guide/engagement_tools/testing/conversion_correlation/) analysis on the **Campaign Analytics** page, which gives you insight into what user attributes and behaviors help or hurt the outcomes you set for campaigns. Covered is an overview of the analysis, what is checked, when it's available, and how Braze checks for significance.
 
-## February 2020
+### Global Control Group Report
 
-### Retention Reports
+We've updated the metrics on the [Global Control Groups]({{site.baseurl}}/user_guide/engagement_tools/testing/global_control_group/) report to better help you analyze the overall impact of your messaging efforts over time. Key changes include adding **Events per User** and **Estimated Group Size**, and adjusting the calculation for **Incremental Uplift** to reflect the difference in total events between your treatment and control groups.
 
-Braze is proud to now offer Retention Reports for Campaigns. This feature helps measure user retention for users who have received any message in a specific campaign. Retention Reports can be found conveniently on the Campaign Analytics page within the Dashboard. 
+### Reports Overview
 
-Information on this new feature can be found in our [documentation]({{site.baseurl}}/user_guide/engagement_tools/campaigns/testing_and_more/retention_reports/)
+Not sure where to start with analyzing your campaigns or Canvases? The [Reports Overview]({{site.baseurl}}/user_guide/data_and_analytics/your_reports/reports_overview/) provides guidance on which reports and analytics you can use to answer common marketing strategy questions.
 
-![Full Report][4]
+### New US-05 Cluster
 
-{% alert important %}
-As of February 13th, 2020 this feature is not yet available to our client deployed in our EU region or our HIPPA-compliant cluster. We will make this report available to those regions as we continue to deploy functionality across our entire platform.
-{% endalert %}
+Braze supports a new US cluster, US-05. Refer to our list of Dashboard and REST [Endpoints]({{site.baseurl}}/api/basics/#endpoints) to see more.
 
-### New Email Content Block API Endpoint
+### Braze UI Updates
 
-You can now [update]({{site.baseurl}}/api/endpoints/templates/content_blocks_templates/post_email_content_block/) your Email Content Blocks via API!
+In May 2021, Braze updated the following labels and terms in the Braze Dashboard:
 
-## January 2020
+- App Usage --> Overview
+- App Settings --> Settings
+- Manage App Group --> Manage Settings
+- Money Spent In-App --> Money Spent
+- App Usage (User Profile) --> Sessions Overview
+- Import a CSV of user information to add and/or update users in this App Group --> Import a CSV of user information to add or update users
 
-### Added SMS Capability
+## May 2021
 
-Braze now allows you to [cap the frequency]({{ site.baseurl}}/user_guide/engagement_tools/campaigns/testing_and_more/rate-limiting/) of SMS messages as well as implement an added [segment filter]({{ site.baseurl}}/user_guide/engagement_tools/segments/segmentation_filters/) "Last Received SMS".
+### iOS Push Advanced Implementation Guide
+This detailed guide covers how to leverage push notification content app extensions to get the most out of your push messages. Included are three custom use cases built by our team (interactive push, data capture push, and progress based push), accompanying code snippets, and guidance on logging analytics. Visit our documentation here to read [more](/docs/developer_guide/platform_integration_guides/ios/push_notifications/implementation_guide/).
 
-In the SMS channel, the New User settings and behavior have been outlined and can be checked out [here]({{site.baseurl}}/user_guide/message_building_by_channel/sms/keywords/).
+### VFC support for Multimedia Message Service (MMS)
+vCards, also known as Virtual Contact Files (.VCF), are a standardized file format for sending business/contact information that can be easily imported into address/contact books. These VFC files can now be sent through MMS and added to the Braze media library. Visit our MMS documentation to [learn more]({{site.baseurl}}/user_guide/message_building_by_channel/sms/mms/create/). 
+
+### Updates to User Delete
+In October of 2020, we made improvements to how our user delete handles data subject's phone number or email address. More information about this can be found [here](https://www.braze.com/docs/help/release_notes/2020/october/)
+
+### New Braze Partnerships
+
+#### Airbridge - Attribution Partner
+The Airbridge and Braze integration allow you to pass all organic and non-organic install attribution data to Braze to build more personalized marketing campaigns and understand exactly where users were acquired. Visit our Airbridge documentation [here]({{site.baseurl}}/partners/message_orchestration/attribution/airbridge/).
+
+#### Kubit - Analytics Partner
+Kubit is a no-code, self-service analytics platform that delivers instant product insights. Through the seamless no-code integration with Braze, you can import user Cohort information into Braze and launch engagement campaigns to target specific Cohorts. In addition, through the use of Snowflake Secure Data Sharing, you can integrate the raw campaign and impression data from Braze with product analytics in Kubit to measure the impact of these campaigns in real-time. Visit our Kubit documentation [here]({{site.baseurl}}/partners/data_and_infrastructure_agility/analytics/kubit/).
+
+#### Census - Customer Data Platform Partner
+Census allows you to keep your customer success, sales, and marketing teams all on the same page by keeping your customer data in sync, all without ongoing help from your engineering department. Visit our Census documentation [here]({{site.baseurl}}/partners/data_and_infrastructure_agility/customer_data_platform/census/)
+
+#### Treasure Data - Customer Data Platform Partner
+Treasure Data helps drive relevant customer experiences by harmonizing data, insights, and engagement to work in perfect unison. Armed with actionable indicators, CX Teams, including marketing, sales, and customer service can effectively optimize spend, and personalize omnichannel interactions across the entire customer journey. Visit our Treasure Data documentation [here]({{site.baseurl}}/partners/data_and_infrastructure_agility/customer_data_platform/treasure_data/).
+
+### Phrasee - A/B Testing
+Braze customer engagement develops relationships through multichannel marketing. Working together with Phrasee, Braze can deploy brand language, at scale, across channels that are customized to your brand voice. Phrasee’s deep learning engine handles the testing, monitors the results, and generates new language based on what it’s learned. Visit our Phrasee documentation [here]({{site.baseurl}}/partners/data_and_infrastructure_agility/ab_testing/phrasee/).
+
+## April 2021
+
+### Segment Extension
+A [Segment Extension]({{site.baseurl}}/user_guide/engagement_tools/segments/segment_extension) expands our existing segmentation capabilities by enabling you to target more precise lists of users based on their custom event and purchase behavior in the past 365 days. Once these extension lists are generated, they can then be included/excluded as a filter in your Segments.
+
+### A2P 10DLC
+A2P 10DLC refers to a system in the United States that allows businesses to send Application-to-Person (A2P) type messaging via a standard 10-digit long code (10DLC) phone number. 10-digit long codes have traditionally been designed for Person-to-Person (P2P) traffic, causing businesses to be constrained by limited throughput and heightened filtering. __All customers who currently have and/or use long codes are required to register their long codes for 10DLC__. To read more about A2P 10DLC, visit our documentation [here]({{site.baseurl}}/user_guide/message_building_by_channel/sms/phone_numbers/short_and_long_codes/#application-to-person-10-digit-long-codes-a2p-10dlc).
+
+### Global Control Groups
+[Global Control Groups]({{site.baseurl}}/user_guide/engagement_tools/testing/global_control_group/) allow you to analyze the overall impact of your messaging efforts over time. These Groups can help you understand how your marketing campaigns and Canvases result in an uplift in sessions and custom events, by comparing the behaviors of users that receive messaging to those that don’t. 
+
+## March 2021
+
+### Fastly Updates
+Beginning March 22, 2021, the Braze Services will require TLS connections support Server Name Indication (SNI), as our upstream content delivery network Fastly is migrating all TLS traffic to require SNI. All modern browsers, operating systems, and HTTPS connectivity protocols support SNI. Devices which do not support SNI will no longer be able to connect to Braze. Our traffic estimations indicate this is approximately 0.000001% of end-user devices.
+
+### Audience Paths
+[Canvas Audience Paths]({{site.baseurl}}/audience_paths/) allows you to intuitively filter and segment users on a large scale with strategic priority-based user groupings. This new Canvas step replaces the need to create excessive audience-based full steps, allowing you to combine what might have been 8 full steps into one! The introduction of this new step will help you simplify user targeting while clearing up your Canvases from unnecessary clutter and complexity.
 
 
 [support]: {{site.baseurl}}/support_contact/
-[4]: {% image_buster /assets/img/retention_report_full_report.png %}
-[0]: {% image_buster /assets/img/personalized-from-name.png %}
-

@@ -2,82 +2,79 @@
 nav_title: In-App Messaging
 platform: Unity
 page_order: 2
+description: "This reference article covers in-app messaging integration guidelines for the Unity platform."
+
 ---
+
 # In-App Messaging
 
-## In-App Message Types
-There are four types of in-app messages: slideup, modal, full, and custom HTML. All in-app messages implement [`Appboy.Models.IInAppMessage.cs`][13], and modal and full in-app messages additionally implement [`Appboy.Models.IInAppMessageImmersive.cs`][12]. These interfaces provide ways in which you can interact with or customize Braze's in-app messages.
+## Configuring Default In-app Message Behavior
 
-For more information, see [`Appboy.Models.InAppMessageBase`][6] and [`Appboy.Models.InAppMessageImmersiveBase`][11].
+{% tabs %}
+{% tab Android %}
 
-## Customization
-Custom in-app messages can be handled in Unity via Braze's [InAppMessage models][1].
+On Android, in-app messages from Braze are automatically displayed natively. To disable this functionality, deselect "Automatically Display In-App Messages" in the Braze configuration editor.
 
-### Logging Clicks and Impressions
+You may alternatively set `com_appboy_inapp_show_inapp_messages_automatically` to `false` in your Unity project's `braze.xml`.
 
-#### In-App Message Body
+{% endtab %}
+{% tab iOS %}
 
-Clicks and impressions must be manually logged for in-app messages handled in Unity. You can use the `LogClicked()` and `LogImpression()` methods defined in [`Appboy.Models.IInAppMessage`][13].
+On iOS, in-app messages from Braze are automatically displayed natively. To disable this functionality, set game object listeners in the Braze configuration editor, and ensure "Braze Displays In-App Messages" is not selected.
 
-#### In-App Message Buttons
+{% endtab %}
+{% endtabs %}
 
-Button clicks can be logged by calling the `LogButtonClicked(buttonID(int))` method in [`Appboy.Models.IInAppMessageImmersive`][12]. The `ButtonID` can be retrieved from [`Appboy.Models.InAppMessageButton`][8].
+## Configuring In-App Message Display Behavior
 
-For more information, refer to [`Appboy.Models.InAppMessageImmersiveBase`][11].
-
-### Customizing Display Behavior
-
-#### Dismissal Behavior
-
-You can customize in-app message dismissal behavior by setting the in-app message's `InAppDismissType` property to either `DismissType.AUTO_DISMISS` or `DismissType.SWIPE`.
-
-For more information, see [`Appboy.Models.InAppMessage.IInAppMessage`][13] and [`Appboy.Models.DismissType`][5].
-
-#### Slideup Behavior
-
-For slideup in-app messages, you can set in-app messages to slide from the top or bottom by setting the in-app message's `SlideupAnchor` property to `SlideFrom.TOP` or `SlideFrom.BOTTOM`.
-
-For more information, see [`Appboy.Models.InAppMessage.InAppMessageSlideup`][4] and [`Appboy.Models.SlideFrom`][3].
-
-### Customizing Click Behavior
-
-#### In-App Messages
-
-To set the in-app click action, you can call `SetInAppClickAction()` and pass in `ClickAction.NEWS_FEED` or `ClickAction.NONE`, which will redirect to the News Feed or do nothing, respectively.
-
-Alternatively, you can set the click action to redirect to a URI by calling
+You may optionally change the display behavior of In-App Messages at runtime via the following:
 
 ```csharp
-SetInAppClickAction(ClickAction.URI, "https://www.braze.com");
+// Sets In-App Messages to display immediately when triggered.
+Appboy.AppboyBinding.SetInAppMessageDisplayAction(BrazeUnityInAppMessageDisplayActionType.IAM_DISPLAY_NOW);
+
+// Sets In-App Messages to display at a later time and be saved in a stack.
+Appboy.AppboyBinding.SetInAppMessageDisplayAction(BrazeUnityInAppMessageDisplayActionType.IAM_DISPLAY_LATER);
+
+// Sets In-App Messages to be discarded after being triggered.
+Appboy.AppboyBinding.SetInAppMessageDisplayAction(BrazeUnityInAppMessageDisplayActionType.IAM_DISCARD);
 ```
 
-For more information, see [`Appboy.Models.InAppMessage.IInAppMessage`][13] and [`Appboy.Models.ClickAction`][9].
+## Receiving In-App Message Data in Unity
 
-#### In-App Message Buttons
+You may register Unity Game Objects to be notified of incoming in-app messages. We recommend setting game object listeners from the Braze configuration editor. In the configuration editor, listeners must be set separately for Android and iOS.
 
-You can also set the click action on an in-app message button via the `SetButtonClickAction()` methods on [`Appboy.Models.InAppMessageButton`][8]:
+- If you need to configure your game object listener at runtime, use `AppboyBinding.ConfigureListener()` and specify `BrazeUnityMessageType.IN_APP_MESSAGE`.
+
+## Parsing In-App Messages
+
+Incoming `string` messages received in your in-app message game object callback can be parsed into our pre-supplied model objects for convenience.
+
+Use `InAppMessageFactory.BuildInAppMessage()` to parse your in-app message. The resulting object will either be an instance of [`IInAppMessage.cs`][13] or [`IInAppMessageImmersive.cs`][12] depending on its type.
+
+### Example In-App Message Callback
 
 ```csharp
-SetButtonClickAction(ClickAction.NEWS_FEED);
-
-SetButtonClickAction(ClickAction.URI, "https://www.braze.com");
+// Automatically logs a button click, if present.
+void InAppMessageReceivedCallback(string message) {
+  IInAppMessage inApp = InAppMessageFactory.BuildInAppMessage(message);
+  if (inApp is IInAppMessageImmersive) {
+    IInAppMessageImmersive inAppImmersive = inApp as IInAppMessageImmersive;
+    if (inAppImmersive.Buttons != null && inAppImmersive.Buttons.Count > 0) {
+      inAppImmersive.LogButtonClicked(inAppImmersive.Buttons[0].ButtonID);
+    }
+  }
+}
 ```
 
-### Customizing Appearance
-Custom in-app messages should be handled in Unity, using [Braze's in-app message models][1].
+## Analytics
 
-### Sample Code
-For sample implementation code, refer to the `InAppMessageReceivedCallback()` method in [BrazeBindingTester.cs][2].
+Clicks and impressions must be manually logged for in-app messages not displayed directly by Braze.
 
-[1]: https://github.com/Appboy/appboy-unity-sdk/tree/master/Assets/Plugins/Appboy/models/InAppMessage
-[2]: https://github.com/Appboy/appboy-unity-sdk/blob/master/Assets/Plugins/Appboy/Tests/AppboyBindingTester.cs
-[3]: https://github.com/Appboy/appboy-unity-sdk/blob/master/Assets/Plugins/Appboy/models/SlideFrom.cs
-[4]: https://github.com/Appboy/appboy-unity-sdk/blob/master/Assets/Plugins/Appboy/models/InAppMessage/InAppMessageSlideup.cs
-[5]: https://github.com/Appboy/appboy-unity-sdk/blob/master/Assets/Plugins/Appboy/models/DismissType.cs
-[6]: https://github.com/Appboy/appboy-unity-sdk/blob/master/Assets/Plugins/Appboy/models/InAppMessage/InAppMessageBase.cs
-[7]: https://github.com/Appboy/appboy-unity-sdk/blob/master/Assets/Plugins/Appboy/AppboyBinding.cs
+Use `LogClicked()` and `LogImpression()` on [`IInAppMessage`][13] to log clicks and impressions on your message.
+
+Use `LogButtonClicked(int buttonID)` on [`IInAppMessageImmersive`][12] to log button clicks. Note that buttons are represented as lists of[`InAppMessageButton`][8] instances, each of which contains a `ButtonID`.
+
 [8]: https://github.com/Appboy/appboy-unity-sdk/blob/master/Assets/Plugins/Appboy/models/InAppMessage/InAppMessageButton.cs
-[9]: https://github.com/Appboy/appboy-unity-sdk/blob/master/Assets/Plugins/Appboy/models/ClickAction.cs
-[11]: https://github.com/Appboy/appboy-unity-sdk/blob/master/Assets/Plugins/Appboy/models/InAppMessage/InAppMessageImmersiveBase.cs
 [12]: https://github.com/Appboy/appboy-unity-sdk/blob/master/Assets/Plugins/Appboy/models/InAppMessage/IInAppMessageImmersive.cs
 [13]: https://github.com/Appboy/appboy-unity-sdk/blob/master/Assets/Plugins/Appboy/models/InAppMessage/IInAppMessage.cs

@@ -2,9 +2,11 @@
 nav_title: Social Data Tracking
 platform: Android
 page_order: 5
+description: "This reference article shows how to implement social data tracking for your Android application."
 
 ---
-## Social Data Tracking
+
+# Social Data Tracking
 Similar to the Braze iOS SDK, the Braze Android SDK does not automatically collect Facebook and Twitter data. However, it's possible to add social media data to a Braze user's profile from the Android SDK as well:
 
 - Obtain social media data within your app via the Facebook SDK and Twitter APIs.
@@ -12,7 +14,7 @@ Similar to the Braze iOS SDK, the Braze Android SDK does not automatically colle
   - [Twitter Documentation][2]
 - Initialize Facebook and Twitter User objects with social media data and pass them to Braze.
 
-### Social Network Data Constructors
+## Social Network Data Constructors
 
 {% tabs %}
 {% tab JAVA %}
@@ -79,17 +81,17 @@ TwitterUser(
 {% endtab %}
 {% endtabs %}
 
-To pass data retrieved from social networks to Braze, you'll create a new FacebookUser or TwitterUser and then pass them to the method `AppboyUser.setFacebookData()`/`AppboyUser.setTwitterData()`. For example:
+To pass data retrieved from social networks to Braze, you'll create a new FacebookUser or TwitterUser and then pass them to the method `BrazeUser.setFacebookData()`/`BrazeUser.setTwitterData()`. For example:
 
 {% tabs %}
 {% tab JAVA %}
 
 ```java
 FacebookUser facebookUser = new FacebookUser("100000", "FirstName", "LastName", "email@email.com", "bio", "City", Gender.MALE, 3, Arrays.asList(new String[]{ "like" }), "04/13/1990");
-Appboy.getInstance(context).getCurrentUser().setFacebookData(facebookUser);
+Braze.getInstance(context).getCurrentUser().setFacebookData(facebookUser);
 
 TwitterUser twitterUser = new TwitterUser(100000, "handle", "Name", "description", 100, 50, 150, "image_url");
-Appboy.getInstance(context).getCurrentUser().setTwitterData(twitterUser);
+Braze.getInstance(context).getCurrentUser().setTwitterData(twitterUser);
 ```
 
 {% endtab %}
@@ -97,10 +99,10 @@ Appboy.getInstance(context).getCurrentUser().setTwitterData(twitterUser);
 
 ```kotlin
 val facebookUser = FacebookUser("100000", "FirstName", "LastName", "email@email.com", "bio", "City", Gender.MALE, 3, listOf("like"),"04/13/1990")
-Appboy.getInstance(context).currentUser?.setFacebookData(facebookUser)
+Braze.getInstance(context).currentUser?.setFacebookData(facebookUser)
 
 val twitterUser = TwitterUser(100000, "handle", "Name", "description", 100, 50, 150, "image_url")
-Appboy.getInstance(context).currentUser?.setTwitterData(twitterUser)
+Braze.getInstance(context).currentUser?.setTwitterData(twitterUser)
 ```
 
 {% endtab %}

@@ -11,7 +11,7 @@ tool: currents
 
 # Google Cloud Storage
 
-> [Google Cloud Storage](https://cloud.google.com/storage/) is a massively scalable object storage for unstructured data offered by Google as part of the Cloud Computing product suite.
+> [Google Cloud Storage](https://cloud.google.com/storage/) is massively scalable object storage for unstructured data offered by Google as part of the Cloud Computing product suite.
 
 After streaming data into Google Cloud Storage Storage, you can use ETL processes (Extract, Transform, Load) to transfer your data to other locations, such as Google Bigquery.
 
@@ -31,7 +31,7 @@ Give the Role a name, add the `storage.buckets.get` and `storage.objects.create`
 
 ![google_cloud_storage][3]
 
-### Step 3 - Create Service Account
+### Step 3 - Create a Service Account
 
 Create a new **Service Account** for your project within the **IAM & admin** section of your **Google Cloud Platform** console.
 
@@ -39,7 +39,7 @@ Create a new **Service Account** for your project within the **IAM & admin** sec
 
 ### Step 4 - Grant Access
 
-Give the Service Account a name, and grant it access as a your newly created custom Role.
+Give the Service Account a name, and grant it access as your newly created custom Role.
 
 ![google_cloud_storage][5]
 
@@ -52,6 +52,10 @@ Create a key using the JSON format. Once created, this key will download to your
 ### Step 6 - Upload Key
 
 On the **Braze Currents** integration page, upload that JSON key file as your **Credentials File**.
+
+{% alert important %}
+It's important to keep your Credentials File up to date; if your connector's credentials expire, the connector will stop sending events. If this persists for more than **48 hours**, the connector's events will be dropped and data will be permanently lost.
+{% endalert %}
 
 ### Step 7 - Finish Up
 

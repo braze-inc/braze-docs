@@ -30,7 +30,7 @@ glossaries:
     tags:
       - Web
   - name: "Push Primer Campaigns"
-    description: "In-App Message Campaigns used to gain explicit push opt-in or opt-out signal from users. Through the primer, you can avoid sending notifications to users that are likely to turn off push through the device settings. For iOS, push campaigns are relevant as foreground push notifications (i.e. notifications that wake up the device) are not enabled until a user explicitly opts into iOS' native push prompt."
+    description: "In-app message campaigns used to gain explicit push opt-in or opt-out signal from users. Through the primer, you can avoid sending notifications to users that are likely to turn off push through the device settings. For iOS, push campaigns are relevant as foreground push notifications (i.e. notifications that wake up the device) are not enabled until a user explicitly opts into iOS' native push prompt."
     tags:
       - iOS
       - Android
@@ -63,9 +63,7 @@ glossaries:
   - name: "HTML Push Notifications"
     description: "HTML Push Notifications are push messages that are hard coded in HTML and do not use the pre-set push templates that Braze provides. Having the option to create HTML push notifications allows your company to have full creative freedom and consistent branding when it comes to how you want these push messages to look."
     tags:
-      - iOS
       - Android
-      - Web
   - name: "Notification IDs & Channel IDs"
     description: "Notification IDs and Channel IDs allow you to replace or update push notifications already received, but not opened, by the user."
     tags:

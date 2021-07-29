@@ -2,22 +2,20 @@
 nav_title: "Notification Options (Android)"
 page_order: 2
 page_type: reference
-description: "This reference article covers several Android Notification Option and how to best use them within Braze campaigns."
+description: "This reference article covers several Android notification options and how to best use them within Braze campaigns."
 
 platform: Android
 channel:
   - Push
 tool:
-  - Docs
   - Dashboard
-  - Campaigns
 ---
 
 # Android Notification Options
 
 > If you want to categorize your messages and group them in your user's notification tray, you can utilize Android's Notification Channels feature through Braze.
 
-Create your Android Push Campaign, then look to the top of the composer. There, you'll see a dropdown labeled Notification Channels.
+Create your Android push campaign, then look to the top of the composer. There, you'll see a dropdown labeled Notification Channels.
 
 ![notificationchanneldropdown][28]
 

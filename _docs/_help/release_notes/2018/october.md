@@ -1,6 +1,9 @@
 ---
 nav_title: October
 page_order: 4
+no_index: true
+page_type: update
+description: "This article contains release notes for October 2018."
 ---
 # October 2018
 
@@ -16,7 +19,7 @@ page_order: 4
 
 ## Calculate Exact Audience Stats for Campaigns
 
-You can now go to Campaign Analytics and calculate the exact statistics for your audience. Press __Calculate Exact Stats__ in the footer of the __Target Users__ section and the exact audience stats will populate. You will have to save the campaign before calculating (draft campaigns will be saved as draft).
+You can now go to **Campaign Analytics** and calculate the exact statistics for your audience. Press __Calculate Exact Stats__ in the footer of the __Target Users__ section and the exact audience stats will populate. You will have to save the campaign before calculating (draft campaigns will be saved as draft).
 
 ## Windows 8 Deprecation
 

@@ -1,6 +1,14 @@
 ---
 nav_title: Reporting & Analytics
 page_order: 4
+description: "This reference article covers the different Content Card reporting metrics and analytics options provided in the Braze dashboard."
+
+channel:
+  - content cards
+tool:
+  - Dashboard
+  - Campaigns
+  - Reports
 ---
 
 # Reporting & Analytics
@@ -9,7 +17,7 @@ To see the meanings of all Content Cards metrics, check the [Metrics Glossary][1
 
 ## Content Card Metrics
 
-- **Recipients**: The number of users who have received a Content Card which received at least one impression.
+- **Recipients**: The number of users who have received a Content Card that received at least one impression.
 - **Impressions**: The number of times a Content Card was visible and on-screen.
 - **Clicks**: The number of times a user has clicked the CTA Link of a Content Card.
 - **Dismissals**: The number of times a user has swiped away or clicked to dismiss a Content Card.
@@ -18,11 +26,15 @@ To see the meanings of all Content Cards metrics, check the [Metrics Glossary][1
 
 To measure the impact of an individual Content Card, a [Control Group][2] can be added to an A/B Test.
 
-The top level campaign details will not include metrics from the Control Group variant.
+The Campaign Details Analytics Block (located above the Performance table) will not include metrics from the Control Group variant.
+
+{% alert warning %}
+If you have a customized feed, be sure to log impressions for control cards to inform our analytics of when a user _would have seen_ the control card in its feed position. For more detail, see the [iOS](/docs/developer_guide/platform_integration_guides/ios/content_cards/data_model/#card-methods), [Android](/docs/developer_guide/platform_integration_guides/android/content_cards/customization/#fully-custom-content-card-display-for-android), and [Web](/docs/developer_guide/platform_integration_guides/web/content_cards/integration/#control-group) developer guides.
+{% endalert %}
 
 ## Reporting in Campaigns
 
-Campaigns will deliver your reports in a series of blocks. You may see more or less than those listed in the tabs below, but each has their own useful purpose.
+Campaigns will deliver your reports in a series of blocks. You may see more or less than those listed in the tabs below, but each has its own useful purpose.
 
 {% tabs %}
 

@@ -1,12 +1,19 @@
 ---
 nav_title: Initial SDK Setup
 platform: React Native
-subplatform: Android and FireOS
+subplatform: 
+- Android
+- FireOS
 page_order: 0
+
+page_type: reference
+description: "This article covers initial SDK setup steps for Android or FireOS apps using React Native."
+
 ---
+
 # Initial SDK Setup
 
-#### Using react-native link
+### Using react-native link
 
 1. `npm install react-native-appboy-sdk@latest --save`
 2. `react-native link`
@@ -21,7 +28,7 @@ allprojects {
 }
 ```
 
-#### Without react-native link
+### Without react-native link
 
 1. `npm install react-native-appboy-sdk@latest --save`
 2. Link the project by adding the following:
@@ -77,7 +84,7 @@ public void onNewIntent(Intent intent) {
 
 ### Completing the integration
 
-1.  Follow the directions at [our public documentation]({{site.baseurl}}/developer_guide/platform_integration_guides/android/initial_sdk_setup/android_sdk_integration/) to finish your integration. In particular, you will need to set your Braze API key in a new `appboy.xml` file.
+1.  Follow the directions at [our public documentation]({{site.baseurl}}/developer_guide/platform_integration_guides/android/initial_sdk_setup/android_sdk_integration/) to finish your integration. In particular, you will need to set your Braze API key in a new `braze.xml` file and set up session handling by passing a `AppboyLifecycleCallbackListener` instance into `application.registerActivityLifecycleCallbacks`.
 2.  When you need to make Braze calls from JavaScript, use the following declaration to import the JavaScript module:
 
 ```

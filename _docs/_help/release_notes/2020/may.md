@@ -1,6 +1,9 @@
 ---
 nav_title: May
 page_order: 8
+no_index: true
+page_type: update
+description: "This article contains release notes for May 2020."
 ---
 # May 2020
 
@@ -13,9 +16,9 @@ You can now [blacklist]({{site.baseurl}}/api/endpoints/email/post_blacklist/) em
 
 ## API Key Change for Braze API Endpoints
 
-As of May 2020, Braze has changed how we read API keys to be more secure. Now API keys should be passed in as a request header. Examples can be found on individual endpoint pages under __Example Request__, as well as in the __API Key Explantion__ below.
+As of May 2020, Braze has changed how we read API keys to be more secure. Now API keys should be passed in as a request header. Examples can be found on individual endpoint pages under __Example Request__, as well as in the __API Key Explanation__ below.
 
-Braze will continue to support the `api_key` being passed through the request body and URL parameters, but will eventually be sunset (TBD). __Please update your API calls accordingly.__ These changes have been updated within [Postman](https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#intro) and will soon be input into the Braze [Swagger UI](https://www.braze.com/docs/api/interactive). 
+Braze will continue to support the `api_key` being passed through the request body and URL parameters, but will eventually be sunset (TBD). __Please update your API calls accordingly.__ These changes have been updated within [Postman](https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#intro).
 {% details API Key Explanation %}
 {% tabs %}
 {% tab GET Request %}
@@ -23,12 +26,12 @@ This example uses the /email/hard_bounces endpoint.
 
 __Before: API Key in Request Body__
 ```
-curl --location --request GET 'https://rest.iad-01.braze.com/email/hard_bounces?api_key=YOUR_REST_API_KEY&start_date=2019-01-01&end_date=2019-02-01&limit=100&offset=1&email=foo@braze.com' \
+curl --location --request GET 'https://rest.iad-01.braze.com/email/hard_bounces?api_key=YOUR-REST-API-KEY&start_date=2019-01-01&end_date=2019-02-01&limit=100&offset=1&email=foo@braze.com' \
 ```
 __Now: API Key in Header__
 ```
 curl --location --request GET 'https://rest.iad-01.braze.com/email/hard_bounces?start_date=2019-01-01&end_date=2019-02-01&limit=100&offset=1&email=foo@braze.com' \
---header 'Authorization: Bearer YOUR_REST_API_KEY'
+--header 'Authorization: Bearer YOUR-REST-API-KEY'
 ```
 {% endtab %}
 {% tab POST Request %}

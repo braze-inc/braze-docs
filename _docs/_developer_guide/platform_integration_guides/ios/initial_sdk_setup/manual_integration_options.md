@@ -2,18 +2,20 @@
 nav_title: Manual Integration Options
 platform: iOS
 page_order: 2
+description: "This reference article shows how to manually integrate the Braze SDK for iOS."
 
 ---
 
 # Manual Integration
 
 {% alert tip %}
-We strongly recommend that you implement the SDK via a [CocoaPod](http://cocoapods.org/). It will save you a lot of time and automate much of the process for you. However, if you are unable to do so you may complete integration manually without CocoaPods by using our manual integration instructions below.
+We strongly recommend that you implement the SDK via a package manager such as [Swift Package Manager](../swift_package_manager/), [CocoaPods](../cocoapods/), or [Carthage](../carthage_integration/). It will save you a lot of time and automate much of the process for you. However, if you are unable to do so you may complete the integration manually by following the instructions below.
 {% endalert %}
 
-## Step 1: Cloning the Braze SDK
+## Step 1: Downloading the Braze SDK
 
-1. Clone the Braze iOS SDK Github project:
+1. Download `Appboy_iOS_SDK.zip` from the [release page](https://github.com/appboy/appboy-ios-sdk/releases).
+If integrating an SDK version before 3.24.0, instead clone the Braze iOS SDK Github project:
 
 ```bash
 # This command will clone both versions of the Braze SDK
@@ -24,6 +26,7 @@ $ git clone git@github.com:Appboy/appboy-ios-sdk.git
 3. Navigate to File > Add Files to “Project_Name”
 4. Add the `AppboyKit` and `AppboyUI` folders to your project as a group.
 	- Make sure that the "Copy items into destination group’s folder" option is checked if you are integrating for the first time. Expand "Options" in the file picker to select "Copy items if needed" and "Create groups."
+	- Delete the `AppboyKit/include` and `AppboyUI/include` directories
 5. (Optional) If you are one of the following:
   - You only want the core analytics features of the SDK and do not use any UI features (e.g, In-App Messages or Content Cards)
   - You have custom UI for Braze's UI features and handle the image downloading yourself
@@ -48,24 +51,13 @@ If you try to use the core version of the SDK without Braze's UI features, in-ap
 	- `WebKit.framework`
 6. Add the following frameworks and mark them as optional:
 	- `CoreTelephony.framework`
-	- `Social.framework`
-	- `Accounts.framework`
-	- `AdSupport.framework`
-	- `StoreKit.framework`
-7. While still under the target for your project, select the "Build Settings" tab. In the "Linking" section, locate the "Other Linker Flags" setting and add the `-ObjC` flag.
+7. Select the "Build Settings" tab. In the "Linking" section, locate the "Other Linker Flags" setting and add the `-ObjC` flag.
 8. The SDWebImage framework is required for the Braze News Feed, Content Cards and In-App Messaging to function properly. SDWebImage is used for image downloading and displaying, including GIFs. If you intend to use the News Feed, Content Cards or In-App Messages, please follow the steps below.
 
 ### SDWebImage Integration
 
-1. Inside of your project folder, clone SDWebImage repository recursively:
-```
-git clone --recursive https://github.com/rs/SDWebImage.git
-```
-2. Drag-n-drop `SDWebImage/SDWebImage.xcodeproj` into your application Xcode project.
-3. In your project application’s target settings, open the "General" tab, click the "+" button under the "Link Frameworks and Libraries" block and add `ImageIO.framework`.
-4. In your project application’s target settings, open the "General" tab, click the "+" button under the "Embedded Binaries" block and add `SDWebImage.framework`.
-5. In the `SDWebImage` project settings, open the "Build Settings" tab. In the "Linking" section, locate the "Other Linker Flags" setting and add the `-ObjC` flag if it isn't already present.
-6. In your project application's target settings, open the "Build Settings" tab. In the "Search Paths" section, locate "Header Search Paths" and add `$(SRCROOT)/SDWebImage` with "recursive" turned on.
+1. Follow the SDWebImage Installation Guide's [instructions](https://github.com/SDWebImage/SDWebImage/wiki/Installation-Guide#using-sdwebimage-as-sub-xcode-project) for manually using SDWebImage as a Sub-Project in Xcode.
+2. In the `SDWebImage` project settings, open the "Build Settings" tab. In the "Linking" section, locate the "Other Linker Flags" setting and add the `-ObjC` flag if it isn't already present.
 
 ### Optional Location Tracking
 
@@ -86,7 +78,7 @@ Add the following line of code to your `AppDelegate.m` file:
 Within your `AppDelegate.m` file, add the following snippet within your `application:didFinishLaunchingWithOptions` method:
 
 {% alert important %}
-Be sure to update `YOUR-API-KEY` with the correct value from your App Settings page.
+Be sure to update `YOUR-API-KEY` with the correct value from your **Settings** page.
 {% endalert %}
 
 
@@ -99,8 +91,6 @@ Be sure to update `YOUR-API-KEY` with the correct value from your App Settings p
 {% alert important %}
 Be sure to initialize Braze in your application's main thread.
 {% endalert %}
-
-See the [`AppDelegate.m` file](https://github.com/Appboy/appboy-ios-sdk/blob/master/Example/Stopwatch/AppDelegate.m) in the Stopwatch sample app.
 
 {% endtab %}
 {% tab swift %}
@@ -132,9 +122,4 @@ Braze should now be collecting data from your application and your basic integra
 
 [Full iOS class documentation][7] is available to provide additional guidance on any of the aforementioned methods.
 
-[1]: #clone-sdk
-[2]: #add-libs
-[3]: #configure
-[4]: #update-delegate
-[7]: http://appboy.github.io/appboy-ios-sdk/docs/annotated.html "full ios class documentation"
-[10]: http://cocoapods.org/
+[7]: http://appboy.github.io/appboy-ios-sdk/docs/annotated.html "full iOS class documentation"

@@ -2,8 +2,9 @@
 nav_title: Customer Feedback
 platform: FireOS
 page_order: 5
-
 hidden: true
+page_type: reference
+
 ---
 
 {% alert Update %}
@@ -44,15 +45,11 @@ appboyFeedbackFragment.setFeedbackFinishedListener(new AppboyFeedbackFragment.Fe
 
 Braze has a [method][5] allows you to pass Feedback to Braze from a form or field within your app. This is perfect for passing feedback from an existing UI element to Braze. The method will return a boolean which indicates whether or not the feedback was queued for delivery.
 
-## Third Party Provider Integrations
+## Third-Party Provider Integrations
 
-Braze has easy integrations with both [Desk.com][13] and [Zendesk][14]. So long as you are collecting feedback through our ready-made UI or manually using the `submitFeedback` method, you can pass that feedback through to either third party provider. This will afford you the benefit of having the entire user profile card available to the CSR handling the case, and allow you to segment based upon the number of feedback requests a user has submitted.
+Braze has easy integrations with both [Desk.com][13] and [Zendesk][14]. So long as you are collecting feedback through our ready-made UI or manually using the `submitFeedback` method, you can pass that feedback through to either third-party provider. This will afford you the benefit of having the entire user profile card available to the CSR handling the case, and allow you to segment based upon the number of feedback requests a user has submitted.
 
-To take advantage of these integrations, please visit the "Feedback" section within the "App Settings" page
-
-**Implementation Example**
-
-See the [`DroidBoyActivity.java` file][4] in the Droidboy sample app.
+To take advantage of these integrations, please visit the "Feedback" section within the **Settings** page
 
 ## Theming the Braze Feedback UI
 
@@ -108,16 +105,8 @@ If you would prefer, you can override these styles to create a look and feel tha
 [1]: {% image_buster /assets/img_archive/droidfeed.png %} "Android News Feed and Feedback Form"
 [2]: http://developer.android.com/guide/components/fragments.html
 [3]: http://developer.android.com/guide/components/fragments.html#Adding "Android Documentation: Fragments"
-[4]: https://github.com/Appboy/appboy-android-sdk/blob/master/droidboy/src/main/java/com/appboy/sample/DroidBoyActivity.java
 [5]: https://appboy.github.io/appboy-android-sdk/javadocs/com/appboy/Appboy.html#submitFeedback-java.lang.String-java.lang.String-boolean- "Feedback documentation"
 [6]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/analytics/tracking_sessions/
-[7]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/customer_feedback/#customer-feedback
-[8]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/customer_feedback/#customer-feedback
-[9]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/customer_feedback/#manual-feedback-collection
-[10]: {{site.baseurl}}/user_guide/data_and_analytics/uninstall_tracking/#implementation
 [13]: http://www.desk.com
 [14]: http://www.zendesk.com
-[16]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/customer_feedback/#third-party-provider-integrations
-[17]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/customer_feedback/#theming-the-braze-feedback-ui
-[18]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/news_feed/#overriding-styles
 [20]: {% image_buster /assets/img_archive/Image31Theming.png %} "Android Feedback"

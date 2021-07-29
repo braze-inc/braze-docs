@@ -3,8 +3,8 @@ nav_title: Available Partners
 page_order: 2
 
 page_type: reference
-description: "This page outlines and describes the use cases of the data partners who you can use to integrate with Braze Currents."
-tool: currents
+description: "This reference article outlines the data partners you can use to integrate with Braze Currents, and their use cases."
+tool: Currents
 ---
 
 # Available Partners
@@ -44,7 +44,7 @@ These partners specialize in product analytics and business intelligence and can
 [1]: {{site.baseurl}}/partners/data_and_infrastructure_agility/data_warehouses/amazon_s3/
 [2]: {{site.baseurl}}/partners/data_and_infrastructure_agility/data_warehouses/google_cloud_storage_for_currents/
 [3]: {{site.baseurl}}/partners/data_and_infrastructure_agility/data_warehouses/microsoft_azure_blob_storage_for_currents/
-[4]: {{site.baseurl}}/partners/insights/behavioral_analytics/amplitude_for_currents/
+[4]: {{site.baseurl}}/partners/data_and_infrastructure_agility/analytics/amplitude/amplitude_for_currents/
 [5]: {{site.baseurl}}/partners/insights/behavioral_analytics/mixpanel_for_currents/
-[6]: {{site.baseurl}}/partners/data_and_infrastructure_agility/customer_data_platform/mparticle_for_currents/
-[7]: {{site.baseurl}}/partners/data_and_infrastructure_agility/customer_data_platform/segment_for_currents/
+[6]: {{site.baseurl}}/partners/data_and_infrastructure_agility/customer_data_platform/mParticle/mparticle_for_currents/
+[7]: {{site.baseurl}}/partners/data_and_infrastructure_agility/customer_data_platform/segment/segment_for_currents/

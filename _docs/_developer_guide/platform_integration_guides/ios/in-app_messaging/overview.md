@@ -2,6 +2,9 @@
 nav_title: Overview
 platform: iOS
 page_order: 0
+description: "This article covers iOS in-app messaging, when to best use it, in addition to several great use cases."
+channel:
+  - in-app messages
 
 ---
 
@@ -25,7 +28,7 @@ In-app messages don't deliver outside of the user's app and won't intrude on the
 - Encouraging and rewarding discovery
 - [Permission Requests/Push Priming][30]
 
-To see examples of in-app messages, check out our [Client Integration Gallery][31].
+To see examples of in-app messages, check out our [Case Studies][31].
 
 [Create an in-app message]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/create/) now!
 
@@ -96,27 +99,6 @@ The following example shows a paginated HTML Full in-app message:
 {% endtabs %}
 
 
-[1]: http://appboy.github.io/appboy-ios-sdk/docs/interface_a_b_k_slideup.html
-[2]: https://appboy.github.io/appboy-android-sdk/javadocs/com/appboy/models/InAppMessageSlideup.html
-[3]: http://appboy.github.io/appboy-ios-sdk/docs/interface_a_b_k_modal.html
-[4]: https://appboy.github.io/appboy-android-sdk/javadocs/com/appboy/models/InAppMessageModal.html
-[5]: http://appboy.github.io/appboy-ios-sdk/docs/interface_a_b_k_full.html
-[6]: https://appboy.github.io/appboy-android-sdk/javadocs/com/appboy/models/InAppMessageFull.html
-[7]: http://appboy.github.io/appboy-ios-sdk/docs/interface_a_b_k_h_t_m_l_full.html
-[8]: https://appboy.github.io/appboy-android-sdk/javadocs/com/appboy/models/InAppMessageHtmlFull.html
-[9]: {% image_buster /assets/img_archive/In-App_Slideup.png %}
-[10]: {% image_buster /assets/img_archive/In-App_Modal.png %}
-[11]: {% image_buster /assets/img_archive/In-App_Full.png %}
-[12]: {% image_buster /assets/img_archive/HTML5.gif %}
-[13]: {% image_buster /assets/img_archive/trigger-iam-composer.png %}
-[14]: {{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/create/#original-in-app-messages
-[15]: {{site.baseurl}}/developer_guide/platform_integration_guides/{{ include.platform }}/analytics/tracking_sessions/#session-lifecycle
-[16]: https://github.com/Appboy/appboy-ios-sdk/blob/master/Example/Stopwatch/AppDelegate.m
-[17]: https://github.com/Appboy/appboy-android-sdk/blob/master/droidboy/src/main/res/values/appboy.xml
-[19]: {{site.baseurl}}/developer_guide/platform_integration_guides/{{ include.platform }}/in-app_messaging/#in-app-messages-triggered
-[23]: {% image_buster /assets/img_archive/ios-html-full-iam.gif %}
-[24]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/analytics/tracking_custom_events/#tracking-custom-events
-[25]: {{site.baseurl}}/developer_guide/platform_integration_guides/ios/analytics/tracking_custom_events/#tracking-custom-events
 [29]: {% image_buster /assets/img_archive/ABKInAppMessage-models.png %}
 [30]: {{site.baseurl}}/help/best_practices/push/creating_custom_opt-in_prompts/#creating-custom-opt-in-prompts
-[31]: {{site.baseurl}}/help/best_practices/client_integration_gallery/
+[31]: https://www.braze.com/customers

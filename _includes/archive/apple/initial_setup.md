@@ -34,10 +34,6 @@ __Note__: We suggest you version Braze so pod updates automatically grab anythin
 {% if include.platform == 'iOS' %}
 __Note__: If you do not use any Braze default UI and don't want to introduce the SDWebImage dependency, please point your Braze dependency in your Podfile to our Core subspec, like `pod 'Appboy-iOS-SDK/Core'` in your Podfile. {% endif %}.
 
-##### Example Podfile
-
-If you would like to see an example, see the [Podfile][apple_initial_setup_14] within our Stopwatch Sample Application. {% if include.platform == 'iOS' %}If you use `use_frameworks!` in your Podfile, please see the [Podfile][apple_initial_setup_13] within our HelloSwift Sample Application.{% endif %}
-
 ### Step 3: Installing the Braze SDK
 
 To install the Braze SDK Cocoapod, navigate to the directory of your Xcode app project within your terminal and run the following command:
@@ -91,7 +87,7 @@ __Note__: Braze's `sharedInstance` singleton will be nil before `startWithApiKey
 {% endtabs %}
 
 {% alert important %}
-Be sure to update `YOUR-API-KEY` with the correct value from your App Settings page.
+Be sure to update `YOUR-API-KEY` with the correct value from your Mangage Settings page.
 {% endalert %}
 
 {% alert warning %}
@@ -123,11 +119,6 @@ Support for setting endpoints at runtime using `ABKAppboyEndpointDelegate` has b
 {% alert important %}
 To find out your specific cluster, please ask your Customer Success Manager or reach out to our support team.
 {% endalert %}
-
-#### Implementation Example
-
-See the {% if include.platform == 'iOS' %}
-[`AppDelegate.m`][apple_initial_setup_7] file{% else %}[`AppDelegate.m`][apple_initial_setup_29] file{% endif %} in the Stopwatch sample app.
 
 ### SDK Integration Complete
 
@@ -193,12 +184,9 @@ If you call `startWithApiKey:` in your `didFinishLaunchingWithOptions:` delegate
 [apple_initial_setup_2]: https://www.ruby-lang.org/en/installation/
 [apple_initial_setup_3]: http://guides.cocoapods.org/using/getting-started.html "CocoaPods Installation Directions"
 [apple_initial_setup_4]: http://guides.cocoapods.org/syntax/podfile.html
-[apple_initial_setup_5]: https://github.com/Appboy/appboy-ios-sdk/blob/master/AppboyKit/headers/AppboyKitLibrary/Appboy.h#L32
-[apple_initial_setup_7]: https://github.com/Appboy/appboy-ios-sdk/blob/master/Example/Stopwatch/AppDelegate.m
+[apple_initial_setup_5]: https://github.com/Appboy/appboy-ios-sdk/blob/master/AppboyKit/include/Appboy.h
 [apple_initial_setup_8]: #manual-sdk-integration
 [apple_initial_setup_12]: #appboy-podfiles-for-non-64-bit-apps
-[apple_initial_setup_13]: https://github.com/Appboy/appboy-ios-sdk/blob/master/HelloSwift/Podfile
-[apple_initial_setup_14]: https://github.com/Appboy/appboy-ios-sdk/blob/master/Example/Podfile "Example Podfile"
 [apple_initial_setup_15]: {% image_buster /assets/img_archive/podsworkspace.png %}
 [apple_initial_setup_17]: http://guides.cocoapods.org/using/getting-started.html#updating-cocoapods
 [apple_initial_setup_19]: https://developer.apple.com/library/ios/documentation/swift/conceptual/buildingcocoaapps/MixandMatch.html
@@ -206,7 +194,5 @@ If you call `startWithApiKey:` in your `didFinishLaunchingWithOptions:` delegate
 [apple_initial_setup_25]: http://guides.cocoapods.org/using/troubleshooting.html "CocoaPods Troubleshooting Guide"
 [apple_initial_setup_26]: #social-data-tracking
 [apple_initial_setup_27]: https://github.com/Appboy/appboy-ios-sdk/blob/master/CHANGELOG.md "iOS Changelog"
-[apple_initial_setup_29]: https://github.com/Appboy/appboy-ios-sdk/blob/master/Example/tvOS_Stopwatch/AppDelegate.m
-[apple_initial_setup_30]: {{ site.baseurl }}/developer_guide/eu01_us3_sdk_implementation_differences/overview/#overview
 [apple_initial_setup_31]: {{ site.baseurl }}/developer_guide/rest_api/basics/#endpoints
 [apple_initial_setup_32]: {{ site.baseurl }}/support_contact/

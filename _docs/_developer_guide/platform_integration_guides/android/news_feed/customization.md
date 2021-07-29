@@ -1,8 +1,11 @@
 ---
 nav_title: Customization
 page_order: 2
-
 platform: Android
+description: "This reference article covers how to customize your News Feed in your Android application."
+channel:
+  - news feed
+  
 ---
 
 # News Feed Customization
@@ -31,7 +34,7 @@ Braze UI elements come with a default look and feel that matches the Android sta
 
 If you would prefer, you can override these styles to create a look and feel that better suits your app. To override a style, copy it in its entirety to the `styles.xml` file in your own project and make modifications. The whole style must be copied over to your local `styles.xml` file in order for all of the attributes to be correctly set.
 
-### Correct Style Override
+#### Correct Style Override
 
 ```xml
 <style name="Appboy.Feed.List">
@@ -45,7 +48,7 @@ If you would prefer, you can override these styles to create a look and feel tha
 </style>
 ```
 
-### Incorrect Style Override
+#### Incorrect Style Override
 
 ```xml
 <style name="Appboy.Feed.List">
@@ -58,10 +61,10 @@ If you would prefer, you can override these styles to create a look and feel tha
 
 Below is a description of the themable Braze UI elements and their names for styling purposes:
 
-![Android Feed][18]
-![Android Cards][19]
-![Android Empty][20]
-![Android Network Error][21]
+{% gallery %}{% image_buster /assets/img_archive/Image27Theming.png %}
+{% image_buster /assets/img_archive/Image28Theming.png %}
+{% image_buster /assets/img_archive/Image29Theming.png %}
+{% image_buster /assets/img_archive/Image30Theming.png %}{% endgallery %}
 
 ## Setting A Custom Font
 
@@ -88,13 +91,9 @@ You can handle News Feed clicks manually by setting a custom News Feed click lis
 
 Create a class that implements [IFeedClickActionListener][37]. Implement the `onFeedCardClicked()` method, which will be called when the user clicks a News Feed card.
 
-See [CustomFeedClickActionListener.java][38] in our Droidboy sample application for an example implementation.
-
 ### Step 2: Instruct Braze to Use Your News Feed Click Listener
 
 Once your `IFeedClickActionListener` is created, call `AppboyFeedManager.getInstance().setFeedCardClickActionListener()` to instruct `AppboyFeedManager` to use your custom `IFeedClickActionListener`.
-
-See [PreferencesActivity.java][39] in our Droidboy sample application for an example implementation.
 
 ## Fully Custom Feed Display
 
@@ -143,35 +142,13 @@ To log a display of the feed, call [`Appboy.logFeedDisplayed()`][6].
 To log an impression or click on a Card, call [`Card.logClick()`][7] and [`Card.logImpression()`][8] respectively.
 
 
-[1]: {% image_buster /assets/img_archive/UONewsFeed.png %}
-[2]: http://developer.android.com/guide/components/fragments.html
-[3]: http://developer.android.com/guide/components/fragments.html#Adding "Android Documentation: Fragments"
-[4]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/analytics/tracking_sessions/
-[5]: https://github.com/Appboy/appboy-android-sdk/blob/master/droidboy/src/main/java/com/appboy/sample/DroidBoyActivity.java
 [6]: https://appboy.github.io/appboy-android-sdk/javadocs/com/appboy/Appboy.html#logFeedDisplayed--
 [7]: https://appboy.github.io/appboy-android-sdk/javadocs/com/appboy/models/cards/Card.html#logClick--
 [8]: https://appboy.github.io/appboy-android-sdk/javadocs/com/appboy/models/cards/Card.html#logImpression--
 [9]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/news_feed/card_types/#card-types
-[14]: {{site.baseurl}}/help/best_practices/news_feed/
-[16]: https://appboy.github.io/appboy-android-sdk/javadocs/com/appboy/Appboy.html#requestFeedRefresh()
-[17]: https://appboy.github.io/appboy-android-sdk/javadocs/com/appboy/events/FeedUpdatedEvent.html#getUnreadCardCount()
 [18]: {% image_buster /assets/img_archive/Image27Theming.png %} "Android Feed"
 [19]: {% image_buster /assets/img_archive/Image28Theming.png %} "Android Cards"
 [20]: {% image_buster /assets/img_archive/Image29Theming.png %} "Android Empty"
 [21]: {% image_buster /assets/img_archive/Image30Theming.png %} "Android Network Error"
-[23]: {% image_buster /assets/img_archive/android_news_feed.png %}
-[25]: {% image_buster /assets/img_archive/UnreadvsReadNewsFeedCard.png %}
-[26]: https://github.com/Appboy/appboy-android-sdk/blob/master/android-sdk-ui/res/drawable-hdpi/icon_unread.png
-[27]: https://github.com/Appboy/appboy-android-sdk/blob/master/android-sdk-ui/res/drawable-hdpi/icon_read.png
-[28]: https://github.com/Appboy/appboy-android-sdk/blob/master/droidboy/src/main/AndroidManifest.xml "AndroidManifest.xml"
-[29]: https://appboy.github.io/appboy-android-sdk/javadocs/com/appboy/models/cards/Card.html
-[30]: https://appboy.github.io/appboy-android-sdk/javadocs/com/appboy/models/cards/BannerImageCard.html
-[31]: https://appboy.github.io/appboy-android-sdk/javadocs/com/appboy/models/cards/CaptionedImageCard.html
-[32]: https://appboy.github.io/appboy-android-sdk/javadocs/com/appboy/models/cards/TextAnnouncementCard.html
-[33]: https://appboy.github.io/appboy-android-sdk/javadocs/com/appboy/models/cards/ShortNewsCard.html
-[34]: https://appboy.github.io/appboy-android-sdk/javadocs/com/appboy/models/cards/CrossPromotionSmallCard.html
-[36]: https://appboy.github.io/appboy-android-sdk/javadocs/com/appboy/models/cards/Card.html#getExtras()
-[37]: https://github.com/Appboy/appboy-android-sdk/blob/master/android-sdk-ui/src/com/appboy/ui/feed/listeners/IFeedClickActionListener.java
-[38]: https://github.com/Appboy/appboy-android-sdk/blob/master/droidboy/src/main/java/com/appboy/sample/CustomFeedClickActionListener.java
-[39]: https://github.com/Appboy/appboy-android-sdk/blob/master/droidboy/src/main/java/com/appboy/sample/PreferencesActivity.java#L183
+[37]: https://github.com/Appboy/appboy-android-sdk/blob/master/android-sdk-ui/src/main/java/com/appboy/ui/feed/listeners/IFeedClickActionListener.java
 [40]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/advanced_use_cases/font_customization/#font-customization

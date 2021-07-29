@@ -3,6 +3,12 @@ nav_title: Slideups
 platform: Message_Building_and_Personalization
 subplatform: In-App Messages
 page_order: 2
+channel:
+  - in-app messages
+tool:
+  - Media
+description: "This reference article covers the message and design requirements of sliedup in-app messages."
+
 ---
 # Slideup In-App Messages
 
@@ -19,6 +25,8 @@ Slideup messages can contain up to three lines of copy before truncation with el
 - __All images must be less than 5MB.__
 - We only accept `PNG`, `JPG`, and `GIF` file types.
 - We recommend that your images be 500KB.
+
+{% alert tip %}Create assets with confidence! Our in-app message image templates and safe zone overlays are designed to play nicely with devices of all sizes. [Download Design Templates]({% image_buster /assets/download_file/Braze-In-App-Message-Design-Templates.zip %}) {% endalert %}
 
 | Layout | Asset Size | Notes |
 |--- | --- | --- |

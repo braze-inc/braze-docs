@@ -5,6 +5,10 @@ layout: glossary_page
 glossary_top_header: "Report Metrics Glossary"
 glossary_top_text: "These are terms you'll find in your reports in your Braze account. Search for the metrics you need or filter by channel. <br>  <br> This glossary does not necessarily include metrics you might see in Currents or other downloaded reports outside of your Braze account."
 
+page_type: glossary
+description: "This glossary defines terms you'll find in your reports in your Braze account."
+tool: Reports
+
 glossary_tag_name: Channels
 glossary_filter_text: "Select Channels below to narrow the glossary:"
 
@@ -36,14 +40,14 @@ glossaries:
     tags:
       - All
   - name: Total Impressions
-    description: The number of users whose devices reported that the in-app message has been delivered, or card has been viewed (if a user receives a message twice, they will be counted twice). This number is a sum of the number of impression events that Braze receives from the SDKs.
+    description: The number of times the in-app message or card has been viewed (if a user is shown a message twice, they will be counted twice). This number is a sum of the number of impression events that Braze receives from the SDKs.
     calculation: Count
     tags:
       - In-App Message
       - News Feed
       - Content Cards
   - name: Unique Impressions
-    description: Also known as Unique Daily Impression, is the total number of people who actually received and viewed the in-app message or card in a day. This number is received from Braze.
+    description: The total number of users who received and viewed a given in-app message or card in a day. For in-app messages, unique impressions can be incremented again after 24 hours if re-eligibility is on and a user performs the trigger action. Conversely, the count should not increment the second time a user views a Content Card. This number is received from Braze.
     calculation: Count
     tags:
       - In-App Message
@@ -55,13 +59,13 @@ glossaries:
     tags:
       - All
   - name: Sends to Carrier
-    description: This stat is the sum of Confirmed Deliveries, Rejections and sends where delivery or rejection was not confirmed by the carrier. There are instances where carriers do not provide delivery or rejected confirmation, as some carriers do not provide this confirmation or were unable to do so at the time of send.
+    description: This stat is the sum of Confirmed Deliveries, Rejections, and Sends where delivery or rejection was not confirmed by the carrier. There are instances where carriers do not provide delivery or rejected confirmation, as some carriers do not provide this confirmation or were unable to do so at the time of send.
     calculation: Count
     tags:
       - SMS
   - name: Deliveries
-    description: The total number of messages successfully sent to and received by eligible users.
-    calculation: (Sends - Bounces) / (Sends)
+    description: The total number of message requests that are accepted by the receiving email server.
+    calculation: Count
     tags:
       - All Push
       - Email
@@ -102,7 +106,7 @@ glossaries:
       - Webhook
   - name: Total Opens
     description: The total number of messages that were opened.
-    calculation: (Opens) / (Deliveries) (for Email) or (Unique Opens) / (Deliveries) (for all Push)
+    calculation: (Opens) / (Deliveries) (for Email); (Direct Opens) / (Deliveries) (for Web Push); (Unique Opens) / (Deliveries) (for iOS Push, Android, Kindle)
     tags:
       - Email
       - iOS Push
@@ -127,21 +131,21 @@ glossaries:
       - iOS Push
       - Android Push
   - name: Total Clicks
-    description: The total number (and percentage) of users who clicked within the delivered email or card.
+    description: The total number (and percentage) of users who clicked within the delivered email or card. Please note that clicks on an unsubscribe link will not be counted towards total clicks.
     calculation: (Total Clicks) / (Deliveries) (for Email) or (Total Clicks) / (Total Impressions) (for Content Cards)
     tags:
       - Email
       - News Feed
       - Content Cards
   - name: Unique Clicks
-    description: Distinct number of recipients who have clicked within a message at least once. This is tracked over a 7 day period for Email.
+    description: Distinct number of recipients who have clicked within a message at least once. This is tracked over a 7 day period for Email. Note that clicks on Braze-provided unsubscribe links are counted as unique clicks.
     calculation: (Unique Clicks) / (Deliveries) (for Email) or (Unique Clicks) / (Unique Impressions) (for Content Cards)
     tags:
       - Email
       - News Feed
       - Content Cards
   - name: Body Clicks
-    description: Occurs when someone clicks on a slideup, modal, or full-screen in-app message that has no buttons.
+    description: Occurs when someone clicks on a slide-up, modal, or full-screen in-app message that has no buttons.
     calculation: (Body Clicks) / (Impressions)
     tags:
       - In-App Message
@@ -155,6 +159,12 @@ glossaries:
     calculation: (Button 2 Clicks) / (Impressions)
     tags:
       - In-App Message
+  - name: Body Click
+    description: Push Story Notifications record a body click when the notification is clicked. It will not be recorded when a message is expanded, or for action button clicks.
+    calculation: (Body Clicks) / (Impressions)
+    tags:
+      - iOS Push
+      - Android Push
   - name: Unsubscribes
     description: The number of recipients whose subscription state changed to unsubscribed as a result of clicking the Braze provided unsubscribe URL.
     calculation: (Unsubscribes) / (Deliveries)
@@ -195,4 +205,75 @@ glossaries:
     calculation: (Unique Dismissals) / (Unique Impressions)
     tags:
       - Content Cards
+  - name: AMP Clicks
+    description: The total number of users who clicked into the AMP version of your AMP HTML Email.
+    tags:
+      - Email
+  - name: Received
+    description: Content Cards - Received when users view the card in the app.<br>Push - Received when messages are sent from the Braze server to the push provider.<br>Email - Received when messages are sent from the Braze server to the email service provider.<br>SMS/MMS - "Delivered" once the SMS provider receives confirmation from the upstream carrier and destination device.<br>In-App Message - Received at the time of display based on the trigger action defined. 
+    tags:
+      - Email
+      - Content Cards
+      - In-App Message
+      - Web Push
+      - iOS Push
+      - Android Push
+      - SMS
+  - name: Total Direct Revenue
+    description: The amount of revenue generated by this campaign, based on last-click attribution*. This metric is only available on Campaign Comparison Reports, via the <a href='/docs/user_guide/data_and_analytics/your_reports/report_builder/'>Report Builder</a>.<br><br>*Last-click attribution means that in order for revenue to be attributed to a campaign, that campaign must&#58; <br> 1. Be the last campaign the user clicked prior to purchasing, and <br> 2. Be clicked by the user less than 3 days prior to purchasing.
+    tags:
+      - Email
+      - Content Cards
+      - In-App Message
+      - Web Push
+      - iOS Push
+      - Android Push
+  - name: Unique Direct Purchases
+    description: The number of users who purchased, based on last-click attribution*. This metric is only available on Campaign Comparison Reports, via the <a href='/docs/user_guide/data_and_analytics/your_reports/report_builder/'>Report Builder</a>.<br><br>*Last-click attribution means that in order for revenue to be attributed to a campaign, that campaign must&#58; <br> 1. Be the last campaign the user clicked prior to purchasing, and <br> 2. Be clicked by the user less than 3 days prior to purchasing.
+    tags:
+      - Email
+      - Content Cards
+      - In-App Message
+      - Web Push
+      - iOS Push
+      - Android Push
+  - name: Total Direct Purchases
+    description: The total number of purchases made, based on last-click attribution*. This metric counts multiple purchases from a single user, for example if one user makes two purchases, the count will increment by two. This metric is only available on Campaign Comparison Reports, via the <a href='/docs/user_guide/data_and_analytics/your_reports/report_builder/'>Report Builder</a>.<br><br>*Last-click attribution means that in order for revenue to be attributed to a campaign, that campaign must&#58; <br> 1. Be the last campaign the user clicked prior to purchasing, and <br> 2. Be clicked by the user less than 3 days prior to purchasing.
+    tags:
+      - Email
+      - Content Cards
+      - In-App Message
+      - Web Push
+      - iOS Push
+      - Android Push
+  - name: Revenue per Recipient
+    description: The total direct revenue divided by unique recipients. This metric is only available on Campaign Comparison Reports, via the <a href='/docs/user_guide/data_and_analytics/your_reports/report_builder/'>Report Builder</a>.
+    calculation: (Total Direct Revenue) / (Unique Recipients)
+    tags:
+      - Email
+      - Content Cards
+      - In-App Message
+      - Web Push
+      - iOS Push
+      - Android Push
+  - name: Choices Submitted
+    description: Total number of choices selected when the user clicks the submit button on the survey question page of a <a href='/docs/user_guide/message_building_by_channel/in-app_messages/templates/simple_survey/' target='_blank'>Simple Survey</a>.
+    tags: 
+      - In-App Message
+  - name: Confirmation Page Button
+    description: Total clicks on the call to action button on the confirmation page of a <a href='/docs/user_guide/message_building_by_channel/in-app_messages/templates/simple_survey/' target='_blank'>Simple Survey</a>.
+    tags:
+      - In-App Message
+  - name: Confirmation Page Dismissals
+    description: Total clicks on the close (x) button on the confirmation page of a <a href='/docs/user_guide/message_building_by_channel/in-app_messages/templates/simple_survey/' target='_blank'>Simple Survey</a>.
+    tags:
+      - In-App Message
+  - name: Survey Page Dismissals
+    description: Total clicks on the close (x) button on the survey question page of a <a href='/docs/user_guide/message_building_by_channel/in-app_messages/templates/simple_survey/' target='_blank'>Simple Survey</a>.
+    tags:
+      - In-App Message
+  - name: Survey Submissions
+    description: Total clicks on the submit button of a <a href='/docs/user_guide/message_building_by_channel/in-app_messages/templates/simple_survey/' target='_blank'>Simple Survey</a>.
+    tags:
+      - In-App Message
 ---

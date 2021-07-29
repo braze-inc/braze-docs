@@ -46,7 +46,7 @@ noindex: true
 
 In the second paragraph, you should explore and explain the relationship between Braze and this partner. This paragraph should explain how Braze and this partner work together to tighten the bond between the Braze User and their customer. Explain the "elevation" that occurs when a Braze User integrates with or leverages this partner and their services.
 
-## Requirements or Pre-Requisites
+## Requirements or Prerequisites
 
 This section is all about what you need to integrate with the partner and start using their services. The best way to deliver this information is with a quick instructional paragraph that describes any non-technical important details of "need to know" information, like whether or not your integration will be subject to additional security checks or clearances. Then, you should use a chart to describe the technical requirements of the integration.
 
@@ -56,7 +56,7 @@ The requirements listed below are typical requirements you might need from Braze
 
 | Requirement | Origin | Access | Description |
 |---|---|---|---|
-|Braze App Group REST API Key | Braze platform | Manage App Group > App Settings Page | This description should tell you what to do with the App Group REST API Key. |
+|Braze App Group REST API Key | Braze platform | Manage Settings > Settings Page | This description should tell you what to do with the App Group REST API Key. |
 |Braze API Endpoint | Braze platform | Check out our [listed endpoints]({{site.baseurl}}/developer_guide/rest_api/basics/#endpoints) or open a support ticket. | Description pending. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
 
@@ -104,7 +104,7 @@ Make sure you define parameters or elements that users might have to adjust from
 
 ### Step 3: How Many Steps
 
-Outline through usage of the integration - especially if it means inserting liquid into our message composer.
+Outline through usage of the integration - especially if it means inserting Liquid into our message composer.
 
 ## Customization
 

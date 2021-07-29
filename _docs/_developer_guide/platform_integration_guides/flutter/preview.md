@@ -1,13 +1,17 @@
 ---
-nav_title: Preview
+nav_title: Flutter SDK
 platform: Flutter
 page_order: 0
+
+page_type: reference
+description: "This page provides resources on integrating Braze's Flutter SDK."
+
 ---
 
-# Preview
+# Flutter SDK
 
-Our Flutter integration is being tested with select customers.
+To learn more about integrating Braze's Flutter SDK, view our [`pub.dev` documentation](https://pub.dev/packages/braze_plugin).
 
-To join the preview program, please contact your account manager or our [support team][support].
-
-[support]: {{site.baseurl}}/support_contact/
+## SDK Requirements
+* Dark SDK 2.0.0
+* Flutter SDK 1.10.0

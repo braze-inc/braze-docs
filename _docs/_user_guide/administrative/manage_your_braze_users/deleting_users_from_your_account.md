@@ -1,6 +1,10 @@
 ---
 nav_title: Deleting Braze Account Users
 page_order: 1
+
+page_type: reference
+description: "This reference article covers how to delete users."
+tool: Dashboard
 ---
 
 # Deleting Users

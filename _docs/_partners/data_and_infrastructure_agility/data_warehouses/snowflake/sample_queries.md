@@ -53,9 +53,9 @@ Note:
 - We are using Snowflake's [window](https://docs.snowflake.com/en/sql-reference/functions-analytic.html) functions here.
 - The left join will ensure that events that were not related to a campaign will also be included.
 - If you see events with `campaign_id`s but no campaign names then there is a possibility that the campaign was created with a name before Data Sharing existed as a product.
-- You can see canvas names using a similar query, joining with the `CHANGELOGS_CANVAS_SHARED` table instead.
+- You can see Canvas names using a similar query, joining with the `CHANGELOGS_CANVAS_SHARED` table instead.
 
-If you want to see both campaign and canvas names, you may have to use a sub-query as shown below.
+If you want to see both campaign and Canvas names, you may have to use a sub-query as shown below.
 
 ```sql
 SELECT campaign_join.*, canvas.name AS canvas_name
@@ -67,7 +67,7 @@ FROM
   LEFT JOIN CHANGELOGS_CAMPAIGN_SHARED AS campaign ON campaign.id = e.campaign_id
   WHERE e.time >= 1574830800 AND e.time <= 1575176399
   qualify row_number() over (partition by e.id ORDER BY campaign.time DESC) = 1) AS campaign_join
-LEFT JOIN CHANGELOGS_CANVAS_SHARED AS canvas ON canvas.id = campaign_join.canvas_id
+LEFT JOIN CHANGELOGS_CANVAS_SHARED AS Canvas ON canvas.id = campaign_join.canvas_id
 qualify row_number() over (partition by campaign_join.event_id ORDER BY canvas.time DESC) = 1;
 ```
   {% endtab %}
@@ -142,6 +142,56 @@ FROM email_messaging_cadence GROUP BY 1
 ORDER BY 1
 LIMIT 500;
 ```
-
-{% endtab %}
+  {% endtab %}
+  {% tab Unique Email Clicks %}
+  
+The algorithm to calculate the unique email clicks in a given time window is as follows.
+  1. Partition the events by the key (app_group_id, message_variation_id, dispatch_id, email_address).
+  2. In each partition, order the events by time and the first event is always a unique event.
+  3. For every subsequent event, if it occurred more than 7 days after its predecessor, is considered a unique event.
+  
+We can use Snowflake's windowing functions to help us achieve this. The query below gives us all email clicks in the last 365 days and indicates which events are unique in the `is_unique` column.
+  
+```sql
+SELECT id, app_group_id, message_variation_api_id, dispatch_id, email_address, time,
+  ROW_NUMBER()       OVER (PARTITION BY app_group_id, message_variation_api_id, dispatch_id, email_address order by time) row_number,
+  LAG(time, 1, time) OVER (PARTITION BY app_group_id, message_variation_api_id, dispatch_id, email_address order by time) previous_time,
+  time - previous_time AS diff,
+  IFF(row_number = 1, true, IFF(diff >= 7*24*3600, true, false)) AS is_unique
+FROM USERS_MESSAGES_EMAIL_CLICK_SHARED
+WHERE
+  time < DATE_PART('EPOCH_SECOND', TO_TIMESTAMP(CURRENT_TIMESTAMP())) 
+  AND time > DATE_PART('EPOCH_SECOND', TO_TIMESTAMP(CURRENT_TIMESTAMP())) - 365*24*3600; 
+```
+If you just want to see the unique events, use the `QUALIFY` clause.
+```sql
+SELECT id, app_group_id, message_variation_api_id, dispatch_id, email_address, time,
+  ROW_NUMBER()       OVER (PARTITION BY app_group_id, message_variation_api_id, dispatch_id, email_address order by time) row_number,
+  LAG(time, 1, time) OVER (PARTITION BY app_group_id, message_variation_api_id, dispatch_id, email_address order by time) previous_time,
+  time - previous_time AS diff,
+  IFF(row_number = 1, true, IFF(diff >= 7*24*3600, true, false)) AS is_unique
+FROM USERS_MESSAGES_EMAIL_CLICK_SHARED
+WHERE
+  time < DATE_PART('EPOCH_SECOND', TO_TIMESTAMP(CURRENT_TIMESTAMP())) 
+  AND time > DATE_PART('EPOCH_SECOND', TO_TIMESTAMP(CURRENT_TIMESTAMP())) - 365*24*3600
+QUALIFY is_unique = true;
+```
+To further see unique event counts grouped by email address
+```sql
+WITH unique_events AS(
+  SELECT id, app_group_id, message_variation_api_id, dispatch_id, email_address, time,
+  ROW_NUMBER()       OVER (PARTITION BY app_group_id, message_variation_api_id, dispatch_id, email_address order by time) row_number,
+  LAG(time, 1, time) OVER (PARTITION BY app_group_id, message_variation_api_id, dispatch_id, email_address order by time) previous_time,
+  time - previous_time AS diff,
+  IFF(row_number = 1, true, iff(diff >= 7*24*3600, true, false)) AS is_unique
+FROM USERS_MESSAGES_EMAIL_CLICK_SHARED
+WHERE
+  time < DATE_PART('EPOCH_SECOND', TO_TIMESTAMP(CURRENT_TIMESTAMP())) 
+  AND time > DATE_PART('EPOCH_SECOND', TO_TIMESTAMP(CURRENT_TIMESTAMP())) - 365*24*3600
+QUALIFY is_unique = true) 
+SELECT email_address, count(*) AS count
+FROM unique_events
+GROUP BY email_address;
+```
+  {% endtab %}
 {% endtabs %}

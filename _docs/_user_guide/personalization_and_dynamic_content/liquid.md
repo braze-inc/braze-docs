@@ -4,6 +4,7 @@ page_order: 0
 layout: featured
 guide_top_header: "Personalization Using Liquid Tags"
 guide_top_text: "Braze can automatically substitute values from a given user into your messages. Put your expression inside of two sets of curly brackets to notify Braze that you'll be using an interpolated value. Inside of these brackets, any user values that you want to substitute must be surrounded by an additional set of brackets with a dollar sign in front of them."
+description: "Braze can automatically substitute values from a given user into your messages. Put your expression inside of two sets of curly brackets to notify Braze that you'll be using an interpolated value."
 
 guide_featured_title: "Section Articles"
 guide_featured_list:
@@ -31,6 +32,9 @@ guide_featured_list:
 - name: Aborting Messages
   link: /docs/user_guide/personalization_and_dynamic_content/liquid/aborting_messages/
   fa_icon: fas fa-undo
+- name: Liquid Use Cases
+  link: /docs/user_guide/personalization_and_dynamic_content/liquid/liquid_use_cases/
+  fa_icon: fas fa-list-ul
 ---
 
 ## About Liquid
@@ -45,7 +49,7 @@ Liquid templating language supports the use of objects, tags and filters.
 
 - [Tags]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/supported_personalization_tags/) allow you to execute programming logic in your messages. For example, you can use tags to include intelligent logic, such as "if" statements, in your campaigns.
 
-- [Filters]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/filters/) allow you to reformat personalized attributes and dynamic content. For example, you could convert a timestamp, such as *2016-09-07 08:43:50 UTC* into a date such as *September 7th, 2016*.
+- [Filters]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/filters/) allow you to reformat personalized attributes and dynamic content. For example, you could convert a timestamp, such as *2016-09-07 08:43:50 UTC* into a date such as *September 7, 2016*.
 
 
 ## Terms to Know

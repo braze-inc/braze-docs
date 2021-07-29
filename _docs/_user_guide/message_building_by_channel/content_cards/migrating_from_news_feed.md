@@ -1,6 +1,11 @@
 ---
 nav_title: Migrating from News Feed
 page_order: 10
+description: "Content Cards offer many more capabilities that are not supported by Braze's News Feed. This article covers the differences between the two and guidance on migration and adoption."
+
+channel:
+  - content cards
+  - news feed
 ---
 
 # Migrating From News Feed to Content Cards
@@ -11,7 +16,7 @@ Reach out to your Braze account manager for more details.
 
 ## Features and Functionality
 
-Content Cards offers many capabilities that are not supported by Braze's current News Feed such as additional delivery options like action-based, API delivery, and enhanced analytics like conversion tracking.
+Content Cards offers many capabilities that are not supported by Braze's current News Feed, such as additional delivery options like action-based, API delivery, and enhanced analytics like conversion tracking.
 
 As you plan your migration from the News Feed to Content Cards, it will be important to note the main differences between Content Cards and the News Feed:
 
@@ -35,9 +40,9 @@ As you plan your migration from the News Feed to Content Cards, it will be impor
 ## Implementation
 
 - Content Cards and the News Feed are separate products, so a simple integration for your app or website is necessary in order to use Content Cards.
-- If desired, existing News Feed Cards will need to be manually migrated to Content Card Campaigns when you switch.
+- If desired, existing News Feed Cards will need to be manually migrated to Content Card campaigns when you switch.
 - Content Cards is not intended to be used at the same time as the News Feed, as it is a replacement for the News Feed.
-- Content Cards does not currently support categories - categories can be achieved via [customization and key value pairs][1].
+- Content Cards does not currently support categories - categories can be achieved via [customization and key-value pairs][1].
 
 
 [1]: {{site.baseurl}}/developer_guide/platform_integration_guides/web/content_cards/multiple_feeds/

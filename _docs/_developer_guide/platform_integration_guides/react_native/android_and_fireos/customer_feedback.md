@@ -1,7 +1,9 @@
 ---
 nav_title: Customer Feedback
 platform: React Native
-subplatform: Android and FireOS
+subplatform: 
+- Android
+- FireOS
 page_order: 5
 hidden: true
 ---

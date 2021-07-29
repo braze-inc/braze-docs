@@ -2,14 +2,15 @@
 nav_title: Font Customization
 platform: Android
 page_order: 7
+description: "This reference article covers font customization options such as defining a font family and shows how to reference it throughout your application."
 
 ---
 
-## Font Customization
+# Font Customization
 
-Fonts in the Braze SDK can be set via XML using the Support Library version 26.0.0 or above using the [Font in XML Guide][1]. To use your custom font with the Braze SDK, you'll first need to create a font family.
+Fonts in the Braze SDK can be set via XML using the AndroidX libraries according to [Font in XML Guide][1]. To use your custom font with the Braze SDK, you'll first need to create a font family.
 
-### Create A Font Family
+## Create A Font Family
 
 The following is an example custom font family definition using the [font family guide][2]. For this example, we use the [Bungee Shade Font][3].
 
@@ -18,7 +19,7 @@ The following is an example custom font family definition using the [font family
 <font-family xmlns:android="http://schemas.android.com/apk/res/android"
              xmlns:app="http://schemas.android.com/apk/res-auto">
 
-  <!--Note: As of Android Support Library 26.0.0, you must declare both sets of attributes
+  <!--Note: You must declare both sets of attributes
       to ensure your fonts load on devices running Android 8.0 (API level 26) or lower.
       See https://developer.android.com/guide/topics/ui/look-and-feel/fonts-in-xml.html -->
 
@@ -34,7 +35,7 @@ The following is an example custom font family definition using the [font family
 
 After storing the font family definition in `/res/font/bungee_font_family.xml`, we can refer to it in XML as `@font/bungee_font_family`.
 
-### Referencing Your Font Family
+## Referencing Your Font Family
 
 Now that the font family is created, you can override Braze style defaults in your `styles.xml` to include references to the font family.
 

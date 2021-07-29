@@ -3,8 +3,9 @@ nav_title: Scheduling and Organizing
 layout: dev_guide
 guide_top_header: "Scheduling and Organizing"
 guide_top_text: ""
+page_order: 1
 
-tools: campaigns
+tool: Campaigns
 page_type: landing
 description: "This landing page is home to Campaign Scheduling and Organizing. Here you can find resources on how to set up your campaign and the different options available."
 
@@ -12,7 +13,7 @@ guide_featured_title: "Popular Articles"
 
 guide_featured_list:
   - name: Scheduling Your Campaign
-    link: /docs/user_guide/engagement_tools/campaigns/scheduling_and_organizing/scheduling_your_campaign/
+    link: /docs/user_guide/engagement_tools/campaigns/scheduling_and_organizing/delivery_types/
     fa_icon: fas fa-chart-line
   - name: Attribute Triggers
     link: /docs/user_guide/engagement_tools/campaigns/scheduling_and_organizing/attribute_triggers/
@@ -38,4 +39,7 @@ guide_menu_list:
   - name: Campaign Connector
     link: /docs/user_guide/engagement_tools/campaigns/scheduling_and_organizing/campaign_connector/
     fa_icon: fas fa-arrows-alt-h
+  - name: Change Your Campaign After Launch 
+    link: /docs/user_guide/engagement_tools/campaigns/scheduling_and_organizing/change_your_campaign_after_launch/
+    fa_icon: fas fa-undo
 ---

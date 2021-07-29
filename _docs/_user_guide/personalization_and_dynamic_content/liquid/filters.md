@@ -1,6 +1,7 @@
 ---
 nav_title: Filters
 page_order: 3
+description: "Filters can be used to reformat static or dynamic content. This reference article covers the Liquid filters supported by Braze."
 ---
 
 # Filters
@@ -50,11 +51,23 @@ You must first define one of the custom attributes as a variable and then perfor
 {{custom_attribute.${giftcard_balance} | plus: balance}}
 ```
 
-- [Full Math Filter Documentation from Shopify][19]
+Use the abs filter to get the absolute value of a field:
+
+Input:
+```liquid
+The abs of -2 is {{ -2 | abs }}
+```
+
+Output:
+```liquid
+The abs of -2 is 2
+```
+
+
 
 ## E-Commerce
 
-If you're updating a user on their purchase, an account balance, or anything regarding money, you can use [money filters][11] to ensure that your decimals are in the proper place and that no piece of your update is lost (like that pesky `0` at the end).
+If you're updating a user on their purchase, an account balance, or anything regarding money, you can use money filters to ensure that your decimals are in the proper place and that no piece of your update is lost (like that pesky `0` at the end).
 
 ```liquid
 ${{custom_attribute.${account_balance} | money}}
@@ -65,6 +78,9 @@ In the event you are importing a custom attribute (like `account_balance`), you 
 | With the Money Filter | Without the Money Filter |
 |---|---|
 |![With Filter][1] <br> <br> Where `account_balance` is input as `17.8`. | ![Without Filter][2] <br> <br> Where `account_balance` is input as `17.8`.|
+{: .reset-td-br-1 .reset-td-br-2}
+
+Documentation on money filters can be found [here][11]. Please note that the behavior of the [Shopify money filter][11] slightly differs from how it is used within the Braze Dashboard. Please reference the behavior detailed above for an accurate representation of the expected behavior of this filter.
 
 ## String Filters
 
@@ -98,7 +114,7 @@ For example, to get the `date_attribute` in Unix time, you'd input the following
 
 In addition to the filters that you'll find listed in Shopify's documentation, we also support the "time_zone" filter.
 
-The "Time_zone" filter takes a time, a time zone, and a date format and returns the time in that timezone in the specified date format. For example, let's say that the value of `{{custom_attribute.${date_attribute}}}` is 2015-04-03 9:00:00 UTC.
+The "Time_zone" filter takes a time, a time zone, and a date format and returns the time in that time zone in the specified date format. For example, let's say that the value of `{{custom_attribute.${date_attribute}}}` is 2015-04-03 9:00:00 UTC.
 
 **Input:**
 
@@ -132,12 +148,9 @@ Which will return something like:
 [2]: {% image_buster /assets/img/without_money_filter.png %}
 [11]: https://help.shopify.com/en/themes/liquid/filters/money-filters
 [12]: https://docs.shopify.com/themes/liquid-documentation/filters
-[19]: https://docs.shopify.com/themes/liquid/filters/math-filters
 [20]: https://docs.shopify.com/themes/liquid/filters/string-filters
 [21]: https://docs.shopify.com/themes/liquid/filters/string-filters#capitalize
 [22]: https://docs.shopify.com/themes/liquid/filters/array-filters
 [23]: https://docs.shopify.com/themes/liquid/filters/array-filters#first
 [24]: https://docs.shopify.com/themes/liquid/filters/additional-filters#date
-[26]: {% image_buster /assets/img_archive/developer_console.png %}
-[27]: #adding-personalizable-attributes-objects
 [30]: #variable-tags

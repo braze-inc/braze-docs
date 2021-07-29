@@ -1,13 +1,17 @@
 ---
 nav_title: Company Wide Settings
 page_order: 5
+
+page_type: reference
+description: "This reference article covers company-wide settings, like changing the name of your company, setting your time zone, and requesting to delete your company."
+tool: Dashboard
 ---
 
 # Company Wide Settings Management
 
 ## Company Settings Page
 
-The [Company Settings Page][1] allows you to change the name of your company, set your timezone and request to delete your company.
+The [Company Settings Page][1] allows you to change the name of your company, set your time zone and request to delete your company.
 
 {% alert note %}
 Note that only Admins and users with explicit permissions to manage Company Settings will see this page.
@@ -52,7 +56,7 @@ Slack has an [incoming webhook app][62] that allows messages to be posted from e
 
 - Select the Slack channel that you'd like the notifications to go to
 
-- Slack will generate a URL that you'll need to enter this URL into the settings for the notifications that you wish to receive
+- Slack will generate a URL that you'll need to enter into the settings for the notifications that you wish to receive
 
 ![copy_url][64]
 
@@ -68,13 +72,13 @@ That's it! You should start receiving notifications about your company to this S
 
 ### Weekly Analytics Reporting
 
-Braze optionally sends a weekly report via email to individuals you designate within your company every Monday at 5AM EST. The custom events to be included in the weekly report are selected on the Custom Events Management Tab within the ["Manage App Group"][19] page of the dashboard. You may select up to 5 events to be included in your weekly report:
+Braze optionally sends a weekly report via email to individuals you designate within your company every Monday at 5AM EST. The custom events to be included in the weekly report are selected on the **Custom Events** tab within the [Manage Settings][19] page of the dashboard. You may select up to 5 events to be included in your weekly report:
 
 ![Analytics Report Event Selection][22]
 
 ### Additional Email Settings
 
-You also can access the [App Settings - Email Tab][8] to edit:
+You also can access the [Email Settings][8] tab to edit:
 
 - The name which will be displayed by default on your emails
 - The default reply-to address for your emails
@@ -136,6 +140,13 @@ For more information on CIDR notation see [RFC 4632][84].
 
 Two-factor authentication adds an extra layer of identity verification upon login. By enabling two-factor authentication, Braze will require two methods of verification to log in to your Braze account: your password and your mobile phone.  Braze uses [Authy][56], a two-factor authentication service, to help secure your account.
 
+#### Two-Factory Authentication Authy Set Up Overview
+1. Download the Authy App.
+2. Navigate to Two-Factor Authentication under Account Settings and enter your phone number.
+3. There will be a notification sent to the device instructing to open Authy to obtain the code for Braze.
+4. Open the Authy App on the device linked to obtain the code. 
+5. Navigate to Two-Factor Authentication settings and enter the code. 
+
 If you would like to enforce two-factor authentication for the whole company, turn on two-factor authentication under the Security Settings tab and press Save Changes at the bottom of the page.
 
 ![Two-Factor Authentication - Company Settings][53]
@@ -148,22 +159,11 @@ Under the Manage Users page, there will be an additional column that indicates w
 ![Two-Factor Authentication - Manage Users][55]
 
 [1]: https://dashboard-01.braze.com/company_settings/company_settings/ "Company Settings Page"
-[6]: https://dashboard-01.braze.com/app_settings/app_settings/analytics_report/
 [7]: {% image_buster /assets/img_archive/email_settings_custom_new.png %}
 [8]: https://dashboard-01.braze.com/app_settings/app_settings/email/ "Email App Settings"
 [19]: https://dashboard-01.braze.com/app_settings/app_settings/ "App Settings Page"
 [22]: {% image_buster /assets/img_archive/company_analytics_report_new.png %}
 [support]: {{site.baseurl}}/support_contact/
-[29]: {% image_buster /assets/img_archive/editing_user_permission_new.png %} "Edit User Permission"
-[30]: {% image_buster /assets/img_archive/user_accesses_new.png %} "User Permissions"
-[31]: {% image_buster /assets/img_archive/permission_diff_apps_new.png %} "Permissions App to App"
-[33]: http://dashboard-01.braze.com/company_settings/manage_users/ "Manage Users Page"
-[34]: {% image_buster /assets/img_archive/delete_user_new.png %} "Delete a User"
-[37]: http://dashboard-01.braze.com/company_settings/account_settings/ "Account Settings Page"
-[43]: {{site.baseurl}}/user_guide/data_and_analytics/configuring_reporting/#configuring-reporting
-[44]: {{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_attributes/#custom-attribute-data-types
-[45]: {% image_buster /assets/img_archive/Enable_reset.png %}
-[49]: {{site.baseurl}}/user_guide/onboarding/platform_administrative_features/#user-permissions
 [50]: {% image_buster /assets/img_archive/security_settings_new.png %}
 [51]: {% image_buster /assets/img_archive/authentication_rules_new.png %}
 [52]: {% image_buster /assets/img_archive/dashboard_ip_whitelisting_new.png %}
@@ -172,31 +172,11 @@ Under the Manage Users page, there will be an additional column that indicates w
 [56]: https://www.authy.com
 [57]: {% image_buster /assets/img_archive/list_unsub_img1.png %}
 [59]: {% image_buster /assets/img_archive/list_unsub_img3_new.png %}
-[60]: http://www.list-unsubscribe.com/
 [61]: {% image_buster /assets/img_archive/notification_preferences.png %}
 [62]: https://api.slack.com/incoming-webhooks
 [63]: {% image_buster /assets/img_archive/slack_f.png %}
 [64]: {% image_buster /assets/img_archive/copy_url.png %}
-[65]: {% image_buster /assets/img_archive/click_edit_f.gif %}
+[65]: {% image_buster /assets/img_archive/click_edit_f.png %}
 [67]: https://my.slack.com/services/new/incoming-webhook/
-[68]: {% image_buster /assets/img_archive/adding_a_team.png %}
-
-[69]: {% image_buster /assets/img_archive/manageappgroupnavigation1.png %}
-
-[70]: {% image_buster /assets/img_archive/appsettingsview1.png %}
-
-[71]: {% image_buster /assets/img_archive/customattributessearch1.png %}
-
-[72]: {% image_buster /assets/img_archive/customeventsview1.png %}
-
-[73]: {% image_buster /assets/img_archive/manageproperties1.png %}
-
-[74]: {% image_buster /assets/img_archive/customeventsviewblacklist1.png %}
-
-[75]: {% image_buster /assets/img_archive/customeventsviewdatatypedropdown1.png %}
-
-[76]: {{site.baseurl}}/user_guide/administrative/manage_your_braze_users/user_permissions/
-
 [83]: https://dashboard-01.braze.com/company_settings/company_settings/security-management/
 [84]: https://tools.ietf.org/html/rfc4632
-[85]: https://lab.braze.com/braze-101

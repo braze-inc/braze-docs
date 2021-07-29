@@ -210,6 +210,10 @@
                 display: none;
                 //background-color: $black-shark;
             }
+            &::marker {
+                content: "";
+                //background-color: $black-shark;
+            }
             &::before {
               content:"►";
               margin-right: 2px;
@@ -237,9 +241,13 @@
           }
           &[open] {
             summary {
-                &::before {
-                  content:"▼" ;
-                }
+              &::marker {
+                  content: "";
+                  //background-color: $black-shark;
+              }
+              &::before {
+                content:"▼" ;
+              }
             }
           }
         }
@@ -516,6 +524,11 @@ table {
     &.reset-td-br-4 {
       td:nth-child(4) {
         word-break: initial;
+      }
+    }
+    &.ws-td-nw-1 {
+      td:nth-child(1) {
+        white-space: nowrap;
       }
     }
   }

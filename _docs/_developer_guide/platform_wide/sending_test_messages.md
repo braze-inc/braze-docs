@@ -1,7 +1,10 @@
 ---
 nav_title: Sending Test Messages
 page_order: 3
+description: "THis reference article covers sending test messages for different channels."
+
 ---
+
 # Sending Test Messages
 
 Before sending out a messaging campaign to your users, you may want to test it to make sure it looks right and operates in the intended manner. Creating and sending test messages to select devices or members of your team is very simple using the tools in the dashboard.
@@ -34,11 +37,11 @@ After adding the testing filters to your test segment, you can verify that you'v
 
 >  Exporting the segment's User Data to CSV will give you the most accurate picture of who falls under that segment. The "Preview" tab is only a sample of the users in the segment - [see more details about this in our FAQ][9] - and therefore may appear to have not selected all intended members.
 
-Once you've confirmed that you're only targeting the users that you want to receive the test message, you can either select this segment in an existing campaign that you want to test or click the "Start Campaign" button in the segment menu.
+Once you've confirmed that you're only targeting the users that you want to receive the test message, you can either select this segment in an existing campaign that you want to test or click **Start Campaign** in the segment menu.
 
 ## Sending a Test Push Notification or In-App Messages <a class="margin-fix" name="push-inapp-test"></a>
 
-To send test push notifications and/or in-app messages, you need to target your previously created test segment. Begin by creating your campaign and following the usual steps. When you reach the 'Target Users' section, select your test segment as shown below.
+To send test push notifications and/or in-app messages, you need to target your previously created test segment. Begin by creating your campaign and following the usual steps. When you reach the **Target Users** step, select your test segment as shown below.
 
 ![Test Segment][11]
 
@@ -137,12 +140,8 @@ curl -X POST -H "Content-Type: application/json" -H "Authorization: Bearer {{YOU
 [3]: {% image_buster /assets/img_archive/testmessages2.png %}
 [4]: {% image_buster /assets/img_archive/testmessages3.png %}
 [5]: {% image_buster /assets/img_archive/testmessages45.png %}
-[7]: #test-segment
-[8]: #email-test
 [9]: {{site.baseurl}}/developer_guide/platform_wide/platform_features/#user-segmentation
-[10]: #push-inapp-test
 [11]: {% image_buster /assets/img_archive/test_segment.png %}
-[12]: #curl
 [13]: {{site.baseurl}}/developer_guide/rest_api/messaging/
 [14]: https://dashboard-01.braze.com/app_settings/api_settings/
 [15]: https://dashboard-01.braze.com/users/user_search/user-search/

@@ -1,12 +1,16 @@
 ---
 nav_title: SMS & MMS
 page_order: 4
-layout: featured
+layout: dev_guide
+channel:
+  - SMS
+  - MMS
 
-guide_top_header: "SMS/MMS"
-guide_top_text: "SMS (Short Messaging Service) and MMS (Multimedia Messaging Service) offer more direct ways to reach your users and customers than most other messaging channels, as it utilizes their personal phone number to reach them. Check out the topics below to get started with Braze SMS or MMS!"
+guide_top_header: "SMS & MMS"
+guide_top_text: "SMS (Short Messaging Service) and MMS (Multimedia Messaging Service) offer more direct ways to reach your users and customers than most other messaging channels, as it utilizes their personal phone number to reach them. Note that SMS & MMS are __not__ available out-of-the-box and must be purchased. Check out the topics below to get started with Braze SMS or MMS!"
+description: "SMS (Short Messaging Service) and MMS (Multimedia Messaging Service) offer more direct ways to reach your users and customers than most other messaging channels, as it utilizes their personal phone number to reach them."
 
-guide_featured_title: "Popular Articles"
+guide_featured_title: "SMS"
 guide_featured_list:
 - name: "About SMS"
   link: /docs/user_guide/message_building_by_channel/sms/about_sms/
@@ -32,15 +36,25 @@ guide_featured_list:
 - name: "Understanding SMS Stats"
   link: /docs/user_guide/message_building_by_channel/sms/sms_campaign_analytics/
   fa_icon: fas fa-mobile-alt
-- name: "FAQs"
+- name: "SMS FAQs"
   link: /docs/user_guide/message_building_by_channel/sms/faqs/
   fa_icon: fas fa-comment
+
+
+guide_menu_title: "MMS"
+guide_menu_list:
 - name: "About MMS"
   link: /docs/user_guide/message_building_by_channel/sms/mms/about_mms/
   fa_icon: fas fa-paint-brush
-- name: "Create an MMS"
+- name: "MMS Short and Long Codes"
+  link: /docs/user_guide/message_building_by_channel/sms/mms/mms_short_long_codes/
+  fa_icon: fas fa-phone-square
+- name: "Creating a MMS Campaign"
   link: /docs/user_guide/message_building_by_channel/sms/mms/create/
   fa_icon: fas fa-table
+- name: "MMS FAQs"
+  link: /docs/user_guide/message_building_by_channel/sms/mms/faqs/
+  fa_icon: fas fa-comment
 ---
 
 <br>

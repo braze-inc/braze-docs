@@ -1,11 +1,18 @@
 ---
 nav_title: Using Custom Event Properties
 page_order: 5
+
+page_type: solution
+description: "This help article walks you through three important checks to ensure your custom events are being logged as you expect."
+tool: 
+- Campaigns
+- Canvas
+no_index: true
 ---
 
 # Are My Custom Event Properties Being Logged?
 
-There are three important checks to carry out to ensure your Custom Events are being logged as you expect:
+There are three important checks to carry out to ensure your custom events are being logged as you expect:
 
 * [Establish which events are logged](#which-events)
 * [Verify log](#verify-log)
@@ -15,11 +22,11 @@ There are three important checks to carry out to ensure your Custom Events are b
 
 [Custom event properties][22] are metadata that describe custom events. Multiple properties may be logged each time a custom event is logged.
 
-## Verify Custom Event properties
+## Verify Custom Event Properties
 
 ### Which Events?
 
-Check with your developers which Event Properties are being tracked. Keep in mind that all event properties are case sensitive.
+Check with your developers which event properties are being tracked. Keep in mind that all event properties are case sensitive.
 
 For further information see:
 
@@ -30,11 +37,11 @@ For further information see:
 
 ### Verify Log
 
-To confirm that the event properties are successfully tracked, you can view all event properties by going to the Manage App Groups page, clicking on the Custom Events tab, then clicking on Manage Properties. This will show you the names of all of the properties associated with an event.
+To confirm that the event properties are successfully tracked, you can view all event properties by going to the **Manage Settings** page, clicking on the **Custom Events** tab, then clicking **Manage Properties**. This will show you the names of all of the properties associated with an event.
 
 ### Verify Values
 
-To check the specific property values that are being passed for each event, check the [Event User Logs][24] on your dashboard. After adding your user as a test user, you should perform the Custom Event within the App, wait around 10 seconds for the data to flush, and then refresh the event user log to view the custom event and the event property value that was passed with it.
+To check the specific property values that are being passed for each event, check the [Event User Logs][24] on your dashboard. After adding your user as a test user, you should perform the custom event within the app, wait around 10 seconds for the data to flush, and then refresh the event user log to view the custom event and the event property value that was passed with it.
 
 Still need help? [Open a support ticket]({{site.baseurl}}/support_contact/).
 

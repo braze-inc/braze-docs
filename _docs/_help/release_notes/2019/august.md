@@ -1,12 +1,15 @@
 ---
 nav_title: August
 page_order: 5
+no_index: true
+page_type: update
+description: "This article contains release notes for August 2019."
 ---
 
 # August 2019
 
 ## Campaign Details in Reports
-Your Campaign performance report will now list your campaign's details so you don't have to go back through your campaign to see which Delivery, Audience, or Conversion settings you chose while setting up your report.
+Your campaign performance report will now list your campaign's details so you don't have to go back through your campaign to see which Delivery, Audience, or Conversion settings you chose while setting up your report.
 
 ![Campaign Details]({% image_buster /assets/img/campaign_details_update.png %})
 

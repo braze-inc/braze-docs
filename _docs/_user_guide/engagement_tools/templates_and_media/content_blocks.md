@@ -1,6 +1,12 @@
 ---
 nav_title: Content Blocks
 page_order: 1
+
+page_type: reference
+description: "This reference article explains how to use the Content Blocks Library to manage your reusable, cross-channel content in a single, centralized location."
+tool: 
+- Templates
+- Media
 ---
 
 # Content Blocks
@@ -34,7 +40,7 @@ You can also [create and manage your Content Blocks via API][5].
 
 1. Create your Content Block.
 2. Copy the Content Block Liquid Tag from your Content Block page.
-3. Insert the Content Block Liquid Tag into the message. You can also begin typing the liquid and have the tag auto-populate.
+3. Insert the Content Block Liquid Tag into the message. You can also begin typing the Liquid and have the tag auto-populate.
 
 ## Updating & Copying Content Blocks
 
@@ -51,7 +57,7 @@ You can also [duplicate a Content Block with our Templates & Media feature]({{si
 Content blocks can be nested, but only once! You can nest _Content Block A_ into _Content Block B_, but you will not be able to then nest _Content Block B_ into Content _Block C_.
 
 {% alert warning %}
-Nothing will prevent you from nesting a third level of Content Block, but you will not see the content expand in nests beyond the second. The content and the liquid snippet are removed from the message.
+Nothing will prevent you from nesting a third level of Content Block, but you will not see the content expand in nests beyond the second. The content and the Liquid snippet are removed from the message.
 {% endalert %}
 
 Additionally, Content Blocks cannot be used within an email footer, though email footers can be used within Content Blocks.

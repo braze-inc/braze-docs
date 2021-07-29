@@ -2,8 +2,12 @@
 nav_title: Content Cards In Canvas
 platform: Canvas
 subplatform: Create a Canvas
-hidden: true
 page_order: 5
+
+page_type: reference
+description: "This reference article describes features and nuances specific to using Content Cards as a messaging channel within Canvas."
+tool: Canvas
+channel: content cards
 ---
 
 # Content Cards In Canvas
@@ -17,7 +21,7 @@ As with other Canvas messaging channels, Content Cards will be sent to a user's 
 Two options that will change how the Content Card step will interact with Canvas are its [Expiration](#content-card-expiration) and [Advancement Behavior](#advancement-behavior-options).
 
 ## Content Card Expiration {#content-card-expiration}
-When composing a new Content Card you have the option to choose when it should expire from the user's feed, based on its send time. The expiration time begins when a user reaches its canvas step and the card is sent.
+When composing a new Content Card you have the option to choose when it should expire from the user's feed, based on its send time. The expiration time begins when a user reaches its Canvas step and the card is sent.
 
 If a sent card expires before a user has viewed it in your app, it will be removed from their feed the next time their cards are refreshed.
 
@@ -81,7 +85,7 @@ Using Canvas, you can add a step that sends both a Content Card and Push Notific
 
 #### Multiple Feeds based on Categories
 
-You can separate your Content Cards into multiple feeds based on categories. For example, different topics users can browse, or transactional vs. marketing feeds. For more information, see these guides for creating different feeds using Key Value Pairs:
+You can separate your Content Cards into multiple feeds based on categories. For example, different topics users can browse, or transactional vs. marketing feeds. For more information, see these guides for creating different feeds using key-value pairs:
 
 * [Multiple Feeds for Web SDK]({{site.baseurl}}/developer_guide/platform_integration_guides/web/content_cards/multiple_feeds/)
 * [Multiple Feeds for Android SDK]({{site.baseurl}}/developer_guide/platform_integration_guides/android/content_cards/multiple_feeds/)
@@ -90,5 +94,4 @@ You can separate your Content Cards into multiple feeds based on categories. For
 [2]: {% image_buster /assets/img_archive/content-cards-in-canvas-single-channel.png %}
 [3]: {% image_buster /assets/img_archive/content-cards-in-canvas-multiple-channels.png %}
 [4]: {% image_buster /assets/img_archive/content-cards-in-canvas-analytics.png %}
-[5]: {{site.baseurl}}/user_guide/message_building_by_channel/content_cards/reporting/#IAM-Reporting
 [6]: {{site.baseurl}}/user_guide/data_and_analytics/report_metrics/

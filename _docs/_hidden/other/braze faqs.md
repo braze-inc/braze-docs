@@ -6,7 +6,7 @@ permalink: /braze_faqs/
 
 # Braze FAQs
 
-Appboy has become Braze. The word braze means to bond, to unite, or to join with considerable strength. Renaming our company to Braze is a representation of the strong, unwavering connection that our technology creates between people and the brands they love.
+Appboy has become Braze. The word Braze means to bond, to unite, or to join with considerable strength. Renaming our company to Braze is a representation of the strong, unwavering connection that our technology creates between people and the brands they love.
 
 As we move over to Braze, you have questions – and we have answers. Check out our FAQs below.
 

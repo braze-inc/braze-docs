@@ -1,19 +1,19 @@
 ---
 nav_title: "ETL Event Pipeline Setup"
 page_order: 2
-description: "This partner page offers an example set up for a Email Clicks query to reference when setting up your own queries."
+description: "This partner page offers an example set up for an Email Clicks query to reference when setting up your own queries."
 page_type: partner
 ---
 
 # Sample Queries
 
->  This partner page offers an example set up for a Email Clicks query to reference when setting up your own queries.
+>  This partner page offers an example set up for an Email Clicks query to reference when setting up your own queries.
 
-You can use this Email Clicks query to analyze the interactions with specific emails in your Braze Campaigns and Canvases.
+You can use this Email Clicks query to analyze the interactions with specific emails in your Braze campaigns and Canvases.
 
 ## Set Up this Query
 
-Create a database for `BRAZE`, then create database if none exists for `BRAZE_CURRENTS;`:
+Create a database for `BRAZE`, then create a database if none exists for `BRAZE_CURRENTS;`:
 
 ```sql
 use schema BRAZE_CURRENTS.public;

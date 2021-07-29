@@ -1,10 +1,14 @@
 ---
-nav_title: Amp Support
+nav_title: AMP Support
 platform: Web
 page_order: 5
 
+page_type: reference
+description: "This reference article describes how to integrate Braze on an AMP page."
+
 ---
-# Amp Support
+
+# AMP Support
 
 **This section is NOT a necessary integration step unless you're trying to integrate Braze on an AMP page.**
 

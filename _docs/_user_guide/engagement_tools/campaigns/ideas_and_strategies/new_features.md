@@ -4,9 +4,15 @@ platform: Campaigns
 subplatform: Ideas and Strategies
 page_order: 7
 
-tools: campaigns
 page_type: reference
 description: "This reference article discusses how to keep your users knowledgeable and excited about when you release new features or versions."
+tool: Campaigns
+platform: 
+- iOS
+- Android
+channel:
+- in-app messages
+- content cards
 ---
 # Feature Awareness and New App Version
 
@@ -24,7 +30,7 @@ Braze SDKs automatically track a user's _most recent_ app version. These version
 
 ![App Version Filter][1]
 
-#### App Version Number (new)
+### App Version Number (new)
 
 Use the _App Version Number_ filter to segment users by the app's version/build number. 
 
@@ -32,13 +38,33 @@ This filter supports numerical comparisons to target a range of app versions. Fo
 
 This new filter can replace the legacy "App Version Name" filter which would require explicitly listing each older version or using a regular expression.
 
-Values for this filter are collected starting with Braze Android SDK v3.6.0+ and iOS SDK v3.21.0+.
+#### SDK requirements
+
+Values for this filter are collected starting with Braze Android SDK v3.6.0+ and iOS SDK v3.21.0+. Even though this filter has SDK requirements, you will still be able to target users who are on lower (older) versions of your app using this feature!
 
 For Android, this version number is based on the [Package Long Version Code][9] for the app.
 
 For iOS, this version number is based on the [Short Version String][8] for the app.
 
-#### App Version Name
+{% alert tip %}
+This filter will populate values once users upgrade their apps to the supported Braze SDK Versions. Until then, the filter won't show any versions when selected.
+{% endalert %}
+
+#### Example Scenarios
+
+In the following scenario, let's assume that you first upgraded to the Braze SDKs which supports this filter in version `2.0.0` of your app.
+
+Once Braze receives data from version 2.0.0 of your app, you can target users below or above this version.
+
+| Filter  | User's App Version  | Result |
+:------------- | :----------- | :---------|
+| _Less than 2.0.0_ | 1.0.0 | User is in the segment, even though their Braze SDK did not support the App Version Number filter |
+| _Greater than 2.0.0_ | 2.5.1 | This user, and all future installs will be in the segment |
+| _Greater than 2.0.0_ | 1.9.9 | User is not in the segment |
+| _Less than or equal to 2.0.0_ | 3.0.1 | User is not in the segment |
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
+
+### App Version Name
 
 Use the _App Version Name_ filter to segment users by the app's user-facing version name. 
 
@@ -66,7 +92,7 @@ For feature awareness campaigns, timing is also key.  Onboarding should familiar
 
 ### Use Non-intrusive Channels
 
-Because they are relatively intrusive, push notifications and emails that ask users to update can come off as needy if sent too often. Be sure to use a multi-channel strategy when making your request, focusing on in-app channels if possible. [In-app messages][5] and [Content Cards][6] cards are less disruptive and easily ignored if the user doesn’t wish to update immediately. Be sure to include deep links to the appropriate app store. Simple in-app messages pointing out new features can be a great way to expose users to new content without getting in their way and cluttering them with messages.
+Because they are relatively intrusive, push notifications and emails that ask users to update can come off as needy if sent too often. Be sure to use a multichannel strategy when making your request, focusing on in-app channels if possible. [In-app messages][5] and [Content Cards][6] cards are less disruptive and easily ignored if the user doesn’t wish to update immediately. Be sure to include deep links to the appropriate app store. Simple in-app messages pointing out new features can be a great way to expose users to new content without getting in their way and cluttering them with messages.
 
 
 [1]: {% image_buster /assets/img_archive/new_app_version.png %}

@@ -4,6 +4,10 @@ nav_title: Segments
 layout: dev_guide
 guide_top_header: "Segments Help Articles"
 
+page_type: landing
+description: "This landing page is home to help articles related to common Segments issues."
+tool: Segments
+no_index: true
 guide_menu_title: ""
 guide_menu_list:
   - name: Filter Options Changed

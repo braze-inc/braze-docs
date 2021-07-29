@@ -26,18 +26,13 @@ Use the endpoints below to update email templates on the Braze dashboard. You ca
 
 All fields other than the `email_template_id` are optional, but you must specify at least one field to update.
 
-{% apiref swagger %}https://www.braze.com/docs/api/interactive/#/Email%20Templates/UpdateEmailTemplate {% endapiref %}
-{% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#680315e8-32d4-4a3d-81b6-0085a91b9cdc {% endapiref %}
-
-{% alert important %}
-__Looking for the `api_key` parameter?__<br>As of May 2020, Braze has changed how we read API keys to be more secure. Now API keys must be passed as a request header, please see `YOUR_REST_API_KEY` within the __Example Request__ below.<br><br>Braze will continue to support the `api_key` being passed through the request body and URL parameters, but will eventually be sunset. Please update your API calls accordingly.
-{% endalert %}
+{% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#afb25494-3350-458d-932d-5bf4220049fa {% endapiref %}
 
 ## Request Body
 
 ```
 Content-Type: application/json
-Authorization: Bearer YOUR_REST_API_KEY
+Authorization: Bearer YOUR-REST-API-KEY
 ```
 
 ```json
@@ -49,32 +44,31 @@ Authorization: Bearer YOUR_REST_API_KEY
   "plaintext_body": (optional, string) a plaintext version of the email template body,
   "preheader": (optional, string) the email preheader used to generate previews in some clients,
   "tags": (optional, array of Strings) Tags must already exist
+  "should_inline_css": (optional, Boolean) One of 'true' or 'false' is expected
 }
 ```
 
-### Request Parameters
+## Request Parameters
 
 | Parameter | Required | Data Type | Description |
 | --------- | ---------| --------- | ----------- |
-|`email_template_id`| Required |String|Your email template's API Identifier.|
-|`template_name`|Optional|String|The name of your email template|
-|`subject`|Optional|String|The email template subject line|
-|`body`|Optional|String|The email template body that may include HTML|
-|`plaintext_body`|Optional|String|A plaintext version of the email template body|
-|`preheader`|Optional|String|The email preheader used to generate previews in some clients|
-|`tags`|Optional|String|Tags must already exist|
+|`email_template_id`| Required |String|Your [email template's API identifier]({{site.baseurl}}/api/identifier_types/).|
+|`template_name`|Optional|String|Name of your email template.|
+|`subject`|Optional|String|Email template subject line.|
+|`body`|Optional|String|Email template body that may include HTML.|
+|`plaintext_body`|Optional|String|A plaintext version of the email template body.|
+|`preheader`|Optional|String|Email preheader used to generate previews in some clients.|
+|`tags`|Optional|String|[Tags]({{site.baseurl}}/user_guide/administrative/app_settings/manage_app_group/tags/) must already exist.|
+|`should_inline_css`|Optional|Boolean|Enables or disables the `inline_css` feature per template. If not provided, Braze will use the default setting for the AppGroup. One of `true` or `false` is expected.|
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
 
-### Request Components
-- [Template Identifier]({{site.baseurl}}/api/identifier_types/)
-
-### Request Example
+## Request Example
 ```
 curl --location --request POST 'https://rest.iad-01.braze.com/templates/email/update' \
 --header 'Content-Type: application/json' \
---header 'Authorization: Bearer YOUR_REST_API_KEY' \
+--header 'Authorization: Bearer YOUR-REST-API-KEY' \
 --data-raw '{
-  "email_template_id": "ab1cde55-fg47-4h3i-8297-158jk3l2466m",
+  "email_template_id": "email_template_id",
   "template_name": "Weekly Newsletter",
   "subject": "This Week'\''s Styles",
   "body": "Check out this week'\''s digital lookbook to inspire your outfits. Take a look at https://www.braze.com/",
@@ -84,7 +78,7 @@ curl --location --request POST 'https://rest.iad-01.braze.com/templates/email/up
 }'
 ```
 
-### Possible Errors
+## Possible Errors
 - `Template Name is required`
 
 - `Tags must be an array.`
@@ -92,5 +86,8 @@ curl --location --request POST 'https://rest.iad-01.braze.com/templates/email/up
 - `All Tags must be Strings.`
 
 - `Some Tags could not be found.`
+
+- `"Invalid value for 'should_inline_css'.  One of 'true' or 'false' was expected"` - 'should_inline_css' accepts boolean characters only.  The error likely is being shown as the value is being sent as a 'string'.
+
 
 {% endapi %}

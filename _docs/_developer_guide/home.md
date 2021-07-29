@@ -10,7 +10,7 @@ guide_featured_list:
   fa_icon: fab fa-android
   link: /docs/developer_guide/platform_integration_guides/android/initial_sdk_setup/android_sdk_integration/
 - name: iOS
-  link: /docs/developer_guide/platform_integration_guides/ios/
+  link: /docs/developer_guide/platform_integration_guides/ios/initial_sdk_setup/overview/
   fa_icon: fab fa-apple
 - name: Web
   link: /docs/developer_guide/platform_integration_guides/web/initial_sdk_setup/
@@ -25,7 +25,7 @@ guide_menu_list:
     link: /docs/developer_guide/platform_integration_guides/cordova/ios/initial_sdk_setup/
     fa_icon: fab fa-apple
   - name: Fire OS
-    link: /docs/developer_guide/platform_integration_guides/fireos/initial_sdk_setup/
+    link: /docs/developer_guide/platform_integration_guides/fireos/initial_sdk_setup/android_sdk_integration/
     fa_icon: fab fa-amazon
   - name: ReactNative Android and FireOS
     link: /docs/developer_guide/platform_integration_guides/react_native/android_and_fireos/initial_sdk_setup/
@@ -45,9 +45,6 @@ guide_menu_list:
   - name: Windows Universal
     link: /docs/developer_guide/platform_integration_guides/windows_universal/initial_sdk_setup/
     fa_icon: fab fa-windows
-  - name: Zapier/Wordpress
-    link: /docs/partners/channel_extensions/workflow_automation/zapier_integration/
-    fa_icon: fab fa-wordpress
   - name: Xamarin Android and Fire OS
     link: /docs/developer_guide/platform_integration_guides/xamarin/android_and_fireos/initial_sdk_setup/
     fa_icon: fab fa-android
@@ -60,6 +57,12 @@ guide_menu_list:
   - name: Flutter Android and iOS
     link: /docs/developer_guide/platform_integration_guides/flutter/preview/
     fa_icon: fas fa-mobile
+  - name: Smart TVs
+    link: /docs/developer_guide/platform_integration_guides/web/smart_tvs/
+    fa_icon: fas fa-tv
+  - name: Unreal Engine
+    link: /docs/developer_guide/platform_integration_guides/unreal_engine/initial_sdk_setup/
+    fa_icon: fas fa-gamepad
 
 guide_footer_header: " "
 guide_footer_text: " "

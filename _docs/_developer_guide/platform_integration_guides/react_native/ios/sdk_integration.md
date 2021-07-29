@@ -3,7 +3,12 @@ nav_title: Initial SDK Setup
 platform: React Native
 subplatform: iOS
 page_order: 0
+
+page_type: reference
+description: "This article covers initial SDK setup steps for iOS apps using React Native."
+
 ---
+
 # Initial SDK Setup
 
 Installing the Braze SDK will provide you with analytics functionality, as well as push and in-app messages.
@@ -28,7 +33,7 @@ Installing the Braze SDK will provide you with analytics functionality, as well 
 1.  Complete your [iOS SDK integration][3].  You must pass your Braze API key to the SDK in `startWithApiKey` in your App delegate's `didFinishLaunchingWithOptions:` method. While custom endpoints are no longer assigned by Braze, if you have been given a pre-existing custom endpoint, you need to set up your custom endpoint in your `Info.plist` file.
 2.  When you need to make Braze calls from JavaScript, use the following declaration to import the JavaScript module:
 
-```
+```javascript
 const ReactAppboy = require('react-native-appboy-sdk');
 ```
 
@@ -36,10 +41,21 @@ const ReactAppboy = require('react-native-appboy-sdk');
 
 For deep links to work on iOS from a cold start, you will need to add the following to your App delegate file's `didFinishLaunchingWithOptions` method:
 
-```
+{% tabs %}
+{% tab OBJECTIVE-C %}
+```objc
 [[AppboyReactUtils sharedInstance] populateInitialUrlFromLaunchOptions:launchOptions];
 ```
+{% endtab %}
+{% tab swift %}
+```swift
+AppboyReactUtils.sharedInstance()?.populateInitialUrl(fromLaunchOptions: launchOptions)
+```
+{% endtab %}
+{% endtabs %}
+
+
 
 [1]: {{site.baseurl}}/developer_guide/platform_integration_guides/ios/initial_sdk_setup/cocoapods/#cocoapods-integration
 [2]: {{site.baseurl}}/developer_guide/platform_integration_guides/ios/advanced_use_cases/manual_sdk_integration/
-[3]: {{site.baseurl}}/developer_guide/platform_integration_guides/ios/initial_sdk_setup/
+[3]: {{site.baseurl}}/developer_guide/platform_integration_guides/ios/initial_sdk_setup/overview/

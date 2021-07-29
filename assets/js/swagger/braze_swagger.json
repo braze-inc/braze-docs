@@ -2,22 +2,20 @@
   "openapi": "3.0.0",
   "info": {
     "title": "Braze API Endpoints",
-    "description": "The collection below list interactive documentation with prewritten examples for all of Braze's API endpoints. For more detailed explanations of our API, please read <a href=\"/docs/developer_guide/rest_api/basics\">our API overview</a>. You can also check out <a href=\"/docs/developer_guide/rest_api/postman_collection/#what-is-postman\">our Postman Collection</a>.",
+    "description": "The collection below list interactive documentation with prewritten examples for all of Braze's API endpoints. Please note that this documentation is currently out of date. For more detailed explanations of our API, please read <a href=\"/docs/developer_guide/rest_api/basics\">our API overview</a>. You can also check out <a href=\"/docs/developer_guide/rest_api/postman_collection/#what-is-postman\">our Postman Collection</a>.",
     "version": "1.0"
   },
   "components": {
     "securitySchemes": {
-      "ApiKeyAuth": {
-        "description": "For get request. For post, place inline in body",
-        "type": "apiKey",
-        "in": "query",
-        "name": "api_key"
+      "bearerAuth":{
+        "type": "http",
+        "scheme" : "bearer"
       }
     }
   },
   "security": [
     {
-      "ApiKeyAuth": []
+      "bearerAuth": []
     }
   ],
   "servers": [
@@ -54,9 +52,9 @@
         ],
         "summary": "User Export - User IDs Example",
         "description": "Example of exporting user data documents by specifying individual user IDs using the /users/export/ids endpoint. This endpoint allows you to export data from any user profile by specifying a form of user identifier. Up to 75 external_ids or user_aliases can be included in a single request. Should you want to specify device_id or email_address, only one of either identifier can be included per request.",
-        "operationId": "User export  user ids example",
+        "operationId": "User export user ids example",
         "requestBody": {
-          "description": "Exports the details about the user with the specified exterenal ID",
+          "description": "Exports the details about the user with the specified external ID",
           "required": true,
           "content": {
             "application/json": {
@@ -72,7 +70,11 @@
           }
         },
         "deprecated": false,
-        "security": [],
+        "security": [
+          {
+            "bearerAuth": []
+          }
+        ],
         "x-operation-settings": {
           "CollectParameters": false,
           "AllowDynamicQueryParameters": false,
@@ -109,7 +111,11 @@
           }
         },
         "deprecated": false,
-        "security": [],
+        "security": [
+          {
+            "bearerAuth": []
+          }
+        ],
         "x-operation-settings": {
           "CollectParameters": false,
           "AllowDynamicQueryParameters": false,
@@ -169,7 +175,7 @@
         "deprecated": false,
         "security": [
           {
-            "ApiKeyAuth": []
+            "bearerAuth": []
           }
         ],
         "x-operation-settings": {
@@ -186,7 +192,7 @@
           "Export"
         ],
         "summary": "Segment Export - Analytics Example",
-        "description": "Example of using the /segments/data_series endpoint to return daily time-series data about the membership size of a given segment. The parameters \"api_key\" and \"segment_id\" (segment api identifier) are required. Length is the max number of days before ending_at to include in the returned series; must be between 1 and 100 inclusive, and \"ending_at\" must be in DateTime ISO 8601 string format.",
+        "description": "Example of using the /segments/data_series endpoint to return daily time-series data about the membership size of a given segment. The parameter \"segment_id\" (segment api identifier) is required. Length is the max number of days before ending_at to include in the returned series; must be between 1 and 100 inclusive, and \"ending_at\" must be in DateTime ISO 8601 string format.",
         "operationId": "Segment export  analytics example",
         "parameters": [
           {
@@ -237,7 +243,7 @@
         "deprecated": false,
         "security": [
           {
-            "ApiKeyAuth": []
+            "bearerAuth": []
           }
         ],
         "x-operation-settings": {
@@ -280,7 +286,7 @@
         "deprecated": false,
         "security": [
           {
-            "ApiKeyAuth": []
+            "bearerAuth": []
           }
         ],
         "x-operation-settings": {
@@ -355,7 +361,7 @@
         "deprecated": false,
         "security": [
           {
-            "ApiKeyAuth": []
+            "bearerAuth": []
           }
         ],
         "x-operation-settings": {
@@ -425,7 +431,7 @@
         "deprecated": false,
         "security": [
           {
-            "ApiKeyAuth": []
+            "bearerAuth": []
           }
         ],
         "x-operation-settings": {
@@ -470,7 +476,7 @@
         "deprecated": false,
         "security": [
           {
-            "ApiKeyAuth": []
+            "bearerAuth": []
           }
         ],
         "x-operation-settings": {
@@ -545,7 +551,7 @@
         "deprecated": false,
         "security": [
           {
-            "ApiKeyAuth": []
+            "bearerAuth": []
           }
         ],
         "x-operation-settings": {
@@ -590,7 +596,7 @@
         "deprecated": false,
         "security": [
           {
-            "ApiKeyAuth": []
+            "bearerAuth": []
           }
         ],
         "x-operation-settings": {
@@ -699,7 +705,7 @@
         "deprecated": false,
         "security": [
           {
-            "ApiKeyAuth": []
+            "bearerAuth": []
           }
         ],
         "x-operation-settings": {
@@ -808,7 +814,7 @@
         "deprecated": false,
         "security": [
           {
-            "ApiKeyAuth": []
+            "bearerAuth": []
           }
         ],
         "x-operation-settings": {
@@ -876,7 +882,7 @@
         "deprecated": false,
         "security": [
           {
-            "ApiKeyAuth": []
+            "bearerAuth": []
           }
         ],
         "x-operation-settings": {
@@ -944,7 +950,7 @@
         "deprecated": false,
         "security": [
           {
-            "ApiKeyAuth": []
+            "bearerAuth": []
           }
         ],
         "x-operation-settings": {
@@ -1012,7 +1018,7 @@
         "deprecated": false,
         "security": [
           {
-            "ApiKeyAuth": []
+            "bearerAuth": []
           }
         ],
         "x-operation-settings": {
@@ -1080,7 +1086,7 @@
         "deprecated": false,
         "security": [
           {
-            "ApiKeyAuth": []
+            "bearerAuth": []
           }
         ],
         "x-operation-settings": {
@@ -1178,7 +1184,7 @@
         "deprecated": false,
         "security": [
           {
-            "ApiKeyAuth": []
+            "bearerAuth": []
           }
         ],
         "x-operation-settings": {
@@ -1224,7 +1230,7 @@
         "deprecated": false,
         "security": [
           {
-            "ApiKeyAuth": []
+            "bearerAuth": []
           }
         ],
         "x-operation-settings": {
@@ -1329,7 +1335,7 @@
         "deprecated": false,
         "security": [
           {
-            "ApiKeyAuth": []
+            "bearerAuth": []
           }
         ],
         "x-operation-settings": {
@@ -1375,7 +1381,7 @@
         "deprecated": false,
         "security": [
           {
-            "ApiKeyAuth": []
+            "bearerAuth": []
           }
         ],
         "x-operation-settings": {
@@ -1467,7 +1473,7 @@
         "deprecated": false,
         "security": [
           {
-            "ApiKeyAuth": []
+            "bearerAuth": []
           }
         ],
         "x-operation-settings": {
@@ -1559,7 +1565,7 @@
         "deprecated": false,
         "security": [
           {
-            "ApiKeyAuth": []
+            "bearerAuth": []
           }
         ],
         "x-operation-settings": {
@@ -1576,7 +1582,7 @@
           "User Data"
         ],
         "summary": "User Track - Attributes Example",
-        "description": "Example of submitting user attributes with all of the different data types we support to the /users/track endpoint. An API request with any fields in the Attributes Object will create or update an attribute of that name with the given value on the specified user profile. To remove a profile attribute, set it to null. Some fields, such as external_id and user_alias, cannot be removed once added to a user profile. If you wish to add or remove custom attributes from an array, use the formatting \"my_array_custom_attribute:{\"add or remove\": [\"value you are adding or removing\"]}. The parameter my_custom_attributes can be stored as dates (ISO 8601 format), strings, floats, boolean, integers, and array.",
+        "description": "Example of submitting user attributes with all of the different data types we support to the /users/track endpoint. An API request with any fields in the Attributes Object will create or update an attribute of that name with the given value on the specified user profile. To remove a profile attribute, set it to null. Some fields, such as external_ids and user_alias, cannot be removed once added to a user profile. If you wish to add or remove custom attributes from an array, use the formatting \"my_array_custom_attribute:{\"add or remove\": [\"value you are adding or removing\"]}. The parameter my_custom_attributes can be stored as dates (ISO 8601 format), strings, floats, boolean, integers, and array.",
         "operationId": "User track – attributes example",
         "requestBody": {
           "description": "This endpoint can be used to record custom events, user attributes, and purchases for users.",
@@ -1595,7 +1601,11 @@
           }
         },
         "deprecated": false,
-        "security": [],
+        "security": [
+          {
+            "bearerAuth": []
+          }
+        ],
         "x-operation-settings": {
           "CollectParameters": false,
           "AllowDynamicQueryParameters": false,
@@ -1604,13 +1614,13 @@
         }
       }
     },
-    "/users/track#events": {
+    "/users/track/events": {
       "post": {
         "tags": [
           "User Data"
         ],
         "summary": "User Track - Events Example",
-        "description": "Example of submitting user attributes with all of the different data types we support to the /users/track endpoint. An API request with any fields in the Attributes Object will create or update an attribute of that name with the given value on the specified user profile. To remove a profile attribute, set it to null. Some fields, such as external_id and user_alias cannot be removed once added to a user profile. If you wish to add or remove custom attributes from an array use the formatting \"my_array_custom_attribute:{\"add or remove\": [\"value you are adding or removing\"]}.The parameter my_custom_attributes can be stored as dates (ISO 8601 format), strings, floats, boolean, integers, and array.",
+        "description": "Example of submitting user attributes with all of the different data types we support to the /users/track endpoint. An API request with any fields in the Attributes Object will create or update an attribute of that name with the given value on the specified user profile. To remove a profile attribute, set it to null. Some fields, such as external_ids and user_alias cannot be removed once added to a user profile. If you wish to add or remove custom attributes from an array use the formatting \"my_array_custom_attribute:{\"add or remove\": [\"value you are adding or removing\"]}.The parameter my_custom_attributes can be stored as dates (ISO 8601 format), strings, floats, boolean, integers, and array.",
         "operationId": "User track – events example",
         "requestBody": {
           "description": "This endpoint can be used to record custom events, user attributes, and purchases for users.",
@@ -1629,7 +1639,11 @@
           }
         },
         "deprecated": false,
-        "security": [],
+        "security": [
+          {
+            "bearerAuth": []
+          }
+        ],
         "x-operation-settings": {
           "CollectParameters": false,
           "AllowDynamicQueryParameters": false,
@@ -1644,7 +1658,7 @@
           "User Data"
         ],
         "summary": "User Delete Example",
-        "description": "Example of a request to delete a user profile from the specified app group using the /users/delete endpoint. Either \"external_ids\" OR \"braze_ids\" are accepted, but only one can be (if both \"external_id\" and \"braze_id\" are provided, then there will be an error)",
+        "description": "Example of a request to delete a user profile from the specified app group using the /users/delete endpoint. Either \"external_ids\" OR \"braze_ids\" are accepted, but only one can be (if both \"external_ids\" and \"braze_id\" are provided, then there will be an error)",
         "operationId": "UserDeleteExample",
         "requestBody": {
           "description": "Exports the details about the user with the specified external ID.",
@@ -1663,7 +1677,11 @@
           }
         },
         "deprecated": false,
-        "security": [],
+        "security": [
+          {
+            "bearerAuth": []
+          }
+        ],
         "x-operation-settings": {
           "CollectParameters": false,
           "AllowDynamicQueryParameters": false,
@@ -1678,7 +1696,7 @@
           "User Data"
         ],
         "summary": "New User Alias Request Example",
-        "description": "Example of creating a new user alias for an existing identified user. You can add up to 50 user aliases per request. The parameters api_key and user_aliases are required. User_aliases are an array of New User Alias Object.",
+        "description": "Example of creating a new user alias for an existing identified user. You can add up to 50 user aliases per request. The parameter user_aliases is required. User_aliases are an array of New User Alias Object.",
         "operationId": "NewUserAliasRequestExample",
         "requestBody": {
           "description": "Use this endpoint to create new user aliases for existing identified users.",
@@ -1697,7 +1715,11 @@
           }
         },
         "deprecated": false,
-        "security": [],
+        "security": [
+          {
+            "bearerAuth": []
+          }
+        ],
         "x-operation-settings": {
           "CollectParameters": false,
           "AllowDynamicQueryParameters": false,
@@ -1716,22 +1738,9 @@
         "operationId": "GetUsersSubscriptionGroups",
         "parameters": [
           {
-            "name": "api_key",
+            "name": "external_ids",
             "in": "query",
-            "description": "Your App Group REST API key as found in your Developer Console.",
-            "required": true,
-            "style": "form",
-            "explode": true,
-            "schema": {
-              "type": "string",
-              "example": "123a45b6-cd78-9e01-g234-hi56j7k8l9m0"
-            },
-            "example": "123a45b6-cd78-9e01-g234-hi56j7k8l9m0"
-          },
-          {
-            "name": "external_id",
-            "in": "query",
-            "description": "The External Id (`external_id`) of the user (must include at least one and at most 50 `external_ids`).",
+            "description": "The External Id (`external_ids`) of the user (must include at least one and at most 50 `external_ids`).",
             "required": true,
             "style": "form",
             "explode": true,
@@ -1791,7 +1800,7 @@
         "deprecated": false,
         "security": [
           {
-            "ApiKeyAuth": []
+            "bearerAuth": []
           }
         ],
         "x-operation-settings": {
@@ -1812,20 +1821,7 @@
         "operationId": "GetUsersSubscriptionStatus",
         "parameters": [
           {
-            "name": "api_key",
-            "in": "query",
-            "description": "Your App Group REST API key as found in your Developer Console.",
-            "required": true,
-            "style": "form",
-            "explode": true,
-            "schema": {
-              "type": "string",
-              "example": "123a45b6-cd78-9e01-g234-hi56j7k8l9m0"
-            },
-            "example": "123a45b6-cd78-9e01-g234-hi56j7k8l9m0"
-          },
-          {
-            "name": "external_id",
+            "name": "external_ids",
             "in": "query",
             "description": "The External Id (`external_id`) of the user (must include at least one and at most 50 `external_ids`). Either the user's `external_id` or the `email` is required.",
             "required": false,
@@ -1872,7 +1868,7 @@
         "deprecated": false,
         "security": [
           {
-            "ApiKeyAuth": []
+            "bearerAuth": []
           }
         ],
         "x-operation-settings": {
@@ -1892,10 +1888,9 @@
         "description": "Use the endpoints below to update the subscription state of a user in your Braze account. You can access a subscription groups `subscription_group_id` by navigating to it on the Subscription Group page.",
         "operationId": "SetUsersSubscriptionStatus",
         "requestBody": {
-          "api_key": "123a45b6-cd78-9e01-g234-hi56j7k8l9m0",
           "subscription_group_id": "pto81fff-734f-80e5-b7b2-b880562888ww",
           "subscription_state": "unsubscribed",
-          "external_id": "external_user_id",
+          "external_ids": "external_user_id",
           "email": "your.user@email.com",
         "description": "Use the following request body below to set user subscruption statuses. Be sure to adhere to the defined parameters outlined in the Modal tab.",
           "required": true,
@@ -1913,7 +1908,11 @@
           }
         },
         "deprecated": false,
-        "security": [],
+        "security": [
+          {
+            "bearerAuth": []
+          }
+        ],
         "x-operation-settings": {
           "CollectParameters": false,
           "AllowDynamicQueryParameters": false,
@@ -1947,7 +1946,11 @@
           }
         },
         "deprecated": false,
-        "security": [],
+        "security": [
+          {
+            "bearerAuth": []
+          }
+        ],
         "x-operation-settings": {
           "CollectParameters": false,
           "AllowDynamicQueryParameters": false,
@@ -1981,7 +1984,11 @@
           }
         },
         "deprecated": false,
-        "security": [],
+        "security": [
+          {
+            "bearerAuth": []
+          }
+        ],
         "x-operation-settings": {
           "CollectParameters": false,
           "AllowDynamicQueryParameters": false,
@@ -1996,7 +2003,7 @@
           "Email Sync"
         ],
         "summary": "Changing Email Subscription Status Example",
-        "description": "Example of using the /email/status endpoint to change user email subscription state. The body of the request needs to include your \"api_key\", the \"email\" address to be changed, and a valid \"subscription_state\": either \"subscribed\", \"unsubscribed\", or \"opted_in\".",
+        "description": "Example of using the /email/status endpoint to change user email subscription state. The body of the request needs to include your \"email\" address to be changed, and a valid \"subscription_state\": either \"subscribed\", \"unsubscribed\", or \"opted_in\".",
         "operationId": "ChangingEmailSubscriptionStatusExample",
         "requestBody": {
           "description": "This endpoint allows you to set the email subscription state for your users. Users can be “opted_in”, “unsubscribed”, or “subscribed” (not specifically opted in or out).",
@@ -2015,7 +2022,11 @@
           }
         },
         "deprecated": false,
-        "security": [],
+        "security": [
+          {
+            "bearerAuth": []
+          }
+        ],
         "x-operation-settings": {
           "CollectParameters": false,
           "AllowDynamicQueryParameters": false,
@@ -2033,19 +2044,6 @@
         "description": "Example of using the /email/unsubscribed endpoint to return emails that have unsubscribed during the time period from \"start_date\" to \"end_date\". You must provide either an email or a start_date and an end_date. Additional parameters can be passed to determine how many records should be returned (\"limit\") or where we should begin the list of unsubscribed (\"offset\"). If there are more than \"limit\" number of records to return, you should call this endpoint again, adding to the \"offset\" parameter until you are returned less than \"limit\" number of unsubscribe records (\"limit\"defaults at 100 and can be no higher than 500).",
         "operationId": "QueryingAllEmailUnsubscribesExample",
         "parameters": [
-          {
-            "name": "api_key",
-            "in": "query",
-            "description": "Your App Group REST API key as found in your Developer Console.",
-            "required": true,
-            "style": "form",
-            "explode": true,
-            "schema": {
-              "type": "string",
-              "example": "123a45b6-cd78-9e01-g234-hi56j7k8l9m0"
-            },
-            "example": "123a45b6-cd78-9e01-g234-hi56j7k8l9m0"
-          },
           {
             "name": "start_date",
             "in": "query",
@@ -2125,7 +2123,7 @@
         "deprecated": false,
         "security": [
           {
-            "ApiKeyAuth": []
+            "bearerAuth": []
           }
         ],
         "x-operation-settings": {
@@ -2145,7 +2143,6 @@
         "description": "Use the endpoints below to create email templates in your Braze account. These templates will be available on the Templates and Media page. The response from this endpoint will include a field for email_template_id, which can be used to update the template in subsequent API calls.",
         "operationId": "CreateEmailTemplate",
         "requestBody": {
-          "api_key": "123a45b6-cd78-9e01-g234-hi56j7k8l9m0",
           "template_name": "descriptive_email_template_name_here",
           "subject": "Your eye-catching email template subject here.",
           "body": "This is where you'll put the body of your email template - you can even include HTML!",
@@ -2169,7 +2166,7 @@
         "deprecated": false,
         "security": [
           {
-            "ApiKeyAuth": []
+            "bearerAuth": []
           }
         ],
         "x-operation-settings": {
@@ -2186,10 +2183,9 @@
           "Email Templates"
         ],
         "summary": "Update an Email Template",
-        "description": "Use the endpoints below to update email templates on the Braze dashboard. You can access an email template’s `email_template_id` by navigating to it on the Templates and Media page. The email template creation API endpoint will also return an `email_template_id` reference. All fields other than the `api_key` and `email_template_id` are optional, but you must specify at least one field to update.",
+        "description": "Use the endpoints below to update email templates on the Braze dashboard. You can access an email template’s `email_template_id` by navigating to it on the Templates and Media page. The email template creation API endpoint will also return an `email_template_id` reference. All fields other than `email_template_id` are optional, but you must specify at least one field to update.",
         "operationId": "UpdateEmailTemplate",
         "requestBody": {
-            "api_key": "123a45b6-cd78-9e01-g234-hi56j7k8l9m0",
             "email_template_id": "ab1cde55-fg47-4h3i-8297-158jk3l2466m",
             "template_name": "email_template_name",
             "subject": "Welcome to my updated email template!",
@@ -2212,7 +2208,11 @@
           }
         },
         "deprecated": false,
-        "security": [],
+        "security": [
+          {
+            "bearerAuth": []
+          }
+        ],
         "x-operation-settings": {
           "CollectParameters": false,
           "AllowDynamicQueryParameters": false,
@@ -2230,19 +2230,6 @@
         "description": "Use the endpoints below to get a list of available templates in your Braze account.",
         "operationId": "ListEmailTemplates",
         "parameters": [
-          {
-            "name": "api_key",
-            "in": "query",
-            "description": "Your App Group REST API key as found in your Developer Console.",
-            "required": true,
-            "style": "form",
-            "explode": true,
-            "schema": {
-              "type": "string",
-              "example": "123a45b6-cd78-9e01-g234-hi56j7k8l9m0"
-            },
-            "example": "123a45b6-cd78-9e01-g234-hi56j7k8l9m0"
-          },
           {
             "name": "modified_after",
             "in": "query",
@@ -2306,7 +2293,7 @@
         "deprecated": false,
         "security": [
           {
-            "ApiKeyAuth": []
+            "bearerAuth": []
           }
         ],
         "x-operation-settings": {
@@ -2326,19 +2313,6 @@
         "description": "Use to get information on your available email templates.",
         "operationId": "SeeEmailTemplateInformation",
         "parameters": [
-          {
-            "name": "api_key",
-            "in": "query",
-            "description": "Your App Group REST API key as found in your Developer Console.",
-            "required": true,
-            "style": "form",
-            "explode": true,
-            "schema": {
-              "type": "string",
-              "example": "123a45b6-cd78-9e01-g234-hi56j7k8l9m0"
-            },
-            "example": "123a45b6-cd78-9e01-g234-hi56j7k8l9m0"
-          },
           {
             "name": "email_template_id",
             "in": "query",
@@ -2361,7 +2335,7 @@
         "deprecated": false,
         "security": [
           {
-            "ApiKeyAuth": []
+            "bearerAuth": []
           }
         ],
         "x-operation-settings": {
@@ -2378,7 +2352,7 @@
           "Messaging"
         ],
         "summary": "Send Message Immediately Example",
-        "description": "Example of sending a message using Braze's API that is not associated with any campaign. This uses the /messages/send endpoint and can use our API Campaigns (not to be confused with API-Triggered Campaigns) feature to track analytics.",
+        "description": "Example of sending a message using Braze's API that is not associated with any campaign. This uses the /messages/send endpoint and can use our API campaigns (not to be confused with API-triggered campaigns) feature to track analytics.",
         "operationId": "SendMessageImmediatelyExample",
         "requestBody": {
           "description": "The send endpoint allows you to send immediate, ad-hoc messages to designated users.",
@@ -2397,7 +2371,11 @@
           }
         },
         "deprecated": false,
-        "security": [],
+        "security": [
+          {
+            "bearerAuth": []
+          }
+        ],
         "x-operation-settings": {
           "CollectParameters": false,
           "AllowDynamicQueryParameters": false,
@@ -2412,7 +2390,7 @@
           "Messaging"
         ],
         "summary": "Create Scheduled Message Example",
-        "description": "Example of scheduling a message using Braze's API that is not associated with any campaign and will be sent at some point in the future. It is possible to specify future scheduled messages to be sent in users' local time or using our Intelligent Delivery calculated optimal time with the \"in_local_time\" or \"at_optimal_time\" parameters in the \"schedule\" object (\"in_local_time\" is featured in this example). This uses the /messages/schedule/create endpoint and can use our API Campaigns (not to be confused with API-Triggered Campaigns) feature to track analytics. The parameter \"time\" under \"schedule\" is required (DateTime ISO 8601 format).",
+        "description": "Example of scheduling a message using Braze's API that is not associated with any campaign and will be sent at some point in the future. It is possible to specify future scheduled messages to be sent in users' local time or using our Intelligent Delivery calculated optimal time with the \"in_local_time\" or \"at_optimal_time\" parameters in the \"schedule\" object (\"in_local_time\" is featured in this example). This uses the /messages/schedule/create endpoint and can use our API campaigns (not to be confused with API-triggered ampaigns) feature to track analytics. The parameter \"time\" under \"schedule\" is required (DateTime ISO 8601 format).",
         "operationId": "CreateScheduledMessageExample",
         "requestBody": {
           "description": "Use this endpoint to send messages directly from the API.",
@@ -2431,7 +2409,11 @@
           }
         },
         "deprecated": false,
-        "security": [],
+        "security": [
+          {
+            "bearerAuth": []
+          }
+        ],
         "x-operation-settings": {
           "CollectParameters": false,
           "AllowDynamicQueryParameters": false,
@@ -2465,7 +2447,11 @@
           }
         },
         "deprecated": false,
-        "security": [],
+        "security": [
+          {
+            "bearerAuth": []
+          }
+        ],
         "x-operation-settings": {
           "CollectParameters": false,
           "AllowDynamicQueryParameters": false,
@@ -2479,7 +2465,7 @@
         "tags": [
           "Messaging"
         ],
-        "summary": "Send API Triggered Delivery Campaign Example",
+        "summary": "Send API-Triggered Delivery Campaign Example",
         "description": "Example of sending a campaign set up in the dashboard with API-Triggered Delivery. This example specifies a single user in the request with some properties that can be templated into the message using Liquid (e.g. {{api_trigger_properties.${some_property}}} will populate the value of \"some_property\" into the message). Uses the /campaigns/trigger/send endpoint. Either \"external_user_id\" OR \"user_aliases\" is required, requests must only specify one.",
         "operationId": "SendApiTriggeredDeliveryCampaignExample",
         "requestBody": {
@@ -2499,7 +2485,11 @@
           }
         },
         "deprecated": false,
-        "security": [],
+        "security": [
+          {
+            "bearerAuth": []
+          }
+        ],
         "x-operation-settings": {
           "CollectParameters": false,
           "AllowDynamicQueryParameters": false,
@@ -2513,7 +2503,7 @@
         "tags": [
           "Messaging"
         ],
-        "summary": "Create Scheduled API Triggered Campaign Example",
+        "summary": "Create Scheduled API-Triggered Campaign Example",
         "description": "Example of scheduling a future send of a campaign set up in the dashboard with API-Triggered Delivery. It is possible to specify future scheduled messages to be sent in users' local time or using our Intelligent Delivery calculated optimal time with the \"in_local_time\" or \"at_optimal_time\" parameters in the \"schedule\" object (\"in_local_time\" is featured in this example). This example specifies a single user in the request with some properties that can be templated into the message using Liquid (e.g. {{api_trigger_properties.${some_property}}} will populate the value of \"some_property\" into the message). Uses the /campaigns/trigger/schedule/create endpoint.The parameter \"time\" under \"schedule\" is required (DateTime ISO 8601 format). When sending a message to a segment or campaign audience using an API endpoint, Braze requires you to explicitly define whether or not your message is a “broadcast” to a large group of users by including a “broadcast” boolean in the API call. That is, if you intend to send an API message to the entire segment that a campaign or Canvas targets, you must include “broadcast: true” in your API call. If the “broadcast” flag is not set to true and an explicit list of recipients it not provided, the API endpoint will return an error. Similarly, including “broadcast: true” and providing a recipient list will return an error. The “broadcast” flag is required in order to protect against accidental sends to large groups of users. In this example, there is a specific recipient and therefore broadcast does not have to be stated as it will default to false.",
         "operationId": "CreateScheduledApiTriggeredCampaignExample",
         "requestBody": {
@@ -2533,7 +2523,11 @@
           }
         },
         "deprecated": false,
-        "security": [],
+        "security": [
+          {
+            "bearerAuth": []
+          }
+        ],
         "x-operation-settings": {
           "CollectParameters": false,
           "AllowDynamicQueryParameters": false,
@@ -2547,8 +2541,8 @@
         "tags": [
           "Messaging"
         ],
-        "summary": "Update Scheduled API Triggered Campaign Send Example",
-        "description": "Example of updating a scheduled send for an API-Triggered Campaign. Successful requests to /campaigns/trigger/schedule/create will return a \"schedule_id\" within the response. This can be saved for use with this /campaigns/trigger/schedule/update endpoint or the /campaigns/trigger/schedule/delete endpoint. The /campaigns/trigger/schedule/update endpoint can be used to update the scheduled time for a message, message data is changed from within the Braze dashboard.",
+        "summary": "Update Scheduled API-Triggered Campaign Send Example",
+        "description": "Example of updating a scheduled send for an API-triggered campaign. Successful requests to /campaigns/trigger/schedule/create will return a \"schedule_id\" within the response. This can be saved for use with this /campaigns/trigger/schedule/update endpoint or the /campaigns/trigger/schedule/delete endpoint. The /campaigns/trigger/schedule/update endpoint can be used to update the scheduled time for a message, message data is changed from within the Braze dashboard.",
         "operationId": "UpdateScheduledApiTriggeredCampaignSendExample",
         "requestBody": {
           "description": "Use this endpoint to send messages directly from the API.",
@@ -2567,7 +2561,11 @@
           }
         },
         "deprecated": false,
-        "security": [],
+        "security": [
+          {
+            "bearerAuth": []
+          }
+        ],
         "x-operation-settings": {
           "CollectParameters": false,
           "AllowDynamicQueryParameters": false,
@@ -2581,7 +2579,7 @@
         "tags": [
           "Messaging"
         ],
-        "summary": "Send API Triggered Delivery Canvas Example",
+        "summary": "Send API-Triggered Delivery Canvas Example",
         "description": "Example of sending a canvas set up in the dashboard with API-Triggered Delivery. This example specifies a single user in the request with some properties that can be templated into the message using Liquid (e.g. {{api_trigger_properties.${some_property}}} will populate the value of \"some_property\" into the message). Uses the /canvas/trigger/send endpoint. Either \"external_user_id\" OR \"user_aliases\" is required, requests must only specify one. The recipient array may contain up to 75 objects, with each one containing a single \"external_user_id\" string and \"canvas_entry_properties\" object.",
         "operationId": "SendApiTriggeredDeliveryCanvasExample",
         "requestBody": {
@@ -2601,7 +2599,11 @@
           }
         },
         "deprecated": false,
-        "security": [],
+        "security": [
+          {
+            "bearerAuth": []
+          }
+        ],
         "x-operation-settings": {
           "CollectParameters": false,
           "AllowDynamicQueryParameters": false,
@@ -2615,8 +2617,8 @@
         "tags": [
           "Messaging"
         ],
-        "summary": "Create Scheduled API Triggered Canvas Example",
-        "description": "Example of scheduling a future send of a canvas set up in the dashboard with API-Triggered Delivery.The paramters \"api_key\" and \"canvas_id\" are required. You can pass in canvas_entry_properties that will be templated into the messages sent by the first steps of the Canvas. When sending a message to a segment or campaign audience using an API endpoint, Braze requires you to explicitly define whether or not your message is a “broadcast” to a large group of users by including a “broadcast” boolean in the API call. That is, if you intend to send an API message to the entire segment that a campaign or Canvas targets, you must include “broadcast: true” in your API call. If the “broadcast” flag is not set to true and an explicit list of recipients it not provided, the API endpoint will return an error. Similarly, including “broadcast: true” and providing a recipient list will return an error. The “broadcast” flag is required in order to protect against accidental sends to large groups of users.",
+        "summary": "Create Scheduled API-Triggered Canvas Example",
+        "description": "Example of scheduling a future send of a canvas set up in the dashboard with API-Triggered Delivery.The paramter \"canvas_id\" is required. You can pass in canvas_entry_properties that will be templated into the messages sent by the first steps of the Canvas. When sending a message to a segment or campaign audience using an API endpoint, Braze requires you to explicitly define whether or not your message is a “broadcast” to a large group of users by including a “broadcast” boolean in the API call. That is, if you intend to send an API message to the entire segment that a campaign or Canvas targets, you must include “broadcast: true” in your API call. If the “broadcast” flag is not set to true and an explicit list of recipients it not provided, the API endpoint will return an error. Similarly, including “broadcast: true” and providing a recipient list will return an error. The “broadcast” flag is required in order to protect against accidental sends to large groups of users.",
         "operationId": "CreateScheduledApiTriggeredCanvasExample",
         "requestBody": {
           "description": "Use this endpoint to send messages directly from the API.",
@@ -2635,7 +2637,11 @@
           }
         },
         "deprecated": false,
-        "security": [],
+        "security": [
+          {
+            "bearerAuth": []
+          }
+        ],
         "x-operation-settings": {
           "CollectParameters": false,
           "AllowDynamicQueryParameters": false,
@@ -2649,8 +2655,8 @@
         "tags": [
           "Messaging"
         ],
-        "summary": "Update Scheduled API Triggered Campaign Send Example",
-        "description": "Example of updating a scheduled send for an API-Triggered Campaign. Successful requests to /canvas/trigger/schedule/create will return a \"schedule_id\" within the response. This can be saved for use with this /campaigns/trigger/schedule/update endpoint or the /canvas/trigger/schedule/delete endpoint. The /canvas/trigger/schedule/update endpoint can be used to update the scheduled time for a message, message data is changed from within the Braze dashboard.",
+        "summary": "Update Scheduled API-Triggered Campaign Send Example",
+        "description": "Example of updating a scheduled send for an API-triggered campaign. Successful requests to /canvas/trigger/schedule/create will return a \"schedule_id\" within the response. This can be saved for use with this /campaigns/trigger/schedule/update endpoint or the /canvas/trigger/schedule/delete endpoint. The /canvas/trigger/schedule/update endpoint can be used to update the scheduled time for a message, message data is changed from within the Braze dashboard.",
         "operationId": "UpdateScheduledApiTriggeredCanvasSendExample",
         "requestBody": {
           "description": "Use this endpoint to send messages directly from the API.",
@@ -2669,7 +2675,11 @@
           }
         },
         "deprecated": false,
-        "security": [],
+        "security": [
+          {
+            "bearerAuth": []
+          }
+        ],
         "x-operation-settings": {
           "CollectParameters": false,
           "AllowDynamicQueryParameters": false,
@@ -2703,7 +2713,11 @@
           }
         },
         "deprecated": false,
-        "security": [],
+        "security": [
+          {
+            "bearerAuth": []
+          }
+        ],
         "x-operation-settings": {
           "CollectParameters": false,
           "AllowDynamicQueryParameters": false,
@@ -2718,7 +2732,7 @@
           "Messaging"
         ],
         "summary": "Get Upcoming Scheduled Campaigns and Canvases",
-        "description": "You can view a JSON list of upcoming and scheduled Campaigns and Canvases using the following information and parameters. The endpoint will return information about scheduled Campaigns and entry Canvases between now and the designated end_time (ISO 8601 format) specified in the request. Daily, recurring messages will only appear once with their next occurrence. Results returned in this endpoint are only for Campaigns and Canvases created and scheduled in Braze.",
+        "description": "You can view a JSON list of upcoming and scheduled campaigns and Canvases using the following information and parameters. The endpoint will return information about scheduled campaigns and entry Canvases between now and the designated end_time (ISO 8601 format) specified in the request. Daily, recurring messages will only appear once with their next occurrence. Results returned in this endpoint are only for Campaigns and Canvases created and scheduled in Braze.",
         "operationId": "GetUpcomingScheduledCampaignsAndCanvases",
         "parameters": [
           {
@@ -2741,7 +2755,7 @@
         "deprecated": false,
         "security": [
           {
-            "ApiKeyAuth": []
+            "bearerAuth": []
           }
         ],
         "x-operation-settings": {
@@ -2757,19 +2771,12 @@
     "Update_Email_Template": {
       "type": "object",
       "required": [
-        "api_key",
         "email_template_id",
         "subject",
         "body"
       ],
       "properties": {
-        "api_key": {
-          "type": "string",
-          "format": "int64",
-          "description": "Your App Group REST API key as found in your Developer Console.",
-          "example": "123a45b6-cd78-9e01-g234-hi56j7k8l9m0"
-        },
-          "email_template_id": {
+        "email_template_id": {
           "type": "string",
           "format": "int64",
           "description": "The ID of your already existing email template.",
@@ -2807,18 +2814,11 @@
     "Create_Email_Template": {
       "type": "object",
       "required": [
-        "api_key",
         "template_name",
         "subject",
         "body"
       ],
       "properties": {
-        "api_key": {
-          "type": "string",
-          "format": "int64",
-          "description": "Your App Group REST API key as found in your Developer Console.",
-          "example": "123a45b6-cd78-9e01-g234-hi56j7k8l9m0"
-        },
         "template_name": {
           "type": "string",
           "format": "int64",
@@ -2851,19 +2851,12 @@
     "Update_Subscription_State": {
       "type": "object",
       "required": [
-        "api_key",
         "subscription_group_id",
         "subscription_state",
-        "external_id",
+        "external_ids",
         "email"
       ],
       "properties": {
-        "api_key": {
-          "type": "string",
-          "format": "int64",
-          "description": "Your App Group REST API key as found in your Developer Console.",
-          "example": "123a45b6-cd78-9e01-g234-hi56j7k8l9m0"
-        },
         "subscription_group_id": {
           "type": "string",
           "format": "int64",
@@ -2876,7 +2869,7 @@
           "description": "Choose from available values: `unsubscribed` (not in subscription group) or `subscribed` (in subscription group).",
           "example": "unsubscribed"
         },
-        "external_id": {
+        "external_ids": {
           "type": "string",
           "description": "The External Id (`external_id`) of the user. Either the user's `external_id` or the `email` is required.",
           "example": "user123"
@@ -2891,16 +2884,10 @@
     "User_Export": {
       "type": "object",
       "required": [
-        "api_key",
         "name"
       ],
       "properties": {
-        "api_key": {
-          "type": "string",
-          "format": "int64",
-          "example": "123a45b6-cd78-9e01-g234-hi56j7k8l9m0"
-        },
-        "external_id": {
+        "external_ids": {
           "type": "array",
           "items": {
             "type": "string",
@@ -2912,15 +2899,9 @@
     "Segment_Export": {
       "type": "object",
       "required": [
-        "api_key",
         "name"
       ],
       "properties": {
-        "api_key": {
-          "type": "string",
-          "format": "int64",
-          "example": "123a45b6-cd78-9e01-g234-hi56j7k8l9m0"
-        },
         "segment_id": {
           "type": "string",
           "format": "int64",
@@ -2931,15 +2912,9 @@
     "User_Track_Attributes": {
       "type": "object",
       "required": [
-        "api_key",
         "name"
       ],
       "properties": {
-        "api_key": {
-          "type": "string",
-          "format": "int64",
-          "example": "123a45b6-cd78-9e01-g234-hi56j7k8l9m0"
-        },
         "attributes": {
           "type": "array",
           "items": {
@@ -2951,7 +2926,7 @@
     "CustomAttribute": {
       "type": "object",
       "properties": {
-        "external_id": {
+        "external_ids": {
           "type": "string"
         },
         "favorite_color": {
@@ -2962,15 +2937,9 @@
     "User_Track_Events": {
       "type": "object",
       "required": [
-        "api_key",
         "name"
       ],
       "properties": {
-        "api_key": {
-          "type": "string",
-          "format": "int64",
-          "example": "123a45b6-cd78-9e01-g234-hi56j7k8l9m0"
-        },
         "events": {
           "type": "array",
           "items": {
@@ -2982,7 +2951,7 @@
     "CustomEvent": {
       "type": "object",
       "properties": {
-        "external_id": {
+        "external_ids": {
           "type": "string"
         },
         "name": {
@@ -2996,16 +2965,10 @@
     "User_Delete": {
       "type": "object",
       "required": [
-        "api_key",
         "name"
       ],
       "properties": {
-        "api_key": {
-          "type": "string",
-          "format": "int64",
-          "example": "123a45b6-cd78-9e01-g234-hi56j7k8l9m0"
-        },
-        "external_id": {
+        "external_ids": {
           "type": "array",
           "items": {
             "type": "string",
@@ -3017,15 +2980,9 @@
     "User_Alias": {
       "type": "object",
       "required": [
-        "api_key",
         "name"
       ],
       "properties": {
-        "api_key": {
-          "type": "string",
-          "format": "int64",
-          "example": "123a45b6-cd78-9e01-g234-hi56j7k8l9m0"
-        },
         "user_aliases": {
           "type": "array",
           "items": {
@@ -3037,7 +2994,7 @@
     "AliasObject": {
       "type": "object",
       "properties": {
-        "external_id": {
+        "external_ids": {
           "type": "string"
         },
         "alias_name": {
@@ -3051,15 +3008,9 @@
     "Email_Spam_Remove": {
       "type": "object",
       "required": [
-        "api_key",
         "name"
       ],
       "properties": {
-        "api_key": {
-          "type": "string",
-          "format": "int64",
-          "example": "123a45b6-cd78-9e01-g234-hi56j7k8l9m0"
-        },
         "email": {
           "type": "array",
           "items": {
@@ -3072,15 +3023,9 @@
     "Email_Bounce_Remove": {
       "type": "object",
       "required": [
-        "api_key",
         "name"
       ],
       "properties": {
-        "api_key": {
-          "type": "string",
-          "format": "int64",
-          "example": "123a45b6-cd78-9e01-g234-hi56j7k8l9m0"
-        },
         "email": {
           "type": "array",
           "items": {
@@ -3093,15 +3038,9 @@
     "Email_Status": {
       "type": "object",
       "required": [
-        "api_key",
         "name"
       ],
       "properties": {
-        "api_key": {
-          "type": "string",
-          "format": "int64",
-          "example": "123a45b6-cd78-9e01-g234-hi56j7k8l9m0"
-        },
         "email": {
           "type": "array",
           "items": {
@@ -3119,15 +3058,9 @@
     "MessagesSend": {
       "type": "object",
       "required": [
-        "api_key",
         "name"
       ],
       "properties": {
-        "api_key": {
-          "type": "string",
-          "format": "int64",
-          "example": "123a45b6-cd78-9e01-g234-hi56j7k8l9m0"
-        },
         "external_user_ids": {
           "type": "array",
           "items": {
@@ -3162,15 +3095,9 @@
     "MessagesSchedule": {
       "type": "object",
       "required": [
-        "api_key",
         "name"
       ],
       "properties": {
-        "api_key": {
-          "type": "string",
-          "format": "int64",
-          "example": "123a45b6-cd78-9e01-g234-hi56j7k8l9m0"
-        },
         "external_user_ids": {
           "type": "array",
           "items": {
@@ -3222,15 +3149,9 @@
     "MessagesScheduleUpdate": {
       "type": "object",
       "required": [
-        "api_key",
         "name"
       ],
       "properties": {
-        "api_key": {
-          "type": "string",
-          "format": "int64",
-          "example": "123a45b6-cd78-9e01-g234-hi56j7k8l9m0"
-        },
         "schedule_id": {
           "type": "string",
           "format": "int64",
@@ -3287,15 +3208,9 @@
     "CampaignTriggerSend": {
       "type": "object",
       "required": [
-        "api_key",
         "name"
       ],
       "properties": {
-        "api_key": {
-          "type": "string",
-          "format": "int64",
-          "example": "123a45b6-cd78-9e01-g234-hi56j7k8l9m0"
-        },
         "campaign_id": {
           "type": "string",
           "format": "int64",
@@ -3320,15 +3235,9 @@
     "CampaignTriggerCreate": {
       "type": "object",
       "required": [
-        "api_key",
         "name"
       ],
       "properties": {
-        "api_key": {
-          "type": "string",
-          "format": "int64",
-          "example": "123a45b6-cd78-9e01-g234-hi56j7k8l9m0"
-        },
         "campaign_id": {
           "type": "string",
           "format": "int64",
@@ -3362,15 +3271,9 @@
     "CampaignTriggerUpdate": {
       "type": "object",
       "required": [
-        "api_key",
         "name"
       ],
       "properties": {
-        "api_key": {
-          "type": "string",
-          "format": "int64",
-          "example": "123a45b6-cd78-9e01-g234-hi56j7k8l9m0"
-        },
         "campaign_id": {
           "type": "string",
           "format": "int64",
@@ -3403,15 +3306,9 @@
     "CanvasTriggerSend": {
       "type": "object",
       "required": [
-        "api_key",
         "name"
       ],
       "properties": {
-        "api_key": {
-          "type": "string",
-          "format": "int64",
-          "example": "123a45b6-cd78-9e01-g234-hi56j7k8l9m0"
-        },
         "canvas_id": {
           "type": "string",
           "format": "int64",
@@ -3428,15 +3325,9 @@
     "CanvasTriggerCreate": {
       "type": "object",
       "required": [
-        "api_key",
         "name"
       ],
       "properties": {
-        "api_key": {
-          "type": "string",
-          "format": "int64",
-          "example": "123a45b6-cd78-9e01-g234-hi56j7k8l9m0"
-        },
         "canvas_id": {
           "type": "string",
           "format": "int64",
@@ -3470,15 +3361,9 @@
     "CanvasTriggerUpdate": {
       "type": "object",
       "required": [
-        "api_key",
         "name"
       ],
       "properties": {
-        "api_key": {
-          "type": "string",
-          "format": "int64",
-          "example": "123a45b6-cd78-9e01-g234-hi56j7k8l9m0"
-        },
         "canvas_id": {
           "type": "string",
           "format": "int64",
@@ -3511,15 +3396,9 @@
     "SendID": {
       "type": "object",
       "required": [
-        "api_key",
         "name"
       ],
       "properties": {
-        "api_key": {
-          "type": "string",
-          "format": "int64",
-          "example": "123a45b6-cd78-9e01-g234-hi56j7k8l9m0"
-        },
         "campaign_id": {
           "type": "string",
           "format": "int64",

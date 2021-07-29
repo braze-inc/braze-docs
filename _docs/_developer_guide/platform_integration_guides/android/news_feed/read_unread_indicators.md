@@ -1,11 +1,14 @@
 ---
 nav_title: Read & Unread Indicators
 page_order: 4
-
 platform: Android
+description: "This reference article covers how to implement read and unread indicators in your News Feed for your Android application."
+channel:
+  - news feed
+
 ---
 
-# Read/Unread Indicators
+# Read & Unread Indicators
 
 Braze allows you to optionally toggle on an Unread/Read indicator on News Feed cards as pictured below:
 
@@ -13,7 +16,7 @@ Braze allows you to optionally toggle on an Unread/Read indicator on News Feed c
 
 ## Enabling the Indicators
 
-In order to enable this functionality add the following line to your `appboy.xml` file:
+In order to enable this functionality add the following line to your `braze.xml` file:
 
 ```xml
 <bool name="com_appboy_newsfeed_unread_visual_indicator_on">true</bool>

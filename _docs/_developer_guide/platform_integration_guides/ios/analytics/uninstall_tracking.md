@@ -2,9 +2,13 @@
 nav_title: Uninstall Tracking
 platform: iOS
 page_order: 7
+description: "This article covers how to configure uninstall tracking for your iOS application."
 
 ---
+
 # Uninstall Tracking
+
+> This article covers how to configure uninstall tracking for your iOS application, and how to test to ensure that your app does not take any unwanted automatic actions upon receiving a Braze uninstall tracking push.
 
 Uninstall Tracking utilizes background push notifications with a Braze flag in the payload. For more information, see our [Uninstall Tracking][6] page in our User Guide.
 
@@ -18,13 +22,13 @@ Braze uses background push notifications to collect uninstall tracking analytics
 
 ## Step 3: Test from the Dashboard
 
-To ensure that your app does not take any unwanted automatic actions upon receiving a Braze uninstall tracking push, send yourself a test push from the [Dashboard][7].
+To ensure that your app does not take any unwanted automatic actions upon receiving a Braze uninstall tracking push, send yourself a test push from the [Dashboard][7]. This test push will not update your User Profile.
 
-1. On the Campaigns page, create a Push Notification campaign and select iOS Push as your platform.
+1. On the **Campaigns** page, create a Push Notification campaign and select iOS Push as your platform.
 
 2. On the Additional Message Settings page,
   - Add the key `appboy_uninstall_tracking` with corresponding value `true`
-  - Check "Add Content-Available Flag"
+  - Check **Add Content-Available Flag**
 
     ![key-value  Pair][9]{: width="40%"}
 
@@ -42,10 +46,7 @@ The above steps are a proxy for sending an uninstall tracking push from Braze. I
 
 Follow the instructions for enabling uninstall tracking using our [article on Uninstall Tracking][6].
 
-[1]: https://github.com/Appboy/appboy-ios-sdk/blob/master/CHANGELOG.md
-[2]: https://github.com/Appboy/appboy-ios-sdk/blob/master/Example/Stopwatch/AppDelegate.m
-[3]: https://github.com/Appboy/appboy-ios-sdk/blob/master/AppboyKit/headers/AppboyKitLibrary/ABKPushUtils.h
-[4]: {{site.baseurl}}/developer_guide/platform_integration_guides/ios/push_notifications/customization/#ignoring-brazes-internal-push-notifications
+[4]: {{site.baseurl}}/developer_guide/platform_integration_guides/ios/push_notifications/customization/ignoring_internal_push/
 [5]: {{site.baseurl}}/developer_guide/platform_integration_guides/ios/push_notifications/silent_push_notifications/
 [6]: {{site.baseurl}}/user_guide/data_and_analytics/tracking/uninstall_tracking/#uninstall-tracking
 [7]: https://dashboard-01.braze.com/

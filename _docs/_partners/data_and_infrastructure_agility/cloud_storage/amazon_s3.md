@@ -32,7 +32,7 @@ To retrieve your **Access Key ID** and **Secret Access Key**, you’ll need to [
 
 ### Step 2 - Get Credentials {#secret-key-2}
 
-Once a user has been created, click "Show User Security Credentials" so your **Access Key ID** and **Secret Access Key** will be revealed. Next, either note these credentials somewhere, or click the blue "Download Credentials" button as you will need to input these into the Braze dashboard later on.
+Once a user has been created, click "Show User Security Credentials" so your **Access Key ID** and **Secret Access Key** will be revealed. Next, either note these credentials somewhere or click the blue "Download Credentials" button as you will need to input these into the Braze dashboard later on.
 
 ![Secret Key][11]
 
@@ -90,7 +90,7 @@ Input the code below when creating your own policy. (Note that there are differe
 
 ### Step 4 - Attach Policy {#secret-key-4}
 
-Once your policy has been created, navigate to "Users" and then click into your specifc user so you can attach this new policy. On the "Permissions" tab, click "Attach Policy".
+Once your policy has been created, navigate to "Users" and then click into your specific user so you can attach this new policy. On the "Permissions" tab, click "Attach Policy".
 
 ![Attach User][13]
 
@@ -109,10 +109,14 @@ Navigate to the "Currents" page on the Braze Dashboard under the "Integrations" 
 
 Give your Current a name. Then, in the **Credentials** section, make sure the "AWS Secret Access Key" radio button is selected, then input your **AWS Access ID**, **AWS Secret Access Key**, and **AWS S3 Bucket Name** in the designated fields.
 
+{% alert important %}
+It's important to keep your AWS Access Key ID and AWS Secret Access Key up to date; if your connector's credentials expire, the connector will stop sending events. If this persists for more than **48 hours**, the connector's events will be dropped and data will be permanently lost.
+{% endalert %}
+
 You can also add the following customizations, based on your needs:
 
--   Folder Path (defaults to `currents`)
--   AES-256 Encryption (defaults to OFF)
+-   Folder Path (defaults to `currents`) 
+-   Server-Side, At-Rest AES-256 Encryption (defaults to OFF) - Includes the "x-amz-server-side-encryption" header
 
 Click "Launch Current" to continue.
 
@@ -128,7 +132,7 @@ Navigate to the "Technology Partners" page on the Braze Dashboard under the "Int
 On the AWS Credentials page, make sure the "AWS Secret Access Key" radio button is selected, then input your AWS Access ID, AWS Secret Access Key, and AWS S3 Bucket Name in the designated fields. When inputting your secret key, click "Test Credentials" first to ensure your credentials work, then "Save" once this is successful.
 
 {% alert note %}
-You can always retrieve new credentials by navigating to your user and clicking "Create Access Key" on the Security Credentials Tab within the AWS Console.
+You can always retrieve new credentials by navigating to your user and clicking "Create Access Key" on the Security Credentials tab within the AWS Console.
 {% endalert %}
 
 A notification will inform you whether your credentials have been successfully validated. AWS S3 should now be integrated into your Braze account.
@@ -142,7 +146,7 @@ This authentication method generates a Role ARN (Amazon Resource Name) that enab
 
 ### Step 1 - Create Policy {#role-arn-1}
 
-To get started, navigate to the IAM section of the AWS Console, click "Policies" in the navigation bar and click "Create Policy".
+To get started, sign in to the AWS Management Console as an administrator of the account. Navigate to the IAM section of the AWS Console, click "Policies" in the navigation bar, and click "Create Policy".
 
 ![Role ARN]({{site.baseurl}}/assets/img/create_policy_1_list.png)
 
@@ -157,12 +161,12 @@ Open the "JSON" tab and input the code below into the “Policy Document” sect
     "Statement": [
         {
             "Effect": "Allow",
-            "Action": ["s3:GetBucketLocation"],
+            "Action": ["s3:ListBucket", "s3:GetBucketLocation"],
             "Resource": ["arn:aws:s3:::INSERTBUCKETNAME"]
         },
         {
             "Effect": "Allow",
-            "Action": ["s3:PutObject", "s3:ListObject"],
+            "Action": ["s3:PutObject", "s3:GetObject"],
             "Resource": ["arn:aws:s3:::INSERTBUCKETNAME/*"]
         }
     ]
@@ -238,7 +242,7 @@ Give the Role a name and a description, and click "Create Role".
 
 ![Role ARN]({{site.baseurl}}/assets/img/create_role_4_name.png)
 
-You should now see your newly created Role in the list.
+You should now see your newly created Role on the list.
 
 ### Step 4 - Link to Braze AWS {#role-arn-4}
 
@@ -264,11 +268,15 @@ Give your Current a name. Then, in the Credentials section, make sure the "AWS R
 You can also add the following customizations, based on your needs:
 
 -   Folder Path (defaults to `currents`)
--   AES-256 Encryption (defaults to OFF)
+-   Server-Side, At-Rest AES-256 Encryption (defaults to OFF) - Includes the "x-amz-server-side-encryption" header
 
 Click "Launch Current" to continue.
 
 A notification will inform you whether your credentials have been successfully validated. AWS S3 should now be set up for Braze Currents.
+
+{% alert important %}
+Error: If you receive a “S3 credentials are invalid” error, this may be due to integrating too quickly after creating a role in AWS. Please wait and try again. 
+{% endalert %}
 
 {% endtab %}
 {% tab Dashboard Data Export %}
@@ -280,7 +288,7 @@ Navigate to the "Technology Partners" page in your Braze account under the "Inte
 On the **AWS Credentials** page, make sure the "AWS Role ARN" radio button is selected, then input your Role ARN, and **AWS S3 Bucket Name** in the designated fields. Click "Test Credentials" first to ensure your credentials work properly, then "Save" once this is successful.
 
 {% alert note %}
-You can always retrieve new credentials by navigating to your user and clicking "Create Access Key" on the Security Credentials Tab within the AWS Console.
+You can always retrieve new credentials by navigating to your user and clicking "Create Access Key" on the Security Credentials tab within the AWS Console.
 {% endalert %}
 
 A notification will inform you whether your credentials have been successfully validated. AWS S3 should now be integrated into your Braze account.
@@ -288,15 +296,7 @@ A notification will inform you whether your credentials have been successfully v
 {% endtab %}
 {% endtabs %}
 
-[3]: http://aws.amazon.com/
-[4]: http://aws.amazon.com/
 
-[5]: {% image_buster /assets/img/s3_tech_partners.png %} "AWS Creds"
-[6]: https://console.aws.amazon.com/s3/
-[8]: https://docs.aws.amazon.com/AmazonS3/latest/dev/BucketRestrictions.html
-[10]: https://docs.aws.amazon.com/IAM/latest/UserGuide/getting-started_create-admin-group.html
 [11]: {% image_buster /assets/img_archive/S3_Credentials.png %}
 [12]: {% image_buster /assets/img_archive/S3_CreatePolicy.png %}
 [13]: {% image_buster /assets/img_archive/S3_AttachPolicy.png %}
-[14]: {{site.baseurl}}/developer_guide/platform_wide/app_group_configuration/#app-group-configuration
-[15]: {{site.baseurl}}/partners/data_and_infrastructure_agility/customer_data_platform/segment_integration/#getting-started

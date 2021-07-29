@@ -1,6 +1,9 @@
 ---
 nav_title: October
 page_order: 3
+no_index: true
+page_type: update
+description: "This article contains release notes for October 2016."
 ---
 
 # October 2016
@@ -17,7 +20,7 @@ Braze users can now download CSVs of recently imported users. This gives you mor
 In addition to the [birthday filter]({{site.baseurl}}/user_guide/Engagement_Tools/Segments/Segmentation_Filters/), Braze now supports an anniversary filter which gives you the ability to target users based on a calendar date for loyalty milestones, refill notices, and more! Access this feature by selecting the "Date of Custom Attribute" filter on the Segments page. Learn more on filters in Braze [here]({{site.baseurl}}/user_guide/engagement_tools/segments/segmentation_filters/#segmentation-filters).
 
 ## Frequency Capping Updates
-Previously, a Campaign or Canvas that ignored the Frequency Capping restrictions would still count towards frequency caps. We’ve changed the behavior so that by default new Campaigns and Canvases that do not obey Frequency Caps will also not count towards them. This is configurable for each Campaign and Canvas. Learn more about Frequency Capping [here]({{site.baseurl}}/user_guide/engagement_tools/campaigns/testing_and_more/rate-limiting/#frequency-capping).
+Previously, a campaign or Canvas that ignored the Frequency Capping restrictions would still count towards frequency caps. We’ve changed the behavior so that by default new campaigns and Canvases that do not obey Frequency Caps will also not count towards them. This is configurable for each campaign and Canvas. Learn more about Frequency Capping [here]({{site.baseurl}}/user_guide/engagement_tools/campaigns/testing_and_more/rate-limiting/#frequency-capping).
 
 ## In-App Message Color Profiles
 We’ve added Color Profiles for in-app messages, allowing customers to reuse on-brand color schemes when creating new messages in Braze. Learn about color profiles [here]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/customize/#color-profile).

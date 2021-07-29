@@ -1,6 +1,9 @@
 ---
 nav_title: May
 page_order: 8
+no_index: true
+page_type: update
+description: "This article contains release notes for May 2019."
 ---
 
 # May 2019
@@ -38,7 +41,7 @@ You can now retrieve data from Roku devices for data enrichment and custom event
 
 ## Notification Preferences for Canvas & Campaign Updates
 
-This new notification will alert you via email when a Campaign/Canvas is activated, updated, reactivated or deactivated. Activate this in Notification Preferences in your Braze account. [Learn more about this preference here.]({{site.baseurl}}/user_guide/administrative/company_settings/notification_preferences/#notification-preferences)  
+This new notification will alert you via email when a campaign/Canvas is activated, updated, reactivated or deactivated. Activate this in Notification Preferences in your Braze account. [Learn more about this preference here.]({{site.baseurl}}/user_guide/administrative/company_settings/notification_preferences/#notification-preferences)  
 
 ## Jampp Technology Partner Documentation
 
@@ -55,24 +58,24 @@ We've made it easier to select where your in-app messages are going and which pl
 ## Dispatch ID Currents Field for Email
 
 {% alert update %}
-Behavior for `dispatch_id` differs between Canvas and Campaigns because Braze treats Canvas steps (except for Entry Steps, which can be scheduled) as triggered events, even when they are "scheduled". [Learn more about `dispatch_id` behavior in Canvas and Campaigns here]({{site.baseurl}}/help/help_articles/data/dispatch_id/).
+Behavior for `dispatch_id` differs between Canvas and campaigns because Braze treats Canvas steps (except for Entry Steps, which can be scheduled) as triggered events, even when they are "scheduled". [Learn more about `dispatch_id` behavior in Canvas and campaigns here]({{site.baseurl}}/help/help_articles/data/dispatch_id/).
 
 _Update noted in August 2019._
 {% endalert %}
 
 In the effort to continue enhancing our Currents capabilities, we're adding `dispatch_id` as a field to Currents Email events across all connector types.
 
-The `dispatch_id` is the unique id generated for each transmission – or, dispatch – sent from the Braze platform.
+The `dispatch_id` is the unique out-of-the-box ID generated for each transmission – or, dispatch – sent from the Braze platform.
 
-While all customers who are sent a scheduled message get the same `dispatch_id`, customers who receive either action-based or API triggered messages will get a unique `dispatch_id` per message. The `dispatch_id` field enables you to identify which instance of a recurring campaign is responsible for conversion, thus equipping you with more insights and information on which types of campaigns are helping push the needle on your business goals.
+While all customers who are sent a scheduled message get the same `dispatch_id`, customers who receive either action-based or API-triggered messages will get a unique `dispatch_id` per message. The `dispatch_id` field enables you to identify which instance of a recurring campaign is responsible for conversion, thus equipping you with more insights and information on which types of campaigns are helping push the needle on your business goals.
 
 ## Only Show Mine - Campaign Sorting Feature
 
-When a user checks the `Only Show Mine` checkbox on the Campaign grid, the results will filter down to Campaigns show only created by the logged-in user. Additionally, the user can use the search bar by inputting `created_by_me:true`.
+When a user checks the `Only Show Mine` checkbox on the campaign grid, the results will filter down to campaigns show only created by the logged-in user. Additionally, the user can use the search bar by inputting `created_by_me:true`.
 
 ![Created by Me][cbm]{: height="50%" width="50%"}
 
-Also, the Campaign grid sidebar is now resizable!
+Also, the campaign grid sidebar is now resizable!
 
 ## Delete Users by Alias
 
@@ -89,7 +92,7 @@ Any users also using Mailjet will see a spike in these numbers, since the previo
 You can search for these updated terms in our [Report Metrics Glossary]({{site.baseurl }}/user_guide/data_and_analytics/report_metrics/).
 
 {% alert update %}
-Behavior for `dispatch_id` differs between Canvas and Campaigns because Braze treats Canvas steps (except for Entry Steps, which can be scheduled) as triggered events, even when they are "scheduled". [Learn more about `dispatch_id` behavior in Canvas and Campaigns here]({{site.baseurl}}/help/help_articles/data/dispatch_id/).
+Behavior for `dispatch_id` differs between Canvas and campaigns because Braze treats Canvas steps (except for Entry Steps, which can be scheduled) as triggered events, even when they are "scheduled". [Learn more about `dispatch_id` behavior in Canvas and campaigns here]({{site.baseurl}}/help/help_articles/data/dispatch_id/).
 
 _Update noted in August 2019._
 {% endalert %}
@@ -105,6 +108,5 @@ The Most Engaged Channel filter selects the portion of your audience for whom th
 
 Check this new filter out in [our Segmentation Filters library]({{site.baseurl }}/user_guide/engagement_tools/segments/segmentation_filters/).
 
-[CCFeed]: {% image_buster /assets/img/cc-feed.png %}
 [cbm]: {% image_buster /assets/img/created_by_me2.png %}
 [plat_p]: {% image_buster /assets/img/iam_platforms.gif %}

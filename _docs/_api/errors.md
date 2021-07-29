@@ -7,7 +7,7 @@ tool:
   - Docs
 platform: 
   - APIs
-page_order: 2.1
+page_order: 2.3
 
 ---
 # Errors & Responses
@@ -74,7 +74,7 @@ The following status codes and associated error messages will be returned if you
 |---|---|
 | `400 Bad Request` | Bad syntax.|
 | `400 No Recipients` | There are no external IDs or segment IDs or no push tokens in the request.|
-| `400 Invalid Campaign ID` | No Messaging API Campaign was found for the campaign ID you provided.|
+| `400 Invalid Campaign ID` | No Messaging API campaign was found for the campaign ID you provided.|
 | `400 Message Variant Unspecified` | You provide a campaign ID but no message variation ID.|
 | `400 Invalid Message Variant` | You provided a valid campaign ID, but the message variation ID doesn't match any of that campaign's messages.|
 | `400 Mismatched Message Type` | You provided a message variation of the wrong message type for at least one of your messages.|
@@ -90,6 +90,7 @@ The following status codes and associated error messages will be returned if you
 | `400 Bad Request` | In your request, `in_local_time` is true but `time` has passed in your company’s time zone.|
 | `401 Unauthorized` | Unknown or missing REST API Key.|
 | `403 Forbidden` | Rate plan doesn't support or account is otherwise inactivated.|
+| `403 Access Denied` | The REST API Key you are using does not have sufficient permissions, check the API key permissions in the Braze Developer Console.|
 | `404 Not Found` | Unknown REST API Key.|
 | `429 Rate Limited` | Over rate limit.|
 | `5XX Internal Server Error` | You should retry your request with exponential backoff.|

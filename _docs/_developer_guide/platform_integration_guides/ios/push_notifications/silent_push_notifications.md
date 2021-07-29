@@ -2,12 +2,15 @@
 nav_title: Silent Push Notifications
 platform: iOS
 page_order: 4
+description: "This article covers how to implement silent push notifications in your iOS application."
+channel:
+  - push
 
 ---
 
 # Silent Push Notifications
 
-Remote notifications allow you to notify your app when important events occur. You might have new instant messages to deliver, breaking news alerts to send, or the latest episode of your user's favorite TV show ready for him or her to download for offline viewing. Remote notifications are great for sporadic but immediately important content, where the delay between background fetches might not be acceptable. Remote Notifications can also be much more efficient than Background Fetch, as your application only launches when necessary. However, remote notifications are limited by the system and cannot automatically launch your application if the user has force-quit it.
+Remote notifications allow you to notify your app when important events occur. You might have new instant messages to deliver, breaking news alerts to send, or the latest episode of your user's favorite TV show ready for them to download for offline viewing. Remote notifications are great for sporadic but immediately important content, where the delay between background fetches might not be acceptable. Remote Notifications can also be much more efficient than Background Fetch, as your application only launches when necessary. However, remote notifications are limited by the system and cannot automatically launch your application if the user has force-quit it.
 
 A Remote Notification is really just a normal Push Notification with the `content-available` flag set. You might send a push with an alert message informing the user that something has happened, while you update the UI in the background. But Remote Notifications can also be silent, containing no alert message or sound, used only to update your app's interface or trigger background work. You might then post a local notification when you've finished downloading or processing the new content.
 
@@ -15,7 +18,7 @@ Silent push notifications are rate-limited, so don't be afraid of sending as man
 
 ## Sending Remote Notifications
 
-To send a remote notification, set the `content-available` flag in a push notification payload. When you're sending a Remote Notification, you might also want to include some data in the notification payload, so your application can reference the event. This could save you a few networking requests and increase the responsiveness of your app.
+To send a remote notification, set the `content-available` flag to 1 in a push notification payload. When you're sending a Remote Notification, you might also want to include some data in the notification payload, so your application can reference the event. This could save you a few networking requests and increase the responsiveness of your app.
 
 The `content-available` flag can be set in the Braze dashboard (pictured below) as well as within our [User API][1].
 
@@ -42,6 +45,7 @@ Braze has several features which rely on iOS Silent Push Notifications:
 |---|---|
 |Uninstall Tracking | User receives a silent, nightly uninstall tracking push.|
 |Geofences | Silent syncing of geofences from server to device.|
+{: .reset-td-br-1 .reset-td-br-2}
 
 For more information, check out Apple's developer site on the [Instance Method][7] and [Unreceived Notifications][8].
 

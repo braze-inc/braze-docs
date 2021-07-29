@@ -1,6 +1,10 @@
 ---
 nav_title: Using Event Logging
 page_order: 6
+
+page_type: solution
+description: "This help article describes how to use event logging to troubleshoot issues with your Braze integration."
+no_index: true
 ---
 
 # The Event Log

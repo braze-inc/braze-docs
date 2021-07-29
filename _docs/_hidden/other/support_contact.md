@@ -7,9 +7,7 @@ hide_toc: true
 ---
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/docsearch.js/2/docsearch.min.css" />
 
-
 <style type="text/css">
-
 
 #main-container {
   margin-top: 20px;
@@ -126,9 +124,6 @@ hide_toc: true
 
 #ticket_search .algolia-docsearch-footer {
   padding-top: 5px;
-}
-#ticket_search_title {
-  display: none;
 }
 
 .gradient-line {
@@ -278,12 +273,41 @@ a:hover {
   color: #3accdd;
   text-decoration: none;
 }
+#support-search-panel .aa-Panel {
+  top: 0px !important;
+  position: static;
+  box-shadow: none;
+}
+#support-search-panel .aa-Item {
+  top: 0px !important;
+  position: static;
+  box-shadow: none;
+  min-height: 1.8em;
+  line-height: 1.3em;
+}
+#support-search-panel .aa-PanelLayout {
+  padding-top: 0px;
+}
+#support-search-div {
+  padding-bottom: 15px;
+}
+#support-search-div .aa-Form {
+  box-shadow: none;
+  border-color: transparent;
+  border-radius: 0px;
+  border-bottom: solid 2px #c9c9c9;
+}
+#support-search-div .aa-Form button {
+  padding-top: 10px;
+}
 </style>
-
-<script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/2/docsearch.min.js"></script>
 
 
 <script type="text/javascript">
+function support_doc_submit(){
+  window.location = base_url + '/search/?query=' + encodeURIComponent($('#support-search-form .aa-Form .aa-Input').val());
+  return false;
+}
 
 String.prototype.mapReplace = function(map) {
   var mstr = this;
@@ -605,7 +629,7 @@ var ticket_lookuptable = {
         'Creating Campaigns and Canvases' : {
           'ShowSubmit': true,
           'LinksTitle': ['Canvas','Importing users','LAB course: Canvas','Getting started guide','Scheduling and organizing campaigns'],
-          'Links':  ['{{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/create_a_canvas/','{{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/user_import/','https://lab.braze.com/canvas-course/174101/scorm/20ff1lsqbf4t','{{site.baseurl}}/user_guide/introduction/','{{site.baseurl}}/user_guide/engagement_tools/campaigns/scheduling_and_organizing/scheduling_your_campaign/#scheduling-your-campaign']
+          'Links':  ['{{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/create_a_canvas/','{{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/user_import/','https://lab.braze.com/canvas-course/174101/scorm/20ff1lsqbf4t','{{site.baseurl}}/user_guide/introduction/','{{site.baseurl}}/user_guide/engagement_tools/campaigns/scheduling_and_organizing/delivery_types/']
         },
         'Understanding reporting' : {
           'ShowSubmit': true,
@@ -734,12 +758,8 @@ $( document ).ready(function() {
     };
   });
 
-
-
   var droplist = ['ticket_topic','ticket_category','ticket_subcategory','ticket_type'];
   var result_div = 'ticket_result';
-
-
 
   function reset_page(ind = 1){
     for(var i = ind; i < droplist.length;i++){
@@ -847,7 +867,6 @@ $( document ).ready(function() {
 
   }
 
-
   function type_change(e) {
     reset_page(3);
     var topic_selected =  $('#ticket_topic option:selected').val();
@@ -859,7 +878,6 @@ $( document ).ready(function() {
     if (subtype_options && ('Label' in subtype_options)){
       $('#ticket_type_label').html(subtype_options['Label']);
     }
-
 
     if (subtype_selected && 'SelectOption' in subtype_options) {
       hide_page(4);
@@ -878,7 +896,6 @@ $( document ).ready(function() {
       //showlinks(subtype_options);
     }
     showlinks(subtype_options);
-
   }
 
   function category_change(e) {
@@ -906,10 +923,7 @@ $( document ).ready(function() {
       hide_page(2);
     }
     showlinks(type_options);
-
-   }
-
-
+  }
 
   function topic_change(e) {
     reset_page(1);
@@ -926,7 +940,7 @@ $( document ).ready(function() {
       $.each(category_options['SelectOption'],function(category) {
         category_menu.append($('<option>',{value: category}).html(category));
       });
-//      showlinks(category_options);
+      // showlinks(category_options);
     }
     else {
       hide_page(1);
@@ -938,10 +952,8 @@ $( document ).ready(function() {
   var tmenu = $('#ticket_menu');
   var topic_menu = $('#ticket_topic');
   var subtype_menu = $('#ticket_type');
-   var type_menu = $('#ticket_subcategory');
+  var type_menu = $('#ticket_subcategory');
   var category_menu = $('#ticket_category');
-
-
 
   function settopic(){
     reset_page(0);
@@ -1008,7 +1020,6 @@ $( document ).ready(function() {
     e.preventDefault();
 
     var mform = $(this);
-    //console.log(mform.serialize());
     var sf_submit = new iframeform('https://webto.salesforce.com/servlet/servlet.WebToCase?encoding=UTF-8');
     var sels = mform.find('select');
     var user_name = $('#ticket_name').val();
@@ -1099,60 +1110,132 @@ $( document ).ready(function() {
   $("#submit_ticket").trigger("change");
 
 
-
-     $('#search-input input').autocomplete({ hint: false ,debug: true}, [{
-         source: $.fn.autocomplete.sources.hits(index, { hitsPerPage: 5 }),
-         displayKey:  'nav_title',
-         dropdownMenuContainer: '#ticket_search',
-         cssClasses: {
-           root: 'algolia-autocomplete-block'
+  function string_to_slug(str) {
+    if (str) {
+      str = str.toLowerCase().replace(/\s/g, '-').replace(/[^\w-]/g, '');
+    }
+    return str;
+  }
+  const algoliaInsightsPluginSupport = createAlgoliaInsightsPlugin({
+    insightsClient,
+    onItemsChange({ insights, insightsEvents }) {
+      const events = insightsEvents.map((insightsEvent) => ({
+        ...insightsEvent,
+        eventName: 'Viewed from Support Search',
+      }));
+      insights.viewedObjectIDs(...events);
+    },
+    onSelect({ insights, insightsEvents }) {
+      const events = insightsEvents.map((insightsEvent) => ({
+        ...insightsEvent,
+        eventName: 'Clicked from Support Search',
+      }));
+      insights.clickedObjectIDsAfterSearch(...events);
+    },
+  });
+  autocomplete({
+    container: "#support-search-div",
+    panelContainer: "#support-search-panel",
+    debug: true,
+    placeholder: "Search",
+    plugins: [algoliaInsightsPluginSupport],
+    detachedMediaQuery: 'none',
+    onSubmit(e){
+      var query = e.state.query;
+      window.location = base_url + '/search/?query=' + encodeURIComponent(query);
+    },
+    getSources() {
+      return [{
+          sourceId: "querySuggestions",
+          getItemInputValue: ({ item }) => item.query,
+          getItems({ query }) {
+            return getAlgoliaResults({
+              searchClient,
+              queries: [
+                {
+                  indexName: "DocSearch",
+                  query,
+                  params: {
+                    hitsPerPage: 5,
+                    attributesToSnippet: ["description:12"],
+                    snippetEllipsisText: " ...",
+                    clickAnalytics: true,
+                  },
+                },
+              ],
+            });
+          },
+          getItemUrl({ item }) {
+           return base_url + item.url;
          },
-
          templates: {
-           suggestion: function(suggestion) {
-             var content = '';
-             var title = '';
-             var type = '';
-             var category = '';
-             var platform = '';
-             var subname = ''
+           noResults({createElement}) {
+             return createElement("div", {
+               dangerouslySetInnerHTML: {
+                 __html: '<div class="no_results">No results were found with your current search. Try to change the search query.</div>',
+                 },
+               })
+          },
 
-             //console.log(hit)
-             if ('nav_title' in suggestion) {
-               title = suggestion.nav_title.replace('%20', ' ').replace('_', ' ');
-             }
-             else {
-               title = suggestion.title.replace('%20', ' ').replace('_', ' ');
-             }
-             if ('platform' in suggestion) {
-               platform = suggestion.platform.replace('%20', ' ').replace('_', ' ');
-             }
-             else {
-               platform = suggestion.platform.replace('%20', ' ').replace('_', ' ');
-             }
+          item({ item, createElement }) {
+            var content = "";
+            var title = "";
+            var type = "";
+            var category = "";
+            var platform = "";
+            var subname = "";
+            var heading = "";
 
+            if ("nav_title" in item) {
+              title = item.nav_title.replaceUnder();
+            } else {
+              title = item.title.replaceUnder();
+            }
+            if ("type" in item) {
+              type = item.type.replaceUnder().upCaseWord();
+            }
+            if ("category" in item) {
+              category = item.category.replaceUnder();
+            }
 
-             var resulttemplate = '<a href="' + base_url + suggestion.url + '"><div class="title"> * ' + platform + ' > ' +
-               title + '</div></a>';
-             return resulttemplate;
-             //
-             //return  suggestion._highlightResult.title.value;
-           },
-           empty: '<div class="no_results">No results were found with your current search. Try to change the search query.</div><hr />',
-           footer: ''
-         }
+            if ("platform" in item) {
+              if (Array.isArray(item.platform)){
+                platform = item.platform.join(',').replace(/\%20/g, ' ').replace(/\_/g, ' ') + ' > ';
+              }
+              else {
+                platform = item.platform.replace(/\%20/g, ' ').replace(/\_/g, ' ') + ' > ';
+              }
+            }
+            if ("headings" in item) {
+              if (item["headings"]) {
+                heading = item["headings"][item["headings"].length - 1];
+              }
+            }
 
-       }]
-     ).on('autocomplete:selected', function(event, suggestion, dataset) {
-     }).keydown(function(e){
-       if (e.which == 27) {
-         $(this).autocomplete('val', '');;
-       }
-     });
-     if (navigator.userAgent.toLowerCase().indexOf('firefox') > -1 ) {
-       var ff_div = $('#firefox_warning').detach();
-       ff_div.insertBefore($('#basic_page')).show();
-     }
+            var url = item.url;
+            if (heading) {
+              url += "#" + string_to_slug(heading);
+            }
+            var resulttemplate = '<a href="' +
+                base_url + url + '"><div class="title"> * ' +
+                platform + title + ' <div class="category">' +
+                subname.replace(/\_/g, " ") +
+                "</div></div></a>";
+            return createElement("div", {
+              dangerouslySetInnerHTML: {
+                __html: resulttemplate,
+              },
+            });
+          },
+        },
+      }];
+    }
+  });
+
+ if (navigator.userAgent.toLowerCase().indexOf('firefox') > -1 ) {
+   var ff_div = $('#firefox_warning').detach();
+   ff_div.insertBefore($('#basic_page')).show();
+ }
 });
 </script>
 <div id="firefox_warning" style="display:none;">For Firefox users, please whitelist this site or check your <a href="https://developer.mozilla.org/en-US/docs/Mozilla/Firefox/Privacy/Tracking_Protection?utm_source=mozilla&utm_medium=firefox-console-errors&utm_campaign=default" target="_blank">Tracking Protection Settings</a>, or your ticket might not be submitted.</div>
@@ -1282,13 +1365,10 @@ $( document ).ready(function() {
               </form>
         </div>
         <div class="col-sm-5" id="ticket_resources">
-          <div id="search-input">
-          <input type="text" placeholder="Search">
-           </div>
+        <div id="support-search-div">
+         </div>
 
-           <div id="ticket_search_title">Search Result:</div>
-
-           <div id="ticket_search"></div>
+           <div id="support-search-panel"></div>
 
             <legend>Useful Resources</legend>
 

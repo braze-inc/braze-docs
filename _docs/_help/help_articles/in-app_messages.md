@@ -4,6 +4,10 @@ nav_title: In-App Messages
 layout: dev_guide
 guide_top_header: "In-App Message Help Articles"
 
+page_type: landing
+description: "This landing page is home to help articles related to common issues with in-app messages."
+channel: in-app messages
+no_index: true
 guide_menu_title: ""
 guide_menu_list:
   - name: Low Impressions

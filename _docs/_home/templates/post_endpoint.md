@@ -1,7 +1,6 @@
 ---
 nav_title: "POST: [Endpoint Name]"
 page_order:
-
 layout: api_page
 excerpt_separator: ""
 
@@ -16,6 +15,9 @@ tool:
   - Campaigns
 
 description: "This article outlines details about and using this POST [endpoint name] Braze endpoint."
+
+noindex: true
+#ATTENTION: remove noindex and this alert from template
 ---
 {% api %}
 # [Endpoint Name]
@@ -35,7 +37,7 @@ This is where you can give more information about your endpoint request body, in
 
 ```
 Content-Type: application/json
-Authorization: Bearer YOUR_REST_API_KEY
+Authorization: Bearer YOUR-REST-API-KEY
 ```
 
 ```json
@@ -51,6 +53,7 @@ This is a place for you to describe additional details for the parameters above.
 | Parameter | Required | Data Type | Description |
 | ---------------------| --------------- |
 | `email` | Yes | String or Array | String email address to modify, or an Array of up to 50 email addresses to modify. |
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4}
 
 ## Example Unsubscribe CURL
 

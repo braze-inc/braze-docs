@@ -1,38 +1,45 @@
 ---
-nav_title: SMS Set Up
+nav_title: SMS Setup
 layout: featured
-page_order: 4
-guide_top_header: "SMS Set Up"
-guide_top_text: "Braze has just launched SMS! You can use it in our Campaigns or Canvas tools. But, first, you should probably get set up and get to know SMS with Braze..."
+page_order: 6
+guide_top_header: "SMS Setup"
+guide_top_text: "Ready to get started with SMS? You can use it in our campaigns or Canvas tools. But, first, you should probably get set up and get to know SMS with Braze..."
+
+page_type: landing
+description: "This landing page is home to articles on SMS setup. Here you can find resources on crafting SMS messages, SMS laws and regulations, terms to know, and more."
+tool:
+- Campaigns
+- Canvas
+channel: SMS
 
 guide_featured_title: "Section Articles"
 guide_featured_list:
+- name: About SMS
+  link: /docs/user_guide/onboarding_with_braze/sms_setup/about_sms/
+  fa_icon: fas fa-comment-dots
+- name: SMS Laws & Regulations
+  link: /docs/user_guide/onboarding_with_braze/sms_setup/sms_laws_and_regulations/
+  fa_icon: fas fa-gavel
 - name: Terms to Know
   link: /docs/user_guide/onboarding_with_braze/sms_setup/terms/
   fa_icon: fas fa-bookmark
-- name: "Import Phone Numbers"
-  link: /docs/user_guide/onboarding_with_braze/sms_setup/importing_numbers/
-  fa_icon: fas fa-user-circle
-- name: "Short & Long Codes"
+- name: Short and Long Codes
   link: /docs/user_guide/onboarding_with_braze/sms_setup/short_and_long_codes/
-  fa_icon: far fa-address-card
-- name: Requirements
-  link: /docs/user_guide/onboarding_with_braze/sms_setup/#requirements
-  fa_icon: far fa-check-square
-- name: Compliance
-  link: /docs/user_guide/message_building_by_channel/sms/compliance/
-  fa_icon: fas fa-gavel
+  fa_icon: fas fa-address-card
+- name: User Data Migration
+  link: /docs/user_guide/onboarding_with_braze/sms_setup/user_data_migration/
+  fa_icon: fas fa-user
+- name: SMS Message Sending
+  link: /docs/user_guide/onboarding_with_braze/sms_setup/sms_sending/
+  fa_icon: fas fa-comment-alt
+- name: SMS Subscription Groups
+  link: /docs/user_guide/onboarding_with_braze/sms_setup/sms_subscription_groups/
+  fa_icon: fas fa-users
+- name: Next Steps..
+  link: /docs/user_guide/onboarding_with_braze/sms_setup/next_steps/
+  fa_icon: fas fa-forward
+  
 ---
-
-## Requirements
-
-Before you start sending sms, there are some things you need. Refer to the basic chart below to learn more.
-
-|Requirement | Description | Acquirement |
-|---|---|---|
-| A Dedicated Phone Number (either a Short Code or Long Code) | A dedicated phone number provided exclusively to a single brand or host. | Braze handles acquiring these numbers for you. You can [read more about short and long codes here]({{site.baseurl}}/user_guide/onboarding_with_braze/sms_setup/short_and_long_codes/).|
-| List of Users with Phone Numbers | Before you can start sending messages, you must add users to your account. Additionally, you must know the approximate size of your audience.  | Users are initially added to Braze through our backend. You must pass this list to us to upload for you. Phone numbers must be formatted as 10-digit number, as well as a country area code. [Learn more here]({{site.baseurl}}/user_guide/onboarding_with_braze/sms/importing_numbers/). |
-| [Keywords and Responses to Them]({{site.baseurl}}/user_guide/message_building_by_channel/sms/keywords/) | Certain keywords must have responses attributed to it before you can begin messaging - specifically all  | You should list these out and send them to your Braze representative or onboarding manager during your onboarding process. You can check out some templates for that here. |
-
-
 <br>
+
+

@@ -1,10 +1,15 @@
 ---
-nav_title: Logging Custom Events
+nav_title: Tracking Custom Events
 platform: React Native
 subplatform: iOS
 page_order: 1
+
+page_type: reference
+description: "This page provides resources and methods to log custom events for your Android or FireOS app running React Native."
+
 ---
-## Logging Custom Events
+
+# Tracking Custom Events
 
 See [the iOS integration instructions][1] for in depth discussion of event tracking best practices and interfaces. You should also check out our notes on [event naming conventions]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/event_naming_conventions/).
 

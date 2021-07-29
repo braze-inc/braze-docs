@@ -1,6 +1,9 @@
 ---
 nav_title: September
 page_order: 5
+no_index: true
+page_type: update
+description: "This article contains release notes for September 2018."
 ---
 # September 2018
 
@@ -11,7 +14,7 @@ You can now access [Apple's Notification Group features]({{site.baseurl}}/user_g
 
 Customers can now specify [Quiet Hours]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/create_a_canvas/#step-5-select-your-send-settings) (the time during which your messages will not send) for Canvas. Just go to your __Canvas Send Settings__ and check "Enable Quiet Hours". Then, select your Quiet Hours in your user's local time and what action will follow if the message triggers inside of those Quiet Hours.
 
-Campaigns now also uses Quiet Time instead of “send this message during a specific portion of the day”.
+Campaigns now also use Quiet Time instead of “send this message during a specific portion of the day”.
 
 ## Adjust Customers
 

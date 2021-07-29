@@ -3,14 +3,14 @@ nav_title: Transfer Data from Amazon S3 to Snowflake
 page_order: 7
 
 page_type: tutorial
-description: "This article will walk you through transferring data from cloud storage like Amazon S3 to a warehouse like Snowflake using the ELT process."
-tool: currents
+description: "This how-to article will walk you through transferring data from cloud storage (like Amazon S3) to a warehouse (like Snowflake) using the E process."
+tool: Currents
 
 ---
 
 # Transfer Data from Amazon S3 to Snowflake
 
-> If your data is currently sitting in Amazon S3, you can transfer it to Snowflake or another relational data warehouse using the ELT process (Extract Load Transform).
+> If your data is currently sitting in Amazon S3, you can transfer it to Snowflake or another relational data warehouse using the ELT (Extract Load Transform) process.
 
 {% alert note %}
 If you have more specific use cases and would like Braze to service your Currents instance, reach out to your Braze Account Manager and ask them about Braze Data Professional Services.
@@ -18,7 +18,7 @@ If you have more specific use cases and would like Braze to service your Current
 
 ## Automated Load Process
 
-This automated load process moves data into [Snowflake](https://www.snowflake.com/), which will allow you to use the [Braze Looker Blocks](https://looker.com/platform/blocks/directory?utm_campaign=7012R000000fxfC&utm_source=other&utm_medium=email&utm_content=brazedirectreferral&utm_term=braze_direct#braze) to visualize that data in Looker to help drive insights and feedback into your Campaigns, Canvases, and Segments.
+This automated load process moves data into [Snowflake](https://www.snowflake.com/), which will allow you to use the [Braze Looker Blocks](https://looker.com/platform/blocks/directory?utm_campaign=7012R000000fxfC&utm_source=other&utm_medium=email&utm_content=brazedirectreferral&utm_term=braze_direct#braze) to visualize that data in Looker to help drive insights and feedback into your campaigns, Canvases, and Segments.
 
 Once you have a Currents to S3 export set up and are receiving live events data, it is time to configure your live ELT pipeline in Snowflake by configuring the following components:
 

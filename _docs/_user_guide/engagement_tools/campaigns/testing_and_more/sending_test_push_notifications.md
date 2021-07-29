@@ -2,15 +2,17 @@
 nav_title: Sending Test Messages
 platform: Campaigns
 subplatform: Testing and More
-page_order: 4
+page_order: 3
 
-tools: campaigns
+tool: 
+- Campaigns
+- Segments
 page_type: reference
 description: "This reference article covers how to send test messages across the different Braze channels and how to incorporate custom event properties or user attributes."
 ---
 # Sending Test Messages
 
-> This reference article goes over how to send test messages across the difference Braze channels, as well as how to incorporate custom event properties and user attributes. 
+> This reference article goes over how to send test messages across the different Braze channels, as well as how to incorporate custom event properties and user attributes. 
 > <br>
 > <br>
 > By testing out your campaigns you can make sure everything about it is just right!
@@ -81,7 +83,7 @@ After adding the testing filters to your test segment, you can verify that you'v
 
 > Exporting the segment's User Data to CSV will give you the most accurate picture of who falls under that segment. The "Preview" tab is only a sample of the users in the segment - [see more details about this in our FAQ][7] - and therefore may appear to have not selected all intended members.
 
-Once you've confirmed that you're only targeting the users that you want to receive the test message, you can either select this segment in an existing campaign that you want to test or click the "Start Campaign" button in the segment menu.
+Once you've confirmed that you're only targeting the users that you want to receive the test message, you can either select this segment in an existing campaign that you want to test or click the **Start Campaign** button in the segment menu.
 
 ## Sending the Test Campaign
 
@@ -110,7 +112,7 @@ If previewing as a customized user, you'll be able to enter in text for various 
 ![Custom user][25]
 
 ## Sending a Test Campaign Personalized with Custom Event Properties
-Testing campaigns [personalized][20] with [Custom Event Properties][19] differ slightly from testing other types of campaigns outlined above. The most robust way to test campaigns personalized using Custom Event Properties is to trigger the campaign yourself. Begin by writing up the copy involving the event property:
+Testing campaigns [personalized][20] with [custom event properties][19] differ slightly from testing other types of campaigns outlined above. The most robust way to test campaigns personalized using custom event properties is to trigger the campaign yourself. Begin by writing up the copy involving the event property:
 
 ![Composing Test Message with Properties][15]
 
@@ -122,7 +124,7 @@ If you're testing an iOS Push campaign, you must set the delay to 1 minute to al
 
 ![Test Message Delivery][16]
 
-As described above, target the users as you would for testing using either a testing filter or simply targeting your own e-mail address and finish creating the campaign.
+As described above, target the users as you would for testing using either a testing filter or simply targeting your own email address and finish creating the campaign.
 
 ![Test Message Targeting][17]
 
@@ -130,7 +132,7 @@ Go into your app and complete the custom event, and the campaign will trigger, a
 
 ![Test Message Example][18]
 
-Alternatively, if you are saving custom user IDs, you can also test the campaign by sending a customized test message to yourself. After writing the copy for your campaign, click the eye icon on the upper right corner of the preview, then select "Customized User". Add the custom event property on the bottom of the page, add your user ID or e-mail address to the top box and click "Send Test". You should receive a message personalized with the property.
+Alternatively, if you are saving custom user IDs, you can also test the campaign by sending a customized test message to yourself. After writing the copy for your campaign, click the eye icon on the upper right corner of the preview, then select "Customized User". Add the custom event property on the bottom of the page, add your user ID or email address to the top box and click "Send Test". You should receive a message personalized with the property.
 
 ![Testing Using Customized User][22]
 
@@ -143,7 +145,6 @@ Alternatively, if you are saving custom user IDs, you can also test the campaign
 [9]: {% image_buster /assets/img_archive/testemail.png %}
 [10]: {% image_buster /assets/img_archive/testpush.png %}
 [11]: {% image_buster /assets/img_archive/testwebpush.png %}
-[12]: {% image_buster /assets/img_archive/WebPush_Prompt.png %}
 [13]: {% image_buster /assets/img_archive/test-push-for-in-app.png %}
 [14]: {% image_buster /assets/img_archive/test-in-app.png %}
 [15]: {% image_buster /assets/img_archive/testeventproperties-compose.png %}
@@ -152,7 +153,7 @@ Alternatively, if you are saving custom user IDs, you can also test the campaign
 [18]: {% image_buster /assets/img_archive/testeventproperties-message.PNG %}
 [19]: {{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/#custom-event-properties
 [20]: {{site.baseurl}}/user_guide/personalization_and_dynamic_content/personalized_messaging/#personalized-messaging
-[21]: {{site.baseurl}}/user_guide/engagement_tools/campaigns/scheduling_and_organizing/scheduling_your_campaign/#action-based-delivery-event-triggered-campaigns
+[21]: {{site.baseurl}}/user_guide/engagement_tools/campaigns/scheduling_and_organizing/delivery_types/triggered_delivery/
 [22]: {% image_buster /assets/img_archive/testeventproperties-customuser.png %}
 [23]: {% image_buster /assets/img_archive/personalized_testing.png %}
 [24]: {% image_buster /assets/img_archive/personalized_testing_select.png %}

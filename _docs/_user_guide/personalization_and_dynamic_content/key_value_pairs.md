@@ -1,7 +1,10 @@
 ---
 nav_title: Key-Value Pairs
 page_order: 3
+description: "Braze enables you to send extra data payloads to user devices via key-value pairs. This feature is available across push, in-app, and News Feed messaging channels."
+
 ---
+
 # Key-Value Pairs
 
 Braze enables you to send extra data payloads to user devices via key-value pairs. This feature is available across push, in-app, and News Feed messaging channels. Extra data payloads can help you update internal metrics and app content as well as customize push notification properties, such as alert prioritization, localization, and sounds.
@@ -19,7 +22,7 @@ Apple Push Notifications service (APNs) supports setting alert preferences and s
 | alert             | string or dictionary object | For string inputs, displays an alert with the string as the message with Close and View buttons; for non-string inputs, displays an alert or banner depending on the input's child properties |
 | badge             | number                      | Governs the number that is displayed as the badge on the app icon                                                                                                                              |
 | sound             | string                      | The name of the sound file to play as an alert; must be in the app's bundle or ```Library/Sounds``` folder                                                                                    |
-| content-available | number                      | Input values of 1 signal to the app the availabilty of new information upon launch or session resumption |
+| content-available | number                      | Input values of 1 signal to the app the availability of new information upon launch or session resumption |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
 
 
@@ -91,17 +94,7 @@ If you are using the HTTP/2 provider API, any individual payload you send to APN
 
 ### Android
 
-Firebase Cloud Messaging (FCM) allows you to send send additional data payloads in push notifications using key-value pairs. FCM specifies two types of payloads: notification and data. The notification payload has a 2KB limit and predetermined set of keys that govern message content. The data payload enables developers to send as much as 4KB of custom key-value pairs.
-
-##### Notification Payload Key-Values
-
-| Key   | Value Type | Value Description                             |
-|-------|------------|-----------------------------------------------|
-| body  | string     | The content of the push notification          |
-| title | string     | The title of the push notification            |
-| icon  | string     | The file name of the desired image to display |
-
-Braze's message composer automatically handles the creation of the notifcation payload.
+Braze allows you to send send additional data payloads in push notifications using key-value pairs.
 
 ##### Data Payload
 
@@ -115,28 +108,6 @@ Use-cases for custom key-value pairs include but are not limited to internal met
 Note that your app's backend must be able to process custom key-value pairs for the data payload to function properly.
 {% endalert %}
 
-For more information on accessing key-value pairs sent with Android push notifications, refer to the [Braze Documention][6].
-
-Braze automatically formats both payloads as a JSON before sending them to FCM.
-
-**Notification and Data Payloads**
-
-{% raw %}
-
-```
-{
-    "notification" : {
-        "body" : "Message received from Spencer",
-        "title" : "Hi Will!",
-        "icon" : "Smiley"
-    },
-    "data" : {
-        "volume" : "6.7",
-        "contents" : "https://blog.braze.com/"
-    }
-}
-```
-
 ##### FCM Messaging Options
 
 Android push notifications can be further customized with FCM message options. These include [notification priority][8], [sound][10], [delay, lifespan, and collapsibility][9]. These values can be input directly in the Dashboard as shown below. Refer to the [Braze Documentation][7] for further instructions on how to set these options in the Braze message composer.
@@ -149,10 +120,10 @@ A silent push notification is a push notification containing no alert message or
 
 Marketers should test that silent push notifications trigger expected behavior before sending them to their app's users. Once you compose your [iOS][2] or [Android][13] silent push notification, ensure that you only target a test user by filtering on [external user ID][14] or [email address][15].
 
-Upon campaign launch, you should check that you have not received any visible push notification on your test device. For instructions on how to check if your silent push notification has updated your app as intended, contact your dedicated success manager or [success@braze.com](mailto:success@braze.com).
+Upon campaign launch, you should check that you have not received any visible push notification on your test device.
 
 {% alert note %}
-The iOS operating system may [gate notifications][24] for some features (Uninstall Tracking, Geofences, and Push Stories). Please note that if you are experiencing difficulties with these features, the iOS's silent notifications gate might be the cause.
+The iOS operating system may [gate notifications]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/push_notifications/silent_push_notifications/#ios-silent-notifications-limitations) for some features (Uninstall Tracking, Geofences, and Push Stories). Please note that if you are experiencing difficulties with these features, the iOS's silent notifications gate might be the cause.
 {% endalert %}
 
 ### Web
@@ -171,8 +142,6 @@ To add a key-value pair to an in-app message, select the gear icon in the Braze 
 
 For Braze customers that use SendGrid, key-value pairs will be sent as [unique arguments][11]. SendGrid allows you to attach an unlimtied number of key-value pairs up to 10,000 bytes of data. These key-value pairs can be seen in posts from the SendGrid [Event Webhook][12]. 
 
-{% endraw %}
-
 {% alert note %}
 Note that bounced emails will not deliver key-value pairs to SendGrid.
 {% endalert %}
@@ -188,16 +157,13 @@ Key-value pairs can be added to a News Feed Card in the Braze message composer b
 
 [1]: {{site.baseurl}}/developer_guide/platform_integration_guides/ios/push_notifications/customization/#extracting-data-from-push-notification-key-value-pairs
 [2]: {{site.baseurl}}/developer_guide/platform_integration_guides/ios/push_notifications/silent_push_notifications/
-[3]: https://developer.apple.com/library/ios/documentation/NetworkingInternet/Conceptual/RemoteNotificationsPG/Chapters/TheNotificationPayload.html
 [4]: {{site.baseurl}}/user_guide/data_and_analytics/tracking/uninstall_tracking/
-[5]: https://developers.google.com/cloud-messaging/concept-options#common-message-options
-[6]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/news_feed/#key-value-pairs
 [7]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/push_notifications/advanced_settings/
 [8]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/push_notifications/advanced_settings/#notification-priority
 [9]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/push_notifications/advanced_settings/#delivery-options
 [10]: {{site.baseurl}}/developer_guide/platform_integration_guides/fireos/push_notifications/advanced_settings/#sounds
 [11]: https://sendgrid.com/docs/API_Reference/SMTP_API/unique_arguments.html
-[12]: https://sendgrid.com/docs/API_Reference/Event_Webhook/event.html
+[12]: https://sendgrid.com/docs/for-developers/tracking-events/event/
 [13]: {{site.baseurl}}/developer_guide/platform_integration_guides/fireos/push_notifications/silent_push_notifications/#silent-push-notifications
 [14]: {{site.baseurl}}/developer_guide/rest_api/messaging/#external-user-id
 [15]: {{site.baseurl}}/user_guide/engagement_tools/segments/creating_a_segment/
@@ -209,4 +175,3 @@ Key-value pairs can be added to a News Feed Card in the Braze message composer b
 [21]: {% image_buster /assets/img_archive/keyvalue_iam.png %}
 [22]: {% image_buster /assets/img_archive/keyvalue_email.png %}
 [23]: {% image_buster /assets/img_archive/keyvalue_newsfeed.png %}
-[24]: {{site.baseurl}}/developer_guide/platform_integration_guides/ios/push_notifications/silent_push_notifications/#ios-silent-notifications-limitations

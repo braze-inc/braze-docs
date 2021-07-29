@@ -17,108 +17,107 @@ description: "This article outlines details about the Update User's Subscription
 ---
 {% api %}
 # Update Users' Subscription Group Status
-{% apimethod post %}
+{% apimethod post core_endpoint|https://www.braze.com/docs/core_endpoints %} 
 /subscription/status/set
 {% endapimethod %}
 
-Use the endpoints below to update the subscription state of a user on the Braze dashboard. You can access a subscription groups `subscription_group_id` by navigating to it on the Subscription Group page.
+Use the endpoints below to batch update the subscription state of up to 50 users on the Braze dashboard. You can access a subscription groups `subscription_group_id` by navigating to it on the Subscription Group page.
 
 If you want to see examples or test this endpoint for __Email Subscription Groups__:
 
-{% apiref swagger %}https://www.braze.com/docs/api/interactive/#/Subscription%20Groups/SetUsersSubscriptionStatus {% endapiref %}
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#8895e87e-6324-47a3-a833-adf29a258bb9 {% endapiref %}
 
 If you want to see examples or test this endpoint for __SMS Subscription Groups__:
 
-{% apiref swagger %}https://www.braze.com/docs/api/interactive/#/Subscription%20Groups/SetUsersSubscriptionStatus {% endapiref %}
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#72558b32-7dbe-4cba-bd22-a7ce513076dd {% endapiref %}
-
-{% alert important %}
-__Looking for the `api_key` parameter?__<br>As of May 2020, Braze has changed how we read API keys to be more secure. Now API keys must be passed as a request header, please see `YOUR_REST_API_KEY` within the __Example Request__ below.<br><br>Braze will continue to support the `api_key` being passed through the request body and URL parameters, but will eventually be sunset. Please update your API calls accordingly.
-{% endalert %}
 
 ## Request Body
 
+{% tabs %}
+{% tab SMS %}
 ```
 Content-Type: application/json
-Authorization: Bearer YOUR_REST_API_KEY
+Authorization: Bearer YOUR-REST-API-KEY
 ```
 
 ```json
 {
    "subscription_group_id": (required, string) the id of your subscription group,
    "subscription_state": (required, string) available values are “unsubscribed” (not in subscription group) or “subscribed” (in subscription group),
-   "external_id": (required*, string) the external_id of the user,
-   "email": (required*, string) the email address of the user
-   //one of external_id or email is required
-   //can be passed as an array of string with a max of 50
-   //endpoint only accepts email or phone value, not both
-   "phone": (optional, string in E.164 format) The phone number of the user (must include at least one phone number and at most 50 phone numbers).
+   "external_id": (required*, array of strings) the external_id of the user or users, may include up to 50 ids,
+   "phone": (required*, array of strings in E.164 format) The phone number of the user (must include at least one phone number and at most 50 phone numbers),
+   // SMS subscription group - one of external_id or phone is required
  }
 ```
-\* SMS subscription groups: Only `external_id` or `phone` is accepted.<br>
-\* Email subscription groups: Either `email` or `external_id` is required. 
+\* SMS subscription groups: Only `external_id` or `phone` is accepted.
 
-### Request Parameters
+{% endtab %}
+{% tab Email %}
+```
+Content-Type: application/json
+Authorization: Bearer YOUR-REST-API-KEY
+```
+
+```json
+{
+   "subscription_group_id": (required, string) the id of your subscription group,
+   "subscription_state": (required, string) available values are “unsubscribed” (not in subscription group) or “subscribed” (in subscription group),
+   "external_id": (required*, array of strings) the external_id of the user or users, may include up to 50 ids,
+   "email": (required*, array of strings) the email address of the user (must include at least one email and at most 50 emails),
+   // Email subscription group - one of external_id or email is required
+   // Please note that sending an email address that is linked to multiple profiles will update all relevant profiles
+ }
+```
+\* Email subscription groups: Either `email` or `external_id` is required.
+{% endtab %}
+{% endtabs %}
+
+This property should not be used for updating a user's profile information. Please use the [/users/track]({{site.baseurl}}/api/endpoints/user_data/post_user_track/) property instead.
+
+{% alert important %}
+When creating new users via the [/users/track]({{site.baseurl}}/api/endpoints/user_data/post_user_track/) endpoint, you should leave a delay of around 2 minutes before adding users to the relevant Subscription Group to allow Braze time to fully create the user profile.
+{% endalert %}
+
+## Request Parameters
 
 | Parameter | Required | Data Type | Description |
 |---|---|---|---|
-| `subscription_group_id` | Yes | String | The id of your subscription group, |
-| `subscription_state` | Yes | String | Available values are “unsubscribed” (not in subscription group) or “subscribed” (in subscription group) |
-| `external_id` | Yes* | String | The external_id of the user |
-| `email` | Yes* | String | The email address of the user |
-| `phone` | Optional | String in E.164 format | Tags must already exist. |
+| `subscription_group_id` | Required | String | The `id` of your subscription group. |
+| `subscription_state` | Required | String | Available values are `unsubscribed` (not in subscription group) or `subscribed` (in subscription group). |
+| `external_id` | Required* | Array of strings | The `external_id` of the user or users, may include up to 50 `id`s. |
+| `email` | Required* | String | The email address of the user, can be passed as an array of strings. Must include at least one email address (with a max of 50). |
+| `phone` | Required* | String in [E.164](https://en.wikipedia.org/wiki/E.164) format | The phone number of the user, can be passed as an array of strings. Must include at least one phone number (with a max of 50). |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
 
-#### Using Email
-```json
-{
-  "subscription_group_id": "pto81fff-734f-80e5-b7b2-b880562888ww",
-  "subscription_state": "unsubscribed",
-  "email": "your.user@email.com"
-}
-
-```
-
-#### Using Phone Number
-```json
-{
-  "subscription_group_id": "pto81fff-734f-80e5-b7b2-b880562888ww",
-  "subscription_state": "unsubscribed",
-  "phone": "+12223334444"
-}
-
-```
-
-### Example Requests Email
+## Example Requests Email
 ```
 curl --location --request POST 'https://rest.iad-01.braze.com/subscription/status/set' \
 --header 'Content-Type: application/json' \
---header 'Authorization: Bearer YOUR_REST_API_KEY' \
+--header 'Authorization: Bearer YOUR-REST-API-KEY' \
 --data-raw '{
-  "subscription_group_id": "pto81fff-734f-80e5-b7b2-b880562888ww",
+  "subscription_group_id": "subscription_group_identifier",
   "subscription_state": "unsubscribed",
-  "external_id": "user123",
-  "email": "your.user@email.com"
+  "external_id": "example-user",
+  "email": ["example1@email.com", "example2@email.com"]
 }
 '
 ```
 
-### Example Requests SMS
+## Example Requests SMS
 ```
 curl --location --request POST 'https://rest.iad-01.braze.com/subscription/status/set' \
 --header 'Content-Type: application/json' \
---header 'Authorization: Bearer YOUR_REST_API_KEY' \
+--header 'Authorization: Bearer YOUR-REST-API-KEY' \
 --data-raw '{
-  "subscription_group_id": "pto81fff-734f-80e5-b7b2-b880562888ww",
+  "subscription_group_id": "subscription_group_identifier",
   "subscription_state": "unsubscribed",
-  "external_id": "user123",
-  "phone": "+12223334444"
+  "external_id": "external_identifier",
+  "phone": ["+12223334444", "+11112223333"]
 }
 '
 ```
 
-### Example Successful Response
+## Example Successful Response
 
 Response: (status 201)
 
@@ -134,4 +133,3 @@ The endpoint only accepts the `email` or `phone` value, not both. If given both,
 
 {% endapi %}
 
-[support]: {{site.baseurl}}/support_contact/

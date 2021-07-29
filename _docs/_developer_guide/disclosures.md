@@ -5,6 +5,9 @@ page_order: 5
 guide_top_header: "Disclosures"
 guide_top_text: "Braze has you covered! Learn how below!"
 
+page_type: landing
+description: "This landing page is home to Braze's disclosures and qualifications."
+
 guide_featured_title: "Disclosures and Qualifications"
 guide_featured_list:
   - name: Security Vulnerability Disclosure
@@ -19,8 +22,8 @@ guide_featured_list:
   - name: Security Qualifications
     link: /docs/developer_guide/disclosures/security_qualifications/
     fa_icon: fas fa-user-shield
-  - name: GDPR
-    link: /docs/help/gdpr_compliance/
+  - name: Data Protection Technical Assistance
+    link: /docs/help/dp-technical-assistance/
     fa_icon: fas fa-globe-europe
 
 ---

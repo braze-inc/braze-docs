@@ -1,6 +1,10 @@
 ---
 nav_title: Scroll Bar Overlap
 page_order: 0
+
+page_type: solution
+description: "This help article walks Mac users through how to resolve scroll bars overlapping content within Braze docs."
+no_index: true
 ---
 
 # Scroll Bar Overlap

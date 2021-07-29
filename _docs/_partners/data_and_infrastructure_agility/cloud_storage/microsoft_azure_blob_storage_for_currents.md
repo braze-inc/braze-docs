@@ -28,7 +28,7 @@ All you need to do is give the Storage Account a name. You don't need to change 
 
 ### Step 2: Get Connection String
 
-Once the Storage Account is deployed, Navigate to the Access Keys menu from the center column. Take note of the Connection String. Microsoft provides two access keys so that you can maintain connections using one key while regenerating the other. You only need the connection string from one of them.
+Once the Storage Account is deployed, navigate to the Access Keys menu from the center column. Take note of the Connection String. Microsoft provides two access keys so that you can maintain connections using one key while regenerating the other. You only need the connection string from one of them.
 
 {% alert note %}
 Braze Currents uses the Connection String from this menu, not the Key.
@@ -46,8 +46,13 @@ Then, navigate to the "Blobs" menu under the "Blob Service" section of the cente
 
 Add this information to the Azure Blob Currents page on the dashboard, and press "Launch Current".
 
+![Azure Blob]({% image_buster /assets/img_archive/currents-azure-blob-edit.png %})
+
+{% alert important %}
+It's important to keep your Connection String up to date; if your connector's credentials expire, the connector will stop sending events. If this persists for more than **48 hours**, the connector's events will be dropped and data will be permanently lost.
+{% endalert %}
+
 You can also add the following customizations, based on your needs:
 
 -   Prefix (defaults to `currents`)
 
-![Azure Blob]({% image_buster /assets/img_archive/currents-azure-blob-edit.png %})
