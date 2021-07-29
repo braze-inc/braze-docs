@@ -1,6 +1,7 @@
 ---
 nav_title: Docs Metadata
 page_order: 0
+noindex: true
 ---
 # Docs Metadata
 
@@ -48,11 +49,11 @@ These will assist in external and internal SEO, informing page content and forma
 | `page_type` | Type of page, determined by page templates. Inform formatting and content. | Yes. | Exclusive; only one can be used per page. | String. | See [Page Types](#page-types) list below. |
 | `platform` | Notes which platforms (iOS, Android, etc.) the article is associated with. | No, unless on a Dev Guide page.  | Multiple values can be used. | String. | Any of the platforms Braze integrates on: `iOS`, `Android`, `Web`, `API`, and any of the wrapper SDKs. |
 | `channel` | Notes which messaging channels (push, in-app messages, etc.) the article is associated with. | No, unless the content mentions a specific channel or channels. | Multiple values can be used. | String. | Any of the messaging channels Braze sends to: `content cards`, `email`, `news feed`, `in-app messages`, `push`, `sms`, and `webhooks`.|
-| `tool` | Notes which engagement tools (Canvas, Campaigns, etc.) the article is associated with. | Yes. | Multiple values can be used. | String. | Any of Braze's  tools: `dashboard`, `docs`, `canvas`, `campaigns`, `segments`, `templates`, `media`, `location`, `currents`, `reports`. |
+| `tool` | Notes which engagement tools (Canvas, campaigns, etc.) the article is associated with. | Yes. | Multiple values can be used. | String. | Any of Braze's  tools: `dashboard`, `docs`, `canvas`, `campaigns`, `segments`, `templates`, `media`, `location`, `currents`, `reports`. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
 
 ### Multiple Tag Values
-Sometimes, you may find that a content tag for a page could be categorized with multiple values (as in, an article might talk about both Canvas and Campaigns, or cover a custom integration for both Android and iOS).
+Sometimes, you may find that a content tag for a page could be categorized with multiple values (as in, an article might talk about both Canvas and campaigns, or cover a custom integration for both Android and iOS).
 
 You can format that like this: 
 ```

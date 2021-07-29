@@ -18,14 +18,14 @@ Before implementation, be sure to review examples of the segmentation options af
 {% tab JAVA %}
 
 ```java
-Appboy.getInstance(context).logCustomEvent(YOUR_EVENT_NAME);
+Braze.getInstance(context).logCustomEvent(YOUR_EVENT_NAME);
 ```
 
 {% endtab %}
 {% tab KOTLIN %}
 
 ```kotlin
-Appboy.getInstance(context).logCustomEvent(YOUR_EVENT_NAME)
+Braze.getInstance(context).logCustomEvent(YOUR_EVENT_NAME)
 ```
 
 {% endtab %}
@@ -43,18 +43,18 @@ Properties are defined as key-value pairs.  Keys are `String` objects and values
 {% tab JAVA %}
 
 ```java
-AppboyProperties eventProperties = new AppboyProperties();
+BrazeProperties eventProperties = new BrazeProperties();
 eventProperties.addProperty("key", "value");
-Appboy.getInstance(YOUR_ACTIVITY.this).logCustomEvent(YOUR_EVENT_NAME, eventProperties);
+Braze.getInstance(YOUR_ACTIVITY.this).logCustomEvent(YOUR_EVENT_NAME, eventProperties);
 ```
 
 {% endtab %}
 {% tab KOTLIN %}
 
 ```kotlin
-val eventProperties = AppboyProperties()
+val eventProperties = BrazeProperties()
 eventProperties.addProperty("key", "value")
-Appboy.getInstance(context).logCustomEvent(YOUR_EVENT_NAME, eventProperties)
+Braze.getInstance(context).logCustomEvent(YOUR_EVENT_NAME, eventProperties)
 ```
 
 {% endtab %}
@@ -62,7 +62,7 @@ Appboy.getInstance(context).logCustomEvent(YOUR_EVENT_NAME, eventProperties)
 
 ### Reserved Keys
 
-The following keys are __RESERVED__ and __CANNOT__ be used as Custom Event Properties:
+The following keys are __RESERVED__ and __CANNOT__ be used as custom event properties:
 
 - `time`
 - `event_name`
@@ -70,7 +70,7 @@ The following keys are __RESERVED__ and __CANNOT__ be used as Custom Event Prope
 See the [Javadoc][6] for more information.
 
 [0]: {{site.baseurl}}/developer_guide/platform_wide/analytics_overview/#user-data-collection
-[2]: https://appboy.github.io/appboy-android-sdk/javadocs/com/appboy/Appboy.html#logCustomEvent(java.lang.String) "Javadocs"
+[2]: https://appboy.github.io/appboy-android-sdk/javadocs/com/appboy/Appboy.html#logCustomEvent(java.lang.String)
 [3]: http://developer.android.com/reference/java/util/Date.html
-[4]: https://appboy.github.io/appboy-android-sdk/javadocs/com/appboy/models/outgoing/AppboyProperties.html
+[4]: https://appboy.github.io/appboy-android-sdk/javadocs/com/braze/models/outgoing/BrazeProperties.html
 [6]: https://appboy.github.io/appboy-android-sdk/javadocs/com/appboy/Appboy.html#logCustomEvent(java.lang.String,%20com.appboy.models.outgoing.AppboyProperties)

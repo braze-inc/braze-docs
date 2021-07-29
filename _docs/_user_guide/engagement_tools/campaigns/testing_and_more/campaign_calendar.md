@@ -14,25 +14,25 @@ description: "This reference page breaks down the components of the campaign cal
 The Campaign Calendar is a useful central location in the Dashboard where you can see a big picture view of upcoming and past scheduled campaigns. In addition to this, you will be presented with overall messaging analytics, providing useful information on the type and quantity of future campaigns as well as send stats for past campaigns. 
 ![Calendar Button][5]{: style="float:right;max-width:15%;margin-left:15px;margin-bottom:10px;margin-top:10px;"}
 
-The Campaign Calendar can be found by navigating to the Braze Dashboard and selecting Calendar listed under Campaigns. 
+The Campaign Calendar can be found by navigating to the Braze Dashboard and selecting **Calendar**, listed under **Campaigns**. 
 
 ![Full Page][4]
 
 {% alert note %}
-Only Scheduled Campaigns are displayed in the Campaign Calendar. Canvas Steps, Triggered Campaigns, and API campaigns will not be displayed here.
+Only scheduled campaigns are displayed in the Campaign Calendar. Canvas steps, triggered campaigns, and API campaigns will not be displayed here.
 {% endalert %}
 
 ## Future Send Calendar
 
-__Red__: Single Channel Scheduled Campaigns<br>
-__Blue__: Multichannel Scheduled Campaigns
+__Red__: Single-channel scheduled campaigns<br>
+__Blue__: Multichannel scheduled campaigns
 
 Note that only __Scheduled Campaigns__ are displayed in the Campaign Calendar.<br> 
-Canvas Steps, Triggered Campaigns, and API campaigns __will not be displayed here__. 
+Canvas steps, triggered campaigns, and API campaigns __will not be displayed here__. 
 
 ## Messaging Analytics
 
-__Upcoming Message Types__: Details the amount of Push, Email, and In-App Messaging campaigns over the course of the next 14 days.<br> 
+__Upcoming Message Types__: Details the amount of push, email, and in-app messaging campaigns over the course of the next 14 days.<br> 
 __Messages Sent__: Details the number of messages sent and opened over the course of the past 14 days. 
 
 To get more detailed information on these analytics, you can scroll over the individual bars within the charts for a breakdown by day. If you wish to save the message analytics charts, you can press the ![hamburger][3]{: style="border:0;"} icon to save the chart in various formats. 

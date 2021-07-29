@@ -28,10 +28,10 @@ This endpoint will list you existing [Content Blocks]({{site.baseurl}}/user_guid
 
 | Parameter | Required | Data Type | Description |
 |---|---|---|---|
-| `modified_after`  | No | String in ISO 8601 | Retrieve only content blocks updated at or after the given time. |
-| `modified_before`  |  No | String in ISO 8601 | Retrieve only content blocks updated at or before the given time. |
-| `limit` | No | Positive Number | Maximum number of content blocks to retrieve, default to 100 if not provided, maximum acceptable value is 1000. |
-| `offset`  |  No | Positive Number | Number of content blocks to skip before returning rest of the templates that fit the search criteria. |
+| `modified_after`  | Optional | String in [ISO-8601](https://en.wikipedia.org/wiki/ISO_8601) format | Retrieve only content blocks updated at or after the given time. |
+| `modified_before`  |  Optional | String in [ISO-8601](https://en.wikipedia.org/wiki/ISO_8601) format | Retrieve only content blocks updated at or before the given time. |
+| `limit` | Optional | Positive Number | Maximum number of content blocks to retrieve. Default to 100 if not provided, with a maximum acceptable value of 1000. |
+| `offset`  |  Optional | Positive Number | Number of content blocks to skip before returning rest of the templates that fit the search criteria. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
 
 ## Example Request

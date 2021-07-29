@@ -5,6 +5,7 @@ page_order: 2
 page_type: solution
 description: "This help article walks you through quick checks that may assist you if no users have available locations."
 tool: Location
+no_index: true
 ---
 
 # Where Is My Location Data?

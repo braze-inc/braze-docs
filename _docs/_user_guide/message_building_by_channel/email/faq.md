@@ -23,11 +23,11 @@ Note that this deduplication occurs if the users targeted are included in the sa
 
 When a user tied to a given email address opens or clicks an email, all user profiles which share that email address are marked as opening and clicking the campaign. You can identify targeted users from the user profile download within **User Search**. The user who actually received the email will have a timestamp set for the “received_email” field in the associated campaign summary; other users won’t have this field, just “date”.
 
-**Exception: API Triggered Campaigns**
+**Exception: API-Triggered Campaigns**
 
-API-triggered campaigns will dedupe or send dupes depending on where the audience is defined. In short, the duplicate emails must be directly targeted as separate `User_ids` within the call in order to receive multiple details. Here are three possible scenarios for API triggered campaigns:
+API-triggered campaigns will dedupe or send dupes depending on where the audience is defined. In short, the duplicate emails must be directly targeted as separate `User_ids` within the call in order to receive multiple details. Here are three possible scenarios for API-triggered campaigns:
 
-- **Scenario 1: Duplicate emails in target segment (DEDUPED):** If the same email appears in multiple user profiles that are grouped together in dashboard’s audience filters for an API triggered campaign, only one of the profiles will get the email.
+- **Scenario 1: Duplicate emails in target segment (DEDUPED):** If the same email appears in multiple user profiles that are grouped together in dashboard’s audience filters for an API-triggered campaign, only one of the profiles will get the email.
 - **Scenario 2: Duplicate emails in different user_ids within recipients object (DUPE SENDS):** If the same email appears within multiple `External_user_IDs` referenced by the “recipients” object, the email will be sent twice.
 - **Scenario 3: Duplicate emails due to duplicate user_ids within recipients object (DEDUPED):** If you try to add the same user profile twice, only one of the profiles will get the email.
 

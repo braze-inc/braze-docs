@@ -1,7 +1,7 @@
 ---
 nav_title: May
 page_order: 8
-
+no_index: true
 page_type: update
 description: "This article contains release notes for May 2017."
 ---
@@ -40,7 +40,7 @@ We now have an alert to let you know when you’ve reached your quota depending 
 
 ## Canvas Data in Engagement Reports
 
-Canvas and Campaign data can now be exported together in Engagement Report, streamlining your data analysis. Learn more about Engagement Reports [here][35].
+Canvas and campaign data can now be exported together in Engagement Report, streamlining your data analysis. Learn more about Engagement Reports [here][35].
 
 
 [35]: {{site.baseurl}}/user_guide/data_and_analytics/your_reports/engagement_reports/#engagement-reports

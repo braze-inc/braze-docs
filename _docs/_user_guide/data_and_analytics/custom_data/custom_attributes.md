@@ -16,6 +16,24 @@ Custom attributes are a collection of your users' unique traits. Custom attribut
 
 All data stored on the **User Profile**, including custom attribute data, is retained indefinitely as long as each profile is active.
 
+## Setting Custom Attributes
+
+Listed below are the methods across various platforms that are used to set custom attributes.
+
+- [Android]({{site.baseurl}}/developer_guide/platform_integration_guides/android/analytics/setting_custom_attributes/)
+- [iOS]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/analytics/setting_custom_attributes/)
+- [Web]({{site.baseurl}}/developer_guide/platform_integration_guides/web/analytics/setting_custom_attributes/)
+- [FireOS]({{site.baseurl}}/developer_guide/platform_integration_guides/fireos/analytics/setting_custom_attributes/)
+- **React Native**: 
+    - [Android/FireOS]({{site.baseurl}}/developer_guide/platform_integration_guides/react_native/android_and_fireos/analytics/attribute_tracking/)
+    - [iOS]({{site.baseurl}}/developer_guide/platform_integration_guides/react_native/ios/analytics/attribute_tracking/)
+- [Unity]({{site.baseurl}}/developer_guide/platform_integration_guides/unity/Analytics/setting_custom_attributes/)
+- [Windows Universal]({{site.baseurl}}/developer_guide/platform_integration_guides/windows_universal/analytics/setting_custom_attributes/)
+- **Xamarin**: 
+    - [Android/FireOS]({{site.baseurl}}/developer_guide/platform_integration_guides/xamarin/android_and_fireos/analytics/#setting-custom-attributes)
+    - [iOS]({{site.baseurl}}/developer_guide/platform_integration_guides/xamarin/ios/analytics/#setting-custom-attributes)
+- [Roku]({{site.baseurl}}/developer_guide/platform_integration_guides/roku/analytics/setting_custom_attributes/)
+
 ## Custom Attribute Data Types
 
 Custom attributes are extraordinarily flexible tools that allow for great targeting.
@@ -91,6 +109,10 @@ More resources on RegEx:
 ### Arrays {#arrays}
 
 Array attributes are good for storing related lists of information about your users. For example, storing the last 100 pieces of content a user watched within an array would allow specific interest segmentation.
+
+By default, the max length of an array for an attribute is set to 25. For example, if you're sending over an attribute such as "Movies Watched" and it is set to 25, when a user watches a 26th movie, the first movie will be removed from the array and the most recent movie will be added. 
+
+The maximum for individual arrays can be increased to 100. If you would like this maximum increased, please reach out to your customer service manager.
 
 | Segmentation Options | Dropdown Filter | Input Options |
 | ---------------------| --------------- | ------------- |

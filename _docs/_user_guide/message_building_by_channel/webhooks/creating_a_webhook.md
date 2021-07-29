@@ -24,7 +24,7 @@ Creating a webhook campaign or including a webhook in a multichannel campaign al
 
 ## Step 1: Set Up a Webhook
 
-Add a new webhook message to a Campaign or Canvas. You can then choose to build a webhook from scratch or use one of our existing templates.
+Add a new webhook message to a campaign or Canvas. You can then choose to build a webhook from scratch or use one of our existing templates.
 
 ## Step 2: Enter the URL for Your Webhook
 

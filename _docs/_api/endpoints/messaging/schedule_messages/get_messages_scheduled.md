@@ -18,7 +18,7 @@ description: "This article outlines details about the Get Scheduled Messages Bra
 /messages/scheduled_broadcasts
 {% endapimethod %}
 
-You can view a JSON list of upcoming and scheduled Campaigns and Canvases using the following information and parameters. The endpoint will return information about scheduled Campaigns and entry Canvases between now and the designated `end_time` specified in the request. Daily, recurring messages will only appear once with their next occurrence. Results returned in this endpoint are only for Campaigns and Canvases created and scheduled in Braze.
+You can view a JSON list of upcoming and scheduled campaigns and Canvases using the following information and parameters. The endpoint will return information about scheduled campaigns and entry Canvases between now and the designated `end_time` specified in the request. Daily, recurring messages will only appear once with their next occurrence. Results returned in this endpoint are only for campaigns and Canvases created and scheduled in Braze.
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#6f623cc3-383b-4bf7-b14d-7c56fc5562f5 {% endapiref %}
 
@@ -26,7 +26,7 @@ You can view a JSON list of upcoming and scheduled Campaigns and Canvases using 
 
 | Parameter | Required | Data Type | Description |
 | --------- | -------- | --------- | ----------- |
-| `end_time` | Yes | String in ISO 8601 format | End date of the range to retrieve upcoming scheduled Campaigns and Canvases. This is treated as midnight in UTC time by the API. |
+| `end_time` | Required | String in [ISO-8601](https://en.wikipedia.org/wiki/ISO_8601) format | End date of the range to retrieve upcoming scheduled campaigns and Canvases. This is treated as midnight in UTC time by the API. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
 
 ## Example Request

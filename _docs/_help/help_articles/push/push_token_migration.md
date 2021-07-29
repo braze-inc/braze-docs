@@ -5,6 +5,7 @@ page_order: 1
 page_type: solution
 description: "This article covers how to migrate push tokens so you can continue sending push messages to your users after switching to Braze."
 channel: push
+no_index: true
 ---
 
 # Push Token Migration
@@ -13,7 +14,7 @@ A push token is a unique key, created and assigned by Apple or Google to create 
 
 Braze customers who were previously sending push notifications, either on their own or with a different provider, often have a list of users with registered push tokens.
 
-To continue sending push messages to these users during the Braze SDK integration process, you can import these tokens into Braze and target those users using Braze's Campaign tool.
+To continue sending push messages to these users during the Braze SDK integration process, you can import these tokens into Braze and target those users using Braze's campaign tool.
 
 {% comment %}
 These campaigns will have to be configured with proper key-value pairs to ensure that the client’s existing push notification setup will recognize and display the push payload we send to users’ devices. While we will record the number of pushes we send, no data on open rates or conversion events is tracked as that requires the Braze’s SDK to be integrated.

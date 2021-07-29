@@ -13,7 +13,7 @@ tool:
 description: "This article explains the different components of the User Alias object."
 ---
 
-#  User Attributes Object Specification
+# User Attributes Object Specification
 
 An API request with any fields in the Attributes Object will create or update an attribute of that name with the given value on the specified user profile. Use Braze User Profile Field names (listed below or any listed in the [User Profile Fields chart][27]) to update those special values on the user profile in the dashboard or add your own custom attribute data to the user.
 
@@ -78,19 +78,15 @@ For more information, check out [Push Token Migration][3].
 
 The following data types can be stored as a custom attribute:
 
-- Dates (Must be stored in the [ISO 8601][19] format or in the `yyyy-MM-dd'T'HH:mm:ss:SSSZ` format)
-  - Time attributes without a timezone will default to Midnight UTC (and will be formatted on the dashboard as the equivalent of Midnight UTC in the company's timezone)
-  - Events and Attributes with timestamps in the future will default to the current time
-- Strings
-- Floats
-- Booleans
-- Integers
-  - Integer custom attributes may be incremented by positive or negative integers by assigning them an object with the field "inc" and the value by which you would like to increment them.
-    - Example: `"my_custom_attribute_2" : {"inc" : int_value},`
-- Arrays
-  - Custom attribute arrays are one-dimensional sets; multi-dimensional arrays are not supported. __Adding an element to a custom attribute array appends the element to the end of the array, unless it's already present, in which case it gets moved from its current position to the end of the array.__ For example, if an array `['hotdog','hotdog','hotdog','pizza']` were imported, it will show in the array attribute as `['hotdog', 'pizza']` because only unique values are supported. 
-  - In addition to setting the values of an array by saying something like `"my_array_custom_attribute":[ "Value1", "Value2" ]` you may add to existing arrays by doing something like `"my_array_custom_attribute" : { "add" : ["Value3"] },` or remove values from an array by doing something like `"my_array_custom_attribute" : { "remove" : [ "Value1" ]}`
-  - The maximum number of elements in custom attribute arrays defaults to 25. The maximum for individual arrays can be increased to up to 100. If you would like this maximum increased, please reach out to your Customer Service Manager. Arrays exceeding the maximum number of elements will be truncated to contain the maximum number of elements. For more information on custom attribute arrays and their behavior, see our [Documentation on Arrays][6].
+| Data Type | Notes |
+| --- | --- |
+| Arrays | Custom attribute arrays are one-dimensional sets; multi-dimensional arrays are not supported. Adding an element to a custom attribute array appends the element to the end of the array, unless it's already present, in which case it gets moved from its current position to the end of the array.<br><br>For example, if an array `['hotdog','hotdog','hotdog','pizza']` were imported, it will show in the array attribute as `['hotdog', 'pizza']` because only unique values are supported.<br><br>In addition to setting the values of an array by saying something like `"my_array_custom_attribute":[ "Value1", "Value2" ]` you may add to existing arrays by doing something like `"my_array_custom_attribute" : { "add" : ["Value3"] },` or remove values from an array by doing something like `"my_array_custom_attribute" : { "remove" : [ "Value1" ]}`<br><br>The maximum number of elements in custom attribute arrays defaults to 25. The maximum for individual arrays can be increased to up to 100. If you would like this maximum increased, please reach out to your Customer Service Manager. Arrays exceeding the maximum number of elements will be truncated to contain the maximum number of elements. For more information on custom attribute arrays and their behavior, see our [documentation on arrays][6]. |
+| Booleans |  |
+| Dates | Must be stored in the [ISO 8601][19] format or `yyyy-MM-ddTHH:mm:ss:SSSZ`. Note that "T" is a time designator, not a placeholder. <br><br>Time attributes without a time zone will default to Midnight UTC (and will be formatted on the dashboard as the equivalent of Midnight UTC in the company's time zone). <br><br> Events with timestamps in the future will default to the current time. |
+| Floats |  |
+| Integers | Integer custom attributes may be incremented by positive or negative integers by assigning them an object with the field "inc" and the value by which you would like to increment them. <br><br>Example: `"my_custom_attribute_2" : {"inc" : int_value},`|
+| Strings |  |
+{: .reset-td-br-1 .reset-td-br-2}
 
 For information regarding when you should use a custom event vs a custom attribute, see our [Best Practices - User Data Collection][15] documentation.
 

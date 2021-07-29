@@ -30,7 +30,7 @@ A Purchase Object is an object that gets passed through the API when a purchase 
   "external_id" : (optional, string) External User ID,
   "user_alias" : (optional, User Alias Object), User Alias,
   "braze_id" : (optional, string) Braze User Identifier,
-  "app_id" : (optional, string) see App Identifier below,
+  "app_id" : (required, string) see App Identifier below,
   // Please see product_id naming conventions below for clarification.
   "product_id" : (required, string), identifier for the purchase, e.g. Product Name or Product Category,
   "currency" : (required, string) ISO 4217 Alphabetic Currency Code,
@@ -46,7 +46,10 @@ A Purchase Object is an object that gets passed through the API when a purchase 
   "_update_existing_only" : (optional, boolean)
 }
 ```
+
 - [ISO 4217 Currency Code Wiki][20]
+- [ISO 8601 Time Code Wiki][22]
+- [App Identifier][21]
 
 ## Purchase Product_ID
 
@@ -61,7 +64,21 @@ When choosing `product_id`, Braze suggests using simplistic names such as the pr
 This helps make products easy to identify for segmentation and triggering.
 
 ## Purchase Properties Object
-Custom events and purchases may have event properties. The “properties” values should be an object where the keys are the property names and the values are the property values. Property names must be non-empty strings less than or equal to 255 characters, with no leading dollar signs. Property values can be integers, floats, booleans, datetimes (as strings in [ISO-8601](https://en.wikipedia.org/wiki/ISO_8601) or yyyy-MM-dd'T'HH:mm:ss:SSSZ format), or strings less than or equal to 255 characters.
+Custom events and purchases may have event properties. The “properties” values should be an object where the keys are the property names and the values are the property values. Property names must be non-empty strings less than or equal to 255 characters, with no leading dollar signs. 
+
+Property values can be any of the following data types:
+
+| Data Type | Description |
+| --- | --- |
+| Numbers | As either [integers](https://en.wikipedia.org/wiki/Integer) or [floats](https://en.wikipedia.org/wiki/Floating-point_arithmetic) |
+| Booleans |  |
+| Datetimes | Formatted as strings in [ISO-8601](https://en.wikipedia.org/wiki/ISO_8601) or `yyyy-MM-dd'T'HH:mm:ss:SSSZ` format. Not supported within arrays. |
+| Strings | 255 characters or fewer. |
+| Arrays | Arrays cannot include datetimes. |
+| Objects | Objects will be ingested as strings. |
+{: .reset-td-br-1 .reset-td-br-2}
+
+Event property objects that contain array or object values can have an event property payload of up to 50KB.
 
 ### Purchase Properties
 [Purchase properties]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/purchase_events/#purchase-properties) __do not__ persist and aren't saved on a user's profile. These properties can, however, be used to trigger messages and for personalization using Liquid, also allowing you to segment (up to 30 days) based on these properties. Braze allows you to "save" these properties for 30 days by turning on this feature flipper to keep these properties alive and useable for message personalization. To turn on this feature in your own app group, contact your customer service manager.
@@ -133,3 +150,5 @@ For info on how to set up webhooks, check out our [Webhook][1] documentation.
 
 [1]: {{site.baseurl}}/user_guide/message_building_by_channel/webhooks/creating_a_webhook/
 [20]: http://en.wikipedia.org/wiki/ISO_4217 "ISO 4217 Currency Code"
+[21]: {{site.baseurl}}/api/api_key/#the-app-identifier-api-key
+[22]: https://en.wikipedia.org/wiki/ISO_8601 "ISO 8601 Time Code"

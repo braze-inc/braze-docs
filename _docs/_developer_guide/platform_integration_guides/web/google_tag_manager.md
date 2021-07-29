@@ -52,7 +52,7 @@ The Braze Actions Tag template lets you trigger custom events, track purchases, 
 
 ![Actions Tag Template][5]
 
-#### Changing User External ID
+#### Changing User External ID {#external-id}
 
 The __Change User__ Tag Type calls the [`changeUser` method](https://js.appboycdn.com/web-sdk/latest/doc/modules/appboy.html#changeuser).
 
@@ -62,11 +62,11 @@ Be sure to enter the current user's unique ID in the "External User ID" field, t
 
 ![Change User Tag][8]
 
-#### Log Custom Events
+#### Log Custom Events {#custom-events}
 
 The __Custom Event__ Tag Type calls the [`logCustomEvent` method](https://js.appboycdn.com/web-sdk/latest/doc/modules/appboy.html#logcustomevent).
 
-Use this tag to send Custom events to Braze, optionally including custom event properties
+Use this tag to send custom events to Braze, optionally including custom event properties
 
 Enter the __Event Name__, either using a variable or by typing in an event name.
 
@@ -74,7 +74,7 @@ Use the __Add Row__ button to add event properties.
 
 ![Custom Event Tag][9]
 
-#### Track Purchase
+#### Track Purchase {#purchases}
 
 The __Purchase__ Tag Type calls the [`logPurchase` method](https://js.appboycdn.com/web-sdk/latest/doc/modules/appboy.html#logpurchase).
 
@@ -86,13 +86,13 @@ Use the __Add Row__ button to add Purchase properties.
 
 ![Purchase Tag][10]
 
-#### Stop and Resume Tracking
+#### Stop and Resume Tracking {#stop-tracking}
 
 Sometimes, you might be required to disable or re-enable Braze tracking on your website, for example, after a user indicates they've opted out of web tracking for privacy reasons.
 
 Use the __Disable Tracking__ or __Resume Tracking__ Tag Type to disable web tracking or re-enable web tracking, respectively.
 
-#### Custom User Attributes
+#### Custom User Attributes {#custom-attributes}
 
 Custom user attributes are not available due to a limitation in Google Tag Manager's scripting language. To log custom attributes, create a Custom HTML tag with the following content:
 
@@ -102,9 +102,9 @@ window.appboy.getUser().setCustomUserAttribute("attribute name", "attribute valu
 </script>
 ```
 
-## Troubleshooting Steps
+## Troubleshooting Steps {#troubleshooting}
 
-### Enable Tag Debugging
+### Enable Tag Debugging {#debugging}
 
 Each Braze Tag template has an optional "GTM Tag Debugging" checkbox which can be used to log debug messages to your webpage's Javascript console.
 

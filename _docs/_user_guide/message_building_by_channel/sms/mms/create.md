@@ -37,9 +37,21 @@ Creating an MMS message requires your Subscription Group to be configured for MM
 
 ![picture][2]
 
+### Image Specifications
+
+**Image Specifications** | **Recommended Properties**
+--- | ---
+Size | 5MB maximum
+File Types | PNG, JPG, GIF
+{: .reset-td-br-1 .reset-td-br-2}
+
 ## Previewing an MMS message
 
-Braze provides a preview of the image you have uploaded. Please note: The ordering of SMS/MMS assets cannot be customized. The ordering is dependent on the phone receiving this message.
+Braze provides a preview of the image you have uploaded. 
+
+{% alert note %}
+The ordering of SMS/MMS assets cannot be customized. The ordering is dependent on the phone receiving this message.
+{% endalert %}
 
 ![picture][3]
 

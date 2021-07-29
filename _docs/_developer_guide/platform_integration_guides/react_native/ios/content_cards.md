@@ -23,6 +23,7 @@ You can use these additional methods to build a custom Content Cards Feed within
 |`ReactAppboy.requestContentCardsRefresh()`|Requests the latest Content Cards from the Braze SDK server.|
 |`ReactAppboy.getContentCards()`|Retrieves Content Cards from the Braze SDK. This will return the latest list of cards from the server.|
 |`ReactAppboy.logContentCardsDisplayed()`|Logs a Content Content feed displayed event.|
+|`ReactAppboy.logContentCardClicked(cardId)`|Logs a click for the given Content Card ID.|
 |`ReactAppboy.logContentCardImpression(cardId)`|Logs an impression for the given Content Card ID.|
 |`ReactAppboy.logContentCardDismissed(cardId)`|Logs a dismissal for the given Content Card ID.|
 

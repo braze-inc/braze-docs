@@ -22,7 +22,7 @@ This endpoint allows you to export a list of custom events that have been record
 
 | Parameter| Required | Data Type | Description |
 | -------- | -------- | --------- | ----------- |
-| `page`    | No | Integer | The page of event names to return, defaults to 0 (returns the first set of up to 250) |
+| `page`    | Optional | Integer | The page of event names to return, defaults to 0 (returns the first set of up to 250). |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
 
 ## Example Request

@@ -7,6 +7,7 @@ description: "This help article walks you through three important checks to ensu
 tool: 
 - Campaigns
 - Canvas
+no_index: true
 ---
 
 # Are My Custom Event Properties Being Logged?
@@ -21,7 +22,7 @@ There are three important checks to carry out to ensure your custom events are b
 
 [Custom event properties][22] are metadata that describe custom events. Multiple properties may be logged each time a custom event is logged.
 
-## Verify Custom Event properties
+## Verify Custom Event Properties
 
 ### Which Events?
 

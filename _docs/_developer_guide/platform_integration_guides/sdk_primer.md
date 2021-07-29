@@ -70,7 +70,7 @@ These properties are collected by the iOS SDK upon proper integration.
 | Device IDFV <br> `ABKDeviceOptionIDFV`| Device identifier for vendors. |
 | Device IDFA <br> `ABKDeviceOptionIDFA`| (if supplied) Device identifier for advertisers. |
 | Device Push Enabled <br> `ABKDeviceOptionPushEnabled`| Whether this app has push notifications enabled.
-| Device Timezone <br> `ABKDeviceOptionTimezone`| The reported timezone of the device.
+| Device Timezone <br> `ABKDeviceOptionTimezone`| The reported time zone of the device.
 | Device Push Authorization Status <br> `ABKDeviceOptionPushAuthStatus`| Whether this app has push authorization for the device.
 | Device Ad Tracking Enabled <br> `ABKDeviceAdTrackingEnabled`| Whether this app has Ad Tracking enabled. |
 {: .reset-td-br-1 .reset-td-br-2}
@@ -97,7 +97,7 @@ Braze sends data to the SDK at the beginning of a session based on which segment
 
 It is possible, though not suggested, to block the automatic collection of certain data from your SDK integrations. As we stated above, not fully integrating our SDKs can reduce the capabilities of personalization and targeting.
 
-For example, if you choose not to fully integrate for location on one of the SDKs, you will not be able to personalize your messaging based on language or location. If you choose not to integrate for timezone, you might not be able to send messages within a user's timezone. If you choose to not integrate for specific device visual information, message content might not be optimized for that device.
+For example, if you choose not to fully integrate for location on one of the SDKs, you will not be able to personalize your messaging based on language or location. If you choose not to integrate for time zone, you might not be able to send messages within a user's time zone. If you choose to not integrate for specific device visual information, message content might not be optimized for that device.
 
 We highly recommend fully integrating the SDKs to take full advantage of our product's capabilties.
 

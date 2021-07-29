@@ -32,7 +32,7 @@ Predictive Purchase gives marketers a powerful tool for identifying and messagin
 
 Once the Prediction is built, users are assigned a __[Purchase Likelihood Score]({{site.baseurl}}/user_guide/predictive_suite/predictive_purchases/prediction_analytics/#purchase_score)__ between 0 and 100 denoting how likely they are to make a purchase. The higher the score, the more likely a user is to make a purchase. Users can also be sorted by Low, Medium, and High Purchase Likelihood Category. 
 
-__The real value of Predictive Purchase lies in the next step: using Prediction results to create a Segment or Campaign__. Marketers can build targeted Campaigns directly in the Prediction page for immediate revenue-boosting results, or save a Segment for a future Campaign or Canvas. Not sure who to target first? Read our (__[strategic considerations]({{site.baseurl}}/user_guide/predictive_suite/predictive_purchases/messaging_users/#strategy)__)  for messaging users based on their Purchase Likelihood.
+__The real value of Predictive Purchase lies in the next step: using Prediction results to create a Segment or Campaign__. Marketers can build targeted campaigns directly in the Prediction page for immediate revenue-boosting results, or save a Segment for a future campaign or Canvas. Not sure who to target first? Read our (__[strategic considerations]({{site.baseurl}}/user_guide/predictive_suite/predictive_purchases/messaging_users/#strategy)__)  for messaging users based on their Purchase Likelihood.
 
 
 ## Access Predictive Purchases

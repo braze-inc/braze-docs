@@ -83,7 +83,7 @@ After adding the testing filters to your test segment, you can verify that you'v
 
 > Exporting the segment's User Data to CSV will give you the most accurate picture of who falls under that segment. The "Preview" tab is only a sample of the users in the segment - [see more details about this in our FAQ][7] - and therefore may appear to have not selected all intended members.
 
-Once you've confirmed that you're only targeting the users that you want to receive the test message, you can either select this segment in an existing campaign that you want to test or click the "Start Campaign" button in the segment menu.
+Once you've confirmed that you're only targeting the users that you want to receive the test message, you can either select this segment in an existing campaign that you want to test or click the **Start Campaign** button in the segment menu.
 
 ## Sending the Test Campaign
 
@@ -112,7 +112,7 @@ If previewing as a customized user, you'll be able to enter in text for various 
 ![Custom user][25]
 
 ## Sending a Test Campaign Personalized with Custom Event Properties
-Testing campaigns [personalized][20] with [Custom Event Properties][19] differ slightly from testing other types of campaigns outlined above. The most robust way to test campaigns personalized using Custom Event Properties is to trigger the campaign yourself. Begin by writing up the copy involving the event property:
+Testing campaigns [personalized][20] with [custom event properties][19] differ slightly from testing other types of campaigns outlined above. The most robust way to test campaigns personalized using custom event properties is to trigger the campaign yourself. Begin by writing up the copy involving the event property:
 
 ![Composing Test Message with Properties][15]
 

@@ -228,9 +228,6 @@ algolia:
       - collection,tags
       - platform
       - channel
-    customRanking:
-      - desc(custom_ranking)
-      - desc(search_rank)
   extensions_to_index:
     - html
     - md
