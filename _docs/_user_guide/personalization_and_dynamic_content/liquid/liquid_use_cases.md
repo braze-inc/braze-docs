@@ -111,16 +111,16 @@ Message body
 
 **Explanation:** Similar to the [birthday week](#birthday-week) use case, except here we use the `%B` filter (month, i.e., "May") to calculate which users have a birthday this month. A potential application could be addressing birthday users in a monthly email.
 
-### Avoid sending messages on major holidays {#avoid-holidays}
+### Avoid Sending Messages on Major Holidays {#avoid-holidays}
 
 This use case shows how to send messages during the holiday period while avoiding the days of major holidays, when engagement is likely to be low.
 
 {% raw %}
 ```liquid
 {% assign today = 'now' | date: '%Y-%m-%d' %}
-{%if today == "2021-12-24" or today == "2021-12-25" or today == "2021-12-26” %}
-{%abort_message%}
-{%endif%}
+{% if today == "2021-12-24" or today == "2021-12-25" or today == "2021-12-26” %}
+{% abort_message%}
+{% endif%}
 ```
 {% endraw %}
 
@@ -781,7 +781,7 @@ Miscellaneous
 - [Query the end of a string](#misc-query-end-of-string)
 - [Query values in an array from a custom attribute with multiple combinations](#misc-query-array-values)
 
-### Avoid sending emails to customers that have blocked marketing emails {#avoid-blocked-emails}
+### Avoid Sending Emails to Customers That Have Blocked Marketing Emails {#avoid-blocked-emails}
 
 This use case takes a list of blocked users saved in a Content Block and ensures those blocked users are not communicated to or targeted in upcoming campaigns or Canvases.
 
@@ -1199,7 +1199,7 @@ For push notifications and in-app message channels, you can specify the device c
 
 {% raw %}
 ```liquid
-{%if {targeted_device.${carrier}} contains "verizon" or {targeted_device.${carrier}} contains "Verizon" %}
+{% if {targeted_device.${carrier}} contains "verizon" or {targeted_device.${carrier}} contains "Verizon" %}
 
 This is a message for Verizon users!
 
