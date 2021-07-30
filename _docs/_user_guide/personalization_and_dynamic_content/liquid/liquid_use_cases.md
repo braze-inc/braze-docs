@@ -19,7 +19,7 @@ Anniversaries and Holidays
 - [Personalize messages based on a user's anniversary year](#anniversary-year)
 - [Personalize messages based on a user's birthday week](#birthday-week)
 - [Send campaigns to users in their birthday month](#birthday-month)
-- [Avoid sending messages on major holidays](#avoid-holidays)
+- [Avoid sending messages on major holidays](#holiday-avoid)
 
 ### Personalize Messages Based on a User's Anniversary Year {#anniversary-year}
 
@@ -111,7 +111,7 @@ Message body
 
 **Explanation:** Similar to the [birthday week](#birthday-week) use case, except here we use the `%B` filter (month, i.e., "May") to calculate which users have a birthday this month. A potential application could be addressing birthday users in a monthly email.
 
-### Avoid sending messages on major holidays {#avoid-holidays}
+### Avoid sending messages on major holidays {#holiday-avoid}
 
 This use case shows how to send messages during the holiday period while avoiding the days of major holidays, when engagement is likely to be low.
 
@@ -771,7 +771,7 @@ tuesday default
 Miscellaneous
 {% endapitags %}
 
-- [Avoid sending emails to customers that have blocked marketing emails](#avoid-blocked-emails)
+- [Avoid sending emails to customers that have blocked marketing emails](#misc-avoid-blocked-emails)
 - [Capitalize the first letter of every word in a string](#misc-capitalize-words-string)
 - [Compare custom attribute value against an array](#misc-compare-array)
 - [Create an upcoming event reminder](#misc-event-reminder)
@@ -781,7 +781,7 @@ Miscellaneous
 - [Query the end of a string](#misc-query-end-of-string)
 - [Query values in an array from a custom attribute with multiple combinations](#misc-query-array-values)
 
-### Avoid sending emails to customers that have blocked marketing emails {#avoid-blocked-emails}
+### Avoid sending emails to customers that have blocked marketing emails {#misc-avoid-blocked-emails}
 
 This use case takes a list of blocked users saved in a Content Block and ensures those blocked users are not communicated to or targeted in upcoming campaigns or Canvases.
 
