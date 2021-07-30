@@ -33,4 +33,4 @@ Now that you know who may or may not make a future purchase start thinking about
 
 Messaging users based on their Purchase Likelihood Score or Category doesn't just help you make money - it helps you save money, too! Offer promotions on a sliding scale: the more likely users are to make a purchase, the fewer discounts they likely need. Finding this balance helps you give and get the right amount of value for each customer. Keep in mind that you can also layer other filters onto these segments to further qualify who gets which messages.
 
-[5]: {% image_buster /assets/img/churn/churnFilters.png %}
+[5]: {% image_buster /assets/img/purchasePrediction/filters.png %}

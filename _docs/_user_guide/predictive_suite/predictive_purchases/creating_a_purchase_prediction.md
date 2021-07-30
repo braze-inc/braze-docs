@@ -16,7 +16,7 @@ On the left navigation bar of the Braze dashboard, choose the __Predictions__ pa
 To create a new Prediction, choose “Create Prediction” in the upper right corner, and select a new “Purchase Prediction.”
 
 {% alert note %}
-There is a limit of 3 concurrently active Purchase Predictions. Prior to purchasing Predictive Purchase, the limit is 1 active Preview Purchase Prediction. A Preview Purchase Prediction will not regularly update scores or allow you to target users based on the Prediction's output. Contact your Account Manager for details.
+There is a limit of 3 concurrently active Purchase Predictions. Prior to purchasing Predictive Purchases, the limit is 1 active Preview Purchase Prediction. A Preview Purchase Prediction will not regularly update scores or allow you to target users based on the Prediction's output. Contact your Account Manager for details.
 {% endalert %}
 
 ### Step 1: Create a New Prediction
@@ -51,10 +51,8 @@ For filters that begin with “Last...” like Last Used App and Last Made Purch
 
 The machine learning model created when you complete this page will be used on a schedule you select here to generate fresh scores of users’ probability to Purchase. Please select the __maximum frequency of updates__ that you’ll find useful. For example, if you’re going to send a weekly promotion to prevent users from Purchasing, set the update frequency to __Weekly__ on the day and time of your choosing. 
 
-![Purchase 2][2]
-
 {% alert note %}
-Preview and Demo Predictions will never update users' risk of Purchase. Additionally, daily updates for predictions require an additional purchase beyond Weekly or Monthly updates with Predictive Purchase. To purchase this functionality, contact your Account Manager. 
+Preview and Demo Predictions will never update users' likelihood to Purchase. 
 {% endalert %}
 
 ### Step 5: Build Prediction
@@ -62,7 +60,7 @@ Verify that the details you’ve provided are correct, and choose “Build Predi
 
 Once it’s done, the page will switch to the Analytics view automatically, and you will also get an email informing you that the Prediction and results are ready. In the event of an error, the page will return to the Editing mode with an explanation of what went wrong.
 
-The Prediction will be rebuilt ("retrained") again every __two weeks automatically__ to keep it updated on the most recent data available. Note that this is a separate process from when users' Purchase Risk Scores, the output of the Prediction, are produced. The latter is determined by the update frequency you chose in Step 4.
+The Prediction will be rebuilt ("retrained") again every __two weeks automatically__ to keep it updated on the most recent data available. Note that this is a separate process from when users' Purchase Likelihood Scores, the output of the Prediction, are produced. The latter is determined by the update frequency you chose in Step 4.
 
 ## Archived Predictions
 
