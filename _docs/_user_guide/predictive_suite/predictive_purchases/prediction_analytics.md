@@ -56,7 +56,7 @@ Here’s what we recommend for various ranges of Prediction Quality:
 
 The Prediction will be trained again every two weeks and updated alongside the Prediction Quality metric to keep your predictions updated on the most recent user behavior patterns. The last time this retraining occurred will be displayed on the Predictions list page as well as on your Prediction's analytics page. 
 
-When a Prediction is first created, the Prediction Quality will be based upon historical data that is queried when you click Build Prediction. Every two weeks thereafter, the Prediction Quality is derived by comparing prediction scores to future outcomes not known at the time the scores were assigned.
+When a Prediction is first created, the Prediction Quality will be based upon historical data that is queried when you click Build Prediction. Every two weeks thereafter, the Prediction Quality is derived by comparing prediction scores to real-world outcomes.
 
 
 ## Purchase Correlation Table {#correlation_table}
