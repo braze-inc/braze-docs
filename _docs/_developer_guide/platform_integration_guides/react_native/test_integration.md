@@ -1,8 +1,9 @@
 ---
 nav_title: Test Your Integration
 platform: React Native
-page_order: 1
+page_order: 2
 description: "This article covers basic instructions how to test whether Braze SDK integrated correctly."
+hidden: true
 ---
 
 # Test Your Integration
@@ -23,4 +24,6 @@ You can then search for the user with `some-user-id` in the Dashboard under `Use
 
 If you have implemented push notifications, you can test Content Cards, Push Notifications and In-App Messages.
 
-# Alert -- you can't test these on an iOS simulator
+{% alert important %}
+You cannot test push notification related app behavior because iOS simulator do not support device tokens that are required to be able to send a push notification.
+{% endalert %}

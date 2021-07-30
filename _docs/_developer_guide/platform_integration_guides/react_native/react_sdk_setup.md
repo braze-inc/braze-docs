@@ -11,6 +11,8 @@ Installing the Braze React Native SDK provides basic analytics functionality and
 
 It is necessary to complete installation steps in both platform separately.
 
+You will need the App Identifier Braze SDK API key as well as the endpoint. Both are located in the `Developer Console` under `Settings` in the Dashboard. You can read more about the API keys in the API documentation.
+
 ## Step 1: Integrate the Braze Library
 
 Add Braze React Native SDK package.
@@ -20,8 +22,6 @@ npm install react-native-appboy-sdk
 # or using yarn
 # yarn add react-native-appboy-sdk
 ```
-
-Follow the steps below to complete the installation on both platforms.
 
 ## Step 2: Complete Native Setup
 
@@ -58,7 +58,7 @@ Add the required permissions to your `AndroidManifest.xml` file:
 <uses-permission android:name="android.permission.INTERNET" />
 <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
 ```
-<!-- 
+
 #### Implement User Session Tracking
 
 The calls to `openSession()` and `closeSession()` are handled automatically.
@@ -73,20 +73,83 @@ public void onCreate() {
     ...
     registerActivityLifecycleCallbacks(new AppboyLifecycleCallbackListener());
 }
-``` -->
+```
 
 ### iOS
 
-```
+Since React Native automatically links the libraries to the native platform, you can install the SDK with the help of CocoaPods.
+
+#### Install Pods
+
+From the root folder of the project:
+
+```bash
 cd ios && pod install
+```
+
+#### Configure the Braze SDK
+
+In the `AppDelegate.m` file, add the following snippet within the
+`application:didFinishLaunchingWithOptions` method:
+
+```objc
+[Appboy startWithApiKey:@"YOUR-APP-IDENTIFIER-API-KEY"
+         inApplication:application
+     withLaunchOptions:launchOptions];
+```
+
+Then, add your SDK Endpoint in the `Info.plist` file. It is located in the `ios` project folder. If you're working in Xcode:
+
+1. Add a row with the name `Braze` and type of `Dictionary`
+2. To that Dictionary, add a row with the name `Endpoint`, type `String` and as a value, input your endpoint.
+3. 
+Otherwise, add the following elements to the file:
+
+```xml
+<key>Braze</key>
+  <dict>
+    <key>Endpoint</key>
+    <string>sdk.your-endpoint.com</string>
+  </dict>
 ```
 
 ## Step 3: Usage
 
 Once installed, you can `import` the library in your React Native code:
+
 ```javascript
-import ReactAppboy from 'react-native-appboy-sdk';
+import ReactAppboy from "react-native-appboy-sdk";
 ```
+
+## Test Your Basic Integration
+
+At this point, you can verify that the SDK is integrated by checking session statistics in the Dashboard. If you run your application on either platform, you should see a new session in Dashboard (in the `Overview` section).
+
+You can open a session for a particular user by calling the following code in your app.
+
+```javascript
+ReactAppboy.changeUser("some-user-id");
+```
+
+For example, you can assign the user ID at the startup of the app:
+
+```javascript
+import React, { useEffect } from "react";
+import ReactAppboy from "react-native-appboy-sdk";
+
+const App = () => {
+  useEffect(() => {
+    ReactAppboy.changeUser("some-user-id");
+  }, []);
+
+  return (
+    <div>
+      ...
+    </div>
+  )
+```
+
+You can then search for the user with `some-user-id` in the Dashboard under `User Search`. There, you can verify that session and device data has been logged.
 
 
 [1]: https://www.braze.com/docs/developer_guide/platform_integration_guides/android/initial_sdk_setup/android_sdk_integration/ "Android SDK Install"
