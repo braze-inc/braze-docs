@@ -111,11 +111,7 @@ Message body
 
 **Explanation:** Similar to the [birthday week](#birthday-week) use case, except here we use the `%B` filter (month, i.e., "May") to calculate which users have a birthday this month. A potential application could be addressing birthday users in a monthly email.
 
-<<<<<<< HEAD
 ### Avoid Sending Messages on Major Holidays {#avoid-holidays}
-=======
-### Avoid sending messages on major holidays {#holiday-avoid}
->>>>>>> 8d53bc905edb0a74cbafedf6dc3f860f6e4c21db
 
 This use case shows how to send messages during the holiday period while avoiding the days of major holidays, when engagement is likely to be low.
 
