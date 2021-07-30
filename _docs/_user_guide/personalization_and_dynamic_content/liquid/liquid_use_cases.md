@@ -111,7 +111,7 @@ Message body
 
 **Explanation:** Similar to the [birthday week](#birthday-week) use case, except here we use the `%B` filter (month, i.e., "May") to calculate which users have a birthday this month. A potential application could be addressing birthday users in a monthly email.
 
-### Avoid Sending Messages on Major Holidays {#avoid-holidays}
+### Avoid Sending Messages on Major Holidays {#holiday-avoid}
 
 This use case shows how to send messages during the holiday period while avoiding the days of major holidays, when engagement is likely to be low.
 
@@ -781,7 +781,7 @@ Miscellaneous
 - [Query the end of a string](#misc-query-end-of-string)
 - [Query values in an array from a custom attribute with multiple combinations](#misc-query-array-values)
 
-### Avoid Sending Emails to Customers That Have Blocked Marketing Emails {#avoid-blocked-emails}
+### Avoid Sending Emails to Customers That Have Blocked Marketing Emails {#misc-avoid-blocked-emails}
 
 This use case takes a list of blocked users saved in a Content Block and ensures those blocked users are not communicated to or targeted in upcoming campaigns or Canvases.
 
