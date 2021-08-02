@@ -12,22 +12,11 @@ description: "This article covers how to get started with Content Cards for Reac
 
 To get started with Content Cards, the Braze SDKs include a default card feed. To show the card feed you can use the `ReactAppboy.launchContentCards()` method.
 
-The default card feed included with the Braze SDK will handle all analytics tracking, dismissals, and rendering for a user's Content Cards. Follow the respective guides below for integration.
-
-## Integration
-
-### Android
-
-Follow [the Android integration instructions][2].
-
-### iOS
-
-Follow [the iOS integration instructions][3].
+The default card feed included with the Braze SDK will handle all analytics tracking, dismissals, and rendering for a user's Content Cards.
 
 ### Example to use following methods using React Hooks
 ```javascript
 useEffect(() => {
-    ReactAppboy.getContentCards();
     ReactAppboy.requestContentCardsRefresh();
     ReactAppboy.logContentCardsDisplayed();
 }, []);
@@ -55,6 +44,8 @@ Follow the steps below to test a sample content card.
 3. Compose your test content card campaign and head over to the **Test** tab. Add the same *user-id* as the test user and `Send Test`. You should be able to launch a content card on your device shortly.
 
 ![Content Card Campaign Test][5]
+
+For more integrations, follow [the Android integration instructions][2] or follow [the iOS integration instructions][3].
 
 A sample implementation of this is contained in AppboyProject, within the [React SDK][1].
 
