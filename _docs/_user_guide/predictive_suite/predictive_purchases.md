@@ -26,6 +26,8 @@ Tool:
 
 ## Overview
 
+![Predictive Purchases Overview][1]
+
 Predictive Purchases give marketers a powerful tool for identifying and messaging users based on their likelihood to make a purchase. When you create a Purchase Prediction, Braze trains a machine learning model using [gradient boosted decision trees](https://en.wikipedia.org/wiki/Gradient_boosting) to learn from previous purchase activity and predict future purchase activity. 
 
 Once a Prediction is built, users are assigned a [Purchase Likelihood Score]({{site.baseurl}}/user_guide/predictive_suite/predictive_purchases/prediction_analytics/#purchase_score) between 0 and 100 denoting how likely they are to make a purchase. The higher the score, the more likely a user is to make a purchase. Users are also sorted by Low, Medium, and High Purchase Likelihood Categories. 
@@ -40,5 +42,5 @@ With the Preview, you can also edit and rebuild this one Prediction or archive i
 
 <br><br>
 
-[1]: {% image_buster /assets/img/churn/churn_overview.png %}
+[1]: {% image_buster /assets/img/purchasePrediction/purchasesOverview.png %}
 
