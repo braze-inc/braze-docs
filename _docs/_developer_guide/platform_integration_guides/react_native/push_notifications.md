@@ -9,8 +9,6 @@ description: "This article covers implementing push notifications on React Nativ
 
 Integrating push notifications in React Native requires setting up each native platform separately. Follow the respective guides below to finish the installation.
 
-## Integration
-
 ### Android
 
 Follow [the Android integration instructions][1].

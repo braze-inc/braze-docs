@@ -128,7 +128,7 @@ At this point, you can verify that the SDK is integrated by checking session sta
 You can open a session for a particular user by calling the following code in your app.
 
 ```javascript
-ReactAppboy.changeUser("some-user-id");
+ReactAppboy.changeUser("user-id");
 ```
 
 For example, you can assign the user ID at the startup of the app:
@@ -139,7 +139,7 @@ import ReactAppboy from "react-native-appboy-sdk";
 
 const App = () => {
   useEffect(() => {
-    ReactAppboy.changeUser("some-user-id");
+    ReactAppboy.changeUser("user-id");
   }, []);
 
   return (
