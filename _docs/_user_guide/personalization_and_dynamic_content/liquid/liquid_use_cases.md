@@ -119,8 +119,8 @@ This use case shows how to send messages during the holiday period while avoidin
 ```liquid
 {% assign today = 'now' | date: '%Y-%m-%d' %}
 {% if today == "2021-12-24" or today == "2021-12-25" or today == "2021-12-26” %}
-{% abort_message%}
-{% endif%}
+{% abort_message %}
+{% endif %}
 ```
 {% endraw %}
 
