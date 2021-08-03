@@ -1,7 +1,7 @@
 ---
 nav_title: Reporting & Analytics
 page_order: 4
-description: "This reference article covers the different Content Card reporting metrics and analytics options provided in the Braze dashboard."
+description: "This reference article provides an overview of the different Content Card reporting metrics and analytics options provided in the Braze dashboard."
 
 channel:
   - content cards
@@ -13,7 +13,7 @@ tool:
 
 # Reporting & Analytics
 
-To see the meanings of all Content Cards metrics, check the [Metrics Glossary][1].
+> This reference article provides an overview of the different Content Card reporting metrics and analytics options provided in the Braze dashboard.
 
 ## Content Card Metrics
 
@@ -21,6 +21,8 @@ To see the meanings of all Content Cards metrics, check the [Metrics Glossary][1
 - **Impressions**: The number of times a Content Card was visible and on-screen.
 - **Clicks**: The number of times a user has clicked the CTA Link of a Content Card.
 - **Dismissals**: The number of times a user has swiped away or clicked to dismiss a Content Card.
+
+To see the meanings of all Content Cards metrics, check the [Report Metrics Glossary][1].
 
 ### Control Groups
 
@@ -79,6 +81,8 @@ This block will show you the performance of your conversion events for an indivi
 {% endtab %}
 
 {% endtabs %}
+
+For definitions of all Content Cards metrics, refer to the [Report Metrics Glossary][1].
 
 [1]: {{site.baseurl}}/user_guide/data_and_analytics/report_metrics/
 [2]: {{site.baseurl}}/user_guide/intelligence/multivariate_testing/#step-4-choose-a-segment-and-distribute-your-users-across-variants
