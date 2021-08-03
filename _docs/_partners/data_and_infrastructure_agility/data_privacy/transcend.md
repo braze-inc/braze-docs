@@ -1,5 +1,3 @@
-Transcend
-
 ---
 nav_title: Transcend
 page_order: 1
