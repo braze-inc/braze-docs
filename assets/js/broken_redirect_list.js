@@ -404,3 +404,7 @@ validurls['/docs/help/best_practices/image_and_text_specifications/#email'] = '/
 
 validurls['/docs/help/best_practices/in-app_messages/in-app_message_specs/'] = '/docs/user_guide/message_building_by_channel/in-app_messages/best_practices/previous_in-app_message_generations/#specs';
 
+validurls['/docs/developer_guide/platform_integration_guides/android/content_cards/overview/'] = '/docs/user_guide/message_building_by_channel/content_cards/about/';
+validurls['/docs/developer_guide/platform_integration_guides/ios/content_cards/overview/'] = '/docs/user_guide/message_building_by_channel/content_cards/about/';
+validurls['/docs/developer_guide/platform_integration_guides/web/content_cards/overview/'] = '/docs/user_guide/message_building_by_channel/content_cards/about/';
+validurls['/docs/developer_guide/platform_integration_guides/fireos/content_cards/overview/'] = '/docs/user_guide/message_building_by_channel/content_cards/about/';
