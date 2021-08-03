@@ -8,7 +8,7 @@ description: "This article covers how to get started with Content Cards for Reac
 
 ---
 
-# Content Cards for React Native Integration
+# Content Cards
 
 To get started with Content Cards, the Braze SDKs include a default card feed. To show the card feed you can use the `ReactAppboy.launchContentCards()` method.
 

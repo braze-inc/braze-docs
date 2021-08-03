@@ -15,7 +15,7 @@ At this point, you can verify that the SDK is integrated by checking session sta
 You can also open a session for a particular user by calling the following code in your app.
 
 ```javascript
-ReactAppboy.changeUser('some-user-id');
+ReactAppboy.changeUser("user-id");
 ```
 
 You can then search for the user with `some-user-id` in the Dashboard under `User Search`. There, you can verify the session and device information.
