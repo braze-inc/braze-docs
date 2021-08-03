@@ -28,7 +28,7 @@ Integrating with Braze is simple on Nexla. Once you've created an account and lo
 
 ### Step 1: Create a Nexla Account
 
-If you do not already have a Nexla account, head to the Nexla [website](www.nexla.com) to request a free demo and trial. Next, log on to [www.dataops.nexla.io](www.dataops.nexla.io) and sign on with your new credentials.
+If you do not already have a Nexla account, head to the Nexla [website](https://www.nexla.com) to request a free demo and trial. Next, log on to [www.dataops.nexla.io](https://www.dataops.nexla.io) and sign on with your new credentials.
 
 ### Step 2: Add Your Source
 
@@ -60,4 +60,4 @@ Once the flow is set up, nothing more is required. Nexla will handle any changes
 Nexla's data-as-a-product, [Nexsets](https://nexla.zendesk.com/hc/en-us/articles/360052999674-Dataset-Information), make it easy to work with data of any format without worrying about metadata. When you set up your data flows to or from Braze with Nexla, no-code tools make it easy and available in minutes. Once the data flow is set to a destination, Nexla will monitor your flow and scale to any amount of data. Our platform makes it simple for anyone to create scalable data flows. Teams working with data get a no/low-code unified experience to integrate, transform, provision, and monitor data for any use case. 
 
 [1]: {{site.baseurl}}/developer_guide/rest_api/basics/#endpoints)
-[2]: www.nexla.com/get-demo
+[2]: https://www.nexla.com/get-demo

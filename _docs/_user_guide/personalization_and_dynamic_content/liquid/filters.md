@@ -114,7 +114,7 @@ For example, to get the `date_attribute` in Unix time, you'd input the following
 
 In addition to the filters that you'll find listed in Shopify's documentation, we also support the "time_zone" filter.
 
-The "Time_zone" filter takes a time, a time zone, and a date format and returns the time in that timezone in the specified date format. For example, let's say that the value of `{{custom_attribute.${date_attribute}}}` is 2015-04-03 9:00:00 UTC.
+The "Time_zone" filter takes a time, a time zone, and a date format and returns the time in that time zone in the specified date format. For example, let's say that the value of `{{custom_attribute.${date_attribute}}}` is 2015-04-03 9:00:00 UTC.
 
 **Input:**
 

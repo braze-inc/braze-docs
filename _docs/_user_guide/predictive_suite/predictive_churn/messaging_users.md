@@ -10,7 +10,7 @@ Tool:
 # Messaging Users {#what-do-next}
 
 {% alert note %}
-Preview and Demo Predictions will not allow users to be targeted for messaging, and the __Create Segment__, and __Create Campaign__ buttons will be disabled. To purchase this functionality, contact your Account Manager.
+Preview and Demo Predictions will not allow users to be targeted for messaging, and the __Create Segment__, and __Create Campaign__ buttons will be disabled. To purchase this functionality, contact your account manager.
 {% endalert %}
 
 ## Implementing Filters {#filters}

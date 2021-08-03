@@ -27,7 +27,7 @@ To customize the session timeout, add `com_appboy_session_timeout` to your [`bra
 <!-- The length of time before a session times out in seconds. The session manager will "re-open"
 otherwise closed sessions if the call to StartSession comes within this interval. (default is 10) -->
 <integer name="com_appboy_session_timeout">NUMBER_OF_SECONDS_UNTIL_SESSION_TIMEOUT</integer>
-``` 
+```
 
 **Note**: The minimum value for `sessionTimeoutInSeconds` is 1 second.
 
@@ -45,7 +45,7 @@ The Braze SDK provides a [`subscribeToSessionUpdates`][1] subscriber to listen f
 {% tab JAVA %}
 
 ```java
-Appboy.getInstance(this).subscribeToSessionUpdates(new IEventSubscriber<SessionStateChangedEvent>() {
+Braze.getInstance(this).subscribeToSessionUpdates(new IEventSubscriber<SessionStateChangedEvent>() {
   @Override
   public void trigger(SessionStateChangedEvent message) {
     if (message.getEventType() == SessionStateChangedEvent.ChangeType.SESSION_STARTED) {
@@ -59,7 +59,7 @@ Appboy.getInstance(this).subscribeToSessionUpdates(new IEventSubscriber<SessionS
 {% tab KOTLIN %}
 
 ```kotlin
-Appboy.getInstance(this).subscribeToSessionUpdates { message ->
+Braze.getInstance(this).subscribeToSessionUpdates { message ->
   if (message.eventType == SessionStateChangedEvent.ChangeType.SESSION_STARTED) {
     // A session has just been started
   }

@@ -144,20 +144,20 @@ Braze is capable of sending push notifications to Android devices using [Baidu C
 PushManager.startWork(getApplicationContext(), PushConstants.LOGIN_TYPE_API_KEY, "Your-API-Key");
 ```
 
-- Finally, you will need to register your users with Braze.  In the `onBind()` method of the Baidu broadcast receiver that you created in part 5, send the `channelId` to Braze using `Appboy.registerAppboyPushMessages(channelId)`.
+- Finally, you will need to register your users with Braze.  In the `onBind()` method of the Baidu broadcast receiver that you created in part 5, send the `channelId` to Braze using `Braze.registerAppboyPushMessages(channelId)`.
 
 {% tabs %}
 {% tab JAVA %}
 
 ```java
-Appboy.getInstance(context).registerAppboyPushMessages(channelId);
+Braze.getInstance(context).registerAppboyPushMessages(channelId);
 ```
 
 {% endtab %}
 {% tab KOTLIN %}
 
 ```kotlin
-Appboy.getInstance(context).registerAppboyPushMessages(channelId)
+Braze.getInstance(context).registerAppboyPushMessages(channelId)
 ```
 
 {% endtab %}
@@ -182,7 +182,7 @@ Appboy.getInstance(context).registerAppboyPushMessages(channelId)
 
   ```java
   String customContentString = intent.getStringExtra(ChinaPushMessageReceiver.NOTIFICATION_CLICKED_KEY);
-  AppboyNotificationUtils.logBaiduNotificationClick(mApplicationContext, customContentString);
+  BrazeNotificationUtils.logBaiduNotificationClick(mApplicationContext, customContentString);
   ```
 
 {% endtab %}
@@ -190,7 +190,7 @@ Appboy.getInstance(context).registerAppboyPushMessages(channelId)
 
 ```kotlin
 val customContentString = intent.getStringExtra(ChinaPushMessageReceiver.NOTIFICATION_CLICKED_KEY)
-AppboyNotificationUtils.logBaiduNotificationClick(context, customContentString)
+BrazeNotificationUtils.logBaiduNotificationClick(context, customContentString)
 ```
 
 {% endtab %}
