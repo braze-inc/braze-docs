@@ -30,7 +30,7 @@ A Purchase Object is an object that gets passed through the API when a purchase 
   "external_id" : (optional, string) External User ID,
   "user_alias" : (optional, User Alias Object), User Alias,
   "braze_id" : (optional, string) Braze User Identifier,
-  "app_id" : (optional, string) see App Identifier below,
+  "app_id" : (required, string) see App Identifier below,
   // Please see product_id naming conventions below for clarification.
   "product_id" : (required, string), identifier for the purchase, e.g. Product Name or Product Category,
   "currency" : (required, string) ISO 4217 Alphabetic Currency Code,
@@ -46,7 +46,10 @@ A Purchase Object is an object that gets passed through the API when a purchase 
   "_update_existing_only" : (optional, boolean)
 }
 ```
+
 - [ISO 4217 Currency Code Wiki][20]
+- [ISO 8601 Time Code Wiki][22]
+- [App Identifier][21]
 
 ## Purchase Product_ID
 
@@ -147,3 +150,5 @@ For info on how to set up webhooks, check out our [Webhook][1] documentation.
 
 [1]: {{site.baseurl}}/user_guide/message_building_by_channel/webhooks/creating_a_webhook/
 [20]: http://en.wikipedia.org/wiki/ISO_4217 "ISO 4217 Currency Code"
+[21]: {{site.baseurl}}/api/api_key/#the-app-identifier-api-key
+[22]: https://en.wikipedia.org/wiki/ISO_8601 "ISO 8601 Time Code"

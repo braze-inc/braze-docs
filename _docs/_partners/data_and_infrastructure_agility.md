@@ -66,4 +66,7 @@ valid_partner_list:
   url: /docs/partners/data_and_infrastructure_agility/customer_data_platform/amperity/
 - name: Hightouch
   url: /docs/partners/data_and_infrastructure_agility/workflow_automation/hightouch/
+- name: Transcend
+  url: /docs/partners/data_and_infrastructure_agility/data_privacy/transcend/
+  
 ---

@@ -33,9 +33,9 @@ Campaign, Card, and Canvas attributes are only supported in their corresponding 
 
 {% alert update %}
 
-Please note that the behavior for the following tags differs between Canvas and Campaigns:<br><br>
+Please note that the behavior for the following tags differs between Canvas and campaigns:<br><br>
 
-`dispatch_id`  - Behavior differs between Canvas and Campaigns because Braze treats Canvas steps (except for Entry Steps, which can be scheduled) as triggered events, even when they are "scheduled". [Learn more about `dispatch_id` behavior in Canvas and Campaigns here]({{site.baseurl}}/help/help_articles/data/dispatch_id/).<br><br>
+`dispatch_id`  - Behavior differs between Canvas and campaigns because Braze treats Canvas steps (except for Entry Steps, which can be scheduled) as triggered events, even when they are "scheduled". [Learn more about `dispatch_id` behavior in Canvas and campaigns here]({{site.baseurl}}/help/help_articles/data/dispatch_id/).<br><br>
 {% raw %}
 `{{campaign.${name}}}` - When using this tag with Canvas, it will display the Canvas step name. When using this tag with campaigns, it will display the campaign name.
 {% endraw %}<br><br>
@@ -207,7 +207,7 @@ Message in default language
 
 In this example, customers with a most recent locale of 'pt_BR' will get a message in Brazilian Portuguese, customers with a most recent locale of 'pt_PT' will get a message in European Portuguese and customers who don't meet the first two conditions but have their language set to Portuguese will get a message in whatever you'd like the default Portuguese language type to be.
 
-You can also target users based off of their time zone. For example, send one message if they are based in EST and another if they are PST. To do this, save the current time in UTC, and compare an if/else statement with the user's current time to ensure you're sending the right message for the right timezone. You should set the campaign to send in the user's local time zone, to ensure they are getting the campaign at the right time. See below for an example of how to write a message that will go out between 2PM and 3PM and will have a specific message for each time zone.
+You can also target users based off of their time zone. For example, send one message if they are based in EST and another if they are PST. To do this, save the current time in UTC, and compare an if/else statement with the user's current time to ensure you're sending the right message for the right time zone. You should set the campaign to send in the user's local time zone, to ensure they are getting the campaign at the right time. See below for an example of how to write a message that will go out between 2PM and 3PM and will have a specific message for each time zone.
 
 ```liquid
 {% assign hour_in_utc = 'now' | date: '%H' | plus:0 %}

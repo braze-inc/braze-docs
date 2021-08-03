@@ -32,7 +32,7 @@ Contract details list the start and end date of your current contract with Braze
 
 ## Most Used Data Points by App
 
-The Most Used Data Points by App tab is a further breakdown of the information provided in the usage graphs. Here, you can set a time frame in the upper right to display the top 10 most heavily used data points per app group/source. Some customers may have the option to override this value, showing up to 200 of the most used data points. Within these app group breakdowns, include the data point name, the count, the percentage, as well as Profile Attribute Collected and Custom Attribute Collected data points groupings. Users are able to export and save this data as CSV by selecting the Download All Data button. 
+The Most Used Data Points by App tab is a further breakdown of the information provided in the usage graphs. Here, you can set a time frame in the upper right to display the top 10 most heavily used data points per app group/source. Some customers may have the option to override this value, showing up to 200 of the most used data points. Within these app group breakdowns, include the data point name, the count, the percentage, as well as **Profile Attribute Collected** and **Custom Attribute Collected** data points groupings. Users are able to export and save this data as CSV by clicking **Download All Data**. 
 
 ![Subscription and Usage][4]{: style="max-width:90%;"}
 

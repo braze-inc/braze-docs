@@ -12,16 +12,16 @@ Tool:
 ### Step 1: Create a New Prediction
 On the left navigation bar of the Braze dashboard, choose the __Predictions__ page. A Prediction is one instance of a trained machine learning model and all the parameters and data it uses. On this page, you will see a list of current active Predictions along with some basic info about them. Here you can rename, archive, and create new Predictions. Archived predictions are inactive and do not update user scores. 
 
-To create a new Prediction, choose “Create Prediction” in the upper right corner, and select a new “Churn Prediction.”
+To create a new Prediction, choose __Create Prediction__ in the upper right corner, and select a new __Churn Prediction__.
 
 {% alert note %}
-There is a limit of 3 concurrently active Churn Predictions. Prior to purchasing Predictive Churn, the limit is 1 active Preview Churn Prediction. A Preview Churn Prediction will not regularly update scores or allow you to target users based on the Prediction's output. Contact your Account Manager for details.
+There is a limit of 3 concurrently active Churn Predictions. Prior to purchasing Predictive Churn, the limit is one active Preview Churn Prediction. A Preview Churn Prediction will not regularly update scores or allow you to target users based on the Prediction's output. Contact your Account Manager for details.
 {% endalert %}
 
 On the Edit page, give your new Prediction a unique name.
 
 ### Step 2: Define Churn
-In the Churn Definition panel, use the provided filters to define what churn means for your business. In other words, what does a user have to do in what time frame for you to consider them churned? Remember, you don’t need to explain what behaviors might precede churn-- only what makes a user a churned user. This should also generally be a description of what behavior a user does or doesn't do to churn as opposed to an attribute a user has. For example, you might consider users who haven’t opened your app in 7 days to be churned. 
+In the __Churn Definition__ panel, use the provided filters to define what churn means for your business. In other words, what does a user have to do in what time frame for you to consider them churned? Remember, you don’t need to explain what behaviors might precede churn - only what makes a user a churned user. This should also generally be a description of what behavior a user does or doesn't do to churn as opposed to an attribute a user has. For example, you might consider users who haven’t opened your app in 7 days to be churned. 
 
 To implement this example, enter 7 days in the time window at the top of the panel.
 
@@ -54,7 +54,7 @@ Preview and Demo Predictions will never update users' risk of churn. Additionall
 {% endalert %}
 
 ### Step 5: Build Prediction
-Verify that the details you’ve provided are correct, and choose “Build Prediction.” You can also save your changes in draft form by selecting “Save As Draft” to return to this page and build the model later. Once you click __Build Prediction__, the process that generates the model will begin. This could take between 30 minutes to a few hours depending on data volumes. For this Prediction, you will see a page explaining that training is in progress for the duration of the model building process.
+Verify that the details you’ve provided are correct, and choose __Build Prediction__. You can also save your changes in draft form by selecting __Save As Draft__ to return to this page and build the model later. Once you click __Build Prediction__, the process that generates the model will begin. This could take between 30 minutes to a few hours depending on data volumes. For this Prediction, you will see a page explaining that training is in progress for the duration of the model building process.
 
 Once it’s done, the page will switch to the Analytics view automatically, and you will also get an email informing you that the Prediction and results are ready. In the event of an error, the page will return to the Editing mode with an explanation of what went wrong.
 

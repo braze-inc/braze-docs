@@ -12,7 +12,7 @@ The behavior of these filters will remain largely the same and will be defined b
 - The current UTC day is defined as "0".
 
 {% details Why has the UTC definition changed from "1" to "0"? %}
-Local time zone scheduling requires that users stay in segments for 24 hours. In the case of Y = 1 day, we were in some cases evaluating less than 24 hours of the user’s history when determining who should be processed for the Campaign or Canvas.
+Local time zone scheduling requires that users stay in segments for 24 hours. In the case of Y = 1 day, we were in some cases evaluating less than 24 hours of the user’s history when determining who should be processed for the campaign or Canvas.
 
 The change will make the filter more intuitive and more consistent with the behavior of our other calendar functionality, such as our send “in 1 day” scheduling options.
 {% enddetails %}
@@ -51,9 +51,9 @@ Calendar Days are used when you select "days" or "weeks" under `Frequency Cappin
 
 ### Company & Local Time
 
-The current Calendar Day in the company timezone counts as day `0`.
+The current Calendar Day in the company time zone counts as day `0`.
 
-`Send in 1 Calendar days at 11:05AM company time` or `send in 1 Calendar days at 11:05AM local time` would add `1` day to the current calendar day in the company timezone or local timezone, respectively, then schedule the message at the next upcoming 11:05AM Company Time.
+`Send in 1 Calendar days at 11:05AM company time` or `send in 1 Calendar days at 11:05AM local time` would add `1` day to the current calendar day in the company time zone or local time zone, respectively, then schedule the message at the next upcoming 11:05AM Company Time.
 
 If the Company or Local time is Pacific Time, and the user enters the Canvas step at 8:00PM PT on 4/13, Braze will schedule this Canvas step for 11:05 am PT on 4/14.
 

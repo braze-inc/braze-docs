@@ -103,16 +103,14 @@ If you wish to display an in-app message at other times within your app, you may
 {% tab OBJECTIVE-C %}
 
 ```objc
-[[Appboy sharedInstance].inAppMessageController displayNextInAppMessageWithDelegate:YOUR_IN_APP_MESSAGE_DELEGATE]
-// YOUR_IN_APP_MESSAGE_DELEGATE should be replaced with your in-app message controller delegate, if you have implemented one.
+[[Appboy sharedInstance].inAppMessageController displayNextInAppMessage];
 ```
 
 {% endtab %}
 {% tab swift %}
 
 ```swift
-Appboy.sharedInstance()!.inAppMessageController.displayNextInAppMessage(with: YOUR_IN_APP_MESSAGE_DELEGATE?)
-// YOUR_IN_APP_MESSAGE_DELEGATE should be replaced with your in-app message controller delegate, if you have implemented one.
+Appboy.sharedInstance()!.inAppMessageController.displayNextInAppMessage()
 ```
 
 {% endtab %}

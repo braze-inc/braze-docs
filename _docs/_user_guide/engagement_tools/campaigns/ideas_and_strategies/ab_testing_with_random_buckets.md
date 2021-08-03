@@ -38,7 +38,7 @@ Consider the following sample plan for creating segments of equal size for three
 
 ![Example filter][2]
 
-For each of your created segments, including the control group, turn on [Analytics Tracking][14]. When evaluating the success of variants relative to the control group, you will be able to go into your [Custom Events page][15] and view how often each segment has completed certain custom events.
+For each of your created segments, including the control group, turn on [Analytics Tracking][14]. When evaluating the success of variants relative to the control group, you will be able to go into your [Custom Events][15] page and view how often each segment has completed certain custom events.
 
 ## Step 2: Create your campaign variants
 
@@ -83,7 +83,7 @@ You can test the effectiveness of different message channel combinations. For in
 
 ### Campaign Variant Percentages
 
-In a Campaign, if a variant percentage is modified after initial creation, you will find that the users may be redistributed to other variants.
+In a campaign, if a variant percentage is modified after initial creation, you will find that the users may be redistributed to other variants.
 
 Initially, users are randomly assigned a particular variant before receiving a campaign for the first time. From then on, each successive time the campaign is received (or the user re-enters a campaign variant) - __they will receive the same variant unless the variant percentages are modified__. If the variant percentages change, users may be redistributed to other variants. Users stay in these variants until percentages are modified again. Control groups remain consistent if the variant percentage is unchanged. Users who previously received messages cannot enter the control group on a later send, nor can any user in the control group ever receive a message.
 

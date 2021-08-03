@@ -18,7 +18,6 @@ Nested Object Support allows you to send arrays of data as properties of custom 
 - Datetimes are not supported within the array.
 - Object data types will be ingested as strings.
 - Event property objects that contain array or object values can have an event property payload of up to 50KB.
-- Available on events/purchases sent via API only, the Braze SDKs are not yet supported.
 
 ## Usage Examples
 
@@ -57,7 +56,7 @@ properties:{
   "r_details" : {
     "name" : "McDonalds",
     "identifier" : "12345678",
-    "location" ; {
+    "location" : {
       "city" : "Montclair",
       "state" : "NJ"
     }

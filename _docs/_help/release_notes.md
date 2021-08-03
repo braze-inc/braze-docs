@@ -44,6 +44,36 @@ guide_featured_list:
 > <br>
 > For more information on any of the updates listed in this section, reach out to your account manager or [open a support ticket][support]. You can also check out [our SDK Changelogs]({{site.baseurl}}/developer_guide/platform_integration_guides/sdk_changelogs/) to see more information on our monthly SDK releases, updates, and improvements.
 
+## August 2021
+
+### Simple Survey In-App Message
+
+Use the new Simple Survey In-App Message template to collect user attributes, insights, and preferences that power your campaign strategy. For example, you can ask users how they’d like to use your app, learn more about their personal preferences, or even ask about their satisfaction with a particular feature. This survey template is supported for both mobile apps and web browsers. Visit our [documentation]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/templates/simple_survey/) to get started.
+
+### Liquid Use Case Library
+
+Wondering how to do that one thing with Liquid? Just looking for inspiration? Check out our new [Liquid Use Case Library]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/liquid_use_cases/) for a collection of use cases ranging from Anniversaries and Birthdays to Platform Targeting and more.
+
+### Email Tracking
+
+Open pixel tracking and click tracking can now be disabled per user profile. This flexibility helps customers support regional privacy laws, where an individual user profile might indicate they no longer want to be tracked. Visit our [documentation]({{site.baseurl}}/user_guide/data_and_analytics/tracking/email_tracking/) to learn more.
+
+### SDK Data Collection Options
+
+Learn more about how the Braze SDK can be integrated to allow for flexible data collection in our new documentation on [SDK Data Collection Options]({{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/sdk_data_collection/).
+
+### SSL Overview
+
+Learn more about SSL at Braze, why SSL is important, and how you can acquire an SSL certificate in our new [SSL Overview]({{site.baseurl}}/user_guide/onboarding_with_braze/email_setup/ssl/) documentation.
+
+### Amplitude User Profile API Endpoints
+
+Amplitude’s User Profile API serves Amplitude user profiles. This includes user properties, computed user properties, a list of cohort IDs of cohorts that include the user, and recommendations. Refer to [Amplitude User Profile API Endpoints]({{site.baseurl}}/partners/data_and_infrastructure_agility/analytics/amplitude/amplitude_user_profile_api/) to learn more.
+
+### Campaign Details Endpoint
+
+The GET [`/campaigns/details`]({{site.baseurl}}/api/endpoints/export/campaigns/get_campaign_details/) API endpoint has added a dedicated `message` response for the in-app message channel. Documentation on this can be found [here]({{site.baseurl}}/api/endpoints/export/campaigns/get_campaign_details/#messages).
+
 ## July 2021
 
 ### Transactional Email Campaigns
@@ -80,7 +110,7 @@ Curious about the details of purchase events at Braze? Visit our dedicated [purc
 
 ### Conversion Correlation
 
-This guide covers the [Conversion Correlation]({{site.baseurl}}/user_guide/engagement_tools/testing/conversion_correlation/) analysis on the Campaign Analytics page, which gives you insight into what user attributes and behaviors help or hurt the outcomes you set for campaigns. Covered is an overview of the analysis, what is checked, when it's available, and how Braze checks for significance.
+This guide covers the [Conversion Correlation]({{site.baseurl}}/user_guide/engagement_tools/testing/conversion_correlation/) analysis on the **Campaign Analytics** page, which gives you insight into what user attributes and behaviors help or hurt the outcomes you set for campaigns. Covered is an overview of the analysis, what is checked, when it's available, and how Braze checks for significance.
 
 ### Global Control Group Report
 
@@ -152,30 +182,5 @@ Beginning March 22, 2021, the Braze Services will require TLS connections suppor
 ### Audience Paths
 [Canvas Audience Paths]({{site.baseurl}}/audience_paths/) allows you to intuitively filter and segment users on a large scale with strategic priority-based user groupings. This new Canvas step replaces the need to create excessive audience-based full steps, allowing you to combine what might have been 8 full steps into one! The introduction of this new step will help you simplify user targeting while clearing up your Canvases from unnecessary clutter and complexity.
 
-## February 2021
-
-### Canvas Report Builder
-The Report Builder allows you to compare the results of multiple campaigns or Canvases in a single view so that you can easily determine which engagement strategies most impacted your key metrics. To read more about the Canvas Report Builder, check out our documentation [here]({{site.baseurl}}/user_guide/data_and_analytics/your_reports/report_builder/).
-
-### In-App Message iOS Implementation Guide
-This detailed guide covers how to leverage subclassing to create custom slide-up in-app messages, custom modal in-app messages, and custom full in-app messages to add to your Braze campaigns and Canvases. Included are the necessary code consideration, detailed use cases built by our team, and accompanying code snippets. Visit our documentation [here]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/in-app_messaging/implementation_guide/) to read more. 
-
-### SMS Custom Keyword Categories and Retargeting Options
-Braze has expanded our native SMS capabilities to include the ability to add custom keywords for two-way messaging, custom categories for keywords, multi-language support, and keyword retargeting and filtering options. To read more about SMS keyword processing, visit our [SMS documentation]({{site.baseurl}}/user_guide/message_building_by_channel/sms/keywords/keyword_handling/). 
-
-### Playable Partnership is Live
-Expand Braze's email capabilities to deliver your best content (high-quality video) to your best audience (email) with Playable. Playable video emails allow you to increase your click-through and post-click metrics with exciting high-quality video content that plays automatically within the inbox. To read more about Playable, visit our documentation [here]({{site.baseurl}}/partners/playable/).
-
-### Zendesk Partnership is Live
-Zendesk Support Suite (ZSS) offers businesses the ability to have natural conversations with their customers through omnichannel support using email, webchat, voice, or social messaging apps. ZSS values customer support through tracking and prioritizing interactions, allowing businesses to have a unified historical view of their customers. Powerful tools such as a streamlined ticketing system allow businesses to reach out directly to customers with a personalized approach. Braze offers a server-to-server integration with Zendesk, allowing you to utilize the Braze webhooks that can sync support ticket data between Braze and Zendesk. To read more about our Zendesk integration, visit our documentation [here]({{site.baseurl}}/partners/zendesk/)
-
-### Crowdin Partnership is Live
-
-Crowdin is a cloud-based software for localization management. Braze integration with Crowdin allows you to translate email templates and content blocks. You can synchronize content from your Braze account to your Crowdin project and add translations back to Braze. To read more about our Crowdin integration, visit our article [here]({{site.baseurl}}/partners/crowdin/).
-
 
 [support]: {{site.baseurl}}/support_contact/
-[1]: {{site.baseurl}}/user_guide/engagement_tools/canvas/retention_reports/
-[2]: {{site.baseurl}}/user_guide/engagement_tools/campaigns/testing_and_more/retention_reports/
-[3]: {{site.baseurl}}/api/endpoints/user_data/post_user_track/
-[5]: {% image_buster /assets/img/campaign_comparison/campaign_main.png %} 

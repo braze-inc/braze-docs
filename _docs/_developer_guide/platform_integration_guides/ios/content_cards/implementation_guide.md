@@ -18,10 +18,6 @@ Looking for the out-of-the-box Content Card developer integration guide? Find it
 
 ## Code Considerations
 
-### Import Statements and Helper Files
-
-When working with custom implementation Content Cards, it is recommended to integrate them using a single `import Appboy-iOS-SDK` statement with the use of a helper file. This approach limits issues that arise from excessive SDK imports, making it easier to track, debug, and alter code. An example helper file can be found [here](https://github.com/braze-inc/braze-growth-shares-ios-demo-app/blob/master/Braze-Demo/BrazeManager.swift).
-
 ### Content Cards as Custom Objects
 
 Much like a rocketship adding a booster, your own custom objects can be extended to function as Content Cards. Limited API surfaces such as this provide flexibility to work with different data backends interchangeably. This can be done by conforming to the `ContentCardable` protocol and implementing the initializer (as seen below) and, through the use of the `ContentCardData` struct, allows you to access the `ABKContentCard` data. The `ABKContentCard` payload will be used to initialize the `ContentCardData` struct and the custom object itself, all from a `Dictionary` type via the initializer the protocol comes with.
@@ -441,7 +437,7 @@ The example to the right shows a `UICollectionView` with a hybrid list of items 
 
 #### Dashboard Configuration
 
-This Content Card is delivered by an API triggered campaign with API triggered key-value pairs. This is ideal for campaigns where the card's values depend on external factors to determine what content to display to the user. Note that `class_type` should be known at set-up time.
+This Content Card is delivered by an API-triggered campaign with API-triggered key-value pairs. This is ideal for campaigns where the card's values depend on external factors to determine what content to display to the user. Note that `class_type` should be known at set-up time.
 
 ![Supplementary Content PNG][2]{: style="max-width:60%;"}
 
