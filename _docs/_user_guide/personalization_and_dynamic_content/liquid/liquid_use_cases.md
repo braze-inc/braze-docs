@@ -10,15 +10,16 @@ description: "This landing page is home to sample Liquid use cases organized by 
 
 {% api %}
 
-## Anniversaries and Birthdays
+## Anniversaries and Holidays
 
 {% apitags %}
-Anniversaries and Birthdays
+Anniversaries and Holidays
 {% endapitags %}
 
 - [Personalize messages based on a user's anniversary year](#anniversary-year)
 - [Personalize messages based on a user's birthday week](#birthday-week)
 - [Send campaigns to users in their birthday month](#birthday-month)
+- [Avoid sending messages on major holidays](#holiday-avoid)
 
 ### Personalize Messages Based on a User's Anniversary Year {#anniversary-year}
 
@@ -109,6 +110,23 @@ Message body
 {% endraw %}
 
 **Explanation:** Similar to the [birthday week](#birthday-week) use case, except here we use the `%B` filter (month, i.e., "May") to calculate which users have a birthday this month. A potential application could be addressing birthday users in a monthly email.
+
+### Avoid Sending Messages on Major Holidays {#holiday-avoid}
+
+This use case shows how to send messages during the holiday period while avoiding the days of major holidays, when engagement is likely to be low.
+
+{% raw %}
+```liquid
+{% assign today = 'now' | date: '%Y-%m-%d' %}
+{% if today == "2021-12-24" or today == "2021-12-25" or today == "2021-12-26” %}
+{% abort_message %}
+{% endif %}
+```
+{% endraw %}
+
+**Explanation:** Here we assign the term `today` to the reserved variable `now` (the current date and time), using the filters `%Y` (year, i.e., "2021"), `%m` (month, i.e., "12"), and `%d` (day, i.e., "25") to format the date. We then run our conditional statement to say that if the variable `today` matches the holiday days of your choice, then the message will be aborted. 
+
+The example provided uses Christmas Eve, Christmas Day, and Boxing Day (the day after Christmas).
 
 {% endapi %}
 
@@ -574,8 +592,10 @@ This use case captures a user's first name (if both first and last name are stor
 {% assign name = {{${first_name}}} | split: ' ' %}
 Hi {{name[0]}}, here's your message!
 ```
-{% endraw %}
 
+**Explanation:** The `split` filter turns the string held in `{{${first_name}}}` into an array. By using `{{name[0]}}`, we then only refer to the first item in the array, which is the user's first name. 
+
+{% endraw %}
 {% endapi %}
 
 {% api %}
@@ -751,6 +771,7 @@ tuesday default
 Miscellaneous
 {% endapitags %}
 
+- [Avoid sending emails to customers that have blocked marketing emails](#misc-avoid-blocked-emails)
 - [Capitalize the first letter of every word in a string](#misc-capitalize-words-string)
 - [Compare custom attribute value against an array](#misc-compare-array)
 - [Create an upcoming event reminder](#misc-event-reminder)
@@ -759,6 +780,33 @@ Miscellaneous
 - [Find the smallest value in an array](#misc-smallest-value)
 - [Query the end of a string](#misc-query-end-of-string)
 - [Query values in an array from a custom attribute with multiple combinations](#misc-query-array-values)
+
+### Avoid Sending Emails to Customers That Have Blocked Marketing Emails {#misc-avoid-blocked-emails}
+
+This use case takes a list of blocked users saved in a Content Block and ensures those blocked users are not communicated to or targeted in upcoming campaigns or Canvases.
+
+{% alert important %}
+To use this Liquid, first save the list of blocked emails within a Content Block. The list should have no additional spaces or characters inserted between email addresses (e.g., `test@braze.com,abc@braze.com`).
+{% endalert %}
+
+{% raw %}
+```liquid
+{% assign blocked_emails = {{content_blocks.${BlockedEmailList}}} | split: ',' %}
+{% for email in blocked_emails %}
+    {% if {{${email_address}}} == email %}
+    {% abort_message('Email is blocked') %}
+    {% break %}
+    {% endif %}
+{% endfor %} 
+Your message here!
+```
+{% endraw %}
+
+**Explanation:** Here we check if your potential recipient's email is in this list by referencing the Content Block of blocked emails. If the email is found, the message will not send.
+
+{% alert note %}
+Content Blocks have a size limit of 5 MB.
+{% endalert %}
 
 ### Capitalize the First Letter of Every Word in a String {#misc-capitalize-words-string}
 
@@ -772,6 +820,8 @@ This use case takes a string of words, splits them into an array, and capitalize
 {% endfor %} 
 ```
 {% endraw %}
+
+**Explanation:** Here we've assigned a variable to our chosen string attribute, and used the `split` filter to split the string into an array. We've then used the `for` tag to assign the variable `words` to each of the items in our newly created array, before displaying those words with the `capitalize` filter and the `append` filter to add spaces between each of the terms.
 
 ### Compare Custom Attribute Value Against an Array {#misc-compare-array}
 
@@ -1149,7 +1199,7 @@ For push notifications and in-app message channels, you can specify the device c
 
 {% raw %}
 ```liquid
-{%if {targeted_device.${carrier}} contains "verizon" or {targeted_device.${carrier}} contains "Verizon" %}
+{% if {targeted_device.${carrier}} contains "verizon" or {targeted_device.${carrier}} contains "Verizon" %}
 
 This is a message for Verizon users!
 
