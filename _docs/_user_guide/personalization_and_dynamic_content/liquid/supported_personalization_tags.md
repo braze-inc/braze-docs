@@ -137,8 +137,22 @@ Make a purchase to bring your rewards points to {{new_points_balance}} and cash 
 ```
 This tag comes in handy when you want to reformat content that is returned from our [Connected Content][4] feature. You can read more about variable tags [here][31].
 
+{% endraw %}
+
+{% alert tip %}
+Find yourself assigning the same variables in every message? Instead of writing out the `assign` tag over and over again, you can save that tag as a Content Block and put it at the top of your message instead.
+
+1. [Create a Content Block]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/content_blocks/#create-a-content-block).
+2. Give your Content Block a name (no spaces or special characters).
+3. Click **Edit** at the bottom of the page.
+4. Type in your `assign` tags.
+
+As long as the Content Block is at the top of your message, every time the variable is inserted into your message as an object, it will refer to your chosen custom attribute!
+{% endalert %}
+
 ## Iteration Tags
 
+{% raw %}
 Iteration tags can be used to run a block of code repeatedly. This example features the `for` tag.
 
 Let's say that you're having a sale on Nike sneakers and want to message customers who've expressed interest in Nike. You have an array of product brands viewed on each customer's profile. This array could contain up to 25 product brands, but you only want to message customers who viewed a Nike product as one of their 5 most recent product views.
