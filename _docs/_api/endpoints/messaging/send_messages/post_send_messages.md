@@ -42,7 +42,7 @@ Authorization: Bearer YOUR-REST-API-KEY
    "user_aliases": (optional, array of user alias object) see user alias,
    "segment_id": (optional, string) see segment identifier,
    "audience": (optional, connected audience object) see connected audience,
-   "campaign_id": (optional*, string) *required if you wish to track campaign states. see campaign identifier,
+   "campaign_id": (optional*, string) *required if you wish to track campaign stats (e.g. sends, clicks, bounces, etc). see campaign identifier,
    "send_id": (optional, string) see send identifier,
    "override_frequency_capping": (optional, bool) ignore frequency_capping for campaigns, defaults to false,
    "recipient_subscription_state": (optional, string) use this to send messages to only users who have opted in ('opted_in'), only users who have subscribed or are opted in ('subscribed') or to all users, including unsubscribed users ('all'), the latter being useful for transactional email messaging. Defaults to 'subscribed',
