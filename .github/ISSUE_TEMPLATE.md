@@ -1,6 +1,6 @@
 # Submit an Issue
 
-This issue template is for __documentation-related issues__ such as broken links, missing images and content, contributing issues, documentation website outages, and more. Please note that [technical questions, bugs, and general issues](https://github.com/braze-inc/braze-docs/issues/new/choose) with the platform __will not__ be addressed by the documentation team and should not be submitted here.
+This issue template is for __documentation-related issues__ such as broken links, missing images and content, contribution issues, documentation website outages, and more. Please note that [technical questions, bugs, and general issues](https://github.com/braze-inc/braze-docs/issues/new/choose) with the platform __will not__ be addressed by the documentation team and should not be submitted here.
 
 #### Describe the Problem:
 > I would like to see the following changes..... (could be a link, a new image, a new section, etc.)... because.....
