@@ -29,7 +29,7 @@ ReactAppboy.changeUser("user_id");
 You can record custom events in Braze to learn more about your app’s usage patterns and to segment your users by their actions on the dashboard.
 
 ```javascript
-ReactAppboy.logCustomEvent("react_native_custom_event);
+ReactAppboy.logCustomEvent("react_native_custom_event");
 ```
 
 You can add metadata about the event by passing a properties object with your custom event.
