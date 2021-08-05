@@ -1,14 +1,18 @@
 ---
 nav_title: Analytics
 platform: React Native
+subplatform:
+- iOS
+- Android
 page_order: 5
-description: "This article covers how to setup and track basic analytics in the React Native app."
+description: "This article covers how to set up and track basic analytics in the React Native app."
 ---
 
 # Analytics
 
-Read our [Analytics Overview][0] article to learn more about what is being tracked by default and to understand Braze analytics better.
-We also recommend familiarizing yourself with our [event naming conventions][1].
+This article covers how to set up and track basic analytics in your React Native app.
+
+Before you start, read our [Analytics Overview][0] article to learn more about Braze analytics, and what is already tracked by default. We also recommend familiarizing yourself with our [event naming conventions][1].
 
 ## Session Tracking
 

@@ -5,16 +5,15 @@ page_order: 3
 
 page_type: reference
 description: "This article covers how to get started with Content Cards for React Native apps."
-
+channel: content cards
 ---
 
 # Content Cards
 
-To get started with Content Cards, the Braze SDKs include a default card feed. To show the card feed you can use the `ReactAppboy.launchContentCards()` method.
+The Braze SDKs include a default card feed to get you started with Contend Cards. To show the card feed, you can use the `ReactAppboy.launchContentCards()` method. The default card feed included with the Braze SDK will handle all analytics tracking, dismissals, and rendering for a user's Content Cards.
 
-The default card feed included with the Braze SDK will handle all analytics tracking, dismissals, and rendering for a user's Content Cards.
+Example using React Hooks:
 
-### Example to use following methods using React Hooks
 ```javascript
 useEffect(() => {
     ReactAppboy.requestContentCardsRefresh();
@@ -34,6 +33,7 @@ You can use these additional methods to build a custom Content Cards Feed within
 |`ReactAppboy.logContentCardClicked(cardId)`|Logs a click for the given Content Card ID.|
 |`ReactAppboy.logContentCardImpression(cardId)`|Logs an impression for the given Content Card ID.|
 |`ReactAppboy.logContentCardDismissed(cardId)`|Logs a dismissal for the given Content Card ID.|
+{: .reset-td-br-1 .reset-td-br-2}
 
 ## Test Displaying Sample Content Card
 
@@ -41,11 +41,11 @@ Follow the steps below to test a sample content card.
 
 1. Set an active user in the React application by calling `ReactAppboy.changeUserId('your-user-id')` method.
 2. Head to **Campaigns** and follow [this guide][4] to create a new **Content Card** campaign.
-3. Compose your test content card campaign and head over to the **Test** tab. Add the same *user-id* as the test user and `Send Test`. You should be able to launch a content card on your device shortly.
+3. Compose your test Content Card campaign and head over to the **Test** tab. Add the same `user-id` as the test user and click **Send Test**. You should be able to launch a Content Card on your device shortly.
 
 ![Content Card Campaign Test][5]
 
-For more integrations, follow [the Android integration instructions][2] or follow [the iOS integration instructions][3].
+For more integrations, follow the [Android integration instructions][2] or the [iOS integration instructions][3], depending on your platform.
 
 A sample implementation of this is contained in AppboyProject, within the [React SDK][1].
 

@@ -1,22 +1,27 @@
 ---
 nav_title: In-App Messages
 platform: React Native
-subplatform: iOS
+subplatform: 
+- iOS
+- Android
 page_order: 4
 page_type: reference
-description: "This article covers in-app messages for iOS apps using React Native, including customizing and logging analytics."
+description: "This article covers in-app messages for iOS and Android apps using React Native, including customizing and logging analytics."
 channel: in-app messages
 
 ---
 
 # In-App Messages
 
-Native in-app messages display automatically on Android and iOS when using React Native.
+Native in-app messages display automatically on Android and iOS when using React Native. This article covers customizing and logging analytics for your in-app messages for apps using React Native.
 
 ## Android
 
 ### Accessing In-App Message Data
-If you would like to access the in-app message data in the JavaScript layer, implement the `IInAppMessageManagerListener` as described in our public documentation [for Android][1]. In your `beforeInAppMessageDisplayed` implementation, you can access the `inAppMessage` data, send it to the JavaScript layer, and decide to show or not show the native message based on the return value (for more on these values, see our [Android documentation][2]).
+
+If you would like to access the in-app message data in the JavaScript layer, implement the `IInAppMessageManagerListener` as described in our Android section on [Custom Manager Listener][1]. In your `beforeInAppMessageDisplayed` implementation, you can access the `inAppMessage` data, send it to the JavaScript layer, and decide to show or not show the native message based on the return value.
+
+For more on these values, see our [Android documentation][2].
 
 ```java
 // In-app messaging
@@ -38,7 +43,10 @@ public InAppMessageOperation beforeInAppMessageDisplayed(IInAppMessage inAppMess
 ## iOS
 
 ### Accessing In-App Message Data
-If you would like to access the in-app message data in the JavaScript layer, implement the `ABKInAppMessageControllerDelegate` delegate as described in our public documentation [for iOS][3]. In the `beforeInAppMessageDisplayed:` delegate method, you can access the `inAppMessage` data, send it to the JavaScript layer, and decide to show or not show the native message based on the return value (for more on these values, see our [iOS documentation][4]).
+
+If you would like to access the in-app message data in the JavaScript layer, implement the `ABKInAppMessageControllerDelegate` delegate as described in our iOS section on [Core In-App Message Delegate][3]. In the `beforeInAppMessageDisplayed:` delegate method, you can access the `inAppMessage` data, send it to the JavaScript layer, and decide to show or not show the native message based on the return value.
+
+For more on these values, see our [iOS documentation][4].
 
 {% tabs %}
 {% tab OBJECTIVE-C %}
@@ -91,17 +99,17 @@ ReactAppboy.logInAppMessageButtonClicked(inAppMessage, 0);
 
 ## Test Displaying a Sample In-App Message
 
-Follow the steps below to test a sample In-App Message.
+Follow the steps below to test a sample in-app message.
 
 1. Set an active user in the React application by calling `ReactAppboy.changeUserId('your-user-id')` method.
 2. Head to **Campaigns** and follow [this guide][5] to create a new **In-App Messaging** campaign.
-3. Compose your test in-app messaging campaign and head over to the **Test** tab. Add the same *user-id* as the test user and `Send Test`. You should be able to launch an in-app message on your device shortly.
+3. Compose your test in-app messaging campaign and head over to the **Test** tab. Add the same `user-id` as the test user and click **Send Test**. You should be able to launch an in-app message on your device shortly.
 
 ![In-App Messaging Campaign Test][6]
 
 A sample implementation of this is contained in AppboyProject, within the [React SDK][7]. Additional Android implementation samples are contained in the [Android SDK][8].    Additional iOS implementation samples are contained in the [iOS SDK][9].
 
-[1]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/in-app_messaging/customization/#setting-a-custom-manager-listener
+[1]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/in-app_messaging/customization/#custom-manager-listener
 [2]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/in-app_messaging/customization/#step-1-implement-an-in-app-message-manager-listener
 [3]: {{site.baseurl}}/developer_guide/platform_integration_guides/ios/in-app_messaging/customization/#core-in-app-message-controller-delegate
 [4]: {{site.baseurl}}/developer_guide/platform_integration_guides/ios/in-app_messaging/customization/#custom-handling-in-app-message-display
