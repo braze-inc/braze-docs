@@ -15,9 +15,9 @@ channel: in-app messages
 
 Native in-app messages display automatically on Android and iOS when using React Native. This article covers customizing and logging analytics for your in-app messages for apps using React Native.
 
-## Android
+## Accessing In-App Message Data
 
-### Accessing In-App Message Data
+### Android
 
 If you would like to access the in-app message data in the JavaScript layer, implement the `IInAppMessageManagerListener` as described in our Android section on [Custom Manager Listener][1]. In your `beforeInAppMessageDisplayed` implementation, you can access the `inAppMessage` data, send it to the JavaScript layer, and decide to show or not show the native message based on the return value.
 
@@ -40,9 +40,7 @@ public InAppMessageOperation beforeInAppMessageDisplayed(IInAppMessage inAppMess
 }
 ```
 
-## iOS
-
-### Accessing In-App Message Data
+### iOS
 
 If you would like to access the in-app message data in the JavaScript layer, implement the `ABKInAppMessageControllerDelegate` delegate as described in our iOS section on [Core In-App Message Delegate][3]. In the `beforeInAppMessageDisplayed:` delegate method, you can access the `inAppMessage` data, send it to the JavaScript layer, and decide to show or not show the native message based on the return value.
 
@@ -70,7 +68,7 @@ For more on these values, see our [iOS documentation][4].
 {% endtab %}
 {% endtabs %}
 
-### Receiving In-App Message in JavaScript
+## Receiving In-App Message in JavaScript
 
 On the JavaScript side, this data can be used to instantiate a `BrazeInAppMessage`:
 ```javascript
@@ -79,7 +77,7 @@ DeviceEventEmitter.addListener("inAppMessageReceived", (event) => {
 });
 ```
 
-### Analytics
+## Analytics
 
 To log analytics using your `BrazeInAppMessage`, pass the instance into the desired analytics function:
 - `logInAppMessageClicked`
