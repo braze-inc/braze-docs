@@ -11,31 +11,20 @@ channel: in-app messages
 
 # In-App Messages
 
-__In-App Messages__ help you get content to your user without interrupting their day with a push notification. Customized and tailored in-app messages enhance the user experience and help your audience get the most value out of your app. With a variety of layouts and customization tools to choose from, in-app messages engage your users more than ever before.
-
-{% comment %}
-Embed video on the right. Demos all of the topics mentioned on this page.
-{% endcomment %}
-
-## When to Use In-App Messages
-
-In-app messages are good for a lot of things. They can be used in web apps, Android apps, iOS apps, and more!
-
-In-app messages don't deliver outside of the user's app and won't intrude on their home screen, like push notifications do. In-app messages, by their nature, exist within your app and come with context and are rarely unwelcome! They're always delivered when the user is active within your app.
-
-#### Great Use Cases
-
-- New App Features
-- App Management
-- Reviews
-- App Upgrades/Updates
-- Giveaways & Sweepstakes
+[In-App Messages]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/) help you get content to your user without interrupting their day with a push notification. Customized and tailored in-app messages enhance the user experience and help your audience get the most value out of your app. With a variety of layouts and customization tools to choose from, in-app messages engage your users more than ever before.
 
 To see examples of in-app messages, check out our [Case Studies][53].
 
 ## In-App Message Types
 
-Braze currently offers the following default in-app message types: [`Slideup`][13], [`Modal`][17], and [`Full`][41] and [`HTML`][42].  Each in-app message type is customizable across content, images, icons, click actions, analytics, display, and delivery.
+Braze currently offers the following default in-app message types: 
+
+- [`Slideup`][13]
+- [`Modal`][17]
+- [`Full`][41]
+- [`HTML`][42]
+
+Each in-app message type is customizable across content, images, icons, click actions, analytics, display, and delivery.
 
 All in-app messages inherit their prototype from [`appboy.InAppMessage`][2], which defines basic behavior and traits for all in-app messages. The protypical subclasses are [appboy.SlideUpMessage][3], [appboy.ModalMessage][6], [appboy.FullScreenMessage][7], and [appboy.HtmlMessage][12].
 

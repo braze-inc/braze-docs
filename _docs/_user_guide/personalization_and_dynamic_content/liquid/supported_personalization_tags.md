@@ -137,8 +137,22 @@ Make a purchase to bring your rewards points to {{new_points_balance}} and cash 
 ```
 This tag comes in handy when you want to reformat content that is returned from our [Connected Content][4] feature. You can read more about variable tags [here][31].
 
+{% endraw %}
+
+{% alert tip %}
+Find yourself assigning the same variables in every message? Instead of writing out the `assign` tag over and over again, you can save that tag as a Content Block and put it at the top of your message instead.
+
+1. [Create a Content Block]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/content_blocks/#create-a-content-block).
+2. Give your Content Block a name (no spaces or special characters).
+3. Click **Edit** at the bottom of the page.
+4. Type in your `assign` tags.
+
+As long as the Content Block is at the top of your message, every time the variable is inserted into your message as an object, it will refer to your chosen custom attribute!
+{% endalert %}
+
 ## Iteration Tags
 
+{% raw %}
 Iteration tags can be used to run a block of code repeatedly. This example features the `for` tag.
 
 Let's say that you're having a sale on Nike sneakers and want to message customers who've expressed interest in Nike. You have an array of product brands viewed on each customer's profile. This array could contain up to 25 product brands, but you only want to message customers who viewed a Nike product as one of their 5 most recent product views.
@@ -207,7 +221,7 @@ Message in default language
 
 In this example, customers with a most recent locale of 'pt_BR' will get a message in Brazilian Portuguese, customers with a most recent locale of 'pt_PT' will get a message in European Portuguese and customers who don't meet the first two conditions but have their language set to Portuguese will get a message in whatever you'd like the default Portuguese language type to be.
 
-You can also target users based off of their time zone. For example, send one message if they are based in EST and another if they are PST. To do this, save the current time in UTC, and compare an if/else statement with the user's current time to ensure you're sending the right message for the right timezone. You should set the campaign to send in the user's local time zone, to ensure they are getting the campaign at the right time. See below for an example of how to write a message that will go out between 2PM and 3PM and will have a specific message for each time zone.
+You can also target users based off of their time zone. For example, send one message if they are based in EST and another if they are PST. To do this, save the current time in UTC, and compare an if/else statement with the user's current time to ensure you're sending the right message for the right time zone. You should set the campaign to send in the user's local time zone, to ensure they are getting the campaign at the right time. See below for an example of how to write a message that will go out between 2PM and 3PM and will have a specific message for each time zone.
 
 ```liquid
 {% assign hour_in_utc = 'now' | date: '%H' | plus:0 %}

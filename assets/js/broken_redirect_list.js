@@ -370,6 +370,7 @@ validurls['/docs/help/webinars/troubleshooting_bootcamp/'] = '/docs/help/home/';
 validurls['/docs/user_guide/message_building_by_channel/email/creating_an_email_template/'] = '/docs/user_guide/message_building_by_channel/email/templates/email_template/';
 validurls['/docs/user_guide/administrative/access_braze/single_sign_on/restriction/'] = '/docs/user_guide/administrative/access_braze/single_sign_on/set_up/#restriction';
 validurls['/docs/user_guide/message_building_by_channel/email/email_reporting/'] = '/docs/user_guide/message_building_by_channel/email/creating_an_email_campaign/#email-reporting';
+validurls['/docs/user_guide/data_and_analytics/user_data_collection/data_collected_by_default/'] = '/docs/user_guide/data_and_analytics/user_data_collection/sdk_data_collection/';
 
 validurls['/docs/help/best_practices/client_integration_gallery/'] = 'https://www.braze.com/customers';
 validurls['/docs/help/best_practices/email/'] = '/docs/message_building_by_channel/email/best_practices';
@@ -401,3 +402,9 @@ validurls['/docs/help/best_practices/image_and_text_specifications/#news-feed-sp
 validurls['/docs/help/best_practices/image_and_text_specifications/#mms'] = '/docs/user_guide/message_building_by_channel/sms/mms/create/#image-specifications';
 validurls['/docs/help/best_practices/image_and_text_specifications/#email'] = '/docs/user_guide/message_building_by_channel/email/best_practices/guidelines_and_tips/#email-size';
 
+validurls['/docs/help/best_practices/in-app_messages/in-app_message_specs/'] = '/docs/user_guide/message_building_by_channel/in-app_messages/best_practices/previous_in-app_message_generations/#specs';
+
+validurls['/docs/developer_guide/platform_integration_guides/android/content_cards/overview/'] = '/docs/user_guide/message_building_by_channel/content_cards/about/';
+validurls['/docs/developer_guide/platform_integration_guides/ios/content_cards/overview/'] = '/docs/user_guide/message_building_by_channel/content_cards/about/';
+validurls['/docs/developer_guide/platform_integration_guides/web/content_cards/overview/'] = '/docs/user_guide/message_building_by_channel/content_cards/about/';
+validurls['/docs/developer_guide/platform_integration_guides/fireos/content_cards/overview/'] = '/docs/user_guide/message_building_by_channel/content_cards/about/';

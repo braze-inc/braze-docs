@@ -43,7 +43,7 @@ If you are looking for a complete list of supported languages you may attribute 
 - Norwegian
 - Nynorsk
 - Polish
-- Portuguese 
+- Portuguese
 - Russian
 - Spanish
 - Swedish
@@ -55,4 +55,3 @@ For more information see the [Android Localization Developer Docs][3].
 
 [3]: http://developer.android.com/guide/topics/resources/localization.html
 [1]: {{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/language_codes/
-

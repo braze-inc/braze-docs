@@ -1,7 +1,7 @@
 ---
 nav_title: Snowflake
 alias: /partners/snowflake/
-
+page_order: 1
 description: "This article outlines the partnership between Braze and Snowflake, a purpose-built SQL cloud data warehouse for all of your data and all of your users."
 page_type: partner
 ---

@@ -18,14 +18,14 @@ To enable network offline mode in the Braze SDK, see the following example:
 {% tab JAVA %}
 
 ```java
-Appboy.setOutboundNetworkRequestsOffline(true);
+Braze.setOutboundNetworkRequestsOffline(true);
 ```
 
 {% endtab %}
 {% tab KOTLIN %}
 
 ```kotlin
-Appboy.setOutboundNetworkRequestsOffline(true)
+Braze.setOutboundNetworkRequestsOffline(true)
 ```
 
 {% endtab %}

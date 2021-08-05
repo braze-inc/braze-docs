@@ -23,6 +23,9 @@ guide_featured_list:
   - name: "Export FAQs"
     link: /docs/user_guide/data_and_analytics/export_braze_data/faqs/
     fa_icon: fas fa-file-export
+  - name: "In-App Messages FAQs"
+    link: /docs/user_guide/message_building_by_channel/in-app_messages/faq/
+    fa_icon: fas fa-mobile-alt
   - name: "Locations & Geofences FAQs"
     link: /docs/user_guide/engagement_tools/locations_and_geofences/faqs/
     fa_icon: fas fa-map-marker-alt
