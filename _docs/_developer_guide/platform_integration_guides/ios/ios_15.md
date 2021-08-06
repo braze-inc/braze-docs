@@ -50,7 +50,7 @@ We're excited to offer support for this new features - stay tuned for more infor
 
 In iOS 15, users can (optionally) choose certain times throughout the day to receive a summary of notifications. Notifications that don't require immediate attention (i.e. sent as "Passive", or while the user is in Focus Mode) will be grouped together to prevent constant interruptions throughout the day for notifications which don’t need immediate attention.
 
-For each notification you send, you'll soon be able to specify a "relevance score" to control which notification should appear at the top of the summary. Stay tuned for more information 
+For each notification you send, you'll soon be able to specify a "relevance score" to control which notification should appear at the top of the summary.
 
 We're excited to offer support for this new features - stay tuned for more information to be announced near iOS 15's official release!
 
