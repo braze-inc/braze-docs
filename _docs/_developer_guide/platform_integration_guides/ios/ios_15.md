@@ -28,6 +28,8 @@ We strongly recommend you upgrade to the [Braze iOS SDK v4.3.2][1] as soon as po
 
 iOS 15 introduced new notification features to help users stay focused and avoid frequent interruptions throughout the day.
 
+We're excited to offer support for these new features - stay tuned for more information to be announced near iOS 15's official release!
+
 ### Focus Modes {#focus-mode}
 
 iOS 15 users can now create "Focus Modes" - custom profiles used to determine which notifications they want to __break through__ their focus and display prominently.
@@ -43,7 +45,6 @@ In iOS 15, push notifications can be sent with one of four interuption levels:
 * **Time Sensitive** (new) - Allows sound, vibration, screen waking, can breakthrough system controls if allowed.
 * **Critical** - Allows sound, vibration, screen waking, can breakthrough system controls and bypass ringer switch.
 
-We're excited to offer support for this new features - stay tuned for more information to be announced near iOS 15's official release!
 
 
 ### Notification Summary {#notification-summary}
