@@ -16,25 +16,43 @@ This guide outlines changes introduced in iOS 15 (WWDC21) and the required upgra
 This is a working document and will evolve as Apple releases new Beta versions and information on their upcoming changes.
 {% endalert %}
 
-<!-- ## Upgrade Requirements
-
-<style>
-table th:nth-child(1),
-table th:nth-child(2),
-table td:nth-child(1),
-table td:nth-child(2) {
-    min-width:230px;
-}
-table td {
-    word-break: break-word;
-}
-</style>
-
-|If Your App Uses:|Upgrade Recommendation|Description|
-|------|--------|---|
-|Xcode 13|**Upgrade to iOS SDK v4.0 or above**|Customers using Xcode 13 must use [v4.0.0+][1] for compatibility. If you experience any issues or questions related to our iOS 15 compatibility, please open a new [Github Issue][2].| -->
-
 # iOS 15 Changes
+
+## Transparency Changes to UI Navigations
+
+As part of our annual testing of iOS betas, we have identified a change made by Apple which causes certain UI navigation bars to appear transparent instead of opaque. This will be visible when using Braze’s default UI for Content Cards or News Feed, or when web deep links are opened inside your app and not in a separate browser app.
+
+We strongly recommend you upgrade to the [Braze iOS SDK v4.3.2][1] as soon as possible, before users begin to upgrade their phones to iOS 15.
+
+## New Notification Settings {#notification-settings}
+
+iOS 15 introduced new notification features to help users stay focused and avoid frequent interruptions throughout the day.
+
+### Focus Modes {#focus-mode}
+
+iOS 15 users can now create "Focus Modes" - custom profiles used to determine which notifications they want to __break through__ their focus and display prominently.
+
+![Focus Settings]({% image_buster /assets/img/ios/ios15-focus-settings.png %}){: style="float:right;max-width:25%;margin-left:15px;border:0"}
+
+### Interruption Levels {#interruption-levels}
+
+In iOS 15, push notifications can be sent with one of four interuption levels:
+
+* **Passive** (new) - No sound, no vibration, no screen waking, no breakthrough of focus settings.
+* **Active** (default) - Allows sound, vibration, screen waking, no breakthrough of focus settings
+* **Time Sensitive** (new) - Allows sound, vibration, screen waking, can breakthrough system controls if allowed.
+* **Critical** - Allows sound, vibration, screen waking, can breakthrough system controls and bypass ringer switch.
+
+We're excited to offer support for this new features - stay tuned for more information to be announced near iOS 15's official release!
+
+
+### Notification Summary {#notification-summary}
+
+In iOS 15, users will be able to choose certain times throughout the day to receive a summary of notifications. Notifications that don't require immediate attention (i.e. sent as "Passive", or while the user is in Focus Mode) will be grouped together to prevent constant interruptions throughout the day for notifications which don’t need immediate attention.
+
+For each notification you send, you'll soon be able to specify a "relevance score" to control which notification should appear at the top of the summary. Stay tuned for more information 
+
+We're excited to offer support for this new features - stay tuned for more information to be announced near iOS 15's official release!
 
 ## Location Buttons {#location-buttons}
 
@@ -54,37 +72,6 @@ According to Apple, users who have already shared background location access - t
 This feature gives you an extra chance to prompt users for permission! Users who have previously declined location permissions, prior to iOS 15, will be shown a prompt when clicking hte Location Button as an opportunity to reset the permission from the declined state one last time.
 {% endalert %}
 
-## New Notification Settings {#notification-settings}
-
-### Focus Settings {#focus-settings}
-
-iOS 15 users can now create "Focus Settings" - custom profiles used to determine which notifications they want to __break through__ their focus and display prominently.
-
-![Focus Settings]({% image_buster /assets/img/ios/ios15-focus-settings.png %}){: style="float:right;max-width:25%;margin-left:15px;border:0"}
-
-### Interruption Levels {#interruption-levels}
-
-Starting in iOS 15, push notifications can be sent with one of four interuption levels:
-
-* **Passive** (new) - No sound, no vibration, no screen waking, no breakthrough of focus settings.
-* **Active** (default) - Allows sound, vibration, screen waking, no breakthrough of focus settings
-* **Time Sensitive** (new) - Allows sound, vibration, screen waking, can breakthrough system controls if allowed.
-* **Critical** - Allows sound, vibration, screen waking, can breakthrough system controls and bypass ringer switch.
-
-#### Using Interruption Levels with Braze
-
-Our team is researching this feature and will have updates closer to the launch of iOS 15. If you have feedback or ideas on how you'd use this feature, please let us know!
-
-### Push Action Icons {#push-icons}
-
-iOS 15 introduces the ability to add icons alongside push action buttons
-
-![Push Button Icons]({% image_buster /assets/img/ios/ios15-focus-settings.png %}){: style="float:right;max-width:25%;margin-left:15px;border:0"}
-
-To use this feature, you'll need to update your integration to specify which icons should be used for each push category.
-
-We'll be releasing more detailed documentation closer to the release of iOS 15.
-
 
 ### Apple Mail {#mail}
 
@@ -96,5 +83,5 @@ This year, Apple has annnounced many updates to Email tracking and privacy. For 
 In iOS 15, users will be able to configure Safari to either anonymize or generalize the location that can be  IP Addresses while browsing the web.
 
 
-[1]: https://github.com/Appboy/appboy-ios-sdk/releases/tag/4.0.0
+[1]: https://github.com/Appboy/appboy-ios-sdk/releases/tag/4.3.2
 [2]: https://github.com/Appboy/appboy-ios-sdk/issues
