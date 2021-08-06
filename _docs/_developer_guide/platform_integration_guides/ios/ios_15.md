@@ -63,16 +63,15 @@ The new Location Button builds off of the existing "Allow Once" permission, but 
 
 For more information, watch Apple's [Meet The Location Button](https://developer.apple.com/videos/play/wwdc2021/10102/) video from this year's WWDC conference.
 
+{% alert tip %}
+This feature gives you an extra chance to prompt users for permission! Users who have previously declined location permissions, prior to iOS 15, will be shown a prompt when clicking the Location Button as an opportunity to reset the permission from the declined state one last time.
+{% endalert %}
+
 #### Using Location Buttons with Braze
 
 No additional integration is required when using Location Buttons with Braze. Your app should continue passing a user's location - once they've granted permission - as usual.
 
 According to Apple, users who have already shared background location access - the "While Using App" option - will continue to grant that level of permission after they upgrade to iOS 15.
-
-{% alert tip %}
-This feature gives you an extra chance to prompt users for permission! Users who have previously declined location permissions, prior to iOS 15, will be shown a prompt when clicking the Location Button as an opportunity to reset the permission from the declined state one last time.
-{% endalert %}
-
 
 ### Apple Mail {#mail}
 
@@ -81,7 +80,7 @@ This year, Apple has annnounced many updates to Email tracking and privacy. For 
 
 ### Safari IP Address Location
 
-In iOS 15, users will be able to configure Safari to either anonymize or generalize the location that can be determined from a user's IP Addresses while browsing the web.
+In iOS 15, users will be able to configure Safari to anonymize or generalize the location that can be determined from a their IP Addresses. Please keep this in mind when using location-based targeting or segmentation.
 
 
 [1]: https://github.com/Appboy/appboy-ios-sdk/releases/tag/4.3.2
