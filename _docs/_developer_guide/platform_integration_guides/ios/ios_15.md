@@ -80,7 +80,7 @@ This year, Apple has annnounced many updates to Email tracking and privacy. For 
 
 ### Safari IP Address Location
 
-In iOS 15, users will be able to configure Safari to either anonymize or generalize the location that can be  IP Addresses while browsing the web.
+In iOS 15, users will be able to configure Safari to either anonymize or generalize the location that can be determined from a user's IP Addresses while browsing the web.
 
 
 [1]: https://github.com/Appboy/appboy-ios-sdk/releases/tag/4.3.2
