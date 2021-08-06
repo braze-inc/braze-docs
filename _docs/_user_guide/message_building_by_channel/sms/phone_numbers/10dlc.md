@@ -33,11 +33,11 @@ Since 2019, carriers have begun adopting 10DLC for commercial messaging, with Ve
 ### Costs 
 Registering with A2P 10DLC may include several types of fees:
 
-| Fee Type | Descrption |
+| Fee Type | Description |
 | -------- | ---------- |
-| Registration Fees | Nominal fees that are applied when registering your brand and use case across all major US networks. |
+| Registration Fees | Nominal fees applied when registering your brand and use case across all major US networks. |
 | Secondary Vetting Fees | Brands can appeal their [Brand Trust Score](#trust-score) and request a secondary vetting process to improve their overall throughput; there is a fee associated with this process. |
-| Carrier Fees | Fees charged by carriers for outbound SMS and MMS messages sent to users, all existing long codes already have carrier fees in effect. Fees are higher on unregistered traffic (standard long codes) vs. registered traffic (10DLC). |
+| Carrier Fees | Fees charged by carriers for outbound SMS and MMS messages sent to users; all existing long codes already have carrier fees in effect. Fees are higher on unregistered traffic (standard long codes) vs. registered traffic (10DLC). |
 {: .reset-td-br-1 .reset-td-br-2}
 
 Visit the Twilio 10DLC article to check out updated [fee estimates](https://support.twilio.com/hc/en-us/articles/1260803965530-What-pricing-and-fees-are-associated-with-the-A2P-10DLC-service-).
@@ -59,7 +59,7 @@ The Campaign Registry (TCR) is a third-party agency that uses a reputation algor
 
 #### Daily Message Limits
 
-Daily limits range from 2000 to 200,000 messages depending on your brand trust score and apply across all long codes. While high brand trust scores come with a throughout of 60 messages per second, any daily message limits set by the carrier will still apply. This means that short codes would be a better option if a brand's daily peak messages are higher than the imposed daily limit. 
+Daily limits range from 2000 to 200,000 messages depending on your brand trust score and apply across all long codes. While high brand trust scores come with a throughput of 60 messages per second, any daily message limits set by the carrier will still apply. This means that short codes would be a better option if a brand's daily peak messages are higher than the imposed daily limit. 
 
 {% alert tip %}
 Companies listed in the Russel 3000 index are automatically granted the maximum message limit and skip registration and verification. 
@@ -67,19 +67,50 @@ Companies listed in the Russel 3000 index are automatically granted the maximum 
 
 #### Messaging Use Cases
 
-Throughput is also affected by the type of messaging use case. Specific use cases like social engagement will be susceptible to higher throughput values. The values for this can be found in the following table:
+Throughput is also affected by the type of messaging use case you choose. Most customers will fall under the standard marketing or mixed marketing use case. Other less common use cases will be susceptible to higher throughput values.
+
+Depending on your use case, the trust score needed to achieve the maximum throughput will vary. The table below lists standard use cases. For special use cases such as emergency services or charity, please reference the Twilio docs.
 
 | Standard Use Cases | Description |
 | ------------------ | ----------- |
 | Marketing | Promotional content such as sales and limited time offers |
 | Mixed | Campaign that covers multiple use cases such as Customer Care | 
-| Transactional Use Cases | Customer Care, Delivery and Account Notificaitons, 2FA, Security and Fraud Alerts | 
+| Higher Education | Campaigns for higher education institutions |
+| Polling & Voting | Non-political polling and voting such as customer surveys |
+| PSA | PSAs to raise awareness about a given topic |
+| Customer Care | Support, account management, and other customer interactions |
+| Delivery Notifications | Status of delivery messages |
+| Account Notifications | Notifications about the status of an account |
+| 2FA | Any authentication of account verification such as OTP | 
+| Security Alerts | Notification of a compromised system |
+| Fraud Alerts | Messaging about potentially fraudulent activity |
 
-| Special Use Cases | Description |
-| ----------------- | ----------- |
-| Charity | Messages from a registerd charity such as 501c3 organizations |
-| Emergency Services | Notifications about supporting public saftey during emergency situations. Restricted to government and healthcare entities |
+Depending on your use case, you will be subject to different trust score ranges to determine your throughput.
 
+{% tabs %}
+{% tab Declared Use %}
+A Declared use case means you have chosen one specific non-marketing use case (for example, 2FA, Account Notifications, etc.).
+
+| Trust Score | Total SMS MPS toward major US networks | AT&T SMS MPS | T-Mobile SMS MPS | Verizon SMS MPS |
+| --- | ----------- | ---- | -------- | ------- |
+| 86-100 | 180 | 60 | 60 | 60 |
+| 66-85 | 30 | 10 | 10 | 10 |
+| 26-65 | 3 | 1 | 1 | 1| 
+
+{% endtab %}
+{% tab Mixed / Marketing %}
+
+Mixed / Marketing use cases can be registered for customers who want to send messages for multiple use cases from the same set of numbers or for marketing. Different throughput levels are allocated for Mixed / Marketing use cases than for Declared use cases.
+
+| Trust Score | Total SMS MPS toward major US networks | AT&T SMS MPS | T-Mobile SMS MPS | Verizon SMS MPS |
+| --- | ----------- | ---- | -------- | ------- |
+| 86-100 | 180 | 60 | 60 | 60 |
+| 66-85 | 30 | 10 | 10 | 10 |
+| 26-65 | 3 | 1 | 1 | 1| 
+| 15-25 | 2.2 | 0.2 | 1 | 1 |
+
+{% endtab %}
+{% endtabs %}
 
 Visit the Twilio 10DLC article to check out updated [throughput estimates](https://support.twilio.com/hc/en-us/articles/1260803225669-Message-throughput-MPS-and-Trust-Scores-for-A2P-10DLC-in-the-US).
 
