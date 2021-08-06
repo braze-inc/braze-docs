@@ -70,7 +70,7 @@ No additional integration is required when using Location Buttons with Braze. Yo
 According to Apple, users who have already shared background location access - the "While Using App" option - will continue to grant that level of permission after they upgrade to iOS 15.
 
 {% alert tip %}
-This feature gives you an extra chance to prompt users for permission! Users who have previously declined location permissions, prior to iOS 15, will be shown a prompt when clicking hte Location Button as an opportunity to reset the permission from the declined state one last time.
+This feature gives you an extra chance to prompt users for permission! Users who have previously declined location permissions, prior to iOS 15, will be shown a prompt when clicking the Location Button as an opportunity to reset the permission from the declined state one last time.
 {% endalert %}
 
 
