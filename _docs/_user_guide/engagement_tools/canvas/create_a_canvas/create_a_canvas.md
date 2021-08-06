@@ -138,6 +138,10 @@ You can set the target audience for your Canvas on the **Entry Audience** step. 
 
 For example, if you want to target new users, you can limit a particular journey to users who first used your app less than 3 weeks ago. You can also control settings such as whether messages should be sent to users who are subscribed or opted-in to your notifications.
 
+{% alert warning %}
+Avoid configuring an action-based campaign or Canvas with the same trigger as the audience filter (i.e., a changed attribute or performed a custom event). A race condition may occur in which the user is not in the audience at the time they perform the trigger event, which means they won't receive the campaign or enter the Canvas.  
+{% endalert %}
+
 ### Step 2d: Select Your Send Settings
 
 Click **Send Settings** to select your Subscription Settings, turn on rate limiting, and to enable Quiet Hours.
