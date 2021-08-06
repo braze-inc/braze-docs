@@ -171,6 +171,20 @@ You can add additional variants by pressing the <i class="fas fa-plus-circle"></
 
 ![Canvas Multiple Variants][12]
 
+{% alert tip %}
+By default, Canvas variant assignment is locked in when users enter the Canvas, meaning that if a user first enters a variant, that will be their variant every time they re-enter the Canvas. However, there are ways to circumvent this behavior. <br><br>To do so, you can create a random number generator using Liquid, run it at the beginning of each user's Canvas entry, store the value as a custom attribute, and then use that attribute to randomly divide users.
+
+{% details Expand for steps %}
+
+1. Create a custom attribute to store your random number. Name is something easy to locate, like "lottery_number" or "random_assignment". You can create the attribute either [in your dashboard]({{site.baseurl}}/user_guide/administrative/app_settings/manage_app_group/custom_event_and_attribute_management/), or through API calls to our [User Track]({{site.baseurl}}/api/endpoints/user_data/post_user_track/) endpoint.<br><br>
+2. Create a webhook campaign at the beginning of your Canvas. This campaign will be the medium in which you create your random number, and store it as a custom attribute. Refer to [Creating a Webhook]({{site.baseurl}}/user_guide/message_building_by_channel/webhooks/creating_a_webhook/#step-1-set-up-a-webhook) for more. Set the URL to our User Track endpoint.<br><br>
+3. Create the random number generator. You can do so with the code [outlined here](https://www.131-studio.com/blogs/shopify-conversion/generate-random-numbers-using-liquid-shopify), which takes advantage of each user's unique time of entry to create a random number. Set the resulting number as a Liquid variable within your webhook campaign.<br><br>
+4. Format the `users/track` call on your webhook campaign so that it sets the custom attribute you created in step 1 to the random number you've generated on your current user's profile. When this step runs, you will have successfully made a random number that changes each time a user enters your campaign.<br><br>
+5. Adjust the branches of your Canvas so that, instead of being divided by randomly chosen variants, they are divided based on audience rules. In the audience rules of each branch, set the audience filter according to your custom attribute. <br><br>For example, one branch may have "lottery_number is less than 3" as an audience filter, while another branch may have "lottery_number is more than 3 and less than 6" as an audience filter.
+
+{% enddetails %}
+{% endalert %}
+
 ### Editing a Step
 
 Click anywhere on a Step, and Braze will open the Step editing interface. Steps can be configured to send messages after either a fixed delay (maximum of 31 days) or when a user performs a particular action. For example, you can use Canvas to configure a Day 1, Day 3, Day 7 onboarding campaign with time delays between messages:
