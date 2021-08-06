@@ -77,7 +77,7 @@ The domain name must follow these parameters:
 	- Contain 1 to 63 characters
 
 **Additional Validation Required:**<br>
-The final label of the domain must be a valid top-level domain (TLD) which is determined by anything after the final period (.). This TLD should be in [ICANN's TLD list][2].
+The final label of the domain must be a valid top-level domain (TLD) which is determined by anything after the final period (.). This TLD should be in [ICANN's TLD list][2]. The Braze email validator only ensures the syntax of the email is correct according to the regex listed above. It does not catch typos or addresses that don't exist.
 
 {% alert important %}
 Unicode is accepted only for the local part of the email address.<br>
