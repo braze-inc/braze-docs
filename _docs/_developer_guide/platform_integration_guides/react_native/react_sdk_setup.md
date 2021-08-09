@@ -12,7 +12,7 @@ description: "This reference introduces React Native SDK and explain how to inte
 
 Installing the Braze React Native SDK provides basic analytics functionality and lets you integrate in-app messages and Content Cards for both iOS and Android with just one code base.
 
-You will need to complete installation steps in both platform separately.
+You will need to complete installation steps on both platforms separately.
 
 To complete the installation, you will need the [App Identifier API key]({{site.baseurl}}/api/api_key/#the-app-identifier-api-key) as well as the [SDK endpoint]({{site.baseurl}}/api/basics/#endpoints). Both are located in the **Developer Console** under **Settings** in the Dashboard.
 

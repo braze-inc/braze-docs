@@ -39,9 +39,11 @@ ReactAppboy.logCustomEvent("react_native_custom_event");
 You can add metadata about the event by passing a properties object with your custom event.
 
 ```javascript
-const properties = {};
-properties["prop_key"] = "prop_value";
-reactAppboy.logCustomEvent("custom_event_with_properties", properties);
+reactAppboy.logCustomEvent("custom_event_with_properties", {
+    key1: "value1",
+    key2: ["value2", "value3"],
+    key3: false,
+});
 ```
 
 ## Logging Custom Attributes
@@ -81,13 +83,17 @@ Beyond the attributes above, Braze also allows you to define custom attributes f
 String values have a maximum length of 255 characters.
 
 ```javascript
-ReactAppboy.setCustomUserAttribute("attribute_key", "attribute_value" onResultCallback);
+ReactAppboy.setCustomUserAttribute("attribute_key", "attribute_value", function(){
+    // optional onResult callback
+});
 ```
 
 ##### Unsetting a Custom Attribute
 
 ```javascript
-ReactAppboy.unsetCustomUserAttribute("attribute_key", onResultCallback);
+ReactAppboy.unsetCustomUserAttribute("attribute_key", function(){
+    // optional onResult callback
+});
 ```
 
 ## Logging Purchases
@@ -105,9 +111,9 @@ ReactAppboy.logPurchase(productId, price, currencyCode, quantity, properties);
 For example:
 
 ```javascript
-const properties = {};
-properties["key"] = "value";
-ReactAppboy.logPurchase("product_id", 9.99, "USD", 1, properties);
+ReactAppboy.logPurchase("product_id", 9.99, "USD", 1, {
+    key1: "value"
+});
 ```
 
 {% alert tip %}
