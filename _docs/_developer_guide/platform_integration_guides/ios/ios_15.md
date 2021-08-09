@@ -73,7 +73,7 @@ According to Apple, users who have already shared background location access - t
 
 ### Apple Mail {#mail}
 
-This year, Apple has annnounced many updates to Email tracking and privacy. For more information, please see: https://www.braze.com/resources/articles/9-ways-email-marketers-can-respond-to-apples-mail-privacy-protection-feature
+This year, Apple has annnounced many updates to Email tracking and privacy. For more information, please see: [our recent blog post](https://www.braze.com/resources/articles/9-ways-email-marketers-can-respond-to-apples-mail-privacy-protection-feature).
 
 
 ### Safari IP Address Location
