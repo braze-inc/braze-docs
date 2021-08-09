@@ -1,6 +1,6 @@
 ---
 nav_title: "A2P 10DLC"
-page_order: 1
+page_order: 2.9
 description: "This article covers A2P 10DLC, why it's are necessary at Braze, helpful costs and throughput information, and how to get started with registration."
 page_type: reference
 
@@ -10,7 +10,7 @@ channel:
 
 # Application-to-Person 10-Digit Long Codes (A2P 10DLC)
 
-> A2P 10DLC refers to a system in the United States that allows businesses to send Application-to-Person (A2P) type messaging via a standard 10-digit long code (10DLC) phone number. These registered long codes are granted higher throughput, better deliverability, improved compliance, and lower costs than the standard long code user.
+> A2P 10DLC refers to a system in the United States that allows businesses to send Application-to-Person (A2P) type messaging via a standard 10-digit long code (10DLC) phone number. These registered long codes are granted higher throughput, better deliverability, improved compliance, and lower costs than the standard long code.
 
 {% alert important %}
 All customers who currently have and/or use long codes are required to register their long codes for 10DLC; customers who fail to do so will experience heavy filtering of all messages.
@@ -18,7 +18,7 @@ All customers who currently have and/or use long codes are required to register 
 
 ## Why it's Necessary
 
-10DLC service was created to specifically facilitate A2P messaging using long codes. Historically, long codes were meant for Person-to-Person (P2P) messaging, but when used for marketing reasons, they caused businesses to be constrained by limited throughput and heightened filtering. 
+10DLC service was created to specifically facilitate A2P messaging using long codes. Historically, long codes were meant for Person-to-Person (P2P) messaging, but when used for marketing reasons, caused businesses to be constrained by limited throughput and heightened filtering. 
 
 10DLC helps alleviate those issues by offering: 
 - __Higher Throughput__: 10DLC numbers support a higher volume of messages than regular long codes.
@@ -26,7 +26,7 @@ All customers who currently have and/or use long codes are required to register 
 - __Improved Compliance__: Using a local long code for commercial text messaging is against the CTIA guidelines. 10DLC numbers were designated for mass messaging and allow brands to comply with industry regulations without relying on short codes.
 - __Lower Costs__: 10DLC numbers are a budget-friendly alternative for smaller brands and companies looking to scale their SMS program over time. Plus, brands with existing long codes can simply register those codes with 10DLC and ensure continuity of their existing SMS programs. 
 
-Since 2019, carriers have begun adopting 10DLC for commercial messaging, with Verizon and AT&T currently support 10DLC, and we expect all major carriers to follow soon. While it may cause inconveniences in the short term, in the long term, customers will enjoy better deliverability rates while protecting their consumers from unwanted messages. 
+Since 2019, carriers have begun adopting 10DLC for commercial messaging, with Verizon and AT&T currently supporting 10DLC, and we expect all major carriers to follow soon. While it may cause inconveniences in the short term, in the long term, customers will enjoy better deliverability rates while protecting their consumers from unwanted messages. 
 
 ## What you Need to Know
 
@@ -67,9 +67,9 @@ Companies listed in the Russel 3000 index are automatically granted the maximum 
 
 #### Messaging Use Cases
 
-Throughput is also affected by the type of messaging use case you choose. Most customers will fall under the standard marketing or mixed marketing use case. Other less common use cases will be susceptible to higher throughput values.
+Throughput is also affected by the type of messaging use case you choose. Most customers will fall under the standard marketing or mixed marketing use case. Other less common use cases will be susceptible to differing throughput values.
 
-Depending on your use case, the trust score needed to achieve the maximum throughput will vary. The table below lists standard use cases. For special use cases such as emergency services or charity, please reference the Twilio docs.
+Depending on your use case, the trust score needed to achieve the maximum throughput will vary. The table below lists standard use cases. For special use cases such as emergency services or charity, please reference the [Twilio docs](https://support.twilio.com/hc/en-us/articles/1260803225669-Message-throughput-MPS-and-Trust-Scores-for-A2P-10DLC-in-the-US).
 
 | Standard Use Cases | Description |
 | ------------------ | ----------- |
@@ -84,23 +84,25 @@ Depending on your use case, the trust score needed to achieve the maximum throug
 | 2FA | Any authentication of account verification such as OTP | 
 | Security Alerts | Notification of a compromised system |
 | Fraud Alerts | Messaging about potentially fraudulent activity |
+{: .reset-td-br-1 .reset-td-br-2}
 
 Depending on your use case, you will be subject to different trust score ranges to determine your throughput.
 
 {% tabs %}
 {% tab Declared Use %}
-A Declared use case means you have chosen one specific non-marketing use case (for example, 2FA, Account Notifications, etc.).
+A declared use case means you have chosen one specific non-marketing use case (for example, 2FA or Account Notifications).
 
 | Trust Score | Total SMS MPS toward major US networks | AT&T SMS MPS | T-Mobile SMS MPS | Verizon SMS MPS |
 | --- | ----------- | ---- | -------- | ------- |
 | 86-100 | 180 | 60 | 60 | 60 |
 | 66-85 | 30 | 10 | 10 | 10 |
 | 26-65 | 3 | 1 | 1 | 1| 
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
 
 {% endtab %}
 {% tab Mixed / Marketing %}
 
-Mixed / Marketing use cases can be registered for customers who want to send messages for multiple use cases from the same set of numbers or for marketing. Different throughput levels are allocated for Mixed / Marketing use cases than for Declared use cases.
+Mixed / Marketing use cases can be registered for customers who want to send messages for multiple use cases from the same set of numbers or for marketing.
 
 | Trust Score | Total SMS MPS toward major US networks | AT&T SMS MPS | T-Mobile SMS MPS | Verizon SMS MPS |
 | --- | ----------- | ---- | -------- | ------- |
@@ -108,6 +110,7 @@ Mixed / Marketing use cases can be registered for customers who want to send mes
 | 66-85 | 30 | 10 | 10 | 10 |
 | 26-65 | 3 | 1 | 1 | 1| 
 | 15-25 | 2.2 | 0.2 | 1 | 1 |
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
 
 {% endtab %}
 {% endtabs %}
