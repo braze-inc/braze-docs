@@ -41,7 +41,7 @@ iOS 15 users can now create "Focus Modes" - custom profiles used to determine wh
 In iOS 15, push notifications can be sent with one of four interuption levels:
 
 * **Passive** (new) - No sound, no vibration, no screen waking, no breakthrough of focus settings.
-* **Active** (default) - Allows sound, vibration, screen waking, no breakthrough of focus settings
+* **Active** (default) - Allows sound, vibration, screen waking, no breakthrough of focus settings.
 * **Time Sensitive** (new) - Allows sound, vibration, screen waking, can breakthrough system controls if allowed.
 * **Critical** - Allows sound, vibration, screen waking, can breakthrough system controls and bypass ringer switch.
 
