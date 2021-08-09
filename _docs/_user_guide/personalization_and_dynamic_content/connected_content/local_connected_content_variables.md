@@ -88,7 +88,7 @@ You can optionally provide a POST body by specifying `:body` followed by a query
 
 {% raw %}
 ```
-# This example will POST the body as application/x-www-formurlencoded
+# This example will POST the body as application/x-www-form-urlencoded
 {% connected_content https://post.example.com/someEndpoint :method post :body key1=value1&key2=value2 %}
 
 # This example will POST the body as {"key1":"value1", "key2":"value2"}
