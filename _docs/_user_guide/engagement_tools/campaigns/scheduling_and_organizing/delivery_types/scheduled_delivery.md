@@ -64,5 +64,5 @@ Intelligent Timing campaigns work best for one-off and recurring messages where 
 [10]: {% image_buster /assets/img_archive/schedule_immediately.png %}
 [14]: {% image_buster /assets/img_archive/schedule_intelligent.png %}
 [24]: {% image_buster /assets/img_archive/ReEligible.png %}
-[25]: {{site.baseurl}}/user_guide/engagement_tools/campaigns/faq/
+[25]: {{site.baseurl}}/user_guide/engagement_tools/campaigns/faq/#how-do-i-schedule-a-local-time-zone-campaign/
 [34]: {% image_buster /assets/img_archive/customEventProperties.png %}
