@@ -34,6 +34,9 @@ We're excited to offer support for these new features - stay tuned for more info
 
 iOS 15 users can now create "Focus Modes" - custom profiles used to determine which notifications they want to __break through__ their focus and display prominently.
 
+![Notification Settings]({% image_buster /assets/img/ios/ios15-notification-settings.png %}){: style="float:right;max-width:25%;margin-left:15px;border:0"}
+
+
 ### Interruption Levels {#interruption-levels}
 
 In iOS 15, push notifications can be sent with one of four interuption levels:
@@ -43,9 +46,9 @@ In iOS 15, push notifications can be sent with one of four interuption levels:
 * **Time Sensitive** (new) - Allows sound, vibration, screen waking, can breakthrough system controls if allowed.
 * **Critical** - Allows sound, vibration, screen waking, can breakthrough system controls and bypass ringer switch.
 
-
-
 ### Notification Summary {#notification-summary}
+
+![Notification Summary]({% image_buster /assets/img/ios/ios15-notification-summary.png %}){: style="float:right;max-width:25%;margin-left:15px;border:0"}
 
 In iOS 15, users can (optionally) choose certain times throughout the day to receive a summary of notifications. Notifications that don't require immediate attention (i.e. sent as "Passive", or while the user is in Focus Mode) will be grouped together to prevent constant interruptions throughout the day.
 
