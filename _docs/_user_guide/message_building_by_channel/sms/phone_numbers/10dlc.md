@@ -46,9 +46,7 @@ Visit the Twilio 10DLC article to check out updated [fee estimates](https://supp
 Message throughput for your 10DLC depends on several factors, including brand trust score, daily message limits, and your messaging use cases.
 
 #### Brand Trust Score {#trust-score}
-A trust score is assigned when a customer registers for US 10DLC messaging. The higher the trust score, the better the throughput you will experience with your messages. 
-
-The Campaign Registry (TCR) is a third-party agency that uses a reputation algorithm to review specific criteria relating to your company and assign a trust score that determines messaging throughput for each brand. 
+The Campaign Registry (TCR) is a third-party agency that uses a reputation algorithm to review specific criteria relating to your company and assign a trust score that determines messaging throughput for each brand. This trust score will be assigned when a customer registers for US 10DLC messaging. The higer the trust score, the better the throughput you will experience. 
 
 |     | Trust Score | AT&T | T-Mobile | Verizon |
 | --- | ----------- | ---- | -------- | ------- |
@@ -86,21 +84,21 @@ Depending on your use case, the trust score needed to achieve the maximum throug
 | Fraud Alerts | Messaging about potentially fraudulent activity |
 {: .reset-td-br-1 .reset-td-br-2}
 
-Depending on your use case, you will be subject to different trust score ranges to determine your throughput.
+##### Common Use Case Trust Score Ranges
 
 {% tabs %}
-{% tab Declared Use %}
+{% tab Declared Use Case %}
 A declared use case means you have chosen one specific non-marketing use case (for example, 2FA or Account Notifications).
 
 | Trust Score | Total SMS MPS toward major US networks | AT&T SMS MPS | T-Mobile SMS MPS | Verizon SMS MPS |
 | --- | ----------- | ---- | -------- | ------- |
-| 86-100 | 180 | 60 | 60 | 60 |
-| 66-85 | 30 | 10 | 10 | 10 |
-| 26-65 | 3 | 1 | 1 | 1| 
+| 76-100 | 180 | 60 | 60 | 60 |
+| 51-75 | 30 | 10 | 10 | 10 |
+| 16-50 | 3 | 1 | 1 | 1| 
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
 
 {% endtab %}
-{% tab Mixed / Marketing %}
+{% tab Mixed / Marketing Use Case %}
 
 Mixed / Marketing use cases can be registered for customers who want to send messages for multiple use cases from the same set of numbers or for marketing.
 
