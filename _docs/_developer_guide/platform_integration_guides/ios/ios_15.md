@@ -34,7 +34,9 @@ We're excited to offer support for these new features - stay tuned for more info
 
 iOS 15 users can now create "Focus Modes" - custom profiles used to determine which notifications they want to __break through__ their focus and display prominently.
 
+<!--
 ![Focus Settings]({% image_buster /assets/img/ios/ios15-focus-settings.png %}){: style="float:right;max-width:25%;margin-left:15px;border:0"}
+-->
 
 ### Interruption Levels {#interruption-levels}
 
