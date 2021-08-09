@@ -84,19 +84,33 @@ By default, Connected Content will set a Content-Type header on a GET HTTP reque
 
 By default, Connected Content makes an HTTP GET request to the specified URL. To make a POST request instead, specify `:method post`.
 
-You can optionally provide a POST body by specifying `:body` followed by a query string of the format `key1=value1&key2=value2&...`. Content-Type defaults to `application/x-www-form-urlencoded` unless you specify `:content_type application/json`, in which case Braze will automatically JSON-encode the body before sending.
+You can optionally provide a POST body by specifying `:body` followed by a query string of the format `key1=value1&key2=value2&...`. Content-Type defaults to `application/x-www-form-urlencoded`. If you specify `:content_type application/json` and provide a form-urlencoded body such as `key1=value1&key2=value2`, Braze will automatically JSON-encode the body before sending.
 
 {% raw %}
 ```
+# This example will POST the body as application/x-www-formurlencoded
 {% connected_content https://post.example.com/someEndpoint :method post :body key1=value1&key2=value2 %}
+
+# This example will POST the body as {"key1":"value1", "key2":"value2"}
+{% connected_content https://post.example.com/someEndpoint :method post :body key1=value1&key2=value2 :content_type application/json %}
 ```
 {% endraw %}
 
-#### Object Serialization Example:
+If you want to provide your own JSON body, you can write it inline if there are no spaces. If your body has spaces, you should use an assign or capture statement. That is, any of these three are acceptable:
+
 {% raw %}
-```
-foo=bar&baz=bang => { "foo" => "bar", "baz" => "bang" }
-```
+# Inline: Spaces in the body are not allowed.
+{% connected_content https://post.example.com/someEndpoint :method post :body {"foo":"bar","baz":"{{1|plus:1}}"} :content_type application/json %}
+
+# Body in a capture: Spaces in the body are allowed.
+{% capture postBody %}
+{"foo": "bar", "baz": "{{ 1 | plus: 1 }}"}
+{%endcapture%}
+{% connected_content https://post.example.com/someEndpoint :method post :body {{postBody}} :content_type application/json %}
+
+# Body in an assign: Spaces in the body are allowed.
+{% assign postBody = '{"foo":"bar", "baz": "2"}' %}
+{% connected_content https://post.example.com/someEndpoint :method post :body {{postBody}} :content_type application/json %}
 {% endraw %}
 
 ### HTTP Status Codes
@@ -118,11 +132,11 @@ This key will only be automatically added to the Connected Content object if the
 
 ### Configurable Caching {#configurable-caching}
 
-Connected Content will cache the value it returns from GET endpoints for a minimum of 5 minutes. If a cache time is not specified, the default cache time is 5 minutes. 
+Connected Content will cache the value it returns from GET endpoints for a minimum of 5 minutes. If a cache time is not specified, the default cache time is 5 minutes.
 
 Connected Content cache time can be configured to be longer with `:cache_max_age`, as shown below. The minimum cache time is 5 minutes and the maximum cache time is 4 hours. Connected Content data is cached in-memory using a volatile cache system, such as memcached. As a result, regardless of the specified cache time, Connected Content data may be evicted from Braze's in-memory cache earlier than specified. This means the cache durations are suggestions and may not actually represent the duration that the data is guaranteed to be cached by Braze and you may see more Connected Content requests than you may expect with a given cache duration.
 
-By default, Connected Content does not cache POST calls. You can change this behavior by adding `:cache_max_age` to the Connected Content POST call. 
+By default, Connected Content does not cache POST calls. You can change this behavior by adding `:cache_max_age` to the Connected Content POST call.
 
 #### Cache for Specified Seconds
 
@@ -136,7 +150,7 @@ This example will cache for 900 seconds (or 15 minutes).
 
 #### Cache Busting
 
-To prevent Connected Content from caching the value it returns from a GET request, you can use the `:no_cache` configuration, as shown below. 
+To prevent Connected Content from caching the value it returns from a GET request, you can use the `:no_cache` configuration, as shown below.
 
 {% raw %}
 ```js
