@@ -53,7 +53,7 @@ In iOS 15, users can (optionally) choose certain times throughout the day to rec
 
 For each notification you send, you'll soon be able to specify a "relevance score" to control which notification should appear at the top of the summary.
 
-We're excited to offer support for this new features - stay tuned for more information to be announced near iOS 15's official release!
+We're excited to offer support for these new features - stay tuned for more information to be announced near iOS 15's official release!
 
 ## Location Buttons {#location-buttons}
 
