@@ -16,7 +16,7 @@ Closes #**ISSUE_NUMBER_HERE**
 <br>
 
 - [ ] Check that all links work.
-- [ ] Ensure you have completed [our Contributors Liscense Agreement](https://www.braze.com/docs/cla/).
+- [ ] Ensure you have completed [our Contributors License Agreement](https://www.braze.com/docs/cla/).
 - [ ] Tag @Timothy-Kim and @KellieHawks as a reviewer when your work is **done and ready to be reviewed for merge**. Are you an internal product manager? Reference the chart below to tag the appropriate reviewer.
 - [ ] Tag others as reviewers as necessary.
 - [ ] If you have modified any links, be sure to add redirects to `assets` > `js` > `broken_redirect_list.js`
@@ -70,5 +70,3 @@ Closes #**ISSUE_NUMBER_HERE**
   </tr>
 </table>
 </details>
-
-
