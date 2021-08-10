@@ -56,7 +56,7 @@ The Campaign Registry (TCR) is a third-party agency that uses a reputation algor
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
 
 {% alert tip %}
-Companies listed in the Russel 3000 index will be granted a very high throughput and brand trust score after registration and review. 
+Companies listed in the Russel 3000 index will be granted a high throughput and brand trust score after 10DLC registration and review. 
 {% endalert %} 
 
 #### Daily Message Limits
@@ -67,34 +67,32 @@ Daily limits range from 2000 to 200,000 messages depending on your brand trust s
 
 Throughput is also affected by the type of messaging use case you choose. Most customers will fall under the standard marketing or mixed marketing use case. Other less common use cases will be susceptible to differing throughput values.
 
-Depending on your use case, the trust score needed to achieve the maximum throughput will vary. The table below lists standard use cases. For special use cases such as emergency services or charity, please reference the [Twilio docs](https://support.twilio.com/hc/en-us/articles/1260803225669-Message-throughput-MPS-and-Trust-Scores-for-A2P-10DLC-in-the-US).
+Depending on your use case, the trust score needed to achieve the maximum throughput will vary. The tables below lists standard use cases and common use case trust score ranges. For special use cases such as emergency services or charity, please reference the [Twilio docs](https://support.twilio.com/hc/en-us/articles/1260803225669-Message-throughput-MPS-and-Trust-Scores-for-A2P-10DLC-in-the-US).
 
 | Standard Use Cases | Description |
 | ------------------ | ----------- |
-| Marketing | Promotional content such as sales and limited time offers |
-| Mixed | Campaign that covers multiple use cases such as Customer Care | 
-| Higher Education | Campaigns for higher education institutions |
-| Polling & Voting | Non-political polling and voting such as customer surveys |
-| PSA | PSAs to raise awareness about a given topic |
-| Customer Care | Support, account management, and other customer interactions |
-| Delivery Notifications | Status of delivery messages |
-| Account Notifications | Notifications about the status of an account |
-| 2FA | Any authentication of account verification such as OTP | 
-| Security Alerts | Notification of a compromised system |
-| Fraud Alerts | Messaging about potentially fraudulent activity |
+| Marketing | Promotional content such as sales and limited time offers. |
+| Mixed | Campaign that covers multiple use cases such as Customer Care. | 
+| Higher Education | Campaigns for higher education institutions. |
+| Polling & Voting | Non-political polling and voting such as customer surveys. |
+| PSA | PSAs to raise awareness about a given topic. |
+| Customer Care | Support, account management, and other customer interactions. |
+| Delivery Notifications | Status of delivery messages. |
+| Account Notifications | Notifications about the status of an account. |
+| 2FA | Any authentication of account verification such as OTP. | 
+| Security Alerts | Notification of a compromised system. |
+| Fraud Alerts | Messaging about potentially fraudulent activity. |
 {: .reset-td-br-1 .reset-td-br-2}
-
-##### Common Use Case Trust Score Ranges
 
 {% tabs %}
 {% tab Declared Use Case %}
 A declared use case means you have chosen one specific non-marketing use case (for example, 2FA or Account Notifications).
 
-| Trust Score | Total SMS MPS toward major US networks | AT&T | T-Mobile | Verizon |
+| Trust Score | Total throughput toward major US networks | AT&T | T-Mobile | Verizon |
 | --- | ----------- | ---- | -------- | ------- |
-| 76-100 | 180 | 60 MPS | 60 MPS | 60 MPS |
-| 51-75 | 30 | 10 MPS | 10 MPS | 10 MPS |
-| 16-50 | 3 | 1 MPS | 1 MPS | 1 MPS| 
+| 76-100 | 180 MPS | 60 MPS | 60 MPS | 60 MPS |
+| 51-75 | 30 MPS | 10 MPS | 10 MPS | 10 MPS |
+| 16-50 | 3 MPS | 1 MPS | 1 MPS | 1 MPS| 
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
 
 {% endtab %}
@@ -102,12 +100,12 @@ A declared use case means you have chosen one specific non-marketing use case (f
 
 Mixed / Marketing use cases can be registered for customers who want to send messages for multiple use cases from the same set of numbers or for marketing.
 
-| Trust Score | Total SMS MPS toward major US networks | AT&T | T-Mobile  | Verizon |
+| Trust Score | Total throughput toward major US networks | AT&T | T-Mobile  | Verizon |
 | --- | ----------- | ---- | -------- | ------- |
-| 86-100 | 180 | 60 MPS | 60 MPS | 60 MPS |
-| 66-85 | 30 | 10 MPS | 10 MPS | 10 MPS |
-| 26-65 | 3 | 1 MPS | 1 MPS | 1 MPS| 
-| 15-25 | 2.2 | 0.2 MPS | 1 MPS | 1 MPS |
+| 86-100 | 180 MPS | 60 MPS | 60 MPS | 60 MPS |
+| 66-85 | 30 MPS | 10 MPS | 10 MPS | 10 MPS |
+| 26-65 | 3 MPS | 1 MPS | 1 MPS | 1 MPS| 
+| 15-25 | 2.2 MPS | 0.2 MPS | 1 MPS | 1 MPS |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
 
 {% endtab %}
