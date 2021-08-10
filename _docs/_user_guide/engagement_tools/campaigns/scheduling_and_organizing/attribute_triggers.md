@@ -57,6 +57,7 @@ Use the "change custom attribute value" trigger with the "specific value" option
 - Attribute triggers for specific custom attribute values are not available for array and date custom attributes.
 - The custom attribute values change trigger does not trigger when the custom attribute value is updated to null.  
 - The custom attribute values change trigger will only trigger when the value of a custom attribute changes. If a custom attribute's current value is re-sent to Braze (e.g the value for the favorite color attribute is red, and you resend the value red to Braze), the custom attribute values change trigger will not occur.
+- The custom attribute values change trigger also applies for new users created. 
 {% endalert %}
 
 
