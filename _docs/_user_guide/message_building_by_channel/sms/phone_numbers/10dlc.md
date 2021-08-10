@@ -18,7 +18,7 @@ All customers who currently have and/or use US long codes to send to US customer
 
 ## Why it's Necessary
 
-10DLC service was created to specifically facilitate A2P messaging using long codes. Historically, long codes were meant for Person-to-Person (P2P) messaging, but when used for marketing reasons, caused businesses to be constrained by limited throughput and heightened filtering. 
+10DLC service was created to specifically facilitate A2P messaging using long codes. Historically, long codes were meant for Person-to-Person (P2P) messaging, but when used for marketing reasons, they caused businesses to be constrained by limited throughput and heightened filtering. 
 
 10DLC helps alleviate those issues by offering: 
 - __Higher Throughput__: 10DLC numbers support a higher volume of messages than regular long codes.
@@ -37,7 +37,7 @@ Registering with A2P 10DLC may include several types of fees:
 | -------- | ---------- |
 | Registration Fees | Nominal fees applied when registering your brand and use case across all major US networks. |
 | Secondary Vetting Fees | Brands can appeal their [Brand Trust Score](#trust-score) and request a secondary vetting process to improve their overall throughput; there is a fee associated with this process. |
-| Carrier Fees | Fees charged by carriers for outbound SMS and MMS messages sent to users once registered for 10DLC. Starting October 1, 2021 carrier fees will be higher on unregistered traffic (standard long codes) than registered traffic (10DLC). |
+| Carrier Fees | Fees charged by carriers for outbound SMS and MMS messages sent to users once registered for 10DLC. Starting October 1, 2021, carrier fees will be higher on unregistered traffic (standard long codes) than registered traffic (10DLC). |
 {: .reset-td-br-1 .reset-td-br-2}
 
 Visit the Twilio 10DLC article to check out updated [fee estimates](https://support.twilio.com/hc/en-us/articles/1260803965530-What-pricing-and-fees-are-associated-with-the-A2P-10DLC-service-).
@@ -46,24 +46,22 @@ Visit the Twilio 10DLC article to check out updated [fee estimates](https://supp
 Message throughput for your 10DLC depends on several factors, including brand trust score, daily message limits, and your messaging use cases.
 
 #### Brand Trust Score {#trust-score}
-A trust score is assigned when a customer registers for US 10DLC messaging. The higher the trust score, the better the throughput you will experience with your messages. 
-
-The Campaign Registry (TCR) is a third-party agency that uses a reputation algorithm to review specific criteria relating to your company and assign a trust score that determines messaging throughput for each brand. 
+The Campaign Registry (TCR) is a third-party agency that uses a reputation algorithm to review specific criteria relating to your company and assign a trust score that determines messaging throughput for each brand. This trust score will be assigned when a customer registers for US 10DLC messaging. The higher the trust score, the better the messages per second (MPS) you will experience. 
 
 |     | Trust Score | AT&T | T-Mobile | Verizon |
 | --- | ----------- | ---- | -------- | ------- |
-| High | 76-100 | 60 | 60 | 60 |
-| Medium | 51-75 | 10 | 10 | 10 |
-| Low | 16-50 | 1 | 1 | 1| 
+| High | 76-100 | 60 MPS | 60 MPS | 60 MPS |
+| Medium | 51-75 | 10 MPS | 10 MPS | 10 MPS |
+| Low | 16-50 | 1 MPS | 1 MPS | 1 MPS | 
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
+
+{% alert tip %}
+Companies listed in the Russel 3000 index will be granted a very high throughput and brand trust score after registration and review. 
+{% endalert %} 
 
 #### Daily Message Limits
 
 Daily limits range from 2000 to 200,000 messages depending on your brand trust score and apply across all long codes. While high brand trust scores come with a throughput of 60 messages per second, any daily message limits set by the carrier will still apply. This means that short codes would be a better option if a brand's daily peak messages are higher than the imposed daily limit. 
-
-{% alert tip %}
-Companies listed in the Russel 3000 index are automatically granted the maximum message limit and skip registration and verification. 
-{% endalert %}
 
 #### Messaging Use Cases
 
@@ -86,30 +84,30 @@ Depending on your use case, the trust score needed to achieve the maximum throug
 | Fraud Alerts | Messaging about potentially fraudulent activity |
 {: .reset-td-br-1 .reset-td-br-2}
 
-Depending on your use case, you will be subject to different trust score ranges to determine your throughput.
+##### Common Use Case Trust Score Ranges
 
 {% tabs %}
-{% tab Declared Use %}
+{% tab Declared Use Case %}
 A declared use case means you have chosen one specific non-marketing use case (for example, 2FA or Account Notifications).
 
-| Trust Score | Total SMS MPS toward major US networks | AT&T SMS MPS | T-Mobile SMS MPS | Verizon SMS MPS |
+| Trust Score | Total SMS MPS toward major US networks | AT&T | T-Mobile | Verizon |
 | --- | ----------- | ---- | -------- | ------- |
-| 86-100 | 180 | 60 | 60 | 60 |
-| 66-85 | 30 | 10 | 10 | 10 |
-| 26-65 | 3 | 1 | 1 | 1| 
+| 76-100 | 180 | 60 MPS | 60 MPS | 60 MPS |
+| 51-75 | 30 | 10 MPS | 10 MPS | 10 MPS |
+| 16-50 | 3 | 1 MPS | 1 MPS | 1 MPS| 
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
 
 {% endtab %}
-{% tab Mixed / Marketing %}
+{% tab Mixed / Marketing Use Case %}
 
 Mixed / Marketing use cases can be registered for customers who want to send messages for multiple use cases from the same set of numbers or for marketing.
 
-| Trust Score | Total SMS MPS toward major US networks | AT&T SMS MPS | T-Mobile SMS MPS | Verizon SMS MPS |
+| Trust Score | Total SMS MPS toward major US networks | AT&T | T-Mobile  | Verizon |
 | --- | ----------- | ---- | -------- | ------- |
-| 86-100 | 180 | 60 | 60 | 60 |
-| 66-85 | 30 | 10 | 10 | 10 |
-| 26-65 | 3 | 1 | 1 | 1| 
-| 15-25 | 2.2 | 0.2 | 1 | 1 |
+| 86-100 | 180 | 60 MPS | 60 MPS | 60 MPS |
+| 66-85 | 30 | 10 MPS | 10 MPS | 10 MPS |
+| 26-65 | 3 | 1 MPS | 1 MPS | 1 MPS| 
+| 15-25 | 2.2 | 0.2 MPS | 1 MPS | 1 MPS |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
 
 {% endtab %}
