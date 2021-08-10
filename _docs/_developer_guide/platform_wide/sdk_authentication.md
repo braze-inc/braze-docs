@@ -175,13 +175,13 @@ braze.setSdkAuthenticationSignature("NEW-JWT-TOKEN-FROM-SERVER");
 Supply the JWT Token when calling `appboy.changeUser`:
 
 ```java
-Appboy.getInstance(this).changeUser("NEW-USER-ID", "JWT-TOKEN-FROM-SERVER");
+Braze.getInstance(this).changeUser("NEW-USER-ID", "JWT-TOKEN-FROM-SERVER");
 ```
 
 Or, when you have refreshed the user's token mid-session:
 
 ```java
-Appboy.getInstance(this).setSdkAuthenticationSignature("NEW-JWT-TOKEN-FROM-SERVER");
+Braze.getInstance(this).setSdkAuthenticationSignature("NEW-JWT-TOKEN-FROM-SERVER");
 ```
 {% endtab %}
 {% tab KOTLIN %}
@@ -189,13 +189,13 @@ Appboy.getInstance(this).setSdkAuthenticationSignature("NEW-JWT-TOKEN-FROM-SERVE
 Supply the JWT Token when calling `appboy.changeUser`:
 
 ```kotlin
-Appboy.getInstance(this).changeUser("NEW-USER-ID", "JWT-TOKEN-FROM-SERVER")
+Braze.getInstance(this).changeUser("NEW-USER-ID", "JWT-TOKEN-FROM-SERVER")
 ```
 
 Or, when you have refreshed the user's token mid-session:
 
 ```kotlin
-Appboy.getInstance(this).setSdkAuthenticationSignature("NEW-JWT-TOKEN-FROM-SERVER")
+Braze.getInstance(this).setSdkAuthenticationSignature("NEW-JWT-TOKEN-FROM-SERVER")
 ```
 {% endtab %}
 {% tab Objective-C %}
@@ -256,21 +256,21 @@ braze.subscribeToSdkAuthenticationFailures((authFailure) => {
 {% endtab %}
 {% tab Java %}
 ```java
-Appboy.getInstance(this).subscribeToSdkAuthenticationFailures(errorEvent -> {
+Braze.getInstance(this).subscribeToSdkAuthenticationFailures(errorEvent -> {
     // TODO: optionally log to your error-reporting service
     // TODO: check if the errorEvent user matches the currently logged-in user
     String newToken = getNewTokenSomehow(errorEvent);
-    Appboy.getInstance(getContext()).setSdkAuthenticationSignature(newToken);
+    Braze.getInstance(getContext()).setSdkAuthenticationSignature(newToken);
 });
 ```
 {% endtab %}
 {% tab KOTLIN %}
 ```kotlin
-Appboy.getInstance(this).subscribeToSdkAuthenticationFailures({ errorEvent: BrazeSdkAuthenticationErrorEvent ->
+Braze.getInstance(this).subscribeToSdkAuthenticationFailures({ errorEvent: BrazeSdkAuthenticationErrorEvent ->
     // TODO: optionally log to your error-reporting service
     // TODO: check if the errorEvent user matches the currently logged-in user
     val newToken: String = getNewTokenSomehow(errorEvent)
-    Appboy.getInstance(getContext()).setSdkAuthenticationSignature(newToken)
+    Braze.getInstance(getContext()).setSdkAuthenticationSignature(newToken)
 })
 ```
 {% endtab %}
