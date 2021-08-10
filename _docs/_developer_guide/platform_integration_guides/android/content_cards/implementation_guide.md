@@ -213,148 +213,48 @@ There are three sample customer use cases provided. Each sample has video walkth
 
 ### Content Cards as Supplemental Content
 
+![Supplementary Content PNG][1]{: style="float:right;max-width:25%;margin-left:15px;border:0;"}
+
 You can seamlessly blend Content Cards into an existing feed, allowing data from multiple feeds to load simultaneously. This creates a cohesive, harmonious experience with Braze Content Cards and existing feed content.
 
-#### __Load Content Cards Alongside Existing Content__<br><br>
-{% tabs %}
-{% tab Kotlin %}
-__Load the data into a merged adapter__<br>
-In this example, we are loading primary data from a JSON resource file stored in the app, but in practice, you could load this data from anywhere.
+You can seamlessly blend Content Cards into an existing feed, allowing data from multiple feeds to load simultaneously. This creates a cohesive, harmonious experience with Braze Content Cards and existing feed content.
 
-```kotlin
-class CardableTileDataProvider(private var ctx: Context) : BaseAdapter(),
-    ContentCardableObserver {
+The example to the right shows a `ListView` with a hybrid list of items that are populated via local data and Content Cards powered by Braze. With this, Content Cards can be indistinguishable alongside existing content.
 
-    private var localTiles: List<Tile> = mutableListOf()
-    private var currentTiles: List<Tile> = listOf()
+#### Dashboard Configuration
 
-    init {
-        BrazeManager.getInstance().registerContentCardableObserver(this)   //register for ContentCard updates
-        localTiles = Gson().fromJson(
-            InputStreamReader(ctx.resources.openRawResource(R.raw.tiles)),
-            TileList::class.java
-        ).tiles                                                            //load the local resource file
-        currentTiles = localTiles
-    }
+This Content Card is delivered by an API-triggered campaign with API-triggered key-value pairs. This is ideal for campaigns where the card's values depend on external factors to determine what content to display to the user. Note that `class_type` should be known at set-up time.
 
-    override fun getCount(): Int {
-      return currentTiles.size
-    }
+![Supplementary Content PNG][2]{: style="max-width:60%;"}
 
-    override fun getItem(position: Int): Any {
-        return currentTiles[position]
-    }
-
-    override fun getItemId(position: Int): Long {
-        return currentTiles[position].id.toLong()
-    }
-
-```
-{% endtab %}
-{% tab Java %}
-__Load the data into a merged adapter__<br>
-In this example, we are loading primary data from a JSON resource file stored in the app, but in practice, you could load this data from anywhere.
-
-```java
-TODO
-```
-{% endtab %}
-{% endtabs %}
-
-{% tabs %}
-{% tab Kotlin %}
-__Receive Content Card updates from the Braze SDK__<br>
-A custom observer is used to notify any interested parties about Content Card updates. 
-
-```kotlin
-interface ContentCardableObserver {
-    fun onContentCardsChanged(cards: List<ContentCardable>)
-}
-
-class CardableTileDataProvider(private var ctx: Context) : BaseAdapter(),
-    ContentCardableObserver {
-      //...
-    override fun onContentCardsChanged(cards: List<ContentCardable>) {
-        MainScope().launch { updateCards(cards) }
-    }
-```
-{% endtab %}
-{% tab Java %}
-__Receive Content Card updates from the Braze SDK__<br>
-A custom observer is used to notify any interested parties about Content Card updates. 
-
-```java
-TODO
-```
-{% endtab %}
-{% endtabs %}
-
-{% tabs %}
-{% tab Kotlin %}
-__Merge the data__<br>
-The corresponding `[Tile]` array will be seamlessly blended with an array of Content Cards. Because there are multiple content card subclasses that we could be seeing, we also filter out _only_ the instances of `Tile`
-
-```kotlin
-class CardableTileDataProvider(private var ctx: Context) : BaseAdapter(),
-    ContentCardableObserver {
-      //...
-    private fun updateCards(cards: List<ContentCardable>) {
-        currentTiles = cards.filterIsInstance<Tile>() + localTiles
-        notifyDataSetChanged()
-    }
-```
-{% endtab %}
-{% tab Java %}
-__Merge the data__<br>
-The corresponding `[Tile]` array will be seamlessly blended with an array of Content Cards. Because there are multiple content card subclasses that we could be seeing, we also filter out _only_ the instances of `Tile`
-
-```java
-TODO
-```
-{% endtab %}
-{% endtabs %}
-{% tabs %}
-{% tab Kotlin %}
-__Present a unified stream of data__<br>
-Because the adapter uses the merged list to supply data model information to the `ListView`, both the Content Card-based data and the API(or JSON)-based data will be displayed in unison to the user.
-
-```kotlin
-    override fun getView(position: Int, convertView: View?, parent: ViewGroup?): View {
-        val binding: CardCellLayoutBinding = if (convertView != null) {
-            convertView.tag as CardCellLayoutBinding
-        } else {
-            CardCellLayoutBinding.inflate(LayoutInflater.from(ctx), parent, false)
-
-        }
-
-        val tile = currentTiles[position]
-        binding.cellImage.setImageURI(tile.image)
-        binding.cellTitle.text = tile.title
-        binding.cellDescription.text = tile.detail
-        binding.root.tag = binding
-        return binding.root
-    }
-```
-{% endtab %}
-{% tab Java %}
-__Present a unified stream of data__<br>
-Because the adapter uses the merged list to supply data model information to the `ListView`, both the Content Card-based data and the API(or JSON)-based data will be displayed in unison to the user.
-
-```java
-TODO
-```
-{% endtab %}
-{% endtabs %}
+##### Ready to log analytics?
+Visit the [following section](#logging-impressions-clicks-and-dismissals) to get a better understanding of how the flow of data should look.
 
 ### Content Cards in a Message Center
-Content Cards can be used in a message center format where each message is its own card. Each card contains additional key value pairs that power on-click UI/UX.<br>
+<br>
+Content Cards can be used in a message center format where each message is its own card. Each message in the message center is populated via a Content Card payload, and each card contains additional key-value pairs that power on-click UI/UX. In the example below, one message directs you to an arbitrary custom view, while another opens to a webview that displays custom HTML.
+
+![Message Center PNG][3]{: style="border:0;"}{: style="max-width:80%;border:0"}
+
+#### Dashboard Configuration
+
+For the following message types, the key-value pair `class_type` should be added to your dashboard configuration. The values assigned here are arbitrary but should be distinguishable between class types. These key-value pairs are the key identifiers that the application looks at when deciding where to go when the user clicks on an abridged inbox message. 
+
+| Arbitrary Custom View Message (Full Page) | Webview Message (HTML) |
+| ---- | ---- |
+| <br>The key-value pairs for this use case include:<br><br>- `message_header` set as `Full Page`<br>- `class_type` set as `message_full_page`<br><br><br>![Message Center JPG1][4]{: style="max-width:100%;"} | The key-value pairs for this use case include:<br><br>- `message_header` set as `HTML`<br>- `class_type` set as `message_webview`<br>- `message_title`<br><br>This message also looks for an HTML key-value pair, but if you are working with a web domain, a URL key-value pair is also valid.<br><br>![Message Center JPG2][5] |
+{: .reset-td-br-1 .reset-td-br-2}
+
+#### Further Explanation
+
+The message center logic is driven by the `class_type` that is provided by the key-value pairs from Braze. Using the `createContentCardable` method from our example, you are able to both filter and identify these class types.
+
+__Using `class_type` for On Click Behavior__<br>
+When we inflate the Content Card data into our custom classes, we use the `ContentCardClass` property of the data to determine which concrete subclass should be used to
+store the data.
 
 {% tabs %}
 {% tab Kotlin %}
-__Using `class_type` for On Click Behavior__<br>
-When we inflate the Content Card data into our custom classes, we use the `class_type` property of the data to determine which concrete subclass should be used to
-store the data.
-
 ```kotlin
  private fun createContentCardable(metadata: Map<String, Any>, type: ContentCardClass?): ContentCardable?{
         return when(type){
@@ -370,12 +270,33 @@ store the data.
 ```
 {% endtab %}
 {% tab Java %}
-__Using `class_type` for On Click Behavior__<br>
-When we inflate the Content Card data into our custom classes, we use the `class_type` property of the data to determine which concrete subclass should be used to
-store the data.
-
 ```java
-TODO
+private ContentCardable createContentCardable(Map<String, ?> metadata,  ContentCardClass type){
+    switch(type){
+        case ContentCardClass.AD:{
+            return new Ad(metadata);
+        }
+        case ContentCardClass.MESSAGE_WEB_VIEW:{
+            return new WebViewMessage(metadata);
+        }
+        case ContentCardClass.MESSAGE_FULL_PAGE:{
+            return new FullPageMessage(metadata);
+        }
+        case ContentCardClass.ITEM_GROUP:{
+            return new Group(metadata);
+        }
+        case ContentCardClass.ITEM_TILE:{
+            return new Tile(metadata);
+        }
+        case ContentCardClass.COUPON:{
+            return new Coupon(metadata);
+        }
+        default:{
+            return null;
+        }
+    }
+}
+
 ```
 {% endtab %}
 {% endtabs %}
@@ -387,11 +308,7 @@ Then, when handling the user interaction with the message list, we can use the m
 ```kotlin
 override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        binding = MessageListBinding.inflate(layoutInflater)
-        setContentView(binding.root)
-        dataProvider = CardableMessageDataProvider(this)
-        val listView = binding.listView
-        listView.adapter = dataProvider
+        //...
         listView.onItemClickListener = AdapterView.OnItemClickListener { parent, view, position, id ->
            when (val card = dataProvider[position]){
                 is WebViewMessage -> {
@@ -418,63 +335,58 @@ override fun onCreate(savedInstanceState: Bundle?) {
 {% endtab %}
 {% tab Java %}
 ```java
-TODO
+@Override
+protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState)
+        //...
+        listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id){
+               ContentCardable card = dataProvider.get(position);
+               if (card instanceof WebViewMessage){
+                    Bundle intent = new Intent(this, WebViewActivity.class);
+                    Bundle bundle = new Bundle();
+                    bundle.putString(WebViewActivity.INTENT_PAYLOAD, card.getContentString());
+                    intent.putExtras(bundle);
+                    startActivity(intent);
+                }
+                else if (card instanceof FullPageMessage){
+                    Intent intent = new Intent(this, FullPageContentCard.class);
+                    Bundle bundle = Bundle();
+                    bundle.putString(FullPageContentCard.CONTENT_CARD_IMAGE, card.getIcon());
+                    bundle.putString(FullPageContentCard.CONTENT_CARD_TITLE, card.getMessageTitle());
+                    bundle.putString(FullPageContentCard.CONTENT_CARD_DESCRIPTION, card.getCardDescription());
+                    intent.putExtras(bundle)
+                    startActivity(intent)
+                }
+            }
+
+        });
+    }
 ```
 {% endtab %}
 {% endtabs %}
 
+##### Ready to log analytics?
+Visit the [following section](#logging-impressions-clicks-and-dismissals) to get a better understanding of how the flow of data should look.
+
+![Interactive Content PNG][6]{: style="border:0;"}{: style="float:right;max-width:45%;border:0;margin-left:15px;"} 
 
 ### Interactive Content Cards
-Content Cards can be leveraged to create interactive experiences for your users. In our demo application, we have a Content Card pop-up appear at checkout providing users last-minute promotions. Well-placed cards like this are a great way to give users a "nudge" toward specific user actions. 
+<br>
+Content Cards can be leveraged to create dynamic and interactive experiences for your users. In the example to the right, we have a Content Card pop-up appear at checkout providing users last-minute promotions. 
 
-#### Interactable View<br><br>
-{% tabs %}
-{% tab Kotlin %}
-__Requesting Content Cards__<br>
-When we created our custom BrazeManager, we also defined a custom `ContentCardableObserver` interface to be called when Content Cards are updated. As long as the listener is still retained in memory, a notification callback from the Braze SDK can be expected. 
-```kotlin
-fun registerContentCardableObserver(observer: ContentCardableObserver){
-        registerForContentCardUpdates()
-        contentCardableObservers.add(observer)
-        requestContentCardUpdate()
-        if (cardList.isNotEmpty()){
-            observer.onContentCardsChanged(mapCardsToCardables(cardList))
-        }
-    }
-```
-{% endtab %}
-{% tab Java %}
-__Requesting Content Cards__<br>
-When we created our custom BrazeManager, we also defined a custom `ContentCardableObserver` interface to be called when Content Cards are updated. As long as the listener is still retained in memory, a notification callback from the Braze SDK can be expected. 
-```java
-todo
-```
-{% endtab %}
-{% endtabs %}
+Well-placed cards like this are a great way to give users a "nudge" toward specific user actions. 
+<br><br><br>
+#### Dashboard Configuration
 
-{% tabs %}
-{% tab Kotlin %}
-__Getting Type-Specific Content Cards__<br>
-Similar to our other exampes, we can filter the cards to only retrieve the ones we're interested in for the shopping cart. In this case `Coupon` types.
+The dashboard configuration for interactive Content Cards is quick and straightforward. The key-value pairs for this use case include a `discount_percentage` set as the desired discount amount and `class_type` set as `coupon_code`. These key-value pairs are how type-specific Content Cards get filtered and displayed on the checkout screen.
 
-```kotlin
- override fun onContentCardsChanged(cards: List<ContentCardable>) {
-        coupons = cards.filterIsInstance<Coupon>()
-    }
-```
-{% endtab %}
-{% tab Java %}
-__Getting Type-Specific Content Cards__<br>
-Similar to our other exampes, we can filter the cards to only retrieve the ones we're interested in for the shopping cart. In this case `Coupon` types.
+![Interactive Content JPG][7]{: style="max-width:70%;"} 
 
-```java
-@Override
-public void onContentCardsChanged(List<ContentCardable> cards) {
-        coupons = cards.stream().filter(c -> c instanceof Coupon).collect(Collectors.toList());
-}
-```
-{% endtab %}
-{% endtabs %}
+##### Ready to log analytics?
+Visit the [following section](#logging-impressions-clicks-and-dismissals) to get a better understanding of how the flow of data should look.
+
 
 ## Logging Impressions, Clicks, and Dismissals
 
@@ -487,7 +399,7 @@ After extending your own custom objects to function as Content Cards, logging va
 __Custom Objects Call the Logging Methods__<br>
 Within your `ContentCardable` base class, you can call the BrazeManager directly, if appropriate. Remember, in this example, the `cardData` property will be nonnull if the object came from a content card. 
 
-```swift
+```kotlin
 override fun getView(position: Int, convertView: View?, parent: ViewGroup?): View {
         val tile = currentTiles[position]
         tile.logContentCardImpression()
@@ -566,3 +478,39 @@ The [BrazeManager](insert) can reference Braze SDK dependencies such as the list
 {% alert important %}
 For a control variant Content Card, a custom object should still be instantiated and UI logic should set the object's corresponding view as hidden. The object can then log an impression to inform our analytics of when a user would have seen the control card.
 {% endalert %}
+
+## Helper Files
+
+{% details ContentCardKey Helper File %}
+{% tabs %}
+{% tab Kotlin %}
+```kotlin
+companion object Keys{
+        const val idString = "idString"
+        const val created = "created"
+        const val classType = "class_type"
+        const val dismissable = "dismissable"
+        //...
+    }
+```
+{% endtab %}
+{% tab Java %}
+```java
+
+public static final String IDSTRING = "idString";
+public static final String CREATED = "created";
+public static final String CLASSTYPE = "class_type";
+public static final String DISMISSABLE = "dismissable";
+...
+```
+{% endtab %}
+{% endtabs %}
+{% enddetails %}
+
+[1]: {% image_buster /assets/img/cc_implementation/android_supplementary.png %}
+[2]: {% image_buster /assets/img/cc_implementation/supplementary_content.png %}
+[3]: {% image_buster /assets/img/cc_implementation/android_message_center.png %}
+[4]: {% image_buster /assets/img/cc_implementation/full_page.png %}
+[5]: {% image_buster /assets/img/cc_implementation/html_webview.png %}
+[6]: {% image_buster /assets/img/cc_implementation/discount2.png %} //todo
+[7]: {% image_buster /assets/img/cc_implementation/discount.png %}
