@@ -184,7 +184,7 @@ When you _track_ an event, we will record that event as a [custom event][13] usi
 | [Track with Product](https://segment.com/docs/spec/track/){:target="_blank"} | Logged as a [Purchase Event]({{site.baseurl}}/developer_guide/platform_integration_guides/web/analytics/logging_purchases/). | `analytics.track("purchase", {products: [product_id: "ab12", price: 19]});` > `appboy.logPurchase("ab12", 19);` |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
 
-#### Order Completed {order-completed}
+#### Order Completed {#order-completed}
 
 When you _track_ an event with the name `Order Completed` using the format described in Segment's [ECommerce API][4]{:target="_blank"}, we will record the products you've listed as [purchases][28].
 
