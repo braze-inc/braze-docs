@@ -35,7 +35,7 @@ The Entry Wizard will guide you through setting up your Canvas—everything from
     Here, you will decide how your users will enter your Canvas:
     - Scheduled: This is a time-based Canvas entry
     - Action-Based: Your user will enter your Canvas after they perform a defined action
-    - API Triggered: Use an API request to enter users into your Canvas
+    - API-Triggered: Use an API request to enter users into your Canvas
 
     [Learn more about the Entry Schedule step.](#set-your-canvas-entry-schedule)
   {% endtab %}
@@ -97,7 +97,7 @@ After you choose which you'll use, adjust those settings appropriately, and move
 {% tabs local %}
   {% tab Scheduled Delivery %}
     __Scheduled Delivery__<br>
-    With scheduled delivery, users will enter on a time schedule, similarly to how you would schedule a Campaign. You can enroll users in a Canvas as soon as it is launched, or enter them into your journey at some point in the future, or on a recurring basis.
+    With scheduled delivery, users will enter on a time schedule, similarly to how you would schedule a campaign. You can enroll users in a Canvas as soon as it is launched, or enter them into your journey at some point in the future, or on a recurring basis.
 
     ![Canvas Scheduled Delivery]({% image_buster /assets/img_archive/Canvas_Scheduled_Delivery.png %})
   {% endtab %}
@@ -116,9 +116,9 @@ After you choose which you'll use, adjust those settings appropriately, and move
     ![Canvas API-Triggered Delivery]({% image_buster /assets/img_archive/Canvas_API_Triggered_Delivery.png %})
 
     API-Triggered Delivery Endpoints:
-    - [POST: Send Canvas Messages via API Triggered Delivery]({{site.baseurl}}/api/endpoints/messaging/send_messages/post_send_triggered_canvases/)
-    - [POST: Schedule API Triggered Canvases]({{site.baseurl}}/api/endpoints/messaging/schedule_messages/post_schedule_triggered_canvases/)
-    - [POST: Update Scheduled API Triggered Canvases]({{site.baseurl}}/api/endpoints/messaging/schedule_messages/post_update_scheduled_triggered_canvases/)
+    - [POST: Send Canvas Messages via API-Triggered Delivery]({{site.baseurl}}/api/endpoints/messaging/send_messages/post_send_triggered_canvases/)
+    - [POST: Schedule API-Triggered Canvases]({{site.baseurl}}/api/endpoints/messaging/schedule_messages/post_schedule_triggered_canvases/)
+    - [POST: Update Scheduled API-Triggered Canvases]({{site.baseurl}}/api/endpoints/messaging/schedule_messages/post_update_scheduled_triggered_canvases/)
 
   {% endtab %}
 {% endtabs %}
@@ -137,6 +137,10 @@ You can set the target audience for your Canvas on the **Entry Audience** step. 
 ![Canvas Target Audience][54]
 
 For example, if you want to target new users, you can limit a particular journey to users who first used your app less than 3 weeks ago. You can also control settings such as whether messages should be sent to users who are subscribed or opted-in to your notifications.
+
+{% alert warning %}
+Avoid configuring an action-based campaign or Canvas with the same trigger as the audience filter (i.e., a changed attribute or performed a custom event). A race condition may occur in which the user is not in the audience at the time they perform the trigger event, which means they won't receive the campaign or enter the Canvas.  
+{% endalert %}
 
 ### Step 2d: Select Your Send Settings
 
@@ -167,6 +171,20 @@ You can add additional variants by pressing the <i class="fas fa-plus-circle"></
 
 ![Canvas Multiple Variants][12]
 
+{% alert tip %}
+By default, Canvas variant assignment is locked in when users enter the Canvas, meaning that if a user first enters a variant, that will be their variant every time they re-enter the Canvas. However, there are ways to circumvent this behavior. <br><br>To do so, you can create a random number generator using Liquid, run it at the beginning of each user's Canvas entry, store the value as a custom attribute, and then use that attribute to randomly divide users.
+
+{% details Expand for steps %}
+
+1. Create a custom attribute to store your random number. Name is something easy to locate, like "lottery_number" or "random_assignment". You can create the attribute either [in your dashboard]({{site.baseurl}}/user_guide/administrative/app_settings/manage_app_group/custom_event_and_attribute_management/), or through API calls to our [User Track]({{site.baseurl}}/api/endpoints/user_data/post_user_track/) endpoint.<br><br>
+2. Create a webhook campaign at the beginning of your Canvas. This campaign will be the medium in which you create your random number, and store it as a custom attribute. Refer to [Creating a Webhook]({{site.baseurl}}/user_guide/message_building_by_channel/webhooks/creating_a_webhook/#step-1-set-up-a-webhook) for more. Set the URL to our User Track endpoint.<br><br>
+3. Create the random number generator. You can do so with the code [outlined here](https://www.131-studio.com/blogs/shopify-conversion/generate-random-numbers-using-liquid-shopify), which takes advantage of each user's unique time of entry to create a random number. Set the resulting number as a Liquid variable within your webhook campaign.<br><br>
+4. Format the `users/track` call on your webhook campaign so that it sets the custom attribute you created in step 1 to the random number you've generated on your current user's profile. When this step runs, you will have successfully made a random number that changes each time a user enters your campaign.<br><br>
+5. Adjust the branches of your Canvas so that, instead of being divided by randomly chosen variants, they are divided based on audience rules. In the audience rules of each branch, set the audience filter according to your custom attribute. <br><br>For example, one branch may have "lottery_number is less than 3" as an audience filter, while another branch may have "lottery_number is more than 3 and less than 6" as an audience filter.
+
+{% enddetails %}
+{% endalert %}
+
 ### Editing a Step
 
 Click anywhere on a Step, and Braze will open the Step editing interface. Steps can be configured to send messages after either a fixed delay (maximum of 31 days) or when a user performs a particular action. For example, you can use Canvas to configure a Day 1, Day 3, Day 7 onboarding campaign with time delays between messages:
@@ -187,7 +205,7 @@ You can also apply **Filters** to each Step of a Canvas. Use this to add additio
 
 Edit the Messages in a Canvas Step to control messages that a particular Step will send. Canvas can send Email, Mobile & Web Push messages, and Webhooks to integrate with other systems.
 
-Similar to campaign messages, you may use certain Liquid templating. Refer to the Canvas and Custom Event Properties tabs below for limitations.
+Similar to campaign messages, you may use certain Liquid templating. Refer to the tabs below for limitations.
 
 ![Canvas Message Edit][16]
 
@@ -210,11 +228,11 @@ For more information on the Canvas Entry Properties Object, check out our [docum
 {% endtab %}
 
 {% tab Custom Event Properties %}
-Custom Event Properties are the properties set by you on custom events and purchases, used mainly in Action-Based Delivery campaigns. These properties are ephemeral and can only be used at the time when they happen. <br><br>Event properties don’t persist, so if you are scheduling a Canvas step rather than using action-based delivery, you wouldn’t be able to use an event property (as we don’t store that data). You can't reference the event property for an event that’s already happened.
+Custom event properties are the properties set by you on custom events and purchases, used mainly in action-based delivery campaigns. These properties are ephemeral and can only be used at the time when they happen. <br><br>Event properties don’t persist, so if you are scheduling a Canvas step rather than using action-based delivery, you wouldn’t be able to use an event property (as we don’t store that data). You can't reference the event property for an event that’s already happened.
 
-__Custom Event Properties can be referenced in the first step of a Canvas - but only the first step__! 
+__Custom event properties can be referenced in the first step of a Canvas - but only the first step__! 
 
-For more information on Custom Event Properties, check out our [documentation]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events/#custom-event-properties).
+For more information on custom event properties, check out our [documentation]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events/#custom-event-properties).
 
 {% endtab %}
 {% endtabs %}

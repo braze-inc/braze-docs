@@ -18,7 +18,7 @@ description: "This reference article covers how to create and customize Webhook 
 
 ### Step 1: Navigate to the Webhook Template Editor
 
-You can access the Webhook Template by first clicking the Campaigns tab under Engagement on the navigation bar, which will reveal a drop-down menu with a 'Templates and Styles' tab.  Click on this tab to access the Webhook Template Editor.
+You can access the Webhook Template by first clicking the **Campaigns** tab under **Engagement** on the navigation bar, which will reveal a drop-down menu with a 'Templates and Styles' tab.  Click on this tab to access the Webhook Template Editor.
 
 ![Webhook_template_campaign][1]
 

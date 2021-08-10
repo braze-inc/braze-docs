@@ -119,10 +119,10 @@ If you need to handle ADM registration yourself, you should do the following:
   <!-- This will disable automatic registration for ADM via the Braze SDK-->
   <bool name="com_appboy_push_adm_messaging_registration_enabled">false</bool>
   ```
-- Use the [registerAppboyPushMessages()][37] method to pass your user's ADM `registration_id` to Braze:
+- Use the [registerPushToken()][37] method to pass your user's ADM `registration_id` to Braze:
 
   ```java
-  Appboy.getInstance(context).registerAppboyPushMessages(registration_id);
+  Braze.getInstance(context).registerPushToken(registration_id);
   ```
 
 >  Braze does not recommend using manual registration if possible.
@@ -154,5 +154,5 @@ If a Kindle reserved key is detected, Braze returns Status Code 400: Kindle Push
 [29]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/advanced_use_cases/deep_linking/
 [32]: https://developer.amazon.com/appsandservices/apis/engage/device-messaging/tech-docs/04-integrating-your-app-with-adm
 [34]: {% image_buster /assets/img_archive/fire_os_dashboard.png %}
-[37]: https://appboy.github.io/appboy-android-sdk/javadocs/com/appboy/Appboy.html#registerAppboyPushMessages(java.lang.String) "registerAppboyPushMessages()"
+[37]: https://appboy.github.io/appboy-android-sdk/javadocs/com/appboy/Appboy.html#registerPushToken-java.lang.String-
 [52]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/push_notifications/integration/#custom-handling-push-receipts-opens-and-key-value-pairs

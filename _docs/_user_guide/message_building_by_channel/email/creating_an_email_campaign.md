@@ -19,7 +19,7 @@ channel:
 
 Email messages are great for delivering content to your users on their terms. They are also excellent tools to re-engage users who may have even uninstalled your app. Sending customized and tailored email messages will enhance your users' experience, and help your users get the most value out of your app.
 
-To see examples of email campaigns, check out our [Client Integration Gallery][9].
+To see examples of email campaigns, check out our [Case Studies][9].
 
 ## Step 1: Create a New Campaign
 On the **Campaigns** page, click **Create Campaign** and select **Email** as your messaging channel.
@@ -66,6 +66,14 @@ When you're ready for a final check, select **Test Send** and send a test messag
 ![newemailtest][15]
 
 If you see any issues with your email, or want to make any changes, click **Edit Email** to return to the editor.
+
+{% alert tip %}
+Email clients that support preview text always pull in enough characters to fill all available preview text space. However, this can leave you in situations where the preview text is incomplete or unoptimised.
+<br><br>To avoid this, you can create white space after your desired preview text so that email clients don’t pull other distracting text or characters into the envelope content. To do so, add a chain of zero-width non-joiners (‌`&zwnj;`) and non-breaking spaces (`&nbsp;`) after the preview text that you want displayed. <br><br>When added to the end of your preview text in the preheader section, the following piece of code will add the white space you’re looking for:
+```html
+<div style="display: none; max-height: 0px; overflow: hidden;">&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;</div>
+```
+{% endalert %}
 
 ### Step 2c: Check for Email Errors
 
@@ -189,7 +197,7 @@ On the **Funnel Report** page, you can analyze the journeys your customers take 
 [3]: {% image_buster /assets/img_archive/choose_email_creation.png %}
 [5]: {% image_buster /assets/img_archive/targetsegment_email_new.png %}
 [6]: {% image_buster /assets/img_archive/confirm_email.png %}
-[9]: {{site.baseurl}}/help/best_practices/client_integration_gallery/#client-integration-email
+[9]: https://www.braze.com/customers
 [10]: {{site.baseurl}}/user_guide/message_building_by_channel/email/creating_an_email_template/#creating-an-email-template
 [13]: {{site.baseurl}}/user_guide/engagement_tools/campaigns/testing_and_more/multivariate_testing/#intelligent-selection
 [14]: {% image_buster /assets/img/email.jpg %}

@@ -14,21 +14,19 @@ page_type: partner
 ## Requirements
 
 * __Kubit Enterprise__ - The Braze integration feature is only available to Kubit Enterprise customers.
-* __Braze API Key and REST Endpoint__ - This integration invokes the Braze [/users/track endpoint]({{site.baseurl}}/api/endpoints/user_data/post_user_track/) to function. These calls will be counted toward your Braze [API limits]({{site.baseurl}}/api/basics/#api-limits).
+* __Braze Data Import Key and REST Endpoint__ - This integration invokes the Braze [/users/track endpoint]({{site.baseurl}}/api/endpoints/user_data/post_user_track/) to function. These calls will be counted toward your Braze [API limits]({{site.baseurl}}/api/basics/#api-limits).
 * __Matching User IDs__ - Your customer data in Kubit and Braze must have matching User IDs for this integration to match customers between the two platforms. This includes Anonymous UUIDs. To read about how Braze sets user IDs, visit our documentation [here](({{site.baseurl}}/developer_guide/platform_integration_guides/fireos/analytics/setting_user_ids/#setting-user-ids)). 
 
 ## Braze and Kubit Integration
-### Step 1: Create Braze API Key
-To begin this integration, you must create a dedicated Braze API Key with `users.track` permissions.
+### Step 1: Generate Braze Data Import Key
+From the Braze dashboard, navigate to __Technology Partners__ and select __Kubit__. 
 
-1. Visit your [Braze Developer Console](https://dashboard-01.braze.com/app_settings/developer_console/) on your Braze Dashboard. 
-2. Click “Create New API Key”.
-3. Enter a name for the API Key (eg “Kubit”) and only grant permission for `users.track` in the User Data section. <br><br>![Braze API Key]({% image_buster /assets/img/kubit/braze_api_key.png %}){: style="max-width:70%;"}
+Here, you will find the REST Endpoint and generate your Braze Data Import Key. Once generated, you will be able to create a new key, or invalidate an existing one as needed. The Data Import Key and the REST Endpoint are used in the next step when setting up a postback in Kubits's dashboard.
 
-You can also find references for these steps in [Braze API Key Documentation]({{site.baseurl}}/api/basics/#app-group-rest-api-keys). 
+![Config on Kubit]({% image_buster /assets/img/kubit/kubit.png %}){: style="max-width:90%;"}
 
 ### Step 2: Configure Kubit
-Provide the Braze API Key created in step 1, and your Braze [endpoint location]({{site.baseurl}}/api/basics/#endpoints).
+Provide the Braze Data Import Key and Braze REST endpoint found in step 1. 
 
 ![Config on Kubit]({% image_buster /assets/img/kubit/config_on_kubit.png %}){: style="max-width:30%;"}
 
@@ -41,7 +39,7 @@ Once you have saved a Cohort in Kubit, you can import these users to Braze to be
 Once an import has been completed, an email notification will be sent to the recipients(s) specified in the import schedule. You can also check a Cohort's import status under Schedule in Kubit. The schedule history will display every import execution time, outcome, and the total number of users in the Cohort who were imported to Braze.<br><br>![Import History]({% image_buster /assets/img/kubit/import_history.png %})<br><br>You can manually trigger an import by clicking on Import to Braze icon for that import schedule.
 
 ### Step 4: Create Braze Segments with Kubit Cohorts
-After Cohorts are imported to Braze, you can use them as filters to create Braze Segments and include them in Braze Campaigns or Canvas. Visit our segment documentation to learn more about [how to create Braze Segments]({{site.baseurl}}/user_guide/engagement_tools/segments/creating_a_segment/#step-4-add-filters-to-your-segment).
+After Cohorts are imported to Braze, you can use them as filters to create Braze Segments and include them in Braze campaigns or Canvas. Visit our segment documentation to learn more about [how to create Braze Segments]({{site.baseurl}}/user_guide/engagement_tools/segments/creating_a_segment/#step-4-add-filters-to-your-segment).
 
 ![Segment with Kubit Cohorts]({% image_buster /assets/img/kubit/segment_with_kubit_cohorts.png %}){: style="max-width:70%;"}
 

@@ -117,14 +117,14 @@ The following method will manually display your in-app message.
 {% tab JAVA %}
 
 ```java
-AppboyInAppMessageManager.getInstance().addInAppMessage(inAppMessage);
+BrazeInAppMessageManager.getInstance().addInAppMessage(inAppMessage);
 ```
 
 {% endtab %}
 {% tab KOTLIN %}
 
 ```kotlin
-AppboyInAppMessageManager.getInstance().addInAppMessage(inAppMessage)
+BrazeInAppMessageManager.getInstance().addInAppMessage(inAppMessage)
 ```
 
 {% endtab %}

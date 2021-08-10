@@ -10,10 +10,6 @@ tool:
   - Media
   - Templates
 ---
-<br>
-{% alert important %}
-This feature is in a closed _Early Access_ period. To request access, please submit your feedback in our [Product Portal](https://dashboard.braze.com/resources/roadmap).
-{% endalert %}
 
 # Simple Survey In-App Message
 
@@ -59,7 +55,7 @@ Select **Log attributes upon submission** to collect attributes based on the use
 
 ![Custom Attributes]({% image_buster /assets/img/iam/collect-attributes.png %}){: style="max-width:70%"}
 
-To add a custom attribute to each choice, select an existing attribute name from the dropdown, and the value to set when this choice is submitted. You can create a new custom attribute in your [Settings Page][5].
+To add a custom attribute to each choice, select a custom attribute name from the dropdown (or create a new one), and then enter the value to set when this choice is submitted. You can create a new custom attribute in your [Settings Page][5].
 
 For example, in a notification preferences survey, you might make each choice a boolean (true/false) attribute to allow users to select which topics they're interested in. If a user checks the "Promotions" choice, that will update their [User Profile][3] with the custom attribute `Promotions Topic` set to `true`. If they leave the choice unchecked, that same attribute will remain unchanged.
 
@@ -93,7 +89,7 @@ You can customize the font color and accent color of the message using the **Col
 
 ## Analyze Results {#analytics}
 
-Once your campaign has launched, you can analyze results in real-time to see the breakdown of each selected choice. If you've enabled [Custom Attribute collection](#custom-attributes), you'll also be able to create new segments or follow-up campaigns for users who have submitted the survey.
+Once your campaign has launched, you can analyze results in real-time to see the breakdown of each selected choice. If you've enabled [custom attribute collection](#custom-attributes), you'll also be able to create new segments or follow-up campaigns for users who have submitted the survey.
 
 {% alert note %}
 Deleted survey choices will still appear in analytics, but will not be shown as a choice to new users.

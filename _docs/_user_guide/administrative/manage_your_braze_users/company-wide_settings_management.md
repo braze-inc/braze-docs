@@ -3,7 +3,7 @@ nav_title: Company Wide Settings
 page_order: 5
 
 page_type: reference
-description: "This reference article covers company-wide settings, like changing the name of your company, setting your timezone, and requesting to delete your company."
+description: "This reference article covers company-wide settings, like changing the name of your company, setting your time zone, and requesting to delete your company."
 tool: Dashboard
 ---
 
@@ -11,7 +11,7 @@ tool: Dashboard
 
 ## Company Settings Page
 
-The [Company Settings Page][1] allows you to change the name of your company, set your timezone and request to delete your company.
+The [Company Settings Page][1] allows you to change the name of your company, set your time zone and request to delete your company.
 
 {% alert note %}
 Note that only Admins and users with explicit permissions to manage Company Settings will see this page.
@@ -72,13 +72,13 @@ That's it! You should start receiving notifications about your company to this S
 
 ### Weekly Analytics Reporting
 
-Braze optionally sends a weekly report via email to individuals you designate within your company every Monday at 5AM EST. The custom events to be included in the weekly report are selected on the Custom Events Management Tab within the ["Manage Settings"][19] page of the dashboard. You may select up to 5 events to be included in your weekly report:
+Braze optionally sends a weekly report via email to individuals you designate within your company every Monday at 5AM EST. The custom events to be included in the weekly report are selected on the **Custom Events** tab within the [Manage Settings][19] page of the dashboard. You may select up to 5 events to be included in your weekly report:
 
 ![Analytics Report Event Selection][22]
 
 ### Additional Email Settings
 
-You also can access the [Settings - Email Settings Tab][8] to edit:
+You also can access the [Email Settings][8] tab to edit:
 
 - The name which will be displayed by default on your emails
 - The default reply-to address for your emails

@@ -30,14 +30,14 @@ Appboy.sharedInstance()?.user.addAlias(ALIAS_NAME, ALIAS_LABEL)
 {% tab JAVA %}
 
 ```java
-Appboy.getInstance(context).getCurrentUser().addAlias(ALIAS_NAME, ALIAS_LABEL);
+Braze.getInstance(context).getCurrentUser().addAlias(ALIAS_NAME, ALIAS_LABEL);
 ```
 
 {% endtab %}
 {% tab KOTLIN %}
 
 ```kotlin
-Braze.getInstance(context).getCurrentUser<BrazeUser>().addAlias(ALIAS_NAME, ALIAS_LABEL)
+Braze.getInstance(context).currentUser?.addAlias(ALIAS_NAME, ALIAS_LABEL)
 ```
 
 {% endtab %}

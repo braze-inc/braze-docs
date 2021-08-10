@@ -10,24 +10,30 @@ channel: email
 
 # Email Technical Guidelines & Notes
 
+> This reference article covers local and host part validation rules for email addresses.
+
 ## Email Validation
 
 {% alert important %}
 Validation is used for dashboard email addresses, end-user email addresses (your customers), and from and reply-to addresses done of an email message.
 {% endalert %}
 
-> Email validation is done when a user's email address has been updated or is being imported into Braze via API, CSV Upload, or modified in the dashboard. Email addresses targeted via the Braze servers must be validated per [RFC 2822](http://tools.ietf.org/html/rfc2822) standards. This validation is not to be confused with a validation service like Briteverify. This is a check to verify that the syntax of an email address is correct. One of the main drivers to use this new validation process is to support international characters (i.e., UTF-8) in the local part of the email address.
+Email validation is done when a user's email address has been updated or is being imported into Braze via API, CSV Upload, or modified in the dashboard. Email addresses targeted via the Braze servers must be validated per [RFC 2822](http://tools.ietf.org/html/rfc2822) standards.
+
+This validation is not to be confused with a validation service like Briteverify. This is a check to verify that the syntax of an email address is correct. One of the main drivers to use this new validation process is to support international characters (i.e., UTF-8) in the local part of the email address.
 
 Email syntax validation looks at both the local and host part of an email address. The local part is anything before the @ symbol, and the host part is anything after the @ symbol. Note that this process is only validating the syntax of the email address and does not consider whether the domain has a valid MX server or if the user exists on the domain listed.
 
-__Note: If the domain part contains any non-[ASCII](https://en.wikipedia.org/wiki/ASCII) characters, it will need to be [Punycode-encoded](https://www.punycoder.com/) before being supplied to Braze.__
+{% alert note %}
+If the domain part contains any non-[ASCII](https://en.wikipedia.org/wiki/ASCII) characters, it will need to be [Punycode-encoded](https://www.punycoder.com/) before being supplied to Braze.
+{% endalert %}
 
 If Braze receives a request to add a user and the email address is considered invalid, you would see an error response in the API. When uploading via CSV, a user would be created, but the email address would not be added.
 
 ## Local Part Validation Rules
 
 ### Microsoft Domains
-If the host domain includes "msn, hotmail, outlook, or live", then the following regex will be used to validate the local part:<br>
+If the host domain includes "msn", "hotmail", "outlook", or "live", then the following regex will be used to validate the local part:<br>
 `/\A\w[\-\w]*(?:\.[\-\w]+)*\z/i`
 
 The Microsoft address local part must follow these parameters:
@@ -71,7 +77,7 @@ The domain name must follow these parameters:
 	- Contain 1 to 63 characters
 
 **Additional Validation Required:**<br>
-The final label of the domain must be a valid top-level domain (TLD) which is determined by anything after the final period (.). This TLD should be in [ICANN's TLD list][2].
+The final label of the domain must be a valid top-level domain (TLD) which is determined by anything after the final period (.). This TLD should be in [ICANN's TLD list][2]. The Braze email validator only ensures the syntax of the email is correct according to the regex listed above. It does not catch typos or addresses that don't exist.
 
 {% alert important %}
 Unicode is accepted only for the local part of the email address.<br>

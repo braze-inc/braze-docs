@@ -91,11 +91,11 @@ __I followed the integration instructions but I'm still not receiving any push n
 
 It's often a good idea for sites to implement a "soft" push prompt where you "prime" the user and make your case for sending them push notifications before requesting push permission. This is useful because the browser throttles how often you may prompt the user directly, and if the user denies permission you can never ask them again. This can be done simply through Braze's [triggered In-App Messages]({{site.baseurl}}/developer_guide/platform_integration_guides/web/in_app_messaging/#in-app-messaging) for a seamless user experience. Instead of calling `appboy.registerAppboyPushMessages()` directly as described above, instead:
 
-1. Create a "Prime for Push" in-app messaging Campaign on the Braze dashboard.
-  - Make it a "Modal" In-App Message. Give it whatever text and styling you wish to present to the user ("Can we stay in touch?")
+1. Create a "Prime for Push" in-app messaging campaign on the Braze dashboard.
+  - Make it a **Modal** in-app message. Give it whatever text and styling you wish to present to the user ("Can we stay in touch?")
   - Give the in-app message a Button 1 Text value of "OK" (or whatever affirmative text you wish), and set the On-Click Behavior to "Close Message." You'll customize that behavior later.
   - Under the gear composer section, add a key-value pair.  Give it a key of `msg-id` and a value of `push-primer`.
-  - Give the message a trigger action of the Custom Event 'prime-for-push' (you can create that custom event manually from the dashboard) if you need to)
+  - Give the message a trigger action of the custom event 'prime-for-push' (you can create that custom event manually from the dashboard) if you need to)
 
 2. In your Braze SDK integration, find and remove any calls to `appboy.display.automaticallyShowNewInAppMessages()` from within your loading snippet.
 

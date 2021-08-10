@@ -48,7 +48,7 @@ If your in-app messages are not being returned, you're likely experiencing a cam
 - Your segment does not contain your user.
   - Check your user's [Engagement tab][troubleshooting_iams_6] to see if the correct segment appears under Segments.
 - Your user has previously received the in-app message and was not re-eligible to receive it again.
-  - Check the [campaign re-eligibility settings][troubleshooting_iams_7] under the Delivery tab of the Campaign Composer and make sure the re-eligibility settings align with your testing setup.
+  - Check the [campaign re-eligibility settings][troubleshooting_iams_7] under the **Delivery** step of the **Campaign Composer** and make sure the re-eligibility settings align with your testing setup.
 - Your user hit the frequency cap for the campaign.
   - Check the campaign [frequency cap settings][troubleshooting_iams_8] and make sure they align with your testing setup.
 - If there was a control group on the campaign, your user may have fallen into the control group.

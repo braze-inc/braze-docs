@@ -29,7 +29,7 @@ You will need to use both your Inkit and Braze accounts to use the Inkit integra
 
 ### Step 1: Create a Webhook Template in Braze
 
-You can create this from the `Templates & Media` section, or create a new Webhook Campaign in Braze.
+You can create this from the **Templates & Media** section, or create a new webhook campaign in Braze.
 
 ![Inkit_Webhook_Template][7]
 

@@ -10,30 +10,20 @@ channel:
 
 # In-App Messages
 
-## When to Use In-App Messages
+[In-App Messages]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/) help you get content to your user without interrupting their day with a push notification. Customized and tailored in-app messages enhance the user experience and help your audience get the most value out of your app. With a variety of layouts and customization tools to choose from, in-app messages engage your users more than ever before.
 
-In-app messages are good for a lot of things. They can be used in web apps, Android apps, iOS apps, and more!
-
-In-app messages don't deliver outside of the user's app and won't intrude on their home screen like push notifications do. In-app messages, by their nature, exist within your app and come with context and are almost never unwelcome! They're always delivered when the user is active within your app.
-
-### Great Use Cases
-
-- New App Features
-- App Management
-- Reviews
-- App Upgrades/Updates
-- Giveaways & Sweepstakes
-- Sales and Promotions
-- Product Sales
-- Encouraging and rewarding discovery
-- [Permission Requests/Push Priming][30]
-
-To see examples of in-app messages, check out our [Client Integration Gallery][31].
-
-[Create an in-app message]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/create/) now!
+To see examples of in-app messages, check out our [Case Studies][83].
 
 ## In-App Message Types
-Braze currently offers the following default in-app message types: `Slideup`, `Modal`, `Full` and `HTML Full`. Each in-app message type is highly customizable across content, images, icons, click actions, analytics, display, and delivery.
+
+Braze currently offers the following default in-app message types: 
+
+- `Slideup`
+- `Modal`
+- `Full`
+- `HTML Full`
+
+Each in-app message type is highly customizable across content, images, icons, click actions, analytics, display, and delivery.
 
 All in-app messages are subclasses of the `ABKInAppMessage`, which defines basic behavior and traits for all in-app messages. The in-app message class structures as following:
 
@@ -101,4 +91,4 @@ The following example shows a paginated HTML Full in-app message:
 
 [29]: {% image_buster /assets/img_archive/ABKInAppMessage-models.png %}
 [30]: {{site.baseurl}}/help/best_practices/push/creating_custom_opt-in_prompts/#creating-custom-opt-in-prompts
-[31]: {{site.baseurl}}/help/best_practices/client_integration_gallery/
+[31]: https://www.braze.com/customers

@@ -42,7 +42,7 @@ Save and share this API Key along with your Braze REST Endpoint with Phrasee so 
 
 ## Using This Integration
 
-With this integration, you can integrate Email or Push Campaigns into Phrasee. The steps are detailed below for both.
+With this integration, you can integrate email or push campaigns into Phrasee. The steps are detailed below for both.
 
 {% tabs %}
 {% tab Email Campaign %}
@@ -69,7 +69,7 @@ Please note that you will not need to recreate each email from scratch, you can 
 
 #### Step 3: Schedule your Braze Campaign
 
-Schedule your Campaign to start at a specific time. __You’ll need to know this time to plug into Phrasee.__
+Schedule your campaign to start at a specific time. __You’ll need to know this time to plug into Phrasee.__
 
 ![schedule_braze]({% image_buster /assets/img/phrasee/6_braze_schedule.png %})
 
@@ -89,7 +89,7 @@ The integration window will pop out:
 1. Select your Braze campaign from the dropdown list.
 2. Select the date and time that your Braze campaign is scheduled to start. The time zone of your Braze account will appear below the campaign dropdown to ensure the times align between applications.
 3. Select the date and time that your Braze A/B test is scheduled to complete.
-4. Select the date and time that your Braze Campaign will complete. This is the date when the final results will be pulled into the Phrasee system.
+4. Select the date and time that your Braze campaign will complete. This is the date when the final results will be pulled into the Phrasee system.
 6. Save the details.
 
 ![phrasee_drawer]({% image_buster /assets/img/phrasee/8_braze_int_drawer.png %})
@@ -98,7 +98,7 @@ The integration window will pop out:
 Ensure your scheduled date and time match what was configured within Braze so that Phrasee pulls in the results at the correct time.
 {% endalert %}
 
-Launch your Campaign in Braze and Phrasee has it from here! When your Campaign test results are in, they will automatically appear in Phrasee. 
+Launch your campaign in Braze and Phrasee has it from here! When your campaign test results are in, they will automatically appear in Phrasee. 
 
 {% endtab %}
 {% tab Push Campaign %}
@@ -133,7 +133,7 @@ You can also enter the whole Phrasee variant into the **Message body** for the r
 
 #### Step 4: Schedule your Braze Campaign
 
-Schedule your Campaign to start at a specific time. __You’ll need to know this time to plug into Phrasee.__
+Schedule your campaign to start at a specific time. __You’ll need to know this time to plug into Phrasee.__
 
 ![schedule_braze]({% image_buster /assets/img/phrasee/6_braze_schedule.png %})
 
@@ -151,7 +151,7 @@ The integration window will pop out:
 1. Select your Braze campaign(s) from the dropdown list.
 2. Select the date and time that your Braze campaign is scheduled to start. The time zone of your Braze account will appear below the campaign dropdown to ensure the times align between applications.
 3. Select the date and time that your Braze A/B test is scheduled to complete.
-4. Select the date and time that your Braze Campaign will complete. This is the date when the final results will be pulled into the Phrasee system.
+4. Select the date and time that your Braze campaign will complete. This is the date when the final results will be pulled into the Phrasee system.
 6. Save the details.
 
 ![phrasee_drawer]({% image_buster /assets/img/phrasee/8_braze_int_drawer.png %})
@@ -160,7 +160,7 @@ The integration window will pop out:
 Ensure your scheduled date and time match what you configured within Braze so that Phrasee pulls in the results at the correct time.
 {% endalert %}
 
-Launch your Campaign in Braze and Phrasee has it from here! When your Campaign test results are in, they will automatically appear in Phrasee. 
+Launch your campaign in Braze and Phrasee has it from here! When your campaign test results are in, they will automatically appear in Phrasee. 
 
 {% endtab %}
 {% endtabs %}

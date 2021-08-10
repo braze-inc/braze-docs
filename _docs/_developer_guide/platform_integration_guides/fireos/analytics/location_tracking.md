@@ -39,7 +39,7 @@ To disable automatic location tracking, set `com_appboy_enable_location_collecti
 Then you can manually log single location data points via the `setLastKnownLocation()` method on `AppboyUser` like this:
 
 ```java
-Appboy.getInstance(context).getCurrentUser().setLastKnownLocation(LATITUDE_DOUBLE_VALUE, LONGITUDE_DOUBLE_VALUE, ALTITUDE_DOUBLE_VALUE, ACCURACY_DOUBLE_VALUE);
+Braze.getInstance(context).getCurrentUser().setLastKnownLocation(LATITUDE_DOUBLE_VALUE, LONGITUDE_DOUBLE_VALUE, ALTITUDE_DOUBLE_VALUE, ACCURACY_DOUBLE_VALUE);
 ```
 
 See [here in our Javadocs][4] for more information on the `setLastKnownLocation()` method.

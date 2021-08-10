@@ -18,4 +18,6 @@ valid_partner_list:
   url: /docs/partners/data_and_infrastructure_agility/workflow_automation/zapier/
 - name: Nexla
   url: /docs/partners/data_and_infrastructure_agility/workflow_automation/nexla/
+- name: Hightouch
+  url: /docs/partners/data_and_infrastructure_agility/workflow_automation/hightouch/
 ---
