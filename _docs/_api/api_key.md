@@ -91,13 +91,13 @@ API key permissions are permissions you can assign a user or group to limit thei
 
 | Name | Description |
 |---|---|---|
-| `campaigns.trigger.send` | Trigger the sending of an existing Campaign. |
-| `campaigns.trigger.schedule.create` | Schedule a future send of a Campaign with API-triggered delivery. |
-| `campaigns.trigger.schedule.update` | Update a Campaign scheduled with API-triggered delivery. |
-| `campaigns.trigger.schedule.delete` | Delete a Campaign scheduled with API-triggered delivery |
-| `campaigns.list` | Query for a list of Campaigns. |
-| `campaigns.data_series` | Query for Campaign analytics over a time range. |
-| `campaigns.details` | Query for details of a specific Campaign. |
+| `campaigns.trigger.send` | Trigger the sending of an existing campaign. |
+| `campaigns.trigger.schedule.create` | Schedule a future send of a campaign with API-triggered delivery. |
+| `campaigns.trigger.schedule.update` | Update a campaign scheduled with API-triggered delivery. |
+| `campaigns.trigger.schedule.delete` | Delete a campaign scheduled with API-triggered delivery |
+| `campaigns.list` | Query for a list of campaigns. |
+| `campaigns.data_series` | Query for campaign analytics over a time range. |
+| `campaigns.details` | Query for details of a specific campaign. |
 | `sends.data_series` | Query for message send analytics over a time range. |
 | `sends.id.create` | Create Send ID for message blast tracking. |
 {: .reset-td-br-1 .reset-td-br-2}
@@ -227,9 +227,9 @@ Keep in mind that once you create a new API Key, you cannot edit the scope of pe
 
 The App Identifier API Key or `app_id` is a parameter associating activity with a specific app in your app group. It designates which app within the app group you are interacting with. For example, you will find that you will have an `app_id` for your iOS app, an `app_id` for your android app, and an `app_id` for your web integration. At Braze, you might find that you have multiple apps for the same platform across the various platform types that Braze supports.
 
-App identifiers at Braze are used when integrating the SDK and are also used to reference a specific app in REST API calls. With the `app_id` you can do many things like pull data for a custom event that occurred for a particular app, retrieve uninstall stats, new user stats, DAU stats, and session start stats for a particular app. 
+App identifiers at Braze are used when integrating the SDK and are also used to reference a specific app in REST API calls. With the `app_id` you can do many things like pull data for a custom event that occurred for a particular app, retrieve uninstall stats, new user stats, DAU stats, and session start stats for a particular app.
 
-Sometimes, you may find you are prompted for an `app_id` but you are not working with an app, because it is a legacy field specific to a specific platform, you can "omit" this field by including any string of characters as a placeholder for this required parameter. For example, if we are trying to send an email object, an `app_id` is required, but because the channel is not associated with an app (iOS or Android) like Push or In-App Messages are, we can "omit" this field by including placeholder text. 
+Sometimes, you may find you are prompted for an `app_id` but you are not working with an app, because it is a legacy field specific to a specific platform, you can “omit” this field by including any string of characters as a placeholder for this required parameter.
 
 ### Where can I find it?
 There are two ways to locate your `app_id`:

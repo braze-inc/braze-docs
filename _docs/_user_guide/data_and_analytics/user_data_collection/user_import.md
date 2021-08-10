@@ -10,6 +10,10 @@ tool: Dashboard
 
 There are two approaches for importing customer data into your Braze dashboard: REST API and CSV.
 
+{% alert important %}
+Braze does not sanitize HTML data during ingestion time, this means that script tags must be stripped for all import data meant for web personalization. [Read more](#html-data-stripping).
+{% endalert %}
+
 ## REST API
 You can use Braze’s User Track REST API endpoint to record custom events, user attributes, and purchases for users. See [User Track Endpoint][12] for more information.
 
@@ -24,13 +28,13 @@ When you provide an `external_id` in your import, Braze will update any existing
 
 ### Constructing Your CSV
 
-Braze has several data types in Braze. When importing or updating user profiles via CSV, you can create or update Standard User Attributes or Custom Attributes.
+Braze has several data types in Braze. When importing or updating user profiles via CSV, you can create or update standard user attributes or custom attributes.
 
-- Standard User Attributes are reserved keys in Braze. For example, `first_name` or `email`.
-- Custom Attributes are custom to your business. For example, a travel booking app may have a custom attribute called `last_destination_searched`.
+- Standard user attributes are reserved keys in Braze. For example, `first_name` or `email`.
+- Custom attributes are custom to your business. For example, a travel booking app may have a custom attribute called `last_destination_searched`.
 
 {% alert important %}
-When importing customer data, the Column Headers you use must map exactly to the Standard User Attributes. Otherwise, Braze will automatically create a Custom Attribute on that user’s profile.
+When importing customer data, the Column Headers you use must map exactly to the Standard User Attributes. Otherwise, Braze will automatically create a custom attribute on that user’s profile.
 {% endalert %}
 
 Braze accepts user data in the standard CSV format from files up to 100MB in size.
@@ -81,7 +85,7 @@ While `external_id` itself is not mandatory, you __must__ include one of these f
 
 ### Importing Custom Data via CSV
 
-Any headers which do not exactly match nonstandard User Data will create a Custom Attribute within Braze.
+Any headers which do not exactly match nonstandard User Data will create a custom attribute within Braze.
 
 These data types are accepted in User Import:
 - Datetime (Must be stored in [ISO-8601](https://en.wikipedia.org/wiki/ISO_8601) format)
@@ -91,8 +95,8 @@ These data types are accepted in User Import:
 - Blank (Blank values will not overwrite existing values on the user profile, and you do not need to include all existing user attributes in your CSV file.)
 
 {% alert important %}
-Arrays, Push Tokens, and Custom Event data types are not supported in User Import.
-Especially for Arrays, commas in your CSV file will be interpreted as a column separator; therefore, any commas in values will cause errors parsing the file.
+Arrays, push tokens, and custom event data types are not supported in **User Import**.
+Especially for arrays, commas in your CSV file will be interpreted as a column separator; therefore, any commas in values will cause errors parsing the file.
 
 For uploading these kinds of values, please use the [User Track Endpoint]({{site.baseurl}}/developer_guide/rest_api/user_data/#user-track-endpoint).
 {% endalert %}
@@ -145,6 +149,14 @@ The filter used to create the segment selects users who were created or updated 
 As of 4/10/2018, for each user, only the last 100 CSVs the user was imported/updated in are cached. So, if you attempt to create a segment by filtering for members who were in an older import, the segment will not include users who have been in 100 or more imports since. Prior to 4/10/2018, Braze cached the last 10 CSVs that a user was imported/updated in.
 {% endalert %}
 
+## HTML Data Stripping
+
+Braze does not sanitize HTML data during ingestion time. When importing data into Braze, specifically meant for personalization usage in a web browser, ensure that it is stripped of HTML, JavaScript, or any other script tag that potentially could be leveraged maliciously when rendered in a web browser.  Alternatively, for HTML, you can use Braze's Liquid filters (strip_html) to HTML escape rendered text. 
+
+__Liquid Example:__<br>
+{% raw %}Input:  {{ "Have <em>you</em> read <strong>Ulysses</strong>?" &#124; strip_html }}{% endraw %}<br>
+Output: Have you read Ulysses?
+
 ## Troubleshooting
 
 ### Malformed Row
@@ -165,7 +177,7 @@ Values encapsulated in single (‘’) or double (“”) quotation marks will b
 
 ### Data Imported as Custom Attribute
 
-If you are seeing a piece of Standard User Data (e.g. `email` or `first_name`) imported as a Custom Attribute, check the case and spacing of your CSV file. For example, `First_name` would be imported as a Custom Attribute, while `first_name` would be correctly imported into the “first name” field on a user’s profile.
+If you are seeing a piece of Standard User Data (e.g. `email` or `first_name`) imported as a custom attribute, check the case and spacing of your CSV file. For example, `First_name` would be imported as a custom attribute, while `first_name` would be correctly imported into the “first name” field on a user’s profile.
 
 {% alert important %}
 Braze will ban or block users ("dummy users") with over 5 million sessions and no longer ingest their SDK events, because they are usually the result of misintegration. If you find that this has happened for a legitimate user, please reach out to your Braze account manager.

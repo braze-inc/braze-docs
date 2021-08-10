@@ -15,7 +15,7 @@ description: "This article outlines details about the Get Campaigns List endpoin
 /campaigns/list
 {% endapimethod %}
 
-This endpoint allows you to export a list of campaigns, each of which will include its name, campaign API identifier, whether it is an API Campaign, and Tags associated with the campaign. The campaigns are returned in groups of 100 sorted by time of creation (oldest to newest by default).
+This endpoint allows you to export a list of campaigns, each of which will include its name, campaign API identifier, whether it is an API campaign, and tags associated with the campaign. The campaigns are returned in groups of 100 sorted by time of creation (oldest to newest by default).
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#f3b0b3ef-04fb-4a31-8570-e6ad88dacb18 {% endapiref %}
 
@@ -47,7 +47,7 @@ Authorization: Bearer YOUR-REST-API-KEY
             "id" : (string) Campaign API Identifier,
             "last_edited": (ISO 8601 string) the last edited time for the message 
             "name" : (string) campaign name,
-            "is_api_campaign" : (boolean) whether the campaign is an API Campaign,
+            "is_api_campaign" : (boolean) whether the campaign is an API campaign,
             "tags" : (array) tag names associated with the campaign
         },
         ...

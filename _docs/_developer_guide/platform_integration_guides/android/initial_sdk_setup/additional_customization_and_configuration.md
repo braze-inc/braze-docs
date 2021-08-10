@@ -28,14 +28,14 @@ To enable verbose logging on the Braze Android SDK:
 {% tab JAVA %}
 
 ```java
-AppboyLogger.setLogLevel(Log.VERBOSE);
+BrazeLogger.setLogLevel(Log.VERBOSE);
 ```
 
 {% endtab %}
 {% tab KOTLIN %}
 
 ```kotlin
-AppboyLogger.setLogLevel(Log.VERBOSE)
+BrazeLogger.setLogLevel(Log.VERBOSE)
 ```
 
 {% endtab %}
@@ -45,22 +45,22 @@ AppboyLogger.setLogLevel(Log.VERBOSE)
 Verbose logs should be enabled as early as possible in your `Application.onCreate()`, before any other calls to the SDK, to guarantee as much logging as possible.
 {% endalert %}
 
-To know if your obtained logs are verbose, look for `V/Appboy` somewhere in your logs. For example:
+To know if your obtained logs are verbose, look for `V/Braze` somewhere in your logs. For example:
 
-`2077-11-19 16:22:49.591 ? V/Appboy v9.0.01 .bo.app.d3: Request started`
+`2077-11-19 16:22:49.591 ? V/Braze v9.0.01 .bo.app.d3: Request started`
 
 ### Suppressing Braze SDK Logging
 
 The default Log Level for the Braze Android SDK is `INFO`.
 
-To change the Braze Log Level, call [`AppboyLogger.setLogLevel()`][70] with one of the [`android.util.Log`][54] constants or `AppboyLogger.SUPPRESS`. For example:
+To change the Braze Log Level, call [`BrazeLogger.setLogLevel()`][70] with one of the [`android.util.Log`][54] constants or `BrazeLogger.SUPPRESS`. For example:
 
 {% tabs %}
 {% tab JAVA %}
 
 ```java
 // Suppress all logs
-AppboyLogger.setLogLevel(AppboyLogger.SUPPRESS);
+BrazeLogger.setLogLevel(BrazeLogger.SUPPRESS);
 ```
 
 {% endtab %}
@@ -68,7 +68,7 @@ AppboyLogger.setLogLevel(AppboyLogger.SUPPRESS);
 
 ```kotlin
 // Suppress all logs
-AppboyLogger.setLogLevel(AppboyLogger.SUPPRESS)
+BrazeLogger.setLogLevel(BrazeLogger.SUPPRESS)
 ```
 
 {% endtab %}
@@ -98,4 +98,4 @@ To set an API key in code, please see the [runtime configuration][69] documentat
 [50]: https://developer.android.com/studio/build/shrink-code
 [54]: https://developer.android.com/reference/android/util/Log.html
 [69]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/advanced_use_cases/runtime_configuration/
-[70]: https://appboy.github.io/appboy-android-sdk/javadocs/com/appboy/support/AppboyLogger.html#setLogLevel-int-
+[70]: https://appboy.github.io/appboy-android-sdk/javadocs/com/braze/support/BrazeLogger.html#setLogLevel-int-

@@ -23,11 +23,11 @@ The export functionality from Stensul to Braze will allow users to send your HTM
 Braze is integrated directly into the Stensul platform. Thus, after providing your Stensul Customer Success team with your Braze API key and cluster instance, the integration will be set up for you, allowing you to push your completed email from Stensul to Braze as outlined below.
 
 ### Step 1
-Once the email is created in Stensul, click “Complete”.
+Once the email is created in Stensul, click **Complete**.
 ![Stensul Save Options]({% image_buster /assets/img_archive/stensul_save_options.png %})
 
 ### Step 2
-Select the **Upload to Braze** option on the Completion page, as shown below.
+Select the **Upload to ESP** option on the Completion page, as shown below.
 ![Stensul Upload Options]({% image_buster /assets/img_archive/stensul_upload_options.png %})
 
 ### Step 3

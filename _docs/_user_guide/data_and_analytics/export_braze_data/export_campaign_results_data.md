@@ -11,7 +11,7 @@ tool:
 
 # Campaign Results Data
 
-All of the analytics from your Braze campaigns can be exported to a CSV. From the Campaigns page of the Dashboard, select the campaign you wish to view and scroll down to the historical performance graphs, which can be exported.
+All of the analytics from your Braze campaigns can be exported to a CSV. From the **Campaigns** page of the Dashboard, select the campaign you wish to view and scroll down to the historical performance graphs, which can be exported.
 
 ## Multi-Channel Campaigns
 

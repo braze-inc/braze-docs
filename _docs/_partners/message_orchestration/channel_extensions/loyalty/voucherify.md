@@ -13,7 +13,7 @@ With the Braze and Voucherify integration, users can automatically send personal
 ## How does it work?
 Leverage the power of Voucherify and grow your promotional campaigns by sending unique codes through the use of:
 - __[Connected Content]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/connected_content/about_connected_content)__: Add unique codes to Braze campaigns via Braze’s Connected Content. You can use Voucherify discount coupons, gift card campaigns, loyalty cards, and referral codes with this feature.
-- __[Custom Attributes]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_attributes)__: Custom Attributes enable you to assign Voucherify unique coupons, gift cards, loyalty cards, and referral codes to users’ profiles in Braze. As a result, you can send attached codes and their attributes in email campaigns and share them with your users.
+- __[Custom Attributes]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_attributes)__: Custom attributes enable you to assign Voucherify unique coupons, gift cards, loyalty cards, and referral codes to users’ profiles in Braze. As a result, you can send attached codes and their attributes in email campaigns and share them with your users.
 - __[Promotion Codes Lists]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/promotion_codes)__: Use Voucherify generated promotion codes and upload them into Braze.
 
 ## Prerequisites
@@ -87,7 +87,7 @@ If a user redeems the code, you’ll see the redemption details in your Voucheri
 
 ## Assign Unique Codes to Users’ Custom Attributes
 
-Braze Custom Attributes enable you to assign Voucherify unique coupons, gift cards, loyalty cards, and referral codes to users’ profiles in Braze. As a result, you can send attached codes and their attributes in email campaigns and share them with your users.
+Braze custom attributes enable you to assign Voucherify unique coupons, gift cards, loyalty cards, and referral codes to users’ profiles in Braze. As a result, you can send attached codes and their attributes in email campaigns and share them with your users.
 
 ### Step 1: Connect your Voucherify Account with Braze
 
@@ -103,7 +103,7 @@ When both accounts are connected, you can start a new Voucherify distribution th
 
 You can distribute codes to Braze using manual mode or define an automated workflow that triggers code delivery in response to your users’ actions.
 
-In both manual and automatic mode, Voucherify sends unique codes with their attributes and assigns them to Custom Attributes in users' profiles.
+In both manual and automatic mode, Voucherify sends unique codes with their attributes and assigns them to custom attributes in users' profiles.
 
 ![CUSTOM ATTRIBUTES]({% image_buster /assets/img/voucherify-custom-attributes-mapping.png %})
 
@@ -156,7 +156,7 @@ When a user redeems the code, you’ll see the redemption details in your Vouche
 
 ## Upload Voucherify Codes to Braze Promo Codes Lists
 
-Next to the Connected Content and Custom Attributes, you can share Voucherify codes using Braze Promo Codes snippet.
+Next to the Connected Content and custom attributes, you can share Voucherify codes using Braze Promo Codes snippet.
 
 ### Step 1: Export Unique Codes from Voucherify Campaign.
 

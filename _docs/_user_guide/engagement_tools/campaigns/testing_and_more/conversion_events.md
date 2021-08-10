@@ -31,7 +31,7 @@ The Primary Conversion Event is the first event added during the campaign or Can
 - Adjust message distributions for campaigns and Canvases using Intelligent Selection.
 
 ## Step 1: Create a Campaign with Conversion Tracking
-Navigate to the [Braze Campaigns page][1] in your company dashboard and click "Create Campaign," then select the type of campaign you'd like to create.
+Navigate to the [Campaigns][1] page in your company dashboard and click **Create Campaign**, then select the type of campaign you'd like to create.
 
 After setting up your campaign's messages and—for non-API campaigns—schedule, you'll have the option to add up to four Conversion events for tracking. We highly recommend using as many as you feel is necessary, as the addition of a second (or third) Conversion Event can significantly enrich your reporting. For example, if you had a campaign or Canvas targeting lapsing users, although a retention-centric Conversion Event of "Starts Session" within 3 days is valuable, perhaps you also want to add a secondary Conversion Event of performing another high-value custom event. This way, you can dive back into the dashboard and understand not only the extent to which your campaign or Canvas is ushering users back into your application but also how involved and active these sessions are.
 

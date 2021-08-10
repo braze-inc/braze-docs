@@ -34,14 +34,14 @@ Complete the following steps to utilize the Braze webhook channel to send data t
 {% tabs %}
 {% tab Campaign %}
 
-To create a webhook, navigate to the Braze dashboard and select `Campaigns` under `Engagement`. <br>From the `Create Campaign` drop-down, select `Webhook` and name your Campaign.
+To create a webhook, go to the **Campaigns** page on the Braze dashboard, under **Engagement**. <br>From the **Create Campaign** drop-down, select **Webhook** and name your campaign.
 
 ![zd11]({% image_buster /assets/img_archive/zd11.gif %})
 
 {% endtab %}
 {% tab Canvas %}
 
-To create a webhook, from a new or existing Canvas, create a full step or message step in the Canvas Builder. Next, click the green message icon that appears and then `Webhook` from the message options.
+To create a webhook, from a new or existing Canvas, create a full step or message step in the Canvas Builder. Next, click the green message icon that appears and then **Webhook** from the message options.
 
 {% endtab %}
 {% endtabs %}

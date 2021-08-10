@@ -45,8 +45,8 @@ Braze.configure(this, brazeConfig)
 {% endtab %}
 {% endtabs %}
 
-Another example can be found in our [Hello Appboy sample app][3].
+Another example can be found in our [Hello Braze sample app][3].
 
 [1]: https://appboy.github.io/appboy-android-sdk/javadocs/com/appboy/Appboy.html#configure-android.content.Context-com.appboy.configuration.BrazeConfig-
 [2]: https://appboy.github.io/appboy-android-sdk/javadocs/com/braze/configuration/BrazeConfig.Builder.html
-[3]: https://github.com/Appboy/appboy-android-sdk/blob/master/hello-appboy/src/main/java/com/appboy/helloworld/HelloAppboyApplication.java#L25
+[3]: https://github.com/Appboy/appboy-android-sdk/blob/master/samples/hello-braze/src/main/java/com/braze/helloworld/CustomApplication.java#L32

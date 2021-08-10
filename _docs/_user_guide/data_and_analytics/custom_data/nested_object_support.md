@@ -15,7 +15,6 @@ Nested Object Support allows you to send nested JSON data as properties of custo
 
 - Nested data can only be sent with [custom events]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events/) and [purchase events]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/purchase_events/). This is not yet supported with user attributes.
 - Event property objects that contain array or object values can have an event property payload of up to 50KB.
-- Available on events/purchases sent via API only, the Braze SDKs are not yet supported.
 
 ## Usage Examples
 

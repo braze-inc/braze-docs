@@ -1,5 +1,5 @@
 ---
-nav_title: "POST: Schedule API Triggered Campaign Messages"
+nav_title: "POST: Schedule API-Triggered Campaign Messages"
 page_order: 4
 
 layout: api_page
@@ -9,17 +9,17 @@ platform: API
 tool:
   - Campaigns
 
-description: "This article outlines details about the Schedule API Triggered Campaigns Braze endpoint."
+description: "This article outlines details about the Schedule API-Triggered Campaigns Braze endpoint."
 ---
 {% api %}
-# Schedule API Triggered Campaigns
+# Schedule API-Triggered Campaigns
 {% apimethod post core_endpoint|https://www.braze.com/docs/core_endpoints %} 
 /campaigns/trigger/schedule/create
 {% endapimethod %}
 
-Use this endpoint to trigger API Triggered Campaigns, which are created on the Dashboard and initiated via the API. You can pass in `trigger_properties` that will be templated into the message itself.
+Use this endpoint to trigger API-triggered campaigns, which are created on the Dashboard and initiated via the API. You can pass in `trigger_properties` that will be templated into the message itself.
 
-This endpoint allows you to send Campaign messages (up to 90 days in advance) via API Triggered delivery, allowing you to decide what action should trigger the message to be sent. Please note that to send messages with this endpoint, you must have a Campaign ID, created when you build an [API Triggered Campaign]({{site.baseurl}}/api/api_campaigns/).
+This endpoint allows you to send campaign messages (up to 90 days in advance) via API-triggered delivery, allowing you to decide what action should trigger the message to be sent. Please note that to send messages with this endpoint, you must have a Campaign ID, created when you build an [API-Triggered Campaign]({{site.baseurl}}/api/api_campaigns/).
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#b7e61de7-f2c2-49c9-9e46-b85a0aa01bba {% endapiref %}
 

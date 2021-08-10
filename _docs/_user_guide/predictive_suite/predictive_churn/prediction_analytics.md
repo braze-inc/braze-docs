@@ -9,7 +9,7 @@ Tool:
 
 # Prediction Analytics
 
-Once your Prediction has been built and trained, you will have access to the Prediction Analytics page. This page helps you decide what users you should target based on their Churn Risk Score or Category. As soon as the Prediction is done training and this page is populated, you can jump to simply using [Filters]({{site.baseurl}}/user_guide/predictive_suite/predictive_churn/messaging_users/#filters) in Segments or Campaigns to begin using the outputs of the model. But, if you want help deciding who to target and why, this page can help based on the historical accuracy of the model and your own business goals. 
+Once your Prediction has been built and trained, you will have access to the Prediction Analytics page. This page helps you decide what users you should target based on their Churn Risk Score or Category. As soon as the Prediction is done training and this page is populated, you can jump to simply using [Filters]({{site.baseurl}}/user_guide/predictive_suite/predictive_churn/messaging_users/#filters) in Segments or campaigns to begin using the outputs of the model. But, if you want help deciding who to target and why, this page can help based on the historical accuracy of the model and your own business goals. 
 
 __Analytics Components__<br>
 &#45; [Churn Score and Category](#churn_score)<br>
@@ -27,7 +27,11 @@ As you move the slider, the bar in the left half of the lower panel will inform 
 
 ## Churn Score and Category {#churn_score}
 
-Users in the Prediction Audience will be assigned a Churn Score between 0 and 100. The higher the score, the greater the likelihood of Churn. Users with Churn Scores between 0 and 50 will be labeled in the Low Churn Risk category. Users with scores between 50 and 75, and 75 and 100 will be labeled in the Medium and High Churn Risk categories, respectively. The scores and the corresponding categories will be updated according to the schedule you chose on the model creation page. The number of users with Churn Scores in each of 20 equally sized buckets is displayed in the chart at the top of the page. This can help you determine what the churn risk looks like across the population according to this Prediction.
+Users in the Prediction Audience will be assigned a Churn Score between 0 and 100. The higher the score, the greater the likelihood of Churn. 
+- Users with Churn Scores between 0 and 50 will be labeled in the Low Churn Risk category. 
+- Users with scores between 50 and 75, and 75 and 100 will be labeled in the Medium and High Churn Risk categories, respectively. 
+
+The scores and the corresponding categories will be updated according to the schedule you chose on the model creation page. The number of users with Churn Scores in each of 20 equally sized buckets is displayed in the chart at the top of the page. This can help you determine what the churn risk looks like across the population according to this Prediction.
 
 ## Targeting Users to Reduce Churn
 
@@ -66,7 +70,7 @@ This analysis displays any user attributes or behaviors that are correlated with
 This table is updated only when the Prediction retrains and not when user Churn Risk Scores are updated.
 
 {% alert note %}
-Correlation data for Preview Predictions will be partially hidden. A purchase is required to reveal this information. Please contact your Account Manager for more information.
+Correlation data for Preview Predictions will be partially hidden. A purchase is required to reveal this information. Please contact your account manager for more information.
 {% endalert %}
 
 [6]: {% image_buster /assets/img/churn/churnEstimatedResults.png %}
