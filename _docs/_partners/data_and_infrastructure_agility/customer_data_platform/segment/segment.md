@@ -204,7 +204,7 @@ Most of your [Overview][27] metrics (lifetime sessions, MAU, DAU, Stickiness, Da
 
 You can view your data in the [Custom Events][22] or [Revenue][28] pages, or by [creating a segment][23]. The **Custom Events** page of the dashboard allows you to view custom event counts over time. Note that you will not be able to use [formulas][24] that include MAU and DAU statistics.
 
-If you're sending purchase data to Braze (see [Completed Order](#completed-order)), the [Revenue][28] page allows you to view data on revenue or purchases over specific periods of time or your app's total revenue.
+If you're sending purchase data to Braze (see [Order Completed](#order-completed)), the [Revenue][28] page allows you to view data on revenue or purchases over specific periods of time or your app's total revenue.
 
 [Creating a segment][26] allows you to filter your users based on custom event data and custom attribute data.
 
