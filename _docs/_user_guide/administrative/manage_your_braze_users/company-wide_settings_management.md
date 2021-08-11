@@ -104,6 +104,8 @@ Navigate to ‘Email Settings’ within your AppGroup.
 Set List-Unsubscribe to ‘ON'
 ![list_unsub_3] [59]
 
+When enabled, this feature will add a standard list-unsubscribe 'mailto:' header to all eligible outgoing emails.  Upon receipt of a list-unsubscribe request from an end-user, Braze will ensure the same person who was sent the email is being unsubscribed.  If there is no match, we will not process this request.
+
 > This feature only applies to emails that target users who are “subscribed or opted in” or “opted-in only.”
 
 The header is not added for messages targeting “all users including unsubscribed users,” as these represent transactional messages which do not need an unsubscribe function.
