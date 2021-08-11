@@ -39,6 +39,10 @@ _Note: Any existing custom HTML templates will need to be re-created using the D
 
 You can write your message within the rich-text editor or optionally flip over to our HTML editor or Drag & Drop Editor to customize your content. Once selected, you will be guided to the editor experience you chose. An 'HTML Editor' or 'Drag & Drop Editor' badge will appear, indicating that you are about to use this editing experience for template creation.
 
+{% alert important %}
+When composing your email template copy, do not switch back and forth between different editor types (HTML/Block/Classic) as that may shift the previously created HTML leading to rendering issues. 
+{% endalert %}
+
 ![dnd_badge_icon]({% image_buster /assets/img/dnd_badge_icon.png %})
 
 {% tabs %}
