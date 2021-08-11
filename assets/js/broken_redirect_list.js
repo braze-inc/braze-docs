@@ -108,7 +108,6 @@ validurls['/docs/tvos'] = '/docs/developer_guide/platform_integration_guides/tvo
 validurls['/docs/sdk_integration/unity/ios'] = '/docs/developer_guide/platform_integration_guides/unity/ios/sdk_integration/';
 validurls['/docs/sdk_integration/xamarin/ios'] = '/docs/developer_guide/platform_integration_guides/xamarin/ios/sdk_integration/';
 validurls['/docs/cordova/ios'] = '/docs/developer_guide/platform_integration_guides/cordova/ios/initial_sdk_setup/overview/';
-validurls['/docs/react_native/ios'] = '/docs/developer_guide/platform_integration_guides/react_native/ios/sdk_integration/';
 
 validurls['/docs/android/'] = '/docs/developer_guide/platform_integration_guides/android/initial_sdk_setup/android_sdk_integration/';
 validurls['/docs/eclipse_setup/'] = '/docs/developer_guide/platform_integration_guides/android/initial_sdk_setup/android_sdk_integration/#android-sdk-integration';
@@ -118,8 +117,6 @@ validurls['/docs/fireos/'] = '/docs/developer_guide/platform_integration_guides/
 validurls['/docs/ios/'] = '/docs/developer_guide/platform_integration_guides/ios/initial_sdk_setup/overview/';
 validurls['/docs/developer_guide/platform_integration_guides/ios/'] = '/docs/developer_guide/platform_integration_guides/ios/initial_sdk_setup/overview/';
 validurls['/docs/delayed_braze_initialization_ios/'] = '/docs/developer_guide/platform_integration_guides/ios/initial_sdk_setup/cocoapods/#appboysharedinstance-and-swift-nullability';
-validurls['/docs/react_native/android_and_fireos/'] = '/docs/developer_guide/platform_integration_guides/react_native/android_and_fireos/initial_sdk_setup/';
-validurls['/docs/react_native/ios/'] = '/docs/developer_guide/platform_integration_guides/react_native/ios/sdk_integration/';
 validurls['/docs/platform_wide/'] = '/docs/developer_guide/platform_wide/platform_features/';
 validurls['/docs/programmatic_message_sending/'] = '/docs/developer_guide/rest_api/messaging/#messaging';
 validurls['/docs/braze_faqs/'] = '/docs/help/faqs/';
