@@ -47,7 +47,7 @@ If you want to add a string or URL before the links in your email message, creat
 
 A preview section is provided to give you an example of the insertion process.
 
-![prepend][3]
+![pre-append]({% image_buster /assets/img_archive/link_template_preappend.png %})
 
 ### Append: Create a Link Template that Inserts After a URL {#append-link-template}
 
@@ -55,13 +55,13 @@ If you want to add query parameters after a URL in your email message, create a 
 
 You can have multiple parameters appended to the end of a URL.
 
-![postappend][2]
+![postappend]({% image_buster /assets/img_archive/link_template_postappend.png %})
 
 ## Using Your Templates in Email Campaigns
 
 Once your templates are set up, you can select which template you would like to use in your email from the email editor.
 
-From the email editor, click **Content Library** and select the **Link Templating** tab. You will see all the links present in your email, and can add the template from there.
+From the email editor, click **Content Library** and select the **Link Templating** tab. You will see all the links present in your email and can add the template from there.
 
 ![messagecomposer][1]
 

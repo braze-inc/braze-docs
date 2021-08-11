@@ -52,7 +52,7 @@ Now that you've added your API key, you need to add the following permissions to
 To enable user session tracking and register your app for in-app messages, add the following call to the `OnCreate()` lifecycle method of the `Application` class in your app:
 
 ```csharp
-RegisterActivityLifecycleCallbacks(new AppboyLifecycleCallbackListener());
+RegisterActivityLifecycleCallbacks(new BrazeActivityLifecycleCallbackListener());
 ```
 
 ## SDK Integration Complete
