@@ -27,7 +27,7 @@ Branch and Braze help you understand exactly when and where users were acquired 
 * If you have an Android app, you will need to include the code snippet below, which passes a unique Braze device id to Branch. You must set the correct key before calling `initSession`. You must also initialize the Braze SDK before setting the request metadata in the Branch SDK.
 
 ```java
-Branch.getInstance().setRequestMetadata("$braze_install_id", Appboy.getInstance(context).getInstallTrackingId());
+Branch.getInstance().setRequestMetadata("$braze_install_id", Braze.getInstance(context).getInstallTrackingId());
 
 ...
 

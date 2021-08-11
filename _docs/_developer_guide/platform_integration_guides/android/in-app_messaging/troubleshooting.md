@@ -62,7 +62,7 @@ If your app is successfully requesting and receiving in-app messages but they ar
 
 - Triggered in-app messages are rate-limited based on the [minimum time interval between triggers][troubleshooting_iams_9], which defaults to 30 seconds.
 - If you have set a delegate to customize in-app message handling, check your delegate to ensure it is not affecting in-app message display.
-- Failed image downloads will prevent in-app messages with images from displaying. Image downloads will always fail if the `AppboyInAppMessageManager` is not registered properly. Check your device logs to ensure that image downloads are not failing.
+- Failed image downloads will prevent in-app messages with images from displaying. Image downloads will always fail if the `BrazeInAppMessageManager` is not registered properly. Check your device logs to ensure that image downloads are not failing.
 - If the device orientation did not match the orientation specified by the in-app message, the in-app message will not display. Make sure that your device is in the correct orientation.
 
 [troubleshooting_iams_1]: {{ site.baseurl }}/user_guide/administrative/app_settings/developer_console/internal_groups_tab/#adding-test-users

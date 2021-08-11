@@ -26,10 +26,6 @@ For devices without Google services installed, Braze offers the option to send p
 
 Use [Firebase Cloud Messaging](https://firebase.google.com/docs/cloud-messaging/) (FCM) to register for push. For a full sample of using Firebase with the Braze Android SDK, see our [Firebase Push sample app](https://github.com/Appboy/appboy-android-sdk/tree/master/samples/firebase-push).
 
-{% alert update %}
-Automatic GCM registration is unavailable through the Braze SDK as a result of Google's removal of support for GCM on May 29, 2019. If your app is currently supporting GCM, we advise that you speak to your development teams about transitioning to [Firebase from GCM](https://developers.google.com/cloud-messaging/android/android-migrate-fcm) as soon as possible.
-{% endalert %}
-
 ### Step 1: Enable Firebase
 
 To get started, follow the instructions at [Add Firebase to Your Android Project][49].
@@ -185,7 +181,7 @@ After completing this section, you should be able to receive and display push no
 Braze includes a service to handle push receipt and open intents. Our `BrazeFirebaseMessagingService` class will need to be registered in your `AndroidManifest.xml`.
 
 ```xml
-<service android:name="com.braze.BrazeFirebaseMessagingService"
+<service android:name="com.braze.push.BrazeFirebaseMessagingService"
   android:exported="false">
   <intent-filter>
     <action android:name="com.google.firebase.MESSAGING_EVENT" />

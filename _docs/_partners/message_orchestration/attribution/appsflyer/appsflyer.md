@@ -33,7 +33,7 @@ If you have an Android app, you will need to include the code snippet below, whi
 
 ```java
 HashMap<String, Object> customData = new HashMap<String,Object>();
-String deviceId = Appboy.getInstance(context).getInstallTrackingId();
+String deviceId = Braze.getInstance(context).getInstallTrackingId();
 customData.put("customData", deviceId);
 AppsFlyerLib.setAdditionalData(customData);
 ```

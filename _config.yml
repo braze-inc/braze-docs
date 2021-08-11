@@ -56,7 +56,6 @@ github_icon: 'GitHub-Mark-32px.png'
 
 plugins_dir: ["./_plugins"]
 
-
 # Collections directory
 collections_dir: _docs
 

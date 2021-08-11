@@ -22,6 +22,10 @@ This endpoint allows you to export data from any user profile by specifying a fo
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#b9750447-9d94-4263-967f-f816f0c76577 {% endapiref %}
 
+{% alert update %}
+Customers who onboard on or after August 16, 2021 will have a rate limit of 2,500 requests per minute on this endpoint.
+{% endalert %}
+
 ## Request Body
 
 ```
