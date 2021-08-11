@@ -83,16 +83,10 @@ On Android, Braze will move a user to be __push disabled__ if:
 - A user uninstalls the app from their device.
 - Braze receives a bounce when sending to a specific token (sometimes caused by app updates, uninstalls, new push token version, or format).
 - Push registration fails to FCM (sometimes caused by poor network connections or a failure to connect to or on FCM to return a valid token).
-- (For Android SDK v2.2.2+) The user blocks push notifications for the app within their device settings and subsequently logs a session.
+- The user blocks push notifications for the app within their device settings and subsequently logs a session.
 
   {% endtab %}
 {% endtabs %}
-
-## Before Android SDK v2.2.2 {#before-android-sdk}
-
-Here are some details you should know if you aren't using our most up-to-date Android SDK.
-- The previous version of the Android SDK does not detect that a user has disabled push, and so the user's push enabled state remains enabled. When you attempt to send to a device in this state, the push is 'sent', and the device receives the payload but is suppressed by the device, so it is not displayed to a user. Braze refers to this as 'silently failing'.
-- The previous version of the Android SDK does not have the `notifications_enabled` parameter and will not return a value for it if user data is called using the Braze REST API.
 
 [1]: https://cloud.githubusercontent.com/assets/20304883/25244744/cd16d324-25b6-11e7-9d7c-d37b74690cf8.png
 [2]: https://cloud.githubusercontent.com/assets/20304883/25244775/ec6e0ae4-25b6-11e7-846d-4bf8f38c3057.png
