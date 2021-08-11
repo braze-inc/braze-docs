@@ -226,7 +226,7 @@ In-app message delivery is entirely based off of of the following action trigger
 
 A start date and time must be selected, however, an end date is optional. An end date will stop that specific in-app message from showing up on devices after the specified date/time.
 
-Please refer to our developer documentation for [server-side event triggering]({{site.baseurl}}/developer_guide/platform_integration_guides/web/in_app_messaging/#in-app-message-delivery) and [local in-app message delivery]({{site.baseurl}}/developer_guide/platform_integration_guides/web/in_app_messaging/#local-in-app-messages).
+Please refer to our developer documentation for [server-side event triggering]({{site.baseurl}}developer_guide/platform_integration_guides/web/in-app_messaging/in-app_message_delivery/) and [local in-app message delivery]({{site.baseurl}}/developer_guide/platform_integration_guides/web/in-app_messaging/in-app_message_delivery/#local-in-app-messages).
 
 #### Online vs. Offline Triggering
 
