@@ -1,7 +1,7 @@
 ---
 nav_title: "A2P 10DLC"
 page_order: 2.9
-description: "This article covers A2P 10DLC, why it's are necessary at Braze, helpful costs and throughput information, and how to get started with registration."
+description: "This article covers A2P 10DLC, why 10DLC registration is necessary for US long code customers, helpful costs and throughput information, and how to get started with registration."
 page_type: reference
 
 channel:
@@ -16,19 +16,19 @@ channel:
 All customers who currently have and/or use US long codes to send to US customers are required to register their long codes for 10DLC; those who fail to do so will experience heavy filtering of all messages.
 {% endalert %}
 
-## Why it's Necessary
+## Why It's Necessary
 
 10DLC service was created to specifically facilitate A2P messaging using long codes. Historically, long codes were meant for Person-to-Person (P2P) messaging, but when used for marketing reasons, they caused businesses to be constrained by limited throughput and heightened filtering. 
 
 10DLC helps alleviate those issues by offering: 
 - __Higher Throughput__: 10DLC numbers support a higher volume of messages than regular long codes.
-- __Better Deliverability__: 10DLC numbers are designated for A2P traffic, so messages sent on these numbers are more likely to reach the recipient and are less likely to get filtered or rejected by the carrier than messages sent via regular local long codes. 
-- __Improved Compliance__: Using a local long code for commercial text messaging is against the CTIA guidelines. 10DLC numbers were designated for mass messaging and allow brands to comply with industry regulations without relying on short codes.
+- __Better Deliverability__: 10DLC numbers are designated for A2P traffic, so messages sent with these numbers are more likely to reach the recipient and are less likely to get filtered or rejected by the carrier than messages sent via regular local long codes. 
+- __Improved Compliance__: Using a local long code for commercial text messaging is against the [CTIA](https://api.ctia.org/wp-content/uploads/2019/07/190719-CTIA-Messaging-Principles-and-Best-Practices-FINAL.pdf) guidelines. 10DLC numbers were designated for mass messaging and allow brands to comply with industry regulations without relying on short codes.
 - __Budget Friendly__: 10DLC is a great option for companies who want to get started sending SMS or send SMS at small volumes. For brands sending at larger messaging volumes of over 100,000 messages a day, Braze would recommend using a short code. 
 
 Since 2019, carriers have begun adopting 10DLC for commercial messaging, with Verizon and AT&T currently supporting 10DLC, and we expect all major carriers to follow soon. While it may cause inconveniences in the short term, in the long term, customers will enjoy better deliverability rates while protecting their consumers from unwanted messages. 
 
-## What you Need to Know
+## What You Need to Know
 
 ### Costs 
 Registering with A2P 10DLC may include several types of fees:
@@ -56,18 +56,18 @@ The Campaign Registry (TCR) is a third-party agency that uses a reputation algor
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
 
 {% alert tip %}
-Companies listed in the Russel 3000 index will be granted a high throughput and brand trust score after 10DLC registration and review. 
+Companies listed in the Russel 3000 Index will be granted a high throughput and brand trust score after 10DLC registration and review. 
 {% endalert %} 
 
 #### Daily Message Limits
 
-Daily limits range from 2000 to 200,000 messages depending on your brand trust score and apply across all long codes. While high brand trust scores come with a throughput of 60 messages per second, any daily message limits set by the carrier will still apply. This means that short codes would be a better option if a brand's daily peak messages are higher than the imposed daily limit. 
+Daily limits range from 2,000 to 200,000 messages depending on your brand trust score and apply across all long codes. While high brand trust scores come with a throughput of 60 messages per second, any daily message limits set by the carrier will still apply. This means that short codes would be a better option if a brand's daily peak messages are higher than the imposed daily limit. 
 
 #### Messaging Use Cases
 
 Throughput is also affected by the type of messaging use case you choose. Most customers will fall under the standard marketing or mixed marketing use case. Other less common use cases will be susceptible to differing throughput values.
 
-Depending on your use case, the trust score needed to achieve the maximum throughput will vary. The tables below lists standard use cases and common use case trust score ranges. For special use cases such as emergency services or charity, please reference the [Twilio docs](https://support.twilio.com/hc/en-us/articles/1260803225669-Message-throughput-MPS-and-Trust-Scores-for-A2P-10DLC-in-the-US).
+Depending on your use case, the trust score needed to achieve the maximum throughput will vary. The tables below list standard use cases and common use case trust score ranges. For special use cases such as emergency services or charity, please reference the [Twilio docs](https://support.twilio.com/hc/en-us/articles/1260803225669-Message-throughput-MPS-and-Trust-Scores-for-A2P-10DLC-in-the-US).
 
 | Standard Use Cases | Description |
 | ------------------ | ----------- |
@@ -96,9 +96,9 @@ A declared use case means you have chosen one specific non-marketing use case (f
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
 
 {% endtab %}
-{% tab Mixed / Marketing Use Case %}
+{% tab Mixed/Marketing Use Case %}
 
-Mixed / Marketing use cases can be registered for customers who want to send messages for multiple use cases from the same set of numbers or for marketing.
+Mixed/Marketing use cases can be registered for customers who want to send messages for multiple use cases from the same set of numbers or for marketing.
 
 | Trust Score | Total throughput toward major US networks | AT&T | T-Mobile  | Verizon |
 | --- | ----------- | ---- | -------- | ------- |
