@@ -24,14 +24,11 @@ guide_menu_list:
   - name: Cordova iOS
     link: /docs/developer_guide/platform_integration_guides/cordova/ios/initial_sdk_setup/
     fa_icon: fab fa-apple
-  - name: Fire OS
+  - name: FireOS
     link: /docs/developer_guide/platform_integration_guides/fireos/initial_sdk_setup/android_sdk_integration/
     fa_icon: fab fa-amazon
-  - name: ReactNative Android and FireOS
-    link: /docs/developer_guide/platform_integration_guides/react_native/android_and_fireos/initial_sdk_setup/
-    fa_icon: fab fa-react
-  - name: ReactNative iOS
-    link: /docs/developer_guide/platform_integration_guides/react_native/ios/sdk_integration/
+  - name: ReactNative
+    link: /docs/developer_guide/platform_integration_guides/react_native/react_sdk_setup/
     fa_icon: fab fa-react
   - name: tvOS
     link: /docs/developer_guide/platform_integration_guides/tvos/initial_sdk_setup/
