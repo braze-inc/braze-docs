@@ -81,7 +81,7 @@ The Content section contains the editor. There are three key components within t
 
 - __Content__: This section includes a series of tiles that represent the different kinds of content you can use in your message. More will become available in the future. To use them, just drag one inside an existing row segment; it will auto-adjust to the column width. Every block has its own settings, such as granular control on padding. The right-side panel automatically switches to a property panel for the selected content element.<br><br> For more information see [Editor Block Properties]({{site.baseurl}}/dnd/editor_blocks/)<br><br>
 - __Rows__: Rows are structural units that define the horizontal composition of a section of the message by using columns. Using more than one column allows you to put different content elements side by side. You can add all the structural elements you need to your message, regardless of the template you selected when you started.<br><br>
-- __Settings__: General settings for the message. They are inherited by Rows and Content sections. For example, the font family set in the message settings is then used everywhere in your message, except where you use a custom setting.
+- __Settings__: General settings for the message. They are inherited by Rows and Content sections. For example, the font family set in the message settings will be used everywhere in your message, except where you use a custom setting.
 
 This is very useful to build a coherent message very quickly.
 {% endsubtab %}
@@ -108,7 +108,7 @@ To read more about the different components of the drag & drop editing experienc
 Braze will add a footer with an unsubscribe link at the bottom of your email by default. You can customize this footer in the **Email Settings** tab of the **Manage Settings** page. For more information, please read our article on [custom footers][cf].
 
 #### Step 4a: Check for Email Errors
-Email errors are presented on the ‘compose’ tab of the message workflow. Errors prevent you from progressing forward, while “Warnings” indicate reminders to help you follow best practices. Depending on your business, you might choose to ignore them.
+Email errors are presented on the 'compose' tab of the message workflow. Errors prevent you from progressing forward, while "Warnings" indicate reminders to help you follow best practices. Depending on your business, you might choose to ignore them.
 
 ![dnd_compose_error][1]{: style="float:right;max-width:40%;margin-left:15px;"}
 
@@ -132,14 +132,14 @@ When you're ready for a final check, select **Test Send** and send a test messag
 
 ![newemailtest][15]
 
-If you see any issues with your template, or want to make any changes, click **Edit Email** to return to the editor.
+If you see any issues with your template or want to make any changes, click **Edit Email** to return to the editor.
 
 ### Step 5: Save Your Template
 
 Be sure to save your template by clicking **Save Template** in the bottom right corner of the editor. You're now ready to use this template in any campaign or Canvas step you choose.
 
 {% alert note %}
-If you make any edits to an existing template, those changes will not be reflected in campaigns that were created using previous versions of that template.
+If you make any edits to an existing template, those changes will not be reflected in campaigns created using previous versions of that template.
 {% endalert %}
 
 ## Using Your Templates in API Campaigns
@@ -167,4 +167,3 @@ For answers to frequently asked questions about email templates, check out our [
 [9]: {{site.baseurl}}/user_guide/message_building_by_channel/email/templates/faq/
 [15]: {% image_buster /assets/img_archive/newEmailTest.png %}
 [20]: {{site.baseurl}}/user_guide/administrative/app_settings/manage_app_group/tags/
-

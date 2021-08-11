@@ -17,7 +17,7 @@ description: "This reference article covers various creative details of Drag & D
 
 ### Step 1: Select Editing Experience
 Navigate to the email wizard and select your editing experience. Two editing options will be shown:
-- Select the 'Drag & Drop Editor' to select templates created using the Drag & Drop Editor.
+- Select the __Drag & Drop Editor__ to select templates created using the Drag & Drop Editor.
 - Select the HTML Code Editor to use the existing editors and see your existing email templates.<br><br>![dnd_editor_workflow][6]{: style="max-width:80%;"}
 
 ### Step 2: Build out Email Structure
@@ -73,7 +73,7 @@ Images added to your email will automatically be set to __auto width__. To adjus
 
 ### Color Layering
 
-The Drag & Drop Editor allows you to change the color of the email background, content area, and different content components. The color ordering from front to back is as listed: content component color, content area background color, and background color. 
+The Drag & Drop Editor allows you to change the color of the email background, content area, and different content components. The color ordering from front to back is content component color, content area background color, and background color. 
 
 ![Drag & Drop Email PNG][3]
 
