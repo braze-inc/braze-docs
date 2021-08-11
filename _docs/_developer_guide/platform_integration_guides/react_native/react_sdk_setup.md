@@ -5,12 +5,12 @@ subplatform:
 - iOS
 - Android
 page_order: 1
-description: "This reference introduces React Native SDK and explain how to integrate it natively on Android and iOS."
+description: "This reference introduces the React Native SDK and explains how to integrate it natively on Android and iOS."
 ---
 
 # Initial SDK Setup
 
-Installing the Braze React Native SDK provides basic analytics functionality and lets you integrate in-app messages and Content Cards for both iOS and Android with just one code base.
+Installing the Braze React Native SDK provides basic analytics functionality and lets you integrate in-app messages and Content Cards for both iOS and Android with just one codebase.
 
 You will need to complete installation steps on both platforms separately.
 
@@ -28,7 +28,8 @@ npm install react-native-appboy-sdk
 
 ## Step 2: Complete Native Setup
 
-### Android
+{% tabs %}
+{% tab Android %}
 
 #### Step 2.1a: Add Our Repository
 
@@ -77,12 +78,12 @@ public void onCreate() {
     registerActivityLifecycleCallbacks(new AppboyLifecycleCallbackListener());
 }
 ```
-
-### iOS
-
-Since React Native automatically links the libraries to the native platform, you can install the SDK with the help of CocoaPods.
+{% endtab %}
+{% tab iOS %}
 
 #### Step 2.2a: Install Pods
+
+Since React Native automatically links the libraries to the native platform, you can install the SDK with the help of CocoaPods.
 
 From the root folder of the project:
 
@@ -103,7 +104,7 @@ In the `AppDelegate.m` file, add the following snippet within the
 
 Then, add your SDK Endpoint in the `Info.plist` file. It is located in the `ios` project folder. If you're working in Xcode:
 
-1. Add a row with the name `Braze` and type of `Dictionary`
+1. Add a row with the name `Braze` and type of `Dictionary`.
 2. To that Dictionary, add a row with the name `Endpoint`, type `String` and as a value, input your [SDK endpoint]({{site.baseurl}}/api/basics/#endpoints). 
 
 Otherwise, add the following elements to the file:
@@ -115,6 +116,9 @@ Otherwise, add the following elements to the file:
     <string>sdk.your-endpoint.com</string>
   </dict>
 ```
+
+{% endtab %}
+{% endtabs %}
 
 ## Step 3: Usage
 
@@ -152,7 +156,7 @@ const App = () => {
   )
 ```
 
-You can then search for the user with `some-user-id` in the Dashboard under **User Search**. There, you can verify that session and device data has been logged.
+You can then search for the user with `some-user-id` in the Dashboard under **User Search**. There, you can verify that session and device data have been logged.
 
 
 [1]: https://www.braze.com/docs/developer_guide/platform_integration_guides/android/initial_sdk_setup/android_sdk_integration/ "Android SDK Install"

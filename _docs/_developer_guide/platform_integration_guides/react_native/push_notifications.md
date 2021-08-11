@@ -12,13 +12,8 @@ Integrating push notifications in React Native requires setting up each native p
 
 ## Step 1: Complete Native Setup
 
-### Android
-
-Follow [the Android integration instructions][1].
-
-### iOS
-
-Follow [the iOS integration instructions][2].
+- Android: Follow [the Android integration instructions][1].
+- iOS: Follow [the iOS integration instructions][2].
 
 ## Step 2: Test Displaying Push Notifications
 

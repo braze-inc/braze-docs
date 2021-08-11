@@ -10,7 +10,7 @@ hidden: true
 
 At this point, you can verify that the SDK is integrated by checking session statistics in the Dashboard. If you run your application on either platform, you should see a new session in Dashboard (in the `Overview` section).
 
-### User Sessions
+## User Sessions
 
 You can also open a session for a particular user by calling the following code in your app.
 
@@ -18,12 +18,12 @@ You can also open a session for a particular user by calling the following code 
 ReactAppboy.changeUser("user-id");
 ```
 
-You can then search for the user with `some-user-id` in the Dashboard under `User Search`. There, you can verify the session and device information.
+You can then search for the user with `some-user-id` in the Dashboard under __User Search__. There, you can verify the session and device information.
 
-### Content
+## Content
 
 If you have implemented push notifications, you can test Content Cards, Push Notifications and In-App Messages.
 
 {% alert important %}
-You cannot test push notification related app behavior because iOS simulator do not support device tokens that are required to be able to send a push notification.
+You can't test push notification related app behavior on an iOS simulator because simulators don't support the device tokens required to send and receive a push notification.
 {% endalert %}

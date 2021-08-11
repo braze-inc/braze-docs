@@ -12,15 +12,15 @@ description: "This article covers how to set up and track basic analytics in the
 
 This article covers how to set up and track basic analytics in your React Native app.
 
-Before you start, read our [Analytics Overview][0] article to learn more about Braze analytics, and what is already tracked by default. We also recommend familiarizing yourself with our [event naming conventions][1].
+Before you start, read our [Analytics Overview][0] article to learn more about Braze analytics and what is already tracked by default. We also recommend familiarizing yourself with our [event naming conventions][1].
 
 ## Session Tracking
 
 <!-- COPIED: Android/Analytics/Tracking Sessions -->
 
-The Braze SDK reports session data that is used by the Braze dashboard to calculate user engagement and other analytics integral to understanding your users. Based on the below session semantics, our SDK generates “start session” and “close session” data points that account for session length and session counts viewable within the Braze Dashboard.
+The Braze SDK reports session data used by the Braze dashboard to calculate user engagement and other analytics integral to understanding your users. Based on the below session semantics, our SDK generates “start session” and “close session” data points that account for session length and session counts viewable within the Braze Dashboard.
 
-To set a user ID or start a session, use the `changeUser` method which takes a user ID parameter.
+To set a user ID or start a session, use the `changeUser` method, which takes a user ID parameter.
 
 ```javascript
 ReactAppboy.changeUser("user_id");
@@ -30,7 +30,7 @@ ReactAppboy.changeUser("user_id");
 
 <!-- Copied ios/android/analytics/tracking custom events -->
 
-You can record custom events in Braze to learn more about your app’s usage patterns and to segment your users by their actions on the dashboard.
+You can record custom events in Braze to learn more about your app’s usage patterns and to segment your users by their actions in the dashboard.
 
 ```javascript
 ReactAppboy.logCustomEvent("react_native_custom_event");
@@ -79,7 +79,7 @@ All string values such as first name, last name, country, and home city are limi
 
 ### Custom User Attributes
 
-Beyond the attributes above, Braze also allows you to define custom attributes for your users. Supported data types for values include `Date`, `Array`, `boolean`, `string`, `number` and `float`.
+Beyond the attributes above, Braze also allows you to define custom attributes for your users. Supported data types for values include `Date`, `Array`, `boolean`, `string`, `number`, and `float`.
 String values have a maximum length of 255 characters.
 
 ```javascript
@@ -88,7 +88,7 @@ ReactAppboy.setCustomUserAttribute("attribute_key", "attribute_value", function(
 });
 ```
 
-##### Unsetting a Custom Attribute
+#### Unsetting a Custom Attribute
 
 ```javascript
 ReactAppboy.unsetCustomUserAttribute("attribute_key", function(){
@@ -117,10 +117,10 @@ ReactAppboy.logPurchase("product_id", 9.99, "USD", 1, {
 ```
 
 {% alert tip %}
-If you pass in a value of `10 USD`, and a quantity of `3` then that will log to the user's profile as 3 purchases of 10 dollars for a total of 30 dollars. Quantities must be less than or equal to 100. Values of purchases can be negative.
+If you pass in a value of `10 USD` and a quantity of `3`, this will log three purchases of 10 dollars for a total of 30 dollars to the user's profile. Quantities must be less than or equal to 100. Values of purchases can be negative.
 {% endalert %}
 
-#### Reserved Keys
+### Reserved Keys
 
 The following keys are **reserved** and **cannot** be used as purchase properties:
 

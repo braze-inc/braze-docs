@@ -10,7 +10,7 @@ channel: content cards
 
 # Content Cards
 
-The Braze SDKs include a default card feed to get you started with Contend Cards. To show the card feed, you can use the `ReactAppboy.launchContentCards()` method. The default card feed included with the Braze SDK will handle all analytics tracking, dismissals, and rendering for a user's Content Cards.
+The Braze SDKs include a default card feed to get you started with Content Cards. To show the card feed, you can use the `ReactAppboy.launchContentCards()` method. The default card feed included with the Braze SDK will handle all analytics tracking, dismissals, and rendering for a user's Content Cards.
 
 Example using React Hooks:
 
@@ -47,10 +47,10 @@ Follow the steps below to test a sample content card.
 
 For more integrations, follow the [Android integration instructions][2] or the [iOS integration instructions][3], depending on your platform.
 
-A sample implementation of this is contained in AppboyProject, within the [React SDK][1].
+A sample implementation of this can be found in AppboyProject, within the [React SDK][1].
 
 [1]: https://github.com/Appboy/appboy-react-sdk
 [2]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/content_cards/data_models/
 [3]: {{site.baseurl}}/developer_guide/platform_integration_guides/ios/content_cards/data_model/
-[4]: {{site.baseurl}}user_guide/message_building_by_channel/content_cards/create
+[4]: {{site.baseurl}}/user_guide/message_building_by_channel/content_cards/create
 [5]: {% image_buster /assets/img/react-native/content-card-test.png %} "Content Card Campaign Test"
