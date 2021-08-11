@@ -12,27 +12,19 @@ channel: content cards
 
 The Braze SDKs include a default card feed to get you started with Content Cards. To show the card feed, you can use the `ReactAppboy.launchContentCards()` method. The default card feed included with the Braze SDK will handle all analytics tracking, dismissals, and rendering for a user's Content Cards.
 
-Example using React Hooks:
-
-```javascript
-useEffect(() => {
-    ReactAppboy.requestContentCardsRefresh();
-    ReactAppboy.logContentCardsDisplayed();
-}, []);
-``` 
-
 ## Customization
 
 You can use these additional methods to build a custom Content Cards Feed within your app:
 
-|Method | Description |
-|---|---|
-|`ReactAppboy.requestContentCardsRefresh()`|Requests the latest Content Cards from the Braze SDK server.|
-|`ReactAppboy.getContentCards()`|Retrieves Content Cards from the Braze SDK. This will return the latest list of cards from the server.|
-|`ReactAppboy.logContentCardsDisplayed()`|Logs a Content Content feed displayed event.|
-|`ReactAppboy.logContentCardClicked(cardId)`|Logs a click for the given Content Card ID.|
-|`ReactAppboy.logContentCardImpression(cardId)`|Logs an impression for the given Content Card ID.|
-|`ReactAppboy.logContentCardDismissed(cardId)`|Logs a dismissal for the given Content Card ID.|
+| Method                                         | Description                                                                                            |
+| ---------------------------------------------- | ------------------------------------------------------------------------------------------------------ |
+| `ReactAppboy.requestContentCardsRefresh()`     | Requests the latest Content Cards from the Braze SDK server.                                           |
+| `ReactAppboy.getContentCards()`                | Retrieves Content Cards from the Braze SDK. This will return the latest list of cards from the server. |
+| `ReactAppboy.logContentCardsDisplayed()`       | Logs a Content Content feed displayed event.                                                           |
+| `ReactAppboy.logContentCardClicked(cardId)`    | Logs a click for the given Content Card ID.                                                            |
+| `ReactAppboy.logContentCardImpression(cardId)` | Logs an impression for the given Content Card ID.                                                      |
+| `ReactAppboy.logContentCardDismissed(cardId)`  | Logs a dismissal for the given Content Card ID.                                                        |
+
 {: .reset-td-br-1 .reset-td-br-2}
 
 ## Test Displaying Sample Content Card
@@ -53,4 +45,5 @@ A sample implementation of this can be found in AppboyProject, within the [React
 [2]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/content_cards/data_models/
 [3]: {{site.baseurl}}/developer_guide/platform_integration_guides/ios/content_cards/data_model/
 [4]: {{site.baseurl}}/user_guide/message_building_by_channel/content_cards/create
+
 [5]: {% image_buster /assets/img/react-native/content-card-test.png %} "Content Card Campaign Test"
