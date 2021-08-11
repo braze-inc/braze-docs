@@ -97,7 +97,7 @@ Templating in Liquid in a message triggered by the "Ordered" event:
 
 ### Message Triggering
 
-To use these properties to trigger a campaign, select your custom event or purchase, and add a __Nested Property__ filter.
+To use these properties to trigger a campaign, select your custom event or purchase, and add a __Nested Property__ filter. Note that message triggering is not yet supported for in-app messages.
 
 {% tabs %}
 {% tab Music Example %}
@@ -119,7 +119,6 @@ Triggering a campaign with nested properties from the "Ordered" event:
 {% endtab %}
 {% endtabs %}
 
-{% alert note %} Triggering is not yet supported for In-App Messages.  {% endalert %}
 {% alert note %} If your event property contains the `[]` or `.` characters, escape them by wrapping the chunk in double-quotes. For instance, `"songs[].album".yearReleased` will match an event with the literal property `"songs[].album"`.  {% endalert %}
 
 ### Segmentation
