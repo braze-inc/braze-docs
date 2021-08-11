@@ -55,7 +55,7 @@ The following example shows how to run a promotion to drive nearby users in-stor
 
 To get started, you'll need to have your Radar publishable API key on hand to use within your request URLs.
 
-Next, within a `connected_content` tag, make a GET request to the [Search Places API](https://apidev.accuweather.com/developers/locationsAPIguide). The search places API returns nearby locations based on [Radar Places](https://radar.io/documentation/places): a database of locations for places, chains, and categories that provides a comprehensive view of the world.
+Next, within a `connected_content` tag, make a GET request to the [Search Places API](https://radar.io/documentation/api#search-places). The search places API returns nearby locations based on [Radar Places](https://radar.io/documentation/places): a database of locations for places, chains, and categories that provides a comprehensive view of the world.
 
 Shown below is an example of what Radar will return as a JSON object from the API call:
 

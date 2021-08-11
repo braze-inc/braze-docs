@@ -37,21 +37,21 @@ All User Profile data (custom events, custom attribute, custom data) is stored a
 
 ## Blocklisting Custom Attributes, Custom Events, and Products
 
-If you want to stop tracking a specific Custom attribute, event, or product (e.g., accidental creation during testing, no longer useful), search for it in the **Custom Events** tab, then click **Blocklist**.
+If you want to stop tracking a specific custom attribute, event, or product (e.g., accidental creation during testing, no longer useful), search for it in the **Custom Events** tab, then click **Blocklist**.
 
 To prevent collecting certain device attributes, see our [SDK guide][88].
 
-Once a Custom event or attribute is blocklisted:
+Once a custom event or attribute is blocklisted:
 
 - No data will be collected regarding that event/attribute,
-- Existing data will not be wiped,
+- Existing data will be unavailable, unless reactivated,
 - Blocklisted events and attributes will not show up in filters or graphs.
 
-Changes to the blocklist may take a few minutes to propagate. You may re-enable any blocklist event or attribute at anytime.
+To accomplish this, Braze sends the blocklisting information down to each device. This is important as if you’re thinking about blocklisting a huge number of events and attributes (hundreds of thousands or millions), it will be a data intensive operation.
 
-{% alert note %}
-Please note that you should still remove the event or attribute from your app code during your next release.
-{% endalert %}
+Something to consider is that blocklisting a high number of events and attributes is possible, but not advisable. This is because each time an event is performed or an attribute is (potentially) sent up to Braze, this event or attribute has to be checked against the entire blocklist. If it appears on the list, it won’t be sent up. This operation takes time, and if the list grows big enough, your app could start to slow down. If you have no need to use the event or attribute in the future, it should be removed from your app code during your next release.
+
+Changes to the blocklist may take a few minutes to propagate. You may re-enable any blocklist event or attribute at anytime.
 
 ## Forcing Data Type Comparisons
 

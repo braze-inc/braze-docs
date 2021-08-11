@@ -10,7 +10,7 @@ description: "This reference article shows how to set custom attributes in your 
 
 Braze provides methods for assigning attributes to users. You'll be able to filter and segment your users according to these attributes on the dashboard.
 
-Before implementation, be sure to review examples of the segmentation options afforded by Custom events vs. Custom attributes vs Purchase events in our [Best Practices section][1], as well as our notes on [event naming conventions]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/event_naming_conventions/).
+Before implementation, be sure to review examples of the segmentation options afforded by custom events vs. custom attributes vs. purchase events in our [Best Practices section][1], as well as our notes on [event naming conventions]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/event_naming_conventions/).
 
 ## Assigning Standard User Attributes
 
@@ -52,7 +52,7 @@ The following attributes should be set on the `ABKUser` object:
 
 ## Assigning Custom User Attributes
 
-Beyond the attributes above, Braze also allows you to define Custom attributes using a number of different data types:
+Beyond the attributes above, Braze also allows you to define custom attributes using a number of different data types:
 For more information regarding the segmentation options, each of these attributes will afford you, see our ["Best Practices" documentation][1] within this section.
 
 ### Custom Attribute with a String Value
@@ -155,7 +155,7 @@ Appboy.sharedInstance()?.user.setCustomAttributeWithKey("your_attribute_key", an
 >  Dates passed to Braze with this method must either be in the [ISO 8601][2] format, e.g `2013-07-16T19:20:30+01:00` or in the `yyyy-MM-dd'T'HH:mm:ss:SSSZ` format e.g `2016-12-14T13:32:31.601-0800`
 
 ### Custom Attribute with an Array Value
-The maximum number of elements in Custom attribute arrays defaults to 25. The maximum for individual arrays can be increased to up to 100. If you would like this maximum increased, please reach out to your Customer Service Manager. Arrays exceeding the maximum number of elements will be truncated to contain the maximum number of elements. For more information on Custom attribute arrays and their behavior, see our [documentation on arrays][8].
+The maximum number of elements in custom attribute arrays defaults to 25. The maximum for individual arrays can be increased to up to 100. If you would like this maximum increased, please reach out to your Customer Service Manager. Arrays exceeding the maximum number of elements will be truncated to contain the maximum number of elements. For more information on custom attribute arrays and their behavior, see our [documentation on arrays][8].
 
 {% tabs %}
 {% tab OBJECTIVE-C %}
@@ -188,7 +188,7 @@ Appboy.sharedInstance()?.user.removeFromCustomAttributeArrayWithKey("array_name"
 
 ### Unsetting a Custom Attribute
 
-Custom Attributes can also be unset using the following method:
+Custom attributes can also be unset using the following method:
 
 {% tabs %}
 {% tab OBJECTIVE-C %}

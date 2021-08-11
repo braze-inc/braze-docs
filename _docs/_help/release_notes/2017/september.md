@@ -1,7 +1,7 @@
 ---
 nav_title: September
 page_order: 4
-
+no_index: true
 page_type: update
 description: "This article contains release notes for September 2017."
 ---
@@ -10,10 +10,10 @@ description: "This article contains release notes for September 2017."
 
 ## New Functionality for Engagement Reports
 
-You can now use [Engagement Reports][72] to aggregate metrics for a campaign across specific periods of time. For example, you can export the total number of opens from a quarter, or the total number of clicks from the entire lifetime of a Campaign or Canvas. All you have to do is:
+You can now use [Engagement Reports][72] to aggregate metrics for a campaign across specific periods of time. For example, you can export the total number of opens from a quarter, or the total number of clicks from the entire lifetime of a campaign or Canvas. All you have to do is:
 - Select a time frame from which to export data,
 - Schedule an Engagement Report that sends to one or more recipients on a regular basis, and
-- Add Campaigns and Canvases to your report based on their tags.
+- Add campaigns and Canvases to your report based on their tags.
 
 ## Updates to User Profile Page
 

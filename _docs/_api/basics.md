@@ -19,7 +19,7 @@ platform:
 A REST API is a way to programmatically transfer information over the web using a predefined schema. Braze has created many different endpoints which perform various actions and/or return various data.
 
 {% alert note %}
-Customers using Braze's EU database should use `https://rest.fra-01.braze.eu/`. For more information on REST API endpoints for customers using Braze's EU database see our [EU/US Implementation Differences documentation]({{site.baseurl}}/developer_guide/eu01_us3_sdk_implementation_differences/overview/).
+Customers using Braze's EU database should use the `https://rest.fra-01.braze.eu/` endpoint. This endpoint will be used when configuring the Braze [iOS]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/initial_sdk_setup/carthage_integration/#compile-time-endpoint-configuration-recommended), [Android]({{site.baseurl}}/developer_guide/platform_integration_guides/android/initial_sdk_setup/android_sdk_integration/#step-2-configure-the-braze-sdk-in-brazexml), and [Web]({{site.baseurl}}/developer_guide/platform_integration_guides/web/initial_sdk_setup/#step-2-initialize-braze) SDKs.
 {% endalert %}
 
 ## API Definitions
@@ -124,6 +124,7 @@ The Braze API infrastructure is designed to handle high volumes of data across o
 |Default API Rate Limit | Value|
 |---|---|
 |Requests to the `/users/track` endpoint| User Track has a base speed limit of 50,000 requests per minute for all customers. This limit can be increased upon request. Please reach out to your Customer Success Manager for more information. |
+|Requests to the `/users/export/ids` endpoint|2,500 requests per minute. |
 |Batching with the `/users/track` endpoint|75 Events, 75 Purchases, and 75 Attributes per API request. |
 |Requests to the Send endpoint specifying a Segment or Connected Audience|250 per minute. |
 |Send Identifier Creation|100 per day. |

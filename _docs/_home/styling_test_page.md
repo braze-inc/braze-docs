@@ -1,7 +1,7 @@
 ---
 nav_title: Styling Test Page
 page_order: 2
-hidden: true
+noindex: true
 ---
 
 # Styling Test Page
@@ -159,9 +159,9 @@ Appboy.sharedInstance()?.submitFeedback(feedback) { (feedbackSentResult) in
 @Override
 public void onResume() {
   super.onResume();
-  // Registers the AppboyInAppMessageManager for the current Activity. This Activity will now listen for
+  // Registers the BrazeInAppMessageManager for the current Activity. This Activity will now listen for
   // in-app messages from Braze.
-  AppboyInAppMessageManager.getInstance().registerInAppMessageManager(activity);
+  BrazeInAppMessageManager.getInstance().registerInAppMessageManager(activity);
 }
 ```
 

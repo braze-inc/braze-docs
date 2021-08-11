@@ -23,13 +23,8 @@ This endpoint allows you to retrieve relevant information on a specified campaig
 
 | Parameter     | Required | Data Type | Description             |
 | ------------- | -------- | --------- | ----------------------- |
-| `campaign_id` | Yes      | String    | Campaign API identifier |
+| `campaign_id` | Required      | String    | See [Campaign API identifier]({{site.baseurl}}/api/identifier_types/).<br><br> The `campaign_id` for API campaigns can be found on the **Developer Console** and the **Campaign Details** page within your dashboard; or you can use the [Campaign List Endpoint](#campaign-list-endpoint).   |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
-
-### Request Components
-- [Campaign Identifier]({{site.baseurl}}/api/identifier_types/)
-<br><br>
-The `campaign_id` for API campaigns can be found on the Developer Console page and the campaign details page within your dashboard or you can use the [Campaign List Endpoint](#campaign-list-endpoint).
 
 ## Example Request 
 {% raw %}
@@ -50,8 +45,8 @@ Authorization: Bearer YOUR-REST-API-KEY
     "message": (required, string) the status of the export, returns 'success' when completed without errors,
     "created_at" : (string) date created as ISO 8601 date,
     "updated_at" : (string) date last updated as ISO 8601 date,
-    "archived": (boolean) whether this Campaign is archived,
-    "draft": (boolean) whether this Campaign is a draft,
+    "archived": (boolean) whether this campaign is archived,
+    "draft": (boolean) whether this campaign is a draft,
     "name" : (string) campaign name,
     "description" : (string) campaign description,
     "schedule_type" : (string) type of scheduling action,
@@ -95,6 +90,34 @@ The `messages` response will contain information about each message. Example mes
     "reply_to": (string) reply-to for message, if different than "from" address,
     "title": (string) name of the email,
     "extras": (hash) any key-value pairs provided
+}
+```
+
+#### In-App Message Channel
+
+```json
+{
+    "type": (string) description of in-app message type, such as "survey", "modal", and "fullscreen",
+    "data": {
+        "pages": [
+            {
+                "header": 
+                    {
+                         "text":(string) display text for the header of the survey,
+                    }
+                "choices": [
+                    {
+                       "choice_id": (string) choice identifier,
+                       "text": (string) display text, 
+                       "custom_attribute_key": (string) custom attribute key, 
+                       "custom_attribute_value": (sting) custom attribute value,
+                       "deleted": (boolean) deleted from live campaign, 
+                    },
+                    ...
+                ]
+            }
+        ]
+    }
 }
 ```
 

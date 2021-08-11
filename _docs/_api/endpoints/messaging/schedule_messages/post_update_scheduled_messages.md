@@ -44,15 +44,13 @@ Authorization: Bearer YOUR-REST-API-KEY
 
 | Parameter | Required | Data Type | Description |
 | --------- | ---------| --------- | ----------- |
-|`schedule_id`|Required|String| The `schedule_id` to update (obtained from the response to create schedule)|
-|`schedule` | Optional | Object | See schedule object |
-|`messages` | Optional | Object | See available message object |
+| `schedule_id` | Required | String | The `schedule_id` to update (obtained from the response to create schedule). |
+|`schedule` | Optional | Object | See [schedule object]({{site.baseurl}}/api/objects_filters/schedule_object/). |
+|`messages` | Optional | Object | See [available message objects](#available-message-objects), below. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
 
-### Request Components
-- [Schedule Object]({{site.baseurl}}/api/objects_filters/schedule_object/)
 
-### Available Messaging Objects
+### Available Messaging Objects {#available-message-objects}
 You can use these objects in the [request body](#request-body) above.
 
 - [Android Objects]({{site.baseurl}}/api/objects_filters/android_objects/)

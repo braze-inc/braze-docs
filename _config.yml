@@ -56,7 +56,6 @@ github_icon: 'GitHub-Mark-32px.png'
 
 plugins_dir: ["./_plugins"]
 
-
 # Collections directory
 collections_dir: _docs
 
@@ -175,6 +174,10 @@ permalink: ./:collection/:path/
 #permalink: /:platform/:nav_title/
 permalink_custom_vars: ['nav_title']
 
+# List of pages(path) to auto expand
+nav_expand_list:
+  - '/developer_guide/platform_integration_guides'
+
 # Don't serve non-jekyll files
 exclude: [
   'app','bin','db','lib','log','test','tmp','vendor',
@@ -224,9 +227,6 @@ algolia:
       - collection,tags
       - platform
       - channel
-    customRanking:
-      - desc(custom_ranking)
-      - desc(search_rank)
   extensions_to_index:
     - html
     - md

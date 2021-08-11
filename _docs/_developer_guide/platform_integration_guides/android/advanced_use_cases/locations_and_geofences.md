@@ -71,7 +71,7 @@ If you have not yet enabled Braze location collection, update your `braze.xml` f
 Starting with Braze Android SDK version 3.6.0 Braze location collection is disabled by default.
 {% endalert %}
 
-Braze geofences are enabled if Braze location collection is enabled. If you would like to opt-out of our default location collection but still want to use geofences, it can be enabled selectively by setting the value of key `com_appboy_geofences_enabled` to `true` in `braze.xml`, independently of the value of `com_appboy_enable_location_collection`. 
+Braze geofences are enabled if Braze location collection is enabled. If you would like to opt-out of our default location collection but still want to use geofences, it can be enabled selectively by setting the value of key `com_appboy_geofences_enabled` to `true` in `braze.xml`, independently of the value of `com_appboy_enable_location_collection`.
 
 ```xml
 <bool name="com_appboy_geofences_enabled">true</bool>
@@ -109,7 +109,7 @@ See [`RuntimePermissionUtils.java`][4] in our sample application for an example 
 
 ```java
 public class RuntimePermissionUtils {
-  private static final String TAG = AppboyLogger.getAppboyLogTag(RuntimePermissionUtils.class);
+  private static final String TAG = BrazeLogger.getBrazeLogTag(RuntimePermissionUtils.class);
   public static final int DROIDBOY_PERMISSION_LOCATION = 40;
 
   public static void handleOnRequestPermissionsResult(Context context, int requestCode, int[] grantResults) {
@@ -147,7 +147,7 @@ public class RuntimePermissionUtils {
 
 ```kotlin
 object RuntimePermissionUtils {
-  private val TAG = AppboyLogger.getAppboyLogTag(RuntimePermissionUtils::class.java!!)
+  private val TAG = BrazeLogger.getBrazeLogTag(RuntimePermissionUtils::class.java!!)
   val DROIDBOY_PERMISSION_LOCATION = 40
 
   fun handleOnRequestPermissionsResult(context: Context, requestCode: Int, grantResults: IntArray) {
@@ -213,7 +213,7 @@ if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
 ```kotlin
 if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
   if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.Q) {
-    val hasAllPermissions = PermissionUtils.hasPermission(applicationContext, Manifest.permission.ACCESS_BACKGROUND_LOCATION) 
+    val hasAllPermissions = PermissionUtils.hasPermission(applicationContext, Manifest.permission.ACCESS_BACKGROUND_LOCATION)
         && PermissionUtils.hasPermission(applicationContext, Manifest.permission.ACCESS_FINE_LOCATION)
     if (!hasAllPermissions) {
       // Request both BACKGROUND and FINE location permissions
@@ -282,14 +282,14 @@ Braze Geofences are manually requested via the [`requestGeofences()`][11] method
 {% tab JAVA %}
 
 ```java
-Appboy.getInstance(getApplicationContext()).requestGeofences(latitude, longitude);
+Braze.getInstance(getApplicationContext()).requestGeofences(latitude, longitude);
 ```
 
 {% endtab %}
 {% tab KOTLIN %}
 
 ```kotlin
-Appboy.getInstance(applicationContext).requestGeofences(33.078947, -116.601356)
+Braze.getInstance(applicationContext).requestGeofences(33.078947, -116.601356)
 ```
 
 {% endtab %}

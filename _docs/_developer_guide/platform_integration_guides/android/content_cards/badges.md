@@ -16,14 +16,14 @@ You can [request the number of unread cards][1] at any time by calling:
 {% tab JAVA %}
 
 ```java
-Appboy.getInstance(context).getContentCardUnviewedCount();
+Braze.getInstance(context).getContentCardUnviewedCount();
 ```
 
 {% endtab %}
 {% tab KOTLIN %}
 
 ```kotlin
-Appboy.getInstance(context).contentCardUnviewedCount
+Braze.getInstance(context).contentCardUnviewedCount
 ```
 
 {% endtab %}

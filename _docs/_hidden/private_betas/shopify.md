@@ -1,6 +1,6 @@
 ---
 nav_title: Shopify
-alias: /partners/shopify/
+permalink: /partners/shopify/
 description: ""
 page_type: partner
 hidden: true
@@ -134,7 +134,7 @@ For the Shopify Abandoned Checkout event, you are also able to segment and Liqui
 
 ### Campaign and Canvas Triggering 
 
-With Shopify custom events in Braze, you can trigger Canvases or Campaigns like you normally would with any other [custom event]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events/#custom-event-storage). Here is an example below of a Canvas that triggers off of the Shopify Abandoned Checkout event within the Canvas entry criteria. 
+With Shopify custom events in Braze, you can trigger Canvases or campaigns like you normally would with any other [custom event]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events/#custom-event-storage). Here is an example below of a Canvas that triggers off of the Shopify Abandoned Checkout event within the Canvas entry criteria. 
 
 ![Shopify][5]
 

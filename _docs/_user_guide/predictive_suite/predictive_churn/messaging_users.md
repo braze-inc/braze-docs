@@ -10,7 +10,7 @@ Tool:
 # Messaging Users {#what-do-next}
 
 {% alert note %}
-Preview and Demo Predictions will not allow users to be targeted for messaging, and the __Create Segment__, and __Create Campaign__ buttons will be disabled. To purchase this functionality, contact your Account Manager.
+Preview and Demo Predictions will not allow users to be targeted for messaging, and the __Create Segment__, and __Create Campaign__ buttons will be disabled. To purchase this functionality, contact your account manager.
 {% endalert %}
 
 ## Implementing Filters {#filters}
@@ -19,11 +19,11 @@ Once you've decided what range of Churn Risk Score or Category you want to targe
 
 ![Churn Filters][5]
 
-You can also use filters in campaigns or segments to target the users according to that threshold. You can filter for users by Churn Score or Churn Category in Campaigns, Canvas, and Segments, just like you use any other filter in Braze.
+You can also use filters in campaigns or segments to target the users according to that threshold. You can filter for users by Churn Score or Churn Category in campaigns, Canvas, and Segments, just like you use any other filter in Braze.
 
 ## Strategic Considerations
 
-Now that you've identified and selected the group of users at risk of churn that you feel require some incentives or a new messaging series to keep them active and engaged, what do you do? Do you just add them proactively to your current passive user series? Or do you build out a brand new series of Canvases and Campaigns? 
+Now that you've identified and selected the group of users at risk of churn that you feel require some incentives or a new messaging series to keep them active and engaged, what do you do? Do you just add them proactively to your current passive user series? Or do you build out a brand new series of Canvases and campaigns? 
 
 __Here are a few ideas to consider:__
 

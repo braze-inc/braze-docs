@@ -45,7 +45,7 @@ This event occurs when a specific custom event is triggered. Use this to track w
   "user_id": (string) Braze user id of the user,
   "external_user_id": (string) External ID of the user,
   "time": (int) UTC time of the event in seconds since the epoch,
-  "timezone": (string) IANA timezone of the user at the time of the event,
+  "timezone": (string) IANA time zone of the user at the time of the event,
   "name": (string) name of the custom event,
   "app_id": (string) id for the app on which the user action occurred,
   "platform": (string) platform of the device (iOS, Android, web, etc.),
@@ -63,6 +63,10 @@ This event occurs when a specific custom event is triggered. Use this to track w
 For `ad_id`, `ad_id_type` and `ad_tracking_enabled`, you will need to explicitly collect the iOS idfa and Android Google adid through the native sdks. Learn more about them here: [iOS]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/initial_sdk_setup/optional_idfa_collection/#optional-idfa-collection/), [Android]({{site.baseurl}}/developer_guide/platform_integration_guides/android/initial_sdk_setup/optional_gaid_collection/#optional-google-advertising-id).
 
 _Update noted in June 2020._
+{% endalert %}
+
+{% alert note %}
+If you are using Kafka to ingest [Currents]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/) data, reach out to your Customer Success Manager or Account Manager to enable the feature flipper for sending `ad_id`.
 {% endalert %}
 
 {% endapi %}
@@ -108,6 +112,10 @@ For `ad_id`, `ad_id_type` and `ad_tracking_enabled`, you will need to explicitly
 _Update noted in June 2020._
 {% endalert %}
 
+{% alert note %}
+If you are using Kafka to ingest [Currents]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/) data, reach out to your Customer Success Manager or Account Manager to enable the feature flipper for sending `ad_id`.
+{% endalert %}
+
 {% endapi %}
 
 
@@ -132,7 +140,7 @@ When a user starts their first session, both a `FirstSession` and a `SessionStar
   "user_id": (string) Braze user id of the user,
   "external_user_id": (string) External ID of the user,
   "time": (int) UTC time of the event in seconds since the epoch,
-  "timezone": (string) IANA timezone of the user at the time of the event,
+  "timezone": (string) IANA time zone of the user at the time of the event,
   "session_id": (string) id of the session,
   "app_id": (string) id for the app on which the user action occurred,
   "platform": (string) platform of the device (iOS, Android, web, etc.),
@@ -243,6 +251,10 @@ This event is triggered when a user visits a specified location. Use this to tra
 For `ad_id`, `ad_id_type` and `ad_tracking_enabled`, you will need to explicitly collect the iOS idfa and Android Google adid through the native sdks. Learn more about them here: [iOS]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/initial_sdk_setup/optional_idfa_collection/#optional-idfa-collection/), [Android]({{site.baseurl}}/developer_guide/platform_integration_guides/android/initial_sdk_setup/optional_gaid_collection/#optional-google-advertising-id).
 
 _Update noted in June 2020._
+{% endalert %}
+
+{% alert note %}
+If you are using Kafka to ingest [Currents]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/) data, reach out to your Customer Success Manager or Account Manager to enable the feature flipper for sending `ad_id`.
 {% endalert %}
 
 {% endapi %}

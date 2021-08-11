@@ -55,8 +55,7 @@ If users will simply have to update the app and it’s not a new app being relea
 
 By creating a new app group, all of the historical data and profiles from the older version of your app will not exist in this new app group. So, once existing users upgrade to the new app version, they’ll have a new profile created that does not contain any of the behavioral data from the old app. Additionally, this user will exist on both the old app group and the new app group and can potentially have the same push token. If this happens, it can lead to users receiving an “upgrade now” marketing message intended for only old app group users, even if they’ve already upgraded.
 
-The best way to go about this if you want to separate the old vs. new app would be to create a new app within the same app group. This way, you can effectively target only users on the new version by selecting that app as you create your segments. If you did want to message users who are still on the old version, you can select the old app and filter the previous app version.
-
+The best way to go about this if you want to separate the old vs. new app would be to create a new app within the same app group. This way, you can effectively target only users on the new version by selecting that app as you create your segments. If you did want to message users who are still on the old version, you can use [Liquid to select the old app and filter the previous app version](https://www.youtube.com/watch?v=Dv__RAUwamA).
 
 [3]: {% image_buster /assets/img_archive/add_appgroup.png %}
 [4]: {% image_buster /assets/img_archive/new_app_landing.png %} "Braze Settings"

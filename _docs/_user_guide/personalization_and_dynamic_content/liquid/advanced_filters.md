@@ -14,8 +14,11 @@ description: "This reference article lists advanced filters, examples, and how t
 `md5` | returns md5 encoded string | `{{'hey' | md5}}` | 6057f13c496ecf7fd777ceb9e79ae285 |
 `sha1` | returns sha1 encoded string | `{{'hey' | sha1}}` | 7f550a9f4c44173a37664d938f1355f0f92a47a7 |
 `sha2` | returns sha2 encoded string | `{{'hey' | sha2}}` | fa690b82061edfd2852629aeba8a8977b57e40fcb77d1a7a28b26cba62591204 |
-`base64` | encodes string into base64 | `{{'blah' | base64_encode}}` | YmxhaA== |
-`hmac_sha1` | returns hmac-sha1 encoded string | `{{'hey' | hmac_sha1: 'secret_key'}}` | 2a3969bed25bfeefb00aca4063eb9590b4df8f0e |
+`base64` | return base64 encoded string | `{{'blah' | base64_encode}}` | YmxhaA== |
+`hmac_sha1_hex` (previously `hmac_sha1`) | returns hmac-sha1 signature, encoded as a hex string | `{{'hey' | hmac_sha1_hex: 'secret_key'}}` | 2a3969bed25bfeefb00aca4063eb9590b4df8f0e |
+`hmac_sha1_base64` | returns hmac-sha1 signature, encoded as a base64 string | `{{'hey' | hmac_sha1_base64: 'secret_key'}}` | KjlpvtJb/u+wCspAY+uVkLTfjw4= |
+`hmac_sha256_hex` | returns hmac-sha256 signature, encoded as a hex string | `{{'hey' | hmac_sha256_hex: 'secret_key'}}` | 8df897f8da3d7992fe57c8dbc6f27578cfbf2dcc4d0fbb4000b8c924841d508e |
+`hmac_sha256_base64` | returns hmac-sha256 signature, encoded as a base64 string | `{{'hey' | hmac_sha256_base64: 'secret_key'}}` | jfiX+No9eZL+V8jbxvJ1eM+/LcxND7tAALjJJIQdUI4= |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
 
 ## URL Filters

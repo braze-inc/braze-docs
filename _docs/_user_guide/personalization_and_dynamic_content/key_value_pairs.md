@@ -120,7 +120,7 @@ A silent push notification is a push notification containing no alert message or
 
 Marketers should test that silent push notifications trigger expected behavior before sending them to their app's users. Once you compose your [iOS][2] or [Android][13] silent push notification, ensure that you only target a test user by filtering on [external user ID][14] or [email address][15].
 
-Upon campaign launch, you should check that you have not received any visible push notification on your test device. For instructions on how to check if your silent push notification has updated your app as intended, contact your dedicated success manager or [success@braze.com](mailto:success@braze.com).
+Upon campaign launch, you should check that you have not received any visible push notification on your test device.
 
 {% alert note %}
 The iOS operating system may [gate notifications]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/push_notifications/silent_push_notifications/#ios-silent-notifications-limitations) for some features (Uninstall Tracking, Geofences, and Push Stories). Please note that if you are experiencing difficulties with these features, the iOS's silent notifications gate might be the cause.

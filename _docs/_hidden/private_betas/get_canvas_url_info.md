@@ -3,7 +3,7 @@ nav_title: "GET: Retrieve Link Aliases (Canvas)"
 layout: api_page
 page_type: reference
 hidden: true
-alias: /get_canvas_link_alias/
+permalink: /get_canvas_link_alias/
 
 platform: API
 channel:
@@ -28,9 +28,9 @@ Use this endpoint to list the link alias set in a particular Email Canvas step.
 
 | Parameter | Required | Data Type | Description |
 |---|---|---|---|
-| `canvas_step_id`  | Yes | String | Canvas Step API identifier. |
-| `message_variation_id `  |  Yes | String | Message variant API identifier (for the Email message variant in that step). |
-| `includes_link_id` | No | String | A specific link identifier (as assigned by Braze) or `null`. This is used to filter the results by a specific `link_id`. |
+| `canvas_step_id`  | Required | String | See [Canvas Step API identifier]({{site.baseurl}}/api/identifier_types/#canvas-api-identifier). |
+| `message_variation_id `  |  Required | String | Message variant API identifier (for the Email message variant in that step). You can find this by clicking **Analyze Variants** on the Canvas details page for a Canvas. |
+| `includes_link_id` | Optional | String | A specific link identifier (as assigned by Braze) or `null`. This is used to filter the results by a specific `link_id`. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 }
 
 ## Example Request

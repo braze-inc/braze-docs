@@ -109,7 +109,7 @@ dimension: external_id {
 
 ![Send Looker Action][13]
 
-If the export was correctly sent, then `looker_export` should appear in the user's profile as a Custom Attribute with the value you entered in the Action.
+If the export was correctly sent, then `looker_export` should appear in the user's profile as a custom attribute with the value you entered in the Action.
 
 ![Custom Attribute in Braze from Looker][14]
 

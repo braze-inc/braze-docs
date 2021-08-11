@@ -1,7 +1,7 @@
 ---
 nav_title: June
 page_order: 7
-
+no_index: true
 page_type: update
 description: "This article contains release notes for June 2021."
 ---
@@ -10,7 +10,7 @@ description: "This article contains release notes for June 2021."
 
 ## Conversion Correlation
 
-This guide covers the [Conversion Correlation]({{site.baseurl}}/user_guide/engagement_tools/testing/conversion_correlation/) analysis on the Campaign Analytics page, which gives you insight into what user attributes and behaviors help or hurt the outcomes you set for campaigns. Covered is an overview of the analysis, what is checked, when it's available, and how Braze checks for significance.
+This guide covers the [Conversion Correlation]({{site.baseurl}}/user_guide/engagement_tools/testing/conversion_correlation/) analysis on the **Campaign Analytics** page, which gives you insight into what user attributes and behaviors help or hurt the outcomes you set for campaigns. Covered is an overview of the analysis, what is checked, when it's available, and how Braze checks for significance.
 
 ## Global Control Group Report
 

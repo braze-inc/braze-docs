@@ -1,6 +1,6 @@
 ---
 nav_title: View PII User permission
-alias: /view_pii/
+permalink: /view_pii/
 hidden: true
 ---
 

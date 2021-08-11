@@ -17,7 +17,7 @@ channel:
 
 # Creating a Content Card
 
-You can create a Content Card using the Braze platform using Campaigns and Canvases.
+You can create a Content Card using the Braze platform using campaigns and Canvases.
 
 ## Content Card Creation in Campaigns and Canvases
 {% tabs %}
@@ -28,7 +28,7 @@ Navigate to the Campaign section of the Dashboard and click __Create Campaign__ 
 
 ![Create Your Content Card]({% image_buster /assets/img/create-cc.gif %})
 
-1. Name your Campaign something clear and meaningful.<br><br>
+1. Name your campaign something clear and meaningful.<br><br>
 2. Add __Teams__ and __Tags__, as necessary.<br><br>
 3. Add and name as many Variants as you need for this campaign.
   - You can choose different platforms, message types, and layouts for each of your added Variants.
@@ -175,7 +175,7 @@ If you need to remove old cards, you must stop the campaign to do so. This can b
 
 Some Content Cards are only relevant up until a user performs some action. For example, a card nudging users to activate their account shouldn't be shown once the user completes that onboarding task.
 
-Within a Campaign or Canvas Message, you can optionally add a __Removal Event__ to specify which Custom events or Purchases should cause previously sent cards to be removed from that user's feed; triggered via SDK or REST API.
+Within a campaign or Canvas Message, you can optionally add a __Removal Event__ to specify which custom events or purchases should cause previously sent cards to be removed from that user's feed; triggered via SDK or REST API.
 
 {% alert tip %}
 You can specify multiple custom events and purchases that should remove a card from a user's feed. Once **any** of those actions are performed by the user, any existing cards sent by the campaign's cards will be removed. Any future eligible cards will continue to be sent according to the message's schedule.

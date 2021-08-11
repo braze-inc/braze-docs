@@ -37,11 +37,11 @@ After adding the testing filters to your test segment, you can verify that you'v
 
 >  Exporting the segment's User Data to CSV will give you the most accurate picture of who falls under that segment. The "Preview" tab is only a sample of the users in the segment - [see more details about this in our FAQ][9] - and therefore may appear to have not selected all intended members.
 
-Once you've confirmed that you're only targeting the users that you want to receive the test message, you can either select this segment in an existing campaign that you want to test or click the "Start Campaign" button in the segment menu.
+Once you've confirmed that you're only targeting the users that you want to receive the test message, you can either select this segment in an existing campaign that you want to test or click **Start Campaign** in the segment menu.
 
 ## Sending a Test Push Notification or In-App Messages <a class="margin-fix" name="push-inapp-test"></a>
 
-To send test push notifications and/or in-app messages, you need to target your previously created test segment. Begin by creating your campaign and following the usual steps. When you reach the 'Target Users' section, select your test segment as shown below.
+To send test push notifications and/or in-app messages, you need to target your previously created test segment. Begin by creating your campaign and following the usual steps. When you reach the **Target Users** step, select your test segment as shown below.
 
 ![Test Segment][11]
 

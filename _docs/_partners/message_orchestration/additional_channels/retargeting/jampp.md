@@ -31,7 +31,7 @@ Requirement   | Source | Description
 Android App ID | Braze | Your unique application identifier for Android (i.e. “com.example”).
 iOS App ID | Braze | Your unique application identifier for iOS (i.e. “012345678”).
 Enable IDFA Collection in Braze SDK | Braze | [IDFA Collection][4] is optional within the Braze SDK and disabled by default.
-Collection of Google Advertising ID via Custom Attribute | Google | Google Advertising ID collection is optional for customers and can be collected as a [custom attribute][5].
+Collection of Google Advertising ID via custom attribute | Google | Google Advertising ID collection is optional for customers and can be collected as a [custom attribute][5].
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
 
 {% alert important %}
@@ -42,7 +42,7 @@ Braze does not automatically collect the device IDFA/AAID so you must store thes
 
 ### Step 1: Create a Webhook Template in Braze
 
-You can create this from the `Templates & Media` section, or create a new Webhook Campaign in Braze.
+You can create this from the `Templates & Media` section, or create a new webhook campaign in Braze.
 
 ![Jampp_Webhook_Template][6]
 

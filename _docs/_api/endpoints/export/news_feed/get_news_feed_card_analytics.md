@@ -24,17 +24,11 @@ This endpoint allows you to retrieve a daily series of engagement stats for a ca
 
 | Parameter   | Required | Data Type | Description |
 | ----------- | -------- | --------- | ----------- |
-| `card_id`   | Yes      | String    | Card API identifier |
-| `length`    | Yes      | Integer   | Max number of units (days or hours) before ending_at to include in the returned series - must be between 1 and 100 inclusive |
-| `unit`      | No       | String   | Unit of time between data points - can be "day" or "hour" (defaults to "day")  |
-| `ending_at` | No       | DateTime (ISO 8601 string) | Date on which the data series should end - defaults to time of the request |
+| `card_id`   | Required      | String    | See [Card API identifier]({{site.baseurl}}/api/identifier_types/). <br><br> The `card_id` for a given card can be found in the **Developer Console** page and on the card details page within your dashboard, or you can use the [News Feed List Endpoint]({{site.baseurl}}/api/endpoints/export/news_feed/get_news_feed_cards/).|
+| `length`    | Required      | Integer | Max number of units (days or hours) before `ending_at` to include in the returned series. Must be between 1 and 100 (inclusive). |
+| `unit`      | Optional       | String   | Unit of time between data points. Can be `day` or `hour`, defaults to `day`.  |
+| `ending_at` | Optional | Datetime <br>([ISO-8601](https://en.wikipedia.org/wiki/ISO_8601) string) | Date on which the data series should end. Defaults to time of the request. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
-
-### Request Components
-- [Card ID]({{site.baseurl}}/api/identifier_types/)
-- [News Feed List]({{site.baseurl}}/api/endpoints/export/news_feed/get_news_feed_cards/)
-<br><br>
-The `card_id` for a given card can be found in the Developer Console page and on the card details page within your dashboard or you can use the [News Feed List Endpoint](#news-feed-list).
 
 ## Example Request
 {% raw %}

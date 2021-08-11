@@ -66,20 +66,20 @@ You can find your Canvas ID one of two ways:
 
 ## Campaign API Identifier
 
-A [Campaign]({{site.baseurl}}/user_guide/engagement_tools/campaigns/) API Identifier or Campaign ID is an out-of-the-box key by Braze for a given campaign within the Dashboard. Campaign IDs are unique to each campaign and can be used to reference campaigns through the API. 
+A [Campaign]({{site.baseurl}}/user_guide/engagement_tools/campaigns/) API Identifier or campaign ID is an out-of-the-box key by Braze for a given campaign within the Dashboard. Campaign IDs are unique to each campaign and can be used to reference campaigns through the API. 
 
-Note that if you have a Campaign that has variants, there exists an overall Campaign ID as well as individual variant Campaign IDs nested under the main campaign. 
+Note that if you have a campaign that has variants, there is both an overall campaign ID as well as individual variant campaign IDs nested under the main campaign. 
 
 ### Where can I find it?
-You can find your Campaign ID one of two ways:
+You can find your campaign ID one of two ways:
 
-1. In the Dashboard, open up "Campaigns" under "Engagement" and select a pre-existing Campaign. If the Campaign you want does not exist yet, create one and save it. At the bottom of the individual campaign page, you will be able to find your Campaign API Identifier.<br><br>
-2. Braze offers an "Additional API Identifiers" search, here you can quickly look up specific identifiers. It can be found at the bottom of the "API settings" within the "Developer Console" page.
+1. In the Dashboard, open up **Campaigns** under **Engagement** and select a pre-existing campaign. If the campaign you want does not exist yet, create one and save it. At the bottom of the individual campaign page, you will be able to find your **Campaign API Identifier**.<br><br>
+2. Braze offers an **Additional API Identifiers** search, here you can quickly look up specific identifiers. You can find this at the bottom of the **API Settings** tab in the **Developer Console**.
 
 ### What can it be used for?
 - Track analytics on a specific message
-- Grab high-level aggregate stats on Campaign performance
-- Grab details on a specific Campaign
+- Grab high-level aggregate stats on campaign performance
+- Grab details on a specific campaign
 - With Currents to bring in user-level data for a "bigger picture" approach to campaigns
 - With API trigger delivery in order to collect statistics for transactional messages
 

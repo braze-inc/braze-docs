@@ -15,11 +15,11 @@ page_type: partner
 
 We offer [both](#integration-options) a side-by-side SDK integration for your Android, iOS, and web applications and a server-to-server integration for your backend services so that you can start building richer user profiles.
 
-If you're looking for information on the Currents integration with Segment, [click here]({{site.baseurl}}/partners/data_and_infrastructure_agility/customer_data_platform/segment/segment_for_currents/). If you're looking for more information about [Segment Personas]({{site.baseurl}}/partners/data_and_infrastructure_agility/customer_data_platform/segment/segment_personas/), which allows you to build segments in Segment and pass over to Braze as a Custom Attribute against a user profile.
+If you're looking for information on the Currents integration with Segment, [click here]({{site.baseurl}}/partners/data_and_infrastructure_agility/customer_data_platform/segment/segment_for_currents/). If you're looking for more information about [Segment Personas]({{site.baseurl}}/partners/data_and_infrastructure_agility/customer_data_platform/segment/segment_personas/), which allows you to build segments in Segment and pass over to Braze as a custom attribute against a user profile.
 
 ## Setup Overview
 
-To get going with your Segment/Braze integration:
+To get going with your Segment/Braze integration,
 1. Take note of and prepare for your integration by [adhering to the requirements and prerequisites](#prerequisites).
 2. Set up [Braze as a Destination](#connection-settings) in accordance with [your chosen integration type](#integration-options).
 3. If you're a new-to-Braze customer, you can relay historical data to Braze using [Segment Replays](#segment-replays).
@@ -42,7 +42,7 @@ To get going with your Segment/Braze integration:
 | Name| Description |
 |---|---|
 | App Identifier| Previously called the API Key. Found in the [Developer Console](https://dashboard.braze.com/app_settings/developer_console) under the `API Settings` tab. |
-| REST API Key| Previously called the "App Group Identifier". Found in the [Developer Console](https://dashboard.braze.com/app_settings/developer_console) under the `API Settings` tab. <br> <br> __The REST API Key is not required for the Side-by-Side Integration.__ |
+| REST API Key| Previously called the "App Group Identifier". Found in the [Developer Console](https://dashboard.braze.com/app_settings/developer_console) under the `API Settings` tab. |
 | API Endpoint| Find and enter your [Braze SDK Endpoint]({{site.baseurl}}/user_guide/administrative/access_braze/braze_instances/) in our documentation. <br> <br> Format without the `https` as `sdk.iad-01.braze.com`. |
 | Appboy Datacenter| Your Braze cluster. Select and input your [Braze Instance]({{site.baseurl}}/user_guide/administrative/access_braze/braze_instances/) from the drop down. |
 | Log Purchase when Revenue is present | Choose when to log purchases. |
@@ -106,16 +106,12 @@ To complete the side-by-side integration, please refer to Segment's detailed ins
 {% endtab %}
 {% tab Web or Javascript %}
 
-See and set up [mappings](#methods) to Segment's SDK for [Web / Analytics.js (Segment's JavaScript SDK)](https://github.com/segment-integrations/analytics.js-integration-appboy) on Braze's Github.
+See and set up [mappings](#methods) to Segment's SDK for [Web / Analytics.js (Segment's JavaScript SDK)](https://github.com/segmentio/analytics.js-integrations/tree/master/integrations/appboy) on Braze's Github.
 
-For Braze's Web SDK, [Segment's Analytics.js library](https://github.com/segment-integrations/analytics.js-integration-appboy) dynamically pulls in and initializes our Web SDK when you add Braze as a destination on your Segment dashboard. However, to use Braze's browser notification capabilities, please refer to Segment's [Web](https://segment.com/docs/connections/destinations/catalog/braze/#web){:target="_blank"} documentation.
+For Braze's Web SDK, [Segment's Analytics.js library](https://github.com/segmentio/analytics.js-integrations/tree/master/integrations/appboy) dynamically pulls in and initializes our Web SDK when you add Braze as a destination on your Segment dashboard. However, to use Braze's browser notification capabilities, please refer to Segment's [Web](https://segment.com/docs/connections/destinations/catalog/braze/#web){:target="_blank"} documentation.
 
 {% endtab %}
 {% endtabs %}
-
-{% alert important %}
-For the side-by-side integration, inputting the "Braze REST API Key" into your [Braze's Connection Settings](#connection-settings) in the Segment Dashboard is **not** necessary.
-{% endalert %}
 
 ### Server-to-Server Integration
 
@@ -141,7 +137,7 @@ Currently, Braze's server-to-server integration with Segment __does not__ suppor
 
 ## Step 2B: Map Methods {#methods}
 
-Braze supports the [Identify](https://segment.com/docs/spec/identify/){:target="_blank"}, [Track](https://segment.com/docs/spec/track/){:target="_blank"}, and [Page](https://segment.com/docs/connections/sources/catalog/libraries/website/javascript/#page){:target="_blank"} (web) Segment methods; however, our REST APIs require you to include a [user ID][41]{:target="_blank"} when making these calls. Braze also supports Custom Attribute mapping using Segment's [Group](https://segment.com/docs/spec/group/){:target="_blank"} method.
+Braze supports the [Identify](https://segment.com/docs/spec/identify/){:target="_blank"}, [Track](https://segment.com/docs/spec/track/){:target="_blank"}, and [Page](https://segment.com/docs/connections/sources/catalog/libraries/website/javascript/#page){:target="_blank"} (web) Segment methods; however, our REST APIs require you to include a [user ID][41]{:target="_blank"} when making these calls. Braze also supports custom attribute mapping using Segment's [Group](https://segment.com/docs/spec/group/){:target="_blank"} method.
 
 ### Identify
 
@@ -188,7 +184,7 @@ When you _track_ an event, we will record that event as a [custom event][13] usi
 | [Track with Product](https://segment.com/docs/spec/track/){:target="_blank"} | Logged as a [Purchase Event]({{site.baseurl}}/developer_guide/platform_integration_guides/web/analytics/logging_purchases/). | `analytics.track("purchase", {products: [product_id: "ab12", price: 19]});` > `appboy.logPurchase("ab12", 19);` |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
 
-#### Order Completed
+#### Order Completed {#order-completed}
 
 When you _track_ an event with the name `Order Completed` using the format described in Segment's [ECommerce API][4]{:target="_blank"}, we will record the products you've listed as [purchases][28].
 
@@ -208,7 +204,7 @@ Most of your [Overview][27] metrics (lifetime sessions, MAU, DAU, Stickiness, Da
 
 You can view your data in the [Custom Events][22] or [Revenue][28] pages, or by [creating a segment][23]. The **Custom Events** page of the dashboard allows you to view custom event counts over time. Note that you will not be able to use [formulas][24] that include MAU and DAU statistics.
 
-If you're sending purchase data to Braze (see [Completed Order](#completed-order)), the [Revenue][28] page allows you to view data on revenue or purchases over specific periods of time or your app's total revenue.
+If you're sending purchase data to Braze (see [Order Completed](#order-completed)), the [Revenue][28] page allows you to view data on revenue or purchases over specific periods of time or your app's total revenue.
 
 [Creating a segment][26] allows you to filter your users based on custom event data and custom attribute data.
 

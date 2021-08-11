@@ -24,9 +24,7 @@ tool:
 On iOS SDK versions 3.13.0+, due to a change in how the SDK downloads images, a thumbnail of the first image will not show on the condensed view of the push. You should ensure that your message copy prompts users to expand the push to see the images.
 {% endalert %}
 
-## Prerequisites
-
-Users must update to the latest version of Android (version: 2.2.0+) and iOS (version: 3.2.0+).
+__Prerequisites__: Users must update to the latest version of Android(version:2.2.0+) and iOS (version: 3.2.0+)
 
 ## Dashboard Changes
 
@@ -53,7 +51,7 @@ If you are pulling in images with [Connected Content]({{site.baseurl}}/user_guid
 
 ### Push Story Segmentation
 
-When you create a Campaign or Canvas, you can filter which users you want to target based on whether they have clicked on a Push Story Page. Then, select the Campaign and the page you want to use to target your users.
+When you create a campaign or Canvas, you can filter which users you want to target based on whether they have clicked on a Push Story Page. Then, select the campaign and the page you want to use to target your users.
 
 ### Push Stories Analytics
 

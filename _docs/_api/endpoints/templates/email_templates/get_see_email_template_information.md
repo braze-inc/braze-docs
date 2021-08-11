@@ -34,7 +34,7 @@ Templates built using the Drag & Drop Editor are not accepted
 
 | Parameter | Required | Data Type | Description |
 |---|---|---|---|
-| `email_template_id`  | Yes | String | Your email template’s API Identifier. |
+| `email_template_id`  | Required | String | See [email template API identifier]({{site.baseurl}}/api/identifier_types/). |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
 
 ### Request Components
