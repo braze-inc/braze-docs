@@ -1,9 +1,10 @@
 ---
 nav_title: Remerge
+article_title: Remerge
 alias: /partners/remerge/
-
 description: "This article outlines the partnership between Braze and Remerge, a purpose-built app for retargeting at scale, arming you with tools to efficiently segment app audiences and retarget users."
 page_type: partner
+search_tag: Partner
 
 ---
 

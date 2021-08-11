@@ -1,9 +1,10 @@
 ---
 nav_title: Bluedot
+article_title: Bluedot
 alias: /partners/bluedot/
-
 description: "This article outlines the partnership between Braze and Bluedot to provide real-time location context of your users."
 page_type: partner
+search_tag: Partner
 
 ---
 

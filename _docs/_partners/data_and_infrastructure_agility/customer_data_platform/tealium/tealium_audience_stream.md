@@ -1,10 +1,11 @@
 ---
 nav_title: Tealium AudienceStream
+article_title: Tealium AudienceStream
 page_order: 2.1
 alias: /partners/tealium_audience_stream/
-
 description: "This article outlines the partnership between Braze and Tealium, a universal data hub that enables you to connect mobile, web, and alternative data to other third-party sources."
 page_type: partner
+search_tag: Partner
 
 ---
 

@@ -1,9 +1,11 @@
 ---
 nav_title: Amperity
+article_title: Amperity
 alias: /partners/amperity/
 description: "This article covers the Braze and Amperity integration. Amperity provides intelligent capabilities across data management unification, analytics and insights, and activation."
 page_type: partner
 page_order: 2.1
+search_tag: Partner
 
 ---
 

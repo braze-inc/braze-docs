@@ -1,15 +1,12 @@
 ---
 nav_title: PassKit
+article_title: PassKit
 alias: /partners/passkit/
-
 description: "This article outlines the partnership between Braze and Passkit. This partnership enables you to extend your mobile reach by integrating Apple Wallet and Google Pay passes into your customers experience."
 page_type: partner
+search_tag: Partner
 
 ---
-
-{% alert important %}
-This partnership is in early access beta. All features may not perform as exactly described. Please reach out to your Braze Account Manager for more information.
-{% endalert %}
 
 # PassKit
 

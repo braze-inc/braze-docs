@@ -1,9 +1,10 @@
 ---
 nav_title: Certona
+article_title: Certona
 alias: /partners/certona/
-
 description: "This article outlines the partnership between Braze and Certona,a real-time, omnichannel personalization solution that offers personalization across the customer lifecycle. Use Certona with Braze's Connected Content partner to easily insert content recommendations across multichannel campaigns."
 page_type: partner
+search_tag: Partner
 
 ---
 

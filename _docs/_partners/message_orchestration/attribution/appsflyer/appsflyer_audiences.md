@@ -1,8 +1,10 @@
 ---
 nav_title: AppsFlyer Audiences
+article_title: AppsFlyer Audiences
 alias: /partners/appsflyer_audiences/
 description: "This page outlines the partnership between Braze and AppsFlyer Audiences, a feature of the AppsFlyer platform that allows you to efficiently build and connect audience segments to partner networks."
 page_type: partner
+search_tag: Partner
 
 ---
 

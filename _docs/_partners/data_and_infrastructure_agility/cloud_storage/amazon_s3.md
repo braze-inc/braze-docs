@@ -1,10 +1,12 @@
 ---
 nav_title: Amazon S3
+article_title: Amazon S3
 alias: /partners/amazon_s3/
 page_order: 1
-
 description: "This article outlines the partnership between Braze and Amazon S3, a highly scalable storage system offered by Amazon Web Services."
 page_type: partner
+search_tag: Partner
+
 ---
 
 # Amazon S3 Integration

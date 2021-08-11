@@ -1,13 +1,14 @@
 ---
 nav_title: Looker
+article_title: Looker
 alias: /partners/looker/
-
 description: "This article outlines the partnership between Braze and Looker, a business intelligence and big-data analytics platform."
 page_type: partner
+search_tag: Partner
 
 ---
 
-# About Looker
+# Looker
 
 > Looker, a business intelligence and big-data analytics platform, enables you to explore, analyze, and share real-time business analytics seamlessly.
 

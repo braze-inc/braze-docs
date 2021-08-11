@@ -1,9 +1,10 @@
 ---
 nav_title: Inkit
+article_title: Inkit
 alias: /partners/inkit/
-
 description: "This article outlines the partnership between Braze and Inkit, which enables you to save time and effort by automating your direct mail campaigns and bring offline customers back online."
 page_type: partner
+search_tag: Partner
 
 ---
 

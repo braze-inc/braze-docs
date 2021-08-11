@@ -1,9 +1,11 @@
 ---
 nav_title: A/B Testing
+article_title: A/B Testing Partners
 layout: partner_page
 page_order: 1
 
 page_type: landing
+search_tag: Partner
 description: "This page lists Braze partners (Alloys) who offer additional A/B testing through their platforms."
 
 partner_api: "https://www.braze.com/api/v1/partners"
