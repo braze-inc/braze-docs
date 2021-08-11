@@ -512,5 +512,5 @@ public static final String DISMISSABLE = "dismissable";
 [3]: {% image_buster /assets/img/cc_implementation/android_message_center.png %}
 [4]: {% image_buster /assets/img/cc_implementation/full_page.png %}
 [5]: {% image_buster /assets/img/cc_implementation/html_webview.png %}
-[6]: {% image_buster /assets/img/cc_implementation/discount2.png %} //todo
+[6]: {% image_buster /assets/img/cc_implementation/android_discount2.png %} //todo
 [7]: {% image_buster /assets/img/cc_implementation/discount.png %}
