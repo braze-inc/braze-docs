@@ -20,9 +20,7 @@ Listed below are the methods across various platforms that are used to log custo
 - [iOS]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/analytics/tracking_custom_events/)
 - [Web]({{site.baseurl}}/developer_guide/platform_integration_guides/web/analytics/tracking_custom_events/)
 - [FireOS]({{site.baseurl}}/developer_guide/platform_integration_guides/fireos/analytics/tracking_custom_events/)
-- **React Native**: 
-    - [Android/FireOS]({{site.baseurl}}/developer_guide/platform_integration_guides/react_native/android_and_fireos/analytics/logging_custom_events/)
-    - [iOS]({{site.baseurl}}/developer_guide/platform_integration_guides/react_native/ios/analytics/logging_custom_events/)
+- [React Native]({{site.baseurl}}/developer_guide/platform_integration_guides/react_native/analytics/#logging-custom-events)
 - [Unity]({{site.baseurl}}/developer_guide/platform_integration_guides/unity/Analytics/logging_custom_events/)
 - [Windows Universal]({{site.baseurl}}/developer_guide/platform_integration_guides/windows_universal/analytics/logging_custom_events/)
 - **Xamarin**: 

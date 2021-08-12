@@ -108,7 +108,6 @@ validurls['/docs/tvos'] = '/docs/developer_guide/platform_integration_guides/tvo
 validurls['/docs/sdk_integration/unity/ios'] = '/docs/developer_guide/platform_integration_guides/unity/ios/sdk_integration/';
 validurls['/docs/sdk_integration/xamarin/ios'] = '/docs/developer_guide/platform_integration_guides/xamarin/ios/sdk_integration/';
 validurls['/docs/cordova/ios'] = '/docs/developer_guide/platform_integration_guides/cordova/ios/initial_sdk_setup/overview/';
-validurls['/docs/react_native/ios'] = '/docs/developer_guide/platform_integration_guides/react_native/ios/sdk_integration/';
 
 validurls['/docs/android/'] = '/docs/developer_guide/platform_integration_guides/android/initial_sdk_setup/android_sdk_integration/';
 validurls['/docs/eclipse_setup/'] = '/docs/developer_guide/platform_integration_guides/android/initial_sdk_setup/android_sdk_integration/#android-sdk-integration';
@@ -118,8 +117,6 @@ validurls['/docs/fireos/'] = '/docs/developer_guide/platform_integration_guides/
 validurls['/docs/ios/'] = '/docs/developer_guide/platform_integration_guides/ios/initial_sdk_setup/overview/';
 validurls['/docs/developer_guide/platform_integration_guides/ios/'] = '/docs/developer_guide/platform_integration_guides/ios/initial_sdk_setup/overview/';
 validurls['/docs/delayed_braze_initialization_ios/'] = '/docs/developer_guide/platform_integration_guides/ios/initial_sdk_setup/cocoapods/#appboysharedinstance-and-swift-nullability';
-validurls['/docs/react_native/android_and_fireos/'] = '/docs/developer_guide/platform_integration_guides/react_native/android_and_fireos/initial_sdk_setup/';
-validurls['/docs/react_native/ios/'] = '/docs/developer_guide/platform_integration_guides/react_native/ios/sdk_integration/';
 validurls['/docs/platform_wide/'] = '/docs/developer_guide/platform_wide/platform_features/';
 validurls['/docs/programmatic_message_sending/'] = '/docs/developer_guide/rest_api/messaging/#messaging';
 validurls['/docs/braze_faqs/'] = '/docs/help/faqs/';
@@ -206,6 +203,8 @@ validurls['/docs/user_guide/personalization_and_dynamic_content/connected_conten
 validurls['/docs/user_guide/personalization_and_dynamic_content/liquid/content_blocks/'] = '/docs/user_guide/engagement_tools/templates_and_media/content_blocks/';
 validurls['/docs/user_guide/personalization_and_dynamic_content/liquid/advanced_use_cases'] = '/docs/user_guide/personalization_and_dynamic_content/liquid/supported_tags/';
 validurls['/docs/user_guide/personalization_and_dynamic_content/liquid/accounting_for_null_attribute_values/'] = '/docs/user_guide/personalization_and_dynamic_content/liquid/conditional_logic/#accounting_for_null_attribute_values/';
+validurls['/docs/user_guide/message_building_by_channel/email/email_reporting/'] = '/docs/user_guide/message_building_by_channel/email/reporting_and_analytics/email_reporting/';
+validurls['/docs/user_guide/message_building_by_channel/email/analytics_glossary/'] = '/docs/user_guide/message_building_by_channel/email/reporting_and_analytics/analytics_glossary/';
 
 validurls['/docs/partners/technology_partners/'] = '/docs/partners/';
 validurls['/docs/partners/technology_partners/data_and_infrastructure_agility/customer_data_platform/segment_for_currents/'] = '/docs/partners/data_and_infrastructure_agility/customer_data_platform/segment_for_currents/';

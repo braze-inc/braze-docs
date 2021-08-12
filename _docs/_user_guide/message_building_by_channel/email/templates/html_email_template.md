@@ -1,5 +1,5 @@
 ---
-nav_title: Upload an HTML Email Template
+nav_title: Upload an Email Template
 platform: Message_Building_and_Personalization
 subplatform: Email
 page_order: 2.1
@@ -16,7 +16,7 @@ channel:
 
 # How to Upload an HTML Email Template
 
-> This article covers how to create, manage, and troubleshoot HTML email templates in the Braze dashboard.
+> This article covers creating, managing, and troubleshooting HTML email templates in the Braze dashboard.
 
 Email messages are great for delivering content to the user on their terms. They are also wonderful tools to re-engage users who may have even uninstalled your app. The Braze dashboard has an email template editor that allows you to create custom-tailored, eye-catching emails and save them for later use in campaigns. You can also [create an Email Template]({{site.baseurl}}/user_guide/message_building_by_channel/email/creating_an_email_template/) using our editor.
 
@@ -56,14 +56,13 @@ There are several email error messages you can receive when uploading an HTML fi
 |Missing HTML| Add HTML file to your ZIP file and try uploading again.|
 |Multiple HTML| Remove one of the HTML files and try uploading again.|
 |Images over 5MB| Reduce the number of images and try uploading again. |
-|Extra Images| You may have additional images in your file that are not referenced in your HTML file. This will not cause a fail error, but those extra images will be discarded. If those images were supposed to be referenced in the HTML file, please check its contents, correct any errors, and then try uploading again.
+|Extra Images| You may have additional images in your file that are not referenced in your HTML file. This will not cause a fail error, but the extra images will be discarded. If those images were supposed to be referenced in the HTML file, please check its contents, correct any errors, and try uploading again.
 |Missing Images| If there are images referenced in your HTML file, but those images are not included in the image folder of the .zip file, you will receive a file error. Inspect your file and correct any errors (like misspellings), or add the missing images to your .zip file and try uploading again.|
 {: .reset-td-br-1 .reset-td-br-2}
 
-
 ### Step 4: Finish and Save Your Template
 
-Be sure to save your template by clicking **Save Template** in the bottom right corner of the editor. You're now ready to use this template in any campaign you choose.
+Be sure to save your template by clicking **Save Template** in the bottom right corner of the editor. You're now ready to use this template in any campaign or Canvas you choose.
 
 {% alert note %}
 If you make any edits to an existing template, those changes will not be reflected in campaigns that were created using previous versions of that template.
@@ -83,8 +82,8 @@ You can [duplicate]({{site.baseurl}}/user_guide/engagement_tools/templates_and_m
 
 For answers to frequently asked questions about email templates, check out our [Email and Link Templates FAQs][10] page.
 
+
 [4]: {% image_buster /assets/img_archive/email_templates4-new.png %}
 [8]: {% image_buster /assets/img_archive/upload_html_template.gif %}
 [9]: {% image_buster /assets/img_archive/step1and2htmluploader.gif %}
 [10]: {{site.baseurl}}/user_guide/message_building_by_channel/email/templates/faq/
-

@@ -22,19 +22,19 @@ Email messages are great for delivering content to your users on their terms. Th
 To see examples of email campaigns, check out our [Case Studies][9].
 
 ## Step 1: Create a New Campaign
-On the **Campaigns** page, click **Create Campaign** and select **Email** as your messaging channel.
 
+On the **Campaigns** page, click **Create Campaign** and select **Email** as your messaging channel.
 ![newcampaign][19]
 
-Give your new campaign a name and optional description. You can also assign [tags][20] to keep track of engagement tactics.  
+## Step 2: Select Your Editing Experience {#step-2-choose-your-template-and-compose-your-email}
 
-## Step 2: Compose Your Email or Use a Template {#step-2-choose-your-template-and-compose-your-email}
+From the campaign wizard, name your email and provide an optional description. You can also assign [tags][20] to keep track of engagement tactics. 
 
-Braze offers basic email templates for a variety of use cases to get you started with creating email campaigns. Click on the appropriate tile to choose an existing email template, [create your own][10], or [upload one from a file][18], and then draft your message.
+Braze offers two editing experiences when creating an email campaign, our [Drag & Drop editor]({{site.baseurl}}/dnd/) or our standard HTML editor. Click on the appropriate tile to select which editing experience you'd prefer. Once selected, you must also select an existing [HTML][10] or [Drag & Drop][10] email template, [upload a template from a file][18] (HTML editor only), or use a blank template.
 
 ![email1][3]
 
-Once you choose a template for your email, you'll see an overview of your email, where you can quickly jump to the fullscreen editor, change your sending info, and view warnings about deliverability or law compliance.
+Once you selected your template, you will see an overview of your email where you can quickly jump to the full-screen editor to draft your email, change your sending info, and view warnings about deliverability or law compliance. 
 
 ![newemailoverview][14]
 
@@ -96,38 +96,35 @@ You can schedule your campaigns against three types of delivery:
 - Action-Based (sending when your users perform specified actions), and
 - API-Triggered (sending according to an API request).
 
-
-
 {% tabs %}
-  {% tab Scheduled Delivery %}
+{% tab Scheduled Delivery %}
 Scheduled Delivery allows you to specify the time at which you want the message to send, either immediately or at a future time (you can also consider local time in your scheduling). You can also use [Intelligent Timing][21] to send the message when the user is most likely to engage. Braze makes this calculation based on a statistical analysis of the user's interactions with your app.
 
 Messages can also be configured to recur daily, weekly (optionally on specific days), or monthly.
 
 Unless you check **Allow users to become re-eligible to receive campaign**, each user will only receive the contents of a campaign once, and only new users that meet the criteria will receive the campaign on subsequent deliveries.
 
-
 ![Schedule]({% image_buster /assets/img_archive/schedule_new.png %}){: height="80%"" width="80%"}
 
-  {% endtab %}
-  {% tab Action-Based Delivery %}
+{% endtab %}
+{% tab Action-Based Delivery %}
 
-  Action-Based Delivery allows you to specify the time a message will send after a user takes a particular action (selected from the __New Trigger Action__ dropdown.)
+Action-Based Delivery allows you to specify the time a message will send after a user takes a particular action (selected from the __New Trigger Action__ dropdown.)
 
 ![Action]({% image_buster /assets/img_archive/action_delivery_new.png %}){: height="80%"" width="80%"}
 
-  {% alert note %}
-  When the trigger action is set to "Interact With Campaign", selecting a "Receive" option as the interaction will cause your new campaign to trigger as soon as Braze marks the selected campaign as sent, even if that message bounces or fails to be delivered.
-  {% endalert %}
+{% endtab %}
+{% tab API-Triggered Delivery %}
 
-  {% endtab %}
-  {% tab API-Triggered Delivery %}
-Check out our [API-Triggered section of the Developer Guide]({{site.baseurl}}/developer_guide/rest_api/messaging/#sending-messages-via-api-triggered-delivery) for more on API-Triggered Delivery.
+{% alert note %}
+When the trigger action is set to "Interact With Campaign", selecting a "Receive" option as the interaction will cause your new campaign to trigger as soon as Braze marks the selected campaign as sent, even if that message bounces or fails to be delivered.
+{% endalert %}
+
+Check out our [API-Triggered endpoints found in the API Guide]({{site.baseurl}}/developer_guide/rest_api/messaging/#sending-messages-via-api-triggered-delivery) for more information on API-Triggered Delivery.
 
 ![API]({% image_buster /assets/img_archive/api_delivered_new.png %}){: height="80%"" width="80%"}
-  {% endtab %}
+{% endtab %}
 {% endtabs %}
-
 
 ## Step 4: Choose Conversion Events
 
@@ -200,7 +197,7 @@ On the **Funnel Report** page, you can analyze the journeys your customers take 
 [9]: https://www.braze.com/customers
 [10]: {{site.baseurl}}/user_guide/message_building_by_channel/email/creating_an_email_template/#creating-an-email-template
 [13]: {{site.baseurl}}/user_guide/engagement_tools/campaigns/testing_and_more/multivariate_testing/#intelligent-selection
-[14]: {% image_buster /assets/img/email.jpg %}
+[14]: {% image_buster /assets/img/email.png %}
 [15]: {% image_buster /assets/img_archive/newEmailTest.png %}
 [16]: {{site.baseurl}}/help/best_practices/email/email_styling_tips/#email-size
 [17]: {% image_buster /assets/img_archive/email_click_results_heatmap.gif %}
