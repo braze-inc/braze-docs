@@ -53,6 +53,9 @@ guide_featured_list:
   - name: "POST: Delete Scheduled API-Triggered Messages"
     link: /docs/api/endpoints/messaging/schedule_messages/post_delete_scheduled_triggered_messages/
     fa_icon: fas fa-calendar-minus
+  - name: "POST: Delete Scheduled API-Triggered Canvases"
+    link: /docs/api/endpoints/messaging/schedule_messages/post_delete_scheduled_triggered_canvases/
+    fa_icon: fas fa-calendar-minus
   - name: "POST: Schedule Messages"
     link: /docs/api/endpoints/messaging/schedule_messages/post_schedule_messages/
     fa_icon: fas fa-calendar-plus
