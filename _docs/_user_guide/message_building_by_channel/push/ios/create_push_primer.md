@@ -76,9 +76,11 @@ To add buttons to your in-app message, you will find a Button 1 textbox and Butt
 
 After your push primer message has been set up, on-click behavior must be assigned. For the corresponding "Turn on Notifications" button you had assigned, you must select "Deep Link Into App". 
 
+#### Deep Linking
+
 Because Push Primer campaigns are not an out-of-the-box feature, the deep-link link that prompts the native push prompt must be set up by your developers before it becomes available. 
 
-Documentation for this can be found here: [Push Primer Integrations][integrations].
+Documentation on push primer integrations and deep linking customization can be found [here][integrations].
 
 ## Step 5: Selecting the Delivery Method
 

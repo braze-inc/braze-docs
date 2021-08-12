@@ -24,9 +24,7 @@ Listed below are the methods across various platforms that are used to log purch
 - [iOS]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/analytics/logging_purchases/)
 - [Web]({{site.baseurl}}/developer_guide/platform_integration_guides/web/analytics/logging_purchases/)
 - [FireOS]({{site.baseurl}}/developer_guide/platform_integration_guides/fireos/analytics/logging_purchases/)
-- **React Native**: 
-    - [Android/FireOS]({{site.baseurl}}/developer_guide/platform_integration_guides/react_native/android_and_fireos/analytics/revenue_tracking/)
-    - [iOS]({{site.baseurl}}/developer_guide/platform_integration_guides/react_native/ios/analytics/revenue_tracking/)
+- [React Native]({{site.baseurl}}/developer_guide/platform_integration_guides/react_native/analytics/#logging-purchases)
 - [Unity]({{site.baseurl}}/developer_guide/platform_integration_guides/unity/Analytics/logging_purchases/)
 - [Windows Universal]({{site.baseurl}}/developer_guide/platform_integration_guides/windows_universal/analytics/logging_purchases/)
 - **Xamarin**: 
