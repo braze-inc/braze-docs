@@ -13,7 +13,7 @@ For a full migration guide of Android 12, see the [Android Developer Documentati
 
 ## Braze SDK Compatibility
 
-For optimal performance on Android 12, we recommend upgrading to to [Braze Android SDK v13.1.2+][1] as soon as possible, before the release of Android 12.
+For optimal performance on Android 12, we recommend upgrading to to [Braze Android SDK v13.1.2+][1] as soon as possible.
 
 If you are targeting Android 12, you must use [Braze Android SDK v13.1.2+][1]. If you do not target Android 12 yet, upgrading is still recommended.
 
