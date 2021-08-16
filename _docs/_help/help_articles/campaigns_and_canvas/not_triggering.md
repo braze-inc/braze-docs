@@ -25,6 +25,8 @@ If your campaign is triggering off of a custom event, you will want to make sure
 
 For example, if the Segment includes the event Session Start “Has Used App more than once” and the event the campaign triggers off of is Session Start, the user will receive the message, it just won’t necessarily be for the first session. This is because the first step when checking to see if a user should receive a campaign is reviewing the segment target audience. 
 
+In short, avoid configuring an action-based campaign or Canvas with the same trigger as the audience filter (i.e., a changed attribute or performed a custom event). A race condition may occur in which the user is not in the audience at the time they perform the trigger event, which means they won't receive the campaign or enter the Canvas.  
+
 Still need help? [Open a support ticket]({{site.baseurl}}/support_contact/).
 
 

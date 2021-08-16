@@ -45,7 +45,7 @@ Providing this information to others may allow people outside your organization 
 You should make the following call as soon as the user is identified (generally after logging in) in order to set the user id:
 
 ```java
-Appboy.getInstance(context).changeUser(YOUR_USER_ID_STRING);
+Braze.getInstance(context).changeUser(YOUR_USER_ID_STRING);
 ```
 
 >  __Do not call `changeUser()` when a user logs out. `changeUser()` should only be called when the user logs into the application.__ Setting `changeUser()` to a static default value will associate ALL user activity with that default "user" until the user logs in again.

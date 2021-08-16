@@ -16,7 +16,7 @@ All persistent data associated with a user will be stored against a user profile
 Once a user profile is created, either after a user is recognized by the SDK or created via API, there are a number of identifiers that can be assigned to a profile to identify or reference that user. These are the:
 
 * `braze_id`
-* `external_ id`
+* `external_id`
 * Any number of aliases that you choose to set for your user base
 
 ## Anonymous User Profiles

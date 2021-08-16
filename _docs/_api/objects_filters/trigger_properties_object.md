@@ -13,9 +13,9 @@ tool:
 description: "This article explains the different components of the Trigger Properties object."
 ---
 
-#  Trigger Properties Object Specification
+# Trigger Properties Object Specification
 
-When using one of the endpoints for sending a campaign with API Triggered Delivery, you may provide a map of keys and values to customize your message.
+When using one of the endpoints for sending a campaign with API-Triggered Delivery, you may provide a map of keys and values to customize your message.
 
 If you make an API request that contains an object in `"trigger_properties"`, the values in that object can then be referenced in your message template under the api_trigger_properties namespace.
 {% raw %}

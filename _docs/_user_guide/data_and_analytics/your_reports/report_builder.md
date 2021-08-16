@@ -15,7 +15,8 @@ tool:
 
 ![Campaign Comparison Example][5]{: style="max-width:80%;"}
 
-#### Use this report to answer key engagement questions, for example:<br><br>
+Use this report to answer key engagement questions, for example:
+
 - Which were the best performing campaigns or Canvases for a specific tag or channel?
 - Which variants of multivariant campaigns had the most uplift over the control?  
 - Which seasonal promotion campaign led to a higher purchase rate — the summer sale, fall sale, or winter sale?
@@ -27,8 +28,11 @@ tool:
 
 ## Run a Report
 
-__1.__ Within the Dashboard, navigate to the Report Builder page in the lefthand navigation.<br><br>
-__2.__ Create a new report by selecting one of your options: a campaign comparison report or a Canvas comparison report. If you choose to run a report on campaigns, you can select between a __Manual__ or __Automated__ report. Reports may contain either campaigns or Canvases, but not both together.
+### Step 1: Create a New Report
+
+Within the Dashboard, navigate to the **Report Builder** page in the lefthand navigation. Click **Create New Report** and select either a campaign comparison report or a Canvas comparison report. 
+
+If you choose to run a report on campaigns, you can select between a __Manual__ or __Automated__ report. Reports may contain either campaigns or Canvases, but not both together.
 
 {% alert note %} Any campaigns and Canvases that have last sent messages within the past 12 months will be eligible for a report. {% endalert %}
 
@@ -47,20 +51,31 @@ Below are the differences between these two options:
 
 Canvas reports work similarly to a manual campaign report in that Canvas selections and report updates must also be done manually. You can include at most five Canvases in one report.
 
-__3.__ Once you've created your report, you’ll find a blank table containing campaigns in each row. The table will populate once you select __Edit Columns__ and choose the metrics you’d like to add. From here, click __Run Report__ to generate your metrics.
-<br><br>
-![Campaign Options][2]{: style="max-width:80%;"}
-<br>
+### Step 2: Choose Your Metrics
 
-Your table will populate with the metrics you choose.
+Once you've created your report, you’ll find a blank table containing campaigns in each row. The table will populate once you select __Edit Columns__ and choose the metrics you’d like to add. From here, click __Run Report__ to generate your metrics.
 
-You can also toggle calculations for the __average__ of any rate or numerical metric or __total__ for any numerical metric.
+![Campaign Options][15]{: style="max-width:80%;"}
 
-__4.__ You can select a specific time period to view your report's data for. If a particular campaign, Canvas, Canvas variant, or Canvas step does not have any data for your selected time period, the results for that row will be blank. 
+Your table will populate with the metrics you choose. For definitions of these metrics, refer to the [Report Metrics Glossary][16]. Some metrics are only available for campaign comparison reports.
 
-![Campaign numerical metric][4]{: style="max-width:60%;"}<br>
+You can also toggle calculations for the __Average__ of any rate or numerical metric and __Total__ for any numerical metric.
 
-### Campaign Comparison Report with Multivariate Campaigns
+### Step 3: Choose a Time Period
+
+You can select a specific time period to view your report's data for. If a particular campaign, Canvas, Canvas variant, or Canvas step does not have any data for your selected time period, the results for that row will be blank. 
+
+![Campaign numerical metric][4]{: style="max-width:60%;"}
+
+### Step 4: Name and Save Your Report
+
+Name your report before saving it. If a report is saved without being named, Braze will apply a default name of "Campaign Comparison Report".
+
+![Campaign Note][7]{: style="max-width:60%;"}
+
+When you're ready, click __Save__. Saved reports can be viewed at a later point on the **Report Builder** page.
+
+## Campaign Comparison Report with Multivariate Campaigns
 
 For any multivariate campaigns, you can view these metrics broken down by your variants and control group by clicking the arrow next to the campaign name. The rows containing your variants will include performance results for that variant, and the row containing your control will include just the results for your conversion events. 
 
@@ -70,25 +85,31 @@ The metrics populating the row for your overall campaign will reflect the perfor
 
 {% alert important %} If you delete a variant from a multivariant campaign, the data from that variant will not be available for use in a future report. {% endalert %}
 
-### Canvas Comparison Report Breakdown
+## Canvas Comparison Report Breakdown
 
-Within a Canvas report, you can view your Canvases broken down by:
+Within a Canvas report, you can view your Canvases broken down by variant, steps, or message.
 
-- __Variants__ - this will allow you to see the high-level stats for your overall Canvases, as well as stats for each variant, which can be expanded by clicking the arrow next to the Canvas name.<br>![Variants][12]{: style="max-width:90%;"}<br><br>
-- __Steps__ - you’ll be able to view step-level metrics, with each row of the report containing the row of a step.<br>![Steps][13]{: style="max-width:90%;"}<br><br>
-- __Message__ - similar to a step-level breakdown, the message-level breakdown contains the name of steps in each row. However, within Edit Columns, you’ll have access to message-level metrics, such as channel-specific stats like email clicks and push opens.<br>![Report][14]{: style="max-width:90%;"}
+### Variant
+
+Selecting **Breakdown by Variant** will allow you to see the high-level stats for your overall Canvases, as well as stats for each variant, which can be expanded by clicking the arrow next to the Canvas name.
+
+![Variants][12]{: style="max-width:90%;"}
+
+### Steps 
+
+Selecting **Breakdown by Steps** will allow you to view step-level metrics, with each row of the report containing the row of a step.
+
+![Steps][13]{: style="max-width:90%;"}
+
+### Message
+
+Similar to a step-level breakdown, selecting **Breakdown by Message** shows the name of steps in each row. However, within **Edit Columns**, you’ll have access to message-level metrics, such as channel-specific stats like email clicks and push opens.
+
+![Report][14]{: style="max-width:90%;"}
 
 Note that within the Braze dashboard, you can preview the first 50 rows of your Canvas report. You can access the full report when you export a CSV.
 
-## Naming Your Report
-
-Name your report before saving it. If a report is saved without being named, Braze will apply a default name of "Campaign Comparison Report". 
-
-![Campaign Note][7]{: style="max-width:60%;"}
-
-## Saving and Accessing Reports
-
-You can save your report and name it by clicking __Save__. Saved reports can be viewed at a later point on the **Report Builder** page.
+## Accessing Saved Reports
 
 When you access a saved __Manual Report__, you will be able to view the same campaigns you previously added, as these campaigns still fall under your “Last Sent” filter.
 
@@ -113,7 +134,7 @@ The file containing variant metrics will have `variant_` appended to the beginni
 
 ![Campaign Download][8]{: style="max-width:60%;"}
 
-### Canvas Comparison Reports
+### Exporting Canvas Comparison Reports
 
 Your CSV export will reflect whichever breakdown view you were on when you clicked **Export**. For instance, if you were on the step-level breakdown view, your export will contain data on your step metrics. To export data from a different breakdown, you’ll need to navigate to that breakdown first, and click __Export__ from there.
 
@@ -132,3 +153,6 @@ If you download a variant breakdown Canvas report, you'll receive two CSV files:
 [12]: {% image_buster /assets/img/campaign_comparison/campaign_comparison1.png %}
 [13]: {% image_buster /assets/img/campaign_comparison/campaign_comparison2.png %}
 [14]: {% image_buster /assets/img/campaign_comparison/campaign_comparison3.png %}
+[15]: {% image_buster /assets/img/campaign_comparison/campaign_comparison_columns.png %}
+
+[16]: {{site.baseurl}}/user_guide/data_and_analytics/report_metrics/

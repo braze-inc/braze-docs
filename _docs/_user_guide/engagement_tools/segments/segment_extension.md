@@ -26,13 +26,13 @@ Name your Segment Extension by describing the type of users you intend to filter
 
 ## Step 3: Choose Your Criteria
 
-Select between a Purchase or Custom Event criteria for targeting. Once you've selected the desired event type criteria, choose which Purchased Item or specific Custom Event you'd like to target for your user list. Then choose how many times (more than, less than, or equal to) the user would need to have completed the event, and how many days to look back, up to 365 days.
+Select between a purchase or custom event criteria for targeting. Once you've selected the desired event type criteria, choose which purchased item or specific custom event you'd like to target for your user list. Then choose how many times (more than, less than, or equal to) the user would need to have completed the event, and how many days to look back, up to 365 days.
 
 ![Segment Extension Criteria][3]
 
 ### Event Property Segmentation
 
-To increase targeting precision, select the “Add Property Filters” checkbox. This will enable you to drill down based on the specific properties of your Purchase or Custom Event. We support event property segmentation based on string, numeric, boolean, and time objects. 
+To increase targeting precision, select the “Add Property Filters” checkbox. This will enable you to drill down based on the specific properties of your purchase or custom event. We support event property segmentation based on string, numeric, boolean, and time objects. 
 
 ![Event Property][12]
 
@@ -60,7 +60,7 @@ While your extension is processing, you will see a small animation next to the n
 
 ## Step 5: Using Your Extension in a Segment
 
-Once you have created an extension, you can use it as a filter when creating a segment or defining an audience for a Campaign or Canvas. Start by choosing "Braze Segment Extension" from the filter list under the "User Attributes" section.
+Once you have created an extension, you can use it as a filter when creating a segment or defining an audience for a campaign or Canvas. Start by choosing "Braze Segment Extension" from the filter list under the "User Attributes" section.
 
 ![Segment Extension as a Segment Filter][6]
 

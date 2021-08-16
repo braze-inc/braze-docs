@@ -230,7 +230,7 @@ Before you get started, here are the common JSON Payload Parameters that you can
 
 #### Step 1: Create a Webhook Template in Braze
 
-You can create this from the `Templates & Media` section, or create a new Webhook Campaign or Canvas in Braze. Next, select the PassKit - Update Pass webhook template, you should see the following in the composer:
+You can create this from the `Templates & Media` section, or create a new webhook campaign or Canvas in Braze. Next, select the PassKit - Update Pass webhook template, you should see the following in the composer:
 
 __Webhook URL__ (Compose Tab): https://api-pub1.passkit.io/coupon/singleUse/coupon<br>
 __Request Body__ (Compose Tab): application/json<br>

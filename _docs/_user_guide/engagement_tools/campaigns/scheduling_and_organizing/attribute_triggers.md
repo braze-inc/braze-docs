@@ -22,7 +22,7 @@ Attribute triggers allow you to send action-based messages when a user's subscri
 - Boolean, integer, string, or date custom attribute values change to any value.
 - Boolean, integer, or string custom attribute values change to a specific value.
 
-To start using attribute triggers, create a Campaign or Canvas step and select action-based delivery. Then, select the attribute trigger that you'd like to use.
+To start using attribute triggers, create a campaign or Canvas step and select action-based delivery. Then, select the attribute trigger that you'd like to use.
 
 ![attribute triggers][1]
 
@@ -57,6 +57,7 @@ Use the "change custom attribute value" trigger with the "specific value" option
 - Attribute triggers for specific custom attribute values are not available for array and date custom attributes.
 - The custom attribute values change trigger does not trigger when the custom attribute value is updated to null.  
 - The custom attribute values change trigger will only trigger when the value of a custom attribute changes. If a custom attribute's current value is re-sent to Braze (e.g the value for the favorite color attribute is red, and you resend the value red to Braze), the custom attribute values change trigger will not occur.
+- The custom attribute values change trigger also applies for new users created. 
 {% endalert %}
 
 

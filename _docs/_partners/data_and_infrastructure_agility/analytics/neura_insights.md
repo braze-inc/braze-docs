@@ -47,8 +47,8 @@ Set a custom user attribue with the key-value pair `neura, true`
   {% endtab %}
   {% tab Android %}
 ```java
-Appboy.getInstance(YOUR_ACTIVITY.this).getCurrentUser().addAlias(NEURA_USER_ID, "neura_id");
-Appboy.getInstance(YOUR_ACTIVITY.this).getCurrentUser().setCustomUserAttribute("neura", true);
+Braze.getInstance(YOUR_ACTIVITY.this).getCurrentUser().addAlias(NEURA_USER_ID, "neura_id");
+Braze.getInstance(YOUR_ACTIVITY.this).getCurrentUser().setCustomUserAttribute("neura", true);
 ```
   {% endtab %}
 {% endtabs %}
@@ -78,7 +78,7 @@ Neura's generic data import allows for two types of import methods:
 2. Follow the instructions to use the Neura [Insights API][6].
 
 Neura closes the loop by sending actionable data back to Braze, so you can seamlessly execute on Neura's real-world insights right within Braze.
-After you've identified the right engagement moment for the right user, easily create Campaigns and Canvases with [Neura Actions in Braze][7].
+After you've identified the right engagement moment for the right user, easily create campaigns and Canvases with [Neura Actions in Braze][7].
 
 ![insights-moments-personas.png][12]
 

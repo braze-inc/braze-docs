@@ -11,7 +11,7 @@ channel: news feed
 
 News-Feed items allow you to insert permanent content directly into your app from our web dashboard. Better yet, the News Feed also is targetable to individual segments just like all of our other message types. This means what you see in the feed might be completely different from another individual. The possibilities for the news-feed are nearly limitless.
 
-To see examples of News Feeds and helpful tips, check out our [Client Integration Gallery][13], [use case][15], and [best practice][16] docs. 
+To see examples of News Feeds and helpful tips, check out our [Case Studies][13], and our [use case][15] and [best practice][16] docs.
 
 ## Step 1: Click Create Card
 
@@ -86,7 +86,7 @@ You can configure your News Feed Card to target any [segment][10] you've defined
 
 ## Step 5: Review Details and Publish
 
-Next, you will be taken to a page that displays all of the details about your card (and companion In-App message, if applicable). You can review any of the details about these items and edit them if you need to by clicking the pencil icon in any of the headers.
+Next, you will be taken to a page that displays all of the details about your card (and companion in-app message, if applicable). You can review any of the details about these items and edit them if you need to by clicking the pencil icon in any of the headers.
 
 ![News Feed Preview][12]
 
@@ -116,7 +116,7 @@ You can re-order your cards within Braze's News Feed page.
 [10]: {{site.baseurl}}/user_guide/engagement_tools/segments/creating_a_segment/#creating-a-segment
 [11]: {% image_buster /assets/img_archive/targetsegment_new.png %}
 [12]: {% image_buster /assets/img_archive/newsfeedpreview_new.png %}
-[13]: {{site.baseurl}}/help/best_practices/client_integration_gallery/#client-integration-newsfeed
+[13]: https://www.braze.com/customers
 [14]: {% image_buster /assets/img_archive/linked-in-app_new.png %}
 [15]: {{site.baseurl}}/user_guide/engagement_tools/news_feed/news_feed_use_cases/
 [16]: {{site.baseurl}}/help/best_practices/news_feed/#news-feed-best-practices

@@ -13,9 +13,9 @@ glossaries:
   - name: SMS (Short Message Service)
     description: A messaging channel created in 1980 and one of the oldest texting technologies. It also happens to be one of the most wide-spread and more frequently used, of all texting channels. This channel is a more direct way to reach your users and customers than most other messaging channels, as it utilizes their personal phone number to reach them. As such, SMS has more rules and regulations around it than other messaging channels.
   - name: Short Code
-    description: This is a short, memorable 5-6 digit sequence that allows senders to send more messages at more consistent rates than long numbers (1 message per second).<br><br>Either a short or a long code is required.
+    description: This is a short, memorable 5-6 digit sequence that allows senders to send more messages at more consistent rates than long numbers (one message per second).<br><br>Either a short or a long code is required.
   - name: Long Code
-    description: This is the standard, 10-digit phone number (in most countries) that allows senders to send more messages at the rate of 1 message per second.<br><br>Either a short or a long code is required.
+    description: This is the standard, 10-digit phone number (in most countries) that allows senders to send more messages at the rate of one message per second.<br><br>Either a short or a long code is required.
   - name: Encoding
     description: The conversion of anything into a coded form. SMS content can be encoded in either GSM-7 or UCS-2.
   - name: GSM-7 Encoding (Global System for Mobile Communications)
@@ -27,13 +27,13 @@ glossaries:
   - name: Message Segments
     description: A message segment is a grouping of up to a defined number of characters (160 for GSM-7 encoding; 67 for UCS-2 encoding) that will be sent in a single SMS dispatch. If you dispatch an SMS with 161 characters using GSM-7 encoding, you will see that there are two (2) message segments that were sent. Sending multiple message segments may result in additional charges.
   - name: Message Service
-    description: A collection of long codes, short codes, and alpha-numeric ID's used to send your SMS message with Braze.
+    description: A collection of long codes, short codes, and alpha-numeric IDs used to send your SMS message with Braze.
   - name: Keyword
-    description: "A short word that is sent to a short or long code to interact with a pre-defined SMS program or to request to OPT-OUT of a specific program or all programs on a code. For example, `STOP`. Keywords should <br> - be alphanumeric <br> - have no spaces <br> - be less than 10 (ten) characters. <br> <br> A specific keyword and short code combination may only be used on one active program at a time. If a keyword is entered that is already in use by another program, a validation error will appear. <br> <br> There are two mandatory keyword categories that all SMS content providers must comply with: `STOP` and `HELP`."
+    description: "A short word that is sent to a short or long code to interact with a pre-defined SMS program or to request to OPT-OUT of a specific program or all programs on a code. For example, <code>STOP</code>. Keywords should <br> - be alphanumeric <br> - have no spaces <br> - be less than 10 characters. <br> <br> A specific keyword and short code combination may only be used on one active program at a time. If a keyword is entered that is already in use by another program, a validation error will appear. <br> <br> There are two mandatory keyword categories that all SMS content providers must comply with: <code>STOP</code> and <code>HELP</code>."
   - name: Mandatory Keyword HELP
     description: For each program that is created in the SMS Campaign Manager platform, content for this keyword must be provided and has to meet the best practices and carrier compliance per country or region in which the SMS traffic is being sent and received. In most cases, this content should have a brief explanation of the SMS program, and how to OPT-OUT.
   - name: Global STOP Keywords
-    description: Variations include `STOP`, `END`, `QUIT`, `UNSUBSCRIBE`, `CANCEL`, `STOPALL`. These are referred to as `Global-Stop-Keywords`. If any of these keywords are texted in to a short or long code, it results in the mobile number (the originating mobile phone number) being opted-out of every active SMS program on that code it is associated with.
+    description: Variations include <code>STOP</code>, <code>END</code>, <code>QUIT</code>, <code>UNSUBSCRIBE</code>, <code>CANCEL</code>, <code>STOPALL</code>. These are referred to as <code>Global-Stop-Keywords</code>. If any of these keywords are texted in to a short or long code, it results in the mobile number (the originating mobile phone number) being opted-out of every active SMS program on that code it is associated with.
   - name: Vanity Code
     description: A vanity short code is a 5-6 digit phone number that is specifically selected by a brand. Vanity short codes are branded and easier for consumers to remember.
   - name: Shared Short Code

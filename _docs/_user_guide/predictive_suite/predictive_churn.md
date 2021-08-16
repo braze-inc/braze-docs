@@ -28,19 +28,19 @@ Tool:
 
 ---
 
-## Overview
-
 ![Churn Overview][1]
 
-With Predictive Churn, you can define what churn means for your business (__[Churn Definition]({{site.baseurl}}/user_guide/predictive_suite/predictive_churn/creating_a_churn_prediction/#step-2-define-churn)__) as well as the users you'd like to prevent from churning (__[Prediction Audience]({{site.baseurl}}/user_guide/predictive_suite/predictive_churn/creating_a_churn_prediction/#step-3-filter-your-prediction-audience)__). When you create a Prediction, Braze trains a machine learning model using __[gradient boosted decision trees](https://en.wikipedia.org/wiki/Gradient_boosting)__ to identify users at risk of churn by learning from activity patterns of past users who did and did not churn according to your definition.
+## Overview
 
-Once the Prediction model is built, users in the Prediction Audience will be assigned a __[Churn Risk Score]({{site.baseurl}}/user_guide/predictive_suite/predictive_churn/prediction_analytics/#churn_score)__ between 0 and 100 denoting how likely they are to Churn according to your definition. The higher the score, the more likely a user is to churn. 
+With Predictive Churn, you can define what churn means for your business ([Churn Definition]({{site.baseurl}}/user_guide/predictive_suite/predictive_churn/creating_a_churn_prediction/#step-2-define-churn)) as well as the users you'd like to prevent from churning ([Prediction Audience]({{site.baseurl}}/user_guide/predictive_suite/predictive_churn/creating_a_churn_prediction/#step-3-filter-your-prediction-audience)). When you create a Prediction, Braze trains a machine learning model using [gradient boosted decision trees](https://en.wikipedia.org/wiki/Gradient_boosting) to identify users at risk of churn by learning from activity patterns of past users who did and did not churn according to your definition.
 
-Updating the risk scores of the Prediction Audience can be done with a __[frequency you choose]({{site.baseurl}}/user_guide/predictive_suite/predictive_churn/creating_a_churn_prediction/#step-4-choose-the-update-frequency-for-churn-predictions)__. This way, you can reach out to users who are at risk of churning before they actually do and prevent it from happening in the first place. Using up to three active Predictions, you can leverage Predictive Churn to tailor individual models to help prevent churn within specific segments of your users that you deem to be the most valuable.
+Once the Prediction model is built, users in the Prediction Audience will be assigned a [Churn Risk Score]({{site.baseurl}}/user_guide/predictive_suite/predictive_churn/prediction_analytics/#churn_score) between 0 and 100 denoting how likely they are to Churn according to your definition. The higher the score, the more likely a user is to churn. 
+
+Updating the risk scores of the Prediction Audience can be done with a [frequency you choose]({{site.baseurl}}/user_guide/predictive_suite/predictive_churn/creating_a_churn_prediction/#step-4-choose-the-update-frequency-for-churn-predictions). This way, you can reach out to users who are at risk of churning before they actually do and prevent it from happening in the first place. Using up to three active Predictions, you can leverage Predictive Churn to tailor individual models to help prevent churn within specific segments of your users that you deem to be the most valuable.
 
 ## Access Predictive Churn
 
-The Predictions page is accessible from the left navigation bar on the Braze dashboard. For full access, contact your Account Manager. Prior to purchasing this feature, it is available in Preview mode. This will allow you to see a Demo Churn Prediction with synthetic data as well as create one Churn Prediction model at a time. This Prediction will be created based on your actual user data, but it will not allow you to target users for messaging according to Churn Risk. It will also not update regularly after creation.
+The Predictions page is accessible from the left navigation bar on the Braze dashboard. For full access, contact your account manager. Prior to purchasing this feature, it is available in Preview mode. This will allow you to see a Demo Churn Prediction with synthetic data as well as create one Churn Prediction model at a time. This Prediction will be created based on your actual user data, but it will not allow you to target users for messaging according to Churn Risk. It will also not update regularly after creation.
 
 With the Preview, you can also edit and rebuild this one Prediction or archive it and create others to test the expected [Prediction Quality]({{site.baseurl}}/user_guide/predictive_suite/predictive_churn/prediction_analytics/prediction_quality/) of different [definitions]({{site.baseurl}}/user_guide/predictive_suite/predictive_churn/creating_a_churn_prediction/#step-2-define-churn).
 

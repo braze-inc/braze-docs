@@ -22,39 +22,39 @@ The integration example below is taken from the [Glide Integration Sample App][g
 {% tab JAVA %}
 
 ```java
-public class GlideAppboyImageLoader implements IAppboyImageLoader {
-  private static final String TAG = GlideAppboyImageLoader.class.getName();
+public class GlideBrazeImageLoader implements IBrazeImageLoader {
+  private static final String TAG = GlideBrazeImageLoader.class.getName();
 
   private RequestOptions mRequestOptions = new RequestOptions();
 
   @Override
-  public void renderUrlIntoCardView(Context context, Card card, String imageUrl, ImageView imageView, AppboyViewBounds viewBounds) {
+  public void renderUrlIntoCardView(Context context, Card card, String imageUrl, ImageView imageView, BrazeViewBounds viewBounds) {
     renderUrlIntoView(context, imageUrl, imageView, viewBounds);
   }
 
   @Override
-  public void renderUrlIntoInAppMessageView(Context context, IInAppMessage inAppMessage, String imageUrl, ImageView imageView, AppboyViewBounds viewBounds) {
+  public void renderUrlIntoInAppMessageView(Context context, IInAppMessage inAppMessage, String imageUrl, ImageView imageView, BrazeViewBounds viewBounds) {
     renderUrlIntoView(context, imageUrl, imageView, viewBounds);
   }
 
   @Override
-  public Bitmap getPushBitmapFromUrl(Context context, Bundle extras, String imageUrl, AppboyViewBounds viewBounds) {
+  public Bitmap getPushBitmapFromUrl(Context context, Bundle extras, String imageUrl, BrazeViewBounds viewBounds) {
     return getBitmapFromUrl(context, imageUrl, viewBounds);
   }
 
   @Override
-  public Bitmap getInAppMessageBitmapFromUrl(Context context, IInAppMessage inAppMessage, String imageUrl, AppboyViewBounds viewBounds) {
+  public Bitmap getInAppMessageBitmapFromUrl(Context context, IInAppMessage inAppMessage, String imageUrl, BrazeViewBounds viewBounds) {
     return getBitmapFromUrl(context, imageUrl, viewBounds);
   }
 
-  private void renderUrlIntoView(Context context, String imageUrl, ImageView imageView, AppboyViewBounds viewBounds) {
+  private void renderUrlIntoView(Context context, String imageUrl, ImageView imageView, BrazeViewBounds viewBounds) {
     Glide.with(context)
         .load(imageUrl)
         .apply(mRequestOptions)
         .into(imageView);
   }
 
-  private Bitmap getBitmapFromUrl(Context context, String imageUrl, AppboyViewBounds viewBounds) {
+  private Bitmap getBitmapFromUrl(Context context, String imageUrl, BrazeViewBounds viewBounds) {
     try {
       return Glide.with(context)
           .asBitmap()
@@ -78,37 +78,37 @@ public class GlideAppboyImageLoader implements IAppboyImageLoader {
 {% tab KOTLIN %}
 
 ```kotlin
-class GlideAppboyImageLoader : IAppboyImageLoader {
+class GlideBrazeImageLoader : IBrazeImageLoader {
   companion object {
-    private val TAG = GlideAppboyImageLoader::class.qualifiedName
+    private val TAG = GlideBrazeImageLoader::class.qualifiedName
   }
 
   private var mRequestOptions = RequestOptions()
 
-  override fun renderUrlIntoCardView(context: Context, card: Card, imageUrl: String, imageView: ImageView, viewBounds: AppboyViewBounds) {
+  override fun renderUrlIntoCardView(context: Context, card: Card, imageUrl: String, imageView: ImageView, viewBounds: BrazeViewBounds) {
     renderUrlIntoView(context, imageUrl, imageView, viewBounds)
   }
 
-  override fun renderUrlIntoInAppMessageView(context: Context, inAppMessage: IInAppMessage, imageUrl: String, imageView: ImageView, viewBounds: AppboyViewBounds) {
+  override fun renderUrlIntoInAppMessageView(context: Context, inAppMessage: IInAppMessage, imageUrl: String, imageView: ImageView, viewBounds: BrazeViewBounds) {
     renderUrlIntoView(context, imageUrl, imageView, viewBounds)
   }
 
-  override fun getPushBitmapFromUrl(context: Context, extras: Bundle, imageUrl: String, viewBounds: AppboyViewBounds): Bitmap? {
+  override fun getPushBitmapFromUrl(context: Context, extras: Bundle, imageUrl: String, viewBounds: BrazeViewBounds): Bitmap? {
     return getBitmapFromUrl(context, imageUrl, viewBounds)
   }
 
-  override fun getInAppMessageBitmapFromUrl(context: Context, inAppMessage: IInAppMessage, imageUrl: String, viewBounds: AppboyViewBounds): Bitmap? {
+  override fun getInAppMessageBitmapFromUrl(context: Context, inAppMessage: IInAppMessage, imageUrl: String, viewBounds: BrazeViewBounds): Bitmap? {
     return getBitmapFromUrl(context, imageUrl, viewBounds)
   }
 
-  private fun renderUrlIntoView(context: Context, imageUrl: String, imageView: ImageView, viewBounds: AppboyViewBounds) {
+  private fun renderUrlIntoView(context: Context, imageUrl: String, imageView: ImageView, viewBounds: BrazeViewBounds) {
     Glide.with(context)
         .load(imageUrl)
         .apply(mRequestOptions)
         .into(imageView)
   }
 
-  private fun getBitmapFromUrl(context: Context, imageUrl: String, viewBounds: AppboyViewBounds): Bitmap? {
+  private fun getBitmapFromUrl(context: Context, imageUrl: String, viewBounds: BrazeViewBounds): Bitmap? {
     try {
       return Glide.with(context)
           .asBitmap()
@@ -133,7 +133,7 @@ class GlideAppboyImageLoader : IAppboyImageLoader {
 
 #### Step 2: Setting the Image Loader Delegate
 
-The Braze SDK will use any custom image loader set with [setAppboyImageLoader][gifs-66]. Note that we recommend setting the custom image loader in a custom application subclass.
+The Braze SDK will use any custom image loader set with [setBrazeImageLoader][gifs-66]. Note that we recommend setting the custom image loader in a custom application subclass.
 
 {% tabs %}
 {% tab JAVA %}
@@ -143,7 +143,7 @@ public class GlideIntegrationApplication extends Application {
   @Override
   public void onCreate() {
     super.onCreate();
-    Appboy.getInstance(context).setAppboyImageLoader(new GlideAppboyImageLoader());
+    Braze.getInstance(context).setBrazeImageLoader(new GlideBrazeImageLoader());
   }
 }
 ```
@@ -155,7 +155,7 @@ public class GlideIntegrationApplication extends Application {
 class GlideIntegrationApplication : Application() {
   override fun onCreate() {
     super.onCreate()
-    Appboy.getInstance(context).appboyImageLoader = GlideAppboyImageLoader()
+    Braze.getInstance(context).appboyImageLoader = GlideBrazeImageLoader()
   }
 }
 ```
@@ -169,10 +169,10 @@ class GlideIntegrationApplication : Application() {
 [gifs-61]: https://github.com/Appboy/appboy-android-sdk/tree/master/droidboy
 [gifs-64]: https://github.com/Appboy/appboy-android-sdk/tree/master/droidboy
 [gifs-65]: https://github.com/Appboy/appboy-android-sdk/tree/master/samples/glide-image-integration
-[gifs-66]: https://appboy.github.io/appboy-android-sdk/javadocs/com/appboy/Appboy.html#setAppboyImageLoader-com.appboy.IAppboyImageLoader-
+[gifs-66]: https://appboy.github.io/appboy-android-sdk/javadocs/com/appboy/Appboy.html#setImageLoader-com.braze.images.IBrazeImageLoader-
 [gifs-67]: https://bumptech.github.io/glide/
-[gifs-70]: https://appboy.github.io/appboy-android-sdk/javadocs/com/appboy/IAppboyImageLoader.html#setOffline-boolean-
-[gifs-71]: https://appboy.github.io/appboy-android-sdk/javadocs/com/appboy/IAppboyImageLoader.html#getInAppMessageBitmapFromUrl-android.content.Context-com.appboy.models.IInAppMessage-java.lang.String-com.appboy.enums.AppboyViewBounds-
-[gifs-72]: https://appboy.github.io/appboy-android-sdk/javadocs/com/appboy/IAppboyImageLoader.html#getPushBitmapFromUrl-android.content.Context-android.os.Bundle-java.lang.String-com.appboy.enums.AppboyViewBounds-
-[gifs-73]: https://appboy.github.io/appboy-android-sdk/javadocs/com/appboy/IAppboyImageLoader.html#renderUrlIntoCardView-android.content.Context-com.appboy.models.cards.Card-java.lang.String-android.widget.ImageView-com.appboy.enums.AppboyViewBounds-
-[gifs-74]: https://appboy.github.io/appboy-android-sdk/javadocs/com/appboy/IAppboyImageLoader.html#renderUrlIntoInAppMessageView-android.content.Context-com.appboy.models.IInAppMessage-java.lang.String-android.widget.ImageView-com.appboy.enums.AppboyViewBounds-
+[gifs-70]: https://appboy.github.io/appboy-android-sdk/javadocs/com/braze/images/IBrazeImageLoader.html#setOffline-boolean-
+[gifs-71]: https://appboy.github.io/appboy-android-sdk/javadocs/com/braze/images/IBrazeImageLoader.html#getInAppMessageBitmapFromUrl-android.content.Context-com.braze.models.inappmessage.IInAppMessage-java.lang.String-com.braze.enums.BrazeViewBounds-
+[gifs-72]: https://appboy.github.io/appboy-android-sdk/javadocs/com/braze/images/IBrazeImageLoader.html#getPushBitmapFromUrl-android.content.Context-android.os.Bundle-java.lang.String-com.braze.enums.BrazeViewBounds-
+[gifs-73]: https://appboy.github.io/appboy-android-sdk/javadocs/com/braze/images/IBrazeImageLoader.html#renderUrlIntoCardView-android.content.Context-com.appboy.models.cards.Card-java.lang.String-android.widget.ImageView-com.braze.enums.BrazeViewBounds-
+[gifs-74]: https://appboy.github.io/appboy-android-sdk/javadocs/com/braze/images/IBrazeImageLoader.html#renderUrlIntoInAppMessageView-android.content.Context-com.braze.models.inappmessage.IInAppMessage-java.lang.String-android.widget.ImageView-com.braze.enums.BrazeViewBounds-

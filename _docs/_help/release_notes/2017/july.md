@@ -22,7 +22,7 @@ The /campaign/details API endpoint now gives information about its messages, all
 
 ## Updates to Liquid Templating
 
-We’ve added the ability to template variant attributes in Canvases and Campaigns. In Canvas, you can now template both the variant’s API id as well as the variant’s name, and in Campaigns you can now template a message’s message_api_id and message_name. Both updates allow for more flexibility in your messaging, allowing you to build personalized campaigns. Learn more about personalized messaging [here][55].
+We’ve added the ability to template variant attributes in Canvases and campaigns. In Canvas, you can now template both the variant’s API id as well as the variant’s name, and in campaigns you can now template a message’s message_api_id and message_name. Both updates allow for more flexibility in your messaging, allowing you to build personalized campaigns. Learn more about personalized messaging [here][55].
 
 ## New HTML Email Editor
 
@@ -30,7 +30,7 @@ You can now easily write and test emails with a full-screen HTML editor that ena
 
 ## Updates to Previews
 
-You can now follow the screen window as you scroll down message previews in Campaigns & Canvas, ensuring that you can always see the changes reflected. Learn more about previewing and testing [here][53].
+You can now follow the screen window as you scroll down message previews in campaigns & Canvas, ensuring that you can always see the changes reflected. Learn more about previewing and testing [here][53].
 
 ## New Segment Membership filter
 

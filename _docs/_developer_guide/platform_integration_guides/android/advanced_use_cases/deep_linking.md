@@ -14,14 +14,14 @@ The Android SDK provides the ability to set a single delegate object to custom h
 
 Your delegate object should implement the [`IAppboyNavigator`][udl-3] interface and be set using [`AppboyNavigator.setAppboyNavigator()`][udl-2]. In most cases, the delegate should be set in your app's `Application.onCreate()`.
 
-The following is an example of overriding the default [`UriAction`][udl-1] behavior with custom intent flags and custom behavior for Youtube URLs. 
+The following is an example of overriding the default [`UriAction`][udl-1] behavior with custom intent flags and custom behavior for Youtube URLs.
 
 {% tabs %}
 {% tab JAVA %}
 
 ```java
 public class CustomNavigator implements IAppboyNavigator {
-  private static final String TAG = AppboyLogger.getAppboyLogTag(CustomAppboyNavigator.class);
+  private static final String TAG = BrazeLogger.getBrazeLogTag(CustomAppboyNavigator.class);
 
   @Override
   public void gotoNewsFeed(Context context, NewsfeedAction newsfeedAction) {
@@ -53,7 +53,7 @@ public class CustomNavigator implements IAppboyNavigator {
       if (intent.resolveActivity(context.getPackageManager()) != null) {
         context.startActivity(intent);
       } else {
-        AppboyLogger.w(TAG, "Could not find appropriate activity to open for deep link " + uri + ".");
+        BrazeLogger.w(TAG, "Could not find appropriate activity to open for deep link " + uri + ".");
       }
     }
   }
@@ -89,13 +89,13 @@ class CustomNavigator : IAppboyNavigator {
       if (intent.resolveActivity(context.packageManager) != null) {
         context.startActivity(intent)
       } else {
-        AppboyLogger.w(TAG, "Could not find appropriate activity to open for deep link $uri.")
+        BrazeLogger.w(TAG, "Could not find appropriate activity to open for deep link $uri.")
       }
     }
   }
 
   companion object {
-    private val TAG = AppboyLogger.getAppboyLogTag(CustomAppboyNavigator::class.java)
+    private val TAG = BrazeLogger.getBrazeLogTag(CustomAppboyNavigator::class.java)
   }
 }
 ```

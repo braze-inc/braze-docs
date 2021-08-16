@@ -51,7 +51,7 @@ If you are pulling in images with [Connected Content]({{site.baseurl}}/user_guid
 
 ### Push Story Segmentation
 
-When you create a Campaign or Canvas, you can filter which users you want to target based on whether they have clicked on a Push Story Page. Then, select the Campaign and the page you want to use to target your users.
+When you create a campaign or Canvas, you can filter which users you want to target based on whether they have clicked on a Push Story Page. Then, select the campaign and the page you want to use to target your users.
 
 ### Push Stories Analytics
 

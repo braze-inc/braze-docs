@@ -283,14 +283,14 @@ Braze Geofences are manually requested via the [`requestGeofences()`][11] method
 {% tab JAVA %}
 
 ```java
-Appboy.getInstance(getApplicationContext()).requestGeofences(latitude, longitude);
+Braze.getInstance(getApplicationContext()).requestGeofences(latitude, longitude);
 ```
 
 {% endtab %}
 {% tab KOTLIN %}
 
 ```kotlin
-Appboy.getInstance(applicationContext).requestGeofences(33.078947, -116.601356)
+Braze.getInstance(applicationContext).requestGeofences(33.078947, -116.601356)
 ```
 
 {% endtab %}

@@ -56,15 +56,15 @@ To take advantage of these integrations, please visit the "Feedback" section wit
 Braze UI elements come with a default look and feel that matches the Android standard UI guidelines and provides a seamless experience. You can see these default styles in the `res/values/style.xml` file in the Braze SDK distribution. They are completely open source and completely customizable to suit your application's aesthetic.
 
 ```xml
-  <style name="Appboy"/>
+  <style name="Braze"/>
   <!-- Feedback -->
-  <style name="Appboy.Feedback"/>
-  <style name="Appboy.Feedback.Layout"/>
-  <style name="Appboy.Feedback.NavigationBar">
+  <style name="Braze.Feedback"/>
+  <style name="Braze.Feedback.Layout"/>
+  <style name="Braze.Feedback.NavigationBar">
     <item name="android:padding">4dp</item>
     <item name="android:background">@color/com_appboy_feedback_form_navigation_bar_background</item>
   </style>
-  <style name="Appboy.Feedback.NavigationBarCancelButton">
+  <style name="Braze.Feedback.NavigationBarCancelButton">
     <item name="android:layout_marginRight">2dp</item>
     <item name="android:text">@string/com_appboy_feedback_form_cancel</item>
     <item name="android:textStyle">bold</item>
@@ -78,7 +78,7 @@ If you would prefer, you can override these styles to create a look and feel tha
 ### Correct Style Override {#correct-feedback}
 
 ```xml
-<style name="Appboy.Feed.List">
+<style name="Braze.Feed.List">
   <item name="android:background">@color/mint</item>
   <item name="android:cacheColorHint">@color/mint</item>
   <item name="android:divider">@android:color/transparent</item>
@@ -92,7 +92,7 @@ If you would prefer, you can override these styles to create a look and feel tha
 ### Incorrect Style Override {#incorrect-feedback}
 
 ```xml
-<style name="Appboy.Feed.List">
+<style name="Braze.Feed.List">
   <item name="android:background">@color/mint</item>
   <item name="android:cacheColorHint">@color/mint</item>
 </style>
