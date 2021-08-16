@@ -1,0 +1,47 @@
+---
+nav_title: Action Paths in Canvas
+permalink: "/canvas/create_a_canvas/action_paths"
+hidden: true
+platform: Canvas
+
+page_type: reference
+description: "This reference article covers action paths and how to use them in your Canvases."
+tool: Canvas
+---
+
+> Action Paths in Canvas
+
+Action Paths in Canvas allow you to sort your users based on their actions. Using Action Paths, you can: 
+ 
+* Customize your users' path when they perform a specific action;
+* Hold your users for a given duration and prioritize their next path based on the actions they performed during this evaluation period. 
+
+## Create Action Path
+
+To create Action Paths, add a step to your Canvas. Then, using the drop-down menu at the top of the new step, select Action Paths.
+
+## Define Action Settings 
+
+In the *Action Settings* module, you can choose how long you’d like to hold users in the action step. 
+
+When the *Ranking* is off, users who perform the action(s) after they enter the action path and before the end of the evaluation window will immediately advance through the relevant action group as soon as they perform the action. Users who do not perform a relevant action during the evaluation period will advance through the “everyone else” group at the end of the evaluation period. 
+
+When the *Ranking* is on, all users will be held until the end of the evaluation period. At the end of the evaluation period, users will advance through the highest priority action group that they are eligible for. Users who did not perform an action during the evaluation period will advance through the “everyone else” group. 
+
+## Define Action Groups
+
+Add a trigger or multiple triggers to define your action groups. When the rank is off, users who perform one or more of the triggers will immediately advance through the relevant action group. When rank is on, you can prioritize action groups and the user will do down the highest priority group that they are eligible for at the end of the evaluation period. 
+
+## Canvases With Re-eligibility 
+
+If a user enters into an action path multiple times and has multiple entries being help in the action path at the same time the expected behavior is as follows: 
+
+| Ranking | Action Path Behavior |
+|---|--------------|
+
+| Rank Off | * When rank is off and a relevant action is performed, Braze will deduplicate entries and immediately advance the earliest entry through the relevant action group 
+* When rank is off and a relevant action is not performed, all entries will advance at the end of the relevant evaluation window and no deduplication will occur |
+| Rank On | When rank is on, all entries will advance at the end of the relevant evaluation window and no deduplication will occur |
+
+{: .reset-td-br-1 .reset-td-br-2}
+
