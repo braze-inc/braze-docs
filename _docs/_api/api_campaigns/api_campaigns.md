@@ -36,5 +36,4 @@ Now, you can move on to configuring your API campaign.
 4. Click __Save Campaign__ and you're set to begin your API campaign!
 
 [2]: {{site.baseurl}}/api/endpoints/messaging/#send-endpoints
-[3]: {% image_buster /assets/img/selectapicampaigns.png %} "Select API Campaigns"
 [4]: {% image_buster /assets/img/createapicampaigns.gif %} "API Campaign Creation"

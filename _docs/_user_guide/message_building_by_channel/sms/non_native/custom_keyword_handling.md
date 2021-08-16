@@ -53,7 +53,6 @@ If using the new user alias endpoint, to ensure E.164 compliance, please add a "
 [oblink]: {{site.baseurl}}/user_guide/message_building_by_channel/sms/sms_subscription_group/#setup-process
 [1]: {% image_buster /assets/img/sms/keyword_edit2.png %}
 [2]: {% image_buster /assets/img/sms/keyword_home.png %}
-[3]: {% image_buster /assets/img/sms/keyword_language.png %} 
 
 [unknown]: {{site.baseurl}}/user_guide/message_building_by_channel/sms/phone_numbers/sending_phone_numbers/#handling-unknown-phone-numbers
 [endpoint]: {{site.baseurl}}/api/endpoints/user_data/post_user_alias/

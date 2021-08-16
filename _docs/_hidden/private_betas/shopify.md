@@ -183,13 +183,6 @@ With respect to Personal Data submitted to Braze Services by or on behalf of its
 [12]: {% image_buster /assets/img/Shopify/shopify_segmentation2.png %} 
 [13]: {% image_buster /assets/img/Shopify/shopify_segmentation3.png %} 
 [14]: {% image_buster /assets/img/Shopify/shopify_segmentation4.png %} 
-[15]: {% image_buster /assets/img/Shopify/shopify_connected_content1.png %} 
-[16]: {% image_buster /assets/img/Shopify/shopify_connected_content2.png %} 
-[17]: {% image_buster /assets/img/Shopify/shopify_connected_content3.png %} 
-[18]: {% image_buster /assets/img/Shopify/shopify_connected_content4.png %} 
-[19]: {% image_buster /assets/img/Shopify/shopify_connected_content5.png %} 
-[22]: {% image_buster /assets/img/Shopify/shopify_integration13.png %} 
-[23]: {% image_buster /assets/img/Shopify/shopify_integration14.png %} 
 [24]: {% image_buster /assets/img/Shopify/shopify_integration15.png %} 
 [25]: {% image_buster /assets/img/Shopify/shopify_integration16.png %} 
 

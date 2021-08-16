@@ -836,16 +836,11 @@ extension Dictionary where Key == String, Value == Any {
 {% endtabs %}
 
 [1]: {% image_buster /assets/img/push_implementation_guide/push1.png %}
-[2]: {% image_buster /assets/img/push_implementation_guide/push2.png %}
 [3]: {% image_buster /assets/img/push_implementation_guide/push3.png %}
-[4]: {% image_buster /assets/img/push_implementation_guide/push4.png %}
 [5]: {% image_buster /assets/img/push_implementation_guide/push5.png %}
 [6]: {% image_buster /assets/img/push_implementation_guide/push6.png %}
-[7]: {% image_buster /assets/img/push_implementation_guide/push7.png %}
 [8]: {% image_buster /assets/img/push_implementation_guide/push8.png %}
 [9]: {% image_buster /assets/img/push_implementation_guide/push9.png %}
-[10]: {% image_buster /assets/img/push_implementation_guide/push10.png %}
-[11]: {% image_buster /assets/img/push_implementation_guide/push11.png %}
 [12]: {% image_buster /assets/img/push_implementation_guide/push12.png %}
 [13]: {% image_buster /assets/img/push_implementation_guide/push13.png %}
 [14]: {% image_buster /assets/img/push_implementation_guide/push14.png %}

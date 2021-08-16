@@ -69,6 +69,5 @@ Individual users can be granted different degrees of access on an app-by-app bas
 
 [29]: {% image_buster /assets/img_archive/editing_user_permission_new.png %} "Edit User Permission"
 [30]: {% image_buster /assets/img_archive/user_accesses_new.png %} "User Permissions"
-[31]: {% image_buster /assets/img_archive/permission_diff_apps_new.png %} "Permissions App to App"
 [76]: {{site.baseurl}}/user_guide/administrative/manage_your_braze_users/user_permissions/
 [89]: {% image_buster /assets/img/user_permissions_selection.png %}

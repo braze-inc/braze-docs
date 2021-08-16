@@ -239,4 +239,3 @@ Alternatively, to configure Push Story App Group from your `Info.plist` file, ad
 [ios_pushstory_07]: {% image_buster /assets/img_archive/ios_pushstory_07.png %}
 [ios_pushstory_08]: {% image_buster /assets/img_archive/ios_pushstory_08.png %}
 [ios_pushstory_09]: {% image_buster /assets/img_archive/ios_pushstory_09.png %}
-[ios_pushstory_10]: {% image_buster /assets/img_archive/ios_pushstory_10.png %}
