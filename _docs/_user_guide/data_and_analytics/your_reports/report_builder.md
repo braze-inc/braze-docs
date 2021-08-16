@@ -143,7 +143,6 @@ If you download a variant breakdown Canvas report, you'll receive two CSV files:
 - One file containing only top-level metrics for each Canvas
 - One file that contains variant-level metrics
 
-[2]: {% image_buster /assets/img/campaign_comparison/compare_option.png %}
 [3]: {% image_buster /assets/img/campaign_comparison/compare_note.png %}
 [4]: {% image_buster /assets/img/campaign_comparison/metric.png %}
 [5]: {% image_buster /assets/img/campaign_comparison/campaign_main.png %}

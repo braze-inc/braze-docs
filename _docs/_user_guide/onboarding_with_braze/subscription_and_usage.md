@@ -60,7 +60,6 @@ Depending on whether you chose a time frame of weeks or months, your data here w
 
 You can use this section to monitor how your data point usage is trending over time, and how close you are to hitting your contract’s allotment. One trend line shows your consumption, and the other shows your contract allotment.
 
-[1]: {% image_buster /assets/img/subscription_and_billing1.png %}
 [2]: {% image_buster /assets/img/subscription_and_billing2.png %}
 [3]: {% image_buster /assets/img/subscription_and_billing3.png %}
 [4]: {% image_buster /assets/img/subscription_and_billing4.png %}
