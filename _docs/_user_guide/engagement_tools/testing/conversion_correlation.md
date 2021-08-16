@@ -34,7 +34,7 @@ We check the following attributes by treating them as categorical variables. In 
 We also check whether the following affect the rate of conversion:
 
 - Performing any custom events
-- Campaigns and canvases received in the last 30 days (other than the campaign currently being assessed)
+- Campaigns and Canvases received in the last 30 days (other than the campaign currently being assessed)
 
 Finally, we check several behavioral variables that can take on multiple values. We split the following into 4 buckets or quartiles and then measure the association of being in that quartile with increases or decreases in conversion:
 
