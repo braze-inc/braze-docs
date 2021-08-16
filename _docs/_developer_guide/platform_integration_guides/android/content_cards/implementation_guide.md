@@ -20,15 +20,15 @@ Looking for the out-of-the-box Content Card developer integration guide? Find it
 
 ### Import Statements and Helper Files
 
-When building out Content Cards, you should expose the Braze SDK via a single manager singleton. This pattern shields your applicaiton code from the Braze implementation details behind a shared abstraction that makes sense for your use case. It also makes it easier to track, debug, and alter code. An example manager implementation can be found [here](FIXME).
+When building out Content Cards, you should expose the Braze SDK via a single manager singleton. This pattern shields your application code from the Braze implementation details behind a shared abstraction that makes sense for your use case. It also makes it easier to track, debug, and alter code. An example manager implementation can be found [here](FIXME).
 
 ### Content Cards as Custom Objects
 
-Your own custom objects already in use in your application can be extended to carry Content Card data, thereby abstracting the source of the data into a format that is already understood by your application code. Data source abstractions such as this provide flexibility to work with different data backends interchangeably and in concert. In this example, we've defined the `ContentCardable` abstract base class to represent both our existing data (fed, in this example, from a local JSON file) and the new data, fed from the Braze SDK. The base class also exposes the raw Content Card data for consumers that need to access the original `Card` impementation.
+Your own custom objects already in use in your application can be extended to carry Content Card data, thereby abstracting the source of the data into a format already understood by your application code. Data source abstractions such as this provide flexibility to work with different data backends interchangeably and in concert. In this example, we've defined the `ContentCardable` abstract base class to represent both our existing data (fed, in this example, from a local JSON file) and the new data, fed from the Braze SDK. The base class also exposes the raw Content Card data for consumers that need to access the original `Card` implementation.
 
-When initializing `ContentCardable` instances from the Braze SDK, we utilize the `class_type` extra to map the Content Card to a concrete subclass. We then use the additional key/value pairs set within the Braze Dashboard to populate the necessary fields.
+When initializing `ContentCardable` instances from the Braze SDK, we utilize the `class_type` extra to map the Content Card to a concrete subclass. We then use the additional key-value pairs set within the Braze Dashboard to populate the necessary fields.
 
-Once you have a solid understanding of these code considerations, check out our [use cases](#sample-use-cases) below to get started implementing your own custom objects.
+Once you have a solid understanding of these code considerations, check out our [use cases](#sample-use-cases) below to start implementing your own custom objects.
 
 {% tabs local %}
 {% tab No Card Dependencies %}
@@ -129,7 +129,7 @@ public class ContentCardData{
 {% subtabs global %}
 {% subtab Kotlin %}
 __Custom Object Initializer__<br>
-MetaData from a `Card` is used to populate your concrete subclass's variables. Depending on the subclass, you may need to extract different values during initialization. The key value pairs set up in the Braze Dashboard are represented in the “extras” dictionary.
+MetaData from a `Card` is used to populate your concrete subclass's variables. Depending on the subclass, you may need to extract different values during initialization. The key-value pairs set up in the Braze dashboard are represented in the “extras” dictionary.
 
 ```kotlin
 class Tile: ContentCardable {
@@ -150,7 +150,7 @@ class Tile: ContentCardable {
 {% endsubtab %}
 {% subtab Java %}
 __Custom Object Initializer__<br>
-MetaData from a `Card` is used to populate your concrete subclass's variables. Depending on the subclass, you may need to extract different values during initialization. The key value pairs set up in the Braze Dashboard are represented in the “extras” dictionary.
+MetaData from a `Card` is used to populate your concrete subclass's variables. Depending on the subclass, you may need to extract different values during initialization. The key-value pairs set up in the Braze dashboard are represented in the “extras” dictionary.
 
 ```java
 TODO
@@ -162,7 +162,7 @@ TODO
 {% subtabs global %}
 {% subtab Kotlin %}
 __Identifying Types__<br>
-The `ContentCardClass` enum represents the `class_type` value in the Braze Dashboard and provides a method to initialize the enum from the Strings supplied by the SDK.
+The `ContentCardClass` enum represents the `class_type` value in the Braze dashboard and provides a method to initialize the enum from the Strings supplied by the SDK.
 
 ```kotlin
 enum class ContentCardClass{
@@ -194,7 +194,7 @@ enum class ContentCardClass{
 {% endsubtab %}
 {% subtab Java %}
 __Identifying Types__<br>
-The `ContentCardClass` enum represents the `class_type` value in the Braze Dashboard and provides a method to initialize the enum from the Strings supplied by the SDK.
+The `ContentCardClass` enum represents the `class_type` value in the Braze dashboard and provides a method to initialize the enum from the Strings supplied by the SDK.
 
 ```java
 TODO
@@ -206,7 +206,7 @@ TODO
 
 ## Sample Use Cases
 
-There are three sample customer use cases provided. Each sample has video walkthroughs, code snippets, and a look into how Content Card variables may look and be used in the Braze dashboard:
+There are three sample customer use cases provided. Each use case offers a detailed explanation, relevant code snippets, and a look into how Content Card variables may look and be used in the Braze dashboard:
 - [Content Cards As Supplemental Content](#content-cards-as-supplemental-content)
 - [Content Cards in a Message Center](#content-cards-in-a-message-center)
 - [Interactive Content Cards](#interactive-content-cards)
@@ -214,8 +214,6 @@ There are three sample customer use cases provided. Each sample has video walkth
 ### Content Cards as Supplemental Content
 
 ![Supplementary Content PNG][1]{: style="float:right;max-width:25%;margin-left:15px;border:0;"}
-
-You can seamlessly blend Content Cards into an existing feed, allowing data from multiple feeds to load simultaneously. This creates a cohesive, harmonious experience with Braze Content Cards and existing feed content.
 
 You can seamlessly blend Content Cards into an existing feed, allowing data from multiple feeds to load simultaneously. This creates a cohesive, harmonious experience with Braze Content Cards and existing feed content.
 
@@ -247,14 +245,14 @@ For the following message types, the key-value pair `class_type` should be added
 
 #### Further Explanation
 
-The message center logic is driven by the `class_type` that is provided by the key-value pairs from Braze. Using the `createContentCardable` method from our example, you are able to both filter and identify these class types.
+The message center logic is driven by the `class_type` that is provided by the key-value pairs from Braze. Using the `createContentCardable` method from our example, you can filter and identify these class types.
 
+{% tabs %}
+{% tab Kotlin %}
 __Using `class_type` for On Click Behavior__<br>
 When we inflate the Content Card data into our custom classes, we use the `ContentCardClass` property of the data to determine which concrete subclass should be used to
 store the data.
 
-{% tabs %}
-{% tab Kotlin %}
 ```kotlin
  private fun createContentCardable(metadata: Map<String, Any>, type: ContentCardClass?): ContentCardable?{
         return when(type){
@@ -268,43 +266,9 @@ store the data.
         }
     }
 ```
-{% endtab %}
-{% tab Java %}
-```java
-private ContentCardable createContentCardable(Map<String, ?> metadata,  ContentCardClass type){
-    switch(type){
-        case ContentCardClass.AD:{
-            return new Ad(metadata);
-        }
-        case ContentCardClass.MESSAGE_WEB_VIEW:{
-            return new WebViewMessage(metadata);
-        }
-        case ContentCardClass.MESSAGE_FULL_PAGE:{
-            return new FullPageMessage(metadata);
-        }
-        case ContentCardClass.ITEM_GROUP:{
-            return new Group(metadata);
-        }
-        case ContentCardClass.ITEM_TILE:{
-            return new Tile(metadata);
-        }
-        case ContentCardClass.COUPON:{
-            return new Coupon(metadata);
-        }
-        default:{
-            return null;
-        }
-    }
-}
-
-```
-{% endtab %}
-{% endtabs %}
 
 Then, when handling the user interaction with the message list, we can use the message's type to determine which view to display to the user.
 
-{% tabs %}
-{% tab Kotlin %}
 ```kotlin
 override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -334,6 +298,40 @@ override fun onCreate(savedInstanceState: Bundle?) {
 ```
 {% endtab %}
 {% tab Java %}
+__Using `class_type` for On Click Behavior__<br>
+When we inflate the Content Card data into our custom classes, we use the `ContentCardClass` property of the data to determine which concrete subclass should be used to store the data.
+
+```java
+private ContentCardable createContentCardable(Map<String, ?> metadata,  ContentCardClass type){
+    switch(type){
+        case ContentCardClass.AD:{
+            return new Ad(metadata);
+        }
+        case ContentCardClass.MESSAGE_WEB_VIEW:{
+            return new WebViewMessage(metadata);
+        }
+        case ContentCardClass.MESSAGE_FULL_PAGE:{
+            return new FullPageMessage(metadata);
+        }
+        case ContentCardClass.ITEM_GROUP:{
+            return new Group(metadata);
+        }
+        case ContentCardClass.ITEM_TILE:{
+            return new Tile(metadata);
+        }
+        case ContentCardClass.COUPON:{
+            return new Coupon(metadata);
+        }
+        default:{
+            return null;
+        }
+    }
+}
+
+```
+
+Then, when handling the user interaction with the message list, we can use the message's type to determine which view to display to the user.
+
 ```java
 @Override
 protected void onCreate(Bundle savedInstanceState) {
@@ -364,6 +362,7 @@ protected void onCreate(Bundle savedInstanceState) {
         });
     }
 ```
+
 {% endtab %}
 {% endtabs %}
 
@@ -387,17 +386,16 @@ The dashboard configuration for interactive Content Cards is quick and straightf
 ##### Ready to log analytics?
 Visit the [following section](#logging-impressions-clicks-and-dismissals) to get a better understanding of how the flow of data should look.
 
-
 ## Logging Impressions, Clicks, and Dismissals
 
-After extending your own custom objects to function as Content Cards, logging valuable metrics like impressions, clicks, and dismissals is quick and simple. This can be done through the use of a `ContentCardable` base class that references and provides data to the BrazeManager.
+After extending your custom objects to function as Content Cards, logging valuable metrics like impressions, clicks, and dismissals is quick and simple. This can be done by using a `ContentCardable` base class that references and provides data to the `BrazeManager`.
 
 #### __Implementation Components__<br><br>
 
 {% tabs %}
 {% tab Kotlin %}
 __Custom Objects Call the Logging Methods__<br>
-Within your `ContentCardable` base class, you can call the BrazeManager directly, if appropriate. Remember, in this example, the `cardData` property will be nonnull if the object came from a content card. 
+Within your `ContentCardable` base class, you can call the `BrazeManager` directly, if appropriate. Remember, in this example, the `cardData` property will be nonnull if the object came from a Content Card. 
 
 ```kotlin
 override fun getView(position: Int, convertView: View?, parent: ViewGroup?): View {
@@ -417,7 +415,7 @@ The `ContentCardable` base class handles the heavy lifting of calling the `Braze
 ```
 
 __Call `Card` Functions__<br>
-The [BrazeManager](insert) can reference Braze SDK dependencies such as the list of Content Card objects array to get the `Card` to call our logging methods.
+The [BrazeManager](insert) can reference Braze SDK dependencies such as the Content Card objects array list to get the `Card` to call our logging methods.
 
 ```kotlin
     fun logContentCardClicked(idString: String?) {
@@ -435,7 +433,7 @@ The [BrazeManager](insert) can reference Braze SDK dependencies such as the list
 {% endtab %}
 {% tab Java %}
 __Custom Objects Call the Logging Methods__<br>
-Within your `ContentCardable` base class, you can call the BrazeManager directly, if appropriate. Remember, in this example, the `cardData` property will be nonnull if the object came from a content card. 
+Within your `ContentCardable` base class, you can call the `BrazeManager` directly, if appropriate. Remember, in this example, the `cardData` property will be nonnull if the object came from a Content Card. 
 ```java
 @Override
 public View getView(int position, View convertView, ViewGroup parent) {
@@ -457,7 +455,7 @@ The `ContentCardable` base class handles the heavy lifting of calling the `Braze
 ```
 
 __Call `Card` Functions__<br>
-The [BrazeManager](insert) can reference Braze SDK dependencies such as the list of Content Card objects array to get the `Card` to call our logging methods.
+The `[BrazeManager](insert)` can reference Braze SDK dependencies such as the Content Card objects array list to get the `Card` to call our logging methods.
 
 ```java
     public void logContentCardClicked(String idString) {
@@ -496,7 +494,6 @@ companion object Keys{
 {% endtab %}
 {% tab Java %}
 ```java
-
 public static final String IDSTRING = "idString";
 public static final String CREATED = "created";
 public static final String CLASSTYPE = "class_type";
@@ -507,7 +504,7 @@ public static final String DISMISSABLE = "dismissable";
 {% endtabs %}
 {% enddetails %}
 
-[1]: {% image_buster /assets/img/cc_implementation/android_supplementary.png %}
+[1]: {% image_buster /assets/img/cc_implementation/android_supplemental_content.png %}
 [2]: {% image_buster /assets/img/cc_implementation/supplementary_content.png %}
 [3]: {% image_buster /assets/img/cc_implementation/android_message_center.png %}
 [4]: {% image_buster /assets/img/cc_implementation/full_page.png %}

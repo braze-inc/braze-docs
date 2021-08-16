@@ -69,6 +69,33 @@ While building out your slide-up in-app message, you may notice you aren't able 
 #### Custom View Wrapper<br><br>
 
 {% tabs %}
+{% tab Kotlin %}
+__Override and Return Custom Layout Parameters__<br>
+Within the `getLayoutParams` method, you can use the superclass method to access the original `LayoutParameters` for the in-app message. Then, you can adjust the position by adding or subtracting as desired.
+
+```kotlin
+class CustomSlideUpInAppMessageViewWrapper(inAppMessageView: View?,
+                                           inAppMessage: IInAppMessage?,
+                                           inAppMessageViewLifecycleListener: IInAppMessageViewLifecycleListener?,
+                                           configurationProvider: BrazeConfigurationProvider?,
+                                           openingAnimation: Animation?,
+                                           closingAnimation: Animation?,
+                                           clickableInAppMessageView: View?) : DefaultInAppMessageViewWrapper(inAppMessageView,
+    inAppMessage,
+    inAppMessageViewLifecycleListener,
+    configurationProvider,
+    openingAnimation,
+    closingAnimation,
+    clickableInAppMessageView) {
+
+    override fun getLayoutParams(inAppMessage: IInAppMessage?): ViewGroup.LayoutParams {
+        val params = super.getLayoutParams(inAppMessage) as FrameLayout.LayoutParams
+        params.bottomMargin = params.bottomMargin + 500 //move the view up by 500 pixels
+        return params
+    }
+}
+```
+{% endtab %}
 {% tab Java %}
 __Override and Return Custom Layout Parameters__<br>
 Within the `getLayoutParams` method, you can use the superclass method to access the original `LayoutParameters` for the in-app message. Then, you can adjust the position by adding or subtracting as desired.
@@ -96,33 +123,6 @@ class CustomSlideUpInAppMessageViewWrapper extends DefaultInAppMessageViewWrappe
     @Override
     public ViewGroup.LayoutParams getLayoutParams(IInAppMessage inAppMessage){
         FrameLayout.LayoutParams params = (FrameLayout.LayoutParams)super.getLayoutParams(inAppMessage)
-        params.bottomMargin = params.bottomMargin + 500 //move the view up by 500 pixels
-        return params
-    }
-}
-```
-{% endtab %}
-{% tab Kotlin %}
-__Override and Return Custom Layout Parameters__<br>
-Within the `getLayoutParams` method, you can use the superclass method to access the original `LayoutParameters` for the in-app message. Then, you can adjust the position by adding or subtracting as desired.
-
-```kotlin
-class CustomSlideUpInAppMessageViewWrapper(inAppMessageView: View?,
-                                           inAppMessage: IInAppMessage?,
-                                           inAppMessageViewLifecycleListener: IInAppMessageViewLifecycleListener?,
-                                           configurationProvider: BrazeConfigurationProvider?,
-                                           openingAnimation: Animation?,
-                                           closingAnimation: Animation?,
-                                           clickableInAppMessageView: View?) : DefaultInAppMessageViewWrapper(inAppMessageView,
-    inAppMessage,
-    inAppMessageViewLifecycleListener,
-    configurationProvider,
-    openingAnimation,
-    closingAnimation,
-    clickableInAppMessageView) {
-
-    override fun getLayoutParams(inAppMessage: IInAppMessage?): ViewGroup.LayoutParams {
-        val params = super.getLayoutParams(inAppMessage) as FrameLayout.LayoutParams
         params.bottomMargin = params.bottomMargin + 500 //move the view up by 500 pixels
         return params
     }
