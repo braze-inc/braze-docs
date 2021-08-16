@@ -3,7 +3,7 @@
 Installing the Braze SDK will provide you with basic analytics functionality as well as working in-app messages with which you can engage your users.
 
 {% alert note %}
-Due to a number of incompatible changes announced in the Android 12 operating system, you must upgrade to [Braze Android SDK v13.1.2+](https://github.com/Appboy/appboy-android-sdk/blob/master/CHANGELOG.md#1312) as soon as possible, before the release of Android 12. For more information, please see our [Android 12 Upgrade Guide](https://www.braze.com/docs/developer_guide/platform_integration_guides/android/android_12/).
+For optimal performance on Android 12, we recommend upgrading to to [Braze Android SDK v13.1.2+][1] as soon as possible. For more information, please see our [Android 12 Upgrade Guide](https://www.braze.com/docs/developer_guide/platform_integration_guides/android/android_12/).
 {% endalert %}
 
 ## Step 1: Integrate the Braze Library
