@@ -138,5 +138,5 @@ This custom feed can be used like any other [`ContentCardsFragment`][1]. In the 
 When you create a Content Card campaign, set your key-value pair as: `feed_type` > `Transactional` or whatever feed type you desire.
 
 [1]: https://appboy.github.io/appboy-android-sdk/javadocs/com/braze/ui/contentcards/ContentCardsFragment.html
-[2]: https://appboy.github.io/appboy-android-sdk/javadocs/com/appboy/ui/contentcards/handlers/IContentCardsUpdateHandler.html
-[3]: https://appboy.github.io/appboy-android-sdk/javadocs/com/appboy/events/ContentCardsUpdatedEvent.html
+[2]: https://appboy.github.io/appboy-android-sdk/javadocs/com/braze/ui/contentcards/handlers/IContentCardsUpdateHandler.html
+[3]: https://appboy.github.io/appboy-android-sdk/javadocs/com/braze/events/ContentCardsUpdatedEvent.html
