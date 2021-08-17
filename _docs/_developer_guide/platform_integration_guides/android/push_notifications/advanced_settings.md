@@ -101,7 +101,7 @@ To message your full userbase with a specific sound, we recommend that you indir
 [9]: {% image_buster /assets/img_archive/summary_text.png %}
 [11]: {% image_buster /assets/img_archive/sound_android.png %}
 [12]: {% image_buster /assets/img_archive/deep_link_image_android.png %}
-[13]: {{site.baseurl}}/developer_guide/rest_api/messaging/
+[13]: {{site.baseurl}}/api/endpoints/messaging/
 [14]: https://github.com/Appboy/appboy-android-sdk/blob/c5c4209bd3c42fbd3c3fdf096574fa17066fcda9/samples/custom-broadcast/src/main/java/com/braze/custombroadcast/CustomBroadcastReceiver.java
 [15]: {% image_buster /assets/img_archive/messagesummary.gif %}
 [17]: https://developer.android.com/training/notify-user/channels#importance

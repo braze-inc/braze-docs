@@ -19,7 +19,7 @@ alias: "/dnd/email_template/"
 
 > This article covers how to create, customize, and manage email templates.
 
-Email messages are great for delivering content to the user on their terms. They are also wonderful tools to re-engage users who may have even uninstalled your app. The Braze dashboard has an email template editor that allows you to create custom-tailored, eye-catching emails and save them for later use in campaigns. You can also upload your own [HTML Email Template]({{site.baseurl}}/user_guide/message_building_by_channel/email/html_email_template/).
+Email messages are great for delivering content to the user on their terms. They are also wonderful tools to re-engage users who may have even uninstalled your app. The Braze dashboard has an email template editor that allows you to create custom-tailored, eye-catching emails and save them for later use in campaigns. You can also upload your own [HTML Email Template]({{site.baseurl}}/user_guide/message_building_by_channel/email/templates/html_email_template/).
 
 ## Creating Your Template
 

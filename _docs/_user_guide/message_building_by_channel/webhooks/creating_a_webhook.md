@@ -163,12 +163,11 @@ There are many ways to utilize webhooks, and with Braze's technology partners (A
 Check out:
 * [Messenger]({{site.baseurl}}/partners/additional_channels/instant_chat/messenger/)
 * [Remerge]({{site.baseurl}}/partners/advertising_technologies/retargeting/remerge/)
-* [Twilio]({{site.baseurl}}/partners/additional_channels/sms/twilio/)
 * [Lob.com]({{site.baseurl}}/partners/additional_channels/direct_mail/lob/)
 * And many more in our [technology partners]({{site.baseurl}}/partners/home/) section of Braze Docs!
 
 [14]: https://sendgrid.com/blog/whats-webhook
-[15]: {{site.baseurl}}/user_guide/personalization_and_dynamic_content/personalized_messaging/#personalized-messaging
+[15]: {{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/
 [16]: {{site.baseurl}}/user_guide/engagement_tools/campaigns/ideas_and_strategies/campaigns_in_multiple_languages/#campaigns-in-multiple-languages
 [17]: {{site.baseurl}}/developer_guide/platform_integration_guides/ios/analytics/setting_user_ids/#additional-notes-and-best-practices
 [18]: {{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events/

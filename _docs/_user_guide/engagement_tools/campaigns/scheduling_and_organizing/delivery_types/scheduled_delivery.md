@@ -39,7 +39,7 @@ Segments targeted with local time zone campaigns should include, at minimum, a 2
 
 ### Use Cases
 
-Designated time schedules are best suited for messages scheduled in advance and recurring campaigns - such as [onboarding][7] and retention - that run regularly on all qualified users.
+Designated time schedules are best suited for messages scheduled in advance and recurring campaigns - such as onboarding and retention - that run regularly on all qualified users.
 
 ## Option 3: Intelligent Timing
 

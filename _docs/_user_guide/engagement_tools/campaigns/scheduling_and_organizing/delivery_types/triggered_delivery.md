@@ -108,7 +108,7 @@ Triggered campaigns are very effective for transactional or achievement-based me
 
 Transactional campaigns include messages sent after the user completes a purchase or adds an item to their cart. The latter case is a great example of a campaign that would benefit from an exception event. Say your campaign reminds users of items in their cart that they haven't purchased. The exception event, in this case, would be the user buying the products in their cart. For achievement-based campaigns, you can send a message 5 minutes after the user completes a conversion or beats a game level.
 
-In addition, when creating welcome campaigns, you can trigger messages to send after the user registers or sets up an account. Staggering messages to be sent on different days following registration will allow you to create a thorough [onboarding process][30].
+In addition, when creating welcome campaigns, you can trigger messages to send after the user registers or sets up an account. Staggering messages to be sent on different days following registration will allow you to create a thorough onboarding process.
 
 ## Why Did a User Not Receive My Triggered Campaign?
 

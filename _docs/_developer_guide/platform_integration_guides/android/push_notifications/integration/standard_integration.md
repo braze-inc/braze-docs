@@ -665,7 +665,7 @@ Braze push data keys are documented [here](https://appboy.github.io/appboy-andro
 [6]: https://appboy.github.io/appboy-android-sdk/javadocs/com/braze/IBrazeNotificationFactory.html
 [8]: {{site.baseurl}}/user_guide/message_building_by_channel/push/best_practices/
 [16]: {% image_buster /assets/img_archive/fcm_api_insert.png %} "FCMKey"
-[22]: {{site.baseurl}}/developer_guide/rest_api/messaging/
+[22]: {{site.baseurl}}/api/endpoints/messaging/
 [28]: {{site.baseurl}}/developer_guide/platform_integration_guides/fireos/push_notifications/integration/
 [35]: https://appboy.github.io/appboy-android-sdk/javadocs/com/appboy/Appboy.html#registerAppboyPushMessages-java.lang.String- "Manual Registration Method"
 [37]: https://developer.android.com/guide/topics/ui/notifiers/notifications
@@ -686,10 +686,10 @@ Braze push data keys are documented [here](https://appboy.github.io/appboy-andro
 [59]: {% image_buster /assets/img_archive/finding_firebase_server_key.png %} "FirebaseServerKey"
 [61]: {{site.baseurl}}/user_guide/message_building_by_channel/push/creating_a_push_message/#android-notification-options
 [62]: https://developer.android.com/preview/features/notification-channels.html
-[63]: {{site.baseurl}}/developer_guide/rest_api/messaging/#android-push-object
+[63]: {{site.baseurl}}/api/objects_filters/messaging/android_object/
 [64]: {{site.baseurl}}/user_guide/message_building_by_channel/push/notification_channels/#dashboard-fallback-channel
 [65]: {{site.baseurl}}/developer_guide/platform_integration_guides/fireos/advanced_use_cases/runtime_configuration/#runtime-configuration
-[66]: {{site.baseurl}}/developer_guide/rest_api/messaging/#sending-messages-immediately-via-api-only
+[66]: {{site.baseurl}}/api/endpoints/messaging/send_messages/post_send_messages/
 [67]: https://developer.android.com/reference/android/app/Application.html#onCreate()
 [68]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/advanced_use_cases/runtime_configuration/#runtime-configuration
 [70]: https://github.com/Appboy/appboy-android-sdk/blob/master/samples/firebase-push/src/main/AndroidManifest.xml "AndroidManifest.xml"

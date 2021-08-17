@@ -135,5 +135,5 @@ Opera | macOS | 38 | 42
 [3]: {{site.baseurl}}/user_guide/personalization_and_dynamic_content/deep_linking_to_in-app_content/#deep-linking-to-in-app-content
 [8]: https://www.braze.com/customers
 [9]: https://developer.apple.com/app-store/review/guidelines/
-[10]: https://play.google.com/about/developer-content-policy-print/
+[10]: https://developers.google.com/android/play-protect/mobile-unwanted-software
 [23]: {{site.baseurl}}/user_guide/engagement_tools/campaigns/ideas_and_strategies/capturing_lapsing_users/#capturing-lapsing-users

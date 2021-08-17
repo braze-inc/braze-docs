@@ -196,7 +196,7 @@ On the **Funnel Report** page, you can analyze the journeys your customers take 
 [6]: {% image_buster /assets/img_archive/confirm_email.png %}
 [9]: https://www.braze.com/customers
 [10]: {{site.baseurl}}/user_guide/message_building_by_channel/email/creating_an_email_template/#creating-an-email-template
-[13]: {{site.baseurl}}/user_guide/engagement_tools/campaigns/testing_and_more/multivariate_testing/#intelligent-selection
+[13]: {{site.baseurl}}/user_guide/intelligence/intelligent_selection/
 [14]: {% image_buster /assets/img/email.png %}
 [15]: {% image_buster /assets/img_archive/newEmailTest.png %}
 [16]: {{site.baseurl}}/user_guide/message_building_by_channel/email/best_practices/

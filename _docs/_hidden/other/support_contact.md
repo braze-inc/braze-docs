@@ -412,7 +412,7 @@ var ticket_lookuptable = {
           'Label': '*  My question is about...',
           'SelectDefault': 'Select a type...',
           'LinksTitle': ['REST APIs','REST APIs: updating user data','REST APIs: messaging','REST APIs: exporting Braze data'],
-          'Links': ['{{site.baseurl}}/developer_guide/rest_api/basics/','{{site.baseurl}}/developer_guide/rest_api/user_data/','{{site.baseurl}}/developer_guide/rest_api/messaging/','{{site.baseurl}}/developer_guide/rest_api/export/'],
+          'Links': ['{{site.baseurl}}/developer_guide/rest_api/basics/','{{site.baseurl}}/developer_guide/rest_api/user_data/','{{site.baseurl}}/api/endpoints/messaging/','{{site.baseurl}}/developer_guide/rest_api/export/'],
           'SelectOption' : {
             'Importing data' : {
               'ShowSubmit': true,
