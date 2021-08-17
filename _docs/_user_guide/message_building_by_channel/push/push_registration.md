@@ -30,7 +30,7 @@ Android and iOS deal with Push token registration in different ways:
 
 ## Two ways to Check a Users Push Registration State:
 1. __User Profile__: Individual user profiles can be accessed through the Braze dashboard by selecting User Search from the right sidebar. Here, you can look up user profiles by email address, phone number, or external user ID. Once in a user profile, under the Engagement tab, you can view a user's push registration state. <br><br>
-2. __Rest API Export__: Individual user profiles can be exported in the JSON format using the users/export/ [segment][segment] or [identifier][identifier] endpoints by using Braze’s REST API. Braze will return a push tokens object, that contains push enablement information per device, as well as an additional `notifications_enabled` parameter that will signify if a user blocked notifications from displaying (the [previous Android SDK][1] version does not have the `notifications_enabled` parameter).
+2. __Rest API Export__: Individual user profiles can be exported in the JSON format using the users/export/ [segment][segment] or [identifier][identifier] endpoints by using Braze’s REST API. Braze will return a push tokens object, that contains push enablement information per device, as well as an additional `notifications_enabled` parameter that will signify if a user blocked notifications from displaying (the previous Android SDK version does not have the `notifications_enabled` parameter).
 
 ## Push Token Management
 
@@ -61,7 +61,6 @@ If we want to launch a campaign, we create a campaign in Braze that generates a 
 Suppose a user opts-in for push, receives some push messaging, and then later deletes the app; this will remove the push consent at the device level. From here, the first bounced push after the uninstall will result in that user being opted-out of future push messaging. After this, if a user were to reinstall the app but not launch it, Braze will be unable to send a push to the user because push tokens have not been re-granted for your app. <br><br>Additionally, if a user were to re-enable foreground push, it would require a session start to update this information in their user profile to begin receiving push messaging.
 {% enddetails %}
 
-[1]: {{site.baseurl}}/user_guide/message_building_by_channel/push/users_and_subscriptions/#before-android-sdk
 [errors]: {{site.baseurl}}/help/help_articles/push/push_error_codes/#push-bounced-mismatchsenderid
 [identifier]: {{site.baseurl}}/api/endpoints/export/user_data/post_users_identifier/
 [segment]: {{site.baseurl}}/api/endpoints/export/user_data/post_users_segment/
