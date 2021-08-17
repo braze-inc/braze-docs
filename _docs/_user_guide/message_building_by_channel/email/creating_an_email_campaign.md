@@ -199,7 +199,7 @@ On the **Funnel Report** page, you can analyze the journeys your customers take 
 [13]: {{site.baseurl}}/user_guide/engagement_tools/campaigns/testing_and_more/multivariate_testing/#intelligent-selection
 [14]: {% image_buster /assets/img/email.png %}
 [15]: {% image_buster /assets/img_archive/newEmailTest.png %}
-[16]: {{site.baseurl}}/help/best_practices/email/email_styling_tips/#email-size
+[16]: {{site.baseurl}}/user_guide/message_building_by_channel/email/best_practices/
 [17]: {% image_buster /assets/img_archive/email_click_results_heatmap.gif %}
 [18]: {{site.baseurl}}/user_guide/message_building_by_channel/email/templates/html_email_template/
 [19]: {% image_buster /assets/img_archive/new_campaign_email.png %}

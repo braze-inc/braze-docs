@@ -166,7 +166,7 @@ For answers to frequently asked questions about email templates, check out our [
 [4]: {% image_buster /assets/img/email_templates/template4.jpg %}
 [cf]: {{site.baseurl}}/user_guide/message_building_by_channel/email/managing_user_subscriptions/#custom-footer
 [6]: {% image_buster /assets/img/email_templates/template5.jpg %}
-[7]: {{site.baseurl}}/help/best_practices/email/email_styling_tips/#email-size
+[7]: {{site.baseurl}}/user_guide/message_building_by_channel/email/best_practices/
 [8]: {{site.baseurl}}/help/release_notes/2018/may/#mobile-responsive-email-templates
 [9]: {{site.baseurl}}/user_guide/message_building_by_channel/email/templates/faq/
 [15]: {% image_buster /assets/img_archive/newEmailTest.png %}

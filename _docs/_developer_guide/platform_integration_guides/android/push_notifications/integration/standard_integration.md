@@ -663,7 +663,7 @@ Braze push data keys are documented [here](https://appboy.github.io/appboy-andro
 
 [5]: https://appboy.github.io/appboy-android-sdk/javadocs/com/appboy/Appboy.html#setCustomBrazeNotificationFactory-com.braze.IBrazeNotificationFactory-
 [6]: https://appboy.github.io/appboy-android-sdk/javadocs/com/braze/IBrazeNotificationFactory.html
-[8]: {{site.baseurl}}/help/best_practices/push/overview/
+[8]: {{site.baseurl}}/user_guide/message_building_by_channel/push/best_practices/
 [16]: {% image_buster /assets/img_archive/fcm_api_insert.png %} "FCMKey"
 [22]: {{site.baseurl}}/developer_guide/rest_api/messaging/
 [28]: {{site.baseurl}}/developer_guide/platform_integration_guides/fireos/push_notifications/integration/
@@ -676,8 +676,8 @@ Braze push data keys are documented [here](https://appboy.github.io/appboy-andro
 [45]: https://firebase.google.com/docs/cloud-messaging/
 [48]: https://developers.google.com/cloud-messaging/android/android-migrate-fcm
 [49]: https://firebase.google.com/docs/android/setup
-[50]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/push_notifications/integration_baidu/#baidu-integration
-[52]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/push_notifications/integration/#custom-handling-push-receipts-opens-and-key-value-pairs
+[50]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/push_notifications/integration/baidu_integration/
+[52]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/push_notifications/integration/standard_integration/#custom-handling-for-push-receipts-opens-dismissals-and-key-value-pairs
 [53]: https://developer.android.com/reference/android/content/BroadcastReceiver.html
 [55]: {% image_buster /assets/img_archive/android_push_test.png %} "Android Push Test"
 [56]: {{site.baseurl}}/user_guide/message_building_by_channel/push/creating_a_push_message/#creating-a-push-message

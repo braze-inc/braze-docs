@@ -91,4 +91,4 @@ Subdomain segmentation is especially important for large-volume senders. These s
 [43]: https://www.braze.com/blog/email-list-hygiene/
 [44]: https://senderscore.org/
 [45]: http://www.senderbase.org/
-[46]: {{site.baseurl}}/help/best_practices/email/sunset_policies/
+[46]: {{site.baseurl}}/user_guide/message_building_by_channel/email/best_practices/

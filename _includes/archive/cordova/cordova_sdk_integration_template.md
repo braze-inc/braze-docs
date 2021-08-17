@@ -78,7 +78,7 @@ You can look at the [sample {{ include.platform }} application][3] and [sample C
 {% endif %}
 
 {% if include.platform == 'Android' %}
-[1]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/push_notifications/integration/
+[1]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/push_notifications/integration/standard_integration/
 [2]: https://github.com/Appboy/appboy-cordova-sdk "Cordova Repo"
 [3]: https://github.com/Appboy/appboy-android-sdk "Platform sample app"
 [4]: https://github.com/Appboy/appboy-cordova-sdk/blob/master/sample-project/www/js/index.js "Sample Cordova Implementation"

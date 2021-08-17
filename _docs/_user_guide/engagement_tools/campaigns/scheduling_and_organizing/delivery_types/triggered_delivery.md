@@ -141,7 +141,7 @@ Additionally, if a campaign is action-based and has a delay, you can check the o
 [24]: {% image_buster /assets/img_archive/ReEligible.png %}
 [27]: {% image_buster /assets/img_archive/schedule_triggered5.png %}
 [28]: {% image_buster /assets/img_archive/schedule_triggered6.png %}
-[29]: {{site.baseurl}}/help/best_practices/in-app_messages/in-app_message_behavior/#in-app-message-delivery-rules
+[29]: {{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/best_practices/in-app_message_behavior/#in-app-message-delivery-rules
 [30]: {{site.baseurl}}/help/best_practices/user_onboarding/#user-onboarding
 [31]: {% image_buster /assets/img_archive/schedule_triggered_next_available.png %}
 [32]: {{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events/

@@ -149,8 +149,8 @@ For more information, check out our CSS Inlining [Documentation][10]
 [4]: {% image_buster /assets/img/email_settings/custom_opt_in.png %}
 [5]: https://en.wikipedia.org/wiki/CAN-SPAM_Act_of_2003
 [6]: https://lab.braze.com/email-open-tracking-pixel
-[7]: {{site.baseurl}}/help/best_practices/email/managing_email_subscriptions/#unsubscribed-email-addresses
-[8]: {{site.baseurl}}/help/best_practices/email/managing_email_subscriptions/
+[7]: {{site.baseurl}}/user_guide/message_building_by_channel/email/best_practices/managing_email_subscriptions/#unsubscribed-email-addresses
+[8]: {{site.baseurl}}/user_guide/message_building_by_channel/email/best_practices/
 [9]: {{site.baseurl}}/user_guide/administrative/manage_your_braze_users/company-wide_settings_management/#list-unsubscribe-settings
 [10]: {{site.baseurl}}/user_guide/message_building_by_channel/email/css_inline/
 [11]: {% image_buster /assets/img/email_settings/bcc_address.png %}
