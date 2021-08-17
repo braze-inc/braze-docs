@@ -153,7 +153,21 @@ __Custom Object Initializer__<br>
 MetaData from a `Card` is used to populate your concrete subclass's variables. Depending on the subclass, you may need to extract different values during initialization. The key-value pairs set up in the Braze dashboard are represented in the “extras” dictionary.
 
 ```java
-TODO
+public class Tile extends ContentCardable {
+
+    public Tile(Map<String, Object> metadata){
+        super(metadata);
+        this.detail = (String) metadata.get(ContentCardable.detail);
+        this.tags = ((String)metadata.get(ContentCardable.tags)).split(",");
+        if (metadata.containsKey(Keys.extras)){
+            Map<String, Object> extras = metadata.get(Keys.extras);
+            this.title = (String)extras.get(Keys.title);
+            this.price = Double.parseDouble((String)extras.get(Keys.price));
+            this.image = (String)extras.get(Keys.image);
+
+        }
+    }
+}
 ```
 {% endsubtab %}
 {% endsubtabs %}
@@ -197,7 +211,41 @@ __Identifying Types__<br>
 The `ContentCardClass` enum represents the `class_type` value in the Braze dashboard and provides a method to initialize the enum from the Strings supplied by the SDK.
 
 ```java
-TODO
+enum ContentCardClass {
+    AD,
+    COUPON,
+    NONE,
+    ITEM_TILE,
+    ITEM_GROUP,
+    MESSAGE_FULL_PAGE,
+    MESSAGE_WEB_VIEW
+
+    public static valueFrom(String val){
+        switch(val.toLowerCase()){
+            case "coupon_code":{
+                return COUPON;
+            }
+            case "home_tile":{
+                return ITEM_TILE;
+            }
+            case "group":{
+                return ITEM_GROUP;
+            }
+            case "message_full_page":{
+                return MESSAGE_FULL_PAGE;
+            }
+            case "message_webview":{
+                return MESSAGE_WEB_VIEW;
+            }
+            case "ad_banner":{
+                return AD;
+            }
+            default:{
+                return NONE;
+            }
+        }
+    }
+}
 ```
 {% endsubtab %}
 {% endsubtabs %}
@@ -509,5 +557,5 @@ public static final String DISMISSABLE = "dismissable";
 [3]: {% image_buster /assets/img/cc_implementation/android_message_center.png %}
 [4]: {% image_buster /assets/img/cc_implementation/full_page.png %}
 [5]: {% image_buster /assets/img/cc_implementation/html_webview.png %}
-[6]: {% image_buster /assets/img/cc_implementation/android_discount2.png %} //todo
+[6]: {% image_buster /assets/img/cc_implementation/android_discount2.png %}
 [7]: {% image_buster /assets/img/cc_implementation/discount.png %}

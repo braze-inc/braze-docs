@@ -178,7 +178,36 @@ __Supply a Custom Factory to Return Your Custom Wrapper__<br>
 In order to ensure that the Braze SDK uses your custom wrapper, you also need to supply a custom `IInAppMessageViewWrapperFactory` implementation that returns your custom wrapper. You can either implement the `IInAppMessageViewWrapperFactory` directly, or subclass `AppboyInAppMessageViewWrapperFactory` and only override the `createInAppMessageViewWrapper` method:
 
 ```java
-TODO
+class CustomInAppMessageViewWrapperFactory extends AppboyInAppMessageViewWrapperFactory {
+    @Override
+    public IInAppMessageViewWrapper createInAppMessageViewWrapper(View inAppMessageView, 
+        IInAppMessage inAppMessage, 
+        IInAppMessageViewLifecycleListener inAppMessageViewLifecycleListener, 
+        BrazeConfigurationProvider configurationProvider, 
+        Animation openingAnimation, 
+        Animation closingAnimation, 
+        View clickableInAppMessageView){
+        if (inAppMessage instanceof InAppMessageSlideup){
+            return new CustomSlideUpInAppMessageViewWrapper( //return our custom view wrapper only for slideups
+                inAppMessageView,
+                inAppMessage,
+                inAppMessageViewLifecycleListener,
+                configurationProvider,
+                openingAnimation,
+                closingAnimation,
+                clickableInAppMessageView);
+        }else{
+            return super.createInAppMessageViewWrapper(//defer to the default implementation for all other IAM types
+                inAppMessageView,
+                inAppMessage,
+                inAppMessageViewLifecycleListener,
+                configurationProvider,
+                openingAnimation,
+                closingAnimation,
+                clickableInAppMessageView);
+        }
+    }
+}
 ```
 {% endtab %}
 {% endtabs %}
