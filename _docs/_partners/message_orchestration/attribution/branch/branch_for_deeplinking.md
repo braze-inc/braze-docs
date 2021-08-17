@@ -1,9 +1,11 @@
 ---
 nav_title: Branch for Deep Linking
+article_title: Branch for Deep Linking
 alias: /partners/branch_for_deeplinking/
-
 page_type: partner
 description: "This article describes the partnership between Braze and Branch and how to use it to support your deep linking practices."
+search_tag: Partner
+
 ---
 # Branch for Deep Linking {#branch}
 

@@ -1,11 +1,13 @@
 ---
 nav_title: Deep Linking & Attribution
+article_title: Deep Linking & Attribution Partners
 page_order: 1
 
 page_type: landing
 description: "This page lists Braze partners (Alloys) who allow you to deep link or pull data from your app to track attribution."
 
 layout: partner_page
+search_tag: Partner
 partner_api: "https://www.braze.com/api/v1/partners"
 partner_path: "https://www.braze.com/product/alloys/partners/"
 

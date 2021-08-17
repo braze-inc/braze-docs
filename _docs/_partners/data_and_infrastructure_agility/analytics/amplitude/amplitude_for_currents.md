@@ -1,14 +1,16 @@
 ---
 nav_title: Amplitude for Currents
+article_title: Amplitude
 page_order: 0
 alias: /partners/amplitude_for_currents/
-
 description: "This article outlines the partnership between Braze Currents and Amplitude, a product analytics and business intelligence platform."
 page_type: partner
-tool: currents
+tool: Currents
+search_tag: Partner
+
 ---
 
-# About Amplitude & Currents
+# Amplitude for Currents
 
 {% include video.html id="7yadPjDImxQ" align="right" %}
 

@@ -1,7 +1,10 @@
 ---
 nav_title: EduMe
+article_title: EduMe
 description: "This article outlines the partnership between Braze and EduMe, a mobile-based training tool that allows you to give your workforce or customers access to lessons and courses created in EduMe. They will be able to access this content seamlessly in their browser, and you will be able to follow their progress as a group or as individuals using the EduMe reporting functionality."
 alias: /partners/edume/
+page_tpe: partner
+search_tag: Partner
 
 ---
 

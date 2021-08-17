@@ -1,11 +1,12 @@
 ---
 nav_title: Zendesk
+article_title: Zendesk
 page_order: 9
-
 description: "This article outlines the partnership between Braze and Zendesk, a popular support suite that allows you to utilize Braze webhooks that can sync support data between the two platforms."
 alias: /partners/zendesk/
-
 page_type: partner
+search_tag: Partner
+
 ---
 
 # Zendesk

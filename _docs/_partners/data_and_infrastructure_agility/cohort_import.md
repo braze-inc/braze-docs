@@ -1,9 +1,11 @@
 ---
 nav_title: Cohort Import
+article_title: Cohort Import Partners
 layout: partner_page
 page_order: 1
 
 page_type: landing
+search_tag: Partner
 description: "This page lists Braze partners (Alloys) who offer cohort imports to the Braze ."
 
 partner_api: "https://www.braze.com/api/v1/partners"

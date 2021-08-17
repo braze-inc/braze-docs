@@ -1,15 +1,16 @@
 ---
 nav_title: Mixpanel for Currents
+article_title: Mixpanel for Currents
 page_order: 0
 alias: /partners/mixpanel_for_currents/
-
 description: "This article outlines the partnership between Braze Currents and Mixpanel, a business analytics platform."
 page_type: partner
-tool: currents
+search_tag: Partner
+tool: Currents
 
 ---
 
-# About Mixpanel & Currents
+# Mixpanel for Currents
 
 > [Mixpanel](https://mixpanel.com/) is a business analytics platform. You can export events from your Braze integration to Mixpanel in order to perform deeper analysis. Data collected is used to build custom reports and measure user engagement and retention.
 
