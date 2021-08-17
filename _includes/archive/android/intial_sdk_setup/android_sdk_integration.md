@@ -3,7 +3,7 @@
 Installing the Braze SDK will provide you with basic analytics functionality as well as working in-app messages with which you can engage your users.
 
 {% alert note %}
-Due to a number of incompatible changes announced in the Android 12 operating system, you must upgrade to [Braze Android SDK v13.1.2+](https://github.com/Appboy/appboy-android-sdk/blob/master/CHANGELOG.md#1312) as soon as possible, before the release of Android 12. For more information, please see our [Android 12 Upgrade Guide](https://www.braze.com/docs/developer_guide/platform_integration_guides/android/android_12/).
+For optimal performance on Android 12, we recommend upgrading to to [Braze Android SDK v13.1.2+][1] as soon as possible. For more information, please see our [Android 12 Upgrade Guide](https://www.braze.com/docs/developer_guide/platform_integration_guides/android/android_12/).
 {% endalert %}
 
 ## Step 1: Integrate the Braze Library
@@ -155,7 +155,7 @@ Starting with Braze Android SDK version 3.6.0 Braze location collection is disab
 
 Braze will now be able to collect [specified data from your application]({{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/overview/) and your basic integration should be complete.
 
-Please see the following sections in order to enable [custom event tracking]({{site.baseurl}}/developer_guide/platform_integration_guides/android/analytics/tracking_custom_events/#tracking-custom-events), [push messaging]({{site.baseurl}}/developer_guide/platform_integration_guides/android/push_notifications/integration/), [Content Cards]({{site.baseurl}}/developer_guide/platform_integration_guides/android/content_cards/overview/) and the [complete suite]({{site.baseurl}}/developer_guide/platform_integration_guides/android/initial_sdk_setup/android_sdk_integration/) of Braze features.
+Please see the following sections in order to enable [custom event tracking]({{site.baseurl}}/developer_guide/platform_integration_guides/android/analytics/tracking_custom_events/#tracking-custom-events), [push messaging]({{site.baseurl}}/developer_guide/platform_integration_guides/android/push_notifications/integration/standard_integration/), [Content Cards]({{site.baseurl}}/developer_guide/platform_integration_guides/android/content_cards/overview/) and the [complete suite]({{site.baseurl}}/developer_guide/platform_integration_guides/android/initial_sdk_setup/android_sdk_integration/) of Braze features.
 
 [2]: {{site.baseurl}}/user_guide/introduction/
 [32]: {% image_buster /assets/img_archive/androidstudio2.png %}

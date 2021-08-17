@@ -1,9 +1,11 @@
 ---
 nav_title: Digioh
+article_title: Digioh
 page_order: 1
 description: "Digioh lets you easily create pop-ups, forms, surveys, and communication preference centers that drive real engagement through your Braze campaigns."
 alias: /partners/digioh/
 page_type: partner
+search_tag: Partner
 
 ---
 
@@ -48,7 +50,6 @@ You can also add it from the **Integration** section of the editor.
 
 That's all there is to it! Digioh will now pass your captured leads to Braze in real-time.
 
-[1]: {% image_buster /assets/img/digioh/1.png %}
 [2]: {% image_buster /assets/img/digioh/2.png %}
 [3]: {% image_buster /assets/img/digioh/3.png %}
 [4]: {% image_buster /assets/img/digioh/4.png %}

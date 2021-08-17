@@ -1,13 +1,15 @@
 ---
 nav_title: mParticle
+article_title: mParticle
 page_order: 0
 alias: /partners/mparticle/
-
 description: "This article outlines the partnership between Braze and mParticle, a customer data platform that collects and routes information between sources in your marketing stack."
 page_type: partner
+search_tag: Partner
 
 ---
-# About mParticle
+
+# mParticle
 
 {% include video.html id="Njhqwd36gZM" align="right" %}
 

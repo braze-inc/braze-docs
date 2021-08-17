@@ -351,6 +351,14 @@ The "**Optional**" setting is a useful way to monitor the potential impact this 
 
 Invalid JWT signatures will be reported in both **Optional** and **Required** states, however only the **Required** state will reject SDK requests causing apps to retry and request new signatures.
 
+## Analytics {#analytics}
+
+Each app will show a breakdown of SDK Authentication errors collected while this feature is in the **Optional** and **Required** state.
+
+Data is available in real-time, and you can hover over points in the chart to see a breakdown of errors for a given date.
+
+![analytics][10]
+
 ## Error Codes {#error-codes}
 
 | Error Code| Error Reason | Description |
@@ -414,3 +422,4 @@ Requests will retry periodically using an exponential backoff approach. After 50
 [7]: #sdk-callback
 [8]: {% image_buster /assets/img/sdk-auth-settings.png %}
 [9]: #error-codes
+[10]: {% image_buster /assets/img/sdk-auth-analytics.png %}

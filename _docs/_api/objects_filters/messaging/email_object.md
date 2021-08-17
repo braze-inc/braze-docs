@@ -44,4 +44,4 @@ An `email_template_id` can be retrieved from the bottom of any Email Template cr
 ![Email Template ID][31]
 
 [31]: {% image_buster /assets/img_archive/email_template_id.png %}
-[46]: {{site.baseurl}}/help/best_practices/email/email_styling_tips/#body-styling
+[46]: {{site.baseurl}}/user_guide/message_building_by_channel/email/best_practices/

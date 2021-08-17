@@ -272,7 +272,7 @@ One multivariate and A/B test can (and should!) inspire ideas for future tests, 
 [210]: {% image_buster /assets/img/ab_create_8.png %}
 [225]: https://www.optimizely.com/resources/sample-size-calculator/
 [272]: #intelligent-selection
-[273]: {{site.baseurl}}/help/best_practices/push/message_format/
+[273]: {{site.baseurl}}/user_guide/message_building_by_channel/push/best_practices/
 [274]: {{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/create_a_canvas/
 [intelselection]: {{site.baseurl}}/user_guide/intelligence/intelligent_selection/
 [confidence]: {{site.baseurl}}/user_guide/intelligence/multivariate_testing/#understanding-confidence

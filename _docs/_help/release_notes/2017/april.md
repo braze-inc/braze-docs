@@ -47,5 +47,5 @@ We've added a new "Performed Conversion" event and an "In Canvas Control" filter
 [32]: {{site.baseurl}}/developer_guide/platform_integration_guides/ios/push_notifications/integration/#ios-10-rich-notifications
 [33]: {{site.baseurl}}/user_guide/engagement_tools/news_feed/creating_a_news_feed_item/#news-feed-cards
 [34]: {{site.baseurl}}/user_guide/personalization_and_dynamic_content/connected_content/about_connected_content/
-[48]: {{site.baseurl}}/help/best_practices/in-app_messages/
+[48]: {{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/best_practices/
 [98]:{{site.baseurl}}/user_guide/onboarding/platform_administrative_features/#authentication-rules

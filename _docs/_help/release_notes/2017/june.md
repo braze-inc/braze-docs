@@ -35,6 +35,6 @@ You can now select hours as a time unit when you are filtering for date and time
 [45]: {{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/create_a_canvas/
 [46]: {{site.baseurl}}/user_guide/onboarding/platform_administrative_features/#security-settings
 [47]: {{site.baseurl}}/help/best_practices/web_sdk/#web-push
-[49]: {{site.baseurl}}/developer_guide/rest_api/messaging/#overview
+[49]: {{site.baseurl}}/api/endpoints/messaging/
 [50]: {{site.baseurl}}/user_guide/administrative/manage_your_users/user_import/#user-import
 [98]:{{site.baseurl}}/user_guide/onboarding/platform_administrative_features/#authentication-rules

@@ -44,10 +44,10 @@ glossaries:
     description: The percentage of messages that were unsuccessfully sent or designated as 'returned' or 'not received' from send services used or not received by the intended emailable users. This could occur because there is not a valid push token, the email addresses were incorrect or deactivated, or the user unsubscribed after the campaign was launched. <br> <i> An email bounce for customers using Sendgrid consists of hard bounces, spam (`spam_report_drops`), and emails sent to invalid addresses (`invalid_emails`). </i>
     calculation: Bounces / Sends
   - name: Spam
-    description: The total number of emails delivered that were marked as "spam." Braze <a href='/docs/help/best_practices/email/#unsubscribed-email-addresses'>automatically unsubscribes</a> users that marked an email as spam, and those users won’t be targeted by future emails.
+    description: The total number of emails delivered that were marked as "spam." Braze automatically unsubscribes users that marked an email as spam, and those users won’t be targeted by future emails.
     calculation: (Marked as Spam) / (Sends)
   - name: "Spam % or Spam Rate"
-    description: The percentage of emails delivered that were marked or otherwise designated as "spam." Braze <a href='/docs/help/best_practices/email/#unsubscribed-email-addresses'>automatically unsubscribes</a> users that marked an email as spam, and those users won’t be targeted by future emails.
+    description: The percentage of emails delivered that were marked or otherwise designated as "spam." Braze automatically unsubscribes users that marked an email as spam, and those users won’t be targeted by future emails.
     calculation: (Marked as Spam) / (Sends)
   - name: Unique Opens
     description: The total number of delivered emails that have been opened by a single user at least once. This is tracked over a 7 day period for Email.

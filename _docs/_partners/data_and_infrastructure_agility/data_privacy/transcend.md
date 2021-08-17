@@ -1,9 +1,11 @@
 ---
 nav_title: Transcend
+article_title: Transcend
 page_order: 1
 description: "Transcend, a data privacy infrastructure platform, helps automate fulfillment of data subject requests by orchestrating data across dozens of data systems, including Braze."
 alias: /partners/transcend/
 page_type: partner
+search_tag: Partner
 
 ---
 

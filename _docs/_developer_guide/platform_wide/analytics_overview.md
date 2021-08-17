@@ -379,10 +379,10 @@ If only a single generic name field exists for a user (e.g. 'JohnDoe'), you can 
 [4]: {{site.baseurl}}/developer_guide/platform_wide/analytics_overview/#purchase-events--revenue-tracking
 [8]: {% image_buster /assets/img_archive/custom_event_analytics_example.png %} "custom_event_analytics_example.png"
 [9]: {{site.baseurl}}/developer_guide/rest_api/user_data/#user-data
-[10]: {{site.baseurl}}/developer_guide/rest_api/messaging/
+[10]: {{site.baseurl}}/api/endpoints/messaging/
 [11]: http://www.regextester.com/pregsyntax.html
 [12]: #integers
 [16]: #example-case
-[17]: {{site.baseurl}}/user_guide/personalization_and_dynamic_content/personalized_messaging/#personalized-messaging
+[17]: {{site.baseurl}}/user_guide/personalization_and_dynamic_content/
 [18]: {% image_buster /assets/img_archive/customEventProperties.png %} "customEventProperties.png"
 [19]: {% image_buster /assets/img_archive/custom_event_properties_gaming.png %} "custom_event_properties_gaming.png"

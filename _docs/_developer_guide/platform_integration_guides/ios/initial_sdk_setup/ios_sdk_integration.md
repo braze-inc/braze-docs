@@ -729,7 +729,5 @@ Now that you have decoupled any dependencies on the Braze iOS SDK from the rest 
 - [Advanced In-App Messages Implementation Guide]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/in-app_messaging/implementation_guide/)
 - [Advanced Content Card Implementation Guide]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/content_cards/implementation_guide/)
 
-[1]: {% image_buster /assets/img/ios_sdk/ios_sdk1.png %} 
 [2]: {% image_buster /assets/img/ios_sdk/ios_sdk2.png %} 
 [3]: {% image_buster /assets/img/ios_sdk/ios_sdk3.png %} 
-[4]: {% image_buster /assets/img/ios_sdk/ios_sdk4.png %} 

@@ -1,15 +1,16 @@
 ---
 nav_title: Segment for Currents
+article_title: Segment for Currents
 page_order: 1.2
 alias: /partners/segment_for_currents/
-
 description: "This article outlines the partnership between Braze Currents and Segment, a customer data platform that collects and routes information between sources in your marketing stack."
 page_type: partner
-tool: currents
+tool: Currents
+search_tag: Partner
 
 ---
 
-# About Segment & Currents  
+# Segment for Currents  
 
 {% include video.html id="RfOHfZ34hYM" align="right" %}
 

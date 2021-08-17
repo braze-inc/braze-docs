@@ -26,7 +26,7 @@ channel:
 
 Subscription states are helpful flags for brands to use when deciding which users to target for push notifications. Brands may provide simple toggles in their applications to make it simple for users to determine their push notification status. This helps prevent users from going into device settings and removing push tokens completely. 
 
-Note that even though users __may not have a push token (e.g., They turn off push tokens at the device level through settings, opting not to receive messages), they still may be subscribed. Being subscribed does not guarantee that a push will be delivered; users must also be Push enabled or Push registered to receive these notifications. This is done in part because users have a single Push Subscription State but may have multiple devices with different levels of push permissions. 
+Note that even though users __may not have a push token__ (e.g., They turn off push tokens at the device level through settings, opting not to receive messages), they still may be subscribed. Being subscribed does not guarantee that a push will be delivered; users must also be Push enabled or Push registered to receive these notifications. This is done in part because users have a single Push Subscription State but may have multiple devices with different levels of push permissions. 
 
 ### Two ways to Check a Users Push Subscription State:
 ![Push Exmaple][3]{: style="float:right;max-width:25%;margin-left:15px;"}

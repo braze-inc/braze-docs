@@ -1,9 +1,10 @@
 ---
 nav_title: Singular
+article_title: Singular
 alias: /partners/singular/
-
 description: "This article outlines the partnership between Braze and Singular, a unified marketing analytics platform."
 page_type: partner
+search_tag: Partner
 
 ---
 

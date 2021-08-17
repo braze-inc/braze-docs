@@ -2,7 +2,7 @@
 page_order: 0
 layout: dev_guide
 guide_top_header: "Braze Developer Guide"
-guide_top_text: "This is where developers can find all the integrations available with Braze. You can also use the <a href='/docs/developer_guide/rest_api/basics/'>REST API Guide</a>."
+guide_top_text: "This is where developers can find all the integrations available with Braze. You can also use the <a href='/docs/api/basics/'>REST API Guide</a>."
 
 guide_featured_title: "Featured Integrations"
 guide_featured_list:

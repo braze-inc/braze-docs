@@ -10,7 +10,7 @@ description: "This reference article covers the new iOS 15 OS updates, required 
 
 This guide outlines changes introduced in iOS 15 (WWDC21) and the required upgrade steps for your Braze iOS SDK integration.
 
-> For a complete list of new iOS 15 updates, see Apple's [iOS 15 Page](https://www.apple.com/ios/ios-15/).
+> For a complete list of new iOS 15 updates, see Apple's [iOS 15 Page](https://developer.apple.com/documentation/ios-ipados-release-notes/ios-ipados-15-beta-release-notes).
 
 {% alert important %}
 This is a working document and will evolve as Apple releases new beta versions and information on their upcoming changes.

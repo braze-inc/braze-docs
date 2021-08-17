@@ -39,5 +39,5 @@ Clicking the checkbox here will offer the option to set an expiration time for y
 
 [1]: {% image_buster /assets/img_archive/ios_advanced_settings.gif %}
 [2]: {{site.baseurl}}/developer_guide/platform_integration_guides/ios/push_notifications/silent_push_notifications/
-[3]: {{site.baseurl}}/developer_guide/platform_integration_guides/ios/push_notifications/integration/#ios-10-rich-notifications
+[3]: {{site.baseurl}}/developer_guide/platform_integration_guides/ios/push_notifications/rich/
 [4]: https://developer.apple.com/library/content/documentation/NetworkingInternet/Conceptual/RemoteNotificationsPG/APNSOverview.html#//apple_ref/doc/uid/TP40008194-CH8-SW1

@@ -1,9 +1,12 @@
 ---
 nav_title: "Playable"
+article_title: Playable
 page_order: 2
 description: "This article outlines the partnership between Braze and Playable, a video platform that allows you to add video content to your Braze email campaigns."
 alias: /partners/playable/
 page_type: partner
+search_tag: Partner
+
 ---
 
 # Playable

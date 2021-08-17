@@ -30,7 +30,7 @@ glossaries:
   - name: Content Cards
     description: Content cards allow you to send a highly targeted, dynamic stream of rich content to your customers right within the apps they love, without interrupting their experience. Content cards can be sent to both <a href="https://www.braze.com/docs/developer_guide/platform_integration_guides/ios/content_cards/">iOS</a> and <a href="https://www.braze.com/docs/developer_guide/platform_integration_guides/android/content_cards/overview/">Android</a> users.
   - name: Currents
-    description: <a href = "https://www.braze.com/docs/partners/braze_currents/">Currents</a>, our data streaming export, are included in certain Braze packages. Braze Currents allows you to integrate through Data Storage using flat files or to our Behavioral Analytics and Customer Data partners using a batched JSON payloads to a designated endpoint.
+    description: <a href = "https://www.braze.com/docs/user_guide/data_and_analytics/braze_currents/">Currents</a>, our data streaming export, are included in certain Braze packages. Braze Currents allows you to integrate through Data Storage using flat files or to our Behavioral Analytics and Customer Data partners using a batched JSON payloads to a designated endpoint.
   - name: Custom Attributes
     description: Braze provides methods within the dashboard for assigning custom attributes to users. You’ll be able to filter and segment your users according to these attributes for both <a href="https://www.braze.com/docs/developer_guide/platform_integration_guides/ios/analytics/setting_custom_attributes/#setting-custom-attributes">iOS</a> and <a href="https://www.braze.com/docs/developer_guide/platform_integration_guides/android/analytics/setting_custom_attributes/">Android</a> Campaigns.
   - name: Custom Events
@@ -58,7 +58,7 @@ glossaries:
   - name: Multi-Channel Messaging
     description: Messaging a user across various mediums - like a combination of email, web push, and mobile push notifications. <a href="https://www.braze.com/docs/developer_guide/platform_wide/platform_features/#multi-channel-messaging">Messaging channels</a> are best used in concert and with regularity to re-engage lost users, retain active users, and energize your brand ambassadors.
   - name: News Feed
-    description: The News Feed is a fully customizable in-app content feed for your users. Braze targeting and segmentation allows you to create a stream of content that is individually catered to the interests of each user for both <a href="https://www.braze.com/docs/developer_guide/platform_integration_guides/ios/news_feed/">iOS</a> and <a href="https://www.braze.com/docs/developer_guide/platform_integration_guides/android/news_feed/overview/#news-feed">Android</a>.
+    description: The News Feed is a fully customizable in-app content feed for your users. Braze targeting and segmentation allows you to create a stream of content that is individually catered to the interests of each user for both <a href="https://www.braze.com/docs/developer_guide/platform_integration_guides/ios/news_feed/">iOS</a> and <a href="https://www.braze.com/docs/developer_guide/platform_integration_guides/android/news_feed/integration_overview/">Android</a>.
   - name: New User
     description: Braze considers a new user as anyone who has newly installed your app. Alternatively, a new user can also be defined as a user with a user ID that has not been previously identified within Braze.
   - name: Push Messages

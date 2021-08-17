@@ -33,7 +33,7 @@ doc_menu_list:
   - name: API Guide
     bg_color: '#ff9349'
     image: /assets/img/new-icons/api.svg
-    link: /docs/developer_guide/rest_api/basics/
+    link: /docs/api/basics/
     description: "Braze provides a high-performance REST API to allow you to track users, send messages, export data, and more."
 
 popular_topic_list:

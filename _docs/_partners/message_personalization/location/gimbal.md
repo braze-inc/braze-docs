@@ -1,13 +1,14 @@
 ---
 nav_title: Gimbal
+article_title: Gimbal
 alias: /partners/gimbal/
-
 description: "This article outlines the partnership between Braze and Gimbal, which enables you to perfect your marketing relevance using location data."
 page_type: partner
+search_tag: Partner
 
 ---
 
-# About Gimbal
+# Gimbal
 
 > Originally started out of Qualcomm, Gimbal enables you to perfect your marketing relevance using location data. Their location SDK paired with geofencing software and beacons power relevant, personalized, proximity-aware mobile experiences.
 
