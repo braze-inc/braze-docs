@@ -15,4 +15,4 @@ An important step in setting yourself as a successful email sender is ensuring t
 2. __Remove deeply lapsed users.__<br>It is a best practice to not email users who have not engaged with an email in over six months as this can damage your email sender reputation. When importing your email list, ensure you don't import users who have not opened an email from you in the last six months. Long term, you should also consider implementing a [sunset policy][60].<br><br>
 3. __Don't import any suppression lists.__<br>If you are transitioning off an existing email provider, make certain that you do not import users from a suppression list. Suppression lists feature email addresses that have either unsubscribed, marked your emails as spam, or hard bounced.
 
-[60]: {{site.baseurl}}/help/best_practices/email/sunset_policies
+[60]: {{site.baseurl}}/user_guide/message_building_by_channel/email/best_practices/

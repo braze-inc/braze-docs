@@ -161,7 +161,7 @@ Understanding Optimal Delay between endpoints is crucial when making consecutive
 Under normal conditions, the time for our data eventual consistency to occur is 10-100 ms (1/10 of a second). However, there can be some cases where it takes longer for that consistency to occur. Therefore, we recommend that customers allow a __5-minute delay__ between making subsequent calls to minimize the probability of error.
 
 [1]: https://en.wikipedia.org/wiki/UTF-8
-[7]: {{site.baseurl}}/developer_guide/rest_api/messaging/#connected-audience-object
+[7]: {{site.baseurl}}/api/objects_filters/connected_audience/
 [8]: https://dashboard-01.braze.com/app_settings/developer_console/ "Developer Console"
 [9]: {{site.baseurl}}/developer_guide/platform_integration_guides/ios/analytics/setting_user_ids/
 [10]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/analytics/setting_user_ids/

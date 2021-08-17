@@ -9,7 +9,7 @@ tool: Dashboard
 
 # API Settings Tab
 
-The API Settings page displays API identifications for your app group. The first section on Services will link you to our technical documentation for whatever you’re using the API for ([User Data][3], [Messaging][4], [Email Sync][5], and [Exporting][6] your data).
+The API Settings page displays API identifications for your app group. The first section on Services will link you to our technical documentation for whatever you’re using the API for ([User Data][3], [Messaging][4], and [Exporting][6] your data).
 
 ### REST API Keys
 

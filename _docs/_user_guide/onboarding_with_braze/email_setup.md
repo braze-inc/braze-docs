@@ -35,8 +35,8 @@ guide_featured_list:
 - name: IP Warming
   link: /docs/user_guide/onboarding_with_braze/email_setup/ip_warming/
   fa_icon: fas fa-exclamation
-- name: SSL Click Tracking
-  link: /docs/user_guide/onboarding_with_braze/email_setup/ssl_clicktracking/
+- name: SSL Overview
+  link: /docs/user_guide/onboarding_with_braze/email_setup/ssl/
   fa_icon: fas fa-mouse-pointer
 ---
 

@@ -155,7 +155,7 @@ Key-value pairs can be added to a News Feed Card in the Braze message composer b
 ![key-valueInput][23]
 
 
-[1]: {{site.baseurl}}/developer_guide/platform_integration_guides/ios/push_notifications/customization/#extracting-data-from-push-notification-key-value-pairs
+[1]: {{site.baseurl}}/developer_guide/platform_integration_guides/ios/push_notifications/customization/kvp/
 [2]: {{site.baseurl}}/developer_guide/platform_integration_guides/ios/push_notifications/silent_push_notifications/
 [4]: {{site.baseurl}}/user_guide/data_and_analytics/tracking/uninstall_tracking/
 [7]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/push_notifications/advanced_settings/

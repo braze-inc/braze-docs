@@ -44,10 +44,10 @@ Canvas and campaign data can now be exported together in Engagement Report, stre
 
 
 [35]: {{site.baseurl}}/user_guide/data_and_analytics/your_reports/engagement_reports/#engagement-reports
-[36]: {{site.baseurl}}/help/best_practices/email/#what-is-ip-warming
+[36]: {{site.baseurl}}/user_guide/message_building_by_channel/email/best_practices/
 [37]: {{site.baseurl}}/user_guide/data_and_analytics/configuring_reporting/
 [38]: {{site.baseurl}}/user_guide/personalization_and_dynamic_content/personalized_messaging/#adding-personalizable-attributes-objects
-[39]: {{site.baseurl}}/help/best_practices/push/
+[39]: {{site.baseurl}}/user_guide/message_building_by_channel/push/best_practices/
 [40]: {{site.baseurl}}/user_guide/engagement_tools/templates_and_media/
 [41]: {{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/create/#creating-an-in-app-message
 [42]: {{site.baseurl}}/user_guide/administrative/app_settings/tags/#campaign-segment-and-news-feed-card-tags

@@ -55,7 +55,7 @@ _These reading paths assume that you've already completed your integration and s
 
 | Recommended Order |Article | What You'll Learn|
 |---|---|---|
-| 1 | [IP Warming]({{site.baseurl}}/help/best_practices/email/ip_warming/) | About the best practices of setting up your email for success. |  
+| 1 | [IP Warming]({{site.baseurl}}/user_guide/message_building_by_channel/email/best_practices/) | About the best practices of setting up your email for success. |  
 | 2 | [Creating an Email Campaign]({{site.baseurl}}/user_guide/message_building_by_channel/email/creating_an_email_campaign/) | How to create and send an email campaign. |
 | 3 | [Email Templates]({{site.baseurl}}/user_guide/message_building_by_channel/email/creating_an_email_template/) | Create reusable email templates. |
 | 4 | [Managing User Subscriptions]({{site.baseurl}}/user_guide/message_building_by_channel/email/managing_user_subscriptions/) | Learn about and utilize the subscription statuses of your users in email. |

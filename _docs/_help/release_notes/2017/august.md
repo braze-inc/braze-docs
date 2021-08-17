@@ -74,7 +74,7 @@ Now, you can receive consolidated data for every campaign and every Canvas in tw
 [63]: {{site.baseurl}}/help/troubleshooting_guide/troubleshooting_guide/#email
 [64]: {{site.baseurl}}/developer_guide/platform_integration_guides/fireos/advanced_use_cases/locations_and_geofences/#locations--geofences
 [65]: {{site.baseurl}}/developer_guide/rest_api/basics/#what-is-a-rest-api
-[66]: {{site.baseurl}}/help/best_practices/push/
+[66]: {{site.baseurl}}/user_guide/message_building_by_channel/push/best_practices/
 [67]: {{site.baseurl}}/help/troubleshooting_guide/troubleshooting_guide/#email
 [68]: {{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/create_a_canvas/
 [69]: {{site.baseurl}}/user_guide/personalization_and_dynamic_content/personalized_messaging/#personalized-messaging

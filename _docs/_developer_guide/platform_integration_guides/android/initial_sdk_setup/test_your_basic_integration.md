@@ -20,4 +20,4 @@ You should continue to test your integration by navigating through your applicat
 If session tracking is behaving unexpectedly, turn on [Verbose Logging][56] and observe your app while you reproduce session triggering steps. Observe Braze statements in the logcat to detect where you may have missed logging `openSession` and `closeSession` calls in your activities.
 
 [55]: {% image_buster /assets/img_archive/android_sessions.png %}
-[56]: {{site.baseurl}}/developer_guide/platform_integration_guides/fireos/initial_sdk_setup/#verbose-logging
+[56]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/initial_sdk_setup/additional_customization_and_configuration/#android-verbose-logging

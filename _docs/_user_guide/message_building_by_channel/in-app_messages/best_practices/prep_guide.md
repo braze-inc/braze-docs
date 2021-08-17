@@ -44,4 +44,4 @@ Before you start building your in-app message, you should consider a few of the 
 
 
 [1]: {{site.baseurl}}/user_guide/personalization_and_dynamic_content/deep_linking_to_in-app_content/#deep-linking-to-in-app-content
-[21]: {{site.baseurl}}/help/best_practices/push/creating_custom_opt-in_prompts/#creating-custom-opt-in-prompts
+[21]: {{site.baseurl}}/user_guide/message_building_by_channel/push/best_practices/
