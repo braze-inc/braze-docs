@@ -1,5 +1,6 @@
 ---
 nav_title: Canvas
+article_title: Canvas
 layout: dev_guide
 page_order: 3
 guide_top_header: "Canvas"

@@ -1,5 +1,6 @@
 ---
 nav_title: Utilizing Badge Count
+article_title: Utilizing Badge Count
 page_order: 8
 
 page_type: reference
@@ -8,7 +9,8 @@ platform: iOS
 channel: 
 - push
 - in-app messages
-no_index: true
+- news feed
+
 ---
 # Utilizing Badge Count
 

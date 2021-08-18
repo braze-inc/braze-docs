@@ -1,7 +1,7 @@
 ---
 nav_title: Event Delivery Semantics
+article_title: Event Delivery Semantics
 page_order: 3
-
 page_type: reference
 description: "This reference article outlines how Currents manages flat file event data we send to Data Warehouse partners."
 tool: Currents

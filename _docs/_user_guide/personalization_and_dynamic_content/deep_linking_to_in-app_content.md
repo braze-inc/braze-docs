@@ -1,5 +1,6 @@
 ---
 nav_title: Deep Linking to In-App Content
+article_title: Deep Linking to In-App Content
 page_order: 2
 description: "Deep linking is a way of launching a native app and providing additional information telling it to do some specific action or show specific content. This reference article covers how to deep-link in your in-app message content."
 

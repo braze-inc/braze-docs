@@ -1,17 +1,12 @@
 ---
 nav_title: Getting High Ratings
-platform: Campaigns
-subplatform: Ideas and Strategies
+article_title: Getting High Ratings
 page_order: 5
-
 page_type: reference
 description: "This reference article discusses best practices when using Braze to drive your customer platforms toward success."
 tool:
-- Segments
-- Campaigns
-channel:
-- in-app messages
-- news feed
+  - Campaigns
+  
 ---
 # Getting High Ratings
 

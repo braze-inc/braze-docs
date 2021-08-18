@@ -1,11 +1,9 @@
 ---
 nav_title: Messaging Users
-title: Messaging Users
+article_title: Tagreting Users for Predictive Purchases
 description: "This reference article covers potential next steps after you have created a Purchase Prediction, such as filter implementation and strategic considerations."
 page_order: 3
 
-Tool:
-  - Dashboard
 ---
 
 # Messaging Users {#what-do-next}

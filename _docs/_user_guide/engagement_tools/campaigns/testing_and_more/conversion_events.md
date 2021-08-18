@@ -1,12 +1,11 @@
 ---
 nav_title: Conversion Events
-platform: Campaigns
-subplatform: Testing and More
+article_title: Conversion Events
 page_order: 0
-
 page_type: tutorial
 description: "This how-to article goes over what conversion events are, how to use them and define your success metrics within Braze, and how to use these tools to see how engaged your users are"
 tool: Campaigns
+
 ---
 # Conversion Events
 

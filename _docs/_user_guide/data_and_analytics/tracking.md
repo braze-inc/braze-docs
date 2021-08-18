@@ -1,5 +1,6 @@
 ---
 nav_title: Tracking
+article_title: Tracking
 page_order: 5
 layout: dev_guide
 guide_top_header: "Tracking"

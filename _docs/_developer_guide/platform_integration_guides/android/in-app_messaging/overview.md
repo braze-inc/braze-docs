@@ -37,7 +37,7 @@ These are what each in-app message type will appear like for your users.
 
 {% tabs %}
   {% tab Slideup %}
-  [`Slideup`](https://appboy.github.io/appboy-android-sdk/javadocs/com/appboy/models/InAppMessageSlideup.html) in-app messages are so-named because they "slide up" or "slide down" from the top or bottom of the screen.  They cover a small portion of the screen and provide an effective and non-intrusive messaging capability.
+  [`Slideup`](https://appboy.github.io/appboy-android-sdk/javadocs/com/braze/models/inappmessage/InAppMessageSlideup.html) in-app messages are so-named because they "slide up" or "slide down" from the top or bottom of the screen.  They cover a small portion of the screen and provide an effective and non-intrusive messaging capability.
 
   <br>
 
@@ -47,7 +47,7 @@ These are what each in-app message type will appear like for your users.
 
 {% endtab %}
 {% tab Modal %}
-[`Modal`](https://appboy.github.io/appboy-android-sdk/javadocs/com/appboy/models/InAppMessageModal.html) in-app messages appear in the center of the screen and are framed by a translucent panel. Useful for more critical messaging, they can be equipped with up to two click action and analytics enabled buttons.
+[`Modal`](https://appboy.github.io/appboy-android-sdk/javadocs/com/braze/models/inappmessage/InAppMessageModal.html) in-app messages appear in the center of the screen and are framed by a translucent panel. Useful for more critical messaging, they can be equipped with up to two click action and analytics enabled buttons.
 
   <br>
 
@@ -58,14 +58,14 @@ These are what each in-app message type will appear like for your users.
 
 {% endtab %}
 {% tab Full Screen %}
-[`Full`](https://appboy.github.io/appboy-android-sdk/javadocs/com/appboy/models/InAppMessageHtmlFull.html) in-app messages are useful for maximizing the content and impact of your user communication.  The upper half of a `full` in-app message contains an image and the lower half displays text as well as up to two click action and analytics enabled buttons.
+[`Full`](https://appboy.github.io/appboy-android-sdk/javadocs/com/braze/models/inappmessage/InAppMessageFull) in-app messages are useful for maximizing the content and impact of your user communication.  The upper half of a `full` in-app message contains an image and the lower half displays text as well as up to two click action and analytics enabled buttons.
 
 ![Full Example]({% image_buster /assets/img_archive/In-App_Full.png %})
 
 
 {% endtab %}
 {% tab Custom HTML %}
-[`HTML Full`](https://appboy.github.io/appboy-android-sdk/javadocs/com/appboy/models/IInAppMessageHtml.html) in-app messages are useful for creating fully customized user content. User-defined HTML Full in-app message content is displayed in a {% if include.platform == "iOS" %}`WKWebView`{% elsif include.platform == "Android" %}`WebView`{% endif %} and may optionally contain other rich content, such as images and fonts, allowing for full control over message appearance and functionality. <br><br>Android in-app messages support a JavaScript `brazeBridge` interface to call methods on the Braze Web SDK from within your HTML, see <a href="https://www.braze.com/docs/user_guide/message_building_by_channel/in-app_messages/best_practices/">Best Practices</a> for more details.
+[`HTML Full`](https://appboy.github.io/appboy-android-sdk/javadocs/com/braze/models/inappmessage/InAppMessageHtmlFull.html) in-app messages are useful for creating fully customized user content. User-defined HTML Full in-app message content is displayed in a {% if include.platform == "iOS" %}`WKWebView`{% elsif include.platform == "Android" %}`WebView`{% endif %} and may optionally contain other rich content, such as images and fonts, allowing for full control over message appearance and functionality. <br><br>Android in-app messages support a JavaScript `brazeBridge` interface to call methods on the Braze Web SDK from within your HTML, see <a href="https://www.braze.com/docs/user_guide/message_building_by_channel/in-app_messages/best_practices/">Best Practices</a> for more details.
 
 <br>
 

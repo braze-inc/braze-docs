@@ -1,11 +1,8 @@
 ---
 nav_title: Managing User Subscriptions
+article_title: Managing User Subscriptions
 page_order: 1.9
 description: "This reference article covers the different user subscription states, how to create and manage subscription groups, and how to segment users based on their subscriptions."
-
-tool:
-  - Dashboard
-
 channel:
   - email
 

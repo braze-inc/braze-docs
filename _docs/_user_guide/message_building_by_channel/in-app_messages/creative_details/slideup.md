@@ -1,7 +1,6 @@
 ---
-nav_title: Slideups
-platform: Message_Building_and_Personalization
-subplatform: In-App Messages
+nav_title: Slideup
+article_title: Slideup In-app Messages
 page_order: 2
 channel:
   - in-app messages

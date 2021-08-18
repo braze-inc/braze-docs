@@ -1,10 +1,10 @@
 ---
 nav_title: Braze Instances
+article_title: Braze Instances
 page_order: 0
-
 page_type: reference
 description: "This reference article lists the dashboard URLs and endpoints for available Braze instances."
-tool: Dashboard
+
 ---
 
 # Braze Instances

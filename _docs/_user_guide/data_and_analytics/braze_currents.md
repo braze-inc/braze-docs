@@ -1,6 +1,7 @@
 ---
 page_order: 3
 nav_title: Currents
+article_title: Currents
 
 layout: featured
 

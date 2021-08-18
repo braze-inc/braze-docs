@@ -1,5 +1,6 @@
 ---
 nav_title: Customize
+article_title: Customize
 page_order: 2
 layout: featured
 guide_top_header: "Customize Your Content Cards"

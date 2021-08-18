@@ -1,13 +1,13 @@
 ---
 nav_title: "Creating a Push Message"
+article_title: Creating a Push Campaign
 page_order: 4
 page_type: tutorial
 description: "This tutorial page covers the different components involved in creating a Push Message, including configuration, sending, targeting, and more."
-
 channel: push
 tool:
-  - Dashboard
   - Campaigns
+  
 ---
 
 # Creating a Push Message

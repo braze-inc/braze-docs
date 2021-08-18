@@ -1,10 +1,9 @@
 ---
 nav_title: Prediction Analytics
-title: Prediction Analytics
+article_title: Prediction Analytics
 description: "This reference article covers the different components included in the Churn Prediction Analytics Page and how they can be used to make insightful, driven decisions."
 page_order: 2
-Tool:
-  - Dashboard
+
 ---
 
 # Prediction Analytics

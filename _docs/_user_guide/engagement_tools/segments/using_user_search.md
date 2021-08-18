@@ -1,12 +1,12 @@
 ---
 nav_title: Using User Search
+article_title: Using User Search
 page_order: 5
-
 page_type: reference
 tool: 
-- Segments
-- Dashboard
+  - Dashboard
 description: "This reference article will go through how to use User Search in the Dashboard and showcases some User Search use cases."
+
 ---
 
 # Using User Search
@@ -53,6 +53,6 @@ You can use the **Engagement** tab to verify whether a certain user received a c
 [8]: {% image_buster /assets/img_archive/user_profile2.png %}
 [9]: {% image_buster /assets/img_archive/User_Profile_Engagement.png %}
 [11]: {% image_buster /assets/img_archive/User_Profile_Social.png %}
-[12]: {{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/overview/
+[12]: {{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/
 [13]: {{site.baseurl}}/user_guide/engagement_tools/campaigns/ideas_and_strategies/campaigns_in_multiple_languages/#campaigns-in-multiple-languages
 [14]: {% image_buster /assets/img_archive/User_Search_Nonunique.png %}

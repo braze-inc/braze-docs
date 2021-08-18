@@ -1,5 +1,6 @@
 ---
 nav_title: Push
+article_title: Push
 page_order: 3
 layout: dev_guide
 guide_top_header: "Push"

@@ -1,14 +1,10 @@
 ---
 nav_title: Link Templates
-platform: Message_Building_and_Personalization
-subplatform: Email
+article_title: Link Templates
 page_order: 4
 description: "Link Templates allow users to append parameters or prepend URLs to all links in an Email message. This article covers how to create different types of Link Templates."
-
 tool:
-  - Dashboard
   - Templates
-
 channel:
   - email
 

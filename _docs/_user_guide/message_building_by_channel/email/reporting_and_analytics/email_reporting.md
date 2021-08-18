@@ -1,14 +1,13 @@
 ---
 nav_title: Reporting
+article_title:  Email Reporting
 page_order: 20
 description: "Braze provides you with a detailed report of each of your email campaigns. This article covers the different components of the report and where it can be found in the dashboard."
-
 tool:
-  - Dashboard
   - Reports
-
 channel:
   - email
+
 ---
 
 # Email Reporting

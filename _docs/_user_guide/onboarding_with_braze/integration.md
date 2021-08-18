@@ -1,9 +1,10 @@
 ---
 nav_title: Integration
+article_title: Onboarding Integration Overview
 page_order: 1
-
 page_type: reference
 description: "This reference article briefly covers the integration steps required from your engineers or developers."
+
 ---
 
 # Integration
@@ -12,7 +13,7 @@ Integrating with Braze is a worth-while process. But you're smart. You're __here
 
 But what you probably don't know was that you and your engineers/developers are about to go on a journey together that requires technical expertise, strategic planning, and consistent communication that will help you coordinate between the two!
 
-{% alert note %}Please note that this doesn't count for email. Check that out in the [Email Set Up Guide]({{site.baseurl}}/user_guide/onboarding_with_braze/email_setup/overview_and_requirements/).{% endalert %}
+{% alert note %}Please note that this doesn't count for email. Check that out in the [Email Set Up Guide]({{site.baseurl}}/user_guide/onboarding_with_braze/email_setup/).{% endalert %}
 
 ## The Technical Side of the Integration Process
 
@@ -47,7 +48,7 @@ Be sure to tell your engineers which channels you want to use to ensure that imp
 | In-App Messages | Requires SDK implementation as well as these channel-specific steps. |
 | News Feed | This works upon proper implementation and is SDK required. |
 | Push | Requires SDK implementation to provide proper handling around messaging credentials and push tokens. |
-| Email | This is an entirely different process. Check that out in [our Email Setup section]({{site.baseurl}}/user_guide/onboarding_with_braze/email_setup/overview_and_requirements). |
+| Email | This is an entirely different process. Check that out in [our Email Setup section]({{site.baseurl}}/user_guide/onboarding_with_braze/email_setup/). |
 {: .reset-td-br-1 .reset-td-br-2}
 
 ### Step 3: They Set Up Your Data

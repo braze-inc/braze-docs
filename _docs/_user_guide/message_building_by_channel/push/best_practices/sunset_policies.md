@@ -1,12 +1,11 @@
 ---
 nav_title: Sunset Policies
-page_title: Sunset Policies for Push
+article_title: Sunset Policies for Push
 page_order: 3
-
 page_type: reference
 description: "This article provides best practices for sunsetting push notifications to a segment of users."
 channel: push
-no_index: true
+
 ---
 
 # Sunset Policies for Push {#push-sunset-policies}

@@ -1,5 +1,6 @@
 ---
 nav_title: "Templates & Media"
+article_title: Templates & Media
 page_order: 5
 layout: featured
 guide_top_header: "Templates & Media"

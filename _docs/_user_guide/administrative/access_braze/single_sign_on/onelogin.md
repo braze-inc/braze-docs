@@ -1,9 +1,10 @@
 ---
 nav_title: OneLogin
+article_title: OneLogin
 page_order: 5
-
 page_type: tutorial
 description: "This article will walk you through how to configure Braze to use OneLogin for single sign-on."
+
 ---
 
 # OneLogin

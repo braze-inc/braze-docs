@@ -1,12 +1,12 @@
 ---
 nav_title: Report Builder
+article_title: Report Builder
 alias: /report_builder/
-
 page_type: reference
 description: "This reference article notes updates to the Report Builder feature within the Dashboard."
 tool: 
-- Reports
-- Dashboard
+  - Reports
+
 ---
 
 # Report Builder

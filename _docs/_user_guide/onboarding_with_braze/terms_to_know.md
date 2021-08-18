@@ -1,10 +1,11 @@
 ---
 page_order: 0
 nav_title: Terms to Know
+article_title: Onboarding Terms to Know
+
 layout: glossary_page
 glossary_top_header: "Terms to Know"
 glossary_top_text: "These terms should help you as you begin your journey to better customer and user bonds with Braze! Give this a read before you begin your onboarding."
-
 page_type: glossary
 description: "This glossary covers important terms to know as you go through the Braze onboarding process."
 

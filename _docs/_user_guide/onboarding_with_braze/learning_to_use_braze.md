@@ -1,9 +1,10 @@
 ---
 nav_title: Learning to Use Braze
+article_title: Learning to Use Braze
 page_order: 2
-
 page_type: landing
-description: "This page includes several reading paths that will enable you to best utilize our platform to your advantage."
+description: "This page includes several reading paths that will enable you to best utilize our platform to your advantage."
+
 ---
 
 # Learning to Use Braze
@@ -34,7 +35,7 @@ _These reading paths assume that you've already completed your integration and s
 | 8 | [Creating an In-App Message]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/create/) | How to create and send an in-app message. |
 | 9 | [Creating a Push Campaign]({{site.baseurl}}/user_guide/message_building_by_channel/push/creating_a_push_message/) | How to create and send an push message for web or your chosen app on iOS or Android. |
 | 10 | [Personalization Overview]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/overview/) | How to use dynamic content in your messages. |
-| 11 | [Exporting Braze Data]({{site.baseurl}}/user_guide/data_and_analytics/export_braze_data/overview/) | The many ways to export data from the Braze platform. |
+| 11 | [Exporting Braze Data]({{site.baseurl}}/user_guide/data_and_analytics/export_braze_data/) | The many ways to export data from the Braze platform. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
 
 
@@ -66,7 +67,7 @@ _These reading paths assume that you've already completed your integration and s
 | Recommended Order |Article | What You'll Learn|
 |---|---|---|
 | 1 | [Personalization Overview]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/overview/) | How to use dynamic content in your messages. |
-| 2 | [Liquid Overview]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/overview/) | What Liquid is and common terms with it. |
+| 2 | [Liquid Overview]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/) | What Liquid is and common terms with it. |
 | 3 | [Using Liquid]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/using_liquid/) | How to use Liquid to create personalization in your messages. |
 | 4 | [Supported Personalization Tags]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/supported_personalization_tags/) | A summary of supported personalization tags. |
 | 5 | [Connected Content]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/connected_content/about_connected_content/) | Utilizing resources outside of Braze to pull in dynamic content to up-level your content. |
@@ -80,10 +81,10 @@ _These reading paths assume that you've already completed your integration and s
 | Recommended Order |Article | What You'll Learn|
 |---|---|---|
 | 1 | [Configuring Reporting]({{site.baseurl}}/user_guide/data_and_analytics/configuring_reporting/) | How to set up an automatic weekly email report. |
-| 2 | [User Data Collection Overview]({{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/overview/) | How Braze collects and categorizes user data. |
+| 2 | [User Data Collection Overview]({{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/) | How Braze collects and categorizes user data. |
 | 3 | [User Import]({{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/user_import/) | Import users into your Braze account. |
 | 4 | [Custom Events]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events/) | Import users into your Braze account. |
 | 5 | [Custom Attributes]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_attributes/) | Import users into your Braze account. |
-| 6 | [Exporting Braze Data]({{site.baseurl}}/user_guide/data_and_analytics/export_braze_data/overview/) | The many ways to export data from the Braze platform. |
+| 6 | [Exporting Braze Data]({{site.baseurl}}/user_guide/data_and_analytics/export_braze_data/) | The many ways to export data from the Braze platform. |
 | 7 | [Understanding Your Overview Data]({{site.baseurl}}/user_guide/data_and_analytics/your_reports/understanding_your_app_usage_data/) | All about the **Overview** page and the data within it. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}

@@ -1,9 +1,9 @@
 ---
 nav_title: "Push Action Buttons"
+article_title: Push Action Buttons
 page_order: 1
 page_type: reference
 description: "This reference article covers what Push Action buttons are and the difference across iOS and Android platforms."
-
 channel:
   - Push
 

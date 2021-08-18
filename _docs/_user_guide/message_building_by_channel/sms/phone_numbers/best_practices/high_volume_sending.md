@@ -1,11 +1,12 @@
 ---
 nav_title: High-Volume Sending
+article_title: High-Volume SMS Sending
 page_order: 4
 description: "This reference article covers high-volume sending best practices for SMS messaging."
 page_type: reference
-
 channel:
   - SMS
+  
 ---
 
 # High-Volume Sending

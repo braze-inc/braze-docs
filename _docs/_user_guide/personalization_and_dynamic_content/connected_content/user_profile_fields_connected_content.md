@@ -1,9 +1,9 @@
 ---
 nav_title: Pulling User Profile Data
-platform: Message_Building_and_Personalization
-subplatform: Personalization
+article_title: Pulling User Profile Data in Connected Content Calls
 page_order: 5
 description: "This article covers how to pull user profiles into your Connected Content calls, and best practices involving Liquid templating."
+
 ---
 
 # Pulling User Profile Data

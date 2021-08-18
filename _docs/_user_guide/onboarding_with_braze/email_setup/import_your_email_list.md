@@ -1,5 +1,6 @@
 ---
 nav_title: Importing Your Email List into Braze
+article_title: Importing Your Email List into Braze
 page_order: 4
 page_type: reference
 description: "This reference article covers best practices for importing your email list into Braze."

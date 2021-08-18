@@ -1,15 +1,16 @@
 ---
 nav_title: "Create a Push Primer Campaign"
+article_title: Create a Push Primer Campaign
 page_order: 5
 page_type: tutorial
 description: "This walkthrough will show you how to get your users qualified and ready to receive your push messages by sending out a push primer."
-
 channel:
-  - Push
+  - push
 tool:
-  - Dashboard
   - Campaigns
+
 ---
+
 {% alert important %}
 Push Primer campaigns require backend set up from your developers. <br>Check out the necessary Push Primer Integrations [here]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/push_primer/).
 {% endalert %}

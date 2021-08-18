@@ -1,5 +1,6 @@
 ---
 nav_title: Webhooks
+article_title: Webhooks
 page_order: 5
 layout: dev_guide
 guide_top_header: "Webhooks"

@@ -1,10 +1,11 @@
 ---
 nav_title: SSL Click Tracking
+article_title: SSL Click Tracking
 page_order: 9
-
 page_type: reference
 description: "This reference article covers SSL click-tracking, best practices, and how to get started."
 channel: email
+
 ---
 
 # SSL Click Tracking

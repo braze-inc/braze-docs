@@ -1,10 +1,13 @@
 ---
 nav_title: User Language Codes
+article_title: User Language Codes
 page_type: reference
 glossary_top_header: "Braze User Language Codes"
 glossary_top_text: "Use these Braze language codes to define your API requests. Though the parameters you need are listed under endpoints, this should give you more insight into their nuance and other specifications."
 description: "This glossary covers the current language codes Braze supports." 
+
 ---
+
 # User Language Codes
 
 > Here is a completed list of current supported user language codes at Braze. <br>In general, Braze uses the majority of [ISO-639-1](http://en.wikipedia.org/wiki/List_of_ISO_639-1_codes) standard codes but there exist a few not included in that set.

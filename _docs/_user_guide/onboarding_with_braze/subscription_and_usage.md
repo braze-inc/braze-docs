@@ -1,11 +1,12 @@
 ---
 nav_title: Subscriptions and Usage
+article_title: Dashboard Subscription and Usage
 alias: /subscription_and_usage/
 page_order: 4.1
-
 page_type: reference
 description: "This reference article covers the Subscriptions and Usage page, where you can monitor and check your data consumption."
 tool: Dashboard
+
 ---
 
 # Subscriptions and Usage
