@@ -1,14 +1,13 @@
 ---
 nav_title: Transactional Campaigns
+article_title: Transactional Email Campaigns
 page_order: 5
 
 description: "This reference article covers how to create and configure a new Braze Transactional Email Campaign."
 page_type: reference
 tool:
-  - Dashboard
-  - Docs
-platform:
-  - APIs
+  - Campaigns
+channel: email
 
 alias: "/api/api_campaigns/transactional_campaigns"
 ---

@@ -1,11 +1,13 @@
 ---
 nav_title: Liquid Use Case Library
+article_title: Liquid Use Case Library
 page_order: 10
 
 excerpt_separator: ""
 page_type: glossary
 layout: liquid_use_case_glossary
 description: "This landing page is home to sample Liquid use cases organized by category, such as Anniversaries, App Usage, Countdowns, and more."
+
 ---
 
 {% api %}

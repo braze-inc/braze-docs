@@ -1,5 +1,6 @@
 ---
 nav_title: Segment Extension
+article_title: Creating and Using a Segment Extension
 page_order: 3.1
 
 page_type: tutorial

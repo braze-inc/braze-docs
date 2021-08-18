@@ -1,5 +1,6 @@
 ---
 nav_title: Custom Data
+article_title: Custom Data
 page_order: 4
 layout: dev_guide
 guide_top_header: "Custom Data"

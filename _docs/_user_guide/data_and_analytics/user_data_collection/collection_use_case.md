@@ -1,10 +1,10 @@
 ---
 nav_title: Collection Use Case
+article_title: Collection Use Case
 page_order: 3
-
 page_type: reference
 description: "This reference article covers an example user data collection use case—how a ride-sharing app might decide what user data to collect."
-tool: Dashboard
+
 ---
 
 > This reference article covers an example user data collection use case—how a ride-sharing app might decide what user data to collect.

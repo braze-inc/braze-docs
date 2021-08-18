@@ -1,11 +1,11 @@
 ---
 nav_title: Creating a News Feed Item
+article_title: Creating a News Feed Item
 page_order: 3
-
 page_type: reference
 description: "This reference article covers how to create a News Feed item. News-Feed items allow you to insert permanent content directly into your app from our web dashboard."
-tool: Dashboard
 channel: news feed
+
 ---
 # Creating a News Feed Item
 

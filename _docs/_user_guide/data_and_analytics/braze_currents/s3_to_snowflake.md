@@ -1,9 +1,9 @@
 ---
 nav_title: Transfer Data from Amazon S3 to Snowflake
+article_title: Transfer Data from Amazon S3 to Snowflake
 page_order: 7
-
 page_type: tutorial
-description: "This how-to article will walk you through transferring data from cloud storage (like Amazon S3) to a warehouse (like Snowflake) using the E process."
+description: "This how-to article will walk you through transferring data from cloud storage (like Amazon S3) to a warehouse (like Snowflake) using the ETL process."
 tool: Currents
 
 ---

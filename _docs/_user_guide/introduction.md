@@ -1,7 +1,9 @@
 ---
 page_order: 0
 nav_title: Introduction
+article_title: Braze User Guide
 layout: user_guide
+
 user_top_header: "Braze User Guide"
 user_top_text: "Meet us at the intersection of art and science. Find us in the moment,
 or light years ahead. Upon arrival, expect lifecycle engagement at its best. At Braze,

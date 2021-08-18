@@ -1,5 +1,6 @@
 ---
 nav_title: Exporting Braze Data
+article_title: Exporting Braze Data
 page_order: 6
 layout: dev_guide
 guide_top_header: "Exporting Braze Data"

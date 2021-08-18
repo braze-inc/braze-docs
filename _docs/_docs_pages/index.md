@@ -43,7 +43,7 @@ popular_topic_list:
   - name: Create a Campaign
     link: /docs/user_guide/engagement_tools/campaigns/ideas_and_strategies/active_user_campaigns/
   - name: Locations and Geofences
-    link: /docs/user_guide/engagement_tools/locations_and_geofences/about/
+    link: /docs/user_guide/engagement_tools/locations_and_geofences/
   - name: Personalized Messaging
     link: /docs/user_guide/personalization_and_dynamic_content/overview/
   - name: Braze REST API

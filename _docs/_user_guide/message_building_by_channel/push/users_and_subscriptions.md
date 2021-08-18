@@ -1,9 +1,9 @@
 ---
 nav_title: "Push Enablement and Subscription"
+article_title: Push Enablement and Subscription
 page_order: 3
 page_type: reference
 description: "This reference article covers the different push subscription states as well as a push enablement overview, covering the fundamental push difference across iOS and Android."
-
 channel:
   - push
 

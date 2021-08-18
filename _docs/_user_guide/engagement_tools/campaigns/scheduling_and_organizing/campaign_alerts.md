@@ -1,7 +1,6 @@
 ---
 nav_title: Campaign Alerts
-platform: Campaigns
-subplatform: Scheduling and Organizing
+article_title: Campaign Alerts
 page_order: 6
 
 page_type: reference
@@ -10,6 +9,7 @@ tool: Campaigns
 channel:
 - email
 - webhooks
+
 ---
 # Campaign Alerts
 

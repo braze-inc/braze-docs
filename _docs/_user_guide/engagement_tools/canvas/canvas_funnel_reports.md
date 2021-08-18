@@ -1,13 +1,13 @@
 ---
 nav_title: Funnel Report
-title: Funnel Report
+article_title: Funnel Report
 page_order: 4
-
 page_type: reference
 description: "This reference article covers the benefits of funnel reports, how to set them up, as well as how to interpret your report."
 tool:
-- Canvas
-- Reports
+  - Canvas
+  - Reports
+  
 ---
 
 # Funnel Report 

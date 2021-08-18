@@ -1,14 +1,15 @@
 ---
 nav_title: "Create Rich Notifications for Android"
+article_title: Create Rich Push Notifications
 page_order: 3
 page_layout: tutorial
 description: "This tutorial covers how to set up Android Rich notifications for your Braze Campaigns."
-
 platform: Android
 channel:
   - Push
 tool:
   - Campaigns
+  
 ---
 
 # Create Rich Notifications for Android

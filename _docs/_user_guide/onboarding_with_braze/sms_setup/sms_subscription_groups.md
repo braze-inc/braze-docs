@@ -1,18 +1,13 @@
 ---
 nav_title: "SMS Subscription Groups"
+article_title: SMS Subscription Groups
 page_order: 5
 description: "This reference article covers SMS Subscription Groups, a collection of sending phone numbers that are used for a specific type of messaging."
 page_type: reference
-tool:
-  - Dashboard
-  - Campaigns
-
-platform:
-  - iOS
-  - Android
-
+noindex: true
 channel:
   - SMS
+
 ---
 
 # SMS Subscription Groups

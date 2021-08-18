@@ -1,10 +1,10 @@
 ---
 nav_title: Data Points
+article_title: Data Points Overview
 page_order: 4
-
 page_type: reference
 description: "This reference article outlines what Data Points are at Braze and how you can be aware of their usage."
-tool: Dashboard
+
 ---
 
 # Data Points

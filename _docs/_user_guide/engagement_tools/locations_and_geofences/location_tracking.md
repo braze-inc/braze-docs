@@ -1,10 +1,11 @@
 ---
 nav_title: Location Tracking
+article_title: Location Tracking
 page_order: 0
-
 page_type: reference
 description: "This reference article explains how to use location tracking and location targeting in your apps."
 tool: Location
+
 ---
 # Location Tracking
 

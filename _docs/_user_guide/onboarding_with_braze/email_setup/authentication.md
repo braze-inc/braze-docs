@@ -1,10 +1,11 @@
 ---
 nav_title: Email Authentication
+article_title: Email Authentication
 page_order: 1
-
 page_type: reference
 description: "This reference article covers email authentication, a collection of techniques aimed at equipping your email with verifiable information about its origin."
 channel: email
+
 ---
 
 # Email Authentication

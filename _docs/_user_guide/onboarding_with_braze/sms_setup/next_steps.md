@@ -1,15 +1,16 @@
 ---
 nav_title: Next Steps...
+article_title: SMS Next Steps
 layout: dev_guide
 page_order: 10
 guide_top_header: "Next Steps..."
 guide_top_text: "Now that you understand the basics of SMS required for onboarding, get ready to visit our <a href='/docs/user_guide/message_building_by_channel/sms/'>dedicated SMS section</a> for more topics like how to create an SMS campaign, understanding campaign analytics, and SMS keyword processing."
-
 page_type: landing
 description: "This landing page includes next steps for after you've completed your initial SMS setup."
 channel: 
 - SMS
 - MMS
+noindex: true
 
 guide_featured_title: "SMS"
 guide_featured_list:

@@ -1,5 +1,6 @@
 ---
 nav_title: "Full-Screen"
+article_title: Full Screen In-App Messages
 description: "This reference article covers the message and design requirements of full-screen in-app messages."
 page_type: reference
 page_order: 0
@@ -16,10 +17,6 @@ Full-screen messages take up the whole screen of the device! This message type i
 
 
 ![Full-Screen Specs][3a]{: style="max-width: 801px; border: none;"}
-
-[3a]: {% image_buster /assets/img/full-screen-spec.png %}
-[3b]: {% image_buster /assets/img/full-screen-large-viewport.png %}
-[3c]: {% image_buster /assets/img/image-safe-zone-full-screen-in-app-message.png %}
 
 ## Images
 
@@ -60,3 +57,7 @@ When previewing a full-screen in-app message in the Braze platform, you can enab
 On a tablet or desktop browser, a full-screen in-app message will sit in the center of the app screen, as shown below.
 
 ![Full-Screen Viewport][3b]{: style="max-width: 800px; border: none;"}
+
+[3a]: {% image_buster /assets/img/full-screen-spec.png %}
+[3b]: {% image_buster /assets/img/full-screen-large-viewport.png %}
+[3c]: {% image_buster /assets/img/image-safe-zone-full-screen-in-app-message.png %}

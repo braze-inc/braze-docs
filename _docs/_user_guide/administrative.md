@@ -1,7 +1,9 @@
 ---
 nav_title: Administrative
+article_title: Administrative
 page_order: 2
 layout: featured
+
 guide_top_header: "Administrative"
 guide_top_text: "This section details how to administer your Braze dashboard, including initial setup for integrations, dashboard administration, user permission management, and more."
 description: "This section details how to administer your Braze dashboard, including initial setup for integrations, dashboard administration, user permission management, and more."

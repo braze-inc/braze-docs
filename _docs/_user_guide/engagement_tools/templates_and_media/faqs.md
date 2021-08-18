@@ -1,11 +1,11 @@
 ---
 nav_title: FAQs
-title: Templates & Media FAQs
+article_title: Media Library FAQs
 page_order: 5
-
 page_type: FAQ
 tool: Media
 description: "This article provides answers to frequently asked questions about the Braze Media Library."
+
 ---
 
 # Media Library FAQs

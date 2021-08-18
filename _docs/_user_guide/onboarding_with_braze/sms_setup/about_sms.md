@@ -1,18 +1,13 @@
 ---
 nav_title: "About SMS"
+article_title: About SMS
 page_order: 0
 description: "This reference article covers general use cases of the SMS channel."
 page_type: reference
-tool:
-  - Dashboard
-  - Campaigns
-
-platform:
-  - iOS
-  - Android
-
+noindex: true
 channel:
   - SMS
+  
 ---
 
 # What are SMS Messages?

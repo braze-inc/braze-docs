@@ -1,10 +1,11 @@
 ---
 page_order: 2
 nav_title: Terms to Know
+article_title: SMS Terms to Know
+
 layout: glossary_page
 glossary_top_header: "SMS Terms to Know"
 glossary_top_text: "SMS - everyone has it and knows what it is. What they don't know is the nuance. Check out the terms below to learn more about SMS ecosystems, technologies, and processes."
-
 page_type: glossary
 description: "This glossary defines various SMS terms you should know."
 channel: SMS 

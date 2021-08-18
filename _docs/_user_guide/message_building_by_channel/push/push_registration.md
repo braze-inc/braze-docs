@@ -1,13 +1,11 @@
 ---
 nav_title: "Push Registration"
+article_title: Push Registration
 page_order: 2
 page_type: reference
 description: "This reference article discusses what it means to be registered for push and how we send push messages and deal with push tokens at Braze."
-
 channel:
   - push
-tool:
-  - Dashboard
 
 ---
 

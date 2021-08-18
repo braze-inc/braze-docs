@@ -1,10 +1,11 @@
 ---
 nav_title: Scheduled Delivery
+article_title: Scheduled Delivery
 page_order: 0
-
 page_type: reference
 description: "This reference article describes the differences between the time-based scheduling options for campaign delivery."
 tool: Campaigns
+
 ---
 
 # Scheduled Delivery

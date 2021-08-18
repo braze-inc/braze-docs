@@ -1,5 +1,6 @@
 ---
 nav_title: Canvas Components
+article_title: Canvas Components
 page_order: 2
 layout: dev_guide
 guide_top_header: "Canvas Components"

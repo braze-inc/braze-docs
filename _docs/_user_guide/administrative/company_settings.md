@@ -1,5 +1,6 @@
 ---
 nav_title: Company Settings
+article_title: Company Settings
 page_order: 1
 layout: featured
 guide_top_header: "Company Settings"
@@ -7,7 +8,6 @@ guide_top_text: "Most features within Company Settings are only available to Bra
 
 page_type: landing
 description: "This landing page is home to articles on Company Settings. Here you can find help for configuring contact information, notifications, and security settings."
-tool: Dashboard
 
 guide_featured_title: "Section Articles"
 guide_featured_list:

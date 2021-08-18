@@ -1,11 +1,12 @@
 ---
 nav_title: Handling Unknown Phone Numbers
+article_title: Non-Native SMS Unknown Phone Number Handling
 page_order: 1
 description: "This refernence article covers how Braze will go about handling unknown phone numbers for non-native SMS users."
 page_type: reference
-
 channel:
   - SMS
+
 ---
 
 # Handling Unknown Phone Numbers - New Users

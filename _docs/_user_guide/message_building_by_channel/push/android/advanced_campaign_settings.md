@@ -1,14 +1,15 @@
 ---
 nav_title: "Advanced Push Campaign Settings"
+article_title: Advanced Push Campaign Settings
 page_order: 5
 page_layout: reference
 description: "This reference article covers some Advanced Push Campaign settings like priority, custom URLs, delivery options, and more."
-
 platform: Android
 channel:
   - push
 tool:
   - Campaigns
+
 ---
 
 # Advanced Push Campaign Settings
