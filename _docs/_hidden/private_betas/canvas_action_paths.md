@@ -3,7 +3,7 @@ nav_title: Action Paths Step
 permalink: /user_guide/engagement_tools/canvas/canvas_components/action_paths/
 hidden: true
 page_type: reference
-description: "This reference article covers action paths and how to use them in your Canvases."
+description: "This reference article covers Action Paths and how to use them in your Canvases."
 tool: Canvas
 ---
 <br>
