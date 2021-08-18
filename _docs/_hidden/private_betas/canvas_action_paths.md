@@ -1,6 +1,6 @@
 ---
 nav_title: Action Paths in Canvas
-permalink: "/canvas/create_a_canvas/action_paths"
+permalink: /user_guide/engagement_tools/canvas/canvas_components/action_paths
 hidden: true
 platform: Canvas
 
@@ -22,17 +22,17 @@ Action Paths in Canvas allow you to sort your users based on their actions. Usin
 
 ## Create Action Paths
 
-To create Action Paths, add a step to your Canvas. Then, using the drop-down at the top of the new step, select **Action Paths**.
+![canvas_actionpath][1]{: style="float:right;max-width:50%;margin-left:15px;"}
 
-![canvas_actionpath][1]{: style="max-width:70%"}
+To create Action Paths, add a step to your Canvas. Then, using the drop-down at the top of the new step, select `Action Paths`.
 
 ## Define Action Settings 
 
 In the **Action Settings** module, you can choose how long you’d like to hold users in the action step. 
 
-When the **Ranking** is off, users who perform actions after they enter the action path and before the end of the evaluation window will immediately advance through the relevant action group as soon as they perform the action. Users who do not perform a relevant action during the evaluation period will advance through the default **Everyone Else** path at the end of the evaluation period. 
+When the **Ranking** is off, users who perform actions after they enter the action path and before the end of the evaluation window will immediately advance through the relevant action group as soon as they perform the action. Users who do not perform a relevant action during the evaluation period will advance through the default **Everyone Else** group at the end of the evaluation period. 
 
-When the **Ranking** is on, all users will be held until the end of the evaluation period. At the end of the evaluation period, users will advance through the highest priority action group that they are eligible for. Users who did not perform an action during the evaluation period will advance through the “everyone else” group. 
+When the **Ranking** is on, all users will be held until the end of the evaluation period. At the end of the evaluation period, users will advance through the highest priority action group that they are eligible for. Users who do not perform any action during the evaluation period will advance through the default **Everyone Else** group. 
 
 ## Define Action Groups
 
