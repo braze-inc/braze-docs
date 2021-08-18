@@ -10,7 +10,7 @@ tool: Canvas
 
 <br>
 {% alert note %}
-This feature is currently in Beta. Please reach out to your Braze account manager for more information.
+This feature is currently in beta. Please reach out to your Braze account manager for more information.
 {% endalert %}
 
 # Canvas Persistent Entry Properties
@@ -27,7 +27,9 @@ Properties passed in from these objects can be referenced by using the `canvas_e
 
 When a Canvas includes a message with the `canvas_entry_properties` Liquid tag, the values associated with those properties will be saved for the duration of a user’s journey in the Canvas and deleted once the user exits the Canvas.
 
-{% alert important %} If your Canvas includes a re-eligibility window that is less than the total duration of the Canvas and you are using `canvas_entry_properties` beyond the first step of your Canvas, only **Message Steps** are allowed. **Full Steps** are not permitted with these settings due to an [edge case]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/create_a_canvas/#important-edge-case). 
+{% alert important %} If your Canvas includes a re-eligibility window that is less than the total duration of the Canvas and you are using `canvas_entry_properties` beyond the first step of your Canvas, only **Message Steps** are allowed. **Full Steps** are not permitted with these settings due to the following edge case. <br><br>
+Should the window of re-eligibility be less than the maximum duration of the Canvas, a user will be allowed to re-enter and receive more than one message from each step. In the edge case where a user’s re-entry reaches the same step as its previous entry, Braze will only deduplicate that step’s messages if the messages are scheduled to send within 5 minutes of each other.
+
 {% endalert %}
 
 ## Action-Based Canvas Step
