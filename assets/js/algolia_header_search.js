@@ -59,7 +59,7 @@ $(document).ready(function () {
             var title = "";
             var type = "";
             var category = "";
-            var platform = "";
+            var tags_list = "";
             var subname = "";
             var heading = "";
 
@@ -84,12 +84,31 @@ $(document).ready(function () {
                   item["headings"][item["headings"].length - 1];
               }
             }
-            if (platform || category) {
-              subname = "(" + type + ": " + platform;
-              if (platform) {
-                subname += " - ";
+            // Tag search
+            for (var mp in search_color_mapping) {
+              if (mp in item) {
+                var i_tags = item[mp];
+                if (Array.isArray(i_tags)) {
+                  for (var its = 0; its < i_tags.length; its++) {
+                    tags_list += '<span class="search_tags" style="background-color: ' + search_color_mapping[mp] +
+                      ';">' + i_tags[its] + '</span>';
+                  }
+                }
+                else {
+                  tags_list += '<span class="search_tags" style="background-color: ' + search_color_mapping[mp] +
+                    ';">' + i_tags + '</span>';
+                }
               }
-              subname += category.upCaseWord() + ")";
+            }
+            // Navigational Heading
+            var article_path = '';
+            if ('url' in item) {
+              var article_url = item['url'].split('/');
+              // Remove 2 last item and first item
+              article_url.pop();
+              article_url.pop();
+              article_url.shift();
+              article_path = `<div class="article_path">${article_url.join(' > ').replaceUnder().upCaseWord().mapReplace(custom_word_mapping)}</div>`;
             }
             if ("content" in item) {
               content = item.content
@@ -115,7 +134,7 @@ $(document).ready(function () {
                 base_url + url + '"><div class="title">' +
                 title + ' <div class="category">' +
                 subname.replace(/\_/g, " ") +
-                '</div></div> <div class="content">' +
+                ' </div></div><div class="search_tag_div">' + tags_list + '</div>' + article_path + ' <div class="content">' +
                 search_msg +
                 "</div><hr /></a>";
 

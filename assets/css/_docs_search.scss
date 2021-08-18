@@ -216,3 +216,22 @@ $search_offset: 65px;
     }
   }
 }
+
+.search_tags {
+  border-radius: 5px;
+  font-size: 10px;
+  padding: 2px 10px;
+  margin-right: 5px;
+  color: $grey-athens;
+  background-color: $grey-ghost;
+}
+.search_tag_div {
+  display: block;
+  margin-bottom: 5px;
+}
+.article_path {
+  text-align: left;
+    font-size: 12px;
+    color: $grey-manatee;
+    font-weight: bold;
+}

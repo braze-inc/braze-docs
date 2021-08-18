@@ -25,8 +25,86 @@ let algolia_user = Cookies.get('__algolia_user');
 if (!algolia_user){
   algolia_user = generateUUID();
 }
+
+var search_color_mapping = {
+  'endpoint': '#33c699',
+  'channel': '#ff9349',
+  'partner': '#3accdd',
+  'tool': '#F7918e',
+  'platform': '#27368f',
+};
+
+var custom_word_mapping = {
+  'REST': 'REST',
+  'API': 'API',
+  'APIs': 'APIs',
+  'iOS': 'iOS',
+  'ID': 'ID',
+  'IDs': 'IDs',
+  'FAQ': 'FAQ',
+  'FAQS': 'FAQs',
+  'In-App': 'In-App',
+  'GPDR': 'GPDR',
+  'mParticle': 'mParticle',
+  'SDK': 'SDK',
+  'SDKs': 'SDKs',
+  'IP': 'IP',
+  'IPs': 'IPs',
+  'SSL': 'SSL',
+  'SAML': 'SAML',
+  'SSO': 'SSO',
+  'TTL': 'TTL',
+  'A/B': 'A/B',
+  'HTML': 'HTML',
+  'GIF': 'GIF',
+  'GIFs': 'GIFs',
+  'OTT': 'OTT',
+  'TV': 'TV',
+  'KPIs': 'KPIs',
+  'S3': 'S3',
+  'FireOS': 'FireOS',
+  'tvOS': 'tvOS',
+  'macOS': 'macOS',
+  'CocoaPods': 'CocoaPods',
+  'AndroidX': 'AndroidX',
+  'JavaScript': 'JavaScript',
+  'a': 'a',
+  'the': 'the',
+  'by': 'by',
+  'with': 'with',
+  'to': 'to',
+  'from': 'from',
+  'an': 'an',
+}
 // Set cookie to auto expire after 30 days of inactivity
 Cookies.set('__algolia_user', algolia_user, { expires: 30 });
+
+String.prototype.upCaseWord = function() {
+  return this.toString().replace(/\b\w/g, function(l){ return l.toUpperCase() });
+};
+String.prototype.replaceUnder = function() {
+  return this.toString().replace(/\%20/g, ' ').replace(/\_/g, ' ');
+};
+Array.prototype.upCaseWord = function() {
+  return this.map(function(itm){ return itm.toString().replace(/\b\w/g, function(l){ return l.toUpperCase() }) });
+};
+Array.prototype.replaceUnder = function() {
+  return this.map(function(itm){ return itm.toString().replace(/\%20/g, ' ').replace(/\_/g, ' ')});
+};
+String.prototype.mapReplace = function(map) {
+  var mstr = this;
+  for (var wd in map) {
+    if (map.hasOwnProperty(wd)) {
+        var rep = new RegExp('\\b' + wd + '\\b','gi');
+        mstr = mstr.replace(rep,map[wd]);
+    }
+  }
+  return mstr;
+};
+
+String.prototype.sanitize = function() {
+  return this.replace(/\+/g, ' ').replace(/\%20/g, ' ').replace(/\_/g, ' ').replace(/</g,'').replace(/>/g,'').replace(/&lt;/g,'').replace(/&gt;/g,'').replace(/\'/g,'').replace(/\"/g,'');
+};
 
 $(document).ready(function() {
   $('#toc').toc({

@@ -62,7 +62,7 @@ $(document).ready(function () {
             var title = "";
             var type = "";
             var category = "";
-            var platform = "";
+            var tags_list = "";
             var subname = "";
             var heading = "";
 
@@ -77,23 +77,43 @@ $(document).ready(function () {
             if ("category" in item) {
               category = item.category.replaceUnder();
             }
-
-            if ("platform" in item) {
-              platform = item.platform.replaceUnder();
+            // Tag search
+            for (var mp in search_color_mapping) {
+              if (mp in item) {
+                var i_tags = item[mp];
+                if (Array.isArray(i_tags)) {
+                  for (var its = 0; its < i_tags.length; its++) {
+                    tags_list += '<span class="search_tags" style="background-color: ' + search_color_mapping[mp] +
+                      ';">' + i_tags[its] + '</span>';
+                  }
+                }
+                else {
+                  tags_list += '<span class="search_tags" style="background-color: ' + search_color_mapping[mp] +
+                    ';">' + i_tags + '</span>';
+                }
+              }
             }
+            // Navigational Heading
+            var article_path = '';
+            if ('url' in item) {
+              var article_url = item['url'].split('/');
+              // Remove 2 last item and first item
+              article_url.pop();
+              article_url.pop();
+              article_url.shift();
+              article_path = `<div class="article_path">${article_url.join(' > ').replaceUnder().upCaseWord().mapReplace(custom_word_mapping)}</div>`;
+            }
+
             if ("headings" in item) {
               if (item["headings"]) {
                 heading =
                   item["headings"][item["headings"].length - 1];
               }
             }
-            if (platform || category) {
-              subname = "(" + type + ": " + platform;
-              if (platform) {
-                subname += " - ";
-              }
-              subname += category.upCaseWord() + ")";
+            if (category) {
+              subname = "(" + category.upCaseWord() + ")";
             }
+
             if ("content" in item) {
               content = item.content
                 .replaceUnder()
@@ -117,7 +137,7 @@ $(document).ready(function () {
             var resulttemplate = '<a href="' +
                 base_url + url + '"><div class="title">' +
                 title + ' <div class="category">' +
-                subname.replace(/\_/g, " ") +
+                subname.replace(/\_/g, " ") + ' ' + tags_list + article_path +
                 '</div></div> <div class="content">' +
                 search_msg +
                 "</div><hr /></a>";
