@@ -1,9 +1,9 @@
 ---
 nav_title: Local Connected Content Variables
-platform: Message_Building_and_Personalization
-subplatform: Personalization
+article_title: Local Connected Content Variables
 page_order: 1
 description: "This reference article covers how to use and store local Connected Content variables."
+
 ---
 
 # Local Connected Content Variables

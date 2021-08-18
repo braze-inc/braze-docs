@@ -1,10 +1,14 @@
 ---
 nav_title: Overview
-alias: "/dnd/email_template/"
+article_title: Drag & Drop Editor Overview
 alias: "/dnd/overview/"
 channel: email
 page_order: 1
 description: "This reference article covers various creative details of Drag & Drop editor blocks."
+tool: 
+  - Campaigns
+  - Canvas
+  
 ---
 
 # Drag & Drop Editor Overview

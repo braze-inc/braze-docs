@@ -1,10 +1,11 @@
 ---
 nav_title: Action-Based Delivery
+article_title: Action-Based Delivery
 page_order: 1
-
 page_type: reference
 description: "This reference article describes how to trigger campaigns to send after a user completes a certain event."
 tool: Campaigns
+
 ---
 
 # Action-Based Delivery

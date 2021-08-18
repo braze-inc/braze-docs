@@ -1,12 +1,11 @@
 ---
 nav_title: Campaigns in Multiple Languages
-platform: Campaigns
-subplatform: Ideas and Strategies
+article_title: Campaigns in Multiple Languages
 page_order: 4
-
 page_type: tutorial
 description: "This how-to article will walk you through how to send messages in different languages from within Braze dashboard campaigns."
 tool: Campaigns
+
 ---
 
 # Campaigns in Multiple Languages

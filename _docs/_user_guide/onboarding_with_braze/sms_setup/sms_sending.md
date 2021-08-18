@@ -1,18 +1,12 @@
 ---
 nav_title: "SMS Message Sending"
+article_title: SMS Message Sending Overview
 page_order: 4
 description: "This reference article covers the basics and best practices of SMS sending."
 page_type: reference
-tool:
-  - Dashboard
-  - Campaigns
-
-platform:
-  - iOS
-  - Android
-
 channel:
   - SMS
+  
 ---
 
 # SMS Message Sending

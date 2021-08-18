@@ -1,14 +1,13 @@
 ---
 nav_title: Capturing Lapsing Users
-platform: Campaigns
-subplatform: Ideas and Strategies
+article_title: Capturing Lapsing Users
 page_order: 1
-
 page_type: tutorial
 description: "This how-to article addresses the issue of lapsing users and how to effectively use Braze Campaigns to re-engage those users."
 tool:
-- Segments
-- Campaigns
+  - Segments
+  - Campaigns
+
 ---
 # Capturing Lapsing Users
 

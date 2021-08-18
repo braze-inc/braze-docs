@@ -1,9 +1,9 @@
 ---
 nav_title: "Custom App Icon Feature (iOS)"
+article_title: Custom App Icon Feature
 page_order: 7
 page_type: reference
 description: "This reference article covers the iOS 10.3 update on Customizable App Icon."
-
 platform: iOS
 channel:
   - push

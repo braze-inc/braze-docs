@@ -1,15 +1,13 @@
 ---
 nav_title: SMS Setup
+article_title: SMS Onboarding Setup
 layout: featured
+
 page_order: 6
 guide_top_header: "SMS Setup"
 guide_top_text: "Ready to get started with SMS? You can use it in our campaigns or Canvas tools. But, first, you should probably get set up and get to know SMS with Braze..."
-
 page_type: landing
 description: "This landing page is home to articles on SMS setup. Here you can find resources on crafting SMS messages, SMS laws and regulations, terms to know, and more."
-tool:
-- Campaigns
-- Canvas
 channel: SMS
 
 guide_featured_title: "Section Articles"

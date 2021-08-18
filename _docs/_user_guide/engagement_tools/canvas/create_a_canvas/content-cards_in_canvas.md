@@ -1,13 +1,12 @@
 ---
 nav_title: Content Cards In Canvas
-platform: Canvas
-subplatform: Create a Canvas
+article_title: Content Cards in Canvas
 page_order: 5
-
 page_type: reference
 description: "This reference article describes features and nuances specific to using Content Cards as a messaging channel within Canvas."
 tool: Canvas
 channel: content cards
+
 ---
 
 # Content Cards In Canvas

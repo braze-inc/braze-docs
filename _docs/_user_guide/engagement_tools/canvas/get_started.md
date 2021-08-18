@@ -1,5 +1,6 @@
 ---
 nav_title: Get Started
+article_title: Get Started with Canvas
 page_order: 0
 layout: dev_guide
 guide_top_header: "Get Started"

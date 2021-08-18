@@ -1,15 +1,14 @@
 ---
 nav_title: Duplicating Segments, Campaigns, and Canvases
-platform: Campaigns
-subplatform: Scheduling and Organizing
+article_title: Duplicating Segments, Campaigns, and Canvases
 page_order: 4
-
 page_type: reference
 description: "This reference article goes over how to duplicate segments, campaigns, and Canvases for reuse."
 tool: 
-- Campaigns
-- Canvas
-- Segments
+  - Campaigns
+  - Canvas
+  - Segments
+
 ---
 # Duplicating Segments, Campaigns, and Canvases
 

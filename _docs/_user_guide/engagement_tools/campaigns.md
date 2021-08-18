@@ -1,5 +1,6 @@
 ---
 nav_title: Campaigns
+article_title: Campaigns
 page_order: 2
 layout: dev_guide
 guide_top_header: "Campaigns"

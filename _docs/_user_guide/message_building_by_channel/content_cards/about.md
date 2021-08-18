@@ -1,12 +1,11 @@
 ---
 nav_title: About Content Cards
-platform: Message_Building_and_Personalization
-subplatform: Content Cards
+article_title: About Content Cards
 page_order: 0
 description: "This reference article includes an overview of the Braze Content Card channel and common use cases."
-
 channel:
   - content cards
+
 ---
 
 # What are Content Cards?

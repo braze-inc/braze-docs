@@ -1,5 +1,6 @@
 ---
 nav_title: "Types of Push Notifications"
+article_title: Types of Push Notifications
 page_order: 1
 page_type: glossary
 description: "This glossary lists the different types of Push Notifications you can use Braze to send."

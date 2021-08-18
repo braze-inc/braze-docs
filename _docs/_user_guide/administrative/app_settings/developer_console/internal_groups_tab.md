@@ -1,10 +1,10 @@
 ---
 nav_title: Internal Groups Log Tab
+article_title: Internal Group Log Tab
 page_order: 3
-
 page_type: reference
 description: "This reference article covers Internal Groups, a great way to get insight into your test device's SDK or API logs when testing SDK integration."
-tool: Dashboard
+
 ---
 
 # Internal Groups Tab

@@ -1,12 +1,12 @@
 ---
 nav_title: Segment Analytics Tracking
+article_title: Segment Analytics Tracking
 page_order: 8
-
 page_type: reference
 description: "This reference article explains Segment Analytics tracking."
 tool: 
-- Segments
-- Reports
+  - Segments
+  - Reports
 ---
 
 # Segment Analytics Tracking

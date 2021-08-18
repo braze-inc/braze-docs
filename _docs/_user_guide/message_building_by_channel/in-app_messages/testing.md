@@ -1,12 +1,11 @@
 ---
 nav_title: Testing
+article_title: Testing In-App Messages
 page_order: 3
 description: "It is extremely important to always test your in-app messages before sending your campaigns. Our preview and testing capabilities offer two ways to take a look at your in-app messages."
 channel:
   - in-app messages
-tool:
-  - Dashboard
-  - Campaigns
+  
 ---
 
 # Testing

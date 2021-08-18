@@ -1,11 +1,12 @@
 ---
 nav_title: Export News Feed Data
+article_title: Export News Feed Data
 page_order: 5
-
 page_type: reference
 description: "This reference article covers how to export News Feed data."
 tool: Reports
 channel: news feed
+
 ---
 
 # News Feed Data

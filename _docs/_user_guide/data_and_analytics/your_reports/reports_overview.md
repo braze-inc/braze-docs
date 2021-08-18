@@ -1,10 +1,11 @@
 ---
 nav_title: Reports Overview
+article_title: Reports Overview
 page_order: 0
-
 page_type: reference
 description: "This article provides guidance on which reports and analytics you can use to answer common marketing strategy questions."
 tool: Reports
+
 ---
 
 # Reports Overview

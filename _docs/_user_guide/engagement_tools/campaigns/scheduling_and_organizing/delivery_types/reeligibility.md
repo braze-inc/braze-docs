@@ -1,12 +1,13 @@
 ---
 nav_title: Re-eligibility with Campaign and Canvas
+article_title: Re-eligibility with Campaign and Canvas
 page_order: 3
-
 page_type: reference
 description: "This reference article gives an overview of what it means to allow users to become re-eligible to receive or re-enter a campaign or Canvas."
 tool:
-- Campaigns
-- Canvas
+  - Campaigns
+  - Canvas
+
 ---
 
 # Re-eligibility with Campaigns and Canvas

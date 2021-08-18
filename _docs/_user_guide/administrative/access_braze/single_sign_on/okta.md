@@ -1,9 +1,10 @@
 ---
 nav_title: Okta
+article_title: Okta
 page_order: 4
-
 page_type: tutorial
 description: "This article will walk you through how to configure Braze to use Okta for single sign-on." 
+
 ---
 
 # Okta 

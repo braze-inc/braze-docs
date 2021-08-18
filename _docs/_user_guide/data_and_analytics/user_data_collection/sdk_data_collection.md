@@ -1,9 +1,10 @@
 ---
 nav_title: SDK Data Collection
+article_title: SDK Data Collection
 page_order: 1
 page_type: reference
 description: "This reference article addresses the data that is collected by the SDK through a personalized integration, automatically collected integration, and minimum integration."
-tool: Dashboard
+
 ---
 
 # SDK Data Collection Options

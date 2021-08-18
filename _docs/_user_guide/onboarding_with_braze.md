@@ -1,7 +1,9 @@
 ---
 page_order: 0.1
 nav_title: Onboarding with Braze
+article_title: Onboarding with Braze
 layout: featured
+
 guide_top_header: "Welcome to Braze!"
 guide_top_text: "We’re happy you’re here! This section will help you and your developers/engineers get set up and ready to use Braze to create strong, lasting bonds between you and your customers! By now, you should have had some sort of kick-off communication with teams at Braze. <br> <br> This guide is tailored to both supplement fully-guided onboarding, as well as advise on onboarding actions you can take on your own."
 description: "This section will help you and your developers/engineers get set up and ready to use Braze to create strong, lasting bonds between you and your customers! This guide is tailored to both supplement fully-guided onboarding, as well as advise on onboarding actions you can take on your own."

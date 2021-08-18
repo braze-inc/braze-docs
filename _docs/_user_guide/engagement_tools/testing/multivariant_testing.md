@@ -1,12 +1,10 @@
 ---
 nav_title: Multivariate & A/B Testing
+article_title: Multivariate & A/B Testing
 page_order: 2
-
 page_type: reference
 description: "This reference article explains Multivariate and A/B Testing, their benefits, and how to create them with Braze."
-tool: 
-- Campaigns
-- Canvas
+
 ---
 # Multivariate & A/B Testing
 

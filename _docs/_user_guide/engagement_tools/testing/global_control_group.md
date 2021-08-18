@@ -1,14 +1,13 @@
 ---
 nav_title: Global Control Group
+article_title: Global Control Group
 alias: /global_control_group/
 page_order: 0
 
 description: "This article covers how to set up and properly use Global Control Groups. It also covers how to view reports and metrics brought on by the use of these groups."
 page_type: reference
-tool: 
-- Campaigns
-- Canvas
-- Reports
+tool: Reports
+
 ---
 
 # Global Control Groups

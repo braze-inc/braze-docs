@@ -1,11 +1,11 @@
 ---
 nav_title: FAQs
-title: Locations & Geofences FAQs
+article_title: Locations & Geofences FAQs
 page_order: 4
-
 page_type: FAQ
 description: "This reference article covers some frequently asked questions surrounding the use of Geofences."
 tool: Location
+
 ---
 
 # Locations & Geofences FAQs

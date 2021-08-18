@@ -1,11 +1,11 @@
 ---
 nav_title: Email Guidelines & Tips
+article_title: Email Guidelines & Tips
 page_order: 1
-
 page_type: reference
 description: "This article covers content-specific, styling, and technical tips and tricks for various email use cases."
 channel: email
-no_index: true
+
 ---
 
 # Email Guidelines & Tips

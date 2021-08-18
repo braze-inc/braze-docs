@@ -1,16 +1,13 @@
 ---
 nav_title: Email Setup
+article_title: Onboarding Email Setup
 layout: featured
 page_order: 5
 guide_top_header: "Email Setup"
 guide_top_text: "So you want to start sending email campaigns? Braze Onboarding can help you with that! Either follow our guide below or check out our <a href='https://lab.braze.com/email-onboarding-for-pro-and-enterprise-achieving-high-deliverability' target='_blank'>LAB course on deliverability</a>."
-
 page_type: landing
 description: "This landing page includes resources on getting started with email campaigns."
 channel: email
-tool: 
-- Campaigns
-- Canvas
 
 guide_featured_title: "Section Articles"
 guide_featured_list:

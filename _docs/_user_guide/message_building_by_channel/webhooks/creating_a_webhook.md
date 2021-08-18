@@ -1,17 +1,9 @@
 ---
 nav_title: Creating a Webhook
-platform: Message_Building_and_Personalization
-subplatform: Webhooks
+article_title: Creating a Webhook
 page_order: 1
-
-tool:
-  - Dashboard
-  - Canvas
-  - Campaign
-
 channel:
   - webhooks
-
 description: "This reference article covers how to create and configure a webhook, as well as how to utilize them to with certain Braze technology partners."
 
 ---

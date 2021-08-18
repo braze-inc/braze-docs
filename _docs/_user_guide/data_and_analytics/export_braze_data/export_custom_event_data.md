@@ -1,10 +1,11 @@
 ---
 nav_title: Export Custom Event Aggregates
+article_title: Export Custom Event Aggregates
 page_order: 6
-
 page_type: reference
 description: "This reference article covers how to export custom event data aggregates."
 tool: Reports
+
 ---
 
 # Custom Event Aggregates

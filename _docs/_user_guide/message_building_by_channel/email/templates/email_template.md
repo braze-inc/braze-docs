@@ -1,20 +1,16 @@
 ---
 nav_title: Create an Email Template
-platform: Message_Building_and_Personalization
-subplatform: Email
+article_title: Creating an Email Template
 page_order: 2
 description: "Email messages are great for delivering content to the user on their terms. This reference article covers how to create, customize, and manage email templates."
-
 tool:
-  - Dashboard
   - Templates
-
 channel:
   - email
-
 alias: "/dnd/email_template/"
 
 ---
+
 # How to Create an Email Template
 
 > This article covers how to create, customize, and manage email templates.

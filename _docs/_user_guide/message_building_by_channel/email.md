@@ -1,5 +1,6 @@
 ---
 nav_title: Email
+article_title: Email
 page_order: 1
 layout: dev_guide
 guide_top_header: "Email"

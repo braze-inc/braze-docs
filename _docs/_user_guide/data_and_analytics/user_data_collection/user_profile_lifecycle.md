@@ -1,10 +1,10 @@
 ---
 nav_title: User Profile Lifecycle
+article_title: User Profile Lifecycle
 page_order: 2
-
 page_type: reference
 description: "This reference article describes the user profile lifecycle in Braze, and the various ways a user profile can be identified and referenced."
-tool: Dashboard
+
 ---
 
 # User Profile Lifecycle

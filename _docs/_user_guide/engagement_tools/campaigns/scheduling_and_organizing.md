@@ -1,5 +1,6 @@
 ---
 nav_title: Scheduling and Organizing
+article_title: Scheduling and Organizing
 layout: dev_guide
 guide_top_header: "Scheduling and Organizing"
 guide_top_text: ""

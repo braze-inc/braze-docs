@@ -1,13 +1,13 @@
 ---
-nav_title: News Feed Analytics and Retargeting Data
+nav_title: News Feed Analytics
+article_title: News Feed Analytics and Retargeting Data
 page_order: 10
-
 page_type: reference
 description: "This reference article covers News Feed analytics, and various related filters."
 tool: 
-- Dashboard
 - Reports
 channel: news feed
+
 ---
 
 # Analytics

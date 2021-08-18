@@ -1,11 +1,12 @@
 ---
 nav_title: "A2P 10DLC"
+article_title: A2P 10DLC
 page_order: 2.9
 description: "This article covers A2P 10DLC, why 10DLC registration is necessary for US long code customers, helpful costs and throughput information, and how to get started with registration."
 page_type: reference
-
 channel:
   - SMS
+  
 ---
 
 # Application-to-Person 10-Digit Long Codes (A2P 10DLC)

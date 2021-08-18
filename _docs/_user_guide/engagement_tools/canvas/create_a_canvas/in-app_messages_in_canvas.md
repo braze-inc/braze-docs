@@ -1,13 +1,12 @@
 ---
 nav_title: In-App Messages In Canvas
-platform: Canvas
-subplatform: Create a Canvas
+article_title: In-App Messages in Canvas
 page_order: 4
-
 page_type: reference
 description: "This reference article describes features and nuances specific to Canvas In-App Messages, which you can add to your Canvas to show rich messaging."
 tool: Canvas
 channel: in-app messages
+
 ---
 
 # In-App Messages In Canvas

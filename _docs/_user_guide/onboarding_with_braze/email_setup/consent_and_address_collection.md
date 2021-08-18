@@ -1,5 +1,6 @@
 ---
 nav_title: Consent & Address Collection
+article_title: Consent & Address Collection
 page_order: 2
 page_type: reference
 description: "This reference article covers best practices for gathering consent and user email addresses and defines the different possible user subscriber states."

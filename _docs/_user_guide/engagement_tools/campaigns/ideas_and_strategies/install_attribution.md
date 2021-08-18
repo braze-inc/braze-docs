@@ -1,14 +1,12 @@
 ---
 nav_title: Install Attribution Campaign
-platform: Campaigns
-subplatform: Ideas and Strategies
+article_title: Understanding User Installs 
 page_order: 7
-
 page_type: reference
 description: "This reference article describes user installs (install attribution tracking) and different ways to apply this information within your campaign."
 tool:
-- Campaigns
-- Segments
+  - Campaigns
+  - Segments
 ---
 # Understanding User Installs
 

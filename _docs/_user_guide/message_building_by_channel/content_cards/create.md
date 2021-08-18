@@ -1,15 +1,11 @@
 ---
 nav_title: Create a Content Card
-platform: Message_Building_and_Personalization
-subplatform: Content Cards
+article_title: Create a Content Card
 page_order: 0
 description: "This reference article covers how to create, compose, configure and send Content Cards using Braze campaigns and Canvases."
-
 tool:
-  - Dashboard
   - Canvas
   - Campaigns
-
 channel:
   - content cards
 

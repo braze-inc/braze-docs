@@ -2,11 +2,11 @@
 nav_title: Reporting
 page_title: Push Reporting
 page_order: 7
-
 page_type: reference
 description: "This article covers push reporting, which you can use to view and analyze the success of your push campaigns."
-no_index: true
 channel: push
+tool: Reports
+
 ---
 
 # Push Reporting
