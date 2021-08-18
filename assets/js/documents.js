@@ -75,6 +75,8 @@ var custom_word_mapping = {
   'to': 'to',
   'from': 'from',
   'an': 'an',
+  'SMS': 'SMS',
+  'MMS': 'MMS',
 }
 // Set cookie to auto expire after 30 days of inactivity
 Cookies.set('__algolia_user', algolia_user, { expires: 30 });
