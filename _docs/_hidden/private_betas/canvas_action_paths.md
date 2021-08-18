@@ -1,6 +1,6 @@
 ---
 nav_title: Action Paths in Canvas
-permalink: /user_guide/engagement_tools/canvas/canvas_components/action_paths
+permalink: /action_paths/
 hidden: true
 platform: Canvas
 
