@@ -1,17 +1,10 @@
 ---
 nav_title: "Purchase Object"
+article_title: Purchase Object
 page_order: 8
-
 page_type: reference
-
-platform:
-  - API
-tool:
-  - Campaigns
-  - Canvas
-  - Dashboard
-
 description: "This article explains the different components of a purchase object, how to use it correctly, and examples to draw from."
+
 ---
 
 # Purchase Object Specification

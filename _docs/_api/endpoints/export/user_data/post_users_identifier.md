@@ -1,16 +1,12 @@
 ---
 nav_title: "POST: User Profile Export by Identifier"
+article_title: "POST: User Profile Export by Identifier"
+search_tag: Endpoint
 page_order: 4
-
 layout: api_page
-
 page_type: reference
-platform: API
-tool:
-  - Canvas
-  - Campaigns
-
 description: "This article outlines details about the Users by ID Braze endpoint."
+
 ---
 {% api %}
 # Users by Identifier Endpoint

@@ -1,17 +1,12 @@
 ---
 nav_title: "POST: User Profile Export by Global Control Group"
+article_title: "POST: User Profile Export by Global Control Group"
+search_tag: Endpoint
 page_order: 6
-
 layout: api_page
-
 page_type: reference
-platform: API
-tool:
-  - Canvas
-  - Campaigns
-  - Segment
-
 description: "This article outlines details about the Users in Global Control Groups Braze endpoint."
+
 ---
 {% api %}
 # Users by Global Control Group

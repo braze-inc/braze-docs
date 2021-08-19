@@ -1,16 +1,12 @@
 ---
 nav_title: "POST: Update Scheduled Messages"
+article_title: "POST: Update Scheduled Messages"
+search_tag: Endpoint
 page_order: 4
-
 layout: api_page
-
 page_type: reference
-platform: API
-tool:
-  - Canvas
-  - Campaigns
-
 description: "This article outlines details about the Update Scheduled Messages Braze endpoint."
+
 ---
 {% api %}
 # Update Scheduled Messages

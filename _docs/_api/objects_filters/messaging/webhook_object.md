@@ -1,17 +1,12 @@
 ---
 nav_title: "Webhook Object"
+article_title: Webhook Object
 page_order: 13
-
 page_type: reference
-
-channel: Webhook
-platform:
-  - API
-tool:
-  - Campaigns
-  - Canvas
-
+channel: 
+  - webhook
 description: "This article outlines the Braze Webhook Object."
+
 ---
 
 # Webhook Object Specification

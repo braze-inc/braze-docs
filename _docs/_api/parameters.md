@@ -1,16 +1,13 @@
 ---
 page_order: 2.4
 nav_title: Parameters
+article_title: API Parameters
 layout: glossary_page
 glossary_top_header: "Parameters"
 glossary_top_text: "Use these parameters to define your API requests. Though the parameters you need are listed under endpoints, this should give you more insight into their nuance and other specifications."
 
 description: "This glossary covers in detail the parameters involved in making API requests." 
 page_type: glossary
-tool: 
-  - Docs
-platform: 
-  - API
 
 glossaries:
   - name: App Group REST API Key

@@ -1,21 +1,15 @@
 ---
-nav_title: "Apple Objects"
+nav_title: "Apple Object"
+article_title: Apple Object
 page_order: 1
-
 page_type: reference
-
-channel: Push
-platform:
-  - API
-  - iOS
-tool:
-  - Campaigns
-  - Canvas
-
+channel: push
+platform: iOS
 description: "This article lists and explains the different Apple objects used at Braze."
 
 ---
-# Apple Push Objects
+
+# Apple Push Object Specification
 
 These objects are used to define or request information related to Apple Push and Apple Push Alert content.
 

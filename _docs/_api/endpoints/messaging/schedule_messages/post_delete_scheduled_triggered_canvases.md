@@ -1,16 +1,12 @@
 ---
 nav_title: "POST: Delete Scheduled API-Triggered Canvases"
+article_title: "POST: Delete Scheduled API-Triggered Canvases"
+search_tag: Endpoint
 page_order: 4
-
 layout: api_page
-
 page_type: reference
-platform: API
-tool:
-  - Canvas
-  - Campaigns
-
 description: "This article outlines details about the Delete Scheduled API-Triggered Canvases Braze endpoint."
+
 ---
 {% api %}
 # Delete Scheduled API-Triggered Canvases

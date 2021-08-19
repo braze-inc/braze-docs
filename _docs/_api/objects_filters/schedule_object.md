@@ -1,18 +1,13 @@
 ---
-nav_title: "Schedule Objects"
+nav_title: "Schedule Object"
+article_title: Schedule Object
 page_order: 12
-
 page_type: reference
-
-platform:
-  - API
-tool:
-  - Campaigns
-  - Canvas
-
 description: "This article lists and explains the different Scheduling Object used at Braze."
+
 ---
-# The Schedule Object
+
+# Schedule Object Specification
 
 The parameters for the campaign and Canvas schedule creation endpoints mirror those of the sending endpoint and add the `schedule` parameter, which allows you to specify when you want your targeted users to receive your message (up to 90 days in the future). If you include only the `time` parameter in the `schedule` object, all of your users will be messaged at that time.
 

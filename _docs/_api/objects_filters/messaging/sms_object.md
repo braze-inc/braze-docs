@@ -1,17 +1,11 @@
 ---
 nav_title: "SMS Object"
+article_title: SMS Object
 page_order: 10
-
 page_type: reference
-
 channel: SMS
-platform:
-  - API
-tool:
-  - Campaigns
-  - Canvas
-
 description: "This article explains the different components of Braze's SMS Object."
+
 ---
 # SMS Object Specification
 

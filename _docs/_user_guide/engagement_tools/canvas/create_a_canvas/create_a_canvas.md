@@ -198,7 +198,9 @@ You can also apply **Filters** to each Step of a Canvas. Use this to add additio
 
 ![Canvas Additional Engagement][15]
 
-{% alert note %} By default, Filters and Segments for **Full Steps** in Canvas are checked at send time. However, for [Decision Split Steps](57), audience evaluation occurs right after receiving the previous step, or after a delay (if you have configured one). {% endalert %}
+{% alert note %} 
+By default, Filters and Segments for **Full Steps** in Canvas are checked at send time. However, for [Decision Split Steps]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/decision_split/), audience evaluation occurs right after receiving the previous step, or after a delay (if you have configured one). 
+{% endalert %}
 
 #### Messages in Canvas
 
@@ -305,4 +307,3 @@ Once you've launched your Canvas, you'll be able to view analytics for your jour
 [54]: {% image_buster /assets/img/entry-audience-canvas-1.gif %}
 [55]: {% image_buster /assets/img/canvas-send-settings-1.gif %}
 [56]: {{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/exception_events/
-[57]: {{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/decision_split/

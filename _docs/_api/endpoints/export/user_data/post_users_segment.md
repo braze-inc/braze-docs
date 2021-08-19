@@ -1,17 +1,12 @@
 ---
 nav_title: "POST: User Profile Export by Segment"
+article_title: "POST: User Profile Export by Segment"
+search_tag: Endpoint
 page_order: 4
-
 layout: api_page
-
 page_type: reference
-platform: API
-tool:
-  - Canvas
-  - Campaigns
-  - Segment
-
 description: "This article outlines details about the Users by Segment Braze endpoint."
+
 ---
 {% api %}
 # Users by Segment Endpoint
