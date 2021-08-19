@@ -37,6 +37,8 @@ If you are uploading or updating user profiles that are alias only, you must hav
 - `user_alias_name`: A unique user identifier; an alternative to the `external_id`.
 - `user_alias_label`: A common label by which to group user aliases.
 
+![User Alias Import CSV Example][8]
+
 When you provide both a `user_alias_name` and `user_alias_label` in your import, Braze will update any existing user with the same `user_alias_name` or create a newly identified user with that `user_alias_name` set if one is not found.
 
 {% alert important %}
@@ -222,6 +224,7 @@ Braze will ban or block users ("dummy users") with over 5 million sessions and n
 [3]: {% image_buster /assets/img/importcsv.png %}
 [6]: {% image_buster /assets/img/csv-errors.png %}
 [7]: {% image_buster /assets/img/segment-imported-users.png %}
+[8]: {% image_buster /assets/img_archive/user_alias_import_1.png %}
 [12]: {{site.baseurl}}/developer_guide/rest_api/user_data/#user-track-endpoint
 [13]: {{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/user_profile_lifecycle/
 [errors]:#common-errors
