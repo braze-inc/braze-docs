@@ -1,19 +1,12 @@
 ---
 nav_title: "GET: List User's Subscription Groups"
+article_title: "GET: List User's Subscription Groups"
+search_tag: Endpoint
 page_order: 4
-
 layout: api_page
-
 page_type: reference
-platform: API
-channel:
-  - Email
-  - SMS
-tool:
-  - Canvas
-  - Campaigns
-
 description: "This article outlines details about the List User's Subscription Groups Braze endpoint."
+
 ---
 {% api %}
 # Get Users' Subscription Groups

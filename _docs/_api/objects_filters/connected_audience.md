@@ -1,20 +1,13 @@
 ---
 nav_title: "Connected Audience Filter & Object"
+article_title: Connected Audience Object
 page_order: 3
-
 page_type: reference
-
-platform:
-  - API
-tool:
-  - Campaigns
-  - Canvas
-  - Segments
-
 description: "This article explains the different components of the Connected Audience Object and the Filters that create it."
+
 ---
 
-# Connected Audience Object
+# Connected Audience Object Specification
 
 A Connected Audience Object is a selector that identifies the audience to send the message to. It is composed of either a single Connected Audience Filter or several Connected Audience Filters in a logical expression using either `AND` or `OR` operators.
 

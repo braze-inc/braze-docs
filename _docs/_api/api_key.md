@@ -1,14 +1,10 @@
 ---
 nav_title: "API Key Overview"
+article_title: REST API Key Overview
 page_order: 2.1
-
 description: "This reference article covers the concept of API keys, what they are used for, and how they are used." 
 page_type: reference
-tool: 
-  - Dashboard
-  - Docs
-platform: 
-  - API
+
 ---
 
 # REST API Key Overview

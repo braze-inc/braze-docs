@@ -1,13 +1,12 @@
 ---
 nav_title: "GET: Canvas Details"
+article_title: "GET: Canvas Details"
+search_tag: Endpoint
 page_order: 4
-
 layout: api_page
-
 page_type: reference
-platform: API
-tool: Canvas
 description: "This article outlines details about the Canvas Details Endpoint."
+
 ---
 {% api %}
 # Canvas Details Endpoint

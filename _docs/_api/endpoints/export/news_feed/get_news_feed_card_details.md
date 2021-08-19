@@ -1,14 +1,12 @@
 ---
 nav_title: "GET: News Feed Card Details"
+article_title: "GET: News Feed Card Details"
+search_tag: Endpoint
 page_order: 4
-
 layout: api_page
-
 page_type: reference
-platform: API
-channel: News Feed
-tool: Segments
 description: "This article outlines details about the News Feed Card Details endpoint."
+
 ---
 {% api %}
 # News Feed Card Details Endpoint

@@ -1,5 +1,7 @@
 ---
 nav_title: Messaging
+article_title: Messaging Endpoints
+search_tag: Endpoint
 page_order: 2
 local_redirect: #parameter-definitions #app-group-rest-api-key #app-identifier #external-user-id #segment-identifier #campaign-identifier #canvas-identifier #trigger-properties #canvas-identifier #server-responses #fatal-errors #responses-for-tracked-send-ids #messaging-queued #canvas-entry-properties
   parameter-definitions: '/docs/api/parameters/'
@@ -17,27 +19,11 @@ local_redirect: #parameter-definitions #app-group-rest-api-key #app-identifier #
   responses-for-tracked-send-ids: '/docs/api/errors/'
   fatal-errors: '/docs/api/errors/'
 
-
 layout: dev_guide
 
 #Required
 description: "This landing page explains and lists the Braze Messaging Endpoints."
 page_type: landing
-tool:
-  - Canvas
-  - Campaigns
-
-#Use if applicable
-platform:
-  - API
-channel:
-  - Content Cards
-  - Email
-  - News Feed
-  - In-App Messages
-  - Push
-  - SMS
-  - Webhooks
 
 guide_top_header: "Messaging Endpoints"
 guide_top_text: "The Braze messaging API provides you with two distinct options for sending messages to your users. You can provide the message contents and configuration in the API request with the <code class='highlighter-rouge'>/messages/send</code> and `/messages/schedule` endpoints. Alternatively, you can manage the details of your message with an API-Triggered Delivery campaign in the dashboard and just control when and to whom it is sent with the `campaigns/trigger/send` and `campaigns/trigger/schedule` endpoints. The following sections will detail the request specification for both methods. <br> <br> Similarly to other campaigns, you can limit the number of times a particular user can receive a Messaging API campaign by configuring [re-eligibility settings](/docs/user_guide/engagement_tools/campaigns/scheduling_and_organizing/delivery_types/api_triggered_delivery/#re-eligibility-with-api-triggered-campaigns) in the Braze Dashboard. Braze will not deliver API messages to users that haven't become re-eligible for the campaign regardless of how many API requests are sent. <br> <br> The Send endpoints allow you to send immediate, ad-hoc messages to designated users. If you are targeting a segment, a record of your request will be stored in the Developer Console. The Schedule endpoints allow you to send messages at a designated time and modify or cancel messages that you have already scheduled."

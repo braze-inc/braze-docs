@@ -1,12 +1,12 @@
 ---
 nav_title: "POST: Send Transactional Emails via API-Triggered Delivery"
+article_title: "POST: Send Transactional Emails via API-Triggered Delivery"
+search_tag: Endpoint
 page_order: 4
 layout: api_page
 page_type: reference
-platform: API
-tool:
-  - Campaigns
 description: "This article outlines details about the Send Transactional Email Messages via API-Triggered Delivery Braze endpoint."
+
 ---
 
 {% api %}

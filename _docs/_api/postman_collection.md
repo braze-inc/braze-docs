@@ -1,15 +1,10 @@
 ---
 nav_title: Postman & Sample Requests
-platform: REST APIs
+article_title: Postman & Sample Requests
 page_order: 3
-
 description: "This reference article covers the Braze Postman Collection, what it is, how to set up and use the collection, as well as how to edit and send requests."
 page_type: reference
-tool:
-  - Dashboard
-  - Docs
-platform:
-  - API
+
 ---
 
 # Sample API Requests

@@ -1,13 +1,12 @@
 ---
 nav_title: "GET: Monthly Active Users for Last 30 Days"
+article_title: "GET: Monthly Active Users for Last 30 Days"
+search_tag: Endpoint
 page_order: 4
-
 layout: api_page
-
 page_type: reference
-platform: API
-tool: Segments
 description: "This article outlines details about the Get Monthly Active Users endpoint."
+
 ---
 {% api %}
 # Monthly Active Users Endpoint
