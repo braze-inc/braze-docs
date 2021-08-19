@@ -146,7 +146,7 @@ import ReactAppboy from "react-native-appboy-sdk";
 
 const App = () => {
   useEffect(() => {
-    ReactAppboy.changeUser("user-id");
+    ReactAppboy.changeUser("some-user-id");
   }, []);
 
   return (
