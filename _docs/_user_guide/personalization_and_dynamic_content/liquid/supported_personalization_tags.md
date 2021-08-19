@@ -55,10 +55,12 @@ You can template in the following attributes for the user's most recent device a
 
 |Tag | Description |
 |---|---|
+|`{{most_recently_)used_decide.${browser}}}` | The most recently used browser on the user's device. Examples include "Chrome" and "Safari". |
 |`{{most_recently_used_device.${id}}}` | This is Braze's device identifier. On iOS, this is the Apple Identifier for Vendor (IDFV). For Android and other platforms, it is Braze's device identifier, a randomly generated GUID. |
 | `{{most_recently_used_device.${carrier}}}` | The most recently used device's telephone service carrier, if available. Examples include "Verizon" and "Orange". |
+| `{{most_recently_used_device.${ad_tracking_enabled}}}` | If the device has ad tracking enabled or not. This is a boolean value (`true` or `false`). |
 | `{{most_recently_used_device.${idfa}}}` | For iOS devices, this value will be the Identifier for Advertising (IDFA) if your application is configured with Braze's [optional IDFA collection][40]. For non-iOS devices, this value will be null. |
-| `{{most_recently_used_device.${google_ad_id}}}` | For Android devices, this value will be the Google Play Advertising Identifier if your application is configured with Braze's [optional Google Play Advertising ID collection]. For non-Android devices, this value will be null. |
+| `{{most_recently_used_device.${google_ad_id}}}` | For Android devices, this value will be the Google Play Advertising Identifier if your application is configured with Braze's optional Google Play Advertising ID collection. For non-Android devices, this value will be null. |
 | `{{most_recently_used_device.${roku_ad_id}}}` | For Roku devices, this value will be the Roku Advertising Identifier that is collected when your application is configured with Braze. For non-Roku devices, this value will be null. |
 | `{{most_recently_used_device.${windows_ad_id}}}` | For Windows devices, this value will be the Windows Advertising Identifier that is collected when your application is configured with Braze. For non-Windows devices, this value will be null. |
 | `{{most_recently_used_device.${model}}}` | The device's model name, if available. Examples include "iPhone 6S" and "Nexus 6P" and "Firefox". |
