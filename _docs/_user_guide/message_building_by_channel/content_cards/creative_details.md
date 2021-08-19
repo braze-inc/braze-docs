@@ -1,5 +1,6 @@
 ---
 nav_title: Creative Details
+article_title: Creative Details
 page_order: 1
 layout: featured
 guide_top_header: "Creative Details"
@@ -20,6 +21,8 @@ guide_featured_list:
 
 channel:
   - content cards
+tool: Media
+
 ---
 
 ## Content Card Types

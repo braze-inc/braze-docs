@@ -1,13 +1,11 @@
 ---
 nav_title: Uninstall Tracking
+article_title: Uninstall Tracking
 page_order: 6
-
 page_type: reference
 description: "This reference article covers how to implement uninstall tracking."
-tool: 
-- Dashboard
-- Campaigns
-- Reports
+tool: Reports
+
 ---
 # Uninstall Tracking
 

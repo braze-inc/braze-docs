@@ -1,5 +1,6 @@
 ---
 nav_title: SMS & MMS
+article_title: SMS & MMS
 page_order: 4
 layout: dev_guide
 channel:

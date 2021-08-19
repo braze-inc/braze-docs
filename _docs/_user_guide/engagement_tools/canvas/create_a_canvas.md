@@ -1,5 +1,6 @@
 ---
 nav_title: Create a Canvas
+article_title: Create a Canvas
 page_order: 1
 layout: dev_guide
 guide_top_header: "Creating a Canvas"

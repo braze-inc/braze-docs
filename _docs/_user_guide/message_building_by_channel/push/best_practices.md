@@ -1,6 +1,7 @@
 ---
 page_order: 20
 nav_title: Best Practices
+article_title: Push Best Practices
 layout: dev_guide
 guide_top_header: "Push Best Practices"
 guide_top_text: "Being able to communicate with your users whether or not they’re “in-app” can be extremely useful, making push notifications a powerful tool. But with power comes responsibility, and used incorrectly, they can be potentially invasive. To escape being pushy, follow the best practices and use cases below to make sure your push messages inspire engagement rather than annoyance."
@@ -8,7 +9,6 @@ guide_top_text: "Being able to communicate with your users whether or not they�
 page_type: landing
 description: "This landing page is home to best practices and use cases to make sure your push messages inspire engagement rather than annoyance."
 channel: push
-no_index: true
 
 guide_featured_title: "Section Articles"
 guide_featured_list:

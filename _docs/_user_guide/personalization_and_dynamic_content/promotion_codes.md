@@ -1,12 +1,10 @@
 ---
 nav_title: Promotion Codes
+article_title: Promotion Codes
 page_order: 5
 alias: "/promotion_codes/"
-description: "This reference article covers how to create promotion code lists and add them into your campaigns and Camvases."
-Tool:
-  - Dashboard
-  - Campaigns
-  - Canvas
+description: "This reference article covers how to create promotion code lists and add them into your campaigns and Canvases."
+
 ---
 
 # Promotion Codes
@@ -14,7 +12,7 @@ Tool:
 > Promotion codes—also called promo codes—are a great way to keep users engaged by driving interactions with a heavy emphasis on purchases. <br><br>With Braze's Liquid functionality, we offer a way to make widespread promotion code usage a snap, allowing messages to now pull from the promotion list you provided, automatically and intuitively. The promotion codes feature offers expiry dates of up to six months and support for up to 20MM individual codes per list.
 
 {% alert important %}
-Promotion codes can't be sent in In-App Messages.
+Promotion codes can't be sent in in-app messages.
 {% endalert %}
 
 ## Creating a Promotion Code List

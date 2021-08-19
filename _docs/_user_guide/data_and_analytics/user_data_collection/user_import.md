@@ -1,10 +1,10 @@
 ---
 nav_title: User Import
+article_title: User Import
 page_order: 4
-
 page_type: reference
 description: "This reference article covers the topic of how to Import Users into your Braze Dashboard and necessary best practices."
-tool: Dashboard
+
 ---
 # User Import
 

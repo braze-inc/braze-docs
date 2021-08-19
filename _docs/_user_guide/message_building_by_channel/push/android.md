@@ -1,8 +1,8 @@
 ---
 nav_title: "Android Options"
+article_title: Android Push Options
 page_order: 7
 layout: featured
-
 page_type: landing
 channel: push
 platform: android

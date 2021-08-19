@@ -1,5 +1,6 @@
 ---
 nav_title: "In-App Messages"
+article_title: In-App Messages
 page_order: 2
 alias: /in-app_messages/
 layout: featured

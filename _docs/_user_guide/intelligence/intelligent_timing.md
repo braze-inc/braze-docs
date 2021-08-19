@@ -1,10 +1,9 @@
 ---
 nav_title: Intelligent Timing
+article_title: Intelligent Timing
 page_order: 2
 description: "When scheduling a campaign, you can use Intelligent Timing to deliver your message to each user at the time which Braze determines that an individual is most likely to engage. This article covers how to implement intelligent timing in your campaigns and Canvases."
 
-Tool:
-  - Dashboard
 ---
 
 # Intelligent Timing

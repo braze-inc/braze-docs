@@ -1,5 +1,6 @@
 ---
 nav_title: Predictive Suite
+article_title: Predictive Suite
 page_order: 6.4
 layout: featured
 

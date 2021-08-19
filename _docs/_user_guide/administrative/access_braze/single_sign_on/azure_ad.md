@@ -1,10 +1,10 @@
 ---
 nav_title: Azure Active Directory
+article_title: Azure Active Directory
 page_order: 3
-
 page_type: tutorial
-tool: dashboard
 description: "This article will walk you through how to set up Azure AD sign-on capabilities with Braze."
+
 ---
 
 # Azure Active Directory

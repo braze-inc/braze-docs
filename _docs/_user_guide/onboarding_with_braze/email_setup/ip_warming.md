@@ -1,10 +1,11 @@
 ---
 nav_title: IP Warming
+article_title: IP Warming
 page_order: 5
-
 page_type: reference
 description: "This reference article covers the topic of IP warming and best practices."
 channel: email
+
 ---
 
 # IP Warming

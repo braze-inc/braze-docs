@@ -198,7 +198,7 @@ Add the **save** parameter at the end to store the Talon.One response as a Braze
 
 #### Step Six: Show the Value of the Code in the Message
 
-Use a [liquid tag]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/overview/) to show the value of the generated code in the message.
+Use a [liquid tag]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/) to show the value of the generated code in the message.
 
 {% raw %}
 ```liquid

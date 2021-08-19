@@ -1,10 +1,10 @@
 ---
 nav_title: Company Wide Settings
+article_title: Company Wide Settings
 page_order: 5
-
 page_type: reference
 description: "This reference article covers company-wide settings, like changing the name of your company, setting your time zone, and requesting to delete your company."
-tool: Dashboard
+
 ---
 
 # Company Wide Settings Management

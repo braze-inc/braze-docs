@@ -1,10 +1,12 @@
 ---
 nav_title: Segment Funnels
+article_title: Segment Funnels
 page_order: 3
 
 page_type: reference
 tool: Segments
 description: "This reference article explains how to use Braze Segment Funnels, their best practices, and some example use cases."
+
 ---
 # Segment Funnels
 

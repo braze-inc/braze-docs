@@ -1,12 +1,11 @@
 ---
 nav_title: Best Practices
-page_title: News Feed Best Practices
+article_title: News Feed Best Practices
 page_order: 20
-
 page_type: reference
 description: "This article provides best practices for designing and customizing News Feed cards."
 channel: news feed
-no_index: true
+
 ---
 
 # News Feed Best Practices

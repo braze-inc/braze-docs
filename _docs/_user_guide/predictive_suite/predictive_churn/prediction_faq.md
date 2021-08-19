@@ -1,11 +1,9 @@
 ---
 nav_title: Troubleshooting
-title: Troubleshooting
+article_title: Predictive Churn Troubleshooting
 description: "This reference article covers some troubleshooting steps and considerations to keep in mind while using predictive churn."
 page_order: 3
 
-Tool:
-  - Dashboard
 ---
 
 # Troubleshooting

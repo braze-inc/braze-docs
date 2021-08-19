@@ -1,14 +1,14 @@
 ---
 nav_title: "SMS Campaign Analytics"
+article_title: SMS Campaign Analytics
 page_order: 7
 description: "This reference article covers SMS metrics used at Braze, as well as how to view them in your SMS campaigns."
 page_type: reference
 tool:
   - Reports
-  - Dashboard
-
 channel:
   - SMS
+  
 ---
 
 # Reporting & Analytics

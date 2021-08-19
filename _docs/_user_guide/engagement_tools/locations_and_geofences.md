@@ -1,5 +1,6 @@
 ---
 nav_title: Locations & Geofences
+article_title: Locations & Geofences
 page_order: 6
 layout: dev_guide
 guide_top_header: "Locations & Geofences"

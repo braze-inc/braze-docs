@@ -1,5 +1,6 @@
 ---
 nav_title: "Notification Options (iOS)"
+article_title: Push Notification Options
 page_order: 2
 page_layout: reference
 description: "This reference article covers iOS notification options like critical alerts, quiet notifications, provisional push notifications, and more."
@@ -7,9 +8,7 @@ description: "This reference article covers iOS notification options like critic
 platform: iOS
 channel:
   - push
-tool:
-  - Dashboard
-  - Campaigns
+
 ---
 
 # iOS Notification Options
@@ -78,7 +77,7 @@ Apple allows brands the option to send quiet push notifications to their users' 
 Unlike a traditional iOS push token, a provisional push token acts as a "trial pass" that allows brands to reach out to new users before they've seen and clicked Apple's native push opt-in prompt. With this feature, your push notification will be delivered directly to your new user's notification tray with the option to "Keep" or "Turn Off" future notifications. Instead of experiencing an "opt-in" journey, users will experience something more akin to an "opt-out" journey.
 
 {% alert tip %}
-Provisional Authorization has the potential dramatically increase your opt-in rate, but only if users see value in your messages. Be sure to use our [user segmentation]({{site.baseurl}}/user_guide/engagement_tools/segments/creating_a_segment/), [location targeting]({{site.baseurl}}/user_guide/engagement_tools/locations_and_geofences/about/), and [personalization]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/supported_personalization_tags/) features to ensure that the appropriate users are getting these "trial" notifications at the right time. Then, you can encourage users to fully opt-in to your push notifications, knowing that they add value to your users' experience with your app.
+Provisional Authorization has the potential dramatically increase your opt-in rate, but only if users see value in your messages. Be sure to use our [user segmentation]({{site.baseurl}}/user_guide/engagement_tools/segments/creating_a_segment/), [location targeting]({{site.baseurl}}/user_guide/engagement_tools/locations_and_geofences/), and [personalization]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/supported_personalization_tags/) features to ensure that the appropriate users are getting these "trial" notifications at the right time. Then, you can encourage users to fully opt-in to your push notifications, knowing that they add value to your users' experience with your app.
 {% endalert %}
 
 Whichever option the user chooses will add the appropriate token or [subscription status]({{site.baseurl}}/user_guide/message_building_by_channel/push/users_and_subscriptions/) to their [Contact Settings (under the Engagement Tab in their user profile)]({{site.baseurl}}/user_guide/engagement_tools/segments/using_user_search/#engagement-tab) (shown below).

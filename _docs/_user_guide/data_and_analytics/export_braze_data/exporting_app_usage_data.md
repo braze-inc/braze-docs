@@ -1,12 +1,13 @@
 ---
 nav_title: Export Overview Data
+article_title: Export Overview Data
 page_order: 3
 
 page_type: reference
 description: "This reference article covers how to export app usage data."
 tool: 
-- Dashboard
-- Reports
+  - Reports
+
 ---
 
 # Exporting Overview Data

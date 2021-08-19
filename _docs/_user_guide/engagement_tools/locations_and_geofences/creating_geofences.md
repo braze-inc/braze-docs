@@ -1,13 +1,12 @@
 ---
 nav_title: Creating Geofences
+article_title: Creating Geofences
 page_order: 1
-
 page_type: reference
 description: "This reference article covers how to create and configure Geofences."
 tool: 
-- Location
-- Campaign
-- Canvas
+  - Location
+
 ---
 # Geofences
 

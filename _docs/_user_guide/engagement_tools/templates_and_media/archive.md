@@ -1,12 +1,13 @@
 ---
 nav_title: Archive Templates
+article_title: How to Archive Templates
 page_order: 4
-
 page_type: reference
 description: "This reference article covers how to archive templates in the templates and media section of the Braze Dashboard."
 tool: 
-- Templates
-- Media
+  - Templates
+  - Media
+
 ---
 # How to Archive Templates in Templates & Media
 
