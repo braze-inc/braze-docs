@@ -1,14 +1,10 @@
 ---
 nav_title: Overview
+article_title: API Overview
 page_order: 0
-
 description: "This reference article covers the API basics including what a REST API is, the terminology, a brief overview of API keys, and API limits."
 page_type: reference
-tool:
-  - Dashboard
-  - Docs
-platform:
-  - APIs
+
 ---
 # API Overview
 

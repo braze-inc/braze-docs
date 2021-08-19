@@ -1,13 +1,12 @@
 ---
 nav_title: "GET: Campaigns List"
+article_title: "GET: Campaigns Lists"
+search_tag: Endpoint
 page_order: 4
-
 layout: api_page
-
 page_type: reference
-platform: API
-tool: Segments
 description: "This article outlines details about the Get Campaigns List endpoint."
+
 ---
 {% api %}
 # Campaigns List Endpoint

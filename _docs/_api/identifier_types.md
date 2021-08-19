@@ -1,14 +1,10 @@
 ---
 nav_title: "API Identifier Types"
+article_title: API Identifier Types
 page_order: 2.2
-
 description: "This reference article covers the different types of API Identifiers that exist in the Braze dashboard, where you can find them, and what they are used for." 
 page_type: reference
-tool: 
-  - Dashboard
-  - Docs
-platform: 
-  - APIs
+
 ---
 
 # API Identifier Types

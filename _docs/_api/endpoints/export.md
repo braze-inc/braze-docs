@@ -1,5 +1,7 @@
 ---
 nav_title: Export
+article-title: Export Endpoints
+search_tag: Endpoint
 page_order: 1
 
 layout: dev_guide
@@ -7,16 +9,6 @@ layout: dev_guide
 #Required
 description: "This landing page explains and lists the Braze Export Endpoints."
 page_type: landing
-tool:
-  - Canvas
-  - Campaigns
-  - Segments
-
-#Use if applicable
-platform:
-  - API
-channel:
-  - News Feed
 
 guide_top_header: "Export Endpoints"
 guide_top_text: "With this collection of endpoints, you will be able to access and export various levels of details on your KPIs, News Feed Cards, App Sessions, users, segments, Campaigns, and Canvases. <br> <br> Be sure to consult our <a href='/docs/user_guide/administrative/access_braze/braze_instances/' target='_blank'>Instance</a>, <a href='/docs/api/api_key/' target='_blank'>API Key</a>, and <a href='/docs/api/identifier_types/' target='_blank'>identifier</a> reference documentation when building out your parameters and request bodies."

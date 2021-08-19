@@ -1,16 +1,12 @@
 ---
 nav_title: "POST: Create New User Alias"
+article_title: "POST: Create New User Alias"
+search_tag: Endpoint
 page_order: 4
-
 layout: api_page
-
 page_type: reference
-platform: API
-tool:
-  - Canvas
-  - Campaigns
-
 description: "This article outlines details about the create new User Aliases Braze endpoint."
+
 ---
 {% api %}
 # Create New User Alias

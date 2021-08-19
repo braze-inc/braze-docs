@@ -1,13 +1,12 @@
 ---
 nav_title: "GET: KPIs for Daily App Uninstalls by Date"
+article_title: "GET: KPIs for Daily App Uninstalls by Date"
+search_tag: Endpoint
 page_order: 4
-
 layout: api_page
-
 page_type: reference
-platform: API
-tool: Segments
 description: "This article outlines details about the Get Daily App Uninstalls endpoint."
+
 ---
 {% api %}
 # Daily App Uninstalls by Date Endpoint

@@ -1,13 +1,12 @@
 ---
 nav_title: "GET: App Sessions by Time"
+article_title: "Get: App Sessions by Time"
+search_tag: Endpoint
 page_order: 4
-
 layout: api_page
-
 page_type: reference
-platform: API
-tool: Segments
 description: "This article outlines details about the App Sessions by Time endpoint."
+
 ---
 {% api %}
 # Session Analytics Endpoint

@@ -1,18 +1,12 @@
 ---
 nav_title: "POST: Update Content Block"
+article_title: "POST: Update Content Block"
+search_tag: Endpoint
 page_order: 4
-
 layout: api_page
-
 page_type: reference
-platform: API
-channel:
-  - Email
-tool:
-  - Canvas
-  - Campaigns
-
 description: "This article outlines details about the Update Email Content Blocks Braze endpoint."
+
 ---
 {% api %}
 # Update Content Block

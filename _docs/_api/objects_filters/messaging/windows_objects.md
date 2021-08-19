@@ -1,20 +1,15 @@
 ---
-nav_title: "Windows Objects"
+nav_title: "Windows Object"
+article_title: Windows Object
 page_order: 14
-
 page_type: reference
-
-channel: Push
+channel: push
 platform:
-  - API
   - Windows Universal
-tool:
-  - Campaigns
-  - Canvas
-
 description: "This article lists and explains the different Windows objects used at Braze."
+
 ---
-# Windows Objects
+# Windows Object Specification
 
 These objects are used to define or request information related to Windows Phone 8 Push and Windows Universal Push content.
 
