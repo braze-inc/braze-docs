@@ -7,6 +7,7 @@ channel:
   - push
 ---
 
+<br>
 {% alert important %}
 Looking for the out-of-the-box Push developer integration guide? Find it [here]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/push_notifications/integration/).
 {% endalert %}
