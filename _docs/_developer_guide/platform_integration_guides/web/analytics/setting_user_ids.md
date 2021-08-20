@@ -1,5 +1,6 @@
 ---
 nav_title: Setting User IDs
+article_title: Setting User IDs
 platform: Web
 page_order: 1
 

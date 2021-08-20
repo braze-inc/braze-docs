@@ -1,5 +1,6 @@
 ---
 nav_title: Logging Purchases
+article_title: Logging Purchases
 platform: Unity
 page_order: 3
 description: "This reference article covers how to log purchases on Unity platform."

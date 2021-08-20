@@ -1,6 +1,7 @@
 ---
 nav_title: Setting Custom Attributes
-platform: Windows_Universal
+article_title: Setting Custom Attributes
+platform: Windows Universal
 page_order: 3
 description: "This reference article covers how to set custom attributes on the Windows Universal platform."
 

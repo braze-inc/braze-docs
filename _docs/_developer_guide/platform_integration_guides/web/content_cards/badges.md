@@ -1,15 +1,15 @@
 ---
 nav_title: Badges
+article_title: Requesting Unviewed Content Card for Badges
 page_order: 4
-
 platform: Web
+channel: content cards
 page_type: reference
 description: "This reference article describes how to request the number of unread Content Cards."
-channel: content cards
 
 ---
 
-# Requesting Unviewed Content Card Count for Web
+# Requesting Unviewed Content Card Count
 
 You can request the number of unread cards at any time by calling:
 

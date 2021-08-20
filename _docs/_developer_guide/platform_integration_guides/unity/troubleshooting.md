@@ -1,5 +1,6 @@
 ---
 nav_title: Troubleshooting
+article_title: Unity Troubleshooting
 platform: Unity
 page_order: 29
 description: "This reference article covers troubleshooting topics for the Unity platform."

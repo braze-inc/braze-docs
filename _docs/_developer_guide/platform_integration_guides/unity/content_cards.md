@@ -1,6 +1,8 @@
 ---
 nav_title: Content Cards
+article_title: Unity Content Cards
 platform: Unity
+channel: content cards
 page_order: 4
 description: "This reference article covers Content Card implementation guidelines for the Unity platform."
 

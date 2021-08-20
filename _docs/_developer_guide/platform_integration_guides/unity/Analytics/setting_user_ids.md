@@ -1,5 +1,6 @@
 ---
 nav_title: Setting User IDs
+article_title: Setting User IDs
 platform: Unity
 page_order: 0
 description: "This reference article covers how to set user ids on Unity platform."

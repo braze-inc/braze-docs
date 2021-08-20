@@ -1,12 +1,9 @@
 ---
 nav_title: Changelog
+article_title: Unity Changelog
 page_order: 30
 page_type: update
-platform:
-  - unity
-  - android
-  - ios
-
+platform: Unity
 description: "This page lists updates to Braze's Unity SDK changelog."
 
 ---

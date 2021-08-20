@@ -1,5 +1,6 @@
 ---
 nav_title: Google Tag Manager
+article_title: Google Tag Manager
 platform: Web
 page_order: 20
 description: "This article covers how to use Google Tag Manager to deploy Braze to your website."

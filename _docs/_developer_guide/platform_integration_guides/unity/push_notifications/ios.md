@@ -1,7 +1,10 @@
 ---
-nav_title: Push Notifications
-platform: Unity
-subplatform: iOS
+nav_title: iOS
+article_title: Push Notifications
+platform:
+  - Unity
+  - iOS
+channel: push
 ex_push_payload: archive/apple/push_payload.json
 page_order: 1
 description: "This reference article covers iOS push notification integration for the Unity platform."
@@ -114,8 +117,8 @@ To receive a copy of device tokens that Braze receives from the OS, set a delega
 To implement advanced features such as deep links, badge counts, and custom sounds, visit our [native iOS Push instructions][8].
 
 [1]: #manual-push-integration
-[2]: {{site.baseurl}}/developer_guide/platform_integration_guides/unity/ios/sdk_integration/#transitioning-from-manual-to-automated-integration
-[8]: {{site.baseurl}}/developer_guide/platform_integration_guides/ios/push_notifications/integration/
+[2]: {{site.baseurl}}/developer_guide/platform_integration_guides/unity/sdk_integration/ios/#transitioning-from-manual-to-automated-integration-ios
+[8]: {{site.baseurl}}/developer_guide/platform_integration_guides/unity/push_notifications/ios/
 [9]: https://developer.apple.com/ios/manage/overview/index.action "iOS Provisioning Portal"
 [10]: {% image_buster /assets/img_archive/ios_provisioning.png %} "pushNotification2.png"
 [11]: {% image_buster /assets/img_archive/AppleProvisioningOptions.png %} "AppleProvisioningOptions.png"

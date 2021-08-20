@@ -1,8 +1,8 @@
 ---
 nav_title: Browser Extensions
+article_title: Browser Extensions
 platform: Web
 page_order: 20
-
 page_type: reference
 description: "This article describes how to use the Braze Web SDK inside your Browser Extensions (Google Chrome, Firefox)."
 

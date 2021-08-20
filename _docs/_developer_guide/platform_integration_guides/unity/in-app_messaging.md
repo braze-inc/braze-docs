@@ -1,5 +1,7 @@
 ---
 nav_title: In-App Messaging
+article_title: Unity In-App Messaging
+channel: in-app messaging
 platform: Unity
 page_order: 2
 description: "This reference article covers in-app messaging integration guidelines for the Unity platform."

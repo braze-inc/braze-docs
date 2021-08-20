@@ -16,8 +16,4 @@ Xamarin and Braze enable customers to build native applications for multiple pla
 
 # Integration
 
-Please see Braze's Platform Integration Guides to integrate Xamarin.
-
-For [iOS]({{site.baseurl}}/developer_guide/platform_integration_guides/xamarin/ios/sdk_integration/).
-
-For [Android and FireOS]({{site.baseurl}}/developer_guide/platform_integration_guides/xamarin/android_and_fireos/initial_sdk_setup/).
+Please see Braze's Platform Integration Guides to [integrate Xamarin]({{site.baseurl}}/developer_guide/platform_integration_guides/xamarin/sdk_integration/).

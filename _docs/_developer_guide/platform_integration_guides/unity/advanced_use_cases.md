@@ -1,5 +1,6 @@
 ---
 nav_title: Advanced Use Cases
+article_title: Unity Advanced Use Cases
 platform: Unity
 page_order: 7
 description: "This reference article covers advanced SDK use cases for the Unity platform."

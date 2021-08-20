@@ -1,11 +1,11 @@
 ---
 nav_title: Integration
+article_title: In-App Message Integration
 platform: Web
+channel: in-app messages
 page_order: 1
-
 page_type: reference
 description: "This article includes resources on integrating and customizing in-app messages via the Braze SDK."
-channel: in-app messages
 
 ---
 

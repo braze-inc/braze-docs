@@ -3,6 +3,7 @@ page_order: 0
 layout: dev_guide
 guide_top_header: "Braze Developer Guide"
 guide_top_text: "This is where developers can find all the integrations available with Braze. You can also use the <a href='/docs/api/basics/'>REST API Guide</a>."
+article_title: Braze Developer Guide
 
 guide_featured_title: "Featured Integrations"
 guide_featured_list:
@@ -34,20 +35,17 @@ guide_menu_list:
     link: /docs/developer_guide/platform_integration_guides/tvos/initial_sdk_setup/
     fa_icon: fab fa-apple  
   - name: Unity Android
-    link: /docs/developer_guide/platform_integration_guides/unity/android/sdk_integration/
+    link: /docs/developer_guide/platform_integration_guides/unity/sdk_integration/android/
     fa_icon: fab fa-android  
   - name: Unity iOS
-    link: /docs/developer_guide/platform_integration_guides/unity/ios/sdk_integration/
+    link: /docs/developer_guide/platform_integration_guides/unity/sdk_integration/ios/
     fa_icon: fab fa-apple  
   - name: Windows Universal
     link: /docs/developer_guide/platform_integration_guides/windows_universal/initial_sdk_setup/
     fa_icon: fab fa-windows
-  - name: Xamarin Android and Fire OS
-    link: /docs/developer_guide/platform_integration_guides/xamarin/android_and_fireos/initial_sdk_setup/
-    fa_icon: fab fa-android
-  - name: Xamarin iOS
-    link: /docs/developer_guide/platform_integration_guides/xamarin/ios/sdk_integration/
-    fa_icon: fab fa-apple
+  - name: Xamarin
+    link: /docs/developer_guide/platform_integration_guides/xamarin/initial_sdk_setup/
+    fa_icon: fab fa-times
   - name: Roku
     link: /docs/developer_guide/platform_integration_guides/roku/initial_sdk_setup/
     fa_icon: fas fa-tv

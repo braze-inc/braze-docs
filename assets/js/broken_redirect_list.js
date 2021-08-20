@@ -106,7 +106,6 @@ validurls['/docs/windows_universal'] = '/docs/developer_guide/platform_integrati
 validurls['/docs/web'] = '/docs/developer_guide/platform_integration_guides/web/initial_sdk_setup/';
 validurls['/docs/tvos'] = '/docs/developer_guide/platform_integration_guides/tvos/initial_sdk_setup/';
 validurls['/docs/sdk_integration/unity/ios'] = '/docs/developer_guide/platform_integration_guides/unity/ios/sdk_integration/';
-validurls['/docs/sdk_integration/xamarin/ios'] = '/docs/developer_guide/platform_integration_guides/xamarin/ios/sdk_integration/';
 validurls['/docs/cordova/ios'] = '/docs/developer_guide/platform_integration_guides/cordova/ios/initial_sdk_setup/overview/';
 
 validurls['/docs/android/'] = '/docs/developer_guide/platform_integration_guides/android/initial_sdk_setup/android_sdk_integration/';

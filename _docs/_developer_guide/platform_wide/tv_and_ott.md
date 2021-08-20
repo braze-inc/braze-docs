@@ -1,17 +1,16 @@
 ---
 nav_title: TV and OTT Integrations
+article_title: TV and OTT Integrations
 page_order: 4
 
 description: "This article will give you details on Braze's TV and OTT features, integrations, available platforms, and other capabilities."
 platform:
-  - roku
-  - fireos
-  - ios
-  - android
-  - web
-channel:
-  - tv
-  - ott
+  - tvOS
+  - Roku
+  - Web
+  - Android
+  - FireOS
+  
 ---
 
 # TV and OTT Integrations

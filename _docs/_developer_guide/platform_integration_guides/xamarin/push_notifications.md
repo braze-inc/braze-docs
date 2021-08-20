@@ -1,18 +1,21 @@
 ---
 nav_title: Push Notifications
+article_title: Xamarin Push Notifications
 platform: Xamarin
-subplatform: iOS
 page_order: 1
-description: "This article covers iOS push notification integration for the Xamarin platform."
-
+description: "This article covers Android and FireOS push notification integration for the Xamarin platform."
 
 ---
 
 # Push Notifications
 
-See [the iOS integration instructions][1] for information about setting up your application with push and storing your credentials on our server.
+## Android
 
-## Integration
+See [the Android integration instructions][11] for information on how to integrate push into your Xamarin Android app. Furthermore, you can look at the [sample application][12] to see how the namespaces change from java to c#.
+
+## iOS
+
+See [the iOS integration instructions][1] for information about setting up your application with push and storing your credentials on our server.
 
 ### Requesting Push Permissions
 
@@ -48,7 +51,7 @@ public override void DidReceiveRemoteNotification (UIApplication application, NS
   }
 ```
 
-## Badge Count
+### Badge Count
 
 If [badge counts are enabled][2], Braze will display a badge when a customer has unread notifications. By default, this number is 1. Braze will only clear the badge count when the app is opened directly from a Braze push notification. To clear the badge count, you can refer to the [Xamarin documentation][3] and use the following code:
 
@@ -62,3 +65,6 @@ UIApplication.SharedApplication.ApplicationIconBadgeNumber = 0;
 [1]: {{site.baseurl}}/developer_guide/platform_integration_guides/ios/push_notifications/integration/
 [2]: {{site.baseurl}}/help/best_practices/utilizing_badge_count/#badge-count-with-braze
 [3]: https://developer.xamarin.com/guides/cross-platform/application_fundamentals/notifications/ios/local_notifications_in_ios/#Handling_Notifications
+[11]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/push_notifications/integration/standard_integration/
+[12]: https://github.com/Appboy/appboy-xamarin-bindings
+

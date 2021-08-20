@@ -1,13 +1,15 @@
 ---
+nav_title: Integration
+article_title: Push Integration
 platform: Web
+channel: push
 page_order: 0
-
 page_type: reference
 description: "This article describes how to integrate Braze Web Push via the Braze SDK."
 
 ---
 
-# Integration
+# Push Integration
 
 A push notification is an alert that appears on the user's screen when an important update occurs. Push notifications can be received even when your web page is not currently open in the user's browser. Push notifications are a valuable way to provide your users with time-sensitive and relevant content or to re-engage them with your site.
 

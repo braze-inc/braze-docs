@@ -1,8 +1,8 @@
 ---
 nav_title: Cookies and Storage
+article_title: Cookies and Storage
 platform: Web
 page_order: 15
-
 page_type: reference
 description: "This reference article describes the different cookies used by the Braze Web SDK."
 

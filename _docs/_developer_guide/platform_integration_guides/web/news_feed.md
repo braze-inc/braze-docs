@@ -1,8 +1,8 @@
 ---
 nav_title: News Feed
+article_itle: News Feed Integration
 platform: Web
 page_order: 3
-
 page_type: reference
 description: "This article covers how to interact with News Feeds via the Braze SDK."
 channel: news feed

@@ -1,5 +1,6 @@
 ---
 nav_title: Setting Custom Attributes
+article_title: Setting Custom Attributes
 platform: Unity
 page_order: 2
 description: "This reference article covers how to set custom attributes on Unity platform."

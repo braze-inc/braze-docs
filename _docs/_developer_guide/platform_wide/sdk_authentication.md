@@ -1,12 +1,14 @@
 ---
 nav_title: SDK Authentication
+article_title: SDK Authentication
 page_order: 5
 hidden: true
 description: "This reference article covers SDK authentication and how to enable this feature in the Braze SDK."
 platform:
-  - ios
-  - android
-  - web
+  - iOS
+  - Android
+  - Web
+  
 ---
 
 <br>
@@ -35,7 +37,7 @@ There are four high-level steps to get started:
 
 ## Server-Side Integration {#server-side-integration}
 
-### Generate a Public/Private Key-pair {#generate-keys}
+### Generate a Public/Private Key-Pair {#generate-keys}
 
 Generate an RSA public/private key-pair. The Public Key will eventually be added to the Braze Dashboard, while the Private Key should be stored securely on your server.
 

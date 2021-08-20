@@ -1,10 +1,13 @@
 ---
-nav_title: Amazon Device Messaging Push Notifications
-platform: Unity
-subplatform: Android
+nav_title: Amazon Device Messaging
+article_title: Amazon Device Messaging Push Notifications
+platform: 
+  - Unity
+  - Android
 page_order: 2
 description: "This reference article covers the Amazon Android push notification integration for the Unity platform."
 channel: push
+
 ---
 
 # Integration

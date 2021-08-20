@@ -1,15 +1,15 @@
 ---
 nav_title: Integration
+article_title: Content Card Integration
 page_order: 0.2
-
 platform: Web
+channel: content cards
 page_type: reference
 description: "This article covers the content card integration for Web, including contend card types and how to request the number of unread Content Cards."
-channel: content cards
 
 ---
 
-# Content Cards Integration
+# Content Card Integration
 
 The Braze Web SDK includes a Content Cards Feed UI to speed up your integration efforts. If you would prefer to build and your own UI instead, see our [Customization Guide](/docs/developer_guide/platform_integration_guides/web/content_cards/customization/).
 
