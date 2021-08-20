@@ -6,8 +6,8 @@ hidden: true
 page_type: reference
 
 ---
-
-{% alert Update %}
+<br>
+{% alert update %}
 Customer Feedback is no longer supported. [Learn more about this and other deprecated features here]({{site.baseurl}}/help/release_notes/deprecations/#feedback).
 {% endalert %}
 
