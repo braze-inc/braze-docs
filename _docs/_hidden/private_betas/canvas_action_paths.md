@@ -1,6 +1,6 @@
 ---
 nav_title: Action Paths Step
-permalink: /user_guide/engagement_tools/canvas/canvas_components/action_paths/
+permalink: "/action_paths/"
 hidden: true
 page_type: reference
 description: "This reference article covers Action Paths and how to use them in your Canvases."
@@ -46,7 +46,7 @@ If users enter into an action path multiple times and have multiple entries in t
 
 | Ranking Filter | Action Path Behavior |
 |---|--------------|
-| **Off** | * When a relevant action is performed, Braze will deduplicate entries and immediately advance the earliest entry through the relevant action group <br /> * When a relevant action is not performed, all entries will advance at the end of the relevant evaluation window. No deduplication will occur. |
+| **Off** | * When a relevant action is performed, Braze will deduplicate entries and immediately advance the earliest entry through the relevant action group. <br /> * When a relevant action is not performed, all entries will advance at the end of the relevant evaluation window. No deduplication will occur. |
 | **On** | All entries will advance at the end of the relevant evaluation window. No deduplication will occur. |
 {: .reset-td-br-1 .reset-td-br-2}
 
