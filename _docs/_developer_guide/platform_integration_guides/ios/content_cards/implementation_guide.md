@@ -1,5 +1,6 @@
 ---
 nav_title: Advanced Implementation (Optional)
+article_title: Content Card Implementation Guide (Optional) 
 platform: iOS
 page_order: 7
 description: "This advanced implementation guide covers iOS Content Card code considerations, three use cases built by our team, accompanying code snippets, and guidance on logging impressions, clicks, and dismissals."

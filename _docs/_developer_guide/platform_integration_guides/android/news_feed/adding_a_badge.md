@@ -1,5 +1,6 @@
 ---
 nav_title: Adding a Badge
+article_title: Adding a News Feed Badge
 page_order: 6
 platform: Android
 description: "This reference article shows how to add a News Feed badge in your Android application."

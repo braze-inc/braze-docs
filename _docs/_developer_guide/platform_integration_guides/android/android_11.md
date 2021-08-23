@@ -1,5 +1,6 @@
 ---
 nav_title: Android 11 Upgrade Guide
+article_title: Android 11 Upgrade Guide
 page_order: 9
 platform: Android
 description: "This reference article covers the Android 11 SDK update, highlighting changes such as deep linking, SDK compatibility, and more."

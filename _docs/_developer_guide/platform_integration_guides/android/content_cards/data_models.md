@@ -1,5 +1,6 @@
 ---
 nav_title: Integration
+article_title: Content Card Integration
 page_order: 1
 platform: Android
 description: "This article covers the Content Card integration and the different data models and card-specific properties available for your Android application."

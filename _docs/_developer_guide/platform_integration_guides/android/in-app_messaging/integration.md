@@ -1,5 +1,6 @@
 ---
 nav_title: Integration
+article_title: In-App Message Integration
 page_order: 1
 platform: Android
 description: "This reference article covers how to integrate in-app messaging in your Android application."

@@ -1,5 +1,6 @@
 ---
 nav_title: Troubleshooting
+article_title: In-App Message Troubleshooting
 page_order: 4
 platform: Android
 description: "This reference article covers potential Android in-app message troubleshooting topics."

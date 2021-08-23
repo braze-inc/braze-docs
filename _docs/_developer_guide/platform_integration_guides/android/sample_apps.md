@@ -1,5 +1,6 @@
 ---
 nav_title: Sample Apps
+article_title: Sample Apps
 platform: Android
 page_order: 10
 description: "This article covers Android sample apps."

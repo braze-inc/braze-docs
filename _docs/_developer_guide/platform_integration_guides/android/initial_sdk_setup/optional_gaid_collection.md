@@ -1,5 +1,6 @@
 ---
 nav_title: Google Advertising ID (Optional)
+article_title: Optional Google Advertising ID
 page_order: 9
 platform: Android
 description: "This article covers Google advertising IDs and how to pass this advertising information to Braze."

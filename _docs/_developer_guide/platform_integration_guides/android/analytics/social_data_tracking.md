@@ -1,5 +1,6 @@
 ---
 nav_title: Social Data Tracking
+article_title: Social Data Tracking
 platform: Android
 page_order: 5
 description: "This reference article shows how to implement social data tracking for your Android application."

@@ -1,5 +1,6 @@
 ---
 nav_title: SDK Integration Guide (Optional)
+article_title: Braze SDK Integration Guide (Optional)
 alias: "/ios_sdk/"
 description: "This iOS integration guide takes you on a step-by-step journey on setup best practices when first integrating the iOS SDK and its core components into your application. This guide will help you build a BrazeManager.swift helper file."
 page_order: 10

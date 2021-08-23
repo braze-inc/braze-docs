@@ -1,5 +1,6 @@
 ---
 nav_title: Push Stories
+article_title: Push Stories
 platform: iOS
 page_order: 28
 description: "This article shows how to set up Push Stories for your iOS application."

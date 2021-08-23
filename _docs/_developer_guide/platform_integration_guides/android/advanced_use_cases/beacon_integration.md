@@ -1,5 +1,6 @@
 ---
 nav_title: Beacon Integration
+article_title: Beacon Integration
 platform: Android
 page_order: 2
 description: "This article covers how to log custom events using Gimbal Beacons for Android."

@@ -1,5 +1,6 @@
 ---
 nav_title: Other SDK Customizations
+article_title: Other SDK Customizations
 page_order: 3
 platform: Android
 description: "This article covers additional customization and configuration options such as verbose logging, suppressing loggind, and how to implement multiple API keys."

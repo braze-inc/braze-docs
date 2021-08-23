@@ -1,5 +1,6 @@
 ---
 nav_title: Storage
+article_title: Storage
 platform: iOS
 page_order: 9
 page_type: reference

@@ -1,5 +1,6 @@
 ---
 nav_title: Disabling iOS SDK Tracking
+article_title: Disabling iOS SDK Tracking
 platform: iOS
 page_order: 8
 description: "This article shows how to disable data collection for your iOS application."

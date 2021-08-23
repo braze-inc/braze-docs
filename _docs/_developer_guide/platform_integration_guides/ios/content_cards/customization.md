@@ -1,5 +1,6 @@
 ---
 nav_title: Customization
+article_title: Content Card Customization
 platform: iOS
 page_order: 2
 description: "This article covers customization options for your Content Cards in your iOS application."

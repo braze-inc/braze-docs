@@ -1,5 +1,6 @@
 ---
 nav_title: Customization
+article_title: Content Card Customization
 page_order: 2
 platform: Android
 description: "This article covers customization options for your Content Cards in your Android application."

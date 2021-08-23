@@ -1,5 +1,6 @@
 ---
 nav_title: Customization
+article_title: In-App Message Customization
 page_order: 2
 platform: Android
 description: "This reference article covers in-app messaging customization options for your Android application."

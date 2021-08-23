@@ -1,5 +1,6 @@
 ---
 nav_title: Google Tag Manager for Android
+article_title: Google Tag Manager for Android
 platform: Android
 page_order: 8
 description: "This article covers how to initalize, configure, and implement the Google Tag manager into your Android app."

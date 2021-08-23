@@ -1,5 +1,6 @@
 ---
 nav_title: Braze JavaScript Interface
+article_title: Adding the Braze JavaScript Interface to Webviews
 platform: Android
 page_order: 9
 description: "This article shows how to add the Braze JavaScript Interface to WebViews."

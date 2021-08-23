@@ -1,5 +1,6 @@
 ---
 nav_title: Customization
+article_title: News Feed Customization
 page_order: 2
 platform: Android
 description: "This reference article covers how to customize your News Feed in your Android application."

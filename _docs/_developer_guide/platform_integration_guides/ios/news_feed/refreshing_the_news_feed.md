@@ -1,5 +1,6 @@
 ---
 nav_title: Refreshing the News Feed
+article_title: Refreshing the News Feed
 platform: iOS
 page_order: 4
 description: "This reference article shows how to refresh the News Feed in your iOS application."

@@ -1,5 +1,6 @@
 ---
 nav_title: OTT and TV Display
+article_title: OTT and TV Display
 page_order: 5
 platform: Android
 description: "This reference article covers in-app messaging OTT display information for your Android application."

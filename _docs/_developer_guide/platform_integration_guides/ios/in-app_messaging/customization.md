@@ -1,5 +1,6 @@
 ---
 nav_title: Customization
+article_title: In-App Message Customization
 platform: iOS
 page_order: 1
 description: "This reference article covers in-app messaging customization options for your iOS application."

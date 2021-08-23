@@ -1,5 +1,6 @@
 ---
 nav_title: Refreshing the Feed
+article_title: Refreshing the Content Card Feed
 page_order: 4
 platform: Android
 description: "This reference article covers how to implement Content Card refreshing in your Android application."

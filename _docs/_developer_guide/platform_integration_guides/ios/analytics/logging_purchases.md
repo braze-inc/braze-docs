@@ -1,5 +1,6 @@
 ---
 nav_title: Logging Purchases
+article_title: Logging Purchases
 platform: iOS
 page_order: 4
 description: "This reference article shows how to track in-app purchases and revenue and assign purchase properties in your iOS application."

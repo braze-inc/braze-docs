@@ -1,5 +1,6 @@
 ---
 nav_title: Android 12 Upgrade Guide
+article_title: Android 12 Upgrade Gudie
 page_order: 9
 platform: Android
 description: "This reference article covers the Android 12 SDK update, highlighting changes such as deep linking, SDK compatibility, and more."

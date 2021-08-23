@@ -1,5 +1,6 @@
 ---
 nav_title: Network Offline Mode
+article_title: Network Offline Mode
 platform: Android
 page_order: 3
 description: "This reference article covers how to integrate network offline mode for your Android application."

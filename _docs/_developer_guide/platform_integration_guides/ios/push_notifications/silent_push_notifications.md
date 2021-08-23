@@ -1,5 +1,6 @@
 ---
 nav_title: Silent Push Notifications
+article_title: Silent Push Notifications
 platform: iOS
 page_order: 4
 description: "This article covers how to implement silent push notifications in your iOS application."

@@ -1,5 +1,6 @@
 ---
 nav_title: Badge Counts
+article_title: Push Notification Badge Counts
 platform: iOS
 page_order: 0.2
 description: "This article covers how to implement badge counts in your iOS push notifications."

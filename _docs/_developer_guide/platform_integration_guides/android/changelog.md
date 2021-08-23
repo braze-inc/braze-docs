@@ -1,5 +1,6 @@
 ---
 nav_title: Changelog
+article_title: Android Changelog
 page_order: 30
 page_type: update
 platform: android

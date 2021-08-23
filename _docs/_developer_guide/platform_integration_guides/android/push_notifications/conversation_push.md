@@ -1,5 +1,6 @@
 ---
 nav_title: Conversation Push
+article_title: Conversation Push
 platform: Android
 page_order: 5.92
 description: "This appication covers how to implement android conversation push in your Android application."

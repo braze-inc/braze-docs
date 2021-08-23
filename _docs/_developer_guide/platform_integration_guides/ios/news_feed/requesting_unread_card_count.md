@@ -1,5 +1,6 @@
 ---
 nav_title: Requesting Unread Card Count
+article_title: Requesting Unread Card Count for News Feed
 platform: iOS
 page_order: 3
 description: "This reference article covers how to implement read and unread indicators in your News Feed for your iOS application."

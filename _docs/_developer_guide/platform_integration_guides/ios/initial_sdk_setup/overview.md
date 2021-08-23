@@ -1,5 +1,6 @@
 ---
 nav_title: Overview
+article_title: Integration Overview
 platform: iOS
 page_order: 0
 layout: featured

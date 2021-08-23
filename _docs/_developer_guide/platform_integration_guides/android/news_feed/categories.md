@@ -1,5 +1,6 @@
 ---
 nav_title: Defining a News Feed Category
+article_title: Defining a News Feed Category
 page_order: 3
 platform: Android
 description: "This reference article shows how to define a News Feed category in your Android application."

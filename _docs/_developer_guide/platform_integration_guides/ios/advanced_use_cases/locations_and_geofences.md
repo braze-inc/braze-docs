@@ -1,5 +1,6 @@
 ---
 nav_title: Locations & Geofences
+article_title: Location & Geofences
 platform: iOS
 page_order: 6
 description: "This reference article covers how to implement locations and geofences in your iOS application."

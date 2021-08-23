@@ -1,5 +1,6 @@
 ---
 nav_title: Read & Unread Indicators
+article_title: News Feed Read & Unread Indicators
 page_order: 4
 platform: Android
 description: "This reference article covers how to implement read and unread indicators in your News Feed for your Android application."
