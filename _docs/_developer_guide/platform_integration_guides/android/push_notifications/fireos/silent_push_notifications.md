@@ -1,5 +1,6 @@
 ---
 nav_title: Silent Push Notifications
+article_title: Silent Push Notifications
 platform: FireOS
 page_order: 3
 
@@ -23,6 +24,6 @@ This message will cause an intent to be received with an action `.intent.APPBOY_
 
 [2]: {{site.baseurl}}/api/endpoints/messaging/
 [3]: {{site.baseurl}}/api/objects_filters/messaging/android_object/
-[4]: {{site.baseurl}}/developer_guide/platform_integration_guides/fireos/push_notifications/integration/#step-4-define-notification-channels
+[4]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/push_notifications/android/integration/standard_integration/#step-5-define-notification-channels
 [5]: https://github.com/Appboy/appboy-android-sdk/blob/master/samples/custom-broadcast/src/main/java/com/appboy/custombroadcast/AppboyBroadcastReceiver.java "AppboyBroadcastReceiver.java -- Sample Project"
 [6]: {% image_buster /assets/img_archive/SilentPushExample.png %} "Silent Push Notification Example -- Android"

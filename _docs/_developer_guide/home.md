@@ -7,7 +7,7 @@ article_title: Braze Developer Guide
 
 guide_featured_title: "Featured Integrations"
 guide_featured_list:
-- name: Android
+- name: Android and FireOS
   fa_icon: fab fa-android
   link: /docs/developer_guide/platform_integration_guides/android/initial_sdk_setup/android_sdk_integration/
 - name: iOS
@@ -25,9 +25,6 @@ guide_menu_list:
   - name: Cordova iOS
     link: /docs/developer_guide/platform_integration_guides/cordova/ios/initial_sdk_setup/
     fa_icon: fab fa-apple
-  - name: FireOS
-    link: /docs/developer_guide/platform_integration_guides/fireos/initial_sdk_setup/android_sdk_integration/
-    fa_icon: fab fa-amazon
   - name: ReactNative
     link: /docs/developer_guide/platform_integration_guides/react_native/react_sdk_setup/
     fa_icon: fab fa-react

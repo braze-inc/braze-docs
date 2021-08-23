@@ -116,7 +116,7 @@ Features include:
 - Content Cards
 - In-App Messages
 
-For more information, visit the [Fire OS Integration Guide][1].
+For more information, visit the [Fire OS Integration Guide][2].
 
 ### Kindle Fire
 
@@ -129,7 +129,7 @@ Features include:
 - Content Cards
 - In-App Messages
 
-For more information, visit the [Fire OS Integration Guide][1].
+For more information, visit the [Fire OS Integration Guide][2].
 
 ### Android TV
 
@@ -188,7 +188,6 @@ For more information, visit the [iOS SDK Integration Guide][4].
 
 For platforms that support In-App Messages via Custom UI, your app can be configured to read the data model received by the Braze SDK. This information will contain the fields configured in the dashboard (title, body, button text, colors, etc.) which your app can read and display accordingly. This data can also be used to customize Braze's native In-App Message templates into your existing app designs.
 
-[1]: {{site.baseurl}}/developer_guide/platform_integration_guides/fireos/initial_sdk_setup/android_sdk_integration/
 [2]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/initial_sdk_setup/android_sdk_integration/
 [3]: {{site.baseurl}}/developer_guide/platform_integration_guides/roku/initial_sdk_setup/
 [4]: {{site.baseurl}}/developer_guide/platform_integration_guides/tvos/initial_sdk_setup/

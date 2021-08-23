@@ -102,7 +102,7 @@ Lastly, you must add the Client Secret and Client ID you obtained in [Step 1][2]
 ![FireOS Dashboard][34]
 
 [2]: #step-1-enable-adm
-[8]: {{site.baseurl}}/developer_guide/platform_integration_guides/fireos/push_notifications/troubleshooting/
+[8]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/push_notifications/fireos/troubleshooting/
 [10]: https://developer.amazon.com/public
 [11]: https://developer.amazon.com/public/apis/engage/device-messaging/tech-docs/02-obtaining-adm-credentials
 [12]: https://developer.amazon.com/public/apis/engage/device-messaging/tech-docs/03-setting-up-adm
