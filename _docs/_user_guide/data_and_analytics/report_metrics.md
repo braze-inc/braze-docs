@@ -30,7 +30,14 @@ glossaries:
     description: Variation of a campaign, differing as defined by the creator.
     calculation: Count
     tags:
-      - All
+      - Content Cards
+      - Email
+      - In-App Message
+      - Web Push
+      - iOS Push
+      - Android Push
+      - Webhook
+      - SMS
   - name: Audience
     description: Percentage of users who received a particular message. This number is received from Braze.
     tags:
@@ -58,7 +65,14 @@ glossaries:
     description: The total number of messages sent in a campaign. This number is received from Braze.
     calculation: Count
     tags:
-      - All
+      - Content Cards
+      - Email
+      - In-App Message
+      - Web Push
+      - iOS Push
+      - Android Push
+      - Webhook
+      - SMS
   - name: Sends to Carrier
     description: This stat is the sum of Confirmed Deliveries, Rejections, and Sends where delivery or rejection was not confirmed by the carrier. There are instances where carriers do not provide delivery or rejected confirmation, as some carriers do not provide this confirmation or were unable to do so at the time of send.
     calculation: Count
@@ -174,24 +188,59 @@ glossaries:
   - name: Revenue
     description: The total revenue in dollars from campaign recipients within the set primary conversion window.
     tags:
-      - All
+      - Content Cards
+      - Email
+      - In-App Message
+      - Web Push
+      - iOS Push
+      - Android Push
+      - Webhook
+      - SMS
   - name: Primary Conversions (A) or Primary Conversion Event
     description: The number of times a defined event occurred after interacting with or viewing a received message from a Braze campaign. This defined event is determined by the marketer when building the campaign. For Email, Push and Webhooks, we start tracking conversions after the initial send. For Content Cards and In-App Messages, this count begins when they view a Content Card or Message for the first time.
     tags:
-      - All
+      - Content Cards
+      - Email
+      - In-App Message
+      - Web Push
+      - iOS Push
+      - Android Push
+      - Webhook
+      - SMS
   - name: Conversion Rate
     description: The percentage of times a defined event occurred compared to all recipients of a sent message. This defined event is determined when you build the campaign.
     calculation: (Primary Conversions) / (Unique Recipients)
     tags:
-      - All
+      - Content Cards
+      - Email
+      - In-App Message
+      - Web Push
+      - iOS Push
+      - Android Push
+      - Webhook
+      - SMS
   - name: Conversions (B, C, D)
     description: The percentage of times a defined event occurred compared to all recipients of a sent message. This defined event is determined when you build the campaign.
     tags:
-      - All
+      - Content Cards
+      - Email
+      - In-App Message
+      - Web Push
+      - iOS Push
+      - Android Push
+      - Webhook
+      - SMS
   - name: Confidence
     description: The percentage of confidence that a certain variant of a message is outperforming the control group.
     tags:
-      - All
+      - Content Cards
+      - Email
+      - In-App Message
+      - Web Push
+      - iOS Push
+      - Android Push
+      - Webhook
+      - SMS
   - name: Pending Retry
     description: The number of requests that were temporarily rejected, by the receiving server, but still attempted for re-delivery by the ESP. The ESP will retry delivery until a timeout period is reached (typically after 72 hours).
     tags:
