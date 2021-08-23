@@ -3,7 +3,6 @@ nav_title: Setting Custom Attributes
 article_title: Setting Custom Attributes
 platform: Roku
 page_order: 4
-
 page_type: reference
 description: "This page describes methods to assign custom attributes to users via the Braze SDK."
 
