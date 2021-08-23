@@ -1,9 +1,10 @@
 ---
-nav_title: Initial SDK Setup
-platform: Cordova
-subplatform: iOS
-page_order: 0
-
+nav_title: iOS
+article_title: Inital iOS SDK Setup
+platform: 
+  - Cordova
+  - iOS
+page_order: 2
 page_type: reference
 description: "This article describes initial SDK setup steps for iOS apps running on Cordova."
 

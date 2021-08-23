@@ -1,13 +1,9 @@
 ---
 nav_title: Changelog
+article_title: Changelog
 page_order: 30
-
 page_type: update
-platform:
-  - cordova
-  - android
-  - ios
-
+platform: Cordova
 description: "This page lists updates to Braze's Cordova SDK changelog for Android and iOS."
 
 ---

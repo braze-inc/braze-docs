@@ -1,5 +1,6 @@
 ---
 nav_title: Sample Apps
+article_title: Sample Apps
 platform: iOS
 page_order: 9
 description: "This article covers iOS sample apps."

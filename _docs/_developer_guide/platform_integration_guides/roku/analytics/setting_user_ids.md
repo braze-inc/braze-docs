@@ -1,8 +1,8 @@
 ---
 nav_title: Setting User IDs
+article_title: Setting User IDs
 platform: Roku
 page_order: 0
-
 page_type: reference
 description: "This page covers methods to identify users, as well as best practices and important considerations."
 

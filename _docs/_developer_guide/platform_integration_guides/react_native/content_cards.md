@@ -1,11 +1,12 @@
 ---
 nav_title: Content Cards
+article_title: Content Cards
 platform: React Native
 page_order: 3
-
 page_type: reference
 description: "This article covers how to get started with Content Cards for React Native apps."
 channel: content cards
+
 ---
 
 # Content Cards

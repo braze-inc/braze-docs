@@ -1,8 +1,9 @@
 ---
 nav_title: Content Cards
+article_title: Content Cards
 platform: Cordova
 page_order: 3
-
+channel: content cards
 page_type: reference
 description: "This article covers how to get started with Content Cards for Cordova."
 

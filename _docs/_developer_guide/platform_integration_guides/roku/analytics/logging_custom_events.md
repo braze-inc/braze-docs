@@ -1,8 +1,8 @@
 ---
 nav_title: Tracking Custom Events
+article_title: Tracking Custom Events
 platform: Roku
 page_order: 2
-
 page_type: reference
 description: "This page covers methods to record custom events via the Braze SDK."
 

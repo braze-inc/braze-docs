@@ -127,7 +127,7 @@ func application(_ application: UIApplication, didFinishLaunchingWithOptions lau
 {% endsubtabs %}
 
 {% endtab %}
-{% tab Step 2: Handle Appboy Initalization %}
+{% tab Step 2: Handle Appboy Initialization %}
 
 ##### Handle Appboy Initialization in the AppDelegate.swift
 Next, navigate back to the `AppDelegate.swift` file and add the following code snippet in the AppDelegate's `didFinishLaunchingWithOptions` method to handle the Appboy initialization from the `BrazeManager.swift` helper file. Remember, there is no need to add an `import AppboyUI` statement in the `AppDelegate.swift`.

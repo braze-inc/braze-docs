@@ -1,11 +1,10 @@
 ---
 nav_title: Analytics
+article_title: Analytics
 platform: React Native
-subplatform:
-- iOS
-- Android
 page_order: 5
 description: "This article covers how to set up and track basic analytics in the React Native app."
+
 ---
 
 # Analytics
