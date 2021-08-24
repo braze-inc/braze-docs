@@ -37,7 +37,7 @@ You can create your own Content Cards interface by extending `ABKContentCardsTab
 
 ## Handling Clicks Manually
 
-You can manually handle Content Card clicks by implementing the `ABKContentCardsTableViewControllerDelegate` protocol. Set this delegate object as the `ABKContentCardsTableViewController`'s optional `delegate` property.
+You can manually handle Content Card clicks by implementing the [ABKContentCardsTableViewControllerDelegate](https://appboy.github.io/appboy-ios-sdk/docs/protocol_a_b_k_content_cards_table_view_controller_delegate-p.html) protocol and setting your delegate object as the `delegate` property of the `ABKContentCardsTableViewController`. See the [Content Cards sample app](https://github.com/Appboy/appboy-ios-sdk/tree/master/Samples/ContentCards/BrazeContentCardsSampleApp) for an example. 
 
 {% tabs %}
 {% tab OBJECTIVE-C %}
