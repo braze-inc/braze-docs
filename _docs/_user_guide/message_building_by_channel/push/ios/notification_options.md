@@ -140,7 +140,7 @@ Keep in mind that users are ultimately the ones in control of their focus, and e
 The four new Interruption Level options are:
 
 |Interruption Level|Description|When To Use|Break Through Focus Mode|
-|--|--|--|
+|--|--|--|--|
 |[Passive](https://developer.apple.com/documentation/usernotifications/unnotificationinterruptionlevel/passive)|Sends a notification without sound, vibration, or turning on the screen.|Notifications that do not require immediate attention.|No|
 |[Active](https://developer.apple.com/documentation/usernotifications/unnotificationinterruptionlevel/active) (default)|Will only make a sound, vibration, and turn on the screen if the user is not in Focus Mode.|Notifications that require immediate attention, unless the user has Focus Mode enabled.|No|
 |[Time Sensitive](https://developer.apple.com/documentation/usernotifications/unnotificationinterruptionlevel/timesensitive)|Will make a sound, vibrate, and turn on the screen even while in Focus Mode. This requires that the __Time Sensitive Notifications capability__ is added your app in Xcode|Timely notifications that should disturb users regardless of their Focus mode, such as a ride share or delivery notification.|Yes|
