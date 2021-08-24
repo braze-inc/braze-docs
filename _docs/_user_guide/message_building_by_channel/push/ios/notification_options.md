@@ -135,7 +135,11 @@ With iOS 15's new Focus Mode, users are more in control over when app notificati
 
 Apps can now specify what level of interruption a notification should include, based on its urgency.
 
+![Notification Settings]({% image_buster /assets/img/ios/ios15-notification-settings.png %}){: style="float:right;max-width:25%;margin-left:15px;border:0"}
+
+
 Keep in mind that users are ultimately the ones in control of their focus, and even if a Time Sensitive notification is delivered, they can specify which apps are not allowed breaking through their focus.
+
 
 The four new Interruption Level options are:
 
@@ -152,6 +156,8 @@ To change the Interruption Level for an iOS Push Notification, choose the desire
 
 
 ### Relevance Score (iOS 15+) {#relevance-score}
+
+![Notification Summary]({% image_buster /assets/img/ios/ios15-notification-summary.png %}){: style="float:right;max-width:25%;margin-left:15px;border:0"}
 
 iOS 15 also introduces a new way for users to (optionally) schedule a digest grouping of multiple notifications at designated times throughout the day.
 
