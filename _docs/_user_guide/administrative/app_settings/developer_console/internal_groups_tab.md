@@ -72,7 +72,7 @@ _If your Seed Group members report not seeing the message in their inbox, ensure
 
 Seed Groups can be edited from the **Targeting** page when composing an email campaign.
 
-Seed Groups send to each email variant once and are delivered the first time your user receives that particular variant. For scheduled messages this typically is the first time the campaign launches. For action-based or API-triggered campaigns, this will the time the first user is sent a message.
+Seed Groups send to each email variant once and are delivered the first time your user receives that particular variant. For scheduled messages this typically is the first time the campaign launches. For action-based or API-triggered campaigns, this will be the time the first user is sent a message.
 
 If your campaign is multivariate and your variant has a 0% send percentage, it will not be sent to seed groups. Additionally, if the variant has already been sent and has not been updated to resend in Edit Seed Groups on the Target page, it will not send again by default.
 
