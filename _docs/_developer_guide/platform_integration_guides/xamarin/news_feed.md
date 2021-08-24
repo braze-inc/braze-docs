@@ -4,7 +4,7 @@ article_title: Xamarin News Feed
 platform: Xamarin
 page_order: 3
 description: "This article covers iOS, Android, and FireOS News Feed integration for the Xamarin platform."
-
+channel: news feed 
 ---
 
 # News Feed

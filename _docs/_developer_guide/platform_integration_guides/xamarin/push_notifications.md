@@ -4,7 +4,7 @@ article_title: Xamarin Push Notifications
 platform: Xamarin
 page_order: 1
 description: "This article covers Android and FireOS push notification integration for the Xamarin platform."
-
+channel: push 
 ---
 
 # Push Notifications

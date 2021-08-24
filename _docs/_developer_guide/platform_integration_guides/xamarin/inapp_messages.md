@@ -4,6 +4,7 @@ article_title: In-App Messaging for Xamarin
 platform: Xamarin
 page_order: 2
 description: "This article covers iOS, Android, and FireOS in-app messaging for the Xamarin platform."
+channel: in-app messages
 
 ---
 
