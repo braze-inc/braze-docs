@@ -1,6 +1,6 @@
 ---
 nav_title: Tracking Sessions
-article_title: Tracking Sessions
+article_title: Tracking Sessions for Web
 platform: Web
 page_order: 0
 description: "This reference article covers how to track sessions for web."

@@ -1,6 +1,6 @@
 ---
 nav_title: Integration
-article_title: Content Card Integration
+article_title: Content Card Integration for Web
 page_order: 0.2
 platform: Web
 channel: content cards

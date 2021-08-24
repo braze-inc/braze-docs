@@ -1,6 +1,6 @@
 ---
 nav_title: Read & Unread Indicators
-article_title: Content Card Read & Unread Indicators
+article_title: Content Card Read & Unread Indicators for Web
 page_order: 2
 platform: Web
 channel: content cards

@@ -1,7 +1,10 @@
 ---
 nav_title: Troubleshooting
-article_title: Xamarin Troubleshooting
-platform: Xamarin
+article_title: Troubleshooting for Xamarin
+platform: 
+  - Xamarin
+  - iOS
+  - Android
 page_order: 6
 description: "This article covers iOS and Android troubleshooting for the Xamarin platform."
 

@@ -1,6 +1,6 @@
 ---
 nav_title: Android
-article_title: Android Push Notifications
+article_title: Android Push Notifications for Unity
 platform: 
   - Unity
   - Android

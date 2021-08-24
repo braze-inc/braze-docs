@@ -1,6 +1,6 @@
 ---
 nav_title: Localization
-article_title: Localization
+article_title: Localization for iOS
 platform: iOS
 page_order: 2
 description: "This reference article covers iOS localization, listing all the current languages supported by Braze."

@@ -1,6 +1,6 @@
 ---
 nav_title: iOS
-article_title: Push Notifications
+article_title: Push Notifications for Unity
 platform:
   - Unity
   - iOS

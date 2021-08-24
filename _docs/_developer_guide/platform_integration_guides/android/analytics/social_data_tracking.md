@@ -1,7 +1,9 @@
 ---
 nav_title: Social Data Tracking
-article_title: Social Data Tracking
-platform: Android
+article_title: Social Data Tracking for Android/FireOS
+platform: 
+  - Android
+  - FireOS
 page_order: 5
 description: "This reference article shows how to implement social data tracking for your Android application."
 

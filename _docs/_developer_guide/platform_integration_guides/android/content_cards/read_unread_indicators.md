@@ -1,8 +1,10 @@
 ---
 nav_title: Read & Unread Indicators
-article_title: Content Card Read & Unread Indicators
+article_title: Content Card Read & Unread Indicators for Android/FireOS
 page_order: 3
-platform: Android
+platform: 
+  - Android
+  - FireOS
 description: "This reference article covers Android read and unread indicators and how to implement them in your Content Cards."
 channel:
   - content cards

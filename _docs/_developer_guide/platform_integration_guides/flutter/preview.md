@@ -1,6 +1,6 @@
 ---
 nav_title: Flutter SDK
-article_title: Flutter SDk
+article_title: Flutter SDK
 platform: Flutter
 page_order: 0
 page_type: reference

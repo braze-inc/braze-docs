@@ -1,6 +1,6 @@
 ---
 nav_title: Silent Push Notifications
-article_title: Silent Push Notifications
+article_title: Silent Push Notifications for FireOS
 platform: FireOS
 page_order: 3
 

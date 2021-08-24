@@ -1,6 +1,6 @@
 ---
 nav_title: Initial SDK Setup
-article_title: Initial Windows Universal SDK Setup
+article_title: Initial SDK Setup for Windows Universal
 platform: Windows Universal
 page_order: 0
 description: "This reference article covers the initial SDK integration steps to integrate the Braze SDK on your Windows Universal platform."

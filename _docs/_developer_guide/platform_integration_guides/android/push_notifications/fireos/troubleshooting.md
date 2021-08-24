@@ -1,6 +1,6 @@
 ---
 nav_title: Troubleshooting
-article_title: Push Troubleshooting
+article_title: Push Troubleshooting for FireOS
 platform: FireOS
 page_order: 20
 page_type: solution

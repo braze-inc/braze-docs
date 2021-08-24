@@ -1,6 +1,6 @@
 ---
 nav_title: Huawei Integration
-article_title: Huawei Push Integration
+article_title: Huawei Push Integration for Android
 platform: Android
 page_order: 9
 description: "This article covers how to set up a Huawei Android integration."

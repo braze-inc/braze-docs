@@ -1,6 +1,6 @@
 ---
 nav_title: Push Stories
-article_title: Push Stories
+article_title: Push Stories for Android
 platform: Android
 page_order: 5.91
 description: "This article shows how to set up Push Stories for your Android application."

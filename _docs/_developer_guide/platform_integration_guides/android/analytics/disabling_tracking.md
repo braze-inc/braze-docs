@@ -1,7 +1,9 @@
 ---
 nav_title: Disabling Android SDK Tracking
-article_title: Disabling Data Collection
-platform: Android
+article_title: Disabling Data Collection for Android/FireOS
+platform: 
+  - Android
+  - FireOS
 page_order: 8
 description: "This article shows how to disable data collection for your Android application."
 

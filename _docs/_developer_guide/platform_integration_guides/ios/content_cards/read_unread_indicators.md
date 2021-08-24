@@ -1,6 +1,6 @@
 ---
 nav_title: Read & Unread Indicators
-article_title: Content Card Read & Unread Indicators
+article_title: Content Card Read & Unread Indicators for iOS
 platform: iOS
 page_order: 3
 description: "This reference article covers iOS read and unread indicators and how to implement them in your Content Cards."

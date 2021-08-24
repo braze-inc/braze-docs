@@ -1,6 +1,6 @@
 ---
 nav_title: Overview
-article_title: In-App Message Overview
+article_title: In-App Message Overview for iOS
 platform: iOS
 page_order: 0
 description: "This article covers iOS in-app messaging, when to best use it, in addition to several great use cases."

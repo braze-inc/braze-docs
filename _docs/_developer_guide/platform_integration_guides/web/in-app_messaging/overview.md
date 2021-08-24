@@ -1,6 +1,6 @@
 ---
 nav_title: Overview
-article_title: In-App Message Overview
+article_title: In-App Message Overview for Web
 platform: Web
 channel: in-app messages
 page_order: 0

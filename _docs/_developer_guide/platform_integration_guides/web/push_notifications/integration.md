@@ -1,6 +1,6 @@
 ---
 nav_title: Integration
-article_title: Push Integration
+article_title: Push Integration for Web
 platform: Web
 channel: push
 page_order: 0

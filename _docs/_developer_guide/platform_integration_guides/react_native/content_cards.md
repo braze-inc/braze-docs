@@ -1,6 +1,6 @@
 ---
 nav_title: Content Cards
-article_title: Content Cards
+article_title: Content Cards for React Native
 platform: React Native
 page_order: 3
 page_type: reference

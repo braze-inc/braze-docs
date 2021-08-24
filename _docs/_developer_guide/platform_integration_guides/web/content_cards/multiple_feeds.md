@@ -1,6 +1,6 @@
 ---
 nav_title: Multiple Feeds
-article_title: Using Multiple Content Card Feeds
+article_title: Using Multiple Content Card Feeds for Web
 page_order: 5
 platform: Web
 channel: content cards

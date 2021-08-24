@@ -1,7 +1,10 @@
 ---
 nav_title: Analytics
-article_title: Xamarin Analytics
-platform: Xamarin
+article_title: Analytics for Xamarin
+platform: 
+  - Xamarin
+  - iOS
+  - Android
 page_order: 4
 description: "This article covers iOS, Android, and FireOS analytics for the Xamarin platform."
 

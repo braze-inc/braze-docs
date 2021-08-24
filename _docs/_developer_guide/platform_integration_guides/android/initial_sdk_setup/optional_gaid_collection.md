@@ -1,8 +1,10 @@
 ---
 nav_title: Google Advertising ID (Optional)
-article_title: Optional Google Advertising ID
+article_title: Optional Google Advertising ID for Android/FireOS
 page_order: 9
-platform: Android
+platform: 
+  - Android
+  - FireOS
 description: "This article covers Google advertising IDs and how to pass this advertising information to Braze."
 
 ---

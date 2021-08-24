@@ -1,6 +1,6 @@
 ---
 nav_title: Setting User IDs
-article_title: Setting User IDs
+article_title: Setting User IDs for iOS
 platform: iOS
 page_order: 1
 description: "This article shows how to set user IDs in your iOS app, suggested user ID naming conventions, and some best practices."

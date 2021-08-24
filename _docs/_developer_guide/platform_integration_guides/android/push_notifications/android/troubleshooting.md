@@ -1,6 +1,6 @@
 ---
 nav_title: Troubleshooting
-article_title: Push Notificatin Troubleshooting
+article_title: Push Notification Troubleshooting for Android
 platform: Android
 page_order: 16
 description: "This article covers potential troubleshooting topics for your Android push implementation."

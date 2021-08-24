@@ -1,6 +1,6 @@
 ---
 nav_title: Test Your Integration
-article_title: Test Your Integration
+article_title: Integration Testing for React Native
 platform: React Native
 page_order: 2
 description: "This article covers basic instructions how to test whether Braze SDK integrated correctly."

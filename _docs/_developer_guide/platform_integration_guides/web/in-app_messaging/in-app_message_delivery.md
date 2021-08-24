@@ -1,6 +1,6 @@
 ---
 nav_title: In-App Message Delivery
-article_title: In-App Message Delivery
+article_title: In-App Message Delivery for Web
 platform: Web
 channel: in-app messages
 page_order: 4

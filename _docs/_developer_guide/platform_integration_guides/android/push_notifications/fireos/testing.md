@@ -1,6 +1,6 @@
 ---
 nav_title: Testing
-article_title: Testing
+article_title: Testing for FireOS
 platform: FireOS
 page_order: 1
 page_type: reference

@@ -1,6 +1,6 @@
 ---
 nav_title: Badges
-article_title: Requesting Unviewed Content Card for Badges
+article_title: Requesting Unviewed Content Card for Badges for Web
 page_order: 4
 platform: Web
 channel: content cards

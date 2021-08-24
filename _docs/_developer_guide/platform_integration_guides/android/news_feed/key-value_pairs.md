@@ -1,8 +1,10 @@
 ---
 nav_title: Key-Value Pairs
-article_title: News Feed Key-Value Pairs
+article_title: News Feed Key-Value Pairs for Android/FireOS
 page_order: 8
-platform: Android
+platform: 
+  - Android
+  - FireOS
 description: "This reference article covers how to use key-value pairs in your News Feed for your Android application."
 channel:
   - news feed

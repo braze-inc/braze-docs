@@ -1,7 +1,9 @@
 ---
 nav_title: Logging Purchases
-article_title: Logging Purchases
-platform: Android
+article_title: Logging Purchases for Android/FireOS
+platform: 
+  - Android
+  - FireOS
 page_order: 4
 description: "This reference article shows how to track in-app purchases and revenue and assign purchase properties in your Android application."
 

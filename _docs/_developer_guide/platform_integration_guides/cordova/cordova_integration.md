@@ -1,7 +1,10 @@
 ---
 nav_title: Cordova Integration
 article_title: Cordova Integration
-platform: Cordova
+platform: 
+  - Cordova
+  - iOS
+  - Android
 page_order: 1
 page_type: reference
 description: "This article covers initial SDK setup steps for Android and FireOS apps running on Cordova."

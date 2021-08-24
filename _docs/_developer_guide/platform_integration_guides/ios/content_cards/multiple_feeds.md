@@ -1,6 +1,6 @@
 ---
 nav_title: Multiple Feeds
-article_title: Using Multiple Content Card Feeds
+article_title: Using Multiple Content Card Feeds for iOS
 platform: iOS
 page_order: 6
 description: "This reference article covers how to implement multiple Content Card feeds in your iOS application."

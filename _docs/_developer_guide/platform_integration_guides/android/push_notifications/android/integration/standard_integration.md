@@ -1,6 +1,6 @@
 ---
 nav_title: Standard Integration
-article_title: Standard Push Notification Integration
+article_title: Standard Push Notification Integration for Android
 platform: Android
 page_order: 0
 description: "This article covers how to integrate push notifications in your Android application."

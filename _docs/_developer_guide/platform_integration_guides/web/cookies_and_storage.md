@@ -1,6 +1,6 @@
 ---
 nav_title: Cookies and Storage
-article_title: Cookies and Storage
+article_title: Cookies and Storage for Web
 platform: Web
 page_order: 15
 page_type: reference

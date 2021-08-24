@@ -1,7 +1,9 @@
 ---
 nav_title: Deep Linking
-article_title: Deep Linking
-platform: Android
+article_title: Deep Linking for Android/FireOS
+platform: 
+  - Android
+  - FireOS
 page_order: 0
 description: "This article covers how to implement the universal deep linking delegate for your Android app, as well as examples on how to deep link to app settings or a News Feed."
 

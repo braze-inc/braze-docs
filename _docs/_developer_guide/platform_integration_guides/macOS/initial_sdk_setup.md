@@ -1,6 +1,6 @@
 ---
 nav_title: Initial SDK Setup
-article_title: MacOS Initial SDK Setup
+article_title: Initial SDK Setup for MacOS
 platform: MacOS
 page_order: 0
 page_type: reference

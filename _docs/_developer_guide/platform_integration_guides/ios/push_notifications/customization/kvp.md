@@ -1,6 +1,6 @@
 ---
 nav_title: Key-Value Pairs
-article_title: Extracting Data from Push Notification Key-Value Pairs
+article_title: Extracting Data from Push Notification Key-Value Pairs for iOS
 platform: iOS
 page_order: 0.2
 description: "This article covers how to extract data from push notification key-value pairs."

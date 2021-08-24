@@ -1,6 +1,6 @@
 ---
 nav_title: Setting User IDs
-article_title: Setting User IDs
+article_title: Setting User IDs for Windows Universal
 platform: Windows Universal
 page_order: 1
 description: "This reference article covers how to set user ids on the Windows Universal platform."

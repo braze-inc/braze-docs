@@ -1,7 +1,10 @@
 ---
 nav_title: Initial SDK Setup
-article_title: Xamarin Initial SDK Setup
-platform: Xamarin
+article_title: Initial SDK Setup for Xamarin
+platform: 
+  - Xamarin
+  - iOS
+  - Android
 page_order: 0
 description: "This article covers the initial iOS, Android, and FireOS SDK setup for the Xamarin platform."
 

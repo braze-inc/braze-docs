@@ -1,6 +1,6 @@
 ---
 nav_title: Setting Custom Attributes
-article_title: Setting Custom Attributes
+article_title: Setting Custom Attributes for Roku
 platform: Roku
 page_order: 4
 page_type: reference

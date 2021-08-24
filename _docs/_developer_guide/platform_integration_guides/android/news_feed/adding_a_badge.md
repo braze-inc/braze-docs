@@ -1,8 +1,10 @@
 ---
 nav_title: Adding a Badge
-article_title: Adding a News Feed Badge
+article_title: Adding a News Feed Badge for Android/FireOS
 page_order: 6
-platform: Android
+platform: 
+  - Android
+  - FireOS
 description: "This reference article shows how to add a News Feed badge in your Android application."
 channel:
   - news feed

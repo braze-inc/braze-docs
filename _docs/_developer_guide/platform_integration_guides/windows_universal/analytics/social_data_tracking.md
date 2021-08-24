@@ -1,6 +1,6 @@
 ---
 nav_title: Social Data Tracking
-article_title: Social Data Tracking
+article_title: Social Data Tracking for Windows Universal
 platform: Windows Universal
 page_order: 5
 description: "This reference article covers how to deal with social data tracking on the Windows Universal platform."

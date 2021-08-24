@@ -1,7 +1,10 @@
 ---
 nav_title: Content Cards
-article_title: Unity Content Cards
-platform: Unity
+article_title: Content Cards for Unity
+platform: 
+  - Unity
+  - iOS
+  - Android
 channel: content cards
 page_order: 4
 description: "This reference article covers Content Card implementation guidelines for the Unity platform."

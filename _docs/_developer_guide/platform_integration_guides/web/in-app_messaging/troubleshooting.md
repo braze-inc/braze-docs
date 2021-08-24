@@ -1,6 +1,6 @@
 ---
 nav_title: Troubleshooting
-article_title: Web In-App Message Troubleshooting
+article_title: In-App Message Troubleshooting for Web
 platform: Web
 page_order: 5
 channel: in-app messages

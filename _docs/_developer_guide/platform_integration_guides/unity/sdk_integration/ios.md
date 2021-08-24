@@ -1,6 +1,6 @@
 ---
 nav_title: iOS
-article_title: SDK iOS Integration
+article_title: SDK iOS Integration for Unity
 platform: 
   - Unity
   - iOS

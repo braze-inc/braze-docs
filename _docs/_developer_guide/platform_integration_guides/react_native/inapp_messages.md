@@ -1,6 +1,6 @@
 ---
 nav_title: In-App Messages
-article_title: In-App Messages
+article_title: In-App Messages for React Native
 platform: React Native
 page_order: 4
 page_type: reference

@@ -1,6 +1,6 @@
 ---
 nav_title: Push Stories
-article_title: Push Stories
+article_title: Push Stories for FireOS
 platform: FireOS
 page_order: 6
 page_type: reference

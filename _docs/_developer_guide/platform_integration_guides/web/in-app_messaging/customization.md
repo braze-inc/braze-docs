@@ -1,6 +1,6 @@
 ---
 nav_title: Customization
-article_title: In-App Message Customization 
+article_title: In-App Message Customization for Web
 platform: Web
 channel: in-app messages
 page_order: 3

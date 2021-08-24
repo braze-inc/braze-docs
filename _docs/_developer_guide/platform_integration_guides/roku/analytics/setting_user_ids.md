@@ -1,6 +1,6 @@
 ---
 nav_title: Setting User IDs
-article_title: Setting User IDs
+article_title: Setting User IDs for Roku
 platform: Roku
 page_order: 0
 page_type: reference

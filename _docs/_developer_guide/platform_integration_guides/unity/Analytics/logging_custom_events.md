@@ -1,7 +1,10 @@
 ---
 nav_title: Tracking Custom Events
-article_title: Tracking Custom Events
-platform: Unity
+article_title: Tracking Custom Events for Unity
+platform: 
+  - Unity
+  - iOS
+  - Android
 page_order: 1
 description: "This reference article covers how to log custom events on Unity platform."
 

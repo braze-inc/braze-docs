@@ -1,6 +1,6 @@
 ---
 nav_title: Amazon Device Messaging
-article_title: Amazon Device Messaging Push Notifications
+article_title: Amazon Device Messaging Push Notifications for Unity
 platform: 
   - Unity
   - Android

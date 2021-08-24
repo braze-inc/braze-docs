@@ -1,6 +1,6 @@
 ---
 nav_title: Location Tracking
-article_title: Location Tracking
+article_title: Location Tracking for Web
 platform: Web
 page_order: 5
 page_type: reference

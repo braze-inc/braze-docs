@@ -1,6 +1,6 @@
 ---
 nav_title: News Feed
-article_title: tvOS News Feed
+article_title: News Feed for tvOS
 platform: tvOS
 page_order: 2
 page_type: reference

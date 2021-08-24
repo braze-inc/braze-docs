@@ -1,8 +1,11 @@
 ---
 nav_title: News Feed
-article_title: Unity News Feed
+article_title: News Feed for Unity
 channel: news feed
-platform: Unity
+platform: 
+  - Unity
+  - iOS
+  - Android
 page_order: 5
 description: "This reference article covers News Feed integration for the Unity platform."
 

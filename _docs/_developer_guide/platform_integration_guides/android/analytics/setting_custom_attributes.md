@@ -1,7 +1,9 @@
 ---
 nav_title: Setting Custom Attributes
-article_title: Setting Custom Attributes
-platform: Android
+article_title: Setting Custom Attributes for Android/FireOS
+platform: 
+  - Android
+  - FireOS
 page_order: 3
 description: "This reference article shows how to set custom attributes in your Android application."
 

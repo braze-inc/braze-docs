@@ -1,8 +1,10 @@
 ---
 nav_title: Integration Overview
-article_title: News Feed Integration Overview
+article_title: News Feed Integration Overview for Android/FireOS
 page_order: 1
-platform: Android
+platform: 
+  - Android
+  - FireOS
 description: "This article covers an overview of how to integrate the News Feed into your Android application."
 channel:
   - news feed

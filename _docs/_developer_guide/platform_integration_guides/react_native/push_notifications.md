@@ -1,6 +1,6 @@
 ---
 nav_title: Push Notifications
-article_title: Push Notifications
+article_title: Push Notifications for React Native
 platform: React Native
 page_order: 2
 description: "This article covers implementing push notifications on React Native."

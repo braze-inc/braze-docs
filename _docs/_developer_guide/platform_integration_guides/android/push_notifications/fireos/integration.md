@@ -1,6 +1,6 @@
 ---
 nav_title: Integration
-article_title: Push Integration
+article_title: Push Integration for FireOS
 platform: FireOS
 page_order: 0
 page_type: solution

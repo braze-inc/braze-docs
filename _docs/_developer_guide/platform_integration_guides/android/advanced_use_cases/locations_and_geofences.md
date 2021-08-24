@@ -1,7 +1,9 @@
 ---
 nav_title: Locations & Geofences
-article_title: Locations & Geofences
-platform: Android
+article_title: Locations & Geofences for Android/FireOS
+platform: 
+  - Android
+  - FireOS
 page_order: 6
 description: "This reference article covers how to implement locations and geofences in your Android application."
 Tool:

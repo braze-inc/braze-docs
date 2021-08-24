@@ -1,8 +1,10 @@
 ---
 nav_title: Card Types
-article_title: News Feed Card Types
+article_title: News Feed Card Types for Android/FireOS
 page_order: 5
-platform: Android
+platform: 
+  - Android
+  - FireOS
 description: "This article covers different News Feed card types and the different card-specific properties available."
 channel:
   - news feed

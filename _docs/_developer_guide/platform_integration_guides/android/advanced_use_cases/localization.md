@@ -1,7 +1,9 @@
 ---
 nav_title: Localization
-article_title: Localization
-platform: Android
+article_title: Localization for Android/FireOS
+platform: 
+  - Android
+  - FireOS
 page_order: 1
 description: "This reference article covers Android localization, listing all the current languages supported by Braze."
 

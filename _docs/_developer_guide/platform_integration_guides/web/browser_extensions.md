@@ -1,6 +1,6 @@
 ---
 nav_title: Browser Extensions
-article_title: Browser Extensions
+article_title: Browser Extensions for Web
 platform: Web
 page_order: 20
 page_type: reference

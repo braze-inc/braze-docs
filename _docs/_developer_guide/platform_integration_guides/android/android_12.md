@@ -1,8 +1,10 @@
 ---
 nav_title: Android 12 Upgrade Guide
-article_title: Android 12 Upgrade Gudie
+article_title: Android 12 Upgrade Guide
 page_order: 9
-platform: Android
+platform: 
+  - Android
+  - FireOS
 description: "This reference article covers the Android 12 SDK update, highlighting changes such as deep linking, SDK compatibility, and more."
 ---
 

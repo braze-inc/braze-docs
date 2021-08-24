@@ -1,6 +1,6 @@
 ---
 nav_title: Android
-article_title: SDK Android Integration
+article_title: SDK Android Integration for Unity
 platform: 
   - Unity
   - Android

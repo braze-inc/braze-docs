@@ -1,6 +1,6 @@
 ---
 nav_title: iOS
-article_title: Inital iOS SDK Setup
+article_title: Initial iOS SDK Setup for Cordova
 platform: 
   - Cordova
   - iOS

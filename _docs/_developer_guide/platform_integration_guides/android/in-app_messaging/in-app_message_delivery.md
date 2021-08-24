@@ -1,8 +1,10 @@
 ---
 nav_title: In-App Message Delivery
-article_title: In-App Message Delivery
+article_title: In-App Message Delivery for Android/FireOS
 page_order: 3
-platform: Android
+platform: 
+  - Android
+  - FireOS
 description: "This article covers Android in-app message delivery, listing different trigger types, delivery semantics, and event triggering steps."
 channel:
   - in-app messages

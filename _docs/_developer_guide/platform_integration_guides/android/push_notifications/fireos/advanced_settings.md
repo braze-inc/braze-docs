@@ -1,6 +1,6 @@
 ---
 nav_title: Advanced Settings
-article_title: Advanced Settings
+article_title: Advanced Settings for FireOS
 platform: FireOS
 page_order: 4
 page_type: reference

@@ -1,8 +1,10 @@
 ---
 nav_title: Refreshing the Feed
-article_title: Refreshing the Content Card Feed
+article_title: Refreshing the Content Card Feed for Android/FireOS
 page_order: 4
-platform: Android
+platform: 
+  - Android
+  - FireOS
 description: "This reference article covers how to implement Content Card refreshing in your Android application."
 channel:
   - content cards

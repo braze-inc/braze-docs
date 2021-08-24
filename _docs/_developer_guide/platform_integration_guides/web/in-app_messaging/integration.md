@@ -1,6 +1,6 @@
 ---
 nav_title: Integration
-article_title: In-App Message Integration
+article_title: In-App Message Integration for Web
 platform: Web
 channel: in-app messages
 page_order: 1

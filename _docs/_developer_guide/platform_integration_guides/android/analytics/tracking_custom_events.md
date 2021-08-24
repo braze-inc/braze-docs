@@ -1,7 +1,9 @@
 ---
 nav_title: Tracking Custom Events
-article_title: Tracking Custom Events
-platform: Android
+article_title: Tracking Custom Events for Android/FireOS
+platform: 
+  - Android
+  - FireOS
 page_order: 2
 description: "This reference article covers how to add and track custom events for your Android application."
 

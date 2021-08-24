@@ -1,6 +1,6 @@
 ---
 nav_title: Baidu Integration
-article_title: Baidu Push Notification Integration
+article_title: Baidu Push Notification Integration for Android
 platform: Android
 page_order: 9
 description: "This article shows how to set up a Baidu Android integration."

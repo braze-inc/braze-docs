@@ -1,6 +1,6 @@
 ---
 nav_title: Customization
-article_title: Content Card Customization
+article_title: Content Card Customization for Web
 page_order: 1
 platform: Web
 channel: content cards

@@ -1,6 +1,6 @@
 ---
 nav_title: Tracking Custom Events
-article_title: Tracking Custom Events
+article_title: Tracking Custom Events for Roku
 platform: Roku
 page_order: 2
 page_type: reference

@@ -1,8 +1,10 @@
 ---
 nav_title: Badges
-article_title: Content Card Badges
+article_title: Content Card Badges for Android/FireOS
 page_order: 5
-platform: Android
+platform: 
+  - Android
+  - FireOS
 description: "This article covers how to add badges to your Content Cards in your Android application."
 channel:
   - content cards

@@ -1,6 +1,6 @@
 ---
 nav_title: Android and FireOS
-article_title: Initial Android SDK Setup
+article_title: Initial Android SDK Setup for Cordova
 platform: 
   - Cordova
   - iOS

@@ -1,6 +1,6 @@
 ---
 nav_title: Changelog
-article_title: Changelog
+article_title: Changelog for Windows Universal SDK
 page_order: 30
 page_type: update
 platform: Windows Universal

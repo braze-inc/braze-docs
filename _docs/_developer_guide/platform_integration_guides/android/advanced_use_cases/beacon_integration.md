@@ -1,7 +1,9 @@
 ---
 nav_title: Beacon Integration
-article_title: Beacon Integration
-platform: Android
+article_title: Beacon Integration for Android/FireOS
+platform: 
+  - Android
+  - FireOS
 page_order: 2
 description: "This article covers how to log custom events using Gimbal Beacons for Android."
 
