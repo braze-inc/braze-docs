@@ -12,10 +12,6 @@ This guide outlines changes introduced in iOS 15 (WWDC21) and the required upgra
 
 > For a complete list of new iOS 15 updates, see Apple's [iOS 15 Page](https://developer.apple.com/documentation/ios-ipados-release-notes/ios-ipados-15-beta-release-notes).
 
-{% alert important %}
-This is a working document and will evolve as Apple releases new beta versions and information on their upcoming changes.
-{% endalert %}
-
 ## iOS 15 Changes
 
 ## Transparency Changes to UI Navigations
@@ -26,7 +22,7 @@ To avoid this visual change in iOS 15, we strongly recommend you upgrade to the 
 
 ## New Notification Settings {#notification-settings}
 
-iOS 15 introduced new notification features to help users stay focused and avoid frequent interruptions throughout the day. We're excited to offer support for these new features - stay tuned for more information to be announced near iOS 15's official release!
+iOS 15 introduced new notification features to help users stay focused and avoid frequent interruptions throughout the day. We're excited to offer support for these new features. [Learn More][3]
 
 ### Focus Modes {#focus-mode}
 
@@ -81,3 +77,4 @@ In iOS 15, users will be able to configure Safari to anonymize or generalize the
 
 [1]: https://github.com/Appboy/appboy-ios-sdk/releases/tag/4.3.2
 [2]: https://github.com/Appboy/appboy-ios-sdk/issues
+[3]: https://www.braze.com/docs/user_guide/message_building_by_channel/push/ios/notification_options/#interruption-level
