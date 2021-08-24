@@ -129,19 +129,43 @@ if (@available(iOS 12.0, *)) {
   {% endtab %}
 {% endtabs %}
 
-### Critical Alerts
-Apple will allow some brands to send notifications that are considered extremely important, will ignore Do Not Disturb settings, and will always play a sound no matter the setting on a user's device.
+### Interruption Level (iOS 15+) {#interruption-level}
 
-Brands [must be approved by Apple](https://developer.apple.com/contact/request/notifications-critical-alerts-entitlement/) to use Critical Alerts. Good candidates for this feature could be apps with medical and other health-related information, home security, and public safety features. You must do this before using the feature in Braze.
+With iOS 15's new Focus Mode, users are more in control over when app notifications can "interrupt" them with a sound or vibration.
 
-_Users will still be able to turn off Critical Alerts on a per-app basis, separately from other notifications._
+Apps can now specify what level of interruption a notification should include, based on its urgency.
 
-Braze will give you the ability to select __Send Critical Alert__ under __Alert Options__ in the iOS Push Composer, which will then allow you to specify the notification as a Critical Alert.
+Keep in mind that users are ultimately the ones in control of their focus, and even if a Time Sensitive notification is delivered, they can specify which apps are not allowed breaking through their focus.
 
-{% alert warning %}
-This feature is still in beta. Additionally, if you attempt to use this feature without pre-approval by Apple, your message will not be allowed to send. Contact your account manager before attempting to use this feature.
-{% endalert %}
+The four new Interruption Level options are:
 
+|Interruption Level|Description|When To Use|Break Through Focus Mode|
+|--|--|--|
+|[Passive](https://developer.apple.com/documentation/usernotifications/unnotificationinterruptionlevel/passive)|Sends a notification without sound, vibration, or turning on the screen.|Notifications that do not require immediate attention.|No|
+|[Active](https://developer.apple.com/documentation/usernotifications/unnotificationinterruptionlevel/active) (default)|Will only make a sound, vibration, and turn on the screen if the user is not in Focus Mode.|Notifications that require immediate attention, unless the user has Focus Mode enabled.|No|
+|[Time Sensitive](https://developer.apple.com/documentation/usernotifications/unnotificationinterruptionlevel/timesensitive)|Will make a sound, vibrate, and turn on the screen even while in Focus Mode. This requires that the __Time Sensitive Notifications capability__ is added your app in Xcode|Timely notifications that should disturb users regardless of their Focus mode, such as a ride share or delivery notification.|Yes|
+|[Critical](https://developer.apple.com/documentation/usernotifications/unnotificationinterruptionlevel/critical)|Will make a sound, vibrate, and turn on the screen even if the phone's Do Not Disturb switch is enabled. This [requires explicit approval by Apple](https://developer.apple.com/contact/request/notifications-critical-alerts-entitlement/).|Emergencies such as severe weather or safety alerts|Yes|
+
+To change the Interruption Level for an iOS Push Notification, choose the desired level from the Settings tab within your message:
+
+![Interruption Level Option][28]
+
+
+### Relevance Score (iOS 15+) {#relevance-score}
+
+iOS 15 also introduces a new way for users to (optionally) schedule a digest grouping of multiple notifications at designated times throughout the day.
+
+This is done to prevent constant interruptions throughout the day for notifications which don’t need immediate attention.
+
+Apps can specify which push notifications are most relevant, by setting a __Relevance Score__. Apple will use this score to determine which notifications should be showcased in the scheduled Notification Summary while others are made available when users click into the summary. 
+
+All notifications will still be accessible in the user's notification center.
+
+To set an iOS Notification's Relevance Score, enter a value between `0.0` and `1.0` within the Settings tab. For example, the most important message should be set with `1.0`, whereas a medium-importance message can be sent with `0.5`.
+
+![Relevance Score Option][29]
 
 [26]: {% image_buster /assets/img_archive/notgroupclickdropdown.gif %}
 [27]: {% image_buster /assets/img_archive/managenotgroups.png %}
+[28]: {% image_buster /assets/img/ios/interruption-level.png %}
+[29]: {% image_buster /assets/img/ios/relevance-score.png %}
