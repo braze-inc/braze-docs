@@ -12,7 +12,6 @@ This guide outlines changes introduced in iOS 15 (WWDC21) and the required upgra
 
 > For a complete list of new iOS 15 updates, see Apple's [iOS 15 Page](https://developer.apple.com/documentation/ios-ipados-release-notes/ios-ipados-15-beta-release-notes).
 
-## iOS 15 Changes
 
 ## Transparency Changes to UI Navigations
 
