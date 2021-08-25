@@ -163,7 +163,7 @@ iOS 15 also introduces a new way for users to (optionally) schedule a digest gro
 
 This is done to prevent constant interruptions throughout the day for notifications which don’t need immediate attention.
 
-Apps can specify which push notifications are most relevant, by setting a __Relevance Score__. Apple will use this score to determine which notifications should be showcased in the scheduled Notification Summary while others are made available when users click into the summary. 
+Apps can specify which push notifications are most relevant by setting a __Relevance Score__. Apple will use this score to determine which notifications should be showcased in the scheduled Notification Summary while others are made available when users click into the summary. 
 
 All notifications will still be accessible in the user's notification center.
 
