@@ -1,7 +1,7 @@
 ---
 nav_title: Campaign Calendar
 article_title: Campaign Calendar
-page_order: 6
+page_order: 4
 tool: Campaigns
 page_type: reference
 description: "This reference page breaks down the components of the campaign calendar."

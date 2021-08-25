@@ -9,6 +9,8 @@ channel: in-app messages
 
 ---
 
+> TO BE MERGED WITH 'CREATING A CAMPAIGN'
+
 # Active In-App Message Campaign Limits
 
 Braze values reliability and speed. Just like we suggest you send only the data you need to Braze, we also recommend __turning off__ any campaigns that are no longer adding any value to your brand.

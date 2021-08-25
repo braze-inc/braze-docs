@@ -410,3 +410,23 @@ validurls['/docs/partners/data_and_infrastructure_agility/customer_data_platform
 validurls['/docs/user_guide/administrative/manage_your_braze_users/company-wide_settings_management/#overview/'] = '/docs/user_guide/administrative/app_settings/manage_app_group/email_settings/#include-a-list-unsubscribe-header/';
 validurls['/docs/user_guide/administrative/manage_your_braze_users/company-wide_settings_management/#benefits-of-the-list-unsubscribe-header/'] = '/docs/user_guide/administrative/app_settings/manage_app_group/email_settings/#include-a-list-unsubscribe-header/';
 validurls['/docs/user_guide/administrative/manage_your_braze_users/company-wide_settings_management/#how-the-list-unsubscribe-header-works/'] = '/docs/user_guide/administrative/app_settings/manage_app_group/email_settings/#include-a-list-unsubscribe-header/';
+
+validurls['/docs/user_guide/engagement_tools/campaigns/scheduling_and_organizing/understanding_campaign_status/'] = '/docs/user_guide/engagement_tools/campaigns/getting_started/understanding_campaign_status/';
+validurls['/docs/user_guide/engagement_tools/campaigns/scheduling_and_organizing/'] = '/docs/user_guide/engagement_tools/campaigns/building_campaigns/';
+validurls['/docs/user_guide/engagement_tools/campaigns/testing_and_more/campaign_calendar/'] = '';
+validurls['/docs/user_guide/engagement_tools/campaigns/scheduling_and_organizing/time_based_campaign/'] = '/docs/user_guide/engagement_tools/campaigns/building_campaigns/time_based_campaign/';
+validurls['/docs/user_guide/engagement_tools/campaigns/scheduling_and_organizing/delivery_types/'] = '/docs/user_guide/engagement_tools/campaigns/building_campaigns/delivery_types/';
+validurls['/docs/user_guide/engagement_tools/campaigns/scheduling_and_organizing/delivery_types/scheduled_delivery/'] = '/docs/user_guide/engagement_tools/campaigns/building_campaigns/delivery_types/scheduled_delivery/';
+validurls['/docs/user_guide/engagement_tools/campaigns/scheduling_and_organizing/delivery_types/triggered_delivery/'] = '/docs/user_guide/engagement_tools/campaigns/building_campaigns/delivery_types/triggered_delivery/';
+validurls['/docs/user_guide/engagement_tools/campaigns/scheduling_and_organizing/attribute_triggers/'] = '/docs/user_guide/engagement_tools/campaigns/building_campaigns/delivery_types/triggered_delivery/attribute_triggers/';
+validurls['/docs/user_guide/engagement_tools/campaigns/scheduling_and_organizing/campaign_connector/'] = '/docs/user_guide/engagement_tools/campaigns/building_campaigns/delivery_types/triggered_delivery/campaign_connector/';
+validurls['/docs/user_guide/engagement_tools/campaigns/scheduling_and_organizing/delivery_types/api_triggered_delivery/'] = '/docs/user_guide/engagement_tools/campaigns/building_campaigns/delivery_types/api_triggered_delivery/';
+validurls['/docs/user_guide/engagement_tools/campaigns/scheduling_and_organizing/delivery_types/reeligibility/'] = '/docs/user_guide/engagement_tools/campaigns/building_campaigns/delivery_types/reeligibility/';
+validurls['/docs/user_guide/engagement_tools/campaigns/testing_and_more/campaign_calendar/'] = '/docs/user_guide/engagement_tools/campaigns/building_campaigns/delivery_types/campaign_calendar/';
+validurls['/docs/user_guide/engagement_tools/campaigns/testing_and_more/conversion_events/'] = '/docs/user_guide/engagement_tools/campaigns/building_campaigns/conversion_events/';
+validurls['/docs/user_guide/engagement_tools/campaigns/testing_and_more/rate-limiting/'] = '/docs/user_guide/engagement_tools/campaigns/building_campaigns/rate-limiting/';
+validurls['/docs/user_guide/engagement_tools/campaigns/scheduling_and_organizing/change_your_campaign_after_launch/'] = '/docs/user_guide/engagement_tools/campaigns/managing_campaigns/change_your_campaign_after_launch/';
+validurls['/docs/user_guide/engagement_tools/campaigns/scheduling_and_organizing/archiving_campaigns/'] = '/docs/user_guide/engagement_tools/campaigns/managing_campaigns/archiving_campaigns/';
+validurls['/docs/user_guide/engagement_tools/campaigns/scheduling_and_organizing/duplicating_segments_and_campaigns/'] = '/docs/user_guide/engagement_tools/campaigns/managing_campaigns/duplicating_segments_and_campaigns/';
+validurls['/docs/user_guide/engagement_tools/campaigns/scheduling_and_organizing/campaign_alerts/'] = '/docs/user_guide/engagement_tools/campaigns/managing_campaigns/campaign_alerts/';
+validurls['/docs/user_guide/engagement_tools/campaigns/ideas_and_strategies/ab_testing_with_random_buckets/'] = '/docs/user_guide/engagement_tools/campaigns/testing_and_more/ab_testing_with_random_buckets/';

@@ -10,6 +10,8 @@ description: "This reference article goes over how to measure user retention for
 
 ---
 
+> TO BE MERGED AND RELOCATED
+
 # Retention Report
 
 > This reference article goes over how to measure user retention for users who have performed a selected retention event in a specific campaign. By knowing how your users are being retained after sending a message, you can measure the effectiveness of your campaign.

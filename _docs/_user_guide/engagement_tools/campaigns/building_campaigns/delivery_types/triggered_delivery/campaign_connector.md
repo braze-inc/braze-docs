@@ -1,7 +1,7 @@
 ---
 nav_title: Campaign Connector
 article_title: Campaign Connector
-page_order: 5
+page_order: 2
 tool: Campaigns
 page_type: tutorial
 description: "This how-to article goes over what Braze's Campaign Connector is and how to use it to deliver targeted, relevant content at the right time."

@@ -1,7 +1,7 @@
 ---
 nav_title: Changing Your Campaign After Launch
 article_title: Changing Your Campaign After Launch
-page_order: 1.9
+page_order: 0
 tool: Campaigns
 page_type: reference
 description: "This reference article gives an overview of the result of editing certain aspects of a campaign post-launch."

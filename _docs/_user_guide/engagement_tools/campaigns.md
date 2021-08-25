@@ -10,18 +10,16 @@ tool: Campaigns
 page_type: landing
 description: "This landing page is home to Braze's Dashboard campaigns. Here you can find resources to create, set up, and personalize a campaign."
 
-guide_featured_title: "Campaign Topics"
+guide_featured_title: "Popular Articles"
 guide_featured_list:
-- name: Ideas & Strategies
-  link: /docs/user_guide/engagement_tools/campaigns/ideas_and_strategies/
-  fa_icon: fas fa-gamepad
-- name: Scheduling & Organizing
-  link: /docs/user_guide/engagement_tools/campaigns/scheduling_and_organizing/
-  fa_icon: fas fa-clock
-- name: Testing & More
-  link: /docs/user_guide/engagement_tools/campaigns/testing_and_more/
-  fa_icon: fas fa-vials
-- name: Frequently Asked Questions
-  link: /docs/user_guide/engagement_tools/campaigns/faq/
-  fa_icon: fas fa-question
+  - name: 
+    link: 
+    fa_icon: 
+
+guide_menu_title: "More Articles"
+guide_menu_list:
+  - name: 
+    link: 
+    fa_icon: 
+
 ---

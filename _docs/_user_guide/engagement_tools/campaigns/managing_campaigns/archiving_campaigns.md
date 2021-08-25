@@ -1,7 +1,7 @@
 ---
 nav_title: Archiving Campaigns
 article_title: Archiving Campaigns
-page_order: 2
+page_order: 1
 page_type: reference
 description: "This reference article goes over how to archive a pre-existing campaign, the effects of archiving a campaign, and how to resume that campaign if needed."
 tool:
