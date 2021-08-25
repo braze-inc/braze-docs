@@ -138,7 +138,7 @@ Apps can now specify what level of interruption a notification should include, b
 ![Notification Settings]({% image_buster /assets/img/ios/ios15-notification-settings.png %}){: style="float:right;max-width:25%;margin-left:15px;border:0"}
 
 
-Keep in mind that users are ultimately the ones in control of their focus, and even if a Time Sensitive notification is delivered, they can specify which apps are not allowed breaking through their focus.
+Keep in mind that users are ultimately the ones in control of their focus, and even if a Time Sensitive notification is delivered, they can specify which apps are not allowed to break through their focus.
 
 
 The four new Interruption Level options are:
