@@ -19,7 +19,9 @@ This endpoint allows you to pull a list of email addresses that have "hard bounc
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#7c2ef84f-ddf5-451a-a72c-beeabc06ad9d {% endapiref %}
 ## Request Parameters
 
-You must provide an `end_date`, as well as either an `email` or a `start_date`.
+You must provide either a `start_date` and `end_date` OR an `email`.
+
+If you provide a `start_date`, `end_date`, and an `email`, we prioritize the email(s) given and disregard the date range.
 
 | Parameter | Required | Data Type | Description |
 | ----------|-----------| ----------|----- |
