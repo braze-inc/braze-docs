@@ -14,7 +14,11 @@ description: "This article provides answers to frequently asked questions about 
 
 ### Are there storage limits for images within the Media Library?
 
-Nope! There are no storage limits for images within the Media Library.
+No, there are no storage limits for images within the Media Library.
+
+## Are there expiration dates for uploaded assets?
+
+No, uploaded assets will not expire once added to the Media Library.
 
 ### Can I crop all image types?
 
