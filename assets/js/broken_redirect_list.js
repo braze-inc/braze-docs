@@ -434,3 +434,4 @@ validurls['/docs/user_guide/engagement_tools/campaigns/ideas_and_strategies/ab_t
 validurls['/docs/user_guide/engagement_tools/canvas/create_a_canvas/change_your_canvas_after_launch/'] = '/docs/user_guide/engagement_tools/canvas/managing_canvases/change_your_canvas_after_launch/';
 validurls['/docs/user_guide/engagement_tools/campaigns/scheduling_and_organizing/duplicating_segments_and_campaigns/#cloning-a-canvas'] = '/docs/user_guide/engagement_tools/campaigns/managing_campaigns/duplicating_segments_and_campaigns/#cloning-a-canvas';
 
+validurls['/docs/user_guide/engagement_tools/canvas/get_started/canvas/'] = '/docs/user_guide/engagement_tools/canvas/get_started/';

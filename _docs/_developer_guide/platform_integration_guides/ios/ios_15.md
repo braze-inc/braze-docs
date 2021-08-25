@@ -10,13 +10,8 @@ description: "This reference article covers the new iOS 15 OS updates, required 
 
 This guide outlines changes introduced in iOS 15 (WWDC21) and the required upgrade steps for your Braze iOS SDK integration.
 
-> For a complete list of new iOS 15 updates, see Apple's [iOS 15 Page](https://developer.apple.com/documentation/ios-ipados-release-notes/ios-ipados-15-beta-release-notes).
+> For a complete list of new iOS 15 updates, see Apple's [iOS 15 Release Notes](https://developer.apple.com/documentation/ios-ipados-release-notes/ios-ipados-15-beta-release-notes).
 
-{% alert important %}
-This is a working document and will evolve as Apple releases new beta versions and information on their upcoming changes.
-{% endalert %}
-
-## iOS 15 Changes
 
 ## Transparency Changes to UI Navigations
 
@@ -26,11 +21,11 @@ To avoid this visual change in iOS 15, we strongly recommend you upgrade to the 
 
 ## New Notification Settings {#notification-settings}
 
-iOS 15 introduced new notification features to help users stay focused and avoid frequent interruptions throughout the day. We're excited to offer support for these new features - stay tuned for more information to be announced near iOS 15's official release!
+iOS 15 introduced new notification features to help users stay focused and avoid frequent interruptions throughout the day. We're excited to offer support for these new features. Learn more in [iOS Notification Options][3].
 
 ### Focus Modes {#focus-mode}
 
-iOS 15 users can now create "Focus Modes" - custom profiles used to determine which notifications they want to __break through__ their focus and display prominently.
+iOS 15 users can now create "Focus Modes"—custom profiles used to determine which notifications they want to break through their focus and display prominently.
 
 ![Notification Settings]({% image_buster /assets/img/ios/ios15-notification-settings.png %}){: style="float:right;max-width:25%;margin-left:15px;border:0"}
 
@@ -51,7 +46,7 @@ In iOS 15, users can (optionally) choose certain times throughout the day to rec
 
 For each notification you send, you'll soon be able to specify a "relevance score" to control which notification should appear at the top of the summary.
 
-We're excited to offer support for these new features - stay tuned for more information to be announced near iOS 15's official release!
+We're excited to offer support for these new features—stay tuned for more information to be announced near iOS 15's official release!
 
 ## Location Buttons {#location-buttons}
 
@@ -59,7 +54,7 @@ iOS 15 introduces a new, convenient way for users to temporarily grant location 
 
 The new location button builds off of the existing "Allow Once" permission without repeatedly prompting users who click multiple times in the same session.
 
-For more information, watch Apple's [Meet The Location Button](https://developer.apple.com/videos/play/wwdc2021/10102/) video from this year's WWDC conference.
+For more information, watch Apple's [Meet the Location Button](https://developer.apple.com/videos/play/wwdc2021/10102/) video from this year's Worldwide Developer Conference (WWDC).
 
 {% alert tip %}
 This feature gives you an extra chance to prompt users for permission! Users who have previously declined location permissions before iOS 15 will be shown a prompt when clicking the location button as an opportunity to reset the permission from the declined state one last time.
@@ -67,17 +62,18 @@ This feature gives you an extra chance to prompt users for permission! Users who
 
 ### Using Location Buttons with Braze
 
-No additional integration is required when using location buttons with Braze. Your app should continue passing a user's location - once they've granted permission - as usual.
+No additional integration is required when using location buttons with Braze. Your app should continue passing a user's location (once they've granted permission) as usual.
 
 According to Apple, users who have already shared background location access, the "While Using App" option will continue to grant that level of permission after they upgrade to iOS 15.
 
 ## Apple Mail {#mail}
 
-This year, Apple has announced many updates to email tracking and privacy. For more information, check out our [recent blog post](https://www.braze.com/resources/articles/9-ways-email-marketers-can-respond-to-apples-mail-privacy-protection-feature).
+This year, Apple has announced many updates to email tracking and privacy. For more information, check out our [blog post](https://www.braze.com/resources/articles/9-ways-email-marketers-can-respond-to-apples-mail-privacy-protection-feature).
 
 ## Safari IP Address Location
 
-In iOS 15, users will be able to configure Safari to anonymize or generalize the location that can be determined from their IP Addresses. Please keep this in mind when using location-based targeting or segmentation.
+In iOS 15, users will be able to configure Safari to anonymize or generalize the location that can be determined from their IP addresses. Please keep this in mind when using location-based targeting or segmentation.
 
 [1]: https://github.com/Appboy/appboy-ios-sdk/releases/tag/4.3.2
 [2]: https://github.com/Appboy/appboy-ios-sdk/issues
+[3]: https://www.braze.com/docs/user_guide/message_building_by_channel/push/ios/notification_options/#interruption-level
