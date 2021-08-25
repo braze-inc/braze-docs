@@ -1047,7 +1047,7 @@ This event occurs when a user sends an SMS.
   "canvas_step_name": (string) name of the step for this message if from a Canvas,
   "dispatch_id": (string) id of the message dispatch (unique id for each 'transmission' sent from the Braze platform and users who are sent a schedule message get the same dispatch_id. Action-based or API-triggered messages get a unique dispatch_id per user
   "send_id": (string) message send ID this message belongs to,
-"category" : (string) If the SMS was sent as a result of auto-response to one of your global SMS keywords, the Category will be reflected here (e.g Opt-In, Opt-Out, Help) 
+  "category" : (string) If the SMS was sent as a result of auto-response to one of your global SMS keywords, the Category will be reflected here (e.g Opt-In, Opt-Out, Help) 
 }
 ```
 {% endapi %}
