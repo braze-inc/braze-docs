@@ -68,6 +68,11 @@ $(document).ready(function () {
             } else {
               title = item.title.replaceUnder();
             }
+
+            if ("article_title" in item) {
+              title = item.article_title.replaceUnder();
+            }
+
             if ("type" in item) {
               type = item.type.replaceUnder().upCaseWord();
             }
@@ -91,12 +96,12 @@ $(document).ready(function () {
                 if (Array.isArray(i_tags)) {
                   for (var its = 0; its < i_tags.length; its++) {
                     tags_list += '<span class="search_tags" style="background-color: ' + search_color_mapping[mp] +
-                      ';">' + i_tags[its] + '</span>';
+                      ';">' + i_tags[its].upCaseWord().mapReplace(custom_word_mapping) + '</span>';
                   }
                 }
                 else {
                   tags_list += '<span class="search_tags" style="background-color: ' + search_color_mapping[mp] +
-                    ';">' + i_tags + '</span>';
+                    ';">' + i_tags.upCaseWord().mapReplace(custom_word_mapping) + '</span>';
                 }
               }
             }
@@ -115,6 +120,13 @@ $(document).ready(function () {
                 .replaceUnder()
                 .replace(/<(.|\n)*?>/g, "");
             }
+            
+            if (!content && ('guide_top_text' in item)) {
+              content = item.guide_top_text
+                .replaceUnder()
+                .replace(/<(.|\n)*?>/g, "");
+            }
+
             if ("description" in item) {
               description = item.description
                 .replaceUnder()
@@ -132,9 +144,7 @@ $(document).ready(function () {
             }
             var resulttemplate = '<a href="' +
                 base_url + url + '"><div class="title">' +
-                title + ' <div class="category">' +
-                subname.replace(/\_/g, " ") +
-                ' </div></div><div class="search_tag_div">' + tags_list + '</div>' + article_path + ' <div class="content">' +
+                title + '</div><div class="search_tag_div">' + tags_list + '</div>' + article_path + ' <div class="content">' +
                 search_msg +
                 "</div><hr /></a>";
 
