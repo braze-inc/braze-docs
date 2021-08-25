@@ -167,7 +167,7 @@ Apps can specify which push notifications are most relevant, by setting a __Rele
 
 All notifications will still be accessible in the user's notification center.
 
-To set an iOS Notification's Relevance Score, enter a value between `0.0` and `1.0` within the Settings tab. For example, the most important message should be set with `1.0`, whereas a medium-importance message can be sent with `0.5`.
+To set an iOS Notification's Relevance Score, enter a value between `0.0` and `1.0` within the Settings tab. For example, the most important message should be sent with `1.0`, whereas a medium-importance message can be sent with `0.5`.
 
 ![Relevance Score Option][29]
 
