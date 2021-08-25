@@ -40,7 +40,7 @@ To use Dark Mode for all in-app messages, go to Templates & Media, then In-App M
 - End users must be on iOS devices version 13 or higher, or Android devices version 10 or higher.
 - Braze iOS SDK v3.21.0+ Braze Android SDK v3.8.0+ is required.
 
-{% alert info %}
+{% alert tip %}
 Dark Mode apps were introduced with Android 10 and iOS 13. Users who have not upgraded their phones to at least these versions will only be shown the light theme.
 
 Campaigns will still be served to all users who are eligible for the audience you have selected, regardless of users' Dark Mode setting or OS version.
