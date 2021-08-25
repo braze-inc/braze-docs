@@ -1,6 +1,9 @@
 ---
 nav_title: Runtime Configuration
-platform: Android
+article_title: Runtime Configuration for Android/FireOS
+platform: 
+  - Android
+  - FireOS
 page_order: 4
 description: "This reference article covers how to set up runtime configuration for your Android application."
 

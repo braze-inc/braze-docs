@@ -1,7 +1,10 @@
 ---
 nav_title: Accessibility
+article_title: Accessibility for Android/FireOS
 page_order: 4
-platform: Android
+platform: 
+  - Android
+  - FireOS
 description: "This reference article covers how to implement specific Android SDK accessibility features such as in-app message talkback into your Android application."
 
 ---

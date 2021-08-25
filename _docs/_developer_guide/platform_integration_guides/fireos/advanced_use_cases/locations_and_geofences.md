@@ -6,7 +6,7 @@ tool: Location
 
 page_type: reference
 description: "This article covers how to enable Geofences for your Android app."
-
+hidden: true
 ---
 
 # Locations & Geofences

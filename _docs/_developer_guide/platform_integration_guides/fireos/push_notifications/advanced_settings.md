@@ -6,7 +6,7 @@ page_order: 4
 page_type: reference
 description: "This article covers advanced settings available for Android and FireOS push notifications sent through the Braze dashboard."
 channel: push
-
+hidden: true
 ---
 
 # Advanced Settings

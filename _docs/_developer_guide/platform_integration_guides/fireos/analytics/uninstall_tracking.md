@@ -5,7 +5,7 @@ page_order: 7
 
 page_type: reference
 description: "This article describes how Braze tracks uninstall counts for your app."
-
+hidden: true
 ---
 
 # Uninstall Tracking

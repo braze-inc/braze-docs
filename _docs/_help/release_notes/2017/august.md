@@ -37,7 +37,7 @@ We’ve exposed new API endpoints, /email/hard_bounces, that lets you pull hard 
 
 ## Geofences
 
-We’ve added a new feature, Geofences, that allows you to trigger messages in real-time when customers enter and exit defined geographical areas, enabling personalized, relevant communication with your customers. Learn more about location marketing in [Academy][64].
+We’ve added a new feature, Geofences, that allows you to trigger messages in real-time when customers enter and exit defined geographical areas, enabling personalized, relevant communication with your customers. Learn more about location marketing in [our Documentation][64].
 
 ## Update to Email Editor
 
@@ -72,7 +72,7 @@ Now, you can receive consolidated data for every campaign and every Canvas in tw
 [61]: {{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/create_a_canvas/
 [62]: {{site.baseurl}}/user_guide/engagement_tools/segments/segmentation_filters/#segmentation-filters
 [63]: {{site.baseurl}}/help/troubleshooting_guide/troubleshooting_guide/#email
-[64]: {{site.baseurl}}/developer_guide/platform_integration_guides/fireos/advanced_use_cases/locations_and_geofences/#locations--geofences
+[64]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/advanced_use_cases/locations_and_geofences/
 [65]: {{site.baseurl}}/developer_guide/rest_api/basics/#what-is-a-rest-api
 [66]: {{site.baseurl}}/user_guide/message_building_by_channel/push/best_practices/
 [67]: {{site.baseurl}}/help/troubleshooting_guide/troubleshooting_guide/#email

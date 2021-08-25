@@ -1,7 +1,10 @@
 ---
 nav_title: Read & Unread Indicators
+article_title: News Feed Read & Unread Indicators for Android/FireOS
 page_order: 4
-platform: Android
+platform: 
+  - Android
+  - FireOS
 description: "This reference article covers how to implement read and unread indicators in your News Feed for your Android application."
 channel:
   - news feed

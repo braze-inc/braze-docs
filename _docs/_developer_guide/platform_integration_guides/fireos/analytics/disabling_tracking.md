@@ -5,7 +5,7 @@ page_order: 8
 
 page_type: reference
 description: "This page covers disabling data collection, which may be required in order to comply with data privacy regulations."
-
+hidden: true
 ---
 
 # Disabling Data Collection

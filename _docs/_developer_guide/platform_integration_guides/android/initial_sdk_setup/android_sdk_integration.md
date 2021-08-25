@@ -1,7 +1,10 @@
 ---
 nav_title: Android SDK Integration
+article_title: Android SDK Integration for Android/FireOS
 page_order: 0
-platform: Android
+platform: 
+  - Android
+  - FireOS
 description: "This reference article covers how to integrate the Android SDK into your Android application."
 
 ---

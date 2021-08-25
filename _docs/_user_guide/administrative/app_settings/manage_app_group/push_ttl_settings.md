@@ -4,6 +4,7 @@ article_title: Push TTL Settings
 page_order: 4
 page_type: reference
 description: "This reference article covers the Push Time to Live settings page in the Braze Dashboard."
+channel: push
 
 ---
 

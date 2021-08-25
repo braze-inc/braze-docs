@@ -5,7 +5,7 @@ page_order: 3
 
 page_type: reference
 description: "This article covers methods for assigning custom attributes to users."
-
+hidden: true
 ---
 
 # Setting Custom Attributes

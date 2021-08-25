@@ -1,6 +1,6 @@
 ---
 nav_title: "Trigger Properties Object"
-article_title: Trigger Properties Object
+article_title: API Trigger Properties Object
 page_order: 11
 page_type: reference
 description: "This article explains the different components of the Trigger Properties object."

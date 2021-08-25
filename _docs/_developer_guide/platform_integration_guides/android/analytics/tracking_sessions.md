@@ -1,6 +1,9 @@
 ---
 nav_title: Tracking Sessions
-platform: Android
+article_title: Tracking Sessions for Android/FireOS
+platform: 
+  - Android
+  - FireOS
 page_order: 0
 description: "This reference article shows how to subscribe to session updates for your Android application."
 
@@ -24,8 +27,7 @@ __Note:__ If a session closes while the user has the app backgrounded, that data
 To customize the session timeout, add `com_appboy_session_timeout` to your [`braze.xml`][session_tracking_3] file:
 
 ```xml
-<!-- The length of time before a session times out in seconds. The session manager will "re-open"
-otherwise closed sessions if the call to StartSession comes within this interval. (default is 10) -->
+<!-- The length of time before a session times out in seconds. The session manager will "re-open" otherwise closed sessions if the call to StartSession comes within this interval. (default is 10) -->
 <integer name="com_appboy_session_timeout">NUMBER_OF_SECONDS_UNTIL_SESSION_TIMEOUT</integer>
 ```
 

@@ -5,7 +5,7 @@ platform: FireOS
 description: "This reference article shows how to define a News Feed category in your Android application."
 channel:
   - news feed
-  
+hidden: true
 ---
 
 # Defining a News Feed Category

@@ -1,6 +1,6 @@
 ---
 nav_title: "SMS Object"
-article_title: SMS Object
+article_title: SMS Messaging Object
 page_order: 10
 page_type: reference
 channel: SMS

@@ -1,6 +1,7 @@
 ---
 page_order: 0
 nav_title: Help
+article_title: Self-Help Troubleshooting Guide
 layout: self_help
 help_top_header: "Self-Help Troubleshooting Guide"
 

@@ -1,7 +1,10 @@
 ---
 nav_title: Customization
+article_title: Content Card Customization for Android/FireOS
 page_order: 2
-platform: Android
+platform: 
+  - Android
+  - FireOS
 description: "This article covers customization options for your Content Cards in your Android application."
 channel:
   - content cards
