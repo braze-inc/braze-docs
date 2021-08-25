@@ -256,9 +256,6 @@ A good security practice is to assign a user only as much access as is necessary
 
 With App identifiers, the `app_id` is assigned by Braze and permissions cannot be assigned or revoked. Because of the nature of the relationship between `app_id` and the SDK, keeping this identifier secure is __crucial__ in the security of your application.
 
-{% alert update %}
-Braze deprecated the Debug API keys in August 2014. As a result, you will no longer see “Braze is Working” when using any legacy debug API keys you may have. You should migrate your application to the API key on your **Settings** page in order to test messaging and recording functionality. The production key should be used with production provisioning profiles and apps that are live in the app store.
-{% endalert %} 
 
 [2]: {{site.baseurl}}/api/identifier_types/
 [3]: https://developer.android.com/studio/build/build-variants.html
