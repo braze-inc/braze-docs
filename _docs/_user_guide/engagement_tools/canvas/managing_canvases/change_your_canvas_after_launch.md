@@ -1,7 +1,7 @@
 ---
 nav_title: Change Your Canvas After Launch
 article_title: Change Your Canvas After Launch
-page_order: 3
+page_order: 1
 description: "This reference article covers the different aspects of a Canvas that can be changed after the initial launch."
 page_type: reference
 tool:

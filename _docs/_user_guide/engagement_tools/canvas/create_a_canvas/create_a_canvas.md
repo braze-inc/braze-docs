@@ -1,5 +1,5 @@
 ---
-nav_title: Create a Canvas
+nav_title: Creating a Canvas
 article_title: Creating a Canvas
 page_order: 0
 page_type: reference
