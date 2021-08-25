@@ -1,7 +1,7 @@
 ---
 nav_title: In-App Messaging
 article_title: In-App Messaging for Xamarin
-platform: Xamarinplatform: 
+platform: 
   - Xamarin
   - iOS
   - Android
