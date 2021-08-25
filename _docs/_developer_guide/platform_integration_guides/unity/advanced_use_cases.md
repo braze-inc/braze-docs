@@ -1,6 +1,6 @@
 ---
 nav_title: Advanced Use Cases
-article_title: Advanced Use Cases for Unity
+article_title: Advanced SDK Use Cases for Unity
 platform: 
   - Unity
   - iOS

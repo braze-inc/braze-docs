@@ -1,6 +1,6 @@
 ---
 nav_title: "Android Objects"
-article_title: Android Objects
+article_title: Android Messaging Object
 page_order: 0
 page_type: reference
 channel: push

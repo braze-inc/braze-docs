@@ -1,5 +1,6 @@
 ---
 nav_title: Help Articles
+article_title: Help Articles
 page_order: 1
 layout: dev_guide
 guide_top_header: "Help Articles"

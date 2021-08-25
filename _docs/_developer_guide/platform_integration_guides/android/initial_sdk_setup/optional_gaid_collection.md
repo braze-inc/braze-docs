@@ -1,6 +1,6 @@
 ---
 nav_title: Google Advertising ID (Optional)
-article_title: Optional Google Advertising ID for Android/FireOS
+article_title: Optional Google Advertising ID for Android
 page_order: 9
 platform: 
   - Android

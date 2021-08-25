@@ -1,6 +1,6 @@
 ---
 nav_title: AndroidX Integration
-article_title: AndroidX Integration for Android/FireOS
+article_title: AndroidX Integration for Android
 platform: 
   - Android
   - FireOS

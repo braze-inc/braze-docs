@@ -1,6 +1,6 @@
 ---
 nav_title: iOS 15 Upgrade Guide
-article_title: iOS 15 Upgrade Guide
+article_title: iOS 15 SDK Upgrade Guide
 page_order: 7
 platform: iOS
 description: "This reference article covers the new iOS 15 OS updates, required SDK updates, and new features."

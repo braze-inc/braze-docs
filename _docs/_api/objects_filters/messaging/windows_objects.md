@@ -1,6 +1,6 @@
 ---
 nav_title: "Windows Object"
-article_title: Windows Object
+article_title: Windows Messaging Object
 page_order: 14
 page_type: reference
 channel: push
