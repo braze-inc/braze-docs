@@ -35,3 +35,62 @@ Note that overriding default images is currently not supported in our Xamarin iO
 ## Customizing the Content Cards Feed
 
 You can create your own Content Cards interface by extending `ABKContentCardsTableViewController` to customize all UI elements and Content Cards behavior. The Content Card cells may also be subclassed and then used programmatically or by introducing a custom Storyboard that registers the new classes. See the [Content Cards sample app](https://github.com/Appboy/appboy-ios-sdk/tree/master/Samples/ContentCards/BrazeContentCardsSampleApp) for a more complete example. Alternatively, you can create a completely custom view controller and [subscribe for data updates]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/content_cards/data_model/). In the latter case, you would need to log all view events, dismissed events, and clicks manually.
+
+## Handling Clicks Manually
+
+You can manually handle Content Card clicks by implementing the [ABKContentCardsTableViewControllerDelegate](https://appboy.github.io/appboy-ios-sdk/docs/protocol_a_b_k_content_cards_table_view_controller_delegate-p.html) protocol and setting your delegate object as the `delegate` property of the `ABKContentCardsTableViewController`. See the [Content Cards sample app](https://github.com/Appboy/appboy-ios-sdk/tree/master/Samples/ContentCards/BrazeContentCardsSampleApp) for an example. 
+
+{% tabs %}
+{% tab OBJECTIVE-C %}
+
+```objc
+contentCardsTableViewController.delegate = delegate;
+
+// Methods to implement in delegate
+- (BOOL)contentCardTableViewController:(ABKContentCardsTableViewController *)viewController
+                 shouldHandleCardClick:(NSURL *)url {
+  if ([[url.host lowercaseString] isEqualToString:@"my-domain.com"]) {
+    // Custom handle link here
+    NSLog(@"Manually handling content card click with URL %@", url.absoluteString);
+    return NO;
+  }
+  // Let the Braze SDK handle the click action
+  return YES;
+}
+
+- (void)contentCardTableViewController:(ABKContentCardsTableViewController *)viewController
+                    didHandleCardClick:(NSURL *)url {
+  NSLog(@"Braze SDK handled content card click with URL %@", url.absoluteString);
+}
+```
+
+{% endtab %}
+{% tab swift %}
+
+```swift
+contentCardsTableViewController.delegate = delegate
+
+// Methods to implement in delegate
+func contentCardTableViewController(_ viewController: ABKContentCardsTableViewController!,
+                                    shouldHandleCardClick url: URL!) -> Bool {
+  if (url.host?.lowercased() == "my-domain.com") {
+    // Custom handle link here
+    NSLog("Manually handling content card click with URL %@", url.absoluteString)
+    return false
+  }
+  // Let the Braze SDK handle the click action
+  return true
+}
+
+func contentCardTableViewController(_ viewController: ABKContentCardsTableViewController!,
+                                    didHandleCardClick url: URL!) {
+  NSLog("Braze SDK handled content card click with URL %@", url.absoluteString)
+}
+```
+
+{% endtab %}
+{% endtabs %}
+
+{% alert important %}
+If you override the `handleCardClick:` method in `ABKContentCardsTableViewController`, then these delegate methods might not be called.
+{% endalert %}
