@@ -63,7 +63,6 @@ $(document).ready(function () {
             var type = "";
             var category = "";
             var tags_list = "";
-            var subname = "";
             var heading = "";
 
             if ("nav_title" in item) {
@@ -71,6 +70,10 @@ $(document).ready(function () {
             } else {
               title = item.title.replaceUnder();
             }
+            if ("article_title" in item) {
+              title = item.article_title.replaceUnder();
+            }
+
             if ("type" in item) {
               type = item.type.replaceUnder().upCaseWord();
             }
@@ -84,12 +87,12 @@ $(document).ready(function () {
                 if (Array.isArray(i_tags)) {
                   for (var its = 0; its < i_tags.length; its++) {
                     tags_list += '<span class="search_tags" style="background-color: ' + search_color_mapping[mp] +
-                      ';">' + i_tags[its] + '</span>';
+                      ';">' + i_tags[its].upCaseWord().mapReplace(custom_word_mapping) + '</span>';
                   }
                 }
                 else {
                   tags_list += '<span class="search_tags" style="background-color: ' + search_color_mapping[mp] +
-                    ';">' + i_tags + '</span>';
+                    ';">' + i_tags.upCaseWord().mapReplace(custom_word_mapping) + '</span>';
                 }
               }
             }
@@ -110,12 +113,14 @@ $(document).ready(function () {
                   item["headings"][item["headings"].length - 1];
               }
             }
-            if (category) {
-              subname = "(" + category.upCaseWord() + ")";
-            }
 
             if ("content" in item) {
               content = item.content
+                .replaceUnder()
+                .replace(/<(.|\n)*?>/g, "");
+            }
+            if (!content && ('guide_top_text' in item)) {
+              content = item.guide_top_text
                 .replaceUnder()
                 .replace(/<(.|\n)*?>/g, "");
             }
@@ -126,8 +131,8 @@ $(document).ready(function () {
             }
             var search_msg = description || content;
 
-            if (search_msg.length > 400) {
-              search_msg = search_msg.substring(0, 400);
+            if (search_msg.length > 200) {
+              search_msg = search_msg.substring(0, 200);
               search_msg += "...";
             }
             var url = item.url;
@@ -137,7 +142,7 @@ $(document).ready(function () {
             var resulttemplate = '<a href="' +
                 base_url + url + '"><div class="title">' +
                 title + ' <div class="category">' +
-                subname.replace(/\_/g, " ") + ' ' + tags_list + article_path +
+                tags_list + article_path +
                 '</div></div> <div class="content">' +
                 search_msg +
                 "</div><hr /></a>";

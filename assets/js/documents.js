@@ -27,11 +27,12 @@ if (!algolia_user){
 }
 
 var search_color_mapping = {
-  'endpoint': '#33c699',
-  'channel': '#ff9349',
-  'partner': '#3accdd',
-  'tool': '#F7918e',
-  'platform': '#27368f',
+  'endpoint': '#33C699',
+  'channel': '#FF9349',
+  'partner': '#3ACCDD',
+  'tool': '#F7918E',
+  'platform': '#27368F',
+  'search_tag': '#0759AA',
 };
 
 var custom_word_mapping = {
@@ -77,7 +78,9 @@ var custom_word_mapping = {
   'an': 'an',
   'SMS': 'SMS',
   'MMS': 'MMS',
-}
+  'Platform Wide': 'Platform Wide Features & Behaviors',
+};
+
 // Set cookie to auto expire after 30 days of inactivity
 Cookies.set('__algolia_user', algolia_user, { expires: 30 });
 
@@ -93,12 +96,12 @@ Array.prototype.upCaseWord = function() {
 Array.prototype.replaceUnder = function() {
   return this.map(function(itm){ return itm.toString().replace(/\%20/g, ' ').replace(/\_/g, ' ')});
 };
-String.prototype.mapReplace = function(map) {
+String.prototype.mapReplace = function(word_map) {
   var mstr = this;
-  for (var wd in map) {
-    if (map.hasOwnProperty(wd)) {
+  for (var wd in word_map) {
+    if (word_map.hasOwnProperty(wd)) {
         var rep = new RegExp('\\b' + wd + '\\b','gi');
-        mstr = mstr.replace(rep,map[wd]);
+        mstr = mstr.replace(rep,word_map[wd]);
     }
   }
   return mstr;
