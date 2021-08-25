@@ -148,8 +148,8 @@ When a user starts their first session, both a `FirstSession` and a `SessionStar
   "device_model": (string) hardware model of the device,
   "device_id": (string) id of the device on which the session occurred,
   "gender": (string) gender of the user,
-  "country": (string) gender of the user,
-  "language": (string) gender of the user,
+  "country": (string) country of the user,
+  "language": (string) language of the user,
   "sdk_version": (string) version of the Braze SDK in use during the session
 }
 ```
