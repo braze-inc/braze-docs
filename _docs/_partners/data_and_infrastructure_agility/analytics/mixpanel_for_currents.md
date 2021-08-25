@@ -62,8 +62,8 @@ You can manage the Mixpanel Cohort Import process from the Technology Partners p
 ```json
 // Purchase
 {
-  "product_id": (string) id of product purchased (sent in the “productId” field of Amplitude HTTP API),
-  "price": (float) price of product (sent in the “price” field of Amplitude HTTP API),
+  "product_id": (string) id of product purchased (sent in the “productId” field of Mixpanel HTTP API),
+  "price": (float) price of product (sent in the “price” field of Mixpanel HTTP API),
   "currency": (string) three letter alpha ISO 4217 currency code,
   "app_id": (string) id for the app on which the user action occurred,
   "platform": (string) platform of the device (iOS, Android, web, etc.),
