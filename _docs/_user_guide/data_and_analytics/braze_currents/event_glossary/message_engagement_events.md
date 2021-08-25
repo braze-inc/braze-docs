@@ -105,10 +105,15 @@ This event occurs when a user directly clicks on the Push notification to open t
   "canvas_variation_name": (string) name of the Canvas variation the user is in if from a Canvas,
   "canvas_step_id": (string) id of the step for this message if from a Canvas,
   "canvas_step_name": (string) name of the step for this message if from a Canvas,
+  "canvas_step_message_variation_id": (string) API id of the canvas step message variation this user received,
   "platform": (string) platform of the device (iOS, Android, web, etc.),
   "os_version": (string) os version of device used for the action,
   "device_model": (string) hardware model of the device,
   "device_id": (string) id of the device that we made a delivery attempt to,
+  "button_action_type": (string) Action type of the push notification,
+  button. One of [URI, DEEP_LINK, NONE, CLOSE, SHARE]. null if not
+  from a button click,
+  "button_string": (string) identifier (button_string) of the push notification button clicked. null if not from a button click,
   "send_id": (string) id of the message if specified for the campaign (See Send Identifier under API Identifier Types),
   "dispatch_id": (string) id of the message dispatch (unique id for each 'transmission' sent from the Braze platform). Users who are sent a schedule message get the same dispatch_id. Action-based or API-triggered messages get a unique dispatch_id per user.,
   "ad_id": (string) advertising identifier,
@@ -599,6 +604,7 @@ Subscription groups are only available for email and SMS channels at this time.
   "channel": (string) either 'sms' or 'email',
   "time": (int) UTC time of the event in seconds since the epoch,
   "timezone": (string) IANA time zone of the user at the time of the event,
+  "app_id": (string) id for the app on which the user action occurred,
   "campaign_id": (string) id of the campaign if from a campaign,
   "campaign_name": (string) name of the campaign,
   "message_variation_id": (string) id of the message variation if from a campaign,
@@ -1026,9 +1032,9 @@ This event occurs when a user sends an SMS.
   "user_id": (string) Braze user id of the user,
   "external_user_id": (string) External ID of the user,
   "time": (int) UTC time of the event in seconds since the epoch,
+  "timezone": (string) IANA time zone of the user at the time of the event,
   "from_phone_number": (string) the from phone number of the message (Delivered and Undelivered only),
   "subscription_group_id": (string) id of the subscription group targeted for this SMS message,
-  "subscription_group_api_id": (string) api id of the subscription group targeted for this SMS message,
   "to_phone_number": (string) the number the message was sent to,
   "campaign_id": (string) id of the campaign if from a campaign,
   "campaign_name": (string) name of the campaign,
@@ -1040,6 +1046,7 @@ This event occurs when a user sends an SMS.
   "canvas_step_id": (string) id of the step for this message if from a Canvas,
   "canvas_step_name": (string) name of the step for this message if from a Canvas,
   "dispatch_id": (string) id of the message dispatch (unique id for each 'transmission' sent from the Braze platform and users who are sent a schedule message get the same dispatch_id. Action-based or API-triggered messages get a unique dispatch_id per user
+  "send_id": (string) message send ID this message belongs to,
   "category" : (string) If the SMS was sent as a result of auto-response to one of your global SMS keywords, the Category will be reflected here (e.g Opt-In, Opt-Out, Help) 
 }
 ```
@@ -1062,9 +1069,9 @@ This event occurs when an SMS is sent to the carrier.
   "user_id": (string) Braze user id of the user,
   "external_user_id": (string) External ID of the user,
   "time": (int) UTC time of the event in seconds since the epoch,
+  "timezone": (string) IANA time zone of the user at the time of the event,
   "from_phone_number": (string) the from phone number of the message (Delivered and Undelivered only),
   "subscription_group_id": (string) id of the subscription group targeted for this SMS message,
-  "subscription_group_api_id": (string) api id of the subscription group targeted for this SMS message,
   "to_phone_number": (string) the number the message was sent to,
   "campaign_id": (string) id of the campaign if from a campaign,
   "campaign_name": (string) name of the campaign,
@@ -1075,7 +1082,8 @@ This event occurs when an SMS is sent to the carrier.
   "canvas_variation_name": (string) name of the Canvas variation the user is in if from a Canvas,
   "canvas_step_id": (string) id of the step for this message if from a Canvas,
   "canvas_step_name": (string) name of the step for this message if from a Canvas,
-  "dispatch_id": (string) id of the message dispatch (unique id for each 'transmission' sent from the Braze platform and users who are sent a schedule message get the same dispatch_id. Action-based or API-triggered messages get a unique dispatch_id per user
+  "dispatch_id": (string) id of the message dispatch (unique id for each 'transmission' sent from the Braze platform and users who are sent a schedule message get the same dispatch_id. Action-based or API-triggered messages get a unique dispatch_id per user,
+  "send_id": (string) message send ID this message belongs to
 }
 ```
 {% endapi %}
@@ -1097,9 +1105,9 @@ This event occurs when an SMS was successfully delivered to the users mobile pho
   "user_id": (string) Braze user id of the user,
   "external_user_id": (string) External ID of the user,
   "time": (int) UTC time of the event in seconds since the epoch,
+  "timezone": (string) IANA time zone of the user at the time of the event,
   "from_phone_number": (string) the from phone number of the message (Delivered and Undelivered only),
   "subscription_group_id": (string) id of the subscription group targeted for this SMS message,
-  "subscription_group_api_id": (string) api id of the subscription group targeted for this SMS message,
   "to_phone_number": (string) the number the message was sent to,
   "campaign_id": (string) id of the campaign if from a campaign,
   "campaign_name": (string) name of the campaign,
@@ -1110,7 +1118,8 @@ This event occurs when an SMS was successfully delivered to the users mobile pho
   "canvas_variation_name": (string) name of the Canvas variation the user is in if from a Canvas,
   "canvas_step_id": (string) id of the step for this message if from a Canvas,
   "canvas_step_name": (string) name of the step for this message if from a Canvas,
-  "dispatch_id": (string) id of the message dispatch (unique id for each 'transmission' sent from the Braze platform and users who are sent a schedule message get the same dispatch_id. Action-based or API-triggered messages get a unique dispatch_id per user
+  "dispatch_id": (string) id of the message dispatch (unique id for each 'transmission' sent from the Braze platform and users who are sent a schedule message get the same dispatch_id. Action-based or API-triggered messages get a unique dispatch_id per user,
+  "send_id": (string) message send ID this message belongs to
 }
 ```
 {% endapi %}
@@ -1132,6 +1141,7 @@ This event occurs when an SMS send gets rejected by the carrier, this can happen
   "user_id": (string) Braze user id of the user,
   "external_user_id": (string) External ID of the user,
   "time": (int) UTC time of the event in seconds since the epoch,
+  "timezone": (string) IANA time zone of the user at the time of the event,
   "from_phone_number": (string) the from phone number of the message (Delivered and Undelivered only),
   "subscription_group_id": (string) id of the subscription group targeted for this SMS message,
   "subscription_group_api_id": (string) api id of the subscription group targeted for this SMS message,
@@ -1146,6 +1156,7 @@ This event occurs when an SMS send gets rejected by the carrier, this can happen
   "canvas_step_id": (string) id of the step for this message if from a Canvas,
   "canvas_step_name": (string) name of the step for this message if from a Canvas,
   "dispatch_id": (string) id of the message dispatch (unique id for each 'transmission' sent from the Braze platform and users who are sent a schedule message get the same dispatch_id. Action-based or API-triggered messages get a unique dispatch_id per user,
+  "send_id": (string) message send ID this message belongs to,
   "error": (string) the Braze provided error (Rejection and Delivery Failure events only),
   "provider_error_code": (string) the provider’s reason code as to why the message was not sent (Rejection and Delivery Failure events only)
 }
@@ -1170,6 +1181,7 @@ This event occurs when an SMS experiences delivery failure. Use this event and t
   "user_id": (string) Braze user id of the user,
   "external_user_id": (string) External ID of the user,
   "time": (int) UTC time of the event in seconds since the epoch,
+  "timezone": (string) IANA time zone of the user at the time of the event,
   "from_phone_number": (string) the from phone number of the message (Delivered and Undelivered only),
   "subscription_group_id": (string) id of the subscription group targeted for this SMS message,
   "subscription_group_api_id": (string) api id of the subscription group targeted for this SMS message,
@@ -1184,6 +1196,7 @@ This event occurs when an SMS experiences delivery failure. Use this event and t
   "canvas_step_id": (string) id of the step for this message if from a Canvas,
   "canvas_step_name": (string) name of the step for this message if from a Canvas,
   "dispatch_id": (string) id of the message dispatch (unique id for each 'transmission' sent from the Braze platform and users who are sent a schedule message get the same dispatch_id. Action-based or API-triggered messages get a unique dispatch_id per user,
+  "send_id": (string) message send ID this message belongs to,
   "error": (string) the Braze provided error (Rejection and Delivery Failure events only),
   "provider_error_code": (string) the provider’s reason code as to why the message was not sent (Rejection and Delivery Failure events only)
 }
@@ -1205,6 +1218,7 @@ This event occurs when one of your users sends an SMS to a phone number in one o
   "id": (string) unique id of this event,
   "user_id": (string) Braze user id of the user,
   "external_user_id": (string) External ID of the user,
+  "app_group_id": (string) API ID of the app group associated with the inbound phone number,
   "time": (int) UTC time of the event in seconds since the epoch,
   "user_phone_number": (string) the phone number of the user who sent the message to your Braze number,
   "subscription_group_id": (string) id of the subscription group which the phone number the user messaged belongs to,
@@ -1212,10 +1226,14 @@ This event occurs when one of your users sends an SMS to a phone number in one o
   "action" : (string) the subscription action Braze took as a result of this message (either `subscribed`, `unsubscribed` or `none` based on the message body. `None` indicates this inbound message did not match any of your keywords to opt-in or opt-out a user),
   "message_body" : (string) the body of the message sent by the user,
   "campaign_id": (string) id of the campaign if Braze identifies this inbound message is a reply to a campaign,
+  "campaign_name": (string) name of the campaign,
   "message_variation_id": (string) id of the message variation if Braze identifies this inbound message is a reply to a campaign,
-  "canvas_id": (string) id of the Canvas if Braze identifies this inbound message is a reply to a Canvas step,
-  "canvas_variation_id": (string) id of the Canvas variation the user is in if Braze identifies this inbound message is a reply to a Canvas step,
-  "canvas_step_id": (string) id of the step for this message if Braze identifies this inbound message is a reply to a Canvas step.
+  "canvas_id": (string) id of the Canvas if from a Canvas,
+  "canvas_name": (string) name of the Canvas,
+  "canvas_variation_id": (string) id of the Canvas variation the user is in if from a Canvas,
+  "canvas_variation_name": (string) name of the Canvas variation the user is in if from a Canvas,
+  "canvas_step_id": (string) id of the step for this message if from a Canvas,
+  "canvas_step_name": (string) name of the step for this message if from a Canvas
 }
 ```
 {% endapi %}
@@ -1337,6 +1355,7 @@ This event occurs when a user is enrolled in a control variant set on a multi-va
   "id": (string) unique id of this event,
   "user_id": (string) Braze user id of the user,
   "external_user_id": (string) External ID of the user,
+  "app_id": (string) id for the app on which the user action occurred,
   "time": (int) UTC time of the event in seconds since the epoch,
   "timezone": (string) IANA time zone of the user at the time of the event,
   "campaign_id": (string) id of the campaign,

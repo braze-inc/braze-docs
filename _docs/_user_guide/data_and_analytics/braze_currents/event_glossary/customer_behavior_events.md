@@ -146,7 +146,11 @@ When a user starts their first session, both a `FirstSession` and a `SessionStar
   "platform": (string) platform of the device (iOS, Android, web, etc.),
   "os_version": (string) os version of the device used for the action,
   "device_model": (string) hardware model of the device,
-  "device_id": (string) id of the device on which the session occurred
+  "device_id": (string) id of the device on which the session occurred,
+  "gender": (string) gender of the user,
+  "country": (string) country of the user,
+  "language": (string) language of the user,
+  "sdk_version": (string) version of the Braze SDK in use during the session
 }
 ```
 {% endapi %}
@@ -309,7 +313,8 @@ Please note that this is not fired when the user actually uninstalls the app - t
   "user_id": (string) Braze user id of the user,
   "external_user_id": (string) External ID of the user,
   "time": (int) UTC time of the event in seconds since the epoch,
-  "app_id": (string) id for the app on which the user action occurred
+  "app_id": (string) id for the app on which the user action occurred,
+  "device_id": (string) id of the device on which the session occurred
 }
 ```
 
