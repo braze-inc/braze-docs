@@ -1,6 +1,10 @@
 ---
 nav_title: Advanced Use Cases
-platform: Unity
+article_title: Advanced SDK Use Cases for Unity
+platform: 
+  - Unity
+  - iOS
+  - Android
 page_order: 7
 description: "This reference article covers advanced SDK use cases for the Unity platform."
 ---
@@ -33,4 +37,4 @@ Braze supports integrating [Amazon ADM push][10] into Unity apps. If you would l
 
 [1]: https://github.com/appboy/appboy-unity-sdk
 [10]: https://developer.amazon.com/public/apis/engage/device-messaging
-[11]: {{site.baseurl}}/developer_guide/platform_integration_guides/fireos/push_notifications/integration/
+[11]: {{site.baseurl}}/developer_guide/platform_integration_guides/unity/push_notifications/adm_push_notifications/

@@ -1,20 +1,13 @@
 ---
 nav_title: "Recipients Object"
+article_title: API Recipients Object
 page_order: 9
-
 page_type: reference
-
-platform:
-  - API
-tool:
-  - Campaigns
-  - Canvas
-  - Segments
-
 description: "This article explains the different components of the Braze Recipients object."
+
 ---
 
-# Recipients Object
+# Recipients Object Specification
 
 The Recipients Object allows you to request or write information in our endpoints.
 

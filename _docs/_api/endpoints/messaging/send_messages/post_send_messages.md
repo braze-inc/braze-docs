@@ -1,16 +1,12 @@
 ---
 nav_title: "POST: Send Messages Immediately via API Only"
+article_title: "POST: Send Messages Immediately via API Only"
+search_tag: Endpoint
 page_order: 4
-
 layout: api_page
-
 page_type: reference
-platform: API
-tool:
-  - Canvas
-  - Campaigns
-
 description: "This article outlines details about the Send Messages Immediately Braze endpoint."
+
 ---
 {% api %}
 # Sending Messages Immediately via API Only

@@ -1,8 +1,8 @@
 ---
 nav_title: Initial SDK Setup
+article_title: Initial SDK Setup for Unreal Engine
 platform: Unreal Engine
 page_order: 0
-
 page_type: reference
 description: "This page provides resources on initial SDK setup steps for the Braze Unreal Engine plugin."
 

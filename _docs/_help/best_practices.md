@@ -1,5 +1,6 @@
 ---
 nav_title: Best Practices
+article_title: Best Practices
 page_order: 3
 layout: dev_guide
 guide_top_header: "Best Practices"

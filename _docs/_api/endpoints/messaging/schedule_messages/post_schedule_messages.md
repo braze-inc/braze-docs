@@ -1,16 +1,12 @@
 ---
 nav_title: "POST: Schedule Messages"
+article_title: "POST: Schedule Messages"
+search_tag: Endpoint
 page_order: 4
-
 layout: api_page
-
 page_type: reference
-platform: API
-tool:
-  - Canvas
-  - Campaigns
-
 description: "This article outlines details about the Schedule Messages Braze endpoint."
+
 ---
 {% api %}
 # Create Scheduled Messages

@@ -1,19 +1,13 @@
 ---
 nav_title: "Email Object"
+article_title: Email Messaging Object
 page_order: 5
-
 page_type: reference
-
-channel: Email
-platform:
-  - API
-tool:
-  - Campaigns
-  - Canvas
-
+channel: email
 description: "This article explains the different components of Braze's Email Object."
 
 ---
+
 # Email Object Specification
 
 ```json

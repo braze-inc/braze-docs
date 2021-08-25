@@ -301,7 +301,7 @@ There are {{difference_s_days}} days left to order with standard shipping so you
 There is {{difference_e_days}} day left to order with express shipping, so your order gets here on time for Christmas Eve!
 {% else %}
 There are {{difference_e_days}} days left to order with express shipping so your order gets here on time for Christmas Eve!
-{% endif%}
+{% endif %}
 {% elsif today >= express_shipping_end and today < overnight_shipping_end %}
 This is the last day for overnight shipping so your order gets here on time for Christmas Eve!
 {% else %}
@@ -1129,17 +1129,15 @@ For example, you may want to show mobile users shorter versions of message copy 
 {% if targeted_device.${platform} == "ios" or targeted_device.${platform} == "android" %}
 This is a shorter copy.
 
-{% else % %}
+{% else %}
 This is the regular copy and much longer than the short version. 
 {% endif %}
 ```
 {% endraw %}
 
-{% raw %}
 {% alert note %} 
 Liquid is case-sensitive, `targeted_device.${platform}` returns the value in all lowercase. 
 {% endalert %}
-{% endraw %}
 
 ### Target Only a Specific Platform {#platform-target}
 
@@ -1154,7 +1152,7 @@ For example, you may want to only send a message to Android users. This can be u
 This is a message for an Android user! 
 
 {% else %}  
-{% abort_message %] 
+{% abort_message %} 
 {% endif %}
 ```
 {% endraw %}
@@ -1171,8 +1169,8 @@ The example used sends a warning to users on iOS 10.0 or below that they are pha
 
 We are phasing out support for your device's operating system. Be sure to update to the latest software for the best app experience.
 
-{% else%}
-{% abort_message%}
+{% else %}
+{% abort_message %}
 {% endif %}
 ```
 {% endraw %}
@@ -1288,7 +1286,7 @@ For example, the scenario below lets a user know that a store is closed.
 
 Store's closed. Come back between 11 am and 9 pm!
 
-{% else%} 
+{% else %} 
 {% abort_message("not sent because the store is open") %}
 {% endif %}
 ```

@@ -5,7 +5,7 @@ platform: FireOS
 description: "This reference article covers how to implement multiple Content Card feeds in your Android application."
 channel:
   - content cards
-
+hidden: true
 ---
 
 # Using Multiple Content Card Feeds

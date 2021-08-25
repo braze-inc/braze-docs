@@ -5,7 +5,7 @@ platform: FireOS
 description: "This reference article covers how to customize your News Feed in your Android application."
 channel:
   - news feed
-  
+hidden: true  
 ---
 
 # News Feed Customization

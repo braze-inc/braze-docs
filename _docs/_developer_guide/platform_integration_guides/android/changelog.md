@@ -1,8 +1,11 @@
 ---
 nav_title: Changelog
+article_title: Changelog for Android/FireOS
 page_order: 30
 page_type: update
-platform: android
+platform: 
+  - Android
+  - FireOS
 description: "This page lists updates to Braze's Android SDK changelog."
 
 ---

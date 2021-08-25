@@ -1,16 +1,12 @@
 ---
 nav_title: "POST: User Delete"
+article_title: "POST: USer Delete"
+search_tag: Endpoint
 page_order: 4
-
 layout: api_page
-
 page_type: reference
-platform: API
-tool:
-  - Canvas
-  - Campaigns
-
 description: "This article outlines details about the delete User Information Braze endpoint."
+
 ---
 {% api %}
 # User Delete Endpoint

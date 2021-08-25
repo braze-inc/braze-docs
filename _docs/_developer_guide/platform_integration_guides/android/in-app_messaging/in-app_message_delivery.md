@@ -1,7 +1,10 @@
 ---
 nav_title: In-App Message Delivery
+article_title: In-App Message Delivery for Android/FireOS
 page_order: 3
-platform: Android
+platform: 
+  - Android
+  - FireOS
 description: "This article covers Android in-app message delivery, listing different trigger types, delivery semantics, and event triggering steps."
 channel:
   - in-app messages
@@ -131,7 +134,7 @@ BrazeInAppMessageManager.getInstance().addInAppMessage(inAppMessage)
 {% endtabs %}
 
 [72]: https://gist.github.com/robbiematthews/1d037e2c366e523b2dda5f2e053ea2a9
-[73]: {{site.baseurl}}/developer_guide/platform_integration_guides/fireos/push_notifications/silent_push_notifications/#silent-push-notifications
+[73]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/push_notifications/android/silent_push_notifications/
 [75]: {% image_buster /assets/img_archive/serverSentPush.png %}
 [76]: {% image_buster /assets/img_archive/kvpConfiguration.png %}
 [77]: {% image_buster /assets/img_archive/IAMeventTrigger.png %}

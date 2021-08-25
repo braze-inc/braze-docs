@@ -5,7 +5,7 @@ platform: FireOS
 description: "This article covers different News Feed card types and the different card-specific properties available."
 channel:
   - news feed
-  
+hidden: true
 ---
 
 # Card Types

@@ -6,7 +6,7 @@ page_order: 4
 page_type: solution
 description: "This article breaks down troubleshooting steps for issues you may have with delivering or displaying in-app messages."
 channel: in-app messages
-
+hidden: true
 ---
 
 # Troubleshooting

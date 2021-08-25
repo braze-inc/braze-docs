@@ -1,15 +1,12 @@
 ---
 nav_title: "POST: Update Scheduled API-Triggered Canvas Messages"
+article_title: "POST: Update Scheduled API-Triggered Canvas Messages"
+search_tag: Endpoint
 page_order: 4
-
 layout: api_page
-
 page_type: reference
-platform: API
-tool:
-  - Canvas
-
 description: "This article outlines details about the Update Scheduled API-Triggered Canvases Braze endpoint."
+
 ---
 {% api %}
 # Update Scheduled API-Triggered Canvases

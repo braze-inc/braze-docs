@@ -1,11 +1,11 @@
 ---
 nav_title: In-App Message Delivery
+article_title: In-App Message Delivery for Web
 platform: Web
+channel: in-app messages
 page_order: 4
-
 page_type: reference
 description: "This article describes in-app message delivery via the Braze SDK, such as manually displaying in-app messages or sending exit-intent messages."
-channel: in-app messages
 
 ---
 

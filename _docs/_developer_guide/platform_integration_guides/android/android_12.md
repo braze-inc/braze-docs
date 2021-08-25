@@ -1,7 +1,10 @@
 ---
 nav_title: Android 12 Upgrade Guide
+article_title: Android 12 Upgrade Guide
 page_order: 9
-platform: Android
+platform: 
+  - Android
+  - FireOS
 description: "This reference article covers the Android 12 SDK update, highlighting changes such as deep linking, SDK compatibility, and more."
 ---
 
@@ -12,8 +15,6 @@ This guide describes relevant changes introduced in Android 12 (2021) and the re
 For a full migration guide of Android 12, see the [Android Developer Documentation](https://developer.android.com/about/versions/12).
 
 ## Braze SDK Compatibility
-
-For optimal performance on Android 12, we recommend upgrading to to [Braze Android SDK v13.1.2+][1] as soon as possible.
 
 If you are targeting Android 12, you must use [Braze Android SDK v13.1.2+][1]. If you do not target Android 12 yet, upgrading is still recommended.
 

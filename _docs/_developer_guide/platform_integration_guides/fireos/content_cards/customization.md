@@ -5,7 +5,7 @@ platform: FireOS
 description: "This article covers customization options for your Content Cards in your Android application."
 channel:
   - content cards
-
+hidden: true
 ---
 
 # Customization

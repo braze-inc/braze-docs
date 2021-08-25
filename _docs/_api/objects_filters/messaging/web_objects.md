@@ -1,20 +1,14 @@
 ---
-nav_title: "Web Objects"
+nav_title: "Web Object"
+article_title: Web Messaging Object
 page_order: 12
-
 page_type: reference
-
-channel: Push
-platform:
-  - API
-  - Web
-tool:
-  - Campaigns
-  - Canvas
-
+channel: push
+platform: Web
 description: "This article lists and explains the different Web objects used at Braze."
+
 ---
-# Web Push Objects
+# Web Push Object Specification
 
 These objects are used to define or request information related to Web Push and Web Push Alert content.
 

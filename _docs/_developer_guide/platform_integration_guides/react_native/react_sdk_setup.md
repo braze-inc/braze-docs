@@ -1,11 +1,10 @@
 ---
 nav_title: Initial SDK Setup
+article_title: Initial SDK Setup for React Native
 platform: React Native
-subplatform:
-- iOS
-- Android
 page_order: 1
 description: "This reference introduces the React Native SDK and explains how to integrate it natively on Android and iOS."
+
 ---
 
 # Initial SDK Setup
@@ -146,7 +145,7 @@ import ReactAppboy from "react-native-appboy-sdk";
 
 const App = () => {
   useEffect(() => {
-    ReactAppboy.changeUser("user-id");
+    ReactAppboy.changeUser("some-user-id");
   }, []);
 
   return (

@@ -1,17 +1,12 @@
 ---
 nav_title: API Campaigns
-platform: REST APIs
+article_title: API Campaigns
 page_order: 5
-
 description: "This reference article covers how to generate a campaign_id to include in your API calls and how to configure that campaign."
 page_type: reference
-tool:
-  - Dashboard
-  - Docs
-platform:
-  - APIs
-
 alias: /api/api_campaigns/
+tool: Campaigns
+
 ---
 # API Campaigns
 

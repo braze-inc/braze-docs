@@ -1,8 +1,12 @@
 ---
 nav_title: Content Cards
-platform: Cordova
+article_title: Content Cards Integration for Cordova
+platform: 
+  - Cordova
+  - iOS
+  - Android
 page_order: 3
-
+channel: content cards
 page_type: reference
 description: "This article covers how to get started with Content Cards for Cordova."
 
