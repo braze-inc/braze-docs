@@ -48,7 +48,6 @@ Appboy.start(withApiKey: "YOUR-API-KEY",
 {% endtabs %}
 
 If you have set a session timeout, then the above session semantics all extend to that customized timeout.
-{% endif %}
 
 **Note**: The minimum value for `sessionTimeoutInSeconds` is 1 second.
 
