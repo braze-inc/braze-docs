@@ -5,7 +5,7 @@ page_order: 3
 page_type: solution
 description: "This help article covers what it means when your filter options for your Custom Attributes have changed."
 tool: Segments
-no_index: true
+noindex: true
 ---
 
 # My Filter Options Have Changed
