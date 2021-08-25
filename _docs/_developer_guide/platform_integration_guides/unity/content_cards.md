@@ -27,6 +27,8 @@ You may register Unity Game Objects to be notified of incoming Content Cards. We
 
 - If you need to configure your game object listener at runtime, use `AppboyBinding.ConfigureListener()` and specify `BrazeUnityMessageType.CONTENT_CARDS_UPDATED`.
 
+Note, on iOS you will additionally need to make a call to `AppboyBinding.RequestContentCardsRefresh()` to start receiving data in your game object listener.
+
 ## Parsing Content Cards
 
 Incoming `string` messages received in your Content Cards game object callback can be parsed into our pre-supplied [`ContentCard`][17] model object for convenience.
