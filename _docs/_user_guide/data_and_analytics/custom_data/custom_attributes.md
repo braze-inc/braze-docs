@@ -155,6 +155,14 @@ The last date a custom event or purchase event occurred is automatically recorde
 | Check if the time attribute __does not exist__ on a user's profile | __DOES NOT EXIST__ | __N/A__ |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
 
+### Time Attribute Details
+
+- Day of Recurring Event
+  - When using the "Day of Recurring Event" filter, and are then prompted to select the "Calendar Day of Recurring Event", if you select `IS LESS THAN` or `IS MORE THAN`, the current date will be counted for that segmentation filter.
+  - For example, if on March 10, 2020, you selected the date of the attribute to be `LESS THAN ... March 10, 2020`, attributes will be considered for the days up to, and including March 10, 2020. 
+- Less than X Days Ago: The "Less than X Days Ago" filter includes dates between X days ago and the current date/time.
+- Less than X Days in the Future: Includes dates between the current date/time and X days in the future.
+
 ## Purchase and Revenue Tracking {#purchase-revenue-tracking}
 
 Using our purchase methods to record in-app purchases establishes the Lifetime Value (LTV) for each individual user profile. This data is viewable within our revenue page in time-series.
@@ -176,18 +184,6 @@ Using our purchase methods to record in-app purchases establishes the Lifetime V
 {% alert tip %}
 If you would like to segment on the number of times a specific purchase has occurred, you should also record that purchase individually as an [incrementing custom attribute]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/analytics/setting_custom_attributes/#incrementingdecrementing-custom-attributes).
 {% endalert %}
-
-### Attribute Type Details
-
-As of March 10, 2020, the behavior of "Day of Recurring Event", "Less than X Days Ago", and "Less than X Days in the Future" has changed. If you use these filters in your segmentation, we recommend readjusting your segments to take these changes into account.
-
-For the "Day of Recurring Event" filter, the current date is now counted in this segmentation filter.
-- When using the "Day of Recurring Event" filter, and are then prompted to select the "Calendar Day of Recurring Event", if you select `IS LESS THAN` or `IS MORE THAN`, the current date will be counted for that segmentation filter.
-- For example, if on March 10, 2020, you selected the date of the attribute to be `LESS THAN ... March 10, 2020`, attributes will be considered for the days up to, and including March 10, 2020. 
-
-The "Less than X Days Ago" and "Less than X Days in the Future" filters previously included future dates for past date queries, and past dates for future queries. 
-- The "Less than X Days Ago" filter includes dates between X days ago and the current date/time. We will no longer include any dates in the future.
-- Less than X Days in the Future: Includes dates between the current date/time and X days in the future. We will no longer include any dates in the past.
 
 You can change the data type of your custom attribute, but you should be aware of [what other changes this action entails]({{site.baseurl}}/help/help_articles/data/change_custom_data_type/).
 
