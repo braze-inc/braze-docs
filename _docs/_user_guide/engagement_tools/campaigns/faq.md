@@ -1,7 +1,7 @@
 ---
 nav_title: FAQs
 article_title: Campaign FAQs
-page_order: 7
+page_order: 5
 page_type: FAQ
 description: "This page provides answers to frequently asked questions about Campaigns."
 tool: Campaigns
@@ -9,6 +9,10 @@ tool: Campaigns
 ---
 
 # Campaign FAQs
+
+### How do you create a multichannel campaign?
+
+Multichannel campaigns can be created by selecting __Create Campaign__ and then __Multichannel Campaign__ within the dashboard. Once in a multichannel campaign, select __Add Messaging Channel__ within the __compose__ tab to add your desired channels. Clicking on the channel icons that appear will allow you to toggle through different messaging composers as you build your campaign copy for the different channels.
 
 ### Why is there a difference between the number of unique recipients and the number of sends for a given campaign or Canvas?
 
