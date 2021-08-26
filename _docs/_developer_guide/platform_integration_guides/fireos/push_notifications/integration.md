@@ -6,7 +6,7 @@ page_order: 0
 page_type: solution
 description: "This article walks you through how to integrate Braze push notifications with your FireOS app."
 channel: push
-
+hidden: true
 ---
 
 # Integration

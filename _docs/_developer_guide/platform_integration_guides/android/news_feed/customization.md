@@ -1,7 +1,10 @@
 ---
 nav_title: Customization
+article_title: News Feed Customization for Android/FireOS
 page_order: 2
-platform: Android
+platform: 
+  - Android
+  - FireOS
 description: "This reference article covers how to customize your News Feed in your Android application."
 channel:
   - news feed

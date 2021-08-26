@@ -1,6 +1,6 @@
 ---
 nav_title: "Email Object"
-article_title: Email Object
+article_title: Email Messaging Object
 page_order: 5
 page_type: reference
 channel: email

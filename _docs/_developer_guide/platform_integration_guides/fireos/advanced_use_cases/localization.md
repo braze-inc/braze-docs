@@ -5,7 +5,7 @@ page_order: 1
 
 page_type: reference
 description: "This page provides information on supported languages within the Braze Android SDK."
-
+hidden: true
 ---
 
 # Localization

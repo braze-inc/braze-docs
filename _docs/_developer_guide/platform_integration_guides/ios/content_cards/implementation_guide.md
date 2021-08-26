@@ -1,5 +1,6 @@
 ---
 nav_title: Advanced Implementation (Optional)
+article_title: Content Card Implementation Guide for iOS (Optional) 
 platform: iOS
 page_order: 7
 description: "This advanced implementation guide covers iOS Content Card code considerations, three use cases built by our team, accompanying code snippets, and guidance on logging impressions, clicks, and dismissals."
@@ -338,7 +339,7 @@ func convertContentCards(_ cards: [ABKContentCard], for classTypes: [ContentCard
 }
 ```
 
-__Initalizing your Custom Objects from Content Card Payload Data__<br>
+__Initializing your Custom Objects from Content Card Payload Data__<br>
 The `class_type` is used to determine which of your custom objects will be initialized from the payload data.
 
 ```swift
@@ -399,7 +400,7 @@ Loops through the array of Content Cards and only parses the cards with a matchi
 }
 ```
 
-__Initalizing your Custom Objects from Content Card Payload Data__<br>
+__Initializing your Custom Objects from Content Card Payload Data__<br>
 The `class_type` is used to determine which of your custom objects will be initialized from the payload data.
 
 ```obj-c

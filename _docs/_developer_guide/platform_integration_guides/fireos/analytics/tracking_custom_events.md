@@ -5,7 +5,7 @@ page_order: 2
 
 page_type: reference
 description: "This article covers how to track custom events for your FireOS app."
-
+hidden: true
 ---
 
 # Tracking Custom Events

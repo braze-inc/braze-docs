@@ -5,7 +5,7 @@ platform: FireOS
 description: "This article covers how to add badges to your Content Cards in your Android application."
 channel:
   - content cards
-
+hidden: true
 ---
 
 # Adding a Badge

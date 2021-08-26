@@ -5,7 +5,7 @@ page_order: 4
 
 page_type: reference
 description: "This article covers runtime configuration, an optional way to configure your app at runtime in place of a braze.xml."
-
+hidden: true
 ---
 
 # Runtime Configuration

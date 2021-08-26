@@ -1,5 +1,6 @@
 ---
 nav_title: Troubleshooting
+article_title: Push Notification Troubleshooting for iOS
 platform: iOS
 page_order: 30
 description: "This article covers potential troubleshooting topics for your iOS push implementation."

@@ -5,7 +5,7 @@ page_order: 3
 
 page_type: reference
 description: "This article describes Network Offline Mode and its usage."
-
+hidden: true
 ---
 
 # Network Offline Mode

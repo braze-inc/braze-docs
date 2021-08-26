@@ -141,11 +141,8 @@ Application-to-person 10-digit long codes (A2P 10DLC) refers to a system in the 
 
 10-digit long codes have traditionally been designed for person-to-person (P2P) traffic, causing businesses to be constrained by limited throughput and heightened filtering. This service helps alleviate those issues, improving overall message deliverability, allowing brands to send messages at scale (including links and calls to action), and helping further protect consumers from unwanted messages. 
 
-All Braze customers who currently have and/or use long codes are required to register their long codes for 10DLC. 
+All Braze customers who currently have and/or use long codes are required to register their long codes for 10DLC. Visit our dedicated [A2P 10DLC article]({{site.baseurl}}/user_guide/message_building_by_channel/sms/phone_numbers/10dlc/) for more information.
 
-{% alert update %}
-Starting March 25, 2021, registering and applying for 10DLC will be now part of the SMS onboarding process. If you have onboarded SMS before this date, you must work with your COM or CSM to get your long codes registered. <br><br>Starting June 1, 2021 any A2P sender using long codes will experience heavy filtering of all messages if they are not registered for 10DLC. You may also experience additional carrier fees through adopting this service. Please reach out to your COM or CSM to learn more. 
-{% endalert %}
 
 [1]: {{site.baseurl}}/user_guide/message_building_by_channel/sms/sms_subscription_group/
 [3]: {% image_buster /assets/img/sms/sms_graph.png %}

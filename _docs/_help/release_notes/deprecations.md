@@ -1,5 +1,6 @@
 ---
 nav_title: Deprecations
+article_title: Deprecations
 page_order: 9
 layout: featured
 

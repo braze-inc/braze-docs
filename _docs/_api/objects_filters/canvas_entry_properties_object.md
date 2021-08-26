@@ -1,6 +1,6 @@
 ---
 nav_title: "Canvas Entry Properties Object"
-article_title: Cnvas Entry Properties Object
+article_title: API Canvas Entry Properties Object
 page_order: 2
 page_type: reference
 tool:

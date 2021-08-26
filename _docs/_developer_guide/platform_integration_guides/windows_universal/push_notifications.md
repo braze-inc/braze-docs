@@ -1,8 +1,10 @@
 ---
 nav_title: Push Notifications
-platform: Windows_Universal
+article_title: Push Notifications for Windows Universal
+platform: Windows Universal
 page_order: 1
 description: "This article covers push notification integration instructions for the windows universal platform."
+channel: push 
 
 ---
 

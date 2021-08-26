@@ -6,7 +6,7 @@ page_order: 6
 page_type: reference
 description: "This article covers enabling and disabling location tracking on your FireOS app."
 tool: Location
-
+hidden: true
 ---
 
 # Location Tracking

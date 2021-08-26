@@ -33,19 +33,13 @@ As a convenience, a summary of supported personalization tags are listed below. 
 Campaign, Card, and Canvas attributes are only supported in their corresponding messaging templates (for example, `dispatch_id` is not available in in-app message campaigns).
 {% endalert %}
 
-{% alert update %}
+#### Canvas and Campaign Tag Differences 
 
-Please note that the behavior for the following tags differs between Canvas and campaigns:<br><br>
-
-`dispatch_id`  - Behavior differs between Canvas and campaigns because Braze treats Canvas steps (except for Entry Steps, which can be scheduled) as triggered events, even when they are "scheduled". [Learn more about `dispatch_id` behavior in Canvas and campaigns here]({{site.baseurl}}/help/help_articles/data/dispatch_id/).<br><br>
+The behavior for the following tags differs between Canvas and campaigns:
 {% raw %}
-`{{campaign.${name}}}` - When using this tag with Canvas, it will display the Canvas step name. When using this tag with campaigns, it will display the campaign name.
-{% endraw %}<br><br>
-
-_Updates noted in August 2019._
-{% endalert %}
-
-
+- `dispatch_id` differs between Canvas and campaigns because Braze treats Canvas steps (except for Entry Steps, which can be scheduled) as triggered events, even when they are "scheduled". [Learn more about `dispatch_id` behavior in Canvas and campaigns here]({{site.baseurl}}/help/help_articles/data/dispatch_id/).
+- Using the `{{campaign.${name}}}` tag with Canvas will display the Canvas step name. When using this tag with campaigns, it will display the campaign name.
+{% endraw %}
 
 ## Most Recently Used Device Information
 

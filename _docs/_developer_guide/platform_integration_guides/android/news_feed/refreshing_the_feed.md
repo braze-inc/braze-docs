@@ -1,7 +1,10 @@
 ---
 nav_title: Refreshing the Feed
+article_title: Refreshing the News Feed for Android/FireOS
 page_order: 7
-platform: Android
+platform: 
+  - Android
+  - FireOS
 description: "This reference article shows how to refresh the News Feed in your Android application."
 channel:
   - news feed
