@@ -32,7 +32,7 @@ guide_featured_list:
 - name: Webhook Campaign
   link: /docs/user_guide/message_building_by_channel/webhooks/creating_a_webhook/
   image: /assets/img/webhook_icon.png
-- name: Create a Multichannel Campaign
+- name: Multichannel Campaign
   link: /docs/user_guide/engagement_tools/campaigns/faq/#how-do-you-create-a-multichannel-campaign
   fa_icon: fas fa-plus
 
