@@ -1,6 +1,9 @@
 ---
 nav_title: Storage
-platform: iOS
+article_title: Storage for Android/FireOS
+platform: 
+  - Android
+  - FireOS
 page_order: 9
 page_type: reference
 description: "This reference article describes the device-level properties captured by the Braze Android SDK."

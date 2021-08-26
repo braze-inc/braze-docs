@@ -5,7 +5,7 @@ page_order: 7
 
 page_type: reference
 description: "This page describes the sample apps provided within Braze's SDK repository."
-
+hidden: true
 ---
 
 # Sample Apps

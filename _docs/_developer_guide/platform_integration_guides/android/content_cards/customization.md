@@ -1,7 +1,10 @@
 ---
 nav_title: Customization
+article_title: Content Card Customization for Android/FireOS
 page_order: 2
-platform: Android
+platform: 
+  - Android
+  - FireOS
 description: "This article covers customization options for your Content Cards in your Android application."
 channel:
   - content cards
@@ -642,7 +645,7 @@ Disabling swipe-to-dismiss functionality is done on a per-card basis via the [`c
 See the [Javadoc][36] for more information.
 
 {% alert note %}
-Content Cards have a maximum size of **2kb** (including images, links, and all content) - exceeding that amount will prevent the card from sending.
+Content Cards have a maximum size limit of 2 KB for content you enter in the Braze dashboard. This includes message text, image URLs, links, and key-value pairs. Exceeding that amount will prevent the card from sending.
 {% endalert %}
 
 ## GIFs {#gifs-news-content-cards}

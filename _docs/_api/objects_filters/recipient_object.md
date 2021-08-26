@@ -1,6 +1,6 @@
 ---
 nav_title: "Recipients Object"
-article_title: Recipients Object
+article_title: API Recipients Object
 page_order: 9
 page_type: reference
 description: "This article explains the different components of the Braze Recipients object."

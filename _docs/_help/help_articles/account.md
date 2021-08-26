@@ -13,5 +13,5 @@ guide_menu_list:
     link: /docs/help/help_articles/account/locked_out/
     fa_icon: fas fa-lock
 
-no_index: true
+noindex: true
 ---

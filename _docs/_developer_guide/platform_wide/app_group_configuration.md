@@ -1,5 +1,6 @@
 ---
 nav_title: App Group Configuration
+article_title: App Group Configuration
 page_order: 1
 description: "This reference article covers app group configuration and how to create your app group."
 

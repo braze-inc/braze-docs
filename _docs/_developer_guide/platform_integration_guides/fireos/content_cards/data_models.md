@@ -5,7 +5,7 @@ platform: FireOS
 description: "This article covers the Content Card integration and the different data models and card-specific properties available for your Android application."
 channel:
   - content cards
-
+hidden: true
 ---
 
 # Content Cards Integration

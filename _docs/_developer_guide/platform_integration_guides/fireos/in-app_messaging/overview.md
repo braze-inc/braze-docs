@@ -6,7 +6,7 @@ page_order: 0
 page_type: reference
 description: "This article provides an overview of in-app messages, including use cases, message types, and expected behaviors."
 channel: in-app messages
-
+hidden: true
 ---
 
 # In-App Messages

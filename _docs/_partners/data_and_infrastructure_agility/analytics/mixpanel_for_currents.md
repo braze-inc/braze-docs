@@ -62,8 +62,8 @@ You can manage the Mixpanel Cohort Import process from the Technology Partners p
 ```json
 // Purchase
 {
-  "product_id": (string) id of product purchased (sent in the “productId” field of Amplitude HTTP API),
-  "price": (float) price of product (sent in the “price” field of Amplitude HTTP API),
+  "product_id": (string) id of product purchased (sent in the “productId” field of Mixpanel HTTP API),
+  "price": (float) price of product (sent in the “price” field of Mixpanel HTTP API),
   "currency": (string) three letter alpha ISO 4217 currency code,
   "app_id": (string) id for the app on which the user action occurred,
   "platform": (string) platform of the device (iOS, Android, web, etc.),
@@ -228,11 +228,7 @@ You can manage the Mixpanel Cohort Import process from the Technology Partners p
 }
 ```
 
-{% alert update %}
-Behavior for `dispatch_id` differs between Canvas and campaigns because Braze treats Canvas steps (except for Entry Steps, which can be scheduled) as triggered events, even when they are "scheduled". [Learn more about `dispatch_id` behavior in Canvas and campaigns here]({{site.baseurl}}/help/help_articles/data/dispatch_id/).
-
-_Update noted in August 2019._
-{% endalert %}
+Behavior for `dispatch_id` differs between Canvas and campaigns because Braze treats Canvas steps (except for Entry Steps, which can be scheduled) as triggered events, even when they are "scheduled". [Learn more about `dispatch_id` behavior in Canvas and campaigns here]({{site.baseurl}}/help/help_articles/data/dispatch_id/). For additional information, refer to the [Customer Behavior and User Events]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/event_glossary/customer_behavior_events/) and [Message Engagement Events]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/event_glossary/message_engagement_events/).
 
 
 ### SMS Events

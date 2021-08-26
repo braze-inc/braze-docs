@@ -6,7 +6,7 @@ page_order: 20
 page_type: solution
 description: "This article provides troubleshooting scenarios for possible issues you may experience with push notifications."
 channel: push
-
+hidden: true
 ---
 # Troubleshooting
 

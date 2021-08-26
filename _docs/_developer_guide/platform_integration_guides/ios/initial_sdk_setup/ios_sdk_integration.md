@@ -1,5 +1,6 @@
 ---
 nav_title: SDK Integration Guide (Optional)
+article_title: Braze SDK Integration Guide for iOS (Optional)
 alias: "/ios_sdk/"
 description: "This iOS integration guide takes you on a step-by-step journey on setup best practices when first integrating the iOS SDK and its core components into your application. This guide will help you build a BrazeManager.swift helper file."
 page_order: 10
@@ -127,7 +128,7 @@ func application(_ application: UIApplication, didFinishLaunchingWithOptions lau
 {% endsubtabs %}
 
 {% endtab %}
-{% tab Step 2: Handle Appboy Initalization %}
+{% tab Step 2: Handle Appboy Initialization %}
 
 ##### Handle Appboy Initialization in the AppDelegate.swift
 Next, navigate back to the `AppDelegate.swift` file and add the following code snippet in the AppDelegate's `didFinishLaunchingWithOptions` method to handle the Appboy initialization from the `BrazeManager.swift` helper file. Remember, there is no need to add an `import AppboyUI` statement in the `AppDelegate.swift`.

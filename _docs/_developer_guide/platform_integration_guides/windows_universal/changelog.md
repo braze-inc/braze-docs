@@ -1,10 +1,9 @@
 ---
 nav_title: Changelog
+article_title: Changelog for Windows Universal SDK
 page_order: 30
-
 page_type: update
-platform: windows universal
-
+platform: Windows Universal
 description: "This page lists updates to Braze's Windows Universal SDK changelog."
 
 ---

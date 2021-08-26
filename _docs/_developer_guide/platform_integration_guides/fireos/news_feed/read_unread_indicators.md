@@ -5,7 +5,7 @@ platform: FireOS
 description: "This reference article covers how to implement read and unread indicators in your News Feed for your Android application."
 channel:
   - news feed
-
+hidden: true
 ---
 
 # Read & Unread Indicators

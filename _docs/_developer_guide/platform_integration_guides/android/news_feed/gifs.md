@@ -1,7 +1,10 @@
 ---
 nav_title: GIFs
+article_title: News Feed GIFs for Android/FireOS
 page_order: 9
-platform: Android
+platform: 
+  - Android
+  - FireOS
 description: "This reference article covers how to implement gifs in your News Feed for your Android applciation."
 channel:
   - news feed
