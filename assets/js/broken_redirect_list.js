@@ -435,3 +435,8 @@ validurls['/docs/user_guide/engagement_tools/canvas/create_a_canvas/change_your_
 validurls['/docs/user_guide/engagement_tools/campaigns/scheduling_and_organizing/duplicating_segments_and_campaigns/#cloning-a-canvas'] = '/docs/user_guide/engagement_tools/campaigns/managing_campaigns/duplicating_segments_and_campaigns/#cloning-a-canvas';
 
 validurls['/docs/user_guide/engagement_tools/canvas/get_started/canvas/'] = '/docs/user_guide/engagement_tools/canvas/get_started/';
+
+validurls['/docs/user_guide/engagement_tools/campaigns/testing_and_more/campaign_funnel_report/'] = '/docs/user_guide/data_and_analytics/your_reports/funnel_reports/';
+validurls['/docs/user_guide/engagement_tools/canvas/canvas_funnel_reports/'] = '/docs/user_guide/data_and_analytics/your_reports/funnel_reports/';
+validurls['/docs/user_guide/engagement_tools/campaigns/testing_and_more/retention_reports/'] = '/docs/user_guide/data_and_analytics/your_reports/retention_reports/';
+validurls['/docs/user_guide/engagement_tools/canvas/retention_reports/'] = '/docs/user_guide/data_and_analytics/your_reports/retention_reports/';
