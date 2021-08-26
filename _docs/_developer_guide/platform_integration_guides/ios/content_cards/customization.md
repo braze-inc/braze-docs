@@ -22,7 +22,7 @@ Braze allows clients to replace existing default images with their own custom im
 - Placeholder image: `appboy_cc_noimage_lrg`.
 - Pinned icon image: `appboy_cc_icon_pinned`.
 
-Because Content Cards have a maximum size of **2kb** (including images, links, and all content) make sure to check the size before sending. Exceeding this amount will prevent the card from sending.
+Because Content Cards have a maximum size of 2 KB for content you enter in the dashboard (including message text, images URLs, links, and all key-value pairs) make sure to check the size before sending. Exceeding this amount will prevent the card from sending.
 
 {% alert note %}
 Be sure to upload the `@2x` and `@3x` versions of the images as well to accommodate different phone sizes.
