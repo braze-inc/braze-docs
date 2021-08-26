@@ -1,7 +1,7 @@
 ---
 nav_title: Engagement Reports
 article_title: Engagement Reports
-page_order: 22
+page_order: 3
 local_redirect:
   report-glossary: '/docs/user_guide/data_and_analytics/report_metrics/'
 page_type: tutorial
