@@ -92,6 +92,11 @@ cd ios && pod install
 
 #### Step 2.2b: Configure the Braze SDK
 
+Add the following line of code to your AppDelegate.m file:
+```bash
+#import "AppboyKit.h"
+```
+
 In the `AppDelegate.m` file, add the following snippet within the
 `application:didFinishLaunchingWithOptions` method:
 
