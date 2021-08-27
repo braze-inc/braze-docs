@@ -20,7 +20,7 @@ channel:
 |Opt-in State|Description|
 |---|---|
 |Subscribed| Default status.|
-|Opted-In| A user has explicitly allowed Braze will automatically move a user's opt-in state to "Opted-In". |
+|Opted-In| A user has explicitly expressed a preference to receive push notifications. Braze will automatically move a user's opt-in state to "Opted-In". |
 |Unsubscribed| A user explicitly unsubscribed from push through your application UI or other methods that your brand provides. By default, Braze push campaigns only target users that are "Subscribed" or "Opted-in" for push.|
 {: .reset-td-br-1 .reset-td-br-2}
 
