@@ -28,7 +28,7 @@ Subscription states are helpful flags for brands to use when deciding which user
 
 Note that even though users __may not have a push token__ (e.g., They turn off push tokens at the device level through settings, opting not to receive messages), they still may be subscribed. Being subscribed does not guarantee that a push will be delivered; users must also be Push enabled or Push registered to receive these notifications. This is done in part because users have a single Push Subscription State but may have multiple devices with different levels of push permissions. 
 
-### Two ways to Check a User's Push Subscription State:
+### Two Ways to Check a User's Push Subscription State:
 ![Push Exmaple][3]{: style="float:right;max-width:35%;margin-left:15px;"}
 1. __User Profile__: Individual user profiles can be accessed through the Braze dashboard by selecting User Search from the right sidebar. Here, you can look up user profiles by email address, phone number, or external user ID. Once in a user profile, under the Engagement tab, you can view and manually adjust a user's subscription state. <br><br>
 2. __Rest API Export__: Individual user profiles can be exported in the JSON format using the users/export/ [segment][segment] or [identifier][identifier] endpoints by using Braze’s REST API. Braze will return a push tokens object that contains push enablement information per device.
