@@ -47,7 +47,7 @@ Once you have successfully connected your Google Ads account, you will be taken 
 ![Google Sync][4]
 
 {% alert important %}
-If you are planning on export iOS IDFA or Google Advertising IDs within your audience sync, Google requires your iOS app ID and Android app ID within the requests. Within the Google Audience Sync module, please select __Add Mobile Advertising IDs__, input your iOS app ID and Android app ID (app package name), and then save each.
+If you are planning on export iOS IDFA or Google Advertising IDs within your audience sync, Google requires your iOS app ID and Android app ID within the requests. Within the Google Audience Sync module, select __Add Mobile Advertising IDs__, input your iOS app ID and Android app ID (app package name), and then save each.
 
 ![Google Sync]({% image_buster /assets/img/google_sync/google_sync5.png %})
 {% endalert %}
