@@ -59,8 +59,11 @@ Users experiencing issues logging in via two-factor authentication can reach out
 
 Two-Factor Authentication Enforcement:
 - If two-factor authentication is not enforced at the company level, once reset, the user will log in normally and need to go to __Account Settings__ to enable and set up two-factor authentication. 
-- If two-factor authentication is enforced at the company level, the next time the user logs in, they'll be asked to set up their two-factor authentication.
+- If two-factor authentication is enforced at the company level, the next time the user logs in, they'll be asked to set up their two-factor authentication.'
 
+## Security Event Download
+
+The Security Event report is a CSV report of account invitations, account removals, and failed and successful login attempts. To download this report, click **Download report** in the **Security Event Download** section.
 
 [0]: {% image_buster /assets/img/remember_me.png %}
 [1]: {{site.baseurl}}/user_guide/administrative/access_braze/single_sign_on/
