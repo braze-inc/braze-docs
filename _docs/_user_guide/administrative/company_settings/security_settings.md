@@ -59,7 +59,7 @@ Users experiencing issues logging in via two-factor authentication can reach out
 
 Two-Factor Authentication Enforcement:
 - If two-factor authentication is not enforced at the company level, once reset, the user will log in normally and need to go to __Account Settings__ to enable and set up two-factor authentication. 
-- If two-factor authentication is enforced at the company level, the next time the user logs in, they'll be asked to set up their two-factor authentication.'
+- If two-factor authentication is enforced at the company level, the next time the user logs in, they'll be asked to set up their two-factor authentication.
 
 ## Security Event Download
 
