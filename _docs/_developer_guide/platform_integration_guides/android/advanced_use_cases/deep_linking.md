@@ -179,3 +179,55 @@ Then, as you set up your push notification campaign (either through the [dashboa
 [udl-1]: https://appboy.github.io/appboy-android-sdk/javadocs/com/appboy/ui/actions/UriAction.html
 [udl-2]: https://appboy.github.io/appboy-android-sdk/javadocs/com/appboy/ui/AppboyNavigator.html#setAppboyNavigator-com.appboy.IAppboyNavigator-
 [udl-3]: https://appboy.github.io/appboy-android-sdk/javadocs/com/appboy/IAppboyNavigator.html
+
+## Custom WebView Activity {#Custom_Webview_Activity}
+
+By default, deeplinks to websites are are handled by [`BrazeWebViewActivity`][udl-4]. To change this:
+
+1. Create a new Activity that handles the target URL from `Intent.getExtras()` with the key `com.appboy.Constants.APPBOY_WEBVIEW_URL_EXTRA`. See [`BrazeWebViewActivity.java`][udl-8] for an example.
+2. Add that activity to `AndroidManifest.xml` and set exported to false.
+
+    ```xml
+    <activity
+        android:name=".MyCustomWebViewActivity"
+        android:exported="false" />
+    ```
+
+3. Use a [builder object][udl-6] that is then built and passed to [Braze.configure()][udl-5] in [`Application.onCreate()`][udl-7]
+
+    {% tabs %}
+    {% tab JAVA %}
+
+    ```java
+    BrazeConfig brazeConfig = new BrazeConfig.Builder()
+        .setCustomWebViewActivityClass(MyCustomWebViewActivity::class)
+        ...
+        .build();
+    Braze.configure(this, brazeConfig);
+    ```
+
+    {% endtab %}
+    {% tab KOTLIN %}
+
+    ```kotlin
+    val brazeConfig = BrazeConfig.Builder()
+        .setCustomWebViewActivityClass(MyCustomWebViewActivity::class.java)
+        ...
+        .build()
+    Braze.configure(this, brazeConfig)
+    ```
+
+    {% endtab %}
+    {% endtabs %}
+
+[1]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/push_notifications/integration/standard_integration/#step-4-add-deep-links
+[2]: {{site.baseurl}}/user_guide/message_building_by_channel/push/creating_a_push_message/#creating-a-push-message
+[3]: {{site.baseurl}}/api/endpoints/messaging/
+[udl-1]: https://appboy.github.io/appboy-android-sdk/javadocs/com/appboy/ui/actions/UriAction.html
+[udl-2]: https://appboy.github.io/appboy-android-sdk/javadocs/com/appboy/ui/AppboyNavigator.html#setAppboyNavigator-com.appboy.IAppboyNavigator-
+[udl-3]: https://appboy.github.io/appboy-android-sdk/javadocs/com/appboy/IAppboyNavigator.html
+[udl-4]: https://appboy.github.io/appboy-android-sdk/javadocs/com/braze/ui/BrazeWebViewActivity.html
+[udl-5]: https://appboy.github.io/appboy-android-sdk/javadocs/com/appboy/Appboy.html#configure-android.content.Context-com.appboy.configuration.BrazeConfig-
+[udl-6]: https://appboy.github.io/appboy-android-sdk/javadocs/com/braze/configuration/BrazeConfig.Builder.html
+[udl-7]: https://developer.android.com/reference/android/app/Application.html#onCreate()
+[udl-8]: https://github.com/Appboy/appboy-android-sdk/blob/master/android-sdk-ui/src/main/java/com/braze/ui/BrazeWebViewActivity.java
