@@ -1,63 +1,18 @@
 ---
-nav_title: CocoaPods Integration
+nav_title: Completing the Integration
 platform: iOS
-page_order: 1
-description: "This reference article shows how to integrate the Braze SDK using CocoaPods for iOS."
+description: "This reference article shows how to finish integrating the Braze SDK after installing it via one of the integration options."
+page_order: 3
 
 ---
 
-# CocoaPods Integration
+# Completing the Integration
 
-## Step 1: Install CocoaPods
+## Requirements
 
-Installing the iOS SDK via [CocoaPod][apple_initial_setup_1] automates the majority of the installation process for you. Before beginning this process please ensure that you are using [Ruby version 2.0.0][apple_initial_setup_2] or greater. Don't worry, knowledge of Ruby syntax isn't necessary to install this SDK.
+Before following these steps, make sure you have integrated the SDK using one of the installation options listed before this page.
 
-Simply run the following command to get started:
-
-```bash
-$ sudo gem install cocoapods
-```
-
-__Note__: If you are prompted to overwrite the `rake` executable please refer to the [Getting Started Directions on CocoaPods.org][apple_initial_setup_3] for further details.
-
-__Note__: If you have issues regarding CocoaPods, please refer to the [CocoaPods Troubleshooting Guide][apple_initial_setup_25].
-
-## Step 2: Constructing the Podfile
-
-Now that you've installed the CocoaPods Ruby Gem, you're going to need to create a file in your Xcode project directory named `Podfile`.
-
-Add the following line to your Podfile:
-
-```
-target 'YourAppTarget' do
-  pod 'Appboy-iOS-SDK'
-end
-```
-
-__Note__: We suggest you version Braze so pod updates automatically grab anything smaller than a minor version update. This looks like 'pod 'Appboy-iOS-SDK' ~> Major.Minor.Build'. If you want to integrate the latest version of Braze SDK automatically even with major changes, you can use `pod 'Appboy-iOS-SDK'` in your Podfile.
-
-> We recommend that integrators import our full SDK as outlined above. However, if you are certain that you are only going to integrate a particular Braze feature then you have the option to import just the desired UI subspec instead of the full SDK.
-
-| Subspec | Details |
-| ------- | ------- |
-| `pod 'Appboy-iOS-SDK/InAppMessage'` | The `InAppMessage` subspec contains the Braze In-App Message UI and the Core SDK.|
-| `pod 'Appboy-iOS-SDK/ContentCards'` | The `ContentCards` subspec contains the Braze Content Card UI and the Core SDK. |
-| `pod 'Appboy-iOS-SDK/NewsFeed'` | The `NewsFeed` subspec contains the Braze News Feed UI and the Core SDK. |
-| `pod 'Appboy-iOS-SDK/Core'` | The `Core` subspec contains support for analytics, such as custom events and attributes. |
-{: .ws-td-nw-1}
-
-## Step 3: Installing the Braze SDK
-
-To install the Braze SDK Cocoapod, navigate to the directory of your Xcode app project within your terminal and run the following command:
-```
-pod install
-```
-
-At this point, you should be able to open the new Xcode project workspace created by CocoaPods.
-
-![New Workspace][apple_initial_setup_15]
-
-## Step 4: Updating your App Delegate
+## Step 1: Update Your App Delegate
 
 {% tabs %}
 {% tab OBJECTIVE-C %}
@@ -68,12 +23,12 @@ Add the following line of code to your `AppDelegate.m` file:
 #import "Appboy-iOS-SDK/AppboyKit.h"
 ```
 
-Within your `AppDelegate.m` file, add the following snippet within your `application:didFinishLaunchingWithOptions` method:
+Within your `AppDelegate.m` file, add the following snippet within your `application:didFinishLaunchingWithOptions:` method:
 
 ```objc
 [Appboy startWithApiKey:@"YOUR-APP-IDENTIFIER-API-KEY"
-         inApplication:application
-     withLaunchOptions:launchOptions];
+          inApplication:application
+      withLaunchOptions:launchOptions];
 ```
 
 {% endtab %}
@@ -107,7 +62,7 @@ Be sure to initialize Braze in your application's main thread. Initializing asyn
 {% endalert %}
 
 
-## Step 5: Specify Your Data Cluster
+## Step 2: Specify Your Data Cluster
 
 {% alert note %}
 Note that as of December 2019, custom endpoints are no longer given out, if you have a pre-existing custom endpoint, you may continue to use it. For a list of our available endpoints, <a href="{{site.baseurl}}/api/basics/#endpoints">click here</a>.
@@ -133,21 +88,13 @@ To find out your specific cluster, please ask your Customer Success Manager or r
 
 Braze should now be collecting data from your application and your basic integration should be complete. {% if include.platform == 'iOS' %}Please see the following sections in order to enable custom event tracking, push messaging, the news-feed and the complete suite of Braze features.{% endif %}
 
-## Updating the Braze SDK via CocoaPods
-
-To update a Cocoapod simply run the following commands within your project directory:
-
-```
-pod update
-```
-
 ## Customizing Braze On Startup
 
 If you wish to customize Braze on startup, you can instead use the Braze initialization method `startWithApiKey:inApplication:withLaunchOptions:withAppboyOptions` and pass in an optional `NSDictionary` of Braze startup keys.
 {% tabs %}
 {% tab OBJECTIVE-C %}
 
-In your `AppDelegate.m` file, within your `application:didFinishLaunchingWithOptions` method, add the following Braze method:
+In your `AppDelegate.m` file, within your `application:didFinishLaunchingWithOptions:` method, add the following Braze method:
 
 ```objc
 [Appboy startWithApiKey:@"YOUR-APP-IDENTIFER-API-KEY"
@@ -182,16 +129,16 @@ This method is called with the following parameters:
 - `launchOptions` – The options `NSDictionary` that you get from `application:didFinishLaunchingWithOptions:`
 - `appboyOptions` – An optional `NSDictionary` with startup configuration values for Braze
 
-See [Appboy.h][apple_initial_setup_5] for a list of Braze startup keys.
+See [Appboy.h][1] for a list of Braze startup keys.
 
 ## Appboy.sharedInstance() and Swift nullability
 Differing somewhat from common practice, the `Appboy.sharedInstance()` singleton is optional. The reason for this is that, as noted above, `sharedInstance` is `nil` before `startWithApiKey:` is called, and there are some non-standard but not-invalid implementations in which a delayed initialization can be used.
 
 If you call `startWithApiKey:` in your `didFinishLaunchingWithOptions:` delegate before any access to Appboy's `sharedInstance` (the standard implementation), you can use optional chaining, like `Appboy.sharedInstance()?.changeUser("testUser")`, to avoid cumbersome checks. This will have parity with an Objective-C implementation that assumed a non-null `sharedInstance`.
 
-[apple_initial_setup_1]: http://cocoapods.org/
-[apple_initial_setup_2]: https://www.ruby-lang.org/en/installation/
-[apple_initial_setup_3]: http://guides.cocoapods.org/using/getting-started.html "CocoaPods Installation Directions"
-[apple_initial_setup_5]: https://github.com/braze-inc/braze-ios-sdk/blob/master/AppboyKit/include/Appboy.h
-[apple_initial_setup_15]: {% image_buster /assets/img_archive/podsworkspace.png %}
-[apple_initial_setup_25]: http://guides.cocoapods.org/using/troubleshooting.html "CocoaPods Troubleshooting Guide"
+## Documentation
+
+[Full iOS class documentation][2] is available to provide additional guidance on any of the SDK's methods.
+
+[1]: https://github.com/braze-inc/braze-ios-sdk/blob/master/AppboyKit/include/Appboy.h
+[2]: http://appboy.github.io/appboy-ios-sdk/docs/annotated.html "full iOS class documentation"
