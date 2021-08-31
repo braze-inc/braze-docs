@@ -45,6 +45,29 @@ Size | 5MB maximum
 File Types | PNG, JPG, GIF
 {: .reset-td-br-1 .reset-td-br-2}
 
+## Contact Card Generator
+
+{% tabs %}
+{% tab Step 1 %}
+
+Contact Cards can be created from the SMS and MMS composer. Select the __Contact Card Generator__ tab to get started.
+
+{% endtab %}
+{% tab Step 2 %}
+
+Next, you will be prompted to input yout company name or nickname. This is
+
+
+{% endtab %}
+{% tab Step 3 %}
+
+
+{% endtab %}
+{% tab Step 4 %}
+
+
+{% endtab %}
+
 ## Previewing an MMS message
 
 Braze provides a preview of the image you have uploaded. 
