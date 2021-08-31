@@ -63,7 +63,7 @@ Follow the instructions for [Completing the Integration]({{site.baseurl}}/develo
 
 ## Updating the Braze SDK via CocoaPods
 
-To update a Cocoapod, simply run the following commands within your project directory:
+To update a Cocoapod, simply run the following command within your project directory:
 
 ```
 pod update
