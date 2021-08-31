@@ -1,6 +1,6 @@
 ---
 nav_title: "POST: User Delete"
-article_title: "POST: USer Delete"
+article_title: "POST: User Delete"
 search_tag: Endpoint
 page_order: 4
 layout: api_page

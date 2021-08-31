@@ -13,7 +13,7 @@ guide_menu_list:
     link: /docs/help/help_articles/api/delete_user/
     fa_icon: fas fa-user-times
 
-no_index: true
+noindex: true
 ---
 
 
