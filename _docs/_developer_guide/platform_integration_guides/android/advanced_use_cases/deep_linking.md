@@ -185,6 +185,7 @@ Then, as you set up your push notification campaign (either through the [dashboa
 By default, when website deeplinks are opened inside the app by Braze, they are handled by [`BrazeWebViewActivity`][udl-4]. To change this:
 
 1. Create a new Activity that handles the target URL from `Intent.getExtras()` with the key `com.appboy.Constants.APPBOY_WEBVIEW_URL_EXTRA`. See [`BrazeWebViewActivity.java`][udl-8] for an example.
+
 2. Add that activity to `AndroidManifest.xml` and set `exported` to `false`.
 
     ```xml
@@ -194,7 +195,6 @@ By default, when website deeplinks are opened inside the app by Braze, they are 
     ```
 
 3. Set your custom Activity in a `BrazeConfig` [builder object][udl-6]. Build the builder and pass it to [Braze.configure()][udl-5] in your [`Application.onCreate()`][udl-7]
-
 
     {% tabs %}
     {% tab JAVA %}
