@@ -163,7 +163,7 @@ Key-value pairs can be added to a News Feed Card in the Braze message composer b
 
 To add a key-value pair to a Content Card, go to the **Settings** tab in the Braze message composer and click **Add New Pair**.
 
-![Add key-value pair to Content Card][24]
+![Add key-value pair to Content Card][24]{: style="max-width:70%;"}
 
 
 [1]: {{site.baseurl}}/developer_guide/platform_integration_guides/ios/push_notifications/customization/kvp/
