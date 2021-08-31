@@ -2,7 +2,7 @@
 nav_title: "GET: Query Invalid Phone Numbers"
 article_title: "GET: Query Invalid Phone Numbers"
 search_tag: Endpoint
-page_order: 1
+page_order: 0
 layout: api_page
 page_type: reference
 description: "This article outlines the usage of and parameters for using the retrieve a List of Invalid Phone Numbers Braze endpoint."
@@ -21,18 +21,18 @@ This endpoint allows you to pull a list of phone numbers that have been deemed "
 
 You must provide either a `start_date` and an `end_date` OR `phone_numbers`.
 
-If you provide a `start_date`, an `end_date`, and `phone_numbers`, we prioritize the phone number(s) given and disregard the date range.
+If you provide a `start_date`, an `end_date`, and `phone_numbers`, we prioritize the given phone numbers and disregard the date range.
 
 | Parameter | Required | Data Type | Description |
 | ----------|-----------| ----------|----- |
 | `start_date` | Optional* | String in YYYY-MM-DD format| Start date of the range to retrieve invalid phone numbers, must be earlier than `end_date`. This is treated as midnight in UTC time by the API. |
 | `end_date` | Optional* | String in YYYY-MM-DD format | End date of the range to retrieve invalid phone numbers. This is treated as midnight in UTC time by the API. |
 | `limit` | Optional | Integer | Optional field to limit the number of results returned. Defaults to 100, maximum is 500. |
-| `offset` | Optional | Integer | Optional beginning point in the list to retrieve from |
-| `phone_numbers` | Optional* | Array | If provided, we will return whether or not those phone numbers have been detected as invalid phone numbers |
+| `offset` | Optional | Integer | Optional beginning point in the list to retrieve from. |
+| `phone_numbers` | Optional* | Array | If provided, we will return whether or not those phone numbers have been detected as invalid phone numbers. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
 
-If your date range has more than the `limit` number of invalid phone numbers, you will need to make multiple API calls, each time increasing the `offset` until a call returns either fewer than `limit` or zero results.
+If your date range has more than the `limit` number of invalid phone numbers, you will need to make multiple API calls with increasing the `offset` each time until a call returns either fewer than `limit` or zero results.
 
 ## Example Request
 ```

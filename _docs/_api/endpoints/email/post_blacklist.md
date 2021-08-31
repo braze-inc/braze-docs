@@ -2,7 +2,7 @@
 nav_title: "POST: Blacklist Emails"
 article_title: "POST: Blacklist Emails"
 search_tag: Endpoint
-page_order: 6
+page_order: 5
 layout: api_page
 page_type: reference
 alias: /blacklist/

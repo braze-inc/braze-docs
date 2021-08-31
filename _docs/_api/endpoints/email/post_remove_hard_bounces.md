@@ -2,7 +2,7 @@
 nav_title: "POST: Remove Hard Bounced Emails"
 article_title: "POST: Remove Hard Bounced Emails"
 search_tag: Endpoint
-page_order: 4
+page_order: 3
 layout: api_page
 page_type: reference
 description: "This article outlines details about and using the Remove Hard Bounced Email Addresses Braze endpoint."
