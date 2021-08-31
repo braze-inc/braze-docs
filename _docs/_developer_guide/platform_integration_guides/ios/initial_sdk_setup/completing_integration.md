@@ -17,10 +17,16 @@ Before following these steps, make sure you have integrated the SDK using one of
 {% tabs %}
 {% tab OBJECTIVE-C %}
 
-Add the following line of code to your `AppDelegate.m` file:
+If you are integrating the Braze SDK with CocoaPods or Carthage, add the following line of code to your `AppDelegate.m` file:
 
 ```objc
 #import "Appboy-iOS-SDK/AppboyKit.h"
+```
+
+If you are integrating the Braze SDK with Swift Package Manager or the [Manual Integration Options]({{site.baseUrl}}/docs/developer_guide/platform_integration_guides/ios/initial_sdk_setup/installation_methods/manual_integration_options/), add the following line of code to your `AppDelegate.m` file:
+
+```objc
+#import "AppboyKit.h"
 ```
 
 Within your `AppDelegate.m` file, add the following snippet within your `application:didFinishLaunchingWithOptions:` method:
@@ -38,6 +44,12 @@ If you are integrating the Braze SDK with CocoaPods or Carthage, add the followi
 
 ```swift
 import Appboy_iOS_SDK
+```
+
+If you are integrating the Braze SDK with Swift Package Manager, add the following line of code to your `AppDelegate.swift` file:
+
+```swift
+import AppboyKit
 ```
 
 For more information about using Objective-C code in Swift projects, please see the [Apple Developer Docs](https://developer.apple.com/library/ios/documentation/swift/conceptual/buildingcocoaapps/MixandMatch.html).
