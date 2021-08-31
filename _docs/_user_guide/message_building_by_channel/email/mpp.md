@@ -12,7 +12,7 @@ channel:
 
 ## What is Apple's Mail Privacy Protection Update?
 
-Apple's Mail Privacy Protection (MPP) is a privacy update that will be available for users of the Apple Mail app on iOS 15, iPadOS 15, macOS Monterey, and watchOS 8, historically set to release mid-September. For users who opt-in to MPP (which we predict most users will do), emails will now be preloaded using proxy servers, caching images and hindering the ability to leverage tracking pixels for metrics like [open tracking]({{site.baseurl}}/user_guide/data_and_analytics/tracking/email_tracking/%23open-pixel-and-click-tracking-overview). Once this feature goes into effect, brands should expect MPP to result in issues regarding email deliverability metrics and issues with pre-existing campaigns and Canvases that trigger based on these metrics.
+Apple's Mail Privacy Protection (MPP) is a privacy update that will be available for users of the Apple Mail app on iOS 15, iPadOS 15, macOS Monterey, and watchOS 8, historically set to release mid-September. For users who opt-in to MPP (which we predict most users will do), emails will now be preloaded using proxy servers, caching images and hindering the ability to leverage tracking pixels for metrics like [open tracking]({{site.baseurl}}/user_guide/administrative/app_settings/manage_app_group/email_settings/#email-open-tracking-pixel). Once this feature goes into effect, brands should expect MPP to result in issues regarding email deliverability metrics and issues with pre-existing campaigns and Canvases that trigger based on these metrics.
 
 ### Who Will This Affect?
 
