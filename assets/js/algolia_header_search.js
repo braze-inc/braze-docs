@@ -120,7 +120,7 @@ $(document).ready(function () {
                 .replaceUnder()
                 .replace(/<(.|\n)*?>/g, "");
             }
-            
+
             if (!content && ('guide_top_text' in item)) {
               content = item.guide_top_text
                 .replaceUnder()
@@ -144,7 +144,7 @@ $(document).ready(function () {
             }
             var resulttemplate = '<a href="' +
                 base_url + url + '"><div class="title">' +
-                title + '</div><div class="search_tag_div">' + tags_list + '</div>' + article_path + ' <div class="content">' +
+                title + '</div><div class="search_tag_header_div">' + tags_list + '</div>' + article_path + ' <div class="content">' +
                 search_msg +
                 "</div><hr /></a>";
 
