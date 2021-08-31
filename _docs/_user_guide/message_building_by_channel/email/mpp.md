@@ -35,4 +35,4 @@ Time is of the essence for brands who are just beginning to think about how they
 - Put together a targeted MPP response plan that addresses automation adjustments on the Braze platform, strengthens deliverability best practices, and develops a broader set of metrics to measure performance.
 - Implement that response plan as soon as they can
 
-For an in-depth overview of how to prepare for Apple's Mail Privacy Protection, check out this article [here](https://www.braze.com/resources/articles/apple-mail-privacy-protection-how-to-prepare).
+For an in-depth overview of how to prepare for Apple's Mail Privacy Protection, check out this article [here](https://www.braze.com/resources/articles/apple-mail-privacy-protection-how-to-prepare). 
