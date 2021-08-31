@@ -195,6 +195,7 @@ By default, when website deeplinks are opened inside the app by Braze, they are 
 
 3. Set your custom Activity in a `BrazeConfig` [builder object][udl-6]. Build the builder and pass it to [Braze.configure()][udl-5] in your [`Application.onCreate()`][udl-7]
 
+
     {% tabs %}
     {% tab JAVA %}
 
