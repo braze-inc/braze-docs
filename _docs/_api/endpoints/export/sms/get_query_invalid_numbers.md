@@ -6,7 +6,7 @@ page_order: 0
 layout: api_page
 page_type: reference
 description: "This article outlines the usage of and parameters for using the retrieve a List of Invalid Phone Numbers Braze endpoint."
-
+hidden: true
 ---
 {% api %}
 # Query or List Invalid Phone Numbers
