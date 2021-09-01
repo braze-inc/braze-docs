@@ -1,6 +1,6 @@
 ---
 nav_title: Apple Mail Privacy Protection
-article_title: Apple Mail Privacy Protection
+article_title: Apple Mail Privacy Protection for iOS 15
 page_order: 8.1
 description: "This reference article covers the Apple Mail Privacy Protection privacy update, who will be affected by it, and some next steps to prepare for the feature."
 channel:
