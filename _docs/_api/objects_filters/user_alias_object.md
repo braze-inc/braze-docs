@@ -1,6 +1,6 @@
 ---
 nav_title: "User Alias Object"
-article_title: User Alias Object
+article_title: API User Alias Object
 page_order: 11
 page_type: reference
 description: "This article explains the different components of the User Alias object."

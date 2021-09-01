@@ -1,12 +1,14 @@
 ---
 nav_title: Google Advertising ID (Optional)
+article_title: Optional Google Advertising ID for Android
 page_order: 9
-platform: Android
+platform: 
+  - Android
 description: "This article covers Google advertising IDs and how to pass this advertising information to Braze."
 
 ---
 
-# Optional Google Advertising ID
+# Optional Google Advertising ID (Android Only)
 
 The Google Advertising ID is a user-specific, unique, resettable ID for advertising, provided by Google Play services. It gives users better controls and provides developers with a simple, standard system to continue to monetize their apps. It is an anonymous identifier for advertising purposes and enables users to reset their identifier or opt-out of interest-based ads within Google Play apps. See [here][2] for more information.
 

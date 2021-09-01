@@ -1,6 +1,6 @@
 ---
 nav_title: "Content Card Object"
-article_title: Content Card Object
+article_title: Content Card Messaging Object
 page_order: 4
 page_type: reference
 channel: content cards

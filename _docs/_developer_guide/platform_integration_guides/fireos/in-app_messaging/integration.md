@@ -6,7 +6,7 @@ page_order: 1
 page_type: reference
 description: "This article describes integrating Braze's in-app message display."
 channel: in-app messages
-
+hidden: true
 ---
 
 {% include archive/android/in_app_messages/integration.md android_type="fireos" %}

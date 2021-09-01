@@ -1,6 +1,6 @@
 ---
 nav_title: "Event Object"
-article_title: Event Object
+article_title: API Event Object
 page_order: 6
 page_type: reference
 description: "This reference article goes over the event object, what it is, and how it's a crucial part of event-based campaign strategies."

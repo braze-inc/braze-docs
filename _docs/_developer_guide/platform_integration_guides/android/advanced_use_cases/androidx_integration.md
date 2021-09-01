@@ -1,6 +1,9 @@
 ---
 nav_title: AndroidX Integration
-platform: Android
+article_title: AndroidX Integration for Android/FireOS
+platform: 
+  - Android
+  - FireOS
 page_order: 3
 description: "This article covers how to integrate AndroidX."
 

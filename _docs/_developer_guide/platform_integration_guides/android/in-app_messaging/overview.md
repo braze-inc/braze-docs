@@ -1,7 +1,10 @@
 ---
 nav_title: Overview
+article_title: In-App Message Overview for Android/FireOS
 page_order: 0
-platform: Android
+platform: 
+  - Android
+  - FireOS
 description: "This article covers Android in-app messaging, when to best use it, in addition to several great use cases."
 channel:
   - in-app messages

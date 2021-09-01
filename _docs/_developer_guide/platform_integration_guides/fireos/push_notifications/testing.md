@@ -8,7 +8,7 @@ description: "This page provides information on testing in-app messages and push
 channel: 
 - push
 - in-app messages
-
+hidden: true
 ---
 
 # Testing From Command Line

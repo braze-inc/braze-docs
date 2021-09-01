@@ -368,8 +368,8 @@ var ticket_lookuptable = {
                 },
                 'Other' : {
                   'ShowSubmit': true,
-                  'LinksTitle': ['Xamarin iOS: push integration','Xamarin Android and FireOS: push integration'],
-                  'Links' : ['{{site.baseurl}}/developer_guide/platform_integration_guides/xamarin/ios/push_notifications/','{{site.baseurl}}/developer_guide/platform_integration_guides/xamarin/android_and_fireos/push_notifications/']
+                  'LinksTitle': ['Xamarin push integration'],
+                  'Links' : ['{{site.baseurl}}/developer_guide/platform_integration_guides/xamarin/push_notifications/']
                 }
               }
             },

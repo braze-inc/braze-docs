@@ -208,8 +208,10 @@ algolia:
   application_id: "1T770XQJ1A"
   index_name: "DocSearch" # You can replace that with whatever name you want
   nodes_to_index: "p,h1,h2,h3,h4,h5,h6,tr,pre,details"
+  max_record_size: 20000
   settings:
     attributesForFaceting:
+      - searchable(article_title)
       - searchable(collection)
       - searchable(type)
       - searchable(category)
@@ -218,6 +220,7 @@ algolia:
       - searchable(nav_title)
       - searchable(channel)
     searchableAttributes:
+      - article_title
       - nav_title
       - Path_01
       - headings

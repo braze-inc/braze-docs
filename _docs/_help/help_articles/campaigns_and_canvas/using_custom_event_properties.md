@@ -7,7 +7,7 @@ description: "This help article walks you through three important checks to ensu
 tool: 
 - Campaigns
 - Canvas
-no_index: true
+noindex: true
 ---
 
 # Are My Custom Event Properties Being Logged?

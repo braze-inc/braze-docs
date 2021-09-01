@@ -1,15 +1,15 @@
 ---
 nav_title: Customization
+article_title: Content Card Customization for Web
 page_order: 1
-
 platform: Web
+channel: content cards
 page_type: reference
 description: "This article covers how to customize the default Content Cards style within the Braze SDK."
-channel: content cards
 
 ---
 
-# Content Cards Customization
+# Content Card Customization
 
 ## Content Card Data Models {#data-models}
 

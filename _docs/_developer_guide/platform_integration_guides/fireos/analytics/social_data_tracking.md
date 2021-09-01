@@ -5,6 +5,7 @@ page_order: 5
 
 page_type: reference
 description: "This article covers adding soial media data to a Braze user's profile from the Android SDK."
+hidden: true
 ---
 
 # Social Data Tracking

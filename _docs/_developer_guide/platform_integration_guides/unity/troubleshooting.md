@@ -1,6 +1,10 @@
 ---
 nav_title: Troubleshooting
-platform: Unity
+article_title: Troubleshooting for Unity
+platform: 
+  - Unity
+  - iOS
+  - Android
 page_order: 29
 description: "This reference article covers troubleshooting topics for the Unity platform."
 

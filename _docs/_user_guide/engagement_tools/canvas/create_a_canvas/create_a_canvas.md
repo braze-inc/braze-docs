@@ -28,7 +28,7 @@ The Entry Wizard will guide you through setting up your Canvas—everything from
     - Add Tags to Your Canvas
     - Assign Conversion Events and Choose Their Event Types and Deadlines
 
-    [Learn more about the Basics step.](#set-up-your-canvas-basics)
+    [Learn more about the Basics step.](#step-2a-set-up-your-canvas-basics)
   {% endtab %}
   {% tab Entry Schedule %}
     Here, you will decide how your users will enter your Canvas:
@@ -36,7 +36,7 @@ The Entry Wizard will guide you through setting up your Canvas—everything from
     - Action-Based: Your user will enter your Canvas after they perform a defined action
     - API-Triggered: Use an API request to enter users into your Canvas
 
-    [Learn more about the Entry Schedule step.](#set-your-canvas-entry-schedule)
+    [Learn more about the Entry Schedule step.](#step-2b-set-your-canvas-entry-schedule)
   {% endtab %}
   {% tab Entry Audience %}
     Here, you will select your Canvas Entry Audience:
@@ -44,7 +44,7 @@ The Entry Wizard will guide you through setting up your Canvas—everything from
     - Fine-tune Canvas Re-Entry and Entry Limits
     - See a Summary of Your Target Audience
 
-    [Learn more about the Entry Audience step.](#set-your-target-entry-audience)
+    [Learn more about the Entry Audience step.](#step-2c-set-your-target-entry-audience)
   {% endtab %}
   {% tab Send Settings %}
     Here, you will select your Canvas Send Settings:
@@ -52,7 +52,7 @@ The Entry Wizard will guide you through setting up your Canvas—everything from
     - Set a Send Rate Limit for Your Canvas Messages
     - Enable and Set Quiet Hours
 
-    [Learn more about the Send Settings step.](#select-your-send-settings)
+    [Learn more about the Send Settings step.](#step-2d-select-your-send-settings)
   {% endtab %}
   {% tab Build Canvas %}
     Here you will build your Canvas.

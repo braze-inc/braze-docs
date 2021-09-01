@@ -166,10 +166,6 @@ You can set the name of the segment or accept the default, which is the name of 
 
 The filter used to create the segment selects users who were created or updated in a selected import and is available with all other filters in the edit segment page.
 
-{% alert update %}
-As of 4/10/2018, for each user, only the last 100 CSVs the user was imported/updated in are cached. So, if you attempt to create a segment by filtering for members who were in an older import, the segment will not include users who have been in 100 or more imports since. Prior to 4/10/2018, Braze cached the last 10 CSVs that a user was imported/updated in.
-{% endalert %}
-
 ## HTML Data Stripping
 
 Braze does not sanitize HTML data during ingestion time. When importing data into Braze, specifically meant for personalization usage in a web browser, ensure that it is stripped of HTML, JavaScript, or any other script tag that potentially could be leveraged maliciously when rendered in a web browser.  

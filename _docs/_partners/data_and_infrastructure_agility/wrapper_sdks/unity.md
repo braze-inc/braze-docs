@@ -18,6 +18,6 @@ Braze and Unity together enable seamless app development across multiple platfor
 
 Please see Braze's Platform Integration Guides to integrate Unity.
 
-For [iOS]({{site.baseurl}}/developer_guide/platform_integration_guides/unity/ios/sdk_integration/).
+For [iOS]({{site.baseurl}}/developer_guide/platform_integration_guides/unity/sdk_integration/ios/).
 
-For [Android]({{site.baseurl}}/developer_guide/platform_integration_guides/unity/android/sdk_integration/).
+For [Android]({{site.baseurl}}/developer_guide/platform_integration_guides/unity/sdk_integration/android/).

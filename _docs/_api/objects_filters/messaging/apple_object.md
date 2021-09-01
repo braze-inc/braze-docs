@@ -1,6 +1,6 @@
 ---
 nav_title: "Apple Object"
-article_title: Apple Object
+article_title: Apple Messaging Object
 page_order: 1
 page_type: reference
 channel: push

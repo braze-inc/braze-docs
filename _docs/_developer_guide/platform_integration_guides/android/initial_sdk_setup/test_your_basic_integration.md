@@ -1,7 +1,10 @@
 ---
 nav_title: Test Your Basic Integration
+article_title: Test Your Basic Integration for Android/FireOS
 page_order: 1
-platform: Android
+platform: 
+  - Android
+  - FireOS
 description: "This article covers how to test your basic integration for your Android application."
 
 ---
