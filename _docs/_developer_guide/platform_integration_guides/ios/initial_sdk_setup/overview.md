@@ -26,7 +26,7 @@ guide_featured_list:
 - name: "Completing the Integration"
   link: /docs/developer_guide/platform_integration_guides/ios/initial_sdk_setup/completing_integration/
   fa_icon: fas fa-flag-checkered
-- name: "Other SDK Customizations (Optional)"
+- name: "Other Optional SDK Customizations"
   link: /docs/developer_guide/platform_integration_guides/ios/initial_sdk_setup/other_sdk_customizations/
   fa_icon: fas fa-id-card-alt
 
