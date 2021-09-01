@@ -24,7 +24,7 @@ If you are integrating the Braze SDK with CocoaPods or Carthage, add the followi
 #import "Appboy-iOS-SDK/AppboyKit.h"
 ```
 
-If you are integrating the Braze SDK with Swift Package Manager or the [Manual Integration Options]({{site.baseUrl}}/docs/developer_guide/platform_integration_guides/ios/initial_sdk_setup/manual_integration_options/), add the following line of code to your `AppDelegate.m` file:
+If you are integrating the Braze SDK with Swift Package Manager or the [Manual Integration Options]({{site.baseUrl}}/docs/developer_guide/platform_integration_guides/ios/initial_sdk_setup/installation_methods/manual_integration_options/), add the following line of code to your `AppDelegate.m` file:
 
 ```objc
 #import "AppboyKit.h"
