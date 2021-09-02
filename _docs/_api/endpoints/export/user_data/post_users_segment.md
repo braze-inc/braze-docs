@@ -180,8 +180,8 @@ User export object (we will include the least data possible - if a field is miss
     "attributed_source" : (string),
     "attributed_adgroup" : (string),
     "attributed_ad" : (string),
-    "push_subscribe" : (string) "opted_in" | "subscribed" | "unsubscribed",
-    "email_subscribe" : (string) "opted_in" | "subscribed" | "unsubscribed",
+    "push_subscribe" : (string) "opted_in" "push_opted_in_at" | "subscribed" | "unsubscribed" "push_unsubscribed_at",
+    "email_subscribe" : (string) "opted_in" "email_opted_in_at" | "subscribed" | "unsubscribed" "email_unsubscribed_at",
     "custom_attributes" : (object) custom attribute key-value pairs,
     "custom_events" : [
         {
