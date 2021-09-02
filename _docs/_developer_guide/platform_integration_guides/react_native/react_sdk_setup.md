@@ -92,8 +92,13 @@ cd ios && pod install
 
 #### Step 2.2b: Configure the Braze SDK
 
-In the `AppDelegate.m` file, add the following snippet within the
-`application:didFinishLaunchingWithOptions` method:
+
+Add Appboy SDK import at the top of the `AppDelegate.m` file:
+```objc
+#import "Appboy-iOS-SDK/AppboyKit.h"
+```
+
+In the same file, add the following snippet within the `application:didFinishLaunchingWithOptions` method:
 
 ```objc
 [Appboy startWithApiKey:@"YOUR-APP-IDENTIFIER-API-KEY"
