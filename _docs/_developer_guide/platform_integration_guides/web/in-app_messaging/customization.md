@@ -66,7 +66,7 @@ To set your in-app message links to open in a new tab, set the `openInAppMessage
 appboy.initialize('api-key', { openInAppMessagesInNewTab: true} );
 ```
 
-## Require Explicit In-App Message Dismissal
+## In-App Message Dismissal
 
 By default, when an in-app message is showing, pressing the escape button or a click on the greyed-out background of the page will dismiss the message. Configure this option to `true` using the `requireExplicitInAppMessageDismissal ` [initialization option][41] to prevent this behavior and require an explicit button click to dismiss messages. 
 
