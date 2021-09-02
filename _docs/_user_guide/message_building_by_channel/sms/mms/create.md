@@ -45,7 +45,7 @@ File Types | PNG, JPG, GIF
 
 ### vCard Contact Cards 
 
-vCards, also known as Virtual Contact Files (.VCF), are a standardized file format for sending business/contact information that can be easily imported into address/contact books. vCards can be created [programmatically(https://www.twilio.com/blog/send-vcard-twilio-sms) and uploaded to the Braze [Media Library]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/media_library/#media-library) or created through our built-in Contact Card Generator. Some common properties that can be assigned to these cards are name, image, phone number, address, and email.
+vCards, also known as Virtual Contact Files (VCF), are a standardized file format for sending business and contact information that can be easily imported into address books or contact books. vCards can be created [programmatically](https://www.twilio.com/blog/send-vcard-twilio-sms) and uploaded to the Braze [Media Library]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/media_library/#media-library) or created through our built-in Contact Card Generator. You can assign common properties to these cards, such as your company's name, phone number, address, email, and a small image.
 
 #### Contact Card Generator
 
@@ -56,7 +56,7 @@ __Assign Name__
 
 Contact Cards can be created from the SMS and MMS composer. Select the __Contact Card Generator__ tab to get started.
 
-Next, you will be prompted to input your company name or nickname. This is the name that your users will see when they save the card. A 20 character limit is enforced to ensure the user can see your whole company name/alias in their contacts and messaging app. 
+Next, you will be prompted to input your company name or nickname. This is the name that your users will see when they save the card. A 20 character limit is enforced to ensure the user can see your whole company name or alias in their contacts and messaging app. 
 
 ![Contact Card Composer]({% image_buster /assets/img/sms/contact_card1.png %})
 
