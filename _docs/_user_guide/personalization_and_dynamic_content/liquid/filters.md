@@ -6,7 +6,7 @@ description: "Filters can be used to reformat static or dynamic content. This re
 
 # Filters
 
-> This reference article provides an overview of filters in Liquid, and covers which filters are supported by Braze.
+> This reference article provides an overview of filters in Liquid, and covers which filters are supported by Braze. Looking for ideas on how you can use these filters? Check out our [Liquid Use Case Library]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/liquid_use_cases/).
 
 {% raw %}
 
@@ -111,6 +111,8 @@ When dividing integers (whole numbers) by integers in Liquid, if the answer is a
 {% endraw %}
 {% endalert %}
 
+### Mathematical Operations with Custom Attributes
+
 Keep in mind that you can’t perform mathematical operations between two custom attributes.
 
 {% raw %}
@@ -161,6 +163,8 @@ If you’re updating a user on their purchase, an account balance, or anything r
 | [money_without_trailing_zeros][5.3] | Formats numbers to exclude the decimal separator (either `.` or `,`) and trailing zeros. If there are no trailing zeros, then this filter behaves like the `money` filter. | ✅  Yes   |
 | [money_without_currency][5.4]       | Formats numbers without the currency symbol.                                                       | ⛔  No    |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
+
+### Shopify Money Filter vs Braze Money Filter
 
 {% alert warning %}
 The behavior of the Shopify `money` filter differs from how it is used in Braze. Refer to the examples below for an accurate depication of the expected behavior.
@@ -270,6 +274,8 @@ The following general filters serve many different purposes, including formattin
 | [highlight][7.4]      | Wraps words inside search results with an HTML `<strong>` tag with the class highlight if it matches the submitted search terms. | ⛔  No    |
 | time_zone      | Refer to [Time Zone Filter](#time-zone-filter) below for more. | ✅  Yes   |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
+
+You can find more supported filters, such as encoding and URL filters, on our [Advanced Filters]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/advanced_filters/) page.
 
 ### Date Filter {#date-filter}
 
