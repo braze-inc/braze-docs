@@ -168,7 +168,7 @@ All other traits will be recorded as [custom attributes][14].
 
 
 {% alert important %}
-When passing user attribute data, please be sure that you are only passing values for attributes that have changed since the last update. This will ensure that you do not unnecessarily consume data points towards your allotment.
+When passing user attribute data, check that you are only passing values for attributes that have changed since the last update. This will ensure that you do not unnecessarily consume data points towards your allotment.
 {% endalert %}
 
 ### Group
@@ -211,7 +211,7 @@ If you're sending purchase data to Braze (see [Order Completed](#order-completed
 [Creating a segment][26] allows you to filter your users based on custom event data and custom attribute data.
 
 {% alert important %}
-If you use a server-to-server integration, filters related to automatically collected session data (such as "first used app" and "last used app") will not work. If you want to use these in your Segment/Braze integration, please use a side-by-side integration.
+If you use a server-to-server integration, filters related to automatically collected session data (such as "first used app" and "last used app") will not work. If you want to use these in your Segment/Braze integration, use a side-by-side integration.
 {% endalert %}
 
 ## User Deletion & Suppression 
@@ -225,10 +225,10 @@ You must ensure that that you select a common user identifier between Braze and 
 
 Segment provides a service to clients to "Replay" all historical data to a new technology partner. New Braze customers who want to import all relevant historical data can do so through Segment.
 
-Segment will connect to our [users/track endpoint]({{site.baseurl}}/api/endpoints/user_data/#user-track-endpoint) to import user data into Braze on behalf of the client.
+Segment will connect to our [Users Track endpoint]({{site.baseurl}}/api/endpoints/user_data/#user-track-endpoint) to import user data into Braze on behalf of the client.
 
 {% alert important %}
-If users do not have an external ID, they will not be imported into Braze, as our users/track endpoint requires a user ID if a Braze ID or user alias is not provided. Currently, Segment does not map to Braze's Braze ID or user alias, so all anonymous data will not be "replayed" over.
+If users do not have an external ID, they will not be imported into Braze. Our Users Track endpoint requires a user ID if a Braze ID or user alias is not provided. Currently, Segment does not map to Braze's Braze ID or user alias, so all anonymous data will not be "replayed" over.
 {% endalert %}
 
 ## Best Practices
