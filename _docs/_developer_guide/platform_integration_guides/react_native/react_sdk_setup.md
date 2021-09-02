@@ -98,8 +98,7 @@ Add Appboy SDK import at the top of the `AppDelegate.m` file:
 #import "Appboy-iOS-SDK/AppboyKit.h"
 ```
 
-In the same file, add the following snippet within the
-`application:didFinishLaunchingWithOptions` method:
+In the same file, add the following snippet within the `application:didFinishLaunchingWithOptions` method:
 
 ```objc
 [Appboy startWithApiKey:@"YOUR-APP-IDENTIFIER-API-KEY"
