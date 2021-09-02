@@ -1,9 +1,12 @@
 ---
 nav_title: Android 11 Upgrade Guide
+article_title: Android 11 Upgrade Guide
 page_order: 9
-platform: Android
+platform: 
+  - Android
+  - FireOS
 description: "This reference article covers the Android 11 SDK update, highlighting changes such as deep linking, SDK compatibility, and more."
-
+hidden: true
 ---
 
 # Android 11 SDK Upgrade Guide
@@ -17,7 +20,7 @@ For a full migration guide of Android 11, see the [Android Developer Documentati
 All apps that _target_ Android 11 (API 30) must upgrade to [Braze Android SDK v8.1.0+][1] in order to continue using Braze messaging features.
 
 {% alert important %}
-Due to changes in Android 11’s APIs, apps targeting Android 11 that do not upgrade to [Braze Android SDK v8.1.0+][1] will experience issues with deep linking from Braze UI components, and will not properly display custom HTML In-App Messages.
+Due to changes in Android 11’s APIs, apps targeting Android 11 that do not upgrade to Braze Android SDK v8.1.0+ will experience issues with deep linking from Braze UI components, and will not properly display custom HTML In-App Messages.
 {% endalert %}
 
 ### Deep Links

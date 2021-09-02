@@ -1,13 +1,14 @@
 ---
 nav_title: Radar
+article_title: Radar
 alias: /partners/radar/
-
 description: "This article outlines the partnership between Braze and Radar to add location context and tracking to your iOS and Android apps."
 page_type: partner
+search_tag: Partner
 
 ---
 
-# Radar Integration
+# Radar
 
 > [Radar](https://www.onradar.com/) is a geofencing platform for mobile and web apps. Combining Braze's industry-leading engagement platform and Radar's industry-leading geofencing capabilities allows you to drive digital engagement and loyalty. 
 The Radar platform has three products: [Geofences](https://radar.io/product/geofencing), [Trip Tracking](https://radar.io/product/trip-tracking), and [Geo APIs](https://radar.io/product/api).

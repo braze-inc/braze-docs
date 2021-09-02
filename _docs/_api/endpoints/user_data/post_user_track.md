@@ -1,16 +1,12 @@
 ---
 nav_title: "POST: User Track"
+article_title: "POST: User Track"
+search_tag: Endpoint
 page_order: 4
-
 layout: api_page
-
 page_type: reference
-platform: API
-tool:
-  - Canvas
-  - Campaigns
-
 description: "This article outlines details about the User Track Braze endpoint."
+
 ---
 {% api %}
 # User Track

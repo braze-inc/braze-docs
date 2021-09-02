@@ -1,13 +1,12 @@
 ---
 nav_title: "SMS Subscription Groups"
+article_title: SMS Subscription Groups
 page_order: 2
 description: "Subscription Groups are the foundation for sending SMS & MMS through Braze. A Subscription Group is a collection of sending phone numbers (i.e. short codes, long codes, and/or alphanumeric sender IDs) that are used for a specific type of messaging purpose."
 page_type: reference
-tool:
-  - Dashboard
-
 channel:
   - SMS
+  
 ---
 
 # SMS Subscription Groups
@@ -28,7 +27,7 @@ There are two subscription states for SMS users: `subscribed` and `unsubscribed`
 - __Rest API Set__: User profiles can be programmatically set by the [/subscription/status/set endpoint][4] by using Braze's REST API.
 - __Automatically Handled Upon User Opt-In/Opt-Out__: By users texting a default opt-in or opt-out [keyword][7], Braze automatically sets and updates users' subscription state.
 
-### How to Check a Users SMS Subscription Group:
+### How to Check a User's SMS Subscription Group:
 - __User Profile__: Individual user profiles can be accessed through the Braze dashboard by selecting User Search from the right sidebar. Here, you can look up user profiles by email address, phone number, or external user ID. Once in a user profile, under the Engagement tab, you can view a user's SMS subscription groups. 
 - __Rest API Get__: Individual user profiles subscription group can be viewed by the [Get Subscription Group][9] endpoint or [Subscription Group Status][8] endpoint by using Braze’s REST API. 
 

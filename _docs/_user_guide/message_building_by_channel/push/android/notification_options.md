@@ -1,5 +1,6 @@
 ---
 nav_title: "Notification Options (Android)"
+article_title: Push Notification Options
 page_order: 2
 page_type: reference
 description: "This reference article covers several Android notification options and how to best use them within Braze campaigns."
@@ -7,8 +8,7 @@ description: "This reference article covers several Android notification options
 platform: Android
 channel:
   - Push
-tool:
-  - Dashboard
+
 ---
 
 # Android Notification Options

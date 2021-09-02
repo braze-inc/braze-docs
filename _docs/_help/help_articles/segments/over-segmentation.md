@@ -5,7 +5,7 @@ page_order: 1
 page_type: solution
 description: "This help article covers the implications of over-segmenting your users."
 tool: Segments
-no_index: true
+noindex: true
 ---
 
 # Over-Segmentation

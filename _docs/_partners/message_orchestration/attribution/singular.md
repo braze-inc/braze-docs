@@ -1,9 +1,10 @@
 ---
 nav_title: Singular
+article_title: Singular
 alias: /partners/singular/
-
 description: "This article outlines the partnership between Braze and Singular, a unified marketing analytics platform."
 page_type: partner
+search_tag: Partner
 
 ---
 
@@ -32,7 +33,7 @@ protected void onCreate(Bundle savedInstanceState)
     // Init Singular SDK
    Singular.init(context, config); // context is Application Context
    // Code For Braze
-   String appboyDeviceId = Appboy.getInstance(context).getInstallTrackingId();
+   String appboyDeviceId = Braze.getInstance(context).getInstallTrackingId();
    Singular.event("App Open", "appboyUserID", appboyDeviceId);
 }
 ```

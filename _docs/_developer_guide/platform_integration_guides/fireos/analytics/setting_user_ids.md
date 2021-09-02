@@ -5,7 +5,7 @@ page_order: 1
 
 page_type: reference
 description: "This page covers seting user IDs for each of your users, including best practices and important considerations."
-
+hidden: true
 ---
 
 # Setting User IDs
@@ -45,7 +45,7 @@ Providing this information to others may allow people outside your organization 
 You should make the following call as soon as the user is identified (generally after logging in) in order to set the user id:
 
 ```java
-Appboy.getInstance(context).changeUser(YOUR_USER_ID_STRING);
+Braze.getInstance(context).changeUser(YOUR_USER_ID_STRING);
 ```
 
 >  __Do not call `changeUser()` when a user logs out. `changeUser()` should only be called when the user logs into the application.__ Setting `changeUser()` to a static default value will associate ALL user activity with that default "user" until the user logs in again.
@@ -81,6 +81,6 @@ Please note the following:
 {% include archive/aliasing.md platform="Android" %}
 
 [1]: {{site.baseurl}}/developer_guide/rest_api/user_data/#user-data
-[2]: {{site.baseurl}}/developer_guide/rest_api/messaging/
+[2]: {{site.baseurl}}/api/endpoints/messaging/
 [4]: https://appboy.github.io/appboy-android-sdk/javadocs/com/appboy/Appboy.html#changeUser(java.lang.String) "Javadocs"
 [6]: http://developer.android.com/reference/java/util/Locale.html#default_locale "Android Developer Docs - Localization"

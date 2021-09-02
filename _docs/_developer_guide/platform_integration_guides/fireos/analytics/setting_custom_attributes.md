@@ -5,7 +5,7 @@ page_order: 3
 
 page_type: reference
 description: "This article covers methods for assigning custom attributes to users."
-
+hidden: true
 ---
 
 # Setting Custom Attributes
@@ -39,7 +39,7 @@ All string values such as first name, last name, country, and home city are limi
 This is what setting a first name would look like in code:
 
 ```java
-Appboy.getInstance(context).getCurrentUser().setFirstName("first_name");
+Braze.getInstance(context).getCurrentUser().setFirstName("first_name");
 ```
 
 ## Assigning Custom User Attributes
@@ -60,49 +60,49 @@ Full method specifications for custom attributes can be found here within the [A
 ### Setting a Custom Attribute with a String Value
 
 ```java
-Appboy.getInstance(context).getCurrentUser().setCustomUserAttribute("your_attribute_key", "your_attribute_value");
+Braze.getInstance(context).getCurrentUser().setCustomUserAttribute("your_attribute_key", "your_attribute_value");
 ```
 
 ### Setting a Custom Attribute with an Integer Value
 
 ```java
-Appboy.getInstance(context).getCurrentUser().setCustomUserAttribute, "your_attribute_key", YOUR_INT_VALUE);
+Braze.getInstance(context).getCurrentUser().setCustomUserAttribute, "your_attribute_key", YOUR_INT_VALUE);
 // Integer attributes may also be incremented using code like the following:
-Appboy.getInstance(context).getCurrentUser().incrementCustomUserAttribute("your_attribute_key", YOUR_INCREMENT_VALUE);
+Braze.getInstance(context).getCurrentUser().incrementCustomUserAttribute("your_attribute_key", YOUR_INCREMENT_VALUE);
 ```
 
 ### Setting a Custom Attribute with a Boolean Value
 
 ```java
-Appboy.getInstance(context).getCurrentUser().setCustomUserAttribute("your_attribute_key", YOUR_BOOLEAN_VALUE);
+Braze.getInstance(context).getCurrentUser().setCustomUserAttribute("your_attribute_key", YOUR_BOOLEAN_VALUE);
 ```
 
 ### Setting a Custom Attribute with a Long Value
 
 ```java
-Appboy.getInstance(context).getCurrentUser().setCustomUserAttribute("your_attribute_key", YOUR_LONG_VALUE);
+Braze.getInstance(context).getCurrentUser().setCustomUserAttribute("your_attribute_key", YOUR_LONG_VALUE);
 ```
 
 ### Setting a Custom Attribute with a Float Value
 
 ```java
-Appboy.getInstance(context).getCurrentUser().setCustomUserAttribute("your_attribute_key", YOUR_FLOAT_VALUE);
+Braze.getInstance(context).getCurrentUser().setCustomUserAttribute("your_attribute_key", YOUR_FLOAT_VALUE);
 ```
 
 ### Setting a Custom Attribute with a Double Value
 
 ```java
-Appboy.getInstance(context).getCurrentUser().setCustomUserAttribute("your_attribute_key", YOUR_DOUBLE_VALUE);
+Braze.getInstance(context).getCurrentUser().setCustomUserAttribute("your_attribute_key", YOUR_DOUBLE_VALUE);
 ```
 
 ### Setting a Custom Attribute with a Date Value
 
 ```java
-Appboy.getInstance(context).getCurrentUser().setCustomUserAttribute("your_attribute_key", YOUR_DATE_VALUE);
+Braze.getInstance(context).getCurrentUser().setCustomUserAttribute("your_attribute_key", YOUR_DATE_VALUE);
 // This method will assign the current time to a custom attribute at the time the method is called:
-Appboy.getInstance(context).getCurrentUser().setCustomUserAttributeToNow("your_attribute_key");
+Braze.getInstance(context).getCurrentUser().setCustomUserAttributeToNow("your_attribute_key");
 // This method will assign the date specified by SECONDS_FROM_EPOCH to a custom attribute:
-Appboy.getInstance(context).getCurrentUser().setCustomUserAttributeToSecondsFromEpoch("your_attribute_key", SECONDS_FROM_EPOCH);
+Braze.getInstance(context).getCurrentUser().setCustomUserAttributeToSecondsFromEpoch("your_attribute_key", SECONDS_FROM_EPOCH);
 ```
 
 {% alert warning %}
@@ -114,11 +114,11 @@ The maximum number of elements in custom attribute arrays defaults to 25. The ma
 
 ```java
 // Setting a custom attribute with an array value
-Appboy.getInstance(context).getCurrentUser().setCustomAttributeArray("your_attribute_key", testSetArray);
+Braze.getInstance(context).getCurrentUser().setCustomAttributeArray("your_attribute_key", testSetArray);
 // Adding to a custom attribute with an array value
-Appboy.getInstance(context).getCurrentUser().addToCustomAttributeArray("your_attribute_key", "value_to_add");
+Braze.getInstance(context).getCurrentUser().addToCustomAttributeArray("your_attribute_key", "value_to_add");
 // Removing a value from an array type custom attribute
-Appboy.getInstance(context).getCurrentUser().removeFromCustomAttributeArray("your_attribute_key", "value_to_remove");
+Braze.getInstance(context).getCurrentUser().removeFromCustomAttributeArray("your_attribute_key", "value_to_remove");
 ```
 
 #### Unsetting a Custom Attribute
@@ -126,7 +126,7 @@ Appboy.getInstance(context).getCurrentUser().removeFromCustomAttributeArray("you
 Custom attributes can also be unset using the following method:
 
 ```java
-Appboy.getInstance(context).getCurrentUser().unsetCustomUserAttribute("your_attribute_key");
+Braze.getInstance(context).getCurrentUser().unsetCustomUserAttribute("your_attribute_key");
 ```
 
 #### Setting a Custom Attribute via the REST API
@@ -160,13 +160,13 @@ No explicit opt-in is required by Android to send users push notifications. When
 ##### Setting Email Subscriptions
 
 ```java
-Appboy.getInstance(context).getCurrentUser().setEmailNotificationSubscriptionType(emailNotificationSubscriptionType);
+Braze.getInstance(context).getCurrentUser().setEmailNotificationSubscriptionType(emailNotificationSubscriptionType);
 ```
 
 ##### Setting Push Notification Subscription
 
 ```java
-Appboy.getInstance(context).getCurrentUser().setPushNotificationSubscriptionType(pushNotificationSubscriptionType);
+Braze.getInstance(context).getCurrentUser().setPushNotificationSubscriptionType(pushNotificationSubscriptionType);
 ```
 
 [2]: https://appboy.github.io/appboy-android-sdk/javadocs/com/appboy/AppboyUser.html "Javadocs"

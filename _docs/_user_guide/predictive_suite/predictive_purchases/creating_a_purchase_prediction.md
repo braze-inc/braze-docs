@@ -1,12 +1,9 @@
 ---
 nav_title: Creating A Purchase Prediction
-title: Creating A Purchase Prediction
-description: ""
+article_title: Creating A Purchase Prediction
 page_order: 1
-
 description: "This article covers how to create a Purchase Prediction within the Braze dashboard."
-Tool:
-  - Dashboard
+
 ---
 
 # Creating A Purchase Prediction

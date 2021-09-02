@@ -1,8 +1,11 @@
 ---
 nav_title: Iterate
+article_title: Iterate
 alias: /partners/iterate/
 description: "This article outlines the partnership between Braze and Iterate allowing you to enrich customer data by using surveys to add additional insights."
 page_type: partner
+search_tag: Partner
+
 ---
 
 # Iterate

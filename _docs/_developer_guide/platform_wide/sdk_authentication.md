@@ -1,12 +1,14 @@
 ---
 nav_title: SDK Authentication
+article_title: SDK Authentication
 page_order: 5
 hidden: true
 description: "This reference article covers SDK authentication and how to enable this feature in the Braze SDK."
 platform:
-  - ios
-  - android
-  - web
+  - iOS
+  - Android
+  - Web
+  
 ---
 
 <br>
@@ -35,7 +37,7 @@ There are four high-level steps to get started:
 
 ## Server-Side Integration {#server-side-integration}
 
-### Generate a Public/Private Key-pair {#generate-keys}
+### Generate a Public/Private Key-Pair {#generate-keys}
 
 Generate an RSA public/private key-pair. The Public Key will eventually be added to the Braze Dashboard, while the Private Key should be stored securely on your server.
 
@@ -175,13 +177,13 @@ braze.setSdkAuthenticationSignature("NEW-JWT-TOKEN-FROM-SERVER");
 Supply the JWT Token when calling `appboy.changeUser`:
 
 ```java
-Appboy.getInstance(this).changeUser("NEW-USER-ID", "JWT-TOKEN-FROM-SERVER");
+Braze.getInstance(this).changeUser("NEW-USER-ID", "JWT-TOKEN-FROM-SERVER");
 ```
 
 Or, when you have refreshed the user's token mid-session:
 
 ```java
-Appboy.getInstance(this).setSdkAuthenticationSignature("NEW-JWT-TOKEN-FROM-SERVER");
+Braze.getInstance(this).setSdkAuthenticationSignature("NEW-JWT-TOKEN-FROM-SERVER");
 ```
 {% endtab %}
 {% tab KOTLIN %}
@@ -189,13 +191,13 @@ Appboy.getInstance(this).setSdkAuthenticationSignature("NEW-JWT-TOKEN-FROM-SERVE
 Supply the JWT Token when calling `appboy.changeUser`:
 
 ```kotlin
-Appboy.getInstance(this).changeUser("NEW-USER-ID", "JWT-TOKEN-FROM-SERVER")
+Braze.getInstance(this).changeUser("NEW-USER-ID", "JWT-TOKEN-FROM-SERVER")
 ```
 
 Or, when you have refreshed the user's token mid-session:
 
 ```kotlin
-Appboy.getInstance(this).setSdkAuthenticationSignature("NEW-JWT-TOKEN-FROM-SERVER")
+Braze.getInstance(this).setSdkAuthenticationSignature("NEW-JWT-TOKEN-FROM-SERVER")
 ```
 {% endtab %}
 {% tab Objective-C %}
@@ -256,21 +258,21 @@ braze.subscribeToSdkAuthenticationFailures((authFailure) => {
 {% endtab %}
 {% tab Java %}
 ```java
-Appboy.getInstance(this).subscribeToSdkAuthenticationFailures(errorEvent -> {
+Braze.getInstance(this).subscribeToSdkAuthenticationFailures(errorEvent -> {
     // TODO: optionally log to your error-reporting service
     // TODO: check if the errorEvent user matches the currently logged-in user
     String newToken = getNewTokenSomehow(errorEvent);
-    Appboy.getInstance(getContext()).setSdkAuthenticationSignature(newToken);
+    Braze.getInstance(getContext()).setSdkAuthenticationSignature(newToken);
 });
 ```
 {% endtab %}
 {% tab KOTLIN %}
 ```kotlin
-Appboy.getInstance(this).subscribeToSdkAuthenticationFailures({ errorEvent: BrazeSdkAuthenticationErrorEvent ->
+Braze.getInstance(this).subscribeToSdkAuthenticationFailures({ errorEvent: BrazeSdkAuthenticationErrorEvent ->
     // TODO: optionally log to your error-reporting service
     // TODO: check if the errorEvent user matches the currently logged-in user
     val newToken: String = getNewTokenSomehow(errorEvent)
-    Appboy.getInstance(getContext()).setSdkAuthenticationSignature(newToken)
+    Braze.getInstance(getContext()).setSdkAuthenticationSignature(newToken)
 })
 ```
 {% endtab %}
@@ -351,6 +353,14 @@ The "**Optional**" setting is a useful way to monitor the potential impact this 
 
 Invalid JWT signatures will be reported in both **Optional** and **Required** states, however only the **Required** state will reject SDK requests causing apps to retry and request new signatures.
 
+## Analytics {#analytics}
+
+Each app will show a breakdown of SDK Authentication errors collected while this feature is in the **Optional** and **Required** state.
+
+Data is available in real-time, and you can hover over points in the chart to see a breakdown of errors for a given date.
+
+![analytics][10]
+
 ## Error Codes {#error-codes}
 
 | Error Code| Error Reason | Description |
@@ -414,3 +424,4 @@ Requests will retry periodically using an exponential backoff approach. After 50
 [7]: #sdk-callback
 [8]: {% image_buster /assets/img/sdk-auth-settings.png %}
 [9]: #error-codes
+[10]: {% image_buster /assets/img/sdk-auth-analytics.png %}

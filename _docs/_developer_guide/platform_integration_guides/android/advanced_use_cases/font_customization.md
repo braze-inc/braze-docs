@@ -1,6 +1,9 @@
 ---
 nav_title: Font Customization
-platform: Android
+article_title: Font Customization for Android/FireOS
+platform: 
+  - Android
+  - FireOS
 page_order: 7
 description: "This reference article covers font customization options such as defining a font family and shows how to reference it throughout your application."
 
@@ -42,12 +45,12 @@ Now that the font family is created, you can override Braze style defaults in yo
 For example, the following styles override would use the `bungee` font family from above for _all_ Braze in-app messages and a different font family for _all_ Braze News Feed cards.
 
 ```
-<style name="Appboy.InAppMessage">
+<style name="Braze.InAppMessage">
   <item name="android:fontFamily">@font/bungee_font_family</item>
   <item name="fontFamily">@font/bungee_font_family</item>
 </style>
 
-<style name="Appboy.Cards">
+<style name="Braze.Cards">
   <item name="android:fontFamily">@font/another_custom_font_family</item>
   <item name="fontFamily">@font/another_custom_font_family</item>
 </style>

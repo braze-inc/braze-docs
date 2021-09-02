@@ -1,17 +1,12 @@
 ---
 nav_title: "GET: Query Hard Bounced Emails"
+article_title: "GET: Query Hard Bounced Emails"
+search_tag: Endpoint
 page_order: 0
-
 layout: api_page
-
 page_type: reference
-platform: API
-channel: Email
-tool:
-  - Canvas
-  - Campaigns
-
 description: "This article outlines the usage of and parameters for using the retrieve a List of Hard Bounced Email Addresses Braze endpoint."
+
 ---
 {% api %}
 # Query or List Hard Bounced Emails
@@ -22,9 +17,12 @@ description: "This article outlines the usage of and parameters for using the re
 This endpoint allows you to pull a list of email addresses that have "hard bounced" your email messages within a certain time frame.
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#7c2ef84f-ddf5-451a-a72c-beeabc06ad9d {% endapiref %}
+
 ## Request Parameters
 
-You must provide an `end_date`, as well as either an `email` or a `start_date`.
+You must provide either a `start_date` and `end_date` OR an `email`.
+
+If you provide a `start_date`, `end_date`, and an `email`, we prioritize the email(s) given and disregard the date range.
 
 | Parameter | Required | Data Type | Description |
 | ----------|-----------| ----------|----- |
@@ -44,7 +42,6 @@ curl --location --request GET 'https://rest.iad-01.braze.com/email/hard_bounces?
 ```
 
 ## Response
-
 Entries are listed in descending order.
 
 ```json

@@ -1,18 +1,12 @@
 ---
 nav_title: "GET: Send Analytics"
+article_title: "GET: Send Analytics"
+search_tag: Endpoint
 page_order: 4
-
 layout: api_page
-
 page_type: reference
-platform:
-  - API
-
-tool:
-  - Campaign
-
-
 description: "This article outlines details about Braze's Campaign Daily Stats by Send ID endpoint."
+
 ---
 {% api %}
 # Send Analytics Endpoint

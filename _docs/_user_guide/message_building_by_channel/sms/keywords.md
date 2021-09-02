@@ -1,7 +1,9 @@
 ---
 nav_title: Keyword Processing
+article_title: SMS Keyword Processing
 page_order: 6
 layout: featured
+
 guide_top_header: "Keyword Processing"
 guide_top_text: "Keywords are a foundational aspect of automated SMS messaging. With keywords, your users are able to message a preset list of single-word commands that do some type of action. For example, opting in and out of receiving SMS messages. With Braze, you also have the capability of setting custom keywords that can be leveraged for more marketing options. This topic will cover how Braze approaches Keyword Processing and Management, as well as some best practices."
 description: "Keywords are a foundational aspect of automated SMS messaging. With keywords, your users are able to message a preset list of single-word commands that do some type of action."

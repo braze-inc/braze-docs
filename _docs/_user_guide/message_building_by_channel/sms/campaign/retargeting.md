@@ -1,14 +1,14 @@
 ---
 nav_title: User Retargeting
+article_title: SMS User Retargeting
 page_order: 5
 description: "This reference article covers how users can retarget their messages by users SMS interactions."
 page_type: reference
 tool:
-  - Dashboard
   - Campaigns
-
 channel:
   - SMS
+
 ---
 
 # SMS Retargeting
@@ -57,7 +57,7 @@ Note when triggering a message on an "Other" keyword response, you will have the
 ![picture][8]{: style="margin-top:10px;"}
 
 __Template Keywords__<br>
-When triggering a campaign or Canvas Step on an inbound SMS, you can optionally template the text that your user sent into the body of your campaign or Canvas with Liquid. This will enable you to access the user's response which you can then include in your reply, apply conditional logic to, or anything else you can do with Liquid. 
+When triggering a campaign or Canvas Step on an inbound SMS or MMS, you can optionally template the text and/or media attachments that your user sent into the body of your campaign or Canvas with Liquid. This will enable you to access the user's response which you can then include in your reply, apply conditional logic to, or anything else you can do with Liquid. 
 
 ![picture][16]{: style="max-width:80%;"}
 <br><br>

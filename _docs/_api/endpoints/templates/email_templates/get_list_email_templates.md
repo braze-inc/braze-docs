@@ -1,18 +1,12 @@
 ---
 nav_title: "GET: List Available Email Templates"
+article_title: "GET: List Available Email Templates"
+search_tag: Endpoint
 page_order: 4
-
 layout: api_page
-
 page_type: reference
-platform: API
-channel:
-  - Email
-tool:
-  - Canvas
-  - Campaigns
-
 description: "This article outlines details about the List Available Email Templates Braze endpoint."
+
 ---
 {% api %}
 # List Available Email Templates
@@ -60,5 +54,5 @@ Authorization: Bearer YOUR-REST-API-KEY
 {% endapi %}
 
 {% alert important %}
-Templates built using the Drag & drop editor are not provided in this response.
+Templates built using the Drag & Drop Editor are not provided in this response.
 {% endalert %}

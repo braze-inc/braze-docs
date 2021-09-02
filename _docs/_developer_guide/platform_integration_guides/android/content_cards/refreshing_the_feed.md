@@ -1,7 +1,10 @@
 ---
 nav_title: Refreshing the Feed
+article_title: Refreshing the Content Card Feed for Android/FireOS
 page_order: 4
-platform: Android
+platform: 
+  - Android
+  - FireOS
 description: "This reference article covers how to implement Content Card refreshing in your Android application."
 channel:
   - content cards
@@ -16,14 +19,14 @@ You can queue a manual refresh of Braze Content Cards at any time by calling:
 {% tab JAVA %}
 
 ```java
-Appboy.getInstance(context).requestContentCardsRefresh(false);
+Braze.getInstance(context).requestContentCardsRefresh(false);
 ```
 
 {% endtab %}
 {% tab KOTLIN %}
 
 ```kotlin
-Appboy.getInstance(context).requestContentCardsRefresh(false)
+Braze.getInstance(context).requestContentCardsRefresh(false)
 ```
 
 {% endtab %}

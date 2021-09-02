@@ -6,7 +6,7 @@ page_order: 4
 page_type: reference
 description: "This article covers advanced settings available for Android and FireOS push notifications sent through the Braze dashboard."
 channel: push
-
+hidden: true
 ---
 
 # Advanced Settings
@@ -93,7 +93,7 @@ To message your full userbase with a specific sound, we recommend that you indir
 [11]: {% image_buster /assets/img_archive/sound_android.png %}
 [12]: {% image_buster /assets/img_archive/deep_link_image_android.png %}
 [13]: {{site.baseurl}}/developer_guide/rest_api/messaging/
-[14]: https://github.com/Appboy/appboy-android-sdk/blob/master/samples/custom-broadcast/src/main/java/com/appboy/custombroadcast/AppboyBroadcastReceiver.java
+[14]: https://github.com/Appboy/appboy-android-sdk/blob/master/samples/custom-broadcast/src/main/java/com/braze/custombroadcast/CustomBroadcastReceiver.java
 [15]: {% image_buster /assets/img_archive/messagesummary.gif %}
 [17]: https://developer.android.com/training/notify-user/channels#importance
 [16]: https://developer.android.com/training/notify-user/channels

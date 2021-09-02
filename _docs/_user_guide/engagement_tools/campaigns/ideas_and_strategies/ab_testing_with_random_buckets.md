@@ -1,15 +1,13 @@
 ---
 nav_title: A/B Testing with Random Buckets
-platform: Campaigns
-subplatform: Ideas and Strategies
+article_title: A/B Testing with Random Buckets
 page_order: 7
-
 page_type: tutorial
 description: "This how-to article goes over the concept of A/B testing and variants and how you can use them in your Braze campaigns."
 page_type: reference
 tool:
   - Campaign
-  - Dashboard
+
 ---
 
 # A/B Testing with Random Buckets

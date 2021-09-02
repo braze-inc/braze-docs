@@ -1,7 +1,7 @@
 ---
 nav_title: Opening CSV Reports in Excel
+article_title: Opening CSV Reports in Excel 
 page_order: 9
-
 page_type: reference
 description: "This reference article covers how to open CSV exports in Excel."
 

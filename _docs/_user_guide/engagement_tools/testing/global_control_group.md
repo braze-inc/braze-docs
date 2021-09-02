@@ -1,14 +1,13 @@
 ---
 nav_title: Global Control Group
+article_title: Global Control Group
 alias: /global_control_group/
 page_order: 0
 
 description: "This article covers how to set up and properly use Global Control Groups. It also covers how to view reports and metrics brought on by the use of these groups."
 page_type: reference
-tool: 
-- Campaigns
-- Canvas
-- Reports
+tool: Reports
+
 ---
 
 # Global Control Groups
@@ -18,7 +17,7 @@ tool:
 ## Create a Global Control Group
 
 1. __Navigate to the Global Control Group settings__<br>From the dashboard, navigate to the Global Control Group tab located within __Global Message Settings__ under __Engagement__. <br><br>
-2. __Assign a percentage of all users to this control group__<br> Input a percentage for your control group and __Save__. Once entered, Braze will show you an estimate of how many users will fall into your Global Control, treatment, and treatment sample. Keep in mind that the more users you have in your app group, the more accurate this estimate will be. Visit our [best practices section](#percentage-guidelines) for percentage guidelines.<br><br>![Global Control Group][4] <br><br>
+2. __Assign a percentage of all users to this control group__<br> Input a percentage for your control group and __Save__. Once entered, Braze will show you an estimate of how many users will fall into your Global Control, treatment, and treatment sample. Keep in mind that the more users you have in your app group, the more accurate this estimate will be. The number of users in your Global Control Groups is automatically updated after creation to remain proportionate to this audience percentage.<br><br>Visit our [best practices section](#percentage-guidelines) for percentage guidelines.<br><br>![Global Control Group][4] <br><br>
 3. __Assign exclusion settings__<br>Add exclusion settings to your global control group by using tags. Any campaigns that use the tags included here in the exclusion settings will __not use__ your global control group. These campaigns will continue to send to every user in the target audience (including those in your global control group). You may want to add exclusion settings if you have transactional messages that should send to every user.<br><br>![Global Control Group][5] <br><br>
 4. __Save your control group__<br>At this point, Braze will generate a randomly selected group of users comprising the selected percentage of your total user base. Once saved, all currently active as well as future campaigns/Canvases __will no longer send to users in this group__, with the exception being campaigns/Canvases that contain any of the tags in your exclusion settings.
 

@@ -1,14 +1,13 @@
 ---
 nav_title: Retention Reports
-platform: Campaigns
-subplatform: Testing and More
+article_title: Retention Reports
 page_order: 4
-
 tool: 
-- Campaigns
-- Reports
+  - Campaigns
+  - Reports
 page_type: reference
 description: "This reference article goes over how to measure user retention for users who performed a selected retention event in a specific campaign."
+
 ---
 
 # Retention Report

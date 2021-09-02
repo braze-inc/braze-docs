@@ -1,9 +1,10 @@
 ---
 nav_title: AppsFlyer
+article_title: AppsFlyer
 alias: /partners/appsflyer/
-
 description: "This article outlines the partnership between Braze and AppsFlyer, a mobile marketing analytics and attribution platform that helps you analyze and optimize your apps."
 page_type: partner
+search_tag: Partner
 
 ---
 
@@ -33,7 +34,7 @@ If you have an Android app, you will need to include the code snippet below, whi
 
 ```java
 HashMap<String, Object> customData = new HashMap<String,Object>();
-String deviceId = Appboy.getInstance(context).getInstallTrackingId();
+String deviceId = Braze.getInstance(context).getInstallTrackingId();
 customData.put("customData", deviceId);
 AppsFlyerLib.setAdditionalData(customData);
 ```
@@ -66,7 +67,7 @@ In your Braze account, navigate to __Attribution__ under __Technology Partners__
 In AppsFlyer's dashboard, navigate to the __Integrated Partners__ page on the left bar. From here, search for __Braze__ and click on Braze's logo to open up a configuration window.
 ![AppsFlyer][1]{: style="float:right;max-width:30%;margin-left:15px;margin-bottom:15px;margin-top:15px"}
 
-Within the __Integration__ tab, switch on __Activate Partner__, copy the Data Import Key into the `API_key` field, add your Braze REST Endpoint URL into the `REST Endpoint` field. Finally, save your configuration.
+Within the __Integration__ tab, switch on __Activate Partner__, copy the Data Import Key into the `API_key` field, add your Braze REST Endpoint URL into the `REST Endpoint` field. There will also be an option to toggle advanced privacy, make sure that this toggle is turned off. Finally, save your configuration.
 
 Additional information on these instructions is available in [AppsFlyer's documentation][16].
 

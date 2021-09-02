@@ -1,5 +1,6 @@
 ---
 nav_title: "Push Primer"
+article_title: Push Primer for iOS
 page_order: 6
 page_type: reference
 description: "This article covers how to integrate iOS push primers."
@@ -133,7 +134,7 @@ let notificationSettiings = UIApplication.shared.currentUserNotificationSettings
 {% tab OBJECTIVE-C %}
 __Deep Link Handler__<br>
 Place this code snippet outside of the `AppDelegate.m` file. <br>
-For more information on deep linking check out our [documentation]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/advanced_use_cases/linking/#deep-linking-to-app-settings).
+For more information on deep linking check out our [documentation]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/advanced_use_cases/linking/#linking-handling-customization).
 ```objc
   // ...
   // check that this deep link relates to the push prompt

@@ -1,12 +1,8 @@
 ---
 nav_title: Errors & Responses
-
+article_title: API Errors & Responses
 description: "This reference article covers the various errors and server responses that can come up while using the Braze API and how to troubleshoot them." 
 page_type: reference
-tool: 
-  - Docs
-platform: 
-  - APIs
 page_order: 2.3
 
 ---

@@ -1,12 +1,12 @@
 ---
 nav_title: "POST: Send Transactional Emails via API-Triggered Delivery"
+article_title: "POST: Send Transactional Emails via API-Triggered Delivery"
+search_tag: Endpoint
 page_order: 4
 layout: api_page
 page_type: reference
-platform: API
-tool:
-  - Campaigns
 description: "This article outlines details about the Send Transactional Email Messages via API-Triggered Delivery Braze endpoint."
+
 ---
 
 {% api %}
@@ -30,13 +30,13 @@ Authorization: Bearer YOUR-REST-API-KEY
 {
   "external_send_id": (optional, string) see external_send_id below,
   "trigger_properties": (optional, object) personalization key-value pairs that will apply to the user in this request,
-  "recipient": (required, object)
-    {
+  "recipients": (required, object)
+    [{
       // Either "external_user_id" or "user_alias" is required. Requests must specify only one.
       "user_alias": (optional, User alias object) User alias of the user to receive message,
       "external_user_id": (optional, string) External identifier of user to receive message,
       "attributes": (optional, object) fields in the attributes object will create or update an attribute of that name with the given value on the specified user profile before the message is sent and existing values will be overwritten
-    }
+    }]
 }
 ```
 
@@ -46,7 +46,7 @@ Authorization: Bearer YOUR-REST-API-KEY
 | --------- | ---------| --------- | ----------- |
 |`external_send_id`| Optional | String |  A Base64 compatible string. Validated against the following regex:<br><br> `/^[a-zA-Z0-9-_+\/=]+$/` <br><br>This optional field allows you to pass an internal identifier for this particular send, which will be included in events sent from the Transactional HTTP event postback. When passed, this identifier will also be used as a deduplication key, which Braze will store for 24 hours. <br><br>Passing the same identifier in another request will not result in a new instance of a send by Braze for 24 hours.|
 |`trigger_properties`|Optional|Object|See [trigger properties]({{site.baseurl}}/api/objects_filters/trigger_properties_object/). Personalization key-value pairs that will apply to the user in this request. |
-|`recipient`|Required|Object|See [recipients object]({{site.baseurl}}/api/objects_filters/recipient_object/). The user you are targeting this message to. <br><br>Note that if you provide an external user ID that doesn't already exist in Braze, passing any fields to the `attributes` object will create this user profile in Braze and send this message to the newly created user. <br><br>If you send multiple requests to the same user with different data in the `attributes` object, Braze will ensure that `first_name`, `last_name`, and `email` attributes will be updated synchronously and templated into your message. Custom attributes don't have this same protection, so proceed with caution when updating a user through this API and passing different custom attribute values in quick succession.|
+|`recipients`|Required|Object|See [recipients object]({{site.baseurl}}/api/objects_filters/recipient_object/). The user you are targeting this message to. <br><br>Note that if you provide an external user ID that doesn't already exist in Braze, passing any fields to the `attributes` object will create this user profile in Braze and send this message to the newly created user. <br><br>If you send multiple requests to the same user with different data in the `attributes` object, Braze will ensure that `first_name`, `last_name`, and `email` attributes will be updated synchronously and templated into your message. Custom attributes don't have this same protection, so proceed with caution when updating a user through this API and passing different custom attribute values in quick succession.|
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
 
 ## Example Request
@@ -60,9 +60,9 @@ curl -X POST \
           "example_string_property": YOUR_EXAMPLE_STRING,
           "example_integer_property": YOUR_EXAMPLE_INTEGER
         },
-        "recipient": {
+        "recipients": [{
           "external_user_id": TARGETED_USER_ID_STRING
-        }
+        }]
       }' \
   https://rest.iad-01.braze.com/transactional/v1/campaigns/YOUR_CAMPAIGN_ID_HERE/send
 ```

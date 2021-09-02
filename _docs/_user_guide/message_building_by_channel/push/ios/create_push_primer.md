@@ -1,15 +1,16 @@
 ---
 nav_title: "Create a Push Primer Campaign"
+article_title: Create a Push Primer Campaign
 page_order: 5
 page_type: tutorial
 description: "This walkthrough will show you how to get your users qualified and ready to receive your push messages by sending out a push primer."
-
 channel:
-  - Push
+  - push
 tool:
-  - Dashboard
   - Campaigns
+
 ---
+
 {% alert important %}
 Push Primer campaigns require backend set up from your developers. <br>Check out the necessary Push Primer Integrations [here]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/push_primer/).
 {% endalert %}
@@ -76,9 +77,11 @@ To add buttons to your in-app message, you will find a Button 1 textbox and Butt
 
 After your push primer message has been set up, on-click behavior must be assigned. For the corresponding "Turn on Notifications" button you had assigned, you must select "Deep Link Into App". 
 
+#### Deep Linking
+
 Because Push Primer campaigns are not an out-of-the-box feature, the deep-link link that prompts the native push prompt must be set up by your developers before it becomes available. 
 
-Documentation for this can be found here: [Push Primer Integrations][integrations].
+Documentation on push primer integrations and deep linking customization can be found [here][integrations].
 
 ## Step 5: Selecting the Delivery Method
 

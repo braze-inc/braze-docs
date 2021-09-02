@@ -5,7 +5,7 @@ page_order: 2
 
 page_type: reference
 description: "This article walks you through how to integrate specific kinds of beacons with Braze to allow for segmentation and messaging"
-
+hidden: true
 ---
 
 # Beacon Integration
@@ -21,14 +21,14 @@ In order to log a custom Event when a user enters a place, input this code into 
 {% tabs %}
 {% tab JAVA %}
 ```java
-Appboy.getInstance(context).logCustomEvent("Entered " + visit.getPlace());
-Appboy.getInstance(context).requestImmediateDataFlush();
+Braze.getInstance(context).logCustomEvent("Entered " + visit.getPlace());
+Braze.getInstance(context).requestImmediateDataFlush();
 ```
 {% endtab %}
 {% tab KOTLIN %}
 
 ```kotlin
-Appboy.getInstance(context).logCustomEvent("Entered ${visit.getPlace()}")
+Braze.getInstance(context).logCustomEvent("Entered ${visit.getPlace()}")
 ```
 {% endtab %}
 {% endtabs %}

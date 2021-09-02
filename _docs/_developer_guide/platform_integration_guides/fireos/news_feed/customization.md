@@ -5,7 +5,7 @@ platform: FireOS
 description: "This reference article covers how to customize your News Feed in your Android application."
 channel:
   - news feed
-  
+hidden: true  
 ---
 
 # News Feed Customization
@@ -15,10 +15,10 @@ channel:
 Braze UI elements come with a default look and feel that matches the Android standard UI guidelines and provides a seamless experience. You can see these default styles in the `res/values/style.xml` file in the Braze SDK distribution.
 
 ```xml
-  <style name="Appboy"/>
+  <style name="Braze"/>
   <!-- Feed -->
-  <style name="Appboy.Feed"/>
-  <style name="Appboy.Feed.List">
+  <style name="Braze.Feed"/>
+  <style name="Braze.Feed.List">
     <item name="android:background">@android:color/transparent</item>
     <item name="android:divider">@android:color/transparent</item>
     <item name="android:dividerHeight">16.0dp</item>
@@ -37,7 +37,7 @@ If you would prefer, you can override these styles to create a look and feel tha
 #### Correct Style Override
 
 ```xml
-<style name="Appboy.Feed.List">
+<style name="Braze.Feed.List">
   <item name="android:background">@color/mint</item>
   <item name="android:cacheColorHint">@color/mint</item>
   <item name="android:divider">@android:color/transparent</item>
@@ -51,7 +51,7 @@ If you would prefer, you can override these styles to create a look and feel tha
 #### Incorrect Style Override
 
 ```xml
-<style name="Appboy.Feed.List">
+<style name="Braze.Feed.List">
   <item name="android:background">@color/mint</item>
   <item name="android:cacheColorHint">@color/mint</item>
 </style>
@@ -75,7 +75,7 @@ For example, to update the font on all titles for Short News Cards, override the
 Here is a truncated example with a custom font family, `my_custom_font_family`, referenced on the last line:
 
 ```
-<style name="Appboy.Cards.ShortNews.Title">
+<style name="Braze.Cards.ShortNews.Title">
   <item name="android:layout_height">wrap_content</item>
   ...
   <item name="android:fontFamily">@font/my_custom_font_family</item>
@@ -112,7 +112,7 @@ Next, add the following code to subscribe to feed updates from Braze, typically 
 
 ```java
 // Remove the old subscription first
-Appboy.getInstance(context).removeSingleSubscription(mFeedUpdatedSubscriber, FeedUpdatedEvent.class);
+Braze.getInstance(context).removeSingleSubscription(mFeedUpdatedSubscriber, FeedUpdatedEvent.class);
 mFeedUpdatedSubscriber = new IEventSubscriber<FeedUpdatedEvent>() {
   @Override
   public void trigger(final FeedUpdatedEvent event) {
@@ -121,16 +121,16 @@ mFeedUpdatedSubscriber = new IEventSubscriber<FeedUpdatedEvent>() {
     // your logic here
   }
 };
-Appboy.getInstance(context).subscribeToFeedUpdates(mFeedUpdatedSubscriber);
+Braze.getInstance(context).subscribeToFeedUpdates(mFeedUpdatedSubscriber);
 
 // Request a refresh of feed data
-Appboy.getInstance(context).requestFeedRefresh();
+Braze.getInstance(context).requestFeedRefresh();
 ```
 
 We also recommend unsubscribing when your custom feed activity moves out of view. Add the following code to your activity's `onDestroy()` lifecycle method:
 
 ```
-Appboy.getInstance(context).removeSingleSubscription(mFeedUpdatedSubscriber, FeedUpdatedEvent.class);
+Braze.getInstance(context).removeSingleSubscription(mFeedUpdatedSubscriber, FeedUpdatedEvent.class);
 ```
 
 ### Part 2: Logging Analytics

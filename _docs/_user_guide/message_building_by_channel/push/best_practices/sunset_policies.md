@@ -1,12 +1,11 @@
 ---
 nav_title: Sunset Policies
-page_title: Sunset Policies for Push
+article_title: Sunset Policies for Push
 page_order: 3
-
 page_type: reference
 description: "This article provides best practices for sunsetting push notifications to a segment of users."
 channel: push
-no_index: true
+
 ---
 
 # Sunset Policies for Push {#push-sunset-policies}
@@ -17,6 +16,6 @@ Before you stop sending push notifications to a segment of users, you should del
 
 Although you may be reluctant to stop sending pushes to users who originally opted in to them, keep in mind that there are other messaging channels that can more effectively reach these users, especially if they have previously ignored your pushes.  If the user opens your emails, then email campaigns are a good way to reach them outside of your app.  If not, then in-app messages and News Feed cards are the best way to deliver content without risking the user uninstalling your app.
 
-[19]: {{site.baseurl}}/help/best_practices/email/sunset_policies/
+[19]: {{site.baseurl}}/user_guide/message_building_by_channel/email/best_practices/
 [46]:{% image_buster /assets/img_archive/Push_Window8_Toast.png %}
 [47]:{% image_buster /assets/img_archive/Push_Windows_Universal_Toast.png %}

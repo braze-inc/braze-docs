@@ -1,9 +1,12 @@
 ---
 nav_title: Census
+article_title: Census
 page_order: 9
 description: "This article outlines the partnership between Braze and Census, a data intgration platform that allows you to dynamically create targeted user segments with data from your cloud warehouse."
 alias: /partners/census/
 page_type: partner
+search_tag: Partner
+
 ---
 
 # Census
@@ -43,7 +46,11 @@ Locate and note your Braze REST API endpoint, this will be needed when creating 
 1. In the __Settings__ tab, create a new __Braze Service Connection__ under __Add Service__ in Census.
 2. Name this connection and provide the Braze Endpoint URL and API Key.<br><br>![add_service][8]{: style="max-width:60%;"}
 
-## Supported Sync Behaviors in Census
+## Syncing in Census
+
+When using the Census and Braze integration, Census will only send the deltas (changing data) on each sync to Braze.  
+
+### Supported Sync Behaviors
 
 Census supports syncing your data to both the user and event object in Braze. To learn more about this integration and Census syncing behaviors, visit the following [Census documentation](https://docs.getcensus.com/destinations/braze).
 

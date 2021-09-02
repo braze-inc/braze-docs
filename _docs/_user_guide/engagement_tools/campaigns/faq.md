@@ -1,11 +1,11 @@
 ---
 nav_title: FAQs
-title: Campaign FAQs
+article_title: Campaign FAQs
 page_order: 5
-
 page_type: FAQ
 description: "This page provides answers to frequently asked questions about Campaigns."
 tool: Campaigns
+
 ---
 
 # Campaign FAQs
@@ -32,11 +32,15 @@ To check your company’s time zone, look at your [Company Settings]({{site.base
 
 When scheduling a campaign, you need to choose to send it at a designated time, and then check **Send campaign to users in their local time zone**.
 
-Braze highly recommends that all local time zone campaigns are scheduled 24 hours in advance. Since such a campaign needs to send over the course of an entire day, scheduling them 24 hours in advance ensures that your message will reach your entire segment. However, you can schedule these campaigns less than 24 hours in advance if necessary. Keep in mind that Braze will not send messages to any users that has missed the send time by more than 1 hour. 
+Braze highly recommends that all local time zone campaigns are scheduled 24 hours in advance. Since such a campaign needs to send over the course of an entire day, scheduling them 24 hours in advance ensures that your message will reach your entire segment. However, you can schedule these campaigns less than 24 hours in advance if necessary. Keep in mind that Braze will not send messages to any users that have missed the send time by more than 1 hour. 
 
 For example, if it is 1pm and you schedule a local time zone campaign for 3pm, then the campaign will immediately send to all users whose local time is 3-4pm, but not to users whose local time is 5pm. In addition, the send time you choose for your campaign needs to have not yet occurred in your company’s time zone.
 
-Editing a local time zone campaign that is scheduled less than 24 hours in advance will alter the message’s schedule for certain users. If you decide to edit a local time zone campaign to send at a later time (for instance, 7pm instead of 6pm), users who were in the targeted segment when the original send time was chosen will still receive the message at the original time (6pm). If you edit a local time zone to send at an earlier time (for instance, 4pm instead of 5pm), then the campaign will send to all segment members at the earlier time (4pm). 
+Editing a local time zone campaign that is scheduled less than 24 hours in advance will not alter the message’s schedule. If you decide to edit a local time zone campaign to send at a later time (for instance, 7pm instead of 6pm), users who were in the targeted segment when the original send time was chosen will still receive the message at the original time (6pm). If you edit a local time zone to send at an earlier time (for instance, 4pm instead of 5pm), then the campaign will still send to all segment members at the original time (5pm). 
+
+{% alert note %}
+For Canvas steps, users do not need to be in the step for 24 hours to receive the next step for local time zone delivery. 
+{% endalert %}
 
 If you have allowed users to become re-eligible for the campaign, then they will receive it again at the original time (5pm). For all subsequent occurrences of your campaign, however, your messages only send at your updated time.
 

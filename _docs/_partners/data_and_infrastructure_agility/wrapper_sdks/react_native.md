@@ -15,8 +15,4 @@ Braze and React Native empower developers to get up and running quickly across m
 
 # Integration
 
-Please see Braze's Platform Integration Guides to integrate React Native.
-
-For [iOS]({{site.baseurl}}/developer_guide/platform_integration_guides/react_native/ios/sdk_integration/).
-
-For [Android and FireOS]({{site.baseurl}}/developer_guide/platform_integration_guides/react_native/android_and_fireos/initial_sdk_setup/).
+Please see [Braze's Platform Integration Guides]({{site.baseurl}}/developer_guide/platform_integration_guides/react_native/react_sdk_setup/) to integrate React Native.

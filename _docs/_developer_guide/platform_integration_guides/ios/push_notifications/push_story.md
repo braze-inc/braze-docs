@@ -1,5 +1,6 @@
 ---
 nav_title: Push Stories
+article_title: Push Stories for iOS
 platform: iOS
 page_order: 28
 description: "This article shows how to set up Push Stories for your iOS application."
@@ -239,4 +240,3 @@ Alternatively, to configure Push Story App Group from your `Info.plist` file, ad
 [ios_pushstory_07]: {% image_buster /assets/img_archive/ios_pushstory_07.png %}
 [ios_pushstory_08]: {% image_buster /assets/img_archive/ios_pushstory_08.png %}
 [ios_pushstory_09]: {% image_buster /assets/img_archive/ios_pushstory_09.png %}
-[ios_pushstory_10]: {% image_buster /assets/img_archive/ios_pushstory_10.png %}

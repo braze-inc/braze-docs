@@ -1,5 +1,6 @@
 ---
 nav_title: Content Cards
+article_title: Content Cards
 page_order: 0
 layout: featured
 guide_top_header: "Content Cards"

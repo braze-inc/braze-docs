@@ -259,7 +259,7 @@ public class ApptimizeAppboy
                     Apptimize.OnExperimentsProcessedListener {
 
     public void configureExperimentTracking(Context context) {
-        appboyInstance = Appboy.getInstance(context);
+        appboyInstance = Braze.getInstance(context);
         enrollmentStorage = new File(context.getDir("apptimize-appboy", Context.MODE_PRIVATE), ApptimizeAppboyTestEnrollmentStorage);
 
         Apptimize.setOnExperimentRunListener(this);

@@ -1,7 +1,10 @@
 ---
 nav_title: Defining a News Feed Category
+article_title: Defining a News Feed Category for Android/FireOS
 page_order: 3
-platform: Android
+platform: 
+  - Android
+  - FireOS
 description: "This reference article shows how to define a News Feed category in your Android application."
 channel:
   - news feed
@@ -30,4 +33,4 @@ newsFeed.setCategories:EnumSet.of(CardCategory.ANNOUNCEMENTS, CardCategory.NEWS)
 ```
 
 
-[14]: {{site.baseurl}}/help/best_practices/news_feed/
+[14]: {{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/reporting/

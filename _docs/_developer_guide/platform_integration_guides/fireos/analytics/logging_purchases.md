@@ -5,7 +5,7 @@ page_order: 4
 
 page_type: reference
 description: "This page describes how to record in-app purchases for your FireOS app."
-
+hidden: true
 ---
 
 # Logging Purchases
@@ -21,7 +21,7 @@ Before implementation, be sure to review examples of the segmentation options af
 To use this feature, add this method call after a successful purchase in your app:
 
 ```java
-Appboy.getInstance(context).logPurchase(
+Braze.getInstance(context).logPurchase(
    String productId,
    String currencyCode,
    BigDecimal price,
@@ -43,7 +43,7 @@ Properties are defined as key-value pairs.  Keys are `String` objects and values
 ```java
 AppboyProperties purchaseProperties = new AppboyProperties();
 purchaseProperties.addProperty("key", "value");
-Appboy.getInstance(context).logPurchase(..., purchaseProperties);
+Braze.getInstance(context).logPurchase(..., purchaseProperties);
 ```
 
 See the [Javadoc][6] for more information.

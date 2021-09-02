@@ -1,7 +1,10 @@
 ---
 nav_title: Badges
+article_title: Content Card Badges for Android/FireOS
 page_order: 5
-platform: Android
+platform: 
+  - Android
+  - FireOS
 description: "This article covers how to add badges to your Content Cards in your Android application."
 channel:
   - content cards
@@ -16,14 +19,14 @@ You can [request the number of unread cards][1] at any time by calling:
 {% tab JAVA %}
 
 ```java
-Appboy.getInstance(context).getContentCardUnviewedCount();
+Braze.getInstance(context).getContentCardUnviewedCount();
 ```
 
 {% endtab %}
 {% tab KOTLIN %}
 
 ```kotlin
-Appboy.getInstance(context).contentCardUnviewedCount
+Braze.getInstance(context).contentCardUnviewedCount
 ```
 
 {% endtab %}

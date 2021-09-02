@@ -1,9 +1,11 @@
 ---
 nav_title: Amplitude User Profile API
+article_title: Amplitude User Profile API Endpoints
 page_order: 0
 alias: /partners/amplitude_api_endpoints/
 page_type: partner
 description: "Amplitude's User Profile API serves Amplitude user profiles. This includes user properties, computed user properties, a list of cohort IDs of cohorts that include the user, and recommendations."
+search_tag: Partner
 
 ---
 

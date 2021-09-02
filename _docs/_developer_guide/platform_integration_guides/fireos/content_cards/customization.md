@@ -5,7 +5,7 @@ platform: FireOS
 description: "This article covers customization options for your Content Cards in your Android application."
 channel:
   - content cards
-
+hidden: true
 ---
 
 # Customization
@@ -16,7 +16,7 @@ Braze In-App Messages and Content Cards come with a default look and feel that m
 
 ```xml
   <!-- Content Cards Example -->
-  <style name="Appboy.ContentCards.CaptionedImage.Description">
+  <style name="Braze.ContentCards.CaptionedImage.Description">
     <item name="android:textColor">@color/com_appboy_description</item>
     <item name="android:textSize">15.0sp</item>
     <item name="android:includeFontPadding">false</item>
@@ -36,7 +36,7 @@ If you would prefer, you can override these styles to create a look and feel tha
 ### Correct Style Override {#correct-style-override-for-android}
 
 ```xml
-<style name="Appboy.ContentCardsDisplay">
+<style name="Braze.ContentCardsDisplay">
   <item name="android:background">@color/mint</item>
   <item name="android:cacheColorHint">@color/mint</item>
   <item name="android:divider">@android:color/transparent</item>
@@ -50,7 +50,7 @@ If you would prefer, you can override these styles to create a look and feel tha
 ### Incorrect Style Override {#incorrect-style-override-for-android}
 
 ```xml
-<style name="Appboy.ContentCardsDisplay">
+<style name="Braze.ContentCardsDisplay">
   <item name="android:background">@color/mint</item>
   <item name="android:cacheColorHint">@color/mint</item>
 </style>
@@ -58,18 +58,18 @@ If you would prefer, you can override these styles to create a look and feel tha
 
 ## Customizing The Default Content Card Feed {#content-cards-fragment-customization}
 
-This section covers customization of the [AppboyContentCardsFragment][49] whose source can be found [here][54].
+This section covers customization of the [ContentCardsFragment][49] whose source can be found [here][54].
 
 ### Customizing The Network Connection Error Message
 
-If the [AppboyContentCardsFragment][49] determines that a Content Card refresh has failed, it will display a network connection error message.
+If the [ContentCardsFragment][49] determines that a Content Card refresh has failed, it will display a network connection error message.
 
 A special adapter, the [AppboyEmptyContentCardsAdapter][50] replaces the standard [AppboyCardAdapter][53] to display the error message. To set the custom message itself, override the string resource `com_appboy_feed_empty`.
 
 The style used to display this message can be found via [`Appboy.ContentCardsDisplay.Empty`][52] and is reproduced below.
 
 ```xml
-<style name="Appboy.ContentCardsDisplay.Empty">
+<style name="Braze.ContentCardsDisplay.Empty">
   <item name="android:lineSpacingExtra">1.5dp</item>
   <item name="android:text">@string/com_appboy_feed_empty</item>
   <item name="android:textColor">@color/com_appboy_title</item>
@@ -80,7 +80,7 @@ The style used to display this message can be found via [`Appboy.ContentCardsDis
 </style>
 ```
 
-To fully customize the network error behavior, you can extend the [AppboyContentCardsFragment][54] and set the `mShowNetworkUnavailableRunnable` variable to perform some other action.
+To fully customize the network error behavior, you can extend the [ContentCardsFragment][54] and set the `mShowNetworkUnavailableRunnable` variable to perform some other action.
 
 ## Content Cards Style Elements {#content-cards-style-elements-for-android}
 
@@ -93,7 +93,7 @@ For example, to update the font on all titles for Captioned Image Cards, overrid
 Here is a truncated example with a custom font family, `my_custom_font_family`, referenced on the last line:
 
 ```xml
-  <style name="Appboy.ContentCards.CaptionedImage.Title">
+  <style name="Braze.ContentCards.CaptionedImage.Title">
     <item name="android:layout_width">wrap_content</item>
     ...
     <item name="android:fontFamily">@font/my_custom_font_family</item>
@@ -107,7 +107,7 @@ To set a custom pinned icon, override the `Appboy.ContentCards.PinnedIcon` style
 
 ### Customizing Displayed Card Order {#customizing-displayed-card-order-for-android}
 
-The `AppboyContentCardsFragment` relies on a [`IContentCardsUpdateHandler`][44] to handle any sorting or modifications of Content Cards before they are displayed in the feed. A custom update handler can be set via [`setContentCardUpdateHandler`][45] on your [`AppboyContentCardsFragment`][47].
+The `ContentCardsFragment` relies on a [`IContentCardsUpdateHandler`][44] to handle any sorting or modifications of Content Cards before they are displayed in the feed. A custom update handler can be set via [`setContentCardUpdateHandler`][45] on your [`ContentCardsFragment`][47].
 
 Filtering out Content Cards before they reach the user's feed is a common use-case and could be achieved by reading the key-value pairs set on the dashboard via [`Card.getExtras()`][36] and performing any logic you'd like in the update handler.
 
@@ -256,7 +256,7 @@ And here's how to use the above class:
 ```java
 IContentCardsUpdateHandler cardUpdateHandler = new DefaultContentCardsUpdateHandler();
 
-AppboyContentCardsFragment fragment = getMyCustomFragment();
+ContentCardsFragment fragment = getMyCustomFragment();
 fragment.setContentCardUpdateHandler(cardUpdateHandler);
 ```
 
@@ -458,7 +458,7 @@ And here's how to use the above class:
 ```java
 IContentCardsViewBindingHandler viewBindingHandler = new DefaultContentCardsViewBindingHandler();
 
-AppboyContentCardsFragment fragment = getMyCustomFragment();
+ContentCardsFragment fragment = getMyCustomFragment();
 fragment.setContentCardsViewBindingHandler(viewBindingHandler);
 ```
 
@@ -483,7 +483,7 @@ You can handle Content Cards clicks manually by setting a custom click listener.
 
 #### Step 1: Implement a Content Cards Click Listener
 
-Create a class that implements [IContentCardsActionListener][43] and register it with `AppboyContentCardsManager`. Implement the `onContentCardClicked()` method, which will be called when the user clicks a content card.
+Create a class that implements [IContentCardsActionListener][43] and register it with `BrazeContentCardsManager`. Implement the `onContentCardClicked()` method, which will be called when the user clicks a content card.
 
 #### Step 2: Instruct Braze to Use Your Content Card Click Listener
 
@@ -493,7 +493,7 @@ You can see an example of steps 1 and 2 here:
 {% tab JAVA %}
 
 ```java
-AppboyContentCardsManager.getInstance().setContentCardsActionListener(new IContentCardsActionListener() {
+BrazeContentCardsManager.getInstance().setContentCardsActionListener(new IContentCardsActionListener() {
   @Override
   public boolean onContentCardClicked(Context context, Card card, IAction cardAction) {
     return false;
@@ -510,7 +510,7 @@ AppboyContentCardsManager.getInstance().setContentCardsActionListener(new IConte
 {% tab KOTLIN %}
 
 ```kotlin
-AppboyContentCardsManager.getInstance().contentCardsActionListener = object : IContentCardsActionListener {
+BrazeContentCardsManager.getInstance().contentCardsActionListener = object : IContentCardsActionListener {
   override fun onContentCardClicked(context: Context, card: Card, cardAction: IAction): Boolean {
     return false
   }
@@ -563,7 +563,7 @@ Next, add the following code to subscribe to Content Card updates from Braze, ty
 
 ```java
 // Remove the previous subscriber before rebuilding a new one with our new activity.
-Appboy.getInstance(context).removeSingleSubscription(mContentCardsUpdatedSubscriber, ContentCardsUpdatedEvent.class);
+Braze.getInstance(context).removeSingleSubscription(mContentCardsUpdatedSubscriber, ContentCardsUpdatedEvent.class);
 mContentCardsUpdatedSubscriber = new IEventSubscriber<ContentCardsUpdatedEvent>() {
     @Override
     public void trigger(ContentCardsUpdatedEvent event) {
@@ -573,8 +573,8 @@ mContentCardsUpdatedSubscriber = new IEventSubscriber<ContentCardsUpdatedEvent>(
         // Your logic below
     }
 };
-Appboy.getInstance(context).subscribeToContentCardsUpdates(mContentCardsUpdatedSubscriber);
-Appboy.getInstance(context).requestContentCardsRefresh(true);
+Braze.getInstance(context).subscribeToContentCardsUpdates(mContentCardsUpdatedSubscriber);
+Braze.getInstance(context).requestContentCardsRefresh(true);
 ```
 
 {% endtab %}
@@ -582,15 +582,15 @@ Appboy.getInstance(context).requestContentCardsRefresh(true);
 
 ```kotlin
 // Remove the previous subscriber before rebuilding a new one with our new activity.
-Appboy.getInstance(context).removeSingleSubscription(mContentCardsUpdatedSubscriber, ContentCardsUpdatedEvent::class.java)
+Braze.getInstance(context).removeSingleSubscription(mContentCardsUpdatedSubscriber, ContentCardsUpdatedEvent::class.java)
 mContentCardsUpdatedSubscriber = IEventSubscriber { event ->
   // List of all content cards
   val allCards = event.allCards
 
   // Your logic below
 }
-Appboy.getInstance(context).subscribeToContentCardsUpdates(mContentCardsUpdatedSubscriber)
-Appboy.getInstance(context).requestContentCardsRefresh(true)
+Braze.getInstance(context).subscribeToContentCardsUpdates(mContentCardsUpdatedSubscriber)
+Braze.getInstance(context).requestContentCardsRefresh(true)
 ```
 
 {% endtab %}
@@ -602,14 +602,14 @@ We also recommend unsubscribing when your custom activity moves out of view. Add
 {% tab JAVA %}
 
 ```java
-Appboy.getInstance(context).removeSingleSubscription(mContentCardsUpdatedSubscriber, ContentCardsUpdatedEvent.class);
+Braze.getInstance(context).removeSingleSubscription(mContentCardsUpdatedSubscriber, ContentCardsUpdatedEvent.class);
 ```
 
 {% endtab %}
 {% tab KOTLIN %}
 
 ```kotlin
-Appboy.getInstance(context).removeSingleSubscription(mContentCardsUpdatedSubscriber, ContentCardsUpdatedEvent::class.java)
+Braze.getInstance(context).removeSingleSubscription(mContentCardsUpdatedSubscriber, ContentCardsUpdatedEvent::class.java)
 ```
 
 {% endtab %}
@@ -633,7 +633,7 @@ If a card is already marked as dismissed, it cannot be marked as dismissed again
 
 ## Disabling Swipe To Dismiss
 
-Disabling swipe-to-dismiss functionality is done on a per-card basis via the [`card.setIsDismissibleByUser()`][48] method. Cards can be intercepted before display using the [`AppboyContentCardsFragment.setContentCardUpdateHandler()`][45] method.
+Disabling swipe-to-dismiss functionality is done on a per-card basis via the [`card.setIsDismissibleByUser()`][48] method. Cards can be intercepted before display using the [`ContentCardsFragment.setContentCardUpdateHandler()`][45] method.
 
 ## Key-Value Pairs
 
@@ -642,7 +642,7 @@ Disabling swipe-to-dismiss functionality is done on a per-card basis via the [`c
 See the [Javadoc][36] for more information.
 
 {% alert note %}
-Content Cards have a maximum size of **2kb** (including images, links, and all content) - exceeding that amount will prevent the card from sending.
+Content Cards have a maximum size limit of 2 KB for content you enter in the Braze dashboard. This includes message text, image URLs, links, and key-value pairs. Exceeding that amount will prevent the card from sending.
 {% endalert %}
 
 ## GIFs {#gifs-news-content-cards}
@@ -661,15 +661,15 @@ This section applies to integrations which use the Braze SDK's default Content C
 [41]: https://appboy.github.io/appboy-android-sdk/javadocs/com/appboy/Appboy.html#logContentCardsDisplayed--
 [42]: https://github.com/Appboy/appboy-android-sdk/blob/master/android-sdk-ui/src/main/res/values/styles.xml
 [43]: https://appboy.github.io/appboy-android-sdk/javadocs/com/appboy/ui/contentcards/listeners/IContentCardsActionListener.html
-[44]: https://appboy.github.io/appboy-android-sdk/javadocs/com/appboy/ui/contentcards/handlers/IContentCardsUpdateHandler.html
-[45]: https://appboy.github.io/appboy-android-sdk/javadocs/com/appboy/ui/AppboyContentCardsFragment.html#setContentCardUpdateHandler-com.appboy.ui.contentcards.handlers.IContentCardsUpdateHandler-
+[44]: https://appboy.github.io/appboy-android-sdk/javadocs/com/braze/ui/contentcards/handlers/IContentCardsUpdateHandler.html
+[45]: https://appboy.github.io/appboy-android-sdk/javadocs/com/braze/ui/contentcards/ContentCardsFragment.html#setContentCardUpdateHandler-com.appboy.ui.contentcards.handlers.IContentCardsUpdateHandler-
 [46]: https://github.com/Appboy/appboy-android-sdk/blob/v11.0.0/android-sdk-ui/src/main/java/com/appboy/ui/contentcards/handlers/DefaultContentCardsUpdateHandler.java
-[47]: https://appboy.github.io/appboy-android-sdk/javadocs/com/appboy/ui/AppboyContentCardsFragment.html
+[47]: https://appboy.github.io/appboy-android-sdk/javadocs/com/braze/ui/contentcards/ContentCardsFragment.html
 [48]: https://appboy.github.io/appboy-android-sdk/javadocs/com/appboy/models/cards/Card.html#setIsDismissibleByUser-boolean-
-[49]: https://appboy.github.io/appboy-android-sdk/javadocs/com/appboy/ui/AppboyContentCardsFragment.html
+[49]: https://appboy.github.io/appboy-android-sdk/javadocs/com/braze/ui/contentcards/ContentCardsFragment.html
 [50]: https://appboy.github.io/appboy-android-sdk/javadocs/com/appboy/ui/contentcards/AppboyEmptyContentCardsAdapter.html
 [52]: https://github.com/Appboy/appboy-android-sdk/blob/master/android-sdk-ui/src/main/res/values/styles.xml#L552-L560
 [53]: https://appboy.github.io/appboy-android-sdk/javadocs/com/appboy/ui/contentcards/AppboyCardAdapter.html
-[54]: https://github.com/Appboy/appboy-android-sdk/blob/master/android-sdk-ui/src/main/java/com/appboy/ui/AppboyContentCardsFragment.java
+[54]: https://github.com/Appboy/appboy-android-sdk/blob/master/android-sdk-ui/src/main/java/com/braze/ui/contentcards/ContentCardsFragment.java
 [55]: https://appboy.github.io/appboy-android-sdk/javadocs/com/appboy/models/cards/Card.html#isControl--
 [56]: https://github.com/Appboy/appboy-android-sdk/blob/v11.0.0/android-sdk-ui/src/main/java/com/appboy/ui/contentcards/handlers/DefaultContentCardsViewBindingHandler.java

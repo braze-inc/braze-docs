@@ -1,13 +1,13 @@
 ---
 nav_title: "Creating a Push Message"
+article_title: Creating a Push Campaign
 page_order: 4
 page_type: tutorial
 description: "This tutorial page covers the different components involved in creating a Push Message, including configuration, sending, targeting, and more."
-
 channel: push
 tool:
-  - Dashboard
   - Campaigns
+  
 ---
 
 # Creating a Push Message
@@ -67,7 +67,7 @@ Action-Based Delivery allows you to specify the time a message will send after a
 
 {% endtab %}
 {% tab API-Triggered Delivery %}
-Check out our [API-Triggered section of the Developer Guide]({{site.baseurl}}/developer_guide/rest_api/messaging/#sending-messages-via-api-triggered-delivery) for more on API-Triggered Delivery.
+Check out our [API-Triggered section of the Developer Guide]({{site.baseurl}}/api/endpoints/messaging/) for more on API-Triggered Delivery.
 
 ![API]({% image_buster /assets/img_archive/api_delivered_new.png %}){: height="80%"" width="80%"}
   {% endtab %}

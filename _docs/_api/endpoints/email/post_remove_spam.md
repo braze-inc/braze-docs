@@ -1,17 +1,12 @@
 ---
 nav_title: "POST: Remove Email Addresses from Spam List"
+article_title: "POST: Remove Email Addresses from Spam List"
+search_tag: Endpoint
 page_order: 4
-
 layout: api_page
-
 page_type: reference
-platform: API
-channel: Email
-tool:
-  - Canvas
-  - Campaigns
-
 description: "This article outlines details about and using the Remove Email Addresses from the Spam List Braze endpoint."
+
 ---
 {% api %}
 # Remove Email Addresses from Spam List

@@ -1,12 +1,11 @@
 ---
 nav_title: Create a Canvas
-platform: Canvas
-subplatform: Create a Canvas
+article_title: Creating a Canvas
 page_order: 0
-
 page_type: reference
 description: "This reference article covers the necessary steps involved in creating, maintaining, and testing a Canvas."
 tool: Canvas
+
 ---
 
 # Creating a Canvas
@@ -29,7 +28,7 @@ The Entry Wizard will guide you through setting up your Canvas—everything from
     - Add Tags to Your Canvas
     - Assign Conversion Events and Choose Their Event Types and Deadlines
 
-    [Learn more about the Basics step.](#set-up-your-canvas-basics)
+    [Learn more about the Basics step.](#step-2a-set-up-your-canvas-basics)
   {% endtab %}
   {% tab Entry Schedule %}
     Here, you will decide how your users will enter your Canvas:
@@ -37,7 +36,7 @@ The Entry Wizard will guide you through setting up your Canvas—everything from
     - Action-Based: Your user will enter your Canvas after they perform a defined action
     - API-Triggered: Use an API request to enter users into your Canvas
 
-    [Learn more about the Entry Schedule step.](#set-your-canvas-entry-schedule)
+    [Learn more about the Entry Schedule step.](#step-2b-set-your-canvas-entry-schedule)
   {% endtab %}
   {% tab Entry Audience %}
     Here, you will select your Canvas Entry Audience:
@@ -45,7 +44,7 @@ The Entry Wizard will guide you through setting up your Canvas—everything from
     - Fine-tune Canvas Re-Entry and Entry Limits
     - See a Summary of Your Target Audience
 
-    [Learn more about the Entry Audience step.](#set-your-target-entry-audience)
+    [Learn more about the Entry Audience step.](#step-2c-set-your-target-entry-audience)
   {% endtab %}
   {% tab Send Settings %}
     Here, you will select your Canvas Send Settings:
@@ -53,7 +52,7 @@ The Entry Wizard will guide you through setting up your Canvas—everything from
     - Set a Send Rate Limit for Your Canvas Messages
     - Enable and Set Quiet Hours
 
-    [Learn more about the Send Settings step.](#select-your-send-settings)
+    [Learn more about the Send Settings step.](#step-2d-select-your-send-settings)
   {% endtab %}
   {% tab Build Canvas %}
     Here you will build your Canvas.
@@ -138,6 +137,10 @@ You can set the target audience for your Canvas on the **Entry Audience** step. 
 
 For example, if you want to target new users, you can limit a particular journey to users who first used your app less than 3 weeks ago. You can also control settings such as whether messages should be sent to users who are subscribed or opted-in to your notifications.
 
+{% alert warning %}
+Avoid configuring an action-based campaign or Canvas with the same trigger as the audience filter (i.e., a changed attribute or performed a custom event). A race condition may occur in which the user is not in the audience at the time they perform the trigger event, which means they won't receive the campaign or enter the Canvas.  
+{% endalert %}
+
 ### Step 2d: Select Your Send Settings
 
 Click **Send Settings** to select your Subscription Settings, turn on rate limiting, and to enable Quiet Hours.
@@ -167,6 +170,20 @@ You can add additional variants by pressing the <i class="fas fa-plus-circle"></
 
 ![Canvas Multiple Variants][12]
 
+{% alert tip %}
+By default, Canvas variant assignment is locked in when users enter the Canvas, meaning that if a user first enters a variant, that will be their variant every time they re-enter the Canvas. However, there are ways to circumvent this behavior. <br><br>To do so, you can create a random number generator using Liquid, run it at the beginning of each user's Canvas entry, store the value as a custom attribute, and then use that attribute to randomly divide users.
+
+{% details Expand for steps %}
+
+1. Create a custom attribute to store your random number. Name it something easy to locate, like "lottery_number" or "random_assignment". You can create the attribute either [in your dashboard]({{site.baseurl}}/user_guide/administrative/app_settings/manage_app_group/custom_event_and_attribute_management/), or through API calls to our [User Track]({{site.baseurl}}/api/endpoints/user_data/post_user_track/) endpoint.<br><br>
+2. Create a webhook campaign at the beginning of your Canvas. This campaign will be the medium in which you create your random number, and store it as a custom attribute. Refer to [Creating a Webhook]({{site.baseurl}}/user_guide/message_building_by_channel/webhooks/creating_a_webhook/#step-1-set-up-a-webhook) for more. Set the URL to our User Track endpoint.<br><br>
+3. Create the random number generator. You can do so with the code [outlined here](https://www.131-studio.com/blogs/shopify-conversion/generate-random-numbers-using-liquid-shopify), which takes advantage of each user's unique time of entry to create a random number. Set the resulting number as a Liquid variable within your webhook campaign.<br><br>
+4. Format the `users/track` call on your webhook campaign so that it sets the custom attribute you created in step 1 to the random number you've generated on your current user's profile. When this step runs, you will have successfully made a random number that changes each time a user enters your campaign.<br><br>
+5. Adjust the branches of your Canvas so that, instead of being divided by randomly chosen variants, they are divided based on audience rules. In the audience rules of each branch, set the audience filter according to your custom attribute. <br><br>For example, one branch may have "lottery_number is less than 3" as an audience filter, while another branch may have "lottery_number is more than 3 and less than 6" as an audience filter.
+
+{% enddetails %}
+{% endalert %}
+
 ### Editing a Step
 
 Click anywhere on a Step, and Braze will open the Step editing interface. Steps can be configured to send messages after either a fixed delay (maximum of 31 days) or when a user performs a particular action. For example, you can use Canvas to configure a Day 1, Day 3, Day 7 onboarding campaign with time delays between messages:
@@ -181,7 +198,9 @@ You can also apply **Filters** to each Step of a Canvas. Use this to add additio
 
 ![Canvas Additional Engagement][15]
 
-{% alert note %} By default, Filters and Segments for **Full Steps** in Canvas are checked at send time. However, for [Decision Split Steps](57), audience evaluation occurs right after receiving the previous step, or after a delay (if you have configured one). {% endalert %}
+{% alert note %} 
+By default, Filters and Segments for **Full Steps** in Canvas are checked at send time. However, for [Decision Split Steps]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/decision_split/), audience evaluation occurs right after receiving the previous step, or after a delay (if you have configured one). 
+{% endalert %}
 
 #### Messages in Canvas
 
@@ -288,4 +307,3 @@ Once you've launched your Canvas, you'll be able to view analytics for your jour
 [54]: {% image_buster /assets/img/entry-audience-canvas-1.gif %}
 [55]: {% image_buster /assets/img/canvas-send-settings-1.gif %}
 [56]: {{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/exception_events/
-[57]: {{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/decision_split/

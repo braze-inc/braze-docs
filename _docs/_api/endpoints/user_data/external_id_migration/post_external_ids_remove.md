@@ -1,13 +1,12 @@
 ---
 nav_title: "POST: External ID Remove"
+article_title: "POST: External ID Remove"
+search_tag: Endpoint
 page_order: 2
-
 layout: api_page
-
 page_type: reference
-platform: API
-
 description: "This article outlines details about the external IDs Remove endpoint."
+
 ---
 {% api %}
 # External ID Remove

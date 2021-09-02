@@ -1,9 +1,11 @@
 ---
 nav_title: Adjust
+article_title: Adjust
 alias: /partners/adjust/
-
 description: "This article outlines the partnership between Braze and Adjust, a mobile attribution and analytics company that combines attribution for advertising sources."
 page_type: partner
+search_tag: Partner
+
 ---
 
 # Adjust
@@ -29,7 +31,7 @@ This integration supports iOS and Android apps.
 If you have an Android app, you will need to include the code snippet below, which passes a unique Braze device ID to Adjust. You should call the following before initializing the SDK on `Adjust.onCreate.`:
 
 ```
-Adjust.addSessionPartnerParameter("braze_device_id", Appboy.getInstance(getApplicationContext()).getInstallTrackingId()););
+Adjust.addSessionPartnerParameter("braze_device_id", Braze.getInstance(getApplicationContext()).getInstallTrackingId()););
 ```
 {% endtab %}
 {% tab iOS %}

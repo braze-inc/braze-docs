@@ -1,7 +1,7 @@
 ---
 nav_title: September
 page_order: 5
-no_index: true
+noindex: true
 page_type: update
 description: "This article contains release notes for September 2018."
 ---

@@ -1,10 +1,12 @@
 ---
 nav_title: Email Settings
+article_title: Email Settings
 page_type: reference
 page_order: 3
-
 description: "This reference article covers email settings in the Braze Dashboard."
 tool: Dashboard
+channel: email
+
 ---
 
 # Email Settings
@@ -131,7 +133,27 @@ Learn more about best practices for email list management [here][8].
 
 This feature allows you to automatically include a List-Unsubscribe email header for emails sent to subscribed or opted-in users. This List-Unsubscribe header allows email providers to include an "Unsubscribe" button when displaying an email.
 
-Learn more about List-Unsubscribe headers [here][9].
+#### Benefits of the List-Unsubscribe Header
+
+Some recipients prefer to have an Unsubscribe link available in the same place for all emails, rather than having to find links in each mailing. When enabled, this feature puts a prominent Unsubscribe link in the header of the email client, making it easier to unsubscribe and therefore less likely that customers will mark your email as Spam. This has a significant impact on your reputation and deliverability as an email sender.
+
+#### How the List-Unsubscribe Header Works
+
+Navigate to **Email Settings** within your AppGroup. Toggle List-Unsubscribe to **ON**.
+
+![list_unsub_3] [59]
+
+When enabled, this feature will add a standard list-unsubscribe 'mailto:' header to all eligible outgoing emails.  Upon receipt of a list-unsubscribe request from an end-user, Braze will ensure the same person who was sent the email is being unsubscribed.  If there is no match, we will not process this request.
+
+> This feature only applies to emails that target users who are “subscribed or opted in” or “opted-in only.”
+
+The header is not added for messages targeting “all users including unsubscribed users,” as these represent transactional messages which do not need an unsubscribe function.
+
+*Currently ‘Windows Live Hotmail’ and ‘Gmail’ support this feature.*
+
+{% alert note %}
+If you use Mailjet, you do not have the flexibility to choose on/off for this feature - it will be `ON` by default.
+{% endalert %}
 
 ### Inline CSS on New Emails by Default
 
@@ -149,10 +171,10 @@ For more information, check out our CSS Inlining [Documentation][10]
 [4]: {% image_buster /assets/img/email_settings/custom_opt_in.png %}
 [5]: https://en.wikipedia.org/wiki/CAN-SPAM_Act_of_2003
 [6]: https://lab.braze.com/email-open-tracking-pixel
-[7]: {{site.baseurl}}/help/best_practices/email/managing_email_subscriptions/#unsubscribed-email-addresses
-[8]: {{site.baseurl}}/help/best_practices/email/managing_email_subscriptions/
-[9]: {{site.baseurl}}/user_guide/administrative/manage_your_braze_users/company-wide_settings_management/#list-unsubscribe-settings
+[7]: {{site.baseurl}}/user_guide/message_building_by_channel/email/best_practices/managing_email_subscriptions/#unsubscribed-email-addresses
+[8]: {{site.baseurl}}/user_guide/message_building_by_channel/email/best_practices/
 [10]: {{site.baseurl}}/user_guide/message_building_by_channel/email/css_inline/
 [11]: {% image_buster /assets/img/email_settings/bcc_address.png %}
 [12]: {% image_buster /assets/img/email_settings/require_bcc.png %}
 [13]: {% image_buster /assets/open_pixel.png %}
+[59]: {% image_buster /assets/img_archive/list_unsub_img3_new.png %}

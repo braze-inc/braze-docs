@@ -1,9 +1,9 @@
 ---
 nav_title: Intelligent Channel
+article_title: Intelligent Channel Filter
 page_order: 0
 description: "The Intelligent Channel filter selects the portion of your audience for whom the selected messaging channel is their best channel. In this case, best means has the highest likelihood of engagement, given the user's history."
-Tool:
-  - Dashboard
+
 ---
 
 # Intelligent Channel Filter
@@ -41,12 +41,6 @@ When the user has sufficient data for a ranking to be determined but becomes unr
 ### Audience Sizing
 
 Intelligent Channel allows you to selectively target in advance the fraction of users who have a much higher likelihood of engaging with a message than the rest of your audience. This is not likely to represent a majority of users in a typical audience. Rather, you can expect this filter to find the 5-20% from your usual audience who have an established record of engaging on a particular channel.
-
-## Most Engaged Channel Update
-
-{% alert update %}
-As of the [November 2019 product release]({{site.baseurl}}/help/release_notes/2019/november/#intelligence-suite), "Most Engaged Channel" has been renamed to "Intelligent Channel".
-{% endalert %}
 
 
 [1]: {% image_buster /assets/img/intelligent_channel_filter.png %} "Intelligent Channel Filter"

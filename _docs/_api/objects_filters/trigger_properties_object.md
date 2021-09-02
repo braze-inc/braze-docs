@@ -1,16 +1,11 @@
 ---
 nav_title: "Trigger Properties Object"
+article_title: API Trigger Properties Object
 page_order: 11
-
 page_type: reference
-
-platform:
-  - API
-tool:
-  - Campaigns
-  - Canvas
-
 description: "This article explains the different components of the Trigger Properties object."
+tool: Campaigns
+
 ---
 
 # Trigger Properties Object Specification

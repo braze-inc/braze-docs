@@ -6,7 +6,7 @@ page_order: 3
 page_type: reference
 description: "This article describes how to send silent push notifications, and potential use cases for when silent push notifications may be preferable."
 channel: push
-
+hidden: true
 ---
 
 # Silent Push Notifications
@@ -21,8 +21,8 @@ Silent notifications are also available within the dashboard. In order to send a
 
 This message will cause an intent to be received with an action `.intent.APPBOY_PUSH_RECEIVED`. Handling of this intent to cause any action such as a refresh of app content must be defined within the broadcast receiver you defined in [Step 4 of Enabling Push Notifications - Android][4]. Please see [AppboyBroadcastReceiver.java][5] for an example of this receiver.
 
-[2]: {{site.baseurl}}/developer_guide/rest_api/messaging/
-[3]: {{site.baseurl}}/developer_guide/rest_api/messaging/#android-push-object
+[2]: {{site.baseurl}}/api/endpoints/messaging/
+[3]: {{site.baseurl}}/api/objects_filters/messaging/android_object/
 [4]: {{site.baseurl}}/developer_guide/platform_integration_guides/fireos/push_notifications/integration/#step-4-define-notification-channels
 [5]: https://github.com/Appboy/appboy-android-sdk/blob/master/samples/custom-broadcast/src/main/java/com/appboy/custombroadcast/AppboyBroadcastReceiver.java "AppboyBroadcastReceiver.java -- Sample Project"
 [6]: {% image_buster /assets/img_archive/SilentPushExample.png %} "Silent Push Notification Example -- Android"

@@ -1,15 +1,12 @@
 ---
 nav_title: Retargeting Campaigns
-platform: Campaigns
-subplatform: Ideas and Strategies
+article_title: Retargeting Campaigns
 page_order: 2
-
 page_type: reference
 description: "This reference article goes over how and why you should consider retargeting campaigns based on messages your users receive."
 tool:
-- Campaigns
-- Canvas
-- Segments
+  - Campaigns
+  
 ---
 
 # Retargeting Campaigns

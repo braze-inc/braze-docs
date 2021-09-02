@@ -1,9 +1,10 @@
 ---
 nav_title: Branch for Attribution
+article_title: Branch for Attribution
 alias: /partners/branch_for_attribution/
-
 description: "This article outlines the partnership between Braze and Branch, a mobile linking platform that helps you acquire, engage, and measure across all devices, channels, and platforms."
 page_type: partner
+search_tag: Partner
 
 ---
 
@@ -27,7 +28,7 @@ Branch and Braze help you understand exactly when and where users were acquired 
 * If you have an Android app, you will need to include the code snippet below, which passes a unique Braze device id to Branch. You must set the correct key before calling `initSession`. You must also initialize the Braze SDK before setting the request metadata in the Branch SDK.
 
 ```java
-Branch.getInstance().setRequestMetadata("$braze_install_id", Appboy.getInstance(context).getInstallTrackingId());
+Branch.getInstance().setRequestMetadata("$braze_install_id", Braze.getInstance(context).getInstallTrackingId());
 
 ...
 

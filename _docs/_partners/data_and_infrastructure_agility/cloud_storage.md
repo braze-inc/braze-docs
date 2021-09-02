@@ -1,8 +1,10 @@
 ---
 nav_title: Cloud Storage
+article_title: Cloud Storage Partners
 page_order: 3
 
 page_type: landing
+search_tag: Partner
 description: "This page lists Braze partners (Alloys) who allow you to store data to use in your messaging campaigns."
 
 layout: partner_page

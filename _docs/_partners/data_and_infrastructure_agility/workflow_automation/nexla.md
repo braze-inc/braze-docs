@@ -1,9 +1,11 @@
 ---
 nav_title: Nexla
+article_title: Nexla
 page_order: 1
 description: "Braze Currents and Nexla make data accessible across your entire ecosystem to the data warehouse of your choice."
 alias: /partners/nexla/
 page_type: partner
+search_tag: Partner
 
 ---
 

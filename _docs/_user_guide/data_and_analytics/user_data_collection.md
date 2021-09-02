@@ -1,5 +1,6 @@
 ---
 nav_title: User Data Collection
+article_title: User Data Collection
 page_order: 3.5
 layout: featured
 guide_top_header: "User Data Collection"

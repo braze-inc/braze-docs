@@ -1,14 +1,16 @@
 ---
 nav_title: Amplitude for Currents
+article_title: Amplitude
 page_order: 0
 alias: /partners/amplitude_for_currents/
-
 description: "This article outlines the partnership between Braze Currents and Amplitude, a product analytics and business intelligence platform."
 page_type: partner
-tool: currents
+tool: Currents
+search_tag: Partner
+
 ---
 
-# About Amplitude & Currents
+# Amplitude for Currents
 
 {% include video.html id="7yadPjDImxQ" align="right" %}
 
@@ -241,13 +243,6 @@ To check out some of the common Amplitude API endpoints, view our dedicated [Amp
   "url": (string) the URL that was clicked (Email Click events only)
 }
 ```
-
-{% alert update %}
-Behavior for `dispatch_id` differs between Canvas and campaigns because Braze treats Canvas steps (except for Entry Steps, which can be scheduled) as triggered events, even when they are "scheduled". [Learn more about `dispatch_id` behavior in Canvas and campaigns here]({{site.baseurl}}/help/help_articles/data/dispatch_id/).
-
-_Update noted in August 2019._
-{% endalert %}
-
 
 ### SMS Events
 ```json

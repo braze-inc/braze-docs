@@ -1,15 +1,12 @@
 ---
 nav_title: "POST: Schedule API-Triggered Canvas Messages"
+article_title: "POST: Schedule API-Triggered Canvas Messages"
+search_tag: Endpoint
 page_order: 4
-
 layout: api_page
-
 page_type: reference
-platform: API
-tool:
-  - Canvas
-
 description: "This article outlines details about the Schedule API-Triggered Canvases Braze endpoint."
+
 ---
 {% api %}
 # Schedule API-Triggered Canvases
@@ -34,9 +31,9 @@ Authorization: Bearer YOUR-REST-API-KEY
 {
   "canvas_id": (required, string) see Canvas identifier,
   // Including 'recipients' will send only to the provided user ids if they are in the campaign's segment
-  "recipients": (optional, array of recipient object),
-  // for any keys that conflict between these trigger properties and those in a Recipient Object, the value from the
-  // Recipient Object will be used
+  "recipients": (optional, array of recipients object),
+  // for any keys that conflict between these trigger properties and those in a Recipients Object, the value from the
+  // Recipients Object will be used
   "audience": (optional, connected audience object) see connected audience,
   // Including 'audience' will only send to users in the audience
   // If 'recipients' and 'audience' are not provided and broadcast is not set to 'false',
@@ -57,7 +54,7 @@ Authorization: Bearer YOUR-REST-API-KEY
 | --------- | ---------| --------- | ----------- |
 |`canvas_id`|Required|String| See [Canvas identifier]({{site.baseurl}}/api/identifier_types/). |
 | `send_id` | Optional | String | See [send identifier]({{site.baseurl}}/api/identifier_types/). | 
-| `recipients` | Optional | Array of recipient objects | See [recipients object]({{site.baseurl}}/api/objects_filters/recipient_object/). |
+| `recipients` | Optional | Array of recipients objects | See [recipients object]({{site.baseurl}}/api/objects_filters/recipient_object/). |
 | `audience` | Optional | Connected audience object | See [connected audience]({{site.baseurl}}/api/objects_filters/connected_audience/). |
 |`broadcast`| Optional | Boolean | See [broadcast]({{site.baseurl}}/api/parameters/#broadcast). This parameter defaults to false (as of August 31, 2017). <br><br> If `recipients` is omitted, `broadcast` must be set to true. However, use caution when setting `broadcast: true`, as unintentionally setting this flag may cause you to send your message to a larger than expected audience. |
 | `trigger_properties` | Optional | Object | Personalization key-value pairs for all users in this send. See [trigger properties]({{site.baseurl}}/api/objects_filters/trigger_properties_object/). |

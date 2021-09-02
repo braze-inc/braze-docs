@@ -1,7 +1,8 @@
 ---
 nav_title: Swift Package Manager
+article_title: Swift Package Manager Integration for iOS
 platform: iOS
-page_order: 1
+page_order: 3
 description: "This tutorial covers how to install the Braze SDK using Swift Package Manager for iOS"
 
 ---
@@ -65,77 +66,9 @@ bash "$BUILT_PRODUCTS_DIR/Appboy_iOS_SDK_AppboyKit.bundle/Contents/Resources/App
 
 ![Swift Package Manager: Menu 7][apple_initial_setup_7]
 
-## Step 3: Updating your App Delegate
+## Next Steps
 
-{% tabs %}
-{% tab OBJECTIVE-C %}
-
-Add the following line of code to your `AppDelegate.m` file:
-
-```objc
-#import "AppboyKit.h"
-```
-
-Within your `AppDelegate.m` file, add the following snippet within your `application:didFinishLaunchingWithOptions` method:
-
-```objc
-[Appboy startWithApiKey:@"YOUR-APP-IDENTIFIER-API-KEY"
-         inApplication:application
-     withLaunchOptions:launchOptions];
-```
-
-{% endtab %}
-{% tab swift %}
-
-Add the following line of code to your `AppDelegate.swift` file:
-
-```swift
-import AppboyKit
-```
-
-For more information about using Objective-C code in Swift projects, please see the [Apple Developer Docs](https://developer.apple.com/library/ios/documentation/swift/conceptual/buildingcocoaapps/MixandMatch.html).
-
-In `AppDelegate.swift`, add following snippet to your `application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool`:
-
-```swift
-Appboy.start(withApiKey: "YOUR-APP-IDENTIFIER-API-KEY", in:application, withLaunchOptions:launchOptions)
-```
-
-__Note__: Braze's `sharedInstance` singleton will be `nil` before `startWithApiKey:` is called, as that is a prerequisite to using any Braze functionality.
-
-{% endtab %}
-{% endtabs %}
-
-{% alert important %}
-Be sure to update `YOUR-APP-IDENTIFIER-API-KEY` with the correct value from your **Settings** page. For more information on where to find your App Identifier API key, check out our [API documentation]({{site.baseurl}}/api/api_key/#the-app-identifier-api-key).
-{% endalert %}
-
-{% alert warning %}
-Be sure to initialize Braze in your application's main thread. Initializing asynchronously can lead to broken functionality.
-{% endalert %}
-
-
-## Step 4: Specify Your Data Cluster
-
-{% alert note %}
-Note that as of December 2019, custom endpoints are no longer given out, if you have a pre-existing custom endpoint, you may continue to use it. For a list of our available endpoints, <a href="{{site.baseurl}}/api/basics/#endpoints">click here</a>.
-{% endalert %}
-
-### Compile-time Endpoint Configuration (Recommended)
-
-If given a pre-existing custom endpoint...
-- Starting with Braze iOS SDK v3.0.2, you can set a custom endpoint using the `Info.plist` file. Add the Braze dictionary to your `Info.plist` file. Inside the `Braze` dictionary, add the `Endpoint` string subentry and set the value to your custom endpoint URL's authority (for example, `sdk.iad-01.braze.com`, not `https://sdk.iad-01.braze.com`). Note that prior to Braze iOS SDK v4.0.2, the dictionary key `Appboy` must be used in place of `Braze`.
-
-Your Braze representative should have already advised you of the [correct endpoint]({{site.baseurl}}/user_guide/administrative/access_braze/sdk_endpoints/).
-
-### Runtime Endpoint Configuration
-
-If given a pre-existing custom endpoint...
-- Starting with Braze iOS SDK v3.17.0+, you can override set your endpoint via the `ABKEndpointKey` inside the `appboyOptions` parameter passed to `startWithApiKey:inApplication:withLaunchOptions:withAppboyOptions:`. Set the value to your custom endpoint URL's authority (for example, `sdk.iad-01.braze.com`, not `https://sdk.iad-01.braze.com`).
-
-{% alert important %}
-To find out your specific cluster, please ask your Customer Success Manager or reach out to our support team.
-{% endalert %}
+Follow the instructions for [Completing the Integration]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/initial_sdk_setup/completing_integration/).
 
 [apple_initial_setup_1]: https://swift.org/package-manager/
 [apple_initial_setup_2]: {% image_buster /assets/img/ios/spm/image1.png %}

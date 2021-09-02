@@ -5,7 +5,7 @@ page_order: 2
 
 page_type: reference
 description: "This article covers how to track custom events for your FireOS app."
-
+hidden: true
 ---
 
 # Tracking Custom Events
@@ -17,7 +17,7 @@ Before implementation, be sure to review examples of the segmentation options af
 ## Adding A Custom Event
 
 ```java
-Appboy.getInstance(context).logCustomEvent(YOUR_EVENT_NAME);
+Braze.getInstance(context).logCustomEvent(YOUR_EVENT_NAME);
 ```
 
 See the [Javadoc][2] for more information.
@@ -31,7 +31,7 @@ Properties are defined as key-value pairs.  Keys are `String` objects and values
 ```java
 AppboyProperties eventProperties = new AppboyProperties();
 eventProperties.addProperty("key", "value");
-Appboy.getInstance(context).logCustomEvent(YOUR_EVENT_NAME, eventProperties);
+Braze.getInstance(context).logCustomEvent(YOUR_EVENT_NAME, eventProperties);
 ```
 
 ### Reserved Keys

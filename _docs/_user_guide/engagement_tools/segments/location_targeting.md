@@ -1,12 +1,13 @@
 ---
 nav_title: Location Targeting
+article_title: Location Targeting
 page_order: 6
-
 page_type: tutorial
 tool: 
 - Segments
 - Location
 description: "This how-to article will walk you through how to set up Location Targeting, allowing you to segment users by location."
+
 ---
 # Location Targeting
 

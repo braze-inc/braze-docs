@@ -1,14 +1,13 @@
 ---
 nav_title: Retention Report
-platform: Canvas
-subplatform: Testing and More
+article_title: Retention Report
 page_order: 3
-
 tool: 
-- Canvas
-- Reports
+  - Canvas
+  - Reports
 page_type: reference
 description: "This reference goes over how to measure user retention for users who performed a selected retention event in a specific canvas."
+
 ---
 
 # Retention Report

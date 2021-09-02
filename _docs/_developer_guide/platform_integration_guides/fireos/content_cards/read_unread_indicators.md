@@ -5,7 +5,7 @@ platform: FireOS
 description: "This reference article covers Android read and unread indicators and how to implement them in your Content Cards."
 channel:
   - content cards
-
+hidden: true
 ---
 
 # Read & Unread Indicators {#read-indicators-for-android}

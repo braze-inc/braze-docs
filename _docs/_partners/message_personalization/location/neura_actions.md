@@ -1,13 +1,14 @@
 ---
 nav_title: Neura Actions
+article_title: Neura Actions
 alias: /partners/neura_actions/
-
 description: "This article outlines the partnership between Braze and Neura Actions. This integration leads mobile brands to drive higher customer engagement and retention."
 page_type: partner
+search_tag: Partner
 
 ---
 
-# Neura Actions Integration
+# Neura Actions
 
 > [Neura][1] helps leading mobile brands drive higher customer engagement & retention with AI-powered, real-world behavioral insights and advanced campaign segmentation & triggering.
 
@@ -52,8 +53,8 @@ Set a custom user attribue with the key-value pair `neura, true`
   {% endtab %}
   {% tab Android %}
 ```java
-Appboy.getInstance(YOUR_ACTIVITY.this).getCurrentUser().addAlias(NEURA_USER_ID, "neura_id");
-Appboy.getInstance(YOUR_ACTIVITY.this).getCurrentUser().setCustomUserAttribute("neura", true);
+Braze.getInstance(YOUR_ACTIVITY.this).getCurrentUser().addAlias(NEURA_USER_ID, "neura_id");
+Braze.getInstance(YOUR_ACTIVITY.this).getCurrentUser().setCustomUserAttribute("neura", true);
 ```
   {% endtab %}
 {% endtabs %}

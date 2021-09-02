@@ -1,11 +1,12 @@
 ---
 nav_title: Google Cloud Storage
+article_title: Google Cloud Storage
 page_order: 2
 alias: /partners/google_cloud_storage_for_currents/
-
 description: "This article outlines the partnership between Braze and Google Cloud Storage, a massively scalable object storage for unstructured data."
 page_type: partner
-tool: currents
+tool: Currents
+search_tag: Partner
 
 ---
 

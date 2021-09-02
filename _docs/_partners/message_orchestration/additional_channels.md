@@ -1,11 +1,13 @@
 ---
 nav_title: Additional Channels
+article_title: Additional Channel Partners
 page_order: 1
 
 page_type: landing
 description: "These partners allow you to expand your analytics and communications using channels other than the ones Braze provides."
 
 layout: partner_page
+search_tag: Partner
 partner_api: "https://www.braze.com/api/v1/partners"
 partner_path: "https://www.braze.com/product/alloys/partners/"
 

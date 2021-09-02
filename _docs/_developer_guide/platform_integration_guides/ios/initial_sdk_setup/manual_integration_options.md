@@ -1,7 +1,8 @@
 ---
 nav_title: Manual Integration Options
+article_title: Manual Integration Options for iOS
 platform: iOS
-page_order: 2
+page_order: 4
 description: "This reference article shows how to manually integrate the Braze SDK for iOS."
 
 ---
@@ -64,36 +65,9 @@ If you try to use the core version of the SDK without Braze's UI features, in-ap
 1. Add the `CoreLocation.framework` to enable location tracking
 2. You must authorize location for your users using `CLLocationManager` in your app
 
-## Step 3: Updating your App Delegate
+## Step 3: Objective-C Bridging Header
 
-{% tabs %}
-{% tab OBJECTIVE-C %}
-
-Add the following line of code to your `AppDelegate.m` file:
-
-```objc
-#import "AppboyKit.h"
-```
-
-Within your `AppDelegate.m` file, add the following snippet within your `application:didFinishLaunchingWithOptions` method:
-
-{% alert important %}
-Be sure to update `YOUR-API-KEY` with the correct value from your **Settings** page.
-{% endalert %}
-
-
-```objc
-[Appboy startWithApiKey:@"YOUR-API-KEY"
-         inApplication:application
-     withLaunchOptions:launchOptions];
-```
-
-{% alert important %}
-Be sure to initialize Braze in your application's main thread.
-{% endalert %}
-
-{% endtab %}
-{% tab swift %}
+If your project uses Swift, you will need a bridging header file.
 
 If you do not have a bridging header file, create one and name it `your-product-module-name-Bridging-Header.h` by choosing File > New > File > (iOS or OS X) > Source > Header File. Then add the following line of code to the top of your bridging header file:
 ```
@@ -102,24 +76,10 @@ If you do not have a bridging header file, create one and name it `your-product-
 
 In your project's Build Settings, add the relative path of your header file to the `Objective-C Bridging Header` build setting under `Swift Compiler - Code Generation`.
 
-For more information about using Objective-C code in Swift projects, please refer to the [Apple Developer Docs](https://developer.apple.com/library/ios/documentation/swift/conceptual/buildingcocoaapps/MixandMatch.html).
+{% alert note %}
+You do not need to follow these steps if your project only uses Objective-C.
+{% endalert %}
 
-In `AppDelegate.swift`, add following snippet within function `application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool`:
+## Next Steps
 
-```
-Appboy.start(withApiKey: "YOUR-API-KEY",
-                 in:application,
-                 withLaunchOptions:launchOptions,
-                 withAppboyOptions:appboyOptions)
-```
-
-{% endtab %}
-{% endtabs %}
-
-## SDK Integration Complete {#manual-sdk-integ}
-
-Braze should now be collecting data from your application and your basic integration should be complete. Please see the following sections in order to enable custom event tracking, push messaging, the news-feed and the complete suite of Braze features.
-
-[Full iOS class documentation][7] is available to provide additional guidance on any of the aforementioned methods.
-
-[7]: http://appboy.github.io/appboy-ios-sdk/docs/annotated.html "full iOS class documentation"
+Follow the instructions for [Completing the Integration]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/initial_sdk_setup/completing_integration/).

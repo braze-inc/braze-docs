@@ -1,18 +1,9 @@
 ---
 page_order: 10
 nav_title: SDK Changelogs
-
+article_title: Braze SDK Changelogs
 page_type: landing
-platform:
-  - android
-  - ios
-  - web
-  - windows universal
-  - unity
-  - cordova
-
 description: "This page lists updates to Braze's Android SDK changelog."
-
 layout: dev_guide
 
 guide_top_header: "Braze SDK Changelogs"

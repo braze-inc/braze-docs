@@ -1,12 +1,14 @@
 ---
 nav_title: Messenger
+article_title: Facebook Messenger
 alias: /partners/messenger/
-
 description: "This article outlines the partnership between Braze and Facebook Messenger, one of the world’s most popular instant messaging platforms."
 page_type: partner
+search_tag: Partner
+
 ---
 
-# Overview
+# Facebook Messenger
 
 > [Facebook Messenger](https://developers.facebook.com/docs/messenger-platform/) is one of the world’s most popular instant messaging platforms, used by nearly one billion monthly active users. Through this platform, brands can create engaging Chatbots to interact intelligently and automatically with their customers.
 

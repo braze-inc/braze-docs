@@ -1,18 +1,11 @@
 ---
 nav_title: Feature Awareness and New App Version
-platform: Campaigns
-subplatform: Ideas and Strategies
+article_title: Feature Awareness and New App Version
 page_order: 7
-
 page_type: reference
 description: "This reference article discusses how to keep your users knowledgeable and excited about when you release new features or versions."
 tool: Campaigns
-platform: 
-- iOS
-- Android
-channel:
-- in-app messages
-- content cards
+
 ---
 # Feature Awareness and New App Version
 

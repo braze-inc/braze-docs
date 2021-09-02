@@ -1,7 +1,7 @@
 ---
 nav_title: Third Party Liability
+article_title: Third Party Liability
 page_order: 8
-
 page_type: reference
 description: "This page details policies around liability Braze holds in reference to its associated third parties."
 
