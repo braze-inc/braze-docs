@@ -47,7 +47,7 @@ Verbose logs should be enabled as early as possible in your `Application.onCreat
 
 To know if your obtained logs are verbose, look for `V/Appboy` somewhere in your logs. For example:
 
-`2077-11-19 16:22:49.591 ? V/Appboy v9.0.01 .bo.app.d3: Request started`
+`2077-11-19 16:22:49.591 ? V/Appboy v9.0.01 .bo.app.d3: Request started`
 
 ### Suppressing Braze SDK Logging
 
