@@ -31,7 +31,7 @@ To enable the integration:
 	- Input any event or event attribute filtering to ensure only relevant data is sent to Braze for engagement marketing
 
 {% alert note %}
-You can set separate API keys for the Test and Live environments.
+You can set separate API keys for the test and live environments.
 {% endalert %}
 
 Whenever Radar events are generated, Radar will send custom events and user attributes to Braze. Events from iOS devices will be sent using your iOS API keys; events and user attributes from Android devices will be sent using your Android API keys.
@@ -44,7 +44,7 @@ You can use custom events and user attributes to build location-based segments o
 
 ![Radar Segment]({% image_buster /assets/img_archive/radar-segment.png %})
 
-### Trigger when a User Enters a Location with High Confidence
+### Trigger When a User Enters a Location with High Confidence
 
 ![Radar Campaign]({% image_buster /assets/img_archive/radar-campaign.png %})
 

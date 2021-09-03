@@ -34,7 +34,7 @@ You can upload video files into Playable or add videos by providing a URL of you
 Playable generates an Embed code that plays the video within the inbox. When each viewer opens your email, the Embed code works with Playable servers to deliver the __best possible__ version of your video, depending on the email client, device, screen size, and network conditions.
 
 {% alert tip %}
-Videos will autoplay in >98% of inboxes, including iPhone Mail, Gmail, Apple Mail, Outlook for iOS, Outlook for Android, Outlook for Mac, and newer versions of Outlook 365 for Windows.
+Videos will autoplay in over 98% of inboxes, including iPhone Mail, Gmail, Apple Mail, Outlook for iOS, Outlook for Android, Outlook for Mac, and newer versions of Outlook 365 for Windows.
 Users of legacy Outlook for Windows will see a static image instead.
 {% endalert %}
 
