@@ -68,7 +68,7 @@ appboy.initialize('api-key', { openInAppMessagesInNewTab: true} );
 
 ## In-App Message Dismissal
 
-By default, when an in-app message is showing, pressing the escape button or a click on the greyed-out background of the page will dismiss the message. Configure this option to `true` using the `requireExplicitInAppMessageDismissal ` [initialization option][41] to prevent this behavior and require an explicit button click to dismiss messages. 
+By default, when an in-app message is showing, pressing the escape button or a click on the greyed-out background of the page will dismiss the message. Configure the `requireExplicitInAppMessageDismissal` [initialization option][41] to true to prevent this behavior and require an explicit button click to dismiss messages. 
 
 ```javascript
 import braze from "@braze/web-sdk";
