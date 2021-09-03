@@ -21,9 +21,7 @@ __Common use cases for syncing Custom Audiences include__:
 - Creating suppression audiences to prevent users from receiving advertisements when they're already loyal consumers of your brand.
 - Creating Lookalike Audiences to acquire new users more efficiently.
 
-{% alert note %}
 This feature gives brands the option to control what specific first-party data is shared with Facebook. At Braze, the integrations you can and cannot share your first-party data with are given the utmost consideration. To learn more about our Braze data privacy policy, click [here](https://www.braze.com/privacy).
-{% endalert %}
 
 ## Integration
 
