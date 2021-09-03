@@ -51,8 +51,6 @@ Additionally, we recommend against changing the user ID when a user logs out, as
 
 {% include archive/setting_user_ids/best_practices.md %}
 
-> If you opt to use a hash of a unique identifier as your userID take care to ensure that you're normalizing the input to your hashing function. For example, if you're going to use a hash of an email address, ensure that you're stripping leading and trailing whitespace from the input, and taking [localization problems][6] into account.
-
 ## Aliasing Users
 
 {% include archive/aliasing.md platform="iOS" %}
@@ -61,4 +59,3 @@ Additionally, we recommend against changing the user ID when a user logs out, as
 [2]: {{site.baseurl}}/api/endpoints/messaging/
 [4]: https://github.com/Appboy/appboy-ios-sdk/blob/master/AppboyKit/include/Appboy.h
 [5]: http://appboy.github.io/appboy-ios-sdk/docs/interface_appboy.html#ac8b369b40e15860b0ec18c0f4b46ac69 "changeuser"
-[6]: http://developer.android.com/reference/java/util/Locale.html#default_locale "Android Developer Docs - Localization"
