@@ -1,10 +1,11 @@
 ---
 nav_title: Exception Events 
+article_title: Exception Events
 page_order: 2.1
-
 page_type: reference
 description: "This reference article describes exception events and how they impact your Canvas steps."
 tool: Canvas
+
 ---
 
 # Canvas Exception Events

@@ -166,8 +166,6 @@ Updating a custom attribute object to `null` also consumes a data point.
 
 
 [1]: {{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_attributes/#custom-attribute-data-types
-[2]: {% image_buster /assets/img_archive/nca_liquid.png %}
-[3]: {% image_buster /assets/img_archive/nca_segmentation.png %}
 [4]: https://calendly.com/d/w9y6-qq9c/feedback-on-nested-custom-attributes?month=2021-07
 [5]: {% image_buster /assets/img_archive/nca_liquid_2.png %} 
 [6]: {% image_buster /assets/img_archive/nca_segmentation_2.png %}

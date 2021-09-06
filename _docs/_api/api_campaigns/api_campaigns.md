@@ -1,17 +1,12 @@
 ---
 nav_title: API Campaigns
-platform: REST APIs
+article_title: API Campaigns
 page_order: 5
-
 description: "This reference article covers how to generate a campaign_id to include in your API calls and how to configure that campaign."
 page_type: reference
-tool:
-  - Dashboard
-  - Docs
-platform:
-  - APIs
-
 alias: /api/api_campaigns/
+tool: Campaigns
+
 ---
 # API Campaigns
 
@@ -36,5 +31,4 @@ Now, you can move on to configuring your API campaign.
 4. Click __Save Campaign__ and you're set to begin your API campaign!
 
 [2]: {{site.baseurl}}/api/endpoints/messaging/#send-endpoints
-[3]: {% image_buster /assets/img/selectapicampaigns.png %} "Select API Campaigns"
 [4]: {% image_buster /assets/img/createapicampaigns.gif %} "API Campaign Creation"

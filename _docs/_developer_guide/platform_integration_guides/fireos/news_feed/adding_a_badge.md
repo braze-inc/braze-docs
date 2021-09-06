@@ -5,7 +5,7 @@ platform: FireOS
 description: "This reference article shows how to add a News Feed badge in your Android application."
 channel:
   - news feed
-
+hidden: true
 ---
 
 # Adding a Badge

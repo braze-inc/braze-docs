@@ -1,12 +1,13 @@
 ---
 nav_title: "RegEx"
+article_title: RegEx
 page_order: 5
 
 description: "This reference article covers what regular expressions are, how to begin using them, and offers debugger functionality to validate and test regular expressions."
 page_type: reference
 tool:
-  - Dashboard
   - Testing Tools
+  
 ---
 
 # RegEx with Braze

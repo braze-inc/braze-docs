@@ -1,6 +1,9 @@
 ---
 nav_title: Tracking Custom Events
-platform: Android
+article_title: Tracking Custom Events for Android/FireOS
+platform: 
+  - Android
+  - FireOS
 page_order: 2
 description: "This reference article covers how to add and track custom events for your Android application."
 
@@ -12,7 +15,7 @@ You can record custom events in Braze to learn more about your app's usage patte
 
 Before implementation, be sure to review examples of the segmentation options afforded by custom events vs. custom attributes vs purchase events in our [Analytics Overview][0], as well as our notes on [event naming conventions]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/event_naming_conventions/).
 
-## Adding A Custom Event
+## Adding a Custom Event
 
 {% tabs %}
 {% tab JAVA %}

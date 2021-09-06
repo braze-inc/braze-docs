@@ -1,11 +1,11 @@
 ---
 nav_title: Creating a News Feed Item
+article_title: Creating a News Feed Item
 page_order: 3
-
 page_type: reference
 description: "This reference article covers how to create a News Feed item. News-Feed items allow you to insert permanent content directly into your app from our web dashboard."
-tool: Dashboard
 channel: news feed
+
 ---
 # Creating a News Feed Item
 
@@ -119,4 +119,4 @@ You can re-order your cards within Braze's News Feed page.
 [13]: https://www.braze.com/customers
 [14]: {% image_buster /assets/img_archive/linked-in-app_new.png %}
 [15]: {{site.baseurl}}/user_guide/engagement_tools/news_feed/news_feed_use_cases/
-[16]: {{site.baseurl}}/help/best_practices/news_feed/#news-feed-best-practices
+[16]: {{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/reporting/

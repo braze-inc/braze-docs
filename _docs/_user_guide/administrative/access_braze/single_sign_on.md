@@ -1,5 +1,6 @@
 ---
 nav_title: "SAML & Single Sign-On"
+article_title: SAML & Single Sign-On
 page_order: 5
 layout: featured
 guide_top_header: "SAML & Single Sign-On"

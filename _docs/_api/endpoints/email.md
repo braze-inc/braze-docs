@@ -1,20 +1,12 @@
 ---
 nav_title: "Email Lists & Addresses"
+article_title: Email Lists & Addresses Endpoints
+search_tag: Endpoint
 page_order: 0
 layout: featured
 
-#Required
 description: "This landing page explains and lists the Braze Email Lists and Addresses Endpoints."
 page_type: landing
-tool:
-  - Canvas
-  - Campaigns
-
-#Use if applicable
-platform:
-  - API
-channel:
-  - Email
 
 guide_top_header: "Email Lists & Addresses Endpoints"
 guide_top_text: "Users’ email subscription status can be updated and retrieved via Braze using a RESTful API. You can use the API to set up bi-directional sync between Braze and other email systems or your own database."

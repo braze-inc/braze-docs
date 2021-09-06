@@ -1,12 +1,13 @@
 ---
 nav_title: "Personalization & Dynamic Content"
+article_title: "Personalization & Dynamic Content"
 page_order: 6
 layout: featured
+
 guide_top_header: "Personalized Messaging"
 guide_top_text: "Braze allows you to personalize your campaigns by inserting user-specific information, such as the user's name, into messages."
-description: "Braze allows you to personalize your campaigns by inserting user-specific information, such as the user's name, into messages."
-
 description: "Braze allows you to personalize your campaigns by inserting user-specific information, such as the user's name, into messages. Check out this landing page to learn mroe abot personalization & dynamic content."
+
 guide_featured_title: "Topics"
 guide_featured_list:
 - name: Liquid
@@ -21,9 +22,6 @@ guide_featured_list:
 - name: "Key-Value Pairs"
   link: /docs/user_guide/personalization_and_dynamic_content/key_value_pairs/
   fa_icon: far fa-dot-circle
-- name: Emoji Messaging
-  link: /docs/user_guide/personalization_and_dynamic_content/emoji_messaging/
-  fa_icon: far fa-smile
 - name: Content Blocks
   link: /docs/user_guide/engagement_tools/templates_and_media/content_blocks/
   fa_icon: fas fa-columns

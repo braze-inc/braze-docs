@@ -1,13 +1,14 @@
 ---
 nav_title: Lob
+article_title: Lob 
 alias: /partners/lob/
-
 description: "This article outlines the partnership between Braze and Lob.com, which allows you to send direct mail like letters, postcards, and checks through the mail."
 page_type: partner
+search_tag: Partner
 
 ---
 
-# Lob Direct Mail Integration
+# Lob Direct Mail Automation
 
 > [Lob.com][38] is an online service which one can interact with through their API to send direct mail like letters, postcards, and checks through the mail.  
 

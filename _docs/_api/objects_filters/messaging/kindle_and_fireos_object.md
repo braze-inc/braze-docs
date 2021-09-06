@@ -1,24 +1,17 @@
 ---
 nav_title: "Kindle and FireOS Push Object"
+article_title: Kindle and FireOS Push Messaging Object
 page_order: 7
-
 page_type: reference
-
-channel: Push
+channel: push
 platform:
-  - API
   - Android
   - FireOS
-  - Kindle
-
-tool:
-  - Campaigns
-  - Canvas
-
 description: "This article explains the different components of Braze's Kindle and FireOS Push Object."
+
 ---
 
-# Kindle and FireOS Push Object
+# Kindle and FireOS Push Object Specification
 
 ```json
 {

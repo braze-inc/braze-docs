@@ -1,5 +1,6 @@
 ---
 nav_title: Predictive Churn
+article_title: Predictive Churn
 page_order: 6.4
 layout: featured
 alias: /predictive_churn/
@@ -22,9 +23,6 @@ guide_featured_list:
 - name: Frequently Asked Questions
   link: /docs/user_guide/predictive_suite/predictive_churn/prediction_faq/
   fa_icon: fas fa-question
-
-Tool:
-  - Dashboard
 
 ---
 

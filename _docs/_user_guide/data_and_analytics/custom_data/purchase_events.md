@@ -1,9 +1,10 @@
 ---
 nav_title: Purchase Events
+article_title: Purchase Events
 page_order: 0.5
-
 page_type: reference
 description: "This reference article describes purchase events and properties, their usage, and where to view relevant analytics."
+
 ---
 
 # Purchase Events
@@ -20,18 +21,13 @@ You can log purchases by passing a [Purchase Object]({{site.baseurl}}/api/object
 
 Listed below are the methods across various platforms that are used to log purchases. Within these pages, you will also be able to find documentation on how to add properties and quantities to your purchase event.
 
-- [Android]({{site.baseurl}}/developer_guide/platform_integration_guides/android/analytics/logging_purchases/)
+- [Android and FireOS]({{site.baseurl}}/developer_guide/platform_integration_guides/android/analytics/logging_purchases/)
 - [iOS]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/analytics/logging_purchases/)
 - [Web]({{site.baseurl}}/developer_guide/platform_integration_guides/web/analytics/logging_purchases/)
-- [FireOS]({{site.baseurl}}/developer_guide/platform_integration_guides/fireos/analytics/logging_purchases/)
-- **React Native**: 
-    - [Android/FireOS]({{site.baseurl}}/developer_guide/platform_integration_guides/react_native/android_and_fireos/analytics/revenue_tracking/)
-    - [iOS]({{site.baseurl}}/developer_guide/platform_integration_guides/react_native/ios/analytics/revenue_tracking/)
+- [React Native]({{site.baseurl}}/developer_guide/platform_integration_guides/react_native/analytics/#logging-purchases)
 - [Unity]({{site.baseurl}}/developer_guide/platform_integration_guides/unity/Analytics/logging_purchases/)
 - [Windows Universal]({{site.baseurl}}/developer_guide/platform_integration_guides/windows_universal/analytics/logging_purchases/)
-- **Xamarin**: 
-    - [Android/FireOS]({{site.baseurl}}/developer_guide/platform_integration_guides/xamarin/android_and_fireos/analytics/#logging-purchases)
-    - [iOS]({{site.baseurl}}/developer_guide/platform_integration_guides/xamarin/ios/analytics/#logging-purchases)
+- [Xamarin]({{site.baseurl}}/developer_guide/platform_integration_guides/xamarin/analytics/#logging-purchases)
 - [Roku]({{site.baseurl}}/developer_guide/platform_integration_guides/roku/analytics/logging_purchases/)
 
 ## Blocklisting Purchase Events

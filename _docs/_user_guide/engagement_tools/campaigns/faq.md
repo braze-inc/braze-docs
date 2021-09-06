@@ -1,11 +1,11 @@
 ---
 nav_title: FAQs
-title: Campaign FAQs
+article_title: Campaign FAQs
 page_order: 5
-
 page_type: FAQ
 description: "This page provides answers to frequently asked questions about Campaigns."
 tool: Campaigns
+
 ---
 
 # Campaign FAQs
@@ -37,6 +37,10 @@ Braze highly recommends that all local time zone campaigns are scheduled 24 hour
 For example, if it is 1pm and you schedule a local time zone campaign for 3pm, then the campaign will immediately send to all users whose local time is 3-4pm, but not to users whose local time is 5pm. In addition, the send time you choose for your campaign needs to have not yet occurred in your company’s time zone.
 
 Editing a local time zone campaign that is scheduled less than 24 hours in advance will not alter the message’s schedule. If you decide to edit a local time zone campaign to send at a later time (for instance, 7pm instead of 6pm), users who were in the targeted segment when the original send time was chosen will still receive the message at the original time (6pm). If you edit a local time zone to send at an earlier time (for instance, 4pm instead of 5pm), then the campaign will still send to all segment members at the original time (5pm). 
+
+{% alert note %}
+For Canvas steps, users do not need to be in the step for 24 hours to receive the next step for local time zone delivery. 
+{% endalert %}
 
 If you have allowed users to become re-eligible for the campaign, then they will receive it again at the original time (5pm). For all subsequent occurrences of your campaign, however, your messages only send at your updated time.
 

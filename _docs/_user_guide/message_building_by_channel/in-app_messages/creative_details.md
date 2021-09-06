@@ -1,5 +1,6 @@
 ---
 nav_title: Creative Details
+article_title: Creative Details
 page_order: 1
 layout: featured
 guide_top_header: "Creative Details"
@@ -92,7 +93,7 @@ Braze currently supports gifs for Web (included), [Android]({{site.baseurl}}/dev
 Braze in-app messages have both global and individual creative specifications. For more information about fully customizing in-app messages, go to our [Customize]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/customize/) page.
 
 {% alert important %}
-  These details only apply to our most recent in-app message generation (Generation 3). If you are not using our newest generation of in-app messages, check out our [previous in-app message generations]({{site.baseurl}}/help/best_practices/in-app_messages/previous_in-app_message_generations/) documentation.
+  These details only apply to our most recent in-app message generation (Generation 3). If you are not using our newest generation of in-app messages, check out our [previous in-app message generations]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/best_practices/) documentation.
 {% endalert %}
 
 <br>

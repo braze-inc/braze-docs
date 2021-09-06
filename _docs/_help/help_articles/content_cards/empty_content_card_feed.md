@@ -5,7 +5,7 @@ page_order: 0
 page_type: solution
 description: "This help article describes why new users may not have Content Cards in their feed, and how to resolve this issue."
 channel: content cards
-no_index: true
+noindex: true
 ---
 
 # New Users Do Not Have Cards in Their Feed

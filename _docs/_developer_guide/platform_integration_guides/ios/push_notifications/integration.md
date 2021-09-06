@@ -1,5 +1,6 @@
 ---
 nav_title: Integration
+article_title: Push Integration for iOS
 platform: iOS
 page_order: 0
 description: "This article covers how to integrate push notifications in your iOS application."
@@ -107,7 +108,11 @@ Be sure to call all push integration code in your application's main thread.
 
 ### Using UserNotification Framework (iOS 10+)
 
-If you are using the `UserNotifications` framework (recommended) that was introduced in iOS 10, add the following code to the `application:didFinishLaunchingWithOptions:` method of your app delegate:
+If you are using the `UserNotifications` framework (recommended) that was introduced in iOS 10, add the following code to the `application:didFinishLaunchingWithOptions:` method of your app delegate.
+
+{% alert important %}
+The code sample below includes integration for Provisional Push Authentication (lines 5 and 6 in `Objective-C` tab; lines 5 and 6 in `Swift` tab). If you are not planning on using provisional authorization in your app, you can remove the lines of code that add `UNAuthorizationOptionProvisional` to the `requestAuthorization` options in the above code snippet. Learn more about [Push Provisional Authentication, iOS notification options, and iOS 12 here]({{site.baseurl}}/user_guide/message_building_by_channel/push/notification_options_ios/).
+{% endalert %}
 
 {% tabs %}
 {% tab OBJECTIVE-C %}
@@ -158,9 +163,6 @@ if #available(iOS 10, *) {
 {% endtab %}
 {% endtabs %}
 
-{% alert important %}
-Please note that the code sample above includes integration for Provisional Push Authentication (lines 5 and 6 in `Objective-C` tab; lines 5 and 6 in `Swift` tab). If you are not planning on using provisional authorization in your app, you can remove the lines of code that add `UNAuthorizationOptionProvisional` to the `requestAuthorization` options in the above code snippet. Learn more about [Push Provisional Authentication, iOS notification options, and iOS 12 here]({{site.baseurl}}/user_guide/message_building_by_channel/push/notification_options_ios/).
-{% endalert %}
 
 {% alert warning %}
 You must assign your delegate object using `center.delegate = self` synchronously before your app finishes launching, preferably in `application:didFinishLaunchingWithOptions:`. Not doing so may cause your app to miss incoming push notifications. For more information, visit Apple's [`UNUserNotificationCenterDelegate` documentation](https://developer.apple.com/documentation/usernotifications/unusernotificationcenterdelegate).

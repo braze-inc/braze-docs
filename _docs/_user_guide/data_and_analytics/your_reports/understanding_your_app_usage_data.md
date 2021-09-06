@@ -1,13 +1,14 @@
 ---
 nav_title: Understanding Your Overview Data
+article_title: Understanding Your Overview Data
 page_order: 3
 page_type: reference
 description: "This reference article describes the Overview page, and provides definitions for statistics available on this page."
 tool: 
-- Dashboard
-- Reports
+  - Reports
 
 ---
+
 # Understanding Your Overview Data
 
 ## Overview
@@ -29,7 +30,7 @@ A low MAU/Lifetime User ratio may indicate that you need to diversify your messa
 ## Lifetime Sessions
 
 This is the total count of sessions that Braze has recorded since integration. Simply put, a session is each time a user uses the app. For a more precise definition on how sessions are defined by platform, please visit the cooresponding 
-[iOS]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/analytics/tracking_sessions/#session-tracking), [Android]({{site.baseurl}}/developer_guide/platform_integration_guides/android/analytics/tracking_sessions/), [Web]({{site.baseurl}}/developer_guide/platform_integration_guides/web/analytics/tracking_sessions/), [FireOS]({{site.baseurl}}/developer_guide/platform_integration_guides/fireos/analytics/tracking_sessions/), or [Windows Universal]({{site.baseurl}}/developer_guide/platform_integration_guides/windows_universal/analytics/tracking_sessions/) session tracking developer articles.
+[iOS]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/analytics/tracking_sessions/#session-tracking), [Android and FireOS]({{site.baseurl}}/developer_guide/platform_integration_guides/android/analytics/tracking_sessions/), [Web]({{site.baseurl}}/developer_guide/platform_integration_guides/web/analytics/tracking_sessions/), or [Windows Universal]({{site.baseurl}}/developer_guide/platform_integration_guides/windows_universal/analytics/tracking_sessions/) session tracking developer articles.
 
 ## Monthly Active Users
 

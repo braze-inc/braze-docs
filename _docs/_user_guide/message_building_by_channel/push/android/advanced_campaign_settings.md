@@ -1,14 +1,15 @@
 ---
 nav_title: "Advanced Push Campaign Settings"
+article_title: Advanced Push Campaign Settings
 page_order: 5
 page_layout: reference
 description: "This reference article covers some Advanced Push Campaign settings like priority, custom URLs, delivery options, and more."
-
 platform: Android
 channel:
   - push
 tool:
   - Campaigns
+
 ---
 
 # Advanced Push Campaign Settings
@@ -93,8 +94,8 @@ To message your full user base with a specific sound, we recommend that you indi
 [9]: {% image_buster /assets/img_archive/summary_text.png %}
 [11]: {% image_buster /assets/img_archive/sound_android.png %}
 [12]: {% image_buster /assets/img_archive/deep_link_image_android.png %}
-[13]: {{site.baseurl}}/developer_guide/rest_api/messaging/
-[14]: https://github.com/Appboy/appboy-android-sdk/blob/master/samples/custom-broadcast/src/main/java/com/appboy/custombroadcast/AppboyBroadcastReceiver.java
+[13]: {{site.baseurl}}/api/endpoints/messaging/
+[14]: https://github.com/Appboy/appboy-android-sdk/blob/master/samples/custom-broadcast/src/main/java/com/braze/custombroadcast/CustomBroadcastReceiver.java
 [15]: {% image_buster /assets/img_archive/messagesummary.gif %}
 [17]: https://developer.android.com/training/notify-user/channels#importance
 [16]: https://developer.android.com/training/notify-user/channels

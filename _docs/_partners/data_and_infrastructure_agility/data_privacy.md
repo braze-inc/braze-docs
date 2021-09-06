@@ -1,9 +1,11 @@
 ---
 nav_title: Data Privacy & Compliance
+article_title: Data & Privacy Compliance Partners
 layout: partner_page
 page_order: 1
 
 page_type: landing
+search_tag: Partner
 description: "This page lists Braze partners (Alloys) who offer data privacy & compliance through their platforms."
 
 partner_api: "https://www.braze.com/api/v1/partners"

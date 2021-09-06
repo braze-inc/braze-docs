@@ -1,13 +1,14 @@
 ---
 nav_title: Radar
+article_title: Radar
 alias: /partners/radar/
-
 description: "This article outlines the partnership between Braze and Radar to add location context and tracking to your iOS and Android apps."
 page_type: partner
+search_tag: Partner
 
 ---
 
-# Radar Integration
+# Radar
 
 > [Radar](https://www.onradar.com/) is a geofencing platform for mobile and web apps. Combining Braze's industry-leading engagement platform and Radar's industry-leading geofencing capabilities allows you to drive digital engagement and loyalty. 
 The Radar platform has three products: [Geofences](https://radar.io/product/geofencing), [Trip Tracking](https://radar.io/product/trip-tracking), and [Geo APIs](https://radar.io/product/api).
@@ -30,7 +31,7 @@ To enable the integration:
 	- Input any event or event attribute filtering to ensure only relevant data is sent to Braze for engagement marketing
 
 {% alert note %}
-You can set separate API keys for the Test and Live environments.
+You can set separate API keys for the test and live environments.
 {% endalert %}
 
 Whenever Radar events are generated, Radar will send custom events and user attributes to Braze. Events from iOS devices will be sent using your iOS API keys; events and user attributes from Android devices will be sent using your Android API keys.
@@ -43,7 +44,7 @@ You can use custom events and user attributes to build location-based segments o
 
 ![Radar Segment]({% image_buster /assets/img_archive/radar-segment.png %})
 
-### Trigger when a User Enters a Location with High Confidence
+### Trigger When a User Enters a Location with High Confidence
 
 ![Radar Campaign]({% image_buster /assets/img_archive/radar-campaign.png %})
 

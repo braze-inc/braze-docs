@@ -1,9 +1,11 @@
 ---
 nav_title: Adjust
+article_title: Adjust
 alias: /partners/adjust/
-
 description: "This article outlines the partnership between Braze and Adjust, a mobile attribution and analytics company that combines attribution for advertising sources."
 page_type: partner
+search_tag: Partner
+
 ---
 
 # Adjust

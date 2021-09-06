@@ -1,17 +1,10 @@
 ---
 nav_title: "Event Object"
+article_title: API Event Object
 page_order: 6
-
 page_type: reference
-
-channel: Push
-platform:
-  - API
-tool:
-  - Campaigns
-  - Canvas
-
 description: "This reference article goes over the event object, what it is, and how it's a crucial part of event-based campaign strategies."
+
 ---
 
 # Event Object Specification
@@ -34,7 +27,7 @@ You can check out how to set up custom events for a specific platform by reading
   "external_id" : (optional, string), External User ID,
   "user_alias" : (optional, User Alias Object), User Alias Object,
   "braze_id" : (optional, string) Braze User Identifier,
-  "app_id" : (required, string) see App Identifier below,
+  "app_id" : (optional, string) see App Identifier below,
   "name" : (required, string) the name of the event,
   "time" : (required, datetime as string in ISO 8601 or in `yyyy-MM-dd'T'HH:mm:ss:SSSZ` format),
   "properties" : (optional, Properties Object) properties of the event

@@ -1,5 +1,6 @@
 ---
 nav_title: Custom Sounds
+article_title: Custom Push Notification Sounds for iOS
 platform: iOS
 page_order: 2
 description: "This article covers how to implement custom sounds in your iOS push notifications."
@@ -41,5 +42,5 @@ If the specified sound file doesn’t exist or the keyword ‘default’ is ente
 
 [8]: {% image_buster /assets/img_archive/sound_push_ios.png %}
 [9]: https://developer.apple.com/library/content/documentation/NetworkingInternet/Conceptual/RemoteNotificationsPG/SupportingNotificationsinYourApp.html
-[12]: {{site.baseurl}}/developer_guide/rest_api/messaging/
-[25]: {{site.baseurl}}/developer_guide/rest_api/messaging/#messaging
+[12]: {{site.baseurl}}/api/endpoints/messaging/
+[25]: {{site.baseurl}}/api/endpoints/messaging/

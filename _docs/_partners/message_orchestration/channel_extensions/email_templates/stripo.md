@@ -1,7 +1,11 @@
 ---
 nav_title: Stripo
+article_title: Stripo
 alias: /partners/stripo
-description: "This article outlines the partnership between Braze and Stripo, a drag-and-drop email template builder that allosws you to quickly create sophisticated emails to use in the Braze platform."
+description: "This article outlines the partnership between Braze and Stripo, a drag-and-drop email template builder that allows you to quickly create sophisticated emails to use in the Braze platform."
+page_type: partner
+search_tag: Partner
+
 ---
 
 # Stripo

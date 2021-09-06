@@ -1,14 +1,15 @@
 ---
 nav_title: Spam Regulations
+article_title: Spam Regulations
 page_order: 4.2
-
 page_type: reference
 description: "This article provides summaries and resources on various spam regulations that may affect you or your users."
 channel:
 - email
 - push
 - SMS
-no_index: true
+
+
 ---
 # Spam Regulations
 
@@ -113,5 +114,5 @@ In Android, your users can assume to be opted-in by the implied opt-in that is s
 [3]: http://laws-lois.justice.gc.ca/eng/annualstatutes/2010_23/FullText.html
 [4]: https://en.wikipedia.org/wiki/Email_spam_legislation_by_country
 [5]: http://www.business.ftc.gov/documents/bus61-can-spam-act-compliance-guide-business
-[6]: {{site.baseurl}}/help/best_practices/push/#creating-custom-opt-in-prompts
+[6]: {{site.baseurl}}/user_guide/message_building_by_channel/push/best_practices/
 [7]: http://blog.hubspot.com/blog/tabid/6307/bid/30684/The-Ultimate-List-of-Email-SPAM-Trigger-Words.aspx#sm.00001wbela64xddnmppa99vp1xa8j

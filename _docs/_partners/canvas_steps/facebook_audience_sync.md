@@ -1,12 +1,12 @@
 ---
 nav_title: Audience Sync to Facebook
-title: Audience Sync to Facebook
+article_title: Canvas Audience Sync to Facebook
 description: "This reference article will cover how to use Braze Audience Sync to Facebook, to deliver advertisements based upon behavioral triggers, segmentation, and more."
 page_order: 4
 alias: "/audience_sync_facebook/"
 
 Tool:
-  - Dashboard
+  - Canvas
 
 ---
 
@@ -21,7 +21,7 @@ __Common use cases for syncing Custom Audiences include__:
 - Creating suppression audiences to prevent users from receiving advertisements when they're already loyal consumers of your brand.
 - Creating Lookalike Audiences to acquire new users more efficiently.
 
-__Please note__: this feature gives brands the option to control what specific first-party data is shared with Facebook. At Braze, the integrations you can and cannot share your first-party data with are given the utmost consideration. To learn more about our Braze data privacy policy, please click [here][0].
+This feature gives brands the option to control what specific first-party data is shared with Facebook. At Braze, the integrations you can and cannot share your first-party data with are given the utmost consideration. To learn more about our Braze data privacy policy, click [here](https://www.braze.com/privacy).
 
 ## Integration
 
@@ -59,9 +59,9 @@ Once you have successfully connected, you will be taken back to the partner page
 Your Facebook connection will be applied at the Braze app group level. If your Facebook admin removes you from your Facebook Business Manager or access to the connected Facebook accounts, Braze will detect an invalid token. As a result, your active Canvases using Facebook Audience Steps will show errors, and Braze will not be able to sync users. 
 
 {% alert important %}
-For customers that have previously undergone the Facebook App Review process for [Ads Management](https://developers.facebook.com/docs/facebook-login/permissions/#reference-ads_management) and [Ads Management Standard Access](https://developers.facebook.com/docs/marketing-api/access#standard), your System User Token will still be valid for the Facebook Audience Step. You will not be able to edit or revoke the Facebook System User Token through the Facebook partner page. Instead, you can connect your Facebook account to replace your Facebook System User Token within your Braze app group. 
+For customers who have previously undergone the Facebook App Review process for [Ads Management](https://developers.facebook.com/docs/facebook-login/permissions/#reference-ads_management) and [Ads Management Standard Access](https://developers.facebook.com/docs/marketing-api/access#standard), your System User Token will still be valid for the Facebook Audience Step. You will not be able to edit or revoke the Facebook System User Token through the Facebook partner page. Instead, you can connect your Facebook account to replace your Facebook System User Token within your Braze app group. 
 
-<br><br>The new Facebook oAuth configuration will also apply to [Facebook exports via Segments]({{site.baseurl}}/partners/message_orchestration/additional_channels/retargeting/facebook/#prerequisites). 
+<br><br>The Facebook oAuth configuration will also apply to [Facebook exports via Segments]({{site.baseurl}}/partners/message_orchestration/additional_channels/retargeting/facebook/#prerequisites). 
 {% endalert %}
 
 ### Step 2: Add a Facebook Audience Step in Canvas

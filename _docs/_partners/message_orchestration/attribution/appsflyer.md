@@ -1,5 +1,6 @@
 ---
 nav_title: AppsFlyer
+noindex: true
 page_order: 1
 layout: featured
 guide_top_header: "AppsFlyer"

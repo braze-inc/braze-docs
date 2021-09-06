@@ -1,20 +1,18 @@
 ---
 nav_title: Create an In-App Message
-platform: Message_Building_and_Personalization
-subplatform: In-App Messages
+article_title: Create an In-App Message
 page_order: 0
 description: "You can create an in-app message using the Braze platform using campaigns, Canvas, or as an API campaign. This article will guide you through this process."
 channel:
   - in-app messages
 tool:
-  - Dashboard
   - Campaigns
 
 ---
 
 # Creating an In-App Message
 
-You can create an in-app message using the Braze platform using campaigns, Canvas, or as an API campaign. We highly recommend planning out your messages and preparing all materials ahead of time using our handy [In-App Message Prep Guide]({{site.baseurl}}/help/best_practices/in-app_messages/prep_guide/).
+You can create an in-app message using the Braze platform using campaigns, Canvas, or as an API campaign. We highly recommend planning out your messages and preparing all materials ahead of time using our handy [In-App Message Prep Guide]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/best_practices/).
 
 
 ## Choose Where to Build Your Message {#create-new-campaign-in-app}
@@ -226,7 +224,7 @@ In-app message delivery is entirely based off of of the following action trigger
 
 A start date and time must be selected, however, an end date is optional. An end date will stop that specific in-app message from showing up on devices after the specified date/time.
 
-Please refer to our developer documentation for [server-side event triggering]({{site.baseurl}}/developer_guide/platform_integration_guides/web/in_app_messaging/#in-app-message-delivery) and [local in-app message delivery]({{site.baseurl}}/developer_guide/platform_integration_guides/web/in_app_messaging/#local-in-app-messages).
+Please refer to our developer documentation for [server-side event triggering]({{site.baseurl}}/developer_guide/platform_integration_guides/web/in-app_messaging/in-app_message_delivery/) and [local in-app message delivery]({{site.baseurl}}/developer_guide/platform_integration_guides/web/in-app_messaging/in-app_message_delivery/#local-in-app-messages).
 
 #### Online vs. Offline Triggering
 

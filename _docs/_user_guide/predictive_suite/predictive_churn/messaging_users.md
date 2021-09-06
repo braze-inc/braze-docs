@@ -1,10 +1,9 @@
 ---
 nav_title: Messaging Users
-title: Messaging Users
+article_title: Targeting Users for Predictive Churn
 description: "This reference article covers potential next steps after you have created a Churn Prediction such as implementing filter and strategic considerations."
 page_order: 3
-Tool:
-  - Dashboard
+
 ---
 
 # Messaging Users {#what-do-next}

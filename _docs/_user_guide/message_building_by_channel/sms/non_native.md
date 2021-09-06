@@ -1,6 +1,8 @@
 ---
 nav_title: Non-Native SMS
+article_title: Non-Native SMS Articles
 page_order: 7.9
+
 layout: featured
 guide_top_header: "Non-Native SMS"
 guide_top_text: "The following docs are for clients that will not or have not yet switched over to Braze's native keyword processing capability. For these clients, please reference the native SMS user guide but be on the look for callouts that will redirect you to the appropriate version of the doc for your implementation."

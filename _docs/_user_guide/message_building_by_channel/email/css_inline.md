@@ -1,13 +1,8 @@
 ---
 nav_title: CSS Inlining
-platform: Message_Building_and_Personalization
-subplatform: Email
+article_title: CSS Inlining
 page_order: 3
 description: "CSS inlining can improve the way emails render. This reference article covers how to enable CSS inlining and some best practices."
-
-tool:
-  - Dashboard
-
 channel:
   - email
 

@@ -1,10 +1,11 @@
 ---
 nav_title: Creating a Formula
+article_title: Creating a Formula
 page_order: 1.2
-
 page_type: reference
 description: "This reference article covers creating and managing formulas, which help you easily understand complex relationships that exist in your data."
 tool: Reports
+
 ---
 # Creating a Formula
 

@@ -1,10 +1,9 @@
 ---
 nav_title: Changelog
+article_title: Changlog for Web SDK
 page_order: 30
-
 page_type: update
-platform: web
-
+platform: Web
 description: "This page lists updates to Braze's Web SDK changelog."
 
 ---

@@ -1,11 +1,12 @@
 ---
 nav_title: Conditional Messaging Logic
+article_title: Conditional Liquid Messaging Logic
 page_order: 6
 description: "Tags allow you to include programming logic in your messaging campaigns. This reference article covers how tags can and should be used in your campaigns."
+
 ---
 
 # Conditional Messaging Logic (Tags)
-
 
 [Tags][7] allow you to include programming logic in your messaging campaigns.
 
@@ -17,11 +18,9 @@ Tags can be used for executing conditional statements as well as for advanced us
 
 {% alert tip %}
 To make your life a bit easier, Braze has included color-formatting that will activate in green and purple if you correctly format your Liquid syntax.
-
-
+<br><br>
 If you're having a hard time using conditional messaging, try writing out the conditional syntax before you insert your custom attributes and other Liquid elements.
-
-
+<br><br>
 For example, add the following into the message field first:  
 {% raw %}
 ```liquid
@@ -31,8 +30,7 @@ For example, add the following into the message field first:
 ```
 
 Be sure it highlights in green, then replace the `X` with your chosen Liquid or Connected Content using the blue `+` in the message field corner, and the `0` with your desired value.
-
-
+<br><br>
 Then, add your message variations as you need them between the `else` conditionals:
 ```liquid
 {% if {{custom_attribute.${total_spend}}} >0 %}

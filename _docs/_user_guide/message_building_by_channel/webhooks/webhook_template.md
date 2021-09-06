@@ -1,19 +1,15 @@
 ---
 nav_title: Creating a Webhook Template
-platform: Message_Building_and_Personalization
-subplatform: Webhooks
+article_title: Creating a Webhook Template
 page_order: 2
-
 tool:
-  - Dashboard
   - Templates
-
 channel:
   - webhooks
-
 description: "This reference article covers how to create and customize Webhook templates for later use within the Braze platform."
 
 ---
+
 # Creating a Webhook Template
 
 ### Step 1: Navigate to the Webhook Template Editor

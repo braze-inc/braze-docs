@@ -1,20 +1,14 @@
 ---
 nav_title: "Android Objects"
+article_title: Android Messaging Object
 page_order: 0
-
 page_type: reference
-
-channel: Push
-platform:
-  - API
-  - Android
-tool:
-  - Campaigns
-  - Canvas
-
+channel: push
+platform: Android
 description: "This article lists and explains the different Android objects used at Braze."
+
 ---
-# Android Objects
+# Android Object Specification
 
 These objects are used to define or request information related to Android Push and Android Push Alert content.
 
@@ -114,6 +108,6 @@ The concepts in this message correspond to those in the [Android Conversation Pu
 [29]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/advanced_use_cases/deep_linking/
 [35]: https://firebase.google.com/docs/cloud-messaging/concept-options#collapsible_and_non-collapsible_messages "collapse key documentation"
 [44]: {{site.baseurl}}/user_guide/message_building_by_channel/push/notification_channels/
-[43]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/push_notifications/integration/#step-4-define-notification-channels
+[43]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/push_notifications/integration/standard_integration/#step-5-define-notification-channels
 [45]: {{site.baseurl}}/user_guide/message_building_by_channel/push/notification_channels/#notification-channels
 [46]: https://developer.android.com/guide/topics/ui/conversations

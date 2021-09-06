@@ -1,9 +1,11 @@
 ---
 nav_title: Amperity
+article_title: Amperity
 alias: /partners/amperity/
 description: "This article covers the Braze and Amperity integration. Amperity provides intelligent capabilities across data management unification, analytics and insights, and activation."
 page_type: partner
 page_order: 2.1
+search_tag: Partner
 
 ---
 
@@ -176,6 +178,5 @@ To read more about different aspects of the Lambda function such as monitoring a
 [3]: {% image_buster /assets/img/amperity/amperity3.png %} 
 [4]: {% image_buster /assets/img/amperity/amperity4.png %} 
 [5]: {% image_buster /assets/img/amperity/amperity5.png %} 
-[6]: {% image_buster /assets/img/amperity/activate1.png %} 
 [7]: {% image_buster /assets/img/amperity/activate2.png %} 
 [8]: {% image_buster /assets/img/amperity/destinationconfiguration.png %} 

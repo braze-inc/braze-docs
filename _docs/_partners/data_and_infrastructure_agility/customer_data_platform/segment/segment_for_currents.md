@@ -1,15 +1,16 @@
 ---
 nav_title: Segment for Currents
+article_title: Segment for Currents
 page_order: 1.2
 alias: /partners/segment_for_currents/
-
 description: "This article outlines the partnership between Braze Currents and Segment, a customer data platform that collects and routes information between sources in your marketing stack."
 page_type: partner
-tool: currents
+tool: Currents
+search_tag: Partner
 
 ---
 
-# About Segment & Currents  
+# Segment for Currents  
 
 {% include video.html id="RfOHfZ34hYM" align="right" %}
 
@@ -25,8 +26,8 @@ tool: currents
 
 ![Segment][1]
 
-{% alert important %}
-It's important to keep your Segment API Key up to date; if your connector's credentials expire, the connector will stop sending events. If this persists for more than **48 hours**, the connector's events will be dropped, and data will be permanently lost.
+{% alert warning %}
+It's important to keep your Segment API Key up to date. If your connector's credentials expire, the connector will stop sending events. If this persists for more than **48 hours**, the connector's events will be dropped, and data will be permanently lost.
 {% endalert %}
 
 ### Step 2: Export Message Engagement Events 
@@ -114,11 +115,6 @@ The following properties will be included with all Braze Events sent to Segment:
 | `subscription_status`  | `String` | For Subscription Group State Changed events, the status the user changed to, either 'Subscribed' or 'Unsubscribed'. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
 
-{% alert update %}
-The behavior for `dispatch_id` differs between Canvas and campaigns because Braze treats Canvas steps (except for Entry Steps, which can be scheduled) as triggered events, even when they are "scheduled". [Learn more about `dispatch_id` behavior in Canvas and campaigns here]({{site.baseurl}}/help/help_articles/data/dispatch_id/).
-
-_Update noted in August 2019._
-{% endalert %}
 
 {% endtab %}
 {% endtabs %}

@@ -1,16 +1,12 @@
 ---
 nav_title: "POST: Identify Users"
+article_title: "POST: Identify Users"
+search_tag: Endpoint
 page_order: 4
-
 layout: api_page
-
 page_type: reference
-platform: API
-tool:
-  - Canvas
-  - Campaigns
-
 description: "This article outlines details about the Identify Users Braze endpoint."
+
 ---
 {% api %}
 # Identify Users

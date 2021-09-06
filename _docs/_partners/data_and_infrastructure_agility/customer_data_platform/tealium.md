@@ -1,5 +1,6 @@
 ---
 nav_title: Tealium
+noindex: true
 page_order: 2
 layout: featured
 guide_top_header: "Tealium"

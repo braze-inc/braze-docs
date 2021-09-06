@@ -1,6 +1,7 @@
 ---
 page_order: 26
 nav_title: Best Practices
+article_title: Email Best Practices
 layout: dev_guide
 guide_top_header: "Email Best Practices"
 guide_top_text: "Email is a tried and tested approach for communicating with your users. Email is extremely adaptable and can reach users across a variety of platforms—mobile or otherwise—with dynamic HTML content. But it's a science and an art—and we're here to help you refine it! Use the following articles to refine your email practices."
@@ -8,7 +9,6 @@ guide_top_text: "Email is a tried and tested approach for communicating with you
 page_type: landing
 description: "This landing page is home to email best practices. Here you can find tips, use cases, and best practices to refine your email messaging."
 channel: email
-no_index: true
 
 guide_featured_title: "Section Articles"
 guide_featured_list:

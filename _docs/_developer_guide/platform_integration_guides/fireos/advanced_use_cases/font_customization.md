@@ -5,7 +5,7 @@ page_order: 7
 
 page_type: reference
 description: "This page covers how to use a custom font with the Braze SDK."
-
+hidden: true
 ---
 
 # Font Customization

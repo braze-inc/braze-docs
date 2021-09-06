@@ -1,10 +1,11 @@
 ---
 nav_title: Available Partners
+article_title: Available Currents Partners
 page_order: 2
-
 page_type: reference
 description: "This reference article outlines the data partners you can use to integrate with Braze Currents, and their use cases."
 tool: Currents
+
 ---
 
 # Available Partners

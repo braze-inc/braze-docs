@@ -1,11 +1,12 @@
 ---
 nav_title: "Short and Long Codes"
+article_title: Short and Long Codes
 page_order: 1
 description: "This article will walk you through important concepts involved in sending phone numbers with Braze. Included are considerations to keep in mind when using short codes and long codes, an explanation of the application process for a short code, and other topics like handling unknown numbers and high volume and multi-country sending."
 page_type: reference
-
 channel:
   - SMS
+  
 ---
 
 
@@ -135,7 +136,7 @@ If you have your own short code, reach out to your Customer Success Manager  __d
 
 A2P 10DLC refers to a system in the United States that allows businesses to send Application-to-Person (A2P) type messaging via a standard 10-digit long code (10DLC) phone number. 10-digit long codes have traditionally been designed for Person-to-Person (P2P) traffic, causing businesses to be constrained by limited throughput and heightened filtering. This service helps alleviate those issues, improving overall message deliverability, allowing brands to send messages at scale including links and calls to action, and helping further protect consumers from unwanted messages. 
 
-All customers who currently have and/or use long codes are required to register their long codes for 10DLC. Starting March 25, 2021, registering and applying for 10DLC will be now part of the SMS onboarding process. Customers who onboarded SMS before this date must work with their COM or CSM to get their long codes registered. __If customers fail to register their long codes, starting June 1, 2021 any A2P sender using long codes will experience heavy filtering of all messages if they are not registered for 10DLC.__ Customers may also experience additional carrier fees through adopting this service, please reach out to your COM or CSM to learn more. 
+All customers who currently have and/or use US long codes to send to US customers are required to register their long codes for 10DLC. To read more about the specifics of 10DLC and why it's required, visit our dedicated [10DLC article]({{site.baseurl}}/user_guide/message_building_by_channel/sms/phone_numbers/10dlc/).
 
 
 [1]: {{site.baseurl}}/user_guide/message_building_by_channel/sms/sms_subscription_group/

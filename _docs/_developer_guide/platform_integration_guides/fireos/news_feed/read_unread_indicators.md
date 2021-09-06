@@ -5,7 +5,7 @@ platform: FireOS
 description: "This reference article covers how to implement read and unread indicators in your News Feed for your Android application."
 channel:
   - news feed
-
+hidden: true
 ---
 
 # Read & Unread Indicators
@@ -23,7 +23,7 @@ In order to enable this functionality add the following line to your `braze.xml`
 ```
 
 ## Customizing the Indicators
-These indicators can be customized by altering the values in [android-sdk-ui/src/main/res/drawable-hdpi/icon_unread.png][26] and [android-sdk-ui/src/main/res/drawable-hdpi/icon_read.png][27].
+These indicators can be customized by altering the "icon_read" and "icon_unread" drawables.
 
 [25]: {% image_buster /assets/img_archive/UnreadvsReadNewsFeedCard.png %}
 [26]: https://github.com/Appboy/appboy-android-sdk/blob/master/android-sdk-ui/res/drawable-hdpi/icon_unread.png

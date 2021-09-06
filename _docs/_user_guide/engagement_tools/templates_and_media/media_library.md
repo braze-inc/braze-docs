@@ -1,10 +1,11 @@
 ---
 nav_title: Media Library
+article_title: Media Library
 page_order: 0
-
 page_type: reference
 description: "This reference article describes how to use the Media Library to manage your assets in a single, centralized location."
 tool: Media
+
 ---
 # Media Library
 
@@ -38,5 +39,5 @@ You can also [duplicate]({{site.baseurl}}/user_guide/engagement_tools/templates_
 [1]: {% image_buster /assets/img_archive/media_library_main.png %}
 [2]: {% image_buster /assets/img_archive/media_library_crop1.png %}
 [3]: {% image_buster /assets/img_archive/media_library_crop2.png %}
-[4]: {{site.baseurl}}/user_guide/engagement_tools/templates_and_media/about/
+[4]: {{site.baseurl}}/user_guide/engagement_tools/templates_and_media/
 [5]: https://imageoptim.com/mac

@@ -1,5 +1,6 @@
 ---
 nav_title: Fine Network Traffic Control
+article_title: Fine Network Traffic Control for iOS
 platform: iOS
 page_order: 1
 description: "This article covers how to implement fine network traffic control for your iOS application"
@@ -145,5 +146,5 @@ Appboy.sharedInstance()?.shutdownServerCommunication();
 
 After calling this method, you must reset the request processing mode back to Automatic. For this reason, we only recommend calling this if the OS is forcing you to stop background tasks or something similar.
 
-[3]: #customizing-appboy-on-startup
+[3]: https://appboy.github.io/appboy-ios-sdk/docs/interface_appboy.html#aa9f1bd9e4a5c082133dd9cc344108b24
 [4]: https://github.com/Appboy/appboy-ios-sdk/blob/master/AppboyKit/include/Appboy.h

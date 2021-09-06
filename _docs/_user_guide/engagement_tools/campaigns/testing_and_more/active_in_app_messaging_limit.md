@@ -1,13 +1,12 @@
 ---
 nav_title: Active In-App Message Campaign Limits
-platform: Campaigns
-subplatform: Testing and More
+article_title: Active In-App Messaging Campaign limits
 page_order: 5
-
 page_type: reference
 description: "This reference goes over the limits surrounding the number of active in-app message campaign you may have at once."
 tool: Campaigns
 channel: in-app messages
+
 ---
 
 # Active In-App Message Campaign Limits

@@ -1,10 +1,10 @@
 ---
 nav_title: Ideas and Strategies
+article_title: Ideas and Strategies
 layout: dev_guide
 guide_top_header: "Ideas & Strategies"
 guide_top_text: "Learn more about how to build your ideal campaign with these use cases and other ideas."
 page_order: 2
-
 
 tool: Campaigns
 page_type: landing

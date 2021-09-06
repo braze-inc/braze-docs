@@ -1,10 +1,10 @@
 ---
 nav_title: Custom Event and Attribute Management
+article_title: Custom Event and Attribute Management
 page_order: 1
-
 page_type: reference
 description: "This reference article covers managing custom events and attributes, as well as understanding data type comparisons."
-tool: Dashboard
+
 ---
 
 # Custom Event and Attribute Management

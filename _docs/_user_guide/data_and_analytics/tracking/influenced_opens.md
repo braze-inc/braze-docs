@@ -1,11 +1,11 @@
 ---
 nav_title: Influenced Opens
+article_title: Influenced Opens
 page_order: 7
-
 page_type: reference
 description: "This reference article explains Influenced Opens and how you can track them to provide a richer level of detail into the effect of your push campaigns."
-tool: Campaigns
 channel: push
+
 ---
 # Influenced Opens
 
@@ -21,5 +21,5 @@ Influenced Opens are added to the direct opens of a campaign to give a number of
 
 For more information on tracking opens, check out the conversion tracking section of our [best practices for push][bp].
 
-[bp]: {{site.baseurl}}/help/best_practices/push/conversion_tracking/#conversion-tracking
+[bp]: {{site.baseurl}}/user_guide/message_building_by_channel/push/best_practices/
 [1]: {% image_buster /assets/img_archive/Influenced_Opens2.png %}

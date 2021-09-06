@@ -1,7 +1,8 @@
 ---
 nav_title: Sending Test Messages
+article_title: Sending Test Messages
 page_order: 3
-description: "THis reference article covers sending test messages for different channels."
+description: "This reference article covers sending test messages for different channels."
 
 ---
 
@@ -142,7 +143,7 @@ curl -X POST -H "Content-Type: application/json" -H "Authorization: Bearer {{YOU
 [5]: {% image_buster /assets/img_archive/testmessages45.png %}
 [9]: {{site.baseurl}}/developer_guide/platform_wide/platform_features/#user-segmentation
 [11]: {% image_buster /assets/img_archive/test_segment.png %}
-[13]: {{site.baseurl}}/developer_guide/rest_api/messaging/
+[13]: {{site.baseurl}}/api/endpoints/messaging/
 [14]: https://dashboard-01.braze.com/app_settings/api_settings/
 [15]: https://dashboard-01.braze.com/users/user_search/user-search/
-[66]: {{site.baseurl}}/developer_guide/rest_api/messaging/#sending-messages-via-api-triggered-delivery
+[66]: {{site.baseurl}}/api/endpoints/messaging/send_messages/post_send_messages/

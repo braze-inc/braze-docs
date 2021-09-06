@@ -1,13 +1,14 @@
 ---
 nav_title: Foursquare
+article_title: Foursquare
 alias: /partners/foursquare/
-
 description: "This article outlines the partnership between Braze and Foursquare to provide real-time event triggering based on location."
 page_type: partner
+search_tag: Partner
 
 ---
 
-# Foursquare Integration
+# Foursquare
 
 {% include video.html id="G2ZoJqZGqrU" align="right" %}
 

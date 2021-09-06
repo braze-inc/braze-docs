@@ -1,13 +1,12 @@
 ---
 nav_title: Funnel Report
-title: Funnel Report
+article_title: Campaign Funnel Report
 page_order: 4.5
-
 page_type: reference
 description: "This referece article covers the benefits of funnel reports, how to set them up, and how to interpret your report."
 tool: 
-- Campaigns
-- Reports
+  - Campaigns
+  - Reports
 alias: /funnel_reports/
 
 ---

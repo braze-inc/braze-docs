@@ -1,9 +1,11 @@
 ---
 nav_title: Rokt Calendar
+article_title: Rokt Calendar
 alias: /partners/rokt_calendar/
-
 description: "This article outlines the partnership between Braze and Rokt Calendar, a dynamic calendar marketing technology that enables brands to push 1:1 events and promotional communications."
 page_type: partner
+search_tag: Partner
+
 ---
 
 # Rokt Calendar

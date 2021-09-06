@@ -1,9 +1,11 @@
 ---
 nav_title: Kubit
+article_title: Kubit
 page_order: 1
 description: "This article outlines the partnership between Braze and Kubit, a no-code, self-service analytics platform that delivers instant product insights."
 alias: /partners/kubit/
 page_type: partner
+search_tag: Partner
 
 ---
 
@@ -15,7 +17,7 @@ page_type: partner
 
 * __Kubit Enterprise__ - The Braze integration feature is only available to Kubit Enterprise customers.
 * __Braze Data Import Key and REST Endpoint__ - This integration invokes the Braze [/users/track endpoint]({{site.baseurl}}/api/endpoints/user_data/post_user_track/) to function. These calls will be counted toward your Braze [API limits]({{site.baseurl}}/api/basics/#api-limits).
-* __Matching User IDs__ - Your customer data in Kubit and Braze must have matching User IDs for this integration to match customers between the two platforms. This includes Anonymous UUIDs. To read about how Braze sets user IDs, visit our documentation [here](({{site.baseurl}}/developer_guide/platform_integration_guides/fireos/analytics/setting_user_ids/#setting-user-ids)). 
+* __Matching User IDs__ - Your customer data in Kubit and Braze must have matching User IDs for this integration to match customers between the two platforms. This includes Anonymous UUIDs. To read about how Braze sets user IDs, visit our documentation [here]({{site.baseurl}}/developer_guide/platform_integration_guides/android/analytics/setting_user_ids/). 
 
 ## Braze and Kubit Integration
 ### Step 1: Generate Braze Data Import Key

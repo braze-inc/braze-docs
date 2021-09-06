@@ -1,5 +1,6 @@
 ---
 nav_title: Segments
+article_title: Segments
 page_order: 1
 layout: dev_guide
 guide_top_header: "Segments"

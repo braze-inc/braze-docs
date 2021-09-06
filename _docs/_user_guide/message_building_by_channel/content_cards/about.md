@@ -1,12 +1,11 @@
 ---
 nav_title: About Content Cards
-platform: Message_Building_and_Personalization
-subplatform: Content Cards
+article_title: About Content Cards
 page_order: 0
 description: "This reference article includes an overview of the Braze Content Card channel and common use cases."
-
 channel:
   - content cards
+
 ---
 
 # What are Content Cards?
@@ -49,5 +48,5 @@ This is what it looks like for your users to open a standard Content Card feed. 
 ![Content Cards Feed]({% image_buster /assets/img/cc-feed.png %}){: height="50%" width="50%"}
 
 {% alert note %}
-Content Cards have a maximum size of 2 KB (including images, links, and all content). Exceeding that amount will prevent the card from sending.
+Content Cards have a maximum size limit of 2 KB for content you enter in the Braze dashboard. This includes message text, image URLs, links, and key-value pairs. Exceeding that amount will prevent the card from sending.
 {% endalert %}

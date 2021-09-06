@@ -353,13 +353,13 @@ var ticket_lookuptable = {
             'Push' : {
               'SelectDefault': 'Select a platform...',
               'LinksTitle': ['iOS: push integration','Android: push integration'],
-              'Links' : ['{{site.baseurl}}/developer_guide/platform_integration_guides/ios/push_notifications/integration/','{{site.baseurl}}/developer_guide/platform_integration_guides/android/push_notifications/integration/'],
+              'Links' : ['{{site.baseurl}}/developer_guide/platform_integration_guides/ios/push_notifications/integration/','{{site.baseurl}}/developer_guide/platform_integration_guides/android/push_notifications/integration/standard_integration/'],
               'Label': '* Platform',
               'SelectOption' : {
                 'Android' : {
                   'ShowSubmit': true,
                   'LinksTitle': ['Android: push integration','Android: push troubleshooting','Android: silent push notifications'],
-                  'Links' : ['{{site.baseurl}}/developer_guide/platform_integration_guides/android/push_notifications/integration/','{{site.baseurl}}/developer_guide/platform_integration_guides/android/push_notifications/troubleshooting/','{{site.baseurl}}/developer_guide/platform_integration_guides/android/push_notifications/silent_push_notifications/']
+                  'Links' : ['{{site.baseurl}}/developer_guide/platform_integration_guides/android/push_notifications/integration/standard_integration/','{{site.baseurl}}/developer_guide/platform_integration_guides/android/push_notifications/troubleshooting/','{{site.baseurl}}/developer_guide/platform_integration_guides/android/push_notifications/silent_push_notifications/']
                 },
                 'iOS' : {
                   'ShowSubmit': true,
@@ -368,8 +368,8 @@ var ticket_lookuptable = {
                 },
                 'Other' : {
                   'ShowSubmit': true,
-                  'LinksTitle': ['Xamarin iOS: push integration','Xamarin Android and FireOS: push integration'],
-                  'Links' : ['{{site.baseurl}}/developer_guide/platform_integration_guides/xamarin/ios/push_notifications/','{{site.baseurl}}/developer_guide/platform_integration_guides/xamarin/android_and_fireos/push_notifications/']
+                  'LinksTitle': ['Xamarin push integration'],
+                  'Links' : ['{{site.baseurl}}/developer_guide/platform_integration_guides/xamarin/push_notifications/']
                 }
               }
             },
@@ -412,7 +412,7 @@ var ticket_lookuptable = {
           'Label': '*  My question is about...',
           'SelectDefault': 'Select a type...',
           'LinksTitle': ['REST APIs','REST APIs: updating user data','REST APIs: messaging','REST APIs: exporting Braze data'],
-          'Links': ['{{site.baseurl}}/developer_guide/rest_api/basics/','{{site.baseurl}}/developer_guide/rest_api/user_data/','{{site.baseurl}}/developer_guide/rest_api/messaging/','{{site.baseurl}}/developer_guide/rest_api/export/'],
+          'Links': ['{{site.baseurl}}/developer_guide/rest_api/basics/','{{site.baseurl}}/developer_guide/rest_api/user_data/','{{site.baseurl}}/api/endpoints/messaging/','{{site.baseurl}}/developer_guide/rest_api/export/'],
           'SelectOption' : {
             'Importing data' : {
               'ShowSubmit': true,
@@ -473,32 +473,32 @@ var ticket_lookuptable = {
           'SelectDefault': 'Select a type...',
           'Label': '*  My question is about...',
           'LinksTitle': ['Email best practices','LAB course: Achieving High Email Deliverability'],
-          'Links' : ['{{site.baseurl}}/help/best_practices/email/use_cases/','https://lab.braze.com/email-onboarding-for-pro-and-enterprise-achieving-high-deliverability'],
+          'Links' : ['{{site.baseurl}}/user_guide/message_building_by_channel/email/best_practices/','https://lab.braze.com/email-onboarding-for-pro-and-enterprise-achieving-high-deliverability'],
           'SelectOption': {
             'Setup (whitelabeled IPs, DNS records)' : {
               'ShowSubmit': true,
               'LinksTitle': ['LAB course: Achieving High Email Deliverability','IP warming'],
-              'Links' : ['https://lab.braze.com/email-onboarding-for-pro-and-enterprise-achieving-high-deliverability','{{site.baseurl}}/help/best_practices/email/ip_warming/#ip-warming']
+              'Links' : ['https://lab.braze.com/email-onboarding-for-pro-and-enterprise-achieving-high-deliverability','{{site.baseurl}}/user_guide/onboarding_with_braze/email_setup/ip_warming/#ip-warming']
             },
             'Deliverability' :{
               'ShowSubmit': true,
               'LinksTitle': ['IP warm','LAB course: Achieving High Email Deliverability'],
-               'Links' : ['{{site.baseurl}}/help/best_practices/email/ip_warming/#ip-warming','https://lab.braze.com/email-onboarding-for-pro-and-enterprise-achieving-high-deliverability']
+               'Links' : ['{{site.baseurl}}/user_guide/onboarding_with_braze/email_setup/ip_warming/#ip-warming','https://lab.braze.com/email-onboarding-for-pro-and-enterprise-achieving-high-deliverability']
             },
             'IP warmup' : {
               'ShowSubmit': true,
-              'LinksTitle': ['IP warming','IP warming best practices'],
-              'Links' : ['{{site.baseurl}}/help/best_practices/email/ip_warming/#ip-warming','{{site.baseurl}}/help/best_practices/email/ip_warming/#ip-warming-best-practices']
+              'LinksTitle': ['IP warming'],
+              'Links' : ['{{site.baseurl}}/user_guide/onboarding_with_braze/email_setup/ip_warming/#ip-warming']
             },
             'Managing unsubscribes and opt-ins' : {
               'ShowSubmit': true,
               'LinksTitle': ['Managing email subscription states','Email subscription state definitions','Changing email subscription states'],
-              'Links' : ['{{site.baseurl}}/help/best_practices/email/managing_email_subscriptions/#managing-email-subscriptions','{{site.baseurl}}/user_guide/message_building_by_channel/email/managing_user_subscriptions/#subscription-states','{{site.baseurl}}/user_guide/message_building_by_channel/email/managing_user_subscriptions/#changing-subscriptions']
+              'Links' : ['{{site.baseurl}}/user_guide/message_building_by_channel/email/best_practices/managing_email_subscriptions/','{{site.baseurl}}/user_guide/message_building_by_channel/email/managing_user_subscriptions/#subscription-states','{{site.baseurl}}/user_guide/message_building_by_channel/email/managing_user_subscriptions/#changing-subscriptions']
             },
             'Other' : {
               'ShowSubmit': true,
               'LinksTitle': ['Email best practices','LAB course: Achieving High Email Deliverability'],
-              'Links' : ['{{site.baseurl}}/help/best_practices/email/use_cases/','https://lab.braze.com/email-onboarding-for-pro-and-enterprise-achieving-high-deliverability']
+              'Links' : ['{{site.baseurl}}/user_guide/message_building_by_channel/email/best_practices/','https://lab.braze.com/email-onboarding-for-pro-and-enterprise-achieving-high-deliverability']
             }
           }
         },
@@ -595,7 +595,7 @@ var ticket_lookuptable = {
             'I\'m seeing unexpected reporting or data.' : {
               'ShowSubmit': true,
               'LinksTitle': ['Data and analytics reporting','Email reporting','Push reporting','In-app message reporting','Exporting data from Braze\'s dashboard'],
-              'Links':['{{site.baseurl}}/user_guide/data_and_analytics/configuring_reporting/#configuring-reporting','{{site.baseurl}}/help/best_practices/email/email_reporting/','{{site.baseurl}}/help/best_practices/push/push_reporting/#push-reporting','{{site.baseurl}}/help/best_practices/in-app_messages/reporting/#reporting','{{site.baseurl}}/user_guide/data_and_analytics/export_braze_data/overview/']
+              'Links':['{{site.baseurl}}/user_guide/data_and_analytics/configuring_reporting/#configuring-reporting','{{site.baseurl}}/user_guide/message_building_by_channel/email/reporting_and_analytics/email_reporting/','{{site.baseurl}}/help/best_practices/push/push_reporting/#push-reporting','{{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/reporting/','{{site.baseurl}}/user_guide/data_and_analytics/export_braze_data/']
             },
             'Other' : {
               'ShowSubmit': true,
@@ -634,7 +634,7 @@ var ticket_lookuptable = {
         'Understanding reporting' : {
           'ShowSubmit': true,
           'LinksTitle': ['Email reporting','Push reporting','In-app message reporting','Data and analytics reporting','Exporting data from Braze\'s dashboard'],
-          'Links' :  ['{{site.baseurl}}/help/best_practices/email/email_reporting/','{{site.baseurl}}/help/best_practices/push/push_reporting/#push-reporting','{{site.baseurl}}/help/best_practices/in-app_messages/reporting/#reporting','{{site.baseurl}}/user_guide/data_and_analytics/configuring_reporting/#configuring-reporting','{{site.baseurl}}/user_guide/data_and_analytics/export_braze_data/exporting_app_usage_data/#exporting-app-usage-data']
+          'Links' :  ['{{site.baseurl}}/user_guide/message_building_by_channel/email/reporting_and_analytics/email_reporting/','{{site.baseurl}}/help/best_practices/push/push_reporting/#push-reporting','{{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/reporting/','{{site.baseurl}}/user_guide/data_and_analytics/configuring_reporting/#configuring-reporting','{{site.baseurl}}/user_guide/data_and_analytics/export_braze_data/exporting_app_usage_data/#exporting-app-usage-data']
         },
         'Personalization, Liquid and Connected Content' : {
           'ShowSubmit': true,
@@ -654,7 +654,7 @@ var ticket_lookuptable = {
         'Location Targeting and Geofencing' :  {
           'ShowSubmit': true,
           'LinksTitle': ['Targeting users based on location','Geofencing'],
-          'Links': ['{{site.baseurl}}/user_guide/engagement_tools/segments/location_targeting/#step-2-customize-your-location','{{site.baseurl}}/user_guide/engagement_tools/locations_and_geofences/about/']
+          'Links': ['{{site.baseurl}}/user_guide/engagement_tools/segments/location_targeting/#step-2-customize-your-location','{{site.baseurl}}/user_guide/engagement_tools/locations_and_geofences/']
         },
         'Other' :  {
           'ShowSubmit': true,
@@ -668,7 +668,7 @@ var ticket_lookuptable = {
       'Label': '* Category',
       'SelectDefault': 'Select a category...',
       'LinksTitle': ['Campaign ideas and strategies','Mobile marketing best practices'],
-      'Links': ['{{site.baseurl}}/user_guide/engagement_tools/campaigns/ideas_and_strategies/active_user_campaigns/#active-user-campaigns','{{site.baseurl}}/help/best_practices/news_feed/#news-feed'],
+      'Links': ['{{site.baseurl}}/user_guide/engagement_tools/campaigns/ideas_and_strategies/active_user_campaigns/#active-user-campaigns','{{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/reporting/'],
       'SelectOption' : {
         'Campaign and Canvas strategies' : {
           'ShowSubmit': true,
@@ -693,7 +693,7 @@ var ticket_lookuptable = {
         'Other' :{
           'ShowSubmit': true,
           'LinksTitle': ['Campaign ideas and strategies','Mobile marketing best practices'],
-          'Links':  ['{{site.baseurl}}/user_guide/engagement_tools/campaigns/ideas_and_strategies/active_user_campaigns/#active-user-campaigns','{{site.baseurl}}/help/best_practices/news_feed/#news-feed']
+          'Links':  ['{{site.baseurl}}/user_guide/engagement_tools/campaigns/ideas_and_strategies/active_user_campaigns/#active-user-campaigns','{{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/reporting/']
         }
       }
     },

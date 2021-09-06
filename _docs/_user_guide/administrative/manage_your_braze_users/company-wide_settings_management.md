@@ -1,10 +1,10 @@
 ---
 nav_title: Company Wide Settings
+article_title: Company Wide Settings
 page_order: 5
-
 page_type: reference
 description: "This reference article covers company-wide settings, like changing the name of your company, setting your time zone, and requesting to delete your company."
-tool: Dashboard
+
 ---
 
 # Company Wide Settings Management
@@ -89,30 +89,11 @@ You also can access the [Email Settings][8] tab to edit:
 
 ## List-Unsubscribe Settings
 
-### Overview
+![list_unsub_1] [57]{: style="float:right;max-width:60%;margin-left:15px;"}
+
 Although most marketers add a one-click Unsubscribe link to their email, it is best practice to provide a special email header (“List-Unsubscribe”) that allows email service providers such as Gmail and Windows Live Hotmail to provide their own Unsubscribe functionality:
 
-![list_unsub_1] [57]
-
-
-### Benefits of the List-Unsubscribe Header
-Some recipients prefer to have an Unsubscribe link available in the same place for all emails, rather than having to find links in each mailing. When enabled, this feature puts a prominent Unsubscribe link in the header of the email client, making it easier to unsubscribe and therefore less likely that customers will mark your email as Spam. This has a significant impact on your reputation and deliverability as an email sender.
-
-### How the List-Unsubscribe Header Works
-Navigate to ‘Email Settings’ within your AppGroup.
-
-Set List-Unsubscribe to ‘ON'
-![list_unsub_3] [59]
-
-> This feature only applies to emails that target users who are “subscribed or opted in” or “opted-in only.”
-
-The header is not added for messages targeting “all users including unsubscribed users,” as these represent transactional messages which do not need an unsubscribe function.
-
-*Currently ‘Windows Live Hotmail’ and ‘Gmail’ support this feature.*
-
-{% alert note %}
-If you use Mailjet, you do not have the flexibility to choose on/off for this feature - it will be `ON` by default.
-{% endalert %}
+For more information about list-unsubscribe, refer to [Email Settings][2]
 
 ## Security Settings
 
@@ -159,6 +140,7 @@ Under the Manage Users page, there will be an additional column that indicates w
 ![Two-Factor Authentication - Manage Users][55]
 
 [1]: https://dashboard-01.braze.com/company_settings/company_settings/ "Company Settings Page"
+[2]: {{site.baseurl}}/user_guide/administrative/app_settings/manage_app_group/email_settings/#include-a-list-unsubscribe-header
 [7]: {% image_buster /assets/img_archive/email_settings_custom_new.png %}
 [8]: https://dashboard-01.braze.com/app_settings/app_settings/email/ "Email App Settings"
 [19]: https://dashboard-01.braze.com/app_settings/app_settings/ "App Settings Page"
@@ -171,7 +153,6 @@ Under the Manage Users page, there will be an additional column that indicates w
 [55]: {% image_buster /assets/img_archive/two_factor_authentication_manage_users_new.png %}
 [56]: https://www.authy.com
 [57]: {% image_buster /assets/img_archive/list_unsub_img1.png %}
-[59]: {% image_buster /assets/img_archive/list_unsub_img3_new.png %}
 [61]: {% image_buster /assets/img_archive/notification_preferences.png %}
 [62]: https://api.slack.com/incoming-webhooks
 [63]: {% image_buster /assets/img_archive/slack_f.png %}

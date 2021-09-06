@@ -1,5 +1,6 @@
 ---
 nav_title: "Notification IDs"
+article_title: Push Notification IDs
 page_order: 3
 page_type: reference
 description: "This reference article briefly discusses notification IDs and how to assign them."

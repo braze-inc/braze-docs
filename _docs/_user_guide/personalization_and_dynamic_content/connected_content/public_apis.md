@@ -1,7 +1,6 @@
 ---
 nav_title: Public APIs
-platform: Message_Building_and_Personalization
-subplatform: Personalization
+article_title: Public APIs for Connected Content
 page_order: 4
 description: "This articles covers a list of publicly available APIs that can be used with Connected Content."
 ---
@@ -53,7 +52,6 @@ There are a variety of publicly available APIs that can be used for Connected Co
 | --------- | --- |
 | [AirVisual][42] | Provides Air quality and weather data. |
 | [Nutritionix Worlds][43] | Provides verified nutrition data. |
-| [openFDA][44] | Provides FDA data on drugs, devices, and foods |
 | [USDA Nutrients][45] | Provides access to the National Nutrient Database. |
 {: .reset-td-br-1 .reset-td-br-2}
 

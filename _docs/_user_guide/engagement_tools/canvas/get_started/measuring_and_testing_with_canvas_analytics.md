@@ -1,13 +1,13 @@
 ---
 nav_title: Canvas Analytics
-title: Measuring and Testing with Canvas Analytics
+article_title: Measuring and Testing with Canvas Analytics
 page_order: 2
-
 page_type: reference
 description: "This reference article describes the various analytics and reports you can leverage to understand your Canvas' performance."
 tool: 
-- Canvas
-- Reports
+  - Canvas
+  - Reports
+  
 ---
 
 # Measuring and Testing with Canvas Analytics

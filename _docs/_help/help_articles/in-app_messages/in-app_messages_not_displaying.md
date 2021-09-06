@@ -5,7 +5,7 @@ page_order: 2
 page_type: solution
 description: "This help article walks you through troubleshooting issues with in-app messages not displaying or rendering properly."
 channel: in-app messages
-no_index: true
+noindex: true
 ---
 
 # In-App Messages Are Not Displaying
@@ -60,7 +60,7 @@ Still need help? [Open a support ticket]({{site.baseurl}}/support_contact/).
 [1]: {{site.baseurl}}/user_guide/data_and_analytics/your_reports/understanding_your_app_usage_data/#understanding-your-app-usage-data
 [2]: {{site.baseurl}}/user_guide/data_and_analytics/configuring_reporting/#configuring-reporting
 [14]: {% image_buster /assets/img_archive/trouble6.png %}
-[15]: {{site.baseurl}}/help/best_practices/in-app_messages/in-app_message_specs/
+[15]: {{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/creative_details/
 [16]: {{site.baseurl}}/developer_guide/platform_integration_guides/ios/analytics/tracking_sessions/#customizing-session-timeout
 [17]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/analytics/tracking_sessions/#customizing-session-timeout
 [18]: {{site.baseurl}}/developer_guide/platform_integration_guides/web/analytics/tracking_sessions/#customizing-session-timeout

@@ -1,5 +1,6 @@
 ---
 nav_title: News Feed Integration Overview
+article_title: News Feed Integration Overview for iOS
 platform: iOS
 page_order: 1
 description: "This article covers an overview of how to integrate the News Feed into your iOS application."
@@ -78,5 +79,5 @@ self.present(newsFeed, animated: true, completion: nil)
 >  The [News Feed sample app][3] contains examples of the view controllers.
 
 [1]: {{site.baseurl}}/developer_guide/platform_integration_guides/ios/in-app_messaging/customization/#setting-delegates
-[2]: {{site.baseurl}}/developer_guide/platform_integration_guides/ios/in-app_messaging/#customizing-in-app-message-behavior-on-click
+[2]: {{site.baseurl}}/developer_guide/platform_integration_guides/ios/in-app_messaging/customization/#customizing-in-app-message-body-clicks
 [3]: https://github.com/Appboy/appboy-ios-sdk/tree/master/Samples/NewsFeed/BrazeNewsFeedSample
