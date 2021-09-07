@@ -47,7 +47,41 @@ Using the Content Card `apply` method, you can reference the card object and pas
 {% subtabs global %}
 {% subtab Objective-C %}
 ```objc
-
+- (void)applyCard:(ABKCaptionedImageContentCard *)captionedImageCard {
+  [super applyCard:captionedImageCard];
+ 
+  [self applyToBaseView:captionedImageCard];
+  [self applyToCaptionedImageView:captionedImageCard];
+}
+ 
+- (void)applyToBaseView:(ABKContentCard *)card {
+  if ([card.extras objectForKey:ContentCardKeyBackgroundColorValue]) {
+    NSString *backgroundColor = [card.extras objectForKey:ContentCardKeyBackgroundColor];
+    if ([backgroundColor colorValue]) {
+      self.rootView.backgroundColor = [backgroundColor colorValue];
+    } else {
+      self.rootView.backgroundColor = BrazeBackgroundColor;
+    }
+  } else {
+    self.rootView.backgroundColor = BrazeBackgroundColor;
+  }
+}
+ 
+- (void)applyToCaptionedImageView:(ABKContentCard *)card {
+  if ([card.extras objectForKey:ContentCardKeyLabelColor]) {
+    NSString *labelColor = [card.extras objectForKey:ContentCardKeyLabelColor];
+    if ([labelColor colorValue]) {
+      self.titleLabel.textColor = [labelColor colorValue];
+      self.descriptionLabel.textColor = [labelColor colorValue];
+    } else {
+      self.titleLabel.textColor = BrazeLabelColor;
+      self.descriptionLabel.textColor = BrazeLabelColor;
+    }
+  } else {
+    self.titleLabel.textColor = BrazeLabelColor;
+    self.descriptionLabel.textColor = BrazeLabelColor;
+  }
+}
 ```
 {% endsubtab %}
 {% subtab Swift %}
@@ -96,8 +130,6 @@ extension ABKCaptionedImageContentCardCell {
 {% endtab %}
 {% tab Static UI %}
 {% subtabs global %}
-
-
 {% subtab Objective-C %}
 ```objc
 #import "CustomClassicContentCardCell.h"  
@@ -115,7 +147,14 @@ extension ABKCaptionedImageContentCardCell {
 {% endsubtab %}
 {% subtab Swift %}
 ```swift
-
+override func setUpUI() {
+  super.setUpUI()
+     
+  rootView.backgroundColor = .lightGray
+  rootView.layer.borderColor = UIColor.purple.cgColor
+  unviewedLineViewColor = .red
+  titleLabel.font = .italicSystemFont(ofSize: 20)
+}
 ```
 {% endsubtab %}
 {% endsubtabs %}
@@ -140,7 +179,15 @@ Custom interfaces can be provided by registering custom classes for each desired
 {% endtab %}
 {% tab Swift %}
 ```swift
-
+override func registerTableViewCellClasses() {
+  super.registerTableViewCellClasses()
+     
+  // Replace the default class registrations with custom classes
+  tableView.register(CustomCaptionedImageContentCardCell.self, forCellReuseIdentifier: "ABKCaptionedImageContentCardCell")
+  tableView.register(CustomBannerContentCardCell.self, forCellReuseIdentifier: "ABKBannerContentCardCell")
+  tableView.register(CustomClassicImageContentCardCell.self, forCellReuseIdentifier: "ABKClassicImageCardCell")
+  tableView.register(CustomClassicContentCardCell.self, forCellReuseIdentifier: "ABKClassicCardCell")
+}
 ```
 {% endtab %}
 {% endtabs %}
@@ -166,7 +213,16 @@ Content Cards components can be overridden by using the `getContentCards` method
 {% endtab %}
 {% tab Swift %}
 ```swift
-
+override func populateContentCards() {
+  guard let cards = Appboy.sharedInstance()?.contentCardsController.contentCards else { return }
+  for card in cards {
+    // Replaces the card description for all Classic content cards
+    if let classicCard = card as? ABKClassicContentCard {
+      classicCard.cardDescription = "Custom Feed Override title [classic cards only]!"
+    }
+  }
+  super.cards = (cards as NSArray).mutableCopy() as? NSMutableArray
+}
 ```
 {% endtab %}
 {% endtabs %}
