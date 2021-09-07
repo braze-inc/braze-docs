@@ -131,15 +131,11 @@ The content of the Compose tab vary based on your chosen Message Options in the 
 
 ### Buttons
 
-When available for your message type, you can have up to two buttons appear below your body of text. By default, the button on the right (Button 2) is formatted to be more visually drawing to your user. We recommend using this button for singular or primary actions.
+When available for your message type, you can have up to two buttons appear below your body of text.
 
 ![Primary_Secondary][2]{: height="40%" width="40%"}
 
 If you choose to only use one button, it will automatically adjust to take over the available space at the bottom of your message, instead of leaving room for an additional button.
-
-{% alert tip %}
-  If you decide to format these buttons with your own colors, we recommend that you use Button 2 for your more preferred result. In other words, if you want your user to click on one button more than the other, make sure it is on the right. The right button has often displayed better potential to get clicked, especially if it has a somewhat contrasting or otherwise stand-out color from the rest of the message. This is only emphasized when the button on the left blends more visually with the message.
-{% endalert %}
 
 ### Generations
 

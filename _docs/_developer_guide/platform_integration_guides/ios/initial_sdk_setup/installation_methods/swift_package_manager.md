@@ -53,7 +53,9 @@ Next, navigate to your project build settings and add the `-ObjC` flag to the _O
 
 ![Swift Package Manager: Menu 5][apple_initial_setup_6]
 
-Edit the scheme of the target including the Appboy package (_Product > Scheme > Edit Scheme_ menu item):
+## Step 3: Editing the target's scheme
+
+If you are using Xcode 12.4 or earlier, edit the scheme of the target including the Appboy package (_Product > Scheme > Edit Scheme_ menu item):
 - Click the expand ▶︎ next to _Build_ and select _Post-actions_. Press _+_ and select _New Run Script Action_.
 - In the dropdown next to _Provide build settings from_, select your app's target.
 - Copy this script into the open field:
@@ -63,6 +65,10 @@ bash "$BUILT_PRODUCTS_DIR/Appboy_iOS_SDK_AppboyKit.bundle/Appboy.bundle/appboy-s
 # macOS (if applicable)
 bash "$BUILT_PRODUCTS_DIR/Appboy_iOS_SDK_AppboyKit.bundle/Contents/Resources/Appboy.bundle/appboy-spm-cleanup.sh"
 ```
+
+{% alert note %}
+You do not need to perform this step if you are using Xcode 12.5 or newer.
+{% endalert %}
 
 ![Swift Package Manager: Menu 7][apple_initial_setup_7]
 

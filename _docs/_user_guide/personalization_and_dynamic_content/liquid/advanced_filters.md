@@ -32,6 +32,18 @@ description: "This reference article lists advanced filters, examples, and how t
 | `url_encode` | encodes a string that is url friendly | `{{ 'google search' | url_encode }}` | google+search |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
 
+{% endraw %}
+{% alert tip %}
+The `assign` tag can be combined with HTML to save you time and effort when creating multiple hyperlinks.
+{% raw %}
+```
+{% assign url = "https://www.examplelink.com" %}
+<a href='{{url}}'>Click this Link!</a>
+```
+{% endraw %}
+{% endalert %}
+{% raw %}
+
 ## Property Accessor Filter
 
 | filter name | filter description |
