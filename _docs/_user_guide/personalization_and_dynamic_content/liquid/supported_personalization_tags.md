@@ -49,7 +49,7 @@ You can template in the following attributes for the user's most recent device a
 
 |Tag | Description |
 |---|---|
-|`{{most_recently_)used_decide.${browser}}}` | The most recently used browser on the user's device. Examples include "Chrome" and "Safari". |
+|`{{most_recently_used_device.${browser}}}` | The most recently used browser on the user's device. Examples include "Chrome" and "Safari". |
 |`{{most_recently_used_device.${id}}}` | This is Braze's device identifier. On iOS, this is the Apple Identifier for Vendor (IDFV). For Android and other platforms, it is Braze's device identifier, a randomly generated GUID. |
 | `{{most_recently_used_device.${carrier}}}` | The most recently used device's telephone service carrier, if available. Examples include "Verizon" and "Orange". |
 | `{{most_recently_used_device.${ad_tracking_enabled}}}` | If the device has ad tracking enabled or not. This is a boolean value (`true` or `false`). |
