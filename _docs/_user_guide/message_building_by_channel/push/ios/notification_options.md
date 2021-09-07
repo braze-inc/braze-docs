@@ -128,7 +128,7 @@ if (@available(iOS 12.0, *)) {
   {% endtab %}
 {% endtabs %}
 
-{% alert info %}
+{% alert note %}
 The following iOS 15 options are early access features. Please request access by submitting your feedback in our [Product Portal](https://dashboard.braze.com/resources/roadmap).
 {% endalert %}
 
