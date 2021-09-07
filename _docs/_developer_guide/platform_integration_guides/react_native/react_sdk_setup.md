@@ -77,6 +77,18 @@ public void onCreate() {
     registerActivityLifecycleCallbacks(new AppboyLifecycleCallbackListener());
 }
 ```
+
+#### Step 2.1d: Handle Intent updates
+
+If your MainActivity has `android:launchMode` set to `singleTask`, add the following code to your Activity class in the `MainActivity.java` file:
+
+```java
+@Override
+public void onNewIntent(Intent intent) {
+    super.onNewIntent(intent);
+    setIntent(intent);
+}
+```
 {% endtab %}
 {% tab iOS %}
 
