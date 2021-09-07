@@ -422,3 +422,9 @@ validurls['/docs/user_guide/administrative/manage_your_braze_users/company-wide_
 validurls['/docs/user_guide/administrative/manage_your_braze_users/company-wide_settings_management/#benefits-of-the-list-unsubscribe-header/'] = '/docs/user_guide/administrative/app_settings/manage_app_group/email_settings/#include-a-list-unsubscribe-header/';
 validurls['/docs/user_guide/administrative/manage_your_braze_users/company-wide_settings_management/#how-the-list-unsubscribe-header-works/'] = '/docs/user_guide/administrative/app_settings/manage_app_group/email_settings/#include-a-list-unsubscribe-header/';
 validurls['/docs/user_guide/engagement_tools/canvas/get_started/canvas/'] = '/docs/user_guide/engagement_tools/canvas/get_started/';
+
+validurls['/docs/developer_guide/platform_integration_guides/ios/initial_sdk_setup/carthage_integration/'] = '/docs/developer_guide/platform_integration_guides/ios/initial_sdk_setup/installation_methods/carthage_integration/';
+validurls['/docs/developer_guide/platform_integration_guides/ios/initial_sdk_setup/cocoapods/'] = '/docs/developer_guide/platform_integration_guides/ios/initial_sdk_setup/installation_methods/cocoapods/';
+validurls['/docs/developer_guide/platform_integration_guides/ios/initial_sdk_setup/swift_package_manager/'] = '/docs/developer_guide/platform_integration_guides/ios/initial_sdk_setup/installation_methods/swift_package_manager/';
+validurls['/docs/developer_guide/platform_integration_guides/ios/initial_sdk_setup/manual_integration_options/'] = '/docs/developer_guide/platform_integration_guides/ios/initial_sdk_setup/installation_methods/manual_integration_options/';
+
