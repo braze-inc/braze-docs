@@ -33,6 +33,7 @@
 
 
     <div id="search_hits"></div>
+    <div id="search_hits_labs"></div>
     <div id="search_pagination"></div>
 
     </div>
@@ -176,6 +177,46 @@
       return `<div class="hit"><a href="{{site.baseurl}}${url}" ${bindEvent('click', hit, 'Clicked from Page Search')} ><div class="hit-content"><div><div class="hit-name">${title } </div> <div class="hit-subname">${tags_list} </div>${article_path}<div class="hit-description">${ content }</div></div></div></a><hr /></div>`;
     }
 
+    function hitLABTemplate(hit, bindEvent) {
+      var description = '';
+      var title = '';
+      var url = '';
+      var tags_list = '<span class="search_tags" style="background-color: #3accdd;">LAB</span>';;
+      if (hit['tags']) {
+        var tags = hit['tags'];
+        if (Array.isArray(tags)) {
+          for (var its = 0; its < tags.length; its++) {
+            tags_list += '<span class="search_tags" style="background-color: #3accdd;">' +
+              tags[its].upCaseWord().mapReplace(custom_word_mapping) + '</span>';
+          }
+        }
+        else {
+          tags_list += '<span class="search_tags" style="background-color: #3accdd;">' +
+            tags.upCaseWord().mapReplace(custom_word_mapping) + '</span>';
+        }
+      }
+      var lab_image = "<img src='" + base_url + "/assets/img/lab.png' width='45px' /> ";
+
+      if ("title" in hit) {
+        title = hit.title
+          .replaceUnder()
+          .replace(/<(.|\n)*?>/g, "");
+      }
+
+      if ("description" in hit) {
+        description = hit.description
+          .replaceUnder()
+          .replace(/<(.|\n)*?>/g, "");
+      }
+
+      if (description.length > 200) {
+        description = description.substring(0, 200);
+        description += "...";
+      }
+      var url = hit.url;
+
+      return `<div class="hit"><a href="${url}" ${bindEvent('click', hit, 'Clicked LAB from Page Search')} ><div class="hit-content"><div><div class="hit-name lab_title">${lab_image} ${title } <i class="fas fa-external-link-alt"></i> </div> <div class="hit-subname">${tags_list} </div><div class="hit-description">${ description }</div></div></div></a><hr /></div>`;
+    }
 
     String.prototype.upCaseWord = function() {
       return this.toString().replace(/\b\w/g, function(l){ return l.toUpperCase() });
@@ -191,12 +232,12 @@
       }
     });
     var instant_search = instantsearch({
-      indexName: "{{ site.algolia.index_name }}",
+      indexName: algolia_doc_index,
       searchClient,
       routing: {
         stateMapping: {
           stateToRoute(uiIState) {
-            const uiState = uiIState['DocSearch'];
+            const uiState = uiIState[algolia_doc_index];
             return {
               query: uiState.query || $.urlParam('q '),
               // we use the character ~ as it is one that is rarely present in data and renders well in urls
@@ -206,22 +247,42 @@
             };
           },
           routeToState(routeState) {
-            return {
-              "DocSearch" : {
-                query: routeState.query || $.urlParam('q'),
-                refinementList: {
-                  type: routeState.types && routeState.types.split('~'),
-                  category: routeState.categories && routeState.categories.split('~')
-                },
-                page: routeState.page
-              }
+            const route_state = {};
+            route_state[algolia_doc_index] = {
+              query: routeState.query || $.urlParam('q'),
+              refinementList: {
+                type: routeState.types && routeState.types.split('~'),
+                category: routeState.categories && routeState.categories.split('~')
+              },
+              page: routeState.page
             };
+            return route_state;
           }
         }
       },
     });
     instant_search.use(insightsMiddleware);
     instant_search.addWidgets([
+      instantsearch.widgets.index({ indexName: algolia_lab_index })
+      .addWidgets([
+        instantsearch.widgets.configure({
+          hitsPerPage: 3,
+        }),
+
+        instantsearch.widgets.hits({
+          container: '#search_hits_labs',
+          attributesToSnippet: ["description:24"],
+          snippetEllipsisText: " [...]",
+          templates: {
+            item: function(hit, bindEvent) {
+              return hitLABTemplate(hit, bindEvent);
+            },
+            empty: function(data) {
+              return '';
+            }
+          },
+        }),
+      ]),
       instantsearch.widgets.searchBox({
         container: searchbox,
       }),
@@ -280,6 +341,7 @@
       instantsearch.widgets.pagination({
         container: '#search_pagination',
       }),
+
     ]);
 
     instant_search.start();

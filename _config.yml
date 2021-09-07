@@ -202,6 +202,8 @@ asset_pipeline:
   display_path: docs/assets
   gzip: false
 
+lab_index_name: "LABSearch"
+
 # Algolia Search index
 algolia:
   algolia_api_key: "ef2b60b317325b3227caabd0c9431d4b"
@@ -221,15 +223,20 @@ algolia:
       - searchable(channel)
     searchableAttributes:
       - article_title
+      - headings
+      - unordered(description)
+      - search_rank
       - nav_title
       - Path_01
-      - headings
-      - content
       - url
-      - search_rank
       - collection,tags
+      - content
       - platform
       - channel
+    customRanking:
+      - desc(article_title)
+      - desc(custom_ranking.heading)
+      - desc(custom_ranking.position)
   extensions_to_index:
     - html
     - md
