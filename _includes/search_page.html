@@ -155,14 +155,18 @@
           heading = hit['headings'][hit['headings'].length - 1];
         }
       }
-
-      if ('content' in hit._highlightResult) {
-        if ('value' in hit._highlightResult.content) {
-          content = hit._highlightResult.content.value.replace(/<(.|\n)*?>/g, '');
-        }
+      if ('description' in hit) {
+        content = hit.description.replace(/<(.|\n)*?>/g, '');
       }
-      if (!content && ('guide_top_text' in hit)) {
-        content = hit.guide_top_text.replace(/<(.|\n)*?>/g, '');
+      else {
+        if ('content' in hit._highlightResult) {
+          if ('value' in hit._highlightResult.content) {
+            content = hit._highlightResult.content.value.replace(/<(.|\n)*?>/g, '');
+          }
+        }
+        if (!content && ('guide_top_text' in hit)) {
+          content = hit.guide_top_text.replace(/<(.|\n)*?>/g, '');
+        }
       }
 
       if (content.length > 200) {
