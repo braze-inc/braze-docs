@@ -65,8 +65,10 @@ Add the required permissions to your `AndroidManifest.xml` file:
 #### Step 2.1c: Implement User Session Tracking
 
 The calls to `openSession()` and `closeSession()` are handled automatically.
-Add the following code to the `onCreate()` method of your Application class in the `MainApplication.java` file:
+Add the following code to the `onCreate()` method of your `MainApplication` class:
 
+{% subtabs global %}
+{% subtab JAVA %}
 ```java
 import com.appboy.AppboyLifecycleCallbackListener;
 
@@ -77,11 +79,26 @@ public void onCreate() {
     registerActivityLifecycleCallbacks(new AppboyLifecycleCallbackListener());
 }
 ```
+{% endsubtab %}
+{% subtab KOTLIN %}
+```kotlin
+import com.appboy.AppboyLifecycleCallbackListener
+
+override fun onCreate() {
+    super.onCreate()
+    ...
+    registerActivityLifecycleCallbacks(AppboyLifecycleCallbackListener())
+}
+```
+{% endsubtab %}
+{% endsubtabs %}
 
 #### Step 2.1d: Handle Intent updates
 
-If your MainActivity has `android:launchMode` set to `singleTask`, add the following code to your Activity class in the `MainActivity.java` file:
+If your MainActivity has `android:launchMode` set to `singleTask`, add the following code to your `MainActivity` class:
 
+{% subtabs global %}
+{% subtab JAVA %}
 ```java
 @Override
 public void onNewIntent(Intent intent) {
@@ -89,6 +106,16 @@ public void onNewIntent(Intent intent) {
     setIntent(intent);
 }
 ```
+{% endsubtab %}
+{% subtab KOTLIN %}
+```kotlin
+override fun onNewIntent(intent: Intent) {
+    super.onNewIntent(intent)
+    setIntent(intent)
+}
+```
+{% endsubtab %}
+{% endsubtabs %}
 {% endtab %}
 {% tab iOS %}
 
