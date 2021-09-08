@@ -92,13 +92,6 @@ You can find a breakdown of how Braze accumulates data points below, but there a
 | Contact Settings |  Push Subscribed | No |
 | Contact Settings |  Apps Registered for Push | No |
 |Campaigns Received | Email Address | No |
-|Segments | Gender | No |
-|Communication Stats | Age Group | No |
-|Communication Stats | Country | No |
-|Communication Stats | City | No |
-|Communication Stats | Language | No |
-|Communication Stats | Most Recent Device Locale | No |
-|Communication Stats | Most Recent Device Locale | No |
 |News Feed Cards Clicked | News Feed Cards Clicked | No |
 |Install Attribution | Install Source | No |
 |Install Attribution | Campaign | No |
