@@ -5,7 +5,7 @@ platform: iOS
 page_order: 2
 description: "This article covers customization options for your Content Cards in your iOS application."
 channel:
-  - content cards
+  - Content Cards
 
 ---
 
@@ -42,7 +42,7 @@ The following code snippets show an example of how to build custom Content Cards
 
 {% tabs local %}
 {% tab Dynamic UI %}
-Using the Content Card `apply` method, you can reference the card object and pass it the key-value pairs that will be used to update the UI.
+The Content Card `applyCard` method can be used to reference the card object and pass it the key-value pairs that will be used to update the UI.
 
 {% subtabs global %}
 {% subtab Objective-C %}
@@ -129,6 +129,9 @@ extension ABKCaptionedImageContentCardCell {
 {% endsubtabs %}
 {% endtab %}
 {% tab Static UI %}
+
+The `setUpUI` instance method can be used to assign values to the static Content Card components across all cards. 
+
 {% subtabs global %}
 {% subtab Objective-C %}
 ```objc
@@ -202,7 +205,7 @@ Content Cards components can be overridden by using the `getContentCards` method
 - (void)populateContentCards {
   NSMutableArray<ABKContentCard *> *cards = [NSMutableArray arrayWithArray:[Appboy.sharedInstance.contentCardsController getContentCards]];
   for (ABKContentCard *card in cards) {
-    // Replaces the card description for all Classic content cards
+    // Replaces the card description for all Classic Content Cards
     if ([card isKindOfClass:[ABKClassicContentCard class]]) {
       ((ABKClassicContentCard *)card).cardDescription = @"Custom Feed Override title [classic cards only]!";
     }
@@ -216,7 +219,7 @@ Content Cards components can be overridden by using the `getContentCards` method
 override func populateContentCards() {
   guard let cards = Appboy.sharedInstance()?.contentCardsController.contentCards else { return }
   for card in cards {
-    // Replaces the card description for all Classic content cards
+    // Replaces the card description for all Classic Content Cards
     if let classicCard = card as? ABKClassicContentCard {
       classicCard.cardDescription = "Custom Feed Override title [classic cards only]!"
     }
@@ -241,7 +244,7 @@ contentCardsTableViewController.delegate = delegate;
                  shouldHandleCardClick:(NSURL *)url {
   if ([[url.host lowercaseString] isEqualToString:@"my-domain.com"]) {
     // Custom handle link here
-    NSLog(@"Manually handling content card click with URL %@", url.absoluteString);
+    NSLog(@"Manually handling Content Card click with URL %@", url.absoluteString);
     return NO;
   }
   // Let the Braze SDK handle the click action
@@ -250,7 +253,7 @@ contentCardsTableViewController.delegate = delegate;
 
 - (void)contentCardTableViewController:(ABKContentCardsTableViewController *)viewController
                     didHandleCardClick:(NSURL *)url {
-  NSLog(@"Braze SDK handled content card click with URL %@", url.absoluteString);
+  NSLog(@"Braze SDK handled Content Card click with URL %@", url.absoluteString);
 }
 ```
 {% endtab %}
@@ -263,7 +266,7 @@ func contentCardTableViewController(_ viewController: ABKContentCardsTableViewCo
                                     shouldHandleCardClick url: URL!) -> Bool {
   if (url.host?.lowercased() == "my-domain.com") {
     // Custom handle link here
-    NSLog("Manually handling content card click with URL %@", url.absoluteString)
+    NSLog("Manually handling Content Card click with URL %@", url.absoluteString)
     return false
   }
   // Let the Braze SDK handle the click action
@@ -272,7 +275,7 @@ func contentCardTableViewController(_ viewController: ABKContentCardsTableViewCo
 
 func contentCardTableViewController(_ viewController: ABKContentCardsTableViewController!,
                                     didHandleCardClick url: URL!) {
-  NSLog("Braze SDK handled content card click with URL %@", url.absoluteString)
+  NSLog("Braze SDK handled Content Card click with URL %@", url.absoluteString)
 }
 ```
 {% endtab %}
