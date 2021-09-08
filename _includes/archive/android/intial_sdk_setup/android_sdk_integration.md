@@ -29,10 +29,6 @@ allprojects {
 }
 ```
 
-{% alert note %}
-The Braze Android SDK uses AndroidX Jetpack dependencies as of SDK version 10.0.0.
-{% endalert %}
-
 Alternatively, you can directly find the artifact AAR files on our [maven repository][71].
 
 #### Add Braze Dependency
