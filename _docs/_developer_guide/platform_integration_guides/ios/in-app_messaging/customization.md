@@ -402,6 +402,8 @@ Example `Info.plist` contents:
 </dict>
 ```
 
+You can also enable the feature at runtime by setting `ABKEnableDismissModalOnOutsideTapKey` to `YES` in `appboyOptions`.
+
 ### Description of Dismiss Modal on Outside Tap
 
 | DismissModalOnOutsideTap | Description |
