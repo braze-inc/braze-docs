@@ -20,10 +20,10 @@ guide_featured_list:
 guide_menu_title: "All Integrations"
 guide_menu_list:
   - name: Cordova Android
-    link: /docs/developer_guide/platform_integration_guides/cordova/android_and_fireos/initial_sdk_setup/
+    link: /docs/developer_guide/platform_integration_guides/cordova/initial_sdk_setup/android/
     fa_icon: fab fa-android
   - name: Cordova iOS
-    link: /docs/developer_guide/platform_integration_guides/cordova/ios/initial_sdk_setup/
+    link: /docs/developer_guide/platform_integration_guides/cordova/initial_sdk_setup/ios/
     fa_icon: fab fa-apple
   - name: ReactNative
     link: /docs/developer_guide/platform_integration_guides/react_native/react_sdk_setup/
@@ -42,7 +42,7 @@ guide_menu_list:
     fa_icon: fab fa-windows
   - name: Xamarin
     link: /docs/developer_guide/platform_integration_guides/xamarin/initial_sdk_setup/
-    fa_icon: fab fa-times
+    fa_icon: fas fa-times
   - name: Roku
     link: /docs/developer_guide/platform_integration_guides/roku/initial_sdk_setup/
     fa_icon: fas fa-tv

@@ -9,4 +9,3 @@ channel: in-app messages
 hidden: true
 ---
 
-{% include archive/android/in_app_messages/customization.md android_type="fireos" %}
