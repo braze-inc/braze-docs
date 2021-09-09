@@ -15,22 +15,15 @@ There are many advanced settings available for Android and Fire OS push notifica
 
 ![Advanced Settings][1]
 
-## Delivery Options
-
-Both Google and Amazon's push messaging services (FCM and ADM, respectively) allow you to set additional parameters for when and how your messages are delivered. FCM and ADM both follow roughly the same pattern in how these options are structured and utilized. The default behavior of these services is to send messages to devices as soon as they are received for delivery. However, depending on the use case, this may not be the best way to communicate to your users. To provide you with precise control over when your push messages are delivered, we have implemented ways to use FCM and ADM delivery options with Braze campaigns.
-
-For example, say that a user of a sports news app had their device offline the duration of a football game. The app sends out updates after one of the competing teams score for a total of 10 push notifications over that duration. When the user reconnects to the messaging service, we would not want them to receive 10 redundant notifications. We have a couple of options available to solve this problem.
-
 ## Notification ID {#notification-id}
 
-A __"Notification ID"__ is a unique identifier for a message category of your choosing that informs the messaging service to only respect the most recent message from that ID. Setting a Notification ID allows you to send just the most recent and relevant message, rather than a stack of outdated, irrelevant ones. However, if the phone correctly receives the original push notifications, then the Notification ID will not replace the already delivered notification(s).
+A __"Notification ID"__ is a unique identifier for a message category of your choosing that informs the messaging service to only respect the most recent message from that ID. Setting a Notification ID allows you to send just the most recent and relevant message, rather than a stack of outdated, irrelevant ones.
 
 ## Time to Live (TTL) {#ttl}
+
 The __"Time to Live"__ (ttl) field allows you to set a custom length of time to store messages with the push messaging service. Braze's default values for time to live are 4 weeks for FCM and 31 days for ADM. If the hypothetical user from the example above were to reconnect their device 4 weeks after the game with the time to live set to the default, then those messages would have already expired in the messaging service and would not be delivered.
 
-For more information on these delivery options, please see the [Firebase Cloud Messaging][7] and [Amazon Device Messaging][8] documentation.
-
-## Firebase Messaging Priority {#fcm-priority}
+## Firebase Messaging Delivery Priority {#fcm-priority}
 
 The __"Firebase Messaging Delivery Priority"__ field lets you control whether a push is sent with "normal" or "high" priority to Firebase Cloud Messaging. See [FCM documentation](https://firebase.google.com/docs/cloud-messaging/concept-options#setting-the-priority-of-a-message) to learn more.
 
@@ -54,10 +47,10 @@ The __"Custom URI"__ feature allows you to specify a Web URL or an Android resou
 
 ![Custom URI][12]
 
-## Notification Priority {#notification-priority}
+## Notification Display Priority {#notification-priority}
 
 {% alert important %}
-The Notification Priority setting is no longer used on devices running Android O or newer. For newer devices, set the priority through [notification channel configuration](https://developer.android.com/training/notify-user/channels#importance).
+The Notification Display Priority setting is no longer used on devices running Android O or newer. For newer devices, set the priority through [notification channel configuration](https://developer.android.com/training/notify-user/channels#importance).
 {% endalert %}
 
 The priority level of a push notification affects how your notification is displayed in the notification tray relative to other notifications. It can also affect the speed and manner of delivery, as normal and lower priority messages may be sent with slightly higher latency or batched to preserve battery life whereas high priority messages are always sent immediately.
@@ -95,8 +88,6 @@ To message your full userbase with a specific sound, we recommend that you indir
 
 [1]: {% image_buster /assets/img_archive/android_advanced_settings.png %}
 [2]: http://developer.android.com/design/patterns/notifications.html
-[7]: https://firebase.google.com/docs/cloud-messaging/concept-options
-[8]: https://developer.amazon.com/public/apis/engage/device-messaging/tech-docs/06-sending-a-message
 [9]: {% image_buster /assets/img_archive/summary_text.png %}
 [11]: {% image_buster /assets/img_archive/sound_android.png %}
 [12]: {% image_buster /assets/img_archive/deep_link_image_android.png %}
