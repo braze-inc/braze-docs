@@ -50,7 +50,7 @@ You can link to headings with custom anchors by creating a standard link with a 
 
 {% raw %}
 ```
-Here is my [link]{#anchor-text}
+Here is my [link](#anchor-text)
 ```
 {% endraw %}
 
