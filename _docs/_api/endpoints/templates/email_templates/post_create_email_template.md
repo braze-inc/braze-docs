@@ -1,17 +1,10 @@
 ---
 nav_title: "POST: Create Email Template"
+article_title: "POST: Create Email Templates"
+search_tag: Endpoint
 page_order: 4
-
 layout: api_page
-
 page_type: reference
-platform: API
-channel:
-  - Email
-tool:
-  - Canvas
-  - Campaigns
-
 description: "This article outlines details about the Create Email Templates Braze endpoint."
 ---
 {% api %}

@@ -1,15 +1,10 @@
 ---
 nav_title: Inbox Vision
-platform: Message_Building_and_Personalization
-subplatform: Email
+article_title: Inbox Vision
 page_order: 5
 description: "Inbox Vision allows marketers to view their emails from the perspective of various email clients and mobile devices. This reference article covers how to set up and use Inbox Vision."
-
 tool:
   - Dashboard
-  - Campaign
-  - Canvas
-
 channel:
   - email
 

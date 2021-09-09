@@ -1,13 +1,15 @@
 ---
 nav_title: Segment
+article_title: Segment
 page_order: 1
 alias: /partners/segment/
-
 description: "This article outlines the partnership between Braze and Segment, a customer data platform that collects and routes information between sources in your marketing stack."
 page_type: partner
+search_tag: Partner
 
 ---
-# About Segment  
+
+# Segment  
 
 {% include video.html id="RfOHfZ34hYM" align="right" %}
 
@@ -166,7 +168,7 @@ All other traits will be recorded as [custom attributes][14].
 
 
 {% alert important %}
-When passing user attribute data, please be sure that you are only passing values for attributes that have changed since the last update. This will ensure that you do not unnecessarily consume data points towards your allotment.
+When passing user attribute data, check that you are only passing values for attributes that have changed since the last update. This will ensure that you do not unnecessarily consume data points towards your allotment.
 {% endalert %}
 
 ### Group
@@ -184,7 +186,7 @@ When you _track_ an event, we will record that event as a [custom event][13] usi
 | [Track with Product](https://segment.com/docs/spec/track/){:target="_blank"} | Logged as a [Purchase Event]({{site.baseurl}}/developer_guide/platform_integration_guides/web/analytics/logging_purchases/). | `analytics.track("purchase", {products: [product_id: "ab12", price: 19]});` > `appboy.logPurchase("ab12", 19);` |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
 
-#### Order Completed
+#### Order Completed {#order-completed}
 
 When you _track_ an event with the name `Order Completed` using the format described in Segment's [ECommerce API][4]{:target="_blank"}, we will record the products you've listed as [purchases][28].
 
@@ -204,12 +206,12 @@ Most of your [Overview][27] metrics (lifetime sessions, MAU, DAU, Stickiness, Da
 
 You can view your data in the [Custom Events][22] or [Revenue][28] pages, or by [creating a segment][23]. The **Custom Events** page of the dashboard allows you to view custom event counts over time. Note that you will not be able to use [formulas][24] that include MAU and DAU statistics.
 
-If you're sending purchase data to Braze (see [Completed Order](#completed-order)), the [Revenue][28] page allows you to view data on revenue or purchases over specific periods of time or your app's total revenue.
+If you're sending purchase data to Braze (see [Order Completed](#order-completed)), the [Revenue][28] page allows you to view data on revenue or purchases over specific periods of time or your app's total revenue.
 
 [Creating a segment][26] allows you to filter your users based on custom event data and custom attribute data.
 
 {% alert important %}
-If you use a server-to-server integration, filters related to automatically collected session data (such as "first used app" and "last used app") will not work. If you want to use these in your Segment/Braze integration, please use a side-by-side integration.
+If you use a server-to-server integration, filters related to automatically collected session data (such as "first used app" and "last used app") will not work. If you want to use these in your Segment/Braze integration, use a side-by-side integration.
 {% endalert %}
 
 ## User Deletion & Suppression 
@@ -223,10 +225,10 @@ You must ensure that that you select a common user identifier between Braze and 
 
 Segment provides a service to clients to "Replay" all historical data to a new technology partner. New Braze customers who want to import all relevant historical data can do so through Segment.
 
-Segment will connect to our [users/track endpoint]({{site.baseurl}}/api/endpoints/user_data/#user-track-endpoint) to import user data into Braze on behalf of the client.
+Segment will connect to our [Users Track endpoint]({{site.baseurl}}/api/endpoints/user_data/#user-track-endpoint) to import user data into Braze on behalf of the client.
 
 {% alert important %}
-If users do not have an external ID, they will not be imported into Braze, as our users/track endpoint requires a user ID if a Braze ID or user alias is not provided. Currently, Segment does not map to Braze's Braze ID or user alias, so all anonymous data will not be "replayed" over.
+If users do not have an external ID, they will not be imported into Braze. Our Users Track endpoint requires a user ID if a Braze ID or user alias is not provided. Currently, Segment does not map to Braze's Braze ID or user alias, so all anonymous data will not be "replayed" over.
 {% endalert %}
 
 ## Best Practices

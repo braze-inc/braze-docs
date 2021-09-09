@@ -1,7 +1,7 @@
 ---
 nav_title: November
 page_order: 3
-no_index: true
+noindex: true
 page_type: update
 description: "This article contains release notes for November 2018."
 ---

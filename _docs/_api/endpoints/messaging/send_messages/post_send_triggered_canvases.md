@@ -1,15 +1,12 @@
 ---
 nav_title: "POST: Send Canvas Messages via API-Triggered Delivery"
+article_title: "POST: Send Canvas Messages via API-Triggered Delivery"
+search_tag: Endpoint
 page_order: 4
-
 layout: api_page
-
 page_type: reference
-platform: API
-tool:
-  - Canvas
-
 description: "This article outlines details about the Send Canvas Messages via API-Triggered Delivery Braze endpoint."
+
 ---
 {% api %}
 # Sending Canvas Messages via API-Triggered Delivery
@@ -37,17 +34,16 @@ Authorization: Bearer YOUR-REST-API-KEY
   "broadcast": (optional, boolean) see Broadcast -- defaults to false on 8/31/17, must be set to true if `recipients` is omitted,
   "audience": (optional, connected audience object) see connected audience,
   // Including 'audience' will only send to users in the audience
-  "recipients": (optional, array; if not provided and broadcast is not set to 'false', message will send to the entire segment targeted by the Canvas) [
-    {
+  "recipients": (optional, array; if not provided and broadcast is not set to 'false', message will send to the entire segment targeted by the Canvas)
+    [{
       // Either "external_user_id" or "user_alias" is required. Requests must specify only one.
       "user_alias": (optional, user alias object) user alias of user to receive message,
       "external_user_id": (optional, string) external identifier of user to receive message,
       "canvas_entry_properties": (optional, object) personalization key-value pairs that will apply to this user (these key-value pairs will override any keys that conflict with `canvas_entry_properties` above)
       "send_to_existing_only": (optional, boolean) defaults to true,
       "attributes": (optional, object) fields in the attributes object will create or update an attribute of that name with the given value on the specified user profile before the message is sent and existing values will be overwritten
-    },
+    }],
     ...
-  ]
 }
 ```
 
@@ -124,7 +120,7 @@ curl --location --request POST 'https://rest.iad-01.braze.com/canvas/trigger/sen
       }
     ]
   },
-  "recipients": {
+  "recipients": [{
     "user_alias": {
       "alias_name" : "example_name",
       "alias_label" : "example_label"
@@ -136,7 +132,7 @@ curl --location --request POST 'https://rest.iad-01.braze.com/canvas/trigger/sen
     "attributes": {
         "first_name" : "Alex"
     }
-    }
+  }]
 }'
 ```
 

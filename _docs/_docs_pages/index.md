@@ -33,7 +33,7 @@ doc_menu_list:
   - name: API Guide
     bg_color: '#ff9349'
     image: /assets/img/new-icons/api.svg
-    link: /docs/developer_guide/rest_api/basics/
+    link: /docs/api/basics/
     description: "Braze provides a high-performance REST API to allow you to track users, send messages, export data, and more."
 
 popular_topic_list:
@@ -43,7 +43,7 @@ popular_topic_list:
   - name: Create a Campaign
     link: /docs/user_guide/engagement_tools/campaigns/ideas_and_strategies/active_user_campaigns/
   - name: Locations and Geofences
-    link: /docs/user_guide/engagement_tools/locations_and_geofences/about/
+    link: /docs/user_guide/engagement_tools/locations_and_geofences/
   - name: Personalized Messaging
     link: /docs/user_guide/personalization_and_dynamic_content/overview/
   - name: Braze REST API

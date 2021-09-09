@@ -1,5 +1,6 @@
 ---
 nav_title: Segment Extension
+article_title: Creating and Using a Segment Extension
 page_order: 3.1
 
 page_type: tutorial
@@ -10,7 +11,7 @@ tool: Segments
 
 > This article will walk you through how to use a Segment Extension to enhance your segmentation capabilities
 
-A Segment Extension expands our existing segmentation capabilities by enabling you to target more precise lists of users based on their custom event and purchase behavior in the past 365 days. Users are able to create a max of 10 Segment Extensions. Once these extension lists are generated, they can then be included/excluded as a [filter][10] in your Segments. When creating a Segment Extension, you can also specify that the list be regenerated once every 24 hours.
+A Segment Extension expands our existing segmentation capabilities by enabling you to target more precise lists of users based on their custom event and purchase behavior in the past 365 days. Users are able to create a max of 10 Segment Extensions per App Group. Once these extension lists are generated, they can then be included/excluded as a [filter][10] in your Segments. When creating a Segment Extension, you can also specify that the list be regenerated once every 24 hours.
 
 ## Step 1: Navigating to the Segment Extension Section
 
@@ -32,7 +33,7 @@ Select between a purchase or custom event criteria for targeting. Once you've se
 
 ### Event Property Segmentation
 
-To increase targeting precision, select the “Add Property Filters” checkbox. This will enable you to drill down based on the specific properties of your purchase or custom event. We support event property segmentation based on string, numeric, boolean, and time objects. 
+To increase targeting precision, select the “Add Property Filters” checkbox. This will enable you to drill down based on the specific properties of your purchase or custom event. We support event property segmentation based on string, numeric, boolean, and time objects. We also support segmentation based on [nested event properties]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/nested_object_support/).
 
 ![Event Property][12]
 

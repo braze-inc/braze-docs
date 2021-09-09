@@ -1,11 +1,12 @@
 ---
 nav_title: Migrating from News Feed
+article_title: Migrating from News Feed
 page_order: 10
 description: "Content Cards offer many more capabilities that are not supported by Braze's News Feed. This article covers the differences between the two and guidance on migration and adoption."
-
 channel:
   - content cards
   - news feed
+  
 ---
 
 # Migrating From News Feed to Content Cards

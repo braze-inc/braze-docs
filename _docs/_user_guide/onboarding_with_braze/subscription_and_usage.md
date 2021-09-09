@@ -1,11 +1,12 @@
 ---
 nav_title: Subscriptions and Usage
+article_title: Dashboard Subscription and Usage
 alias: /subscription_and_usage/
 page_order: 4.1
-
 page_type: reference
 description: "This reference article covers the Subscriptions and Usage page, where you can monitor and check your data consumption."
 tool: Dashboard
+
 ---
 
 # Subscriptions and Usage
@@ -60,7 +61,6 @@ Depending on whether you chose a time frame of weeks or months, your data here w
 
 You can use this section to monitor how your data point usage is trending over time, and how close you are to hitting your contract’s allotment. One trend line shows your consumption, and the other shows your contract allotment.
 
-[1]: {% image_buster /assets/img/subscription_and_billing1.png %}
 [2]: {% image_buster /assets/img/subscription_and_billing2.png %}
 [3]: {% image_buster /assets/img/subscription_and_billing3.png %}
 [4]: {% image_buster /assets/img/subscription_and_billing4.png %}

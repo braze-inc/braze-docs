@@ -19,6 +19,6 @@ Empower developers to work smarter, not harder, as they lean on Cordova's app de
 
 Please see Braze's Platform Integration Guides to integrate Cordova.
 
-For [iOS]({{site.baseurl}}/developer_guide/platform_integration_guides/cordova/ios/initial_sdk_setup/).
+For [iOS]({{site.baseurl}}/developer_guide/platform_integration_guides/cordova/initial_sdk_setup/ios/).
 
-For [Android and FireOS]({{site.baseurl}}/developer_guide/platform_integration_guides/cordova/android_and_fireos/initial_sdk_setup/).
+For [Android and FireOS]({{site.baseurl}}/developer_guide/platform_integration_guides/cordova/initial_sdk_setup/android/).

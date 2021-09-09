@@ -1,10 +1,10 @@
 ---
 nav_title: Data Points
+article_title: Data Points Overview
 page_order: 4
-
 page_type: reference
 description: "This reference article outlines what Data Points are at Braze and how you can be aware of their usage."
-tool: Dashboard
+
 ---
 
 # Data Points
@@ -92,13 +92,6 @@ You can find a breakdown of how Braze accumulates data points below, but there a
 | Contact Settings |  Push Subscribed | No |
 | Contact Settings |  Apps Registered for Push | No |
 |Campaigns Received | Email Address | No |
-|Segments | Gender | No |
-|Communication Stats | Age Group | No |
-|Communication Stats | Country | No |
-|Communication Stats | City | No |
-|Communication Stats | Language | No |
-|Communication Stats | Most Recent Device Locale | No |
-|Communication Stats | Most Recent Device Locale | No |
 |News Feed Cards Clicked | News Feed Cards Clicked | No |
 |Install Attribution | Install Source | No |
 |Install Attribution | Campaign | No |

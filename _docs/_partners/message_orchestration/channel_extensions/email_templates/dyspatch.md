@@ -1,7 +1,11 @@
 ---
 nav_title: Dyspatch
+article_title: Dyspatch
 alias: /partners/dyspatch
 description: "This article outlines the partnership between Braze and Dyspatch, a drag-and-drop email builder that allows to create beautiful, responsive, and engaging emails without the need to write code."
+page_type: partner
+search_tag: Partner
+
 ---
 
 # Dyspatch

@@ -1,14 +1,12 @@
 ---
 nav_title: "Notification Channels"
+article_title: Push Notification Channels 
 page_order: 4
 page_type: reference
 description: "This reference article covers Android push notification channel topics like Android O transition, how to add a channel to Braze, setting a fallback channel, and more."
-
 platform: Android
 channel:
   - push
-tool:
-  - Dashboard
 
 ---
 
@@ -119,7 +117,7 @@ Your fallback channel is the channel that Braze will attempt to send your androi
 ![no_dropdown][10]
 
 [1]: https://www.braze.com/blog/android-o-push-notifications-channels/
-[2]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/push_notifications/integration/#step-4-define-notification-channels
+[2]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/push_notifications/integration/standard_integration/#step-5-define-notification-channels
 [3]: https://developer.android.com/preview/features/notification-channels.html#DeletingChannels
 [4]: https://developer.android.com/preview/features/notification-channels.html
 [6]: {% image_buster /assets/img_archive/Click_Here.png %}

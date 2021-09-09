@@ -1,7 +1,9 @@
 ---
 nav_title: Setting Custom Attributes
+article_title: Setting Custom Attributes for Web
 platform: Web
 page_order: 3
+description: "This reference article covers how to set custom attributes via the Braze Web SDK."
 
 ---
 

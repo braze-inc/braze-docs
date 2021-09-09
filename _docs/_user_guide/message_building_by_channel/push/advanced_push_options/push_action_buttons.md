@@ -1,9 +1,9 @@
 ---
 nav_title: "Push Action Buttons"
+article_title: Push Action Buttons
 page_order: 1
 page_type: reference
 description: "This reference article covers what Push Action buttons are and the difference across iOS and Android platforms."
-
 channel:
   - Push
 
@@ -27,7 +27,7 @@ Each interactive button can link to a webpage, a deep link, open the app, or dis
 
 >  Due to iOS’s handling of buttons, you will need to perform additional integration steps when setting up push action buttons, which are outlined in our Documentation. In particular, you will need to either configure iOS Categories or will need to select from certain default button options. For Android integrations, these buttons will work out of the box.
 
-For instructions on Integrating iOS Push Action Button, check out our [documentation]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/push_notifications/integration/#push-action-buttons-integration).
+For instructions on Integrating iOS Push Action Button, check out our [documentation]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/push_notifications/customization/action_buttons/).
 
 {% endtab %} 
 {% tab Android Push Action Buttons %}

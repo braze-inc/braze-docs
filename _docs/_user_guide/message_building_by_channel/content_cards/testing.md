@@ -1,10 +1,11 @@
 ---
 nav_title: Testing
+article_title: Testing Content Cards
 page_order: 3
 description: "This reference article covers how to preview and test Content Cards, as well as some best practices."
-
 channel:
   - content cards
+  
 ---
 
 # Testing

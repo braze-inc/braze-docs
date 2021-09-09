@@ -1,8 +1,10 @@
 ---
 nav_title: Hightouch
+article_title: Hightouch
 description: "This article details the partnership between Braze and Hightouch, a platform to sync your customer data from your warehouse to business tools."
 alias: /partners/hightouch/
 page_type: partner
+search_tag: Partner
 
 ---
 

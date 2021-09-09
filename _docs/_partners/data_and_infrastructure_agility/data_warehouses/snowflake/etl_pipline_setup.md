@@ -1,11 +1,14 @@
 ---
 nav_title: "ETL Event Pipeline Setup"
+article_title: Snowflake ETL Event Pipeline Setup
 page_order: 2
 description: "This partner page offers an example set up for an Email Clicks query to reference when setting up your own queries."
 page_type: partner
+search_tag: Partner
+
 ---
 
-# Sample Queries
+# ETL Event Pipeline Setup
 
 >  This partner page offers an example set up for an Email Clicks query to reference when setting up your own queries.
 

@@ -1,9 +1,10 @@
 ---
 nav_title: Amazon Personalize
+article_title: Amazon Personalize
 alias: /partners/amazon_personalize/
-
 description: "This article outlines a reference architecture for and integration between Braze and Amazon Personalize."
 page_type: partner
+search_tag: Partner
 
 ---
 

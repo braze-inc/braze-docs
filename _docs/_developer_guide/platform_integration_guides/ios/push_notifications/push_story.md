@@ -1,5 +1,6 @@
 ---
 nav_title: Push Stories
+article_title: Push Stories for iOS
 platform: iOS
 page_order: 28
 description: "This article shows how to set up Push Stories for your iOS application."
@@ -230,7 +231,7 @@ Alternatively, to configure Push Story App Group from your `Info.plist` file, ad
 [2]: {% image_buster /assets/img_archive/add_content_extension.png %}
 [3]: {% image_buster /assets/img_archive/enable_background_mode.png %}
 [4]: {% image_buster /assets/img_archive/add_app_groups.png %}
-[5]: {{site.baseurl}}/developer_guide/platform_integration_guides/ios/initial_sdk_setup/swift_package_manager/
+[5]: {{site.baseurl}}/developer_guide/platform_integration_guides/ios/initial_sdk_setup/installation_methods/swift_package_manager/
 [6]: {% image_buster /assets/img/ios/push_story/spm1.png %}
 [7]: {% image_buster /assets/img/ios/push_story/spm2.png %}
 [8]: https://github.com/Appboy/appboy-ios-sdk/releases
@@ -239,4 +240,3 @@ Alternatively, to configure Push Story App Group from your `Info.plist` file, ad
 [ios_pushstory_07]: {% image_buster /assets/img_archive/ios_pushstory_07.png %}
 [ios_pushstory_08]: {% image_buster /assets/img_archive/ios_pushstory_08.png %}
 [ios_pushstory_09]: {% image_buster /assets/img_archive/ios_pushstory_09.png %}
-[ios_pushstory_10]: {% image_buster /assets/img_archive/ios_pushstory_10.png %}

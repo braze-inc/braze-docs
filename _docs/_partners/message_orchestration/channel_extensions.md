@@ -1,11 +1,13 @@
 ---
 nav_title: Channel Extensions
+article_title: Channel Extension Partners
 page_order: 8
 
 page_type: landing
 description: "These partners allow you to expand your messaging strategy and connect or target across custom channels."
 
 layout: partner_page
+search_tag: Partner
 partner_api: "https://www.braze.com/api/v1/partners"
 partner_path: "https://www.braze.com/product/alloys/partners/"
 

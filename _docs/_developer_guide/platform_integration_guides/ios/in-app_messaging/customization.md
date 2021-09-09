@@ -1,5 +1,6 @@
 ---
 nav_title: Customization
+article_title: In-App Message Customization for iOS
 platform: iOS
 page_order: 1
 description: "This reference article covers in-app messaging customization options for your iOS application."
@@ -400,6 +401,8 @@ Example `Info.plist` contents:
 	<boolean>YES</boolean>
 </dict>
 ```
+
+You can also enable the feature at runtime by setting `ABKEnableDismissModalOnOutsideTapKey` to `YES` in `appboyOptions`.
 
 ### Description of Dismiss Modal on Outside Tap
 

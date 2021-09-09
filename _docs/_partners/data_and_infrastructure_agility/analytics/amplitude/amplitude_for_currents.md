@@ -1,14 +1,16 @@
 ---
 nav_title: Amplitude for Currents
+article_title: Amplitude
 page_order: 0
 alias: /partners/amplitude_for_currents/
-
 description: "This article outlines the partnership between Braze Currents and Amplitude, a product analytics and business intelligence platform."
 page_type: partner
-tool: currents
+tool: Currents
+search_tag: Partner
+
 ---
 
-# About Amplitude & Currents
+# Amplitude for Currents
 
 {% include video.html id="7yadPjDImxQ" align="right" %}
 
@@ -22,8 +24,8 @@ Add this information to the Amplitude integration page on the dashboard, and pre
 
 ![Amplitude]({% image_buster /assets/img_archive/currents-amplitude-edit.png %})
 
-{% alert important %}
-It's important to keep your Amplitude API Key up to date; if your connector's credentials expire, the connector will stop sending events. If this persists for more than **48 hours**, the connector's events will be dropped and data will be permanently lost.
+{% alert warning %}
+Keep your Amplitude API Key up to date. If your connector's credentials expire, the connector will stop sending events. If this persists for more than **48 hours**, the connector's events will be dropped and data will be permanently lost.
 {% endalert %}
 
 Amplitude's documentation is available [here](https://amplitude.zendesk.com/hc/en-us/articles/115000217351-Appboy-Amplitude-Integration#how-to-set-up-and-use-the-integration).
@@ -241,13 +243,6 @@ To check out some of the common Amplitude API endpoints, view our dedicated [Amp
   "url": (string) the URL that was clicked (Email Click events only)
 }
 ```
-
-{% alert update %}
-Behavior for `dispatch_id` differs between Canvas and campaigns because Braze treats Canvas steps (except for Entry Steps, which can be scheduled) as triggered events, even when they are "scheduled". [Learn more about `dispatch_id` behavior in Canvas and campaigns here]({{site.baseurl}}/help/help_articles/data/dispatch_id/).
-
-_Update noted in August 2019._
-{% endalert %}
-
 
 ### SMS Events
 ```json

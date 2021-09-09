@@ -1,9 +1,9 @@
 ---
 nav_title: "Push for Web"
+article_title: Push for Web
 page_order: 9
 page_type: reference
 description: "This reference page briefly covers web push, and links out to the necessary steps to create one."
-
 platform: Web
 channel:
   - push

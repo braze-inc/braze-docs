@@ -1,14 +1,12 @@
 ---
 nav_title: Sending Test Messages
-platform: Campaigns
-subplatform: Testing and More
+article_title: Sending Test Messages
 page_order: 3
-
 tool: 
-- Campaigns
-- Segments
+  - Campaigns
 page_type: reference
 description: "This reference article covers how to send test messages across the different Braze channels and how to incorporate custom event properties or user attributes."
+
 ---
 # Sending Test Messages
 

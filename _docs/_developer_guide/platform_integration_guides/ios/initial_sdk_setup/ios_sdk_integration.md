@@ -1,5 +1,6 @@
 ---
 nav_title: SDK Integration Guide (Optional)
+article_title: Braze SDK Integration Guide for iOS (Optional)
 alias: "/ios_sdk/"
 description: "This iOS integration guide takes you on a step-by-step journey on setup best practices when first integrating the iOS SDK and its core components into your application. This guide will help you build a BrazeManager.swift helper file."
 page_order: 10
@@ -99,7 +100,7 @@ class BrazeManager: NSObject {
 {% tab Step 1: Initialize SDK from BrazeManager.swift %}
 
 ##### Initialize SDK from BrazeManager.swift
-Next, you must initialize the SDK. As mentioned above, this guide assumes you have already [added the SDK]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/initial_sdk_setup/overview/) into your Xcode project. You must also have your [app group SDK endpoint]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/initial_sdk_setup/swift_package_manager/#step-4-specify-your-data-cluster) and [`LogLevel`]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/initial_sdk_setup/other_sdk_customizations/#braze-log-level) set in your `info.plist` file. 
+Next, you must initialize the SDK. As mentioned above, this guide assumes you have already [added the SDK]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/initial_sdk_setup/overview/) into your Xcode project. You must also have your [app group SDK endpoint]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/initial_sdk_setup/completing_integration/#step-2-specify-your-data-cluster) and [`LogLevel`]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/initial_sdk_setup/other_sdk_customizations/#braze-log-level) set in your `info.plist` file.
 
 Add the `didFinishLaunchingWithOptions` method from the `AppDelegate.swift` file without a return type in your `BrazeManager.swift` file. By creating a similar method in the `BrazeManager.swift` file, there will not be an `import AppboyUI` statement in your `AppDelegate.swift` file. 
 
@@ -127,7 +128,7 @@ func application(_ application: UIApplication, didFinishLaunchingWithOptions lau
 {% endsubtabs %}
 
 {% endtab %}
-{% tab Step 2: Handle Appboy Initalization %}
+{% tab Step 2: Handle Appboy Initialization %}
 
 ##### Handle Appboy Initialization in the AppDelegate.swift
 Next, navigate back to the `AppDelegate.swift` file and add the following code snippet in the AppDelegate's `didFinishLaunchingWithOptions` method to handle the Appboy initialization from the `BrazeManager.swift` helper file. Remember, there is no need to add an `import AppboyUI` statement in the `AppDelegate.swift`.
@@ -729,7 +730,5 @@ Now that you have decoupled any dependencies on the Braze iOS SDK from the rest 
 - [Advanced In-App Messages Implementation Guide]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/in-app_messaging/implementation_guide/)
 - [Advanced Content Card Implementation Guide]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/content_cards/implementation_guide/)
 
-[1]: {% image_buster /assets/img/ios_sdk/ios_sdk1.png %} 
 [2]: {% image_buster /assets/img/ios_sdk/ios_sdk2.png %} 
 [3]: {% image_buster /assets/img/ios_sdk/ios_sdk3.png %} 
-[4]: {% image_buster /assets/img/ios_sdk/ios_sdk4.png %} 

@@ -1,7 +1,7 @@
 ---
 nav_title: "Sending Best Practices"
 config_only: true
-no_index: true
+noindex: true
 page_order: 3
 ---
 

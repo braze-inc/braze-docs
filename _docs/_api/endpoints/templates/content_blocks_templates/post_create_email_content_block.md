@@ -1,18 +1,12 @@
 ---
 nav_title: "POST: Create Content Block"
+article_title: "POST: Creat Content Block"
+search_tag: Endpoint
 page_order: 4
-
 layout: api_page
-
 page_type: reference
-platform: API
-channel:
-  - Email
-tool:
-  - Canvas
-  - Campaigns
-
 description: "This article outlines details about the Create Email Content Blocks Braze endpoint."
+
 ---
 {% api %}
 # Create Content Block

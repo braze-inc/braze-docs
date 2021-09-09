@@ -1,7 +1,11 @@
 ---
 nav_title: Fivetran
+article_title: Fivetran
 alias: /partners/fivetran/
 description: "This article outlines the partnership between Braze and Fivetran, a workflow automation tool that can assist you in data-backed decision making by delivering ready-to-query data into your cloud warehouse."
+page_type: partner
+search_tag: Partner
+
 ---
 
 # Fivetran
@@ -30,7 +34,9 @@ Braze API Key    | [Braze](https://dashboard.braze.com/sign_in) | Found in your 
 Locate your External ID in the Fivetran setup form for Braze.
 ![Fivetran Connector setup form]({% image_buster /assets/img/fivetran_braze_setupform_as3.png %})
 
-{% alert note %} Simply take note of the **External ID** as depicted above. The remaining details needed to complete the setup will be retrieved in later steps. {% endalert %}
+{% alert note %} 
+Note the **External ID** as depicted above. The remaining details required to complete the setup will be retrieved in later steps. 
+{% endalert %}
 
 ### Step 2: Create a Braze API Key For Amazon S3 Storage
 

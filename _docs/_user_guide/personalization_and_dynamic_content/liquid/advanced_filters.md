@@ -1,7 +1,9 @@
 ---
 nav_title: Advanced Filters
+article_title: Advanced Liquid Filters
 page_order: 4
 description: "This reference article lists advanced filters, examples, and how they can be used in your campaign."
+
 ---
 
 # Advanced Filters
@@ -29,6 +31,18 @@ description: "This reference article lists advanced filters, examples, and how t
 | `url_param_escape` | replaces all characters in a string that are not allowed in URLs with their escaped variants, including the ampersand (&) | `{{'hey<&>hi' | url_param_escape}` | hey%3C%26%3Ehi |
 | `url_encode` | encodes a string that is url friendly | `{{ 'google search' | url_encode }}` | google+search |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
+
+{% endraw %}
+{% alert tip %}
+The `assign` tag can be combined with HTML to save you time and effort when creating multiple hyperlinks.
+{% raw %}
+```
+{% assign url = "https://www.examplelink.com" %}
+<a href='{{url}}'>Click this Link!</a>
+```
+{% endraw %}
+{% endalert %}
+{% raw %}
 
 ## Property Accessor Filter
 

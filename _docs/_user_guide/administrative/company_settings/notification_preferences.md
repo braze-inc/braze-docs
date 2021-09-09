@@ -1,10 +1,10 @@
 ---
 nav_title: Notification Preferences
+article_title: Notification Preferences
 page_order: 1
-
 page_type: reference
 description: "This reference article covers your available options for monitoring the messaging and activity in your company account."
-tool: Dashboard
+
 ---
 
 # Notification Preferences

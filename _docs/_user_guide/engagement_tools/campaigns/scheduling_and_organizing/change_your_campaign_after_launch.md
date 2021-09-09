@@ -1,12 +1,11 @@
 ---
 nav_title: Changing Your Campaign After Launch
-platform: Campaigns
-subplatform: Scheduling and Organizing
+article_title: Changing Your Campaign After Launch
 page_order: 1.9
-
 tool: Campaigns
 page_type: reference
 description: "This reference article gives an overview of the result of editing certain aspects of a campaign post-launch."
+
 ---
 
 # Changing Your Campaign After Launch

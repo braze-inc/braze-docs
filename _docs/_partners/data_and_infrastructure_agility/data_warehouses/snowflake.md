@@ -1,9 +1,12 @@
 ---
 nav_title: Snowflake
+article_title: Snowflake
 alias: /partners/snowflake/
 page_order: 1
 description: "This article outlines the partnership between Braze and Snowflake, a purpose-built SQL cloud data warehouse for all of your data and all of your users."
 page_type: partner
+search_tag: Partner
+
 ---
 
 # Snowflake Secure Data Sharing
@@ -82,7 +85,7 @@ Examples of non-breaking changes:
 - Adding a column to an existing table or view
 
 {% alert important %}
-Note that because new columns are considered non-breaking, Braze strongly recommends not using `SELECT *` queries, but rather explicitly listing the columns of interest in each query. Alternately, customers might want to create views that explicitly name columns, and then query those views instead of the tables directly.
+Because new columns are considered non-breaking, Braze strongly recommends explicitly listing the columns of interest in each query instead of using `SELECT *` queries. Alternately, customers might want to create views that explicitly name columns, and then query those views instead of the tables directly.
 {% endalert %}
 
 #### Breaking Changes

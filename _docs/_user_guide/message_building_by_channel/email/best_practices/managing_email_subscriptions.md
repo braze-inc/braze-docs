@@ -1,11 +1,11 @@
 ---
 nav_title: Managing Email Subscriptions
+article_title: Managing Email Subscriptions
 page_order: 7
-
 page_type: reference
 description: "This article covers best practices for managing email subscriptions, such as unsubscribed, invalid, or duplicate emails."
 channel: email
-no_index: true
+
 ---
    
 # Managing Email Subscriptions

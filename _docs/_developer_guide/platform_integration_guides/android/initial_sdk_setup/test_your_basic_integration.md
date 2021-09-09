@@ -1,7 +1,10 @@
 ---
 nav_title: Test Your Basic Integration
+article_title: Test Your Basic Integration for Android/FireOS
 page_order: 1
-platform: Android
+platform: 
+  - Android
+  - FireOS
 description: "This article covers how to test your basic integration for your Android application."
 
 ---
@@ -20,5 +23,4 @@ You should continue to test your integration by navigating through your applicat
 If session tracking is behaving unexpectedly, turn on [Verbose Logging][56] and observe your app while you reproduce session triggering steps. Observe Braze statements in the logcat to detect where you may have missed logging `openSession` and `closeSession` calls in your activities.
 
 [55]: {% image_buster /assets/img_archive/android_sessions.png %}
-[56]: {{site.baseurl}}/developer_guide/platform_integration_guides/fireos/initial_sdk_setup/#verbose-logging
-[57]: {% image_buster /assets/img_archive/android_device_data.png %}
+[56]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/initial_sdk_setup/additional_customization_and_configuration/#android-verbose-logging

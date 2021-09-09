@@ -7,10 +7,6 @@ page_type: reference
 
 ---
 
-{% alert Update %}
-Customer Feedback is no longer supported. [Learn more about this and other deprecated features here]({{site.baseurl}}/help/release_notes/deprecations/#feedback).
-{% endalert %}
-
 # Customer Feedback
 
 The Braze feedback form allows users to submit feedback about your app that is immediately sent to your company's dashboard.

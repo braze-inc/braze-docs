@@ -1,21 +1,13 @@
 ---
 nav_title: Subscription Groups
+article_title: Subscription Group Endpoints
 page_order: 3
 layout: featured
 
 #Required
 description: "This landing page explains and lists the Braze Subscription Groups Endpoints for Email and SMS."
 page_type: landing
-tool:
-  - Canvas
-  - Campaigns
-
-#Use if applicable
-platform:
-  - API
-channel:
-  - Email
-  - SMS
+search_tag: Endpoint
 
 guide_top_header: "Subscription Groups Endpoints"
 guide_top_text: "Use the Subscription Group REST APIs to programmatically manage the subscription groups that you have stored on the Braze dashboard, on the Subscription Group page. This applies to both SMS and Email Subscription Groups."

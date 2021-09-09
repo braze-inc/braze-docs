@@ -1,10 +1,10 @@
 ---
 nav_title: FAQs
-title: Export FAQs
+article_title: Export FAQs
 page_order: 11
-
 page_type: FAQ
 description: "This  article covers some frequently asked questions for API and CSV exports."
+
 ---
 
 # Export FAQs

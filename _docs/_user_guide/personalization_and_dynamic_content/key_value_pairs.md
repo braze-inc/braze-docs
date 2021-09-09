@@ -1,7 +1,12 @@
 ---
 nav_title: Key-Value Pairs
+article_title: Key-Value Pairs
 page_order: 3
 description: "Braze enables you to send extra data payloads to user devices via key-value pairs. This feature is available across push, in-app, and News Feed messaging channels."
+channel:
+  - push
+  - in-app messages
+  - news feed
 
 ---
 
@@ -154,17 +159,23 @@ Key-value pairs can be added to a News Feed Card in the Braze message composer b
 
 ![key-valueInput][23]
 
+## Content Cards
 
-[1]: {{site.baseurl}}/developer_guide/platform_integration_guides/ios/push_notifications/customization/#extracting-data-from-push-notification-key-value-pairs
+To add a key-value pair to a Content Card, go to the **Settings** tab in the Braze message composer and click **Add New Pair**.
+
+![Add key-value pair to Content Card][24]{: style="max-width:70%;"}
+
+
+[1]: {{site.baseurl}}/developer_guide/platform_integration_guides/ios/push_notifications/customization/kvp/
 [2]: {{site.baseurl}}/developer_guide/platform_integration_guides/ios/push_notifications/silent_push_notifications/
 [4]: {{site.baseurl}}/user_guide/data_and_analytics/tracking/uninstall_tracking/
 [7]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/push_notifications/advanced_settings/
 [8]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/push_notifications/advanced_settings/#notification-priority
 [9]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/push_notifications/advanced_settings/#delivery-options
-[10]: {{site.baseurl}}/developer_guide/platform_integration_guides/fireos/push_notifications/advanced_settings/#sounds
+[10]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/push_notifications/android/advanced_settings/#sounds
 [11]: https://sendgrid.com/docs/API_Reference/SMTP_API/unique_arguments.html
 [12]: https://sendgrid.com/docs/for-developers/tracking-events/event/
-[13]: {{site.baseurl}}/developer_guide/platform_integration_guides/fireos/push_notifications/silent_push_notifications/#silent-push-notifications
+[13]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/push_notifications/android/silent_push_notifications/
 [14]: {{site.baseurl}}/developer_guide/rest_api/messaging/#external-user-id
 [15]: {{site.baseurl}}/user_guide/engagement_tools/segments/creating_a_segment/
 [16]: {% image_buster /assets/img_archive/keyvalue_automatickeys.png %}
@@ -175,3 +186,4 @@ Key-value pairs can be added to a News Feed Card in the Braze message composer b
 [21]: {% image_buster /assets/img_archive/keyvalue_iam.png %}
 [22]: {% image_buster /assets/img_archive/keyvalue_email.png %}
 [23]: {% image_buster /assets/img_archive/keyvalue_newsfeed.png %}
+[24]: {% image_buster /assets/img_archive/kvp_content_cards.png %}

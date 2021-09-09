@@ -1,5 +1,6 @@
 ---
 nav_title: Silent Push Notifications
+article_title: Silent Push Notifications for iOS
 platform: iOS
 page_order: 4
 description: "This article covers how to implement silent push notifications in your iOS application."
@@ -16,17 +17,19 @@ A Remote Notification is really just a normal Push Notification with the `conten
 
 Silent push notifications are rate-limited, so don't be afraid of sending as many as your application needs. iOS and the APNs servers will control how often they are delivered, and you won't get into trouble for sending too many. If your push notifications are throttled, they might be delayed until the next time the device sends a keep-alive packet or receives another notification.
 
-## Sending Remote Notifications
+## Sending Silent Remote Notifications
 
-To send a remote notification, set the `content-available` flag to 1 in a push notification payload. When you're sending a Remote Notification, you might also want to include some data in the notification payload, so your application can reference the event. This could save you a few networking requests and increase the responsiveness of your app.
+To send a silent remote notification, set the `content-available` flag to 1 in a push notification payload. When you're sending a silent remote notification, you might also want to include some data in the notification payload, so your application can reference the event. This could save you a few networking requests and increase the responsiveness of your app.
 
-The `content-available` flag can be set in the Braze dashboard (pictured below) as well as within our [User API][1].
+The `content-available` flag can be set in the Braze dashboard (pictured below) as well as within our [Apple Push Object]({{site.baseurl}}/api/objects_filters/messaging/apple_object/) in the [Messaging API][1].
 
 ![content-available][2]
 
 ## Use Silent Remote Notifications to Trigger Background Work
 
-Silent remote notifications can wake your app from a "Suspended" or "Not Running" state, to update content or run certain tasks without notifying your users. To send a silent remote push notification, you just need to set up the `content-available` flag with no message nor sound. Please set up your app's background mode to enable `remote notifications` under the "Capabilities" tab in your project settings.
+Silent remote notifications can wake your app from a "Suspended" or "Not Running" state to update content or run certain tasks without notifying your users. 
+
+To use silent remote notifications to trigger background work, set up the `content-available` flag following the above instructions with no message nor sound. Please set up your app's background mode to enable `remote notifications` under the "Capabilities" tab in your project settings.
 
 ![background-mode-enabled][3]
 
@@ -49,7 +52,7 @@ Braze has several features which rely on iOS Silent Push Notifications:
 
 For more information, check out Apple's developer site on the [Instance Method][7] and [Unreceived Notifications][8].
 
-[1]: {{site.baseurl}}/developer_guide/rest_api/user_data/#user-data
+[1]: {{site.baseurl}}/api/endpoints/messaging/
 [2]: {% image_buster /assets/img_archive/remote_notification.png %} "content available"
 [3]: {% image_buster /assets/img_archive/background_mode.png %} "background mode enabled"
 [4]: https://developer.apple.com/documentation/usernotifications/setting_up_a_remote_notification_server/pushing_background_updates_to_your_app?language=objc

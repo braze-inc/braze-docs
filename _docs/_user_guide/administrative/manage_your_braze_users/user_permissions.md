@@ -1,10 +1,11 @@
 ---
 nav_title: Braze Account User Permissions
+article_title: Braze Account User Permissions
 page_order: 2
-
 page_type: reference
 description: "This reference article covers user permissions in Braze, such as choosing who can access your apps on the Braze Dashboard."
 tool: Dashboard
+
 ---
 
 # Setting User Permissions
@@ -69,6 +70,5 @@ Individual users can be granted different degrees of access on an app-by-app bas
 
 [29]: {% image_buster /assets/img_archive/editing_user_permission_new.png %} "Edit User Permission"
 [30]: {% image_buster /assets/img_archive/user_accesses_new.png %} "User Permissions"
-[31]: {% image_buster /assets/img_archive/permission_diff_apps_new.png %} "Permissions App to App"
 [76]: {{site.baseurl}}/user_guide/administrative/manage_your_braze_users/user_permissions/
 [89]: {% image_buster /assets/img/user_permissions_selection.png %}

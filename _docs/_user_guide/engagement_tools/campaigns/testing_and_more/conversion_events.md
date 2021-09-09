@@ -1,12 +1,11 @@
 ---
 nav_title: Conversion Events
-platform: Campaigns
-subplatform: Testing and More
+article_title: Conversion Events
 page_order: 0
-
 page_type: tutorial
 description: "This how-to article goes over what conversion events are, how to use them and define your success metrics within Braze, and how to use these tools to see how engaged your users are"
 tool: Campaigns
+
 ---
 # Conversion Events
 
@@ -39,15 +38,11 @@ After setting up your campaign's messages and—for non-API campaigns—schedule
 
 For each conversion event you wish to track, select the event and conversion deadline:
 
-1. Select the general type of event you'd like to use.
-
-    ![Conversion Event Selection][2]
-
-    - __Opens App__: A user is counted as having converted when they open any one of the apps that you specify (defaults to all apps in the app group).
-    - __Makes Purchase__: A user is counted as having converted when they purchase the product you specify (defaults to any product).
-    - __Performs Custom Event__: A user is counted as having converted when they perform one of your existing custom events (no default, you must specify the event).
-  - __Upgrade App__: A user is counted as having converted when they upgrade the app version on any one of the apps that you specify (defaults to all apps in the app group). Braze will perform a best-efforts numerical comparison to determine if the version change was, in fact, an upgrade. For example, a user would convert if they upgrade from version 1.2.3 to 1.3.0 of the application, while Braze will not register a conversion if a user downgrades from 1.2.3 to 1.2.2. However, if the app's version names contain strings, such as "1.2.3-beta2", then Braze will not be able to determine if a version change was, in fact, an upgrade. In that situation, Braze will count it as a conversion when the user's most recent app version changes.
-
+1. Select the general type of event you'd like to use.<br>![Conversion Event Selection][2]<br><br>
+  - __Opens App__: A user is counted as having converted when they open any one of the apps that you specify (defaults to all apps in the app group).
+  - __Makes Purchase__: A user is counted as having converted when they purchase the product you specify (defaults to any product).
+  - __Performs Custom Event__: A user is counted as having converted when they perform one of your existing custom events (no default, you must specify the event).
+  - __Upgrade App__: A user is counted as having converted when they upgrade the app version on any one of the apps that you specify (defaults to all apps in the app group). Braze will perform a best-efforts numerical comparison to determine if the version change was, in fact, an upgrade. For example, a user would convert if they upgrade from version 1.2.3 to 1.3.0 of the application, while Braze will not register a conversion if a user downgrades from 1.2.3 to 1.2.2. However, if the app's version names contain strings, such as "1.2.3-beta2", then Braze will not be able to determine if a version change was, in fact, an upgrade. In that situation, Braze will count it as a conversion when the user's most recent app version changes.<br><br>
 2. Set a "conversion deadline." You have the option of allowing up to a 30-day window during which a conversion will be counted if the user takes the specified action.  
 
 Once you've selected your conversion events, continue the campaign creation process and begin sending your campaign.

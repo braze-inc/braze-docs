@@ -1,5 +1,6 @@
 ---
 nav_title: Settings
+article_title: Settings
 page_order: 0
 layout: dev_guide
 guide_top_header: "Settings"
@@ -7,7 +8,6 @@ guide_top_text: "The App Group Settings are useful for customization per app gro
 
 page_type: landing
 description: "This landing page includes resources for managing your App Groups in the Braze Dashboard."
-tool: Dashboard
 
 guide_featured_title: "Section Articles"
 

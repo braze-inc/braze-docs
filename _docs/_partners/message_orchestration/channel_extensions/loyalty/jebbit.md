@@ -1,10 +1,12 @@
 ---
 nav_title: Jebbit
+article_title: Jebbit
 page_order: 4
 description: "This article outlines the partnership between Braze and Jebbit, a PaaS that allows you to pass user emails and attributes from your Jebbit campaigns as user data to Braze in real-time."
 alias: /partners/jebbit/
-
 page_type: partner
+search_tag: Partner
+
 ---
 
 # Jebbit

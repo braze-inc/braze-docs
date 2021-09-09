@@ -1,15 +1,15 @@
 ---
 nav_title: "User Data Migration"
+article_title: SMS User Data Migration
 page_order: 4
 description: "This reference article runs through all the considerations you’ll need to keep in mind when you’re migrating your user data to Braze for SMS messaging."
 page_type: reference
-tool:
-  - Dashboard
-
 channel:
   - SMS
+
 ---
 
+<br>
 {% alert important %}
 Are you currently a non-native SMS client? If so, please visit the [non-native SMS documentation](/docs/user_guide/message_building_by_channel/sms/non_native/) for your corresponding user data migration article.
 {% endalert %}

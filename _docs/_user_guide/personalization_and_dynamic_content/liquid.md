@@ -1,7 +1,9 @@
 ---
 nav_title: Liquid
+article_title: Liquid
 page_order: 0
 layout: featured
+
 guide_top_header: "Personalization Using Liquid Tags"
 guide_top_text: "Braze can automatically substitute values from a given user into your messages. Put your expression inside of two sets of curly brackets to notify Braze that you'll be using an interpolated value. Inside of these brackets, any user values that you want to substitute must be surrounded by an additional set of brackets with a dollar sign in front of them."
 description: "Braze can automatically substitute values from a given user into your messages. Put your expression inside of two sets of curly brackets to notify Braze that you'll be using an interpolated value."
@@ -45,7 +47,7 @@ For more on Dynamic Personalization with Liquid, check out our detailed, guided 
 
 Liquid templating language supports the use of objects, tags and filters.
 
-- [**Objects**]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/overview/) allow you to insert personalized attributes into your messages.
+- [**Objects**]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/) allow you to insert personalized attributes into your messages.
 - [**Tags**]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/supported_personalization_tags/) allow you to execute programming logic in your messages. For example, you can use tags to include intelligent logic, such as "if" statements, in your campaigns.
 - [**Filters**]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/filters/) allow you to reformat personalized attributes and dynamic content. For example, you could convert a timestamp, such as *2016-09-07 08:43:50 UTC* into a date such as *September 7, 2016*.
 

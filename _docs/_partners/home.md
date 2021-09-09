@@ -1,12 +1,15 @@
 ---
 page_order: 0
+article_title: Technology Partners
 alias: /partners/Partners/
 layout: partner_page
+search_tag: Partner
+
 partner_api: "https://www.braze.com/api/v1/partners"
 partner_path: "https://www.braze.com/product/alloys/partners/"
+
 partner_top_header: "Technology Partners"
 partner_top_text: "Welcome to our list of Alloys (our allies - our best buds - our partners)! Use it to explore the technical documentation that will help implement Technology Partners into your Braze SDK. <br> <br>  If you're looking for information on joining our Firebrands, a community of movers and shakers using Braze to modernize their customer experience and marketing, check out our information page <a href='https://brazefirebrands.splashthat.com/'>here</a>."
-
 description: "This landing page includes all Braze partners. Use it to explore techncial documentation that will help implement Technology Partners into your braze SDK."
 
 valid_partner_list:

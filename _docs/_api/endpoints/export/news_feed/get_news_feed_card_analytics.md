@@ -1,14 +1,12 @@
 ---
 nav_title: "GET: News Feed Card Analytics"
+article_title: "GET: News Feed Card Analytics"
+search_tag: Endpoint
 page_order: 4
-
 layout: api_page
-
 page_type: reference
-channel: News Feed
-platform: API
-tool: Segments
 description: "This article outlines details about and using the Segments List endpoint to export a list of available Segments."
+
 ---
 {% api %}
 # News Feed Card Analytics Endpoint

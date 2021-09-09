@@ -1,12 +1,12 @@
 ---
 nav_title: Advancement Behaviors
-platform: Canvas
+article_title: Advancement Behaviors
 page_order: 2
 alias: /auto_advance/
-
 page_type: reference
 description: "This reference article describes Braze's Advancement Behavior feature and covers various scenarios that may come up as you advance through a Canvas."
 tool: Canvas
+
 ---
 
 # Advancing Your Users Through Canvas Steps

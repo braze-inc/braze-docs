@@ -1,19 +1,13 @@
 ---
 nav_title: "User Alias Object"
+article_title: API User Alias Object
 page_order: 11
-
 page_type: reference
-
-platform:
-  - API
-tool:
-  - Campaigns
-  - Canvas
-
 description: "This article explains the different components of the User Alias object."
+
 ---
 
-# User Alias Object
+# User Alias Object Specification
 
 An alias serves as an alternative unique user identifier. Use aliases to identify users along different dimensions than your core user ID:
 - Set a consistent identifier for analytics that will follow a given user both before and after they have logged in to a mobile app or website.

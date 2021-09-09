@@ -1,14 +1,10 @@
 ---
 nav_title: Overview
+article_title: API Overview
 page_order: 0
-
 description: "This reference article covers the API basics including what a REST API is, the terminology, a brief overview of API keys, and API limits."
 page_type: reference
-tool:
-  - Dashboard
-  - Docs
-platform:
-  - APIs
+
 ---
 # API Overview
 
@@ -19,7 +15,7 @@ platform:
 A REST API is a way to programmatically transfer information over the web using a predefined schema. Braze has created many different endpoints which perform various actions and/or return various data.
 
 {% alert note %}
-Customers using Braze's EU database should use the `https://rest.fra-01.braze.eu/` endpoint. This endpoint will be used when configuring the Braze [iOS]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/initial_sdk_setup/carthage_integration/#compile-time-endpoint-configuration-recommended), [Android]({{site.baseurl}}/developer_guide/platform_integration_guides/android/initial_sdk_setup/android_sdk_integration/#step-2-configure-the-braze-sdk-in-brazexml), and [Web]({{site.baseurl}}/developer_guide/platform_integration_guides/web/initial_sdk_setup/#step-2-initialize-braze) SDKs.
+Customers using Braze's EU database should use the `https://rest.fra-01.braze.eu/` endpoint. This endpoint will be used when configuring the Braze [iOS]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/initial_sdk_setup/completing_integration/#compile-time-endpoint-configuration-recommended), [Android]({{site.baseurl}}/developer_guide/platform_integration_guides/android/initial_sdk_setup/android_sdk_integration/#step-2-configure-the-braze-sdk-in-brazexml), and [Web]({{site.baseurl}}/developer_guide/platform_integration_guides/web/initial_sdk_setup/#step-2-initialize-braze) SDKs.
 {% endalert %}
 
 ## API Definitions
@@ -124,6 +120,7 @@ The Braze API infrastructure is designed to handle high volumes of data across o
 |Default API Rate Limit | Value|
 |---|---|
 |Requests to the `/users/track` endpoint| User Track has a base speed limit of 50,000 requests per minute for all customers. This limit can be increased upon request. Please reach out to your Customer Success Manager for more information. |
+|Requests to the `/users/export/ids` endpoint|2,500 requests per minute. |
 |Batching with the `/users/track` endpoint|75 Events, 75 Purchases, and 75 Attributes per API request. |
 |Requests to the Send endpoint specifying a Segment or Connected Audience|250 per minute. |
 |Send Identifier Creation|100 per day. |
@@ -160,7 +157,7 @@ Understanding Optimal Delay between endpoints is crucial when making consecutive
 Under normal conditions, the time for our data eventual consistency to occur is 10-100 ms (1/10 of a second). However, there can be some cases where it takes longer for that consistency to occur. Therefore, we recommend that customers allow a __5-minute delay__ between making subsequent calls to minimize the probability of error.
 
 [1]: https://en.wikipedia.org/wiki/UTF-8
-[7]: {{site.baseurl}}/developer_guide/rest_api/messaging/#connected-audience-object
+[7]: {{site.baseurl}}/api/objects_filters/connected_audience/
 [8]: https://dashboard-01.braze.com/app_settings/developer_console/ "Developer Console"
 [9]: {{site.baseurl}}/developer_guide/platform_integration_guides/ios/analytics/setting_user_ids/
 [10]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/analytics/setting_user_ids/

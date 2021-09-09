@@ -1,5 +1,6 @@
 ---
 nav_title: Platform Wide Features & Behaviors
+article_title: Platform Wide Features & Behaviors
 layout: dev_guide
 page_order: 1
 guide_top_header: "Platform Wide Features & Behaviors"

@@ -1,17 +1,12 @@
 ---
 nav_title: Rate-Limiting and Frequency Capping
-platform:
-  - iOS
-  - Android
-  - Web
-subplatform: Testing and More
+article_title: Rate-Limiting and Frequency Capping
 page_order: 1
 tool:
   - Campaigns
-  - Canvas
-  - Segments
 page_type: reference
 description: "This reference article discusses the concept of rate limiting and frequency capping, and how you can apply marketing pressure to improve user experience."
+
 ---
 
 # Rate-Limiting and Frequency Capping

@@ -8,7 +8,7 @@ channel: push
 platform:
 - iOS
 - Android
-no_index: true
+noindex: true
 ---
 
 # Common Push Related Error Messages
@@ -19,7 +19,7 @@ no_index: true
 MismatchSenderId indicates an authentication failure.  Gooogle Cloud Messaging (GCM) authenticates with a couple key pieces of data: senderID and GCM API key.  These should both be validated for accuracy. For more information see the [public documentation](https://developer.apple.com/library/archive/documentation/NetworkingInternet/Conceptual/RemoteNotificationsPG/CommunicatingwithAPNs.html) about this issue.
 
 Common failures:
-- Bad [senderID]({{site.baseurl}}/developer_guide/platform_integration_guides/android/push_notifications/integration/#firebase-integration)
+- Bad [senderID]({{site.baseurl}}/developer_guide/platform_integration_guides/android/push_notifications/integration/standard_integration/#step-1-enable-firebase)
 - Multiple registration, this can happen if they register with another push service with a different senderID.
 
 ### Push Bounced: InvalidRegistration

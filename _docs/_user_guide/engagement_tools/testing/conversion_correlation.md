@@ -1,13 +1,14 @@
 ---
 nav_title: Conversion Correlation
+article_title: Conversion Correlation
 alias: /conversion_correlation/
 page_order: 3
 
 page_type: reference
 description: "This reference article explains the Conversion Correlation analysis on the Campaign Analytics page."
 tool: 
-- Campaigns
-- Reports
+  - Reports
+  
 ---
 
 # Conversion Correlation
@@ -33,8 +34,8 @@ We check the following attributes by treating them as categorical variables. In 
 
 We also check whether the following affect the rate of conversion:
 
-- Having ever performed any of your top 10 most common custom events
-- Having received any of your top 10 highest volume campaigns in the last 30 days (other than the campaign currently being assessed)
+- Performing any custom events
+- Campaigns and Canvases received in the last 30 days (other than the campaign currently being assessed)
 
 Finally, we check several behavioral variables that can take on multiple values. We split the following into 4 buckets or quartiles and then measure the association of being in that quartile with increases or decreases in conversion:
 

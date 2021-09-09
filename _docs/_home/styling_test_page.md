@@ -38,6 +38,22 @@ H6 Text
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed nec tortor at lectus tempus tempor. Suspendisse tellus diam, finibus eu dictum non, varius et ipsum.
 
+### Custom Anchor
+
+To add an anchor to a heading, add the following code to the end of the line that the heading is on. Replace `anchor-text` with the anchor for this heading. Use lowercase letters and put hyphens between words.
+
+```
+# Heading Text {#anchor-text}
+```
+
+You can link to headings with custom anchors by creating a standard link with a number sign `#` followed by the custom anchor.
+
+{% raw %}
+```
+Here is my [link](#anchor-text)
+```
+{% endraw %}
+
 ## Font Test
 
 Normal Text

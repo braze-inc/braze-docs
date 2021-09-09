@@ -1,12 +1,12 @@
 ---
 nav_title: "GET: Custom Events Analytics"
+article_title: "GET: Custom Event Analytics"
+search_tag: Endpoint
 page_order: 4
-
 layout: api_page
-
 page_type: reference
-platform: API
 description: "This article outlines details about the Custom Events Analytics endpoint."
+
 ---
 {% api %}
 # Custom Events Analytics

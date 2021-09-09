@@ -1,10 +1,12 @@
 ---
 nav_title: Microsoft Azure Blob Storage
+article_title: Microsoft Azure Blob Storage
 page_order: 3
 alias: /partners/microsoft_azure_blob_storage_for_currents/
-
 description: "This article outlines the partnership between Braze Currents and Microsoft Azure Blog Storage, a massively scalable object storage for unstructured data."
 page_type: partner
+tool: Currents
+search_tag: Partner
 
 ---
 

@@ -1,18 +1,13 @@
 ---
 nav_title: "SMS Laws & Regulations"
+article_title: SMS Laws & Regulations
 page_order: 1
 description: "This reference article covers laws and regulations surrounding SMS."
 page_type: reference
-tool:
-  - Dashboard
-  - Campaigns
-
-platform:
-  - iOS
-  - Android
-
+noindex: true
 channel:
   - SMS
+  
 ---
 
 # SMS Laws, Regulations, & Abuse Prevention

@@ -1,7 +1,6 @@
 ---
 nav_title: Modal
-platform: Message_Building_and_Personalization
-subplatform: In-App Messages
+article_title: Modal In-App Messages
 page_order: 1
 channel:
   - in-app messages

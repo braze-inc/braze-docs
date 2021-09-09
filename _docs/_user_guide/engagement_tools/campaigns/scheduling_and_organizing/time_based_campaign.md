@@ -1,12 +1,11 @@
 ---
 nav_title: Time-Based Functionalities for Campaigns
-platform: Campaigns
-subplatform: Scheduling and Organizing
+article_title: Time-Based Functionalities for Campaigns
 page_order: 0
-
 tool: Campaigns
 page_type: reference
 description: "This reference article covers time-based functionalities for Campaigns."
+
 ---
 # Time-Based Functionalities for Campaigns
 

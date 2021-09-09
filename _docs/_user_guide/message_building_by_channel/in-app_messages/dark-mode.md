@@ -1,5 +1,6 @@
 ---
 nav_title: Dark Mode Themes
+article_title: Dark Mode for In-App Messages
 page_order: 5.20
 description: "Braze in-app messages support adding an alternate Dark theme to help deliver the right color message to your users based on their preference, and helps provide consistency with your app's design."
 channel:
@@ -28,7 +29,7 @@ The new Dark Mode option, located in the Style tab when [creating an in-app mess
 When this option is enabled, you can choose dark theme colors for your in-app message using the color picker, or by selecting existing [Color Profiles][2] to re-use existing Dark or Light themes.
 
 {% alert note %}
-You may still use this feature even if your app does not offer its own dark theme. However, devices which do not support Dark Mode will display the _Light_ theme by default.
+You may still use this feature even if your app does not offer its own dark theme. However, devices which do not support Dark Mode will display the _Light_ theme by default. Additionally, changing the devices theme on Android while an in-app message is being displayed won't change which theme is used for that in-app message.
 {% endalert %}
 
 ### Using Dark Mode Consistently
@@ -39,7 +40,7 @@ To use Dark Mode for all in-app messages, go to Templates & Media, then In-App M
 - End users must be on iOS devices version 13 or higher, or Android devices version 10 or higher.
 - Braze iOS SDK v3.21.0+ Braze Android SDK v3.8.0+ is required.
 
-{% alert info %}
+{% alert tip %}
 Dark Mode apps were introduced with Android 10 and iOS 13. Users who have not upgraded their phones to at least these versions will only be shown the light theme.
 
 Campaigns will still be served to all users who are eligible for the audience you have selected, regardless of users' Dark Mode setting or OS version.

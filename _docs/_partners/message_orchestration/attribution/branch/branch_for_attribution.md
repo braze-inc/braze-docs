@@ -1,9 +1,10 @@
 ---
 nav_title: Branch for Attribution
+article_title: Branch for Attribution
 alias: /partners/branch_for_attribution/
-
 description: "This article outlines the partnership between Braze and Branch, a mobile linking platform that helps you acquire, engage, and measure across all devices, channels, and platforms."
 page_type: partner
+search_tag: Partner
 
 ---
 

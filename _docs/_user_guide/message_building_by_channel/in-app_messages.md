@@ -1,5 +1,6 @@
 ---
 nav_title: "In-App Messages"
+article_title: In-App Messages
 page_order: 2
 alias: /in-app_messages/
 layout: featured
@@ -94,4 +95,4 @@ Full-Screen messages are exactly what you'd expect - they take up the whole scre
 {% endtabs %}
 
 [11]: https://www.braze.com/customers
-[21]: {{site.baseurl}}/help/best_practices/push/creating_custom_opt-in_prompts/#creating-custom-opt-in-prompts
+[21]: {{site.baseurl}}/user_guide/message_building_by_channel/push/best_practices/

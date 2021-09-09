@@ -1,14 +1,13 @@
 ---
 nav_title: Double Opt-In Process
+article_title: Non-Native SMS Double Opt-In Process
 page_order: 5
 description: "This reference article covers how Braze processes certain keywords for non-native SMS users, as well as best practices when creating an SMS webhook campaign."
 page_type: reference
-tool:
-  - Campaigns
-
 channel:
   - SMS
   - webhooks
+
 ---
 
 # Double Opt-In Process

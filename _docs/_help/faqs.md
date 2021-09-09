@@ -1,5 +1,6 @@
 ---
 nav_title: FAQs
+article_title: Frequently Asked Questions
 page_order: 6
 hide_toc: true
 layout: featured

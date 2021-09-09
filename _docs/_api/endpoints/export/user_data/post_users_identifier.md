@@ -1,16 +1,12 @@
 ---
 nav_title: "POST: User Profile Export by Identifier"
+article_title: "POST: User Profile Export by Identifier"
+search_tag: Endpoint
 page_order: 4
-
 layout: api_page
-
 page_type: reference
-platform: API
-tool:
-  - Canvas
-  - Campaigns
-
 description: "This article outlines details about the Users by ID Braze endpoint."
+
 ---
 {% api %}
 # Users by Identifier Endpoint
@@ -21,6 +17,10 @@ description: "This article outlines details about the Users by ID Braze endpoint
 This endpoint allows you to export data from any user profile by specifying a form of user identifier. Up to 50 `external_ids` or `user_aliases` can be included in a single request. Should you want to specify `device_id` or `email_address` only one of either identifier can be included per request.
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#b9750447-9d94-4263-967f-f816f0c76577 {% endapiref %}
+
+{% alert update %}
+Customers who onboard on or after August 16, 2021 will have a rate limit of 2,500 requests per minute on this endpoint.
+{% endalert %}
 
 ## Request Body
 

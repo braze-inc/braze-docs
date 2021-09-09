@@ -1,6 +1,9 @@
 ---
 nav_title: Deep Linking
-platform: Android
+article_title: Deep Linking for Android/FireOS
+platform: 
+  - Android
+  - FireOS
 page_order: 0
 description: "This article covers how to implement the universal deep linking delegate for your Android app, as well as examples on how to deep link to app settings or a News Feed."
 
@@ -170,9 +173,55 @@ To deep link to the Braze News Feed from a push notification, [create a custom d
 
 Then, as you set up your push notification campaign (either through the [dashboard][2] or [API][3]), configure the notification to navigate to your News Feed Deep Link.
 
-[1]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/push_notifications/integration/#step-3-add-deep-links
+## Custom WebView Activity {#Custom_Webview_Activity}
+
+By default, when website deeplinks are opened inside the app by Braze, they are handled by [`BrazeWebViewActivity`][udl-4]. To change this:
+
+**1.** Create a new Activity that handles the target URL from `Intent.getExtras()` with the key `com.appboy.Constants.APPBOY_WEBVIEW_URL_EXTRA`. See [`BrazeWebViewActivity.java`][udl-8] for an example.<br><br>
+**2.** Add that activity to `AndroidManifest.xml` and set `exported` to `false`.
+
+```xml
+<activity
+    android:name=".MyCustomWebViewActivity"
+    android:exported="false" />
+```
+
+**3.** Set your custom Activity in a `BrazeConfig` [builder object][udl-6]. Build the builder and pass it to [Braze.configure()][udl-5] in your [`Application.onCreate()`][udl-7]
+
+{% tabs %}
+{% tab JAVA %}
+
+```java
+BrazeConfig brazeConfig = new BrazeConfig.Builder()
+    .setCustomWebViewActivityClass(MyCustomWebViewActivity::class)
+    ...
+    .build();
+Braze.configure(this, brazeConfig);
+```
+
+ {% endtab %}
+ {% tab KOTLIN %}
+
+```kotlin
+val brazeConfig = BrazeConfig.Builder()
+    .setCustomWebViewActivityClass(MyCustomWebViewActivity::class.java)
+    ...
+    .build()
+Braze.configure(this, brazeConfig)
+```
+
+ {% endtab %}
+ {% endtabs %}
+
+
+[1]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/push_notifications/integration/standard_integration/#step-4-add-deep-links
 [2]: {{site.baseurl}}/user_guide/message_building_by_channel/push/creating_a_push_message/#creating-a-push-message
-[3]: {{site.baseurl}}/developer_guide/rest_api/messaging/#messaging
+[3]: {{site.baseurl}}/api/endpoints/messaging/
 [udl-1]: https://appboy.github.io/appboy-android-sdk/javadocs/com/appboy/ui/actions/UriAction.html
 [udl-2]: https://appboy.github.io/appboy-android-sdk/javadocs/com/appboy/ui/AppboyNavigator.html#setAppboyNavigator-com.appboy.IAppboyNavigator-
 [udl-3]: https://appboy.github.io/appboy-android-sdk/javadocs/com/appboy/IAppboyNavigator.html
+[udl-4]: https://appboy.github.io/appboy-android-sdk/javadocs/com/braze/ui/BrazeWebViewActivity.html
+[udl-5]: https://appboy.github.io/appboy-android-sdk/javadocs/com/appboy/Appboy.html#configure-android.content.Context-com.appboy.configuration.BrazeConfig-
+[udl-6]: https://appboy.github.io/appboy-android-sdk/javadocs/com/braze/configuration/BrazeConfig.Builder.html
+[udl-7]: https://developer.android.com/reference/android/app/Application.html#onCreate()
+[udl-8]: https://github.com/Appboy/appboy-android-sdk/blob/master/android-sdk-ui/src/main/java/com/braze/ui/BrazeWebViewActivity.java

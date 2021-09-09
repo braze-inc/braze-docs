@@ -5,7 +5,7 @@ platform: FireOS
 description: "This article covers an overview of how to integrate the News Feed into your Android application."
 channel:
   - news feed
-  
+hidden: true  
 ---
 
 # News Feed Integration Overview

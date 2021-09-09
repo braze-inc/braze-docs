@@ -1,10 +1,10 @@
 ---
 nav_title: User Import
+article_title: User Import
 page_order: 4
-
 page_type: reference
 description: "This reference article covers the topic of how to Import Users into your Braze Dashboard and necessary best practices."
-tool: Dashboard
+
 ---
 # User Import
 
@@ -18,13 +18,34 @@ Braze does not sanitize HTML data during ingestion time, this means that script 
 You can use Braze’s User Track REST API endpoint to record custom events, user attributes, and purchases for users. See [User Track Endpoint][12] for more information.
 
 ## CSV
-You can also upload and update user profiles via CSV files from the **User Import** page. This feature supports recording and updating user attributes such as first name and email, in addition to custom attributes such as shoe size.
+You can also upload and update user profiles via CSV files from the **User Import** page. This feature supports recording and updating user attributes such as first name and email, in addition to custom attributes such as shoe size. There are two different ways you can approach a CSV import, depending on if your users have an `external_id` or not.
+
+### Import with External ID
 
 When importing your customer data, you'll need to specify each customer’s unique identifier, also known as `external_id`. Before starting your CSV import it’s important to understand from your engineering team how users will be identified in Braze. Typically this would be a database ID used internally. This should align with how users will be identified by the Braze SDK on mobile and web, and ensures that each customer will have a single user profile within Braze across their devices. Read more about [Braze’s user profile lifecycle][13].
 
 When you provide an `external_id` in your import, Braze will update any existing user with the same `external_id` or create a newly identified user with that `external_id` set if one is not found.
 
-[Download a CSV Import Template here.][template]
+<i class="fas fa-file-download"></i> Download: [CSV Import Template][template]
+
+### Import with User Alias
+
+To target users who don't have an `external_id`, you can import a list of users with user aliases. An alias serves as an alternative unique user identifier, and can be helpful if you are trying to market to anonymous users who haven't signed up or made an account with your app.
+
+If you are uploading or updating user profiles that are alias only, you must have the following two columns in your CSV:
+
+- `user_alias_name`: A unique user identifier; an alternative to the `external_id`.
+- `user_alias_label`: A common label by which to group user aliases.
+
+![User Alias Import CSV Example][8]
+
+When you provide both a `user_alias_name` and `user_alias_label` in your import, Braze will update any existing user with the same `user_alias_name` or create a newly identified user with that `user_alias_name` set if one is not found.
+
+{% alert important %}
+You can't use a CSV import to update an existing user with a `user_alias_name` if they already have an `external_id`. This will instead create a new user profile with the associated `user_alias_name`. To associate an alias-only user with an `external_id`, use the [Identify Users]({{site.baseurl}}/api/endpoints/user_data/post_user_identify/) endpoint.
+{% endalert %}
+
+<i class="fas fa-file-download"></i> Download: [CSV Alias Import Template][template_alias]
 
 ### Constructing Your CSV
 
@@ -39,7 +60,7 @@ When importing customer data, the Column Headers you use must map exactly to the
 
 Braze accepts user data in the standard CSV format from files up to 100MB in size.
 
-[Download a CSV Import Template here.][template]
+<i class="fas fa-file-download"></i> Download: [CSV Import Template][template]
 
 ### Data Point Considerations
 
@@ -105,7 +126,7 @@ For uploading these kinds of values, please use the [User Track Endpoint]({{site
 
 To import your CSV file, navigate to the **User Import** page under the Users section on the left-hand toolbar. In the lower text box, **Recent Imports**, there will be a table that lists up to twenty of your most recent imports, their file names, number of lines in the file, number of lines successfully imported, total lines in each file, and the status of each import.
 
-[Download a CSV Import Template here.][template]
+<i class="fas fa-file-download"></i> Download: [CSV Import Template][template]
 
 The upper box, **Import CSV**, will contain importing directions and a button to begin your import. Click **Select CSV File** and select your file of interest, then click **Start Upload**. Braze will upload your file and check the column headers as well as the data types of each column.
 
@@ -145,17 +166,28 @@ You can set the name of the segment or accept the default, which is the name of 
 
 The filter used to create the segment selects users who were created or updated in a selected import and is available with all other filters in the edit segment page.
 
-{% alert update %}
-As of 4/10/2018, for each user, only the last 100 CSVs the user was imported/updated in are cached. So, if you attempt to create a segment by filtering for members who were in an older import, the segment will not include users who have been in 100 or more imports since. Prior to 4/10/2018, Braze cached the last 10 CSVs that a user was imported/updated in.
-{% endalert %}
-
 ## HTML Data Stripping
 
-Braze does not sanitize HTML data during ingestion time. When importing data into Braze, specifically meant for personalization usage in a web browser, ensure that it is stripped of HTML, JavaScript, or any other script tag that potentially could be leveraged maliciously when rendered in a web browser.  Alternatively, for HTML, you can use Braze's Liquid filters (strip_html) to HTML escape rendered text. 
+Braze does not sanitize HTML data during ingestion time. When importing data into Braze, specifically meant for personalization usage in a web browser, ensure that it is stripped of HTML, JavaScript, or any other script tag that potentially could be leveraged maliciously when rendered in a web browser.  
 
-__Liquid Example:__<br>
-{% raw %}Input:  {{ "Have <em>you</em> read <strong>Ulysses</strong>?" &#124; strip_html }}{% endraw %}<br>
-Output: Have you read Ulysses?
+Alternatively, for HTML, you can use Braze's Liquid filters (`strip_html`) to HTML escape rendered text. For example:
+
+{% tabs local %}
+{% tab Input %}
+{% raw %}
+```liquid
+{{ "Have <em>you</em> read <strong>Ulysses</strong>?" &#124; strip_html }}
+```
+{% endraw %}
+{% endtab %}
+{% tab Output %}
+{% raw %}
+```liquid
+Have you read Ulysses?
+```
+{% endraw %}
+{% endtab %}
+{% endtabs %}
 
 ## Troubleshooting
 
@@ -188,7 +220,9 @@ Braze will ban or block users ("dummy users") with over 5 million sessions and n
 [3]: {% image_buster /assets/img/importcsv.png %}
 [6]: {% image_buster /assets/img/csv-errors.png %}
 [7]: {% image_buster /assets/img/segment-imported-users.png %}
+[8]: {% image_buster /assets/img_archive/user_alias_import_1.png %}
 [12]: {{site.baseurl}}/developer_guide/rest_api/user_data/#user-track-endpoint
 [13]: {{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/user_profile_lifecycle/
 [errors]:#common-errors
 [template]: {% image_buster /assets/download_file/braze-user-import-template-csv.xlsx %}
+[template_alias]: {% image_buster /assets/download_file/braze-user-import-alias-template-csv.xlsx %}

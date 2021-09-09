@@ -1,13 +1,14 @@
 ---
 nav_title: Apteligent
+article_title: Apteligent
 alias: /partners/apteligent/
-
 description: "This article outlines the partnership between Braze and Apteligent, which details crash reporting, allowing you to log critical data into your existing Braze solution."
 page_type: partner
-platform: ios
+search_tag: Partner
 
 ---
-# Apteligent Integration
+
+# Apteligent
 
 > Braze is dedicated to creating partner integrations that provide data-driven approaches to improving your application's user experience. The [Apteligent][1] and Braze partnership combines Braze's multichannel engagement automation with Apteligent's detailed crash reporting, allowing you to log critical data into your existing Braze solution. Together, Apteligent and Braze can help you segment, understand, and engage with your users who have experienced application crashes.
 

@@ -1,8 +1,8 @@
 ---
 nav_title: News Feed
+article_itle: News Feed Integration for Web
 platform: Web
 page_order: 3
-
 page_type: reference
 description: "This article covers how to interact with News Feeds via the Braze SDK."
 channel: news feed
@@ -111,6 +111,6 @@ See the JSDocs for [ab.ClassicCard][3], [ab.Banner][4], or [ab.CaptionedImage][5
 [3]: https://js.appboycdn.com/web-sdk/latest/doc/ab.ClassicCard.html
 [4]: https://js.appboycdn.com/web-sdk/latest/doc/ab.Banner.html
 [5]: https://js.appboycdn.com/web-sdk/latest/doc/ab.CaptionedImage.html
-[14]: {{site.baseurl}}/help/best_practices/news_feed/
+[14]: {{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/reporting/
 [17]: https://js.appboycdn.com/web-sdk/latest/doc/ab.Feed.html
 [25]: {% image_buster /assets/img_archive/UnreadvsReadNewsFeedCard.png %}

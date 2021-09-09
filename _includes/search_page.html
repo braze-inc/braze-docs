@@ -89,31 +89,19 @@
       return str;
     }
 
-    String.prototype.upCaseWord = function() {
-      return this.toString().replace(/\b\w/g, function(l){ return l.toUpperCase() });
-    };
-    String.prototype.replaceUnder = function() {
-      return this.toString().replace(/\%20/g, ' ').replace(/\_/g, ' ');
-    };
-    Array.prototype.replaceUnder = function() {
-      return this.map(function(itm){ return itm.toString().replace(/\%20/g, ' ').replace(/\_/g, ' ')});
-    };
-    Array.prototype.upCaseWord = function() {
-      return this.map(function(itm){ return itm.toString().replace(/\b\w/g, function(l){ return l.toUpperCase() }) });
-    };
     function adjustlabel(data) {
       return data.map(d => {
-        d.highlighted = d.highlighted.replace(/\_/g,' ').replaceUnder().upCaseWord().mapReplace(wordmap)
+        d.highlighted = d.highlighted.replace(/\_/g,' ').replaceUnder().upCaseWord().mapReplace(custom_word_mapping);
         return d;
       });
     }
+
     function hitTemplate(hit, bindEvent) {
       var content = '';
       var title = '';
       var type = '';
       var category = '';
-      var platform = '';
-      var subname = '';
+      var tags_list = "";
       var heading = '';
 
       if ('nav_title' in hit) {
@@ -121,6 +109,10 @@
       } else {
         title = hit.title.replaceUnder() ;
       }
+      if ('article_title' in hit) {
+        title = hit.article_title.replaceUnder() ;
+      }
+
       if ('type' in hit) {
         type = hit.type.replaceUnder().upCaseWord() ;
       }
@@ -132,72 +124,67 @@
           category = hit.category.replaceUnder() ;
         }
       }
-      if ('platform' in hit) {
-        if (Array.isArray(hit.platform)) {
-          platform = hit.platform.map(x => x.replaceUnder() ).join(',');
-        }
-        else {
-          platform = hit.platform.replaceUnder() ;
+      // Tags list
+      for (var mp in search_color_mapping) {
+        if (mp in hit) {
+          var i_tags = hit[mp];
+          if (Array.isArray(i_tags)) {
+            for (var its = 0; its < i_tags.length; its++) {
+              tags_list += '<span class="search_tags" style="background-color: ' + search_color_mapping[mp] +
+                ';">' + i_tags[its].upCaseWord().mapReplace(custom_word_mapping) + '</span>';
+            }
+          }
+          else {
+            tags_list += '<span class="search_tags" style="background-color: ' + search_color_mapping[mp] +
+              ';">' + i_tags.upCaseWord().mapReplace(custom_word_mapping) + '</span>';
+          }
         }
       }
-      if (platform || category) {
-        subname = '(' + type + ': ' + platform;
-        if (platform) {
-          subname += ' - ';
-        }
-        subname += category.upCaseWord() + ')';
+      // Navigational Heading
+      var article_path = '';
+      if ('url' in hit) {
+        var article_url = hit['url'].split('/');
+        // Remove 2 last item and first item
+        article_url.pop();
+        article_url.pop();
+        article_url.shift();
+        article_path = `<div class="article_path">${article_url.join(' > ').replaceUnder().upCaseWord().mapReplace(custom_word_mapping)}</div>`;
       }
-
       if ('headings' in hit) {
         if (hit['headings']) {
           heading = hit['headings'][hit['headings'].length - 1];
         }
       }
-
-      if ('content' in hit._highlightResult) {
-        if ('value' in hit._highlightResult.content) {
-          content = hit._highlightResult.content.value.replace(/<(.|\n)*?>/g, '');
+      if ('description' in hit) {
+        content = hit.description.replace(/<(.|\n)*?>/g, '');
+      }
+      else {
+        if ('content' in hit._highlightResult) {
+          if ('value' in hit._highlightResult.content) {
+            content = hit._highlightResult.content.value.replace(/<(.|\n)*?>/g, '');
+          }
+        }
+        if (!content && ('guide_top_text' in hit)) {
+          content = hit.guide_top_text.replace(/<(.|\n)*?>/g, '');
         }
       }
 
+      if (content.length > 200) {
+        content = content.substring(0, 200);
+        content += "...";
+      }
       var url = hit.url;
       if (heading){
         url += '#' + string_to_slug(heading);
       }
-      return `<div class="hit"><a href="{{site.baseurl}}${url}" ${bindEvent('click', hit, 'Clicked from Page Search')} ><div class="hit-content"><div><div class="hit-name">${title } </div> <div class="hit-subname">${subname} </div><div class="hit-description">${ content }</div></div></div></a><hr /></div>`;
+      return `<div class="hit"><a href="{{site.baseurl}}${url}" ${bindEvent('click', hit, 'Clicked from Page Search')} ><div class="hit-content"><div><div class="hit-name">${title } </div> <div class="hit-subname">${tags_list} </div>${article_path}<div class="hit-description">${ content }</div></div></div></a><hr /></div>`;
     }
-    String.prototype.mapReplace = function(map) {
-      var mstr = this;
-      for (var wd in map) {
-        if (map.hasOwnProperty(wd)) {
-            var rep = new RegExp('\\b' + wd + '\\b','gi');
-            mstr = mstr.replace(rep,map[wd]);
-        }
-      }
-      return mstr;
-    };
-    String.prototype.sanitize = function() {
-      return this.replace(/\+/g, ' ').replace(/\%20/g, ' ').replace(/\_/g, ' ').replace(/</g,'').replace(/>/g,'').replace(/&lt;/g,'').replace(/&gt;/g,'').replace(/\'/g,'').replace(/\"/g,'');
-    };
+
 
     String.prototype.upCaseWord = function() {
       return this.toString().replace(/\b\w/g, function(l){ return l.toUpperCase() });
     };
 
-
-    var wordmap = {
-      'REST' : 'REST',
-      'API' : 'API',
-      'APIs' : 'APIs',
-      'iOS' : 'iOS',
-      'ID' : 'ID',
-      'IDs' : 'IDs',
-      'FAQ' : 'FAQ',
-      'FAQS' : 'FAQs',
-      'In-App' : 'In-App',
-      'GPDR' : 'GPDR',
-      'mParticle' : 'mParticle'
-    }
     const searchClient = algoliasearch('{{ site.algolia.application_id }}', '{{ site.algolia.algolia_api_key }}');
     const insightsMiddleware = instantsearch.middlewares.createInsightsMiddleware({
       insightsClient: window.insightsClient,

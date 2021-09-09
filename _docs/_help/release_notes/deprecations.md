@@ -1,5 +1,6 @@
 ---
 nav_title: Deprecations
+article_title: Deprecations
 page_order: 9
 layout: featured
 
@@ -65,7 +66,7 @@ The Braze SDK provided a feedback widget that could be added to your app to allo
 
 ## Google Cloud Messaging (GCM)
 
-_Replaced by: [Firebase Cloud Messaging (FCM)]({{site.baseurl}}/developer_guide/platform_integration_guides/android/push_notifications/integration/#firebase-integration)_
+_Replaced by: [Firebase Cloud Messaging (FCM)]({{site.baseurl}}/developer_guide/platform_integration_guides/android/push_notifications/integration/standard_integration/#step-1-enable-firebase)_
 
 _Integration_
 
@@ -73,7 +74,7 @@ _Support withdrawn: July 2018 (Braze removal of support) and May 29, 2019 (Googl
 
 [Google has removed support for GCM](https://developers.googleblog.com/2018/04/time-to-upgrade-from-gcm-to-fcm.html) as of May 29, 2019. Braze removed support for GCM from the Android SDKs in July 2018, which was noted within [our Android SDK changelogs](https://github.com/Appboy/appboy-android-sdk/blob/master/CHANGELOG.md). This means that existing GCM tokens will continue to work and you will be able to message your existing users. However, you will not be able to message new users.
 
-Customers that have not already migrated to [Firebase Cloud Messaging (FCM)]({{site.baseurl}}/developer_guide/platform_integration_guides/android/push_notifications/integration/#firebase-integration) may be affected by this change.
+Customers that have not already migrated to [Firebase Cloud Messaging (FCM)]({{site.baseurl}}/developer_guide/platform_integration_guides/android/push_notifications/integration/standard_integration/#step-1-enable-firebase) may be affected by this change.
 
 If you have not transitioned to FCM, all GCM push tokens registrations will fail. If your apps are currently supporting GCM, you’ll need to work with your development teams on [transitioning from GCM to Firebase Cloud Messaging (FCM)](https://developers.google.com/cloud-messaging/android/android-migrate-fcm).
 

@@ -1,17 +1,12 @@
 ---
 nav_title: "GET: Segment Analytics"
+article_title: "GET: Segment Analytics"
+search_tag: Endpoint
 page_order: 4
-
 layout: api_page
-
 page_type: reference
-platform: API
-channel: Email
-tool:
-  - Canvas
-  - Campaigns
-
 description: "This article outlines details about and using the Get Segment Analytics endpoint."
+
 ---
 {% api %}
 # Segment Analytics Endpoint

@@ -1,5 +1,6 @@
 ---
 nav_title: Defining a News Feed Category
+article_title: Defining a News Feed Category for iOS
 platform: iOS
 page_order: 2
 description: "This reference article shows how to define a News Feed category in your iOS application."
@@ -61,4 +62,4 @@ newsFeed.categories = ABKCardCategory([.announcements, .advertising])
 {% endtab %}
 {% endtabs %}
 
-[40]: {{site.baseurl}}/help/best_practices/news_feed/
+[40]: {{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/reporting/

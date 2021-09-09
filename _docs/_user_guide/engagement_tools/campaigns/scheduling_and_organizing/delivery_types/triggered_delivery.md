@@ -1,10 +1,11 @@
 ---
 nav_title: Action-Based Delivery
+article_title: Action-Based Delivery
 page_order: 1
-
 page_type: reference
 description: "This reference article describes how to trigger campaigns to send after a user completes a certain event."
 tool: Campaigns
+
 ---
 
 # Action-Based Delivery
@@ -108,7 +109,7 @@ Triggered campaigns are very effective for transactional or achievement-based me
 
 Transactional campaigns include messages sent after the user completes a purchase or adds an item to their cart. The latter case is a great example of a campaign that would benefit from an exception event. Say your campaign reminds users of items in their cart that they haven't purchased. The exception event, in this case, would be the user buying the products in their cart. For achievement-based campaigns, you can send a message 5 minutes after the user completes a conversion or beats a game level.
 
-In addition, when creating welcome campaigns, you can trigger messages to send after the user registers or sets up an account. Staggering messages to be sent on different days following registration will allow you to create a thorough [onboarding process][30].
+In addition, when creating welcome campaigns, you can trigger messages to send after the user registers or sets up an account. Staggering messages to be sent on different days following registration will allow you to create a thorough onboarding process.
 
 ## Why Did a User Not Receive My Triggered Campaign?
 
@@ -141,7 +142,7 @@ Additionally, if a campaign is action-based and has a delay, you can check the o
 [24]: {% image_buster /assets/img_archive/ReEligible.png %}
 [27]: {% image_buster /assets/img_archive/schedule_triggered5.png %}
 [28]: {% image_buster /assets/img_archive/schedule_triggered6.png %}
-[29]: {{site.baseurl}}/help/best_practices/in-app_messages/in-app_message_behavior/#in-app-message-delivery-rules
+[29]: {{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/best_practices/in-app_message_behavior/#in-app-message-delivery-rules
 [30]: {{site.baseurl}}/help/best_practices/user_onboarding/#user-onboarding
 [31]: {% image_buster /assets/img_archive/schedule_triggered_next_available.png %}
 [32]: {{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events/

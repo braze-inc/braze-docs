@@ -6,7 +6,7 @@ page_order: 0
 page_type: solution
 description: "This article walks you through how to integrate Braze push notifications with your FireOS app."
 channel: push
-
+hidden: true
 ---
 
 # Integration
@@ -155,4 +155,4 @@ If a Kindle reserved key is detected, Braze returns Status Code 400: Kindle Push
 [32]: https://developer.amazon.com/appsandservices/apis/engage/device-messaging/tech-docs/04-integrating-your-app-with-adm
 [34]: {% image_buster /assets/img_archive/fire_os_dashboard.png %}
 [37]: https://appboy.github.io/appboy-android-sdk/javadocs/com/appboy/Appboy.html#registerPushToken-java.lang.String-
-[52]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/push_notifications/integration/#custom-handling-push-receipts-opens-and-key-value-pairs
+[52]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/push_notifications/integration/standard_integration/#custom-handling-for-push-receipts-opens-dismissals-and-key-value-pairs

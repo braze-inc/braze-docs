@@ -1,12 +1,11 @@
 ---
 nav_title: Campaign Calendar
-platform: Campaigns
-subplatform: Testing and More
+article_title: Campaign Calendar
 page_order: 6
-
 tool: Campaigns
 page_type: reference
 description: "This reference page breaks down the components of the campaign calendar."
+
 ---
 
 # Campaign Calendar

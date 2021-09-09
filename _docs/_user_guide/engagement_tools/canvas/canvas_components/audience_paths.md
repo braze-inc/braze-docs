@@ -1,12 +1,12 @@
 ---
 nav_title: Audience Paths Step
-title: Audience Path Step
+article_title: Audience Path Step
 alias: /audience_paths/
 page_order: 5
-
 description: "This reference article describes how to use Audience Paths in your Canvas to intuitively filter and segment users on a large scale with strategic priority-based user-groupings."
 page_type: reference
 tool: Canvas
+
 ---
 
 # Audience Paths Step

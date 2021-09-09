@@ -1,27 +1,26 @@
 ---
 nav_title: "SMS Campaign Analytics"
+article_title: SMS Campaign Analytics
 page_order: 7
 description: "This reference article covers SMS metrics used at Braze, as well as how to view them in your SMS campaigns."
 page_type: reference
 tool:
   - Reports
-  - Dashboard
-
 channel:
   - SMS
+  
 ---
 
 # Reporting & Analytics
 
 ## SMS Metrics
-- **Sent**: A campaign or Canvas step has been launched or triggered and an SMS has been sent from Braze. It is possible that the SMS does not reach a user's device due to errors, as explained below.
-- **Sent to Carrier**: Braze has attempted to send the SMS through to the carriers. This stat is the sum of Confirmed Deliveries, Rejections, and sends where delivery or rejection was not confirmed by the carrier. There are instances where carriers do not provide delivery or rejected confirmation, as some carriers do not provide this confirmation or were unable to do so at the time of sending.
-- **Delivery Failures**: The SMS could not be sent due to queues overflow (sending SMS at a rate higher than your long or short codes can handle).
+- **Sent**: A campaign or Canvas step has been launched or triggered, and an SMS has been sent from Braze. It is possible that the SMS does not reach a user's device due to errors, as explained below.
+- **Sent to Carrier**: Braze has attempted to send the SMS through to the carriers. This stat is the sum of Confirmed Deliveries, Rejections, and sends where the carrier did not confirm delivery or rejection. There are instances where carriers do not provide delivery or rejected confirmation, as some carriers do not provide this confirmation or were unable to do so at the time of sending.
+- **Delivery Failures**: Delivery Failures reflect messages that were not attempted to be sent due to a failed outcome within Twilio logs. The reason behind this could be queue overflow or invalid recipient number - depending on the associated Twilio error code. Please reach out to Braze Support for assistance in understanding the reasons for delivery failures.
 - **Confirmed Delivery**: The carrier has confirmed that the SMS was delivered to the target phone number. As a Braze customer, deliveries are charged toward your SMS allotment.
-- **Rejections**: The SMS has been rejected by the carrier. This can happen for several reasons including carrier content filtering, availability of the destination device, the phone number is no longer in service, etc. As a Braze customer, rejections are charged toward your SMS allotment.
+- **Rejections**: The SMS has been rejected by the carrier. This can happen for several reasons, including carrier content filtering, availability of the destination device, the phone number is no longer in service, etc. As a Braze customer, rejections are charged toward your SMS allotment.
 - **Opt-Out**: A user replied to your message with an [Opt-Out Keyword][3] and was unsubscribed from your SMS program. A user reply is measured anytime a user sends an inbound message within four hours of receiving your message. 
 - **Help**: A user replied to your message with a [HELP Keyword][3] and was dispatched a HELP auto-response. A user reply is measured anytime a user sends an inbound message within four hours of receiving your message. 
-
 
 ### Control Groups
 
@@ -71,7 +70,7 @@ This block allows you to see the message's performance over a set period on a ti
 
 **Keyword Responses**
 
-This block allows you to see the inbound keywords users replied with after receiving your message on a timeline 
+This block allows you to see the inbound keywords users replied with after receiving your message on a timeline. 
 
 ![keyword_responses]({% image_buster /assets/img/sms/keyword_responses.png %})
 
@@ -89,7 +88,7 @@ This block will show you the performance of your conversion events for the SMS m
 {% endtabs %}
 
 ## SMS Currents Events
-Just like email, Braze receives user-level events related to an SMS message as it makes its journey to a user. Any inbound SMS event will also be sent as a Currents [event]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/event_glossary/message_engagement_events/) through the SMS InboundReceived event. This will allow you to perform additional actions or reporting on the messages your users are texting in outside of the Braze platform. Please note that inbound messages are truncated past 1600 characters. 
+Like email, Braze receives user-level events related to an SMS message as it makes its journey to a user. Any inbound SMS event will also be sent as a Currents [event]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/event_glossary/message_engagement_events/) through the SMS InboundReceived event. This will allow you to perform additional actions or reporting on the messages your users are texting in outside of the Braze platform. Please note that inbound messages are truncated past 1600 characters. 
 
 ![picture][9]{: style="max-width:80%;"}
 
