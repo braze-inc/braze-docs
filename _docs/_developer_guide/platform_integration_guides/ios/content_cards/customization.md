@@ -38,102 +38,55 @@ You can create your own Content Cards interface by extending `ABKContentCardsTab
 
 ### Customizing UI
 
-The following code snippets show an example of how to build custom Content Cards with key-value pairs using the methods provided by the SDK. There are two distinct ways to do this, the dynamic UI method, which allows you to update card UI on a per-card basis, or the static method, which will update the UI across all cards. 
+The following code snippets show an example of how to build custom Content Cards with key-value pairs using the methods provided by the SDK. These methods allow you to customize all aspects of the Content Card UI, such as including custom fonts, customized color components, customized text, and more. 
 
-{% tabs local %}
-{% tab Dynamic UI %}
+There exist two distinct ways to customize Content Carrd UI, the dynamic UI method, which allows you to update card UI on a per-card basis, or the static method, which will update the UI across all cards.
+
+#### Dynamic UI
+
 The Content Card `applyCard` method can be used to reference the card object and pass it the key-value pairs that will be used to update the UI.
 
-{% subtabs global %}
-{% subtab Objective-C %}
+{% tabs %}
+{% tab Objective-C %}
 ```objc
 - (void)applyCard:(ABKCaptionedImageContentCard *)captionedImageCard {
-  [super applyCard:captionedImageCard];
+  [super applyCard:captionedImageCard];    
  
-  [self applyToBaseView:captionedImageCard];
-  [self applyToCaptionedImageView:captionedImageCard];
-}
- 
-- (void)applyToBaseView:(ABKContentCard *)card {
   if ([card.extras objectForKey:ContentCardKeyBackgroundColorValue]) {
     NSString *backgroundColor = [card.extras objectForKey:ContentCardKeyBackgroundColor];
     if ([backgroundColor colorValue]) {
       self.rootView.backgroundColor = [backgroundColor colorValue];
     } else {
-      self.rootView.backgroundColor = BrazeBackgroundColor;
+      self.rootView.backgroundColor = [UIColor lightGray];
     }
   } else {
-    self.rootView.backgroundColor = BrazeBackgroundColor;
-  }
-}
- 
-- (void)applyToCaptionedImageView:(ABKContentCard *)card {
-  if ([card.extras objectForKey:ContentCardKeyLabelColor]) {
-    NSString *labelColor = [card.extras objectForKey:ContentCardKeyLabelColor];
-    if ([labelColor colorValue]) {
-      self.titleLabel.textColor = [labelColor colorValue];
-      self.descriptionLabel.textColor = [labelColor colorValue];
-    } else {
-      self.titleLabel.textColor = BrazeLabelColor;
-      self.descriptionLabel.textColor = BrazeLabelColor;
-    }
-  } else {
-    self.titleLabel.textColor = BrazeLabelColor;
-    self.descriptionLabel.textColor = BrazeLabelColor;
-  }
+    self.rootView.backgroundColor = [UIColor lightGray];
+  }  
 }
 ```
-{% endsubtab %}
-{% subtab Swift %}
+{% endtab %}
+{% tab Swift %}
 ```swift
 override func apply(_ captionedImageCard: ABKCaptionedImageContentCard!) {
-  super.apply(captionedImageCard)
-     
-  applyToBaseView(captionedImageCard)
-  applyToCaptionedImageView(captionedImageCard)
-}
+  super.apply(captionedImageCard)         
  
-extension ABKBaseContentCardCell {
-  var BrazeBackgroundColor: UIColor {
-    return .systemBackground
-  }
- 
-  func applyToBaseView(_ card: ABKContentCard) {
-    if let backgroundColor = card.extras?[ContentCardKey.backgroundColor.rawValue] as? String,
-       let backgroundColorValue = backgroundColor.colorValue() {
-      rootView.backgroundColor = backgroundColorValue
-    } else {
-      rootView.backgroundColor = BrazeBackgroundColor
-    }
-  }
-}
- 
-extension ABKCaptionedImageContentCardCell {
-  var BrazeLabelColor: UIColor {
-    return .label
-  }  
- 
-  func applyToCaptionedImageView(_ card: ABKContentCard) {
-    if let labelColor = card.extras?[ContentCardKey.labelColor.rawValue] as? String,
-       let labelColorValue = labelColor.colorValue() {
-      titleLabel.textColor = labelColorValue
-      descriptionLabel.textColor = labelColorValue
-    } else {
-      titleLabel.textColor = BrazeLabelColor
-      descriptionLabel.textColor = BrazeLabelColor
-    }
+  if let backgroundColor = card.extras?[ContentCardKey.backgroundColor.rawValue] as? String,
+     let backgroundColorValue = backgroundColor.colorValue() {
+    rootView.backgroundColor = backgroundColorValue
+  } else {
+    rootView.backgroundColor = .lightGray
   }
 }
 ```
-{% endsubtab %}
-{% endsubtabs %}
 {% endtab %}
-{% tab Static UI %}
+{% endtabs %}
+
+#### Static UI
 
 The `setUpUI` instance method can be used to assign values to the static Content Card components across all cards. 
 
-{% subtabs global %}
-{% subtab Objective-C %}
+{% tabs %}
+{% tab Objective-C %}
 ```objc
 #import "CustomClassicContentCardCell.h"  
  
@@ -147,8 +100,8 @@ The `setUpUI` instance method can be used to assign values to the static Content
   self.titleLabel.font = [UIFont italicSystemFontOfSize:20];
 }
 ```
-{% endsubtab %}
-{% subtab Swift %}
+{% endtab %}
+{% tab Swift %}
 ```swift
 override func setUpUI() {
   super.setUpUI()
@@ -159,14 +112,18 @@ override func setUpUI() {
   titleLabel.font = .italicSystemFont(ofSize: 20)
 }
 ```
-{% endsubtab %}
-{% endsubtabs %}
 {% endtab %}
 {% endtabs %}
 
 ### Providing Custom Interfaces
 
-Custom interfaces can be provided by registering custom classes for each desired card type.
+Custom interfaces can be provided by registering custom classes for each desired card type. 
+
+![Custom Classes]({% image_buster /assets/img/interface1.png %}){: style="max-width:35%;margin-left:15px;"}
+![Custom Classes]({% image_buster /assets/img/interface2.png %}){: style="max-width:25%;margin-left:15px;"}
+![Custom Classes]({% image_buster /assets/img/interface3.png %}){: style="max-width:18%;margin-left:15px;"}
+
+If you would like to use our banner, captioned image, and classic Content Card templates, those can be found [here](). Alternaively, if you would like to provide your own custom interfaces, reference the following code snippets:
 
 {% tabs %}
 {% tab Objective-C %}
