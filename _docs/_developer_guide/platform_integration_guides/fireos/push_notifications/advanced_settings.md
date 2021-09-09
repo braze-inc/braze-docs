@@ -25,7 +25,7 @@ For example, say that a user of a sports news app had their device offline the d
 - A __"Collapse Key"__ is a unique identifier for a message category of your choosing that informs the messaging service to only respect the most recent message from that ID. Setting a collapse key allows you to send just the most recent and relevant message, rather than a stack of outdated, irrelevant ones. However, if the phone correctly receives the original push notifications, then the collapse key will not replace the already delivered notification.
 - The __"Time to Live"__ field allows you to set a custom length of time to store messages with the push messaging service. Braze's default values for time to live are 4 weeks for FCM and 31 days for ADM. If the hypothetical user from the example above were to reconnect their device 4 weeks after the game with the time to live set to the default, then those messages would have already expired in the messaging service and would not be delivered.
 
-> FCM has a limit of 4 collapse keys per app. If you use more than 4 collapse keys, FCM does not make any guarantees as to which ones will be respected. Braze uses 2 of these by default for campaigns, so make sure to specify only up to 2 additional collapse keys for Android messages.
+> FCM has a limit of 4 collapse keys per app. If you use more than 4 collapse keys, FCM does not make any guarantees as to which ones will be respected. Braze uses one of these by default for campaigns, so make sure to specify only up to 3 additional collapse keys for Android messages.
 
 For more information on these delivery options, please see the [Firebase Cloud Messaging][7] and [Amazon Device Messaging][8] documentation.
 
