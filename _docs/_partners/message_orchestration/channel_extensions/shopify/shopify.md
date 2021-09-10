@@ -1,9 +1,11 @@
 ---
 nav_title: Shopify
-permalink: /partners/shopify/
-description: ""
+article_title: "Shopify"
+description: "This article outlines the partnership with Braze and Shopify, a global commerce company that allows you to seamlessly connect their Shopify store with Braze to pass select Shopify webhooks into Braze. Leverage Braze's cross-channel strategies and Canvas to nudge customers to complete their purchases, or retarget users based on their previous purchases."
+alias: /partners/shopify/
 page_type: partner
-hidden: true
+search_tag: Partner
+
 ---
 
 # Shopify
