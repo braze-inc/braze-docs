@@ -9,7 +9,7 @@ description: "This reference article describes nested object support for custom 
 ---
 <br>
 {% alert note %}
-This feature is currently in beta. For more informatino, please reach out to your Braze account manager.
+This feature is generally available, however triggering messages and segmenting users based on this data is in early access. For more information, please reach out to your Braze account manager.
 {% endalert %}
 
 # Nested Object Support for Custom Event Properties
