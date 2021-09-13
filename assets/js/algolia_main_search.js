@@ -135,7 +135,7 @@ $(document).ready(function () {
     var url = item.url;
 
     var resulttemplate = '<a href="' +
-        url + '"><div class="title lab_title">' + lab_image +
+        url + '" target="_blank"><div class="title lab_title">' + lab_image +
         title + ' <i class="fas fa-external-link-alt"></i> <div class="category">' +
         tags_list +
         '</div></div> <div class="content">' +
