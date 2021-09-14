@@ -26,6 +26,12 @@ Below is some terminology that you may see in the Braze REST API documentation a
 
 Braze manages a number of different instances for our Dashboard and REST Endpoints. When your account is provisioned you will log in to one of the corresponding URLs below. Use the correct REST Endpoint based on which instance you are provisioned to. If you are unsure, open a support ticket or use the table below to match the URL of the dashboard you use to the correct REST Endpoint.
 
+{% alert important %}
+When using endpoints for API calls, use the "REST Endpoint" located below.
+
+For SDK integration, use the ["SDK Endpoint"]({{site.baseurl}}/user_guide/administrative/access_braze/sdk_endpoints/), not the "REST Endpoint".
+{% endalert %}
+
 |Instance|URL|REST Endpoint|SDK Endpoint|
 |---|---|---|
 |US-01| `https://dashboard-01.braze.com` | `https://rest.iad-01.braze.com` | `sdk.iad-01.braze.com` |
@@ -38,12 +44,6 @@ Braze manages a number of different instances for our Dashboard and REST Endpoin
 |EU-01| `https://dashboard-01.braze.eu` | `https://rest.fra-01.braze.eu` | `sdk.fra-01.braze.eu` |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
 
-{% alert important %}
-When using endpoints for API calls, use the "REST Endpoint" located on this page.
-
-For SDK integration, use the ["SDK Endpoint"]({{site.baseurl}}/user_guide/administrative/access_braze/sdk_endpoints/), not the "REST Endpoint".
-{% endalert %}
-
 ### Company Secret Explanation
 
 The `company_secret` was formerly included with all API requests but has been deprecated as of October 2014. This field will be ignored for all future API requests to ensure backward compatibility.
@@ -51,7 +51,7 @@ The `company_secret` was formerly included with all API requests but has been de
 ### App Group REST API Keys
 
 {% alert note %}
-For a deeper dive on the different kinds of API Keys here at Braze, checkout our dedicated <a href="{{site.baseurl}}/api/api_key/">API Keys</a> and <a href="{{site.baseurl}}/api/identifier_types/">API Identifier Types</a> reference articles.
+For a deeper dive on the different kinds of API Keys here at Braze, check out our dedicated <a href="{{site.baseurl}}/api/api_key/">API Keys</a> and <a href="{{site.baseurl}}/api/identifier_types/">API Identifier Types</a> reference articles.
 
 {% endalert %}
 
@@ -68,7 +68,7 @@ A good security practice is to assign a user only as much access as is necessary
 ![REST API Key Permissions][25]
 
 {% alert warning %}
-Given that REST API Keys allow access to potentially sensitive REST API endpoints, please ensure they are stored and used securely. For example, do not use this key to make AJAX calls from your website or expose it in any other public manner.
+Given that REST API Keys allow access to potentially sensitive REST API endpoints, ensure they are stored and used securely. For example, do not use this key to make AJAX calls from your website or expose it in any other public manner.
 {% endalert %}
 
 If accidental exposure of a key occurs, it can be deleted from the [Developer Console][8]. For help with this process, please [open a support ticket][support].
