@@ -27,7 +27,8 @@ Updating or removing items in an array requires identifying the item by key and 
 
 ### API Request Body
 
-#### Create
+{% tabs %}
+{% tab Create %}
 
 Shown below is a `/users/track` example with a `pets` array. To capture the properties of the pets, send an API request that lists `pets` as an array of objects. Note that each object has been assigned a unique `id` that can be referenced when making updates later.
 
@@ -54,8 +55,8 @@ Shown below is a `/users/track` example with a `pets` array. To capture the prop
   ]
 }
 ```
-
-#### Add
+{% endtab %}
+{% tab Add %}
 
 Add another item to the array using the `$add` operator. The following example shows adding three more pet objects to the user's pets array.
 
@@ -91,42 +92,8 @@ Add another item to the array using the `$add` operator. The following example s
   ]
 }
 ```
-
-#### Remove
-
-Remove objects from an array using the `$remove` operator in combination with a matching key (`$identifier_key`) and value (`$identifier_value`).
-
-The following example shows removing any object in the pets array that have an `id` with a value of `1`, an `id` with a value of `2`, and a `type` with a value of `dog`. If there are multiple objects with the `type` value of `dog`, all matching objects will be removed.
-
-```json
-{
-  "attributes": [
-    {
-      "external_id": "user_id",
-      "pets": {
-        "$remove": [
-          // Remove by ID
-          {
-            "$identifier_key": "id",
-            "$identifier_value": 1
-          },
-          {
-            "$identifier_key": "id",
-            "$identifier_value": 2
-          },
-          // Remove any dog
-          {
-            "$identifier_key": "type",
-            "$identifier_value": "dog"
-          }
-        ]
-      }
-    }
-  ]
-}
-```
-
-#### Update
+{% endtab %}
+{% tab Update %}
 
 Update values for specific objects within an array using the `_merge_objects` parameter. Similar to updates to simple [nested custom attribute]({{site.baseurl}}/nested_custom_attribute_support/#api-request-body) objects, this performs a deep merge.
 
@@ -165,6 +132,43 @@ The following example shows updating the `breed` property to `goldfish` for the 
 You must set `_merge_objects` to true, or your objects will be overwritten. `_merge_objects` is false by default.
 {% endalert %}
 
+{% endtab %}
+{% tab Remove %}
+
+Remove objects from an array using the `$remove` operator in combination with a matching key (`$identifier_key`) and value (`$identifier_value`).
+
+The following example shows removing any object in the pets array that have an `id` with a value of `1`, an `id` with a value of `2`, and a `type` with a value of `dog`. If there are multiple objects with the `type` value of `dog`, all matching objects will be removed.
+
+```json
+{
+  "attributes": [
+    {
+      "external_id": "user_id",
+      "pets": {
+        "$remove": [
+          // Remove by ID
+          {
+            "$identifier_key": "id",
+            "$identifier_value": 1
+          },
+          {
+            "$identifier_key": "id",
+            "$identifier_value": 2
+          },
+          // Remove any dog
+          {
+            "$identifier_key": "type",
+            "$identifier_value": "dog"
+          }
+        ]
+      }
+    }
+  ]
+}
+```
+{% endtab %}
+{% endtabs %}
+
 ### Liquid Templating
 
 You can use this pets array to personalize a message. The Liquid templating example below shows how to reference the custom attribute object properties saved from the above API request and use them in your messaging.
@@ -189,11 +193,24 @@ Create a new segment and select **Nested Custom Attribute** as your filter. Then
 
 ![Filter by array of objects][1]
 
-Use dot notation to specify which field in the array of objects you want to use. Start the text field with an empty set of square brackets `[]` to tell Braze that you're looking inside an array of objects. After that, add a period `.`, followed by the name of the field you want to use. 
+Use dot notation to specify which field in the array of objects you want to use. Start the text field with an empty set of square brackets `[]` to tell Braze that you're looking inside an array of objects. After that, add a period `.`, followed by the name of the field you want to use.
+
+For example, if you want to filter the pets array of objects based on the `type` field, enter `[].type` and choose which type of pet to filter for, such as `snake`.
+
+![Filter by pet type equals snake][3]
+
+Or you might filter for pets that have a `type` of `dog`. Here the user has at least one dog, so the user qualifies into the segment of "any user who has at least one pet of type dog".
+
+![Filter by pet type equals dog][2]
 
 ## Data Points
 
-### Create
+Data points are consumed differently depending on whether you create, update, or remove a property.
+
+{% tabs %}
+{% tab Create %}
+
+Creating a new array consumes one data point for each attribute in an object. This example costs eight data points—each pet object has four attributes and there are two objects.
 
 ```json
 {
@@ -218,8 +235,10 @@ Use dot notation to specify which field in the array of objects you want to use.
   ]
 }
 ```
+{% endtab %}
+{% tab Update %}
 
-### Update
+Updating an existing array consumes one data point for each property added. This example costs two data points as it only updates one property in each of the two objects.
 
 ```json
 {
@@ -249,8 +268,10 @@ Use dot notation to specify which field in the array of objects you want to use.
   ]
 }
 ```
+{% endtab %}
+{% tab Remove %}
 
-### Remove
+Removing an object from an array consumes one data point for each removal criteria you send. This example costs three data points, even though you may be removing multiple dogs with this statement.
 
 ```json
 {
@@ -280,5 +301,9 @@ Use dot notation to specify which field in the array of objects you want to use.
 }
 ```
 
+{% endtab %}
+{% endtabs %}
 
-[1]: 
+[1]: {% image_buster /assets/img_archive/array_of_objects_segmenting_1.gif %}
+[2]: {% image_buster /assets/img_archive/array_of_objects_segmenting_2.png %}
+[3]: {% image_buster /assets/img_archive/array_of_objects_segmenting_3.png %}
