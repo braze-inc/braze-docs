@@ -19,23 +19,17 @@ Looking for the out-of-the-box Push developer integration guide? Find it [here](
 
 ## Custom Notification Layout
 
-Braze notifications are sent as [data messages](https://firebase.google.com/docs/cloud-messaging/concept-options), which means that your application will always have a chance to respond and perform behavior accordingly, even in the background (this is in contrast to notification messages, which can be handled automatically by the system when your app is in the background). As such, your application will have a chance to customize the experience by, for example displaying personalized UI elements within the notification delivered to the notification tray. While implementing push in this way may be unfamiliar to some, one of our well-known features at Braze, [Push Stories]({{site.baseurl}}/user_guide/message_building_by_channel/push/advanced_push_options/push_stories/), are a prime example of using custom view components to create an egaging experience!
+Braze notifications are sent as [data messages](https://firebase.google.com/docs/cloud-messaging/concept-options), which means that your application will always have a chance to respond and perform behavior accordingly, even in the background (this is in contrast to notification messages, which can be handled automatically by the system when your app is in the background). As such, your application will have a chance to customize the experience by, for example displaying personalized UI elements within the notification delivered to the notification tray. While implementing push in this way may be unfamiliar to some, one of our well-known features at Braze, [Push Stories]({{site.baseurl}}/user_guide/message_building_by_channel/push/advanced_push_options/push_stories/), are a prime example of using custom view components to create an engaging experience!
 
-##### Ready to log analytics?
-Visit the following section to get a better understanding of how the flow of data should look.
+#### Requirements
 
-#### Requirements:
-
-Android imposes some limitations on what components can be used to implement custom notification views. Notification view layouts must _only_ contain View objects that are compatible with the [RemoteViews](https://developer.android.com/reference/android/widget/RemoteViews) framework.
-
-##### Ready to log analytics?
-Visit the [following section](#logging-analytics) to get a better understanding of how the flow of data should look.
+Android imposes some limitations on what components can be used to implement custom notification views. Notification view layouts must _only_ contain View objects compatible with the [RemoteViews](https://developer.android.com/reference/android/widget/RemoteViews) framework.
 
 ### Personalized Push Notifications
 
 Push notifications can display user-specific information inside a custom view hierarchy. The example below shows a push notification after a user has completed a specific task (Braze LAB course) and is now encouraged to expand this notification to check their progress. The information provided here is user-specific and can be fired off as a session is completed or specific user action is taken by leveraging an API trigger. 
 
-![Personalized Push Dashboard Example][1]{: style="max-width:60%;border:0"}
+![Personalized Push Dashboard Example][1]{: style="max-width:65%;border:0"}
 
 #### Dashboard Configuration
 
@@ -44,7 +38,7 @@ To set up a personalized push in the dashboard, you must register the specific c
 ![Personalized Push Dashboard Example][2]{: style="max-width:60%;"}
 
 ##### Ready to log analytics?
-Visit the following section to get a better understanding of how the flow of data should look.
+Visit the [following section](#logging-analytics) to better understand how the flow of data should look.
 
 ## Logging Analytics
 
@@ -56,11 +50,9 @@ Logging analytics can only be done in real-time with the help of the customer's 
 
 ### Logging Manually 
 
-Logging manually can be achieved by logging whatever elements you wish from either within your `FirebaseMessagingService.onMessageReceived` implementation, or from within your startup activity, based on the extras present in the payload. An important caveat to remember, however, is that your `FirebaseMessagingService` subclass _must_ finish execution within 10 seconds of invocation to avoid being [flagged or terminated](https://firebase.google.com/docs/cloud-messaging/android/receive) by the Android system. 
+Logging manually can be achieved by logging whatever elements you wish from either within your `FirebaseMessagingService.onMessageReceived` implementation or from within your startup activity, based on the extras present in the payload. However, an important caveat to remember is that your `FirebaseMessagingService` subclass _must_ finish execution within 10 seconds of invocation to avoid being [flagged or terminated](https://firebase.google.com/docs/cloud-messaging/android/receive) by the Android system. 
 
 
 [1]: {% image_buster /assets/img/push_implementation_guide/android_push_custom_layout.png %}
 [2]: {% image_buster /assets/img/push_implementation_guide/push5.png %}
 [3]: {% image_buster /assets/img/push_implementation_guide/android_braze_id_configuration.png %}
-
-
