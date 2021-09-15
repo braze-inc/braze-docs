@@ -4,10 +4,10 @@ article_title: Managing Canvases
 page_order: 2
 layout: dev_guide
 guide_top_header: "Managing Canvases"
-guide_top_text: ""
+guide_top_text: "Once you’ve launched your Canvas, it’s time to sit back and watch the data roll in. However if you need to make any changes or archive your Canvas, refer to the articles listed below for help."
 
 page_type: landing
-description: ""
+description: "This landing page is home to articles on managing your Canvas, including archiving, duplicating, or making changes after launch."
 tool: Canvas
 
 guide_featured_title: "Section Articles"
