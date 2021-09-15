@@ -17,9 +17,9 @@ When dealing with numerous custom attribute objects, use an array of objects to 
 - Available on custom attributes sent via API only, not supported with Braze SDKs or CSV upload.
 - Partners do not yet support arrays of objects. Until this is supported, we recommend against using this feature with app groups that have partner integrations enabled.
 - Datetimes are not supported in objects. If datetimes are included in your objects, they are stored as strings.
-- Arrays of objects have no limit on the number of items, but do have a maximum size of 50KB.
+- Arrays of objects have no limit on the number of items but do have a maximum size of 50KB.
 
-Updating or removing items in an array requires identifying the item by key and value. As such, consider including a unique identifier for each item in the array. The uniqueness is scoped only to the array, and is useful if you want to update and remove specific objects from your array. This is not enforced by Braze.
+Updating or removing items in an array requires identifying the item by key and value. As such, consider including a unique identifier for each item in the array. The uniqueness is scoped only to the array and is useful if you want to update and remove specific objects from your array. This is not enforced by Braze.
 
 ## Usage Examples
 
@@ -135,7 +135,7 @@ You must set `_merge_objects` to true, or your objects will be overwritten. `_me
 
 Remove objects from an array using the `$remove` operator in combination with a matching key (`$identifier_key`) and value (`$identifier_value`).
 
-The following example shows removing any object in the pets array that have an `id` with a value of `1`, an `id` with a value of `2`, and a `type` with a value of `dog`. If there are multiple objects with the `type` value of `dog`, all matching objects will be removed.
+The following example shows removing any object in the pets array that has an `id` with a value of `1`, an `id` with a value of `2`, and a `type` with a value of `dog`. If there are multiple objects with the `type` value of `dog`, all matching objects will be removed.
 
 ```json
 {
@@ -197,7 +197,7 @@ For example, if you want to filter the pets array of objects based on the `type`
 
 ![Filter by pet type equals snake][3]
 
-Or you might filter for pets that have a `type` of `dog`. Here a user has at least one dog, so that user qualifies into the segment of "any user who has at least one pet of type dog".
+Or you might filter for pets that have a `type` of `dog`. Here a user has at least one dog so that user qualifies into the segment of "any user who has at least one pet of type dog".
 
 ![Filter by pet type equals dog][2]
 
