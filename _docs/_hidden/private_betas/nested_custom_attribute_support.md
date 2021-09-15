@@ -18,7 +18,8 @@ Objects can contain existing [data types][1], such as:
 - Strings
 - Booleans
 - Arrays
-- [Other objects]({{site.baseurl}}/array_of_objects/)
+- Other objects
+- [Arrays of objects]({{site.baseurl}}/array_of_objects/)
 
 ## Limitations
 
