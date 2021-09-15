@@ -5,14 +5,12 @@ hidden: true
 ---
 <br>
 {% alert note %}
-This feature is currently in beta. Please contact your Braze account manager if you are interested in participating in the beta.
+Support for this feature depends on [nested custom attributes]({{site.baseurl}}/nested_custom_attribute_support/), which is currently in beta. Please contact your Braze account manager if you are interested in participating in the beta.
 {% endalert %}
-
 
 # Array of Objects
 
-When dealing with numerous custom attribute objects, you can use an array of objects. 
-> Needs an intro
+When dealing with numerous custom attribute objects, use an array of objects to group related attributes. These arrays of objects can be used to personalize your messaging with Liquid, or create audience segments if any element within an object matches the criteria.
 
 ## Limitations
 
@@ -199,7 +197,7 @@ For example, if you want to filter the pets array of objects based on the `type`
 
 ![Filter by pet type equals snake][3]
 
-Or you might filter for pets that have a `type` of `dog`. Here the user has at least one dog, so the user qualifies into the segment of "any user who has at least one pet of type dog".
+Or you might filter for pets that have a `type` of `dog`. Here a user has at least one dog, so that user qualifies into the segment of "any user who has at least one pet of type dog".
 
 ![Filter by pet type equals dog][2]
 
