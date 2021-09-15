@@ -22,7 +22,7 @@ To avoid this visual change in iOS 15, we strongly recommend you upgrade to the 
 
 ## New Notification Settings {#notification-settings}
 
-iOS 15 introduced new notification features to help users stay focused and avoid frequent interruptions throughout the day. We're excited to offer support for these new features. Learn more in [iOS Notification Options][3].
+iOS 15 introduced new notification features to help users stay focused and avoid frequent interruptions throughout the day. We're excited to offer support for these new features. These features do not require any additional SDK upgrades and will only be applied for users on iOS 15 devices.
 
 ### Focus Modes {#focus-mode}
 
