@@ -20,7 +20,7 @@ channel:
 |Opt-in State|Description|
 |---|---|
 |Subscribed| Default status.|
-|Opted-In| A user has explicitly allowed Braze will automatically move a user's opt-in state to "Opted-In". |
+|Opted-In| A user has explicitly expressed a preference to receive push notifications. Braze will automatically move a user's opt-in state to "Opted-In". |
 |Unsubscribed| A user explicitly unsubscribed from push through your application UI or other methods that your brand provides. By default, Braze push campaigns only target users that are "Subscribed" or "Opted-in" for push.|
 {: .reset-td-br-1 .reset-td-br-2}
 
@@ -28,8 +28,8 @@ Subscription states are helpful flags for brands to use when deciding which user
 
 Note that even though users __may not have a push token__ (e.g., They turn off push tokens at the device level through settings, opting not to receive messages), they still may be subscribed. Being subscribed does not guarantee that a push will be delivered; users must also be Push enabled or Push registered to receive these notifications. This is done in part because users have a single Push Subscription State but may have multiple devices with different levels of push permissions. 
 
-### Two ways to Check a Users Push Subscription State:
-![Push Exmaple][3]{: style="float:right;max-width:25%;margin-left:15px;"}
+### Two Ways to Check a User's Push Subscription State:
+![Push Exmaple][3]{: style="float:right;max-width:35%;margin-left:15px;"}
 1. __User Profile__: Individual user profiles can be accessed through the Braze dashboard by selecting User Search from the right sidebar. Here, you can look up user profiles by email address, phone number, or external user ID. Once in a user profile, under the Engagement tab, you can view and manually adjust a user's subscription state. <br><br>
 2. __Rest API Export__: Individual user profiles can be exported in the JSON format using the users/export/ [segment][segment] or [identifier][identifier] endpoints by using Braze’s REST API. Braze will return a push tokens object that contains push enablement information per device.
 
@@ -39,7 +39,7 @@ A user is "Push Enabled" or "Push Registered" if they have an *active push token
 
 ![img][1]{: style="float:right;max-width:50%;margin-left:15px;"}
 
-On the User Engagement tab in the dashboard, you will see: **Push Registered For** followed by an **App Name(s)** or followed by **No Apps**. There will be an entry for every device that belongs to the user.
+On the User Engagement tab in the dashboard, you will see: **Push Registered For** followed by an **App Name(s)** or followed by **&#45;&#45;**. There will be an entry for every device that belongs to the user.
 
 If the device entry's app name is prefixed by `Foreground:`, the app is authorized to receive both foreground push notifications (visible to the user) and background push notifications (not visible to the user) on that device.
 
@@ -88,8 +88,8 @@ On Android, Braze will move a user to be __push disabled__ if:
   {% endtab %}
 {% endtabs %}
 
-[1]: https://cloud.githubusercontent.com/assets/20304883/25244744/cd16d324-25b6-11e7-9d7c-d37b74690cf8.png
-[2]: https://cloud.githubusercontent.com/assets/20304883/25244775/ec6e0ae4-25b6-11e7-846d-4bf8f38c3057.png
+[1]: {% image_buster /assets/img/push_enablement.png %}
+[2]: {% image_buster /assets/img/push_changelog.png %}
 [identifier]: {{site.baseurl}}/api/endpoints/export/user_data/post_users_identifier/
 [segment]: {{site.baseurl}}/api/endpoints/export/user_data/post_users_segment/
 [56]: {% image_buster /assets/img_archive/braze_optedin.png %}

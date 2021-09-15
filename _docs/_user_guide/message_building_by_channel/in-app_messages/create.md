@@ -136,7 +136,7 @@ The content of the Compose tab vary based on your chosen Message Options in the 
 
 #### Buttons
 
-When available for your message type, you can have up to two buttons appear below your body of text. By default, the button on the right (Button 2) is formatted to be more visually drawing to your user. We recommend using this button for singular or primary actions.
+When available for your message type, you can have up to two buttons appear below your body of text.
 
 ![Primary_Secondary]({% image_buster /assets/img/primary-secondary-buttons.png %}){: height="40%" width="40%"}
 

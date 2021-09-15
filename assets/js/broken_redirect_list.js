@@ -417,6 +417,8 @@ validurls['/docs/developer_guide/platform_integration_guides/android/push_notifi
 validurls['/docs/developer_guide/platform_integration_guides/android/push_notifications/integration/baidu_integration/'] = '/docs/developer_guide/platform_integration_guides/android/push_notifications/android/integration/baidu_integration/';
 validurls['/docs/developer_guide/platform_integration_guides/android/push_notifications/integration/standard_integration/'] = '/docs/developer_guide/platform_integration_guides/android/push_notifications/android/integration/standard_integration/';
 validurls['/docs/developer_guide/platform_integration_guides/fireos/content_cards/overview/'] = '/docs/user_guide/message_building_by_channel/content_cards/about/';
+
+validurls['/docs/user_guide/personalization_and_dynamic_content/liquid/filters/#e-commerce/'] = '/docs/user_guide/personalization_and_dynamic_content/liquid/filters/#money-filters/';
 validurls['/docs/partners/data_and_infrastructure_agility/customer_data_platform/amerpity/#amperity/'] = '/docs/partners/data_and_infrastructure_agility/customer_data_platform/amperity/';
 validurls['/docs/user_guide/administrative/manage_your_braze_users/company-wide_settings_management/#overview/'] = '/docs/user_guide/administrative/app_settings/manage_app_group/email_settings/#include-a-list-unsubscribe-header/';
 validurls['/docs/user_guide/administrative/manage_your_braze_users/company-wide_settings_management/#benefits-of-the-list-unsubscribe-header/'] = '/docs/user_guide/administrative/app_settings/manage_app_group/email_settings/#include-a-list-unsubscribe-header/';
@@ -451,3 +453,12 @@ validurls['/docs/user_guide/engagement_tools/campaigns/testing_and_more/campaign
 validurls['/docs/user_guide/engagement_tools/canvas/canvas_funnel_reports/'] = '/docs/user_guide/data_and_analytics/your_reports/funnel_reports/';
 validurls['/docs/user_guide/engagement_tools/campaigns/testing_and_more/retention_reports/'] = '/docs/user_guide/data_and_analytics/your_reports/retention_reports/';
 validurls['/docs/user_guide/engagement_tools/canvas/retention_reports/'] = '/docs/user_guide/data_and_analytics/your_reports/retention_reports/';
+validurls['/docs/developer_guide/platform_integration_guides/ios/initial_sdk_setup/carthage_integration/'] = '/docs/developer_guide/platform_integration_guides/ios/initial_sdk_setup/installation_methods/carthage_integration/';
+validurls['/docs/developer_guide/platform_integration_guides/ios/initial_sdk_setup/cocoapods/'] = '/docs/developer_guide/platform_integration_guides/ios/initial_sdk_setup/installation_methods/cocoapods/';
+validurls['/docs/developer_guide/platform_integration_guides/ios/initial_sdk_setup/swift_package_manager/'] = '/docs/developer_guide/platform_integration_guides/ios/initial_sdk_setup/installation_methods/swift_package_manager/';
+validurls['/docs/developer_guide/platform_integration_guides/ios/initial_sdk_setup/manual_integration_options/'] = '/docs/developer_guide/platform_integration_guides/ios/initial_sdk_setup/installation_methods/manual_integration_options/';
+
+validurls['/docs/developer_guide/platform_integration_guides/android/push_notifications/troubleshooting/#troubleshooting-scenarios'] = '/docs/developer_guide/platform_integration_guides/android/push_notifications/android/troubleshooting/#troubleshooting-scenarios';
+
+validurls['/docs/help/best_practices/push/push_subscription_status/'] = '/docs/user_guide/message_building_by_channel/push/best_practices/';
+validurls['/docs/user_guide/message_building_by_channel/push/best_practices/users_and_subscriptions/'] = '/docs/user_guide/message_building_by_channel/push/users_and_subscriptions/';

@@ -26,8 +26,8 @@ search_tag: Partner
 
 ![Segment][1]
 
-{% alert important %}
-It's important to keep your Segment API Key up to date; if your connector's credentials expire, the connector will stop sending events. If this persists for more than **48 hours**, the connector's events will be dropped, and data will be permanently lost.
+{% alert warning %}
+It's important to keep your Segment API Key up to date. If your connector's credentials expire, the connector will stop sending events. If this persists for more than **48 hours**, the connector's events will be dropped, and data will be permanently lost.
 {% endalert %}
 
 ### Step 2: Export Message Engagement Events 

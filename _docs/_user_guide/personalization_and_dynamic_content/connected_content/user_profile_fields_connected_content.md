@@ -14,7 +14,7 @@ If a Connected Content response contains user profile fields (within a Liquid pe
 The `:rerender` flag is only one level deep, meaning that it will not apply to any nested Connected Content tags.
 {% endalert %}
 
-For personalization, the Braze pulls user profile fields before passing that field to Liquid—so if the response from Connected Content has user profile fields, it must be defined beforehand. 
+For personalization, Braze pulls user profile fields before passing that field to Liquid—so if the response from Connected Content has user profile fields, it must be defined beforehand. 
 
 For example, if this were the Connected Content call:
 {% raw %}

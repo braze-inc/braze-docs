@@ -21,7 +21,7 @@ Build more holistic marketing campaigns by leveraging mobile install attribution
 ### Step 1: Integration Requirements
 
 {% alert important %}
-As of March 4, 2019, AppsFlyer requires that the Activate Partner toggle be switched to "on" for every integrated partner, including Braze. Please be sure that your toggle is flipped on from your AppsFlyer dashboard.
+AppsFlyer requires that the Activate Partner toggle be switched to "on" for every integrated partner, including Braze. Check that your toggle is flipped on from your AppsFlyer dashboard.
 {% endalert %}
 
 * This integration supports iOS and Android apps.

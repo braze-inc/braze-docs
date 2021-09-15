@@ -47,20 +47,23 @@ Two-factor authentication is optional by default. However, when enabled, users w
 
 ### __Remember Me__
 ![Remember Me][0]{: style="float:right;max-width:30%;margin-left:15px;"}
-Upon toggling on two-factor authentication for your company, the __Remember Me__ checkbox becomes available to users. This feature stores a cookie on your device, only requiring you to log in with two-factor authentication __once__ over the course of 30 days. 
+Upon toggling on two-factor authentication for your company, the __Remember Me__ checkbox becomes available to users. This feature stores a cookie on your device, only requiring you to log in with two-factor authentication __once__ over the course of 30 days.
 
-- Customers with multiple accounts under a Dashboard Company may experience issues using this feature due to the cookie being tied to a specific device. If users use the same device to log in to multiple accounts, the cookie will be replaced for the previously authorized accounts on that device. Braze expects only one device to be associated with an account, not one device for multiple accounts. 
+- Customers with multiple accounts under a Dashboard Company may experience issues using this feature due to the cookie being tied to a specific device. If users use the same device to log in to multiple accounts, the cookie will be replaced for the previously authorized accounts on that device. Braze expects only one device to be associated with an account, not one device for multiple accounts.
 
 Be sure to save your changes before leaving the page!
 
 ### User Authetication Reset
 
-Users experiencing issues logging in via two-factor authentication can reach out to their company admins to reset their two-factor authentication. To do this, have an admin navigate to __Manage Users__, select the user from the provided list, and select __Reset__ under __Two-Factor Authentication__. A reset can solve common authentication issues such as trouble with Authy, login failure due to SMS outages or user error, and more. 
+Users experiencing issues logging in via two-factor authentication can reach out to their company admins to reset their two-factor authentication. To do this, have an admin navigate to __Manage Users__, select the user from the provided list, and select __Reset__ under __Two-Factor Authentication__. A reset can solve common authentication issues such as trouble with Authy, login failure due to SMS outages or user error, and more.
 
 Two-Factor Authentication Enforcement:
-- If two-factor authentication is not enforced at the company level, once reset, the user will log in normally and need to go to __Account Settings__ to enable and set up two-factor authentication. 
+- If two-factor authentication is not enforced at the company level, once reset, the user will log in normally and need to go to __Account Settings__ to enable and set up two-factor authentication.
 - If two-factor authentication is enforced at the company level, the next time the user logs in, they'll be asked to set up their two-factor authentication.
 
+## Security Event Download
+
+The Security Event report is a CSV report of security events such as account invitations, account removals, failed and successful login attempts, and other activities. To download this report, click **Download report** in the **Security Event Download** section.
 
 [0]: {% image_buster /assets/img/remember_me.png %}
 [1]: {{site.baseurl}}/user_guide/administrative/access_braze/single_sign_on/
