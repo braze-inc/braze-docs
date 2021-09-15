@@ -56,7 +56,7 @@ Shown below is a `/users/track` example with a `pets` array. To capture the prop
 {% endtab %}
 {% tab Add %}
 
-Add another item to the array using the `$add` operator. The following example shows adding three more pet objects to the user's pets array.
+Add another item to the array using the `$add` operator. The following example shows adding three more pet objects to the user's `pets` array.
 
 ```json
 {
@@ -135,7 +135,7 @@ You must set `_merge_objects` to true, or your objects will be overwritten. `_me
 
 Remove objects from an array using the `$remove` operator in combination with a matching key (`$identifier_key`) and value (`$identifier_value`).
 
-The following example shows removing any object in the pets array that has an `id` with a value of `1`, an `id` with a value of `2`, and a `type` with a value of `dog`. If there are multiple objects with the `type` value of `dog`, all matching objects will be removed.
+The following example shows removing any object in the `pets` array that has an `id` with a value of `1`, an `id` with a value of `2`, and a `type` with a value of `dog`. If there are multiple objects with the `type` value of `dog`, all matching objects will be removed.
 
 ```json
 {
@@ -169,7 +169,7 @@ The following example shows removing any object in the pets array that has an `i
 
 ### Liquid Templating
 
-You can use this pets array to personalize a message. The Liquid templating example below shows how to reference the custom attribute object properties saved from the above API request and use them in your messaging.
+You can use this `pets` array to personalize a message. The Liquid templating example below shows how to reference the custom attribute object properties saved from the above API request and use them in your messaging.
 
 {% raw %}
 ```liquid
@@ -181,7 +181,7 @@ I have a {{pet.type}} named {{pet.name}}! They are a {{pet.breed}}.
 ```
 {% endraw %}
 
-In this scenario, you can use Liquid to loop through the pets array and print out a statement for each pet. [Assign a variable]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/using_liquid/#assigning-variables) to the `pets` custom attribute and use dot notation to access properties on an object. Specify the name of the object, followed by a period `.`, followed by the property name.
+In this scenario, you can use Liquid to loop through the `pets` array and print out a statement for each pet. [Assign a variable]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/using_liquid/#assigning-variables) to the `pets` custom attribute and use dot notation to access properties on an object. Specify the name of the object, followed by a period `.`, followed by the property name.
 
 ### Segmentation
 
@@ -193,7 +193,7 @@ Create a new segment and select **Nested Custom Attribute** as your filter. Then
 
 Use dot notation to specify which field in the array of objects you want to use. Start the text field with an empty set of square brackets `[]` to tell Braze that you're looking inside an array of objects. After that, add a period `.`, followed by the name of the field you want to use.
 
-For example, if you want to filter the pets array of objects based on the `type` field, enter `[].type` and choose which type of pet to filter for, such as `snake`.
+For example, if you want to filter the `pets` array of objects based on the `type` field, enter `[].type` and choose which type of pet to filter for, such as `snake`.
 
 ![Filter by pet type equals snake][3]
 
