@@ -5,12 +5,12 @@ hidden: true
 ---
 <br>
 {% alert note %}
-Support for this feature depends on [nested custom attributes]({{site.baseurl}}/nested_custom_attribute_support/), which is currently in beta. Please contact your Braze account manager if you are interested in participating in the beta.
+Support for this feature depends on [nested custom attributes]({{site.baseurl}}/nested_custom_attribute_support/), which is currently in early access. Please contact your Braze account manager if you are interested in participating in the early access.
 {% endalert %}
 
 # Array of Objects
 
-When dealing with numerous custom attribute objects, use an array of objects to group related attributes. These arrays of objects can be used to personalize your messaging with Liquid, or create audience segments if any element within an object matches the criteria.
+Use an array of objects to group related attributes. You may have a group of pet objects, song objects, and account objects that all belong to one user. These arrays of objects can be used to personalize your messaging with Liquid, or create audience segments if any element within an object matches the criteria.
 
 ## Limitations
 
@@ -28,7 +28,7 @@ Updating or removing items in an array requires identifying the item by key and 
 {% tabs %}
 {% tab Create %}
 
-Shown below is a `/users/track` example with a `pets` array. To capture the properties of the pets, send an API request that lists `pets` as an array of objects. Note that each object has been assigned a unique `id` that can be referenced when making updates later.
+Shown below is a `/users/track` example with a `pets` array. To capture the properties of the pets, send an API request that lists `pets` as an array of objects. Note that each object has been assigned a unique `id` that can be referenced later when making updates.
 
 ```json
 {
@@ -93,9 +93,9 @@ Add another item to the array using the `$add` operator. The following example s
 {% endtab %}
 {% tab Update %}
 
-Update values for specific objects within an array using the `_merge_objects` parameter. Similar to updates to simple [nested custom attribute]({{site.baseurl}}/nested_custom_attribute_support/#api-request-body) objects, this performs a deep merge.
+Update values for specific objects within an array using the `_merge_objects` parameter and the `$update` operator. Similar to updates to simple [nested custom attribute]({{site.baseurl}}/nested_custom_attribute_support/#api-request-body) objects, this performs a deep merge.
 
-The following example shows updating the `breed` property to `goldfish` for the object with an `id` of `4`. This also updates the object with `id` equals `5` with a new `name` of `Annette`. Since the `_merge_objects` parameter is set to `true`, all other fields for these two objects remain the same.
+The following example shows updating the `breed` property to `goldfish` for the object with an `id` of `4`. This request example also updates the object with `id` equals `5` with a new `name` of `Annette`. Since the `_merge_objects` parameter is set to `true`, all other fields for these two objects remain the same.
 
 ```json
 {

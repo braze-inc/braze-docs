@@ -5,7 +5,7 @@ hidden: true
 ---
 <br>
 {% alert note %}
-Nested custom attribute support is currently in beta. Please contact your Braze account manager if you are interested in participating in the beta.
+Support for nested custom attributes is currently in early access. Please contact your Braze account manager if you are interested in participating in the early access.
 {% endalert %}
 
 # Nested Custom Attribute Support
