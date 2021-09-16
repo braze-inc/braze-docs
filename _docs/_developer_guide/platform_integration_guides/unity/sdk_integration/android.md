@@ -112,7 +112,7 @@ In your `AndroidManifest.xml`, all instances of `REPLACE_WITH_YOUR_PACKAGE_NAME`
 The following dependencies are required:
 
 ```groovy
-implementation "androidx.appcompat:appcompat:+"
+implementation "org.jetbrains.kotlin:kotlin-stdlib:1.5.21"
 
 // Both are required if using the default Content Cards Activity on Android
 implementation "androidx.swiperefreshlayout:swiperefreshlayout:+"
@@ -127,7 +127,7 @@ Examples on how to add these dependencies using Unity tools are provided below.
 
 ```groovy
 dependencies {
-  implementation "androidx.appcompat:appcompat:+"
+  implementation "org.jetbrains.kotlin:kotlin-stdlib:1.5.21"
 }
 ```
 
@@ -138,7 +138,7 @@ dependencies {
 ```xml
 <dependencies>
   <androidPackages>
-    <androidPackage spec="androidx.appcompat:appcompat:+" />
+    <androidPackage spec="org.jetbrains.kotlin:kotlin-stdlib:1.5.21" />
   </androidPackages>
 </dependencies>
 ```
