@@ -40,7 +40,7 @@ You can create your own Content Cards interface by extending `ABKContentCardsTab
 
 The following code snippets show an example of how to build custom Content Cards with key-value pairs using the methods provided by the SDK. These methods allow you to customize all aspects of the Content Card UI, such as including custom fonts, customized color components, customized text, and more. 
 
-There exist two distinct ways to customize Content Carrd UI, the dynamic UI method, which allows you to update card UI on a per-card basis, or the static method, which will update the UI across all cards.
+There exist two distinct ways to customize Content Card UI, the dynamic UI method, which allows you to update card UI on a per-card basis, or the static method, which will update the UI across all cards.
 
 #### Dynamic UI
 
@@ -123,7 +123,7 @@ Custom interfaces can be provided by registering custom classes for each desired
 ![Custom Classes]({% image_buster /assets/img/interface2.png %}){: style="max-width:25%;margin-left:15px;"}
 ![Custom Classes]({% image_buster /assets/img/interface3.png %}){: style="max-width:18%;margin-left:15px;"}
 
-If you would like to use our banner, captioned image, and classic Content Card templates, those can be found [here](). Alternaively, if you would like to provide your own custom interfaces, reference the following code snippets:
+If you would like to use our banner, captioned image, and classic Content Card templates, those can be found [here](). Alternatively, if you would like to provide your own custom interfaces, reference the following code snippets:
 
 {% tabs %}
 {% tab Objective-C %}
