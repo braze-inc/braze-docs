@@ -12,16 +12,16 @@ description: "This landing page covers Braze SDK integration guides for CocoaPod
 guide_featured_title: "Basic Integration Options"
 guide_featured_list:
 - name: CocoaPods
-  link: /docs/developer_guide/platform_integration_guides/ios/initial_sdk_setup/cocoapods/
+  link: /docs/developer_guide/platform_integration_guides/ios/initial_sdk_setup/installation_methods/cocoapods/
   image: /assets/img/cocoapods.png
 - name: Swift Package Manager (SPM)
-  link: /docs/developer_guide/platform_integration_guides/ios/initial_sdk_setup/swift_package_manager/
+  link: /docs/developer_guide/platform_integration_guides/ios/initial_sdk_setup/installation_methods/swift_package_manager/
   image: /assets/img/swift.png
 - name: Carthage
-  link: /docs/developer_guide/platform_integration_guides/ios/initial_sdk_setup/carthage_integration/
+  link: /docs/developer_guide/platform_integration_guides/ios/initial_sdk_setup/installation_methods/carthage_integration/
   image: /assets/img/carthage.jpeg
 - name: Manual
-  link: /docs/developer_guide/platform_integration_guides/ios/initial_sdk_setup/manual_integration_options/
+  link: /docs/developer_guide/platform_integration_guides/ios/initial_sdk_setup/installation_methods/manual_integration_options/
   fa_icon: fas fa-toolbox
 - name: "Completing the Integration"
   link: /docs/developer_guide/platform_integration_guides/ios/initial_sdk_setup/completing_integration/

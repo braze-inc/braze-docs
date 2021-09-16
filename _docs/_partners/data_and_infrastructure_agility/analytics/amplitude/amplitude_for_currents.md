@@ -24,8 +24,8 @@ Add this information to the Amplitude integration page on the dashboard, and pre
 
 ![Amplitude]({% image_buster /assets/img_archive/currents-amplitude-edit.png %})
 
-{% alert important %}
-It's important to keep your Amplitude API Key up to date; if your connector's credentials expire, the connector will stop sending events. If this persists for more than **48 hours**, the connector's events will be dropped and data will be permanently lost.
+{% alert warning %}
+Keep your Amplitude API Key up to date. If your connector's credentials expire, the connector will stop sending events. If this persists for more than **48 hours**, the connector's events will be dropped and data will be permanently lost.
 {% endalert %}
 
 Amplitude's documentation is available [here](https://amplitude.zendesk.com/hc/en-us/articles/115000217351-Appboy-Amplitude-Integration#how-to-set-up-and-use-the-integration).

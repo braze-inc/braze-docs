@@ -179,6 +179,11 @@ If you have a custom [Application][76] subclass, ensure you do not have automati
 After completing this section, you should be able to receive and display push notifications sent by Braze.
 
 ### Step 1: Register Braze Firebase Messaging Service
+
+{% alert important %}
+If you already have a Firebase Messaging Service registered, do not complete this step. Instead, proceed to [Using Your Own Firebase Messaging Service](#using-your-own-firebase-messaging-service) and complete the steps listed there.
+{% endalert %}
+
 Braze includes a service to handle push receipt and open intents. Our `BrazeFirebaseMessagingService` class will need to be registered in your `AndroidManifest.xml`.
 
 ```xml
@@ -193,10 +198,6 @@ Braze includes a service to handle push receipt and open intents. Our `BrazeFire
 Braze's notification code also uses `BrazeFirebaseMessagingService` to handle open and click action tracking. This service must be registered in the `AndroidManifest.xml` for that to function correctly. Also, keep in mind that Braze prefixes notifications from our system with a unique key to ensure we only render notifications sent from Braze's systems. You may register additional services separately to render notifications sent from other FCM services.
 
 {% alert important %}
-If you already have a Firebase Messaging Service registered, do not complete this step. Instead, proceed to [Using Your Own Firebase Messaging Service](#using-your-own-firebase-messaging-service) and complete the steps listed there.
-{% endalert %}
-
-{% alert update %}
 Before Braze SDK 3.1.1, `AppboyFcmReceiver` was used to handle FCM push. The `AppboyFcmReceiver` class should be removed from your manifest and replaced with the above integration.
 {% endalert %}
 
@@ -259,7 +260,7 @@ To properly create a notification small icon asset:
 - All other non-white regions of the asset should be transparent.
 
 {% alert note %}
-A common symptom of an improper asset is the notification small icon rendering as a solid monochrome square. This is due to the Android system not being able to find any transparent regions in the notification small icon asset.
+A common symptom of an improper asset is the small notification icon rendering as a solid monochrome square. This is due to the Android system not being able to find any transparent regions in the notification small icon asset.
 {% endalert %}
 
 The icons pictured below are examples of properly designed icons:
@@ -498,7 +499,7 @@ setCustomBrazeNotificationFactory(brazeNotificationFactory: IBrazeNotificationFa
 The recommended place to set your custom `IBrazeNotificationFactory` is in the `Application.onCreate()` application lifecycle method (not activity).  This will allow the notification factory to be set correctly whenever your app process is active.
 
 {% alert important %}
-Creating your own notification from scratch is an advanced use case and should be done only with thorough testing and a deep understanding of Braze's push functionality (you must, for example, ensure your notification logs push opens correctly).
+Creating your own notification from scratch is an advanced use case and should be done only with thorough testing and a deep understanding of Braze's push functionality. For example, you must ensure your notification logs push opens correctly.
 {% endalert %}
 
 To unset your custom [`IBrazeNotificationFactory`][6] and return to default Braze handling for push, pass in `null` to our custom notification factory setter:

@@ -32,8 +32,6 @@ Refer to the [changeUser documentation][4] for more information.
 
 {% include archive/setting_user_ids/best_practices.md %}
 
-> If you opt to use a hash of a unique identifier as your userID take care to ensure that you're normalizing the input to your hashing function. For example, if you're going to use a hash of an email address, ensure that you're stripping leading and trailing whitespace from the input.
-
 ## Aliasing Users
 
 An alias serves as an alternative unique user identifier. Use aliases to identify users along different dimensions than your core user ID:

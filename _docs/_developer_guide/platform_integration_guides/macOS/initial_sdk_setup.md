@@ -26,6 +26,6 @@ Please note that Push Stories, Rich Push, and Geofences are not supported on Mac
 
 [1]:https://github.com/Appboy/appboy-ios-sdk/releases/tag/3.32.0
 [2]:https://developer.apple.com/mac-catalyst/
-[3]:{{site.baseurl}}/developer_guide/platform_integration_guides/ios/initial_sdk_setup/swift_package_manager/
+[3]:{{site.baseurl}}/developer_guide/platform_integration_guides/ios/initial_sdk_setup/installation_methods/swift_package_manager/
 [4]:{{site.baseurl}}/developer_guide/platform_integration_guides/ios/push_notifications/integration/
 [5]:{{site.baseurl}}/developer_guide/platform_integration_guides/ios/analytics/location_tracking/

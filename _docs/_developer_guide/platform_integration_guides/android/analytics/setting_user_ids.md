@@ -54,10 +54,6 @@ Full class information can be found in the [javadocs][4].
 
 {% include archive/setting_user_ids/best_practices.md %}
 
-{% alert tip %}
-If you opt to use a hash of a unique identifier as your userID take care to ensure that you're normalizing the input to your hashing function. For example, if you're going to use a hash of an email address, ensure that you're stripping leading and trailing whitespace from the input, and taking [localization problems](http://developer.android.com/reference/java/util/Locale.html#default_locale) into account.
-{% endalert %}
-
 ## Aliasing Users
 
 An alias serves as an alternative unique user identifier. Use aliases to identify users along different dimensions than your core user ID:

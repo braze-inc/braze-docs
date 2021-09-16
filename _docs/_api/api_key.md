@@ -34,7 +34,7 @@ While the old way of passing API keys continues to work, after a period of time 
 {% alert important %}
 __Looking for the `api_key` parameter in your Braze endpoints?__<br>
 As of May 2020, Braze has changed how we read API keys to be more secure. Now API keys must be passed as a request header, please see YOUR-REST-API-KEY within each endpoint Example Requests.
-
+<br><br>
 Braze will continue to support the `api_key` being passed through the request body and URL parameters, but will eventually be sunset. Please update your API calls accordingly.
 {% endalert %}
 
@@ -215,8 +215,8 @@ API key permissions are permissions you can assign a user or group to limit thei
 
 Please check [Braze documentation][5] site or our [Braze Postman documentation][6] for a full description of these API endpoints.
 
-{% alert note %}
-Keep in mind that once you create a new API Key, you cannot edit the scope of permissions or the whitelisted IPs. This limitation is in place for security reasons. If you need to change the scope of a key, create a new key with the updated permissions and implement that key in place of the old one. Once you’ve completed your implementation, go ahead and delete the old key.
+{% alert important %}
+Once you create a new API Key, you cannot edit the scope of permissions or the whitelisted IPs. This limitation is in place for security reasons. If you need to change the scope of a key, create a new key with the updated permissions and implement that key in place of the old one. Once you’ve completed your implementation, go ahead and delete the old key.
 {% endalert %}
 
 ## The App Identifier API Key

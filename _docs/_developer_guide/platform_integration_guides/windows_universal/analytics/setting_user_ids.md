@@ -28,8 +28,6 @@ Additionally, we recommend against changing the user ID when a user logs out, as
 
 {% include archive/setting_user_ids/best_practices.md %}
 
-> If you opt to use a hash of a unique identifier as your userID take care to ensure that you're normalizing the input to your hashing function. For example, if you're going to use a hash of an email address, ensure that you're stripping leading and trailing whitespace from the input, and taking [localization problems][6] into account.
-
 [1]: {{site.baseurl}}/developer_guide/rest_api/user_data/#user-data
 [2]: {{site.baseurl}}/developer_guide/rest_api/messaging/
 [6]: http://developer.android.com/reference/java/util/Locale.html#default_locale "Android Developer Docs - Localization"
