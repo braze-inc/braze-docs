@@ -118,11 +118,11 @@ override func setUpUI() {
 ### Providing Custom Interfaces
 
 Custom interfaces can be provided by registering custom classes for each desired card type. 
-
+<!--
 ![Custom Classes]({% image_buster /assets/img/interface1.png %}){: style="max-width:35%;margin-left:15px;"}
 ![Custom Classes]({% image_buster /assets/img/interface2.png %}){: style="max-width:25%;margin-left:15px;"}
 ![Custom Classes]({% image_buster /assets/img/interface3.png %}){: style="max-width:18%;margin-left:15px;"}
-
+-->
 If you would like to use our banner, captioned image, and classic Content Card templates, those can be found [here](). Alternaively, if you would like to provide your own custom interfaces, reference the following code snippets:
 
 {% tabs %}
