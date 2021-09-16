@@ -26,6 +26,10 @@ Subsequently, you can associate multiple additional user aliases with a single `
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#5f74e0f7-0620-4c7b-b0a2-f5f38fdbff58 {% endapiref %}
 
+{% alert note %}
+A rate limit is applied to requests made to this endpoint for customers who onboarded with Braze on or after September 16, 2021. For more information, see [API Limits]({{site.baseurl}}/api/basics/#api-limits).
+{% endalert %}
+
 ## Request Body
 
 ```
