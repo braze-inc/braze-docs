@@ -65,7 +65,7 @@ The [TCPA](https://en.wikipedia.org/wiki/Telephone_Consumer_Protection_Act_of_19
 
 Remember to comply with the [National Do Not Call Registry](https://www.donotcall.gov/).
 
-Braze uses [Subscription Groups]({{site.baseurl}}/user_guide/message_building_by_channel/sms/keywords/) to manage groups of users based on their level of consent.
+Braze uses [Subscription Groups]({{site.baseurl}}/user_guide/message_building_by_channel/sms/sms_subscription_group/) to manage groups of users based on their level of consent.
 
 ### Spam and Cadence
 

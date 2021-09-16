@@ -34,7 +34,7 @@ guide_featured_list:
   link: /docs/user_guide/message_building_by_channel/push/best_practices/reporting
   fa_icon: fas fa-file-alt
 - name: Push Enablement and Subscription
-  link: /docs/user_guide/message_building_by_channel/push/best_practices/users_and_subscriptions/
+  link: /docs/user_guide/message_building_by_channel/push/users_and_subscriptions/
   fa_icon: fas fa-user-check
 ---
 
