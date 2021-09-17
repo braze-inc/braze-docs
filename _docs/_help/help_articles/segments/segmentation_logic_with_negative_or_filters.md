@@ -40,14 +40,7 @@ If you'd like to include customers with two or more values for a particular attr
 
 `Country is not United States AND Country is not Canada` will only include customers who are not from the United States AND who are not from Canada. Therefore, both United States customers and Canadian customers will be excluded.
 
-Because there are no valid use cases for using "Or" operands with two or more negative filters that have the same attribute, Braze will not allow you to continue creating your campaign or segment if you use this configuration with "does not equal" or "is not" comparisons.
-
-![targeting_error][48]
-
-If you received this warning message and aren't sure how to correct your campaign, Canvas or segment, please get in touch with your Customer Success Manager or write to our support team.
-
 Still need help? [Open a support ticket]({{site.baseurl}}/support_contact/).
 
-[48]: {% image_buster /assets/img_archive/targeting_error.png %}
 [49]: {% image_buster /assets/img_archive/us_canada.png %}
 [50]: {% image_buster /assets/img_archive/not_us_not_canada.png %}
