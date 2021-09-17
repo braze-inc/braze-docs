@@ -17,7 +17,7 @@ channel:
 __Note that integration of `SDWebImage` is required if you plan on using our Braze UI for displaying images__ within iOS In-App Messages, News Feed, or Content Cards.
 {% endalert %}
 
-Braze allows clients to replace existing default images with their own custom images. To accomplish this, create a new `png` file with the custom image and add it to the app’s image bundle. Then, rename the file with the image’s name (see below) to override the default image in our library. Images available for override in Content Cards include:
+Braze allows clients to replace existing default images with their own custom images. To accomplish this, create a new `png` file with the custom image and add it to the app's image bundle. Then, rename the file with the image's name (see below) to override the default image in our library. Images available for override in Content Cards include:
 
 - Placeholder image: `appboy_cc_noimage_lrg`.
 - Pinned icon image: `appboy_cc_icon_pinned`.
@@ -25,7 +25,7 @@ Braze allows clients to replace existing default images with their own custom im
 Because Content Cards have a maximum size of 2 KB for content you enter in the dashboard (including message text, image URLs, links, and all key-value pairs), make sure to check the size before sending. Exceeding this amount will prevent the card from sending.
 
 {% alert note %}
-Be sure to upload the `@2x` and `@3x` versions of the images as well to accommodate different phone sizes.
+Be sure to upload the `@2x` and `@3x` versions of the images to accommodate different phone sizes.
 {% endalert %}
 
 {% alert note %}
@@ -38,13 +38,13 @@ You can create your own Content Cards interface by extending `ABKContentCardsTab
 
 ### Customizing UI
 
-The following code snippets show an example of how to build custom Content Cards with key-value pairs using the methods provided by the SDK. These methods allow you to customize all aspects of the Content Card UI, such as including custom fonts, customized color components, customized text, and more. 
+The following code snippets show how to style and change out-of-the-Box Content Cards to fit your UI needs using methods provided by the SDK. These methods allow you to customize all aspects of the Content Card UI, such as including custom fonts, customized color components, customized text, and more. 
 
 There exist two distinct ways to customize Content Card UI, the dynamic UI method, which allows you to update card UI on a per-card basis, or the static method, which will update the UI across all cards.
 
 #### Dynamic UI
 
-The Content Card `applyCard` method can be used to reference the card object and pass it the key-value pairs that will be used to update the UI.
+The Content Card `applyCard` method can reference the card object and pass it key-value pairs that will be used to update the UI.
 
 {% tabs %}
 {% tab Objective-C %}
@@ -83,7 +83,7 @@ override func apply(_ captionedImageCard: ABKCaptionedImageContentCard!) {
 
 #### Static UI
 
-The `setUpUI` instance method can be used to assign values to the static Content Card components across all cards. 
+The `setUpUI` method can assign values to the static Content Card components across all cards. 
 
 {% tabs %}
 {% tab Objective-C %}
@@ -123,7 +123,7 @@ Custom interfaces can be provided by registering custom classes for each desired
 ![Custom Classes]({% image_buster /assets/img/interface2.png %}){: style="max-width:25%;margin-left:15px;"}
 ![Custom Classes]({% image_buster /assets/img/interface3.png %}){: style="max-width:18%;margin-left:15px;"}
 
-If you would like to use our banner, captioned image, and classic Content Card templates, those can be found [here](). Alternatively, if you would like to provide your own custom interfaces, reference the following code snippets:
+Braze provides three Content Card templates (banner, captioned image, and classic). Alternatively, if you would like to provide your own custom interfaces, reference the following code snippets:
 
 {% tabs %}
 {% tab Objective-C %}
@@ -154,7 +154,7 @@ override func registerTableViewCellClasses() {
 
 ### Overriding Populated Content Cards
 
-Content Cards components can be overridden by using the `getContentCards` method along with the `isKindOfClass` method to reference the desired card and push updates.
+Content Cards can be changed programmatically using the `populateContentCards` method.
 
 {% tabs %}
 {% tab Objective-C %}
@@ -239,5 +239,5 @@ func contentCardTableViewController(_ viewController: ABKContentCardsTableViewCo
 {% endtabs %}
 
 {% alert important %}
-If you override the `handleCardClick:` method in `ABKContentCardsTableViewController`, then these delegate methods might not be called.
+If you override the `handleCardClick:` method in `ABKContentCardsTableViewController`, these delegate methods might not be called.
 {% endalert %}
