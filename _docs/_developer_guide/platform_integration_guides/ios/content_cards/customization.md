@@ -40,7 +40,9 @@ You can create your own Content Cards interface by extending `ABKContentCardsTab
 
 The following code snippets show how to style and change out-of-the-Box Content Cards to fit your UI needs using methods provided by the SDK. These methods allow you to customize all aspects of the Content Card UI, such as including custom fonts, customized color components, customized text, and more. 
 
-There exist two distinct ways to customize Content Card UI, the dynamic UI method, which allows you to update card UI on a per-card basis, or the static method, which will update the UI across all cards.
+There exist two distinct ways to customize Content Card UI: 
+- Dynamic method: update card UI on a per-card basis
+- Static method: update the UI across all cards
 
 #### Dynamic UI
 
