@@ -24,7 +24,7 @@ The funnel reporting feature is available from either:
 Funnel Reports can be made for existing active campaigns and Canvases. These reports show a series of events that a campaign recipient progresses through over a period of one (1) to thirty (30) days from the date they received the message. A user is considered converted through a step in the funnel if they perform the event in the specified order.
 <br><br>
 {% alert important %}
-Funnel Reports are not available for SMS and API-triggered campaigns.
+Funnel Reports are not available for API-triggered campaigns.
 {% endalert %}
 
 ### Step 1: Select a Date Range
