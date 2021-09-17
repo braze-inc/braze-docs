@@ -11,7 +11,7 @@ channel:
 
 # Contact Cards 
 
-> Contact Cards (sometimes known as vCard or Virtual Contact Files (vcf)) are a standardized file format for sending business and contact information that can be easily imported into address books or contact books. 
+> Contact Cards (sometimes known as vCard or Virtual Contact Files (VCF)) are a standardized file format for sending business and contact information that can be easily imported into address books or contact books. 
 
 Contact Cards can be created [programmatically](https://www.twilio.com/blog/send-vcard-twilio-sms) and uploaded to the Braze [Media Library]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/media_library/#media-library) or created through our built-in Contact Card Generator. You can assign common properties to these cards, such as your company's name, phone number, address, email, and a small photo.
 
