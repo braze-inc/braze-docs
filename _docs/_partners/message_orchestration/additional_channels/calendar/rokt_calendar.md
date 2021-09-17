@@ -16,7 +16,7 @@ The Rokt Calendar and Braze integration allow for Rokt Calendar calendar subscri
 
 Customers can use the Braze Canvas to define journey targeting, a segment of your audience, while using the calendar event as a communication method, much in the same way that SMS, email, and push notifications are used. Audience segmentation can be done on any of the standard Braze user attributes as well as the custom attributes generated through the calendar subscription.
 
-Rokt Calendar provides Braze customers the ability to align their personalized marketing initiatives and extend personalized content to the end user's Calendar. Thus, making it a more seamless experience for the end user and further develops stickiness with our customers' services. 
+Rokt Calendar provides Braze customers the ability to align their personalized marketing initiatives and extend personalized content to the end user's Calendar. Thus, making it a more seamless experience for the end user and further develops stickiness with our customers' services.
 
 ## Prerequisites
 
