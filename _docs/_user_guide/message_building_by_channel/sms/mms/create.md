@@ -27,8 +27,9 @@ Sending MMS with Braze:
   - MMS are billed at a different rate vs. text-only SMS.
   - Not all carriers can accept MMS. In these cases, Twilio will automatically convert the MMS to an image link the user can click.
 
-### vCard Contact Cards
-vCards, also known as Virtual Contact Files (VCF), are a standardized file format for sending business and contact information that can be easily imported into address books or contact books. These cards can be created [programmatically](https://www.twilio.com/blog/send-vcard-twilio-sms) and uploaded to the Braze Media Library or created through our built-in [Contact Card Generator]({{site.baseurl}}/user_guide/message_building_by_channel/sms/mms/contact_card/).
+### Contact Cards
+
+Contact Cards (sometimes known as vCard or Virtual Contact Files (vcf)) are a standardized file format for sending business and contact information that can be easily imported into address books or contact books. These cards can be created [programmatically](https://www.twilio.com/blog/send-vcard-twilio-sms) and uploaded to the Braze Media Library or created through our built-in [Contact Card Generator]({{site.baseurl}}/user_guide/message_building_by_channel/sms/mms/contact_card/).
 
 ## Creating an MMS message
 

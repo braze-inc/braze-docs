@@ -9,11 +9,11 @@ channel:
   
 ---
 
-# vCard Contact Cards 
+# Contact Cards 
 
-> vCards, also known as Virtual Contact Files (VCF), are a standardized file format for sending business and contact information that can be easily imported into address books or contact books. 
+> Contact Cards (sometimes known as vCard or Virtual Contact Files (vcf)) are a standardized file format for sending business and contact information that can be easily imported into address books or contact books. 
 
-vCards can be created [programmatically](https://www.twilio.com/blog/send-vcard-twilio-sms) and uploaded to the Braze [Media Library]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/media_library/#media-library) or created through our built-in Contact Card Generator. You can assign common properties to these cards, such as your company's name, phone number, address, email, and a small photo.
+Contact Cards can be created [programmatically](https://www.twilio.com/blog/send-vcard-twilio-sms) and uploaded to the Braze [Media Library]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/media_library/#media-library) or created through our built-in Contact Card Generator. You can assign common properties to these cards, such as your company's name, phone number, address, email, and a small photo.
 
 ## Contact Card Generator
 ![Contact Card Composer]({% image_buster /assets/img/sms/contactcards.gif %}){: style="max-width:75%;margin-top:15px;"}
@@ -51,4 +51,4 @@ The Contact card will also be saved in the [Media Library]({{site.baseurl}}/user
 
 ## Adding an Existing Contact Card
 
-To add an existing Contact Card, create a campaign or Canvas and select your desired subscription group. Next, an __Add Media__ option will appear in the message composer window. Here, you can upload an existing vCard file or locate one through the Media Library.
+To add an existing Contact Card, create a campaign or Canvas and select your desired subscription group. Next, an __Add Media__ option will appear in the message composer window. Here, you can upload an existing Contact Card file or locate one through the Media Library.
