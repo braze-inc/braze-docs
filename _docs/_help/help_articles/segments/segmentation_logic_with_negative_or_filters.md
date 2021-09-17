@@ -1,5 +1,5 @@
 ---
-nav_title: Segmentation Logic With Negative Or Filters
+nav_title: Segmentation Logic with Negative OR Filters
 page_order: 2
 
 page_type: solution
@@ -8,37 +8,48 @@ tool: Segments
 noindex: true
 ---
 
-# Segmentation Logic With Negative OR Filters
+# Segmentation Logic with Negative OR Filters
 
 The OR operator must be used with care, especially when considering:
 * [When to apply the OR operator](#using-or)
 * [When not to apply the OR operator](#when-not-to-apply-the-or-operator)
-* [When to apply the AND operator](when-to-apply-the-and-operator)
+* [When to apply the AND operator](#when-to-apply-the-and-operator)
 
-# Using OR
+## When to Apply the OR Operator {#using-or}
 
-The "OR" operator allows you to create a statement that will evaluate to true if a user meets the criteria for one or more filters in the statement. For example, consider a promotion that is valid for your US and Canadian customers. You want to make sure that only customers in areas where the promotion is valid receive the promotion. You can use the following statement to target your campaign: `Country is United States OR Country is Canada`
+Use the `OR` operator to create a statement that will evaluate to true if a user meets the criteria for one or more filters in the statement. 
 
-![us_or_canada][49]
+For example, consider a promotion that is valid for both United States and Canadian customers. You want to make sure that only customers in areas where the promotion is valid receive the promotion. In this scenario, use the following statement to target your campaign:
 
-A customer who meets one or more of the country filters will receive your campaign so your campaign will only go to customers whose country is Canada or whose country is United States.
+`Country is United States OR Country is Canada`
 
-# When Not to Apply the OR Operator
+![us_or_canada][49]{: style="max-width:80%"}
 
-In certain circumstances, the "OR" operator should not be used, it is possible to break the logic. For example, let's say that you have a campaign that is valid in every country EXCEPT for the US and Canada. Inverting our logic from the last scenario leads to a segment that targets **all** customers: `Country is not United States OR Country is not Canada`
+With the `OR` operator, your campaign will only go to customers whose country is Canada or whose country is United States.
 
+## When Not to Apply the OR Operator
 
-![not_us_or_canada][50]
+In certain circumstances, the `OR` operator should not be used. For example, if you have a campaign that is valid in every country except for the United States and Canada. To filter for this segment, you might try to invert the logic from the previous scenario. However, this leads to a segment that targets all customers: 
 
-The above statement will target all customers, because all customers will meet the criteria for one or more of the filters. Canadian customers meet the criteria for "Country is not United states". US customers meet the criteria for "Country is not Canada".
+`Country is not United States OR Country is not Canada`
 
-The negative targeting criteria "is not" and "does not equal" **should not** be used with the "OR" operator when two or more filters are referencing the same attribute. If "is not" or "does not equal" is used with the "OR" operator two or more times in a statement, customers will all values for the relevant attribute will be targeted.
+![not_us_or_canada][50]{: style="max-width:80%"}
 
-## When To Apply the AND Operator
+The preceeding statement targets all customers, because all customers meet the criteria for one or more of the filters. Canadian customers meet the criteria for `Country is not United States`. US customers meet the criteria for `Country is not Canada`.
 
-If you'd like to include customers with two or more values for a particular attribute, you should use the "AND" operator. Let's return to our use case - targeting customers from every country except for Canada and the United States.
+The following negative targeting criteria should not be used with the `OR` operator when two or more filters are referencing the same attribute:
 
-`Country is not United States AND Country is not Canada` will only include customers who are not from the United States AND who are not from Canada. Therefore, both United States customers and Canadian customers will be excluded.
+- `is not`
+- `does not equal`
+- `does not match regex`
+
+If `is not`, `does not equal`, or `does not match regex` are used with the `OR` operator two or more times in a statement, customers with all values for the relevant attribute will be targeted.
+
+## When to Apply the AND Operator
+
+If you'd like to include customers with two or more values for a particular attribute, you should use the `AND` operator. Let's return to the example use case—targeting customers from every country except for Canada and the United States.
+
+The statement `Country is not United States AND Country is not Canada` will only include customers who are not from the United States and who are not from Canada. Therefore, both United States customers and Canadian customers will be excluded.
 
 Still need help? [Open a support ticket]({{site.baseurl}}/support_contact/).
 

@@ -18,6 +18,10 @@ This endpoint allows you to export a list of custom events that have been record
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#93ecd8a5-305d-4b72-ae33-2d74983255c1 {% endapiref %}
 
+{% alert note %}
+A rate limit is applied to requests made to this endpoint for customers who onboarded with Braze on or after September 16, 2021. For more information, see [API Limits]({{site.baseurl}}/api/basics/#api-limits).
+{% endalert %}
+
 ## Request Parameters
 
 | Parameter| Required | Data Type | Description |
