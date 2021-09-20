@@ -39,6 +39,8 @@ In iOS 15, push notifications can be sent with one of four interruption levels:
 * **Time-Sensitive** (new) - Allows sound, vibration, screen waking, can break through system controls if allowed.
 * **Critical** - Allows sound, vibration, screen waking, can break through system controls, and bypass ringer switch.
 
+To learn more about how to set this option in iOS Push, see our [documentation](https://www.braze.com/docs/user_guide/message_building_by_channel/push/ios/notification_options/#interruption-level)
+
 ### Notification Summary {#notification-summary}
 
 ![Notification Summary]({% image_buster /assets/img/ios/ios15-notification-summary.png %}){: style="float:right;max-width:25%;margin-left:15px;border:0"}
@@ -47,7 +49,7 @@ In iOS 15, users can (optionally) choose certain times throughout the day to rec
 
 For each notification you send, you'll soon be able to specify a "relevance score" to control which notification should appear at the top of the summary.
 
-We're excited to offer support for these new features—stay tuned for more information to be announced near iOS 15's official release!
+To learn more about how to set a notification's "relevance score", see our [documentation](https://www.braze.com/docs/user_guide/message_building_by_channel/push/ios/notification_options/#relevance-score)
 
 ## Location Buttons {#location-buttons}
 
