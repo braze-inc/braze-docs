@@ -43,7 +43,7 @@ The method declarations in [ABKFeedController][44] below describe this in detail
 
 ## Displaying Number of Unread News Feed Items on App Badge Count
 
-![Badge Example][42]
+![Badge Example][42]{: style="float:right;max-width:70%;margin-left:15px;"}
 
 In addition to serving as push notification reminders for an app, badges can also be utilized to denote unviewed items in the user's News Feed. Updating the badge count based on unread News Feed updates can be a valuable tool in attracting users back to your app and increasing sessions.
 

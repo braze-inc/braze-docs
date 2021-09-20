@@ -14,11 +14,11 @@ channel: news feed
 
 Similar to scheduled campaigns, the News Feed tool comes with an analytics dashboard to monitor impressions, clicks, and clickthrough rates. Clicking on a specific News Feed message in your dashboard brings up a host of visual analytics to sort through. At the top of the page, you can select your data date range and see a quick visualization of your most important metrics. Additionally, you can see specifics about this News Feed message, such as when it was sent and who it was sent to.
 
-![newsfeed_analytics_top][19]
+![Newsfeed Analytics Top][19]
 
 By scrolling down the page, you can see a larger breakdown of your clicks and impressions day-by-day. Total clicks/impressions are easily compared with unique clicks/impressions through line charts, while a clickthrough rate is presented as an interactive bar chart.
 
-![newsfeed_analytics_bottom][20]
+![NewsFeed Analytics Bottom][20]
 
 # Retargeting Data
 
@@ -51,7 +51,7 @@ You can create segments based on how users have interacted with specific cards i
   - Avoid over-using this targeting because user's may end up with empty feeds. Best practice is to use a combination of static and automatically removed content.
 - It also works well to retarget users who do not click on a card to follow up with another call to action.
 
-![has not clicked card][14]
+![Has not clicked card example][14]
 
 
 [19]: {% image_buster /assets/img_archive/braze_newsfeedanalytics.png %}

@@ -13,7 +13,7 @@ platform: Android
 
 ## Android Push Priority
 
-Android push notifications provide the option of dictating where notifications are displayed relative to other apps' notifications.  When composing the message for your push campaign, select "Notification Priority" in the settings tab to set a priority for your notification.
+Android push notifications provide the option of dictating where notifications are displayed relative to other apps' notifications.  When composing the message for your push campaign, select "Notification Display Priority" in the settings tab to set a priority for your notification.
 
 ![Dashboard Push Priority Location][41]
 
@@ -52,7 +52,7 @@ Android push notifications provide an optional field to determine how a notifica
 
 Additionally, Android users can override how push notifications appear on their lock screen by changing the notification privacy setting on their device. This setting will override the Visibility from the push notification.
 
-![Dashboard Push Priority Location][53]
+![Dashboard Push Priority Location][53]{: style="float:right;max-width:60%;margin-left:15px;"}
 
 Note that regardless of the Visibility, all notifications will be shown on the user's lock screen if the notification privacy setting on their device is *Show all content* (default setting). Likewise, notifications will not be shown on their lock screen if their notification privacy is set to *Do not show notifications*. The Visibility only has an effect if their notification privacy is set to *Hide sensitive content*. In that case, the notification will be displayed as follows:
 
