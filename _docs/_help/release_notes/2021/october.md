@@ -19,7 +19,7 @@ iOS 15 introduced new notification features to help users stay focused and avoid
 Contact Cards are a standardized file format for sending business and contact information that can be easily imported into address books or contact books. You can now upload and create Contact Cards for your SMS and MMS messages. To read more about how to build Contact Cards in our built-in Contact Card Generator, visit our [documentation]({{site.baseurl}}/user_guide/message_building_by_channel/sms/mms/contact_card/).
 
 ## Out-of-the-Box Content Cards Customization
-You can create your own Content Cards interface by extending ABKContentCardsTableViewController to customize all UI elements and Content Cards behavior. To read more about how to customize the Content Cards Feed, visit our [documentation]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/content_cards/customization/#customizing-the-content-cards-feed/). 
+You can create your own Content Cards interface by extending `ABKContentCardsTableViewController` to customize all UI elements and Content Cards behavior. To read more about how to customize the Content Cards Feed, visit our [documentation]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/content_cards/customization/#customizing-the-content-cards-feed/). 
 
 ## Canvas Experiment Steps
 With Experiment Steps, you can now track path performance to make informed decisions about your Canvas journey. Experiment Steps allow you to test multiple Canvas paths against each other and a control group at any point in the user journey. To learn more, visit [Experiment Steps]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/experiment_step/).
