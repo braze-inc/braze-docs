@@ -79,4 +79,4 @@ In iOS 15, users will be able to configure Safari to anonymize or generalize the
 
 [1]: https://github.com/Appboy/appboy-ios-sdk/releases/tag/4.3.2
 [2]: https://github.com/Appboy/appboy-ios-sdk/issues
-[3]: {{site.baseurl}}/docs/user_guide/message_building_by_channel/push/ios/notification_options/#interruption-level
+[3]: {{site.baseurl}}/user_guide/message_building_by_channel/push/ios/notification_options/#interruption-level
