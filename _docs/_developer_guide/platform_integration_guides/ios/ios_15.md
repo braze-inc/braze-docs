@@ -39,7 +39,7 @@ In iOS 15, push notifications can be sent with one of four interruption levels:
 * **Time-Sensitive** (new) - Allows sound, vibration, screen waking, can break through system controls if allowed.
 * **Critical** - Allows sound, vibration, screen waking, can break through system controls, and bypass ringer switch.
 
-To learn more about how to set this option in iOS Push, see [iOS Notification Options](https://www.braze.com/docs/user_guide/message_building_by_channel/push/ios/notification_options/#interruption-level).
+To learn more about how to set this option in iOS Push, see [iOS Notification Options]({{site.baseurl}}/user_guide/message_building_by_channel/push/ios/notification_options/#interruption-level).
 
 ### Notification Summary {#notification-summary}
 
@@ -49,7 +49,7 @@ In iOS 15, users can (optionally) choose certain times throughout the day to rec
 
 For each notification you send, you'll soon be able to specify a "relevance score" to control which notification should appear at the top of the summary.
 
-To learn more about how to set a notification's "relevance score", see [iOS Notification Options](https://www.braze.com/docs/user_guide/message_building_by_channel/push/ios/notification_options/#relevance-score).
+To learn more about how to set a notification's "relevance score", see [iOS Notification Options]({{site.baseurl}}/user_guide/message_building_by_channel/push/ios/notification_options/#relevance-score).
 
 ## Location Buttons {#location-buttons}
 
@@ -79,4 +79,4 @@ In iOS 15, users will be able to configure Safari to anonymize or generalize the
 
 [1]: https://github.com/Appboy/appboy-ios-sdk/releases/tag/4.3.2
 [2]: https://github.com/Appboy/appboy-ios-sdk/issues
-[3]: https://www.braze.com/docs/user_guide/message_building_by_channel/push/ios/notification_options/#interruption-level
+[3]: {{site.baseurl}}/docs/user_guide/message_building_by_channel/push/ios/notification_options/#interruption-level
