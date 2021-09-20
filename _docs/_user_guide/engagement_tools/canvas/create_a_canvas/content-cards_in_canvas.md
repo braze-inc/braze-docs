@@ -55,7 +55,7 @@ Canvas steps with a Content Card and another messaging channel have the followin
 
 | Option | Description |
 |---|---|
-| Message Sent | Users will advance to the next steps of the Canvas when at least one of the message types in this step have been sent successfully.|
+| Advance When Message Sent | Users will advance to the next steps of the Canvas when at least one of the message types in this step have been sent successfully.|
 | Immediately Advance Audience | When this option is selected, everyone in the step's audience will advance to the next steps after the delay elapses, whether they have seen the noted message or not.  <br> <br> _Users must match the step's segment and filter criteria to advance to next steps._ |
 {: .reset-td-br-1 .reset-td-br-2}
 
@@ -63,8 +63,6 @@ Canvas steps with a Content Card and another messaging channel have the followin
 
 After launching a Content Cards step in Canvas you can begin to analyze several different metrics for this step. 
 These metrics include the number of messages sent, unique recipients, conversion rates, total revenue, and more.
-
-
 
 For more information on the available metrics and their definitions, see our [Report Metrics Glossary][6].
 
