@@ -45,6 +45,33 @@ guide_featured_list:
 > <br>
 > For more information on any of the updates listed in this section, reach out to your account manager or [open a support ticket][support]. You can also check out [our SDK Changelogs]({{site.baseurl}}/developer_guide/platform_integration_guides/sdk_changelogs/) to see more information on our monthly SDK releases, updates, and improvements.
 
+## October 2021
+
+### iOS 15
+#### Apple Mail Privacy Protection
+Apple’s Mail Privacy Protection (MPP) is a privacy update that will be available for users of the Apple Mail app on iOS 15, iPadOS 15, macOS Monterey, and watchOS 8, released in mid-September. For users who opt-in to MPP, emails will now be preloaded using proxy servers, caching images and hindering the ability to leverage tracking pixels for metrics like [open tracking]({{site.baseurl}}/user_guide/administrative/app_settings/manage_app_group/email_settings/#email-open-tracking-pixel/). To learn more about MPP and issues regarding email deliverability metrics and issues with pre-existing campaigns and Canvases that trigger based on these metrics, visit our [documentation]({{site.baseurl}}/user_guide/message_building_by_channel/email/mpp/).
+
+#### Push Features
+iOS 15 introduced new notification features to help users stay focused and avoid frequent interruptions throughout the day. We're excited to offer support for these new features, including [Interruption Levels and Relevance Scores]({{site.baseurl}}/user_guide/message_building_by_channel/push/ios/notification_options/).
+
+### Contact Cards
+Contact Cards are a standardized file format for sending business and contact information that can be easily imported into address books or contact books. You can now upload and create Contact Cards for your SMS and MMS messages. To read more about how to build Contact Cards in our built-in Contact Card Generator, visit our [documentation]({{site.baseurl}}/user_guide/message_building_by_channel/sms/mms/contact_card/).
+
+### Out-of-the-Box Content Cards Customization
+You can create your own Content Cards interface by extending ABKContentCardsTableViewController to customize all UI elements and Content Cards behavior. To read more about how to customize the Content Cards Feed, visit our [documentation]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/content_cards/customization/#customizing-the-content-cards-feed/). 
+
+### Canvas Experiment Steps
+With Experiment Steps, you can now track path performance to make informed decisions about your Canvas journey. Experiment Steps allow you to test multiple Canvas paths against each other and a control group at any point in the user journey. To learn more, visit [Experiment Steps]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/experiment_step/).
+
+### API Rate Limits
+[Rate limits]({{site.baseurl}}/api/basics/#api-limits/) will apply to all customers onboarded after September 16, 2021. 
+
+### Updates to Android and FireOS Developer Guides
+Android and FireOS developer guides have merged into one location. Dedicated FireOS articles will be available in this [new Android section]({{site.baseurl}}/developer_guide/platform_integration_guides/android/push_notifications/fireos/integration/).
+
+### Updates to Funnel and Retention Reports
+[Funnel Reports]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_funnel_reports/) and [Retention Reports]({{site.baseurl}}/user_guide/engagement_tools/campaigns/testing_and_more/retention_reports/) are now available for SMS campaigns.
+
 ## September 2021
 
 ### Google Audience Sync
@@ -192,17 +219,6 @@ Treasure Data helps drive relevant customer experiences by harmonizing data, ins
 
 ### Phrasee - A/B Testing
 Braze customer engagement develops relationships through multichannel marketing. Working together with Phrasee, Braze can deploy brand language, at scale, across channels that are customized to your brand voice. Phrasee’s deep learning engine handles the testing, monitors the results, and generates new language based on what it’s learned. Visit our Phrasee documentation [here]({{site.baseurl}}/partners/data_and_infrastructure_agility/ab_testing/phrasee/).
-
-## April 2021
-
-### Segment Extension
-A [Segment Extension]({{site.baseurl}}/user_guide/engagement_tools/segments/segment_extension) expands our existing segmentation capabilities by enabling you to target more precise lists of users based on their custom event and purchase behavior in the past 365 days. Once these extension lists are generated, they can then be included/excluded as a filter in your Segments.
-
-### A2P 10DLC
-A2P 10DLC refers to a system in the United States that allows businesses to send Application-to-Person (A2P) type messaging via a standard 10-digit long code (10DLC) phone number. 10-digit long codes have traditionally been designed for Person-to-Person (P2P) traffic, causing businesses to be constrained by limited throughput and heightened filtering. __All customers who currently have and/or use long codes are required to register their long codes for 10DLC__. To read more about A2P 10DLC, visit our documentation [here]({{site.baseurl}}/user_guide/message_building_by_channel/sms/phone_numbers/short_and_long_codes/#application-to-person-10-digit-long-codes-a2p-10dlc).
-
-### Global Control Groups
-[Global Control Groups]({{site.baseurl}}/user_guide/engagement_tools/testing/global_control_group/) allow you to analyze the overall impact of your messaging efforts over time. These Groups can help you understand how your marketing campaigns and Canvases result in an uplift in sessions and custom events, by comparing the behaviors of users that receive messaging to those that don’t. 
 
 
 [support]: {{site.baseurl}}/support_contact/
