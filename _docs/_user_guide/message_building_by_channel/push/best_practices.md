@@ -28,7 +28,7 @@ guide_featured_list:
   link: /docs/user_guide/message_building_by_channel/push/best_practices/conversion_tracking/
   fa_icon: fas fa-chart-line
 - name: Message Format
-  link: /docs/user_guide/message_building_by_channel/push/best_practices/best_practices/message_format/
+  link: /docs/user_guide/message_building_by_channel/push/best_practices/message_format/
   fa_icon: fas fa-envelope
 - name: Reporting
   link: /docs/user_guide/message_building_by_channel/push/best_practices/reporting

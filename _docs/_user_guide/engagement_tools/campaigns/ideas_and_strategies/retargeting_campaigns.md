@@ -18,7 +18,7 @@ tool:
 
 Braze provides support for retargeting users based on messages they have received. You can retarget users based upon their interactions with your campaigns, Canvases, and News Feed cards.
 
-![SCREENSHOT][1]
+![Retargeting Campaigns][1]{: style="max-width:80%;"}
 
 Each of these retargeting filters provides you with several options after you add them.
 
@@ -28,13 +28,13 @@ For more on targeting users, check out our [Campaign Setup LAB course](http://la
 
 ### Clicked Card Filter
 
-![clickedcard][2]
+![Click Card][2]
 
 Use the filter to find users who Have/Have Not clicked a specific News Feed card (which you specify in the drop-down).
 
 ### Clicked/Opened Campaign Filter
 
-![clickedopened][3]
+![Clicked/Opened][3]
 
 Use this filter to find users who Have/Have Not:
 
@@ -48,7 +48,7 @@ This can be further specified by selecting which campaign you want to retarget i
 
 ### Clicked/Opened Campaign or Canvas With Tag Filter
 
-![clickedopened][16]
+![Clicked/Opened][16]
 
 Use this filter to find users who have or have not interacted with campaigns or Canvases with a given tag:
 
@@ -60,7 +60,7 @@ Use this filter to find users who have or have not interacted with campaigns or 
 
 ### Converted From Campaign Filter
 
-![converted from campaign][12]
+![Converted from Campaign][12]
 
 Use this filter to find users who Have/Have Not converted (based on the primary conversion) in your target campaign, which is selected in the drop-down menu.
 
@@ -68,7 +68,7 @@ Use this filter to find users who Have/Have Not converted (based on the primary 
 
 ### Converted From Canvas Filter
 
-![converted from canvas][18]
+![Converted from Canvas][18]
 
 Use this filter to find users who Have/Have Not converted (based on the primary conversion) in your target Canvas, which is selected in the drop-down menu.
 
@@ -76,37 +76,37 @@ Use this filter to find users who Have/Have Not converted (based on the primary 
 
 ### In Campaign Control Group Filter
 
-![campaign control group][13]
+![Campaign Control Group][13]
 
 Use this filter to find users who Are/Are Not in the control group of your target campaign, which can be selected in the drop-down.
 
 ### In Canvas Control Group Filter
 
-![canvas control group][19]
+![Canvas Control Group][19]
 
 Use this filter to find users who Are/Are Not in the control group of your target Canvas, which can be selected in the drop-down.
 
 ### Last Received Message from Specific Campaign Filter
 
-![lastreceivedspecificcamp][14]
+![Last Received Specific Campaign Filter][14]
 
 Use this filter to find users who last received a specific campaign before or after a specified date or number of days.
 
 ### Last Received Message from Specific Campaign or Canvas with Tag Filter
 
-![lastreceivedcampwithtag][17]
+![Last Received Campaign with Tag][17]
 
 Use this filter to find users who last received a specific campaign or Canvas with a given tag before or after a specified date or number of days.
 
 ### Received Message from Campaign Filter
 
-![receivedcamp][4]
+![Received Campaign][4]
 
 \" this filter to find users who Have/Have Not received your target campaign, which you select in the drop-down.
 
 ### Received Message from Campaign or Canvas with Tag Filter
 
-![receivedcampwithtag][15]
+![Received Campaign with Tag][15]
 
 Use this filter to find users who Have/Have Not received a campaign or Canvas that has your target tag, which you select in the drop-down.
 

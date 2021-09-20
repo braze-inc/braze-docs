@@ -48,8 +48,8 @@ channel: push
 {% endtab %}
 {% tab Image Example %}
 
-![iOS Rich Push]({% image_buster /assets/img_archive/braze_richpush1.png %}){: style="max-width:60%;"}
-![iOS Rich Push On Hard Push]({% image_buster /assets/img_archive/braze_richpush2.png %}){: style="max-width:60%;"}
+![iOS Rich Push]({% image_buster /assets/img_archive/braze_richpush1.png %}){: style="max-width:50%;"}
+![iOS Rich Push On Hard Push]({% image_buster /assets/img_archive/braze_richpush2.png %}){: style="max-width:50%;"}
 
 {% endtab %}
 {% endtabs %}

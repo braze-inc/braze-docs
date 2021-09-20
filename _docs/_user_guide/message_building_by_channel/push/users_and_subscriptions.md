@@ -13,7 +13,7 @@ channel:
 
 > Push subscription states are filters that allow your users to control whether they receive messages or not. For your user to receive your messages through push, they must be `Subscribed` or `Opted-In`, as well as [Push Enabled](#push-enabled).
 
-![opt-in][56]{: height="50%" width="50%"}
+![Opt-in Option][56]{: height="50%" width="50%"}
 
 ## Push Subscription State
 
@@ -29,7 +29,7 @@ Subscription states are helpful flags for brands to use when deciding which user
 Note that even though users __may not have a push token__ (e.g., They turn off push tokens at the device level through settings, opting not to receive messages), they still may be subscribed. Being subscribed does not guarantee that a push will be delivered; users must also be Push enabled or Push registered to receive these notifications. This is done in part because users have a single Push Subscription State but may have multiple devices with different levels of push permissions. 
 
 ### Two Ways to Check a User's Push Subscription State:
-![Push Exmaple][3]{: style="float:right;max-width:35%;margin-left:15px;"}
+![Push Example][3]{: style="float:right;max-width:35%;margin-left:15px;"}
 1. __User Profile__: Individual user profiles can be accessed through the Braze dashboard by selecting User Search from the right sidebar. Here, you can look up user profiles by email address, phone number, or external user ID. Once in a user profile, under the Engagement tab, you can view and manually adjust a user's subscription state. <br><br>
 2. __Rest API Export__: Individual user profiles can be exported in the JSON format using the users/export/ [segment][segment] or [identifier][identifier] endpoints by using Braze’s REST API. Braze will return a push tokens object that contains push enablement information per device.
 
@@ -37,14 +37,14 @@ Note that even though users __may not have a push token__ (e.g., They turn off p
 
 A user is "Push Enabled" or "Push Registered" if they have an *active push token* for an app in your app group.
 
-![img][1]{: style="float:right;max-width:50%;margin-left:15px;"}
+![Push Enablement][1]{: style="float:right;max-width:50%;margin-left:15px;"}
 
 On the User Engagement tab in the dashboard, you will see: **Push Registered For** followed by an **App Name(s)** or followed by **&#45;&#45;**. There will be an entry for every device that belongs to the user.
 
 If the device entry's app name is prefixed by `Foreground:`, the app is authorized to receive both foreground push notifications (visible to the user) and background push notifications (not visible to the user) on that device.
 
 On the other hand, if the device entry's app name is prefixed by `Background:`, the app is only authorized to receive background push and can not display user-visible notifications on that device. This usually indicates the user has disabled notifications for the app on that device.
-![img2][2]{: style="float:right;max-width:40%;margin-left:15px;margin-top:10px;"}
+![Push Changelog][2]{: style="float:right;max-width:40%;margin-left:15px;margin-top:10px;"}
 
 If a push token is moved to a different user on the same device, that first user will no longer be push registered.
 
