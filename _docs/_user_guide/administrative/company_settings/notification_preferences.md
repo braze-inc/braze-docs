@@ -9,7 +9,7 @@ description: "This reference article covers your available options for monitorin
 
 # Notification Preferences
 
-If you would like to monitor the messaging and activity in your company account, you can choose to set up specific notifications and elect where they go.
+If you would like to monitor the messaging and activity in your company account, you can choose to set up specific notifications and select where they go.
 
 | Notification | Notified When | Available Notification Channels |
 |---|---|---|
