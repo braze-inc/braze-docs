@@ -13,13 +13,17 @@ description: "This reference article covers how to send test messages across the
 > This reference article goes over how to send test messages across the different Braze channels, as well as how to incorporate custom event properties and user attributes. 
 > <br>
 > <br>
-> By testing out your campaigns you can make sure everything about it is just right!
+> By testing out your campaigns, you can make sure everything about it is just right!
 
 Before sending out a messaging campaign to your users, you may want to test it to make sure it looks right and operates in the intended manner. Creating and sending test messages to select devices or members of your team is very simple using the tools in the dashboard.
 
+{% alert important %}
+You can send test messages without saving the message as a draft. Make sure to save your campaign draft after testing to avoid deleting your campaign.
+{% endalert %}
+
 ## Sending a Test Mobile Push Notification or Email Message
 
-After drafting your Push or Email, you have the ability to send the message to your own device to see what it looks like in real-time. In the settings bar, click the "eye" icon, input your email address or userID, and click "Send Test." This will send the message that you drafted to your device.
+After creating your Push or Email, you have the ability to send the message to your own device to see what it looks like in real-time. In the settings bar, click the "eye" icon, input your email address or userID, and click "Send Test." This will send the message that you drafted to your device. 
 
 This is what the testing process will look like for a push message.
 
@@ -29,11 +33,11 @@ And here is what the process will look like for an email message.
 
 ![Test Email][9]
 
-Keep in mind that you will either need your users' email address or Braze UserID to send test messages to your device.
+Keep in mind that you will either need your users' email addresses or Braze UserID to send test messages to your device.
 
 ## Sending a Test Web Push Notification
 
-After drafting your web push, you have the ability to send the message to your computer to see what it looks like in real-time. In the settings bar, click the "eye" icon, and click "Send Test to Myself."
+After creating your web push, you have the ability to send the message to your computer to see what it looks like in real-time. In the settings bar, click the "eye" icon, and click "Send Test to Myself."
 
 ![Test Web Push][11]
 
@@ -97,7 +101,7 @@ Finish confirming your campaign and launch it to test your News Feed cards.
 
 If you are using [personalization][26] in your message, you'll need to take some additional steps to properly preview your campaign and check that user data is properly populating the content.
 
-When sending a test message, make sure to choose either the option to "Select Existing User" or preview as a "Custom User."
+When sending a test message, make sure to choose either the option to "Select Existing User" or preview as a "Custom User".
 
 ![Testing a personalized message][23]
 
