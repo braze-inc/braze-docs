@@ -55,7 +55,7 @@ Slack has an incoming webhook app that [allows messages to be posted from extern
   Slack will generate a URL that you'll need to enter into Braze for the notifications that you wish to receive.<br><br>
 2. Copy the **Webhook URL**.<br><br>
     ![copy_url][64]<br><br>
-3. Navigate to the **Notification Preferences** tab in **Company Settings**.
+3. Navigate to the **Notification Preferences** tab in **Company Settings**.<br><br>
 4. Select the notification that you wish to enable for Slack. Or, if you have multiple notifications that you want to send to this Slack channel, use **Bulk Add** to add the webhook to multiple notifications.<br><br>
     ![click_edit][65]<br><br>
 5. Enter the URL that Slack generated for you.
