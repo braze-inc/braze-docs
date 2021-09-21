@@ -9,13 +9,12 @@ description: "This reference article covers your available options for monitorin
 
 # Notification Preferences
 
-If you would like to monitor the messaging and activity in your company account, you can choose to set up specific notifications and elect where they go.
+If you would like to monitor the messaging and activity in your company account, you can choose to set up specific notifications and select where they go.
 
 | Notification | Notified When | Available Notification Channels |
 |---|---|---|
 | AWS Credential Errors | When Braze receives an error while attempting to use your Amazon Web Services credentials for a data export. | Email, Webhook |
 |Campaign/Canvas Updated | Notifies recipients when an active campaign/canvas is updated or deactivated, as well as when an inactive campaign/canvas is reactivated or when drafts are launched. | Email |
-|Connected Content Errors | Notifies recipients when a Connected Content URL times out more than 300 times in 5 minutes. This notification sends no more than once every two hours. | Email, Webhook |
 |Newsfeed Card Published/Live | Notifies recipients when Newsfeed cards are scheduled or published. | Email, Webhook |
 |Push Credential Errors |  Notifies recipients when an app's push credentials are invalid and when an app's push credentials are expiring soon. | Email, Webhook |
 |Scheduled Campaign Sent/Not Sent | Notifies recipients when scheduled campaigns begin sending or when scheduled campaigns attempted to send, but had no eligible users to send to. | Email, Webhook |

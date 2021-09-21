@@ -119,7 +119,6 @@ When the trigger action is set to "Interact With Campaign", selecting a "Receive
 
 Check out our [API-Triggered endpoints found in the API Guide]({{site.baseurl}}/developer_guide/rest_api/messaging/#sending-messages-via-api-triggered-delivery) for more information on API-Triggered Delivery.
 
-![API]({% image_buster /assets/img_archive/api_delivered_new.png %}){: height="80%"" width="80%"}
 {% endtab %}
 {% endtabs %}
 
@@ -187,7 +186,6 @@ On the **Retention Report** page, you can run various reports to measure user re
 
 On the **Funnel Report** page, you can analyze the journeys your customers take after receiving your campaign. If your campaign uses a control group or multiple variants, you will be able to understand how the different variants have impacted the conversion funnel at a more granular level, and optimize based on this data. [Learn more]({{site.baseurl}}/user_guide/engagement_tools/campaigns/testing_and_more/campaign_funnel_report/).
 
-[1]: {% image_buster /assets/img_archive/newcampaign_new.png %}
 [3]: {% image_buster /assets/img_archive/choose_email_creation.png %}
 [5]: {% image_buster /assets/img_archive/targetsegment_email_new.png %}
 [6]: {% image_buster /assets/img_archive/confirm_email.png %}

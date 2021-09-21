@@ -1,7 +1,7 @@
 ---
 nav_title: FAQs
 article_title: MMS FAQs
-page_order: 3
+page_order: 4
 description: "This article covers some of the most frequently asked questions about MMS."
 page_type: FAQ
 channel:
