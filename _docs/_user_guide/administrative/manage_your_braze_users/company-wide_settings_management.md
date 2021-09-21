@@ -11,10 +11,10 @@ description: "This reference article covers company-wide settings, like changing
 
 ## Company Settings Page
 
-The [Company Settings Page][1] allows you to change the name of your company, set your time zone and request to delete your company.
+The [Company Settings][1] page allows you to change the name of your company, set your time zone and request to delete your company.
 
 {% alert note %}
-Note that only Admins and users with explicit permissions to manage Company Settings will see this page.
+Only Admins and users with explicit permissions to manage Company Settings will see this page.
 {% endalert %}
 
 ### Consequences of Switching Your Time Zone
@@ -48,27 +48,19 @@ The available notifications are in the table below:
 
 ### Slack Incoming Webhook Integration
 
-Slack has an [incoming webhook app][62] that allows messages to be posted from external sources into Slack. To get started, open the [incoming webhook app][67].
+Slack has an incoming webhook app that [allows messages to be posted from external sources into Slack][62]. To get started, open the [incoming webhook app][67].
 
-- Click "Add Configuration"
+1. Select the Slack channel that you'd like the notifications to go to and click **Add Incoming Webhooks Integration**.<br><br>
+    ![add_configuration][63]<br><br>
+  Slack will generate a URL that you'll need to enter into Braze for the notifications that you wish to receive.<br><br>
+2. Copy the **Webhook URL**.<br><br>
+    ![copy_url][64]<br><br>
+3. Navigate to the **Notification Preferences** tab in **Company Settings**.
+4. Select the notification that you wish to enable for Slack. Or, if you have multiple notifications that you want to send to this Slack channel, use **Bulk Add** to add the webhook to multiple notifications.<br><br>
+    ![click_edit][65]<br><br>
+5. Enter the URL that Slack generated for you.
 
-![add_configuration][63]
-
-- Select the Slack channel that you'd like the notifications to go to
-
-- Slack will generate a URL that you'll need to enter into the settings for the notifications that you wish to receive
-
-![copy_url][64]
-
-- Navigate to the Notification Preferences page in Company Settings
-
-- Click into the notification that you wish to enable for Slack. Or, if you have multiple notifications that you want to send to this Slack Channel, you can use our "Bulk Add" feature to add the webhook to multiple notifications
-
-![click_edit][65]
-
-- Enter the URL that Slack generated for you
-
-That's it! You should start receiving notifications about your company to this Slack Channel!
+That's it! You should start receiving notifications about your company to this Slack channel.
 
 ### Weekly Analytics Reporting
 
@@ -97,7 +89,7 @@ For more information about list-unsubscribe, refer to [Email Settings][2]
 
 ## Security Settings
 
-The security settings page is where you can configure authentication rules, dashboard IP whitelisting, and two-factor authentication. These settings are located in the ["Security Settings" tab of the Company Settings page][83].
+The security settings page is where you can configure authentication rules, dashboard IP whitelisting, and two-factor authentication. These settings are located in the [Security Settings][83] tab of the **Company Settings** page.
 
 ![Security Settings][50]
 
