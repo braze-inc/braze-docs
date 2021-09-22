@@ -39,6 +39,19 @@ guide_featured_list:
   - name: "SMS FAQs"
     link: /docs/user_guide/message_building_by_channel/sms/faqs/
     fa_icon: fas fa-comment-dots
+  - name: Email Best Practices
+    link: /docs/user_guide/message_building_by_channel/email/best_practices/
+    fa_icon: fas fa-envelope
+  - name: In-App Message Best Practices
+    link: /docs/user_guide/message_building_by_channel/in-app_messages/best_practices/
+    fa_icon: fas fa-mobile-alt
+  - name: News Feed Best Practices
+    link: /docs/user_guide/engagement_tools/news_feed/best_practices/
+    fa_icon: fas fa-newspaper
+  - name: Push Best Practices
+    link: /docs/user_guide/message_building_by_channel/push/best_practices/
+    fa_icon: fas fa-comment-alt
+
 ---
 
 <br>
