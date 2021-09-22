@@ -125,7 +125,7 @@ If you want a particular campaign to override frequency capping rules, you can s
 By default, new campaigns and Canvases that do not obey Frequency Caps will also not count towards them. This is configurable for each campaign and Canvas.
 
 {% alert note %}
-This behavior changes the default behavior when you turn off frequency capping for a campaign or Canvas. The changes are backward compatible and do not impact messages right now.
+This behavior changes the default behavior when you turn off frequency capping for a campaign or Canvas. The changes are backward compatible and do not impact messages that are currently live.
 {% endalert %}
 
 ![Frequency Capping Update][18]
