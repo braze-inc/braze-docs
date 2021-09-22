@@ -41,7 +41,7 @@ Consider the following example segment:
 
 ![Rate_Limit_Example][1]
 
-This is a standard re-engagement segment. If you have other more targeted segments receiving notifications recently, you may not want your users to be targeted by more generic campaigns directed at this segment. Appending the "Last Received Push Campaign" filter to this segment, the user has ensured that if they've received another notification in the past 24 hours, they will slide out of this campaign for the next 24 hours. If they still meet the other criteria of the segment 24 hours later and haven't received any more notifications they will slide back into the segment.
+This is a standard re-engagement segment. If you have other more targeted segments receiving notifications recently, you may not want your users to be targeted by more generic campaigns directed at this segment. Appending the "Last Received Push Campaign" filter to this segment, the user has ensured that if they've received another notification in the past 24 hours, they will slide out of this segment for the next 24 hours. If they still meet the other criteria of the segment 24 hours later and haven't received any more notifications they will slide back into the segment.
 
 Appending this filter to all segments targeted by campaigns would cause your users to receive a maximum of one push every 24 hours. You could then prioritize your messaging by ensuring that your most important messages are delivered before less important messages.
 
@@ -51,7 +51,7 @@ Additionally, in the 'Target Users' section of your campaign composition, you ca
 
 ![Total Limit Example][2]
 
-By using the max user cap checkbox, you'll be able to limit the rate at which your users receive notifications on a per-channel basis or globally across all message types.
+By selecting the max user limit, you can limit the rate at which your users receive notifications on a per-channel basis or globally across all message types.
 
 #### Setting a Max Impression Cap
 
@@ -104,7 +104,7 @@ As your user base continues to grow and your messaging scales to include life cy
 
 ### Feature Overview {#freq-cap-feat-over}
 
-Frequency capping is applied at the campaign or Canvas step send level and can be set up for each app group by selecting __Global Message Settings__ found underneath the **Engagement** tab. From here, you can choose the following:
+Frequency capping is applied at the campaign or Canvas step send level and can be set up for each app group by selecting __Global Message Settings__ found in the **Engagement** tab. From here, you can choose the following:
 
 - Which messaging channel you would like to cap: push, email, SMS, webhook, or any of those four.
 - How many times each user should receive a campaign or Canvas step sends from a channel within a certain time frame.
@@ -118,14 +118,14 @@ Each line of frequency caps will be connected using the `AND` operator, and you 
 
 ### Delivery Rules
 
-There may be some campaigns - transactional messages, in particular - that you wish to always reach the user, even if they have already reached their frequency cap. For example, a delivery app may wish to send an email or push when an item is delivered regardless of how many campaigns the user has received.
+There may be some campaigns, like transactional messages, that you want to always reach the user, even if they have already reached their frequency cap. For example, a delivery app may wish to send an email or push when an item is delivered regardless of how many campaigns the user has received.
 
 If you want a particular campaign to override frequency capping rules, you can set this up in the Braze dashboard when scheduling that campaign's delivery by toggling **Frequency Capping** to **OFF**. After this, you will be asked if you still want this campaign to count towards your Frequency Cap. Messages that count towards frequency capping are included in calculations for the Intelligent Channel filter. When sending [API campaigns][15], which are often transactional, you'll have the ability to specify that a campaign should ignore frequency capping rules [within the API request][16] by setting `override_messaging_limits` to `true`.
 
 By default, new campaigns and Canvases that do not obey Frequency Caps will also not count towards them. This is configurable for each campaign and Canvas.
 
 {% alert note %}
-Please note that this behavior changes the default behavior when you turn off frequency capping for a campaign or Canvas; the changes are backward compatible and do not impact messages that are currently live right now.
+This behavior changes the default behavior when you turn off frequency capping for a campaign or Canvas. The changes are backward compatible and do not impact messages that are currently live right now.
 {% endalert %}
 
 ![Frequency Capping Update][18]
