@@ -329,7 +329,7 @@ func application(_ app: UIApplication, open url: URL, options: [UIApplicationOpe
 [5]: https://github.com/Appboy/appboy-ios-sdk/blob/master/AppboyKit/ABKModalWebViewController.m
 [6]: https://github.com/Appboy/appboy-ios-sdk/blob/master/AppboyKit/include/ABKModalWebViewController.h
 [8]: https://developer.apple.com/library/ios/documentation/Cocoa/Reference/Foundation/Classes/NSString_Class/index.html#//apple_ref/occ/instm/NSString/stringByRemovingPercentEncoding
-[10]: {% image_buster /assets/img_archive/Open_Deep_Link.png %}
+[10]: {% image_buster /assets/img_archive/deep_link.png %}
 [11]: https://developer.apple.com/library/content/documentation/General/Conceptual/AppSearch/UniversalLinks.html
 [12]: https://developer.apple.com/library/content/documentation/General/Reference/InfoPlistKeyReference/Articles/LaunchServicesKeys.html#//apple_ref/doc/uid/TP40009250-SW14
 [13]: https://developer.apple.com/reference/uikit/uiapplicationdelegate/1623112-application?language=objc
