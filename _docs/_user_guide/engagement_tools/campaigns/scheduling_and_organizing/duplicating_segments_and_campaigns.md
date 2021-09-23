@@ -40,6 +40,6 @@ To clone a Canvas, click the gear icon next to a Canvas and select "Duplicate." 
 ![Canvas][5]
 
 
-[3]: {% image_buster /assets/img_archive/Duplicate_segment.png %}
-[4]: {% image_buster /assets/img_archive/Duplicate_campaign.png %}
-[5]: {% image_buster /assets/img/canvas_duplicate.jpg %}
+[3]: {% image_buster /assets/img_archive/duplicate_segment.png %}
+[4]: {% image_buster /assets/img_archive/duplicate_campaign.png %}
+[5]: {% image_buster /assets/img_archive/duplicate_canvas.png %}
