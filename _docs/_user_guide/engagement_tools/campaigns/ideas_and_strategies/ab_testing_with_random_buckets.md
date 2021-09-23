@@ -50,13 +50,9 @@ Create a campaign and, on the Target Users page, select a segment of recipients.
 
 [Duplicate][18] your initial campaign variant and modify it accordingly. For instance, you may decide to change the send time or the combination of messaging channels used. When targeting users, select the segment you wish to receive this new campaign variant. Repeat this step to create your remaining campaign variants. Your control group should not receive any variant of this campaign.
 
-
-
-## Step 3: Built out additional messages in your test over time
+## Step 3: Build out additional messages in your test over time
 
 If you wish, you can continue to send campaign variants to your random bucket segments over time by repeating step 2. One example use case is to test the difference between sending one group 2 notifications in one week, compared to 1. Be sure to plan the workflows of your campaign series variants in advance in order to maintain the integrity of your A/B test.
-
-
 
 ## Common Use Cases
 
@@ -64,16 +60,13 @@ Because creating a [multivariate test][16] allows you to easily test content, us
 
 All of the below use cases can be accomplished within [Canvas][13], a tool built with these types of experiments in mind.
 
-
 ### Delivery
 
 You can compare results between a campaign sent with [scheduled][11], [action-based delivery][17] and [intelligent timing][12].
 
-
 ### Cadence
 
 You can test multiple messaging flows over a period of time. For instance, you can test two different onboarding cadences: one that sends 2 messages in the user's first 2 weeks, and one that sends 3 messages in the user's first 2 weeks. Or, when targeting lapsing users, you can test the effectiveness of sending two winback messages in a week, versus sending just one.
-
 
 ### Messaging channels
 
