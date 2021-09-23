@@ -19,7 +19,7 @@ If your impressions are lower than you'd like them to be, we recommend you...
 
 ## Segment Size
 
-It’s important to ensure that your Segment size in the campaign reflects your intended audience. Perhaps there are filters applied limiting your audience and causing your campaign to have fewer impressions.
+It’s important to ensure that your Segment size in the campaign reflects your intended audience. There may be filters applied that are limiting your audience and causing your campaign to have fewer impressions.
 
 ## Segment Changelogs
 
@@ -29,7 +29,7 @@ If the impression count is low compared to where it once was, make sure no one u
 
 ## Run Tests
 
-A quick way to identify any obvious issues is to clone the campaign and target your own userid/email and launch the campaign. Once you perform the message trigger (session start, custom event, etc.), verify that you receive the message correctly. Then, navigate to the dashboard and refresh the page to see if your impression is logged correctly. If it is not, then the problem is likely within your implementation.
+A quick way to identify any obvious issues is to clone the campaign, target your own user ID or email, and launch the campaign. Once you perform the message trigger (session start, custom event, etc.), verify that you received the message correctly. Then, navigate to the dashboard, and refresh the page to see if your impression is logged correctly. If it is not, then the problem is likely within your implementation.
 
 
 ## Event Triggers
