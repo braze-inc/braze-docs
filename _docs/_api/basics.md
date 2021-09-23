@@ -73,37 +73,37 @@ Given that REST API Keys allow access to potentially sensitive REST API endpoint
 
 If accidental exposure of a key occurs, it can be deleted from the [Developer Console][8]. For help with this process, please [open a support ticket][support].
 
-#### API IP Whitelisting
+#### API IP Allowlisting
 
-For additional security, you can specify a whitelist of IP addresses and subnets which are allowed to make REST API requests for a given REST API Key. To whitelist specific IP addresses or subnets, add them to the API IP Whitelisting section when creating a new REST API Key:
+For additional security, you can specify an allowlist of IP addresses and subnets which are allowed to make REST API requests for a given REST API Key. To allowlist specific IP addresses or subnets, add them to the **Whitelist IPs** section when creating a new REST API Key:
 
 ![API IP Whitelisting][26]
 
 #### Creating and Managing REST API Keys
 
-To create a new REST API Key, visit the [Developer Console][8] on your Braze Dashboard. This page displays your existing API Keys. To create a new key, click the "Create New API Key" button.
+![Create New API Key][28]{: style="max-width:20%;float:right;margin-left:15px;"}
 
-![Create New API Key][28]
+To create a new REST API Key, visit the [Developer Console][8] on your Braze Dashboard. This page displays your existing API Keys. To create a new key, click **Create New API Key**.
 
-You will then be able to:
+You can then to do the following:
 
-- Give your new key a name for easy identification
+- Give your new key a name for identification at a glance
 - Select which permissions you would like to be associated with your new key
-- Specify whitelisted IP addresses and subnets for the new key
+- Specify allowlisted IP addresses and subnets for the new key
 
 Existing REST API Keys can be Viewed or Deleted by clicking the gear icon and selecting the corresponding option.
 
 ![API Key Options][29]
 
 {% alert important %}
-Keep in mind that once you create a new API Key, you cannot edit the scope of permissions or the whitelisted IPs. This limitation is in place for security reasons. If you need to change the scope of a key, create a new key with the updated permissions and implement that key in place of the old one. Once you've completed your implementation, go ahead and delete the old key.
+Keep in mind that once you create a new API Key, you cannot edit the scope of permissions or the allowlisted IPs. This limitation is in place for security reasons. If you need to change the scope of a key, create a new key with the updated permissions and implement that key in place of the old one. Once you've completed your implementation, go ahead and delete the old key.
 {% endalert %}
 
-###  External User ID Explanation
+### External User ID Explanation
 
 The `external_id` serves as a unique user identifier for whom you are submitting data. This identifier should be the same as the one you set in the Braze SDK in order to avoid creating multiple profiles for the same user.
 
-###  Braze User ID Explanation
+### Braze User ID Explanation
 
 The `braze_id` serves as a unique user identifier that is set by Braze. This identifier can be used to delete users through the REST API in addition to external_ids.
 
