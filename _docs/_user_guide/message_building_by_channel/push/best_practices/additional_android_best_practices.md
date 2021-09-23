@@ -62,13 +62,12 @@ Note that regardless of the Visibility, all notifications will be shown on the u
 
 The Visibility has no effect on devices earlier than Android Lollipop 5.0.0; all notifications will be shown on such devices.
 
-[See Android Documentation for more info][50]
+[See Android Documentation for more info][51]
 
 [40]: https://www.braze.com/blog/breakdown-android-lollipops-new-notification-priorities-push-flexibility/
 [41]: {% image_buster /assets/img_archive/braze_default.png %}
 [46]:{% image_buster /assets/img_archive/Push_Window8_Toast.png %}
 [47]:{% image_buster /assets/img_archive/Push_Windows_Universal_Toast.png %}
-[50]: http://developer.android.com/design/patterns/notifications.html
-[51]: http://developer.android.com/design/patterns/notifications.html
+[51]: https://developer.android.com/guide/topics/ui/notifiers/notifications
 [52]: {% image_buster /assets/img_archive/braze_category.png %}
 [53]: {% image_buster /assets/img_archive/braze_visibility.png %}
