@@ -59,7 +59,7 @@ Still need help? [Open a support ticket]({{site.baseurl}}/support_contact/).
 
 [1]: {{site.baseurl}}/user_guide/data_and_analytics/your_reports/understanding_your_app_usage_data/#understanding-your-app-usage-data
 [2]: {{site.baseurl}}/user_guide/data_and_analytics/configuring_reporting/#configuring-reporting
-[14]: {% image_buster /assets/img_archive/trouble6.png %}
+[14]: {% image_buster /assets/img_archive/trouble5.png %}
 [15]: {{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/creative_details/
 [16]: {{site.baseurl}}/developer_guide/platform_integration_guides/ios/analytics/tracking_sessions/#customizing-session-timeout
 [17]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/analytics/tracking_sessions/#customizing-session-timeout
