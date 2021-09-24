@@ -1,6 +1,7 @@
 ---
 nav_title: Race Conditions
 article_title: Race Conditions
+alias: /race_conditions/
 page_order: 9
 page_type: reference
 description: "This article covers best practices to avoid race conditions from affecting your messaging campaigns."
