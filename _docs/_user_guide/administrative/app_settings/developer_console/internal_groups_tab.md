@@ -9,13 +9,13 @@ description: "This reference article covers Internal Groups, a great way to get 
 
 # Internal Groups Tab
 
-Internal Groups are a great way to build and organize internal or 3rd party test groups and provide insight into the SDK or API logs available from your test device during SDK integration testing. You can create an unlimited number of custom Internal Groups with up to 1000 members.
+Internal Groups are a great way to build and organize internal or third-party test groups and provide insight into the SDK or API logs available from your test device during SDK integration testing. You can create an unlimited number of custom Internal Groups with up to 1000 members.
 
 ### Creating a Group
 
-Depending on your access and permissions, you can create Internal Groups from the Developer Console in the  
+Depending on your access and permissions, you can create Internal Groups from the Developer Console:
 
-* Click ‘Create Internal Group’ on the top, right to create a new group.
+* Click ‘Create Internal Group’ on the upper right to create a new group.
 * Give your group a name.
 * Choose a group type from those shown (defined below).
 
@@ -26,12 +26,12 @@ Depending on your access and permissions, you can create Internal Groups from th
 | :------------- | :------------- |
 | User Event Group| Used for verifying events or logs from your test device.|
 |Content Test Group| A similar concept to Test Lists. Can be used across push, email, and in-app messages to send a rendered copy of the message.|
-|Seed Group | Automatically sends a copy of the Email to everyone the Seed Group upon send.|
+|Seed Group | Automatically sends a copy of the email to everyone the Seed Group upon send.|
 {: .reset-td-br-1 .reset-td-br-2}
 
 ### Adding Test Users
 
-After you create your Internal Group you can add test users as members. If you are not already on your Internal Group's management page, click into it. Then, click “Add Test User” and add them as identified or anonymous users, or in Bulk.
+After you create your Internal Group, you can add test users as members. Go to your Internal Group's management page. Then, click “Add Test User” and add them in bulk or as identified or anonymous users.
 
 ![User Logs 1][8]
 
@@ -39,24 +39,24 @@ After you create your Internal Group you can add test users as members. If you a
 | :------------- | :------------- |
 | Identified Users |Search for the user by their External User ID or email address.|
 |Anonymous Users| Search by IP address. Then, provide a name for each test user that is added. This is the name that all event logs will be associated with on the Event User Log page.|
-|Bulk Add Users|Copy and paste a list of email addresses or external ID’s into the provided section. Braze will only allow you to add users that are already known in the database. Remember to upload your .csv files to add users to the database or programmatically create them via the API.|
+|Bulk Add Users|Copy and paste a list of email addresses or external IDs into the provided section. Braze will only allow you to add users that are already known in the database. Remember to upload your .csv files to add users to the database or programmatically create them via the API.|
 {: .reset-td-br-1 .reset-td-br-2}
 
 ### Content Test Groups
 
-Similar to sending a preview test of a message, the Content Test group saves you time and allows you to launch tests to a pre-defined list of Braze Users simultaneously. This functionality is available for Push, In-App Message, SMS, and Email within Braze.
+Similar to sending a preview test of a message, the Content Test group saves you time and allows you to launch tests to a pre-defined list of Braze users simultaneously. This functionality is available for Push, In-App Message, SMS, and Email within Braze.
 
 {% alert note %}
 [SMS]({{site.baseurl}}/user_guide/message_building_by_channel/sms/) test messages can only be sent to valid phone numbers in the database.
 {% endalert %}
 
-You can select individual Braze Users or as many Internal Groups to send the message to as you want. The message will utilize the attributes available for each individual User. For Users who have no attributes, the default value set will be utilized.
+You can select individual Braze users or as many Internal Groups to send the message to as you want. The message will utilize the attributes available for each individual User. For users who have no attributes, the default value set will be utilized.
 
-Additionally, if you preview the message as a ‘random user’, ‘custom user’ or ‘select an existing user’ - the option to send that previewed version is presented. Unchecking the box will allow you to send based on each Users’ attributes versus the previewed version.
+Additionally, if you preview the message as a "random user", "custom user" or "select an existing user", the option to send that previewed version is presented. Unchecking the box will allow you to send based on each Users’ attributes versus the previewed version.
 
 Lastly, for clients who use an IP pool to send out email, you can now select which IP pool you would like the email to be sent from by simply selecting the pool from the dropdown available.
 
-Only Groups that are tagged as Content Test will be available on the ‘preview’ section of a message.
+Only groups that are tagged as Content Test will be available on the preview section of a message.
 
 ![Content test group settings][9]
 
@@ -78,7 +78,7 @@ If your campaign is multivariate and your variant has a 0% send percentage, it w
 
 _If there is a recurring campaign and an update is conducted on any one of the variants, you have the option of re-sending to only the updated variants, all variants or to turn off seed group sending upon update._
 
-![Seed_group_campaign][11]
+![Seed group campaign][11]
 
 #### For Canvas
 
