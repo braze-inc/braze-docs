@@ -214,7 +214,7 @@ Image: ![Logo]({{site.baseurl}}/assets/img/braze-logo-mark.png){: height="36px" 
 
 #### Linked Image Test
 
-Linked Image: [![Braze]({{site.baseurl}}/assets/img/braze-logo-mark.png){: height="36px" width="36px"}](https://www.braze.com)
+Linked Image: [![Braze]({{site.baseurl}}/assets/img/braze-logo-mark.png){: style="max-width:36px;"}](https://www.braze.com)
 
 #### Image Styling
 
@@ -228,7 +228,7 @@ Linked Image: [![Braze]({{site.baseurl}}/assets/img/braze-logo-mark.png){: heigh
 
 [![Braze]({{site.baseurl}}/assets/img/braze-logo-mark.png)](https://www.braze.com)
 
-![Text]({% image_buster /assets/img/logo-braze-fa.svg %}){: style="max-width:300px; color: green" }
+![Text]({% image_buster /assets/img/logo-braze-fa.svg %}){: style="max-width:30%; color: green" }
 ```
 {% endtab %}
 {% endtabs %}
@@ -361,23 +361,23 @@ class Foo:
 {% raw %}
 ```
 {% alert tip %}
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed nec tortor at lectus tempus tempor. Suspendisse tellus diam, finibus eu dictum non, varius et ipsum. 
+This is a tip
 {% endalert %}
 
 {% alert note %}
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed nec tortor at lectus tempus tempor. Suspendisse tellus diam, finibus eu dictum non, varius et ipsum. 
+This is a note
 {% endalert %}
 
 {% alert important %}
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed nec tortor at lectus tempus tempor. Suspendisse tellus diam, finibus eu dictum non, varius et ipsum. 
+This is a important alert
 {% endalert %}
 
 {% alert warning %}
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed nec tortor at lectus tempus tempor. Suspendisse tellus diam, finibus eu dictum non, varius et ipsum. 
+This is a warning
 {% endalert %}
 
 {% alert update %}
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed nec tortor at lectus tempus tempor. Suspendisse tellus diam, finibus eu dictum non, varius et ipsum. 
+This is a update
 {% endalert %}
 ```
 {% endraw %}
@@ -562,7 +562,7 @@ Enclose individual __tab__ with the Liquid code and name of the tab `{% tab [Tab
  then when somebody clicks on `C++`, the other section will show nothing. See local tabs option below for workaround.
 {% endalert %}
 
-{%raw %}
+{% raw %}
 ```liquid
 {% tabs %}
 {% tab objective-c %}
@@ -576,9 +576,9 @@ Content of swift
 {% endraw %}
 
 #### Local Tabs
-For self contain tabs, ie tabs that only change the tab content for the specific section, then use the local parameter in the parent tabs block.
+For self-contained tabs, i.e. tabs that only change the tab content for the specific section, then use the local parameter in the parent tabs block.
 
-{%raw %}
+{% raw %}
 ```liquid
 {% tabs local %}
 ...
@@ -586,30 +586,30 @@ For self contain tabs, ie tabs that only change the tab content for the specific
 ```
 {% endraw %}
 
-#### Sub Tabs
+#### Subtabs
 For tabs within tabs, `subtabs` and `subtab` can be used. Default setting is `local`.
-For global `subtabs`, use the `global` option: {%raw %}`{% subtabs global %}`{% endraw %}
+For global `subtabs`, use the `global` option: {% raw %}`{% subtabs global %}`{% endraw %}
 
 {% tabs local %}
 {% tab Tab 1 %}
 tab content 1
 {% subtabs %}
-{% subtab Sub Tab 1a %}
-Sub Tab 1a Content
+{% subtab Subtab 1a %}
+Subtab 1a content
 {% endsubtab %}
-{% subtab Sub Tab 2a %}
-Sub Tab 2a Content
+{% subtab Subtab 2a %}
+Subtab 2a content
 {% endsubtab %}
 {% endsubtabs %}
 {% endtab %}
 {% tab Tab 2 %}
 tab content 2
 {% subtabs %}
-{% subtab Sub Tab 1b %}
-Sub Tab 1a Content
+{% subtab Subtab 1b %}
+Subtab 1a content
 {% endsubtab %}
-{% subtab Sub Tab 2b %}
-Sub Tab 2a Content
+{% subtab Subtab 2b %}
+Subtab 2a content
 {% endsubtab %}
 {% endsubtabs %}
 {% endtab %}
@@ -621,11 +621,11 @@ Sub Tab 2a Content
 {% tabs %}
 {% tab Tab 1 %}
 {% subtabs %}
-{% subtab Sub Tab 1 %}
-Sub Tab 1 Content
+{% subtab Subtab 1 %}
+Subtab 1 content
 {% endsubtab %}
-{% subtab Sub Tab 2 %}
-Sub Tab 2 Content
+{% subtab Subtab 2 %}
+Subtab 2 content
 {% endsubtab %}
 {% endsubtabs %}
 {% endtab %}
