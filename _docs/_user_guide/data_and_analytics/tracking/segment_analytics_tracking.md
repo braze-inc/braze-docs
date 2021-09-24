@@ -35,5 +35,5 @@ An app can have tracking turned on for at most 25 segments. Braze recommends tra
 [14]: {{site.baseurl}}/user_guide/data_and_analytics/export_braze_data/exporting_revenue_data/
 [16]: {% image_buster /assets/img_archive/A_Tracking_2.png %}
 [17]: {% image_buster /assets/img_archive/Revenue.png %}
-[18]: {% image_buster /assets/img_archive/Events_Over_Time2.png %}
+[18]: {% image_buster /assets/img_archive/events_over_time2.png %}
 [20]: {{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events/
