@@ -85,7 +85,7 @@ If you choose to use Liquid in your Email messages, be sure to:
 
 You can insert pre-formatted variables with defaults through the "Insert Personalization Attribute" modal located on the top-right of any templated text field.
 
-![Modal buttons][44]
+![Modal buttons][44]{: style="max-width:70%;"}
 
 The modal will insert Liquid with your specified default value at the point that your cursor was. The insertion point is also specified via the preview box, which has the before and after text. If a block of text is highlighted, the highlighted text will be replaced.
 
