@@ -22,7 +22,7 @@ There are a number of approaches that you may try:
 
 If the campaign is triggered by a session start or a custom event, you want to ensure that this event or session is happening frequently enough to trigger the message. Check this data on the [Overview][1] (for session data) or [Custom Events][2] pages:
 
-![trouble6][14]
+![Custom Event Counts Statistic][14]
 
 ## Message Impressions
 

@@ -9,7 +9,7 @@ noindex: true
 ---
 # In-App Message Impressions Appear Lower Than Expected
 
-If your impressions are lower than you'd like them to be, we recommend you...
+If your impressions are lower than you'd like them to be, we recommend that you:
 
 * [Check Segment](#segment-size)
 * [Check Changelogs](#segment-changelogs)
@@ -19,13 +19,13 @@ If your impressions are lower than you'd like them to be, we recommend you...
 
 ## Segment Size
 
-It’s important to ensure that your Segment size in the campaign reflects your intended audience. There may be filters applied that are limiting your audience and causing your campaign to have fewer impressions.
+It’s important to ensure that your segment size in the campaign reflects your intended audience. There may be filters applied that are limiting your audience and causing your campaign to have fewer impressions.
 
 ## Segment Changelogs
 
-If the impression count is low compared to where it once was, make sure no one unintentionally altered the Segment or campaign since launch. Our Segment and campaign changelogs will give you insight into changes that have been made, who made the change, and when it happened.
+If the impression count is low compared to where it once was, make sure no one unintentionally altered the segment or campaign since launch. Our segment and campaign changelogs will give you insight into changes that have been made, who made the change, and when it happened.
 
-![trouble4][10]
+![Campaign Changelog][10]
 
 ## Run Tests
 
@@ -36,7 +36,7 @@ A quick way to identify any obvious issues is to clone the campaign, target your
 
 If the campaign is triggered by a session start or a custom event, you want to ensure that this event or session is happening frequently enough to trigger the message. Check this data on the [Overview][1] (for session data) or [Custom Events][2] pages:
 
-![trouble5][11]
+![Custom Event Counts Statistic][11]
 
 ## Message Impressions
 
