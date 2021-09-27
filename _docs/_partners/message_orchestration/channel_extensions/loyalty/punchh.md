@@ -133,7 +133,7 @@ The Braze and Punchh integration allows you to leverage Braze webhook capabiliti
 2. From the Braze dashboard, navigate to the __Webhook Templates__ and select the Punchh template. Here, you can provide the `custom_segment_id` and `user_id` as key-value pairs.<br><br>![Punch Platform][4]<br><br>
 3. Once the webhook is saved, it can be used to trigger in Canvas to run the webhook and sync users as shown below:<br><br>![Punch Platform][7]
 
-For more information on how webhooks are used at Braze, check out our webhook documentaion [here]({{site.baseurl}}/user_guide/message_building_by_channel/webhooks/creating_a_webhook/). 
+For more information on how webhooks are used at Braze, check out our webhook documentation [here]({{site.baseurl}}/user_guide/message_building_by_channel/webhooks/creating_a_webhook/). 
 
 [1]: {% image_buster /assets/img/punchh/punchh1.png %}
 [2]: {% image_buster /assets/img/punchh/punchh2.png %}
