@@ -16,7 +16,7 @@ channel:
 
 To add a headline to an iOS push notification, use the Title field in the Braze message composer. The headline will appear in bold once the message is sent.
 
-![iOS_Title_Image][1]
+![iOS Title Image][1]
 
 
 [1]: {% image_buster /assets/img_archive/ios_title.png %}

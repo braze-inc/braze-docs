@@ -50,7 +50,7 @@ Set up an action-based campaign within Braze that will send messages based on a 
 
 You can use the Pilgrim SDK to set a `last_location` custom attribute on your Braze users' User Profiles. You can then use the `matches regex` comparison to retarget users who went to a particular location in the real world: for example, segmenting all users who were recently at a pizza place.
 
-![Pilgrim Developer Console]({% image_buster /assets/img_archive/last-location-segment.png %})
+![Braze Dashboard Targeting]({% image_buster /assets/img_archive/last-location-segment.png %})
 
 You can also segment users in Braze who visited a particular type of venue, based on Foursquare's `primaryCategoryId` in a particular window of time. To leverage this data point for your retargeting use cases, please log `primaryCategoryId` as an event property during your audience segmentation process. To identify the users and properties used by the Foursquare API and Pilgrim SDK, please refer to the [Foursquare developer site](https://developer.foursquare.com/).
 

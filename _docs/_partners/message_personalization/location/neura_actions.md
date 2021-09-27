@@ -24,7 +24,7 @@ To get started, ensure that both the Braze and Neura SDKs are properly integrate
 
 To integrate the Neura SDK you simply add a few lines of code to your [AppDelegate on iOS][5] or [MainActivity class on Android][6]. You’ll then begin receiving [Neura Moments™][3] as Braze custom events. You’ll also gain the ability to segment users based on their real-world lifestyles and habits, [True Personas™][2], received as Braze custom attributes.
 
-![neura-personas-moments.png][10]
+![Neura Persona Moments][10]
 
 First, find your App ID on the "Developer Console" section of the Braze Dashboard and create a new API Key with `users.track`, `users.alias.new` and `users.export.ids` permissions.
 
@@ -38,7 +38,7 @@ Complete the Mobile Engagement Platform section of your application in the [Neur
 
 **Android/iOS App ID:** We recommend providing a unique Braze application ID for each mobile platform, allowing you to segment the users for each platform individually.
 
-![neura-mep-details-in-neura.png][12]
+![Neura MEP Details in Neura][12]
 
 Last, ensure that Braze and Neura users are mapped:
 Create a user alias labeled `neura_id` with your user's neura_id

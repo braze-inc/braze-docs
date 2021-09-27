@@ -20,7 +20,7 @@ Geofences are managed in the **Locations** page in the **Engagement** section. G
 
 ## Creating Geofence Sets Manually
 
-![locations_main_screen][1]
+![Geofence Location Main Screen][1]
 
 Once you have created a geofence set, you can manually add geofences by drawing them on the map. We recommend creating geofences with a radius of at least 100 meters for optimal functionality.
 

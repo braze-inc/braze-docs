@@ -22,7 +22,7 @@ You can use the **Media Library** to:
 * Drag and drop images or folders to be uploaded
 * Delete images
 
-![media_library_main][1]
+![Media Library Page][1]
 
 ## Stats Available
 Within the Media Library, you can now see the image dimensions, URL, type as well as the date it was added to the library.

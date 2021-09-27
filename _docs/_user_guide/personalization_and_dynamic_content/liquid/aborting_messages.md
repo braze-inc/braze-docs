@@ -13,7 +13,7 @@ Optionally, you can also now abort messages within conditionals. Here are some e
 
 For example, let’s say that you did not want to send the above message to customers who had not attended a game:
 
-![liquid abort message][15]
+![Liquid Abort Message Example][15]
 
 This message will only send to customers who are known to have attended a game.
 

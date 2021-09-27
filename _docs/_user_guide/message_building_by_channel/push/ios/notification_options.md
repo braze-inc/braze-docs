@@ -27,7 +27,7 @@ From there, you can select any Notification Groups. If your notification group s
 
 If you don't have any Notification Groups listed here, you can add one using the iOS Thread ID. You will need one iOS Thread ID for every Notification Group you want to add. Then, add it to your Notification Groups by clicking __Manage Notification Groups__ in the dropdown and filling out the required fields in the __Manage iOS Push Notification Groups__ window that appears.
 
-![managenotgroups][27]
+![Manage Notification Groups][27]
 
 ### Summary Arguments
 
