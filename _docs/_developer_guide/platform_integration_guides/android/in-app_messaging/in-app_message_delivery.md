@@ -67,7 +67,7 @@ Create a silent push campaign that is triggered via the server sent event. For d
 
 The push campaign must include key-value pair extras which indicate that this push campaign is sent with the intention to log an SDK custom event. This event will be used to trigger the in-app message.
 
-![kvpConfiguration][76]
+![kvpConfiguration][76]{: style="max-width:70%;" }
 
 The [EventBroadcastReceiver.java][72] recognizes the key-value pairs and logs the appropriate SDK custom event.
 
