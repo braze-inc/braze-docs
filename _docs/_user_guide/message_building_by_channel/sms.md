@@ -53,6 +53,9 @@ guide_menu_list:
 - name: "Creating a MMS Campaign"
   link: /docs/user_guide/message_building_by_channel/sms/mms/create/
   fa_icon: fas fa-table
+- name: "Contact Cards"
+  link: /docs/user_guide/message_building_by_channel/sms/mms/contact_card/
+  fa_icon: fas fa-user-circle
 - name: "MMS FAQs"
   link: /docs/user_guide/message_building_by_channel/sms/mms/faqs/
   fa_icon: fas fa-comment

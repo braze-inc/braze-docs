@@ -148,7 +148,6 @@ Additionally, if a campaign is action-based and has a delay, you can check the o
 [32]: {{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events/
 [33]: {{site.baseurl}}/user_guide/engagement_tools/campaigns/scheduling_and_organizing/campaign_connector/#campaign-connector
 [34]: {% image_buster /assets/img_archive/customEventProperties.png %}
-[34]: {% image_buster /assets/img_archive/customEventProperties.png %}
 [41]: {% image_buster /assets/img_archive/schedule_triggered7.png %}
 [47]: {{site.baseurl}}/user_guide/engagement_tools/campaigns/scheduling_and_organizing/delivery_types/triggered_delivery/#why-did-a-user-not-receive-my-triggered-campaign
 [48]: {{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events/#custom-event-properties

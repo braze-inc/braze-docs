@@ -1,6 +1,6 @@
 ---
 nav_title: "POST: Create Content Block"
-article_title: "POST: Creat Content Block"
+article_title: "POST: Create Content Block"
 search_tag: Endpoint
 page_order: 4
 layout: api_page

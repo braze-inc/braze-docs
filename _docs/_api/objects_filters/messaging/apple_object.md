@@ -23,6 +23,8 @@ These objects are used to define or request information related to Apple Push an
    "sound": (optional, string) the location of a custom notification sound within the app,
    "extra": (optional, object) additional keys and values to be sent,
    "content-available": (optional, boolean) if set, Braze will add the "content-available" flag to the push payload,
+   "interruption_level": (optional, string: "passive", "active", "time-sensitive", or "critical") specifies the interruption level passed (iOS 15+),
+   "relevance_score": (optional, float) specifies the relevance score between 0.0 and 1.0 used for grouping notification summaries (iOS 15+),
    "expiry": (optional, ISO 8601 date string) if set, push messages will expire at the specified datetime,
    "custom_uri": (optional, string) a web URL, or Deep Link URI,
    "message_variation_id": (optional, string) used when providing a campaign_id to specify which message variation this message should be tracked under (must be an iOS Push Message),

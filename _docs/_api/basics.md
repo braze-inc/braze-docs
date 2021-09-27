@@ -26,6 +26,12 @@ Below is some terminology that you may see in the Braze REST API documentation a
 
 Braze manages a number of different instances for our Dashboard and REST Endpoints. When your account is provisioned you will log in to one of the corresponding URLs below. Use the correct REST Endpoint based on which instance you are provisioned to. If you are unsure, open a support ticket or use the table below to match the URL of the dashboard you use to the correct REST Endpoint.
 
+{% alert important %}
+When using endpoints for API calls, use the "REST Endpoint" located below.
+
+For SDK integration, use the ["SDK Endpoint"]({{site.baseurl}}/user_guide/administrative/access_braze/sdk_endpoints/), not the "REST Endpoint".
+{% endalert %}
+
 |Instance|URL|REST Endpoint|SDK Endpoint|
 |---|---|---|
 |US-01| `https://dashboard-01.braze.com` | `https://rest.iad-01.braze.com` | `sdk.iad-01.braze.com` |
@@ -38,12 +44,6 @@ Braze manages a number of different instances for our Dashboard and REST Endpoin
 |EU-01| `https://dashboard-01.braze.eu` | `https://rest.fra-01.braze.eu` | `sdk.fra-01.braze.eu` |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
 
-{% alert important %}
-When using endpoints for API calls, use the "REST Endpoint" located on this page.
-
-For SDK integration, use the ["SDK Endpoint"]({{site.baseurl}}/user_guide/administrative/access_braze/sdk_endpoints/), not the "REST Endpoint".
-{% endalert %}
-
 ### Company Secret Explanation
 
 The `company_secret` was formerly included with all API requests but has been deprecated as of October 2014. This field will be ignored for all future API requests to ensure backward compatibility.
@@ -51,7 +51,7 @@ The `company_secret` was formerly included with all API requests but has been de
 ### App Group REST API Keys
 
 {% alert note %}
-For a deeper dive on the different kinds of API Keys here at Braze, checkout our dedicated <a href="{{site.baseurl}}/api/api_key/">API Keys</a> and <a href="{{site.baseurl}}/api/identifier_types/">API Identifier Types</a> reference articles.
+For a deeper dive on the different kinds of API Keys here at Braze, check out our dedicated <a href="{{site.baseurl}}/api/api_key/">API Keys</a> and <a href="{{site.baseurl}}/api/identifier_types/">API Identifier Types</a> reference articles.
 
 {% endalert %}
 
@@ -68,42 +68,42 @@ A good security practice is to assign a user only as much access as is necessary
 ![REST API Key Permissions][25]
 
 {% alert warning %}
-Given that REST API Keys allow access to potentially sensitive REST API endpoints, please ensure they are stored and used securely. For example, do not use this key to make AJAX calls from your website or expose it in any other public manner.
+Given that REST API Keys allow access to potentially sensitive REST API endpoints, ensure they are stored and used securely. For example, do not use this key to make AJAX calls from your website or expose it in any other public manner.
 {% endalert %}
 
 If accidental exposure of a key occurs, it can be deleted from the [Developer Console][8]. For help with this process, please [open a support ticket][support].
 
-#### API IP Whitelisting
+#### API IP Allowlisting
 
-For additional security, you can specify a whitelist of IP addresses and subnets which are allowed to make REST API requests for a given REST API Key. To whitelist specific IP addresses or subnets, add them to the API IP Whitelisting section when creating a new REST API Key:
+For additional security, you can specify an allowlist of IP addresses and subnets which are allowed to make REST API requests for a given REST API Key. To allowlist specific IP addresses or subnets, add them to the **Whitelist IPs** section when creating a new REST API Key:
 
 ![API IP Whitelisting][26]
 
 #### Creating and Managing REST API Keys
 
-To create a new REST API Key, visit the [Developer Console][8] on your Braze Dashboard. This page displays your existing API Keys. To create a new key, click the "Create New API Key" button.
+![Create New API Key][28]{: style="max-width:20%;float:right;margin-left:15px;"}
 
-![Create New API Key][28]
+To create a new REST API Key, visit the [Developer Console][8] on your Braze Dashboard. This page displays your existing API Keys. To create a new key, click **Create New API Key**.
 
-You will then be able to:
+You can then to do the following:
 
-- Give your new key a name for easy identification
+- Give your new key a name for identification at a glance
 - Select which permissions you would like to be associated with your new key
-- Specify whitelisted IP addresses and subnets for the new key
+- Specify allowlisted IP addresses and subnets for the new key
 
 Existing REST API Keys can be Viewed or Deleted by clicking the gear icon and selecting the corresponding option.
 
 ![API Key Options][29]
 
 {% alert important %}
-Keep in mind that once you create a new API Key, you cannot edit the scope of permissions or the whitelisted IPs. This limitation is in place for security reasons. If you need to change the scope of a key, create a new key with the updated permissions and implement that key in place of the old one. Once you've completed your implementation, go ahead and delete the old key.
+Keep in mind that once you create a new API Key, you cannot edit the scope of permissions or the allowlisted IPs. This limitation is in place for security reasons. If you need to change the scope of a key, create a new key with the updated permissions and implement that key in place of the old one. Once you've completed your implementation, go ahead and delete the old key.
 {% endalert %}
 
-###  External User ID Explanation
+### External User ID Explanation
 
 The `external_id` serves as a unique user identifier for whom you are submitting data. This identifier should be the same as the one you set in the Braze SDK in order to avoid creating multiple profiles for the same user.
 
-###  Braze User ID Explanation
+### Braze User ID Explanation
 
 The `braze_id` serves as a unique user identifier that is set by Braze. This identifier can be used to delete users through the REST API in addition to external_ids.
 
@@ -117,11 +117,13 @@ The `braze_id` serves as a unique user identifier that is set by Braze. This ide
 
 The Braze API infrastructure is designed to handle high volumes of data across our customer base. We enforce API rate limits, per app group, in order to ensure responsible use of the API. All messages should follow [UTF-8][1] encoding.
 
-|Default API Rate Limit | Value|
+|Request Type|Default API Rate Limit|
 |---|---|
 |Requests to the `/users/track` endpoint| User Track has a base speed limit of 50,000 requests per minute for all customers. This limit can be increased upon request. Please reach out to your Customer Success Manager for more information. |
 |Requests to the `/users/export/ids` endpoint|2,500 requests per minute. |
 |Batching with the `/users/track` endpoint|75 Events, 75 Purchases, and 75 Attributes per API request. |
+|Requests to the following endpoints:<br>`/events/lists`<br>`/purchases/product_ids`|1,000 requests per hour, shared between the two endpoints.|
+|Requests to the following endpoints: <br>`/users/delete`<br>`/users/alias/new`<br>`/users/identify`<br>`/push_notification/remove`|20,000 requests per minute, shared between the four endpoints.|
 |Requests to the Send endpoint specifying a Segment or Connected Audience|250 per minute. |
 |Send Identifier Creation|100 per day. |
 |Requests of any other kind|250,000 per hour. |

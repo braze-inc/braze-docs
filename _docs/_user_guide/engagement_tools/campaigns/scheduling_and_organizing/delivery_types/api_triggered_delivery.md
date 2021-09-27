@@ -15,15 +15,13 @@ API-triggered campaigns or server-trigger campaigns are ideal for more advanced 
 
 ## Setting up an API-Triggered Campaign
 
-Setting up an API-triggered campaign is easy. First, create a new multichannel or single-channel campaign (with multivariate testing).
+Setting up an API-triggered campaign takes a few quick steps. First, create a new multichannel or single-channel campaign (with multivariate testing).
 
 {% alert note %}
 An API-triggered campaign is different from an [API campaign]({{site.baseurl}}/developer_guide/rest_api/api_campaigns/#api-campaigns).
 {% endalert %}
 
-![API-Triggered Creation Step][45]
-
-Next, simply configure your copy and notifications the same way as you would were it a normally scheduled notification and select __API-Triggered Delivery__. For more information on the triggering of these campaigns from your server, please see the endpoint documentation section on [API-triggered campaign sending]({{site.baseurl}}/api/endpoints/messaging/send_messages/post_send_triggered_campaigns/).
+Next, configure your copy and notifications the same way as you would were it a normally scheduled notification and select __API-Triggered Delivery__. For more information on the triggering of these campaigns from your server, please see the endpoint documentation section on [API-triggered campaign sending]({{site.baseurl}}/api/endpoints/messaging/send_messages/post_send_triggered_campaigns/).
 
 ![API-Triggered Delivery Step][37]
 
@@ -31,9 +29,9 @@ Next, simply configure your copy and notifications the same way as you would wer
 
 In addition to triggering the message, you can also include content with the API request to be templated into the message within the `trigger_properties` object. This content can be referenced in the body of the message by saying something like
 ``{% raw %} {{ api_trigger_properties.${ some_value_included_with_request }}} {% endraw %}``.
-See the following social notification example use-case for additional context:
+See the following social notification example use case for additional context:
 
-![Social Example Delivery Window][38]
+![Social Example Delivery Window][38]{: style="max-width:70%;"}
 
 ## Re-eligibility with API-Triggered Campaigns
 
@@ -45,8 +43,7 @@ For example, if you are using an API-triggered campaign to send the user a campa
 
 
 [37]: {% image_buster /assets/img_archive/api_triggered_campaign_delivery.png %}
-[38]: {% image_buster /assets/img_archive/api_trigger_photo_social_example_1.png %}
+[38]: {% image_buster /assets/img_archive/api_triggered_photo_social_example_1.png %}
 [39]: {{site.baseurl}}/developer_guide/rest_api/messaging/#sending-messages-via-api-triggered-delivery
 [42]: {{site.baseurl}}/developer_guide/rest_api/messaging/#sending-messages-via-api-triggered-delivery
-[43]: {% image_buster /assets/img_archive/api-trigger-reeligible.png %}
-[45]: {% image_buster /assets/img_archive/api_triggered_creation_step.png %}
+[43]: {% image_buster /assets/img_archive/api_triggered_reeligible.png %}

@@ -22,7 +22,7 @@ To avoid this visual change in iOS 15, we strongly recommend you upgrade to the 
 
 ## New Notification Settings {#notification-settings}
 
-iOS 15 introduced new notification features to help users stay focused and avoid frequent interruptions throughout the day. We're excited to offer support for these new features. Learn more in [iOS Notification Options][3].
+iOS 15 introduced new notification features to help users stay focused and avoid frequent interruptions throughout the day. We're excited to offer support for these new features. These features do not require any additional SDK upgrades and will only be applied for users on iOS 15 devices.
 
 ### Focus Modes {#focus-mode}
 
@@ -39,6 +39,8 @@ In iOS 15, push notifications can be sent with one of four interruption levels:
 * **Time-Sensitive** (new) - Allows sound, vibration, screen waking, can break through system controls if allowed.
 * **Critical** - Allows sound, vibration, screen waking, can break through system controls, and bypass ringer switch.
 
+To learn more about how to set this option in iOS Push, see [iOS Notification Options]({{site.baseurl}}/user_guide/message_building_by_channel/push/ios/notification_options/#interruption-level).
+
 ### Notification Summary {#notification-summary}
 
 ![Notification Summary]({% image_buster /assets/img/ios/ios15-notification-summary.png %}){: style="float:right;max-width:25%;margin-left:15px;border:0"}
@@ -47,7 +49,7 @@ In iOS 15, users can (optionally) choose certain times throughout the day to rec
 
 For each notification you send, you'll soon be able to specify a "relevance score" to control which notification should appear at the top of the summary.
 
-We're excited to offer support for these new features—stay tuned for more information to be announced near iOS 15's official release!
+To learn more about how to set a notification's "relevance score", see [iOS Notification Options]({{site.baseurl}}/user_guide/message_building_by_channel/push/ios/notification_options/#relevance-score).
 
 ## Location Buttons {#location-buttons}
 
@@ -77,4 +79,4 @@ In iOS 15, users will be able to configure Safari to anonymize or generalize the
 
 [1]: https://github.com/Appboy/appboy-ios-sdk/releases/tag/4.3.2
 [2]: https://github.com/Appboy/appboy-ios-sdk/issues
-[3]: https://www.braze.com/docs/user_guide/message_building_by_channel/push/ios/notification_options/#interruption-level
+[3]: {{site.baseurl}}/user_guide/message_building_by_channel/push/ios/notification_options/#interruption-level

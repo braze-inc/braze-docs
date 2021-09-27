@@ -40,9 +40,13 @@ Attribute triggers are not currently available for array attributes.
 
 ![any value][2]
 
-You can also personalize the message body with the customer's new loyalty tier so that you can provide the customer with more information about the change.
+You can also use Liquid to personalize the message body with the customer's new loyalty tier and provide the customer with more information about the change.
 
-![personalize][3]
+{% raw %}
+```liquid
+Your loyalty tier was just changed to {{custom_attribute.${loyalty_tier}}}
+```
+{% endraw %}
 
 
 ### Custom Attribute Values Change to A Specific Value
@@ -62,5 +66,4 @@ Use the "change custom attribute value" trigger with the "specific value" option
 
 [1]:{% image_buster /assets/img_archive/trigger_attribute.png %}
 [2]:{% image_buster /assets/img_archive/any_value.png %}
-[3]:{% image_buster /assets/img_archive/trigger_personalize.png %}
 [4]:{% image_buster /assets/img_archive/super_vip.png %}

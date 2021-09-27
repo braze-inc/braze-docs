@@ -27,4 +27,7 @@ guide_featured_list:
   - name: Audience Paths Step
     link: /docs/user_guide/engagement_tools/canvas/canvas_components/audience_paths/
     fa_icon: fa fa-users
+  - name: Experiment Step
+    link: /docs/user_guide/engagement_tools/canvas/canvas_components/experiment_step/
+    fa_icon: fas fa-code-branch
 ---
