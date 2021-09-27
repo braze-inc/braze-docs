@@ -35,10 +35,10 @@ While Braze’s out-of-the-box in-app messages can be customized in a variety of
 
 Custom HTML messages can use the [JavaScript Bridge](#javascript-bridge) methods to log events, set custom attributes, close the message, and more!
 
-Check out our [Github repository][2] which contains detailed instructions on how to use and customize HTML in-app messages for your needs, and for a set of HTML5 in-app messages templates to help you get started.
+Check out our [GitHub repository][2] that contains detailed instructions on how to use and customize HTML in-app messages for your needs, and for a set of HTML5 in-app messages templates to help you get started.
 
 {% alert note %}
-To enable HTML in-app messages in the Web SDK, your SDK integration must supply the `allowUserSuppliedJavascript` initialization option to Braze: for example `appboy.initialize('YOUR-API_KEY', {allowUserSuppliedJavascript: true})`. This is for security reasons - HTML in-app messages can execute javascript so we require a site maintainer to enable them.
+To enable HTML in-app messages in the Web SDK, your SDK integration must supply the `allowUserSuppliedJavascript` initialization option to Braze: for example `appboy.initialize('YOUR-API_KEY', {allowUserSuppliedJavascript: true})`. This is for security reasons since HTML in-app messages can execute JavaScript, so we require a site maintainer to enable them.
 {% endalert %}
 
 
@@ -115,7 +115,7 @@ As with other URL parameters, the first parameter should begin with a question m
 - `<a href="https://example.com/?abButtonId=1">` - `<a>` tag with Button 2 click
 
 {% alert note %}
-In-app messages support only Button 1 and Button 2 clicks. URLs which do not specify one of these two button IDs will be logged as generic "body clicks".
+In-app messages support only Button 1 and Button 2 clicks. URLs that do not specify one of these two button IDs will be logged as generic "body clicks".
 {% endalert %}
 
 #### Open Link in New Window
@@ -169,7 +169,7 @@ To navigate to this option, you must create an in-app messaging campaign. From t
 ![Select Web Email Capture Form][4]
 
 {% alert note %}
-To enable Email Capture in-app messages, your SDK integration must supply the `allowUserSuppliedJavascript` initialization option to Braze, e.g. `appboy.initialize('YOUR-API_KEY', {allowUserSuppliedJavascript: true})`. This is for security reasons - HTML in-app messages can execute javascript so we require a site maintainer to enable them.
+To enable Email Capture in-app messages, your SDK integration must supply the `allowUserSuppliedJavascript` initialization option to Braze, e.g. `appboy.initialize('YOUR-API_KEY', {allowUserSuppliedJavascript: true})`. This is for security reasons since HTML in-app messages can execute JavaScript, so we require a site maintainer to enable them.
 {% endalert %}
 
 #### Customizable Features
@@ -266,6 +266,10 @@ To use a local video asset, be sure to include this file when uploading assets t
 
 To support iOS devices, you must include the `playsinline` attribute since full screen playback is not supported at this time.
 
+{% alert note %}
+iOS does not support autoplay by default. To update this default option, you can modify the [`ABKInAppMessageHTMLViewController`](https://github.com/Appboy/appboy-ios-sdk/blob/master/AppboyUI/ABKInAppMessage/ViewControllers/ABKInAppMessageHTMLViewController.m)
+{% endalert %}
+
 You can find other possible `<video>` options on [MDN Web Docs][9]
 
 ```
@@ -280,9 +284,6 @@ You can find other possible `<video>` options on [MDN Web Docs][9]
 Full screen videos will not render correctly on iOS and are not supported at this time. You must include the `playsinline` attribute to show the video within the HTML message instead.
 {% endalert %}
 
-{% alert note %}
-iOS does not support autoplay by default. To update this default option, you can modify the [`ABKInAppMessageHTMLViewController`](https://github.com/Appboy/appboy-ios-sdk/blob/master/AppboyUI/ABKInAppMessage/ViewControllers/ABKInAppMessageHTMLViewController.m)
-{% endalert %}
 
 [1]: {{site.baseurl}}/docs/user_guide/message_building_by_channel/in-app_messages/creative_details/
 [2]: https://github.com/Appboy/appboy-custom-html5-in-app-message-templates
