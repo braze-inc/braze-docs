@@ -234,7 +234,7 @@ Linked Image: [![Braze]({{site.baseurl}}/assets/img/braze-logo-mark.png){: style
 
 ![Text]({% image_buster /assets/img/logo-braze-fa.svg %}){: style="max-width:30%; color: green" }
 
-![Text]({% image_buster /assets/img/logo-braze-fa.svg %}){: style="align:right;max-width:300px;" }
+![Text]({% image_buster /assets/img/logo-braze-fa.svg %}){: style="float:right;max-width:300px;" }
 ```
 {% endtab %}
 {% endtabs %}
