@@ -1,11 +1,11 @@
 ---
 nav_title: Over-Segmentation
+article_title: Over-Segementation
 page_order: 1
 
 page_type: solution
 description: "This help article covers the implications of over-segmenting your users."
 tool: Segments
-noindex: true
 ---
 
 # Over-Segmentation

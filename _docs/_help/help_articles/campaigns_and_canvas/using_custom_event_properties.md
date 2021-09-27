@@ -1,5 +1,6 @@
 ---
 nav_title: Using Custom Event Properties
+article_title: Using Custom Event Properties
 page_order: 5
 
 page_type: solution
@@ -7,7 +8,6 @@ description: "This help article walks you through three important checks to ensu
 tool: 
 - Campaigns
 - Canvas
-noindex: true
 ---
 
 # Are My Custom Event Properties Being Logged?

@@ -1,5 +1,6 @@
 ---
-nav_title: Why are my conversions low?
+nav_title: Experiencing Low Conversions
+article_title: Experiencing Low Conversions
 page_order: 1
 
 page_type: solution
@@ -7,7 +8,6 @@ description: "This help article walks you through troubleshooting campaigns or C
 tool:
 - Canvas
 - Campaigns
-noindex: true
 ---
 
 # Why Are My Conversions Low?

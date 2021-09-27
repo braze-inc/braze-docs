@@ -1,11 +1,11 @@
 ---
 nav_title: No Push Notification Was Received
+article_title: Missing Push Notifications
 page_order: 0
 
 page_type: solution
 description: "This help article walks you through troubleshooting steps you can take if users are not receiving your push notifications."
 channel: push
-noindex: true
 ---
 # No Push Notification Was Received
 
