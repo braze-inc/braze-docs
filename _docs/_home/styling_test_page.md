@@ -222,7 +222,7 @@ Linked Image: [![Braze]({{site.baseurl}}/assets/img/braze-logo-mark.png){: style
 
 #### Anchoring Images
 
-![Text]({% image_buster /assets/img/logo-braze-fa.svg %}){: style="align:right;max-width:300px; color: green" }
+![Text]({% image_buster /assets/img/logo-braze-fa.svg %}){: style="float:right;max-width:300px; color: green" }
 
 {% endtab %}
 {% tab Markdown %}
