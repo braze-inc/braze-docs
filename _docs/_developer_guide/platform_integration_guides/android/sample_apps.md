@@ -1,6 +1,9 @@
 ---
 nav_title: Sample Apps
-platform: Android
+article_title: Sample Apps for Android/FireOS
+platform: 
+  - Android
+  - FireOS
 page_order: 10
 description: "This article covers Android sample apps."
 

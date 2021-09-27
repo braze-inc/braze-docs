@@ -135,7 +135,7 @@ You will see the default footer, which uses the ``{{${set_user_to_unsubscribed_u
 
 If using the default footer, which uses the ``{{${set_user_to_unsubscribed_url}}}`` attribute, be sure to select **&#60;other&#62;** for the **Protocol**, as indicated below.
 
-![Default Unsub URL Protocol][24]
+![Default Unsub URL Protocol][24]{: style="max-width:50%;"}
 
 ![No Footer-Email Settings][21]
 

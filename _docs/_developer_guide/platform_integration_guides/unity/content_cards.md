@@ -1,6 +1,11 @@
 ---
 nav_title: Content Cards
-platform: Unity
+article_title: Content Cards for Unity
+platform: 
+  - Unity
+  - iOS
+  - Android
+channel: content cards
 page_order: 4
 description: "This reference article covers Content Card implementation guidelines for the Unity platform."
 
@@ -21,6 +26,8 @@ Appboy.AppboyBinding.DisplayContentCards();
 You may register Unity Game Objects to be notified of incoming Content Cards. We recommend setting game object listeners from the Braze configuration editor.
 
 - If you need to configure your game object listener at runtime, use `AppboyBinding.ConfigureListener()` and specify `BrazeUnityMessageType.CONTENT_CARDS_UPDATED`.
+
+Note, you will additionally need to make a call to `AppboyBinding.RequestContentCardsRefresh()` to start receiving data in your game object listener on iOS.
 
 ## Parsing Content Cards
 

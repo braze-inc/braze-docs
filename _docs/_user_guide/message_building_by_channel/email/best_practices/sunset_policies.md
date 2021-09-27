@@ -19,14 +19,16 @@ Here are some things to consider when you create a sunset policy:
 - Will you deliver any special campaigns to users before excluding them from your segments?
 - Which messaging channels will your sunset policy apply to?
 
-To incorporate sunset policies into your campaigns, [create segments][19] that automatically exclude users who have marked your emails as spam or have not interacted with a your messages for a certain period of time.  To set up these segments, choose the "Has Marked You As Spam" and/ or "Last Engaged With Message" filters.  When you apply the "Last Engaged With Message" filter, you can specify the type of messaging (push, email, or in-app notification) that the user has or has not interacted with, as well as the number of days it has been since the user last interacted. After you create a segment, you can then choose to target this segment with any messaging channel.
+To incorporate sunset policies into your campaigns, [create segments][19] that automatically exclude users who have marked your emails as spam or have not interacted with a your messages for a certain period of time.  
 
-![Sunset Policy][20]
+To set up these segments, choose the "Has Marked You As Spam" and/or "Last Engaged With Message" filters, which are located under the **Marketing Activity** section in the filter dropdown.  When you apply the "Last Engaged With Message" filter, specify the type of messaging (push, email, or in-app notification) that the user has or has not interacted with, as well as the number of days it has been since the user last interacted. After you create a segment, choose to target this segment with any [messaging channel]({{site.baseurl}}/user_guide/message_building_by_channel/).
+
+![Segment Details page with the filter "Last Engaged with Message" selected][20]
 
 While Braze's platform automatically stops sending emails to users who have marked you as spam, the "Has Marked You As Spam" filter allows you to also send these users targeted push messages, in-app notifications, and News Feed cards.  This filter is useful for [retargeting campaigns][21] - for instance, you can send unengaged users messages or News Feed updates that remind them of the features and deals that they are missing out on when they don't open your emails.
 
 Sunset policies can be especially helpful in email campaigns that target lapsing users.  While these campaigns focus on segments that have not interacted with your app for a period of time, they can put the deliverability of your emails at risk if they repeatedly include unengaged recipients. Sunset policies allow you to target lapsing users without landing in the spam folder.
 
 [19]: {{site.baseurl}}/user_guide/engagement_tools/segments/creating_a_segment/#creating-a-segment
-[20]: {% image_buster /assets/img_archive/Email_Sunset_Policies_new.png %}
+[20]: {% image_buster /assets/img_archive/email_sunset_policies_new.png %}
 [21]: {{site.baseurl}}/user_guide/engagement_tools/campaigns/ideas_and_strategies/retargeting_campaigns/#retargeting-campaigns

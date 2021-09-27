@@ -31,7 +31,7 @@ It's important to keep your Mixpanel API Secret and Mixpanel Token up to date; i
 
 A list of the events that can be exported from Braze to Mixpanel is below. All events sent to Mixpanel will include the user's `external_user_id` as the Mixpanel Distinct ID. At this time, Braze does not send event data for users who do not have their `external_user_id` set.
 
-You can export two types of events events to Mixpanel: "Message Engagement Events" consisting of the Braze Events that are directly related to message sending, and "Customer Behavior Events" including other App or Website activity such as Sessions, Custom events, and Purchases tracked through the platform. All custom events are prefixed with `[Braze Custom Event]`. Custom event properties and purchase event properties are prefixed with `[Custom event property]` and `[Purchase property]`, respectively.
+You can export two types of events to Mixpanel: "Message Engagement Events" consisting of the Braze Events that are directly related to message sending, and "Customer Behavior Events" including other App or Website activity such as Sessions, Custom events, and Purchases tracked through the platform. All custom events are prefixed with `[Braze Custom Event]`. Custom event properties and purchase event properties are prefixed with `[Custom event property]` and `[Purchase property]`, respectively.
 
 Please contact your Account Manager or [open a support ticket][support] if you need access to additional event entitlements.
 
@@ -62,8 +62,8 @@ You can manage the Mixpanel Cohort Import process from the Technology Partners p
 ```json
 // Purchase
 {
-  "product_id": (string) id of product purchased (sent in the “productId” field of Amplitude HTTP API),
-  "price": (float) price of product (sent in the “price” field of Amplitude HTTP API),
+  "product_id": (string) id of product purchased (sent in the “productId” field of Mixpanel HTTP API),
+  "price": (float) price of product (sent in the “price” field of Mixpanel HTTP API),
   "currency": (string) three letter alpha ISO 4217 currency code,
   "app_id": (string) id for the app on which the user action occurred,
   "platform": (string) platform of the device (iOS, Android, web, etc.),
@@ -228,11 +228,7 @@ You can manage the Mixpanel Cohort Import process from the Technology Partners p
 }
 ```
 
-{% alert update %}
-Behavior for `dispatch_id` differs between Canvas and campaigns because Braze treats Canvas steps (except for Entry Steps, which can be scheduled) as triggered events, even when they are "scheduled". [Learn more about `dispatch_id` behavior in Canvas and campaigns here]({{site.baseurl}}/help/help_articles/data/dispatch_id/).
-
-_Update noted in August 2019._
-{% endalert %}
+Behavior for `dispatch_id` differs between Canvas and campaigns because Braze treats Canvas steps (except for Entry Steps, which can be scheduled) as triggered events, even when they are "scheduled". [Learn more about `dispatch_id` behavior in Canvas and campaigns here]({{site.baseurl}}/help/help_articles/data/dispatch_id/). For additional information, refer to the [Customer Behavior and User Events]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/event_glossary/customer_behavior_events/) and [Message Engagement Events]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/event_glossary/message_engagement_events/).
 
 
 ### SMS Events

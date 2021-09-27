@@ -12,7 +12,7 @@ tool:
 
 # Content Blocks
 
-> The Content Blocks Library allows you to manage your reusable, cross-channel content in a single, centralized location. To access this feature please go into the __Content Blocks Library__ tab in the [Templates & Media][6] section of your Braze account.
+> The Content Blocks Library allows you to manage your reusable, cross-channel content in a single, centralized location. To access this feature, go into the __Content Blocks Library__ tab in the [Templates & Media][6] section of your Braze account.
 
 With Content Blocks, you can:
 
@@ -31,11 +31,18 @@ Then, create your Content Block!
 
 Content Blocks currently have two types: `HTML` or `text`. Braze will select the type for you based on the content you inserted into the block. If Braze detects `HTML` markup in the Content Block, the block type will switch to `HTML` automatically. Otherwise, it will be considered `text`.  
 
-{% comment %}
-While there is little value to having ‘types’ today, it will become important in the future as we add additional types.  We envision better validation being done, as well as a more specific UI based on the type selected.
-{% endcomment %}
-
 You can also [create and manage your Content Blocks via API][5].
+
+{% alert tip %}
+When creating Content Blocks, it sometimes helps to visualize HTML and Liquid by adding line breaks. If these line breaks are left in during sending, you risk having extraneous spaces that can affect how the block will render. To avoid this, utilize the __Capture__ tag on your block along with the __&#124; strip__ filter. 
+{% raw %}
+```
+{% capture your_variable %}
+{{content_blocks.${your_content_block}}}
+{% endcapture %}{{your_variable | strip}}
+```
+{% endraw %}
+{% endalert %}
 
 ## Using Content Blocks
 
@@ -47,7 +54,7 @@ You can also [create and manage your Content Blocks via API][5].
 
 If you choose to update a Content Block, it will update in all messages the Content Block is used.
 
-If you want to update a Content Block for a single message or make a copy of a Content Block to use in other messages, you can either copy the HTML from the original message to your new one or edit the original Content Block (it must have been used in a message already) and save it. You will then get a prompt that allows you to save it as a new Content Block.
+If you want to update a Content Block for a single message or make a copy to use in other messages, you can copy the HTML from the original message to your new one, or edit the original Content Block (it must have been used in a message already) and save it. You will then get a prompt that allows you to save it as a new Content Block.
 
 ![copy-content-block][2]{: height="70%" width="70%"}
 
@@ -55,7 +62,7 @@ You can also [duplicate a Content Block with our Templates & Media feature]({{si
 
 ## Nesting Content Blocks
 
-Content blocks can be nested, but only once! You can nest _Content Block A_ into _Content Block B_, but you will not be able to then nest _Content Block B_ into Content _Block C_.
+Content blocks can be nested, but only once! You can nest _Content Block A_ into _Content Block B_, but you will not be able to then nest _Content Block B_ into _Content Block C_.
 
 {% alert warning %}
 Nothing will prevent you from nesting a third level of Content Block, but you will not see the content expand in nests beyond the second. The content and the Liquid snippet are removed from the message.
@@ -69,7 +76,7 @@ Once you have finished using a Content Block, you can [archive it from the __Tem
 
 ![Archive_CB][3]{: height="80%" width="80%"}
 
-Messages using the archived Block will still perform as though it was there, though we do recommend several best practices to ensure that outdated information is not included accidentally in your emails.
+Messages using the archived Block will still perform as though it was there. However, we recommend several best practices to ensure that outdated information is not accidentally included in your emails.
 
 1. When your Block is only used in a few emails, we recommend archiving the outdated Block and updating your live messages with a newer Block that has not been archived.
 2. When your Block only has a typo or needs a minor change, we do not recommend archiving the Block. Just update and get sending!

@@ -38,6 +38,10 @@ curl --location --request GET 'https://rest.iad-01.braze.com/templates/email/lis
 
 ## Response 
 
+{% alert important %}
+Templates built using the Drag & Drop Editor are not provided in this response.
+{% endalert %}
+
 ```json
 Content-Type: application/json
 Authorization: Bearer YOUR-REST-API-KEY
@@ -53,6 +57,5 @@ Authorization: Bearer YOUR-REST-API-KEY
 ```
 {% endapi %}
 
-{% alert important %}
-Templates built using the Drag & Drop Editor are not provided in this response.
-{% endalert %}
+
+

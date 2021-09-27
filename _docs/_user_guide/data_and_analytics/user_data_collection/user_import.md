@@ -42,7 +42,7 @@ If you are uploading or updating user profiles that are alias only, you must hav
 When you provide both a `user_alias_name` and `user_alias_label` in your import, Braze will update any existing user with the same `user_alias_name` or create a newly identified user with that `user_alias_name` set if one is not found.
 
 {% alert important %}
-You can't update an existing user with a `user_alias_name` if they already have an `external_id`. Instead, this will create a new user profile with the associated `user_alias_name`. To identify an alias-only user, use the [Identify Users]({{site.baseurl}}/api/endpoints/user_data/post_user_identify/) endpoint.
+You can't use a CSV import to update an existing user with a `user_alias_name` if they already have an `external_id`. Instead, this will create a new user profile with the associated `user_alias_name`. To associate an alias-only user with an `external_id`, use the [Identify Users]({{site.baseurl}}/api/endpoints/user_data/post_user_identify/) endpoint.
 {% endalert %}
 
 <i class="fas fa-file-download"></i> Download: [CSV Alias Import Template][template_alias]
@@ -58,9 +58,7 @@ Braze has several data types in Braze. When importing or updating user profiles 
 When importing customer data, the column headers you use must map exactly to the standard user attributes. Otherwise, Braze will automatically create a custom attribute on that user’s profile.
 {% endalert %}
 
-Braze accepts user data in the standard CSV format from files up to 100MB in size.
-
-<i class="fas fa-file-download"></i> Download: [CSV Import Template][template]
+Braze accepts user data in the standard CSV format from files up to 100MB in size. Refer to the sections above for CSV templates.
 
 ### Data Point Considerations
 
@@ -78,6 +76,8 @@ Setting `language` or `country` on a user via CSV import or API will prevent Bra
 | USER PROFILE FIELD | DATA TYPE | INFORMATION | REQUIRED |
 |---|---|---|---|
 | `external_id` | String | A unique user identifier for your customer. | Yes, see the following note |
+| `user_alias` | String | A unique user identifier for anonymous users. An alternative to the `external_id`. | No, see the following note |
+| `user_alias_label` | String | A common label by which to group user aliases. | Yes if `user_alias` is used |
 | `first_name` | String | The first name of your users as they have indicated (e.g. `Jane`). | No |
 | `last_name` | String | The last name of your users as they have indicated (e.g. `Doe`). | No |
 | `email` | String | The email of your users as they have indicated (e.g. `jane.doe@braze.com`). | No |
@@ -100,7 +100,8 @@ Setting `language` or `country` on a user via CSV import or API will prevent Bra
 {% alert note %}
 While `external_id` itself is not mandatory, you __must__ include one of these fields:
 - `external_id` - A unique user identifier for your customer <br> - OR -
-- `braze_id` - A unique user identifier pulled for existing Braze users
+- `braze_id` - A unique user identifier pulled for existing Braze users <br> - OR -
+- `user_alias` - A unique user identifier for an anonymous user
 {% endalert %}
 
 
@@ -126,9 +127,9 @@ For uploading these kinds of values, please use the [User Track Endpoint]({{site
 
 To import your CSV file, navigate to the **User Import** page under the Users section on the left-hand toolbar. In the lower text box, **Recent Imports**, there will be a table that lists up to twenty of your most recent imports, their file names, number of lines in the file, number of lines successfully imported, total lines in each file, and the status of each import.
 
-<i class="fas fa-file-download"></i> Download: [CSV Import Template][template]
+The upper box, **Import CSV**, will contain importing directions and a button to begin your import. Click **Select CSV File** and select your file of interest, then click **Start Upload**. Braze will upload your file and check the column headers as well as the data types of each column. 
 
-The upper box, **Import CSV**, will contain importing directions and a button to begin your import. Click **Select CSV File** and select your file of interest, then click **Start Upload**. Braze will upload your file and check the column headers as well as the data types of each column.
+To download a CSV template, refer to the sections [Import with External ID](#import-with-external-id) or [Import with User Alias](#import-with-user-alias) on this page.
 
 {% alert important %}
 CSV imports are case sensitive. This means capital letters in CSV imports will write the field as a custom attribute instead of a standard one. For example, "email" is correct, but "Email" would be written as a custom attribute.

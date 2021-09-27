@@ -1,6 +1,6 @@
 ---
 nav_title: "User Attributes Object"
-article_title: User Attributes Object
+article_title: API User Attributes Object
 page_order: 11
 page_type: reference
 description: "This article explains the different components of the User Alias object."
@@ -86,6 +86,10 @@ For information regarding when you should use a custom event vs a custom attribu
 
 #### Braze User Profile Fields
 
+{% alert important %} 
+The following user profile fields are case sensitive, so be sure to reference these fields in lower case.
+{% endalert %}
+
 | User Profile Field | Data Type Specification |
 | ---| --- |
 | country | (string) We require that country codes be passed to Braze in the [ISO-3166-1 alpha-2 standard][17]. |
@@ -114,10 +118,6 @@ For information regarding when you should use a custom event vs a custom attribu
 {: .reset-td-br-1 .reset-td-br-2}
 
 Language values that are explicitly set via this API will take precedence over the locale information Braze automatically receives from the device.
-
-{% alert note %} 
-The above user profile fields are case sensitive so be sure to reference these fields in lower case.
-{% endalert %}
 
 ####  User Attribute Example Request
 
@@ -161,4 +161,4 @@ This example contains two User Attribute objects of the allowed 75 per API call.
 [19]: http://en.wikipedia.org/wiki/ISO_8601 "ISO 8601 Time Code Wiki"
 [24]: http://en.wikipedia.org/wiki/List_of_ISO_639-1_codes "ISO-639-1 codes"
 [26]: https://en.wikipedia.org/wiki/List_of_tz_database_time_zones
-[27]: {{site.baseurl}}/developer_guide/rest_api/user_data/#braze-user-profile-fields
+[27]: #braze-user-profile-fields

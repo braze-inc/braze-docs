@@ -58,7 +58,7 @@ Each alias consists of two parts: a label, which defines the key of the alias, a
 
 Unlike an `external_id`, an alias can be updated with a new name for a given label once set. You can do so either via the [New User Alias Endpoint][32], or if you pass a new name via the SDK. The user alias will then be visible when exporting that user's data.
 
-![Alias_Label_Diagram][29]
+![Alias Label Diagram][29]
 
 User aliases also allow you to tag anonymous users with an identifier. These users can then be exported using their aliases, or referenced by the API.
 
@@ -68,7 +68,7 @@ A user alias can also be set on a known user profile to reference a known user b
 
 For information on how to set a user alias please see our documentation for each platform ([iOS][1], [Android][2], [Web][3]).
 
-![User_Profile_Lifecycle][26]
+![User Profile Lifecycle][26]
 
 ## Advanced Use Case Information
 

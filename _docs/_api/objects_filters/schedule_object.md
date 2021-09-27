@@ -1,6 +1,6 @@
 ---
 nav_title: "Schedule Object"
-article_title: Schedule Object
+article_title: API Schedule Object
 page_order: 12
 page_type: reference
 description: "This article lists and explains the different Scheduling Object used at Braze."

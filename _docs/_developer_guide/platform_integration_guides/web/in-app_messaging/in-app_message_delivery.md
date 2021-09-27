@@ -1,11 +1,11 @@
 ---
 nav_title: In-App Message Delivery
+article_title: In-App Message Delivery for Web
 platform: Web
+channel: in-app messages
 page_order: 4
-
 page_type: reference
 description: "This article describes in-app message delivery via the Braze SDK, such as manually displaying in-app messages or sending exit-intent messages."
-channel: in-app messages
 
 ---
 
@@ -14,6 +14,10 @@ channel: in-app messages
 ## Trigger Types
 
 Our in-app message product allows you to trigger an in-app message display as a result of several different event types: `Any Purchase`, `Specific Purchase`, `Session Start`, `Custom Event`, `Push Click`.  Furthermore, `Specific Purchase` and `Custom Event` triggers can contain robust property filters.
+
+{% alert note %}
+Triggered in-app messages only work with custom events logged through the SDK and not through the REST APIs. If you're working with a web app, check out how to log custom events [here]({{site.baseurl}}/developer_guide/platform_integration_guides/web/analytics/tracking_custom_events/#tracking-custom-events).
+{% endalert %}
 
 ## Delivery Semantics
 All in-app messages that a user is eligible for are automatically downloaded to the user's device/browser upon a session start event, and triggered according to the message's delivery rules. For more information about the SDK's session start semantics, see our [session lifecycle documentation][10].

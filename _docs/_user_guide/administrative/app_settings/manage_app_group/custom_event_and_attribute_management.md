@@ -19,13 +19,9 @@ You can manage custom attributes, custom events (and their properties), and prod
 
 To add a custom attribute, event, or product, go to the respective tab and click **+ Add**. Give it a name (and for custom attributes, a data type) and click **Save**. This will enable tracking on it.
 
-![customattributessearch1.png][71]
-
 ### Managing Properties
 
 Once you have created a **Custom Event** or **Product**, you can click **Manage Properties** for that event or product to add new properties, blocklist existing properties, and view which campaigns or Canvases use this property in a [trigger event]({{site.baseurl}}/user_guide/engagement_tools/campaigns/scheduling_and_organizing/delivery_types/triggered_delivery/#step-1-select-a-trigger-event).
-
-![customeventsview1.png][72]
 
 ![manageproperties1.png][73]{: style="max-width:70%"}
 
@@ -59,7 +55,7 @@ Braze automatically recognizes data types for attribute data that is sent to us.
 
 {% alert note %} Forcing data types does not apply to event properties, or purchase properties. {% endalert %}
 
-![customeventsviewdatatypedropdown1.png][75]
+![Custom Attributes View Data Type Dropdown][75]
 
 {% alert warning %}
 If you choose to force the data type for an attribute, any data that comes in that isn't the specified type will be ignored.
@@ -83,8 +79,6 @@ Data sent to Braze is immutable and cannot be deleted or modified once we've rec
 
 [43]: {{site.baseurl}}/user_guide/data_and_analytics/configuring_reporting/#configuring-reporting
 [44]: {{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_attributes/#custom-attribute-data-types
-[71]: {% image_buster /assets/img_archive/customattributessearch1.jpeg %}
-[72]: {% image_buster /assets/img_archive/customeventsview1.jpeg %}
 [73]: {% image_buster /assets/img_archive/manageproperties1.png %}
-[75]: {% image_buster /assets/img_archive/customeventsviewdatatypedropdown1.png %}
+[75]: {% image_buster /assets/img_archive/custom_events_view_data_type_dropdown.png %}
 [88]: {{site.baseurl}}/developer_guide/platform_integration_guides/sdk_primer/#blocking-data-collection

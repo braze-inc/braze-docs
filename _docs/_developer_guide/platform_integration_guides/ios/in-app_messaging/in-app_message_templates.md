@@ -1,5 +1,6 @@
 ---
 nav_title: In-App Message Templates
+article_title: In-App Message Templates for iOS
 platform: iOS
 page_order: 4
 description: "This reference article shows iOS in-app message templates."

@@ -1,6 +1,6 @@
 ---
 nav_title: "Web Object"
-article_title: Web Object
+article_title: Web Messaging Object
 page_order: 12
 page_type: reference
 channel: push

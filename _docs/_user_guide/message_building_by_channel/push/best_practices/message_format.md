@@ -43,13 +43,13 @@ channel: push
 {% endtab %}
 {% tab Text Example %}
 
-![iOS_Push]({% image_buster /assets/img_archive/iOS_push_notification_small.png %})
+![iOS Push]({% image_buster /assets/img_archive/iOS_push_notification_small.png %})
 
 {% endtab %}
 {% tab Image Example %}
 
-![iOS Rich Push]({% image_buster /assets/img_archive/braze_richpush1.png %}){: style="align:left;"}
-![iOS Rich Push On Hard Push]({% image_buster /assets/img_archive/braze_richpush2.png %}){: style="align:right;"}
+![iOS Rich Push]({% image_buster /assets/img_archive/braze_richpush1.png %}){: style="max-width:50%;"}
+![iOS Rich Push On Hard Push]({% image_buster /assets/img_archive/braze_richpush2.png %}){: style="max-width:50%;"}
 
 {% endtab %}
 {% endtabs %}
@@ -91,7 +91,7 @@ Smaller, high quality images will load faster, so it’s recommended to use the 
 {% endtab %}
 {% tab Text Example %}
 
-![Android_Push]({% image_buster /assets/img_archive/Push_Android_2.png %})
+![Android Push]({% image_buster /assets/img_archive/Push_Android_2.png %})
 
 {% endtab %}
 {% tab Image Example %}
@@ -120,7 +120,7 @@ Large image notifications display best when using an image of at least 600x300 p
 {% endtab %}
 {% tab Text Example %}
 
-![Push_Window_Universal]({% image_buster /assets/img_archive/Push_Window8_Toast.png %})
+![Push Window Universal]({% image_buster /assets/img_archive/Push_Window8_Toast.png %})
 
 {% endtab %}
 {% endtabs %}
@@ -139,7 +139,7 @@ Large image notifications display best when using an image of at least 600x300 p
 {% endtab %}
 {% tab Text Example %}
 
-![Push_Window8]({% image_buster /assets/img_archive/Push_Windows_Universal_Toast.png %})
+![Push Window8]({% image_buster /assets/img_archive/Push_Windows_Universal_Toast.png %})
 
 {% endtab %}
 {% endtabs %}

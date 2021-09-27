@@ -1,6 +1,10 @@
 ---
 nav_title: Logging Purchases
-platform: Unity
+article_title: Logging Purchases for Unity
+platform: 
+  - Unity
+  - iOS
+  - Android
 page_order: 3
 description: "This reference article covers how to log purchases on Unity platform."
 

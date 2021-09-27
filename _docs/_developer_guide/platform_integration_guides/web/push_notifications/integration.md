@@ -1,13 +1,15 @@
 ---
+nav_title: Integration
+article_title: Push Integration for Web
 platform: Web
+channel: push
 page_order: 0
-
 page_type: reference
 description: "This article describes how to integrate Braze Web Push via the Braze SDK."
 
 ---
 
-# Integration
+# Push Integration
 
 A push notification is an alert that appears on the user's screen when an important update occurs. Push notifications can be received even when your web page is not currently open in the user's browser. Push notifications are a valuable way to provide your users with time-sensitive and relevant content or to re-engage them with your site.
 
@@ -45,6 +47,10 @@ While industry best practice is to make your whole site secure, customers who ca
 - If you don't already have a Service Worker, create a new file named ```service-worker.js``` with the content below, and place it in the root directory of your website.
 
 - Otherwise, if your site already registers a Service Worker, add the content below to the Service Worker file, and set the [```manageServiceWorkerExternally``` initialization option to ```true```](https://js.appboycdn.com/web-sdk/latest/doc/module-appboy.html#.initialize) when initializing the Web SDK.
+
+```javascript
+self.importScripts('https://js.appboycdn.com/web-sdk/3.3/service-worker.js');
+```
 
 <script src="https://gist-it.appspot.com/https://github.com/Appboy/appboy-web-sdk/blob/master/sample-build/service-worker.js?footer=minimal"></script>
 

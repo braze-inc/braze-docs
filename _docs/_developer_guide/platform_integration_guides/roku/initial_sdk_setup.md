@@ -1,8 +1,8 @@
 ---
 nav_title: Initial SDK Setup
+article_title: Initial SDK Setup for Roku
 platform: Roku
 page_order: 0
-
 page_type: reference
 description: "This page describes initial setup steps for the Braze Roku SDK."
 

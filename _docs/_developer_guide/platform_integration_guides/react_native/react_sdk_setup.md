@@ -1,11 +1,10 @@
 ---
 nav_title: Initial SDK Setup
+article_title: Initial SDK Setup for React Native
 platform: React Native
-subplatform:
-- iOS
-- Android
 page_order: 1
 description: "This reference introduces the React Native SDK and explains how to integrate it natively on Android and iOS."
+
 ---
 
 # Initial SDK Setup
@@ -66,8 +65,10 @@ Add the required permissions to your `AndroidManifest.xml` file:
 #### Step 2.1c: Implement User Session Tracking
 
 The calls to `openSession()` and `closeSession()` are handled automatically.
-Add the following code to the `onCreate()` method of your Application class in the `MainApplication.java` file:
+Add the following code to the `onCreate()` method of your `MainApplication` class:
 
+{% subtabs global %}
+{% subtab JAVA %}
 ```java
 import com.appboy.AppboyLifecycleCallbackListener;
 
@@ -78,6 +79,43 @@ public void onCreate() {
     registerActivityLifecycleCallbacks(new AppboyLifecycleCallbackListener());
 }
 ```
+{% endsubtab %}
+{% subtab KOTLIN %}
+```kotlin
+import com.appboy.AppboyLifecycleCallbackListener
+
+override fun onCreate() {
+    super.onCreate()
+    ...
+    registerActivityLifecycleCallbacks(AppboyLifecycleCallbackListener())
+}
+```
+{% endsubtab %}
+{% endsubtabs %}
+
+#### Step 2.1d: Handle Intent updates
+
+If your MainActivity has `android:launchMode` set to `singleTask`, add the following code to your `MainActivity` class:
+
+{% subtabs global %}
+{% subtab JAVA %}
+```java
+@Override
+public void onNewIntent(Intent intent) {
+    super.onNewIntent(intent);
+    setIntent(intent);
+}
+```
+{% endsubtab %}
+{% subtab KOTLIN %}
+```kotlin
+override fun onNewIntent(intent: Intent) {
+    super.onNewIntent(intent)
+    setIntent(intent)
+}
+```
+{% endsubtab %}
+{% endsubtabs %}
 {% endtab %}
 {% tab iOS %}
 
@@ -93,8 +131,13 @@ cd ios && pod install
 
 #### Step 2.2b: Configure the Braze SDK
 
-In the `AppDelegate.m` file, add the following snippet within the
-`application:didFinishLaunchingWithOptions` method:
+
+Add Appboy SDK import at the top of the `AppDelegate.m` file:
+```objc
+#import "Appboy-iOS-SDK/AppboyKit.h"
+```
+
+In the same file, add the following snippet within the `application:didFinishLaunchingWithOptions` method:
 
 ```objc
 [Appboy startWithApiKey:@"YOUR-APP-IDENTIFIER-API-KEY"

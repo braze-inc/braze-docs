@@ -1,5 +1,6 @@
 ---
 nav_title: Analytics Overview
+article_title: Analytics Overview
 page_order: 2
 description: "This reference article covers user data collection including what data is automatically collected, purchase events and custom events, as well as data collection best practices."
 
@@ -13,7 +14,7 @@ This best practice guide will help you to understand exactly what Braze consider
 
 ## Automatically Collected Data
 
-The following events and attributes are captured and updated automatically by the Braze SDK as part of the Session Start and Session End data points, or by the Braze backend. You don't need to record them separately as custom events or custom attributes. If you wish to whitelist processes that block the default collection of certain data items (not suggested), please see our [SDK Primer]({{site.baseurl}}/developer_guide/platform_integration_guides/sdk_primer/).
+The following events and attributes are captured and updated automatically by the Braze SDK as part of the Session Start and Session End data points, or by the Braze backend. You don't need to record them separately as custom events or custom attributes. If you wish to whitelist processes that block the default collection of certain data items (not suggested), check out our [SDK Primer]({{site.baseurl}}/developer_guide/platform_integration_guides/sdk_primer/).
 
 #### Usage Information
 - First Used App (Time)
@@ -91,7 +92,7 @@ For example, if an eCommerce application wanted to send a message to a user when
 
 Custom event properties can also be used for personalization within the messaging template. Any campaign using [Action-Based Delivery][19] with a trigger event can use custom event properties from that event for messaging personalization. If a gaming application wanted to send a message to users who had completed a level, it could further personalize the message with a property for the time it took users to complete that level. In this example, the message is personalized for three different segments using [conditional logic][18].  The custom event property called ``time_spent``, can be included in the message by calling ``{% raw %} {{event_properties.${time_spent}}} {% endraw %}``.
 
-![custom_event_properties_gaming.png][19]
+![custom_event_properties_gaming.png][19]{: style="max-width:75%;"}
 
 Custom event properties are designed to help you personalize your messaging or build granular action-based delivery campaigns. If you would like to create segments based on event property recency and frequency, please reach out to your Customer Success Manager, as this may incur additional data costs.
 

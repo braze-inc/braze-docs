@@ -52,31 +52,31 @@ You can export the following data from Braze to mParticle:
 {% tab Platform-Specific %}
 | Event Name| Feed Type| Description| Currents Properties |
 | --------- | -------- | ---------- | ------------------- |
-| Push Notification Send| Platform-specific Feed | A push notification was successfully sent to a User.| `app_id`, `campaign_id`, `canvas_step_id`, `canvas_id`, `canvas_variation_id`|
-| Push Notification Open| Platform-specific Feed | User opened a push notification.| `app_id`, `campaign_id`, `canvas_step_id`, `canvas_id`, `canvas_variation_id`|
-| Push Notification Bounce| Platform-specific Feed | Braze was not able to send a push notification to this User.| `app_id`, `campaign_id`, `canvas_step_id`, `canvas_id`, `canvas_variation_id`|
-| In-App Message Impression| Platform-specific Feed | User viewed an In-App Message.| `app_id`, `campaign_id`, `canvas_step_id`, `canvas_id`, `canvas_variation_id`|
-| In-App Message Clicked| Platform-specific Feed | User tapped or clicked a button in an In-App Message.| `button_id`, `app_id`, `campaign_id`, `canvas_step_id`, `canvas_id`, `canvas_variation_id` |
+| Push Notification Sends| Platform-specific Feed | A push notification was successfully sent to a User.| `app_id`, `campaign_id`, `canvas_step_id`, `canvas_id`, `canvas_variation_id`|
+| Push Notification Opens| Platform-specific Feed | User opened a push notification.| `app_id`, `campaign_id`, `canvas_step_id`, `canvas_id`, `canvas_variation_id`|
+| Push Notification Bounces| Platform-specific Feed | Braze was not able to send a push notification to this User.| `app_id`, `campaign_id`, `canvas_step_id`, `canvas_id`, `canvas_variation_id`|
+| In-App Message Impressions| Platform-specific Feed | User viewed an In-App Message.| `app_id`, `campaign_id`, `canvas_step_id`, `canvas_id`, `canvas_variation_id`|
+| In-App Message Clicks| Platform-specific Feed | User tapped or clicked a button in an In-App Message.| `button_id`, `app_id`, `campaign_id`, `canvas_step_id`, `canvas_id`, `canvas_variation_id` |
 | Content Card Sent| Platform-specific Feed | A Content Card was sent to a user's device                                                | `app_id`, `card_id`, `campaign_id`, `canvas_step_id`, `canvas_id`, `canvas_variation_id`  |
 | Content Card Viewed| Platform-specific Feed | User viewed a Content Card| `app_id`, `card_id`, `campaign_id`, `canvas_step_id`, `canvas_id`, `canvas_variation_id`  |
 | Content Card Clicked| Platform-specific Feed | User clicked a Content Card| `app_id`, `card_id`, `campaign_id`, `canvas_step_id`, `canvas_id`, `canvas_variation_id`  |
 | Content Card Dismissed| Platform-specific Feed | User dismissed a Content Card| `app_id`, `card_id`, `campaign_id`, `canvas_step_id`, `canvas_id`, `canvas_variation_id`  |
-| News Feed Viewed| Platform-specific Feed | User viewed the native Braze News Feed.| `app_id`, `card_id`, `campaign_id`, `canvas_step_id`, `canvas_id`, `canvas_variation_id`  |
-| News Feed Card Viewed| Platform-specific Feed | User viewed a Card within the native Braze News Feed.| `app_id`, `card_id`, `campaign_id`, `canvas_step_id`, `canvas_id`, `canvas_variation_id`  |
-| News Feed Card Clicked| Platform-specific Feed | User clicked on a Card within the native Braze News Feed.| `app_id`, `card_id`, `campaign_id`, `canvas_step_id`, `canvas_id`, `canvas_variation_id`  |
+| News Feed Views| Platform-specific Feed | User viewed the native Braze News Feed.| `app_id`, `card_id`, `campaign_id`, `canvas_step_id`, `canvas_id`, `canvas_variation_id`  |
+| News Feed Card Views| Platform-specific Feed | User viewed a Card within the native Braze News Feed.| `app_id`, `card_id`, `campaign_id`, `canvas_step_id`, `canvas_id`, `canvas_variation_id`  |
+| News Feed Card Clicks| Platform-specific Feed | User clicked on a Card within the native Braze News Feed.| `app_id`, `card_id`, `campaign_id`, `canvas_step_id`, `canvas_id`, `canvas_variation_id`  |
 | Application Uninstalled| Platform-specific Feed | User uninstalled the App.| `app_id`|
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
 {% endtab %}
 {% tab Unbound %}
 | Event Name| Feed Type| Description| Currents Properties |
 | --------- | -------- | ---------- | ------------------- |
-| Email Sent| Unbound Feed| An email was successfully sent.| `campaign_id`, `canvas_step_id`, `canvas_id`, `canvas_variation_id`|
-| Email Delivered| Unbound Feed| An email was successfully delivered to a User’s mail server.| `campaign_id`, `canvas_step_id`, `canvas_id`, `canvas_variation_id`|
-| Email Opened| Unbound Feed| User opened an email.| `campaign_id`, `canvas_step_id`, `canvas_id`, `canvas_variation_id`|
-| Email Clicked| Unbound Feed| User clicked a link in an email. Email click tracking must be enabled.| `campaign_id`, `canvas_step_id`, `canvas_id`, `canvas_variation_id`|
-| Email Bounced| Unbound Feed| Braze attempted to send an email, but the User’s receiving mail server did not accept it. | `campaign_id`, `canvas_step_id`, `canvas_id`, `canvas_variation_id`|
-| Email Marked As Spam| Unbound Feed| User marked an email as spam.| `campaign_id`, `canvas_step_id`, `canvas_id`, `canvas_variation_id`|
-| Email Unsubscribed| Unbound Feed| User clicked the unsubscribe link in an email.| `campaign_id`, `canvas_step_id`, `canvas_id`, `canvas_variation_id`|
+| Email Sends| Unbound Feed| An email was successfully sent.| `campaign_id`, `canvas_step_id`, `canvas_id`, `canvas_variation_id`|
+| Email Deliveries| Unbound Feed| An email was successfully delivered to a User’s mail server.| `campaign_id`, `canvas_step_id`, `canvas_id`, `canvas_variation_id`|
+| Email Opens| Unbound Feed| User opened an email.| `campaign_id`, `canvas_step_id`, `canvas_id`, `canvas_variation_id`|
+| Email Clicks| Unbound Feed| User clicked a link in an email. Email click tracking must be enabled.| `campaign_id`, `canvas_step_id`, `canvas_id`, `canvas_variation_id`|
+| Email Bounces| Unbound Feed| Braze attempted to send an email, but the User’s receiving mail server did not accept it. | `campaign_id`, `canvas_step_id`, `canvas_id`, `canvas_variation_id`|
+| Email Marks As Spam| Unbound Feed| User marked an email as spam.| `campaign_id`, `canvas_step_id`, `canvas_id`, `canvas_variation_id`|
+| Email Unsubscribes| Unbound Feed| User clicked the unsubscribe link in an email.| `campaign_id`, `canvas_step_id`, `canvas_id`, `canvas_variation_id`|
 | SMS Sends| Unbound Feed| An SMS was sent to a user.| `campaign_id`, `campaign_name`, `message_variation_id`, `canvas_step_id`, `canvas_step_name`, `canvas_id`, `canvas_name`, `canvas_variation_id`, `canvas_variation_name`, `to_phone_number`|
 | SMS Carrier Sends| Unbound Feed| An SMS was set to a carrier.| `campaign_id`, `campaign_name`, `message_variation_id`, `canvas_step_id`, `canvas_step_name`, `canvas_id`, `canvas_name`, `canvas_variation_id`, `canvas_variation_name`, `to_phone_number`, `from_phone_number` |
 | SMS Deliveries| Unbound Feed| An SMS was delivered successfully.| `campaign_id`, `campaign_name`, `message_variation_id`, `canvas_step_id`, `canvas_step_name`, `canvas_id`, `canvas_name`, `canvas_variation_id`, `canvas_variation_name`, `to_phone_number`, `from_phone_number` |
@@ -84,11 +84,11 @@ You can export the following data from Braze to mParticle:
 | SMS Rejections| Unbound Feed| An SMS was rejected.| `campaign_id`, `campaign_name`, `message_variation_id`, `canvas_step_id`, `canvas_step_name`, `canvas_id`, `canvas_name`, `canvas_variation_id`, `canvas_variation_name`, `to_phone_number`, `from_phone_number`, `error`, `provider_error_code` |
 | SMS Inbound Received| Unbound Feed| An inbound SMS was received.| `inbound_phone_number`, `action`, `message_body` |
 | Subscription Group State Change| Unbound Feed| User's subscription group state changed to 'Subscribed' or 'Unsubscribed'| `campaign_id`, `canvas_step_id`, `canvas_id`, `canvas_variation_id`|
-| Webhook Sent| Unbound Feed| A webhook message was sent on behalf of a User.| `campaign_id`, `canvas_step_id`, `canvas_id`, `canvas_variation_id`|
-| Campaign Conversion Event| Unbound Feed| User performed the primary conversion event for a campaign within its conversion window.  | `campaign_id`|
-| Campaign Enrollment in Control Group | Unbound Feed| User was enrolled in a campaign control group.| `campaign_id`|
-| Canvas Conversion Event| Unbound Feed| User performed the primary conversion event for a Canvas within its conversion window.| `canvas_step_id`, `canvas_id`, `canvas_variation_id`|
-| Canvas Entry| Unbound Feed | User was entered into a Canvas.| `in_control_group`, `canvas_id`, `canvas_variation_id`|
+| Webhook Sends| Unbound Feed| A webhook message was sent on behalf of a User.| `campaign_id`, `canvas_step_id`, `canvas_id`, `canvas_variation_id`|
+| Campaign Conversions| Unbound Feed| User performed the primary conversion event for a campaign within its conversion window.  | `campaign_id`|
+| Campaign Control Group Enrollments | Unbound Feed| User was enrolled in a campaign control group.| `campaign_id`|
+| Canvas Conversions| Unbound Feed| User performed the primary conversion event for a Canvas within its conversion window.| `canvas_step_id`, `canvas_id`, `canvas_variation_id`|
+| Canvas Entries| Unbound Feed | User was entered into a Canvas.| `in_control_group`, `canvas_id`, `canvas_variation_id`|
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
 {% endtab %}
 {% endtabs %}

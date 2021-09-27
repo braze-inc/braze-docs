@@ -19,13 +19,16 @@ For some email clients, CSS inlining can improve the way that emails render and 
 
 ## How do I enable/disable CSS inlining?
 
-You can control whether CSS Inlining is turned on or off for any email message through a checkbox in the Sending Info section of Braze's Email Composer.
+You can control whether CSS inlining is turned on or off for any email message through a checkbox in the **Sending Info** tab of the HTML Composer, and the **Advanced** tab of the Drag & Drop Editor.
 
-![css-inline2][2]
+| HTML Composer | Drag & Drop Editor|
+| --- | --- |
+| ![Manage CSS inlining in HTML composer][2]{: style="max-width:80%;"} | ![Manage CSS inlining in Drag & Drop Editor][3]{: style="max-width:80%;"} |
 
-Additionally, a default on or off state can be set globally from Manage Settings > Email Settings > Inline CSS. This setting ensures that all new email messages start with the desired default value. Note that changing this setting will not affect any of your existing email messages. You can also override this default at any time while composing email messages.
+Additionally, you can set a default on or off state globally from **Manage Settings** > **Email Settings** > **Inline CSS**. This setting ensures that all new email messages start with the desired default value. Note that changing this setting will not affect any of your existing email messages. You can also override this default at any time while composing email messages.
 
 ![css-inline1][1]
 
 [1]:{% image_buster /assets/img_archive/css-inline1.png %}
 [2]:{% image_buster /assets/img_archive/css-inline2.png %}
+[3]:{% image_buster /assets/img_archive/css-inline3.png %}

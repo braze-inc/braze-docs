@@ -1,5 +1,6 @@
 ---
 nav_title: Disclosures
+article_title: Disclosures and Qualifications
 layout: dev_guide
 page_order: 5
 guide_top_header: "Disclosures"

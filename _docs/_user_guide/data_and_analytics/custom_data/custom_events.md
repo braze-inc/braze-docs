@@ -17,16 +17,13 @@ Custom events are actions taken by, or updates about, your users. They're best s
 
 Listed below are the methods across various platforms that are used to log custom events. Within these pages, you will also be able to find documentation on how to add properties and quantities to your custom events.
 
-- [Android]({{site.baseurl}}/developer_guide/platform_integration_guides/android/analytics/tracking_custom_events/)
+- [Android and FireOS]({{site.baseurl}}/developer_guide/platform_integration_guides/android/analytics/tracking_custom_events/)
 - [iOS]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/analytics/tracking_custom_events/)
 - [Web]({{site.baseurl}}/developer_guide/platform_integration_guides/web/analytics/tracking_custom_events/)
-- [FireOS]({{site.baseurl}}/developer_guide/platform_integration_guides/fireos/analytics/tracking_custom_events/)
 - [React Native]({{site.baseurl}}/developer_guide/platform_integration_guides/react_native/analytics/#logging-custom-events)
 - [Unity]({{site.baseurl}}/developer_guide/platform_integration_guides/unity/Analytics/logging_custom_events/)
 - [Windows Universal]({{site.baseurl}}/developer_guide/platform_integration_guides/windows_universal/analytics/logging_custom_events/)
-- **Xamarin**: 
-    - [Android/FireOS]({{site.baseurl}}/developer_guide/platform_integration_guides/xamarin/android_and_fireos/analytics/#tracking-custom-events)
-    - [iOS]({{site.baseurl}}/developer_guide/platform_integration_guides/xamarin/ios/analytics/#tracking-custom-events)
+- [Xamarin]({{site.baseurl}}/developer_guide/platform_integration_guides/xamarin/analytics/#tracking-custom-events)
 - [Roku]({{site.baseurl}}/developer_guide/platform_integration_guides/roku/analytics/logging_custom_events/)
 
 ## Custom Event Segmentation Filters

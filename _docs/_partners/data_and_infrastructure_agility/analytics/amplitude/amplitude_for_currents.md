@@ -24,8 +24,8 @@ Add this information to the Amplitude integration page on the dashboard, and pre
 
 ![Amplitude]({% image_buster /assets/img_archive/currents-amplitude-edit.png %})
 
-{% alert important %}
-It's important to keep your Amplitude API Key up to date; if your connector's credentials expire, the connector will stop sending events. If this persists for more than **48 hours**, the connector's events will be dropped and data will be permanently lost.
+{% alert warning %}
+Keep your Amplitude API Key up to date. If your connector's credentials expire, the connector will stop sending events. If this persists for more than **48 hours**, the connector's events will be dropped and data will be permanently lost.
 {% endalert %}
 
 Amplitude's documentation is available [here](https://amplitude.zendesk.com/hc/en-us/articles/115000217351-Appboy-Amplitude-Integration#how-to-set-up-and-use-the-integration).
@@ -60,7 +60,7 @@ Scheduled syncs will only send deltas of the updated data set.
 
 ## Rate Limits
 
-Currents connects to Amplitude's HTTP API, which has a [Rate Limit](https://amplitude.zendesk.com/hc/en-us/articles/204771828-HTTP-API#upload-limit) of 60 events/second per device. Above that threshold, Amplitude will throttle events that are logged through Currents. If a device in your integration is sending above this rate limit, you may experience a delay in when events from all devices will appear in Amplitude.
+Currents connects to Amplitude's HTTP API, which has a [Rate Limit](https://amplitude.zendesk.com/hc/en-us/articles/204771828-HTTP-API#upload-limit) of 60 events/second per device. Above that threshold, Amplitude will throttle events that are logged through Currents. If a device in your integration is sending above this rate limit, you may experience a delay in when events from all devices will appear in Amplitude.
 
 Devices should not report more than 60 events/second under normal circumstances, and this event pattern should only occur due to a misconfigured integration. To avoid this type of delay, ensure that your SDK integration is reporting events at a normal rate as specified in our SDK integration instructions.
 
@@ -243,13 +243,6 @@ To check out some of the common Amplitude API endpoints, view our dedicated [Amp
   "url": (string) the URL that was clicked (Email Click events only)
 }
 ```
-
-{% alert update %}
-Behavior for `dispatch_id` differs between Canvas and campaigns because Braze treats Canvas steps (except for Entry Steps, which can be scheduled) as triggered events, even when they are "scheduled". [Learn more about `dispatch_id` behavior in Canvas and campaigns here]({{site.baseurl}}/help/help_articles/data/dispatch_id/).
-
-_Update noted in August 2019._
-{% endalert %}
-
 
 ### SMS Events
 ```json
