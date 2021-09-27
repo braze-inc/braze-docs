@@ -45,10 +45,10 @@ Reference Punchh documentation on what sample payloads for these available event
 
 External IDs from Braze can be added in several different ways:
 
-1. Create new users in Punchh with the Punchh signup API under the `external_source` and `external_source_id` fields.<br>Punchh allows external identifiers to be sent with a user profile via signup API. The field values must be unique to Punchh and not associated with any other existing profile. <br><br>For more information on applicable Punchh APIs, visit the following API documentation:
+1. Create new users in Punchh with the Punchh signup API under the `external_source` and `external_source_id` fields.<br>Punchh allows external identifiers to be sent with a user profile via a signup API endpoint. The field values must be unique to Punchh and not associated with any other existing profile. <br><br>For more information on applicable Punchh APIs, visit the following API documentation:
 - [Mobile Signup API](https://developers.punchh.com/mobile-apis/users/mobile-sign-up)
 - [SSO Signup API](https://developers.punchh.com/sso-online-apis/single-sign-on/sso-signup)<br><br>
-2. Update `external_source_id` for existing users. <br>Punchh allows external identifiers to be added to a profile via user update endpoint where the value is unique to Punchh and is not associated with any other existing profile.<br><br>For more information on applicable Punchh APIs, visit the following API documentation: 
+2. Update `external_source_id` for existing users. <br>Punchh allows external identifiers to be added to a profile via a user API update endpoint where the value is unique to Punchh and is not associated with any other existing profile.<br><br>For more information on applicable Punchh APIs, visit the following API documentation: 
 - [Mobile User Update](https://developers.punchh.com/mobile-apis/users/mobile-update-user-profile)
 - [SSO User Update](https://developers.punchh.com/sso-online-apis/single-sign-on/sso-update-user-information)
 - [Dashboard User Update](https://developers.punchh.com/platform-functions-apis/users/dashboard-users-update)
