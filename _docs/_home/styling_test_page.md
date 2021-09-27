@@ -220,6 +220,10 @@ Linked Image: [![Braze]({{site.baseurl}}/assets/img/braze-logo-mark.png){: style
 
 ![Text]({% image_buster /assets/img/logo-braze-fa.svg %}){: style="max-width:300px; color: green" }
 
+#### Anchoring Images
+
+![Text]({% image_buster /assets/img/logo-braze-fa.svg %}){: style="align:right;max-width:300px; color: green" }
+
 {% endtab %}
 {% tab Markdown %}
 
@@ -229,6 +233,8 @@ Linked Image: [![Braze]({{site.baseurl}}/assets/img/braze-logo-mark.png){: style
 [![Braze]({{site.baseurl}}/assets/img/braze-logo-mark.png)](https://www.braze.com)
 
 ![Text]({% image_buster /assets/img/logo-braze-fa.svg %}){: style="max-width:30%; color: green" }
+
+![Text]({% image_buster /assets/img/logo-braze-fa.svg %}){: style="align:right;max-width:300px;" }
 ```
 {% endtab %}
 {% endtabs %}
