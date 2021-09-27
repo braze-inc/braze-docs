@@ -2,7 +2,7 @@
 nav_title: Punchh
 article_title: Punchh
 page_order: 5
-description: "This article outlines the partnership between Braze and Punchh. This integration enables you to..."
+description: "This article outlines the partnership between Braze and Punchh. This integration enables you to sync data across the two platforms for gifting and loyalty purposes. Data published in Braze will be available for segmentation and can sync user data back into Punchh via webhook templates setup in Braze. "
 alias: /partners/punchh/
 page_type: partner
 search_tag: Partner
@@ -13,7 +13,7 @@ search_tag: Partner
 
 > [Punchh](https://punchh.com/) is an industry-leading loyalty & engagement platform that enables brands to deliver omnichannel customer loyalty programs both in-store and digitally. 
 
-Punchh has partnered with Braze to sync data across platforms for gifting and loyalty purposes. Data published in Braze will be available for segmentation and can sync user data back into Punchh via webhook templates setup in Braze.  
+Punchh has partnered with Braze to sync data across the two platforms for gifting and loyalty purposes. Data published in Braze will be available for segmentation and can sync user data back into Punchh via webhook templates setup in Braze.  
 
 ## Requirements
 
@@ -34,15 +34,74 @@ Punchh offers several endpoints available to Braze customers to help add externa
 3. Gift Checkin
 4. Redemption
 5. Rewards
-6. Transacion Notifications
+6. Transaction Notifications
 7. Marketing Notifications
+
+{% alert note %}
+Reference Punchh documentation on what sample payloads for these available events may look like. 
+{% endalert %}
 
 ### External ID Ingestion Endpoints
 
 External IDs from Braze can be added in several different ways:
 
-1. Create new users in Punchh with the Punchh signup API under the `external_source` and `external_source_id` fields.<br>The field values must be unique within Punchh. For more information on applicable Punchh APIs, visit the [Mobile signup](https://developers.punchh.com/mobile-apis/users/mobile-sign-up) and [SSO Signup](https://developers.punchh.com/sso-online-apis/single-sign-on/sso-signup) API Punchh documentation.<br><br>
-2. Update `external_source_id` for existing users. <br>The field value must be unique with Punchh. For more information on applicable Punchh APIs, visit the [Mobile User update](https://developers.punchh.com/mobile-apis/users/mobile-update-user-profile), [SSO User Update](https://developers.punchh.com/sso-online-apis/single-sign-on/sso-update-user-information), and [Dashboard User Update](https://developers.punchh.com/platform-functions-apis/users/dashboard-users-update) API Punchh documetation.
+1. Create new users in Punchh with the Punchh signup API under the `external_source` and `external_source_id` fields.<br>Punchh allows external identifiers to be sent with a user profile via signup API. The field values must be unique to Punchh and not associated with any other existing profile. <br><br>For more information on applicable Punchh APIs, visit the following API documentation:
+- [Mobile Signup API](https://developers.punchh.com/mobile-apis/users/mobile-sign-up)
+- [SSO Signup API](https://developers.punchh.com/sso-online-apis/single-sign-on/sso-signup)<br><br>
+2. Update `external_source_id` for existing users. <br>Punchh allows external identifiers to be added to a profile via user update endpoint where the value is unique to Punchh and is not associated with any other existing profile.<br><br>For more information on applicable Punchh APIs, visit the following API documentation: 
+- [Mobile User Update](https://developers.punchh.com/mobile-apis/users/mobile-update-user-profile)
+- [SSO User Update](https://developers.punchh.com/sso-online-apis/single-sign-on/sso-update-user-information)
+- [Dashboard User Update](https://developers.punchh.com/platform-functions-apis/users/dashboard-users-update)
+<br><br>
+{% tabs %}
+{% tab User Signup API Example %}
+This example allows you to send external identifiers with the user profile at the time of signup under `external_source` as “customer_id” and `external_source_id` as “556644557788334412” value with a string data type.
+
+```json
+curl --location --request POST 'https://sandbox.punchh.com/api2/mobile/users' \
+--header 'Content-Type: application/json' \
+--header 'x-pch-digest: eac5b04cbf7362c5359a4c259cf8fc18941646bf2e11bfe46be0031ffaa1100b' \
+--header 'Accept-Timezone: Etc/UTC' \
+--header 'Accept: application/json' \
+--header 'Accept-Language: en' \
+--data-raw '{
+    "client":"1533b61caecafea4303aa1f4bad8321d6d8e7a843593e4a0e0024ae0d30b",
+    "user" : {
+      "email": "example@braze.com",
+      "password": "p@ssw0rd",
+      "first_name":"Amit",
+      "last_name":"K",
+      "terms_and_conditions":"true",
+      "anniversary":"2014-02-02",
+      "zip_code":"94497",
+      "birthday":"2004-02-02",
+      "external_source":"customer_id",
+      "external_source_id":"556644557788334412"
+      }
+}'
+```
+{% endtab %}
+{% tab User Update API Example %}
+This will allow you to update external identifiers with user profile under `external_source` as “customer_id” and `external_source_id` as “556644557788334412” value with a string data type.
+
+```json
+curl --location --request PUT 'https://sandbox.punchh.com/api2/mobile/users' \
+--header 'Content-Type: application/json' \
+--header 'Accept: application/json' \
+--header 'Accept-Language: en' \
+--header 'x-pch-digest: 953d896eebfdb5a84aacb9d1b8eaae1fa0cd710b68bcd3b2324415ac40fee99c' \
+--header 'Authorization: Bearer c90b819bf962db9882eeac6993b57c0a22816ecad0e5229b27320d63' \
+--data-raw '{
+    "client":"1533b61caecafea4303aa1f4bad8321d6d8e7a843593e4a0e0024ae0d30b",
+    "user": {
+        "external_source":"customer_id",
+        "external_source_id":"556644557788334412"
+    }
+}'
+```
+
+{% endtab %}
+{% endtabs %}
 
 {% alert note %}
 Platform Configuration: In order to enable external identifiers in Punchh, from the Punchh dashboard, navigate to __Cockpit -> Dashboard -> External User Identifier__.
@@ -50,7 +109,13 @@ Platform Configuration: In order to enable external identifiers in Punchh, from 
 
 ### Braze Adapter Setup in Punchh
 
-1. To set up the Braze and Punchh integration on the Punchh platform, navigate to __Webhooks Manager__ under the __Settings__ tab and select the __Adapters__ tab. <br><br>![Punch Platform][1]<br><br>
+To set up the Braze and Punchh integration, on the Punchh platform:
+
+1. Navigate to __Cockpit -> Dashboard -> Major Features -> Enable Webhook Management__ and toggle on __Enable Webhook Management__.<br><br>
+
+2. Enable adapters by navigatating to __Settings -> Webhooks Manager -> Configurations -> Show Adapters Tab__ and toggle on __Show Adapters Tab__.<br><br>
+
+1. Navigate to __Webhooks Manager__ under the __Settings__ tab and select the __Adapters__ tab. <br><br>![Punch Platform][1]<br><br>
 
 2. Click on __Create Adapter__.<br><br>![Punch Platform][2]<br><br>
 
