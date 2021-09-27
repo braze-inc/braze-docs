@@ -137,6 +137,6 @@ BrazeInAppMessageManager.getInstance().addInAppMessage(inAppMessage)
 [73]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/push_notifications/android/silent_push_notifications/
 [75]: {% image_buster /assets/img_archive/serverSentPush.png %}
 [76]: {% image_buster /assets/img_archive/kvpConfiguration.png %}
-[77]: {% image_buster /assets/img_archive/IAMeventTrigger.png %}
+[77]: {% image_buster /assets/img_archive/iam_event_trigger.png %}
 [78]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/push_notifications/integration/standard_integration/#custom-handling-for-push-receipts-opens-dismissals-and-key-value-pairs
 [84]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/analytics/tracking_sessions/#session-lifecycle
