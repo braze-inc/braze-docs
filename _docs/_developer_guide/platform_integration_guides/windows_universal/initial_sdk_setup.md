@@ -45,7 +45,7 @@ Once you've added that snippet, be sure to modify the following file properties 
 ## Step 3: Configuring Package.appxmanifest
 
 Within the "Capabilities tab, ensure `Internet (Client)` is checked.
-![Internet_Client][18]
+![Internet Client][18]
 
 ## Step 4: Editing your App class
 

@@ -105,7 +105,7 @@ Braze allows you to send send additional data payloads in push notifications usi
 
 Custom key-value pairs can be input by clicking the gear icon and specifying your key-value pairs below.
 
-![key-valueInput][19]
+![Key-Value Input][19]
 
 Use-cases for custom key-value pairs include but are not limited to internal metrics keeping and setting the context for the user interface; they may be used for whatever purpose you choose.
 
