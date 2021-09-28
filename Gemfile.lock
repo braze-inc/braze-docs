@@ -1,15 +1,15 @@
 GIT
   remote: https://github.com/zzhaobraze/html-extractor
-  revision: 1128ad10aef449318890a732e2f99075985ca305
+  revision: 281e2dbc80038d58b050284880b477e5470871db
   branch: master
   specs:
-    algolia_html_extractor (2.6.1b)
+    algolia_html_extractor (2.6.1c)
       json (~> 2.0)
-      nokogiri (~> 1.11.4)
+      nokogiri (~> 1.12.5)
 
 GIT
   remote: https://github.com/zzhaobraze/jekyll-algolia
-  revision: 5af8bd04396d8c44dccb2c37abedcc97fb21e21a
+  revision: 8e71ff4e6ac667600d4d0412b8db0ee350ca1fde
   branch: master
   specs:
     jekyll-algolia (1.6.0)
@@ -17,7 +17,7 @@ GIT
       filesize (~> 0.1)
       jekyll (>= 3.6, < 5.0)
       json (~> 2.0)
-      nokogiri (~> 1.11.4)
+      nokogiri (~> 1.12.5)
       progressbar (~> 1.9)
       verbal_expressions (~> 0.1.5)
 
@@ -76,7 +76,7 @@ GEM
       rb-fsevent (~> 0.10, >= 0.10.3)
       rb-inotify (~> 0.9, >= 0.9.10)
     mercenary (0.3.6)
-    mini_portile2 (2.5.3)
+    mini_portile2 (2.6.1)
     minima (2.5.1)
       jekyll (>= 3.5, < 5.0)
       jekyll-feed (~> 0.9)
@@ -84,8 +84,8 @@ GEM
     mustermann (1.1.1)
       ruby2_keywords (~> 0.0.1)
     nio4r (2.5.7)
-    nokogiri (1.11.7)
-      mini_portile2 (~> 2.5.0)
+    nokogiri (1.12.5)
+      mini_portile2 (~> 2.6.1)
       racc (~> 1.4)
     pathutil (0.16.2)
       forwardable-extended (~> 2.6)

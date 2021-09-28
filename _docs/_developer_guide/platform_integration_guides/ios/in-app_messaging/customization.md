@@ -484,11 +484,11 @@ When the silent push is received an SDK recorded event "In-App Message Trigger" 
 
 Create a silent push campaign which is triggered via the server sent event. For details on how to create a silent push campaign, refer to our article on [silent push notifications][39].
 
-![serverEventTrigger][40]
+![Server Event Trigger][40]
 
 The push campaign must include key-value pair extras which indicate that this push campaign is sent with the intention to log an SDK custom event. This event will be used to trigger the in-app message:
 
-![IAMSilentPush][41]
+![IAM Silent Push][41]
 
 The code within the `application(_:didReceiveRemoteNotification:fetchCompletionHandler:)` method checks for key `IS_SERVER_EVENT` and will log an SDK custom event if this is present.
 
@@ -500,7 +500,7 @@ Create your user visible in-app message campaign from within Braze’s dashboard
 
 In the example below the specific in-app message to be trigger has been configured by sending the event property as part of the initial silent push.
 
-![IAMPushTrigger][42]
+![IAM Push Trigger Example][42]
 
 >  Due to a push message being used to record an SDK logged custom event, Braze will need to store a push token for each user to enable this solution. For iOS users, Braze will only store a token from the point that a user has been served the OS's push prompt. Before this, the user will not be reachable using push and the above solution will not be possible.
 

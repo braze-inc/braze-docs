@@ -23,8 +23,6 @@ Formulas can be accessed in the "Detailed Statistics" panels on the [Overview][9
 
 To create a new formula, navigate to the appropriate dashboard (Overview, Revenue, or Custom Events) and click **Manage Formulas** in the detailed statistics section. From there, enter a name for your formula and select the relevant numerators and denominators. Save your formula.
 
-![create formula][15]
-
 ## Available Numerators and Denominators
 
 ### App Usage Dashboard
@@ -71,6 +69,5 @@ Formulas, especially when combined with custom events, allow you to better under
 [9]: {{site.baseurl}}/user_guide/data_and_analytics/your_reports/understanding_your_app_usage_data/
 [10]: {{site.baseurl}}/user_guide/data_and_analytics/export_braze_data/exporting_revenue_data/
 [11]: {{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events/
-[15]: {% image_buster /assets/img_archive/kpi_formulas.gif %}
 [16]: {% image_buster /assets/img_archive/kpi_forms.png %}
 [17]: {{site.baseurl}}/user_guide/data_and_analytics/your_reports/viewing_and_understanding_segment_data/#viewing-and-understanding-segment-data

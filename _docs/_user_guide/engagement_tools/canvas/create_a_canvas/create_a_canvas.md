@@ -12,7 +12,8 @@ tool: Canvas
 
 Follow this guide, or check out our [LAB course](http://lab.braze.com/quick-overview-canvas-setup)!
 
-## Step 1: Create a New Canvas ![Canvas][1]{: style="float:right;max-width:20%;margin-left:10px;margin-top:10px;margin-bottom:10px;"}
+## Step 1: Create a New Canvas 
+![Canvas][1]{: style="float:right;max-width:20%;margin-left:10px;margin-top:10px;margin-bottom:10px;"}
 
 Go to the **Canvas** page, located under the **Engagement** section, then click __Create a New Canvas__.
 
@@ -155,8 +156,7 @@ Visit your [Global Message Settings](https://dashboard-01.braze.com/engagement/g
 
 If desired, specify Quiet Hours (the time during which your messages will not send) for your Canvas. Check **Enable Quiet Hours** in your __Send Settings__. Then, select your Quiet Hours in your user's local time and what action will follow if the message triggers inside of those Quiet Hours.
 
-![quiethours][50]
-
+![Quiet Hours][50]
 
 ## Step 3: Build Your Canvas
 
@@ -295,11 +295,6 @@ Once you've launched your Canvas, you'll be able to view analytics for your jour
 [18b]: {% image_buster /assets/img_archive/canvas_intelligent_selection.png %}
 [19]:{% image_buster /assets/img_archive/Canvas_Analytics.png %}
 [20]:{% image_buster /assets/img_archive/Canvas_Advancement_Behavior.png %}
-[21]:{% image_buster /assets/img_archive/Journey_2.png %}
-[24]:{% image_buster /assets/img_archive/Journey_5.png %}
-[25]:{% image_buster /assets/img_archive/Journey_6.png %}
-[28]:{% image_buster /assets/img_archive/Journey_9.png %}
-[29]:{% image_buster /assets/img_archive/Journey_10.png %}
 [50]: {% image_buster /assets/img/quiet_hours.png %}
 [51]: {% image_buster /assets/img/Basics1.gif %}
 [52]: {% image_buster /assets/img/Conversions-canvas-1.gif %}

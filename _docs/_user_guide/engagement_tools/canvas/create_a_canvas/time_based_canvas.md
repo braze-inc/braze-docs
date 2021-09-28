@@ -29,7 +29,7 @@ description: "This reference article covers definitions, time zones, and example
 | Send message after a delay. You can specify a delay in seconds, minutes, hours, days, or weeks.  | N/A |
 {: .reset-td-br-1 .reset-td-br-2}
 
-![Send after x days][2]
+![Send after X days][2]
 
 ### Send on the next [day of the week] at X time
 
@@ -59,7 +59,7 @@ Canvas calculates the delay as `day of the week` + `calendar days`, then adds th
 | Braze calculates the optimal send time based on a statistical analysis of your user’s past interactions with your messaging (on a per channel basis) and app. [Learn more]({{site.baseurl}}/user_guide/intelligence/intelligent_timing/). | If you select **a specific time** as your [fallback]({{site.baseurl}}/user_guide/intelligence/intelligent_timing/#fallback-options), this will be sent in the user's local time. |
 {: .reset-td-br-1 .reset-td-br-2}
 
-![Intelligent Timing][5]
+![Intelligent timing][5]
 
 ## Global Frequency Capping
 

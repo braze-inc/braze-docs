@@ -58,7 +58,7 @@ Each alias consists of two parts: a label, which defines the key of the alias, a
 
 Unlike an `external_id`, an alias can be updated with a new name for a given label once set. You can do so either via the [New User Alias Endpoint][32], or if you pass a new name via the SDK. The user alias will then be visible when exporting that user's data.
 
-![Alias_Label_Diagram][29]
+![Alias Label Diagram][29]
 
 User aliases also allow you to tag anonymous users with an identifier. These users can then be exported using their aliases, or referenced by the API.
 
@@ -68,7 +68,7 @@ A user alias can also be set on a known user profile to reference a known user b
 
 For information on how to set a user alias please see our documentation for each platform ([iOS][1], [Android][2], [Web][3]).
 
-![User_Profile_Lifecycle][26]
+![User Profile Lifecycle][26]
 
 ## Advanced Use Case Information
 
@@ -83,7 +83,7 @@ Uninstalling and reinstalling an app will cause a new anonymous user ID to be ge
 Aside from acting as a mechanism to organize user data and reference user profiles, all `braze_id`'s can be used to find and identify users within your dashboard for testing. To find your user in the Braze dashboard please see our [Adding Test Users][28] section.
 
 {% alert important %}
-Braze will ban or block users ("dummy users") with over 5 million sessions and no longer ingest their SDK events because they are usually the result of misintegration. If you find that this has happened for a legitimate user, please reach out to your Braze account manager.
+Braze will ban or block users ("dummy users") with over 5 million sessions and no longer ingest their SDK events because they are usually the result of misintegration. If you find that this has happened to a legitimate user, please reach out to your Braze account manager.
 {% endalert %}
 
 [1]: {{site.baseurl}}/developer_guide/platform_integration_guides/ios/analytics/setting_user_ids/#aliasing-users

@@ -74,23 +74,27 @@ Add a step in your Canvas, select the dropdown at the top of the step, and selec
 
 Click on the __Custom Audience__ button to open the step editor.
 
-Select the desired Facebook ad account. Then you will have to option to __Sync with an Existing Audience__ or __Create a New Audience__.
+Select the desired Facebook ad account. Under the __Choose a New or Existing Audience__ dropdown, type in the name of a new or existing audience. 
 
 {% tabs %}
 {% tab Create a New Audience %}
 __Create a New Audience__<br>
-Select the option to __Create a New Audience__ and enter a name for the new custom audience. You will also be able to select which fields you would like to sync with Facebook. 
+Enter a name for the new custom audience, select __Add Users to Audience__ and select which fields you would like to sync with Facebook. Next, save your audience by clicking the __Create Audience__ button at the bottom of the step editor.
 
-![Google Sync]({% image_buster /assets/img/fb_audience_sync/google_sync7.png %})
+![Facebook Sync]({% image_buster /assets/img/fb_audience_sync/google_sync7.png %})
 
-When you launch a Canvas with __Create a New Audience__ selected, Braze will create the new custom audience upon launching the Canvas and subsequently sync users in near real-time as they enter the Facebook Audience Step. 
+Users will be notified at the top of the step editor if the audience is created successfully or if errors arise during this process. Users can also reference this audience for user removal later in the Canvas journey because the audience was created in draft mode. 
+
+![Facebook Sync]({% image_buster /assets/img/fb_audience_sync/google_sync11.png %})
+
+When you launch a Canvas with a new audience, Braze will create the new custom audience upon launching the Canvas and subsequently sync users in near real-time as they enter the Facebook Audience Step. 
 
 {% endtab %}
 {% tab Sync with an Existing Audience %}
 __Sync with an Existing Audience__<br>
-Braze also offers the ability to either add or remove users from existing Facebook custom audiences to ensure that these audiences are up-to-date. To sync with an existing audience, select an existing custom audience to sync to and then choose whether you want to __Add to the audience__ or __Remove from the audience__. Braze will then either add or remove users in near real-time as they enter the Facebook Audience Step. 
+Braze also offers the ability to either add or remove users from existing Facebook custom audiences to ensure that these audiences are up-to-date. To sync with an existing audience, type the existing audience name in the dropdown and choose whether you want to __Add to the Audience__ or __Remove from the Audience__. Braze will then either add or remove users in near real-time as they enter the Facebook Audience Step. 
 
-![Google Sync]({% image_buster /assets/img/fb_audience_sync/google_sync8.png %})
+![Facebook Sync]({% image_buster /assets/img/fb_audience_sync/google_sync8.png %})
 
 It's important to note that Facebook prohibits removing users from custom audiences where the audience sizes are too low (typically fewer than 1,000). As a result, Braze will be unable to sync users for a Remove from Audience step until the audience reaches the appropriate audience size.
 
@@ -108,9 +112,7 @@ The __History__ tab of the custom audience in the Facebook Audience Manager will
 ## User Syncing & Rate Limit Considerations 
 As users reach the Audience Sync Step, Braze will sync these users in near real-time while also respecting Facebook's Marketing API rate limits. What this means in practice is that Braze will try to batch and process as many users every 5 seconds before sending these users to Facebook. 
 
-Facebook's Marketing API rate limit states no more than &#126;190k API requests for each ad account in a 1 hour time period. If a Braze customer reaches this rate limit, Braze the Canvas will retry the sync for up to &#126;13 hours. If the sync is not possible at that point, these users are listed under the Users Errored metric.
-
-Given these processing and rate-limiting considerations, Braze recommends no more than __10-15 million users synced per day__ to ensure that Braze can successfully process and sync users with Facebook. If you have an audience larger than 10-15 million users, you can sync this custom audience at a lower frequency (ex: once per week). 
+Facebook's Marketing API rate limit states no more than &#126;190k API requests for each ad account in a 1 hour time period. If a Braze customer reaches this rate limit, Braze the Canvas will retry the sync for up to &#126;13 hours. If the sync is not possible, these users are listed under the Users Errored metric.
 
 ## Understanding Analytics
 
@@ -131,7 +133,7 @@ __Users Errored__: Number of users who were not synced to Facebook due to an API
 __Exited Canvas__: Number of users who have exited the Canvas. This occurs when the last step in a Canvas is a Facebook step.
 
 {% alert important %}
-Keep in mind that there will be a delay in reporting for users synced and users errored metrics due to the bulk flusher and the 13-hour retry, respectively.
+Remember that there will be a delay in reporting for users synced and users errored metrics due to the bulk flusher and the 13-hour retry, respectively.
 {% endalert %}   
 
 ## Troubleshooting
@@ -166,3 +168,4 @@ At this time, value-based custom audiences are not supported by Braze. If you ar
 [16]: {% image_buster /assets/img/fb_audience_sync/FB2.jpg %}
 [20]: {% image_buster /assets/img/fb_audience_sync/FB6.png %}
 [39]: {% image_buster /assets/img/fb_audience_sync/google_sync9.png %}
+[40]: {% image_buster /assets/img/fb_audience_sync/google_sync10.png %}

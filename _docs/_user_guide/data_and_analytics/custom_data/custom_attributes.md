@@ -137,7 +137,7 @@ Time filters using relative dates (e.g., more than 1 day ago, less than 2 days a
 For example, to build a segment that targets users with a time attribute between 24 and 48 hours in the future, apply the filters `in more than 1 day in the future` and `in less than 2 days in the future`.
 
 {% alert warning %}
-The last date a custom event or purchase event occurred is automatically recorded, and shouldn't be recorded again via a custom time attribute.
+The last date a custom event or purchase event occurred is automatically recorded and shouldn't be recorded again via a custom time attribute.
 {% endalert %}
 
 | Segmentation Options | Dropdown Filter | Input Options |

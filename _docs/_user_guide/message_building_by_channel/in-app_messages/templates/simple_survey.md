@@ -16,11 +16,11 @@ Use the new **Simple Survey** In-App Message template to collect user attributes
 
 For example, ask users how they'd like to use your app, learn more about their personal preferences, or even ask about their satisfaction with a particular feature.
 
-![examples]({% image_buster /assets/img/iam/iam-survey.png %})
+![Simple Survey examples]({% image_buster /assets/img/iam/iam-survey.png %})
 
 ## SDK Requirements {#supported-sdk-versions}
 
-This in-app message will only be delivered to devices that support [Flex CSS](https://caniuse.com/?search=flex), and must have at least the [SDK versions]({{ site.baseurl }}/user_guide/engagement_tools/campaigns/ideas_and_strategies/new_features/#filtering-by-most-recent-app-versions) below:
+This in-app message will only be delivered to devices that support [Flex CSS](https://caniuse.com/?search=flex), and must have at least the [SDK versions]({{site.baseurl}}/user_guide/engagement_tools/campaigns/ideas_and_strategies/new_features/#filtering-by-most-recent-app-versions) below:
 
 {% sdk_min_versions web:2.5.0 android:8.0.0 ios:3.23.0 %}
 
@@ -38,7 +38,9 @@ To get started building your survey, add your question to the survey **Header** 
 
 ![Simple Survey Question]({% image_buster /assets/img/iam/iam-survey2.png %})
 
-{% alert tip %} These fields can include both Liquid and emojis, so get fancy! {% endalert %}
+{% alert tip %} 
+These fields can include both Liquid and emojis, so get fancy! 
+{% endalert %}
 
 ### Step 2: Choose Between Single or Multiple-choice {#single-multiple-choice}
 
@@ -46,7 +48,9 @@ Use the Single vs. Multiple Choice option to control whether a user can select o
 
 ![Single Multiple Choice]({% image_buster /assets/img/iam/single-multiple-choice.png %}){: style="max-width:70%"}
 
-{% alert tip %} Your **Helper text** will automatically update when you switch between **Single-choice selection** and **Multiple-choice selection** to let users know how many choices they can select. {% endalert %}
+{% alert tip %} 
+Your **Helper text** will automatically update when you switch between **Single-choice selection** and **Multiple-choice selection** to let users know how many choices they can select. 
+{% endalert %}
 
 ### Step 3: Collect Custom Attributes {#custom-attributes}
 
@@ -54,15 +58,17 @@ Select **Log attributes upon submission** to collect attributes based on the use
 
 ![Custom Attributes]({% image_buster /assets/img/iam/collect-attributes.png %}){: style="max-width:70%"}
 
-To add a custom attribute to each choice, select a custom attribute name from the dropdown (or create a new one), and then enter the value to set when this choice is submitted. You can create a new custom attribute in your [Settings Page][5].
+To add a custom attribute to each choice, select a custom attribute name from the dropdown menu (or create a new one), and then enter the value to set when this choice is submitted. You can create a new custom attribute in your [Settings Page][5].
 
-For example, in a notification preferences survey, you might make each choice a boolean (true/false) attribute to allow users to select which topics they're interested in. If a user checks the "Promotions" choice, that will update their [User Profile][3] with the custom attribute `Promotions Topic` set to `true`. If they leave the choice unchecked, that same attribute will remain unchanged.
+For example, in a notification preferences survey, you might make each choice a boolean (true/false) attribute to allow users to select which topics they're interested in. If a user checks the "Promotions" choice, that will update their [user profile][3] with the custom attribute `Promotions Topic` set to `true`. If they leave the choice unchecked, that same attribute will remain unchanged.
 
 ![Choice Custom Attributes]({% image_buster /assets/img/iam/iam-survey3.png %}){: style="max-width:70%"}
 
 You can then create a segment for users with `Promotions Topic = true` to make sure that only users interested in your promotions will receive the relevant campaigns.
 
-{% alert important %} When custom attribute collection is enabled, choices that share the same custom attribute name will be combined into an array.{% endalert %}
+{% alert important %} 
+When custom attribute collection is enabled, choices that share the same custom attribute name will be combined into an array.
+{% endalert %}
 
 ### Step 4: Choose Submission Behavior
 
@@ -91,7 +97,7 @@ You can customize the font color and accent color of the message using the **Col
 Once your campaign has launched, you can analyze results in real-time to see the breakdown of each selected choice. If you've enabled [custom attribute collection](#custom-attributes), you'll also be able to create new segments or follow-up campaigns for users who have submitted the survey.
 
 {% alert note %}
-Deleted survey choices will still appear in analytics, but will not be shown as a choice to new users.
+Deleted survey choices will still appear in analytics but will not be shown as a choice to new users.
 {% endalert %}
 
 For definitions of survey metrics, refer to the [Report Metrics Glossary][11] and filter by "In-App Message".
@@ -130,9 +136,9 @@ For example, if the user selects "Upgrading my account", that will set `product_
 
 **Goal:** Understand why customers aren’t upgrading or purchasing.
 
-Here we're using single-choice selection, with each choice being a common reason why a user might not upgrade to a Premium account. Each choice has the custom attribute `upgrade_reason` set to the user's selection. 
+Here we're using single-choice selection, with each choice being a common reason why a user might not upgrade to a premium account. Each choice has the custom attribute `upgrade_reason` set to the user's selection. 
 
-For example, if the user selects "Too Expensive", that will set `upgrade_reason = expensive` on the user's profile. You can then target these users for promotional campaigns, like discounts or free trials.
+For example, if the user selects "Too Expensive", that will set `upgrade_reason = expensive` on the user's profile. You can target these users for promotional campaigns like discounts or free trials.
 
 ![Improve Conversion Rates][9]
 
@@ -140,7 +146,7 @@ For example, if the user selects "Too Expensive", that will set `upgrade_reason 
 
 **Goal:** Understand which features customers enjoy using.
 
-Here we're using multiple-choice selection, with each choice being an app feature. Each choice has the custom attribute `favorite_features` set to the user's selection. Because this use case involves multiple choice, once the user has completed the survey, their profile will be updated with the `favorite_features` attribute set to an array of all selected options.
+Here we're using multiple-choice selection with each choice being an app feature. Each choice has the custom attribute `favorite_features` set to the user's selection. Because this use case involves multiple choice, once the user has completed the survey, their profile will be updated with the `favorite_features` attribute set to an array of all selected options.
 
 ![Favorite Features][10]
 

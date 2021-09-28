@@ -21,7 +21,7 @@ To see examples of email campaigns, check out our [Case Studies][9].
 ## Step 1: Create a New Campaign
 
 On the **Campaigns** page, click **Create Campaign** and select **Email** as your messaging channel.
-![newcampaign][19]
+![New Campaign Page][19]
 
 ## Step 2: Select Your Editing Experience {#step-2-choose-your-template-and-compose-your-email}
 

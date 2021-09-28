@@ -11,7 +11,7 @@ description: "This reference article covers managing app groups in your Braze Da
 
 You can manage, segment, and communicate with multiple applications simultaneously all from the **Manage Settings** page in the Braze Dashboard.
 
-![manageappgroupnavigation1.png][69]
+![Manage App Group Call Out][69]
 
 App groups are designed to house versions of the same application across multiple platforms. Many clients also use app groups to contain free and premium versions of their application on the same platform.
 

@@ -393,7 +393,7 @@ A high percentage of emails are read on mobile devices. Utilizing deep linking i
 - Updating users on new features is also a re-engagement tool because it reminds lapsing users of your app's value.
 - If your feature requires an explanation or demo, include a link in the message. Here's an example by Allrecipes.com:
 
-![Allrecipes_email][31]{: style="max-width:70%;"}
+![Allrecipes email][31]{: style="max-width:70%;"}
 
 
 [25]: {{site.baseurl}}/help/best_practices/user_onboarding/#user-onboarding
