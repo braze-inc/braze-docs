@@ -48,7 +48,7 @@ The AMP Web Push component works by creating a popup that handles the push subsc
 
 Create a `service-worker.js` file with the content below, and place it in the root directory of your website.
 
-The code for our service work to include can be found in our [Github Repo](https://github.com/Appboy/appboy-web-sdk/blob/master/sample-build/service-worker.js).
+The code to include our service worker can be found in our [Github Repo](https://github.com/Appboy/appboy-web-sdk/blob/master/sample-build/service-worker.js).
 
 ## Step 5: Configure AMP Web Push HTML Element
 
