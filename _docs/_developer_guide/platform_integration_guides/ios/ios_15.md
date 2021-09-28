@@ -11,7 +11,7 @@ description: "This reference article covers the new iOS 15 OS updates, required 
 
 This guide outlines changes introduced in iOS 15 (WWDC21) and the required upgrade steps for your Braze iOS SDK integration.
 
-> For a complete list of new iOS 15 updates, see Apple's [iOS 15 Release Notes](https://developer.apple.com/documentation/ios-ipados-release-notes/ios-ipados-15-beta-release-notes).
+> For a complete list of new iOS 15 updates, see Apple's [iOS 15 Release Notes](https://developer.apple.com/documentation/ios-ipados-release-notes/ios-ipados-15-release-notes).
 
 
 ## Transparency Changes to UI Navigations
