@@ -19,15 +19,17 @@ channel:
 
 If you want to categorize your messages and group them in your user's notification tray, you can utilize iOS's Notification Groups feature through Braze.
 
-Create your iOS push campaign, then look to the top of the composer. There, you'll see a dropdown labeled **Notification Groups**.
+Create your iOS push campaign, then look to the top of the **Compose** tab for the **Notification Groups** dropdown.
 
-![notificationgroupsdropdown][26]
+![notificationgroupsdropdown][26]{: style="max-width:60%;" }
 
-From there, you can select any Notification Groups. If your notification group settings malfunction or you select __None__ from the dropdown, the message will automatically send as normal to all defined users in the app group.
+Select your Notification Groups from the dropdown. If your notification group settings malfunction or you select __None__ from the dropdown, the message will automatically send as normal to all defined users in the app group.
 
 If you don't have any Notification Groups listed here, you can add one using the iOS Thread ID. You will need one iOS Thread ID for every Notification Group you want to add. Then, add it to your Notification Groups by clicking __Manage Notification Groups__ in the dropdown and filling out the required fields in the __Manage iOS Push Notification Groups__ window that appears.
 
 ![Manage Notification Groups][27]
+
+Create your iOS push campaign, then look to the top of the composer. There, you'll see a dropdown labeled **Notification Groups**.
 
 ### Summary Arguments
 
@@ -170,7 +172,7 @@ To set an iOS Notification's Relevance Score, enter a value between `0.0` and `1
 
 ![Relevance Score Option][29]
 
-[26]: {% image_buster /assets/img_archive/notgroupclickdropdown.gif %}
+[26]: {% image_buster /assets/img_archive/notification_group_dropdown.png %}
 [27]: {% image_buster /assets/img_archive/managenotgroups.png %}
 [28]: {% image_buster /assets/img/ios/interruption-level.png %}
 [29]: {% image_buster /assets/img/ios/relevance-score.png %}

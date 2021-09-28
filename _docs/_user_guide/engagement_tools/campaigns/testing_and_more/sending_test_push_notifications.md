@@ -103,7 +103,7 @@ If you are using [personalization][26] in your message, you'll need to take some
 
 When sending a test message, make sure to choose either the option to "Select Existing User" or preview as a "Custom User".
 
-![Testing a personalized message][23]
+![Testing a personalized message][23]{: style="max-width:70%;" }
 
 If selecting a user, you'll be able to enter the user ID or email of a specific app user into a search field. Then you'll be able to use the dashboard preview to see how that user's message would appear and send a test message to your device that reflects that that user would see.
 
