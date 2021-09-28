@@ -1,11 +1,11 @@
 ---
 nav_title: Why is my control group so large?
+article_title: Handling a Large Control Group
 page_order: 3
 
 page_type: solution
 description: "This help article describes why your control group might be larger than expected, and walks you through steps to fix this."
 tool: Canvas
-noindex: true
 ---
 
 # Why Is My Control Group So Large?

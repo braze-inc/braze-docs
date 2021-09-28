@@ -1,11 +1,11 @@
 ---
-nav_title: Segmentation Logic with Negative OR Filters
+nav_title: Using Segmentation Logic with Negative OR Filters
+article_title: Using Segmentation Logic with Negative OR Filters
 page_order: 2
 
 page_type: solution
 description: "This article walks you through best practices on when to use or not use the OR operator, and when to use the AND operator."
 tool: Segments
-noindex: true
 ---
 
 # Segmentation Logic with Negative OR Filters

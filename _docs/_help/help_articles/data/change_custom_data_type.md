@@ -1,10 +1,10 @@
 ---
-nav_title: Change Custom Attribute or Event Data Type
+nav_title: Changing Custom Attribute or Event Data Type
+article_title: Changing Custom Attribute or Event Data Type
 page_order: 0
 
 page_type: solution
 description: "This help article walks you through how to change the data type of a custom attribute or custom event, and the implications of doing so."
-noindex: true
 ---
 
 # Changing the Data Type of a Custom Attribute or Event

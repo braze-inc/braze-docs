@@ -1,10 +1,10 @@
 ---
-nav_title: Contribute to Braze Docs
+nav_title: Contributing to Braze Docs
+article_title: Contributing to Braze Docs
 page_order: 0
 
 page_type: reference
 description: "This page covers how you can contribute to Braze's open source documentation."
-noindex: true
 ---
 
 # How Can I Contribute to Braze Docs?

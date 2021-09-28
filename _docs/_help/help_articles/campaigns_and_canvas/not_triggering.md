@@ -1,5 +1,6 @@
 ---
 nav_title: Why is my Campaign/Canvas Not Triggering?
+article_title: Resolving Untriggered Campaign or Canvas
 page_order: 4
 
 page_type: solution
@@ -7,7 +8,6 @@ description: "This help article walks you through steps to resolve issues with c
 tool: 
 - Campaigns
 - Canvas
-noindex: true
 ---
 
 # Why Is My Campaign/Canvas Not Triggering?
