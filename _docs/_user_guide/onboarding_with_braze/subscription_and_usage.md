@@ -31,21 +31,9 @@ Try dragging your mouse over the different color components for a data point cou
 
 Contract details list the start and end date of your current contract with Braze.
 
-## Most Used Data Points by App
-
-The Most Used Data Points by App tab is a further breakdown of the information provided in the usage graphs. Here, you can set a time frame in the upper right to display the top 10 most heavily used data points per app group/source. Some customers may have the option to override this value, showing up to 200 of the most used data points. Within these app group breakdowns, include the data point name, the count, the percentage, as well as **Profile Attribute Collected** and **Custom Attribute Collected** data points groupings. Users are able to export and save this data as CSV by clicking **Download All Data**. 
-
-![Subscription and Usage][4]{: style="max-width:90%;"}
-
-{% alert important %}
-Please note that custom attributes, events, and in-app purchases are italicized.
-{% endalert%}
-
-Data breakdowns like these help customers understand what specific data points are taking up large percentages of your allotment. We recommend customers monitor this information from time to time to make sure they aren't accidentally spending data points in accidental and unnecessary ways. 
-
 ## Total Data Points Dashboard
 
-Your Total Data Points Dashboard can be found under the __Total Data Points Dashboard__ tab. Here, you can view all data in this section aggregated by either weeks or months. Click ‘Run’ to apply any changes.
+Your Total Data Points Dashboard can be found under the __Total Data Points Dashboard__ tab. You can view all data in this section aggregated by either weeks or months. Click **Run** to apply any changes.
 
 ![Subscription and Usage][2]{: style="max-width:80%;"}
 
@@ -60,6 +48,19 @@ Depending on whether you chose a time frame of weeks or months, your data here w
 ### Data Point Usage Over Time
 
 You can use this section to monitor how your data point usage is trending over time, and how close you are to hitting your contract’s allotment. One trend line shows your consumption, and the other shows your contract allotment.
+
+## Most Used Events and Attributes By App
+
+The Most Used Events and Attributes By App tab is a further breakdown of the information provided in the usage graphs. Here, you can set a time frame in the upper right to display the top 10 most heavily used data points per app group/source. Some customers may have the option to override this value, showing up to 200 of the most used data points. Within these app group breakdowns, include the data point name, the count, the percentage, as well as **Profile Attribute Collected** and **Custom Attribute Collected** data points groupings. Users are able to export and save this data as CSV by clicking **Download All Data**. 
+
+![Subscription and Usage][4]{: style="max-width:90%;"}
+
+{% alert important %}
+Please note that custom attributes, events, and in-app purchases are italicized.
+{% endalert%}
+
+Data breakdowns like these help customers understand what specific data points are taking up large percentages of your allotment. We recommend customers monitor this information from time to time to make sure they aren't accidentally spending data points in accidental and unnecessary ways. 
+
 
 [2]: {% image_buster /assets/img/subscription_and_billing2.png %}
 [3]: {% image_buster /assets/img/subscription_and_billing3.png %}
