@@ -1,5 +1,6 @@
 ---
 nav_title: Common Error Messages
+article_title: Common Error Messages
 page_order: 0
 
 page_type: solution
@@ -8,7 +9,6 @@ channel: push
 platform:
 - iOS
 - Android
-noindex: true
 ---
 
 # Common Push Related Error Messages

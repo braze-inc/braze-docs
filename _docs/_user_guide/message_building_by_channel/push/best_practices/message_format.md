@@ -43,7 +43,7 @@ channel: push
 {% endtab %}
 {% tab Text Example %}
 
-![iOS Push]({% image_buster /assets/img_archive/iOS_push_notification_small.png %})
+![Small iOS Push Notification]({% image_buster /assets/img_archive/iOS_push_notification_small.png %})
 
 {% endtab %}
 {% tab Image Example %}

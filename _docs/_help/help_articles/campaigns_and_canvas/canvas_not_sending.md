@@ -1,11 +1,11 @@
 ---
 nav_title: Why isn’t my Canvas sending?
+article_title: Troubleshooting Canvas Delivery
 page_order: 0
 
 page_type: solution
 description: "This help article walks you through troubleshooting delivery issues with your Canvas."
 tool: Canvas
-noindex: true
 ---
 
 # My Canvas Isn't Sending

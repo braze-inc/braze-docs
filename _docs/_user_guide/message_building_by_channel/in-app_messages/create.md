@@ -205,10 +205,12 @@ Build the remainder of your campaign or Canvas, see the sections below for furth
 ### Triggering
 
 {% alert important %}
-Please note that if you intend to trigger your in-app message based off a custom event, that custom event __must be sent via the SDK__.
+Please note that if you intend to trigger your in-app message based off a custom event, that custom event must be sent via the SDK.
 {% endalert %}
 
-![Schedule]({% image_buster /assets/img_archive/in-app-schedule.png %}){: style="max-width:70%"}
+Select the action you'd like to trigger your message off of, as well as the start and end times for your campaign or Canvas.
+
+![Schedule]({% image_buster /assets/img_archive/in_app_schedule.png %}){: style="max-width:80%"}
 
 In-app message delivery is entirely based off of of the following action triggers:
 - Making a purchase

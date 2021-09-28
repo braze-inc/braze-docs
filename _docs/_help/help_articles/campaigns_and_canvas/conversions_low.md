@@ -1,5 +1,6 @@
 ---
-nav_title: Why are my conversions low?
+nav_title: Experiencing Low Conversions
+article_title: Experiencing Low Conversions
 page_order: 1
 
 page_type: solution
@@ -7,7 +8,6 @@ description: "This help article walks you through troubleshooting campaigns or C
 tool:
 - Canvas
 - Campaigns
-noindex: true
 ---
 
 # Why Are My Conversions Low?
@@ -24,7 +24,7 @@ To quickly troubleshoot why that is, we recommend that you:
 
 When a campaign triggers a session start or custom event, you want to ensure that this event, or session is happening frequently enough to trigger the message. Check this data on the [Overview][1] (for session data) or [Custom Events][2] pages:
 
-![trouble17][43]
+![Custom Event Counts Statistic][43]
 
 ## Verify the Deadline to Convert
 

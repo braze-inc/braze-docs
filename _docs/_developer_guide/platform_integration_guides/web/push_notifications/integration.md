@@ -48,7 +48,8 @@ While industry best practice is to make your whole site secure, customers who ca
 
 - Otherwise, if your site already registers a Service Worker, add the content below to the Service Worker file, and set the [```manageServiceWorkerExternally``` initialization option to ```true```](https://js.appboycdn.com/web-sdk/latest/doc/module-appboy.html#.initialize) when initializing the Web SDK.
 
-<script src="https://gist-it.appspot.com/https://github.com/Appboy/appboy-web-sdk/blob/master/sample-build/service-worker.js?footer=minimal"></script>
+The code to include our service worker can be found in our [Github Repo](https://github.com/Appboy/appboy-web-sdk/blob/master/sample-build/service-worker.js).
+
 
 {% alert important %}
 Your web server must return a `Content-Type: application/javascript` when serving your Service Worker file. 

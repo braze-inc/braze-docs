@@ -1,11 +1,11 @@
 ---
 nav_title: Using Segmentation Logic with And/Or
+article_title: Using Segmentation Logic with And/Or
 page_order: 1
 
 page_type: solution
 description: "This article walks you through the difference between AND and OR operators, and how you can use them to build powerful segments."
 tool: Segments
-noindex: true
 ---
 
 # Using Segmentation Logic With And/Or
@@ -20,7 +20,7 @@ The **AND** and **OR** operators enable some very powerful filtering. There are 
 
 Use **AND** if you are interested in the intersection of two groups. This is, what is similar between the two groups. For example let’s compare two animals. What dogs **AND** cats both have in common is fur, are mammals, and are human pets:
 
-![trouble10][30]
+![Venn Diagram Definition][30]
 
 ### OR
 
@@ -38,9 +38,9 @@ For example, imagine that you want to send a message to all your users __except_
 
 Finally, look at the example below where we are using both the **AND** and **OR**. The target audience here are users who purchased Nike Sneakers **OR** Adidas sneakers **AND** are opted in to receive email notifications.
 
-![trouble13][33]
+![Sneaker Shoppers Example][33]
 
-![trouble14][34]
+![Venn Diagram Example][34]
 
 Another way to ensure you’re building the right logic is to create your segment and [preview the users][35] who are falling into it based on your filters. This way you can make sure that their attributes, app version, or any other segmentation matches what you are seeing.
 

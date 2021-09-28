@@ -80,7 +80,7 @@ These are what it looks like for your users to open one of our out-of-the-box in
 
 The following example shows a paginated HTML Full in-app message:
 
-![HTML5 Example]({% image_buster /assets/img_archive/ios-html-full-iam.gif %})
+![HTML5 IAM Example]({% image_buster /assets/img_archive/ios-html-full-iam.gif %})
 
 > Full in-app message content is displayed in a WKWebView and may optionally contain other rich content, such as images and fonts, allowing for full control over message appearance and functionality. **Please note that we currently do not support display of custom HTML in-app messages in an iFrame on the iOS and Android platforms.**
 

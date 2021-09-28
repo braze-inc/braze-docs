@@ -67,7 +67,7 @@ Create a silent push campaign that is triggered via the server sent event. For d
 
 The push campaign must include key-value pair extras which indicate that this push campaign is sent with the intention to log an SDK custom event. This event will be used to trigger the in-app message.
 
-![kvpConfiguration][76]
+![kvpConfiguration][76]{: style="max-width:70%;" }
 
 The [EventBroadcastReceiver.java][72] recognizes the key-value pairs and logs the appropriate SDK custom event.
 
@@ -137,6 +137,6 @@ BrazeInAppMessageManager.getInstance().addInAppMessage(inAppMessage)
 [73]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/push_notifications/android/silent_push_notifications/
 [75]: {% image_buster /assets/img_archive/serverSentPush.png %}
 [76]: {% image_buster /assets/img_archive/kvpConfiguration.png %}
-[77]: {% image_buster /assets/img_archive/IAMeventTrigger.png %}
+[77]: {% image_buster /assets/img_archive/iam_event_trigger.png %}
 [78]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/push_notifications/integration/standard_integration/#custom-handling-for-push-receipts-opens-dismissals-and-key-value-pairs
 [84]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/analytics/tracking_sessions/#session-lifecycle

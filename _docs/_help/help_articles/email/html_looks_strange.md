@@ -1,11 +1,11 @@
 ---
-nav_title: The HTML Looks Strange
+nav_title: Troubleshooting HTML Rendering in Test Emails
+article_title: Troubleshooting HTML Rendering in Test Emails
 page_order: 0
 
 page_type: solution
 description: "This help article walks you through how to troubleshoot issues with HTML rendering in test emails."
 channel: email
-noindex: true
 ---
 
 # The HTML Looks Strange When I Send A Test Email To Myself
