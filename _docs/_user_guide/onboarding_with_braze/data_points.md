@@ -64,10 +64,15 @@ You can find a breakdown of how Braze accumulates data points below, but there a
 |Recent Devices | Device | No |
 |Recent Devices | Device OS | No |
 |Custom Events | All Custom Events | Yes |
+|Custom Event Properties | All Custom Event Properties* | Yes |
 |Purchases | All Purchases | Yes |
 |Amplitude Cohort Assignment | All Assignments | Yes |
 |Mixpanel Cohort Assignment | All Assignments | Yes |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
+
+{% alert note %}
+&#42; Custom event properties are all counted as separate data points in addition to the data point counted by the custom event itself.
+{% endalert %}
 
   {% endtab %}
 {% tab Location %}
