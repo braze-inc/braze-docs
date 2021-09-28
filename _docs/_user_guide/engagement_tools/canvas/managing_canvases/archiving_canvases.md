@@ -27,7 +27,7 @@ You can view all previously archived Canvases in the **Archived folder** on the 
 
 ## Unarchiving Canvases
 
-You can also view previously archived Canvases and choose to unarchive a Canvas. Note that when you unarchive a Canvas, the associated archived Segments will also be unarchived.
+You can also choose to unarchive a Canvas. Go to the **Archived folder** on the **Canvas** page, click the gear icon next to the selected Canvas, and click **Unarchive**. Note that when you unarchive a Canvas, the associated archived Segments will also be unarchived.
 
 ![Unarchive Canvas option][3]
 
