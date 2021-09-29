@@ -1,10 +1,8 @@
 ---
 nav_title: BlueConic Connection
 page_order: 1
-
 description: "BlueConic, the leading pure-play customer data platform, liberates companies’ first-party data from disparate systems and makes it accessible wherever and whenever it is required to transform customer relationships and drive business growth."
 alias: /partners/blueconic/
-
 page_type: partner
 hidden: true
 ---
@@ -27,6 +25,7 @@ hidden: true
 | Secret access key | [S3 security credentials page][3] | The Secret access key will allow you to authenticate your S3 server for importing and exporting |
 | Bucket | AWS | You will need to connect to S3 within the plugin. After authentication, the available buckets will show in a dropdown menu | This is where the files to be imported are stored or need to be exported to. |
 | BlueConic account | [BlueConic][1] | n/a | You will need to have [access to view and edit Connections][4] within your BlueConic account to access the plugins |
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
 
 ## Integration
 
@@ -36,7 +35,7 @@ The Braze connection allows you to enrich BlueConic profiles with data from Braz
 
 Click _Connections_ in the BlueConic navigation bar, then click _Add Connection_. A pop-up window will appear. Enter "Braze" in the search bar. 
 
-![BlueConic Plugin Gallery Braze Connection](/assets/img/blueconic/braze1.png){: style="max-width:50%;"}
+![BlueConic Plugin Gallery Braze Connection]({% image_buster /assets/img/blueconic/braze1.png %}){ style:="max-width:50%;"}
 
 Click _Braze Connection_. Once the Braze connection opens, you can expand or collapse the metadata fields by clicking on the gray chevron icon. Within the metadata fields, you may mark the connection as a favorite, add labels, or write a brief description about what the connection does. You can also choose whether to get [email notifications when the connection runs or fails to run][5].
 
@@ -50,11 +49,11 @@ Select _Set up and run_ in the Setup section in the left panel.
 
 In the Braze authentication section, enter your _Braze instance URL_, and _API key_.
 
-![BlueConic Authentication](/assets/img/blueconic/braze2.png){: style="max-width:60%;"}
+![BlueConic Authentication]({% image_buster /assets/img/blueconic/braze2.png}){ style:="max-width:60%;"}
 
 In the S3 setup and authentication section, enter the Amazon Web Services (S3) access key ID, secret access key, and S3 bucket.
 
-![BlueConic S3 Authentication](/assets/img/blueconic/braze3.png){: style="max-width:60%;"}
+![BlueConic S3 Authentication]({% image_buster /assets/img/blueconic/braze3.png}){ style:="max-width:60%;"}
 
 Save your settings.
 
@@ -67,17 +66,17 @@ Select _Import data into BlueConic_ in the left panel to open the page to config
 
 Select the location of the data in Braze. Here you can tell BlueConic where to find the data to be imported by selecting your Braze audience.
 
-![BlueConic Import Goal](/assets/img/blueconic/braze4.png){: style="max-width:60%;"}
+![BlueConic Import Goal]({% image_buster /assets/img/blueconic/braze4.png}){ style:="max-width:60%;"}
 
 Link identifiers between Braze and BlueConic. To match customer data between the two systems, enter one or more customer identifiers. Use the dropdown menu in the BlueConic field to select either the BlueConic profile identifier or a profile property. 
 
-![BlueConic Import Goal](/assets/img/blueconic/braze5.png){: style="max-width:60%;"}
+![BlueConic Import Goal]({% image_buster /assets/img/blueconic/braze5.png}){ style:="max-width:60%;"}
 
 Use the _Allow creation..._ checkbox to allow BlueConic to create new profile for data that does not match an existing BlueConic profile.
 
 Map Braze data to BlueConic profile properties. You can match Braze fields on the left column to BlueConic profile properties on the right column. Use the dropdown menu to specify how imported content should be added to existing values: added, summed, set oly if the profile property is empty, or set to clear (if the Braze field is empty). 
 
-![BlueConic Import Map](/assets/img/blueconic/braze6.png){: style="max-width:60%;"}
+![BlueConic Import Map]({% image_buster /assets/img/blueconic/braze6.png}){ style:="max-width:60%;"}
 
 Use the _Add Mapping_ button to create additional mapping rows. You can add multiple mapping rows at once with the _Add remaining fields_ option. BlueConic detects the remaining Braze fields and matches them with BlueConic profile properties. You can set the merge strategy for imported (set, add, sum, set if empty or clear) as well as provide a custom prefix to the names of BlueConic profile properties.
 
@@ -92,7 +91,7 @@ Select a BlueConic segment for the export. Only profiles in this segment that ha
 
 Link identifiers between BlueConic and Braze. At this point, you can match identifiers between BlueConic profiles and Braze fields. You can optionally choose to let BlueConic create new records in Braze if no existing match is found.
 
-![BlueConic Export Map](/assets/img/blueconic/braze7.png){: style="max-width:60%;"}
+![BlueConic Export Map]({% image_buster /assets/img/blueconic/braze7.png}){ style:="max-width:60%;"}
 
 Use the dropdown menu from the BlueConic icon to choose the type of information you want to export.
 
