@@ -9,7 +9,7 @@ description: "This reference article shows how to set custom attributes in your 
 
 ---
 
-# Setting Custom Attributes
+# Setting Custom Attributes for Android/FireOS
 
 Braze provides methods for assigning attributes to users. You'll be able to filter and segment your users according to these attributes on the dashboard.
 

@@ -8,7 +8,7 @@ description: "This article describes how to log purchases via the Braze SDK."
 
 ---
 
-# Logging Purchases
+# Logging Purchases for Web
 
 Record in-app purchases so that you can track your revenue over time and across revenue sources, as well as segment your users by their lifetime value.
 
