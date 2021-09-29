@@ -70,7 +70,7 @@ __Step 2: Export Certificate__
 1. Download the production push certificate that you just created and open it with the Keychain Access application.
 2. In Keychain Access, click on My Certificates and locate your push certificate.
 3. Export it as a `.p12` file and use a temporary, unsecure password (you will need this password when uploading your certificate to Braze).
-4. Navigate to the [app settings page](https://dashboard-01.braze.com/app_settings/app_settings) in the dashboard and upload your production certificate.
+4. Navigate to the [Settings](https://dashboard-01.braze.com/app_settings/app_settings) page in the dashboard and upload your production certificate.
 
 ![push upload example]({% image_buster /assets/img_archive/push_cert_upload.png %})
 

@@ -49,7 +49,7 @@ Common errors you might see here include user-specific notifications, such as ["
 
 In addition, Braze also provides a Push Changelog on the user profile under the Engagement tab. This changelog provides insight into push registration behavior such as token invalidation, push registration errors, tokens being moved to new users, etc.
 
-![Push Changelog][1]
+![Push Changelog][1]{: style="max-width:50%;" }
 
 ## Push Registration Issues
 
@@ -60,14 +60,11 @@ If the application does not prompt you to register for push notifications, there
 ### No "Push Registered" Users Showing in the Dashboard
 
   - Ensure that your app is prompting you to allow push notifications. Typically this prompt will appear upon your first open of the app, but it can be programmed to appear elsewhere. If it is not appearing where it should be, then the problem is likely with the basic configuration of your app's push capabilities.
-    - Verify the steps under ["Enabling Message Channels" > "Push Notifications"][21] were successfully completed.
-    - Make sure that the provisioning profile your app was built with includes permissions for push. Make sure that you're pulling down all of the available provisioning profiles from your Apple Developer account, as well. You can confirm this by navigating to "Preferences" > "Accounts" in Xcode (Command+,).
-
-    ![Provisioning Profile Refresh Step 1][23]
-
-    Click on the Apple ID you use for your developer account and then "View Details...". In the bottom left corner of the pane that opens up, click on the refresh icon.
-
-    ![Provisioning Profile Refresh Step 2][24]
+    - Verify the steps for [Push Integration][21] were successfully completed.
+    - Make sure that the provisioning profile your app was built with includes permissions for push. Make sure that you're pulling down all of the available provisioning profiles from your Apple Developer account, as well. To confirm this, perform the following steps:
+      1. In Xcode, navigate to **Preferences** > **Accounts** (Or use the keyboard shortcut <kbd>Command</kbd>+<kbd>,</kbd>).
+      2. Select the Apple ID you use for your developer account and click **View Details**.
+      3. On the next page, click **<i class="fas fa-redo-alt"></i> Refresh** and confirm that you're pulling all available provisioning profiles.
   - Make sure you have [properly enabled push capability][29] in your app.
   - Make sure your push provisioning profile matches the environment you're testing in. Universal certificates may be configured in the Braze dashboard to send to either the development or production APNs environment. Using a development certificate for a production app or a production certificate for a development app will not work.
   - Ensure that you are calling our `registerPushToken` method by setting a breakpoint in your code.
@@ -141,8 +138,6 @@ If opens are being logged, check to see if it is an issue with the deep link in 
 [1]: {% image_buster /assets/img_archive/push_changelog.png %}
 [20]: https://developer.apple.com/library/content/documentation/NetworkingInternet/Conceptual/RemoteNotificationsPG/APNSOverview.html#//apple_ref/doc/uid/TP40008194-CH8-SW1
 [21]: {{site.baseurl}}/developer_guide/platform_integration_guides/ios/push_notifications/integration/
-[23]: {% image_buster /assets/img_archive/prov_profile_refresh_step1.png %}
-[24]: {% image_buster /assets/img_archive/prov_profile_refresh_step2.png %}
 [25]: {% image_buster /assets/img_archive/RegistrationProblem.png %}
 [26]: {% image_buster /assets/img_archive/message_activity_log.png %}
 [27]: https://dashboard-01.braze.com/app_settings/developer_console/activitylog/
