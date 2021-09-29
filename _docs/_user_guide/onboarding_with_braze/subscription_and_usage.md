@@ -68,6 +68,10 @@ This table gives you the ability to quickly see your total data point usage vs y
 
 ### App Group Billing Data
 
+{% alert note %}
+The app group billing data is available beginning October 1, 2021, so the app group charts will only display for dates after October 1, 2021. 
+{% endalert %}
+
 #### Drill to App Groups
 The **Drill to App Groups** lets you view granular data point data for each of your app groups. Click an app group to see its data point details.
 
@@ -93,9 +97,6 @@ Data breakdowns like these can help customers understand what specific data poin
 
 ![Most Used Events and Attributes By App][4]
 
-{% alert note %}
-This chart displays event counts based on the event timestamp whereas Braze billing is based on when the event was processed by Braze, so there may be small differences between the data in this chart and your total data points chart.
-{% endalert %}
 
 
 [2]: {% image_buster /assets/img/subscription_and_billing2.png %}
