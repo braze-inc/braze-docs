@@ -40,10 +40,17 @@ Below is an example of tags an eCommerce app might find useful:
 
 ![Potential Tags][I11]
 
-You can use the same tags across segments, campaigns, and News Feed cards. To efficiently rename or remove tags across your dashboard, use the **Tags** tab under **Manage Settings**.
+You can use the same tags across segments, campaigns, and News Feed cards. To efficiently rename, remove, or add tags across your dashboard, go to the **Manage Settings** page and select the **Tags** tab.
 
 ![tags view][I12]
 
+To further organize your tags, nest your tags under a parent tag. For example, you can keep all holiday tags nested under a parent `Holidays` tag, or all tags related to a stage of your marketing funnel under a parent `Funnel` tag. 
+
+To do so, create a new tag, select **Nest Tag Under**, and choose which existing tag to nest your new tag under. You can also nest existing tags from **Manage Settings** > **Tags**. On this page, hover over a row with your tag and click **<i class="fas fa-pencil-alt"></i>Edit**. Then, follow the same steps as before.
+
+![Create a nested tag][1]{: style ="max-width:70%;" }
+
+[1]: {% image_buster /assets/img_archive/tag_nested.png %}
 [I1]:{% image_buster /assets/img_archive/tags_add_tag.png %}
 [I2]:{% image_buster /assets/img_archive/tag_details_page.png %}
 [I3]:{% image_buster /assets/img_archive/tags_grid.png %}
