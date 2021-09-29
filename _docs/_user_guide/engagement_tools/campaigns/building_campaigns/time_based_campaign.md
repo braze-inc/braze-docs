@@ -1,7 +1,7 @@
 ---
 nav_title: Time-Based Functionalities for Campaigns
 article_title: Time-Based Functionalities for Campaigns
-page_order: 0
+page_order: 2
 tool: Campaigns
 page_type: reference
 description: "This reference article covers time-based functionalities for Campaigns."

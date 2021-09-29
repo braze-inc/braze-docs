@@ -1,7 +1,7 @@
 ---
 nav_title: Campaign Alerts
 article_title: Campaign Alerts
-page_order: 6
+page_order: 3
 
 page_type: reference
 description: "This reference article gives an overview of campaign alerts, their benefits, as well as how to set them up to help provide you peace of mind."

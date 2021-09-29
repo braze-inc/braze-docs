@@ -1,9 +1,9 @@
 ---
-nav_title: Get Started
-article_title: Get Started with Canvas
+nav_title: Getting Started
+article_title: Getting Started with Canvas
 page_order: 0
 layout: dev_guide
-guide_top_header: "Get Started"
+guide_top_header: "Getting Started with Canvas"
 guide_top_text: "Before you send a Canvas, use these articles to guide your planning for your Canvas and the journey you plan to take your users through."
 
 page_type: landing
@@ -12,7 +12,7 @@ tool: Canvas
 
 guide_featured_title: "Section Articles"
 guide_featured_list:
-  - name: The Basics
+  - name: Canvas Basics
     link: /docs/user_guide/engagement_tools/canvas/get_started/the_basics/
     fa_icon: fas fa-list
   - name: Measuring and Testing with Canvas Analytics

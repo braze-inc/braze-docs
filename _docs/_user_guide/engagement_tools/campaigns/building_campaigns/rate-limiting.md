@@ -1,9 +1,8 @@
 ---
 nav_title: Rate-Limiting and Frequency Capping
 article_title: Rate-Limiting and Frequency Capping
-page_order: 1
-tool:
-  - Campaigns
+page_order: 6
+tool: Campaigns
 page_type: reference
 description: "This reference article discusses the concept of rate limiting and frequency capping, and how you can apply marketing pressure to improve user experience."
 

@@ -1,7 +1,7 @@
 ---
 nav_title: In-App Messages In Canvas
 article_title: In-App Messages in Canvas
-page_order: 4
+page_order: 6
 page_type: reference
 description: "This reference article describes features and nuances specific to Canvas In-App Messages, which you can add to your Canvas to show rich messaging."
 tool: Canvas

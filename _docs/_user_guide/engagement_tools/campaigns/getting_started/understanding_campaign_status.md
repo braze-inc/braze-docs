@@ -1,11 +1,10 @@
 ---
 nav_title: Understanding Campaign Status
 article_title: Understanding Campaign Status
-page_order: 3
+page_order: 2
 tool: Campaigns
 page_type: reference
 description: "This reference article gives an overview of the various statuses a campaign can have and what they mean."
-
 ---
 # Understanding Campaign Status
 
