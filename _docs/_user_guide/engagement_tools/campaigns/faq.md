@@ -1,7 +1,7 @@
 ---
 nav_title: FAQs
 article_title: Campaign FAQs
-page_order: 5
+page_order: 10
 page_type: FAQ
 description: "This page provides answers to frequently asked questions about Campaigns."
 tool: Campaigns

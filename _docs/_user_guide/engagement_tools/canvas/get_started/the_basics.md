@@ -14,53 +14,56 @@ Also, create a real form for them to download - need to write in where this info
 
 # Canvas: The Basics
 
-## Find Your Strategy with the Five W's of Visualization
+## Find Your Strategy with the Five W’s of Visualization
 
 Answer the questions below to get started:
 
-* __What__ am I trying to help the customer do or understand?_________________________
-    (Canvas Name)
+* __What__ am I trying to help the customer do or understand? (Canvas Name)
 
 * __When__ will a user start this experience? Pick one.
-    * Enter users at a designated time:
-        * Scheduled
-        * Start a session
-        * Perform a custom event
-        * Enter a location
-        * Interact with or leave another campaign or Canvas
+  * Enter users at a designated time: __Scheduled__
+    * Start a session
+    * Perform a custom event
+    * Enter a location
+    * Interact with or leave another campaign or Canvas
+  * Enter user when they perform actions: __Action-Based__
+    * Make a purchase
+    * Start a session
+    * Perform a custom event
+    * Enter a location
+    * Interact with or leave another campaign or Canvas
+  * Enter users when they perform a specific action that triggers an API request to Braze (advanced): __API-Triggered__
+    * API-triggered campaigns give you the flexibility to house message content inside of the Braze dashboard while dictating when a message is sent and to whom, via your API.<br><br>
 
-    * Enter user when they perform actions: Action-Based
-        * Make purchase
-        * Start a session
-        * Perform a custom event
-        * Enter a location
-        * Interact with or leave another campaign or Canvas<br><br>
+* __Who__ are we trying to reach? (Segment Name with _optional_ additional filters)
+  * Custom Data
+  * User Activity
+  * Retargeting
+  * Marketing Activity
+  * User Attributes
+  * Install Attribution
+  * Social Activity<br><br>
 
-* __Who__ are we trying to reach? _________________________ (Segment Name) with [optional] additional filters:
-    * Custom Data
-    * User Activity
-    * Retargeting
-    * Marketing Activity
-    * User Attributes
-    * Install Attribution
-    * Social Activity<br><br>
+* __Why__ am I creating this Canvas?
+  * Start Session: I want them coming back and engaging with the app.
+  * Make Purchase: I want them to buy.
+  * Perform Custom Event: I want them to perform a specific action that I’m tracking as a custom event.
+  * Upgrades App: I want them to upgrade their app version<br><br>
 
-* __Why__ am I creating this canvas?
-    * Start Session: I want them coming back and engaging with the app.
-    * Make Purchase: I want them to buy.
-    * Perform Custom Event: I want them to perform a specific action that I’m tracking as a custom event.<br><br>
+* __Where__ will we reach them?
+  * Email
+  * Push (Android, iOS, Windows, web)
+  * In-app Messages
+  * Content Cards
+  * SMS or MMS
+  * Webhook<br><br>
 
-*  __Where__ will we reach them?
-    * Push (Android, iOS, Windows, web)
-    * Email
-    * Webhook<br><br>
-
-*  __How__ will we reach them? (Great place to test different messaging configurations)
-    * Timing: Schedule or trigger messages using tools like Intelligent Timing and delays after trigger events
-    * Cadence & Channel: Use one channel and then another or sent messages on multiple channels simultaneously
-    * Content: Build creative with strong appeals, value propositions, and CTAs
-    * Targeting: Add additional segments and/or filters
-    * Triggers: Use customer actions to trigger messages<br><br>
+* __How__ will we reach them? (Great place to test different messaging configurations)
+  * Timing: Schedule or trigger messages using tools like Intelligent Timing and delays after trigger events
+  * Cadence & Channel: Use one channel and then another or sent messages on multiple channels simultaneously
+  * Content: Build creative copy with strong appeals, value propositions, and CTAs
+  * Targeting: Add additional segments and/or filters
+  * Triggers: Use customer actions to trigger messages<br><br>
 
 ## Anatomy of Canvas
 
