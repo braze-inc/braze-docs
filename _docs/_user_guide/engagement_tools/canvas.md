@@ -15,7 +15,7 @@ guide_featured_list:
   - name: Getting Started
     link: /docs/user_guide/engagement_tools/canvas/get_started/
     fa_icon: fas fa-book-open
-  - name: Building a Canvas
+  - name: Building Canvases
     link: /docs/user_guide/engagement_tools/canvas/create_a_canvas/
     fa_icon: fas fa-paint-brush
   - name: Canvas Components

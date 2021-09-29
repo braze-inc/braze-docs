@@ -1,9 +1,9 @@
 ---
-nav_title: Building a Canvas
-article_title: Building a Canvas
+nav_title: Building Canvases
+article_title: Building Canvases
 page_order: 1
 layout: dev_guide
-guide_top_header: "Building a Canvas"
+guide_top_header: "Building Canvases"
 guide_top_text: "The following articles will help you create and launch a multi-dimensional Canvas."
 
 page_type: landing
