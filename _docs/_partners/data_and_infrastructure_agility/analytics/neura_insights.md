@@ -16,7 +16,7 @@ search_tag: Partner
 
 *Leverage [Neura insights][2] to uncover the relationships between each user’s real-world behavior and the actions they take in your app in order to find the best moment to engage with each user.*
 
-![insights-bubble-graph.png][9]
+![Insights Bubble Graph][9]
 
 ## Integration Details
 
@@ -34,7 +34,7 @@ Complete the Mobile Engagement Platform section of your application in the [Neur
 
 **Android/iOS App ID:** We recommend providing a unique Braze application ID for each mobile platform, allowing you to segment the users for each platform individually.
 
-![neura-mep-details-in-neura.png][11]
+![Neura MEP Details in Neura][11]
 
 Last, ensure that Braze and Neura users are mapped:
 Create a user alias labeled `neura_id` with your user's neura_id

@@ -9,7 +9,7 @@ description: "This article describes how to set user IDs for each of your users,
  
 ---
 
-# Setting User IDs
+# Setting User IDs for Web
 
 {% include archive/setting_user_ids/setting_user_ids.md %}
 

@@ -683,7 +683,7 @@ Braze push data keys are documented [here](https://appboy.github.io/appboy-andro
 [53]: https://developer.android.com/reference/android/content/BroadcastReceiver.html
 [55]: {% image_buster /assets/img_archive/android_push_test.png %} "Android Push Test"
 [56]: {{site.baseurl}}/user_guide/message_building_by_channel/push/creating_a_push_message/#creating-a-push-message
-[57]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/push_notifications/troubleshooting/
+[57]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/push_notifications/android/troubleshooting/
 [58]: https://console.firebase.google.com/
 [59]: {% image_buster /assets/img_archive/finding_firebase_server_key.png %} "FirebaseServerKey"
 [61]: {{site.baseurl}}/user_guide/message_building_by_channel/push/creating_a_push_message/#android-notification-options

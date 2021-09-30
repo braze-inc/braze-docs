@@ -1,11 +1,11 @@
 ---
 nav_title: Canvas Not Sending
+article_title: Troubleshooting Canvas Delivery
 page_order: 0
 
 page_type: solution
 description: "This help article walks you through troubleshooting delivery issues with your Canvas."
 tool: Canvas
-noindex: true
 ---
 
 # My Canvas Isn't Sending
@@ -15,7 +15,6 @@ Canvases are robust and complex, and we know you dedicate time and care when cre
 * [Check Your Schedule](#schedule)
 * [Check Your Segment](#segment)
 * [Check Your Settings](#settings)
-
 
 ## Schedule
 
@@ -37,6 +36,5 @@ It is important to check your [Entry Audience]({{site.baseurl}}/user_guide/engag
 The [Entry Settings]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/create_a_canvas/#step-2-use-the-entry-wizard-to-set-up-your-canvas) are important. Check if you have limited the number of people who will potentially enter the Canvas.
 
 Users may also drop out of a Canvas if they are no longer eligible to receive messages. For example, if the Canvas only contained push notifications, and a user opted out of push after receiving the First Step, then that user would drop out of the Canvas. Consider using branching to add in alternative user journeys.
-
 
 Still need help? [Open a support ticket]({{site.baseurl}}/support_contact/) or review our comprehensive [Canvas documentation]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/create_a_canvas/).

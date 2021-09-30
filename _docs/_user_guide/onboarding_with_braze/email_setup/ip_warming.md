@@ -87,7 +87,7 @@ Many ISPs and email access providers no longer only filter by IP address reputat
 Subdomain segmentation is especially important for large-volume senders. These senders should work with a Braze representative when setting up their account to ensure they adhere to this practice.
 {% endalert %}
 
-[18]: {% image_buster /assets/img_archive/Email_IP_Warming_Sends_Limit_new.png %}
+[18]: {% image_buster /assets/img_archive/email_ip_warming_sends_limit_new.png %}
 [40]: {{site.baseurl}}/help/best_practices/spam_regulations/#spam-regulations
 [43]: https://www.braze.com/blog/email-list-hygiene/
 [44]: https://senderscore.org/

@@ -80,7 +80,7 @@ At Braze, the web SDK treats the "Email Web Capture Form" message type template 
 
 The following example shows a paginated HTML in-app message:
 
-![HTML5 Example]({% image_buster /assets/img_archive/ios-html-full-iam.gif %})
+![HTML5 IAM Example]({% image_buster /assets/img_archive/ios-html-full-iam.gif %})
 
 {% endtab %}
 {% endtabs %}

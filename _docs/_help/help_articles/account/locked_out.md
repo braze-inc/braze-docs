@@ -1,11 +1,11 @@
 ---
 nav_title: Locked Out of Account
+article_title: Locked Out of Account
 page_order: 0
 
 page_type: solution
 description: "This help article walks you through troubleshooting steps if you've been locked out of your Braze account."
 tool: Dashboard
-noindex: true
 ---
 
 # Locked Out of Braze Account	

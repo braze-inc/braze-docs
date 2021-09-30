@@ -16,34 +16,33 @@ channel:
 
 Email messages are great for delivering content to the user on their terms. They are also wonderful tools to re-engage users who may have even uninstalled your app. The Braze dashboard has an email template editor that allows you to create custom-tailored, eye-catching emails and save them for later use in campaigns. You can also [create an Email Template]({{site.baseurl}}/user_guide/message_building_by_channel/email/creating_an_email_template/) using our editor.
 
+## Prerequisites {#upload-requirements}
+
+Before you begin, you need to create your HTML email template. This must be a single ZIP file containing the following:
+
+* A single HTML file—the body of your email
+* A folder of images that are referenced in the HTML file
+* Less than 50 image files
+
+This ZIP file should be under 5 MB.
+
 ## Uploading Your Template
 
 ### Step 1: Navigate to the Email Template Editor
 
-In the left navigation, click __Templates & Media__, under the __Engagement__ section. This will open up the __Email Template Gallery__.
+Go to the __Templates & Media__ page, under the __Engagement__ section. This opens the __Email Templates__ page.
 
 ### Step 2: Open the Uploader
 
-Select **From File** in the **Start from a Basic HTML Template** section.
+In the section **Start from a Basic HTML Template**, select **From File**.
 
 ### Step 3: Upload your Template
-Navigate to and upload your template from your computer.
 
-![HTML Uploader][8]
-
-#### Upload Requirements:
-
-Within a single ZIP file, you should limit your upload to:
-- A single HTML file (the body of your email)
-- A folder of images that are referenced in the HTML file
-- Less than 50 image files
-
-Generally, the uploaded file must be:
-- Under 5 MB
-- Zipped in a single file
+Click **Upload From File** and select your template from your computer. Refer to the [Prerequisites](#upload-requirements) section to ensure your template meets the upload requirements.
 
 #### Solve Upload Email Template Errors
-There are several email error messages you can receive when uploading an HTML file for email. You will receive a specific error message describing each of these. Here are a few samples with their recommended fixes:
+
+There are several email error messages you may receive when uploading an HTML template file. If you receive an error, refer to the table below for common issues and their recommended fixes:
 
 | Error | Fix |
 |---|---|
@@ -53,7 +52,7 @@ There are several email error messages you can receive when uploading an HTML fi
 |Multiple HTML| Remove one of the HTML files and try uploading again.|
 |Images over 5MB| Reduce the number of images and try uploading again. |
 |Extra Images| You may have additional images in your file that are not referenced in your HTML file. This will not cause a fail error, but the extra images will be discarded. If those images were supposed to be referenced in the HTML file, please check its contents, correct any errors, and try uploading again.
-|Missing Images| If there are images referenced in your HTML file, but those images are not included in the image folder of the .zip file, you will receive a file error. Inspect your file and correct any errors (like misspellings), or add the missing images to your .zip file and try uploading again.|
+|Missing Images| If there are images referenced in your HTML file, but those images are not included in the image folder of the ZIP file, you will receive a file error. Inspect your file and correct any errors (like misspellings), or add the missing images to your ZIP file and try uploading again.|
 {: .reset-td-br-1 .reset-td-br-2}
 
 ### Step 4: Finish and Save Your Template
@@ -68,7 +67,7 @@ If you make any edits to an existing template, those changes will not be reflect
 
 To use your email for an API campaign, you need an `email_template_id`, which can be found at the bottom of any email template created in Braze.
 
-![Save Template][4]
+![API Identifier section of an HTML email template][4]
 
 ## Managing Email Templates
 
@@ -79,6 +78,5 @@ You can [duplicate]({{site.baseurl}}/user_guide/engagement_tools/templates_and_m
 For answers to frequently asked questions about email templates, check out our [Email and Link Templates FAQs][10] page.
 
 
-[4]: {% image_buster /assets/img_archive/email_templates4-new.png %}
-[8]: {% image_buster /assets/img_archive/upload_html_template.gif %}
+[4]: {% image_buster /assets/img_archive/email_template_id.png %}
 [10]: {{site.baseurl}}/user_guide/message_building_by_channel/email/templates/faq/

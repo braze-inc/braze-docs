@@ -49,7 +49,7 @@ Braze notes the number of times these events have occurred as well as the last t
 ![custom_event_analytics_example.png][8]
 
 {% alert tip %}
-[Incrementing custom attributes]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_attributes/#integers) can be used to keep a counter on a user action similar to a custom event. However, you will not be able to view custom attribute data in a time series. User actions that do not need to be analyzed in time series should be recorded via this method.
+[Incrementing custom attributes]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_attributes/#integers) can be used to keep a counter on a user action similar to a custom event. However, you will not be able to view custom attribute data in a time series. User actions that do not need to be analyzed in time series should be recorded using this method.
 {% endalert %}
 
 ### Custom Events Analytics Not Showing?
@@ -97,8 +97,10 @@ Triggered in-app messages with templated custom event properties (for example, `
 You can change the data type of your custom event property, but please be aware of [the impacts of changing data types]({{site.baseurl}}/help/help_articles/data/change_custom_data_type/) after data has been collected.
 
 {% alert important %}
-Please note that when making API calls and using the "is blank" filter, a specific custom event property is considered "blank" if excluded from the call. For example, if you were to include `"event_property": "` your users would be considered "not blank".
+When making API calls and using the "is blank" filter, a specific custom event property is considered "blank" if excluded from the call. For example, if you were to include `"event_property": "`, then your users would be considered "not blank".
 {% endalert %}
+
+In regards to subscription usage, custom event properties are all counted as separate data points in addition to the data point counted by the custom event itself.
 
 ## Custom Event Property Storage
 

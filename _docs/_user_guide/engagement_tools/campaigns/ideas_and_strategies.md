@@ -4,7 +4,7 @@ article_title: Ideas and Strategies
 layout: dev_guide
 guide_top_header: "Ideas & Strategies"
 guide_top_text: "Learn more about how to build your ideal campaign with these use cases and other ideas."
-page_order: 2
+page_order: 5
 
 tool: Campaigns
 page_type: landing
@@ -39,7 +39,4 @@ guide_menu_list:
   - name: Feature Awareness and New App Version
     link: /docs/user_guide/engagement_tools/campaigns/ideas_and_strategies/new_features/
     fa_icon: fas fa-mobile
-  - name: "A/B Testing with Random Buckets"
-    link: /docs/user_guide/engagement_tools/campaigns/ideas_and_strategies/ab_testing_with_random_buckets/
-    fa_icon: fas fa-columns
 ---

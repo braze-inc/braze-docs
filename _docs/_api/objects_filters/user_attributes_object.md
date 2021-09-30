@@ -40,7 +40,7 @@ To remove a profile attribute, set it to null. Some fields, such as `external_id
 
 #### Update Existing Profiles Only
 
-If you wish to update only existing user profiles in Braze, you should pass the `_update_existing_only` key with a value of `true` within the body of your request. If this value is omitted, Braze will create a new user profile if the external_id does not already exist.
+If you wish to update only existing user profiles in Braze, you should pass the `_update_existing_only` key with a value of `true` within the body of your request. If this value is omitted, Braze will create a new user profile if the `external_id` does not already exist.
 
 {% alert note %}
 If you are creating an alias-only user profile via the users/track endpoint, `_update_existing_only` must be set to `false`. If this value is omitted, the alias-only profile will not be created.
