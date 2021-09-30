@@ -49,26 +49,26 @@ Create a Braze IAM Campaign in the Braze of the HTML Custom View type. Advance t
 
 ### Step 1: Creating an IAM Campaign
 
-![Braze Create Campaign Menu](images/braze-create-campaign-menu.png)
+![Braze Create Campaign Menu][1]
 
 ### Step 2: Selecting "Custom Code" Message Type
 
 While any of the Message Types should work, consider using the Custom Code type. You'll then need to populate the content of the Message with the minimum that Braze requires; note that this will not be shown on to the user, but Braze expects to use its own UI and so requires us to provide some content.
 
-![Braze Custom Code Campaign](images/braze-campaign-select-custom-type.png)
+![Braze Custom Code Campaign][2]
 
 
 With the Custom Code type, use the following minimal HTML snippet to satisfy the form validation: `<a href="appboy://close">X</a>`.
 
 Note that this will not be displayed in production on your device, since this In-App Message will be intercepted and replaced with a Judo experience.
 
-![Braze HTML Snippet](images/braze-html-boilerplate.png)
+![Braze HTML Snippet][3]
 
 ### Step 3: Setting the `judo-experience` Extra
 
 Then, set a custom Extra value on the Campaign with a key of `judo-experience`. Provide the URL of the Judo Experience you'd like to show here. This is what the Judo-Braze integration library will detect in the handler and use to inject your Judo Experience in lieu of the standard Braze IAM UI.
 
-![Braze Campaign Extras Configuration](images/braze-campaign-extras-judo-experience.png)
+![Braze Campaign Extras Configuration][4]
 
 ### Step 4: Finishing the Campaign
 
@@ -79,3 +79,7 @@ You will need to complete the campaign, namely setting up a trigger for the Camp
 
 This can be a critical part of your documentation. Though this is optional, this is a good place to outline typical or even novel use cases for the integration. This can be used as a way to sell or upsell the relationship - it provides context, ideas, and most importantly a way to visualize the capabilities of the integration.
 
+[1]: {% image_buster /assets/img/judo/braze-create-campaign-menu.png %}
+[2]: {% image_buster /assets/img/judo/braze-campaign-select-custom-type.png %}
+[3]: {% image_buster /assets/img/judo/braze-html-boilerplate.png %}
+[4]: {% image_buster /assets/img/judo/braze-campaign-extras-judo-experience.png) %}
