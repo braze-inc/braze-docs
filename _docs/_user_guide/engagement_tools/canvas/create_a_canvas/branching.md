@@ -1,7 +1,7 @@
 ---
 nav_title: Branching
 article_title: Branching
-page_order: 1
+page_order: 2
 page_type: reference
 description: "This reference article covers what branching is, and how it can be useful in your Canvases."
 tool: Canvas

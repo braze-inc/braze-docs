@@ -242,7 +242,6 @@ Straight quotes are different from curly quotes in Liquid. Be careful when copyi
 | [handle/handleize][6.6]                          | Formats a string into a handle.     | ⛔  No    |
 | [md5][6.7]                                       | Converts a string into an MD5 hash. Refer to [Encoding Filters][3] for more. | ✅  Yes   |
 | [sha1][6.8]                                      | Converts a string into a SHA-1 hash. Refer to [Encoding Filters][3] for more. | ✅  Yes   |
-| [sha256][6.9]                                    | Converts a string into a SHA-256 hash.             | ✅  Yes   |
 | hmac_sha1_hex<br>(previously [hmac_sha_1][6.10]) | Converts a string into a SHA-1 hash using a hash message authentication code (HMAC). Pass the secret key for the message as a parameter to the filter. Refer to [Encoding Filters][3] for more. | ✅  Yes   |
 | [hmac_sha256][6.11]                              | Converts a string into a SHA-256 hash using a hash message authentication code (HMAC). Pass the secret key for the message as a parameter to the filter.| ✅  Yes   |
 | [newline_to_br][6.12]                            | Inserts a `<br>` linebreak HTML tag in front of each line break in a string. | ✅  Yes   |
@@ -405,7 +404,6 @@ You can also use the reserved variable `now` to access the current date and time
 [6.6]: https://shopify.dev/api/liquid/filters/string-filters#handle-handleize
 [6.7]: https://shopify.dev/api/liquid/filters/string-filters#md5
 [6.8]: https://shopify.dev/api/liquid/filters/string-filters#sha1
-[6.9]: https://shopify.dev/api/liquid/filters/string-filters#sha256
 [6.10]: https://shopify.dev/api/liquid/filters/string-filters#hmac_sha1
 [6.11]: https://shopify.dev/api/liquid/filters/string-filters#hmac_sha256
 [6.12]: https://shopify.dev/api/liquid/filters/string-filters#newline_to_br

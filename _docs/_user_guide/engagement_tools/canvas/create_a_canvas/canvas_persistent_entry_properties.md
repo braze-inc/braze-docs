@@ -5,7 +5,7 @@ alias: "/persistent_entry/"
 page_type: reference
 description: "This reference article describes how to use persistent entry properties in your Canvas to send more curated messages, and create a highly refined end-user experience."
 tool: Canvas
-
+page_order: 5
 ---
 
 <br>

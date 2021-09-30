@@ -7,7 +7,7 @@ description: "This reference article shows how to implement social data tracking
 
 ---
 
-# Social Data Tracking
+# Social Data Tracking for iOS
 
 ## Collecting Social Account Data
 

@@ -1,7 +1,7 @@
 ---
 nav_title: Time-Based Functionalities for Canvas
 article_title: Time-Based Functionalities for Canvas
-page_order: .9
+page_order: 1
 tools: Canvas
 page_type: reference
 description: "This reference article covers definitions, time zones, and examples of time-based functionalities for Canvas."
