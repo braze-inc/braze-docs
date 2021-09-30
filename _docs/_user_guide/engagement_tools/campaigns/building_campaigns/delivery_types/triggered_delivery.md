@@ -10,7 +10,7 @@ tool: Campaigns
 
 # Action-Based Delivery
 
-Action-based delivery campaigns or event-triggerd campaigns are very effective for transactional or achievement-based messages. Instead of sending your campaign on certain days, you can trigger them to send after a user completes a certain event. Listed below are the steps for setting up an event-based schedule:
+Action-based delivery campaigns or event-triggered campaigns are very effective for transactional or achievement-based messages. Instead of sending your campaign on certain days, you can trigger them to send after a user completes a certain event. Listed below are the steps for setting up an event-based schedule:
 
 {% alert important %}
 Action-based delivery is not available for [Canvas steps with in-app messages]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/in-app_messages_in_canvas). These steps must be scheduled.
