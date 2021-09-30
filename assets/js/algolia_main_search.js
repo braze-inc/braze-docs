@@ -3,6 +3,7 @@ function mainDocSubmit(){
   return false;
 }
 $(document).ready(function () {
+  var lab_intialized = true;
   function parseDocSearch(item){
     var content = "";
     var description = "";
@@ -11,6 +12,11 @@ $(document).ready(function () {
     var category = "";
     var tags_list = "";
     var heading = "";
+    lab_intialized = true;
+    var result_template = '';
+    if (item.__autocomplete_id) {
+      result_template += '<hr />';
+    }
 
     if ("nav_title" in item) {
       title = item.nav_title.replaceUnder();
@@ -86,20 +92,27 @@ $(document).ready(function () {
     if (heading) {
       url += "#" + string_to_slug(heading);
     }
-    var resulttemplate = '<a href="' +
+    result_template += '<a href="' +
         base_url + url + '"><div class="title">' +
         title + ' <div class="category">' +
         tags_list + article_path +
         '</div></div> <div class="content">' +
         search_msg +
-        "</div><hr /></a>";
-    return resulttemplate;
+        "</div></a>";
+    return result_template;
   };
   function parseLABSearch(item){
     var description = '';
     var title = '';
     var url = '';
-    var tags_list = '<span class="search_tags" style="background-color: #3accdd;">LAB</span>';;
+    var tags_list = '<span class="search_tags" style="background-color: #3accdd;">LAB</span>';
+    var lab_image = "<img src='" + base_url + "/assets/img/lab.png' width='35px' /> ";
+    var result_template = '';
+    if (lab_intialized) {
+      result_template = '<div class="lab_title">Learning at Braze' + lab_image + '</div><hr />';
+      lab_intialized = false;
+    }
+
     if (item['category']) {
       var tags = item['category'];
       if (Array.isArray(tags)) {
@@ -113,7 +126,6 @@ $(document).ready(function () {
           tags.upCaseWord().mapReplace(custom_word_mapping) + '</span>';
       }
     }
-    var lab_image = "<img src='" + base_url + "/assets/img/lab.png' width='35px' /> ";
 
 
     if ("title" in item) {
@@ -134,14 +146,14 @@ $(document).ready(function () {
     }
     var url = item.url;
 
-    var resulttemplate = '<a href="' +
-        url + '" target="_blank"><div class="title lab_title">' + lab_image +
+    result_template += '<a href="' +
+        url + '" target="_blank"><div class="title lab_title">' +
         title + ' <i class="fas fa-external-link-alt"></i> <div class="category">' +
         tags_list +
         '</div></div> <div class="content">' +
         description +
         "</div><hr /></a>";
-    return resulttemplate;
+    return result_template;
   };
   autocomplete({
     container: "#doc-search-home",
@@ -207,18 +219,18 @@ $(document).ready(function () {
             })
           },
           item({ item, createElement }) {
-            var resulttemplate = '';
+            var result_template = '';
             switch(item['__autocomplete_indexName']) {
               case 'LABSearch':
-                resulttemplate = parseLABSearch(item);
+                result_template = parseLABSearch(item);
                 break;
               default:
-                resulttemplate = parseDocSearch(item);
+                result_template = parseDocSearch(item);
                 break;
             }
             return createElement("div", {
               dangerouslySetInnerHTML: {
-                __html: resulttemplate,
+                __html: result_template,
               },
             });
           },

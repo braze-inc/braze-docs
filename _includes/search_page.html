@@ -33,6 +33,7 @@
 
 
     <div id="search_hits"></div>
+    <div id="search_header_labs" style="display:none;"> Learning at Braze <img src='{{site.baseurl}}/assets/img/lab.png' width='45px' /><hr /></div>
     <div id="search_hits_labs"></div>
     <div id="search_pagination"></div>
     <div id="search_stats_lab" style="display:none; visibility:hidden;"></div>
@@ -107,7 +108,6 @@
       var category = '';
       var tags_list = "";
       var heading = '';
-
       if ('nav_title' in hit) {
         title = hit.nav_title.replaceUnder() ;
       } else {
@@ -184,6 +184,7 @@
       var description = '';
       var title = '';
       var url = '';
+      $('#search_header_labs').show();
       var tags_list = '<span class="search_tags" style="background-color: #3accdd;">LAB</span>';;
       if (hit['category']) {
         var tags = hit['category'];
@@ -198,7 +199,6 @@
             tags.upCaseWord().mapReplace(custom_word_mapping) + '</span>';
         }
       }
-      var lab_image = "<img src='" + base_url + "/assets/img/lab.png' width='45px' /> ";
 
       if ("title" in hit) {
         title = hit.title
@@ -218,7 +218,7 @@
       }
       var url = hit.url;
 
-      return `<div class="hit"><a href="${url}" ${bindEvent('click', hit, 'Clicked LAB from Page Search')} target="_blank"><div class="hit-content"><div><div class="hit-name lab_title">${lab_image} ${title } <i class="fas fa-external-link-alt"></i> </div> <div class="hit-subname">${tags_list} </div><div class="hit-description">${ description }</div></div></div></a><hr /></div>`;
+      return `<div class="hit"><a href="${url}" ${bindEvent('click', hit, 'Clicked LAB from Page Search')} target="_blank"><div class="hit-content"><div><div class="hit-name lab_title">${title } <i class="fas fa-external-link-alt"></i> </div> <div class="hit-subname">${tags_list} </div><div class="hit-description">${ description }</div></div></div></a><hr /></div>`;
     }
 
     String.prototype.upCaseWord = function() {
@@ -293,6 +293,7 @@
               return hitLABTemplate(hit, bindEvent);
             },
             empty: function(data) {
+              $('#search_header_labs').hide();
               return '';
             }
           },

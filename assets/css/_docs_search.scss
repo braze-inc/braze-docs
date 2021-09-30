@@ -58,7 +58,6 @@ $search_offset: 65px;
     box-shadow: none;
     #algolia_footer {
       height: $search_footer_height;
-      border-top: 1px solid rgba($grey-ghost,0.7);
       margin: 0 15px 0 15px;
 
       .algolia-docsearch-footer {
@@ -166,15 +165,10 @@ $search_offset: 65px;
     font-size: $search_font_size ;
     .aa-Item {
       hr {
-        margin-top: 15px;
+        margin-top: 10px;
+        margin-bottom: 15px;
         border-width: 1px;
         border-color: rgba($grey-ghost,0.7);
-      }
-      &:last-child  {
-        hr {
-          border-color: transparent;
-
-        }
       }
     }
 
@@ -216,9 +210,20 @@ $search_offset: 65px;
     }
   }
 }
-
-.lab_title {
-
+#search_header_labs {
+  color: $black-shark;
+  font-size: 18px;
+  margin-top: 20px;
+  margin-bottom: 5px;
+  hr {
+    margin-top: 5px;
+  }
+}
+.lab_header {
+  margin-top: 20px;
+  color: $black-shark;
+  font-size: 16px;
+  margin-bottom: 0px;
 }
 .search_tags {
   border-radius: 5px;
