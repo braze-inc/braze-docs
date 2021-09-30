@@ -462,3 +462,5 @@ validurls['/docs/developer_guide/platform_integration_guides/android/push_notifi
 
 validurls['/docs/help/best_practices/push/push_subscription_status/'] = '/docs/user_guide/message_building_by_channel/push/best_practices/';
 validurls['/docs/user_guide/message_building_by_channel/push/best_practices/users_and_subscriptions/'] = '/docs/user_guide/message_building_by_channel/push/users_and_subscriptions/';
+validurls['/docs/developer_guide/platform_integration_guides/android/push_notifications/troubleshooting/'] = '/docs/developer_guide/platform_integration_guides/android/push_notifications/android/troubleshooting/';
+validurls['/docs/developer_guide/platform_integration_guides/android/push_notifications/integration/#registering-for-push'] = '/docs/developer_guide/platform_integration_guides/android/push_notifications/android/integration/standard_integration/#registering-for-push';
