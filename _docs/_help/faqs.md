@@ -3,7 +3,7 @@ nav_title: FAQs
 article_title: Frequently Asked Questions
 page_order: 6
 hide_toc: true
-layout: featured
+layout: dev_guide
 guide_top_header: "Frequently Asked Questions"
 guide_top_text: "This page is home to articles on frequently asked questions about the Braze Dashboard and its features."
 
@@ -39,16 +39,20 @@ guide_featured_list:
   - name: "SMS FAQs"
     link: /docs/user_guide/message_building_by_channel/sms/faqs/
     fa_icon: fas fa-comment-dots
-  - name: Email Best Practices
+
+
+guide_menu_title: "Best Practices"
+guide_menu_list:
+  - name: "Email Best Practices"
     link: /docs/user_guide/message_building_by_channel/email/best_practices/
     fa_icon: fas fa-envelope
-  - name: In-App Message Best Practices
+  - name: "In-App Message Best Practices"
     link: /docs/user_guide/message_building_by_channel/in-app_messages/best_practices/
     fa_icon: fas fa-mobile-alt
-  - name: News Feed Best Practices
+  - name: "News Feed Best Practices"
     link: /docs/user_guide/engagement_tools/news_feed/best_practices/
     fa_icon: fas fa-newspaper
-  - name: Push Best Practices
+  - name: "Push Best Practices"
     link: /docs/user_guide/message_building_by_channel/push/best_practices/
     fa_icon: fas fa-comment-alt
 

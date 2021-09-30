@@ -30,7 +30,7 @@ In order to see whether user location data is being sent to Braze, use the “lo
 
 ## Confirm Data Transfer
 
-Confirm that your developers are passing location data to Braze. Normally the passing of location data is handled automatically by the SDK once the user gives permissions, but it’s possible that your developers have disabled location tracking in Braze. More information on location tracking can be found for:
+Confirm that your developers are passing location data to Braze. Normally, the passing of location data is handled automatically by the SDK once the user gives permissions, but it’s possible that your developers have disabled location tracking in Braze. More information on location tracking can be found for:
 - [Android][26]
 - [iOS][27]
 - [Web][28]

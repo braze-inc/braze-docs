@@ -10,7 +10,7 @@ noindex: true
 
 # Why Is My Control Group So Large?
 
-When you created your Canvas, you may have expected your audience to split evenly between your Control Group and your Variant, like in [our example](#example) below. We can explain why that is and how to fix it!
+When you created your Canvas, you may have expected your audience to split evenly between your control group and your variant, like in [our example](#example) below. We can explain why that is and how to fix it!
 
 Which group a user joins (either the Control Group or a Variant group) depends on their settings. A user will enter a Canvas when they fit all of your criteria defined in the [Entry Step][1]. When setting up your Canvas, you define what percentage of users will enter each variant and the control group.
 

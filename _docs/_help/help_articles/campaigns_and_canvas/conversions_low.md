@@ -12,9 +12,9 @@ noindex: true
 
 # Why Are My Conversions Low?
 
-Your conversions (when your user performs an action within your message that you defined during the creation of your campaign) might not be as high as you expect them to be - whether as compared to previous comparable campaigns or your predictions/expectations. Conversions are a tricky business, but are dependent upon a few simple functions in our platform: event tracking and conversion deadlines.
+Your conversions (when your user performs an action within your message that you defined during the creation of your campaign) might not be as high as you expect them to be, whether as compared to previous comparable campaigns or your predictions/expectations. Conversions are a tricky business, but are dependent upon a few simple functions in our platform: event tracking and conversion deadlines.
 
-To quickly troubleshoot why that is, we recommend that you...
+To quickly troubleshoot why that is, we recommend that you:
 
 * [Check Event Tracking](#ensure-the-event-is-tracking)
 * [Verify Deadline](#verify-the-deadline-to-convert)
@@ -30,7 +30,7 @@ When a campaign triggers a session start or custom event, you want to ensure tha
 
 For each conversion event that you select per campaign, you set the [deadline][44]. This means you are setting a time limit within which a conversion must happen in order for it to count towards each respective campaign.
 
-Please ensure you’ve reviewed Braze's information on [calculating conversions][45] in order to understanding your campaign metrics.
+Check that you’ve reviewed Braze's information on [calculating conversions][45] in order to understanding your campaign metrics.
 
 Still need help? [Open a support ticket]({{site.baseurl}}/support_contact/).
 
