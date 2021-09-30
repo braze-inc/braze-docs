@@ -1,5 +1,5 @@
 ---
-nav_title: Resolving Empty Content Card Feed
+nav_title: Empty Content Card Feed
 article_title: Resolving Empty Content Card Feed
 page_order: 0
 
