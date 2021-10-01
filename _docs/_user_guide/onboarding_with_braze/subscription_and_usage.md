@@ -19,13 +19,9 @@ To navigate to the **Subscriptions and Usage** page, select your account icon on
 
 Here, you will find data usage graphs that apply to your app groups. Common graphs that will appear for customers are Email Sends usage and Data Point usage. Though common, you may find your own dashboard shows different usage metrics based on the products you have purchased. 
 
-![Subscription and Usage][3]{: style="max-width:90%;"}
+![Usage Graphs][3]{: style="max-width:90%;"}
 
-Within these graphs, you will be able to find your yearly capacity for a specific type of usage, stats by month, stats by year, as well as a bar graph visualization of overall app group usage that's color-coded by app group. These usage graphs allow you to select and unselect app groups to isolate usage. Usage graphs like these are particularly helpful when trying to budget usage and gain a deeper understanding of what app groups contribute to overall usage.
-
-{% alert tip %}
-Try dragging your mouse over the different color components for a data point count!
-{% endalert %}
+Usage graphs like these are particularly helpful when trying to budget usage and gain a deeper understanding of what app groups contribute to overall usage.
 
 ### Contract Details
 
