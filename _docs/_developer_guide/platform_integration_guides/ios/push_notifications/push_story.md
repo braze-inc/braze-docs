@@ -236,7 +236,7 @@ Alternatively, to configure Push Story App Group from your `Info.plist` file, ad
 [7]: {% image_buster /assets/img/ios/push_story/spm2.png %}
 [8]: https://github.com/Appboy/appboy-ios-sdk/releases
 [9]: {% image_buster /assets/img/ios/push_story/manual1.png %}
-[ios_pushstory_06]: {% image_buster /assets/img/ios/push_story/ios_pushstory_06.png %}
-[ios_pushstory_07]: {% image_buster /assets/img/ios/push_story/ios_pushstory_07.png %}
-[ios_pushstory_08]: {% image_buster /assets/img/ios/push_story/ios_pushstory_08.png %}
-[ios_pushstory_09]: {% image_buster /assets/img/ios/push_story/ios_pushstory_09.png %}
+[ios_pushstory_06]: {% image_buster /assets/img/ios/push_story/abkstoriesview_class.png %}
+[ios_pushstory_07]: {% image_buster /assets/img/ios/push_story/abkstoriesview_size.png %}
+[ios_pushstory_08]: {% image_buster /assets/img/ios/push_story/notificationcontentextension_plist.png %}
+[ios_pushstory_09]: {% image_buster /assets/img/ios/push_story/abkstoriesview_outlet.png %}
