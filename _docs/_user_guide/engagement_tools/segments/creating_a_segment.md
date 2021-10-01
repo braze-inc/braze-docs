@@ -16,7 +16,8 @@ Your developers have integrated the SDK, and the data from your users have begun
 Segmentation allows you to target users based upon their demographic, behavioral, social, or technical characteristics and actions. Creative and intelligent use of segmentation and messaging automation enables you to seamlessly move your users from first touch to long-term customer. Segments update in real-time as data changes, and you can create as many segments as needed for your targeting and messaging purposes.
 
 ## Step 1: Navigating to the Segments Section
-![Segment1][1]{: style="float:right;max-width:20%;"}
+
+![Segments Menu][1]{: style="float:right;max-width:20%;"}
 
 From the left-hand side of the Dashboard under Engagement, click **Segments**.
 
@@ -26,7 +27,7 @@ Name your segment by describing the type of user you intend to filter for. This 
 
 Optionally, you can add a description to the segment to provide more details about the intention of this audience and leave notes for other team members to refer back to.
 
-![Segment2][2]{: style="max-width:70%;"}
+![Create a Segment][2]{: style="max-width:70%;"}
 
 ## Step 3: Choose Your App or Platform
 
@@ -44,14 +45,14 @@ Add at least one filter to your segment as depicted in the image below. You can 
 Braze doesn't generate profiles for users until they've used the app for the first time, so you can't target users who haven't opened your app yet.
 {% endalert %}
 
-![segment_step4][3]
+![Segment Filters][3]
 
 Choosing "OR" for your filters means that your segment will contain users satisfying any combination of one, some, or all of those filters, while "AND" means that users who do not pass that filter will not be included in your segment. This logic can be combined, so that you can segment users who pass one filter "AND" either one of two other filters.
 
 Notice that the statistics on your segment are changing in real-time as you add and subtract filters. Keep in mind that these statistics are estimates (+/- 1%) and that the exact segment membership is always calculated before a segment is affected by a message sent in a campaign or Canvas.
 
 {% alert important %}
-Please note that segments already using the Segment Membership Filter cannot be further included/nested into other segments. 
+Segments already using the Segment Membership Filter cannot be further included/nested into other segments. 
 {% endalert %}
 
 ### Single-user Segments

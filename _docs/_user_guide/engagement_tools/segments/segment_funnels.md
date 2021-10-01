@@ -10,20 +10,20 @@ description: "This reference article explains how to use Braze Segment Funnels, 
 ---
 # Segment Funnels
 
-> This reference article explains how to use Braze Segment Funnels, their best practices, and some example use cases. 
+> This reference article explains how to use Braze Segment Funnels, their best practices, and some use cases. 
 > <br>
 > <br>
 > Segment funnels are great for narrowing your audience for a specific campaign use case, learning about that audience and their interactions and using that knowledge to strategize and develop effective campaigns.
 
 
-Segment funnels allow you to see how each added filter impacts your segment statistics. When creating a segment, a row of data will appear under each filter. This data will provide the following information for users that are targeted by all filters _up to that point_:
+Segment funnels allow you to see how each added filter impacts your segment statistics. When creating a segment, a row of data will appear under each filter. This data will provide the following information for users that are targeted by all filters up to that point:
 
-- The total number of users targeted and the percentage of your audience base
-- The LTV and LTV for paying users  
-- The number of users emailable
-- The number of users opted in to email
-- The number of users that are push enabled  
-- The number of users opted in to push
+- Total number of users targeted and the percentage of your audience base
+- LTV and LTV for paying users  
+- Number of users emailable
+- Number of users opted in to email
+- Number of users that are push enabled  
+- Number of users opted in to push
 
 ![Segment funnel overview][1]
 
@@ -51,8 +51,7 @@ In the example below, all users who added items to a wish list also made a purch
 ### Compare Messaging Channels
 Create a segment of active users (or users with desired traits) and compare their interactions with different engagement channels, such as the News Feed, email and push notifications. For instance, if more loyal users are subscribed to push, you may want to spend more time on sending active user campaigns via push. If you find that the LTV is higher, however, for those who are subscribed to email, you might want to prompt more active users to subscribe to email.
 
-![Push][5]
-
+![Wish list email][5]
 
 
 [1]: {% image_buster /assets/img_archive/Wish_List.png %}
