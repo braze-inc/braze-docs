@@ -54,34 +54,3 @@ There’s so much more you can do with event data, accessed by Currents. Trust u
 
 A Currents connector is already included in many of our pro- and enterprise-level packages. If you’re interested using Currents, reach out to your account manager. Your account manager and our data specialists can assist in your Currents [setup and integration]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/setting_up_currents/).
 
-## Change Log
-
-### 2020-07-15
-* Added CANVAS_VARIATION_NAME and CANVAS_STEP_NAME to the following events:
-  * users.behaviors.subscriptiongroup.StateChange
-  * users.canvas.Conversion
-  * users.canvas.Entry
-  * users.messages.contentcard.Click
-  * users.messages.contentcard.Dismiss
-  * users.messages.contentcard.Impression
-  * users.messages.contentcard.Send
-  * users.messages.email.Bounce
-  * users.messages.email.Click
-  * users.messages.email.Delivery
-  * users.messages.email.MarkAsSpam
-  * users.messages.email.Open
-  * users.messages.email.Send
-  * users.messages.email.SoftBounce
-  * users.messages.email.Unsubscribe
-  * users.messages.inappmessage.Click
-  * users.messages.inappmessage.Impression
-  * users.messages.pushnotification.Bounce
-  * users.messages.pushnotification.IosForeground
-  * users.messages.pushnotification.Open
-  * users.messages.pushnotification.Send
-  * users.messages.sms.CarrierSend
-  * users.messages.sms.Delivery
-  * users.messages.sms.DeliveryFailure
-  * users.messages.sms.Rejection
-  * users.messages.sms.Send
-  * users.messages.webhook.Send
