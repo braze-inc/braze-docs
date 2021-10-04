@@ -37,7 +37,7 @@ guide_featured_list:
   fa_icon: fas fa-mouse-pointer
 ---
 
-# Requirements
+## Requirements
 
 Before you start sending emails, there are some things you need. Refer to the chart below to learn more.
 
