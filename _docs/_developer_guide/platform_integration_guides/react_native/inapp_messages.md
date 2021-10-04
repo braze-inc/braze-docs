@@ -18,9 +18,9 @@ Native in-app messages display automatically on Android and iOS when using React
 {% tabs %}
 {% tab Android %}
 
-If you want to access the in-app message data in the JavaScript layer, implement the `IInAppMessageManagerListener` as described in our Android section on [Custom Manager Listener]({{site.baseurl}}/developer_guide/platform_integration_guides/android/in-app_messaging/customization/#custom-manager-listener). In your `beforeInAppMessageDisplayed` implementation, you can access the `inAppMessage` data, send it to the JavaScript layer, and decide to show or not show the native message based on the return value.
+If you want to access the in-app message data in the JavaScript layer, implement the `IInAppMessageManagerListener` as described in our Android section on [Custom Manager Listener][1]. In your `beforeInAppMessageDisplayed` implementation, you can access the `inAppMessage` data, send it to the JavaScript layer, and decide to show or not show the native message based on the return value.
 
-For more on these values, see our [Android documentation]({{site.baseurl}}/developer_guide/platform_integration_guides/android/in-app_messaging/).
+For more on these values, see our [Android documentation][10].
 
 ```java
 // In-app messaging
@@ -41,9 +41,9 @@ public InAppMessageOperation beforeInAppMessageDisplayed(IInAppMessage inAppMess
 {% endtab %}
 {% tab iOS %}
 
-If you would like to access the in-app message data in the JavaScript layer, implement the `ABKInAppMessageControllerDelegate` delegate as described in our iOS section on [Core In-App Message Delegate]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/in-app_messaging/customization/#core-in-app-message-controller-delegate). In the `beforeInAppMessageDisplayed:` delegate method, you can access the `inAppMessage` data, send it to the JavaScript layer, and decide to show or not show the native message based on the return value.
+If you would like to access the in-app message data in the JavaScript layer, implement the `ABKInAppMessageControllerDelegate` delegate as described in our iOS section on [Core In-App Message Delegate][3]. In the `beforeInAppMessageDisplayed:` delegate method, you can access the `inAppMessage` data, send it to the JavaScript layer, and decide to show or not show the native message based on the return value.
 
-For more on these values, see our [iOS documentation]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/in-app_messaging/customization/#custom-handling-in-app-message-display).
+For more on these values, see our [iOS documentation][4].
 
 {% subtabs %}
 {% subtab OBJECTIVE-C %}
@@ -117,3 +117,4 @@ A sample implementation can be found in AppboyProject, within the [React SDK][7]
 [7]: https://github.com/Appboy/appboy-react-sdk
 [8]: https://github.com/Appboy/appboy-android-sdk
 [9]: https://github.com/Appboy/appboy-ios-sdk
+[10]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/in-app_messaging/customization
