@@ -100,7 +100,7 @@ You can change the data type of your custom event property, but please be aware 
 When making API calls and using the "is blank" filter, a specific custom event property is considered "blank" if excluded from the call. For example, if you were to include `"event_property": "`, then your users would be considered "not blank".
 {% endalert %}
 
-In regards to subscription usage, custom event properties are all counted as separate data points in addition to the data point counted by the custom event itself.
+In regards to subscription usage, custom event properties enabled for segmentation with the filters `X Custom Event Property in Y Days` or `X Purchase Property in Y Days` are all counted as separate data points in addition to the data point counted by the custom event itself.
 
 ## Custom Event Property Storage
 
