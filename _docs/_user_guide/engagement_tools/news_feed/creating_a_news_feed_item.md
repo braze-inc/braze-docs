@@ -23,7 +23,7 @@ First, you must choose the type of News Feed item you want to send down to your 
 
 #### News Feed Cards
 
-![Classic Card][2]
+![Classic Card][2]{: style="max-width:40%;"}
 
 Standard News Feed cards consist of:
 
@@ -34,7 +34,7 @@ Standard News Feed cards consist of:
 
 #### Captioned Image Cards
 
-![Captioned Image][3]
+![Captioned Image][3]{: style="max-width:40%;"}
 
 Captioned Image cards consist of:
 
