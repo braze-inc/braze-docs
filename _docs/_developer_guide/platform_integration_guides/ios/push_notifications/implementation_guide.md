@@ -207,7 +207,7 @@ Logging analytics can only be done in real-time with the help of the customer's 
 
 ![Personalized Push Dashboard Example][18]{: style="max-width:80%;"}
 
-### Logging Manually 
+### Logging Manually
 
 Logging manually will require you to first configure app groups within Xcode, and then create, save, and retrieve analytics. This will require some custom developer work on your end. The code snippets shown below will help address this. 
 
@@ -850,4 +850,4 @@ extension Dictionary where Key == String, Value == Any {
 [16]: {% image_buster /assets/img/push_implementation_guide/push16.png %}
 [17]: {% image_buster /assets/img/push_implementation_guide/push17.png %}
 [18]: {% image_buster /assets/img/push_implementation_guide/push18.png %}
-[19]: {% image_buster /assets/img_archive/add_app_groups.png %}
+[19]: {% image_buster /assets/img/ios/push_story/add_app_groups.png %}
