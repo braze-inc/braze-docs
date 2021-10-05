@@ -172,6 +172,8 @@ To set an iOS Notification's Relevance Score, enter a value between `0.0` and `1
 
 ![Relevance Score Option][29]
 
+For more information on maximum message lengths for different message types, refer to [Image and Text Specifications]({{site.baseurl}}/user_guide/message_building_by_channel/push/about/#image-and-text-specifications).
+
 [26]: {% image_buster /assets/img_archive/notification_group_dropdown.png %}
 [27]: {% image_buster /assets/img_archive/managenotgroups.png %}
 [28]: {% image_buster /assets/img/ios/interruption-level.png %}

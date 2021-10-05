@@ -71,14 +71,14 @@ Your push messages must fall within the guidelines of the Apple App Store and Go
 {% endtab %}
 {% tab Text %}
 
-**Message Type** | **Max Message Length**
+| Message Type | Recommended Message Length (Text only) | Recommended Message Length (Rich)
 --- | ---
-(iOS) Lock Screen | 110 Characters
-(iOS) Notification Center | 110 Characters
-(iOS) Banner Alert | 63 Characters
-(Android) Lock Screen | 49 Characters
-(Android) Notification Drawer | 597 Characters
-{: .reset-td-br-1 .reset-td-br-2}
+(iOS) Lock Screen | 160 characters | 130 characters
+(iOS) Notification Center | 160 characters | 130 characters
+(iOS) Banner Alert | 80 characters | 65 characters
+(Android) Lock Screen | 49 characters | N/A
+(Android) Notification Drawer | 597 characters | N/A
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 }
 
 {% endtab %}
 {% tab Payload Size %}

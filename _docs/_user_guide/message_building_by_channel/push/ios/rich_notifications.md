@@ -29,6 +29,18 @@ tool:
 - iOS will scale images to fit in the screen and will scale Rich images for the active/locked view.
 - File types that we currently support for direct uploading within our dashboard include JPG, PNG, or GIF. These files can also be entered into the templatable URL field along with these additional file types: AIF, M4A, MP3, MP4, or WAV.
 
+### Character Count
+
+There is no hard and fast rule for the exact size or number of characters to include in a push notification, and these are only guidelines to consider while designing iOS messages. There may be some variance depending on the presence of an image, the notification state and display setting of the user's device, as well as the size of the device.
+
+- Image thumbnails take over about 10 characters per line
+- Notification states affect how the user views the notification:
+  - Messages on lock screen or in notification center will display four lines of text
+  - Messages on active devices will display two lines of text
+  - If a user long taps a message, they will see seven lines of text in the expanded view
+
+> As a general rule of thumb, Braze recommends keeping each line of text for both the optional title and message body to approximately 30-40 characters in a mobile push notification.
+
 ## Setting Up Your iOS Rich Notification
 
 ### Step 1: Create a Campaign
