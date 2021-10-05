@@ -15,17 +15,17 @@ When you turn analytics tracking on for a segment, Braze will let you view sessi
 
 ![Analytics tracking][16]
 
-On the **Revenue** page of the Dashboard, you'll be able to view data on [revenue and purchases over time for this segment][14]. By adding or removing segments from the graph, you can visually compare segment data for any custom time range.
+On the **Revenue** page of the Dashboard, you can view data on [revenue and purchases over time for this segment][14]. To visually compare segment data for any custom time range, add or remove segments from the graph. Select **By Segment** and search for your segments to view them in the chart. Click any legend item to toggle visibility for that metric on or off.
 
 ![Revenue data by segment][17]
 
-Similarly, data on [sessions over time for this particular segment][13] can be found on the **Overview** page.
+Similarly, you can find data on [sessions over time for this particular segment][13] on the **Overview** page.
 
 ![Session data by segment][18]
 
 Braze also provides the ability to view data on [Custom events over time for segments][20], via the **Custom Events** page.
 
-If you don't turn analytics tracking on for a segment, you will still be able to access [realtime statistics][11] for that segment and target its users with campaigns. The only difference is the access to the specific analysis tools mentioned above.
+If you don't turn analytics tracking on for a segment, you can still access [realtime statistics][11] for that segment and target its users with campaigns. The only difference is the access to the specific analysis tools mentioned above.
 
 An app can have tracking turned on for at most 25 segments. Braze recommends tracking segments that are important for you to analyze when understanding your campaigns' effects on sessions, revenue, and purchases.
 
