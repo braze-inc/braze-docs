@@ -11,7 +11,7 @@ channel:
 
 # Apple Shareplay and In-App Messages
 
-> Shareplay is a newly released feature that enables iOS 15 Facetime users to have a shared media experience across their devices, offering real-time audio and video syncing. This integration allows Braze customers to take advantage of the notoriety of Facetime, one of the most popular messaging options for iOS users, and the newly released `GroupActivities` framework to integrate Shareplay into your applications and Braze in-app messages.
+> Shareplay is a newly released feature that enables iOS 15 Facetime users to have a shared media experience across their devices, offering real-time audio and video syncing. This integration allows Braze customers to take advantage of the success of Facetime, one of the most popular video conferencing options for iOS users, and the newly released `GroupActivities` framework to integrate Shareplay into your applications and Braze in-app messages.
 
 ## Overview  
 
