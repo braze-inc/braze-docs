@@ -11,21 +11,28 @@ channel:
 
 # Apple Shareplay and In-App Messages
 
-> Shareplay is a feature that enables iOS 15 users to have a shared media experience across their devices when using Facetime. Syncing audio and video playback controls across compatible devices, the `GroupActivities` framework allows you to leverage Shareplay in your own applications and select Braze messaging channels.
+> Shareplay is a newly released feature that enables iOS 15 Facetime users to have a shared media experience across their devices, offering real-time audio and video syncing. This integration allows Braze customers to take advantage of the notoriety of Facetime, one of the most popular messaging options for iOS users, and the newly released `GroupActivities` framework to integrate Shareplay into your applications and Braze in-app messages.
 
-## Overview 
+## Overview  
 
-The new `GroupActivities` framework released by Apple allows you to leverage Shareplay in your applications and select Braze messaging channels. The responsiveness of in-app messages makes in-app messages the most intuitive choice for sharing shareplay videos and content, as In-app messages can be launched from any screen, allowing you to even trigger in-app messages from your home screen. For our loyal Content Card users, a similar experience can be achieved but requires extra developer work. 
+The new `GroupActivities` framework released by Apple as part of the iOS 15 update allows you to leverage Shareplay in your applications and select Braze messaging channels. Shareplay is a great way for users to experience content with friends and family, offering Braze customers an additional avenue for video content and opportunities to introduce new users to your application.
 
-## Quick Look
+__Why In-App Messages?__<br>The responsiveness of in-app messages makes them the most intuitive choice for sharing shareplay content as In-app messages can be launched from any screen, allowing you to trigger messages from even your home screen. For our loyal Content Card users, a similar experience can be achieved but will require extra developer work.
 
-Shareplay is a great way to get new users introduced to your application. When users initiate a Shareplay video, an "Open" button will appear at the top of their screens. Users who do not have your app downloaded will be redirected to the App Store.
+__What Does it Look Like?__<br>When users initiate a Shareplay video in a Facetime call, an "Open" button will appear at the top of everyone's screen. Once opened, audio and video will be synced across all compatible devices, allowing users to watch videos together in real-time. Those who do not have the app downloaded will be redirected to the App Store.
+
+![Shareplay][1]{: style="max-width:20%;"}
+![Shareplay][2]{: style="max-width:20%;"}
+![Shareplay][3]{: style="max-width:20%;"}
+![Shareplay][4]{: style="max-width:20%;"}
+![Shareplay][5]{: style="max-width:20%;"}
+![Shareplay][6]{: style="max-width:20%;"}
 
 ## Integration
 
 ### Step 1: Configure AVPlayer for In-App Messages
 
-In-app messages can play videos natively with some lightweight developer work. By doing this, you have access to all the `AVPlayerVideoController` features such as SharePlay. The in-app message used for this example is a subclassed `ABKInAppMessageModalViewController` that has a custom view to embed a native video player.
+In-app messages can play videos natively with some lightweight developer work. By doing this, you have access to all the `AVPlayerVideoController` features, such as Shareplay. The in-app message used for this example is a subclassed `ABKInAppMessageModalViewController` that has a custom view to embed a native video player.
 
 ```swift
 func configureVideoPlayer() {
@@ -45,18 +52,19 @@ func configureVideoPlayer() {
   playerViewController.didMove(toParent: self)
 }
 ```
+#### Dashboard Configuration
 
-Please note that as you set up your Shareplay in-app messages that:
-- The video URL must be set in the key-value pairs of the in-app message and cannot be attached to the media item itself. You can add URL validity checking in `beforeInAppMesageDisplayed` as a guardrail before displaying the content.
-- The in-app message should be eligible for all users with re-eligibility enabled. Make sure to trigger appropriately for iOS 15 and non iOS 15 users. Users This can be done by setting two triggers, a default trigger and another trigger for the Shareplay action. Users not on iOS 15 can still view in-app messages but can only be viewed locally. 
-The in-app message should be eligible for all users with re-eligibility enabled. 
-- Be mindful of any other in-app messages triggered on session start that may or may not conflict with each other.
+__Key-Value Pairs__: The video URL must be set in the key-value pairs on the in-app message and cannot be attached to the media item itself. You can add URL validity checking in `beforeInAppMesageDisplayed` as a guardrail before displaying the content.
+
+__Triggering__: The in-app message should be eligible for all users with re-eligibility enabled. Make sure to trigger appropriately for iOS 15 users and non iOS 15 users. This can be done by setting two triggers, a default trigger and another trigger for the Shareplay action. Users not on iOS 15 will only be able to view messages locally. 
+
+{% alert important %}
+Be mindful of any other in-app messages triggered on session start that may conflict with each other.
+{% endalert %}
 
 ### Step 2: Create Group Watching Activity
 
-The `GroupActivities` API determines if there is a video present. If so, trigger the custom event to launch your SharePlay-able in-app message. The code snippet for this logic is detailed in the next section. 
-
-The first thing to do would be to create an object that conforms to the `GroupActivity` protocol. The object is the metadata of the `GroupSession` shared throughout the SharePlay lifecycle. 
+First, create an object that conforms to the `GroupActivity` protocol. The object will be the metadata of the `GroupSession` shared throughout the Shareplay lifecycle. 
 
 ```swift
 struct MediaItem: Hashable, Codable {
@@ -79,12 +87,15 @@ struct MediaItemActivity: GroupActivity {
   }
 }
 ```
+
+#### Prepare To Play
+
 When you prepare to play the media item, each group activity has three states:
 .activationDisabled - viewing individually
 .activationPreferred - viewing together
 .cancelled - ignore and handle gracefully
 
-#### Prepare To Play
+When the state comes back as `activationPreferred`, that is your cue to activate the rest of the group activity lifecycle. 
 
 ```swift
 @available(iOS 15, *)
@@ -95,11 +106,9 @@ func prepareToPlay() {
 }
 ```
 
-When the state comes back as `activationPreferred`, that is your cue to activate the rest of the group activity lifecycle. 
-
 ### Step 3: Launch IAM From Shareplay API
 
-For triggering an in-app message from SharePlay, our trusty `BrazeManager.swift` helper file takes the liberty of checking if there is an enqueued media item from the `GroupActivity`. 
+The `GroupActivities` API determines if there is a video present. If so, you should trigger the custom event to launch your SharePlay-able in-app message. For triggering an in-app message from SharePlay, the `BrazeManager.swift` helper file takes the liberty of checking if there is an enqueued media item from the `GroupActivity`. 
 
 ```swift
 private var subscriptions = Set<AnyCancellable>()  
@@ -122,11 +131,11 @@ private func launchVideoPlayerIfNecessary() {
       .store(in: &subscriptions)
 }
 ```
-The `CoordinationManager` is responsible for the state changes of SharePlay, such as if the user(s) leaves and/or joins the call. 
+The `CoordinationManager` is responsible for the state changes of SharePlay, such as if the user(s) leaves or joins the call. 
 
 ### Step 4: Configure SharePlay Button Visibility
 
-It is expected to dynamically hide/show any SharePlay indicator. Utilize the `isEligibleForGroupSession` variable to observe if the user is currently on a FaceTime call or not. If you happen to be on a FaceTime call, a button will be visible to share the video across the compatible devices in the chat. The first time the user initiates SharePlay, a prompt will appear on the original device to select the options. A subsequent prompt will then appear on the shared users' devices to engage in the content.
+It is best practice to dynamically hide or show any SharePlay indicator. Utilize the `isEligibleForGroupSession` variable to observe if the user is currently on a FaceTime call or not. If they happen to be on a FaceTime call, a button should be visible to share the video across the compatible devices in the chat. The first time the user initiates SharePlay, a prompt will appear on the original device to select the options. A subsequent prompt will then appear on the shared users' devices to engage in the content.
 
 ```swift
 private var isEligibleForSharePlay: Bool = false {
@@ -145,14 +154,6 @@ override func viewDidLoad() {
     .store(in: &subscriptions)
 }
 ``` 
-
-
-
-
-
-
-
-
 
 #### Leaving a Group Session on IAM Dismissal
 
