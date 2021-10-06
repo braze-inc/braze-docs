@@ -60,7 +60,7 @@ You can also switch between desktop, mobile, and plaintext views to get a sense 
 
 When you're ready for a final check, select **Test Send** and send a test message to yourself or a group of content testers to ensure that your email displays properly on a variety of devices and email clients.
 
-![newemailtest][15]
+![New Email Preview][15]
 
 If you see any issues with your email, or want to make any changes, click **Edit Email** to return to the editor.
 

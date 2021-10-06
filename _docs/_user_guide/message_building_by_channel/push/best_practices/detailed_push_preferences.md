@@ -34,7 +34,5 @@ Documentation for setting custom attributes:
 [5]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/analytics/setting_custom_attributes/#setting-custom-attributes
 [6]: {{site.baseurl}}/developer_guide/platform_integration_guides/windows_universal/analytics/setting_custom_attributes/
 [10]: {{site.baseurl}}/developer_guide/rest_api/user_data/#user-attributes-object-specification
-[14]: {% image_buster /assets/img_archive/circa_push1.png %}
-[15]: {% image_buster /assets/img_archive/circa_push2.png %}
 [46]:{% image_buster /assets/img_archive/Push_Window8_Toast.png %}
 [47]:{% image_buster /assets/img_archive/Push_Windows_Universal_Toast.png %}
