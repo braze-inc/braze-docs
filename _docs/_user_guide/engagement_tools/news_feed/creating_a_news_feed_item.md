@@ -17,13 +17,13 @@ To see examples of News Feeds and helpful tips, check out our [Case Studies][13]
 
 First, you must choose the type of News Feed item you want to send down to your users. From the dropdown menu, you can select any of our four News Feed card types.
 
-![Newsfeed1][1]
+![Create News Feed][1]
 
 ### News Feed Card Specifications
 
 #### News Feed Cards
 
-![Classic Card][2]
+<br>![Classic Card][2]{: style="max-width:40%;"}
 
 Standard News Feed cards consist of:
 
@@ -34,7 +34,7 @@ Standard News Feed cards consist of:
 
 #### Captioned Image Cards
 
-![Captioned Image][3]
+<br>![Captioned Image][3]{: style="max-width:40%;"}
 
 Captioned Image cards consist of:
 
@@ -45,7 +45,7 @@ Captioned Image cards consist of:
 
 #### Banner Cards
 
-![NewsFeedBanner][4]
+<br>![NewsFeed Banner][4]{: style="max-width:40%;"}
 
 Banner cards consist of:
 
