@@ -31,13 +31,17 @@ tool:
 
 ### Character Count
 
-There is no hard and fast rule for the exact size or number of characters to include in a push notification, and these are only guidelines to consider while designing iOS messages. There may be some variance depending on the presence of an image, the notification state and display setting of the user's device, as well as the size of the device.
+While there is no hard and fast rule for the exact number of characters to include in a push notification, we [provide some guidelines]({{site.baseurl}}/user_guide/message_building_by_channel/push/about/#image-and-text-specifications) to consider while designing iOS messages. There may be some variance depending on the presence of an image, the notification state and display setting of the user's device, as well as the size of the device.
 
-- Image thumbnails take over about 10 characters per line
+The following may impact how text is displayed in a push notification:
+
+- Image thumbnails take over about 10 characters per line.
 - Notification states affect how the user views the notification:
-  - Messages on lock screen or in notification center will display four lines of text
-  - Messages on active devices will display two lines of text
-  - If a user long taps a message, they will see seven lines of text in the expanded view
+  - Messages on lock screen or in notification center will display four lines of text.
+  - Messages on active devices will display two lines of text.
+  - If a user long taps a message, they will see seven lines of text in the expanded view.
+- Users can increase or decrease the global font size on their phone for accessibility reasons.
+- Messages can be displayed differently based on device size (ie. narrow phone vs wide iPad).
 
 > As a general rule of thumb, Braze recommends keeping each line of text for both the optional title and message body to approximately 30-40 characters in a mobile push notification.
 
