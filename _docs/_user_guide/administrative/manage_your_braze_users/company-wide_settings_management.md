@@ -57,7 +57,7 @@ Slack has an incoming webhook app that [allows messages to be posted from extern
     ![copy_url][64]<br><br>
 3. Navigate to the **Notification Preferences** tab in **Company Settings**.<br><br>
 4. Select the notification that you wish to enable for Slack. Or, if you have multiple notifications that you want to send to this Slack channel, use **Bulk Add** to add the webhook to multiple notifications.<br><br>
-    ![click_edit][65]<br><br>
+    ![Select Slack Notifications][65]{: style="max-width:80%;"}<br><br>
 5. Enter the URL that Slack generated for you.
 
 That's it! You should start receiving notifications about your company to this Slack channel.

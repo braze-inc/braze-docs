@@ -70,41 +70,27 @@ To better understand the expected behavior for channels, please refer to the fol
 
 ## Adding Channels to Braze's Dashboard
 
-* Open any campaign or Canvas that includes an Android push and click **Edit Campaign**.
-* Navigate to the Android Push message composer
-* Click "Manage Notification Channels". Note that any channels added here will be available globally for all campaigns and Canvases and that you must have "manage apps" permissions for your app group to manage channels.
-
-
-![click_here][6]
-
-* Click "Add Notification Channel"
-
-* Enter the name and ID of the notification channel you want to add
-
-![Enter Channel][8]
-
-* Repeat the two steps above for each notification channel that you'd like to add
-
-* Press "save" to save your changes
+1. Open any campaign or Canvas that includes an Android push and click **Edit Campaign**.<br><br>
+2. Navigate to the Android Push message composer.<br><br>
+3. Click __Manage Notification Channels__. Note that any channels added here will be available globally for all campaigns and Canvases and that you must have "manage apps" permissions for your app group to manage channels.<br><br>![Notification Channels][6]<br><br>
+4.  Click __Add Notification Channel__.<br><br>
+5.  Enter the name and ID of the notification channel you want to add.<br><br>![Enter Channel][8]<br><br>
+6. Repeat the two steps above for each notification channel that you'd like to add.<br><br>
+7. Press __Save__ to save your changes.
 
 
 ## Specifying your Fallback Channel
 
 Your fallback channel is the channel that Braze will attempt to send your android message with if you have not selected a channel for the message. The only campaigns and Canvases that will have android messages without a channel selection are campaigns and Canvases that were created before your team added channels to the Braze dashboard. If you change your fallback channel, the change will be applied globally to all campaigns and Canvases without an explicit channel selection.
 
-* Open any existing campaign or Canvas
+1. Open any existing campaign or Canvas
+2. Navigate to the Android push composer
+3. Select "Manage Notification Channels" after expanding the notification channel options.
+4. Add the channel to the dashboard (if it has not already been added)
+5. Select the radio dial next to the channel that you'd like to designate as the fallback channel
+6. Save your changes. Your changes will be applied globally
 
-* Navigate to the android push composer
-
-* Select "Manage Notification Channels"
-
-* Add the channel to the dashboard (if it has not already been added)
-
-* Select the radio dial next to the channel that you'd like to designate as the fallback channel
-
-![change_default][9]
-
-* Save your changes. Your changes will be applied globally
+![change_default][9]{: style="max-width:80%;"}
 
 ## Adding Channels to your Android Push Messages
 

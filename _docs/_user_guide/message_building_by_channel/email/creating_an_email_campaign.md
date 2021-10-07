@@ -29,7 +29,7 @@ From the campaign wizard, name your email and provide an optional description. Y
 
 Braze offers two editing experiences when creating an email campaign, our [Drag & Drop editor]({{site.baseurl}}/dnd/) or our standard HTML editor. Click on the appropriate tile to select which editing experience you'd prefer. Once selected, you must also select an existing [HTML][10] or [Drag & Drop][10] email template, [upload a template from a file][18] (HTML editor only), or use a blank template.
 
-![email1][3]
+![Email Creation][3]
 
 Once you selected your template, you will see an overview of your email where you can quickly jump to the full-screen editor to draft your email, change your sending info, and view warnings about deliverability or law compliance. 
 
@@ -60,7 +60,7 @@ You can also switch between desktop, mobile, and plaintext views to get a sense 
 
 When you're ready for a final check, select **Test Send** and send a test message to yourself or a group of content testers to ensure that your email displays properly on a variety of devices and email clients.
 
-![newemailtest][15]
+![New Email Preview][15]
 
 If you see any issues with your email, or want to make any changes, click **Edit Email** to return to the editor.
 

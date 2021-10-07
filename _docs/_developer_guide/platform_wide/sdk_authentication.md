@@ -2,7 +2,6 @@
 nav_title: SDK Authentication
 article_title: SDK Authentication
 page_order: 5
-hidden: true
 description: "This reference article covers SDK authentication and how to enable this feature in the Braze SDK."
 platform:
   - iOS
@@ -13,7 +12,7 @@ platform:
 
 <br>
 {% alert important %}
-This feature is in _beta_ and only available for Android, Web, and iOS SDKs.
+To enable this feature, please contact our support team or your customer success manager.
 {% endalert %}
 
 # SDK Authentication
