@@ -127,6 +127,8 @@ Purchases.getSharedInstance().setAttributes(attributes);
 
 ## Customization
 
+### Send User Alias Object to Braze
+
 If you are looking to send an alternative unique user identifier that is different than the RevenueCat app user ID, update users with the below data as RevenueCat subscriber attributes.
 
 | Key | Description |
@@ -136,6 +138,10 @@ If you are looking to send an alternative unique user identifier that is differe
 {: .reset-td-br-1 .reset-td-br-2}
 
 Both attributes are required for the [User Alias Object][2] to be sent alongside your event data. These properties can be set manually, like any other [RevenueCat Subscriber Attribute][4].
+
+### Add a Sandbox API Key
+
+If you only provide one Braze REST API Key to RevenueCat, then only production purchase events will be sent. If you also want to send sandbox events, [create another Braze REST API Key][11] and add it to your Braze settings in RevenueCat.
 
 ## Using This Integration
 
@@ -157,3 +163,4 @@ This can be a critical part of your documentation. Though this is optional, this
 [8]: https://docs.revenuecat.com/docs/configuring-sdk
 [9]: https://app.revenuecat.com/login
 [10]: http://127.0.0.1:5006/docs/hidden/wip_partnerships/partnership_template/#customization
+[11]: {{site.baseurl}}/api/basics/#app-group-rest-api-keys
