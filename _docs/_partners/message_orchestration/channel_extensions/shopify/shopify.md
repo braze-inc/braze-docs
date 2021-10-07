@@ -71,21 +71,163 @@ Once the app installation is complete, Braze automatically creates your webhook 
 
 ### Supported Shopify Events
 
-| Event Name | Braze Event Type | Example Payload | Triggered When... |
-| --- | --- | --- | --- |
-| `shopify_abandoned_checkout` | [Custom Event]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events/) |  | Shopify checkout updates webhook's trigger when a customer adds/removes items from their cart AND proceeds further into the checkout process including adding their personal information.<br><br>Braze will listen to the inbound Shopify checkout update webhooks and trigger the `shopify_abandoned_checkout` custom event when that checkout is considered abandoned after __1 hour__ of checkout/cart activity. |
-| `shopify_create_order` | [Custom Event]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events/) |  | Order create events trigger:<br><br>Automatically after a customer has completed a purchase from your Shopify store.<br><br>__OR__<br><br>Manually through the [orders](https://help.shopify.com/en/manual/orders/create-orders) section of your Shopify account.|
-| Purchase | [Braze Purchase Event]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/purchase_events/) |  | Shopify's order create event also immediately triggers a Braze purchase event. |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
+{% tabs local %}
+{% tab Shopify Events %}
+| Event Name | Braze Event Type | Triggered When... |
+| --- | --- | --- |
+| `shopify_abandoned_checkout` | [Custom Event]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events/) | Shopify checkout updates webhook's trigger when a customer adds/removes items from their cart AND proceeds further into the checkout process including adding their personal information.<br><br>Braze will listen to the inbound Shopify checkout update webhooks and trigger the `shopify_abandoned_checkout` custom event when that checkout is considered abandoned after __1 hour__ of checkout/cart activity. |
+| `shopify_create_order` | [Custom Event]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events/) | Order create events trigger:<br><br>Automatically after a customer has completed a purchase from your Shopify store.<br>__OR__<br>Manually through the [orders](https://help.shopify.com/en/manual/orders/create-orders) section of your Shopify account.|
+| Purchase | [Braze Purchase Event]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/purchase_events/) | Shopify's order create event also immediately triggers a Braze purchase event. |
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
+
+{% endtab %}
+{% tab Example Payload %}
+{% subtabs local %}
+{% subtab Checkout Abandoned Event %}
+```json
+{
+  "name": "shopify_abandoned_checkout",
+  "time": "2020-09-10T18:53:37-04:00",
+  "properties": {
+    "applied_discount": {
+      "amount": "30.00",
+      "title": "XYZPromotion",
+      "description": "Promotionalitemforblackfriday."
+    },
+    "discount_code": "30_DOLLARS_OFF",
+    "total_price": "398.00",
+    "line_items": [
+      {
+        "product_id": 632910392,
+        "quantity": 1,
+        "sku": "IPOD2008PINK",
+        "title": "IPodNano-8GB",
+        "vendor": "Apple",
+        "properties": "nil",
+        "price": "199.00"
+      }
+    ],
+    "abandoned_checkout_url": "https://checkout.local/690933842/checkouts/123123123/recover?key=example-secret-token",
+    "checkout_id": "123123123"
+  }
+}
+
+```
+{% endsubtab %}
+{% subtab Order Created Event %}
+```json
+{
+  "name": "shopify_created_order",
+  "time": "2020-09-10T18:53:45-04:00",
+  "properties": {
+    "total_discounts": "5.00",
+    "total_price": "403.00",
+    "discount_codes": [],
+    "line_items": [
+      {
+        "product_id": 632910392,
+        "quantity": 1,
+        "sku": "IPOD2008PINK",
+        "title": "IPodNano-8GB",
+        "vendor": "nil",
+        "name": "IPodNano-8GB",
+        "properties": [],
+        "price": "199.00"
+      }
+    ],
+    "order_id": 820982911946154500,
+    "confirmed": false,
+    "order_status_url": "https://apple.myshopify.com/690933842/orders/123456abcd/authenticate?key=abcdefg",
+    "order_number": 1234,
+    "cancelled_at": "2020-09-10T18:53:45-04:00"
+  }
+}
+```
+{% endsubtab %}
+{% subtab Purchase Event %}
+```json
+{
+  "product_id": 632910392,
+  "currency": "USD",
+  "price": "199.00",
+  "time": "2020-09-10T18:53:45-04:00",
+  "quantity": 1,
+  "source": "shopify",
+  "properties": {
+    "name": "IPodNano-8GB",
+    "sku": "IPOD2008PINK",
+    "title": "IPodNano-8GB",
+    "variant_title": "nil",
+    "vendor": "nil",
+    "properties": []
+  }
+}
+```
+{% endsubtab %}
+{% endsubtabs %}
+{% endtab %}
+{% endtabs %}
 
 ### Supported Shopify Custom Attributes
+{% tabs local %}
+{% tab Shopify Custom Attributes %}
+| Attribute Name | Description |
+| --- | --- |
+| `shopify_accepts_marketing` | The `shopify_accepts_marketing` custom attribute corresponds to the SMS marketing opt-in status that is captured on the checkout page. |
+| `shopify_sms_consent` | The `shopify_sms_consent` custom attribute corresponds to the SMS marketing opt-in status that is captured on the checkout page. |
+| `shopify_tags`  | The `shopify_tags` custom attribute corresponds to the [Customer Tags](https://help.shopify.com/en/manual/shopify-admin/productivity-tools/using-tags#tag-types) set by Shopify admins. |
+{: .reset-td-br-1 .reset-td-br-2}
 
-| Attribute Name | Example Payload | Description |
-| --- | --- | --- |
-| `shopify_accepts_marketing` |  | The `shopify_accepts_marketing` custom attribute corresponds to the SMS marketing opt-in status that is captured on the checkout page. |
-| `shopify_sms_consent` |  | The `shopify_sms_consent` custom attribute corresponds to the SMS marketing opt-in status that is captured on the checkout page. |
-| `shopify_tags` |   | The `shopify_tags` custom attribute corresponds to the [Customer Tags](https://help.shopify.com/en/manual/shopify-admin/productivity-tools/using-tags#tag-types) set by Shopify admins. |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
+{% endtab %}
+{% tab Example Payload %}
+{% subtabs local %}
+{% subtab Shopify SMS Consent %}
+```json
+{
+  "attributes": [
+    {
+      "external_id": "user_id",
+      "shopify_sms_consent": {
+        "state": "subscribed",
+        "opt_in_level": "single_opt_in",
+        "collected_from": "other"
+      }
+    }
+  ]
+}
+```
+{% endsubtab %}
+{% subtab Shopify Accepts Marketing (Email) %}
+```json
+{
+  "attributes": [
+    {
+      "external_id": "user_id",
+      "shopify_accepts_marketing": {
+        "state": "subscribed",
+        "opt_in_level": "single_opt_in",
+        "collected_from": "other"
+      }
+    }
+  ]
+}
+```
+{% endsubtab %}
+{% subtab Shopify Tags %}
+```json
+{
+  "attributes": [
+    {
+      "external_id": "user_id",
+      "shopify_tags": "VIP_customer"
+    }
+  ]
+}
+```
+{% endsubtab %}
+{% endsubtabs %}
+{% endtab %}
+{% endtabs %}
 
 Supported Shopify Standard Attributes
 
@@ -153,12 +295,74 @@ With respect to Personal Data submitted to Braze Services by or on behalf of its
 
 Using nested object support for custom events, Braze Shopify customers can use liquid template variables of the nested event properties. You can find the Liquid templating variables for each event below.
 
-| Event Name | Braze Event Type | Liquid Template Variables | 
-| ------- | ------- | ------- |
-| `shopify_abandoned_checkout` | [Custom Event]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events/) | {%raw%}- {{event_properties.${checkout_id}}}<br>-{{event_properties.${abandoned_checkout_url}}}<br>- {{event_properties.${discount_code}}}<br>- {{event_properties.${total_price}}}<br>- {{event_properties.${applied_discount}[0].amount}}<br>- {{event_properties.${applied_discount}[0].title}}<br>- {{event_properties.${applied_discount}[0].description}}<br>- {{event_properties.${applied_discount}[0].title}}<br>- {{event_properties.${line_items}[0].product_id}}<br>- {{event_properties.${line_items}[0].quantity}}<br>- {{event_properties.${line_items}[0].sku}}<br>- {{event_properties.${line_items}[0].title}}<br>- {{event_properties.${line_items}[0].vendor}}<br>- {{event_properties.${line_items}[0].properties}}<br>- {{event_properties.${line_items}[0].price}}{% endraw %} |
-| `shopify_created_order` | [Custom Event]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events/) | {% raw %}- {{event_properties.${order_id}}}<br>- {{event_properties.${confirmed}}}<br>- {{event_properties.${order_status_url}}}<br>- {{event_properties.${order_number}}}<br>- {{event_properties.${cancelled_at}}}<br>- {{event_properties.${total_discounts}}}<br>- {{event_properties.${total_price}}}<br>- {{event_properties.${discount_codes}}}<br>- {{event_properties.${line_items}[0].product_id}}<br>- {{event_properties.${line_items}[0].quantity}}<br>- {{event_properties.${line_items}[0].sku}}<br>- {{event_properties.${line_items}[0].title}}<br>- {{event_properties.${line_items}[0].vendor}}<br>- {{event_properties.${line_items}[0].properties}}<br>- {{event_properties.${line_items}[0].price}}{% endraw %} |
-| Purchase | [Braze Purchase Event]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/purchase_events/) | {% raw %}- {{event_properties.${line_items}[0].sku}}<br>- {{event_properties.${line_items}[0].title}}<br>- {{event_properties.${line_items}[0].vendor}}<br>- {{event_properties.${line_items}[0].properties}}{% endraw %} |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
+{% tabs %}
+{% tab Shopify Abandon Checkout Event %}
+__Event__: `shopify_abandoned_checkout`<br>
+__Type__: [Custom Event]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events/)
+
+{% raw %}
+| Variable | Liquid Templating |
+| --- | --- |
+| Checkout ID | `{{event_properties.${checkout_id}}}` |
+| Abandoned Card URL | `{{event_properties.${abandoned_checkout_url}}}` |
+| Discount Code | `{{event_properties.${discount_code}}}` |
+| Total Price | `{{event_properties.${total_price}}}` |
+| Discount Amount | `{{event_properties.${applied_discount}[0].amount}}` |
+| Discount Title | `{{event_properties.${applied_discount}[0].title}}` |
+| Discount Description | `{{event_properties.${applied_discount}[0].description}}` |
+| Item ID | `{{event_properties.${line_items}[0].product_id}}` |
+| Item Quantity | `{{event_properties.${line_items}[0].quantity}}` |
+| Item SKU | `{{event_properties.${line_items}[0].sku}}` |
+| Item Title | `{{event_properties.${line_items}[0].title}}` |
+| Item Vendor | `{{event_properties.${line_items}[0].vendor}}` |
+| Item Propeties | `{{event_properties.${line_items}[0].properties}}` |
+| Item Price | `{{event_properties.${line_items}[0].price}}` |
+{% endraw %}
+
+{% endtab %}
+{% tab Shopify Created Order Event %}
+
+__Event__: `shopify_created_order`<br>
+__Type__: [Custom Event]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events/)
+
+{% raw %}
+| Variable | Liquid Templating |
+| --- | --- |
+| Order ID | `{{event_properties.${order_id}}}` |
+| Confirmed Status | `{{event_properties.${confirmed}}}` |
+| Order Status URL | `{{event_properties.${order_status_url}}}` |
+| Order Number | `{{event_properties.${order_number}}}` |
+| Cancelled Timestamp | `{{event_properties.${cancelled_at}}}` |
+| Total Discounts | `{{event_properties.${total_discounts}}}` |
+| Total Price | `{{event_properties.${total_price}}}` |
+| Discount Codes | `{{event_properties.${discount_codes}}}` |
+| Item ID | `{{event_properties.${line_items}[0].product_id}}` |
+| Item Quantity | `{{event_properties.${line_items}[0].quantity}}` |
+| Item SKU | `{{event_properties.${line_items}[0].sku}}` |
+| Item Title | `{{event_properties.${line_items}[0].title}}` |
+| Item Vendor | `{{event_properties.${line_items}[0].vendor}}` |
+| Item Properties | `{{event_properties.${line_items}[0].properties}}` |
+| Item Price | `{{event_properties.${line_items}[0].price}}` |
+{% endraw %}
+
+{% endtab %}
+{% tab Purchase Event %}
+
+__Event__: Purchase<br>
+__Type__: [Braze Purchase Event]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/purchase_events/)
+
+{% raw %}
+| Variable | Liquid Templating |
+| --- | --- |
+| Item SKU | `{{event_properties.${line_items}[0].sku}}` |
+| Item Title  | `{{event_properties.${line_items}[0].title}}` |
+| Item Vendor | `{{event_properties.${line_items}[0].vendor}}` |
+|  Item Properties | `{{event_properties.${line_items}[0].properties}}` |
+{% endraw %}
+
+{% endtab %}
+{% endtabs %}
+
 
 ### Segmentation
 
