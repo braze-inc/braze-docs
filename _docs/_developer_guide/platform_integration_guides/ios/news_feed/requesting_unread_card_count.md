@@ -11,7 +11,7 @@ channel:
 
 # Requesting Unread Card Count
 
-![News Feed Badge Example][45]
+![News Feed Badge Example][45]{: style="float:right;max-width:25%;margin-left:15px;"}
 
 Badges are a great way to call attention to new content awaiting your users in the News Feed. If you'd like to add a badge to your News Feed, the Braze SDK provides methods to query the following:
 
@@ -43,7 +43,7 @@ The method declarations in [ABKFeedController][44] below describe this in detail
 
 ## Displaying Number of Unread News Feed Items on App Badge Count
 
-![Badge Example][42]
+![Badge Example][42]{: style="float:right;max-width:70%;margin-left:15px;"}
 
 In addition to serving as push notification reminders for an app, badges can also be utilized to denote unviewed items in the user's News Feed. Updating the badge count based on unread News Feed updates can be a valuable tool in attracting users back to your app and increasing sessions.
 

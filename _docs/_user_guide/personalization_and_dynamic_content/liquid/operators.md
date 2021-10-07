@@ -110,7 +110,7 @@ You can also [abort messages based on Connected Content][1].
 {% raw %}
 ```liquid
 {% if {{${time_zone.$}}} =='America/Los_Angeles' %}
-Steam now!
+Stream now!
 {% else %}
 {% abort_message () %}
 {% endif %}

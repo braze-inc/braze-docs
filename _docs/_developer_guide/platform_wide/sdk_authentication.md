@@ -13,7 +13,7 @@ platform:
 
 <br>
 {% alert important %}
-This feature is in _beta_ and only available for Android, Web, and iOS SDKs.
+To enable this feature, please contact our support team or your customer success manager.
 {% endalert %}
 
 # SDK Authentication

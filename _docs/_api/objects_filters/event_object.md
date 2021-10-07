@@ -34,11 +34,20 @@ You can check out how to set up custom events for a specific platform by reading
   // Setting this flag to true will put the API in "Update Only" mode.
   // When using a "user_alias", "Update Only" mode is always true.
   "_update_existing_only" : (optional, boolean)
+  // See note below regarding anonymous push token imports
 }
 ```
 
 - [ISO 8601 Time Code Wiki][22]
 - [App Identifier][21]
+
+#### Update Existing Profiles Only
+
+If you wish to update only existing user profiles in Braze, you should pass the `_update_existing_only` key with a value of `true` within the body of your request. If this value is omitted, Braze will create a new user profile if the `external_id` does not already exist.
+
+{% alert note %}
+If you are creating an alias-only user profile via the users/track endpoint, `_update_existing_only` must be set to `false`. If this value is omitted, the alias-only profile will not be created.
+{% endalert %}
 
 ## Event Properties Object
 Custom events and purchases may have event properties. The “properties” values should be an object where the keys are the property names and the values are the property values. Property names must be non-empty strings less than or equal to 255 characters, with no leading dollar signs ($).

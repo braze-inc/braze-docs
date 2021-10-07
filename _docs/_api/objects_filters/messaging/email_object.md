@@ -33,9 +33,9 @@ description: "This article explains the different components of Braze's Email Ob
 
 For more information and best practices on pre-headers, see [our help article on email body styling][46].
 
-An `email_template_id` can be retrieved from the bottom of any Email Template created within the dashboard. Below is an example of what this ID looks like:
+An `email_template_id` can be retrieved from the bottom of any Email Template created with the HTML editor. Below is an example of what this ID looks like:
 
-![Email Template ID][31]
+![API Identifier section of an HTML email template][31]
 
 [31]: {% image_buster /assets/img_archive/email_template_id.png %}
 [46]: {{site.baseurl}}/user_guide/message_building_by_channel/email/best_practices/

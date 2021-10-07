@@ -308,7 +308,7 @@ Braze Geofences can only be requested once per session, either automatically by 
 
 ##### Enable geofences from the Settings page:
 
-![Braze Developer Console]({% image_buster /assets/img_archive/enable-geofences-app-settings-page.png %})
+![Braze Developer Console]({% image_buster /assets/img_archive/enable-geofences-app-settings-page.png %}){: style="max-width:65%;" }
 
 ## Note about Push to Sync
 

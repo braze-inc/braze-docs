@@ -40,7 +40,7 @@ To remove a profile attribute, set it to null. Some fields, such as `external_id
 
 #### Update Existing Profiles Only
 
-If you wish to update only existing user profiles in Braze, you should pass the `_update_existing_only` key with a value of `true` within the body of your request. If this value is omitted, Braze will create a new user profile if the external_id does not already exist.
+If you wish to update only existing user profiles in Braze, you should pass the `_update_existing_only` key with a value of `true` within the body of your request. If this value is omitted, Braze will create a new user profile if the `external_id` does not already exist.
 
 {% alert note %}
 If you are creating an alias-only user profile via the users/track endpoint, `_update_existing_only` must be set to `false`. If this value is omitted, the alias-only profile will not be created.
@@ -86,6 +86,10 @@ For information regarding when you should use a custom event vs a custom attribu
 
 #### Braze User Profile Fields
 
+{% alert important %} 
+The following user profile fields are case sensitive, so be sure to reference these fields in lower case.
+{% endalert %}
+
 | User Profile Field | Data Type Specification |
 | ---| --- |
 | country | (string) We require that country codes be passed to Braze in the [ISO-3166-1 alpha-2 standard][17]. |
@@ -114,10 +118,6 @@ For information regarding when you should use a custom event vs a custom attribu
 {: .reset-td-br-1 .reset-td-br-2}
 
 Language values that are explicitly set via this API will take precedence over the locale information Braze automatically receives from the device.
-
-{% alert note %} 
-The above user profile fields are case sensitive so be sure to reference these fields in lower case.
-{% endalert %}
 
 ####  User Attribute Example Request
 

@@ -9,7 +9,7 @@ description: "This article shows how to set user IDs in your Android app, sugges
 
 ---
  
-# Setting User IDs
+# Setting User IDs for Android/FireOS
  
 {% include archive/setting_user_ids/setting_user_ids.md %}
 

@@ -17,7 +17,7 @@ As an example, say you are sending a push to users of a messaging app, and you h
 
 Influenced Opens are added to the direct opens of a campaign to give a number of total opens. This can be seen on the Details page of a push campaign. Total opens and direct opens are shown in the Message Performance and Historical Performance sections. Influenced Opens are the difference between the two measures.
 
-![Details][1]
+![Influenced Open Details][1]
 
 For more information on tracking opens, check out the conversion tracking section of our [best practices for push][bp].
 

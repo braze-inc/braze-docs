@@ -48,36 +48,31 @@ As described on [this page](https://help.apple.com/developer-account/#/devcdfbb5
 6. Navigate to the [Settings page](https://dashboard-01.braze.com/app_settings/app_settings) in the dashboard and upload the .p8 file.
 7. When prompted, also enter your [app's Bundle Id](https://developer.apple.com/account/ios/identifier/bundle/), the [Key Id](https://developer.apple.com/account/ios/authkey), and your [Team Id](https://developer.apple.com/account/#/membership). Click `Save`.
 
-  {% endtab %}
-  {% tab .p12 Certificate (Legacy) %}
+{% endtab %}
+{% tab .p12 Certificate (Legacy) %}
 __Using a .p12 Certificate (Legacy)__
 
 Alternatively, you may utilize Apple's older authentication scheme (.p12 SSL certificates). Unlike the .p8 solution described above, these certificates automatically expire every year and will require you to regenerate and re-upload them. Braze will send you email reminders as the certificate approaches expiration to help your notifications continue uninterrupted, but because this is a manual process we recommend utilizing the above-described .p8 authentication scheme instead.  However, if you still wish to, you may configure and upload .p12 certificates as described here:
 
-_Step 1: Generate Certificate Signing Request_
+__Step 1: Generate Certificate Signing Request__
 
 1. Navigate to the [iOS Provisioning Portal](https://developer.apple.com/ios/manage/overview/index.action)
-2. Select Identifiers > App IDs in the left sidebar
-
- ![iOSPush3]({% image_buster /assets/img_archive/ios_provisioning.png %})
-
+2. Select Identifiers > App IDs in the left sidebar<br>![iOS Provisioning]({% image_buster /assets/img_archive/ios_provisioning.png %})
 3. Select your application.
-4. If push notifications are not enabled, click Edit to update the app settings
-  ![AppleProvisioningOptions]({% image_buster /assets/img_archive/AppleProvisioningOptions.png %})
-5. Tick the Enable check box and click Create Certificate under the Production SSL Certificate
-  ![iOSPush32]({% image_buster /assets/img_archive/push_cert_gen.png %})
+4. If push notifications are not enabled, click Edit to update the app settings<br>![AppleProvisioningOptions]({% image_buster /assets/img_archive/AppleProvisioningOptions.png %})
+5. Tick the Enable check box and click Create Certificate under the Production SSL Certificate<br>![iOSPush32]({% image_buster /assets/img_archive/push_cert_gen.png %})
 6. Follow the instructions from the SSL certificate assistant. You should now see a green status to indicate that push is enabled.
 
 >  You must update your provisioning profile for the app after you create your SSL certificates. A simple "Refresh" in the organizer will accomplish this.
 
-_Step 2: Export Certificate_
+__Step 2: Export Certificate__
 
 1. Download the production push certificate that you just created and open it with the Keychain Access application.
 2. In Keychain Access, click on My Certificates and locate your push certificate.
 3. Export it as a `.p12` file and use a temporary, unsecure password (you will need this password when uploading your certificate to Braze).
-4. Navigate to the [app settings page](https://dashboard-01.braze.com/app_settings/app_settings) in the dashboard and upload your production certificate.
+4. Navigate to the [Settings](https://dashboard-01.braze.com/app_settings/app_settings) page in the dashboard and upload your production certificate.
 
- ![push upload example]({% image_buster /assets/img_archive/push_cert_upload.png %})
+![push upload example]({% image_buster /assets/img_archive/push_cert_upload.png %})
 
 >  You can upload either your development or production push certificates to the dashboard for your distribution provisioning profile apps, but you can only have one active at a time. As such, if you wish to do repeated testing of push notifications once your app goes live in the App Store, we recommend setting up a separate App Group or App for the development version of your app.
 

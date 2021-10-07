@@ -16,13 +16,19 @@ description: "This article outlines details about the create new User Aliases Br
 
 Use this endpoint to add new user aliases for existing identified users, or to create new unidentified users.
 
+{% alert note %}
+You can add up to 50 user aliases per request.
+{% endalert %}
+
 __Adding a user alias for an existing user__ requires an `external_id` to be included in the new user alias object. If the `external_id` is present in the object but there is no user with that `external_id`, the alias will not be added to any users. If an `external_id` is not present, a user will still be created but will need to be identified later. You can do this using the "Identifying Users" and the `users/identify` endpoint.
 
 __Creating a new alias-only user__ requires the `external_id` to be omitted from the new user alias object. Once the user is created, use the `/users/track` endpoint to associate the alias-only user with attributes, events, and purchases, and the `/users/identify` endpoint to identify the user with an `external_id`.
 
-You can add up to 50 user aliases per request.
-
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#5cf18e64-fd02-452f-8c90-9a0f7c4d0487 {% endapiref %}
+
+{% alert note %}
+A rate limit is applied to requests made to this endpoint for customers who onboarded with Braze on or after September 16, 2021. For more information, see [API Limits]({{site.baseurl}}/api/basics/#api-limits).
+{% endalert %}
 
 ## Request Body
 

@@ -12,6 +12,9 @@ tool: Canvas
 
 guide_featured_title: "Section Articles"
 guide_featured_list:
+  - name: Audience Paths Step
+    link: /docs/user_guide/engagement_tools/canvas/canvas_components/audience_paths/
+    fa_icon: fa fa-users  
   - name: Decision Split Step
     link: /docs/user_guide/engagement_tools/canvas/canvas_components/decision_split/
     fa_icon: fas fa-random
@@ -21,10 +24,10 @@ guide_featured_list:
   - name: Message Step
     link: /docs/user_guide/engagement_tools/canvas/canvas_components/message_step/
     fa_icon: fas fa-comment-alt
-  - name: Audience Sync to Facebook
-    link: /docs/user_guide/engagement_tools/canvas/canvas_components/fb_audience_sync/
+  - name: Facebook Audience Sync
+    link: /docs/partners/canvas_steps/facebook_audience_sync/
     fa_icon: fab fa-facebook
-  - name: Audience Paths Step
-    link: /docs/user_guide/engagement_tools/canvas/canvas_components/audience_paths/
-    fa_icon: fa fa-users
+  - name: Google Audience Sync
+    link: /docs/partners/advertising_technologies/social/canvas_steps/google_audience_sync/
+    fa_icon: fab fa-google
 ---

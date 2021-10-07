@@ -21,7 +21,7 @@ To see examples of email campaigns, check out our [Case Studies][9].
 ## Step 1: Create a New Campaign
 
 On the **Campaigns** page, click **Create Campaign** and select **Email** as your messaging channel.
-![newcampaign][19]
+![New Campaign Page][19]
 
 ## Step 2: Select Your Editing Experience {#step-2-choose-your-template-and-compose-your-email}
 
@@ -29,7 +29,7 @@ From the campaign wizard, name your email and provide an optional description. Y
 
 Braze offers two editing experiences when creating an email campaign, our [Drag & Drop editor]({{site.baseurl}}/dnd/) or our standard HTML editor. Click on the appropriate tile to select which editing experience you'd prefer. Once selected, you must also select an existing [HTML][10] or [Drag & Drop][10] email template, [upload a template from a file][18] (HTML editor only), or use a blank template.
 
-![email1][3]
+![Email Creation][3]
 
 Once you selected your template, you will see an overview of your email where you can quickly jump to the full-screen editor to draft your email, change your sending info, and view warnings about deliverability or law compliance. 
 
@@ -60,7 +60,7 @@ You can also switch between desktop, mobile, and plaintext views to get a sense 
 
 When you're ready for a final check, select **Test Send** and send a test message to yourself or a group of content testers to ensure that your email displays properly on a variety of devices and email clients.
 
-![newemailtest][15]
+![New Email Preview][15]
 
 If you see any issues with your email, or want to make any changes, click **Edit Email** to return to the editor.
 
@@ -119,7 +119,6 @@ When the trigger action is set to "Interact With Campaign", selecting a "Receive
 
 Check out our [API-Triggered endpoints found in the API Guide]({{site.baseurl}}/developer_guide/rest_api/messaging/#sending-messages-via-api-triggered-delivery) for more information on API-Triggered Delivery.
 
-![API]({% image_buster /assets/img_archive/api_delivered_new.png %}){: height="80%"" width="80%"}
 {% endtab %}
 {% endtabs %}
 
@@ -187,7 +186,6 @@ On the **Retention Report** page, you can run various reports to measure user re
 
 On the **Funnel Report** page, you can analyze the journeys your customers take after receiving your campaign. If your campaign uses a control group or multiple variants, you will be able to understand how the different variants have impacted the conversion funnel at a more granular level, and optimize based on this data. [Learn more]({{site.baseurl}}/user_guide/engagement_tools/campaigns/testing_and_more/campaign_funnel_report/).
 
-[1]: {% image_buster /assets/img_archive/newcampaign_new.png %}
 [3]: {% image_buster /assets/img_archive/choose_email_creation.png %}
 [5]: {% image_buster /assets/img_archive/targetsegment_email_new.png %}
 [6]: {% image_buster /assets/img_archive/confirm_email.png %}

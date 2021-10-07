@@ -5,7 +5,7 @@ hidden: true
 ---
 <br>
 {% alert note %}
-Nested custom attribute support is currently in beta. Please contact your Braze account manager if you are interested in participating in the beta.
+Support for nested custom attributes is currently in early access. Please contact your Braze account manager if you are interested in participating in the early access.
 {% endalert %}
 
 # Nested Custom Attribute Support
@@ -19,12 +19,12 @@ Objects can contain existing [data types][1], such as:
 - Booleans
 - Arrays
 - Other objects
+- [Arrays of objects]({{site.baseurl}}/array_of_objects/)
 
 ## Limitations
 
 - Available on custom attributes sent via API only, the Braze SDKs are not yet supported.
 - Partners do not yet support nested custom attributes. Until this is supported, we recommend against using this feature with app groups that have partner integrations enabled.
-- Arrays of objects are not currently supported, but they are coming soon. Looking for this feature? [Schedule a chat][4] with the product team.
 - Datetimes are not supported in objects.
 - Objects have a maximum size of 50KB.
 - Key names and string values have a size limit of 255 characters.
@@ -59,7 +59,7 @@ Shown below is a `/users/track` example with a "Most Played Song" object. To cap
 
 {% endtab %}
 {% tab Update %}
-To update an existing object, send a POST to `users/track` with the `_merge_objects` parameter in the request. This will deep merge your update with the existing object data. In this example, we already have a `most_played_song` object in Braze, and now we're adding a new field, `year_released`, to the `most_played_song` object.
+To update an existing object, send a POST to `users/track` with the `_merge_objects` parameter in the request. This will deep merge your update with the existing object data. Deep merging ensures that all levels of an object are merged into another object instead of only the first level. In this example, we already have a `most_played_song` object in Braze, and now we're adding a new field, `year_released`, to the `most_played_song` object.
 
 ```
 {

@@ -24,9 +24,9 @@ When using link templates and [Liquid]({{site.baseurl}}/user_guide/personalizati
 
 ## Creating a Link Template
 
-To create a link template, navigate to the **Templates & Media** page, and select the **Link Templates** tab. You can create an unlimited number of link templates to support your various needs. Click **Create Link Template** to get started.
+![Create Link Template][11]{: style="float:right;max-width:30%;"}
 
-![Create Link Template][11]
+To create a link template, navigate to the **Templates & Media** page, and select the **Link Templates** tab. You can create an unlimited number of link templates to support your various needs. Click **Create Link Template** to get started.
 
 {% alert note %}
 Link templates are an optional feature. If the **Link Templates** tab is missing from your **Templates & Media** page, reach out to your Customer Success Manager or Account Manager to enable the feature flipper for link templates.
@@ -43,7 +43,7 @@ If you want to add a string or URL before the links in your email message, creat
 
 A preview section is provided to give you an example of the insertion process.
 
-![pre-append]({% image_buster /assets/img_archive/link_template_preappend.png %})
+![Pre Append]({% image_buster /assets/img_archive/link_template_preappend.png %})
 
 ### Append: Create a Link Template that Inserts After a URL {#append-link-template}
 
@@ -51,7 +51,7 @@ If you want to add query parameters after a URL in your email message, create a 
 
 You can have multiple parameters appended to the end of a URL.
 
-![postappend]({% image_buster /assets/img_archive/link_template_postappend.png %})
+![Post Append]({% image_buster /assets/img_archive/link_template_postappend.png %})
 
 ## Using Your Templates in Email Campaigns
 
@@ -59,7 +59,7 @@ Once your templates are set up, you can select which template you would like to 
 
 From the email editor, click **Content Library** and select the **Link Templating** tab. You will see all the links present in your email and can add the template from there.
 
-![messagecomposer][1]
+![Message Composer][1]
 
 ## Managing Link Templates
 
@@ -78,4 +78,4 @@ For answers to frequently asked questions about link templates, check out our [E
 [3]:{% image_buster /assets/img_archive/link_template_preappend.png %}
 [4]: {{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/
 [10]: {{site.baseurl}}/user_guide/message_building_by_channel/email/templates/faq/
-[11]: {% image_buster /assets/img_archive/create_link_template.gif %}
+[11]: {% image_buster /assets/img_archive/create_link_template.png %}
