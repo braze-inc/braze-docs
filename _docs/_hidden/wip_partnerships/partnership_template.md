@@ -1,5 +1,5 @@
 ---
-nav_title: Your Partner Page
+nav_title: RevenueCat
 page_order: 1
 
 description: "RevenueCat can automatically send subscription revenue events to Braze. This can be helpful in understanding what stage a customer is in to react accordingly. With accurate and up-to-date subscription data in Braze, you'll be set to turbocharge your campaigns."
