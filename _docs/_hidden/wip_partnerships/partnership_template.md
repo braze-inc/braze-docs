@@ -2,7 +2,7 @@
 nav_title: Your Partner Page
 page_order: 1
 
-description: "This is the Google Search and SEO description that will appear, try to make this informative and concise, yet brief."
+description: "RevenueCat can automatically send subscription revenue events to Braze. This can be helpful in understanding what stage a customer is in to react accordingly. With accurate and up-to-date subscription data in Braze, you'll be set to turbocharge your campaigns."
 alias: /partners/revenuecat/
 
 page_type: partner
