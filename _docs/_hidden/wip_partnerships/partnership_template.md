@@ -1,64 +1,94 @@
 ---
-nav_title: Your Partner Page
+nav_title: Judo
 page_order: 1
-
-description: "This is the Google Search and SEO description that will appear, try to make this informative and concise, yet brief."
-alias: /partners/your_partner_name/
-
+description: "Use the Judo no-code server-driven UI platform with the Braze marketing automation platform"
+alias: /partners/judo/
 page_type: partner
-hidden: true
 ---
 
-# [Partner Name]
+# Judo
 
-> Welcome to the Partner Page Template! Here, you'll find everything you need to create your partner page. In this first section, you should describe the partner in the first paragraph in a sentence or two. Also, include a link to that partner's main site.
+> [Judo](https://judo.app) is a server-driven UI platform that empowers publishers to efficiently deliver rich, engaging in-app user experiences without app updates.
 
-In the second paragraph, you should explore and explain the relationship between Braze and this partner. This paragraph should explain how Braze and this partner work together to tighten the bond between the Braze User and their customer. Explain the "elevation" that occurs when a Braze User integrates with or leverages this partner and their services.
+Developers integrating Braze marketing automation with Judo experiences will find elevated value for their joint customers. Superior targeting, personalization, and campaign orchestration from Braze are linked to bespoke experiences from Judo. Instead of a simple, templated landing page experience, a Braze campaign may incorporate content that comprises multiple screens, modals, video, custom fonts, and support settings such as dark mode and accessibility built without code and deployed without app updates. Data from Braze may be used to support personalized content in a Judo experience. User events and data from the experience can feedback into Braze for attribution and targeting.
 
-## Requirements or Prerequisites
+## Prerequisites
 
-This section is all about what you need to integrate with the partner and start using their services. The best way to deliver this information is with a quick instructional paragraph that describes any non-technical important details of "need to know" information, like whether or not your integration will be subject to additional security checks or clearances. Then, you should use a chart to describe the technical requirements of the integration.
-
-{% alert important %}
-The requirements listed below are typical requirements you might need from Braze. We recommend using the attributed titling, origin, links, and phrasing as listed in the chart below. Be sure to adjust the description so that you know what each of these requirements is used to do.
-{% endalert %}
+First, you will need to have already integrated both Braze and Judo into your apps.
 
 | Requirement | Origin | Access | Description |
 |---|---|---|---|
-| Braze API Key | Braze | You will need to create a new API Key.<br><br>This can be created in the __Developer Console -> API Settings -> Create New API Key__ with __users.track__ permissions. | This description should tell you what to do with the Braze API Key. |
-| Braze REST Endpoint | Braze | [Braze REST Endpoint List][1] | Your REST Endpoint URL. Your endpoint will depend on the Braze URL for your instance. |
+| Judo Account | Judo | [Judo](https://www.judo.app/) | You'll need a Judo account in order to host Experiences for launch from Braze. |
+| Judo SDK | Judo | [Judo iOS SDK](https://github.com/judoapp/judo-ios/) and [Judo Android SDK](https://github.com/judoapp/judo-android) | You'll need the Judo SDKs integrated into your iOS and/or Android apps. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
 
-## [Type of Integration] Integration
+## Side-by-Side SDK Integration
 
-This is where you break down the integration into steps. Do not just write endless paragraphs - these are technical documents that will be used by marketers and developers alike to get the integration up and running. Your only goal for this section is to write descriptive documentation that helps the Braze User get the job done. By 'Type of Integration' in the section title, we mean to indicate whether or not this is a Side-by-Side integration, server-to-server, or Out-of-the-Box. This enables you to have multiple Integration Sections if there is more than one way to integrate with this partner.
+Judo offers additional libraries that automate some of the effort necessary to integrate the Judo and Braze SDKs side-by-side in your mobile apps. 
 
-### Step 1: This Is a Short Description of Step One
+### Step 1: Install the Judo-Braze Integration Library
 
-Just break this down, including any code as necessary. Remember that you can offer several different sets of code - there's no need to only offer one way to integrate.
+Install and set up the Judo-Braze integration library into your apps. This will automatically enable event tracking.
 
-### Step 2: This Step Will Describe Images
+- [iOS installation
+instructions](https://github.com/judoapp/judo-braze-ios/wiki#installation)
+- [Android installation
+instructions](https://github.com/judoapp/judo-braze-android/wiki#installation).
 
-You have the option to put images in your documentation, so we recommend you do and do so mindfully.
+### Step 2: Configure In-App Messaging
 
-### Step 3: How Many Steps
+This step will involve creating custom `ABKInAppMessageControllerDelegate` and `IInAppMessageManagerListener` implementations for iOS and Android.
 
-Outline thorough usage of the integration - especially if it means inserting Liquid into our message composer.
+See the in-app message setup documentation bundled for each of the integration libraries:
 
-## Customization
+- [iOS In-App Messaging
+Setup](https://github.com/judoapp/judo-braze-ios/wiki#in-app-messaging-setup)
+- [Android In-App Messaging
+Setup](https://github.com/judoapp/judo-braze-android/wiki#in-app-messaging-setup).
 
-This is an __optional__ section. Here, you could outline any specific ways to customize your integration between the two partners.
+## Using this Integration
 
-## Using This Integration
+Once you have finished the app-side integration, you can test it by running a test Braze in-app message campaign for a Judo Experience to verify that it runs as expected.
 
-This should describe how to use the integration - let your reader know if they need to push a few buttons or if they don't need to do anything at all after the integration.
+### Step 1: Creating an In-App Message Campaign
 
-### Step 1: This Is a Short Description of Step One
+From the Braze platform, create a Braze in-app message campaign with a __HTML Custom View__ type. Advance through each of the steps by clicking the __Forward__ button at the bottom of the page.
 
-Just your typical step by step how to.
+![Braze Create Campaign Menu][1]
+
+### Step 2: Selecting "Custom Code" Message Type
+
+While any of the message types should work, we recommend using the __Custom Code__ message type. Make sure to populate the content of the message with the base in-app messaging fields. Note that this content will not be shown to the user.
+
+![Braze Custom Code Campaign][2]
+
+Next, use the following minimal HTML snippet to satisfy the form validation: `<a href="appboy://close">X</a>`.
+
+Note that this will not be displayed in production on your device as Judo will rewrite and replace this with a Judo experience.
+
+![Braze HTML Snippet][3]
+
+### Step 3: Set a Key-Value Pair for Judo
+
+Next, set a [custom key-value pair]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/key_value_pairs/) on the campaign with a key of `judo-experience`. Provide the URL of the Judo Experience you'd like to show here. The Judo-Braze integration library will then detect thie key-value pair in the handler and use to inject your Judo Experience in place of the standard Braze in-app message UI.
+
+![Braze Campaign Extras Configuration][4]
+
+### Step 4: Finishing the Campaign
+
+Lastly, complete the campaign, setting up a trigger for the campaign and selecting users via Segments in the __Delivery__ and __Target User__ sections. For information on the different components of a Braze in-app message, visit our documentation [here]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/create/).
 
 ## Use Cases
 
-This can be a critical part of your documentation. Though this is optional, this is a good place to outline typical or even novel use cases for the integration. This can be used as a way to sell or upsell the relationship - it provides context, ideas, and most importantly a way to visualize the capabilities of the integration.
+The Judo no-code, server-driven UI platform can support the delivery of new custom user experiences to an application without any app updates. There are numerous use cases when used in conjunction with Braze's marketing automation.
 
-[1]: {{site.baseurl}}/developer_guide/rest_api/basics/#endpoints)
+**Onboarding**: App publishers using Judo build and deploy rich, native onboarding experiences. These experiences can now be one element in a personalized cross-channel onboarding journey coordinated via Braze. Experiences may be personalized and quickly iterated on without any app updates to test the effectiveness of different in-app flows.
+
+**Conversion**: App publishers can use data from Braze to create a personalized rich in-app experience to drive in-app purchases, paid subscriptions, or contextual merchandising using integration hooks in Judo. Access to these experiences may be triggered via engagement marketing campaigns created in Braze.
+
+**Event-Driven Content**: A primary use for Judo in sports and entertainment is building rich experiences to preview, promote and recap events. This capability has broad applications in other verticals for seasonal and news-driven content. Linking messaging to promote or highlight events in a timely manner to rich in-app experiences empowers publishers to drive engagement by being contextually relevant.
+
+[1]: {% image_buster /assets/img/judo/braze-create-campaign-menu.png %}
+[2]: {% image_buster /assets/img/judo/braze-campaign-select-custom-type.png %}
+[3]: {% image_buster /assets/img/judo/braze-html-boilerplate.png %}
+[4]: {% image_buster /assets/img/judo/braze-campaign-extras-judo-experience.png %}
