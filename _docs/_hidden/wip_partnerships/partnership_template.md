@@ -3,62 +3,157 @@ nav_title: Your Partner Page
 page_order: 1
 
 description: "This is the Google Search and SEO description that will appear, try to make this informative and concise, yet brief."
-alias: /partners/your_partner_name/
+alias: /partners/revenuecat/
 
 page_type: partner
 hidden: true
 ---
 
-# [Partner Name]
+# RevenueCat
 
-> Welcome to the Partner Page Template! Here, you'll find everything you need to create your partner page. In this first section, you should describe the partner in the first paragraph in a sentence or two. Also, include a link to that partner's main site.
+> RevenueCat is a powerful, reliable, and free to use in-app purchase server with cross-platform support that allows you to keep track of all of your app transactions in one place.
 
-In the second paragraph, you should explore and explain the relationship between Braze and this partner. This paragraph should explain how Braze and this partner work together to tighten the bond between the Braze User and their customer. Explain the "elevation" that occurs when a Braze User integrates with or leverages this partner and their services.
+RevenueCat can automatically send subscription events to Braze via a server-to-server integration. This can be helpful in understanding what stage a customer is in to react accordingly. For example, you might want to:
 
-## Requirements or Prerequisites
+- Send an onboarding campaign to a user in a free trial
+- Allow customer support grant a promotional subscription to a loyal user that experienced issues
+- Send campaigns to users that cancelled free trials
 
-This section is all about what you need to integrate with the partner and start using their services. The best way to deliver this information is with a quick instructional paragraph that describes any non-technical important details of "need to know" information, like whether or not your integration will be subject to additional security checks or clearances. Then, you should use a chart to describe the technical requirements of the integration.
+## Requirements
 
-{% alert important %}
-The requirements listed below are typical requirements you might need from Braze. We recommend using the attributed titling, origin, links, and phrasing as listed in the chart below. Be sure to adjust the description so that you know what each of these requirements is used to do.
-{% endalert %}
+At a minimum, you will need to set up the server-to-server integration in RevenueCat in order to connect RevenueCat to Braze. If you're using the Braze SDK, you can use the RevenueCat and Braze SDKs together to enhance the integration.
 
 | Requirement | Origin | Access | Description |
 |---|---|---|---|
-| Braze API Key | Braze | You will need to create a new API Key.<br><br>This can be created in the __Developer Console -> API Settings -> Create New API Key__ with __users.track__ permissions. | This description should tell you what to do with the Braze API Key. |
-| Braze REST Endpoint | Braze | [Braze REST Endpoint List][1] | Your REST Endpoint URL. Your endpoint will depend on the Braze URL for your instance. |
+| RevenueCat Account and Configured App | RevenueCat | [https://app.revenuecat.com/login][9] | You must have an active account and a configured app with RevenueCat to use their service. |
+| RevenueCat SDK Integration | RevenueCat | [https://docs.revenuecat.com/docs/configuring-sdk][8] | RevenueCat must be successfully installed in your app. |
+| Braze SDK Integration | Braze | For more details regarding Braze’s SDKs, please refer to our [iOS][5], [Android][6] and [Web][7] documentation. | It's strongly recommended to install the Braze SDK to provide user aliases to RevenueCat. |
+| Braze API Key | Braze | Your API key can be found in the Developer Console -> Settings -> REST API Keys. | RevenueCat requires the API key to send server-side to Braze. |
+| Braze Instance | Braze | Your Braze Instance can be obtained from your Braze onboarding manager. | RevenueCat requires the Braze Instance to send server-side to the correct Braze REST endpoint. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
 
-## [Type of Integration] Integration
+## Server-to-Server Integration
 
-This is where you break down the integration into steps. Do not just write endless paragraphs - these are technical documents that will be used by marketers and developers alike to get the integration up and running. Your only goal for this section is to write descriptive documentation that helps the Braze User get the job done. By 'Type of Integration' in the section title, we mean to indicate whether or not this is a Side-by-Side integration, server-to-server, or Out-of-the-Box. This enables you to have multiple Integration Sections if there is more than one way to integrate with this partner.
 
-### Step 1: This Is a Short Description of Step One
+### Step 1: Configure Braze Settings in RevenueCat
 
-Just break this down, including any code as necessary. Remember that you can offer several different sets of code - there's no need to only offer one way to integrate.
+Navigate to your app in the RevenueCat dashboard and choose 'Braze' from the integrations menu and add your Braze instance and API key.
 
-### Step 2: This Step Will Describe Images
+![braze_settings_in_revenuecat][3]
 
-You have the option to put images in your documentation, so we recommend you do and do so mindfully.
+### Step 2: Configure Event Names in RevenueCat
 
-### Step 3: How Many Steps
+Enter the event names that RevenueCat will send or choose the default event names by clicking **Use default event names**. The events that RevenueCat supports sending are described in the chart below.
 
-Outline thorough usage of the integration - especially if it means inserting Liquid into our message composer.
+| Event | Description |
+|---|---|
+| Initial Purchase | The first purchase of an auto-renewing subscription product that does not contain a free trial. |
+| Trial Started | The start of an auto-renewing subscription product free trial. |
+| Trial Converted | When an auto-renewing subscription product converts from a free trial to normal paid period. |
+| Trial Cancelled | When a user turns off renewals for an auto-renewing subscription product during a free trial period. |
+| Renewal | When an auto-renewing subscription product renews OR a user repurchases the auto-renewing subscription product after a lapse in their subscription. |
+| Cancellation | When a user turns off renewals for an auto-renewing subscription product during the normal paid period. |
+| Non Subscription Purchase | The purchase of any product that's not an auto-renewing subscription. |
+
+For events that have revenue, such as trial conversions and renewals, RevenueCat will automatically record this amount along with the event in Braze.
+
+### Step 3: Set Braze User Identity
+
+In the Braze SDK, you can set the User ID to match the RevenueCat App User ID. This way, events sent from the Braze SDK and events sent from RevenueCat can be synced to the same user.
+
+Configure the Braze SDK with the same App User ID as RevenueCat or use the `.changeUser()` method on the Braze SDK.
+
+Optionally, you can also [set RevenueCat Subscriber Attributes][10] for the name and label of the user which will allow RevenueCat to send a User Alias Object to Braze.
+
+{% tabs %}
+{% tab swift %}
+```swift
+// Configure Purchases SDK
+Purchases.configure(withAPIKey: "public_sdk_key", appUserID: "my_app_user_id")
+
+// Change user in Braze SDK
+Appboy.sharedInstance()?.changeUser("my_app_user_id")
+
+// [Optional] Set User Alias Object attributes
+Purchases.shared.setAttributes(["$brazeAliasName" : "name", 
+                             "$brazeAliasLabel" : "label"])
+```
+{% endtab %}
+{% tab objective-c %}
+```objc
+// Configure Purchases SDK
+[RCPurchases configureWithAPIKey:@"public_sdk_key" appUserID:@"my_app_user_id"];
+
+// Change user in Braze SDK
+[[Appboy sharedInstance] changeUser:@"my_app_user_id"];
+
+// [Optional] Set User Alias Object attributes
+[[RCPurchases sharedPurchases] setAttributes:@{
+    @"$brazeAliasName": @"name",
+    @"$brazeAliasLabel": @"label"
+}];
+```
+{% endtab %}
+{% tab kotlin %}
+```kotlin
+// Configure Purchases SDK
+Purchases.configure(this, "public_sdk_key", "my_app_user_id");
+
+// Change user in Braze SDK
+Braze.getInstance(this).changeUser("my_app_user_id");
+
+// [Optional] Set User Alias Object attributes
+Purchases.sharedInstance.setAttributes(mapOf("$brazeAliasName" to "name",
+                                             "$brazeAliasLabel" to "label"));
+```
+{% endtab %}
+{% tab java %}
+```java
+// Configure Purchases SDK
+Purchases.configure(this, "public_sdk_key", "my_app_user_id");
+
+// Change user in Braze SDK
+Braze.getInstance(this).changeUser("my_app_user_id");
+
+// [Optional] Set User Alias Object attributes
+Map<String, String> attributes = new HashMap<String, String>();
+attributes.put("$brazeAliasName", "name");
+attributes.put("$brazeAliasLabel", "label");
+
+Purchases.getSharedInstance().setAttributes(attributes);
+```
+{% endtab %}
+{% endtabs %}
 
 ## Customization
 
-This is an __optional__ section. Here, you could outline any specific ways to customize your integration between the two partners.
+If you are looking to send an alternative unique user identifier that is different than the RevenueCat app user ID, update users with the below data as RevenueCat subscriber attributes.
+
+| Key | Description |
+|---|---|
+| `$brazeAliasName	` | The Braze `alias_name` in the [User Alias Object][2] |
+| `$brazeAliasLabel		` | The Braze `alias_label` in the [User Alias Object][2] |
+{: .reset-td-br-1 .reset-td-br-2}
+
+Both attributes are required for the [User Alias Object][2] to be sent alongside your event data. These properties can be set manually, like any other [RevenueCat Subscriber Attribute][4].
 
 ## Using This Integration
 
-This should describe how to use the integration - let your reader know if they need to push a few buttons or if they don't need to do anything at all after the integration.
-
-### Step 1: This Is a Short Description of Step One
-
-Just your typical step by step how to.
+After configuring Braze Settings in RevenueCat, events will automatically begin flowing from RevenueCat to Braze without any other action on your part.
 
 ## Use Cases
 
 This can be a critical part of your documentation. Though this is optional, this is a good place to outline typical or even novel use cases for the integration. This can be used as a way to sell or upsell the relationship - it provides context, ideas, and most importantly a way to visualize the capabilities of the integration.
 
+**TBD**
+
 [1]: {{site.baseurl}}/developer_guide/rest_api/basics/#endpoints)
+[2]: {{site.baseurl}}/api/objects_filters/user_alias_object/
+[3]: {% image_buster /assets/img/revenuecat/braze_settings_in_revenuecat.png %}
+[4]: https://docs.revenuecat.com/docs/subscriber-attributes
+[5]: {{site.baseurl}}/developer_guide/platform_integration_guides/ios/initial_sdk_setup/
+[6]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/initial_sdk_setup/android_sdk_integration/
+[7]: #customization
+[8]: https://docs.revenuecat.com/docs/configuring-sdk
+[9]: https://app.revenuecat.com/login
+[10]: http://127.0.0.1:5006/docs/hidden/wip_partnerships/partnership_template/#customization
