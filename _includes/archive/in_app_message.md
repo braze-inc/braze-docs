@@ -36,7 +36,7 @@ Full in-app message content is displayed in a WKWebView and may optionally conta
 
 ### In-App Messages (Triggered)
 
-The following documentation refers to Braze's `In-App Messaging` product, aka "triggered in-app messages," which are branded as highlighted below in the "Create Campaign" drop-down:
+The following documentation refers to Braze's `In-App Messaging` product, also known as "triggered in-app messages," which are branded as highlighted below in the "Create Campaign" drop-down:
 
 ![In-App Messaging Composer][in_app_message_13]
 
