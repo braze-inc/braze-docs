@@ -99,7 +99,7 @@ __Anonymous Users__<br>
 #### What Braze Syncs
 Braze syncs the following attributes on the user profile only if there was a change.
 
-| Braze Standard Attributes | Braze Custom Attributes | Alias Object |
+| Braze Default Attributes | Braze Custom Attributes | Alias Object |
 | ------- | ------- | ------- |
 | - Email<br>- First Name<br>- Last Name<br>- Phone<br>- City<br>- Country | - `shopify_accepts_marketing`<br>- `shopify_tags` | - `alias_label`: `(shopify_customer_id)`<br>- `alias_value`: `shopify_customer_id` |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}

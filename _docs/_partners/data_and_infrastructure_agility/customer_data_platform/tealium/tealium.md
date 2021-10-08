@@ -67,7 +67,7 @@ Remote commands allow customers to trigger code in their apps by using a tag in 
 
 Using remote commands, the Braze and Tealium SDKs work in tandem allowing customers to make calls from the Tealium SDK - through the Braze servers - to Braze. Here, the Tealium tags travel back to be mapped by Braze. __The Braze SDK will continue to handle message displays, message renders, and message analytics.__
 
-Braze Mobile Remote Command maps standard user attributes and custom attributes and can track purchases and custom events. It also allows you to track location, and social data on Twitter and Facebook - like the number of followers or number of friends a user has. Check out the Remote Command chart to see the corresponding Braze methods.
+Braze Mobile Remote Command maps default user attributes and custom attributes and can track purchases and custom events. It also allows you to track location, and social data on Twitter and Facebook - like the number of followers or number of friends a user has. Check out the Remote Command chart to see the corresponding Braze methods.
 
 You can find more details on how to set up the Braze Mobile Remote Command Tag, as well as an overview of supported methods in the [Tealium Developer Docs](https://community.tealiumiq.com/t5/Client-Side-Tags/Braze-Mobile-Remote-Command-Tag-Setup-Guide/ta-p/32828).
 

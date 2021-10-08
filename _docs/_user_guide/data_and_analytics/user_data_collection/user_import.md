@@ -49,13 +49,13 @@ You can't use a CSV import to update an existing user with a `user_alias_name` i
 
 ### Constructing Your CSV
 
-Braze has several data types in Braze. When importing or updating user profiles via CSV, you can create or update standard user attributes or custom attributes.
+Braze has several data types in Braze. When importing or updating user profiles via CSV, you can create or update default user attributes or custom attributes.
 
-- Standard user attributes are reserved keys in Braze. For example, `first_name` or `email`.
+- Default user attributes are reserved keys in Braze. For example, `first_name` or `email`.
 - Custom attributes are custom to your business. For example, a travel booking app may have a custom attribute called `last_destination_searched`.
 
 {% alert important %}
-When importing customer data, the column headers you use must map exactly to the standard user attributes. Otherwise, Braze will automatically create a custom attribute on that user’s profile.
+When importing customer data, the column headers you use must map exactly to the default user attributes. Otherwise, Braze will automatically create a custom attribute on that user’s profile.
 {% endalert %}
 
 Braze accepts user data in the standard CSV format from files up to 100MB in size. Refer to the sections above for CSV templates.
@@ -71,7 +71,7 @@ Each piece of customer data imported via CSV will overwrite the existing value o
 Setting `language` or `country` on a user via CSV import or API will prevent Braze from automatically capturing this information via the SDK.
 {% endalert %}
 
-### Standard User Data Column Headers
+### Default User Data Column Headers
 
 | USER PROFILE FIELD | DATA TYPE | INFORMATION | REQUIRED |
 |---|---|---|---|
@@ -107,7 +107,7 @@ While `external_id` itself is not mandatory, you __must__ include one of these f
 
 ### Importing Custom Data via CSV
 
-Any headers which do not exactly match nonstandard User Data will create a custom attribute within Braze.
+Any headers which do not exactly match default user data will create a custom attribute within Braze.
 
 These data types are accepted in User Import:
 - Datetime (Must be stored in [ISO-8601](https://en.wikipedia.org/wiki/ISO_8601) format)
@@ -210,7 +210,7 @@ Values encapsulated in single (‘’) or double (“”) quotation marks will b
 
 ### Data Imported as Custom Attribute
 
-If you are seeing a piece of Standard User Data (e.g. `email` or `first_name`) imported as a custom attribute, check the case and spacing of your CSV file. For example, `First_name` would be imported as a custom attribute, while `first_name` would be correctly imported into the “first name” field on a user’s profile.
+If you are seeing a piece of default user data (e.g. `email` or `first_name`) imported as a custom attribute, check the case and spacing of your CSV file. For example, `First_name` would be imported as a custom attribute, while `first_name` would be correctly imported into the “first name” field on a user’s profile.
 
 {% alert important %}
 Braze will ban or block users ("dummy users") with over 5 million sessions and no longer ingest their SDK events, because they are usually the result of misintegration. If you find that this has happened for a legitimate user, please reach out to your Braze account manager.
