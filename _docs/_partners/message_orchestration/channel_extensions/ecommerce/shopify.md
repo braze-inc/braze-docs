@@ -9,10 +9,10 @@ description: "Shopify is a leading global commerce company, providing trusted to
 
 guide_featured_list:
 - name: Shopify
-  link: /partners/data_and_infrastructure_agility/customer_data_platform/mparticle/mparticle/
+  link: /docs/partners/message_orchestration/channel_extensions/ecommerce/shopify/shopify/
   fa_icon: fa fa-shopping-cart
-- name: Shopify Use Cases
-  link: /partners/data_and_infrastructure_agility/customer_data_platform/mparticle/mparticle/
+- name: Shopify Data in Braze
+  link: /docs/partners/message_orchestration/channel_extensions/ecommerce/shopify/use_cases/
   fa_icon: fa fa-users
 ---
 

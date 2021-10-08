@@ -32,6 +32,8 @@ valid_partner_list:
   url: /docs/partners/message_orchestration/channel_extensions/surveys/iterate/
 - name: Digioh
   url: /docs/partners/message_orchestration/channel_extensions/surveys/digioh/
-  
+- name: Shopify
+  url: /docs/partners/message_orchestration/channel_extensions/ecommerce/shopify/
+    
 ---
 
