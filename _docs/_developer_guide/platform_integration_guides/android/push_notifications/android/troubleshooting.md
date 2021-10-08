@@ -35,7 +35,7 @@ Braze provides a log of Push Notification Errors within the "Message Activity Lo
 
 ## Troubleshooting Scenarios
 
-### No "Push Registered" Users Showing in the Braze dashboard (Prior to Sending Messages)
+### No "Push Registered" Users Showing in the Braze Dashboard (Prior to Sending Messages)
 
 Ensure that your app is correctly configured to allow push notifications. Common failure points to check include:
 
