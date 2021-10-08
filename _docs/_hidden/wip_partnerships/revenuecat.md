@@ -161,5 +161,5 @@ After configuring Braze Settings in RevenueCat, events will automatically begin 
 [7]: {{site.baseurl}}/developer_guide/platform_integration_guides/web/initial_sdk_setup/
 [8]: https://docs.revenuecat.com/docs/configuring-sdk
 [9]: https://app.revenuecat.com/login
-[10]: http://127.0.0.1:5006/docs/hidden/wip_partnerships/partnership_template/#customization
+[10]: http://127.0.0.1:5006/docs/hidden/wip_partnerships/revenuecat/#customization
 [11]: {{site.baseurl}}/api/basics/#app-group-rest-api-keys
