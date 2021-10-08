@@ -21,7 +21,7 @@ This can result in two different users having different `dispatch_ids` for a sin
 
 Scheduled campaign messages get the same `dispatch_id`. Action-based or API-triggered campaign messages will get a unique `dispatch_id` per user.
 
-Multi-channel campaigns will have the same behavior as described above.
+Multichannel campaigns will have the same behavior as described above.
 
 For example, if Becky and Tom are both included in your scheduled campaign audience, then they will have the same `dispatch_id`.
 

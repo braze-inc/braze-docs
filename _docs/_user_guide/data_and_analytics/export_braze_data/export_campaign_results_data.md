@@ -14,7 +14,7 @@ tool:
 
 All of the analytics from your Braze campaigns can be exported to a CSV. From the **Campaigns** page of the Dashboard, select the campaign you wish to view and scroll down to the historical performance graphs, which can be exported.
 
-## Multi-Channel Campaigns
+## Multichannel Campaigns
 
 For multichannel campaigns, the data that can be exported will depend on which messaging channels were used. Here's a list of all the data that can be exported from a campaign that used iOS push, Android push, email, and in-app messages:
 

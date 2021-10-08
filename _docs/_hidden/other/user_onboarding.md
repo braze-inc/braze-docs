@@ -94,7 +94,7 @@ Requesting user for data during the onboarding process can be tricky. Read our t
 
 Because it's best practice to ask users for data after providing them with value, we recommend that you do not ask users to grant location or push access the second they open your app for the first time. There is a higher chance that the user will deny you access. If this information is essential to the onboarding process, request it with a [custom opt-in prompt][20].
 
-### Using Multi-Channel Messaging
+### Using Multichannel Messaging
 
 Use multichannel messaging to create an engaging onboarding campaign. Combine in-app messages, push notifications and emails with News Feed content to capture your users' attention right away.
 

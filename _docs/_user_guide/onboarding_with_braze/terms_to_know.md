@@ -56,7 +56,7 @@ glossaries:
     description: <a href="https://www.braze.com/docs/user_guide/message_building_by_channel/">Messaging channels</a> are ways you can virtually communicate with your customers - through push notifications on their phone or web browser, email, in-app messages, and so much more!
   - name: "Monthly Active User (MAU)"
     description: Any user who has a session within the last 30 days.
-  - name: Multi-Channel Messaging
+  - name: Multichannel Messaging
     description: Messaging a user across various mediums - like a combination of email, web push, and mobile push notifications. <a href="https://www.braze.com/docs/developer_guide/platform_wide/platform_features/#multi-channel-messaging">Messaging channels</a> are best used in concert and with regularity to re-engage lost users, retain active users, and energize your brand ambassadors.
   - name: News Feed
     description: The News Feed is a fully customizable in-app content feed for your users. Braze targeting and segmentation allows you to create a stream of content that is individually catered to the interests of each user for both <a href="https://www.braze.com/docs/developer_guide/platform_integration_guides/ios/news_feed/">iOS</a> and <a href="https://www.braze.com/docs/developer_guide/platform_integration_guides/android/news_feed/integration_overview/">Android</a>.

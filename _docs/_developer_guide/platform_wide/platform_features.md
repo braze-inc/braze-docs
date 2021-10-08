@@ -44,7 +44,7 @@ Segmentation allows you to create groups of users based on powerful filters of t
 
 ![Segmentation Example][2]
 
-## Multi-Channel Messaging
+## Multichannel Messaging
 
 Once you have defined a segment, Braze's messaging tools allow for multichannel communication with your users. For example, send a push notification and email to the example segment defined in the previous section. Messaging channels are best used in concert and with regularity to re-engage lost users, retain active users, and energize your brand ambassadors. Moreover, you can use our advanced scheduling options to automate campaigns to specific groups of those users going forward.
 
