@@ -13,7 +13,7 @@ search_tag: Partner
 
 > [Amazon S3](https://aws.amazon.com/s3/) is a highly scalable storage system offered by Amazon Web Services.
 
-Braze has two different integration strategies with Amazon S3 - one for [Braze Currents]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/) and one for all Dashboard data exports (CSV exports, Engagement Reports, etc.) Both integrations support two different authentication/authorization methods:
+Braze has two different integration strategies with Amazon S3 - one for [Braze Currents]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/) and one for all dashboard data exports (CSV exports, Engagement Reports, etc.) Both integrations support two different authentication/authorization methods:
 
 -   [AWS Secret Access Key method](#aws-secret-key-auth-method)
 -   [AWS Role ARN method](#aws-role-arn-auth-method)
@@ -105,7 +105,7 @@ You are now ready to link your AWS credentials to your Braze account.
 {% tabs %}
 {% tab Braze Currents %}
 
-Navigate to the "Currents" page on the Braze Dashboard under the "Integrations" section, click the "Create Current" dropdown, and select "Amazon S3 Data Export".
+Navigate to the "Currents" page on the Braze dashboard under the "Integrations" section, click the "Create Current" dropdown, and select "Amazon S3 Data Export".
 
 ![AWS Creds]({{site.baseurl}}/assets/img/currents-s3-example.png)
 
@@ -127,7 +127,7 @@ A notification will inform you whether your credentials have been successfully v
 {% endtab %}
 {% tab Dashboard Data Export %}
 
-Navigate to the "Technology Partners" page on the Braze Dashboard under the "Integrations" section and click on "Amazon S3".
+Navigate to the "Technology Partners" page on the Braze dashboard under the "Integrations" section and click on "Amazon S3".
 
 ![AWS Creds]({{site.baseurl}}/assets/img/s3_tech_partners.png)
 

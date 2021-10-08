@@ -15,7 +15,7 @@ Before implementation, be sure to review examples of the segmentation options af
 
 User attributes can be assigned to the current `IAppboyUser`. To obtain a reference to the current `IAppboyUser`, call `Appboy.SharedInstance.AppboyUser`
 
-## Assigning Standard User Attributes
+## Assigning Default User Attributes
 
 The following attributes should be defined as properties of the `IAppboyUser`:
 

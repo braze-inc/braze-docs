@@ -66,7 +66,7 @@ Optional, any attributes can also be set by using a tag of `braze[]` with the na
   - Attribute will only be sent if it's **included as a field within the look**.
   - Attribute name are case sensitive.
   - Supported types are: `Strings`, `Booleans`, `Numbers` and `Dates`.
-  - Standard attributes can also be set as long as they matched the [standard user profiles]({{site.baseurl}}/api/endpoints/user_data/#braze-user-profile-fields) name exactly.
+  - Default attributes can also be set as long as they matched the [standard user profiles]({{site.baseurl}}/api/endpoints/user_data/#braze-user-profile-fields) name exactly.
   - The full tag will be within quotes, so it should look like `tags: ["braze[first_name]"]`. Other tags can also be assigned but will be ignored.
   - Additional information can be found on [Github](https://github.com/looker/actions/tree/master/src/actions/braze)
 

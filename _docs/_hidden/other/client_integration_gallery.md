@@ -110,7 +110,7 @@ glossaries:
     tags:
       - Media & Entertainment
       - Miscellaneous & Other
-  - name: "Multi-Channel Onboarding Campaigns Nurture the User From the Get-Go!"
+  - name: "Multichannel Onboarding Campaigns Nurture the User From the Get-Go!"
     image: /docs/assets/img/mytaxiprimingiamemail.png
     description: "<a href='https://us.mytaxi.com/jobs/about-mytaxi.html'>MyTaxi</a> <br> <br> Combining in-app messages with emails ensures a seamless experience for users. This in-app message includes a clear call-to-action at the top of the screen. It entices users to provide their email when they're already using the app. The follow-up email is personalized with the user's name, details about the offer, and a large button that serves as a call-to-action."
     tags:

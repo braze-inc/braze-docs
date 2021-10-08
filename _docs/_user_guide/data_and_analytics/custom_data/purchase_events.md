@@ -32,7 +32,7 @@ Listed below are the methods across various platforms that are used to log purch
 
 ## Blocklisting Purchase Events
 
-In the Braze Dashboard, you can manage blocklisting from **Manage Settings** > **Products**. Check out [Custom Events and Attribute Management]({{site.baseurl}}/user_guide/administrative/app_settings/manage_app_group/custom_event_and_attribute_management/) to learn more.
+In the Braze dashboard, you can manage blocklisting from **Manage Settings** > **Products**. Check out [Custom Events and Attribute Management]({{site.baseurl}}/user_guide/administrative/app_settings/manage_app_group/custom_event_and_attribute_management/) to learn more.
 
 ## Purchase Event Segmentation
 
