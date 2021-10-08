@@ -3,7 +3,7 @@ nav_title: User Import
 article_title: User Import
 page_order: 4
 page_type: reference
-description: "This reference article covers the topic of how to Import Users into your Braze Dashboard and necessary best practices."
+description: "This reference article covers the topic of how to Import Users into your Braze dashboard and necessary best practices."
 
 ---
 # User Import
@@ -153,7 +153,7 @@ Errors are based solely on data type and file structure. For example, a poorly f
 
 When you're satisfied with the upload, start the import. The pop-up will close and the import will begin in the background. You can track its progress on the **User Import** page, which will refresh every 5 seconds, or at the press of the refresh button in the **Recent Imports** box.
 
-Under **Lines Processed**, you will see the progress of the import; the status will change to Complete when finished. You can still use the rest of the Braze Dashboard during the import, and you'll receive notifications when the import begins and ends.
+Under **Lines Processed**, you will see the progress of the import; the status will change to Complete when finished. You can still use the rest of the Braze dashboard during the import, and you'll receive notifications when the import begins and ends.
 
 If the import process runs into an error, a yellow warning icon will be displayed next to the total number of lines in the file. You can hover over the icon to see details into why certain lines failed. Once the import is complete, all data will be added to existing profiles, or new profiles will be created.
 

@@ -11,7 +11,7 @@ tool: Dashboard
 
 # Subscriptions and Usage
 
-To navigate to the **Subscriptions and Usage** page, select your account icon on the Dashboard and select __Subscriptions and Usage__ from the dropdown menu. Customers are encouraged to use this page as a self-serve tool to monitor and check their data consumption. 
+To navigate to the **Subscriptions and Usage** page, select your account icon on the dashboard and select __Subscriptions and Usage__ from the dropdown menu. Customers are encouraged to use this page as a self-serve tool to monitor and check their data consumption. 
 
 ## Subscriptions and Usage
 

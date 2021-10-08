@@ -22,7 +22,7 @@ search_tag: Partner
 
 To integrate the Neura SDK you simply add a few lines of code to your [AppDelegate on iOS][3] or [MainActivity class on Android][4].
 
-First, find your App ID on the "Developer Console" section of the Braze Dashboard and create a new API Key with `users.track`, `users.alias.new` and `users.export.ids` permissions.
+First, find your App ID on the "Developer Console" section of the Braze dashboard and create a new API Key with `users.track`, `users.alias.new` and `users.export.ids` permissions.
 
 ![neura-braze-api-key.png][10]
 

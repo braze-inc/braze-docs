@@ -137,7 +137,7 @@ __Note__: This method would replace the `startWithApiKey:inApplication:withLaunc
 
 This method is called with the following parameters:
 
-- `YOUR-APP-IDENTIFIER-API-KEY` – Your [App Identifier]({{site.baseurl}}/api/api_key/#the-app-identifier-api-key) API Key from the Braze Dashboard.
+- `YOUR-APP-IDENTIFIER-API-KEY` – Your [App Identifier]({{site.baseurl}}/api/api_key/#the-app-identifier-api-key) API Key from the Braze dashboard.
 - `application` – The current app
 - `launchOptions` – The options `NSDictionary` that you get from `application:didFinishLaunchingWithOptions:`
 - `appboyOptions` – An optional `NSDictionary` with startup configuration values for Braze

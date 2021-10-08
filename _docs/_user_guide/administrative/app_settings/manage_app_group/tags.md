@@ -3,7 +3,7 @@ nav_title: Tags
 article_title: Tags
 page_order: 2
 page_type: reference
-description: "This reference article covers tags in the Braze Dashboard, which you can use to further organize and sort your engagement."
+description: "This reference article covers tags in the Braze dashboard, which you can use to further organize and sort your engagement."
 
 ---
 # Tags

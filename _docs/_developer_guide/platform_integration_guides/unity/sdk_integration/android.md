@@ -149,7 +149,7 @@ Braze provides a native Unity solution for automating the Unity Android integrat
 
 1. In the Unity Editor, open the Braze Configuration Settings by navigating to Braze > Braze Configuration.
 2. Check the "Automate Unity Android Integration" box.
-3. In the "Braze API Key" field, input your application's API key from the Braze Dashboard.
+3. In the "Braze API Key" field, input your application's API key from the Braze dashboard.
 
 >  Your Braze API key can be found within the **Settings** page of the Braze dashboard. To find out your specific cluster or endpoint, please ask your Customer Success Manager or [open a support ticket]({{site.baseurl}}/support_contact/).
 

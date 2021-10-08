@@ -180,7 +180,7 @@ __Note__: This method would replace the `startWithApiKey:inApplication:withLaunc
 
 This method is called with the following parameters:
 
-- `YOUR-API-KEY` – Your application's API Key from the Braze Dashboard
+- `YOUR-API-KEY` – Your application's API Key from the Braze dashboard
 - `application` – The current app
 - `launchOptions` – The options `NSDictionary` that you get from `application:didFinishLaunchingWithOptions:`
 - `appboyOptions` – An optional `NSDictionary` with startup configuration values for Braze

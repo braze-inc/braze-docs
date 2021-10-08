@@ -23,11 +23,11 @@ In your Huawei account, go to **My Projects** > **Project Settings** > **App Inf
 
 ![Huawei App Credentials][3]
 
-In the next step, you will enter these credentials in the Braze Dashboard which will let Braze send push on behalf of your Huawei app.
+In the next step, you will enter these credentials in the Braze dashboard which will let Braze send push on behalf of your Huawei app.
 
 ## Step 2: Create a new Huawei App in the Braze Dashboard
 
-In the Braze Dashboard, go to **Manage Settings**, listed under the **Settings** navigation.
+In the Braze dashboard, go to **Manage Settings**, listed under the **Settings** navigation.
 
 Click **+ Add App**, provide a name (i.e. My Huawei App), select `Android` as the Platform, and choose `Huawei (HMS)` as the Push Provider.
 
@@ -104,7 +104,7 @@ After adding your custom push service, add the following to your `AndroidManifes
 
 ## Step 5: Send a Huawei Push
 
-At this point, you've created a new Huawei Android app in the Braze Dashboard, configured it with your Huawei Developer credentials, and have integrated the Braze and Huawei SDKs into your app.
+At this point, you've created a new Huawei Android app in the Braze dashboard, configured it with your Huawei Developer credentials, and have integrated the Braze and Huawei SDKs into your app.
 
 Next, we can test out the integration by testing out a new Push campaign in Braze.
 

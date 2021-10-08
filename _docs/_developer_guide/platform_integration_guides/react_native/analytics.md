@@ -17,7 +17,7 @@ Before you start, read our [Analytics Overview][0] article to learn more about B
 
 <!-- COPIED: Android/Analytics/Tracking Sessions -->
 
-The Braze SDK reports session data used by the Braze dashboard to calculate user engagement and other analytics integral to understanding your users. Based on the below session semantics, our SDK generates “start session” and “close session” data points that account for session length and session counts viewable within the Braze Dashboard.
+The Braze SDK reports session data used by the Braze dashboard to calculate user engagement and other analytics integral to understanding your users. Based on the below session semantics, our SDK generates “start session” and “close session” data points that account for session length and session counts viewable within the Braze dashboard.
 
 To set a user ID or start a session, use the `changeUser` method, which takes a user ID parameter.
 

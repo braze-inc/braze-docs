@@ -3,7 +3,7 @@ nav_title: Email Settings
 article_title: Email Settings
 page_type: reference
 page_order: 3
-description: "This reference article covers email settings in the Braze Dashboard."
+description: "This reference article covers email settings in the Braze dashboard."
 tool: Dashboard
 channel: email
 

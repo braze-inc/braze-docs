@@ -13,7 +13,7 @@ description: "This article outlines details about the Update Scheduled API-Trigg
 /campaigns/trigger/schedule/update
 {% endapimethod %}
 
-Use this endpoint to update scheduled API-triggered campaigns, which are created on the Dashboard and initiated via the API. You can pass in `trigger_properties` that will be templated into the message itself.
+Use this endpoint to update scheduled API-triggered campaigns, which are created on the dashboard and initiated via the API. You can pass in `trigger_properties` that will be templated into the message itself.
 
 This endpoint allows you to send campaign messages via API-triggered delivery, allowing you to decide what action should trigger the message to be sent. Please note that to send messages with this endpoint, you must have a Campaign ID, created when you build an [API-Triggered Campaign]({{site.baseurl}}/api/api_campaigns/).
 

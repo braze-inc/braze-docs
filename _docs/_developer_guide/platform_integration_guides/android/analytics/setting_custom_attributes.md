@@ -220,7 +220,7 @@ Dates passed to Braze with this method must either be in the [ISO 8601](http://e
 {% endtab %}
 {% tab Array %}
 
-The maximum number of elements in custom attribute arrays defaults to 25. The maximum for individual arrays can be increased to up to 100 in the Braze Dashboard, under __Manage Settings__ -> __Custom Attributes__. Arrays exceeding the maximum number of elements will be truncated to contain the maximum number of elements. For more information on custom attribute arrays and their behavior, see our [documentation on Arrays]({{site.baseurl}}/developer_guide/platform_wide/analytics_overview/#arrays).
+The maximum number of elements in custom attribute arrays defaults to 25. The maximum for individual arrays can be increased to up to 100 in the Braze dashboard, under __Manage Settings__ -> __Custom Attributes__. Arrays exceeding the maximum number of elements will be truncated to contain the maximum number of elements. For more information on custom attribute arrays and their behavior, see our [documentation on Arrays]({{site.baseurl}}/developer_guide/platform_wide/analytics_overview/#arrays).
 
 {% subtabs global %}
 {% subtab JAVA %}
