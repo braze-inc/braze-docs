@@ -54,7 +54,7 @@ Data sent from the Braze Services to Braze's Snowflake Data Lake via Braze serve
 
 Data available to Customers within the Braze dashboard is mostly aggregated. Detailed logs are kept in a separate database created by Braze (the “Data Lake”, formerly known as “BI Database”).
 
-Braze has instituted processes to enable a custom retention policy scheduled to clear events at an app group or event level. This automatic deletion process applies to:
+Braze has instituted processes to ensure regularly scheduled deletions of PII from the “Data Lake” at an app group or event level. If you use our APIs to delete user profiles, or delete or amend attributes from user profiles, within two weeks this automatic deletion process will apply to:
 
 - Events
 - Purchases
