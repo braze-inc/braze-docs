@@ -13,9 +13,11 @@ page_order: 3
 
 The default LogLevel for the Braze iOS SDK is `8`. This level suppresses most logging so that no sensitive information is logged in a production released application.
 
-To enable verbose logging for debugging, add a dictionary named `Braze` to your `Info.plist` file. Inside the `Braze` Dictionary, add the `LogLevel` String subentry and set the value to `0`. Note that prior to Braze iOS SDK v4.0.2, the dictionary key `Appboy` must be used in place of `Braze`.
+You can set the LogLevel to `0` to enable verbose logging for debugging either at compile time or at runtime. This level is only intended to be used in development environments and should not be set in a released application.
 
-LogLevel `0` is only intended to be used in development environments and should not be set in a released application.
+### Setting LogLevel at Compile Time
+
+Add a dictionary named `Braze` to your `Info.plist` file. Inside the `Braze` Dictionary, add the `LogLevel` String subentry and set the value to `0`. Note that prior to Braze iOS SDK v4.0.2, the dictionary key `Appboy` must be used in place of `Braze`.
 
 Example `Info.plist` contents:
 
@@ -26,6 +28,11 @@ Example `Info.plist` contents:
 	<string>0</string>
 </dict>
 ```
+
+### Setting LogLevel at Runtime
+
+Starting with Braze iOS SDK v4.4.0, you can set the SDK's LogLevel via the `ABKLogLevelKey` inside the `appboyOptions` parameter passed to `startWithApiKey:inApplication:withLaunchOptions:withAppboyOptions:`. Set its value to the integer `0`.
+
 
 ### Description of Log Levels
 
