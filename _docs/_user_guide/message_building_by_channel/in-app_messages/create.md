@@ -261,7 +261,7 @@ The high, medium, and low options for triggered message priorities are buckets, 
 ##### Canvas
 A customer may trigger two in-app messages within your Canvas at the same time. When this occurs, Braze will follow the priority order below to determine which in-app message is displayed. Drag different Canvas steps to re-order their priority. By default, steps earlier in a Canvas variant will display before later steps.
 
-![step_priority]({% image_buster /assets/img_archive/step_priority.png %}){: style="max-width:70%"}
+![step_priority]({% image_buster /assets/img_archive/step_priority.png %}){: style="max-width:80%"}
 
 Navigate to the "send settings" of the Canvas section to prioritize in-app messages from a Canvas against in-app messages from other Canvases and campaigns.
 

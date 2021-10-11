@@ -5,10 +5,10 @@ page_order: 6
 hide_toc: true
 layout: dev_guide
 guide_top_header: "Frequently Asked Questions"
-guide_top_text: "This page is home to articles on frequently asked questions about the Braze Dashboard and its features."
+guide_top_text: "This page is home to articles on frequently asked questions about the Braze dashboard and its features."
 
 page_type: landing
-description: "This landing page is home to sections on frequently asked questions about the Braze Dashboard and its features."
+description: "This landing page is home to sections on frequently asked questions about the Braze dashboard and its features."
 
 guide_featured_title: "FAQ Articles"
 guide_featured_list:

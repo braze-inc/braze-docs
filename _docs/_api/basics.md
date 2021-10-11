@@ -24,7 +24,7 @@ Below is some terminology that you may see in the Braze REST API documentation a
 
 ### Endpoints
 
-Braze manages a number of different instances for our Dashboard and REST Endpoints. When your account is provisioned you will log in to one of the corresponding URLs below. Use the correct REST Endpoint based on which instance you are provisioned to. If you are unsure, open a support ticket or use the table below to match the URL of the dashboard you use to the correct REST Endpoint.
+Braze manages a number of different instances for our dashboard and REST Endpoints. When your account is provisioned you will log in to one of the corresponding URLs below. Use the correct REST Endpoint based on which instance you are provisioned to. If you are unsure, open a support ticket or use the table below to match the URL of the dashboard you use to the correct REST Endpoint.
 
 {% alert important %}
 When using endpoints for API calls, use the "REST Endpoint" located below.
@@ -83,7 +83,7 @@ For additional security, you can specify an allowlist of IP addresses and subnet
 
 ![Create New API Key][28]{: style="max-width:20%;float:right;margin-left:15px;"}
 
-To create a new REST API Key, visit the [Developer Console][8] on your Braze Dashboard. This page displays your existing API Keys. To create a new key, click **Create New API Key**.
+To create a new REST API Key, visit the [Developer Console][8] on your Braze dashboard. This page displays your existing API Keys. To create a new key, click **Create New API Key**.
 
 You can then to do the following:
 

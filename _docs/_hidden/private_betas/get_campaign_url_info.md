@@ -61,9 +61,9 @@ Authorization: Bearer YOUR-REST-API-KEY
 
 ### Possible Errors
 
-- `Missing/Invalid Campaign ID` - The Campaign API ID must be an API identifier. You can find this using the [Campaigns List Endpoint]({{site.baseurl}}/api/endpoints/export/campaigns/get_campaigns/) or by logging into the Dashboard.
+- `Missing/Invalid Campaign ID` - The Campaign API ID must be an API identifier. You can find this using the [Campaigns List Endpoint]({{site.baseurl}}/api/endpoints/export/campaigns/get_campaigns/) or by logging into the dashboard.
 
-- `Missing/Invalid Message Variant ID` - The Message Variant API ID must be an API identifier. You can find this using the [Campaign Details Endpoint]({{site.baseurl}}/api/endpoints/export/campaigns/get_campaign_details/) or by logging into the Dashboard.
+- `Missing/Invalid Message Variant ID` - The Message Variant API ID must be an API identifier. You can find this using the [Campaign Details Endpoint]({{site.baseurl}}/api/endpoints/export/campaigns/get_campaign_details/) or by logging into the dashboard.
 
 
 {% endapi %}

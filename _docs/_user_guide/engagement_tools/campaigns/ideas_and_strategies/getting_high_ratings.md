@@ -39,7 +39,7 @@ Our page on [Data Opt-in][7] has more information on ways to ensure your request
 
 ### Use Non-intrusive Messaging Channels
 
-Because they are relatively intrusive, push notifications and emails that ask users to rate you can come off as needy if sent too often. Be sure to use a [multi-channel strategy][9] when making your request, focusing on in-app channels if possible. In-app messages and News Feed cards are less disruptive and easily ignored if the user doesn't wish to provide a review. Be sure to include deep links to the appropriate app store.
+Because they are relatively intrusive, push notifications and emails that ask users to rate you can come off as needy if sent too often. Be sure to use a [multichannel strategy][9] when making your request, focusing on in-app channels if possible. In-app messages and News Feed cards are less disruptive and easily ignored if the user doesn't wish to provide a review. Be sure to include deep links to the appropriate app store.
 
 ![In-app message][9]
 

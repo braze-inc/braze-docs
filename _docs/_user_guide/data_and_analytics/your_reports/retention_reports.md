@@ -23,7 +23,7 @@ Retention Reports are not available for API-triggered campaigns.
 
 ![Report Date][8]{: style="float:right;max-width:30%;margin-left:15px;"}
 
-Get started by visiting any campaign or Canvas in your Braze Dashboard, and select a date range for your report. Selecting an appropriate date range is crucial because of the way it affects the retention reports. 
+Get started by visiting any campaign or Canvas in your Braze dashboard, and select a date range for your report. Selecting an appropriate date range is crucial because of the way it affects the retention reports. 
 
 This report will include all users who initially entered the campaign or Canvas during this window, and of those users, the data of those that performed their retention event during the date range will appear in the report.
 

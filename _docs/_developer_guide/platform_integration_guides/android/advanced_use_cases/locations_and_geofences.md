@@ -238,7 +238,7 @@ if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
 
 ## Step 5: Enable Geofences on the Dashboard
 
-Android only allows up to 100 geofences to be stored for a given app. Braze's Locations product will use up to 20 of these geofence slots if available. To prevent accidental or unwanted disruption to other geofence-related functionality in your app, location geofences must be enabled for individual Apps on the Dashboard.
+Android only allows up to 100 geofences to be stored for a given app. Braze's Locations product will use up to 20 of these geofence slots if available. To prevent accidental or unwanted disruption to other geofence-related functionality in your app, location geofences must be enabled for individual Apps on the dashboard.
 
 For Braze's Locations product to work correctly, you should also ensure that your App is not using all available geofence spots.
 

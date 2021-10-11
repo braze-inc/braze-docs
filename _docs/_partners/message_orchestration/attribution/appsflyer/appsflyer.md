@@ -91,7 +91,7 @@ Your user-base can be segmented by attribution data in the Braze dashboard using
 
 ![User Attributes 1][2]{: style="max-width:80%;margin-right:15px;"} 
 
-Additionally, attribution data for a particular user is available on each user’s profile in the Braze Dashboard.
+Additionally, attribution data for a particular user is available on each user’s profile in the Braze dashboard.
 
 ## Facebook, Snapchat, and Twitter Attribution Data
 

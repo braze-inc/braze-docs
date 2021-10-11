@@ -11,7 +11,7 @@ channel:
 
 # Requesting Unread Card Count
 
-![News Feed Badge Example][45]
+![News Feed Badge Example][45]{: style="float:right;max-width:25%;margin-left:15px;"}
 
 Badges are a great way to call attention to new content awaiting your users in the News Feed. If you'd like to add a badge to your News Feed, the Braze SDK provides methods to query the following:
 

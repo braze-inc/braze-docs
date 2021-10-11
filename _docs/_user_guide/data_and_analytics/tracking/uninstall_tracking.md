@@ -28,7 +28,7 @@ You can enable Uninstall Tracking in the **Settings** tab of the **Manage Settin
 
 When uninstall tracking is enabled for an app, background push messages will be sent nightly to users who have not recorded a session or received a push in 24 hours. 
 
-If you are interested in filtering Braze background push on iOS, you can use a [utility method][iOS docs]. On Android, you can use [`AppboyNotificationUtils.isUninstallTrackingPush()`][8] to detect uninstall push. When Braze detects an uninstall, whether from Uninstall Tracking or normal push campaign delivery, we will record the best estimated time of the uninstall on the user. This time is stored in the user profile as a standard attribute.
+If you are interested in filtering Braze background push on iOS, you can use a [utility method][iOS docs]. On Android, you can use [`AppboyNotificationUtils.isUninstallTrackingPush()`][8] to detect uninstall push. When Braze detects an uninstall, whether from Uninstall Tracking or normal push campaign delivery, we will record the best estimated time of the uninstall on the user. This time is stored in the user profile as a default attribute.
 
 ![Uninstall Attribute][4]
 
@@ -54,7 +54,7 @@ Apps without uninstall tracking enabled will report uninstalls from only a subse
 
 Campaign Uninstall Tracking allows you to see the number of users who received a specific campaign and subsequently uninstalled your app within the selected time frame. This tool gives marketers insight into how campaigns may be encouraging unintended negative user behaviors and helps to measure overall campaign efficacy.
 
-Braze tracks uninstalls by observing when push messages sent to users’ devices return a signal from either Firebase Cloud Messaging (FCM) or Apple Push Notification Service (APNs) that the app is no longer installed. If Global Uninstall Tracking is enabled for a particular app, Braze sends a daily silent push message to users to detect whether they have uninstalled (this “silent” push does not appear to users). If Braze detects that a user has uninstalled, that platform:
+Braze tracks uninstalls by observing when push messages sent to users’ devices return a signal from either Firebase Cloud Messaging (FCM) or Apple Push Notification Service (APNs) that the app is no longer installed. If Global Uninstall Tracking is enabled for a particular app, Braze sends a daily silent push message to users to detect whether they have uninstalled. This “silent” push is sent to all users (unless the user has disabled silent pushes in their app settings), however it does not appear to users. If Braze detects that a user has uninstalled, that platform:
 
 * Increments the app’s total uninstall count by 1.
 * Increments the uninstall count for every campaign that the user successfully received in the past 24 hours by 1.

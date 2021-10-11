@@ -27,7 +27,7 @@ In your Braze account, navigate to "Attribution" under "Technology Partners" and
 
 ### Step 3: Setting Up A Postback from Kochava
 
-Follow [these instructions][18] to add a postback in Kochava's dashboard. You will be prompted for the key and REST Endpoint that you found in Braze's Dashboard in Step 2. 
+Follow [these instructions][18] to add a postback in Kochava's dashboard. You will be prompted for the key and REST Endpoint that you found in Braze's dashboard in Step 2. 
 
 ### Step 4: Confirming the Integration
 

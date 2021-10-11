@@ -105,7 +105,7 @@ POST Request to the User Track Braze Endpoint (users/track)
 
 Returns
 -------
-Creates and/or Updates User Details within Braze Dashboard
+Creates and/or Updates User Details within Braze dashboard
 
 '''
 import requests
@@ -214,7 +214,7 @@ POST Request to the User Track Braze Endpoint (users/track)
 
 Returns
 -------
-Creates and/or Updates User Details within Braze Dashboard
+Creates and/or Updates User Details within Braze dashboard
 
 '''
 import requests
