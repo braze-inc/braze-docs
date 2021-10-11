@@ -203,11 +203,7 @@ Once the app installation is complete, Braze automatically creates your webhook 
   "attributes": [
     {
       "external_id": "user_id",
-      "shopify_accepts_marketing": {
-        "state": "subscribed",
-        "opt_in_level": "single_opt_in",
-        "collected_from": "other"
-      }
+      "shopify_accepts_marketing": true
     }
   ]
 }
