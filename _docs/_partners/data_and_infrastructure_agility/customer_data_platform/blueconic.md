@@ -4,6 +4,7 @@ page_order: 8
 description: "This article covers the Braze and BlueConic integration. BlueConic is a leading pure-play customer data platform providing accessible first-party data wherever and whenever it is required to transform customer relationships and drive business growth."
 alias: /partners/blueconic/
 page_type: partner
+search_tag: Partner
 
 ---
 
