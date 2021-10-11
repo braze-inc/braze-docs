@@ -13,7 +13,9 @@ page_order: 3
 
 The default LogLevel for the Braze iOS SDK is `8`. This level suppresses most logging so that no sensitive information is logged in a production released application.
 
-You can set the LogLevel to `0` to enable verbose logging for debugging either at compile time or at runtime. This level is only intended to be used in development environments and should not be set in a released application.
+You can set the LogLevel to `0` to enable verbose logging for debugging. This level is only intended to be used in development environments and should not be set in a released application.
+
+This can be assigned either at compile time or at runtime:
 
 {% tabs local %}
 {% tab Compile Time %}
