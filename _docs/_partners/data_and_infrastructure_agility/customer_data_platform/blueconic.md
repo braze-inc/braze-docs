@@ -32,7 +32,7 @@ The Braze and BlueConic connection allows you to enrich profile data across the 
 ### Step 1: Creating a Braze Connection
 
 1. On the BlueConic platform, select __Connections__ in the navigation bar, and then __Add Connection__. In the pop-up window that appears, enter "Braze" in the search bar and select __Braze connection__.<br><br>![BlueConic Plugin Gallery Braze Connection]({% image_buster /assets/img/blueconic/braze1.png %}){: style="max-width:50%;"}<br><br>
-2. In the Braze comnnection, expand or collapse metadata fields by clicking the grey chevron icon. Within these fields, you can mark the connection as a favorite, add labels, and write a brief description. You can also choose to get [email notifications when the connection runs or fails to run][5]. <br><br>
+2. In the Braze connection, expand or collapse metadata fields by clicking the grey chevron icon. Within these fields, you can mark the connection as a favorite, add labels, and write a brief description. You can also choose to get [email notifications when the connection runs or fails to run][5]. <br><br>
 3. Lastly, enter the name for your connection at the top of the page and save your settings. 
 
 ### Step 2: Configuring A Braze Connection With BlueConic
@@ -50,7 +50,7 @@ Once the authentication is complete, you'll create at least one import or export
 
 1. Select __Import data into BlueConic__ in the left panel to open the page to configure your data import from Braze to BlueConic.<br><br>
 2. Select the location of the data in Braze. Here you can tell BlueConic where to find the data to be imported by selecting your Braze audience.<br><br>![BlueConic Import Goal]({% image_buster /assets/img/blueconic/braze4.png %}){: style="max-width:80%;"}<br><br>
-3. Next, you must map identifiers between Braze and BlueConic. <br><br>![BlueConic Import Goal]({% image_buster /assets/img/blueconic/braze5.png %}){: style="max-width:80%;"}<br><br> To link the customer data between the two systems, enter one or more customer identifiers. Use the drop down fields to select either the BlueConic profile identifier or a profile property on the left and then select the cooresponding Braze profile identifier. Next, use the dropdown menu to specify how imported content should be added to existing values: added, summed, set only if the profile property is empty, or set to clear (if the Braze field is empty). <br><br>Use the __Allow creation...__ checkbox to allow BlueConic to create new profiles for data that does not match an existing BlueConic profile.<br><br>![BlueConic Import Map]({% image_buster /assets/img/blueconic/braze6.png %}){: style="max-width:80%;"}<br><br>
+3. Next, you must map identifiers between Braze and BlueConic. <br><br>![BlueConic Import Goal]({% image_buster /assets/img/blueconic/braze5.png %}){: style="max-width:80%;"}<br><br> To link the customer data between the two systems, enter one or more customer identifiers. Use the drop down fields to select either the BlueConic profile identifier or a profile property on the left and then select the corresponding Braze profile identifier. Next, use the dropdown menu to specify how imported content should be added to existing values: added, summed, set only if the profile property is empty, or set to clear (if the Braze field is empty). <br><br>Use the __Allow creation...__ checkbox to allow BlueConic to create new profiles for data that does not match an existing BlueConic profile.<br><br>![BlueConic Import Map]({% image_buster /assets/img/blueconic/braze6.png %}){: style="max-width:80%;"}<br><br>
 4. Use the __Add Mapping__ button to create additional mapping rows as needed. You can add multiple mapping rows at once with the __Add remaining fields__ option. BlueConic detects the remaining Braze fields and matches them with BlueConic profile properties. You can set the merge strategy for imported (set, add, sum, set if empty or clear) and provide a custom prefix to the names of BlueConic profile properties.<br><br>
 5. Lastly, select __Run the connection__ to start the connection. See [Scheduling and running connections][6].
 
@@ -58,7 +58,7 @@ Once the authentication is complete, you'll create at least one import or export
 
 Select __Export data to Braze__ in the left panel to configure your data export from BlueConic to Braze. Choose a BlueConic segment for the export. Only profiles in this segment that have matching identifiers in Braze will be exported.
 
-Similiar to the import mapping shown in step 3, link identifiers between BlueConic and Braze, matching identifiers between BlueConic profiles and Braze fields. You can optionally choose to let BlueConic create new records in Braze if no existing match is found.
+Like the import mapping shown in step 3, you must link identifiers between BlueConic and Braze, matching export identifiers between BlueConic profiles and Braze fields. You can optionally choose to let BlueConic create new records in Braze if no existing match is found.
 
 ![BlueConic Export Map]({% image_buster /assets/img/blueconic/braze7.png %}){: style="max-width:80%;"}
 
