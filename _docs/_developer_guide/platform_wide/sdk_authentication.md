@@ -2,7 +2,6 @@
 nav_title: SDK Authentication
 article_title: SDK Authentication
 page_order: 5
-hidden: true
 description: "This reference article covers SDK authentication and how to enable this feature in the Braze SDK."
 platform:
   - iOS
@@ -18,7 +17,7 @@ To enable this feature, please contact our support team or your customer success
 
 # SDK Authentication
 
-SDK Authentication allows you to supply cryptographic proof (generated server-side) to SDK requests made on behalf of logged-in users. When this feature is enabled in your app, the Braze Dashboard can be configured to reject requests with a missing or invalid JWT signature.
+SDK Authentication allows you to supply cryptographic proof (generated server-side) to SDK requests made on behalf of logged-in users. When this feature is enabled in your app, the Braze dashboard can be configured to reject requests with a missing or invalid JWT signature.
 
 When enabled, this feature will prevent unauthorized requests that use your app's SDK API Key for logged in users, including:
 - Sending custom events, attributes, purchases, and session data
@@ -32,14 +31,14 @@ There are four high-level steps to get started:
 
 1. [Server-Side Integration][1] - Generate a public and private key-pair, and use your private key to create a JWT (_JSON Web Token_) for the current logged-in user.<br><br>
 2. [SDK Integration][2] - Enable this feature in the Braze SDK and request the JWT Token generated from your server.<br><br>
-3. [Adding Public Keys][3] - Add your _public key_ to the Braze Dashboard in the "Manage Settings" page.<br><br>
-4. [Toggle Enforcement within the Braze Dashboard][4] - Toggle this feature's enforcement within the Braze Dashboard on an app-by-app basis.
+3. [Adding Public Keys][3] - Add your _public key_ to the Braze dashboard in the "Manage Settings" page.<br><br>
+4. [Toggle Enforcement within the Braze Dashboard][4] - Toggle this feature's enforcement within the Braze dashboard on an app-by-app basis.
 
 ## Server-Side Integration {#server-side-integration}
 
 ### Generate a Public/Private Key-Pair {#generate-keys}
 
-Generate an RSA public/private key-pair. The Public Key will eventually be added to the Braze Dashboard, while the Private Key should be stored securely on your server.
+Generate an RSA public/private key-pair. The Public Key will eventually be added to the Braze dashboard, while the Private Key should be stored securely on your server.
 
 We recommend an RSA Key with 2048 bits for use with the RS256 JWT algorithm.
 
@@ -90,7 +89,7 @@ This feature is available as of the following [SDK versions]({{ site.baseurl }}/
 When this feature is enabled, the Braze SDK will append the current user's last known JWT to network requests made to Braze Servers.
 
 {% alert note %}
-Don't worry, initializing with this option alone won't impact data collection in any way, until you start [enforcing authentication](#braze-dashboard) within the Braze Dashboard.
+Don't worry, initializing with this option alone won't impact data collection in any way, until you start [enforcing authentication](#braze-dashboard) within the Braze dashboard.
 {% endalert %}
 
 {% tabs %}
@@ -234,7 +233,7 @@ Appboy.sharedInstance()?.setSdkAuthenticationSignature("signature")
 When this feature is set as ["Required"](#enforcement-options), the following scenarios will cause SDK requests to be rejected by Braze:
 - JWT was expired by the time is was received by the Braze API
 - JWT was empty or missing
-- JWT failed to verify for the Public Keys you uploaded to the Braze Dashboard
+- JWT failed to verify for the Public Keys you uploaded to the Braze dashboard
 
 When the SDK requests fail for one of these reasons, a callback function you supply will be invoked with a relevant [Error Code][9]. Failed requests will periodically be retried until your app supplies a new valid JWT.
 
@@ -318,7 +317,7 @@ The `errorEvent` argument passed to this callback will contain the following inf
 
 ## Adding Public Keys {#key-management}
 
-In the "Manage Settings" page of the dashboard, add your Public Key to a specific app in the Braze Dashboard. Each app supports up to 3 Public Keys. Note that the same Public/Private keys may be used across apps.
+In the "Manage Settings" page of the dashboard, add your Public Key to a specific app in the Braze dashboard. Each app supports up to 3 Public Keys. Note that the same Public/Private keys may be used across apps.
 
 To add a Public Key:
 1. Choose the app in the left-hand side menu
@@ -332,13 +331,13 @@ To delete a key, or to promote a key to the Primary key, choose the correspondin
 
 Once your [Server-side Integration][1] and [SDK Integration][2] are complete, you can begin to enable this feature for those specific apps.
 
-Keep in mind, SDK requests will continue to flow as usual - without authentication - _unless_ the app's SDK Authentication setting is switched to **required** in the Braze Dashboard.
+Keep in mind, SDK requests will continue to flow as usual - without authentication - _unless_ the app's SDK Authentication setting is switched to **required** in the Braze dashboard.
 
-Should anything go wrong with your integration (i.e. your app is incorrectly passing tokens to the SDK, or your server is generating invalid tokens), simply **disable** this feature in the Braze Dashboard and data will resume to flow as usual, without verification.
+Should anything go wrong with your integration (i.e. your app is incorrectly passing tokens to the SDK, or your server is generating invalid tokens), simply **disable** this feature in the Braze dashboard and data will resume to flow as usual, without verification.
 
 ### Enforcement Options {#enforcement-options}
 
-In the Dashboard `Settings` page, each app has three SDK Authentication states which control how Braze verifies requests.
+In the dashboard `Settings` page, each app has three SDK Authentication states which control how Braze verifies requests.
 
 | Setting| Description|
 | ------ | ---------- |
@@ -399,15 +398,15 @@ Should a user's token expire mid-session, the SDK has a [callback function][7] i
 
 #### What happens if my server-side integration breaks and I can no longer create a JWT? {#faq-server-downtime}
 
-If your server is not able to provide JWT tokens or you notice some integration issue, you can always disable the feature in the Braze Dashboard.
+If your server is not able to provide JWT tokens or you notice some integration issue, you can always disable the feature in the Braze dashboard.
 
 Once disabled, any pending failed SDK requests will eventually be retried by the SDK and accepted by Braze.
 
 #### Why does this feature use Public/Private keys instead of Shared Secrets? {#faq-shared-secrets}
 
-When using Shared Secrets, anyone with access to that shared secret (i.e. the Braze Dashboard page) would be able to generate tokens and impersonate your end-users.
+When using Shared Secrets, anyone with access to that shared secret (i.e. the Braze dashboard page) would be able to generate tokens and impersonate your end-users.
 
-Instead, we use Public/Private Keys so that not even Braze Employees (let alone your Dashboard users) have access to your Private Keys.
+Instead, we use Public/Private Keys so that not even Braze Employees (let alone your dashboard users) have access to your Private Keys.
 
 #### How will rejected requests be retried? {#faq-retry-logic}
 

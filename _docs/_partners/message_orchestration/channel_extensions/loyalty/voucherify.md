@@ -32,7 +32,7 @@ Add unique codes to Braze campaigns via Braze’s Connected Content. You can use
 
 ### Step 1: Create a New Campaign
 
-From the Braze Dashboard, create a new campaign, define your campaign name, choose an email template, and edit the email body.
+From the Braze dashboard, create a new campaign, define your campaign name, choose an email template, and edit the email body.
 
 ### Step 2: Add Code Snippet to Email Body
 

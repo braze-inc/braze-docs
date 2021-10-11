@@ -26,7 +26,7 @@ To integrate the Neura SDK you simply add a few lines of code to your [AppDelega
 
 ![Neura Persona Moments][10]
 
-First, find your App ID on the "Developer Console" section of the Braze Dashboard and create a new API Key with `users.track`, `users.alias.new` and `users.export.ids` permissions.
+First, find your App ID on the "Developer Console" section of the Braze dashboard and create a new API Key with `users.track`, `users.alias.new` and `users.export.ids` permissions.
 
 ![neura-braze-api-key.png][11]
 
@@ -77,7 +77,7 @@ mNeuraApiClient.setExternalId(USER_ID)
 
 ## Using Neura with Braze
 
-Once both SDKs are integrated, you can set up a campaign or Canvas in the Braze Dashboard to be trigged by Neura Moments, which are available in the Braze platform as custom events.
+Once both SDKs are integrated, you can set up a campaign or Canvas in the Braze dashboard to be trigged by Neura Moments, which are available in the Braze platform as custom events.
 
 ![action-based-delivery.png][13]
 

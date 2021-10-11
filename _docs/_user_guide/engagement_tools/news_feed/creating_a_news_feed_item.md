@@ -96,7 +96,7 @@ That's it! You're done! You've published your first news-feed card!
 
 ![Linked In App][14]
 
-Multi-Channel campaigns often lead to better overall conversion and engagement rates, so Braze has made it easy to link an in-app message to a specific News Feed card. After launching a News Feed card, a button will appear in the new feed statistics page allowing you to "create an associated in-app message." Clicking on this will take you to the campaign composer for a new in-app message campaign. While you would input the copy, look, and feel of the in-app message, Braze automatically copies the delivery and targeting rules of the associated News Feed card to make sure the campaigns launch together.
+Multichannel campaigns often lead to better overall conversion and engagement rates, so Braze has made it easy to link an in-app message to a specific News Feed card. After launching a News Feed card, a button will appear in the new feed statistics page allowing you to "create an associated in-app message." Clicking on this will take you to the campaign composer for a new in-app message campaign. While you would input the copy, look, and feel of the in-app message, Braze automatically copies the delivery and targeting rules of the associated News Feed card to make sure the campaigns launch together.
 
 ## Organizing your News Feed
 

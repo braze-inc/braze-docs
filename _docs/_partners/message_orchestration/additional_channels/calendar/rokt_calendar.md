@@ -97,7 +97,7 @@ Before you get started, the fields below detail the information that can be cust
 
 ### Step 1: Create a Webhook Template in Braze
 
-To create a new Rokt Calendar Webhook Template you can either navigate to **Templates & Media** or create a new webhook campaign via the Dashboard. 
+To create a new Rokt Calendar Webhook Template you can either navigate to **Templates & Media** or create a new webhook campaign via the dashboard. 
 
 From the list of Templates, select **Blank Template**.
 
@@ -179,7 +179,7 @@ Remember to save your template before leaving the page!
 
 ### Step 1: Create a Webhook Template in Braze
 
-To create a new Rokt Calendar Webhook Template you can either navigate to **Templates & Media** or create a new webhook campaign via the Dashboard. 
+To create a new Rokt Calendar Webhook Template you can either navigate to **Templates & Media** or create a new webhook campaign via the dashboard. 
 
 From the list of Templates, select **Blank Template**.
 

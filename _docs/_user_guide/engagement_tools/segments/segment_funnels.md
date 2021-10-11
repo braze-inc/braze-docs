@@ -5,15 +5,15 @@ page_order: 3
 
 page_type: reference
 tool: Segments
-description: "This reference article explains how to use Braze Segment Funnels, their best practices, and some example use cases."
+description: "This reference article explains how to use Braze Segment Funnels, their best practices, and example use cases."
 
 ---
 # Segment Funnels
 
-> This reference article explains how to use Braze Segment Funnels, their best practices, and some use cases. 
+> This reference article explains how to use Braze Segment Funnels, their best practices, and use cases. 
 > <br>
 > <br>
-> Segment funnels are great for narrowing your audience for a specific campaign use case, learning about that audience and their interactions and using that knowledge to strategize and develop effective campaigns.
+> Segment funnels are great for narrowing your audience for a specific campaign use case, learning about that audience and their interactions, and using that knowledge to strategize and develop effective campaigns.
 
 
 Segment funnels allow you to see how each added filter impacts your segment statistics. When creating a segment, a row of data will appear under each filter. This data will provide the following information for users that are targeted by all filters up to that point:
@@ -46,15 +46,15 @@ By analyzing the impact of a certain user action (such as adding items to a wish
 
 In the example below, all users who added items to a wish list also made a purchase. Since only a small percentage of users added items to a wish list, this app may want to incentivize this behavior more through marketing campaigns.
 
-![Wish list users][3]
+![Segment funnel for users][3]
 
 ### Compare Messaging Channels
-Create a segment of active users (or users with desired traits) and compare their interactions with different engagement channels, such as the News Feed, email and push notifications. For instance, if more loyal users are subscribed to push, you may want to spend more time on sending active user campaigns via push. If you find that the LTV is higher, however, for those who are subscribed to email, you might want to prompt more active users to subscribe to email.
+Create a segment of active users (or users with desired traits) and compare their interactions with different engagement channels, such as the News Feed, email and push notifications. For instance, if more loyal users are subscribed to push, you may want to spend more time on sending active user campaigns via push. However, if you find that the LTV is higher for those who are subscribed to email, you might want to prompt more active users to subscribe to email.
 
-![Wish list email][5]
+![Segment funnel for email][5]
 
 
-[1]: {% image_buster /assets/img_archive/Wish_List.png %}
+[1]: {% image_buster /assets/img_archive/segment_funnel_example.png %}
 [3]: {% image_buster /assets/img_archive/Wish_List_2.png %}
 [4]: #push-email
 [5]: {% image_buster /assets/img_archive/Wish_List_Email.png %}
