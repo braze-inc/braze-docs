@@ -1,10 +1,10 @@
 ---
-nav_title: FAQs
+nav_title: Best Practices and FAQs
 article_title: Frequently Asked Questions
 page_order: 3
 hide_toc: true
 layout: dev_guide
-guide_top_header: "Frequently Asked Questions"
+guide_top_header: "Best Practices and Frequently Asked Questions"
 guide_top_text: "This page is home to articles on frequently asked questions and best practices about the Braze dashboard and its features."
 
 guide_featured_title: "FAQ Articles"
