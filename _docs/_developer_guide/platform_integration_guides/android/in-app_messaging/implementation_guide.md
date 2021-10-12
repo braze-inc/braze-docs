@@ -1,5 +1,6 @@
 ---
 nav_title: Advanced Implementation (Optional)
+In-App Message Implementation Guide for Android (Optional)
 platform: Android
 page_order: 6
 description: "This advanced implementation guide covers Android in-app message code considerations, three use cases built by our team, and accompanying code snippets."
@@ -64,7 +65,7 @@ There are three sample customer use cases provided. Each sample has code snippet
 
 ### Custom Slideup In-App Message
 
-While building out your slide-up in-app message, you may notice you aren't able to modify the placement of the message. While this option is not explicitly offered out-of-the-box, modification like this is made possible by subclassing the `DefaultInAppMessageViewWrapper` class to adjust the layout parameters. You can adjust the final position on the screen by overriding the `getLayoutParams` method, returning the modified `LayoutParams` with your own custom positioning values. Visit the [CustomSlideUpInAppMessageViewWrapper](TODO) to get started.
+While building out your slide-up in-app message, you may notice you aren't able to modify the placement of the message. While this option is not explicitly offered out-of-the-box, modification like this is made possible by subclassing the `DefaultInAppMessageViewWrapper` class to adjust the layout parameters. You can adjust the final position on the screen by overriding the `getLayoutParams` method, returning the modified `LayoutParams` with your own custom positioning values. Visit the [CustomSlideUpInAppMessageViewWrapper](https://github.com/braze-inc/braze-growth-shares-android-demo-app/blob/main/app/src/main/java/com/braze/advancedsamples/inapp/slideup/CustomSlideUpInAppMessageViewWrapper.kt) to get started.
 
 #### Custom View Wrapper<br><br>
 
@@ -233,7 +234,7 @@ AppboyInAppMessageManager.getInstance().setCustomInAppMessageViewWrapperFactory(
 
 ### Custom Modal In-App Message
 
-An `AppboyInAppMessageModalView` can be subclassed to leverage a `Spinner` offering engaging ways to collect valuable user attributes. The example below shows how you can use Connected Content to capture custom attributes from a dynamic list of items. Visit the [TeamPickerView](TODO) to get started.
+An `AppboyInAppMessageModalView` can be subclassed to leverage a `Spinner` offering engaging ways to collect valuable user attributes. The example below shows how you can use Connected Content to capture custom attributes from a dynamic list of items. Visit the [TeamPickerView](https://github.com/braze-inc/braze-growth-shares-android-demo-app/blob/main/app/src/main/java/com/braze/advancedsamples/inapp/modal/TeamPickerView.kt) to get started.
 
 {% tabs %}
 {% tab Kotlin %}

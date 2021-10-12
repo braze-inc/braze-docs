@@ -1,5 +1,6 @@
 ---
 nav_title: Advanced Implementation (Optional)
+article_title: Content Card Implementation Guide for Android (Optional) 
 platform: Android
 page_order: 7
 description: "This advanced implementation guide covers Android Content Card code considerations, three use cases built by our team, accompanying code snippets, and guidance on logging impressions, clicks, and dismissals."
@@ -14,13 +15,13 @@ Looking for the out-of-the-box Content Card developer integration guide? Find it
 
 # Content Card Implementation Guide
 
-> This optional and advanced implementation guide covers Content Card code considerations, three custom use cases built by our team, accompanying code snippets, and guidance on logging impressions, clicks, and dismissals. Visit our Braze Demo Repository [here](FIXME)! Please note that this implementation guide is centered around a Kotlin implementation, but Java snippets are provided for those interested.
+> This optional and advanced implementation guide covers Content Card code considerations, three custom use cases built by our team, accompanying code snippets, and guidance on logging impressions, clicks, and dismissals. Visit our Braze Demo Repository [here](https://github.com/braze-inc/braze-growth-shares-android-demo-app)! Please note that this implementation guide is centered around a Kotlin implementation, but Java snippets are provided for those interested.
 
 ## Code Considerations
 
 ### Import Statements and Helper Files
 
-When building out Content Cards, you should expose the Braze SDK via a single manager singleton. This pattern shields your application code from the Braze implementation details behind a shared abstraction that makes sense for your use case. It also makes it easier to track, debug, and alter code. An example manager implementation can be found [here](FIXME).
+When building out Content Cards, you should expose the Braze SDK via a single manager singleton. This pattern shields your application code from the Braze implementation details behind a shared abstraction that makes sense for your use case. It also makes it easier to track, debug, and alter code. An example manager implementation can be found [here](https://github.com/braze-inc/braze-growth-shares-android-demo-app/blob/main/app/src/main/java/com/braze/advancedsamples/BrazeManager.kt).
 
 ### Content Cards as Custom Objects
 
@@ -463,7 +464,7 @@ The `ContentCardable` base class handles the heavy lifting of calling the `Braze
 ```
 
 __Call `Card` Functions__<br>
-The [BrazeManager](insert) can reference Braze SDK dependencies such as the Content Card objects array list to get the `Card` to call our logging methods.
+The [BrazeManager](https://github.com/braze-inc/braze-growth-shares-android-demo-app/blob/main/app/src/main/java/com/braze/advancedsamples/BrazeManager.kt) can reference Braze SDK dependencies such as the Content Card objects array list to get the `Card` to call our logging methods.
 
 ```kotlin
     fun logContentCardClicked(idString: String?) {
