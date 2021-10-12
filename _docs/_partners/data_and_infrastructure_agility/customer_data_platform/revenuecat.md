@@ -142,7 +142,7 @@ Only production purchase events will be sent if you only provide one Braze REST 
 
 After configuring Braze settings in RevenueCat, events will automatically begin flowing from RevenueCat to Braze without any other action on your part.
 
-## Use Cases
+## Use Cases 
 
 - Trigger an onboarding campaign highlighting your premium features when a customer starts a free trial.
 - Send a reminder to update billing information when a "Billing Issue" event is received.
