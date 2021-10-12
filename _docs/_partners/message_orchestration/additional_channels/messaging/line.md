@@ -2,7 +2,7 @@
 nav_title: Line
 article_title: Line
 alias: /partners/line/
-description: "This article outlines the partnership between Braze and Line, one of the world’s most popular instant messaging platforms."
+description: "This article outlines the partnership between Braze and Line, one of the world's most popular instant messaging platforms."
 page_type: partner
 search_tag: Partner
 
@@ -10,44 +10,40 @@ search_tag: Partner
 
 # Line
 
-> [Line](https://line.me/en/) is one of the world’s most popular instant messaging platforms, used by hundreds of million monthly active users. Through this platform, brands can engage with their customers with rich and two-way messaging.
+> [Line](https://line.me/en/) is one of the world's most popular instant messaging platforms, used by hundreds of millions of monthly active users. Through this platform, brands can engage with their customers with rich and two-way messaging.
 
-Use our Webhook and advanced segmentation, personalization, and triggering features to message your users in Line through the [Line Messaging API](https://developers.line.biz/en/docs/messaging-api/overview/). We've included the Line Webhook template in the Braze platform under __Templates & Media__.
-
+The Line and Braze integration allows you to leverage Braze webhooks, advanced segmentation, personalization, and triggering features to message your users in Line through the [Line Messaging API](https://developers.line.biz/en/docs/messaging-api/overview/). The Line Webhook template can be found on the Braze platform listed under __Templates & Media__.
 
 ## Prerequisites
 
-Line allows both promotional and non-promotional messaging to users as long as brands have secured users' consent. However, to begin sending through Line you will need to register your business with Line and set up a Line Business Account. Below we go through the requirements for sending Line messages through Braze.
-
+Line allows both promotional and non-promotional messaging to users as long as brands have secured users' consent. To begin sending through Line, you will need to register your business with Line and set up a Line Business Account. Below we go through the requirements for sending Line messages through Braze.
 
 | Requirement| Origin| Access| Description|
-| ---| ---| ---|
-| Line Business Account| Line| https://www.linebiz.com/jp-en/ | Brands will need to set up a Line Official Business Account in order to use Line's Messaging API. When sending Line messages, your messages will all be associated with your Line Official Account, resulting in users seeing your Account name and the Account page.|
-| Messaging API Channel| Line| https://developers.line.biz/en/docs/messaging-api/getting-started/#using-oa-manager | When enabling the use of the Messaging API in the LINE Official Account Manager (opens new window), a Messaging API channel is created. This will be the channel you use to communicate with your customers.
-| Channel Access Tokens | Line | https://developers.line.biz/en/docs/messaging-api/channel-access-tokens/ | The channel access token will allow you to send messages to users that have added your Line Official Account as a friend. It can be found in your `Line Developer Console` under the `Messaging API` tab. |
-| Line User IDs | Line | https://developers.line.biz/en/reference/messaging-api/#get-follower-ids | You need to have users' Line IDs (this ID is different from users' username) in order to send messages on Line. Once a user adds your Line Official Account as a friend, you will be able to access the user's Line ID through Line's Users API.
+| ---| ---| ---| --- |
+| Line Business Account| Line| [https://www.linebiz.com/jp-en/](https://www.linebiz.com/jp-en/) | Brands will need to set up a Line Official Business Account to use Line's Messaging API.<br><br>When sending Line messages, your messages will all be associated with your Line Official Account, resulting in users seeing your account name and page.|
+| Messaging API Channel| Line| [Using OA Manager Line Documentation](https://developers.line.biz/en/docs/messaging-api/getting-started/#using-oa-manager) | When enabling the use of the Messaging API in the LINE Official Account Manager, a Messaging API channel is created. This will be the channel you use to communicate with your customers.
+| Channel Access Tokens | Line | [Channel Access Token Line Documentation](https://developers.line.biz/en/docs/messaging-api/channel-access-tokens/) | The channel access token will allow you to send messages to users that have added your Line Official Account as a friend. It can be found in your __Line Developer Console__ under the __Messaging API__ tab. |
+| Line User IDs | Line | [Get Follower IDs Line Documentation](https://developers.line.biz/en/reference/messaging-api/#get-follower-ids) | You need to have users' Line IDs (this ID is different from users' username) to send messages on Line.<br><br>Once a user adds your Line Official Account as a friend, you can access the user's Line ID through Line's Users API.
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
 
-In order to send messages to users, they must meet one of two conditions:
+To send messages to users, they must meet one of two conditions:
 - Users who have added your LINE Official Account as a friend
-- Users who haven't added your LINE Official Account as a friend but have sent a message to your LINE Official Account (except users who have blocked your LINE Official Account)
+- Users who haven't added your LINE Official Account as a friend but have sent a message to your LINE Official Account (excluding users who have blocked your LINE Official Account)
 
-## Integration
-
-Read this quick guide to set up your Line Webhook.
+## Integration Details
 
 ### Step 1: Collect Your Customers Line IDs
 
-In order to send messages on Line Messenger, you need to collect your users' Line IDs in order to identify your user and interact with them consistently.
+To send messages on Line Messenger, you need to collect your users' Line IDs to identify your user and interact with them consistently.
 
-__What is a Line ID?__
+__What is a Line ID?__<br>
 Line IDs are not the same as the user's Line usernames. This is an ID generated by Line that can be used when interacting with Line's APIs.
 
-__Where do you find it?__
-To get a list of your customers' Line IDs, use the [User ID API](https://developers.line.biz/en/reference/messaging-api/#get-follower-ids) that Line offers. The API will return a list of Line IDs for all users that have either friended your Line Official Account or sent your account a message and has not blocked you. When making a GET request to the endpoint `https://api.line.me/v2/bot/followers/ids`, you will get the following:
+__Where do you find it?__<br>
+To get a list of your customers' Line IDs, use the [User ID API](https://developers.line.biz/en/reference/messaging-api/#get-follower-ids) that Line offers. The API will return a list of Line IDs for all users who have friended your LINE Official Account or sent your account a message and have not blocked you. When making a GET request to the endpoint `https://api.line.me/v2/bot/followers/ids`, you will get the following:
 
 
-```
+```json
 {
    "userIds":[
       "U4af4980629...",
@@ -58,17 +54,16 @@ To get a list of your customers' Line IDs, use the [User ID API](https://develop
 }
 ```
 
-__What do I do with it?__
-
+__What do I do with it?__<br>
 Once you have a list of Line IDs, send it to Braze as a custom attribute called `line_id`.
 
 ### Step 2: Send to Braze as a Custom Attribute
 
-Coordinate and share this with your developer to send the Line IDs to Braze as a [custom attribute]({{site.baseurl}}/user_guide/Data_and_Analytics/Custom_Data/Custom_Attributes/#custom-attributes). Line IDs are strings that can be accessed by making an [API call](https://developers.line.biz/en/reference/messaging-api/#get-follower-ids).
+Coordinate and share this with your developers to send the Line IDs to Braze as a [custom attribute]({{site.baseurl}}/user_guide/Data_and_Analytics/Custom_Data/Custom_Attributes/#custom-attributes). Line IDs are strings that can be accessed by making an [API call](https://developers.line.biz/en/reference/messaging-api/#get-follower-ids).
 
 ### Step 3: Set Your Channel Access Token as a Content Block
 
-In order for the Braze Line Templates to work, you will need to input your Line Official Accounts [Channel Access Token](https://developers.line.biz/en/docs/messaging-api/channel-access-tokens/ ) into Braze as Content Block](https://www.braze.com/docs/user_guide/engagement_tools/templates_and_media/content_blocks/#content-blocks). Once you've set the channel access token inside a content block, you will be able to use the Line Webhook Templates to send messages to users that have added your Line Official Account as a friend.
+For the Braze Line Templates to work, you will need to input your Line Official Accounts [Channel Access Token](https://developers.line.biz/en/docs/messaging-api/channel-access-tokens/ ) into Braze as a [Content Block]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/content_blocks/#content-blocks). Once you've set the channel access token inside a content block, you will be able to use the Line Webhook Templates to send messages to users that have added your LINE Official Account as a friend.
 
 #### Find your Channel Access Token
 Your channel access token can be found in the `Line Developer Console` under the `Messaging API` tab.
@@ -76,14 +71,13 @@ Your channel access token can be found in the `Line Developer Console` under the
 ![Line Channel Access Token][1]
 
 #### Create Content Block
-Once you've grabbed your Line Channel Access Token, you will need to create a Braze [Content Block](https://www.braze.com/docs/user_guide/engagement_tools/templates_and_media/content_blocks/#content-blocks) and name it `LINE_Channel_AccessToken`. Copy and paste your channel access token into the content block and save. To access Content Blocks, go into the Content Blocks Library tab in the Templates & Media section of your Braze account.
+Once you've grabbed your Line Channel Access Token, you will need to create a Braze [Content Block]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/content_blocks/#content-blocks) and name it `LINE_Channel_AccessToken`. Copy and paste your channel access token into the content block and save it. To access Content Blocks, go into the __Content Blocks Library__ tab in the __Templates & Media__ section of the Braze dashboard.
 
 ![Line Content Block Token][2]
 
 ## Usage
 
-Braze supports the following Line Messaging types:
-
+Braze currently supports the following Line Messaging types:
 - `Text`
 - `Sticker`
 - `Image`
@@ -94,53 +88,35 @@ Braze supports the following Line Messaging types:
 These are what each Line message type will appear like for your users.
 
 {% tabs %}
-  {% tab Text %}
-  [`Text`](https://developers.line.biz/en/docs/messaging-api/message-types/#text-messages) are text Line messages that support emojis.
-
-  <br>
-
-  ![Text Type]({% image_buster /assets/img_archive/line_text_type.png %}){: style="border:0px;"}
-
-  <br>
-
+{% tab Text %}
+[`Text`](https://developers.line.biz/en/docs/messaging-api/message-types/#text-messages): Text Line messages are text-based messages that support emojis.
+<br><br>
+![Text Type]({% image_buster /assets/img_archive/line_text_type.png %}){: style="border:0px;"}
 {% endtab %}
 {% tab Sticker %}
-[`Sticker`](https://developers.line.biz/en/docs/messaging-api/message-types/#sticker-messages) You can effectively use stickers to make your bot app more expressive and engaging for your users. To send a sticker, include the package ID and sticker ID of the sticker in a message object. For a list of stickers that can be sent with the Messaging API, see the [List of available stickers](https://developers.line.biz/en/docs/messaging-api/sticker-list/).
-
-  <br>
-
-  ![Sticker Type]({% image_buster /assets/img_archive/line_sticker_type.png %}){: style="border:0px;"}
-
-  <br>
-
+[`Sticker`](https://developers.line.biz/en/docs/messaging-api/message-types/#sticker-messages): Stickers can be used to make your bot app more expressive and engaging for your users. To send a sticker, include the sticker's package ID and sticker ID in a message object. For a list of stickers that can be sent with the Messaging API, see the [List of available stickers](https://developers.line.biz/en/docs/messaging-api/sticker-list/).
+<br><br>
+![Sticker Type]({% image_buster /assets/img_archive/line_sticker_type.png %}){: style="border:0px;"}
 {% endtab %}
 {% tab Image %}
-[`Image`](https://developers.line.biz/en/docs/messaging-api/message-types/#image-messages) To send images, include URLs of the original image and a smaller preview image in the message object. The preview image is displayed in the chat and the full image is opened when the image is tapped. Note that the URLs must use HTTPS over TLS 1.2 or later.
-
+[`Image`](https://developers.line.biz/en/docs/messaging-api/message-types/#image-messages): To send images, include URLs of the original image and a smaller preview image in the message object. The preview image is displayed in the chat, and the full image is opened when the image is tapped. Note that the URLs must use HTTPS over TLS 1.2 or later.
+<br><br>
 ![Image Type]({% image_buster /assets/img_archive/line_image_type.png %})
-
-
 {% endtab %}
 {% tab Carousel %}
-[`Carousel`](https://developers.line.biz/en/docs/messaging-api/message-types/#carousel-template) Use the carousel template to send a message with multiple column objects that users can cycle through. In addition having buttons, you can also indicate in each column object a single action to be executed when a user taps anywhere in the image, title, or text area.
-
-<br>
-
+[`Carousel`](https://developers.line.biz/en/docs/messaging-api/message-types/#carousel-template): Use the carousel template to send a message with multiple column objects that users can cycle through. In addition to having buttons, you can also indicate in each column object a single action to be executed when a user taps anywhere in the image, title, or text area.
+<br><br>
 ![Carousel Type]({% image_buster /assets/img_archive/line_carousel_type.png %}){: style="border:0px;"}
-
-<br>
-
 {% endtab %}
 {% endtabs %}
 
-
-From __Templates & Media__, go to Webhook Templates and choose the Line Messenger Webhook Template.
+From __Templates & Media__, go to __Webhook Templates__ and choose the __Line Messenger Webhook Template__.
 
 1. Enter your Template Name, add teams, and add tags.
-2. Depending on the Line Template type you select, enter your message and/or your sticker ID or image.
-3. The custom attribute `Line ID` should be templated in the `To:` field of the message body. If not, include the Line ID as a custom attribute (Hint: Use the blue and white + button in the corner of the __Request Body__ box.)
+2. Enter your message, sticker ID, or image depending on the Line template type you select.
+3. The custom attribute `Line ID` should be templated in the message body's `To:` field. If not, include the Line ID as a custom attribute. This can be done by using the blue and white + button in the corner of the __Request Body__ box.
 
-#### Previewing and Testing Your Webhook
+### Previewing and Testing Your Webhook
 
 Before you send your message, test your webhook. Make sure your Line ID is saved in Braze (or find it and test as a Customized User), and use the preview to send the test message:
 
@@ -148,16 +124,17 @@ Before you send your message, test your webhook. Make sure your Line ID is saved
 
 If you receive the message successfully, you can start to configure its delivery settings.
 
-#### Targeting Line Users
+### Targeting Line Users
 
-You should [create a segment][62] for all users for whom the Line ID exists as a custom attribute and turn on [Analytics Tracking][61] to track your Messenger subscription rates over time. If you choose not to create a specific segment for Messenger subscribers, make sure to include a filter for Line ID existing to avoid errors:
+You should [create a segment][62] for all users for whom the `Line ID` exists as a custom attribute and turn on [Analytics Tracking][61] to track your Messenger subscription rates over time. If you choose not to create a specific segment for Messenger subscribers, make sure to include a filter for `Line ID` existing to avoid errors:
 
 ![Segment filter for Line IDs][63]
 
-You may also use other segmentation to target your Line campaigns, and the rest of the campaign creation process is as with any other campaign.
+You may also use other segmentation to target your Line campaigns and the rest of the campaign creation process, just like any other campaign.
 
 [1]: {% image_buster /assets/img_archive/line_channel_access_token.png %}
 [2]: {% image_buster /assets/img_archive/line_content_block_token.png %}
 [3]: {% image_buster /assets/img_archive/line_preview.png %}
+[61]: {{site.baseurl}}/user_guide/data_and_analytics/your_reports/viewing_and_understanding_segment_data/#viewing-and-understanding-segment-data
 [62]: {{site.baseurl}}/user_guide/engagement_tools/segments/creating_a_segment/#creating-a-segment
 [63]: {% image_buster /assets/img_archive/fbm-segmentation.png %}

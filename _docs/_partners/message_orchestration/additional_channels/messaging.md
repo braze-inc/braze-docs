@@ -16,5 +16,6 @@ partner_top_header: "Instant Chat"
 valid_partner_list:
 - name: Messenger
   url: /docs/partners/message_orchestration/additional_channels/instant_chat/messenger/
-  
+- name: Line
+  url: /docs/partners/message_orchestration/additional_channels/instant_chat/line/  
 ---

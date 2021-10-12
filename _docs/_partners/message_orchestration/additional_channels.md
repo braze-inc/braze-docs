@@ -32,5 +32,6 @@ valid_partner_list:
   url: /docs/partners/message_orchestration/additional_channels/calendar/rokt_calendar/
 - name: optilyz
   url: /docs/partners/message_orchestration/additional_channels/direct_mail/optilyz/
-
+- name: Line
+  url: /docs/partners/message_orchestration/additional_channels/instant_chat/line/
 ---

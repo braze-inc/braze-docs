@@ -151,5 +151,6 @@ valid_partner_list:
   url: /docs/partners/data_and_infrastructure_agility/cohort_import/tinyclues/
 - name: Transcend
   url: /docs/partners/data_and_infrastructure_agility/data_privacy/transcend/
-    
+- name: Line
+  url: /docs/partners/message_orchestration/additional_channels/instant_chat/line/    
 ---
