@@ -83,7 +83,7 @@ GEM
       jekyll-seo-tag (~> 2.1)
     mustermann (1.1.1)
       ruby2_keywords (~> 0.0.1)
-    nio4r (2.5.7)
+    nio4r (2.5.8)
     nokogiri (1.12.5)
       mini_portile2 (~> 2.6.1)
       racc (~> 1.4)
@@ -91,7 +91,7 @@ GEM
       forwardable-extended (~> 2.6)
     progressbar (1.11.0)
     public_suffix (4.0.6)
-    puma (4.3.8)
+    puma (4.3.9)
       nio4r (~> 2.0)
     racc (1.5.2)
     rack (2.2.3)
@@ -139,7 +139,7 @@ DEPENDENCIES
   kramdown (>= 2.3.1)
   kramdown-parser-gfm
   minima (~> 2.0)
-  puma (= 4.3.8)
+  puma (= 4.3.9)
   rack
   rack-jekyll
   rack-reverse-proxy
