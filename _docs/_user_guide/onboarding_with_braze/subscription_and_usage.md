@@ -17,7 +17,7 @@ To navigate to the **Subscriptions and Usage** page, select your account icon on
 
 ### Usage Graphs
 
-Here, you will find data usage graphs that apply to your app groups. Common graphs that will appear for customers are Email Sends usage and Data Point usage. Though common, you may find your own dashboard shows different usage metrics based on the products you have purchased. 
+Here, you will find usage graphs that apply to your app groups. You may find your own dashboard shows different usage metrics based on the products you have purchased. 
 
 ![Usage Graphs][3]{: style="max-width:90%;"}
 
