@@ -136,7 +136,7 @@ customContentCardsFragment.contentCardUpdateHandler = getUpdateHandlerForFeedTyp
 
 ## Step 4: Using the Content Cards Fragment
 
-This custom feed can be used like any other [`ContentCardsFragment`][1]. In the different parts of your app, you can display different Content Card feeds based on the key provided on the Dashboard. Each [`ContentCardsFragment`][1] feed will have a unique set of cards displayed thanks to the custom [`IContentCardsUpdateHandler`][2] on each fragment.
+This custom feed can be used like any other [`ContentCardsFragment`][1]. In the different parts of your app, you can display different Content Card feeds based on the key provided on the dashboard. Each [`ContentCardsFragment`][1] feed will have a unique set of cards displayed thanks to the custom [`IContentCardsUpdateHandler`][2] on each fragment.
 
 When you create a Content Card campaign, set your key-value pair as: `feed_type` > `Transactional` or whatever feed type you desire.
 

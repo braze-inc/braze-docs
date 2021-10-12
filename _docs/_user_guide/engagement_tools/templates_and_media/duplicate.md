@@ -4,7 +4,7 @@ article_title: How to Duplicate Templates
 page_order: 3
 
 page_type: reference
-description: "This reference article describes how to duplicate templates in the Templates & Media section of the Braze Dashboard."
+description: "This reference article describes how to duplicate templates in the Templates & Media section of the Braze dashboard."
 tool:
   - Templates
   - Media

@@ -10,7 +10,7 @@ description: "This reference article gives an overview of the various statuses a
 
 > This reference article gives an overview of the various statuses a campaign can have and what they mean.
 
-On your Braze Dashboard, your campaigns are grouped by their status. Below are the different statuses your campaigns could have and descriptions on what they mean:
+On your Braze dashboard, your campaigns are grouped by their status. Below are the different statuses your campaigns could have and descriptions on what they mean:
 
 - __Draft__
 	- Campaigns that are saved but not launched. Clicking on them allows you to continue editing and begin sending.

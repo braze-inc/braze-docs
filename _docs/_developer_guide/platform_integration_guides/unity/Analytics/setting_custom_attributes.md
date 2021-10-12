@@ -16,7 +16,7 @@ Braze provides methods for assigning attributes to users. You'll be able to filt
 
 Before implementation, be sure to review examples of the segmentation options afforded by custom events vs. custom attributes vs. purchase events in our [Best Practices section][1].
 
-## Assigning Standard User Attributes
+## Assigning Default User Attributes
 
 To assign user attributes, you need to call the appropriate method on the BrazeBinding object. The following is a list of built-in attributes that can be called using this method.
 

@@ -28,7 +28,7 @@ To contribute to Braze docs, you must have a Github account with which you can c
 
 We recommend first __[forking](https://help.github.com/en/github/getting-started-with-github/fork-a-repo) our GitHub repository__, and then creating a __local clone of your fork__:
 1. Navigate to the main [braze-docs repo](https://github.com/Appboy/braze-docs), and click __Fork__ in the upper right corner of the page. <br><br>
-2. Next, within this newly forked repo, click the green __Clone or download__ button. Within the dialogue that appears, click __Use SSH__, and __save the repository link provided__ for step 3. <br><br>
+2. Next, within this newly forked repo, click the green __Clone or download__ button. From the dialogue that appears, click __Use SSH__, and __save the repository link provided__ for step 3. <br><br>
 3. Lastly, follow our Github Wiki Guide on how to set up your [local environment](https://github.com/Appboy/braze-docs/wiki/Set-Up-Your-Local-Environment#configuring-the-github-braze-docs-repo) __ommitting step 3 of the guide__, and instead, __using the repository link saved,__ to clone your forked repo.
 
 After setting up your local environment, make sure to sign our [CLA](https://www.braze.com/docs/cla) (Contribution License Agreement), _this step is required_.
@@ -44,8 +44,8 @@ Here, you will find a [Partnership Template]({{site.baseurl}}/partners/your_part
 ### Useful Resources
 
 Useful links to reference as you write:
-- [Braze Writing Style Guide and Best Practices](https://github.com/Appboy/braze-docs/wiki/Writing-Style-Guide-&-Best-Practices): A quick skim of our writing style guide and best practices help align your documentation with our voice.<br>
-- [Braze Docs Styling Test Page](https://www.braze.com/docs/home/styling_test_page/) and [Special Formatting](https://github.com/Appboy/braze-docs/wiki/Special-Formatting): See something cool in our docs that you want to include in your page? Want to know how to add charts, tabs, downloadable files, and more? Check out our Styling test page and Special Formatting pages to get started.
+- [Braze Writing Style Guide and Best Practices](https://docs.google.com/document/d/e/2PACX-1vTtzHpcihaXTTYD85LoKIvYBvpCQFLr8n0BDKRDRAMEz_DnZdHJJINKL24r4JXkRUui24pl_DVxbu2T/pub#h.wstt3flbts5k): A quick skim of our writing style guide and best practices help align your documentation with our voice.<br>
+- [Braze Docs Styling Test Page](https://www.braze.com/docs/home/styling_test_page/) and [Special Formatting](https://github.com/braze-inc/braze-docs/wiki/Special-Formatting): See something cool in our docs that you want to include in your page? Want to know how to add charts, tabs, downloadable files, and more? Check out our Styling test page and Special Formatting pages to get started.
 
 ### Template Components
 
@@ -63,6 +63,7 @@ description: "This is the Google Search and SEO description that will appear. Tr
 alias: /partners/your_partnership_name/
 
 page_type: partner
+search_tag: Partner
 hidden: true
 ---
 ```
@@ -73,7 +74,7 @@ Note that we require you to fill out all metadata fields __except__ `page_order`
 
 {% endtab %}
 {% tab Content %}
-This information is the meat of the document. Here you cover the prerequisites, integration steps, use cases, etc...
+This information is the meat of the document. Here you cover the prerequisites, integration steps, use cases, etc..
 For more information on what to include in the content, check out our Partnership [Template]({{site.baseurl}}/partners/your_partner_name/) that breaks down what should be included.
 ```
 # [Partner Name]
@@ -111,11 +112,11 @@ This last section is located at the very end of your document. Here you will lis
 
 ## Step 3: Image, Link and Code Snippet Formatting {#image_links}
 
-Links and images are a necessary part of any integration document. They help supplement your instructions with helpful pictures, helping communicate information to users that might be hard or unnecessary to explain in words. 
+Links and images are a necessary part of any integration document. They help supplement your instructions with helpful pictures, communicate information to users that might be hard or unnecessary to explain in words. 
 
 ### Images
 
-The higher quality of the images you can provide, the better. Images should not include important information such as API keys or employee names; we recommend burring information such as this out. Images should also be tightly cropped to display only useful information. When in doubt, include screenshots, as they can always be removed in the approval process. If in serious doubt, please reach out to @KellieHawks on Github.
+The higher quality of the images you can provide, the better. Images should not include important information such as API keys or employee names; we recommend burring information such as this out. Images should also be tightly cropped to display only useful information. When in doubt, include screenshots, as they can always be removed in the approval process.
 
 To add images to your partner doc, you must place them in the `img` folder in our repository. This folder can be found by following the file path: `braze-docs` -> `assets` -> `img`.
 
@@ -196,7 +197,7 @@ Within the Braze docs GitHub repository, you will be able to find your branch. I
 
 The review process may take several days to a week to get approved. We understand other companies and writers may have a different writing style than we do at Braze, so we will need time to make sure it aligns with the Braze voice and the specific formatting that we use.
 
-Once the Pull Request has been approved by our writers, we will move it out of `wip_partnerships` to the correct location in our repository.
+Once the Pull Request has been approved by our writers, we will move it out of `wip_partnerships` to the correct location in our repository. Please note that we may not merge your documentation into our repository until given approval by the Braze partnership team. Reach out to your Braze partnership contact for an anticiapted release date.
 
 And you are done! Thanks for contributing to Braze Docs! 
 

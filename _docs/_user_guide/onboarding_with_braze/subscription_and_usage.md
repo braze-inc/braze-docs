@@ -11,13 +11,13 @@ tool: Dashboard
 
 # Subscriptions and Usage
 
-To navigate to the **Subscriptions and Usage** page, select your account icon on the Dashboard and select __Subscriptions and Usage__ from the dropdown menu. Customers are encouraged to use this page as a self-serve tool to monitor and check their data consumption. 
+To navigate to the **Subscriptions and Usage** page, select your account icon on the dashboard and select __Subscriptions and Usage__ from the dropdown menu. Customers are encouraged to use this page as a self-serve tool to monitor and check their data consumption. 
 
 ## Subscriptions and Usage
 
 ### Usage Graphs
 
-Here, you will find data usage graphs that apply to your app groups. Common graphs that will appear for customers are Email Sends usage and Data Point usage. Though common, you may find your own dashboard shows different usage metrics based on the products you have purchased. 
+Here, you will find usage graphs that apply to your app groups. You may find your own dashboard shows different usage metrics based on the products you have purchased. 
 
 ![Usage Graphs][3]{: style="max-width:90%;"}
 
