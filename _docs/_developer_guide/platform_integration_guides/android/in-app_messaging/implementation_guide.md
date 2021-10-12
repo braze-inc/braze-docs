@@ -1,6 +1,6 @@
 ---
 nav_title: Advanced Implementation (Optional)
-In-App Message Implementation Guide for Android (Optional)
+article_title: In-App Message Implementation Guide for Android (Optional)
 platform: Android
 page_order: 6
 description: "This advanced implementation guide covers Android in-app message code considerations, three use cases built by our team, and accompanying code snippets."
