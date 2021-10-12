@@ -1,12 +1,33 @@
 ---
 page_order: 0
 nav_title: Help
-article_title: Help
-layout: user_guide
+article_title: Braze Help
+layout: self_help
+help_top_header: "Braze Help"
 
-user_top_header: "Braze Help"
+page_type: landing
 user_top_text: "Welcome to the Braze self-help section! Here you'll find a variety of help articles that can help you troubleshoot issues you may encounter. You can also learn more about the best practices to communicate and reach your users."
+description: "Welcome to the Braze self-help section! Here you'll find a variety of help articles that can help you troubleshoot issues you may encounter. You can also learn more about the best practices to communicate and reach your users."
 
+resources_list:
+  - name: "Help Articles"
+    link: /docs/help/help_articles/overview/
+    image: /assets/img/pencil-paper.png
+  - name: LAB Login
+    link: https://lab.braze.com
+    image: /assets/img/icons/icon-lab.png
+  - name: FAQs
+    link: /docs/help/faqs/
+    image: /assets/img/megaphone.png
+  - name: Release Notes
+    link: /docs/help/release_notes/most_recent/
+    image: /assets/img/notebook.png
+  - name: Best Practices
+    link: /docs/help/best_practices/
+    image: /assets/img/icons/icon-document-ribbon.png
+  - name: Data Protection Technical Assistance
+    link: /docs/help/dp-technical-assistance/
+    image: /assets/img/icons/icon-news.png
 
 popular_topic_list:
   - name: Push Token Migration
