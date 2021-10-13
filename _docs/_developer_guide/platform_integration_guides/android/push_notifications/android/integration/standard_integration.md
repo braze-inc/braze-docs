@@ -300,7 +300,7 @@ You may also optionally use a color reference, see:
 
 #### Enabling Automatic Deep Link Opening
 
-To enable Braze to automatically open your app and any deep links when a push notification is clicked, set `com_appboy_handle_push_deep_links_automatically` to its default setting,`true`, in your `braze.xml`:
+To enable Braze to automatically open your app and any deep links when a push notification is clicked, set `com_appboy_handle_push_deep_links_automatically` to `true`, in your `braze.xml`:
 
 ```xml
 <bool name="com_appboy_handle_push_deep_links_automatically">true</bool>
