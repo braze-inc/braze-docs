@@ -55,7 +55,7 @@ You can specify whether you want this extension to represent a single snapshot i
 Starting on November 8, 2021, the setting to regenerate extensions daily will be automatically turned off for unused Segment Extensions. Braze defines unused extensions as ones that meet the following criteria:
 
 - Not used in any active campaigns, Canvases, or segments
-- Not used in of any inactive (draft, stopped, archived) campaigns, Canvases, or segments
+- Not used in any inactive (draft, stopped, archived) campaigns, Canvases, or segments
 - Have not been modified in over 7 days
 
 Braze will notify the company contact and creator of the extension when this setting is turned off. The option to regenerate extensions daily can be turned on again at any time.
