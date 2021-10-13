@@ -49,6 +49,16 @@ To increase targeting precision, select the “Add Property Filters” checkbox.
 
 ### Extension Regeneration
 
+{% alert important %}
+Starting on November 8, 2021, the setting to regenerate extensions daily will be automatically turned off for unused segment extensions. Braze defines unused segment extensions as ones that meet the following criteria:
+
+- Not used in any active campaigns, Canvases, or segments
+- Not used in of any inactive (draft, stopped, archived) campaigns, Canvases, or segments
+- Have not been modified in over 7 days
+
+Braze will notify the company contact and creator of the extension when this setting is turned off. The option to regenerate extensions daily can be turned on again at any time.
+{% endalert %}
+
 You can specify whether you want this extension to represent a single snapshot in time, or whether you want this extension to regenerate on a daily basis. Your extension will always begin processing after the initial save. If you would like the extension to be regenerated daily, select the “Regenerate Extension Daily” checkbox and the regeneration will begin processing at around midnight each day in your company’s time zone.
 
 ## Step 4: Save Your Segment Extension
