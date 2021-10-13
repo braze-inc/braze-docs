@@ -30,22 +30,23 @@ user_menu_list:
     description: Are you ready to start building a customer journey? We'll guide you through it.
 
 popular_topic_list:
+  - name: User Track Endpoint
+    link: /docs/api/endpoints/user_data/post_user_track/
   - name: User Import
     link: /docs/user_guide/data_and_analytics/user_data_collection/user_import/
-  - name: Braze Currents
-    link: /docs/user_guide/data_and_analytics/braze_currents/
   - name: Custom Events
     link: /docs/user_guide/data_and_analytics/custom_data/custom_events/
   - name: Managing User Subscriptions
     link: /docs/user_guide/message_building_by_channel/email/managing_user_subscriptions/
-  - name: Customize In-App Messages
-    link: /docs/user_guide/message_building_by_channel/in-app_messages/customize/
+  - name: Braze Currents
+    link: /docs/user_guide/data_and_analytics/braze_currents/ 
   - name: Custom Attributes
     link: /docs/user_guide/data_and_analytics/custom_data/custom_attributes/
-  - name: Message Engagement Events
-    link: /docs/user_guide/data_and_analytics/braze_currents/event_glossary/message_engagement_events/
-  - name: Making an API Call
-    link: /docs/user_guide/personalization_and_dynamic_content/connected_content/making_an_api_call/
+  - name: Customize In-App Messages
+    link: /docs/user_guide/message_building_by_channel/in-app_messages/customize/
   - name: Liquid
     link: /docs/user_guide/personalization_and_dynamic_content/liquid/
+  - name: Making an API Call
+    link: /docs/user_guide/personalization_and_dynamic_content/connected_content/making_an_api_call/
+
 ---
