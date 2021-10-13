@@ -14,7 +14,7 @@ Warning! Don't make any changes to this document without approval from the legal
 
 # Braze Data Retention Information
 
-*Last revised in May 2021*
+*Last revised in October 2021*
 
 > This article covers general Braze data retention information.
 
