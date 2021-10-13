@@ -15,7 +15,7 @@ guide_featured_list:
   - name: Canvas Delivery Issues
     link: /docs/help/help_articles/campaigns_and_canvas/canvas_not_sending/
     fa_icon: far fa-paper-plane
-  - name: Experiencing Low Conversions
+  - name: Low Campaign or Canvas Conversions
     link: /docs/help/help_articles/campaigns_and_canvas/conversions_low/
     fa_icon: fas fa-cart-arrow-down
   - name: Checking Location Data
@@ -26,7 +26,7 @@ guide_featured_list:
 
 guide_menu_title: "Other Topics"
 guide_menu_list:
-  - name: Handling Large Control Groups
+  - name: Handling a Large Control Group
     link: /docs/help/help_articles/campaigns_and_canvas/more_people_in_control_group/
     fa_icon: far fa-dot-circle
   - name: Untriggered Campaign or Canvas

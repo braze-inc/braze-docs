@@ -1,7 +1,7 @@
 ---
 nav_title: Untriggered Campaign or Canvas
 article_title: Untriggered Campaign or Canvas
-page_order: 4
+page_order: 5
 
 page_type: solution
 description: "This help article walks you through steps to resolve issues with campaigns or Canvases not triggering as expected."
@@ -10,7 +10,7 @@ tool:
 - Canvas
 ---
 
-# Why Is My Campaign/Canvas Not Triggering?
+# Untriggered Campaign or Canvas
 
 There are a number of reasons why you did not get the expected trigger behavior.
 

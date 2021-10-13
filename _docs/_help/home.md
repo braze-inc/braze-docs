@@ -35,7 +35,7 @@ popular_topic_list:
     link: /docs/help/help_articles/push/push_error_codes/
   - name: Changing Custom Attribute or Event Data Type
     link: /docs/help/help_articles/data/change_custom_data_type/
-  - name: Push Token Migration
+  - name: Migrating Push Token
     link: /docs/help/help_articles/push/push_token_migration/
   - name: Logging Custom Event Properties
     link: /docs/help/help_articles/campaigns_and_canvas/using_custom_event_properties/

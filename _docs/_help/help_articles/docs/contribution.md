@@ -7,7 +7,7 @@ page_type: reference
 description: "This page covers how you can contribute to Braze's open source documentation."
 ---
 
-# How Can I Contribute to Braze Docs?
+# Contributing to Braze Docs
 
 Do you see a typo? Are you not content with waiting to see changes made to Docs? Are you a developer looking to be very active on Github?
 

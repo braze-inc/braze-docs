@@ -1,6 +1,6 @@
 ---
-nav_title: Resolving Empty Content Card Feed
-article_title: Resolving Empty Content Card Feed
+nav_title: Empty Content Card Feed
+article_title: Empty Content Card Feed
 page_order: 0
 
 page_type: solution
@@ -8,7 +8,7 @@ description: "This help article describes why new users may not have Content Car
 channel: content cards
 ---
 
-# New Users Do Not Have Cards in Their Feed
+# Empty Content Card Feed
 
 You cannot send cards to users who do not exist. By definition, new users will not have any cards in their feed on their first session.
 

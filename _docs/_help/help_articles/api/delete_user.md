@@ -9,7 +9,7 @@ tool: Dashboard
 platform: API
 ---
 
-# What happens when a user profile is deleted via the REST API?	
+# Deleting Users via REST API?	
 
 When you [delete a user via the Braze API]({{site.baseurl}}/api/endpoints/user_data/#user-delete-endpoint), the following occurs:
 

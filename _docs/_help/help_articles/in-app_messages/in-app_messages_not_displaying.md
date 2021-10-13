@@ -1,7 +1,7 @@
 ---
 nav_title: In-App Messages Not Displaying
 article_title: In-App Messages Not Displaying
-page_order: 2
+page_order: 1
 
 page_type: solution
 description: "This help article walks you through troubleshooting issues with in-app messages not displaying or rendering properly."

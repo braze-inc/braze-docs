@@ -1,7 +1,7 @@
 ---
 nav_title: Logging Custom Event Properties
 article_title: Logging Custom Event Properties
-page_order: 5
+page_order: 3
 
 page_type: solution
 description: "This help article walks you through three important checks to ensure your custom events are being logged as you expect."
@@ -10,7 +10,7 @@ tool:
 - Canvas
 ---
 
-# Are My Custom Event Properties Being Logged?
+# Logging Custom Event Properties
 
 There are three important checks to carry out to ensure your custom events are being logged as you expect:
 

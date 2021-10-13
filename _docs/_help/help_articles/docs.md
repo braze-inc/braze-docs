@@ -9,7 +9,7 @@ description: "This landing page includes resources related to the Braze Document
 noindex: true
 guide_menu_title: ""
 guide_menu_list:
-  - name: Contribute to Braze Docs
+  - name: Contributing to Braze Docs
     link: /docs/help/help_articles/docs/contribution/
     fa_icon: fas fa-edit
   - name: Scroll Bar Overlap

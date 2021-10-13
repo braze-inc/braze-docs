@@ -11,7 +11,7 @@ platform:
 - Android
 ---
 
-# Common Push Related Error Messages
+# Common Push Error Messages
 
 {% tabs %}
 {% tab Android %} 

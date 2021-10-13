@@ -1,13 +1,13 @@
 ---
 nav_title: Missing Users in Segment
 article_title: Missing Users in Segment
-page_order: 0
+page_order: 1
 
 page_type: solution
 description: "This help article walks you through troubleshooting steps if zero users are showing in your segment, but you anticipate more."
 tool: Segments
 ---
-# Segment Is Showing No Users
+# Missing Users in Segment
 
 There are two possible solutions when you are seeing `0` users, but you anticipated more:
 * [Calculate Exact Statistics](#calculate-exact-statistics)

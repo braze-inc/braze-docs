@@ -7,7 +7,7 @@ page_type: solution
 description: "This help article walks you through troubleshooting steps you can take if users are not receiving your push notifications."
 channel: push
 ---
-# No Push Notification Was Received
+# Missing Push Notifications
 
 There are a number of steps you can take to troubleshoot this issue:
 

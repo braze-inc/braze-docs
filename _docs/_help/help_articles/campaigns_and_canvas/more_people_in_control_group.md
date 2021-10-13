@@ -1,14 +1,14 @@
 ---
 nav_title: Handling a Large Control Group
 article_title: Handling a Large Control Group
-page_order: 3
+page_order: 2
 
 page_type: solution
 description: "This help article describes why your control group might be larger than expected, and walks you through steps to fix this."
 tool: Canvas
 ---
 
-# Why Is My Control Group So Large?
+# Handling a Large Control Group
 
 When creating your Canvas, you may have expected your audience to split evenly between your control group and your variant group, like in [our example](#example) below. We can explain why that is and how to fix it!
 

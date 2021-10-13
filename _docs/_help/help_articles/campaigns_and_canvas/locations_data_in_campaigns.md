@@ -1,14 +1,14 @@
 ---
 nav_title: Checking Location Data
 article_title: Checking Location Data
-page_order: 2
+page_order: 1
 
 page_type: solution
 description: "This help article walks you through quick checks that may assist you if no users have available locations."
 tool: Location
 ---
 
-# Where Is My Location Data?
+# Checking Location Data
 
 Braze captures a user's most recent location by default via its SDK. This typically means that the "recent location" is the location from which your user most recently used your app. If you are sending Braze background location data, you may have more granular data available.
 

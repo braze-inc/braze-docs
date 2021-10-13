@@ -8,7 +8,7 @@ description: "This help article walks you through how to troubleshoot issues wit
 channel: email
 ---
 
-# The HTML Looks Strange When I Send A Test Email To Myself
+# Troubleshooting HTML Rendering in Test Emails
 
 If your [Test Email][37] looks off, we recommend that you...
 

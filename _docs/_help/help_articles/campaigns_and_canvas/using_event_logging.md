@@ -7,7 +7,7 @@ page_type: solution
 description: "This help article describes how to use event logging to troubleshoot issues with your Braze integration."
 ---
 
-# The Event Log
+# Using Event Logging
 
 The Event User Log helps you troubleshoot any issues with your Braze integration.
 

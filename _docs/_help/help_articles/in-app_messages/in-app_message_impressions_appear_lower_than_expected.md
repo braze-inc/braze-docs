@@ -1,13 +1,13 @@
 ---
 nav_title: Low In-App Message Impressions
 article_title: Low In-App Message Impressions
-page_order: 1
+page_order: 2
 
 page_type: solution
 description: "This help article covers actions you can take if your in-app message impressions are lower than you'd like them to be."
 channel: in-app messages
 ---
-# In-App Message Impressions Appear Lower Than Expected
+# Low In-App Message Impressions
 
 If your impressions are lower than you'd like them to be, we recommend that you:
 

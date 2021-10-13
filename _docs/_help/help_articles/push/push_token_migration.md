@@ -8,7 +8,7 @@ description: "This article covers how to migrate push tokens so you can continue
 channel: push
 ---
 
-# Push Token Migration
+# Migrating Push Tokens
 
 A push token is a unique key, created and assigned by Apple or Google to create a connection between an app and an iOS, Android, or web device. Push token migration is the importing of those already-generated keys into Braze’s platform.
 
