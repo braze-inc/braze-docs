@@ -1,16 +1,12 @@
 ---
-nav_title: Nested Custom Attribute Support
+nav_title: Nested Custom Attributes
 permalink: "/nested_custom_attribute_support/"
 hidden: true
 ---
-<br>
-{% alert note %}
-Support for nested custom attributes is currently in early access. Please contact your Braze account manager if you are interested in participating in the early access.
-{% endalert %}
 
-# Nested Custom Attribute Support
+# Nested Custom Attributes
 
-Nested custom attribute support allows you to send objects as a new data type for custom attributes. This nested data allows you to create segments using information from a custom attribute object, and personalize your messages using a custom attribute object and Liquid.
+You can use nested custom attributes to send objects as a new data type for custom attributes. This nested data allows you to create segments using information from a custom attribute object, and personalize your messages using a custom attribute object and Liquid.
 
 Objects can contain existing [data types][1], such as:
 
@@ -20,6 +16,10 @@ Objects can contain existing [data types][1], such as:
 - Arrays
 - Other objects
 - [Arrays of objects]({{site.baseurl}}/array_of_objects/)
+
+{% alert important %}
+Support for nested custom attributes is currently in early access. Please contact your Braze account manager if you are interested in participating in the early access.
+{% endalert %}
 
 ## Limitations
 
