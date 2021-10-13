@@ -2,7 +2,6 @@
 nav_title: Shopify
 article_title: "Shopify"
 description: "This article outlines the partnership with Braze and Shopify, a global commerce company that allows you to seamlessly connect their Shopify store with Braze to pass select Shopify webhooks into Braze. Leverage Braze's cross-channel strategies and Canvas to nudge customers to complete their purchases, or retarget users based on their previous purchases."
-alias: /partners/shopify/
 page_type: partner
 search_tag: Partner
 
@@ -77,7 +76,7 @@ Once the app installation is complete, Braze automatically creates your webhook 
 | --- | --- | --- |
 | `shopify_abandoned_checkout` | [Custom Event]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events/) | Shopify checkout updates webhook's trigger when a customer adds/removes items from their cart AND proceeds further into the checkout process including adding their personal information.<br><br>Braze will listen to the inbound Shopify checkout update webhooks and trigger the `shopify_abandoned_checkout` custom event when that checkout is considered abandoned after __1 hour__ of checkout/cart activity. |
 | `shopify_create_order` | [Custom Event]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events/) | Order create events trigger:<br><br>Automatically after a customer has completed a purchase from your Shopify store.<br>__OR__<br>Manually through the [orders](https://help.shopify.com/en/manual/orders/create-orders) section of your Shopify account.|
-| Purchase | [Braze Purchase Event]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/purchase_events/) | Shopify's order create event also immediately triggers a Braze purchase event. |
+| Purchase | [Braze Purchase Event]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/purchase_events/) | Shopify's order create event also immediately triggers a Braze purchase event.<br><br>_Note: the Braze `product_id` field will include the Shopify product id._ |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
 
 {% endtab %}
@@ -133,13 +132,34 @@ Once the app installation is complete, Braze automatically creates your webhook 
         "name": "IPodNano-8GB",
         "properties": [],
         "price": "199.00"
+      },
+      {
+        "product_id": 632910392,
+        "quantity": 1,
+        "sku": "IPOD2008PINK",
+        "title": "IPodNano-8GB",
+        "vendor": "nil",
+        "name": "IPodNano-8GB",
+        "properties": [],
+        "price": "199.00"
       }
     ],
     "order_id": 820982911946154500,
     "confirmed": false,
     "order_status_url": "https://apple.myshopify.com/690933842/orders/123456abcd/authenticate?key=abcdefg",
     "order_number": 1234,
-    "cancelled_at": "2020-09-10T18:53:45-04:00"
+    "cancelled_at": "2020-09-10T18:53:45-04:00",
+    "shipping": [
+      {
+        "title": "Standard",
+        "price": "10.00"
+      },
+      {
+        "title": "Expedited",
+        "price": "25.00"
+      }
+    ],
+    "tags": "heavy"
   }
 }
 ```

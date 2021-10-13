@@ -2,7 +2,6 @@
 nav_title: Shopify Data in Braze
 article_title: "Shopify"
 description: "This article outlines how to use Shopify data in Braze for personalization and segmentation."
-alias: /partners/shopify/
 page_type: partner
 search_tag: Partner
 
@@ -54,6 +53,7 @@ __Type__: [Custom Event]({{site.baseurl}}/user_guide/data_and_analytics/custom_d
 | Cancelled Timestamp | `{{event_properties.${cancelled_at}}}` |
 | Total Discounts | `{{event_properties.${total_discounts}}}` |
 | Total Price | `{{event_properties.${total_price}}}` |
+| Tags | `{{event_properties.${tags}}}` |
 | Discount Codes | `{{event_properties.${discount_codes}}}` |
 | Item ID | `{{event_properties.${line_items}[0].product_id}}` |
 | Item Quantity | `{{event_properties.${line_items}[0].quantity}}` |
@@ -62,6 +62,9 @@ __Type__: [Custom Event]({{site.baseurl}}/user_guide/data_and_analytics/custom_d
 | Item Vendor | `{{event_properties.${line_items}[0].vendor}}` |
 | Item Properties | `{{event_properties.${line_items}[0].properties}}` |
 | Item Price | `{{event_properties.${line_items}[0].price}}` |
+| Shipping Title | `{{event_properties.${shipping}[0].title}}` |
+| Shipping Price | `{{event_properties.${shipping}[0].price}}` |
+
 {% endraw %}
 
 {% endtab %}
