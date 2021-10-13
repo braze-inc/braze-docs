@@ -1,6 +1,6 @@
 ---
-nav_title: Using Segmentation Logic with And/Or
-article_title: Using Segmentation Logic with And/Or
+nav_title: Segmentation Logic with And/Or
+article_title: Segmentation Logic with And/Or
 page_order: 1
 
 page_type: solution

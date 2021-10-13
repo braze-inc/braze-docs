@@ -10,12 +10,12 @@ tool: Dashboard
 
 # Locked Out of Braze Account	
 
-So you're locked out of your Braze Account–no worries! We can help you get back.	
+So you're locked out of your Braze Account—no worries! We can help you get back in.	
 
 You can tell what kind of lock out you're experiencing by the error message you receive:	
 
 - [I see an error about my password.](#password-error)	
-- [I don't see an error, but it still won't let me in.](#instance-error)	
+- [I don't see an error, but Braze still won't let me in.](#instance-error)	
 - [I see an error about account suspension.](#account-suspension)	
 
 ## Password Error	

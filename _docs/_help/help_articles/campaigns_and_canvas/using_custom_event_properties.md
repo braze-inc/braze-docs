@@ -1,6 +1,6 @@
 ---
-nav_title: Using Custom Event Properties
-article_title: Using Custom Event Properties
+nav_title: Logging Custom Event Properties
+article_title: Logging Custom Event Properties
 page_order: 5
 
 page_type: solution

@@ -1,5 +1,5 @@
 ---
-nav_title: Over-Segmentation
+nav_title: Over-Segementation
 article_title: Over-Segementation
 page_order: 1
 

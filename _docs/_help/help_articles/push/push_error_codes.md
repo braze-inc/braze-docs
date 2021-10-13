@@ -1,6 +1,6 @@
 ---
-nav_title: Common Error Messages
-article_title: Common Error Messages
+nav_title: Common Push Error Messages
+article_title: Common Push Error Messages
 page_order: 0
 
 page_type: solution

@@ -1,6 +1,6 @@
 ---
-nav_title: Delete User via API
-article_title: Delete User via API
+nav_title: Deleting Users via API
+article_title: Deleting Users via API
 page_order: 0
 
 page_type: reference

@@ -1,5 +1,5 @@
 ---
-nav_title: No Push Notification Was Received
+nav_title: Missing Push Notifications
 article_title: Missing Push Notifications
 page_order: 2
 

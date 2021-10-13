@@ -1,6 +1,6 @@
 ---
-nav_title: Experiencing Low In-App Message Impressions
-article_title: Experiencing Low In-App Message Impressions
+nav_title: Low In-App Message Impressions
+article_title: Low In-App Message Impressions
 page_order: 1
 
 page_type: solution

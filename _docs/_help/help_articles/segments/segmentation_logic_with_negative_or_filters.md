@@ -1,6 +1,6 @@
 ---
-nav_title: Using Segmentation Logic with Negative OR Filters
-article_title: Using Segmentation Logic with Negative OR Filters
+nav_title: Segmentation Logic with Negative OR Filters
+article_title: Segmentation Logic with Negative OR Filters
 page_order: 2
 
 page_type: solution

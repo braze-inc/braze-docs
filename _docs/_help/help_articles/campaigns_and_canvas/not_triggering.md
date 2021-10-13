@@ -1,6 +1,6 @@
 ---
-nav_title: Why is my Campaign/Canvas Not Triggering?
-article_title: Resolving Untriggered Campaign or Canvas
+nav_title: Untriggered Campaign or Canvas
+article_title: Untriggered Campaign or Canvas
 page_order: 4
 
 page_type: solution

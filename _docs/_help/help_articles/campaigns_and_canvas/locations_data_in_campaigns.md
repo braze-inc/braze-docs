@@ -1,5 +1,5 @@
 ---
-nav_title: Where is my Location Data?
+nav_title: Checking Location Data
 article_title: Checking Location Data
 page_order: 2
 

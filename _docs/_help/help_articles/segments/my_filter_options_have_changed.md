@@ -1,6 +1,6 @@
 ---
-nav_title: My Filter Options Have Changed
-article_title: My Filter Options Have Changed
+nav_title: Filter Options
+article_title: Filter Options
 page_order: 3
 
 page_type: solution
@@ -9,7 +9,6 @@ tool: Segments
 ---
 
 # My Filter Options Have Changed
-
 
 Your filter options are related to the format (data type) that you’re passing to Braze for your custom attribute. To review the data type that Braze is recognizing for your custom attributes, navigate to **Manage Settings** then select the **Custom Attributes** tab.
 

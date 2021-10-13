@@ -1,5 +1,5 @@
 ---
-nav_title: Why is my control group so large?
+nav_title: Handling a Large Control Group
 article_title: Handling a Large Control Group
 page_order: 3
 
