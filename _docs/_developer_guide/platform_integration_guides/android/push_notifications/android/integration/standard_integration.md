@@ -263,7 +263,7 @@ To properly create a notification small icon asset:
 A common symptom of an improper asset is the small notification icon rendering as a solid monochrome square. This is due to the Android system not being able to find any transparent regions in the notification small icon asset.
 {% endalert %}
 
-The icons pictured below are examples of properly designed icons:
+The large and small icons pictured below are examples of properly designed icons:
 
 ![Android Icon Example][38]
 
