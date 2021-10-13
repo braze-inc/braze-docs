@@ -536,4 +536,4 @@ public void onBindViewHolder(OptionViewHolder holder, Int position) {
 ![Touches][1]{: style="float:right;max-width:30%;margin-left:10px;border:0"}
 Intercepting in-app message touches is crucial in making the custom full in-app message buttons function correctly. By default, all in-app message views add `onClick` listeners onto the message, so users can dismiss messages without buttons. When you add custom controls that should respond to user input (like custom buttons), you can register an `onClick` listener with the view as normal. Any touches outside of the custom controls will dismiss the in-app message as usual, while touches received by the custom controls will invoke your `onClick` listener. 
 
-[1]: {% image_buster /assets/img/iam_implementation_guide.png %}
+[1]: {% image_buster /assets/img/iam_implementation_guide_android.png %}
