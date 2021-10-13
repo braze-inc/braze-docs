@@ -1,12 +1,9 @@
 $(document).ready(function () {
 	if(page_collection == 'developer_guide') {
-
-		// $('#parent_nav_home').append(platform_select);
 		var dev_selected = Cookies.get('__dev_selected') || '';
 		var platform_objects = $('#nav_top_platformintegrationguides > div.nav-item');
 		var platform_list = [];
 		var select_html = '<div id="dev_select_div"><select id="dev_select"><option value="">All</option>';
-		// parent_nav_top_platformintegrationguides
 		platform_objects.each(function(k){
 			var $this = $(this);
 			var obj_id = $this.attr('id');
