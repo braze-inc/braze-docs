@@ -19,14 +19,14 @@ channel:
 
 The new `GroupActivities` framework released by Apple as part of the iOS 15 update allows you to leverage SharePlay in your applications and select Braze messaging channels. SharePlay is a great way for users to experience content with friends and family, offering Braze customers an additional avenue for video content and opportunities to introduce new users to your application.
 
-__Why In-App Messages?__<br>The responsiveness of in-app messages makes them the most intuitive choice for sharing SharePlay content as In-app messages can be launched from any screen, allowing you to trigger messages from even your home screen. For our loyal Content Card users, a similar experience can be achieved but will require extra developer work.
+__Why In-App Messages?__<br>The responsiveness of in-app messages makes them the most intuitive choice for sharing SharePlay content as in-app messages can be launched from any screen, allowing you to trigger messages from even your home screen. For our loyal Content Card users, a similar experience can be achieved but will require extra developer work.
 
 ![SharePlay][3]{: style="float:right;max-width:30%;margin-left:15px;"}
 
 __What Does it Look Like?__<br>When users initiate a SharePlay video in a Facetime call, an "Open" button will appear at the top of everyone's screen. Once opened, audio and video will be synced across all compatible devices, allowing users to watch videos together in real-time. Those who do not have the app downloaded will be redirected to the App Store.
 
 __Starting SharePlay vs. Receiving SharePlay__<br>
-![SharePlay][1]{: style="max-width:30%;"}  ![SharePlay][4]{: style="max-width:26%;"}
+![SharePlay][1]{: style="max-width:30%;"}    ![SharePlay][4]{: style="max-width:26%;"}
 
 <!--
 ![SharePlay][2]{: style="max-width:20%;"}
@@ -108,9 +108,9 @@ struct MediaItemActivity: GroupActivity {
 #### Prepare To Play
 
 When you prepare to play the media item, each group activity has three states:
-.activationDisabled - viewing individually
-.activationPreferred - viewing together
-.cancelled - ignore and handle gracefully
+- `.activationDisabled` - viewing individually
+- `.activationPreferred` - viewing together
+- `.cancelled` - ignore and handle gracefully
 
 When the state comes back as `activationPreferred`, that is your cue to activate the rest of the group activity lifecycle. 
 
