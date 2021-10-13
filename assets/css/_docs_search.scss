@@ -104,6 +104,11 @@ $search_offset: 65px;
     z-index: 700;
 
   }
+
+  .lab_title {
+    font-size: 18px;
+    margin-top: 20px;
+  }
   .aa-Autocomplete,
   .aa-DetachedFormContainer {
     @media (min-width: $window-xxlarge-px) {
