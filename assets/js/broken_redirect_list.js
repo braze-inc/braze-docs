@@ -466,4 +466,7 @@ validurls['/docs/developer_guide/platform_integration_guides/android/push_notifi
 validurls['/docs/developer_guide/platform_integration_guides/android/push_notifications/integration/#registering-for-push'] = '/docs/developer_guide/platform_integration_guides/android/push_notifications/android/integration/standard_integration/#registering-for-push';
 validurls['/docs/help/dp-technical-assistance/'] = '/docs/dp-technical-assistance/';
 validurls['/docs/help/innovation_statement/'] = '/docs/innovation_statement/';
+validurls['/docs/partners/data_and_infrastructure_agility/customer_data_platform/amerpity/#amperity'] = '/docs/partners/data_and_infrastructure_agility/customer_data_platform/amperity/';
+
+
 
