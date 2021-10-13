@@ -12,7 +12,7 @@ search_tag: Partner
 
 ## Personalization
 
-Using nested object support for custom events, Braze Shopify customers can use liquid template variables of the nested event properties. You can find the Liquid templating variables for each event below.
+Using nested object support for custom events, Braze Shopify customers can use Liquid template variables of the nested event properties. You can find the Liquid templating variables for each event below.
 
 {% tabs %}
 {% tab Shopify Abandon Checkout Event %}
@@ -108,7 +108,7 @@ With Shopify custom events in Braze, you can trigger Canvases or campaigns like 
 
 ![Shopify][5]
 
-With Nested Object Support for Custom Event Properties, customers now can trigger campaigns and Canvases using a nested event property. Shown below is an example of triggering a campaign using a specific product from the `shopif_created_order` custom event.
+With Nested Object Support for Custom Event Properties, customers now can trigger campaigns and Canvases using a nested event property. Shown below is an example of triggering a campaign using a specific product from the `shopify_created_order` custom event.
 
 ![Shopify][26]
 
