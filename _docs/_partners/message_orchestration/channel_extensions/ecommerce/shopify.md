@@ -1,6 +1,7 @@
 ---
 nav_title: Shopify
 noindex: true
+alias: /partners/shopify/
 page_order: 0
 layout: featured
 guide_top_header: "Shopify"
