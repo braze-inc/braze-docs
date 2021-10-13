@@ -30,8 +30,6 @@ user_menu_list:
     description: Are you ready to start building a customer journey? We'll guide you through it.
 
 popular_topic_list:
-  - name: User Track Endpoint
-    link: /docs/api/endpoints/user_data/post_user_track/
   - name: User Import
     link: /docs/user_guide/data_and_analytics/user_data_collection/user_import/
   - name: Custom Events
@@ -48,5 +46,7 @@ popular_topic_list:
     link: /docs/user_guide/personalization_and_dynamic_content/liquid/
   - name: Making an API Call
     link: /docs/user_guide/personalization_and_dynamic_content/connected_content/making_an_api_call/
+  - name: Message Engagement Events
+    link: /docs/user_guide/data_and_analytics/braze_currents/event_glossary/message_engagement_events/
 
 ---
