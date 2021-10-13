@@ -44,7 +44,7 @@
 - /assets/js/toc.js
 - /assets/js/documents.js
 - /assets/js/feedback.js
-
+- /assets/js/developer_nav.js
 - /assets/js/contentcards.js
 {% endjavascript_asset_tag %}
 
@@ -53,6 +53,7 @@
 <script type='text/javascript' src='{{site.baseurl}}/assets/js/algolia_search.js' ></script>
 
 <script type="text/javascript">
+  const page_collection = '{{ page.collection }}';
   const { autocomplete,getAlgoliaResults, createAutocomplete } = window['@algolia/autocomplete-js'];
   const { createAlgoliaInsightsPlugin } = window['@algolia/autocomplete-plugin-algolia-insights'];
   const searchClient = algoliasearch('{{ site.algolia.application_id }}', '{{ site.algolia.algolia_api_key }}');
