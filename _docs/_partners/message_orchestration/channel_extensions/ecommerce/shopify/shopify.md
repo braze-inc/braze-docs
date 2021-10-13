@@ -225,7 +225,7 @@ Once the app installation is complete, Braze automatically creates your webhook 
 {% endtab %}
 {% endtabs %}
 
-Supported Shopify Standard Attributes
+#### Supported Shopify Standard Attributes
 
 - Email
 - First Name
