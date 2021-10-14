@@ -53,5 +53,7 @@ The statement `Country is not United States AND Country is not Canada` will only
 
 Still need help? [Open a support ticket]({{site.baseurl}}/support_contact/).
 
+_Last updated on September 17, 2021_
+
 [49]: {% image_buster /assets/img_archive/us_canada.png %}
 [50]: {% image_buster /assets/img_archive/not_us_not_canada.png %}

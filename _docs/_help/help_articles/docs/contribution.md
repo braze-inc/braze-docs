@@ -20,3 +20,5 @@ You can find the Braze Docs repo [here](https://github.com/Appboy/braze-docs/) o
 {% alert important %}
 Before making changes to Braze Docs, you will be asked to sign our [Contributor License Agreement (CLA)]({{site.baseurl}}/cla).
 {% endalert %}
+
+_Last updated on September 23, 2019_

@@ -18,5 +18,6 @@ Please note that changing the data type of a custom attribute in the dashboard w
 
 Still need help? [Open a support ticket]({{site.baseurl}}/support_contact/).
 
+_Last updated on May 5, 2021_
 
 [36]: {{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_attributes/#custom-attribute-data-types

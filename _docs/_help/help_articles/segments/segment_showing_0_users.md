@@ -7,6 +7,7 @@ page_type: solution
 description: "This help article walks you through troubleshooting steps if zero users are showing in your segment, but you anticipate more."
 tool: Segments
 ---
+
 # Missing Users in Segment
 
 There are two possible solutions when you are seeing `0` users, but you anticipated more:
@@ -15,7 +16,7 @@ There are two possible solutions when you are seeing `0` users, but you anticipa
 
 ## Calculate Exact Statistics
 
-The Segment statistics could be providing an estimate. The estimation is calculated based on a random sample with a 95% confidence interval that the result is within `+/- 1%`. The smaller your user base is, the more likely it is that the size of your segment is a rough estimate. Click “Calculate Exact Statistics” on the Segment page. This will calculate the exact number of users in your segment.
+The Segment statistics could be providing an estimate. The estimation is calculated based on a random sample with a 95% confidence interval that the result is within `+/- 1%`. The smaller your user base is, the more likely it is that the size of your segment is a rough estimate. Click **Calculate Exact Statistics** on the **Segment Details** panel. This will calculate the exact number of users in your segment.
 
 ![Calculate Exact Statistics][28]
 
@@ -31,6 +32,8 @@ The data that you see in the Braze dashboard may not have the same syntax as wha
 {% endalert %}
 
 Still need help? [Open a support ticket]({{site.baseurl}}/support_contact/).
+
+_Last updated on January 5, 2021_
 
 [28]: {% image_buster /assets/img_archive/trouble8.png %}
 [29]: {% image_buster /assets/img_archive/trouble9.png %}

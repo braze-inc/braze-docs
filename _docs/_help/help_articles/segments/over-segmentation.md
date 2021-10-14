@@ -22,3 +22,5 @@ If you over segment your user data, your findings will lose statistical signific
 {% alert tip %}
 Multiple user actions within an app can be labeled with the same custom event or attribute designation. This is useful when you want to track something generically such as "played a song" rather than recording each individual song within a music app as a separate and distinct event.
 {% endalert %}
+
+_Last updated on October 17, 2019_

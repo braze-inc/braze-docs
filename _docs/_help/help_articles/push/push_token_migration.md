@@ -118,3 +118,6 @@ You must have a receiver to handle and display push payloads. To notify the rece
 {% alert note %}
 For some push notification providers, Braze will need to flatten the key-value pairs so that they can be properly interpreted. To flatten key-value pairs for a specific Android app, contact your Customer Onboarding or Success Manager.
 {% endalert %}
+
+_Last updated on June 1, 2021_
+

@@ -27,6 +27,7 @@ Here's what your updated scroll bar should look like now:
 
 ![Scroll Fixed][3]
 
+_Last updated on March 27, 2019_
 
 {% comment %}
 Insert this where there is a single line of long code that might cause issues:

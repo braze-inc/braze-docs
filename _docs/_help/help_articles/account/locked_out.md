@@ -40,6 +40,8 @@ If you are using the same machine you usually do to log in, Braze should automat
 
 This doesn't happen very often, but we take account suspension and deletions very seriously. If you find this error, your best bet is to reach out to your company's Braze administrator, Braze Account Manager, or Braze [Support][support].	
 
+_Last updated on October 19, 2019_
+
 [support]: {{site.baseurl}}/support_contact/	
 [1]: {{site.baseurl}}/user_guide/administrative/access_braze/braze_instances/#braze-instances
 [2]: {{site.baseurl}}/user_guide/administrative/logging_in_and_security/resetting_your_password/	

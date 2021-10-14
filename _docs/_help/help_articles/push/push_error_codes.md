@@ -60,3 +60,4 @@ This generally happens when someone uninstalls. Braze query’s the APNS Feedbac
 {% endtab %}
 {% endtabs %}
 
+_Last updated on August 17, 2021_

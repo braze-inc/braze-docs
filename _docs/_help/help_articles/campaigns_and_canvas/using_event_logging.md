@@ -27,5 +27,7 @@ This is a great way to find anonymous users. You can also use this information t
 
 Still need help? [Open a support ticket]({{site.baseurl}}/support_contact/).
 
+_Last updated on March 27, 2019_
+
 [46]: {{site.baseurl}}/user_guide/administrative/app_settings/developer_console/event_user_log_tab/#event-user-log-tab
 [51]: {{site.baseurl}}/user_guide/administrative/app_settings/developer_console/internal_groups_tab/#adding-test-users

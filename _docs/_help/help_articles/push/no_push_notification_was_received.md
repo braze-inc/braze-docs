@@ -51,6 +51,7 @@ If this is a single channel campaign or a Canvas with a control group, it’s po
 
   Still need help? [Open a support ticket]({{site.baseurl}}/support_contact/).
 
+_Last updated on July 15, 2021_
 
 [1]: {{site.baseurl}}/user_guide/engagement_tools/segments/using_user_search/#engagement-tab
 [2]: {% image_buster /assets/img_archive/trouble1.png %}

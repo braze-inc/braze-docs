@@ -34,6 +34,8 @@ Check that you’ve reviewed information on [calculating conversions][45] in ord
 
 Still need help? [Open a support ticket]({{site.baseurl}}/support_contact/).
 
+_Last updated on May 6, 2021_
+
 [1]: {{site.baseurl}}/user_guide/data_and_analytics/your_reports/understanding_your_app_usage_data/#understanding-your-app-usage-data
 [2]: {{site.baseurl}}/user_guide/data_and_analytics/configuring_reporting/#configuring-reporting
 [43]: {% image_buster /assets/img_archive/trouble5.png %}

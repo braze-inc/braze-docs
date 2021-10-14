@@ -49,6 +49,8 @@ This means that even though we specified 90% of users to enter the variant, not 
 
 Still need help? [Open a support ticket]({{site.baseurl}}/support_contact/).
 
+_Last updated on December 3, 2020_
+
 [1]: {{site.baseurl }}/user_guide/engagement_tools/canvas/create_a_canvas/create_a_canvas/#step-2-use-the-entry-wizard-to-set-up-your-canvas
 [41]: {% image_buster /assets/img_archive/trouble15.png %}
 [42]: {% image_buster /assets/img_archive/trouble16.png %}

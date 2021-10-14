@@ -29,4 +29,4 @@ In short, avoid configuring an action-based campaign or Canvas with the same tri
 
 Still need help? [Open a support ticket]({{site.baseurl}}/support_contact/).
 
-
+_Last updated on August 5, 2021_
