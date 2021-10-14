@@ -109,7 +109,7 @@ $(document).ready(function () {
     var lab_image = "<img src='" + base_url + "/assets/img/lab.png' width='45px' /> ";
     var result_template = '';
     if (lab_intialized) {
-      result_template = '<div class="lab_title">Learning at Braze ' + lab_image + '</div><hr />';
+      result_template = '<div class="lab_header">Learning at Braze ' + lab_image + '</div><hr />';
       lab_intialized = false;
     }
 
