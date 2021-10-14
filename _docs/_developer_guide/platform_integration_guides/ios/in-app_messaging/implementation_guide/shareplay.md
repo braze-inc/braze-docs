@@ -1,6 +1,6 @@
 ---
 nav_title: SharePlay
-article_title: SharePlay
+article_title: SharePlay In-App Message Implementation Guide
 platform: iOS
 page_order: 1
 description: "This advanced SharePlay implementation guide expands on the video use case provided in the in-app message advanced implementation guide. SharePlay is a newly released feature that enables iOS 15 Facetime users to have a shared media experience across their devices, offering real-time audio and video syncing."
@@ -9,7 +9,7 @@ channel:
 
 ---
 
-# Apple SharePlay and In-App Messages
+# SharePlay In-App Message Implementation Guide
 
 > SharePlay is a newly released feature that enables iOS 15 Facetime users to have a shared media experience across their devices, offering real-time audio and video syncing. SharePlay is a great way for users to experience content with friends and family, offering Braze customers an additional avenue for video content and opportunities to introduce new users to your application.
 
