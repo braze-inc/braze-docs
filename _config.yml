@@ -202,6 +202,8 @@ asset_pipeline:
   display_path: docs/assets
   gzip: false
 
+lab_index_name: "LABSearch"
+
 # Algolia Search index
 algolia:
   algolia_api_key: "ef2b60b317325b3227caabd0c9431d4b"
