@@ -366,14 +366,10 @@ $search_offset: 65px;
       font-size: $search_font_size ;
       .aa-Item {
         hr {
-          margin-top: 15px;
+          margin-top: 5px;
+          margin-bottom: 15px;
           border-width: 1px;
           border-color: rgba($grey-ghost,0.7);
-        }
-        &:last-child  {
-          hr {
-            border-color: transparent;
-          }
         }
       }
 

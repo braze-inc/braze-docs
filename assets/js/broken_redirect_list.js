@@ -470,3 +470,5 @@ validurls['/docs/partners/data_and_infrastructure_agility/customer_data_platform
 
 
 
+validurls['/docs/help/best_practices/'] = '/docs/faqs/';
+

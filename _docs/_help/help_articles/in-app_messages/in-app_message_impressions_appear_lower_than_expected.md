@@ -1,13 +1,13 @@
 ---
-nav_title: Experiencing Low In-App Message Impressions
-article_title: Experiencing Low In-App Message Impressions
-page_order: 1
+nav_title: Low In-App Message Impressions
+article_title: Low In-App Message Impressions
+page_order: 2
 
 page_type: solution
 description: "This help article covers actions you can take if your in-app message impressions are lower than you'd like them to be."
 channel: in-app messages
 ---
-# In-App Message Impressions Appear Lower Than Expected
+# Low In-App Message Impressions
 
 If your impressions are lower than you'd like them to be, we recommend that you:
 
@@ -47,6 +47,8 @@ You can read more about this:
   * [Android][13] In-app message documentation
 
 Still need help? [Open a support ticket]({{site.baseurl}}/support_contact/).
+
+_Last updated on May 6, 2021_
 
 [1]: {{site.baseurl}}/user_guide/data_and_analytics/your_reports/understanding_your_app_usage_data/#understanding-your-app-usage-data
 [2]: {{site.baseurl}}/user_guide/data_and_analytics/configuring_reporting/#configuring-reporting

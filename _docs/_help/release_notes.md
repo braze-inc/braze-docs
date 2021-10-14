@@ -1,7 +1,7 @@
 ---
-page_order: 2
 nav_title: Release Notes
 article_title: Release Notes
+page_order: 4
 layout: featured
 guide_top_header: "Release Notes"
 guide_top_text: "This is where you can find all updates to the Braze platform, with the <a href='/docs/help/release_notes/#most-recent'>most recent platform updates</a>, listed below. You can also

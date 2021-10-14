@@ -9,7 +9,7 @@ description: "This landing page contains help articles related to Braze data."
 noindex: true
 guide_menu_title: ""
 guide_menu_list:
-  - name: Change Custom Attribute or Event Data Type
+  - name: Changing Custom Attribute or Event Data Type
     link: /docs/help/help_articles/data/change_custom_data_type/
     fa_icon: fas fa-table
   - name: Dispatch ID Behavior
