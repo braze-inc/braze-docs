@@ -25,6 +25,9 @@ resources_list:
   - name: Media Resources
     link: https://www.youtube.com/channel/UCEXVTEWeAHx1OlddOMRTaOg
     image: /assets/img/icons/icon-document-ribbon.png
+  - name: Braze Support
+    link: /docs/braze_support/
+    image: /assets/img/sign-in.png
 
 popular_topic_list:
   - name: Dispatch ID Behavior
