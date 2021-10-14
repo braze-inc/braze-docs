@@ -6,8 +6,8 @@ layout: self_help
 help_top_header: "Braze Help"
 
 page_type: landing
-user_top_text: "Welcome to the Braze self-help section! Here you'll find a variety of help articles that can help you troubleshoot issues you may encounter. You can also learn more about the best practices to communicate and reach your users."
-description: "Welcome to the Braze self-help section! Here you'll find a variety of help articles that can help you troubleshoot issues you may encounter. You can also learn more about the best practices to communicate and reach your users."
+user_top_text: "Welcome to the Braze self-help section! Here you'll find a variety of help articles that can help you troubleshoot issues you may encounter. You can also learn more about the best practices to communicate with and reach your users."
+description: "Welcome to the Braze self-help section! Here you'll find a variety of help articles that can help you troubleshoot issues you may encounter. You can also learn more about the best practices to communicate with and reach your users."
 
 resources_list:
   - name: Help Articles
