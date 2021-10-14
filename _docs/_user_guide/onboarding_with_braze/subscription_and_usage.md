@@ -65,7 +65,7 @@ This table gives you the ability to quickly see your total data point usage vs y
 ### App Group Billing Data
 
 {% alert note %}
-The app group billing data and app group charts will only display for dates after October 1, 2021. 
+The app group billing data and app group charts only display for dates after October 1, 2021. 
 {% endalert %}
 
 #### Drill to App Groups
