@@ -8,10 +8,6 @@ description: "This reference article covers how to create a stand-alone message 
 tool: Canvas
 
 ---
-<br>
-{% alert note %}
-Support for Canvas Message Steps is currently in early access. Please contact your Braze account manager if you are interested in participating in the early access.
-{% endalert %}
 
 # Message Step for Canvas
 ![Canvas Message Step][1]{: style="float:right;max-width:19%;margin-left:15px;"}
