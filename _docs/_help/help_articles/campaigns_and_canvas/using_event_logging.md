@@ -7,7 +7,7 @@ page_type: solution
 description: "This help article describes how to use event logging to troubleshoot issues with your Braze integration."
 ---
 
-# The Event Log
+# Using Event Logging
 
 The Event User Log helps you troubleshoot any issues with your Braze integration.
 
@@ -26,6 +26,8 @@ Use Event Logging to test what behavior looks like for an anonymous user. It can
 This is a great way to find anonymous users. You can also use this information to test what data is being sent to Braze and check any discrepancies. From this view you are also able to identify whether the deltas of your data are being sent to Braze. If an email address or push token is being sent with every event logged that indicates that all data is being sent to Braze.
 
 Still need help? [Open a support ticket]({{site.baseurl}}/support_contact/).
+
+_Last updated on March 27, 2019_
 
 [46]: {{site.baseurl}}/user_guide/administrative/app_settings/developer_console/event_user_log_tab/#event-user-log-tab
 [51]: {{site.baseurl}}/user_guide/administrative/app_settings/developer_console/internal_groups_tab/#adding-test-users

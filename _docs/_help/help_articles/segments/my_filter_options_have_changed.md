@@ -1,15 +1,14 @@
 ---
-nav_title: My Filter Options Have Changed
-article_title: My Filter Options Have Changed
-page_order: 3
+nav_title: Filter Options Changed
+article_title: Filter Options Changed
+page_order: 0
 
 page_type: solution
 description: "This help article covers what it means when your filter options for your Custom Attributes have changed."
 tool: Segments
 ---
 
-# My Filter Options Have Changed
-
+# Filter Options Changed
 
 Your filter options are related to the format (data type) that you’re passing to Braze for your custom attribute. To review the data type that Braze is recognizing for your custom attributes, navigate to **Manage Settings** then select the **Custom Attributes** tab.
 
@@ -19,5 +18,6 @@ Please note that changing the data type of a custom attribute in the dashboard w
 
 Still need help? [Open a support ticket]({{site.baseurl}}/support_contact/).
 
+_Last updated on May 5, 2021_
 
 [36]: {{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_attributes/#custom-attribute-data-types

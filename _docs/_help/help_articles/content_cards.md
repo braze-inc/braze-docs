@@ -10,7 +10,7 @@ channel: content cards
 noindex: true
 guide_menu_title: ""
 guide_menu_list:
-  - name: No Cards New User Feeds
+  - name: Empty Content Card Feed
     link: /docs/help/help_articles/content_cards/empty_content_card_feed/
     fa_icon: fas fa-times-circle
 

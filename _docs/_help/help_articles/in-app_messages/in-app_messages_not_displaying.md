@@ -1,7 +1,7 @@
 ---
 nav_title: In-App Messages Not Displaying
 article_title: In-App Messages Not Displaying
-page_order: 2
+page_order: 1
 
 page_type: solution
 description: "This help article walks you through troubleshooting issues with in-app messages not displaying or rendering properly."
@@ -56,6 +56,8 @@ There is a minimum interval at which we’ll allow in-app messages to be consecu
 These are customizable, however we have them in place to avoid over-messaging your users.
 
 Still need help? [Open a support ticket]({{site.baseurl}}/support_contact/).
+
+_Last updated on July 15, 2021_
 
 [1]: {{site.baseurl}}/user_guide/data_and_analytics/your_reports/understanding_your_app_usage_data/#understanding-your-app-usage-data
 [2]: {{site.baseurl}}/user_guide/data_and_analytics/configuring_reporting/#configuring-reporting
