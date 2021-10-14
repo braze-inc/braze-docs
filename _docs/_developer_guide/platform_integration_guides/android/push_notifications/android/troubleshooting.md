@@ -62,6 +62,12 @@ __Note:__ Google Play Services is not installed on Android emulators without Goo
 
 Ensure your device has good internet connectivity and that it isn't sending network traffic through a proxy.
 
+### Tapping Push Notification Doesn't Open App
+
+Check if `com_appboy_handle_push_deep_links_automatically` is set to `true` or `false`. To enable Braze to automatically open the app and any deep links when a push notification is tapped, set `com_appboy_handle_push_deep_links_automatically` to `true` in your `braze.xml` file.
+
+If `com_appboy_handle_push_deep_links_automatically` is set to its default of `false`, then you need to create a broadcast receiver to listen for and handle the push received and opened intents.
+
 ### Push Notifications Bounced
 
 If a push notification isn't delivered, make sure it didn't bounce by looking in the [developer console][2]. The following are descriptions of common errors that may be logged in the developer console:
