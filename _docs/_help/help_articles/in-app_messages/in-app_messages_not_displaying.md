@@ -33,7 +33,7 @@ Customization of the in-app message UI or delivery mechanisms within the SDK may
 
 It is important to determine whether the trigger event is failing to occur, or the message itself is unable to display. To test, trigger the message using a different action (like a session start, or different custom event) and verify whether it displays. This will help isolate if this is potentially a data issue.
 
-Alternatively try using a different type of in-app message template or size of image. There are [specs][15] for in-app messages that must be followed. Sometimes, if an image is too large, it will prevent the in-app message from displaying.
+Alternatively try using a different type of in-app message template or size of image. There are [specifications for in-app messages][15] that must be followed. Sometimes, if an image is too large, it will prevent the in-app message from displaying.
 
 
 ## Session Timeout
