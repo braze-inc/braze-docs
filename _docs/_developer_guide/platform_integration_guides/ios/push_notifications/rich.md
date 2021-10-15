@@ -65,7 +65,7 @@ static NSString *const AppboyAPNSDictionaryAttachmentTypeKey = @"type";
 
 To manually display push with a Braze payload, download the content from the value under `AppboyAPNSDictionaryAttachmentURLKey`, save it as a file with the file type stored under the `AppboyAPNSDictionaryAttachmentTypeKey` key, and add it to the notification attachments.
 
-You can write the Service Extension in either Objective-C or Swift. You can copy the following sample code into your `Notification Service Extension`. Changing the class name to the one you picked will automatically provide this functionality.
+You can write the Service Extension in either Objective-C or Swift. To implement the Service Extension using our sample code, you can copy the below code into your `Notification Service Extension` and change its class name to the one you picked.
 
 {% tabs %}
 {% tab OBJECTIVE-C %}
