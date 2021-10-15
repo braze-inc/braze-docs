@@ -24,9 +24,7 @@ Ensure that `Embed In Application` is set to embed the extension in your applica
 A `Notification Service Extension` is its own binary that is bundled with your app. As such, it must be set up in the [Apple Developer Portal][27] with its own App ID and Provisioning Profile.
 
 ### Configuring The Service Extension To Work With Braze
-Braze sends down an attachment payload in the APNs payload under the `ab` key that we use to configure, download and display rich content:
-
-For example:
+Braze sends down an attachment payload in the APNs payload under the `ab` key that we use to configure, download and display rich content. For example:
 
 ```json
 {
