@@ -326,4 +326,10 @@ glossaries:
     description: Total clicks on the submit button of a <a href='/docs/user_guide/message_building_by_channel/in-app_messages/templates/simple_survey/' target='_blank'>Simple Survey</a>.
     tags:
       - In-App Message
+  - name: Click to Open Rate
+    description: The percentage of opened emails that were clicked. Available in Report Builder.
+    calculation: (Unique clicks) / (unique opens) (for Email)
+    tags:
+      - Email
+    
 ---
