@@ -86,13 +86,13 @@ To ensure campaigns operate as desired, we recommend stopping the current campai
 
 Please ensure you re-adjust campaign schedule times to allow for time zone sending.
 
-### When does Braze evaluate users for local timezone delivery?
+### When does Braze evaluate users for local time zone delivery?
 
-For local timezone delivery, Braze evaluates users for their entry eligibility during these two instances:
+For local time zone delivery, Braze evaluates users for their entry eligibility during these two instances:
 - At Samoa time (UTC+13) of the scheduled day
 - At local time of the scheduled day
 
-In order for a user to be eligible for entry, the must must be eligible for both checks. For example, if a Canvas is scheduled to launch on August 7, 2021 at 2pm local timezone,  then targeting a user located in New York would require the following checks for eligibility:
+In order for a user to be eligible for entry, the must must be eligible for both checks. For example, if a Canvas is scheduled to launch on August 7, 2021 at 2pm local time zone,  then targeting a user located in New York would require the following checks for eligibility:
 - New York on August 6, 2021 at 9pm
 - New York on August 7, 2021 at 2pm
 
