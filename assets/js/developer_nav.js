@@ -1,5 +1,9 @@
 $(document).ready(function () {
 	if(page_collection == 'developer_guide') {
+		var exclusion_list = [
+			'parent_nav_top_platformintegrationguides_sdkprimer',
+			'parent_nav_top_platformintegrationguides_sdkchangelogs'
+		];
 		var dev_selected = Cookies.get('__dev_selected') || '';
 		var platform_objects = $('#nav_top_platformintegrationguides > div.nav-item');
 		var platform_list = [];
@@ -7,25 +11,28 @@ $(document).ready(function () {
 		platform_objects.each(function(k){
 			var $this = $(this);
 			var obj_id = $this.attr('id');
-			platform_list.push(obj_id);
-			select_html += `<option value="${obj_id}" `;
-			if (dev_selected == obj_id){
-				select_html += ' selected="selected"'
+			if (exclusion_list.indexOf(obj_id) == -1){
+				platform_list.push(obj_id);
+				select_html += `<option value="${obj_id}" `;
+				if (dev_selected == obj_id){
+					select_html += ' selected="selected"'
+				}
+				select_html += `>${$this.text().trim()}</option>`;
 			}
-			select_html += `>${$this.text().trim()}</option>`;
 			if (dev_selected != '') {
 				var sel_item = $('#' + obj_id + ' a');
-
-				if (dev_selected != obj_id) {
-					$('#' + obj_id).hide();
-					if (sel_item.attr('aria-expanded') == 'true') {
-						sel_item.trigger('click');
+				if (exclusion_list.indexOf(obj_id) == -1){
+					if (dev_selected != obj_id) {
+						$('#' + obj_id).hide();
+						if (sel_item.attr('aria-expanded') == 'true') {
+							sel_item.trigger('click');
+						}
 					}
-				}
-				else {
-					$('#' + obj_id).show();
-					if (sel_item.attr('aria-expanded') == 'false') {
-						sel_item.trigger('click');
+					else {
+						$('#' + obj_id).show();
+						if (sel_item.attr('aria-expanded') == 'false') {
+							sel_item.trigger('click');
+						}
 					}
 				}
 			}
@@ -44,10 +51,12 @@ $(document).ready(function () {
 			}
 			else {
 				$(platform_list).each(function(i,v){
-					if ($("#" + v + ' a').attr('aria-expanded') == 'true') {
-						$("#" + v + ' a').trigger('click');
+					if (exclusion_list.indexOf(v) == -1){
+						if ($("#" + v + ' a').attr('aria-expanded') == 'true') {
+							$("#" + v + ' a').trigger('click');
+						}
+						$("#" + v).hide();
 					}
-					$("#" + v).hide();
 				});
 				$('#' + cur_sel).show();
 				var sel_item = $('#' + cur_sel + ' a');
