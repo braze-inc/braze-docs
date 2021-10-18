@@ -85,3 +85,15 @@ Changing the send time on campaigns within this time can lead to undesired behav
 To ensure campaigns operate as desired, we recommend stopping the current campaign (this will abort any enqueued messages). You can then duplicate the campaign, making the changes as necessary and launch the new campaign. You may need to exclude users from this campaign who have already received the first campaign.
 
 Please ensure you re-adjust campaign schedule times to allow for time zone sending.
+
+### When does Braze evaluate users for local timezone delivery?
+
+For local timezone delivery, Braze evaluates users for their entry eligibility during these two instances:
+- At Samoa time (UTC+13) of the scheduled day
+- At local time of the scheduled day
+
+In order for a user to be eligible for entry, the must must be eligible for both checks. For example, if a Canvas is scheduled to launch on August 7, 2021 at 2pm local timezone,  then targeting a user located in New York would require the following checks for eligibility:
+- New York on August 6, 2021 at 9pm
+- New York on August 7, 2021 at 2pm
+
+Note that the user needs to be in the segment for 24 hours prior to the launch. If the user is not eligible in the first check, then Braze will not attempt the second check. 
