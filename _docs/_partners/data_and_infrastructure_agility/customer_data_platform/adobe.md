@@ -3,7 +3,9 @@ nav_title: Adobe
 alias: /partners/adobe/
 description: "The Braze and Adobe CDP integration allows brands to connect and map their Adobe data (custom attributes and segments) to Braze in real-time. Brands can then act on this data, delivering personalized targeted experiences to those users."
 page_type: partner
-hidden: true
+page_order: 2.1
+search_tag: Partner
+
 ---
 
 # Adobe
@@ -11,10 +13,6 @@ hidden: true
 > Built on the Adobe Experience Platform, Adobe's Real-time Customer Data Platform (Real-time CDP) helps companies bring together known and anonymous data from multiple enterprise sources in order to create customer profiles that can be used to provide personalized customer experiences across all channels and devices in real-time.
 
 The Braze and Adobe CDP integration allows brands to connect and map their Adobe data (custom attributes and segments) to Braze in real-time. Brands can then act on this data, delivering personalized targeted experiences to those users. With Adobe, the integration is intuitive. Simply take any Adobe [identity](https://experienceleague.adobe.com/docs/experience-platform/identity/namespaces.html?lang=en), map it to a Braze external ID, and send it off to the Braze platform. All data sent will be accessible in Braze through a new `AdobeExperiencePlatformSegments` attribute.
-
-{% alert important %}
-The Adobe and Braze integration is currently in beta. Please contact your Braze account manager if you are interested in participating in the beta.
-{% endalert %}
 
 ## Prerequisites
 
