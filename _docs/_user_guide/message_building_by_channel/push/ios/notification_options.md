@@ -154,7 +154,7 @@ To change the Interruption Level for an iOS Push Notification, choose the desire
 
 ![Interruption Level Option][28]
 
-This feature does not have minimum SDK Version requirements, but is only applied for devices running iOS 15+.
+This feature does not have minimum SDK version requirements, but is only applied for devices running iOS 15+.
 
 ### Relevance Score (iOS 15+) {#relevance-score}
 
@@ -170,7 +170,7 @@ To set an iOS Notification's Relevance Score, enter a value between `0.0` and `1
 
 ![Relevance Score Option][29]
 
-This feature does not have minimum SDK Version requirements, but is only applied for devices running iOS 15+.
+This feature does not have minimum SDK version requirements, but is only applied for devices running iOS 15+.
 
 For more information on maximum message lengths for different message types, refer to [Image and Text Specifications]({{site.baseurl}}/user_guide/message_building_by_channel/push/about/#image-and-text-specifications).
 
