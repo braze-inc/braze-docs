@@ -89,7 +89,7 @@ Keywords created in custom keyword categories adhere to all of the rules and val
 
 ### Lifecycle Specific Keywords
 
-If you have a use case where you would like to limit when a customer can send a specific keyword during their lifecycle (e.g., during their first initial onboarding) to receive a response, you can use the trigger "Send inbound SMS to subscription group within keyword category OTHER" in your campaign/Canvas and define some ad-hoc keywords that your users can send in at a point in time. This trigger supports filtering on the specific inbound message using is/is not comparisons of the message, as well as matches/does not match regex rules to validate the user's input.
+If you have a use case where you would like to limit when a customer can send a specific keyword during their lifecycle (e.g., during their first initial onboarding) to receive a response, you can use the trigger "Sent inbound SMS to subscription group within keyword category OTHER" in your campaign/Canvas and define some ad-hoc keywords that your users can send in at a point in time. This trigger supports filtering on the specific inbound message using is/is not comparisons of the message, as well as matches/does not match regex rules to validate the user's input.
 
 #### Canvas
 
@@ -98,6 +98,14 @@ If you have a use case where you would like to limit when a customer can send a 
 #### Campaign
 
 ![picture][15]{: style="max-width:80%;"}
+
+### Dealing with Unknown Keywords
+
+While not required, we strongly recommend setting up an auto-response for when users send inbound SMS keywords that do not match an existing keyword. This message will notify the user that the keyword is not recognized and offer some guidance. 
+
+This can be done by creating an SMS campaign with a message like "Sorry! We didn't recognize that keyword, text STOP to stop or HELP to help." Next, in the delivery step, select "Action-Based Delivery" and use the trigger "Sent inbound SMS to subscription group within keyword category OTHER".
+
+![SMS Confirm]({% image_buster /assets/img/sms/sms_other.png %})
 
 {% alert tip %}
 Interested in seeing how these keywords and keyword categories can be used in your campaigns and Canvases to retarget and trigger messages? Visit our [SMS retargeting article]({{site.baseurl}}/user_guide/message_building_by_channel/sms/campaign/retargeting/) for more information.
