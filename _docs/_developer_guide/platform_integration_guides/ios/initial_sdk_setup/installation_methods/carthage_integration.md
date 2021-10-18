@@ -15,7 +15,7 @@ binary "https://raw.githubusercontent.com/Appboy/appboy-ios-sdk/master/appboy_io
 github "SDWebImage/SDWebImage"
 ```
 
-Please reference the [Carthage quick start guide][1] for more detailed instructions about importing the SDK. When migrating from version `4.3.4` of the Braze SDK or before, follow the [Carthage migration guide for XCFrameworks][2].
+Please reference the [Carthage quick start guide][1] for more detailed instructions about importing the SDK. When migrating from version `4.3.4` or before of the Braze SDK, follow the [Carthage migration guide for XCFrameworks][2].
 
 For platform-specific usage of Carthage, refer to their [user guide][3] on Github.
 
@@ -26,26 +26,26 @@ For versions `3.34.0` through `4.3.4`, simply include this one line in your `Car
 binary "https://raw.githubusercontent.com/Appboy/appboy-ios-sdk/master/appboy_ios_sdk_full.json"
 ```
 
-You can integrate earlier versions of the SDK by including the following in your `Cartfile`:
+You can integrate versions prior to `3.34.0` by including the following in your `Cartfile`:
 ```
 github "Appboy/Appboy-iOS-SDK" "<BRAZE_IOS_SDK_VERSION>"
 ```
 
-> Make sure to replace `<BRAZE_IOS_SDK_VERSION>` with the appropriate version of the Braze iOS SDK in "x.y.z" format. Release versions are available [here][4].
+Make sure to replace `<BRAZE_IOS_SDK_VERSION>` with the appropriate version of the Braze iOS SDK in "x.y.z" format. Release versions are available [here][4].
 
 ## Next Steps
 
 Follow the instructions for [Completing the Integration][5].
 
 ## Dependency-Free Integration
-If you want to use the Braze SDK without the `SDWebImage` dependency, install a thin version of the Braze Carthage framework. To do so, include the following line in your Cartfile:
+If you want to use the Braze SDK without the `SDWebImage` dependency, install the thin version of the Braze Carthage framework by including the following line in your Cartfile:
 
 ```
 binary "https://raw.githubusercontent.com/Appboy/appboy-ios-sdk/master/appboy_ios_sdk.json"
 ```
 
 ## Core Only Integration
-If you want to use the Core SDK without any UI components, install the core version of the Braze Carthage framework by including the following line in your Cartfile:
+If you want to use the Core SDK without any UI components or dependencies, install the core version of the Braze Carthage framework by including the following line in your Cartfile:
 
 ```
 binary "https://raw.githubusercontent.com/Appboy/appboy-ios-sdk/master/appboy_ios_sdk_core.json"
