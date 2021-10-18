@@ -3,7 +3,7 @@ $(document).ready(function () {
 		var dev_selected = Cookies.get('__dev_selected') || '';
 		var platform_objects = $('#nav_top_platformintegrationguides > div.nav-item');
 		var platform_list = [];
-		var select_html = '<div id="dev_select_div"><select id="dev_select"><option value="">All</option>';
+		var select_html = '<div id="dev_select_div"><select id="dev_select"><option value="">Select Platform</option>';
 		platform_objects.each(function(k){
 			var $this = $(this);
 			var obj_id = $this.attr('id');

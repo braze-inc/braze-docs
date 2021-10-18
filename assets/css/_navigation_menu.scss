@@ -102,10 +102,10 @@ $nav_bottom_height: 60px;
     display: inline;
     margin-left: 300px;
     @media (min-width: $window-medium-px) {
-      margin-left: 70px;
+      margin-left: 30px;
     }
     #dev_select {
-      max-width: 100px;
+      max-width: 140px;
       padding: 3px 5px;
     }
   }
