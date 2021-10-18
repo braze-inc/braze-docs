@@ -84,6 +84,21 @@ Decide how, when, and why your message will be delivered. You can either schedul
 
 ![SMS Delivery]({% image_buster /assets/img/sms_campaign_delivery.gif %})
 
+## SMS Keywords
+
+Braze gives you the option to provide auto responses based on specific inbound keywords. Below, we offer a setup recommendation to help you deal with unrecognized inbound SMS keywords. Visit our [custom keyword handling article](https://www.braze.com/docs/user_guide/message_building_by_channel/sms/keywords/keyword_handling/) to learn more.
+
+{% alert tip %}
+__Keyword Setup Recommendation__<br>
+While not required, we recommend setting up an auto-response when a user sends an inbound SMS message that does not match an existing keyword. This message will notify the user that the keyword is not recognized and offer some options to learn more. 
+
+This can be done by creating an SMS campaign with a message along the lines of: "Sorry! We didn't recognize that keyword, text STOP to stop or HELP to help."
+
+Next, in the delivery step, add a trigger action of __Send an SMS inbound message__, select the desired SMS subscription group when prompted, and select __Other__ as the keyword category. 
+
+![SMS Confirm]({% image_buster /assets/img/sms/sms_other.png %})
+{% endalert %}
+
 ## Step 5: Target Users & Select Segment
 
 In this step, you'll choose which users receive your message. You should have already chosen the Subscription Group, which narrows users by the level or category of communication they wish to have with you. In this step, you will select the larger audience from your Segments, and narrow that segment further with our Filters, if you choose.
