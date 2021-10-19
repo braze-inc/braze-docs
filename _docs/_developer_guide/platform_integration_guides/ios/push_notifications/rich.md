@@ -67,9 +67,9 @@ To manually display push with a Braze payload, download the content from the val
 
 You can write the Service Extension in either Objective-C or Swift.
 
-To use our Objective-C sample code, copy [NotificationService.h][1] and [NotificationService.m][2] into your `Notification Service Extension` and change its class name to the one you picked. 
+To use our Objective-C sample code, replace the contents of your `Notification Service Extension` target's newly created `NotificationService.m` with the contents of [this file][2].
 
-To use our Swift sample code, copy [NotificationService.swift][3] into your `Notification Service Extension` and change its class name to the one you picked.
+To use our Swift sample code, replace the contents of your `Notification Service Extension` target's newly created `NotificationService.swift` with the contents of [this file][3].
 
 ## Creating A Rich Notification In Your Dashboard
 
