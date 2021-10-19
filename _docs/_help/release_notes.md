@@ -45,6 +45,48 @@ guide_featured_list:
 > <br>
 > For more information on any of the updates listed in this section, reach out to your account manager or [open a support ticket][support]. You can also check out [our SDK Changelogs]({{site.baseurl}}/developer_guide/platform_integration_guides/sdk_changelogs/) to see more information on our monthly SDK releases, updates, and improvements.
 
+## November 2021
+
+### Data Points Usage Dashboard
+
+Use the **Total Data Points Usage** dashboard to track your data point usage pacing in relation to your contract allotment. This dashboard provides information on your contract, current billing cycle, company billing data, and app group billing data. For more information, refer to [Subscriptions and Usage]({{site.baseurl}}/user_guide/onboarding_with_braze/subscription_and_usage/#total-data-points-dashboard).
+
+### Change to Segment Extension Regeneration
+
+Starting on November 29, 2021, the setting to regenerate extensions daily will be automatically turned off for unused [Segment Extensions]({{site.baseurl}}/user_guide/engagement_tools/segments/segment_extension/). Braze defines unused extensions as ones that meet the following criteria:
+
+- Not used in any active campaigns, Canvases, or segments
+- Not used in any inactive (draft, stopped, archived) campaigns, Canvases, or segments
+- Have not been modified in over 7 days
+
+Braze will notify the company contact and creator of the extension when this setting is turned off. The option to regenerate extensions daily can be turned on again at any time.
+
+### Android Advanced Implementation Guides
+
+#### Content Cards
+
+This optional and advanced [implementation guide]({{site.baseurl}}/developer_guide/platform_integration_guides/android/content_cards/implementation_guide/) covers Content Card code considerations, three custom use cases built by our team, accompanying code snippets, and guidance on logging impressions, clicks, and dismissals.
+
+#### In-App Messaging
+
+This optional and advanced [implementation guide]({{site.baseurl}}/developer_guide/platform_integration_guides/android/in-app_messaging/implementation_guide/) covers in-app message code considerations, three custom use cases built by our team, and accompanying code snippets.
+
+#### Push Notifications
+
+This optional and advanced [implementation guide]({{site.baseurl}}/developer_guide/platform_integration_guides/android/push_notifications/android/implementation_guide/) covers ways to leverage a custom `FirebaseMessagingService` subclass to get the most out of your push messages. Included is a custom use case built by our team, accompanying code snippets, and guidance on logging analytics.
+
+### New Braze Partnerships
+
+#### Adobe - Customer Data Platform
+
+Built on the Adobe Experience Platform, Adobe’s Real-time Customer Data Platform (Real-time CDP) helps companies bring together known and anonymous data from multiple enterprise sources in order to create customer profiles that can be used to provide personalized customer experiences across all channels and devices in real-time.
+
+The Braze and [Adobe]({{site.baseurl}}/partners/data_and_infrastructure_agility/customer_data_platform/adobe/) CDP integration allows brands to connect and map their Adobe data (custom attributes and segments) to Braze in real-time. Brands can then act on this data, delivering personalized targeted experiences to those users. 
+
+#### Shopify - eCommerce
+
+[Shopify]({{site.baseurl}}/partners/message_orchestration/channel_extensions/ecommerce/shopify/shopify/) is a leading global commerce company providing trusted tools to start, grow, market, and manage a retail business of any size. Together, the Braze and Shopify integration allows brands to connect their Shopify store seamlessly with Braze to pass select Shopify webhooks into Braze. Leverage Braze’s cross-channel strategies and Canvas to retarget your users with abandoned checkout messaging and nudge customers to complete their purchase, or retarget users based on their previous purchases.
+
 ## October 2021
 
 ### iOS 15
@@ -191,34 +233,6 @@ In May 2021, Braze updated the following labels and terms in the Braze dashboard
 - Money Spent In-App --> Money Spent
 - App Usage (User Profile) --> Sessions Overview
 - Import a CSV of user information to add and/or update users in this App Group --> Import a CSV of user information to add or update users
-
-## May 2021
-
-### iOS Push Advanced Implementation Guide
-This detailed guide covers how to leverage push notification content app extensions to get the most out of your push messages. Included are three custom use cases built by our team (interactive push, data capture push, and progress based push), accompanying code snippets, and guidance on logging analytics. Visit our documentation here to read [more](/docs/developer_guide/platform_integration_guides/ios/push_notifications/implementation_guide/).
-
-### VFC support for Multimedia Message Service (MMS)
-vCards, also known as Virtual Contact Files (.VCF), are a standardized file format for sending business/contact information that can be easily imported into address/contact books. These VFC files can now be sent through MMS and added to the Braze media library. Visit our MMS documentation to [learn more]({{site.baseurl}}/user_guide/message_building_by_channel/sms/mms/create/). 
-
-### Updates to User Delete
-In October of 2020, we made improvements to how our user delete handles data subject's phone number or email address. More information about this can be found [here](https://www.braze.com/docs/help/release_notes/2020/october/)
-
-### New Braze Partnerships
-
-#### Airbridge - Attribution Partner
-The Airbridge and Braze integration allow you to pass all organic and non-organic install attribution data to Braze to build more personalized marketing campaigns and understand exactly where users were acquired. Visit our Airbridge documentation [here]({{site.baseurl}}/partners/message_orchestration/attribution/airbridge/).
-
-#### Kubit - Analytics Partner
-Kubit is a no-code, self-service analytics platform that delivers instant product insights. Through the seamless no-code integration with Braze, you can import user Cohort information into Braze and launch engagement campaigns to target specific Cohorts. In addition, through the use of Snowflake Secure Data Sharing, you can integrate the raw campaign and impression data from Braze with product analytics in Kubit to measure the impact of these campaigns in real-time. Visit our Kubit documentation [here]({{site.baseurl}}/partners/data_and_infrastructure_agility/analytics/kubit/).
-
-#### Census - Customer Data Platform Partner
-Census allows you to keep your customer success, sales, and marketing teams all on the same page by keeping your customer data in sync, all without ongoing help from your engineering department. Visit our Census documentation [here]({{site.baseurl}}/partners/data_and_infrastructure_agility/customer_data_platform/census/)
-
-#### Treasure Data - Customer Data Platform Partner
-Treasure Data helps drive relevant customer experiences by harmonizing data, insights, and engagement to work in perfect unison. Armed with actionable indicators, CX Teams, including marketing, sales, and customer service can effectively optimize spend, and personalize omnichannel interactions across the entire customer journey. Visit our Treasure Data documentation [here]({{site.baseurl}}/partners/data_and_infrastructure_agility/customer_data_platform/treasure_data/).
-
-### Phrasee - A/B Testing
-Braze customer engagement develops relationships through multichannel marketing. Working together with Phrasee, Braze can deploy brand language, at scale, across channels that are customized to your brand voice. Phrasee’s deep learning engine handles the testing, monitors the results, and generates new language based on what it’s learned. Visit our Phrasee documentation [here]({{site.baseurl}}/partners/data_and_infrastructure_agility/ab_testing/phrasee/).
 
 
 [support]: {{site.baseurl}}/support_contact/
