@@ -21,12 +21,12 @@ For platform-specific usage of Carthage, refer to their [user guide][3] on Githu
 
 ### Previous versions
 
-For versions `3.34.0` through `4.3.4`, simply include this one line in your `Cartfile`:
+For versions `3.24.0` through `4.3.4`, simply include this line in your `Cartfile`:
 ```
 binary "https://raw.githubusercontent.com/Appboy/appboy-ios-sdk/master/appboy_ios_sdk_full.json"
 ```
 
-For versions prior to `3.34.0`, include the following in your `Cartfile`:
+For versions prior to `3.24.0`, include the following in your `Cartfile`:
 ```
 github "Appboy/Appboy-iOS-SDK" "<BRAZE_IOS_SDK_VERSION>"
 ```
