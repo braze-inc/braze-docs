@@ -26,7 +26,7 @@ For versions `3.34.0` through `4.3.4`, simply include this one line in your `Car
 binary "https://raw.githubusercontent.com/Appboy/appboy-ios-sdk/master/appboy_ios_sdk_full.json"
 ```
 
-You can integrate versions prior to `3.34.0` by including the following in your `Cartfile`:
+For versions prior to `3.34.0`, include the following in your `Cartfile`:
 ```
 github "Appboy/Appboy-iOS-SDK" "<BRAZE_IOS_SDK_VERSION>"
 ```
