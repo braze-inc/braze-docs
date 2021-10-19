@@ -152,5 +152,5 @@ valid_partner_list:
 - name: Transcend
   url: /docs/partners/data_and_infrastructure_agility/data_privacy/transcend/
 - name: Line
-  url: /docs/partners/message_orchestration/additional_channels/instant_chat/line/    
+  url: /docs/partners/message_orchestration/additional_channels/messaging/line/  
 ---
