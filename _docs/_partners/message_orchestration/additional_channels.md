@@ -33,5 +33,5 @@ valid_partner_list:
 - name: optilyz
   url: /docs/partners/message_orchestration/additional_channels/direct_mail/optilyz/
 - name: Line
-  url: /docs/partners/message_orchestration/additional_channels/instant_chat/line/
+  url: /docs/partners/message_orchestration/additional_channels/messaging/line/  
 ---
