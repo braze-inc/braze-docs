@@ -7,9 +7,9 @@ description: "This reference article covers how to track sessions for web."
 
 ---
 
-# Session Tracking
+# Session Tracking for Web
 
-The Braze SDK reports session data that is used by the Braze dashboard to calculate user engagement and other analytics integral to understanding your users. Based on the below session semantics, our SDK generates "start session" and "close session" data points that account for session length and session counts viewable within the Braze Dashboard.
+The Braze SDK reports session data that is used by the Braze dashboard to calculate user engagement and other analytics integral to understanding your users. Based on the below session semantics, our SDK generates "start session" and "close session" data points that account for session length and session counts viewable within the Braze dashboard.
 
 ## Session Lifecycle
 

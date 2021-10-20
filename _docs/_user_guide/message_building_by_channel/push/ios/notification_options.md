@@ -130,10 +130,6 @@ if (@available(iOS 12.0, *)) {
   {% endtab %}
 {% endtabs %}
 
-{% alert note %}
-The following iOS 15 options are early access features. Please request access by submitting your feedback in our [Product Portal](https://dashboard.braze.com/resources/roadmap).
-{% endalert %}
-
 ### Interruption Level (iOS 15+) {#interruption-level}
 
 ![Notification Settings]({% image_buster /assets/img/ios/ios15-notification-settings.png %}){: style="float:right;max-width:25%;margin-left:15px;border:0"}
@@ -158,6 +154,8 @@ To change the Interruption Level for an iOS Push Notification, choose the desire
 
 ![Interruption Level Option][28]
 
+This feature does not have minimum SDK version requirements, but is only applied for devices running iOS 15+.
+
 ### Relevance Score (iOS 15+) {#relevance-score}
 
 ![Notification Summary]({% image_buster /assets/img/ios/ios15-notification-summary.png %}){: style="float:right;max-width:25%;margin-left:15px;border:0"}
@@ -171,6 +169,10 @@ All notifications will still be accessible in the user's notification center.
 To set an iOS Notification's Relevance Score, enter a value between `0.0` and `1.0` within the **Settings** tab. For example, the most important message should be sent with `1.0`, whereas a medium-importance message can be sent with `0.5`.
 
 ![Relevance Score Option][29]
+
+This feature does not have minimum SDK version requirements, but is only applied for devices running iOS 15+.
+
+For more information on maximum message lengths for different message types, refer to [Image and Text Specifications]({{site.baseurl}}/user_guide/message_building_by_channel/push/about/#image-and-text-specifications).
 
 [26]: {% image_buster /assets/img_archive/notification_group_dropdown.png %}
 [27]: {% image_buster /assets/img_archive/managenotgroups.png %}

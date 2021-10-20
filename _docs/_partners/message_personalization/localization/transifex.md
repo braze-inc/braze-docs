@@ -16,7 +16,7 @@ Transifex enables powerful localization across your user base, no matter what th
 
 | Requirement| Origin| Access| Description|
 | ---| ---| ---|
-|Transifex Account | Transifex | https://www.transifex.com/signin/ | You must first have a Transifex account to access their SDK integration information. |
+|Transifex Account | Transifex | [https://www.transifex.com/signin/](https://www.transifex.com/signin/) | You must first have a Transifex account to access their SDK integration information. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
 
 Set up basic authentication for your account in the __Connected Content__ tab in __Manage Settings__.
@@ -41,9 +41,8 @@ The following CURL will allow you to see if your Transifex account has context v
 curl -i -L --user username:password -X GET https://www.transifex.com/api/2/project/<project_name>/resource/<resource_name>/translation/en/strings
 ```
 
-Input the project and resource name into CURL. You can find these values in the URL of your Transifex account.
+Input the project and resource name into CURL. You can find these values in the URL of your Transifex account. <br>For example, if your Transifex project is located at `https://www.transifex.com/appboy-3/french2/french_translationspo/`, the `project_name` will be "french2" and the `resource_name` will be "french_translationspo".
 
-![Transifex_account][32]
 
 An example response with a blank context field is pictured below:
 

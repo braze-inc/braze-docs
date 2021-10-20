@@ -92,7 +92,7 @@ Example Payload
 
 #### Step 2: Create and Encode an Undefined Payload Variable
 
-First, create and name a new content block by navigating to `Templates & Media` within the Braze Dashboard. Here you can find the Content Block Library tab, select `Create Content Block` to get started.
+First, create and name a new content block by navigating to `Templates & Media` within the Braze dashboard. Here you can find the Content Block Library tab, select `Create Content Block` to get started.
 
 Next, you must define your __Content Block Liquid Tag__. After saving this content block, this Liquid tag can now be referenced when composing messages. In this example, we have assigned the Liquid tag as {% raw %}`{{content_blocks.${passKit_SmartPass_url}}}`{% endraw %}. 
 

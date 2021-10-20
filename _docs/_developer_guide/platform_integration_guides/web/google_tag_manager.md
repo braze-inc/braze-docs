@@ -33,7 +33,7 @@ Search for "Braze" in the Community Template Gallery, and choose the Braze Initi
 
 #### Step 2. Configure Settings
 
-Enter your Braze SDK API Key and SDK Endpoint, which can be found in your Dashboard's [Settings][6] page.
+Enter your Braze SDK API Key and SDK Endpoint, which can be found in your dashboard's [Settings][6] page.
 
 #### Step 3. Choose Initialization Options
 
@@ -103,6 +103,18 @@ window.appboy.getUser().setCustomUserAttribute("attribute name", "attribute valu
 </script>
 ```
 
+#### Default User Attributes {#standard-attributes}
+
+Default user attributes, such as a user's first name, should be logged in the same manner as custom user attributes. Make sure the values you're passing in for default attributes match the expected format specified in the [User Class][16] documentation.
+
+For example, the gender attribute can accept any of the following as values: `"m" | "f" | "o" | "u" | "n" | "p"`. Therefore to set a user's gender as female, create a Custom HTML tag with the following content:
+
+```html
+<script>
+window.appboy.getUser().setGender("f")
+</script>
+```
+
 ## Troubleshooting Steps {#troubleshooting}
 
 ### Enable Tag Debugging {#debugging}
@@ -133,3 +145,4 @@ This will help identify what values are being sent from your webpage's datalayer
 [13]: {% image_buster /assets/img/web-gtm/gtm-debug-mode.png %}
 [14]: https://support.google.com/tagmanager/answer/6107056
 [15]: https://tagmanager.google.com/gallery/#/?filter=braze
+[16]: https://js.appboycdn.com/web-sdk/latest/doc/classes/appboy.user.html

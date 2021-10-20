@@ -251,6 +251,7 @@ Linked Image: [![Braze]({{site.baseurl}}/assets/img/braze-logo-mark.png){: style
 {% endgallery %}
 {% endtab %}
 {% tab Markdown %}
+{% raw %}
 ```
 {% gallery %}
 {{site.baseurl}}/assets/img_archive/EBTH_Email.png?bf892368baf287cba5ab9a6e3b09431d  <br> This is a [link](https://www.braze.com).
@@ -260,6 +261,7 @@ Linked Image: [![Braze]({{site.baseurl}}/assets/img/braze-logo-mark.png){: style
 {{site.baseurl}}/assets/img/SOC2.png?6338040be8e98c4c9abe1f35b3e43e3a  <br> This is a regular comment.
 {% endgallery %}
 ```
+{% endraw %}
 {% endtab %}
 {% endtabs %}
 

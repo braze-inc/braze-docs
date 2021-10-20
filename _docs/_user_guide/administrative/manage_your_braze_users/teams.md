@@ -3,7 +3,7 @@ nav_title: Teams
 article_title: Teams
 page_order: 4
 page_type: reference
-description: "This reference article covers various aspects of Teams in your Braze Dashboard, such as creating and archiving teams, or assigning roles."
+description: "This reference article covers various aspects of Teams in your Braze dashboard, such as creating and archiving teams, or assigning roles."
 
 ---
 

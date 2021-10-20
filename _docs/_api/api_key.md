@@ -23,7 +23,7 @@ We refer to both the REST API Key and App Group API Key as the `api_key`. The `a
 
 ### Where can I find it?
 
-Your API keys can always be found in the Braze Dashboard in the **Developer Console** under **Settings**. At the top of this new page, you will find the **REST API Keys** section. Here you can view all of your available REST API/App Group API Keys, and create new API keys.
+Your API keys can always be found in the Braze dashboard in the **Developer Console** under **Settings**. At the top of this new page, you will find the **REST API Keys** section. Here you can view all of your available REST API/App Group API Keys, and create new API keys.
 
 ### How can I use it?
 

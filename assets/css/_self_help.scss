@@ -23,10 +23,7 @@ $help_transition_time : 0.25s;
   }
   #help_step2 {
     width: 100%;
-    margin-bottom: 30px;
-    @media (min-width:  $window-medium-px) {
-      margin-bottom: 45px;
-    }
+    margin-bottom: 5px;
 
     #help_list {
       display: flex;

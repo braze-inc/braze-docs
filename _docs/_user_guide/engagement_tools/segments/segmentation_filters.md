@@ -290,7 +290,7 @@ glossaries:
     tags:
       - User Attributes
   - name: Braze Segment Extension
-    description: After creating a Segment Extension in the Braze Dashboard, you can choose to include/exclude those extensions in your segment.
+    description: After creating a Segment Extension in the Braze dashboard, you can choose to include/exclude those extensions in your segment.
     tags:
       - User Attributes
   - name: City
@@ -330,7 +330,7 @@ glossaries:
     tags:
       - User Attributes
   - name: Subscription Groups
-    description: Segments your users by their Subscription Group for email. Archived Groups will not appear and cannot be used.
+    description: Segments your users by their Subscription Group for email or SMS/MMS. Archived Groups will not appear and cannot be used.
     tags:
       - Other
   - name: Email Unsubscribed Date

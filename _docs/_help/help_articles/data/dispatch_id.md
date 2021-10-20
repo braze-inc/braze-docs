@@ -21,7 +21,7 @@ This can result in two different users having different `dispatch_ids` for a sin
 
 Scheduled campaign messages get the same `dispatch_id`. Action-based or API-triggered campaign messages will get a unique `dispatch_id` per user.
 
-Multi-channel campaigns will have the same behavior as described above.
+Multichannel campaigns will have the same behavior as described above.
 
 For example, if Becky and Tom are both included in your scheduled campaign audience, then they will have the same `dispatch_id`.
 
@@ -50,3 +50,5 @@ The `dispatch_id` is the unique id generated for each transmission – or, dispa
 While all customers who are sent a scheduled message get the same `dispatch_id`, customers who receive either action-based or API-triggered messages will get a unique `dispatch_id` per message. The `dispatch_id` field enables you to identify which instance of a recurring campaign is responsible for conversion, thus equipping you with more insights and information on which types of campaigns are helping push the needle on your business goals.
 
 You can use `dispatch_id` as a [Personalization Tag]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/supported_personalization_tags/#supported-personalization-tags), in [Message Engagement Events]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/message_engagement_events/), or when you use [Segment]({{site.baseurl}}/partners/data_and_infrastructure_agility/customer_data_platform/segment_for_currents/#integration-details), [Mixpanel]({{site.baseurl}}/partners/insights/behavioral_analytics/mixpanel_for_currents/#email-events), or [Amplitude]({{site.baseurl}}/partners/data_and_infrastructure_agility/analytics/amplitude/amplitude_for_currents/) for Currents.
+
+_Last updated on July 15, 2021_

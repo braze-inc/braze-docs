@@ -96,10 +96,10 @@ A date string such as "12-1-2021" or "12/1/2021" will be converted to a datetime
 {% alert important %}
 When segmenting using the __DOES NOT MATCH REGEX__ filter, you must already have a custom attribute with a value assigned in that user profile. Braze suggests using "OR" logic to check if a custom attribute is blank to ensure users are being targeted properly.<br>
 
-More resources on RegEx:
-- [RegEx with Braze]({{site.baseurl}}/user_guide/engagement_tools/segments/regex/)
-- [RegEx Debugger and Tester](https://regex101.com/)
-- [RegEx Tutorial](https://medium.com/factory-mind/regex-tutorial-a-simple-cheatsheet-by-examples-649dc1c3f285)
+More resources on regex:
+- [Regex with Braze]({{site.baseurl}}/user_guide/engagement_tools/segments/regex/)
+- [Regex Debugger and Tester](https://regex101.com/)
+- [Regex Tutorial](https://medium.com/factory-mind/regex-tutorial-a-simple-cheatsheet-by-examples-649dc1c3f285)
 {% endalert %}
 
 ### Arrays {#arrays}
@@ -120,12 +120,12 @@ The maximum for individual arrays can be increased to 100. If you would like thi
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
 
 {% alert tip %}
-For more on how to use our RegEx filter, check out this documentation on [Perl compatible regular expressions (PCRE)](http://www.regextester.com/pregsyntax.html).
+For more on how to use our regular expressions filter, check out this documentation on [Perl compatible regular expressions (PCRE)](http://www.regextester.com/pregsyntax.html).
 <br>
-More resources on RegEx:
-- [RegEx with Braze]({{site.baseurl}}/user_guide/engagement_tools/segments/regex/)
-- [RegEx Debugger and Tester](https://regex101.com/)
-- [RegEx Tutorial](https://medium.com/factory-mind/regex-tutorial-a-simple-cheatsheet-by-examples-649dc1c3f285)
+More resources on regex:
+- [Regex with Braze]({{site.baseurl}}/user_guide/engagement_tools/segments/regex/)
+- [Regex Debugger and Tester](https://regex101.com/)
+- [Regex Tutorial](https://medium.com/factory-mind/regex-tutorial-a-simple-cheatsheet-by-examples-649dc1c3f285)
 {% endalert %}
 
 ### Time {#time}

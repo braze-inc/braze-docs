@@ -24,8 +24,6 @@ Once your user installs your app, you can begin segmenting them based on the fol
 
 Now that you have more information about your user, you can personalize their onboarding process. This could be as simple as changing the images in your messages to fit their preferences, or as complex as creating a unique user onboarding for each ad that could lead to an install. To scale out a fully comprehensive sequence of messages that can take user behavior into consideration, please take a look at our documentation on [Canvas][5]
 
-![Install Attribute Onboarding][3]
-
 ### Reference Data from the Ad
 
 Users may be attracted to your app by a promotional offer or giveaway. Using install attribution data allows you to send campaigns containing discount codes or offers to only the users who installed due to these promotions. In a similar manner, if your ad contains information on a particular product (such as a specific movie in a video app or sale in an eCommerce app), you can send campaigns directing users to the correct page of your app.

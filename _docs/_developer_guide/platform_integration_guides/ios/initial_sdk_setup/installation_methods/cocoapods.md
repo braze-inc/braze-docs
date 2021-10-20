@@ -54,7 +54,7 @@ To install the Braze SDK Cocoapod, navigate to the directory of your Xcode app p
 pod install
 ```
 
-At this point, you should be able to open the new Xcode project workspace created by CocoaPods.
+At this point, you should be able to open the new Xcode project workspace created by CocoaPods. Make sure to use this Xcode workspace instead of your Xcode project. 
 
 ![New Workspace][apple_initial_setup_15]
 

@@ -530,9 +530,8 @@ This use case will display the date 30 days from now to use in messaging.
 
 {% raw %}
 ```liquid
-{% assign today
- = 'now' | date: "%s" %}
-{% assign thirty_days = {{today}} | plus: 2592000 | date: "%B %d" %}
+{% assign today = 'now' | date: "%s" %}
+{% assign thirty_days = today | plus: 2592000 | date: "%B %d" %}
 ```
 {% endraw %}
 

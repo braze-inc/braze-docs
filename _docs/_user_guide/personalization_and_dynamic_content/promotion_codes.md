@@ -20,7 +20,7 @@ Promotion codes can't be sent in in-app messages.
 ![Promo Codes 1][1]{: style="float:right;max-width:30%;margin-left:15px;"}
 ### Step 1: Navigate to the Promotion Code Section
 
-From the Dashboard, go to **Promotion Codes**, located under the **Integrations** section, then select **Create Promotion Code List**.
+From the dashboard, go to **Promotion Codes**, located under the **Integrations** section, then select **Create Promotion Code List**.
 
 ### Step 2: Naming and Creating your Promotion Code
 Name your promotion code list and add an optional description.
@@ -82,7 +82,7 @@ To send promotion codes in messages, click **Copy Snippet** to copy the code sni
 
 ![Promo Codes 9][9]{: style="max-width:70%"}
 
-From there, you can paste this code into a message within the Dashboard.
+From there, you can paste this code into a message within the dashboard.
 
 ![Promo Codes 10][10]{: style="max-width:70%"}
 

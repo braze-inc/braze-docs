@@ -1,7 +1,7 @@
 ---
-nav_title: Understanding Your Overview Data
+nav_title: Overview Data
 article_title: Understanding Your Overview Data
-page_order: 3
+page_order: 1
 page_type: reference
 description: "This reference article describes the Overview page, and provides definitions for statistics available on this page."
 tool: 

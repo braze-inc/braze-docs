@@ -27,7 +27,7 @@ As you plan your migration from the News Feed to Content Cards, it will be impor
 | Feature | News Feed | Content Cards |
 |---|---|---|
 | Transactional and 1:1 Messaging | <i class="fas fa-times"></i> | <i class="fas fa-check"></i> |
-| Multivariate and Multi-Channel Campaigns | <i class="fas fa-times"></i> | <i class="fas fa-check"></i> |
+| Multivariate and Multichannel Campaigns | <i class="fas fa-times"></i> | <i class="fas fa-check"></i> |
 | Scheduled, Action-Based, and API-Based Delivery | <i class="fas fa-times"></i> | <i class="fas fa-check"></i> |
 | API-Created Messages | <i class="fas fa-times"></i> | <i class="fas fa-check"></i> |
 | A/B Testing | <i class="fas fa-times"></i> | <i class="fas fa-check"></i> |
