@@ -124,12 +124,12 @@ String attributes are useful for storing user input, such as a favorite brand, a
 {% endalert %}
 
 {% alert tip %}
-For more on how to use our RegEx filter, check out this documentation on [Perl compatible regular expressions (PCRE)](http://www.regextester.com/pregsyntax.html).
+For more on how to use our regular expressions filter, check out this documentation on [Perl compatible regular expressions (PCRE)](http://www.regextester.com/pregsyntax.html).
 <br>
-More resources on RegEx:
-- [RegEx with Braze]({{site.baseurl}}/user_guide/engagement_tools/segments/regex/)
-- [RegEx Debugger and Tester](https://regex101.com/)
-- [RegEx Tutorial](https://medium.com/factory-mind/regex-tutorial-a-simple-cheatsheet-by-examples-649dc1c3f285)
+More resources on regex:
+- [Regex with Braze]({{site.baseurl}}/user_guide/engagement_tools/segments/regex/)
+- [Regex Debugger and Tester](https://regex101.com/)
+- [Regex Tutorial](https://medium.com/factory-mind/regex-tutorial-a-simple-cheatsheet-by-examples-649dc1c3f285)
 {% endalert %}
 
 #### Arrays
@@ -309,6 +309,8 @@ These should not be used as user IDs:
 - Device ID
 - Random number or session ID
 - Any non-unique ID
+
+{% include sdk_auth_alert.md %}
 
 #### Give Custom Events and Attributes Readable Names
 Imagine you're a marketer who begins using Braze a year or two after implementation, reading a dropdown list full of names like "usr_no_acct" without further context may be intimidating. Giving your event and attributes identifiable and readable names will make things easier for all users of your platform. Consider the following best-practices:

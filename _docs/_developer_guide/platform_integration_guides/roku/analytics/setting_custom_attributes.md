@@ -14,7 +14,7 @@ Braze provides methods for assigning attributes to users. You'll be able to filt
 
 Before implementation, be sure to review examples of the segmentation options afforded by custom events vs. User attributes vs. purchase events in our [Best Practices section][7]. You should also check out our notes on [event naming conventions]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/event_naming_conventions/).
 
-## Assigning Standard User Attributes
+## Assigning Default User Attributes
 
 User attributes will be assigned to the currently active user. The following default fields may be set:
 

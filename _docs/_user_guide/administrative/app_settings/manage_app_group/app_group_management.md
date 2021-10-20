@@ -3,13 +3,13 @@ nav_title: App Group Management
 article_title: App Group Management
 page_order: 0
 page_type: reference
-description: "This reference article covers managing app groups in your Braze Dashboard. "
+description: "This reference article covers managing app groups in your Braze dashboard. "
 
 ---
 
 # App Group Management
 
-You can manage, segment, and communicate with multiple applications simultaneously all from the **Manage Settings** page in the Braze Dashboard.
+You can manage, segment, and communicate with multiple applications simultaneously all from the **Manage Settings** page in the Braze dashboard.
 
 ![Manage App Group Call Out][69]
 

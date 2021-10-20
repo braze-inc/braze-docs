@@ -27,7 +27,7 @@ To target users that fall into multiple previously created segments, add multipl
 
 You can also target users of one or more previously created segments that also fall under additional filters. After first selecting your segments, you can further refine your audience under the **Additional Filters** section. This is demonstrated in the screenshot below, which targets users that are in the Daily Active Users segment, Not Open Emails segment, and made a purchase less than 30 days ago.
 
-![Multi-Channel Footer][25]
+![Multichannel Footer][25]
 
 ### Target Users Without Segments {#without-segment}
 

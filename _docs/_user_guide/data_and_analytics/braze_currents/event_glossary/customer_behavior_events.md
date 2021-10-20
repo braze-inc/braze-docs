@@ -25,7 +25,7 @@ Customer Behavior and User Events events are comprised of __user specific__ prop
 {% enddetails %}
 
 {% alert important %}
-Please note that these schemas __only apply to the flat file event data we send to Data Warehouse partners (Google Cloud Storage, Amazon S3, and Microsoft Azure Blob Storage)__. For schema that apply to the other partners, please check [their respective pages]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/available_partners/).<br><br>Additionally, note that Currents will drop events with excessively large payloads of greater than 900KB. 
+Please note that these schemas only apply to the flat file event data we send to Data Warehouse partners (Google Cloud Storage, Amazon S3, and Microsoft Azure Blob Storage), and are not available for Segment connectors. For schema that apply to other partners, please check [their respective pages]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/available_partners/).<br><br>Additionally, note that Currents will drop events with excessively large payloads of greater than 900KB. 
 
 {% endalert %}
 {% api %}

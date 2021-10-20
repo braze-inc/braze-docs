@@ -9,7 +9,7 @@ description: "This article contains release notes for March 2020."
 
 ## Custom Attribute Filter Behavior
 
-The Dashboard has improved filters to include more intuitive behaviors.
+The dashboard has improved filters to include more intuitive behaviors.
 There have been two significant changes to how certain custom attributes filters work. 
 The custom attribute filter changes are reflected in the filters: 
 - Less than __X__ Days Ago

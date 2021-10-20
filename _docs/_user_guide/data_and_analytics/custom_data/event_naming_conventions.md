@@ -14,7 +14,7 @@ Ensuring consistency in your event and attribute taxonomy during your Braze inte
 - Keep your naming convention clear.
 - Consistent casing and formatting of event names.
 - Avoid giving events similar names.
-- Avoid long event attribute strings which will be truncated or cut off in the Braze Dashboard.
+- Avoid long event attribute strings which will be truncated or cut off in the Braze dashboard.
 
 ## Naming Conventions
 

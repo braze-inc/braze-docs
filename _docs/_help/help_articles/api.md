@@ -9,7 +9,7 @@ description: "This landing page is home to help articles related to the Braze AP
 
 guide_menu_title: ""
 guide_menu_list:
-  - name: User Deletion via REST API
+  - name: Deleting Users via API
     link: /docs/help/help_articles/api/delete_user/
     fa_icon: fas fa-user-times
 

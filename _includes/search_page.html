@@ -33,8 +33,10 @@
 
 
     <div id="search_hits"></div>
+    <div id="search_header_labs" style="display:none;"> Learning at Braze <img src='{{site.baseurl}}/assets/img/lab.png' width='45px' /><hr /></div>
+    <div id="search_hits_labs"></div>
     <div id="search_pagination"></div>
-
+    <div id="search_stats_lab" style="display:none; visibility:hidden;"></div>
     </div>
     </div>
   </div>
@@ -42,7 +44,10 @@
 <script type="text/javascript">
   $(document).ready(function() {
     var searchbox = '#search_box';
-
+    var lab_hit_cache = {
+      'hits': {},
+      'counts': 0,
+    };
     $.urlParam = function(name) {
       var results = new RegExp('[\?&]' + name + '=([^&#]*)').exec(window.location.href);
       if (results == null) {
@@ -103,7 +108,6 @@
       var category = '';
       var tags_list = "";
       var heading = '';
-
       if ('nav_title' in hit) {
         title = hit.nav_title.replaceUnder() ;
       } else {
@@ -180,6 +184,46 @@
       return `<div class="hit"><a href="{{site.baseurl}}${url}" ${bindEvent('click', hit, 'Clicked from Page Search')} ><div class="hit-content"><div><div class="hit-name">${title } </div> <div class="hit-subname">${tags_list} </div>${article_path}<div class="hit-description">${ content }</div></div></div></a><hr /></div>`;
     }
 
+    function hitLABTemplate(hit, bindEvent) {
+      var description = '';
+      var title = '';
+      var url = '';
+      $('#search_header_labs').show();
+      var tags_list = '<span class="search_tags" style="background-color: #3accdd;">LAB</span>';;
+      if (hit['category']) {
+        var tags = hit['category'];
+        if (Array.isArray(tags)) {
+          for (var its = 0; its < tags.length; its++) {
+            tags_list += '<span class="search_tags" style="background-color: #3accdd;">' +
+              tags[its].upCaseWord().mapReplace(custom_word_mapping) + '</span>';
+          }
+        }
+        else {
+          tags_list += '<span class="search_tags" style="background-color: #3accdd;">' +
+            tags.upCaseWord().mapReplace(custom_word_mapping) + '</span>';
+        }
+      }
+
+      if ("title" in hit) {
+        title = hit.title
+          .replaceUnder()
+          .replace(/<(.|\n)*?>/g, "");
+      }
+
+      if ("description" in hit) {
+        description = hit.description
+          .replaceUnder()
+          .replace(/<(.|\n)*?>/g, "");
+      }
+
+      if (description.length > 200) {
+        description = description.substring(0, 200);
+        description += "...";
+      }
+      var url = hit.url;
+
+      return `<div class="hit"><a href="${url}" ${bindEvent('click', hit, 'Clicked LAB from Page Search')} target="_blank"><div class="hit-content"><div><div class="hit-name lab_title">${title } <i class="fas fa-external-link-alt"></i> </div> <div class="hit-subname">${tags_list} </div><div class="hit-description">${ description }</div></div></div></a><hr /></div>`;
+    }
 
     String.prototype.upCaseWord = function() {
       return this.toString().replace(/\b\w/g, function(l){ return l.toUpperCase() });
@@ -195,12 +239,12 @@
       }
     });
     var instant_search = instantsearch({
-      indexName: "{{ site.algolia.index_name }}",
+      indexName: algolia_doc_index,
       searchClient,
       routing: {
         stateMapping: {
           stateToRoute(uiIState) {
-            const uiState = uiIState['DocSearch'];
+            const uiState = uiIState[algolia_doc_index];
             return {
               query: uiState.query || $.urlParam('q '),
               // we use the character ~ as it is one that is rarely present in data and renders well in urls
@@ -210,22 +254,55 @@
             };
           },
           routeToState(routeState) {
-            return {
-              "DocSearch" : {
-                query: routeState.query || $.urlParam('q'),
-                refinementList: {
-                  type: routeState.types && routeState.types.split('~'),
-                  category: routeState.categories && routeState.categories.split('~')
-                },
-                page: routeState.page
-              }
+            const route_state = {};
+            route_state[algolia_doc_index] = {
+              query: routeState.query || $.urlParam('q'),
+              refinementList: {
+                type: routeState.types && routeState.types.split('~'),
+                category: routeState.categories && routeState.categories.split('~')
+              },
+              page: routeState.page
             };
+            return route_state;
           }
         }
       },
     });
     instant_search.use(insightsMiddleware);
     instant_search.addWidgets([
+      instantsearch.widgets.index({ indexName: algolia_lab_index })
+      .addWidgets([
+        instantsearch.widgets.configure({
+          hitsPerPage: 3,
+        }),
+        instantsearch.widgets.stats({
+          container: '#search_stats_lab',
+          templates: {
+            text: function(hit) {
+             lab_hit_cache['counts'] = hit.nbHits;
+             return '';
+            }
+          }
+        }),
+        instantsearch.widgets.hits({
+          container: '#search_hits_labs',
+          attributesToSnippet: ["description:24"],
+          snippetEllipsisText: " [...]",
+          transformItems(items) {
+            lab_hit_cache['hits'] = items;
+            return items;
+          },
+          templates: {
+            item: function(hit, bindEvent) {
+              return hitLABTemplate(hit, bindEvent);
+            },
+            empty: function(data) {
+              $('#search_header_labs').hide();
+              return '';
+            }
+          },
+        }),
+      ]),
       instantsearch.widgets.searchBox({
         container: searchbox,
       }),
@@ -257,6 +334,13 @@
           item: function(hit, bindEvent) {
             return hitTemplate(hit, bindEvent);
           },
+          empty: function(data) {
+            var results_msg = 'No results found.';
+            if (lab_hit_cache['counts']) {
+              results_msg = '';
+            }
+            return results_msg;
+          },
         },
       }),
       instantsearch.widgets.stats({
@@ -264,7 +348,7 @@
         templates: {
           text: function(hit) {
               var cleanedquery = hit.query.sanitize();
-              return `⚡️ <strong>${hit.nbHits}</strong> results found ${
+              return `⚡️ <strong>${(hit.nbHits + lab_hit_cache['counts'])}</strong> results found ${
              hit.query != "" ? `for <strong>"${ cleanedquery }"</strong>` : ``
            } in <strong>${hit.processingTimeMS}ms</strong>`;
           }
@@ -278,12 +362,20 @@
           header: "Section"
         },
         transformItems(items) {
+          var updatedItem = items.find(item => item.value === 'lab');
+          if (!updatedItem) {
+            items.push({count: lab_hit_cache['counts'], isRefined: false, label: 'lab', value: 'lab', highlighted: 'LAB'})
+          }
+          else {
+            items.find(item => item.value === 'lab')['count'] = lab_hit_cache['counts'];
+          }
           return adjustlabel(items)
         }
       }),
       instantsearch.widgets.pagination({
         container: '#search_pagination',
       }),
+
     ]);
 
     instant_search.start();

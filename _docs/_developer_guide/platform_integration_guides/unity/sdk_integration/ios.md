@@ -44,7 +44,7 @@ Braze provides a native Unity solution for automating the Unity iOS integration.
 
 1. In the Unity Editor, open the Braze Configuration Settings by navigating to Braze > Braze Configuration.
 2. Check the "Automate Unity iOS Integration" box.
-3. In the "Braze API Key" field, input your application's API key from the [Braze Dashboard](https://dashboard-01.braze.com/app_settings/app_settings). Your Braze Configuration settings should look like this:
+3. In the "Braze API Key" field, input your application's API key from the [Settings](https://dashboard-01.braze.com/app_settings/app_settings) page in the Braze dashboard. Your Braze Configuration settings should look like this:
 
 ![Braze Config Editor]({% image_buster /assets/img_archive/unity-ios-appboyconfig.png %})
 

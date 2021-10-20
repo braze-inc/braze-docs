@@ -73,4 +73,7 @@ valid_partner_list:
   url: /docs/partners/data_and_infrastructure_agility/data_privacy/transcend/
 - name: RevenueCat
   url: /docs/partners/data_and_infrastructure_agility/customer_data_platform/revenuecat/  
+- name: Adobe
+  url: /docs/partners/data_and_infrastructure_agility/customer_data_platform/adobe/
+
 ---

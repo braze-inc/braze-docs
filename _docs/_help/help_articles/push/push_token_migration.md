@@ -8,9 +8,9 @@ description: "This article covers how to migrate push tokens so you can continue
 channel: push
 ---
 
-# Push Token Migration
+# Migrating Push Tokens
 
-A push token is a unique key, created and assigned by Apple or Google to create a connection between an app and an iOS, Android, or web device. Push Token migration is the importing of those already-generated keys into Braze’s platform.
+A push token is a unique key, created and assigned by Apple or Google to create a connection between an app and an iOS, Android, or web device. Push token migration is the importing of those already-generated keys into Braze’s platform.
 
 Braze customers who were previously sending push notifications, either on their own or with a different provider, often have a list of users with registered push tokens.
 
@@ -63,7 +63,7 @@ To do this, use the `users/track` endpoint and post the following information:
 ]
 ```
 
-Example:
+##### Example
 
 ```json
 "attributes": [ 
@@ -108,13 +108,16 @@ Web push tokens contain extra fields that other platforms do not. As a result, w
 ## Sending Push before Braze SDK Integration (Android Only)
 
 {% alert warning %}
-Please note that this solution only applies for Android users. iOS users will not receive push with this method. iOS does not require these steps because there is only one framework for displaying push. Push notifications will render immediately as long as Braze has the necessary push tokens and certificates.
+This solution only applies to Android users. iOS users will not receive push with this method. iOS does not require these steps because there is only one framework for displaying push. Push notifications will render immediately as long as Braze has the necessary push tokens and certificates.
 {% endalert %}
 
-If you find that you must send a push notification to your users before the Braze SDK integration is complete, you can use key-value pairs to validate push notifications.
+If you find that you must send a push notification to your users before the Braze SDK integration is complete, you can use key-value pairs to validate push notifications. 
 
-__You must have a receiver to handle and display push payloads.__
+You must have a receiver to handle and display push payloads. To notify the receiver of the push payload, add the necessary key-value pairs to the push campaign. The values of these pairs is contingent on the specific push partner you used before Braze.
 
-To notify the receiver of the push payload, add the necessary key-value pairs to the push campaign. The values of these pairs is contingent on the specific push partner you used before Braze.
+{% alert note %}
+For some push notification providers, Braze will need to flatten the key-value pairs so that they can be properly interpreted. To flatten key-value pairs for a specific Android app, contact your Customer Onboarding or Success Manager.
+{% endalert %}
 
-_For some push notification providers, Braze will need to flatten the key-value pairs so that they can be properly interpreted. To flatten key-value pairs for a specific Android app, contact your Customer Onboarding/Success Manager._
+_Last updated on June 1, 2021_
+
