@@ -2,7 +2,7 @@
 nav_title: Experiment Step
 article_title: Experiment Step
 alias: /experiment_step/
-page_order: 6
+page_order: 4
 description: "Experiment Steps allow you to test multiple Canvas paths against each other and a control group at any point in the user journey."
 tool: Canvas
 ---
