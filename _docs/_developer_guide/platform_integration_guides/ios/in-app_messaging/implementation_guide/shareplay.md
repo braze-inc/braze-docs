@@ -6,6 +6,7 @@ page_order: 1
 description: "This advanced SharePlay implementation guide expands on the video use case provided in the in-app message advanced implementation guide. SharePlay is a newly released feature that enables iOS 15 Facetime users to have a shared media experience across their devices, offering real-time audio and video syncing."
 channel:
   - in-app messages
+alias: /shareplay/
 
 ---
 
@@ -30,11 +31,13 @@ With synced media playback, if one person pauses the SharePlay video, it will be
 The in-app message used in this integration is a subclassed modal in-app message view controller. A guide for setup can be found in the iOS in-app message advanced use case [implementation guide]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/in-app_messaging/implementation_guide/). Before integrating, make sure to add the `GroupActivities` entitlement to your Xcode project.
 
 {% alert important %}
-We recommend opening the [Apple SharePlay documentation](https://developer.apple.com/documentation/avfoundation/media_playback_and_selection/supporting_coordinated_media_playback) side-by-side by the guide to complete the integration.
+We recommend opening the [Apple SharePlay documentation](https://developer.apple.com/documentation/avfoundation/media_playback_and_selection/supporting_coordinated_media_playback) side-by-side by this guide to complete the integration.
 {% endalert %}
 
 ### Step 1: Overriding and Loading XIB
 
+{% tabs %}
+{% tab Swift %}
 ```swift
 override var nibName: String {
   return "ModalVideoViewController"
@@ -45,11 +48,15 @@ override func loadView() {
   Bundle.main.loadNibNamed(nibName, owner: self, options: nil)
 }
 ```
+{% endtab %}
+{% endtabs %}
 
 ### Step 2: Configure AVPlayer for In-App Messages
 
 In-app messages can play videos natively with some lightweight developer work. By doing this, you have access to all the `AVPlayerVideoController` features, such as SharePlay. The in-app message used for this example is a subclassed `ABKInAppMessageModalViewController` that has a custom view to embed a native video player.
 
+{% tabs %}
+{% tab Swift %}
 ```swift
 func configureVideoPlayer() {
   guard let urlString = inAppMessage.extras?["video_url"] as? String,
@@ -68,6 +75,9 @@ func configureVideoPlayer() {
   playerViewController.didMove(toParent: self)
 }
 ```
+{% endtab %}
+{% endtabs %}
+
 #### Dashboard Configuration
 
 __Key-Value Pairs__: The video file must be set in the key-value pairs on the in-app message and cannot be attached to the media item itself. You can also add URL validity checking in `beforeInAppMesageDisplayed` as a guardrail before displaying the content.
@@ -82,6 +92,8 @@ Be mindful of any other in-app messages triggered on session start that may conf
 
 Create an object that conforms to the `GroupActivity` protocol. The object will be the metadata of the `GroupSession` shared throughout the SharePlay lifecycle. 
 
+{% tabs %}
+{% tab Swift %}
 ```swift
 struct MediaItem: Hashable, Codable {
   let title: String
@@ -103,6 +115,8 @@ struct MediaItemActivity: GroupActivity {
   }
 }
 ```
+{% endtab %}
+{% endtabs %}
 
 #### Prepare To Play
 
@@ -119,6 +133,8 @@ When the state comes back as `activationPreferred`, that is your cue to activate
 
 The `GroupActivities` API determines if there is a video present. If so, you should trigger the custom event to launch your SharePlay-able in-app message. The `CoordinationManager` is responsible for the state changes of SharePlay, such as if the user(s) leaves or joins the call. 
 
+{% tabs %}
+{% tab Swift %}
 ```swift
 private var subscriptions = Set<AnyCancellable>()  
 private var selectedMediaItem: MediaItem? {
@@ -140,9 +156,15 @@ private func launchVideoPlayerIfNecessary() {
       .store(in: &subscriptions)
 }
 ```
+{% endtab %}
+{% endtabs %}
 
 ### Step 5: Leaving a Group Session on In-App Message Dismissal
 
+When the in-app message is dismissed is an appropriate time to leave the SharePlay session and discard the session object.
+
+{% tabs %}
+{% tab Swift %}
 ```swift
 override func viewDidDisappear(_ animated: Bool) {
   super.viewDidDisappear(animated)
@@ -164,11 +186,15 @@ class CoordinationManager() {
 ...
 }
 ```
+{% endtab %}
+{% endtabs %}
 
 ### Configure SharePlay Button Visibility
 
 It is best practice to dynamically hide or show any SharePlay indicator. Utilize the `isEligibleForGroupSession` variable to observe if the user is currently on a FaceTime call or not. If they happen to be on a FaceTime call, a button should be visible to share the video across the compatible devices in the chat. The first time the user initiates SharePlay, a prompt will appear on the original device to select the options. A subsequent prompt will then appear on the shared users' devices to engage in the content.
 
+{% tabs %}
+{% tab Swift %}
 ```swift
 private var isEligibleForSharePlay: Bool = false {
   didSet {
@@ -186,15 +212,12 @@ override func viewDidLoad() {
     .store(in: &subscriptions)
 }
 ``` 
+{% endtab %}
+{% endtabs %}
 
 [1]: {% image_buster /assets/img/shareplay/shareplay.png %}
 [2]: {% image_buster /assets/img/shareplay/shareplay2.png %}
 [3]: {% image_buster /assets/img/shareplay/shareplay3.png %}
 [4]: {% image_buster /assets/img/shareplay/shareplay4.png %}
-<<<<<<< HEAD
 [5]: {% image_buster /assets/img/shareplay/shareplay7.png %}
 [6]: {% image_buster /assets/img/shareplay/shareplay6.png %}
-=======
-[5]: {% image_buster /assets/img/shareplay/shareplay5.png %}
-[6]: {% image_buster /assets/img/shareplay/shareplay6.3.png %}
->>>>>>> 6d33375a6326430fe00d3e2c5617c70b13ef8511
