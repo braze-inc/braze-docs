@@ -290,7 +290,7 @@ glossaries:
     tags:
       - User Attributes
   - name: Braze Segment Extension
-    description: After creating a Segment Extension in the Braze Dashboard, you can choose to include/exclude those extensions in your segment.
+    description: After creating a Segment Extension in the Braze dashboard, you can choose to include/exclude those extensions in your segment.
     tags:
       - User Attributes
   - name: City

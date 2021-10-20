@@ -49,7 +49,7 @@ After creating your web push, select the **Settings** tab. Check **Send Test to 
 
 ![Test Web Push]({% image_buster /assets/img_archive/testwebpush.png %})
 
-If you have already accepted push messages from the Braze Dashboard, you will see the push come through in the corner of your screen. Otherwise, click **Allow** when prompted, and the message will appear.
+If you have already accepted push messages from the Braze dashboard, you will see the push come through in the corner of your screen. Otherwise, click **Allow** when prompted, and the message will appear.
 
 {% endtab %}
 {% tab In-App Message %}

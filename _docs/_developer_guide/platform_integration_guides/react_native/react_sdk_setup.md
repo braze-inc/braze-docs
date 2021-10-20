@@ -13,7 +13,7 @@ Installing the Braze React Native SDK provides basic analytics functionality and
 
 You will need to complete installation steps on both platforms separately.
 
-To complete the installation, you will need the [App Identifier API key]({{site.baseurl}}/api/api_key/#the-app-identifier-api-key) as well as the [SDK endpoint]({{site.baseurl}}/api/basics/#endpoints). Both are located in the **Developer Console** under **Settings** in the Dashboard.
+To complete the installation, you will need the [App Identifier API key]({{site.baseurl}}/api/api_key/#the-app-identifier-api-key) as well as the [SDK endpoint]({{site.baseurl}}/api/basics/#endpoints). Both are located in the **Developer Console** under **Settings** in the dashboard.
 
 ## Step 1: Integrate the Braze Library
 
@@ -173,7 +173,7 @@ import ReactAppboy from "react-native-appboy-sdk";
 
 ## Test Your Basic Integration
 
-At this point, you can verify that the SDK is integrated by checking session statistics in the Dashboard. If you run your application on either platform, you should see a new session in Dashboard (in the **Overview** section).
+At this point, you can verify that the SDK is integrated by checking session statistics in the dashboard. If you run your application on either platform, you should see a new session in dashboard (in the **Overview** section).
 
 You can open a session for a particular user by calling the following code in your app.
 
@@ -199,7 +199,7 @@ const App = () => {
   )
 ```
 
-You can then search for the user with `some-user-id` in the Dashboard under **User Search**. There, you can verify that session and device data have been logged.
+You can then search for the user with `some-user-id` in the dashboard under **User Search**. There, you can verify that session and device data have been logged.
 
 
 [1]: https://www.braze.com/docs/developer_guide/platform_integration_guides/android/initial_sdk_setup/android_sdk_integration/ "Android SDK Install"

@@ -29,7 +29,7 @@
       "url": "https://github.com/beanieboi/nginx-buildpack.git"
     },
     {
-      "url": "https://codon-buildpacks.s3.amazonaws.com/buildpacks/heroku/ruby.tgz"
+      "url": "heroku/ruby"
     },
     {
       "url": "https://github.com/heroku/heroku-buildpack-jvm-common.git"

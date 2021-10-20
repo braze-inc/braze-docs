@@ -71,5 +71,6 @@ valid_partner_list:
   url: /docs/partners/data_and_infrastructure_agility/cohort_import/tinyclues/
 - name: Transcend
   url: /docs/partners/data_and_infrastructure_agility/data_privacy/transcend/
-  
+- name: Adobe
+  url: /docs/partners/data_and_infrastructure_agility/customer_data_platform/adobe/
 ---

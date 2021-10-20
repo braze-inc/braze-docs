@@ -1,33 +1,33 @@
 ---
-nav_title: "RegEx"
-article_title: RegEx
+nav_title: "Regular Expressions"
+article_title: Regular Expressions
 page_order: 5
 
-description: "This reference article covers what regular expressions are, how to begin using them, and offers debugger functionality to validate and test regular expressions."
+description: "This reference article covers what regular expressions (regex) are, how to begin using them, and offers debugger functionality to validate and test regular expressions."
 page_type: reference
 tool:
   - Testing Tools
   
 ---
 
-# RegEx with Braze
+# Regular Expressions with Braze
 
 {% include video.html id="3h5Xbhl-TxE" align="right" %}
 
->  Regular expressions, known commonly as RegEx, is a sequence of characters that define a search pattern. RegEx lets you do validation of text grouping and find and replace actions. <br><br>RegEx is used at Braze to give you a more flexible string matching solution in your segmentation and campaign filtering for your target audience. 
+>  Regular expressions, known commonly as regex, is a sequence of characters that define a search pattern. Regular expressions let you do validation of text grouping and find and replace actions. <br><br>Regex is used at Braze to give you a more flexible string matching solution in your segmentation and campaign filtering for your target audience. 
 
-In the provided video, we show you how RegEx can be used and tested on the [RegEx101][regex] site. Below we also offer an inhouse RegEx tester, a helpful cheatsheet, dummy data referenced in the RegEx LAB video, as well as some frequently asked questions.
+In the provided video, we show you how regular expressions can be used and tested on the [Regex101][regex] site. Below we also offer an inhouse regex tester, a helpful cheatsheet, sample data referenced in the Regex LAB video, as well as some frequently asked questions.
 
-[Downloadable RegEx Cheat Sheet][cheatsheet]<br>
-[Downloadable Dummy Data][dummydata]
+[Downloadable Regex Cheat Sheet PDF][cheatsheet]<br>
+[Downloadable Sample Data RTF][dummydata]
 
 {% tabs %}
-{% tab RegEx Debugger %}
+{% tab Regex Debugger %}
 
-This form allows for basic validation and testing of RegEx.
+This form allows for basic validation and testing of regular expressions.
 ​
 <div class="alert alert-important" role="alert"><div class="alert-msg"> <b>important: </b><br />
-<p>This tool is only meant as a reference, and does not guarantee that the RegEx matches 100% with the Braze Platform.</p>
+<p>This tool is only meant as a reference, and does not guarantee that the regex matches 100% with the Braze Platform. Regex used within Braze are case sensitive, so make sure that your regexes can handle all cases. </p>
 </div></div>
 <div>
 Regex:
@@ -146,7 +146,7 @@ Say you want to filter for emails ending with @braze.com. You would use the emai
 
 {% enddetails%}
 
-{% details How can I use RegEx on number Strings to filter for values ≥ x or ≤ x? %}
+{% details How can I use regex on number strings to filter for values ≥ x or ≤ x? %}
 If you're searching for __values ≥ x__, the regex to use would be __^([x-y]|\d{z,})$__
 where x-y is the range of numbers (0-9) of the first digit, and z is the one more the number of digits of x.<br>__Example__<br>
 For values ≥ 50, the regex would then be ^([5-9][0-9]|\d{3,})$
@@ -155,7 +155,7 @@ If you're searching for __values ≤ x__, the regex would be __^([x-y]|[a-b])$__
 where x-y is the range of numbers (0-9) of the first digit, and a-b is lower bound range of x.<br>__Example__<br>
 For values ≤ 50, the regex would then be ^([5-9][0-9]|[0-4][0-9])$
 {% enddetails %}
-{% details How to filter custom Attributes that start with a specific string? %}
+{% details How to filter custom attributes that start with a specific string? %}
 Use the __^__ to character to denote what the string starts with and enter the name of you're trying to specify. 
 
 __Example__<br>
@@ -163,7 +163,7 @@ If you're trying to target users who live in cities that start with "San", your 
 
 ![image2]({% image_buster /assets/img/regex/regeximg2.png %})
 {% enddetails %}
-{% details How to filter for certain phone numbers with RegEx %}
+{% details How to filter for certain phone numbers with regex %}
 
 Before using regex to filter phone numbers, please take note that numbers logged for user profiles should already be in an [E.164 format](https://en.wikipedia.org/wiki/E.164) as specified in our [documentation]({{site.baseurl}}/user_guide/message_building_by_channel/sms/phone_numbers/).
 

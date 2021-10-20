@@ -263,7 +263,7 @@ To properly create a notification small icon asset:
 A common symptom of an improper asset is the small notification icon rendering as a solid monochrome square. This is due to the Android system not being able to find any transparent regions in the notification small icon asset.
 {% endalert %}
 
-The icons pictured below are examples of properly designed icons:
+The large and small icons pictured below are examples of properly designed icons:
 
 ![Android Icon Example][38]
 
@@ -300,7 +300,7 @@ You may also optionally use a color reference, see:
 
 #### Enabling Automatic Deep Link Opening
 
-To enable Braze to automatically open your app and any deep links when a push notification is clicked, set `com_appboy_handle_push_deep_links_automatically` to its default setting,`true`, in your `braze.xml`:
+To enable Braze to automatically open your app and any deep links when a push notification is clicked, set `com_appboy_handle_push_deep_links_automatically` to `true`, in your `braze.xml`:
 
 ```xml
 <bool name="com_appboy_handle_push_deep_links_automatically">true</bool>

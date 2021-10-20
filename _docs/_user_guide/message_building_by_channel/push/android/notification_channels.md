@@ -16,7 +16,7 @@ channel:
 
 ## Transitioning to Android O
 
-Notification channels can only be created in the code of your application and cannot be created programmatically in the Braze Dashboard. We recommend your engineering team work with your marketers to ensure the desired notification channels are properly added to the dashboard.
+Notification channels can only be created in the code of your application and cannot be created programmatically in the Braze dashboard. We recommend your engineering team work with your marketers to ensure the desired notification channels are properly added to the dashboard.
 
 Starting with Android O, push notifications require a valid channel to display. If your app targets Android O or above, you must use Braze SDK version 2.1.0 or higher. Your development team should define the channels that you want to use as well as suggested notification settings (e.g., importance, sound, lights) for each channel in your application code. You can find Android's developer documentation [here][4] and Braze's developer documentation [here.][2]
 

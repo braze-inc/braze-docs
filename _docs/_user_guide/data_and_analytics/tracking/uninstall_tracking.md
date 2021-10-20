@@ -28,7 +28,7 @@ You can enable Uninstall Tracking in the **Settings** tab of the **Manage Settin
 
 When uninstall tracking is enabled for an app, background push messages will be sent nightly to users who have not recorded a session or received a push in 24 hours. 
 
-If you are interested in filtering Braze background push on iOS, you can use a [utility method][iOS docs]. On Android, you can use [`AppboyNotificationUtils.isUninstallTrackingPush()`][8] to detect uninstall push. When Braze detects an uninstall, whether from Uninstall Tracking or normal push campaign delivery, we will record the best estimated time of the uninstall on the user. This time is stored in the user profile as a standard attribute.
+If you are interested in filtering Braze background push on iOS, you can use a [utility method][iOS docs]. On Android, you can use [`AppboyNotificationUtils.isUninstallTrackingPush()`][8] to detect uninstall push. When Braze detects an uninstall, whether from Uninstall Tracking or normal push campaign delivery, we will record the best estimated time of the uninstall on the user. This time is stored in the user profile as a default attribute.
 
 ![Uninstall Attribute][4]
 

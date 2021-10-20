@@ -59,7 +59,7 @@ The CDN integration code can be found on our [Github Repo](https://github.com/Ap
 
 ## Step 2: Initialize Braze
 
-Once the Braze Web SDK is added to your website, initialize the library with the `API Key` and [SDK Endpoint URL]({{site.baseurl}}/user_guide/administrative/access_braze/sdk_endpoints) found in **Manage Settings** > **Settings** within your Braze Dashboard.
+Once the Braze Web SDK is added to your website, initialize the library with the `API Key` and [SDK Endpoint URL]({{site.baseurl}}/user_guide/administrative/access_braze/sdk_endpoints) found in **Manage Settings** > **Settings** within your Braze dashboard.
 
 **Note**: If you've configured your Braze initialization options in a Tag Manager, you can skip this step.
 
