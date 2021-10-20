@@ -1,6 +1,6 @@
 ---
 nav_title: RevenueCat
-description: "The RevenueCat and Braze integration allows you to automatically sync your customer's purchase and subscription lifecycle events across platforms. This allows you to build campaigns that react to the subscription lifecycle stage of your customers, such as engaging with customers that opted out during their free trial or sending reminders to customers with billing issues. With accurate and up-to-date subscription data in Braze, you'll be set to turbocharge your campaigns."
+description: "The RevenueCat and Braze integration allows you to automatically sync your customer's purchase and subscription lifecycle events across platforms. This allows you to build campaigns that react to the subscription lifecycle stage of your customers, such as engaging with customers that opted out during their free trial or sending reminders to customers with billing issues."
 alias: /partners/revenuecat/
 page_type: partner
 search_tag: Partner
@@ -22,7 +22,7 @@ At a minimum, you will need to enable the integration from the RevenueCat dashbo
 | RevenueCat Account and Configured App | RevenueCat | [https://app.revenuecat.com/login][9] | You must have an active account and a configured app with RevenueCat to use their service. |
 | RevenueCat SDK Integration | RevenueCat | [https://docs.revenuecat.com/docs/configuring-sdk][8] | RevenueCat must be successfully installed in your app. |
 | Braze SDK Integration | Braze | For more details regarding Braze's SDKs, please refer to our [iOS][5], [Android][6], and [Web][7] documentation. | It's strongly recommended to install the Braze SDK to provide user aliases to RevenueCat. |
-| Braze Instance | Braze | Your Braze Instance can be obtained from your Braze onboarding manager. | RevenueCat requires the Braze Instance to send server-side to the correct Braze REST endpoint. |
+| Braze Instance | Braze | Your Braze instance can be obtained from your Braze onboarding manager or can be found on the [API overview page]({{site.baseurl}}/api/basics/#endpoints). | RevenueCat requires the Braze instance to send server-side to the correct Braze REST endpoint. |
 | Braze API Key | Braze | Your API keys can be found in the __Developer Console -> Settings -> REST API Keys__. | RevenueCat requires the API key to send server-side to Braze. |
 | Braze Test API Key (Optional) | Braze | Your API keys can be found in the __Developer Console -> Settings -> REST API Keys__. | You can use a separate API key for test and production purchases if you'd like them sent to separate Braze instances. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
@@ -45,7 +45,7 @@ Enter the event names that RevenueCat will send or select from the default event
 | Trial Started | The start of an auto-renewing subscription product free trial. |
 | Trial Converted | When an auto-renewing subscription product converts from a free trial to a normal paid period. |
 | Trial Cancelled | When a user turns off renewals for an auto-renewing subscription product during a free trial period. |
-| Renewal | When an auto-renewing subscription product renews OR a user repurchases the auto-renewing subscription product after a lapse in their subscription. |
+| Renewal | When an auto-renewing subscription product renews, or a user repurchases the auto-renewing subscription product after a lapse in their subscription. |
 | Cancellation | When a user turns off renewals for an auto-renewing subscription product during the normal paid period. |
 | Non Subscription Purchase | The purchase of any product that's not an auto-renewing subscription. |
 | Expiration | When a subscription expires. |
@@ -62,7 +62,7 @@ Configure the Braze SDK with the same App User ID as RevenueCat or use the `.cha
 
 #### (Optional) Send User Alias Object to Braze
 
-If you are looking to send an alternative unique user identifier different from the RevenueCat App User ID, update users with the below data as RevenueCat subscriber attributes.
+If you want to send an alternative unique user identifier different from the RevenueCat App User ID, update users with the below data as RevenueCat subscriber attributes.
 
 | Key | Description |
 |---|---|

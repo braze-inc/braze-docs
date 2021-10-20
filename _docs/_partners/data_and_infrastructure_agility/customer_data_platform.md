@@ -31,6 +31,6 @@ valid_partner_list:
 - name: Amperity
   url: /docs/partners/data_and_infrastructure_agility/customer_data_platform/amperity/
 - name: RevenueCat
-  url: /docs/partners/data_and_infrastructure_agility/customer_data_platform/revenuecat/
+  url: /docs/partners/data_and_infrastructure_agility/payments/revenuecat/
 
 ---
