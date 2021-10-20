@@ -40,7 +40,7 @@ guide_menu_list:
   - name: Beacon and Geofence Support
     link: /docs/user_guide/engagement_tools/segments/beacon_support/
     fa_icon: fas fa-map-marker-alt
-  - name: RegEx
+  - name: Regular Expressions
     link: /docs/user_guide/engagement_tools/segments/regex/
     fa_icon: fas fa-search
 ---

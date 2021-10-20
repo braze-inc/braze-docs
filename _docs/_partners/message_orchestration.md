@@ -68,5 +68,8 @@ valid_partner_list:
   url: /docs/partners/message_orchestration/channel_extensions/surveys/digioh
 - name: Punchh
   url: /docs/partners/message_orchestration/channel_extensions/loyalty/punchh/
-  
+  url: /docs/partners/message_orchestration/channel_extensions/surveys/digioh/
+- name: Shopify
+  url: /docs/partners/message_orchestration/channel_extensions/eCommerce/shopify/
+
 ---

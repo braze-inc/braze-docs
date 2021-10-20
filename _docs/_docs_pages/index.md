@@ -57,8 +57,10 @@ popular_topic_list:
 
 helpful_resources_list:
   - name: Innovation Statement
-    link: /docs/help/innovation_statement/
+    link: /docs/innovation_statement/
   - name: Support & Success Services Handbook
     link: /docs/handbooks/
+  - name: Data Protection Technical Assistance
+    link: /docs/dp-technical-assistance/
 ---
 

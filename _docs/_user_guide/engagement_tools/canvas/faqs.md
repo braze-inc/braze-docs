@@ -1,7 +1,7 @@
 ---
 nav_title: FAQs
 article_title: Canvas FAQs
-page_order: 6
+page_order: 10
 description: "This article provides answers to frequently asked questions about Canvas."
 tool: Canvas
 

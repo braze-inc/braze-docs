@@ -1,11 +1,11 @@
 ---
 nav_title: Segmentation Logic with Negative OR Filters
-page_order: 2
+article_title: Segmentation Logic with Negative OR Filters
+page_order: 4
 
 page_type: solution
 description: "This article walks you through best practices on when to use or not use the OR operator, and when to use the AND operator."
 tool: Segments
-noindex: true
 ---
 
 # Segmentation Logic with Negative OR Filters
@@ -52,6 +52,8 @@ If you'd like to include customers with two or more values for a particular attr
 The statement `Country is not United States AND Country is not Canada` will only include customers who are not from the United States and who are not from Canada. Therefore, both United States customers and Canadian customers will be excluded.
 
 Still need help? [Open a support ticket]({{site.baseurl}}/support_contact/).
+
+_Last updated on September 17, 2021_
 
 [49]: {% image_buster /assets/img_archive/us_canada.png %}
 [50]: {% image_buster /assets/img_archive/not_us_not_canada.png %}

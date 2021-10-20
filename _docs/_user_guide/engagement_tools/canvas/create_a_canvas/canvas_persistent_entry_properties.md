@@ -5,17 +5,16 @@ alias: "/persistent_entry/"
 page_type: reference
 description: "This reference article describes how to use persistent entry properties in your Canvas to send more curated messages, and create a highly refined end-user experience."
 tool: Canvas
-
+page_order: 5
 ---
-
-<br>
-{% alert note %}
-This feature is currently in beta. Please reach out to your Braze account manager for more information.
-{% endalert %}
 
 # Canvas Persistent Entry Properties
 
 When a Canvas is triggered by a custom event, purchase, or an API call, customers are now able to use metadata from the API call, custom event, or purchase event for personalization in each step of the Canvas. __Prior to this feature, the entry properties could only be used in the first step of Canvas__. The ability to use entry properties throughout a Canvas journey allows customers to send more curated messages and create a highly refined end-user experience.
+
+{% alert important %}
+This feature is currently in beta. Please reach out to your Braze account manager for more information.
+{% endalert %}
 
 ## Using Entry Properties
 

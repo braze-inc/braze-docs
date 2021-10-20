@@ -6,7 +6,7 @@ tool:
   - Templates
 channel:
   - webhooks
-description: "This reference article covers how to create and customize Webhook templates for later use within the Braze platform."
+description: "This reference article covers how to create and customize webhook templates for later use within the Braze platform."
 
 ---
 
@@ -14,13 +14,13 @@ description: "This reference article covers how to create and customize Webhook 
 
 ### Step 1: Navigate to the Webhook Template Editor
 
-You can access the Webhook Template by first clicking the **Campaigns** tab under **Engagement** on the navigation bar, which will reveal a drop-down menu with a 'Templates and Styles' tab.  Click on this tab to access the Webhook Template Editor.
+You can access the Webhook Template Editor by first clicking the **Campaigns** tab under **Engagement** on the navigation bar, which will reveal a drop-down menu with a Templates and Styles tab.  Click this tab to access the Webhook Template Editor.
 
-![Webhook_template_campaign][1]
+![Webhook Template Campaign][1]
 
 ### Step 2: Create a New Template
 
-You can now create a new template, edit an existing template or utilize one of the predesigned webhook templates that are offered.  The predesigned templates currently offered are for Twilio and Facebook messenger.
+You can now create a new template, edit an existing template, or utilize one of the predesigned webhook templates that are offered.  The predesigned templates currently offered are for Twilio and Facebook Messenger.
 
 ### Step 3: Customize Your Template
 
@@ -28,13 +28,13 @@ Webhook templates can be used for many different use cases.  You can start by en
 
 If you want to see how your webhook looks before sending it out to your users, you can send a test webhook through the Settings tab in the top right corner.
 
-![Webhook_template_test][2]
+![Webhook Template Test][2]{: style="max-width:80%"}
 
 ### Step 4: Save Your Template
 
-Be sure to save your template by clicking the "Save Template" button in the bottom right corner of the editor. You're now ready to use this template in any campaign you choose.
+Be sure to save your template by clicking the **Save Template** button in the bottom right corner of the editor. You're now ready to use this template in any campaign you choose.
 
-![Webhook_template_save][3]
+![Webhook Template Save][3]{: style="max-width:80%"}
 
 
 > Edits made to an existing template will not be reflected in campaigns that were created using the previous versions of that template.

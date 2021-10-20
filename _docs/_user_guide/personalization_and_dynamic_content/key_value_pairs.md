@@ -46,7 +46,7 @@ Apple Push Notifications service (APNs) supports setting alert preferences and s
 | launch-image   | strings                  | The name of an image file in the app bundle you wish to be used as the launch image when users tap the action button or move the action slide |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
 
-Braze's message composer automatically handles the creation of the following keys: **alert** and **its properties**, **content-available**, **sound**, and **category**. These values can be input directly in the Dashboard as shown below.
+Braze's message composer automatically handles the creation of the following keys: **alert** and **its properties**, **content-available**, **sound**, and **category**. These values can be input directly in the dashboard as shown below.
 
 ![iOS Automatic Keys][16]
 {% raw %}
@@ -105,7 +105,7 @@ Braze allows you to send send additional data payloads in push notifications usi
 
 Custom key-value pairs can be input by clicking the gear icon and specifying your key-value pairs below.
 
-![key-valueInput][19]
+![Key-Value Input][19]
 
 Use-cases for custom key-value pairs include but are not limited to internal metrics keeping and setting the context for the user interface; they may be used for whatever purpose you choose.
 
@@ -115,7 +115,7 @@ Note that your app's backend must be able to process custom key-value pairs for 
 
 ##### FCM Messaging Options
 
-Android push notifications can be further customized with FCM message options. These include [notification priority][8], [sound][10], [delay, lifespan, and collapsibility][9]. These values can be input directly in the Dashboard as shown below. Refer to the [Braze Documentation][7] for further instructions on how to set these options in the Braze message composer.
+Android push notifications can be further customized with FCM message options. These include [notification priority][8], [sound][10], [delay, lifespan, and collapsibility][9]. These values can be input directly in the dashboard as shown below. Refer to the [Braze Documentation][7] for further instructions on how to set these options in the Braze message composer.
 
 ![Android Automatic Keys][18]
 

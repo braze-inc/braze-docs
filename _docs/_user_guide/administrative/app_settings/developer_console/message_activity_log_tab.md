@@ -11,7 +11,7 @@ description: "This reference article describes the Message Activity Log in the D
 
 The Message Activity Log, in the Developer Console, gives you the opportunity to see any messages, especially error messages, associated with your campaigns and sends. You can see API campaign transactions, troubleshoot details on failed messages, and gather insight on how to improve notification delivery or solve existing technical issues.
 
-![msgactlog1][2]
+![Message Activity Log][2]
 
 These messages can come from our own system, your apps or platforms, or our third party partners. This can result in an infinite number of messages that can appear in this log.
 
@@ -28,5 +28,5 @@ However, there are some common message types you might see, and some might even 
 
 
 [1]: {{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/aborting_messages/#aborting-messages
-[2]: {% image_buster /assets/img_archive/msgactlog1.png %}
+[2]: {% image_buster /assets/img_archive/message_activity_log.png %}
 [8]: {% image_buster /assets/img_archive/UserLogs1.png %}

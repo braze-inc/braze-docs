@@ -1,9 +1,9 @@
 ---
-nav_title: Viewing and Understanding Segment Data
+nav_title: Segment Data
 article_title: Viewing and Understanding Segment Data
-page_order: 4
+page_order: 2
 page_type: reference
-description: "This reference article explains the Segments section of your Braze Dashboard, and includes a summary the statistics provided."
+description: "This reference article explains the Segments section of your Braze dashboard, and includes a summary the statistics provided."
 tool: 
   - Segments
   - Reports
@@ -11,13 +11,15 @@ tool:
 ---
 # Viewing and Understanding Segment Data
 
+> This reference article explains the Segments section of your Braze dashboard, and includes a summary the statistics provided.
+
 ## Accessing Segment Data
 
-The Segments section of your Braze Dashboard contains a summary of all of your segments and allows you to examine detailed data for each one. To learn how to create a segment, go to our Quick Wins [page][3].
+The **Segments** page of your Braze dashboard contains a summary of all of your segments and allows you to examine detailed data for each one. On this page, search for and click the name of a segment to edit and view it's data. To learn how to create a segment, check out [Creating a Segment][3].
 
-![View segment][1]
+![Segments page][1]
 
-After clicking on the name of a segment, you'll be able to view, at the top of the page, segment statistics and filters. You can edit your segment by adding or deleting filters. Be sure to save any changes!
+After clicking on the name of a segment, you'll be able to view segment statistics and filters. You can edit your segment by adding or deleting filters. Be sure to save any changes!
 
 ![Segment data][2]
 
@@ -38,26 +40,28 @@ You will see the following segment statistics, which update in real-time as you 
 
 ## Messaging Use and Historical Membership
 
-If you scroll down the page, you will see segment data on Messaging Use and Historical Membership. Under the Messaging Use category, you can view the campaigns and News Feed items that have been targeted at this segment. Under Historical Membership, you can see how the size of this segment changed over time.
+If you scroll down the page, you will see segment data on Messaging Use and Historical Membership. Under the **Messaging Use** section, see which campaigns and News Feed items have targeted this segment. Under **Historical Membership**, you see how the size of this segment changed over time. Use the dropdown to filter segment membership by date range.
 
-![More segments data][4]
+![Under Messaging Use, view the campaigns that your segment is being used in.][4]
+![Use the Historical Membership dropdown to filter segment membership by date range.][10]
 
 ## User Preview
 
-Lastly, you can view detailed, user-specific information about your segments by selecting the 'User Preview' button on your segment page.
+To view detailed, user-specific information about your segments, click **User Data** and select **User Preview**.
 
 ![User Specific Info][7]
 
-On this page, you can view a number of user-specific attributes as shown below:
+On this page, you can view a number of user-specific attributes, such as gender, age, number of sessions, and whether they have opted into push and email.
 
 ![User Preview][8]
 
 [1]: {% image_buster /assets/img_archive/segments.png %}
 [2]: {% image_buster /assets/img_archive/A_Tracking.png %}
 [3]: {{site.baseurl}}/user_guide/engagement_tools/segments/creating_a_segment/#creating-a-segment
-[4]: {% image_buster /assets/img_archive/Historical_Membership2.png %}
+[4]: {% image_buster /assets/img_archive/historical_membership1.png %}
+[10]: {% image_buster /assets/img_archive/historical_membership2.png %}
 [5]: {{site.baseurl}}/user_guide/message_building_by_channel/email/managing_user_subscriptions/#segmenting-by-user-subscriptions
 [6]: {{site.baseurl}}/help/best_practices/spam_regulations/#spam-regulations
-[7]: {% image_buster /assets/img_archive/Preview_Users.png %}
-[8]: {% image_buster /assets/img_archive/User_Preview.png %}
+[7]: {% image_buster /assets/img_archive/preview_users.png %}
+[8]: {% image_buster /assets/img_archive/user_preview.png %}
 [9]: {{site.baseurl}}/user_guide/data_and_analytics/tracking/segment_analytics_tracking/

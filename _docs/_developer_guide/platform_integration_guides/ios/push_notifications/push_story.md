@@ -174,13 +174,13 @@ class NotificationViewController: UIViewController, UNNotificationContentExtensi
 
 -		Open the Notification Content Extension storyboard and place a new `UIView` in the notification view controller. Rename the class to `ABKStoriesView`. Make the view width and height auto-resizable matching the Notification View Controller's main view frame.
 
-![View Class][ios_pushstory_06]
+![View Class][10]
 
-![View Size][ios_pushstory_07]
+![View Size][11]
 
 -		Link the Notification View Controller's `storiesView` IBOutlet to the added `ABKStoriesView`.
 
-![View Outlet][ios_pushstory_09]
+![View Outlet][13]
 
 ## Step 7: Set the Notification Content Extension Plist
 
@@ -190,7 +190,7 @@ Open the Info.plist file of the Notification Content Extension and add/change fo
 `UNNotificationExtensionDefaultContentHidden` = `YES` (`Boolean` type)
 `UNNotificationExtensionInitialContentSizeRatio` = `0.65` (`Number` type)
 
-![Plist Settings][ios_pushstory_08]
+![Plist Settings][12]
 
 ## Step 8: Updating the Braze Integration in Your Main App
 
@@ -228,15 +228,15 @@ Appboy.start(withApiKey: "YOUR-API-KEY", in:application, withLaunchOptions:launc
 Alternatively, to configure Push Story App Group from your `Info.plist` file, add a dictionary named `Braze` to your `Info.plist` file. Inside the `Braze` dictionary, add a string-typed `PushStoryAppGroup` subentry and set the value to your App Group identifier. Note that prior to Braze iOS SDK v4.0.2, the dictionary key `Appboy` must be used in place of `Braze`.
 
 [1]: {{site.baseurl}}/developer_guide/platform_integration_guides/ios/push_notifications/integration/
-[2]: {% image_buster /assets/img_archive/add_content_extension.png %}
-[3]: {% image_buster /assets/img_archive/enable_background_mode.png %}
-[4]: {% image_buster /assets/img_archive/add_app_groups.png %}
+[2]: {% image_buster /assets/img/ios/push_story/add_content_extension.png %}
+[3]: {% image_buster /assets/img/ios/push_story/enable_background_mode.png %}
+[4]: {% image_buster /assets/img/ios/push_story/add_app_groups.png %}
 [5]: {{site.baseurl}}/developer_guide/platform_integration_guides/ios/initial_sdk_setup/installation_methods/swift_package_manager/
 [6]: {% image_buster /assets/img/ios/push_story/spm1.png %}
 [7]: {% image_buster /assets/img/ios/push_story/spm2.png %}
 [8]: https://github.com/Appboy/appboy-ios-sdk/releases
 [9]: {% image_buster /assets/img/ios/push_story/manual1.png %}
-[ios_pushstory_06]: {% image_buster /assets/img_archive/ios_pushstory_06.png %}
-[ios_pushstory_07]: {% image_buster /assets/img_archive/ios_pushstory_07.png %}
-[ios_pushstory_08]: {% image_buster /assets/img_archive/ios_pushstory_08.png %}
-[ios_pushstory_09]: {% image_buster /assets/img_archive/ios_pushstory_09.png %}
+[10]: {% image_buster /assets/img/ios/push_story/abkstoriesview_class.png %}
+[11]: {% image_buster /assets/img/ios/push_story/abkstoriesview_size.png %}
+[12]: {% image_buster /assets/img/ios/push_story/notificationcontentextension_plist.png %}
+[13]: {% image_buster /assets/img/ios/push_story/abkstoriesview_outlet.png %}

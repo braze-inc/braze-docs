@@ -12,13 +12,13 @@ tool:
 noindex: true
 guide_featured_title: "Popular Topics"
 guide_featured_list:
-  - name: Why isn’t my Canvas sending?
+  - name: Canvas Delivery Issues
     link: /docs/help/help_articles/campaigns_and_canvas/canvas_not_sending/
     fa_icon: far fa-paper-plane
-  - name: Why are my conversions low?
+  - name: Low Campaign or Canvas Conversions
     link: /docs/help/help_articles/campaigns_and_canvas/conversions_low/
     fa_icon: fas fa-cart-arrow-down
-  - name: Where is my location data?
+  - name: Checking Location Data
     link: /docs/help/help_articles/campaigns_and_canvas/locations_data_in_campaigns/
     fa_icon: fas fa-location-arrow
 
@@ -26,13 +26,13 @@ guide_featured_list:
 
 guide_menu_title: "Other Topics"
 guide_menu_list:
-  - name: Why is my control group so large?
+  - name: Handling a Large Control Group
     link: /docs/help/help_articles/campaigns_and_canvas/more_people_in_control_group/
     fa_icon: far fa-dot-circle
-  - name: Why is my Campaign/Canvas not triggering?
+  - name: Untriggered Campaign or Canvas
     link: /docs/help/help_articles/campaigns_and_canvas/not_triggering/
     fa_icon: far fa-times-circle
-  - name: Using Custom Event Properties
+  - name: Logging Custom Event Properties
     link: /docs/help/help_articles/campaigns_and_canvas/using_custom_event_properties/
     fa_icon: fas fa-code
   - name: Using Event Logging

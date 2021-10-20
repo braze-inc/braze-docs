@@ -79,6 +79,7 @@ var custom_word_mapping = {
   'SMS': 'SMS',
   'MMS': 'MMS',
   'Platform Wide': 'Platform Wide Features & Behaviors',
+  'lab': 'LAB',
 };
 
 // Set cookie to auto expire after 30 days of inactivity

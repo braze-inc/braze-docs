@@ -9,9 +9,8 @@ channel: email
 ---
 
 # SSL at Braze
-<!---
-{% include video.html id="" align="right" %}
--->
+
+{% include video.html id="zP1N_wN0SsQ" align="right" %}
 
 > A Secure Socket Layer (SSL) encrypts a URL with HTTPS instead of the less secure HTTP. URLs with HTTPS indicate that an SSL or TLS certificate that is valid and trusted exists and that the site is safe to visit and not a scam or the source of dangerous malware.
 

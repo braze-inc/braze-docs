@@ -7,7 +7,7 @@ description: "This article covers how to configure uninstall tracking for your i
 
 ---
 
-# Uninstall Tracking
+# Uninstall Tracking for iOS
 
 > This article covers how to configure uninstall tracking for your iOS application, and how to test to ensure that your app does not take any unwanted automatic actions upon receiving a Braze uninstall tracking push.
 
@@ -23,20 +23,14 @@ Braze uses background push notifications to collect uninstall tracking analytics
 
 ## Step 3: Test from the Dashboard
 
-To ensure that your app does not take any unwanted automatic actions upon receiving a Braze uninstall tracking push, send yourself a test push from the [Dashboard][7]. This test push will not update your User Profile.
+To ensure that your app does not take any unwanted automatic actions upon receiving a Braze uninstall tracking push, send yourself a test push from the [dashboard][7]. This test push will not update your User Profile.
 
-1. On the **Campaigns** page, create a Push Notification campaign and select iOS Push as your platform.
-
+1. On the **Campaigns** page, create a Push Notification campaign and select iOS Push as your platform.<br><br>
 2. On the Additional Message Settings page,
-  - Add the key `appboy_uninstall_tracking` with corresponding value `true`
-  - Check **Add Content-Available Flag**
-
-    ![key-value  Pair][9]{: width="40%"}
-
-3. Use the Preview Message page to send yourself a test uninstall tracking push.
-
-    ![Test User][10]{: width="40%"}
-
+- Add the key `appboy_uninstall_tracking` with corresponding value `true`
+- Check **Add Content-Available Flag**
+<br><br>![Key-Value Pairs][9]{:style="max-width:60%;"}<br><br>
+3. Use the Preview Message page to send yourself a test uninstall tracking push.<br><br>![Test User][10]{:style="max-width:60%;"}<br><br>
 4. Check that your app does not take any unwanted automatic actions upon receiving the push.
 
 {% alert important %}

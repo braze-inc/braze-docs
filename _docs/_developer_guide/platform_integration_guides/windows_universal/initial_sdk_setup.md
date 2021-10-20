@@ -35,7 +35,7 @@ Create a file called `AppboyConfiguration.xml` in the root directory of your pro
         <ApiKey>YOUR_API_KEY_HERE</ApiKey>
     </AppboyConfig>
 ```
->  Be sure to update `YOUR_API_KEY_HERE` with your API key which can found on the [Settings][1] page within the Braze Dashboard.
+>  Be sure to update `YOUR_API_KEY_HERE` with your API key which can found on the [Settings][1] page within the Braze dashboard.
 
 Once you've added that snippet, be sure to modify the following file properties for `AppboyConfiguration.xml`
 
@@ -45,7 +45,7 @@ Once you've added that snippet, be sure to modify the following file properties 
 ## Step 3: Configuring Package.appxmanifest
 
 Within the "Capabilities tab, ensure `Internet (Client)` is checked.
-![Internet_Client][18]
+![Internet Client][18]
 
 ## Step 4: Editing your App class
 

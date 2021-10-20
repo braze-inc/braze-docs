@@ -29,7 +29,7 @@ To change the color of the unread indicator of a card, add custom CSS to your we
 
 ## Disabling the Indicators
 
-In order to disable this functionality add the following style to your `css`:
+In order to disable this functionality, add the following style to your `css`:
 
 ```css
 .ab-unread-indicator { display: none; }

@@ -22,11 +22,11 @@ Not sure where to start with analyzing your campaigns or Canvases? The [Reports 
 
 ## New US-05 Cluster
 
-Braze supports a new US cluster, US-05. Refer to our list of Dashboard and REST [Endpoints]({{site.baseurl}}/api/basics/#endpoints) to see more.
+Braze supports a new US cluster, US-05. Refer to our list of dashboard and REST [Endpoints]({{site.baseurl}}/api/basics/#endpoints) to see more.
 
 ## Braze UI Updates
 
-In May 2021, Braze updated the following labels and terms in the Braze Dashboard:
+In May 2021, Braze updated the following labels and terms in the Braze dashboard:
 
 - App Usage --> Overview
 - App Settings --> Settings

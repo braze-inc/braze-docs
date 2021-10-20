@@ -13,7 +13,7 @@ glossaries:
   - name: Active User
     description: Braze defines an <a href="https://www.braze.com/docs/user_guide/engagement_tools/campaigns/ideas_and_strategies/active_user_campaigns/">active user</a> for a given period as any user who has a session at that time.
   - name: "A/B Multivariate Testing"
-    description: A type of testing where one or more variables are changed and tested to see which changes perform best. <a href="https://www.braze.com/docs/user_guide/engagement_tools/campaigns/testing_and_more/multivariate_testing/#multivariate--ab-testing">A/B Testing</a> can be done within Dashboard campaigns.
+    description: A type of testing where one or more variables are changed and tested to see which changes perform best. <a href="https://www.braze.com/docs/user_guide/engagement_tools/campaigns/testing_and_more/multivariate_testing/#multivariate--ab-testing">A/B Testing</a> can be done within dashboard campaigns.
   - name: Alloys
     description: <a href = "https://www.braze.com/docs/partners/home/"> Alloys</a> are Braze's Technology Partners.
   - name: "Application Program Interface (API)"
@@ -23,7 +23,7 @@ glossaries:
   - name: Braze Engagement Tools
     description: Braze offers many <a href="https://www.braze.com/docs/user_guide/engagement_tools/">tools</a> to reach your customers and users with our campaigns, Canvas tools, and you can optimize for consistency (and upload images and other content) using our Templates & Media tools. From there, you can create Segments and Geofences to target your audience by location or other attributes.
   - name: Braze Teams
-    description: Braze Admins can divide a subset of Dashboard users into <a href="https://www.braze.com/docs/user_guide/administrative/manage_your_braze_users/teams/">Teams</a> with varying user roles and permissions. This allows Admins to limit access to certain features by group membership.
+    description: Braze Admins can divide a subset of dashboard users into <a href="https://www.braze.com/docs/user_guide/administrative/manage_your_braze_users/teams/">Teams</a> with varying user roles and permissions. This allows Admins to limit access to certain features by group membership.
   - name: Canvas
     description: A single unified interface where marketers can set up campaigns with multiple messages and steps to form a cohesive journey. <a href="https://www.braze.com/docs/user_guide/engagement_tools/canvas/">Canvas</a> also lets you compare and optimize those experiences using comprehensive analytics for the full user experience.
   - name: Connected Content
@@ -56,7 +56,7 @@ glossaries:
     description: <a href="https://www.braze.com/docs/user_guide/message_building_by_channel/">Messaging channels</a> are ways you can virtually communicate with your customers - through push notifications on their phone or web browser, email, in-app messages, and so much more!
   - name: "Monthly Active User (MAU)"
     description: Any user who has a session within the last 30 days.
-  - name: Multi-Channel Messaging
+  - name: Multichannel Messaging
     description: Messaging a user across various mediums - like a combination of email, web push, and mobile push notifications. <a href="https://www.braze.com/docs/developer_guide/platform_wide/platform_features/#multi-channel-messaging">Messaging channels</a> are best used in concert and with regularity to re-engage lost users, retain active users, and energize your brand ambassadors.
   - name: News Feed
     description: The News Feed is a fully customizable in-app content feed for your users. Braze targeting and segmentation allows you to create a stream of content that is individually catered to the interests of each user for both <a href="https://www.braze.com/docs/developer_guide/platform_integration_guides/ios/news_feed/">iOS</a> and <a href="https://www.braze.com/docs/developer_guide/platform_integration_guides/android/news_feed/integration_overview/">Android</a>.

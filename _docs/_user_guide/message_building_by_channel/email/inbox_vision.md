@@ -33,6 +33,7 @@ Once you make changes to a template, you will need to click **Re-Run Test** to s
 Code analysis is a way for Braze to highlight issues that may exist with your HTML, showing the number of occurrences of each issue and providing insight into which HTML elements are not supported. This information can be found on the Inbox Vision preview page by selecting the list icon in the upper left-hand corner.
 
 ![inboxvision2][2]
+
 ![inboxvision3][3]
 
 {% alert note %} Sometimes the code analysis will show up faster than the preview for a particular email client. This is because we wait until the email arrives in the inbox before taking the screenshot. {% endalert %}

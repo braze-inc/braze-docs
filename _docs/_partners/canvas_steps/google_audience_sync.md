@@ -17,7 +17,7 @@ __Common use cases for syncing Custom Audiences include:__
 - Creating suppression audiences to prevent users from receiving advertisements when they're already loyal consumers of your brand.
 - Creating similar audiences to acquire new users more efficiently.
 
-__Please note:__ This feature gives brands the option to control what specific first-party data is shared with Google. At Braze, the integrations you can and cannot share your first-party data with are given the utmost consideration. To learn more about our Braze data privacy policy, please click [here](https://www.braze.com/privacy).
+__Please note:__ This feature gives brands the option to control what specific first-party data is shared with Google. At Braze, the integrations with which you can and cannot share your first-party data are given the utmost consideration. To learn more about our Braze data privacy policy, please click [here](https://www.braze.com/privacy).
 
 ## Integration
 ### Integration Requirements
@@ -40,14 +40,14 @@ You'll then be prompted with a modal to select the email associated with your Go
 
 Please note that Braze will only be managing your audiences. 
 
-![Google Sync][2]{: style="max-width:30%;"}![Google Sync][3]{: style="max-width:29%;"}
+![Google Sync][2]{: style="max-width:30%;"}  ![Google Sync][3]{: style="max-width:29%;"}
 
 Once you have successfully connected your Google Ads account, you will be taken back to your Google Ads partner page in Braze. 
 
 ![Google Sync][4]
 
 {% alert important %}
-If you are planning on export iOS IDFA or Google Advertising IDs within your audience sync, Google requires your iOS app ID and Android app ID within the requests. Within the Google Audience Sync module, select __Add Mobile Advertising IDs__, input your iOS app ID and Android app ID (app package name), and then save each.
+If you plan to export iOS IDFA or Google Advertising IDs within your audience sync, Google requires your iOS app ID and Android app ID within the requests. Within the Google Audience Sync module, select __Add Mobile Advertising IDs__, input your iOS app ID and Android app ID (app package name), and save each.
 
 ![Google Sync]({% image_buster /assets/img/google_sync/google_sync5.png %})
 {% endalert %}
@@ -62,21 +62,28 @@ Add a step in your Canvas, select the dropdown at the top of the step, and selec
 
 Click on the __Custom Audience__ button to open the step editor.
 
-Select the desired Google ad account. Then you will have to option to __Sync with an Existing Audience__ or __Create a New Audience__.
+Select the desired Google ad account. Under the __Choose a New or Existing Audience__ dropdown, type in the name of a new or existing audience. 
 
 {% tabs %}
 {% tab Create a New Audience %}
 __Create a New Audience__<br>
-Select the option to __Create a New Audience__ and enter a name for the new custom audience.
+Enter a name for the new custom audience, select __Add Users to Audience__ and select the first-party user field data to send to with your audience. You can choose either: 
+- __Customer Contact Info__ which will contain your users' email and/or phone numbers if they exist in Braze
+- __Mobile Advertiser ID__ which you will then need to select either iOS IDFA or Android GAID   
+
+Next, save your audience by clicking the __Create Audience__ button at the bottom of the step editor.
 
 ![Google Sync]({% image_buster /assets/img/google_sync/google_sync7.png %})
 
-Next, select the first-party user field data to send to with your audience. You can choose either: 
-- __Customer Contact Info__ which will contain your users' email and/or phone numbers if they exist in Braze
-- __Mobile Advertiser ID__ which you will then need to select either iOS IDFA or Android GAID 
+Users will be notified at the top of the step editor if the audience is created successfully or if errors arise during this process. Users can reference this audience for user removal later in the Canvas journey because the audience was created in draft mode. 
 
+![Google Sync]({% image_buster /assets/img/google_sync/google_sync11.png %})
+
+When you launch a Canvas with a new audience, Braze will create a new custom audience upon launching the Canvas and subsequently sync users in near real-time as they enter the Google Audience Step. 
+
+{% alert important %}
 Given Google's Customer Match requirements, you cannot have customer contact info and mobile advertiser IDs in the same customer lists. Google Customer Match will then use this information to determine who is targetable within Google Search, Google Display, YouTube, and Gmail. For more details around Google Customer Match requirements, please review their [documentation](https://support.google.com/google-ads/answer/7474166?hl=en&ref_topic=6296507).
-
+{% endalert %}
 {% endtab %}
 {% tab Sync with an Existing Audience %}
 __Sync with an Existing Audience__<br>
@@ -84,24 +91,22 @@ Braze also offers the ability to either add or remove users from existing Google
 
 Once you've configured your Google Audience step, select __Done__. Your Google Audience step will include details about the new audience.
 
-![Google Sync]({% image_buster /assets/img/google_sync/google_sync8.png %}){: style="max-width:30%;"}
+![Google Sync]({% image_buster /assets/img/google_sync/google_sync8.png %})
 
 {% endtab %}
 {% endtabs %}
 
 ### Step 4: Launch Canvas
 
-Complete the remainder of your user journey within Canvas and then launch! If you have opted to create a new audience, then Braze will first create the audience within Google and then add users as they reach this step in your Canvas. If you have selected to add or remove users from an existing audience, Braze will either add or remove users as soon as they reach this step in their user journey.
+Complete the remainder of your user journey within Canvas and then launch! If you have opted to create a new audience, Braze will first create the audience within Google and then add users as they reach this step in your Canvas. If you have selected to add or remove users from an existing audience, Braze will either add or remove users when they reach this step in their user journey.
 
 Users will then advance to the next step of the Canvas if there is one or exit the Canvas if it is the last step. 
 
 ## User Syncing & Rate Limit Considerations
 
-As users reach the Audience Sync Step, Braze will sync these users in near real-time while also respecting Google Ads API rate limits. What this means in practice is that Braze will try to batch and process as many users every 5 seconds before sending these users to Google. 
+As users reach the Audience Sync Step, Braze will sync these users in near real-time while respecting Google Ads API rate limits. What this means in practice is that Braze will try to batch and process as many users every 5 seconds before sending these users to Google. 
 
-Once a customer is close to reaching the Google Ads API rate limit, Google will provide feedback back to Braze around retry recommendations. If a Braze customer reaches their rate limit, Braze the Canvas will retry the sync for up to &#126;13 hours. If the sync is not possible at that point, these users are listed under the Users Errored metric.
-
-Given these processing and rate-limiting considerations, Braze recommends no more than __10-15 million users synced per day__ to ensure that Braze can successfully process and sync users with Google. If you have an audience larger than 10-15 million users, you can sync this custom audience at a lower frequency (ex: once per week). 
+Once a customer is close to reaching the Google Ads API rate limit, Google will provide feedback back to Braze around retry recommendations. If a Braze customer reaches their rate limit, Braze the Canvas will retry the sync for up to &#126;13 hours. If the sync is not possible, these users are listed under the Users Errored metric.
 
 ## Understanding Analytics 
 <br>

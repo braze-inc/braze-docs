@@ -24,9 +24,9 @@ You can send web messages to engage with users directly in their web/mobile brow
 
 ## Web Push
 
-Web push is another great way to engage with users of your web application. Customers visiting your website via Chrome, Safari, Firefox, and Opera can opt-in to receive web push from your web application whether or not the web page is loaded. This feature is also supported on Android Chrome and Firefox Mobile on Android allowing for mobile web notifications. Web push works the same way app push notifications operate on your phone. For more information on composing a web push, see our page on [creating a push notification][11]. See below for a sample web push sent by Braze.
+![Web Push Example][12]{: style="float:right;max-width:60%;margin-left:15px;border:0;"}
 
-![appboy-web-push][12]
+Web push is another great way to engage with users of your web application. Customers visiting your website via Chrome, Safari, Firefox, and Opera can opt-in to receive web push from your web application whether or not the web page is loaded. This feature is also supported on Android Chrome and Firefox Mobile on Android allowing for mobile web notifications. Web push works the same way app push notifications operate on your phone. For more information on composing a web push, see our page on [creating a push notification][11]. See below for a sample web push sent by Braze.
 
 Users of your web application need to opt-in to receive web push. See below.
 

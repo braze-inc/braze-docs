@@ -62,9 +62,9 @@ Authorization: Bearer YOUR-REST-API-KEY
 
 ### Possible Errors
 
-- `Missing/Invalid Canvas ID` - The Canvas API ID must be an API identifier. You can find this using the [Canvas List Endpoint]({{site.baseurl}}/api/endpoints/export/canvas/get_canvases/) or by logging into the Dashboard.
+- `Missing/Invalid Canvas ID` - The Canvas API ID must be an API identifier. You can find this using the [Canvas List Endpoint]({{site.baseurl}}/api/endpoints/export/canvas/get_canvases/) or by logging into the dashboard.
 
-- `Missing/Invalid Message Variant ID` - The Message Variant API ID must be an API identifier. You can find this using the [Canvas Details Endpoint]({{site.baseurl}}/api/endpoints/export/canvas/get_canvas_details/) or by logging into the Dashboard.
+- `Missing/Invalid Message Variant ID` - The Message Variant API ID must be an API identifier. You can find this using the [Canvas Details Endpoint]({{site.baseurl}}/api/endpoints/export/canvas/get_canvas_details/) or by logging into the dashboard.
 
 
 {% endapi %}

@@ -16,13 +16,13 @@ search_tag: Partner
 
 *Leverage [Neura insights][2] to uncover the relationships between each user’s real-world behavior and the actions they take in your app in order to find the best moment to engage with each user.*
 
-![insights-bubble-graph.png][9]
+![Insights Bubble Graph][9]
 
 ## Integration Details
 
 To integrate the Neura SDK you simply add a few lines of code to your [AppDelegate on iOS][3] or [MainActivity class on Android][4].
 
-First, find your App ID on the "Developer Console" section of the Braze Dashboard and create a new API Key with `users.track`, `users.alias.new` and `users.export.ids` permissions.
+First, find your App ID on the "Developer Console" section of the Braze dashboard and create a new API Key with `users.track`, `users.alias.new` and `users.export.ids` permissions.
 
 ![neura-braze-api-key.png][10]
 
@@ -34,7 +34,7 @@ Complete the Mobile Engagement Platform section of your application in the [Neur
 
 **Android/iOS App ID:** We recommend providing a unique Braze application ID for each mobile platform, allowing you to segment the users for each platform individually.
 
-![neura-mep-details-in-neura.png][11]
+![Neura MEP Details in Neura][11]
 
 Last, ensure that Braze and Neura users are mapped:
 Create a user alias labeled `neura_id` with your user's neura_id

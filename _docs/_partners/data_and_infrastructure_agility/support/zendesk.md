@@ -37,8 +37,6 @@ Complete the following steps to utilize the Braze webhook channel to send data t
 
 To create a webhook, go to the **Campaigns** page on the Braze dashboard, under **Engagement**. <br>From the **Create Campaign** drop-down, select **Webhook** and name your campaign.
 
-![zd11]({% image_buster /assets/img_archive/zd11.gif %})
-
 {% endtab %}
 {% tab Canvas %}
 
@@ -110,4 +108,3 @@ Should you have a common identifier between Braze and Zendesk, it would be best 
 [5]: {% image_buster /assets/img_archive/zendesk_step2.png %}
 [6]: https://developer.zendesk.com/rest_api/docs/support/tickets#create-ticket
 [7]: {% image_buster /assets/img_archive/zdfinal.gif %}
-[8]: {% image_buster /assets/img_archive/zd11.gif %}

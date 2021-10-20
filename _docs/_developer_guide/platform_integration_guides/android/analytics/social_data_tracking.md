@@ -9,7 +9,8 @@ description: "This reference article shows how to implement social data tracking
 
 ---
 
-# Social Data Tracking
+# Social Data Tracking for Android/FireOS
+
 Similar to the Braze iOS SDK, the Braze Android SDK does not automatically collect Facebook and Twitter data. However, it's possible to add social media data to a Braze user's profile from the Android SDK as well:
 
 - Obtain social media data within your app via the Facebook SDK and Twitter APIs.

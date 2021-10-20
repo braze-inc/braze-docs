@@ -127,6 +127,6 @@ By default, all fields are collected by the Braze iOS SDK.
 
 ## SDK Compatibility
 
-We have done internal testing and verified that our SDK is compatible with Urban Airship, Flurry, and Crittercism. That's not to say that we are not compatible with more, but that is what we have tested so far. If you are experiencing any issues you think might be due to incompatibility, feel free to contact your Customer Success Manager.
+Braze's SDK is designed to be very well-behaved, and not interfere with other SDKs present in your mobile app. If you are experiencing any issues you think might be due to incompatibility with another mobile SDK, please reach out to Braze Support.
 
 Additionally, the Braze iOS SDK fully supports RubyMotion apps.

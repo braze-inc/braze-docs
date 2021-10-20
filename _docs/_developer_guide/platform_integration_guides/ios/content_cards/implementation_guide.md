@@ -122,7 +122,7 @@ __Content Card Data Struct__<br>
 {% subtabs global %}
 {% subtab Swift %}
 __Custom Object Initializer__<br>
-MetaData from an `ABKContentCard` is used to populate your object's variables. The key-value pairs set up in the Braze Dashboard are represented in the "extras" dictionary.
+MetaData from an `ABKContentCard` is used to populate your object's variables. The key-value pairs set up in the Braze dashboard are represented in the "extras" dictionary.
 
 ```swift
 extension CustomObject: ContentCardable {
@@ -142,7 +142,7 @@ extension CustomObject: ContentCardable {
 ```
 
 __Identifying Types__<br>
-The `ContentCardClassType` enum represents the `class_type` value in the Braze Dashboard. This value is also used as a filter identifier to display Content Cards in different places. 
+The `ContentCardClassType` enum represents the `class_type` value in the Braze dashboard. This value is also used as a filter identifier to display Content Cards in different places. 
 
 ```swift
 enum ContentCardClassType: Hashable {
@@ -167,7 +167,7 @@ enum ContentCardClassType: Hashable {
 {% endsubtab %}
 {% subtab Objective-C %}
 __Custom Object Initializer__<br>
-MetaData from an `ABKContentCard` is used to populate your object's variables. The key-value pairs set up in the Braze Dashboard are represented in the "extras" dictionary.
+MetaData from an `ABKContentCard` is used to populate your object's variables. The key-value pairs set up in the Braze dashboard are represented in the "extras" dictionary.
 
 
 ```objc
@@ -193,7 +193,7 @@ MetaData from an `ABKContentCard` is used to populate your object's variables. T
 ```
 
 __Identifying Types__<br>
-The `ContentCardClassType` enum represents the `class_type` value in the Braze Dashboard. This value is also used as a filter identifier to display Content Cards in different places. 
+The `ContentCardClassType` enum represents the `class_type` value in the Braze dashboard. This value is also used as a filter identifier to display Content Cards in different places. 
 
 ```objc
 typedef NS_ENUM(NSInteger, ContentCardClassType) {

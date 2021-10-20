@@ -13,7 +13,7 @@ channel:
 
 [In-App Messages]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/) help you get content to your user without interrupting their day with a push notification. Customized and tailored in-app messages enhance the user experience and help your audience get the most value out of your app. With a variety of layouts and customization tools to choose from, in-app messages engage your users more than ever before.
 
-To see examples of in-app messages, check out our [Case Studies][83].
+To see examples of in-app messages, check out our [Case Studies][31].
 
 ## In-App Message Types
 
@@ -80,7 +80,7 @@ These are what it looks like for your users to open one of our out-of-the-box in
 
 The following example shows a paginated HTML Full in-app message:
 
-![HTML5 Example]({% image_buster /assets/img_archive/ios-html-full-iam.gif %})
+![HTML5 IAM Example]({% image_buster /assets/img_archive/ios-html-full-iam.gif %})
 
 > Full in-app message content is displayed in a WKWebView and may optionally contain other rich content, such as images and fonts, allowing for full control over message appearance and functionality. **Please note that we currently do not support display of custom HTML in-app messages in an iFrame on the iOS and Android platforms.**
 

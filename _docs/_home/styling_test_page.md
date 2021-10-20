@@ -210,16 +210,20 @@ Link here: [Braze.com](https://www.braze.com){: height="36px" width="36px"}
 ## Image Test
 {% tabs %}
 {% tab Styling %}
-Image: ![Logo]({{site.baseurl}}/assets/img/braze-logo-mark.png){: height="36px" width="36px"}
+Image: ![Logo]({{site.baseurl}}/assets/img/braze-logo-mark.png){: style="max-width:30%;"}
 
 #### Linked Image Test
 
-Linked Image: [![Braze]({{site.baseurl}}/assets/img/braze-logo-mark.png){: style="max-width:36px;"}](https://www.braze.com)
+Linked Image: [![Braze]({{site.baseurl}}/assets/img/braze-logo-mark.png){: style="max-width:30%;"}](https://www.braze.com)
 
 #### Image Styling
 
-![Text]({% image_buster /assets/img/logo-braze-fa.svg %}){: style="max-width:300px; color: green" }
+![Text]({% image_buster /assets/img/logo-braze-fa.svg %}){: style="max-width:30%; color: green" }
 
+#### Anchoring Images
+
+![Text]({% image_buster /assets/img/logo-braze-fa.svg %}){: style="float:right;max-width:30%; color: green" }
+<br><br><br><br><br>
 {% endtab %}
 {% tab Markdown %}
 
@@ -229,6 +233,8 @@ Linked Image: [![Braze]({{site.baseurl}}/assets/img/braze-logo-mark.png){: style
 [![Braze]({{site.baseurl}}/assets/img/braze-logo-mark.png)](https://www.braze.com)
 
 ![Text]({% image_buster /assets/img/logo-braze-fa.svg %}){: style="max-width:30%; color: green" }
+
+![Text]({% image_buster /assets/img/logo-braze-fa.svg %}){: style="float:right;max-width:30%;" }
 ```
 {% endtab %}
 {% endtabs %}
@@ -245,6 +251,7 @@ Linked Image: [![Braze]({{site.baseurl}}/assets/img/braze-logo-mark.png){: style
 {% endgallery %}
 {% endtab %}
 {% tab Markdown %}
+{% raw %}
 ```
 {% gallery %}
 {{site.baseurl}}/assets/img_archive/EBTH_Email.png?bf892368baf287cba5ab9a6e3b09431d  <br> This is a [link](https://www.braze.com).
@@ -254,6 +261,7 @@ Linked Image: [![Braze]({{site.baseurl}}/assets/img/braze-logo-mark.png){: style
 {{site.baseurl}}/assets/img/SOC2.png?6338040be8e98c4c9abe1f35b3e43e3a  <br> This is a regular comment.
 {% endgallery %}
 ```
+{% endraw %}
 {% endtab %}
 {% endtabs %}
 

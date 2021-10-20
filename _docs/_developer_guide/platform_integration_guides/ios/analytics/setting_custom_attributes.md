@@ -7,13 +7,13 @@ description: "This reference article shows how to set custom attributes in your 
 
 ---
 
-# Setting Custom Attributes
+# Setting Custom Attributes for iOS
 
 Braze provides methods for assigning attributes to users. You'll be able to filter and segment your users according to these attributes on the dashboard.
 
 Before implementation, be sure to review examples of the segmentation options afforded by custom events vs. custom attributes vs. purchase events in our [Best Practices section][1], as well as our notes on [event naming conventions]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/event_naming_conventions/).
 
-## Assigning Standard User Attributes
+## Assigning Default User Attributes
 
 To assign user attributes, you need to set the appropriate field on the shared `ABKUser` object.
 

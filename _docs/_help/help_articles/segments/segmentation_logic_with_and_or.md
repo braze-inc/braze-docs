@@ -1,14 +1,14 @@
 ---
-nav_title: Using Segmentation Logic with And/Or
-page_order: 1
+nav_title: Segmentation Logic with And/Or
+article_title: Segmentation Logic with And/Or
+page_order: 3
 
 page_type: solution
 description: "This article walks you through the difference between AND and OR operators, and how you can use them to build powerful segments."
 tool: Segments
-noindex: true
 ---
 
-# Using Segmentation Logic With And/Or
+# Segmentation Logic With And/Or
 
 The **AND** and **OR** operators enable some very powerful filtering. There are 2 scenarios you may wish to apply:
 * [Using AND or OR](#using-and-or-or)
@@ -45,6 +45,8 @@ Finally, look at the example below where we are using both the **AND** and **OR*
 Another way to ensure you’re building the right logic is to create your segment and [preview the users][35] who are falling into it based on your filters. This way you can make sure that their attributes, app version, or any other segmentation matches what you are seeing.
 
 Still need help? [Open a support ticket]({{site.baseurl}}/support_contact/).
+
+_Last updated on September 23, 2021_
 
 [30]: {% image_buster /assets/img_archive/trouble10.png %}
 [33]: {% image_buster /assets/img_archive/NikeSneakers.png %}

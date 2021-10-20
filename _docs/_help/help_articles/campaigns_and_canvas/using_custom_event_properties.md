@@ -1,16 +1,16 @@
 ---
-nav_title: Using Custom Event Properties
-page_order: 5
+nav_title: Logging Custom Event Properties
+article_title: Logging Custom Event Properties
+page_order: 3
 
 page_type: solution
 description: "This help article walks you through three important checks to ensure your custom events are being logged as you expect."
 tool: 
 - Campaigns
 - Canvas
-noindex: true
 ---
 
-# Are My Custom Event Properties Being Logged?
+# Logging Custom Event Properties
 
 There are three important checks to carry out to ensure your custom events are being logged as you expect:
 
@@ -44,6 +44,8 @@ To confirm that the event properties are successfully tracked, you can view all 
 To check the specific property values that are being passed for each event, check the [Event User Logs][24] on your dashboard. After adding your user as a test user, you should perform the custom event within the app, wait around 10 seconds for the data to flush, and then refresh the event user log to view the custom event and the event property value that was passed with it.
 
 Still need help? [Open a support ticket]({{site.baseurl}}/support_contact/).
+
+_Last updated on June 21, 2021_
 
 [22]: {{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events/#custom-event-properties
 [23]: {{site.baseurl}}/developer_guide/platform_integration_guides/ios/analytics/tracking_custom_events/
