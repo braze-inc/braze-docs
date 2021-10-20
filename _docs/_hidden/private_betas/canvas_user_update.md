@@ -28,25 +28,29 @@ To create a User Update Step, add a step to your Canvas. Use the drop-down menu 
 ![JSON Composer][2] 
 
 {% alert note %}
-Do not include any of the following into the JSON composer:
+Do not include any of the following information in the JSON composer:
 * External user ID
 * API key
 * Braze cluster URL
 * Fields related to push token imports
 {% endalert %}
 
-As an example, users who receive the User Update Step below will have their **VIP Member** attribute set to `true`.
+As an example, users who receive the User Update Step below will have the VIP Member attribute set to `true`.
 
 ![Example in JSON Composer][3]
 
 ### Personalization Features
 
-User Update Step also supports the following personalization features: 
+The User Update Step also supports the following personalization features: 
 
 * [Connected Content]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/connected_content/) 
 * [Content Blocks]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/content_blocks/)
 * Liquid logic (including [Aborting Messages]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/aborting_messages/)
 * Multiple attribute or event updates per object
+
+{% alert note %}
+Entry properties and event properties are not supported for the User Update Step.
+{% endalert %}
 
 
 [1]: {% image_buster /assets/img_archive/canvas_user_update_step.png %} 
