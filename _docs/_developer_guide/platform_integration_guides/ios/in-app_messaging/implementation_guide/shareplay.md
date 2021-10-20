@@ -191,10 +191,5 @@ override func viewDidLoad() {
 [2]: {% image_buster /assets/img/shareplay/shareplay2.png %}
 [3]: {% image_buster /assets/img/shareplay/shareplay3.png %}
 [4]: {% image_buster /assets/img/shareplay/shareplay4.png %}
-<<<<<<< HEAD
 [5]: {% image_buster /assets/img/shareplay/shareplay7.png %}
 [6]: {% image_buster /assets/img/shareplay/shareplay6.png %}
-=======
-[5]: {% image_buster /assets/img/shareplay/shareplay5.png %}
-[6]: {% image_buster /assets/img/shareplay/shareplay6.3.png %}
->>>>>>> 6d33375a6326430fe00d3e2c5617c70b13ef8511
