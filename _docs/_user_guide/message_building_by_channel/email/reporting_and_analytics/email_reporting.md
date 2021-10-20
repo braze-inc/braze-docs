@@ -16,7 +16,6 @@ Braze provides you with a detailed report of each of your email campaigns. Navig
 
 Additionally, you can see how successful different links in a single email campaign are using heat maps. Under **Email Performance**, expand the **Total Clicks** dropdown and click **View Heat Map** to bring up a visual view of your email that shows the overall frequency and location of clicks within the lifespan of the campaign. Note that date ranges are not taken into consideration for email heat maps.
 
-
 ![email_analytics][63]
 
 If you want to see what our metrics mean, check out our [Email Analytics Glossary]({{site.baseurl}}/user_guide/message_building_by_channel/email/analytics_glossary/).

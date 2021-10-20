@@ -17,7 +17,7 @@ To navigate to the **Subscriptions and Usage** page, select your account icon on
 
 ### Usage Graphs
 
-Here, you will find data usage graphs that apply to your app groups. Common graphs that will appear for customers are Email Sends usage and Data Point usage. Though common, you may find your own dashboard shows different usage metrics based on the products you have purchased. 
+Here, you will find usage graphs that apply to your app groups. You may find your own dashboard shows different usage metrics based on the products you have purchased. 
 
 ![Usage Graphs][3]{: style="max-width:90%;"}
 
@@ -65,7 +65,7 @@ This table gives you the ability to quickly see your total data point usage vs y
 ### App Group Billing Data
 
 {% alert note %}
-The app group billing data is available beginning October 1, 2021, so the app group charts will only display for dates after October 1, 2021. 
+The app group billing data and app group charts only display for dates after October 1, 2021. 
 {% endalert %}
 
 #### Drill to App Groups

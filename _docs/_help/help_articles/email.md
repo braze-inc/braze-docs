@@ -10,7 +10,7 @@ channel: email
 noindex: true
 guide_menu_title: ""
 guide_menu_list:
-  - name: Email HTML Looks Strange 
+  - name: Troubleshooting HTML Rendering in Test Emails 
     link: /docs/help/help_articles/email/html_looks_strange/
     fa_icon: fas fa-code
 ---
