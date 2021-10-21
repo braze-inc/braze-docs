@@ -18,7 +18,7 @@ Nested Object Support allows you to send nested JSON data as properties of custo
 
 ## Limitations
 
-- nested data can only be sent with [custom events]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events/) and [purchase events]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/purchase_events/). this is not yet supported with user attributes.
+- Nested data can only be sent with [custom events]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events/) and [purchase events]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/purchase_events/). this is not yet supported with user attributes.
 - Event property objects that contain array or object values can have an event property payload of up to 50KB.
 - The following SDK versions support Nested Objects:
 

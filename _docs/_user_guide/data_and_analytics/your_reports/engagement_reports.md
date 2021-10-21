@@ -50,11 +50,11 @@ The Add Messages tab allows you to select your messages in two ways:
 
 ![engagement_reports_message_selection][2]
 
-### Manually select campaigns or canvases
+### Manually select campaigns or Canvases
 
 This option gives you the freedom to choose whichever campaigns or Canvases you would like in this report.
 
-### Automatically select campaigns or canvases
+### Automatically select campaigns or Canvases
 
 This option gives you the ability to automatically include all messages based on a specific tag. You can target messages that have any one or all of the tags listed.  This option is useful if you are setting up recurring reports and utilize our tagging system.
 
@@ -75,9 +75,9 @@ The Stats tab will automatically show you stats for the types of campaigns or Ca
 | SMS | Sends, Sends to Carrier, Confirmed Deliveries, Delivery Failures, Rejections |
 {: .reset-td-br-1 .reset-td-br-2}
 
-## Set up report data coverage & distribution
+## Set up report data coverage and distribution
 
-The Set Up Report tab allows you to enter your report name, select the compression and delimiter of the report and include whom you would like to send this report to.  
+The **Set Up Report** tab allows you to enter your report name, select the compression and delimiter of the report and include whom you would like to send this report to.  
 
 ![engagement_reports_data_coverage][4]
 
@@ -105,7 +105,7 @@ This option gives you the flexibility to choose how frequently you would like to
 
 ## Open report  
 
-You will receive an email with links to your reports. When you click on the provided links you will automatically download a `.zip` file containing your `.csv` files - one for all Campaigns.
+You will receive an email with links to your reports. When you click on the provided links you will automatically download a ZIP file containing your CSV files - one for all Campaigns.
 
 The report, when opened, will contain all the statistics selected in the [Add Stats](#add-statistics-to-your-reports) section of the setup process.
 

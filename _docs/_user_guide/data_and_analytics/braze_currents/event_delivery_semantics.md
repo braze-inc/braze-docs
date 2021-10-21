@@ -21,7 +21,7 @@ Please note that this content **only applies to the flat file event data we send
 {% endalert %}
 
 
-## At-Least-Once Delivery
+## At-least-once delivery
 
 As a high-throughput system, Currents guarantees "at-least-once" delivery of events, meaning that duplicate events can occasionally be written to your storage bucket. This can happen when events are reprocessed from our queue for any reason.
 
@@ -29,11 +29,11 @@ If your use cases require exactly-once delivery, you can use the unique identifi
 
 ## Timestamps
 
-all timestamps exported by currents are sent in the utc time zone. for some events where it is available, a time zone field is also included, which delivers the iana format of the user's local time zone at the time of the event.
+All timestamps exported by currents are sent in the utc time zone. For some events where it is available, a time zone field is also included, which delivers the iana format of the user's local time zone at the time of the event.
 
 ## Avro
 
-the braze currents data storage integrations output data in the `.avro` format. we chose [avro](https://avro.apache.org/) because it is a flexible data format that natively supports schema evolution and is supported by a wide variety of data products:
+The Braze Currents data storage integrations output data in the `.avro` format. we chose [avro](https://avro.apache.org/) because it is a flexible data format that natively supports schema evolution and is supported by a wide variety of data products:
 
 -   Avro is supported by nearly every major data warehouse.
 -   In the event that you desire to leave your data in S3, Avro compresses better than CSV and JSON, so you pay less for storage and potentially can use less CPU to parse the data.
@@ -84,7 +84,7 @@ Currents will never write empty files.
 
 From time to time, Braze may make changes to the Avro schema when fields are added, changed, or removed. For our purposes here, there are two types of changes: breaking and non-breaking. In all cases, the `<schema-id>` will be advanced to indicate the schema was updated.
 
-#### Non-breaking Changes
+#### Non-breaking changes
 
 When a field is added to the Avro schema, we consider this a non-breaking change. Added fields will always be "optional" Avro fields (i.e. with a default value of `null`), so they will "match" older schemas according to the [Avro schema resolution spec](http://avro.apache.org/docs/current/spec.html#schema+resolution). These additions should not affect existing ETL processes as the field will simply be ignored until it is added to your ETL process. 
 

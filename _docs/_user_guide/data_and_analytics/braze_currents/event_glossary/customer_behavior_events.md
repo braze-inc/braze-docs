@@ -244,7 +244,7 @@ This event is triggered when a user visits a specified location. Use this to tra
 
 {% api %}
 
-## News feed impression event
+## News Feed impression event
 
 {% apitags %}
 Impression, News Feed

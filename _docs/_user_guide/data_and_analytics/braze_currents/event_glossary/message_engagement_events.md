@@ -119,7 +119,7 @@ This event occurs when a user directly clicks on the Push notification to open t
 {% endapi %}
 {% api %}
 
-## Push notifications in the ios foreground events
+## Push notifications in the iOS foreground events
 
 {% apitags %}
 Push, iOS, Sends
@@ -560,7 +560,7 @@ Subscription groups are only available for email and SMS channels at this time.
 
 {% api %}
 
-## In-App Message Impression Events
+## In-app message impression events
 
 {% apitags %}
 In-App Messages, Impressions
@@ -604,7 +604,7 @@ This event occurs when a user views an in-app message.
 
 {% api %}
 
-## In-App Message Click Events
+## In-app message click events
 
 {% apitags %}
 In-App Messages, Clicks
@@ -681,7 +681,7 @@ This event occurs when a webhook was processed and sent to the third party speci
 {% endapi %}
 
 {% api %}
-## Content card send events
+## Content Card send events
 
 {% apitags %}
 Content Cards, Sends
@@ -715,7 +715,7 @@ This event occurs when a content card gets sent to a user.
 {% endapi %}
 
 {% api %}
-## Content card impression events
+## Content Card impression events
 
 {% apitags %}
 Content Cards, Impressions
@@ -758,7 +758,7 @@ This event occurs when a user views a content card.
 {% endapi %}
 
 {% api %}
-## Content card click events
+## Content Card click events
 
 {% apitags %}
 Content Cards, Clicks
@@ -802,7 +802,7 @@ This event occurs when a user clicks a content card.
 
 
 {% api %}
-## Content card dismissal events
+## Content Card dismissal events
 
 {% apitags %}
 Content Cards, Dismissal
@@ -846,7 +846,7 @@ This event occurs when a user dismisses a content card.
 
 {% api %}
 
-## News feed impression event
+## News Feed impression event
 
 {% apitags %}
 News Feed, Impressions
@@ -879,7 +879,7 @@ This event occurs when a user views the News Feed.
 
 {% api %}
 
-## News feed click events
+## News Feed click events
 
 {% apitags %}
 News Feed, Clicks

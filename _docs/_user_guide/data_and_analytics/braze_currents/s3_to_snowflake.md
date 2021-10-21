@@ -8,7 +8,7 @@ tool: Currents
 
 ---
 
-# Transfer data from amazon s3 to snowflake
+# Transfer data from Amazon S3 to Snowflake
 
 > If your data is currently sitting in Amazon S3, you can transfer it to Snowflake or another relational data warehouse using the ELT (Extract Load Transform) process.
 
@@ -25,11 +25,11 @@ Once you have a Currents to S3 export set up and are receiving live events data,
 -   [AWS SQS Queues](#aws-sqs-queues)
 -   [Auto-Ingest Snowpipes](#auto-ingest-snowpipes)
 
-### AWS(c) SQS Queues
+### AWS SQS Queues
 
 **Auto-ingest Snowpipes** rely on SQS queues for sending notification from S3 to Snowpipe. This process is managed by Snowflake after configuring SQS.
 
-#### Configure the external s3 stage
+#### Configure the external S3 stage
 
 {% alert note %}
 Tables in your database are created from this stage.

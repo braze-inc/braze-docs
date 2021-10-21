@@ -278,7 +278,7 @@ More questions you can answer with report:
 {% endtab %}
 {% endtabs %}
 
-## What campaigns should i run next?
+## What campaigns should I run next?
 
 {% tabs local %}
 {% tab Funnel Report %}

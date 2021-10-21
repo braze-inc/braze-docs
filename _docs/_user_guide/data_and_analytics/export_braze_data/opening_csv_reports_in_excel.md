@@ -7,17 +7,17 @@ description: "This reference article covers how to open CSV exports in Excel."
 
 ---
 
-# Opening csv exports in excel
+# Opening CSV exports in Excel
 
-## Setting excel as the default program
+## Setting Excel as the default program
 
 While CSV files are usually automatically opened in Excel by default, that is sometimes not the case on Windows 7. [Here are instructions and screenshots][20] on how to set Excel as your default program for CSVs on Windows 7.
 
-## Converting csv to xlsx or xls
+## Converting CSV to XLSX or XLS
 
 To convert a CSV to XLSX or XLS, or get rid of the comma in between data values, [refer to this guide][19] for importing CSVs into Excel.
 
-## Leading zeroes stripped from user ids
+## Leading zeroes stripped from user IDs
 
 You may sometimes find that leading zeroes are stripped from User IDs in your CSV export. This happens because Excel treats the numbers in a CSV as data, as opposed to text. [Here are steps on how to remedy this][22] by running Excel's Text Import Wizard.
 

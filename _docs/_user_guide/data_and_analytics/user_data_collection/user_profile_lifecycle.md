@@ -78,7 +78,7 @@ If you attempt to set a pre-existing `external_id` on an anonymous user profile 
 
 Uninstalling and reinstalling an app will cause a new anonymous user ID to be generated for that user.
 
-## How to troubleshoot with braze's ids
+## How to troubleshoot with Braze's IDs
 
 Aside from acting as a mechanism to organize user data and reference user profiles, all `braze_id`'s can be used to find and identify users within your dashboard for testing. To find your user in the Braze dashboard please see our [Adding Test Users][28] section.
 

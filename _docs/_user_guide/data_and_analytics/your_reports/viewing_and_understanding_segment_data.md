@@ -3,7 +3,7 @@ nav_title: Segment Data
 article_title: Viewing and Understanding Segment Data
 page_order: 2
 page_type: reference
-description: "This reference article explains the Segments section of your Braze dashboard, and includes a summary the statistics provided."
+description: "This reference article explains the segments section of your Braze dashboard, and includes a summary the statistics provided."
 tool: 
   - Segments
   - Reports
@@ -11,7 +11,7 @@ tool:
 ---
 # Viewing and understanding segment data
 
-> This reference article explains the Segments section of your Braze dashboard, and includes a summary the statistics provided.
+> This reference article explains the segments section of your Braze dashboard, and includes a summary the statistics provided.
 
 ## Accessing segment data
 

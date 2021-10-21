@@ -10,7 +10,7 @@ tool:
 
 ---
 
-# Report builder
+# Report Builder
 
 > The Report Builder allows you to compare the results of multiple campaigns or Canvases in a single view so that you can easily determine which engagement strategies most impacted your key metrics. For both campaigns and Canvases, you’re able to export your data and save your report to view in the future.
 
@@ -29,7 +29,7 @@ Use this report to answer key engagement questions, for example:
 
 ## Run a report
 
-### Step 1: create a new report
+### Step 1: Create a new report
 
 Within the Dashboard, navigate to the **Report Builder** page in the lefthand navigation. Click **Create New Report** and select either a campaign comparison report or a Canvas comparison report. 
 
@@ -52,7 +52,7 @@ Below are the differences between these two options:
 
 Canvas reports work similarly to a manual campaign report in that Canvas selections and report updates must also be done manually. You can include at most five Canvases in one report.
 
-### Step 2: choose your metrics
+### Step 2: Choose your metrics
 
 Once you've created your report, you’ll find a blank table containing campaigns in each row. The table will populate once you select __Edit Columns__ and choose the metrics you’d like to add. From here, click __Run Report__ to generate your metrics.
 
@@ -62,13 +62,13 @@ Your table will populate with the metrics you choose. For definitions of these m
 
 You can also toggle calculations for the __Average__ of any rate or numerical metric and __Total__ for any numerical metric.
 
-### Step 3: choose a time period
+### Step 3: Choose a time period
 
 You can select a specific time period to view your report's data for. If a particular campaign, Canvas, Canvas variant, or Canvas step does not have any data for your selected time period, the results for that row will be blank. 
 
 ![Campaign numerical metric][4]{: style="max-width:60%;"}
 
-### Step 4: name and save your report
+### Step 4: Name and save your report
 
 Name your report before saving it. If a report is saved without being named, Braze will apply a default name of "Campaign Comparison Report".
 
@@ -92,19 +92,19 @@ Within a Canvas report, you can view your Canvases broken down by variant, steps
 
 ### Variant
 
-selecting **breakdown by variant** will allow you to see the high-level stats for your overall canvases, as well as stats for each variant, which can be expanded by clicking the arrow next to the canvas name.
+Selecting **breakdown by variant** will allow you to see the high-level stats for your overall canvases, as well as stats for each variant, which can be expanded by clicking the arrow next to the canvas name.
 
 ![Variants][12]{: style="max-width:90%;"}
 
 ### Steps 
 
-selecting **breakdown by steps** will allow you to view step-level metrics, with each row of the report containing the row of a step.
+Selecting **breakdown by steps** will allow you to view step-level metrics, with each row of the report containing the row of a step.
 
 ![Steps][13]{: style="max-width:90%;"}
 
 ### Message
 
-similar to a step-level breakdown, selecting **breakdown by message** shows the name of steps in each row. however, within **edit columns**, you’ll have access to message-level metrics, such as channel-specific stats like email clicks and push opens.
+Similar to a step-level breakdown, selecting **breakdown by message** shows the name of steps in each row. however, within **edit columns**, you’ll have access to message-level metrics, such as channel-specific stats like email clicks and push opens.
 
 ![Report][14]{: style="max-width:90%;"}
 

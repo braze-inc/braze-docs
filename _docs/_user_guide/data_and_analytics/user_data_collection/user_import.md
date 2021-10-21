@@ -14,13 +14,15 @@ There are two approaches for importing customer data into your Braze dashboard: 
 Braze does not sanitize HTML data during ingestion time. This means that script tags must be stripped for all import data meant for web personalization. [Read more](#html-data-stripping).
 {% endalert %}
 
-## REST api
+## REST API
+
 You can use Braze’s User Track REST API endpoint to record custom events, user attributes, and purchases for users. See [User Track Endpoint][12] for more information.
 
 ## CSV
+
 you can also upload and update user profiles via csv files from the **user import** page. this feature supports recording and updating user attributes such as first name and email, in addition to custom attributes such as shoe size. there are two different ways you can approach a csv import, depending on if your users have an `external_id` or not.
 
-### Import with external id
+### Import with external ID
 
 When importing your customer data, you'll need to specify each customer’s unique identifier, also known as `external_id`. Before starting your CSV import it’s important to understand from your engineering team how users will be identified in Braze. Typically this would be a database ID used internally. This should align with how users will be identified by the Braze SDK on mobile and web, and ensures that each customer will have a single user profile within Braze across their devices. Read more about [Braze’s user profile lifecycle][13].
 
@@ -47,7 +49,7 @@ You can't use a CSV import to update an existing user with a `user_alias_name` i
 
 <i class="fas fa-file-download"></i> Download: [CSV Alias Import Template][template_alias]
 
-### Constructing your csv
+### Constructing your CSV
 
 Braze has several data types in Braze. When importing or updating user profiles via CSV, you can create or update default user attributes or custom attributes.
 
@@ -105,7 +107,7 @@ While `external_id` itself is not mandatory, you __must__ include one of these f
 {% endalert %}
 
 
-### Importing custom data via csv
+### Importing custom data via CSV
 
 Any headers which do not exactly match default user data will create a custom attribute within Braze.
 
@@ -123,7 +125,7 @@ Especially for arrays, commas in your CSV file will be interpreted as a column s
 For uploading these kinds of values, please use the [User Track Endpoint]({{site.baseurl}}/developer_guide/rest_api/user_data/#user-track-endpoint).
 {% endalert %}
 
-### Importing a csv
+### Importing a CSV
 
 To import your CSV file, navigate to the **User Import** page under the Users section on the left-hand toolbar. In the lower text box, **Recent Imports**, there will be a table that lists up to twenty of your most recent imports, their file names, number of lines in the file, number of lines successfully imported, total lines in each file, and the status of each import.
 
@@ -192,7 +194,7 @@ Have you read Ulysses?
 
 ## Troubleshooting
 
-### malformed row
+### Malformed row
 
 There must be a header row in order to properly import data. Each row must have the same number of cells as the header row. Rows whose length has more or fewer values than the header row will be excluded from the import. Commas in a value will be interpreted as a separator and can lead to this error being thrown. Additionally, all data must be UTF-8 encoded.
 

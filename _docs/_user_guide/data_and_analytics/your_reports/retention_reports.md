@@ -19,7 +19,7 @@ Retention Reports are not available for API-triggered campaigns.
 
 ## Run a retention report
 
-### Step 1: select a date range
+### Step 1: Select a date range
 
 ![Report Date][8]{: style="float:right;max-width:30%;margin-left:15px;"}
 
@@ -29,7 +29,7 @@ This report will include all users who initially entered the campaign or Canvas 
 
 To select a date range, you must navigate to the upper right-hand corner of the campaign or Canvas **Analytics** page. Here you may select various ranges or set a custom range for your report.
 
-### Step 2: select a retention event
+### Step 2: Select a retention event
 
 {% tabs %}
 {% tab Campaign %}
@@ -46,7 +46,7 @@ Next, click **Analyze Variants** at the bottom of the page. From here, you can a
 
 ![Select a Retention event][1]{: style="max-width:80%"}
 
-### Step 3: generate the report
+### Step 3: Generate the report
 
 Once you've selected a retention event, click **Run Report** to start the query.
 

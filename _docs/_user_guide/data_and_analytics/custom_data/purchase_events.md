@@ -80,7 +80,7 @@ For example, if an eCommerce application wanted to send a message to a user afte
 
 Refer to [Purchase Properties Object]({{site.baseurl}}/api/objects_filters/purchase_object/#purchase-properties-object) for more.
 
-### Referencing purchase event properties with liquid
+### Referencing purchase event properties with Liquid
 
 When you send through purchase data that includes purchase properties, you can use the `event_properties` tag to reference the purchase properties in your channel messaging.
 
