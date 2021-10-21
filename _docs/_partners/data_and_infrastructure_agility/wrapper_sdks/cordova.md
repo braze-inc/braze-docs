@@ -9,7 +9,7 @@ platform: cordova
 
 ---
 
-# About Cordova
+# About cordova
 
 > Cordova enables developers to create, test, debug, and scale app development.
 
@@ -17,7 +17,7 @@ Empower developers to work smarter, not harder, as they lean on Cordova's app de
 
 # Integration
 
-Please see Braze's Platform Integration Guides to integrate Cordova.
+please see braze's platform integration guides to integrate cordova.
 
 For [iOS]({{site.baseurl}}/developer_guide/platform_integration_guides/cordova/initial_sdk_setup/ios/).
 

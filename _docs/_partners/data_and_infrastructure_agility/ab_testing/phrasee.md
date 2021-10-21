@@ -11,24 +11,24 @@ search_tag: Partner
 
 # Phrasee
 
-> Enhance customer experiences by optimizing language used across the full customer journey. The [Phrasee][1] platform brings together artificial intelligence, computational linguistics, and a spirit of customer-centricity as the only provider of its kind to generate, optimize, automate, and analyze language in real-time. Let us handle the content minutiae while your team focuses on the big picture.
+> enhance customer experiences by optimizing language used across the full customer journey. the [phrasee][1] platform brings together artificial intelligence, computational linguistics, and a spirit of customer-centricity as the only provider of its kind to generate, optimize, automate, and analyze language in real-time. let us handle the content minutiae while your team focuses on the big picture.
 
 Braze customer engagement develops relationships through multichannel marketing. Working together with Phrasee, Braze can deploy brand language, at scale, across channels that are customized to your brand voice. Phrasee’s deep learning engine handles the testing, monitors the results, and generates new language based on what it’s learned.
 
 ## Requirements
 
-| Requirement | Origin | Description |
+| requirement | origin | description |
 |---|---|---|
 | Braze API Key | Braze | You will need to create a new API Key.<br>This can be created in the Developer Console -> API Settings -> **Create New API Key with Campaigns permissions**. | 
 | Braze REST Endpoint | Braze | Your REST Endpoint URL. Your endpoint will depend on the Braze URL for [your instance][2]. |
 | Phrasee Account | Phrasee | Contact [Phrasee][3] to sign up. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
 
-## Server to Server Integration
+## Server to server integration
 
 Phrasee requires server-to-server application details to check for results in Braze while you are not logged in.
 
-### Create a new Braze Phrasee API Key
+### Create a new braze phrasee api key
 
 Navigate to the developer console within Braze and click __Create a New API Key__.
 
@@ -40,22 +40,22 @@ This API Key will only require access to **Campaigns**.
 
 Save and share this API Key along with your Braze REST Endpoint with Phrasee so we can complete the integration and link your campaigns.
 
-## Using This Integration
+## Using this integration
 
 With this integration, you can integrate email or push campaigns into Phrasee. The steps are detailed below for both.
 
 {% tabs %}
 {% tab Email Campaign %}
 
-### Email Campaign
+### Email campaign
 
-#### Step 1: Set up your campaign in Phrasee to generate the variants of your split test
+#### Step 1: set up your campaign in phrasee to generate the variants of your split test
 
 Setup your Phrasee email campaign as you normally would. Once you have approved your variants, you will then be taken to the summary page. Here, you will need to copy the variants that will be added to your Braze campaign. If preferred, you can also click the **Download variants** button to download a .txt file containing all of your variants.
 
 ![phrasee_campaign]({% image_buster /assets/img/phrasee/3_phrasee_braze1.png %})
 
-#### Step 2: Create your Braze Email Campaign
+#### Step 2: create your braze email campaign
 
 Navigate to the Braze dashboard to create your email campaign. When creating your campaign, add the tag __Email Campaign__. If this tag does not yet exist, create it.
 
@@ -67,13 +67,13 @@ Please note that you will not need to recreate each email from scratch, you can 
 
 ![copy_variant]({% image_buster /assets/img/phrasee/5_copy_variant_braze.png %})
 
-#### Step 3: Schedule your Braze Campaign
+#### Step 3: schedule your braze campaign
 
 Schedule your campaign to start at a specific time. __You’ll need to know this time to plug into Phrasee.__
 
 ![schedule_braze]({% image_buster /assets/img/phrasee/6_braze_schedule.png %})
 
-#### Step 4: Finalize the Braze Campaign Setup
+#### Step 4: finalize the braze campaign setup
 
 Complete the remaining steps in Braze to set up your campaign. Check the box to Send Winning Variant. Then select how long to wait before sending the Winning Variant.
 
@@ -81,7 +81,7 @@ Complete the remaining steps in Braze to set up your campaign. Check the box to 
 
 Finalize any other settings as needed and save your campaign.
 
-#### Step 5: Phrasee Integration Inputs
+#### Step 5: phrasee integration inputs
 
 Navigate back to your Phrasee campaign and click the __Braze integration__ button.
 
@@ -103,21 +103,21 @@ Launch your campaign in Braze and Phrasee has it from here! When your campaign t
 {% endtab %}
 {% tab Push Campaign %}
 
-### Push Campaign
+### Push campaign
 
-#### Step 1: Set up your Push Campaign in Phrasee to generate the variants of your split test
+#### Step 1: set up your push campaign in phrasee to generate the variants of your split test
 
 Setup your Phrasee push campaign as you normally would. Once you have approved your variants, you will then be taken to the summary page. Here, you will need to copy the variants that will be added to your Braze campaign. If preferred, you can also click the **Download variants** button to download a .txt file containing all of your variants.
 
 ![phrasee_campaign]({% image_buster /assets/img/phrasee/3_phrasee_braze1.png %})
 
-#### Step 2: Setup your Braze Push Campaign
+#### Step 2: setup your braze push campaign
 
 Phrasee’s integration will allow you to select both an iOS and an Android Braze push campaign to integrate into one Phrasee campaign if needed. To enable this functionality, when creating your push campaign in Braze, ensure you tag it __Push Campaign__ (as seen below). __This is required for step 4.__
 
 ![push_tag]({% image_buster /assets/img/phrasee/9_braze_push_tag.png %})
 
-#### Step 3: Copy the Phrasee Variants into Braze
+#### Step 3: copy the phrasee variants into braze
 
 {% alert important %} 
 For Phrasee to automatically pull the results of the variants within your push campaign, the variant text must be contained within the message body, not the Title.
@@ -131,19 +131,19 @@ You can also enter the whole Phrasee variant into the **Message body** for the r
 
 ![push_oneline]({% image_buster /assets/img/phrasee/11_push_messagebody.png %})
 
-#### Step 4: Schedule your Braze Campaign
+#### Step 4: schedule your braze campaign
 
 Schedule your campaign to start at a specific time. __You’ll need to know this time to plug into Phrasee.__
 
 ![schedule_braze]({% image_buster /assets/img/phrasee/6_braze_schedule.png %})
 
-#### Step 5: Finalize the Braze Campaign Setup
+#### Step 5: finalize the braze campaign setup
 
 Complete the remaining steps in Braze to set up your campaign. Check the box to __Send Winning Variant__. Then select how long to wait before sending the Winning Variant.
 
 ![send_winner]({% image_buster /assets/img/phrasee/7_braze_send_winner.png %})
 
-#### Step 6: Phrasee Integration Inputs
+#### Step 6: phrasee integration inputs
 
 Navigate back to your Phrasee campaign and click the __Braze integration__ button.
 

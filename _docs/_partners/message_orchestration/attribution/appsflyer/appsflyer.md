@@ -10,7 +10,7 @@ search_tag: Partner
 
 # AppsFlyer
 
-{% include video.html id="gQ9y2DA2LuQ" align="right" %}
+{% include video.html id="gq9y2da2luq" align="right" %}
 
 > AppsFlyer is a mobile marketing analytics and attribution platform that helps you analyze and optimize your apps through marketing analytics, mobile attribution, and deep linking.
 
@@ -18,7 +18,7 @@ Build more holistic marketing campaigns by leveraging mobile install attribution
 
 ## Integration
 
-### Step 1: Integration Requirements
+### step 1: integration requirements
 
 {% alert important %}
 AppsFlyer requires that the Activate Partner toggle be switched to "on" for every integrated partner, including Braze. Check that your toggle is flipped on from your AppsFlyer dashboard.
@@ -58,11 +58,11 @@ AppsFlyer.setAdditionalData(customData);
 {% endtab %}
 {% endtabs %}
 
-### Step 2: Getting the Braze Data Import Key
+### Step 2: getting the braze data import key
 
 In your Braze account, navigate to __Attribution__ under __Technology Partners__ and select __AppsFlyer__. Here, you will find the REST Endpoint and generate your Braze Data Import Key. Once generated, you will be able to create a new key, or invalidate an existing one. The Data Import Key and the REST Endpoint are used in the next step when setting up a postback in AppsFlyer's dashboard.<br><br>![AppsFlyer Image][4]{: style="max-width:70%;"}
 
-### Step 3: Configure Braze in AppsFlyer's Dashboard
+### Step 3: configure braze in appsflyer's dashboard
 
 In AppsFlyer's dashboard, navigate to the __Integrated Partners__ page on the left bar. From here, search for __Braze__ and click on Braze's logo to open up a configuration window.
 ![AppsFlyer][1]{: style="float:right;max-width:30%;margin-left:15px;margin-bottom:15px;margin-top:15px"}
@@ -81,11 +81,11 @@ Once you have saved the configuration, AppsFlyer sends the following data to Bra
 | `af_ad` | Attributed Ad |
 {: .reset-td-br-1 .reset-td-br-2}
 
-### Step 4: Confirming the Integration
+### Step 4: confirming the integration
 
 Once Braze receives attribution data from AppsFlyer, the status connection indicator on __Technology Partners__, then __Attribution__ will change to green and a timestamp of the last successful request will be included. Note that this will not happen until we receive data about an __attributed__ install. Organic installs, which should be excluded by the AppsFlyer integration, are ignored by our API and are not counted when determining if a successful connection was established.
 
-### Step 5: Viewing User Attribution Data
+### Step 5: viewing user attribution data
 
 Your user-base can be segmented by attribution data in the Braze dashboard using the Install Attribution filters.
 
@@ -99,13 +99,13 @@ Attribution data for Facebook, Snapchat, and Twitter campaigns is not available 
 
 For more information, please see AppsFlyer's [documentation][31].
 
-## Email Deep Linking and Click Tracking
+## Email deep linking and click tracking
 
 Deep links, links that direct users toward a specific page or place within an app or website, are crucial in creating a tailored user experience. While widely used, often issues come up when using them in tandem with click tracking, another vital feature used in collecting user data. These issues are due to ESPs (Email Service Providers) wrapping deep links in their own click recording domain, breaking the original link. 
 
 There are, however, ESPs like Sendgrid that support both universal linking and click tracking. Braze recommends integrating OneLink-based attribution links into your SendGrid email system in order to seamlessly deep link from emails. To get started, check out AppsFlyer's [documentation][3].
 
-### Click Tracking URLs in Braze (Optional)
+### Click tracking urls in braze (optional)
 
 You can use AppsFlyer's [OneLink attribution links](https://support.AppsFlyer.com/hc/en-us/articles/360001294118) in Braze campaigns across push, email, and more. This allows you to be able to send back install or re-engagement attribution data from their Braze campaigns into AppsFlyer. As a result, you will be able to holistically see the impact of your paid and owned channels in a single platform.
 

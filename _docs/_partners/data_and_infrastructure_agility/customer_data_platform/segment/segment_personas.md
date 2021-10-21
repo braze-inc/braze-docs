@@ -10,7 +10,7 @@ search_tag: Partner
 
 ---
 
-# Segment Personas
+# Segment personas
 
 {% include video.html id="RfOHfZ34hYM" align="right" %}
 
@@ -18,7 +18,7 @@ search_tag: Partner
 
 If you're looking for information on the Currents integration with Segment, refer to [Segment for Currents]({{site.baseurl}}/partners/data_and_infrastructure_agility/customer_data_platform/segment_for_currents/). If you're looking for our regular integration (side-by-side or server-to-server) with Segment, refer to [Segment]({{site.baseurl}}/partners/data_and_infrastructure_agility/customer_data_platform/segment/).
 
-## About Segment Personas
+## About segment personas
 
 [Personas](https://segment.com/docs/personas/) is Segment's built-in audience builder. You can go to your Segment Dashboard and create segments of users based on data you have already collected across various sources.
 
@@ -26,13 +26,13 @@ From there, these segments will be assigned a [custom attribute]({{site.baseurl}
 
 ## Requirements
 
-Before you can access and use Segment Personas, you must have already [set up Braze as a destination]({{site.baseurl}}/partners/data_and_infrastructure_agility/customer_data_platform/segment/) your Segment integration, including inputting the correct "Appboy Data Center" and "Braze REST API Key" into your destination [Connection Settings]({{site.baseurl}}/partners/data_and_infrastructure_agility/customer_data_platform/segment/#connection-settings).
+before you can access and use segment personas, you must have already [set up braze as a destination]({{site.baseurl}}/partners/data_and_infrastructure_agility/customer_data_platform/segment/) your segment integration, including inputting the correct "appboy data center" and "braze rest api key" into your destination [connection settings]({{site.baseurl}}/partners/data_and_infrastructure_agility/customer_data_platform/segment/#connection-settings).
 
-## Sync Time
+## Sync time
 
 Though the default setting for the Braze to Segment Personas connection is `Realtime`, there are some filters that will disqualify the persona from syncing in real-time, including some time-based filters which restrict your audience's size at the time of message send.
 
-## Segment Debugger Testing
+## Segment debugger testing
 
 Segment's dashboard provides a "Debugger" feature that allows customers to test whether data from a "Source" is transferring to a "Destination" as expected.
 

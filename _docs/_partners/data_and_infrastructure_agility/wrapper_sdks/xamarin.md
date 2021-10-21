@@ -8,7 +8,7 @@ platform: xamarin
 
 ---
 
-# About Xamarin
+# About xamarin
 
 > Xamarin is an app development platform that empowers developers to build, test, and monitor consumer and enterprise applications.
 
@@ -16,4 +16,4 @@ Xamarin and Braze enable customers to build native applications for multiple pla
 
 # Integration
 
-Please see Braze's Platform Integration Guides to [integrate Xamarin]({{site.baseurl}}/developer_guide/platform_integration_guides/xamarin/sdk_integration/).
+please see braze's platform integration guides to [integrate xamarin]({{site.baseurl}}/developer_guide/platform_integration_guides/xamarin/sdk_integration/).

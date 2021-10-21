@@ -7,7 +7,7 @@ description: "This article describes the partnership between Braze and Branch an
 search_tag: Partner
 
 ---
-# Branch for Deep Linking {#branch}
+# Branch for deep linking {#branch}
 
 {% include video.html id="PwGKqfwV-Ss" align="right" %}
 
@@ -18,22 +18,22 @@ Branch, with Braze, allows you to provide better experiences to your customers b
 Branch and Braze help you understand exactly when and where users were acquired as well as how to personalize their journeys through robust [attribution]({{site.baseurl}}/partners/advertising_technologies/attribution/branch_for_attribution/) and deep linking.
 
 
-## Install Attribution {#branch-install-attribution}
+## Install attribution {#branch-install-attribution}
 
 Branch offers an install attribution feature to measure user acquisition. See our [Attribution documentation][2] for integration instructions.
 
-## Deep Linking
+## Deep linking
 
 Follow Branch's SDK Integration Guide to get up and running with your Branch and Braze integration. For additional use cases, see below.
 
-## Supporting iOS Universal Links
+## Supporting ios universal links
 
 To support sending iOS Universal Links as deep links from within Braze:
 
 1. Follow [Branch's documentation for setting up Universal Links][3].
 2. Add `ABKURLDelegate` to your Braze SDK integration to route Universal Links from within your app. See our [Linking Customization documentation][4] for implementation details.
 
-## Deep Linking in Email
+## Deep linking in email
 
 To set up deep linking from emails sent through Braze, see [Branch's documentation](https://docs.branch.io/pages/integrations/braze/).
 

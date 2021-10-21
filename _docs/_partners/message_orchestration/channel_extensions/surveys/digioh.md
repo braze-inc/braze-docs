@@ -11,22 +11,22 @@ search_tag: Partner
 
 # Digioh
 
-> [Digioh](https://www.digioh.com/) helps you grow your lists, capture first-party data, and put your data to use in your Braze campaigns. The drag-and-drop builder makes it easy to create on-brand forms, pop-ups, preference centers, landing pages, and surveys that connect you with your customers. Integration setup is included in every package, and Digioh will also help build, design, and launch your first campaign for you.
+> [digioh](https://www.digioh.com/) helps you grow your lists, capture first-party data, and put your data to use in your braze campaigns. the drag-and-drop builder makes it easy to create on-brand forms, pop-ups, preference centers, landing pages, and surveys that connect you with your customers. integration setup is included in every package, and digioh will also help build, design, and launch your first campaign for you.
 
 !["Create flexible email and communications preference centers with Digioh"][5]{: style="border:0"}
 
 ## Requirements
 
-| Requirement | Origin | Access | Description |
+| requirement | origin | access | description |
 |---|---|---|---|
 | Braze API Key | Braze | You will need to create a new API Key.<br><br>This can be created in the __Developer Console -> API Settings -> Create New API Key__ with __users.track__ permissions. | You will need to copy this key to your Digioh account - see the instructions below. |
 | Braze REST Endpoint | Braze | You will need the server endpoint your account uses to access Braze's API. [See Braze's API documentation for details][6].  | You will need to copy this URL to your Digioh account - see the instructions below. |
 | Digioh Account | Digioh | [https://www.digioh.com/](https://www.digioh.com/)  | You will need to have a Digioh account. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
 
-## Integration Details
+## Integration details
 
-### Step 1: Create Digioh Integration 
+### Step 1: create digioh integration 
 
 In the Digioh platform, click the **Integrations** tab, and create the **+ New Integration** button.
 
@@ -34,11 +34,11 @@ Next, select **Braze** from the **Integration** dropdown and name the integratio
 
 !["Select the correct integration from the dropdown"][2]{: style="max-width:50%;"}
 
-### Step 2: Map Additional Fields
+### Step 2: map additional fields
 
 On the **Integrations** page, use the **Map Fields** link to map additional fields beyond email and name.
 
-### Step 3: Apply Integration
+### Step 3: apply integration
 
 To apply the integration to a [lightbox](https://help.digioh.com/knowledgebase/digioh-platform-training-videos-video-series-getting-started-with-digioh/), use the **Add** or **Edit** link in the **Integrations** column on the **Boxes** page.
 

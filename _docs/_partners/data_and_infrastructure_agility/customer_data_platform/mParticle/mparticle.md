@@ -11,7 +11,7 @@ search_tag: Partner
 
 # mParticle
 
-{% include video.html id="Njhqwd36gZM" align="right" %}
+{% include video.html id="njhqwd36gzm" align="right" %}
 
 > mParticle's customer data platform empowers you to do more with your data. Sophisticated marketers use mParticle to orchestrate data across their entire growth stack, enabling them to win in key customer journey moments.
 
@@ -21,7 +21,7 @@ If you're looking for information on the Currents integration with mParticle, re
 
 ## Prerequisites
 
-| Requirement| Origin| Access| Description|
+| requirement| origin| access| description|
 | ---| ---| ---|
 | mParticle Account & Account Information | mParticle | [https://app.mparticle.com/login](https://app.mparticle.com/login) | You must have an active mParticle Account to utilize their services with Braze. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4}
@@ -32,7 +32,7 @@ If you have backend data outside of your apps, you'll want to use the Server API
 
 Please note that regardless of approach, it is necessary to integrate the mParticle embedded kit.
 
-## Embedded Kit Integration
+## Embedded kit integration
 
 Through the embedded kit integration, mParticle and Braze's SDK will both be present on your application. However, unlike a direct Braze integration, mParticle takes care of calling the majority of Braze SDK code for you. Any mParticle methods you use to track user data will automatically be mapped to Braze's SDK. These mappings of mParticle’s SDK for [Android](https://github.com/mparticle-integrations/mparticle-android-integration-appboy), [iOS](https://github.com/mparticle-integrations/mparticle-apple-integration-appboy) and [Web](https://github.com/Appboy/integration-appboy) are open source and can be found on [mParticle’s GitHub page](https://github.com/mparticle-integrations). 
 
@@ -70,11 +70,11 @@ mParticle's [Braze Event Kit Integration Guide](https://docs.mparticle.com/integ
 API keys will be different for each platform (iOS, Android, and Web).
 {% endalert %}
 
-## Server API Integration
+## Server api integration
 
 This is an add-on to route your backend data to Braze if you're using mParticle's Server-Side SDKs (e.g., Ruby, Python, etc.). To set up this server-to-server integration with Braze, please follow mParticle's documentation [here](https://docs.mparticle.com/guides/platform-guide/connections/).
 
-### Connections Settings for your Braze Output
+### Connections settings for your braze output
 
 These settings are located in mParticle’s __Connections__ tab under __Connect__. You will need to add Braze as an output.
 
@@ -87,7 +87,7 @@ The App Group REST API Key required to input in mParticle's dashboard can be fou
 Custom REST Endpoint: Set this to your relevant [REST API endpoint]({{site.baseurl}}/developer_guide/rest_api/basics/#endpoints). This should match the __Custom REST Endpoint__ field in the Event Configuration for Braze found in your mParticle Dashboard in the __Setup__ tab under __Outputs__.
 
 
-### Data Mapping
+### Data mapping
 Not all data types that are supported on mParticle are supported by Braze.
 
 - [Custom event properties]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events/) support string, numeric, boolean, or date objects. It does not support arrays or nested objects.

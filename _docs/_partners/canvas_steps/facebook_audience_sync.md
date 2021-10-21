@@ -10,7 +10,7 @@ Tool:
 
 ---
 
-# Audience Sync to Facebook
+# Audience sync to facebook
 
 Using the Braze Audience Sync to Facebook, brands can elect to add their own users' data from their own Braze integration to Facebook Custom Audiences to deliver advertisements based upon behavioral triggers, segmentation, and more. Any criteria you'd typically use to trigger a message (Push, Email, SMS, Webhook, etc.) in a Braze Canvas based upon your user data can now be used to trigger an ad to that user in Facebook via Custom Audiences.
 
@@ -25,7 +25,7 @@ This feature gives brands the option to control what specific first-party data i
 
 ## Integration
 
-### Integration Requirements
+### integration requirements
 
 You will need to ensure that you have the following items created and/or completed before setting up your Facebook Audience Step in Canvas. 
 
@@ -38,7 +38,7 @@ You will need to ensure that you have the following items created and/or complet
 
 ## Integration
 
-### Step 1: Connect to Facebook
+### step 1: connect to facebook
 
 In the Braze dashboard, go to __Technology Partners__ and select __Facebook__. In the Facebook Audience Export module, click __Connect Facebook__.
 
@@ -64,13 +64,13 @@ For customers who have previously undergone the Facebook App Review process for 
 <br><br>The Facebook oAuth configuration will also apply to [Facebook exports via Segments]({{site.baseurl}}/partners/message_orchestration/additional_channels/retargeting/facebook/#prerequisites). 
 {% endalert %}
 
-### Step 2: Add a Facebook Audience Step in Canvas
+### Step 2: add a facebook audience step in canvas
 
 Add a step in your Canvas, select the dropdown at the top of the step, and select __Facebook Audience Step__.
 
 ![audience sync][20]{:style="max-width:70%"}
 
-### Step 3: Sync Setup
+### Step 3: sync setup
 
 Click on the __Custom Audience__ button to open the step editor.
 
@@ -101,7 +101,7 @@ It's important to note that Facebook prohibits removing users from custom audien
 {% endtab %}
 {% endtabs %}
 
-### Step 4: Launch Canvas
+### Step 4: launch canvas
 
 Once you have configured your Facebook Audience Step, simply launch the Canvas! The new custom audience will be created, and users who flow through the Facebook Audience step will be passed into this custom audience on Facebook. If your Canvas contains subsequent steps, your users will then advance to the next step in their user journey.
 
@@ -109,12 +109,12 @@ The __History__ tab of the custom audience in the Facebook Audience Manager will
 
 ![Google Sync][39]{: style="max-width:80%;"}
 
-## User Syncing & Rate Limit Considerations 
+## User syncing & rate limit considerations 
 As users reach the Audience Sync Step, Braze will sync these users in near real-time while also respecting Facebook's Marketing API rate limits. What this means in practice is that Braze will try to batch and process as many users every 5 seconds before sending these users to Facebook. 
 
 Facebook's Marketing API rate limit states no more than &#126;190k API requests for each ad account in a 1 hour time period. If a Braze customer reaches this rate limit, Braze the Canvas will retry the sync for up to &#126;13 hours. If the sync is not possible, these users are listed under the Users Errored metric.
 
-## Understanding Analytics
+## Understanding analytics
 
 ![audience sync][16]{: style="float:right;max-width:15%;margin-left:15px;"}
 
@@ -138,7 +138,7 @@ Remember that there will be a delay in reporting for users synced and users erro
 
 ## Troubleshooting
 
-{% details What should I do next if I receive an invalid token error? %}
+{% details what should i do next if i receive an invalid token error? %}
 You can simply disconnect and reconnect your Facebook account on the Facebook partner page. Please ensure with your Facebook Business Manager Admin that you have the appropriate permissions to the ad account you wish to sync with.
 {% enddetails %}
 

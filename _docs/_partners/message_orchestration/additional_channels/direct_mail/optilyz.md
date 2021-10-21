@@ -9,7 +9,7 @@ search_tag: Partner
 
 ---
 
-# optilyz Direct Mail Automation
+# optilyz direct mail automation
 
 > [optilyz][1] is a direct mail automation platform that enables you to run more customer-centric, sustainable, and profitable direct mail campaigns. optilyz is used by hundreds of companies across Europe and empowers you to integrate letters, postcards, and self-mailers into your cross-channel marketing as well as automate and better personalize campaigns.
 
@@ -17,7 +17,7 @@ Use the optilyz and Braze webhook integration to send direct mail to your custom
 
 ## Requirements
 
-| Requirement | Origin | Access | Description |
+| requirement | origin | access | description |
 |---|---|---|---|
 | optilyz API Key<br><br>`OPTILYZ_API_KEY`| optilyz | Your optilyz customer success manager will provide you with your optilyz API key. | This API key will enable you to connect your Braze and optilyz accounts. |
 | optilyz Automation ID<br><br>`OPTILYZ_AUTOMATION_ID` | optilyz | The automation ID can be found in a box on the page header. | When logged into optilyz, you can navigate to the automation you want to send data into.<br><br>The automation must be activated first. |
@@ -25,13 +25,13 @@ Use the optilyz and Braze webhook integration to send direct mail to your custom
 
 ## Integration
 
-To integrate with optilyz, use the [optilyz API][2] to send recipient data to the Braze webhook.
+to integrate with optilyz, use the [optilyz api][2] to send recipient data to the braze webhook.
 
-### Step 1: Create a Webhook Template in Braze
+### Step 1: create a webhook template in braze
 
 To create a webhook template, from the Braze dashboard, navigate to __Templates & Media__ and select __Blank Template__ under __Webhook Templates__. Name your template.
 
-### Step 2: Fill Out Your Template
+### Step 2: fill out your template
 
 In your new Webhook template, fill out the following fields:
 
@@ -63,7 +63,7 @@ The `variation` field is optional and can be used to define which design inside 
 
 ![optilyz_compose][5]
 
-### Step 3: Define Request Headers and HTTP Method
+### Step 3: define request headers and http method
 
 optilyz also requires an HTTP Header for authorization and an HTTP method. In the __Settings__ tab of the webhook editor, create a key-value pair and replace the `OPTILYZ_API_KEY` with your optilyz API key.
 
@@ -74,17 +74,17 @@ optilyz also requires an HTTP Header for authorization and an HTTP method. In th
 
 ![optilyz_settings][6]{: style="max-width:50%"}
 
-### Step 4: Preview Your Request and Save Your Template
+### Step 4: preview your request and save your template
 
 Next, preview your request in the left-hand panel or navigate to the __Test__ tab, where you can select a random user, an existing user, or customize your own to test your webhook. Remember to save your template before leaving the page!
 
 ![optilyz_testing][7]{: style="max-width:80%"}
 
-## Using This Integration
+## Using this integration
 
 Create a campaign, select __Webhook__, and choose your template from the __Saved Webhook Template__ list.<br>For more information, check out our documentation on [Webhooks][9]!
 
-## Use Cases
+## Use cases
 
 Running direct mail like a digital channel means moving away from mass mailings and leveraging the channel as part of your (digital) customer journeys.
 

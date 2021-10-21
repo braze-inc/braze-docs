@@ -10,7 +10,7 @@ tool: Currents
 
 ---
 
-# Mixpanel for Currents
+# Mixpanel for currents
 
 > [Mixpanel](https://mixpanel.com/) is a business analytics platform. You can export events from your Braze integration to Mixpanel in order to perform deeper analysis. Data collected is used to build custom reports and measure user engagement and retention.
 
@@ -27,7 +27,7 @@ Add this information to the Mixpanel Currents integration page on the dashboard,
 It's important to keep your Mixpanel API Secret and Mixpanel Token up to date; if your connector's credentials expire, the connector will stop sending events. If this persists for more than **48 hours**, the connector's events will be dropped and data will be permanently lost.
 {% endalert %}
 
-## Integration Details
+## Integration details
 
 A list of the events that can be exported from Braze to Mixpanel is below. All events sent to Mixpanel will include the user's `external_user_id` as the Mixpanel Distinct ID. At this time, Braze does not send event data for users who do not have their `external_user_id` set.
 
@@ -35,7 +35,7 @@ You can export two types of events to Mixpanel: "Message Engagement Events" cons
 
 Please contact your Account Manager or [open a support ticket][support] if you need access to additional event entitlements.
 
-## Mixpanel Cohort Import
+## Mixpanel cohort import
 
 Use Braze and Mixpanel's partnership to configure your integration and import Mixpanel cohorts directly into Braze for retargeting, creating a full loop of data from one system to another. This allows you to perform a deeper analysis using Mixpanel and seamlessly execute on your strategies using Braze.
 
@@ -43,9 +43,9 @@ You can manage the Mixpanel Cohort Import process from the Technology Partners p
 
 ![Mixpanel cohort import]({% image_buster /assets/img_archive/currents-mixpanel-import.png %})
 
-## Customer Behavior Events
+## Customer behavior events
 
-### Custom Events
+### Custom events
 
 ```json
 // <Custom Event Name>
@@ -57,7 +57,7 @@ You can manage the Mixpanel Cohort Import process from the Technology Partners p
 }
 ```
 
-### Purchase Events
+### Purchase events
 
 ```json
 // Purchase
@@ -72,7 +72,7 @@ You can manage the Mixpanel Cohort Import process from the Technology Partners p
 }
 ```
 
-### Session Events
+### Session events
 
 ```json
 // First Session
@@ -102,7 +102,7 @@ You can manage the Mixpanel Cohort Import process from the Technology Partners p
 }
 ```
 
-### Location Events
+### Location events
 
 ```json
 // Location
@@ -119,7 +119,7 @@ You can manage the Mixpanel Cohort Import process from the Technology Partners p
 }
 ```
 
-### Install Attribution Events
+### Install attribution events
 
 ```json
 // Install Attribution
@@ -128,7 +128,7 @@ You can manage the Mixpanel Cohort Import process from the Technology Partners p
 }
 ```
 
-### Uninstall Events
+### Uninstall events
 
 ```json
 // Uninstall
@@ -137,9 +137,9 @@ You can manage the Mixpanel Cohort Import process from the Technology Partners p
 }
 ```
 
-## Message Engagement Events
+## Message engagement events
 
-### Push Notification Events
+### Push notification events
 
 ```json
 // Push Notification Send
@@ -202,7 +202,7 @@ You can manage the Mixpanel Cohort Import process from the Technology Partners p
 }
 ```
 
-### Email Events
+### Email events
 
 ```json
 // Email Send
@@ -231,7 +231,7 @@ You can manage the Mixpanel Cohort Import process from the Technology Partners p
 Behavior for `dispatch_id` differs between Canvas and campaigns because Braze treats Canvas steps (except for Entry Steps, which can be scheduled) as triggered events, even when they are "scheduled". [Learn more about `dispatch_id` behavior in Canvas and campaigns here]({{site.baseurl}}/help/help_articles/data/dispatch_id/). For additional information, refer to the [Customer Behavior and User Events]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/event_glossary/customer_behavior_events/) and [Message Engagement Events]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/event_glossary/message_engagement_events/).
 
 
-### SMS Events
+### SMS events
 
 ```json
 // SMS Send
@@ -300,7 +300,7 @@ Behavior for `dispatch_id` differs between Canvas and campaigns because Braze tr
 }
 ```
 
-### Subscription Events
+### Subscription events
 
 ```json
 // Subscription Group State Change
@@ -355,7 +355,7 @@ Behavior for `dispatch_id` differs between Canvas and campaigns because Braze tr
 }
 ```
 
-### Webhook Events
+### Webhook events
 
 ```json
 // Webhook Send
@@ -371,7 +371,7 @@ Behavior for `dispatch_id` differs between Canvas and campaigns because Braze tr
 }
 ```
 
-### Content Card Events
+### Content card events
 
 ```json
 // Content Card Send
@@ -409,7 +409,7 @@ Behavior for `dispatch_id` differs between Canvas and campaigns because Braze tr
 }
 ```
 
-### News Feed Events
+### News feed events
 
 ```json
 // News Feed Card Impression
@@ -437,7 +437,7 @@ Behavior for `dispatch_id` differs between Canvas and campaigns because Braze tr
 }
 ```
 
-### Conversion Events
+### Conversion events
 
 ```json
 // Campaign Conversion Event
@@ -460,7 +460,7 @@ Behavior for `dispatch_id` differs between Canvas and campaigns because Braze tr
 }
 ```
 
-### Canvas Entry Events
+### Canvas entry events
 
 ```json
 // Canvas Entry
@@ -472,7 +472,7 @@ Behavior for `dispatch_id` differs between Canvas and campaigns because Braze tr
 }
 ```
 
-### Campaign Enrollment Events
+### Campaign enrollment events
 
 ```json
 // Campaign Control Group Enrollment

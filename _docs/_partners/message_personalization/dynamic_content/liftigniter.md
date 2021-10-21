@@ -8,7 +8,7 @@ search_tag: Partner
 
 ---
 
-# About Liftigniter
+# About liftigniter
 
 > LiftIgniter is a leading personalization platform helping enterprises transform their customer experiences through real-time personalization across every touch point.
 
@@ -16,7 +16,7 @@ Use Liftigniter with Braze’s Connected Content to allow brands to recommend in
 
 ## Prerequisites
 
-| Requirement| Origin| Access| Description|
+| requirement| origin| access| description|
 | ---| ---| ---|
 |Liftigniter Account | Liftigniter | https://console.liftigniter.com/login | You'll need this account to access other resources and tools needed to incorporate and leverage Liftigniter data with Braze. |
 | Liftigniter API Integration | Liftigniter| https://support.liftigniter.com/support/solutions/articles/30000024667-api-integration-overview | You must integrate Liftigniter into your site or app to be able to pull recommendations from there. |
@@ -24,7 +24,7 @@ Use Liftigniter with Braze’s Connected Content to allow brands to recommend in
 
 ## Integration
 
-Use [Liftigniter's REST API](https://documenter.getpostman.com/view/2166502/liftigniter/7TFGvSV#9bdf75da-edd6-45ec-9c28-a0edefad1389) to insert personalized content into your messages. Once you have your Liftigniter account and Liftigniter is integrated into your app, use this template to call content into your messages. Feel free to reach out to Liftigniter's support team with any questions.
+use [liftigniter's rest api](https://documenter.getpostman.com/view/2166502/liftigniter/7tfgvsv#9bdf75da-edd6-45ec-9c28-a0edefad1389) to insert personalized content into your messages. once you have your liftigniter account and liftigniter is integrated into your app, use this template to call content into your messages. feel free to reach out to liftigniter's support team with any questions.
 
 {% raw %}
 

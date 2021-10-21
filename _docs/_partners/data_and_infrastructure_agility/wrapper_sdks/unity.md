@@ -8,7 +8,7 @@ page_type: partner
 platform: unity
 
 ---
-# About Unity
+# About unity
 
 Unity, an app development platform specializing in gaming, allows developers to create, test, and debug apps across multiple platforms.
 
@@ -16,7 +16,7 @@ Braze and Unity together enable seamless app development across multiple platfor
 
 # Integration
 
-Please see Braze's Platform Integration Guides to integrate Unity.
+please see braze's platform integration guides to integrate unity.
 
 For [iOS]({{site.baseurl}}/developer_guide/platform_integration_guides/unity/sdk_integration/ios/).
 

@@ -10,14 +10,14 @@ search_tag: Partner
 
 # Radar
 
-> [Radar](https://www.onradar.com/) is a geofencing platform for mobile and web apps. Combining Braze's industry-leading engagement platform and Radar's industry-leading geofencing capabilities allows you to drive digital engagement and loyalty. 
+> [radar](https://www.onradar.com/) is a geofencing platform for mobile and web apps. combining braze's industry-leading engagement platform and radar's industry-leading geofencing capabilities allows you to drive digital engagement and loyalty. 
 The Radar platform has three products: [Geofences](https://radar.io/product/geofencing), [Trip Tracking](https://radar.io/product/trip-tracking), and [Geo APIs](https://radar.io/product/api).
 
 Use the Radar and Braze integration to add location context and tracking to your iOS and Android apps in less than ten lines of code, allowing you to easily retarget your customers and augment your marketing with rich location data. Whenever Radar geofence or trip tracking events are generated, Radar will send custom events and user attributes to Braze. You can use these events and attributes to build location-based segments or trigger location-based campaigns.
 
 Additionally, Radar Geo APIs can be leveraged to enrich or personalize your marketing campaigns through [Connected Content]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/connected_content/about_connected_content/). 
 
-## Event Integration Details
+## Event integration details
 
 To map data between the Braze and Radar SDKs, you will need to set the same user IDs in both systems. This can be done by using the `changeUser()` method in the Braze SDK and the `setUserId()` method in the Radar SDK.
 
@@ -36,19 +36,19 @@ You can set separate API keys for the test and live environments.
 
 Whenever Radar events are generated, Radar will send custom events and user attributes to Braze. Events from iOS devices will be sent using your iOS API keys; events and user attributes from Android devices will be sent using your Android API keys.
 
-## Event and Attribute-Based Use Cases
+## Event and attribute-based use cases
 
 You can use custom events and user attributes to build location-based segments or trigger location-based campaigns.
 
-### Segment of Traveling Users
+### Segment of traveling users
 
 ![Radar Segment]({% image_buster /assets/img_archive/radar-segment.png %})
 
-### Trigger When a User Enters a Location with High Confidence
+### Trigger when a user enters a location with high confidence
 
 ![Radar Campaign]({% image_buster /assets/img_archive/radar-campaign.png %})
 
-## Connected Content
+## Connected content
 
 The following example shows how to run a promotion to drive nearby users in-store with a digital offer. 
 

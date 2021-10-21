@@ -9,7 +9,7 @@ search_tag: Partner
 
 ---
 
-# Amazon S3 Integration
+# Amazon s3 integration
 
 > [Amazon S3](https://aws.amazon.com/s3/) is a highly scalable storage system offered by Amazon Web Services.
 
@@ -24,21 +24,21 @@ Follow the instructions on this page to get started with your AWS S3 integration
 2.  Once signed in, select "S3" from the "Storage & Content Delivery" category.
 3.  Select "Create Bucket" on the next screen and you"ll be prompted to create your bucket and select a region.
 
-## AWS Secret Key Auth Method
+## AWS secret key auth method
 
 This authentication method generates a **Secret Key** and an **Access Key ID** that enables Braze to authenticate as a user on your AWS account for the purposes of writing data to your bucket.
 
-### Step 1 - Create User {#secret-key-1}
+### Step 1 - create user {#secret-key-1}
 
 To retrieve your **Access Key ID** and **Secret Access Key**, you’ll need to [create an **IAM User** and **Administrators Group** in AWS](https://docs.aws.amazon.com/IAM/latest/UserGuide/getting-started_create-admin-group.html).
 
-### Step 2 - Get Credentials {#secret-key-2}
+### Step 2 - get credentials {#secret-key-2}
 
 Once a user has been created, click "Show User Security Credentials" so your **Access Key ID** and **Secret Access Key** will be revealed. Next, either note these credentials somewhere or click the blue "Download Credentials" button as you will need to input these into the Braze dashboard later on.
 
 ![Secret Key][11]
 
-### Step 3 - Create Policy {#secret-key-3}
+### Step 3 - create policy {#secret-key-3}
 
 Now, navigate to the **Policies** tab in the navigation bar and select "Get Started" then "Create Policy". This will allow you to add permissions for your user. Select "Create Your Own Policy". This will give limited permissions so we only have the ability to access the bucket that you specify.
 
@@ -90,7 +90,7 @@ Input the code below when creating your own policy. (Note that there are differe
 {% endtab %}
 {% endtabs %}
 
-### Step 4 - Attach Policy {#secret-key-4}
+### Step 4 - attach policy {#secret-key-4}
 
 Once your policy has been created, navigate to "Users" and then click into your specific user so you can attach this new policy. On the "Permissions" tab, click "Attach Policy".
 
@@ -100,7 +100,7 @@ Search for the new policy that you created and click to attach.
 
 You are now ready to link your AWS credentials to your Braze account.
 
-### Step 5 - Link Braze to AWS {#secret-key-5}
+### Step 5 - link braze to aws {#secret-key-5}
 
 {% tabs %}
 {% tab Braze Currents %}
@@ -142,11 +142,11 @@ A notification will inform you whether your credentials have been successfully v
 {% endtab %}
 {% endtabs %}
 
-## AWS Role ARN Auth Method
+## AWS role arn auth method
 
 This authentication method generates a Role ARN (Amazon Resource Name) that enables Braze's Amazon account to authenticate as a member of the Role you created for the purposes of writing data to your bucket.
 
-### Step 1 - Create Policy {#role-arn-1}
+### Step 1 - create policy {#role-arn-1}
 
 To get started, sign in to the AWS Management Console as an administrator of the account. Navigate to the IAM section of the AWS Console, click "Policies" in the navigation bar, and click "Create Policy".
 
@@ -205,7 +205,7 @@ Next, give the policy a name and a description and click "Create Policy".
 
 ![Role ARN]({{site.baseurl}}/assets/img/create_policy_4_created.png)
 
-### Step 2 - Create Role {#role-arn-2}
+### Step 2 - create role {#role-arn-2}
 
 Now, still within the IAM section of the AWS Console, click "Roles" in the navigation bar and click "Create Role".
 
@@ -234,7 +234,7 @@ Back on the AWS Console, select "Another AWS Account" from the type of trusted e
 
 ![Role ARN]({{site.baseurl}}/assets/img/create_role_2_another.png)
 
-### Step 3 - Attach Policy {#role-arn-3}
+### Step 3 - attach policy {#role-arn-3}
 
 Next, attach the Policy you created earlier to the Role. Search for the policy in the search bar, and place a checkmark next to the policy to attach it. Click "Next" when complete.
 
@@ -246,7 +246,7 @@ Give the Role a name and a description, and click "Create Role".
 
 You should now see your newly created Role on the list.
 
-### Step 4 - Link to Braze AWS {#role-arn-4}
+### Step 4 - link to braze aws {#role-arn-4}
 
 Still on the AWS Console, find your newly created Role in the list. Click the name to open up the details of that Role.
 

@@ -10,11 +10,11 @@ search_tag: Partner
 
 # EduMe
 
-> [EduMe](https://edume.com) is a mobile-based training tool that gives your workforce the knowledge they need to succeed. When they need it, wherever they are. <br><br>Use [Connected Content]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/connected_content/about_connected_content/#about-connected-content) in Braze to give your workforce or your customers access to lessons and courses in EduMe. They will be able to access this content seamlessly in their browser, and you will be able to follow their progress as a group or as individuals using the EduMe reporting functionality.
+> [edume](https://edume.com) is a mobile-based training tool that gives your workforce the knowledge they need to succeed. when they need it, wherever they are. <br><br>use [connected content]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/connected_content/about_connected_content/#about-connected-content) in braze to give your workforce or your customers access to lessons and courses in edume. they will be able to access this content seamlessly in their browser, and you will be able to follow their progress as a group or as individuals using the edume reporting functionality.
 
 ## Prerequisites
 
-In order to use Connected Content with EduMe, you will need to set up a few things with your EduMe customer success contact.
+in order to use connected content with edume, you will need to set up a few things with your edume customer success contact.
 
 | Requirement | Origin | Access | Description |
 |---|---|---|---|
@@ -23,11 +23,11 @@ In order to use Connected Content with EduMe, you will need to set up a few thin
 | Knowledge of group and content IDs in EduMe | EduMe | Your customer success contact at EduMe will work with you to help you know the IDs for the relevant content and user groups in EduMe for your use case. | You will use these IDs when setting up the Connected Content snippets following the instructions below. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
 
-## Connected Content Integration
+## Connected content integration
 
 Use this integration to give your users access to courses and lessons you've published in EduMe.
 
-### Access to a Course
+### Access to a course
 
 To give a user access to a course, and to track their progress against your internal user ID in EduMe, follow the API call shown in this simple example:
 
@@ -45,7 +45,7 @@ Please access your onboarding course at:
 ```
 {% endraw %}
 
-### Adapting the Example for Your Own Use Case
+### Adapting the example for your own use case
 
 To go from the example to your own use case, update the following:
 1. Include your EduMe API key where shown in the message.
@@ -55,7 +55,7 @@ To go from the example to your own use case, update the following:
 5. Customize the message and include it in the appropriate place in your campaign or Canvas.
 6. Test the flow: Send a test message to yourself, access the EduMe content through the link you receive, complete the lesson or course, and verify that you can find the record of your completion in EduMe reports.
 
-### Access to a Lesson
+### Access to a lesson
 
 Similarly, a link to a particular lesson can be created by using the following URL in the same way:
 {%raw%}
@@ -65,7 +65,7 @@ https://edume-braze-connect.herokuapp.com/getLessonLink?lessonId=25805&groupId=4
 {%endraw%}
 The differences are the API endpoint `getLessonLink`, and providing a lesson ID in the `lessonId` parameter instead of a module ID. Otherwise, everything works the same as for courses.
 
-### Access to an eNPS Survey
+### Access to an enps survey
 
 As for lessons, a link to a particular eNPS survey can be created by using the following URL:
 {%raw%}

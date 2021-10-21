@@ -8,13 +8,13 @@ search_tag: Partner
 
 ---
 
-# ETL Event Pipeline Setup
+# ETL event pipeline setup
 
 >  This partner page offers an example set up for an Email Clicks query to reference when setting up your own queries.
 
 You can use this Email Clicks query to analyze the interactions with specific emails in your Braze campaigns and Canvases.
 
-## Set Up this Query
+## Set up this query
 
 Create a database for `BRAZE`, then create a database if none exists for `BRAZE_CURRENTS;`:
 
@@ -94,7 +94,7 @@ COPY INTO
 show pipes;
 ```
 
-## Do More with this Query Example
+## Do more with this query example
 
 Copy the `notification_channel` from the output of the command above and use that when configuring S3 bucket notifications.
 

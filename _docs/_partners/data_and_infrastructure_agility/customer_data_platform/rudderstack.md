@@ -11,11 +11,11 @@ search_tag: Partner
 
 # RudderStack
 
-> [RudderStack][1] is an open-source Customer Data Infrastructure for collecting and routing customer event data to your preferred data warehouse and dozens of other analytics providers, such as Braze. It is enterprise-ready and offers a robust transformation framework to process your event data on the fly.
+> [rudderstack][1] is an open-source customer data infrastructure for collecting and routing customer event data to your preferred data warehouse and dozens of other analytics providers, such as braze. it is enterprise-ready and offers a robust transformation framework to process your event data on the fly.
 
 RudderStack offers a native SDK integration for your Android, iOS, and web applications, as well as a server-to-server integration for your backend services.  This way, you can send your in-app customer event data to Braze directly for contextual analysis.
 
-## Setup Overview
+## Setup overview
 
 Integrating RudderStack with Braze is very quick and easy. All you need to do is follow these steps:
 
@@ -23,7 +23,7 @@ Integrating RudderStack with Braze is very quick and easy. All you need to do is
 2. Choose your preferred type of integration and configure Braze as a destination in RudderStack.
 3. Set up the required mappings for your integration.
 
-## Step 1: Prerequisites
+## Step 1: prerequisites
 
 | Requirement | Origin | Access | Description |
 |---|---|---|---|
@@ -32,7 +32,7 @@ Integrating RudderStack with Braze is very quick and easy. All you need to do is
 | Braze SDK Integration with your device | Braze | To know more about using the Braze SDKs, refer to our documentation on the [web][4], [iOS][5], and [Android][6] platforms. | Braze must be set up on your website or app for the integration to be successful. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
 
-## Step 2: Choose the Type of Integration
+## Step 2: choose the type of integration
 
 You can choose to integrate RudderStack's web and native client-side libraries with Braze using either a side-by-side ("Device Mode") integration or a server-to-server ("Cloud Mode") integration.
 
@@ -46,7 +46,7 @@ You can choose to integrate RudderStack's web and native client-side libraries w
 Learn more about RudderStack's connection modes and the benefits of each [here](https://docs.rudderstack.com/get-started/rudderstack-connection-modes).
 {% endalert %}
 
-### Step 2.1a: Side-by-Side Integration (Device Mode)
+### Step 2.1a: side-by-side integration (device mode)
 
 With this mode, you can send your events to Braze using the Braze SDK set up on your website or mobile app.
 
@@ -65,7 +65,7 @@ With this mode, you can send your events to Braze using the Braze SDK set up on 
   {% endtab %}
 {% endtabs %}
 
-### Step 2.1b: Server-to-Server Integration (Cloud Mode)
+### Step 2.1b: server-to-server integration (cloud mode)
 
 With this mode, the Braze SDK sends the event data directly to RudderStack. RudderStack then transforms this data and routes it to Braze in the expected format. The transformation is done in the RudderStack backend.
 
@@ -77,7 +77,7 @@ All of RudderStack's server-side SDKs (Java, Python, Node.js, Go, Ruby) support 
 
 {% alert important %} The server-to-server integration does not support Braze's UI features, such as push notifications or in-app messaging. These features are, however, supported by the Device Mode integration. {% endalert %}
 
-## Step 2.2: Configure Braze Settings in RudderStack
+## Step 2.2: configure braze settings in rudderstack
 
 Once you've decided on the integration mode and successfully set up the source and the Braze SDK on your device, you will need to configure Braze as a destination in RudderStack. The setup is quite straightforward - you will need to enter the following required fields:
 
@@ -91,12 +91,12 @@ Once you've decided on the integration mode and successfully set up the source a
 | Native SDK | You can enable or disable this option to use the Braze native SDK to send the events (use the Device Mode). |
 {: .reset-td-br-1 .reset-td-br-2}
 
-## Step 3: Using the Integration - Set Up the Mappings
+## Step 3: using the integration - set up the mappings
 
 Braze supports the RudderStack methods [identify][16], [track][16], and [page][16].
 
 ### Identify
-The RudderStack `identify` method associates a user to their actions. RudderStack captures a unique user ID and the optional traits associated with that user, such as name, email, IP address, etc.
+the rudderstack `identify` method associates a user to their actions. rudderstack captures a unique user id and the optional traits associated with that user, such as name, email, ip address, etc.
 
 The field mapping is done as per the table below:
 
@@ -119,16 +119,16 @@ You can read more about RudderStack's identify method in their [documentation][1
 
 ### Track
 
-RudderStack's `track` method captures all the user activities, along with the properties associated with those activities.
+rudderstack's `track` method captures all the user activities, along with the properties associated with those activities.
 
 You can read more about RudderStack's `track` method in their [documentation][19].
 
-#### Order Completed
+#### Order completed
 On using the [RudderStack eCommerce API][20] to call the track method for an event with the name `Order Completed`, RudderStack sends the products listed in that event to Braze as [`purchases`][21].
 
 ### Page
 
-RudderStack's `page` method allows you to record your website's page views. It also captures any other relevant information about that page.
+rudderstack's `page` method allows you to record your website's page views. it also captures any other relevant information about that page.
 
 You can read more about RudderStack's `page` method in their [documentation][22].
 

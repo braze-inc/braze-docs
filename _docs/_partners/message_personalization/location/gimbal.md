@@ -10,7 +10,7 @@ search_tag: Partner
 
 # Gimbal
 
-> Originally started out of Qualcomm, Gimbal enables you to perfect your marketing relevance using location data. Their location SDK paired with geofencing software and beacons power relevant, personalized, proximity-aware mobile experiences.
+> originally started out of qualcomm, gimbal enables you to perfect your marketing relevance using location data. their location sdk paired with geofencing software and beacons power relevant, personalized, proximity-aware mobile experiences.
 
 Combine your beacon or geofence support with Braze’s targeting and messaging features to learn more about your user’s physical actions and message them accordingly. This partnership integration opens up an array of use cases for:
 - __Marketing:__ Send contextually relevant messaging and build experiential consumer journeys.
@@ -19,12 +19,12 @@ Combine your beacon or geofence support with Braze’s targeting and messaging f
 
 ## Prerequisites
 
-| Requirement| Origin| Access| Description|
+| requirement| origin| access| description|
 | ---| ---| ---|
 |Gimbal SDK | Gimbal | https://docs.gimbal.com/index.html | The Gimbal Location SDK powers macro and micro location-based mobile experiences using proximity beacons and geofences that allow you to communicate more effectively with your app users. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
 
-## SDK Integration
+## SDK integration
 
 You must have the Location SDK implemented & geofences (or beacons) set up, as well as a Gimbal Manager account to proceed with the integration.
 1.	Create a [Gimbal Manager][1] account.

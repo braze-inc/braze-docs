@@ -12,26 +12,26 @@ hidden: true
 
 # NPAW
 
-> [NPAW](https://nicepeopleatwork.com/), also knows as _Nice People at Work_, is an intelligent data analytics platform that provides actionable insights to leading online media professionals. With NPAW's YOUBORA tool suite, Braze customers can now leverage a predictive and robust AI to greater understand customer behavior and drive engagement accross platforms.
+> [npaw](https://nicepeopleatwork.com/), also knows as _nice people at work_, is an intelligent data analytics platform that provides actionable insights to leading online media professionals. with npaw's youbora tool suite, braze customers can now leverage a predictive and robust ai to greater understand customer behavior and drive engagement accross platforms.
 
 # Prerequisites
 
-| Requirement   |Origin| Description |
+| requirement   |origin| description |
 | --------------|------|-------------|
 | YOUBORA API Key |[YOUBORA Settings](https://youbora.nicepeopleatwork.com/users/login)|An API Key generated on user sign up and can be located under **Settings** |
 | ID |[Braze Settings](https://dashboard.braze.com/sign_in) | YOUBORA gives you the options of whether to link the software to Braze via a ***Braze ID***, an ***external User ID***, or a ***User ID*** |
 | Endpoint |[Braze Settings](https://dashboard.braze.com/sign_in)| A fully customizable URL endpoint configurable through your **Braze Dashboard** |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
 
-# Analytics Integration
+# Analytics integration
 
-## Accessing the Integrations page
+## Accessing the integrations page
 
 After logging into your YOUBORA tool suite account, navigate to the Intgrations page by selecting **Integrations** option from the drop-down account menu found at the top right corner of the screen as shown below.
 
 ![NPAW DROP DOWN]({% image_buster /assets/img/npaw_dropdown.png %})
 
-## Configuring Your Integration
+## Configuring your integration
 
 Once you have accessed the Integration page, scroll down until you
 see the **Braze** integration option. After clicking on this, it will expand and offer a number of required parameters to fill out as shown below:
@@ -46,7 +46,7 @@ Fill in the details with the appropriate information gathered from the prequisit
 
 Once all the fields have been filled out, simply click on the **Connect** button to establish a connection and save the changes made.
 
-## Using Your NPAW Integration
+## Using your npaw integration
 
 Once you have finished configuring your integration with Braze, navivate to the **Users** product and select the **Sample Manager** within the **Sections Manager**.
 

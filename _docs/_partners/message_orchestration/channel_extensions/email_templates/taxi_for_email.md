@@ -8,7 +8,7 @@ search_tag: Partner
 
 ---
 
-# Taxi for Email
+# Taxi for email
 
 [Taxi For Email](http://taxiforemail.com/) is an online email marketing tool that encourages teams to easily collaborate on email campaigns. It allows teams to produce accurate and on-brand emails at a large scale in less time.
 
@@ -17,13 +17,13 @@ Taxi For Email can help Braze customers create intelligent email templates using
 
 # Requirements
 
-Requirement   | Source | Notes
+requirement   | source | notes
 --------------|--------| -----
 Braze API Key | [Braze Platform](https://dashboard.braze.com/sign_in) | The API key must have the *Template's* permission enabled before use.
 
 # Integration
 
-The export functionality from Taxi For Email to Braze will allow users to send the HTML as a new template within the Braze platform.
+the export functionality from taxi for email to braze will allow users to send the html as a new template within the braze platform.
 
 To set up the Braze connector, you'll need to be logged into both your Braze and Taxi accounts.
 
@@ -52,6 +52,6 @@ If the field is not green, please make sure that the **Templates** section check
 {% endalert %}
 
 # Usage
-To use this integration, look for your new email template in [Templates & Media > Email Templates][1] in your Braze account, or begin to create your email and choose your template from those presented.  
+to use this integration, look for your new email template in [templates & media > email templates][1] in your braze account, or begin to create your email and choose your template from those presented.  
 
 [1]: {{site.baseurl}}/user_guide/message_building_by_channel/email/creating_an_email_template/

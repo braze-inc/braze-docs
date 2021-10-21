@@ -4,9 +4,9 @@ alias: /currents_connector/
 hidden: true
 ---
 
-# Partner Custom Currents Connector
+# Partner custom currents connector
 
-## Serialization and Data Format
+## Serialization and data format
 
 The target data format will be JSON over HTTPS. Events will be grouped into batches of events,
 the size of which is configurable, and sent to the endpoint as a JSON array containing all of the
@@ -221,7 +221,7 @@ Here are some example event payloads for various events, as they would appear if
 }
 ```
 
-### Other Events
+### Other events
 
 Here are some example event payloads for various other events that are not associated with either campaigns or Canvases:
 
@@ -310,7 +310,7 @@ Here are some example event payloads for various other events that are not assoc
 
 ## Authentication
 
-If required, authentication will be performed by passing a token in the HTTP `Authorization` header, via the `Bearer` authorization scheme, as specified in [RFC 6750](https://tools.ietf.org/html/rfc6750#section-2.1). This is also automatically forwards-compatible with any custom authentication scheme we may choose to implement in the future, since using the `Authorization` header would allow us to switch over to a custom (unique to Braze) key-value pair authorization scheme conforming to [RFC 7235](https://tools.ietf.org/html/rfc7235) (which is how e.g. AWS's custom auth scheme works) if we so choose in the future.
+if required, authentication will be performed by passing a token in the http `authorization` header, via the `bearer` authorization scheme, as specified in [rfc 6750](https://tools.ietf.org/html/rfc6750#section-2.1). this is also automatically forwards-compatible with any custom authentication scheme we may choose to implement in the future, since using the `authorization` header would allow us to switch over to a custom (unique to braze) key-value pair authorization scheme conforming to [rfc 7235](https://tools.ietf.org/html/rfc7235) (which is how e.g. aws's custom auth scheme works) if we so choose in the future.
 
 As per RFC 6750, the token will be a Base64-encoded value of at least one character. (Obviously though, we must vet our partners and customers so that we know that they are unlikely to choose incredibly weak tokens.) A notable quirk of RFC 6750 is that it allows the token to contain the following characters in addition to the normal Base64 characters: '-', '.', '_', and '~'. Since the exact contents of the token make absolutely no difference to any of our systems, we won't care whether our partners decide to include these characters in their token or not.
 
@@ -324,7 +324,7 @@ So for example, if the API token is `0p3n5354m3==`, the Authorization header wil
 
 ## Versioning
 
-All requests from our Integratable HTTP Connectors will be sent with a custom header designating the version of the Currents request being made:
+all requests from our integratable http connectors will be sent with a custom header designating the version of the currents request being made:
 
 `Braze-Currents-Version: 1`
 
@@ -337,7 +337,7 @@ Individual events will follow the same evolution rules as our existing Avro sche
 - Required fields will never be removed.
   - What is considered "required" will be specified via documentation that we will likely want to auto-generate from our Avro schemas as the central source of truth. This will require us to annotate the Avro schema fields with some metadata, and a special script that can read that metadata to generate the documentation.
 
-## Error Handling and Retry Mechanism
+## Error handling and retry mechanism
 
 In the event of an error, Braze will queue and retry the request based on the HTTP return code received.
 

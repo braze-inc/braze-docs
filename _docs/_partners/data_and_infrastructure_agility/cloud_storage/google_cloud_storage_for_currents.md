@@ -10,7 +10,7 @@ search_tag: Partner
 
 ---
 
-# Google Cloud Storage
+# Google cloud storage
 
 > [Google Cloud Storage](https://cloud.google.com/storage/) is massively scalable object storage for unstructured data offered by Google as part of the Cloud Computing product suite.
 
@@ -18,39 +18,39 @@ After streaming data into Google Cloud Storage Storage, you can use ETL processe
 
 ## Integration
 
-Integration with Google Cloud Storage requires credentials that allow Braze to get information about the storage bucket being written to (`storage.buckets.get`) as well as the ability to create objects within that bucket (`storage.objects.create`). In order to grant those permissions in the Google Cloud Platform IAM & Admin section, you need to create a custom Role and then create a Service Account that uses that Role. Doing this will generate a downloadable key that you can then upload into Braze so that Currents events can be written to your GCS bucket.
+integration with google cloud storage requires credentials that allow braze to get information about the storage bucket being written to (`storage.buckets.get`) as well as the ability to create objects within that bucket (`storage.objects.create`). in order to grant those permissions in the google cloud platform iam & admin section, you need to create a custom role and then create a service account that uses that role. doing this will generate a downloadable key that you can then upload into braze so that currents events can be written to your gcs bucket.
 
-### Step 1 - Create Role
+### Step 1 - create role
 
 Create a new Role in the **Roles** subsection of the **IAM & admin** section of your **Google Cloud Platform** console
 
 ![google_cloud_storage][2]
 
-### Step 2 - Grant Role Permissions
+### Step 2 - grant role permissions
 
 Give the Role a name, add the `storage.buckets.get` and `storage.objects.create` permissions to the Role, and click Create.
 
 ![google_cloud_storage][3]
 
-### Step 3 - Create a Service Account
+### Step 3 - create a service account
 
 Create a new **Service Account** for your project within the **IAM & admin** section of your **Google Cloud Platform** console.
 
 ![google_cloud_storage][4]
 
-### Step 4 - Grant Access
+### Step 4 - grant access
 
 Give the Service Account a name, and grant it access as your newly created custom Role.
 
 ![google_cloud_storage][5]
 
-### Step 5 - Create Key
+### Step 5 - create key
 
 Create a key using the JSON format. Once created, this key will download to your machine.
 
 ![google_cloud_storage][6]
 
-### Step 6 - Upload Key
+### Step 6 - upload key
 
 On the **Braze Currents** integration page, upload that JSON key file as your **Credentials File**.
 
@@ -58,13 +58,13 @@ On the **Braze Currents** integration page, upload that JSON key file as your **
 It's important to keep your Credentials File up to date; if your connector's credentials expire, the connector will stop sending events. If this persists for more than **48 hours**, the connector's events will be dropped and data will be permanently lost.
 {% endalert %}
 
-### Step 7 - Finish Up
+### Step 7 - finish up
 
 Include your GCS bucket name in the appropriate field so we know where to stream Currents data.
 
 ## Customizations
 
-You can also add the following customizations, based on your needs:
+you can also add the following customizations, based on your needs:
 
 -   Prefix (defaults to `currents`)
 

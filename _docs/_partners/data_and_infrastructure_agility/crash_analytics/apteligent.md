@@ -10,13 +10,13 @@ search_tag: Partner
 
 # Apteligent
 
-> Braze is dedicated to creating partner integrations that provide data-driven approaches to improving your application's user experience. The [Apteligent][1] and Braze partnership combines Braze's multichannel engagement automation with Apteligent's detailed crash reporting, allowing you to log critical data into your existing Braze solution. Together, Apteligent and Braze can help you segment, understand, and engage with your users who have experienced application crashes.
+> braze is dedicated to creating partner integrations that provide data-driven approaches to improving your application's user experience. the [apteligent][1] and braze partnership combines braze's multichannel engagement automation with apteligent's detailed crash reporting, allowing you to log critical data into your existing braze solution. together, apteligent and braze can help you segment, understand, and engage with your users who have experienced application crashes.
 
 {% alert warning %}
 This integration is currently only supported on iOS.
 {% endalert %}
 
-## iOS Integration {#apteligent-ios-integration}
+## iOS integration {#apteligent-ios-integration}
 
 To integrate Apteligent with Braze on iOS, do the following:
 
