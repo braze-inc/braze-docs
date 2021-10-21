@@ -11,7 +11,7 @@ search_tag: Partner
 
 # Phrasee
 
-> Enhance customer experiences by optimizing language used across the full customer journey. the [Phrasee][1] platform brings together artificial intelligence, computational linguistics, and a spirit of customer-centricity as the only provider of its kind to generate, optimize, automate, and analyze language in real-time. Let us handle the content minutiae while your team focuses on the big picture.
+> Enhance customer experiences by optimizing language used across the full customer journey. The [Phrasee][1] platform brings together artificial intelligence, computational linguistics, and a spirit of customer-centricity as the only provider of its kind to generate, optimize, automate, and analyze language in real-time. Let us handle the content minutiae while your team focuses on the big picture.
 
 Braze customer engagement develops relationships through multichannel marketing. Working together with Phrasee, Braze can deploy brand language, at scale, across channels that are customized to your brand voice. Phrasee’s deep learning engine handles the testing, monitors the results, and generates new language based on what it’s learned.
 
