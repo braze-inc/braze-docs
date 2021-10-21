@@ -16,7 +16,7 @@ Looker and Braze empower you to transform customer experiences with live custome
 
 ## Integration
 
-Braze partners with Looker through [first-party Looker Blocks](#implementing-the-looker-blocks) and [flagging users within Braze via REST API](#flagging-users-within-braze). To use Looker with braze, we recommend sending your Braze data to a [data warehouse using Braze Currents][6], then use Braze's Looker Blocks to quickly model and visualize your Braze data in Looker.
+Braze partners with Looker through [first-party Looker Blocks](#implementing-the-looker-blocks) and [flagging users within Braze via REST API](#flagging-users-within-braze). To use Looker with Braze, we recommend sending your Braze data to a [data warehouse using Braze Currents][6], then use Braze's Looker Blocks to quickly model and visualize your Braze data in Looker.
 
 Braze's Looker Blocks can reduce the burden of modeling data and enable marketers to quickly access and visualize data.
 
