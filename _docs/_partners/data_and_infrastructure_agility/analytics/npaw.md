@@ -16,7 +16,7 @@ hidden: true
 
 # Prerequisites
 
-| Requirement   |Origin| Decription |
+| Requirement   |Origin| Description |
 | --------------|------|-------------|
 | YOUBORA API Key |[YOUBORA Settings](https://youbora.nicepeopleatwork.com/users/login)|An API Key generated on user sign up and can be located under **Settings** |
 | ID |[Braze Settings](https://dashboard.braze.com/sign_in) | YOUBORA gives you the options of whether to link the software to Braze via a ***Braze ID***, an ***external User ID***, or a ***User ID*** |
