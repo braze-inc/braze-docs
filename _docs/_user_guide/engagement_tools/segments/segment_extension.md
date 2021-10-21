@@ -11,7 +11,7 @@ tool: Segments
 
 > This article will walk you through how to use a Segment Extension to enhance your segmentation capabilities
 
-A Segment Extension expands our existing segmentation capabilities by enabling you to target more precise lists of users based on their custom event and purchase behavior in the past 365 days. Users are able to create a max of 10 Segment Extensions per App Group. Once these extension lists are generated, they can then be included/excluded as a [filter][10] in your Segments. When creating a Segment Extension, you can also specify that the list be regenerated once every 24 hours.
+A Segment Extension expands our existing segmentation capabilities by enabling you to target more precise lists of users based on their custom event and purchase behavior in the past 365 days. You can create a maximum of 10 Segment Extensions per App Group. After these extension lists are generated, they can then be included or excluded as a [filter][10] in your segments. When creating a Segment Extension, you can also specify that the list be regenerated once every 24 hours.
 
 ## Step 1: Navigating to the Segment Extension Section
 
@@ -44,6 +44,8 @@ To increase targeting precision, select the **Add Property Filters** checkbox. T
 ![Event Property][14]{: style="max-width:85%;"}
 
 ![Event Property][15]{: style="max-width:85%;"}
+
+Segment Extensions rely on long term storage of event properties and don't have the 30-day custom event property storage limit. This means you can look back on event properties tracked within the past year, and tracking doesn't wait until the extension has been set up first.
 
 {% alert note %} Using event properties within Segment Extensions does not impact data point usage.  {% endalert %}
 

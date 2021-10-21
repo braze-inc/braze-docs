@@ -1,7 +1,8 @@
 ---
 nav_title: Action Paths Step
-permalink: "/action_paths/"
-hidden: true
+article_title: Action Paths Step
+alias: /action_paths/
+page_order: 1
 page_type: reference
 description: "This reference article covers Action Paths and how to use them in your Canvases."
 tool: Canvas
@@ -15,7 +16,7 @@ Action Paths in Canvas allow you to sort your users based on their actions. Usin
 * Hold users for a given duration to prioritize their next path based on their actions during this evaluation period
 
 {% alert important %}
-Canvas Action Paths are currently in beta. Please contact your Braze account manager if you are interested in participating in the beta.
+Canvas Action Paths are currently in early access. Please contact your Braze account manager if you are interested in participating in the early access.
 {% endalert %}
 
 ## Create Action Paths

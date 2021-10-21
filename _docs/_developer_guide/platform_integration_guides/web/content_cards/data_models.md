@@ -11,7 +11,7 @@ description: "This article covers the content card integration for Web, includin
 
 # Content Card Integration
 
-The Braze Web SDK includes a Content Cards Feed UI to speed up your integration efforts. If you would prefer to build and your own UI instead, see our [Customization Guide](/docs/developer_guide/platform_integration_guides/web/content_cards/customization/).
+The Braze Web SDK includes a Content Cards Feed UI to speed up your integration efforts. If you would prefer to build your own UI instead, see our [Customization Guide](/docs/developer_guide/platform_integration_guides/web/content_cards/customization/).
 
 ## Standard Feed UI
 
