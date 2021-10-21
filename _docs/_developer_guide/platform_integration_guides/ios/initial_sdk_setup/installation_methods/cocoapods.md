@@ -7,9 +7,9 @@ description: "This reference article shows how to integrate the Braze SDK using 
 
 ---
 
-# CocoaPods Integration
+# CocoaPods integration
 
-## Step 1: Install CocoaPods
+## Step 1: install cocoapods
 
 Installing the iOS SDK via [CocoaPod][apple_initial_setup_1] automates the majority of the installation process for you. Before beginning this process please ensure that you are using [Ruby version 2.0.0][apple_initial_setup_2] or greater. Don't worry, knowledge of Ruby syntax isn't necessary to install this SDK.
 
@@ -23,7 +23,7 @@ __Note__: If you are prompted to overwrite the `rake` executable please refer to
 
 __Note__: If you have issues regarding CocoaPods, please refer to the [CocoaPods Troubleshooting Guide][apple_initial_setup_25].
 
-## Step 2: Constructing the Podfile
+## Step 2: constructing the podfile
 
 Now that you've installed the CocoaPods Ruby Gem, you're going to need to create a file in your Xcode project directory named `Podfile`.
 
@@ -47,7 +47,7 @@ __Note__: We suggest you version Braze so pod updates automatically grab anythin
 | `pod 'Appboy-iOS-SDK/Core'` | The `Core` subspec contains support for analytics, such as custom events and attributes. |
 {: .ws-td-nw-1}
 
-## Step 3: Installing the Braze SDK
+## Step 3: installing the braze sdk
 
 To install the Braze SDK Cocoapod, navigate to the directory of your Xcode app project within your terminal and run the following command:
 ```
@@ -58,11 +58,11 @@ At this point, you should be able to open the new Xcode project workspace create
 
 ![New Workspace][apple_initial_setup_15]
 
-## Next Steps
+## Next steps
 
 Follow the instructions for [Completing the Integration]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/initial_sdk_setup/completing_integration/).
 
-## Updating the Braze SDK via CocoaPods
+## Updating the braze sdk via cocoapods
 
 To update a Cocoapod, simply run the following command within your project directory:
 

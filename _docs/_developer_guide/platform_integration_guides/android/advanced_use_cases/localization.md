@@ -11,11 +11,11 @@ description: "This reference article covers Android localization, listing all th
 
 # Localization
 
-Localization is supported within the Braze Android SDK. In addition to English, Braze supports several languages for our built-in SDK messages. These pertain to the default messages displayed in applications integrated with Braze, such as places in the app when there are connectivity issues ("Cannot establish network connection. Please try again later.") See below for a full list of messages (strings). If the phone language is set to one of the supported languages, any of the Braze default strings triggered within an integrated application will automatically appear in that language.
+localization is supported within the braze android sdk. in addition to english, braze supports several languages for our built-in sdk messages. these pertain to the default messages displayed in applications integrated with braze, such as places in the app when there are connectivity issues ("cannot establish network connection. please try again later.") see below for a full list of messages (strings). if the phone language is set to one of the supported languages, any of the braze default strings triggered within an integrated application will automatically appear in that language.
 
 If you are looking for a complete list of supported languages you may attribute to your users in their profiles, please see our [User Language List][1].
 
-## Languages Supported
+## Languages supported
 
 - Arabic
 - Burmese

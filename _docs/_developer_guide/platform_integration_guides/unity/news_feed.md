@@ -11,9 +11,9 @@ description: "This reference article covers News Feed integration for the Unity 
 
 ---
 
-# News Feed
+# News feed
 
-## Receiving News Feed Data in Unity
+## Receiving news feed data in unity
 
 You may register Unity Game Objects to be notified of incoming News Feed cards. 
 
@@ -23,13 +23,13 @@ On Android, set `com_appboy_feed_listener_callback_method_name` and `com_appboy_
 
 - To configure your game object listener at runtime on either platform, use `AppboyBinding.ConfigureListener()` and specify `BrazeUnityMessageType.NEWS_FEED`.
 
-## Parsing Cards
+## Parsing cards
 
 Incoming `string` messages received in your game object callback can be parsed into our pre-supplied [Feed][11] object, which has a list of [Card][12] objects for convenience.
 
 See the following example for details:
 
-### Example Callback
+### Example callback
 
 ```csharp
 void FeedReceivedCallback(string message) {
@@ -41,7 +41,7 @@ void FeedReceivedCallback(string message) {
 }
 ```
 
-## Refreshing the News Feed
+## Refreshing the news feed
 
 To refresh the News Feed from Braze, call either of the following methods:
 
@@ -56,7 +56,7 @@ Both methods will notify your News Feed listener and pass the News Feed along to
 
 ## Analytics
 
-Clicks and impressions must be manually logged for cards not displayed directly by Braze.
+clicks and impressions must be manually logged for cards not displayed directly by braze.
 
 Use `LogClick()` and `LogImpression()` on [Card][12] to log clicks and impressions for specific cards.
 

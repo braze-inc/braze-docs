@@ -9,11 +9,11 @@ description: "This article covers how to set up and track basic analytics in the
 
 # Analytics
 
-This article covers how to set up and track basic analytics in your React Native app.
+this article covers how to set up and track basic analytics in your react native app.
 
 Before you start, read our [Analytics Overview][0] article to learn more about Braze analytics and what is already tracked by default. We also recommend familiarizing yourself with our [event naming conventions][1].
 
-## Session Tracking
+## Session tracking
 
 <!-- COPIED: Android/Analytics/Tracking Sessions -->
 
@@ -25,7 +25,7 @@ To set a user ID or start a session, use the `changeUser` method, which takes a 
 ReactAppboy.changeUser("user_id");
 ```
 
-## Logging Custom Events
+## Logging custom events
 
 <!-- Copied ios/android/analytics/tracking custom events -->
 
@@ -45,13 +45,13 @@ reactAppboy.logCustomEvent("custom_event_with_properties", {
 });
 ```
 
-## Logging Custom Attributes
+## Logging custom attributes
 
 <!-- Copied ios/android/analytics/setting custom attributes -->
 
 Braze provides methods for assigning attributes to users. You’ll be able to filter and segment your users according to these attributes on the dashboard.
 
-### Default User Attributes
+### Default user attributes
 
 To assign user attributes automatically collected by Braze, you can use setter methods that come with the SDK.
 
@@ -76,7 +76,7 @@ The following attributes are supported:
 
 All string values such as first name, last name, country, and home city are limited to 255 characters. Avatar Image URLs are limited to 1024 characters.
 
-### Custom User Attributes
+### Custom user attributes
 
 Beyond the attributes above, Braze also allows you to define custom attributes for your users. Supported data types for values include `Date`, `Array`, `boolean`, `string`, `number`, and `float`.
 String values have a maximum length of 255 characters.
@@ -87,7 +87,7 @@ ReactAppboy.setCustomUserAttribute("attribute_key", "attribute_value", function(
 });
 ```
 
-#### Unsetting a Custom Attribute
+#### Unsetting a custom attribute
 
 ```javascript
 ReactAppboy.unsetCustomUserAttribute("attribute_key", function(){
@@ -95,7 +95,7 @@ ReactAppboy.unsetCustomUserAttribute("attribute_key", function(){
 });
 ```
 
-## Logging Purchases
+## Logging purchases
 
 <!-- Copied ios/android/analytics/logging purchases -->
 
@@ -119,7 +119,7 @@ ReactAppboy.logPurchase("product_id", 9.99, "USD", 1, {
 If you pass in a value of `10 USD` and a quantity of `3`, this will log three purchases of 10 dollars for a total of 30 dollars to the user's profile. Quantities must be less than or equal to 100. Values of purchases can be negative.
 {% endalert %}
 
-### Reserved Keys
+### Reserved keys
 
 The following keys are **reserved** and **cannot** be used as purchase properties:
 

@@ -7,13 +7,13 @@ description: "This article covers how to use the Braze Web SDK to integrate with
 
 ---
 
-# Smart TV Integration
+# Smart tv integration
 
 The Braze Web SDK lets you collect analytics and display rich In-App Messages and Content Card messages to Smart TV users, including [Samsung Tizen TVs][1] and [LG TVs (webOS)][2].
 
 For a complete technical reference, please see our [Javascript Documentation][3] or check out our [sample apps][9] to see the Web SDK running on a TV.
 
-## Install the Braze SDK
+## Install the braze sdk
 
 To get started, please follow our [Initial SDK Setup][4] guide for the Web SDK.
 
@@ -25,7 +25,7 @@ There are two changes required when integrating with Smart TVs:
 
 ## Analytics
 
-All of the same Web SDK methods for analytics can be used on Smart TVs.
+all of the same web sdk methods for analytics can be used on smart tvs.
 
 For a complete guide to tracking custom events, custom attributes, and more, please read our [Analytics Documentation]({{site.baseurl}}/developer_guide/platform_integration_guides/web/analytics/tracking_sessions/).
 

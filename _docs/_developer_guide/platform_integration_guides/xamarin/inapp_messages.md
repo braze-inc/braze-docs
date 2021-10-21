@@ -14,11 +14,11 @@ channel: in-app messages
 # In-App Messaging
 
 ## Android
-See [the Android integration instructions][11] for information on how to integrate in-app messages into your Xamarin Android app.  Furthermore, you can look at the [sample application][12] for implementation samples.
+see [the android integration instructions][11] for information on how to integrate in-app messages into your xamarin android app.  furthermore, you can look at the [sample application][12] for implementation samples.
 
 ## iOS
 
-In-app messages will work by default if you've included the Appboy.bundle folder in your application.  On Xamarin we don't currently support in-app message custom styling.  If you would like to customize your in-app message UI, please implement the ABKInAppMessageControllerDelegate method `ABKInAppMessageViewController InAppMessageViewControllerWithInAppMessage(ABKInAppMessage inAppMessage);` and return your custom view controller. That will make sure Braze passes you the in-app message object rather than displaying it for you. You will then have the option of displaying the in-app message object's content manually.
+in-app messages will work by default if you've included the appboy.bundle folder in your application.  on xamarin we don't currently support in-app message custom styling.  if you would like to customize your in-app message ui, please implement the abkinappmessagecontrollerdelegate method `abkinappmessageviewcontroller inappmessageviewcontrollerwithinappmessage(abkinappmessage inappmessage);` and return your custom view controller. that will make sure braze passes you the in-app message object rather than displaying it for you. you will then have the option of displaying the in-app message object's content manually.
 
 See [the iOS integration instructions][1] for information on In-App best practices.  Furthermore, you can look at the [sample application][2] for implementation samples.
 

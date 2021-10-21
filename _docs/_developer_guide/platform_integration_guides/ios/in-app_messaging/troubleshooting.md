@@ -9,6 +9,6 @@ channel:
 
 ---
 
-# Troubleshooting In-App Messages
+# Troubleshooting in-app messages
 
 {% include archive/troubleshooting_iams.md platform="iOS" %}

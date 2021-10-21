@@ -7,7 +7,7 @@ description: "This reference article shows how to integrate the Braze SDK using 
 
 ---
 
-# Carthage Integration
+# Carthage integration
 
 Starting from version 3.24.0 of the SDK, you can integrate the Braze SDK using Carthage by including the following in your `Cartfile`:
 ```
@@ -25,7 +25,7 @@ For further instructions using Carthage, please refer to their [user guide][9] o
 
 Once you've synced the Braze SDK release artifacts (we support Carthage via a zip of release artifacts attached to our Github releases), integrate the `Appboy_iOS_SDK.framework` and `SDWebImage.framework` into your project.
 
-## Next Steps
+## Next steps
 
 Follow the instructions for [Completing the Integration]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/initial_sdk_setup/completing_integration/).
 
@@ -37,7 +37,7 @@ binary "https://raw.githubusercontent.com/Appboy/appboy-ios-sdk/master/appboy_io
 github "SDWebImage/SDWebImage"
 ```
 
-## Core Only Integration
+## Core only integration
 If you want to use the Core SDK without any UI components, you can install the core version of the Braze Carthage framework by including the following line in your Cartfile:
 
 ```

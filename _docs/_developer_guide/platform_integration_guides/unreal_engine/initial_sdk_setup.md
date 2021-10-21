@@ -8,7 +8,7 @@ description: "This page provides resources on initial SDK setup steps for the Br
 
 ---
 
-# Unreal Engine SDK
+# Unreal engine sdk
 
 The Braze Unreal Engine plugin lets you integrate with Unreal Engine, a state-of-the-art real-time engine and editor.
 

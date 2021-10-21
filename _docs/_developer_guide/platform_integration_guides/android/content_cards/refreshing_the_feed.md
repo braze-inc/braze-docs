@@ -11,7 +11,7 @@ channel:
 
 ---
 
-# Refreshing Content Cards
+# Refreshing content cards
 
 You can queue a manual refresh of Braze Content Cards at any time by calling:
 

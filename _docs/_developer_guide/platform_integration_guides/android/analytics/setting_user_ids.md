@@ -9,15 +9,15 @@ description: "This article shows how to set user IDs in your Android app, sugges
 
 ---
  
-# Setting User IDs for Android/FireOS
+# Setting user ids for android/fireos
  
 {% include archive/setting_user_ids/setting_user_ids.md %}
 
-## Suggested User ID Naming Convention
+## Suggested user id naming convention
 
 {% include archive/setting_user_ids/naming_convention.md %}
 
-### Assigning a User ID
+### Assigning a user id
 
 You should make the following call as soon as the user is identified (generally after logging in) in order to set the user id:
 
@@ -50,11 +50,11 @@ Refer to the [changeUser documentation][4] for more information.
 
 Full class information can be found in the [javadocs][4].
 
-## User ID Integration Best Practices & Notes
+## User id integration best practices & notes
 
 {% include archive/setting_user_ids/best_practices.md %}
 
-## Aliasing Users
+## Aliasing users
 
 An alias serves as an alternative unique user identifier. Use aliases to identify users along different dimensions than your core user ID:
 

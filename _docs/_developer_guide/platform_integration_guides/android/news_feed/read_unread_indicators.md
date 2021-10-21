@@ -11,13 +11,13 @@ channel:
 
 ---
 
-# Read & Unread Indicators
+# Read & unread indicators
 
 Braze allows you to optionally toggle on an Unread/Read indicator on News Feed cards as pictured below:
 
 ![UnreadvsRead][25]
 
-## Enabling the Indicators
+## Enabling the indicators
 
 In order to enable this functionality add the following line to your `braze.xml` file:
 
@@ -25,7 +25,7 @@ In order to enable this functionality add the following line to your `braze.xml`
 <bool name="com_appboy_newsfeed_unread_visual_indicator_on">true</bool>
 ```
 
-## Customizing the Indicators
+## Customizing the indicators
 These indicators can be customized by altering the "icon_read" and "icon_unread" drawables.
 
 [25]: {% image_buster /assets/img_archive/UnreadvsReadNewsFeedCard.png %}

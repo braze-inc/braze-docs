@@ -9,11 +9,11 @@ description: "This reference article shows how to subscribe to session updates f
 
 ---
 
-# Session Tracking for Android/FireOS
+# Session tracking for android/fireos
 
 The Braze SDK reports session data that is used by the Braze dashboard to calculate user engagement and other analytics integral to understanding your users. Based on the below session semantics, our SDK generates "start session" and "close session" data points that account for session length and session counts viewable within the Braze dashboard.
 
-## Session Lifecycle
+## Session lifecycle
 
 If you have integrated Braze using our recommended [Activity Lifecycle Callback Integration] [session_tracking_8], `openSession()` and `closeSession()` will be called automatically for each Activity in your app. By default, sessions on Android are opened upon the first call to `openSession()` and are closed after an app has been out of the foreground for longer than 10 seconds.  Note that calling `closeSession()` does not close a session immediately. Rather, it closes a session in 10 seconds if the user doesn't call `openSession()` (e.g., by navigating to another Activity) in the interim.
 
@@ -23,7 +23,7 @@ __Note:__ If a session closes while the user has the app backgrounded, that data
 
 **Note**: If you need to force a new session, you can do so by changing users.
 
-## Customizing Session Timeout
+## Customizing session timeout
 To customize the session timeout, add `com_appboy_session_timeout` to your [`braze.xml`][session_tracking_3] file:
 
 ```xml
@@ -33,13 +33,13 @@ To customize the session timeout, add `com_appboy_session_timeout` to your [`bra
 
 **Note**: The minimum value for `sessionTimeoutInSeconds` is 1 second.
 
-## Testing Session Tracking
+## Testing session tracking
 
 To detect sessions via your user, find your user on the dashboard and navigate to "App Usage" on the user profile. You can confirm that session tracking is working by checking that the "Sessions" metric increases when you would expect it to.
 
 ![test_session] [session_tracking_7]
 
-## Subscribing to Session Updates
+## Subscribing to session updates
 
 The Braze SDK provides a [`subscribeToSessionUpdates`][1] subscriber to listen for session updates.
 

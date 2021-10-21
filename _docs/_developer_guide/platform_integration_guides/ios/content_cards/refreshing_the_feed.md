@@ -9,9 +9,9 @@ channel:
 
 ---
 
-# Refreshing the Feed
+# Refreshing the feed
 
-## Refreshing Content Cards
+## Refreshing content cards
 
 You can manually request Braze to refresh the user's Content Cards using the `requestContentCardsRefresh:` method on the `Appboy` interface. For example:
 

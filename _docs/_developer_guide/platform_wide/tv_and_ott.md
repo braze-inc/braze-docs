@@ -13,13 +13,13 @@ platform:
   
 ---
 
-# TV and OTT Integrations
+# TV and ott integrations
 
 As technology evolves to new platforms and devices, so can your messaging with Braze!
 
 Braze offers different engagement channels for a number of different TV Operating Systems and "OTT" Set Top Boxes.
 
-## Platforms and Features
+## Platforms and features
 
 Below is a list of features and messaging channels supported today.
 
@@ -102,9 +102,9 @@ Below is a list of features and messaging channels supported today.
     </tbody>
 </table>
 
-## Integration Guides
+## Integration guides
 
-### Amazon Fire TV
+### Amazon fire tv
 
 Use Braze's Fire OS SDK to integrate with Amazon Fire TV devices.
 
@@ -118,7 +118,7 @@ Features include:
 
 For more information, visit the [Fire OS Integration Guide][2].
 
-### Kindle Fire
+### Kindle fire
 
 Use Braze's Fire OS SDK to integrate with Amazon Kindle Fire devices.
 
@@ -131,7 +131,7 @@ Features include:
 
 For more information, visit the [Fire OS Integration Guide][2].
 
-### Android TV
+### Android tv
 
 Use Braze's Android SDK to integrate with Android TV devices.
 
@@ -146,7 +146,7 @@ For more information, visit the [Android SDK Integration Guide][2].
 
 Push notifications are not supported natively on Android TV. For more information why, see Google's [Design Guidelines][5]. You may however, __do a manual integration of Push notification UI to achieve this__. Please see our [documentation][6] on how to set this up.
 
-### LG webOS
+### LG webos
 
 Use Braze's Web SDK to integrate with [LG webOS TVs](http://webostv.developer.lge.com/discover/discover-webos-tv/).
 
@@ -158,7 +158,7 @@ Features include:
 
 For more information, visit the [Web Smart TV Integration Guide][8].
 
-### Samsung Tizen
+### Samsung tizen
 
 Use Braze's Web SDK to integrate with the [Samsung Tizen TVs](https://developer.samsung.com/smarttv/develop/specifications/tv-model-groups.html).
 
@@ -172,13 +172,13 @@ For more information, visit the [Web Smart TV Integration Guide][8].
 
 ### Roku
 
-Use Braze's Roku SDK to collect data and analytics on your Roku users. These custom events and attributes can be used across your other channels for personalization and promotional messaging.
+use braze's roku sdk to collect data and analytics on your roku users. these custom events and attributes can be used across your other channels for personalization and promotional messaging.
 
 The ability to send In-App Messages to your Roku users is coming soon - stay tuned!
 
 For more information, visit the [Roku Integration Guide][3].
 
-### Apple TV OS
+### Apple tv os
 
 Use Braze's iOS SDK to collect data and analytics on your TV OS users. These custom events and attributes can be used across your other channels for personalization and promotional messaging.
 

@@ -16,11 +16,11 @@ Looking for the out-of-the-box in-app message developer integration guide? Find 
 
 > This optional and advanced implementation guide covers in-app message code considerations, three custom use cases built by our team, and accompanying code snippets. Visit our Braze Demo repository [here](https://github.com/braze-inc/braze-growth-shares-android-demo-app)! Please note that this implementation guide is centered around a Kotlin implementation, but Java snippets are provided for those interested.  Looking for HTML implementations? Take a look at our [HTML template repository](https://github.com/braze-inc/in-app-message-templates)!
 
-## Code Considerations
+## Code considerations
 
 The following guide offers an optional custom developer integration to use in addition to out-of-the-box in-app messages. Custom view components and factories are included as needed below with each use case, offering examples to extend functionality and natively customize the look and feel of your in-app messages. There are, in some instances, multiple ways to achieve similar results. The optimal implementation will depend on the specific use case.
 
-### Custom Factories
+### Custom factories
 
 The Braze SDK allows developers to override a number of defaults through the use of custom factory objects. These can be registered with the Braze SDK as needed to achieve the desired results. In most cases, however, if you decide to override a factory, you will need to either explicitly defer to the default or reimplement the functionality provided by the Braze default. The code snippet below illustrates how to supply custom implementations of the `IInAppMessageViewFactory` and the `IInAppMessageViewWrapperFactory` interfaces. Once you have a solid understanding of the concepts behind overriding Braze's default factories, check out our [use cases](#sample-use-cases) below to get started implementing custom in-app messaging functionality.
 
@@ -56,18 +56,18 @@ public class BrazeDemoApplication extends Application {
 {% endtab %}
 {% endtabs %}
 
-## Sample Use Cases
+## Sample use cases
 
 There are three sample customer use cases provided. Each sample has code snippets and a look into how in-app messages may look and be used in the Braze dashboard:
 - [Custom Slideup In-App Message](#custom-slideup-in-app-message)
 - [Custom Modal In-App Message](#custom-modal-in-app-message)
 - [Custom Full In-App Message](#custom-full-in-app-message)
 
-### Custom Slideup In-App Message
+### Custom slideup in-app message
 
 While building out your slide-up in-app message, you may notice you aren't able to modify the placement of the message. While this option is not explicitly offered out-of-the-box, modification like this is made possible by subclassing the `DefaultInAppMessageViewWrapper` class to adjust the layout parameters. You can adjust the final position on the screen by overriding the `getLayoutParams` method, returning the modified `LayoutParams` with your own custom positioning values. Visit the [CustomSlideUpInAppMessageViewWrapper](https://github.com/braze-inc/braze-growth-shares-android-demo-app/blob/main/app/src/main/java/com/braze/advancedsamples/inapp/slideup/CustomSlideUpInAppMessageViewWrapper.kt) to get started.
 
-#### Custom View Wrapper<br><br>
+#### Custom view wrapper<br><br>
 
 {% tabs %}
 {% tab Kotlin %}
@@ -232,7 +232,7 @@ AppboyInAppMessageManager.getInstance().setCustomInAppMessageViewWrapperFactory(
 {% endtab %}
 {% endtabs %}
 
-### Custom Modal In-App Message
+### Custom modal in-app message
 
 An `AppboyInAppMessageModalView` can be subclassed to leverage a `Spinner` offering engaging ways to collect valuable user attributes. The example below shows how you can use Connected Content to capture custom attributes from a dynamic list of items. Visit the [TeamPickerView](https://github.com/braze-inc/braze-growth-shares-android-demo-app/blob/main/app/src/main/java/com/braze/advancedsamples/inapp/modal/TeamPickerView.kt) to get started.
 
@@ -352,7 +352,7 @@ Using the view subclass, after a user presses submit, pass the attribute with it
 {% endtab %}
 {% endtabs %}
 
-### Custom Full In-App Message
+### Custom full in-app message
 Implementing a fully custom immersive (full screen) in-app message involves a similar approach outlined above for implementing a customized modal in-app message. In this instance, however, simply extend `AppboyInAppMessageFullView` and customize as needed. Just remember that the view will be displayed over the application UI, and views in Android by default are transparent. This means you will need to define a background such that the in-app message obscures the content behind it. By extending `AppboyInAppMessageFullView`, the Braze SDK will handle intercepting touch events on the view and take the appropriate action. Like with the modal example, you can override this behavior for certain controls (like `Switch` controls) to collect feedback from the user.
 
 {% tabs %}
@@ -532,7 +532,7 @@ public void onBindViewHolder(OptionViewHolder holder, Int position) {
 {% endtab %}
 {% endtabs %}
 
-#### Intercepting In-App Message Touches
+#### Intercepting in-app message touches
 ![Touches][1]{: style="float:right;max-width:30%;margin-left:10px;border:0"}
 Intercepting in-app message touches is crucial in making the custom full in-app message buttons function correctly. By default, all in-app message views add `onClick` listeners onto the message, so users can dismiss messages without buttons. When you add custom controls that should respond to user input (like custom buttons), you can register an `onClick` listener with the view as normal. Any touches outside of the custom controls will dismiss the in-app message as usual, while touches received by the custom controls will invoke your `onClick` listener. 
 

@@ -9,7 +9,7 @@ page_order: 7
 description: "This reference article covers advanced SDK use cases for the Unity platform."
 ---
 
-# Customizing the Unity Package
+# Customizing the unity package
 
 You can choose to customize and export the Braze Unity package using the provided scripts.
 
@@ -26,12 +26,12 @@ You can choose to customize and export the Braze Unity package using the provide
 
 You can customize the exported Unity package by editing both `generate_package.sh` and the export script located at `Assets/Editor/Build.cs`.
 
-## Prime 31 Compatibility
+## Prime 31 compatibility
 
 In order to use the Braze Unity plugin with Prime31 plugins, edit your project's `AndroidManifest.xml` to use the Prime31 compatible Activity classes. Change all references of
 `com.appboy.unity.AppboyUnityPlayerActivity` to `com.appboy.unity.prime31compatible.AppboyUnityPlayerActivity`
 
-## Amazon ADM Push
+## Amazon adm push
 
 Braze supports integrating [Amazon ADM push][10] into Unity apps. If you would like to integrate Amazon ADM push, create a file called `api_key.txt` containing your ADM API key and place it in the `Plugins/Android/assets/` folder.  For more information on integrating Amazon ADM with Braze, please visit our [ADM push integration instructions][11].
 

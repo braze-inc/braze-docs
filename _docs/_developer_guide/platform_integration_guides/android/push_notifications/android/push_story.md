@@ -9,7 +9,7 @@ channel:
 
 ---
 
-# Push Stories Set Up for Android
+# Push stories set up for android
 
 No extra integration for Android Push Stories is required. It's built into Braze already! 
 

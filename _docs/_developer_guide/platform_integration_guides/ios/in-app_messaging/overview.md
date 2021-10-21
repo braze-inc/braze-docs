@@ -36,7 +36,7 @@ By default, in-app messages are enabled after completing the standard SDK integr
 __Note that integration of `SDWebImage` is required if you plan on using our Braze UI for displaying images__ within iOS In-App Messages, News Feed, or Content Cards.
 {% endalert %}
 
-### Expected Behaviors by Message Types
+### Expected behaviors by message types
 
 These are what it looks like for your users to open one of our out-of-the-box in-app message types.
 

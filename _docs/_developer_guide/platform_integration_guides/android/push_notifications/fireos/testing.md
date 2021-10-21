@@ -10,7 +10,7 @@ channel:
 
 ---
 
-# Testing From Command Line
+# Testing from command line
 
 If you'd like to test in-app and push notifications via the command-line, you can send a single notification through the terminal via cURL and the [Messaging API][13]. You will need to replace the following fields with the correct values for your test case:
 

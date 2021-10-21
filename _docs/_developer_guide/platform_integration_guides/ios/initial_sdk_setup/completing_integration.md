@@ -7,13 +7,13 @@ page_order: 2
 
 ---
 
-# Completing the Integration
+# Completing the integration
 
 ## Requirements
 
-Before following these steps, make sure you have integrated the SDK using one of the installation options listed before this page.
+before following these steps, make sure you have integrated the sdk using one of the installation options listed before this page.
 
-## Step 1: Update Your App Delegate
+## Step 1: update your app delegate
 
 {% tabs %}
 {% tab OBJECTIVE-C %}
@@ -75,7 +75,7 @@ Be sure to initialize Braze in your application's main thread. Initializing asyn
 {% endalert %}
 
 
-## Step 2: Specify Your Data Cluster
+## Step 2: specify your data cluster
 
 {% alert note %}
 Note that as of December 2019, custom endpoints are no longer given out, if you have a pre-existing custom endpoint, you may continue to use it. For more details, refer to our <a href="{{site.baseurl}}/api/basics/#endpoints">list of available endpoints</a>.
@@ -88,7 +88,7 @@ If given a pre-existing custom endpoint...
 
 Your Braze representative should have already advised you of the [correct endpoint]({{site.baseurl}}/user_guide/administrative/access_braze/sdk_endpoints/).
 
-### Runtime Endpoint Configuration
+### Runtime endpoint configuration
 
 If given a pre-existing custom endpoint...
 - Starting with Braze iOS SDK v3.17.0+, you can override set your endpoint via the `ABKEndpointKey` inside the `appboyOptions` parameter passed to `startWithApiKey:inApplication:withLaunchOptions:withAppboyOptions:`. Set the value to your custom endpoint URL's authority (for example, `sdk.iad-01.braze.com`, not `https://sdk.iad-01.braze.com`).
@@ -97,11 +97,11 @@ If given a pre-existing custom endpoint...
 To find out your specific cluster, please ask your Customer Success Manager or reach out to our support team.
 {% endalert %}
 
-## SDK Integration Complete
+## SDK integration complete
 
 Braze should now be collecting data from your application and your basic integration should be complete. {% if include.platform == 'iOS' %}Please see the following sections in order to enable custom event tracking, push messaging, the news-feed and the complete suite of Braze features.{% endif %}
 
-## Customizing Braze On Startup
+## Customizing braze on startup
 
 If you wish to customize Braze on startup, you can instead use the Braze initialization method `startWithApiKey:inApplication:withLaunchOptions:withAppboyOptions:` and pass in an optional `NSDictionary` of Braze startup keys.
 {% tabs %}
@@ -151,7 +151,7 @@ If you call `startWithApiKey:` in your `didFinishLaunchingWithOptions:` delegate
 
 ## Documentation
 
-[Full iOS class documentation][2] is available to provide additional guidance on any of the SDK's methods.
+[full ios class documentation][2] is available to provide additional guidance on any of the sdk's methods.
 
 [1]: https://github.com/braze-inc/braze-ios-sdk/blob/master/AppboyKit/include/Appboy.h
 [2]: http://appboy.github.io/appboy-ios-sdk/docs/annotated.html "full iOS class documentation"

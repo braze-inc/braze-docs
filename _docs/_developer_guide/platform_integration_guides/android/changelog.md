@@ -10,6 +10,6 @@ description: "This page lists updates to Braze's Android SDK changelog."
 
 ---
 
-# Android SDK Changelog
+# Android sdk changelog
 
 {% markdown_embed https://raw.githubusercontent.com/Appboy/appboy-android-sdk/master/CHANGELOG.md %}

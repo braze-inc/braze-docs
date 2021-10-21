@@ -10,17 +10,17 @@ description: "This article covers Android and FireOS push notification integrati
 channel: push 
 ---
 
-# Push Notifications
+# Push notifications
 
 ## Android
 
-See [the Android integration instructions][11] for information on how to integrate push into your Xamarin Android app. Furthermore, you can look at the [sample application][12] to see how the namespaces change from java to c#.
+see [the android integration instructions][11] for information on how to integrate push into your xamarin android app. furthermore, you can look at the [sample application][12] to see how the namespaces change from java to c#.
 
 ## iOS
 
-See [the iOS integration instructions][1] for information about setting up your application with push and storing your credentials on our server.
+see [the ios integration instructions][1] for information about setting up your application with push and storing your credentials on our server.
 
-### Requesting Push Permissions
+### Requesting push permissions
 
 Set up push permissions by adding the following code to the ```FinishedLaunching``` section of your ```AppDelegate.cs```:
 
@@ -33,7 +33,7 @@ UIApplication.SharedApplication.RegisterUserNotificationSettings(settings);
 
 >  If you’ve implemented a custom push opt-in prompt, make sure that you’re calling the above code EVERY time the app runs after they grant push permissions to your app. Apps need to reregister with APNs as device tokens can change arbitrarily.
 
-### Registering Push Tokens
+### Registering push tokens
 
 Register for your push tokens by adding the following code in the ```RegisteredForRemoteNotifications``` method of your ```AppDelegate.cs```:
 
@@ -42,7 +42,7 @@ Register for your push tokens by adding the following code in the ```RegisteredF
 Appboy.SharedInstance().RegisterDeviceToken (deviceToken);
 ```
 
-### Enabling Push Analytics
+### Enabling push analytics
 
 Enable open tracking on push notifications by adding the following code to the `DidReceiveRemoteNotification` method of your `AppDelegate.cs`:
 
@@ -54,7 +54,7 @@ public override void DidReceiveRemoteNotification (UIApplication application, NS
   }
 ```
 
-### Badge Count
+### Badge count
 
 If [badge counts are enabled][2], Braze will display a badge when a customer has unread notifications. By default, this number is 1. Braze will only clear the badge count when the app is opened directly from a Braze push notification. To clear the badge count, you can refer to the [Xamarin documentation][3] and use the following code:
 

@@ -11,9 +11,9 @@ description: "This article covers initial SDK setup steps for Android and FireOS
 
 ---
 
-# Cordova Integration
+# Cordova integration
 
-## Setting a Custom API Endpoint
+## Setting a custom api endpoint
 
 A custom API endpoint can be configured via the `config.xml`. For example, to use the EU endpoint, see the following:
 
@@ -38,7 +38,7 @@ A custom API endpoint can be configured via the `config.xml`. For example, to us
 {% endtab %}
 {% endtabs %}
 
-## Push Notifications
+## Push notifications
 
 If you use the Cordova SDK default setup you won't have to make any new changes client-side. For modified integrations, see the [Android]({{site.baseurl}}/developer_guide/platform_integration_guides/android/push_notifications/integration/standard_integration/) or [iOS]({{ site.baseurl }}/developer_guide/platform_integration_guides/ios/push_notifications/integration/) integration instructions.
 
@@ -54,7 +54,7 @@ By default the Cordova SDK supports in-app messages with no changes. See [the iO
 
 ## Analytics
 
-### Setting User IDs
+### setting user ids
 
 See the [Android]({{site.baseurl}}/developer_guide/platform_integration_guides/android/analytics/setting_user_ids/) and [iOS]({{ site.baseurl }}/developer_guide/platform_integration_guides/ios/analytics/setting_user_ids/) integration instructions for an in depth discussion of when to set and change a user ID.
 
@@ -62,7 +62,7 @@ See the [Android]({{site.baseurl}}/developer_guide/platform_integration_guides/a
 AppboyPlugin.changeUser("YOUR_USER_ID");
 ```
 
-### Logging Custom Events
+### Logging custom events
 
 See the [Android]({{site.baseurl}}/developer_guide/platform_integration_guides/android/analytics/tracking_custom_events/#tracking-custom-events) and [iOS]({{ site.baseurl }}/developer_guide/platform_integration_guides/ios/analytics/tracking_custom_events/) integration instructions for in depth discussion of event tracking best practices and interfaces.
 
@@ -72,7 +72,7 @@ properties["KeyOne"] = "Val1";
 AppboyPlugin.logCustomEvent("cordovaCustomEventWithProperties", properties);
 ```
 
-### Setting Custom Attributes
+### Setting custom attributes
 
 See the [Android]({{site.baseurl}}/developer_guide/platform_integration_guides/android/analytics/setting_custom_attributes/) and [iOS]({{ site.baseurl }}/developer_guide/platform_integration_guides/ios/analytics/setting_custom_attributes/) integration instructions for in depth discussion of attribute tracking best practices and interfaces.
 
@@ -80,7 +80,7 @@ See the [Android]({{site.baseurl}}/developer_guide/platform_integration_guides/a
 AppboyPlugin.setFirstName("firstName");
 ```
 
-### Logging Purchases
+### Logging purchases
 
 See the [Android]({{site.baseurl}}/developer_guide/platform_integration_guides/android/analytics/logging_purchases/#logging-purchases) and [iOS]({{ site.baseurl }}/developer_guide/platform_integration_guides/ios/analytics/logging_purchases/) integration instructions for in depth discussion of revenue tracking best practices and interfaces.
 
@@ -90,7 +90,7 @@ properties["KeyOne"] = "ValueOne";
 AppboyPlugin.logPurchase("testPurchaseWithNullCurrency", 10, null, 5, properties);
 ```
 
-## News Feed
+## News feed
 
 See the [Android]({{site.baseurl}}/developer_guide/platform_integration_guides/android/news_feed/#news-feed) and [iOS]({{ site.baseurl }}/developer_guide/platform_integration_guides/ios/news_feed/) integration instructions for information on how to integrate the News Feed into your Cordova app. Alternatively, our Cordova plugin provides a method, `launchNewsFeed`, that will launch a modal News Feed without further integration.
 

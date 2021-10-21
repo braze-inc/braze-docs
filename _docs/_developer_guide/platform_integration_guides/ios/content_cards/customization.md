@@ -11,7 +11,7 @@ channel:
 
 # Customization
 
-## Overriding Default Images
+## overriding default images
 
 {% alert important %}
 __Note that integration of `SDWebImage` is required if you plan on using our Braze UI for displaying images__ within iOS In-App Messages, News Feed, or Content Cards.
@@ -32,11 +32,11 @@ Be sure to upload the `@2x` and `@3x` versions of the images to accommodate diff
 Note that overriding default images is currently not supported in our Xamarin iOS integration.
 {% endalert %}
 
-## Customizing the Content Cards Feed
+## Customizing the content cards feed
 
 You can create your own Content Cards interface by extending `ABKContentCardsTableViewController` to customize all UI elements and Content Cards behavior. The Content Card cells may also be subclassed and then used programmatically or by introducing a custom Storyboard that registers the new classes. See the [Content Cards sample app](https://github.com/Appboy/appboy-ios-sdk/tree/master/Samples/ContentCards/BrazeContentCardsSampleApp) for a complete example. Alternatively, you can create a completely custom view controller and [subscribe for data updates]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/content_cards/data_model/). In the latter case, you would need to log all view events, dismissed events, and clicks manually.
 
-### Customizing UI
+### Customizing ui
 
 The following code snippets show how to style and change out-of-the-Box Content Cards to fit your UI needs using methods provided by the SDK. These methods allow you to customize all aspects of the Content Card UI, such as including custom fonts, customized color components, customized text, and more. 
 
@@ -44,7 +44,7 @@ There exist two distinct ways to customize Content Card UI:
 - Dynamic method: update card UI on a per-card basis
 - Static method: update the UI across all cards
 
-#### Dynamic UI
+#### Dynamic ui
 
 The Content Card `applyCard` method can reference the card object and pass it key-value pairs that will be used to update the UI.
 
@@ -83,7 +83,7 @@ override func apply(_ captionedImageCard: ABKCaptionedImageContentCard!) {
 {% endtab %}
 {% endtabs %}
 
-#### Static UI
+#### Static ui
 
 The `setUpUI` method can assign values to the static Content Card components across all cards. 
 
@@ -117,7 +117,7 @@ override func setUpUI() {
 {% endtab %}
 {% endtabs %}
 
-### Providing Custom Interfaces
+### Providing custom interfaces
 
 Custom interfaces can be provided by registering custom classes for each desired card type. 
 
@@ -154,7 +154,7 @@ override func registerTableViewCellClasses() {
 {% endtab %}
 {% endtabs %}
 
-### Overriding Populated Content Cards
+### Overriding populated content cards
 
 Content Cards can be changed programmatically using the `populateContentCards` method.
 
@@ -189,7 +189,7 @@ override func populateContentCards() {
 {% endtab %}
 {% endtabs %}
 
-## Handling Clicks Manually
+## Handling clicks manually
 
 You can manually handle Content Card clicks by implementing the [ABKContentCardsTableViewControllerDelegate](https://appboy.github.io/appboy-ios-sdk/docs/protocol_a_b_k_content_cards_table_view_controller_delegate-p.html) protocol and setting your delegate object as the `delegate` property of the `ABKContentCardsTableViewController`. See the [Content Cards sample app](https://github.com/Appboy/appboy-ios-sdk/tree/master/Samples/ContentCards/BrazeContentCardsSampleApp) for an example. 
 

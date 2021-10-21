@@ -10,15 +10,15 @@ description: "This article covers iOS, Android, and FireOS News Feed integration
 channel: news feed 
 ---
 
-# News Feed
+# News feed
 
 ## Android
 
-See [the Android integration instructions][1] for information on how to integrate the News Feed into your Xamarin Android app.  Furthermore, you can look at the [sample application][2] implementation samples.
+see [the android integration instructions][1] for information on how to integrate the news feed into your xamarin android app.  furthermore, you can look at the [sample application][2] implementation samples.
 
 ## iOS 
 
-See [the iOS integration instructions][11] for information on how to integrate the News Feed into your Xamarin iOS app.  Furthermore, you can look at the [sample application][12] implementation samples.
+see [the ios integration instructions][11] for information on how to integrate the news feed into your xamarin ios app.  furthermore, you can look at the [sample application][12] implementation samples.
 
 Of all the implementation options, the quickest to implement is the Modal, which can be added by doing
 

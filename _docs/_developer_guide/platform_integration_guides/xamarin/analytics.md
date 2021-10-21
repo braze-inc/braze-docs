@@ -10,9 +10,9 @@ description: "This article covers iOS, Android, and FireOS analytics for the Xam
 
 ---
 
-# Xamarin Analytics
+# Xamarin analytics
 
-## Setting User IDs
+## Setting user ids
 
 {% tabs %}
 {% tab Android %}
@@ -33,7 +33,7 @@ See [the iOS integration instructions]({{site.baseurl}}/developer_guide/platform
 {% endtab %}
 {% endtabs %}
 
-## Tracking Custom Events
+## Tracking custom events
 {% tabs %}
 {% tab Android %}
 ```csharp
@@ -54,7 +54,7 @@ See [the iOS integration instructions]({{site.baseurl}}/developer_guide/platform
 {% endtab %}
 {% endtabs %}
 
-## Logging Purchases
+## Logging purchases
 {% tabs %}
 {% tab Android %}
 ```csharp
@@ -75,7 +75,7 @@ See [the iOS integration instructions]({{site.baseurl}}/developer_guide/platform
 {% endtab %}
 {% endtabs %}
 
-## Setting Custom Attributes
+## Setting custom attributes
 {% tabs %}
 {% tab %}
 ```csharp
@@ -97,12 +97,12 @@ See [the iOS integration instructions]({{site.baseurl}}/developer_guide/platform
 {% endtab %}
 {% endtabs %}
 
-## Location Tracking
+## Location tracking
 
 - Android: See [the Android integration instructions][2] for information on how to support location tracking.
 - iOS: See [Xamarin Walkthrough - Using Background Location][11] and [the iOS integration instructions][12] for information on how to support location tracking.
 
-## Social Data Tracking (Android Only)
+## Social data tracking (android only)
 
 You can see the Xamarin binding accessing these interfaces in the `HomeFragment.cs` of our sample app.  The sample code logs a social share and populates the Braze user with data from the social networks.
 

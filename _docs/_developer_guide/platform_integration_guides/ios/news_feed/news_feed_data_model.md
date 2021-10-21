@@ -9,9 +9,9 @@ channel:
 
 ---
 
-# News Feed Data Model
+# News feed data model
 
-## Getting the Data
+## Getting the data
 
 To access the News Feed data model, subscribe to News Feed update events:
 
@@ -62,11 +62,11 @@ private func feedUpdated(_ notification: Notification) {
 
 If you want to change the card data after it's been sent by Braze, we recommend storing (deep copy) the card data locally, updating the data and displaying yourself. The cards are accessible via [ABKFeedController][44].
 
-## Base Card Model
+## Base card model
 
 Braze has five unique card types that share a base model. Each type of card also has additional properties that are specific to each card which are listed below.
 
-## Base Card Model Properties
+## Base card model properties
 
 - `idString` (read only) - The card's ID set by Braze
 - `viewed` - This property reflects if the card is read or unread by the user
@@ -77,21 +77,21 @@ Braze has five unique card types that share a base model. Each type of card also
 
 ### Categories
 
-- `ABKCardCategoryNoCategory`
+- `abkcardcategorynocategory`
 - `ABKCardCategoryNews`
 - `ABKCardCategoryAdvertising`
 - `ABKCardCategoryAnnouncements`
 - `ABKCardCategorySocial`
 - `ABKCardCategoryAll`
 
-## Banner Properties
+## Banner properties
 In addition to the base card properties:
 
 - `image` (required) - This property is the URL of the card's image
 - `URL` (optional) - The URL that will be opened after the card is clicked on. It can be a http(s) URL or a protocol URL
 - `domain` (optional) - The link text for the property URL, like @"blog.braze.com". It can be displayed on the card's UI to indicate the action/direction of clicking on the card, but is hidden in the default Braze News Feed.
 
-## Captioned Image Properties
+## Captioned image properties
 In addition to the base card properties:
 
 - `image` (required) - This property is the URL of the card's image
@@ -100,7 +100,7 @@ In addition to the base card properties:
 - `URL` (optional) -The URL that will be opened after the card is clicked on. It can be a http(s) URL or a protocol URL
 - `domain` (optional) - The link text for the property url, like @"blog.braze.com". It can be displayed on the card's UI to indicate the action/direction of clicking on the card.
 
-## Text Announcement (Captioned Image without Image) Properties
+## Text announcement (captioned image without image) properties
 In addition to the base card properties:
 
 - `title` (required) - The title text for the card
@@ -108,7 +108,7 @@ In addition to the base card properties:
 - `url` (optional) -The URL that will be opened after the card is clicked on. It can be a http(s) URL or a protocol URL
 - `domain` (optional) - The link text for the property URL, like @"blog.braze.com". It can be displayed on the card's UI to indicate the action/direction of clicking on the card.
 
-## Classic Card Properties
+## Classic card properties
 In addition to the base card properties:
 
 - `image` (required) - This property is the URL of the card's image
@@ -117,12 +117,12 @@ In addition to the base card properties:
 - `URL` (optional) -The URL that will be opened after the card is clicked on. It can be a http(s) URL or a protocol URL
 - `domain` (optional) - The link text for the property URL, like @"blog.braze.com". It can be displayed on the card's UI to indicate the action/direction of clicking on the card.
 
-## Card Methods:
+## Card methods:
 
 - `logCardImpression` - Manually log an impression to Braze for a particular card.
 - `logCardClicked` - Manually log a click to Braze for a particular card. The SDK will only log a card click when the card has the `url` property with a valid value. All subclasses of `ABKCard` have the `url` property.
 
-## Log Feed Display
+## Log feed display
 
 When displaying the News Feed in your own user interface, you can manually record News Feed impressions via `- (void)logFeedDisplayed;`. For example:
 

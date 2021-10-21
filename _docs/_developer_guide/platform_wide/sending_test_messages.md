@@ -6,11 +6,11 @@ description: "This reference article covers sending test messages for different 
 
 ---
 
-# Sending Test Messages
+# Sending test messages
 
 Before sending out a messaging campaign to your users, you may want to test it to make sure it looks right and operates in the intended manner. Creating and sending test messages to select devices or members of your team is very simple using the tools in the dashboard.
 
-## Creating a Designated Test Segment <a class="margin-fix" name="test-segment"></a>
+## Creating a designated test segment <a class="margin-fix" name="test-segment"></a>
 
 Once you set up a test segment, you can utilize it to test __any__ of our messaging channels. The process is very simple and if configured properly will only need to be done once.
 
@@ -40,7 +40,7 @@ After adding the testing filters to your test segment, you can verify that you'v
 
 Once you've confirmed that you're only targeting the users that you want to receive the test message, you can either select this segment in an existing campaign that you want to test or click **Start Campaign** in the segment menu.
 
-## Sending a Test Push Notification or In-App Messages <a class="margin-fix" name="push-inapp-test"></a>
+## Sending a test push notification or in-app messages <a class="margin-fix" name="push-inapp-test"></a>
 
 To send test push notifications and/or in-app messages, you need to target your previously created test segment. Begin by creating your campaign and following the usual steps. When you reach the **Target Users** step, select your test segment as shown below.
 
@@ -52,17 +52,17 @@ Finish confirming your campaign and launch it to test your push notification and
 
 >  If you're only testing email messages, you do not have to set up a test segment. In the first step of the campaign wizard where you compose your campaign's email message, there is a "Send Test" button in the bottom left corner.
 
-## Sending a Test Email Message
+## Sending a test email message
 
 ![Send Test Button][5]
 
 Clicking on this button causes a window to appear where you can enter the email address you would like the test email to be sent to. Click "Send Test" and your test email will be delivered shortly.
 
 
-## Testing In-App Messages and Push via CURL
+## Testing in-app messages and push via curl
 Alternatively, if you'd like to test in-app and push notifications via the command-line you can follow the following examples below for each platform.
 
-### Testing Push with iOS Apps via CURL
+### Testing push with ios apps via curl
 
 You can send a single notification through the terminal via CURL and the [Messaging API][13]. You will need to replace the following fields with the correct values for your test case:
 
@@ -78,7 +78,7 @@ You can send a single notification through the terminal via CURL and the [Messag
 curl -X POST -H "Content-Type: application/json" -H "Authorization: Bearer {{YOUR_API_KEY}}" -d "{\"external_user_ids\":[\"YOUR_EXTERNAL_USER_ID\"],\"messages\":{\"apple_push\":{\"alert\":\"Test push\",\"extra\":{\"YOUR_KEY1\":\"YOUR_VALUE1\"}}}}" https://rest.iad-01.braze.com/messages/send
 ```
 
-### Testing Push with Android Apps via CURL
+### Testing push with android apps via curl
 
 You can send a single notification through the terminal via cURL and the [Messaging API][13]. You will need to replace the following fields with the correct values for your test case:
 
@@ -93,7 +93,7 @@ You can send a single notification through the terminal via cURL and the [Messag
 curl -X POST -H "Content-Type: application/json" -H "Authorization: Bearer {{YOUR_API_KEY}}" -d "{\"external_user_ids\":[\"YOUR_EXTERNAL_USER_ID\"],\"messages\":{\"android_push\":{\"title\":\"Test push title\",\"alert\":\"Test push\",\"extra\":{\"YOUR_KEY1\":\"YOUR_VALUE1\"}}}}" https://rest.iad-01.braze.com/messages/send
 ```
 
-### Testing Push with Kindle Apps via CURL
+### Testing push with kindle apps via curl
 
 You can send a single notification through the terminal via cURL and the [Messaging API][13]. You will need to replace the following fields with the correct values for your test case:
 
@@ -106,7 +106,7 @@ You can send a single notification through the terminal via cURL and the [Messag
 curl -X POST -H "Content-Type: application/json" -H "Authorization: Bearer {{YOUR_API_KEY}}" -d "{\"external_user_ids\":[\"YOUR_EXTERNAL_USER_ID\"],\"messages\":{\"kindle_push\":{\"title\":\"Test push title\",\"alert\":\"Test push\",\"extra\":{\"YOUR_KEY1\":\"YOUR_VALUE1\"}}}}" https://rest.iad-01.braze.com/messages/send
 ```
 
-### Testing Push with Windows Universal Apps via CURL
+### Testing push with windows universal apps via curl
 
 You can send a single notification through the terminal via cURL and the [Messaging API][13]. You will need to replace the following fields with the correct values for your test case:
 
@@ -121,7 +121,7 @@ You can send a single notification through the terminal via cURL and the [Messag
 curl -X POST -H "Content-Type: application/json" -H "Authorization: Bearer {{YOUR_API_KEY}}" -d "{\"external_user_ids\":[\"YOUR_EXTERNAL_USER_ID\"],\"messages\":{\"windows_push\":{\"push_type\":\"toast_text_01\",\"toast_text1\":\"test_title\"}}}" https://rest.iad-01.braze.com/messages/send
 ```
 
-### Testing Push with Windows Phone Apps via CURL
+### Testing push with windows phone apps via curl
 
 You can send a single notification through the terminal via cURL and the [Messaging API][13]. You will need to replace the following fields with the correct values for your test case:
 

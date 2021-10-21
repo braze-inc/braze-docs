@@ -12,7 +12,7 @@ channel: push
 
 # Integration
 
-A push notification is an out-of-app alert that appears on the user's screen when an important update occurs. Push notifications are a valuable way to provide your users with time-sensitive and relevant content or to re-engage them with your app.
+a push notification is an out-of-app alert that appears on the user's screen when an important update occurs. push notifications are a valuable way to provide your users with time-sensitive and relevant content or to re-engage them with your app.
 
 >  ADM (Amazon Device Messaging) is not supported on non-Amazon devices. In order to test Kindle Push you must have a FireOS device ([see Amazon Listing of supported devices][32]).
 
@@ -22,7 +22,7 @@ Braze sends push notifications to Amazon devices using [Amazon Device Messaging 
 
 >  Amazon Device Messaging (ADM) is __only__ supported on Fire phones and tablets (except for Kindle Fire 1st Generation). You cannot test ADM messaging on a regular Android device.
 
-## Step 1: Enable ADM
+## Step 1: enable adm
 
 - Create an account with the [Amazon Apps & Games Developer Portal][10] if you have not already done so.
 - Obtain OAuth credentials (Client ID and Client Secret) and an ADM API key by following the instructions in [Obtaining Amazon Device Messaging Credentials][11].
@@ -33,7 +33,7 @@ Braze sends push notifications to Amazon devices using [Amazon Device Messaging 
   <bool name="com_appboy_push_adm_messaging_registration_enabled">true</bool>
   ```
 
-## Step 2: Update Unity AndroidManifest.xml
+## Step 2: update unity androidmanifest.xml
 
 If your app does not have an `AndroidManifest.xml`, you can use the following as a template. Otherwise, if you already have an `AndroidManifest.xml`, ensure that any missing sections below are added to your existing `AndroidManifest.xml`.
 
@@ -85,17 +85,17 @@ If your app does not have an `AndroidManifest.xml`, you can use the following as
 </manifest>
 ```
 
-## Step 3: Store Your ADM API Key
+## Step 3: store your adm api key
 
 - Save your ADM API key to a file named `api_key.txt` and save it in your project's [`Assets/Plugins/Android/assets`][54] folder.
 - For how to obtain an ADM API Key for your app, consult Amazon's documentation on [obtaining an ADM API Key][11].
 - Amazon will not recognize your key if `api_key.txt` contains any white space characters, such as a trailing line break.
 
-## Step 4: Add ADM Jar
+## Step 4: add adm jar
 
 The required ADM Jar file may be placed anywhere in your project according to the [Unity JAR documentation][53].
 
-## Step 5: Add Client Secret and Client ID to Braze Dashboard
+## Step 5: add client secret and client id to braze dashboard
 
 Lastly, you must add the Client Secret and Client ID you obtained in [Step 1][2] to the Braze dashboard's "Manage Settings" page as pictured below:
 

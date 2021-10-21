@@ -10,7 +10,7 @@ description: "This reference article covers how to log custom events on Unity pl
 
 ---
 
-# Logging Custom Events
+# Logging custom events
 
 You can record custom events in Braze to learn more about your app's usage patterns and to segment your users by their actions on the dashboard.
 
@@ -26,7 +26,7 @@ Braze also supports adding metadata about custom events by passing a `Dictionary
 AppboyBinding.LogCustomEvent("event name", properties(Dictionary<string, object>));
 ```
 
-## REST API
+## REST api
 
 You can also use our REST API to record events. Refer to the [user API documentation][5] for details.
 

@@ -7,9 +7,9 @@ page_order: 3
 
 ---
 
-# Other SDK Customizations
+# Other sdk customizations
 
-## Braze Log Level
+## Braze log level
 
 The default LogLevel for the Braze iOS SDK is `8`. This level suppresses most logging so that no sensitive information is logged in a production released application.
 
@@ -27,7 +27,7 @@ Example `Info.plist` contents:
 </dict>
 ```
 
-### Description of Log Levels
+### Description of log levels
 
 | LogLevel | Description |
 |----------|-------------|
@@ -35,7 +35,7 @@ Example `Info.plist` contents:
 | 8        | Default, minimal logging. |
 {: .reset-td-br-1 .reset-td-br-2}
 
-## Optional IDFA Collection
+## Optional idfa collection
 
 IDFA Collection is optional within the Braze SDK and disabled by default. IDFA Collection is only required within Braze if you intend to utilize our [install attribution integrations][21]. If you opt to store your IDFA, we will store it free of charge so you may take advantage of these options immediately upon release without additional development work.
 
@@ -44,7 +44,7 @@ As a result, we recommend continuing to collect the IDFA if you meet any of the 
 - You are attributing app installation to a previously served advertisement
 - You are attributing an action within the application to a previously served advertisement
 
-### iOS 14 AppTrackingTransparency
+### iOS 14 apptrackingtransparency
 In the future, Apple will require a new permission prompt in order to collect IDFA. For now, prompting for IDFA permission with `AppTrackingTransparency` is not required, but you should be prepared for a future iOS release from Apple which will require user opt-in.
 
 When the `AppTrackingTransparency` prompt is required, in addition to implementing Braze's `ABKIDFADelegate` protocol, your application will need to request authorization using Apple's `ATTrackingManager` in the App Tracking Transparency framework. For more information, please reference this [Braze iOS 14 guide]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/ios_14/#idfa-and-app-tracking-transparency), [Apple's Overview](https://developer.apple.com/app-store/user-privacy-and-data-use/), and [Apple's Developer Documentation](https://developer.apple.com/documentation/apptrackingtransparency). In iOS 14, collecting IDFA will require building with Xcode 12.
@@ -56,11 +56,11 @@ The prompt for App Tracking Transparency authorization also requires an `Info.pl
 <string>To retarget ads and build a global profile to better serve you things you would like.</string>
 ```
 
-### Implementing IDFA Collection
+### Implementing idfa collection
 
 Follow these steps to implement IDFA Collection:
 
-##### Step 1: Implement ABKIDFADelegate
+##### Step 1: implement abkidfadelegate
 
 Create a class that conforms to the [`ABKIDFADelegate`][29] protocol.
 
@@ -112,11 +112,11 @@ class IDFADelegate: NSObject, ABKIDFADelegate {
 {% endtab %}
 {% endtabs %}
 
-##### Step 2: Set the delegate during Braze initialization
+##### Step 2: set the delegate during braze initialization
 
 In the `appboyOptions` dictionary passed to `startWithApiKey:inApplication:withAppboyOptions:`, set the `ABKIDFADelegateKey` key to an instance of your `ABKIDFADelegate` conforming class.
 
-## Approximate iOS SDK Size {#ios-sdk-size}
+## Approximate ios sdk size {#ios-sdk-size}
 
 The approximate iOS SDK framework file size is 30MB and the approximate .ipa (addition to app file) size is between 1MB and 2MB.
 

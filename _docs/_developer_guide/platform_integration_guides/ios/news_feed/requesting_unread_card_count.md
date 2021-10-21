@@ -9,7 +9,7 @@ channel:
 
 ---
 
-# Requesting Unread Card Count
+# Requesting unread card count
 
 ![News Feed Badge Example][45]{: style="float:right;max-width:25%;margin-left:15px;"}
 
@@ -41,7 +41,7 @@ The method declarations in [ABKFeedController][44] below describe this in detail
 - (NSInteger)cardCountForCategories:(ABKCardCategory)categories;
 ```
 
-## Displaying Number of Unread News Feed Items on App Badge Count
+## Displaying number of unread news feed items on app badge count
 
 ![Badge Example][42]{: style="float:right;max-width:70%;margin-left:15px;"}
 

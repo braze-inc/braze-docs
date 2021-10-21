@@ -7,21 +7,21 @@ description: "This article covers how to configure uninstall tracking for your i
 
 ---
 
-# Uninstall Tracking for iOS
+# Uninstall tracking for ios
 
 > This article covers how to configure uninstall tracking for your iOS application, and how to test to ensure that your app does not take any unwanted automatic actions upon receiving a Braze uninstall tracking push.
 
 Uninstall Tracking utilizes background push notifications with a Braze flag in the payload. For more information, see our [Uninstall Tracking][6] page in our User Guide.
 
-## Step 1: Enabling Background Push
+## Step 1: enabling background push
 
 Make sure that you have enabled the "Remote notifications" option from the "Background Modes" section of your Xcode project's Capabilities tab. For additional details, refer to our documentation on [Silent Push Notifications][5].
 
-## Step 2: Checking for Braze Background Push
+## Step 2: checking for braze background push
 
 Braze uses background push notifications to collect uninstall tracking analytics. Follow the instructions [here][4] to ensure that your application does not take any unwanted actions upon receiving Braze's uninstall tracking notifications.
 
-## Step 3: Test from the Dashboard
+## Step 3: test from the dashboard
 
 To ensure that your app does not take any unwanted automatic actions upon receiving a Braze uninstall tracking push, send yourself a test push from the [dashboard][7]. This test push will not update your User Profile.
 
@@ -37,7 +37,7 @@ To ensure that your app does not take any unwanted automatic actions upon receiv
 The above steps are a proxy for sending an uninstall tracking push from Braze. If you have badge counts enabled, a badge number will be sent along with the test push, but Braze's uninstall tracking pushes will not set a badge number on your application.
 {% endalert %}
 
-## Step 4: Enable Uninstall Tracking
+## Step 4: enable uninstall tracking
 
 Follow the instructions for enabling uninstall tracking using our [article on Uninstall Tracking][6].
 

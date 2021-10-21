@@ -9,7 +9,7 @@ description: "This reference article describes how to queue a manual refresh of 
 
 ---
 
-# Refreshing Content Cards
+# Refreshing content cards
 
  You can queue a manual refresh of the Braze Content Cards at any time by calling:
 

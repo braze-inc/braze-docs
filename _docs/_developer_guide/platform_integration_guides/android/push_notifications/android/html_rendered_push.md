@@ -9,7 +9,7 @@ channel:
 
 ---
 
-# HTML Push Notifications
+# HTML push notifications
 
 In Braze SDK version 3.1.1, HTML can be sent to a device to render multicolor text in push notifications.
 
@@ -29,7 +29,7 @@ The above example is rendered with the following HTML:
 
 ## Implementation
 
-In your `braze.xml`:
+in your `braze.xml`:
 
 ```xml
 <bool translatable="false" name="com_appboy_push_notification_html_rendering_enabled">true</bool>

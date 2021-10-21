@@ -13,7 +13,7 @@ description: "This article covers customization of in-app messaging via the Braz
 
 All of Braze’s in-app message types are highly customizable across messages, images, [Font Awesome][15]  icons, click actions, analytics, editable styling, custom display options, and custom delivery options. Multiple options can be configured on a per in-app message basis from [within the dashboard]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/create/). Braze additionally provides multiple levels of advanced customization to satisfy a variety of use cases and needs.
 
-## Key Value Pair Extras
+## Key value pair extras
 
 In-app message objects may carry key-value pairs as their `extras` property. These are specified on the dashboard under "Additional Message Settings" when creating an in-app message campaign. These can be used to send data down along with an in-app message for further handling by your site. For example:
 
@@ -46,7 +46,7 @@ braze.initialize("YOUR-API-KEY", {
 });
 ```
 
-### Custom Styling
+### Custom styling
 
 Braze UI elements come with a default look and feel that create a neutral in-app message experience and aims for consistency with other Braze mobile platforms. Braze's default styles are defined in CSS within the Braze SDK. By overriding selected styles in your application, it is possible to customize our standard in-app message types with your own background images, font families, styles, sizes, animations, and more. For instance, the following is an example override that will cause an in-app message's headers to appear italicized:
 
@@ -58,7 +58,7 @@ Braze UI elements come with a default look and feel that create a neutral in-app
 
 See the [JSDocs][2] for more information.
 
-## Open Message Link in New Tab
+## Open message link in new tab
 
 To set your in-app message links to open in a new tab, set the `openInAppMessagesInNewTab` option to `true` to force all links from in-app message clicks open in a new tab or window.
 

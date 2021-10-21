@@ -10,13 +10,13 @@ platform:
   
 ---
 
-# Platform Features
+# Platform features
 
 Braze provides a comprehensive user engagement solution for your mobile and web applications. The Braze platform has three primary components - the SDK, the dashboard, and the data API.
 
 ## SDK
 
-The Braze SDKs can be integrated into your mobile and web applications to provide powerful marketing, customer support, and analytics tools.
+the braze sdks can be integrated into your mobile and web applications to provide powerful marketing, customer support, and analytics tools.
 
 | Platform | Approximate SDK Size |
 |---|---|
@@ -29,26 +29,26 @@ The Braze SDKs can be integrated into your mobile and web applications to provid
 
 The dashboard controls all of the data and interactions at the heart of the Braze platform. Marketers can use the site to manage notifications, setup targeted messaging campaigns, and view analytics. Developers can use the dashboard to manage settings for integrating apps, such as API keys and push notification credentials.
 
-## Data API
+## Data api
 
 The Braze Data API provides a web service where you can record actions taken by your users directly via HTTP, rather than through the mobile and web SDKs. This allows you to add custom events for segmentation purposes directly from a web-based application.
 
-## Granular Targeting and Analysis
+## Granular targeting and analysis
 
-### App Analytics
+### App analytics
 The Braze dashboard displays graphs that are updated in real-time based upon a number of analytics metrics as well as custom events that you instrument in your application.
 
-### User Segmentation
+### User segmentation
 
 Segmentation allows you to create groups of users based on powerful filters of their in-app behavior, demographic data, social data, etc. Braze also allows you to define any in-app user action as a "custom event" if the desired action is not captured by default. The same is true of user characteristics via "custom attributes". Once a user segment is created on the dashboard, your users will move in and out of the segment as they meet (or fail to meet) the defined criteria. For example, the below image shows a segment that includes all users who have spent money in-app and last used the app more than two weeks ago.
 
 ![Segmentation Example][2]
 
-## Multichannel Messaging
+## Multichannel messaging
 
 Once you have defined a segment, Braze's messaging tools allow for multichannel communication with your users. For example, send a push notification and email to the example segment defined in the previous section. Messaging channels are best used in concert and with regularity to re-engage lost users, retain active users, and energize your brand ambassadors. Moreover, you can use our advanced scheduling options to automate campaigns to specific groups of those users going forward.
 
-### News Feed {#platform-features-news-feed}
+### News feed {#platform-features-news-feed}
 
 When your app opens, the Braze SDK automatically pulls down the user's News Feed -- a set of News Items that are controlled on the Braze dashboard. By making a call to the Braze library, you can display the News Feed when a button or action is triggered in your app, providing an in-app notification center that can be updated by non-technical team members without having to change your code or database.
 
@@ -60,7 +60,7 @@ When your app opens, the Braze SDK automatically pulls down the user's News Feed
 
 ![News Feed Dashboard][6]
 
-### Push Notifications {#platform-features-push}
+### Push notifications {#platform-features-push}
 
 Braze supports the Apple Push Notification Service (APNs) for iOS and Firebase Cloud Messaging (FCM) for Android. Push notifications can be triggered by the publication of messaging campaigns and news items.
 

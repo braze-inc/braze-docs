@@ -8,17 +8,17 @@ description: "This page covers methods to record custom events via the Braze SDK
 
 ---
 
-# Tracking Custom Events
+# Tracking custom events
 
 You can record custom events in Braze to learn more about your app's usage patterns and to segment your users by their actions on the dashboard. You should also check out our notes on [event naming conventions]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/event_naming_conventions/).
 
-## Add a Custom Event
+## Add a custom event
 
 ```javascript
 m.Braze.logEvent("YOUR_EVENT_NAME")
 ```
 
-### Adding Properties
+### Adding properties
 
 You can add metadata about custom events by passing a properties dictionary with your custom event.
 

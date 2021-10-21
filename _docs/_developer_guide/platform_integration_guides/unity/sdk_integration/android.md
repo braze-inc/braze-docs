@@ -9,11 +9,11 @@ description: "This reference article covers the Android SDK integration for the 
 
 ---
 
-# SDK Android Integration
+# SDK android integration
 
 Follow the below instructions to get Braze running in your Unity application. If you are transitioning from a manual integration, please read the instructions on [Transitioning From a Manual to an Automated Integration][5].
 
-## Step 1: Choose your Braze Unity Package
+## Step 1: choose your braze unity package
 
 The Braze [`.unitypackage`][41] bundles native bindings for the Android and iOS platforms, along with a C# interface.
 
@@ -27,7 +27,7 @@ There are several Braze Unity packages available for download at [Braze Unity Re
 
 > iOS: To see if you require the [SDWebImage][unity-1] dependency for your iOS project, please visit the [iOS In-App Message Documentation][unity-4].<br><br>Android: As of Unity 2.6.0, the bundled Braze Android SDK artifact requires  [AndroidX][unity-3] dependencies. If you were previously using a `jetified unitypackage`, then you can safely transition to the corresponding `unitypackage` above.
 
-## Step 2: Import the Package
+## Step 2: import the package
 
 1. In the Unity Editor, import the package into your Unity project by navigating to `Assets > Import Package > Custom Package`.
 2. Click __Import__.
@@ -38,11 +38,11 @@ Alternatively, follow the Unity instructions for [Importing Asset packages][41] 
 If you only wish to import the iOS/Android plugin, deselect the `Plugins/Android`/`Plugins/iOS` subdirectory when importing the Braze `.unitypackage`.
 {% endalert %}
 
-## Step 3a: Updating your AndroidManifest.xml
+## Step 3a: updating your androidmanifest.xml
 
 Android Unity projects require an [`AndroidManifest.xml`](https://docs.unity3d.com/Manual/android-manifest.html) to be present to run the application. Additionally, Braze requires several additions to your [`AndroidManifest.xml`](https://docs.unity3d.com/Manual/android-manifest.html) in order to function.
 
-#### Part 1: Configuring the AndroidManifest.xml
+#### Part 1: configuring the androidmanifest.xml
 
 If your app does not have an `AndroidManifest.xml`, you can use the following as a template. Otherwise, if you already have an `AndroidManifest.xml`, ensure that any missing sections below are added to your existing `AndroidManifest.xml`.
 
@@ -98,16 +98,16 @@ If your app does not have an `AndroidManifest.xml`, you can use the following as
 Your final `AndroidManifest.xml` should only contain a single Activity with `"android.intent.category.LAUNCHER"` present.
 {% endalert %}
 
-#### Part 2: Finding your Package Name 
+#### Part 2: finding your package name 
 
 - Click File -> Build Settings -> Player Settings -> Android Tab
 ![Unity Package Name]({% image_buster /assets/img_archive/UnityPackageName.png %})
 
-#### Part 3: Make Replacements in the AndroidManifest
+#### Part 3: make replacements in the androidmanifest
 
 In your `AndroidManifest.xml`, all instances of `REPLACE_WITH_YOUR_PACKAGE_NAME` should be replaced with your `Package Name` from the previous step.
 
-### Step 4: Add Gradle Dependencies {#unity-android-gradle-configuration}
+### Step 4: add gradle dependencies {#unity-android-gradle-configuration}
 
 The following dependencies are required:
 
@@ -121,7 +121,7 @@ implementation "androidx.recyclerview:recyclerview:+"
 
 Examples on how to add these dependencies using Unity tools are provided below.
 
-#### Custom Gradle Template
+#### Custom gradle template
 
 [Custom Gradle Template](https://docs.unity3d.com/Manual/android-gradle-overview.html)
 
@@ -131,7 +131,7 @@ dependencies {
 }
 ```
 
-#### External Dependency Manager for Unity
+#### External dependency manager for unity
 
 [External Dependency Manager for Unity](https://github.com/googlesamples/unity-jar-resolver)
 
@@ -143,7 +143,7 @@ dependencies {
 </dependencies>
 ```
 
-### Step 5: Configure the SDK {#unity-static-configuration}
+### Step 5: configure the sdk {#unity-static-configuration}
 
 Braze provides a native Unity solution for automating the Unity Android integration. 
 
@@ -157,7 +157,7 @@ Braze provides a native Unity solution for automating the Unity Android integrat
 This automatic integration should not be used in conjunction with a manually created `braze.xml` file since the configuration values may conflict during project building. If you require the use of a manual `braze.xml`, please disable the automatic integration.
 {% endalert %}
 
-## Basic SDK Integration Complete
+## Basic sdk integration complete
 
 Braze should now be collecting data from your application and your basic integration should be complete.
 
@@ -166,9 +166,9 @@ Braze should now be collecting data from your application and your basic integra
 - __Content Cards__: See the [Content Cards documentation][40] for information on integrating Content Cards.
 - __News Feed__: See the [News Feed documentation][35] for information on integrating the News Feed.
 
-## Additional Advanced Implementation Options
+## Additional advanced implementation options
 
-### Extending Braze's Unity Player (Android) {#extending-braze-unity-player}
+### Extending braze's unity player (android) {#extending-braze-unity-player}
 
 The example `AndroidManifest.xml` file provided has one Activity class registered, [`AppboyUnityPlayerActivity`](https://github.com/Appboy/appboy-android-sdk/blob/e67e09f785adeff075a5d7710e79f41ed3676a6a/android-sdk-unity/src/main/java/com/appboy/unity/AppboyUnityPlayerActivity.java). This class is integrated with the Braze SDK and extends `UnityPlayerActivity` with session handling, in-app message registration, push notification analytics logging, and more. See [this documentation](https://docs.unity3d.com/Manual/AndroidUnityPlayerActivity.html) for more information on extending the `UnityPlayerActivity` class.
 

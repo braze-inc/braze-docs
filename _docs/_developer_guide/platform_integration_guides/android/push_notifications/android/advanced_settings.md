@@ -9,25 +9,25 @@ channel:
 
 ---
 
-# Advanced Settings
+# Advanced settings
 
 There are many advanced settings available for Android and Fire OS push notifications sent through the Braze dashboard. This article will describe these features and how to use them successfully.
 
 ![Advanced Settings][1]
 
-## Notification ID {#notification-id}
+## Notification id {#notification-id}
 
 A __"Notification ID"__ is a unique identifier for a message category of your choosing that informs the messaging service to only respect the most recent message from that ID. Setting a Notification ID allows you to send just the most recent and relevant message, rather than a stack of outdated, irrelevant ones.
 
-## Time to Live (TTL) {#ttl}
+## Time to live (ttl) {#ttl}
 
 The __"Time to Live"__ (ttl) field allows you to set a custom length of time to store messages with the push messaging service. Braze's default values for time to live are 4 weeks for FCM and 31 days for ADM. If the hypothetical user from the example above were to reconnect their device 4 weeks after the game with the time to live set to the default, then those messages would have already expired in the messaging service and would not be delivered.
 
-## Firebase Messaging Delivery Priority {#fcm-priority}
+## Firebase messaging delivery priority {#fcm-priority}
 
 The __"Firebase Messaging Delivery Priority"__ field lets you control whether a push is sent with "normal" or "high" priority to Firebase Cloud Messaging. See [FCM documentation](https://firebase.google.com/docs/cloud-messaging/concept-options#setting-the-priority-of-a-message) to learn more.
 
-## Summary Text {#summary-text}
+## Summary text {#summary-text}
 
 Summary text allows you to set additional text in the "Expanded Notification" view. It also serves as a caption for notifications with images.
 
@@ -39,7 +39,7 @@ For push notifications that include images, the message text will be shown in th
 
 ![Summary Text Behavior][15]
 
-## Custom URIs {#custom-uri}
+## Custom uris {#custom-uri}
 
 The __"Custom URI"__ feature allows you to specify a Web URL or an Android resource to navigate to when the notification is clicked. If no custom URI is specified, clicking on the notification brings users into your app. You can use the custom URI to deep-link inside your app as well as direct users to resources that exist outside of your app as well. This can be specified via our [Messaging API][13] or via our dashboard under "Advanced Settings" in the push composer wizard as pictured below:
 
@@ -47,7 +47,7 @@ The __"Custom URI"__ feature allows you to specify a Web URL or an Android resou
 
 ![Custom URI][12]
 
-## Notification Display Priority {#notification-priority}
+## Notification display priority {#notification-priority}
 
 {% alert important %}
 The Notification Display Priority setting is no longer used on devices running Android O or newer. For newer devices, set the priority through [notification channel configuration](https://developer.android.com/training/notify-user/channels#importance).

@@ -9,7 +9,7 @@ channel:
 
 ---
 
-# Action Buttons {#push-action-buttons-integration}
+# Action buttons {#push-action-buttons-integration}
 
 The Braze iOS SDK supports default push categories, including URL handling support for each push action button. Currently, the default categories have four sets of push action buttons: `Accept`/`Decline`, `Yes`/`No`, `Confirm`/`Cancel` and `More`. 
 
@@ -17,7 +17,7 @@ The Braze iOS SDK supports default push categories, including URL handling suppo
 
 To register Braze's default push categories, follow the integration instructions below:
 
-## Step 1: Adding Braze Default Push Categories
+## Step 1: adding braze default push categories
 
 Use the following code to register for Braze's default push categories when you [register for push][36]:
 
@@ -57,7 +57,7 @@ Clicking on push action buttons with background activation mode will only dismis
 
 >  If you wish to create your own custom notification categories, see our [action button customization][37] documentation.
 
-## Step 2: Enable Interactive Push Handling
+## Step 2: enable interactive push handling
 
 If you are using the UNNotification Framework and have implemented [Braze delegates][39], you should already have this method integrated. 
 
@@ -111,7 +111,7 @@ Appboy.sharedInstance()?.getActionWithIdentifier(identifier,
 We strongly recommend that people using `handleActionWithIdentifier` begin using UNNotification Framework. We recommend this due to the [deprecation of handleActionWithIdentifier](https://developer.apple.com/documentation/uikit/uiapplicationdelegate/1623068-application?language=objc).
 {% endalert %}
 
-## Push Category Customization
+## Push category customization
 
 In addition to providing a set of [default push categories][2], Braze supports custom notification categories and actions. Once you register categories in your application, you can use the Braze dashboard to send notification categories to your users.
 

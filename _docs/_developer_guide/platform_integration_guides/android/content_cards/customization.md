@@ -13,7 +13,7 @@ channel:
 
 # Customization
 
-## Default Styling {#default-styling-for-android}
+## default styling {#default-styling-for-android}
 
 Braze In-App Messages and Content Cards come with a default look and feel that matches the Android standard UI guidelines and provide a seamless experience. You can see these default styles in the [`res/values/styles.xml`][42] file in the Braze SDK distribution.
 
@@ -32,11 +32,11 @@ Braze In-App Messages and Content Cards come with a default look and feel that m
   </style>
 ```
 
-## Overriding Styles {#overriding-styles-for-android}
+## Overriding styles {#overriding-styles-for-android}
 
 If you would prefer, you can override these styles to create a look and feel that better suits your app. To override a style, copy it in its entirety to the `styles.xml` file in your project and make modifications. The whole style must be copied over to your local `styles.xml` file in order for all of the attributes to be correctly set.
 
-### Correct Style Override {#correct-style-override-for-android}
+### Correct style override {#correct-style-override-for-android}
 
 ```xml
 <style name="Braze.ContentCardsDisplay">
@@ -50,7 +50,7 @@ If you would prefer, you can override these styles to create a look and feel tha
 </style>
 ```
 
-### Incorrect Style Override {#incorrect-style-override-for-android}
+### Incorrect style override {#incorrect-style-override-for-android}
 
 ```xml
 <style name="Braze.ContentCardsDisplay">
@@ -59,11 +59,11 @@ If you would prefer, you can override these styles to create a look and feel tha
 </style>
 ```
 
-## Customizing The Default Content Card Feed {#content-cards-fragment-customization}
+## Customizing the default content card feed {#content-cards-fragment-customization}
 
 This section covers customization of the [ContentCardsFragment][49] whose source can be found [here][54].
 
-### Customizing The Network Connection Error Message
+### Customizing the network connection error message
 
 If the [ContentCardsFragment][49] determines that a Content Card refresh has failed, it will display a network connection error message.
 
@@ -85,9 +85,9 @@ The style used to display this message can be found via [`Appboy.ContentCardsDis
 
 To fully customize the network error behavior, you can extend the [ContentCardsFragment][54] and set the `mShowNetworkUnavailableRunnable` variable to perform some other action.
 
-## Content Cards Style Elements {#content-cards-style-elements-for-android}
+## Content cards style elements {#content-cards-style-elements-for-android}
 
-### Custom Font {#setting-a-custom-font-for-android}
+### Custom font {#setting-a-custom-font-for-android}
 
 Braze allows for setting a custom font using the [font family guide][40]. To use it, override a style for cards and use the `fontFamily` attribute to instruct Braze to use your custom font family.
 
@@ -104,11 +104,11 @@ Here is a truncated example with a custom font family, `my_custom_font_family`, 
   </style>
 ```
 
-### Custom Pinned Icon {#setting-a-custom-pinned-icon-for-android}
+### Custom pinned icon {#setting-a-custom-pinned-icon-for-android}
 
 To set a custom pinned icon, override the `Appboy.ContentCards.PinnedIcon` style. Your custom image asset should be declared in the `android:src` element.
 
-### Customizing Displayed Card Order {#customizing-displayed-card-order-for-android}
+### Customizing displayed card order {#customizing-displayed-card-order-for-android}
 
 The `ContentCardsFragment` relies on a [`IContentCardsUpdateHandler`][44] to handle any sorting or modifications of Content Cards before they are displayed in the feed. A custom update handler can be set via [`setContentCardUpdateHandler`][45] on your [`ContentCardsFragment`][49].
 
@@ -276,7 +276,7 @@ fragment.setContentCardUpdateHandler(cardUpdateHandler)
 {% endtab %}
 {% endtabs %}
 
-### Customizing Card Rendering {#customizing-card-rendering-for-android}
+### Customizing card rendering {#customizing-card-rendering-for-android}
 
 Here's information on how to change how any card is rendered in the recyclerView. The `IContentCardsViewBindingHandler` interface defines how all Content Cards get rendered. You can customize this to change anything you want.
 
@@ -480,15 +480,15 @@ fragment.setContentCardsViewBindingHandler(viewBindingHandler)
 
 There are additional relevant resources on this topic available [here](https://medium.com/google-developers/android-data-binding-recyclerview-db7c40d9f0e4).
 
-### Custom Content Cards Click Listener
+### Custom content cards click listener
 
 You can handle Content Cards clicks manually by setting a custom click listener. This enables use cases such as selectively using the native web browser to open web links.
 
-#### Step 1: Implement a Content Cards Click Listener
+#### Step 1: implement a content cards click listener
 
 Create a class that implements [IContentCardsActionListener][43] and register it with `BrazeContentCardsManager`. Implement the `onContentCardClicked()` method, which will be called when the user clicks a content card.
 
-#### Step 2: Instruct Braze to Use Your Content Card Click Listener
+#### Step 2: instruct braze to use your content card click listener
 
 You can see an example of steps 1 and 2 here:
 
@@ -527,17 +527,17 @@ BrazeContentCardsManager.getInstance().contentCardsActionListener = object : ICo
 {% endtab %}
 {% endtabs %}
 
-### Dark Theme Customization
+### Dark theme customization
 
 By default, Content Cards views will automatically respond to Dark Theme changes on the device with a set of themed colors and layout changes. 
 
 To override this behavior, override the `values-night` values in `android-sdk-ui/src/main/res/values-night/colors.xml` and `android-sdk-ui/src/main/res/values-night/dimens.xml`.
 
-### Fully Custom Content Card Display {#fully-custom-content-card-display-for-android}
+### Fully custom content card display {#fully-custom-content-card-display-for-android}
 
 If you would like to display the Content Cards in a completely custom manner, it is possible to do so by using your own views populated with data from our models. To obtain Braze’s Content Cards models, you will need to subscribe to content card updates and use the resulting model data to populate your views. You will also need to log analytics on the model objects as users interact with your views.
 
-#### Part 1: Subscribing to Content Card Updates
+#### Part 1: subscribing to content card updates
 
 First, declare a private variable in your custom class to hold your subscriber:
 
@@ -618,7 +618,7 @@ Braze.getInstance(context).removeSingleSubscription(mContentCardsUpdatedSubscrib
 {% endtab %}
 {% endtabs %}
 
-#### Part 2: Logging Analytics
+#### Part 2: logging analytics
 
 When using custom views, you will need to log analytics manually as well, since analytics are only handled automatically when using Braze views.
 
@@ -628,13 +628,13 @@ To log an impression or click on a Card, call [`Card.logClick()`][7] or [`Card.l
 
 For campaigns using Control Cards for A/B testing, you can use [`Card.isControl()`][55] to determine if a card will be blank, and used only for tracking purposes.
 
-#### Manually Dismissing a Content Card
+#### Manually dismissing a content card
 
 You can manually log or set a Content Card as "dismissed" to Braze [for a particular card with `setIsDismissed`](https://appboy.github.io/appboy-android-sdk/javadocs/com/appboy/models/cards/Card.html#setIsDismissed-boolean-).
 
 If a card is already marked as dismissed, it cannot be marked as dismissed again.
 
-## Disabling Swipe To Dismiss
+## Disabling swipe to dismiss
 
 Disabling swipe-to-dismiss functionality is done on a per-card basis via the [`card.setIsDismissibleByUser()`][48] method. Cards can be intercepted before display using the [`ContentCardsFragment.setContentCardUpdateHandler()`][45] method.
 

@@ -9,13 +9,13 @@ channel: content cards
 
 ---
 
-# Content Cards
+# Content cards
 
 The Braze SDKs include a default card feed to get you started with Content Cards. To show the card feed, you can use the `ReactAppboy.launchContentCards()` method. The default card feed included with the Braze SDK will handle all analytics tracking, dismissals, and rendering for a user's Content Cards.
 
 ## Customization
 
-You can use these additional methods to build a custom Content Cards Feed within your app:
+you can use these additional methods to build a custom content cards feed within your app:
 
 | Method                                         | Description                                                                                            |
 | ---------------------------------------------- | ------------------------------------------------------------------------------------------------------ |
@@ -28,7 +28,7 @@ You can use these additional methods to build a custom Content Cards Feed within
 
 {: .reset-td-br-1 .reset-td-br-2}
 
-## Test Displaying Sample Content Card
+## Test displaying sample content card
 
 Follow the steps below to test a sample content card.
 

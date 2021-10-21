@@ -34,7 +34,7 @@ In addition, there is a subinterface of `IInAppMessage` called [`IInAppMessageIm
 
 HTML Full in-app messages are [`InAppMessageHtmlFull`][51] instances, which implement [`IInAppMessageHtml`][52], another subclass of `IInAppMessage`.
 
-### Expected Behaviors by Message Types
+### Expected behaviors by message types
 
 These are what each in-app message type will appear like for your users.
 

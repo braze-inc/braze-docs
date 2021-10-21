@@ -10,7 +10,7 @@ description: "This article covers initial SDK setup steps for Android and FireOS
 
 ---
 
-# Initial SDK Setup
+# Initial sdk setup
 
 Download the SDK from [Github][1] and run the following from the root your project:
 
@@ -34,7 +34,7 @@ In your config.xml, add a `preference` element under the android `platform` elem
 </platform>
 ```
 
-## Setting Extra Configuration
+## Setting extra configuration
 
 The Cordova Android SDK also allows for various other settings to be configured via the config.xml file:
 
@@ -66,13 +66,13 @@ See the [Android Cordova Plugin][2] for more details.
 </platform>
 ```
 
-## Customized Setup
+## Customized setup
 
 Note that this plugin can be forked and modified for custom implementations. Find the platform-specific native source code in the `/plugin/src` directory, the JavaScript interface in the `/plugin/www` directory, and the main configuration file at `/plugin`.
 
 Users that check their platform directory into version control (enabling them to make permanent code edits there) will be able to further leverage Braze's UI elements by calling them directly from their platform specific project.
 
-### Removing automatic push setup (Android)
+### Removing automatic push setup (android)
 
 To remove automatic push registration on Android set the following configuration preferences:
 
@@ -82,7 +82,7 @@ To remove automatic push registration on Android set the following configuration
 </platform>
 ```
 
-### Location Collection and Geofences
+### Location collection and geofences
 
 To enable location collection and Braze Geofences, use the [`geofence-branch`][3] instead of the default `master` branch. By default, the Braze SDK disables location collection and Braze Geofences. Additionally, use the following preferences configuration:
 
@@ -99,11 +99,11 @@ The geofence-branch can be added to your Cordova project with the following:
 cordova plugin add https://github.com/appboy/appboy-cordova-sdk#geofence-branch
 ```
 
-### Delaying Automatic Session Tracking
+### Delaying automatic session tracking
 
 Set `<preference name="com.appboy.android_disable_auto_session_tracking" value="true" />` in your `config.xml` to disable the Android Cordova plugin from automatically tracking sessions. To start tracking sessions, call `AppboyPlugin.startSessionTracking()`. Note that this will not retroactively track sessions and will only start tracking sessions starting from the next `Activity.onStart()`.
 
-## Initial Setup Complete
+## Initial setup complete
 
 Once the initial setup is complete, you can access the `AppboyPlugin` JavaScript interface in your app.
 

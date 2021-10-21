@@ -7,15 +7,15 @@ description: "This tutorial covers how to install the Braze SDK using Swift Pack
 
 ---
 
-# Swift Package Manager Integration
+# Swift package manager integration
 
 ## Requirements
 
-Installing the iOS SDK via [Swift Package Manager][apple_initial_setup_1] (SPM) automates the majority of the installation process for you. Before beginning this process please ensure that you are using Xcode 12 or greater.
+installing the ios sdk via [swift package manager][apple_initial_setup_1] (spm) automates the majority of the installation process for you. before beginning this process please ensure that you are using xcode 12 or greater.
 
 > Note that tvOS is not yet available via _Swift Package Manager_.
 
-## Step 1: Adding the dependency to your project
+## Step 1: adding the dependency to your project
 
 Open your project and navigate to your project's settings. Select the tab named _Swift Packages_ and click on the add button (+) at the bottom left.
 
@@ -47,13 +47,13 @@ Select the package that best fits your needs and click _Finish_:
 
 ![Swift Package Manager: Menu 4][apple_initial_setup_5]
 
-## Step 2: Configuring your project
+## Step 2: configuring your project
 
 Next, navigate to your project build settings and add the `-ObjC` flag to the _Other Linker Flags_ setting. Please note that this flag __must be added and [errors](https://developer.apple.com/library/archive/qa/qa1490/_index.html) resolved__ in order to further integrate the SDK.
 
 ![Swift Package Manager: Menu 5][apple_initial_setup_6]
 
-## Step 3: Editing the target's scheme
+## Step 3: editing the target's scheme
 
 If you are using Xcode 12.4 or earlier, edit the scheme of the target including the Appboy package (_Product > Scheme > Edit Scheme_ menu item):
 - Click the expand ▶︎ next to _Build_ and select _Post-actions_. Press _+_ and select _New Run Script Action_.
@@ -61,7 +61,7 @@ If you are using Xcode 12.4 or earlier, edit the scheme of the target including 
 - Copy this script into the open field:
 ```sh
 # iOS
-bash "$BUILT_PRODUCTS_DIR/Appboy_iOS_SDK_AppboyKit.bundle/Appboy.bundle/appboy-spm-cleanup.sh"
+bash "$built_products_dir/appboy_ios_sdk_appboykit.bundle/appboy.bundle/appboy-spm-cleanup.sh"
 # macOS (if applicable)
 bash "$BUILT_PRODUCTS_DIR/Appboy_iOS_SDK_AppboyKit.bundle/Contents/Resources/Appboy.bundle/appboy-spm-cleanup.sh"
 ```
@@ -72,7 +72,7 @@ You do not need to perform this step if you are using Xcode 12.5 or newer.
 
 ![Swift Package Manager: Menu 7][apple_initial_setup_7]
 
-## Next Steps
+## Next steps
 
 Follow the instructions for [Completing the Integration]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/initial_sdk_setup/completing_integration/).
 

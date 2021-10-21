@@ -9,15 +9,15 @@ channel: news feed
 
 ---
 
-# News Feed
+# News feed
 
 The News Feed is a fully customizable in-app content feed for your users. Our targeting and segmentation allows you to create a stream of content that is individually catered to the interests of each user. Depending on their position in the user life cycle and the nature of your app, this could be an on-boarding content server, an advertisement center, an achievement center, or a generic news center.
 
-## Example News Feed
+## Example news feed
 
 <img src="{% image_buster /assets/img_archive/WebNewsFeed.png %}" alt="Sample News Feed" height="600" />
 
-## News Feed Integration
+## News feed integration
 
 To toggle the display of the News Feed through the Braze Web SDK, simply call
 
@@ -45,7 +45,7 @@ appboy.requestFeedRefresh();
 
 See the [JSDocs][2] for full documentation for `showFeed`, `destroyFeed`, and `toggleFeed`.
 
-## News Feed Customization
+## News feed customization
 
 Braze UI elements come with a default look and feel that matches the composers within the Braze dashboard and aims for consistency with other Braze mobile platforms. Braze's default styles are defined in CSS within the Braze SDK. By overriding selected styles in your application, it is possible to customize our standard feed with your own background images, font families, styles, sizes, animations, and more. For instance, the following is an example override that will cause the News Feed to appear 800px wide:
 
@@ -57,7 +57,7 @@ body .ab-feed {
 
 ## Categories
 
-Instances of the Braze News Feed can be configured to only receive cards from a certain “category”. This allows for the effective integration of multiple News Feed streams within a single application. For more information on this feature visit our [documentation][14].
+instances of the braze news feed can be configured to only receive cards from a certain “category”. this allows for the effective integration of multiple news feed streams within a single application. for more information on this feature visit our [documentation][14].
 
 News Feed Categories can be defined by providing the third "allowedCategories" parameter to `toggleFeed`:
 
@@ -71,13 +71,13 @@ You can also populate a feed with a combination of categories as in the followin
 appboy.display.toggleFeed(undefined, undefined, [appboy.Card.Category.ANNOUNCEMENTS, appboy.Card.Category.NEWS]);
 ```
 
-## Read & Unread Indicators
+## Read & unread indicators
 
 Braze provides an Unread/Read indicator on News Feed cards as pictured below:
 
 ![UnreadvsRead][25]
 
-### Disabling the Indicators
+### Disabling the indicators
 
 In order to disable this functionality add the following style to your css:
 
@@ -86,11 +86,11 @@ In order to disable this functionality add the following style to your css:
 .ab-read-indicator { display: none; }
 ```
 
-## Card Types
+## Card types
 
 The Braze Web SDK supports 3 unique News Feed card types, [ab.ClassicCard][3], [ab.Banner][4], [ab.CaptionedImage][5] which share a base model, [ab.Card][1].
 
-### Requesting Unread Card Count
+### Requesting unread card count
 
 You can request the number of unread cards at any time by calling:
 

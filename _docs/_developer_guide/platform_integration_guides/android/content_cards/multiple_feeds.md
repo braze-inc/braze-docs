@@ -11,19 +11,19 @@ channel:
 
 ---
 
-# Using Multiple Content Card Feeds
+# Using multiple content card feeds
 
 Content Cards can be filtered on the app to only display specific cards, which enables you to have multiple Content Card feeds for different use cases (as in having a "Transactional" feed versus a "Marketing" feed).
 
 The following documentation demonstrates an example implementation that can be changed to fit your specific integration.
 
-## Step 1: Setting Key-Value Pairs on Cards
+## Step 1: setting key-value pairs on cards
 
 When creating a Content Card campaign, key value pair data can be set on each Card. Our filtering logic will use this key-value pair data to categorize cards. Note that we do not recommend sending nested JSON values as key-value pairs. Instead, in order for things to correctly, we recommend flattening the JSON before sending. 
 
 For the purposes of this example, we'll set a key-value pair with the key `feed_type` that will designate which Content Card feed the card should be displayed in. The value will be whatever your custom feeds will be, as in `Transactional`, `Marketing`, and more.
 
-## Step 2: Create A Content Card Update Handler
+## Step 2: create a content card update handler
 
 To perform filtering on a [`ContentCardsFragment`][1], we will create a use a custom [`IContentCardsUpdateHandler`][2]. A [`IContentCardsUpdateHandler`][2] takes a [`ContentCardsUpdatedEvent`][3] from the Braze SDK and returns a list of cards to display.
 
@@ -111,7 +111,7 @@ private fun getUpdateHandlerForFeedType(desiredFeedType: String): IContentCardsU
 {% endtab %}
 {% endtabs %}
 
-## Step 3: Create a Content Cards Feed Using The Custom Update Handler
+## Step 3: create a content cards feed using the custom update handler
 
 Now that we have a custom [`IContentCardsUpdateHandler`][2], we can create a [`ContentCardsFragment`][1] that uses it. In the following example code, we'll create a [`ContentCardsFragment`][1] that only displays cards with a "Transactional" value for `feed_type`:
 
@@ -134,7 +134,7 @@ customContentCardsFragment.contentCardUpdateHandler = getUpdateHandlerForFeedTyp
 {% endtab %}
 {% endtabs %}
 
-## Step 4: Using the Content Cards Fragment
+## Step 4: using the content cards fragment
 
 This custom feed can be used like any other [`ContentCardsFragment`][1]. In the different parts of your app, you can display different Content Card feeds based on the key provided on the dashboard. Each [`ContentCardsFragment`][1] feed will have a unique set of cards displayed thanks to the custom [`IContentCardsUpdateHandler`][2] on each fragment.
 

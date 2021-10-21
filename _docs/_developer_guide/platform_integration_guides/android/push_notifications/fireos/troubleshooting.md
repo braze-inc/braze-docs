@@ -10,19 +10,19 @@ channel: push
 ---
 # Troubleshooting
 
-## Utilizing the Push Error Logs
+## utilizing the push error logs
 
 Braze provides a log of Push Notification Errors within the "Message Activity Log". This error log provides a variety of warnings which can be very helpful for identifying why your campaigns aren't working as expected.  Clicking on an error message will redirect you to relevant documentation to help you troubleshoot a particular incident.
 
 ![Push Error Log][11]
 
-## Troubleshooting Scenarios
+## Troubleshooting scenarios
 
-### No "Push Registered" Users Showing in the Braze Dashboard (Prior to Sending Messages)
+### No "push registered" users showing in the braze dashboard (prior to sending messages)
   - Ensure that your app is correctly configured to allow push notifications.
   - Ensure that the Client Id and Client Secret configured in your Braze dashboard are correct.
 
-### Push Notifications Not Displayed on Users' Devices
+### Push notifications not displayed on users' devices
 There are a few scenarios why this could be occurring:
 
   - If you force-quit your application, your push notifications will not be displayed while your app is not running.

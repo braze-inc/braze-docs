@@ -8,7 +8,7 @@ description: "This page covers methods to identify users, as well as best practi
  
 ---
 
-# Setting User IDs
+# Setting user ids
 
 {% include archive/setting_user_ids/setting_user_ids.md %}
 
@@ -18,11 +18,11 @@ You should make the following call as soon as the user is identified (generally 
 m.Braze.setUserId(YOUR_USER_ID_STRING)
 ```
 
-## Suggested User ID Naming Convention
+## Suggested user id naming convention
 
 {% include archive/setting_user_ids/naming_convention.md %}
 
-## User ID Integration Best Practices & Notes
+## User id integration best practices & notes
 
 {% include archive/setting_user_ids/best_practices.md %}
 

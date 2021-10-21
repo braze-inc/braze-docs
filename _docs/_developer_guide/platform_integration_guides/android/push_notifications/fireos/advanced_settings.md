@@ -9,17 +9,17 @@ channel: push
 
 ---
 
-# Advanced Settings
+# Advanced settings
 
 There are many advanced settings available for FireOS push notifications sent through the Braze dashboard. This article will describe these features and how to use them successfully.
 
 ![Advanced Settings][1]
 
-## Time to Live (TTL) {#ttl}
+## Time to live (ttl) {#ttl}
 
 The __"Time to Live"__ (ttl) field allows you to set a custom length of time to store messages with the push messaging service. Braze's default values for time to live are 4 weeks for FCM and 31 days for ADM. If the hypothetical user from the example above were to reconnect their device 4 weeks after the game with the time to live set to the default, then those messages would have already expired in the messaging service and would not be delivered.
 
-## Summary Text
+## Summary text
 
 Summary text allows you to set additional text in the "Expanded Notification" view. It also serves as a caption for notifications with images.
 
@@ -31,7 +31,7 @@ For push notifications that include images, the message text will be shown in th
 
 ![Summary Text Behavior][15]
 
-## Custom URIs
+## Custom uris
 
 The __"Custom URI"__ feature allows you to specify a Web URL or an Android resource to navigate to when the notification is clicked. If no custom URI is specified, clicking on the notification brings users into your app. You can use the custom URI to deep link inside your app as well as direct users to resources that exist outside of your app as well. This can be specified via our [Messaging API][13] or via our dashboard under "Advanced Settings" in the push composer wizard as pictured below:
 
@@ -39,7 +39,7 @@ The __"Custom URI"__ feature allows you to specify a Web URL or an Android resou
 
 ![Custom URI][12]
 
-## Notification Display Priority
+## Notification display priority
 
 The priority level of a push notification affects how your notification is displayed in the notification tray relative to other notifications. It can also affect the speed and manner of delivery, as normal and lower priority messages may be sent with slightly higher latency or batched to preserve battery life whereas high priority messages are always sent immediately.
 
@@ -64,7 +64,7 @@ For more information, please consult [Google's documentation on Android notifica
 
 ## Sounds
 
-In Android O, notification sounds became a property of notification channels. You will need to work with your developer to define the sound for a channel during its configuration, and then use the dashboard to select the proper channel when sending your notifications.
+in android o, notification sounds became a property of notification channels. you will need to work with your developer to define the sound for a channel during its configuration, and then use the dashboard to select the proper channel when sending your notifications.
 
 For devices running versions of Android before O, Braze allows you to set the sound of an individual push message through the dashboard composer. You can do so by specifying a local sound resource on the device (e.g. `android.resource://com.mycompany.myapp/raw/mysound`). Specifying "default" in this field will play the default notification sound on the device. This can be specified via our [Messaging API][13] or via our dashboard under "Advanced Settings" in the push composer wizard as pictured below:
 

@@ -8,11 +8,11 @@ description: "This page describes how to fetch and display News Feed data in you
 
 ---
 
-# News Feed
+# News feed
 
 The News Feed is a fully customizable in-app content feed for your users. Our targeting and segmentation allows you to create a stream of content that is individually catered to the interests of each user. Depending on their position in the user life cycle and the nature of your app, this could be an on-boarding content server, an advertisement center, an achievement center, or a generic news center.
 
-## tvOS Feed Integration
+## tvOS feed integration
 Our tvOS SDK supports fetching your News Feed data, such that you can display the News Feed in your application with your own custom UI.  To fetch the News Feed, call
 
 {% tabs %}

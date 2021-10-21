@@ -9,9 +9,9 @@ channel:
 
 ---
 
-# Custom Sounds
+# Custom sounds
 
-## Step 1: Hosting the Sound in the App
+## Step 1: hosting the sound in the app
 
 Custom push notification sounds must be hosted locally within the main bundle of the client application. The following audio data formats are accepted:
 
@@ -32,7 +32,7 @@ You can inspect a sound to determine its data format by opening it in QuickTime 
 
 Custom sounds must be under 30 seconds when played. If a custom sound is over that limit, the default system sound is played instead.
 
-## Step 2: Providing the Dashboard with a Protocol URL for the Sound
+## Step 2: providing the dashboard with a protocol url for the sound
 
 Your sound must be hosted locally within the app. You must specify a Protocol URL that directs to the location of the sound file in the app within the "Sound" field in the push composer. Specifying “default” in this field will play the default notification sound on the device. This can be specified via our [Messaging API][25] or our dashboard under “Advanced Settings” in the push composer wizard as pictured below:
 

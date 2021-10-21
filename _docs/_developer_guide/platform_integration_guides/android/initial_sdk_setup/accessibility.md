@@ -11,7 +11,7 @@ description: "This reference article covers how to implement specific Android SD
 
 # Accessibility
 
-The Braze Android SDK follows the [Android Accessibility Guidelines][1].
+the braze android sdk follows the [android accessibility guidelines][1].
 
 ## In-App Message Talkback
 

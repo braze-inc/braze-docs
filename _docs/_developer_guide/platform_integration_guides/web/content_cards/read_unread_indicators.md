@@ -9,7 +9,7 @@ description: "This reference article covers read and unread indicators in Conten
 
 ---
 
-# Read & Unread Indicators
+# Read & unread indicators
 
 Braze provides indicators on Content Cards as pictured below:
 
@@ -19,7 +19,7 @@ Braze provides indicators on Content Cards as pictured below:
 | Unread | ![UnreadContentCard][3] |
 {: .reset-td-br-1 .reset-td-br-2}
 
-## Changing Colors
+## Changing colors
 
 To change the color of the unread indicator of a card, add custom CSS to your webpage. For example, changing it to green with the following CSS:
 
@@ -27,7 +27,7 @@ To change the color of the unread indicator of a card, add custom CSS to your we
 .ab-unread-indicator { background-color: green !important; }
 ```
 
-## Disabling the Indicators
+## Disabling the indicators
 
 In order to disable this functionality, add the following style to your `css`:
 

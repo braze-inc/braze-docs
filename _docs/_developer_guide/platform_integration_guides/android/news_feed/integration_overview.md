@@ -11,7 +11,7 @@ channel:
   
 ---
 
-# News Feed Integration Overview
+# News feed integration overview
 
 In Android, the News Feed is implemented as a [Fragment][2] that are available in the Braze Android UI project. View [Google's documentation on Fragments][3] for information on how to add a Fragment to an Activity.
 

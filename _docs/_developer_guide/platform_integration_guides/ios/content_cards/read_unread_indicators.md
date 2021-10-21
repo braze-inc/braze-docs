@@ -9,15 +9,15 @@ channel:
 
 ---
 
-# Read & Unread Indicators
+# Read & unread indicators
 
-## Disabling the Unviewed Indicator
+## Disabling the unviewed indicator
 
  ![Read & Unread Indicator]({% image_buster /assets/img/braze-content-cards-seen-unseen-behavior.png %}){: height="50%" width="50%"}
 
 You can choose to disable the blue line at the bottom of the card which indicates whether or not the card has been viewed by setting the `disableUnviewedIndicator` property in `ABKContentCardsTableViewController` to YES.
 
-## Customizing the Unviewed Indicator
+## Customizing the unviewed indicator
 
 The Unviewed indicator can be accessed through the `unviewedLineView` property of the `ABKBaseContentCardCell` class. If you are utilizing Braze's `UITableViewCell` implementations, you should access the property before the cell is drawn.
 

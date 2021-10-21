@@ -12,13 +12,13 @@ description: "This article covers iOS and Android troubleshooting for the Xamari
 
 # Troubleshooting
 
-## Android
+## android
 
-### Push Doesn't Appear After App is Closed from Task Switcher
+### Push doesn't appear after app is closed from task switcher
 
 If you observe that push notifications no longer appear after the app is closed from the task switcher, your app is likely in Debug mode. Xamarin adds scaffolding in Debug mode that prevents apps from receiving push after their process is killed. If you run your app in Release Mode, you should see push even after the app is closed from the task switcher.
 
-### Custom Notification Factory Not Being Set Correctly
+### Custom notification factory not being set correctly
 
 Custom notification factories (and all delegates) must extend [`Java.Lang.Object`][2] to work properly across the C#/Java divide. See Xamarin's [documentation on implementing Java interfaces][1] for more information.
 

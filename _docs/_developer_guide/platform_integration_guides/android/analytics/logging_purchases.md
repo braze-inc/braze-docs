@@ -9,7 +9,7 @@ description: "This reference article shows how to track in-app purchases and rev
 
 ---
 
-# Logging Purchases for Android/FireOS
+# Logging purchases for android/fireos
 
 Record in-app purchases so that you can track your revenue over time and across revenue sources, as well as segment your users by their lifetime value.
 
@@ -17,7 +17,7 @@ Braze supports purchases in multiple currencies. Purchases that you report in a 
 
 Before implementation, be sure to review examples of the segmentation options afforded by custom events vs. custom attributes vs. purchase events in our [Analytics Overview][3].
 
-## Tracking Purchases & Revenue
+## Tracking purchases & revenue
 
 To use this feature, add this method call after a successful purchase in your app:
 
@@ -54,7 +54,7 @@ __If the product Identifier is empty, the purchase will not be logged to Braze._
   If you pass in a value of `10 USD`, and a quantity of `3` then that will log to the user's profile as 3 purchases of 10 dollars for a total of 30 dollars. Quantities must be less than or equal to 100. Values of purchases can be negative.
 {% endalert %}
 
-### Adding Properties
+### Adding properties
 
 You can add metadata about purchases by passing a [Braze Properties][4] object with your purchase information.
 
@@ -83,7 +83,7 @@ Braze.getInstance(context).logPurchase(..., purchaseProperties)
 
 See the [Javadoc][6] for more information.
 
-### Reserved Keys
+### Reserved keys
 
 The following keys are __RESERVED__ and __CANNOT__ be used as Purchase Properties:
 
@@ -94,7 +94,7 @@ The following keys are __RESERVED__ and __CANNOT__ be used as Purchase Propertie
 - `price`
 - `currency`
 
-### REST API
+### REST api
 
 You can also use our REST API to record purchases. Refer to the [User API documentation][1] for details.
 

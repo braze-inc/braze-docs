@@ -10,7 +10,7 @@ description: "This article describes initial SDK setup steps for iOS apps runnin
 
 ---
 
-# Initial SDK Setup
+# Initial sdk setup
 
 Download the SDK from [Github][1] and run the following from the root your project:
 
@@ -36,7 +36,7 @@ In your config.xml, add a `preference` element under the iOS `platform` element 
 
 Set up your applications to have the appropriate certificates for push, via the [iOS push documentation][2].
 
-### Removing Automatic Push Setup
+### Removing automatic push setup
 
 If you want to turn off iOS automatic push registration, set the following configuration preferences:
 
@@ -47,7 +47,7 @@ If you want to turn off iOS automatic push registration, set the following confi
 </platform>
 ```
 
-### Optional IDFA Collection
+### Optional idfa collection
 
 To enable the automatic collection of the iOS IDFA, set the following configuration preferences:
 
@@ -59,7 +59,7 @@ To enable the automatic collection of the iOS IDFA, set the following configurat
 
 > Please see the [iOS IDFA][3] documentation for more information.
 
-### Location Collection and Geofences
+### Location collection and geofences
 
 To enable location collection and Braze Geofences, use the [`geofence-branch`][3] instead of the default `master` branch. By default, the Braze SDK disables location collection and Braze Geofences. Additionally, use the following preferences configuration:
 
@@ -78,7 +78,7 @@ cordova plugin add https://github.com/appboy/appboy-cordova-sdk#geofence-branch
 
 > Please also visit the [iOS Geofences][4] documentation for more information.
 
-### Initial Setup Complete
+### Initial setup complete
 
 Once the initial setup is complete, you can access the `AppboyPlugin` JavaScript interface in your app.
 

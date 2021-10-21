@@ -10,54 +10,54 @@ description: "This reference article covers how to set custom attributes on Unit
 
 ---
 
-# Setting Custom Attributes
+# Setting custom attributes
 
 Braze provides methods for assigning attributes to users. You'll be able to filter and segment your users according to these attributes on the dashboard.
 
 Before implementation, be sure to review examples of the segmentation options afforded by custom events vs. custom attributes vs. purchase events in our [Best Practices section][1].
 
-## Assigning Default User Attributes
+## Assigning default user attributes
 
 To assign user attributes, you need to call the appropriate method on the BrazeBinding object. The following is a list of built-in attributes that can be called using this method.
 
-### First Name
+### First name
 `AppboyBinding.SetUserFirstName("first name");`
 
-### Last Name
+### Last name
 `AppboyBinding.SetUserLastName("last name");`
 
-### User Email
+### User email
 `AppboyBinding.SetUserEmail("email@email.com");`
 
 >  It's still valuable to set email addresses even if you're not sending emails through Braze. Email makes it easier to search for individual user profiles and troubleshoot issues as they arise.
 
 ### Gender
-`AppboyBinding.SetUserGender(Appboy.Models.Gender);`
+`appboybinding.setusergender(appboy.models.gender);`
 
-### Birth Date
+### Birth date
 `AppboyBinding.SetUserDateOfBirth("year(int)", "month(int)", "day(int)");`
 
-### User Country
+### User country
 `AppboyBinding.SetUserCountry("country name");`
 
-### User Home City
+### User home city
 `AppboyBinding.SetUserHomeCity("city name");`
 
-### User Email Subscription
+### User email subscription
 `AppboyBinding.SetUserEmailNotificationSubscriptionType(AppboyNotificationSubscriptionType);`
 
-### User Push Subscription
+### User push subscription
 `AppboyBinding.SetUserPushNotificationSubscriptionType(AppboyNotificationSubscriptionType);`
 
-### User Phone Number
+### User phone number
 `AppboyBinding.SetUserPhoneNumber("phone number");`
 
-## Assigning Custom User Attributes
+## Assigning custom user attributes
 
 Beyond the attributes above, Braze also allows you to define custom attributes using a number of different data types:
 For more information regarding the segmentation options each of these attributes will afford you see our ["Best Practices" documentation][1] within this section.
 
-### Setting Custom Attribute Values
+### Setting custom attribute values
 
 {% tabs %}
 {% tab Boolean Value %}
@@ -117,7 +117,7 @@ AppboyBinding.RemoveFromCustomUserAttributeArray("key", "Attribute")
 {% endtab %}
 {% endtabs 
 	%}
-### Unsetting a Custom Attribute
+### Unsetting a custom attribute
 
 Custom attributes can also be unset using the following method:
 
@@ -125,13 +125,13 @@ Custom attributes can also be unset using the following method:
 AppboyBinding.UnsetCustomUserAttribute("custom attribute key");
 ```
 
-## Setting a Custom Attribute via the REST API
+## Setting a custom attribute via the rest api
 You can also use our REST API to set user attributes. To do so refer to the [user API documentation][3].
 
-## Custom Attribute Value Limits
+## Custom attribute value limits
 Custom attribute values have a maximum length of 255 characters; longer values will be truncated.
 
-## Setting Up User Subscriptions
+## Setting up user subscriptions
 
 To set up a subscription for your users (either email or push), call the functions     
 `AppboyBinding.SetUserEmailNotificationSubscriptionType()` or `AppboyBinding.SetPushNotificationSubscriptionType()`, respectively. Both of these functions take the parameters `Appboy.Models.AppboyNotificationSubscriptionType` as arguments. This type has three different states:
@@ -152,15 +152,15 @@ To set up a subscription for your users (either email or push), call the functio
 
 >  These types fall under `Appboy.Models.AppboyNotificationSubscriptionType`.
 
-## Sample Code
+## Sample code
 
-### Email Subscription:
+### Email subscription:
 
 ```csharp
 AppboyBinding.SetUserEmailNotificationSubscriptionType(AppboyNotificationSubscriptionType.OPTED_IN);
 ```
 
-### Push Notification Subscription:
+### Push notification subscription:
 
 ```csharp
 AppboyBinding.SetUserPushNotificationSubscriptionType(AppboyNotificationSubscriptionType.OPTED_IN);

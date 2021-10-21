@@ -7,7 +7,7 @@ description: "This reference article covers how to log purchases on the Windows 
 
 ---
 
-# Logging Purchases
+# Logging purchases
 
 Record in-app purchases so that you can track your revenue over time and across revenue sources, as well as segment your users by their lifetime value.
 
@@ -23,7 +23,7 @@ Purchases are logged by using the `EventLogger`, which is a property exposed in 
 bool LogPurchase(string productId, string currencyCode, decimal price)
 ```
 
-## REST API
+## REST api
 
 You can also use our REST API to record purchases. Refer to the [user API documentation][2] for details.
 

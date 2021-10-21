@@ -9,19 +9,19 @@ description: "This article covers how to initalize, configure, and implement the
 
 ---
 
-# Google Tag Manager for Android
+# Google tag manager for android
 
-## Initializing the SDK {#initializing-android-google-tag-provider}
+## Initializing the sdk {#initializing-android-google-tag-provider}
 
 Braze's Android SDK can be initialized and controlled by tags configured within [Google Tag Manager][5].
 
 But first - before using Google Tag Manager - be sure to first follow our [Initial SDK Setup][1].
 
-## Configuring Your Google Tag Manager {#configuring-android-google-tag-manager}
+## Configuring your google tag manager {#configuring-android-google-tag-manager}
 
 In our example, we'll pretend we are a music streaming app that wants to log different events as users listen to songs. Using Google Tag Manager for Android, we can control which of our 3rd party vendors receive this event, and create tags specific to Braze.
 
-### Custom Events
+### Custom events
 
 Custom events are logged with `actionType` set to `logEvent`. The Braze custom tag provider in our example is expecting the custom event name to be set using `eventName`.
 
@@ -74,7 +74,7 @@ mFirebaseAnalytics!!logEvent("played song", params)
 {% endtab %}
 {% endtabs %}
 
-### Logging Custom Attributes
+### Logging custom attributes
 
 Custom attributes are set via an `actionType` set to `customAttribute`. The Braze custom tag provider is expecting the custom attribute key-value to be set via `customAttributeKey` and `customAttributeValue`.
 
@@ -101,7 +101,7 @@ mFirebaseAnalytics!!.logEvent("customAttribute", params)
 {% endtab %}
 {% endtabs %}
 
-### Calling ChangeUser
+### Calling changeuser
 
 Calls to `changeUser()` are made via an `actionType` set to `changeUser`. The Braze custom tag provider is expecting the Braze user ID to be set via an `externalUserId` key-value pair within your tag.
 
@@ -126,7 +126,7 @@ mFirebaseAnalytics!!.logEvent("changeUser", params)
 {% endtab %}
 {% endtabs %}
 
-## Braze SDK Custom Tag Provider {#adding-android-google-tag-provider}
+## Braze sdk custom tag provider {#adding-android-google-tag-provider}
 
 With the tags and triggers set up, you will also need to implement Google Tag Manager in your Android app which can be found in Google's [documentation][2]
 

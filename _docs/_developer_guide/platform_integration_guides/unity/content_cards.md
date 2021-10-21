@@ -11,9 +11,9 @@ description: "This reference article covers Content Card implementation guidelin
 
 ---
 
-# Content Cards
+# Content cards
 
-## Displaying Content Cards Natively {#unity-content-cards-native-ui}
+## Displaying content cards natively {#unity-content-cards-native-ui}
 
 You can display the default UI for Content Cards using the following call:
 
@@ -21,7 +21,7 @@ You can display the default UI for Content Cards using the following call:
 Appboy.AppboyBinding.DisplayContentCards();
 ```
 
-## Receiving Content Card Data in Unity
+## Receiving content card data in unity
 
 You may register Unity Game Objects to be notified of incoming Content Cards. We recommend setting game object listeners from the Braze configuration editor.
 
@@ -29,13 +29,13 @@ You may register Unity Game Objects to be notified of incoming Content Cards. We
 
 Note, you will additionally need to make a call to `AppboyBinding.RequestContentCardsRefresh()` to start receiving data in your game object listener on iOS.
 
-## Parsing Content Cards
+## Parsing content cards
 
 Incoming `string` messages received in your Content Cards game object callback can be parsed into our pre-supplied [`ContentCard`][17] model object for convenience.
 
 Parsing Content Cards requires Json parsing, see the following example for details:
 
-##### Example Content Cards Callback
+##### Example content cards callback
 
 ```csharp
 void ExampleCallback(string message) {
@@ -70,7 +70,7 @@ void ExampleCallback(string message) {
 }
 ```
 
-## Refreshing Content Cards
+## Refreshing content cards
 
 To refresh Content Cards from Braze, call either of the following methods:
 
@@ -83,7 +83,7 @@ AppboyBinding.RequestContentCardsRefreshFromCache()
 
 ## Analytics
 
-Clicks and impressions must be manually logged for Content Cards not displayed directly by Braze.
+clicks and impressions must be manually logged for content cards not displayed directly by braze.
 
 Use `LogClick()` and `LogImpression()` on [ContentCard][17] to log clicks and impressions for specific cards.
 

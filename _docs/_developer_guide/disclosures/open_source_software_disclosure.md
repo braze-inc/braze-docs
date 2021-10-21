@@ -11,7 +11,7 @@ description: "This page is home to the open source software disclosure for the B
 Warning! Don't make any changes to this document without approval from the legal department.
 -->
 
-# Open Source Software Disclosure for the Braze Services
+# Open source software disclosure for the braze services
 
 _(effective as of August 29, 2018; subject to change)_
 
@@ -422,7 +422,7 @@ This list of open-source code (the “List”) was generated out-of-the-box by B
 * zendesk_api Apache 2.0
 * zookeeper MIT
 
-## License Descriptions
+## License descriptions
 
 _This is a set of links to open source licenses as described above._
 

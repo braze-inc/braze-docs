@@ -12,7 +12,7 @@ description: "This article covers how to get started with Content Cards for Cord
 
 ---
 
-# Content Cards for Cordova Integration
+# Content cards for cordova integration
 
 To get started with Content Cards, the Braze SDKs include a default card feed. To show the card feed you can use the `AppboyPlugin.launchContentCards()` method.
 
@@ -20,7 +20,7 @@ The default card feed included with the Braze SDK will handle all analytics trac
 
 ## Customization
 
-You can use these additional methods to build a custom Content Cards Feed within your app:
+you can use these additional methods to build a custom content cards feed within your app:
 
 |Method | Description |
 |---|---|

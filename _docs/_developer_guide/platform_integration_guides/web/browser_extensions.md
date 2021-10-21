@@ -8,7 +8,7 @@ description: "This article describes how to use the Braze Web SDK inside your Br
 
 ---
 
-# Browser Extension Integration
+# Browser extension integration
 
 Integrate Braze's Web SDK within your Browser Extension to collect analytics and display rich messaging to users! This includes both **Google Chrome Extensions** and **Firefox Add-Ons**.
 
@@ -21,7 +21,7 @@ In general, since Extensions are simply HTML and Javascript, you can use Braze f
 * **Content Cards** Add a feed of native cards to your extension for onboarding or promotional content.
 * **Web Push** Send timely notifications even when your web page is not currently open.
 
-## Extension Types
+## Extension types
 Braze can be included in the following areas of your extension:
 
 |Area|Details|What's supported|
@@ -33,11 +33,11 @@ Braze can be included in the following areas of your extension:
 
 ## Permissions
 
-No additional permissions are required in your `manifest.json` when integrating the Braze SDK (`appboy.min.js`) as a local file, bundled with your extension. 
+no additional permissions are required in your `manifest.json` when integrating the braze sdk (`appboy.min.js`) as a local file, bundled with your extension. 
 
 However, if you use [Google Tag Manager][8], or reference Braze's SDK from an external URL, or have set a strict Content Security Policy for your extension, you will need to adjust the [`content_security_policy`][6] setting in your `manifest.json` to allow remote script sources.
 
-## Getting Started
+## Getting started
 
 {% alert tip %}
 Before you get started, make sure you've read through the Web SDK's [Initial SDK Setup Guide]({{site.baseurl}}/developer_guide/platform_integration_guides/web/initial_sdk_setup/) to learn more about our Javascript integration in general.  <br><br>You may also want to bookmark the [Javascript SDK Reference](https://js.appboycdn.com/web-sdk/latest/doc/modules/appboy.html) for full details on all of the different SDK methods and configuration options.
@@ -54,7 +54,7 @@ npm install --save @braze/web-sdk;
 cp node_modules/@braze/web-sdk/appboy.min.js /path/to/extension
 ```
 
-### Extension Popups {#popup}
+### Extension popups {#popup}
 
 Adding Braze to an Extension Popup is easy! Just reference the local Javascript file in your `popup.html`, as you would in a regular website. If you're using Google Tag Manager, you can add Braze using our [Google Tag Manager Templates][8] instead.
 
@@ -69,7 +69,7 @@ Adding Braze to an Extension Popup is easy! Just reference the local Javascript 
 </html>
 ```
 
-### Background Script {#background-script}
+### Background script {#background-script}
 
 To use Braze within your extension's Background Script, add the Braze library to your `manifest.json` in the `background.scripts` array. This will make the global `appboy` variable available in your background script context.
 
@@ -86,13 +86,13 @@ To use Braze within your extension's Background Script, add the Braze library to
 }
 ```
 
-### Options Page {#options-page}
+### Options page {#options-page}
 
 If you use an options page (via the `options` or `options_ui` manifest properties), you can include Braze just as you would in the [`popup.html` instructions](#popup).
 
 ## Initialization
 
-Once the SDK is included you can initialize the library as usual. 
+once the sdk is included you can initialize the library as usual. 
 
 Note: since cookies are not supported in browser extensions, you can disable the use of cookies by initializing with `noCookies: true`.
 
@@ -108,7 +108,7 @@ appboy.initialize("YOUR-API-KEY-HERE", {
 
 ## Push
 
-Extension Popup dialogs don't allow for push prompts (they don't have the URL bar in the navigation). So, in order to register and request Push Permission within an extension's Popup dialog, you'll have to make use of alternate domain workaround, as described in our [Alternate Push Domain][11] guide.
+extension popup dialogs don't allow for push prompts (they don't have the url bar in the navigation). so, in order to register and request push permission within an extension's popup dialog, you'll have to make use of alternate domain workaround, as described in our [alternate push domain][11] guide.
 
 [1]: https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/user_interface/Popups
 [2]: https://developer.chrome.com/extensions/background_pages

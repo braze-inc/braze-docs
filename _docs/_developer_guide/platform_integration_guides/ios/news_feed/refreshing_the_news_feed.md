@@ -9,7 +9,7 @@ channel:
 
 ---
 
-# Refreshing the News Feed
+# Refreshing the news feed
 
 You can manually request Braze to refresh the user's News Feed in `Appboy.h` using `- (void) requestFeedRefresh;`. For example:
 

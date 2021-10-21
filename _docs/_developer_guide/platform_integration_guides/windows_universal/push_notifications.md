@@ -8,7 +8,7 @@ channel: push
 
 ---
 
-# Push Notification Integration
+# Push notification integration
 
 ![Sample Push][10]{: style="float:right;max-width:40%;margin-left:15px;"}
 
@@ -16,18 +16,18 @@ A push notification is an out-of-app alert that appears on the user's screen whe
 
 Visit our [documentation][9] for additional best practices.
 
-## Step 1: Configure Your Application For Push
+## Step 1: configure your application for push
 
 Ensure that in your `Package.appxmanifest` file, the following settings are configured as noted below:
 
 Within the __Application__ tab, ensure that `Toast Capable` is set to `YES`.
 
-## Step 2: Configure the Braze Dashboard
+## Step 2: configure the braze dashboard
 
 1. Find your SID and Client Secret - [Step By Step Instructions][4]
 2. Within the __Settings__ page of the Braze dashboard, add the SID and Client Secret in your settings.
 
-## Step 3: Update for Background Open Logging
+## Step 3: update for background open logging
 
 In your `OnLaunched` method, after you have called `OpenSession` add the following code snippet.
 
@@ -41,7 +41,7 @@ Appboy.SharedInstance.PushManager.LogPushNotificationOpened(campaignId);
 
 ![Windows SID Dashboard][6]
 
-## Step 4: Creating Event Handlers
+## Step 4: creating event handlers
 
 To listen to events that are fired when the push is received and activated (clicked by user), create event handlers and add them to the `PushManager` events:
 
@@ -53,9 +53,9 @@ Your event handlers should have the signatures:
 - `void YourPushReceivedEventHandler(PushNotificationChannel sender, AppboyPushNotificationReceivedEventArgs args);`
 - `void YourToastActivatedEventHandler(ToastNotification sender, AppboyToastActivatedEventArgs args);`
 
-## Step 5: Deep Linking From Push Into Your App
+## Step 5: deep linking from push into your app
 
-### Part 1: Creating deep links for your app
+### Part 1: creating deep links for your app
 
 Deep links are used to navigate users from outside your application directly to a certain screen or page in your application. Typically this is done by registering a URL scheme (e.g. myapp://mypage) with an operating system and registering your application to handle that scheme; when the OS is asked to open a URL of that format it transfers control to your application.
 
@@ -63,13 +63,13 @@ WNS deep link support differs from this as it launches your application with dat
 
 If you specify an extra launch string in the dashboard or the REST API, it will be added to the end of the launch string that we create, after the key "abextras=". So, an example launch string might look like `ab_cn_id=_trackingid_abextras=page=settings`, in which you specified `page=settings` in the extra launch string parameter so you can parse it and navigate the user to the settings page.
 
-### Part 2: Deep Linking Through the Dashboard
+### Part 2: deep linking through the dashboard
 
 Specify the string to be appended to the launch string in the “Additional Launch String Configuration” field in push notification settings.
 
 ![Deep_Link_Dash_Example][15]
 
-### Part 3: Deep Linking through the REST API
+### Part 3: deep linking through the rest api
 
 Braze also allows sending deep links through the REST API. Windows Universal Push objects accept an optional `extra_launch_string` parameter. See the [Windows Universal Push Object Example.][13]
 

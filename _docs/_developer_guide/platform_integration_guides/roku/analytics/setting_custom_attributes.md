@@ -8,13 +8,13 @@ description: "This page describes methods to assign custom attributes to users v
 
 ---
 
-# Setting Custom Attributes
+# Setting custom attributes
 
 Braze provides methods for assigning attributes to users. You'll be able to filter and segment your users according to these attributes on the dashboard.
 
 Before implementation, be sure to review examples of the segmentation options afforded by custom events vs. User attributes vs. purchase events in our [Best Practices section][7]. You should also check out our notes on [event naming conventions]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/event_naming_conventions/).
 
-## Assigning Default User Attributes
+## Assigning default user attributes
 
 User attributes will be assigned to the currently active user. The following default fields may be set:
 
@@ -35,11 +35,11 @@ User attributes will be assigned to the currently active user. The following def
 m.Braze.setFirstName("User's First Name")
 ```
 
-## Assigning Custom User Attributes
+## Assigning custom user attributes
 
 Beyond the default attributes above, Braze also allows you to define custom attributes using several different data types. For more information regarding the segmentation options, and how each of these attributes will affect you, see our [Best Practices documentation][1] within this section.
 
-### Settings Custom Attribute Values
+### Settings custom attribute values
 {% tabs %}
 {% tab Boolean %}
 ```javascript
@@ -88,7 +88,7 @@ This code is an example of an incrementing custom attribute. You may increment t
 m.Braze.incrementCustomUserAttribute("intAttribute", 3)
 ```
 
-### Unsetting a Custom Attribute
+### Unsetting a custom attribute
 
 Custom atributes can also be unset using the following method:
 
@@ -96,15 +96,15 @@ Custom atributes can also be unset using the following method:
 m.Braze.unsetCustomAttribute("attributeName")
 ```
 
-### Setting a Custom Attribute via the REST API
+### Setting a custom attribute via the rest api
 
 You can also use our REST API to set user attributes. To do so refer to the [user API documentation][4].
 
-### Custom Attribute Value Limits
+### Custom attribute value limits
 
 Custom attribute values have a maximum length of 255 characters.
 
-## Managing Email Subscription Status
+## Managing email subscription status
 
 You can set the following email subscription statuses for your users programmatically through the SDK.
 
