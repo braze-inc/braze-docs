@@ -15,7 +15,7 @@ For example, if you send out multiple categories of email campaigns, you can off
 
 Use the [Subscription Group REST APIs]({{site.baseurl}}/developer_guide/rest_api/subscription_group_api/) to programmatically manage the subscription groups that you have stored on the Braze dashboard to the Subscription Group page.
 
-## Email preference center
+## Email Preference Center
 
 The [Email Preference Center]({{site.baseurl}}/user_guide/message_building_by_channel/email/managing_user_subscriptions/#email-preference-center) is an easy way to manage which users receive certain groups of newsletters. Each Subscription Group you create is added to the Preference Center list. Click on the name of the Preference Center to see an interactive preview.
 

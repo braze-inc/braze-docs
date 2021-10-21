@@ -9,7 +9,7 @@ tool: Dashboard
 platform: API
 ---
 
-# Deleting users via api
+# Deleting users via API
 
 When you [delete a user via the Braze REST API]({{site.baseurl}}/api/endpoints/user_data/#user-delete-endpoint), the following occurs:
 

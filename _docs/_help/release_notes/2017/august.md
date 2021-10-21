@@ -12,7 +12,7 @@ description: "This article contains release notes for August 2017."
 
 We added support for [push action buttons][70] to our REST API messaging endpoints.
 
-## Update to liquid templating
+## Update to Liquid templating
 
 You can now [personalize a message][69] based on:
 - The device it was sent to,
@@ -23,7 +23,7 @@ You can now [personalize a message][69] based on:
 - OS, and
 - Platform
 
-## API-Triggered Canvas
+## API-triggered Canvas
 
 You can now trigger a [Canvas][68] via API endpoints (send, schedule, update, delete) that match the existing ones for campaigns, allowing you to further automate and optimize your marketing.
 
@@ -31,7 +31,7 @@ You can now trigger a [Canvas][68] via API endpoints (send, schedule, update, de
 
 We’ve added support for push action buttons on the web SDK for Chrome, allowing you increase your engagement by giving your users contextual choices that simplify their busy lives. Learn more about best practices for push notifications [here][66].
 
-## New api endpoints
+## New API endpoints
 
 We’ve exposed new API endpoints, /email/hard_bounces, that lets you pull hard bounces by email address or in a given date range, and /messages/scheduled_broadcasts, that lets you pull the next time that scheduled campaigns and scheduled-entry Canvases will begin. These new endpoints allow you for further customization and optimization of your campaigns. Learn more about our API endpoints [here][65].
 
@@ -47,11 +47,11 @@ We’ve added dynamic autocompleting to our new email editor, so you can now aut
 
 We’ve added a “never” date filter so you can target customers who have never received or interacted with one of your message, enabling you to have clean customer lists and ensure email deliverability. Learn more about filters [here][62].
 
-## Update to canvas
+## Update to Canvas
 
 We’ve added percentages to the top of each Canvas variant so now, you can see which variants are performing better at a glance. Learn more about Canvas [here][61].
 
-## Canvas with intelligent selection
+## Canvas with Intelligent Selection
 
 Canvas now has Intelligent Selection, allowing you to test your Canvases with more efficiency. Learn more about our Intelligence Suite [here][60].
 
@@ -59,7 +59,7 @@ Canvas now has Intelligent Selection, allowing you to test your Canvases with mo
 
 We’ve added support of special UTF-8 characters in email display names, so you can create even more personalized emails for your customers. Learn more about email best practices [here][67].
 
-## Engagement reports csv aggregation
+## Engagement Reports CSV aggregation
 
 Now, you can receive consolidated data for every campaign and every Canvas in two separate files regardless of how many campaigns or Canvases are selected, allowing you to have all the data you need, when you need it. Learn more about Engagement Reports [here][59].
 

@@ -13,7 +13,7 @@ You can now trigger campaigns and Canvas steps based on attribute value changes,
 
 This feature is not yet available for all customers. Please reach out to your Account Manager if you are interested in enabling this feature for your Braze account.
 
-## Canvas time option addition: local time
+## Canvas time option addition: Local time
 
 You can now choose to send a message at your company's local time, or your user's local time. When creating your Canvas step, just select "Scheduled", then "on the next" or "in". Then, you will be able to choose between "company time" and "user's local time".
 

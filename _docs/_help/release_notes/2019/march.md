@@ -8,7 +8,7 @@ description: "This article contains release notes for March 2019."
 
 # March 2019
 
-## In-App Messages - Generation 3
+## In-app messages - Generation 3
 
 Braze is proud to announce that we have made improvements to the look and feel of our in-app messages to adhere to the latest UX and UI best practices. In the newest in-app messages, you can expect your users to interact with messages with
 - larger font sizes,
@@ -27,7 +27,7 @@ We highly recommend updating to the latest versions of the Braze SDKs for [Web](
 
 After that, you're good to go!
 
-## Content blocks archive update
+## Content Blocks archive update
 
 You can now archive and unarchive Content Blocks. Learn more in our main [Content Blocks documentation]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/content_blocks/#archiving-content-blocks).
 
@@ -35,6 +35,6 @@ You can now archive and unarchive Content Blocks. Learn more in our main [Conten
 
 You can now use [Inkit]({{site.baseurl}}/partners/inkit/) as a Predesigned Webhook Template or create a new Webhook Campaign.
 
-## Google cloud storage
+## Google Cloud Storage
 
 Google Cloud Storage is no longer in Beta! Braze is proud to announce that Google Cloud Storage is available to interested customers within the Braze platform. Go to __Technology Partners__ in your Braze account and search for Google Cloud Storage and [read more in our documentation]({{site.baseurl}}/partners/data_and_infrastructure_agility/data_warehouses/google_cloud_storage_for_currents/).

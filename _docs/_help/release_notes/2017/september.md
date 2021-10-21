@@ -8,7 +8,7 @@ description: "This article contains release notes for September 2017."
 
 # September 2017
 
-## New functionality for engagement reports
+## New functionality for Engagement Reports
 
 You can now use [Engagement Reports][72] to aggregate metrics for a campaign across specific periods of time. For example, you can export the total number of opens from a quarter, or the total number of clicks from the entire lifetime of a campaign or Canvas. All you have to do is:
 - Select a time frame from which to export data,
@@ -27,7 +27,7 @@ You can now set up message close behavior for Chrome web pushes that requires th
 
 When creating an email message within Braze, you can now easily insert a preheader in the "Sending Info" section.
 
-## New api endpoint for raw event export
+## New API endpoint for raw event export
 
 We've added a new [API endpoint][71], /raw_data/status, that lets you query to see if a given day has been loaded into the Raw Event Export. You can use it to check if a particular day's raw data is available, to help with debugging and automation.
 

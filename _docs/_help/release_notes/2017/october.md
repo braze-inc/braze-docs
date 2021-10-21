@@ -16,7 +16,7 @@ On iOS and Android, you can now [create notifications][74] with multiple pages, 
 
 [currents][75] displays a set of real-time, high volume data connections for customer data with pre-built connections directly into technologies like data warehouses, business intelligence tools, and data management platforms. it launches with integrations for amazon redshift, amplitude, and data management platforms segment and mparticle. to gain access to this new product, please contact your customer success manager, account manager, or [open a support ticket][support].
 
-## Okta single sign-on (october 2017)
+## Okta single sign-on (October 2017)
 
 Companies can use Okta to control Braze access and allow or force their fellow Braze users to log in using Okta credentials. To gain access to this new product, please contact your Customer Success Manager, Account Manager, or [open a support ticket][support].
 

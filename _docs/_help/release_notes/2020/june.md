@@ -7,11 +7,11 @@ description: "This article contains release notes for June 2020."
 ---
 # June 2020
 
-## Retention reports 
+## Retention Reports
 
 Retention Reports now offer Range Retention - Range Retention measures how many users come back and perform a selected retention event during specific intervals of time. To read more about Range Retention and Retention Reports, visit out [Canvas][1] and [Campaign][2] docs. 
 
-## Users/Track API Updates
+## User track API updates
 
 The [users/track][3] endpoint now has a default rate of 50,000 API requests per minute for dashboard companies created after June 2, 2020. Existing companies created before this date and their app groups will still be allowed unlimited API requests to the users/track endpoint.
 

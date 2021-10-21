@@ -10,7 +10,7 @@ tool:
 - Canvas
 ---
 
-# Untriggered campaign or canvas
+# Untriggered campaign or Canvas
 
 There are a number of reasons why you did not get the expected trigger behavior.
 

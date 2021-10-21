@@ -7,7 +7,7 @@ description: "This article contains release notes for December 2018."
 ---
 # December 2018
 
-## Content blocks
+## Content Blocks
 
 [Content Blocks]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/content_blocks/) allow you to manage your reusable, cross-channel content in a single, centralized location. To access this feature please go into the __Content Blocks Library__ tab in the __Templates & Media__ section of your Braze account. With Content Blocks, you can:
  - Create a consistent look and feel to your Email campaigns using Content Blocks as Headers and Footers.

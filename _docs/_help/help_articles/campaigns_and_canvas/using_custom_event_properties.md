@@ -24,7 +24,7 @@ There are three important checks to carry out to ensure your custom events are b
 
 ## Verify custom event properties
 
-### Which events?
+### Verify events
 
 Check with your developers which event properties are being tracked. Keep in mind that all event properties are case sensitive.
 

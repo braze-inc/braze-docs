@@ -8,7 +8,7 @@ description: "This article contains release notes for September 2019."
 
 # September 2019
 
-## Braze app within onelogin
+## Braze app within OneLogin
 
 Customers will be able to simply search and select Braze within [OneLogin]({{site.baseurl}}/user_guide/administrative/access_braze/single_sign_on/onelogin/) for SP or IdP Initiated login. This means that customers will not have to add a custom application within OneLogin. As a result, this should pre-populate certain settings like attributes which we have seen come up since launching SAML SSO.
 
@@ -23,7 +23,7 @@ Customers will be able to simply search and select Braze within [OneLogin]({{sit
 
 With [Passkit]({{site.baseurl}}/partners/additional_channels/mobile_wallet/passkit/), Braze customers will be able to expand their customer engagement to mobile wallet. They will be able to personalized wallet campaigns while using Braze's powerful segmentation and orchestrate alongside channels like push, in-app messages, and more.
 
-## Dispatch id value return via messaging endpoints
+## Dispatch ID value return via messaging endpoints
 
 A message's `dispatch_id` will be included in the following Messaging endpoint responses:
 

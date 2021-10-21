@@ -7,14 +7,15 @@ description: "This article contains release notes for May 2020."
 ---
 # May 2020
 
-## Google tag manager
+## Google Tag Manager
 
 Added documentation and examples of how to deploy and manage Braze's Android SDK using [Google Tag Manager]({{site.baseurl}}/developer_guide/platform_integration_guides/android/advanced_use_cases/android_google_tag_manager/).
 
-## New blacklist email api endpoint
+## New blacklist email API endpoint
+
 You can now [blacklist]({{site.baseurl}}/api/endpoints/email/post_blacklist/) email addresses via the Braze API. Blacklisting an email address will unsubscribe the user from email and mark them as hard bounced.
 
-## API key change for braze api endpoints
+## API key change for Braze API endpoints
 
 As of May 2020, Braze has changed how we read API keys to be more secure. Now API keys should be passed in as a request header. Examples can be found on individual endpoint pages under __Example Request__, as well as in the __API Key Explanation__ below.
 

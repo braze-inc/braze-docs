@@ -21,11 +21,11 @@ If your control group is large compared to your variant group (and this is not y
 
 When creating a Canvas with a control group, ensure that all users in the Entry Audience are able to receive messages within the Canvas (i.e. the Canvas contains push and email messages).
 
-### Set entry audience push status
+## Set entry audience push status
 
 Set your entry audience filter to "Is Push Enabled".
 
-### Set entry audience email status
+## Set entry audience email status
 
 Set your entry audience filter to "is Opted In or Subscribed".
 

@@ -22,17 +22,17 @@ You can now create segments using the following filters:
 As of March 2019, `Received Canvas Step` has been renamed to `Received Message from Canvas Step`, and `Last Received Specific Canvas Step` has been renamed to `Last Received Message from Specific Canvas Step`.
 {% endalert %}
 
-## Exporting users using device id
+## Exporting users using device ID
 
 This endpoint now accepts a device identifier as a parameter, which lets you to [export profiles of anonymous users][82].
 
 You can use Device ID to export all user profiles on that device.
 
-## Engagement reports update
+## Engagement Reports update
 
 Additional stats, like **push open rate** and **conversion rate**, are [now available in reports][81].
 
-## Apple push certificates: using .p8 files
+## Apple push certificates: Using .p8 files
 
 You can now use a [.p8 file][80] when uploading an Apple Push Certificate - ensuring that your iOS push credentials will never expire.
 

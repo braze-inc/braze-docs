@@ -9,11 +9,11 @@ description: "This article contains release notes for January 2019."
 
 Welcome to a new year!
 
-## Push time to live (ttl)
+## Push time to live (TTL)
 
 In your account, within __Manage Settings__, click the [Push TTL Settings]({{site.baseurl}}/user_guide/administrative/app_settings/push_ttl_settings/) tab to manage the time duration for attempted resends in the event that a device is offline.
 
-## Connected content ip whitelisting
+## Connected Content IP whitelisting
 
 Braze is pleased to announce that due to a number of infrastructure upgrades made by our internal teams, we can now offer IP whitelisting for Connected Content on all clusters. In the future, we plan to add additional IPs for the non-EU clusters.
 

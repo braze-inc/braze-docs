@@ -15,7 +15,7 @@ In May, Braze will be implementing a security initiative for webhook redirects. 
 
 Braze has updated the CSV X filter to include the 100 most recent CSVs a user was updated in, as opposed to the previous 10.
 
-## Uninstall tracking on by default for android apps
+## Uninstall tracking on by default for Android apps
 
 The [Uninstall Tracking][94] function for all new Android apps will default to "on." All existing Android apps that have uninstall tracking turned off will now be changed to "on." Android uninstall tracking no longer sends push to the device, and no other updates or actions are required on your part.
 

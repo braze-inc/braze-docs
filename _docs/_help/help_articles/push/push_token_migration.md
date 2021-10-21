@@ -20,13 +20,13 @@ To continue sending push messages to these users during the Braze SDK integratio
 These campaigns will have to be configured with proper key-value pairs to ensure that the client’s existing push notification setup will recognize and display the push payload we send to users’ devices. While we will record the number of pushes we send, no data on open rates or conversion events is tracked as that requires the Braze’s SDK to be integrated.
 {% endcomment %}
 
-## Migration via api
+## Migration via API
 
 Push tokens can either be uploaded for identified users or anonymous users. This means that either an `external_id` needs to present, or the anonymous users must have the `push_token_import` flag set to `true`. 
 
 The `app_id` required can be found in the **Developer Console**, under the **API Settings** tab in the **Identification** section. Each app (iOS, Android, Web, etc.) has its own `app_id` - be sure to use the correct platform's `app_id`.
 
-#### Migration if external id is present
+#### Migration if external ID is present
 ```json
 "attributes" : [
   {
@@ -46,7 +46,7 @@ The `app_id` required can be found in the **Developer Console**, under the **API
 When importing push tokens from other systems, an `external_id` is not always available. To maintain communication with these users during your transition to Braze, you can import the legacy tokens for anonymous users without providing `external_id` by specifying `push_token_import` as `true`.
 {% endalert %}
 
-#### Migration if external id is not present
+#### Migration if external ID is not present
 
 These tokens can be migrated by [importing them with our API]({{site.baseurl}}/api/endpoints/user_data/#push-token-import).
 
@@ -105,7 +105,7 @@ Braze will check once a month to find any anonymous profile with the `push_token
 ### Web push tokens
 Web push tokens contain extra fields that other platforms do not. As a result, we recommend that you integrate push and allow your token-base to repopulate naturally.
 
-## Sending push before braze sdk integration (android only)
+## Sending push before Braze SDK integration (Android only)
 
 {% alert warning %}
 This solution only applies to Android users. iOS users will not receive push with this method. iOS does not require these steps because there is only one framework for displaying push. Push notifications will render immediately as long as Braze has the necessary push tokens and certificates.

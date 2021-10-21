@@ -8,7 +8,7 @@ description: "This article contains release notes for August 2021."
 
 # August 2021
 
-## Simple survey in-app message
+## Simple Survey in-app message
 
 Use the new Simple Survey In-App Message template to collect user attributes, insights, and preferences that power your campaign strategy. For example, you can ask users how they’d like to use your app, learn more about their personal preferences, or even ask about their satisfaction with a particular feature. This survey template is supported for both mobile apps and web browsers. Visit our [documentation]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/templates/simple_survey/) to get started.
 
@@ -28,7 +28,7 @@ Learn more about how the Braze SDK can be integrated to allow for flexible data 
 
 Learn more about SSL at Braze, why SSL is important, and how you can acquire an SSL certificate in our new [SSL Overview]({{site.baseurl}}/user_guide/onboarding_with_braze/email_setup/ssl/) documentation.
 
-## Amplitude user profile api endpoints
+## Amplitude user profile API endpoints
 
 Amplitude’s User Profile API serves Amplitude user profiles. This includes user properties, computed user properties, a list of cohort IDs of cohorts that include the user, and recommendations. Refer to [Amplitude User Profile API Endpoints]({{site.baseurl}}/partners/data_and_infrastructure_agility/analytics/amplitude/amplitude_user_profile_api/) to learn more.
 

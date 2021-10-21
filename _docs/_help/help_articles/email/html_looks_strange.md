@@ -8,7 +8,7 @@ description: "This help article walks you through how to troubleshoot issues wit
 channel: email
 ---
 
-# Troubleshooting html rendering in test emails
+# Troubleshooting HTML rendering in test emails
 
 If your [Test Email][37] looks off, we recommend that you...
 
@@ -17,7 +17,7 @@ If your [Test Email][37] looks off, we recommend that you...
 * [Check Rendering](#check-rendering), or
 * [Switch CSS In-lining](#switch-css-in-lining).
 
-### Check html setup
+### Check HTML setup
 
 First, confirm with your developers that your HTML is set up properly.
 
@@ -37,7 +37,7 @@ Emails render differently on different browsers and email clients. Record which 
 
 - Once you’ve identified which browsers/email clients are causing issues, let your developer team know that they’ll need to modify their HTML and make edits to accommodate those browsers/email clients.
 
-### Switch css in-lining
+### Switch CSS in-lining
 
 There are times when the preview in Email on Acid or Litmus still does not match what is sent via the Braze dashboard. One possible cause for this is the CSS in-lining that is performed by Braze may differ from the CSS in-lining performed by other tools. If you suspect that this is the case, contact your Braze account manager to ask for CSS in-lining to be turned off.
 

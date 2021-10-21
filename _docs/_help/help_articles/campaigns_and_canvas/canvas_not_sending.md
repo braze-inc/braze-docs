@@ -18,13 +18,13 @@ Canvases are robust and complex, and we know you dedicate time and care when cre
 
 ## Schedule
 
-* is the canvas [scheduled correctly]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/create_a_canvas/#scheduled-delivery)?
+* Is the Canvas [scheduled correctly]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/create_a_canvas/#scheduled-delivery)?
 * Have you chosen the correct date and time?
 * For [Action-Based]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/create_a_canvas/#action-based-delivery), have users performed specified actions since you launched the Canvas?
 
 ## Segment
 
-it is important to check your [entry audience]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/create_a_canvas/#set-your-target-entry-audience):
+It is important to check your [Entry Audience]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/create_a_canvas/#set-your-target-entry-audience):
 * Have you chosen the correct Segment?
 * How is the Segment set up?
 * Have you ensured that the Segment contains any users?
@@ -33,7 +33,7 @@ it is important to check your [entry audience]({{site.baseurl}}/user_guide/engag
 
 ## Settings
 
-the [entry settings]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/create_a_canvas/#step-2-use-the-entry-wizard-to-set-up-your-canvas) are important. check if you have limited the number of people who will potentially enter the canvas.
+The [Entry Settings]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/create_a_canvas/#step-2-use-the-entry-wizard-to-set-up-your-canvas) are important. Check if you have limited the number of people who will potentially enter the Canvas.
 
 Users may also drop out of a Canvas if they are no longer eligible to receive messages. For example, if the Canvas only contains push notifications, and a user opts out of push after receiving the first step, then that user would drop out of the Canvas. Consider using branching to add in alternative user journeys.
 

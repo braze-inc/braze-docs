@@ -7,19 +7,19 @@ description: "This article contains release notes for August 2020."
 ---
 # August
 
-## external id migration endpoints
+## External ID migration endpoints
 
 Braze has released two new External ID Migration endpoints. These endpoints allow customers to rename or remove their users' Braze external IDs by utilizing the Braze API. These endpoints can be leveraged to migrate users with different naming schemas  while retaining historical data on those users. Check out our docs to learn more about the [`users.external_ids.rename`]({{site.baseurl}}/api/endpoints/user_data/external_id_migration/post_external_ids_rename/) and [`users.external_ids.remove`]({{site.baseurl}}/api/endpoints/user_data/external_id_migration/post_external_ids_remove/) endpoints.
 
-## Predictive churn
+## Predictive Churn
 
 Braze's Predictive Suite puts machine learning directly in your hands. Starting with [Predictive Churn]({{site.baseurl}}/user_guide/predictive_suite/), it’s easier than ever to effectively leverage and act on data seamlessly within the Braze platform. With it, you can create a tailored machine learning model to predict the risk of churn for a specific customer base, and then message the users that machine learning determines are at-risk before it’s too late. Previews of this feature will appear in eligible Braze customers' dashboards in early August. Contact your Account Manager for access to the full feature.
 
-## Updates to currents tracking properties
+## Updates to Currents tracking properties
 
 Within certain Currents message engagement events (linked below), the tracking properties `canvas_variation_name` and `canvas_step_name` have been added. For a full list, check out the [Message Engagement Events Glossary]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/event_glossary/message_engagement_events/) and the [Currents Changelog]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/).
 
-## Amazon personalize partnership
+## Amazon Personalize partnership
 
 Amazon Personalize uses machine learnings to help create high-quality recommendations for your website and applications. Amazon personalize enables you to improve customer engagement by powering real-time personalized product and content recommendations, and targeted marketing promotions. For more information, check out our [Amazon Personalize]({{site.baseurl}}/partners/data_augmentation/recommendation/amazon_personalize/) documentation.
 

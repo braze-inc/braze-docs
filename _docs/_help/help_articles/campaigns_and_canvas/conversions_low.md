@@ -10,7 +10,7 @@ tool:
 - Campaigns
 ---
 
-# Low campaign or canvas conversions
+# Low campaign or Canvas conversions
 
 Your conversions (when your user performs an action within your message that you defined during the creation of your campaign) might not be as high as you expect them to be when compared to previous campaigns or your expectations. Conversions are a tricky business, but they are dependent on a few simple functions in our platform: event tracking and conversion deadlines.
 

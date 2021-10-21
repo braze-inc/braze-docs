@@ -8,7 +8,7 @@ description: "This article contains release notes for June 2017."
 
 # June 2017
 
-## Update to external api
+## Update to external API
 
 We've updated the external API to support the collapse_id field for Apple push, giving you the ability to message your customers with precision. Learn more about the Braze messaging API [here][49].
 
@@ -20,14 +20,16 @@ We've added updates for web push notifications previews including a dropdown and
 
 We've added the ability for customers to set password complexity rules, dashboard IP whitelisting, and two factor authentication, giving you more control. Learn more security settings [here][46].
 
-## Concurrent csv imports
+## Concurrent CSV imports
 
 You can now upload multiple CSVs and process them at the same time, enabling you to move faster. Learn more about user imports [here][50].
 
 ## Canvas template attributes
+
 We’ve added the ability to include templating attributes to messages sent from Canvas steps, helping you be more efficient. Learn more about Canvas [here][45].
 
 ## Updates to targeting
+
 You can now select hours as a time unit when you are filtering for date and time, enabling you to target your messages with more precision. Learn more about filters [here][44].
 
 

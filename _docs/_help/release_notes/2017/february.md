@@ -8,11 +8,11 @@ description: "This article contains release notes for February 2017."
 
 # February 2017
 
-## Add canvas steps after launch
+## Add Canvas steps after launch
 
 Canvas steps can now be added to existing steps, even after the Canvas is launched. To learn more about creating a Canvas, read more [here][23].
 
-## Bulk csv for engagement reports
+## Bulk CSV for Engagement Reports
 
 You can now export campaign data CSV in bulk with Engagement Reports. Learn more about this new feature [here][22].
 
@@ -26,7 +26,7 @@ For more personalized user targeting, you can now use “Last Received In-App Me
 
 It’s now easier for you to see what is happening in your SDK integration. For more information on Event User Logs and their use, visit [here][20].
 
-## News feed templating
+## News Feed templating
 
 There are now two News Feed card fields,{% raw %} {{card.${name}}} {% endraw %} and {% raw %}  {{card.${api_id}}}{% endraw %}. These cards can be added to Liquid templating. Learn more about personalized messaging and templates [here][19].
 

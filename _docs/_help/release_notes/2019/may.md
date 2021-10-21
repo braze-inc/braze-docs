@@ -8,7 +8,7 @@ description: "This article contains release notes for May 2019."
 
 # May 2019
 
-## Content cards
+## Content Cards
 
 Content Cards are persistent content that appear within customers’ app and web experiences.
 
@@ -39,7 +39,7 @@ You can now retrieve data from Roku devices for data enrichment and custom event
 
 [Check out the documentation here!]({{site.baseurl}}/developer_guide/platform_integration_guides/roku/initial_sdk_setup/)
 
-## Notification preferences for canvas & campaign updates
+## Notification preferences for Canvas & campaign updates
 
 This new notification will alert you via email when a campaign/Canvas is activated, updated, reactivated or deactivated. Activate this in Notification Preferences in your Braze account. [Learn more about this preference here.]({{site.baseurl}}/user_guide/administrative/company_settings/notification_preferences/#notification-preferences)  
 
@@ -55,7 +55,7 @@ We've made it easier to select where your in-app messages are going and which pl
 
 ![Platform Picker][plat_p]
 
-## Dispatch id currents field for email
+## Dispatch ID currents field for email
 
 {% alert update %}
 Behavior for `dispatch_id` differs between Canvas and campaigns because Braze treats Canvas steps (except for Entry Steps, which can be scheduled) as triggered events, even when they are "scheduled". [Learn more about `dispatch_id` behavior in Canvas and campaigns here]({{site.baseurl}}/help/help_articles/data/dispatch_id/).
@@ -69,7 +69,7 @@ The `dispatch_id` is the unique out-of-the-box ID generated for each transmissio
 
 While all customers who are sent a scheduled message get the same `dispatch_id`, customers who receive either action-based or API-triggered messages will get a unique `dispatch_id` per message. The `dispatch_id` field enables you to identify which instance of a recurring campaign is responsible for conversion, thus equipping you with more insights and information on which types of campaigns are helping push the needle on your business goals.
 
-## Only show mine - campaign sorting feature
+## Only Show Mine - campaign sorting feature
 
 When a user checks the `Only Show Mine` checkbox on the campaign grid, the results will filter down to campaigns show only created by the logged-in user. Additionally, the user can use the search bar by inputting `created_by_me:true`.
 

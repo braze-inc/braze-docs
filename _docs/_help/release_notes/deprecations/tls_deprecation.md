@@ -23,10 +23,10 @@ More recently, the PCI Security Standards Council released encryption-related gu
 
 A cipher suite is a combination of algorithms that provide encryption, authentication, and communications integrity when negotiating a secure SSL or TLS connection. When it’s discovered that it’s possible for a given cipher to be broken—whether or not there are any current known attacks—the cipher is considered to have “weaknesses” that could enable future attacks. By excluding these TLS ciphers from PCI DSS compliance requirements, the PCI DSS Council is requiring service providers to support only best-in-class encryption standards. The PCI DSS Council has set a deadline of June 30, 2018 for compliance with the encryption requirement to drop support for TLS 1.0 and TLS 1.1.
 
-## Braze’s Deprecation Plan
+## Braze’s deprecation plan
 In order to comply with the PCI DSS Council’s recommendations, Braze will be raising the minimum versions of TLS that we support on our Services. To give you a better idea about our compliance plan and its potential impact on your brand and your end users, there are two main phases to our plan to be aware of:
 
-### Phase 1: october 1, 2017
+### Phase 1: October 1, 2017
 
 Braze will remove the ability to use the following ciphers from Braze's Web dashboard and REST APIs:
 
@@ -42,7 +42,7 @@ This change should not impact customers accessing the Braze dashboard, as all mo
 
 Your engineering team should ensure that they aren’t using any of these ciphers for server-to-server communication with Braze’s REST APIs. If they are, they’ll need to update their code to use more secure encryption ciphers prior to October 1 in order to continue making use of Braze’s APIs. However, in order to maintain support for old and outdated mobile devices which may be using weak ciphers, Braze will continue to support these ciphers on the APIS that received data from our SDKs.
 
-### Phase 2: may 31, 2018
+### Phase 2: May 31, 2018
 
 Braze will be disabling support for TLS 1.0 and TLS 1.1 across all Braze Services on May 31, 2018—including the Braze dashboard, REST APIs, and APIs that communicate with our SDKs. We’ll also remove support for the ciphers listed above in connection with the APIs that receive SDK data. That means that all TLS 1.0 and 1.1 communication to and from Braze will not be supported by our network as of this date.
 

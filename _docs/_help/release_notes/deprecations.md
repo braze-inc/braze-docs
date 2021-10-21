@@ -64,7 +64,7 @@ _Support to be completely withdrawn July 1, 2019._
 
 The Braze SDK provided a feedback widget that could be added to your app to allow users to leave feedback using the submitFeedback method and pass it into either Desk.com or Zendesk and was managed on the dashboard.
 
-## Google cloud messaging (gcm)
+## Google Cloud Messaging (GCM)
 
 _Replaced by: [Firebase Cloud Messaging (FCM)]({{site.baseurl}}/developer_guide/platform_integration_guides/android/push_notifications/integration/standard_integration/#step-1-enable-firebase)_
 
@@ -88,7 +88,7 @@ _Support withdrawn: 2014-2015_
 
 Braze has removed support for the Eclipse IDE due to [Google sunsetting support for the Eclipse Android Developer Tools Plugin](http://android-developers.blogspot.com/2015/06/an-update-on-eclipse-android-developer.html). If you need assistance with your Eclipse integration prior to migration please [email Support]({{site.baseurl}}/support_contact/) for assistance.
 
-## The raw event stream (res)
+## The Raw Event Stream (RES)
 
 _Replaced by: [Currents]({{site.baseurl}}/partners/braze_currents/about/)_
 

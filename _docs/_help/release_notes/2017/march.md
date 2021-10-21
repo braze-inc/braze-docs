@@ -16,7 +16,7 @@ We've added a new "Converted from Canvas" filter to provide more seamless retarg
 
 You can now save webhook messages as templates for easy reuse or start with a preconfigured templates for platforms like SMS with Twilio or chatbots like Facebook Messenger. Learn more about creating a webhook [here][26].
 
-## Multiple email support for engagement reports
+## Multiple email support for Engagement Reports
 
 Engagement Reports may now be sent to multiple email addresses. To learn more about exporting data with Engagement Reports, visit [here][25].
 

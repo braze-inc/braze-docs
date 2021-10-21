@@ -16,15 +16,15 @@ We’ve added support for large images for Web Push on Chrome for Windows and An
 
 You can now lock emails to a specific set of from-addresses, ensuring that you don’t accidentally input the wrong address. The email composition form will be pre-populated with addresses used in the last 6 months to streamline the process. Learn more about email best practices [here][57].
 
-## Updates to campaign details api
+## Updates to campaign details API
 
 The /campaign/details API endpoint now gives information about its messages, allowing you to pull subject, HTML body, from-address, and reply-to fields using the API. Learn more about our APIs [here][56].
 
-## Updates to liquid templating
+## Updates to Liquid templating
 
 We’ve added the ability to template variant attributes in Canvases and campaigns. In Canvas, you can now template both the variant’s API id as well as the variant’s name, and in campaigns you can now template a message’s message_api_id and message_name. Both updates allow for more flexibility in your messaging, allowing you to build personalized campaigns. Learn more about personalized messaging [here][55].
 
-## New html email editor
+## New HTML email editor
 
 You can now easily write and test emails with a full-screen HTML editor that enables live preview, personalization via Liquid and an improved full-screen text editor with line numbers and syntax highlighting. Learn more about email composition [here][54].
 
@@ -36,7 +36,7 @@ You can now follow the screen window as you scroll down message previews in camp
 
 We added a new filter, Segment Membership, enabling you to target users based off their membership in any of your existing segments. In addition, we’ve added the ability to use of both “And” and “Or” logic in segment filters, as well as the ability to nest segments within each other. These updates enable you to send customized messages to your customers with more precision. Learn more about filters [here][52].
 
-## Update to android preview
+## Update to Android preview
 
 We updated the Android preview to reflect more recent versions of Android since Android N.  Learn more about preview messages [here][51].
 

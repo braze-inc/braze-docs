@@ -18,7 +18,7 @@ Also, please check out the pioneers of Hacktoberfest - [DigitalOcean](https://ha
 
 ## Participation
 
-to participate, just...
+To participate, just...
 
 1. Check out [our repo](https://github.com/Appboy/braze-docs) or click the <i class="fab fa-github"></i> __Edit this page on Github__ button at the bottom of most pages.
 2. Sign [our CLA](http://braze.com/docs/cla).
@@ -38,7 +38,7 @@ We're still working on setting some things up, but trust us, they're on our mind
 
 ## Prizes
 
-we have hacktober pumpkin-torchie pins, t-shirts, and hoodies available for our top contributors!
+We have Hacktober pumpkin-torchie pins, t-shirts, and hoodies available for our top contributors!
 
 ![Torchie]({% image_buster /assets/img/hacktoberfest_torchie2.png %}){: style="border:none;"}
 

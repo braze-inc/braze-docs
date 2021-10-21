@@ -12,16 +12,16 @@ description: "This article contains release notes for February 2018."
 You can now [update badge count][89] within the push composer from Braze.
 For each push message, you can specify what badge count that notification triggers.
 
-## Exporting users via api using email addresses
+## Exporting users via API using email addresses
 
 You can now [export user profile data via API][88] by specifying email addresses.
 This export includes all profiles associated with that email address.
 
-## Email template apis
+## Email template APIs
 
 You can now create and update [email templates via API][87]. Each template will have an **email_template_id** that can be referenced in other API calls.
 
-## REST api keys permissions
+## REST API keys permissions
 
 You can now create [multiple REST API keys][86] and configure access permissions for each. Each key can be configured to grant access to certain endpoints.
 
