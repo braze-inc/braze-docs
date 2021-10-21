@@ -91,11 +91,11 @@ Including a control group lets you know whether your messages have a greater imp
 
 ## Creating Multivariate & A/B Tests with Braze {#creating-tests}
 
+![Create Your Campaign][160]{: style="max-width:30%;float:right;margin-left:15px;"}
+
 ### Step 1: Create Your Campaign
 
 Click **Create Campaign** and select a channel for the campaign from the section that allows multivariate and A/B testing.
-
-![Create Your Campaign][160]
 
 ### Step 2: Compose Your Variants
 
@@ -103,7 +103,7 @@ You can create up to eight (8) variants of your message, differentiating between
 
 The number of differences between the messages determines whether this is a Multivariate or A/B Test.
 
-For some ideas on how to get started differentiating your variants, see [here][70].
+For some ideas on how to get started differentiating your variants, see the section on [Tips for Different Channels][70].
 
 ![Compose Your Variants][170]
 
@@ -127,7 +127,7 @@ Using a control group when determining winner by Opens or Clicks is not recommen
 
 Sending the Winning Variant automatically is only available for Email, Push, and Webhook campaigns scheduled to send once.
 
-For best practices around choosing a segment to test with, see [here][80].
+For best practices around choosing a segment to test with, see the section below on [Choosing a Segment][80].
 
 ![Choose a Segment][180]
 
@@ -187,12 +187,9 @@ In general, a confidence of at least 95% is necessary to show that your results 
 
 A test that doesn’t have a confidence of 95% can still hold important insights. Here are a few things you can learn from a test with statistically insignificant results:
 
-- It’s possible that all of your variants had roughly the same effect. Knowing this saves you the time you would’ve spent making these changes. Sometimes, you may find that conventional marketing tactics, such as repeating your call to action, don’t necessarily work for your audience.
-
-- While your results may have been due to chance, they can inform the hypothesis for your next test. If multiple variants appear to have roughly the same results, run some of them again alongside new variants to see if you can find a more effective alternative. If one variant does better, but not by a significant amount, you can perform another test in which this variant’s difference is more exaggerated.
-
-- Keep testing! A test with insignificant results should lead to certain questions. Was there truly no difference between your variants? Should you have structured your test differently? You can answer these questions by running follow-up tests.
-
+- It’s possible that all of your variants had roughly the same effect. Knowing this saves you the time you would’ve spent making these changes. Sometimes, you may find that conventional marketing tactics, such as repeating your call to action, don’t necessarily work for your audience.<br><br>
+- While your results may have been due to chance, they can inform the hypothesis for your next test. If multiple variants appear to have roughly the same results, run some of them again alongside new variants to see if you can find a more effective alternative. If one variant does better, but not by a significant amount, you can perform another test in which this variant’s difference is more exaggerated.<br><br>
+- Keep testing! A test with insignificant results should lead to certain questions. Was there truly no difference between your variants? Should you have structured your test differently? You can answer these questions by running follow-up tests.<br><br>
 - While testing is useful for discovering which type of messaging generates the most response from your audience, it’s also important to understand which alterations in messaging have only a negligible effect.  This allows you to either continue testing for another more effective alternative, or save the time that may have been spent deciding between two alternate messages.
 
 Whether or not your test has a clear winner, it can be helpful to run follow-up test to confirm your results or apply your findings to a slightly different scenario.
@@ -261,10 +258,10 @@ One multivariate and A/B test can (and should!) inspire ideas for future tests, 
 {% enddetails %}
 
 [2]: {{site.baseurl}}/user_guide/engagement_tools/campaigns/testing_and_more/conversion_events/#conversion-events
-[70]: #what-can-you-test
+[70]: #tips-different-channels
 [80]: #choosing-a-segment
 [160]: {% image_buster /assets/img/ab_create_1.png %}
-[170]: {% image_buster /assets/img/ab_create_2.gif %}
+[170]: {% image_buster /assets/img/ab_create_2.png %}
 [175]: {{site.baseurl}}/user_guide/engagement_tools/campaigns/scheduling_and_organizing/delivery_types/
 [180]: {% image_buster /assets/img/ab_create_4.png %}
 [210]: {% image_buster /assets/img/ab_create_8.png %}
