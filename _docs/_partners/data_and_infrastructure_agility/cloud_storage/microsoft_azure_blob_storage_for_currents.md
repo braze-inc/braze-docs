@@ -18,7 +18,7 @@ After transporting data into Azure Blob Storage, you can use ETL processes (Extr
 
 ## Integration
 
-Integration with Microsoft Azure Blob Storage requires a Storage Account and a Connection String to allow Braze to connect to stream Currents data
+Integration with Microsoft Azure Blob Storage requires a Storage Account and a Connection String to allow Braze to connect to stream Currents data.
 
 ### Step 1: Create storage account
 
