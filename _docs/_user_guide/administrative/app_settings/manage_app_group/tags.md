@@ -10,7 +10,7 @@ description: "This reference article covers tags in the Braze dashboard, which y
 
 braze tracks author, editor, date, and status information about segments, campaigns, canvases, and news feed cards, and gives you the ability to create tags to further organize and sort your engagement.
 
-## Campaign, Segment, and News Feed Card Tags
+## Campaign, segment, and News Feed card tags
 
 You can add tags when creating or editing a campaign, Canvas, segment, or News Feed card. Click <span style="font-size: 14px;margin-bottom: .5rem;height: 16px;width: 16px;" class="fas fa-tag" ></span>**Tags** below the engagement name and select an existing tag, or start typing to add a new tag.
 

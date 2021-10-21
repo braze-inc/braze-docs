@@ -28,15 +28,15 @@ Use this field to set when you want your Braze account users to reset their pass
 ### Session duration rules
 Use this field to define how long Braze will keep your session active. Once Braze deems your session inactive (no activity for the defined number of minutes), the user will be logged out. The maximum number of minutes you can enter is 1440 (equal to 24 hours).
 
-### Restrict sso
+### Restrict SSO
 You can restrict your users from logging in using a password or SSO.
 
 For [SAML SSO][1], customers will need to set up their SAML settings prior to enforcing. If customers use Google SSO, they will simply have to enforce the security settings page with no additional lift.
 
-## Dashboard ip whitelisting
+## Dashboard IP whitelisting
 Use the field shown to whitelist specific IP addresses and subnets from which users can log in to your account (for example, from a company network or VPN). Specify IP addresses and subnets as CIDR ranges in a comma-separated list. If not specified, users will be able to log in from any IP address.
 
-## Two-Factor Authentication
+## Two-factor authentication
 Two-factor authentication adds a second level of identity verification to an account log, making it more secure than just a username and password. Toggling this switch to __On__ will make two-factor authentication mandatory for all Braze account users in your company.
 
 When two-factor authentication is enabled, in addition to entering a password, users will need to enter a verification code sent to their mobile device when logging in to their Braze account.
@@ -45,7 +45,7 @@ When two-factor authentication is enabled, in addition to entering a password, u
 
 Two-factor authentication is optional by default. However, when enabled, users who fail to set up their two-factor authentication will be locked out of their Braze account. Braze account users also can set up two-factor authentication on their own, even if not required by the administrator.
 
-### __Remember me__
+### Remember me
 ![Remember Me][0]{: style="float:right;max-width:30%;margin-left:15px;"}
 Upon toggling on two-factor authentication for your company, the __Remember Me__ checkbox becomes available to users. This feature stores a cookie on your device, only requiring you to log in with two-factor authentication __once__ over the course of 30 days.
 
@@ -57,7 +57,7 @@ Be sure to save your changes before leaving the page!
 
 Users experiencing issues logging in via two-factor authentication can reach out to their company admins to reset their two-factor authentication. To do this, have an admin navigate to __Manage Users__, select the user from the provided list, and select __Reset__ under __Two-Factor Authentication__. A reset can solve common authentication issues such as trouble with Authy, login failure due to SMS outages or user error, and more.
 
-Two-Factor Authentication Enforcement:
+Two-factor authentication enforcement:
 - If two-factor authentication is not enforced at the company level, once reset, the user will log in normally and need to go to __Account Settings__ to enable and set up two-factor authentication.
 - If two-factor authentication is enforced at the company level, the next time the user logs in, they'll be asked to set up their two-factor authentication.
 

@@ -7,9 +7,9 @@ description: "This reference article covers company-wide settings, like changing
 
 ---
 
-# Company wide settings management
+# Company-wide settings management
 
-## Company settings page
+## Company Settings page
 
 The [Company Settings][1] page allows you to change the name of your company, set your time zone and request to delete your company.
 
@@ -79,7 +79,7 @@ You also can access the [Email Settings][8] tab to edit:
 
 ![email settings][7]
 
-## List-Unsubscribe Settings
+## List-unsubscribe settings
 
 ![list_unsub_1] [57]{: style="float:right;max-width:60%;margin-left:15px;"}
 
@@ -99,7 +99,7 @@ Company administrators can configure authentication requirements for signing int
 
 ![Authentication Rules][51]
 
-### Dashboard ip whitelisting
+### Dashboard IP whitelisting
 
 Your team can add a whitelist of specific IP addresses, ranges and subnets from which users can log in to your company's Braze account.
 
@@ -109,11 +109,11 @@ For more information on CIDR notation see [RFC 4632][84].
 
 ![Dashboard IP Whitelisting][52]
 
-### Two-Factor Authentication
+### Two-factor authentication
 
 Two-factor authentication adds an extra layer of identity verification upon login. By enabling two-factor authentication, Braze will require two methods of verification to log in to your Braze account: your password and your mobile phone.  Braze uses [Authy][56], a two-factor authentication service, to help secure your account.
 
-#### Two-Factory Authentication Authy Set Up Overview
+#### Two-factor authentication Authy set up overview
 1. Download the Authy App.
 2. Navigate to Two-Factor Authentication under Account Settings and enter your phone number.
 3. There will be a notification sent to the device instructing to open Authy to obtain the code for Braze.

@@ -155,7 +155,7 @@ The header is not added for messages targeting “all users including unsubscrib
 If you use Mailjet, you do not have the flexibility to choose on/off for this feature - it will be `ON` by default.
 {% endalert %}
 
-### Inline css on new emails by default
+### Inline CSS on new emails by default
 
 CSS inlining is a technique that automatically inlines your emails' CSS styles. For some email clients, this can improve the way that your emails render. This feature automatically inlines CSS on new emails by default.
 

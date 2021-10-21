@@ -7,7 +7,7 @@ description: "This reference article covers the Event User Log, which can help y
 
 ---
 
-# Event user log tab
+# Event User Log tab
 
 The Event User Log can help you break down, debug, or otherwise troubleshoot issues in your Braze Integration. This tab gives you a log of errors that details the type of error, which app it's associated with, when it happened, and often an opportunity to view the raw data associated with it.
 
@@ -26,11 +26,11 @@ Each log is broken up into multiple sections, which can include:
 * Campaign Events
 * Response Data
 
-Click the “Raw Data” button to show the raw `JSON` data for that specific log.
+Click the **Raw Data** button to show the raw JSON data for that specific log.
 
 ![Raw logs][10]
 
-Event User Logs will remain in the dashboard for thirty (30) days after they are logged.
+Event User Logs will remain in the dashboard for 30 days after they are logged.
 
 
 [10]: {% image_buster /assets/img_archive/rawlogs.png %}

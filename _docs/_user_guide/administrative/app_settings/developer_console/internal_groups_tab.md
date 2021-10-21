@@ -7,11 +7,11 @@ description: "This reference article covers Internal Groups, a great way to get 
 
 ---
 
-# Internal groups tab
+# Internal Groups tab
 
 Internal Groups are a great way to build and organize internal or third-party test groups and provide insight into the SDK or API logs available from your test device during SDK integration testing. You can create an unlimited number of custom Internal Groups with up to 1000 members.
 
-### Creating a group
+## Creating a group
 
 Depending on your access and permissions, you can create Internal Groups from the Developer Console:
 
@@ -80,7 +80,7 @@ _If there is a recurring campaign and an update is conducted on any one of the v
 
 ![Seed group campaign][11]
 
-#### For canvas
+#### For Canvas
 
 Seed groups in Canvas work in a similar fashion to that of any triggered campaign. Braze automatically detects all steps that contain an email message and will send to these when your user first reaches that particular email step.
 

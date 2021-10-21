@@ -25,16 +25,17 @@ Okta connects any person with any application on any device. It's an enterprise-
 | Braze Admin Privileges | Please make sure you have Admin Privileges before setting up Okta |
 {: .reset-td-br-1 .reset-td-br-2}
 
-## Step 1: configure braze
+## Step 1: Configure Braze
 
-### Step 1a: log in to your braze account and navigate to security settings
+### Step 1a: Log in to your Braze account and navigate to Security Settings
+
 Log into your Braze account using an __admin account__.
 
-Click on your user name, then select `Company Settings` from the dropdown menu. Next, select the `Security Settings` tab. Toggle the green `SAML SSO` switch to `ON` from the right side of the page.
+Click on your user name, then select **Company Settings** from the dropdown menu. Next, select the **Security Settings** tab. Toggle the green **SAML SSO** switch to **ON** from the right side of the page.
 
 ![Okta SAML]({% image_buster/assets/img/Okta/okta1.png %})
 
-### Step 1b: edit saml sso settings
+### Step 1b: Edit SAML SSO settings
 
 From your Okta Admin Dashboard, you will be provided a `Target URL` (Login URL) and `x.509` certificate which you must input into your Braze account.
 
@@ -47,31 +48,34 @@ From your Okta Admin Dashboard, you will be provided a `Target URL` (Login URL) 
 
 ![Enable SAML SSO]({% image_buster /assets/img/samlsso.gif %})
 
-Select `Save Changes` at the bottom of the page once completed.
+Select **Save Changes** at the bottom of the page once completed.
 
-## Step 2: enable the idp-initiated flow
+## Step 2: Enable the IdP-initiated flow
 
 Next, you must create your Braze API Key with `sso.saml.login` permission enabled.
-- If you do not already have such a Braze API Key, one can be created by going to the `Developer Console` in `Settings`, then click `Create New API Key`.<br>From here, scroll down to the SSO section and check the `sso.saml.login` option and then __save__ the API Key.<br>
+
+- If you do not already have such a Braze API Key, one can be created by going to the **Developer Console** in **Settings**, then click **Create New API Key**.<br>From here, scroll down to the SSO section and check the `sso.saml.login` option and then save the API Key.<br>
 
 ![SSO Set Up]({% image_buster /assets/img/sso2.png %}){: style="max-width:80%"}
 
-## Step 3: configure okta
+## Step 3: Configure Okta
+
 ![Okta SAML]({% image_buster/assets/img/Okta/okta2.png %}){: style="float:right;max-width:45%;margin-left:15px;"}
-### Step 3a: navigate to okta
 
-In Okta, select the `Sign On` tab for the Braze SAML app, then click `Edit`.
+### Step 3a: Navigate to Okta
 
-### Step 3b: update default relay state
+In Okta, select the **Sign On** tab for the Braze SAML app, then click **Edit**.
 
-Enter the API key with `sso.saml.login` permission you made in Step 2, in the `Default Relay State` field.
+### Step 3b: Update default relay state
+
+Enter the API key with `sso.saml.login` permission you made in Step 2, in the **Default Relay State** field.
 
 __Save these new settings.__
 
 {% alert tip %}
-If you want your Braze account users to only sign in with SAML SSO, you can [restrict single sign-on authentication]({{site.baseurl}}/user_guide/administrative/access_braze/single_sign_on/restriction/) from the `Company Settings` page.
+If you want your Braze account users to only sign in with SAML SSO, you can [restrict single sign-on authentication]({{site.baseurl}}/user_guide/administrative/access_braze/single_sign_on/restriction/) from the **Company Settings** page.
 {% endalert %}
 
-## You should now be able to log into braze using okta!
+## You should now be able to log into Braze using Okta!
 <br>
 ![Okta SAML]({% image_buster/assets/img/Okta/okta3.png %}){: style="max-width:60%"}

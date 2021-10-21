@@ -17,7 +17,7 @@ For more on managing your company’s Braze users, check out the [Manage Your Br
 
 If you are not the first user on your company’s Braze account, reach out to your company’s Braze Account Administrator and ask them to create your account. You will then receive a welcome email from `@alerts.braze.com` asking you to confirm your email and log in.
 
-# Logging in
+## Logging in
 
 Now that you’ve established where you need to log in, let’s talk about how to log in, whether it’s the first time or the millionth! If you are your company’s first user, follow the guidance detailed above. If not, feel free to log in after your company’s Braze Admin creates your account!
 
