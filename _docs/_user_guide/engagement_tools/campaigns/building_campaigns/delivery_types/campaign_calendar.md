@@ -8,7 +8,7 @@ description: "This reference page breaks down the components of the campaign cal
 
 ---
 
-# Campaign Calendar
+# Campaign calendar
 
 The Campaign Calendar is a useful central location in the Dashboard where you can see a big picture view of upcoming and past scheduled campaigns. In addition to this, you will be presented with overall messaging analytics, providing useful information on the type and quantity of future campaigns as well as send stats for past campaigns. 
 ![Calendar Button][5]{: style="float:right;max-width:15%;margin-left:15px;margin-bottom:10px;margin-top:10px;"}
@@ -21,7 +21,7 @@ The Campaign Calendar can be found by navigating to the Braze dashboard and sele
 Only scheduled campaigns are displayed in the Campaign Calendar. Canvas steps, triggered campaigns, and API campaigns will not be displayed here.
 {% endalert %}
 
-## Future Send Calendar
+## Future send calendar
 
 __Red__: Single-channel scheduled campaigns<br>
 __Blue__: Multichannel scheduled campaigns
@@ -29,7 +29,7 @@ __Blue__: Multichannel scheduled campaigns
 Note that only __Scheduled Campaigns__ are displayed in the Campaign Calendar.<br> 
 Canvas steps, triggered campaigns, and API campaigns __will not be displayed here__. 
 
-## Messaging Analytics
+## Messaging analytics
 
 __Upcoming Message Types__: Details the amount of push, email, and in-app messaging campaigns over the course of the next 14 days.<br> 
 __Messages Sent__: Details the number of messages sent and opened over the course of the past 14 days. 

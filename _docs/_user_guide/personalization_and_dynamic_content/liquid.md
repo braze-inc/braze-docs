@@ -39,7 +39,7 @@ guide_featured_list:
   fa_icon: fas fa-list-ul
 ---
 
-## About Liquid
+## About liquid
 
 Campaign messages support templated messaging using the Liquid templating language. Detailed documentation of Liquid syntax and usage is available [**here**][1].
 
@@ -51,7 +51,7 @@ Liquid templating language supports the use of objects, tags and filters.
 - [**Tags**]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/supported_personalization_tags/) allow you to execute programming logic in your messages. For example, you can use tags to include intelligent logic, such as "if" statements, in your campaigns.
 - [**Filters**]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/filters/) allow you to reformat personalized attributes and dynamic content. For example, you could convert a timestamp, such as *2016-09-07 08:43:50 UTC* into a date such as *September 7, 2016*.
 
-## Terms to Know
+## Terms to know
 
 These terms are reinterpreted from [**Shopify's documentation**](https://shopify.github.io/liquid/basics/introduction/) based on our level of support.
 

@@ -8,12 +8,12 @@ channel: email
 
 ---
 
-# Consent & Address Collection
+# Consent & address collection
 
 ## Consent
-Before sending out your initial emails, it's important to get permission from your customers first. It's a common courtesy and does wonders for your open rates!
+before sending out your initial emails, it's important to get permission from your customers first. it's a common courtesy and does wonders for your open rates!
 
-### Subscriber States
+### Subscriber states
 There are three email subscription states for a user: __opted in__, __subscribed__, and __unsubscribed__. To change a user's subscription state, in addition to using the methods described above, you can use our [REST APIs]({{site.baseurl}}/api/endpoints/subscription_groups/post_update_user_subscription_group_status/).
 
 |Subscriber State | Description |
@@ -23,7 +23,7 @@ There are three email subscription states for a user: __opted in__, __subscribed
 |Unsubscribed|To be marked as unsubscribed, a customer has either explicitly unsubscribed from your emails or has marked an email as spam.|
 {: .reset-td-br-1 .reset-td-br-2}
 
-## Address Collection Methods
+## Address collection methods
 
 | Method | Description |
 |---|---|

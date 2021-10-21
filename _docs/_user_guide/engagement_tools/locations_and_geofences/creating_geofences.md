@@ -10,7 +10,7 @@ tool:
 ---
 # Geofences
 
-> This reference article covers how to create and configure Geofences.
+> this reference article covers how to create and configure geofences.
 
 At the core of Braze's real-time location offering is the concept of a "geofence." A geofence is a virtual geographic area, represented as latitude/longitude pairs combined with a radius, forming a circle in a specific position on the globe. Geofences can vary in size from the size of a building to the size of an entire city.
 
@@ -18,13 +18,13 @@ You can define geofences on the Braze dashboard and trigger campaigns in real-ti
 
 Geofences are managed in the **Locations** page in the **Engagement** section. Geofences are organized into geofence sets - a group of geofences that can be used to segment or engage users throughout the platform. Example geofence sets include `All Northeast Regional Stores` or `September Events`. A given geofence set may only contain up to 10,000 geofences.
 
-## Creating Geofence Sets Manually
+## Creating geofence sets manually
 
 ![Geofence Location Main Screen][1]
 
 Once you have created a geofence set, you can manually add geofences by drawing them on the map. We recommend creating geofences with a radius of at least 100 meters for optimal functionality.
 
-## Creating Geofence Sets via Bulk Upload
+## Creating geofence sets via bulk upload
 
 Geofences may be uploaded in bulk as a GeoJSON object of type `FeatureCollection`. Each individual geofence is a `Point` geometry type in the feature collection. The properties for each feature require a `"radius"` key, and an optional `"name"` key for each geofence.
 
@@ -62,18 +62,18 @@ The sample below represents the correct GeoJSON for specifying two geofences: on
 
 >  The maximum geofence radius that may be uploaded is 100000 meters (100km/62mi).
 
-## Using Geofence Events
+## Using geofence events
 
 Once geofences have been configured, you can use them to enhance and enrich how you communicate with your users.
 
 ### Triggering
-To use geofence data as part of campaign and Canvas triggers, choose "Action-based Delivery" for its delivery method. Next, add a trigger action of `Trigger a Geofence`. Finally, choose the geofence set and geofence transition event types for your message. You can also advance users through a Canvas using geofence events.
+to use geofence data as part of campaign and canvas triggers, choose "action-based delivery" for its delivery method. next, add a trigger action of `trigger a geofence`. finally, choose the geofence set and geofence transition event types for your message. you can also advance users through a canvas using geofence events.
 
 ![action_based_geofence_trigger][2]
 
 ### Personalization
 
-To use geofence data to personalize a message, you may use the following Liquid personalization syntax:
+to use geofence data to personalize a message, you may use the following liquid personalization syntax:
 
 {% raw %}
 * `{{event_properties.${geofence_name}}}`

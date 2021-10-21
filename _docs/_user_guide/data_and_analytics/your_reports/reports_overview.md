@@ -8,11 +8,11 @@ tool: Reports
 
 ---
 
-# Reports Overview
+# Reports overview
 
 Not sure where to start with analyzing your campaigns? You're in the right place. This page provides guidance on which reports and analytics you can use to answer common marketing strategy questions.
 
-## Which Variant Won?
+## Which variant won?
 
 {% tabs local %}
 {% tab Campaign Analytics %}
@@ -75,7 +75,7 @@ More questions you can answer with this feature:
 {% endtab %}
 {% endtabs %}
 
-## Which Variant Impacted Retention the Most?
+## Which variant impacted retention the most?
 
 {% tabs local %}
 {% tab Retention Reports %}
@@ -116,7 +116,7 @@ More questions you can answer with this report:
 {% endtab %}
 {% endtabs%}
 
-## How Engaged Are My Users?
+## How engaged are my users?
 
 {% tabs local %}
 {% tab Report Builder %}
@@ -187,7 +187,7 @@ More questions you can answer with this report:
 {% endtab %}
 {% endtabs %}
 
-## How Do User Behaviors Differ by Segment?
+## How do user behaviors differ by segment?
 
 {% tabs local %}
 {% tab Segment Data %}
@@ -239,7 +239,7 @@ Check out this page to:
 {% endtab %}
 {% endtabs %}
 
-## Did My Campaign Provide a Return on Investment?
+## Did my campaign provide a return on investment?
 
 {% tabs local %}
 {% tab Revenue Data %}
@@ -278,7 +278,7 @@ More questions you can answer with report:
 {% endtab %}
 {% endtabs %}
 
-## What Campaigns Should I Run Next?
+## What campaigns should i run next?
 
 {% tabs local %}
 {% tab Funnel Report %}

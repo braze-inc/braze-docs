@@ -11,7 +11,7 @@ tool:
   - Canvas
   - Reports
 ---
-# Engagement Reports
+# Engagement reports
 
 Engagement Reports are Braze's custom reporting tool, where you can pull engagement statistics for specified messages from campaigns and Canvases.
 
@@ -23,7 +23,7 @@ Engagement Reports are Braze's custom reporting tool, where you can pull engagem
 Reports are not saved in the dashboard, and re-running the report can result in updated statistics.
 {% endalert %}
 
-## Create A New Report
+## Create a new report
 
 ![GIF of creating an engagement report]({% image_buster /assets/img/engagement_reports.gif %}){: style="float:right;max-width:50%;border:0px;"}
 
@@ -44,22 +44,22 @@ Your Braze user account must have ‘Export User Data’ access to utilize Engag
 
 ---
 
-## Add Messages to Your Report
+## Add messages to your report
 
 The Add Messages tab allows you to select your messages in two ways:
 
 ![engagement_reports_message_selection][2]
 
-### Manually Select Campaigns or Canvases
+### Manually select campaigns or canvases
 
 This option gives you the freedom to choose whichever campaigns or Canvases you would like in this report.
 
-### Automatically Select Campaigns or Canvases
+### Automatically select campaigns or canvases
 
 This option gives you the ability to automatically include all messages based on a specific tag. You can target messages that have any one or all of the tags listed.  This option is useful if you are setting up recurring reports and utilize our tagging system.
 
 
-## Add Statistics to Your Report
+## Add statistics to your report
 
 The Stats tab will automatically show you stats for the types of campaigns or Canvases you have selected.  For instance, if you picked Email messages, you will only see the Email Stats.  If you picked a combination of Email and Push, you will see the stats for those two channels.
 
@@ -75,35 +75,35 @@ The Stats tab will automatically show you stats for the types of campaigns or Ca
 | SMS | Sends, Sends to Carrier, Confirmed Deliveries, Delivery Failures, Rejections |
 {: .reset-td-br-1 .reset-td-br-2}
 
-## Set Up Report Data Coverage & Distribution
+## Set up report data coverage & distribution
 
 The Set Up Report tab allows you to enter your report name, select the compression and delimiter of the report and include whom you would like to send this report to.  
 
 ![engagement_reports_data_coverage][4]
 
-### Time Frame
+### Time frame
 
 By default, the data range shown will go from the earliest message selected until the present date.  You can customize this by selecting the date dropdown and using the custom range selection OR by selecting the next radio button and defining your date range with the dropdown options available.
 
-### Data Display
+### Data display
 
 By default, the data displayed in the engagement reports is daily (1 day). Should you like to view this data across different intervals, you can choose an explicit number of days or weeks to aggregate the data for the report. So instead of seeing daily metrics, you can look at your engagement by week, month, quarter, etc. Should a time-centric aggregation not suffice, you can also elect to export data at the campaign or Canvas level.
 
-## Schedule Your Report
+## Schedule your report
 
 There are two options when scheduling your report:
 
 ![engagement_reports_schedule_report][5]{: style="max-width:65%;" }
 
-### Send Immediately
+### Send immediately
 
 After the report is saved, Braze will send this report Immediately
 
-### Send at a Designated Time
+### Send at a designated time
 
 This option gives you the flexibility to choose how frequently you would like to receive this report.  You can choose to send this report every X days, weeks or months.  Additionally, you can define when to stop sending the report.
 
-## Open Report  
+## Open report  
 
 You will receive an email with links to your reports. When you click on the provided links you will automatically download a `.zip` file containing your `.csv` files - one for all Campaigns.
 

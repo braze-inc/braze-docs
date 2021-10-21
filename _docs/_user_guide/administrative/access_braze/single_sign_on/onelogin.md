@@ -9,13 +9,13 @@ description: "This article will walk you through how to configure Braze to use O
 
 # OneLogin
 
-> This article will walk you through how to configure Braze to use OneLogin for single sign-on.
+> this article will walk you through how to configure braze to use onelogin for single sign-on.
 
 [OneLogin](https://www.onelogin.com/) is a cloud identity platform that provides a comprehensive solution for managing user identities. OneLogin integrates with cloud and on-premise applications using SAML 2.0, for Single Sign-On (SSO), user provisioning, multi-factor authentication, and more.
 
 ## Requirements
 
-Upon setup, you will be asked to provide a Sign-On URL and an Assertion Consumer Service (ACS) URL.  
+upon setup, you will be asked to provide a sign-on url and an assertion consumer service (acs) url.  
 
 | Requirement | Details |
 |---|---|
@@ -23,9 +23,9 @@ Upon setup, you will be asked to provide a Sign-On URL and an Assertion Consumer
 {: .reset-td-br-1 .reset-td-br-2}
 
 
-## Service Provider (SP) Initiated Login within OneLogin
+## Service provider (sp) initiated login within onelogin
 
-### Step 1: Configure the Braze App
+### Step 1: configure the braze app
 
 1. Log into [OneLogin](https://app.onelogin.com/login). Click on `Administration`.
 - ![onelogin_1]({% image_buster /assets/img/onelogin_1.png %})
@@ -45,7 +45,7 @@ Upon setup, you will be asked to provide a Sign-On URL and an Assertion Consumer
 6. Copy the `Certificate` and `SAML 2.0 Endpoint (HTTP)` needed to set up the Braze dashboard from under the `SSO` tab.
 - ![onelogin_6]({% image_buster /assets/img/onelogin_6.png %})
 
-### Step 2: Configure OneLogin within Braze
+### Step 2: configure onelogin within braze
 
 Once you have set up Braze within your OneLogin, they will provide a Target URL (`SAML 2.0 Endpoint (HTTP)`) and `x.509` certificate which you will input into your Braze account.
 
@@ -62,7 +62,7 @@ On this page, you, input:
 
 ![Enable SAML SSO]({% image_buster /assets/img/samlsso.gif %})
 
-## Create and Enable a Braze API Key for IdP Login (Optional)
+## Create and enable a braze api key for idp login (optional)
 
 To enable IdP initiated login, you will first need to create an API Key in `Developer Console` > `API Settings`.
 

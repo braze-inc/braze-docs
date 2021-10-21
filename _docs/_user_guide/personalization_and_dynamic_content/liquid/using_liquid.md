@@ -6,7 +6,7 @@ description: "Liquid can elevate the personalization in your messages to impress
 
 ---
 
-# Liquid Use Cases and Overview
+# Liquid use cases and overview
 
 {% raw %}
 
@@ -29,7 +29,7 @@ You can also pull content directly from a web server via Braze's [Connected Cont
 Braze currently supports Liquid up to and including __Liquid 3 from Shopify__. We do not currently support Liquid 4 and beyond.
 {% endalert %}
 
-## Using Liquid
+## Using liquid
 
 {% raw %}
 
@@ -53,7 +53,7 @@ Or...
 Hi Valued User, thanks for using the App!
 ```
 
-### Liquid Syntax
+### Liquid syntax
 
 Liquid follows a specific structure, or syntax, that you'll need to keep in mind as you're crafting dynamic personalization. Here are a few basic rules to keep in mind:
 
@@ -61,7 +61,7 @@ Liquid follows a specific structure, or syntax, that you'll need to keep in mind
 2. **Brackets come in pairs:** Every bracket must both open and close **{ }**. Make sure to use curly brackets!
 3. **If statements come in pairs:** For every `if`, you need an `endif` to indicate the `if` statement has ended.
 
-### Inserting Tags
+### Inserting tags
 
 You can insert tags by typing `{{` in any message, which will trigger an auto-completion feature that will continue to update as you type. You can even select a variable from the options that appear as you type.
 
@@ -93,7 +93,7 @@ The modal will insert Liquid with your specified default value at the point that
 
 {% endraw %}
 
-### Assigning Variables
+### Assigning variables
 
 {% raw %}
 Some operations in Liquid require you to store the value you want to manipulate as a variable. This is often the case if your Liquid statement includes multiple attributes, event properties, or filters. 
@@ -108,7 +108,7 @@ This Liquid doesn't work because you can't reference multiple attributes in one 
 
 #### Example
 
-For example, let's calculate a user's current balance by adding their gift card balance and rewards balance:
+for example, let's calculate a user's current balance by adding their gift card balance and rewards balance:
 
 First, use the `assign` tag to subsitute the custom attribute of `current_rewards_balance` with the term "balance". This means that you now have a variable named `balance`, which you can manipulate.
 

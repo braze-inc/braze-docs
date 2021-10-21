@@ -7,7 +7,7 @@ page_type: reference
 description: "This reference article covers how to access and use the Braze Product Portal from the dashboard."
 ---
 
-# Product Portal ![Portal][1]{: style="float:right;max-width:25%;margin-left:15px;margin-top:15px;"}
+# Product portal ![portal][1]{: style="float:right;max-width:25%;margin-left:15px;margin-top:15px;"}
 
 With the product portal, you can access the Braze product roadmap and submit ideas. This provides you with insight into what we've recently released, new features that we're working on, and ideas we're considering building. In the portal, you can vote for the features you want by ranking a feature's importance to you and leave a comment with feedback or a request. The product portal can be found in the upper right section of the Braze dashboard, listed under "Resources" as "Product Roadmap".
 
@@ -19,7 +19,7 @@ With the product portal, you can access the Braze product roadmap and submit ide
 | __Submit Ideas__ | There are 10 product categories in which you can vote for general improvements or comment with a specific feature request or idea. <br>Our product team will receive and read your requests but an idea submission does not guarantee it will be built. |
 {: .reset-td-br-1 .reset-td-br-2}
 
-## How you can Join the Conversation
+## How you can join the conversation
 
 | __Rank a Feature's Importance__ | Rank a feature's importance by selecting "Nice to Have", "Important", or "Critical". |
 | __Comment on a Feature__ | Once you've ranked a feature, you can leave a comment with your feedback. |
@@ -27,7 +27,7 @@ With the product portal, you can access the Braze product roadmap and submit ide
 | __Submit an Idea__ | Go to the "Submit Ideas" page in the portal and select from one of ten cards to rank its importance and include your idea or request in the comments. <br><br>Once submitted, your idea will be reviewed by a member of our product team. We cannot provide updates on the status of a request. Occasionally check back to see if your idea has been added to the "Under Consideration" or "Planned Features" sections. |
 {: .reset-td-br-1 .reset-td-br-2}
 
-## Product Feedback at Braze
+## Product feedback at braze
 Braze builds the product roadmap based upon many different sources of information. We take data from our customers, the market, the technology landscape in which we operate, our product vision and innovation strategy, and more. Customer input and feedback is an important component, but it is only one component. 
 
 Priorities and timelines can (and do) shift based on the latest information available to the team. With this in mind, it is always recommended to submit product feedback in a timely fashion so the product team is aware of customers' and the market's sentiment. 
@@ -35,7 +35,7 @@ Priorities and timelines can (and do) shift based on the latest information avai
 - __Submitting product feedback is a guarantee__ that our product team will review and consider the feedback. 
 - __Submitting product feedback is not a guarantee__ that we will take action. Braze both cannot and does not want to act upon all product feedback. 
 
-## Tips for Submitting Product Feedback
+## Tips for submitting product feedback
 The more information and context the better! Include links to campaigns, Canvases, or segments, everything that aids the description. We structure product feedback based on the following questions:
 
 - What problem are you trying to solve?

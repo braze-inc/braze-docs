@@ -16,9 +16,9 @@ Action-based delivery campaigns or event-triggered campaigns are very effective 
 Action-based delivery is not available for [Canvas steps with in-app messages]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/in-app_messages_in_canvas). These steps must be scheduled.
 {% endalert %}
 
-## Setting Up a Triggered Campaign
+## Setting up a triggered campaign
 
-### Step 1: Select a Trigger Event
+### Step 1: select a trigger event
 
 Select a trigger event, which can be:
 - Starting a session
@@ -50,7 +50,7 @@ In addition, triggered in-app messages still abide by in-app message delivery ru
 
 ![triggered 1][17]
 
-### Step 2: Select Delay Length
+### Step 2: select delay length
 
 Select how long to wait before sending the campaign after the trigger criteria are met. If the delay length chosen is longer than the message's duration for sending, no users will receive the campaign. 
 
@@ -63,7 +63,7 @@ You may also elect to send the campaign on either a specific day of the week (by
 ![triggered 7][41]
 ![triggered 8][50]
 
-### Step 3: Select Exception Events
+### Step 3: select exception events
 
 Select an exception event that will disqualify users from receiving this campaign. You can only do this if your triggered message sends after a time delay. Exception events can be making a purchase, starting a session, performing one of a campaign's designated [conversion events][18], or performing a custom event. If a user completes the trigger event but then completes your exception event before the message sends due to the time delay, they will not receive the campaign. Users who do not receive the campaign due to the exception event will automatically be eligible to receive it in the future, the next time they complete the trigger event, even if you do not elect for users to become [re-eligible]({{site.baseurl}}/user_guide/engagement_tools/campaigns/scheduling_and_organizing/delivery_types/reeligibility/).
 
@@ -77,13 +77,13 @@ You can read more about how to employ exception events in our section on [use ca
 You cannot make a "session start" both the trigger event and exception event for a campaign. However, you always have the choice to select any other custom event outside of this option.
 {% endalert %}
 
-### Step 4: Assign Duration
+### Step 4: assign duration
 
 Assign the campaign's duration by specifying a start time and optional end time. If a user completes a trigger event during the specified time frame but qualifies for the message outside of the time frame due to a scheduled delay, then she will not receive the campaign. Therefore, if you set a time delay longer than the message's time frame, no users will receive your campaign. In addition, you can elect to send the message in users' [local time zones]({{site.baseurl}}/user_guide/engagement_tools/campaigns/scheduling_and_organizing/delivery_types/scheduled_delivery/#local-time-zone-campaigns).
 
 ![triggered 4][21]
 
-### Step 5: Select Time Frame
+### Step 5: select time frame
 
 Select whether the user will receive the campaign during a specific portion of the day. If you give the message a time frame and the user either completes the trigger event outside the time frame or the message delay causes them to miss the time frame, then by default, the user will not receive your message.
 
@@ -97,13 +97,13 @@ If a user doesn't receive the message because they miss the time frame, then the
 
 If you have also assigned the campaign a certain duration, then a user must qualify within both the duration and the specific portion of the day to receive the message.
 
-### Step 6: Determine Re-Eligibility
+### Step 6: determine re-eligibility
 
 Determine whether users can become [re-eligible][24] for the campaign. If you allow users to become re-eligible, you may specify a time delay before the user can receive the campaign again. This will prevent your triggered campaigns from becoming "spammy".
 
 ![triggered 6][28]
 
-## Use Cases
+## Use cases
 
 Triggered campaigns are very effective for transactional or achievement-based messages.
 
@@ -111,7 +111,7 @@ Transactional campaigns include messages sent after the user completes a purchas
 
 In addition, when creating welcome campaigns, you can trigger messages to send after the user registers or sets up an account. Staggering messages to be sent on different days following registration will allow you to create a thorough onboarding process.
 
-## Why Did a User Not Receive My Triggered Campaign?
+## Why did a user not receive my triggered campaign?
 
 Any of these things will prevent a user who has completed the trigger event from receiving the campaign:
 

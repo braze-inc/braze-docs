@@ -13,7 +13,7 @@ channel:
 Are you currently a non-native SMS client? If so, please visit the [non-native SMS documentaion](/docs/user_guide/message_building_by_channel/sms/non_native/) for your corresponding handling unknown phone numbers article.
 {% endalert %}
 
-# Handling Unknown Phone Numbers - New Users
+# Handling unknown phone numbers - new users
 
 You may find that once you get SMS up and running with Braze that you receive messages from unknown users. Noted below are the steps through which an unidentified user and number get processed.
 

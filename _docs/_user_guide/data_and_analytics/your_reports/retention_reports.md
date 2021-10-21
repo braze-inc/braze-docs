@@ -7,7 +7,7 @@ page_type: reference
 description: "This reference article goes over how to measure user retention for users who performed a selected retention event in a specific campaign or Canvas."
 ---
 
-# Retention Reports for Campaigns and Canvases
+# Retention reports for campaigns and canvases
 
 > This reference article goes over how to measure user retention for users who have performed a selected retention event in a specific campaign or Canvas. By knowing how your users are being retained after sending a message, you can measure the effectiveness of your messaging journeys.
 
@@ -17,9 +17,9 @@ User retention is one of the most important metrics for any marketer. Keeping en
 Retention Reports are not available for API-triggered campaigns.
 {% endalert %}
 
-## Run a Retention Report
+## Run a retention report
 
-### Step 1: Select a Date Range
+### Step 1: select a date range
 
 ![Report Date][8]{: style="float:right;max-width:30%;margin-left:15px;"}
 
@@ -29,7 +29,7 @@ This report will include all users who initially entered the campaign or Canvas 
 
 To select a date range, you must navigate to the upper right-hand corner of the campaign or Canvas **Analytics** page. Here you may select various ranges or set a custom range for your report.
 
-### Step 2: Select a Retention Event
+### Step 2: select a retention event
 
 {% tabs %}
 {% tab Campaign %}
@@ -46,7 +46,7 @@ Next, click **Analyze Variants** at the bottom of the page. From here, you can a
 
 ![Select a Retention event][1]{: style="max-width:80%"}
 
-### Step 3: Generate the Report
+### Step 3: generate the report
 
 Once you've selected a retention event, click **Run Report** to start the query.
 
@@ -71,17 +71,17 @@ The report will only list days on which the campaign or Canvas was sending messa
 {% endtab %}
 {% endtabs %}
 
-## Report Explanation
+## Report explanation
 
 The Retention Report offers both a rolling retention and range retention formula. To view your campaign or Canvas report with one of these retention types, select either **Rolling Retention** or **Range Retention** for your **Type of Retention**.
 
-### Rolling Retention
+### Rolling retention
 
 Rolling retention measures how many users come back and do the retention event on or after any of the days listed across the top of the report. So, if a user started a session between day 3 and 7, the user will be counted as retained under the “3 days”, “1 day”, and “0 days” columns. Any user who is counted as retained after the 30-day mark from when the campaign or Canvas was sent will be counted under the “30 days” column in that row.
 
 A user who completes the event multiple times during a window of 30+ days will be counted as part of multiple time frames. For instance, a user who completes a session after 1 day will be incremented in the columns for >0 and >1. If they then complete the event after 3 days, they will again be incremented in the prior columns (>0 and >1), which could result in the retention rate exceeding 100%.
 
-#### How to Read Rolling Retention Reports
+#### How to read rolling retention reports
 
 The way to read the retention report chart for a day 3 column would be Y% or Y number of users (based on units chosen) performed the event 3 or more days after receiving the campaign on day Z.
 
@@ -91,17 +91,17 @@ As another example, referring to the table above, on the 25th of March, a total 
 
 This information can be useful if you want to know the percentage of users who have and have not used your product 30+ days after first use. A percentage/number value in the day 30 column tells you the percentage of users who returned on day 30 or after.
 
-### Range Retention
+### Range retention
 
 Range retention measures how many users come back in the range of days listed across the top of the report. So, if a user started a session between days 3 and 7 and then again on day 13, they would be counted as retained under both “Day 3-7” and “Day 7-14” ranges.
 
-#### How to Read Range Retention Reports
+#### How to read range retention reports
 
 Range Reports are some of the most intuitive reports to read. They clearly state, of all the users in a cohort, what percentage of those users performed the retention event within a given date range. For example, in the image shown below, referencing the All Users Cohort, on date range "Day 0 (0-24hrs)", 35.71% of the cohort performed the retention report. If a user performs multiple retention events within multiple date ranges, they will be counted as retained for each range.
 
 ![Retention Report][5]
 
-### Retention Report Components
+### Retention report components
 
 - __Users Column__: The value shown is the number of unique users that performed the start action within the selected time frame; the count of users for the present day will be excluded since it is being calculated. 
 - __Cohort Z Rows__: Shows the days in which the campaign or Canvas was sending messages.
@@ -113,7 +113,7 @@ Range Reports are some of the most intuitive reports to read. They clearly state
 - __Color Mapping__: In your retention report, higher percentages/number of users are assigned darker shades of blue. Lower percentage/number of users are assigned lighter shades of blue. This is done to help users visualize this data.
 - __Retention Report Graph__: This graph summarizes the results for all cohorts for the selected date range.
 
-### Performance by Variant
+### Performance by variant
 
 Viewing your Retention Report by variant allows you to compare rolling retention for each variant or message variation for the selected time period, as well as the Control Group. This report can be viewed by toggling **Show Performance For** to **By Variant**.
 
@@ -135,7 +135,7 @@ Some use cases for showing performance by variant:
 {% endtab %}
 {% endtabs %}
 
-#### Retention Report by Variant Components
+#### Retention report by variant components
 
 - __Date Range__: Set on the Campaign or Canvas **Details** page, the date range includes all users who received the campaign or Canvas during this window, and of those users, the data of those that performed their retention event during the date range will appear in the report. Each day the retention rate, percentage change from the control group, and confidence are measured.
 - __Retention Rate__: Shows the retention rate by variant. The retention rate is equivalent to the number of users that performed the retention event divided by the total users that have received the campaign or Canvas.
@@ -144,7 +144,7 @@ Some use cases for showing performance by variant:
 - __Units__: You can adjust the units between the percentage of users and the number of users in the upper right-hand corner of the chart, specific units may prove to be more significant when judging the impact of a campaign or Canvas.
 - __Variant Graph__: This graph summarizes the results by variant for the selected date range.
 
-## Things to Look For in Your Retention Reports
+## Things to look for in your retention reports
 
 Retention Reports are easy to generate, yet challenging to interpret and act on. To help aid marketers, we have assembled a couple of topics and questions to consider when looking at your Retention Reports.
 

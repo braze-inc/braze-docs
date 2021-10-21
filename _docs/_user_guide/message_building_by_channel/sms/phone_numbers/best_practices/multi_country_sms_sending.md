@@ -17,7 +17,7 @@ To overcome this limitation, during the Subscription Groups [setup process][5], 
 
 ![picture][2]
 
-## Best Practices:
+## Best practices:
 
 1. __Get Permission__. One of the most important rules for using SMS as a business is that you must first gain permission from customers to contact them. Failing to do so can damage your brand and result in hefty legal fees.<br><br>
 2. __Choose the right number for your use case__. Three main types of phone numbers can send and receive SMS messages: long codes, short codes, and alphanumeric sender IDs, and their capabilities and availability in different regions vary. Think in advance if your business is served better with a vanity code. <br><br>

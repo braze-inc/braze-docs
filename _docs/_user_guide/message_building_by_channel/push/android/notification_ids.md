@@ -11,7 +11,7 @@ channel:
 
 ---
 
-# Notification IDs
+# Notification ids
 
 > A notification ID can be assigned to a push notification when you want the option to group or replace it with an updated version once it’s been issued.
 

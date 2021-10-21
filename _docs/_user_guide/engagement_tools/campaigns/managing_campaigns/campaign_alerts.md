@@ -11,13 +11,13 @@ channel:
 - webhooks
 
 ---
-# Campaign Alerts
+# Campaign alerts
 
 > This reference article gives an overview of campaign alerts, their benefits, as well as how to set them up to help provide you peace of mind.
 
 ## Overview
 
-We want to alert you when something doesn’t seem quite as expected and give you peace of mind that the ship is sailing smoothly. Campaign threshold alerts provide peace of mind — be the first to know if an important campaign sends more or fewer messages than you expect.
+we want to alert you when something doesn’t seem quite as expected and give you peace of mind that the ship is sailing smoothly. campaign threshold alerts provide peace of mind — be the first to know if an important campaign sends more or fewer messages than you expect.
 
 Campaign alerts are available for:
 
@@ -25,7 +25,7 @@ Campaign alerts are available for:
 - Action-based campaigns
 - API-triggered campaigns
 
-## Setting Up Your Campaign Alert
+## Setting up your campaign alert
 
 Navigate to the analytics page of your campaign to start setting up your alert. Once you hit "Set Up Alert," you'll be able to specify upper and lower alert thresholds as well as the alert recipients and channels.
 
@@ -35,7 +35,7 @@ You can set up an email alert, a webhook alert or both. Webhook alerts can be ve
 
 ![Setting up Campaign Alert][2]
 
-## Campaign Alert Webhook Payload
+## Campaign alert webhook payload
 
 The following is a sample payload for the body of a campaign alert webhook. This example uses an alert that is configured to send when messages sent falls below 500 for a given campaign send.
 

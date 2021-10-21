@@ -9,20 +9,20 @@ channel:
 
 ---
 
-# Push Action Buttons
+# Push action buttons
 
 > Push Action Buttons enable you to set content and actions for buttons when utilizing Braze's iOS and Android push notifications. Your users will now be able to interact directly with your app from a notification without needing to click into an app experience to take action.
 
 ![Push Action Buttons][1]{: style="max-width:50%"}
 
-## How To Use Action Buttons
+## How to use action buttons
 
 Each interactive button can link to a webpage, a deep link, open the app, or dismiss the notification. You can specify your Push Action Buttons in the ‘On Click Behavior’ section of the push message composer in the Dashboard.
 
 {% tabs %} 
 {% tab iOS Push Action Buttons %}
 
-### iOS Push Action Buttons
+### iOS push action buttons
 ![iOS Push Action Buttons]({% image_buster /assets/img_archive/ios_push_action_buttons.png %}){: style="max-width:80%"}
 
 >  Due to iOS’s handling of buttons, you will need to perform additional integration steps when setting up push action buttons, which are outlined in our Documentation. In particular, you will need to either configure iOS Categories or will need to select from certain default button options. For Android integrations, these buttons will work out of the box.
@@ -32,7 +32,7 @@ For instructions on Integrating iOS Push Action Button, check out our [documenta
 {% endtab %} 
 {% tab Android Push Action Buttons %}
 
-### Android Push Action Buttons
+### Android push action buttons
 ![Android Push Action Buttons]({% image_buster /assets/img_archive/android_push_action_buttons.png %}){: style="max-width:80%"}
 
 {% endtab %} 

@@ -6,7 +6,7 @@ description: "Tags allow you to include programming logic in your messaging camp
 
 ---
 
-# Conditional Messaging Logic (Tags)
+# Conditional messaging logic (tags)
 
 [Tags][7] allow you to include programming logic in your messaging campaigns.
 
@@ -42,7 +42,7 @@ Buy now! Would 5% off convince you?
 {% endraw %}
 {% endalert %}
 
-## Conditional Logic
+## Conditional logic
 You can include many types of [intelligent logic within messages][1] -- one example is a conditional statement. See the following example which uses [conditionals][8] to internationalize a campaign:
 {% raw %}
 
@@ -58,7 +58,7 @@ This is a message from Braze! This is going to go to anyone who did not match th
 {% endif %}
 ```
 
-### Step By Step Example
+### Step by step example
 
 In this example, we use tags with "if", "elsif" and "else" statements to deliver internationalized content.
 
@@ -93,7 +93,7 @@ The `{% endif %}`  tag signals that you've finished your conditional logic. You 
 
 {% endraw %}
 
-## Accounting For Null Attribute Values
+## Accounting for null attribute values
 
 Conditional logic is a useful way to account for null attribute values. A null value occurs when the value of a custom attribute has not been set. For example, a user who has not yet set their first name will not have a first name in Braze's database.
 
@@ -112,7 +112,7 @@ The following tag allows you to specify a message for users with a null "first n
 
 ![NullValues][36]
 
-## Referencing Custom Attributes
+## Referencing custom attributes
 
 After you have created [custom attributes][2] from **Manage Settings** > **Custom Attributes**, you can reference these custom attributes in your Liquid messaging. 
 
@@ -126,7 +126,7 @@ Strings and arrays require straight apostrophes around them, while booleans and 
 
 #### Boolean
 
-[Booleans][9] are binary values, and can be set to either `true` or `false`, such as `registration_complete: true`. Boolean values don't have apostrophes around them.
+[booleans][9] are binary values, and can be set to either `true` or `false`, such as `registration_complete: true`. boolean values don't have apostrophes around them.
 
 {% raw %}
 
@@ -138,7 +138,7 @@ Strings and arrays require straight apostrophes around them, while booleans and 
 
 #### Number
 
-[Numbers][10] are numeric values, which can be integers or floats. For example, a user may have `shoe_size: 10` or `levels_completed: 287`. Number values don't have apostrophes around them.
+[numbers][10] are numeric values, which can be integers or floats. for example, a user may have `shoe_size: 10` or `levels_completed: 287`. number values don't have apostrophes around them.
 
 {% raw %}
 
@@ -160,7 +160,7 @@ You can also use other [basic operators](https://shopify.dev/docs/themes/liquid/
 
 #### String
 
-A [string][11] is made up of alpha-numeric characters and stores a piece of data about your user. For example, you may have `favorite_color: red` or `phone_number: 3025981329`. String values must have apostrophes around them.
+a [string][11] is made up of alpha-numeric characters and stores a piece of data about your user. for example, you may have `favorite_color: red` or `phone_number: 3025981329`. string values must have apostrophes around them.
 
 {% raw %}
 
@@ -174,7 +174,7 @@ For strings, you can use both "==" or "contains" in your Liquid.
 
 #### Array
 
-An [array][12] is a list of information about your user. For example, a user may have `last_viewed_shows: stranger things, planet earth, westworld`. Array values must have apostrophes around them.
+an [array][12] is a list of information about your user. for example, a user may have `last_viewed_shows: stranger things, planet earth, westworld`. array values must have apostrophes around them.
 
 {% raw %}
 
@@ -188,7 +188,7 @@ For arrays, you must use "contains" and can't use "==".
 
 #### Time
 
-A time stamp of when an event took place. [Time][13] values must have a [math filter][5] on them to be used in conditional logic.
+a time stamp of when an event took place. [time][13] values must have a [math filter][5] on them to be used in conditional logic.
 
 {% raw %}
 

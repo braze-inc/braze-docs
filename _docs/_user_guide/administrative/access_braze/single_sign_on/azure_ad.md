@@ -7,7 +7,7 @@ description: "This article will walk you through how to set up Azure AD sign-on 
 
 ---
 
-# Azure Active Directory
+# Azure active directory
 
 > This article will walk you through how to set up Azure AD sign-on capabilities with Braze.
 
@@ -15,7 +15,7 @@ description: "This article will walk you through how to set up Azure AD sign-on 
 
 ## Requirements
 
-Upon setup, you will be asked to provide a Sign-On URL and an Assertion Consumer Service (ACS) URL.  
+upon setup, you will be asked to provide a sign-on url and an assertion consumer service (acs) url.  
 
 | Requirement | Details |
 |---|---|
@@ -25,55 +25,55 @@ Upon setup, you will be asked to provide a Sign-On URL and an Assertion Consumer
 {: .reset-td-br-1 .reset-td-br-2}
 
 
-## Service Provider (SP) Initiated Login within Azure AD
+## Service provider (sp) initiated login within azure ad
 
-### Step 1: Add Braze from the Gallery
+### Step 1: add braze from the gallery
 
-#### Step 1a: Go to the Azure Active Directory 
+#### Step 1a: go to the azure active directory 
 
 Go to the Azure Portal and click **Azure Active Directory** in the left navigation panel. 
 ![Azure_AD1]({% image_buster /assets/img/azure_ad1.png %})
 
-#### Step 1b: Find Applications
+#### Step 1b: find applications
 Navigate to **Enterprise Applications**, then select **All applications**.
 ![Azure_AD2]({% image_buster /assets/img/azure_ad2.png %})
 
-#### Step 1c: Create a New Application
+#### Step 1c: create a new application
 Add a new application by clicking **+ New application** in the top of the dialog.
 ![Azure_AD3]({% image_buster /assets/img/azure_ad3.png %})
 
-#### Step 1d: Add Braze
+#### Step 1d: add braze
 Search for **Braze** in the search box, then select it from the result panel, then click **Add**.
 ![Azure_AD4]({% image_buster /assets/img/azure_ad4.png %})
 
-### Step 2: Configure Azure AD Single Sign-On
+### Step 2: configure azure ad single sign-on
 
-#### Step 2a: Select Single Sign-On
+#### Step 2a: select single sign-on
 In your Azure Portal, go to the **Braze Application Integration** page and select **Single sign-on**.
 
 ![Azure_AD5]({% image_buster /assets/img/azure_ad5.png %})
 
-#### Step 2b: Select SSO Method
+#### Step 2b: select sso method
 Select **SAML/WS-Fed** as your method from the **Select a single sign-on method** dialog to open the **Set up Single Sign-On with SAML** page.
 
 ![Azure_AD6]({% image_buster /assets/img/azure_ad6.png %})
 
-#### Step 2c: Open Configure Dialog
+#### Step 2c: open configure dialog
 From there, click the edit icon to open the **Basic SAML Configuration** dialog.
 
 ![Azure_AD7]({% image_buster /assets/img/azure_ad7.png %})
 
-#### Step 2d: Configure in IdP Mode
+#### Step 2d: configure in idp mode
 If you want to configure the application in IdP-initiated mode, enter a URL that combines [your Braze instance]({{site.baseurl}}/user_guide/administrative/access_braze/braze_instances/#braze-instances) with the following pattern: `https://<SUBDOMAIN>.braze.com/auth/saml/callback`.
 
 ![Azure_AD8]({% image_buster /assets/img/azure_ad8.png %})
 
-#### Step 2e: Configure in SP Mode
+#### Step 2e: configure in sp mode
 If you want to configure the application in SP-initiated mode, click **Set additional URLs** and enter a URL that combines [your Braze instance]({{site.baseurl}}/user_guide/administrative/access_braze/braze_instances/#braze-instances) with the following pattern: `https://<SUBDOMAIN>.braze.com/sign_in`.
 
 ![Azure_AD9]({% image_buster /assets/img/azure_ad9.png %})
 
-#### Step 2f: Format SAML Assertions
+#### Step 2f: format saml assertions
 
 Braze expects the SAML assertions in a specific format. Refer to the following tabs on user attributes and user claims to understand how these attributes and values must be formatted.
 
@@ -113,17 +113,17 @@ You can manage these user claims and values from the **Manage user claims** dial
 {% endtab %}
 {% endtabs %}
 
-#### Step 2g: Download Certificate
+#### Step 2g: download certificate
 Go to the **Set up Single Sign-On with SAML** page, then scroll to the **SAML Signing Certificate** section and download the appropriate **Certificate (Base64)** based on your requirements.
 
 ![Azure_AD13]({% image_buster /assets/img/azure_ad13.png %})
 
-#### Step 2h: Copy URLs for Configuration in Braze
+#### Step 2h: copy urls for configuration in braze
 Go to the **Set up Braze** section and copy the appropriate URLs for use in the [Braze configuration](#step-3-configure-braze-single-sign-on).
 
 ![Azure_AD14]({% image_buster /assets/img/azure_ad14.png %})
 
-### Step 3: Configure Azure AD within Braze
+### Step 3: configure azure ad within braze
 
 Once you have set up Braze within your Azure AD, they will provide a Target URL (Login URL) and **x.509** certificate which you will input into your Braze account.
 
@@ -140,7 +140,7 @@ On this page, you will add the following:
 
 ![Enable SAML SSO]({% image_buster /assets/img/samlsso.gif %})
 
-## Create and Enable a Braze API Key for IdP Login (Optional)
+## Create and enable a braze api key for idp login (optional)
 
 To enable IdP-initiated login, you will first need to create an API Key in **Developer Console** > **API Settings**.
 

@@ -8,13 +8,13 @@ tool: Campaigns
 
 ---
 
-# Campaign FAQs
+# Campaign faqs
 
 ### How do you create a multichannel campaign?
 
 Multichannel campaigns can be created by selecting __Create Campaign__ and then __Multichannel Campaign__ within the dashboard. Once in a multichannel campaign, select __Add Messaging Channel__ within the __compose__ tab to add your desired channels. Clicking on the channel icons that appear will allow you to toggle through different messaging composers as you build your campaign copy for the different channels.
 
-### Why is there a difference between the number of unique recipients and the number of sends for a given campaign or Canvas?
+### Why is there a difference between the number of unique recipients and the number of sends for a given campaign or canvas?
 
 One potential explanation for this difference could be due to the campaign or Canvas having re-eligibility turned on. By having this on, users who qualify for the segment and delivery settings will be able to receive the message more than once. If re-eligibility is not turned on, then the probable explanation for the difference between sends and unique recipients may be due to users having multiple devices, across platforms, associated with their profiles. 
 
@@ -26,13 +26,13 @@ Local time zone delivery allows you to deliver messaging campaigns to a segment 
 
 For example, a London-based company sending a campaign at 12pm will reach users on the west coast of America at 4am. If your app is only available in certain countries, this may not be a risk for you, otherwise, we highly recommend avoiding sending early morning push notifications to your user base!
 
-### How does Braze recognize a user's time zone?
+### How does braze recognize a user's time zone?
 
 Braze will automatically determine a user’s time zone from their device. This ensures time zone accuracy and full coverage of your users. Users created through the User API or otherwise without a time zone will have your company’s time zone as their default time zone until they are recognized in your app by the SDK. 
 
 To check your company’s time zone, look at your [Company Settings]({{site.baseurl}}/user_guide/administrative/manage_your_braze_users/company-wide_settings_management/) on the dashboard. Click on your name in the top toolbar and then click **Company Settings**.
 
-### How do I schedule a local time zone campaign?
+### How do i schedule a local time zone campaign?
 
 When scheduling a campaign, you need to choose to send it at a designated time, and then check **Send campaign to users in their local time zone**.
 
@@ -57,7 +57,7 @@ Target segments for local time zone campaigns should include at least a 48-hour 
 
 Local time zone delivery may miss users in this segment based on the delivery time and the users’ local time zone. This is because a user can leave the segment by the time their time zone triggers delivery.
 
-### What changes can I make to scheduled campaigns ahead of launch?
+### What changes can i make to scheduled campaigns ahead of launch?
 
 When the campaign is scheduled, edits to anything other than the message composition need to be made before we enqueue the messages to send. As per all campaigns, you can’t edit conversion events after it is launched.
 
@@ -73,20 +73,20 @@ For Canvas entries, refer to above. For Canvas steps:
 - **Local Send Time campaigns**—can be edited up to 24 hours prior to the scheduled send time.
 - **Optimal Send Time campaigns**—can be edited up to 24 hours prior to the day the campaign is scheduled to send on.
 
-### What if I make an edit within the "safe zone"?
+### What if i make an edit within the "safe zone"?
 
 Changing the send time on campaigns within this time can lead to undesired behavior, for example:
 
 - Braze will not send messages to any users that have missed the send time by more than 1 hour.
 - Pre-enqueued messages may still send at the originally enqueued time, rather than the adjusted time.
 
-### What should I do if the "safe zone" has already passed?
+### What should i do if the "safe zone" has already passed?
 
 To ensure campaigns operate as desired, we recommend stopping the current campaign (this will abort any enqueued messages). You can then duplicate the campaign, making the changes as necessary and launch the new campaign. You may need to exclude users from this campaign who have already received the first campaign.
 
 Please ensure you re-adjust campaign schedule times to allow for time zone sending.
 
-### When does Braze evaluate users for local time zone delivery?
+### When does braze evaluate users for local time zone delivery?
 
 For local time zone delivery, Braze evaluates users for their entry eligibility during these two instances:
 - At Samoa time (UTC+13) of the scheduled day

@@ -10,7 +10,7 @@ tool:
   - Segments
 
 ---
-# Duplicating Segments, Campaigns, and Canvases
+# Duplicating segments, campaigns, and canvases
 
 > This reference article goes over how to duplicate segments, campaigns, and Canvases for reuse.
 > <br>
@@ -21,19 +21,19 @@ Braze allows you to duplicate pre-existing segments, campaigns, and Canvases. Th
 
 For more on Segments and campaigns, check out our [quick LAB course](http://lab.braze.com/quick-overview-segment-and-campaign-setup)!
 
-## Cloning a Segment
+## Cloning a segment
 
 To clone a segment, click the gear icon next to a segment and select "Duplicate." Your new segment will automatically be titled "Copy of [Original Segment]" and you'll be brought to its editing page.
 
 ![Segment][3]
 
-## Cloning a Campaign
+## Cloning a campaign
 
 To clone a campaign, click the gear icon next to a campaign and select "Duplicate." Your new campaign will automatically be titled "Copy of [Original Campaign]" and you'll be brought to its editing page. Duplicates of campaigns will remain drafts until you edit and launch them.
 
 ![Campaign][4]
 
-## Cloning a Canvas
+## Cloning a canvas
 
 To clone a Canvas, click the gear icon next to a Canvas and select "Duplicate." Your new Canvas will automatically be titled "Copy of [Original Canvas]" and you'll be brought to its editing page. Duplicates of Canvases will remain drafts until you edit and launch them. 
 

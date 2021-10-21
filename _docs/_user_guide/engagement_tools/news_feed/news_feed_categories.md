@@ -7,7 +7,7 @@ description: "This reference article describes News Feed Categories, which make 
 tool: Dashboard
 channel: news feed
 ---
-# News Feed Categories
+# News feed categories
 
 News Feed "Categories" make it possible to integrate multiple instances of the News Feed into your application. It's possible to integrate feeds within different windows that only display News Feed cards of a certain "category."
 

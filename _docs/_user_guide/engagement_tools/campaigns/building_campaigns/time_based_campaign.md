@@ -11,7 +11,7 @@ description: "This reference article covers time-based functionalities for Campa
 
 > This reference article covers time-based functionalities for campaigns to assist with strategies, troubleshooting, and to answer common questions.
 
-## Scheduled Delivery
+## Scheduled delivery
 
 This section covers time-based scheduling and delivery options for [Scheduled Delivery]({{site.baseurl}}/user_guide/engagement_tools/campaigns/scheduling_and_organizing/delivery_types/scheduled_delivery/) campaigns.
 
@@ -24,7 +24,7 @@ This section covers time-based scheduling and delivery options for [Scheduled De
 
 ![Send at a designated time][2]
 
-### Intelligent Timing
+### Intelligent timing
 
 | Definition | Time Zone |
 | ---------- | --------- |
@@ -55,7 +55,7 @@ This section covers time-based scheduling and delivery options for [Scheduled De
 
 This section covers the schedule delay and delivery options for [Action-Based Delivery]({{site.baseurl}}/user_guide/engagement_tools/campaigns/scheduling_and_organizing/delivery_types/triggered_delivery/) campaigns.
 
-### Schedule Delay
+### Schedule delay
 
 {% alert important %}
 In choosing your delay length, note that if you set a delay that is longer than the [Campaign Duration]({{site.baseurl}}/user_guide/engagement_tools/campaigns/scheduling_and_organizing/delivery_types/triggered_delivery/#step-4-assign-duration), no users will receive your campaign.
@@ -70,7 +70,7 @@ In choosing your delay length, note that if you set a delay that is longer than 
 
 ![Send immediately][6]
 
-#### Send campaign after X days
+#### Send campaign after x days
 
 | Definition | Time Zone |
 | ---------- | --------- |
@@ -79,7 +79,7 @@ In choosing your delay length, note that if you set a delay that is longer than 
 
 ![Send after X days][7]
 
-#### Send campaign on the next [day of the week] at X time
+#### Send campaign on the next [day of the week] at x time
 
 | Definition | Time Zone |
 | ---------- | --------- |
@@ -90,7 +90,7 @@ In choosing your delay length, note that if you set a delay that is longer than 
 
 For example, suppose you select "Send on the next Saturday at 3:15pm". If a user performs the trigger event on a Saturday, they would receive that message on the next Saturday in 7 days. If they enter on a Friday, the next Saturday would be in 1 day.
 
-#### Send in X calendar days at Y time
+#### Send in x calendar days at y time
 
 | Definition | Time Zone |
 | ---------- | --------- |
@@ -101,7 +101,7 @@ For example, suppose you select "Send on the next Saturday at 3:15pm". If a user
 
 Braze calculates the delay as `day of the week` + `calendar days`, then adds the `time`. For example, suppose the user performs the trigger event on Monday at 9pm, and the schedule delay is set to "Send campaign in 1 day at 9am". That message will be delivered on Tuesday at 9am, because Braze calculates the delay as `Monday` + `1 calendar day`, then adds on `9am`.
 
-### Quiet Hours
+### Quiet hours
 
 | Definition | Time Zone |
 | ---------- | --------- |
@@ -119,7 +119,7 @@ Braze calculates the delay as `day of the week` + `calendar days`, then adds the
 
 ![Re-eligibility][5]
 
-### Global Frequency Capping
+### Global frequency capping
 
 | Definition | Time Zone |
 | ---------- | --------- |
@@ -128,7 +128,7 @@ Braze calculates the delay as `day of the week` + `calendar days`, then adds the
 
 Frequency capping is based on calendar days, not a 24-hour period. This means that you could set up a frequency capping rule of sending no more than one campaign a day, but if a user receives a message at 11pm in their local time, they can still receive another message an hour later (on midnight the next calendar day).
 
-## Conversion Deadline
+## Conversion deadline
 
 | Definition | Time Zone |
 | ---------- | --------- |

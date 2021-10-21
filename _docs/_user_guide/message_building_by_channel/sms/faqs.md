@@ -9,11 +9,11 @@ channel:
   
 ---
 
-# SMS FAQs
+# SMS faqs
 
 > On this page, we'll attempt to answer your most stringent questions about SMS!
 
-### Can you include links in an SMS?
+### Can you include links in an sms?
 
 You can include any link in any SMS campaign you would like. However, there are a few concerns to consider:
 
@@ -25,11 +25,11 @@ You can include any link in any SMS campaign you would like. However, there are 
 
 Yes, they do. Please keep this in mind when testing messages.
 
-### Do you need to rate-limit how fast you send SMS messages?
+### Do you need to rate-limit how fast you send sms messages?
 
 The default concurrency rate and throughput enables about 360,000 messages an hour per short code. Additional throughput requires additional short codes.
 
-### How can I avoid overages?
+### How can i avoid overages?
 
 While we can't promise that you won't occasionally have an overage, you could follow these precautions to decrease the chances of going over your allotted limits:
 
@@ -38,7 +38,7 @@ While we can't promise that you won't occasionally have an overage, you could fo
 - Consider the type of encoding your message uses - if your message uses GSM-7 encoding, you can usually estimate that you can send a message with 128 characters per message segment. If your message uses [UCS-2](https://en.wikipedia.org/wiki/Universal_Coded_Character_Set) encoding, you can usually estimate that you can send a message with 67 characters per message segment.
 - Test test test! Always test your SMS messages before launch, especially when using Liquid and Connected Content.
 
-### How do you create logic for selective opt-ins to SMS so users are in the right subscription group?
+### How do you create logic for selective opt-ins to sms so users are in the right subscription group?
 
 Custom keywords would be written as custom events, so you would want to create segments based on the keywords customers can text in. For example, if a user opts in to SMS for VIP messages, but not Alerts, you can create a VIP segment and an Alerts segment, then assign the user to the appropriate segment.
 
@@ -46,12 +46,12 @@ Custom keywords would be written as custom events, so you would want to create s
 
 Emojis can be a bit tricky, as there is no standard character count across all emojis. There is the risk the emoji will exceed the character limit and break the SMS into multiple messages, despite it showing as one message in the Braze composer. When QA'ing your messages, you can better verify if a message will be split using [this tool]({{site.baseurl}}/user_guide/message_building_by_channel/sms/campaign/segments/#segment-calculator).
 
-### How will I be billed for SMS?
+### How will i be billed for sms?
 
 Besides the charges for Short and Long Codes, billing is done by the number of message segments sent per country. To read more about how message segments are calculated see our [Message Segments and Copy Limits]({{site.baseurl}}/user_guide/message_building_by_channel/sms/campaign/segments/#segment-breakdown) guide. 
 For overages, your account manager will reach out to let you know if you are close to reaching your maximum, providing relevant reports to help inform you. For further questions regarding overages, please reach out to your Braze representative.
 
-### If a user texts STOP to our short code, are they unsubscribed from the subscription group?
+### If a user texts stop to our short code, are they unsubscribed from the subscription group?
 
 What does that look like on the user profile? The subscription group will revert to 2 dashes (- -), and there will be custom events for subscribe and unsubscribe.
 
@@ -75,7 +75,7 @@ Braze will de-dupe users on the Canvas step level, so it should not be possible 
 
 {% alert important %} If you stagger your users into a Canvas and have different schedule times for each Canvas step, you can send a user with the same email or phone duplicate messages. {% endalert %}
 
-### Will SMS event properties capture keywords in a sentence?
+### Will sms event properties capture keywords in a sentence?
 
 In order for a keyword to be recognized within a sentence, (e.g. "please stop texting me") you'll need to use a Liquid statement in the message to recognize the specific word. Event properties have a character limit of 256, otherwise, there is no character limit.
 

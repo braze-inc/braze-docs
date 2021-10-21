@@ -9,11 +9,11 @@ tool:
   - Reports
   
 ---
-# Viewing and Understanding Segment Data
+# Viewing and understanding segment data
 
 > This reference article explains the Segments section of your Braze dashboard, and includes a summary the statistics provided.
 
-## Accessing Segment Data
+## Accessing segment data
 
 The **Segments** page of your Braze dashboard contains a summary of all of your segments and allows you to examine detailed data for each one. On this page, search for and click the name of a segment to edit and view it's data. To learn how to create a segment, check out [Creating a Segment][3].
 
@@ -25,7 +25,7 @@ After clicking on the name of a segment, you'll be able to view segment statisti
 
 When you turn [analytics tracking on for a segment][9], Braze will let you view sessions, custom events, and revenue over time by this segment.
 
-## Segment Statistics
+## Segment statistics
 
 You will see the following segment statistics, which update in real-time as you add or delete filters:
 
@@ -38,14 +38,14 @@ You will see the following segment statistics, which update in real-time as you 
 | **Push Enabled (Opted In)** | Push enabled refers to the number of users with at least one push token. Some users may have multiple push tokens (e.g. if they own an iPhone and iPad), so the number of push notifications you send to this segment may be greater than the number of "push enabled" users. Opted In refers to the number of users who have explicitly opted in to push notifications. On iOS and Windows, users must always explicitly opt-in for you to send them pushes. Because of how permissions are granted on Android, users don't always need to explicitly opt-in to receive pushes. |
 {: .reset-td-br-1 .reset-td-br-2}
 
-## Messaging Use and Historical Membership
+## Messaging use and historical membership
 
 If you scroll down the page, you will see segment data on Messaging Use and Historical Membership. Under the **Messaging Use** section, see which campaigns and News Feed items have targeted this segment. Under **Historical Membership**, you see how the size of this segment changed over time. Use the dropdown to filter segment membership by date range.
 
 ![Under Messaging Use, view the campaigns that your segment is being used in.][4]
 ![Use the Historical Membership dropdown to filter segment membership by date range.][10]
 
-## User Preview
+## User preview
 
 To view detailed, user-specific information about your segments, click **User Data** and select **User Preview**.
 

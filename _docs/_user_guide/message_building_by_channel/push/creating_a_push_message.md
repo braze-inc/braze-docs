@@ -10,19 +10,19 @@ tool:
   
 ---
 
-# Creating a Push Message
+# Creating a push message
 
 > Push notifications are wonderful for time-sensitive calls to action, as well as re-engaging users who haven't come into the app in a while. <br><br> Successful push campaigns drive the user directly to content and demonstrate the value of your app.
 
 _To see examples of push notifications, check out our [Case Studies][8]._
 
-## Step 1: Create a New Push Campaign {#create-new-campaign-push}
+## Step 1: create a new push campaign {#create-new-campaign-push}
 
 ![Create new push campaign][1]{: style="float:right;max-width:25%;margin-left:15px;"}
 
 Navigate to the **Campaigns** page and create a new push campaign. Click __Create Campaign__ and select __Push Notification__. Or, if you want to include multiple channels in addition to Push, select **Multichannel Campaign**.
 
-## Step 2a: Name Your Campaign, Choose Messaging Types, and Compose your Message
+## Step 2a: name your campaign, choose messaging types, and compose your message
 
 Give your campaign a name and select the platform you want to target. For multichannel campaigns, click **Add Messaging Channel** to add additional push platforms. 
 
@@ -40,13 +40,13 @@ If you want to include images in your push campaign, refer to the following guid
 
 Now it's time to write your push message! Start typing in the message box and watch a preview appear in the preview box to the left. Don't forget to use [Liquid]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/) when writing your push messages to make them personalized and targeted.
 
-### Additional Push Customization Steps
+### Additional push customization steps
 
 #### Languages
 
-Add copy in multiple languages using the __Add Languages__ button. Insert Liquid into your message to set custom messages and fields in specific languages based on a customer's language preferences. Check out example use cases in our [Liquid Use Case Library]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/liquid_use_cases/#language).
+add copy in multiple languages using the __add languages__ button. insert liquid into your message to set custom messages and fields in specific languages based on a customer's language preferences. check out example use cases in our [liquid use case library]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/liquid_use_cases/#language).
 
-#### On Click Behavior
+#### On click behavior
 
 Specify what happens when a user clicks the body of a push notification with **On Click Behavior**. For example, you can prompt customers to open your application, redirect customers to a specified Web URL, or even open a specific page of your application with a deep link.
 
@@ -60,13 +60,13 @@ Here, you can also set up button prompts within your push notification, such as:
 For more information on platform-specific notification options, see [iOS Notification Options]({{site.baseurl}}/user_guide/message_building_by_channel/push/notification_options_ios/) or [Android Notification Options]({{site.baseurl}}/user_guide/message_building_by_channel/push/notification_options_android/).
 {% endalert %}
 
-### Step 2b: Preview and Test Your Message
+### Step 2b: preview and test your message
 
 ![Test push message][7]{: style="float:right;max-width:30%;margin-left:15px;"}
 
 Testing is arguably one of the most critical steps. After you finish composing your perfect push message, test it before sending it out. Select the **Test** tab and use **Preview Message as User** to get a sense of how your message may view on mobile. Use **Send Test** to send yourself a test push and ensure that your message displays properly.
 
-## Step 3: Schedule Your Push Messaging Campaign {#schedule-push-campaign}
+## Step 3: schedule your push messaging campaign {#schedule-push-campaign}
 
 Choose between sending your campaign at a scheduled time, after users complete an action, or via an API request.
 
@@ -96,7 +96,7 @@ Use [API-Triggered Delivery]({{site.baseurl}}/user_guide/engagement_tools/campai
 Unless you check the box titled "Allow users to become re-eligible to receive campaign" under the __Schedule__ portion of the campaign wizard, each user will only receive the contents of a campaign once, and only new users that meet the criteria will receive the campaign on subsequent deliveries.
 {% endalert %}
 
-## Step 4: Target Users
+## Step 4: target users
 
 On the **Target Users** step of the campaign setup, choose the target audience for your campaign. 
 
@@ -118,7 +118,7 @@ Detailed audience statistics for the channels targeted by your campaign are avai
 
 Keep in mind that exact segment membership is always calculated right before the message is sent.
 
-## Step 5: Choose Conversion Events
+## Step 5: choose conversion events
 
 Braze allows you to track whether users perform specific actions (Conversion Events) after receiving a campaign. You can specify any of the following actions as a "Conversion Event":
 
@@ -131,13 +131,13 @@ You have the option of allowing a conversion event within a time frame that is r
 
 ![Conversion Event][15]
 
-## Step 6: Review and Deploy {#review-and-deploy-push}
+## Step 6: review and deploy {#review-and-deploy-push}
 
 The final page will give you a summary of the campaign you've just designed. Clicking **Launch Campaign** will enable it to send. Confirm all the relevant details and watch the data roll in!
 
 ![Confirmation Page][5]
 
-## Results Data {#results-data-push}
+## Results data {#results-data-push}
 
 Braze will show you the number of messages sent and opened over time for each push campaign you deploy, as shown below:
 

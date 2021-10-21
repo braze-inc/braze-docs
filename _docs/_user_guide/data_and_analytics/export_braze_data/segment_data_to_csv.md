@@ -7,7 +7,7 @@ description: "This reference article covers how to export segment data to CSV."
 
 ---
 
-# Exporting to CSV
+# Exporting to csv
 
 To request a CSV export of user data from a segment, click on the "User Data" button on the top-right side while editing a segment:
 

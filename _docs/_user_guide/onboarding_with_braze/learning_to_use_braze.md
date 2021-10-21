@@ -7,7 +7,7 @@ description: "This page includes several reading paths that will enable you to b
 
 ---
 
-# Learning to Use Braze
+# Learning to use braze
 
 Braze is a complex tool that can allow you to send an amazing range of campaigns that take your customers and users through professional, tailored, and personalized journeys that not only get you the results _you_ want, but the results _they_ want. No surprises, no unwanted contact, no annoying contact - just you letting your customers know that you care about what they want from you.
 
@@ -21,7 +21,7 @@ Choose from the paths below to fit your needs and get reading!
 
 _These reading paths assume that you've already completed your integration and set up for your messaging channels, so the readings in the Onboarding with Braze section are not included._
 
-## Braze Beginner
+## Braze beginner
 
 | Recommended Order |Article | What You'll Learn|
 |---|---|---|
@@ -39,7 +39,7 @@ _These reading paths assume that you've already completed your integration and s
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
 
 
-## Adept Admin
+## Adept admin
 
 | Recommended Order |Article | What You'll Learn|
 |---|---|---|
@@ -52,7 +52,7 @@ _These reading paths assume that you've already completed your integration and s
 | 7 | [Message Activity Log Tab]({{site.baseurl}}/user_guide/administrative/app_settings/developer_console/message_activity_log_tab/) | Learn about and utilize the message log, including all associated errors. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
 
-## Email Expert
+## Email expert
 
 | Recommended Order |Article | What You'll Learn|
 |---|---|---|
@@ -62,7 +62,7 @@ _These reading paths assume that you've already completed your integration and s
 | 4 | [Managing User Subscriptions]({{site.baseurl}}/user_guide/message_building_by_channel/email/managing_user_subscriptions/) | Learn about and utilize the subscription statuses of your users in email. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
 
-## Personalization Prodigy
+## Personalization prodigy
 
 | Recommended Order |Article | What You'll Learn|
 |---|---|---|
@@ -76,7 +76,7 @@ _These reading paths assume that you've already completed your integration and s
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
 
 
-## Data Doctor
+## Data doctor
 
 | Recommended Order |Article | What You'll Learn|
 |---|---|---|

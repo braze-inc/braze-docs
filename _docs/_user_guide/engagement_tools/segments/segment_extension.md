@@ -7,31 +7,31 @@ page_type: tutorial
 description: "This how-to article will walk you through how to use a Segment Extension with Braze Segments."
 tool: Segments
 ---
-# Creating and Using a Segment Extension
+# Creating and using a segment extension
 
 > This article will walk you through how to use a Segment Extension to enhance your segmentation capabilities
 
 A Segment Extension expands our existing segmentation capabilities by enabling you to target more precise lists of users based on their custom event and purchase behavior in the past 365 days. You can create a maximum of 10 Segment Extensions per App Group. After these extension lists are generated, they can then be included or excluded as a [filter][10] in your segments. When creating a Segment Extension, you can also specify that the list be regenerated once every 24 hours.
 
-## Step 1: Navigating to the Segment Extension Section
+## Step 1: navigating to the segment extension section
 
 From the left-hand side of the Dashboard under Engagement, expand the Segments section, and click **Segment Extension**. From the Segment Extensions table, click **+ Create New Extension**.
 
 ![Segment Extension Nav][1]
 
-## Step 2: Name Your Segment Extension
+## Step 2: name your segment extension
 
 Name your Segment Extension by describing the type of users you intend to filter for. This will ensure that this extension can be easily and accurately discovered when applying it as a filter in your segment.
 
 ![Segment Extension Name][2]
 
-## Step 3: Choose Your Criteria
+## Step 3: choose your criteria
 
 Select between a purchase or custom event criteria for targeting. Once you've selected the desired event type criteria, choose which purchased item or specific custom event you'd like to target for your user list. Then choose how many times (more than, less than, or equal to) the user would need to have completed the event, and how many days to look back, up to 365 days.
 
 ![Segment Extension Criteria][3]
 
-### Event Property Segmentation
+### Event property segmentation
 
 To increase targeting precision, select the **Add Property Filters** checkbox. This will enable you to drill down based on the specific properties of your purchase or custom event. We support event property segmentation based on string, numeric, boolean, and time objects. We also support segmentation based on [nested event properties]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/nested_object_support/).
 
@@ -49,7 +49,7 @@ Segment Extensions rely on long term storage of event properties and don't have 
 
 {% alert note %} Using event properties within Segment Extensions does not impact data point usage.  {% endalert %}
 
-### Extension Regeneration
+### Extension regeneration
 
 You can specify whether you want this extension to represent a single snapshot in time, or whether you want this extension to regenerate on a daily basis. Your extension will always begin processing after the initial save. If you would like the extension to be regenerated daily, select the **Regenerate Extension Daily** checkbox and the regeneration will begin processing at around midnight each day in your company’s time zone.
 
@@ -63,7 +63,7 @@ Starting on November 29, 2021, the setting to regenerate extensions daily will b
 Braze will notify the company contact and creator of the extension when this setting is turned off. The option to regenerate extensions daily can be turned on again at any time.
 {% endalert %}
 
-## Step 4: Save Your Segment Extension
+## Step 4: save your segment extension
 
 Once you click **Save**, your extension will begin processing. The length of time it takes to generate your extension depends on how many users you have, how many custom events or purchase events you're capturing, and how many days you're looking back in history.
 
@@ -71,7 +71,7 @@ While your extension is processing, you will see a small animation next to the n
 
 ![Segment Extension Processing][5]
 
-## Step 5: Using Your Extension in a Segment
+## Step 5: using your extension in a segment
 
 Once you have created an extension, you can use it as a filter when creating a segment or defining an audience for a campaign or Canvas. Start by choosing **Braze Segment Extension** from the filter list under the **User Attributes** section.
 

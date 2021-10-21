@@ -11,11 +11,11 @@ channel:
 
 ---
 
-# iOS Notification Options
+# iOS notification options
 
 > With the release of Apple's iOS 12, Braze offers support for several of its features, including [Notification Groups](#notification-groups), [Quiet Notifications/Provisional Authorization](#provisional-push-authentication--quiet-notifications), and [Critical Alerts](#critical-alerts).
 
-## Notification Groups
+## Notification groups
 
 If you want to categorize your messages and group them in your user's notification tray, you can utilize iOS's Notification Groups feature through Braze.
 
@@ -31,7 +31,7 @@ If you don't have any Notification Groups listed here, you can add one using the
 
 Create your iOS push campaign, then look to the top of the composer. There, you'll see a dropdown labeled **Notification Groups**.
 
-### Summary Arguments
+### Summary arguments
 
 In addition to grouping notifications by Thread IDs, Apple allows you to edit the summaries that appear when notifications are grouped. Braze Users can specify the summary category, summary count, and summary argument when composing a push campaign using our tool.
 
@@ -43,7 +43,7 @@ Check the __Alert Options__ box in the __Push Composer__.
 
 Then, select `summary-arg` and `summary-arg-count` as keys and input those values in the corresponding column. If you do not set a value for `summary-arg`, it will default to 1.
 
-### Summary Categories
+### Summary categories
 
 Summary Categories allow you to customize the entire summary that appears when notifications are grouped. You can create and apply multiple categories.
 
@@ -70,7 +70,7 @@ Once this is set up on your app, use the summary category by checking the __Noti
 
 Then, input the summary category identifier that you set in your app.
 
-### Provisional Push Authentication & Quiet Notifications
+### Provisional push authentication & quiet notifications
 
 Apple allows brands the option to send quiet push notifications to their users' Notification Centers before they officially, explicitly opt-in, giving you a chance to demonstrate the value of your messages early. All you need to do is [set up provisional push notifications](#set-up-provisional-push-notifications) in your app, then any user who has a provisional push token will receive your messages.
 
@@ -96,7 +96,7 @@ If users choose to "Turn Off" provisional push from you, they won't see any more
 If you utilize additional push prompts or [in-app push primers](https://www.braze.com/resources/glossary/priming-for-push/) (an in-app message that encourages users to opt-in to push notifications), please reach out to your Braze representative for additional guidance.
 {% endalert %}
 
-#### Set Up Provisional Push Notifications
+#### Set up provisional push notifications
 
 Braze allows you to register for Provisional Authentication by updating your code in your _token registration snippet_ within your Braze iOS SDK implementation using the snippets below as an example (send these to your developers or ensure they [implement provisional push authentication during the integration process]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/push_notifications/integration/#using-usernotification-framework-ios-10)).
 
@@ -130,7 +130,7 @@ if (@available(iOS 12.0, *)) {
   {% endtab %}
 {% endtabs %}
 
-### Interruption Level (iOS 15+) {#interruption-level}
+### Interruption level (ios 15+) {#interruption-level}
 
 ![Notification Settings]({% image_buster /assets/img/ios/ios15-notification-settings.png %}){: style="float:right;max-width:25%;margin-left:15px;border:0"}
 
@@ -156,7 +156,7 @@ To change the Interruption Level for an iOS Push Notification, choose the desire
 
 This feature does not have minimum SDK version requirements, but is only applied for devices running iOS 15+.
 
-### Relevance Score (iOS 15+) {#relevance-score}
+### Relevance score (ios 15+) {#relevance-score}
 
 ![Notification Summary]({% image_buster /assets/img/ios/ios15-notification-summary.png %}){: style="float:right;max-width:25%;margin-left:15px;border:0"}
 

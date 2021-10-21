@@ -8,23 +8,23 @@ tool: Location
 
 ---
 
-# Locations & Geofences FAQs
+# Locations & geofences faqs
 
 ## Locations
 
-### When does Braze collect location data?
+### when does braze collect location data?
 
 Braze only collects location when the application is in the foreground. As a result, our last known location filters target users based upon where they last opened the application.
 
 ## Geofences
 
-### Can I store more than X geofences?
+### can i store more than x geofences?
 
 Per Android's [documentation][3], Android apps may only store up to 100 geofences locally at a time. Braze is configured to store only up to 20 geofences locally per app. For geofences to work correctly, you should ensure that your App is not using all available geofence spots.
 
 iOS devices may monitor up to 20 [geofences][4] at a time per app. Braze will monitor up to 20 locations if space is available. For geofences to work correctly, you should ensure that your App is not using all available geofence spots.
 
-### How accurate are Braze geofences?
+### How accurate are braze geofences?
 
 Braze geofences use a combination of all location providers available to a device to triangulate the user's location. These include Wifi, GPS, and cellular towers.
 
@@ -34,7 +34,7 @@ Typical accuracy is in 20-50m range and best-case accuracy will be in the 5-10m 
 
 Our geofencing solution uses the native geofence system service on iOS and Android and is tuned to intelligently trade off accuracy and power, ensuring best in class battery life and improvements in performance as the underlying service improves.
 
-### How many geofences can I upload to Braze?
+### How many geofences can i upload to braze?
 
 You may create or upload an unlimited amount of geofences on the Dashboard, allowing your marketing team to setup geofence sets and campaigns without needing to calculate numbers of geofences. However, each geofence set can hold a maximum of 10,000 geofences. Braze dynamically re-synchronizes the geofences that it tracks for each individual user, ensuring that the most relevant geofences to them are always available.
 

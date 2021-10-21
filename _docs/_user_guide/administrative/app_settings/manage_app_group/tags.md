@@ -8,7 +8,7 @@ description: "This reference article covers tags in the Braze dashboard, which y
 ---
 # Tags
 
-Braze tracks author, editor, date, and status information about segments, campaigns, Canvases, and News Feed cards, and gives you the ability to create tags to further organize and sort your engagement.
+braze tracks author, editor, date, and status information about segments, campaigns, canvases, and news feed cards, and gives you the ability to create tags to further organize and sort your engagement.
 
 ## Campaign, Segment, and News Feed Card Tags
 
@@ -32,7 +32,7 @@ To filter by a tag, select the tag name in the left-hand toolbar or search for t
 
 ![Tag Search for Campaigns and Segments][6]
 
-## Best Practices {#tags-best-practices}
+## Best practices {#tags-best-practices}
 
 Tags can be a useful organizational tool for keeping track of engagement tactics. You can link segments, campaigns, and News Feed cards to business objectives, funnel stages, and the like.
 

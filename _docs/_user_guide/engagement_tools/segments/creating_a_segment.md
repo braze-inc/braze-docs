@@ -7,7 +7,7 @@ description: "This how-to article will walk you through how to set up and create
 tool: Segments
 
 ---
-# Creating a Segment
+# Creating a segment
 
 > This article will walk you through the steps of creating a segment, filtering your target audience, and segment navigation and archival.
 
@@ -15,13 +15,13 @@ Your developers have integrated the SDK, and the data from your users have begun
 
 Segmentation allows you to target users based upon their demographic, behavioral, social, or technical characteristics and actions. Creative and intelligent use of segmentation and messaging automation enables you to seamlessly move your users from first touch to long-term customer. Segments update in real-time as data changes, and you can create as many segments as needed for your targeting and messaging purposes.
 
-## Step 1: Navigating to the Segments Section
+## Step 1: navigating to the segments section
 
 ![Segments Menu][1]{: style="float:right;max-width:20%;"}
 
 From the left-hand side of the Dashboard under Engagement, click **Segments**.
 
-## Step 2: Name Your Segment
+## Step 2: name your segment
 
 Name your segment by describing the type of user you intend to filter for. This will ensure that this segment can accurately be the target of multiple campaigns or Canvases to come. Vague segment titles can cause confusion down the line.
 
@@ -29,7 +29,7 @@ Optionally, you can add a description to the segment to provide more details abo
 
 ![Create a Segment][2]{: style="max-width:70%;"}
 
-## Step 3: Choose Your App or Platform
+## Step 3: choose your app or platform
 
 Choose which apps or platforms you'd like to target by either selecting **Include users from all apps** (default), or by clearing the checkbox. If you clear this option, you can then select which apps or platforms you want to include in your segment. For example, if you'd like to send an in-app message to only iOS devices, select your iOS app. This will ensure that users who might use both an iOS and an Android device will only receive the message on their iOS device.
 
@@ -37,7 +37,7 @@ For more information on this option, refer to the section [Segment Membership Ca
 
 ![Segment App Selection][5]
 
-## Step 4: Add Filters to Your Segment
+## Step 4: add filters to your segment
 
 Add at least one filter to your segment as depicted in the image below. You can combine as many filters as you want in order to make your segmentation more specific.
 
@@ -63,11 +63,11 @@ However, the segmentation stats or preview may not show this individual user bec
 
 Braze has testing filters to target specific users by user ID or email address.
 
-## Step 5: Save Your Segment
+## Step 5: save your segment
 
 Once you've clicked "Save" you're ready to start sending messages to your users!
 
-## Segment Membership Calculation {#segment-membership-calculation}
+## Segment membership calculation {#segment-membership-calculation}
 
 Braze updates the user’s segment membership as data is sent back to our servers and processed, typically instantaneously. A user’s segment membership will not change until that session has been processed. For example, a user who falls into a lapsed user segment when the session first starts will be immediately moved out of the lapsed user segment when the session is processed.
 
@@ -75,7 +75,7 @@ Additionally, segment membership is calculated differently when **Include users 
 
 If **Include users from all apps** is cleared and you have more than one app in your app group, segment membership will only include users with sessions logged in the selected apps, and excludes users with no sessions or app data. Therefore the total of individual segments with one app selected will not equal a segment with **Include users from all apps** selected.
 
-## Archiving Segments
+## Archiving segments
 
 If you no longer need or wish to retire a specific segment, you can archive it by going to the __Segments__ page, clicking on the appropriate gear, then selecting "Archive" from the drop-down that appears.
 

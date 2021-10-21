@@ -27,16 +27,16 @@ guide_featured_list:
 
 ---
 
-## Content Guidelines
+## Content guidelines
 
 ### Text
-For in-app message bodies or headers, we recommend you keep it short and sweet - one to two lines for headers; up to three for bodies. After three lines, the message will likely need to vertically scroll, and users might not engage with all of the content. The threshold that triggers the scroll can vary depending on the end user’s device size, custom styling, or presence of images within messages, but three lines is usually safe!
+for in-app message bodies or headers, we recommend you keep it short and sweet - one to two lines for headers; up to three for bodies. after three lines, the message will likely need to vertically scroll, and users might not engage with all of the content. the threshold that triggers the scroll can vary depending on the end user’s device size, custom styling, or presence of images within messages, but three lines is usually safe!
 
 If you are using the newest generation of in-app messages (Generation 3), you'll find that the fonts default to the Operating System default Sans Serif for iOS and Android. Web in-app messages will default to Helvetica.
 
 
 ### Images
-Our guidelines for images are more structured than those for text, as we want to ensure your messages display as-intended, and beautifully across phones, tablets, and computers of all models and sizes.
+our guidelines for images are more structured than those for text, as we want to ensure your messages display as-intended, and beautifully across phones, tablets, and computers of all models and sizes.
 
 In general, Braze recommends using images that fit into a 16:10 screen.
 
@@ -83,12 +83,12 @@ In general, Braze recommends using images that fit into a 16:10 screen.
 {% endtabs %}
 
 
-### Gifs & Videos
+### Gifs & videos
 
 Braze currently supports gifs for Web (included), [Android]({{site.baseurl}}/developer_guide/platform_integration_guides/android/in-app_messaging/customization/#gifs-IAMs), and iOS (included) in-app messaging, given that it has been enabled during the desired platform integration. For more on video in in-app messages, see our [Customization documentation]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/customize/#video).
 
 
-## Additional Considerations
+## Additional considerations
 
 Braze in-app messages have both global and individual creative specifications. For more information about fully customizing in-app messages, go to our [Customize]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/customize/) page.
 

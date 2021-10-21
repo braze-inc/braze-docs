@@ -9,7 +9,7 @@ channel: push
 
 ---
 
-# Conversion Tracking
+# Conversion tracking
 
 When assigning [conversion events][34] to a push campaign, you'll have the option to track app opens for a certain period after the campaign is received. Setting app opens as a conversion event provides different insight from the results statistics you normally receive after after a push campaign. While all push campaigns results break down a message's direct opens and opens ([which include both direct and influenced opens][35]), conversion tracking will track any type of open, whether it is direct or influenced.
 

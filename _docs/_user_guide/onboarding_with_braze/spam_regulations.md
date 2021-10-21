@@ -11,7 +11,7 @@ channel:
 
 
 ---
-# Spam Regulations
+# Spam regulations
 
 There are a number of laws that regulate senders of electronic communications, including email, push notifications and SMS. You should always be aware of [local regulations][4] that may affect you or your users. Braze is providing relevant information based on our own research, but you should also refer to the full text of these laws for complete and up-to-date details.
 
@@ -34,11 +34,11 @@ There are 7 key requirements for CAN-SPAM:
 
 Transactional emails are exempt from these rules with the exception of #1.
 
-## Canadian Anti-Spam Law (CASL) {#casl}
+## Canadian anti-spam law (casl) {#casl}
 
 On July 1, 2014, the Canadian Anti-Spam Law (CASL) goes into effect for emails sent to Canadian residents. You can read the full text of the law [here][3]. The law essentially says that Canadian recipients of both email and push notifications need to provide "expressed or implied" consent to your communication with them.
 
-### CASL vs CAN-SPAM
+### CASL vs can-spam
 
 There are a couple key differences between CASL and CAN-SPAM, most notably:
 
@@ -47,9 +47,9 @@ There are a couple key differences between CASL and CAN-SPAM, most notably:
 
 ### Liability
 
-While CASL has a three-year transition period, ending July 1, 2017, the Canadian Radio-Television and Telecommunications Commission (CRTC), the Competition Bureau and the Office of the Privacy Commissioner of Canada may begin investigation and litigation during this period. At the end of the transition period, individuals may also litigate against entities they believe to be sending spam.
+while casl has a three-year transition period, ending july 1, 2017, the canadian radio-television and telecommunications commission (crtc), the competition bureau and the office of the privacy commissioner of canada may begin investigation and litigation during this period. at the end of the transition period, individuals may also litigate against entities they believe to be sending spam.
 
-### Exempt Messages
+### Exempt messages
 
 The following types of messages are exempt from the requirements of CASL:
 
@@ -62,11 +62,11 @@ The following types of messages are exempt from the requirements of CASL:
 
 >  This is not the complete list of exemptions. Please view the [full text of the law][3] for more details.
 
-### Message Consent
+### Message consent
 
 Messages that do not fall under one of the exemptions require "expressed or implied" consent from the message recipient.
 
-#### Implied Consent
+#### Implied consent
 
 Implied consent is based on previous activity with a user through an existing business or non-business relationship. Messages can be sent based on implied consent during the transition period. After July 1, 2017, express consent is required, unless the implied consent is still valid (ie, the 2 years after a purchase was made).
 
@@ -75,14 +75,14 @@ Implied consent is based on previous activity with a user through an existing bu
 
 Implied consent is only valid for 6 months if the recipient does not become a customer.
 
-#### Express Consent
+#### Express consent
 
 Express consent is written or oral confirmation from the message recipient and only valid if the message includes a clear and simple description of:
 
 - Why consent is being sought
 - The person or organization seeking consent
 
-## Spam Filters
+## Spam filters
 
 Just because your emails have successfully sent doesn’t mean that they have necessarily been seen. There is no cure-all solution to avoid all spam filters because each filter is unique in how they evaluate the “spamminess score” of an email. However, here are some tips to avoid having your emails labeled as “spam”:
 
@@ -95,13 +95,13 @@ Just because your emails have successfully sent doesn’t mean that they have ne
 - Check and Test: Make sure your message does not contain anything that can trigger spam filters. This includes superfluous tags from external text editors like Microsoft Word, abnormal text formatting, over-usage of ! and ? as punctuation, writing in ALL CAPS, and spam trigger words (see [here][7] for a list of common trigger words). Send emails with varying content using Braze’s multivariate testing capabilities to make sure your emails are not going to spam.
 
 
-## Messaging Channel
+## Messaging channel
 
 ### Email {#spam-email}
 
 The quality of your email list is especially important.  A handful of bad emails on your list can ruin your delivery for a million good users. Collecting a list of bad emails generates bounces, blacklisting, spam trap hits, and tanks your response rates. Culling emails that have no activity on a regular basis, and removing obvious bounces are the first step. Whether you implement a opt-in (check the box), opt-out (uncheck the box), confirm opt-in (an email that says thanks for signing up, and gives an unsubscribe link), or double opt-in (an email that that requires a click to confirm), what you want to think about is list quality.
 
-### iOS and Windows {#spam-ios-windows}
+### iOS and windows {#spam-ios-windows}
 
 In iOS, your users have always been asked to opt-in to push notifications. The iOS dialog boxed simply pops up on entry to the app and asks the user to opt-in for notifications to your app. The app user sees the same message pop-up the moment they open an app for the first time, so everyone who is on your iOS list for push notifications has, by definition, opted-in. Windows also requires explicit opt-ins by the user.
 

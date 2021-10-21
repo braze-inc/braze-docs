@@ -9,7 +9,7 @@ tool:
 description: "This reference article covers the message and design requirements of sliedup in-app messages."
 
 ---
-# Slideup In-App Messages
+# Slideup in-app messages
 
 Our slideups typically appear at the top or bottom of the app screen (you can set this when you create your message). These are great for alerting your users about new terms of service, cookies, and other snippets of information. These are non-obtrusive and allow your end users to continue to interact with your app while the message displays.
 
@@ -17,7 +17,7 @@ Our slideups typically appear at the top or bottom of the app screen (you can se
 ![Slideup Specs][2a]{: style="max-width: 459px; border: none;"}
 
 
-## Image and Copy Behavior
+## Image and copy behavior
 
 Slideup messages can contain up to three lines of copy before truncation with ellipses. Images in slideups will never be cropped or clipped - they will always scale down to fit within the 50X50 image container.
 
@@ -38,7 +38,7 @@ You should __always__ [preview and test your messages]({{site.baseurl}}/user_gui
 [2b]: {% image_buster /assets/img/slideup-large-viewport.png %}
 
 
-### Larger Screens
+### Larger screens
 
 On a tablet or desktop browser, a slideup in-app message will sit in the corner of the app screen as shown below (unless designated otherwise when creating the in-app message).
 

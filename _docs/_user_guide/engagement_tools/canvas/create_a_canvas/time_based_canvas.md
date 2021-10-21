@@ -11,7 +11,7 @@ description: "This reference article covers definitions, time zones, and example
 
 > This reference article covers time-based functionalities for Canvas to assist with strategies, troubleshooting, and to answer common questions.
 
-## Schedule Delay
+## Schedule delay
 
 ### Send immediately
 
@@ -22,7 +22,7 @@ description: "This reference article covers definitions, time zones, and example
 
 ![Send immediately][1]
 
-### Send after X days
+### Send after x days
 
 | Definition |  Time Zone |
 | --- | --- |
@@ -31,7 +31,7 @@ description: "This reference article covers definitions, time zones, and example
 
 ![Send after X days][2]
 
-### Send on the next [day of the week] at X time
+### Send on the next [day of the week] at x time
 
 | Definition |  Time Zone |
 | --- | --- |
@@ -42,7 +42,7 @@ For example, suppose you select "Send on the next Saturday at 3:15pm". If a user
 
 ![Send on the next][3]
 
-### Send in X calendar days at Y time
+### Send in x calendar days at y time
 
 | Definition |  Time Zone |
 | --- | --- |
@@ -52,7 +52,7 @@ Canvas calculates the delay as `day of the week` + `calendar days`, then adds th
 
 ![Send in X days][4]
 
-### Intelligent Timing
+### Intelligent timing
 
 | Definition | Time Zone |
 | ---------- | ----- |
@@ -61,7 +61,7 @@ Canvas calculates the delay as `day of the week` + `calendar days`, then adds th
 
 ![Intelligent timing][5]
 
-## Global Frequency Capping
+## Global frequency capping
 
 | Definition | Time Zone |
 | --- | --- |

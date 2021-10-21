@@ -30,7 +30,7 @@ Please note that these schemas __only apply to the flat file event data we send 
 
 {% api %}
 
-## Push Send Events
+## Push send events
 
 {% apitags %}
 Push, Sends
@@ -65,13 +65,13 @@ This event occurs when Braze processes a push message for a user, communicating 
   "ad_tracking_enabled": (boolean) whether advertising tracking is enabled for the device
 }
 ```
-#### Property Details
+#### Property details
 - For `ad_id`, `ad_id_type` and `ad_tracking_enabled`, you will need to explicitly collect the iOS idfa and Android Google adid through the native SDKs. Learn more about them here: [iOS]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/initial_sdk_setup/optional_idfa_collection/#optional-idfa-collection/), [Android]({{site.baseurl}}/developer_guide/platform_integration_guides/android/initial_sdk_setup/optional_gaid_collection/#optional-google-advertising-id).
 - If you are using Kafka to ingest [Currents]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/) data, reach out to your Customer Success Manager or Account Manager to enable the feature flipper for sending `ad_id`.
 {% endapi %}
 {% api %}
 
-## Push Open Events
+## Push open events
 
 {% apitags %}
 Push, Opens
@@ -113,13 +113,13 @@ This event occurs when a user directly clicks on the Push notification to open t
   "ad_tracking_enabled": (boolean) whether advertising tracking is enabled for the device
 }
 ```
-#### Property Details
+#### Property details
 - For `ad_id`, `ad_id_type` and `ad_tracking_enabled`, you will need to explicitly collect the iOS idfa and Android Google adid through the native SDKs. Learn more about them here: [iOS]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/initial_sdk_setup/optional_idfa_collection/#optional-idfa-collection/), [Android]({{site.baseurl}}/developer_guide/platform_integration_guides/android/initial_sdk_setup/optional_gaid_collection/#optional-google-advertising-id).
 - If you are using Kafka to ingest [Currents]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/) data, reach out to your Customer Success Manager or Account Manager to enable the feature flipper for sending `ad_id`.
 {% endapi %}
 {% api %}
 
-## Push Notifications in the iOS Foreground Events
+## Push notifications in the ios foreground events
 
 {% apitags %}
 Push, iOS, Sends
@@ -154,13 +154,13 @@ This event occurs if a push was sent while the iOS app was in the foreground. Wh
   "ad_tracking_enabled": (boolean) whether advertising tracking is enabled for the device
 }
 ```
-#### Property Details
+#### Property details
 - For `ad_id`, `ad_id_type` and `ad_tracking_enabled`, you will need to explicitly collect the iOS idfa and Android Google adid through the native SDKs. Learn more about them here: [iOS]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/initial_sdk_setup/optional_idfa_collection/#optional-idfa-collection/), [Android]({{site.baseurl}}/developer_guide/platform_integration_guides/android/initial_sdk_setup/optional_gaid_collection/#optional-google-advertising-id).
 - If you are using Kafka to ingest [Currents]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/) data, reach out to your Customer Success Manager or Account Manager to enable the feature flipper for sending `ad_id`.
 {% endapi %}
 {% api %}
 
-## Push Notifications Bounce
+## Push notifications bounce
 
 {% apitags %}
 Push, Sends, Bounce
@@ -195,12 +195,12 @@ This event occurs when an error is received from either Apple Push Notification 
   "ad_tracking_enabled": (boolean) whether advertising tracking is enabled for the device
 }
 ```
-#### Property Details
+#### Property details
 - If you are using Kafka to ingest [Currents]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/) data, reach out to your Customer Success Manager or Account Manager to enable the feature flipper for sending `ad_id`.
 {% endapi %}
 {% api %}
 
-## Email Send Events
+## Email send events
 
 {% apitags %}
 Email, Sends
@@ -234,14 +234,14 @@ This event occurs when an email send request was successfully communicated betwe
   "ip_pool": (string) IP pool used for message sending
 }
 ```
-#### Property Details
+#### Property details
 - The behavior for `dispatch_id` differs between Canvas and campaigns because Braze treats Canvas steps (except for Entry Steps, which can be scheduled) as triggered events, even when they are "scheduled". [Learn more about `dispatch_id` behavior in Canvas and campaigns here]({{site.baseurl}}/help/help_articles/data/dispatch_id/).
 {% endapi %}
 
 
 {% api %}
 
-## Email Delivery Events
+## Email delivery events
 
 {% apitags %}
 Email, Delivery
@@ -273,14 +273,14 @@ This event occurs when an email sent made it successfully to the end-users inbox
   "ip_pool": (string) IP pool used for message sending
 }
 ```
-#### Property Details
+#### Property details
 - The behavior for `dispatch_id` differs between Canvas and campaigns because Braze treats Canvas steps (except for Entry Steps, which can be scheduled) as triggered events, even when they are "scheduled". [Learn more about `dispatch_id` behavior in Canvas and campaigns here]({{site.baseurl}}/help/help_articles/data/dispatch_id/).
 {% endapi %}
 
 
 {% api %}
 
-## Email Open Events
+## Email open events
 
 {% apitags %}
 Email, Opens
@@ -312,7 +312,7 @@ This event occurs when a user opens an email. Multiple events may be generated f
   "ip_pool": (string) IP pool used for message sending
 }
 ```
-#### Property Details
+#### Property details
 - The behavior for `dispatch_id` differs between Canvas and campaigns because Braze treats Canvas steps (except for Entry Steps, which can be scheduled) as triggered events, even when they are "scheduled". [Learn more about `dispatch_id` behavior in Canvas and campaigns here]({{site.baseurl}}/help/help_articles/data/dispatch_id/).
 {% endapi %}
 
@@ -320,7 +320,7 @@ This event occurs when a user opens an email. Multiple events may be generated f
 
 {% api %}
 
-## Email Clicks Events
+## Email clicks events
 
 {% apitags %}
 Email, Clicks
@@ -353,13 +353,13 @@ This event occurs when a user clicks an email. Multiple events may be generated 
   "ip_pool": (string) IP pool used for message sending
 }
 ```
-#### Property Details
+#### Property details
 - The behavior for `dispatch_id` differs between Canvas and campaigns because Braze treats Canvas steps (except for Entry Steps, which can be scheduled) as triggered events, even when they are "scheduled". [Learn more about `dispatch_id` behavior in Canvas and campaigns here]({{site.baseurl}}/help/help_articles/data/dispatch_id/).
 {% endapi %}
 
 {% api %}
 
-## Email Bounce Event
+## Email bounce event
 
 {% apitags %}
 Email, Bounce
@@ -392,13 +392,13 @@ This event occurs when an Internet Service Provider returns a hard bounce. A har
   "bounce_reason": (string) reason for bounce provided by server
 }
 ```
-#### Property Details
+#### Property details
 - The behavior for `dispatch_id` differs between Canvas and campaigns because Braze treats Canvas steps (except for Entry Steps, which can be scheduled) as triggered events, even when they are "scheduled". [Learn more about `dispatch_id` behavior in Canvas and campaigns here]({{site.baseurl}}/help/help_articles/data/dispatch_id/).
 {% endapi %}
 
 {% api %}
 
-## Email Soft Bounce Event
+## Email soft bounce event
 
 {% apitags %}
 Email, Bounce
@@ -431,13 +431,13 @@ This event occurs when an Internet Service Provider returns a soft bounce. A sof
   "bounce_reason": (string) reason for bounce provided by server
 }
 ```
-#### Property Details
+#### Property details
 - The behavior for `dispatch_id` differs between Canvas and campaigns because Braze treats Canvas steps (except for Entry Steps, which can be scheduled) as triggered events, even when they are "scheduled". [Learn more about `dispatch_id` behavior in Canvas and campaigns here]({{site.baseurl}}/help/help_articles/data/dispatch_id/).
 {% endapi %}
 
 {% api %}
 
-## Email Spam Events
+## Email spam events
 
 {% apitags %}
 Email, Spam
@@ -469,14 +469,14 @@ This event occurs when the end-user hits the “spam” button on the email. Not
   "ip_pool": (string) IP pool used for message sending
 }
 ```
-#### Property Details
+#### Property details
 - The behavior for `dispatch_id` differs between Canvas and campaigns because Braze treats Canvas steps (except for Entry Steps, which can be scheduled) as triggered events, even when they are "scheduled". [Learn more about `dispatch_id` behavior in Canvas and campaigns here]({{site.baseurl}}/help/help_articles/data/dispatch_id/).
 {% endapi %}
 
 
 {% api %}
 
-## Email Unsubscribe Events
+## Email unsubscribe events
 
 {% apitags %}
 Email, Subscription
@@ -511,13 +511,13 @@ Please note that the `Unsubscribe` event is actually a specialized click event t
   "ip_pool": (string) IP pool used for message sending
 }
 ```
-#### Property Details
+#### Property details
 - The behavior for `dispatch_id` differs between Canvas and campaigns because Braze treats Canvas steps (except for Entry Steps, which can be scheduled) as triggered events, even when they are "scheduled". [Learn more about `dispatch_id` behavior in Canvas and campaigns here]({{site.baseurl}}/help/help_articles/data/dispatch_id/).
 {% endapi %}
 
 {% api %}
 
-## Subscription Events
+## Subscription events
 
 {% apitags %}
 Subscription, Email, SMS
@@ -597,7 +597,7 @@ This event occurs when a user views an in-app message.
   "ad_tracking_enabled": (boolean) whether advertising tracking is enabled for the device
 }
 ```
-#### Property Details
+#### Property details
 - For `ad_id`, `ad_id_type` and `ad_tracking_enabled`, you will need to explicitly collect the iOS idfa and Android Google adid through the native SDKs. Learn more about them here: [iOS]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/initial_sdk_setup/optional_idfa_collection/#optional-idfa-collection/), [Android]({{site.baseurl}}/developer_guide/platform_integration_guides/android/initial_sdk_setup/optional_gaid_collection/#optional-google-advertising-id).
 - If you are using Kafka to ingest [Currents]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/) data, reach out to your Customer Success Manager or Account Manager to enable the feature flipper for sending `ad_id`.
 {% endapi %}
@@ -642,7 +642,7 @@ This event occurs when a user clicks on an in-app message.
   "ad_tracking_enabled": (boolean) whether advertising tracking is enabled for the device
 }
 ```
-#### Property Details
+#### Property details
 - For `ad_id`, `ad_id_type` and `ad_tracking_enabled`, you will need to explicitly collect the iOS idfa and Android Google adid through the native SDKs. Learn more about them here: [iOS]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/initial_sdk_setup/optional_idfa_collection/#optional-idfa-collection/), [Android]({{site.baseurl}}/developer_guide/platform_integration_guides/android/initial_sdk_setup/optional_gaid_collection/#optional-google-advertising-id).
 - If you are using Kafka to ingest [Currents]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/) data, reach out to your Customer Success Manager or Account Manager to enable the feature flipper for sending `ad_id`.
 {% endapi %}
@@ -650,7 +650,7 @@ This event occurs when a user clicks on an in-app message.
 
 {% api %}
 
-## Webhook Send Events
+## Webhook send events
 
 {% apitags %}
 Webhooks, Sends
@@ -681,7 +681,7 @@ This event occurs when a webhook was processed and sent to the third party speci
 {% endapi %}
 
 {% api %}
-## Content Card Send Events
+## Content card send events
 
 {% apitags %}
 Content Cards, Sends
@@ -715,7 +715,7 @@ This event occurs when a content card gets sent to a user.
 {% endapi %}
 
 {% api %}
-## Content Card Impression Events
+## Content card impression events
 
 {% apitags %}
 Content Cards, Impressions
@@ -752,13 +752,13 @@ This event occurs when a user views a content card.
   "ad_tracking_enabled": (boolean) whether advertising tracking is enabled for the device
 }
 ```
-#### Property Details
+#### Property details
 - For `ad_id`, `ad_id_type` and `ad_tracking_enabled`, you will need to explicitly collect the iOS idfa and Android Google adid through the native SDKs. Learn more about them here: [iOS]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/initial_sdk_setup/optional_idfa_collection/#optional-idfa-collection/), [Android]({{site.baseurl}}/developer_guide/platform_integration_guides/android/initial_sdk_setup/optional_gaid_collection/#optional-google-advertising-id).
 - If you are using Kafka to ingest [Currents]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/) data, reach out to your Customer Success Manager or Account Manager to enable the feature flipper for sending `ad_id`.
 {% endapi %}
 
 {% api %}
-## Content Card Click Events
+## Content card click events
 
 {% apitags %}
 Content Cards, Clicks
@@ -795,14 +795,14 @@ This event occurs when a user clicks a content card.
   "ad_tracking_enabled": (boolean) whether advertising tracking is enabled for the device
 }
 ```
-#### Property Details
+#### Property details
 - For `ad_id`, `ad_id_type` and `ad_tracking_enabled`, you will need to explicitly collect the iOS idfa and Android Google adid through the native SDKs. Learn more about them here: [iOS]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/initial_sdk_setup/optional_idfa_collection/#optional-idfa-collection/), [Android]({{site.baseurl}}/developer_guide/platform_integration_guides/android/initial_sdk_setup/optional_gaid_collection/#optional-google-advertising-id).
 - If you are using Kafka to ingest [Currents]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/) data, reach out to your Customer Success Manager or Account Manager to enable the feature flipper for sending `ad_id`.
 {% endapi %}
 
 
 {% api %}
-## Content Card Dismissal Events
+## Content card dismissal events
 
 {% apitags %}
 Content Cards, Dismissal
@@ -839,14 +839,14 @@ This event occurs when a user dismisses a content card.
   "ad_tracking_enabled": (boolean) whether advertising tracking is enabled for the device
 }
 ```
-#### Property Details
+#### Property details
 - For `ad_id`, `ad_id_type` and `ad_tracking_enabled`, you will need to explicitly collect the iOS idfa and Android Google adid through the native SDKs. Learn more about them here: [iOS]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/initial_sdk_setup/optional_idfa_collection/#optional-idfa-collection/), [Android]({{site.baseurl}}/developer_guide/platform_integration_guides/android/initial_sdk_setup/optional_gaid_collection/#optional-google-advertising-id).
 - If you are using Kafka to ingest [Currents]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/) data, reach out to your Customer Success Manager or Account Manager to enable the feature flipper for sending `ad_id`.
 {% endapi %}
 
 {% api %}
 
-## News Feed Impression Event
+## News feed impression event
 
 {% apitags %}
 News Feed, Impressions
@@ -879,7 +879,7 @@ This event occurs when a user views the News Feed.
 
 {% api %}
 
-## News Feed Click Events
+## News feed click events
 
 {% apitags %}
 News Feed, Clicks
@@ -911,7 +911,7 @@ This event occurs when a user clicks the News Feed.
 
 {% api %}
 
-## SMS Send Events
+## SMS send events
 
 {% apitags %}
 SMS, Sends
@@ -948,7 +948,7 @@ This event occurs when a user sends an SMS.
 
 {% api %}
 
-## SMS Sends to Carrier Events
+## SMS sends to carrier events
 
 {% apitags %}
 SMS, Delivery
@@ -984,7 +984,7 @@ This event occurs when an SMS is sent to the carrier.
 
 {% api %}
 
-## SMS Delivery Events
+## SMS delivery events
 
 {% apitags %}
 SMS, Delivery
@@ -1020,7 +1020,7 @@ This event occurs when an SMS was successfully delivered to the users mobile pho
 
 {% api %}
 
-## SMS Rejection Events
+## SMS rejection events
 
 {% apitags %}
 SMS, Rejection
@@ -1060,7 +1060,7 @@ This event occurs when an SMS send gets rejected by the carrier, this can happen
 
 {% api %}
 
-## SMS Delivery Failure Events
+## SMS delivery failure events
 
 {% apitags %}
 SMS, Delivery
@@ -1098,7 +1098,7 @@ This event occurs when an SMS experiences delivery failure. Use this event and t
 {% endapi %}
 {% api %}
 
-## SMS Inbound Received Events
+## SMS inbound received events
 
 {% apitags %}
 SMS, InboundReceived
@@ -1135,7 +1135,7 @@ This event occurs when one of your users sends an SMS to a phone number in one o
 
 {% api %}
 
-## Campaign Conversion Events
+## Campaign conversion events
 
 {% apitags %}
 Campaign, Conversion
@@ -1169,7 +1169,7 @@ Please note that the conversion event is encoded in the `conversion_behavior` fi
 
 {% api %}
 
-## Canvas Conversion Events
+## Canvas conversion events
 
 {% apitags %}
 Canvas, Conversion
@@ -1205,7 +1205,7 @@ Please note that the conversion event is encoded in the `conversion_behavior` fi
 
 {% api %}
 
-## Canvas Entry Events
+## Canvas entry events
 
 {% apitags %}
 Canvas, Entry
@@ -1235,7 +1235,7 @@ This event occurs when a user enters into the canvas. This event tells you which
 {% endapi %}
 
 {% api %}
-## Campaign Control Group Enrollment Events
+## Campaign control group enrollment events
 
 {% apitags %}
 Campaign, Entry

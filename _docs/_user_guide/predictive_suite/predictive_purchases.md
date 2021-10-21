@@ -25,7 +25,7 @@ guide_featured_list:
 
 ## Overview
 
-![Predictive Purchases Overview][1]
+![predictive purchases overview][1]
 
 Predictive Purchases give marketers a powerful tool for identifying and messaging users based on their likelihood to make a purchase. When you create a Purchase Prediction, Braze trains a machine learning model using [gradient boosted decision trees](https://en.wikipedia.org/wiki/Gradient_boosting) to learn from previous purchase activity and predict future purchase activity. 
 
@@ -33,7 +33,7 @@ Once a Prediction is built, users are assigned a [Purchase Likelihood Score]({{s
 
 The real value of Predictive Purchases lies using Prediction results to create a Segment or campaign. Marketers can build targeted campaigns directly on the __Prediction__ page for immediate revenue-boosting results or save a Segment for a future campaign or Canvas. Not sure who to target first? Read our [strategic considerations]({{site.baseurl}}/user_guide/predictive_suite/predictive_purchases/messaging_users/#strategy) for messaging users based on their Purchase Likelihood.
 
-## Access Predictive Purchases
+## Access predictive purchases
 
 The __Predictions__ page is accessible from the left navigation bar on the Braze dashboard. For full access, contact your account manager. Prior to purchasing this feature, it is available in Preview mode. This will allow you to see a Demo Purchase Prediction with synthetic data as well as create one Preview Purchase Prediction model at a time. This Prediction will be created based on your actual user data, but it will not allow you to target users for messaging according to Purchase Likelihood. It will also not update regularly after creation.
 

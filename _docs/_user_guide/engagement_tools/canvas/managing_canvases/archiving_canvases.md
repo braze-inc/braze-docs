@@ -7,7 +7,7 @@ page_type: reference
 tool: Canvas
 ---
 
-# Archiving Canvases
+# Archiving canvases
 
 > This reference article explains how to archive a pre-existing Canvas and the effects of archiving a Canvas.
 
@@ -25,7 +25,7 @@ You can view all previously archived Canvases in the **Archived folder** on the 
 
 ![List of archived Canvases][2]
 
-## Unarchiving Canvases
+## Unarchiving canvases
 
 You can also choose to unarchive a Canvas. Go to the **Archived folder** on the **Canvas** page, click the gear icon next to the selected Canvas, and click **Unarchive**. Note that when you unarchive a Canvas, the associated archived Segments will also be unarchived.
 

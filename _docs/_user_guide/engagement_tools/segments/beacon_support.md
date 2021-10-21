@@ -9,14 +9,14 @@ tool:
 description: "This article briefly discusses Beacon and Geofence support and how to use your Gimbal account to begin location tracking."
 
 ---
-# Beacon and Geofence Support
+# Beacon and geofence support
 
 > This article briefly discusses Beacon and Geofence support and how to use your Gimbal account to begin location tracking.
 
 
 Combining existing beacon or geofence support with Braze's targeting and messaging features allows you to learn more about your user's physical actions and message them accordingly.
 
-## Gimbal Places Support
+## Gimbal places support
 
 Connecting your Gimbal Account to Braze lets you track when your users enter or leave your defined places and trigger events off of these entries and exits. In addition, you can track extra information like the Place name or the Dwell visit as an event property so that you can personalize your messaging even further. Please reference Gimbal's documentation along with our instructions for [iOS][1] and [Android][2] integration. 
 {% alert note %}

@@ -7,9 +7,9 @@ channel: email
 
 ---
 
-# Email FAQs
+# Email faqs
 
-### Can I add a "view this email in a browser" link to my emails?
+### Can i add a "view this email in a browser" link to my emails?
 
 No, Braze does not offer this functionality. This is because an increasing majority of email is opened on mobile devices and modern email clients, which render images and content without any problems.
 

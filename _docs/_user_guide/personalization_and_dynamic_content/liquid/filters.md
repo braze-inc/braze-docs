@@ -8,7 +8,7 @@ description: "Filters can be used to reformat static or dynamic content. This re
 
 # Filters
 
-> This reference article provides an overview of filters in Liquid, and covers which filters are supported by Braze. Looking for ideas on how you can use these filters? Check out our [Liquid Use Case Library]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/liquid_use_cases/).
+> this reference article provides an overview of filters in liquid, and covers which filters are supported by braze. looking for ideas on how you can use these filters? check out our [liquid use case library]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/liquid_use_cases/).
 
 {% raw %}
 
@@ -61,7 +61,7 @@ Braze does not support all Liquid filters from Shopify. This page attempts to ou
 <br><br>If you have any questions about a filter that is not listed here, please contact Support or reach out to your Customer Success Manager.
 {% endalert %}
 
-## Array Filters
+## Array filters
 
 Array filters are used to change the output of arrays.
 
@@ -79,15 +79,15 @@ Array filters are used to change the output of arrays.
 | [uniq][1.10]   | Removes any duplicate instances of elements in an array.                                                           | ✅  Yes   |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
 
-## Color Filters
+## Color filters
 
 [Color filters][2.1] are not supported in Braze.
 
-## Font Filters
+## Font filters
 
 [Font filters][3.1] are not supported in Braze.
 
-## Math Filters
+## Math filters
 
 Math filters allow you to perform mathematical operations. Remember—if you use multiple filters on one output, they are applied from left to right.
 
@@ -113,7 +113,7 @@ When dividing integers (whole numbers) by integers in Liquid, if the answer is a
 {% endraw %}
 {% endalert %}
 
-### Mathematical Operations with Custom Attributes
+### Mathematical operations with custom attributes
 
 Keep in mind that you can’t perform mathematical operations between two custom attributes.
 
@@ -154,7 +154,7 @@ You have $35 to spend!
 {% endtab %}
 {% endtabs %}
 
-## Money Filters
+## Money filters
 
 If you’re updating a user on their purchase, an account balance, or anything regarding money, you should use money filters. Money filters ensure that your decimals are in the proper place and that no piece of your update is lost (like that pesky `0` at the end).
 
@@ -166,7 +166,7 @@ If you’re updating a user on their purchase, an account balance, or anything r
 | [money_without_currency][5.4]       | Formats numbers without the currency symbol.                                                       | ⛔  No    |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
 
-### Shopify Money Filter vs Braze Money Filter
+### Shopify money filter vs braze money filter
 
 {% alert warning %}
 The behavior of the Shopify `money` filter differs from how it is used in Braze. Refer to the examples below for an accurate depication of the expected behavior.
@@ -224,7 +224,7 @@ $1.45
 {% endtab %}
 {% endtabs %}
 
-## String Filters
+## String filters
 
 String filters are used to manipulate the outputs and variables of strings. Strings are a combination of alphanumeric characters and must be wrapped in straight quotes.
 
@@ -263,7 +263,7 @@ Straight quotes are different from curly quotes in Liquid. Be careful when copyi
 | [upcase][6.28]                                   | Converts a string into uppercase. | ✅  Yes   |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
 
-## Additional Filters
+## Additional filters
 
 The following general filters serve many different purposes, including formatting or converting content.
 
@@ -278,7 +278,7 @@ The following general filters serve many different purposes, including formattin
 
 You can find more supported filters, such as encoding and URL filters, on our [Advanced Filters]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/advanced_filters/) page.
 
-### Date Filter {#date-filter}
+### Date filter {#date-filter}
 
 The `date` filter can be used to convert a timestamp into a different date format. You can pass in parameters to the `date` filter to reformat the timestamp. For examples of these parameters, refer to [strfti.me](http://www.strfti.me/).
 
@@ -320,7 +320,7 @@ In addition to the `strftime` formatting options, Braze also supports converting
 {% endtab %}
 {% endtabs %}
 
-### Time Zone Filter {#time-zone-filter}
+### Time zone filter {#time-zone-filter}
 
 {% raw %}
 In addition to the filters that you’ll find listed in Shopify’s documentation, Braze also supports the `time_zone` filter.

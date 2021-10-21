@@ -7,17 +7,17 @@ tool: Canvas
 
 ---
 
-# Canvas FAQs
+# Canvas faqs
 
 > This article provides answers to some frequently asked questions about Canvas.
 
-### What happens if the audience and send time are identical for a Canvas that has one variant, but multiple branches?
+### What happens if the audience and send time are identical for a canvas that has one variant, but multiple branches?
 
 We enqueue a job for each step—they run at around the same time, and one of them "wins". In practice, this may be sorted somewhat evenly, but it's likely to have at least a slight bias toward the step that was created first. 
 
 Moreover, we can't make any guarantees about exactly what that distribution will look like. If you want to ensure an even split, add a [Random Bucket Number]({{site.baseurl}}/user_guide/engagement_tools/campaigns/ideas_and_strategies/ab_testing_with_random_buckets/) filter to ensure it.
 
-### What happens when you stop a Canvas?
+### What happens when you stop a canvas?
 
 When you stop a Canvas:
 
@@ -35,13 +35,13 @@ Stopping a Canvas won't flush users who are waiting to receive messages. If you 
 
 If you want to except users who have performed a certain event in advance, use [filters]({{site.baseurl}}/user_guide/engagement_tools/segments/segmentation_filters/) instead.
 
-### How does editing a Canvas affect users already in the Canvas?
+### How does editing a canvas affect users already in the canvas?
 
 If you edit some of the steps of a multi-step Canvas, users who were already in the audience but have not received the steps will receive the updated version of the message. Note that this will only happen if they haven't been evaulated for the step yet.
 
 For more information on what you can or can't edit after launch, check out [Changing Your Canvas After Launch]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/change_your_canvas_after_launch/).
 
-### How are user conversions tracked in a Canvas?
+### How are user conversions tracked in a canvas?
 
 A user can only convert once per Canvas entry. 
 

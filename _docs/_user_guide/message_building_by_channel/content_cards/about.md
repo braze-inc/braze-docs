@@ -8,7 +8,7 @@ channel:
 
 ---
 
-# What are Content Cards?
+# What are content cards?
 
 {% alert note %}
 Braze recommends that customers who use our News Feed tool move over to our Content Cards messaging channel - it is more flexible, customizable, and reliable. It is also easier to find and use in the Braze product. See our [Migration Guide](/docs/user_guide/message_building_by_channel/content_cards/migrating_from_news_feed/) or contact your Braze account manager for more information.
@@ -20,11 +20,11 @@ With Content Cards, you can send a highly targeted, dynamic stream of rich conte
 
 Content Cards are not available out-of-the-box and must be purchased. To get started with Content Cards, reach out to your Customer Success Manager for more information.
 
-## When to Use Content Cards 
+## When to use content cards 
 
 Content Cards typically sit in a feed of sorts (but not necessarily), and help you take advantage of the visual space by incorporating images and graphics that stand out. You can personalize the cards based on user actions, onboard your customers with a checklist, and much more!
 
-### Advantages of Using Content Cards
+### Advantages of using content cards
 
 Wondering about the benefits of using Content Cards vs. having your tech team build content into your app? Here are some advantages of using Content Cards:
 
@@ -33,7 +33,7 @@ Wondering about the benefits of using Content Cards vs. having your tech team bu
 - **Cohesive customer journeys:** You can combine Content Cards with other channels in Braze to create consistent customer experiences. A popular use case is sending a push notification, then saving that notification as a Content Card in your app for anyone who didn't engage with the push. If the content is built directly into your app by your tech team, then it's siloed from the rest of your messaging.
 - **More control over the messaging experience:** While you'll still need your tech team to help with the initial setup of Content Cards, after that you'll be able to control the message, recipients, timing, and more straight from your Braze dashboard.
 
-### Great Use Cases
+### Great use cases
 
 - Showcase new content.
 - Coordinate with push messages to illustrate a persistent record of promotions.
@@ -41,7 +41,7 @@ Wondering about the benefits of using Content Cards vs. having your tech team bu
 - Trigger order confirmations or other personalized communication with your customer.
 - Develop and deliver and an onboarding schedule.
 
-## Content Cards & Feed
+## Content cards & feed
 
 This is what it looks like for your users to open a standard Content Card feed. As you can see, there are three standard types of cards that can sit in the feed - a Banner Card, a Captioned Content Card, and a Classic Content Card.
 

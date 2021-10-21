@@ -8,40 +8,40 @@ description: "This reference article covers how to create and configure a webhoo
 
 ---
 
-# Creating a Webhook
+# Creating a webhook
 
-## Feature Overview
+## Feature overview
 
 Creating a webhook campaign or including a webhook in a multichannel campaign allows you to trigger non-app actions. More specifically, [webhooks][14] can be used to provide other systems and applications with real-time information. You can use webhooks to send information to systems such as Salesforce or Marketo. You can also use webhooks to send information to your backend systems. For example, you might want to credit your customers' accounts with a promotion once they've performed a custom event a certain number of times.
 
-## Step 1: Set Up a Webhook
+## Step 1: set up a webhook
 
 Add a new webhook message to a campaign or Canvas. You can then choose to build a webhook from scratch or use one of our existing templates.
 
-## Step 2: Enter the URL for Your Webhook
+## Step 2: enter the url for your webhook
 
-### HTTP URL
+### HTTP url
 Enter the HTTP URL. This HTTP URL specifies your endpoint. The endpoint is the place where you'll be sending the information that you're capturing in the webhook. If you'd like to send information to a vendor, the vendor should provide this URL in their API documentation. If you're sending information to your own systems, check with your development or engineering team to ensure that you're using the correct URL. Braze only allows URLs that communicate over standard ports 80 (HTTP) and 443 (HTTPS).
 
 ### Personalization
 
-[Personalization][15] is supported in our HTTP URLs. At times, certain endpoints may require you to identify a user or provide user-specific information as part of your URL. You'll want to be sure to include a [default value][19] for each piece of user-specific information that you use in your URL.
+[personalization][15] is supported in our http urls. at times, certain endpoints may require you to identify a user or provide user-specific information as part of your url. you'll want to be sure to include a [default value][19] for each piece of user-specific information that you use in your url.
 
 ### Internationalization
 
-[Internationalization][16] is supported in the URL and the request body. To internationalize your message, click 'add languages' and fill out the flyout.
+[internationalization][16] is supported in the url and the request body. to internationalize your message, click 'add languages' and fill out the flyout.
 
-## Step 3: Create the Request Body
+## Step 3: create the request body
 
 Create the body of your webhook request. This is the information that will be sent to the URL that you specified. There are two ways to create the body of your webhook request:
 
-### JSON Key-Value Pairs
+### JSON key-value pairs
 
 JSON key-value pairs allow you to easily write a request for an endpoint that expects a JSON format. Do note that you can only use this feature with an endpoint that expects a JSON request. For example, if your key is "message_body," the corresponding value might be "Your order just arrived." Once you've entered your key-value pair, the composer will configure your request in JSON syntax, and a preview of your JSON request will automatically populate.
 
 ![Webhook_JSON][21]
 
-### Raw Text
+### Raw text
 
 The raw text option gives you the flexibility to write a request for an endpoint that expects a body of any format. For example, you might use this feature to write a request for an endpoint that expects your request to be in XML format.
 
@@ -49,13 +49,13 @@ The raw text option gives you the flexibility to write a request for an endpoint
 
 ### Personalization
 
-[Personalization][15] is supported in both the JSON key-value pairs option and the raw text option. You can include any user attribute, [custom attribute][17], or [event property][18] in your request. For example, you can include a customer's first name and email in your request. Don’t forget to include a [default value][19] for each attribute.
+[personalization][15] is supported in both the json key-value pairs option and the raw text option. you can include any user attribute, [custom attribute][17], or [event property][18] in your request. for example, you can include a customer's first name and email in your request. don’t forget to include a [default value][19] for each attribute.
 
 ### Internationalization
 
-[Internationalization][16] is supported in raw text.
+[internationalization][16] is supported in raw text.
 
-## Step 4: Request Headers and HTTP Method
+## Step 4: request headers and http method
 
 Certain endpoints may require that you include headers in your request. In the settings section of the composer, you can add as many headers as you'd like. Common use cases for request headers include a content-type specification (e.g., XML or JSON) and authorization headers that contain your credentials with your vendor or system. Content type specifications have the key "Content-Type" and common values are "application/json" or "application/x-www-form-urlencoded".
 
@@ -63,13 +63,13 @@ The HTTP method that you should use will vary depending on the endpoint to which
 
 ![Webhook_Request_Header][26]
 
-## Step 5: Test Send Your Message
+## Step 5: test send your message
 
 Before making your campaign go live, you may wish to test the webhook to make sure the request is formatted properly. To do so, navigate to the preview tab and send the test webhook. You can test the webhook for a random user, a specific user (by entering their email address of external user ID), or a customized user with attributes of your choosing.  If the request is successful, a small message will appear at the top of your screen. If the webhook request is unsuccessful, a modal will appear with the error response message. The screenshot below is an example of the response of a webhook with an invalid webhook URL.
 
 ![Webhook Test Feature][64]
 
-## Step 6: Continue Campaign Creation
+## Step 6: continue campaign creation
 Continuing creating your campaign the way that you normally would. As with all of our message types, you can preview what your request will look like for a particular user, random user, or user with specific attributes in the preview section of the webhook composer.
 
 ## Errors, Retry Logic, and Timeouts
@@ -96,7 +96,7 @@ When retrying, Braze will make five attempts using exponential backoff for a per
 
 Each webhook is allowed 90 seconds before it times out.
 
-## IP Whitelisting
+## IP whitelisting
 
 When a Webhook is sent from Braze, the Braze servers make network requests to our customers or third parties servers.
 
@@ -148,7 +148,7 @@ Braze will send Webhooks from the IP ranges below.
 | `40.76.166.144`
 | `40.76.166.145`
 
-# Utilizing Webhooks
+# Utilizing webhooks
 
 There are many ways to utilize webhooks, and with Braze's technology partners (Alloys), you can use webhooks to uplevel your communication directly with your customers and users.
 

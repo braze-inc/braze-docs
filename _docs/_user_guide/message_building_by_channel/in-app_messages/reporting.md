@@ -10,7 +10,7 @@ tool:
 
 ---
 
-# Reporting & Analytics {#IAM-Reporting}
+# Reporting & analytics {#iam-reporting}
 
 ## In-App Message Analytics Glossary
 
@@ -25,7 +25,7 @@ In Canvas, you'll see in-app message performance mapped onto the Canvas you've c
 
 {% endcomment %}
 
-## Reporting in Campaigns
+## Reporting in campaigns
 
 Campaigns will deliver your reports in a series of blocks. You may see more or less than those listed in the tabs below, but each has their own useful purpose.
 

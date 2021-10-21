@@ -9,7 +9,7 @@ tool:
   
 ---
 
-# Retargeting Campaigns
+# Retargeting campaigns
 
 > This reference article goes over the concept of retargeting campaigns and how it can be a beneficial marketing strategy. 
 > <br>
@@ -24,9 +24,9 @@ Each of these retargeting filters provides you with several options after you ad
 
 For more on targeting users, check out our [Campaign Setup LAB course](http://lab.braze.com/campaign-setup-delivery-targeting-conversions)!
 
-## Retargeting Filters
+## Retargeting filters
 
-### Clicked Card Filter
+### Clicked card filter
 
 ![Click Card][2]
 
@@ -58,7 +58,7 @@ Use this filter to find users who have or have not interacted with campaigns or 
 - Opened Email
 - Viewed In-App Message
 
-### Converted From Campaign Filter
+### Converted from campaign filter
 
 ![Converted from Campaign][12]
 
@@ -66,7 +66,7 @@ Use this filter to find users who Have/Have Not converted (based on the primary 
 
 >  For recurring campaigns this filter refers to whether users have converted on the _most recent_ message from the campaign.
 
-### Converted From Canvas Filter
+### Converted from canvas filter
 
 ![Converted from Canvas][18]
 
@@ -74,43 +74,43 @@ Use this filter to find users who Have/Have Not converted (based on the primary 
 
 >  For recurring Canvases this filter refers to whether users have ever converted anytime they've gone through the Canvas.
 
-### In Campaign Control Group Filter
+### In campaign control group filter
 
 ![Campaign Control Group][13]
 
 Use this filter to find users who Are/Are Not in the control group of your target campaign, which can be selected in the drop-down.
 
-### In Canvas Control Group Filter
+### In canvas control group filter
 
 ![Canvas Control Group][19]
 
 Use this filter to find users who Are/Are Not in the control group of your target Canvas, which can be selected in the drop-down.
 
-### Last Received Message from Specific Campaign Filter
+### Last received message from specific campaign filter
 
 ![Last Received Specific Campaign Filter][14]
 
 Use this filter to find users who last received a specific campaign before or after a specified date or number of days.
 
-### Last Received Message from Specific Campaign or Canvas with Tag Filter
+### Last received message from specific campaign or canvas with tag filter
 
 ![Last Received Campaign with Tag][17]
 
 Use this filter to find users who last received a specific campaign or Canvas with a given tag before or after a specified date or number of days.
 
-### Received Message from Campaign Filter
+### Received message from campaign filter
 
 ![Received Campaign][4]
 
 \" this filter to find users who Have/Have Not received your target campaign, which you select in the drop-down.
 
-### Received Message from Campaign or Canvas with Tag Filter
+### Received message from campaign or canvas with tag filter
 
 ![Received Campaign with Tag][15]
 
 Use this filter to find users who Have/Have Not received a campaign or Canvas that has your target tag, which you select in the drop-down.
 
-## Why Use Retargeting Campaigns?
+## Why use retargeting campaigns?
 
 Retargeting is particularly effective when the original segment also included a specific action you want to see users take. For example, let's say you have a card targeted at users who have never made a purchase. The card advertises a promotion for a discounted in-app purchase. The initial segment looks like:
 

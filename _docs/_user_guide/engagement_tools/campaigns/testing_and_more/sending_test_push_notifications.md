@@ -8,7 +8,7 @@ page_type: reference
 description: "This reference article covers how to send test messages across the different Braze channels and how to incorporate custom event properties or user attributes."
 
 ---
-# Sending Test Messages
+# Sending test messages
 
 > This reference article goes over how to send test messages across the different Braze channels and how to incorporate custom event properties and user attributes. 
 > <br>
@@ -21,7 +21,7 @@ Before sending out a messaging campaign to your users, you may want to test it t
 Make sure to save your campaign draft after testing to avoid deleting your campaign. You can send test messages without saving the message as a draft.
 {% endalert %}
 
-## Channel Specific Test Sending
+## Channel specific test sending
 
 For steps to send test messages, refer to the section for your channel below.
 
@@ -30,20 +30,20 @@ For steps to send test messages, refer to the section for your channel below.
 
 #### Email
 
-After drafting your email message, click **Preview and Test**. From this page, select the **Test Send** tab and add your email address or user ID in the **Add Individual Users** field. When you're ready, click **Send Test** to send your drafted email to your inbox.
+after drafting your email message, click **preview and test**. from this page, select the **test send** tab and add your email address or user id in the **add individual users** field. when you're ready, click **send test** to send your drafted email to your inbox.
 
 ![Test Email]({% image_buster /assets/img_archive/testemail.png %}){: style="max-width:40%;" }
 
 {% endtab %}
 {% tab Push %}
 
-#### Mobile Push
+#### Mobile push
 
 After drafting your mobile push, select the **Settings** tab and add your email address or user ID in the **Add Individual Users** field. When you're ready, click **Send Test** to send your drafted message to your device.
 
 ![Test Push]({% image_buster /assets/img_archive/testpush.png %})
 
-#### Web Push
+#### Web push
 
 After creating your web push, select the **Settings** tab. Check **Send Test to Myself** and click **Send Test**.
 
@@ -65,7 +65,7 @@ Directly clicking and opening the push message will send you to your app, where 
 {% endtab %}
 {% tab Content Card %}
 
-#### Content Card
+#### Content card
 
 After creating your Content Card, you can send a test Content Card to your app to see what it will look like in real-time. After drafting your Content Card, select the __Test__ tab and select at least one Content Test Group or individual user to receive this test message. 
 
@@ -85,18 +85,18 @@ After creating your SMS/MMS message, you can send a test message to your phone t
 
 #### Webhook
 
-After creating your webhook, you can do a test send to check the webhook response. Select the __Test__ tab and select __Send Test__ to send a test send to the supplied webhook URL. You may also select an individual user to preview the response as a specific user. 
+after creating your webhook, you can do a test send to check the webhook response. select the __test__ tab and select __send test__ to send a test send to the supplied webhook url. you may also select an individual user to preview the response as a specific user. 
 
 ![Test Content Card]({% image_buster /assets/img/webhook_test.png %})
 
 {% endtab %}
 {% tab News Feed %}
 
-#### News Feed Card
+#### News feed card
 
 Sending a test News Feed card requires you to set up a test segment and subsequently send a test campaign out.
 
-##### Step 1: Create a Designated Test Segment
+##### Step 1: create a designated test segment
 
 Once you set up a test segment, you can utilize these messaging channels. The process takes a few short steps and, if configured properly, will only need to be done once.
 
@@ -124,7 +124,7 @@ After adding the testing filters to your test segment, verify that you've select
 
 Once you've confirmed that you're only targeting the users you want to receive the test message, you can either select this segment in an existing campaign that you want to test or click the **Start Campaign** button in the segment menu.
 
-##### Step 2: Send a Test Campaign
+##### Step 2: send a test campaign
 
 To send test News Feed cards, you need to target your previously created test segment. Begin by creating a multichannel campaign and following the usual steps. When you reach the **Target Users** step, select your test segment as shown below.
 
@@ -137,7 +137,7 @@ Finish confirming your campaign and launch it to test your News Feed cards.
 {% endtab %}
 {% endtabs %}
 
-## Campaign Personalized with User Attributes
+## Campaign personalized with user attributes
 
 If you are using [personalization][26] in your message, you'll need to take additional steps to properly preview your campaign and check that user data is properly populating the content.
 
@@ -153,7 +153,7 @@ If previewing as a customized user, enter text for various fields available for 
 
 ![Custom user][25]
 
-## Campaign Personalized with Custom Event Properties
+## Campaign personalized with custom event properties
 
 Testing campaigns [personalized][20] with [custom event properties][19] differs slightly from testing other types of campaigns outlined above. The most robust way to test campaigns personalized using custom event properties is to trigger the campaign yourself. Begin by writing up the copy involving the event property:
 

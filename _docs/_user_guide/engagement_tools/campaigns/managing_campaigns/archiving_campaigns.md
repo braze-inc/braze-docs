@@ -8,7 +8,7 @@ tool:
   - Campaigns
 
 ---
-# Archiving Campaigns
+# Archiving campaigns
 
 > This reference article goes over how to archive a pre-existing campaign, the effects of archiving a campaign, and how to resume that campaign if needed.
 
@@ -32,7 +32,7 @@ To view archived messages from the **Campaigns** page, select the **Archived** f
 
 ![Include archived][2]
 
-## Unarchiving Campaigns
+## Unarchiving campaigns
 
 While clicking on an archived campaign will allow you to view its past results, you won't be able to edit the campaign. You will need to unarchive campaign in order to edit it. To unarchive a campaign, you must select the campaign within the **Archived** folder and click **Unarchive Selected**.
 

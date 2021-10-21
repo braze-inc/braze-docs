@@ -11,7 +11,7 @@ channel:
 
 ---
 
-# SMS Retargeting
+# SMS retargeting
 
 In addition to changing the user’s subscription state and sending auto-responders based on incoming keywords, Braze will also record interactions to the user profile for filtering and triggering messages. These filters and triggers allow you to filter users that have received SMS messages, received SMS messages from a specific SMS campaign, and trigger messages as users receive SMS messages from a specific SMS campaign. 
 
@@ -19,9 +19,9 @@ In addition to changing the user’s subscription state and sending auto-respond
 To read more about custom keywords and how to set up two-way messaging to take advantage of these retargeting options, visit our [custom keyword]({{site.baseurl}}/user_guide/message_building_by_channel/sms/keywords/keyword_handling/) article.
 {% endalert %}  
 
-## Retargeting Options
+## Retargeting options
 
-### Filter Users by SMS
+### Filter users by sms
 Users can be filtered by when they last received an SMS or if they have received an SMS from a specific SMS campaign. Filters can be set in the Target Users step of the campaign builder. 
 
 __Filter by Last Received SMS__<br>
@@ -31,21 +31,21 @@ __Filter by Received Messages from SMS Campaign__<br>
 Filters users who have received a message from a specific SMS campaign. With this filter, you also have the option to filter off those that have not received messages from an SMS campaign. <br>
 ![Filter 2][1]
 
-### Trigger Messages as Users Receive SMS
+### Trigger messages as users receive sms
 To trigger messages as users receive SMS messages from a specific campaign, select __Interact with Campaign__ as the trigger action. Next, select __Receive SMS__ and the SMS campaign you would like to use. <br><br>
 ![Trigger][3]
 
-## Keyword Category Specific Retargeting
+## Keyword category specific retargeting
 
 In addition to the three default keyword categories (Opt-in, Opt-out, and Help), you are also able to create up to 10 of your own keyword categories, allowing you to identify arbitrary keywords and responses. These categories can be used for filtering and retargeting. To read more about SMS keyword categories and how to set them up, visit our documentation [here]({{site.baseurl}}/user_guide/message_building_by_channel/sms/campaign/retargeting/). 
 
-### Filter by Recency
+### Filter by recency
 
 Filter for the recency of a user responding to your SMS Program. This filter will evaluate the LAST date a user sent an inbound SMS that is within one of the keyword categories. 
 
 ![picture][6]
 
-### Trigger Messages by Keyword
+### Trigger messages by keyword
 
 Messages can be triggered as users send messages inbound based on keyword categories (user sent any one of the keywords) or other keywords (user sent a keyword that does not fall into one of the existing categories). These triggers are set in the Delivery step of the campaign builder.
 

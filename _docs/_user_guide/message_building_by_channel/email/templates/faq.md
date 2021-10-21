@@ -11,19 +11,19 @@ channel: email
 
 ---
 
-# Email and Link Templates FAQs
+# Email and link templates faqs
 
 > This page provides answers to some frequently asked questions about email templates and link templates.
 
-## Email Templates
+## Email templates
 
-### Can I add a "view this email in a browser" link to my emails?
+### Can i add a "view this email in a browser" link to my emails?
 
 No, Braze does not offer this functionality. This is because an increasing majority of email is opened on mobile devices and modern email clients, which render images and content without any problems.
 
 **Workaround:** To achieve this same result, you can host the content of your email on an external landing page (such as your website), which can then be linked to from the email campaign you are building using the **Link** tool when editing the email body.
 
-### How do I create a custom unsubscribe link for my email templates?
+### How do i create a custom unsubscribe link for my email templates?
 
 There is a redirection option for the unsubscribe page.
 
@@ -33,21 +33,21 @@ You could change the unsubscribe link in the custom footer from {% raw %} `{{${s
 
 You could then call the [Email Status]({{site.baseurl}}/api/endpoints/email/post_email_subscription_status/) endpoint to update the user's subscription status. For more details, see our documentation on [changing email subscription status]({{site.baseurl}}/user_guide/message_building_by_channel/email/managing_user_subscriptions/#changing-email-subscriptions).
 
-### What happens if I edit an email template that is currently being used in a campaign?
+### What happens if i edit an email template that is currently being used in a campaign?
 
 Edits made to an existing template won't be reflected in campaigns that were created using previous versions of that template.
 
-## Link Templates
+## Link templates
 
-### Can I upload multiple link templates to my email?
+### Can i upload multiple link templates to my email?
 
 Yes, you can insert as many templates as you would like in your email messages. As a best practice, you should test your emails to ensure that the links are not exceeding 2,000 characters, as most browsers will shorten or cut the links.
 
-### How do I preview my links with all of the tags applied?
+### How do i preview my links with all of the tags applied?
 
 Once you have applied the Link Template, you can send yourself a test email to view all the links. Additionally, you can open the links from the preview pane in a new tab to view the links. Lastly, you can hover over the links in the Preview Pane and see them at the bottom of your browser.
 
-### How does Link Templating work with Liquid?
+### How does link templating work with liquid?
 
 Link Templates are expanded and added to the each URL prior to any Liquid expansion happening. 
 

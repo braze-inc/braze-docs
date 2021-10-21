@@ -9,15 +9,15 @@ channel:
   
 ---
 
-# MMS FAQs
+# MMS faqs
 
 > On this page, we’ll attempt to answer your most stringent questions about MMS!
 
-### Are there any changes to Currents data when sending an MMS?
+### Are there any changes to currents data when sending an mms?
 
 No, the same level of insight will be provided when sending an MMS message.
 
-### Can I control the order in which the image and message body of an MMS are delivered?
+### Can i control the order in which the image and message body of an mms are delivered?
 
 Braze has no control over the display order for when both a message-body and images are included in an MMS message. This is dependent on several factors including but not limited to:
 
@@ -25,11 +25,11 @@ Braze has no control over the display order for when both a message-body and ima
 - The device receiving the message
 - The overall size of the message
 
-### Does MMS and SMS pricing differ?
+### Does mms and sms pricing differ?
 
 MMS and SMS have different costs and are charged separately based on volume. Please reach out to the Braze Onboarding team for pricing information.
 
-### Does MMS require a separate onboarding process?
+### Does mms require a separate onboarding process?
 
 Nope! MMS is now included in our SMS onboarding process. Existing customers who already went through onboarding can start sending MMS campaigns after completing the following steps:
 
@@ -38,6 +38,6 @@ Nope! MMS is now included in our SMS onboarding process. Existing customers who 
 
 Next, the Braze onboarding team will make sure your short and long codes are enabled (in the US and Canada) for MMS. They will also update your subscription groups to show your current numbers that were added or enabled for MMS. Once these steps are complete, you can send MMS messages right away from our native SMS composer.
 
-### Why can’t I find MMS on my dashboard even though the feature is enabled?
+### Why can’t i find mms on my dashboard even though the feature is enabled?
 
 MMS is only displayed on the Braze dashboard when a subscription group is considered “MMS enabled”. This is reflected by an MMS tag when selecting the subscription group on the composer of an SMS/MMS message. This means that at least one number in the subscription group is capable of sending an MMS message.

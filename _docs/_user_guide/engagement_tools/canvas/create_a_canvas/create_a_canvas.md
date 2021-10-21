@@ -8,16 +8,16 @@ tool: Canvas
 
 ---
 
-# Creating a Canvas
+# Creating a canvas
 
 Follow this guide, or check out our [LAB course](http://lab.braze.com/quick-overview-canvas-setup)!
 
-## Step 1: Create a New Canvas 
+## Step 1: create a new canvas 
 ![Canvas][1]{: style="float:right;max-width:20%;margin-left:10px;margin-top:10px;margin-bottom:10px;"}
 
 Go to the **Canvas** page, located under the **Engagement** section, then click __Create a New Canvas__.
 
-## Step 2: Use the Entry Wizard to Set Up Your Canvas
+## Step 2: use the entry wizard to set up your canvas
 
 The Entry Wizard will guide you through setting up your Canvas—everything from naming it to setting conversion events and bringing the right users into your customer journey. Click on each of the tabs below to see what settings you can adjust in each of the Entry Wizard steps.
 
@@ -63,13 +63,13 @@ The Entry Wizard will guide you through setting up your Canvas—everything from
 {% endtabs %}
 
 
-### Step 2a: Set Up Your Canvas Basics
+### Step 2a: set up your canvas basics
 
 Here, you'll name your Canvas, assign [Teams]({{site.baseurl}}/user_guide/administrative/manage_your_braze_users/teams/#teams), and create or add [Tags]({{site.baseurl}}/user_guide/administrative/app_settings/tags/#tags). Here, you'll also assign conversion events for the Canvas.
 
 ![Basics][51]
 
-#### Choose Conversion Events
+#### Choose conversion events
 
 Choose your Conversion Event Type, then select the conversions you would like to record.
 
@@ -80,7 +80,7 @@ We will use the [Conversion Event]({{site.baseurl}}/user_guide/engagement_tools/
 If your Canvas has multiple variants or a Control Group, Braze will use this Conversion Event to determine the best variation for achieving this Conversion goal. Using the same logic, you can create multiple Conversion Events.
 
 
-### Step 2b: Set Your Canvas Entry Schedule
+### Step 2b: set your canvas entry schedule
 
 You can choose one of three ways in which users can enter your Canvas:
 
@@ -92,7 +92,7 @@ After you choose which you'll use, adjust those settings appropriately, and move
 
 ![Entry Schedule][53]
 
-#### Entry Schedule Types
+#### Entry schedule types
 
 {% tabs local %}
   {% tab Scheduled Delivery %}
@@ -130,7 +130,7 @@ After you choose which you'll use, adjust those settings appropriately, and move
 Should the window of re-eligibility be less than the maximum duration of the Canvas, a user will be allowed to re-enter and receive more than one step's messages. In the edge case where a user's re-entry reaches the same step as its previous entry, Braze will deduplicate that step's messages. <br><br>In the event where a user re-enters the Canvas, reaches the same step as their previous entry, and is eligible for an in-app message for each entry, the user will get the message twice (depending on in-app message priority) as long as they re-open a session two times.
 {% endalert %}
 
-### Step 2c: Set Your Target Entry Audience
+### Step 2c: set your target entry audience
 
 You can set the target audience for your Canvas on the **Entry Audience** step. Only the users who match your defined criteria can enter the journey.
 
@@ -142,7 +142,7 @@ For example, if you want to target new users, you can limit a particular journey
 Avoid configuring an action-based campaign or Canvas with the same trigger as the audience filter (i.e., a changed attribute or performed a custom event). A race condition may occur in which the user is not in the audience at the time they perform the trigger event, which means they won't receive the campaign or enter the Canvas.  
 {% endalert %}
 
-### Step 2d: Select Your Send Settings
+### Step 2d: select your send settings
 
 Click **Send Settings** to select your Subscription Settings, turn on rate limiting, and to enable Quiet Hours.
 
@@ -158,9 +158,9 @@ If desired, specify Quiet Hours (the time during which your messages will not se
 
 ![Quiet Hours][50]
 
-## Step 3: Build Your Canvas
+## Step 3: build your canvas
 
-### Adding a Variant
+### Adding a variant
 
 ![Canvas Add Variant][11]{: style="float:right;max-width:40%;margin-left:15px;"}
 
@@ -184,7 +184,7 @@ By default, Canvas variant assignment is locked in when users enter the Canvas, 
 {% enddetails %}
 {% endalert %}
 
-### Editing a Step
+### Editing a step
 
 Click anywhere on a Step, and Braze will open the Step editing interface. Steps can be configured to send messages after either a fixed delay (maximum of 31 days) or when a user performs a particular action. For example, you can use Canvas to configure a Day 1, Day 3, Day 7 onboarding campaign with time delays between messages:
 
@@ -202,7 +202,7 @@ You can also apply **Filters** to each Step of a Canvas. Use this to add additio
 By default, Filters and Segments for **Full Steps** in Canvas are checked at send time. However, for [Decision Split Steps]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/decision_split/), audience evaluation occurs right after receiving the previous step, or after a delay (if you have configured one). 
 {% endalert %}
 
-#### Messages in Canvas
+#### Messages in canvas
 
 Edit the Messages in a Canvas Step to control messages that a particular Step will send. Canvas can send Email, Mobile & Web Push messages, and Webhooks to integrate with other systems.
 
@@ -243,13 +243,13 @@ Did you know you can include Canvas step names in your messages and link templat
 Use the `campaign.${name}` Liquid tag in Canvas to display the current Canvas step name.
 {% endalert %}
 
-### Adding More Steps
+### Adding more steps
 
 Add more Steps by pressing the <i class="fas fa-plus-circle"></i> plus button:
 
 ![Canvas More Step][17]{: style="max-width:75%;"}
 
-## Step 4: Use Multivariate Testing Using Canvas
+## Step 4: use multivariate testing using canvas
 
 You can add a Control Group to your Canvas by clicking on the <i class="fas fa-plus-circle"></i> plus button to add a new variant. 
 
@@ -259,7 +259,7 @@ You can adjust the distribution between your messages by double-clicking the **V
 
 ![Canvas Multivariate][18]
 
-### Intelligent Selection for Canvas
+### Intelligent selection for canvas
 
 Intelligent Selection capabilities are now available within multivariate Canvases. Similar to the [Intelligent Selection][18a] feature for multivariate Campaigns, Intelligent Selection for Canvas analyzes the performance of each Canvas variant and adjusts the percentage of users being funneled through each variant. This distribution is based off each variant's performance metrics to maximize the total expected number of conversions.
 
@@ -271,7 +271,7 @@ Intelligent Selection for Canvas optimizes your Canvas's results by making gradu
 
 For this reason, Intelligent Selection works best on Canvases that have new users entering frequently.
 
-## Step 5: Save & Launch Your Canvas
+## Step 5: save & launch your canvas
 
 Once you're done, press **Launch Canvas** at the bottom right to save and launch your Canvas. You can also save your Canvas as a draft if you need to come back to it.
 

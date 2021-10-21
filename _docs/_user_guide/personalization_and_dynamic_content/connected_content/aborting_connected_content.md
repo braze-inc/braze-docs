@@ -6,7 +6,7 @@ description: "Using Liquid templating, you have the option to abort messages wit
 
 ---
 
-# Aborting Messages {#aborting-connected-content}
+# Aborting messages {#aborting-connected-content}
 Using Liquid templating, you have the option to abort messages with conditionals. For example:
 
 {% raw %}

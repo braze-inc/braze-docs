@@ -14,7 +14,7 @@ Also, create a real form for them to download - need to write in where this info
 
 # Canvas: The Basics
 
-## Find Your Strategy with the Five W’s of Visualization
+## Find your strategy with the five w’s of visualization
 
 Answer the questions below to get started:
 
@@ -65,7 +65,7 @@ Answer the questions below to get started:
   * Targeting: Add additional segments and/or filters
   * Triggers: Use customer actions to trigger messages<br><br>
 
-## Anatomy of Canvas
+## Anatomy of canvas
 
 {% comment %}
 Replace all images below. Thinking of restructuring section with one labeled image and clickable tabs
@@ -99,14 +99,14 @@ Replace all images below. Thinking of restructuring section with one labeled ima
 {% endtabs %}
 
 
-## Building The Customer Journey In Canvas
+## Building the customer journey in canvas
 
-### Name Your Canvas: The “What”
+### Name your canvas: the “what”
 
 Never underestimate the power of the name. Braze is built for collaboration so this is a good time to get grounded in how you’ll communicate goals with your team. You can add Tags (including Teams Tags) and name both steps and variants within the Canvas. For more on customer journeys, check out our [Mapping User Lifecycles LAB course](http://lab.braze.com/mapping-customer-lifecycles)!
 
 
-### Create Starting Conditions: The “When”
+### Create starting conditions: the “when”
 
 When will a customer run into this Canvas? Users can enter your Canvas in two ways: scheduled or action-based triggers.
 
@@ -116,7 +116,7 @@ When will a customer run into this Canvas? Users can enter your Canvas in two wa
 {: .reset-td-br-1 .reset-td-br-2}
 
 
-### Select an Entry Audience for Entry: The “Who”
+### Select an entry audience for entry: the “who”
 
 Who are you trying to reach? Here you can use a pre-defined segment and add further filters. Filters include:
 
@@ -133,12 +133,12 @@ Who are you trying to reach? Here you can use a pre-defined segment and add furt
 
 Only the users who match these target audience criteria can enter the journey.
 
-### Identify Conversion Events: The “Why”
+### Identify conversion events: the “why”
 Why are you building this Canvas? It’s always important to have a defined goal in mind and Canvas helps you understand how you are performing against KPIs like session engagement, purchases, and custom events.
 
 Selecting at least one conversion event will give you the ability to understand your campaign performance and also to help you optimize performance within the Canvas as if your Canvas has multiple variants and/or a control group Braze will use the conversion event to determine the best variation for achieving this goal.
 
-### Build the Experience: The “How” and “Where”
+### Build the experience: the “how” and “where”
 
 1. __Setting up variants:__ A variant is the trail each customer follows on their journey. Canvas supports up to eight variants with a control group. While not required, you can name each variant, as well as control the distribution of the target audience following each variant.
 

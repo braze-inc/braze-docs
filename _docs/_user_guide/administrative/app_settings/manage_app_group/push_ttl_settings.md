@@ -8,7 +8,7 @@ channel: push
 
 ---
 
-# Push Time to Live Settings
+# Push time to live settings
 
 The **Push TTL Settings** tab in **Manage Settings** enables you to control the delivery attempt duration for offline devices. This means if a user's device is offline when your campaign sends, Braze will attempt to deliver the message up to your set time on this page.
 

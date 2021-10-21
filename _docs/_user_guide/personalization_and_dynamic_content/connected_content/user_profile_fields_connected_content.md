@@ -6,7 +6,7 @@ description: "This article covers how to pull user profiles into your Connected 
 
 ---
 
-# Pulling User Profile Data
+# Pulling user profile data
 
 If a Connected Content response contains user profile fields (within a Liquid personalization tag), these values must be defined earlier in the message via Liquid, before the Connected Content call in order to render the Liquid passback properly. Similarly, the `:rerender` flag must be included in the request. 
 

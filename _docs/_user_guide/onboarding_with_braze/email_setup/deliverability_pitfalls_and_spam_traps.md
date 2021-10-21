@@ -8,7 +8,7 @@ channel: email
 
 ---
 
-# Deliverability Pitfalls & Spam Traps
+# Deliverability pitfalls & spam traps
 
 Your email deliverability can be affected by any of the following spam traps:
 
@@ -21,7 +21,7 @@ Your email deliverability can be affected by any of the following spam traps:
 |High Bounce Rate | When your email consistently fails to deliver because the recipient's address is invalid.|
 {: .reset-td-br-1 .reset-td-br-2}
 
-## Avoiding Spam Traps
+## Avoiding spam traps
 
 These traps can be avoided if you set up a confirmed opt-in process. By sending an initial opt-in email and asking customers to verify that they want your messages, you're ensuring you send to real, valid addresses and that your recipients want to hear from you.
 

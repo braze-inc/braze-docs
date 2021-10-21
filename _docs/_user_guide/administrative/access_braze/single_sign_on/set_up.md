@@ -7,13 +7,13 @@ description: "This article will walk you through how to enable SAML single sign-
 
 ---
 
-# Service Provider (SP) Initiated Login
+# Service provider (sp) initiated login
 
 > This article will walk you through how to enable SAML single sign-on for your Braze account.
 
 ## Requirements
 
-Upon setup, you will be asked to provide a Sign-On URL and an Assertion Consumer Service (ACS) URL.  
+upon setup, you will be asked to provide a sign-on url and an assertion consumer service (acs) url.  
 
 | Requirement | Details |
 |---|---|
@@ -22,9 +22,9 @@ Upon setup, you will be asked to provide a Sign-On URL and an Assertion Consumer
 | **Entity ID** | `braze_dashboard` |
 {: .reset-td-br-1 .reset-td-br-2}
 
-## SAML SSO Set Up
+## SAML sso set up
 
-### Configure Your Identity Provider
+### Configure your identity provider
 
 First, you must set up Braze as a Service Provider (SP) in your Identity Provider (IdP) with the information below.
 
@@ -40,7 +40,7 @@ In addition, you’ll need to set up SAML attribute mapping.
 Braze only requires `email` in the SAML Assertion.
 {% endalert %}
 
-### Configure Braze
+### Configure braze
 
 Once you have set up Braze within your IdP, they will provide a Target URL and `x.509` certificate which you will input into your Braze account.
 
@@ -68,7 +68,7 @@ When you save your Security Settings and log out, you should now be able to sign
 
 ![Login Page with SSO]({% image_buster /assets/img/sso1.png %}){: style="max-width:40%;"}
 
-### Create and Enable a Braze API Key for IdP Login (Optional)
+### Create and enable a braze api key for idp login (optional)
 
 To enable IdP initiated login, you will first need to create an API Key in `Developer Console` > `API Settings`.
 
@@ -76,13 +76,13 @@ To enable IdP initiated login, you will first need to create an API Key in `Deve
 
 Input the generated API Key as the `RelayState` parameter within your IdP, which will be used to identify which company the user is trying to log into.
 
-## SSO Behavior
+## SSO behavior
 
 Members who opt to use SSO will __no longer be able to use their password as they did prior__. Users who continue to use their password will be able to unless restricted by the settings below. 
 
 ## Restriction
 
-You can also choose to restrict the members of your organization to sign-in with either Google SSO or SAML SSO. In order to enable, go to `Company Settings` > `Security Settings` and select `Restrict Single Sign-On`.
+you can also choose to restrict the members of your organization to sign-in with either google sso or saml sso. in order to enable, go to `company settings` > `security settings` and select `restrict single sign-on`.
 
 ![SSO Restriction]({% image_buster /assets/img/sso3.png %})
 

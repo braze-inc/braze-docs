@@ -7,13 +7,13 @@ description: "This reference article covers the benefits of funnel reports, how 
 tool: Reports
 ---
 
-# Funnel Reports for Campaigns and Canvases
+# Funnel reports for campaigns and canvases
 
 > Funnel Reporting offers a visual report that allows you to analyze the journeys your customers take after receiving a campaign or Canvas. If your campaign or Canvas uses a control group or multiple variants, you will be able to understand how the different variants have impacted the conversion funnel at a more granular level and optimize based on this data. ![Funnel Report 2][2]{: style="float:right;max-width:15%;margin-bottom:15px; border: 0"}
 
 ![Funnel Report 1][1]{: style="max-width:80%;"}
 
-## Funnel Report Setup
+## Funnel report setup
 
 ![Funnel Report 5][5]{: style="float:right;max-width:30%;border:0;margin-left:15px;"}
 
@@ -27,7 +27,7 @@ Funnel Reports can be made for existing active campaigns and Canvases. These rep
 Funnel Reports are not available for API-triggered campaigns.
 {% endalert %}
 
-### Step 1: Select a Date Range
+### Step 1: select a date range
 
 You can select a time frame for your report (within the past 6 months), and refine the data to see users who, upon entering the campaign or Canvas, completed the funnel events within a set window (maximum of 30 days). In the example below, your funnel would look for users who received this campaign or Canvas in the last 7 days and completed the funnel within 3 days.
 
@@ -37,7 +37,7 @@ You can select a time frame for your report (within the past 6 months), and refi
 If you set the window to complete the funnel to 1 day, then the funnel event must occur within 24 hours of message receipt. However, if you select multiple days, the timing window is then counted as calendar days in the company time zone.
 {% endalert %}
 
-### Step 2: Select Events for Funnel Steps
+### Step 2: select events for funnel steps
 
 For every funnel report, the first event will be when the user receives your message. From there, the subsequent events you choose will funnel the number of users who performed those events, as well as the previous events. Please note that funnel report events for both campaign and Canvases funnels allow for start session, make a purchase, and custom events, while __only campaign funnels__ include message engagement events right now.
 
@@ -47,11 +47,11 @@ For example, if you select a 14-day report time window, followed by the events "
 
 After clicking **Build Report**, generating the funnel report may take several minutes. During this time, you can navigate away from the report to other pages in the dashboard. You’ll receive an in-dashboard notification when your report is ready.
 
-## Interpreting your Funnel Report
+## Interpreting your funnel report
 
 In your funnel report, you will be able to directly compare the control group alongside the variants you have set up. Each consecutive event will show what percentage of the previous users satisfied that action and converted through the funnel.
 
-### Funnel Report Components
+### Funnel report components
 
 - __Horizontal axis__: Displays the percentage of message recipients who performed those actions. 
 - __Chart__: Displays the number of received messages, the number of users that performed the prior actions as well as the action you chose, the conversion rate, and the percentage change from control.

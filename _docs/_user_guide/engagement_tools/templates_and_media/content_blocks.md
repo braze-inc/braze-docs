@@ -10,7 +10,7 @@ tool:
 
 ---
 
-# Content Blocks
+# Content blocks
 
 > The Content Blocks Library allows you to manage your reusable, cross-channel content in a single, centralized location. To access this feature, go into the __Content Blocks Library__ tab in the [Templates & Media][6] section of your Braze account.
 
@@ -21,7 +21,7 @@ With Content Blocks, you can:
 - Create pre-defined assets that can be used to build messages with consistent information and assets.
 - Copy entire message bodies to other messages.
 
-## Create a Content Block
+## Create a content block
 
 Creating a Content Block is easy - go to __Templates & Media__, then the __Content Blocks Library__ tab. Then, click __Create Content Block.__
 
@@ -44,13 +44,13 @@ When creating Content Blocks, it sometimes helps to visualize HTML and Liquid by
 {% endraw %}
 {% endalert %}
 
-## Using Content Blocks
+## Using content blocks
 
 1. Create your Content Block.
 2. Copy the Content Block Liquid Tag from your Content Block page.
 3. Insert the Content Block Liquid Tag into the message. You can also begin typing the Liquid and have the tag auto-populate.
 
-## Updating & Copying Content Blocks
+## Updating & copying content blocks
 
 If you choose to update a Content Block, it will update in all messages the Content Block is used.
 
@@ -60,7 +60,7 @@ If you want to update a Content Block for a single message or make a copy to use
 
 You can also [duplicate a Content Block with our Templates & Media feature]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/duplicate/). When you do this, a "draft" copy is created.
 
-## Nesting Content Blocks
+## Nesting content blocks
 
 Content blocks can be nested, but only once! You can nest _Content Block A_ into _Content Block B_, but you will not be able to then nest _Content Block B_ into _Content Block C_.
 
@@ -70,7 +70,7 @@ Nothing will prevent you from nesting a third level of Content Block, but you wi
 
 Additionally, Content Blocks cannot be used within an email footer, though email footers can be used within Content Blocks.
 
-## Archiving Content Blocks
+## Archiving content blocks
 
 Once you have finished using a Content Block, you can [archive it from the __Templates & Media__ page]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/archive/).
 
@@ -90,7 +90,7 @@ If you made a mistake in archiving a Content Block, you can unarchive it.
 
 ![Unarchive_CB][4]
 
-## Content Block Specifications
+## Content block specifications
 
 | Content Block Attribute | Specifications |
 |---|---|

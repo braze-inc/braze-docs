@@ -9,7 +9,7 @@ tool: Canvas
 
 ---
 
-# Audience Paths Step
+# Audience paths step
 
 > Canvas Audience Paths allows you to intuitively filter and segment users on a large scale with strategic priority-based user-groupings. This new Canvas step replaces the need to create excessive audience-based full steps, allowing you to combine what might have been 8 full steps into one! The introduction of this new step will help you simplify user targeting while clearing up your Canvases from unnecessary clutter and complexity. 
 
@@ -24,7 +24,7 @@ Audience Paths allows you to:
 - __Precisely target users on a large scale__
   - Audience Paths allows you to create up to 8 audience groups (2 default groups and 6 additional) per step, though users may want to connect multiple Audience Path steps to further sort their users. 
 
-## Create Audience Paths
+## Create audience paths
 ![Audience Paths][1]{: style="float:right;max-width:20%;margin-left:15px;"}
 
 To create Audience Paths, add a step to your Canvas. Then, using the drop-down at the top of the new step, select `Audience Paths`.
@@ -32,7 +32,7 @@ To create Audience Paths, add a step to your Canvas. Then, using the drop-down a
 In the default Audience Paths step show to the right, there are already two default audience groups, __Group 1__ and __Everybody Else__. The Everybody Else group includes any user who does not fall into a defined audience group. This group will always be ranked last.
 <br><br><br>
 
-### Define Audience Groups
+### Define audience groups
 
 Below, you are shown the layout of an expanded Audience Paths step. Here you can define up to 8 audience groups (1 preset and 7 customizable). To define an audience group, select the group name from the Audience Paths wizard. Here, you can rename your audience group, choose the filters and segments that apply to your group, and add or delete groups.
 
@@ -44,7 +44,7 @@ Once the Audience Paths Step has been completed, each audience group will have a
 
 ![Audience Paths][4]{: style="max-width:90%;margin-left:15px;"}
 
-## Using Audience Paths
+## Using audience paths
 
 The true power of Audience Paths lies in the ability to assign priority. While this feature does not need to be used strategically, some marketers may find themselves pushing certain products to users, for example, specials or limited-edition releases. By assigning a high priority to these groups, you can target users that fall into specific filters and segments while still targeting users that might not fit those specific criteria, all in a single Canvas step.
 

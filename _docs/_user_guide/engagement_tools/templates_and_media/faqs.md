@@ -8,11 +8,11 @@ description: "This article provides answers to frequently asked questions about 
 
 ---
 
-# Media Library FAQs
+# Media library faqs
 
 > This page provides answers to frequently asked questions about the Braze Media Library.
 
-### Are there storage limits for images within the Media Library?
+### Are there storage limits for images within the media library?
 
 No, there are no storage limits for images within the Media Library.
 
@@ -20,11 +20,11 @@ No, there are no storage limits for images within the Media Library.
 
 No, uploaded assets will not expire once added to the Media Library.
 
-### Can I crop all image types?
+### Can i crop all image types?
 
 No, the Media Library doesn't support cropping GIF images.
 
-### How do I crop an existing image?
+### How do i crop an existing image?
 
 You can crop an existing image by selecting the image from the Media Library and clicking **Crop & Save New Image**. 
 
@@ -34,13 +34,13 @@ You'll then be redirected to a cropping composer where you can select your ratio
 
 ![Media Library Crop 2][3]{: height="75%" width="75%"}
 
-### My image keeps timing out when I try to upload it. What can I do about this?
+### My image keeps timing out when i try to upload it. what can i do about this?
 
 This can happen for a variety of reasons, but a common solution is to make sure your image is optimized before attempting to upload it. This means running your image through an image optimizer (such as [ImageOptim][5]).
 
 Additionally, if your image was built in Photoshop (or a similar software) and has many layers, merging and reducing the number of layers can also help.
 
-### Why can't I upload any image I want into the Push Composers?
+### Why can't i upload any image i want into the push composers?
 
 This is because most composers have restrictions on the image ratio size that is allowed.
 

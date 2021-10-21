@@ -14,18 +14,18 @@ noindex: true
 Are you currently a non-native SMS client? If so, please visit the [non native SMS docs](/docs/user_guide/message_building_by_channel/sms/non_native/) for your corresponding user data migration doc.
 {% endalert %}
 
-# User Data Migration
+# User data migration
 
 Let’s run through all the considerations you’ll need to keep in mind when you’re migrating your user data to Braze. 
 
-### Format User Phone Numbers to Carrier Standards
+### Format user phone numbers to carrier standards
 Phone carriers have a specific type of format they expect called E.164 which is the international telephone numbering plan that ensures that each device has a globally unique number. This is what allows phone calls and text messages to be correctly routed to individual phones in different countries. E.164 numbers are formatted as shown below and can have a maximum of fifteen (15) digits. [Learn more here.][userphone]<br>
 ![e164][picture]{: style="max-width:50%;border: 0;"}
 
-### Update Historical Information on Users Subscription States
+### Update historical information on users subscription states
 If you have any historical information about your user’s [subscription states][subscriptionstate] for your various messaging channels, please be sure to update this information in Braze. 
 
-## Example Migration Steps
+## Example migration steps
 
 Before you begin composing SMS campaigns through Braze, you’ll need to update your user data to ensure that all of this works. 
 

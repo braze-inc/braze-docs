@@ -9,7 +9,7 @@ tool:
   - Campaigns
 
 ---
-# Capturing Lapsing Users
+# Capturing lapsing users
 
 > This how-to article addresses the issue of lapsing users and how to effectively use Braze campaigns to re-engage those users.
 
@@ -18,7 +18,7 @@ If your audience is dwindling, it’s crucial to try wooing them back. Recognizi
 For more on targeting users, check out our [Campaign Set Up LAB course](http://lab.braze.com/campaign-setup-delivery-targeting-conversions)!
 
 
-## Step 1: Segmentation
+## Step 1: segmentation
 
 First, we’ll create a segment to target users who have not used the app in the past two weeks, using the following filters:
 
@@ -29,7 +29,7 @@ First, we’ll create a segment to target users who have not used the app in the
 
 Don’t forget to name the segment something simple and memorable, like “Lapsed Users – 2 Weeks.” Since we’ll be setting up the campaign to recur on a weekly basis, we’ll want to make sure there’s at least 1 week of users captured in the segment. That’s why we’ve selected users who last used the app between 2 and 3 weeks ago.
 
-## Step 2: Campaign Creation
+## Step 2: campaign creation
 
 Next, we’ll click **Create Campaign** and choose what type of campaign we will be sending to this segment.
 

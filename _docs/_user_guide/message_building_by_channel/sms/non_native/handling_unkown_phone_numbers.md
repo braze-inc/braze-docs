@@ -9,7 +9,7 @@ channel:
 
 ---
 
-# Handling Unknown Phone Numbers - New Users
+# Handling unknown phone numbers - new users
 
 You may find that once you get SMS up and running with Braze that you receive messages from unknown users. Noted below are the steps through which an unidentified user and number get processed.
 

@@ -8,7 +8,7 @@ tool: Currents
 
 ---
 
-# Transferring Data to Redshift
+# Transferring data to redshift
 
 > [Amazon Redshift](https://aws.amazon.com/redshift/) is a popular data warehouse that runs on Amazon Web Services alongside Amazon S3. Braze data from Currents is structured to be easy to transfer to Redshift directly.
 > <br>

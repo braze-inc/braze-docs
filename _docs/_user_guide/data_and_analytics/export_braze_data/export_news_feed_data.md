@@ -9,7 +9,7 @@ channel: news feed
 
 ---
 
-# News Feed Data
+# News feed data
 
 When analyzing the performance of a specific News Feed card, you can export the data found in the Performance Breakdown graphs:
 

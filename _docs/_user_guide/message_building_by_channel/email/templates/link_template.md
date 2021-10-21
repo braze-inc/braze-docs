@@ -9,7 +9,7 @@ channel:
   - email
 
 ---
-# Link Templates
+# Link templates
 
 > This article covers how to create link templates for use in email messaging.
 
@@ -22,7 +22,7 @@ Link templates allow you to append parameters or prepend URLs to all links in an
 When using link templates and [Liquid]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/), Liquid code must only be added within the body tag to ensure consistent rendering.
 {% endalert %}
 
-## Creating a Link Template
+## Creating a link template
 
 ![Create Link Template][11]{: style="float:right;max-width:30%;"}
 
@@ -53,7 +53,7 @@ You can have multiple parameters appended to the end of a URL.
 
 ![Post Append]({% image_buster /assets/img_archive/link_template_postappend.png %})
 
-## Using Your Templates in Email Campaigns
+## Using your templates in email campaigns
 
 Once your templates are set up, you can select which template you would like to use in your email from the email editor.
 
@@ -61,7 +61,7 @@ From the email editor, click **Content Library** and select the **Link Templatin
 
 ![Message Composer][1]
 
-## Managing Link Templates
+## Managing link templates
 
 You can also [duplicate]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/duplicate/) link templates! Learn more about creating and managing templates and creative content in [Templates & Media]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/).
 
@@ -71,7 +71,7 @@ Archiving templates is not currently available for [Link Templates]({{site.baseu
 
 ## FAQs
 
-For answers to frequently asked questions about link templates, check out our [Email and Link Templates FAQs][10] page.
+for answers to frequently asked questions about link templates, check out our [email and link templates faqs][10] page.
 
 [1]:{% image_buster /assets/img_archive/link_template_messagecomposer2.png %}
 [2]:{% image_buster /assets/img_archive/link_template_postappend.png %}

@@ -9,11 +9,11 @@ description: "This reference article covers various aspects of Teams in your Bra
 
 # Teams
 
-Braze Admins can divide subsets of their Dashboard users into Teams with varying user roles and permissions. Teams can be set up across customer base location, language, and custom attributes such that members and non-members have different access to messaging features and customer data. Once created, Team filters and tags can be assigned across various engagement tools providing teams access and filtering end-users based on assigned team definitions. 
+braze admins can divide subsets of their dashboard users into teams with varying user roles and permissions. teams can be set up across customer base location, language, and custom attributes such that members and non-members have different access to messaging features and customer data. once created, team filters and tags can be assigned across various engagement tools providing teams access and filtering end-users based on assigned team definitions. 
 
 {% include video.html id="UYjKrFcL9sQ" align="right" %}
 
-## Creating a Team
+## Creating a team
 
 Go to the __Manage Settings__ page and click __Manage Teams__. From there, you will see an option to __+Add Team__ that then populates a modal window. Here you will not only give the Team a name, but also have the option to use a custom attribute, location, or language to further define the access that will be granted. 
 
@@ -21,7 +21,7 @@ This Team can later be used to filter end-users for engagement objects like camp
 
 ![adding_a_team][68]
 
-## Assign Team Roles
+## Assign team roles
 
 Braze Admins can assign Team Roles to their Dashboard users, who are limited to only read/write data available to their particular Teams. Predefined Team Roles include language and location (by Countries and Regions). 
 
@@ -31,7 +31,7 @@ To assign a Team Role, navigate to __Manage Users__ and select a user you'd like
 
 To see descriptions of what each user permission includes and how to use them, check out our [User Permissions section]({{site.baseurl}}/user_guide/administrative/manage_your_braze_users/user_permissions/#editing-user-permissions).
 
-## Assign Teams Tags and Filters {#tags-and-filters}
+## Assign teams tags and filters {#tags-and-filters}
 
 Dashboard objects can be assigned to Teams. Canvases, campaigns, cards, segments, email templates, and media library assets can all be labeled with a Team filter and tag. 
  
@@ -43,7 +43,7 @@ Based on assigned permissions, members of teams will only be allowed to access D
 
 Note that Teams are not available on all Braze contracts. If you’d like to access this feature, reach out to your account executive and customer success manager or contact us at [hello@braze.com](mailto:success@braze.com) for a consultation.
 
-## Archive an Existing Team
+## Archive an existing team
 
 You can archive Teams from the **Manage Teams** page, under **Manage Settings**. Select one or many teams to archive.
 

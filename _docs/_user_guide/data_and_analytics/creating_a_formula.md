@@ -7,25 +7,25 @@ description: "This reference article covers creating and managing formulas, whic
 tool: Reports
 
 ---
-# Creating a Formula
+# Creating a formula
 
-## What Are Formulas?
+## What are formulas?
 
 Braze's analytics views now allow you to combine several data points together to provide valuable insights into your user data. Formulas will allow you to normalize your time series data based on your total number of MAU/DAU as well as to easily understand complex relationships that exist in your data. For example, you can compare how many custom events were completed by daily active users that qualify for a particular segment versus the general population (or against another segment).
 
-## Where to Access Your Formulas
+## Where to access your formulas
 
 Formulas can be accessed in the "Detailed Statistics" panels on the [Overview][9], [Revenue][10] and [Custom Events][11] pages in the dashboard. To view this panel, change the **View Statistics For** dropdown to "KPI Formulas".
 
 ![select formula][16]
 
-## How to Create a New Formula
+## How to create a new formula
 
 To create a new formula, navigate to the appropriate dashboard (Overview, Revenue, or Custom Events) and click **Manage Formulas** in the detailed statistics section. From there, enter a name for your formula and select the relevant numerators and denominators. Save your formula.
 
-## Available Numerators and Denominators
+## Available numerators and denominators
 
-### App Usage Dashboard
+### App usage dashboard
 The available numerators are:
 
 * DAU
@@ -37,7 +37,7 @@ The available denominators are:
 * DAU
 * Segment Size
 
-### Revenue Dashboard
+### Revenue dashboard
 The available numerators are:
 
 * Purchases (all)
@@ -48,7 +48,7 @@ The available denominators are:
 * DAU
 * MAU
 
-### Custom Event Dashboard
+### Custom event dashboard
 The available numerators are:
 
 * Custom Event Count

@@ -7,7 +7,7 @@ description: "This reference article covers how to implement uninstall tracking.
 tool: Reports
 
 ---
-# Uninstall Tracking
+# Uninstall tracking
 
 Braze's Uninstall Tracking provides the following details:
 
@@ -22,7 +22,7 @@ Braze __automatically collects a base level of uninstall information__ from your
 
 ## Implementation
 
-You can enable Uninstall Tracking in the **Settings** tab of the **Manage Settings** page. For each app you are interested in tracking, check the box in the uninstall tracking section.
+you can enable uninstall tracking in the **settings** tab of the **manage settings** page. for each app you are interested in tracking, check the box in the uninstall tracking section.
 
 ![Uninstall Tracking Checkbox][1]
 
@@ -50,7 +50,7 @@ Apps without uninstall tracking enabled will report uninstalls from only a subse
 
 ![Uninstall Graph][3]
 
-## Uninstall Tracking for Campaigns
+## Uninstall tracking for campaigns
 
 Campaign Uninstall Tracking allows you to see the number of users who received a specific campaign and subsequently uninstalled your app within the selected time frame. This tool gives marketers insight into how campaigns may be encouraging unintended negative user behaviors and helps to measure overall campaign efficacy.
 

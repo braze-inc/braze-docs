@@ -8,13 +8,13 @@ description: "This onboarding reference article covers implementing Braze's Web 
 
 ---
 
-# Web SDK
+# Web sdk
 
 With Braze’s Web SDK, you can collect session data, identify users (with the same set of attributes that we support across our other platforms), and record purchases and custom events via a web/mobile browser. Implementing Braze's Web SDK enables you to create a more complete view of your users across web and mobile channels. You can also use the Web SDK to engage with your users by sending in-app web messages and web push notifications.
 
 ## Implementation
 
-For information on integrating the Braze Web SDK, see our [documentation][6]. After implementing the Web SDK, your website will appear as an app in your app group and will be grouped with your mobile apps.
+for information on integrating the braze web sdk, see our [documentation][6]. after implementing the web sdk, your website will appear as an app in your app group and will be grouped with your mobile apps.
 
 ![Web_App_Group][7]
 
@@ -22,7 +22,7 @@ For information on integrating the Braze Web SDK, see our [documentation][6]. Af
 
 You can send web messages to engage with users directly in their web/mobile browser. Web messages are sent as in-app messages, and can also be sent as slideup, modal, or fullscreen types. For more information on composing an in-app message, see our page on [creating an in-app message][8].
 
-## Web Push
+## Web push
 
 ![Web Push Example][12]{: style="float:right;max-width:60%;margin-left:15px;border:0;"}
 
@@ -38,11 +38,11 @@ For more information on the push protocol standards and browser support, you can
 Private browsing windows do not currently support web push.
 {% endalert %}
 
-## Delivery Rules
+## Delivery rules
 
 By default, a campaign containing an in-app message will send an in-app web message as well as an in-app mobile message. To send an in-app message exclusively to web or mobile, you will need to segment your campaign accordingly.
 
-## Segmenting for Web Users
+## Segmenting for web users
 
 You can create a segment of your web users by selecting only your website’s app icon in the Apps Used section.
 
