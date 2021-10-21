@@ -7,11 +7,11 @@ description: "This article contains release notes for June 2018."
 ---
 # June 2018
 
-## Password Reusability
+## Password reusability
 
 Administrators can now determine the minimum number of new, unique passwords other Braze users in their company must use before they can reuse a previous password. This can be controlled from the [Authentication Rules][98] panel in the _Company Settings_ tool (in the top-navigation dropdown menu), within the _Security Settings_ tab.
 
-## Uninstall Tracking for Canvas Steps
+## Uninstall tracking for canvas steps
 
 Uninstalls per Canvas Steps are now tracked and viewable as a stat.
 

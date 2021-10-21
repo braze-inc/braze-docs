@@ -8,23 +8,23 @@ description: "This article walks you through the difference between AND and OR o
 tool: Segments
 ---
 
-# Segmentation Logic With And/Or
+# Segmentation logic with and/or
 
 The **AND** and **OR** operators enable some very powerful filtering. There are 2 scenarios you may wish to apply:
 * [Using AND or OR](#using-and-or-or)
 * [Using Both](#using-both)
 
-## Using AND or OR
+## Using and or or
 
 ### AND
 
-Use **AND** if you are interested in the intersection of two groups. This is, what is similar between the two groups. For example let’s compare two animals. What dogs **AND** cats both have in common is fur, are mammals, and are human pets:
+use **and** if you are interested in the intersection of two groups. this is, what is similar between the two groups. for example let’s compare two animals. what dogs **and** cats both have in common is fur, are mammals, and are human pets:
 
 ![Venn Diagram Definition][30]
 
 ### OR
 
-Use **OR** if you want to target users who meet at least one condition in a group of conditions. If you have three conditions linked together by "OR", then one, two, or all of the conditions could be true in order for the statement to be true.
+use **or** if you want to target users who meet at least one condition in a group of conditions. if you have three conditions linked together by "or", then one, two, or all of the conditions could be true in order for the statement to be true.
 
 For example, imagine that you want to send a message to all your users __except__ those users on version `1.0` or `1.1` of your app. You want to target the overlap of users that are not on version `1.0` and not on version `1.1.` You can create this segment in one of two ways:
 
@@ -34,7 +34,7 @@ For example, imagine that you want to send a message to all your users __except_
 * The alternative may be a longer route. You will need to add a filter for every version of your app using the OR statement, making sure to exclude app versions `1.0` and `1.1`.
 
 
-# Using Both
+# Using both
 
 Finally, look at the example below where we are using both the **AND** and **OR**. The target audience here are users who purchased Nike Sneakers **OR** Adidas sneakers **AND** are opted in to receive email notifications.
 

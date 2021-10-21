@@ -23,30 +23,30 @@ Braze supports:
 - [Azure Active Directory]({{site.baseurl}}/user_guide/administrative/access_braze/single_sign_on/azure_ad/)
 - [Okta]({{site.baseurl}}/user_guide/administrative/access_braze/single_sign_on/okta/)
 
-## Adjust Event API Key Shows
+## Adjust event api key shows
 
 We have updated Adjust's partner page to make this API key accessible to customers.
 
 ![Adjust API Key]({% image_buster /assets/img/adjust_eventapikey.png %})
 
-## New Partners
+## New partners
 
 Some new partners have joined our Alloys program and have been added to our Docs! Say hello to...
 - [FiveTran]({{site.baseurl}}/partners/fivetran/)
 - [Talon.One]({{site.baseurl}}/partners/talonone/)
 - [Voucherify]({{site.baseurl}}/partners/voucherify/)
 
-## Campaign Details Improvement
+## Campaign details improvement
 
 Expanded campaign details are now shown in the ... wait for it ... **Campaign Details** section of the **Campaign** Page!
 
 ![Campaign Details]({% image_buster /assets/img/campaign_details.png %})
 
-## Show Only Mine in Segments & Canvas
+## Show only mine in segments & canvas
 
 The "Only Show Mine" check filter on the **Campaigns** page has proven to be wildly popular! As a result, we're also adding this option to the Canvas and Segment lists!
 
-### Advancement Behavior
+### Advancement behavior
 You can now choose [when a user advances]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/advancement/) from one Canvas step to the next - options are "Message Sent" and "Entire Audience After Delay".
 
 ![Advancement Behavior]({% image_buster /assets/img/advancement_behavior_rn.png %})
@@ -57,20 +57,20 @@ You can now choose [when a user advances]({{site.baseurl}}/user_guide/engagement
 
 ![In-App Messages in Canvas]({% image_buster /assets/img/iam-in-canvas.png %})
 
-# Earlier This Month
+# Earlier this month
 ---
 
-## User Profile Image Removal
+## User profile image removal
 
 We are removing the user profile pictures displayed in Braze User Profiles and User Searches.
 
-## Connected Content in Content Cards
+## Connected content in content cards
 
 You can now use [Connected Content]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/connected_content/about_connected_content/#about-connected-content) strings and functionality in [Content Cards]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards/overview/).
 
 Connected Content calls to external servers will happen when a Card is actually sent, __not__ when the Card is viewed by the User. Similar to Email, dynamic content will be calculated and determined at sending time, rather than when a Card is actually viewed.
 
-## Null 'Reply-To' Address
+## Null 'reply-to' address
 
 Customers can now set a `null` value for an email messages's "Reply-To" address from the Email Settings page in Braze or using [the API]({{site.baseurl}}/api/endpoints/messaging/#email-object-specification).  When used, replies will be sent to the listed "From" address.  You can now personalize the "From" address field as `dan@emailaddress.com` and your customers will have the ability to reply directly back to Dan.
 
@@ -78,11 +78,11 @@ To set a `null` value for an email messages's "Reply-To" address from Braze, go 
 
 ![Email Settings Reply-To]({% image_buster /assets/img/null_reply-to.png %})
 
-## Campaign Comparisons
+## Campaign comparisons
 
 Look at [multiple campaigns at one time to compare their relative performance]({{site.baseurl}}/user_guide/engagement_tools/campaigns/testing_and_more/comparing_campaigns/), side-by-side in Braze - in one window!
 
-## Template Dispatch ID into Messages with Liquid
+## Template dispatch id into messages with liquid
 
 {% alert update %}
 Behavior for `dispatch_id` differs between Canvas and campaigns because Braze treats Canvas steps (except for Entry Steps, which can be scheduled) as triggered events, even when they are "scheduled". [Learn more about `dispatch_id` behavior in Canvas and campaigns here]({{site.baseurl}}/help/help_articles/data/dispatch_id/).

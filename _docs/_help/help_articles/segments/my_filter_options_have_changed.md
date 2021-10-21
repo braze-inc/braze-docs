@@ -8,7 +8,7 @@ description: "This help article covers what it means when your filter options fo
 tool: Segments
 ---
 
-# Filter Options Changed
+# Filter options changed
 
 Your filter options are related to the format (data type) that you’re passing to Braze for your custom attribute. To review the data type that Braze is recognizing for your custom attributes, navigate to **Manage Settings** then select the **Custom Attributes** tab.
 

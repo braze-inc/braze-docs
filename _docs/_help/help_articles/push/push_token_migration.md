@@ -8,7 +8,7 @@ description: "This article covers how to migrate push tokens so you can continue
 channel: push
 ---
 
-# Migrating Push Tokens
+# Migrating push tokens
 
 A push token is a unique key, created and assigned by Apple or Google to create a connection between an app and an iOS, Android, or web device. Push token migration is the importing of those already-generated keys into Braze’s platform.
 
@@ -20,13 +20,13 @@ To continue sending push messages to these users during the Braze SDK integratio
 These campaigns will have to be configured with proper key-value pairs to ensure that the client’s existing push notification setup will recognize and display the push payload we send to users’ devices. While we will record the number of pushes we send, no data on open rates or conversion events is tracked as that requires the Braze’s SDK to be integrated.
 {% endcomment %}
 
-## Migration via API
+## Migration via api
 
 Push tokens can either be uploaded for identified users or anonymous users. This means that either an `external_id` needs to present, or the anonymous users must have the `push_token_import` flag set to `true`. 
 
 The `app_id` required can be found in the **Developer Console**, under the **API Settings** tab in the **Identification** section. Each app (iOS, Android, Web, etc.) has its own `app_id` - be sure to use the correct platform's `app_id`.
 
-#### Migration if External ID is Present
+#### Migration if external id is present
 ```json
 "attributes" : [
   {
@@ -46,7 +46,7 @@ The `app_id` required can be found in the **Developer Console**, under the **API
 When importing push tokens from other systems, an `external_id` is not always available. To maintain communication with these users during your transition to Braze, you can import the legacy tokens for anonymous users without providing `external_id` by specifying `push_token_import` as `true`.
 {% endalert %}
 
-#### Migration if External ID is not Present
+#### Migration if external id is not present
 
 These tokens can be migrated by [importing them with our API]({{site.baseurl}}/api/endpoints/user_data/#push-token-import).
 
@@ -102,10 +102,10 @@ After import, as each user launches the Braze-enabled version of your app, Braze
 
 Braze will check once a month to find any anonymous profile with the `push_token_import` flag that doesn’t have a push token. If the anonymous profile no longer has a push token, we will delete the profile. However, if the anonymous profile still has a push token, suggesting that the actual user has yet to login to the device with said push token, we will do nothing.
 
-### Web Push Tokens
+### Web push tokens
 Web push tokens contain extra fields that other platforms do not. As a result, we recommend that you integrate push and allow your token-base to repopulate naturally.
 
-## Sending Push before Braze SDK Integration (Android Only)
+## Sending push before braze sdk integration (android only)
 
 {% alert warning %}
 This solution only applies to Android users. iOS users will not receive push with this method. iOS does not require these steps because there is only one framework for displaying push. Push notifications will render immediately as long as Braze has the necessary push tokens and certificates.

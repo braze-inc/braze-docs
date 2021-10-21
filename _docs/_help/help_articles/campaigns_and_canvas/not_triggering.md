@@ -10,14 +10,14 @@ tool:
 - Canvas
 ---
 
-# Untriggered Campaign or Canvas
+# Untriggered campaign or canvas
 
 There are a number of reasons why you did not get the expected trigger behavior.
 
 The solution to the most common error, is to ensure that the campaign that you are triggering does not use the same trigger event in the segment.
 
 
-## Campaign Triggers
+## Campaign triggers
 
 Remember, if the user does not fall into the segment first, they will not receive the campaign even if they perform the trigger.
 

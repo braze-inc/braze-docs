@@ -8,7 +8,7 @@ description: "This help article describes why your control group might be larger
 tool: Canvas
 ---
 
-# Handling a Large Control Group
+# Handling a large control group
 
 When creating your Canvas, you may have expected your audience to split evenly between your control group and your variant group, like in [our example](#example) below. We can explain why that is and how to fix it!
 
@@ -21,18 +21,18 @@ If your control group is large compared to your variant group (and this is not y
 
 When creating a Canvas with a control group, ensure that all users in the Entry Audience are able to receive messages within the Canvas (i.e. the Canvas contains push and email messages).
 
-### Set Entry Audience Push Status
+### Set entry audience push status
 
 Set your entry audience filter to "Is Push Enabled".
 
-### Set Entry Audience Email Status
+### Set entry audience email status
 
 Set your entry audience filter to "is Opted In or Subscribed".
 
 
 ## Example
 
-Let’s imagine the following scenario:
+let’s imagine the following scenario:
 - A Canvas has a single **variant** and a **control group**.
 - The first step of the **variant** is a push notification.
 - 90% of users were selected to enter the **variant**, and 10% to enter the control **group**.

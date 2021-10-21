@@ -8,12 +8,12 @@ description: "This article contains release notes for August 2019."
 
 # August 2019
 
-## Campaign Details in Reports
+## Campaign details in reports
 Your campaign performance report will now list your campaign's details so you don't have to go back through your campaign to see which Delivery, Audience, or Conversion settings you chose while setting up your report.
 
 ![Campaign Details]({% image_buster /assets/img/campaign_details_update.png %})
 
-## New Email Content Block API Endpoints
+## New email content block api endpoints
 
 You can now manage ([create]({{site.baseurl}}/api/endpoints/email_templates/#create-content-block), [list available]({{site.baseurl}}/api/endpoints/email_templates/#list-available-content-blocks), [get information]({{site.baseurl}}/api/endpoints/email_templates/#see-content-block-information)) your Email Content Blocks via API!
 
@@ -21,11 +21,11 @@ You can now manage ([create]({{site.baseurl}}/api/endpoints/email_templates/#cre
 This feature is temporarily in limited availability. Please reach out to your Braze account manager for more information.
 {% endalert %}
 
-## Custom Email Unsubscribe Landing Page Update
+## Custom email unsubscribe landing page update
 
 The default [custom Email Unsubscribe page]({{site.baseurl}}/user_guide/message_building_by_channel/email/managing_user_subscriptions/#custom-unsubscribe-landing-page) has been updated with a sleek, more modern look.
 
-## iOS SDK - Notched Phone Support Improvement
+## iOS sdk - notched phone support improvement
 
 Improved support for in-app messages on “notched” devices (for example, iPhone X, Pixel 3XL). Full-screen messages now expand to fill the entire screen of any phone, while covering the status bar.
 

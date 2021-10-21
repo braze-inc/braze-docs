@@ -7,7 +7,7 @@ description: "This article contains release notes for November 2018."
 ---
 ## November 2018
 
-### Canvas Entry Settings Wizard
+### Canvas entry settings wizard
 
 The Canvas UI will be simplified to prevent missed tasks and resulting errors. Canvas configurations, specifically, will now be displayed in a wizard, similar to the design of the **Campaigns** wizard. See the [updated Canvas documentation here]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/create_a_canvas/)!
 

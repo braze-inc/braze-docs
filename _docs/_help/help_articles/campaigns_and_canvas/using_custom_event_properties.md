@@ -10,7 +10,7 @@ tool:
 - Canvas
 ---
 
-# Logging Custom Event Properties
+# Logging custom event properties
 
 There are three important checks to carry out to ensure your custom events are being logged as you expect:
 
@@ -18,13 +18,13 @@ There are three important checks to carry out to ensure your custom events are b
 * [Verify log](#verify-log)
 * [Verify values](#verify-values)
 
-## Custom Event Properties
+## Custom event properties
 
 [Custom event properties][22] are metadata that describe custom events. Multiple properties may be logged each time a custom event is logged.
 
-## Verify Custom Event Properties
+## Verify custom event properties
 
-### Which Events?
+### Which events?
 
 Check with your developers which event properties are being tracked. Keep in mind that all event properties are case sensitive.
 
@@ -35,11 +35,11 @@ For further information see:
 * [Web][52]
 
 
-### Verify Log
+### Verify log
 
 To confirm that the event properties are successfully tracked, you can view all event properties by going to the **Manage Settings** page, clicking on the **Custom Events** tab, then clicking **Manage Properties**. This will show you the names of all of the properties associated with an event.
 
-### Verify Values
+### Verify values
 
 To check the specific property values that are being passed for each event, check the [Event User Logs][24] on your dashboard. After adding your user as a test user, you should perform the custom event within the app, wait around 10 seconds for the data to flush, and then refresh the event user log to view the custom event and the event property value that was passed with it.
 
