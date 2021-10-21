@@ -144,6 +144,21 @@ If you download a variant breakdown Canvas report, you'll receive two CSV files:
 - One file containing only top-level metrics for each Canvas
 - One file that contains variant-level metrics
 
+## Building Charts 
+
+{% alert note %} This new feature is currently in early access. We will be making frequent enhancements to it, so if there's a use case you can't accomplish right now, be sure to check back again in the near future. If you have product feedback, please sumit it through [product feedback portal](https://dashboard.braze.com/resources/roadmap/). {% endalert %}
+
+Charts are available for reports that feature campaigns and have at least one metric added to its columns. 
+
+By default, the chart on each report will display the metric in the first column of the report; however, you can use a dropdown menu to select a particular metric to graph. Any metric in your report table will be available to display in your chart.
+
+Your chart will display up to 30 campaigns, in descending order based on the metric you've selected. For instance, if your chart's metric if email clicks, then your chart will display the 30 email campaigns will the most clicks, ordered from most to fewest clicks. If your report contains more than 30 campaigns, only the top 30 will be displayed in the chart.
+
+Charts are currently not saved when you save your report.
+
+
+
+
 [3]: {% image_buster /assets/img/campaign_comparison/compare_note.png %}
 [4]: {% image_buster /assets/img/campaign_comparison/metric.png %}
 [5]: {% image_buster /assets/img/campaign_comparison/campaign_main.png %}
