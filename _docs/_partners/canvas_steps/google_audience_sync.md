@@ -126,7 +126,7 @@ __Users Pending__: Number of users currently being processed by Braze to sync to
 __Exited Canvas__: Number of users who have exited the Canvas. This occurs when the last step in a Canvas is a Google step.
 
 ## Troubleshooting
-{% details why am i unable to select multiple fields to match in my google audience step configuration? %}
+{% details Why am I unable to select multiple fields to match in my Google Audience Step configuration? %}
 Google Customer Match has strict requirements around how these audiences are formatted and what customer information is included. Specifically, mobile advertiser IDs need to be uploaded separately from customer contact info (i.e., email and phone number). Please refer to [Google's Customer Match documentation](https://support.google.com/google-ads/answer/7659867?hl=en#undefined) for more details. 
 {% enddetails %}
 
