@@ -1,5 +1,6 @@
 ---
 nav_title: User Update Step
+article_title: User Update Step
 permalink: "/user_update/"
 hidden: true
 page_type: reference
