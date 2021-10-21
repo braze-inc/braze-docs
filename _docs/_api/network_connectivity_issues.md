@@ -6,7 +6,7 @@ description: "This reference article touches on API connectivity issues and how 
 page_type: reference
 
 ---
-# API Connectivity Issues
+# API connectivity issues
 
 > This reference article touches on API connectivity issues and how to troubleshoot them. 
 
@@ -26,7 +26,7 @@ For more information about MTR, check out these resources based on your operatin
 - [GNU/Linux][4]
 - [macOS][5]
 
-## Whitelisting Braze's API Endpoint IP Ranges
+## Whitelisting braze's api endpoint ip ranges
 
 To whitelist Braze's API endpoint through your firewall, our CDN provides access to the list of assigned IP ranges via a JSON dump. You can access the public list of Fastly IP ranges [here][3].
 

@@ -9,7 +9,7 @@ description: "This article outlines details about the Update Scheduled API-Trigg
 
 ---
 {% api %}
-# Update Scheduled API-Triggered Canvases
+# Update scheduled api-triggered canvases
 {% apimethod post core_endpoint|https://www.braze.com/docs/core_endpoints %} 
 /canvas/trigger/schedule/update
 {% endapimethod %}
@@ -22,7 +22,7 @@ Any schedule will completely overwrite the one that you provided in the create s
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#8fdf158b-ce20-41d8-80e4-a9300a6706d4 {% endapiref %}
 
-## Request Body
+## Request body
 
 ```
 Content-Type: application/json
@@ -39,7 +39,7 @@ Authorization: Bearer YOUR-REST-API-KEY
 }
 ```
 
-## Request Parameters
+## Request parameters
 
 | Parameter | Required | Data Type | Description |
 | --------- | ---------| --------- | ----------- |
@@ -48,7 +48,7 @@ Authorization: Bearer YOUR-REST-API-KEY
 |`schedule` | Required | Object | See [schedule object]({{site.baseurl}}/api/objects_filters/schedule_object/). |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
 
-## Request Example
+## Request example
 ```
 curl --location --request POST 'https://rest.iad-01.braze.com/campaigns/trigger/schedule/update' \
 --header 'Content-Type: application/json' \

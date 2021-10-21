@@ -8,7 +8,7 @@ page_type: reference
 description: "This article outlines details about the Update User's Subscription Group Status Braze endpoint."
 ---
 {% api %}
-# Update Users' Subscription Group Status
+# Update users' subscription group status
 {% apimethod post core_endpoint|https://www.braze.com/docs/core_endpoints %} 
 /subscription/status/set
 {% endapimethod %}
@@ -23,7 +23,7 @@ If you want to see examples or test this endpoint for __SMS Subscription Groups_
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#72558b32-7dbe-4cba-bd22-a7ce513076dd {% endapiref %}
 
-## Request Body
+## Request body
 
 {% tabs %}
 {% tab SMS %}
@@ -70,7 +70,7 @@ This property should not be used for updating a user's profile information. Plea
 When creating new users via the [/users/track]({{site.baseurl}}/api/endpoints/user_data/post_user_track/) endpoint, you should leave a delay of around 2 minutes before adding users to the relevant Subscription Group to allow Braze time to fully create the user profile.
 {% endalert %}
 
-## Request Parameters
+## Request parameters
 
 | Parameter | Required | Data Type | Description |
 |---|---|---|---|
@@ -81,7 +81,7 @@ When creating new users via the [/users/track]({{site.baseurl}}/api/endpoints/us
 | `phone` | Required* | String in [E.164](https://en.wikipedia.org/wiki/E.164) format | The phone number of the user, can be passed as an array of strings. Must include at least one phone number (with a max of 50). |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
 
-## Example Requests Email
+## Example requests email
 ```
 curl --location --request POST 'https://rest.iad-01.braze.com/subscription/status/set' \
 --header 'Content-Type: application/json' \
@@ -95,7 +95,7 @@ curl --location --request POST 'https://rest.iad-01.braze.com/subscription/statu
 '
 ```
 
-## Example Requests SMS
+## Example requests sms
 ```
 curl --location --request POST 'https://rest.iad-01.braze.com/subscription/status/set' \
 --header 'Content-Type: application/json' \
@@ -109,7 +109,7 @@ curl --location --request POST 'https://rest.iad-01.braze.com/subscription/statu
 '
 ```
 
-## Example Successful Response
+## Example successful response
 
 Response: (status 201)
 

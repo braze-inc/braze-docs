@@ -6,11 +6,11 @@ description: "This reference article covers the API basics including what a REST
 page_type: reference
 
 ---
-# API Overview
+# API overview
 
 > Braze provides a high-performance REST API to allow you to track users, send messages, export data, and more. This reference article covers what a REST API is, the terminology, a brief overview of API keys, and API limits.
 
-## What is a REST API?
+## What is a rest api?
 
 A REST API is a way to programmatically transfer information over the web using a predefined schema. Braze has created many different endpoints which perform various actions and/or return various data.
 
@@ -18,13 +18,13 @@ A REST API is a way to programmatically transfer information over the web using 
 Customers using Braze's EU database should use the `https://rest.fra-01.braze.eu/` endpoint. This endpoint will be used when configuring the Braze [iOS]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/initial_sdk_setup/completing_integration/#compile-time-endpoint-configuration-recommended), [Android]({{site.baseurl}}/developer_guide/platform_integration_guides/android/initial_sdk_setup/android_sdk_integration/#step-2-configure-the-braze-sdk-in-brazexml), and [Web]({{site.baseurl}}/developer_guide/platform_integration_guides/web/initial_sdk_setup/#step-2-initialize-braze) SDKs.
 {% endalert %}
 
-## API Definitions
+## API definitions
 
 Below is some terminology that you may see in the Braze REST API documentation and what it means.
 
 ### Endpoints
 
-Braze manages a number of different instances for our dashboard and REST Endpoints. When your account is provisioned you will log in to one of the corresponding URLs below. Use the correct REST Endpoint based on which instance you are provisioned to. If you are unsure, open a support ticket or use the table below to match the URL of the dashboard you use to the correct REST Endpoint.
+braze manages a number of different instances for our dashboard and rest endpoints. when your account is provisioned you will log in to one of the corresponding urls below. use the correct rest endpoint based on which instance you are provisioned to. if you are unsure, open a support ticket or use the table below to match the url of the dashboard you use to the correct rest endpoint.
 
 {% alert important %}
 When using endpoints for API calls, use the "REST Endpoint" located below.
@@ -44,11 +44,11 @@ For SDK integration, use the ["SDK Endpoint"]({{site.baseurl}}/user_guide/admini
 |EU-01| `https://dashboard-01.braze.eu` | `https://rest.fra-01.braze.eu` | `sdk.fra-01.braze.eu` |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
 
-### Company Secret Explanation
+### Company secret explanation
 
 The `company_secret` was formerly included with all API requests but has been deprecated as of October 2014. This field will be ignored for all future API requests to ensure backward compatibility.
 
-### App Group REST API Keys
+### App group rest api keys
 
 {% alert note %}
 For a deeper dive on the different kinds of API Keys here at Braze, check out our dedicated <a href="{{site.baseurl}}/api/api_key/">API Keys</a> and <a href="{{site.baseurl}}/api/identifier_types/">API Identifier Types</a> reference articles.
@@ -59,7 +59,7 @@ The `api_key` included in each request acts as an authentication key that allows
 
 ![REST API Keys][27]
 
-#### API Key Permissions
+#### API key permissions
 
 API Keys are used to authenticate an API call. When you create a new REST API Key, you need to give it access to specific endpoints. By assigning specific permissions to an API Key, you can limit exactly which calls an API Key can authenticate.
 
@@ -73,13 +73,13 @@ Given that REST API Keys allow access to potentially sensitive REST API endpoint
 
 If accidental exposure of a key occurs, it can be deleted from the [Developer Console][8]. For help with this process, please [open a support ticket][support].
 
-#### API IP Allowlisting
+#### API ip allowlisting
 
 For additional security, you can specify an allowlist of IP addresses and subnets which are allowed to make REST API requests for a given REST API Key. To allowlist specific IP addresses or subnets, add them to the **Whitelist IPs** section when creating a new REST API Key:
 
 ![API IP Whitelisting][26]
 
-#### Creating and Managing REST API Keys
+#### Creating and managing rest api keys
 
 ![Create New API Key][28]{: style="max-width:20%;float:right;margin-left:15px;"}
 
@@ -99,11 +99,11 @@ Existing REST API Keys can be Viewed or Deleted by clicking the gear icon and se
 Keep in mind that once you create a new API Key, you cannot edit the scope of permissions or the allowlisted IPs. This limitation is in place for security reasons. If you need to change the scope of a key, create a new key with the updated permissions and implement that key in place of the old one. Once you've completed your implementation, go ahead and delete the old key.
 {% endalert %}
 
-### External User ID Explanation
+### External user id explanation
 
 The `external_id` serves as a unique user identifier for whom you are submitting data. This identifier should be the same as the one you set in the Braze SDK in order to avoid creating multiple profiles for the same user.
 
-### Braze User ID Explanation
+### Braze user id explanation
 
 The `braze_id` serves as a unique user identifier that is set by Braze. This identifier can be used to delete users through the REST API in addition to external_ids.
 
@@ -113,7 +113,7 @@ The `braze_id` serves as a unique user identifier that is set by Braze. This ide
 - [Setting User IDs - Android][10]
 - [Setting User IDs - Windows Universal][13]
 
-## API Limits
+## API limits
 
 The Braze API infrastructure is designed to handle high volumes of data across our customer base. We enforce API rate limits, per app group, in order to ensure responsible use of the API. All messages should follow [UTF-8][1] encoding.
 
@@ -152,7 +152,7 @@ Header Name             | Description
 
 If you have questions about API limits please contact your Customer Success Manager or please [open a support ticket][support].
 
-### Optimal Delay Between Endpoints
+### Optimal delay between endpoints
 
 Understanding Optimal Delay between endpoints is crucial when making consecutive calls to the Braze API. Problems arise when endpoints depend on the successful processing of other endpoints, and if called too soon, could raise errors. For example, if you're assigning users an alias via our New User Alias endpoint, and then hitting that alias to send a custom event via our Usertrack endpoint, how long should you wait?
 

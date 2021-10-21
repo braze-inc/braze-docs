@@ -7,7 +7,7 @@ description: "This article lists and explains the different Scheduling Object us
 
 ---
 
-# Schedule Object Specification
+# Schedule object specification
 
 The parameters for the campaign and Canvas schedule creation endpoints mirror those of the sending endpoint and add the `schedule` parameter, which allows you to specify when you want your targeted users to receive your message (up to 90 days in the future). If you include only the `time` parameter in the `schedule` object, all of your users will be messaged at that time.
 
@@ -15,7 +15,7 @@ If you set `in_local_time` to be `true`, your users will receive the message at 
 
 The response will provide you with a `schedule_id` that you should save in case you later need to cancel or update the message you schedule:
 
-## Object Body
+## Object body
 
 Insert this object as needed to schedule your messages.
 
@@ -27,7 +27,7 @@ Insert this object as needed to schedule your messages.
 }
 ```
 
-## Schedule ID Response
+## Schedule id response
 
 You will receive a `schedule_id` for the scheduled message you created.
 

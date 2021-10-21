@@ -9,7 +9,7 @@ description: "This article outlines details about the Send Messages Immediately 
 
 ---
 {% api %}
-# Sending Messages Immediately via API Only
+# Sending messages immediately via api only
 {% apimethod post core_endpoint|https://www.braze.com/docs/core_endpoints %} 
 /messages/send
 {% endapimethod %}
@@ -20,7 +20,7 @@ The send endpoint allows you to send immediate, ad-hoc messages to designated us
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#946cb701-96e3-48d7-868c-f079785b6d24 {% endapiref %}
 
-## Request Body
+## Request body
 
 ```
 Content-Type: application/json
@@ -57,7 +57,7 @@ Authorization: Bearer YOUR-REST-API-KEY
  }
 ```
 
-## Request Parameters
+## Request parameters
 
 | Parameter | Required | Data Type | Description |
 | --------- | ---------| --------- | ----------- |
@@ -73,7 +73,7 @@ Authorization: Bearer YOUR-REST-API-KEY
 |`messages`| Optional | Messaging objects | See [available messaging objects](#available-messaging-objects), below. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
 
-### Available Messaging Objects {#available-messaging-objects}
+### Available messaging objects {#available-messaging-objects}
 
 You can use these objects in the [request body](#request-body) above.
 
@@ -87,7 +87,7 @@ You can use these objects in the [request body](#request-body) above.
 - [Webhook Object]({{site.baseurl}}/api/objects_filters/webhook_object/)
 - [Windows Objects]({{site.baseurl}}/api/objects_filters/windows_objects/)
 
-## Example Request
+## Example request
 ```
 curl --location --request POST 'https://rest.iad-01.braze.com/messages/send' \
 --data-raw '{
@@ -162,7 +162,7 @@ curl --location --request POST 'https://rest.iad-01.braze.com/messages/send' \
 }'\'''
 ```
 
-## Response Details
+## Response details
 
 Message sending endpoint responses will include the message’s `dispatch_id` for reference back to the dispatch of the message. The `dispatch_id` is the id of the message dispatch (unique id for each ‘transmission’ sent from the Braze platform). For more information on `dispatch_id` checkout out our [documentation]({{site.baseurl}}/help/help_articles/data/dispatch_id/).
 

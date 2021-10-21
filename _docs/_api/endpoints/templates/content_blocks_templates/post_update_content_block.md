@@ -9,7 +9,7 @@ description: "This article outlines details about the Update Email Content Block
 
 ---
 {% api %}
-# Update Content Block
+# Update content block
 {% apimethod post %}
 /content_blocks/update
 {% endapimethod %}
@@ -18,7 +18,7 @@ Use this endpoint below to update an [Email Content Block]({{site.baseurl}}/user
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#4782239a-cb60-4217-9de0-51411434d57d {% endapiref %}
 
-## Request Body
+## Request body
 
 ```
 Content-Type: application/json
@@ -36,7 +36,7 @@ Authorization: Bearer YOUR-REST-API-KEY
 }
 ```
 
-## Request Parameters
+## Request parameters
 
 | Parameter | Required | Data Type | Description |
 |---|---|---|---|
@@ -48,7 +48,7 @@ Authorization: Bearer YOUR-REST-API-KEY
 | `tags` | Optional | Array of strings | [Tags]({{site.baseurl}}/user_guide/administrative/app_settings/manage_app_group/tags/) must already exist. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
 
-## Example Request
+## Example request
 ```
 curl --location --request POST 'https://rest.iad-01.braze.com/content_blocks/update' \
 --header 'Content-Type: application/json' \
@@ -76,7 +76,7 @@ Authorization: Bearer YOUR-REST-API-KEY
 }
 ```
 
-### Possible Errors
+### Possible errors
 - `Content cannot be blank.`
 
 - `Content must be a string.`

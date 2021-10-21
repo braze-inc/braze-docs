@@ -9,7 +9,7 @@ description: "This article outlines details about the Get Scheduled Messages Bra
 
 ---
 {% api %}
-# Get Upcoming Scheduled Campaigns and Canvases
+# Get upcoming scheduled campaigns and canvases
 {% apimethod get %}
 /messages/scheduled_broadcasts
 {% endapimethod %}
@@ -18,14 +18,14 @@ You can view a JSON list of upcoming and scheduled campaigns and Canvases using 
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#6f623cc3-383b-4bf7-b14d-7c56fc5562f5 {% endapiref %}
 
-## Request Parameters
+## Request parameters
 
 | Parameter | Required | Data Type | Description |
 | --------- | -------- | --------- | ----------- |
 | `end_time` | Required | String in [ISO-8601](https://en.wikipedia.org/wiki/ISO_8601) format | End date of the range to retrieve upcoming scheduled campaigns and Canvases. This is treated as midnight in UTC time by the API. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
 
-## Example Request
+## Example request
 ```
 curl --location --request GET 'https://rest.iad-01.braze.com/messages/scheduled_broadcasts?end_time=2018-09-01T00:00:00-04:00' \
 --header 'Authorization: Bearer YOUR-REST-API-KEY'

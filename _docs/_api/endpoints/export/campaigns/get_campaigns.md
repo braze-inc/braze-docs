@@ -9,7 +9,7 @@ description: "This article outlines details about the Get Campaigns List endpoin
 
 ---
 {% api %}
-# Campaigns List Endpoint
+# Campaigns list endpoint
 {% apimethod get %}
 /campaigns/list
 {% endapimethod %}
@@ -18,7 +18,7 @@ This endpoint allows you to export a list of campaigns, each of which will inclu
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#f3b0b3ef-04fb-4a31-8570-e6ad88dacb18 {% endapiref %}
 
-## Request Parameters
+## Request parameters
 
 | Parameter | Required | Data Type | Description |
 | --------- | -------- | --------- | ----------- |
@@ -28,13 +28,13 @@ This endpoint allows you to export a list of campaigns, each of which will inclu
 | `last_edit.time[gt]` | Optional | Time | Filters the results and only returns campaigns that were edited greater than the time provided till now. Format is `yyyy-MM-DDTHH:mm:ss`. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
 
-## Example Request 
+## Example request 
 ```
 curl --location -g --request GET 'https://rest.iad-01.braze.com/campaigns/list?page=0&include_archived=false&sort_direction=desc&last_edit.time[gt]=2020-06-28T23:59:59-5:00' \
 --header 'Authorization: Bearer YOUR-REST-API-KEY'
 ```
 
-## Campaign List Endpoint API Response
+## Campaign list endpoint api response
 
 ```json
 Content-Type: application/json

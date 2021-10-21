@@ -9,7 +9,7 @@ description: "This article outlines details about the Send Campaign Messages via
 
 ---
 {% api %}
-# Sending Campaign Messages via API-Triggered Delivery
+# Sending campaign messages via api-triggered delivery
 {% apimethod post core_endpoint|https://www.braze.com/docs/core_endpoints %} 
 /campaigns/trigger/send
 {% endapimethod %}
@@ -20,7 +20,7 @@ The send endpoint allows you to send immediate, ad-hoc messages to designated us
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#aef185ae-f591-452a-93a9-61d4bc023b05 {% endapiref %}
 
-## Request Body
+## Request body
 
 ```
 Content-Type: application/json
@@ -47,7 +47,7 @@ Authorization: Bearer YOUR-REST-API-KEY
 }
 ```
 
-## Request Parameters
+## Request parameters
 
 | Parameter | Required | Data Type | Description |
 | --------- | ---------| --------- | ----------- |
@@ -59,7 +59,7 @@ Authorization: Bearer YOUR-REST-API-KEY
 |`recipients`| Optional | Array | See [recipients object]({{site.baseurl}}/api/objects_filters/recipient_object/). If not provided and `broadcast` is set to true, the message will send to the entire segment targeted by the campaign. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
 
-### Request Components
+### Request components
 - [Campaign Identifier]({{site.baseurl}}/api/identifier_types/)
 - [Send Identifier]({{site.baseurl}}/api/identifier_types/)
 - [Broadcast]({{site.baseurl}}/api/parameters/#broadcast)
@@ -73,7 +73,7 @@ The recipients array may contain up to 50 objects, with each object containing a
 <br><br>
 When `send_to_existing_only` is `true`, Braze will only send the message to existing users. When `send_to_existing_only` is `false` and a user with the given `id` does not exist, Braze will create a user with that id and attributes before sending the message.
 
-## Example Request
+## Example request
 ```
 curl --location --request POST 'https://rest.iad-01.braze.com/campaigns/trigger/send' \
 --header 'Content-Type: application/json' \
@@ -145,10 +145,10 @@ curl --location --request POST 'https://rest.iad-01.braze.com/campaigns/trigger/
 }'
 ```
 
-## Response Details
+## Response details
 Message sending endpoint responses will include the message’s `dispatch_id` for reference back to the dispatch of the message. The `dispatch_id` is the id of the message dispatch (unique id for each ‘transmission’ sent from the Braze platform). For more information on `dispatch_id` checkout out our [documentation]({{site.baseurl}}/help/help_articles/data/dispatch_id/).
 
-## Create Send Endpoint
+## Create send endpoint
 
 __Using the Attributes Object in Campaigns__
 

@@ -9,7 +9,7 @@ description: "This article outlines details about the Create Email Content Block
 
 ---
 {% api %}
-# Create Content Block
+# Create content block
 {% apimethod post %}
 /content_blocks/create
 {% endapimethod %}
@@ -18,7 +18,7 @@ This endpoint will create an [Email Content Block]({{site.baseurl}}/user_guide/e
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#f1cefa8b-7a28-4e64-b579-198a4610d0a5 {% endapiref %}
 
-## Request Body
+## Request body
 
 ```
 Content-Type: application/json
@@ -35,7 +35,7 @@ Authorization: Bearer YOUR-REST-API-KEY
 }
 ```
 
-## Request Parameters
+## Request parameters
 
 | Parameter | Required | Data Type | Description |
 |---|---|---|---|
@@ -46,7 +46,7 @@ Authorization: Bearer YOUR-REST-API-KEY
 | `tags` | Optional | Array of strings | [Tags]({{site.baseurl}}/user_guide/administrative/app_settings/manage_app_group/tags/) must already exist. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
 
-## Example Request
+## Example request
 ```
 curl --location --request POST 'https://rest.iad-01.braze.com/content_blocks/create' \
 --header 'Content-Type: application/json' \
@@ -74,7 +74,7 @@ Authorization: Bearer YOUR-REST-API-KEY
 }
 ```
 
-### Possible Errors
+### Possible errors
 - `Content cannot be blank.`
 
 - `Content must be a string.`

@@ -9,7 +9,7 @@ description: "This article outlines details about the List Users' Subscription G
 
 ---
 {% api %}
-# Get Users' Subscription Group Status
+# Get users' subscription group status
 {% apimethod get %}
 /subscription/status/get
 {% endapimethod %}
@@ -24,7 +24,7 @@ If you want to see examples or test this endpoint for __SMS Subscription Groups_
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#4b8515b8-067f-41fd-b213-8bb2d18b1557 {% endapiref %}
 
-## Request Parameters
+## Request parameters
 
 | Parameter | Required | Data Type | Description |
 |---|---|---|---|
@@ -39,7 +39,7 @@ If you want to see examples or test this endpoint for __SMS Subscription Groups_
 - For SMS subscription groups, either `external_id` or `phone` is required.  When both are submitted, only the `external_id` is used for querying and the phone number is applied to that user.
 - For email subscription groups, either `external_id` or `email` is required.  When both are submitted, only the `external_id` is used for the query and the email address is applied to that user.
 
-## Example Request 
+## Example request 
 
 {% tabs %}
 {% tab Multiple Users %}
@@ -69,7 +69,7 @@ curl --location -g --request GET 'https://rest.iad-01.braze.com/subscription/sta
 
 ## Response
 
-All successful responses will return `subscribed`, `unsubscribed`, or `unknown` depending on status and user history with the subscription group.
+all successful responses will return `subscribed`, `unsubscribed`, or `unknown` depending on status and user history with the subscription group.
 
 ```json
 Content-Type: application/json
