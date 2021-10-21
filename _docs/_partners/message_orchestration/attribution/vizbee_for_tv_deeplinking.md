@@ -19,13 +19,13 @@ There are other beneficial user acquisition and retention flows for both mobile 
 
 ## Prerequisites
 
-before performing the vizbee and braze joint integration, ensure that you have registered your app with vizbee, and have an assigned your vizbee app id. to get started and register with vizbee, please visit [vizbee][1].
+Before performing the Vizbee and Braze joint integration, ensure that you have registered your app with Vizbee, and have an assigned your Vizbee app id. To get started and register with Vizbee, please visit [Vizbee][1].
 
-## Mobile-to-TV Deep Linking
+## Mobile-to-tv deep linking
 
 Follow Vizbee's SDK Integration Guide to get up and running with your Vizbee and Braze integration. For details, check out their documentation [here][2].
 
-## TV app installs & viewership attribution {#vizbee-tv-app-installs-viewership-attribution}
+## TV app installs and viewership attribution {#vizbee-tv-app-installs-viewership-attribution}
 
 Vizbee and Braze also enable you to view the holistic performance of your campaigns across mobile and CTV devices. Vizbee SDK sends custom events to the Braze SDK that can be viewed in your campaign reports from the Braze console. For integration instructions, check out the documentation [here] [3].
 

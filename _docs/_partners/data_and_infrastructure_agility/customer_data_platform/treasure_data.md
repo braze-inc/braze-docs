@@ -9,7 +9,7 @@ search_tag: Partner
 
 ---
 
-# Treasure data
+# Treasure Data
 
 > [Treasure Data][4] is the only enterprise Customer Data Platform (CDP) that drives relevant customer experiences by harmonizing Data, Insights, and Engagement to work in perfect unison. Treasure Data empowers brands to give millions of their customers and potential customers the feeling that each one is the one and only. Armed with these actionable indicators, CX Teams, including Marketing, Sales, and Customer Service can effectively optimize spend, and personalize omnichannel interactions across the entire customer journey.
 
@@ -22,7 +22,7 @@ Treasure Data supports the Braze platform by allowing you to write job results f
 
 ## Requirements
 
-| requirement | origin | access | description |
+| Requirement | Origin | Access | Description |
 |---|---|---|---|
 | Braze API Key | Braze | You will need to create a new API Key.<br><br>This can be created in the __Developer Console -> API Settings -> Create New API Key__ with __users.track__, __users.delete__, __users.alias.new__, __users.identify__ permissions. | These API keys support the current feature to synchronize Treasure Data profiles to Braze, including: mapping external IDs, Upload Tracking, and opt-out  |
 | Braze REST Endpoint | Braze | [Braze REST Endpoint List][1] | Your REST Endpoint URL. Your endpoint will depend on the Braze URL for your instance. |
@@ -33,11 +33,11 @@ Treasure Data supports the Braze platform by allowing you to write job results f
 
 For more detail, check out the document on [Treasure Data Product Documentation][5]
 
-### Step 1: obtain rest api key in braze
+### Step 1: Obtain REST API key in Braze
 
 Obtain the required Braze endpoints and keys detailed in the previous requirements section. 
 
-### Step 2: create a new connection
+### Step 2: Create a new connection
 In Treasure Data, you must create and configure the data connection before running your query. As part of the data connection, you must provide authentication to access the integration.
 
 1. First, open the Treasure Data console and navigate to the __Catalog__ under the __Integrations Hub__.
@@ -47,7 +47,7 @@ In Treasure Data, you must create and configure the data connection before runni
 
 ![Treasure Data Authentication Dialog][2]{: style="max-width:80%;"}
 
-### Step 3: define your query
+### Step 3: Define your query
 1. Navigate to __Queries__ under your __Data Workbench__.
 2. Select a query for which you would like to export data.
 3. Run the query to validate the result set.
@@ -58,7 +58,7 @@ In Treasure Data, you must create and configure the data connection before runni
 
 ## Customization
 
-the export results parameters are described in the following table.
+The Export Results parameters are described in the following table.
 
 ![Export Configuration Dialog][3]{: style="max-width:80%;"}
 
@@ -76,7 +76,7 @@ You can synchronize your consolidated customer profiles from Treasure Data into 
 
 ## Webhooks
 
-treasure data users can ingest data through the public rest api. you can use treasure data to create custom webhooks into your data. to learn more, visit the [treasure data documentation][6]
+Treasure Data users can ingest data through the public REST API. You can use Treasure Data to create custom webhooks into your data. To learn more, visit the [Treasure Data Documentation][6]
 
 [6]: https://docs.treasuredata.com/display/public/PD/Postback+API
 [1]: {{site.baseurl}}/developer_guide/rest_api/basics/#endpoints)

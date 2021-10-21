@@ -10,7 +10,7 @@ search_tag: Partner
 
 # AccuWeather
 
-> if you have an accuweather&trade; account, you can enrich and personalize your marketing campaigns, as well as automate translations, through [connected content][60].
+> If you have an AccuWeather account, you can enrich and personalize your marketing campaigns, as well as automate translations, through [Connected Content][60].
 
 Here are all of the AccuWeather APIs you can reference within your Braze campaigns:
 

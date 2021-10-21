@@ -10,7 +10,7 @@ tool: Currents
 
 ---
 
-# Mixpanel for currents
+# Mixpanel for Currents
 
 > [Mixpanel](https://mixpanel.com/) is a business analytics platform. You can export events from your Braze integration to Mixpanel in order to perform deeper analysis. Data collected is used to build custom reports and measure user engagement and retention.
 
@@ -35,7 +35,7 @@ You can export two types of events to Mixpanel: "Message Engagement Events" cons
 
 Please contact your Account Manager or [open a support ticket][support] if you need access to additional event entitlements.
 
-## Mixpanel cohort import
+## Mixpanel Cohort Import
 
 Use Braze and Mixpanel's partnership to configure your integration and import Mixpanel cohorts directly into Braze for retargeting, creating a full loop of data from one system to another. This allows you to perform a deeper analysis using Mixpanel and seamlessly execute on your strategies using Braze.
 
@@ -371,7 +371,7 @@ Behavior for `dispatch_id` differs between Canvas and campaigns because Braze tr
 }
 ```
 
-### Content card events
+### Content Card events
 
 ```json
 // Content Card Send
@@ -409,7 +409,7 @@ Behavior for `dispatch_id` differs between Canvas and campaigns because Braze tr
 }
 ```
 
-### News feed events
+### News Feed events
 
 ```json
 // News Feed Card Impression

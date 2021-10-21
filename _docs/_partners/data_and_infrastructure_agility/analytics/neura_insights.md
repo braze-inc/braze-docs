@@ -10,11 +10,11 @@ search_tag: Partner
 
 ---
 
-# Neura insights
+# Neura Insights
 
 > [Neura][1] helps leading mobile brands drive higher customer engagement & retention with AI-powered, real-world behavioral insights and advanced campaign segmentation & triggering.
 
-*Leverage [Neura insights][2] to uncover the relationships between each user’s real-world behavior and the actions they take in your app in order to find the best moment to engage with each user.*
+*Leverage [Neura Insights][2] to uncover the relationships between each user’s real-world behavior and the actions they take in your app in order to find the best moment to engage with each user.*
 
 ![Insights Bubble Graph][9]
 
@@ -71,7 +71,7 @@ mNeuraApiClient.setExternalId(USER_ID)
   {% endtab %}
 {% endtabs %}
 
-## Sending engagement data to neura
+## Sending engagement data to Neura
 
 Neura's generic data import allows for two types of import methods:
 

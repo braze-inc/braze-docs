@@ -8,7 +8,7 @@ search_tag: Partner
 
 ---
 
-# Facebook messenger
+# Facebook Messenger
 
 > [Facebook Messenger](https://developers.facebook.com/docs/messenger-platform/) is one of the world’s most popular instant messaging platforms, used by nearly one billion monthly active users. Through this platform, brands can create engaging Chatbots to interact intelligently and automatically with their customers.
 
@@ -18,7 +18,7 @@ The Facebook Messenger platform is intended for “non-promotional messages that
 
 ## Prerequisites
 
-please note that facebook does not allow usage of the messenger platform to send marketing messages. in addition, to send messages to users who are not test users of your facebook app, your app will need to pass facebook's [app review](https://developers.facebook.com/docs/messenger-platform/app-review).
+Please note that Facebook does not allow usage of the Messenger Platform to send marketing messages. In addition, to send messages to users who are not test users of your Facebook App, your App will need to pass Facebook's [App Review](https://developers.facebook.com/docs/messenger-platform/app-review).
 
 | Requirement| Origin| Access| Description|
 | ---| ---| ---|
@@ -33,9 +33,9 @@ You need the user's explicit permission for messages from your page.
 
 ## Integration
 
-read this quick guide to set up your facebook messenger webhook. braze also offers a full tutorial for creating a messenger bot with example code in a [github repository](https://github.com/appboy/appboy-fb-messenger-bot)!
+Read this quick guide to set up your Facebook Messenger Webhook. Braze also offers a full tutorial for creating a Messenger bot with example code in a [GitHub repository](https://github.com/Appboy/appboy-fb-messenger-bot)!
 
-### Step 1: collect your psids
+### Step 1: Collect your PSIDs
 
 In order to send messages on Facebook Messenger, you need to collect your users' page-specific IDs (PSIDs) in order to identify your user and interact with them consistently.
 
@@ -70,13 +70,13 @@ __What do I do with it?__
 
 Once you are confident that you are receiving PSIDs, send it to Braze as a custom attribute.
 
-### Step 2: send to braze as a custom attribute
+### Step 2: Send to Braze as a custom attribute
 
 Coordinate and share this with your developer to send the PSIDs to Braze as a [custom attribute]({{site.baseurl}}/user_guide/Data_and_Analytics/Custom_Data/Custom_Attributes/#custom-attributes). PSIDs are strings that can be accessed by making an [API call](https://developers.facebook.com/docs/messenger-platform/reference/send-api).
 
 ## Usage
 
-from __templates & media__, go to webhook templates and choose the facebook messenger webhook template.
+From __Templates & Media__, go to Webhook Templates and choose the Facebook Messenger Webhook Template.
 
 1. Enter your Template Name, add teams, and add tags.
 2. Enter your message or choose a message template from [those made available by Facebook](https://developers.facebook.com/docs/messenger-platform/reference/webhook-events/messages). You can also choose your message [type](https://developers.facebook.com/docs/messenger-platform/send-messages#message_types) or [tag](https://developers.facebook.com/docs/messenger-platform/send-messages/message-tags).
@@ -91,7 +91,7 @@ Before you send your message, test your webhook. Make sure your Messenger ID is 
 
 If you receive the message successfully, you can start to configure its delivery settings.
 
-#### Targeting facebook messenger users
+#### Targeting Facebook messenger users
 
 If you are not sending messages using users' phone numbers and plan on sending Messenger messages repeatedly, you should [create a segment][62] for all users for whom the Messenger ID exists as a custom attribute and turn on [Analytics Tracking][61] to track your Messenger subscription rates over time. If you choose not to create a specific segment for Messenger subscribers, make sure to include a filter for Messenger ID existing to avoid errors:
 

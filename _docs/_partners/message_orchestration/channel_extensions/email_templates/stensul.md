@@ -10,19 +10,19 @@ search_tag: Partner
 
 # Stensul
 
-[stensul](https://stensul.com/) empowers email marketers to easily create mobile-responsive emails across channels, at scale.
+[Stensul](https://stensul.com/) empowers email marketers to easily create mobile-responsive emails across channels, at scale.
 
 Build responsive, on-brand emails in Stensul before sending them downstream to Braze, in real-time, for segmentation and targeting.
 
 ## Requirements
 
-requirement   | source | description
+Requirement   | Source | Description
 --------------|--------| -----
 Braze API Key | [Braze Platform](https://dashboard.braze.com/sign_in) | The API key must have the *Template's* permission enabled before use.
 
 ## Integration
 
-the export functionality from stensul to braze will allow users to send your html-formatted email as a new template within the braze platform.
+The export functionality from Stensul to Braze will allow users to send your HTML-formatted email as a new template within the Braze platform.
 
 Braze is integrated directly into the Stensul platform. Thus, after providing your Stensul Customer Success team with your Braze API key and cluster instance, the integration will be set up for you, allowing you to push your completed email from Stensul to Braze as outlined below.
 
@@ -39,6 +39,6 @@ Enter the `template name`, `subject`, and `preheader` for your email. Then, sele
 ![Stensul Upload Success]({% image_buster /assets/img_archive/stensul_upload_success.png %})
 
 ## Usage
-to use this integration, look for your new email template in [templates & media > email templates][1] in your braze account, or begin to create your email and choose your template from those presented.  
+To use this integration, look for your new email template in [Templates & Media > Email Templates][1] in your Braze account, or begin to create your email and choose your template from those presented.  
 
 [1]: {{site.baseurl}}/user_guide/message_building_by_channel/email/creating_an_email_template/

@@ -8,7 +8,7 @@ search_tag: Partner
 
 ---
 
-# Neura actions
+# Neura Actions
 
 > [Neura][1] helps leading mobile brands drive higher customer engagement & retention with AI-powered, real-world behavioral insights and advanced campaign segmentation & triggering.
 
@@ -75,7 +75,7 @@ mNeuraApiClient.setExternalId(USER_ID)
   {% endtab %}
 {% endtabs %}
 
-## Using neura with braze
+## Using Neura with Braze
 
 Once both SDKs are integrated, you can set up a campaign or Canvas in the Braze dashboard to be trigged by Neura Moments, which are available in the Braze platform as custom events.
 

@@ -10,7 +10,7 @@ search_tag: Partner
 
 # Remerge
 
-> remerge is purpose-built for app retargeting at scale, arming you with tools to efficiently segment app audiences and retarget users.
+> Remerge is purpose-built for app retargeting at scale, arming you with tools to efficiently segment app audiences and retarget users.
 
 Develop robust, cross-channel lifecycle marketing campaigns with the powers of Braze and Remerge combined—build segments on the Braze dashboard, then send via webhook to Remerge to retarget users through their mobile DSP.
 
@@ -22,7 +22,7 @@ For example, An unregistered user could receive a push campaign saying “Thanks
 
 One of the best ways to accomplish this is to use Braze as well as a retargeting partner specialized in mobile, such as Remerge. You want the retargeting partner to receive automated user info from Braze using webhooks. You’ll be able to leverage Braze’s targeting and triggering abilities to send events to Remerge, which could then be used to define retargeting campaign definitions in remerge.io.
 
-## Request url and body
+## Request URl and body
 
 For this webhook, all data is passed on alongside the HTTP URL as query string parameters. There are three parameters that need to be defined:
 

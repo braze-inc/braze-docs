@@ -10,13 +10,13 @@ search_tag: Partner
 
 # Singular
 
-> singular is a unified marketing analytics platform that delivers attribution, cost aggregation, creative reporting, and workflow automation.
+> Singular is a unified marketing analytics platform that delivers attribution, cost aggregation, creative reporting, and workflow automation.
 
 Singular allows you to import paid install attribution data to segment more intelligently within your lifecycle campaigns.
 
 ## Integration
 
-### step 1: integration requirements
+### Step 1: Integration requirements
 
 * This integration supports iOS and Android apps.
 * Your app will need Braze's SDK and Singular's SDK installed.
@@ -47,19 +47,19 @@ Braze will still store IDFA values for users that have opted-in if you are colle
 {% endtab %}
 {% endtabs %}
 
-### Step 2: getting the braze data import key
+### Step 2: Getting the Braze data import key
 
 In your Braze account, navigate to "Attribution" under "Technology Partners" and select "Singular". Here, you will find the REST Endpoint and generate your Braze Data Import Key. Once generated, you will be able to create a new key, or invalidate an existing one as needed. You will need to provide the Data Import Key and your REST Endpoint to your Singular Account Manager for the integration to be completed.<br><br>![Singular Image][4]{: style="max-width:70%;"}
 
-### Step 3: confirming the integration
+### Step 3: Confirming the integration
 
 Once Braze receives attribution data from Singular, the status connection indicator on "Technology Partners", then "Attribution" will change to green and a timestamp of the last successful request will be included. Note that this will not happen until we receive data about an __attributed__ install. Organic installs, which should be excluded from the Singular postback, are ignored by our API and are not counted when determining if a successful connection was established.
 
-## Facebook and twitter attribution data
+## Facebook and Twitter attribution data
 
 Attribution data for Facebook and Twitter campaigns is __not available through our partners__. These media sources do not permit their partners to share attribution data with third parties and, therefore, our partners __cannot send that data to Braze__.
 
-## Singular click tracking urls in braze (optional)
+## Singular click tracking URLs in Braze (optional)
 
 Using click tracking links in your Braze campaigns will allow you to easily see which campaigns are driving app installs and re-engagement. As a result, you'll be able to measure your marketing efforts more effectively and make data-driven decisions on where to invest more resources for the maximum ROI.
 

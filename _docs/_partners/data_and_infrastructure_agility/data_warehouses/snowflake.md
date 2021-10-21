@@ -17,7 +17,7 @@ Braze leverages Snowflake’s Data Exchange to build a presence, find new custom
 
 Learn more about this partnership [here](https://www.braze.com/perspectives/article/snowflake-partner-announcement)!
 
-## What is snowflake?
+## What is Snowflake?
 
 [Snowflake](https://docs.snowflake.net/manuals/user-guide/intro-key-concepts.html) is an analytic data warehouse provided as Software-as-a-Service (SaaS). Snowflake provides a data warehouse that is faster, easier to use, and far more flexible than traditional data warehouse offerings.
 
@@ -42,7 +42,7 @@ Read more about how Snowflake's Data Sharing works here: [Introduction to Secure
 
 ## Integration
 
-> if you're interested in this integration, reach out to your braze account or customer success manager and ask them to consult braze data strategy services on secure data sharing with snowflake. this will get the cogs going inside braze and we'll have your views set up in no time!
+> If you're interested in this integration, reach out to your Braze Account or Customer Success Manager and ask them to consult Braze Data Strategy Services on Secure Data Sharing with Snowflake. This will get the cogs going inside Braze and we'll have your views set up in no time!
 
 {% alert important %}
 In order to use the Braze Data Sharing feature, you must also be a Snowflake customer. This is because the data is shared within the Snowflake platform.
@@ -60,7 +60,7 @@ Once the share is visible in your instance (you need to be `ACCOUNTADMIN` role t
 
 In the context of Data Sharing, Braze is a [Data Provider](https://docs.snowflake.net/manuals/user-guide/data-sharing-intro.html#providers) - any Snowflake account that creates shares and makes them available to other Snowflake accounts to consume. You, our client, are a [Data Consumer](https://docs.snowflake.net/manuals/user-guide/data-sharing-intro.html#consumers) - any account that chooses to create a database from a share made available by a data provider.
 
-## Usage & visualization
+## Usage and visualization
 
 Once the data share is provisioned, you'll need to create a database from the Incoming Data Share, which will then make all the tables shared appear in your Snowflake instance and be queryable just like any other data you're storing in your instance. Keep in mind, however, that the shared data is ready only, and can only be queried, but not modified or deleted in any way.
 
@@ -100,10 +100,10 @@ Braze currently hosts all user-level data in the Snowflake AWS US East-1 and EU-
 ### Historical data
 Braze's historical event data in Snowflake only goes back to April of 2019. In the first few months of us storing data there, we made some product changes that may result in some of that data looking slightly different or having some null values (as we weren't passing data into every available field from the start.) It's best to assume that any results that include data prior to August 2019 may look slightly different from expectations.
 
-### PII and gdpr compliance
+### PII and GDPR compliance
 Nearly every event record we store includes a few fields that represent users' PII (Personally Identifiable Information). Some events may include data such as email address, phone number, device ID, language, gender, and location information. In the event of a user's request to be forgotten being submitted to Braze, we will null out those PII fields for any event belonging to those users. This way we're not removing the historical record of the event, but now the event can never be tied back to a specific individual.
 
-#### PII / non_pii tables - deprecated
+#### PII / NON_PII tables - deprecated
 In the past, Braze separated out columns that contained PII into separate tables that ended with _PII. Other columns were stored in tables that ended with _NON_PII. Those tables have since been deprecated, in favor of tables that contain all columns associated with an event. This change obviates the need to perform additional computation to get a complete view of an event. If you were using the old PII / NON_PII tables, please update your integration to use the new, unified tables.
 
 ### Speed, Performance, Cost of Queries

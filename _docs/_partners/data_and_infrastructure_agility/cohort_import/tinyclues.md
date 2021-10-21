@@ -10,13 +10,13 @@ search_tag: Partner
 
 # Tinyclues
 
-> [tinyclues](https://www.tinyclues.com/) is an audience-building feature that offers the capability to increase the number of campaigns and revenue without harming customer experience and analytics to track the performance of crm campaigns both online and offline.
+> [Tinyclues](https://www.tinyclues.com/) is an audience-building feature that offers the capability to increase the number of campaigns and revenue without harming customer experience and analytics to track the performance of CRM campaigns both online and offline.
 
 Together, the Braze and Tinyclues integration offers users a path to better CRM planning and strategy, allowing users to send more targeting campaigns, find new product opportunities, and elevate revenue using an incredibly user-friendly UI.
 
 ## Overview
 
-to integrate braze and tinyclues, you must export an existing tinyclues campaign and create a user cohort segment in the braze platform to filter future campaigns.
+To integrate Braze and Tinyclues, you must export an existing Tinyclues campaign and create a user cohort segment in the Braze platform to filter future campaigns.
 
 1. Configure the Tinyclues platform with the appropriate settings.
 2. Each time a campaign is executed on Tinyclues Action, the associated audience is automatically pushed to Braze.
@@ -30,16 +30,16 @@ to integrate braze and tinyclues, you must export an existing tinyclues campaign
 
 ## Implementation process
 
-### Step 1: get the braze data import key
+### Step 1: Get the braze data import key
 In your Braze account, navigate to __Technology Partners__ and select __Tinyclues__. Here, you will find your REST Endpoint and generate your Braze data import key. 
 
 ![Tinyclues][6]{: style="max-width:70%;"}
 
-### Step 2: share api key with tinyclues data operations
+### Step 2: Share API key with Tinyclues data operations
 
 You will need to provide the data import key and your REST endpoint to the Tinyclues Data Operations Team for the integration to be complete. Tinyclues will then establish the connection and reach out to you once the setup is complete. 
 
-### Step 3: export a campaign from the tinyclues platform
+### Step 3: Export a campaign from the Tinyclues platform
 
 Each time you want to create a cohort of Tinyclues users to use in Braze, you'll have to first export it from the Tinyclues platform.
 
@@ -49,7 +49,7 @@ In Tinyclues, select the campaign(s) you want to export and click __Export Campa
 
 Upon export, the audience will be automatically uploaded to your Braze account.
 
-### Step 4: use the tinyclues custom audience in braze
+### Step 4: Use the Tinyclues custom audience in Braze
 
 Next on the Braze platform, navigate to __Segments__, name your Tinyclues cohort segment, and select __Tinyclues Cohorts__ as your filter. From here, you can choose which Tinyclues cohort you wish to include. Once created, you will be able to select your Tinyclues cohort segment as an audience filter when creating a campaign or Canvas.
 
@@ -58,14 +58,15 @@ Having trouble locating your cohort? Check out our [troubleshooting](#troublesho
 ![Tinyclues][3]{: style="max-width:70%;"}<br><br>
 ![Tinyclues][4]{: style="max-width:70%;"}
 
-### Step 5: retrieve your audience in braze
+### Step 5: Retrieve your audience in Braze
 
 On the Braze platform, create a campaign or Canvas. On the target audience step, select the Tinyclues cohort segment you just built.
 
 ![Tinyclues][5]{: style="max-width:80%;"}
 
 ## Troubleshooting
-are you having trouble finding the right cohort within the list? verify the name in the tinyclues ui by clicking on the campaign and checking the "export file name".
+
+Are you having trouble finding the right cohort within the list? Verify the name in the Tinyclues UI by clicking on the campaign and checking the "Export File Name".
 
 ![Tinyclues][2]{: style="max-width:30%;"}
 

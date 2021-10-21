@@ -11,21 +11,21 @@ search_tag: Partner
 
 # Crowdin
 
-> crowdin is a cloud-based software for localization management. braze integration with crowdin allows you to translate email templates and content blocks. you can synchronize content from your braze account to your crowdin project and add translations back to braze.
+> Crowdin is a cloud-based software for localization management. Braze integration with Crowdin allows you to translate email templates and content blocks. You can synchronize content from your Braze account to your Crowdin project and add translations back to Braze.
 
 Using Crowdin, you can translate your Android and iOS apps, website, store screenshots, and other content. Use features for improving translation quality, adding translation context, team cooperation, translation memory, workflow automation, integrations and plugins, and much more. You can translate your content with your in-house team, a translation agency, or using machine translation engines.
 
 ## Prerequisites
 
-to connect your braze account with <a href="https://accounts.crowdin.com/register" target="_blank">crowdin</a> or <a href="https://accounts.crowdin.com/register" target="_blank">crowdin enterprise</a>, you’ll first need to sign up and create your translation project.
+To connect your Braze account with <a href="https://accounts.crowdin.com/register" target="_blank">Crowdin</a> or <a href="https://accounts.crowdin.com/register" target="_blank">Crowdin Enterprise</a>, you’ll first need to sign up and create your translation project.
 
-## Generate your credentials in braze
+## Generate your credentials in Braze
 
 To connect your Braze account with Crowdin, you need to provide two authorization elements: 
 * Braze REST API Key 
 * Braze REST Endpoint
 
-### Create braze rest api key
+### Create Braze REST API key
 
 To create a new Braze REST API Key in your Braze account, follow these steps:
 
@@ -39,13 +39,13 @@ These permissions represent the content types you’ll be able to transfer to Cr
 
 After this, you’ll see your new REST API Key in the REST API Keys section list. Copy your new REST API Key from the Identifier column.<br><br>![Copy REST API Key Identifier][1]
 
-### Copy braze rest endpoint
+### Copy Braze REST endpoint
 
 Depending on the instance your Braze account is provisioned to, copy the respective Braze REST Endpoint from the <a href="https://www.braze.com/docs/api/basics/#endpoints" target="_blank">Endpoints table</a>.
 
 For example, if your Braze account is provisioned to the instance **US-01**, your Braze REST Endpoint is the following:<br> `rest.iad-01.braze.com`
 
-## Set up braze app in crowdin/crowdin enterprise
+## Set up Braze app in Crowdin/Crowdin Enterprise
 {% tabs %}
 {% tab Crowdin %}
 To set up the Braze app in Crowdin, follow these steps:
@@ -72,7 +72,7 @@ To set up the Braze app in Crowdin Enterprise, follow these steps:
 {% endtab %}
 {% endtabs %}
 
-## Add your content to crowdin/crowdin enterprise
+## Add your content to Crowdin/Crowdin Enterprise
 
 Once you provide your Braze credentials, you’ll see two panels. To sync the files for translation from your Braze account, select the needed content on the right panel, and click **Sync to Crowdin**.
 
@@ -80,7 +80,7 @@ In the Editor mode in Crowdin, the content synced from your Braze account can be
 
    ![Crowdin Editor Email Preview][2]
 
-## Add translations to braze
+## Add translations to Braze
 
 As soon as translations are completed, open the Braze app in Crowdin, select the translated files (for each file, you can choose either all target languages or only specific ones) on the left panel, and click **Sync to Braze**.
 

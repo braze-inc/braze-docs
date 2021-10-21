@@ -9,7 +9,7 @@ page_order: 1
 
 ---
 
-# Facebook audience export
+# Facebook Audience export
 
 Braze provides the ability to manually export your users from the Braze Segments page. This is a one-time, static audience export and will only create new Facebook Custom Audiences.
 
@@ -37,7 +37,7 @@ Facebook Custom Audiences Terms|[Facebook][3]| You have accepted Facebook's Cust
 
 ## Integration
 
-### connect to facebook
+### Connect to Facebook
 
 In the Braze dashboard, go to __Technology Partners__ and select __Facebook__. In the Facebook Audience Export module, click __Connect Facebook__.
 
@@ -63,7 +63,7 @@ For customers that have previously undergone the Facebook App Review process for
 <br><br>The new Facebook oAuth configuration will also apply to [Facebook exports via Segments]({{site.baseurl}}/partners/message_orchestration/additional_channels/retargeting/facebook/#prerequisites). 
 {% endalert %}
 
-### Exporting your users into facebook
+### Exporting your users into Facebook
 
 Braze's Facebook Audience Export is accessible through the Segments page. Click on the gear next to the segment that you'd like to export. Then click on __Export as Facebook Audience__.
 
@@ -90,7 +90,7 @@ Due to user privacy reasons, Facebook doesn't allow you to see:
 - Size of the Custom Audience. [Learn more.](https://marketingland.com/exclusive-facebook-will-no-longer-show-audience-reach-estimates-for-custom-audiences-after-vulnerability-detected-236923)
 {% endalert %}
 
-#### Lookalike audiences
+#### Lookalike Audiences
 
 Once you've successfully exported a segment as a Facebook Audience, you can create additional groups using Facebook's [Lookalike Audiences][4]. This feature looks at the demographics, interests, and other attributes of your chosen audience and creates a new audience of people with similar attributes.
 

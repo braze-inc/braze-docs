@@ -310,7 +310,7 @@ Here are some example event payloads for various other events that are not assoc
 
 ## Authentication
 
-if required, authentication will be performed by passing a token in the http `authorization` header, via the `bearer` authorization scheme, as specified in [rfc 6750](https://tools.ietf.org/html/rfc6750#section-2.1). this is also automatically forwards-compatible with any custom authentication scheme we may choose to implement in the future, since using the `authorization` header would allow us to switch over to a custom (unique to braze) key-value pair authorization scheme conforming to [rfc 7235](https://tools.ietf.org/html/rfc7235) (which is how e.g. aws's custom auth scheme works) if we so choose in the future.
+If required, authentication will be performed by passing a token in the HTTP `Authorization` header, via the `Bearer` authorization scheme, as specified in [RFC 6750](https://tools.ietf.org/html/rfc6750#section-2.1). This is also automatically forwards-compatible with any custom authentication scheme we may choose to implement in the future, since using the `Authorization` header would allow us to switch over to a custom (unique to Braze) key-value pair authorization scheme conforming to [RFC 7235](https://tools.ietf.org/html/rfc7235) (which is how e.g. AWS's custom auth scheme works) if we so choose in the future.
 
 As per RFC 6750, the token will be a Base64-encoded value of at least one character. (Obviously though, we must vet our partners and customers so that we know that they are unlikely to choose incredibly weak tokens.) A notable quirk of RFC 6750 is that it allows the token to contain the following characters in addition to the normal Base64 characters: '-', '.', '_', and '~'. Since the exact contents of the token make absolutely no difference to any of our systems, we won't care whether our partners decide to include these characters in their token or not.
 
@@ -324,7 +324,7 @@ So for example, if the API token is `0p3n5354m3==`, the Authorization header wil
 
 ## Versioning
 
-all requests from our integratable http connectors will be sent with a custom header designating the version of the currents request being made:
+All requests from our Integratable HTTP Connectors will be sent with a custom header designating the version of the Currents request being made:
 
 `Braze-Currents-Version: 1`
 

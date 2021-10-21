@@ -8,7 +8,7 @@ search_tag: Partner
 
 ---
 
-# About certona
+# About Certona
 
 > Certona's platform drives personalization across the customer lifecycle. From highly individualized email campaigns to machine-learning-powered product recommendations, Certona ensures that you’re harnessing the power of personalization.
 
@@ -16,7 +16,7 @@ Use Certona with Braze's Connected Content partner to easily insert content reco
 
 ## Prerequisites
 
-| requirement| origin| access| description|
+| Requirement| Origin| Access| Description|
 | ---| ---| ---|
 |Certona Account | Certona | https://manage.certona.com/ | You'll need this account to access other resources and tools needed to incorporate and leverage Certona data with Braze. |
 | Certona REST API Endpoint | Certona | https://manage.certona.com/ | This endpoint is used directly in your message (in the Braze Campaign Message Composer) to pull recommended content based on User ID. |
@@ -24,7 +24,7 @@ Use Certona with Braze's Connected Content partner to easily insert content reco
 
 ## Integration
 
-use certona's rest api to insert personalized content into your messages. once you have your certona account and certona is integrated into your app, use this template to call content into your messages.
+Use Certona's REST API to insert personalized content into your messages. Once you have your Certona account and Certona is integrated into your app, use this template to call content into your messages.
 
 {% raw %}
 

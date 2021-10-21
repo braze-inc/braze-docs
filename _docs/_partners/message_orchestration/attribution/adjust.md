@@ -10,13 +10,13 @@ search_tag: Partner
 
 # Adjust
 
-> [adjust](https://www.adjust.com/) is a mobile attribution and analytics company that combines attribution for advertising sources with advanced analytics for a comprehensive picture of business intelligence.
+> [Adjust](https://www.adjust.com/) is a mobile attribution and analytics company that combines attribution for advertising sources with advanced analytics for a comprehensive picture of business intelligence.
 
 Adjust allows you to import non-organic install attribution data to segment more intelligently within your lifecycle campaigns.
 
 ## Requirements
 
-this integration supports ios and android apps.
+This integration supports iOS and Android apps.
 
 | Requirement | Description |
 |---|---|
@@ -49,7 +49,7 @@ If you are planning to send post-install events from Adjust into Braze, you will
 
 ## Integration
 
-to integrate braze with adjust, you must configure braze in adjust's dashboard.
+To integrate Braze with Adjust, you must configure Braze in Adjust's dashboard.
 
 1. In Adjust’s dashboard, navigate to __App Settings__ and navigate to __Partner Setup__, then __Add Partners__.<br><br>
 2. Select __Braze (formerly Appboy)__.<br><br>
@@ -74,11 +74,11 @@ Assuming you configure your integration as suggested above, Braze will map Adjus
   At this time, Braze only receives non-organic install attribution data from these attribution partners. This means that organic data will **not** appear as an attributed source within Braze.
 {% endalert %}
 
-## Facebook and twitter attribution data
+## Facebook and Twitter attribution data
 
 Attribution data for Facebook and Twitter campaigns is __not available through our partners__. Facebook and Twitter do not permit their partners to share attribution data with third parties and, therefore, our partners __cannot send that data to Braze__.
 
-## Adjust click tracking urls in braze (optional)
+## Adjust click tracking URls in Braze (optional)
 
 Using click tracking links in your Braze campaigns will allow you to easily see which campaigns are driving app installs and re-engagement. As a result, you'll be able to measure your marketing efforts more effectively and make data-driven decisions on where to invest more resources for the maximum ROI.
 

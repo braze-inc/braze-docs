@@ -16,7 +16,7 @@ You can access Inkit's services through Braze's webhook feature and send mail to
 
 ## Requirements
 
-|requirement| origin| access| description|
+|Requirement| Origin| Access| Description|
 | ---| ---| ---|
 | Inkit API Key | Inkit | [Inkit Dashboard](https://app.inkit.io/#/account/integrations) | This key will enable you to connect your Braze and Inkit accounts.|
 | Inkit Template ID | Inkit | Found within the URL for each template. | This key will enable you to send your template to Braze. <br> Within the URL `https://app.inkit.io/#/templates/design/bd9b0b8c-c47b-40ae-8787-80dd76f6d2bb`, the Template ID is `bd9b0b8c-c47b-40ae-8787-80dd76f6d2bb`. |
@@ -26,9 +26,9 @@ You can access Inkit's services through Braze's webhook feature and send mail to
 
 ## Integration
 
-you will need to use both your inkit and braze accounts to use the inkit integration.
+You will need to use both your Inkit and Braze accounts to use the Inkit integration.
 
-### Step 1: create a webhook template in braze
+### Step 1: Create a webhook template in Braze
 
 You can create this from the **Templates & Media** section, or create a new webhook campaign in Braze.
 
@@ -40,7 +40,7 @@ Once you have selected the Inkit webhook template, you should see the following:
 - `Request Body`: Raw Text
 - `HTTP Method`: POST
 
-### Step 2: fill out your template
+### Step 2: Fill out your template
 
 Please ensure that your Liquid matches the proper custom attributes associated with the required and optional fields listed below. You can also add custom data fields to any request.
 
@@ -77,7 +77,7 @@ Inkit also requires a `HTTP Header` for authorization that includes your Inkit A
 
 {% endraw %}
 
-### Step 3: preview your request
+### Step 3: Preview your request
 
 You will see that your raw text automatically highlights if it is an applicable Braze tag. You must have `street`, `unit`, `state`, and `zip` set up as [custom attributes][3] to send this Webhook.
 
@@ -91,7 +91,7 @@ See Inkit's integration docs [here][2].
 
 ## Usage
 
-if you hadn't created this in `templates & media`, you can go to `campaigns`, then click `+ create campaign`. select "webhook" and choose your template from the "saved webhook template" list. create your [webhook][6]!
+If you hadn't created this in `Templates & Media`, you can go to `Campaigns`, then click `+ Create Campaign`. Select "Webhook" and choose your template from the "Saved Webhook Template" list. Create your [Webhook][6]!
 
 ![Inkit Usage][4]{: height="70%" width="70%"}
 

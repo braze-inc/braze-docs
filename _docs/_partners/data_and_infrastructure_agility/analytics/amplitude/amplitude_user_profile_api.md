@@ -9,7 +9,7 @@ search_tag: Partner
 
 ---
 
-# Amplitude user profile api endpoints
+# Amplitude user profile API endpoints
 
 > Amplitude's User Profile API serves Amplitude user profiles. This includes user properties, computed user properties, a list of cohort IDs of cohorts that include the user, and recommendations.
 
@@ -40,7 +40,7 @@ The following table lays out the parameters you can use in your calls to the Use
 | `last_updated` | Timestamp of when this recommendation was last generated and synced. |
 {: .reset-td-br-1 .reset-td-br-2}
 
-## Common amplitude endpoints
+## Common Amplitude endpoints
 
 ### Get a recommendation
 
@@ -149,7 +149,7 @@ The following table lays out the parameters you can use in your calls to the Use
 }
 ```
 
-### Get cohort ids
+### Get cohort IDs
 
 #### Endpoint
 {% raw %}

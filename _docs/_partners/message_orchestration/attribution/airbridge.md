@@ -10,20 +10,20 @@ search_tag: Partner
 
 # Airbridge
 
-> airbridge offers people-based attribution and incrementality measurement to measure and analyze true marketing effectiveness across devices, identities, and platforms.
+> Airbridge offers people-based attribution and incrementality measurement to measure and analyze true marketing effectiveness across devices, identities, and platforms.
 
 With Airbridge and Braze, you can pass all organic and non-organic install attribution data to Braze to build more personalized marketing campaigns and understand exactly where users were acquired.
 
 ## Integration
 
-to learn more about airbridge and braze integration, please visit the [airbridge documentation](https://developers.airbridge.io/v1.0-en-us/docs/braze).
+To learn more about Airbridge and Braze integration, please visit the [Airbridge documentation](https://developers.airbridge.io/v1.0-en-us/docs/braze).
 
-### Step 1: integration requirements
+### Step 1: Integration requirements
 
 * This integration supports iOS and Android apps.
 * Your app will need Braze's SDK and Airbridge's SDK installed.
 
-### Step 2: including the code snippet
+### Step 2: Including the code snippet
 
 Integrating Airbridge to Braze will be made via SDK-to-SDK. Attribution Data collected by the Airbridge SDK will be transmitted to Braze via the Braze SDK. Include the following code snippet into your Android or iOS application.
 
@@ -197,7 +197,7 @@ Braze data points will be used when you send data marked as optional because it 
 | `attributedSubSubPublisher3` (Optional) | `airbridge_sub_id_3` | Custom User Attribute |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
 
-## Airbridge click tracking urls in braze (optional)
+## Airbridge click tracking URLs in Braze (optional)
 
 Using click tracking links in your Braze campaigns will allow you to easily see which campaigns are driving app installs and re-engagement. As a result, you'll be able to measure your marketing efforts more effectively and make data-driven decisions on where to invest more resources for the maximum ROI.
 

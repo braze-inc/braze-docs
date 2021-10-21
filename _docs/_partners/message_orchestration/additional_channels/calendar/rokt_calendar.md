@@ -8,7 +8,7 @@ search_tag: Partner
 
 ---
 
-# Rokt calendar
+# Rokt Calendar
 
 > Rokt Calendar is a dynamic calendar marketing technology that enables brands to push 1:1 events and promotional communications, in the form of calendar events and notifications, across a proprietary network of subscriber calendars.
 
@@ -20,7 +20,7 @@ Rokt Calendar provides Braze customers the ability to align their personalized m
 
 ## Prerequisites
 
-| requirement | origin | who | description |
+| Requirement | Origin | Who | Description |
 | ----------- | -------| --- | ----------- |
 | Rokt Calendar Account | Rokt Calendar | Rokt Calendar Account Manager | A client-specific Rokt Calendar account will be set up. |
 | Calendar Setup | Rokt Calendar | Rokt Calendar Account Manager |  A Calendar will be set up to reflect the needs of the client's context and settings: <br>- Merge Flag<br>- SubscriberID fallback flag<br>- Email Capture if Needed |
@@ -44,7 +44,7 @@ In order to send calendar events from Canvas using the Rokt Calendar integration
 | Promote the Calendar | Customer | Customer | In order to build an audience of calendar subscribers, you’ll need to promote the calendar to your audience so that they know where/how to subscribe. <br><br>Calendar promotion examples:<br>- Posts on social media<br>- Email newsletters and updates<br>- Blog posts<br>- In-app notifications |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4}
 
-### Audience segmentation in braze
+### Audience segmentation in Braze
 
 When Rokt either creates a new user or matches an existing subscriber with a Braze user, Rokt will send the following subscription attributes you can filter within Braze:
 
@@ -70,7 +70,7 @@ When Rokt either creates a new user or matches an existing subscriber with a Bra
 
 In addition, Rokt will also trigger a `subscribe` custom event as soon as the user has subscribed to your Rokt calendar that can be used either in Braze segmentation or be used as a trigger for a campaign or Canvas step.
 
-## Using rokt calendar in your braze campaigns & canvases
+## Using Rokt Calendar in your Braze campaigns and Canvases
 
 Within Braze, you can set up a webhook campaign or a webhook within a Canvas to either:
 
@@ -95,17 +95,17 @@ Before you get started, the fields below detail the information that can be cust
 {% tab Send a New Event %}
 ## Send a new event
 
-### Step 1: create a webhook template in braze
+### Step 1: Create a webhook template in Braze
 
 To create a new Rokt Calendar Webhook Template you can either navigate to **Templates & Media** or create a new webhook campaign via the dashboard. 
 
 From the list of Templates, select **Blank Template**.
 
-### Step 2: fill out your template
+### Step 2: Fill out your template
 
 The Blank Webhook template consists of two main components, the compose and settings tab. Below we will break down the components of each tab and what settings you should set.
 
-#### Step 2a: webhook - settings
+#### Step 2a: Webhook - settings
 
 Navigate to the settings tab and edit the __Request Header__ and __HTTP Method__ fields with the corresponding text segments.
 
@@ -120,7 +120,7 @@ Navigate to the settings tab and edit the __Request Header__ and __HTTP Method__
 | POST |
 {: .reset-td-br-1 .reset-td-br-2}
 
-#### Step 2b: webhook - compose
+#### Step 2b: Webhook - compose
 
 Complete the setup by navigating to the Compose tab and define the __Webhook URL__ and edit the contents of the __Request Body__ based on the attribute and field tables shown above. 
 
@@ -164,7 +164,7 @@ For a list of valid time zones see [https://roktcalendar-api.readme.io/docs/time
 
 {% endalert %}
 
-### Step 3: preview your request
+### Step 3: Preview your request
 
 You will see that your raw text automatically highlights if it is an applicable Braze tag.
 
@@ -177,17 +177,17 @@ Remember to save your template before leaving the page!
 
 ## Update an existing event
 
-### Step 1: create a webhook template in braze
+### Step 1: Create a webhook template in Braze
 
 To create a new Rokt Calendar Webhook Template you can either navigate to **Templates & Media** or create a new webhook campaign via the dashboard. 
 
 From the list of Templates, select **Blank Template**.
 
-### Step 2: fill out your template
+### Step 2: Fill out your template
 
 The Blank Webhook template consists of two main components, the compose and settings tab. Below we will break down the components of each tab and what settings you should set.
 
-#### Step 2a: webhook - settings
+#### Step 2a: Webhook - settings
 
 Navigate to the settings tab and edit the __Request Header__ and __HTTP Method__ fields with the corresponding text segments.
 
@@ -202,7 +202,7 @@ Navigate to the settings tab and edit the __Request Header__ and __HTTP Method__
 | POST |
 {: .reset-td-br-1}
 
-#### Step 2b: webhook - compose
+#### Step 2b: Webhook - compose
 
 Complete the setup by navigating to the Compose tab and define the __Webhook URL__ and edit the contents of the __Request Body__ based on the attribute and field tables shown above. 
 
@@ -244,7 +244,7 @@ For a list of valid time zones see [https://roktcalendar-api.readme.io/docs/time
 
 {% endalert %}
 
-### Step 3: preview your request
+### Step 3: Preview your request
 
 You will see that your raw text automatically highlights if it is an applicable Braze tag.
 

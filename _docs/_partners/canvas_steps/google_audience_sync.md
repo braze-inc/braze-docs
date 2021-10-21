@@ -7,7 +7,7 @@ Tool:
   - Canvas
 ---
 
-# Audience sync to google 
+# Audience Sync to Google 
 
 The Braze Audience Sync to Google integration enables brands to extend the reach of their cross-channel customer journeys to Google Search, Google Shopping, Gmail, YouTube, and Google Display. Using your first-party customer data, you can securely deliver ads based upon dynamic behavioral triggers, segmentation, and more. Any criteria you'd typically use to trigger a message (e.g., push, email, SMS, etc.) as part of a Braze Canvas can be used to trigger an ad to that user via Google's [Customer Match](https://support.google.com/google-ads/answer/6379332?hl=en).
 
@@ -20,7 +20,8 @@ __Common use cases for syncing Custom Audiences include:__
 __Please note:__ This feature gives brands the option to control what specific first-party data is shared with Google. At Braze, the integrations with which you can and cannot share your first-party data are given the utmost consideration. To learn more about our Braze data privacy policy, please click [here](https://www.braze.com/privacy).
 
 ## Integration
-### integration requirements
+
+### Integration requirements
 
 You will need to ensure that you have the following items created and/or completed before setting up your Google Audience Step in Canvas.
 
@@ -31,7 +32,7 @@ You will need to ensure that you have the following items created and/or complet
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
 
 ## Implementation process
-### Step 1: connect google account
+### Step 1: Connect Google account
 To get started, go to the Google Ads technology partner page and then select __Connect Google Ads__. 
 
 ![Google Sync][1]
@@ -52,13 +53,13 @@ If you plan to export iOS IDFA or Google Advertising IDs within your audience sy
 ![Google Sync]({% image_buster /assets/img/google_sync/google_sync5.png %})
 {% endalert %}
 
-### Step 2: add a google audience step in canvas
+### Step 2: Add a Google Audience step in Canvas
 
 Add a step in your Canvas, select the dropdown at the top of the step, and select the __Google Audience__ step.
 
 ![Google Sync][6]
 
-### Step 3: sync setup
+### Step 3: Sync setup
 
 Click on the __Custom Audience__ button to open the step editor.
 
@@ -96,13 +97,13 @@ Once you've configured your Google Audience step, select __Done__. Your Google A
 {% endtab %}
 {% endtabs %}
 
-### Step 4: launch canvas
+### Step 4: Launch Canvas
 
 Complete the remainder of your user journey within Canvas and then launch! If you have opted to create a new audience, Braze will first create the audience within Google and then add users as they reach this step in your Canvas. If you have selected to add or remove users from an existing audience, Braze will either add or remove users when they reach this step in their user journey.
 
 Users will then advance to the next step of the Canvas if there is one or exit the Canvas if it is the last step. 
 
-## User syncing & rate limit considerations
+## User syncing and rate limit considerations
 
 As users reach the Audience Sync Step, Braze will sync these users in near real-time while respecting Google Ads API rate limits. What this means in practice is that Braze will try to batch and process as many users every 5 seconds before sending these users to Google. 
 

@@ -10,7 +10,7 @@ search_tag: Partner
 
 # Jampp
 
-> jampp is a performance marketing platform for acquiring and retargeting mobile customers. it combines behavioral data with predictive and programmatic technology to generate revenue for advertisers by showing personal, relevant ads that inspire consumers to purchase for the first time, or more often.
+> Jampp is a performance marketing platform for acquiring and retargeting mobile customers. It combines behavioral data with predictive and programmatic technology to generate revenue for advertisers by showing personal, relevant ads that inspire consumers to purchase for the first time, or more often.
 
 Braze customers can integrate with Jampp by configuring the Braze webhook channel to stream events into Jampp. As a result, customers can add richer data sets to their retargeting initiatives with Jampp within the mobile advertising ecosystem.
 
@@ -41,13 +41,13 @@ Braze does not automatically collect the device IDFA/AAID so you must store thes
 
 # Integration
 
-### step 1: create a webhook template in braze
+### Step 1: Create a webhook template in Braze
 
 You can create this from the `Templates & Media` section, or create a new webhook campaign in Braze.
 
 ![Jampp_Webhook_Template][6]
 
-### Step 2: fill out your template
+### Step 2: Fill out your template
 
 For this webhook, all data is passed on alongside the HTTP URL as query string parameters. The following parameters that need to be defined:
 
@@ -91,7 +91,7 @@ The `Content-Type` should be pre-populated as a key-value pair within the webhoo
 
 ![Jampp Method][3]
 
-### Step 3: preview your request
+### Step 3: Preview your request
 
 To ensure the request is rendering properly for different users, use the Message Preview. A good approach is to preview the Webhook for both Android as well as iOS users. You can also send test requests for these users. If the request was successful the API responds with `HTTP 204`.
 

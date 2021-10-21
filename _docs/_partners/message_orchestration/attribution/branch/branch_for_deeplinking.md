@@ -26,7 +26,7 @@ Branch offers an install attribution feature to measure user acquisition. See ou
 
 Follow Branch's SDK Integration Guide to get up and running with your Branch and Braze integration. For additional use cases, see below.
 
-## Supporting ios universal links
+## Supporting iOS universal links
 
 To support sending iOS Universal Links as deep links from within Braze:
 

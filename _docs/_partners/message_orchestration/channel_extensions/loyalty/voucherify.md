@@ -10,7 +10,7 @@ search_tag: Partner
 
 # Voucherify
 
-> [voucherify](https://www.voucherify.io/) is an all-in-one promotional platform that allows for personalized campaigns and loyalty programs that drive user engagement and retention. 
+> [Voucherify](https://www.voucherify.io/) is an all-in-one promotional platform that allows for personalized campaigns and loyalty programs that drive user engagement and retention. 
 
 With the Braze and Voucherify integration, users can automatically send personalized coupons, gift cards, loyalty cards, referral codes, and more – all through their Braze account while tracking redemptions and campaign growth at every step.
 
@@ -22,19 +22,19 @@ Leverage the power of Voucherify and grow your promotional campaigns by sending 
 
 ## Prerequisites
 
-requirement   |origin| description
+Requirement   |Origin| Description
 --------------|------|-------------
 Braze API Key    |[Braze Settings](https://dashboard.braze.com/sign_in)| A REST API Key linked to your Braze account with the __users.track__ permission enabled
 
-## Send unique codes via connected content
+## Send unique codes via Connected Content
 
 Add unique codes to Braze campaigns via Braze’s Connected Content. You can use Voucherify discount coupons, gift card campaigns, loyalty cards, and referral codes with this feature.
 
-### Step 1: create a new campaign
+### Step 1: Create a new campaign
 
 From the Braze dashboard, create a new campaign, define your campaign name, choose an email template, and edit the email body.
 
-### Step 2: add code snippet to email body
+### Step 2: Add code snippet to email body
 
 Add a code snippet with code publication settings under the ```<body>``` tag in the email template.
 
@@ -69,13 +69,13 @@ After you copy the code to the email body, add your API keys and campaign id as 
 The {% raw %}`{{source_id}}`{% endraw %} parameter in the email body ensures that each customer will receive only one unique code in a single Braze email campaign. It prevents sending other codes to the same customer. Even if Braze unintentionally multiplies messages, the user will receive the same code that was published to them in the first message. If you'd like to change this effect, [go here](https://support.voucherify.io/article/113-braze#sourceid) to see other {% raw %}`{{source_id}}`{% endraw %} configurations. 
 {% endalert %}
 
-### Step 3: send messages with codes to your users
+### Step 3: Send messages with codes to your users
 
 Finish modeling the campaign settings and activate the workflow with Launch Campaign.
 
 Each user defined in the campaign Target Users will get an email with a unique code automatically assigned to their profile in Voucherify.
 
-### Step 4: track sent codes in voucherify
+### Step 4: Track sent codes in Voucherify
 ![CODE PUBLISHED]({% image_buster /assets/img/voucherify-cc-code-published.png %}){: style="float:right;max-width:30%;margin-bottom:15px;"}
 When a code gets to the user, it is published to their profile in Voucherify.
 
@@ -93,7 +93,7 @@ If a user redeems the code, you’ll see the redemption details in your Voucheri
 
 Braze custom attributes enable you to assign Voucherify unique coupons, gift cards, loyalty cards, and referral codes to users’ profiles in Braze. As a result, you can send attached codes and their attributes in email campaigns and share them with your users.
 
-### Step 1: connect your voucherify account with braze
+### Step 1: Connect your Voucherify account with Braze
 
 Copy the REST API Key from your Braze account. Your API key should have __user.track__ permissions.
 
@@ -103,7 +103,7 @@ Next, visit to the Integrations Directory in your Voucherify Dashboard, find Bra
 
 When both accounts are connected, you can start a new Voucherify distribution that assigns unique codes to the custom attributes in the users’ profiles in Braze.
 
-### Step 2: launch voucherify distribution
+### Step 2: Launch Voucherify distribution
 
 You can distribute codes to Braze using manual mode or define an automated workflow that triggers code delivery in response to your users’ actions.
 
@@ -141,7 +141,7 @@ Set an automated workflow that delivers codes to Braze in response to actions ta
 To set up an automatic workflow with Braze and Voucherify, [visit a Voucherify step-by-step tutorial](https://support.voucherify.io/article/19-how-does-the-distribution-manager-work).
 {% endtab %}
 {% endtabs %}
-### Step 3: use custom attribute with code in braze campaigns
+### Step 3: Use custom attribute with code in Braze campaigns
 ![CUSTOM ATTRIBUTE ASSIGNED]({% image_buster /assets/img/voucherify-custom-attribute.png %}){: style="float:right;max-width:30%;margin-left:15px;"}
 When the custom attribute with code is added, you can use it in Braze campaigns.
 
@@ -150,7 +150,7 @@ Edit your email body and add the custom attribute defined in the Voucherify dist
 When it's ready, you can see the code in your message preview.
 ![EMAIL PREVIEW WITH CUSTOM ATTRIBUTE]({% image_buster /assets/img/voucherify-email-preview-custom-attribute.png %})
 
-### Step 4: track sent codes in voucherify
+### Step 4: Track sent codes in Voucherify
 
 Each time a code gets to the user, it is assigned to their profile in Voucherify.
 
@@ -158,17 +158,17 @@ When a user redeems the code, you’ll see the redemption details in your Vouche
 
 ![REDEMPTION SUCCEED]({% image_buster /assets/img/voucherify-redemption.png %})
 
-## Upload voucherify codes to braze promo codes lists
+## Upload Voucherify codes to Braze promo codes lists
 
 Next to the Connected Content and custom attributes, you can share Voucherify codes using Braze Promo Codes snippet.
 
-### Step 1: export unique codes from voucherify campaign.
+### Step 1: Export unique codes from Voucherify campaign.
 
 Edit the CSV file and remove the name of the column to leave the list of codes only.
 
 ![REDEMPTION SUCCEED]({% image_buster /assets/img/voucherify-export-Codes.png %})
 
-### Step 2: create promotion code list in braze
+### Step 2: Create promotion code list in Braze
 ![CREATE PROMOTION LIST]({% image_buster /assets/img/voucherify-create-Promotion-Codes.png %}){: style="float:right;max-width:30%;margin-left:15px;"}
 Go to the Promotion Codes in the Braze Integrations section and click Create Promotion Code List.  
 
@@ -186,7 +186,7 @@ Upload the CSV file with Voucherify codes.
 
 When the import is done, click Save to confirm the list details.
  
-### Step 3: use code snippet in braze campaign
+### Step 3: Use code snippet in Braze campaign
 To use codes from the list in a Braze campaign, Copy Snippet and add it to the email body.
 
 ![COPY SNIPPET]({% image_buster /assets/img/voucherify-promotion-list-copy-snippet.png %}){: style="max-width:60%;"}

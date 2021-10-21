@@ -9,7 +9,7 @@ search_tag: Partner
 
 ---
 
-# Tealium audiencestream
+# Tealium AudienceStream
 
 > Tealium AudienceStream is an Omnichannel customer segmentation and real-time action engine. AudienceStream takes the data that flows into EventStream and creates visitor profiles that represent the most important attributes of your customers' engagement with your brand. 
 
@@ -17,7 +17,7 @@ Tealium AudienceStream visitor profiles are segmented by shared behaviors to cre
 
 ## Prerequisites
 
-| name | description |
+| Name | Description |
 | ---- | ----------- |
 | REST API Key | A Braze REST API Key with `users.track` permissions. <br><br>This can be created within the __Braze Dashboard__ -> __Developer Console__ -> __REST API Key__ -> __Create New API Key__ |
 | Tealium Account & Account Information | You must have an active Tealium Account with both Server and Client-Side Access to utilize AudienceStream with Braze. |
@@ -28,7 +28,7 @@ Tealium AudienceStream visitor profiles are segmented by shared behaviors to cre
 Please note that Tealium AudienceStreams and EventStreams are batched according to Braze specifications so that our customers do not run the risk of exceeding the [/users/track]({{site.baseurl}}/api/endpoints/user_data/post_user_track/) rate limit. Please contact Braze Support or your CSM if you have any questions. 
 {% endalert %}
 
-## Step 1: set up attributes and badges
+## Step 1: Set up attributes and badges
 
 ### Understanding attributes
 
@@ -59,7 +59,7 @@ Once you identify your desired attributes, you can configure them with enrichmen
 
 ### Badges
 
-badges are special visitor attributes that represent interesting behavior patterns. badges are assigned or removed from visitors based on the logic of their enrichments. this logic usually combines multiple conditions into one to capture visitor segments or sets a threshold for when a particular value is reached.
+Badges are special visitor attributes that represent interesting behavior patterns. Badges are assigned or removed from visitors based on the logic of their enrichments. This logic usually combines multiple conditions into one to capture visitor segments or sets a threshold for when a particular value is reached.
 
 ### Attribute and badge example
 
@@ -99,13 +99,13 @@ Next, you may create badges that help you classify and target your users by cert
 
 To read more about Attributes and Badges, check out the [Tealium documentation](https://community.tealiumiq.com/t5/Getting-Started-with/Attributes-Enrichments/ta-p/25786). 
 
-## Step 2: create an audience
+## Step 2: Create an audience
 
 From the Tealium customer data hub main page, select __Audience__ under __AudienceStream__ from the left side of the page. Here you will be able to create an audience of users that have common attributes you select. 
 
 First, name your audience and then take some time to think about what kind of attributes would be applicable for the type of audience you are trying to create. For example, to create an audience of VIP cart abandoners, you could create an audience of visitors who have the __VIP badge__ a __Cart Abandoner badge__ assigned.
 
-## Step 3: create an audience connector
+## Step 3: Create an audience connector
 
 From the main page, select __Audience Connector__ under __AudienceStream__. Here you can create and configure your connector. From the Audience Connector page, select __+ Add Connector__, look up __Braze__, and select __Braze__ as the connector type. 
 
@@ -115,7 +115,7 @@ In the new window that appears, you will now be able to select the audience that
 
 ### Configuration
 
-![create configuration][15]{: style="float:right;max-width:30%;margin-left:15px;margin-bottom:15px;"}
+![Create Configuration][15]{: style="float:right;max-width:30%;margin-left:15px;margin-bottom:15px;"}
 
 Next, a __Configuration__ dialogue will appear. Here, you must select __Add Connector__ and fill in certain values requested by Tealium and Braze:
 
@@ -125,7 +125,7 @@ After you have selected a connector to link this audience to click done and cont
 
 ### Action
 
-next, you must select a connector action. a connector action sends data according to the mapping that you configure. the braze connector allows you to map braze attributes to tealium attribute names. 
+Next, you must select a connector action. A connector action sends data according to the mapping that you configure. The Braze connector allows you to map Braze Attributes to Tealium attribute names. 
 
 1. From the __Action__ dialogue, select one of the actions to set up.
 2. Depending on which action you chose, there will be a varied selection of fields required by Tealium. Listed below are examples and explanations of these fields.
@@ -173,7 +173,7 @@ Select __Continue__.
 ![Save/Publish][17]{: style="float:right;max-width:40%;margin-left:15px;margin-bottom:15px;"}
 The actions you configured will now fire when the trigger connections are met. The data populates, in real-time as each action fires. 
 
-## Step 4: test your tealium connector
+## Step 4: Test your Tealium connector
 
 After your connector is up and running, you should test it to make sure it's working properly. The most simple way to test this is to use the Tealium __Trace Tool__.
 
@@ -196,7 +196,7 @@ __Solution__: <br>You can check your own backend to assess whether an attribute 
 If you have multiple EventStream that target the same event feed, __all actions enabled for that connector__ will automatically fire anytime a single action is triggered, __this could also result in data being overwritten in Braze.__<br><br>
 __Solution__: <br>Set up a separate event specification or feed to track each action. <br>__OR__<br> Disable actions(or connectors) that you do not want to fire by using the toggles in the Tealium dashboard.
 
-#### __Initializing braze too early__
+#### __Initializing Braze too early__
 Users integrating with Tealium using the Braze Web SDK Tag may see a dramatic increase in their MAU. __If Braze is initialized on page load, Braze will create an anonymous profile every time a web user navigates to the website for the first time.__ Some may want to only track user behavior once users have completed some action, such as "Signed In" or "Watched Video" in order to lower their MAU count. <br><br>
 __Solution__: <br>Set up Load Rules to determine exactly when and where a Tag loads on your site. You can learn more about Load Rules and how to set them up in the [Tealium Learning Center](https://community.tealiumiq.com/t5/Customer-Data-Hub/Building-an-Audience/ta-p/11881).
 

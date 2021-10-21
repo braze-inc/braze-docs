@@ -16,7 +16,7 @@ You can access Lob's services through Braze's webhook feature and send mail to y
 
 ![Lob API Key][33]
 
-## HTTP url
+## HTTP URl
 
 The HTTP URL to request in the webhook is different for each action you can make to Lob. In this example we will be sending a postcard so the URL is https://api.lob.com/v1/postcards, however, the list of all the HTTP URL endpoints can be found in the [Lob documentation][39].
 

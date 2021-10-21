@@ -10,7 +10,7 @@ search_tag: Partner
 
 ---
 
-# Segment for currents  
+# Segment for Currents  
 
 {% include video.html id="RfOHfZ34hYM" align="right" %}
 
@@ -18,7 +18,7 @@ search_tag: Partner
 
 ## Integration details
 
-### Step 1: obtain segment write key
+### Step 1: Obtain Segment write key
 
 1. To get started, find the __Segment Write Key__ from your Segment dashboard.
 2. On the Braze dashboard, navigate to __Currents__ under __Integrations__ and create a __Segment Data Export__. 
@@ -30,7 +30,7 @@ search_tag: Partner
 It's important to keep your Segment API Key up to date. If your connector's credentials expire, the connector will stop sending events. If this persists for more than **48 hours**, the connector's events will be dropped, and data will be permanently lost.
 {% endalert %}
 
-### Step 2: export message engagement events 
+### Step 2: Export message engagement events 
 
 Next, select the message engagement events you would like to export. Reference the export events and properties table listed below. All events sent to Segment will include the user's `external_user_id` as the `userId`. At this time, Braze does not send event data for users who do not have their `external_user_id` set.
 

@@ -10,7 +10,7 @@ search_tag: Partner
 
 # Radar
 
-> [radar](https://www.onradar.com/) is a geofencing platform for mobile and web apps. combining braze's industry-leading engagement platform and radar's industry-leading geofencing capabilities allows you to drive digital engagement and loyalty. 
+> [Radar](https://www.onradar.com/) is a geofencing platform for mobile and web apps. Combining Braze's industry-leading engagement platform and Radar's industry-leading geofencing capabilities allows you to drive digital engagement and loyalty. 
 The Radar platform has three products: [Geofences](https://radar.io/product/geofencing), [Trip Tracking](https://radar.io/product/trip-tracking), and [Geo APIs](https://radar.io/product/api).
 
 Use the Radar and Braze integration to add location context and tracking to your iOS and Android apps in less than ten lines of code, allowing you to easily retarget your customers and augment your marketing with rich location data. Whenever Radar geofence or trip tracking events are generated, Radar will send custom events and user attributes to Braze. You can use these events and attributes to build location-based segments or trigger location-based campaigns.
@@ -48,7 +48,7 @@ You can use custom events and user attributes to build location-based segments o
 
 ![Radar Campaign]({% image_buster /assets/img_archive/radar-campaign.png %})
 
-## Connected content
+## Connected Content
 
 The following example shows how to run a promotion to drive nearby users in-store with a digital offer. 
 

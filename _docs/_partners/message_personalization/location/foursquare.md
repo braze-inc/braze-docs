@@ -10,7 +10,7 @@ search_tag: Partner
 
 # Foursquare
 
-{% include video.html id="g2zojqzgqru" align="right" %}
+{% include video.html id="G2ZoJqZGqrU" align="right" %}
 
 > Unlock location data campaign targeting, Braze provides a seamless product integration with [Foursquare](https://foursquare.com/).
 
@@ -18,7 +18,7 @@ You can use Foursquare’s Pilgrim SDK on iOS and Android to provide real-time e
 
 ## Integration
 
-be sure that both the braze and foursquare pilgrim sdks are integrated properly.
+Be sure that both the Braze and Foursquare Pilgrim SDKs are integrated properly.
 
 After you integrate the Pilgrim SDK, you'll begin receiving location events on the device or to a webhook.
 
@@ -48,7 +48,7 @@ Set up an action-based campaign within Braze that will send messages based on a 
 
 ## Retargeting
 
-you can use the pilgrim sdk to set a `last_location` custom attribute on your braze users' user profiles. you can then use the `matches regex` comparison to retarget users who went to a particular location in the real world: for example, segmenting all users who were recently at a pizza place.
+You can use the Pilgrim SDK to set a `last_location` custom attribute on your Braze users' User Profiles. You can then use the `matches regex` comparison to retarget users who went to a particular location in the real world: for example, segmenting all users who were recently at a pizza place.
 
 ![Braze Dashboard Targeting]({% image_buster /assets/img_archive/last-location-segment.png %})
 

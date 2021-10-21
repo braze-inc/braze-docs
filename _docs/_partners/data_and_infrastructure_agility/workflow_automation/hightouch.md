@@ -10,37 +10,37 @@ search_tag: Partner
 
 # Hightouch
 
-> [hightouch][1] is a modern data integration platform that enables you to sync customer, product, or proprietary data from your warehouse or data lake to any app of your choice, all without assistance from your it or engineering teams.
+> [Hightouch][1] is a modern data integration platform that enables you to sync customer, product, or proprietary data from your warehouse or data lake to any app of your choice, all without assistance from your IT or engineering teams.
 
 The Braze and Hightouch integration allows you to build better campaigns on Braze with up-to-date customer data from your data warehouse. You want to provide relevant, timely interactions to your customers, and doing so heavily relies on data in your Braze account to be accurate and fresh. By automatically syncing customer data from your data warehouse into Braze, you no longer need to worry about data consistency, and you can focus on building world-class customer experiences.
 
 ## Requirements
 
-| requirement | origin | access | description |
+| Requirement | Origin | Access | Description |
 |---|---|---|---|
 | Braze API Key | Braze | You will need to create a new API key.<br><br>This can be created in the __Developer Console -> API Settings -> Create New API Key__ with __users.track__ permissions. | You will use your Braze API key to authenticate using Hightouch. |
 | Braze REST Endpoint | Braze | [Braze REST endpoint list][2]. | Your REST endpoint URL.  |
 | Hightouch Account | Hightouch | Your Hightouch Workspace. | An active Hightouch account. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
 
-## Braze and hightouch integration
+## Braze and Hightouch integration
 
-### Step 1: obtain braze credentials
+### Step 1: Obtain Braze credentials
 
-#### Create a braze api key
+#### Create a Braze API key
 
 1. Within Braze, navigate to __Settings__ at the bottom of the left navigation bar and click __Developer Console__.
 2. In the __API Settings__ tab, under __Rest API Keys__, click __+ Create New API Key__.
 3. Name this API key, and select all __users.track__ permissions.  Next, select __Save API Key__.
 4. Lastly, copy the API Key found under __Identifier__ to use when creating your Hightouch connection. 
 
-#### Find your braze api endpoint
+#### Find your Braze API endpoint
 
 You will need to locate your Braze REST API endpoint. You will need this when creating your Hightouch destination with Braze. Your endpoint will depend on the Braze URL for your instance; you can find a full list of all Braze endpoints [here][2]. 
 
 Hightouch only requires everything after "https://rest." to specify your endpoint. For example, if your Braze endpoint is https://rest.iad-01.braze.com, you will only need `iad-01.braze.com`.
 
-### Step 2: create your hightouch braze destination
+### Step 2: Create your Hightouch Braze destination
 
 1. In the __Destinations__ section of Hightouch, click __Add destination__.
 2. Select __Braze__ in the list of destinations listed.

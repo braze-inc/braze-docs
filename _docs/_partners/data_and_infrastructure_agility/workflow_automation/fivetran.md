@@ -10,11 +10,11 @@ search_tag: Partner
 
 # Fivetran
 
-[fivetran](https://fivetran.com/) is a globally recognized brand whose analyst focused products and fully managed pipelines enable data-backed decisions by delivering ready-to-query data into your cloud warehouse. now, as braze's new technology partner, data-backed decision making has been made easier and more efficient than ever before, allowing you to spend more time on the difficult tasks.
+[Fivetran](https://fivetran.com/) is a globally recognized brand whose analyst focused products and fully managed pipelines enable data-backed decisions by delivering ready-to-query data into your cloud warehouse. Now, as Braze's new technology partner, data-backed decision making has been made easier and more efficient than ever before, allowing you to spend more time on the difficult tasks.
 
 ## Prerequisites
 
-requirement   |source| notes
+Requirement   |Source| Notes
 --------------|------|-------------
 Braze Account    | [Braze](https://dashboard.braze.com/sign_in) | This account should have at least one active subscription and admin privileges. |
 Fivetran Account | [Fivetran](https://fivetran.com/login?next=%2Fdashboard)| This Fivetran account should have owner/admin privileges. |
@@ -24,12 +24,12 @@ Braze API Key    | [Braze](https://dashboard.braze.com/sign_in) | Found in your 
 
 ## Integration
 
-### setting up braze current
+### Setting up Braze Current
 
 {% tabs %}
 {% tab Amazon S3 %}
 
-### Step 1: locate your external id
+### Step 1: Locate your external ID
 
 Locate your External ID in the Fivetran setup form for Braze.
 ![Fivetran Connector setup form]({% image_buster /assets/img/fivetran_braze_setupform_as3.png %})
@@ -38,7 +38,7 @@ Locate your External ID in the Fivetran setup form for Braze.
 Note the **External ID** as depicted above. The remaining details required to complete the setup will be retrieved in later steps. 
 {% endalert %}
 
-### Step 2: create a braze api key for amazon s3 storage
+### Step 2: Create a Braze API key for Amazon S3 storage
 
 Next, login to your dashboard [here](https://dashboard.braze.com) or with your [designated dashboard URL]({{site.baseurl}}/api/basics?redirected=true#endpoints) and click **Developer Console** on the bottom left corner of the Braze dashboard.
 
@@ -68,9 +68,9 @@ From here, [create an API Key]({{site.baseurl}}/developer_guide/rest_api/basics/
 
 Lastly, take note of the created API key before proceeding because it will be required in Step 4.
 
-### Step 3: give fivetran access to a specified s3 bucket
+### Step 3: Give Fivetran access to a specified S3 bucket
 
-#### Creating an iam policy
+#### Creating an IAM policy
 
 Open the [Amazon IAM Console](https://console.aws.amazon.com/iam/home#home) and navigate to **Policies->Create Policy** as shown below.
 
@@ -116,7 +116,7 @@ Here, give the policy a unique name (something like "Fivetran-S3-Access") and an
 
 ![Amazon S3 Policy Review Button]({% image_buster /assets/img/fivetran_iam_policy_meta.png %})
 
-#### Create an iam role
+#### Create an IAM role
 
 Navigate to **Roles**, then select **Create New Role**.
 
@@ -136,7 +136,7 @@ Click **Next: Permissions**, and now select the policy that you created earlier 
 
 Lastly, click **Next: Review**, name your new role (i.e., Fivetran), and click **Create Role**.
 
-#### Locating the iam role arn
+#### Locating the IAM role ARN
 
 Click on the role you just created, or navigate to **Roles** from your [Amazon IAM Console](https://console.aws.amazon.com/iam/home#home).
 ![Amazon S3 IAM Role ARN]({% image_buster /assets/img/fivetran_iam_role_arn.png %})
@@ -148,13 +148,13 @@ You can specify permissions for the Role ARN that you designate for Fivetran. Gi
 {% endtab %}
 {% tab Google Cloud Storage %}
 
-### Step 1: retrieve your fivetran email from google cloud storage
+### Step 1: Retrieve your Fivetran email from Google Cloud Storage
 
 Locate your Fivetran email in the Fivetran setup form for Braze by logging into your [Fivetran Dashboard](https://fivetran.com/dashboard), clicking on **+ Connector** selecting **Braze** and selecting **Azure Blob storage** as the ``Cloud Storage`` option.
 
 ![Fivetran Connector setup form]({% image_buster /assets/img/fivetran_braze_setupform_gcs.png %})
 
-### Step 2: create a braze api key for google cloud storage
+### Step 2: Create a Braze API key for Google Cloud Storage
 
 Next, login to your Braze account [here](https://dashboard.braze.com) or with your [designated dashboard URL]({{site.baseurl}}/api/basics?redirected=true#endpoints) and click **Developer Console** on the bottom left corner of the Braze dashboard.
 
@@ -184,7 +184,7 @@ From here, [create an API Key]({{site.baseurl}}/developer_guide/rest_api/basics/
 
 Lastly, take note of the created API key before proceeding because it will be required in Step 4.
 
-### Step 3: authorization
+### Step 3: Authorization
 
 Navigate to your [Google Storage Console](https://console.cloud.google.com/storage/browser) and select a bucket which you configured Braze Currents with and click on **Edit bucket permissions**.
 

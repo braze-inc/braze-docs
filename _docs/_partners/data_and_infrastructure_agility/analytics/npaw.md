@@ -12,11 +12,11 @@ hidden: true
 
 # NPAW
 
-> [npaw](https://nicepeopleatwork.com/), also knows as _nice people at work_, is an intelligent data analytics platform that provides actionable insights to leading online media professionals. with npaw's youbora tool suite, braze customers can now leverage a predictive and robust ai to greater understand customer behavior and drive engagement accross platforms.
+> [NPAW](https://nicepeopleatwork.com/), also knows as _Nice People at Work_, is an intelligent data analytics platform that provides actionable insights to leading online media professionals. With NPAW's YOUBORA tool suite, Braze customers can now leverage a predictive and robust AI to greater understand customer behavior and drive engagement accross platforms.
 
 # Prerequisites
 
-| requirement   |origin| description |
+| Requirement   |Origin| Decription |
 | --------------|------|-------------|
 | YOUBORA API Key |[YOUBORA Settings](https://youbora.nicepeopleatwork.com/users/login)|An API Key generated on user sign up and can be located under **Settings** |
 | ID |[Braze Settings](https://dashboard.braze.com/sign_in) | YOUBORA gives you the options of whether to link the software to Braze via a ***Braze ID***, an ***external User ID***, or a ***User ID*** |
@@ -46,7 +46,7 @@ Fill in the details with the appropriate information gathered from the prequisit
 
 Once all the fields have been filled out, simply click on the **Connect** button to establish a connection and save the changes made.
 
-## Using your npaw integration
+## Using your NPAW integration
 
 Once you have finished configuring your integration with Braze, navivate to the **Users** product and select the **Sample Manager** within the **Sections Manager**.
 

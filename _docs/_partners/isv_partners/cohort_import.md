@@ -8,7 +8,7 @@ hidden: true
 
 > The Partner Cohort Import integration feature allows our partners to integrate with Braze to send over cohorts of users that were generated within the partner’s application.
 
-## Cluster urls
+## Cluster URls
 
 Braze hosts our application on multiple clusters throughout the US and EU. The URL for the import endpoints will be different depending on the cluster the client’s company instance is hosted on:
 
@@ -24,7 +24,7 @@ Braze hosts our application on multiple clusters throughout the US and EU. The U
 | EU-01 | `https://rest.fra-01.braze.eu`  |
 {: .reset-td-br-1 .reset-td-br-2}
 
-## Endpoint urls
+## Endpoint URLs
 
 In addition to the top-level URLs being cluster-specific, each endpoint is also partner-specific. For example, when importing to our US01 cluster, the URL would have the format `https://rest.iad-01.braze.com/partners/[partner_name]/…`, where `[partner_name]` is typically the name of the partner’s business. Specifics for each endpoint are outlined below.
 
@@ -32,7 +32,7 @@ In addition to the top-level URLs being cluster-specific, each endpoint is also 
 
 to import cohort data into braze, there are two authentication keys required.
 
-### Partner api key
+### Partner API key
 
 The Partner API Key identifies the integration partner and authenticates the request as being valid for import. The key should be included in the body of the request in the `partner_api_key` field.
 
@@ -109,7 +109,7 @@ Braze will add a filter that allows a dashboard user to include or exclude users
 
 ## Troubleshooting
 
-refer to the following table for errors codes specific to the cohort import endpoints, and how to troubleshoot them.
+Refer to the following table for errors codes specific to the Cohort Import endpoints, and how to troubleshoot them.
 
 | Error Code | Description |
 | ----- | ---- |
