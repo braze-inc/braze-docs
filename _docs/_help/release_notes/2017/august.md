@@ -37,7 +37,7 @@ We’ve exposed new API endpoints, /email/hard_bounces, that lets you pull hard 
 
 ## Geofences
 
-we’ve added a new feature, geofences, that allows you to trigger messages in real-time when customers enter and exit defined geographical areas, enabling personalized, relevant communication with your customers. learn more about location marketing in [our documentation][64].
+We’ve added a new feature, geofences, that allows you to trigger messages in real-time when customers enter and exit defined geographical areas, enabling personalized, relevant communication with your customers. learn more about location marketing in [our documentation][64].
 
 ## Update to email editor
 
