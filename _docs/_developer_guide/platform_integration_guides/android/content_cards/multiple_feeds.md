@@ -23,7 +23,7 @@ When creating a Content Card campaign, key value pair data can be set on each Ca
 
 For the purposes of this example, we'll set a key-value pair with the key `feed_type` that will designate which Content Card feed the card should be displayed in. The value will be whatever your custom feeds will be, as in `Transactional`, `Marketing`, and more.
 
-## Step 2: Create A Content Card update handler
+## Step 2: Create a Content Card update handler
 
 To perform filtering on a [`ContentCardsFragment`][1], we will create a use a custom [`IContentCardsUpdateHandler`][2]. A [`IContentCardsUpdateHandler`][2] takes a [`ContentCardsUpdatedEvent`][3] from the Braze SDK and returns a list of cards to display.
 
