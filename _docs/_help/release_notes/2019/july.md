@@ -27,8 +27,6 @@ Braze supports:
 
 We have updated Adjust's partner page to make this API key accessible to customers.
 
-![Adjust API Key]({% image_buster /assets/img/adjust_eventapikey.png %})
-
 ## New Partners
 
 Some new partners have joined our Alloys program and have been added to our Docs! Say hello to...
@@ -48,8 +46,6 @@ The "Only Show Mine" check filter on the **Campaigns** page has proven to be wil
 
 ### Advancement Behavior
 You can now choose [when a user advances]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/advancement/) from one Canvas step to the next - options are "Message Sent" and "Entire Audience After Delay".
-
-![Advancement Behavior]({% image_buster /assets/img/advancement_behavior_rn.png %})
 
 ### In-App Messages in Canvas
 

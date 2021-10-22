@@ -164,7 +164,7 @@ Check out:
 [17]: {{site.baseurl}}/developer_guide/platform_integration_guides/ios/analytics/setting_user_ids/#additional-notes-and-best-practices
 [18]: {{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events/
 [19]: {{site.baseurl}}/developer_guide/platform_integration_guides/web/analytics/setting_user_ids/
-[21]: {% image_buster /assets/img/webhook_JSON1.jpg %}
+[21]: {% image_buster /assets/img/webhook_JSON1.png %}
 [22]: {% image_buster /assets/img_archive/webhook_rawtext.png %}
 [26]: {% image_buster /assets/img_archive/Webhook_Request_Header.png %}
 [42]: https://dashboard-01.braze.com/app_settings/developer_console/
