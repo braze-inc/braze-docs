@@ -9,11 +9,11 @@ description: "This article covers the content card integration for Web, includin
 
 ---
 
-# Content Card Integration
+# Content Card integration
 
 The Braze Web SDK includes a Content Cards Feed UI to speed up your integration efforts. If you would prefer to build your own UI instead, see our [Customization Guide](/docs/developer_guide/platform_integration_guides/web/content_cards/customization/).
 
-## Standard Feed UI
+## Standard feed UI
 
 To use the included Content Cards UI, you'll need to specify where on your website to show the feed. 
 
@@ -66,7 +66,7 @@ When using the `toggleContentCards(parentNode, filterFunction)` and `showContent
 
 [See the JS docs](https://js.appboycdn.com/web-sdk/latest/doc/module-display.html#.toggleContentCards) for more information on toggling Content Cards.
 
-### Requesting Unviewed Content Card Count
+### Requesting unviewed Content Card count
 
 You can request the number of unread cards at any time by calling:
 
@@ -80,7 +80,7 @@ This is often used to power badges signifying how many unread Content Cards ther
 Braze will not refresh Content Cards on new page loads (and so this function will return 0) until you show the feed or call `appboy.requestContentCardsRefresh();`.
 {% endcomment %}
 
-### Control Group 
+### Control group 
 
 If you use Braze's default Content Cards feed, impressions and clicks will be automatically tracked.
 
@@ -94,11 +94,11 @@ function isControlCard(card) {
 }
 ```
 
-### Key-Value Pairs
+### Key-value pairs
 
 `ab.Card` objects may optionally carry key-value pairs as `extras`. These can be used to send data down along with a card for further handling by the application. Call [`card.extras`](https://js.appboycdn.com/web-sdk/latest/doc/ab.Card.html) to access these values.
 
-### Additional Card Methods
+### Additional card methods
 
 |Method | Description | Link|
 |---|---|---|

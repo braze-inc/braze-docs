@@ -9,9 +9,9 @@ description: "This article covers additional customization and configuration opt
 
 ---
 
-# Additional Customization and Configuration
+# Additional customization and configuration
 
-## Using R8/Proguard with Braze
+## Using R8/proguard with Braze
 [Code shrinking][50] configuration is automatically included with your Braze integration.
 
 Client apps that obfuscate Braze code must store release mapping files for Braze to interpret stack traces. If you would like to continue to keep all Braze code, add the following to your Proguard file:
@@ -21,7 +21,7 @@ Client apps that obfuscate Braze code must store release mapping files for Braze
 -keep class com.appboy.** { *; }
 ```
 
-## Enabling Verbose Logging {#android-verbose-logging}
+## Enabling verbose logging {#android-verbose-logging}
 
 Verbose logs from the Braze SDK are essential to a fast turnaround on support issues. These logs should not be modified for clarity; long log files are preferred! Verbose logging is only intended to be used in development environments and should not be enabled in a released application. Logs sent to our support team should begin as soon as the application is launched and should end well after the observed issue occurs.
 
@@ -52,7 +52,7 @@ To know if your obtained logs are verbose, look for `V/Braze` somewhere in your 
 
 `2077-11-19 16:22:49.591 ? V/Braze v9.0.01 .bo.app.d3: Request started`
 
-### Suppressing Braze SDK Logging
+### Suppressing Braze SDK logging
 
 The default Log Level for the Braze Android SDK is `INFO`.
 
@@ -77,7 +77,7 @@ BrazeLogger.setLogLevel(BrazeLogger.SUPPRESS)
 {% endtab %}
 {% endtabs %}
 
-## Multiple API Keys
+## Multiple API keys
 
 The most common use case for multiple API keys is separating API keys for debug and release build variants.
 

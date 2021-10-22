@@ -7,7 +7,7 @@ description: "This reference article covers how to track custom events on the Wi
 
 ---
 
-# Tracking Custom Events
+# Tracking custom events
 
 You can record custom events in Braze to learn more about your app's usage patterns and to segment your users by their actions on the dashboard.
 

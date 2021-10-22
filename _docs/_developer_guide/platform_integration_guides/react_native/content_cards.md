@@ -28,7 +28,7 @@ You can use these additional methods to build a custom Content Cards Feed within
 
 {: .reset-td-br-1 .reset-td-br-2}
 
-## Test Displaying Sample Content Card
+## Test displaying sample Content Card
 
 Follow the steps below to test a sample content card.
 

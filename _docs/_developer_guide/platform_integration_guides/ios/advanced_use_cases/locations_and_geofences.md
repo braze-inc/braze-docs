@@ -9,7 +9,7 @@ Tool:
 
 ---
 
-# Locations & Geofences
+# Locations and geofences
 
 Geofences are only available in select Braze packages. For access please create a support ticket or speak with your Braze Customer Success Manager.
 
@@ -23,11 +23,11 @@ To support geofences for iOS:
 As of iOS 14, Geofences do not work reliably for users who choose to give their Approximate Location permission.
 {% endalert %}
 
-## Step 1: Enable Background Push
+## Step 1: Enable background push
 
 To fully utilize our geofence syncing strategy you must have [Background Push][6] enabled in addition to completing the standard push integration.
 
-## Step 2: Enable Geofences
+## Step 2: Enable geofences
 
 By default, geofences are enabled based on whether automatic location collection is enabled. You can enable geofences using the `Info.plist` file. Add the `Braze` dictionary to your `Info.plist` file. Inside the `Braze` dictionary, add the `EnableGeofences` boolean subentry and set the value to `YES`. Note that prior to Braze iOS SDK v4.0.2, the dictionary key `Appboy` must be used in place of `Braze`.
 
@@ -56,7 +56,7 @@ Appboy.start(withApiKey: "YOUR-API-KEY",
 {% endtab %}
 {% endtabs %}
 
-## Step 3: Check for Braze Background Push
+## Step 3: Check for Braze background push
 
 Braze syncs geofences to devices using background push notifications. Follow the instructions [here][7] to ensure that your application does not take any unwanted actions upon receiving Braze's geofence sync notifications.
 
@@ -90,21 +90,21 @@ locationManager.requestAlwaysAuthorization()
 {% endtab %}
 {% endtabs %}
 
-## Step 6: Enable Geofences on the Dashboard
+## Step 6: Enable geofences on the dashboard
 
 iOS only allows up to 20 geofences to be stored for a given app. Braze's Locations product will use up some of these 20 available geofence slots. To prevent accidental or unwanted disruption to other geofence-related functionality in your app, location geofences must be enabled for individual Apps on the dashboard.
 
 For Braze's Locations product to work correctly, you should also ensure that your App is not using all available geofence spots.
 
-### Enable geofences from the Locations page:
+### Enable geofences from the locations page:
 
 ![Appboy Developer Console]({% image_buster /assets/img_archive/enable-geofences-locations-page.png %})
 
-### Enable geofences from the Settings page:
+### Enable geofences from the settings page:
 
 ![Appboy Developer Console]({% image_buster /assets/img_archive/enable-geofences-app-settings-page.png %})
 
-## Disabling Automatic Geofence Requests
+## Disabling automatic geofence requests
 
 Starting in iOS SDK version 3.21.3, you can disable geofences from being automatically requested. You can do this by using the `Info.plist` file. Add the `Braze` dictionary to your `Info.plist` file. Inside the `Braze` dictionary, add the `DisableAutomaticGeofenceRequests` boolean subentry and set the value to `YES`.
 
@@ -135,7 +135,7 @@ Appboy.start(withApiKey: "YOUR-API-KEY",
 
 If you choose to use this option, you will need to manually request geofences for the feature to work.
 
-## Manually Requesting Geofences
+## Manually requesting geofences
 
 When the Braze SDK requests geofences to monitor from the backend, it reports the user's current location and in turn, receives geofences that are determined to be optimally relevant based on the location reported. To control the location that the SDK reports for the purposes of receiving the most relevant geofences, starting in iOS SDK version 3.21.3 you can manually request geofences by providing latitude and longitude of a location. To do so, use the following code:
 

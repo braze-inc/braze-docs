@@ -9,7 +9,7 @@ channel:
 
 ---
 
-# Silent Push Notifications
+# Silent push notifications
 
 Silent notifications allow you to notify your app in the background when important events occur. You might have new instant messages to deliver, new issues of a magazine to publish, breaking news alerts to send, or the latest episode of your user’s favorite TV show ready for them to download for offline viewing. Silent notifications are great for sporadic but immediately important content, where the delay between background fetches might not be acceptable.
 

@@ -11,7 +11,7 @@ channel:
   
 ---
 
-# Defining a News Feed Category
+# Defining a News Feed category
 
 Instances of the Braze News Feed can be configured to only receive cards from a certain “category”. This allows for effective integration of multiple News Feed streams within a single application. For more information on this feature see more in our [News Feed best practices][14]
 

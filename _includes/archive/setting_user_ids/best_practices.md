@@ -1,4 +1,4 @@
-### Automatic Preservation of Anonymous User History
+### Automatic preservation of anonymous user history
 
 | Identification Context | Preservation Behavior |
 | ---------------------- | -------------------------- |
@@ -6,7 +6,7 @@
 | User __has been__ previously identified in-app or via API | Anonymous history __is not merged__ with user profile upon identification |
 {: .reset-td-br-1 .reset-td-br-2}
 
-### Additional Notes and Best Practices
+### Additional notes and best practices
 Please note the following:
 
 - __If your app is used by multiple people, you can assign each user a unique identifier to track them.__
