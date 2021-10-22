@@ -27,8 +27,6 @@ Braze supports:
 
 We have updated Adjust's partner page to make this API key accessible to customers.
 
-![Adjust API Key]({% image_buster /assets/img/adjust_eventapikey.png %})
-
 ## New Partners
 
 Some new partners have joined our Alloys program and have been added to our Docs! Say hello to...
@@ -59,7 +57,6 @@ You can now choose [when a user advances]({{site.baseurl}}/user_guide/engagement
 ![In-App Messages in Canvas]({% image_buster /assets/img/iam-in-canvas.png %})
 
 # Earlier this month
----
 
 ## User profile image removal
 
@@ -76,8 +73,6 @@ Connected Content calls to external servers will happen when a Card is actually 
 Customers can now set a `null` value for an email messages's "Reply-To" address from the Email Settings page in Braze or using [the API]({{site.baseurl}}/api/endpoints/messaging/#email-object-specification).  When used, replies will be sent to the listed "From" address.  You can now personalize the "From" address field as `dan@emailaddress.com` and your customers will have the ability to reply directly back to Dan.
 
 To set a `null` value for an email messages's "Reply-To" address from Braze, go to `Manage Settings` in the navigation, then the `Email Settings` tab. Scroll to the `Outbound Email Settings` section, and select `Exclude “Reply-To” and send replies to “From”` as the default address.
-
-![Email Settings Reply-To]({% image_buster /assets/img/null_reply-to.png %})
 
 ## Campaign comparisons
 
