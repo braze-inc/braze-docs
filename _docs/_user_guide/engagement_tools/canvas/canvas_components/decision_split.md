@@ -4,19 +4,22 @@ article_title: Decision Split Step
 alias: /decision_split/
 page_order: 2
 page_type: reference
-description: "This reference article covers how to create and implement decision split steps within your Canvas."
+description: "This reference article covers how to create and implement Decision Split Steps within your Canvas."
 tool: Canvas
 
 ---
 
-# Decision split step for canvas
+# Decision Split Step
 
-Decision Split Steps in Canvas allow you to deliver personalized, real-time experiences for your users. Decision split steps can be used to create Canvas branches based on whether a user matches a query.
+Decision Split Steps in Canvas allow you to deliver personalized, real-time experiences for your users. Decision Split Steps can be used to create Canvas branches based on whether a user matches a query.
 ![Decision Split Step][1]{: style="float:right;max-width:20%;margin-left:15px;margin-top:15px;margin-bottom:15px;"}
-## Create a decision split step
-To create a Decision Split Step, add a step to your Canvas. Then, use the drop-down at the top of the new step to select `Decision Split Step`.
+
+## Create a Decision Split Step
+
+To create a Decision Split Step, add a step to your Canvas. Then, use the drop-down at the top of the new step to select **Decision Split Step**.
 
 ### Define your split
+
 How do you want to split your users? You can use Segments and Filters to draw the line. Essentially, you're creating a `true` or `false` query that will evaluate your users and then funnel them to one step or another. You must use at least one Segment or one Filter. You do not need to use both a Segment and a Filter.
 
 ![Define Split][2]{: style="max-width:80%;"}
@@ -24,7 +27,8 @@ How do you want to split your users? You can use Segments and Filters to draw th
 {% alert note %} By default, Filters and Segments for **Decision Split Steps** are checked right after receiving a previous step, unless you add a delay. {% endalert %} 
 
 ## Use split steps
-Using the Decision Split step can help you distinguish paths for your users based on their segment or their attributes, even whether they utilize certain messaging channels to receive your messages!
+
+Using the Decision Split Step can help you distinguish paths for your users based on their segment or their attributes, even whether they utilize certain messaging channels to receive your messages!
 
 Let’s say that you’re creating an onboarding flow. You might start with a welcome email upon signing up. Then, two days later, you want to send a push message, but only to users who are push enabled. After that, all users get another email three days after they signed up. You could also use your decision split to send an in-app message to users who don't have push enable to encourage them to enable push.
 
@@ -42,7 +46,7 @@ A filter step can only connect to one next step.
 
 | metric | description |
 |---|---|
-|Entered | The total number of times the step has been entered. If your Canvas has re-eligibility and a user enters a decision split step twice, two entries will be recorded. |
+|Entered | The total number of times the step has been entered. If your Canvas has re-eligibility and a user enters a Decision Split Step twice, two entries will be recorded. |
 |Yes | The number of entries that met the specified criteria and proceeded down the “yes” path. |
 |No | The number of entries that did not meet the specified criteria and proceeded down the “no” path. |
 {: .reset-td-br-1 .reset-td-br-2}

@@ -8,14 +8,14 @@ description: "This reference article discusses the concept of rate limiting and 
 
 ---
 
-# Rate-Limiting and Frequency Capping
+# Rate-limiting and frequency capping
 
 > This reference article discusses the concept of rate limiting and frequency capping, and how you can apply that marketing pressure to improve user experience.
 > <br>
 > <br>
 > We all want our users to have the best experience possible, with rate limiting and frequency capping, you can make sure your users are getting the message they need to, and none of the ones they don't.
 
-## Rate-Limiting
+## Rate-limiting
 
 Braze allows you to control marketing pressure by implementing two different types of rate limiting for your campaigns. The first focuses on providing the best experience for the end user, while the second takes into consideration the bandwidth of your servers.
 

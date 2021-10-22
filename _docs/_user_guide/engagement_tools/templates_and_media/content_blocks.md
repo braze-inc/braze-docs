@@ -10,7 +10,7 @@ tool:
 
 ---
 
-# Content blocks
+# Content Blocks
 
 > The Content Blocks Library allows you to manage your reusable, cross-channel content in a single, centralized location. To access this feature, go into the __Content Blocks Library__ tab in the [Templates & Media][6] section of your Braze account.
 
@@ -21,7 +21,7 @@ With Content Blocks, you can:
 - Create pre-defined assets that can be used to build messages with consistent information and assets.
 - Copy entire message bodies to other messages.
 
-## Create a content block
+## Create a Content Block
 
 Creating a Content Block is easy - go to __Templates & Media__, then the __Content Blocks Library__ tab. Then, click __Create Content Block.__
 
@@ -44,13 +44,13 @@ When creating Content Blocks, it sometimes helps to visualize HTML and Liquid by
 {% endraw %}
 {% endalert %}
 
-## Using content blocks
+## Using Content Blocks
 
 1. Create your Content Block.
 2. Copy the Content Block Liquid Tag from your Content Block page.
 3. Insert the Content Block Liquid Tag into the message. You can also begin typing the Liquid and have the tag auto-populate.
 
-## Updating & copying content blocks
+## Updating and copying Content Blocks
 
 If you choose to update a Content Block, it will update in all messages the Content Block is used.
 
@@ -60,9 +60,9 @@ If you want to update a Content Block for a single message or make a copy to use
 
 You can also [duplicate a Content Block with our Templates & Media feature]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/duplicate/). When you do this, a "draft" copy is created.
 
-## Nesting content blocks
+## Nesting Content Blocks
 
-Content blocks can be nested, but only once! You can nest _Content Block A_ into _Content Block B_, but you will not be able to then nest _Content Block B_ into _Content Block C_.
+Content Blocks can be nested, but only once! You can nest _Content Block A_ into _Content Block B_, but you will not be able to then nest _Content Block B_ into _Content Block C_.
 
 {% alert warning %}
 Nothing will prevent you from nesting a third level of Content Block, but you will not see the content expand in nests beyond the second. The content and the Liquid snippet are removed from the message.
@@ -70,7 +70,7 @@ Nothing will prevent you from nesting a third level of Content Block, but you wi
 
 Additionally, Content Blocks cannot be used within an email footer, though email footers can be used within Content Blocks.
 
-## Archiving content blocks
+## Archiving Content Blocks
 
 Once you have finished using a Content Block, you can [archive it from the __Templates & Media__ page]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/archive/).
 
@@ -83,14 +83,14 @@ Messages using the archived Block will still perform as though it was there. How
 3. When your Block is used in more messages than you can reasonably manage with the first suggestion in this list, we recommend removing __all__ content from the Block, then archiving it. This will ensure no outdated information makes its way into any newly sent emails.
 
 {% alert tip %}
-  You can save a content block without content in it.
+  You can save a Content Block without content in it.
 {% endalert %}
 
 If you made a mistake in archiving a Content Block, you can unarchive it.  
 
 ![Unarchive_CB][4]
 
-## Content block specifications
+## Content Block specifications
 
 | Content Block Attribute | Specifications |
 |---|---|

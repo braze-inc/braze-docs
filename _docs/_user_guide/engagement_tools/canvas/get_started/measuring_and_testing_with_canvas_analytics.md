@@ -10,11 +10,12 @@ tool:
   
 ---
 
-# Measuring and testing with canvas analytics
+# Measuring and testing with Canvas Analytics
 
 You need to know if what you’re building is moving the needle. Canvas makes it easy to understand how the experiences you’re building are impacting your goals. Once you build your Canvas and set it live, you can review performance on the Canvas Details page.
 
 ## Canvas overview
+
 <br>
 ![Canvas Analytics Overview][24]
 
@@ -48,11 +49,11 @@ Beyond that, you'll see a more explicit breakdown of Conversion Events:
 
 You can quickly infer effective variants and identify the right cadences, content, triggers, timing, and more!
 
-## Retention report
+## Retention Report
 
 User retention is one of the most important metrics for any marketer. Keeping engaged users coming back for more indicates that business is healthy. Braze now allows you to measure user retention right on the Canvas Analytics page. For more information on how to read and interpret your retention report, visit our Canvas [Retention Report][1] page.
 
-## Funnel report
+## Funnel Report
 
 Funnel Reporting offers a visual report that allows you to analyze the journeys your customers take after receiving a campaign or Canvas. If your campaign or Canvas uses a control group or multiple variants, you will be able to understand how the different variants have impacted the conversion funnel at a more granular level and optimize based on this data. For more information on funnel reports, visit our Canvas [Funnel Report][2] page.
 

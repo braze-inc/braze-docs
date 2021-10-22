@@ -8,6 +8,7 @@ page_type: reference
 description: "This reference article covers how to send test messages across the different Braze channels and how to incorporate custom event properties or user attributes."
 
 ---
+
 # Sending test messages
 
 > This reference article goes over how to send test messages across the different Braze channels and how to incorporate custom event properties and user attributes. 
@@ -21,7 +22,7 @@ Before sending out a messaging campaign to your users, you may want to test it t
 Make sure to save your campaign draft after testing to avoid deleting your campaign. You can send test messages without saving the message as a draft.
 {% endalert %}
 
-## Channel specific test sending
+## Channel-specific test sending
 
 For steps to send test messages, refer to the section for your channel below.
 
@@ -30,7 +31,7 @@ For steps to send test messages, refer to the section for your channel below.
 
 #### Email
 
-after drafting your email message, click **preview and test**. from this page, select the **test send** tab and add your email address or user id in the **add individual users** field. when you're ready, click **send test** to send your drafted email to your inbox.
+After drafting your email message, click **Preview and Test**. From this page, select the **test send** tab and add your email address or user ID in the **add individual users** field. When you're ready, click **send test** to send your drafted email to your inbox.
 
 ![Test Email]({% image_buster /assets/img_archive/testemail.png %}){: style="max-width:40%;" }
 
@@ -54,7 +55,7 @@ If you have already accepted push messages from the Braze dashboard, you will se
 {% endtab %}
 {% tab In-App Message %}
 
-#### In-App Message
+#### In-app message
 
 If you have push notifications set up within your app and on your test device, you can send test in-app messages to your app to see what it looks like in real-time. After drafting your in-app message, select the **Test** tab and add your email address or user ID to the **Add Individual Users** field. When you're ready, click **Send Test**. A test push message will appear at the top of your device screen. 
 
@@ -85,18 +86,18 @@ After creating your SMS/MMS message, you can send a test message to your phone t
 
 #### Webhook
 
-after creating your webhook, you can do a test send to check the webhook response. select the __test__ tab and select __send test__ to send a test send to the supplied webhook url. you may also select an individual user to preview the response as a specific user. 
+After creating your webhook, you can do a test send to check the webhook response. Select the __test__ tab and select __send test__ to send a test send to the supplied webhook URL. You may also select an individual user to preview the response as a specific user. 
 
 ![Test Content Card]({% image_buster /assets/img/webhook_test.png %})
 
 {% endtab %}
 {% tab News Feed %}
 
-#### News feed card
+#### News Feed card
 
 Sending a test News Feed card requires you to set up a test segment and subsequently send a test campaign out.
 
-##### Step 1: create a designated test segment
+##### Step 1: Create a designated test segment
 
 Once you set up a test segment, you can utilize these messaging channels. The process takes a few short steps and, if configured properly, will only need to be done once.
 
@@ -114,7 +115,7 @@ These filters have the following options:
 2. **Does not equal** - Use this if you want to exclude a particular email or user ID from test campaigns.
 3. **Matches** - Finds users that have email addresses or user IDs that match part of the search term you provide. You could use this to find only the users with an "@yourcompany.com" address, allowing you to send messages to everyone on your team.
 
-These filters can also be used in conjunction to narrow down your list of test users. For example, the test segment could include an email address filter that `matches` "@braze.com" and another filter that `does not equal` "sales@braze.com". You can also select multiple specific emails by using the   `matches` option and separating the email addresses with a "\|" character (e.g. `matches` "email1@braze.com\|email2@braze.com").
+These filters can also be used in conjunction to narrow down your list of test users. For example, the test segment could include an email address filter that `matches` "@braze.com" and another filter that `does not equal` "sales@braze.com". You can also select multiple specific emails by using the `matches` option and separating the email addresses with a "\|" character (e.g. `matches` "email1@braze.com\|email2@braze.com").
 
 After adding the testing filters to your test segment, verify that you've selected only the users you intended by clicking **Preview** at the top of the segment editor or by exporting that segment's user data to CSV. To export segment user data, click the **User Data** dropdown and select **CSV Export All User Data**.
 
@@ -124,7 +125,7 @@ After adding the testing filters to your test segment, verify that you've select
 
 Once you've confirmed that you're only targeting the users you want to receive the test message, you can either select this segment in an existing campaign that you want to test or click the **Start Campaign** button in the segment menu.
 
-##### Step 2: send a test campaign
+##### Step 2: Send a test campaign
 
 To send test News Feed cards, you need to target your previously created test segment. Begin by creating a multichannel campaign and following the usual steps. When you reach the **Target Users** step, select your test segment as shown below.
 

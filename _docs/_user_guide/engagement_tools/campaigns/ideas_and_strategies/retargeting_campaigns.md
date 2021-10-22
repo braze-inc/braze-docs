@@ -32,7 +32,7 @@ For more on targeting users, check out our [Campaign Setup LAB course](http://la
 
 Use the filter to find users who Have/Have Not clicked a specific News Feed card (which you specify in the drop-down).
 
-### Clicked/Opened Campaign Filter
+### Clicked/opened campaign filter
 
 ![Clicked/Opened][3]
 
@@ -46,7 +46,7 @@ Use this filter to find users who Have/Have Not:
 
 This can be further specified by selecting which campaign you want to retarget in the drop-down.
 
-### Clicked/Opened Campaign or Canvas With Tag Filter
+### Clicked/opened campaign or Canvas with tag filter
 
 ![Clicked/Opened][16]
 
@@ -66,7 +66,7 @@ Use this filter to find users who Have/Have Not converted (based on the primary 
 
 >  For recurring campaigns this filter refers to whether users have converted on the _most recent_ message from the campaign.
 
-### Converted from canvas filter
+### Converted from Canvas filter
 
 ![Converted from Canvas][18]
 
@@ -80,7 +80,7 @@ Use this filter to find users who Have/Have Not converted (based on the primary 
 
 Use this filter to find users who Are/Are Not in the control group of your target campaign, which can be selected in the drop-down.
 
-### In canvas control group filter
+### In Canvas control group filter
 
 ![Canvas Control Group][19]
 
@@ -92,7 +92,7 @@ Use this filter to find users who Are/Are Not in the control group of your targe
 
 Use this filter to find users who last received a specific campaign before or after a specified date or number of days.
 
-### Last received message from specific campaign or canvas with tag filter
+### Last received message from specific campaign or Canvas with tag filter
 
 ![Last Received Campaign with Tag][17]
 
@@ -102,17 +102,17 @@ Use this filter to find users who last received a specific campaign or Canvas wi
 
 ![Received Campaign][4]
 
-\" this filter to find users who Have/Have Not received your target campaign, which you select in the drop-down.
+Use this filter to find users who have or have not received your target campaign, which you select in the drop-down.
 
 ### Received message from campaign or canvas with tag filter
 
 ![Received Campaign with Tag][15]
 
-Use this filter to find users who Have/Have Not received a campaign or Canvas that has your target tag, which you select in the drop-down.
+Use this filter to find users who have or have not received a campaign or Canvas that has your target tag, which you select in the drop-down.
 
 ## Why use retargeting campaigns?
 
-Retargeting is particularly effective when the original segment also included a specific action you want to see users take. For example, let's say you have a card targeted at users who have never made a purchase. The card advertises a promotion for a discounted in-app purchase. The initial segment looks like:
+Retargeting is particularly effective when the original segment also included a specific action you want to see users take. For example, let's say you have a card targeted at users who have never made a purchase. The card advertises a promotion for a discounted in-app purchase. The initial segment looks like the following:
 
 - Money Spent in App is exactly 0
 - Last Used App less than 14 days ago

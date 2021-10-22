@@ -30,6 +30,7 @@ Using location tracking data, you can set up location-based campaigns and strate
 See [this article][1] for more information on location targeting.
 
 ## Hard setting the default location attribute
+
 You can also use the [`users/track`][8] endpoint in our API to update the [`current_location`][9] default attribute—for example: 
 ```
 https://[your_braze_rest_endpoint]/users/track
@@ -46,6 +47,7 @@ Authorization: Bearer YOUR-REST-API-KEY
 ```
 
 ## Technology partners
+
 You can also leverage location tracking with some of our partners, for example: 
 
 - [Neura][5]

@@ -9,18 +9,18 @@ tool:
 description: "This how-to article will walk you through how to set up Location Targeting, allowing you to segment users by location."
 
 ---
+
 # Location targeting
 
 > This article will walk you through how to set up Location Targeting, allowing you to segment users by their most recent location. This is perfect for if you are looking into location-based campaigns and strategies.
 
-
-## Step 1: create your segment
+## Step 1: Create your segment
 
 Navigate to the **Segments** page, under **Engagement**, to view all of your current user segments. On this page, you can create and name new segments. To get started, click **Create Segment** and give your segment a name.
 
 ![Create Segment][1]{: style="max-width:70%;"}
 
-## Step 2: customize your location
+## Step 2: Customize your location
 
 Once you have created your segment, add a **Most Recent Location** filter to target users by the last place that they used your app. You have the option of either highlighting users in a standard circular region or a customizable polygonal region.
 

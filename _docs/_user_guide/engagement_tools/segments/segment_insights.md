@@ -8,13 +8,13 @@ tool:
   - Reports
 description: "This how-to article will walk you through how to use, interpret, and share Segment Insights."
 ---
-# Segment insights
+
+# Segment Insights
 
 > This how-to article will walk you through how to use, interpret, and share Segment Insights. 
 > <br>
 > <br> 
 > These insights can be used to target users and develop effective marketing campaigns.
-
 
 ![Segment Insights Dash][1]
 

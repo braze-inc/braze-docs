@@ -9,7 +9,7 @@ tool: Canvas
 
 ---
 
-# Delay step
+# Delay Step
 
 Delay Steps in Canvas allow you to add a stand-alone delay to a Canvas. In other words, you can add a delay to your Canvas without needing to add an associated message.
 

@@ -9,7 +9,7 @@ tool:
 
 ---
 
-# Changing your canvas after launch
+# Changing your Canvas after launch
 
 > This reference article covers the different aspects of a Canvas that can be changed after the initial launch.
 
@@ -54,7 +54,6 @@ tool:
 | Exception Events                    |                                              |
 | Delays / Windows                    |                                              |
 {: .reset-td-br-1 .reset-td-br-2}
-
 
 ## Making edits post launch
 

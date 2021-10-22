@@ -6,6 +6,7 @@ tool: Campaigns
 page_type: reference
 description: "This reference article gives an overview of the various statuses a campaign can have and what they mean."
 ---
+
 # Understanding campaign status
 
 > This reference article gives an overview of the various statuses a campaign can have and what they mean.

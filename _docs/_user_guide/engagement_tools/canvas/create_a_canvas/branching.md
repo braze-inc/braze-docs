@@ -34,7 +34,7 @@ Or you can have users flow between branches based upon actions that they take.
 
 ## Warnings
 
-### overlapping filters
+### Overlapping filters
 
 When setting up your Canvas, you should ensure that the Filters that you use to split users down different branches do not overlap. If a user can match multiple steps, Braze will pick a branch to send them down. For example:
 

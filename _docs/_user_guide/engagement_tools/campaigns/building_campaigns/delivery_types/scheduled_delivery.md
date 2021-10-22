@@ -14,7 +14,7 @@ Campaigns sent using time-based scheduled delivery are delivered on specified da
 
 ![Time-based][3]
 
-## Option 1: send as soon as the campaign is launched
+## Option 1: Send as soon as the campaign is launched
 
 If you choose to send a message as soon as it's launched, it will begin sending as soon as you finish creating your campaign.
 
@@ -24,7 +24,7 @@ This type of schedule is designed for one-off campaigns that you wish to send im
 
 If you plan on editing the campaign and re-sending it after viewing the test, be sure to check the box that makes users [re-eligible][24] to receive the campaign. By default, Braze sends a campaign to a user just once unless that box is checked.
 
-## Option 2: sending at a designated time
+## Option 2: Send at a designated time
 
 Scheduling a campaign for a designated time allows you to specify the days and times your campaign will send. You can send a message once, daily, weekly, or monthly at a certain time of day, as well as specify when your campaign should begin and end. This end date is inclusive, which means the last send will be on the end date. 
 
@@ -42,7 +42,7 @@ Segments targeted with local time zone campaigns should include, at minimum, a 2
 
 Designated time schedules are best suited for messages scheduled in advance and recurring campaigns - such as onboarding and retention - that run regularly on all qualified users.
 
-## Option 3: intelligent timing
+## Option 3: Intelligent Timing
 
 [Intelligent Timing][8] allows you to deliver a campaign to each user at a different time. Braze calculates each individual's time based on when that user typically engages with your app and its notifications. You can optionally specify that Intelligent Timing campaigns send only during a certain portion of the day - for instance, if you are notifying users of a promotion that ends at midnight, you may want your messages to send by 10 pm at the latest.
 

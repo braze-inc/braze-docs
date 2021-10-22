@@ -31,13 +31,13 @@ Should the window of re-eligibility be less than the maximum duration of the Can
 
 {% endalert %}
 
-## Action-Based Canvas Step
+## Action-based Canvas step
 
 When `canvas_entry_properties` and `event_properties` are both referenced in an action-based step of an Action-based or API-triggered Canvas:
 - `canvas_entry_properties` will template with properties associated with the custom event, purchase, or API call that triggered the Canvas.
 - `event_properties` will template with properties associated with the custom event or purchase that triggered the step.
 
-## Updating canvas to use entry properties
+## Updating Canvas to use entry properties
 
 If an active Canvas that previously did not include any messages that use `canvas_entry_properties` is edited to include `canvas_entry_properties`, the value corresponding to that property will not be available for users who entered the Canvas before `canvas_entry_properties` was added to the Canvas. The values will only be saved for users that enter the Canvas after the change is made.
 

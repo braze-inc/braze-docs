@@ -36,7 +36,7 @@ When using a send rate limit, Braze "schedules" your messages in minute-granular
 
 ## Making immediate changes
 
-If you need changes to take effect immediately:
+If you need changes to take effect immediately, do the following:
 
 1. Stop the affected campaign.
 2. Duplicate the campaign.

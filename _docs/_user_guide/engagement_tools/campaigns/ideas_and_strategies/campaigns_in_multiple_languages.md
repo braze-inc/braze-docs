@@ -19,19 +19,19 @@ Braze allows you to send messages in different languages from our Dashboard. Whe
 
 Here's how you can set up a message in multiple languages:
 
-## Step 1: feature opt-in
+## Step 1: Feature opt-in
 
 When composing your campaign, click on **Add Languages**.
 
 ![Add Languages][1]{: style="max-width:60%;" }
 
-## Step 2: select languages
+## Step 2: Select languages
 
 Select the languages that your message will be in. The selections offered in the dropdown menu will be all of the languages that your users currently have. Braze automatically tracks the language in users' device settings and includes this information in each user's profile. After you select your languages, the snippet textbox will alter to feature a template that you can copy and paste into the content of your message. This template uses [conditional logic][3] to handle multiple languages in a single campaign.
 
 ![Select Languages][2]
 
-## Step 3: select fields
+## Step 3: Select fields
 
 Select the fields that you want to appear in different languages. These fields will differ depending on the message channel:
 
@@ -45,11 +45,11 @@ In addition, a warning will display if you have already entered content in any o
 
 ![Select Fields][4]
 
-## Step 4: insert fields
+## Step 4: Insert fields
 
 Using the buttons at the bottom of the dialogue, choose how you wish to insert the templated text into the message composer. Or, copy and paste the template into the desired location.
 
-## Step 5: add language variations
+## Step 5: Add language variations
 
 After your templated text is inserted into the desired fields, type in different variations for each language. For each field where there is templating, you should enter the variations after the bracketed segment of templating. The variation should correspond to the language code referenced in the brackets before it. For instance, in the message's body, this might look like:
 
@@ -85,13 +85,13 @@ Anything entered outside of the template block will behave like normal content a
 
 ![Type Variations][6]
 
-## Step 6: preview message
+## Step 6: Preview message
 
 Click the Personalized Preview button and enter a user's ID or email to see how the message would appear to that individual, depending on their language. In addition, you'll be able to see how your entire message looks as a whole and decide whether to add languages to more fields than the ones you had previously chosen.
 
 ![Preview Message][7]
 
-## Step 7: finish campaign
+## Step 7: Finish campaign
 
 Continue through the remaining steps of message creation. This includes finishing composing the message (for instance, editing Advanced Settings).
 

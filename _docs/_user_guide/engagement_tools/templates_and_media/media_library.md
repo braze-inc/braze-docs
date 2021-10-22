@@ -7,6 +7,7 @@ description: "This reference article describes how to use the Media Library to m
 tool: Media
 
 ---
+
 # Media library
 
 > The Media Library allows you to manage your assets in a single, centralized location. To access this feature please go into the **Media Library** tab in the [Templates & Media][4] section of your dashboard.
@@ -25,12 +26,14 @@ You can use the **Media Library** to:
 ![Media Library Page][1]
 
 ## Stats available
-Within the Media Library, you can now see the image dimensions, URL, type as well as the date it was added to the library.
 
-## Accessing the media library from a message composer
-Previously when composing a message, you would upload images for each respective message. As the Media Library now acts as your dashboard's centralized location for assets, all images will now be uploaded directly to it. This additional functionality gives you the flexibility to re-use images across different messages.
+Within the Media Library, you can see the image dimensions, URL, type as well as the date it was added to the library.
 
-## Managing content 
+## Accessing the Media Library from a message composer
+
+The Media Library acts as your dashboard's centralized location for assets, as all images are uploaded directly to it. This functionality gives you the flexibility to re-use images across different messages.
+
+## Managing content
 
 You can also [duplicate]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/duplicate/) and [archive]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/archive/) templates! Learn more about creating and managing templates and creative content in [Templates & Media]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/).
 

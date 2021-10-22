@@ -7,6 +7,7 @@ description: "This reference article discusses how to keep your users knowledgea
 tool: Campaigns
 
 ---
+
 # Feature awareness and new app version
 
 > This reference article addresses how to use the Braze platform to keep your customers up to date on new features and versions of your app. 
@@ -23,7 +24,7 @@ Braze SDKs automatically track a user's _most recent_ app version. These version
 
 ![App Version Filter][1]
 
-### App version number (new)
+### App version number
 
 Use the _App Version Number_ filter to segment users by the app's version/build number. 
 

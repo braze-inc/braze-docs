@@ -7,7 +7,7 @@ description: "Experiment Steps allow you to test multiple Canvas paths against e
 tool: Canvas
 ---
 
-# Experiment step
+# Experiment Step
 
 > Experiment Steps allow you to test multiple Canvas paths against each other and a control group at any point in the user journey. These steps will enable you to track path performance to make informed decisions about your Canvas journey.
 
@@ -19,13 +19,13 @@ A Canvas Experiment Step will randomly assign users to different paths (or an op
 Experiment Steps is currently in beta. Please contact your Braze account manager if you are interested in participating in the beta.
 {% endalert %}
 
-## Create an experiment step
+## Create an Experiment Step
 
 To create an Experiment Step, add a step to your Canvas. Then, using the dropdown at the top of the new step, select **Experiment**.
 
 In the default Experiment Step shown below, there are two default paths, __Path 1__ and __Path 2__, with 50% of the audience being sent down each path. Click on the Experiment Step itself to expand the **Experiment Settings** panel, and you'll see the configuration options for the step. 
 
-### Step 1: choose the number of paths and audience distribution
+### Step 1: Choose the number of paths and audience distribution
 
 ![Experiment Settings][1]{: style="max-width:80%"}
 
@@ -37,11 +37,11 @@ If Canvas re-eligibility is enabled, users who enter the Canvas and go down a ra
 
 Optionally, you can add a description to explain to others what this Experiment Step intends to test or include other information that might be helpful to note.
 
-### Step 2: select how long to track conversions
+### Step 2: Select how long to track conversions
 
 The Experiment Step will record users who enter each step and convert while in the assigned path. This step will track only the __Primary Conversion__ event of the Canvas. Use the input box at the bottom of the panel to enter how many days (between 1 and 30) you'd like this Experiment Step to track conversions.
 
-### Step 3: create paths
+### Step 3: Create paths
 
 Lastly, you must build your downstream paths. Select **Done** and return to the Canvas builder. Click <i class="fas fa-plus-circle"></i>**Plus** under each path to begin creating journeys using the usual Canvas tools as you see fit, and launch the Canvas when you are ready. 
 

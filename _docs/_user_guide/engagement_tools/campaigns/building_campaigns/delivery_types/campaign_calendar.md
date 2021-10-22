@@ -8,7 +8,7 @@ description: "This reference page breaks down the components of the campaign cal
 
 ---
 
-# Campaign calendar
+# Campaign Calendar
 
 The Campaign Calendar is a useful central location in the Dashboard where you can see a big picture view of upcoming and past scheduled campaigns. In addition to this, you will be presented with overall messaging analytics, providing useful information on the type and quantity of future campaigns as well as send stats for past campaigns. 
 ![Calendar Button][5]{: style="float:right;max-width:15%;margin-left:15px;margin-bottom:10px;margin-top:10px;"}

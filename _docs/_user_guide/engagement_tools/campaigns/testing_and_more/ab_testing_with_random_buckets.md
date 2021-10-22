@@ -10,7 +10,7 @@ tool:
 
 ---
 
-# A/B Testing with Random Buckets
+# A/B testing with random buckets
 
 > This article will cover the concept of A/B testing and Variants, how you can use them in your Braze campaigns, as well as how to assign and implement random bucket numbers to help gather useful data.
 
@@ -20,7 +20,7 @@ If you have [Canvas][13] in your Braze platform, you will be able to accomplish 
 
 Here's how you can set up an A/B test with random buckets:
 
-## Step 1: segment your users by the random bucket attribute
+## Step 1: Segment your users by the random bucket attribute
 
 Apply the filter **Random Bucket #**. Once applied, the filter label will change to **Statistical sampling ID**.
 
@@ -45,19 +45,19 @@ You may want to use these types of segments if you want to run a test of three d
 
 For each of your created segments, including the control group, turn on [Analytics Tracking][14]. When evaluating the success of variants relative to the control group, you will be able to go into your [Custom Events][15] page and view how often each segment has completed certain custom events.
 
-## Step 2: create your campaign variants
+## Step 2: Create your campaign variants
 
-### Step 2a: create your first variant
+### Step 2a: Create your first variant
 
 Create a campaign. On the **Target Users** page, select a segment of recipients. The segment you choose will be one that was created in the prior step.
 
 ![Select Campaign Recipient Segment][4]
 
-### Step 2b: build additional variants
+### Step 2b: Build additional variants
 
 [Duplicate][18] your initial campaign variant and modify it accordingly. For instance, you may decide to change the send time or the combination of messaging channels used. When targeting users, select the segment you wish to receive this new campaign variant. Repeat this step to create your remaining campaign variants. Your control group should not receive any variant of this campaign.
 
-## Step 3: build additional messages
+## Step 3: Build additional messages
 
 If you wish, you can continue to send campaign variants to your random bucket segments over time by repeating step 2. One example use case is to test the difference between sending one group 2 notifications in one week, compared to 1. 
 
@@ -71,11 +71,11 @@ All of the below use cases can be accomplished within [Canvas][13], a tool built
 
 ### Delivery
 
-you can compare results between a campaign sent with [scheduled][11], [action-based delivery][17] and [intelligent timing][12].
+You can compare results between a campaign sent with [scheduled][11], [action-based delivery][17] and [intelligent timing][12].
 
 ### Cadence
 
-you can test multiple messaging flows over a period of time. for instance, you can test two different onboarding cadences: one that sends two messages in the user's first two weeks, and one that sends three messages in the user's first two weeks. or, when targeting lapsing users, you can test the effectiveness of sending two winback messages in a week, versus sending just one.
+You can test multiple messaging flows over a period of time. For instance, you can test two different onboarding cadences: one that sends two messages in the user's first two weeks, and one that sends three messages in the user's first two weeks. Or, when targeting lapsing users, you can test the effectiveness of sending two winback messages in a week, versus sending just one.
 
 ### Messaging channels
 

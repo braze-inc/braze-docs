@@ -7,13 +7,13 @@ page_type: tutorial
 description: "This how-to article goes over what Braze's Campaign Connector is and how to use it to deliver targeted, relevant content at the right time."
 
 ---
-# Campaign connector
+# Campaign Connector
 
 > This how-to article goes over what Braze's Campaign Connector is and how to use it to deliver targeted, relevant content at the right time.
 
 ## Overview
 
-braze's campaign connector allows you to create campaigns that are triggered when users interact with active campaigns or news feed cards. this feature is useful because it enables you to deliver targeted, relevant content at the right time. this feature allows you to target users who complete the following interactions with active campaigns:
+braze's Campaign Connector allows you to create campaigns that are triggered when users interact with active campaigns or News Feed cards. This feature is useful because it enables you to deliver targeted, relevant content at the right time. This feature allows you to target users who complete the following interactions with active campaigns:
 
 - View in-app message
 - Click in-app message
@@ -40,27 +40,29 @@ The Campaign Connector feature only works with active campaigns. In addition, yo
 
 These delivery rules are particularly pertinent if you are targeting users who are enrolled in a control group, receive an email or receive a push notification. Because users will be enrolled in the control group as soon as you publish the original campaign, you must publish the follow-on campaign before you publish the original campaign. Similarly, if you publish the original campaign before the follow-on campaign, many users may receive your email and/or push notification before the follow-on campaign is published.
 
-## How to use the campaign connector feature
+## How to use the Campaign Connector feature
 
-### Step 1: create a new campaign
+### Step 1: Create a new campaign
+
 Compose the messages that you wish to send to your users. You can select a classic campaign or a single channel campaign, depending on your use case.
 
-### Step 2: select interaction and target campaign
+### Step 2: Select interaction and target campaign
 
 You can target users who interact with an active campaign, or users who interact with an active News Feed Card.
 
 #### Targeting users who interact with a campaign
-Select [action-based delivery][7] and add the "Interact with Campaign" trigger. Then, choose the trigger interaction. Next, you’ll select the active campaign that you’d like to target.
+
+Select [Action-Based Delivery][7] and add the "Interact with Campaign" trigger. Then, choose the trigger interaction. Next, you’ll select the active campaign that you’d like to target.
 
 ![Interact with Campaign][4]
 
-#### Targeting users who interact with a news feed card
+#### Targeting users who interact with a News Feed card
 
-Select action-based delivery and add the "Interact with Card" trigger. Then choose whether you’d like to target users who view a News Feed Card or users who click a News Feed Card. Select the active News Feed Card that you’d like to target.
+Select **Action-Based Delivery** and add the "Interact with Card" trigger. Then choose whether you’d like to target users who view a News Feed Card or users who click a News Feed Card. Select the active News Feed Card that you’d like to target.
 
 ![Interact With Card][5]
 
-### Step 3: set schedule delay and add exceptions if necessary
+### Step 3: Set schedule delay and add exceptions if necessary
 
 If you choose to set a schedule delay, you can add an exception to the trigger action. For example, you might want to resend an email campaign to users who did not open the original e-mail.  In this scenario, you can choose "Received e-mail" as the trigger and set a schedule delay of one week. Then you can add "Open e-mail" as an exception. Now, you’ll resend the email to users who did not open the original email within a week of receiving it.
 
@@ -68,8 +70,7 @@ If you choose to set a schedule delay, you can add an exception to the trigger a
 
 Exception events will only trigger while a user is waiting to receive the message it’s associated with. If a user performs the action before waiting for the message, the exception event will not trigger.
 
-
-### Step 4: proceed with campaign creation
+### Step 4: Proceed with campaign creation
 
 Continue creating your campaign just as you normally would. Note that if you want to ensure that you send a message to every user that is going to interact with a specific campaign, then it would be best to target a segment that contains all of the users of your app.
 

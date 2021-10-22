@@ -8,6 +8,7 @@ tool:
   - Campaigns
   - Segments
 ---
+
 # Understanding user installs
 
 > This reference article goes over the concept of user installs (install attribution tracking) and different ways to apply this information within your campaign.

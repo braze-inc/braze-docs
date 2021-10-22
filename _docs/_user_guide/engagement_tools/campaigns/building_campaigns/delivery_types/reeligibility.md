@@ -10,13 +10,13 @@ tool:
 
 ---
 
-# Re-eligibility with Campaigns and Canvas
+# Re-eligibility with campaigns and Canvas
 
 Whenever you schedule a recurring or triggered campaign or Canvas, you have the option of allowing users to become re-eligible for it. By default, Braze sends a message to a user only once, even if they re-qualify. If you enable re-eligibility, you are overriding this default behavior and allowing qualified members to receive messages again once they've received the first instance of the campaign or Canvas. You can state the timeline on which users would ultimately become re-eligible.
 
 ## Canvas
 
-to enable re-elibility for a canvas, check **allow users to re-enter this canvas** in the **entry controls** section of step 3. you can choose between allowing users to re-enter after the maximum duration of the canvas, or after a specified window.
+To enable re-elibility for a canvas, check **allow users to re-enter this canvas** in the **entry controls** section of step 3. You can choose between allowing users to re-enter after the maximum duration of the canvas, or after a specified window.
 
 ![Entry Controls][2]
 
@@ -28,7 +28,7 @@ If re-eligibility for a Canvas is set to shorter than the duration of the Canvas
 
 ## Campaigns
 
-to enable re-eligibility for a campaign, check **allow users to become re-eligible to receive campaign** in the **delivery controls** section of step 2.
+To enable re-eligibility for a campaign, check **allow users to become re-eligible to receive campaign** in the **delivery controls** section of step 2.
 
 ![Delivery Controls][1]
 
@@ -38,7 +38,7 @@ Additionally, if you are trying to send a message immediately with a re-eligibil
 
 ![re-eligible][24]
 
-## Re-eligibility Delay Calculations
+## Re-eligibility delay calculations
 
 Re-eligibility for both campaigns and Canvases are calculated in seconds, not calendar days. That means that a day counts as 24 hours (or 86,400 seconds) from when a user receives the message, not the next calendar day at midnight.
 

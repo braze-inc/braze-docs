@@ -41,7 +41,7 @@ Once you have added segments or filters to fine tune your audience, the **Audien
 
 ![Audience Summary][27]
 
-## A/B Testing
+## A/B testing
 
 Under the **A/B Testing** section, you can set up a test to compare users’ responses to multiple versions of the same marketing campaign. These versions share similar marketing goals but differ in wording and style. The objective is to identify the version of the campaign that best accomplishes your marketing goals. 
 

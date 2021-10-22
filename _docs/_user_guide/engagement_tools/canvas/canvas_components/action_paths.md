@@ -8,9 +8,9 @@ description: "This reference article covers Action Paths and how to use them in 
 tool: Canvas
 ---
 
-# Action paths step
+# Action Paths Step
 
-Action Paths in Canvas allow you to sort your users based on their actions. Using Action Paths, you can: 
+Action Paths in Canvas allow you to sort your users based on their actions. Using Action Paths, you can do the following: 
  
 * Customize user paths based on a specific action
 * Hold users for a given duration to prioritize their next path based on their actions during this evaluation period
@@ -19,13 +19,13 @@ Action Paths in Canvas allow you to sort your users based on their actions. Usin
 Canvas Action Paths are currently in early access. Please contact your Braze account manager if you are interested in participating in the early access.
 {% endalert %}
 
-## Create action paths
+## Create Action Paths
 
 ![canvas_actionpath][1]{: style="float:right;max-width:40%;margin-left:15px;"}
 
-To create Action Paths, add a step to your Canvas. Then, using the drop-down at the top of the new step, select `Action Paths`.
+To create Action Paths, add a step to your Canvas. Then, using the drop-down at the top of the new step, select **Action Paths**.
 
-### Define action settings 
+### Define action settings
 
 In the **Action Settings** module, you can choose how long you’d like to hold users in the action step. 
 
@@ -41,7 +41,7 @@ When **Ranking** is off, users who perform one or more of the triggers will imme
 
 When **Ranking** is on, you can prioritize action groups. The user will continue down the highest priority group that they are eligible for at the end of the evaluation period. 
 
-### Canvases with re-eligibility 
+### Canvases with re-eligibility
 
 If users enter into an action path multiple times and have multiple entries in the action path at the same time, the expected behavior varies depending on **Ranking**: 
 

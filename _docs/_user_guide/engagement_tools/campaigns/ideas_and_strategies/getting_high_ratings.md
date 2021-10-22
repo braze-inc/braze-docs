@@ -8,6 +8,7 @@ tool:
   - Campaigns
   
 ---
+
 # Getting high ratings
 
 > This reference article discusses best practices when using Braze to drive your customer platforms toward success.

@@ -8,7 +8,7 @@ channel: news feed
 
 ---
 
-# News feed best practices
+# News Feed best practices
 
 The Braze News Feed is a targeted, dynamic stream of rich content. It offers a powerful way to reach users with continuously updated content that does not require additional development work. This content can be targeted at various segments and scheduled in the same way as other Braze messages. Each card consists of a title, a summary, an image, and optionally a URL. The feed also includes the ability to deep-link within the app, link directly to the App Store, Google Play, etc. or direct users to a web view. This unique Braze UI element must be enabled during [integration][1]. Make sure to discuss it with your developers.
 
@@ -25,6 +25,7 @@ Braze recommends that customers who use our News Feed tool move over to our Cont
 At Braze, we value the customization that News Feed brings to the table. Here are some of our best practices and tips to help you get the most out of Braze.
 
 ### Make it eye-catching
+
 The more noticeable, relevant and interesting your News Feed is, the more likely it will be seen by others.  
 
 - Use the News Feed to help make your app feel dynamic and regularly updated by showcasing new content.
@@ -32,6 +33,7 @@ The more noticeable, relevant and interesting your News Feed is, the more likely
 - Take advantage of the visual space by incorporating images and graphics that stand out.
 
 ### Make it personal
+
 Companies and their users love and value personalization.
 
 - Customize the News Feed to reflect your brand’s identity and create a seamless app experience.
@@ -39,6 +41,7 @@ Companies and their users love and value personalization.
 - Segment users and tailor certain announcements to inspire specific action.
 
 ### Make it useful
+
 The content you choose to show through the News Feed can range widely and work in tandem with campaigns.  
 
 - Provide announcements that encourage interaction, highlight news and promote sales.

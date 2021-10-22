@@ -9,11 +9,11 @@ platform: API
 
 ---
 
-# API-Triggered Campaigns 
+# API-triggered campaigns
 
 API-triggered campaigns or server-trigger campaigns are ideal for more advanced transactional use-cases. Braze API-triggered campaigns allow marketers to manage campaign copy, multivariate testing, and re-eligibility rules within the Braze dashboard while triggering the delivery of that content from their own servers and systems. The API request to trigger the message can also include additional data to be templated into the message in real-time.
 
-## Setting up an api-triggered campaign
+## Setting up an API-triggered campaign
 
 Setting up an API-triggered campaign takes a few quick steps. First, create a new multichannel or single-channel campaign (with multivariate testing).
 
@@ -25,7 +25,7 @@ Next, configure your copy and notifications the same way as you would were it a 
 
 ![API-Triggered Delivery Step][37]
 
-## Using the templated content included with an api request
+## Using the templated content included with an API request
 
 In addition to triggering the message, you can also include content with the API request to be templated into the message within the `trigger_properties` object. This content can be referenced in the body of the message by saying something like
 ``{% raw %} {{ api_trigger_properties.${ some_value_included_with_request }}} {% endraw %}``.
@@ -33,7 +33,7 @@ See the following social notification example use case for additional context:
 
 ![Social Example Delivery Window][38]{: style="max-width:70%;"}
 
-## Re-eligibility with API-Triggered Campaigns
+## Re-eligibility with API-triggered campaigns
 
 The number of times a user receives an API-triggered campaign can be limited using re-eligibility settings, meaning the user will receive the campaign only once or once in a given window, regardless of how many times the API trigger is fired.
 

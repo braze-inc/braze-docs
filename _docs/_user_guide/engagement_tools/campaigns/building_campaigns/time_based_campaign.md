@@ -7,7 +7,7 @@ page_type: reference
 description: "This reference article covers time-based functionalities for Campaigns."
 
 ---
-# Time-Based Functionalities for Campaigns
+# Time-based functionalities for campaigns
 
 > This reference article covers time-based functionalities for campaigns to assist with strategies, troubleshooting, and to answer common questions.
 
@@ -24,7 +24,7 @@ This section covers time-based scheduling and delivery options for [Scheduled De
 
 ![Send at a designated time][2]
 
-### Intelligent timing
+### Intelligent Timing
 
 | Definition | Time Zone |
 | ---------- | --------- |
@@ -51,7 +51,7 @@ This section covers time-based scheduling and delivery options for [Scheduled De
 
 ![Re-eligibility][5]
 
-## Action-Based Delivery
+## Action-based delivery
 
 This section covers the schedule delay and delivery options for [Action-Based Delivery]({{site.baseurl}}/user_guide/engagement_tools/campaigns/scheduling_and_organizing/delivery_types/triggered_delivery/) campaigns.
 
@@ -70,7 +70,7 @@ In choosing your delay length, note that if you set a delay that is longer than 
 
 ![Send immediately][6]
 
-#### Send campaign after x days
+#### Send campaign after X days
 
 | Definition | Time Zone |
 | ---------- | --------- |
@@ -79,7 +79,7 @@ In choosing your delay length, note that if you set a delay that is longer than 
 
 ![Send after X days][7]
 
-#### Send campaign on the next [day of the week] at x time
+#### Send campaign on the next [day of the week] at X time
 
 | Definition | Time Zone |
 | ---------- | --------- |
@@ -90,7 +90,7 @@ In choosing your delay length, note that if you set a delay that is longer than 
 
 For example, suppose you select "Send on the next Saturday at 3:15pm". If a user performs the trigger event on a Saturday, they would receive that message on the next Saturday in 7 days. If they enter on a Friday, the next Saturday would be in 1 day.
 
-#### Send in x calendar days at y time
+#### Send in X calendar days at Y time
 
 | Definition | Time Zone |
 | ---------- | --------- |

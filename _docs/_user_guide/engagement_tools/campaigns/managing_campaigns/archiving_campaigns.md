@@ -8,11 +8,12 @@ tool:
   - Campaigns
 
 ---
+
 # Archiving campaigns
 
 > This reference article goes over how to archive a pre-existing campaign, the effects of archiving a campaign, and how to resume that campaign if needed.
 
-If you'd like to stop a campaign from sending or clear it from your Dashboard, you can archive it. Go to the **Campaigns** page, click the gear icon next to the campaign's name and click **Archive**.
+If you'd like to stop a campaign from sending or clear it from your dashboard, you can archive it. Go to the **Campaigns** page, click the gear icon next to the campaign's name and click **Archive**.
 
 ![Archiving][1]
 

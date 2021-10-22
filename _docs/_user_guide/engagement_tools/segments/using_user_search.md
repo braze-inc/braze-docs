@@ -13,7 +13,6 @@ description: "This reference article will go through how to use User Search in t
 
 > This reference article will go through how to use User Search in the Dashboard, the different components involved in a user profile, and showcases some examples of how this feature can be used to troubleshoot campaigns. 
 
-
 ## Feature overview
 
 The **User Search** feature allows you to view user profiles. User profiles are a great way to find information about specific users. The User Search feature is located in the Users section of the Braze dashboard.

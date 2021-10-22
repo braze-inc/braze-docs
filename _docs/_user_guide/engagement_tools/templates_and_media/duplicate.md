@@ -10,11 +10,13 @@ tool:
   - Media
 
 ---
-# How to duplicate templates in templates & media
+
+# How to duplicate templates in Templates & Media
 
 > Duplicating a template can save a lot of time. You can duplicate a single template or multiple.
 
 ## Duplicate an individual template
+
 ![template_duplicate_cog][8]{: style="float:right;max-width:15%;margin-left:15px;"}
 
 Duplicating an individual template can be achieved by clicking the cog located on the template grid screen and selecting `duplicate` from the drop-down.
@@ -23,8 +25,8 @@ Duplicating an individual template can be achieved by clicking the cog located o
 For [Content Block]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/content_blocks/) templates, a 'draft' copy is created. For all other templates a new duplicate copy is automatically created.
 {% endalert %}
 
-
 ## Duplicate multiple templates
+
 {% raw %}
 
 Duplicating multiple templates can be achieved by selecting the checkbox next to the template name. Select multiple templates and then click the "Duplicate" button that appears.

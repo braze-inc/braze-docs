@@ -7,7 +7,9 @@ description: "This reference article lists helpful News Feed use cases."
 channel: news feed
 
 ---
-# News feed use cases {#news-feed-use-cases}
+
+# News Feed use cases {#news-feed-use-cases}
+
 At Braze, we value the customization that News Feed brings to the table. Here are some of our favorite use cases to help you get ideas on how to get the most out of Braze.
 
 - Advertising app updates
