@@ -9,7 +9,7 @@ channel:
 
 ---
 
-## Badge Counts
+## Badge counts
 
 You can specify the desired badge count when you compose a push notification through Braze's dashboard. You may also update your badge count manually through your application's [`applicationIconBadgeNumber`][20] property or through the [remote notification payload][21]. Braze will also clear the badge count when a Braze notification is received while the app is foregrounded. If you do not have a plan for clearing badges as part of normal app operation or by sending pushes which clear the badge, you should clear the badge when the app becomes active by adding the following code to your app's `applicationDidBecomeActive:` delegate method:
 

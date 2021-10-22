@@ -13,13 +13,13 @@ platform:
   
 ---
 
-# TV and OTT Integrations
+# TV and OTT integrations
 
 As technology evolves to new platforms and devices, so can your messaging with Braze!
 
 Braze offers different engagement channels for a number of different TV Operating Systems and "OTT" Set Top Boxes.
 
-## Platforms and Features
+## Platforms and features
 
 Below is a list of features and messaging channels supported today.
 
@@ -102,7 +102,7 @@ Below is a list of features and messaging channels supported today.
     </tbody>
 </table>
 
-## Integration Guides
+## Integration guides
 
 ### Amazon Fire TV
 
@@ -184,7 +184,7 @@ Use Braze's iOS SDK to collect data and analytics on your TV OS users. These cus
 
 For more information, visit the [iOS SDK Integration Guide][4].
 
-## In-App Message with Custom UI
+## In-app message with custom UI
 
 For platforms that support In-App Messages via Custom UI, your app can be configured to read the data model received by the Braze SDK. This information will contain the fields configured in the dashboard (title, body, button text, colors, etc.) which your app can read and display accordingly. This data can also be used to customize Braze's native In-App Message templates into your existing app designs.
 

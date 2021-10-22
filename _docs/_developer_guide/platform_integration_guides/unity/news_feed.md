@@ -13,7 +13,7 @@ description: "This reference article covers News Feed integration for the Unity 
 
 # News Feed
 
-## Receiving News Feed Data in Unity
+## Receiving News Feed data in Unity
 
 You may register Unity Game Objects to be notified of incoming News Feed cards. 
 
@@ -23,13 +23,13 @@ On Android, set `com_appboy_feed_listener_callback_method_name` and `com_appboy_
 
 - To configure your game object listener at runtime on either platform, use `AppboyBinding.ConfigureListener()` and specify `BrazeUnityMessageType.NEWS_FEED`.
 
-## Parsing Cards
+## Parsing cards
 
 Incoming `string` messages received in your game object callback can be parsed into our pre-supplied [Feed][11] object, which has a list of [Card][12] objects for convenience.
 
 See the following example for details:
 
-### Example Callback
+### Example callback
 
 ```csharp
 void FeedReceivedCallback(string message) {

@@ -11,10 +11,10 @@ channel:
   
 ---
 
-# Card Types
+# Card types
 Braze has five unique News Feed card types that share a base model. Each card type also has additional card-specific properties which are listed below.
 
-## Base Card
+## Base card
 
 The [Base Card][29] model provides foundational behavior for all cards.  
 
@@ -27,14 +27,14 @@ The [Base Card][29] model provides foundational behavior for all cards.
 - `getCategories()` - returns the list of categories assigned to the card, cards without a category will be assigned ABKCardCategoryNoCategory
 - `isInCategorySet(EnumSet)` - returns true if the card belongs to the given category set
 
-## Banner Image Card
+## Banner image card
 [Banner Image Cards][30] are clickable full-sized images. In addition to the base card properties:
 
 - `getImageUrl()` - returns the URL of the card’s image
 - `getUrl()` - returns the URL that will be opened after the card is clicked on. It can be a http(s) URL or a protocol URL
 - `getDomain()` - returns link text for the property url.
 
-## Captioned Image Card
+## Captioned image card
 [Captioned Image Cards][31] are clickable full-sized images with accompanying descriptive text. In addition to the base card properties:
 
 - `getImageUrl()` - returns the URL of the card’s image
@@ -43,7 +43,7 @@ The [Base Card][29] model provides foundational behavior for all cards.
 - `getUrl()` - returns the URL that will be opened after the card is clicked on. It can be a http(s) URL or a protocol URL
 - `getDomain()` - returns the link text for the property url.
 
-## Text Announcement Card (Captioned Image without Image)
+## Text announcement card (captioned image without image)
 [Text Announcement Cards][32] are clickable cards containing descriptive text. In addition to the base card properties:
 
 - `getTitle()` - returns the title text for the card
@@ -51,7 +51,7 @@ The [Base Card][29] model provides foundational behavior for all cards.
 - `getUrl()` - returns the URL that will be opened after the card is clicked on. It can be a http(s) URL or a protocol URL
 - `getDomain()` - returns the link text for the property url.
 
-## Short News Card
+## Short news card
 [Short News Cards][33] are clickable cards with images and accompanying descriptive text.  In addition to the base card properties:
 
 - `getImageUrl()` - returns the URL of the card’s image
