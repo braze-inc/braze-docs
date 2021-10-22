@@ -179,7 +179,7 @@ The Braze and [Transcend]({{site.baseurl}}/partners/data_and_infrastructure_agil
 
 ## August 2021
 
-### Simple Ssurvey in-app message
+### Simple survey in-app message
 
 Use the new Simple Survey In-App Message template to collect user attributes, insights, and preferences that power your campaign strategy. For example, you can ask users how they’d like to use your app, learn more about their personal preferences, or even ask about their satisfaction with a particular feature. This survey template is supported for both mobile apps and web browsers. Visit our [documentation]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/templates/simple_survey/) to get started.
 
