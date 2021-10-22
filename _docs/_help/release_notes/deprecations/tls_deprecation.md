@@ -13,7 +13,7 @@ Braze has removed support for Transport Layer Security (TLS) ciphers in both TLS
 
 ## Background
 
-braze is deprecating known weak transport layer security (tls) ciphers in both tls 1.0 and 1.1, in accordance with recommendations made by the pci security standards council in two phases concluding in may 2018.
+Braze is deprecating known weak Transport Layer Security (TLS) ciphers in both TLS 1.0 and 1.1, in accordance with recommendations made by the PCI Security Standards Council in two phases concluding in May 2018.
 
 This change is not being made in response to any breach or issue related to Braze’s platform, but as a precautionary measure to maintain our best-in-class security and data standards, and to proactively safeguard our clients and their customers.
 
