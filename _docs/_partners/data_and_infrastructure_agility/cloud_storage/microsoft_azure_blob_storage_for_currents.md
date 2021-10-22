@@ -20,7 +20,7 @@ After transporting data into Azure Blob Storage, you can use ETL processes (Extr
 
 Integration with Microsoft Azure Blob Storage requires a Storage Account and a Connection String to allow Braze to connect to stream Currents data.
 
-### Step 1: Create Storage Account
+### Step 1: Create storage account
 
 Navigate to "Storage Accounts" in the sidebar, and click the **Add** button in the center column to create a new storage account. Even if you already have a storage account, we recommend creating a new one specifically for your Braze data.
 
@@ -28,7 +28,7 @@ All you need to do is give the Storage Account a name. You don't need to change 
 
 ![Azure Blob]({% image_buster /assets/img/azure-currents-step-1.png %})
 
-### Step 2: Get Connection String
+### Step 2: Get connection string
 
 Once the Storage Account is deployed, navigate to the Access Keys menu from the center column. Take note of the Connection String. Microsoft provides two access keys so that you can maintain connections using one key while regenerating the other. You only need the connection string from one of them.
 
@@ -38,13 +38,13 @@ Braze Currents uses the Connection String from this menu, not the Key.
 
 ![Azure Blob]({% image_buster /assets/img/azure-currents-step-2.png %})
 
-### Step 3: Create a Blob Service Container
+### Step 3: Create a blob service container
 
 Then, navigate to the "Blobs" menu under the "Blob Service" section of the center column. Create a Blob Service Container within that same Storage Account that you created earlier. All you need to do is give the Blob Service Container a name. You don't need to change any of the defaults. Take note of the name of the container.
 
 ![Azure Blob]({% image_buster /assets/img/azure-currents-step-3.png %})
 
-### Step 4: Finish Up
+### Step 4: Finish up
 
 Add this information to the Azure Blob Currents page on the dashboard, and press "Launch Current".
 

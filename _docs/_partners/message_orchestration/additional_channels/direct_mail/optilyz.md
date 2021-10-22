@@ -9,7 +9,7 @@ search_tag: Partner
 
 ---
 
-# optilyz Direct Mail Automation
+# optilyz direct mail automation
 
 > [optilyz][1] is a direct mail automation platform that enables you to run more customer-centric, sustainable, and profitable direct mail campaigns. optilyz is used by hundreds of companies across Europe and empowers you to integrate letters, postcards, and self-mailers into your cross-channel marketing as well as automate and better personalize campaigns.
 
@@ -27,11 +27,11 @@ Use the optilyz and Braze webhook integration to send direct mail to your custom
 
 To integrate with optilyz, use the [optilyz API][2] to send recipient data to the Braze webhook.
 
-### Step 1: Create a Webhook Template in Braze
+### Step 1: Create a webhook template in Braze
 
 To create a webhook template, from the Braze dashboard, navigate to __Templates & Media__ and select __Blank Template__ under __Webhook Templates__. Name your template.
 
-### Step 2: Fill Out Your Template
+### Step 2: Fill out your template
 
 In your new Webhook template, fill out the following fields:
 
@@ -63,7 +63,7 @@ The `variation` field is optional and can be used to define which design inside 
 
 ![optilyz_compose][5]
 
-### Step 3: Define Request Headers and HTTP Method
+### Step 3: Define request headers and HTTP method
 
 optilyz also requires an HTTP Header for authorization and an HTTP method. In the __Settings__ tab of the webhook editor, create a key-value pair and replace the `OPTILYZ_API_KEY` with your optilyz API key.
 
@@ -74,17 +74,17 @@ optilyz also requires an HTTP Header for authorization and an HTTP method. In th
 
 ![optilyz_settings][6]{: style="max-width:50%"}
 
-### Step 4: Preview Your Request and Save Your Template
+### Step 4: Preview your request and save your template
 
 Next, preview your request in the left-hand panel or navigate to the __Test__ tab, where you can select a random user, an existing user, or customize your own to test your webhook. Remember to save your template before leaving the page!
 
 ![optilyz_testing][7]{: style="max-width:80%"}
 
-## Using This Integration
+## Using this integration
 
 Create a campaign, select __Webhook__, and choose your template from the __Saved Webhook Template__ list.<br>For more information, check out our documentation on [Webhooks][9]!
 
-## Use Cases
+## Use cases
 
 Running direct mail like a digital channel means moving away from mass mailings and leveraging the channel as part of your (digital) customer journeys.
 

@@ -16,20 +16,20 @@ Kochava and Braze power a more holistic understanding of campaigns. Kochava send
 
 ## Integration
 
-### Step 1: Integration Requirements
+### Step 1: Integration requirements
 
 * This integration supports iOS and Android apps.
 * Your app will need Braze's SDK and Kochava's SDK installed.
 
-### Step 2: Getting the Braze Data Import Key
+### Step 2: Getting the Braze data import key
 
 In your Braze account, navigate to "Attribution" under "Technology Partners" and select "Kochava". Here, you will find the REST Endpoint and generate your Braze Data Import Key. Once generated, you will be able to create a new key, or invalidate an existing one as needed. The Data Import Key and the REST Endpoint are used in the next step when setting up a postback in Kochava's dashboard.<br><br>![Kochava Image][4]{: style="max-width:70%;"}
 
-### Step 3: Setting Up A Postback from Kochava
+### Step 3: Setting up a postback from Kochava
 
 Follow [these instructions][18] to add a postback in Kochava's dashboard. You will be prompted for the key and REST Endpoint that you found in Braze's dashboard in Step 2. 
 
-### Step 4: Confirming the Integration
+### Step 4: Confirming the integration
 
 Once Braze receives attribution data from Kochava, the status connection indicator on "Technology Partners", then "Attribution" will change to green and a timestamp of the last successful request will be included. Note that this will not happen until we receive data about an __attributed__ install. Organic installs are ignored by our API and are not counted when determining if a successful connection was established.
 <br><br>
@@ -53,11 +53,11 @@ Braze will still store IDFA values for users that have opted-in if you are colle
 {% endtab %}
 {% endtabs %}
 
-## Facebook, Twitter and Snapchat Attribution Data
+## Facebook, Twitter and Snapchat attribution data
 
 Attribution data for Facebook, Twitter, and Snapchat campaigns are __not available through our partners__. These media sources do not permit their partners to share attribution data with third parties and, therefore, our partners __cannot send that data to Braze__.
 
-## Kochava Click Tracking URLs in Braze (Optional)
+## Kochava click tracking URLs in Braze (optional)
 
 Using click tracking links in your Braze campaigns will allow you to easily see which campaigns are driving app installs and re-engagement. As a result, you'll be able to measure your marketing efforts more effectively and make data-driven decisions on where to invest more resources for the maximum ROI.
 

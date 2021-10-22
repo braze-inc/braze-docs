@@ -7,7 +7,7 @@ search_tag: Partner
 
 ---
 
-# Using Shopify Data in Braze
+# Using Shopify data in Braze
 
 ## Personalization
 
@@ -105,7 +105,7 @@ In addition, you can also use Braze's breadth of purchase filter to create segme
 If you are looking to segment by custom event properties, please ensure that you work with your Customer Success Manager to enable filtering for all relevant event properties that you'd like to use within segmentation and Liquid.
 {% endalert %} 
 
-## Campaign and Canvas Triggering 
+## Campaign and Canvas triggering 
 
 With Shopify custom events in Braze, you can trigger Canvases or campaigns like you normally would with any other [custom event]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events/#custom-event-storage). Shown below is an example of a Canvas that triggers off of the Shopify `shopify_checkouts_abandon` event within the Canvas entry criteria. 
 

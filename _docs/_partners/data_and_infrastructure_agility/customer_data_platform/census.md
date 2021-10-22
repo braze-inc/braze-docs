@@ -24,11 +24,11 @@ With Census, keeping your customer success, sales, and marketing teams on the sa
 | Census Account | Census | Your Census Instance | An active Census account with an active Braze service connection. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
 
-## Braze and Census Integration
+## Braze and Census integration
 
 The Braze and Census integration allows you to use your product data to dynamically create targeted user segments in Braze. For example, after successfully testing and implementing the integration, Braze can create a user segment of 'Users Active in the Last 30 Days' to target specific users to ask them to test an upcoming beta feature.
 
-### Step 1: Create a Braze API Key
+### Step 1: Create a Braze API key
 
 Braze allows you to create multiple API keys, each with its own set of permissions. In most cases, the recommended practice is to create a new API key for Census rather than reusing an existing one.
 
@@ -37,11 +37,11 @@ Braze allows you to create multiple API keys, each with its own set of permissio
 3. Name this API key, and select all User Data permissions, except for `users.delete`. The permissions set may change as Census adds support for more Braze objects, so you may either want to grant more permissions now or plan to update these permissions in the future. Next, select __Save API Key__.
 4. Lastly, copy API Key found under __Identifier__ to use when creating your Census connection. 
 
-### Step 2: Select your Braze API Endpoint
+### Step 2: Select your Braze API endpoint
 
 Locate and note your Braze REST API endpoint, this will be needed when creating your Census connection with Braze. Your endpoint will depend on the Braze URL for your instance, find a full list of all Braze API Endpoints [here][2]. 
 
-### Step 3: Create the Census Connection
+### Step 3: Create the Census connection
 
 1. In the __Settings__ tab, create a new __Braze Service Connection__ under __Add Service__ in Census.
 2. Name this connection and provide the Braze Endpoint URL and API Key.<br><br>![add_service][8]{: style="max-width:60%;"}
@@ -50,7 +50,7 @@ Locate and note your Braze REST API endpoint, this will be needed when creating 
 
 When using the Census and Braze integration, Census will only send the deltas (changing data) on each sync to Braze.  
 
-### Supported Sync Behaviors
+### Supported sync behaviors
 
 Census supports syncing your data to both the user and event object in Braze. To learn more about this integration and Census syncing behaviors, visit the following [Census documentation](https://docs.getcensus.com/destinations/braze).
 

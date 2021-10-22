@@ -28,11 +28,11 @@ From there, these segments will be assigned a [custom attribute]({{site.baseurl}
 
 Before you can access and use Segment Personas, you must have already [set up Braze as a destination]({{site.baseurl}}/partners/data_and_infrastructure_agility/customer_data_platform/segment/) your Segment integration, including inputting the correct "Appboy Data Center" and "Braze REST API Key" into your destination [Connection Settings]({{site.baseurl}}/partners/data_and_infrastructure_agility/customer_data_platform/segment/#connection-settings).
 
-## Sync Time
+## Sync time
 
 Though the default setting for the Braze to Segment Personas connection is `Realtime`, there are some filters that will disqualify the persona from syncing in real-time, including some time-based filters which restrict your audience's size at the time of message send.
 
-## Segment Debugger Testing
+## Segment debugger testing
 
 Segment's dashboard provides a "Debugger" feature that allows customers to test whether data from a "Source" is transferring to a "Destination" as expected.
 
