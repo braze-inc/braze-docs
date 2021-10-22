@@ -76,7 +76,7 @@ Optional, any attributes can also be set by using a tag of `braze[]` with the na
 
 ### Step 1: Create a REST API Key
 
-Create a REST API Key with access to `user.track` from the [Braze Developer Console][8].
+Create a REST API Key with access to `users.track` from the [Braze Developer Console][8].
 
 ![User/Track API][11]
 
@@ -164,7 +164,7 @@ _Sample of the Outgoing API which will be sent to the [/user/track/][10] endpoin
 [8]: https://dashboard.braze.com/app_settings/developer_console/
 [9]: {{site.baseurl}}/developer_guide/rest_api/basics/#endpoints
 [10]: {{site.baseurl}}/developer_guide/rest_api/user_data/#user-track-request
-[11]: {% image_buster /assets/img/user-track-api.gif %}
+[11]: {% image_buster /assets/img/user_track_api.png %}
 [12]: {% image_buster /assets/img/braze-looker-action.png %}
 [13]: {% image_buster /assets/img/send-looker-action.png %}
 [14]: {% image_buster /assets/img/custom-attributes-looker.png %}

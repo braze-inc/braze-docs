@@ -29,7 +29,7 @@ We have updated Adjust's partner page to make this API key accessible to custome
 
 ![Adjust API Key]({% image_buster /assets/img/adjust_eventapikey.png %})
 
-## New partners
+## New Partners
 
 Some new partners have joined our Alloys program and have been added to our Docs! Say hello to...
 - [FiveTran]({{site.baseurl}}/partners/fivetran/)
