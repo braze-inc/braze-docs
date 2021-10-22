@@ -69,7 +69,7 @@ follow-on messages to users in real-time when these events are triggered.
 
 ## Integration
 
-### ios
+### iOS
 In order to integrate with your app, import the following `Appboy-Apptimize.m` and
 `Apptimize-Appboy.h` files into your Xcode project, import the `Appboy-Apptimize.h`
 header into your AppDelegate implementation and add the following to
