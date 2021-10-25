@@ -8,7 +8,7 @@ description: "This article outlines details about the Update Scheduled API-Trigg
 
 ---
 {% api %}
-# Update scheduled api-triggered campaigns
+# Update scheduled API-triggered campaigns
 {% apimethod post core_endpoint|https://www.braze.com/docs/core_endpoints %} 
 /campaigns/trigger/schedule/update
 {% endapimethod %}

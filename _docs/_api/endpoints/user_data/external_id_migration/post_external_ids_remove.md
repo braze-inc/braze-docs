@@ -9,7 +9,7 @@ description: "This article outlines details about the external IDs Remove endpoi
 
 ---
 {% api %}
-# External id remove
+# External ID remove
 {% apimethod post %}
 /users/external_ids/remove
 {% endapimethod %}
@@ -64,7 +64,7 @@ Only deprecated IDs can be removed; attempting to remove a primary external ID w
 {% endalert %}
 
 ## Response 
-the response will confirm all successful removals, as well as unsuccessful removals with the associated errors. error messages in the `removal_errors` field will reference the index in the array of the original request.
+The response will confirm all successful removals, as well as unsuccessful removals with the associated errors. Error messages in the `removal_errors` field will reference the index in the array of the original request.
 
 ```
 {

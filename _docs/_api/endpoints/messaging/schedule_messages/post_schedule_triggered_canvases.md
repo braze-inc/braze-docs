@@ -9,7 +9,7 @@ description: "This article outlines details about the Schedule API-Triggered Can
 
 ---
 {% api %}
-# Schedule api-triggered canvases
+# Schedule API-triggered canvases
 {% apimethod post core_endpoint|https://www.braze.com/docs/core_endpoints %} 
 /canvas/trigger/schedule/create
 {% endapimethod %}

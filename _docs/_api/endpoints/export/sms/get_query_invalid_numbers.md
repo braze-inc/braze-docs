@@ -41,7 +41,7 @@ curl --location --request GET 'https://rest.iad-01.braze.com/sms/invalid_phone_n
 ```
 
 ## Response
-entries are listed in descending order.
+Entries are listed in descending order.
 
 ```json
 Content-Type: application/json

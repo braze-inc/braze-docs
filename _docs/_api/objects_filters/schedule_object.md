@@ -27,7 +27,7 @@ Insert this object as needed to schedule your messages.
 }
 ```
 
-## Schedule id response
+## Schedule ID response
 
 You will receive a `schedule_id` for the scheduled message you created.
 

@@ -7,23 +7,23 @@ page_type: reference
 
 ---
 
-# Postman and sample api requests
+# Postman and sample API requests
 
 > Braze allows you to generate sample API requests for all of our endpoints via our Postman Collection. This reference article covers the Braze Postman Collection, what it is, how to set up and use the collection, as well as how to edit and send requests.
 
-## What is postman?
+## What is Postman?
 
 Postman is a free-to-use visual editing tool for building and testing API requests. As opposed to other methods for interacting with APIs (e.g. using cURL), Postman allows you to easily edit API requests, view header information, and much more. Postman has the ability for you to save Collections or libraries of sample pre-made API requests. To make it easy for our customers to get up and running with our REST API, we created a Collection with pre-made examples for all of our API endpoints.
 
 You can see or [download our Postman Collection here.](https://www.getpostman.com/collections/29baa41d7ba930673ef0)
 
-## Using braze's postman collection
+## Using Braze's Postman collection
 
 If you have a Postman account (you can download macOS, Windows, and Linux versions [from the Postman website][1]), you can open our Postman documentation in your own Postman app (click the orange **Run in Postman** button below). You can then [create an environment](#setting-up-your-postman-environment), or use our Braze REST API environment as a template, and edit the available `POST` and `GET` requests to suit your own needs.
 
 [![Run in Postman](https://run.pstmn.io/button.svg)](https://app.getpostman.com/run-collection/29baa41d7ba930673ef0?action=collection%2Fimport)
 
-### Setting up your postman environment
+### Setting up your Postman environment
 
 {% raw %}
 The Braze Postman Collection uses a templating variable, `{{instance_url}}`, to substitute the REST API URL of your Braze instance into the pre-built requests, and the `{{api_key}}` variable for your API Key. Rather than having to manually edit all requests in the Collection, you can set up this variable in your Postman environment. You can either select our templated environment (Braze REST API Environment Template) from the dropdown and replace the variable values with your own, or you can set up your own environment.
@@ -48,13 +48,13 @@ Once you have configured your environment. You can use any of the pre-built requ
 
 In general, there are two types of requests that Braze's API endpoints accept - `GET` and `POST`. Depending on which `HTTP` method the endpoint uses, you'll need to edit the pre-built request differently.
 
-#### Edit a post request
+#### Edit a POST request
 
 When editing a `POST` request, open the request and navigate to the **Body** section in the request editor. For readability, select the **raw** radio button to format the `JSON` request body.
 
 ![Editing a POST request][4]
 
-#### Edit a get request
+#### Edit a GET request
 
 When editing a `GET` request, edit the parameters passed in the request URL. To do so, select the **Params** tab and edit the key-value pairs in the fields that appear.
 

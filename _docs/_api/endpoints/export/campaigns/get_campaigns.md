@@ -34,7 +34,7 @@ curl --location -g --request GET 'https://rest.iad-01.braze.com/campaigns/list?p
 --header 'Authorization: Bearer YOUR-REST-API-KEY'
 ```
 
-## Campaign list endpoint api response
+## Campaign list endpoint API response
 
 ```json
 Content-Type: application/json

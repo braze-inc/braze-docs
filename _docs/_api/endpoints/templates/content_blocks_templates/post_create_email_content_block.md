@@ -9,7 +9,7 @@ description: "This article outlines details about the Create Email Content Block
 
 ---
 {% api %}
-# Create content block
+# Create Content Block
 {% apimethod post %}
 /content_blocks/create
 {% endapimethod %}

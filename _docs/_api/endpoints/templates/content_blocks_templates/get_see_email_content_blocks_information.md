@@ -9,7 +9,7 @@ description: "This article outlines details about the See Available Content Bloc
 ---
 
 {% api %}
-# See content block information
+# See Content Block information
 {% apimethod get %}
 /content_blocks/info
 {% endapimethod %}

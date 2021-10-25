@@ -118,7 +118,7 @@ curl --location --request POST 'https://rest.iad-01.braze.com/users/track' \
 
 ## Responses
 
-upon using any of the aforementioned api requests you should receive one of the following three general responses:
+Upon using any of the aforementioned API requests you should receive one of the following three general responses:
 
 ### Successful message
 

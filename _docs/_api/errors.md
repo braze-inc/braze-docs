@@ -6,13 +6,13 @@ page_type: reference
 page_order: 2.3
 
 ---
-# Errors & responses
+# API errors and responses
 
 > This reference article covers the various errors and server responses that can come up while using the Braze API and how to troubleshoot them. 
 
 {% raw %}
 
-##  Server responses
+## Server responses
 
 If your POST payload was accepted by our servers, then successful messages will be met with the following response:
 
@@ -50,7 +50,7 @@ During times of maintenance, Braze might pause real-time processing of the API. 
 }
 ```
 
-## Responses for tracked send ids
+## Responses for tracked send IDs
 
 Analytics are always available for campaigns. In addition, analytics are available for a specific campaign send instance when the campaign is sent as a broadcast. When tracking is available for a specific campaign send instance, you will receive the following response:
 

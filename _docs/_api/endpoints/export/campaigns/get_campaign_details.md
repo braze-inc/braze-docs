@@ -35,7 +35,7 @@ curl --location -g --request GET 'https://rest.iad-01.braze.com/campaigns/detail
 
 ## Responses
 
-### campaign details endpoint api response
+### Campaign details endpoint API response
 
 ```json
 Content-Type: application/json
@@ -66,7 +66,7 @@ Authorization: Bearer YOUR-REST-API-KEY
 
 ### Messages
 
-the `messages` response will contain information about each message. example message responses for channels are below:
+The `messages` response will contain information about each message. Example message responses for channels are below:
 
 #### Push channels
 
@@ -92,7 +92,7 @@ the `messages` response will contain information about each message. example mes
 }
 ```
 
-#### In-App Message Channel
+#### In-app message channel
 
 ```json
 {
@@ -120,7 +120,7 @@ the `messages` response will contain information about each message. example mes
 }
 ```
 
-#### Content card channel
+#### Content Card channel
 
 ```json
 {

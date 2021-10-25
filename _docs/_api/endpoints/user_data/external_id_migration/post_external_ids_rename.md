@@ -9,7 +9,7 @@ description: "This article outlines details about the external IDs Rename endpoi
 
 ---
 {% api %}
-# External id rename
+# External ID rename
 {% apimethod post %}
 /users/external_ids/rename
 {% endapimethod %}
@@ -67,7 +67,7 @@ curl --location --request POST 'https://rest.iad-01.braze.com/users/external_ids
 ```
 
 ## Response 
-the response will confirm all successful renames, as well as unsuccessful renames with any associated errors. error messages in the `rename_errors` field will reference the index of the object in the array of the original request.
+The response will confirm all successful renames, as well as unsuccessful renames with any associated errors. Error messages in the `rename_errors` field will reference the index of the object in the array of the original request.
 
 ```
 {

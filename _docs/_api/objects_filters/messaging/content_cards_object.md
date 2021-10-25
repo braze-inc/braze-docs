@@ -8,7 +8,7 @@ description: "This article explains the different components of Braze's Content 
 
 ---
 
-# Content card object specification
+# Content Card object specification
 
 The Content Card Object allows you to modify or create Content Cards via our messaging endpoints.
 

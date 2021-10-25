@@ -50,13 +50,15 @@ Within the purchase object, The `product_id` is an identifier for the purchase, 
 - Braze allows you to store a max of 5000 `product_id`s in the dashboard.
 - `product_id` max is 255 characters
 
-### Product_ID naming conventions
+### Product ID naming conventions
+
 At Braze, we offer some general naming conventions for the purchase object `product_id`.
 When choosing `product_id`, Braze suggests using simplistic names such as the product name or product category (instead of SKUs) with the intention of grouping all logged items by this `product_id`.
 
 This helps make products easy to identify for segmentation and triggering.
 
 ## Purchase properties object
+
 Custom events and purchases may have event properties. The “properties” values should be an object where the keys are the property names and the values are the property values. Property names must be non-empty strings less than or equal to 255 characters, with no leading dollar signs. 
 
 Property values can be any of the following data types:
@@ -74,6 +76,7 @@ Property values can be any of the following data types:
 Event property objects that contain array or object values can have an event property payload of up to 50KB.
 
 ### Purchase properties
+
 [Purchase properties]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/purchase_events/#purchase-properties) __do not__ persist and aren't saved on a user's profile. These properties can, however, be used to trigger messages and for personalization using Liquid, also allowing you to segment (up to 30 days) based on these properties. Braze allows you to "save" these properties for 30 days by turning on this feature flipper to keep these properties alive and useable for message personalization. To turn on this feature in your own app group, contact your customer service manager.
 
 While uncommon, if you require these properties to persist past the 30-day limit, contact your Customer Success Manager, or, see our webhooks suggestion below to see how you can incorporate webhooks to save these properties as custom attributes.

@@ -24,7 +24,8 @@ Note that a company may run at most one export per segment using this endpoint a
 Beginning April 2021, the "fields_to_export" field in this API request will be __required for all new accounts__. The option to default to all field will be removed, and new customers will need to specify the specific fields they'd like to include in their export.
 {% endalert %}
 
-## Credentials-Based Response Details
+## Credentials-based response details
+
 If you have added your S3 credentials to Braze, then each file will be uploaded in your bucket as a zip file with the key format that looks like `segment-export/SEGMENT_ID/YYYY-MM-dd/RANDOM_UUID-TIMESTAMP_WHEN_EXPORT_STARTED/filename.zip`. We will create 1 file per 5,000 users to optimize processing. You can then unzip the files and concatenate all of the `json` files to a single file if needed. If you specify an `output_format` of `gzip`, then the file extension will be `.gz` instead of `.zip`.
 
 {% details Export Pathing Breakdown for ZIP File %}

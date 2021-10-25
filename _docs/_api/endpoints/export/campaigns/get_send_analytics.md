@@ -39,7 +39,8 @@ curl --location -g --request GET 'https://rest.iad-01.braze.com/sends/data_serie
 {% endraw %}
 
 ## Response
-### send analytics endpoint api response
+
+### Send analytics endpoint API response
 
 ```json
 Content-Type: application/json

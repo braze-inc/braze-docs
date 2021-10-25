@@ -9,7 +9,7 @@ description: "This article outlines details about the Schedule API-Triggered Cam
 
 ---
 {% api %}
-# Schedule api-triggered campaigns
+# Schedule API-triggered campaigns
 {% apimethod post core_endpoint|https://www.braze.com/docs/core_endpoints %} 
 /campaigns/trigger/schedule/create
 {% endapimethod %}

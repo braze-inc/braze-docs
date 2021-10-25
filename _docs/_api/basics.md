@@ -10,7 +10,7 @@ page_type: reference
 
 > Braze provides a high-performance REST API to allow you to track users, send messages, export data, and more. This reference article covers what a REST API is, the terminology, a brief overview of API keys, and API limits.
 
-## What is a rest api?
+## What is a REST API?
 
 A REST API is a way to programmatically transfer information over the web using a predefined schema. Braze has created many different endpoints which perform various actions and/or return various data.
 
@@ -24,7 +24,7 @@ Below is some terminology that you may see in the Braze REST API documentation a
 
 ### Endpoints
 
-braze manages a number of different instances for our dashboard and rest endpoints. when your account is provisioned you will log in to one of the corresponding urls below. use the correct rest endpoint based on which instance you are provisioned to. if you are unsure, open a support ticket or use the table below to match the url of the dashboard you use to the correct rest endpoint.
+Braze manages a number of different instances for our dashboard and REST Endpoints. When your account is provisioned you will log in to one of the corresponding URLs below. Use the correct REST Endpoint based on which instance you are provisioned to. If you are unsure, open a support ticket or use the table below to match the URL of the dashboard you use to the correct REST Endpoint.
 
 {% alert important %}
 When using endpoints for API calls, use the "REST Endpoint" located below.
@@ -48,7 +48,7 @@ For SDK integration, use the ["SDK Endpoint"]({{site.baseurl}}/user_guide/admini
 
 The `company_secret` was formerly included with all API requests but has been deprecated as of October 2014. This field will be ignored for all future API requests to ensure backward compatibility.
 
-### App group rest api keys
+### App group REST API keys
 
 {% alert note %}
 For a deeper dive on the different kinds of API Keys here at Braze, check out our dedicated <a href="{{site.baseurl}}/api/api_key/">API Keys</a> and <a href="{{site.baseurl}}/api/identifier_types/">API Identifier Types</a> reference articles.
@@ -73,13 +73,13 @@ Given that REST API Keys allow access to potentially sensitive REST API endpoint
 
 If accidental exposure of a key occurs, it can be deleted from the [Developer Console][8]. For help with this process, please [open a support ticket][support].
 
-#### API ip allowlisting
+#### API IP allowlisting
 
 For additional security, you can specify an allowlist of IP addresses and subnets which are allowed to make REST API requests for a given REST API Key. To allowlist specific IP addresses or subnets, add them to the **Whitelist IPs** section when creating a new REST API Key:
 
 ![API IP Whitelisting][26]
 
-#### Creating and managing rest api keys
+#### Creating and managing REST API keys
 
 ![Create New API Key][28]{: style="max-width:20%;float:right;margin-left:15px;"}
 
@@ -99,15 +99,17 @@ Existing REST API Keys can be Viewed or Deleted by clicking the gear icon and se
 Keep in mind that once you create a new API Key, you cannot edit the scope of permissions or the allowlisted IPs. This limitation is in place for security reasons. If you need to change the scope of a key, create a new key with the updated permissions and implement that key in place of the old one. Once you've completed your implementation, go ahead and delete the old key.
 {% endalert %}
 
-### External user id explanation
+### External user ID explanation
 
 The `external_id` serves as a unique user identifier for whom you are submitting data. This identifier should be the same as the one you set in the Braze SDK in order to avoid creating multiple profiles for the same user.
 
-### Braze user id explanation
+### Braze user ID explanation
 
 The `braze_id` serves as a unique user identifier that is set by Braze. This identifier can be used to delete users through the REST API in addition to external_ids.
 
-#### For more information see:
+#### More resources
+
+For more information, refer to the following article based on your platform:
 
 - [Setting User IDs - iOS][9]
 - [Setting User IDs - Android][10]

@@ -9,7 +9,7 @@ description: "This article outlines details about the Delete Scheduled API-Trigg
 
 ---
 {% api %}
-# Delete scheduled api-triggered canvases
+# Delete scheduled API-triggered canvases
 {% apimethod post core_endpoint|https://www.braze.com/docs/core_endpoints %} 
 /canvas/trigger/schedule/delete
 {% endapimethod %}

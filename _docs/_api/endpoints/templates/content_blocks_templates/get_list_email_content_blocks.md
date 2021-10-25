@@ -9,7 +9,7 @@ description: "This article outlines details about the List Available Content Blo
 
 ---
 {% api %}
-# List available content blocks
+# List available Content Blocks
 {% apimethod get %}
 /content_blocks/list
 {% endapimethod %}

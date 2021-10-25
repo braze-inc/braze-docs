@@ -37,7 +37,7 @@ curl --location -g --request GET 'https://rest.iad-01.braze.com/campaigns/data_s
 
 ## Response
 
-### multichannel response
+### Multichannel response
 
 ```json
 Content-Type: application/json

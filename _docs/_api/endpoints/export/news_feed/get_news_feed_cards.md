@@ -9,7 +9,7 @@ description: "This article outlines details about the News Feed Cards List Endpo
 
 ---
 {% api %}
-# News feed cards list endpoint
+# News Feed cards list endpoint
 {% apimethod get %}
 /feed/list
 {% endapimethod %}

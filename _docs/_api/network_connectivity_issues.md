@@ -26,7 +26,7 @@ For more information about MTR, check out these resources based on your operatin
 - [GNU/Linux][4]
 - [macOS][5]
 
-## Whitelisting braze's api endpoint ip ranges
+## Whitelisting Braze's API endpoint IP ranges
 
 To whitelist Braze's API endpoint through your firewall, our CDN provides access to the list of assigned IP ranges via a JSON dump. You can access the public list of Fastly IP ranges [here][3].
 

@@ -9,7 +9,7 @@ description: "This article outlines details about the News Feed Card Details end
 
 ---
 {% api %}
-# News feed card details endpoint
+# News Feed card details endpoint
 {% apimethod get %}
 /feed/details
 {% endapimethod %}

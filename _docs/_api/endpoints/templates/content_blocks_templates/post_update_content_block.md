@@ -9,7 +9,7 @@ description: "This article outlines details about the Update Email Content Block
 
 ---
 {% api %}
-# Update content block
+# Update Content Block
 {% apimethod post %}
 /content_blocks/update
 {% endapimethod %}

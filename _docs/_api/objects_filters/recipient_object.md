@@ -16,6 +16,7 @@ Either `external_user_id` or `user_alias` is required in this object. __Requests
 The Recipients object allows you to combine the [User Alias object]({{site.baseurl}}/api/objects_filters/user_alias_object/), the [Trigger Properties object]({{site.baseurl}}/api/objects_filters/trigger_properties_object/), and the [Canvas Entry Properties object]({{site.baseurl}}/api/objects_filters/canvas_entry_properties_object/).
 
 ## Object body
+
 ```json
 [{
   "user_alias": (optional, User Alias Object) User Alias of user to receive message,

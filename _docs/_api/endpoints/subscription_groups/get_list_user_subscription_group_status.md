@@ -69,7 +69,7 @@ curl --location -g --request GET 'https://rest.iad-01.braze.com/subscription/sta
 
 ## Response
 
-all successful responses will return `subscribed`, `unsubscribed`, or `unknown` depending on status and user history with the subscription group.
+All successful responses will return `subscribed`, `unsubscribed`, or `unknown` depending on status and user history with the subscription group.
 
 ```json
 Content-Type: application/json
