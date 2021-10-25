@@ -9,7 +9,7 @@ description: "This article outlines details about the Get Campaign Details endpo
 
 ---
 {% api %}
-# Campaign Details Endpoint
+# Campaign details endpoint
 {% apimethod get %}
 /campaigns/details
 {% endapimethod %}
@@ -18,14 +18,14 @@ This endpoint allows you to retrieve relevant information on a specified campaig
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#aad2a811-7237-43b1-9d64-32042eabecd9 {% endapiref %}
 
-## Request Parameters
+## Request parameters
 
 | Parameter     | Required | Data Type | Description             |
 | ------------- | -------- | --------- | ----------------------- |
 | `campaign_id` | Required      | String    | See [Campaign API identifier]({{site.baseurl}}/api/identifier_types/).<br><br> The `campaign_id` for API campaigns can be found on the **Developer Console** and the **Campaign Details** page within your dashboard; or you can use the [Campaign List Endpoint](#campaign-list-endpoint).   |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
 
-## Example Request 
+## Example request 
 {% raw %}
 ```
 curl --location -g --request GET 'https://rest.iad-01.braze.com/campaigns/details?campaign_id={{campaign_identifier}}' \
@@ -35,7 +35,7 @@ curl --location -g --request GET 'https://rest.iad-01.braze.com/campaigns/detail
 
 ## Responses
 
-### Campaign Details Endpoint API Response
+### Campaign details endpoint API response
 
 ```json
 Content-Type: application/json
@@ -68,7 +68,7 @@ Authorization: Bearer YOUR-REST-API-KEY
 
 The `messages` response will contain information about each message. Example message responses for channels are below:
 
-#### Push Channels
+#### Push channels
 
 ```json
 {
@@ -78,7 +78,7 @@ The `messages` response will contain information about each message. Example mes
 }
 ```
 
-#### Email Channel
+#### Email channel
 
 ```json
 {
@@ -92,7 +92,7 @@ The `messages` response will contain information about each message. Example mes
 }
 ```
 
-#### In-App Message Channel
+#### In-app message channel
 
 ```json
 {
@@ -120,7 +120,7 @@ The `messages` response will contain information about each message. Example mes
 }
 ```
 
-#### Content Card Channel
+#### Content Card channel
 
 ```json
 {
@@ -130,7 +130,7 @@ The `messages` response will contain information about each message. Example mes
 }
 ```
 
-#### Webhook Channel
+#### Webhook channel
 
 ```json
 {
@@ -143,7 +143,7 @@ The `messages` response will contain information about each message. Example mes
 }
 ```
 
-#### SMS Channel
+#### SMS channel
 
 ```json
 {
@@ -154,7 +154,7 @@ The `messages` response will contain information about each message. Example mes
 }
 ```
 
-#### Control Messages
+#### Control messages
 
 ```json
 {
@@ -163,11 +163,11 @@ The `messages` response will contain information about each message. Example mes
 }
 ```
 
-### Conversion Behaviors
+### Conversion behaviors
 
 The `conversion_behaviors` array will contain information about each conversion event behavior set for the campaign. These behaviors are in order as set by the campaign. For example, Conversion Event A will be the first item in the array, Conversion Event B will be second, etc. Example conversion event behavior responses for are below:
 
-#### Clicks Email
+#### Clicks email
 
 ```json
 {
@@ -176,7 +176,7 @@ The `conversion_behaviors` array will contain information about each conversion 
 }
 ```
 
-#### Opens Email
+#### Opens email
 
 ```json
 {
@@ -185,7 +185,7 @@ The `conversion_behaviors` array will contain information about each conversion 
 }
 ```
 
-#### Makes Purchase (any purchase)
+#### Makes purchase (any purchase)
 
 ```json
 {
@@ -194,7 +194,7 @@ The `conversion_behaviors` array will contain information about each conversion 
 }
 ```
 
-#### Makes Purchase (specific product)
+#### Makes purchase (specific product)
 
 ```json
 {
@@ -204,7 +204,7 @@ The `conversion_behaviors` array will contain information about each conversion 
 }
 ```
 
-#### Performs Custom Event
+#### Performs custom event
 
 ```json
 {
@@ -214,7 +214,7 @@ The `conversion_behaviors` array will contain information about each conversion 
 }
 ```
 
-#### Upgrades App
+#### Upgrades app
 
 ```json
 {
@@ -224,7 +224,7 @@ The `conversion_behaviors` array will contain information about each conversion 
 }
 ```
 
-#### Uses App
+#### Uses app
 
 ```json
 {

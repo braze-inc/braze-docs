@@ -7,7 +7,7 @@ description: "This article explains the different components of the User Alias o
 
 ---
 
-# User Attributes Object Specification
+# User attributes object specification
 
 An API request with any fields in the Attributes Object will create or update an attribute of that name with the given value on the specified user profile. Use Braze User Profile Field names (listed below or any listed in the [User Profile Fields chart][27]) to update those special values on the user profile in the dashboard or add your own custom attribute data to the user.
 
@@ -38,7 +38,7 @@ An API request with any fields in the Attributes Object will create or update an
 
 To remove a profile attribute, set it to null. Some fields, such as `external_id` and `user_alias` cannot be removed once added to a user profile.
 
-#### Update Existing Profiles Only
+#### Update existing profiles only
 
 If you wish to update only existing user profiles in Braze, you should pass the `_update_existing_only` key with a value of `true` within the body of your request. If this value is omitted, Braze will create a new user profile if the `external_id` does not already exist.
 
@@ -46,7 +46,7 @@ If you wish to update only existing user profiles in Braze, you should pass the 
 If you are creating an alias-only user profile via the users/track endpoint, `_update_existing_only` must be set to `false`. If this value is omitted, the alias-only profile will not be created.
 {% endalert %}
 
-#### Push Token Import
+#### Push token import
 
 Before you import push tokens to Braze, double check if you need to. When the Braze SDKs are put in place, they handle push tokens automatically with no need to upload them via the API.
 
@@ -68,7 +68,7 @@ Braze will check once a month to find any anonymous profile with the `push_token
 
 For more information, check out [Push Token Migration][3].
 
-#### Custom Attribute Data Types
+#### Custom attribute data types
 
 The following data types can be stored as a custom attribute:
 
@@ -84,7 +84,7 @@ The following data types can be stored as a custom attribute:
 
 For information regarding when you should use a custom event vs a custom attribute, see our [Best Practices - User Data Collection][15] documentation.
 
-#### Braze User Profile Fields
+#### Braze user profile fields
 
 {% alert important %} 
 The following user profile fields are case sensitive, so be sure to reference these fields in lower case.
@@ -119,7 +119,7 @@ The following user profile fields are case sensitive, so be sure to reference th
 
 Language values that are explicitly set via this API will take precedence over the locale information Braze automatically receives from the device.
 
-####  User Attribute Example Request
+####  User attribute example request
 
 ```json
 POST https://YOUR_REST_API_URL/users/track

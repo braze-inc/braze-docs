@@ -9,7 +9,7 @@ description: "This article outlines details about the Custom Events List endpoin
 
 ---
 {% api %}
-# Get Custom Events List
+# Get custom events list
 {% apimethod get %}
 /events/list
 {% endapimethod %}
@@ -22,14 +22,14 @@ This endpoint allows you to export a list of custom events that have been record
 A rate limit is applied to requests made to this endpoint for customers who onboarded with Braze on or after September 16, 2021. For more information, see [API Limits]({{site.baseurl}}/api/basics/#api-limits).
 {% endalert %}
 
-## Request Parameters
+## Request parameters
 
 | Parameter| Required | Data Type | Description |
 | -------- | -------- | --------- | ----------- |
 | `page`    | Optional | Integer | The page of event names to return, defaults to 0 (returns the first set of up to 250). |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
 
-## Example Request
+## Example request
 ```
 curl --location --request GET 'https://rest.iad-01.braze.com/events/list?page=3' \
 --header 'Authorization: Bearer YOUR-REST-API-KEY'
@@ -51,7 +51,7 @@ Authorization: Bearer YOUR-REST-API-KEY
 }
 ```
 
-### Fatal Error Response Codes {#fatal-export}
+### Fatal error response codes {#fatal-export}
 
 The following status codes and associated error messages will be returned if your request encounters a fatal error. Any of these error codes indicate that no data will be processed.
 
