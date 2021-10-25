@@ -149,8 +149,20 @@ Click **Send Settings** to select your Subscription Settings, turn on rate limit
 
 By turning on [Rate Limiting][6b] or [Frequency Capping][6c], you can ease the marketing pressure placed on your users and ensure you aren't over messaging them.
 
-{% alert important %}
+{% alert note %}
 Visit your [Global Message Settings](https://dashboard-01.braze.com/engagement/global_message_settings/) page in your Braze account to manage your Frequency Capping rules.
+{% endalert %}
+
+For Canvases targeting email and push channels, you may want to limit your Canvas so that only the users who are explicitly opted in will receive the message (excluding subscribed or unsubscribed users). For example, say you have three users of different opt-in status:
+
+- **User A** is subscribed to email and is push enabled. This user doesn't receive the email but will receive the push.
+- **User B** is opted-in to email but is not push enabled. This user will receive the email but doesn't receive the push.
+- **User C** is opted-in to email and is push enabled. This user will receive both the email and the push.
+
+To do so, set the **Subscription Settings** to send this Canvas to "opted-in users only". This option will ensure that only opted-in users will receive your email, and Braze will only send your push to users who are push enabled by default.
+
+{% alert warning %}
+With this configuration, don't include any filters in the **Target Users** step that limit the audience to a single channel (e.g., `Push Enabled = True` or `Email Subscription = Opted-In`).
 {% endalert %}
 
 If desired, specify Quiet Hours (the time during which your messages will not send) for your Canvas. Check **Enable Quiet Hours** in your __Send Settings__. Then, select your Quiet Hours in your user's local time and what action will follow if the message triggers inside of those Quiet Hours.
