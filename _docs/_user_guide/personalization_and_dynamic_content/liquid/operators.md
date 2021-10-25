@@ -8,7 +8,7 @@ description: "This reference page notes the operators that Liquid supports, as w
 
 # Operators
 
-liquid supports many [operators][25] that can be used in your conditional statements.
+Liquid supports many [operators][25] that can be used in your conditional statements.
 
 |   Syntax| Operator Description|
 |---------|-----------|

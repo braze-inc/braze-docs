@@ -15,7 +15,7 @@ description: "This landing page is home to sample Liquid use cases organized by 
 ## Anniversaries and holidays
 
 {% apitags %}
-Anniversaries and Holidays
+Anniversaries and holidays
 {% endapitags %}
 
 - [Personalize messages based on a user's anniversary year](#anniversary-year)
@@ -137,7 +137,7 @@ The example provided uses Christmas Eve, Christmas Day, and Boxing Day (the day 
 ## App usage
 
 {% apitags %}
-App Usage
+App usage
 {% endapitags %}
 
 - [Send messages in a user's language if they've logged a session](#app-session-language)
@@ -414,7 +414,7 @@ Still traveling to {{event_properties.${toStation}}} in more than 24 hours? Book
 
 {% alert important %} You will need a custom event property. {% endalert %}
 
-### In-App Message to Send X Days Before Users' Membership Ends {#countdown-membership-expiry}
+### In-app message to send x days before users' membership ends {#countdown-membership-expiry}
 
 This use case captures your membership expiry date, calculates how long until it expires, and displays different messages based on how long until your membership expires.
 
@@ -542,7 +542,7 @@ This use case will display the date 30 days from now to use in messaging.
 ## Custom attribute
 
 {% apitags %}
-Custom Attribute
+Custom attribute
 {% endapitags %}
 
 - [Personalize a message based on matching custom attributes](#attribute-matching)
@@ -604,7 +604,7 @@ Hi {{name[0]}}, here's your message!
 ## Custom event
 
 {% apitags %}
-Custom Event
+Custom event
 {% endapitags %}
 
 - [Abort push notification if a custom event is within two hours of now](#event-abort-push)
@@ -1108,7 +1108,7 @@ All episodes of {{new_shows_clean | join: ', ' }} expire on 9/8 - watch them now
 ## Platform targeting
 
 {% apitags %}
-Platform Targeting
+Platform targeting
 {% endapitags %}
 
 - [Differentiate in-app message copy by device OS](#platform-device-os)
@@ -1117,7 +1117,7 @@ Platform Targeting
 - [Target only Web browsers](#platform-target-web)
 - [Target a specific mobile carrier](#platform-target-carrier)
 
-### Differentiate in-app message copy by device os {#platform-device-os}
+### Differentiate in-app message copy by device OS {#platform-device-os}
 
 This use case checks what platform a user is on, and depending on their platform, will display specific messaging.
 
@@ -1156,7 +1156,7 @@ This is a message for an Android user!
 ```
 {% endraw %}
 
-### Target only ios devices with a specific os version {#platform-target-ios-version}
+### Target only iOS devices with a specific OS version {#platform-target-ios-version}
 
 This use case checks if a user's OS version falls within a certain set of versions and if so, will display a specific message.
 
@@ -1215,7 +1215,7 @@ This is a message for Verizon users!
 ## Time zones
 
 {% apitags %}
-Time Zones
+Time zones
 {% endapitags %}
 
 - [Append the CST time zone to a custom attribute](#time-append-cst)
@@ -1225,7 +1225,7 @@ Time Zones
 - [Send different messages on weekdays vs. weekends in a user's local time zone](#time-weekdays-vs-weekends)
 - [Send different messages based on time of day in a user's local time zone](#time-of-day)
 
-### Append the cst time zone to a custom attribute {#time-append-cst}
+### Append the CST time zone to a custom attribute {#time-append-cst}
 
 This use case displays a custom date attribute in a given time zone.
 
@@ -1255,7 +1255,7 @@ The example provided below will display the date as YYYY-mm-dd HH:MM:SS, such as
 ```
 {% endraw %}
 
-### Only send a canvas push during a window of time in a user's local time zone {#time-canvas-window}
+### Only send a Canvas push during a window of time in a user's local time zone {#time-canvas-window}
 
 This use case checks a user's time in their local time zone, and if it falls within a set time, it will display a specific message.
 

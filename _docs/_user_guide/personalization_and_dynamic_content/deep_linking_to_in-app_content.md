@@ -30,7 +30,7 @@ Keep in mind that enabling these deep links requires some additional setup withi
 
 ## UTM tags and campaign attribution
 
-### What is a utm tag?
+### What is a UTM tag?
 
 [UTM (Urchin Traffic Manager) tags][4] allow you to include campaign attribution details directly within links. UTM tags are used by Google Analytics to collect campaign attribution data, and can be used to track the following properties:
 
@@ -42,7 +42,7 @@ Keep in mind that enabling these deep links requires some additional setup withi
 
 UTM tags can be embedded into both regular HTTP (web) links and deep links and tracked using Google Analytics.
 
-### Using utm tags with braze
+### Using UTM tags with Braze
 
 If you want to use UTM tags with regular HTTP (web) links—for example, to do campaign attribution for your email campaigns—and your organization already uses Google Analytics, you can simply use [Google's URL builder][6] to generate UTM links. These links can be readily embedded into Braze campaign copy just like any other link.
 
@@ -50,7 +50,7 @@ In order to use UTM tags in deep links to your app, your app must have the relev
 
 Once the Analytics SDK is integrated and configured, UTM tags can be used with deep links in Braze campaigns. To set up UTM tags for your campaign, simply include the necessary UTM tags in the destination URL or deep links. The examples below show how to use UTM tags in push notifications, News Feed cards and in-app messages.
 
-#### Attributing push opens with utm tags
+#### Attributing push opens with UTM tags
 
 To include UTM tags in your deep links for push notifications, simply set the on click behavior of the push message to be a deep link, write the deep link address and include the desired UTM tags in the following fashion:
 
@@ -60,13 +60,13 @@ myapp://products/20-gift-card?utm_source=my_app&utm_medium=push&utm_campaign=spr
 
 ![UTM Tags in Push Message][8]
 
-#### Attributing news feed clicks with utm tags
+#### Attributing News Feed clicks with UTM tags
 
 News Feed items deep linking into your app can be configured to use UTM tags as well. Note that you can use `utm_content` to separate between deep links on different OSes.
 
 ![UTM Tags in News Feed][9]
 
-#### Attributing in-app message clicks with utm tags
+#### Attributing in-app message clicks with UTM tags
 
 Similarly to push notifications and News Feed cards, you can include UTM tags in the deep links included within your in-app messages.
 

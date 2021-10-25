@@ -43,7 +43,8 @@ Buy now! Would 5% off convince you?
 {% endalert %}
 
 ## Conditional logic
-You can include many types of [intelligent logic within messages][1] -- one example is a conditional statement. See the following example which uses [conditionals][8] to internationalize a campaign:
+
+You can include many types of [intelligent logic within messages][1] — one example is a conditional statement. See the following example which uses [conditionals][8] to internationalize a campaign:
 {% raw %}
 
 ```liquid
@@ -126,7 +127,7 @@ Strings and arrays require straight apostrophes around them, while booleans and 
 
 #### Boolean
 
-[booleans][9] are binary values, and can be set to either `true` or `false`, such as `registration_complete: true`. boolean values don't have apostrophes around them.
+[Booleans][9] are binary values, and can be set to either `true` or `false`, such as `registration_complete: true`. Boolean values don't have apostrophes around them.
 
 {% raw %}
 
@@ -138,7 +139,7 @@ Strings and arrays require straight apostrophes around them, while booleans and 
 
 #### Number
 
-[numbers][10] are numeric values, which can be integers or floats. for example, a user may have `shoe_size: 10` or `levels_completed: 287`. number values don't have apostrophes around them.
+[Numbers][10] are numeric values, which can be integers or floats. For example, a user may have `shoe_size: 10` or `levels_completed: 287`. Number values don't have apostrophes around them.
 
 {% raw %}
 
@@ -160,7 +161,7 @@ You can also use other [basic operators](https://shopify.dev/docs/themes/liquid/
 
 #### String
 
-a [string][11] is made up of alpha-numeric characters and stores a piece of data about your user. for example, you may have `favorite_color: red` or `phone_number: 3025981329`. string values must have apostrophes around them.
+A [string][11] is made up of alpha-numeric characters and stores a piece of data about your user. For example, you may have `favorite_color: red` or `phone_number: 3025981329`. String values must have apostrophes around them.
 
 {% raw %}
 
@@ -174,7 +175,7 @@ For strings, you can use both "==" or "contains" in your Liquid.
 
 #### Array
 
-an [array][12] is a list of information about your user. for example, a user may have `last_viewed_shows: stranger things, planet earth, westworld`. array values must have apostrophes around them.
+An [array][12] is a list of information about your user. For example, a user may have `last_viewed_shows: stranger things, planet earth, westworld`. Array values must have apostrophes around them.
 
 {% raw %}
 
@@ -188,7 +189,7 @@ For arrays, you must use "contains" and can't use "==".
 
 #### Time
 
-a time stamp of when an event took place. [time][13] values must have a [math filter][5] on them to be used in conditional logic.
+A time stamp of when an event took place. [Time][13] values must have a [math filter][5] on them to be used in conditional logic.
 
 {% raw %}
 

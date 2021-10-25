@@ -39,7 +39,7 @@ guide_featured_list:
   fa_icon: fas fa-list-ul
 ---
 
-## About liquid
+## About Liquid
 
 Campaign messages support templated messaging using the Liquid templating language. Detailed documentation of Liquid syntax and usage is available [**here**][1].
 

@@ -8,7 +8,7 @@ description: "Filters can be used to reformat static or dynamic content. This re
 
 # Filters
 
-> this reference article provides an overview of filters in liquid, and covers which filters are supported by braze. looking for ideas on how you can use these filters? check out our [liquid use case library]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/liquid_use_cases/).
+> This reference article provides an overview of filters in liquid, and covers which filters are supported by braze. looking for ideas on how you can use these filters? check out our [liquid use case library]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/liquid_use_cases/).
 
 {% raw %}
 
@@ -166,7 +166,7 @@ If you’re updating a user on their purchase, an account balance, or anything r
 | [money_without_currency][5.4]       | Formats numbers without the currency symbol.                                                       | ⛔  No    |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
 
-### Shopify money filter vs braze money filter
+### Shopify money filter vs Braze money filter
 
 {% alert warning %}
 The behavior of the Shopify `money` filter differs from how it is used in Braze. Refer to the examples below for an accurate depication of the expected behavior.

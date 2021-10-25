@@ -6,7 +6,7 @@ description: "This reference article covers how to make an Connected Content API
 
 ---
 
-# Making an api call
+# Making an API call
 
 {% raw %}
 
@@ -40,6 +40,7 @@ If the endpoint returns JSON, you can detect that by checking if the `connected`
 {% endalert %}
 
 {% raw %}
+
 ## Using basic authentication
 
 If the URL requires basic authentication, Braze can generate a basic authentication credential for you to use in your API call. You can manage existing basic authentication credentials and add new ones in the **Connected Content** tab of **Manage Settings**.
@@ -82,11 +83,12 @@ When making use of Braze's Connected Content, you may find that certain APIs req
 ```
 {% endraw %}
 
-## Using open authentication (oauth)
+## Using Open Authentication (OAuth)
 
 Some API configurations require retrieval of an access token that can then be used to authenticate the API Endpoint that you want to access.
 
-#### Retrieve the access token
+### Retrieve the access token
+
 The example below illustrates retrieving and saving an access token to a local variable which can then be used to authenticate the subsequent API call. A `:cache` parameter can be added to match the time that the access token is valid for and reduce the number of outbound Connected Content calls. See [Configurable Caching][36] for more information.
 
 {% raw %}
@@ -104,7 +106,8 @@ The example below illustrates retrieving and saving an access token to a local v
 ```
 {% endraw %}
 
-#### Authorize the api using the retrieved access token
+### Authorize the API using the retrieved access token
+
 Now that the token is saved, it can be dynamically templated into the subsequent Connected Content call to authorize the request:
 
 {% raw %}
@@ -121,8 +124,7 @@ Now that the token is saved, it can be dynamically templated into the subsequent
 ```
 {% endraw %}
 
-
-## Connected content ip whitelisting
+## Connected Content IP whitelisting
 
 When a message using Connected Content is sent from Braze, the Braze servers automatically make network requests to our customers’ or third parties’ servers to pull back data.  
 

@@ -10,7 +10,7 @@ channel:
 
 ---
 
-# Key-Value Pairs
+# Key-value pairs
 
 Braze enables you to send extra data payloads to user devices via key-value pairs. This feature is available across push, in-app, and News Feed messaging channels. Extra data payloads can help you update internal metrics and app content as well as customize push notification properties, such as alert prioritization, localization, and sounds.
 
@@ -29,7 +29,6 @@ apple push notifications service (apns) supports setting alert preferences and s
 | sound             | string                      | The name of the sound file to play as an alert; must be in the app's bundle or ```Library/Sounds``` folder                                                                                    |
 | content-available | number                      | Input values of 1 signal to the app the availability of new information upon launch or session resumption |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
-
 
 
 ##### Alert properties library
@@ -99,7 +98,7 @@ If you are using the HTTP/2 provider API, any individual payload you send to APN
 
 ### Android
 
-braze allows you to send send additional data payloads in push notifications using key-value pairs.
+Braze allows you to send send additional data payloads in push notifications using key-value pairs.
 
 ##### Data payload
 
@@ -133,7 +132,7 @@ The iOS operating system may [gate notifications]({{site.baseurl}}/developer_gui
 
 ### Web
 
-key-value pairs can also be added to web push notifications. select the gear icon in the braze message composer to do so.
+Key-value pairs can also be added to web push notifications. Select the gear icon in the Braze message composer to do so.
 
 ![key-valueInput][20]
 
@@ -145,7 +144,7 @@ To add a key-value pair to an in-app message, select the gear icon in the Braze 
 
 ## Emails
 
-for braze customers that use sendgrid, key-value pairs will be sent as [unique arguments][11]. sendgrid allows you to attach an unlimtied number of key-value pairs up to 10,000 bytes of data. these key-value pairs can be seen in posts from the sendgrid [event webhook][12]. 
+For Braze customers that use SendGrid, key-value pairs will be sent as [unique arguments][11]. SendGrid allows you to attach an unlimtied number of key-value pairs up to 10,000 bytes of data. These key-value pairs can be seen in posts from the SendGrid [Event Webhook][12]. 
 
 {% alert note %}
 Note that bounced emails will not deliver key-value pairs to SendGrid.
@@ -153,13 +152,13 @@ Note that bounced emails will not deliver key-value pairs to SendGrid.
 
 ![key-valueInput][22]
 
-## News feed
+## News Feed
 
 Key-value pairs can be added to a News Feed Card in the Braze message composer below the categories drop down-menu.
 
 ![key-valueInput][23]
 
-## Content cards
+## Content Cards
 
 To add a key-value pair to a Content Card, go to the **Settings** tab in the Braze message composer and click **Add New Pair**.
 

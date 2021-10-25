@@ -5,13 +5,13 @@ page_order: 4
 description: "This articles covers a list of publicly available APIs that can be used with Connected Content."
 ---
 
-# Public apis
+# Public APIs
 
 There are a variety of publicly available APIs that can be used for Connected Content. Public APIs allow you to insert custom data in messages.  We've compiled a list below of public APIs that could be used for Connected Content. However, there are many more APIs out there, providing a wide variety of potential Connected Content uses.  [Let us know](mailto:success@braze.com) if you have an API to share!
 
 >  Public APIs can be subject to usage restrictions and rate limiting.  Be sure to read through API documentations and contact API providers about your intended use.
 
-### News and information
+## News and information
 
 |	 API 	| Description |
 | --------- | --- |
@@ -20,7 +20,7 @@ There are a variety of publicly available APIs that can be used for Connected Co
 | [The Guardian API][9] | Provides Guardian article data which includes headline, topic, URL, date, abstract, etc.|
 {: .reset-td-br-1 .reset-td-br-2}
 
-### Events and ticketing
+## Events and ticketing
 
 |	 API 	| Description |
 | --------- | --- |
@@ -31,14 +31,14 @@ There are a variety of publicly available APIs that can be used for Connected Co
 | [Ticketmaster][38] | Provides data on public events, venues, and prices |
 {: .reset-td-br-1 .reset-td-br-2}
 
-### Food & drink
+## Food and drink
 
 |  API  | Description |
 | --------- | --- |
 | [BreweryDB][40] | Provides information on breweries, beers, and beer events. |
 {: .reset-td-br-1 .reset-td-br-2}
 
-### Finance
+## Finance
 
 |  api  | description |
 | --------- | --- |
@@ -46,7 +46,7 @@ There are a variety of publicly available APIs that can be used for Connected Co
 | [CoinDesk][37] | Provides a variety of cryptocurrency data. |
 {: .reset-td-br-1 .reset-td-br-2}
 
-### Health
+## Health
 
 |  api  | description |
 | --------- | --- |
@@ -55,7 +55,7 @@ There are a variety of publicly available APIs that can be used for Connected Co
 | [USDA Nutrients][45] | Provides access to the National Nutrient Database. |
 {: .reset-td-br-1 .reset-td-br-2}
 
-### Music
+## Music
 
 |	 api 	| description |
 | --------- | --- |
@@ -66,14 +66,14 @@ There are a variety of publicly available APIs that can be used for Connected Co
 | [Discogs][21] | Provides information on artists, labels, and recordings. |
 {: .reset-td-br-1 .reset-td-br-2}
 
-### Product information
+## Product information
 
 |	 API 	| Description |
 | --------- | --- |
 | [eBay][15] | Provides live eBay data including item data, popular searches, and more. |
 {: .reset-td-br-1 .reset-td-br-2}
 
-### Miscellaneous
+## Miscellaneous
 
 |	 api 	| description |
 | --------- | --- |

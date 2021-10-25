@@ -29,7 +29,7 @@ You can also pull content directly from a web server via Braze's [Connected Cont
 Braze currently supports Liquid up to and including __Liquid 3 from Shopify__. We do not currently support Liquid 4 and beyond.
 {% endalert %}
 
-## Using liquid
+## Using Liquid
 
 {% raw %}
 
@@ -81,7 +81,7 @@ If you choose to use Liquid in your Email messages, be sure to:
 {% raw %}
 
 
-### Pre-Formatted Variables
+### Pre-formatted variables
 
 You can insert pre-formatted variables with defaults through the "Insert Personalization Attribute" modal located on the top-right of any templated text field.
 
@@ -108,7 +108,7 @@ This Liquid doesn't work because you can't reference multiple attributes in one 
 
 #### Example
 
-for example, let's calculate a user's current balance by adding their gift card balance and rewards balance:
+For example, let's calculate a user's current balance by adding their gift card balance and rewards balance:
 
 First, use the `assign` tag to subsitute the custom attribute of `current_rewards_balance` with the term "balance". This means that you now have a variable named `balance`, which you can manipulate.
 
