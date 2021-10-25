@@ -6,9 +6,9 @@ page_order: 3
 
 ---
 
-# Troubleshooting
+# Predictive Churn Troubleshooting
 
-> predictive churn, and any machine learning model, is only as good as the data available to the model. it also is highly dependent on having certain volumes of data to work with. this means that users may encounter some error messages, or low prediction quality, as they're getting to know this new feature. 
+> Predictive Churn, and any machine learning model, is only as good as the data available to the model. it also is highly dependent on having certain volumes of data to work with. this means that users may encounter some error messages, or low prediction quality, as they're getting to know this new feature. 
 
 ## Potential errors
 

@@ -18,7 +18,7 @@ __Analytics Components__<br>
 
 ## Overview
 
-the distribution of the scores for the entire prediction audience is displayed at the top of the page in a chart that you can view, by category or by score. users in bins further to the right have higher scores and are more likely to churn. users in bins further to the left are less likely to churn. the slider beneath the chart will allow you to select a swath of users and estimate what the results would be of targeting users in the selected range of churn risk score or category.
+The distribution of the scores for the entire Prediction Audience is displayed at the top of the page in a chart that you can view, by category or by score. Users in bins further to the right have higher scores and are more likely to churn. Users in bins further to the left are less likely to churn. The slider beneath the chart will allow you to select a swath of users and estimate what the results would be of targeting users in the selected range of Churn Risk Score or Category.
 
 ![Churn Targeting][4]{: style="max-width:90%"}
 

@@ -6,9 +6,10 @@ page_order: 1
 
 ---
 
-# Creating a churn prediction
+# Creating a Churn Prediction
 
-### Step 1: create a new prediction
+### Step 1: Create a new prediction
+
 On the left navigation bar of the Braze dashboard, choose the __Predictions__ page. A Prediction is one instance of a trained machine learning model and all the parameters and data it uses. On this page, you will see a list of current active Predictions along with some basic info about them. Here you can rename, archive, and create new Predictions. Archived predictions are inactive and do not update user scores. 
 
 To create a new Prediction, choose __Create Prediction__ in the upper right corner, and select a new __Churn Prediction__.
@@ -19,7 +20,8 @@ There is a limit of 3 concurrently active Churn Predictions. Prior to purchasing
 
 On the Edit page, give your new Prediction a unique name.
 
-### Step 2: define churn
+### Step 2: Define churn
+
 In the __Churn Definition__ panel, use the provided filters to define what churn means for your business. In other words, what does a user have to do in what time frame for you to consider them churned? Remember, you don’t need to explain what behaviors might precede churn - only what makes a user a churned user. This should also generally be a description of what behavior a user does or doesn't do to churn as opposed to an attribute a user has. For example, you might consider users who haven’t opened your app in 7 days to be churned. 
 
 To implement this example, enter 7 days in the time window at the top of the panel.
@@ -30,7 +32,7 @@ Then, use the available filters to select which behaviors in that time frame con
 
 Interested in some potential churn definitions to consider? You’ll find some inspiration [here](#sample-definitions).
 
-### Step 3: filter your prediction audience
+### Step 3: Filter your prediction audience
 
 Your Prediction Audience is the group of users you want to target to keep from churning. Although you can try to prevent churn as defined above in your entire population of users, the model will likely perform better if you narrow down and filter the group of users you want to prevent from churning with some criteria. Think about the specific users who mean the most to you that you’d like to retain and define them here. For example, you might want to retain users who first used the app more than a month ago or have ever made a purchase. 
 
@@ -42,7 +44,7 @@ For filters that begin with “Last...” like Last Used App and Last Made Purch
 
 For a sample list of Prediction Audience definitions, check out our sample definitions at the [bottom of this page](#sample-definitions).
 
-### Step 4: choose the update frequency for churn predictions
+### Step 4: Choose the update frequency for Churn Predictions
 
 The machine learning model created when you complete this page will be used on a schedule you select here to generate fresh scores of users’ probability to churn. Please select the __maximum frequency of updates__ that you’ll find useful. For example, if you’re going to send a weekly promotion to prevent users from churning, set the update frequency to __Weekly__ on the day and time of your choosing. 
 
@@ -52,7 +54,8 @@ The machine learning model created when you complete this page will be used on a
 Preview and Demo Predictions will never update users' risk of churn. Additionally, daily updates for predictions require an additional purchase beyond Weekly or Monthly updates with Predictive Churn. To purchase this functionality, contact your Account Manager. 
 {% endalert %}
 
-### Step 5: build prediction
+### Step 5: Build prediction
+
 Verify that the details you’ve provided are correct, and choose __Build Prediction__. You can also save your changes in draft form by selecting __Save As Draft__ to return to this page and build the model later. Once you click __Build Prediction__, the process that generates the model will begin. This could take between 30 minutes to a few hours depending on data volumes. For this Prediction, you will see a page explaining that training is in progress for the duration of the model building process.
 
 Once it’s done, the page will switch to the Analytics view automatically, and you will also get an email informing you that the Prediction and results are ready. In the event of an error, the page will return to the Editing mode with an explanation of what went wrong.
