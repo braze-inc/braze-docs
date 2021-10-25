@@ -8,11 +8,11 @@ platform: Web
 description: "This article lists and explains the different Web objects used at Braze."
 
 ---
-# Web Push Object Specification
+# Web push object specification
 
 These objects are used to define or request information related to Web Push and Web Push Alert content.
 
-## Web Push Object
+## Web push object
 
 ```json
 {
@@ -32,7 +32,7 @@ These objects are used to define or request information related to Web Push and 
 
 The value for `image_url` should be a URL that links to where your image is hosted. Images need to be cropped to a 1:1 aspect ratio.
 
-## Web Push Action Button Object
+## Web push action button object
 
 ```json
 {

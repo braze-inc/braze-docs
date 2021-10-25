@@ -9,7 +9,7 @@ description: "This article outlines details about the Canvas Data Summary Analyt
 
 ---
 {% api %}
-# Canvas Data Summary Endpoint
+# Canvas data summary endpoint
 {% apimethod get %}
 /canvas/data_summary
 {% endapimethod %}
@@ -18,7 +18,7 @@ This endpoint allows you to export rollups of time series data for a Canvas, pro
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#1eb1b760-6b00-4c03-bcfb-12646f2ba6da {% endapiref %}
 
-## Request Parameters
+## Request parameters
 
 | Parameter | Required | Data Type | Description |
 | --------- | -------- | --------- | ----------- |
@@ -31,7 +31,7 @@ This endpoint allows you to export rollups of time series data for a Canvas, pro
 | `include_deleted_step_data` | Optional | Boolean | Whether or not to include step stats for deleted steps (defaults to false). |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
 
-## Example Request
+## Example request
 {% raw %}
 ```
 curl --location -g --request GET 'https://rest.iad-01.braze.com/canvas/data_summary?canvas_id={{canvas_id}}&ending_at=2018-05-30T23:59:59-5:00&starting_at=2018-05-28T23:59:59-5:00&length=5&include_variant_breakdown=true&include_step_breakdown=true&include_deleted_step_data=true' \

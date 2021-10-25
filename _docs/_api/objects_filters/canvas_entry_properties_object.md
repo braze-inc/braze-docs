@@ -9,11 +9,11 @@ description: "This article explains the Braze Canvas Entry Properties object."
 
 ---
 
-# Canvas Entry Properties Object Specification
+# Canvas entry properties object specification
 
 When using one of the endpoints for triggering or scheduling a Canvas via the API, you may provide a map of keys and values to customize messages sent by the first steps of your Canvas, in the `canvas_entry_properties` namespace.
 
-## Object Body
+## Object body
 
 This object body contains an example request.
 
