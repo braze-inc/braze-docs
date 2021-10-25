@@ -35,7 +35,12 @@ This new filter can replace the legacy "App Version Name" filter which would req
 
 * Each part of the `major.minor.patch` version sent in your app's app version are compared as integers
 * If the major numbers are equal, the minor numbers are compared, etc.
-* App Version Numbers must be incremented with each app store release, and might be different than your app's Build Name (which might not change). 
+
+**Important**
+
+* Android apps have both a human readable [`versionName`][7] and an internal [`versionCode`][9]. The App Version Number filter uses `versionCode` because it is guaranteed to be incremented with each app store release.
+* This can cause confusion when your app's `versionName` and `versionCode` get out of sync, especially since both fields can be viewed from the Braze dashboard. As a best practice, ensure your app's `versionName` and `versionCode` are incremented together.
+* If you need to filter by the human readable `versionName` field instead (uncommon), use the App Version Name filter.
 
 #### SDK requirements
 
