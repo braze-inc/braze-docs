@@ -6,7 +6,9 @@ hidden: true
 
 # Catalog
 
-Use a catalog to import a CSV of non-user data into Braze, and then access that information to enrich your messages. You can bring in any type of data into a catalog. This data is typically some sort of metadata from your company such as product information for an eCommerce business, or course information for an education provider.
+You can use a catalog to reference non-user data in your Braze campaigns through Liquid. 
+
+To do so, first import your catalog (a CSV of non-user data) into Braze, and then access that information to enrich your messages. You can bring in any type of data into a catalog. This data is typically some sort of metadata from your company such as product information for an eCommerce business, or course information for an education provider.
 
 Once this information is imported, you can begin accessing it in messages in a similar way to accessing custom attributes or custom event properties through Liquid.
 
@@ -29,10 +31,7 @@ First, create your CSV file. The CSV must have one column with a header of **id*
 
 For this tutorial, we're using a catalog that lists two games, their cost, and an image link:
 
-| id | title | price | image_link |
-| -- | -- | -- | -- |
-| tales_storefront | Tales | 7.49 USD | https://picsum.photos/200 |
-| regeneration_storefront | Regeneration | 22.49 USD | https://picsum.photos/200 |
+![The table shows two example games with columns for id, title, price, and image_link][5]
 
 ### Step 2: Upload your CSV
 
@@ -73,6 +72,10 @@ For example, let's say we want to reference the tales_storefront item:
 ### Step 2: Reference attributes for that item
 
 Below the `catalogs` tag, use the `item` object to reference different attributes for that item.
+
+{% alert note %}
+Remember, Liquid is case sensitive! Make sure you exactly match the case used in your catalog. In our example catalog, we used lowercase for our columns, so we're using lowercase in the `item` objects.
+{% endalert %}
 
 For example, to reference the title and price of the tales_storefront item we could add the following:
 
@@ -133,3 +136,4 @@ Here's what this looks like when the Liquid is rendered:
 [2]: {% image_buster /assets/img_archive/catalog_id.png %}
 [3]: {% image_buster /assets/img_archive/catalog_image_link1.png %}
 [4]: {% image_buster /assets/img_archive/catalog_image_link2.png %}
+[5]: {% image_buster /assets/img_archive/catalog_CSV_example.png %}
