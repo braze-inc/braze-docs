@@ -6,7 +6,7 @@ description: "Intelligent Selection is a feature that analyzes the performance o
 
 ---
 
-# Intelligent selection {#intelligent-selection}
+# Intelligent Selection {#intelligent-selection}
 
 > Intelligent Selection is a feature that analyzes the performance of a recurring campaign or Canvas twice a day and automatically adjusts the percentage of users that receive each message variant. 
 
