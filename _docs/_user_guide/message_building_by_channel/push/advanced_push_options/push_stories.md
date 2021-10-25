@@ -13,7 +13,6 @@ channel:
 
 > Push Stories is a new type of Push Notification introduced by Braze. It allows customers to send down multiple ‘pages’, which consists of an image, click action, title, and description to a device. The users can iterate through these pages and go through the 'story' as told by each marketer.
 
-
 | Android Example (Expanded) | IOS Example (Expanded) |
 | :-----: | :----------: |
 | ![Android Preview][1] | ![IOS Preview][2] |
@@ -23,14 +22,16 @@ channel:
 On iOS SDK versions 3.13.0+, due to a change in how the SDK downloads images, a thumbnail of the first image will not show on the condensed view of the push. Ensure that your message copy prompts users to expand the push to see the images.
 {% endalert %}
 
-__Prerequisites__: Users must update to the latest version of Android(version:2.2.0+) and iOS (version: 3.2.0+)
+## Prerequisites
 
-## Dashboard Changes
+Users must update to the latest version of Android (version:2.2.0+) and iOS (version: 3.2.0+)
+
+## Dashboard changes
 
 ![Composer dropdown][6]{: style="float:right;max-width:50%;margin-left:15px;margin-bottom:15px;"}
 Within the campaign set up dashboard, once you have selected what Push Message Variants you want, you must select __Push Stories__ as the notification type for the Push Story Composer to appear. 
 
-### New Composer
+### New composer
 
 ![Composer Workflow][3]
 
@@ -48,11 +49,11 @@ The previews will be reflected and are interactive.
 If you are pulling in images with [Connected Content]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/connected_content/about_connected_content/#about-connected-content), please ensure that your image URL begins with `https://`. Using `http://` will crash your app.
 {% endalert %}
 
-### Push Story Segmentation
+### Push Story segmentation
 
 When you create a campaign or Canvas, you can filter which users you want to target based on whether they have clicked on a Push Story Page. Then, select the campaign and the page you want to use to target your users.
 
-### Push Stories Analytics
+### Push Stories analytics
 
 ![Push Story Analytics][5]
 
@@ -66,7 +67,7 @@ Apple has specific rules in place that will prevent certain types of notificatio
 
 These are limitations imposed by Apple that should be considered when designing your Push Story.
 
-### I sent myself a Push Story on iOS but saw the condensed view instead
+### I sent myself a push story on iOS but saw the condensed view instead
 
 In certain situations where all the pages do not load, for example, due to a loss of data connection, the Push Story will only show the condensed notification.
 

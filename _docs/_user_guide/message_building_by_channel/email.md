@@ -53,7 +53,7 @@ guide_menu_list:
 
 ---
 
-# Use Cases {#email-use-cases}
+# Use cases {#email-use-cases}
 
 - **Re-engagement:** Because email can reach users outside of the app, including those who have not installed the app, emails are well-suited for re-engagement.
 - **Onboarding:** Email campaigns are also useful for onboarding new users and encouraging them to turn on push notifications or share the app via social networks.

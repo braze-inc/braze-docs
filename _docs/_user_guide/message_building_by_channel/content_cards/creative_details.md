@@ -25,11 +25,11 @@ tool: Media
 
 ---
 
-## Content Card Types
+## Content Card types
 
 ### Classic
 
-The Classic card is great for standard messaging and notifications or even visually categorizing messages with icons. The image is optional, but it must be at a 1:1 ratio.  
+The classic card is great for standard messaging and notifications or even visually categorizing messages with icons. The image is optional, but it must be at a 1:1 ratio.  
 
 ![Classic][1]{: height="50%" width="50%"}
 
@@ -41,8 +41,7 @@ The Classic card is great for standard messaging and notifications or even visua
 | Image | Optional. <br> Must be 1:1 ratio. <br> We recommend an image quality of 60px by 60px. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
 
-
-### Captioned Image
+### Captioned image
 
 The Captioned Image card is a great way to show off and attract attention to important content, like a big sale or a new app feature!
 
@@ -58,7 +57,7 @@ The Captioned Image card is a great way to show off and attract attention to imp
 
 ### Banner
 
-If you want fancy, the Banner card is for you! This is completely custom to what you want it to be. Just create your content elsewhere and upload it for a beautiful card that's all your own.
+If you want fancy, the banner card is for you! this is completely custom to what you want it to be. Just create your content elsewhere and upload it for a beautiful card that's all your own.
 
 ![Banner][3]{: height="50%" width="50%"}
 
@@ -68,11 +67,11 @@ If you want fancy, the Banner card is for you! This is completely custom to what
 | Image | Any aspect ratio supported. <br> 600px minimum width.  <br> Supports hi-res PNG, JPEG, and GIF. |
 {: .reset-td-br-1 .reset-td-br-2}
 
-## Creative Details {#general}
+## Creative details {#general}
 
 Content Cards come with great out-of-the-box functionality. At this time, card styling cannot be done natively in your Braze account, but you can style your Content Card by type and the Content Card feed during integration. More information on Content Cards can be found on our [Customization page][4].
 
-### Dismissal Behavior
+### Dismissal behavior
 
 For a user to dismiss a card, they can either swipe it away on mobile, or use a `close X` function, as shown below. The `x` will appear on hover for the Web SDK only.
 

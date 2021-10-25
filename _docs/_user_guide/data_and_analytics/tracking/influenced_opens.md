@@ -7,7 +7,7 @@ description: "This reference article explains Influenced Opens and how you can t
 channel: push
 
 ---
-# Influenced Opens
+# Influenced opens
 
 Push notifications are a good way to catch users attention and increase engagement. Often that is through direct opens when users click on the notification and are sent to the app. However, the behavior of users who do not click the message may still be influenced by your push campaigns. Braze provides data on Influenced Opens to provide a richer level of detail into the effect of your push campaigns. 
 

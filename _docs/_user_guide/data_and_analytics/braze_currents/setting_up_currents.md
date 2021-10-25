@@ -8,7 +8,7 @@ tool: Currents
 
 ---
 
-# Setting Up Currents
+# Setting up Currents
 
 > This page outlines and describes the generic process for integrating and configuring Braze Currents.
 
@@ -18,7 +18,7 @@ Currents are included with certain Braze packages. Please contact your Braze rep
 
 ## Requirements
 
-Using Currents with any of our partners requires the same basic parameters and connection methodology.
+Using currents with any of our partners requires the same basic parameters and connection methodology.
 
 Each partner requires that Braze has permission to write and send data files to them, and Braze asks for the location they should write those files to, specifically bucket names or keys.
 
@@ -37,31 +37,33 @@ It's important to keep your Partner Keys/Tokens and authentication details up to
 {% endalert %}
 
 
-## Step 1: Choose Your Partner
+## Step 1: Choose your partner
 
 Braze Currents allows you to integrate through Data Storage using flat files or to our Behavioral Analytics and Customer Data partners using a batched JSON payloads to a designated endpoint.  
 
 Before you begin your integration, it’s best to decide which integration is best for your purposes. For example, if you already utilize mParticle and Segment and would like Braze data to stream there, it would be best to use a batched JSON payload. If you would prefer to manipulate the data on your own or have a more complex system of data analysis, it might be best to use Data Storage ([Braze uses this method]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/how_braze_uses_currents/)!)
 
 ## Step 2: Navigate to Currents
+
 To get started, visit the Currents page in the left sidebar, in the "Integrations" section of the Dashboard. You'll be taken to the Currents integration management page.
 
 ![Currents]({% image_buster /assets/img_archive/currents-main-page.png %})
 
-## Step 3: Add Partner
+## Step 3: Add partner
+
 Add a partner, sometimes called a "Currents connector", by clicking the dropdown at the top right of the screen.
 
 ![Adding an Integration]({% image_buster /assets/img/new_current.png %}){: height="50%" width="50%"}
 
 Each partner requires a different set of configuration steps. To enable each integration, [see the instructions in their respective pages]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/available_partners/).
 
-## Step 4: Configure Events
+## Step 4: Cconfigure events
 
 Choose the events you wish to pass to that partner by checking from the available options. You can find listings of these events in our [Customer Behavior Events]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/customer_behavior_events/) and [Message Engagement Events]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/message_engagement_events/) libraries.
 
 If needed, you can learn more about our events in our [Event Delivery Semantics]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/event_delivery_semantics/) article.
 
-## Step 5: Test Your Integration
+## Step 5: Test your integration
 
 You may test your integration or take a look at the sample Currents data in [our Currents Examples Github repo](https://github.com/Appboy/currents-examples).
 

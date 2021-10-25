@@ -7,11 +7,11 @@ description: "This reference article covers some common troubleshooting scenario
 
 ---
 
-# Export Troubleshooting
+# Export troubleshooting
 
 Here are some error messages you may encounter while exporting data via CSV or API from Braze.
 
-## Common Errors
+## Common errors
 
 #### ‘AccessDenied’ 
 

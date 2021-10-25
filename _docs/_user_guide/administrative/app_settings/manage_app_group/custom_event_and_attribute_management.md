@@ -7,9 +7,9 @@ description: "This reference article covers managing custom events and attribute
 
 ---
 
-# Custom Event and Attribute Management
+# Custom event and attribute management
 
-## Adding Custom Attributes, Custom Events, and Products
+## Adding custom attributes, custom events, and products
 
 You can manage custom attributes, custom events (and their properties), and products (and their properties) from the respective tabs on **Manage Settings** page:
 
@@ -19,7 +19,7 @@ You can manage custom attributes, custom events (and their properties), and prod
 
 To add a custom attribute, event, or product, go to the respective tab and click **+ Add**. Give it a name (and for custom attributes, a data type) and click **Save**. This will enable tracking on it.
 
-### Managing Properties
+### Managing properties
 
 Once you have created a **Custom Event** or **Product**, you can click **Manage Properties** for that event or product to add new properties, blocklist existing properties, and view which campaigns or Canvases use this property in a [trigger event]({{site.baseurl}}/user_guide/engagement_tools/campaigns/scheduling_and_organizing/delivery_types/triggered_delivery/#step-1-select-a-trigger-event).
 
@@ -31,7 +31,7 @@ To make these added custom attributes, events, products, or event properties tra
 All User Profile data (custom events, custom attribute, custom data) is stored as long as those profiles are active. Custom event properties are stored and available for Segmentation for thirty (30) days. If you'd like to leverage event properties for Segmentation, please contact your Braze Account Manager or Customer Success Manager.
 {% endalert %}
 
-## Blocklisting Custom Attributes, Custom Events, and Products
+## Blocklisting custom attributes, custom events, and products
 
 If you want to stop tracking a specific custom attribute, event, or product (e.g., accidental creation during testing, no longer useful), search for it in the **Custom Events** tab, then click **Blocklist**.
 
@@ -49,7 +49,7 @@ Something to consider is that blocklisting a high number of events and attribute
 
 Changes to the blocklist may take a few minutes to propagate. You may re-enable any blocklist event or attribute at anytime.
 
-## Forcing Data Type Comparisons
+## Forcing data type comparisons
 
 Braze automatically recognizes data types for attribute data that is sent to us. However, in the event multiple data types are applied to a single attribute, you can force the data type of any attribute to let us know what it really is. Click on the drop-down in the Data Type column to choose.
 
@@ -61,7 +61,7 @@ Braze automatically recognizes data types for attribute data that is sent to us.
 If you choose to force the data type for an attribute, any data that comes in that isn't the specified type will be ignored.
 {% endalert %}
 
-### Data Type Coercion
+### Data type coercion
 
 | Forced Data Type | Description |
 |------------------|-------------|

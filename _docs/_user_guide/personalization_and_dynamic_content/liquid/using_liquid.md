@@ -6,7 +6,7 @@ description: "Liquid can elevate the personalization in your messages to impress
 
 ---
 
-# Liquid Use Cases and Overview
+# Liquid use cases and overview
 
 {% raw %}
 
@@ -53,7 +53,7 @@ Or...
 Hi Valued User, thanks for using the App!
 ```
 
-### Liquid Syntax
+### Liquid syntax
 
 Liquid follows a specific structure, or syntax, that you'll need to keep in mind as you're crafting dynamic personalization. Here are a few basic rules to keep in mind:
 
@@ -61,7 +61,7 @@ Liquid follows a specific structure, or syntax, that you'll need to keep in mind
 2. **Brackets come in pairs:** Every bracket must both open and close **{ }**. Make sure to use curly brackets!
 3. **If statements come in pairs:** For every `if`, you need an `endif` to indicate the `if` statement has ended.
 
-### Inserting Tags
+### Inserting tags
 
 You can insert tags by typing `{{` in any message, which will trigger an auto-completion feature that will continue to update as you type. You can even select a variable from the options that appear as you type.
 
@@ -81,7 +81,7 @@ If you choose to use Liquid in your Email messages, be sure to:
 {% raw %}
 
 
-### Pre-Formatted Variables
+### Pre-formatted variables
 
 You can insert pre-formatted variables with defaults through the "Insert Personalization Attribute" modal located on the top-right of any templated text field.
 
@@ -93,7 +93,7 @@ The modal will insert Liquid with your specified default value at the point that
 
 {% endraw %}
 
-### Assigning Variables
+### Assigning variables
 
 {% raw %}
 Some operations in Liquid require you to store the value you want to manipulate as a variable. This is often the case if your Liquid statement includes multiple attributes, event properties, or filters. 

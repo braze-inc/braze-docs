@@ -9,7 +9,7 @@ channel:
 
 ---
 
-# What are Push Messages?
+# What are push messages?
 
 > Push notifications are wonderful for time-sensitive calls to action, as well as re-engaging users who haven't come into the app in a while. Successful push campaigns drive the user directly to content and demonstrate the value of your application.
 
@@ -17,7 +17,7 @@ channel:
 
 _To see more examples of push notifications, check out our [Case Studies][8]._
 
-## Potential Use Cases
+## Potential use cases
 
 Push Notifications are a great tool for attracting new users and making re-engagement campaigns. Here are some examples of common Push message use cases. 
 
@@ -33,11 +33,11 @@ For more information on re-engaging lapsed users, see our [Quick Wins][23] page 
 
 > Push should be formatted in plain-text. Key-value pairs allow for [deep linking][3] to external URLs or in-app features.
 
-## Push Message Regulations
+## Push message regulations
 
 Because push messages are an intrusive type of messaging, going directly to the user's phone or browser, there are guidelines for sending push messages via apps and sites.
 
-### Mobile Push Regulations for Apps
+### Mobile push regulations for apps
 
 {% alert important %}
 Your push messages must fall within the guidelines of the Apple App Store and Google's Play Store policies, specifically regarding using push messages as advertisements, spam, promotions, and more.
@@ -54,9 +54,9 @@ Your push messages must fall within the guidelines of the Apple App Store and Go
 |[We don’t allow apps or ads that mimic or interfere with system functionality, such as notifications or warnings.][10] System-level notifications may only be used for an app’s integral features, such as an airline app that notifies users of special deals, or a game that notifies users of in-game promotions.|
 {: .reset-td-br-1}
 
-## Image and Text Specifications
+## Image and text specifications
 
-### Native Mobile Push Notifications
+### Native mobile push notifications
 
 {% tabs local %}
 {% tab Images %}
@@ -93,7 +93,7 @@ Android (FCM) | 4 KB
 {% endtab %}
 {% endtabs %}
 
-### Web Push Notifications
+### Web push notifications
 
 {% tabs local %}
 {% tab Images %}

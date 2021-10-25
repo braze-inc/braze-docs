@@ -7,7 +7,7 @@ Tool:
   - Dashboard
 ---
 
-# Prediction Quality
+# Prediction quality
 
 To measure the accuracy of your model, the __Prediction Quality__ metric will show you how effective this particular machine learning model appears to be when tested on historical data. Braze pulls data according to the groups you specified in the model creation page. The model is trained on one data set (the “training” set) and then tested on a new, separate data set (the “test” set). 
 

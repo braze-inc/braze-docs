@@ -8,7 +8,7 @@ tool: Currents
 
 ---
 
-# Transfer Data from Amazon S3 to Snowflake
+# Transfer data from Amazon S3 to Snowflake
 
 > If your data is currently sitting in Amazon S3, you can transfer it to Snowflake or another relational data warehouse using the ELT (Extract Load Transform) process.
 
@@ -16,7 +16,7 @@ tool: Currents
 If you have more specific use cases and would like Braze to service your Currents instance, reach out to your Braze Account Manager and ask them about Braze Data Professional Services.
 {% endalert %}
 
-## Automated Load Process
+## Automated load process
 
 This automated load process moves data into [Snowflake](https://www.snowflake.com/), which will allow you to use the [Braze Looker Blocks](https://looker.com/platform/blocks/directory?utm_campaign=7012R000000fxfC&utm_source=other&utm_medium=email&utm_content=brazedirectreferral&utm_term=braze_direct#braze) to visualize that data in Looker to help drive insights and feedback into your campaigns, Canvases, and Segments.
 
@@ -25,11 +25,11 @@ Once you have a Currents to S3 export set up and are receiving live events data,
 -   [AWS SQS Queues](#aws-sqs-queues)
 -   [Auto-Ingest Snowpipes](#auto-ingest-snowpipes)
 
-### AWS(c) SQS Queues
+### AWS SQS Queues
 
 **Auto-ingest Snowpipes** rely on SQS queues for sending notification from S3 to Snowpipe. This process is managed by Snowflake after configuring SQS.
 
-#### Configure the External S3 Stage
+#### Configure the external S3 stage
 
 {% alert note %}
 Tables in your database are created from this stage.
@@ -104,7 +104,7 @@ COPY INTO
 
 Finally, use the `show pipes;` command to show your SQS information. The name of the SQS queue will be visible in a new column called `NOTIFICATION_CHANNEL` since this pipe was created as an auto-ingest pipe.
 
-#### Create Bucket Events
+#### Create bucket events
 
 In AWS, navigate to the corresponding bucket of the new Snowflake stage. Then, under the **Properties** tab, go to **Events**.
 
@@ -116,7 +116,7 @@ In **Events**, create new events for each set of Currents Data, as needed ([Mess
 
 Check the appropriate box for the object create notifications, as well as the ARN on the bottom of the form (from the notification channel column in Snowflake).
 
-### Snowpipe Setup
+### Snowpipe setup
 
 In order for the above configuration to produce the correct tables, you must define the structure of the incoming data properly using the examples below and the structures determined in our [Message Engagement or Messaging Events]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/message_engagement_events/) and/or [User or Customer Behavior Events]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/customer_behavior_events/) Currents documentation.
 

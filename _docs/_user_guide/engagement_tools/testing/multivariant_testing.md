@@ -1,16 +1,16 @@
 ---
 nav_title: Multivariate & A/B Testing
-article_title: Multivariate & A/B Testing
+article_title: Multivariate and A/B Testing
 page_order: 2
 page_type: reference
 description: "This reference article explains Multivariate and A/B Testing, their benefits, and how to create them with Braze."
 
 ---
-# Multivariate & A/B Testing
+# Multivariate and A/B testing
 
-Multivariate & A/B Testing can be quickly utilized using our [Intelligent Selection]({{site.baseurl}}/user_guide/intelligence/intelligent_selection/) feature.
+Multivariate and A/B Testing can be quickly utilized using our [Intelligent Selection]({{site.baseurl}}/user_guide/intelligence/intelligent_selection/) feature.
 
-## What are Multivariate & A/B Testing?
+## What are multivariate & a/b testing?
 
 An A/B test is an experiment that compares users’ responses to multiple versions of the same marketing campaign. These versions share similar marketing goals but differ in wording and style.
 
@@ -30,8 +30,7 @@ The above test only examines the effect of one variable-- the copy in the push n
 
 In the Braze documentation, a "multivariate test" should be considered interchangeable with an "A/B test".
 
-
-## The Benefits of Multivariate & A/B Testing {#the-benefits-of}
+## The benefits of multivariate and A/B testing {#the-benefits-of}
 
 Multivariate and A/B testing gives you an easy, clear way to learn about your audience. You no longer have to guess what users will respond to - every campaign becomes an opportunity to try different variants of a message and gauge audience response.
 
@@ -55,7 +54,7 @@ Specific scenarios in which multivariate and A/B testing could come in handy inc
 
 <br>
 
-## Five Rules for Multivariate & A/B Testing {#five-rules-for}
+## Five rules for multivariate and A/B testing {#five-rules-for}
 
 Multivariate and A/B testing can unveil powerful insights regarding your users. To ensure that your test results are truly reflective of your users’ behaviors, you need to:
 
@@ -89,15 +88,15 @@ Including a control group lets you know whether your messages have a greater imp
 
 <br>
 
-## Creating Multivariate & A/B Tests with Braze {#creating-tests}
+## Creating multivariate and A/B tests with Braze {#creating-tests}
 
-![Create Your Campaign][160]{: style="max-width:30%;float:right;margin-left:15px;"}
-
-### Step 1: Create Your Campaign
+### Step 1: Create your campaign
 
 Click **Create Campaign** and select a channel for the campaign from the section that allows multivariate and A/B testing.
 
-### Step 2: Compose Your Variants
+![Create Your Campaign][160]
+
+### Step 2: Compose your variants
 
 You can create up to eight (8) variants of your message, differentiating between titles, content, images, and more.
 
@@ -107,17 +106,17 @@ For some ideas on how to get started differentiating your variants, see the sect
 
 ![Compose Your Variants][170]
 
-### Step 3: Schedule Your Campaign
+### Step 3: Schedule your campaign
 
 Test scheduling works the same as scheduling any other Braze campaign. All of Braze's [standard campaign scheduling options][175] are available.
 
-### Step 4: Choose a Segment and Distribute Your Users Across Variants
+### Step 4: Choose a segment and distribute your users across variants
 
 Select segments to target, then distribute its members across your selected variants, as well as reserving a portion to send to the winning variant, if necessary.
 
 Decide what percentage of your target segment should receive each of your variants, be in the Control Group (if any), and what percentage should receive the Winning Variant once the A/B Test is complete.
 
-#### Including a Control Group {#including-a-control-group}
+#### Including a control group {#including-a-control-group}
 
 When you create a multivariate or A/B test, you can reserve a percentage of your target audience for a randomized control group. Users in the control group will not receive the test, but Braze will monitor their conversion rate for the duration of the campaign. When viewing your results, you’ll be able to compare the conversion rates of your variants against a baseline conversion rate provided by your control group. This lets you compare not only the effects of your variants but also compare the effects of your variants against the conversion rate that would result if you didn’t send a message at all. <br><br>The size of the control group for a campaign with [Intelligent Selection][intelselection] will be based on the number of variants. If each variant is being sent to more than 20% of users, then the control group will be 20% and the variants will be split evenly across the remaining 80%. However, if you have multiple variants such that each variant is being sent to less than 20% of users, then the control group will have to become smaller. Once Intelligent Selection starts analyzing the performance of your test, the control group will grow or shrink based on the results.
 
@@ -131,13 +130,13 @@ For best practices around choosing a segment to test with, see the section below
 
 ![Choose a Segment][180]
 
-### Step 5: Pick the Action that Determines the Winner
+### Step 5: Pick the action that determines the winner
 
 The Winning Variant can be measured by `Unique Opens` or `Clicks` for email, `Opens` for Push, or `Primary Conversion Rate` for all channels. Selecting `Opens` or `Clicks` to determine the winner will not affect what you choose for the campaign’s [Conversion Events][2].
 
 Keep in mind that if you’re using a Control Group, users in the Control Group cannot perform `Opens` or `Clicks`, so the “performance” of the Control Group is guaranteed to be `0`. As a result, the Control Group cannot “win” the A/B test; however, you still may want to use a Control Group to track other metrics for users who do not receive a message.
 
-### Step 6: Schedule When to Send the Winning Variant
+### Step 6: Schedule when to send the winning variant
 
 Choose a date and time when the Winning Variant should be sent out.
 
@@ -147,17 +146,17 @@ When sending in users’ local time or with Intelligent Timing, the Winning Vari
 
 In the dropdown below the date, you can also choose whether or not to send the best performing variant even if it does not win by a statistically significant margin. You'll read more about this in Understanding Confidence chapter of this module.
 
-#### (Optional) Designate a Conversion Event
+#### (Optional) Designate a conversion event
 
 Setting a conversion event for a campaign allows you to see how many of the recipients of that campaign performed a particular action after receiving it.
 
 This will only affect the test if you chose “Primary Conversion Rate” in the previous steps. You can read more about our [Conversion Events][2] feature in our documentation.
 
-### Step 7: Review and Launch
+### Step 7: Review and launch
 
 On the confirmation page, review the details of your multivariate campaign and launch the test!
 
-### Step 8: View Results
+### Step 8: View results
 
 Once your campaign has launched, you can check how each variant is performing by selecting clicking on your campaign from the Campaigns section of the dashboard. When the testing campaign is complete, you can see a summary of how all the variants performed and whether or not there was a winner during the test.
 
@@ -170,13 +169,12 @@ On the analytics page, you can also see the performance of the Winning Variant t
 {% alert note %}
 Braze tests all the variants against each other with [Pearson’s chi-squared tests](https://en.wikipedia.org/wiki/Pearson%27s_chi-squared_test). It measures whether or not one variant statistically outperforms all others at a significance level of p < 0.05, or what we refer to as 95% significance. If so, the winning variant is indicated with the “Winner” label.
 
-
 This is a separate test from the confidence score, which only describes the performance of a variant compared to the control with a numeric value between 0 and 100%.
 {% endalert %}
 
 Zero, one, or more variants can do better than control, but the chi-squared testing checks if one variant is better than all of the rest. [Follow-up tests](#recommended-follow-ups) may yield more details.
 
-### Understanding Confidence {#understanding-confidence}
+### Understanding confidence {#understanding-confidence}
 
 An important part of your results is the confidence of your results. For example, what if the Control Group had a 20% conversion rate and Variant A had a 25% conversion rate? This seems to indicate that sending Variant A is more effective than sending no message. Having a confidence of 95% means that the difference between the two conversion rates is likely due to an actual difference in users’ responses and that there is only a 5% likelihood that the difference has occurred by chance.
 
@@ -196,7 +194,7 @@ Whether or not your test has a clear winner, it can be helpful to run follow-up 
 
 {% enddetails %}
 
-### Tips for Different Channels {#tips-different-channels}
+### Tips for different channels {#tips-different-channels}
 
 Depending on which channel you select, you’ll be able to test different components of your message. Try to compose variants with an idea of what you want to test and what you hope to prove.
 
@@ -215,7 +213,7 @@ For instance, if you’re testing a push, you may achieve significant results fa
 
 If you're unsure how long your test should run for, the [Intelligent Selection][272] feature can be useful for finding a winning variant efficiently.
 
-### Choosing a Segment {#choosing-a-segment}
+### Choosing a segment {#choosing-a-segment}
 
 Since different segments of your users may respond differently to messaging, the success of a particular message says something about both the message itself and its target segment. Therefore, try to design a test with your target segment in mind.
 
@@ -225,7 +223,7 @@ Additionally, when choosing which segment to run your test on, be sure to consid
 
 As a crude guide, you will likely need __around 15,000 users per variant__ (including the control) to achieve __95% confidence__ in your test results. However, the exact number of users you need could be higher or lower than that depending on your particular case. For more exact guidance on variant sample sizes, consider referring to [Optimizely's Sample Size Calculator][225].
 
-## Recommended Follow-ups {#recommended-follow-ups}
+## Recommended follow-ups {#recommended-follow-ups}
 
 One multivariate and A/B test can (and should!) inspire ideas for future tests, as well as guide you toward changes in your messaging strategy. Possible follow-up actions include:
 

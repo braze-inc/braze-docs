@@ -6,7 +6,7 @@ description: "This reference article covers a complete list of supported Liquid 
 
 ---
 
-# Supported Personalization Tags
+# Supported personalization tags
 
 As a convenience, a summary of supported personalization tags are listed below. For more detail on each kind of tag and best practices, continue reading.
 
@@ -33,7 +33,7 @@ As a convenience, a summary of supported personalization tags are listed below. 
 Campaign, Card, and Canvas attributes are only supported in their corresponding messaging templates (for example, `dispatch_id` is not available in in-app message campaigns).
 {% endalert %}
 
-#### Canvas and Campaign Tag Differences 
+#### Canvas and campaign tag differences 
 
 The behavior for the following tags differs between Canvas and campaigns:
 {% raw %}
@@ -41,7 +41,7 @@ The behavior for the following tags differs between Canvas and campaigns:
 - Using the `{{campaign.${name}}}` tag with Canvas will display the Canvas step name. When using this tag with campaigns, it will display the campaign name.
 {% endraw %}
 
-## Most Recently Used Device Information
+## Most recently used device information
 
 You can template in the following attributes for the user's most recent device across all platforms. If a user has not used your application (e.g., you imported the user via REST API), then these values will all be `null`.
 
@@ -65,7 +65,7 @@ You can template in the following attributes for the user's most recent device a
 
 Because there are such a wide range of device carriers, model names, and operating systems, we advise that you thoroughly test any Liquid that conditionally depends on any of those values. These values will be `null` if they are not available on a particular device.
 
-## Targeted Device Information
+## Targeted device information
 
 For push notification and in-app message channels, you can template in the following attributes for the device to which a message is being sent. That is, a push notification or in-app message can include device attributes of the device on which the message is being read. Note that these attributes will not work for Content Cards. 
 
@@ -118,7 +118,7 @@ In this example, a user with a blank or null first name will get the message "Th
 
 {% endraw %}
 
-## Variable Tags
+## Variable tags
 
 You can use the `assign` tag to create a variable in the message composer. Once you create a variable, you can reference that variable in your messaging logic or message.
 
@@ -148,7 +148,7 @@ Find yourself assigning the same variables in every message? Instead of writing 
 As long as the Content Block is at the top of your message, every time the variable is inserted into your message as an object, it will refer to your chosen custom attribute!
 {% endalert %}
 
-## Iteration Tags
+## Iteration tags
 
 {% raw %}
 Iteration tags can be used to run a block of code repeatedly. This example features the `for` tag.
@@ -174,7 +174,7 @@ Then, we send the sale message when converse_viewer is true. Otherwise, we abort
 
 This is a simple example of how iteration tags can be used in Braze's message composer. You can find more information [here][32].
 
-## HTTP Status Codes {#http-personalization}
+## HTTP status codes {#http-personalization}
 
 You can utilize the HTTP status from a [Connected Content][38] call by first saving it as a local variable and then using the `__http_status_code__` key. For example:
 
@@ -189,7 +189,7 @@ You can utilize the HTTP status from a [Connected Content][38] call by first sav
   Be aware that this key will only be automatically added to the Connected Content object if the endpoint returns a JSON object. If the endpoint returns an array or other type, then that key cannot be set automatically in the response.
 {% endalert %}
 
-## Sending Messages Based on Language, Most Recent Locale, and Time Zone
+## Sending messages based on language, most recent locale, and time zone
 
 In some situations you may wish to send messages that are specific to particular locales. For example, Brazilian Portuguese is typically different than European Portuguese.
 
