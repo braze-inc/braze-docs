@@ -26,23 +26,23 @@ Upon setup, you will be asked to provide a sign-on URL and an Assertion Consumer
 
 ### Step 1: Configure the Braze app
 
-1. Log into [OneLogin](https://app.onelogin.com/login). Click on **Administration**.
-- ![onelogin_1]({% image_buster /assets/img/onelogin_1.png %})
+1. Log into [OneLogin](https://app.onelogin.com/login). Click on **Administration**.<br><br>
+    ![onelogin_1]({% image_buster /assets/img/onelogin_1.png %})<br><br>
 
-2. Go to **Apps** > **Add Apps** in the top navigation bar. Search for "Braze" and select the Braze app.
-- ![onelogin_2]({% image_buster /assets/img/onelogin_2.png %})
+2. Go to **Apps** > **Add Apps** in the top navigation bar. Search for "Braze" and select the Braze app.<br><br>
+    ![onelogin_2]({% image_buster /assets/img/onelogin_2.png %})<br><br>
 
-3. Save the Braze app to your Company.
-- ![onelogin_3]({% image_buster /assets/img/onelogin_3.png %})
+3. Save the Braze app to your Company.<br><br>
+    ![onelogin_3]({% image_buster /assets/img/onelogin_3.png %})<br><br>
 
-4. Once saved, go to **Configuration** and add your **Braze Domain**.
-- ![onelogin_4]({% image_buster /assets/img/onelogin_4.png %})
+4. Once saved, go to **Configuration** and add your **Braze Domain**.<br><br>
+    ![onelogin_4]({% image_buster /assets/img/onelogin_4.png %})<br><br>
 
-5. Braze expects the SAML assertions in a [specific format][1]. Under **Parameters** the [attributes][1] supported by Braze should be pre-populated. Simply verify that this is correct.
-- ![onelogin_5]({% image_buster /assets/img/onelogin_5.png %})
+5. Braze expects the SAML assertions in a [specific format][1]. Under **Parameters** the [attributes][1] supported by Braze should be pre-populated. Simply verify that this is correct.<br><br>
+    ![onelogin_5]({% image_buster /assets/img/onelogin_5.png %})<br><br>
 
-6. Copy the **Certificate** and **SAML 2.0 Endpoint (HTTP)** needed to set up the Braze dashboard from under the **SSO** tab.
-- ![onelogin_6]({% image_buster /assets/img/onelogin_6.png %})
+6. Copy the **Certificate** and **SAML 2.0 Endpoint (HTTP)** needed to set up the Braze dashboard from under the **SSO** tab.<br><br>
+    ![onelogin_6]({% image_buster /assets/img/onelogin_6.png %})
 
 ### Step 2: Configure OneLogin within Braze
 

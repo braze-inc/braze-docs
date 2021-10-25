@@ -150,7 +150,7 @@ On this page, you will add the following:
 
 ![Enable SAML SSO]({% image_buster /assets/img/samlsso.gif %})
 
-## Create and enable a Bbraze API key for IdP login (optional)
+## Create and enable a Braze API key for IdP login (optional)
 
 To enable IdP-initiated login, you will first need to create an API Key in **Developer Console** > **API Settings**.
 

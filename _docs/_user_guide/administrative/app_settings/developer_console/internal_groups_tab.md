@@ -58,7 +58,7 @@ Lastly, for clients who use an IP pool to send out email, you can now select whi
 
 Only groups that are tagged as Content Test will be available on the preview section of a message.
 
-![Content test group settings][9]
+![Content test group settings][9]{: style="max-width:50%" }
 
 ### Seed groups
 

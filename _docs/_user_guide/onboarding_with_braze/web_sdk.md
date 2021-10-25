@@ -14,7 +14,7 @@ With Braze’s Web SDK, you can collect session data, identify users (with the s
 
 ## Implementation
 
-for information on integrating the braze web sdk, see our [documentation][6]. after implementing the web sdk, your website will appear as an app in your app group and will be grouped with your mobile apps.
+For information on integrating the Braze Web SDK, see our [documentation][6]. After implementing the Web SDK, your website will appear as an app in your app group and will be grouped with your mobile apps.
 
 ![Web_App_Group][7]
 

@@ -76,6 +76,8 @@ __Save these new settings.__
 If you want your Braze account users to only sign in with SAML SSO, you can [restrict single sign-on authentication]({{site.baseurl}}/user_guide/administrative/access_braze/single_sign_on/restriction/) from the **Company Settings** page.
 {% endalert %}
 
-## You should now be able to log into Braze using Okta!
-<br>
+## Step 4: Log in
+
+You should now be able to log in to Braze using Okta!
+
 ![Okta SAML]({% image_buster/assets/img/Okta/okta3.png %}){: style="max-width:60%"}

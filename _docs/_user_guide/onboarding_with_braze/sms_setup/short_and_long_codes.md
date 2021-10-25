@@ -92,7 +92,7 @@ For more information on Alphanumeric Sender IDs, please reach out to your Custom
 {% endtab %}
 {% tab Toll-Free Number %}
 
-### SMS-Enabled Toll-Free Number
+### SMS-enabled toll-free number
 
 A toll-free telephone number, or a freephone number, is a telephone number that is billed for all arriving calls instead of incurring charges at the originating telephone subscriber. Toll-free numbers in the US and Canada are SMS-enabled, where subscribers are charged for incoming and outgoing texts.
 
