@@ -13,16 +13,15 @@ At Braze, data means action: each piece of data that arrives in Braze updates se
  
 Our Customer Success team can help recommend data best practices to fit your specific needs. You can find a more detailed breakdown of this definition in your Braze contract.
 
-## Management & usage
+## Management and usage
 
-To view your Data Point Dashboard, select your name in the top-right corner, click the drop down, and select __Subscriptions and Usage__. For more information on the Data Point Dashboard components, check out our subscription and usage [article]({{site.baseurl}}/user_guide/onboarding_with_braze/subscription_and_usage/). 
+To view your Data Point Dashboard, select your name in the top-right corner, click the drop down, and select __Subscriptions and Usage__. For more information on the Data Point Dashboard components, check out our subscription and usage [article]({{site.baseurl}}/user_guide/onboarding_with_braze/subscription_and_usage/).
 
 {% alert tip %}
 __Only update your deltas (changing data)!__
 
 To prevent using up your allocated data points, we recommend setting up a program that will prevent sending the same, unchanging data from your app to Braze over and over.
 {% endalert %}
-
 
 ## Consumption count
 
@@ -127,10 +126,10 @@ You can find a breakdown of how Braze accumulates data points below, but there a
 
 #### CSV
 
-custom attributes uploaded via csv count towards your data points, however csv imports for segmentation purposes (imports made with `external_id` as the only field) will not consume data points.
+Custom attributes uploaded via CSV count towards your data points, however csv imports for segmentation purposes (imports made with `external_id` as the only field) will not consume data points.
 
 #### Arrays
 
-an array (or string) is an ordered collection of items stored within a custom attribute. in terms of consumption, it costs one data point per api call it takes to update the array.
+An array (or string) is an ordered collection of items stored within a custom attribute. In terms of consumption, it costs one data point per API call it takes to update the array.
 
 That means if you set the whole array at once, it counts as one data point. However if you add values to the array incrementally, it counts as one data point per value.

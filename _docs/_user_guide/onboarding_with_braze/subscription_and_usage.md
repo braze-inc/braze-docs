@@ -13,11 +13,11 @@ tool: Dashboard
 
 To navigate to the **Subscriptions and Usage** page, select your account icon on the dashboard and select __Subscriptions and Usage__ from the dropdown menu. Customers are encouraged to use this page as a self-serve tool to monitor and check their data consumption. 
 
-## Subscriptions and usage
+## Page contents
 
 ### Usage graphs
 
-Here, you will find usage graphs that apply to your app groups. You may find your own dashboard shows different usage metrics based on the products you have purchased. 
+Here, you will find usage graphs that apply to your app groups. You may find your own dashboard shows different usage metrics based on the products you have purchased.
 
 ![Usage Graphs][3]{: style="max-width:90%;"}
 
@@ -33,7 +33,7 @@ Your **Total Data Points Dashboard** can be found under the __Total Data Points 
 
 ![Subscription and Usage][2]{: style="max-width:80%;"}
 
-### Contract details 
+### Contract details
 
 Here, you’ll find information on when your current Braze contract starts and ends, as well as allotted data points and a sum of all data points that have been used thus far in your current contract.
 
@@ -51,13 +51,14 @@ This section of the dashboard displays the data point usage for the current bill
 
 ### Company billing data
 
-#### Usage across app groups 
+#### Usage across app groups
 
 This table allows you to assess the total data point usage of a company by app group. This table gives you the ability to assess how each app group is contributing to the company's data point usage.
 
 ![App Group Data Point Usage][7]{: style="max-width:90%;"}
 
 #### Data point usage over time
+
 This table gives you the ability to quickly see your total data point usage vs your allotted amount of data points. 
 
 ![Data Point Usage over Time][8]{: style="max-width:90%;"}
@@ -69,6 +70,7 @@ The app group billing data and app group charts only display for dates after Oct
 {% endalert %}
 
 #### Drill to app groups
+
 The **Drill to App Groups** lets you view granular data point data for each of your app groups. Click an app group to see its data point details.
 
 ![App Group Drill Down][9]{: style="max-width:90%;"}

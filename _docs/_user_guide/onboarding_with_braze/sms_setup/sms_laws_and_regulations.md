@@ -10,7 +10,7 @@ channel:
   
 ---
 
-# SMS laws, regulations, & abuse prevention
+# SMS laws, regulations, and abuse prevention
 
 Because SMS messages are one of the most direct ways to reach customers and users, going directly to the user’s phone, regulations must exist that prevent brands from abusing or over-using this relationship, and fines for violations could cost thousands of dollars. 
 
@@ -42,7 +42,7 @@ There are the six rules you should follow:
 
 ## Resources
 
-here are some links you might need to consult as you build up your sms campaign:
+Here are some links you might need to consult as you build up your SMS campaign:
 
 - [CTIA's Messaging Principles and Best Practices for 2019](https://api.ctia.org/wp-content/uploads/2019/07/190719-CTIA-Messaging-Principles-and-Best-Practices-FINAL.pdf)
 - [Twilio's Guide to US SMS Compliance](https://www.twilio.com/learn/call-and-text-marketing/guide-to-us-sms-compliance)
@@ -60,7 +60,7 @@ The [CTIA](https://www.ctia.org/) (a trade association representing the wireless
 
 ### Consent
 
-opt-in, help, and opt-out options are an absolute must when creating sms campaigns.
+Opt-in, help, and opt-out options are an absolute must when creating SMS campaigns.
 
 The Telephone Consumer Protection Act ([TCPA](https://en.wikipedia.org/wiki/Telephone_Consumer_Protection_Act_of_1991)) mandates that a business must receive "express written consent" to send customers messages - you can do this in a multitude of ways, including web or mobile. You must be clear with the customer about how you intend to use SMS to communicate with them.
 
@@ -76,7 +76,7 @@ Some spam considerations are built into SMS capabilities in general (long and sh
 
 ### Content
 
-this can be a tricky one, but when in doubt, avoid topics that involve violence, sex, drugs, tobacco, or other paraphernalia. be wise when sending messages regarding these topics—you may still be charged for messages that are blocked by various carriers.
+This can be a tricky one, but when in doubt, avoid topics that involve violence, sex, drugs, tobacco, or other paraphernalia. Be wise when sending messages regarding these topics—you may still be charged for messages that are blocked by various carriers.
 
 The [CTIA](https://www.ctia.org/) recommends that you ensure SHAFT compliance, which defines the following topics as generally "illegal" when messaging in the United States:
 
@@ -90,8 +90,9 @@ You can [read more about the CTIA's Messaging Principles and Best Practices for 
 
 ### Scheduling
 
-please ensure you comply with the [tcpa](https://en.wikipedia.org/wiki/telephone_consumer_protection_act_of_1991), which dictates that you shouldn't send messages during late hours. refer to the regulation's contents for exact hours. however, you shouldn't send messages that late anyway—don't you want high engagement?
+Please ensure you comply with the [TCPA](https://en.wikipedia.org/wiki/telephone_consumer_protection_act_of_1991), which dictates that you shouldn't send messages during late hours. Refer to the regulation's contents for exact hours. However, you shouldn't send messages that late anyway—don't you want high engagement?
 
 ### International
 
-most of these best practices apply to guidelines set forth in the united states of america. if you're reaching customers outside of u.s. regions, please research best practices and laws in those areas. it's always a best practice to act in a way that adheres to the most stringent regulations, which are usually applied in the united states, canada, and countries part of the european union.
+Most of these best practices apply to guidelines set forth in the United States of America. If you're reaching customers outside of U.S. regions, please research best practices and laws in those areas. It's always a best practice to act in a way that adheres to the most stringent regulations, which are usually applied in the United States, Canada, and countries part of the European Union.
+

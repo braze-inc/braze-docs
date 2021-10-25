@@ -9,7 +9,7 @@ channel: email
 
 ---
 
-# Email technical guidelines & notes
+# Email technical guidelines and notes
 
 > This reference article covers local and host part validation rules for email addresses.
 
@@ -34,6 +34,7 @@ If Braze receives a request to add a user and the email address is considered in
 ## Local part validation rules
 
 ### Microsoft domains
+
 If the host domain includes "msn", "hotmail", "outlook", or "live", then the following regex will be used to validate the local part:<br>
 `/\A\w[\-\w]*(?:\.[\-\w]+)*\z/i`
 
@@ -47,6 +48,7 @@ The Microsoft address local part must follow these parameters:
 - Cannot end with a period (.)
 
 ### All other domains
+
 For all other domains, Braze allows email addresses matching the following regex for the local part:<br>
 `\A[\p{L}\p{N}_](?:[\.\+\'\p{L}\p{N}_&#\/\-]*[\p{L}\p{N}_\-])?\z`
 
@@ -60,6 +62,7 @@ If the domain part is a Gmail address, the local part needs to be at least five 
 {% endalert %}
 
 ## Host part validation rules
+
 IPv4 or IPv6 addresses are not allowed in the host part of an email address. Also, the top-level domain (e.g. .com, .org, .net, etc.) may not be fully numeric.
 
 The following regex is used to validate the domain:<br>

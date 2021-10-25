@@ -8,7 +8,7 @@ channel: email
 
 ---
 
-# Deliverability pitfalls & spam traps
+# Deliverability pitfalls and spam traps
 
 Your email deliverability can be affected by any of the following spam traps:
 
@@ -26,6 +26,7 @@ Your email deliverability can be affected by any of the following spam traps:
 These traps can be avoided if you set up a confirmed opt-in process. By sending an initial opt-in email and asking customers to verify that they want your messages, you're ensuring you send to real, valid addresses and that your recipients want to hear from you.
 
 Additional ways to avoid spam traps:
+
 1. Send a double-opt-in email.
 2. Implement a best-practice [sunset policy]({{site.baseurl}}/user_guide/message_building_by_channel/email/best_practices/).
 3. __Never purchase email lists.__

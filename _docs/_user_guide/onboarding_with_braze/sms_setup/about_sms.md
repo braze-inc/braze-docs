@@ -10,7 +10,8 @@ channel:
   
 ---
 
-# What are sms messages?
+# What are SMS messages?
+
 ![SMS about][picture]{: style="float:right;max-width:30%;margin-left:15px;border: 0;"}
 
 SMS, also known as Short Message Service, is used to send text messages to mobile phones. Currently, there are over 23 billion text messages sent every day worldwide, with SMS being the most direct way to reach users and customers. This widespread usage and proven value have made SMS an effective marketing tool for businesses of all sizes. 
@@ -28,7 +29,7 @@ This article shares some common use cases to draw from, requirements, and terms 
 
 ## Requirements
 
-before you start sending sms, there are some things you need. refer to the basic chart below to learn more.
+Before you start sending sms, there are some things you need. Refer to the basic chart below to learn more.
 
 |Requirement | Description | Acquirement |
 |---|---|---|
@@ -46,6 +47,7 @@ before you start sending sms, there are some things you need. refer to the basic
 - __Common SMS Campaign Metrics:__ <br>`Sent`, `Sent to Carrier`, `Delivery Failures`, `Confirmed Delivery`, `Rejections`, `Opt-Out`, and `Help`. <br>For information on these Metrics, please check out the [SMS Campaign Analytics][1] documentation.
 
 <br><br>
+
 For a full list of terms, visit our SMS [Terms to Know]({{site.baseurl}}/user_guide/onboarding_with_braze/sms_setup/terms/) or our dedicated [SMS section]({{site.baseurl}}/user_guide/message_building_by_channel/sms/) for more topics like how to create a SMS campaign, SMS campaign analytics, and SMS keyword processing.
 
 [picture]: {% image_buster /assets/img/sms/sms_about.jpg %}

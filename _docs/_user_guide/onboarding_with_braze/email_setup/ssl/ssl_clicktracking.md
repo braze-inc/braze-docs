@@ -12,7 +12,8 @@ channel: email
 
 A Secured Socket Layer (SSL) encrypts a URL with HTTPS instead of the less secure HTTP. Customers at Braze can set up their links and domains to apply SSL certificates. These certificates, similar to SPM and DKIM for email authentication, are insurances that links in your emails are sending your users to reputable locations, and not malicious websites. While not required, SSL certificates are quickly becoming the standard and are strongly recommended to ensure links and images display properly.
 
-## How do i get started?
+## How do I get started?
+
 1. You must reach out to a COM or CSM to initiate a full Braze email setup.
 2. Braze will provide DNS records to add to your domain registry.
 3. Braze will verify if records have been added to your registry correctly.
@@ -20,7 +21,7 @@ A Secured Socket Layer (SSL) encrypts a URL with HTTPS instead of the less secur
 5. You will set up your CDN. Please note that Braze will not be able to help troubleshoot CDN configuration. Please reach out to your CDN provider for help.
 6. Lastly, reach out to your COM or CSM to get SSL turned on.
 
-## What is a cdn, and why do i need it?
+## What is a CDN, and why do I need it?
 
 A Content Delivery Network (CDN) is a platform of servers that help ensure quick load times of high-quality content across multiple mediums while also handling security certificates. 
 
@@ -64,7 +65,7 @@ Once the command is run, under `ANSWER SECTION` it should list where your CNAME 
 {% endtab %}
 {% tab CDN %}
 
-#### Check for cdn issues
+#### Check for CDN issues
 
 If your live email links start breaking during setup, this often means you've pointed your DNS toward your CDN without it being properly configured. This often comes up as a "Wrong Link" error.
 
@@ -73,7 +74,7 @@ Please reach out to your CDN provider and review their documentation to help to 
 {% endtab %}
 {% tab HTTP Messages Persisting %}
 
-#### Check if ssl is enabled by braze
+#### Check if SSL is enabled by Braze
 
 If you have completed your SSL setup and are still seeing your links come up as HTTP and not HTTPS, reach out to your Braze COM or CSM and make sure SSL has been enabled by Braze. SSL can only be enabled by Braze once all aspects of your SSL setup have been completed.
 

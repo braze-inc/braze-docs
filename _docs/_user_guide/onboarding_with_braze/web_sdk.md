@@ -8,7 +8,7 @@ description: "This onboarding reference article covers implementing Braze's Web 
 
 ---
 
-# Web sdk
+# Web SDK
 
 With Braze’s Web SDK, you can collect session data, identify users (with the same set of attributes that we support across our other platforms), and record purchases and custom events via a web/mobile browser. Implementing Braze's Web SDK enables you to create a more complete view of your users across web and mobile channels. You can also use the Web SDK to engage with your users by sending in-app web messages and web push notifications.
 
@@ -18,7 +18,7 @@ for information on integrating the braze web sdk, see our [documentation][6]. af
 
 ![Web_App_Group][7]
 
-## In-App Web Messaging
+## In-app web messaging
 
 You can send web messages to engage with users directly in their web/mobile browser. Web messages are sent as in-app messages, and can also be sent as slideup, modal, or fullscreen types. For more information on composing an in-app message, see our page on [creating an in-app message][8].
 

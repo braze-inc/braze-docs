@@ -39,7 +39,7 @@ guide_featured_list:
 
 ## Requirements
 
-before you start sending emails, there are some things you need. refer to the chart below to learn more.
+Before you start sending emails, there are some things you need. Refer to the chart below to learn more.
 
 |Requirement | Description | Acquirement |
 |---|---|---|
@@ -63,7 +63,6 @@ Send your first batch of emails to your most engaged users. This will help you g
 
 After you're done with your IP Warmup, feel free to [start creating and sending emails]({{site.baseurl}}/user_guide/message_building_by_channel/email/creating_an_email_campaign/)!
 
+## More resources
 
-### For more information on email at braze, check out our dedicated [email section]({{site.baseurl}}/user_guide/message_building_by_channel/email/).
-
-<br>
+For more information on email at Braze, check out our dedicated [email section]({{site.baseurl}}/user_guide/message_building_by_channel/email/).
