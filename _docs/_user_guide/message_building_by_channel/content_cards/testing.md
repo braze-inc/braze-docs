@@ -10,7 +10,7 @@ channel:
 
 # Testing
 
-it is __extremely important__ to __always__ test your content cards before sending your campaigns. our preview and testing capabilities offer two ways to take a look at your content cards. you can preview your message to help you visualize as you compose it, as well as send a test message to yourself or a specific user's device. we recommend you take advantage of __both__.
+It is __extremely important__ to __always__ test your content cards before sending your campaigns. Our preview and testing capabilities offer two ways to take a look at your content cards. You can preview your message to help you visualize as you compose it, as well as send a test message to yourself or a specific user's device. We recommend you take advantage of __both__.
 
 ## Preview
 

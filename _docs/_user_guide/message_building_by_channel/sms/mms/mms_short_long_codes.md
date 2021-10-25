@@ -31,4 +31,4 @@ For those users who got their short codes before Braze supported MMS, all existi
 
 Customers may send MMS with long codes. To do this, you must ensure your long codes are MMS-enabled. This can be done initially during set up, or later on from within your account. 
 
-Note that our MMS messages cannot be sent with an alphanumeric sender ID. Check out our documentation [here]({{site.baseurl}}/user_guide/message_building_by_channel/sms/phone_numbers/sending_phone_numbers/#alphanumeric-sender-id) to learn more about alphanumeric IDs.
+Note that our MMS messages cannot be sent with an alphanumeric sender ID. To learn more about alphanumeric IDs, check out [Alphanumeric sender ID]({{site.baseurl}}/user_guide/message_building_by_channel/sms/phone_numbers/sending_phone_numbers/#alphanumeric-sender-id).

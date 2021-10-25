@@ -10,9 +10,9 @@ tool:
   - Templates
 ---
 
-# Simple survey in-app message
+# Simple Survey in-app message
 
-Use the new **Simple Survey** In-App Message template to collect user attributes, insights, and preferences that power your campaign strategy.
+Use the new **Simple Survey** in-app message template to collect user attributes, insights, and preferences that power your campaign strategy.
 
 For example, ask users how they'd like to use your app, learn more about their personal preferences, or even ask about their satisfaction with a particular feature.
 
@@ -32,7 +32,7 @@ When creating an [in-app message][1], select **Simple Survey** for your **Messag
 
 This survey template is supported for both mobile apps and web browsers. Remember to check that your SDKs are on the [minimum versions](#supported-sdk-versions) required for this feature.
 
-### Step 1: add your survey question
+### Step 1: Add your survey question
 
 To get started building your survey, add your question to the survey **Header** field. If desired, you can add an optional **Body** message that will appear below your survey question.
 
@@ -42,7 +42,7 @@ To get started building your survey, add your question to the survey **Header** 
 These fields can include both Liquid and emojis, so get fancy! 
 {% endalert %}
 
-### Step 2: choose between single or multiple-choice {#single-multiple-choice}
+### Step 2: Choose between single or multiple-choice {#single-multiple-choice}
 
 Use the Single vs. Multiple Choice option to control whether a user can select only one choice or multiple choices. You can add up to 12 choices in a survey.
 
@@ -52,7 +52,7 @@ Use the Single vs. Multiple Choice option to control whether a user can select o
 Your **Helper text** will automatically update when you switch between **Single-choice selection** and **Multiple-choice selection** to let users know how many choices they can select. 
 {% endalert %}
 
-### Step 3: collect custom attributes {#custom-attributes}
+### Step 3: Collect custom attributes {#custom-attributes}
 
 Select **Log attributes upon submission** to collect attributes based on the user's submission. You can use this option to create new segments and retargeting campaigns. For example, in a satisfaction survey, you could send a follow-up email to all users who were not happy.
 
@@ -70,7 +70,7 @@ You can then create a segment for users with `Promotions Topic = true` to make s
 When custom attribute collection is enabled, choices that share the same custom attribute name will be combined into an array.
 {% endalert %}
 
-### Step 4: choose submission behavior
+### Step 4: Choose submission behavior
 
 Once a user submits their response, you can optionally show a confirmation page, or simply close the message.
 
@@ -86,7 +86,7 @@ If you elect to add a confirmation page, switch to the **Confirmation Page** tab
 
 If you want to guide users to another page of your app or website, change the button’s **On-click behavior**.
 
-### Step 5: stylize your message (optional) {#styling}
+### Step 5: Stylize your message (optional) {#styling}
 
 You can customize the font color and accent color of the message using the **Color Theme** picker.
 

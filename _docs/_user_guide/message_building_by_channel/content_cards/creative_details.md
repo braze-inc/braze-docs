@@ -25,11 +25,11 @@ tool: Media
 
 ---
 
-## Content card types
+## Content Card types
 
 ### Classic
 
-the classic card is great for standard messaging and notifications or even visually categorizing messages with icons. the image is optional, but it must be at a 1:1 ratio.  
+The classic card is great for standard messaging and notifications or even visually categorizing messages with icons. The image is optional, but it must be at a 1:1 ratio.  
 
 ![Classic][1]{: height="50%" width="50%"}
 
@@ -40,7 +40,6 @@ the classic card is great for standard messaging and notifications or even visua
 | Link Text | Optional. <br> 13px <br> Link to webpage or deep link to within  your app. |
 | Image | Optional. <br> Must be 1:1 ratio. <br> We recommend an image quality of 60px by 60px. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
-
 
 ### Captioned image
 
@@ -58,7 +57,7 @@ The Captioned Image card is a great way to show off and attract attention to imp
 
 ### Banner
 
-if you want fancy, the banner card is for you! this is completely custom to what you want it to be. just create your content elsewhere and upload it for a beautiful card that's all your own.
+If you want fancy, the banner card is for you! this is completely custom to what you want it to be. Just create your content elsewhere and upload it for a beautiful card that's all your own.
 
 ![Banner][3]{: height="50%" width="50%"}
 
@@ -82,7 +81,7 @@ If a user has dismissed all of their cards or you haven't pushed out any new upd
 
 ![Empty Feed][6]{: height="50%" width="50%"}
 
-### Using gifs in content cards
+### Using GIFs in Content Cards
 
 | Content Cards for Android | Content Cards for iOS | Content Cards for Web |
 | --- | --- |---|

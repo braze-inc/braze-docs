@@ -10,9 +10,9 @@ tool:
 
 ---
 
-# Reporting & analytics {#iam-reporting}
+# Reporting and analytics {#iam-reporting}
 
-## In-App Message Analytics Glossary
+## In-app message analytics glossary
 
 To see the meanings of all in-app message metrics, check the [Metrics Glossary][1].
 

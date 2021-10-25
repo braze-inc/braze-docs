@@ -10,7 +10,7 @@ channel:
 
 ---
 
-# How to upload an html email template
+# How to upload an HTML email template
 
 > This article covers creating, managing, and troubleshooting HTML email templates in the Braze dashboard.
 
@@ -28,15 +28,15 @@ This ZIP file should be under 5 MB.
 
 ## Uploading your template
 
-### Step 1: navigate to the email template editor
+### Step 1: Navigate to the email template editor
 
 Go to the __Templates & Media__ page, under the __Engagement__ section. This opens the __Email Templates__ page.
 
-### Step 2: open the uploader
+### Step 2: Open the uploader
 
 In the section **Start from a Basic HTML Template**, select **From File**.
 
-### Step 3: upload your template
+### Step 3: Upload your template
 
 Click **Upload From File** and select your template from your computer. Refer to the [Prerequisites](#upload-requirements) section to ensure your template meets the upload requirements.
 
@@ -55,7 +55,7 @@ There are several email error messages you may receive when uploading an HTML te
 |Missing Images| If there are images referenced in your HTML file, but those images are not included in the image folder of the ZIP file, you will receive a file error. Inspect your file and correct any errors (like misspellings), or add the missing images to your ZIP file and try uploading again.|
 {: .reset-td-br-1 .reset-td-br-2}
 
-### Step 4: finish and save your template
+### Step 4: Finish and save your template
 
 Be sure to save your template by clicking **Save Template** in the bottom right corner of the editor. You're now ready to use this template in any campaign or Canvas you choose.
 
@@ -63,7 +63,7 @@ Be sure to save your template by clicking **Save Template** in the bottom right 
 If you make any edits to an existing template, those changes will not be reflected in campaigns that were created using previous versions of that template.
 {% endalert %}
 
-## Using your templates in api campaigns {#api_for_upload_email_templates}
+## Using your templates in API campaigns {#api_for_upload_email_templates}
 
 To use your email for an API campaign, you need an `email_template_id`, which can be found at the bottom of any email template created in Braze.
 
@@ -75,7 +75,7 @@ You can [duplicate]({{site.baseurl}}/user_guide/engagement_tools/templates_and_m
 
 ## FAQs
 
-for answers to frequently asked questions about email templates, check out our [email and link templates faqs][10] page.
+For answers to frequently asked questions about email templates, check out our [email and link templates FAQs][10] page.
 
 
 [4]: {% image_buster /assets/img_archive/email_template_id.png %}

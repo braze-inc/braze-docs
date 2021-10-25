@@ -10,7 +10,7 @@ channel:
 
 ---
 
-# Inbox vision
+# Inbox Vision
 
 Inbox Vision allows marketers to view their emails from the perspective of various email clients and mobile devices. Access Inbox Vision from the email editor by clicking **Preview and Test**.  It also allows you to spam test from the **Spam Test** tab.
 

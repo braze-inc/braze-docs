@@ -11,7 +11,7 @@ tool:
   
 ---
 
-# Drag & drop editor overview
+# Drag & Drop Editor overview
 
 {% include video.html id="4dTrkxe8DLo" align="right" %}
 
@@ -19,12 +19,15 @@ tool:
 
 ## Create a drag & drop email
 
-### Step 1: select editing experience
+### Step 1: Select editing experience
+
 Navigate to the email wizard and select your editing experience. Two editing options will be shown:
+
 - Select the __Drag & Drop Editor__ to select templates created using the Drag & Drop Editor.
 - Select the HTML Code Editor to use the existing editors and see your existing email templates.<br><br>![dnd_editor_workflow][6]{: style="max-width:80%;"}
 
-### Step 2: build out email structure
+### Step 2: Build out email structure
+
 1. __Assemble Rows__ - Drag & drop different row configurations to design the structure of your email. New configurations must be dragged to the beginning or end of an existing section.
 2. __Add Content__ - Add desired content types to the various row components.<br><br>![Drag & Drop Email GIF][1]
 

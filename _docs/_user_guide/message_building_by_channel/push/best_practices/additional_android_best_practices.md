@@ -9,7 +9,7 @@ platform: Android
 
 ---
 
-# Additional android push best practices
+# Additional Android push best practices
 
 ## Android push priority
 
@@ -20,6 +20,7 @@ Android push notifications provide the option of dictating where notifications a
 The provided options correspond to different priorities with which the notification will be displayed if a receiving user has multiple notifications. A more in-depth explanation of Android Push Priority and the priority options can be found [here][40].
 
 ## Android push category
+
 Android push notifications provide the option to specify if your notification falls into a predefined category. The Android system UI may use this Category to make ranking or filtering decisions about where to place the notification in the user's notification tray.
 
 ![Dashboard Push Priority Location][52]
@@ -48,6 +49,7 @@ Android push notifications provide the option to specify if your notification fa
 [See Android Documentation for more info][51]
 
 ## Android push visibility
+
 Android push notifications provide an optional field to determine how a notification appears on the user's lock screen. Notifications can be set to appear on the lock screen *(Public)*, to appear with the message "Contents Hidden" *(Private)*, or to be hidden entirely *(Secret)*.
 
 Additionally, Android users can override how push notifications appear on their lock screen by changing the notification privacy setting on their device. This setting will override the Visibility from the push notification.

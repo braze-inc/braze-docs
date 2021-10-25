@@ -14,7 +14,7 @@ channel:
 
 > [Notification Channels][1] are a way to organize push notifications that were added with Android O. Starting with O, all push notifications must have a Notification Channel that indicates the type of message (e.g., "chat notifications," or "follow notifications"). End users can then control aspects of their notification (e.g., snoozing, noise/vibration settings, or opting-out, etc.) based upon individual Channels.
 
-## Transitioning to android o
+## Transitioning to Android O
 
 Notification channels can only be created in the code of your application and cannot be created programmatically in the Braze dashboard. We recommend your engineering team work with your marketers to ensure the desired notification channels are properly added to the dashboard.
 
@@ -67,8 +67,7 @@ To better understand the expected behavior for channels, please refer to the fol
 |**Company HIJ** updates to Android O but does not update to Braze Android SDK to 2.1.0 or higher| Notifications sent to users running Android O or above do not appear |
 {: .reset-td-br-1 .reset-td-br-2}
 
-
-## Adding channels to braze's dashboard
+## Adding channels to Braze's dashboard
 
 1. Open any campaign or Canvas that includes an Android push and click **Edit Campaign**.<br><br>
 2. Navigate to the Android Push message composer.<br><br>
@@ -77,7 +76,6 @@ To better understand the expected behavior for channels, please refer to the fol
 5.  Enter the name and ID of the notification channel you want to add.<br><br>![Enter Channel][8]<br><br>
 6. Repeat the two steps above for each notification channel that you'd like to add.<br><br>
 7. Press __Save__ to save your changes.
-
 
 ## Specifying your fallback channel
 
@@ -92,7 +90,7 @@ Your fallback channel is the channel that Braze will attempt to send your androi
 
 ![change_default][9]{: style="max-width:80%;"}
 
-## Adding channels to your android push messages
+## Adding channels to your Android push messages
 
 * Navigate to the Android Push composer on any campaign or Canvas
 

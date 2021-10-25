@@ -11,11 +11,12 @@ channel:
 
 ---
 
-# Creating a content card
+# Creating a Content Card
 
 You can create a Content Card using the Braze platform using campaigns and Canvases.
 
-## Content card creation in campaigns and canvases
+## Content Card creation in campaigns and Canvases
+
 {% tabs %}
 {% tab Campaign %}
 __Build Your Message__
@@ -52,7 +53,7 @@ For more in-depth details on setting up and configuring your Canvas, check out o
 {% endtab %}
 {% endtabs %}
 
-## Step 1: specify your message types
+## Step 1: Specify your message types
 
 ### Message types
 
@@ -67,7 +68,7 @@ These Content Card types are accepted by both mobile apps and web applications.
 |[Banner]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards/creative_details/#banner)|  The Banner Card allows you to get creative and command attention with space for images, gifs, and other non-text based content. |
 {: .reset-td-br-1 .reset-td-br-2}
 
-## Step 2: compose a content card
+## Step 2: Compose a Content Card
 
 The Compose tab in the Campaign Wizard (located in the step wizard in Canvas) allows you to edit all aspects of your message's content and behavior.
 
@@ -94,13 +95,13 @@ Each user is eligible to receive up to 100 non-expired and non-dismissed Content
 
 {% endalert %}
 
-## Step 3: configure additional settings
+## Step 3: Configure additional settings
 
 Add [key-value pairs][19] to your message, if needed.
 
 You can use key-value pairs to create categories for your Cards, create multiple Content Card Feeds ([Android]({{site.baseurl}}/developer_guide/platform_integration_guides/android/content_cards/multiple_feeds/), [Web]({{site.baseurl}}/developer_guide/platform_integration_guides/web/content_cards/multiple_feeds/), [iOS]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/content_cards/multiple_feeds/), and customize how Cards are sorted.
 
-## Step 4: build the remainder of your campaign or canvas.
+## Step 4: Build the remainder of your campaign or Canvas
 
 {% tabs %}
 {% tab Campaign %}
@@ -108,17 +109,20 @@ You can use key-value pairs to create categories for your Cards, create multiple
 Build the remainder of your campaign; see the sections below for further details on how to best utilize our tools to build Content Cards.
 
 #### Choose delivery schedule or trigger
+
 - Content Cards can be delivered based on a scheduled time, an action, or based on an API trigger.
 - You can also set the campaign's duration and Quiet Hours in this step.
 - Determine the Content Card's expiration. Set a specific expiration date or the days until a Card expires, up to 30 days. All variants have identical expiration dates.
 - Frequency Capping does not apply to Content Cards.
 
 #### Choose target segment
+
 - Next, you need to choose the target segment from the dropdown menu.
 - You'll automatically be given a snapshot of what that approximate segment population looks like right now.
 - Keep in mind that exact segment membership is always calculated just before the message is sent.
 
 #### Choose conversion events
+
 - Braze allows you to track how often users perform specific actions (i.e., conversion events) after receiving a campaign.
 - You have the option of allowing up to a 30-day window during which a conversion will be counted if the user takes the specified action.
 
@@ -135,12 +139,15 @@ Once a Content Card is launched, it cannot be edited. It can only be stopped fro
 Complete the remaining sections of your Canvas step; see the sections below for further details on how to best utilize our tools to build Content Cards. After you have created and configured your step, check out our [Canvas Documentation]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/create_a_canvas/#step-3-build-your-canvas) for further details on how build out the rest of your Canvas, implement multivariate testing and Intelligent selection, and more.
 
 #### Choose step schedule
+
 - Content Cards can be delivered based on a scheduled time or Action in Canvas
 
 #### Choose audience
+
 - Next, you need to adjust Audience Options for this step. Here, you can further refine the recipients of this step by specifying segments and adding additional filters. Audience options will be checked after the delay, at the time messages are sent.
 
 #### Choose advancement behavior
+
 - Lastly, select your Advancement behavior for this step. Here you can choose to either "Advance when Message Sent" that advances your users to the next steps when the Content Card is sent, or "Immediately Advance Audience" that advances users when either the Content Card is sent, or the Content Card was not sent because it got aborted. 
 - To read more about Canvas Advancement Behavior, check out of [Canvas Documentation]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/advancement/?redirected=true).
 
@@ -152,6 +159,7 @@ After you've finished building out your Canvas Step, review its details and [tes
 ## Things to know
 
 ### Capabilities not yet supported
+
 The following capabilities are not yet supported for Content Cards:
 - Vouchers
 - Frequency Capping

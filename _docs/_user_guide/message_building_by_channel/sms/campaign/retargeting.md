@@ -21,7 +21,8 @@ To read more about custom keywords and how to set up two-way messaging to take a
 
 ## Retargeting options
 
-### Filter users by sms
+### Filter users by SMS
+
 Users can be filtered by when they last received an SMS or if they have received an SMS from a specific SMS campaign. Filters can be set in the Target Users step of the campaign builder. 
 
 __Filter by Last Received SMS__<br>
@@ -31,11 +32,12 @@ __Filter by Received Messages from SMS Campaign__<br>
 Filters users who have received a message from a specific SMS campaign. With this filter, you also have the option to filter off those that have not received messages from an SMS campaign. <br>
 ![Filter 2][1]
 
-### Trigger messages as users receive sms
+### Trigger messages as users receive SMS
+
 To trigger messages as users receive SMS messages from a specific campaign, select __Interact with Campaign__ as the trigger action. Next, select __Receive SMS__ and the SMS campaign you would like to use. <br><br>
 ![Trigger][3]
 
-## Keyword category specific retargeting
+## Keyword category-specific retargeting
 
 In addition to the three default keyword categories (Opt-in, Opt-out, and Help), you are also able to create up to 10 of your own keyword categories, allowing you to identify arbitrary keywords and responses. These categories can be used for filtering and retargeting. To read more about SMS keyword categories and how to set them up, visit our documentation [here]({{site.baseurl}}/user_guide/message_building_by_channel/sms/campaign/retargeting/). 
 

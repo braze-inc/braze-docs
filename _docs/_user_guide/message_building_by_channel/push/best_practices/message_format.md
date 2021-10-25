@@ -105,8 +105,7 @@ Large image notifications display best when using an image of at least 600x300 p
 {% endtab %}
 {% endtabs %}
 
-
-## Windows universal
+## Windows Universal
 
 {% tabs local %}
 {% tab General %}
@@ -125,7 +124,7 @@ Large image notifications display best when using an image of at least 600x300 p
 {% endtab %}
 {% endtabs %}
 
-## Windows phone 8
+## Windows Phone 8
 
 {% tabs local %}
 {% tab General %}

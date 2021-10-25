@@ -9,6 +9,7 @@ channel:
   - email
 
 ---
+
 # Link templates
 
 > This article covers how to create link templates for use in email messaging.
@@ -37,7 +38,7 @@ There are two types of link templates you can create:
 - [Link template that inserts before a URL](#prepend-link-template)
 - [Link template that inserts after a URL](#append-link-template)
 
-### Prepend: Create a Link Template That Inserts Before a URL {#prepend-link-template}
+### Prepend: Create a link template that inserts before a URL {#prepend-link-template}
 
 If you want to add a string or URL before the links in your email message, create a new link template and set the **Template Position** to **Before URL**.  This will allow you to enter a string that will always get prepended to your URL. 
 
@@ -45,7 +46,7 @@ A preview section is provided to give you an example of the insertion process.
 
 ![Pre Append]({% image_buster /assets/img_archive/link_template_preappend.png %})
 
-### Append: Create a Link Template that Inserts After a URL {#append-link-template}
+### Append: Create a link template that inserts after a URL {#append-link-template}
 
 If you want to add query parameters after a URL in your email message, create a new link template and set the **Template Position** to **After URL**.  This will allow you to enter query parameters (`value=something`) to the end of each URL.  
 
@@ -71,7 +72,7 @@ Archiving templates is not currently available for [Link Templates]({{site.baseu
 
 ## FAQs
 
-for answers to frequently asked questions about link templates, check out our [email and link templates faqs][10] page.
+For answers to frequently asked questions about link templates, check out our [email and link templates FAQs][10] page.
 
 [1]:{% image_buster /assets/img_archive/link_template_messagecomposer2.png %}
 [2]:{% image_buster /assets/img_archive/link_template_postappend.png %}

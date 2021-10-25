@@ -9,7 +9,7 @@ tool: Media
 
 ---
 
-# Drag & drop editor blocks
+# Drag & Drop Editor blocks
 
 Editor blocks are the various blocks available in the Drag & Drop Editor under the 'Content' section.  This section includes a series of tiles that represent the different kinds of content you can use in your message. More will become available in the future.
 
@@ -29,6 +29,7 @@ To use them, drag one inside a column. It will auto-adjust to the column width. 
 {: .reset-td-br-1 .reset-td-br-2} 
 
 ## Block type properties
+
 Details for each block type are provided below
 
 ### Title
@@ -98,7 +99,6 @@ Automatic image resizing picks the best size for the image based on a combinatio
 |`html editor`| Enter the raw HTML |
 {: .reset-td-br-1 .reset-td-br-2}
 
-
 ### Menu
 
 | properties | description |
@@ -117,7 +117,7 @@ Automatic image resizing picks the best size for the image based on a combinatio
 |`All sides`| If 'item padding' is disabled, set a consistent padding number|
 {: .reset-td-br-1 .reset-td-br-2}
 
-### Add liquid personalization
+### Add Liquid personalization
 
 | Name | Description |
 |---|---|

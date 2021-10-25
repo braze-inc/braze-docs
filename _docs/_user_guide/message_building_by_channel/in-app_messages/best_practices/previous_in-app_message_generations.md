@@ -17,8 +17,7 @@ This section reviews previous information around our in-app messages. To see the
 
 ## Universal
 
-this will review previous information around our in-app messages. to see the most up-to date information on our current in-app message generation, see our [in-app message overview documentation]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/).
-
+This will review previous information around our in-app messages. To see the most up-to date information on our current in-app message generation, see our [in-app message overview documentation]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/).
 
 {% details Full-Screen %}
 These are the most engaging, but also the most intrusive since they cover your user’s entire screen. They are great for displaying large, rich images, and can be useful in conveying very important information, such as crucial new features and expiring promotions. Since they are more disruptive of the user experience, use these sparingly for top priority content.
@@ -69,7 +68,7 @@ __Customizable Features__
 
 ## Web
 
-this will review previous information around more customized in-app messages. to see the most up-to date information on our current in-app message generation, see our [customization documentation]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/customize/).
+This will review previous information around more customized in-app messages. To see the most up-to date information on our current in-app message generation, see our [customization documentation]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/customize/).
 
 {% details Email Capture Message %}
 Email capture messages allow you to easily prompt users of your site to submit their email address, after which it will be available within the Braze system for use in all your messaging campaigns.
@@ -120,12 +119,11 @@ __Customizable Features__
 
 <br>
 
-# Specs
+## Specifications
 
-this will review previous information around our in-app message creative specifications. to see the most up-to date information on our current in-app message generation, see our [creative specs documentation]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/creative_details/).
+This will review previous information around our in-app message creative specifications. to see the most up-to date information on our current in-app message generation, see our [creative specs documentation]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/creative_details/).
 
-
-## Character and image limits:
+### Character and image limits
 
 | Type                               | Aspect Ratio | Recommended Image Size | Max Image Size |   File Types  | Max Character Count |
 |------------------------------------|:------------:|:----------------------:|:--------------:|:-------------:|:-------------------:|
@@ -138,8 +136,7 @@ this will review previous information around our in-app message creative specifi
 | Modal (With Text)                  |     29:10    |          500KB         |       5MB      | PNG, JPG, GIF |         140         |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
 
-
-## Keeping in-app message file sizes small
+### Keeping in-app message file sizes small
 
 Braze recommends you keep your images, and HTML assets zips as small as possible for several reasons:
 
@@ -152,10 +149,12 @@ The following strategies are helpful for keeping file sizes down:
 - Ensure no extraneous or duplicative CSS or JS are included in your HTML asset zips.
 - Use [ImageOptim][25] on all images to compress images to their minimum possible size with no reduction in quality.
 
-### iPhone 5 specs:
+### iPhone 5 specs
+
 ![iPhone 5 Specs][18]
 
-### iPhone 6 specs:
+### iPhone 6 specs
+
 ![iPhone 6 Specs][19]
 
 

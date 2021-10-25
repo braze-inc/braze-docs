@@ -9,7 +9,7 @@ channel: in-app messages
 
 ---
 
-# Prep guide
+# In-app message prep guide
 
 Before you start building your in-app message, you should consider a few of the following topics so building your message is quick and easy.
 
@@ -34,7 +34,6 @@ Before you start building your in-app message, you should consider a few of the 
 - Is your copy concise and memorable, as in-app messages only appear for a set amount of time?
 - Will you be using [Liquid]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/using_liquid/) to build more custom copy?
 - Is your image or other media within the [Safe Zone]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/creative_details/)?
-
 
 ## Conversion considerations
 

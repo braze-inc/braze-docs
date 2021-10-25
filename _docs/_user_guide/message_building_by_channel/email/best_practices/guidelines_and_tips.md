@@ -8,7 +8,7 @@ channel: email
 
 ---
 
-# Email guidelines & tips
+# Email guidelines and tips
 
 > This article covers technical, styling, and content-specific tips and tricks for various email use cases and topics.
 
@@ -16,12 +16,12 @@ channel: email
 
 ### General
 
-- if you would like one email template for both mobile and desktop, keep the width below 500 pixels.
+- If you would like one email template for both mobile and desktop, keep the width below 500 pixels.
 - Use inline style sheets to format your email as CSS or it will not be recognized by Email Service Providers (ESPs).
 - Images uploaded to the email template must be less than 5MB and either PNG, JPG, GIF.
 - Always use alt-tags for images in case they don't appear in the email (blocked, fail to load, etc.)
 - Don't set heights and widths for images as this will cause unnecessary white space in a degraded email.
-- Div tags should not be used as most email clients do not support their use. Instead, use nested tables.
+- `div` tags should not be used as most email clients do not support their use. Instead, use nested tables.
 - Don’t use JavaScript because it does not work with any ESP.
 - Braze improves load times by using a global CDN to host all email images.
 
@@ -51,7 +51,7 @@ If an email is bounced, Braze marks the email as invalid and the subscription st
 - ,
 {% enddetails %}
 
-### Disallowed html tags
+### Disallowed HTML tags
 
 The following HTML tags are disallowed as they may potentially let malicious code run in the browser. As a result, end-user mail clients often filter emails that contain them.
 - `<!doctype>`
@@ -337,7 +337,7 @@ Smaller, high quality images will load faster, so it’s recommended to use the 
 
 A high percentage of emails are read on mobile devices. Utilizing deep linking is a great practice for engaging with these mobile email recipients. With push notifications and in-app messages, a deep link takes the user directly to a specified destination within an app. Email, on the other hand, gives no way of knowing whether recipients have the app installed. As such, providing a deep link to the app could link to an error message for these recipients who do not have the app.
 
-## Content-Specific Tips & Tricks
+## Content-specific tips and tricks
 
 ### Onboarding
 
@@ -362,15 +362,15 @@ A high percentage of emails are read on mobile devices. Utilizing deep linking i
 
 ### Transactional
 
-- if the user just made an in-app purchase, you should thank them and provide any tips that can help them make the most of that purchase.
-- If the user just made an out-of-app purchase, provide them with shipping confirmation and a way to ask questions about their shipment.
+- If the user recently made an in-app purchase, you should thank them and provide any tips that can help them make the most of that purchase.
+- If the user recently made an out-of-app purchase, provide them with shipping confirmation and a way to ask questions about their shipment.
 - Asking users to give feedback after a purchase is a good way to solicit input without being pushy. Because you've just provided users with a service, they may be more likely to share their thoughts. Here's an example of an email from Restaurant.com:
 
 ![Restaurant email][28]{: style="max-width:80%;"}
 
 ### Retention
 
-- keep your tone friendly.
+- Keep your tone friendly.
 - This may be your last chance to win users back, so be sure to include content that showcases your app's value.
 - If the user has been relatively inactive since installing, offer helpful hints for getting started.
 - For social apps, keep users updated on their friends' activities.
@@ -381,7 +381,7 @@ A high percentage of emails are read on mobile devices. Utilizing deep linking i
 
 ### Social
 
-- email can help you build up a social fanbase by directing recipients toward your facebook, twitter, instagram, pinterest, youtube channel, etc.
+- Email can help you build up a social fanbase by directing recipients toward your Facebook, Twitter, Instagram, Pinterest, YouTube channel, etc.
 - Include links to your social media accounts within the email to make it easy for users to connect.
 - Make it fun! Try running a photo contest, promoting a hashtag, or having a giveaway. Below is an email from Hailo that offers a reward for participating in photo challenges:
 
@@ -389,7 +389,7 @@ A high percentage of emails are read on mobile devices. Utilizing deep linking i
 
 ### Updates
 
-- send updates of new or improved features to all of your users.
+- Send updates of new or improved features to all of your users.
 - Updating users on new features is also a re-engagement tool because it reminds lapsing users of your app's value.
 - If your feature requires an explanation or demo, include a link in the message. Here's an example by Allrecipes.com:
 

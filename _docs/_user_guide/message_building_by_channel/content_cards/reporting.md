@@ -10,11 +10,11 @@ tool:
   
 ---
 
-# Reporting & analytics
+# Reporting and analytics
 
 > This reference article provides an overview of the different Content Card reporting metrics and analytics options provided in the Braze dashboard.
 
-## Content card metrics
+## Content Card metrics
 
 - **Recipients**: The number of users who have received a Content Card that received at least one impression.
 - **Impressions**: The number of times a Content Card was visible and on-screen.

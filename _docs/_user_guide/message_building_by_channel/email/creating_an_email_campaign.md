@@ -18,14 +18,14 @@ Email messages are great for delivering content to your users on their terms. Th
 
 To see examples of email campaigns, check out our [Case Studies][9].
 
-## Step 1: create a new campaign
+## Step 1: Create a new campaign
 
 On the **Campaigns** page, click **Create Campaign** and select **Email** as your messaging channel.
 ![New Campaign Page][19]
 
-## Step 2: select your editing experience {#step-2-choose-your-template-and-compose-your-email}
+## Step 2: Select your editing experience {#step-2-choose-your-template-and-compose-your-email}
 
-From the campaign wizard, name your email and provide an optional description. You can also assign [tags][20] to keep track of engagement tactics. 
+From the campaign wizard, name your email and provide an optional description. You can also assign [tags][20] to keep track of engagement tactics.
 
 Braze offers two editing experiences when creating an email campaign, our [Drag & Drop editor]({{site.baseurl}}/dnd/) or our standard HTML editor. Click on the appropriate tile to select which editing experience you'd prefer. Once selected, you must also select an existing [HTML][10] or [Drag & Drop][10] email template, [upload a template from a file][18] (HTML editor only), or use a blank template.
 
@@ -35,7 +35,7 @@ Once you selected your template, you will see an overview of your email where yo
 
 ![newemailoverview][14]
 
-### Step 2a: add email headers
+### Step 2a: Add email headers
 
 Email headers contain information about the email being sent. These key-value pairs typically have information about the sender, recipient, authentication protocols, and contain email routing information. Braze automatically adds the necessary header information required by the RFC for emails to be delivered to your inbox provider properly.
 
@@ -50,7 +50,7 @@ However, Braze does allow you the flexibility to add additional email headers as
 | DKIM-Signature | received | x-sg-id |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
 
-### Step 2b: preview and test your message
+### Step 2b: Preview and test your message
 
 After you finish composing your perfect email, you need to test it before sending it out.
 
@@ -72,7 +72,7 @@ Email clients that support preview text always pull in enough characters to fill
 ```
 {% endalert %}
 
-### Step 2c: check for email errors
+### Step 2c: Check for email errors
 
 The editor will call out any problems it catches with your message before you send it. Here's a list of errors that are accounted for in our editor:
 
@@ -85,13 +85,13 @@ The editor will call out any problems it catches with your message before you se
 - Emails with no unsubscribe link.
 - The email you are sending from is not whitelisted, thus sends will be highly limited to ensure deliverability.
 
-
-## Step 3: schedule your messaging campaign
+## Step 3: Schedule your messaging campaign
 
 You can schedule your campaigns against three types of delivery:
-- Scheduled (sending your campaign at a designated time),
-- Action-Based (sending when your users perform specified actions), and
-- API-Triggered (sending according to an API request).
+
+- Scheduled (sending your campaign at a designated time)
+- Action-Based (sending when your users perform specified actions)
+- API-Triggered (sending according to an API request)
 
 {% tabs %}
 {% tab Scheduled Delivery %}
@@ -122,7 +122,7 @@ Check out our [API-Triggered endpoints found in the API Guide]({{site.baseurl}}/
 {% endtab %}
 {% endtabs %}
 
-## Step 4: choose conversion events
+## Step 4: Choose conversion events
 
 Braze allows you to track how often users perform specific actions after receiving a campaign, known as a [conversion event][22]. You can specify any of the following actions as a conversion event:
 
@@ -134,7 +134,7 @@ Braze allows you to track how often users perform specific actions after receivi
 
 You have the option of allowing up to a 30-day window during which a conversion will be counted if the user takes the specified action. While Braze automatically tracks opens and clicks for your campaign, you may wish to set the conversion event to be when a user opens or clicks on an email address to take advantage of Braze's [Intelligent Selection][13] feature.
 
-## Step 5: choose your target segment
+## Step 5: Choose your target segment
 
 Next, you need to choose the target segment from the dropdown menu. You'll automatically be given a snapshot of what that segment population looks like right now, including how many users within that segment are reachable via email. Keep in mind that exact segment membership is always calculated just before the message is sent.
 
@@ -142,7 +142,7 @@ Next, you need to choose the target segment from the dropdown menu. You'll autom
 
 Optionally, you can also choose to limit delivery to a specified number of users within the segment, or allow users to receive the same message twice upon a recurrence of the campaign.
 
-## Step 6: review and deploy
+## Step 6: Review and deploy
 
 The final page will give you a summary of the campaign you've just designed. Confirm all the relevant details and click **Launch Campaign** to enable it for sending.
 
@@ -178,11 +178,11 @@ For detailed definitions of the metrics on this page, check out our [Email Analy
 Braze will de-duplicate sends by email address. However, opens are not de-duplicated to prevent the illusion that an email opened by a user with multiple [User Profiles]({{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/user_profile_lifecycle/) under a single email address would only be counted towards a single User Profile.
 {% endalert %}
 
-### Retention report
+### Retention Report
 
 On the **Retention Report** page, you can run various reports to measure user retention for users who have performed a selected retention event in a specific campaign. [Learn more]({{site.baseurl}}/user_guide/engagement_tools/campaigns/testing_and_more/retention_reports/).
 
-### Funnel report
+### Funnel Report
 
 On the **Funnel Report** page, you can analyze the journeys your customers take after receiving your campaign. If your campaign uses a control group or multiple variants, you will be able to understand how the different variants have impacted the conversion funnel at a more granular level, and optimize based on this data. [Learn more]({{site.baseurl}}/user_guide/engagement_tools/campaigns/testing_and_more/campaign_funnel_report/).
 

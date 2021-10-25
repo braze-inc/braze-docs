@@ -7,6 +7,7 @@ channel:
   - email
 
 ---
+
 # Managing user subscriptions
 
 ## Global subscription states {#subscription-states}
@@ -74,7 +75,7 @@ From the **Campaign Analytics** page for your campaign, scroll down to the **Ema
 
 ![Sub Group Performance][30]
 
-### Email preference center
+### Email Preference Center
 
 The Email Preference Center is an easy way to manage which users receive certain groups of newsletters. Each subscription group you create is added to the Preference Center list. Click on the name of the Preference Center to see an interactive preview.
 
@@ -92,7 +93,7 @@ The Preference Center has a checkbox that will allow your users to unsubscribe f
 
 The Preference Center is intended to be used strictly within the email channel itself. The Preference Center links are dynamic, based on each user, and cannot be hosted externally. You may, however, create and host your own custom Preference Center and use the [Subscription Group REST APIs][25] to keep data in sync with Braze. Refer to the next section for more.
 
-#### Customize your preference center
+#### Customize your Preference Center
 
 You can create a fully custom HTML Preference Center, which you will host, then sync to Braze using our [APIs][28]. Reach out to your Braze representative for more information.
 
@@ -102,7 +103,7 @@ At this time, you can only have one Preference Center, which will list all of yo
 
 ##### Logo
 
-you can edit the logo and header of your preference center. click the gear, then click __edit__ from the menu that appears.
+You can edit the logo and header of your preference center. Click the gear, then click __edit__ from the menu that appears.
 
 ### Changing email subscriptions {#changing-email-subscriptions}
 

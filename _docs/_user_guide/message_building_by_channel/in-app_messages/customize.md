@@ -10,7 +10,7 @@ channel:
 
 # Customization
 
-in addition to the out-of-the-box [in-app message templates][1], you can also create customized message templates with the following features:
+In addition to the out-of-the-box [in-app message templates][1], you can also create customized message templates with the following features:
 
 - [Custom HTML templates](#custom-html-messages) - create a customized template with HTML, JavaScript, and CSS.
 - [Modal with custom CSS (web only)](#web-modal-css) - add custom CSS to standard templates for more flexible styling options.
@@ -41,7 +41,6 @@ Check out our [GitHub repository][2] that contains detailed instructions on how 
 To enable HTML in-app messages in the Web SDK, your SDK integration must supply the `allowUserSuppliedJavascript` initialization option to Braze: for example `appboy.initialize('YOUR-API_KEY', {allowUserSuppliedJavascript: true})`. This is for security reasons since HTML in-app messages can execute JavaScript, so we require a site maintainer to enable them.
 {% endalert %}
 
-
 ### JavaScript bridge {#javascript-bridge}
 
 HTML in-app messages for Web, Android, and iOS support a JavaScript "bridge" interface to the Braze Web SDK, allowing you to trigger custom Braze actions when users click on elements with links or otherwise engage with your content. These methods exist with the global `appboyBridge` variable.
@@ -70,6 +69,7 @@ window.addEventListener("ab.BridgeReady", function(){
 }, false);
 </script>
 ```
+
 #### appboyBridge methods
 
 The following JavaScript methods are supported within Braze's HTML in-app messages:
@@ -90,7 +90,7 @@ The following JavaScript methods are supported within Braze's HTML in-app messag
 
 {% include archive/appboyBridge.md %}
 
-### Link-Based Actions
+### Link-based actions
 
 In addition to custom JavaScript, Braze SDKs can also send analytics data with these convenient URL shortcuts. Note that these query parameters and URL schemes are all case sensitive.
 
@@ -142,7 +142,7 @@ Additional query parameters will be passed as property key-value pairs.
 
 `appboy://customEvent?name=eventName&property1=value1&property2=value2` would log an event called `eventName` with the properties `property1`=`value1` and `property2`=`value2`.
 
-#### News feed (mobile only)
+#### News Feed (mobile only)
 
 For mobile apps, you can open the News Feed by setting a link's URL to `appboy://feed`.
 
@@ -154,7 +154,7 @@ To close an in-app message, you can set a link's URL to `appboy://close`.
 
 For example, `<a href="appboy://close">Close</a>` will close the in-app message.
 
-## Modal with css (web only) {#web-modal-css}
+## Modal with CSS (web only) {#web-modal-css}
 
 If you choose to use a web-only Web Modal with CSS message, you can [apply your own template](#css-template) or write your own CSS in the provided space. This space is already pre-filled with the CSS shown in your message preview, but feel free to adjust it slightly to meet your needs.
 
@@ -253,7 +253,7 @@ Name and tag your CSS Template, then choose whether or not it will be your defau
 
 As you can see, you can edit everything from the background color to font size and weight, and so much more.
 
-#### Managing css templates
+#### Managing CSS templates
 
 You can also [duplicate][6] and [archive][7] templates! Learn more about creating and managing templates and creative content in [Templates & Media][8].
 

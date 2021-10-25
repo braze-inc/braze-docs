@@ -14,7 +14,7 @@ channel:
 Are you currently a non-native SMS client? If so, please visit the [non-native SMS documentation](/docs/user_guide/message_building_by_channel/sms/non_native/) for your corresponding keyword handling article.
 {% endalert %}
 
-## Two-Way Messaging (Custom Keyword Responses)
+## Two-way messaging (custom keyword responses)
 
 Two-way messaging allows you to send messages and process the responses to those messages. It requires end-users to send a keyword to Braze, to which that user will receive an automatic reply. Applied correctly, two-way messaging can be a simple, immediate, and dynamic solution to customer marketing, saving time and resources along the way.
 
@@ -24,7 +24,9 @@ SMS with Braze gives you the option to create keyword triggers, custom responses
 
 {% tabs %}
 {% tab Add Keyword Triggers %}
+
 #### Add keyword triggers
+
 In addition to the default opt-in and opt-out keywords listed above, you may also define your own keywords to trigger Opt-In, Opt-Out, and Help responses.
 
 ![Home]({% image_buster /assets/img/sms/keyword_edit2.png %}){: style="float:right;max-width:40%;margin-left:10px;"}
@@ -43,7 +45,9 @@ Interested in seeing how these keywords can be used in your campaigns and Canvas
 {% endtab %}
 
 {% tab Manage Responses %}
+
 #### Manage responses
+
 You are able to manage your own responses that get sent to users after they text in a keyword to a specific keyword category.
 
 ![Home]({% image_buster /assets/img/sms/keyword_edit2.png %}){: style="float:right;max-width:40%;margin-left:10px;"}
@@ -60,7 +64,7 @@ You are able to manage your own responses that get sent to users after they text
 {% endtab %}
 {% endtabs %}
 
-## Multi-Language Support
+## Multi-language support
 
 When sending to certain countries, a sender may be required to support inbound keywords and outbound replies with a local language. To support this, Braze allows you to create a language-specific keyword setting. 
 
@@ -80,6 +84,7 @@ These custom keywords operate in an "always-on" capacity, meaning that any user 
 ![picture][12]
 
 ### Create a custom category
+
 ![picture][13]{: style="float:right;max-width:40%;margin-left:10px;"}
 To create a custom keyword category, edit the appropriate subscription group, and click "Add Custom Keyword Category". Here, you will be able to provide a keyword category name and define which keywords a user can text in to receive the reply message.
 
@@ -87,7 +92,7 @@ Once created, this keyword category will be available to [filter and trigger]({{
 
 Keywords created in custom keyword categories adhere to all of the rules and validations stated above for the creation of new keywords. 
 
-### Lifecycle specific keywords
+### Lifecycle-specific keywords
 
 If you have a use case where you would like to limit when a customer can send a specific keyword during their lifecycle (e.g., during their first initial onboarding) to receive a response, you can use the trigger "Sent inbound SMS to subscription group within keyword category OTHER" in your campaign/Canvas and define some ad-hoc keywords that your users can send in at a point in time. This trigger supports filtering on the specific inbound message using is/is not comparisons of the message, as well as matches/does not match regex rules to validate the user's input.
 

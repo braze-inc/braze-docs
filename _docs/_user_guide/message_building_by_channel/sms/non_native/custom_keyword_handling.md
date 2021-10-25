@@ -9,11 +9,11 @@ channel:
 
 ---
 
-# Two-Way Messaging (Custom Keyword Responses)
+# Two-way messaging (custom keyword responses)
 
 Two-way messaging uses short codes and keywords to deliver text messages to mobile users. It requires end users to send a keyword to Braze to which that user will receive an automatic reply. Applied correctly, two-way messaging can be a simple, immediate, and dynamic solution to customer marketing, saving time and resources along the way. 
 
-## Two way messaging speeds
+## Two-way messaging speeds
 
 Two-way messaging leverages custom events to make this seemingly smooth customer client exchange possible. Due to the nature of two-way messaging, you may find a slight increase in response time. Below are the implications of including two-way messaging:
 

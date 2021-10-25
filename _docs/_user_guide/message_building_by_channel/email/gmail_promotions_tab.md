@@ -8,15 +8,11 @@ channel:
 
 ---
 
-# Gmail promotion tool
+# Gmail Promotion tool
 
-Gmail is updating [the mobile Promotions tab][1] to allow marketers to send more information via annotations in a 'card' rather than just the subject line or pre-header information. Braze has built a tool to help you build the card from our product.
+Gmail has updated [the mobile Promotions tab][1] to allow marketers to send more information via annotations in a 'card' rather than just the subject line or pre-header information. Braze has built a tool to help you build the card from our product.
 
-{% alert tip %}
-Currently, this Gmail feature is only available in their app, but Gmail is working on making it available on the desktop, as well.  
-{% endalert %}
-
-## Building the card with braze
+## Building the card with Braze
 
 Building the card in Braze is easy!
 
@@ -33,7 +29,6 @@ After you've finished filling out the fields, you'll see a completed script at t
 The Promotions script will only appear if your email lands in the Gmail _Promotions Tab_. Currently, Gmail uses algorithms to determine where your email will land. However, if a user ever marks your email as a _promotion_, Gmail's algorithm would be ignored, and your email will automatically land in the _Promotions Tab_ moving forward.
 
 {% endalert %}
-
 
 ### Customize your card
 

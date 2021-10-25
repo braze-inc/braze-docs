@@ -9,7 +9,6 @@ channel:
   
 ---
 
-
 # Short and long codes
 
 Short and long codes are the phone number from which you send messages to your users or customers. They can be 5 to 6-digit short codes, or 10-digit long codes. Each type of code offers specific benefits and all factors should be considered before choosing whether you want a short code, what type of short code you might want, in addition to the long code you will already be assigned.
@@ -37,7 +36,9 @@ A short code is a memorable 5-6 digit sequence that allows senders to send messa
 
 {% endtab %}
 {% tab Long Codes %}
+
 #### Long codes
+
 A long code is a standard phone number used to send and receive voice calls and SMS messages. Phone numbers are typically called “long codes” (10-digit numbers in many countries) when comparing them with SMS short codes (5-6 digit numbers).
 
 | Pros |
@@ -52,6 +53,7 @@ A long code is a standard phone number used to send and receive voice calls and 
 
 {% endtab %}
 {% tab Vanity Short Code %}
+
 #### Vanity short codes
 
 A vanity short code is a 5-6 digit phone number that is specifically selected by a brand. Vanity short codes are branded and easier for consumers to remember, though are typically more expensive. For example:
@@ -71,7 +73,8 @@ A vanity short code is a 5-6 digit phone number that is specifically selected by
 
 {% endtab %}
 {% tab Alphanumeric Sender ID %}
-#### Alphanumeric sender id
+
+#### Alphanumeric sender ID
 
 ![picture]({% image_buster /assets/img/sms/alphanumericsenderid.jpg %}){: style="float:right;max-width:30%;margin-left:15px;border: 0"}
 
@@ -87,7 +90,8 @@ Alphanumeric Sender IDs allow you to set your company name or brand as the Sende
 For more information on Alphanumeric Sender ID, please reach out to your Customer Success Manager. 
 {% endtab %}
 {% tab Toll-Free Number %}
-#### SMS enabled toll-free number
+
+#### SMS-enabled toll-free number
 
 A toll-free telephone number, or a freephone number, is a telephone number that is billed for all arriving calls instead of incurring charges at the originating telephone subscriber. Toll-free numbers in the US and Canada are SMS-enabled, where subscribers are charged for incoming and outgoing texts.
 
@@ -106,7 +110,7 @@ Besides these differences, know that a brand will usually have one short code, b
 Wondering what shared short codes are all about? To learn more about why we recommend straying away from shared short codes, visit the topic in our SMS FAQ [here]({{site.baseurl}}/user_guide/message_building_by_channel/sms/faqs/). 
 {% endalert %}
 
-## How do i get a short code?
+## How do I get a short code?
 
 Going through the short code application process can be a long process. However, it can be a worthwhile one! If you'd like a short code, reach out to your onboarding manager or other Braze representative and let them know. After you do, they'll apply for you - they'll ask for some basic information that will help you qualify. Then, all there is to do is wait! Short codes can take up to 12 weeks to receive approval to start using your short code.
 

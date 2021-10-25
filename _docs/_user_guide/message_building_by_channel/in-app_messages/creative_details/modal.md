@@ -9,13 +9,12 @@ tool:
 description: "This reference article covers the message and design requirements of modal in-app messages."
 
 ---
+
 # Modal in-app messages
 
 Modals appear in the center of the device's screen with a screen overlay that helps it stand out from your app in the background. These are perfect for not-so-subtly suggesting that your user take advantage of a sale or giveaway.
 
-
 ![Modal Specs][1a]{: style="max-width: 801px; border: none;"}
-
 
 ## Image and copy behavior
 
@@ -25,7 +24,7 @@ Modal in-app messages are designed to fit the device at the best and most fillin
 - We only accept `PNG`, `JPG`, and `GIF` file types.
 - We recommend that your images be 500KB.
 
-{% alert tip %}Create assets with confidence! Our in-app message image templates and safe zone overlays are designed to play nicely with devices of all sizes. [Download Design Templates]({% image_buster /assets/download_file/Braze-In-App-Message-Design-Templates.zip %}) {% endalert %}
+{% alert tip %} Create assets with confidence! Our in-app message image templates and safe zone overlays are designed to play nicely with devices of all sizes. [Download Design Templates ZIP]({% image_buster /assets/download_file/Braze-In-App-Message-Design-Templates.zip %}) {% endalert %}
 
 | Layout | Asset Size | Notes |
 |--- | --- | ------ |
@@ -35,7 +34,7 @@ Modal in-app messages are designed to fit the device at the best and most fillin
 
 You should __always__ [preview and test your messages]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/testing/) on a variety of devices to ensure that the most important areas of your image and message appear as expected.
 
-### Font awesome
+### Font Awesome
 
 Braze supports using [Font Awesome v4.3.0](https://fontawesome.com/v4.7.0/cheatsheet/) for modal in-app message icons.
 

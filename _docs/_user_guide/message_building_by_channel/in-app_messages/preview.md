@@ -8,7 +8,7 @@ channel:
 
 ---
 
-# In-App Messages HTML Preview
+# In-app messages HTML Preview
 
 Learn about the new Preview features for custom HTML In-App Messages.
 
@@ -31,7 +31,7 @@ We'll ensure that any [`appboyBridge`]({{site.baseurl}}/user_guide/message_build
 {% endalert %}
 
 
-### Cross-Channel HTML Messages
+### Cross-channel HTML messages
 
 This new HTML message type now lets you create one message that can be sent to both mobile and web!
 
@@ -92,7 +92,7 @@ You can also track new custom button names - up to 100 unique names per campaign
 1. The most notable incompatible change with this new message type is the SDK requirements. Users whose App SDK does not meet the minimum [SDK version requirements](#supported-sdk-versions) will not be shown the message.
 <br>
 
-2. Zip files are no longer used to manage a message's assets. Instead, you should use our new [Asset Uploader](#upload-assets) and paste absolute asset URLs directly into your HTML - just like you would for an email campaign. See the [Migration Steps](#migration-guide) for more information on transitioning away from zip files.
+2. ZIP files are no longer used to manage a message's assets. Instead, you should use our new [Asset Uploader](#upload-assets) and paste absolute asset URLs directly into your HTML - just like you would for an email campaign. See the [Migration Steps](#migration-guide) for more information on transitioning away from zip files.
 <br>
 
 3. The `appboy://close` deeplink which was previously supported on mobile apps has been removed in favor of the Javascript, `appboyBridge.closeMessage()`. This allows cross-platform HTML since the web does not support deep links.
@@ -118,7 +118,6 @@ These new features require upgrading to the following Braze SDK version:
 
 {% alert warning %}
 Because this message type can only be received by certain newer SDK versions, users that are on unsupported SDK versions will not receive the message. 
-
 
 Consider adopting this new message type once a significant portion of your user base is reachable, or target only those users whose app version is _above_ the requirements. [Learn More]({{ site.baseurl }}/user_guide/engagement_tools/campaigns/ideas_and_strategies/new_features/#filtering-by-most-recent-app-versions)
 {% endalert %}
@@ -156,13 +155,13 @@ Then, paste the copied asset URL into your HTML as you normally would when refer
 You can press `CTRL+F` or `CMD+F` within the HTML Editor to search within your code!
 {% endalert %}
 
-### Migrating old "zip file" campaigns {#migration-guide}
+### Migrating old "ZIP file" campaigns {#migration-guide}
 
-Older campaigns that used zip-files are not supported in this new In-App Message composer.
+Older campaigns that used ZIP files are not supported in this new In-App Message composer.
 
-If you want to migrate those older zip-file campaigns, follow these instructions:
+If you want to migrate those older ZIP file campaigns, follow these instructions:
 
-1. Download the .zip asset file to your computer, and unzip the files
+1. Download the ZIP asset file to your computer, and extract the files
 2. Upload all of your asset files into the new campaign. (Tip: you can select all files and drag-and-drop them in)
 3. For each newly uploaded asset, copy its uploaded file URL and replace them in your HTML's older local asset references
 

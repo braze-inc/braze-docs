@@ -32,7 +32,8 @@ Since 2019, carriers have begun adopting 10DLC for commercial messaging, with Ve
 ## What you need to know
 
 ### Costs 
-registering with a2p 10dlc may include several types of fees:
+
+Registering with A2P 10DLC may include several types of fees:
 
 | Fee Type | Description |
 | -------- | ---------- |
@@ -44,9 +45,11 @@ registering with a2p 10dlc may include several types of fees:
 Visit the Twilio 10DLC article to check out updated [fee estimates](https://support.twilio.com/hc/en-us/articles/1260803965530-What-pricing-and-fees-are-associated-with-the-A2P-10DLC-service-).
 
 ### Throughput
-message throughput for your 10dlc depends on several factors, including brand trust score, daily message limits, and your messaging use cases.
+
+Message throughput for your 10dlc depends on several factors, including brand trust score, daily message limits, and your messaging use cases.
 
 #### Brand trust score {#trust-score}
+
 The Campaign Registry (TCR) is a third-party agency that uses a reputation algorithm to review specific criteria relating to your company and assign a trust score that determines messaging throughput for each brand. This trust score will be assigned when a customer registers for US 10DLC messaging. The higher the trust score, the better the messages per second (MPS) you will experience. 
 
 |     | Trust Score | AT&T | T-Mobile | Verizon |
