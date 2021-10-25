@@ -44,7 +44,7 @@ Now it's time to write your push message! Start typing in the message box and wa
 
 #### Languages
 
-add copy in multiple languages using the __add languages__ button. insert liquid into your message to set custom messages and fields in specific languages based on a customer's language preferences. check out example use cases in our [liquid use case library]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/liquid_use_cases/#language).
+Add copy in multiple languages using the __Add Languages__ button. Insert Liquid into your message to set custom messages and fields in specific languages based on a customer's language preferences. Check out example use cases in our [Liquid Use Case Library]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/liquid_use_cases/#language).
 
 #### On click behavior
 
@@ -128,7 +128,7 @@ For multichannel campaigns targeting both push and email channels, you may want 
 
 To do so, under **Audience Summary**, select to send this campaign to "opted-in users only". This option will ensure that only opted-in users will receive your email, and Braze will only send your push to users who are push enabled by default.
 
-{% alert warning %}
+{% alert important %}
 With this configuration, don't include any filters in the **Target Users** step that limit the audience to a single channel (e.g., `Push Enabled = True` or `Email Subscription = Opted-In`).
 {% endalert %}
 
