@@ -73,7 +73,7 @@ To use our Swift sample code, replace the contents of your `Notification Service
 
 ## Creating a rich notification in your dashboard
 
-To create a rich notification in your Braze dashboard, simple create an iOS push and attach an image or gif, or provide a url that hosts an image, gif, or video.  Note that assets are downloaded on the receipt of push notifications, so that if you are hosting your own content you should plan for large, synchronous spikes in requests.
+To create a rich notification in your Braze dashboard, simply create an iOS push and attach an image or gif, or provide a URL that hosts an image, gif, or video.  Note that assets are downloaded on the receipt of push notifications so you should plan for large, synchronous spikes in requests if you are hosting your content.
 
 Also note the supported file types and sizes, listed [here][28].
 
