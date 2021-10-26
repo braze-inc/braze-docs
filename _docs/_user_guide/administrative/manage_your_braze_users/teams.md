@@ -9,7 +9,7 @@ description: "This reference article covers various aspects of Teams in your Bra
 
 # Teams
 
-braze admins can divide subsets of their dashboard users into teams with varying user roles and permissions. teams can be set up across customer base location, language, and custom attributes such that members and non-members have different access to messaging features and customer data. once created, team filters and tags can be assigned across various engagement tools providing teams access and filtering end-users based on assigned team definitions. 
+Braze Admins can divide subsets of their Dashboard users into Teams with varying user roles and permissions. Teams can be set up across customer base location, language, and custom attributes such that members and non-members have different access to messaging features and customer data. Once created, Team filters and tags can be assigned across various engagement tools providing teams access and filtering end-users based on assigned team definitions. 
 
 {% include video.html id="UYjKrFcL9sQ" align="right" %}
 

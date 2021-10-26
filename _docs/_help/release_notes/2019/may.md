@@ -55,7 +55,7 @@ We've made it easier to select where your in-app messages are going and which pl
 
 ![Platform Picker][plat_p]
 
-## Dispatch ID currents field for email
+## Dispatch ID Currents field for email
 
 {% alert update %}
 Behavior for `dispatch_id` differs between Canvas and campaigns because Braze treats Canvas steps (except for Entry Steps, which can be scheduled) as triggered events, even when they are "scheduled". [Learn more about `dispatch_id` behavior in Canvas and campaigns here]({{site.baseurl}}/help/help_articles/data/dispatch_id/).
