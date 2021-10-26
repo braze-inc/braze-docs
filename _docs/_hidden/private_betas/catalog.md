@@ -24,7 +24,7 @@ To create a catalog in Braze, upload a CSV to the **Catalogs** page. Each CSV yo
 
 ### Step 1: Create your CSV
 
-First, create your CSV file. The CSV must have one column with a header of **id**, and each item's **id** must be unique. Additionally, the following limitations apply to catalog CSV files:
+First, create your CSV file. The CSV must have one column with a header of `id`, and each item's `id` must be unique. Additionally, the following limitations apply to catalog CSV files:
 
 - Maximum of 1,000 items (rows)
 - Maximum of 20 fields (columns)
@@ -43,7 +43,7 @@ After you've created your CSV, navigate to the **Catalogs** page and upload the 
 
 ### Step 3: Take note of your catalog ID
 
-After successfully uploading your catalog, the catalog displays in a list below the upload zone. Each catalog has an associated catalog ID—a 24 digit alphanumeric code. Keep that ID handy, you'll need it in the next step.
+After successfully uploading your catalog, the catalog displays in a list below the upload zone. Each catalog has an associated catalog ID — a 24 digit alphanumeric code. Keep that ID handy, you'll need it in the next step.
 
 ![Example catalog ID and associated CSV files in a list below the upload zone][2]
 
@@ -79,7 +79,7 @@ Below the `catalogs` tag, use the `item` object to reference different attribute
 Remember, Liquid is case sensitive! Make sure you exactly match the case used in your catalog. In our example catalog, we used lowercase for our columns, so we're using lowercase in the `item` objects.
 {% endalert %}
 
-For example, to reference the title and price of the tales_storefront item we could add the following:
+For example, to reference the title and price of the `tales_storefront` item we could add the following:
 
 {% raw %}
 ```liquid
@@ -95,7 +95,7 @@ This renders as the following:
 
 #### Multiple items
 
-You aren't limited to just one item in a single message! To reference multiple items from your catalog in one message, repeat the `catalog` tag and replace the `<ITEM_ID>` with a different item from your catalog. Refer to the following as an example:
+You aren't limited to just one item in a single message! To reference multiple items from your catalog in one message, repeat the `catalogs` tag and replace the `<ITEM_ID>` with a different item from your catalog. Refer to the following as an example:
 
 {% raw %}
 ```liquid
@@ -118,7 +118,7 @@ This renders as the following:
 
 You can also reference images in the catalog to use in your messaging. To do so, use the `catalogs` tag and `item` object in the Liquid field for images.
 
-For example, to add the image_link from our Games catalog to our promotional message for Tales, we can add the following to our image field:
+For example, to add the `image_link` from our Games catalog to our promotional message for Tales, we can add the following to our image field:
 
 {% raw %}
 ```liquid
