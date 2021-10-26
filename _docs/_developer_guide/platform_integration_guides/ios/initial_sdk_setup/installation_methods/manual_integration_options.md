@@ -10,10 +10,18 @@ description: "This reference article shows how to manually integrate the Braze S
 # Manual Integration
 
 {% alert tip %}
-We strongly recommend that you implement the SDK via a package manager such as [Swift Package Manager](../swift_package_manager/), [CocoaPods](../cocoapods/), or [Carthage](../carthage_integration/). It will save you a lot of time and automate much of the process for you. However, if you are unable to do so you may complete the integration manually by following the instructions below.
+We strongly recommend that you implement the SDK via a package manager such as [Swift Package Manager](../swift_package_manager/), [CocoaPods](../cocoapods/), or [Carthage](../carthage_integration/). It will save you a lot of time and automate much of the process for you. However, if you are unable to do so, you may complete the integration manually by following the instructions below.
 {% endalert %}
 
 ## Step 1: Downloading the Braze SDK
+
+### Option 1: (Recommended) Install the XCFramework
+
+1. Download `Appboy_iOS_SDK.xcframework.zip` from the [release page](https://github.com/appboy/appboy-ios-sdk/releases) and unzip the file.
+2. In Xcode, drag-and-drop this .xcframework into your project.
+3. Under the `General` tab of the project, select `Embed & Sign` for `Appboy_iOS_SDK.xcframework`.
+
+### Option 2: Install the .framework bundle
 
 1. Download `Appboy_iOS_SDK.zip` from the [release page](https://github.com/appboy/appboy-ios-sdk/releases).
 If integrating an SDK version before 3.24.0, instead clone the Braze iOS SDK Github project:
@@ -57,8 +65,9 @@ If you try to use the core version of the SDK without Braze's UI features, in-ap
 
 ### SDWebImage Integration
 
-1. Follow the SDWebImage Installation Guide's [instructions](https://github.com/SDWebImage/SDWebImage/wiki/Installation-Guide#using-sdwebimage-as-sub-xcode-project) for manually using SDWebImage as a Sub-Project in Xcode.
-2. In the `SDWebImage` project settings, open the "Build Settings" tab. In the "Linking" section, locate the "Other Linker Flags" setting and add the `-ObjC` flag if it isn't already present.
+(Recommended) To install SDWebImage as an XCFramework, follow [their instructions here](https://github.com/SDWebImage/SDWebImage/wiki/Installation-Guide#build-sdwebimage-as-xcframework) and then drag-and-drop the asset into your project.
+
+If you would like to install SDWebImage as a Sub-Project in Xcode instead, follow this [installation guide](https://github.com/SDWebImage/SDWebImage/wiki/Installation-Guide#using-sdwebimage-as-sub-xcode-project). Then, in the `SDWebImage` project settings, open the "Build Settings" tab. In the "Linking" section, locate the "Other Linker Flags" setting and add the `-ObjC` flag if it isn't already present.
 
 ### Optional Location Tracking
 
