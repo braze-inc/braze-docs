@@ -16,13 +16,13 @@ tool:
 
 _To see examples of push notifications, check out our [Case Studies][8]._
 
-## Step 1: create a new push campaign {#create-new-campaign-push}
+## Step 1: Create a new push campaign {#create-new-campaign-push}
 
 ![Create new push campaign][1]{: style="float:right;max-width:25%;margin-left:15px;"}
 
 Navigate to the **Campaigns** page and create a new push campaign. Click __Create Campaign__ and select __Push Notification__. Or, if you want to include multiple channels in addition to Push, select **Multichannel Campaign**.
 
-## Step 2a: name your campaign, choose messaging types, and compose your message
+## Step 2a: Name your campaign, choose messaging types, and compose your message
 
 Give your campaign a name and select the platform you want to target. For multichannel campaigns, click **Add Messaging Channel** to add additional push platforms. 
 
@@ -44,7 +44,7 @@ Now it's time to write your push message! Start typing in the message box and wa
 
 #### Languages
 
-add copy in multiple languages using the __add languages__ button. insert liquid into your message to set custom messages and fields in specific languages based on a customer's language preferences. check out example use cases in our [liquid use case library]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/liquid_use_cases/#language).
+Add copy in multiple languages using the __Add Languages__ button. Insert Liquid into your message to set custom messages and fields in specific languages based on a customer's language preferences. Check out example use cases in our [Liquid Use Case Library]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/liquid_use_cases/#language).
 
 #### On click behavior
 
@@ -60,13 +60,13 @@ Here, you can also set up button prompts within your push notification, such as:
 For more information on platform-specific notification options, see [iOS Notification Options]({{site.baseurl}}/user_guide/message_building_by_channel/push/notification_options_ios/) or [Android Notification Options]({{site.baseurl}}/user_guide/message_building_by_channel/push/notification_options_android/).
 {% endalert %}
 
-### Step 2b: preview and test your message
+### Step 2b: Preview and test your message
 
 ![Test push message][7]{: style="float:right;max-width:30%;margin-left:15px;"}
 
 Testing is arguably one of the most critical steps. After you finish composing your perfect push message, test it before sending it out. Select the **Test** tab and use **Preview Message as User** to get a sense of how your message may view on mobile. Use **Send Test** to send yourself a test push and ensure that your message displays properly.
 
-## Step 3: schedule your push messaging campaign {#schedule-push-campaign}
+## Step 3: Schedule your push messaging campaign {#schedule-push-campaign}
 
 Choose between sending your campaign at a scheduled time, after users complete an action, or via an API request.
 
@@ -96,7 +96,7 @@ Use [API-Triggered Delivery]({{site.baseurl}}/user_guide/engagement_tools/campai
 Unless you check the box titled "Allow users to become re-eligible to receive campaign" under the __Schedule__ portion of the campaign wizard, each user will only receive the contents of a campaign once, and only new users that meet the criteria will receive the campaign on subsequent deliveries.
 {% endalert %}
 
-## Step 4: target users
+## Step 4: Target users
 
 On the **Target Users** step of the campaign setup, choose the target audience for your campaign. 
 
@@ -118,7 +118,21 @@ Detailed audience statistics for the channels targeted by your campaign are avai
 
 Keep in mind that exact segment membership is always calculated right before the message is sent.
 
-## Step 5: choose conversion events
+### Multichannel campaigns with push and email
+
+For multichannel campaigns targeting both push and email channels, you may want to limit your campaign so that only the users who are explicitly opted in will receive the message (excluding subscribed or unsubscribed users). For example, say you have three users of different opt-in status:
+
+- **User A** is subscribed to email and is push enabled. This user doesn't receive the email but will receive the push.
+- **User B** is opted-in to email but is not push enabled. This user will receive the email but doesn't receive the push.
+- **User C** is opted-in to email and is push enabled. This user will receive both the email and the push.
+
+To do so, under **Audience Summary**, select to send this campaign to "opted-in users only". This option will ensure that only opted-in users will receive your email, and Braze will only send your push to users who are push enabled by default.
+
+{% alert important %}
+With this configuration, don't include any filters in the **Target Users** step that limit the audience to a single channel (e.g., `Push Enabled = True` or `Email Subscription = Opted-In`).
+{% endalert %}
+
+## Step 5: Choose conversion events
 
 Braze allows you to track whether users perform specific actions (Conversion Events) after receiving a campaign. You can specify any of the following actions as a "Conversion Event":
 
@@ -131,7 +145,7 @@ You have the option of allowing a conversion event within a time frame that is r
 
 ![Conversion Event][15]
 
-## Step 6: review and deploy {#review-and-deploy-push}
+## Step 6: Review and deploy {#review-and-deploy-push}
 
 The final page will give you a summary of the campaign you've just designed. Clicking **Launch Campaign** will enable it to send. Confirm all the relevant details and watch the data roll in!
 

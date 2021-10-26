@@ -142,6 +142,20 @@ Next, you need to choose the target segment from the dropdown menu. You'll autom
 
 Optionally, you can also choose to limit delivery to a specified number of users within the segment, or allow users to receive the same message twice upon a recurrence of the campaign.
 
+### Multichannel campaigns with email and push
+
+For multichannel campaigns targeting both email and push channels, you may want to limit your campaign so that only the users who are explicitly opted in will receive the message (excluding subscribed or unsubscribed users). For example, say you have three users of different opt-in status:
+
+- **User A** is subscribed to email and is push enabled. This user doesn't receive the email but will receive the push.
+- **User B** is opted-in to email but is not push enabled. This user will receive the email but doesn't receive the push.
+- **User C** is opted-in to email and is push enabled. This user will receive both the email and the push.
+
+To do so, under **Audience Summary**, select to send this campaign to "opted-in users only". This option will ensure that only opted-in users will receive your email, and Braze will only send your push to users who are push enabled by default.
+
+{% alert important %}
+With this configuration, don't include any filters in the **Target Users** step that limit the audience to a single channel (e.g., `Push Enabled = True` or `Email Subscription = Opted-In`).
+{% endalert %}
+
 ## Step 6: Review and deploy
 
 The final page will give you a summary of the campaign you've just designed. Confirm all the relevant details and click **Launch Campaign** to enable it for sending.

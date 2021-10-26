@@ -9,7 +9,7 @@ description: "This article will walk you through how to configure Braze to use O
 
 # Okta 
 
-![okta saml]({% image_buster/assets/img/okta/okta4.png %}){: style="float:right;height:200px;margin-left:15px;margin-bottom:15px;"}
+![okta saml]({% image_buster/assets/img/Okta/okta4.png %}){: style="float:right;height:200px;margin-left:15px;margin-bottom:15px;"}
 
 > This article will walk you through how to configure Braze to use Okta for single sign-on.
 
