@@ -7,7 +7,7 @@ description: "This tutorial covers how to install the Braze SDK using Swift Pack
 
 ---
 
-# Swift Package Manager Integration
+# Swift package manager integration
 
 ## Requirements
 
@@ -72,7 +72,7 @@ You do not need to perform this step if you are using Xcode 12.5 or newer.
 
 ![Swift Package Manager: Menu 7][apple_initial_setup_7]
 
-## Next Steps
+## Next steps
 
 Follow the instructions for [Completing the Integration]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/initial_sdk_setup/completing_integration/).
 

@@ -8,13 +8,13 @@ platform:
 description: "This reference article covers the Android 12 SDK update, highlighting changes such as deep linking, SDK compatibility, and more."
 ---
 
-# Android 12 SDK Upgrade Guide
+# Android 12 SDK upgrade guide
 
 This guide describes relevant changes introduced in Android 12 (2021) and the required upgrade steps for your Braze Android SDK integration.
 
 For a full migration guide of Android 12, see the [Android Developer Documentation](https://developer.android.com/about/versions/12).
 
-## Braze SDK Compatibility
+## Braze SDK compatibility
 
 If you are targeting Android 12, you must use [Braze Android SDK v13.1.2+][1]. If you do not target Android 12 yet, upgrading is still recommended.
 

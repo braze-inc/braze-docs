@@ -3,7 +3,7 @@ nav_title: FAQs
 article_title: Campaign FAQs
 page_order: 10
 page_type: FAQ
-description: "This page provides answers to frequently asked questions about Campaigns."
+description: "This page provides answers to frequently asked questions about campaigns."
 tool: Campaigns
 
 ---
@@ -50,7 +50,7 @@ If you have allowed users to become re-eligible for the campaign, then they will
 
 ### When do changes to local time zone campaigns take effect?
 
-Target segments for local time zone campaigns should include at least a 48-hour window for any time-based filters to guarantee delivery to the entire segment. For example, consider a segment targeting users on their second day with the filters:
+Target segments for local time zone campaigns should include at least a 48-hour window for any time-based filters to guarantee delivery to the entire segment. For example, consider a segment targeting users on their second day with the following filters:
 
 - First used app more than 1 day ago
 - First used app less than 2 days ago
@@ -61,7 +61,7 @@ Local time zone delivery may miss users in this segment based on the delivery ti
 
 When the campaign is scheduled, edits to anything other than the message composition need to be made before we enqueue the messages to send. As per all campaigns, you can’t edit conversion events after it is launched.
 
-For Canvas entries, refer to above. For Canvas steps:
+For Canvas entries, refer to above. For Canvas steps, refer to the following:
 
 - Scheduled changes will only apply to users who are not already waiting to receive the step.
 - Audience changes default to apply to everyone unless you’ve selected **Evaluate At Enqueue Time**, in which case it’s similar behavior to above.
@@ -96,4 +96,4 @@ In order for a user to be eligible for entry, the must must be eligible for both
 - New York on August 6, 2021 at 9pm
 - New York on August 7, 2021 at 2pm
 
-Note that the user needs to be in the segment for 24 hours prior to the launch. If the user is not eligible in the first check, then Braze will not attempt the second check. 
+Note that the user needs to be in the segment for 24 hours prior to the launch. If the user is not eligible in the first check, then Braze will not attempt the second check.

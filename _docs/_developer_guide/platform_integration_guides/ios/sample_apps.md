@@ -7,11 +7,11 @@ description: "This article covers iOS sample apps."
 
 ---
 
-# Sample Apps
+# Sample apps
 
 Braze's SDKs each come with sample applications within the repository for your convenience. Each of these apps is fully buildable so you can test Braze features alongside implementing them within your own applications. Testing behavior within your own application versus expected behavior and codepaths within the sample applications is an excellent way to debug any problems you may run into.
 
-## Building Test Applications
+## Building test applications
 Several test application are available within the [iOS SDK Github repository][1]. Follow the instructions below to build and run our test applications.
 
 1. Create a new ["App Group"][25] and note the production API key.

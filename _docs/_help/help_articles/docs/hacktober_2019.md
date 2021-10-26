@@ -26,7 +26,7 @@ To participate, just...
 
 <br>
 
-## To Do
+## To do
 
 We're still working on setting some things up, but trust us, they're on our mind!
 
@@ -38,21 +38,21 @@ We're still working on setting some things up, but trust us, they're on our mind
 
 ## Prizes
 
-We have Hacktober Pumpkin-Torchie Pins, T-shirts, and Hoodies available for our top contributors!
+We have Hacktober pumpkin-torchie pins, t-shirts, and hoodies available for our top contributors!
 
 ![Torchie]({% image_buster /assets/img/hacktoberfest_torchie2.png %}){: style="border:none;"}
 
 ## Leaderboards
 
-### PR Leaders
+### pr leaders
 
 <iframe src="https://script.google.com/macros/s/AKfycbwwJwf3RbgRRx3Ls3QzvyYNrIRWBvO0ID4xtwnQSK_5uUjLb_Q/exec?type=pr" style="margin-top:20px; width:100%;min-height:650px;border:none;" id="gittoppr"></iframe>
 
-### Commit Leaders
+### Commit leaders
 
 <iframe src="https://script.google.com/macros/s/AKfycbwwJwf3RbgRRx3Ls3QzvyYNrIRWBvO0ID4xtwnQSK_5uUjLb_Q/exec" style="width:100%;min-height:650px;border:none;" id="gittopcommit"></iframe>
 
-### LTR Plug
+### LTR plug
 
 While you're here, make sure to [join us at the end of Hacktober for our LTR conference](https://ltr2019.splashthat.com)!
 

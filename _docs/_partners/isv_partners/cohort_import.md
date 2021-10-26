@@ -4,11 +4,11 @@ alias: /cohort_import/
 hidden: true
 ---
 
-# Partner Cohort Import Integration
+# Partner cohort import integration
 
 > The Partner Cohort Import integration feature allows our partners to integrate with Braze to send over cohorts of users that were generated within the partner’s application.
 
-## Cluster URLs
+## Cluster URls
 
 Braze hosts our application on multiple clusters throughout the US and EU. The URL for the import endpoints will be different depending on the cluster the client’s company instance is hosted on:
 
@@ -30,9 +30,9 @@ In addition to the top-level URLs being cluster-specific, each endpoint is also 
 
 ## Authentication
 
-To import cohort data into Braze, there are two authentication keys required.
+to import cohort data into braze, there are two authentication keys required.
 
-### Partner API Key
+### Partner API key
 
 The Partner API Key identifies the integration partner and authenticates the request as being valid for import. The key should be included in the body of the request in the `partner_api_key` field.
 
@@ -40,15 +40,15 @@ When setting up the integration in the partner’s application, the client shoul
 
 Braze will provide the Partner API Key(s) to the partner prior to the partner beginning integration development. In general, we will provide a single key that is valid for all US clusters, and another key that is valid for our EU cluster.
 
-### Client Data Import Key
+### Client data import key
 
 The Client Data Import Key identifies the client app group into which the cohort should be imported. The key should be included in the body of the request in the `client_secret` field.
 
 This key is generated in the client’s dashboard in the integrations settings for the partner. When setting up the integration in the partner’s application, the client should be asked to specify their Data Import Key so the integration knows which client and app group to send data to.
 
-## API Endpoint Specifications
+## API endpoint specifications
 
-### Cohort Name Endpoint
+### Cohort name endpoint
 The Cohort Name Endpoint can be used to specify the name of a cohort based on its ID. This endpoint should be called whenever a cohort is initially exported to Braze, or when the name of a cohort already known to Braze is changed.
 
 | Field | Type | Required | Notes |
@@ -73,7 +73,7 @@ The Cohort Name Endpoint can be used to specify the name of a cohort based on it
 }
 ```
 
-### User Cohort Endpoint
+### User cohort endpoint
 
 The User Cohort Endpoint allows for specifying which users have been added to or removed from a particular cohort. This endpoint should be called when a cohort is refreshed. Only users who have newly entered the cohort or who have left the cohort since the last refresh should be sent to Braze.
 
@@ -99,11 +99,11 @@ The User Cohort Endpoint allows for specifying which users have been added to or
 }
 ```
 
-## Rate Limiting
+## Rate limiting
 
 Other than the maximum of 1000 user IDs per request in the User Cohort Endpoint, these endpoints are not specifically rate limited.
 
-## Cohort Filter
+## Cohort filter
 
 Braze will add a filter that allows a dashboard user to include or exclude users from a targeted audience if they are in a partner cohort. The filter will provide a dropdown list of the names of all cohorts known to Braze for that client. This filter will only be visible to clients that partner and Braze have agreed to partner with in this integration.
 

@@ -10,7 +10,7 @@ channel:
 
 ---
 
-# Web Push
+# Web push
 
 > Web push is another great way to engage with users of your web application. Customers visiting your website via Chrome, Safari, Firefox, and Opera can opt-in to receive web push from your web application whether or not the web page is loaded. This feature is also supported on Android Chrome and Firefox Mobile on Android allowing for mobile web notifications. 
 

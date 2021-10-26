@@ -11,7 +11,7 @@ channel:
 
 ---
 
-# Refreshing the Feed
+# Refreshing the feed
 
 You can queue a manual refresh of the Braze News Feed at any time by calling:
 

@@ -8,7 +8,7 @@ description: "This reference article describes the different cookies used by the
 
 ---
 
-# Cookies and Storage
+# Cookies and storage
 
 This article describes the different cookies used by the Braze Web SDK.
 
@@ -23,7 +23,7 @@ The Braze Web SDK is built to provide you with maximum flexibility, legal compli
 
 When Braze creates cookies, they are stored with a 1 year expiration that automatically renews on new sessions.
 
-### Disabling Cookies {#disable-cookies}
+### Disabling cookies {#disable-cookies}
 
 To disable all cookies, use the [`noCookies`][6] option when initializing the Web SDK. 
 Disabling cookies will prevent you from associating anonymous users who navigate across sub-domains, and will result in a new user on each subdomain.
@@ -38,7 +38,7 @@ braze.initialize("API-KEY", {
 
 To stop Braze tracking in general, or to clear _all_ stored browser data, please see the [`stopWebTracking`][3] and [`wipeData`][4] SDK methods, respectively. These two methods can be useful should a user revoke consent or you wish to stop all Braze functionality after the SDK has already been initialized.
 
-### List of Cookies
+### List of cookies
 
 |Cookie|Description|Size|
 |---|----|---|---|
@@ -49,7 +49,7 @@ To stop Braze tracking in general, or to clear _all_ stored browser data, please
 |`ab._gd`|Temporarily created (and then deleted) to determine the root-level cookie domain which allows the SDK to work properly across sub-domains.|n/a|
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
 
-## Device Properties
+## Device properties
 
 By default, Braze will collect the following device-level properties to allow device, language, and time zone based message personalization:
 

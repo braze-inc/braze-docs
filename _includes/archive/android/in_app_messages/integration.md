@@ -1,14 +1,14 @@
 # Integration {#in-app-messaging-integration}
 
-## Step 1: Braze In-App Message Manager Registration
+## Step 1: Braze in-app message manager registration
 
 In-App Message display is managed by the [`BrazeInAppMessageManager`][34] class. Every activity in your app must be registered with the `BrazeInAppMessageManager` to allow it to add in-app message views to the view hierarchy. There are two ways to accomplish this:
 
-### Activity Lifecycle Callback Integration (Recommended)
+### Activity lifecycle callback integration (recommended)
 
 The [Activity Lifecycle Callback Integration][59] handles in-app message registration automatically, no extra integration is required. This is the recommended integration for handling in-app message registration.
 
-### Manual In-App Message Registration
+### Manual in-app message registration
 
 A manual in-app message registration requires 3 steps.
 
@@ -93,7 +93,7 @@ public override fun onPause() {
 {% endtab %}
 {% endtabs %}
 
-## Step 2: (Optional) In-App Message Manager Blacklist
+## Step 2: In-app message manager blacklist (optional)
 
 In your integration, you may require that certain Activities in your app should not show In-App Messages. The [Activity Lifecycle Callback Integration][59] provides an easy way to accomplish this.
 

@@ -7,13 +7,13 @@ description: "This article covers how to implement fine network traffic control 
 
 ---
 
-# Fine Network Traffic Control
+# Fine network traffic control
 
-## Request Processing Policies
+## Request processing policies
 
 Braze allows the user the option to control network traffic using the following protocols:
 
-### Automatic Request Processing
+### Automatic request processing
 
 __*`ABKRequestProcessingPolicy` enum value: `ABKAutomaticRequestProcessing`*__
 
@@ -44,7 +44,7 @@ Appboy.sharedInstance()?.flushDataAndProcessRequestQueue()
 {% endtab %}
 {% endtabs %}
 
-### Manual Request Processing
+### Manual request processing
 
 __*`ABKRequestProcessingPolicy` enum value: `ABKManualRequestProcessing`*__
 
@@ -71,9 +71,9 @@ Appboy.sharedInstance()?.flushDataAndProcessRequestQueue()
 {% endtab %}
 {% endtabs %}
 
-## Setting the Request Processing Policy
+## Setting the request processing policy
 
-### Set Request Policy On Startup
+### Set request policy on startup
 
 These policies can be set at app startup time from the [`startWithApiKey:inApplication:withLaunchOptions:withAppboyOptions`][3] method. In the `appboyOptions` dictionary, set the `ABKRequestProcessingPolicyOptionKey` to any of the following `ABKRequestProcessingPolicy` enum values defined below:
 
@@ -100,7 +100,7 @@ public enum ABKRequestProcessingPolicy : Int {
 {% endtab %}
 {% endtabs %}
 
-### Set Request Policy At Runtime
+### Set request policy at runtime
 
 The request processing policy can also be set during runtime via the `requestProcessingPolicy` property on `Appboy`. For example:
 
@@ -123,7 +123,7 @@ Appboy.sharedInstance()?.requestProcessingPolicy = ABKRequestProcessingPolicy.au
 {% endtab %}
 {% endtabs %}
 
-## Manual Shutdown of In-Flight Server Communication
+## Manual shutdown of in-flight server communication
 
 If at any time an "in-flight" server communication needs to be halted, you must call the following method:
 

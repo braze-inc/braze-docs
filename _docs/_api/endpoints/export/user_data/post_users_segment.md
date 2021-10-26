@@ -9,7 +9,7 @@ description: "This article outlines details about the Users by Segment Braze end
 
 ---
 {% api %}
-# Users by Segment Endpoint
+# Users by segment endpoint
 {% apimethod post %}
 /users/export/segment
 {% endapimethod %}
@@ -24,7 +24,8 @@ Note that a company may run at most one export per segment using this endpoint a
 Beginning April 2021, the "fields_to_export" field in this API request will be __required for all new accounts__. The option to default to all field will be removed, and new customers will need to specify the specific fields they'd like to include in their export.
 {% endalert %}
 
-## Credentials-Based Response Details
+## Credentials-based response details
+
 If you have added your S3 credentials to Braze, then each file will be uploaded in your bucket as a zip file with the key format that looks like `segment-export/SEGMENT_ID/YYYY-MM-dd/RANDOM_UUID-TIMESTAMP_WHEN_EXPORT_STARTED/filename.zip`. We will create 1 file per 5,000 users to optimize processing. You can then unzip the files and concatenate all of the `json` files to a single file if needed. If you specify an `output_format` of `gzip`, then the file extension will be `.gz` instead of `.zip`.
 
 {% details Export Pathing Breakdown for ZIP File %}
@@ -55,7 +56,7 @@ In either scenario, you may optionally provide a `callback_endpoint` to be notif
 
 Larger user bases will result in longer export times. For example, an app with 20 million users could take an hour or more.
 
-## Request Body
+## Request body
 
 ```
 Content-Type: application/json
@@ -77,7 +78,7 @@ The `segment_id` for a given segment can be found in your Developer Console with
 Individual custom attributes cannot be exported. However, all custom attributes can be exported by including `custom_attributes` in the `fields_to_export` array (e.g. ['first_name', 'email', 'custom_attributes']).
 {% endalert %}
 
-## Request Parameters
+## Request parameters
 
 | Parameter | Required | Data Type | Description |
 |---|---|---|---|
@@ -87,7 +88,7 @@ Individual custom attributes cannot be exported. However, all custom attributes 
 |`output_format` | Optional | String | When using your own S3 bucket, allows to specify file format as `zip` or `gzip`. Defaults to ZIP file format. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
 
-## Example Request
+## Example request
 ```
 curl --location --request POST 'https://rest.iad-01.braze.com/users/export/segment' \
 --header 'Content-Type: application/json' \
@@ -100,7 +101,7 @@ curl --location --request POST 'https://rest.iad-01.braze.com/users/export/segme
 }'
 ```
 
-## Fields to Export
+## Fields to export
 
 The following is a list of valid `fields_to_export`. Using `fields_to_export` to minimize the data returned can improve response time of this API endpoint:
 
@@ -152,7 +153,7 @@ Authorization: Bearer YOUR-REST-API-KEY
 
 Once made available, the URL will only be valid for a few hours. As such, we highly recommend that you add your own S3 credentials to Braze.
 
-## Sample User Export File Output
+## Sample user export file output
 
 User export object (we will include the least data possible - if a field is missing from the object it should be assumed to be null, false, or empty):
 

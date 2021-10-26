@@ -18,7 +18,7 @@ search_tag: Partner
 
 See the [Neura Insights][4] Braze integration for further details on how to uncover these real-world behavioral insights.
 
-## Integration Details
+## Integration details
 
 To get started, ensure that both the Braze and Neura SDKs are properly integrated for Android and iOS.
 

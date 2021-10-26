@@ -7,17 +7,17 @@ description: "This reference article covers how to track sessions for web."
 
 ---
 
-# Session Tracking for Web
+# Session tracking for web
 
 The Braze SDK reports session data that is used by the Braze dashboard to calculate user engagement and other analytics integral to understanding your users. Based on the below session semantics, our SDK generates "start session" and "close session" data points that account for session length and session counts viewable within the Braze dashboard.
 
-## Session Lifecycle
+## Session lifecycle
 
 By default, sessions begin when `appboy.openSession()` is first called and remain open until there are at least 30 minutes of inactivity. This means that if the user navigates away from the site and then returns less than 30 minutes later, the same session will be continued. If they return after the 30 minutes have expired, a "close session" datapoint is automatically generated for the time at which they navigated away, and a new session opens.
 
 **Note**: If you need to force a new session, you can do so by changing users.
 
-## Customizing Session Timeout
+## Customizing session timeout
 
 To customize the session timeout, pass the `sessionTimeoutInSeconds` option to your [`initialize`][session_tracking_5] function.
 
@@ -30,7 +30,7 @@ If you have set a session timeout, then the above session semantics all extend t
 
 **Note**: The minimum value for `sessionTimeoutInSeconds` is 1 second.
 
-### Testing Session Tracking
+### Testing session tracking
 
 To detect sessions via your user, find your user on the dashboard and navigate to "App Usage" on the user profile. You can confirm that session tracking is working by checking that the "Sessions" metric increases when you would expect it to.
 

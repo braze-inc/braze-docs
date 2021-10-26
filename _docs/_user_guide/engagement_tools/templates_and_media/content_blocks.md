@@ -23,13 +23,13 @@ With Content Blocks, you can:
 
 ## Create a Content Block
 
-Creating a Content Block is easy - go to __Templates & Media__, then the __Content Blocks Library__ tab. Then, click __Create Content Block.__
+Creating a Content Block is easy — go to __Templates & Media__, then select the __Content Blocks Library__ tab. Click __Create Content Block.__
 
 Then, create your Content Block!
 
-![create-content-blocks][1]
+![Create new Content Block][1]
 
-Content Blocks currently have two types: `HTML` or `text`. Braze will select the type for you based on the content you inserted into the block. If Braze detects `HTML` markup in the Content Block, the block type will switch to `HTML` automatically. Otherwise, it will be considered `text`.  
+Content Blocks have two types: `HTML` or `text`. Braze will select the type for you based on the content you inserted into the block. If Braze detects `HTML` markup in the Content Block, the block type will switch to `HTML` automatically. Otherwise, it will be considered `text`.  
 
 You can also [create and manage your Content Blocks via API][5].
 
@@ -50,19 +50,19 @@ When creating Content Blocks, it sometimes helps to visualize HTML and Liquid by
 2. Copy the Content Block Liquid Tag from your Content Block page.
 3. Insert the Content Block Liquid Tag into the message. You can also begin typing the Liquid and have the tag auto-populate.
 
-## Updating & Copying Content Blocks
+## Updating and copying Content Blocks
 
 If you choose to update a Content Block, it will update in all messages the Content Block is used.
 
 If you want to update a Content Block for a single message or make a copy to use in other messages, you can copy the HTML from the original message to your new one, or edit the original Content Block (it must have been used in a message already) and save it. You will then get a prompt that allows you to save it as a new Content Block.
 
-![copy-content-block][2]{: height="70%" width="70%"}
+![Save Content Block dialog][2]{: height="70%" width="70%"}
 
-You can also [duplicate a Content Block with our Templates & Media feature]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/duplicate/). When you do this, a "draft" copy is created.
+You can also [duplicate a Content Block]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/duplicate/) with our Templates & Media feature. When you do this, a "draft" copy is created.
 
 ## Nesting Content Blocks
 
-Content blocks can be nested, but only once! You can nest _Content Block A_ into _Content Block B_, but you will not be able to then nest _Content Block B_ into _Content Block C_.
+Content Blocks can be nested, but only once! You can nest _Content Block A_ into _Content Block B_, but you will not be able to then nest _Content Block B_ into _Content Block C_.
 
 {% alert warning %}
 Nothing will prevent you from nesting a third level of Content Block, but you will not see the content expand in nests beyond the second. The content and the Liquid snippet are removed from the message.
@@ -72,9 +72,9 @@ Additionally, Content Blocks cannot be used within an email footer, though email
 
 ## Archiving Content Blocks
 
-Once you have finished using a Content Block, you can [archive it from the __Templates & Media__ page]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/archive/).
+![Expand settings icon and select Archive][3]{: style="max-width:20%;float:right;margin-left:15px;" }
 
-![Archive_CB][3]{: height="80%" width="80%"}
+Once you have finished using a Content Block, you can archive it from the [Templates & Media]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/archive/) page.
 
 Messages using the archived Block will still perform as though it was there. However, we recommend several best practices to ensure that outdated information is not accidentally included in your emails.
 
@@ -83,14 +83,14 @@ Messages using the archived Block will still perform as though it was there. How
 3. When your Block is used in more messages than you can reasonably manage with the first suggestion in this list, we recommend removing __all__ content from the Block, then archiving it. This will ensure no outdated information makes its way into any newly sent emails.
 
 {% alert tip %}
-  You can save a content block without content in it.
+  You can save a Content Block without content in it.
 {% endalert %}
 
 If you made a mistake in archiving a Content Block, you can unarchive it.  
 
-![Unarchive_CB][4]
+![Expand settings icon and select Unarchive][4]
 
-## Content Block Specifications
+## Content Block specifications
 
 | Content Block Attribute | Specifications |
 |---|---|
@@ -103,7 +103,7 @@ If you made a mistake in archiving a Content Block, you can unarchive it.
 
 [1]: {% image_buster /assets/img/create-content-blocks.gif %}
 [2]: {% image_buster /assets/img/copy-content-block.png %}
-[3]: {% image_buster /assets/img/archive-content-block.png %}
+[3]: {% image_buster /assets/img/template_archive_cog.png %}
 [4]: {% image_buster /assets/img/unarchive-content-block.png %}
 [5]: {{site.baseurl}}/api/endpoints/templates/
 [6]: {{site.baseurl}}/user_guide/engagement_tools/templates_and_media/

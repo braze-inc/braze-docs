@@ -7,7 +7,7 @@ description: "This reference article covers how to add users to your company acc
 
 ---
 
-# Adding Users
+# Adding users
 
 Go to the __Manage Users__ page under your username and click the __Add New User__ button. Then, enter their information (including email and department) as prompted.
 

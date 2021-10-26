@@ -25,9 +25,9 @@ local_redirect:
   
 ---
 
-# Push Integration
+# Push integration
 
-## Step 1: Configure Push Notifications
+## Step 1: Configure push notifications
 
 Before you can send an iOS push notification using Braze, you must provide your Push notification file or certificate from Apple. You may present either a `.p8` file (recommended) or a `.p12` certificate.
 
@@ -80,7 +80,7 @@ __Step 2: Export Certificate__
 {% endtabs %}
 
 
-## Step 2: Enable Push Capabilities
+## Step 2: Enable push capabilities
 
 In your project settings, ensure that under the `Capabilities` tab your `Push Notifications` capability is toggled on, as described on [this page](https://help.apple.com/developer-account/#/devcdfbb56a3).
 
@@ -89,7 +89,7 @@ In your project settings, ensure that under the `Capabilities` tab your `Push No
 >  If you have separate development and production push certificates, please make sure to uncheck the `Automatically manage signing` box in the `General` tab. This will allow you to choose different provisioning profiles for each of your build configurations, as Xcode's automatic code signing feature only does development signing.
 ![xcode 8 auto signing][34]
 
-## Step 3: Register for Push Notifications
+## Step 3: Register for push notifications
 
 The appropriate code sample below must be included within your app's `application:didFinishLaunchingWithOptions:` delegate method for your users' device to register with APNs.
 
@@ -101,7 +101,7 @@ Braze also provides default push categories for push action button support, whic
 Be sure to call all push integration code in your application's main thread.
 {% endalert %}
 
-### Using UserNotification Framework (iOS 10+)
+### Using UserNotification framework (iOS 10+)
 
 If you are using the `UserNotifications` framework (recommended) that was introduced in iOS 10, add the following code to the `application:didFinishLaunchingWithOptions:` method of your app delegate.
 
@@ -163,7 +163,7 @@ if #available(iOS 10, *) {
 You must assign your delegate object using `center.delegate = self` synchronously before your app finishes launching, preferably in `application:didFinishLaunchingWithOptions:`. Not doing so may cause your app to miss incoming push notifications. For more information, visit Apple's [`UNUserNotificationCenterDelegate` documentation](https://developer.apple.com/documentation/usernotifications/unusernotificationcenterdelegate).
 {% endalert %}
 
-### Without UserNotifications Framework
+### Without UserNotifications framework
 
 If you are not using the `UserNotifications` framework, add the following code to the `application:didFinishLaunchingWithOptions:` method of your app delegate:
 
@@ -190,7 +190,7 @@ UIApplication.shared.registerForRemoteNotifications()
 {% endtabs %}
 
 
-## Step 4: Register Push Tokens With Braze
+## Step 4: Register push tokens with Braze
 
 Once APNs registration is complete, the following method must be altered to pass the resulting `deviceToken` to Braze so the user becomes enabled for push notifications:
 
@@ -219,7 +219,7 @@ Appboy.sharedInstance()?.registerDeviceToken(deviceToken)
 The `application:didRegisterForRemoteNotificationsWithDeviceToken:` delegate method is called every time after `[[UIApplication sharedApplication] registerForRemoteNotifications]` is called. If you are migrating to Braze from another push service and your user's device has already registered with APNs, this method will collect tokens from existing registrations the next time the method is called, and users will not have to re-opt-in to push.
 {% endalert %}
 
-## Step 5: Enable Push Handling
+## Step 5: Enable push handling
 
 The following code passes received push notifications along to Braze and is necessary for logging push analytics and link handling.
 
@@ -353,7 +353,7 @@ Appboy.sharedInstance()?.register(application,
 {% endtab %}
 {% endtabs %}
 
-## Step 6: Deep Linking
+## Step 6: Deep linking
 
 Deep linking from a push into the app is automatically handled via our standard push integration documentation. If you'd like to learn more about how to add deep links to specific locations in your app, see our [Advanced Use Cases section on Deep Linking for iOS][10].
 

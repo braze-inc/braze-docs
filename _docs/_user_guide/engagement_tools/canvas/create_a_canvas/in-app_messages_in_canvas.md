@@ -9,7 +9,7 @@ channel: in-app messages
 
 ---
 
-# In-App Messages In Canvas
+# In-app messages in Canvas
 
 {% include video.html id="6X8E20BlblI" align="right" %}
 
@@ -19,7 +19,7 @@ Once you've set up delay and audience options, you can add an in-app message to 
 
 You can customize [when your message will expire](#in-app-message-expiration) and which [advancement behavior](#advancement-behavior-options) it will have.
 
-## In-App Message Expiration
+## In-app message expiration
 
 In the in-app message composer, you have the option to choose when the in-app message will expire. During this time, the in-app message will sit and wait to be viewed until it has reached the expiry date. Once sent, the in-app message can be viewed at most once.
 ![Expire After][1]
@@ -30,7 +30,7 @@ In the in-app message composer, you have the option to choose when the in-app me
 | `Message Expires By ...` | The second option allows you to choose a specific date and time when the in-app message will longer be available. <br> <br> _For example, if you have a sale that ended at a specific date and time, you might select this option so that once the sale ends users no longer see the associated in-app message._ |
 {: .reset-td-br-1 .reset-td-br-2}
 
-### Use Cases
+### Use cases
 
 When should you use this feature? Braze highly recommends that you consider using this feature in your Promotional and Onboarding campaigns.
 
@@ -68,7 +68,7 @@ As you can see, the push messages are spaced around an in-app message to ensure 
   {% endtab %}
 {% endtabs %}
 
-## Advancement Behavior Options
+## Advancement Behavior options
 
 Braze's Advancement Behavior feature allows you to choose the criteria for advancement through your Canvas step. [Steps with only in-app messages](#steps-with-in-app-messages-only) have different advancement options than [steps with multiple message types](#steps-with-multiple-message-channels) (push, email, etc.).
 
@@ -80,7 +80,7 @@ Note that if you have multiple in-app messages within one canvas, a user must st
 Please note that in-app messages __cannot__ be triggered by events in Canvas.
 {% endalert %}
 
-### Steps with In-App Messages Only
+### Steps with in-app messages only
 
 Steps with in-app messages have specific advancement options that allow you to specify the exact situation when your message would be sent.
 
@@ -96,8 +96,7 @@ Steps with in-app messages have specific advancement options that allow you to s
   When "In-App Live" is selected, the in-app message will be available until it expires, even if the user has moved to subsequent steps. If you do not want the in-app message to be live when the next steps in the Canvas are delivered, ensure that the expiration is shorter than the delay on subsequent steps.
 {% endalert %}
 
-
-### Steps with Multiple Channels
+### Steps with multiple channels
 
 ![iampush.png][3]
 
@@ -113,7 +112,8 @@ Steps with an in-app message and another channel have the following advancement 
   When "Entire Audience" is selected, the in-app message will be available until it expires, even if the user has moved to subsequent steps. If you do not want the in-app message to be live when the next steps in the Canvas are delivered, ensure that the expiration is shorter than the delay on subsequent steps.
 {% endalert %}
 
-## Custom Event Properties in a Canvas
+## Custom event properties in a Canvas
+
 Due to action-based delivery being unavailable for Canvas steps with in-app messages, you similarly cannot use custom event properties for these steps. If you'd like to template event properties in Canvas, we recommend storing your event properties as custom attributes in your first Canvas step, and then personalizing your in-app message with the custom attributes in the second step. 
 
 

@@ -9,13 +9,13 @@ tool: Canvas
 
 ---
 
-# Advancing Your Users Through Canvas Steps
+# Advancing your users through Canvas steps
 
 Braze’s Advancement Behavior feature allows you to choose the criteria for advancement through your Canvas step.
 
 ![auto2.png][1]
 
-## Advance When Message Sent
+## Advance when message sent
 
 When __Message Sent__ is selected, customers will only be advanced to subsequent Canvas steps when one of the following conditions occur:
 
@@ -25,7 +25,7 @@ When __Message Sent__ is selected, customers will only be advanced to subsequent
 - An in-app message is viewed
 - A Content Card is sent
 
-## Immediately Advance Audience
+## Immediately advance audience
 
 When __Immediately Advance Audience__ is selected, customers will be advanced to subsequent Canvas steps when one of the following conditions occur:
 
@@ -41,13 +41,13 @@ When __Immediately Advance Audience__ is selected, customers will be advanced to
 Users must meet the step's criteria in order to be advanced through the step. 
 {% endalert %}
 
-### Scheduled Steps
+### Scheduled steps
 
 For a scheduled step, users must meet the audience options for the step in order to be advanced through the step. If the step has an [exception event]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/exception_events/), users who perform the exception event will not be advanced through the step.
 
 When sending a multichannel step with [intelligent timing]({{site.baseurl}}/user_guide/intelligence/intelligent_timing/), we may send or attempt to send messages at different times for different channels. Braze will auto-advance users at the time that the first message in a step attempts to send.
 
-### Action-Based Steps
+### Action-based Steps
 
 For action-based steps, users must perform the trigger action and meet the audience options in order to be advanced through the step. If the step has an exception event, users who perform the exception event will not be advanced through the step.
 
@@ -55,7 +55,7 @@ For action-based steps, users must perform the trigger action and meet the audie
   Customers who advance through a step without receiving messages will not be counted as a unique recipient for the step. Users must receive one or more messages from a step to be counted as a unique recipient.
 {% endalert %}
 
-## Using Canvas Advancement
+## Using Canvas advancement
 
 Advancement works well when subsequent messaging relates to the previous messages. For example, you wouldn't want to send a follow-up push about an email that was never sent to users.
 

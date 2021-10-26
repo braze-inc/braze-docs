@@ -38,11 +38,11 @@ guide_featured_list:
 
 To see examples of in-app messages, check out our [Case Studies][11].
 
-## When to Use In-App Messages
+## When to use in-app messages
 
 In-app messages are good for a lot of things. These messages don't deliver outside of the user's app and won't intrude on their home screen. In-app messages, by their nature, exist within your app and come with context and are almost never unwelcome! They're always delivered when the user is active within your app.
 
-### Great Use Cases
+### Great use cases
 
 - New App Features
 - App Management
@@ -54,7 +54,7 @@ In-app messages are good for a lot of things. These messages don't deliver outsi
 - Encouraging and rewarding discovery
 - [Permission Requests/Push Priming][21]
 
-## Expected Behaviors by Message Types
+## Expected behaviors by message types
 
 These are what it looks like for your users to open one of our out-of-the-box in-app message types.
 

@@ -29,7 +29,7 @@ Click __New Credential__. You can then name your credentials and put in your use
 
 You can then use this basic authentication credential for calls to Transifex.
 
-## Connected Content Integration
+## Connected Content integration
 
 This integration will allow you to type in a source string instead of copying and pasting the translation for every language into the message composer.
 
@@ -48,7 +48,7 @@ An example response with a blank context field is pictured below:
 
 ![terminal_response][33]
 
-## Transifex Integration Code Example
+## Transifex integration code example
 
 Here is example code that utilizes the Transifex Strings API and the user's "language" attribute.
 

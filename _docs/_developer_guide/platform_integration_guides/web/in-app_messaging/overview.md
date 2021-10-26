@@ -9,13 +9,13 @@ description: "This reference article provides an overview of in-app messages, in
 
 ---
 
-# In-App Messages
+# In-app messages
 
 [In-App Messages]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/) help you get content to your user without interrupting their day with a push notification. Customized and tailored in-app messages enhance the user experience and help your audience get the most value out of your app. With a variety of layouts and customization tools to choose from, in-app messages engage your users more than ever before.
 
 To see examples of in-app messages, check out our [Case Studies][53].
 
-## In-App Message Types
+## In-app message types
 
 Braze currently offers the following default in-app message types: 
 
@@ -28,7 +28,7 @@ Each in-app message type is customizable across content, images, icons, click ac
 
 All in-app messages inherit their prototype from [`appboy.InAppMessage`][2], which defines basic behavior and traits for all in-app messages. The protypical subclasses are [appboy.SlideUpMessage][3], [appboy.ModalMessage][6], [appboy.FullScreenMessage][7], and [appboy.HtmlMessage][12].
 
-## Expected Behaviors by Message Types
+## Expected behaviors by message types
 
 These are what it looks like for your users to open one of our out-of-the-box in-app message types.
 

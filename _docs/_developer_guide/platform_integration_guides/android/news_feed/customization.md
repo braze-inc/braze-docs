@@ -11,9 +11,9 @@ channel:
   
 ---
 
-# News Feed Customization
+# News Feed customization
 
-## Default Styling
+## Default styling
 
 Braze UI elements come with a default look and feel that matches the Android standard UI guidelines and provides a seamless experience. You can see these default styles in the `res/values/style.xml` file in the Braze SDK distribution.
 
@@ -33,11 +33,11 @@ Braze UI elements come with a default look and feel that matches the Android sta
   </style>
 ```
 
-## Overriding Styles
+## Overriding styles
 
 If you would prefer, you can override these styles to create a look and feel that better suits your app. To override a style, copy it in its entirety to the `styles.xml` file in your own project and make modifications. The whole style must be copied over to your local `styles.xml` file in order for all of the attributes to be correctly set.
 
-#### Correct Style Override
+#### Correct style override
 
 ```xml
 <style name="Braze.Feed.List">
@@ -51,7 +51,7 @@ If you would prefer, you can override these styles to create a look and feel tha
 </style>
 ```
 
-#### Incorrect Style Override
+#### Incorrect style override
 
 ```xml
 <style name="Braze.Feed.List">
@@ -60,7 +60,7 @@ If you would prefer, you can override these styles to create a look and feel tha
 </style>
 ```
 
-## Feed Style Elements
+## Feed style elements
 
 Below is a description of the themable Braze UI elements and their names for styling purposes:
 
@@ -69,7 +69,7 @@ Below is a description of the themable Braze UI elements and their names for sty
 {% image_buster /assets/img_archive/Image29Theming.png %}
 {% image_buster /assets/img_archive/Image30Theming.png %}{% endgallery %}
 
-## Setting A Custom Font
+## Setting a custom font
 
 Braze allows for setting a custom font using the [font family guide][40]. To use it, override a style for cards and use the `fontFamily` attribute to instruct Braze to use your custom font family.
 
@@ -86,23 +86,23 @@ Here is a truncated example with a custom font family, `my_custom_font_family`, 
 </style>
 ```
 
-## Setting a Custom News Feed Click Listener
+## Setting a custom News Feed click listener
 
 You can handle News Feed clicks manually by setting a custom News Feed click listener. This enables use cases such as selectively using the native web browser to open web links.
 
-### Step 1: Implement a News Feed Click Listener
+### Step 1: Implement a News Feed click listener
 
 Create a class that implements [IFeedClickActionListener][37]. Implement the `onFeedCardClicked()` method, which will be called when the user clicks a News Feed card.
 
-### Step 2: Instruct Braze to Use Your News Feed Click Listener
+### Step 2: Instruct Braze to use your News Feed click listener
 
 Once your `IFeedClickActionListener` is created, call `AppboyFeedManager.getInstance().setFeedCardClickActionListener()` to instruct `AppboyFeedManager` to use your custom `IFeedClickActionListener`.
 
-## Fully Custom Feed Display
+## Fully custom feed display
 
 If you would like to display the feed in a completely custom manner, it is possible to do so by using your own views populated with data from our [models][9]. To obtain Braze's News Feed models, you will need to subscribe for News Feed updates and use the resulting model data to populate your views. You will also need to log analytics on the model objects as users interact with your views.
 
-### Part 1: Subscribing to Feed Updates
+### Part 1: Subscribing to feed updates
 
 First, declare a private variable in your custom feed class to hold your subscriber:
 
@@ -136,7 +136,7 @@ We also recommend unsubscribing when your custom feed activity moves out of view
 Braze.getInstance(context).removeSingleSubscription(mFeedUpdatedSubscriber, FeedUpdatedEvent.class);
 ```
 
-### Part 2: Logging Analytics
+### Part 2: Logging analytics
 
 When using custom views, you will need to log analytics manually as well, since analytics are only handled automatically when using Braze views.
 

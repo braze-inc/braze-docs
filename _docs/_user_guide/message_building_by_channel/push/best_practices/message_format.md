@@ -8,7 +8,7 @@ channel: push
 
 ---
 
-# Message Format
+# Message format
 
 > This reference article describes message and image formats for iOS, Android, and Windows push notifications.
 
@@ -70,14 +70,14 @@ channel: push
 {% endtab %}
 {% tab Image Sizes %}
 
-#### Push Icon
+#### Push icon
 
 |         Aspect Ratio         | Recommended Image Size |                         Maximum Image Size                         | File Types |
 |:----------------------------:|:----------------------:|:------------------------------------------------------------------:|:----------:|
 | 1:1 (400x400 pixels minimum) |          500KB         | N/A - however a balance should be  struck between quality and size |  PNG, JPG  |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4}
 
-#### Expanded Notification Image
+#### Expanded notification image
 
 |         Aspect Ratio         | Recommended Image Size |                         Maximum Image Size                         | File Types |
 |:----------------------------:|:----------------------:|:------------------------------------------------------------------:|:----------:|
@@ -104,7 +104,6 @@ Large image notifications display best when using an image of at least 600x300 p
 
 {% endtab %}
 {% endtabs %}
-
 
 ## Windows Universal
 

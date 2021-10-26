@@ -10,7 +10,7 @@ alias: /shareplay/
 
 ---
 
-# SharePlay In-App Message Implementation Guide
+# SharePlay in-app message implementation guide
 
 > SharePlay is a newly released feature that enables iOS 15 Facetime users to have a shared media experience across their devices, offering real-time audio and video syncing. SharePlay is a great way for users to experience content with friends and family, offering Braze customers an additional avenue for video content and opportunities to introduce new users to your application.
 
@@ -34,7 +34,7 @@ The in-app message used in this integration is a subclassed modal in-app message
 We recommend opening the [Apple SharePlay documentation](https://developer.apple.com/documentation/avfoundation/media_playback_and_selection/supporting_coordinated_media_playback) side-by-side by this guide to complete the integration.
 {% endalert %}
 
-### Step 1: Overriding and Loading XIB
+### Step 1: Overriding and loading XIB
 
 {% tabs %}
 {% tab Swift %}
@@ -51,7 +51,7 @@ override func loadView() {
 {% endtab %}
 {% endtabs %}
 
-### Step 2: Configure AVPlayer for In-App Messages
+### Step 2: Configure AVPlayer for in-app messages
 
 In-app messages can play videos natively with some lightweight developer work. By doing this, you have access to all the `AVPlayerVideoController` features, such as SharePlay. The in-app message used for this example is a subclassed `ABKInAppMessageModalViewController` that has a custom view to embed a native video player.
 
@@ -78,7 +78,7 @@ func configureVideoPlayer() {
 {% endtab %}
 {% endtabs %}
 
-#### Dashboard Configuration
+#### Dashboard configuration
 
 __Key-Value Pairs__: The video file must be set in the key-value pairs on the in-app message and cannot be attached to the media item itself. You can also add URL validity checking in `beforeInAppMesageDisplayed` as a guardrail before displaying the content.
 
@@ -88,7 +88,7 @@ __Triggering__: The in-app message should be eligible for all users with re-elig
 Be mindful of any other in-app messages triggered on session start that may conflict with each other.
 {% endalert %}
 
-### Step 3: Create Group Watching Activity
+### Step 3: Create group watching activity
 
 Create an object that conforms to the `GroupActivity` protocol. The object will be the metadata of the `GroupSession` shared throughout the SharePlay lifecycle. 
 
@@ -118,7 +118,7 @@ struct MediaItemActivity: GroupActivity {
 {% endtab %}
 {% endtabs %}
 
-#### Prepare To Play
+#### Prepare to play
 
 When you prepare to play the media item, each group activity has three states of `prepareForActivation()`:
 - `.activationDisabled` - viewing individually
@@ -129,7 +129,7 @@ When the state comes back as `activationPreferred`, that is your cue to activate
 
 ![SharePlay][1]{: style="border:0;"}
 
-### Step 4: Launch In-App Message From SharePlay API
+### Step 4: Launch in-app message from SharePlay API
 
 The `GroupActivities` API determines if there is a video present. If so, you should trigger the custom event to launch your SharePlay-able in-app message. The `CoordinationManager` is responsible for the state changes of SharePlay, such as if the user(s) leaves or joins the call. 
 
@@ -159,7 +159,7 @@ private func launchVideoPlayerIfNecessary() {
 {% endtab %}
 {% endtabs %}
 
-### Step 5: Leaving a Group Session on In-App Message Dismissal
+### Step 5: Leaving a group session on in-app message dismissal
 
 When the in-app message is dismissed is an appropriate time to leave the SharePlay session and discard the session object.
 
@@ -189,7 +189,7 @@ class CoordinationManager() {
 {% endtab %}
 {% endtabs %}
 
-### Configure SharePlay Button Visibility
+### Configure SharePlay button visibility
 
 It is best practice to dynamically hide or show any SharePlay indicator. Utilize the `isEligibleForGroupSession` variable to observe if the user is currently on a FaceTime call or not. If they happen to be on a FaceTime call, a button should be visible to share the video across the compatible devices in the chat. The first time the user initiates SharePlay, a prompt will appear on the original device to select the options. A subsequent prompt will then appear on the shared users' devices to engage in the content.
 

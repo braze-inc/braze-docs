@@ -9,7 +9,7 @@ page_order: 1
 
 ---
 
-# Facebook Audience Export
+# Facebook Audience export
 
 Braze provides the ability to manually export your users from the Braze Segments page. This is a one-time, static audience export and will only create new Facebook Custom Audiences.
 
@@ -63,7 +63,7 @@ For customers that have previously undergone the Facebook App Review process for
 <br><br>The new Facebook oAuth configuration will also apply to [Facebook exports via Segments]({{site.baseurl}}/partners/message_orchestration/additional_channels/retargeting/facebook/#prerequisites). 
 {% endalert %}
 
-### Exporting Your Users into Facebook
+### Exporting your users into Facebook
 
 Braze's Facebook Audience Export is accessible through the Segments page. Click on the gear next to the segment that you'd like to export. Then click on __Export as Facebook Audience__.
 

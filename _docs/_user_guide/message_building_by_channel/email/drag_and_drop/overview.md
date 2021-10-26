@@ -11,24 +11,27 @@ tool:
   
 ---
 
-# Drag & Drop Editor Overview
+# Drag & Drop Editor overview
 
 {% include video.html id="4dTrkxe8DLo" align="right" %}
 
 > With Braze Email, you can create completely custom and personalized email messages in either Campaigns or Canvas using a drag & drop editing experience.
 
-## Create a Drag & Drop Email
+## Create a drag & drop email
 
-### Step 1: Select Editing Experience
+### Step 1: Select editing experience
+
 Navigate to the email wizard and select your editing experience. Two editing options will be shown:
+
 - Select the __Drag & Drop Editor__ to select templates created using the Drag & Drop Editor.
 - Select the HTML Code Editor to use the existing editors and see your existing email templates.<br><br>![dnd_editor_workflow][6]{: style="max-width:80%;"}
 
-### Step 2: Build out Email Structure
+### Step 2: Build out email structure
+
 1. __Assemble Rows__ - Drag & drop different row configurations to design the structure of your email. New configurations must be dragged to the beginning or end of an existing section.
 2. __Add Content__ - Add desired content types to the various row components.<br><br>![Drag & Drop Email GIF][1]
 
-## Editing Experience
+## Editing experience
 
 The drag & drop editing experience is broken out into 3 sections: __Sending Settings__, __Content__, and __Preview & Test__.
 
@@ -67,27 +70,27 @@ Note: This user may or may not be part of your segmentation criteria. Segmentati
 
 _Note: Inbox Vision is currently unavailable during this testing phase and will be made available in the future_
 
-## Creative Details 
+## Creative details 
 
-### Auto Width Images
+### Auto width images
 
 Images added to your email will automatically be set to __auto width__. To adjust this setting, toggle off __auto width__ and adjust the width percentage as needed. 
 
 ![Drag & Drop Email PNG][2]
 
-### Color Layering
+### Color layering
 
 The Drag & Drop Editor allows you to change the color of the email background, content area, and different content components. The color ordering from front to back is content component color, content area background color, and background color. 
 
 ![Drag & Drop Email PNG][3]
 
-### Content Padding
+### Content padding
 
 ![Drag & Drop Email PNG][4]{: style="float:right;max-width:25%;margin-left:15px;"}
 
 To adjust padding, scroll down to __Block Options__, and toggle __More Options__. This will allow you to fine-tune your padding to get your email looking just right!
 <br><br>
-### Adding Liquid 
+### Adding liquid 
 
 ![Drag & Drop Email PNG][5]{: style="float:right;max-width:25%;margin-left:15px;"}
 
