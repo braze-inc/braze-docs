@@ -9,13 +9,13 @@ description: "This reference article shows how to set custom attributes in your 
 
 ---
 
-# Setting Custom Attributes for Android/FireOS
+# Setting custom attributes for Android/FireOS
 
 Braze provides methods for assigning attributes to users. You'll be able to filter and segment your users according to these attributes on the dashboard.
 
 Before implementation, be sure to review examples of the segmentation options afforded by custom events vs. custom attributes vs purchase events in our [Analytics Overview][7], as well as our notes on [event naming conventions]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/event_naming_conventions/).
 
-## Assigning Default User Attributes
+## Assigning default user attributes
 
 To assign attributes to your users, call the `getCurrentUser()` method on your Braze instance to get a reference to the current user of your app. Once you have a reference to the current user, you can call methods to set predefined or custom attributes.
 
@@ -56,7 +56,7 @@ Braze.getInstance(context).currentUser?.setFirstName("first_name")
 {% endtab %}
 {% endtabs %}
 
-## Assigning Custom User Attributes
+## Assigning custom user attributes
 
 In addition to our predefined user attribute methods, Braze also provides custom attributes to track data from your applications. Braze custom attributes can be set with the following data types:
 
@@ -72,7 +72,7 @@ In addition to our predefined user attribute methods, Braze also provides custom
 
 Full method specifications for custom attributes can be found here within the [BrazeUser class within the Javadocs][2].
 
-### Setting Custom Attribute Values
+### Setting custom attribute values
 
 {% tabs local %}
 {% tab String %}
@@ -250,7 +250,7 @@ Braze.getInstance(context).currentUser?.removeFromCustomAttributeArray("your_att
 {% endtab %}
 {% endtabs %}
 
-### Unsetting a Custom Attribute
+### Unsetting a custom attribute
 
 Custom attributes can also be unset using the following method:
 
@@ -271,17 +271,17 @@ Braze.getInstance(context).currentUser?.unsetCustomUserAttribute("your_attribute
 {% endtab %}
 {% endtabs %}
 
-### Custom Attribute via the REST API
+### Custom attribute via the REST API
 
 You can also use our REST API to set user attributes. To do so refer to the [User API documentation][4].
 
-### Custom Attribute Length
+### Custom attribute length
 
 Custom attribute keys and values have a maximum length of 255 characters.  Longer strings will be truncated to 255 characters.
 
 Full class information can be found in the [javadocs][2].
 
-## Setting Up User Subscriptions
+## Setting up user subscriptions
 
 To set up a subscription for your users (either email or push), call the functions `setEmailNotificationSubscriptionType()`  or `setPushNotificationSubscriptionType()`, respectively. Both of these functions take the enum type 'NotificationSubscriptionType' as arguments. This type has three different states:
 
@@ -296,9 +296,9 @@ To set up a subscription for your users (either email or push), call the functio
 No explicit opt-in is required by Android to send users push notifications. When a user is registered for push, they are set to `SUBSCRIBED` rather than `OPTED_IN` by default. For more information on implementing subscriptions and explicit opt-ins, visit the topic in our [User Guide]({{site.baseurl}}/user_guide/message_building_by_channel/email/managing_user_subscriptions/#managing-user-subscriptions).
 {% endalert %}
 
-### Sample Code
+### Sample code
 
-#### Setting Email Subscriptions
+#### Setting email subscriptions
 
 {% tabs %}
 {% tab JAVA %}
@@ -317,7 +317,7 @@ Braze.getInstance(context).currentUser?.setEmailNotificationSubscriptionType(ema
 {% endtab %}
 {% endtabs %}
 
-#### Setting Push Notification Subscription
+#### Setting push notification subscription
 
 {% tabs %}
 {% tab JAVA %}

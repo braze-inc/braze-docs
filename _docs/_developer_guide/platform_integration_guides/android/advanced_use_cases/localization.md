@@ -15,7 +15,7 @@ Localization is supported within the Braze Android SDK. In addition to English, 
 
 If you are looking for a complete list of supported languages you may attribute to your users in their profiles, please see our [User Language List][1].
 
-## Languages Supported
+## Languages supported
 
 - Arabic
 - Burmese

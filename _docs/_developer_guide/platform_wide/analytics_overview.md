@@ -6,17 +6,17 @@ description: "This reference article covers user data collection including what 
 
 ---
 
-# User Data Collection
+# User data collection
 
 Before completing your Braze implementation, ensure that you have a conversation between your marketing team and your development team regarding your marketing goals. When deciding what you want to track, and how you want to track it with Braze, it's useful to consider these goals and work backward from there. Please reference our case of a [Taxi/Ride-Sharing App][16] at the end of this guide for an example of this process.
 
 This best practice guide will help you to understand exactly what Braze considers to be a "custom event" vs. a "custom attribute".
 
-## Automatically Collected Data
+## Automatically collected data
 
 The following events and attributes are captured and updated automatically by the Braze SDK as part of the Session Start and Session End data points, or by the Braze backend. You don't need to record them separately as custom events or custom attributes. If you wish to whitelist processes that block the default collection of certain data items (not suggested), check out our [SDK Primer]({{site.baseurl}}/developer_guide/platform_integration_guides/sdk_primer/).
 
-#### Usage Information
+#### Usage information
 - First Used App (Time)
 - Last Used App (Time)
 - Total Session Count (Number)
@@ -25,7 +25,7 @@ The following events and attributes are captured and updated automatically by th
 - Email Available (Boolean)
 - News Feed View Count (Number)
 
-#### Campaign Retargeting
+#### Campaign retargeting
 - Last Received Any Message (Time)
 - Last Received Email Campaign (Time)
 - Last Received Push Campaign (Time)
@@ -38,7 +38,7 @@ The following events and attributes are captured and updated automatically by th
 - Retarget Campaign
   - This filter allows you to target users based on whether or not they have opened, or clicked on a specific email, push, or in-app message in the past
 
-#### Device Information
+#### Device information
 - Location Available (Boolean)
 - Most Recent Location (if location permission is granted to your app)
 - Push Enabled (Boolean)
@@ -54,7 +54,7 @@ The following events and attributes are captured and updated automatically by th
 - Device Identifier
 - Uninstalled (Time and Boolean)
 
-## Custom Events
+## Custom events
 
 Custom events are actions taken by your users; they're best suited for tracking high-value user interactions with your application. Logging a custom event can trigger any number of follow-up campaigns with configurable delays, and enables the following segmentation filters around the recency and frequency of that event:
 
@@ -78,11 +78,11 @@ Braze notes the number of times these events have occurred as well as the last t
 
 >  [Incrementing custom attributes][10] can be used to keep a counter on a user action similar to a custom event. However, you will not be able to view custom attribute data in a time-series. User actions that do not need to be analyzed in time-series should be recorded via this method.
 
-### Custom Event Storage
+### Custom event storage
 
 All User Profile data (custom events, custom attribute, custom data) is stored as long as those profiles are active. Custom event properties are stored and available for Segmentation for thirty (30) days. If you'd like to leverage event properties for Segmentation, please contact your Braze account or customer success manager.
 
-### Custom Event Properties
+### Custom event properties
 
 With custom event properties, Braze allows you to set properties on custom events and purchases. These properties can then be used for further qualifying trigger conditions, increasing personalization in messaging, and generating more sophisticated analytics through raw data export. Property values can be string, number, boolean, or time objects. However, property values cannot be array objects.
 
@@ -96,17 +96,17 @@ Custom event properties can also be used for personalization within the messagin
 
 Custom event properties are designed to help you personalize your messaging or build granular action-based delivery campaigns. If you would like to create segments based on event property recency and frequency, please reach out to your Customer Success Manager, as this may incur additional data costs.
 
-## Custom Attributes
+## Custom attributes
 Custom attributes are best for storing attributes about your users, or information about low-value actions within your application. You should keep in mind that we don't store time-series information for custom attributes, so you're not going to get any graphs based upon them like the above example for custom events.
 
-### Custom Attribute Storage
+### Custom attribute storage
 
 All User Profile data (custom events, custom attribute, custom data) is stored as long as those profiles are active. Custom event properties are stored and available for Segmentation for thirty (30) days. If you'd like to leverage event properties for Segmentation, please contact your Braze account or customer success manager.
 
-### Custom Attribute Data Types
+### Custom attribute data types
 Custom attributes are extraordinarily flexible tools that allow for great targeting. The following data types may be stored as custom attributes:
 
-#### Strings (Alpha-Numeric Characters)
+#### Strings (alpha-numeric characters)
 String attributes are useful for storing user input, such as a favorite brand, a phone number, or a last search string within your application. String attributes can be up to 256 characters long.
 
 | Segmentation Options | Dropdown Filter | Input Options |
@@ -124,12 +124,12 @@ String attributes are useful for storing user input, such as a favorite brand, a
 {% endalert %}
 
 {% alert tip %}
-For more on how to use our RegEx filter, check out this documentation on [Perl compatible regular expressions (PCRE)](http://www.regextester.com/pregsyntax.html).
+For more on how to use our regular expressions filter, check out this documentation on [Perl compatible regular expressions (PCRE)](http://www.regextester.com/pregsyntax.html).
 <br>
-More resources on RegEx:
-- [RegEx with Braze]({{site.baseurl}}/user_guide/engagement_tools/segments/regex/)
-- [RegEx Debugger and Tester](https://regex101.com/)
-- [RegEx Tutorial](https://medium.com/factory-mind/regex-tutorial-a-simple-cheatsheet-by-examples-649dc1c3f285)
+More resources on regex:
+- [Regex with Braze]({{site.baseurl}}/user_guide/engagement_tools/segments/regex/)
+- [Regex Debugger and Tester](https://regex101.com/)
+- [Regex Tutorial](https://medium.com/factory-mind/regex-tutorial-a-simple-cheatsheet-by-examples-649dc1c3f285)
 {% endalert %}
 
 #### Arrays
@@ -195,7 +195,7 @@ Numeric attributes have a wide variety of use-cases. Incrementing number custom 
 | Check if the numeric attribute __does not exist__ on a user's profile | __DOES NOT EXIST__ | __N/A__ |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
 
-#### Booleans (True/False)
+#### Booleans (true/false)
 Boolean attributes are useful for storing subscription statuses, and other simple binary data about your users. The input options that we provide allow you to find users that have explicitly had a variable set to a true/false value in addition to those that don't have any record of that attribute recorded yet.
 
 | Segmentation Options | Dropdown Filter | Input Options |
@@ -205,7 +205,7 @@ Boolean attributes are useful for storing subscription statuses, and other simpl
 | Check if the boolean value __does not exist__ on a user's profile | __DOES NOT EXIST__  | __N/A__ |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
 
-## Purchase Events / Revenue Tracking
+## Purchase events / revenue tracking
 
 Using our purchase methods to record in-app purchases establishes the Life-time Value(LTV) for each individual user profile. This data is viewable within our revenue page in time-series.
 
@@ -225,7 +225,7 @@ Using our purchase methods to record in-app purchases establishes the Life-time 
 
 >  If you would like to segment on the number of times a specific purchase has occurred, you should also record that purchase individually as an [incrementing custom attribute][12].
 
-## Taxi/Ride-Sharing App Use Case {#example-case}
+## Taxi/ride-sharing app use case {#example-case}
 For this example case, let's consider a Taxi/Ride-Sharing app (such as Hailo, Lyft, etc.) that wants to decide what user data to collect. The questions and brainstorming process below are a great model for marketing and development teams to follow. By the end of this exercise, both teams should have a solid understanding of what custom events and attributes make sense to collect in order to help meet their goal.
 
 __Case Question #1: What is the goal?__
@@ -272,11 +272,11 @@ Adding these attributes would afford you the ability to send campaigns to users 
 2. Messaging users who give low driver ratings to get direct customer feedback to see why they didn't enjoy their rides.
 3. Use our [message templating and personalization features][17] to drag the unique promo code attribute into messaging directed at users.
 
-## Best Practices
+## Best practices
 
-### General Best Practices
+### General best practices
 
-#### Don’t Over-Segment Your Tracking
+#### Don’t over-segment your tracking
 
 - Being more generic will help you target more users and draw more useful divisions between user segments
 - For example, rather than capturing a separate event for watching each of 50 different movies, it would be more effective to capture simply watching a movie as an event
@@ -286,9 +286,9 @@ Adding these attributes would afford you the ability to send campaigns to users 
 
 >  Multiple user actions within an app can be labeled with the same custom event or attribute designation. This is useful when you want to track something generically such as "played a song" rather than recording each individual song within a music app as a separate and distinct event.
 
-### Development Best Practices
+### Development best practices
 
-#### Set User IDs for Every User
+#### Set user IDs for every user
 
 User IDs should be set for each of your users. These should be unchanging and accessible when a user opens the app. We __strongly recommend__ providing this identifier as it will allow you to:
 
@@ -310,26 +310,28 @@ These should not be used as user IDs:
 - Random number or session ID
 - Any non-unique ID
 
-#### Give Custom Events and Attributes Readable Names
+{% include sdk_auth_alert.md %}
+
+#### Give custom events and attributes readable names
 Imagine you're a marketer who begins using Braze a year or two after implementation, reading a dropdown list full of names like "usr_no_acct" without further context may be intimidating. Giving your event and attributes identifiable and readable names will make things easier for all users of your platform. Consider the following best-practices:
 
 - Do not begin a custom event with a numeric character. The drop-down list is sorted alphabetically and beginning with a numerical character makes it more difficult to segment by your filter of choice
 - Try not to use obscure abbreviations or technical jargon where possible
   - Example: `usr_ctry` may be fine as a variable name for a user's country within a piece of code, but the custom attribute ought to be sent to Braze as `user_country` at very least to lend some clarity to a marketer using the dashboard down the line.
 
-#### Only Log Attributes When They Change
+#### Only log attributes when they change
 We count every attribute passed to Braze as a data point, even if the passed attribute contains the same value as saved previously. Only logging data when it changes helps avoid redundant data point use and ensures a smoother experience by avoiding unnecessary API calls.
 
-#### Avoid Programmatically Generating Events
+#### Avoid programmatically generating events
 If you are constantly creating new event names it is going to be impossible to meaningfully segment your users. You are going to run into the same over-segmentation problems described above. Additionally, programmatic custom events run a risk of containing more than 255 characters which is a constraint placed upon events and attributes (see below). You should generally capture generic events (“Watched a Video” or “Read an Article”) instead of highly specific events such as (“Watched Gangnam Style” or “Read Article: Best 10 Lunch Spots in Midtown Manhattan”).
 
-### Technical Limitations & Constraints
+### Technical limitations and constraints
 Please be mindful of the following limitations and constraints when implementing custom events:
 
-#### Length Constraints
+#### Length constraints
 All custom events, custom attribute names (keys), and custom event string values of 255 characters or longer will be truncated. Ideally, these should be as short as possible to improve network and battery performance for your app. If possible limit them to 50 characters.
 
-#### Content Constraints
+#### Content constraints
 The following content will be trimmed programmatically from your attributes and events. Please take care not to use the following:
 
 - Leading and trailing whitespace
@@ -341,7 +343,7 @@ The following content will be trimmed programmatically from your attributes and 
 - Any invalid UTF-8 encoding values
   -  "My \x80 Field" would be condensed to "My Field"
 
-#### Reserved Keys
+#### Reserved keys
 Prior to iOS SDK version 3.0 and Android SDK version 2.0, the following keys are __RESERVED__ and __CANNOT__ be used as custom attributes:
 
 - `email`
@@ -368,12 +370,12 @@ Additionally, the following keys are reserved and cannot be used as custom event
 - `price`
 - `currency`
 
-#### Value Definitions
+#### Value cefinitions
 
 - Integer values are 64 bit
 - Decimals have 15 decimal digits by default
 
-### Parsing a Generic Name Field
+### Parsing a generic name field
 
 If only a single generic name field exists for a user (e.g. 'JohnDoe'), you can assign this entire title to your user's First Name attribute. Additionally, you can attempt to parse out both the first and last name of the user using spaces, but this latter method carries the potential risk of misnaming some of your users.
 

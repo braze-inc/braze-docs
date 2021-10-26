@@ -7,47 +7,47 @@ page_type: reference
 description: "This reference article covers the Targeting Users step of campaign creation."
 ---
 
-# Targeting Users
+# Targeting users
 
 Once you have [composed your campaign][1] and determined your [delivery schedule][2], you can set the target recipients of your campaign on the **Target Users** step. Only the users who match your defined criteria will receive the campaign. Keep in mind that exact segment membership is always calculated just before the message is sent.
 
-## Targeting Options
+## Targeting options
 
 Under the **Targeting Options** section, you'll find a few options for who you can send your campaign to.
 
-### Target Users in an Existing Segment {#existing-segment}
+### Target users in an existing segment {#existing-segment}
 
 To target members of a previously created segment, select one segment from the dropdown under **Target Users by Segment**.
 
-### Target Users in Multiple Existing Segments {#multiple-existing-segment}
+### Target users in multiple existing segments {#multiple-existing-segment}
 
 To target users that fall into multiple previously created segments, add multiple segments from the dropdown under **Target Users by Segment**. The resulting target audience will be users both in the first segment and the second segment and the third segment, etc.
 
-### Target Users in Multiple Existing Segments and Filters {#existing_segment_filter}
+### Target users in multiple existing segments and filters {#existing_segment_filter}
 
 You can also target users of one or more previously created segments that also fall under additional filters. After first selecting your segments, you can further refine your audience under the **Additional Filters** section. This is demonstrated in the screenshot below, which targets users that are in the Daily Active Users segment, Not Open Emails segment, and made a purchase less than 30 days ago.
 
 ![Multichannel Footer][25]
 
-### Target Users Without Segments {#without-segment}
+### Target users without segments {#without-segment}
 
 To target users without adding a segment, you can use a series of filters. This means you do not need to target a campaign at a pre-existing segment, you can make an ad hoc audience during campaign creation by just using the additional filters, and not selecting any segments under **Target Users By Segment**. This will allow you to skip segment creation when sending campaigns to one-off audiences.
 
 ![Target users with only filters][26]
 
-## Audience Summary
+## Audience summary
 
 Once you have added segments or filters to fine tune your audience, the **Audience Summary** will show an overview of who is in your target audience. Here you you can further limit your campaign audience by setting a maximum user cap, or [rate-limiting][3] delivery speed. For email and push notification campaigns, you can select which subscription and opt-in status to target.
 
 ![Audience Summary][27]
 
-## A/B Testing
+## A/B testing
 
 Under the **A/B Testing** section, you can set up a test to compare users’ responses to multiple versions of the same marketing campaign. These versions share similar marketing goals but differ in wording and style. The objective is to identify the version of the campaign that best accomplishes your marketing goals. 
 
 For more information and best practices, refer to [Multivariate & A/B Testing][4].
 
-## Audience Statistics
+## Audience statistics
 
 Braze provides detailed audience statistics of the targeted channels in the footer.
 

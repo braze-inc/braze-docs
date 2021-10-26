@@ -1,7 +1,7 @@
 ---
 nav_title: In-App Messages Not Displaying
 article_title: In-App Messages Not Displaying
-page_order: 2
+page_order: 1
 
 page_type: solution
 description: "This help article walks you through troubleshooting issues with in-app messages not displaying or rendering properly."
@@ -18,25 +18,25 @@ There are a number of approaches that you may try:
 * [Check Session Timeout](#session-timeout)
 * [Check Messaging Interval](#minimum-interval)
 
-## Event Triggers
+## Event triggers
 
 If the campaign is triggered by a session start or a custom event, you want to ensure that this event or session is happening frequently enough to trigger the message. Check this data on the [Overview][1] (for session data) or [Custom Events][2] pages:
 
 ![Custom Event Counts Statistic][14]
 
-## Message Impressions
+## Message impressions
 
 Customization of the in-app message UI or delivery mechanisms within the SDK may require your developers to utilize our methods to manually log in-app message impressions. Check with your developers to see if you use in-app message customization.
 
 
-## Run Tests
+## Run tests
 
 It is important to determine whether the trigger event is failing to occur, or the message itself is unable to display. To test, trigger the message using a different action (like a session start, or different custom event) and verify whether it displays. This will help isolate if this is potentially a data issue.
 
-Alternatively try using a different type of in-app message template or size of image. There are [specs][15] for in-app messages that must be followed. Sometimes, if an image is too large, it will prevent the in-app message from displaying.
+Alternatively try using a different type of in-app message template or size of image. There are [specifications for in-app messages][15] that must be followed. Sometimes, if an image is too large, it will prevent the in-app message from displaying.
 
 
-## Session Timeout
+## Session timeout
 
 Find out if you have customized your session timeout. By default, Braze retrieves in-app messages at the start of a session from the server.
 
@@ -46,7 +46,7 @@ If you have an extended the session timeout it will extended the period of time 
 * [Android][17]
 * [Web][18]
 
-## Minimum Interval
+## Minimum interval
 
 There is a minimum interval at which we’ll allow in-app messages to be consecutively triggered. You might be trying to trigger them too quickly. Review our documentation for more information on this:
 * [iOS][19]
@@ -56,6 +56,8 @@ There is a minimum interval at which we’ll allow in-app messages to be consecu
 These are customizable, however we have them in place to avoid over-messaging your users.
 
 Still need help? [Open a support ticket]({{site.baseurl}}/support_contact/).
+
+_Last updated on July 15, 2021_
 
 [1]: {{site.baseurl}}/user_guide/data_and_analytics/your_reports/understanding_your_app_usage_data/#understanding-your-app-usage-data
 [2]: {{site.baseurl}}/user_guide/data_and_analytics/configuring_reporting/#configuring-reporting

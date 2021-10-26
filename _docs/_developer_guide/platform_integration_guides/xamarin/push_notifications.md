@@ -10,7 +10,7 @@ description: "This article covers Android and FireOS push notification integrati
 channel: push 
 ---
 
-# Push Notifications
+# Push notifications
 
 ## Android
 
@@ -20,7 +20,7 @@ See [the Android integration instructions][11] for information on how to integra
 
 See [the iOS integration instructions][1] for information about setting up your application with push and storing your credentials on our server.
 
-### Requesting Push Permissions
+### Requesting push permissions
 
 Set up push permissions by adding the following code to the ```FinishedLaunching``` section of your ```AppDelegate.cs```:
 
@@ -33,7 +33,7 @@ UIApplication.SharedApplication.RegisterUserNotificationSettings(settings);
 
 >  If you’ve implemented a custom push opt-in prompt, make sure that you’re calling the above code EVERY time the app runs after they grant push permissions to your app. Apps need to reregister with APNs as device tokens can change arbitrarily.
 
-### Registering Push Tokens
+### Registering push tokens
 
 Register for your push tokens by adding the following code in the ```RegisteredForRemoteNotifications``` method of your ```AppDelegate.cs```:
 
@@ -42,7 +42,7 @@ Register for your push tokens by adding the following code in the ```RegisteredF
 Appboy.SharedInstance().RegisterDeviceToken (deviceToken);
 ```
 
-### Enabling Push Analytics
+### Enabling push analytics
 
 Enable open tracking on push notifications by adding the following code to the `DidReceiveRemoteNotification` method of your `AppDelegate.cs`:
 
@@ -54,7 +54,7 @@ public override void DidReceiveRemoteNotification (UIApplication application, NS
   }
 ```
 
-### Badge Count
+### Badge count
 
 If [badge counts are enabled][2], Braze will display a badge when a customer has unread notifications. By default, this number is 1. Braze will only clear the badge count when the app is opened directly from a Braze push notification. To clear the badge count, you can refer to the [Xamarin documentation][3] and use the following code:
 
@@ -62,8 +62,6 @@ If [badge counts are enabled][2], Braze will display a badge when a customer has
 // C#
 UIApplication.SharedApplication.ApplicationIconBadgeNumber = 0;
 ```
-
-
 
 [1]: {{site.baseurl}}/developer_guide/platform_integration_guides/ios/push_notifications/integration/
 [2]: {{site.baseurl}}/help/best_practices/utilizing_badge_count/#badge-count-with-braze

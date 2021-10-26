@@ -12,7 +12,7 @@ description: "This article contains release notes for September 2021."
 
 The Braze [Audience Sync to Google]({{site.baseurl}}/partners/canvas_steps/google_audience_sync/) integration enables brands to extend the reach of their cross-channel customer journeys to Google Search, Google Shopping, Gmail, YouTube, and Google Display. Using your first-party customer data, you can securely deliver ads based upon dynamic behavioral triggers, segmentation, and more. Any criteria you'd typically use to trigger a message (e.g., push, email, SMS, etc.) as part of a Braze Canvas can be used to trigger an ad to that user via Google's Customer Match.
 
-## Best Practice iOS SDK Integration Guide
+## Best practice iOS SDK integration guide
 
 This optional [iOS integration SDK guide]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/initial_sdk_setup/ios_sdk_integration/) takes you on a step-by-step journey on setup best practices when first integrating the iOS SDK and its core components into your application. This guide will help you build a `BrazeManager.swift` helper file that will decouple any dependencies on the Braze iOS SDK from the rest of your production code, resulting in one `import AppboyUI` in your entire application. This approach limits issues that arise from excessive SDK imports, making it easier to track, debug, and alter code. 
 
@@ -24,15 +24,15 @@ Predictive Purchases give marketers a powerful tool for identifying and messagin
 
 With Braze Email, you can create completely custom and personalized email messages in either Campaigns or Canvas using our new Drag & Drop editing experience. Users can now drag editor blocks into their emails, allowing more intuitive customization. To learn how to get started with the Drag & Drop Editor, visit our [documentation]({{site.baseurl}}/user_guide/message_building_by_channel/email/drag_and_drop/overview/). 
 
-## User Alias Import
+## User alias import
 
 To target users who don't have an `external_id`, you can import a list of users with user aliases. An alias serves as an alternative unique user identifier. It can be helpful if you are trying to market to anonymous users who haven't signed up or made an account with your app. Visit our [documentation]({{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/user_import/#import-with-user-alias) to learn more. 
 
-## iOS 15 Upgrade Guide
+## iOS 15 upgrade guide
 
 This [guide]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/ios_15/) outlines changes introduced in iOS 15 (WWDC21) and the required upgrade steps for your Braze iOS SDK integration.
 
-## Android 12 Upgrade Guide
+## Android 12 upgrade guide
 
 This [guide]({{site.baseurl}}/developer_guide/platform_integration_guides/android/android_12/) describes relevant changes introduced in Android 12 (2021) and the required upgrade steps for your Braze Android SDK integration.
 
@@ -42,11 +42,11 @@ A2P 10DLC refers to a system in the United States that allows businesses to send
 
 All customers who currently have and/or use US long codes to send to US customers must register their long codes for 10DLC. To read more about the specifics of 10DLC and why it's required, visit our dedicated [10DLC article]({{site.baseurl}}/user_guide/message_building_by_channel/sms/phone_numbers/10dlc/).
 
-## Two-Factor Authentication Reset
+## Two-factor authentication reset
 
 Users experiencing issues logging in via two-factor authentication can reach out to their company admins to reset their two-factor authentication. Visit our [documentation]({{site.baseurl}}/user_guide/administrative/company_settings/security_settings/#user-authetication-reset) to learn more. 
 
-## New Braze Partnerships
+## New Braze partnerships
 
 ### Hightouch - Workflow Automation
 

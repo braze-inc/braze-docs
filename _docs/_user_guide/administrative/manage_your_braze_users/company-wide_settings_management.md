@@ -7,9 +7,9 @@ description: "This reference article covers company-wide settings, like changing
 
 ---
 
-# Company Wide Settings Management
+# Company-wide settings management
 
-## Company Settings Page
+## Company Settings page
 
 The [Company Settings][1] page allows you to change the name of your company, set your time zone and request to delete your company.
 
@@ -17,7 +17,7 @@ The [Company Settings][1] page allows you to change the name of your company, se
 Only Admins and users with explicit permissions to manage Company Settings will see this page.
 {% endalert %}
 
-### Consequences of Switching Your Time Zone
+### Consequences of switching your time zone
 
 If you choose to switch your time zone, you may face a variety of consequences:
 
@@ -25,7 +25,7 @@ If you choose to switch your time zone, you may face a variety of consequences:
 - Any card scheduling that is not assigned to Local Time may be affected, with active cards potentially appearing as finished (or vice versa).
 - Segmentation filters of the form "Has done X before/after `Date`" will have the time adjusted because the initial date will now be localized in Pacific Time.
 
-### Notification Preferences
+### Notification preferences
 
 The Notification Preferences Page is where you can configure who (if anyone) receives notifications about your company. You can configure who should receive notifications regarding campaign and News Feed Card delivery, technical errors. You can also specify recipients for the weekly analytics report. For most notifications, Braze supports email and webhook channels.
 
@@ -46,7 +46,7 @@ The available notifications are in the table below:
 | Weekly Analytics Report             | Sends a summary of the past week's app group activity to recipients every Monday. Recipients receive a summary for each app group that they belong to.  | No              |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
 
-### Slack Incoming Webhook Integration
+### Slack incoming webhook integration
 
 Slack has an incoming webhook app that [allows messages to be posted from external sources into Slack][62]. To get started, open the [incoming webhook app][67].
 
@@ -62,13 +62,13 @@ Slack has an incoming webhook app that [allows messages to be posted from extern
 
 That's it! You should start receiving notifications about your company to this Slack channel.
 
-### Weekly Analytics Reporting
+### Weekly analytics reporting
 
 Braze optionally sends a weekly report via email to individuals you designate within your company every Monday at 5AM EST. The custom events to be included in the weekly report are selected on the **Custom Events** tab within the [Manage Settings][19] page of the dashboard. You may select up to 5 events to be included in your weekly report:
 
 ![Analytics Report Event Selection][22]
 
-### Additional Email Settings
+### Additional email settings
 
 You also can access the [Email Settings][8] tab to edit:
 
@@ -79,7 +79,7 @@ You also can access the [Email Settings][8] tab to edit:
 
 ![email settings][7]
 
-## List-Unsubscribe Settings
+## List-unsubscribe settings
 
 ![list_unsub_1] [57]{: style="float:right;max-width:60%;margin-left:15px;"}
 
@@ -87,19 +87,19 @@ Although most marketers add a one-click Unsubscribe link to their email, it is b
 
 For more information about list-unsubscribe, refer to [Email Settings][2]
 
-## Security Settings
+## Security settings
 
 The security settings page is where you can configure authentication rules, dashboard IP whitelisting, and two-factor authentication. These settings are located in the [Security Settings][83] tab of the **Company Settings** page.
 
 ![Security Settings][50]
 
-### Authentication Rules
+### Authentication rules
 
 Company administrators can configure authentication requirements for signing into Braze including setting password requirements (minimum password length, password complexity, password expiration), and enforcing Google authentication.  If the company administrator decides to set password authentication rules to become more strict, as soon as these rules are set, account users will be informed by email to change their passwords accordingly.
 
 ![Authentication Rules][51]
 
-### Dashboard IP Whitelisting
+### Dashboard IP whitelisting
 
 Your team can add a whitelist of specific IP addresses, ranges and subnets from which users can log in to your company's Braze account.
 
@@ -109,11 +109,11 @@ For more information on CIDR notation see [RFC 4632][84].
 
 ![Dashboard IP Whitelisting][52]
 
-### Two-Factor Authentication
+### Two-factor authentication
 
 Two-factor authentication adds an extra layer of identity verification upon login. By enabling two-factor authentication, Braze will require two methods of verification to log in to your Braze account: your password and your mobile phone.  Braze uses [Authy][56], a two-factor authentication service, to help secure your account.
 
-#### Two-Factory Authentication Authy Set Up Overview
+#### Two-factor authentication Authy set up overview
 1. Download the Authy App.
 2. Navigate to Two-Factor Authentication under Account Settings and enter your phone number.
 3. There will be a notification sent to the device instructing to open Authy to obtain the code for Braze.

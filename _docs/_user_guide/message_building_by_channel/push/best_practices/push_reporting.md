@@ -9,7 +9,7 @@ tool: Reports
 
 ---
 
-# Push Reporting
+# Push reporting
 
 The Braze SDK provides you with a detailed report of each of your push campaigns. Navigate to the **Campaigns** tab on your dashboard and select your desired campaign to open the **Details** tab, as shown below:
 
@@ -26,9 +26,9 @@ On this page, you will be able to comprehensively view and analyze the success o
 
 > Delivery of notifications is a “best effort” by APNs. It is not intended to deliver data to your app, only to notify the user that there is new data available. The important distinction is that we will display how many messages we successfully delivered to APNs, not necessarily how many APNs successfully delivered to devices.
 
-## Bounced Push Notifications
+## Bounced push notifications
 
-### Apple Push Notification Service
+### Apple push notification service
 
 Bounces occur in the APNs when a push notification attempts delivery to a device that does not have the intended app installed. APNs also has the right to change tokens for devices arbitrarily. If you attempt to send to a user’s device in which their push token has changed in between when we previously registered their token (i.e. at the beginning of each session when we register a user for a push token) and the time of send, this would cause a bounce.
 
@@ -38,7 +38,7 @@ Push notifications that expire before delivery are not considered as failed and 
 
 ### Firebase Cloud Messaging
 
-FCM bounces could occur in three cases:
+Firebase Cloud Messaging (FCM) bounces could occur in three cases:
 
 - **Uninstalled Applications**
 

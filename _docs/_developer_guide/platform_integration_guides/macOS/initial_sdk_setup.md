@@ -8,7 +8,7 @@ description: "This page provides resources for initial SDK setup steps on macOS.
 
 ---
 
-# Initial SDK Setup
+# Initial SDK setup
 
 As of version [3.32.0][1], the Braze SDK supports macOS for apps using [Mac Catalyst][2] when integrating through Swift Package Manager. Currently, the SDK does not support Mac Catalyst when using Cocoapods or Carthage.
 
@@ -18,7 +18,7 @@ To build your app with Mac Catalyst, please reference <a href="https://developer
 
 Once your app supports Catalyst, follow [these instructions to use Swift Package Manager][3] to import the Braze SDK into your app.
 
-## Supported Features
+## Supported features
 
 Braze supports push notifications and location features when running on Mac Catalyst. To integrate push in your Catalyst app, follow the [iOS SDK instructions here][4]. For enabling automatic location collection, follow the [setup instructions here][5].
 

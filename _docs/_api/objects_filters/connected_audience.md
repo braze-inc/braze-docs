@@ -7,7 +7,7 @@ description: "This article explains the different components of the Connected Au
 
 ---
 
-# Connected Audience Object Specification
+# Connected audience object specification
 
 A Connected Audience Object is a selector that identifies the audience to send the message to. It is composed of either a single Connected Audience Filter or several Connected Audience Filters in a logical expression using either `AND` or `OR` operators.
 
@@ -30,11 +30,11 @@ Multiple filter example:
 }
 ```
 
-## Connected Audience Filters
+## Connected audience filters
 
 Combining multiple custom attribute filters will create a Connected Audience Filter, which will create a Connected Audience Filter when combined with `AND` and `OR` operators.
 
-### Custom Attribute Filter
+### Custom attribute filter
 
 This filter allows you to segment based on a user's custom attribute. These filters contain up to three fields:
 
@@ -60,12 +60,12 @@ The custom attribute's type determines the comparisons that are valid for a give
 | Time | `less_than_x_days_ago`, `greater_than_x_days_ago`, `less_than_x_days_in_the_future`, `greater_than_x_days_in_the_future`, `after`, `before`, `exists`, `does_not_exist` | 
 {: .reset-td-br-1 .reset-td-br-2}
 
-#### Attribute Comparison Caveats
+#### Attribute comparison caveats
 
-| `value` - The `value` is not required when using the `exists` or `does_not_exist` comparisons. `value` must be an ISO 8601 DateTime string when using the `before` and `after` comparisons.<br><br>`matches_regex` - When using the `matches_regex` comparison, the value passed must be a string. To read more about using RegEx with Braze, check out our [RegEx]({{site.baseurl}}/user_guide/engagement_tools/segments/regex/#regex-with-braze) and custom attribute [data type]({{site.baseurl}}/developer_guide/platform_wide/analytics_overview/#custom-attribute-data-types) documentation. |
+| `value` - The `value` is not required when using the `exists` or `does_not_exist` comparisons. `value` must be an ISO 8601 DateTime string when using the `before` and `after` comparisons.<br><br>`matches_regex` - When using the `matches_regex` comparison, the value passed must be a string. To read more about using regular expressions with Braze, check out our documentation on [Regex]({{site.baseurl}}/user_guide/engagement_tools/segments/regex/#regex-with-braze) and custom attribute [data types]({{site.baseurl}}/developer_guide/platform_wide/analytics_overview/#custom-attribute-data-types). |
 {: .reset-td-br-1}
 
-#### Custom Attribute Example
+#### Custom attribute example
 
 ```json
 {
@@ -95,11 +95,11 @@ The custom attribute's type determines the comparisons that are valid for a give
   }
 }
 ```
-### Push Subscription Filter
+### Push subscription filter
 
 This filter allows you to segment based on a user's push subscription status.
 
-#### Filter Body
+#### Filter body
 
 ```json
 {
@@ -116,11 +116,11 @@ This filter allows you to segment based on a user's push subscription status.
 | `is`, `is_not` | `opted_in`, `subscribed`, `unsubscribed` |
 {: .reset-td-br-1 .reset-td-br-2}
 
-### Email Subscription Filter
+### Email subscription filter
 
 This filter allows you to segment based on a user's email subscription status.
 
-#### Filter Body
+#### Filter body
 
 ```json
 {
@@ -137,11 +137,11 @@ This filter allows you to segment based on a user's email subscription status.
 | `is`, `is_not` | `opted_in`, `subscribed`, `unsubscribed` |
 {: .reset-td-br-1 .reset-td-br-2}
 
-### Last Used App Filter
+### Last used app filter
 
 This filter allows you to segment based on when was the last time the user used the App. These filters contain two fields:
 
-#### Filter Body
+#### Filter body
 ```json
 {
   "last_used_app":

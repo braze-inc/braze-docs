@@ -1,7 +1,7 @@
 ---
-nav_title: Why is my Campaign/Canvas Not Triggering?
-article_title: Resolving Untriggered Campaign or Canvas
-page_order: 4
+nav_title: Untriggered Campaign or Canvas
+article_title: Untriggered Campaign or Canvas
+page_order: 5
 
 page_type: solution
 description: "This help article walks you through steps to resolve issues with campaigns or Canvases not triggering as expected."
@@ -10,14 +10,14 @@ tool:
 - Canvas
 ---
 
-# Why Is My Campaign/Canvas Not Triggering?
+# Untriggered campaign or Canvas
 
 There are a number of reasons why you did not get the expected trigger behavior.
 
 The solution to the most common error, is to ensure that the campaign that you are triggering does not use the same trigger event in the segment.
 
 
-## Campaign Triggers
+## Campaign triggers
 
 Remember, if the user does not fall into the segment first, they will not receive the campaign even if they perform the trigger.
 
@@ -29,4 +29,4 @@ In short, avoid configuring an action-based campaign or Canvas with the same tri
 
 Still need help? [Open a support ticket]({{site.baseurl}}/support_contact/).
 
-
+_Last updated on August 5, 2021_

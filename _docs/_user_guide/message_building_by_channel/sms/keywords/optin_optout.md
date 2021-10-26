@@ -11,11 +11,11 @@ channel:
   - SMS
 ---
 
-# Opt-In/ Opt-Out Keywords
+# Opt-in and opt-out keywords
 
 Regulations require that there are responses to all opt-in, opt-out, and help/info keyword responses. Braze automatically processes the following _exact, single-word, case-insensitive_ messages, automatically updating the [Subscription Group state]({{site.baseurl}}/user_guide/message_building_by_channel/sms/sms_subscription_group/) for the user and their associated phone number on all inbound requests.
 
-## Keyword Overview
+## Keyword overview
 
 Braze will process the following keywords automatically and update the Subscription Group state for the phone number on all inbound requests. Note that these default keywords and responses may also be customized. 
 

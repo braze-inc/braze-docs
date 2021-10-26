@@ -8,11 +8,11 @@ channel: email
 
 ---
 
-# Email Services {#email-services}
+# Email services {#email-services}
 
 If you need additional support with your email program, we offer recurring and one-time services at an additional cost. For more information reach out to your Account Manager.
 
-## Premium Deliverability Services {#premium-deliverability-services}
+## Premium deliverability services {#premium-deliverability-services}
 
 We offer two tiers of recurring email support: Premium Deliverability Services and Deliverability Monitoring.
 

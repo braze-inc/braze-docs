@@ -15,7 +15,8 @@ channel:
 
 You can create a Content Card using the Braze platform using campaigns and Canvases.
 
-## Content Card Creation in Campaigns and Canvases
+## Content Card creation in campaigns and Canvases
+
 {% tabs %}
 {% tab Campaign %}
 __Build Your Message__
@@ -52,9 +53,9 @@ For more in-depth details on setting up and configuring your Canvas, check out o
 {% endtab %}
 {% endtabs %}
 
-## Step 1: Specify Your Message Types
+## Step 1: Specify your message types
 
-### Message Types
+### Message types
 
 Learn more about the expected behavior and look of each of these messages on our [Creative Details page]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards/creative_details/), or by clicking on the linked message types in the tables.
 
@@ -73,16 +74,15 @@ The Compose tab in the Campaign Wizard (located in the step wizard in Canvas) al
 
 ![Compose Content Card][24]
 
-The content here varies based on the Message Type chosen in the last step but may include any of the options below:
+The content here varies based on the Message Type chosen in the previous step but may include any of the options below:
 
 | Content | Options| Description |
 |---|---|---|
 |Language | See our [full list of available languages][18]. | Click __Add Languages__ and select your desired languages from the provided list. This will insert Liquid into your message. We recommend selecting your languages before writing your content so you can fill in your text where it belongs in the Liquid. |
+|Title & Message Text | We recommend clear and concise titles and message content. | Write anything you want. There are no limits, but the faster you can get your message across and get your customer clicking - the better! |
 |Image | Click __Add Image__ or use an image URL. | Where applicable, click __Include Image__ or __Upload Image__ and follow the presented instructions. Each message type and platform may have its own suggested proportions and requirements - be sure to check what those are before commissioning or making an image from scratch! <br> <br> Content Card message fields are limited to 2kb in total size, as noted in the section below. |
 |Pinning | A pinned card will display at the top of a user's feed and cannot be dismissed by the user. | If more than one card in a user's feed is pinned, the pinned cards will display in chronological order. Once a card has been sent, you can not update its pinned option retroactively. Changing this option after a campaign has been sent will only affect future sends. |
-|Expiration | Set the specific expiration date or the days until a Card expires. | Currently, Braze supports a maximum expiration time of __30 days__. <br> <br> All variants have identical expiration dates. |
 | On Click Behavior | For either Android, iOS, or Web: <br> __Redirect to Web URL__, __Deep Link into App__ or __None__. | When your customer clicks on a presented link in the card, your link can either lead them deeper into your app or to another site. |
-|Title & Message Text | We recommend clear and concise titles and message content. | Write anything you want. There are no limits, but the faster you can get your message across and get your customer clicking - the better! |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
 
 {% alert warning %}
@@ -95,30 +95,34 @@ Each user is eligible to receive up to 100 non-expired and non-dismissed Content
 
 {% endalert %}
 
-## Step 3: Configure Additional Settings
+## Step 3: Configure additional settings
 
 Add [key-value pairs][19] to your message, if needed.
 
 You can use key-value pairs to create categories for your Cards, create multiple Content Card Feeds ([Android]({{site.baseurl}}/developer_guide/platform_integration_guides/android/content_cards/multiple_feeds/), [Web]({{site.baseurl}}/developer_guide/platform_integration_guides/web/content_cards/multiple_feeds/), [iOS]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/content_cards/multiple_feeds/), and customize how Cards are sorted.
 
-## Step 4: Build the Remainder of Your Campaign or Canvas.
+## Step 4: Build the remainder of your campaign or Canvas
 
 {% tabs %}
 {% tab Campaign %}
 
 Build the remainder of your campaign; see the sections below for further details on how to best utilize our tools to build Content Cards.
 
-#### Choose Delivery Schedule or Trigger
+#### Choose delivery schedule or trigger
+
 - Content Cards can be delivered based on a scheduled time, an action, or based on an API trigger.
 - You can also set the campaign's duration and Quiet Hours in this step.
-- __Frequency Capping does not apply to Content Cards.__
+- Determine the Content Card's expiration. Set a specific expiration date or the days until a Card expires, up to 30 days. All variants have identical expiration dates.
+- Frequency Capping does not apply to Content Cards.
 
-#### Choose Target Segment
+#### Choose target segment
+
 - Next, you need to choose the target segment from the dropdown menu.
 - You'll automatically be given a snapshot of what that approximate segment population looks like right now.
 - Keep in mind that exact segment membership is always calculated just before the message is sent.
 
-#### Choose Conversion Events
+#### Choose conversion events
+
 - Braze allows you to track how often users perform specific actions (i.e., conversion events) after receiving a campaign.
 - You have the option of allowing up to a 30-day window during which a conversion will be counted if the user takes the specified action.
 
@@ -134,13 +138,16 @@ Once a Content Card is launched, it cannot be edited. It can only be stopped fro
 
 Complete the remaining sections of your Canvas step; see the sections below for further details on how to best utilize our tools to build Content Cards. After you have created and configured your step, check out our [Canvas Documentation]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/create_a_canvas/#step-3-build-your-canvas) for further details on how build out the rest of your Canvas, implement multivariate testing and Intelligent selection, and more.
 
-#### Choose Step Schedule
+#### Choose step schedule
+
 - Content Cards can be delivered based on a scheduled time or Action in Canvas
 
-#### Choose Audience
+#### Choose audience
+
 - Next, you need to adjust Audience Options for this step. Here, you can further refine the recipients of this step by specifying segments and adding additional filters. Audience options will be checked after the delay, at the time messages are sent.
 
-#### Choose Advancement Behavior
+#### Choose advancement behavior
+
 - Lastly, select your Advancement behavior for this step. Here you can choose to either "Advance when Message Sent" that advances your users to the next steps when the Content Card is sent, or "Immediately Advance Audience" that advances users when either the Content Card is sent, or the Content Card was not sent because it got aborted. 
 - To read more about Canvas Advancement Behavior, check out of [Canvas Documentation]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/advancement/?redirected=true).
 
@@ -149,9 +156,10 @@ After you've finished building out your Canvas Step, review its details and [tes
 {% endtab %}
 {% endtabs %}
 
-## Things to Know
+## Things to know
 
-### Capabilities Not Yet Supported
+### Capabilities not yet supported
+
 The following capabilities are not yet supported for Content Cards:
 - Vouchers
 - Frequency Capping
@@ -159,7 +167,7 @@ The following capabilities are not yet supported for Content Cards:
 - Post-launch Edits
 
 
-### Sending Behavior
+### Sending behavior
 
 Once Content Cards have been sent, similar to emails, they sit waiting in an "inbox" ready to be delivered to the user. Once content is pulled into the Content Card (at time of displaying), the content cannot be changed during its lifespan. This applies even if you are calling an API through Connected Content, and the data from the endpoint changes; this data will not get updated. It can only be stopped from sending to new users and removed from users' feeds. If you modify a campaign, only __future__ cards that are sent will have the update. 
 
@@ -167,7 +175,7 @@ If you need to remove old cards, you must stop the campaign to do so. This can b
 
 ![Content Card][25]
 
-### Card Removal Events {#action-based-card-removal}
+### Card removal events {#action-based-card-removal}
 
 Some Content Cards are only relevant up until a user performs some action. For example, a card nudging users to activate their account shouldn't be shown once the user completes that onboarding task.
 
@@ -179,7 +187,7 @@ You can specify multiple custom events and purchases that should remove a card f
 
 ![Content Card Removal Event]({% image_buster /assets/img/content_cards/content_card_removal_event.png %})
 
-### Updating Already Sent Cards
+### Updating already sent cards
 
 If you find you need to make changes to cards that have already been sent:
 
@@ -190,5 +198,5 @@ If you find you need to make changes to cards that have already been sent:
 
 [18]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/advanced_use_cases/localization/#languages-supported
 [19]: {{site.baseurl}}/user_guide/personalization_and_dynamic_content/key_value_pairs/
-[24]: {% image_buster /assets/img/compose-cc.gif %}
+[24]: {% image_buster /assets/img/content_card_compose.png %}
 [25]: {% image_buster /assets/img/cc_remove.png %}

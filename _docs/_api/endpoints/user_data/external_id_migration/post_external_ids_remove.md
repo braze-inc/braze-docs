@@ -9,7 +9,7 @@ description: "This article outlines details about the external IDs Remove endpoi
 
 ---
 {% api %}
-# External ID Remove
+# External ID remove
 {% apimethod post %}
 /users/external_ids/remove
 {% endapimethod %}
@@ -26,7 +26,7 @@ You will need to create a new [API key]({{site.baseurl}}/api/api_key/) with perm
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#e16b5340-5f44-42b6-9033-2398faf8908e {% endapiref %}
 
-## Request Body
+## Request body
 
 ```
 Content-Type: application/json
@@ -39,14 +39,14 @@ Authorization: Bearer YOUR-REST-API-KEY
 }
 ```
 
-### Request Parameters
+### Request parameters
 
 | Parameter | Required | Data Type | Description |
 | --------- | ---------| --------- | ----------- |
 | `external_ids` | Required | Array of strings | External identifiers for the users to remove. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
 
-## Request Example
+## Request example
 ```
 curl --location --request POST 'https://rest.iad-01.braze.com/users/external_ids/remove' \
 --header 'Content-Type: application/json' \

@@ -13,7 +13,7 @@ description: "This reference article covers Content Card implementation guidelin
 
 # Content Cards
 
-## Displaying Content Cards Natively {#unity-content-cards-native-ui}
+## Displaying Content Cards natively {#unity-content-cards-native-ui}
 
 You can display the default UI for Content Cards using the following call:
 
@@ -21,7 +21,7 @@ You can display the default UI for Content Cards using the following call:
 Appboy.AppboyBinding.DisplayContentCards();
 ```
 
-## Receiving Content Card Data in Unity
+## Receiving Content Card data in Unity
 
 You may register Unity Game Objects to be notified of incoming Content Cards. We recommend setting game object listeners from the Braze configuration editor.
 
@@ -35,7 +35,7 @@ Incoming `string` messages received in your Content Cards game object callback c
 
 Parsing Content Cards requires Json parsing, see the following example for details:
 
-##### Example Content Cards Callback
+##### Example Content Cards callback
 
 ```csharp
 void ExampleCallback(string message) {

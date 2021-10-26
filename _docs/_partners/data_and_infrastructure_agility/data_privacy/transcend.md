@@ -23,11 +23,11 @@ The Braze and Transcend partnership helps users automate privacy requests by orc
 | Braze API Key | Braze | You will need to create a new API key.<br><br>This can be created in the __Developer Console -> API Settings -> Create New API Key__ with __users.delete, users.alias.new, users.export.ids, email.unsubscribe, email.blacklist__ permissions. | This API key will be used when connecting the Braze data silo to the Transcend platform. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
 
-## Transcend and Braze Integration
+## Transcend and Braze integration
 
 Transcend allows you to programmatically access, erase, and opt users out of communication in the Braze platform in accordance with data privacy regulations.
 
-### Step 1: Setting up the Braze Integration
+### Step 1: Setting up the Braze integration
 To get started, log in to [Transcend](https://app.transcend.io/login).
 
 1. In the Transcend platform, navigate to __Data Map__ > __Add Data Silo__ > __Braze__ and select the __Connect__ button.
@@ -40,7 +40,7 @@ To get started, log in to [Transcend](https://app.transcend.io/login).
 If identifiers are not enabled correctly, Transcend may not be able to process requests for certain users.
 {% endalert %}
 
-### Step 2: Testing Requests
+### Step 2: Testing requests
 Transcend recommends testing requests across your Data Map before you start processing requests from end-users. To do this:
 
 1. Go to __Privacy Center__ and click __View your Privacy Center__.

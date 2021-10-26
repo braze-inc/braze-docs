@@ -7,11 +7,12 @@ page_type: reference
 description: "This reference article covers definitions, time zones, and examples of time-based functionalities for Canvas."
 
 ---
-# Time-Based Functionalities for Canvas
+
+# Time-based functionalities for Canvas
 
 > This reference article covers time-based functionalities for Canvas to assist with strategies, troubleshooting, and to answer common questions.
 
-## Schedule Delay
+## Schedule delay
 
 ### Send immediately
 
@@ -61,7 +62,7 @@ Canvas calculates the delay as `day of the week` + `calendar days`, then adds th
 
 ![Intelligent timing][5]
 
-## Global Frequency Capping
+## Global frequency capping
 
 | Definition | Time Zone |
 | --- | --- |

@@ -9,7 +9,7 @@ description: "This article outlines details about the Users by ID Braze endpoint
 
 ---
 {% api %}
-# Users by Identifier Endpoint
+# Users by identifier endpoint
 {% apimethod post %}
 /users/export/ids
 {% endapimethod %}
@@ -22,7 +22,7 @@ This endpoint allows you to export data from any user profile by specifying a fo
 Customers who onboard on or after August 16, 2021 will have a rate limit of 2,500 requests per minute on this endpoint.
 {% endalert %}
 
-## Request Body
+## Request body
 
 ```
 Content-Type: application/json
@@ -41,7 +41,7 @@ Authorization: Bearer YOUR-REST-API-KEY
 }
 ```
 
-## Request Parameters
+## Request parameters
 
 | Parameter | Required | Data Type | Description |
 |-----|-----|-----|-----|
@@ -54,7 +54,7 @@ Authorization: Bearer YOUR-REST-API-KEY
 |`fields_to_export` | Optional | Array of strings | Name of user data fields to export. Defaults to all if not provided. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
 
-## Example Request
+## Example request
 ```
 curl --location --request POST 'https://rest.iad-01.braze.com/users/export/ids' \
 --header 'Content-Type: application/json' \
@@ -73,7 +73,7 @@ curl --location --request POST 'https://rest.iad-01.braze.com/users/export/ids' 
 }'
 ```
 
-## Fields to Export
+## Fields to export
 
 The following is a list of valid `fields_to_export`. Using `fields_to_export` to minimize the data returned can improve response time of this API endpoint:
 
@@ -129,7 +129,7 @@ Authorization: Bearer YOUR-REST-API-KEY
 
 For an example of the data that is accessible via this endpoint see the example below.
 
-### Sample User Export File Output
+### Sample user export file output
 
 User export object (we will include the least data possible - if a field is missing from the object it should be assumed to be null, false, or empty):
 

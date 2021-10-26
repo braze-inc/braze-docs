@@ -10,19 +10,18 @@ channel:
 
 ---
 
-
-# Short and Long Codes
+# Short and long codes
 
 Short and long codes are the phone number from which you send messages to your users or customers. They can be 5 to 6-digit short codes, or 10-digit long codes. Each type of code offers specific benefits and all factors should be considered before choosing whether you want a short code, what type of short code you might want, in addition to the long code you will already be assigned.
 
-## Types of Sending Numbers
+## Types of sending numbers
 
 ![SMS Number Graph][3]
 
 {% tabs %}
 {% tab Short Codes %}
 
-#### Short Codes
+### Short codes
 
 A short code is a memorable 5-6 digit sequence that allows senders to send messages at more consistent rates than long codes. If you are sending several hundred messages a day from a long code, your messages run the risk of being marked as spam. This makes short codes perfect for high-volume time-sensitive sending.
 
@@ -38,7 +37,9 @@ A short code is a memorable 5-6 digit sequence that allows senders to send messa
 
 {% endtab %}
 {% tab Long Codes %}
-#### Long Codes
+
+### Long codes
+
 A long code is a standard phone number used to send and receive voice calls and SMS messages. Phone numbers are typically called “long codes” (10-digit numbers in many countries) when comparing them with SMS short codes (5-6 digit numbers).
 
 | Pros |
@@ -53,7 +54,8 @@ A long code is a standard phone number used to send and receive voice calls and 
 
 {% endtab %}
 {% tab Vanity Short Code %}
-#### Vanity Short Codes
+
+### Vanity short codes
 
 A vanity short code is a 5-6 digit phone number that is specifically selected by a brand. Vanity short codes are branded and easier for consumers to remember, though are typically more expensive. For example:
 - The NYC health department has a vanity short code of `692-692` which spells out NYC-NYC on a telephone keypad.
@@ -72,7 +74,8 @@ A vanity short code is a 5-6 digit phone number that is specifically selected by
 
 {% endtab %}
 {% tab Alphanumeric Sender ID %}
-#### Alphanumeric Sender ID
+
+### Alphanumeric sender id
 
 ![picture]({% image_buster /assets/img/sms/alphanumericsenderid.jpg %}){: style="float:right;max-width:30%;margin-left:15px;border: 0"}
 
@@ -88,7 +91,8 @@ Alphanumeric Sender IDs allow you to set your company name or brand as the Sende
 For more information on Alphanumeric Sender IDs, please reach out to your Customer Success Manager. 
 {% endtab %}
 {% tab Toll-Free Number %}
-#### SMS-Enabled Toll-Free Number
+
+### SMS-enabled toll-free number
 
 A toll-free telephone number, or a freephone number, is a telephone number that is billed for all arriving calls instead of incurring charges at the originating telephone subscriber. Toll-free numbers in the US and Canada are SMS-enabled, where subscribers are charged for incoming and outgoing texts.
 
@@ -107,13 +111,13 @@ Besides these differences, know that a brand will usually have one short code, b
 Wondering what shared short codes are all about? To learn more about why we recommend moving away from shared short codes, visit the topic in our [SMS FAQ]({{site.baseurl}}/user_guide/message_building_by_channel/sms/faqs/#what-are-shared-short-codes). 
 {% endalert %}
 
-## How Do I Get a Short Code?
+## Getting a short code
 
 Going through the short code application process can be a long process. However, it can be a worthwhile one! If you'd like a short code, reach out to your onboarding manager or other Braze representative and let them know. After you do, they'll ask for some basic information that will help you qualify, and apply for you. 
 
 Then, all there is to do is wait! Short codes can take up to 12 weeks to receive approval to start using your short code.
 
-### Short Code Application
+### Short code application
 
 While Braze is responsible for actually applying for the short code, there is some information that we need from you. We recommend reviewing these questions before you reach out to Braze. 
 
@@ -137,7 +141,7 @@ If you have your own short code, reach out to your Customer Success Manager duri
 
 ## Application-to-Person 10-Digit Long Codes (A2P 10DLC)
 
-Application-to-person 10-digit long codes (A2P 10DLC) refers to a system in the United States that allows businesses to send application-to-person (A2P) type messaging via a standard 10-digit long code (10DLC) phone number.
+Application-to-Person 10-Digit Long Codes (A2P 10DLC) refers to a system in the United States that allows businesses to send application-to-person (A2P) type messaging via a standard 10-digit long code (10DLC) phone number.
 
 10-digit long codes have traditionally been designed for person-to-person (P2P) traffic, causing businesses to be constrained by limited throughput and heightened filtering. This service helps alleviate those issues, improving overall message deliverability, allowing brands to send messages at scale (including links and calls to action), and helping further protect consumers from unwanted messages. 
 

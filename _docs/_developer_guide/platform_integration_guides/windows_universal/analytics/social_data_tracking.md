@@ -7,7 +7,7 @@ description: "This reference article covers how to deal with social data trackin
 
 ---
 
-# Social Data Tracking
+# Social data tracking
 
 Unlike the Braze iOS SDK, the Braze Windows SDK does not automatically collect Facebook and Twitter data. However, it's possible to add social media data to a Braze user's profile from the Windows SDK as well:
 
@@ -15,7 +15,7 @@ Unlike the Braze iOS SDK, the Braze Windows SDK does not automatically collect F
     - [Facebook Documentation][1] // [Twitter Documentation][2]
 - Initialize Facebook and Twitter User objects with social media data and pass them to Braze.
 
-## Social Network Data Constructors
+## Social network data constructors
 
 ```
 FacebookUser(

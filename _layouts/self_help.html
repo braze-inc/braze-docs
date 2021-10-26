@@ -5,7 +5,7 @@ hide_bottom_nav: true
 hide_breadcrumb: true
 ---
 
-
+ 
 
 {%- comment -%} Assigned variables first by page, then by layout {%- endcomment -%}
 {%- assign hide_nav = page.hide_nav -%}
@@ -42,56 +42,12 @@ hide_breadcrumb: true
 
     <div id="help-main">
 
-
     <h1> {{ page.help_top_header }} </h1>
+    <p>  {{ page.user_top_text }} </p>
 
-    <div id="help_step1">
-      <h3>STEP 1</h3>
-      <h4>
-        Check the Braze Status Monitor
-      </h4>
-
-
-      <a id="help_status-indicator" href="https://braze.statuspage.io" target="_blank">
-        <div id="help_status" class="help_info">
-              <div class="help_color-dot"></div>
-              <div class="help_status_description">Checking Status</div>
-        </div>
-      </a>
-
-      <script type="text/javascript">
-        function loadStatusPage() {
-          var lsp = document.createElement('script');
-          lsp.type = 'text/javascript';
-          lsp.async = true;
-          lsp.src = '//statuspage-production.s3.amazonaws.com/se-v2.js';
-          lsp.onload = function() {
-            if (typeof(StatusPage) !== "undefined") {
-              var sp = new StatusPage.page({page: '{{site.status_io_key}}'});
-              sp.status({
-                success: function (data) {
-                  var sd = document.getElementById('help_status-indicator');
-                  sd.getElementsByClassName('help_status_description')[0].textContent = data.status.description;
-                  sd.getElementsByClassName('help_color-dot')[0].className = "help_color-dot " + data.status.indicator;
-                }
-              });
-            }
-          };
-
-          var s = document.getElementsByTagName('script')[0];
-          s.parentNode.insertBefore(lsp, s);
-        };
-
-        window.addEventListener('load', loadStatusPage, false);
-      </script>
-
-    </div>
+    <div id="user-main">
 
     <div id="help_step2">
-      <h3>STEP 2</h3>
-      <h4>
-        Use Our Resources
-      </h4>
       <div id="help_list" >
       {%- for help_list in page.resources_list  -%}
         {%- if help_list.link -%}
@@ -116,21 +72,45 @@ hide_breadcrumb: true
     </div>
   </div>
 
-    <div id="help_search">
-      <h3>STEP 3</h3>
-      <h4>
-        Search for What You Need
-      </h4>
-      <form id="help-search-form"  action="{{site.baseurl}}/search/" method="get" class="form-inline">
-        <div class="input-group ">
-          <input type="text" class="form-control" id="help-menu_search"  name="q" placeholder="Search Braze documentation" aria-label="Search">
-          <button class="btn">
-              <i class="fa fa-search" aria-hidden="true"></i>
-          </button>
-        </div>
-    </form>
-    </div>
+    <div id="user_list" >
 
+      {%- for user_list in page.user_menu_list  -%}
+        {%- if user_list.link -%}
+        <a href="{{ user_list.link }}">
+          {%- endif %}
+      <div id="{{ user_list.name | handle }}" class="user_item">
+        <div class="user_img" style="background-color: {{ user_list.bg_color}}">
+        {%- if user_list.image -%}
+        <img src="{{site.baseurl}}{{ user_list.image}} " />
+        {%- endif -%}
+        </div>
+        <div class="user_info">
+          <div class="user_name">
+              {{ user_list.name }}
+          </div>
+          <div class="user_description">
+              {{ user_list.description }}
+          </div>
+        </div>
+      </div>
+        {%- if user_list.link -%}
+        </a>
+        {%- endif %}
+      {%- endfor -%}
+    </div>
+    <div id="user_bottom">
+        <div id="user_popular" class="user_info">
+          <div class="user_name">Popular Topics</div>
+            <div class="user_description">
+            {%- for user_list in page.popular_topic_list  -%}
+              <div>
+              <a href="{{ user_list.link }}">{{ user_list.name }}</a>
+              </div>
+            {%- endfor -%}
+          </div>
+
+        </div>
+    </div>
 
   </div>
 

@@ -8,15 +8,11 @@ channel:
 
 ---
 
-# Gmail Promotion Tool
+# Gmail Promotion tool
 
-Gmail is updating [the mobile Promotions tab][1] to allow marketers to send more information via annotations in a 'card' rather than just the subject line or pre-header information. Braze has built a tool to help you build the card from our product.
+Gmail has updated [the mobile Promotions tab][1] to allow marketers to send more information via annotations in a 'card' rather than just the subject line or pre-header information. Braze has built a tool to help you build the card from our product.
 
-{% alert tip %}
-Currently, this Gmail feature is only available in their app, but Gmail is working on making it available on the desktop, as well.  
-{% endalert %}
-
-## Building the Card with Braze
+## Building the card with Braze
 
 Building the card in Braze is easy!
 
@@ -34,8 +30,7 @@ The Promotions script will only appear if your email lands in the Gmail _Promoti
 
 {% endalert %}
 
-
-### Customize Your Card
+### Customize your card
 
 You can customize many variables for your card, which will map to the locations shown in the card layout below.
 
@@ -58,15 +53,15 @@ We recommend that you upload your logo and product image to the Braze Media Libr
 While you can use Liquid within this script, we strongly suggest that you test as much as possible to avoid an error.
 {% endalert %}
 
-### Best Practices
+### Best practices
 
 In addition to adhering to the following best practices recommended by Gmail, you can use their [Preview Your Annotations][5] tool to see what their cards look like.
 
-#### Product Image
+#### Product image
 
 Gmail has seen better results with strong imagery related to the email message. Gmail does not recommend using a text-only design, as this space was designed to bring that visual language, vital to email marketing, to the preview. Don't use images with cut-off text or repeat images in multiple campaigns.
 
-#### Discount Offer
+#### Discount offer
 
 Gmail does not suggest using sentences or phrases, such as 'You Can Buy 1 Get 1 Free or Discounts on All Shorts and Shirts', as it may clip, no longer draws the eye, and competes with the subject line. Again, this space should only be used for your messaging to engage your customers with your email; therefore, avoid any language around "Open this email now" or "Click here for deals". Do not repeat your subject line.
 

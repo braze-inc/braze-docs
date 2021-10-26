@@ -8,7 +8,7 @@ platform: iOS
 
 ---
 
-# Braze iOS SDK Integration Guide
+# Braze iOS SDK integration guide
 
 > This optional iOS integration guide takes you on a step-by-step journey on setup best practices when first integrating the iOS SDK and its core components into your application. This guide will help you build a `BrazeManager.swift` helper file that will decouple any dependencies on the Braze iOS SDK from the rest of your production code, resulting in one `import AppboyUI` in your entire application. This approach limits issues that arise from excessive SDK imports, making it easier to track, debug, and alter code. 
 
@@ -16,7 +16,7 @@ platform: iOS
 This guide assumes you have already [added the SDK]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/initial_sdk_setup/overview/) into your Xcode project.
 {% endalert %}
 
-## Integration Overview
+## Integration overview
 
 The following steps help you build a `BrazeManager` helper file that your production code calls into. This helper file will deal with all Braze-related dependencies by adding various extensions for the following integration topics listed below. Each topic will include horizontal tab steps and code snippets in both Swift and Objective-C. Please note that the Content Card and in-app message steps are not required for integration if you do not plan to utilize these channels in your application.
 
@@ -130,7 +130,7 @@ func application(_ application: UIApplication, didFinishLaunchingWithOptions lau
 {% endtab %}
 {% tab Step 2: Handle Appboy Initialization %}
 
-##### Handle Appboy Initialization in the AppDelegate.swift
+##### Handle Appboy initialization in the AppDelegate.swift
 Next, navigate back to the `AppDelegate.swift` file and add the following code snippet in the AppDelegate's `didFinishLaunchingWithOptions` method to handle the Appboy initialization from the `BrazeManager.swift` helper file. Remember, there is no need to add an `import AppboyUI` statement in the `AppDelegate.swift`.
 
 {% subtabs global %}
@@ -168,12 +168,12 @@ func application(
 Proceed to compile your code and run your application.<br><br>At this point, the SDK should be up and running. In your dashboard, observe that sessions are being logged before advancing any further.
 {% endalert %}
 
-### Push Notifications
+### Push notifications
 
 {% tabs local %}
 {% tab Step 1: Add Push Certificate %}
 
-##### Add Push Certificate
+##### Add push certificate
 
 Navigate to your existing app group in the Braze dashboard. Under __Push Notification Settings__ upload your push certificate file to your Braze dashboard and save it. <br><br>![Push Certificate]({% image_buster /assets/img/ios_sdk/ios_sdk2.png %}){: style="max-width:60%;"}
 
@@ -184,7 +184,7 @@ Navigate to your existing app group in the Braze dashboard. Under __Push Notific
 Don't miss the dedicated checkpoint at the end of this step!
 {% endalert %}
 
-##### Register for Push Notifications
+##### Register for push notifications
 
 Next, register for push notifications. This guide assumes you have [set up your push credentials correctly]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/push_notifications/integration/) in your Apple developer portal and Xcode project. 
 
@@ -245,11 +245,11 @@ Observe you are being prompted for push notifications before advancing any furth
 {% endtab %}
 {% tab Step 3: Forward Methods %}
 
-##### Forward Push Notification Methods
+##### Forward push notification methods
 
 Next, forward the system push notifications methods from `AppDelegate.swift` to `BrazeManager.swift` to be handled by the Braze iOS SDK.
 
-###### Step 1: Create Extension for Push Notificiation Code
+###### Step 1: Create extension for push notificiation code
 
 Create an extension for your push notification code in your `BrazeManager.swift` file so it reads in a more organized manner as to what purpose is being served in the helper file, like so:
 
@@ -285,10 +285,10 @@ extension BrazeManager {
 {% endsubtab %}
 {% endsubtabs %}
 
-###### Step 2: Support Remote Notifications
+###### Step 2: Support remote notifications
 In the __Signing & Capabilities__ tab, add __Background Modes__ support and select __Remote notificiations__ to begin your support of remote notifications originating from Braze.<br><br>![Signing & Capabilities]({% image_buster /assets/img/ios_sdk/ios_sdk3.png %})
 
-###### Step 3: Remote Notification Handling
+###### Step 3: Remote notification handling
 The Braze SDK can handle remote notifications that originate from Braze. Forward remote notifications to Braze; the SDK will automatically ignore push notifications that do not originate from Braze. Add the following method to your `BrazeManager.swift` file in the push notification extension.
 
 {% subtabs global %}
@@ -316,7 +316,7 @@ func application(
 {% endsubtab %}
 {% endsubtabs %}
 
-###### Step 4: Forward Notification Responses
+###### Step 4: Forward notification responses
 
 The Braze SDK can handle the response of push notifications that originate from Braze. Forward the response of the notifications to Braze; the SDK will automatically ignore responses from push notifications that do not originate from Braze. Add the following method to your `BrazeManager.swift` file:
 
@@ -356,12 +356,12 @@ didReceiveNotificationResponse:(UNNotificationResponse *)response
 Proceed to compile your code and run your application. <br><br>Try sending yourself a push notification from the Braze dashboard and observe that analytics are being logged from push notifications before advancing any further. 
 {% endalert %}
 
-### Access User Variables and Methods
+### Access user variables and methods
 
 {% tabs local %}
 {% tab Create User Variables and Methods %}
 
-##### Create User Variables and Methods
+##### Create user variables and methods
 
 Next, you will want easy access to the `ABKUser` variables and methods. Create an extension for your user code in the `BrazeManager.swift` file so it reads in a more organized manner as to what purpose is being served in the helper file, like so:
 
@@ -419,12 +419,12 @@ extension BrazeManager {
 Proceed to compile your code and run your application.<br><br>Try identifying users from a successful sign-in/sign-up. Be sure you have a solid understanding of what is and what is not an appropriate user identifier. <br><br>In your dashboard, observe that the user identifier is logged before advancing any further.
 {% endalert %} 
 
-### Log Analytics
+### Log analytics
 
 {% tabs local %}
 {% tab Step 1: Custom Events %}
 
-##### Create Log Custom Event Method
+##### Create log custom event method
 
 Based on the following Braze SDK `logCustomEvent` method, create a matching method. 
 
@@ -457,7 +457,7 @@ func logCustomEvent(_ eventName: String, withProperties properties: [AnyHashable
 {% endtab %}
 {% tab Step 2: Custom Attributes %}
 
-##### Create Log Custom Attributes Method 
+##### Create log custom attributes method 
 
 The SDK can log numerous types as custom attributes. There is no need to create helper methods for each value type that can be set. Instead, only expose one method that can filter down to the appropriate value.
 
@@ -522,7 +522,7 @@ func setCustomAttributeWithKey<T: Equatable>(_ key: String?, andValue value: T?)
 {% endtab %}
 {% tab Step 3: Purchases %}
 
-##### Create Log Purchase Method
+##### Create log purchase method
 
 Next, based on the following Braze SDK `logPurchase` method, create a matching method. 
 
@@ -562,7 +562,7 @@ String, withQuantity quantity: Int) {
 Proceed to compile your code and run your application. <br><br>Try logging custom events.<br><br>In your dashboard, observe that the custom events are logged before advancing any further. 
 {% endalert %}
 
-### In-App Messages
+### In-app messages
 
 {% tabs local %}
 {% tab Step 1: Conform to Delegate %}
@@ -612,7 +612,7 @@ func application(_ application: UIApplication, didFinishLaunchingWithOptions lau
 {% endtab %}
 {% tab Step 2: Add Delegate Methods %}
 
-##### Add Delegate Methods
+##### Add delegate methods
 Next, create an extension that conforms to the `ABKInAppMessageUIDelegate`.
 
 Add this snippet below the analytics section. Note that the `BrazeManager.swift` object is set as the delegate; this will be where the `BrazeManager.swift` file handles all the `ABKInAppMessageUIDelegate` methods. 
@@ -675,7 +675,7 @@ Proceed to compile your code and run your application. <br><br>Try sending yours
 The following Content Card section is not required for integration if you do not plan to utilize this channel in your application.
 {% endalert %}
 
-##### Create Content Card Variables and Methods
+##### Create Content Card variables and methods
 
 Enable your production code to display the Content Cards view controller without the need for unnecessary `import AppboyUI` statements. 
 
@@ -721,7 +721,7 @@ extension BrazeManager {
 Proceed to compile your code and run your application.<br><br>Try displaying the `ABKContentCardsTableViewController` in your application before advancing any further.
 {% endalert %}
 
-## Next Steps
+## Next steps
 
 Congratulations! You've completed this best practice integration guide! An example `BrazeManager` helper file can be found [here](https://github.com/braze-inc/braze-growth-shares-ios-demo-app/blob/master/Braze-Demo/BrazeManager.swift)
 

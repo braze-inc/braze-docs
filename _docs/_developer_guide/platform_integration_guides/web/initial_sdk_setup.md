@@ -8,13 +8,13 @@ description: "This article covers initial SDK setup for the Braze Web SDK."
 
 ---
 
-# Initial SDK Setup
+# Initial SDK setup
 
 The Braze Web SDK lets you collect analytics and display rich In-App Messages, Push, and Content Card messages to your web users.
 
 For a complete technical reference, please see our [JavaScript Documentation][9].
 
-## Step 1:  Install the Braze Library
+## Step 1: Install the Braze library
 
 There are three easy ways to integrate the Web SDK, to include analytics and messaging components on your site. Be sure to view our [Push Integration Guide][16] if you plan to use Web Push features. 
 
@@ -40,7 +40,7 @@ import appboy from "@braze/web-sdk";
 const appboy = require("@braze/web-sdk");
 ```
 
-### Option 2: Google Tag Manager {#install-gtm}
+### Option 2: Google tag manager {#install-gtm}
 
 The Braze Web SDK can be quickly installed from the Google Tag Manager Template Library. Two tags are supported:
 
@@ -90,7 +90,7 @@ For all other JavaScript methods, please see our complete [JavaScript Reference 
 Anonymous users on mobile or web devices may be counted towards your [MAU]({{site.baseurl}}/user_guide/data_and_analytics/your_reports/understanding_your_app_usage_data/#monthly-active-users). As a result, you may want to conditionally load or initialize the SDK to exclude these users from your MAU count.
 {% endalert %}
 
-## Step 3: (Optional) Web Push
+## Step 3: Web push (optional)
 
 To use Web Push Notifications, additional setup is required. 
 
@@ -124,9 +124,9 @@ You can keep up-to-date with our latest release [following our release feed](htt
 
 These two files must be updated in coordination with each other to ensure proper functionality.
 
-## Alternative Integration Methods
+## Alternative integration methods
 
-### AMD Module Loader
+### AMD module loader
 If you are using Google Tag Manager alongside an AMD module loader such as RequireJS to load Braze's SDK you will need to use the RequireJS-compatible integration snippet in your `<head>` tag.
 
 For further instruction on this please see the appropriate section of our [Braze Web SDK Github Repository][2].
@@ -137,7 +137,7 @@ Tealium iQ offers a basic turnkey Braze integration. To configure the integratio
 
 For more details, or in-depth Tealium configuration support, check out our [integration documentation]({{site.baseurl}}/partners/data_and_infrastructure_agility/customer_data_platform/tealium/#about-tealium) or reach out to your Tealium Account Manager.
 
-### Other Tag Managers
+### Other tag managers
 
 Braze may also be compatible with other tag management solutions by following our integration instructions within a custom HTML tag. Please reach out to a Braze representative if you need help evaluating these solutions.
 

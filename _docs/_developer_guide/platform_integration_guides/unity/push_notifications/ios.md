@@ -11,9 +11,9 @@ description: "This reference article covers iOS push notification integration fo
 
 ---
 
-# Push Notifications
+# Push notifications
 
-## Step 1: Choose Automatic or Manual Push Integration
+## Step 1: Choose automatic or manual push integration
 
 Braze provides a native Unity solution for automating iOS push integrations.
 
@@ -21,13 +21,13 @@ Braze provides a native Unity solution for automating iOS push integrations.
 - If you are transitioning from a manual integration to an automated one, follow the instructions on [Transitioning from Manual to Automated Integration][2].
 - Our automatic push notification solution takes advantage of iOS 12's Provisional Authorization feature and is not available to use with the native push prompt pop-up.
 
-## Step 2 (Optional): Implement Automatic Push Integration
+## Step 2 (Optional): Implement automatic push integration
 
-### Configure Push Notifications
+### Configure push notifications
 
 Follow the instructions in our [iOS Push Notification Configuration documentation][8] to configure Braze using a `.p8` or `.p12` file.
 
-### Enable Automatic Push Integration
+### Enable automatic push integration
 
 In the Unity Editor, open the Braze Configuration Settings by navigating to "Braze" > "Braze Configuration".
 
@@ -37,13 +37,13 @@ Check "Integrate Push With Braze" to automatically register users for push notif
 
 ![Integrate Push With Braze][27]
 
-### (Optional): Enable Background Push
+### (Optional): Enable background push
 
 Check "Enable Background Push" if you would like to enable `background mode` for push notifications. This allows the system to wake your application from the `suspended` state when a push notification arrives, enabling your application to download content in response to push notifications. Checking this option is required for Braze's uninstall tracking functionality.
 
 ![Enabling Background Push][29]
 
-### (Optional): Disable Automatic Registration
+### (Optional): Disable automatic registration
 
 Users who have not yet opted-in to push notifications will automatically be authorized for push upon opening your application. To disable this feature and manually register users for push, check "Disable Automatic Push Registration".
 
@@ -53,11 +53,11 @@ Users who have not yet opted-in to push notifications will automatically be auth
 
 ![Disable Automatic Push Registration][28]
 
-## Step 3: Set Push Listeners
+## Step 3: Set push listeners
 
 If you would like to pass push notification payloads to Unity or take additional steps when a user receives a push notification, Braze provides the option of setting push notification listeners.
 
-### Push Received Listener
+### Push received listener
 
 The Push Received listener is fired when a user receives a push notification while they are actively using the application (i.e., the app is foregrounded). Set the push received listener in the Braze configuration editor.
 
@@ -65,7 +65,7 @@ The Push Received listener is fired when a user receives a push notification whi
 
 - If you need to configure your game object listener at runtime, use `AppboyBinding.ConfigureListener()` and specify `BrazeUnityMessageType.PUSH_RECEIVED`.
 
-### Push Opened Listener
+### Push opened listener
 
 The Push Opened listener is fired when a user launches the app by clicking on a push notification. To send the push payload to Unity, set the name of your Game Object and Push Opened listener callback method under the "Set Push Opened Listener" foldout, like so:
 
@@ -74,7 +74,7 @@ The Push Opened listener is fired when a user launches the app by clicking on a 
 
 - If you need to configure your game object listener at runtime, use `AppboyBinding.ConfigureListener()` and specify `BrazeUnityMessageType.PUSH_OPENED`.
 
-### Push Listener Implementation Example
+### Push listener implementation example
 
 The following example implements the `AppboyCallback` game object using a callback method name of `PushNotificationReceivedCallback` and `PushNotificationOpenedCallback` respectively.
 
@@ -106,13 +106,13 @@ public class MainMenu : MonoBehaviour {
 }
 ```
 
-## Advanced Features
+## Advanced features
 
-### Push Token Callback
+### Push token callback
 
 To receive a copy of device tokens that Braze receives from the OS, set a delegate using `AppboyBinding.SetPushTokenReceivedFromSystemDelegate()`.
 
-### Other Features
+### Other features
 
 To implement advanced features such as deep links, badge counts, and custom sounds, visit our [native iOS Push instructions][8].
 

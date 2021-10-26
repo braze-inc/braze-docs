@@ -8,7 +8,7 @@ tool: Campaigns
 
 ---
 
-# Trigger Properties Object Specification
+# Trigger properties object specification
 
 When using one of the endpoints for sending a campaign with API-Triggered Delivery, you may provide a map of keys and values to customize your message.
 

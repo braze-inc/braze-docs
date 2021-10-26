@@ -11,7 +11,7 @@ channel:
 
 ---
 
-# Adding a Badge
+# Adding a badge
 
 You can request the number of unread cards at any time by calling:
 

@@ -9,7 +9,7 @@ tool: Media
 
 ---
 
-# Drag & Drop Editor Blocks
+# Drag & Drop Editor blocks
 
 Editor blocks are the various blocks available in the Drag & Drop Editor under the 'Content' section.  This section includes a series of tiles that represent the different kinds of content you can use in your message. More will become available in the future.
 
@@ -29,11 +29,12 @@ To use them, drag one inside a column. It will auto-adjust to the column width. 
 {: .reset-td-br-1 .reset-td-br-2} 
 
 ## Block type properties
+
 Details for each block type are provided below
 
 ### Title
 
-| Properties | Description |
+| properties | description |
 |---|---|
 | `Title`  | Select the heading style.  H1, H2, or H3 are available only. | 
 |`Font Family`| The style to be used for your title|
@@ -48,7 +49,7 @@ Details for each block type are provided below
 
 ### Text
 
-| Properties | Description |
+| properties | description |
 |---|---|
 |`Text Color`| Modifies the color of the title|
 |`Link Color`| Modifies the color of the link|
@@ -58,7 +59,7 @@ Details for each block type are provided below
 
 ### Image
 
-| Properties | Description |
+| properties | description |
 |---|---|
 |`Auto Width`| Modifies the px of the image|
 |`Align`| Moves the image to be either left, center or right oriented|
@@ -75,7 +76,7 @@ Automatic image resizing picks the best size for the image based on a combinatio
 
 ### Button
 
-| Properties | Description |
+| properties | description |
 |---|---|
 |`Link Type`| The desired action when clicking the button.  Sets the appropriate link protocol |
 |`URL`| Dynamic based on the Link Type chosen.|
@@ -83,7 +84,7 @@ Automatic image resizing picks the best size for the image based on a combinatio
 
 ### Divider
 
-| Properties | Description |
+| properties | description |
 |---|---|
 |`Transparent`| If enabled, 'line' and 'width' options are removed. |
 |`Line `| The different line formats, whether dotted, spotted, or solid.  In addition, you can modify the thickness and color of the divider line|
@@ -93,15 +94,14 @@ Automatic image resizing picks the best size for the image based on a combinatio
 
 ### HTML
 
-| Properties | Description |
+| properties | description |
 |---|---|
 |`html editor`| Enter the raw HTML |
 {: .reset-td-br-1 .reset-td-br-2}
 
-
 ### Menu
 
-| Properties | Description |
+| properties | description |
 |---|---|
 |`Configure menu items`| Add a menu item  |
 |`Font Family`| The style to be used for your menu|
@@ -117,7 +117,7 @@ Automatic image resizing picks the best size for the image based on a combinatio
 |`All sides`| If 'item padding' is disabled, set a consistent padding number|
 {: .reset-td-br-1 .reset-td-br-2}
 
-### Add Liquid Personalization
+### Add Liquid personalization
 
 | Name | Description |
 |---|---|

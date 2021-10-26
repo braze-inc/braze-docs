@@ -29,7 +29,7 @@ Video Content | You can upload video files to Playable or provide video URLs fro
 
 You can upload video files into Playable or add videos by providing a URL of your video on Facebook, Instagram, Youtube, Twitter, TikTok, etc.
 
-### Step 2: Copy the Embed code from Playable
+### Step 2: Copy the embed code from Playable
 
 Playable generates an Embed code that plays the video within the inbox. When each viewer opens your email, the Embed code works with Playable servers to deliver the __best possible__ version of your video, depending on the email client, device, screen size, and network conditions.
 
@@ -38,7 +38,7 @@ Videos will autoplay in over 98% of inboxes, including iPhone Mail, Gmail, Apple
 Users of legacy Outlook for Windows will see a static image instead.
 {% endalert %}
 
-### Step 3: Paste the Embed code into Braze
+### Step 3: Paste the embed code into Braze
 
 Lastly, paste the code into your Braze email campaign, and then continue to design, test, and publish your email campaign as you normally would.
 

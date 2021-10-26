@@ -9,7 +9,7 @@ description: "This article outlines details about the List User's Subscription G
 
 ---
 {% api %}
-# Get Users' Subscription Groups
+# Get users' subscription groups
 {% apimethod get %}
 /subscription/user/status
 {% endapimethod %}
@@ -24,7 +24,7 @@ If you want to see examples or test this endpoint for __SMS Subscription Groups_
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#54bd7ca8-60d9-4654-aff5-406479f3c666 {% endapiref %}
 
-## Request Parameters
+## Request parameters
 
 | Parameter | Required | Data Type | Description |
 |---|---|---|---|
@@ -39,7 +39,7 @@ If you want to see examples or test this endpoint for __SMS Subscription Groups_
 If there are multiple users (multiple external ids) who share the same email address, all users will be returned as a separate user (even if they have the same email address or subscription group).
 {% endalert %}
 
-## Example Request 
+## Example request 
 
 {% tabs %}
 {% tab Multiple Users %}

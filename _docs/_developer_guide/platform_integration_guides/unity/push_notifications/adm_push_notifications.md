@@ -85,7 +85,7 @@ If your app does not have an `AndroidManifest.xml`, you can use the following as
 </manifest>
 ```
 
-## Step 3: Store Your ADM API Key
+## Step 3: Store your ADM API key
 
 - Save your ADM API key to a file named `api_key.txt` and save it in your project's [`Assets/Plugins/Android/assets`][54] folder.
 - For how to obtain an ADM API Key for your app, consult Amazon's documentation on [obtaining an ADM API Key][11].
@@ -95,9 +95,9 @@ If your app does not have an `AndroidManifest.xml`, you can use the following as
 
 The required ADM Jar file may be placed anywhere in your project according to the [Unity JAR documentation][53].
 
-## Step 5: Add Client Secret and Client ID to Braze Dashboard
+## Step 5: Add Client Secret and Client ID to Braze dashboard
 
-Lastly, you must add the Client Secret and Client ID you obtained in [Step 1][2] to the Braze dashboard's "Manage Settings" page as pictured below:
+Lastly, you must add the Client Secret and Client ID you obtained in [Step 1][2] to the Braze dashboard's __Manage Settings__ page as pictured below:
 
 ![FireOS Dashboard][34]
 

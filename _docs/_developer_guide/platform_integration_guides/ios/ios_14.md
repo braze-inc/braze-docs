@@ -8,7 +8,7 @@ hidden: true
 
 ---
 
-# iOS 14 SDK Upgrade Guide
+# iOS 14 SDK upgrade guide
 
 This guide describes Braze-related changes introduced in iOS 14 and the required upgrade steps for your Braze iOS SDK integration.
 
@@ -26,7 +26,7 @@ As of iOS 14.5, **IDFA** collection and [certain data sharing](https://developer
 - As of iOS 14.5, IDFA collection and [certain data sharing][5] require the new [AppTrackingTransparency](https://developer.apple.com/documentation/apptrackingtransparency) Framework permission prompt.
 - If you use the “Ad Tracking Enabled” field for campaign targeting or analytics, you will need to upgrade to Xcode 12 and use the new AppTrackingTransparency framework to report end users’ opt-in status.
 
-## Upgrade Summary
+## Upgrade summary
 
 <style>
 table th:nth-child(1),
@@ -47,9 +47,9 @@ table td {
 |IDFA Ad Tracking ID| **Upgrade to Xcode 12 and iOS SDK v3.27 may be required**|Sometime in 2021, Apple will begin to require a permission prompt for the collection of the IDFA. At that time, apps must upgrade to Xcode 12 and use the new `AppTrackingTransparency` framework in order to continue collecting IDFA. If you pass IDFA to the Braze SDK you must also upgrade to v3.27.0+ at that time.<br><br>Apps that do not use the new iOS 14 APIs will be unable to collect IDFA, and will instead collect a blank ID (`00000000-0000-0000-0000-000000000000`) once Apple begins to enforce this change in 2021. For more information on whether or not this applies to your app, [read the details below](#idfa).|
 
 
-## iOS 14 Behavior Changes
+## iOS 14 behavior changes
 
-### Approximate Location Permission
+### Approximate location permission
 
 ![Precise Location]({% image_buster /assets/img/ios/ios14-approximate-location.png %}){: style="float:right;max-width:45%;margin-left:15px;"}
 
@@ -61,7 +61,7 @@ When requesting location permission, users will now have a choice to provide the
 
 Geofences are [no longer supported by iOS][4] for users who choose the new  _approximate location_ permission. While no updates are required for your Braze SDK integration, you may need to adjust your [location-based marketing strategy](https://www.braze.com/blog/geofencing-geo-targeting-beaconing-when-to-use/) for campaigns that rely on geofences.
 
-#### Location Targeting {#location-tracking}
+#### Location targeting {#location-tracking}
 
 To continue to collect users' _last known location_ when _approximate location_ is granted, your app will need to upgrade to at least v3.26.1 of the Braze iOS SDK. Keep in mind that the location will be less precise, and based on our testing has been upwards of 12,000 meters (7+ miles). When using the _last known location_ targeting options in the Braze dashboard, be sure to increase the location's radius to account for new _approximate locations_ (we recommend at least a 1 mile/1.6km radius).
 
@@ -73,7 +73,7 @@ Note that if you are using XCode 12, you will need to upgrade to at least v3.27.
 
 For more information on Approximate Location, see Apple's [What's New In Location](https://developer.apple.com/videos/play/wwdc2020/10660/) WWDC Video.
 
-### IDFA and App Tracking Transparency {#idfa}
+### IDFA and app tracking transparency {#idfa}
 
 #### Overview
 
@@ -100,20 +100,20 @@ These IDFA updates will take effect once end-users upgrade their device to iOS 1
 
 Read more from Apple about their [Privacy Updates](https://developer.apple.com/app-store/user-privacy-and-data-use/) and the new [App Tracking Transparency framework](https://developer.apple.com/documentation/apptrackingtransparency).
 
-### Push Authorization {#push-provisional-auth}
+### Push authorization {#push-provisional-auth}
 
 {% alert important %}
 No changes to Provisional Push Authorization are included in iOS 14. In an earlier beta version of iOS 14, Apple introduced a change which has since been reverted back to prior behavior.
 {% endalert %}
 
 
-## iOS 14 New Features
+## iOS 14 new features
 
-### App Privacy and Data Collection Overview {#app-privacy}
+### App privacy and data collection overview {#app-privacy}
 
 Since Dec 8, 2020, all submissions to the App Store require additional steps to adhere to [Apple's new App Privacy standards](https://developer.apple.com/app-store/app-privacy-details/).
 
-#### Apple Developer Portal Questionnaire
+#### Apple developer portal questionnaire
 
 On the _Apple Developer Portal_:
 * You will be asked to fill out a questionnaire to describe how your app or third-party partners collect data.
@@ -123,12 +123,12 @@ On the _Apple Developer Portal_:
 
 As you fill out your questionnaire, please consult your legal team, and consider how your usage of Braze for the following fields may affect your disclosure requirements.
 
-#### Braze Default Data Collection
+#### Braze default data collection
 **Identifiers** - An anonymous device identifier is always collected by the Braze SDK. This is currently set to the device IDFV (identifier for vendor).
 
 **Usage Data** - This can include Braze’s session data, as well as any event or attribute collection you use to measure product interaction.
 
-#### Optional Data Collection
+#### Optional data collection
 Data you may optionally be collecting through your usage of Braze:
 
 **Location** - Both Approximate Location and Precise Location can optionally be collected by the Braze SDK. These feature are disabled by default.

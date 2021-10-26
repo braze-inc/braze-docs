@@ -17,7 +17,7 @@ channel:
 All customers who currently have and/or use US long codes to send to US customers are required to register their long codes for 10DLC; those who fail to do so will experience heavy filtering of all messages.
 {% endalert %}
 
-## Why It's Necessary
+## Why it's necessary
 
 10DLC service was created to specifically facilitate A2P messaging using long codes. Historically, long codes were meant for Person-to-Person (P2P) messaging, but when used for marketing reasons, they caused businesses to be constrained by limited throughput and heightened filtering. 
 
@@ -29,9 +29,10 @@ All customers who currently have and/or use US long codes to send to US customer
 
 Since 2019, carriers have begun adopting 10DLC for commercial messaging, with Verizon and AT&T currently supporting 10DLC, and we expect all major carriers to follow soon. While it may cause inconveniences in the short term, in the long term, customers will enjoy better deliverability rates while protecting their consumers from unwanted messages. 
 
-## What You Need to Know
+## What you need to know
 
 ### Costs 
+
 Registering with A2P 10DLC may include several types of fees:
 
 | Fee Type | Description |
@@ -44,9 +45,11 @@ Registering with A2P 10DLC may include several types of fees:
 Visit the Twilio 10DLC article to check out updated [fee estimates](https://support.twilio.com/hc/en-us/articles/1260803965530-What-pricing-and-fees-are-associated-with-the-A2P-10DLC-service-).
 
 ### Throughput
-Message throughput for your 10DLC depends on several factors, including brand trust score, daily message limits, and your messaging use cases.
 
-#### Brand Trust Score {#trust-score}
+Message throughput for your 10dlc depends on several factors, including brand trust score, daily message limits, and your messaging use cases.
+
+#### Brand trust score {#trust-score}
+
 The Campaign Registry (TCR) is a third-party agency that uses a reputation algorithm to review specific criteria relating to your company and assign a trust score that determines messaging throughput for each brand. This trust score will be assigned when a customer registers for US 10DLC messaging. The higher the trust score, the better the messages per second (MPS) you will experience. 
 
 |     | Trust Score | AT&T | T-Mobile | Verizon |
@@ -60,11 +63,11 @@ The Campaign Registry (TCR) is a third-party agency that uses a reputation algor
 Companies listed in the Russel 3000 Index will be granted a high throughput and brand trust score after 10DLC registration and review. 
 {% endalert %} 
 
-#### Daily Message Limits
+#### Daily message limits
 
 Daily limits range from 2,000 to 200,000 messages depending on your brand trust score and apply across all long codes. While high brand trust scores come with a throughput of 60 messages per second, any daily message limits set by the carrier will still apply. This means that short codes would be a better option if a brand's daily peak messages are higher than the imposed daily limit. 
 
-#### Messaging Use Cases
+#### Messaging use cases
 
 Throughput is also affected by the type of messaging use case you choose. Most customers will fall under the standard marketing or mixed marketing use case. Other less common use cases will be susceptible to differing throughput values.
 
@@ -114,6 +117,6 @@ Mixed/Marketing use cases can be registered for customers who want to send messa
 
 Visit the Twilio 10DLC article to check out updated [throughput estimates](https://support.twilio.com/hc/en-us/articles/1260803225669-Message-throughput-MPS-and-Trust-Scores-for-A2P-10DLC-in-the-US).
 
-## Next Steps
+## Next steps
 
 Customers who have not yet registered for 10DLC must work with their COM or CSM to register their long codes. __If customers fail to register their long codes, starting October 1, 2021, any A2P sender using long codes will experience heavy filtering of all messages.__ Reach out to your CSM to get started on your 10DLC registration. 

@@ -9,7 +9,7 @@ channel:
 
 ---
 
-# Refreshing the Feed
+# Refreshing the feed
 
 ## Refreshing Content Cards
 

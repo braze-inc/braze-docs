@@ -86,15 +86,15 @@ Braze sends push notifications to Amazon devices using [Amazon Device Messaging 
   </receiver>
   ```
 
-## Step 3: Store Your ADM API Key
+## Step 3: Store your ADM API key
 
 - Save your ADM API key to a file named `api_key.txt` and save it in your project's `assets` folder.
 - For how to obtain an ADM API Key for your app, consult Amazon's documentation on [obtaining an ADM API Key][11].
 - Amazon will not recognize your key if `api_key.txt` contains any white space characters, such as a trailing line break.
 
-## Step 4: Add Deep Links
+## Step 4: Add deep links
 
-#### Enabling Automatic Deep Link Opening
+#### Enabling automatic deep link opening
 
 To enable Braze to automatically open your app and any deep links when a push notification is clicked, set `com_appboy_handle_push_deep_links_automatically` to `true` in your `braze.xml`:
 
@@ -104,13 +104,13 @@ To enable Braze to automatically open your app and any deep links when a push no
 
 If you would like to custom handle deep links, you will need to create a `BroadcastReceiver` that listens for push received and opened intents from Braze. See our section on [Custom Handling Push Receipts and Opens][52] in the Android push documentation for more information.
 
-## Step 5: Add Client Secret and Client ID to Braze Dashboard
+## Step 5: Add Client Secret and Client ID to Braze dashboard
 
 Lastly, you must add the Client Secret and Client ID you obtained in [Step 1][2] to the Braze dashboard's "Manage Settings" page as pictured below:
 
 ![FireOS Dashboard][34]
 
-## Manual Push Registration
+## Manual push registration
 If you need to handle ADM registration yourself, you should do the following:
 
 - Within [braze.xml][12] add the following:
@@ -127,7 +127,7 @@ If you need to handle ADM registration yourself, you should do the following:
 
 >  Braze does not recommend using manual registration if possible.
 
-## ADM Extras
+## ADM extras
 
 Users may send custom key-value pairs with a Kindle push message as "extras" for ["Deep Linking"][29], tracking urls, etc.  Please note that unlike in Android push, Kindle push users may not use Braze reserved keys as keys when defining "extra" key-value pairs.
 

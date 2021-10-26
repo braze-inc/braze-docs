@@ -11,7 +11,7 @@ description: "This article explains the different components of Braze's Kindle a
 
 ---
 
-# Kindle and FireOS Push Object Specification
+# Kindle and FireOS push object specification
 
 ```json
 {

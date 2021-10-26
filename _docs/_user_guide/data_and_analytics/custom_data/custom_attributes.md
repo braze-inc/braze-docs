@@ -7,17 +7,17 @@ description: "This reference article describes custom attributes, and explains t
 
 ---
 
-# Custom Attributes
+# Custom attributes
 
 Custom attributes are a collection of your users' unique traits. Custom attributes are best for storing attributes about your users, or information about low-value actions within your application. You should keep in mind that we don't store time-series information for custom attributes, so you won't be able to get any graphs based upon them like you can for custom events.
 
 > We get that custom attributes can be confusing, so read closely and check out our LAB course on [Custom Events & Attributes](http://lab.braze.com/custom-events-and-attributes)!
 
-## Custom Attribute Storage
+## Custom attribute storage
 
 All data stored on the **User Profile**, including custom attribute data, is retained indefinitely as long as each profile is active.
 
-## Setting Custom Attributes
+## Setting custom attributes
 
 Listed below are the methods across various platforms that are used to set custom attributes.
 
@@ -30,7 +30,7 @@ Listed below are the methods across various platforms that are used to set custo
 - [Xamarin]({{site.baseurl}}/developer_guide/platform_integration_guides/xamarin/analytics/#setting-custom-attributes)
 - [Roku]({{site.baseurl}}/developer_guide/platform_integration_guides/roku/analytics/setting_custom_attributes/)
 
-## Custom Attribute Data Types
+## Custom attribute data types
 
 Custom attributes are extraordinarily flexible tools that allow for great targeting.
 
@@ -42,7 +42,7 @@ The following data types may be stored as custom attributes:
 - [Arrays](#arrays)
 - [Time](#time)
 
-### Booleans (True/False) {#booleans}
+### Booleans (true/false) {#booleans}
 
 Boolean attributes are useful for storing simple binary data about your users, like subscription statuses. You can find users that explicitly have a variable set to a true or false value, in addition to those that don't have any record of that attribute recorded yet.
 
@@ -75,7 +75,7 @@ Money spent should not be recorded by this method. Rather it should be recorded 
 | Check if the numeric attribute __does not exist__ on a user's profile | __DOES NOT EXIST__ | __N/A__ |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
 
-### Strings (Alpha-Numeric Characters) {#strings}
+### Strings (alpha-numeric characters) {#strings}
 
 String attributes are useful for storing user input, such as a favorite brand, a phone number, or a last search string within your application. 
 
@@ -96,10 +96,10 @@ A date string such as "12-1-2021" or "12/1/2021" will be converted to a datetime
 {% alert important %}
 When segmenting using the __DOES NOT MATCH REGEX__ filter, you must already have a custom attribute with a value assigned in that user profile. Braze suggests using "OR" logic to check if a custom attribute is blank to ensure users are being targeted properly.<br>
 
-More resources on RegEx:
-- [RegEx with Braze]({{site.baseurl}}/user_guide/engagement_tools/segments/regex/)
-- [RegEx Debugger and Tester](https://regex101.com/)
-- [RegEx Tutorial](https://medium.com/factory-mind/regex-tutorial-a-simple-cheatsheet-by-examples-649dc1c3f285)
+More resources on regex:
+- [Regex with Braze]({{site.baseurl}}/user_guide/engagement_tools/segments/regex/)
+- [Regex Debugger and Tester](https://regex101.com/)
+- [Regex Tutorial](https://medium.com/factory-mind/regex-tutorial-a-simple-cheatsheet-by-examples-649dc1c3f285)
 {% endalert %}
 
 ### Arrays {#arrays}
@@ -120,12 +120,12 @@ The maximum for individual arrays can be increased to 100. If you would like thi
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
 
 {% alert tip %}
-For more on how to use our RegEx filter, check out this documentation on [Perl compatible regular expressions (PCRE)](http://www.regextester.com/pregsyntax.html).
+For more on how to use our regular expressions filter, check out this documentation on [Perl compatible regular expressions (PCRE)](http://www.regextester.com/pregsyntax.html).
 <br>
-More resources on RegEx:
-- [RegEx with Braze]({{site.baseurl}}/user_guide/engagement_tools/segments/regex/)
-- [RegEx Debugger and Tester](https://regex101.com/)
-- [RegEx Tutorial](https://medium.com/factory-mind/regex-tutorial-a-simple-cheatsheet-by-examples-649dc1c3f285)
+More resources on regex:
+- [Regex with Braze]({{site.baseurl}}/user_guide/engagement_tools/segments/regex/)
+- [Regex Debugger and Tester](https://regex101.com/)
+- [Regex Tutorial](https://medium.com/factory-mind/regex-tutorial-a-simple-cheatsheet-by-examples-649dc1c3f285)
 {% endalert %}
 
 ### Time {#time}
@@ -152,7 +152,7 @@ The last date a custom event or purchase event occurred is automatically recorde
 | Check if the time attribute __does not exist__ on a user's profile | __DOES NOT EXIST__ | __N/A__ |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
 
-### Time Attribute Details
+### Time attribute details
 
 - Day of Recurring Event
   - When using the "Day of Recurring Event" filter, and are then prompted to select the "Calendar Day of Recurring Event", if you select `IS LESS THAN` or `IS MORE THAN`, the current date will be counted for that segmentation filter.
@@ -160,7 +160,7 @@ The last date a custom event or purchase event occurred is automatically recorde
 - Less than X Days Ago: The "Less than X Days Ago" filter includes dates between X days ago and the current date/time.
 - Less than X Days in the Future: Includes dates between the current date/time and X days in the future.
 
-## Purchase and Revenue Tracking {#purchase-revenue-tracking}
+## Purchase and revenue tracking {#purchase-revenue-tracking}
 
 Using our purchase methods to record in-app purchases establishes the Lifetime Value (LTV) for each individual user profile. This data is viewable within our revenue page in time-series.
 

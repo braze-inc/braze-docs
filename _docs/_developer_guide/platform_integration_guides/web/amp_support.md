@@ -8,7 +8,7 @@ description: "This reference article describes how to integrate Braze on an AMP 
 
 ---
 
-# AMP Support
+# AMP support
 
 **This section is NOT a necessary integration step unless you're trying to integrate Braze on an AMP page.**
 
@@ -16,7 +16,7 @@ Accelerated Mobile Pages (AMP) is a Google-backed project designed to improve pa
 
 As a result, the Braze SDK cannot be loaded onto an AMP page. However, the AMP project does provide a component that supports web push. The following instructions detail how to setup that component and reference the following documentation on the `amp-web-push` component: https://www.ampproject.org/docs/reference/components/amp-web-push
 
-## Step 1: Include AMP Web Push Script
+## Step 1: Include AMP web push script
 
 Add the following async script tag to your head:
 
@@ -24,7 +24,7 @@ Add the following async script tag to your head:
 <script async custom-element="amp-web-push" src="https://cdn.ampproject.org/v0/amp-web-push-0.1.js"></script>
 ```
 
-## Step 2: Add Subscription / Unsubscription Widget
+## Step 2: Add subscription / unsubscription widget
 
 You'll need to add a widget that allows users to subscribe and unsubscribe from push. This should live inside the body of your HTML and can be styled however you see fit. 
 
@@ -44,13 +44,13 @@ You'll need to add a widget that allows users to subscribe and unsubscribe from 
 
 The AMP Web Push component works by creating a popup that handles the push subscription. As a result, you'll need to include a couple of helper files into your project. Download the [helper-iframe.html](https://cdn.ampproject.org/v0/amp-web-push-helper-frame.html) file and [permission-dialog.html](https://cdn.ampproject.org/v0/amp-web-push-permission-dialog.html) file and store them on your site. 
 
-## Step 4: Create a Service Worker File
+## Step 4: Create a service worker file
 
 Create a `service-worker.js` file with the content below, and place it in the root directory of your website.
 
 The code to include our service worker can be found in our [Github Repo](https://github.com/Appboy/appboy-web-sdk/blob/master/sample-build/service-worker.js).
 
-## Step 5: Configure AMP Web Push HTML Element
+## Step 5: Configure AMP web push HTML element
 
 You'll now need to add the amp-web-push html element to your page. Drop the following HTML code into the body of your document:
 

@@ -23,11 +23,11 @@ Liquid supports many [operators][25] that can be used in your conditional statem
 | contains | checks to see if a string or string array contains a string|
 {: .reset-td-br-1 .reset-td-br-2}
 
-## Operator Examples
+## Operator examples
 
 Here are some examples of how these operators could be helpful for your marketing campaigns:
 
-### Choose Message via Integer Custom Attribute
+### Choose message via integer custom attribute
 
 ![Total Spend][13]{: width="100%"}
 
@@ -58,7 +58,7 @@ Hey! Get in here and play this Game!
 
 <br>
 
-### Choose Message via String Custom Attribute
+### Choose message via string custom attribute
 
 ![Games Played][14]
 
@@ -98,7 +98,7 @@ Hey! Get in here and play this Game!
 {% enddetails %}
 <br>
 
-### Abort Message Based on Location
+### Abort message based on location
 
 You can abort a message based on just about anything. The example below shows how you can abort a message if a user is not based in a specified area, as they might not qualify for the promotion, show, or delivery.
 

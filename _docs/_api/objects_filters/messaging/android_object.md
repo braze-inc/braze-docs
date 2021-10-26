@@ -8,11 +8,11 @@ platform: Android
 description: "This article lists and explains the different Android objects used at Braze."
 
 ---
-# Android Object Specification
+# Android object specification
 
 These objects are used to define or request information related to Android Push and Android Push Alert content.
 
-##  Android Push Object
+##  Android push object
 
 You must include an Android Push Object in `messages` if you want users you have targeted to receive a push on their Android devices. The total number of bytes in your `alert` string and `extra` object should not exceed 4000. The Messaging API will return an error if you exceed the message size allowed by Google.
 
@@ -45,7 +45,7 @@ You must include an Android Push Object in `messages` if you want users you have
 
 You can send "Big Picture" notifications by specifying the key `appboy_image_url` in the `extra` object. The value for `appboy_image_url` should be a URL that links to where your image is hosted. Images need to be cropped to a 2:1 aspect ratio and should be at least 600x300. Images used for notifications will only display on devices running Jelly Bean (Android 4.1) or higher.
 
-#### Additional Parameter Details
+#### Additional parameter details
 
 | Parameter | Details |
 | --------- | ------- |
@@ -57,7 +57,7 @@ You can send "Big Picture" notifications by specifying the key `appboy_image_url
 
 > For more information on `send_to_sync` messages please see our section on ["Silent Android Notifications"][28].
 
-## Android Push Action Button Object
+## Android push action button object
 
 ```json
 {
@@ -68,7 +68,7 @@ You can send "Big Picture" notifications by specifying the key `appboy_image_url
 }
 ```
 
-## Android Conversation Push Object {##android-conversation-push-object}
+## Android conversation push object {##android-conversation-push-object}
 
 {% sdk_min_versions android:15.0.0 %}
 
@@ -83,7 +83,7 @@ The concepts in this message correspond to those in the [Android Conversation Pu
 }
 ```
 
-### Android Conversation Push Message Object
+### Android conversation push message object
 
 ```json
 {
@@ -93,7 +93,7 @@ The concepts in this message correspond to those in the [Android Conversation Pu
 }
 ```
 
-### Android Conversation Push Person Object
+### Android conversation push person object
 
 ```json
 {

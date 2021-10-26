@@ -8,7 +8,7 @@ tool: Location
 
 ---
 
-# Locations & Geofences FAQs
+# Locations and geofences FAQs
 
 ## Locations
 
@@ -36,7 +36,7 @@ Our geofencing solution uses the native geofence system service on iOS and Andro
 
 ### How many geofences can I upload to Braze?
 
-You may create or upload an unlimited amount of geofences on the Dashboard, allowing your marketing team to setup geofence sets and campaigns without needing to calculate numbers of geofences. However, each geofence set can hold a maximum of 10,000 geofences. Braze dynamically re-synchronizes the geofences that it tracks for each individual user, ensuring that the most relevant geofences to them are always available.
+You may create or upload an unlimited amount of geofences on the dashboard, allowing your marketing team to setup geofence sets and campaigns without needing to calculate numbers of geofences. However, each geofence set can hold a maximum of 10,000 geofences. Braze dynamically re-synchronizes the geofences that it tracks for each individual user, ensuring that the most relevant geofences to them are always available.
 
 ### When are geofences active?
 

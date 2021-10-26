@@ -1,16 +1,12 @@
 ---
-nav_title: Nested Custom Attribute Support
+nav_title: Nested Custom Attributes
 permalink: "/nested_custom_attribute_support/"
 hidden: true
 ---
-<br>
-{% alert note %}
-Support for nested custom attributes is currently in early access. Please contact your Braze account manager if you are interested in participating in the early access.
-{% endalert %}
 
-# Nested Custom Attribute Support
+# Nested Custom Attributes
 
-Nested custom attribute support allows you to send objects as a new data type for custom attributes. This nested data allows you to create segments using information from a custom attribute object, and personalize your messages using a custom attribute object and Liquid.
+You can use nested custom attributes to send objects as a new data type for custom attributes. This nested data allows you to create segments using information from a custom attribute object, and personalize your messages using a custom attribute object and Liquid.
 
 Objects can contain existing [data types][1], such as:
 
@@ -20,6 +16,10 @@ Objects can contain existing [data types][1], such as:
 - Arrays
 - Other objects
 - [Arrays of objects]({{site.baseurl}}/array_of_objects/)
+
+{% alert important %}
+Support for nested custom attributes is currently in early access. Please contact your Braze account manager if you are interested in participating in the early access.
+{% endalert %}
 
 ## Limitations
 
@@ -138,7 +138,7 @@ When working with nested custom attributes segmentation, you'll have access to a
 
 ## Data Points
 
-Any key that is updated consumes a data point, including the initialization of a parent custom attribute object. For example, this object initialized in the user profile counts as nine (9) data points:
+Any key that is updated consumes a data point. For example, this object initialized in the user profile counts as seven (7) data points:
 
 ```
 {

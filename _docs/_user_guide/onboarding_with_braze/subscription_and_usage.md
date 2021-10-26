@@ -9,37 +9,37 @@ tool: Dashboard
 
 ---
 
-# Subscriptions and Usage
+# Subscriptions and usage
 
 To navigate to the **Subscriptions and Usage** page, select your account icon on the dashboard and select __Subscriptions and Usage__ from the dropdown menu. Customers are encouraged to use this page as a self-serve tool to monitor and check their data consumption. 
 
-## Subscriptions and Usage
+## Page contents
 
-### Usage Graphs
+### Usage graphs
 
-Here, you will find data usage graphs that apply to your app groups. Common graphs that will appear for customers are Email Sends usage and Data Point usage. Though common, you may find your own dashboard shows different usage metrics based on the products you have purchased. 
+Here, you will find usage graphs that apply to your app groups. You may find your own dashboard shows different usage metrics based on the products you have purchased.
 
 ![Usage Graphs][3]{: style="max-width:90%;"}
 
 Usage graphs like these are particularly helpful when trying to budget usage and gain a deeper understanding of what app groups contribute to overall usage.
 
-### Contract Details
+### Contract details
 
 Contract details list the start and end date of your current contract with Braze.
 
-## Total Data Points Dashboard
+## Total data points dashboard
 
 Your **Total Data Points Dashboard** can be found under the __Total Data Points Dashboard__ tab. You can view all data in this section aggregated by either weeks or months. Click **Run** to apply any changes.
 
 ![Subscription and Usage][2]{: style="max-width:80%;"}
 
-### Contract Details 
+### Contract details
 
 Here, you’ll find information on when your current Braze contract starts and ends, as well as allotted data points and a sum of all data points that have been used thus far in your current contract.
 
 ![Contract Details][5]
 
-### Current Billing Cycle
+### Current billing cycle
 
 This section of the dashboard displays the data point usage for the current billing cycle. This includes the following information for the current billing cycle:
 - Start date 
@@ -49,26 +49,28 @@ This section of the dashboard displays the data point usage for the current bill
 
 ![Current Billing Cycle Info][6]{: style="max-width:90%;"}
 
-### Company Billing Data
+### Company billing data
 
-#### Usage Across App Groups 
+#### Usage across app groups
 
 This table allows you to assess the total data point usage of a company by app group. This table gives you the ability to assess how each app group is contributing to the company's data point usage.
 
 ![App Group Data Point Usage][7]{: style="max-width:90%;"}
 
-#### Data Point Usage over Time
+#### Data point usage over time
+
 This table gives you the ability to quickly see your total data point usage vs your allotted amount of data points. 
 
 ![Data Point Usage over Time][8]{: style="max-width:90%;"}
 
-### App Group Billing Data
+### App group billing data
 
 {% alert note %}
-The app group billing data is available beginning October 1, 2021, so the app group charts will only display for dates after October 1, 2021. 
+The app group billing data and app group charts only display for dates after October 1, 2021. 
 {% endalert %}
 
-#### Drill to App Groups
+#### Drill to app groups
+
 The **Drill to App Groups** lets you view granular data point data for each of your app groups. Click an app group to see its data point details.
 
 ![App Group Drill Down][9]{: style="max-width:90%;"}
@@ -85,7 +87,7 @@ The **App Level Stats** table enables you to see data point usage for each of th
 
 ![App Level Stats][12]{: style="max-width:90%;"}
 
-## Most Used Events and Attributes By App
+## Most used events and attributes by app
 
 The **Most Used Events and Attributes By App** page is a useful tool to understand the drivers of your attribute and custom event data point consumption. For each app, you can find an estimated count of each specific custom attribute, profile attribute, and custom event for the selected time period as well as the percentage of that app’s attribute and event updates that were driven by that attribute or event. 
 

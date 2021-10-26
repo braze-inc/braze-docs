@@ -8,7 +8,7 @@ description: "This article provides answers to frequently asked questions about 
 
 ---
 
-# Media Library FAQs
+# Media library FAQs
 
 > This page provides answers to frequently asked questions about the Braze Media Library.
 
@@ -40,7 +40,7 @@ This can happen for a variety of reasons, but a common solution is to make sure 
 
 Additionally, if your image was built in Photoshop (or a similar software) and has many layers, merging and reducing the number of layers can also help.
 
-### Why can't I upload any image I want into the Push Composers?
+### Why can't I upload any image I want into the push composers?
 
 This is because most composers have restrictions on the image ratio size that is allowed.
 

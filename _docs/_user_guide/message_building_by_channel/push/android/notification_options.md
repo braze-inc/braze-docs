@@ -11,7 +11,7 @@ channel:
 
 ---
 
-# Android Notification Options
+# Android notification options
 
 > If you want to categorize your messages and group them in your user's notification tray, you can utilize Android's Notification Channels feature through Braze.
 
