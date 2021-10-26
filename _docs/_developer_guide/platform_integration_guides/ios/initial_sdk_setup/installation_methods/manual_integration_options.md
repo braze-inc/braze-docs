@@ -24,13 +24,6 @@ We strongly recommend that you implement the SDK via a package manager such as [
 ### Option 2: Static XCFramework or Static Integration
 
 1. Download `Appboy_iOS_SDK.zip` from the [release page](https://github.com/appboy/appboy-ios-sdk/releases).
-If integrating an SDK version before 3.24.0, instead clone the Braze iOS SDK Github project:
-
-```bash
-# This command will clone both versions of the Braze SDK
-$ git clone git@github.com:Appboy/appboy-ios-sdk.git
-```
-
 2. In Xcode, from the project navigator, select the destination project or group for Braze
 3. Navigate to File > Add Files to “Project_Name”
 4. Add the `AppboyKit` and `AppboyUI` folders to your project as a group.
