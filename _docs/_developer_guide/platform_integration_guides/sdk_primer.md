@@ -7,13 +7,13 @@ page_order: 0
 
 Before you begin to integrate the Braze SDKs, you may find yourself wondering what exactly you're building and integrating. Further, you may find yourself curious about how you can customize it further to meet your needs. This article can help you answer all of your SDK questions.
 
-## App Performance
+## App performance
 
 Braze should have no negative impact on your app’s performance.
 
 The Braze SDKs have a very small footprint. We automatically change the rate that we flush user data depending on the quality of the network, in addition to allowing manual network control. We automatically batch API requests from the SDK to make sure that data is logged quickly while maintaining maximum network efficiency. Lastly, the amount of data sent from the client to Braze within each API call is extremely small.
 
-## Feature Set Defaults
+## Feature set defaults
 
 If you follow our integration guides to implement our SDKs, you will be able to take advantage of our [default data collection]({{site.baseurl}}/developer_guide/platform_wide/analytics_overview/#automatically-collected-data).
 
@@ -23,7 +23,7 @@ All of our features are configurable, but it would not be advantageous to avoid 
 <br>For example, if you choose not to fully integrate for location on one of the SDKs, you will not be able to personalize your messaging based on language or location. If necessary, it is possible to [block the default collection of certain data, as well as allowlist processes that do so](#blocking-data-collection).
 {% endalert %}
 
-### Device Properties
+### Device properties
 
 {% tabs %}
 {% tab Web SDK %}
@@ -80,7 +80,7 @@ These properties are collected by the iOS SDK upon proper integration.
 {% endtab %}
 {% endtabs %}
 
-## Data Upload and Download
+## Data upload and download
 
 The Braze SDK caches data (sessions, custom events, etc) and uploads it periodically. Only after the data has been uploaded will the values be updated on the dashboard. The upload interval takes into account the state of the device and is governed by the quality of the network connection:
 
@@ -95,7 +95,7 @@ If there is no network connection, data is cached locally on the device until th
 
 Braze sends data to the SDK at the beginning of a session based on which segments the user falls into at the time of the session. The News Feed or new in-app messages will not be updated during the session. However, user data during the session will be continually processed as it is sent from the client. For example, a lapsed user (last used the app more than 7 days ago) will still receive content targeted at lapsed users on their first session back in the app.
 
-## Blocking Data Collection
+## Blocking data collection
 
 It is possible, though not suggested, to block the automatic collection of certain data from your SDK integrations. As we stated above, not fully integrating our SDKs can reduce the capabilities of personalization and targeting.
 
@@ -125,7 +125,7 @@ To specify allowlisted device fields, assign the bitwise OR of desired fields to
 By default, all fields are collected by the Braze iOS SDK.
 {% endalert %}
 
-## SDK Compatibility
+## SDK compatibility
 
 Braze's SDK is designed to be very well-behaved, and not interfere with other SDKs present in your mobile app. If you are experiencing any issues you think might be due to incompatibility with another mobile SDK, please reach out to Braze Support.
 

@@ -7,7 +7,7 @@ page_type: solution
 description: "This help article describes how to use event logging to troubleshoot issues with your Braze integration."
 ---
 
-# Using Event Logging
+# Using event logging
 
 The Event User Log helps you troubleshoot any issues with your Braze integration.
 
@@ -15,11 +15,11 @@ Two particularly helpful steps are:
 * [Setting Up an Anonymous Profile](#setting-up-an-anonymous-profile)
 * [Setting Up Event Logging](#using-event-logging)
 
-## Setting Up An Anonymous Profile
+## Setting up an anonymous profile
 
 For more information on how to set up an anonymous profile to test in Braze, review the [Event User Log][46] or the [Test User][51] section of the User Guide.
 
-## Using Event Logging
+## Using event logging
 
 Use Event Logging to test what behavior looks like for an anonymous user. It can also be helpful when the App you are testing does not collect email and you are struggling to find the user ID. You can use Braze along with your device’s IP to add that device as a test user.
 

@@ -9,21 +9,21 @@ tool: Campaigns
 
 ---
 
-# Transactional Email Campaigns
+# Transactional email campaigns
 
 Transactional emails are those that are sent to facilitate an agreed-upon transaction between a sender and the recipient. Braze's transactional email campaign type is purpose-built for sending automated, non-promotional email messages like order confirmations, password resets, billing alerts, or other business-critical notifications originating from your service for a single user where speed is of the utmost importance. Transactional email is only available as part of select Braze packages. Please reach out to your Braze Customer Success Manager for more details. 
 
 This reference article covers how to create a transational campaign in the Braze dashboard and generate a `campaign_id` to include in your API calls for our [Transactional Email API endpoint]({{site.baseurl}}/api/endpoints/messaging/send_messages/post_send_transactional_message).
 
 
-## Create a New Campaign
+## Create a new campaign
 Navigate to the **Campaigns** page in your company Braze account and click __Create Campaign__, then select __Transactional Email__ under the __Transactional__ section.
 
 ![Select Transactional Email Campaign][1]{: style="float:right;max-width:25%;margin-left:15px;"}
 
 Now, you can move on to configuring your transactional campaign.
 
-## Configure Your Campaign
+## Configure your campaign
 
 When launching a transactional campaign, Braze has simplified the campaign creation flow in order to ensure your business-critical transactional emails can reach all users. As a result, you will notice a few settings you may be familiar with from other Braze campaign types are not required when setting up this campaign type:
 
@@ -38,7 +38,7 @@ When launching a transactional campaign, Braze has simplified the campaign creat
 3. Take note of your `campaign_id`. After you save your API campaign, you must include the generated `campaign_id` fields with your API request where noted in the [Transactional Email Endpoint Spec]({{site.baseurl}}/api/endpoints/messaging/send_messages/post_send_transactional_message)
 4. Click __Save Campaign__ and you're set to begin your API campaign!
 
-### Disallowed Tags in Transactional Emails 
+### Disallowed tags in transactional emails 
 
 Please note that the `Connected Content` and `Promotion Code` Liquid tags are currently not available within transactional email campaigns. 
 

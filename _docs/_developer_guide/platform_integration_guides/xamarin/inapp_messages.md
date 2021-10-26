@@ -11,7 +11,7 @@ channel: in-app messages
 
 ---
 
-# In-App Messaging
+# In-app messaging
 
 ## Android
 See [the Android integration instructions][11] for information on how to integrate in-app messages into your Xamarin Android app.  Furthermore, you can look at the [sample application][12] for implementation samples.

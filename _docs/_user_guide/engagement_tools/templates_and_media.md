@@ -28,7 +28,7 @@ guide_featured_list:
     fa_icon: fas fa-archive
 ---
 
-## About Templates & Media
+## About templates & media
 
 To access Templates & Media, navigate to __Engagement__ in your left navigation bar of your Braze account, then select __Templates & Media__. ![Templates and Media][1]
 

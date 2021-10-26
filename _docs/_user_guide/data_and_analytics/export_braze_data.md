@@ -52,7 +52,7 @@ guide_menu_list:
 ---
 <br>
 
-## Things to Keep in Mind
+## Things to keep in mind
 
 - Whenever there is a graph on the Dashboard, you can export its data in a CSV or download the graph by clicking the symbol in the upper right corner.
 

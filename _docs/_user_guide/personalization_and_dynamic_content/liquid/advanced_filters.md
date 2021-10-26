@@ -6,9 +6,9 @@ description: "This reference article lists advanced filters, examples, and how t
 
 ---
 
-# Advanced Filters
+# Advanced filters
 
-## Encoding Filters
+## Encoding filters
 
 {% raw %}
 | filter name | filter description | example input | example output |
@@ -23,7 +23,7 @@ description: "This reference article lists advanced filters, examples, and how t
 `hmac_sha256_base64` | Returns hmac-sha256 signature, encoded as a base64 string | `{{'hey' | hmac_sha256_base64: 'secret_key'}}` | jfiX+No9eZL+V8jbxvJ1eM+/LcxND7tAALjJJIQdUI4= |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
 
-## URL Filters
+## URL filters
 
 | filter name | filter description | example input | example output |
 |---|---|---|---|
@@ -44,7 +44,7 @@ The `assign` tag can be combined with HTML to save you time and effort when crea
 {% endalert %}
 {% raw %}
 
-## Property Accessor Filter
+## Property accessor filter
 
 | filter name | filter description |
 |---|---|---|---|
@@ -74,7 +74,7 @@ There is no way to instantiate a hash as a variable (i.e. expression) in Liquid 
 | `number_with_delimiter` | Formats a number with commas | `{{ 123456 | number_with_delimiter }}` | 123,456 |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
 
-## JSON Escape / String Escape Filter
+## JSON escape / string escape filter
 
 | filter name | filter description |
 |---|---|---|---|

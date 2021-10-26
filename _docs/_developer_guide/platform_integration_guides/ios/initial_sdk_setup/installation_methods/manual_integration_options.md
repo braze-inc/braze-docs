@@ -7,7 +7,7 @@ description: "This reference article shows how to manually integrate the Braze S
 
 ---
 
-# Manual Integration
+# Manual integration
 
 {% alert tip %}
 We strongly recommend that you implement the SDK via a package manager such as [Swift Package Manager](../swift_package_manager/), [CocoaPods](../cocoapods/), or [Carthage](../carthage_integration/). It will save you a lot of time and automate much of the process for you. However, if you are unable to do so you may complete the integration manually by following the instructions below.
@@ -38,7 +38,7 @@ $ git clone git@github.com:Appboy/appboy-ios-sdk.git
 If you try to use the core version of the SDK without Braze's UI features, in-app messages will not display. Trying to display Braze's Content Cards UI with the core version will lead to unpredictable behavior.
 {% endalert %}
 
-## Step 2: Adding Required iOS Libraries
+## Step 2: Adding required iOS libraries
 
 1. Click on the target for your project (using the left-side navigation), and select the “Build Phases” tab
 2. Click the <i class="fas fa-plus"></i> button under “Link Binary With Libraries”
@@ -55,17 +55,17 @@ If you try to use the core version of the SDK without Braze's UI features, in-ap
 7. Select the "Build Settings" tab. In the "Linking" section, locate the "Other Linker Flags" setting and add the `-ObjC` flag.
 8. The SDWebImage framework is required for the Braze News Feed, Content Cards and In-App Messaging to function properly. SDWebImage is used for image downloading and displaying, including GIFs. If you intend to use the News Feed, Content Cards or In-App Messages, please follow the steps below.
 
-### SDWebImage Integration
+### SDWebImage integration
 
 1. Follow the SDWebImage Installation Guide's [instructions](https://github.com/SDWebImage/SDWebImage/wiki/Installation-Guide#using-sdwebimage-as-sub-xcode-project) for manually using SDWebImage as a Sub-Project in Xcode.
 2. In the `SDWebImage` project settings, open the "Build Settings" tab. In the "Linking" section, locate the "Other Linker Flags" setting and add the `-ObjC` flag if it isn't already present.
 
-### Optional Location Tracking
+### Optional location tracking
 
 1. Add the `CoreLocation.framework` to enable location tracking
 2. You must authorize location for your users using `CLLocationManager` in your app
 
-## Step 3: Objective-C Bridging Header
+## Step 3: Objective-C bridging header
 
 If your project uses Swift, you will need a bridging header file.
 
@@ -80,6 +80,6 @@ In your project's Build Settings, add the relative path of your header file to t
 You do not need to follow these steps if your project only uses Objective-C.
 {% endalert %}
 
-## Next Steps
+## Next steps
 
 Follow the instructions for [Completing the Integration]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/initial_sdk_setup/completing_integration/).

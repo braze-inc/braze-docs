@@ -8,7 +8,7 @@ channel:
   
 ---
 
-# In-App Messages Generations
+# In-app messages generations
 
 Braze currently has three generations of in-app messages. Each comes with it own level of support. To take advantage of the newest features of our in-app messages, we recommend upgrading to the newest [Web]({{site.baseurl}}/developer_guide/platform_integration_guides/web/initial_sdk_setup/#upgrading-the-sdk), iOS, and Android SDKs.
 

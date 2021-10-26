@@ -1,6 +1,6 @@
 ---
 nav_title: Facebook Audience Sync
-page_order: 4
+page_order: 6
 tool: Canvas
 layout: redirect
 noindex: true

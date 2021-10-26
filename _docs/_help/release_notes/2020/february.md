@@ -19,7 +19,7 @@ Information on this new feature can be found in our [documentation]({{site.baseu
 As of January 13th, 2020 this feature is not yet available to our client deployed in our EU region or our HIPPA-compliant cluster. We will make this report available to those regions as we continue to deploy functionality across our entire platform.
 {% endalert %}
 
-## New Email Content Block API Endpoint
+## New email Content Block API endpoint
 
 You can now [update]({{site.baseurl}}/api/endpoints/templates/content_blocks_templates/post_update_content_block/) your Email Content Blocks via API!
 

@@ -10,7 +10,7 @@ tool:
 
 ---
 
-# Exporting Overview Data
+# Exporting overview data
 
 The **Overview** page of the Dashboard contains high-level data of app usage, as well as detailed statistics of different KPIs by date. To obtain CSVs of information from this page, first set the time frame you want to view, then go to the graph at the bottom of the page and choose what data to include in your export.
 

@@ -6,7 +6,7 @@ page_order: 2
 
 ---
 
-# Prediction Analytics
+# Prediction analytics
 
 Once your Prediction has been built and trained, you will have access to the Prediction Analytics page. This page helps you decide what users you should target based on their Churn Risk Score or Category. As soon as the Prediction is done training and this page is populated, you can jump to simply using [Filters]({{site.baseurl}}/user_guide/predictive_suite/predictive_churn/messaging_users/#filters) in Segments or campaigns to begin using the outputs of the model. But, if you want help deciding who to target and why, this page can help based on the historical accuracy of the model and your own business goals. 
 
@@ -24,7 +24,7 @@ The distribution of the scores for the entire Prediction Audience is displayed a
 
 As you move the slider, the bar in the left half of the lower panel will inform you how many users out of the entire Prediction Audience would be targeted.
 
-## Churn Score and Category {#churn_score}
+## Churn score and category {#churn_score}
 
 Users in the Prediction Audience will be assigned a Churn Score between 0 and 100. The higher the score, the greater the likelihood of Churn. 
 - Users with Churn Scores between 0 and 50 will be labeled in the Low Churn Risk category. 
@@ -32,9 +32,9 @@ Users in the Prediction Audience will be assigned a Churn Score between 0 and 10
 
 The scores and the corresponding categories will be updated according to the schedule you chose on the model creation page. The number of users with Churn Scores in each of 20 equally sized buckets is displayed in the chart at the top of the page. This can help you determine what the churn risk looks like across the population according to this Prediction.
 
-## Targeting Users to Reduce Churn
+## Targeting users to reduce churn
 
-### Prediction Quality {#prediction_quality}
+### Prediction quality {#prediction_quality}
 
 To measure the accuracy of your model, the __Prediction Quality__ metric will show you how effective this particular machine learning model appears to be when tested on historical data. Check out this doc to read more about what goes into [Prediction Quality]({{site.baseurl}}/user_guide/predictive_suite/predictive_churn/prediction_analytics/prediction_quality/).
 
@@ -50,7 +50,7 @@ Here's what we recommend for various ranges of Prediction Quality:
 
 The Prediction will be trained again every two weeks and updated alongside the Prediction Quality metric to keep your predictions updated on the most recent user behavior patterns. The last time this retraining occurred will be displayed on the Predictions list page as well as on your Prediction's analytics page.
 
-## Estimated Results {#estimated_results}
+## Estimated results {#estimated_results}
 
 ![Estimated Results][6]{: style="float:right;max-width:30%;margin-left:15px;"}
 
@@ -62,7 +62,7 @@ In the right half of the panel beneath the chart, we show estimates of the expec
 
 Using this information, we encourage you to decide how many of the churners you want to capture and what the cost of a false positive error is for your business. If you are sending out a valuable promo, you may want to keep non-churners targeted to a minimum while getting as many expected true churners as the model will allow. Or, if you're less sensitive to false positives and users receive extra messaging, you can message more of the audience to capture more expected churners and ignore the likely errors.
 
-## Churn Correlation Table {#correlation_table}
+## Churn correlation table {#correlation_table}
 
 This analysis displays any user attributes or behaviors that are correlated with user churn in the historical Prediction Audience. The tables are split into left and right for more and less likely to churn, respectively. For each row, the ratio by which the users with the behavior or attribute in the left column are more or less likely to churn is displayed in the right column. This number is the ratio of churn likelihood of users with this behavior or attribute divided by the likelihood to churn off the entire Prediction Audience.
 

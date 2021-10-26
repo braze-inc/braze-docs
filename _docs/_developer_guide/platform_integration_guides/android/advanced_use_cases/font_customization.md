@@ -9,11 +9,11 @@ description: "This reference article covers font customization options such as d
 
 ---
 
-# Font Customization
+# Font customization
 
 Fonts in the Braze SDK can be set via XML using the AndroidX libraries according to [Font in XML Guide][1]. To use your custom font with the Braze SDK, you'll first need to create a font family.
 
-## Create A Font Family
+## Create a font family
 
 The following is an example custom font family definition using the [font family guide][2]. For this example, we use the [Bungee Shade Font][3].
 
@@ -38,7 +38,7 @@ The following is an example custom font family definition using the [font family
 
 After storing the font family definition in `/res/font/bungee_font_family.xml`, we can refer to it in XML as `@font/bungee_font_family`.
 
-## Referencing Your Font Family
+## Referencing your font family
 
 Now that the font family is created, you can override Braze style defaults in your `styles.xml` to include references to the font family.
 

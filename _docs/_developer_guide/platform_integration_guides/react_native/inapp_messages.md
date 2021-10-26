@@ -9,11 +9,11 @@ channel: in-app messages
 
 ---
 
-# In-App Messages
+# In-app messages
 
 Native in-app messages display automatically on Android and iOS when using React Native. This article covers customizing and logging analytics for your in-app messages for apps using React Native.
 
-## Accessing In-App Message Data
+## Accessing in-app message data
 
 {% tabs %}
 {% tab Android %}
@@ -69,7 +69,7 @@ For more on these values, see our [iOS documentation]({{site.baseurl}}/developer
 {% endtab %}
 {% endtabs %}
 
-## Receiving In-App Message in JavaScript
+## Receiving in-app message in JavaScript
 
 On the JavaScript side, this data can be used to instantiate a `BrazeInAppMessage`:
 ```javascript
@@ -96,7 +96,7 @@ ReactAppboy.logInAppMessageButtonClicked(inAppMessage, 0);
 
 ```
 
-## Test Displaying a Sample In-App Message
+## Test displaying a sample in-app message
 
 Follow the steps below to test a sample in-app message.
 

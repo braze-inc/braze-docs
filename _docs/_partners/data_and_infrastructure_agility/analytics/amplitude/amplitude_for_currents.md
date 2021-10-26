@@ -30,7 +30,7 @@ Keep your Amplitude API Key up to date. If your connector's credentials expire, 
 
 Amplitude's documentation is available [here](https://amplitude.zendesk.com/hc/en-us/articles/115000217351-Appboy-Amplitude-Integration#how-to-set-up-and-use-the-integration).
 
-## Data Import
+## Data import
 
 Using Braze and Amplitude's deep partnership, you can configure your integration to import Amplitude cohorts directly into Braze for retargeting, creating a full loop of data from one system to another. This allows you to perform deep analysis using Amplitude and seamlessly execute on your strategies using Braze.
 
@@ -39,7 +39,7 @@ You can manage the Amplitude Data Import process from the Technology Partners pa
 ![Amplitude cohort import]({% image_buster /assets/img_archive/currents-amplitude-import.png %})
 
 
-## Integration Details
+## Integration details
 
 A list of the events that can be exported from Braze to Amplitude is below. All events sent to Amplitude will include the user's `external_user_id` as the Amplitude User ID. Braze will only send event data for users who either have their `external_user_id` set, or anonymous users who have their `device_id` set. Braze-specific event properties will be sent under the `event_properties` key in the data sent to Amplitude. The properties for each event type are listed below.
 
@@ -49,7 +49,7 @@ All cohorts named and imported into Braze will be prefixed with `[Amplitude]` an
 
 Please contact your Account Manager or [open a support ticket][support] if you need access to additional event entitlements.
 
-### Scheduled Cohort Syncs
+### Scheduled cohort syncs
 
 Braze customers using Amplitude can schedule the timed cohort syncs between Amplitude and Braze. The can be set up as hourly or daily syncs of data to be sent into Braze.
 
@@ -58,19 +58,19 @@ Scheduled syncs will only send deltas of the updated data set.
 {% endalert %}
 
 
-## Rate Limits
+## Rate limits
 
 Currents connects to Amplitude's HTTP API, which has a [Rate Limit](https://amplitude.zendesk.com/hc/en-us/articles/204771828-HTTP-API#upload-limit) of 60 events/second per device. Above that threshold, Amplitude will throttle events that are logged through Currents. If a device in your integration is sending above this rate limit, you may experience a delay in when events from all devices will appear in Amplitude.
 
 Devices should not report more than 60 events/second under normal circumstances, and this event pattern should only occur due to a misconfigured integration. To avoid this type of delay, ensure that your SDK integration is reporting events at a normal rate as specified in our SDK integration instructions.
 
-## Amplitude User Profile API Endpoints
+## Amplitude user profile API endpoints
 
 To check out some of the common Amplitude API endpoints, view our dedicated [Amplitude API documentation]({{site.baseurl}}/partners/data_and_infrastructure_agility/analytics/amplitude/amplitude_user_profile_api/).
 
-## Customer Behavior Events
+## Customer behavior events
 
-### Custom Events
+### Custom events
 
 ```json
 // <Custom Event Name>
@@ -82,7 +82,7 @@ To check out some of the common Amplitude API endpoints, view our dedicated [Amp
 }
 ```
 
-### Purchase Events
+### Purchase events
 
 ```json
 // Purchase
@@ -97,7 +97,7 @@ To check out some of the common Amplitude API endpoints, view our dedicated [Amp
 }
 ```
 
-### Session Events
+### Session events
 
 ```json
 // First Session
@@ -127,7 +127,7 @@ To check out some of the common Amplitude API endpoints, view our dedicated [Amp
 }
 ```
 
-### Location Events
+### Location events
 
 ```json
 // Location
@@ -144,7 +144,7 @@ To check out some of the common Amplitude API endpoints, view our dedicated [Amp
 }
 ```
 
-### Install Attribution Events
+### Install attribution events
 
 ```json
 // Install Attribution
@@ -153,9 +153,9 @@ To check out some of the common Amplitude API endpoints, view our dedicated [Amp
 }
 ```
 
-## Message Engagement Events
+## Message engagement events
 
-### Push Notification Events
+### Push notification events
 
 ```json
 // Push Notification Send
@@ -218,7 +218,7 @@ To check out some of the common Amplitude API endpoints, view our dedicated [Amp
 }
 ```
 
-### Email Events
+### Email events
 
 ```json
 // Email Send
@@ -244,7 +244,7 @@ To check out some of the common Amplitude API endpoints, view our dedicated [Amp
 }
 ```
 
-### SMS Events
+### SMS events
 ```json
 // SMS Send
 {
@@ -306,7 +306,7 @@ To check out some of the common Amplitude API endpoints, view our dedicated [Amp
 
 
 
-### Subscription Events
+### Subscription events
 
 ```json
 // Subscription Group State Change
@@ -361,7 +361,7 @@ To check out some of the common Amplitude API endpoints, view our dedicated [Amp
 }
 ```
 
-### Webhook Events
+### Webhook events
 
 ```json
 // Webhook Send
@@ -377,7 +377,7 @@ To check out some of the common Amplitude API endpoints, view our dedicated [Amp
 }
 ```
 
-### Content Card Events
+### Content Card events
 
 ```json
 // Content Card Send
@@ -415,7 +415,7 @@ To check out some of the common Amplitude API endpoints, view our dedicated [Amp
 }
 ```
 
-### News Feed Events
+### News Feed events
 
 ```json
 // News Feed Card Impression
@@ -443,7 +443,7 @@ To check out some of the common Amplitude API endpoints, view our dedicated [Amp
 }
 ```
 
-### Uninstall Events
+### Uninstall events
 
 ```json
 // Uninstall
@@ -452,7 +452,7 @@ To check out some of the common Amplitude API endpoints, view our dedicated [Amp
 }
 ```
 
-### Conversion Events
+### Conversion events
 
 ```json
 // Campaign Conversion Event
@@ -475,7 +475,7 @@ To check out some of the common Amplitude API endpoints, view our dedicated [Amp
 }
 ```
 
-### Canvas Entry Events
+### Canvas entry events
 
 ```json
 // Canvas Entry
@@ -487,7 +487,7 @@ To check out some of the common Amplitude API endpoints, view our dedicated [Amp
 }
 ```
 
-### Campaign Enrollment Events
+### Campaign enrollment events
 
 ```json
 // Campaign Control Group Enrollment

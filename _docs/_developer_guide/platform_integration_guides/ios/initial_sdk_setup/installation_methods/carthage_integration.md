@@ -7,7 +7,7 @@ description: "This reference article shows how to integrate the Braze SDK using 
 
 ---
 
-# Carthage Integration
+# Carthage integration
 
 Starting from version `4.4.0`, the Braze SDK supports XCFrameworks when integrating via Carthage. To import the full SDK, include these lines in your `Cartfile`:
 ```

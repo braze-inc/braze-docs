@@ -138,7 +138,7 @@ When working with nested custom attributes segmentation, you'll have access to a
 
 ## Data Points
 
-Any key that is updated consumes a data point, including the initialization of a parent custom attribute object. For example, this object initialized in the user profile counts as nine (9) data points:
+Any key that is updated consumes a data point. For example, this object initialized in the user profile counts as seven (7) data points:
 
 ```
 {

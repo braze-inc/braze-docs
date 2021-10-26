@@ -29,15 +29,15 @@ Treasure Data supports the Braze platform by allowing you to write job results f
 | Treasure Data Account and Account Information | Treasure Data | [https://www.treasuredata.com/custom-demo/](https://www.treasuredata.com/custom-demo/) | You must have an active Treasure Data account to utilize their services with Braze |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
 
-## Export Integration
+## Export integration
 
 For more detail, check out the document on [Treasure Data Product Documentation][5]
 
-### Step 1: Obtain Rest API Key in Braze
+### Step 1: Obtain REST API key in Braze
 
 Obtain the required Braze endpoints and keys detailed in the previous requirements section. 
 
-### Step 2: Create a New Connection
+### Step 2: Create a new connection
 In Treasure Data, you must create and configure the data connection before running your query. As part of the data connection, you must provide authentication to access the integration.
 
 1. First, open the Treasure Data console and navigate to the __Catalog__ under the __Integrations Hub__.
@@ -47,7 +47,7 @@ In Treasure Data, you must create and configure the data connection before runni
 
 ![Treasure Data Authentication Dialog][2]{: style="max-width:80%;"}
 
-### Step 3: Define your Query
+### Step 3: Define your query
 1. Navigate to __Queries__ under your __Data Workbench__.
 2. Select a query for which you would like to export data.
 3. Run the query to validate the result set.
@@ -70,7 +70,7 @@ The Export Results parameters are described in the following table.
 | `skip_on_invalid_records` | Boolean | If enabled, continue and ignore any invalid records for the JSON column. <br> Otherwise, the job stops. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
 
-## Use Cases
+## Use cases
 
 You can synchronize your consolidated customer profiles from Treasure Data into Braze to build-out target segments. Treasure Data supports 1st party cookie data, Mobile IDs, third-party systems like your CRM, and many more.
 

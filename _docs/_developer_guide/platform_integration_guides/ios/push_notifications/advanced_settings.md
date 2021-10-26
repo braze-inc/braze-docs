@@ -9,21 +9,21 @@ channel:
 
 ---
 
-# Advanced Settings
+# Advanced settings
 
 When creating push engagement, on the "Compose" step, you can select the "gear" icon to view the Advanced Settings available.
 
 ![Advanced Settings][1]
 
-## Alert Options
+## Alert options
 
 By clicking the checkbox here, you will notice a dropdown of key values available for adjusting how the notification will appear on devices.
 
-## Adding Content-Available Flag
+## Adding content-available flag
 
 The `content-available` flag instructs devices to download new content in the background. Most commonly, this can be checked on should you be interested in sending [silent notifications][2].
 
-## Adding Mutable-Content Flag
+## Adding mutable-content flag
 
 The `mutable-content` flag enables advanced receiver customizations in iOS 10+ devices. This flag will automatically be sent when composing a [rich notification][3], regardless of the value of this checkbox.
 

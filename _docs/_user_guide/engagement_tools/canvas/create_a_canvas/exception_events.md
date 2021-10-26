@@ -8,7 +8,7 @@ tool: Canvas
 
 ---
 
-# Canvas Exception Events
+# Canvas exception events
 
 When scheduling a step for a [Canvas][2], you have the option to set up an exception event while scheduling your canvas. You can add an exception event to a step as long as the audience is not immediately advanced. Users who perform the exception event will not be [advanced through the step][3] and will drop out of your Canvas audience.
 

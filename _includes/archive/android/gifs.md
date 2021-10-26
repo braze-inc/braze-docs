@@ -1,12 +1,12 @@
 Braze requires an external image library to display animated GIFs with {{ include.channel }}.
 
-### Custom Image Library Integration {#gifs-delegate-integration}
+### Custom image library integration {#gifs-delegate-integration}
 
 Braze offers the ability to use a custom image library to display animated GIFs with {{ include.channel }}.
 
 __Note:__ Although the example below uses [Glide][gifs-67], any image library that supports GIFs is compatible.
 
-#### Step 1: Creating the Image Loader Delegate
+#### Step 1: Creating the image loader delegate
 
 The Image Loader delegate must implement the following methods:
 
@@ -131,7 +131,7 @@ class GlideBrazeImageLoader : IBrazeImageLoader {
 {% endtab %}
 {% endtabs %}
 
-#### Step 2: Setting the Image Loader Delegate
+#### Step 2: Setting the image loader delegate
 
 The Braze SDK will use any custom image loader set with [setBrazeImageLoader][gifs-66]. Note that we recommend setting the custom image loader in a custom application subclass.
 

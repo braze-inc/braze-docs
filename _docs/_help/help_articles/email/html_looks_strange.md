@@ -8,7 +8,7 @@ description: "This help article walks you through how to troubleshoot issues wit
 channel: email
 ---
 
-# Troubleshooting HTML Rendering in Test Emails
+# Troubleshooting HTML rendering in test emails
 
 If your [Test Email][37] looks off, we recommend that you...
 
@@ -17,11 +17,11 @@ If your [Test Email][37] looks off, we recommend that you...
 * [Check Rendering](#check-rendering), or
 * [Switch CSS In-lining](#switch-css-in-lining).
 
-### Check HTML Setup
+### Check HTML setup
 
 First, confirm with your developers that your HTML is set up properly.
 
-### Check Conflicts
+### Check conflicts
 
 Certain Chrome extensions will cause issues with Braze’s email editor (one example is [Grammarly][38]). If you’re using one of these, you should either: 
 - edit Braze emails in a browser that does not have Grammarly
@@ -29,7 +29,7 @@ Certain Chrome extensions will cause issues with Braze’s email editor (one exa
 
 NB plain text view removes your ```WYSIWYG``` (what you see is what you get) editor, so you should first ensure that all team members are comfortable with HTML before making this request.
 
-### Check Rendering
+### Check rendering
 
 Emails render differently on different browsers and email clients. Record which browsers and email clients you’re experiencing issues with.
 
@@ -37,7 +37,7 @@ Emails render differently on different browsers and email clients. Record which 
 
 - Once you’ve identified which browsers/email clients are causing issues, let your developer team know that they’ll need to modify their HTML and make edits to accommodate those browsers/email clients.
 
-### Switch CSS In-lining
+### Switch CSS in-lining
 
 There are times when the preview in Email on Acid or Litmus still does not match what is sent via the Braze dashboard. One possible cause for this is the CSS in-lining that is performed by Braze may differ from the CSS in-lining performed by other tools. If you suspect that this is the case, contact your Braze account manager to ask for CSS in-lining to be turned off.
 

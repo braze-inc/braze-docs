@@ -10,11 +10,11 @@ channel:
   - SMS
 ---
 
-# Create an SMS Campaign
+# Create an SMS campaign
 
 > SMS campaigns are great for directly reaching and programmatically conversing with your customers. You can use Liquid and other dynamic content to create a personal experience with your users and create an environment that fosters and enhances an unobtrusive user experience with your brand. 
 
-## Step 1: Choose Where to Build Your Message
+## Step 1: Choose where to build your message
 
 SMS is available in both campaigns and Canvas.
 
@@ -51,8 +51,7 @@ You cannot have multiple in-app message variants in a single step.
 {% endtab %}
 {% endtabs %}
 
-
-## Step 2: Compose Your SMS
+## Step 2: Compose your SMS
 
 Composing an SMS is easy! Just write your message using languages and personalization (Liquid, Connected Content, and Emojis) as needed. Be sure to adhere to our Message Copy Limits to reduce your chances of overage charges.
 
@@ -68,7 +67,7 @@ If you plan to use Liquid, be sure to include a default value for your chosen pe
 {% endraw %}
 {% endalert %}
 
-## Step 3: Preview and Test Your Message
+## Step 3: Preview and test your message
 
 Braze always recommends previewing and testing your message before sending.
 
@@ -78,13 +77,13 @@ Braze always recommends previewing and testing your message before sending.
 If you'd like to test how many segments yout SMS may be split into, test your copy length [here]({{site.baseurl}}/user_guide/message_building_by_channel/sms/campaign/segments/#sms-segment-calculator).
 {% endalert %}
 
-## Step 4: Configure Message Delivery
+## Step 4: Configure message delivery
 
-Decide how, when, and why your message will be delivered. You can either schedule your message for a specific time or trigger it off of a user's action. You can also trigger it via API for both [campaigns]({{site.baseurl}}/api/endpoints/messaging/send_messages/post_send_triggered_campaigns/) and [canvas]({{site.baseurl}}/api/endpoints/messaging/send_messages/post_send_triggered_canvases/).
+Decide how, when, and why your message will be delivered. You can either schedule your message for a specific time or trigger it off of a user's action. You can also trigger it via API for both [campaigns]({{site.baseurl}}/api/endpoints/messaging/send_messages/post_send_triggered_campaigns/) and [Canvas]({{site.baseurl}}/api/endpoints/messaging/send_messages/post_send_triggered_canvases/).
 
 ![SMS Delivery]({% image_buster /assets/img/sms_campaign_delivery.gif %})
 
-## Step 5: Target Users & Select Segment
+## Step 5: Target users and select segment
 
 In this step, you'll choose which users receive your message. You should have already chosen the Subscription Group, which narrows users by the level or category of communication they wish to have with you. In this step, you will select the larger audience from your Segments, and narrow that segment further with our Filters, if you choose.
 
@@ -94,7 +93,7 @@ In this step, you'll choose which users receive your message. You should have al
 Interesting in SMS retargeting? Visit our SMS [retargeting article]({{site.baseurl}}/user_guide/message_building_by_channel/sms/campaign/retargeting/) to learn more. 
 {% endalert %}
 
-## Step 6: Choose Conversion Events
+## Step 6: Choose conversion events
 
 Conversion events help you measure the success of your campaign:
 - If you are using Geotargeting to trigger an SMS message that has an end goal of the user making a purchase, set the conversion event to a "Purchase".
@@ -104,7 +103,7 @@ You can also set custom conversion events based on your specific use case. Get c
 
 ![SMS Conversion Events]({% image_buster /assets/img/sms_campaign_conversion.gif %})
 
-## Step 7: Confirm Details and Launch!
+## Step 7: Confirm details and launch!
 
 If you're using campaigns, you'll have the opportunity to confirm its details. If you're using Canvas, be sure to confirm the details of each of the pieces.
 

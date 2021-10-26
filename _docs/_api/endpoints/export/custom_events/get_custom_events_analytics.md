@@ -9,7 +9,7 @@ description: "This article outlines details about the Custom Events Analytics en
 
 ---
 {% api %}
-# Custom Events Analytics
+# Custom events analytics
 {% apimethod get %}
 /events/data_series
 {% endapimethod %}
@@ -18,7 +18,7 @@ This endpoint allows you to retrieve a series of the number of occurrences of a 
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#0bd1ab63-d1a5-4301-8d17-246cf24a178c {% endapiref %}
 
-## Request Parameters
+## Request parameters
 
 | Parameter| Required | Data Type | Description |
 | -------- | -------- | --------- | ----------- |
@@ -30,7 +30,7 @@ This endpoint allows you to retrieve a series of the number of occurrences of a 
 | `segment_id` | Optional       | String | See [Segment API identifier]({{site.baseurl}}/api/identifier_types/). Segment ID indicating the analytics-enabled segment for which event analytics should be returned. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
 
-## Example Request
+## Example request
 {% raw %}
 ```
 curl --location -g --request GET 'https://rest.iad-01.braze.com/events/data_series?event=event_name&length=24&unit=hour&ending_at=2014-12-10T23:59:59-05:00&app_id={{app_identifier}}&segment_id={{segment_identifier}}' \
@@ -55,7 +55,7 @@ Authorization: Bearer YOUR-REST-API-KEY
 }
 ```
 
-### Fatal Error Response Codes {#fatal-export}
+### Fatal error response codes {#fatal-export}
 
 The following status codes and associated error messages will be returned if your request encounters a fatal error. Any of these error codes indicate that no data will be processed.
 

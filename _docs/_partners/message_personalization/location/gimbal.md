@@ -24,7 +24,7 @@ Combine your beacon or geofence support with Braze’s targeting and messaging f
 |Gimbal SDK | Gimbal | https://docs.gimbal.com/index.html | The Gimbal Location SDK powers macro and micro location-based mobile experiences using proximity beacons and geofences that allow you to communicate more effectively with your app users. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
 
-## SDK Integration
+## SDK integration
 
 You must have the Location SDK implemented & geofences (or beacons) set up, as well as a Gimbal Manager account to proceed with the integration.
 1.	Create a [Gimbal Manager][1] account.

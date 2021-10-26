@@ -7,13 +7,13 @@ description: "This reference article shows how to implement social data tracking
 
 ---
 
-# Social Data Tracking for iOS
+# Social data tracking for iOS
 
-## Collecting Social Account Data
+## Collecting social account data
 
 The Braze iOS SDK does not automatically collect Facebook or Twitter user data. If you want to integrate Facebook user data in Braze user profiles, you need to fetch the user's data and pass it to Braze.
 
-## Passing Facebook Data To Braze
+## Passing Facebook data to Braze
 
 Initialize `ABKFacebookUser` objects with the Facebook data you have collected and pass it to Braze:
 
@@ -68,7 +68,7 @@ let facebookUser = ABKFacebookUser(facebookUserDictionary: facebookUserDictionar
 
 For more information about integrating the Facebook SDK, follow the steps in [Facebook SDK documentation][2].
 
-## Passing Twitter Data To Braze
+## Passing Twitter data to Braze
 
 Initialize `ABKTwitterUser` objects, set up the Twitter data you have collected and pass it to Braze:
 

@@ -8,7 +8,7 @@ channel: push
 
 ---
 
-# Detailed Push Preferences
+# Detailed push preferences
 
 Push notifications should be treated with care to target users with timely and relevant notifications. Braze will collect useful device and usage information that can be used to target relevant segments. This should be supplemented with custom events and attributes specific to your app. Using that data you can carefully target messages to increase open rates and decrease instances of users disabling push.
 

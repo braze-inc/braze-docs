@@ -9,7 +9,7 @@ description: "This article outlines details about the App Sessions by Time endpo
 
 ---
 {% api %}
-# Session Analytics Endpoint
+# Session analytics endpoint
 {% apimethod get %}
 /sessions/data_series
 {% endapimethod %}
@@ -18,7 +18,7 @@ This endpoint allows you to retrieve a series of the number of sessions for your
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#79efb6a9-62ec-4b8a-bf4a-e96313aa4be1 {% endapiref %}
 
-## Request Parameters
+## Request parameters
 
 | Parameter| Required | Data Type | Description |
 | -------- | -------- | --------- | ----------- |
@@ -29,7 +29,7 @@ This endpoint allows you to retrieve a series of the number of sessions for your
 | `segment_id` | Optional       | String | See [Segment API identifier]({{site.baseurl}}/api/identifier_types/). Segment ID indicating the analytics-enabled segment for which sessions should be returned. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
 
-## Example Request
+## Example request
 {% raw %}
 ```
 curl --location -g --request GET 'https://rest.iad-01.braze.com/sessions/data_series?length=14&unit=day&ending_at=2018-06-28T23:59:59-5:00&app_id={{app_identifier}}&segment_id={{segment_identifier}}' \

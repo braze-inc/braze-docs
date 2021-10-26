@@ -7,11 +7,11 @@ description: "This reference article goes over the event object, what it is, and
 
 ---
 
-# Event Object Specification
+# Event object specification
 
 > This article explains the different components of an event object, how you can use this object, and examples to draw from.
 
-## What is the Event Object?
+## What is the event object?
 
 An Event Object is an object that gets passed through the API when a specific event occurs. Events objects are housed in an events array. Each Event Object in the events array represents a single occurrence of a custom event by a particular user at the designated time value. The event object has many different fields that allow you to customize by setting and using event properties in messages, data collection, and personalization.
 
@@ -19,7 +19,7 @@ You can check out how to set up custom events for a specific platform by reading
 
 - Tracking Custom Events: <br>[Android][2]<br>[iOS][3]<br>[Web][4]
 
-### Event Object
+### Event object
 
 ```json
 {
@@ -41,7 +41,7 @@ You can check out how to set up custom events for a specific platform by reading
 - [ISO 8601 Time Code Wiki][22]
 - [App Identifier][21]
 
-#### Update Existing Profiles Only
+#### Update existing profiles only
 
 If you wish to update only existing user profiles in Braze, you should pass the `_update_existing_only` key with a value of `true` within the body of your request. If this value is omitted, Braze will create a new user profile if the `external_id` does not already exist.
 
@@ -49,7 +49,7 @@ If you wish to update only existing user profiles in Braze, you should pass the 
 If you are creating an alias-only user profile via the users/track endpoint, `_update_existing_only` must be set to `false`. If this value is omitted, the alias-only profile will not be created.
 {% endalert %}
 
-## Event Properties Object
+## Event properties object
 Custom events and purchases may have event properties. The “properties” values should be an object where the keys are the property names and the values are the property values. Property names must be non-empty strings less than or equal to 255 characters, with no leading dollar signs ($).
 
 Property values can be any of the following data types:
@@ -66,10 +66,10 @@ Property values can be any of the following data types:
 
 Event property objects that contain array or object values can have an event property payload of up to 50KB.
 
-### Event Property Persistence
+### Event property persistence
 Event Properties are designed for filtering of, and Liquid personalization in, messages triggered by their parent Events. By default, they are not persisted on the Braze user profile. To use Event Property values in segmentation, please see our [Custom Event documentation][5] which details the various approaches to storing Event Property values long-term.
 
-#### Event Example Request
+#### Event example request
 
 ```json
 POST https://YOUR_REST_API_URL/users/track
@@ -104,7 +104,7 @@ Authorization: Bearer YOUR-REST-API-KEY
 ```
 - [ISO 8601 Time Code Wiki][19]
 
-## Event Objects
+## Event objects
 
 Using the example provided above, we can see that someone watched a trailer recently, and then rented a movie. While we cannot go into a campaign and segment the users based on these properties, we can use these properties strategically by using them in the form of a receipt, to send a custom message through a channel using Liquid. For example, "Hello __Beth__, Thanks for renting __The Sad Egg__ by __Dan Alexander__, here are some recommended movies based on your rental..."
 

@@ -9,9 +9,9 @@ channel:
 
 ---
 
-# In-App Message Delivery
+# In-app message delivery
 
-## Trigger Types
+## Trigger types
 
 Our in-app message product allows you to trigger in-app message display as a result of several different event types: `Any Purchase`, `Specific Purchase`, `Session Start`, `Custom Event`, `Push Click`.  Furthermore, `Specific Purchase` and `Custom Event` triggers can contain robust property filters.
 
@@ -19,7 +19,7 @@ Our in-app message product allows you to trigger in-app message display as a res
 Triggered in-app messages only work with custom events logged through the SDK and not through the REST APIs. If you're working with iOS, check out how to log custom events [here]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/analytics/tracking_custom_events/#tracking-custom-events).
 {% endalert %}
 
-## Delivery Semantics
+## Delivery semantics
 
 All in-app messages that a user is eligible for are delivered to the user's device on session start. For more information about the SDK's session start semantics, see our [session lifecycle documentation][45]. Upon delivery, the SDK will pre-fetch assets so that they are available immediately at trigger time, minimizing display latency.
 
@@ -27,7 +27,7 @@ When a trigger event has more than one eligible in-app message associated with i
 
 For in-app messages that display immediately on delivery, (session start, push click) there can be some latency due to assets not being prefetched.
 
-## Minimum Time Interval Between Triggers
+## Minimum time interval between triggers
 
 By default, we rate limit in-app messages to once every 30 seconds to ensure a quality user experience.
 
@@ -54,11 +54,11 @@ Appboy.start(withApiKey: "YOUR-API-KEY", in:application, withLaunchOptions:launc
 {% endtab %}
 {% endtabs %}
 
-## Local In-App Message Delivery
+## Local in-app message delivery
 
-### The In-App Message Stack
+### The in-app message stack
 
-#### Showing In-App Messages
+#### Showing in-app messages
 
 When a user is eligible to receive an in-app message, the `ABKInAppMessageController` will be offered the latest in-app message off the in-app message stack. The stack only persists stored in-app messages in memory and is cleared up between app launches from suspended mode.
 
@@ -66,7 +66,7 @@ When a user is eligible to receive an in-app message, the `ABKInAppMessageContro
 Do not display in-app messages when the keyboard is displayed on screen, as rendering is undefined in this circumstance.
 {% endalert %}
 
-#### Adding In-App Messages to the Stack
+#### Adding in-app messages to the stack
 
 Users are eligible to receive an in-app message in the following situations:
 
@@ -76,7 +76,7 @@ Users are eligible to receive an in-app message in the following situations:
 
 Triggered in-app messages are placed on top of the stack when their trigger event is fired. If multiple in-app messages are in the stack and waiting to be displayed, Braze will display the most recently received in-app message first (last in, first out).
 
-#### Returning In-App Messages to the Stack
+#### Returning in-app messages to the stack
 
 A triggered in-app message can be returned back to the stack in the following situations:
 
@@ -85,7 +85,7 @@ A triggered in-app message can be returned back to the stack in the following si
 - The deprecated `beforeInAppMessageDisplayed:withKeyboardIsUp:` [UI delegate method][38] has **NOT** been implemented, and the keyboard is currently being displayed
 - The `beforeInAppMessageDisplayed:` [delegate method][30] or the deprecated `beforeInAppMessageDisplayed:withKeyboardIsUp:` [UI delegate method][38] returned `ABKDisplayInAppMessageLater`
 
-#### Discarding In-App Messages
+#### Discarding in-app messages
 
 A triggered in-app message will be discarded in the following situations:
 
@@ -96,7 +96,7 @@ A triggered in-app message will be discarded in the following situations:
 - The in-app message is a full in-app message but has no image
 - The in-app message is an image-only modal in-app message but has no image
 
-#### Manually Queue In-App Message Display
+#### Manually queue in-app message display
 
 If you wish to display an in-app message at other times within your app, you may manually display the top-most in-app message on the stack by calling the following method:
 
@@ -117,7 +117,7 @@ Appboy.sharedInstance()!.inAppMessageController.displayNextInAppMessage()
 {% endtab %}
 {% endtabs %}
 
-### Real Time In-App Message Creation & Display
+### Real time in-app message creation and display
 
 In-app messages can also be locally created within the app and displayed via Braze. This is particularly useful for displaying messages that you wish to trigger within the app in real-time. Braze does not support analytics on in-app messages created locally.
 

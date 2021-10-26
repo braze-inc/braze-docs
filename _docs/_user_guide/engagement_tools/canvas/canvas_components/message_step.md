@@ -2,14 +2,14 @@
 nav_title: Message Step
 article_title: Message Step
 alias: "/message_step/"
-page_order: 3
+page_order: 5
 page_type: reference
 description: "This reference article covers how to create a stand-alone message using the Canvas messaging step."
 tool: Canvas
 
 ---
 
-# Message Step for Canvas
+# Message Step
 
 Message Steps allow you to add a standalone message where you want in your Canvas flow.
 
@@ -35,10 +35,10 @@ With a Message Step, all users who enter the step advance to the next step when 
 
 ## Analytics
 
-| Metric | Description |
-| `Entries` | Reflects the number of times the step has been entered. If your Canvas has re-eligibility and a user enters a message step twice, two entries will be recorded. |
+| metric | description |
+| `Entries` | Reflects the number of times the step has been entered. If your Canvas has re-eligibility and a user enters a Message Step twice, two entries will be recorded. |
 | `Proceeded to Next Step` | Reflects the number of entries that proceeded to the next step in the Canvas. |
-| `Sends` | Reflects the total number of messages the step has sent. If your Canvas re-eligibility and a user enters a message step twice, two entries will be recorded. |
+| `Sends` | Reflects the total number of messages the step has sent. If your Canvas re-eligibility and a user enters a Message Step twice, two entries will be recorded. |
 | `Unique Recipients` | Reflects the number of users who have received messages from this step. |
 {: .reset-td-br-1 .reset-td-br-2}
 
