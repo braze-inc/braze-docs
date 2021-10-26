@@ -1,12 +1,12 @@
 ---
-nav_title: Catalog
-permalink: "/catalog/"
+nav_title: Catalogs
+permalink: "/catalogs/"
 hidden: true
 ---
 
-# Catalog
+# Catalogs
 
-You can use a catalog to reference non-user data in your Braze campaigns through Liquid.
+You can use catalogs to reference non-user data in your Braze campaigns through Liquid.
 
 To do so, first import your catalog (a CSV of non-user data) into Braze, and then access that information to enrich your messages. You can bring in any type of data into a catalog. This data is typically some sort of metadata from your company such as product information for an eCommerce business, or course information for an education provider.
 
@@ -20,7 +20,7 @@ If you'd like to share your feedback on this feature or make a request, you can 
 
 ## Creating a catalog
 
-To create a catalog in Braze, upload a CSV to the **Catalogs** page. Each CSV you upload will be its own distinct catalog. Each catalog has an identifier, which you can use to reference data from that catalog in a later step.
+To create a catalog in Braze, upload a CSV to the **Catalogs** page. Each CSV you upload will be its own distinct catalog. Each catalog has an identifier; you'll use it to reference data from that catalog in a later step.
 
 ### Step 1: Create your CSV
 
@@ -47,9 +47,9 @@ After successfully uploading your catalog, the catalog displays in a list below 
 
 ![Example catalog ID and associated CSV files in a list below the upload zone][2]
 
-## Using a catalog in a message
+## Using catalogs in a message
 
-To use a catalog in a message, you'll need the catalog ID. For our example scenario, the catalog ID for our Games catalog is `6171a881759044006998ed9a`.
+To use your catalog in a message, you'll need the catalog ID. For our example scenario, the catalog ID for our Games catalog is `6171a881759044006998ed9a`.
 
 ### Step 1: Retrieve an item
 
@@ -63,7 +63,7 @@ In the message composer of your choice, use the `catalogs` Liquid tag to retriev
 
 Replace `<CATALOG_ID>` with your catalog ID and `<ITEM_ID>` with an item (row) ID from the catalog. 
 
-For example, let's say we want to reference the tales_storefront item:
+For example, let's say we want to reference the `tales_storefront` item:
 
 {% raw %}
 ```liquid
