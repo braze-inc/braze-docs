@@ -103,6 +103,10 @@ window.appboy.getUser().setCustomUserAttribute("attribute name", "attribute valu
 </script>
 ```
 
+{% alert important %}
+The GTM template does not support nested properties on events or purchases at this time. You can use the above HTML to log any events or purchases that require nested properties.
+{% endalert %}
+
 #### Default user attributes {#standard-attributes}
 
 Default user attributes, such as a user's first name, should be logged in the same manner as custom user attributes. Make sure the values you're passing in for default attributes match the expected format specified in the [User Class][16] documentation.
