@@ -14,7 +14,7 @@ description: "This article outlines details about the Get Campaign Details endpo
 /campaigns/details
 {% endapimethod %}
 
-This endpoint allows you to retrieve relevant information on a specified campaign, which can be identified by the `campaign_id`. 
+This endpoint allows you to retrieve relevant information on a specified campaign, which can be identified by the `campaign_id`. If you want to retrieve Canvas data, refer to the [Canvas Details]({{site.baseurl}}/api/endpoints/export/canvas/get_canvas_details/) endpoint.
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#aad2a811-7237-43b1-9d64-32042eabecd9 {% endapiref %}
 
