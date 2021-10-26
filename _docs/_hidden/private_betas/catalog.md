@@ -6,23 +6,25 @@ hidden: true
 
 # Catalog
 
-You can use a catalog to reference non-user data in your Braze campaigns through Liquid. 
+You can use a catalog to reference non-user data in your Braze campaigns through Liquid.
 
 To do so, first import your catalog (a CSV of non-user data) into Braze, and then access that information to enrich your messages. You can bring in any type of data into a catalog. This data is typically some sort of metadata from your company such as product information for an eCommerce business, or course information for an education provider.
 
 Once this information is imported, you can begin accessing it in messages in a similar way to accessing custom attributes or custom event properties through Liquid.
 
 {% alert important %}
-Catalogues are currently in beta. Please contact your Braze account manager if you are interested in participating in the beta.
+Catalogs are currently in beta. Please contact your Braze account manager if you are interested in participating in the beta.
 {% endalert %}
+
+If you'd like to share your feedback on this feature or make a request, you can [book a session](https://calendly.com/d/yzvf-frpy/catalog-beta-working-session?month=2021-10) with the Braze Data Ingestion team on Calendly!
 
 ## Creating a catalog
 
-To create a catalog in Braze, upload a CSV to the **Catalogs** page. Each CSV you upload will be its own distinct catalog. Each catalog has an identifier, which you can use to reference data from that catalogue in a later step.
+To create a catalog in Braze, upload a CSV to the **Catalogs** page. Each CSV you upload will be its own distinct catalog. Each catalog has an identifier, which you can use to reference data from that catalog in a later step.
 
 ### Step 1: Create your CSV
 
-First, create your CSV file. The CSV must have one column with a header of **id**. Each item's **id** must be unique. Additionally, the following limitations apply to catalog CSV files:
+First, create your CSV file. The CSV must have one column with a header of **id**, and each item's **id** must be unique. Additionally, the following limitations apply to catalog CSV files:
 
 - Maximum of 1,000 items (rows)
 - Maximum of 20 fields (columns)
@@ -35,7 +37,7 @@ For this tutorial, we're using a catalog that lists two games, their cost, and a
 
 ### Step 2: Upload your CSV
 
-Next, navigate to the **Catalog** page and upload your CSV. Drag and drop your file to the upload zone, or click **Upload CSV** and choose your file.
+After you've created your CSV, navigate to the **Catalogs** page and upload the file. Drag and drop your file to the upload zone, or click **Upload CSV** and choose your file.
 
 ![Catalog CSV upload zone][1]
 
