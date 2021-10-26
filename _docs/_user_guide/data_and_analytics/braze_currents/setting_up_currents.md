@@ -18,7 +18,7 @@ Currents are included with certain Braze packages. Please contact your Braze rep
 
 ## Requirements
 
-Using currents with any of our partners requires the same basic parameters and connection methodology.
+Using Currents with any of our partners requires the same basic parameters and connection methodology.
 
 Each partner requires that Braze has permission to write and send data files to them, and Braze asks for the location they should write those files to, specifically bucket names or keys.
 
