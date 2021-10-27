@@ -43,7 +43,7 @@ After you've created your CSV, navigate to the **Catalogs** page and upload the 
 
 ### Step 3: Take note of your catalog ID
 
-After successfully uploading your catalog, the catalog displays in a list below the upload zone. Each catalog has an associated catalog ID — a 24 digit alphanumeric code. Keep that ID handy, you'll need it in the next step.
+After successfully uploading your catalog, the catalog displays in a list below the upload zone. Each catalog has an associated catalog ID—a 24 digit alphanumeric code. Keep that ID handy, you'll need it in the next step.
 
 ![Example catalog ID and associated CSV files in a list below the upload zone][2]
 
