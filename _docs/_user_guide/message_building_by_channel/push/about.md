@@ -80,6 +80,8 @@ Your push messages must fall within the guidelines of the Apple App Store and Go
 (Android) Notification Drawer | 597 characters | N/A
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 }
 
+Wondering how many characters you can use in a push notification for iOS 15+ without it being truncated? Check out our [iOS 15 push notification design guide]({{site.baseurl}}/user_guide/message_building_by_channel/push/ios/push_design_guide/).
+
 {% endtab %}
 {% tab Payload Size %}
 

@@ -1,9 +1,9 @@
 ---
-nav_title: "Push Notification Design Guide"
+nav_title: "Push Notification Design Guide (iOS 15+)"
 article_title: iOS 15 Push Notification Design Guide
 page_type: reference
 page_order: 10
-description: "This reference article covers guidelines and recommendations to consider while designing iOS messages."
+description: "This reference article covers guidelines and recommendations to consider while designing push messages for iOS 15+."
 platform: iOS
 channel:
   - push
@@ -11,11 +11,11 @@ tool:
   - Campaigns
 ---
 
-# iOS push notification design guide
+# iOS 15 push notification design guide
 
-> This reference article covers guidelines and recommendations to consider while designing iOS messages.
+> This reference article covers guidelines and recommendations to consider while designing push messages for iOS 15 and above.
 
-While we can't provide a hard and fast rule for the precise number of characters to include in a push, we have some great guidelines and recommendations for you to consider while designing iOS messages. When in doubt, keep it short and sweet. Play it safe, targeting about 30–40 characters for both the message title and body.
+While we can't provide a hard and fast rule for the precise number of characters to include in a push, we have some great guidelines and recommendations for you to consider while designing iOS messages. When in doubt, keep it short and sweet. Play it safe, targeting about 30–40 characters per line for both the message title and body.
 
 ## Notification states
 

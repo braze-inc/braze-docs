@@ -43,7 +43,7 @@ The following may impact how text is displayed in a push notification:
 - Users can increase or decrease the global font size on their phone for accessibility reasons.
 - Messages can be displayed differently based on device size (ie. narrow phone vs wide iPad).
 
-Wondering how many characters you can use in a push notification without it being truncated? Check out our [iOS push notification design guide]({{site.baseurl}}/user_guide/message_building_by_channel/push/ios/push_design_guide/).
+Wondering how many characters you can use in a push notification without it being truncated? Check out our [iOS 15 push notification design guide]({{site.baseurl}}/user_guide/message_building_by_channel/push/ios/push_design_guide/).
 
 > As a general rule of thumb, Braze recommends keeping each line of text for both the optional title and message body to approximately 30-40 characters in a mobile push notification.
 
