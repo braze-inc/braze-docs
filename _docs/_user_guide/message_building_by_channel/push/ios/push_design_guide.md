@@ -13,9 +13,11 @@ tool:
 
 # iOS push notification design guide
 
+> This reference article covers guidelines and recommendations to consider while designing iOS messages.
+
 While we can't provide a hard and fast rule for the precise number of characters to include in a push, we have some great guidelines and recommendations for you to consider while designing iOS messages. When in doubt, keep it short and sweet. Play it safe, targeting about 30–40 characters for both the message title and body.
 
-## Overview of notification states
+## Notification states
 
 Your users may view push notifications in a variety of different situations, and could see different lengths of text as follows.
 
@@ -47,17 +49,50 @@ While we recommend a 2:1 aspect ratio for expanded push notifications, nearly an
 
 When creating content, consider the following scenarios that may impact how much text is displayed.
 
+{% tabs %}
+{% tab Timing %}
+
 ### Timing
 
 Depending on when a user engages with a push notification, the timestamp can shorten the title text.
+
+![Example push notification with a timestamp of "now" and title character count of 35]({% image_buster/assets/img_archive/push_ios_timing_35.png %})
+<br>Title character count: **35**
+
+![Example push notification with a timestamp of "3h ago" and title character count of 33]({% image_buster/assets/img_archive/push_ios_timing_33.png %})
+<br>Title character count: **33**
+
+![Example push notification with a timestamp of "Yesterday, 8:37 AM" and title character count of 22]({% image_buster/assets/img_archive/push_ios_timing_22.png %})
+<br>Title character count: **22**
+
+{% endtab %}
+{% tab Images %}
 
 ### Images
 
 Body text is shortened by about 10 characters per line when an image is present.
 
+![Example push notification with no image and a body character count of 179]({% image_buster/assets/img_archive/push_ios_images_179.png %})
+<br>Body character count: **179**
+
+![Example push notification with an image and a body character count of 154]({% image_buster/assets/img_archive/push_ios_images_154.png %})
+<br>Body character count: **154**
+
+{% endtab %}
+{% tab Interruption level %}
+
 ### Interruption level
 
 Time Sensitive and Critical denotations push the title down to a new line without the timestamp, giving it a little more space.
+
+![Example push notification with no Time Sensitive or Critical denotation and a title character count of 35]({% image_buster/assets/img_archive/push_ios_interruption_level_35.png %})
+<br>Title character count: **35**
+
+![Example push notification with a Time Sensitive denotation and a title character count of 39]({% image_buster/assets/img_archive/push_ios_interruption_level_39.png %})
+<br>Title character count: **39**
+
+{% endtab %}
+{% tab More %}
 
 ### And more
 
@@ -67,5 +102,7 @@ The following also impact text truncation:
 - **Device width:** the message could be displayed on a small phone, or a wide iPad.
 - **Content types:** emojis and wide characters like "m" and "w" take up more space than "i" or "t", and longer words like "engagement" may line-wrap more abruptly than shorter words.
 
+{% endtab %}
+{% endtabs %}
+
 [1]: {% image_buster /assets/img_archive/push_ios_notification_states.png %}
-[2]: {% image_buster /assets/img_archive/push_ios_lockscreen.png %}
