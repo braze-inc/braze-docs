@@ -24,7 +24,14 @@ You will need to clone the [Retail Demo Store repo](https://github.com/aws-sampl
 
 Before you set up Braze to send personalized messages to users, let's review the relevant components required for a typical eCommerce website, using the Retail Demo Store architecture as an example.
 
-![Braze Personalization Architecture][1] 
+![Braze personalization architecture]({% image_buster /assets/img/amazon_personalize/braze-personalize-arch.png %}){: style="max-width:70%" }
+
+**Key:**
+
+1. Retail Demo Store's web UI uses the AWS Amplify JavaScript library to send training events to Amazon Personalize. 
+2. Braze campaign user records are updated from the Global Store User service.
+3. When a Braze campaign runs, a Connected Content template is used to fetch recommendations from Personalize and to populate an email template for a target user. 
+4. Product catalog information can be used to train recommendation models as well.
 
 Braze will send emails to your users based on their behavior or based on attributes of their user profiles. This data can be used to identify users and to build user profiles that can be used to determine when to send a message or email. 
 
