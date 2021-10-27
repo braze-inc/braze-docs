@@ -36,21 +36,21 @@ __Should I be using Push Primers?__ Depends on your iOS version.<br><br>
 - __iOS 11 and Later__: Because these iOS versions only allow foreground Push, the intrusive native iOS Push opt-in prompt will still get sent, in turn sacrificing your marketability to those users. We strongly suggest setting up Push Primers for these versions. 
 {% endalert %}
 
-## Step 1: push primer integrations
+## Step 1: Push primer integrations
 
 We leverage in-app messages to drive Push Primer campaigns. Unlike many of our out-of-the-box features that come ready to use, this essential tool does require some backend setup from your developers. We have included the code snippets required here: [Push Primer Integrations][integrations].
 
-## Step 2: select your channel of choice
+## Step 2: Select your channel of choice
 
 From the **Campaigns** pane within the Dashboard, select **In-App Messaging** as the messaging channel under **Create Campaign**.
 
-## Step 3: set up initial campaign options
+## Step 3: Set up initial campaign options
 
 ![push_primer_message_type][push_primer7]
 
 Once you have a blank in-app messaging campaign to work on, you must name your campaign, select where you would like your Push Primer to send to, select the message type, and pick the layout type. For your basic Push Primer campaign message type, we suggest either a full screen or modal message. Note that for a full-screen in-app message, an image is required.
 
-## Step 4: customize your message
+## Step 4: Customize your message
 
 ![push_primer][push_primer2]
 
@@ -73,7 +73,7 @@ To add buttons to your in-app message, you will find a Button 1 textbox and Butt
 
 ![push_primer][push_primer6]{: style="float:right;max-width:40%;margin-left:15px;"}
 
-### On click behavior
+### On-click behavior
 
 After your push primer message has been set up, on-click behavior must be assigned. For the corresponding "Turn on Notifications" button you had assigned, you must select "Deep Link Into App". 
 
@@ -83,17 +83,17 @@ Because Push Primer campaigns are not an out-of-the-box feature, the deep-link l
 
 Documentation on push primer integrations and deep linking customization can be found [here][integrations].
 
-## Step 5: selecting the delivery method
+## Step 5: Selecting the delivery method
 
 To set your Push Primer to trigger when you want it to, you must set __Perform Custom Event__ as the trigger action. Your developers will set up a custom event that you can choose to trigger off of for your Push Primer campaign. To figure out how your company references this custom event, check with your developers. __This custom event counts as one data point toward your allotment.__ This customer event will check if a user has already been provided a native push prompt, and if not, it will trigger the push primer in-app message. 
 
-## Step 6: targeting users
+## Step 6: Targeting users
 
 Generally, for Push Primer campaigns, we want the push primer to trigger off of a certain segment of users. In these Targeting Users Options, you can decide what segment you feel most appropriate. We suggest taking some time with your marketing team to pick a compelling segment. For example, users that have completed a second purchase, users that have just made an account to become a member, or even users that visit your app more than twice a week. Targeting users for these crucial segments increases the likelihood of users opting in and becoming push enabled.
 
 If you are not sure the best way to segment, you may also select All Users. This option will send your push primer to any iOS device that has not yet opted in or out of push. 
 
-## Step 7: conversions
+## Step 7: Conversions
 Braze suggests default settings for conversions, but you may want to set up conversion events surrounding push primers.
 
 [integrations]: {{site.baseurl}}/developer_guide/platform_integration_guides/ios/push_primer/

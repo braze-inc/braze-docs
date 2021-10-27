@@ -70,7 +70,7 @@ Once this is set up on your app, use the summary category by checking the __Noti
 
 Then, input the summary category identifier that you set in your app.
 
-### Provisional push authentication & quiet notifications
+### Provisional push authentication and quiet notifications
 
 Apple allows brands the option to send quiet push notifications to their users' Notification Centers before they officially, explicitly opt-in, giving you a chance to demonstrate the value of your messages early. All you need to do is [set up provisional push notifications](#set-up-provisional-push-notifications) in your app, then any user who has a provisional push token will receive your messages.
 
@@ -130,7 +130,7 @@ if (@available(iOS 12.0, *)) {
   {% endtab %}
 {% endtabs %}
 
-### Interruption level (ios 15+) {#interruption-level}
+### Interruption level (iOS 15+) {#interruption-level}
 
 ![Notification Settings]({% image_buster /assets/img/ios/ios15-notification-settings.png %}){: style="float:right;max-width:25%;margin-left:15px;border:0"}
 
@@ -156,7 +156,7 @@ To change the Interruption Level for an iOS Push Notification, choose the desire
 
 This feature does not have minimum SDK version requirements, but is only applied for devices running iOS 15+.
 
-### Relevance score (ios 15+) {#relevance-score}
+### Relevance score (iOS 15+) {#relevance-score}
 
 ![Notification Summary]({% image_buster /assets/img/ios/ios15-notification-summary.png %}){: style="float:right;max-width:25%;margin-left:15px;border:0"}
 
@@ -172,7 +172,7 @@ To set an iOS Notification's Relevance Score, enter a value between `0.0` and `1
 
 This feature does not have minimum SDK version requirements, but is only applied for devices running iOS 15+.
 
-For more information on maximum message lengths for different message types, refer to [Image and Text Specifications]({{site.baseurl}}/user_guide/message_building_by_channel/push/about/#image-and-text-specifications).
+For more information on maximum message lengths for different message types, refer to [Image and Text Specifications]({{site.baseurl}}/user_guide/message_building_by_channel/push/about/#image-and-text-specifications). Wondering how many characters you can use in a push notification without it being truncated? Check out our [iOS push notification design guide]({{site.baseurl}}/user_guide/message_building_by_channel/push/ios/push_design_guide/).
 
 [26]: {% image_buster /assets/img_archive/notification_group_dropdown.png %}
 [27]: {% image_buster /assets/img_archive/managenotgroups.png %}
