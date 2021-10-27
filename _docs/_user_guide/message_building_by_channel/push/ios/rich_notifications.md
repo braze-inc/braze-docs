@@ -21,7 +21,7 @@ tool:
 
 ## Requirements
 
-- To ensure your app can send rich notifications, please follow the [ios push integration][1] instructions, as your developer will need to add a service extension to your app.
+- To ensure your app can send rich notifications, please follow the [iOS push integration][1] instructions, as your developer will need to add a service extension to your app.
 - You should also reference [Apple's documentation][2] for media limitations and specs.
 
 > As of January 2020, iOS Rich Push notifications can handle images 1038x1038 as long as they are under 10MB, but we recommend using as small a file size as possible. In practice, sending large files can cause both unnecessary network stress and make download timeouts more common.
@@ -31,21 +31,97 @@ tool:
 
 ### Character count
 
-While there is no hard and fast rule for the exact number of characters to include in a push notification, we [provide some guidelines]({{site.baseurl}}/user_guide/message_building_by_channel/push/about/#image-and-text-specifications) to consider while designing iOS messages. There may be some variance depending on the presence of an image, the notification state and display setting of the user's device, as well as the size of the device.
+While we can't provide a hard and fast rule for the precise number of characters to include in a push, we [provide some guidelines]({{site.baseurl}}/user_guide/message_building_by_channel/push/about/#image-and-text-specifications) to consider while designing iOS messages. There may be some variance depending on the presence of an image, the notification state and display setting of the user's device, as well as the size of the device. 
 
-The following may impact how text is displayed in a push notification:
+When in doubt, keep it short and sweet. Play it safe, targeting about 30–40 characters per line for both the message title and body.
 
-- Image thumbnails take over about 10 characters per line.
-- Notification states affect how the user views the notification:
-  - Messages on lock screen or in notification center will display four lines of text.
-  - Messages on active devices will display two lines of text.
-  - If a user long taps a message, they will see seven lines of text in the expanded view.
-- Users can increase or decrease the global font size on their phone for accessibility reasons.
-- Messages can be displayed differently based on device size (ie. narrow phone vs wide iPad).
+#### Notification states
 
-Wondering how many characters you can use in a push notification without it being truncated? Check out our [iOS 15 push notification design guide]({{site.baseurl}}/user_guide/message_building_by_channel/push/ios/push_design_guide/).
+Your users may view push notifications in a variety of different situations, and could see different lengths of text as follows.
 
-> As a general rule of thumb, Braze recommends keeping each line of text for both the optional title and message body to approximately 30-40 characters in a mobile push notification.
+<table>
+<thead>
+  <tr>
+    <th>Lock screen or Notification Center</th>
+    <th>Expanded</th>
+    <th>Device active</th>
+  </tr>
+</thead>
+<tbody>
+  <tr>
+    <td width="33%">This is the most common scenario.<br><br><b>Title:</b> 1 line of text<br><b>Body:</b> 4 lines of text<br><b>Image:</b> square thumbnail</td>
+    <td width="33%">When a user long-presses a message.<br><br><b>Title:</b> 1 line of text<br><b>Body:</b> 7 lines of text<br><b>Image:</b> 2:1 aspect ratio (recommended, see note below)</td>
+    <td width="33%">When a user receives a push while their phone is unlocked and active.<br><br><b>Title:</b> 1 line of text<br><b>Body:</b> 2 lines of text</td>
+  </tr>
+</tbody>
+</table>
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 }
+
+![Example push notifications for push displayed on the lock screen, when expanded, and when device is active]({% image_buster /assets/img_archive/push_ios_notification_states.png %})
+
+{% alert note %}
+While we recommend a 2:1 aspect ratio for expanded push notifications, nearly any aspect ratio is supported. Images will always span the full width of the notification, and the height will adjust accordingly.
+{% endalert %}
+
+#### Variables in text truncation
+
+When creating content, consider the following scenarios that may impact how much text is displayed.
+
+{% tabs %}
+{% tab Timing %}
+
+##### Timing
+
+Depending on when a user engages with a push notification, the timestamp can shorten the title text.
+
+![Example push notification with a timestamp of "now" and title character count of 35]({% image_buster/assets/img_archive/push_ios_timing_35.png %})
+<br>Title character count: **35**
+
+![Example push notification with a timestamp of "3h ago" and title character count of 33]({% image_buster/assets/img_archive/push_ios_timing_33.png %})
+<br>Title character count: **33**
+
+![Example push notification with a timestamp of "Yesterday, 8:37 AM" and title character count of 22]({% image_buster/assets/img_archive/push_ios_timing_22.png %})
+<br>Title character count: **22**
+
+{% endtab %}
+{% tab Images %}
+
+##### Images
+
+Body text is shortened by about 10 characters per line when an image is present.
+
+![Example push notification with no image and a body character count of 179]({% image_buster/assets/img_archive/push_ios_images_179.png %})
+<br>Body character count: **179**
+
+![Example push notification with an image and a body character count of 154]({% image_buster/assets/img_archive/push_ios_images_154.png %})
+<br>Body character count: **154**
+
+{% endtab %}
+{% tab Interruption level %}
+
+##### Interruption level (iOS 15)
+
+Time Sensitive and Critical denotations push the title down to a new line without the timestamp, giving it a little more space.
+
+![Example push notification with no Time Sensitive or Critical denotation and a title character count of 35]({% image_buster/assets/img_archive/push_ios_interruption_level_35.png %})
+<br>Title character count: **35**
+
+![Example push notification with a Time Sensitive denotation and a title character count of 39]({% image_buster/assets/img_archive/push_ios_interruption_level_39.png %})
+<br>Title character count: **39**
+
+{% endtab %}
+{% tab More %}
+
+##### And more
+
+The following also impact text truncation:
+
+- **Phone display settings:** a user can increase or decrease the global UI font size on their phone, typically for accessibility reasons.
+- **Device width:** the message could be displayed on a small phone, or a wide iPad.
+- **Content types:** emojis and wide characters like "m" and "w" take up more space than "i" or "t", and longer words like "engagement" may line-wrap more abruptly than shorter words.
+
+{% endtab %}
+{% endtabs %}
 
 ## Setting up your iOS rich notification
 
@@ -55,7 +131,7 @@ Follow the [campaign steps][3] you normally do to compose a push notification fo
 
 ### Step 2: Add media
 
-Add your image, gif, audio, or video file in the **Rich Notification Asset** field in the composer of the message. Refer to the [requirements](#requirements) on how to add your content files.
+Add your image, GIF, audio, or video file in the **Rich Notification Asset** field in the composer of the message. Refer to the [requirements](#requirements) on how to add your content files.
 
 ![Add Image][4]{: style="max-width:70%;" }
 
