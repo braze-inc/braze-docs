@@ -41,7 +41,7 @@ Unique Opens and Unique Clicks are currently still dependent on the aggregate da
 
 The Message Composer controls have been refreshed to include wording associated with icons to enable better usability and navigation.
 
-## Azure for currents
+## Azure for Currents
 
 Braze customers using Currents can now see [Azure]({{site.baseurl}}/partners/braze_currents/data_storage_integrations/partners/microsoft_azure_blob_storage/) as a potential integration.
 

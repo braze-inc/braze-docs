@@ -13,7 +13,7 @@ channel:
 
 > On this page, we’ll attempt to answer your most stringent questions about MMS!
 
-### Are there any changes to Currents data when sending an MMS?
+### Are there any changes to currents data when sending an MMS?
 
 No, the same level of insight will be provided when sending an MMS message.
 

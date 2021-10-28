@@ -11,13 +11,14 @@ channel:
   
 ---
 
-# MMS Message Sending
+# MMS message sending
 
 > This page only contains information specific to MMS composition, which is part of the SMS composer. For more detailed information about the SMS/MMS composer, check the [SMS Composer][1].
 
-## MMS Sending Basics
+## MMS sending basics
 
 Sending MMS with Braze:
+
 - __Select your subscription group__
   - You must designate a subscription group with MMS enabled phone numbers to target (can be short or long codes).<br><br>
 - __Input message body__
@@ -37,7 +38,7 @@ Creating an MMS message requires your Subscription Group to be configured for MM
 
 ![picture][2]
 
-### Image Specifications
+### Image specifications
 
 **Image Specifications** | **Recommended Properties**
 --- | ---

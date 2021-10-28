@@ -19,7 +19,7 @@ It depends. Because in-app messages are delivered at session start, the device i
 
 When a user starts a session, Braze checks if changes have been made to any in-app messages that they are eligible for and updates them accordingly. So if the expiration has changed and they log a session, then the in-app message is sent to the device with the updated information.
 
-### How do I set up Quiet Hours for an in-app message campaign?
+### How do I set up quiet hours for an in-app message campaign?
 
 The Quiet Hours feature isn't available for use with in-app message campaigns. This feature is used to prevent messages from being sent to your users during specific hours. For in-app message campaigns, your users will only receive in-app messages if they are active within the app. 
 

@@ -41,7 +41,7 @@ guide_featured_list:
 
 ---
 
-## Currents Capabilities
+## Currents capabilities
 
 Currents allows you to…
 * Stream Braze event data into a data warehouse or to one of [our analytics partners]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/available_partners/) for detailed analysis.

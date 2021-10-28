@@ -82,4 +82,3 @@ When data is deleted from your production instance, the data remains in Braze’
 **How to reset the clock to avoid deletion?** To retain Campaign Interactions for a particular campaign, you can send a message using that campaign at least once within the 25 months since the last message was sent or use that campaign in a retargeting filter in any active campaign, Canvas, or Card.
  
 You can request a shorter data retention than 25 months via your CSM.
-

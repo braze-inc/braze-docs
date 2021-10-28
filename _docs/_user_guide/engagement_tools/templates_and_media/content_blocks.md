@@ -83,7 +83,7 @@ Messages using the archived Block will still perform as though it was there. How
 3. When your Block is used in more messages than you can reasonably manage with the first suggestion in this list, we recommend removing __all__ content from the Block, then archiving it. This will ensure no outdated information makes its way into any newly sent emails.
 
 {% alert tip %}
-  You can save a content block without content in it.
+  You can save a Content Block without content in it.
 {% endalert %}
 
 If you made a mistake in archiving a Content Block, you can unarchive it.  

@@ -7,7 +7,7 @@ description: "This reference article covers important information for admins on 
 
 ---
 
-# Company Contact Information
+# Company contact information
 
 If you're an admin (you'll see so in the top, right corner), this is where you can manage your company's contact information and time zone.
 

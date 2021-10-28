@@ -9,7 +9,7 @@ description: "This article outlines details about the Get Monthly Active Users e
 
 ---
 {% api %}
-# Monthly Active Users Endpoint
+# Monthly active users endpoint
 {% apimethod get %}
 /kpi/mau/data_series
 {% endapimethod %}
@@ -18,7 +18,7 @@ This endpoint allows you to retrieve a daily series of the total number of uniqu
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#68f45461-3bf1-425c-b918-f0bbf3f87149 {% endapiref %}
 
-## Request Parameters
+## Request parameters
 
 | Parameter| Required | Data Type | Description |
 | -------- | -------- | --------- | ----------- |
@@ -27,7 +27,7 @@ This endpoint allows you to retrieve a daily series of the total number of uniqu
 | `app_id`    | Optional       | String | App API identifier retrieved from the **Developer Console**. If excluded, results for all apps in app group will be returned. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
 
-## Example Request
+## Example request
 {% raw %}
 ```
 curl --location -g --request GET 'https://rest.iad-01.braze.com/kpi/mau/data_series?length=7&ending_at=2018-06-28T23:59:59-05:00&app_id={{app_identifier}}' \

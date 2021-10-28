@@ -37,7 +37,7 @@ guide_featured_list:
 
 ---
 
-## Learning Goals
+## Learning goals
 
 By the end of your onboarding, you should feel comfortable with:
 

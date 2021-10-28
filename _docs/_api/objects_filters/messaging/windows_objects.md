@@ -9,11 +9,11 @@ platform:
 description: "This article lists and explains the different Windows objects used at Braze."
 
 ---
-# Windows Object Specification
+# Windows object specification
 
 These objects are used to define or request information related to Windows Phone 8 Push and Windows Universal Push content.
 
-## Windows Phone 8 Push Object
+## Windows Phone 8 push object
 
 ```json
 {
@@ -26,7 +26,7 @@ These objects are used to define or request information related to Windows Phone
 }
 ```
 
-##  Windows Universal Push Object
+## Windows Universal push object
 
 See the Windows Universal [toast template catalog][32] for details on the options for `push_type` below.
 

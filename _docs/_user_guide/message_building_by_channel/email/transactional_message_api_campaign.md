@@ -3,7 +3,7 @@ nav_title: Transactional Campaigns
 article_title: Transactional Email Campaigns
 page_order: 5
 
-description: "This reference article covers how to create and configure a new Braze Transactional Email Campaign."
+description: "This reference article covers how to create and configure a new Braze Transactional Email campaign."
 page_type: reference
 tool:
   - Campaigns
@@ -12,9 +12,9 @@ channel: email
 alias: "/api/api_campaigns/transactional_campaigns"
 ---
 
-# Transactional Email Campaigns
+# Transactional Email campaigns
 
-> This reference article covers how to create a Transactional Campaign in the Braze dashboard and generate a `campaign_id` to include in your API calls for our [Transactional Email API endpoint]({{site.baseurl}}/api/endpoints/messaging/send_messages/post_send_transactional_message).
+> This reference article covers how to create a Transactional Email campaign in the Braze dashboard and generate a `campaign_id` to include in your API calls for our [Transactional Email API endpoint]({{site.baseurl}}/api/endpoints/messaging/send_messages/post_send_transactional_message).
 
 Transactional Emails are emails sent to facilitate an agreed-upon transaction between you and your customers. You can create Transactional Email campaigns to send automated, non-promotional email messages, such as:
 
@@ -28,7 +28,7 @@ In short, use Transactional Emails to send business-critical notifications origi
 Transactional Email is only available as part of select Braze packages. Please reach out to your Braze Customer Success Manager for more details.
 {% endalert %}
 
-## Create a New Campaign
+## Create a new campaign
 
 To create a new Transaction Email campaign, navigate to the **Campaigns** page and click **Create Campaign**, then select **Transactional Email** from the dropdown.
 
@@ -36,7 +36,7 @@ To create a new Transaction Email campaign, navigate to the **Campaigns** page a
 
 Now, you can move on to configuring your Transactional Email campaign.
 
-## Configure Your Campaign
+## Configure your campaign
 
 The campaign creation flow for Transaction Email campaigns is simplified compared to that of a [standard email campaign]({{site.baseurl}}/user_guide/message_building_by_channel/email/creating_an_email_campaign/) to ensure your business-critical transaction email can reach all users.
 
@@ -55,7 +55,7 @@ To configure your Transactional Email campaign, follow these general steps:
 3. Take note of your `campaign_id`. After you save your API campaign, you must include the generated `campaign_id` fields with your API request where noted in the [Transactional Email Endpoint]({{site.baseurl}}/api/endpoints/messaging/send_messages/post_send_transactional_message) article.
 4. Click **Save Campaign** and you're set to begin your API campaign!
 
-### Disallowed Tags in Transactional Emails
+### Disallowed tags in transactional emails
 
 The `Connected Content` and `Promotion Code` Liquid tags are currently not available within Transactional Email campaigns.
 

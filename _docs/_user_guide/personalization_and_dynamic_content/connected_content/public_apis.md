@@ -11,7 +11,7 @@ There are a variety of publicly available APIs that can be used for Connected Co
 
 >  Public APIs can be subject to usage restrictions and rate limiting.  Be sure to read through API documentations and contact API providers about your intended use.
 
-### News and Information
+## News and information
 
 |	 API 	| Description |
 | --------- | --- |
@@ -20,7 +20,7 @@ There are a variety of publicly available APIs that can be used for Connected Co
 | [The Guardian API][9] | Provides Guardian article data which includes headline, topic, URL, date, abstract, etc.|
 {: .reset-td-br-1 .reset-td-br-2}
 
-### Events and Ticketing
+## Events and ticketing
 
 |	 API 	| Description |
 | --------- | --- |
@@ -31,33 +31,33 @@ There are a variety of publicly available APIs that can be used for Connected Co
 | [Ticketmaster][38] | Provides data on public events, venues, and prices |
 {: .reset-td-br-1 .reset-td-br-2}
 
-### Food & Drink
+## Food and drink
 
 |  API  | Description |
 | --------- | --- |
 | [BreweryDB][40] | Provides information on breweries, beers, and beer events. |
 {: .reset-td-br-1 .reset-td-br-2}
 
-### Finance
+## Finance
 
-|  API  | Description |
+|  api  | description |
 | --------- | --- |
 | [Barchart OnDemand][36] | Provides a variety of stock, futures, and foreign exchange data. |
 | [CoinDesk][37] | Provides a variety of cryptocurrency data. |
 {: .reset-td-br-1 .reset-td-br-2}
 
-### Health
+## Health
 
-|  API  | Description |
+|  api  | description |
 | --------- | --- |
 | [AirVisual][42] | Provides Air quality and weather data. |
 | [Nutritionix Worlds][43] | Provides verified nutrition data. |
 | [USDA Nutrients][45] | Provides access to the National Nutrient Database. |
 {: .reset-td-br-1 .reset-td-br-2}
 
-### Music
+## Music
 
-|	 API 	| Description |
+|	 api 	| description |
 | --------- | --- |
 | [Last.fm][14] | Provides a variety of music data including artist information, recommended artists, and more. |
 | [iTunes][24] | Provides data on a variety of items in the iTunes, App Store, and iBooks stores. |
@@ -66,16 +66,16 @@ There are a variety of publicly available APIs that can be used for Connected Co
 | [Discogs][21] | Provides information on artists, labels, and recordings. |
 {: .reset-td-br-1 .reset-td-br-2}
 
-### Product Information
+## Product information
 
 |	 API 	| Description |
 | --------- | --- |
 | [eBay][15] | Provides live eBay data including item data, popular searches, and more. |
 {: .reset-td-br-1 .reset-td-br-2}
 
-### Miscellaneous
+## Miscellaneous
 
-|	 API 	| Description |
+|	 api 	| description |
 | --------- | --- |
 | [Numbers API][18] | Provides random numerical trivia facts. |
 | [Clearbit][27] | Provides company logo images. |

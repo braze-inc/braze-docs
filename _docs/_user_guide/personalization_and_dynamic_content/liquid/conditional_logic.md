@@ -6,7 +6,7 @@ description: "Tags allow you to include programming logic in your messaging camp
 
 ---
 
-# Conditional Messaging Logic (Tags)
+# Conditional messaging logic (tags)
 
 [Tags][7] allow you to include programming logic in your messaging campaigns.
 
@@ -42,8 +42,9 @@ Buy now! Would 5% off convince you?
 {% endraw %}
 {% endalert %}
 
-## Conditional Logic
-You can include many types of [intelligent logic within messages][1] -- one example is a conditional statement. See the following example which uses [conditionals][8] to internationalize a campaign:
+## Conditional logic
+
+You can include many types of [intelligent logic within messages][1] — one example is a conditional statement. See the following example which uses [conditionals][8] to internationalize a campaign:
 {% raw %}
 
 ```liquid
@@ -58,7 +59,7 @@ This is a message from Braze! This is going to go to anyone who did not match th
 {% endif %}
 ```
 
-### Step By Step Example
+### Step by step example
 
 In this example, we use tags with "if", "elsif" and "else" statements to deliver internationalized content.
 
@@ -93,7 +94,7 @@ The `{% endif %}`  tag signals that you've finished your conditional logic. You 
 
 {% endraw %}
 
-## Accounting For Null Attribute Values
+## Accounting for null attribute values
 
 Conditional logic is a useful way to account for null attribute values. A null value occurs when the value of a custom attribute has not been set. For example, a user who has not yet set their first name will not have a first name in Braze's database.
 
@@ -112,7 +113,7 @@ The following tag allows you to specify a message for users with a null "first n
 
 ![NullValues][36]
 
-## Referencing Custom Attributes
+## Referencing custom attributes
 
 After you have created [custom attributes][2] from **Manage Settings** > **Custom Attributes**, you can reference these custom attributes in your Liquid messaging. 
 

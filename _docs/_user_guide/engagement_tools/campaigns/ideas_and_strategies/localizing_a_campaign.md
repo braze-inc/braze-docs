@@ -8,13 +8,13 @@ tool:
   - Campaigns
 
 ---
-# Localizing a Campaign
+# Localizing a campaign
 
 > This reference article briefly goes over the information Braze collects from SDK integration and how it is used to classify locale and customize a user's experience. 
 
 Braze automatically collects relevant data to help you localize campaigns. Our customers send localized content on a daily basis to their audience to keep content relevant and accessible.
 
-## Technical Details
+## Technical details
 
 Braze automatically collects locale information from user devices after the SDK has been integrated. The locale contains a language and region identifier.
 
@@ -29,7 +29,7 @@ More technical details on how locale is retrieved can be accessed by platform:
 - [Windows Store][3]
 - [Windows Phone][4]
 
-## Internationalize Campaigns
+## Internationalize campaigns
 
 You can take advantage of this language identifier and our personalization capabilities to internationalize campaigns. For more information on internationalization, see [Campaigns in Multiple Languages][12]
 

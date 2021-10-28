@@ -8,11 +8,12 @@ tool: Canvas
 
 ---
 
-# Four Canvas Outlines
+# Four canvas outlines
 
 The Entry Steps displayed in each of these outlines shows a previous version of the Canvas Entry Step. For more on the new version of the Entry Step and the Entry Wizard, see the [Create a Canvas]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/create_a_canvas/) page.
 
-## Onboarding - Restaurant Reservation Example
+## Onboarding - Restaurant reservation example
+
 <br>![Restaurant Onboarding][41]
 
 __Onboarding - Restaurant Reservation Example__
@@ -23,7 +24,8 @@ __Onboarding - Restaurant Reservation Example__
 - Where: Push, Email
 - How: Channel, Content (test)
 
-## Upsell - Music Streaming Example
+## Upsell - Music streaming example
+
 <br>![Music Upsell Journey][28]
 
 __Upsell - Music Streaming Example__
@@ -34,7 +36,8 @@ __Upsell - Music Streaming Example__
 - Where: Push, Email, Webhook
 - How: Content, Discount
 
-## Cart Abandonment - Clothing Retail Example
+## Cart abandonment - Clothing retail example
+
 <br>![Cart Abandonment Journey][29]
 
 __Cart Abandonment - Clothing Retail Example__
@@ -45,7 +48,8 @@ __Cart Abandonment - Clothing Retail Example__
 - Where: Push, Email
 - How: Channel, Trigger (test)
 
-## Holiday Travel - Airline
+## Holiday travel - Airline example
+
 <br>![Holiday Travel Journey][42]
 
 __Holiday Travel - Airline__
