@@ -92,9 +92,7 @@ Anonymous users on mobile or web devices may be counted towards your [MAU]({{sit
 
 ## Step 3: Web push (optional)
 
-To use Web Push Notifications additional setup is required. 
-
-Please see our [Push Notifications][16] section for instructions.
+Additional setup is required to use Web push notifications. Please see our [Push Notifications][16] section for instructions.
 
 ## Troubleshooting {#error-logging}
 
