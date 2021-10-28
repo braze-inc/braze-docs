@@ -109,6 +109,8 @@ BrazeConfig.Builder brazeConfigBuilder = new BrazeConfig.Builder()
     .setIsSdkAuthenticationEnabled(true);
 Braze.configure(this, brazeConfigBuilder.build());
 ```
+
+Alternatively, you can add `<bool name="com_braze_sdk_authentication_enabled">true</bool>` to your braze.xml.
 {% endtab %}
 {% tab KOTLIN %}
 When configuring the Appboy instance, call `setIsSdkAuthenticationEnabled` to `true`.
@@ -117,6 +119,8 @@ BrazeConfig.Builder brazeConfigBuilder = BrazeConfig.Builder()
     .setIsSdkAuthenticationEnabled(true)
 Braze.configure(this, brazeConfigBuilder.build())
 ```
+
+Alternatively, you can add `<bool name="com_braze_sdk_authentication_enabled">true</bool>` to your braze.xml.
 {% endtab %}
 {% tab Objective-C %}
 To enable SDK Authentication, add the key `EnableSDKAuthentication` to the `Braze` dictionary in your `.plist` file and set it to true.
