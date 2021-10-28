@@ -286,7 +286,7 @@ Full screen videos will not render correctly on iOS and are not supported at thi
 
 
 [1]: {{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/creative_details/
-[2]: https://github.com/Appboy/appboy-custom-html5-in-app-message-templates
+[2]: https://github.com/braze-inc/in-app-message-templates
 [4]: {% image_buster /assets/img/email_capture_config.png %}
 [5]: {% image_buster /assets/img/email_capture.png %}
 [6]: {{site.baseurl}}/user_guide/engagement_tools/templates_and_media/duplicate/

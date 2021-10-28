@@ -18,5 +18,7 @@ To add a headline to an iOS push notification, use the Title field in the Braze 
 
 ![iOS Title Image][1]
 
+Wondering how many characters you can use in a title without it being truncated? Check out our [iOS character count guidelines]({{site.baseurl}}/user_guide/message_building_by_channel/push/ios/rich_notifications/#character-count).
+
 
 [1]: {% image_buster /assets/img_archive/ios_title.png %}
