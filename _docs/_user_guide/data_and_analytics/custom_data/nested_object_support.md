@@ -1,26 +1,26 @@
 ---
-nav_title: Nested Object Support
-article_title: Nested Object Support for Custom Event Properties
+nav_title: Nested Objects
+article_title: Nested Objects for Custom Event Properties
 page_order: 4
 alias: /nested_object_support/
 page_type: reference
-description: "This reference article describes nested object support for custom event properties, and includes example use cases, limitations, and frequently asked questions."
+description: "This reference article describes nested objects for custom event properties, and includes example use cases, limitations, and frequently asked questions."
 
 ---
-<br>
-{% alert note %}
+
+# Nested objects for custom event properties 
+
+You can use nested objects—objects that are inside of another object—to send nested JSON data as properties of custom events and purchases. This nested data can be used for templating personalized information in messages, for triggering message sends, and for segmentation.
+
+{% alert important %}
 This feature is generally available, however triggering messages and segmenting users based on this data is in early access. For more information, please reach out to your Braze account manager.
 {% endalert %}
 
-# Nested object support for custom event properties
-
-Nested Object Support allows you to send nested JSON data as properties of custom events and purchases. This nested data can be used for templating personalized information in messages, for triggering message sends, and for segmentation.
-
 ## Limitations
 
-- Nested data can only be sent with [custom events]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events/) and [purchase events]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/purchase_events/). this is not yet supported with user attributes.
+- Nested data can only be sent with [custom events]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events/) and [purchase events]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/purchase_events/). This is not yet supported with user attributes.
 - Event property objects that contain array or object values can have an event property payload of up to 50KB.
-- The following SDK versions support Nested Objects:
+- The following SDK versions support nested objects:
 
 {% sdk_min_versions web:3.3.0 ios:4.3.1 android:1.0.0 %}
 
@@ -131,7 +131,7 @@ Triggering a campaign with nested properties from the "Ordered" event:
 
 ### Segmentation
 
-use [segment extensions]({{site.baseurl}}/user_guide/engagement_tools/segments/segment_extension/) to segment users based on nested event properties. segmentation uses the same notation as triggering (described above).
+Use [segment extensions]({{site.baseurl}}/user_guide/engagement_tools/segments/segment_extension/) to segment users based on nested event properties. Segmentation uses the same notation as triggering (described above).
 
 ## Frequently asked questions
 
