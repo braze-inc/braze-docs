@@ -48,9 +48,9 @@ Boolean attributes are useful for storing simple binary data about your users, l
 
 | Segmentation Options | Dropdown Filter | Input Options |
 | ---------------------| --------------- | ------------- |
-| Check if the boolean value __is__ | __IS__  | __TRUE__, __FALSE__, __TRUE OR NOT SET__, or __FALSE OR NOT SET__ |
-| Check if the boolean value __exists__ on a user's profile | __EXISTS__  | __N/A__ |
-| Check if the boolean value __does not exist__ on a user's profile | __DOES NOT EXIST__  | __N/A__ |
+| Check if the boolean value __is__ either true, false, true or not set, or false or not set | __IS__  | __TRUE__, __FALSE__, __TRUE OR NOT SET__, or __FALSE OR NOT SET__ |
+| Check if the boolean value __exists__ on a user's profile | __IS NOT BLANK__  | __N/A__ |
+| Check if the boolean value __does not exist__ on a user's profile | __IS BLANK__  | __N/A__ |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
 
 ### Numbers {#numbers}
