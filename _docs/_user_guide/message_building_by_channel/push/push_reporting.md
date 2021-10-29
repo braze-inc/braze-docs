@@ -1,7 +1,7 @@
 ---
 nav_title: Reporting
 page_title: Push Reporting
-page_order: 7
+page_order: 21
 page_type: reference
 description: "This article covers push reporting, which you can use to view and analyze the success of your push campaigns."
 channel: push
@@ -10,6 +10,8 @@ tool: Reports
 ---
 
 # Push reporting
+
+> This article covers push reporting, which you can use to view and analyze the success of your push campaigns.
 
 The Braze SDK provides you with a detailed report of each of your push campaigns. Navigate to the **Campaigns** tab on your dashboard and select your desired campaign to open the **Details** tab, as shown below:
 
