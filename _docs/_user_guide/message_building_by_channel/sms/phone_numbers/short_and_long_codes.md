@@ -15,7 +15,74 @@ Short and long codes are the phone number from which you send messages to your u
 
 ## Types of sending numbers
 
-![SMS Number Graph][3]
+<style type="text/css">
+.tg td{word-break:normal;}
+.tg th{word-break:normal;}
+.leftHeader{font-size: 12px; font-weight: bold; background-color: #f4f4f7; text-transform: uppercase; color: #212123; font-family: "Sailec W00 Bold",Arial,Helvetica,sans-serif;}
+.tg .tg-0pky{border-color:inherit;text-align:left;vertical-align:top}
+</style>
+<table class="tg">
+<thead>
+  <tr>
+    <th class="tg-0pky"></th>
+    <th class="tg-0pky">Short Codes</th>
+    <th class="tg-0pky">Long Codes</th>
+    <th class="tg-0pky">Vanity Short Code</th>
+    <th class="tg-0pky">Alphanumeric Sender ID</th>
+    <th class="tg-0pky">SMS-Enabled Toll-Free Number</th>
+  </tr>
+</thead>
+<tbody>
+  <tr>
+    <td class="leftHeader">Length</td>
+    <td class="tg-0pky">5–6 digits</td>
+    <td class="tg-0pky">10 digits (US/Canada)</td>
+    <td class="tg-0pky">5–6 digits</td>
+    <td class="tg-0pky">Up to 11 characters</td>
+    <td class="tg-0pky">10 digits (US/Canada)</td>
+  </tr>
+  <tr>
+    <td class="leftHeader">Availability</td>
+    <td class="tg-0pky">US, Canada, UK, and more in beta</td>
+    <td class="tg-0pky">Around 100 countries worldwide</td>
+    <td class="tg-0pky">US and Canada</td>
+    <td class="tg-0pky">Handful of countries worldwide</td>
+    <td class="tg-0pky">US and Canada only</td>
+  </tr>
+  <tr>
+    <td class="leftHeader">Access</td>
+    <td class="tg-0pky">8–12 week application</td>
+    <td class="tg-0pky">Available immediately</td>
+    <td class="tg-0pky">8–12 week application</td>
+    <td class="tg-0pky">Available immediately if pre-registration is not required</td>
+    <td class="tg-0pky">Available immediately</td>
+  </tr>
+  <tr>
+    <td class="leftHeader">Throughput</td>
+    <td class="tg-0pky">100 messages per second</td>
+    <td class="tg-0pky">1 message per second (US)<br>10 messages per second (International)</td>
+    <td class="tg-0pky">100 messages per second</td>
+    <td class="tg-0pky">10 messages per second</td>
+    <td class="tg-0pky">1 message per second</td>
+  </tr>
+  <tr>
+    <td class="leftHeader">MMS Enabled</td>
+    <td class="tg-0pky">Yes</td>
+    <td class="tg-0pky">Yes</td>
+    <td class="tg-0pky">Yes</td>
+    <td class="tg-0pky">No </td>
+    <td class="tg-0pky">No</td>
+  </tr>
+  <tr>
+    <td class="leftHeader">1-way vs. 2-way</td>
+    <td class="tg-0pky">2-way</td>
+    <td class="tg-0pky">2-way</td>
+    <td class="tg-0pky">2-way</td>
+    <td class="tg-0pky">1-way</td>
+    <td class="tg-0pky">2-way</td>
+  </tr>
+</tbody>
+</table>
 
 {% tabs %}
 {% tab Short Codes %}
@@ -144,4 +211,3 @@ All customers who currently have and/or use US long codes to send to US customer
 
 
 [1]: {{site.baseurl}}/user_guide/message_building_by_channel/sms/sms_subscription_group/
-[3]: {% image_buster /assets/img/sms/sms_graph.png %}
