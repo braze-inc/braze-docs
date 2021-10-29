@@ -21,7 +21,7 @@ __Common use cases for syncing Custom Audiences include__:
 - Creating suppression audiences to prevent users from receiving advertisements when they're already loyal consumers of your brand.
 - Creating Lookalike Audiences to acquire new users more efficiently.
 
-This feature gives brands the option to control what specific first-party data is shared with Facebook. At Braze, the integrations you can and cannot share your first-party data with are given the utmost consideration. To learn more about our Braze data privacy policy, click [here](https://www.braze.com/privacy).
+This feature gives brands the option to control what specific first-party data is shared with Facebook. At Braze, the integrations you can and cannot share your first-party data with are given the utmost consideration. For more information, refer to our [privacy policy](https://www.braze.com/privacy).
 
 ## Integration
 
@@ -117,21 +117,18 @@ Facebook's Marketing API rate limit states no more than &#126;190k API requests 
 
 ## Understanding analytics
 
-![audience sync][16]{: style="float:right;max-width:15%;margin-left:15px;"}
+| Metric | Description |
+| --- | --- |
+| Entered | Number of users who entered this step to be synced to Facebook. |
+| Proceeded to Next Step | How many users advanced to the next step if there is one. All users will auto-advance if this is the last step in the Canvas branch. |
+| Users Synced | Number of users who have successfully been synced to Facebook. |
+| Users Not Synced | Number of users that have not been synced due to missing fields to match. |
+| Users Pending | Number of users currently being processed by Braze to sync into Facebook. |
+| Users Errored | Number of users who were not synced to Facebook due to an API error after about 13 hours of retries. Potential causes of errors can include an invalid Facebook token or if the custom audience was deleted on Facebook. |
+| Exited Canvas | Number of users who have exited the Canvas. This occurs when the last step in a Canvas is a Facebook step. |
+{: .reset-td-br-1 .reset-td-br-2}
 
-__Entered__: Number of users who entered this step to be synced to Facebook
-
-__Proceeded to Next Step__: How many users advanced to the next step if there is one. All users will auto-advance. 0 if this is the last step in the Canvas branch.
-
-__Users Synced__: Number of users who have successfully been synced to Facebook
-
-__Users Not Synced__:  Number of users that have not been synced due to missing fields to match.
-
-__Users Pending__: Number of users currently being processed by Braze to sync into Facebook. 
-
-__Users Errored__: Number of users who were not synced to Facebook due to an API error after &#126;13 hours of retries.<br>- Potential causes of errors can include an invalid Facebook token or if the custom audience was deleted on Facebook. 
-
-__Exited Canvas__: Number of users who have exited the Canvas. This occurs when the last step in a Canvas is a Facebook step.
+![audience sync][16]{: style="max-width:25%;"}
 
 {% alert important %}
 Remember that there will be a delay in reporting for users synced and users errored metrics due to the bulk flusher and the 13-hour retry, respectively.
