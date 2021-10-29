@@ -122,12 +122,18 @@ Braze will send Webhooks from the IP ranges below.
 | `52.54.89.238`
 | `18.205.178.15`
 
-| For Instance `EU-01`: |
+| For Instances `EU-01` and `EU-02`: |
 |---|
 | `127.0.0.1`
 | `52.58.142.242`
 | `52.29.193.121`
 | `35.158.29.228`
+| `18.157.135.97`
+| `3.123.166.46`
+| `3.64.27.36`
+| `3.65.88.25`
+| `3.68.144.188`
+| `3.70.107.88` 
 
 | For Instance `US-08`: |
 |---|
@@ -158,7 +164,7 @@ Check out:
 * [Messenger]({{site.baseurl}}/partners/additional_channels/instant_chat/messenger/)
 * [Remerge]({{site.baseurl}}/partners/advertising_technologies/retargeting/remerge/)
 * [Lob.com]({{site.baseurl}}/partners/additional_channels/direct_mail/lob/)
-* And many more in our [technology partners]({{site.baseurl}}/partners/home/) section of Braze Docs!
+* And many more of our [technology partners]({{site.baseurl}}/partners/home/)!
 
 [14]: https://sendgrid.com/blog/whats-webhook
 [15]: {{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/
