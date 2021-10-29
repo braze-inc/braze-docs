@@ -70,7 +70,7 @@ mParticle's [Braze Event Kit Integration Guide](https://docs.mparticle.com/integ
 API keys will be different for each platform (iOS, Android, and Web).
 {% endalert %}
 
-## Server APi integration
+## Server API integration
 
 This is an add-on to route your backend data to Braze if you're using mParticle's Server-Side SDKs (e.g., Ruby, Python, etc.). To set up this server-to-server integration with Braze, please follow mParticle's documentation [here](https://docs.mparticle.com/guides/platform-guide/connections/).
 
