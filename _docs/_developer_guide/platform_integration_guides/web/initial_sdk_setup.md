@@ -52,10 +52,9 @@ For more information, please see the [Google Tag Manager Integration Guide][18].
 
 ### Option 3: Braze CDN {#install-cdn}
 
-Add the Braze Web SDK directly to your HTML by referencing our CDN-hosted script to load the library asynchronously.
+Add the Braze Web SDK directly to your HTML by referencing our CDN-hosted script, which loads the library asynchronously.
 
-The CDN integration code can be found on our [Github Repo](https://github.com/Appboy/appboy-web-sdk/blob/master/snippets/loading-snippet.js).
-
+<script src="https://braze-inc.github.io/embed-like-gist/embed.js?target=https%3A%2F%2Fgithub.com%2FAppboy%2Fappboy-web-sdk%2Fblob%2Fmaster%2Fsnippets%2Floading-snippet.js&style=github&showBorder=on&showLineNumbers=on&showFileMeta=on&showCopy=on"></script>
 
 ## Step 2: Initialize Braze
 
