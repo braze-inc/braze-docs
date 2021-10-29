@@ -38,7 +38,7 @@ Braze provides the following filters in order to help you limit the rate at whic
 
 Consider the following example segment:
 
-![Rate_Limit_Example][1]
+![Rate Limit Example][1]
 
 This is a standard re-engagement segment. If you have other more targeted segments receiving notifications recently, you may not want your users to be targeted by more generic campaigns directed at this segment. Appending the "Last Received Push Campaign" filter to this segment, the user has ensured that if they've received another notification in the past 24 hours, they will slide out of this segment for the next 24 hours. If they still meet the other criteria of the segment 24 hours later and haven't received any more notifications they will slide back into the segment.
 
@@ -199,7 +199,7 @@ Frequency capping by tag rules compute at the time a message sends. This means t
 
 ##### Example
 
-consider the following campaigns and frequency capping by tag rule:
+Consider the following campaigns and frequency capping by tag rule:
 
 __Campaigns:__
 
@@ -218,7 +218,7 @@ __Frequency Capping by Tag Rule:__
 
 #### Sending at large scales
 
-If you send __more than one hundred (100) messages per channel__ from campaigns or Canvas Steps with frequency capping turned on to a specific user over the duration of your frequency capping by tag rule (for example, over 1 week), the frequency capping by tag rule may not always be applied properly.
+If you send more than one hundred (100) messages per channel from campaigns or Canvas Steps with frequency capping turned on to a specific user over the duration of your frequency capping by tag rule (for example, over 1 week), the frequency capping by tag rule may not always be applied properly.
 
 For example, if your frequency capping by tag rule is:
 
