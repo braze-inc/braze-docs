@@ -32,6 +32,17 @@ This filter supports numerical comparisons to target a range of app versions. Fo
 
 This new filter can replace the legacy "App Version Name" filter which would require explicitly listing each older version or using a regular expression.
 
+**How it works**
+
+* Each part of the `major.minor.patch` version sent in your app's app version are compared as integers
+* If the major numbers are equal, the minor numbers are compared, etc.
+
+**Important**
+
+* Android apps have both a human readable [`versionName`][7] and an internal [`versionCode`][9]. The App Version Number filter uses `versionCode` because it is guaranteed to be incremented with each app store release.
+* This can cause confusion when your app's `versionName` and `versionCode` get out of sync, especially since both fields can be viewed from the Braze dashboard. As a best practice, ensure your app's `versionName` and `versionCode` are incremented together.
+* If you need to filter by the human readable `versionName` field instead (uncommon), use the App Version Name filter.
+
 #### SDK requirements
 
 Values for this filter are collected starting with Braze Android SDK v3.6.0+ and iOS SDK v3.21.0+. Even though this filter has SDK requirements, you will still be able to target users who are on lower (older) versions of your app using this feature!
@@ -60,7 +71,7 @@ Once Braze receives data from version 2.0.0 of your app, you can target users be
 
 ### App version name
 
-Use the _App Version Name_ filter to segment users by the app's user-facing version name. 
+Use the _App Version Name_ filter to segment users by the app's user-facing "build name". 
 
 This filter supports matching with "is", "is not", and regular expressions. For example, you can target users who have an app that is not version "1.2.3-test-build".
 
