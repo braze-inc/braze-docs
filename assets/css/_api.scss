@@ -94,7 +94,7 @@
       -webkit-appearance: textfield;
       outline-offset: -2px;
       touch-action: manipulation;
-      background-image: url(/docs/assets/img/search_black_shark.svg);
+      background-image: url(#{$base_url}/assets/img/search_black_shark.svg);
       background-position: left 10px top 5px;
       background-size: 14px 14px;
       background-repeat: no-repeat;
