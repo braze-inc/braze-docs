@@ -29,7 +29,9 @@ Now, you can create a new template or edit an existing template (plain or [mobil
 
 ![New Template][2]
 
-_Note: Any existing custom HTML templates will need to be re-created using the Drag & Drop Editor._
+{% alert note %}
+Any existing custom HTML templates will need to be re-created using the Drag & Drop Editor.
+{% endalert %}
 
 ### Step 3: Customize your template
 
@@ -39,7 +41,7 @@ You can write your message within the rich-text editor or optionally flip over t
 When composing your email template copy, do not switch back and forth between different editor types (HTML/Block/Classic) as that may shift the previously created HTML leading to rendering issues. 
 {% endalert %}
 
-![dnd_badge_icon]({% image_buster /assets/img/dnd_badge_icon.png %})
+![Drag and Drop Editor Icon]({% image_buster /assets/img/dnd_badge_icon.png %})
 
 {% tabs %}
 {% tab HTML Editor %}
@@ -49,7 +51,7 @@ Braze will add a footer with an unsubscribe link at the bottom of your HTML emai
 ![Enter Email Template Editing]({%image_buster/assets/img/email_templates/template3.jpg %})
 <br>
 <br>
-![E-Mail Template Editor Guide]({%image_buster/assets/img/email_templates/template4.jpg %})
+![Email Template Editor Guide]({%image_buster/assets/img/email_templates/template4.jpg %})
 
 Our editor supports **HTML Autocomplete** triggered by the `Tab` key.  This feature should be used on naked HTML tags. For example, using `Tab` on a `<head>` tag will result in:
 {% raw %}
@@ -74,7 +76,9 @@ The drag & drop editing experience is broken out into three sections: __Sending 
 
 The Sending Settings section allows you to configure your from and reply-to address as well as set the subject line or pre-header. 
 
-_Note: Advanced functionality will appear in the campaign or Canvas step composer. In advanced functionality, you can modify your inline CSS setting, set a BCC email address, and enter in a header or extra key-value pairs (if configured)._
+{% alert note %}
+Advanced functionality will appear in the campaign or Canvas step composer. In advanced functionality, you can modify your inline CSS setting, set a BCC email address, and enter in a header or extra key-value pairs (if configured).
+{% endalert %}
 
 {% endsubtab %}
 {% subtab Content %}
@@ -102,10 +106,10 @@ Note: This user may or may not be part of your segmentation criteria. Segmentati
 {% endsubtab %}
 {% endsubtabs %}
 
-_Note: Inbox Vision is currently unavailable during this testing phase and will be made available in the future_
+Inbox Vision is currently unavailable during this testing phase and will be made available in the future.
 
 {% alert tip %}
-To read more about the different components of the drag & drop editing experience, visit our drag & drop documentation articles [here]({{site.baseurl}}/user_guide/message_building_by_channel/email/drag_and_drop/). 
+To read more about the different components of the drag & drop editing experience, visit our Drag & Drop Editor documentation articles [here]({{site.baseurl}}/user_guide/message_building_by_channel/email/drag_and_drop/). 
 {% endalert %}
 
 {% endtab %}
@@ -117,7 +121,7 @@ Braze will add a footer with an unsubscribe link at the bottom of your email by 
 
 Email errors are presented on the **Compose** tab of the message workflow. Errors prevent you from progressing forward, while "Warnings" indicate reminders to help you follow best practices. Depending on your business, you might choose to ignore them.
 
-![dnd_compose_error][1]{: style="float:right;max-width:40%;margin-left:15px;"}
+![Drag & Drop Compose Error][1]{: style="float:right;max-width:40%;margin-left:15px;"}
 
 Here's a list of errors that are accounted for in our editor:
 
