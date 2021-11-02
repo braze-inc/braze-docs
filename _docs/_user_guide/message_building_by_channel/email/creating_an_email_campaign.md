@@ -33,7 +33,7 @@ Braze offers two editing experiences when creating an email campaign, our [Drag 
 
 Once you selected your template, you will see an overview of your email where you can quickly jump to the full-screen editor to draft your email, change your sending info, and view warnings about deliverability or law compliance. 
 
-![newemailoverview][14]
+![New Email Overview][14]
 
 ### Step 2a: Add email headers
 
