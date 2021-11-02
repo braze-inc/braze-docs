@@ -14,7 +14,10 @@ guide_featured_title: "Section Articles"
 guide_featured_list:
   - name: Audience Paths Step
     link: /docs/user_guide/engagement_tools/canvas/canvas_components/audience_paths/
-    fa_icon: fa fa-users  
+    fa_icon: fa fa-users
+  - name: Action Paths Step  
+    link: /docs/user_guide/engagement_tools/canvas/canvas_components/action_paths/
+    fa_icon: fa fa-bolt  
   - name: Decision Split Step
     link: /docs/user_guide/engagement_tools/canvas/canvas_components/decision_split/
     fa_icon: fas fa-random

@@ -8,7 +8,7 @@ channel: push
 
 ---
 
-# Creating Custom Opt-In Prompts
+# Creating custom opt-in prompts
 
 Even if you keep best practices in mind when designing and sending push messages, some users may turn them off before realizing any of the benefits that they would provide. Users may have had previous negative experiences with spammy, irrelevant push messages from other apps and now will decline any request to receive push messages from any app.
 

@@ -1,22 +1,22 @@
-### Slideup In-App Messages
+### Slideup in-app messages
 
 [`Slideup`]{% if include.platform == "iOS" %}[in_app_message_1]{% elsif include.platform == "Android" %}[in_app_message_2]{% endif %} in-app messages are so-named because they "slide up" or "slide down" from the top or bottom of the screen.  They cover a small portion of the screen and provide an effective and non-intrusive messaging capability.
 
 ![Slideup Example][in_app_message_9]
 
-### Modal In-App Messages
+### Modal in-app messages
 
 [`Modal`]{% if include.platform == "iOS" %}[in_app_message_3]{% elsif include.platform == "Android" %}[in_app_message_4]{% endif %} in-app messages appear in the center of the screen and are framed by a translucent panel. Useful for more critical messaging, they can be equipped with up to two click action and analytics enabled buttons.
 
 ![Modal Example][in_app_message_10]
 
-### Full In-App Messages
+### Full in-app messages
 
 [`Full`]{% if include.platform == "iOS" %}[in_app_message_5]{% elsif include.platform == "Android" %}[in_app_message_6]{% endif %} in-app messages are useful for maximizing the content and impact of your user communication.  The upper half of a `full` in-app message contains an image and the lower half displays text as well as up to two click action and analytics enabled buttons.
 
 ![Full Example][in_app_message_11]
 
-### HTML Full In-App Messages
+### HTML full in-app messages
 
 [`HTML Full`]{% if include.platform == "iOS" %}[in_app_message_7]{% elsif include.platform == "Android" %}[in_app_message_8]{% endif %} in-app messages are useful for creating fully customized user content. User-defined HTML Full in-app message content is displayed in a {% if include.platform == "iOS" %}`WKWebView`{% elsif include.platform == "Android" %}`WebView`{% endif %} and may optionally contain other rich content, such as images and fonts, allowing for full control over message appearance and functionality.
 
@@ -32,9 +32,9 @@ The following example shows a paginated HTML Full in-app message:
 
 Full in-app message content is displayed in a WKWebView and may optionally contain other rich content, such as images and fonts, allowing for full control over message appearance and functionality. **Please note that we currently do not support display of custom HTML in-app messages in an iFrame on the iOS and Android platforms.**
 
-## In-App Message Delivery
+## In-app message delivery
 
-### In-App Messages (Triggered)
+### In-app messages (triggered)
 
 The following documentation refers to Braze's `In-App Messaging` product, also known as "triggered in-app messages," which are branded as highlighted below in the "Create Campaign" drop-down:
 
@@ -42,13 +42,13 @@ The following documentation refers to Braze's `In-App Messaging` product, also k
 
 You may also refer to the documentation for our deprecated [`Original In-App Messaging`][in_app_message_14] product.
 
-#### Trigger Types
+#### Trigger types
 
 Our in-app message product allows you to trigger in-app message display as a result of several different event types: `Any Purchase`, `Specific Purchase`, `Session Start`, `Custom Event`, `Push Click`.  Furthermore, `Specific Purchase` and `Custom Event` triggers can contain robust property filters.
 
 -**Note:** Triggered in-app messages only work with custom events logged through the SDK and not through the REST APIs.  If you're working with Android, please check out how to log custom events [here][in_app_message_24]. If you're working with iOS, check out how to log custom events [here][in_app_message_25].
 
-#### Delivery Semantics
+#### Delivery semantics
 
 All in-app messages that a user is eligible for are delivered to the user's device on session start. For more information about the SDK's session start semantics, see our [session lifecycle documentation]{% if include.platform == "iOS" %}[in_app_message_15a]{% elsif include.platform == "Android" %}[in_app_message_15b]{% endif %}. Upon delivery, the SDK will pre-fetch assets so that they are available immediately at trigger time, minimizing display latency.
 
@@ -56,7 +56,7 @@ When a trigger event has more than one eligible in-app message associated with i
 
 For in-app messages that display immediately on deliver (*i.e.*, session start, push click) there can be some latency due to assets not being prefetched.
 
-#### Minimum Time Interval Between Triggers
+#### Minimum time interval between triggers
 
 By default, we rate limit in-app messages to once every 30 seconds to ensure a quality user experience.
 

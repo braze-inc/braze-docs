@@ -18,11 +18,11 @@ For information on integrating the Braze Web SDK, see our [documentation][6]. Af
 
 ![Web_App_Group][7]
 
-## In-App Web Messaging
+## In-app web messaging
 
 You can send web messages to engage with users directly in their web/mobile browser. Web messages are sent as in-app messages, and can also be sent as slideup, modal, or fullscreen types. For more information on composing an in-app message, see our page on [creating an in-app message][8].
 
-## Web Push
+## Web push
 
 ![Web Push Example][12]{: style="float:right;max-width:60%;margin-left:15px;border:0;"}
 
@@ -38,11 +38,11 @@ For more information on the push protocol standards and browser support, you can
 Private browsing windows do not currently support web push.
 {% endalert %}
 
-## Delivery Rules
+## Delivery rules
 
 By default, a campaign containing an in-app message will send an in-app web message as well as an in-app mobile message. To send an in-app message exclusively to web or mobile, you will need to segment your campaign accordingly.
 
-## Segmenting for Web Users
+## Segmenting for web users
 
 You can create a segment of your web users by selecting only your website’s app icon in the Apps Used section.
 

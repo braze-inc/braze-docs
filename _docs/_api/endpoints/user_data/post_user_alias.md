@@ -9,7 +9,7 @@ description: "This article outlines details about the create new User Aliases Br
 
 ---
 {% api %}
-# Create New User Alias
+# Create new user alias
 {% apimethod post %}
 /users/alias/new
 {% endapimethod %}
@@ -30,7 +30,7 @@ __Creating a new alias-only user__ requires the `external_id` to be omitted from
 A rate limit is applied to requests made to this endpoint for customers who onboarded with Braze on or after September 16, 2021. For more information, see [API Limits]({{site.baseurl}}/api/basics/#api-limits).
 {% endalert %}
 
-## Request Body
+## Request body
 
 ```
 Content-Type: application/json
@@ -43,14 +43,14 @@ Authorization: Bearer YOUR-REST-API-KEY
 }
 ```
 
-### Request Parameters
+### Request parameters
 
 | Parameter | Required | Data Type | Description |
 | --------- | ---------| --------- | ----------- |
 | `user_aliases` | Required | Array of new user alias objects | See [user alias object]({{site.baseurl}}/api/objects_filters/user_alias_object/).<br><br> For more information on `alias_name` and `alias_label`, check out our [User Aliases]({{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/user_profile_lifecycle/#user-aliases) documentation.|
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
 
-### Endpoint Request Body with New User Alias Object Specification
+### Endpoint request body with new user alias object specification
 
 ```json
 {
@@ -60,7 +60,7 @@ Authorization: Bearer YOUR-REST-API-KEY
 }
 ```
 
-## Example Request
+## Example request
 ```
 curl --location --request POST 'https://rest.iad-01.braze.com/users/alias/new' \
 --header 'Content-Type: application/json' \

@@ -13,13 +13,13 @@ channel:
 Looking for the out-of-the-box Content Card developer integration guide? Find it [here]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/content_cards/data_model/).
 {% endalert %}
 
-# Content Card Implementation Guide
+# Content Card implementation guide
 
 > This optional and advanced implementation guide covers Content Card code considerations, three custom use cases built by our team, accompanying code snippets, and guidance on logging impressions, clicks, and dismissals. Visit our Braze Demo Repository [here](https://github.com/braze-inc/braze-growth-shares-ios-demo-app)! Please note that this implementation guide is centered around a Swift implementation, but Objective-C snippets are provided for those interested.
 
-## Code Considerations
+## Code considerations
 
-### Content Cards as Custom Objects
+### Content Cards as custom objects
 
 Much like a rocketship adding a booster, your own custom objects can be extended to function as Content Cards. Limited API surfaces such as this provide flexibility to work with different data backends interchangeably. This can be done by conforming to the `ContentCardable` protocol and implementing the initializer (as seen below) and, through the use of the `ContentCardData` struct, allows you to access the `ABKContentCard` data. The `ABKContentCard` payload will be used to initialize the `ContentCardData` struct and the custom object itself, all from a `Dictionary` type via the initializer the protocol comes with.
 
@@ -421,14 +421,14 @@ The `class_type` is used to determine which of your custom objects will be initi
 {% endtab %}
 {% endtabs %}
 
-## Sample Use Cases
+## Sample use cases
 
 There are three sample customer use cases provided. Each use case offers a detailed explanation, relevant code snippets, and a look into how Content Card variables may look and be used in the Braze dashboard:
 - [Content Cards As Supplemental Content](#content-cards-as-supplemental-content)
 - [Content Cards in a Message Center](#content-cards-in-a-message-center)
 - [Interactive Content Cards](#interactive-content-cards)
 
-### Content Cards as Supplemental Content
+### Content Cards as supplemental content
 
 ![Supplementary Content PNG][1]{: style="float:right;max-width:25%;margin-left:15px;border:0;"}
 
@@ -436,7 +436,7 @@ You can seamlessly blend Content Cards into an existing feed, allowing data from
 
 The example to the right shows a `UICollectionView` with a hybrid list of items that are populated via local data and Content Cards powered by Braze. With this, Content Cards can be indistinguishable alongside existing content.
 
-#### Dashboard Configuration
+#### Dashboard configuration
 
 This Content Card is delivered by an API-triggered campaign with API-triggered key-value pairs. This is ideal for campaigns where the card's values depend on external factors to determine what content to display to the user. Note that `class_type` should be known at set-up time.
 
@@ -445,13 +445,13 @@ This Content Card is delivered by an API-triggered campaign with API-triggered k
 ##### Ready to log analytics?
 Visit the [following section](#logging-impressions-clicks-and-dismissals) to get a better understanding of how the flow of data should look.
 
-### Content Cards in a Message Center
+### Content Cards in a message center
 <br>
 Content Cards can be used in a message center format where each message is its own card. Each message in the message center is populated via a Content Card payload, and each card contains additional key-value pairs that power on-click UI/UX. In the example below, one message directs you to an arbitrary custom view, while another opens to a webview that displays custom HTML.
 
 ![Message Center PNG][3]{: style="border:0;"}{: style="max-width:80%;border:0"}
 
-#### Dashboard Configuration
+#### Dashboard configuration
 
 For the following message types, the key-value pair `class_type` should be added to your dashboard configuration. The values assigned here are arbitrary but should be distinguishable between class types. These key-value pairs are the key identifiers that the application looks at when deciding where to go when the user clicks on an abridged inbox message. 
 
@@ -460,7 +460,7 @@ For the following message types, the key-value pair `class_type` should be added
 | <br>The key-value pairs for this use case include:<br><br>- `message_header` set as `Full Page`<br>- `class_type` set as `message_full_page`<br><br><br>![Message Center JPG1][4]{: style="max-width:100%;"} | The key-value pairs for this use case include:<br><br>- `message_header` set as `HTML`<br>- `class_type` set as `message_webview`<br>- `message_title`<br><br>This message also looks for an HTML key-value pair, but if you are working with a web domain, a URL key-value pair is also valid.<br><br>![Message Center JPG2][5] |
 {: .reset-td-br-1 .reset-td-br-2}
 
-#### Further Explanation
+#### Further explanation
 
 The message center logic is driven by the `contentCardClassType` that is provided by the key-value pairs from Braze. Using the `addContentCardToView` method, you are able to both filter and identify these class types.
 
@@ -512,7 +512,7 @@ Content Cards can be leveraged to create dynamic and interactive experiences for
 
 Well-placed cards like this are a great way to give users a "nudge" toward specific user actions. 
 <br><br><br>
-#### Dashboard Configuration
+#### Dashboard configuration
 
 The dashboard configuration for interactive Content Cards is quick and straightforward. The key-value pairs for this use case include a `discount_percentage` set as the desired discount amount and `class_type` set as `coupon_code`. These key-value pairs are how type-specific Content Cards get filtered and displayed on the checkout screen.
 
@@ -521,11 +521,11 @@ The dashboard configuration for interactive Content Cards is quick and straightf
 ##### Ready to log analytics?
 Visit the [following section](#logging-impressions-clicks-and-dismissals) to get a better understanding of how the flow of data should look.
 
-## Logging Impressions, Clicks, and Dismissals
+## Logging impressions, clicks, and dismissals
 
 After extending your custom objects to function as Content Cards, logging valuable metrics like impressions, clicks, and dismissals is quick and simple. This can be done through the use of a `ContentCardable` protocol that references and provides data to a helper file to be logged by the Braze SDK.
 
-#### __Implementation Components__<br><br>
+#### __Implementation components__<br><br>
 
 {% tabs %}
 {% tab Swift %}
@@ -586,7 +586,7 @@ The `idString` passed in from your custom object is used to identify the associa
 For a control variant Content Card, a custom object should still be instantiated, and UI logic should set the object's corresponding view as hidden. The object can then log an impression to inform our analytics of when a user would have seen the control card.
 {% endalert %}
 
-## Helper Files
+## Helper files
 
 {% details ContentCardKey Helper File %}
 {% tabs %}

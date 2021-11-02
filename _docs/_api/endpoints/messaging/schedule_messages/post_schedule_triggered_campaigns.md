@@ -9,7 +9,7 @@ description: "This article outlines details about the Schedule API-Triggered Cam
 
 ---
 {% api %}
-# Schedule API-Triggered Campaigns
+# Schedule API-triggered campaigns
 {% apimethod post core_endpoint|https://www.braze.com/docs/core_endpoints %} 
 /campaigns/trigger/schedule/create
 {% endapimethod %}
@@ -20,7 +20,7 @@ This endpoint allows you to send campaign messages (up to 90 days in advance) vi
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#b7e61de7-f2c2-49c9-9e46-b85a0aa01bba {% endapiref %}
 
-## Request Body
+## Request body
 
 ```
 Content-Type: application/json
@@ -47,7 +47,7 @@ Authorization: Bearer YOUR-REST-API-KEY
   }
 }
 ```
-## Request Parameters
+## Request parameters
 
 | Parameter | Required | Data Type | Description |
 | --------- | ---------| --------- | ----------- |
@@ -60,7 +60,7 @@ Authorization: Bearer YOUR-REST-API-KEY
 | `schedule` | Required | Schedule object | See [schedule object]({{site.baseurl}}/api/objects_filters/schedule_object/). |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
 
-## Example Request
+## Example request
 ```
 curl --location --request POST 'https://rest.iad-01.braze.com/campaigns/trigger/schedule/create' \
 --header 'Content-Type: application/json' \

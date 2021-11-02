@@ -8,23 +8,23 @@ description: "This article contains release notes for June 2016."
 
 # June 2016
 
-## Action Based Trigger for Performing an Exception Event
+## Action-based trigger for performing an exception event
 
 “Exception events” are used to create powerful logic within action-based campaigns. They are used to remove end users from receiving a message; for example, “send users who abandon their shopping carts a push notification, unless they checkout.” By triggering off of an exception event, customers can direct additional messages and attention to the users who did checkout after abandoning their carts, creating a seamless and cohesive experience.
 
-## "Received Message from Campaign with Tag" Segment Filter
+## "Received Message from Campaign with Tag" segment filter
 
 Customers can now exclude users who have received groups of campaigns by the same "Tag" functionality they have already been using.
 
-## Pause & Resume Multiple Campaigns Simultaneously
+## Pause & resume multiple campaigns simultaneously
 
 Customers can now pause and resume multiple campaigns simultaneously from the campaigns page.
 
-## Uninstall Data API Endpoint
+## Uninstall data API endpoint
 
 Customers can now fetch uninstall tracking data from our export APIs directly. Please see our [Export API Documentation][4] for additional details.
 
-## Improved Error Log
+## Improved error log
 
 We've improved your ability to sort by error type in the [Message Error Log][5]!
 

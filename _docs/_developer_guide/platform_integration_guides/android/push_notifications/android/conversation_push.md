@@ -9,7 +9,7 @@ channel:
 
 ---
 
-# Android Conversation Push
+# Android conversation push
 
 ![Android Conversation Push example]({% image_buster /assets/img/android/push/conversations_android.png %}){: style="float:right;max-width:30%;margin-left:15px;border: 0;"}
 
@@ -17,7 +17,7 @@ The [people and conversations initiative][2] is a multi-year Android initiative 
 
 No additional integration or SDK changes are required to use this feature. Devices or SDKs which don't meet the minimum version requirements will instead show a standard push notification.
 
-## Usage Requirements
+## Usage requirements
 
 - This notification type requires the Braze Android SDK v15.0.0+ and Android 11+ devices. 
 - Unsupported devices or SDKs will fallback to a standard push notification.

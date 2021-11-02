@@ -1,4 +1,4 @@
-## Universal Deep Link Delegate
+## Universal deep link delegate
 
 The Android SDK provides the ability to set a single delegate object to custom handle all deep links opened by Braze across Content Cards, in-app messages, and push notifications.
 

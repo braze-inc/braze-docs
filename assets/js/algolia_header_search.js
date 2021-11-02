@@ -61,8 +61,7 @@ $(document).ready(function () {
 
     if ("headings" in item) {
       if (item["headings"]) {
-        heading =
-          item["headings"][item["headings"].length - 1];
+        heading = item["headings"][item["headings"].length - 1];
       }
     }
 
@@ -92,7 +91,7 @@ $(document).ready(function () {
       url += "#" + string_to_slug(heading);
     }
     result_template += '<a href="' +
-        base_url + url + '><div class="title">' +
+        base_url + url + '"><div class="title">' +
         title + ' <div class="category">' +
         tags_list + article_path +
         '</div></div> <div class="content">' +

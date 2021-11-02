@@ -8,21 +8,22 @@ tool: Location
 
 ---
 
-# Geofence Configuration
+# Geofence configuration
 
-## Latitude/Longitude
+## Latitude and longitude
 
 The geographic center of the geofence.
 
 ## Radius
 
-The radius of the geofence in meters, measured from the geographic center. We recommend setting a minimum radius of 100 meters for all geofences.
+The radius of the geofence in meters, measured from the geographic center. we recommend setting a minimum radius of 100 meters for all geofences.
 
 ## Cooldown
 
-Users receive geofence triggered notifications after performing enter or exit transitions on individual geofences.  After a transition occurs, there is a pre-defined period of time during which that user may not perform the same transition on that individual geofence again. This period of time is called the "cooldown" and is pre-defined by Braze. Its main purpose is to prevent unnecessary network requests.
+Users receive geofence triggered notifications after performing enter or exit transitions on individual geofences. After a transition occurs, there is a pre-defined period of time during which that user may not perform the same transition on that individual geofence again. This period of time is called the "cooldown" and is pre-defined by Braze. Its main purpose is to prevent unnecessary network requests.
 
-## Technology Partners
+## Technology partners
+
 You can also leverage geofences with some of our partners, for example: 
 
 - [Neura][1]

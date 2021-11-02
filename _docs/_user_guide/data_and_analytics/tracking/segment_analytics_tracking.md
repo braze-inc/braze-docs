@@ -9,7 +9,7 @@ tool:
   - Reports
 ---
 
-# Segment Analytics Tracking
+# Segment analytics tracking
 
 When you turn analytics tracking on for a segment, Braze will let you view sessions, custom events, and revenue over time by this segment.
 

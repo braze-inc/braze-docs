@@ -7,7 +7,7 @@ page_type: solution
 description: "This help article walks Mac users through how to resolve scroll bars overlapping content within Braze docs."
 ---
 
-# Scroll Bar Overlap
+# Scroll bar overlap
 
 Are you using a Mac and find that your scroll bars are overlapping content within Braze Docs like the example below?
 

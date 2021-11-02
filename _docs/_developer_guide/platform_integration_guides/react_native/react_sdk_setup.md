@@ -7,7 +7,7 @@ description: "This reference introduces the React Native SDK and explains how to
 
 ---
 
-# Initial SDK Setup
+# Initial SDK setup
 
 Installing the Braze React Native SDK provides basic analytics functionality and lets you integrate in-app messages and Content Cards for both iOS and Android with just one codebase.
 
@@ -15,7 +15,7 @@ You will need to complete installation steps on both platforms separately.
 
 To complete the installation, you will need the [App Identifier API key]({{site.baseurl}}/api/api_key/#the-app-identifier-api-key) as well as the [SDK endpoint]({{site.baseurl}}/api/basics/#endpoints). Both are located in the **Developer Console** under **Settings** in the dashboard.
 
-## Step 1: Integrate the Braze Library
+## Step 1: Integrate the Braze library
 
 Add the Braze React Native SDK package.
 
@@ -25,12 +25,12 @@ npm install react-native-appboy-sdk
 # yarn add react-native-appboy-sdk
 ```
 
-## Step 2: Complete Native Setup
+## Step 2: Complete native setup
 
 {% tabs %}
 {% tab Android %}
 
-#### Step 2.1a: Add Our Repository
+#### Step 2.1a: Add our repository
 
 In your top-level project `build.gradle`, add the following as repositories under `allprojects` -> `repositories`:
 
@@ -62,7 +62,7 @@ Add the required permissions to your `AndroidManifest.xml` file:
 <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
 ```
 
-#### Step 2.1c: Implement User Session Tracking
+#### Step 2.1c: Implement user session tracking
 
 The calls to `openSession()` and `closeSession()` are handled automatically.
 Add the following code to the `onCreate()` method of your `MainApplication` class:
@@ -93,7 +93,7 @@ override fun onCreate() {
 {% endsubtab %}
 {% endsubtabs %}
 
-#### Step 2.1d: Handle Intent updates
+#### Step 2.1d: Handle intent updates
 
 If your MainActivity has `android:launchMode` set to `singleTask`, add the following code to your `MainActivity` class:
 
@@ -119,7 +119,7 @@ override fun onNewIntent(intent: Intent) {
 {% endtab %}
 {% tab iOS %}
 
-#### Step 2.2a: Install Pods
+#### Step 2.2a: Install pods
 
 Since React Native automatically links the libraries to the native platform, you can install the SDK with the help of CocoaPods.
 
@@ -171,7 +171,7 @@ Once installed, you can `import` the library in your React Native code:
 import ReactAppboy from "react-native-appboy-sdk";
 ```
 
-## Test Your Basic Integration
+## Test your basic integration
 
 At this point, you can verify that the SDK is integrated by checking session statistics in the dashboard. If you run your application on either platform, you should see a new session in dashboard (in the **Overview** section).
 

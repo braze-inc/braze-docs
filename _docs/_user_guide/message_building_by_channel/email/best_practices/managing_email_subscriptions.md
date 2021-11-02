@@ -8,21 +8,21 @@ channel: email
 
 ---
    
-# Managing Email Subscriptions
+# Managing email subscriptions
 
 Make sure you are familiar with the tools that Braze provides for [managing users' email subscriptions and targeting campaigns at users with particular subscription states][22]. These tools are critical for compliance with [anti-spam laws][23].
 
-## Unsubscribed Email Addresses
+## Unsubscribed email addresses
 
 Braze will automatically unsubscribe any user that either manually unsubscribes from your email through a custom footer or marks an email as spam. These users won't be targeted by future emails. To read more about how to set up your custom footer, visit this [documentation]({{site.baseurl}}/user_guide/message_building_by_channel/email/managing_user_subscriptions/#changing-email-subscriptions).
 
 If a user unsubscribes and later changes their email, their new email will also be unsubscribed. In other words, once an external user ID is associated with an unsubscribe, future email addresses for that user ID will also be unsubscribed.
 
-## Bounces & Invalid Emails
+## Bounces and invalid emails
 
 If an email address hard bounces (due to the fact that the email is invalid or doesn't exist) then we will mark the user's email address as invalid and will not attempt to send further emails to that email address. If that user changes their email address, we will resume sending emails to them, as their new email may be valid. Soft Bounces (inbox full, etc) are automatically retried for 72 hours.
 
-## Duplicate Emails
+## Duplicate emails
 
 Braze automatically checks for and removes duplicate email addresses when an email campaign is sent. This way an email is only sent once and is "deduped" which ensures that it doesn't hit the same email multiple times even if multiple user profiles share a common address. Because deduplication occurs when targeted users are included in the same dispatch, triggered campaigns (excluding API-triggered campaigns, see below) may result in multiple sends to the same email address (even within a time period where users could be excluded due to reeligibility) if differing users with matching emails log the trigger event at different times. 
 

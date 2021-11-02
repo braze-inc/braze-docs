@@ -8,13 +8,13 @@ description: "This article contains release notes for November 2021."
  
 # November 2021
 
-## Data Points Usage Dashboard
+## Data points usage dashboard
 
 Use the **Total Data Points Usage** dashboard to track your data point usage pacing in relation to your contract allotment. This dashboard provides information on your contract, current billing cycle, company billing data, and app group billing data. For more information, refer to [Subscriptions and Usage]({{site.baseurl}}/user_guide/onboarding_with_braze/subscription_and_usage/#total-data-points-dashboard).
 
-## Change to Segment Extension Regeneration
+## Change to segment extension regeneration
 
-Starting on November 29, 2021, the setting to regenerate extensions daily will be automatically turned off for unused [Segment Extensions]({{site.baseurl}}/user_guide/engagement_tools/segments/segment_extension/). Braze defines unused extensions as ones that meet the following criteria:
+Starting on January 10, 2022, the setting to regenerate extensions daily will be automatically turned off for unused [Segment Extensions]({{site.baseurl}}/user_guide/engagement_tools/segments/segment_extension/). Braze defines unused extensions as ones that meet the following criteria:
 
 - Not used in any active campaigns, Canvases, or segments
 - Not used in any inactive (draft, stopped, archived) campaigns, Canvases, or segments
@@ -22,21 +22,21 @@ Starting on November 29, 2021, the setting to regenerate extensions daily will b
 
 Braze will notify the company contact and creator of the extension when this setting is turned off. The option to regenerate extensions daily can be turned on again at any time.
 
-## Android Advanced Implementation Guides
+## Android advanced implementation guides
 
 ### Content Cards
 
 This optional and advanced [implementation guide]({{site.baseurl}}/developer_guide/platform_integration_guides/android/content_cards/implementation_guide/) covers Content Card code considerations, three custom use cases built by our team, accompanying code snippets, and guidance on logging impressions, clicks, and dismissals.
 
-### In-App Messaging
+### In-app messaging
 
 This optional and advanced [implementation guide]({{site.baseurl}}/developer_guide/platform_integration_guides/android/in-app_messaging/implementation_guide/) covers in-app message code considerations, three custom use cases built by our team, and accompanying code snippets.
 
-### Push Notifications
+### Push notifications
 
 This optional and advanced [implementation guide]({{site.baseurl}}/developer_guide/platform_integration_guides/android/push_notifications/android/implementation_guide/) covers ways to leverage a custom `FirebaseMessagingService` subclass to get the most out of your push messages. Included is a custom use case built by our team, accompanying code snippets, and guidance on logging analytics.
 
-## New Braze Partnerships
+## New Braze partnerships
 
 ### Adobe - Customer Data Platform
 

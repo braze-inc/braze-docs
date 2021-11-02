@@ -9,13 +9,13 @@ channel:
 
 ---
 
-# Baidu Integration
+# Baidu integration
 
 Braze is capable of sending push notifications to Android devices using [Baidu Cloud Push][14].
 
 >  Using Baidu Cloud Push __does not__ require you to distribute your apps via the Baidu App Store.
 
-## Step 1: Create a Baidu Account
+## Step 1: Create a Baidu account
 
 Visit the [Baidu Portal][7]. You will see a homepage similar to the following. Click __登录__ (Log In) among the menu options on the top right to bring up a dialog that will allow you to log in or create a new account.
 
@@ -37,7 +37,7 @@ On the following page, you will complete an SMS verification. Choose your countr
 
 ![Baidu Verification SMS][35]
 
-## Step 2: Register as a Baidu Developer
+## Step 2: Register as a Baidu developer
 
 Visit the [Baidu Developer Portal][36]. Open the dropdown menu in the top right of the screen. Choose __注册开发者__ (Create New Developer Account) to begin registration.
 
@@ -47,7 +47,7 @@ On the registration page, choose your account type (个人 for personal, 公司 
 
 ![Baidu Developer Registration][13]
 
-## Step 3: Register your Application with Baidu
+## Step 3: Register your application with Baidu
 
 Visit the [Baidu Project Portal][11]. Click __创建工程__ (Create Project).
 
@@ -67,7 +67,7 @@ On the following page, enter your app package name (e.g. com.braze.sample) and s
 
 ![Baidu Configure Cloud][39]
 
-## Step 4: Add Baidu to your Application
+## Step 4: Add Baidu to your application
 
 Visit the [Baidu Push SDK Portal][40] and download the latest Baidu Cloud Push Android SDK.
 
@@ -165,7 +165,7 @@ Braze.getInstance(context).registerAppboyPushMessages(channelId)
 {% endtab %}
 {% endtabs %}
 
-## Step 5: Registering Push Opens
+## Step 5: Registering push opens
 
 Baidu supports sending extra key-value pairs with push messages in JSON format. Your broadcast receiver's `public void onNotificationClicked(Context context, String title, String description, String customContentString)` method will be called whenever a user clicks an incoming push message. The parameter `customContentString` contains the extras in JSON format. All messages from Braze will contain the following two key-value pairs:
 
@@ -229,7 +229,7 @@ try {
 {% endtab %}
 {% endtabs %}
 
-## Step 7: Set Up Baidu Keys
+## Step 7: Set up Baidu keys
 
 You need to input your Baidu API Key and Baidu Secret Key into the Braze dashboard. Both keys are available from the Baidu application console.
 

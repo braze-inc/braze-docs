@@ -10,7 +10,7 @@ channel:
   
 ---
 
-# Creating an Email Campaign
+# Creating an email campaign
 
 > This article covers how to create an email campaign in Braze. Here, we'll cover steps and best practices on how to compose your message, preview your content, and schedule your campaign.
 
@@ -18,14 +18,14 @@ Email messages are great for delivering content to your users on their terms. Th
 
 To see examples of email campaigns, check out our [Case Studies][9].
 
-## Step 1: Create a New Campaign
+## Step 1: Create a new campaign
 
 On the **Campaigns** page, click **Create Campaign** and select **Email** as your messaging channel.
 ![New Campaign Page][19]
 
-## Step 2: Select Your Editing Experience {#step-2-choose-your-template-and-compose-your-email}
+## Step 2: Select your editing experience {#step-2-choose-your-template-and-compose-your-email}
 
-From the campaign wizard, name your email and provide an optional description. You can also assign [tags][20] to keep track of engagement tactics. 
+From the campaign wizard, name your email and provide an optional description. You can also assign [tags][20] to keep track of engagement tactics.
 
 Braze offers two editing experiences when creating an email campaign, our [Drag & Drop editor]({{site.baseurl}}/dnd/) or our standard HTML editor. Click on the appropriate tile to select which editing experience you'd prefer. Once selected, you must also select an existing [HTML][10] or [Drag & Drop][10] email template, [upload a template from a file][18] (HTML editor only), or use a blank template.
 
@@ -35,7 +35,7 @@ Once you selected your template, you will see an overview of your email where yo
 
 ![newemailoverview][14]
 
-### Step 2a: Add Email Headers
+### Step 2a: Add email headers
 
 Email headers contain information about the email being sent. These key-value pairs typically have information about the sender, recipient, authentication protocols, and contain email routing information. Braze automatically adds the necessary header information required by the RFC for emails to be delivered to your inbox provider properly.
 
@@ -50,7 +50,7 @@ However, Braze does allow you the flexibility to add additional email headers as
 | DKIM-Signature | received | x-sg-id |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
 
-### Step 2b: Preview and Test Your Message
+### Step 2b: Preview and test your message
 
 After you finish composing your perfect email, you need to test it before sending it out.
 
@@ -72,7 +72,7 @@ Email clients that support preview text always pull in enough characters to fill
 ```
 {% endalert %}
 
-### Step 2c: Check for Email Errors
+### Step 2c: Check for email errors
 
 The editor will call out any problems it catches with your message before you send it. Here's a list of errors that are accounted for in our editor:
 
@@ -85,13 +85,13 @@ The editor will call out any problems it catches with your message before you se
 - Emails with no unsubscribe link.
 - The email you are sending from is not whitelisted, thus sends will be highly limited to ensure deliverability.
 
-
-## Step 3: Schedule Your Messaging Campaign
+## Step 3: Schedule your messaging campaign
 
 You can schedule your campaigns against three types of delivery:
-- Scheduled (sending your campaign at a designated time),
-- Action-Based (sending when your users perform specified actions), and
-- API-Triggered (sending according to an API request).
+
+- Scheduled (sending your campaign at a designated time)
+- Action-Based (sending when your users perform specified actions)
+- API-Triggered (sending according to an API request)
 
 {% tabs %}
 {% tab Scheduled Delivery %}
@@ -122,7 +122,7 @@ Check out our [API-Triggered endpoints found in the API Guide]({{site.baseurl}}/
 {% endtab %}
 {% endtabs %}
 
-## Step 4: Choose Conversion Events
+## Step 4: Choose conversion events
 
 Braze allows you to track how often users perform specific actions after receiving a campaign, known as a [conversion event][22]. You can specify any of the following actions as a conversion event:
 
@@ -134,7 +134,7 @@ Braze allows you to track how often users perform specific actions after receivi
 
 You have the option of allowing up to a 30-day window during which a conversion will be counted if the user takes the specified action. While Braze automatically tracks opens and clicks for your campaign, you may wish to set the conversion event to be when a user opens or clicks on an email address to take advantage of Braze's [Intelligent Selection][13] feature.
 
-## Step 5: Choose Your Target Segment
+## Step 5: Choose your target segment
 
 Next, you need to choose the target segment from the dropdown menu. You'll automatically be given a snapshot of what that segment population looks like right now, including how many users within that segment are reachable via email. Keep in mind that exact segment membership is always calculated just before the message is sent.
 
@@ -142,7 +142,21 @@ Next, you need to choose the target segment from the dropdown menu. You'll autom
 
 Optionally, you can also choose to limit delivery to a specified number of users within the segment, or allow users to receive the same message twice upon a recurrence of the campaign.
 
-## Step 6: Review and Deploy
+### Multichannel campaigns with email and push
+
+For multichannel campaigns targeting both email and push channels, you may want to limit your campaign so that only the users who are explicitly opted in will receive the message (excluding subscribed or unsubscribed users). For example, say you have three users of different opt-in status:
+
+- **User A** is subscribed to email and is push enabled. This user doesn't receive the email but will receive the push.
+- **User B** is opted-in to email but is not push enabled. This user will receive the email but doesn't receive the push.
+- **User C** is opted-in to email and is push enabled. This user will receive both the email and the push.
+
+To do so, under **Audience Summary**, select to send this campaign to "opted-in users only". This option will ensure that only opted-in users will receive your email, and Braze will only send your push to users who are push enabled by default.
+
+{% alert important %}
+With this configuration, don't include any filters in the **Target Users** step that limit the audience to a single channel (e.g., `Push Enabled = True` or `Email Subscription = Opted-In`).
+{% endalert %}
+
+## Step 6: Review and deploy
 
 The final page will give you a summary of the campaign you've just designed. Confirm all the relevant details and click **Launch Campaign** to enable it for sending.
 
@@ -150,7 +164,7 @@ Now just wait for all the data to roll in!
 
 ![email2][6]
 
-## Email Reporting
+## Email reporting
 
 Braze provides you with a detailed report of each of your email campaigns. Navigate to the **Campaigns** tab on your dashboard and select your desired campaign to open the **Details** page. This page is broken up into three tabs:
 
@@ -158,7 +172,7 @@ Braze provides you with a detailed report of each of your email campaigns. Navig
 - Retention Report
 - Funnel Report
 
-### Campaign Analytics
+### Campaign analytics
 
 On the **Campaign Analytics** page, you can comprehensively view and analyze the success of your campaign in an organized format.
 

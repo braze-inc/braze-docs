@@ -8,7 +8,7 @@ search_tag: Partner
 
 ---
 
-# Sample Queries
+# Sample queries
 
 >  This partner page offers some sample queries of possible use cases to reference when setting up your queries.
 

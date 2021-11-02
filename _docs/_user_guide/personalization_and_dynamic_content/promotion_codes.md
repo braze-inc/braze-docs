@@ -7,7 +7,7 @@ description: "This reference article covers how to create promotion code lists a
 
 ---
 
-# Promotion Codes
+# Promotion codes
 
 > Promotion codes—also called promo codes—are a great way to keep users engaged by driving interactions with a heavy emphasis on purchases. <br><br>With Braze's Liquid functionality, we offer a way to make widespread promotion code usage a snap, allowing messages to now pull from the promotion list you provided, automatically and intuitively. The promotion codes feature offers expiry dates of up to six months and support for up to 20MM individual codes per list.
 
@@ -15,14 +15,16 @@ description: "This reference article covers how to create promotion code lists a
 Promotion codes can't be sent in in-app messages.
 {% endalert %}
 
-## Creating a Promotion Code List
+## Creating a promotion code list
 
 ![Promo Codes 1][1]{: style="float:right;max-width:30%;margin-left:15px;"}
-### Step 1: Navigate to the Promotion Code Section
+
+### Step 1: Navigate to the Promotion Code section
 
 From the dashboard, go to **Promotion Codes**, located under the **Integrations** section, then select **Create Promotion Code List**.
 
-### Step 2: Naming and Creating your Promotion Code
+### Step 2: Naming and creating your promotion code
+
 Name your promotion code list and add an optional description.
 
 ![Promo Codes 2][2]{: style="max-width:90%"}
@@ -39,7 +41,7 @@ Snippets are case sensitive, for example, “Birthday_promo” and “birthday_p
 You can't change the code snippet after saving!
 {% endalert %}
 
-### Step 3: Promotion Code Options
+### Step 3: Promotion code options
 
 Each promotion code list has a corresponding expiration date and time that get set upon creation. The max expiration length is six months into the future from the day you’re creating or editing your list. Within that time, you can change and update the expiration date repeatedly. This expiration date will apply to all codes added to this list. Upon expiration, the codes will be deleted from the Braze system and any messages calling that list’s code snippet will not be sent.
 
@@ -49,7 +51,7 @@ You also have the option to set up optional and customizable threshold alerts. I
 
 ![Promo Codes 5][5]
 
-### Step 4: Promotion Code Upload
+### Step 4: Promotion code upload
 
 Braze does not manage code creation or redemption, so as a result, you’ll have to generate your promo codes to a CSV file and upload them to Braze. You can use our built-in integration with [Voucherify]({{site.baseurl}}/partners/channel_extensions/loyalty/voucherify/) or [Talon.One]({{site.baseurl}}/partners/channel_extensions/loyalty/talonone/) to create and export promo codes. Make sure that there is only one code on each row.
 
@@ -71,12 +73,12 @@ Upon clicking save, you will see that a new row appears in the **Import History*
 Larger files will take a few minutes to import. While you wait, you are free to leave the page and work on something while the import is in progress. When the import is finished, you will see the status change to **Complete** in the table.
 {% endalert %}
 
-#### Updating a Promotion Code List
+#### Updating a promotion code list
 
 To update a list, simply open up one of your existing lists. You can change the Name, Description, List Expiration, Threshold Alerts, and add more codes to the list by uploading new files and clicking **Update List**.
 All codes in the list will have the same expiration, regardless of the date of import.
 
-### Step 5: Use Promotion Codes
+### Step 5: Use promotion codes
 
 To send promotion codes in messages, click **Copy Snippet** to copy the code snippet you set when creating your promotion code list.
 
@@ -92,7 +94,7 @@ Now, using [Liquid][11], you can insert one of the unique promotion codes from t
 Promotion codes can't be sent in In-App Messages.
 {% endalert %}
 
-## Determining How Many Codes Have Been Used
+## Determining how many codes have been used
 
 You can find the remaining code count in the **Remaining** column of the promotion code list, located on the **Promotion Codes** page.
 

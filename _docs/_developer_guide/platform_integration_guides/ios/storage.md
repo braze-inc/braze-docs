@@ -12,7 +12,7 @@ description: "This reference article describes the device-level properties captu
 
 This article describes the different device-level properties captured when using the Braze iOS SDK.
 
-## Device Properties
+## Device properties
 
 By default, Braze will collect the following [device-level properties](https://github.com/Appboy/appboy-ios-sdk/blob/16e893f2677af7de905b927505d4101c6fb2091d/AppboyKit/headers/AppboyKitLibrary/Appboy.h#L181) to allow device, language, and time zone-based message personalization:
 

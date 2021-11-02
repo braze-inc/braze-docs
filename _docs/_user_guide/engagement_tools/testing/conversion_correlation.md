@@ -17,7 +17,7 @@ tool:
 
 ## Overview
 
-For every campaign, we check a list of attributes and user behaviors and compute whether they are statistically significantly associated with increases or decreases in each of the [conversion events](https://www.braze.com/docs/user_guide/engagement_tools/campaigns/testing_and_more/conversion_events/) you've chosen for the campaign. We also compute how much more or less likely users with the given attribute or behavior were to convert, and if it's significant, display that on the corresponding left or right side of the table. Users with each attribute or behavior of interest are compared to the rates for the entire campaign audience as a whole. Behaviors and attributes that have no significant correlation with conversion are simply not shown in the table.
+For every campaign, we check a list of attributes and user behaviors and compute whether they are statistically significantly associated with increases or decreases in each of the [conversion events](https://www.braze.com/docs/user_guide/engagement_tools/campaigns/testing_and_more/conversion_events/) you've chosen for the campaign. We also compute how much more or less likely users with the given attribute or behavior were to convert, and if it's significant, display that on the corresponding left or right side of the table. Users with each attribute or behavior of interest are compared to the rates for the entire campaign audience as a whole. Behaviors and attributes that have no significant correlation with conversion are not shown in the table.
 
 __To run a Conversion Correlation Analysis:__<br> 
 Use the dropdown to select the conversion event of interest.
@@ -47,7 +47,7 @@ Finally, we check several behavioral variables that can take on multiple values.
 
 This analysis becomes available at least 24 hours after a campaign starts sending and only looks at sends that occurred in the last 30 days. If no behaviors or attributes significantly correlate with any of the campaign's conversion events, the dropdown will be disabled and a message will be displayed letting you know that's the case.
 
-## How we check for significance
+## How Braze checks for significance
 
 We check for statistical significance by using something called the [Wilson confidence interval](https://en.wikipedia.org/wiki/Binomial_proportion_confidence_interval#Wilson_score_interval). We determine at 95% confidence the rate at which the entire campaign audience converted. This is called the base rate. 
 

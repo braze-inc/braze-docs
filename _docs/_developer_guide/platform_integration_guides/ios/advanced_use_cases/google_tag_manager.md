@@ -15,11 +15,11 @@ Braze's iOS SDK can be initialized and controlled by tags configured within [Goo
 
 But first - before using Google Tag Manager - be sure to first follow our [Initial SDK Setup][1].
 
-## Configuring Your Google Tag Manager {#configuring-ios-google-tag-manager}
+## Configuring your Google Tag Manager {#configuring-ios-google-tag-manager}
 
 In our example, we'll pretend we are a music streaming app that wants to log different events as users listen to songs. Using Google Tag Manager for iOS, we can control which of our 3rd party vendors receive this event, and create tags specific to Braze.
 
-### Custom Events
+### Custom events
 
 Custom events are logged with `actionType` set to `logEvent`. The Braze custom tag provider in our example is expecting the custom event name to be set using `eventName`.
 
@@ -61,7 +61,7 @@ NSDictionary *parameters = @{@"genre" : @"pop",
 {% endtab %}
 {% endtabs %}
 
-### Logging Custom Attributes
+### Logging custom attributes
 
 Custom attributes are set via an `actionType` set to `customAttribute`. The Braze custom tag provider is expecting the custom attribute key/value to be set via `customAttributeKey` and `customAttributeValue`.
 
@@ -77,7 +77,7 @@ NSDictionary *parameters = @{@"customAttributeKey" : @"favorite song",
 {% endtab %}
 {% endtabs %}
 
-### Calling ChangeUser
+### Calling changeUser
 
 Calls to `changeUser()` are made via an `actionType` set to `changeUser`. The Braze custom tag provider is expecting the Braze user ID to be set via an `externalUserId` key-value pair within your tag.
 
@@ -92,7 +92,7 @@ NSDictionary *parameters = @{@"externalUserId" : userId};
 {% endtab %}
 {% endtabs %}
 
-## Braze SDK Custom Tag Provider {#adding-ios-google-tag-provider}
+## Braze SDK custom tag provider {#adding-ios-google-tag-provider}
 
 With the tags and triggers set up, you will also need to implement Google Tag Manager in your iOS app which can be found in Google's [documentation][2].
 

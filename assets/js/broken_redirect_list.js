@@ -468,7 +468,8 @@ validurls['/docs/help/dp-technical-assistance/'] = '/docs/dp-technical-assistanc
 validurls['/docs/help/innovation_statement/'] = '/docs/innovation_statement/';
 validurls['/docs/partners/data_and_infrastructure_agility/customer_data_platform/amerpity/#amperity'] = '/docs/partners/data_and_infrastructure_agility/customer_data_platform/amperity/';
 
-
+validurls['/docs/user_guide/message_building_by_channel/push/best_practices/push_reporting/'] = '/docs/user_guide/message_building_by_channel/push/push_reporting/';
 
 validurls['/docs/help/best_practices/'] = '/docs/faqs/';
+
 

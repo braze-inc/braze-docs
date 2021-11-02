@@ -10,13 +10,14 @@ channel:
 
 # Apple's Mail Privacy Protection
 
-## What is Apple's Mail Privacy Protection Update?
+## What is Apple's Mail Privacy Protection update?
 
-Apple's Mail Privacy Protection (MPP) is a privacy update that will be available for users of the Apple Mail app on iOS 15, iPadOS 15, macOS Monterey, and watchOS 8, historically set to release mid-September. For users who opt-in to MPP (which we predict most users will do), emails will now be preloaded using proxy servers, caching images and hindering the ability to leverage tracking pixels for metrics like [open tracking]({{site.baseurl}}/user_guide/administrative/app_settings/manage_app_group/email_settings/#email-open-tracking-pixel). Once this feature goes into effect, brands should expect MPP to result in issues regarding email deliverability metrics and issues with pre-existing campaigns and Canvases that trigger based on these metrics.
+Apple's Mail Privacy Protection (MPP) is a privacy update that is available for users of the Apple Mail app on iOS 15, iPadOS 15, macOS Monterey, and watchOS 8, released mid-September 2021. For users who opt-in to MPP (which we predict most users will do), emails will now be preloaded using proxy servers, caching images and hindering the ability to leverage tracking pixels for metrics like [open tracking]({{site.baseurl}}/user_guide/administrative/app_settings/manage_app_group/email_settings/#email-open-tracking-pixel). Brands should expect MPP to result in issues regarding email deliverability metrics and issues with pre-existing campaigns and Canvases that trigger based on these metrics.
 
-### Who Will This Affect?
+### Who will this affect?
 
 Any recipient using the native Apple Mail app on:
+
 - iOS 15
 - iPadOS 15
 - macOS Monterey
@@ -28,11 +29,12 @@ This applies to all users who have connected their mail account to the Apple Mai
 While these updates to email deliverability are significant, MPP doesn't fundamentally change any of the rules that govern email and deliverability. Instead, it will impact how we benchmark success and what email tools and functionalities can be used going forward.
 {% endalert %} 
 
-## How to Prepare for MPP?
+## How to prepare for MPP?
 
-Time is of the essence for brands who are just beginning to think about how they respond to MPP and its potential impact on their email marketing and overall customer engagement efforts. We recommend users:
+Time is of the essence for brands who are just beginning to think about how they respond to MPP and its potential impact on their email marketing and overall customer engagement efforts. We recommend users do the following:
+
 - Assess the risk that MPP poses to their marketing efforts
 - Put together a targeted MPP response plan that addresses automation adjustments on the Braze platform, strengthens deliverability best practices, and develops a broader set of metrics to measure performance.
 - Implement that response plan as soon as they can
 
-For an in-depth overview of how to prepare for Apple's Mail Privacy Protection, check out this article [here](https://www.braze.com/resources/articles/apple-mail-privacy-protection-how-to-prepare). 
+For an in-depth overview of how to prepare for Apple's Mail Privacy Protection, check out our [blog post](https://www.braze.com/resources/articles/apple-mail-privacy-protection-how-to-prepare). 

@@ -7,7 +7,7 @@ description: "This reference article covers how to set custom attributes on the 
 
 ---
 
-# Setting Custom Attributes
+# Setting custom attributes
 
 Braze provides methods for assigning attributes to users. You'll be able to filter and segment your users according to these attributes on the dashboard.
 
@@ -15,7 +15,7 @@ Before implementation, be sure to review examples of the segmentation options af
 
 User attributes can be assigned to the current `IAppboyUser`. To obtain a reference to the current `IAppboyUser`, call `Appboy.SharedInstance.AppboyUser`
 
-## Assigning Default User Attributes
+## Assigning default user attributes
 
 The following attributes should be defined as properties of the `IAppboyUser`:
 
@@ -36,12 +36,12 @@ The following attributes should be defined as properties of the `IAppboyUser`:
 Appboy.SharedInstance.AppboyUser.FirstName = "User's First Name"
 ```
 
-## Assigning Custom User Attributes
+## Assigning custom user attributes
 
 Beyond the attributes above, Braze also allows you to define custom attributes using a number of different data types:
 For more information regarding the segmentation options, and how each of these attributes will affect you, see our ["Best Practices" documentation][1] within this section.
 
-### Setting Custom Attribute Values
+### Setting custom attribute values
 
 {% tabs %}
 {% tab Boolean %}
@@ -88,7 +88,7 @@ Appboy.SharedInstance.EventLogger.RemoveFromCustomAttributeArray("custom_attribu
 {% endtab %}
 {% endtabs %}
 
-### Incrementing/Decrementing Custom Attributes
+### Incrementing/decrementing custom attributes
 
 This code is an example of an incrementing custom attribute. You may increment the value of a custom attribute by any positive or negative integer value.
 
@@ -96,7 +96,7 @@ This code is an example of an incrementing custom attribute. You may increment t
 bool IncrementCustomAttribute(STRING_KEY, INCREMENT_INTEGER_VALUE);
 ```
 
-### Unsetting a Custom Attribute
+### Unsetting a custom attribute
 
 Custom attributes can also be unset using the following method:
 
@@ -104,15 +104,15 @@ Custom attributes can also be unset using the following method:
 bool UnsetCustomAttribute(STRING_KEY);
 ```
 
-### Setting a Custom Attribute via the REST API
+### Setting a custom attribute via the REST API
 
 You can also use our REST API to set user attributes. To do so refer to the [user API documentation][4].
 
-### Custom Attribute Value Limits
+### Custom attribute value limits
 
 Custom attribute values have a maximum length of 255 characters; longer values will be truncated.
 
-## Managing Notification Subscription Statuses
+## Managing notification subscription statuses
 
 To set up a subscription for your users (either email or push), you can set the subscription statuses below as properties of the `IAppboyUser`. Subscription statuses in Braze have three different states for both Email and Push:
 

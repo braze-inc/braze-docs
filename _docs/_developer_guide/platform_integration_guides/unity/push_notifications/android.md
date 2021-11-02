@@ -10,7 +10,7 @@ description: "This reference article covers the Android push notification integr
 
 ---
 
-# Push Notifications
+# Push notifications
 
 These instructions are for integrating push with [Firebase Cloud Messaging (FCM)][9].
 
@@ -22,7 +22,7 @@ To get started, follow the instructions at [Firebase Unity Setup Docs][11].
 
 Note that integrating the Firebase Unity SDK may cause your `AndroidManifest.xml` to be overriden. If that occurs, make sure to revert it to its original self.
 
-## Step 2: Set Your Firebase Credentials
+## Step 2: Set your Firebase credentials
 
 You need to input your Firebase Server Key and Sender ID into the Braze dashboard:
 
@@ -41,7 +41,7 @@ If you're not familiar with the location of your Firebase Server Key and Sender 
 3. Select Cloud Messaging under Settings and copy the Server Key and Sender ID:
 ![FirebaseServerKey][59]
 
-## Step 3: Implement Automatic Push Integration
+## Step 3: Implement automatic push integration
 
 The Braze SDK can automatically handle push registration with the Firebase Cloud Messaging Servers in order to have devices receive push notifications.
 
@@ -63,7 +63,7 @@ Whether the SDK should handle opening deeplinks or the opening the app when push
 
 The drawable that should be displayed as the small icon whenever a push notification is received. If no icon is given, the notification will use the application icon as the small icon.
 
-## Step 4: Set Push Listeners
+## Step 4: Set push listeners
 
 If you would like to pass push notification payloads to Unity or take additional steps when a user receives a push notification, Braze provides the option of setting push notification listeners.
 
@@ -71,19 +71,19 @@ If you would like to pass push notification payloads to Unity or take additional
 * Enter your Firebase Server Key in the **Firebase Cloud Messaging Server Key** field, under the Push Notification Settings section.
 * Enter your Firebase Sender ID in the **Firebase Cloud Messaging Sender ID** field, under the Push Notification Settings section.
 
-#### Push Received Listener
+#### Push received listener
 
 The Push Received listener is fired when a user receives a push notification. To send the push payload to Unity, set the name of your Game Object and Push Received listener callback method under the "Set Push Received Listener".
 
-#### Push Opened Listener
+#### Push opened listener
 
 The Push Opened listener is fired when a user launches the app by clicking on a push notification. To send the push payload to Unity, set the name of your Game Object and Push Opened listener callback method under the "Set Push Opened Listener".
 
-#### Push Deleted Listener (Android Only)
+#### Push deleted listener (Android only)
 
 The Push Deleted listener is fired when a user swipes away or dismisses a push notification. To send the push payload to Unity, set the name of your Game Object and Push Deleted listener callback method under the "Set Push Deleted Listener".
 
-#### Push Listener Implementation Example
+#### Push listener implementation example
 
 The following example implements the `BrazeCallback` game object using a callback method name of `PushNotificationReceivedCallback`, `PushNotificationOpenedCallback`, and `PushNotificationDeletedCallback` respectively.
 
@@ -123,11 +123,11 @@ public class MainMenu : MonoBehaviour {
 }
 ```
 
-### Implementation Example
+### Implementation example
 
 The sample project in the [Braze Unity SDK repository][13] contains a full working sample app that includes FCM.
 
-## Deep Linking to In-App Resources
+## Deep linking to in-app resources
 
 Although Braze can handle standard deep links (such as website urls, Android uris, etc.) out of the box, creating custom deep links requires additional Manifest setup.
 
