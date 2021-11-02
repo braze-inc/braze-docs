@@ -2,7 +2,7 @@
 nav_title: Cohort Import
 article_title: Cohort Import Partners
 layout: partner_page
-page_order: 1
+page_order: 2
 
 page_type: landing
 search_tag: Partner

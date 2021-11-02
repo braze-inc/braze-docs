@@ -4,7 +4,7 @@ article_title: API Campaigns
 page_order: 5
 description: "This reference article covers how to generate a campaign_id to include in your API calls and how to configure that campaign."
 page_type: reference
-alias: /api/api_campaigns/
+alias: /api/api_campaigns/api_campaigns/
 tool: Campaigns
 
 ---

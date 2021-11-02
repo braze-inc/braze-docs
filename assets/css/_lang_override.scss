@@ -1,0 +1,67 @@
+#api-main {
+  #api_filter {
+    #api_search {
+      background-image: url(#{$base_url}/assets/img/search_black_shark.svg) !important;
+    }
+  }
+}
+
+div.alert {
+  &.alert-warning {
+    background-image: url(#{$base_url}/assets/img/message-warning.png) !important;
+  }
+  &.alert-update{
+    background-image: url(#{$base_url}/assets/img/message-update.png) !important;
+  }
+  &.alert-checkpoint{
+    background-image: url(#{$base_url}/assets/img/message-stop.png) !important;
+  }
+  &.alert-important{
+    background-image: url(#{$base_url}/assets/img/message-important.png) !important;
+  }
+  &.alert-note{
+    background-image: url(#{$base_url}/assets/img/message-note.png) !important;
+  }
+  &.alert-service-notice{
+    background-image: url(#{$base_url}/assets/img/message-note.png) !important;
+  }
+  &.alert-tip{
+    background-image: url(#{$base_url}/assets/img/message-tip.png) !important;
+  }
+}
+
+#glossary-main {
+  #glossary_filter {
+    #glossary_search {
+      background-image: url(#{$base_url}/assets/img/search_black_shark.svg) !important;
+    }
+    .select {
+        background-image: url(#{$base_url}/assets/img/dropdown.svg) !important;
+    }
+  }
+}
+#partner-main {
+  #partner_filter {
+    #partner_search {
+      background-image: url(#{$base_url}/assets/img/search_black_shark.svg) !important;
+    }
+    .select {
+        background-image: url(#{$base_url}/assets/img/dropdown.svg) !important;
+    }
+  }
+}
+
+#doc-search-form_div, .algolia_overlay {
+  #doc-search-panel {
+    #algolia_footer {
+      .algolia-docsearch-footer--logo {
+          background-image: url(#{$base_url}/assets/img/algolia.svg) !important;
+      }
+    }
+  }
+}
+#search_page{
+  .algolia-docsearch-footer--logo {
+      background-image: url(#{$base_url}/assets/img/algolia.svg) !important;
+  }
+}

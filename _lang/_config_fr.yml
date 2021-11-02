@@ -1,0 +1,67 @@
+# Site settings
+title: Braze Documentation
+email: success@braze.com
+description: >- # this means to ignore newlines until "baseurl:"
+  Welcome to Braze Documentation. Braze provides a comprehensive user engagement solution for your mobile apps.
+baseurl: "/docs/fr" # the subpath of your site, e.g. /blog
+homeurl: "https://www.braze.com" # the base hostname & protocol for your site, e.g. http://example.com
+twitter_username: Braze
+github_username:  braze-inc
+
+language: fr
+
+destination: _site/docs/fr
+
+# Source dir
+source: '.'
+
+# Allows the DocSearch element to be inspected. Set to true locally, but don't
+# check in in that state, or it will cause undesirable behavior in prod.
+search_debug: false
+
+# For local testing, set to false to increase build time by not pulling partner api
+# and markdown data. MAKE SURE TO TURN BACK ON PRIOR TO COMMIT.
+partner_api: true
+markdown_api: true
+
+# gitHub config
+github_baseurl: 'https://github.com/braze-inc/braze-docs/blob/develop/_lang/_fr'
+
+# Collections directory
+collections_dir: _lang/_fr
+
+
+collections:
+  home:
+    title: Documentation
+  user_guide:
+    title: User Guide
+  developer_guide:
+    title: Developer Guide
+  api:
+    title: API
+  partners:
+    title: Technology Partners
+  help:
+    title: Help
+  hidden: # Hidden pages not directly linked via navigation
+    title: Braze
+  docs_pages: # Site specific pages. ie main redirects and search
+    title: Braze
+
+
+# Image asset pipeline setting for japr
+asset_pipeline:
+  display_path: docs/fr/assets
+
+# Algolia Search index
+algolia:
+  index_name: "DocSearch_French" # You can replace that with whatever name you want
+  files_to_exclude:
+    - _lang/_fr/_hidden/*
+    - _lang/_fr/_hidden/*/* #exclude hidden subdirectories from indexing
+    - _lang/_fr/_hidden/*/*/* #exclude additional hidden subdirectories from indexing
+    - _lang/_fr/_docs_pages/*
+    - _lang/_fr/_docs_pages/*/* #exclude hidden subdirectories from indexing
+    - _lang/_fr/_docs_pages/*/*/* #exclude additional hidden subdirectories from indexing
+    - _lang/_fr/_home/Styling_Test_Page.md

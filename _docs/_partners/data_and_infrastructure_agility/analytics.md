@@ -1,7 +1,7 @@
 ---
 nav_title: Analytics
 article_title: Analytics Partners
-page_order: 2
+page_order: 1
 
 page_type: landing
 description: "This page lists Braze partners (Alloys) who allow you to gather behavioral and business insights on customer data."
