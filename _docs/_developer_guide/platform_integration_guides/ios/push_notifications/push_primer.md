@@ -133,7 +133,7 @@ let notificationSettiings = UIApplication.shared.currentUserNotificationSettings
 {% tabs %}
 {% tab OBJECTIVE-C %}
 __Deep Link Handler__<br>
-Place this code snippet outside of the `AppDelegate.m` file. <br>
+Place this code snippet outside of the `(BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions` method from step 1. <br>
 For more information on deep linking check out our [documentation]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/advanced_use_cases/linking/#linking-handling-customization).
 ```objc
   // ...
@@ -157,7 +157,7 @@ For more information on deep linking check out our [documentation]({{site.baseur
 {% endtab %}
 {% tab swift %}
 __Deep Link Handler__<br>
-Place this code snippet outside of the `AppDelegate.m` file. <br>
+Place this code snippet outside of the `(BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions` method from step 1. <br>
 For more information on deep linking check out our [documentation]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/advanced_use_cases/linking/#deep-linking-to-app-settings).
 ```swift
   // ...
