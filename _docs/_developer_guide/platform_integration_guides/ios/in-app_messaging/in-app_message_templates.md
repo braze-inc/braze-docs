@@ -9,9 +9,9 @@ channel:
 
 ---
 
-# In-App Message Templates
+# In-app message templates
 
-## Custom App Store Review Prompt
+## Custom App Store review prompt
 
 {% alert note %}
 Once you implement this prompt, Braze stops automatically tracking impressions and you must log analytics with the methods found [here]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/in-app_messaging/customization/#logging-impressions-and-clicks).

@@ -8,7 +8,7 @@ description: "This help article describes why new users may not have Content Car
 channel: content cards
 ---
 
-# Empty Content Card Feed
+# Empty Content Card feed
 
 You cannot send cards to users who do not exist. By definition, new users will not have any cards in their feed on their first session.
 

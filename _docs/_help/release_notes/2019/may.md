@@ -31,7 +31,7 @@ You will need to update to a supported Braze SDK version:
 Content Cards for Currents, as well as our API documentation for Content Cards, will be launched later this week. Stay tuned!
 {% endalert %}
 
-## Roku Platform Addition
+## Roku platform addition
 
 Braze has added a new channel to our capabilities! By expanding into new channels, we can enable our customers to enrich their data by understanding viewing behavior or provide meaningful experiences to their consumers across all relevant channels.
 
@@ -39,23 +39,23 @@ You can now retrieve data from Roku devices for data enrichment and custom event
 
 [Check out the documentation here!]({{site.baseurl}}/developer_guide/platform_integration_guides/roku/initial_sdk_setup/)
 
-## Notification Preferences for Canvas & Campaign Updates
+## Notification preferences for Canvas & campaign updates
 
 This new notification will alert you via email when a campaign/Canvas is activated, updated, reactivated or deactivated. Activate this in Notification Preferences in your Braze account. [Learn more about this preference here.]({{site.baseurl}}/user_guide/administrative/company_settings/notification_preferences/#notification-preferences)  
 
-## Jampp Technology Partner Documentation
+## Jampp technology partner documentation
 
 Jampp is a performance marketing platform for acquiring and retargeting mobile customers. It combines behavioral data with predictive and programmatic technology to generate revenue for advertisers by showing personal, relevant ads that inspire consumers to purchase for the first time, or more often.
 
 [Braze customers can integrate with Jampp]({{site.baseurl}}/partners/advertising_technologies/retargeting/jampp/) by configuring the Braze webhook channel to stream events into Jampp. As a result, customers have the ability to add richer data sets to their retargeting initiatives with Jampp within the mobile advertising ecosystem.
 
-## Platform Picker for In-App Messages
+## Platform picker for in-app messages
 
 We've made it easier to select where your in-app messages are going and which platforms they're built for with our platform picker, which emphasizes this step in the campaign creation process.
 
 ![Platform Picker][plat_p]
 
-## Dispatch ID Currents Field for Email
+## Dispatch ID Currents field for email
 
 {% alert update %}
 Behavior for `dispatch_id` differs between Canvas and campaigns because Braze treats Canvas steps (except for Entry Steps, which can be scheduled) as triggered events, even when they are "scheduled". [Learn more about `dispatch_id` behavior in Canvas and campaigns here]({{site.baseurl}}/help/help_articles/data/dispatch_id/).
@@ -69,7 +69,7 @@ The `dispatch_id` is the unique out-of-the-box ID generated for each transmissio
 
 While all customers who are sent a scheduled message get the same `dispatch_id`, customers who receive either action-based or API-triggered messages will get a unique `dispatch_id` per message. The `dispatch_id` field enables you to identify which instance of a recurring campaign is responsible for conversion, thus equipping you with more insights and information on which types of campaigns are helping push the needle on your business goals.
 
-## Only Show Mine - Campaign Sorting Feature
+## Only Show Mine - campaign sorting feature
 
 When a user checks the `Only Show Mine` checkbox on the campaign grid, the results will filter down to campaigns show only created by the logged-in user. Additionally, the user can use the search bar by inputting `created_by_me:true`.
 
@@ -77,11 +77,11 @@ When a user checks the `Only Show Mine` checkbox on the campaign grid, the resul
 
 Also, the campaign grid sidebar is now resizable!
 
-## Delete Users by Alias
+## Delete users by alias
 
 You can now use the `users/delete` endpoint to [delete users by alias]({{site.baseurl}}/api/endpoints/user_data/#user-delete-request)!
 
-## Unique Calculation for Email Clicks and Opens
+## Unique calculation for email clicks and opens
 
 Unique Clicks and Unique Opens for Email are now captured and displayed on a 7-day time frame per user and increment a count of 1 within that 7 day window, per each `dispatch_id`.
 
@@ -98,7 +98,7 @@ _Update noted in August 2019._
 {% endalert %}
 
 
-## Most Engaged Channel
+## Most engaged channel
 
 {% alert update %}
 As of the [November 2019 product release]({{site.baseurl}}/help/release_notes/2019/november/#intelligence-suite), "Most Engaged Channel" has been renamed to ["Intelligent Channel"]({{site.baseurl}}/user_guide/intelligence/intelligent_channel/).

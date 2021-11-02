@@ -11,32 +11,32 @@ platform:
 - Android
 ---
 
-# Common Push Error Messages
+# Common push error messages
 
 {% tabs %}
 {% tab Android %} 
-### Push Bounced: MismatchSenderId
+### Push bounced: MismatchSenderId
 MismatchSenderId indicates an authentication failure.  Google Cloud Messaging (GCM) authenticates with a couple key pieces of data: senderID and GCM API key.  These should both be validated for accuracy. For more information see the [public documentation](https://developer.apple.com/library/archive/documentation/NetworkingInternet/Conceptual/RemoteNotificationsPG/CommunicatingwithAPNs.html) about this issue.
 
 Common failures may include:
 - Bad [senderID]({{site.baseurl}}/developer_guide/platform_integration_guides/android/push_notifications/integration/standard_integration/#step-1-enable-firebase)
 - Multiple registration if they register with another push service with a different senderID
 
-### Push Bounced: InvalidRegistration
+### Push bounced: InvalidRegistration
 InvalidRegistration can happen when a push token is malformed.  
 
 Common failures may include:
 - People are passing Braze registration tokens manually but don’t call getToken() (i.e. they instead pass the entire instance id). <br>The token in the error message looks like &#124;ID&#124;1&#124;:[regular token].  
 - Multiple registration, people are registering with multiple services. <br>We currently expect push registration intents to arrive old-style, so if folks are registering in multiple places and we catch intents from other services we can get malformed push tokens.
 
-### Push Bounced: NotRegistered
+### Push bounced: NotRegistered
 NotRegistered usually means that the app has been deleted from the device (i.e. Braze's signal for Uninstall).  
 This can also happen if multiple registration is happening and a second registration is invalidating the push token Braze recieves.
 
 {% endtab %}
 {% tab iOS %}
 
-### Push Bounced: Error sending to bad push token
+### Push bounced: Error sending to bad push token
 
 This can happen for several reasons:
 - __The push token isn’t being sent to us correctly in [[Appboy sharedInstance] registerPushToken:]__
@@ -52,7 +52,7 @@ This can happen for several reasons:
 		- Ensuring that the push certificate being used to send push from the Braze dashboard and the provisioning profile are configured correctly.
 		- If this does not work, consider recreating the APNS certification and then recreate the provisioning profile once the APNS certificate is configured to the app id. This can sometimes solve some more opaque problems.
 
-### Push Bounced: APNS Feedback Service Removed
+### Push bounced: APNS feedback service removed
 
 This generally happens when someone uninstalls. Braze queries the APNS Feedback Service each night to get a list of invalid tokens. See [Apple’s Docs and Description on the Feedback Service](https://developer.apple.com/library/archive/documentation/NetworkingInternet/Conceptual/RemoteNotificationsPG/CommunicatingwithAPNs.html).
 

@@ -7,7 +7,7 @@ description: "This article describes how to go about resetting your Braze passwo
 
 ---
 
-# Resetting Your Password
+# Resetting your password
 
 To reset your password, click the **Forgot your password?** link on the dashboard login page. You will then be prompted to input your email to receive a link to reset your password.
 

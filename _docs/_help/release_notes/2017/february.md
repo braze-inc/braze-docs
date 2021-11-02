@@ -8,7 +8,7 @@ description: "This article contains release notes for February 2017."
 
 # February 2017
 
-## Add Canvas Steps After Launch
+## Add Canvas steps after launch
 
 Canvas steps can now be added to existing steps, even after the Canvas is launched. To learn more about creating a Canvas, read more [here][23].
 
@@ -22,11 +22,11 @@ You can now export campaign data CSV in bulk with Engagement Reports. Learn more
 
 For more personalized user targeting, you can now use “Last Received In-App Message” as a time-based filter. To learn more about user targeting with Braze, visit Segmentation [here][21].
 
-## Event User Log Upgrade
+## Event user log upgrade
 
 It’s now easier for you to see what is happening in your SDK integration. For more information on Event User Logs and their use, visit [here][20].
 
-## News Feed Templating
+## News Feed templating
 
 There are now two News Feed card fields,{% raw %} {{card.${name}}} {% endraw %} and {% raw %}  {{card.${api_id}}}{% endraw %}. These cards can be added to Liquid templating. Learn more about personalized messaging and templates [here][19].
 

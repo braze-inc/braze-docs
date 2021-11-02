@@ -7,11 +7,11 @@ description: "This reference article covers Internal Groups, a great way to get 
 
 ---
 
-# Internal Groups Tab
+# Internal Groups tab
 
 Internal Groups are a great way to build and organize internal or third-party test groups and provide insight into the SDK or API logs available from your test device during SDK integration testing. You can create an unlimited number of custom Internal Groups with up to 1000 members.
 
-### Creating a Group
+## Creating a group
 
 Depending on your access and permissions, you can create Internal Groups from the Developer Console:
 
@@ -29,7 +29,7 @@ Depending on your access and permissions, you can create Internal Groups from th
 |Seed Group | Automatically sends a copy of the email to everyone the Seed Group upon send.|
 {: .reset-td-br-1 .reset-td-br-2}
 
-### Adding Test Users
+### Adding test users
 
 After you create your Internal Group, you can add test users as members. Go to your Internal Group's management page. Then, click “Add Test User” and add them in bulk or as identified or anonymous users.
 
@@ -42,7 +42,7 @@ After you create your Internal Group, you can add test users as members. Go to y
 |Bulk Add Users|Copy and paste a list of email addresses or external IDs into the provided section. Braze will only allow you to add users that are already known in the database. Remember to upload your .csv files to add users to the database or programmatically create them via the API.|
 {: .reset-td-br-1 .reset-td-br-2}
 
-### Content Test Groups
+### Content test groups
 
 Similar to sending a preview test of a message, the Content Test group saves you time and allows you to launch tests to a pre-defined list of Braze users simultaneously. This functionality is available for Push, In-App Message, SMS, and Email within Braze.
 
@@ -58,9 +58,9 @@ Lastly, for clients who use an IP pool to send out email, you can now select whi
 
 Only groups that are tagged as Content Test will be available on the preview section of a message.
 
-![Content test group settings][9]
+![Content test group settings][9]{: style="max-width:50%" }
 
-### Seed Groups
+### Seed groups
 
 Seed Groups are only meant for the Email channel and allow you to send a copy of each email variant message to members of that group. Seed Groups are not available for API campaigns, though you can include Seed Groups via an API-triggered entry in campaign. This feature is typically used with partners such as Return Path or 250OK to measure deliverability metrics. It can be used to keep a record of the email content for historical/archive purposes. 
 
@@ -68,7 +68,7 @@ Once you have created an Internal Group and tagged it to be used as a Seed Group
 
 _If your Seed Group members report not seeing the message in their inbox, ensure that they are listed in the Internal Group, verify that your subject lines are different and that Gmail has not bundled the emails together, or have them check their SPAM folders._
 
-#### For Campaigns
+#### For campaigns
 
 Seed Groups can be edited from the **Targeting** page when composing an email campaign.
 

@@ -1,6 +1,6 @@
 ---
 nav_title: Google Audience Sync
-page_order: 4.5
+page_order: 7
 noindex: true
 tool: Canvas
 layout: redirect

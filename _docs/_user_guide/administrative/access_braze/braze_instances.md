@@ -7,7 +7,7 @@ description: "This reference article lists the dashboard URLs and endpoints for 
 
 ---
 
-# Braze Instances
+# Braze instances
 
 _This is the URL Braze Users need to log into Braze, access the API, and integrate your SDK_
 

@@ -10,12 +10,11 @@ search_tag: Partner
 
 # Dyspatch
 
-
 > Use [Dyspatch][1] and Braze together to simplify your email creation lifecycle and deliver engaging email experiences at scale. 
 
 With Dyspatch, use the intuitive drag and drop email builder to create beautiful, responsive, and engaging emails without needing to write code. Collaborate with your team to create and approve emails within Dyspatch and then export them to Braze, all in a couple of quick steps! 
 
-## Integration Requirements
+## Integration requirements
 
 Requirement   | Source | Description
 --------------|--------| -----
@@ -26,7 +25,7 @@ Dyspatch Account | [Dyspatch][3] | To export an email from Dyspatch the account 
 ## Integration
 Export email templates from Dyspatch directly into your Braze media library with Dyspatch's Braze Integration. Dyspatch also supports [downloading your email template][5] to manually import it to Braze.
 
-### Step 1: Create a Braze Integration
+### Step 1: Create a Braze integration
 You will need to have a [Dyspatch admin role][4] assigned to create an integration and you'll also want to have your Braze API key with __Template's__ permission ready for this step.
 
 In Dyspatch's Administration portal, open your username drop-down menu, and select __Integrations__.
@@ -39,7 +38,7 @@ Create a new integration, select Braze and enter your Braze API key.
 
 You can choose how you would like to manage localizations when creating your Braze integration. This way you can use Dyspatch to [localize your email templates][6] and export them to Braze to easily send emails personalized by language or locale. Select either the Braze property __Language__ or __Most Recent Locale__ for your localized templates.
 
-### Step 2: Export an Email from Dyspatch into Braze
+### Step 2: Export an email from Dyspatch into Braze
 After your team has approved an email, click __Download/Export__ when viewing the published email template and select __Export to Integration__ to send your Dyspatch email template to your Braze account.
 
 ![Dyspatch Export Template]({% image_buster /assets/img/dyspatch/dyspatch_export.gif %})

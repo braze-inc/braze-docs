@@ -17,19 +17,19 @@ description: "This article contains release notes for October 2018."
   Braze has made a new GET call available to enable you to request based on an external ID or email address. You will then be provided all the subscription groups associated with that user.
 {% endcomment %}
 
-## Calculate Exact Audience Stats for Campaigns
+## Calculate exact audience stats for campaigns
 
 You can now go to **Campaign Analytics** and calculate the exact statistics for your audience. Press __Calculate Exact Stats__ in the footer of the __Target Users__ section and the exact audience stats will populate. You will have to save the campaign before calculating (draft campaigns will be saved as draft).
 
-## Windows 8 Deprecation
+## Windows 8 deprecation
 
 Braze no longer supports Windows 8 as of October 10, 2018.
 
-## Partnerships Hub
+## Partnerships hub
 
 You can now find a list of your integrations on the Braze platform under __Integrations__, along with integration keys and instructions.
 
-## Email Analytics Calculations
+## Email analytics calculations
 
 Braze is now calculating all email analytics using our email sending partner’s (ESP) event data in order to greatly improve the accuracy of our email analytics. This solution utilizes Postgres, an open source database solution, to ensure data integrity.
 
@@ -37,7 +37,7 @@ Braze is now calculating all email analytics using our email sending partner’s
 Unique Opens and Unique Clicks are currently still dependent on the aggregate data provided by our email sending partners. There is work in progress to calculate these uniqueness stats using the same infrastructure introduced in this release.
 {% endalert %}
 
-## Composer Panel Controls
+## Composer panel controls
 
 The Message Composer controls have been refreshed to include wording associated with icons to enable better usability and navigation.
 
@@ -45,6 +45,6 @@ The Message Composer controls have been refreshed to include wording associated 
 
 Braze customers using Currents can now see [Azure]({{site.baseurl}}/partners/braze_currents/data_storage_integrations/partners/microsoft_azure_blob_storage/) as a potential integration.
 
-## Input Field Expansions
+## Input field expansions
 
 You can now expand the input boxes for Email subject lines and Push titles.

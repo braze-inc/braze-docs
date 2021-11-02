@@ -7,15 +7,15 @@ description: "This reference article outlines what Data Points are at Braze and 
 
 ---
 
-# Data Points
+# Data points
 
 At Braze, data means action: each piece of data that arrives in Braze updates segment membership, can trigger & cancel messaging, is immediately available for messaging personalization, and more. As such, data points are Braze’s way of defining a billing and pricing structure, based on pieces of information logged against user profiles. See [Consumption Count](#consumption-count) below to see what data counts toward your data point allocation.
  
 Our Customer Success team can help recommend data best practices to fit your specific needs. You can find a more detailed breakdown of this definition in your Braze contract.
 
-## Management & Usage
+## Management and usage
 
-To view your Data Point Dashboard, select your name in the top-right corner, click the drop down, and select __Subscriptions and Usage__. For more information on the Data Point Dashboard components, check out our subscription and usage [article]({{site.baseurl}}/user_guide/onboarding_with_braze/subscription_and_usage/). 
+To view your Data Point Dashboard, select your name in the top-right corner, click the drop down, and select __Subscriptions and Usage__. For more information on the Data Point Dashboard components, check out our subscription and usage [article]({{site.baseurl}}/user_guide/onboarding_with_braze/subscription_and_usage/).
 
 {% alert tip %}
 __Only update your deltas (changing data)!__
@@ -23,8 +23,7 @@ __Only update your deltas (changing data)!__
 To prevent using up your allocated data points, we recommend setting up a program that will prevent sending the same, unchanging data from your app to Braze over and over.
 {% endalert %}
 
-
-## Consumption Count
+## Consumption count
 
 In sum, data points are accumulated when a user's profile data is updated or when they perform specific actions. Essentially, data points are counts of each of your users' `session starts`, `session ends`, `events`, and `purchases`.
 
@@ -37,7 +36,7 @@ You can find a breakdown of how Braze accumulates data points below, but there a
 
 ### General
 
-|Data Type | Data Point | Does it count towards consumption? |
+|data type | data point | does it count towards consumption? |
 |---|---|---|
 |Profile Data | First Name | Yes |
 |Profile Data | Last Name | Yes |
@@ -79,7 +78,7 @@ You can find a breakdown of how Braze accumulates data points below, but there a
 
 ### Location
 
-|Data Type | Data Point | Does it count towards consumption? |
+|data type | data point | does it count towards consumption? |
 |---|---|---|
 |Most Recent Location | All Most Recent Locations | Yes |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
@@ -91,7 +90,7 @@ You can find a breakdown of how Braze accumulates data points below, but there a
 
 ### Engagement
 
-|Data Type | Data Point | Does it count towards consumption? |
+|data type | data point | does it count towards consumption? |
 |---|---|---|
 | Contact Settings | Email Subscribed | No |
 | Contact Settings |  Push Subscribed | No |
@@ -111,7 +110,7 @@ You can find a breakdown of how Braze accumulates data points below, but there a
 
 ### Social
 
-|Data Type | Data Point | Does it count towards consumption? |
+|data type | data point | does it count towards consumption? |
 |---|---|---|
 |Twitter | Username | Yes |
 |Twitter | Followers | No |
@@ -123,11 +122,11 @@ You can find a breakdown of how Braze accumulates data points below, but there a
  {% endtab %}
 {% endtabs %}
 
-### Special Circumstances
+### Special circumstances
 
 #### CSV
 
-Custom attributes uploaded via CSV count towards your data points, however CSV imports for segmentation purposes (imports made with `external_id` as the only field) will not consume data points.
+Custom attributes uploaded via CSV count towards your data points, however csv imports for segmentation purposes (imports made with `external_id` as the only field) will not consume data points.
 
 #### Arrays
 

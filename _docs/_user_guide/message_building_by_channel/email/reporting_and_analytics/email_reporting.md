@@ -10,7 +10,7 @@ channel:
 
 ---
 
-# Email Reporting
+# Email reporting
 
 Braze provides you with a detailed report of each of your email campaigns. Navigate to the **Campaigns** tab on your dashboard and select your desired campaign to open the **Details** tab. On this page, you will be able to comprehensively view and analyze the success of your campaign in an organized format. Here, you will also be able to adjust the date filter of your report. Please note that updating this filter will result in your report only displaying events that happened during your selected date range.
 

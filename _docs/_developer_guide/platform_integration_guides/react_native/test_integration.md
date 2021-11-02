@@ -7,11 +7,11 @@ description: "This article covers basic instructions how to test whether Braze S
 
 ---
 
-# Test Your Integration
+# Test your integration
 
 At this point, you can verify that the SDK is integrated by checking session statistics in the dashboard. If you run your application on either platform, you should see a new session in dashboard (in the `Overview` section).
 
-## User Sessions
+## User sessions
 
 You can also open a session for a particular user by calling the following code in your app.
 

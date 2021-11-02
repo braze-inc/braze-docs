@@ -7,11 +7,11 @@ description: "This reference article explains how to use location tracking and l
 tool: Location
 
 ---
-# Location Tracking
+# Location tracking
 
 Location collection captures a user's most recent location when the app was opened using GPS location data. You can use this information to segment data based on users who were in a defined location. 
 
-## Enabling Location Tracking
+## Enabling location tracking
 
 To enable location collection on your app, take a look at the appropriate developer guide for the platform you are using:
 
@@ -23,13 +23,14 @@ In general, mobile apps will use the device's GPS chip and other systems (such a
 
 Note that the accuracy of your location tracking data may be affected by whether or not your users have wi-fi enabled on their device. Android users can also choose different location modes—users that are on "Battery saving" or "Device only" mode may have inaccurate data. 
 
-## Location Targeting
+## Location targeting
 
 Using location tracking data, you can set up location-based campaigns and strategies. For example, you may want to run a promotional campaign for users that live in a particular region, or exclude users in a region that has stricter regulations.
 
 See [this article][1] for more information on location targeting.
 
-## Hard Setting the Default Location Attribute
+## Hard setting the default location attribute
+
 You can also use the [`users/track`][8] endpoint in our API to update the [`current_location`][9] default attribute—for example: 
 ```
 https://[your_braze_rest_endpoint]/users/track
@@ -45,7 +46,8 @@ Authorization: Bearer YOUR-REST-API-KEY
 }
 ```
 
-## Technology Partners
+## Technology partners
+
 You can also leverage location tracking with some of our partners, for example: 
 
 - [Neura][5]

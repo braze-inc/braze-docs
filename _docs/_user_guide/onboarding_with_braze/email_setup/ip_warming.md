@@ -8,9 +8,9 @@ channel: email
 
 ---
 
-# IP Warming
+# IP warming
 
-## What is IP Warming?
+## What is IP warming?
 
 IP Warming is the practice of getting email inbox providers used to receiving messaging from your dedicated IP addresses. It's an extremely important part of email sending with any Email Service Provider and standard practice at Braze to ensure your messages reach their destination inboxes at a consistently high rate.
 
@@ -28,7 +28,7 @@ __IP Warming is required.__ If you fail to warm IPs appropriately, and the patte
 2. __Your domain and or IP could be blacklisted by the IPs, at which point all of your emails will begin going directly to the spam folder of your user's inbox.__
   - If this occurs, the response codes in the __Braze Developer Console__ will contain information about what websites to visit to appeal to these ISPs to get off those lists.
 
-## IP Warming Best Practices
+## IP warming best practices
 
 All of the above consequences are entirely avoidable if you follow the following guidelines:
 
@@ -46,7 +46,7 @@ The following metrics are important to watch during warming:
 - __Spam Reports__: If any campaign is reported as spam at a rate of more than 0.08%, you should re-evaluate the content you're sending, ensure that it is targeted to an interested audience, and make sure your emails are appropriately worded to pique their interest.
 - __Sender Reputation Scores__: The following services are useful for checking how your reputation is progressing: [ReturnPath's SenderScore][44] & Cisco's IronPort [SenderBase][45]
 
-## IP Warming Schedules
+## IP warming schedules
 
 We strongly recommend adhering to this IP warming schedule strictly to ensure deliverability. It's also important that you don't skip days as consistent scaling improves deliverability.
 
@@ -73,13 +73,13 @@ Day | # of Emails to be Sent
 
 Once warming is complete and you've reached your desired daily volume, you should aim to maintain that volume daily. Some fluctuation is alright, but reaching the desired volume, then only doing a mass blast once a week may negatively affect your deliverability and sender reputation. Lastly, most ISPs only store reputation data for 30 days. If you go a month without sending, you will have to repeat the IP warming process.
 
-## How to Limit Sends During Warming
+## How to limit sends during warming
 
 Braze's built-in user limiting feature serves as a useful tool to help you with warming your IP address. After choosing your desired messaging segments during campaign creation, on the [Target Users]({{site.baseurl}}/user_guide/message_building_by_channel/email/creating_an_email_campaign/#step-5-choose-your-target-segment) step, select the __Advanced Options__ dropdown to limit your users. As your warming schedule continues, you can gradually raise this limit to increase the volume of emails you send.
 
 ![Limit Users][18]
 
-## Subdomain Segmentation
+## Subdomain segmentation
 
 Many ISPs and email access providers no longer only filter by IP address reputation. These filtering technologies now also account for domain-based reputation.  This means that filters will look at all data associated with the sender's domain and not just single out the IP address. For this reason, in addition to warming up your email IP, we also recommend having separate domains or subdomains for marketing, transactional, and corporate mail. We recommend segmenting your domains such that corporate mail is sent through your top-level domain, and marketing and transactional mail are sent through different domains or subdomains.
 

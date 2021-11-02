@@ -13,7 +13,7 @@ This article provides a step-by-step guide on how to add the Braze Web SDK to yo
 
 [Google Tag Manager][2] lets you remotely add, remove, and edit tags on your website, without requiring a production code release or engineering resources.
 
-## Braze Tag Templates
+## Braze tag templates
 
 There are two Google Tag Manager templates built by Braze: the [Initialization Tag](#initialization-tag) and [Actions Tag](#actions-tag).
 
@@ -21,21 +21,21 @@ Both tags can be added to your workspace from [Google's Community Gallery][15], 
 
 ![Community Gallery Search][3]
 
-### Initialization Tag Template {#initialization-tag}
+### Initialization tag template {#initialization-tag}
 
 Use the Initialization Tag to add the Braze Web SDK to your website.
 
-#### Step 1: Choose the "Initialization Tag" from the Community Gallery
+#### Step 1: Choose the "initialization tag" from the community gallery
 
 Search for "Braze" in the Community Template Gallery, and choose the Braze Initialization Tag as shown below:
 
 ![Initialization Tag Template][4]
 
-#### Step 2. Configure Settings
+#### Step 2. Configure settings
 
 Enter your Braze SDK API Key and SDK Endpoint, which can be found in your dashboard's [Settings][6] page.
 
-#### Step 3. Choose Initialization Options
+#### Step 3. Choose initialization options
 
 Choose from the optional set of additional initialization options as described in the [Initial Setup][7] guide.
 
@@ -47,13 +47,13 @@ First, using Google Tag Manager's Debug Mode, you should see the Braze Initializ
 
 Second, you should see network requests made to Braze, and the global `window.appboy` library should now be defined on your webpage.
 
-### Actions Tag Template {#actions-tag}
+### Actions tag template {#actions-tag}
 
 The Braze Actions Tag template lets you trigger custom events, track purchases, change user IDs, and stop/resume tracking for privacy requirements.
 
 ![Actions Tag Template][5]
 
-#### Changing User External ID {#external-id}
+#### Changing user external ID {#external-id}
 
 The __Change User__ Tag Type calls the [`changeUser` method](https://js.appboycdn.com/web-sdk/latest/doc/modules/appboy.html#changeuser).
 
@@ -63,7 +63,7 @@ Be sure to enter the current user's unique ID in the "External User ID" field, t
 
 ![Change User Tag][8]
 
-#### Log Custom Events {#custom-events}
+#### Log custom events {#custom-events}
 
 The __Custom Event__ Tag Type calls the [`logCustomEvent` method](https://js.appboycdn.com/web-sdk/latest/doc/modules/appboy.html#logcustomevent).
 
@@ -75,7 +75,7 @@ Use the __Add Row__ button to add event properties.
 
 ![Custom Event Tag][9]
 
-#### Track Purchase {#purchases}
+#### Track purchase {#purchases}
 
 The __Purchase__ Tag Type calls the [`logPurchase` method](https://js.appboycdn.com/web-sdk/latest/doc/modules/appboy.html#logpurchase).
 
@@ -87,13 +87,13 @@ Use the __Add Row__ button to add Purchase properties.
 
 ![Purchase Tag][10]
 
-#### Stop and Resume Tracking {#stop-tracking}
+#### Stop and resume tracking {#stop-tracking}
 
 Sometimes, you might be required to disable or re-enable Braze tracking on your website, for example, after a user indicates they've opted out of web tracking for privacy reasons.
 
 Use the __Disable Tracking__ or __Resume Tracking__ Tag Type to disable web tracking or re-enable web tracking, respectively.
 
-#### Custom User Attributes {#custom-attributes}
+#### Custom user attributes {#custom-attributes}
 
 Custom user attributes are not available due to a limitation in Google Tag Manager's scripting language. To log custom attributes, create a Custom HTML tag with the following content:
 
@@ -103,7 +103,11 @@ window.appboy.getUser().setCustomUserAttribute("attribute name", "attribute valu
 </script>
 ```
 
-#### Default User Attributes {#standard-attributes}
+{% alert important %}
+The GTM template does not support nested properties on events or purchases at this time. You can use the above HTML to log any events or purchases that require nested properties.
+{% endalert %}
+
+#### Default user attributes {#standard-attributes}
 
 Default user attributes, such as a user's first name, should be logged in the same manner as custom user attributes. Make sure the values you're passing in for default attributes match the expected format specified in the [User Class][16] documentation.
 
@@ -115,15 +119,15 @@ window.appboy.getUser().setGender("f")
 </script>
 ```
 
-## Troubleshooting Steps {#troubleshooting}
+## Troubleshooting steps {#troubleshooting}
 
-### Enable Tag Debugging {#debugging}
+### Enable tag debugging {#debugging}
 
 Each Braze Tag template has an optional "GTM Tag Debugging" checkbox which can be used to log debug messages to your webpage's Javascript console.
 
 ![Tag Debugging Option][12]
 
-### Enter Debug Mode
+### Enter debug mode
 
 Another way to help debug your Google Tag Manager integration is using Google's [Preview Mode][14] feature.
 

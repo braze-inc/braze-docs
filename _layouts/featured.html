@@ -56,7 +56,7 @@ layout: default
 
       {%- for menu_list in page.guide_featured_list  -%}
         {%- if menu_list.link -%}
-        <a href="{{ menu_list.link }}">
+        <a href="{{ menu_list.link | multi_lang }}">
             {%- endif %}
           <div id="{{ menu_list.name | handle }}" class="guide_item">
             {%- if menu_list.fa_icon -%}

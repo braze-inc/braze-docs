@@ -11,13 +11,13 @@ channel:
 
 ---
 
-# In-App Messages
+# In-app messages
 
 [In-App Messages]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/) help you get content to your user without interrupting their day with a push notification. Customized and tailored in-app messages enhance the user experience and help your audience get the most value out of your app. With a variety of layouts and customization tools to choose from, in-app messages engage your users more than ever before.
 
 To see examples of in-app messages, check out our [Case Studies][83].
 
-## In-App Message Types
+## In-app message types
 
 Braze offers several default in-app message types, each customizable with messages, images, [Font Awesome][15] icons, click actions, analytics, editable styling and color schemes. The currently available types are:
 
@@ -34,7 +34,7 @@ In addition, there is a subinterface of `IInAppMessage` called [`IInAppMessageIm
 
 HTML Full in-app messages are [`InAppMessageHtmlFull`][51] instances, which implement [`IInAppMessageHtml`][52], another subclass of `IInAppMessage`.
 
-### Expected Behaviors by Message Types
+### Expected behaviors by message types
 
 These are what each in-app message type will appear like for your users.
 
@@ -85,7 +85,7 @@ Please note that we currently do not support display of custom HTML in-app messa
 {% endtab %}
 {% endtabs %}
 
-#### In-Depth: Defining Custom In-App Message Types
+#### In-depth: defining custom in-app message types
 
 Braze's `slideup` in-app message object extends [`InAppMessageBase`][27]. Braze's `full` and `modal` type messages extend [`InAppMessageImmersiveBase`][28]. Extending one of these classes gives you the option of adding custom functionality to your locally generated in-app messages.
 

@@ -8,9 +8,9 @@ tool: Campaigns
 
 ---
 
-# Campaigns: The Basics
+# Campaigns: The basics
 
-## Find Your Strategy with the Five W’s of Visualization
+## Find your strategy with the five W’s of visualization
 
 Answer the questions below to get started:
 
@@ -61,13 +61,13 @@ Answer the questions below to get started:
   * Targeting: Add additional segments and/or filters
   * Triggers: Use customer actions to trigger messages<br><br>
 
-## Building The Customer Journey Campaign
+## Building the customer journey campaign
 
-### Name Your Campaign: The “What”
+### Name your campaign: The “what”
 
 Never underestimate the power of the name. Braze is built for collaboration, so this is an excellent time to get grounded in how you’ll communicate goals with your team. You can add Tags (including Teams Tags) and name both steps and variants within the campaign. For more on customer journeys, check out our [Mapping User Lifecycles LAB course](http://lab.braze.com/mapping-customer-lifecycles)!
 
-### Create Starting Conditions: The “When”
+### Create starting conditions: The “when”
 
 When will a customer run into this campaign? Users can enter your campaign in three ways: scheduled, action-based, or API-triggered.
 
@@ -76,7 +76,7 @@ When will a customer run into this campaign? Users can enter your campaign in th
 |You can use scheduled delivery when you want to send a campaign out immediately to your target audience, have it regularly sent, or schedule it for a specific time in the future. | These campaigns respond to specific customer behaviors as they happen. These action-based triggers can include opening your app, making a purchase, interacting with another campaign, or triggering any custom event. | Your marketing team and engineers will work together to determine key customer actions on your platform that, once achieved, will trigger an API call to Braze and send your campaigns. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
 
-### Select an Entry Audience for Entry: The “Who”
+### Select an entry audience for entry: The “who”
 
 Who are you trying to reach? Here you can use a pre-defined segment and add further filters. Filters include:
 
@@ -93,12 +93,13 @@ Who are you trying to reach? Here you can use a pre-defined segment and add furt
 
 Only the users who match these target audience criteria can enter the journey.
 
-### Identify Conversion Events: The “Why”
+### Identify conversion events: The “why”
+
 Why are you building this campaign? It’s always important to have a defined goal in mind, and campaigns help you understand how you perform against KPIs like session engagement, purchases, and custom events.
 
 Selecting at least one conversion event will give you the ability to understand your campaign performance.
 
-### Build the Experience: The “How” and “Where”
+### Build the experience: The “how” and “where”
 
 Consider setting up variants and A/B testing. A variant is a trail each customer follows on their journey. Campaigns support up to eight variants with a control group. While not required, you can name each variant and control the distribution of the target audience following each variant. The sky’s the limit from there—so how do you decide on the shape of your campaign? That’s where your goals, data, and hypothesis come into play. The “how” and “where” brainstorm from above will help you map out the right user journey for your campaign. There are a couple of approaches you can use:
 - __Work backward:__ Some goals have smaller sub-goals. For instance, if you’re aiming for converting a free user into a subscription, you may need a page with your subscription services outlined. A visitor may need to see the options before they purchase. You may focus your messaging efforts on showing them this page before a checkout page. Working backward to understand the journey a customer must go through to get to your goal is key to guiding them through to conversion.

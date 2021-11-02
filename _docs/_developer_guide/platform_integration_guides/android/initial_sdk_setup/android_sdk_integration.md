@@ -9,7 +9,7 @@ description: "This reference article covers how to integrate the Android SDK int
 
 ---
 
-# Android SDK Integration
+# Android SDK integration
 
 Installing the Braze SDK will provide you with basic analytics functionality as well as working in-app messages with which you can engage your users.
 
@@ -17,15 +17,15 @@ Installing the Braze SDK will provide you with basic analytics functionality as 
 For optimal performance on Android 12, we recommend upgrading to to [Braze Android SDK v13.1.2+](https://github.com/Appboy/appboy-android-sdk/blob/master/CHANGELOG.md#1312) as soon as possible. For more information, please see our [Android 12 Upgrade Guide](https://www.braze.com/docs/developer_guide/platform_integration_guides/android/android_12/).
 {% endalert %}
 
-## Step 1: Integrate the Braze Library
+## Step 1: Integrate the Braze library
 
 The Braze Android SDK can optionally be integrated without UI components. However, Content Cards, News Feed, and In-App Messaging will be rendered inoperable unless you pass the custom data to a UI solely of your design. Additionally, push notifications will not work because our push handling code is in the UI library. Please note that these UI elements are open source and fully customizable. We strongly recommend the integration of these features. Please refer to the [Braze user guide][2] for the benefits of using the Braze Content Cards, News Feed, and In-App Message UI.
 
-### Basic Integration
+### Basic integration
 
 To access Braze's messaging features, you must integrate the UI library. Please see the following Android Studio directions to integrate the UI library depending on your IDE:
 
-#### Add Our Repository
+#### Add our repository
 
 In your top-level project `build.gradle`, add the following as repositories under `allprojects` -> `repositories`.
 
@@ -46,7 +46,7 @@ The Braze Android SDK uses AndroidX Jetpack dependencies as of SDK version 10.0.
 
 Alternatively, you can directly find the artifact AAR files on our [maven repository][71].
 
-#### Add Braze Dependency
+#### Add Braze dependency
 
 Add the `android-sdk-ui` dependency to your app's `build.gradle`:
 
@@ -60,7 +60,7 @@ The example below shows where to place the dependency line in your `build.gradle
 
 ![MavenScreen2][32]
 
-#### Perform Gradle Sync
+#### Perform gradle sync
 
 Be sure to perform a Gradle Sync to build your project and incorporate the dependency additions noted above.
 
@@ -84,7 +84,7 @@ Now that the libraries have been integrated, you have to create an `braze.xml` f
 </resources>
 ```
 
-## Step 3: Add Required Permissions to Android Manifest
+## Step 3: Add required permissions to AndroidManifest.xml
 Now that you've added your API key, you need to add the following permissions to your `AndroidManifest.xml`:
 
 ```xml
@@ -94,9 +94,9 @@ Now that you've added your API key, you need to add the following permissions to
 
 >  With the release of Android M, Android switched from an install-time to a runtime permissions model. However, both of these permissions are normal permissions and are granted automatically if listed in the app manifest. For more information, visit Android's [permission documentation][46].
 
-## Step 4: Tracking User Sessions in Android
+## Step 4: Tracking user sessions in Android
 
-### Activity Lifecycle Callback Integration
+### Activity lifecycle callback integration
 
 Calls to `openSession()`, `closeSession()`,[`ensureSubscribedToInAppMessageEvents()`][64], and `InAppMessageManager` registration are optionally handled automatically.
 
@@ -136,7 +136,7 @@ The second argument instructs the listener to handle `registerInAppMessageManage
 
 See the [javadoc][63] for more information. Please note that any non-standard manual session integration is not fully supported.
 
-## Step 5: Custom Endpoint Setup {#step-5-optional-custom-endpoint-setup}
+## Step 5: Custom endpoint setup {#step-5-optional-custom-endpoint-setup}
 
 {% alert note %}
 Note that as of December 2019, custom endpoints are no longer given out, if you have a pre-existing custom endpoint, you may continue to use it. For more details, refer to our <a href="{{site.baseurl}}/api/basics/#endpoints">list of available endpoints</a>.
@@ -150,7 +150,7 @@ To update the default endpoint in your integration of the Braze SDKs please add 
 <string translatable="false" name="com_appboy_custom_endpoint">YOUR_CUSTOM_ENDPOINT_OR_CLUSTER</string>
 ```
 
-## Step 6: Enable Location Tracking
+## Step 6: Enable location tracking
 
 If you would like to enable Braze location collection, update your `braze.xml` file to include `com_appboy_enable_location_collection` and ensure its value is set to `true`.
 
@@ -162,7 +162,7 @@ If you would like to enable Braze location collection, update your `braze.xml` f
 Starting with Braze Android SDK version 3.6.0 Braze location collection is disabled by default.
 {% endalert %}
 
-## SDK Integration Complete
+## SDK integration complete
 
 Braze will now be able to collect [specified data from your application]({{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/) and your basic integration should be complete.
 

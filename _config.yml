@@ -6,7 +6,7 @@ description: >- # this means to ignore newlines until "baseurl:"
 baseurl: "/docs" # the subpath of your site, e.g. /blog
 homeurl: "https://www.braze.com" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: Braze
-github_username:  Appboy
+github_username: braze-inc
 
 language: en
 
@@ -51,7 +51,7 @@ markdown_api: true
 cla_url: 'https://script.google.com/macros/s/AKfycbyKzEkbL5cZBwCjaYJC2CWXP6aYRroe33W0sL0YIt8DnEDqlzkg/exec'
 
 # gitHub config
-github_baseurl: 'https://github.com/Appboy/braze-docs/blob/develop/_docs/'
+github_baseurl: 'https://github.com/braze-inc/braze-docs/blob/develop/_docs/'
 github_icon: 'GitHub-Mark-32px.png'
 
 plugins_dir: ["./_plugins"]
@@ -185,7 +185,8 @@ exclude: [
   'Rakefile', 'vendor', 'config','404.html','public', 'proxy.rb',
   '*.log','MigrationTool','Archive','documentation','academy',
   '.sass-cache', '.git', '.vscode', 'system.properties',
-  'CODE_OF_CONDUCT.md','CONTRIBUTING.md','LICENSE.md','_site'
+  'CODE_OF_CONDUCT.md','CONTRIBUTING.md','LICENSE.md','_site',
+  'vercel.json'
 ]
 
 # Setting for image buster

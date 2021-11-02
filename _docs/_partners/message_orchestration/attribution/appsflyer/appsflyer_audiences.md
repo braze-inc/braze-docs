@@ -19,7 +19,7 @@ Drive user engagement and increase the efficiency of your remarketing programs b
 - __Braze Data Import Key and REST Endpoint__ - This integration invokes the braze [/users/track/ endpoint]({{site.baseurl}}/api/endpoints/user_data/post_user_track/) to function.
 - __SDKs Integrated__ - The Braze SDK and AppsFlyer SDK must be integrated into your app 
 
-## AppsFlyer and Braze Cohort Import
+## AppsFlyer and Braze cohort import
 
 The following describes the Braze and AppsFlyer Audiences integration for importing cohorts into Braze. This integration supports iOS and Android apps. If you are looking for information about passing AppsFlyer attribution data to Braze, you can find it [here][3].
 
@@ -45,7 +45,7 @@ NSDictionary *brazeInfo = @{
 {% endtab %}
 {% endtabs %}
 
-### Step 2: Get the Braze Data Import Key and REST Endpoint
+### Step 2: Get the Braze data import key and REST endpoint
 
 In the Braze platform:
 
@@ -53,7 +53,7 @@ In the Braze platform:
 2. In the __Data Import Using Cohort Import__ section at the bottom of the page, click __Generate New Key__ to generate your Data Import Key. 
 3. Copy this key and the REST endpoint to use when configuring a Braze connection in AppsFlyer Audiences.<br><br>![data_import_key][5]{: style="max-width:70%;"}
 
-### Step 3: Configure a Braze Connection in AppsFlyer Audiences
+### Step 3: Configure a Braze connection in AppsFlyer Audiences
 
 In the AppsFlyer platform, within AppsFlyer Audiences: 
 
@@ -64,7 +64,7 @@ In the AppsFlyer platform, within AppsFlyer Audiences:
 
 Learn more about working with partner connections in the [AppsFlyer documentation][4].
 
-### Step 4: Using AppsFlyer Audiences Cohorts in Braze
+### Step 4: Using AppsFlyer Audiences cohorts in Braze
 
 Once an AppsFlyer audience has been uploaded to Braze, you can use it as a filter when defining segments in Braze by selecting the __AppsFlyer Cohorts__ filter.
 

@@ -30,9 +30,9 @@ Rokt Calendar provides Braze customers the ability to align their personalized m
 | Webhook Setup | Rokt Calendar | Rokt Calendar Account Manager |  Add the Braze webhook type to the management center using your [Braze Endpoint]({{site.baseurl}}/api/basics?redirected=true#endpoints) and REST API Key |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4}
 
-## API Integration
+## API integration
 
-### Building an Audience of Calendar Subscribers
+### Building an audience of calendar subscribers
 
 In order to send calendar events from Canvas using the Rokt Calendar integration, it is required that you have a Rokt Calendar setup and users have subscribed to the calendar. To do this, you'll need to inform your users where and how to subscribe to the calendar.
 
@@ -44,7 +44,7 @@ In order to send calendar events from Canvas using the Rokt Calendar integration
 | Promote the Calendar | Customer | Customer | In order to build an audience of calendar subscribers, you’ll need to promote the calendar to your audience so that they know where/how to subscribe. <br><br>Calendar promotion examples:<br>- Posts on social media<br>- Email newsletters and updates<br>- Blog posts<br>- In-app notifications |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4}
 
-### Audience Segmentation in Braze
+### Audience segmentation in Braze
 
 When Rokt either creates a new user or matches an existing subscriber with a Braze user, Rokt will send the following subscription attributes you can filter within Braze:
 
@@ -70,7 +70,7 @@ When Rokt either creates a new user or matches an existing subscriber with a Bra
 
 In addition, Rokt will also trigger a `subscribe` custom event as soon as the user has subscribed to your Rokt calendar that can be used either in Braze segmentation or be used as a trigger for a campaign or Canvas step.
 
-## Using Rokt Calendar in Your Braze Campaigns & Canvases
+## Using Rokt Calendar in your Braze campaigns and Canvases
 
 Within Braze, you can set up a webhook campaign or a webhook within a Canvas to either:
 
@@ -93,19 +93,19 @@ Before you get started, the fields below detail the information that can be cust
 
 {% tabs %}
 {% tab Send a New Event %}
-## Send a New Event
+## Send a new event
 
-### Step 1: Create a Webhook Template in Braze
+### Step 1: Create a webhook template in Braze
 
 To create a new Rokt Calendar Webhook Template you can either navigate to **Templates & Media** or create a new webhook campaign via the dashboard. 
 
 From the list of Templates, select **Blank Template**.
 
-### Step 2: Fill Out Your Template
+### Step 2: Fill out your template
 
 The Blank Webhook template consists of two main components, the compose and settings tab. Below we will break down the components of each tab and what settings you should set.
 
-#### Step 2a: Webhook - Settings
+#### Step 2a: Webhook - settings
 
 Navigate to the settings tab and edit the __Request Header__ and __HTTP Method__ fields with the corresponding text segments.
 
@@ -120,7 +120,7 @@ Navigate to the settings tab and edit the __Request Header__ and __HTTP Method__
 | POST |
 {: .reset-td-br-1 .reset-td-br-2}
 
-#### Step 2b: Webhook - Compose
+#### Step 2b: Webhook - compose
 
 Complete the setup by navigating to the Compose tab and define the __Webhook URL__ and edit the contents of the __Request Body__ based on the attribute and field tables shown above. 
 
@@ -129,7 +129,7 @@ Complete the setup by navigating to the Compose tab and define the __Webhook URL
 | {% raw %}{% assign accountCode = {{custom_attribute.${rokt:account_code}}}[0] &#124; split: '/' &#124; first %}https://api.roktcalendar.com/v1/subscriptionevent/{{accountCode}} {% endraw %} |
 {: .reset-td-br-1}
 
-##### Request Body
+##### Request body
 
 {% raw %}
 ```javascript
@@ -164,7 +164,7 @@ For a list of valid time zones see [https://roktcalendar-api.readme.io/docs/time
 
 {% endalert %}
 
-### Step 3: Preview Your Request
+### Step 3: Preview your request
 
 You will see that your raw text automatically highlights if it is an applicable Braze tag.
 
@@ -175,19 +175,19 @@ Remember to save your template before leaving the page!
 {% endtab %}
 {% tab Update to Existing Event %}
 
-## Update an Existing Event
+## Update an existing event
 
-### Step 1: Create a Webhook Template in Braze
+### Step 1: Create a webhook template in Braze
 
 To create a new Rokt Calendar Webhook Template you can either navigate to **Templates & Media** or create a new webhook campaign via the dashboard. 
 
 From the list of Templates, select **Blank Template**.
 
-### Step 2: Fill Out Your Template
+### Step 2: Fill out your template
 
 The Blank Webhook template consists of two main components, the compose and settings tab. Below we will break down the components of each tab and what settings you should set.
 
-#### Step 2a: Webhook - Settings
+#### Step 2a: Webhook - settings
 
 Navigate to the settings tab and edit the __Request Header__ and __HTTP Method__ fields with the corresponding text segments.
 
@@ -202,7 +202,7 @@ Navigate to the settings tab and edit the __Request Header__ and __HTTP Method__
 | POST |
 {: .reset-td-br-1}
 
-#### Step 2b: Webhook - Compose
+#### Step 2b: Webhook - compose
 
 Complete the setup by navigating to the Compose tab and define the __Webhook URL__ and edit the contents of the __Request Body__ based on the attribute and field tables shown above. 
 
@@ -211,7 +211,7 @@ Complete the setup by navigating to the Compose tab and define the __Webhook URL
 | {% raw %}{% assign accountCode = {{custom_attribute.${rokt:account_code}}}[0] &#124; split: '/' &#124; first %}https://api.roktcalendar.com/v1/subscriptionevent/{{accountCode}}/update {% endraw %} |
 {: .reset-td-br-1}
 
-##### Request Body
+##### Request body
 {% raw %}
 ```javascript
 {% capture eventId %}Event_0001{% endcapture %}
@@ -244,7 +244,7 @@ For a list of valid time zones see [https://roktcalendar-api.readme.io/docs/time
 
 {% endalert %}
 
-### Step 3: Preview Your Request
+### Step 3: Preview your request
 
 You will see that your raw text automatically highlights if it is an applicable Braze tag.
 

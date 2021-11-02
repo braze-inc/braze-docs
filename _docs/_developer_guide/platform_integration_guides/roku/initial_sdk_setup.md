@@ -8,18 +8,18 @@ description: "This page describes initial setup steps for the Braze Roku SDK."
 
 ---
 
-# Initial Roku SDK Integration
+# Initial Roku SDK integration
 
 Installing the Braze Roku SDK will provide you with basic analytics and segmentation functionality.
 
-## Step 1: Add Files
+## Step 1: Add files
 
 Braze SDK files can be found in the `sdk_files` directory in the [Braze Roku SDK repo](https://github.com/Appboy/appboy-roku-sdk).
 
 1. Add `BrazeSDK.brs` to your app in the `source` directory.
 2. Add `BrazeTask.brs` and `BrazeTask.xml` to your app in the `components` directory.
 
-## Step 2: Add References
+## Step 2: Add references
 
 Add a reference to `BrazeSDK.brs` in your main scene using the following `script` element:
 
@@ -51,6 +51,6 @@ m.BrazeTask = createObject("roSGNode", "BrazeTask")
 m.Braze = getBrazeInstance(m.BrazeTask)
 ```
 
-## Basic SDK Integration Complete
+## Basic SDK integration complete
 
 Braze should now be collecting data from your application with the Braze Roku SDK. Please see the following sections on how to [log attributes]({{site.baseurl}}/developer_guide/platform_integration_guides/roku/analytics/setting_custom_attributes/), [events]({{site.baseurl}}/developer_guide/platform_integration_guides/roku/analytics/logging_custom_events/), and [purchases]({{site.baseurl}}/developer_guide/platform_integration_guides/roku/analytics/logging_purchases/) to our SDK.

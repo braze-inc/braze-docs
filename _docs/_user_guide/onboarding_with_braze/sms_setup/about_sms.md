@@ -10,14 +10,15 @@ channel:
   
 ---
 
-# What are SMS Messages?
+# What are SMS messages?
+
 ![SMS about][picture]{: style="float:right;max-width:30%;margin-left:15px;border: 0;"}
 
 SMS, also known as Short Message Service, is used to send text messages to mobile phones. Currently, there are over 23 billion text messages sent every day worldwide, with SMS being the most direct way to reach users and customers. This widespread usage and proven value have made SMS an effective marketing tool for businesses of all sizes. 
 
 This article shares some common use cases to draw from, requirements, and terms to know that will aid your SMS integration and allow you to communicate effectively and strategically with your customers.
 
-## Potential Use Cases
+## Potential use cases
 
 | Use Case | Explanation |
 |---|---|
@@ -28,7 +29,7 @@ This article shares some common use cases to draw from, requirements, and terms 
 
 ## Requirements
 
-Before you start sending SMS, there are some things you need. Refer to the basic chart below to learn more.
+Before you start sending sms, there are some things you need. Refer to the basic chart below to learn more.
 
 |Requirement | Description | Acquirement |
 |---|---|---|
@@ -37,7 +38,7 @@ Before you start sending SMS, there are some things you need. Refer to the basic
 | [SMS Keywords and Responses]({{site.baseurl}}/user_guide/message_building_by_channel/sms/keywords/) | All base keywords must have responses attributed to it before you can begin messaging | You should list these out and send them to your Braze representative or onboarding manager during your onboarding process. [View SMS keyword templates here]({{site.baseurl}}/user_guide/onboarding_with_braze/sms_setup/short_and_long_codes/#short-code-application). |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
 
-## Terms to Know
+## Terms to know
 
 - __Short Code:__ A 5 to 6-digit code, that's shorter than a full phone number. This code is used to address and send SMS messages.<br><br>
 - __Long Codes:__ A 10-digit code that is used to address SMS messages. Most average phone numbers are considered long codes (e.g 123-456-7891). These codes are used to address and send SMS messages.<br><br>
@@ -46,6 +47,7 @@ Before you start sending SMS, there are some things you need. Refer to the basic
 - __Common SMS Campaign Metrics:__ <br>`Sent`, `Sent to Carrier`, `Delivery Failures`, `Confirmed Delivery`, `Rejections`, `Opt-Out`, and `Help`. <br>For information on these Metrics, please check out the [SMS Campaign Analytics][1] documentation.
 
 <br><br>
+
 For a full list of terms, visit our SMS [Terms to Know]({{site.baseurl}}/user_guide/onboarding_with_braze/sms_setup/terms/) or our dedicated [SMS section]({{site.baseurl}}/user_guide/message_building_by_channel/sms/) for more topics like how to create a SMS campaign, SMS campaign analytics, and SMS keyword processing.
 
 [picture]: {% image_buster /assets/img/sms/sms_about.jpg %}

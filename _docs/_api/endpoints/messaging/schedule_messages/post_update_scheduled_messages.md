@@ -9,7 +9,7 @@ description: "This article outlines details about the Update Scheduled Messages 
 
 ---
 {% api %}
-# Update Scheduled Messages
+# Update scheduled messages
 {% apimethod post core_endpoint|https://www.braze.com/docs/core_endpoints %} 
 /messages/schedule/update
 {% endapimethod %}
@@ -18,7 +18,7 @@ The messages update schedule endpoint accepts updates to either the `schedule` o
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#f61edf74-4467-4551-b9c4-a4b8d188cd7a {% endapiref %}
 
-## Request Body
+## Request body
 
 ```
 Content-Type: application/json
@@ -36,7 +36,7 @@ Authorization: Bearer YOUR-REST-API-KEY
   }
 }
 ```
-## Request Parameters
+## Request parameters
 
 | Parameter | Required | Data Type | Description |
 | --------- | ---------| --------- | ----------- |
@@ -46,7 +46,7 @@ Authorization: Bearer YOUR-REST-API-KEY
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
 
 
-### Available Messaging Objects {#available-message-objects}
+### Available messaging objects {#available-message-objects}
 You can use these objects in the [request body](#request-body) above.
 
 - [Android Objects]({{site.baseurl}}/api/objects_filters/android_objects/)
@@ -59,7 +59,7 @@ You can use these objects in the [request body](#request-body) above.
 - [Webhook Object]({{site.baseurl}}/api/objects_filters/webhook_object/)
 - [Windows Objects]({{site.baseurl}}/api/objects_filters/windows_object/)
 
-## Request Example
+## Request example
 ```
 curl --location --request POST 'https://rest.iad-01.braze.com/messages/schedule/update' \
 --header 'Content-Type: application/json' \

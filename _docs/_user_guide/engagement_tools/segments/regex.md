@@ -10,7 +10,7 @@ tool:
   
 ---
 
-# Regular Expressions with Braze
+# Regular expressions with Braze
 
 {% include video.html id="3h5Xbhl-TxE" align="right" %}
 

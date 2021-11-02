@@ -7,7 +7,7 @@ description: "This reference article describes purchase events and properties, t
 
 ---
 
-# Purchase Events
+# Purchase events
 
 Purchase events are purchase actions taken by your users. These events are used to record in-app purchases and establish the Lifetime Value (LTV) for each individual user profile. These purchase events must be set up by your team. Logging purchase events gives you the option to add properties like quantity and type, helping you further target your users based on these properties.
 
@@ -15,7 +15,7 @@ Once you have set up and begun logging purchase events, you can view this purcha
 
 ![Purchase 5][5]{: style="max-width:80%;margin-left:15px;"}
 
-## Logging Purchase Events
+## Logging purchase events
 
 You can log purchases by passing a [Purchase Object]({{site.baseurl}}/api/objects_filters/purchase_object/) through the [User Track]({{site.baseurl}}/api/endpoints/user_data/post_user_track/) endpoint.
 
@@ -30,11 +30,11 @@ Listed below are the methods across various platforms that are used to log purch
 - [Xamarin]({{site.baseurl}}/developer_guide/platform_integration_guides/xamarin/analytics/#logging-purchases)
 - [Roku]({{site.baseurl}}/developer_guide/platform_integration_guides/roku/analytics/logging_purchases/)
 
-## Blocklisting Purchase Events
+## Blocklisting purchase events
 
 In the Braze dashboard, you can manage blocklisting from **Manage Settings** > **Products**. Check out [Custom Events and Attribute Management]({{site.baseurl}}/user_guide/administrative/app_settings/manage_app_group/custom_event_and_attribute_management/) to learn more.
 
-## Purchase Event Segmentation
+## Purchase event segmentation
 
 You can trigger any number or type of follow-up campaigns based on logged purchase events, and enable the following segmentation filters based on the recency and frequency of that event when targeting users.
 
@@ -60,7 +60,7 @@ You can trigger any number or type of follow-up campaigns based on logged purcha
 If you would like to segment on the number of times a specific purchase has occurred, you should record that purchase individually as an [incrementing custom attribute]({{site.baseurl}}/developer_guide/platform_wide/analytics_overview/#custom-attribute-storage).
 {% endalert %}
 
-## Purchase Event Analytics
+## Purchase event analytics
 
 In addition to tracking purchase metrics for segmentation, Braze also notes the number purchases for each product and the revenue generated over time. You can view this data on the [Revenue]({{site.baseurl}}/user_guide/data_and_analytics/export_braze_data/exporting_revenue_data/#revenue-data) page.
 
@@ -68,7 +68,7 @@ In addition to tracking purchase metrics for segmentation, Braze also notes the 
 
 ![Purchase 3][3]
 
-## Purchase Event Properties {#purchase-properties}
+## Purchase event properties {#purchase-properties}
 
 With purchase event properties, you can set properties on purchases that can be used to further qualify trigger conditions, increase personalization in messaging, and generate more sophisticated analytics through raw data export. Property value types (string, numeric, boolean, date) vary per platform, and are often assigned as key-value pairs.
 
@@ -80,7 +80,7 @@ For example, if an eCommerce application wanted to send a message to a user afte
 
 Refer to [Purchase Properties Object]({{site.baseurl}}/api/objects_filters/purchase_object/#purchase-properties-object) for more.
 
-### Referencing Purchase Event Properties with Liquid
+### Referencing purchase event properties with Liquid
 
 When you send through purchase data that includes purchase properties, you can use the `event_properties` tag to reference the purchase properties in your channel messaging.
 

@@ -18,16 +18,16 @@ Braze's [Intelligence Suite]({{site.baseurl}}/user_guide/intelligence/) helps yo
 The "Intelligence Suite" is a revision and grouping of features previously known as "Most Engaged Channel", "Intelligent Timing", and "multivariate and A/B testing".
 {% endalert %}
 
-## Dark Mode Themes for In-App Messages
+## Dark Mode themes for in-app messages
 
 iOS 13 and Android 10 both introduced settings that allowed mobile phones to change their color themes to a "Dark Mode". Aligning with this feature, Braze has introduced [Dark Mode for in-app messages]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/dark-mode/)! This feature allows you to create in-app messages with a "light" and a "dark theme". If a device you send to has "Dark Mode" activated, the message will display your selected Dark Mode Theme.
 
 <img src="{% image_buster /assets/img_archive/iam-dark-mode.gif %}" style="width:100%;max-width:800px;" />
 
-## SMS Metrics in Engagement Reports
+## SMS metrics in Engagement Reports
 
 SMS Metrics are now available in [Engagement Reports]({{site.baseurl}}/user_guide/data_and_analytics/your_reports/engagement_reports/)!
 
-## Delete a Braze User's Teams
+## Delete a Braze user's teams
 
 You can now delete a team from a Braze User's account!

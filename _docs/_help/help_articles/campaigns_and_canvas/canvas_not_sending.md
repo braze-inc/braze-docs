@@ -8,7 +8,7 @@ description: "This help article walks you through troubleshooting delivery issue
 tool: Canvas
 ---
 
-# Canvas Delivery Issue
+# Canvas delivery issue
 
 Canvases are robust and complex, and we know you dedicate time and care when creating them. So, if you find that your Canvas isn't sending the way you want it to send, we recommend that you:
 

@@ -9,11 +9,11 @@ channel:
   - push
 ---
 
-# Push Primer Integration
+# Push primer integration
 
 > Push Primer campaigns encourage your users to enable push on their device for your app. Getting permission from users to send messages directly to their device can be complex, but our guides can help! <br><br>This guide shows the steps developers must make to integrate Push Priming.
 
-## Step 1: Add Snippet in AppDelegate.m File
+## Step 1: Add snippet in AppDelegate.m file
 
 {% tabs %}
 {% tab OBJECTIVE-C %}
@@ -77,7 +77,7 @@ if #available(iOS 10, *) {
 {% endtab %}
 {% endtabs %}
 
-## Step 2: Append Custom Event Checker to AppDelegate.m File
+## Step 2: Append custom event checker to AppDelegate.m file
 
 {% tabs %}
 {% tab OBJECTIVE-C %}
@@ -128,7 +128,7 @@ let notificationSettiings = UIApplication.shared.currentUserNotificationSettings
 {% endtab %}
 {% endtabs %}
 
-## Step 3: Set Up Deeplink Handler
+## Step 3: Set up deeplink handler
 
 {% tabs %}
 {% tab OBJECTIVE-C %}

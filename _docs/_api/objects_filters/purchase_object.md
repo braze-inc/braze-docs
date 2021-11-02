@@ -7,15 +7,15 @@ description: "This article explains the different components of a purchase objec
 
 ---
 
-# Purchase Object Specification
+# Purchase object specification
 
 > This article explains the different components of a purchase object, how to use it correctly, best practices, and examples to draw from.
 
-## What is a Purchase Object?
+## What is a purchase object?
 
 A Purchase Object is an object that gets passed through the API when a purchase has been made. Each Purchase Object is located within a purchase array, with each object being a single purchase by a particular user at a particular time. The purchase object has many different fields that allow Braze's backend to store and use this information for customization, data collection, and personalization.
 
-### Purchase Object
+### Purchase object
 
 ```json
 {
@@ -44,19 +44,21 @@ A Purchase Object is an object that gets passed through the API when a purchase 
 - [ISO 8601 Time Code Wiki][22]
 - [App Identifier][21]
 
-## Purchase Product_ID
+## Purchase product_id
 
 Within the purchase object, The `product_id` is an identifier for the purchase, e.g Product Name or Product Category
 - Braze allows you to store a max of 5000 `product_id`s in the dashboard.
 - `product_id` max is 255 characters
 
-### Product_ID Naming Conventions
+### Product ID naming conventions
+
 At Braze, we offer some general naming conventions for the purchase object `product_id`.
 When choosing `product_id`, Braze suggests using simplistic names such as the product name or product category (instead of SKUs) with the intention of grouping all logged items by this `product_id`.
 
 This helps make products easy to identify for segmentation and triggering.
 
-## Purchase Properties Object
+## Purchase properties object
+
 Custom events and purchases may have event properties. The “properties” values should be an object where the keys are the property names and the values are the property values. Property names must be non-empty strings less than or equal to 255 characters, with no leading dollar signs. 
 
 Property values can be any of the following data types:
@@ -73,18 +75,19 @@ Property values can be any of the following data types:
 
 Event property objects that contain array or object values can have an event property payload of up to 50KB.
 
-### Purchase Properties
+### Purchase properties
+
 [Purchase properties]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/purchase_events/#purchase-properties) __do not__ persist and aren't saved on a user's profile. These properties can, however, be used to trigger messages and for personalization using Liquid, also allowing you to segment (up to 30 days) based on these properties. Braze allows you to "save" these properties for 30 days by turning on this feature flipper to keep these properties alive and useable for message personalization. To turn on this feature in your own app group, contact your customer service manager.
 
 While uncommon, if you require these properties to persist past the 30-day limit, contact your Customer Success Manager, or, see our webhooks suggestion below to see how you can incorporate webhooks to save these properties as custom attributes.
 
-### Purchase Property Naming Conventions
+### Purchase property naming conventions
 
 It is important to note that this feature is enabled __per product__, not per purchase. For example, if a customer has a high volume of distinct products, but each has the same properties, segmenting becomes rather meaningless, 
 
 In this instance, this is why when setting the data structures, we recommend using product names at a "group-level" instead of something granular. For example, a train ticket company should have products for "single trip", "return trip", "multi-city", and not specific transactions such as "transaction 123", "transaction 046", etc. Or for example, with the purchase event 'food', properties would be best set as "cake" and "sandwich".
 
-### Example Purchase Object
+### Example purchase object
 ```html
 POST https://YOUR_REST_API_URL/users/track
 Content-Type: application/json
@@ -133,7 +136,7 @@ Authorization: Bearer YOUR-REST-API-KEY
 }
 ```
 
-## Purchase Objects, Event Objects, and Webhooks
+## Purchase objects, event objects, and webhooks
 
 Using the example provided above, we can see that someone bought a backpack with the properties: color, monogram, checkout duration, size, and brand. While we cannot go into a campaign and segment the users based on these properties, we can use these properties strategically by using them in the form of a receipt, to send a custom message through a channel using Liquid. For example, "Hello __Ann F.__, Thanks for purchasing that __red, medium backpack__ for __$40.00__! Thanks for shopping at __Backpack Locker__!"
 

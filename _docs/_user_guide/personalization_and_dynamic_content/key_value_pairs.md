@@ -10,17 +10,17 @@ channel:
 
 ---
 
-# Key-Value Pairs
+# Key-value pairs
 
 Braze enables you to send extra data payloads to user devices via key-value pairs. This feature is available across push, in-app, and News Feed messaging channels. Extra data payloads can help you update internal metrics and app content as well as customize push notification properties, such as alert prioritization, localization, and sounds.
 
-## Push Notifications
+## Push notifications
 
 ### iOS
 
-Apple Push Notifications service (APNs) supports setting alert preferences and sending custom data using key-value pairs. APNs makes use of the Apple-reserved ```aps``` library, which includes predetermined keys and values that govern alert properties.
+apple push notifications service (apns) supports setting alert preferences and sending custom data using key-value pairs. apns makes use of the apple-reserved ```aps``` library, which includes predetermined keys and values that govern alert properties.
 
-##### APS Library
+##### APS library
 
 | Key  | Value Type  | Value Description |
 |-------------------|-----------------------------|----------------------------------|
@@ -31,8 +31,7 @@ Apple Push Notifications service (APNs) supports setting alert preferences and s
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
 
 
-
-##### Alert Properties Library
+##### Alert properties library
 
 | Key            | Value Type               | Value Description                                                                                                                             |
 |----------------|--------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------|
@@ -79,7 +78,7 @@ When Braze sends a push notification to APNs, the payload will be formatted as a
 
 {% endraw %}
 
-##### Custom Key-Value Pairs
+##### Custom key-value pairs
 
 In addition to the ```aps``` library payload values, you may send custom key-value pairs to a user's device. In the message composer, click the gear icon and specify your key-value pairs below. The values in these pairs are restricted to primitive types: dictionary (object), array, string, number, and Boolean.
 
@@ -101,7 +100,7 @@ If you are using the HTTP/2 provider API, any individual payload you send to APN
 
 Braze allows you to send send additional data payloads in push notifications using key-value pairs.
 
-##### Data Payload
+##### Data payload
 
 Custom key-value pairs can be input by clicking the gear icon and specifying your key-value pairs below.
 
@@ -113,13 +112,13 @@ Use-cases for custom key-value pairs include but are not limited to internal met
 Note that your app's backend must be able to process custom key-value pairs for the data payload to function properly.
 {% endalert %}
 
-##### FCM Messaging Options
+##### FCM messaging options
 
 Android push notifications can be further customized with FCM message options. These include [notification priority][8], [sound][10], [delay, lifespan, and collapsibility][9]. These values can be input directly in the dashboard as shown below. Refer to the [Braze Documentation][7] for further instructions on how to set these options in the Braze message composer.
 
 ![Android Automatic Keys][18]
 
-### Silent Push Notifications
+### Silent push notifications
 
 A silent push notification is a push notification containing no alert message or sound, used to update your app’s interface or content in the background. These notifications make use of key-value pairs to trigger these background app actions. Silent push notifications also power Braze's [uninstall tracking][4].
 

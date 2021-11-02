@@ -35,7 +35,7 @@ You need the user's explicit permission for messages from your page.
 
 Read this quick guide to set up your Facebook Messenger Webhook. Braze also offers a full tutorial for creating a Messenger bot with example code in a [GitHub repository](https://github.com/Appboy/appboy-fb-messenger-bot)!
 
-### Step 1: Collect Your PSIDs
+### Step 1: Collect your PSIDs
 
 In order to send messages on Facebook Messenger, you need to collect your users' page-specific IDs (PSIDs) in order to identify your user and interact with them consistently.
 
@@ -70,7 +70,7 @@ __What do I do with it?__
 
 Once you are confident that you are receiving PSIDs, send it to Braze as a custom attribute.
 
-### Step 2: Send to Braze as a Custom Attribute
+### Step 2: Send to Braze as a custom attribute
 
 Coordinate and share this with your developer to send the PSIDs to Braze as a [custom attribute]({{site.baseurl}}/user_guide/Data_and_Analytics/Custom_Data/Custom_Attributes/#custom-attributes). PSIDs are strings that can be accessed by making an [API call](https://developers.facebook.com/docs/messenger-platform/reference/send-api).
 
@@ -83,7 +83,7 @@ From __Templates & Media__, go to Webhook Templates and choose the Facebook Mess
 3. Include the PSID as a custom attribute (Hint: Use the blue and white + button in the corner of the __Request Body__ box.)
 3. Put your Page Access Token in the Webhook URL (Hint: Replace the text `FACEBOOK_PAGE_ACCESS_TOKEN` in the URL with your Token.)
 
-#### Previewing and Testing Your Webhook
+#### Previewing and testing your webhook
 
 Before you send your message, test your webhook. Make sure your Messenger ID is saved in Braze (or find it and test as a Customized User), and use the preview to send the test message:
 
@@ -91,7 +91,7 @@ Before you send your message, test your webhook. Make sure your Messenger ID is 
 
 If you receive the message successfully, you can start to configure its delivery settings.
 
-#### Targeting Facebook Messenger Users
+#### Targeting Facebook messenger users
 
 If you are not sending messages using users' phone numbers and plan on sending Messenger messages repeatedly, you should [create a segment][62] for all users for whom the Messenger ID exists as a custom attribute and turn on [Analytics Tracking][61] to track your Messenger subscription rates over time. If you choose not to create a specific segment for Messenger subscribers, make sure to include a filter for Messenger ID existing to avoid errors:
 
