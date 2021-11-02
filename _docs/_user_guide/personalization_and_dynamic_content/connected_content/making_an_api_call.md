@@ -170,7 +170,7 @@ Braze will send Connected Content requests from the IP ranges below. Braze has a
 | `40.76.166.144`
 | `40.76.166.145`
 
-[1]: #aborting-connected-content
+[1]: {{site.baseurl}}/user_guide/personalization_and_dynamic_content/connected_content/aborting_connected_content/
 [2]: {{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/using_liquid/#liquid-usage-use-cases--overview
 [16]: [success@braze.com](mailto:success@braze.com)
 [34]: {% image_buster /assets/img_archive/basic_auth_mgmt.png %}
