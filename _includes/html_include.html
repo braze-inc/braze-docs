@@ -30,9 +30,17 @@
 <link type="text/css" rel="stylesheet" href="{{site.baseurl}}/assets/css/swiper.css" />
 <link type="text/css" rel="stylesheet" href="{{site.baseurl}}/assets/css/algolia_theme.css"  />
 
-{% css_asset_tag global %}
+
+{%- css_asset_tag global -%}
 - /assets/css/application.scss
-{% endcss_asset_tag %}
+{%- endcss_asset_tag -%}
+
+{%- case site.language -%}
+{%- when "fr" -%}
+{%- css_asset_tag multi_lang -%}
+- /assets/css/_lang_fr.scss
+{%- endcss_asset_tag -%}
+{%- endcase -%}
 
 <script type="text/javascript" src="{{site.baseurl}}/assets/js/clipboard.js"></script>
 <script type='text/javascript' src='{{site.baseurl}}/assets/js/jquery.mark.js' ></script>
@@ -48,13 +56,14 @@
 - /assets/js/contentcards.js
 {% endjavascript_asset_tag %}
 
-<script type='text/javascript' src='{{site.baseurl}}/assets/js/developer_nav.js' ></script>
+<script type='text/javascript' src='{{site.baseurl}}/assets/js/developer_nav.js?{{site.time | date: '%s'}}' ></script>
 <script type='text/javascript' src='{{site.baseurl}}/assets/js/swiper.js' ></script>
 
-<script type='text/javascript' src='{{site.baseurl}}/assets/js/algolia_search.js' ></script>
+<script type='text/javascript' src='{{site.baseurl}}/assets/js/algolia_search.js?{{site.time | date: '%s'}}' ></script>
 
 <script type="text/javascript">
   const page_collection = '{{ page.collection }}';
+  const site_language = '{{ site.language }}';
   const { autocomplete,getAlgoliaResults, createAutocomplete } = window['@algolia/autocomplete-js'];
   const { createAlgoliaInsightsPlugin } = window['@algolia/autocomplete-plugin-algolia-insights'];
   const searchClient = algoliasearch('{{ site.algolia.application_id }}', '{{ site.algolia.algolia_api_key }}');
