@@ -53,6 +53,10 @@ Next, navigate to your project build settings and add the `-ObjC` flag to the _O
 
 ![Swift Package Manager: Menu 5][apple_initial_setup_6]
 
+{% alert note %}
+If you do not add the `-ObjC` flag, parts of the API may become missing and behavior will be undefined. You may encounter unexpected errors such as "unrecognized selector sent to class", application crashes, and other issues.
+{% endalert %}
+
 ## Step 3: Editing the target's scheme
 
 If you are using Xcode 12.4 or earlier, edit the scheme of the target including the Appboy package (_Product > Scheme > Edit Scheme_ menu item):
