@@ -8,15 +8,15 @@ description: "This article covers initial SDK setup for the Braze Web SDK."
 
 ---
 
-# Initial SDK Setup
+# Initial SDK setup
 
 The Braze Web SDK lets you collect analytics and display rich In-App Messages, Push, and Content Card messages to your web users.
 
 For a complete technical reference, please see our [JavaScript Documentation][9].
 
-## Step 1:  Install the Braze Library
+## Step 1: Install the Braze library
 
-There are three easy ways to integrate the Web SDK, to include analytics and messaging components on your site. Be sure to view our [Push Integration Guide][16] if you plan to use Web Push features. 
+There are three easy ways to integrate the Web SDK to include analytics and messaging components on your site. Be sure to view our [Push Integration Guide][16] if you plan to use Web Push features. 
 
 If your website uses a `Content-Security-Policy`, then please follow our [CSP Header Guide][19] in addition to the integration steps below.
 
@@ -40,22 +40,21 @@ import appboy from "@braze/web-sdk";
 const appboy = require("@braze/web-sdk");
 ```
 
-### Option 2: Google Tag Manager {#install-gtm}
+### Option 2: Google tag manager {#install-gtm}
 
 The Braze Web SDK can be quickly installed from the Google Tag Manager Template Library. Two tags are supported:
 
 1. Initialization Tag - loads the Web SDK onto your website, and optionally sets the External User ID
 
-2. Actions Tag - used to trigger custom events, purchases, change user IDs, or stop/resume SDK tracking
+2. Actions Tag - used to trigger custom events, purchases, change user IDs, or toggle SDK tracking
 
 For more information, please see the [Google Tag Manager Integration Guide][18].
 
 ### Option 3: Braze CDN {#install-cdn}
 
-Add the Braze Web SDK directly to your HTML by referencing our CDN-hosted script to load the library asynchronously.
+Add the Braze Web SDK directly to your HTML by referencing our CDN-hosted script, which loads the library asynchronously.
 
-The CDN integration code can be found on our [Github Repo](https://github.com/Appboy/appboy-web-sdk/blob/master/snippets/loading-snippet.js).
-
+<script src="https://braze-inc.github.io/embed-like-gist/embed.js?target=https%3A%2F%2Fgithub.com%2FAppboy%2Fappboy-web-sdk%2Fblob%2Fmaster%2Fsnippets%2Floading-snippet.js&style=github&showBorder=on&showLineNumbers=on&showFileMeta=on&showCopy=on"></script>
 
 ## Step 2: Initialize Braze
 
@@ -90,11 +89,9 @@ For all other JavaScript methods, please see our complete [JavaScript Reference 
 Anonymous users on mobile or web devices may be counted towards your [MAU]({{site.baseurl}}/user_guide/data_and_analytics/your_reports/understanding_your_app_usage_data/#monthly-active-users). As a result, you may want to conditionally load or initialize the SDK to exclude these users from your MAU count.
 {% endalert %}
 
-## Step 3: (Optional) Web Push
+## Step 3: Web push (optional)
 
-To use Web Push Notifications, additional setup is required. 
-
-Please see our [Push Notifications][16] section for instructions.
+Additional setup is required to use Web push notifications. Please see our [Push Notifications][16] section for instructions.
 
 ## Troubleshooting {#error-logging}
 
@@ -115,7 +112,7 @@ appboy.toggleAppboyLogging()
 
 When you reference the Braze Web SDK from our content delivery network, for example, `https://js.appboycdn.com/web-sdk/a.a/appboy.min.js` (as recommended by our default integration instructions), your users will receive minor updates (bug fixes and backward compatible features, versions `a.a.a` through `a.a.z` in the above examples) automatically when they refresh your site. 
 
-When we release major changes however, we require you to upgrade the Braze Web SDK manually to ensure that nothing in your integration will be impacted by any breaking changes. Additionally, if you download our SDK and host it yourself, you won't receive any version updates automatically and should upgrade manually to receive the latest features and bug fixes.
+When we release major changes, however, we require you to upgrade the Braze Web SDK manually to ensure that nothing in your integration will be impacted by any breaking changes. Additionally, if you download our SDK and host it yourself, you won't receive any version updates automatically and should upgrade manually to receive the latest features and bug fixes.
 
 You can keep up-to-date with our latest release [following our release feed](https://github.com/Appboy/appboy-web-sdk/tags.atom) with the RSS Reader or service of your choice, and see [our changelog](https://github.com/Appboy/appboy-web-sdk/blob/master/CHANGELOG.md) for a full accounting of our Web SDK release history. To upgrade the Braze Web SDK:
 
@@ -124,12 +121,12 @@ You can keep up-to-date with our latest release [following our release feed](htt
 
 These two files must be updated in coordination with each other to ensure proper functionality.
 
-## Alternative Integration Methods
+## Alternative integration methods
 
-### AMD Module Loader
+### AMD module loader
 If you are using Google Tag Manager alongside an AMD module loader such as RequireJS to load Braze's SDK you will need to use the RequireJS-compatible integration snippet in your `<head>` tag.
 
-For further instruction on this please see the appropriate section of our [Braze Web SDK Github Repository][2].
+For further instruction on this, please see the appropriate section of our [Braze Web SDK Github Repository][2].
 
 ### Tealium iQ
 
@@ -137,7 +134,7 @@ Tealium iQ offers a basic turnkey Braze integration. To configure the integratio
 
 For more details, or in-depth Tealium configuration support, check out our [integration documentation]({{site.baseurl}}/partners/data_and_infrastructure_agility/customer_data_platform/tealium/#about-tealium) or reach out to your Tealium Account Manager.
 
-### Other Tag Managers
+### Other tag managers
 
 Braze may also be compatible with other tag management solutions by following our integration instructions within a custom HTML tag. Please reach out to a Braze representative if you need help evaluating these solutions.
 

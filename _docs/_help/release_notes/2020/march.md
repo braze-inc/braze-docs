@@ -7,7 +7,7 @@ description: "This article contains release notes for March 2020."
 ---
 # March 2020
 
-## Custom Attribute Filter Behavior
+## Custom attribute filter behavior
 
 The dashboard has improved filters to include more intuitive behaviors.
 There have been two significant changes to how certain custom attributes filters work. 

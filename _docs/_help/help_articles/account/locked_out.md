@@ -8,7 +8,7 @@ description: "This help article walks you through troubleshooting steps if you'v
 tool: Dashboard
 ---
 
-# Locked Out of Braze Account	
+# Locked out of Braze account
 
 So you're locked out of your Braze Account—no worries! We can help you get back in.	
 
@@ -18,7 +18,8 @@ You can tell what kind of lock out you're experiencing by the error message you 
 - [I don't see an error, but Braze still won't let me in.](#instance-error)	
 - [I see an error about account suspension.](#account-suspension)	
 
-## Password Error	
+## Password error
+
 Your account's security is important to us, so passwords are required to log into your Braze account.	
 
 - Check that you are logging into the incorrect dashboard [instance][1]. Check with your account administrator or Braze Account Manager to be sure.	
@@ -28,15 +29,14 @@ Your account's security is important to us, so passwords are required to log int
 
 When in doubt, you can always [reset your password][2].	
 
-## Instance Error	
+## Instance error
 
 If you are using the same machine you usually do to log in, Braze should automatically detect the correct instance. However, in the event that it doesn't or you're logging in for the first time, we recommend that you consider the following:	
 
 - Check that you are logging into the incorrect dashboard [instance][1]. Check with your account administrator or Braze Account Manager to be sure.
 - If your company is on several instances of Braze, you may be using the incorrect email to log in.	
 
-
-## Account Suspension	
+## Account suspension	
 
 This doesn't happen very often, but we take account suspension and deletions very seriously. If you find this error, your best bet is to reach out to your company's Braze administrator, Braze Account Manager, or Braze [Support][support].	
 

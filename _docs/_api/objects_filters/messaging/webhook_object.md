@@ -9,7 +9,7 @@ description: "This article outlines the Braze Webhook Object."
 
 ---
 
-# Webhook Object Specification
+# Webhook object specification
 
 ```json
 {

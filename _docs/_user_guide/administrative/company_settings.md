@@ -23,7 +23,7 @@ guide_featured_list:
 ---
 <br>
 
-## Additional Information
+## Additional information
 
 If you're looking for more information about your own account settings, look [here][1].
 

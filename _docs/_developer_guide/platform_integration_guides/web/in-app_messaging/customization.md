@@ -13,7 +13,7 @@ description: "This article covers customization of in-app messaging via the Braz
 
 All of Braze’s in-app message types are highly customizable across messages, images, [Font Awesome][15]  icons, click actions, analytics, editable styling, custom display options, and custom delivery options. Multiple options can be configured on a per in-app message basis from [within the dashboard]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/create/). Braze additionally provides multiple levels of advanced customization to satisfy a variety of use cases and needs.
 
-## Key Value Pair Extras
+## Key-value pair extras
 
 In-app message objects may carry key-value pairs as their `extras` property. These are specified on the dashboard under "Additional Message Settings" when creating an in-app message campaign. These can be used to send data down along with an in-app message for further handling by your site. For example:
 
@@ -32,7 +32,7 @@ appboy.subscribeToInAppMessage(function(inAppMessage) {
 });
 ```
 
-### In-App Message Default z-index
+### In-app message default z-index
 
 By default, In-App Messages are displayed using `z-index: 1050`. This is configurable using the `inAppMessageZIndex ` [initialization option][41] in the scenario that your website styles elements with higher values than that.
 
@@ -46,7 +46,7 @@ braze.initialize("YOUR-API-KEY", {
 });
 ```
 
-### Custom Styling
+### Custom styling
 
 Braze UI elements come with a default look and feel that create a neutral in-app message experience and aims for consistency with other Braze mobile platforms. Braze's default styles are defined in CSS within the Braze SDK. By overriding selected styles in your application, it is possible to customize our standard in-app message types with your own background images, font families, styles, sizes, animations, and more. For instance, the following is an example override that will cause an in-app message's headers to appear italicized:
 
@@ -58,7 +58,7 @@ Braze UI elements come with a default look and feel that create a neutral in-app
 
 See the [JSDocs][2] for more information.
 
-## Open Message Link in New Tab
+## Open message link in new tab
 
 To set your in-app message links to open in a new tab, set the `openInAppMessagesInNewTab` option to `true` to force all links from in-app message clicks open in a new tab or window.
 
@@ -66,7 +66,7 @@ To set your in-app message links to open in a new tab, set the `openInAppMessage
 appboy.initialize('api-key', { openInAppMessagesInNewTab: true} );
 ```
 
-## In-App Message Dismissal
+## In-app message dismissal
 
 By default, when an in-app message is showing, pressing the escape button or a click on the greyed-out background of the page will dismiss the message. Configure the `requireExplicitInAppMessageDismissal` [initialization option][41] to true to prevent this behavior and require an explicit button click to dismiss messages. 
 

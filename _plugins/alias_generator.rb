@@ -60,11 +60,10 @@ module Jekyll
           File.open(File.join(fs_path_to_dir, alias_file), 'w') do |file|
             file.write(alias_template(site,docs.url))
           end
-          
-          alias_sections.size.times do |sections|
-            site.static_files << Jekyll::AliasFile.new(site, site.dest, alias_sections[0, sections + 1].join('/'), '')
-
-          end
+          # Unneeded since folder path for alias should already be created and causes warnings
+          # alias_sections.size.times do |sections|
+          #   site.static_files << Jekyll::AliasFile.new(site, site.dest, alias_sections[0, sections + 1].join('/'), '')
+          # end
           site.static_files << Jekyll::AliasFile.new(site, site.dest, alias_dir, alias_file)
         end
       end

@@ -7,7 +7,7 @@ description: "This reference article covers how to set custom attributes via the
 
 ---
 
-# Setting Custom Attributes for Web
+# Setting custom attributes for web
 
 Braze provides methods for assigning attributes to users. You'll be able to filter and segment your users according to these attributes on the dashboard.
 
@@ -28,7 +28,7 @@ Braze provides predefined methods for setting the following user attributes with
 - Home City
 - Phone Number
 
-## Implementation Examples
+## Implementation examples
 
 ### Setting a first name
 
@@ -48,7 +48,7 @@ appboy.getUser().setGender(appboy.User.Genders.FEMALE);
 appboy.getUser().setDateOfBirth(2000, 12, 25);
 ```
 
-## Assigning Custom User Attributes
+## Assigning custom user attributes
 
 In addition to our predefined user attribute methods, Braze also provides custom attributes to track data from your applications. Braze custom attributes can be set with the following data types:
 
@@ -63,9 +63,9 @@ In addition to our predefined user attribute methods, Braze also provides custom
 
 Full method specifications for custom attributes can be found here within the [ab.User class JSDocs][1].
 
-### Implementation Examples
+### Implementation examples
 
-#### Setting a Custom Attribute with a String Value
+#### Setting a custom attribute with a string value
 ```javascript
 appboy.getUser().setCustomUserAttribute(
   YOUR_ATTRIBUTE_KEY_STRING,
@@ -73,7 +73,7 @@ appboy.getUser().setCustomUserAttribute(
 );
 ```
 
-#### Setting a Custom Attribute with an Integer Value
+#### Setting a custom attribute with an integer value
 ```javascript
 appboy.getUser().setCustomUserAttribute(
   YOUR_ATTRIBUTE_KEY_STRING,
@@ -87,7 +87,7 @@ appboy.getUser().incrementCustomUserAttribute(
 );
 ```
 
-#### Setting a Custom Attribute with a Date Value
+#### Setting a custom attribute with a date value
 ```javascript
 appboy.getUser().setCustomUserAttribute(
   YOUR_ATTRIBUTE_KEY_STRING,
@@ -108,7 +108,7 @@ appboy.getUser().setCustomUserAttribute(
 ```
 >  Dates passed to Braze with this method must be JavaScript Date objects.
 
-#### Setting a Custom Attribute with an Array Value
+#### Setting a custom attribute with an array value
 The maximum number of elements in custom attribute arrays defaults to 25. The maximum for individual arrays can be increased to up to 100. If you would like this maximum increased, please reach out to your Customer Service Manager. Arrays exceeding the maximum number of elements will be truncated to contain the maximum number of elements. For more information on custom attribute arrays and their behavior, see our [Documentation on Arrays][6].
 
 ```javascript
@@ -121,7 +121,7 @@ appboy.getUser().addToCustomAttributeArray(YOUR_ATTRIBUTE_KEY_STRING, "new strin
 appboy.getUser().removeFromCustomAttributeArray("custom_attribute_array_test", "value to be removed");
 ```
 
-### Unsetting a Custom Attribute
+### Unsetting a custom attribute
 
 Custom attributes can be unset by setting their value to null.
 
@@ -129,15 +129,15 @@ Custom attributes can be unset by setting their value to null.
 appboy.getUser().setCustomUserAttribute(YOUR_ATTRIBUTE_KEY_STRING, null);
 ```
 
-### Setting a Custom Attribute via the REST API
+### Setting a custom attribute via the REST API
 
 You can also use our REST API to set user attributes. To do so refer to the [User API documentation][4].
 
-### Custom Attribute Length
+### Custom attribute length
 
 Custom attribute keys and values have a maximum length of 255 characters. See the [full technical documentation][1] for complete details around valid custom attribute values.
 
-### Setting Up User Subscriptions
+### Setting up user subscriptions
 
 To set up a subscription for your users (either email or push), call the functions `setEmailNotificationSubscriptionType()`  or `setPushNotificationSubscriptionType()`, respectively. Both of these functions take the enum type 'appboy.User.NotificationSubscriptionTypes' as arguments. This type has three different states:
 
@@ -150,7 +150,7 @@ To set up a subscription for your users (either email or push), call the functio
 
 >  When a user is registered for push, the browser forces them to choose to allow or block notifications, and if they choose to allow push, they are set `OPTED_IN` by default. For more information on implementing subscriptions and explicit opt-ins, visit the topic in [our docs][10].
 
-### Sample Code
+### Sample code
 
 #### Unsubscribing a user from email:
 ```javascript

@@ -13,23 +13,23 @@ channel:
 
 # Troubleshooting
 
-## Expected In-App Message Did Not Display
+## Expected in-app message did not display
 
 Most in-app message issues can be broken down into two main categories: delivery and display. To troubleshoot why an expected in-app message did not display on your device, you should first [ensure that the in-app message was delivered to the device][troubleshooting_iams_11], then [troubleshoot message display][troubleshooting_iams_12].
 
-#### Impression or Click Analytics Aren't Being Logged
+#### Impression or click analytics aren't being logged
 
 If you have set an in-app message delegate to manually handle message display or click actions, you'll need to manually log clicks and impressions on the in-app message.
 
-#### Impressions Are Lower Than Expected
+#### Impressions are lower than expected
 
 Triggers take time to sync to the device on session start, so there can be a race condition if users log an event or purchase right after they start a session. One potential workaround could be changing the campaign to trigger off of session start, then segmenting off of the intended event or purchase. Note that this would deliver the in-app message on the next session start after the event has occurred.
 
-## In-App Message Delivery {#troubleshooting-in-app-message-delivery}
+## In-app message delivery {#troubleshooting-in-app-message-delivery}
 
 The SDK requests in-app messages from Braze's servers on session start. To check if in-app messages are being delivered to your device, you'll need to ensure that in-app messages are being both requested by the SDK and returned by Braze's servers.
 
-#### Check If Messages Are Requested and Returned
+#### Check if messages are requested and returned
 
 1. Add yourself as a [test user][troubleshooting_iams_1] on the dashboard.
 2. Set up an in-app message campaign targeted at your user.
@@ -39,13 +39,13 @@ The SDK requests in-app messages from Braze's servers on session start. To check
   - If your app was meant to request Original In-App Messages, you should see  `in_app` in the Requested Responses field under Response Data.
 5. Use the [Event User Logs][troubleshooting_iams_3] to check if the correct in-app messages are being returned in the Response Data.<br><br>![In-App Message][troubleshooting_iams_5]
 
-#### Troubleshoot Messages Not Being Requested
+#### Troubleshoot messages not being requested
 
 If your in-app messages are not being requested, your app might not be [tracking sessions correctly][troubleshooting_iams_4], as in-app messages are refreshed upon session start. Also, be sure that your app is actually starting a session based on your app's session timeout semantics:
 
 ![Session Start][troubleshooting_iams_10]
 
-#### Troubleshoot Messages Not Being Returned
+#### Troubleshoot messages not being returned
 
 If your in-app messages are not being returned, you're likely experiencing a campaign targeting issue:
 
@@ -59,7 +59,7 @@ If your in-app messages are not being returned, you're likely experiencing a cam
   - You can check if this has happened by creating a segment with a "Received Campaign Variant" filter, where the campaign variant is set to "Control", and checking if your user fell into that segment.
   - When creating campaigns for integration testing purposes, make sure to opt out of adding a control group.
 
-## In-App Message Display {#troubleshooting-in-app-message-display}
+## In-app message display {#troubleshooting-in-app-message-display}
 
 If your app is successfully requesting and receiving in-app messages but they are not being shown, some device-side logic may be preventing display:
 

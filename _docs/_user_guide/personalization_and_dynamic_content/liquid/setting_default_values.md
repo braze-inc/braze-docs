@@ -6,7 +6,7 @@ description: "Set default fallback values for any personalization attribute that
 
 ---
 
-# Setting Default Values
+# Setting default values
 
 {% raw %}
 

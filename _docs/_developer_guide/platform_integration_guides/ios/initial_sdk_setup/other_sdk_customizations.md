@@ -7,15 +7,26 @@ page_order: 3
 
 ---
 
-# Other SDK Customizations
+# Other SDK customizations
 
-## Braze Log Level
+## Braze log level
 
 The default LogLevel for the Braze iOS SDK is `8`. This level suppresses most logging so that no sensitive information is logged in a production released application.
 
-To enable verbose logging for debugging, add a dictionary named `Braze` to your `Info.plist` file. Inside the `Braze` Dictionary, add the `LogLevel` String subentry and set the value to `0`. Note that prior to Braze iOS SDK v4.0.2, the dictionary key `Appboy` must be used in place of `Braze`.
+You can set the LogLevel to `0` to enable verbose logging for debugging. This level is only intended to be used in development environments and should not be set in a released application.
 
-LogLevel `0` is only intended to be used in development environments and should not be set in a released application.
+This can be assigned either at compile time or at runtime:
+
+{% tabs local %}
+{% tab Compile Time %}
+
+#### Setting LogLevel at compile time
+
+Add a dictionary named `Braze` to your `Info.plist` file. Inside the `Braze` Dictionary, add the `LogLevel` String subentry and set the value to `0`. 
+
+{% alert note %}
+Prior to Braze iOS SDK v4.0.2, the dictionary key `Appboy` must be used in place of `Braze`.
+{% endalert %} 
 
 Example `Info.plist` contents:
 
@@ -27,7 +38,21 @@ Example `Info.plist` contents:
 </dict>
 ```
 
-### Description of Log Levels
+{% endtab %}
+{% tab Runtime %}
+
+#### Setting LogLevel at runtime
+
+Add the `ABKLogLevelKey` inside the `appboyOptions` parameter passed to `startWithApiKey:inApplication:withLaunchOptions:withAppboyOptions:`. Set its value to the integer `0`.
+
+{% alert note %}
+LogLevel can only be set at runtime with Braze iOS SDK v4.4.0 or newer. If using an earlier version of the SDK, set the LogLevel at compile time instead.
+{% endalert %} 
+
+{% endtab %}
+{% endtabs %}
+
+### Description of LogLevels
 
 | LogLevel | Description |
 |----------|-------------|
@@ -35,7 +60,7 @@ Example `Info.plist` contents:
 | 8        | Default, minimal logging. |
 {: .reset-td-br-1 .reset-td-br-2}
 
-## Optional IDFA Collection
+## Optional IDFA collection
 
 IDFA Collection is optional within the Braze SDK and disabled by default. IDFA Collection is only required within Braze if you intend to utilize our [install attribution integrations][21]. If you opt to store your IDFA, we will store it free of charge so you may take advantage of these options immediately upon release without additional development work.
 
@@ -56,7 +81,7 @@ The prompt for App Tracking Transparency authorization also requires an `Info.pl
 <string>To retarget ads and build a global profile to better serve you things you would like.</string>
 ```
 
-### Implementing IDFA Collection
+### Implementing IDFA collection
 
 Follow these steps to implement IDFA Collection:
 
@@ -116,7 +141,7 @@ class IDFADelegate: NSObject, ABKIDFADelegate {
 
 In the `appboyOptions` dictionary passed to `startWithApiKey:inApplication:withAppboyOptions:`, set the `ABKIDFADelegateKey` key to an instance of your `ABKIDFADelegate` conforming class.
 
-## Approximate iOS SDK Size {#ios-sdk-size}
+## Approximate iOS SDK size {#ios-sdk-size}
 
 The approximate iOS SDK framework file size is 30MB and the approximate .ipa (addition to app file) size is between 1MB and 2MB.
 

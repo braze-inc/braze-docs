@@ -7,7 +7,7 @@ page_type: solution
 description: "This help article walks you through troubleshooting steps you can take if users are not receiving your push notifications."
 channel: push
 ---
-# Missing Push Notifications
+# Missing push notifications
 
 There are a number of steps you can take to troubleshoot this issue:
 
@@ -18,19 +18,19 @@ There are a number of steps you can take to troubleshoot this issue:
 * [Check Control Group Status](#check-control-group-status)
 
 
-## Check User Profiles
+## Check user profiles
 
 Check your user profile in the [Engagement][1] tab in the **User Profile** section to see if you are actively registered for push for the app group that you are testing. If you are registered for multiple apps, you will see them listed in the **Push Registered For** field:
 
 ![Push Registered For][2]
 
-## Check Segment
+## Check segment
 
 Make sure you fall into the segment that you are targeting (if this is a live campaign and not a test). In the **User Profile**, you will see a list of segments that the user currently falls into. Remember this is an ever-changing variable as segmentation is updated in real time.
 
 ![List of Segments][3]
 
-## Check Push Notification Caps
+## Check push notification caps
 
 Check the global frequency caps. It’s possible you did not receive the push notification because your app group has global frequency capping in place and you’ve already hit your push notification cap for the specified time frame.
 
@@ -38,11 +38,11 @@ You can do this by checking [global frequency capping][4] in the dashboard. If t
 
 ![Campaign Details][5]
 
-## Check Rate Limits
+## Check rate limits
 
 If you have a rate limit set for your campaign or Canvas, you might be falling out of receiving messaging due to exceeding this limit. For more information, refer to [Rate Limiting][47].
 
-## Check Control Group Status
+## Check control group status
 
 If this is a single channel campaign or a Canvas with a control group, it’s possible you are falling into the control group.
 

@@ -16,7 +16,7 @@ search_tag: Partner
 This integration is currently only supported on iOS.
 {% endalert %}
 
-## iOS Integration {#apteligent-ios-integration}
+## iOS integration {#apteligent-ios-integration}
 
 To integrate Apteligent with Braze on iOS, do the following:
 

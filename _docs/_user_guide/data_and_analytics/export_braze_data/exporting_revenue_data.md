@@ -9,11 +9,11 @@ tool:
 
 ---
 
-# Revenue Data
+# Revenue data
 
 On the Revenue page of the Dashboard, you can view data on revenue or purchases over specific periods of time, or your app's total revenue or purchases.
 
-## Detailed Statistics Graph
+## Detailed statistics graph
 ![Revenue graph][9]
 
 The following data can be accessed via the Detailed Statistics graph:
@@ -26,7 +26,7 @@ The following data can be accessed via the Detailed Statistics graph:
     - (Optional) Hourly Revenue for Different Segments
 - Revenue per User
 
-## Total Revenue
+## Total revenue
 
 You can view revenue statistics on a case-by-case basis on the Analytics pages for your campaigns. The Total Revenue statistic is generated from campaign recipients who have made a purchase within the campaign's primary conversion period.
 
@@ -34,7 +34,7 @@ You can view revenue statistics on a case-by-case basis on the Analytics pages f
 For help with CSV and API exports, visit our troubleshooting article [here]({{site.baseurl}}/user_guide/data_and_analytics/export_braze_data/export_troubleshooting/).
 {% endalert %}
 
-## Direct Revenue
+## Direct revenue
 
 You can view the following additional revenue metrics by generating a Campaign Comparison Report using the [Report Builder][1]:
 

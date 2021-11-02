@@ -10,7 +10,7 @@ channel:
 
 # Testing
 
-It is __extremely important__ to __always__ test your in-app messages before sending your campaigns. Our preview and testing capabilities offer two ways to take a look at your in-app messages. You can preview your message, to help you visualize as you compose it, as well as send a test message to a your or a specific user's device. We recommend you take advantage of __both__.
+It is __extremely important__ to __always__ test your in-app messages before sending your campaigns. Our preview and testing capabilities offer two ways to take a look at your in-app messages. You can preview your message, to help you visualize as you compose it, as well as send a test message to your or a specific user's device. We recommend you take advantage of __both__.
 
 ## Preview
 
@@ -20,9 +20,9 @@ You can preview your in-app message as you compose it. This should help you visu
 In __Preview__, the view of your message might not be identical to its actual rendering on the user's device. We __always__ recommend sending a test message to a device to ensure that your media, copy, personalization, and custom attributes generate correctly.
 {% endalert %}
 
-### In-App Message Generation Preview
+### In-app message generation peview
 
-Preview what your message will look like to a random user, a specific user or a customized user - the latter two are especially useful if your message contains personalization or multiple languages. You can also preview messages for either mobile devices or tablets to get a better idea of what users will experience.
+Preview what your message will look like to a random user, a specific user, or a customized user - the latter two are especially useful if your message contains personalization or multiple languages. You can also preview messages for either mobile devices or tablets to get a better idea of what users will experience.
 
 ![In-App_Message_Preview][1]
 
@@ -36,13 +36,13 @@ Braze has three generations of in-app messages available. You can fine-tune to w
   To send a test to either [Content Test Groups]({{site.baseurl}}/user_guide/administrative/app_settings/developer_console/internal_groups_tab/#content-test-groups) or individual users, push must be enabled on your test devices before sending.
 {% endalert %}
 
-### Preview Message As User
+### Preview message as user
 
 You can also preview messages from the Test tab, as though you were a user. You can select a specific user, a random user, or create a custom user.
 
 ![Custom_User_Preview][3]
 
-### Test Checklist
+### Test checklist
 
 - Do the images and media show up and act as expected?
 - Does the Liquid function as expected? Have you accounted for a [default attribute value]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/conditional_logic/#accounting-for-null-attribute-values) in the event that the Liquid returns no information?

@@ -7,7 +7,7 @@ description: "This reference article shows how to integrate the Braze SDK using 
 
 ---
 
-# CocoaPods Integration
+# CocoaPods integration
 
 ## Step 1: Install CocoaPods
 
@@ -23,7 +23,7 @@ __Note__: If you are prompted to overwrite the `rake` executable please refer to
 
 __Note__: If you have issues regarding CocoaPods, please refer to the [CocoaPods Troubleshooting Guide][apple_initial_setup_25].
 
-## Step 2: Constructing the Podfile
+## Step 2: Constructing the podfile
 
 Now that you've installed the CocoaPods Ruby Gem, you're going to need to create a file in your Xcode project directory named `Podfile`.
 
@@ -58,7 +58,7 @@ At this point, you should be able to open the new Xcode project workspace create
 
 ![New Workspace][apple_initial_setup_15]
 
-## Next Steps
+## Next steps
 
 Follow the instructions for [Completing the Integration]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/initial_sdk_setup/completing_integration/).
 

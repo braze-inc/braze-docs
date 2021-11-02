@@ -4,9 +4,9 @@ alias: /currents_connector/
 hidden: true
 ---
 
-# Partner Custom Currents Connector
+# Partner custom currents connector
 
-## Serialization and Data Format
+## Serialization and data format
 
 The target data format will be JSON over HTTPS. Events will be grouped into batches of events,
 the size of which is configurable, and sent to the endpoint as a JSON array containing all of the
@@ -221,7 +221,7 @@ Here are some example event payloads for various events, as they would appear if
 }
 ```
 
-### Other Events
+### Other events
 
 Here are some example event payloads for various other events that are not associated with either campaigns or Canvases:
 
@@ -337,7 +337,7 @@ Individual events will follow the same evolution rules as our existing Avro sche
 - Required fields will never be removed.
   - What is considered "required" will be specified via documentation that we will likely want to auto-generate from our Avro schemas as the central source of truth. This will require us to annotate the Avro schema fields with some metadata, and a special script that can read that metadata to generate the documentation.
 
-## Error Handling and Retry Mechanism
+## Error handling and retry mechanism
 
 In the event of an error, Braze will queue and retry the request based on the HTTP return code received.
 

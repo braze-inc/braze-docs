@@ -7,7 +7,7 @@ page_type: reference
 
 ---
 
-# API Identifier Types
+# API Identifier types
 
 > This reference guide touches on the different types of API Identifiers that can be found within the Braze dashboard, their purpose, where you can find them, and how they are typically used. For information on REST API Keys or App Group API Keys, refer to the [Rest API Key Overview]({{site.baseurl}}/api/api_key/)
 
@@ -25,8 +25,8 @@ Templates are great for if your company contracts out your HTML designs for camp
 ### Where can I find it?
 You can find your Template ID one of two ways:
 
-1. In the dashboard, open up "Templates & Media" under "Engagement" and select a pre-existing template. If the template you want does not exist yet, create one and save it. At the bottom of the individual template page, you will be able to find your Template API Identifier.<br><br>
-2. Braze offers an "Additional API Identifiers" search, here you can quickly look up specific identifiers. It can be found at the bottom of the "API settings" within the "Developer Console" page.
+1. In the dashboard, open up **Templates & Media** under **Engagement** and select a pre-existing template. If the template you want does not exist yet, create one and save it. At the bottom of the individual template page, you will be able to find your Template API Identifier.<br><br>
+2. Braze offers an **Additional API Identifiers** search, here you can quickly look up specific identifiers. It can be found at the bottom of the **API Settings** tab within the **Developer Console** page.
 
 ### What can it be used for?
 
@@ -44,10 +44,7 @@ A [Canvas]({{site.baseurl}}/user_guide/engagement_tools/canvas/) API Identifier 
 Note that if you have a Canvas that has variants, there exists an overall Canvas ID as well as individual variant Canvas IDs nested under the main Canvas. 
 
 ### Where can I find it?
-You can find your Canvas ID one of two ways:
-
-1. In the dashboard, open up "Canvas" under "Engagement" and select a pre-existing Canvas. If the Canvas you want does not exist yet, create one and save it. At the bottom of an individual Canvas page, you will find an "Analyze Variants" button, upon clicking it, a window will appear with the Canvas API Identifier located at the bottom. <br><br>
-2. Braze offers an "Additional API Identifiers" search, here you can quickly look up specific identifiers. It can be found at the bottom of the "API settings" within the "Developer Console" page.
+You can find your Canvas ID in the dashboard. Open up **Canvas** under **Engagement** and select a pre-existing Canvas. If the Canvas you want does not exist yet, create one and save it. At the bottom of an individual Canvas page, click **Analyze Variants**. A window appears with the Canvas API Identifier located at the bottom.
 
 ### What can it be used for?
 - Track analytics on a specific message
@@ -90,8 +87,8 @@ A [Segment]({{site.baseurl}}/user_guide/engagement_tools/segments/) API Identifi
 ### Where can I find it?
 You can find your Segment ID one of two ways:
 
-1. In the dashboard, open up "Segments" under "Engagement" and select a pre-existing segment. If the Segment you want does not exist yet, create one and save it. At the bottom of the individual segment page, you will be able to find your Segment API Identifier. <br><br>
-2. Braze offers an "Additional API Identifiers" search, here you can quickly look up specific identifiers. It can be found at the bottom of the "API settings" within the "Developer Console" page.
+1. In the dashboard, open up **Segments** under **Engagement** and select a pre-existing segment. If the Segment you want does not exist yet, create one and save it. At the bottom of the individual segment page, you will be able to find your Segment API Identifier. <br><br>
+2. Braze offers an **Additional API Identifiers** search, here you can quickly look up specific identifiers. It can be found at the bottom of the **API Settings** tab within the **Developer Console** page.
 
 ### What can it be used for?
 - Get details on a specific segment
@@ -109,8 +106,8 @@ A Card API Identifier or Card ID is an out-of-the-box key by Braze for a given N
 ### Where can I find it?
 You can find your Card ID one of two ways:
 
-1. In the dashboard, open up "News Feed" under "Engagement" and select a pre-existing News Feed. If the News Feed you want does not exist yet, create one and save it. At the bottom of the individual News Feed page, you will be able to find your unique Card API Identifier. <br><br>
-2. Braze offers an "Additional API Identifiers" search, here you can quickly look up specific identifiers. It can be found at the bottom of the "API settings" within the "Developer Console" page.
+1. In the dashboard, open up **News Feed** under **Engagement** and select a pre-existing News Feed. If the News Feed you want does not exist yet, create one and save it. At the bottom of the individual News Feed page, you will be able to find your unique Card API Identifier. <br><br>
+2. Braze offers an **Additional API Identifiers** search, here you can quickly look up specific identifiers. It can be found at the bottom of the **API Settings** tab within the **Developer Console** page.
 
 ### What can it be used for?
 - Retrieve relevant information on a card
@@ -129,7 +126,7 @@ A Send Identifier or Send ID is a key either generated by Braze or created by yo
 API and API trigger campaigns that are sent as a broadcast will automatically generate a send identifier if a send identifier is not provided. If you want to specify your own send identifier, you will have to first create one via the [`sends/id/create`]({{site.baseurl}}/api/endpoints/messaging/send_messages/post_create_send_ids/) endpoint. The identifier must be all ASCII characters and at most 64 characters long. You can reuse a send identifier across multiple sends of the same campaign if you want to group analytics of those sends together.
 
 ### What can it be used for?
-- Send and track message performance programmatically, without campaign creation for each send.
+Send and track message performance programmatically, without campaign creation for each send.
 
 <br>
 {% endtab %}

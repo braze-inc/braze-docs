@@ -7,7 +7,7 @@ description: "This article contains release notes for April 2020."
 ---
 # April 2020
 
-## Movable Ink Partnership
+## Movable Ink partnership
 
 Movable Ink provides Braze customers the ability to use Intelligent Creative features like __Countdown Timers, Polls, and Scratch Offs in their Push, In-App Message and Content Card campaigns__. Movable Ink and Braze power a more well-rounded approach to dynamic data-driven messages, providing users with real-time elements about the things that matter.
 
@@ -24,7 +24,7 @@ Updates to this feature include:
 
 Check out our [documentation]({{site.baseurl}}/user_guide/intelligence/intelligent_timing/) for more information.
 
-## Facebook Audience Export
+## Facebook Audience export
 
 Braze provides the ability to manually export your users from the Braze Segments page to create Facebook Custom Audiences. This is a one-time, static audience export and will only create new Facebook Custom Audiences.
 
@@ -36,11 +36,11 @@ __Please note that all clients currently using Facebook Custom Audiences, MUST r
 
 For access to the new simplified Facebook Audience Export steps, check out our documentation [here]({{site.baseurl}}/partners/facebook/).
 
-## Content Block and Email Template API Updates
+## Content Block and email template API updates
 
 The [template/email/list]({{site.baseurl}}/api/endpoints/templates/email_templates/get_list_email_templates/) and [content_block/list]({{site.baseurl}}/api/endpoints/templates/content_blocks_templates/get_list_email_content_blocks/) API endpoints have been updated to include a new `tags` field. This field will list as an array, any tags that apply to the current block or email template.
 
-## Personalized From-Address
+## Personalized from-address
 
 When creating an email message within Braze, you can now personalize the From Address of the message in the "Sending Info" section of email composition. You can use any of [our supported personalization tags]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/supported_personalization_tags/)
 

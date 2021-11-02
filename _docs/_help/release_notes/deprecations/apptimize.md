@@ -28,7 +28,7 @@ Apptimize can be used in conjunction with Braze to complement your growth
 marketing / CRM strategies with product UI testing by syncing experiments and
 data across both platforms.
 
-## Use Cases
+## Use cases
 
 With Braze and Apptimize together, you can leverage both platforms in conjunction
 to create powerful end-to-end experiences:
@@ -38,7 +38,7 @@ to create powerful end-to-end experiences:
 * Concurrently test product feature configurations alongside their appropriate user messaging.
 * Tailor in-app experiences and their appropriate messaging for different segments of end users.
 
-## How It Works
+## How it works
 
 Braze and Apptimize can be integrated together to pass data from SDK to SDK.
 You can sync active Apptimize A/B test groups back to Braze, allowing you to
@@ -215,7 +215,7 @@ NSString *const ApptimizeAppboyTestEnrollmentStorageKey = @"ApptimizeAppboyTestE
 
 ### Android
 
-Import the `ApptimizeAppboy.java` class into your app and in your main `Activity`
+import the `apptimizeappboy.java` class into your app and in your main `activity`
 implementation, create a private member `appboyApptimizeIntegration`:
 
 ```java

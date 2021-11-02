@@ -8,7 +8,7 @@ description: "This article contains release notes for June 2019."
 
 # June 2019
 
-## Snowflake Partnership
+## Snowflake partnership
 
 Braze is proud to announce our partnership with Snowflake!
 

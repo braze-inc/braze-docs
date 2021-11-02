@@ -19,7 +19,7 @@ Moreover, we can't make any guarantees about exactly what that distribution will
 
 ### What happens when you stop a Canvas?
 
-When you stop a Canvas:
+When you stop a Canvas, the following applies:
 
 - Users will be prevented from entering the Canvas.
 - No further messages will be sent out, despite where a user is in the flow.
@@ -43,7 +43,7 @@ For more information on what you can or can't edit after launch, check out [Chan
 
 ### How are user conversions tracked in a Canvas?
 
-A user can only convert once per Canvas entry. 
+A user can only convert once per Canvas entry.
 
 Conversions are assigned to the most recent message received by the user for that entry. The summary block at the beginning of a Canvas reflects all conversions performed by users within that path, whether or not they received a message. Each subsequent step will only show conversions that happened while that was the most recent step the user received.
 

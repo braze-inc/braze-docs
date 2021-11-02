@@ -10,7 +10,7 @@ tool:
 
 ---
 
-# Attribute Triggers Overview
+# Attribute triggers overview
 
 > This reference article gives an overview of attribute triggers and how you can use them to send action-based messages.
 
@@ -24,19 +24,19 @@ To start using attribute triggers, create a campaign or Canvas step and select a
 
 ![attribute triggers][1]
 
-### Update Subscription Status
+### Update subscription status
 
 Use the `Update Subscription Status` trigger to target users when their subscription status is updated. For example, you can target users when their email or push subscription status changes to opted in, and thank them for opting in. You can also send a webhook to your systems whenever a user unsubscribes from email so that your internal systems are up to date with the latest subscription status information.
 
-### Update Subscription Group Status
+### Update subscription group status
 
 Use the `Update Subscription Group Status` trigger to target users when their subscription group status for email or SMS is updated. For example, you can target users with a welcome SMS message once they opt in to your program. You can also specify the source of the update to have finer control over when a message fires. 
 
 Update sources can be REST API, preference center (email), or inbound message (SMS). For example, you may want to only send your welcome SMS when the update comes from the REST API and not an inbound message, since Braze already automatically responds to certain inbound SMS.
 
-### Change Custom Attribute Value
+### Change custom attribute value
 
-#### Any New Value
+#### Any new value
 
 Use the `Change Custom Attribute Value` trigger with the `any new value` option to target users when a boolean, integer, string or date value changes to any new value. For example, target users when their number of loyalty points changes to let them know how many points they now have. In this example, let's say that a user has 85 loyalty points and you've set up a campaign to trigger when the loyalty point attribute changes to any new value. If this user's loyalty point attribute value changes to any new value (e.g 83, 84, 86, etc.) the campaign will trigger.
 
@@ -57,7 +57,7 @@ Your loyalty tier was just changed to {{custom_attribute.${loyalty_tier}}}
 {% endraw %}
 
 
-#### Specific Value
+#### Specific value
 
 Use the `Change Custom Attribute Value` trigger with the `specific value` option to target users when a boolean, integer or string custom attribute changes to a specific value. For example, target users when their loyalty tier changes to the best tier. For this example, say that the best loyalty tier is Super VIP. You can set up a campaign to trigger when a user's loyalty tier custom attribute changes to `Super VIP` so that you can congratulate the user on becoming a Super VIP.
 

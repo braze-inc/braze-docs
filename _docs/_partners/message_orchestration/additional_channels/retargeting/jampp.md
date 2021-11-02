@@ -14,7 +14,7 @@ search_tag: Partner
 
 Braze customers can integrate with Jampp by configuring the Braze webhook channel to stream events into Jampp. As a result, customers can add richer data sets to their retargeting initiatives with Jampp within the mobile advertising ecosystem.
 
-## Retargeting Cases
+## Retargeting cases
 
 Some examples of when you would want to retarget customers with an ad:
 - When a customer’s email or push subscription state changes.
@@ -23,7 +23,7 @@ Some examples of when you would want to retarget customers with an ad:
 
 One of the best ways to accomplish this is to use Braze as well as a retargeting partner specialized in mobile, such as Jampp. You want the retargeting partner to receive automated user info from Braze using webhooks. You’ll be able to leverage Braze’s targeting and triggering abilities to send events to Jampp, which could then be used to define retargeting campaign definitions in Jampp.
 
-## Prerequisites for Integration
+## Prerequisites for integration
 
 This integration supports iOS and Android apps.
 
@@ -41,13 +41,13 @@ Braze does not automatically collect the device IDFA/AAID so you must store thes
 
 # Integration
 
-### Step 1: Create a Webhook Template in Braze
+### Step 1: Create a webhook template in Braze
 
 You can create this from the `Templates & Media` section, or create a new webhook campaign in Braze.
 
 ![Jampp_Webhook_Template][6]
 
-### Step 2: Fill Out Your Template
+### Step 2: Fill out your template
 
 For this webhook, all data is passed on alongside the HTTP URL as query string parameters. The following parameters that need to be defined:
 
@@ -85,13 +85,13 @@ After defining the parameters above, insert this Liquid code template into the W
 
 ![Webhook Template Jampp][2]
 
-#### Request Headers and Method
+#### Request headers and method
 
 The `Content-Type` should be pre-populated as a key-value pair within the webhook template.
 
 ![Jampp Method][3]
 
-### Step 3: Preview Your Request
+### Step 3: Preview your request
 
 To ensure the request is rendering properly for different users, use the Message Preview. A good approach is to preview the Webhook for both Android as well as iOS users. You can also send test requests for these users. If the request was successful the API responds with `HTTP 204`.
 

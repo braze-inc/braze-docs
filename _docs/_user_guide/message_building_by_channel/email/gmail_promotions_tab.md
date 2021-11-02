@@ -8,38 +8,33 @@ channel:
 
 ---
 
-# Gmail Promotion Tool
+# Gmail Promotion tool
 
-Gmail is updating [the mobile Promotions tab][1] to allow marketers to send more information via annotations in a 'card' rather than just the subject line or pre-header information. Braze has built a tool to help you build the card from our product.
+Gmail has updated [the mobile Promotions tab][1] to allow marketers to send more information via annotations in a "card" rather than just the subject line or pre-header information. Braze has built a tool to help you build the card from our product.
 
-{% alert tip %}
-Currently, this Gmail feature is only available in their app, but Gmail is working on making it available on the desktop, as well.  
-{% endalert %}
-
-## Building the Card with Braze
+## Building the card with Braze
 
 Building the card in Braze is easy!
 
-First, create your email campaign, as you normally would. Then, as you're editing the content of your email, click the _Gmail Promo_ tab. Here, you'll be able to fill out fields that will generate the script for your Gmail Promo Tab card.
+First, create your email campaign, as you normally would. Then, as you're editing the content of your email, click the **Gmail Promo** tab. Here, you'll be able to fill out fields that will generate the script for your Gmail Promo Tab card.
 
-![buildyourcard][2]
+![Build Your Card][2]
 
 After you've finished filling out the fields, you'll see a completed script at the bottom of your editor. Copy and paste it into the "`<head>` "section/element of your email's `HTML`.
 
-![copyyourscript][3]
+![Copy Your Script][3]
 
 {% alert warning %}
 
-The Promotions script will only appear if your email lands in the Gmail _Promotions Tab_. Currently, Gmail uses algorithms to determine where your email will land. However, if a user ever marks your email as a _promotion_, Gmail's algorithm would be ignored, and your email will automatically land in the _Promotions Tab_ moving forward.
+The Promotions script will only appear if your email lands in the Gmail **Promotions Tab**. Currently, Gmail uses algorithms to determine where your email will land. However, if a user ever marks your email as a promotion, Gmail's algorithm would be ignored, and your email will automatically land in the **Promotions Tab** moving forward.
 
 {% endalert %}
 
-
-### Customize Your Card
+### Customize your card
 
 You can customize many variables for your card, which will map to the locations shown in the card layout below.
 
-![promocardmap][4]
+![Promo Card Map][4]
 
 | Customizable Variable | Description |
 |---|---|
@@ -58,17 +53,17 @@ We recommend that you upload your logo and product image to the Braze Media Libr
 While you can use Liquid within this script, we strongly suggest that you test as much as possible to avoid an error.
 {% endalert %}
 
-### Best Practices
+### Best practices
 
 In addition to adhering to the following best practices recommended by Gmail, you can use their [Preview Your Annotations][5] tool to see what their cards look like.
 
-#### Product Image
+#### Product image
 
 Gmail has seen better results with strong imagery related to the email message. Gmail does not recommend using a text-only design, as this space was designed to bring that visual language, vital to email marketing, to the preview. Don't use images with cut-off text or repeat images in multiple campaigns.
 
-#### Discount Offer
+#### Discount offer
 
-Gmail does not suggest using sentences or phrases, such as 'You Can Buy 1 Get 1 Free or Discounts on All Shorts and Shirts', as it may clip, no longer draws the eye, and competes with the subject line. Again, this space should only be used for your messaging to engage your customers with your email; therefore, avoid any language around "Open this email now" or "Click here for deals". Do not repeat your subject line.
+Gmail does not suggest using sentences or phrases, such as "You Can Buy 1 Get 1 Free or Discounts on All Shorts and Shirts", as it may clip, no longer draw the eye, and compete with the subject line. Again, this space should only be used for your messaging to engage your customers with your email, so avoid any language around "Open this email now" or "Click here for deals". Do not repeat your subject line.
 
 [1]: https://developers.google.com/gmail/promotab/
 [2]: {% image_buster /assets/img/create-gmail-promo.gif %}

@@ -10,21 +10,21 @@ tool:
   - Templates
 ---
 
-# Simple Survey In-App Message
+# Simple Survey in-app message
 
-Use the new **Simple Survey** In-App Message template to collect user attributes, insights, and preferences that power your campaign strategy.
+Use the new **Simple Survey** in-app message template to collect user attributes, insights, and preferences that power your campaign strategy.
 
 For example, ask users how they'd like to use your app, learn more about their personal preferences, or even ask about their satisfaction with a particular feature.
 
 ![Simple Survey examples]({% image_buster /assets/img/iam/iam-survey.png %})
 
-## SDK Requirements {#supported-sdk-versions}
+## SDK requirements {#supported-sdk-versions}
 
 This in-app message will only be delivered to devices that support [Flex CSS](https://caniuse.com/?search=flex), and must have at least the [SDK versions]({{site.baseurl}}/user_guide/engagement_tools/campaigns/ideas_and_strategies/new_features/#filtering-by-most-recent-app-versions) below:
 
 {% sdk_min_versions web:2.5.0 android:8.0.0 ios:3.23.0 %}
 
-## Creating a Survey {#create}
+## Creating a survey {#create}
 
 When creating an [in-app message][1], select **Simple Survey** for your **Message Type**.
 
@@ -32,7 +32,7 @@ When creating an [in-app message][1], select **Simple Survey** for your **Messag
 
 This survey template is supported for both mobile apps and web browsers. Remember to check that your SDKs are on the [minimum versions](#supported-sdk-versions) required for this feature.
 
-### Step 1: Add Your Survey Question
+### Step 1: Add your survey question
 
 To get started building your survey, add your question to the survey **Header** field. If desired, you can add an optional **Body** message that will appear below your survey question.
 
@@ -42,7 +42,7 @@ To get started building your survey, add your question to the survey **Header** 
 These fields can include both Liquid and emojis, so get fancy! 
 {% endalert %}
 
-### Step 2: Choose Between Single or Multiple-choice {#single-multiple-choice}
+### Step 2: Choose between single or multiple-choice {#single-multiple-choice}
 
 Use the Single vs. Multiple Choice option to control whether a user can select only one choice or multiple choices. You can add up to 12 choices in a survey.
 
@@ -52,7 +52,7 @@ Use the Single vs. Multiple Choice option to control whether a user can select o
 Your **Helper text** will automatically update when you switch between **Single-choice selection** and **Multiple-choice selection** to let users know how many choices they can select. 
 {% endalert %}
 
-### Step 3: Collect Custom Attributes {#custom-attributes}
+### Step 3: Collect custom attributes {#custom-attributes}
 
 Select **Log attributes upon submission** to collect attributes based on the user's submission. You can use this option to create new segments and retargeting campaigns. For example, in a satisfaction survey, you could send a follow-up email to all users who were not happy.
 
@@ -70,7 +70,7 @@ You can then create a segment for users with `Promotions Topic = true` to make s
 When custom attribute collection is enabled, choices that share the same custom attribute name will be combined into an array.
 {% endalert %}
 
-### Step 4: Choose Submission Behavior
+### Step 4: Choose submission behavior
 
 Once a user submits their response, you can optionally show a confirmation page, or simply close the message.
 
@@ -86,13 +86,13 @@ If you elect to add a confirmation page, switch to the **Confirmation Page** tab
 
 If you want to guide users to another page of your app or website, change the button’s **On-click behavior**.
 
-### Step 5: Stylize Your Message (Optional) {#styling}
+### Step 5: Stylize your message (optional) {#styling}
 
 You can customize the font color and accent color of the message using the **Color Theme** picker.
 
 ![Color Theme Picker]({% image_buster /assets/img/iam/color-theme-picker.png %}){: style="max-width:80%"}
 
-## Analyze Results {#analytics}
+## Analyze results {#analytics}
 
 Once your campaign has launched, you can analyze results in real-time to see the breakdown of each selected choice. If you've enabled [custom attribute collection](#custom-attributes), you'll also be able to create new segments or follow-up campaigns for users who have submitted the survey.
 
@@ -110,9 +110,9 @@ Check out [Reporting & Analytics][4] for a breakdown of your campaign metrics.
 
 Selected choices will automatically flow through to Currents, under the [__In-App Message Click Events__][6] `button_id` field. Each choice will be sent with its universally unique identifier (UUID).
 
-## Use Cases
+## Use cases
 
-### User Satisfaction
+### User satisfaction
 
 **Goal:** Measure customer satisfaction and send win-back campaigns to users who left low scores.
 
@@ -122,7 +122,7 @@ After you've launched your survey, you can then target your win-back campaigns t
 
 ![User Satisfaction][7]
 
-### Identify Customer Goals
+### Identify customer goals
 
 **Goal:** Identify top reasons why users visit your app.
 
@@ -132,7 +132,7 @@ For example, if the user selects "Upgrading my account", that will set `product_
 
 ![Identify Customer Goals][8]
 
-### Improve Conversion Rates
+### Improve conversion rates
 
 **Goal:** Understand why customers aren’t upgrading or purchasing.
 
@@ -142,7 +142,7 @@ For example, if the user selects "Too Expensive", that will set `upgrade_reason 
 
 ![Improve Conversion Rates][9]
 
-### Favorite Features
+### Favorite features
 
 **Goal:** Understand which features customers enjoy using.
 

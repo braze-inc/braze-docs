@@ -14,7 +14,7 @@ search_tag: Partner
 
 Develop robust, cross-channel lifecycle marketing campaigns with the powers of Braze and Remerge combined—build segments on the Braze dashboard, then send via webhook to Remerge to retarget users through their mobile DSP.
 
-# Remerge Retargeting Network
+# Remerge retargeting network
 
 To use Remerge, configure the Braze webhook channel to connect Braze with retargeting actions. It is important to have an automatic way of enabling Braze and the retargeting system (i.e. Remerge) to have visibility of what the other system does and adapt from the other’s message. Ad retargeting is helpful if you have users who have push notifications disabled or users who haven’t opened your app recently.
 
@@ -22,7 +22,7 @@ For example, An unregistered user could receive a push campaign saying “Thanks
 
 One of the best ways to accomplish this is to use Braze as well as a retargeting partner specialized in mobile, such as Remerge. You want the retargeting partner to receive automated user info from Braze using webhooks. You’ll be able to leverage Braze’s targeting and triggering abilities to send events to Remerge, which could then be used to define retargeting campaign definitions in remerge.io.
 
-## Request URL and Body
+## Request URl and body
 
 For this webhook, all data is passed on alongside the HTTP URL as query string parameters. There are three parameters that need to be defined:
 
@@ -62,13 +62,13 @@ The old endpoints are still valid and will stay valid, however, Remerge recommen
 
 You can find more information on Remerge's API endpoint [here][66].
 
-## Request Headers and Method
+## Request headers and method
 
 This webhook does not require any *Request Headers*, but be sure to choose GET in the dropdown for the *HTTP Method*.
 
 ![Request Method Remerge][68]
 
-## Preview Your Request
+## Preview your request
 
 To ensure the request is rendering properly for different users, use the Message Preview. A good approach is to preview the Webhook for both Android as well as iOS users. You can also send test requests for these users. If the request was successful the API responds with `HTTP 204`.
 

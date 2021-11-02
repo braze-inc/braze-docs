@@ -9,7 +9,7 @@ description: "This article outlines details about the Get Daily Active Users end
 
 ---
 {% api %}
-# Daily Active Users by Date Endpoint
+# Daily active users by date endpoint
 {% apimethod get %}
 /kpi/dau/data_series
 {% endapimethod %}
@@ -18,7 +18,7 @@ This endpoint allows you to retrieve a daily series of the total number of uniqu
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#90a64560-65aa-4f71-a8ef-1edf49321986 {% endapiref %}
 
-## Request Parameters
+## Request parameters
 
 | Parameter| Required | Data Type | Description |
 | -------- | -------- | --------- | ----------- |
@@ -27,7 +27,7 @@ This endpoint allows you to retrieve a daily series of the total number of uniqu
 | `app_id`    | Optional       | String | App API identifier retrieved from the **Developer Console**. If excluded, results for all apps in app group will be returned. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
 
-## Example Request
+## Example request
 {% raw %}
 ```
 curl --location -g --request GET 'https://rest.iad-01.braze.com/kpi/dau/data_series?length=10&ending_at=2018-06-28T23:59:59-5:00&app_id={{app_identifier}}' \

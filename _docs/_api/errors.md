@@ -6,13 +6,13 @@ page_type: reference
 page_order: 2.3
 
 ---
-# Errors & Responses
+# API errors and responses
 
 > This reference article covers the various errors and server responses that can come up while using the Braze API and how to troubleshoot them. 
 
 {% raw %}
 
-##  Server Responses
+## Server responses
 
 If your POST payload was accepted by our servers, then successful messages will be met with the following response:
 
@@ -40,7 +40,7 @@ In the case of a success, any messages that were not affected by an error in the
 }
 ```
 
-## Queued Responses {#messaging-queued}
+## Queued responses {#messaging-queued}
 
 During times of maintenance, Braze might pause real-time processing of the API. In these situations, the server will return an `HTTP Accepted 202` response code and the following body, which indicates that we have received and queued the API call but have not immediately processed it. All scheduled maintenance will be posted to [http://status.braze.com](http://status.braze.com) ahead of time.
 
@@ -50,7 +50,7 @@ During times of maintenance, Braze might pause real-time processing of the API. 
 }
 ```
 
-## Responses For Tracked Send Ids
+## Responses for tracked send IDs
 
 Analytics are always available for campaigns. In addition, analytics are available for a specific campaign send instance when the campaign is sent as a broadcast. When tracking is available for a specific campaign send instance, you will receive the following response:
 
@@ -62,7 +62,7 @@ Analytics are always available for campaigns. In addition, analytics are availab
 
 The provided send id can be used as a parameter for the send/data_series endpoint to pull back send specific analytics.
 
-## Fatal Errors
+## Fatal errors
 
 The following status codes and associated error messages will be returned if your request encounters a fatal error. Any of these error codes indicate that no messages will be sent.
 

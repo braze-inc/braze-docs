@@ -8,13 +8,13 @@ channel: email
 
 ---
 
-# Email Authentication
+# Email authentication
 
 > Email authentication is a collection of techniques that equip your emails with verifiable information about its origin.
 
 Proper authentication is crucial for ISPs to recognize you as a sender of desirable emails. It's how the ISPs know it's you and how they know to deliver your mail immediately. Without authentication, your outreach is presumed fraudulent.
 
-## Methods of Authentication
+## Methods of authentication
 
 ### Sender Policy Framework (SPF)
 

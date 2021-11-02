@@ -6,13 +6,13 @@ description: "This reference article covers how to use and store local Connected
 
 ---
 
-# Local Connected Content Variables
+# Local Connected Content variables
 
 Braze makes a standard GET request at send time to the endpoint specified within the `connected_content` tag. If the endpoint returns JSON, it's automatically parsed and stored in a variable called `connected`.  If the endpoint returns text, it will be directly inserted into the message in place of the `connected_content` tag.
 
 >  If you want to save your response to a variable, it’s recommended to return JSON objects. And if you want the response of Connected Content to replace the tag with the text, make sure the response is not valid JSON (as defined by [json.org][46])
 
-You can also specify `:save your_variable_name` after the url in order to save the data as something else. For example, the following `connected_content` tag will store the response to a local variable called `localweather` (you can save multiple `connected_content` JSON variables):
+You can also specify `:save your_variable_name` after the URL in order to save the data as something else. For example, the following `connected_content` tag will store the response to a local variable called `localweather` (you can save multiple `connected_content` JSON variables):
 
 {% raw %}
 ```js
@@ -24,7 +24,7 @@ Metaweather is a free weather API that uses a "Where-on-Earth ID" to return weat
 
 >  The stored variable can only be accessed within the field which contains the `connected_content` request. For example, if you wanted to use the `localweather` variable in both the message and title field, you should make the `connected_content` request within both fields. If the request is identical, Braze will use the cached results, rather than making a second request to the destination server. However, Connected Content calls made via HTTP POST do not cache by default and will make a second request to the destination server. If you wish to add caching to POST calls, refer to the [`cache_max_age`](#configurable-caching) option below.
 
-## JSON Parsing
+## JSON parsing
 
 Connected Content will interpret any JSON-formatted results into a local variable, when you specify `:save`. For example, a weather-related Connected Content endpoint returns the following JSON object, which you store into a local variable `localweather` by specifying `:save localweather`.
 {% raw %}
@@ -79,13 +79,13 @@ By default, Connected Content will set a Content-Type header on a GET HTTP reque
 ```
 {% endraw %}
 
-## HTTP POST
+## HTTP post
 
 By default, Connected Content makes an HTTP GET request to the specified URL. To make a POST request instead, specify `:method post`.
 
 You can optionally provide a POST body by specifying `:body` followed by a query string of the format `key1=value1&key2=value2&...`. Content-Type defaults to `application/x-www-form-urlencoded`. If you specify `:content_type application/json` and provide a form-urlencoded body such as `key1=value1&key2=value2`, Braze will automatically JSON-encode the body before sending.
 
-#### Default Content-Type
+#### Default content-type
 {% raw %}
 ```js
 {% connected_content https://example.com/api/endpoint :method post :body key1=value1&key2=value2 %}
@@ -96,7 +96,7 @@ You can optionally provide a POST body by specifying `:body` followed by a query
 ```
 {% endraw %}
 
-### Providing JSON Body
+### Providing json body
 If you want to provide your own JSON body, you can write it inline if there are no spaces. If your body has spaces, you should use an assign or capture statement. That is, any of these three are acceptable:
 
 {% raw %}
@@ -105,7 +105,7 @@ If you want to provide your own JSON body, you can write it inline if there are 
 {% connected_content https://example.com/api/endpoint :method post :body {"foo":"bar","baz":"{{1|plus:1}}"} :content_type application/json %}
 ```
 
-##### Body in a capture statement: Spaces allowed
+##### Body in a capture statement: spaces allowed
 ```js
 {% capture postbody %}
 {"foo": "bar", "baz": "{{ 1 | plus: 1 }}"}
@@ -113,14 +113,14 @@ If you want to provide your own JSON body, you can write it inline if there are 
 {% connected_content https://example.com/api/endpoint :method post :body {{postbody}} :content_type application/json %}
 ```
 
-##### Body in an assign statement: Spaces allowed
+##### Body in an assign statement: spaces allowed
 ```js
 {% assign postbody = '{"foo":"bar", "baz": "2"}' %}
 {% connected_content https://example.com/api/endpoint :method post :body {{postbody}} :content_type application/json %}
 ```
 {% endraw %}
 
-## HTTP Status Codes
+## HTTP status codes
 
 You can utilize the HTTP status from a Connected Content call by first saving it as a local variable and then using the `__http_status_code__` key. For example:
 
@@ -137,7 +137,7 @@ You can utilize the HTTP status from a Connected Content call by first saving it
 This key will only be automatically added to the Connected Content object if the endpoint returns a JSON object. If the endpoint returns an array or other type, then that key cannot be set automatically in the response.
 {% endalert %}
 
-## Configurable Caching {#configurable-caching}
+## Configurable caching {#configurable-caching}
 
 Connected Content will cache the value it returns from GET endpoints for a minimum of 5 minutes. If a cache time is not specified, the default cache time is 5 minutes.
 
@@ -145,7 +145,7 @@ Connected Content cache time can be configured to be longer with `:cache_max_age
 
 By default, Connected Content does not cache POST calls. You can change this behavior by adding `:cache_max_age` to the Connected Content POST call.
 
-#### Cache for Specified Seconds
+#### Cache for specified seconds
 
 This example will cache for 900 seconds (or 15 minutes).
 {% raw %}
@@ -155,7 +155,7 @@ This example will cache for 900 seconds (or 15 minutes).
 {% endraw %}
 
 
-#### Cache Busting
+#### Cache busting
 
 To prevent Connected Content from caching the value it returns from a GET request, you can use the `:no_cache` configuration, as shown below.
 

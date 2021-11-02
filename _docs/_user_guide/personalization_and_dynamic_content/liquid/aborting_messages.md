@@ -6,8 +6,9 @@ description: "Messages may now be aborted within conditional statements. In this
 
 ---
 
-# Aborting Messages
-Optionally, you can also now abort messages within conditionals. Here are some examples of how this feature can be used in marketing campaigns:
+# Aborting Liquid messages
+
+Optionally, you can also abort messages within conditionals. Here are some examples of how this feature can be used in marketing campaigns:
 
 **Aborting message if "Number Games Attended" = 0:**
 

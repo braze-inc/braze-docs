@@ -14,7 +14,7 @@ description: "This reference article describes the device-level properties captu
 
 This article describes the different device-level properties captured when using the Braze Android SDK.
 
-## Device Properties
+## Device properties
 
 By default, Braze will collect the following [device-level properties](https://appboy.github.io/appboy-android-sdk/javadocs/com/appboy/enums/DeviceKey.html) to allow device, language, and time zone-based message personalization:
 

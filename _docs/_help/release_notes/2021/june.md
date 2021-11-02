@@ -8,7 +8,7 @@ description: "This article contains release notes for June 2021."
 
 # June 2021
 
-## Conversion Correlation
+## Conversion correlation
 
 This guide covers the [Conversion Correlation]({{site.baseurl}}/user_guide/engagement_tools/testing/conversion_correlation/) analysis on the **Campaign Analytics** page, which gives you insight into what user attributes and behaviors help or hurt the outcomes you set for campaigns. Covered is an overview of the analysis, what is checked, when it's available, and how Braze checks for significance.
 
@@ -20,11 +20,11 @@ We've updated the metrics on the [Global Control Groups]({{site.baseurl}}/user_g
 
 Not sure where to start with analyzing your campaigns or Canvases? The [Reports Overview]({{site.baseurl}}/user_guide/data_and_analytics/your_reports/reports_overview/) provides guidance on which reports and analytics you can use to answer common marketing strategy questions.
 
-## New US-05 Cluster
+## New US-05 cluster
 
 Braze supports a new US cluster, US-05. Refer to our list of dashboard and REST [Endpoints]({{site.baseurl}}/api/basics/#endpoints) to see more.
 
-## Braze UI Updates
+## Braze UI updates
 
 In May 2021, Braze updated the following labels and terms in the Braze dashboard:
 

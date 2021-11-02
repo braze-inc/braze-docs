@@ -8,7 +8,7 @@ search_tag: Partner
 
 ---
 
-# Inkit Direct Mail Integration
+# Inkit direct mail integration
 
 > [Inkit][1] enables you to reach and communicate with your customers by delivering automated and personalized direct mail campaigns, rendering paperless documents at scale, and validating customer mailing addresses. 
 
@@ -28,7 +28,7 @@ You can access Inkit's services through Braze's webhook feature and send mail to
 
 You will need to use both your Inkit and Braze accounts to use the Inkit integration.
 
-### Step 1: Create a Webhook Template in Braze
+### Step 1: Create a webhook template in Braze
 
 You can create this from the **Templates & Media** section, or create a new webhook campaign in Braze.
 
@@ -40,7 +40,7 @@ Once you have selected the Inkit webhook template, you should see the following:
 - `Request Body`: Raw Text
 - `HTTP Method`: POST
 
-### Step 2: Fill Out Your Template
+### Step 2: Fill out your template
 
 Please ensure that your Liquid matches the proper custom attributes associated with the required and optional fields listed below. You can also add custom data fields to any request.
 
@@ -77,7 +77,7 @@ Inkit also requires a `HTTP Header` for authorization that includes your Inkit A
 
 {% endraw %}
 
-### Step 3: Preview Your Request
+### Step 3: Preview your request
 
 You will see that your raw text automatically highlights if it is an applicable Braze tag. You must have `street`, `unit`, `state`, and `zip` set up as [custom attributes][3] to send this Webhook.
 

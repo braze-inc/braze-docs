@@ -8,25 +8,23 @@ tool: Location
 
 ---
 
-# Mobile Integrations
+# Mobile integrations
 
-## Cross-Platform Requirements
+## Cross-platform requirements
 
-Geofence-triggered campaigns are available on iOS and Android. To support geofences:
+Geofence-triggered campaigns are available on iOS and Android. To support geofences, the following must be in place:
 
 1. Your integration must support background push notifications.
-
 2. Braze geofences or location collection must be enabled.
-
 3. For devices on iOS version 11 and up, the user must allow location access always for geofencing to work.
 
 {% alert important %}
 Starting with Braze SDK version 3.6.0 Braze location collection is disabled by default. To verify location collection is enabled on Android, ensure that `com_appboy_enable_location_collection` is set to `true` in your `braze.xml`.
 {% endalert %}
 
-## Geofence Configuration
+## Geofence configuration
 
-### Latitude/Longitude
+### Latitude and longitude
 
 The geographic center of the geofence.
 
@@ -36,9 +34,9 @@ The radius of the geofence in meters, measured from the geographic center. We re
 
 ### Cooldown
 
-Users receive geofence triggered notifications after performing enter or exit transitions on individual geofences.  After a transition occurs, there is a pre-defined period of time during which that user may not perform the same transition on that individual geofence again. This period of time is called the "cooldown" and is pre-defined by Braze. Its main purpose is to prevent unnecessary network requests.
+Users receive geofence triggered notifications after performing enter or exit transitions on individual geofences. After a transition occurs, there is a pre-defined period of time during which that user may not perform the same transition on that individual geofence again. This period of time is called the "cooldown" and is pre-defined by Braze. Its main purpose is to prevent unnecessary network requests.
 
-## Frequently Asked Questions
+## Frequently asked questions
 
 ##### How do geofences affect battery life?
 

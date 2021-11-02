@@ -9,7 +9,7 @@ description: "This article describes how to set user IDs for each of your users,
  
 ---
 
-# Setting User IDs for Web
+# Setting user IDs for web
 
 {% include archive/setting_user_ids/setting_user_ids.md %}
 
@@ -24,15 +24,15 @@ Additionally, we recommend against changing the user ID when a user logs out, as
 
 Refer to the [changeUser documentation][4] for more information.
 
-## Suggested User ID Naming Convention
+## Suggested user ID naming convention
 
 {% include archive/setting_user_ids/naming_convention.md %}
 
-## User ID Integration Best Practices & Notes
+## User ID integration best practices and notes
 
 {% include archive/setting_user_ids/best_practices.md %}
 
-## Aliasing Users
+## Aliasing users
 
 An alias serves as an alternative unique user identifier. Use aliases to identify users along different dimensions than your core user ID:
 

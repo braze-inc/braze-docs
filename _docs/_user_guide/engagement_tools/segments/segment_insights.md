@@ -8,13 +8,13 @@ tool:
   - Reports
 description: "This how-to article will walk you through how to use, interpret, and share Segment Insights."
 ---
+
 # Segment Insights
 
 > This how-to article will walk you through how to use, interpret, and share Segment Insights. 
 > <br>
 > <br> 
 > These insights can be used to target users and develop effective marketing campaigns.
-
 
 ![Segment Insights Dash][1]
 
@@ -38,7 +38,7 @@ Segment Insights have also been built right into the segment details view. When 
 
 ![Segment Insights Details][3]
 
-## Sample Use Cases {#insights-use-cases}
+## Sample use cases {#insights-use-cases}
 
 ### Comparing demographic usage and purchasing patterns
 

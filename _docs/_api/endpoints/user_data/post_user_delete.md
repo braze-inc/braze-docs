@@ -9,7 +9,7 @@ description: "This article outlines details about the delete User Information Br
 
 ---
 {% api %}
-# User Delete Endpoint
+# User delete endpoint
 {% apimethod post core_endpoint|https://www.braze.com/docs/core_endpoints %} 
 /users/delete
 {% endapimethod %}
@@ -27,7 +27,7 @@ Deleting user profiles CANNOT be undone. It will PERMANENTLY remove users which 
 A rate limit is applied to requests made to this endpoint for customers who onboarded with Braze on or after September 16, 2021. For more information, see [API Limits]({{site.baseurl}}/api/basics/#api-limits).
 {% endalert %}
 
-## Request Body
+## Request body
 
 ```
 Content-Type: application/json
@@ -41,7 +41,7 @@ Authorization: Bearer YOUR-REST-API-KEY
   "braze_ids" : (optional, array of string) Braze user identifiers for the users to delete
 }
 ```
-### Request Parameters
+### Request parameters
 
 | Parameter | Required | Data Type | Description |
 | --------- | ---------| --------- | ----------- |
@@ -50,7 +50,7 @@ Authorization: Bearer YOUR-REST-API-KEY
 | `braze_ids` | Optional | Array of strings | Braze user identifiers for the users to delete. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
 
-## Example Request
+## Example request
 ```
 curl --location --request POST 'https://rest.iad-01.braze.com/users/delete' \
 --header 'Content-Type: application/json' \
