@@ -652,7 +652,7 @@ The following is an example of an embedded Youtube video in an HTML snippet:
 [18]: http://developer.android.com/reference/android/view/View.html
 [19]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/in-app_messaging/customization/#setting-custom-listeners
 [20]: https://appboy.github.io/appboy-android-sdk/javadocs/com/appboy/ui/inappmessage/IInAppMessageAnimationFactory.html
-[21]: https://appboy.github.io/appboy-android-sdk/javadocs/com/appboy/ui/inappmessage/listeners/IInAppMessageManagerListener.html
+[21]: https://appboy.github.io/appboy-android-sdk/javadocs/com/braze/ui/inappmessage/listeners/IInAppMessageManagerListener.html
 [24]: https://appboy.github.io/appboy-android-sdk/javadocs/com/braze/ui/inappmessage/views/IInAppMessageImmersiveView.html
 [25]: https://github.com/Appboy/appboy-android-sdk/blob/master/android-sdk-ui/src/main/java/com/appboy/ui/inappmessage/IInAppMessageView.java
 [34]: https://appboy.github.io/appboy-android-sdk/javadocs/com/braze/ui/inappmessage/BrazeInAppMessageManager.html
