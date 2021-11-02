@@ -9,13 +9,13 @@ channel:
 
 ---
 
-# In-App Messages
+# In-app messages
 
 [In-App Messages]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/) help you get content to your user without interrupting their day with a push notification. Customized and tailored in-app messages enhance the user experience and help your audience get the most value out of your app. With a variety of layouts and customization tools to choose from, in-app messages engage your users more than ever before.
 
 To see examples of in-app messages, check out our [Case Studies][31].
 
-## In-App Message Types
+## In-app message types
 
 Braze currently offers the following default in-app message types: 
 
@@ -36,7 +36,7 @@ By default, in-app messages are enabled after completing the standard SDK integr
 __Note that integration of `SDWebImage` is required if you plan on using our Braze UI for displaying images__ within iOS In-App Messages, News Feed, or Content Cards.
 {% endalert %}
 
-### Expected Behaviors by Message Types
+### Expected behaviors by message types
 
 These are what it looks like for your users to open one of our out-of-the-box in-app message types.
 

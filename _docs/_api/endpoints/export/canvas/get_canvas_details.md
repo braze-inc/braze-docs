@@ -9,7 +9,7 @@ description: "This article outlines details about the Canvas Details Endpoint."
 
 ---
 {% api %}
-# Canvas Details Endpoint
+# Canvas details endpoint
 {% apimethod get %}
 /canvas/details
 {% endapimethod %}
@@ -18,14 +18,14 @@ This endpoint allows you to export metadata about a Canvas, such as its name, wh
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#5188873c-13a3-4aaf-a54b-9fa1daeac5f8 {% endapiref %}
 
-## Request Parameters
+## Request parameters
 
 | Parameter   | Required | Data Type | Description            |
 | ----------- | -------- | --------- | ---------------------- |
 | `canvas_id` | Required | String | See [Canvas API Identifier]({{site.baseurl}}/api/identifier_types/) |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
 
-## Example Request
+## Example request
 {% raw %}
 ```
 curl --location -g --request GET 'https://rest.iad-01.braze.com/canvas/details?canvas_id={{canvas_identifier}}' \

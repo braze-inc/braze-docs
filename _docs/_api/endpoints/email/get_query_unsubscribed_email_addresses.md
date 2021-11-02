@@ -9,7 +9,7 @@ description: "This article outlines the usage of and parameters for using the Ge
 
 ---
 {% api %}
-# Retrieve List of or Query Email Unsubscribes
+# Retrieve list of or query email unsubscribes
 {% apimethod get %}
 /email/unsubscribes
 {% endapimethod %}
@@ -18,7 +18,7 @@ Use the /email/unsubscribes endpoint to return emails that have unsubscribed dur
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#d2966b81-188a-407b-ba7e-e6c252c44b4a {% endapiref %}
 
-## Request Parameters
+## Request parameters
 
 You must provide an `end_date`, as well as either an `email` or a `start_date` .
 
@@ -34,7 +34,7 @@ You must provide an `end_date`, as well as either an `email` or a `start_date` .
 
 If your date range has more than `limit` number of unsubscribes, you will need to make multiple API calls, each time increasing the `offset` until a call returns either fewer than `limit` or zero results.
 
-## Example Request 
+## Example request 
 ```
 curl --location --request GET 'https://rest.iad-01.braze.com/email/unsubscribes?start_date=2020-01-01&end_date=2020-02-01&limit=1&offset=1&sort_direction=desc&email=example@braze.com' \
 --header 'Authorization: Bearer YOUR-API-KEY-HERE'

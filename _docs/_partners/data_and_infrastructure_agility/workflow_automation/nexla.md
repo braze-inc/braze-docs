@@ -28,11 +28,11 @@ Customers that use [Currents]({{site.baseurl}}/user_guide/data_and_analytics/bra
 
 Integrating with Braze is simple on Nexla. Once you've created an account and logged on to the platform, Braze connectors come ready for production out of the box. Simply select the connector, add your Braze credentials, and immediately begin integrating, preparing, and monitoring your data in any format.
 
-### Step 1: Create a Nexla Account
+### Step 1: Create a Nexla account
 
 If you do not already have a Nexla account, head to the Nexla [website](https://www.nexla.com) to request a free demo and trial. Next, log on to [www.dataops.nexla.io](https://www.dataops.nexla.io) and sign on with your new credentials.
 
-### Step 2: Add Your Source
+### Step 2: Add your source
 
 #### If Braze is your data source: 
 1. Navigate to __Flows > Create a New Flow__ on the left toolbar.
@@ -45,19 +45,19 @@ Nexla will now search the source for any data it finds and generate a [Nexset](h
 #### If Braze is your destination
 Visit Nexla documentation on [connecting sources to Nexla](https://nexla.zendesk.com/hc/en-us/sections/115001685927-Create-a-Data-Source).
 
-### Step 3: Transform (Optional)
+### Step 3: Transform (optional)
 
 If you want to perform any custom [transformations](https://nexla.zendesk.com/hc/en-us/sections/115001686007-Transformations) on your data or use Nexla's prebuilt connectors, click the __Transform__ button on the dataset to enter the Transform Builder.
 
-### Step 4: Send to Destination
+### Step 4: Send to destination
 
 Similar to adding a source, click the __Send to Destination__ arrow on the dataset, and select any of Nexla's destination connectors or Braze if you had a different source. Input your credentials, configure the destination options, and click __Save__. Data will instantly begin flowing in the format you specified to the destination of your choice.
 
-## Using This Integration
+## Using this integration
 
 Once the flow is set up, nothing more is required. Nexla will handle any changes in the source data and scale to any amount of new data and notify you of any schema changes or errors for triage. If you'd like to make changes to transformations, the source, or the destination, you can click and make the change, and Nexla will update the flow instantly.
 
-## Use Cases
+## Use cases
 
 Nexla's data-as-a-product, [Nexsets](https://nexla.zendesk.com/hc/en-us/articles/360052999674-Dataset-Information), make it easy to work with data of any format without worrying about metadata. When you set up your data flows to or from Braze with Nexla, no-code tools make it easy and available in minutes. Once the data flow is set to a destination, Nexla will monitor your flow and scale to any amount of data. Our platform makes it simple for anyone to create scalable data flows. Teams working with data get a no/low-code unified experience to integrate, transform, provision, and monitor data for any use case. 
 

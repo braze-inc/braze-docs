@@ -16,6 +16,8 @@ partner_top_header: "Message Personalization"
 valid_partner_list:
 - name: AWS Personalize
   url: /docs/partners/message_personalization/dynamic_content/amazon_personalize/
+- name: Worthy
+  url: /docs/partners/message_orchestration/dynamic_content/worthy/
 - name: Certona
   url: /docs/partners/message_personalization/dynamic_content/certona/
 - name: Playable
@@ -41,5 +43,6 @@ valid_partner_list:
   url: /docs/partners/message_personalization/location/radar/
 - name: Bluedot
   url: /docs/partners/message_personalization/location/bluedot/
-
+- name: Judo
+  url: /docs/partners/message_orchestration/dynamic_content/judo/
 ---

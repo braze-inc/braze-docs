@@ -32,5 +32,6 @@ valid_partner_list:
   url: /docs/partners/data_and_infrastructure_agility/customer_data_platform/amperity/
 - name: RevenueCat
   url: /docs/partners/data_and_infrastructure_agility/payments/revenuecat/
-
+- name: BlueConic
+  url: /docs/partners/data_and_infrastructure_agility/customer_data_platform/blueconic/
 ---

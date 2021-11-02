@@ -10,11 +10,11 @@ tool:
   
 ---
 
-# Reporting & Analytics
+# Reporting and analytics
 
 > This reference article provides an overview of the different Content Card reporting metrics and analytics options provided in the Braze dashboard.
 
-## Content Card Metrics
+## Content Card metrics
 
 - **Recipients**: The number of users who have received a Content Card that received at least one impression.
 - **Impressions**: The number of times a Content Card was visible and on-screen.
@@ -23,7 +23,7 @@ tool:
 
 To see the meanings of all Content Cards metrics, check the [Report Metrics Glossary][1].
 
-### Control Groups
+### Control groups
 
 To measure the impact of an individual Content Card, a [Control Group][2] can be added to an A/B Test.
 
@@ -33,7 +33,7 @@ The Campaign Details Analytics Block (located above the Performance table) will 
 If you have a customized feed, be sure to log impressions for control cards to inform our analytics of when a user _would have seen_ the control card in its feed position. For more detail, see the [iOS](/docs/developer_guide/platform_integration_guides/ios/content_cards/data_model/#card-methods), [Android](/docs/developer_guide/platform_integration_guides/android/content_cards/customization/#fully-custom-content-card-display-for-android), and [Web](/docs/developer_guide/platform_integration_guides/web/content_cards/integration/#control-group) developer guides.
 {% endalert %}
 
-## Reporting in Campaigns
+## Reporting in campaigns
 
 Campaigns will deliver your reports in a series of blocks. You may see more or less than those listed in the tabs below, but each has its own useful purpose.
 

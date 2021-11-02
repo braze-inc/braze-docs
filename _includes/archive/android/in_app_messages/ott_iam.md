@@ -2,7 +2,7 @@
 
 The Braze Android SDK natively supports displaying In-App Messages on OTT devices like Android TV or Fire Stick.
 
-#### Key Differences
+#### Key differences
 
 Some key differences exist in the display of standard In-App Messages between native and OTT devices.
 

@@ -9,7 +9,7 @@ description: "This article outlines details about the Get Campaign Analytics end
 
 ---
 {% api %}
-# Campaign Analytics Endpoint
+# Campaign analytics endpoint
 {% apimethod get %}
 /campaigns/data_series
 {% endapimethod %}
@@ -18,7 +18,7 @@ This endpoint allows you to retrieve a daily series of various stats for a campa
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#c07b5ebd-0246-471e-b154-416d63ae28a1 {% endapiref %}
 
-## Request Parameters
+## Request parameters
 
 | Parameter | Required | Data Type | Description |
 | --------- | -------- | --------- | ----------- |
@@ -27,7 +27,7 @@ This endpoint allows you to retrieve a daily series of various stats for a campa
 | `ending_at` | Optional | Datetime <br>([ISO-8601](https://en.wikipedia.org/wiki/ISO_8601) string) | Date on which the data series should end. Defaults to time of the request. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
 
-## Example Request 
+## Example request 
 {% raw %}
 ```
 curl --location -g --request GET 'https://rest.iad-01.braze.com/campaigns/data_series?campaign_id={{campaign_identifier}}&length=7&ending_at=2020-06-28T23:59:59-5:00' \
@@ -37,7 +37,7 @@ curl --location -g --request GET 'https://rest.iad-01.braze.com/campaigns/data_s
 
 ## Response
 
-### Multichannel Response
+### Multichannel response
 
 ```json
 Content-Type: application/json
@@ -127,7 +127,7 @@ Authorization: Bearer YOUR-REST-API-KEY
 }
 ```
 
-### Multivariate Response
+### Multivariate response
 
 ```json
 Content-Type: application/json

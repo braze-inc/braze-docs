@@ -52,7 +52,7 @@ hide_breadcrumb: true
 
       {%- for user_list in page.user_menu_list  -%}
         {%- if user_list.link -%}
-        <a href="{{ user_list.link }}">
+        <a href="{{ user_list.link | multi_lang }}">
           {%- endif %}
       <div id="{{ user_list.name | handle }}" class="user_item">
         <div class="user_img" style="background-color: {{ user_list.bg_color}}">
@@ -80,7 +80,7 @@ hide_breadcrumb: true
             <div class="user_description">
             {%- for user_list in page.popular_topic_list  -%}
               <div>
-              <a href="{{ user_list.link }}">{{ user_list.name }}</a>
+              <a href="{{ user_list.link | multi_lang }}">{{ user_list.name }}</a>
               </div>
             {%- endfor -%}
           </div>

@@ -9,9 +9,9 @@ description: "This article covers how to implement the universal deep linking de
 
 ---
 
-# Android Deep Linking
+# Android deep linking
 
-## Universal Deep Link Delegate
+## Universal deep link delegate
 
 The Android SDK provides the ability to set a single delegate object to custom handle all deep links opened by Braze across Content Cards, in-app messages, and push notifications.
 
@@ -106,7 +106,7 @@ class CustomNavigator : IAppboyNavigator {
 {% endtab %}
 {% endtabs %}
 
-## Deep Linking to App Settings
+## Deep linking to app settings
 
 To allow for deep links to directly open your app's settings, you'll need a custom AppboyNavigator. In the following example, the presence of a custom key-value pair called `open_notification_page` will make the deep link open the app's settings page.
 
@@ -167,13 +167,13 @@ AppboyNavigator.setAppboyNavigator(object : IAppboyNavigator {
 {% endtab %}
 {% endtabs %}
 
-## Deep Linking to the News Feed {#Android_Deep_Advance}
+## Deep linking to the News Feed {#Android_Deep_Advance}
 
 To deep link to the Braze News Feed from a push notification, [create a custom deep link][1] for your News Feed activity.
 
 Then, as you set up your push notification campaign (either through the [dashboard][2] or [API][3]), configure the notification to navigate to your News Feed Deep Link.
 
-## Custom WebView Activity {#Custom_Webview_Activity}
+## Custom WebView activity {#Custom_Webview_Activity}
 
 By default, when website deeplinks are opened inside the app by Braze, they are handled by [`BrazeWebViewActivity`][udl-4]. To change this:
 

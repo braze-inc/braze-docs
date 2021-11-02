@@ -7,7 +7,7 @@ page_type: solution
 description: "This article covers dispatch ID behavior, including it's usage, implications, and limitations."
 ---
 
-# Dispatch ID Behavior
+# Dispatch ID behavior
 
 A `dispatch_id` is the ID of the message dispatch - a unique ID for each "transmission" sent from Braze. Users who are send a scheduled message get the same `dispatch_id`, while action-based or API-triggered messages will receive a unique `dispatch_id` per user.
 
@@ -17,7 +17,7 @@ Note that `dispatch_ids` are per user, per campaign for triggered (action-based 
 
 This can result in two different users having different `dispatch_ids` for a single campaign if messages were sent at two different times. This is often because the API requests were made separately. If both users were in the same campaign audience in a single send, their Dispatch IDs would be the same.
 
-## Dispatch ID Behavior in Campaigns
+## Dispatch ID behavior in campaigns
 
 Scheduled campaign messages get the same `dispatch_id`. Action-based or API-triggered campaign messages will get a unique `dispatch_id` per user.
 
@@ -31,7 +31,7 @@ If they are included in the audience of an API-triggered campaign, they will hav
 Dispatch IDs are generated randomly for all Canvas Steps because Braze treats Canvas Steps as triggered events, even when they are "scheduled". This may result in inconsistencies generating the ids. Sometimes, a Canvas step will have unique `dispatch_ids` per user per send, or it may have shared `dispatch_ids` across users per send.
 {% endalert %}
 
-## Template Dispatch ID into Messages with Liquid
+## Template dispatch ID into messages with Liquid
 
 If you want to track the dispatch of a message from within the message (in a URL, for example), you can template in the `dispatch_id`. You can find the formatting for this in our list of Supported Personalization Tags, under [Canvas Attributes]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/supported_personalization_tags/).
 
@@ -41,7 +41,7 @@ This behaves just like `api_id`, in that since the `api_id` isn't available at c
 Liquid templating of `dispatch_id_for_unsent_campaign` does not work with in-app messages, since in-app messages don't have a `dispatch_id`.
 {% endalert %}
 
-## Dispatch ID Currents Field for Email
+## Dispatch ID Currents field for email
 
 In the effort to continue enhancing our Currents capabilities, we're adding `dispatch_id` as a field to Currents Email events across all connector types.
 

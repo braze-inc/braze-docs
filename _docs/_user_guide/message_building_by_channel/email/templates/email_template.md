@@ -11,27 +11,29 @@ alias: "/dnd/email_template/"
 
 ---
 
-# How to Create an Email Template
+# How to create an email template
 
 > This article covers how to create, customize, and manage email templates.
 
 Email messages are great for delivering content to the user on their terms. They are also wonderful tools to re-engage users who may have even uninstalled your app. The Braze dashboard has an email template editor that allows you to create custom-tailored, eye-catching emails and save them for later use in campaigns. You can also upload your own [HTML Email Template]({{site.baseurl}}/user_guide/message_building_by_channel/email/templates/html_email_template/).
 
-## Creating Your Template
+## Creating your template
 
-### Step 1: Navigate to the Email Template Editor
+### Step 1: Navigate to the email template editor
 
 In the left navigation, click __Templates & Media__, under the __Engagement__ section. This will open up the __Email Template Gallery__.
 
-### Step 2: Create or Choose a Template
+### Step 2: Create or choose a template
 
 Now, you can create a new template or edit an existing template (plain or [mobile responsive][8]) using either the drag & drop editing experience or standard HTML experience. If you'd like to create a new template, then you can choose from Braze's predesigned templates, or you can choose to create a new layout.
 
 ![New Template][2]
 
-_Note: Any existing custom HTML templates will need to be re-created using the Drag & Drop Editor._
+{% alert note %}
+Any existing custom HTML templates will need to be re-created using the Drag & Drop Editor.
+{% endalert %}
 
-### Step 3: Customize Your Template
+### Step 3: Customize your template
 
 You can write your message within the rich-text editor or optionally flip over to our HTML editor or Drag & Drop Editor to customize your content. Once selected, you will be guided to the editor experience you chose. An 'HTML Editor' or 'Drag & Drop Editor' badge will appear, indicating that you are about to use this editing experience for template creation.
 
@@ -39,7 +41,7 @@ You can write your message within the rich-text editor or optionally flip over t
 When composing your email template copy, do not switch back and forth between different editor types (HTML/Block/Classic) as that may shift the previously created HTML leading to rendering issues. 
 {% endalert %}
 
-![dnd_badge_icon]({% image_buster /assets/img/dnd_badge_icon.png %})
+![Drag and Drop Editor Icon]({% image_buster /assets/img/dnd_badge_icon.png %})
 
 {% tabs %}
 {% tab HTML Editor %}
@@ -49,7 +51,7 @@ Braze will add a footer with an unsubscribe link at the bottom of your HTML emai
 ![Enter Email Template Editing]({%image_buster/assets/img/email_templates/template3.jpg %})
 <br>
 <br>
-![E-Mail Template Editor Guide]({%image_buster/assets/img/email_templates/template4.jpg %})
+![Email Template Editor Guide]({%image_buster/assets/img/email_templates/template4.jpg %})
 
 Our editor supports **HTML Autocomplete** triggered by the `Tab` key.  This feature should be used on naked HTML tags. For example, using `Tab` on a `<head>` tag will result in:
 {% raw %}
@@ -65,18 +67,24 @@ Our editor supports **HTML Autocomplete** triggered by the `Tab` key.  This feat
 {% endtab %}
 {% tab Drag & Drop Editor %}
 
-The drag & drop editing experience is broken out into 3 sections: __Sending Settings__, __Content__, and __Preview & Test__.
+The drag & drop editing experience is broken out into three sections: __Sending Settings__, __Content__, and __Preview & Test__.
 
 {% subtabs %}
 {% subtab Send Settings %}
-#### __Sending Settings__
+
+#### __Sending settings__
+
 The Sending Settings section allows you to configure your from and reply-to address as well as set the subject line or pre-header. 
 
-_Note: Advanced functionality will appear in the campaign or Canvas step composer. In advanced functionality, you can modify your inline CSS setting, set a BCC email address, and enter in a header or extra key-value pairs (if configured)._
+{% alert note %}
+Advanced functionality will appear in the campaign or Canvas step composer. In advanced functionality, you can modify your inline CSS setting, set a BCC email address, and enter in a header or extra key-value pairs (if configured).
+{% endalert %}
 
 {% endsubtab %}
 {% subtab Content %}
+
 #### __Content__
+
 The Content section contains the editor. There are three key components within this section.
 
 - __Content__: This section includes a series of tiles that represent the different kinds of content you can use in your message. More will become available in the future. To use them, just drag one inside an existing row segment; it will auto-adjust to the column width. Every block has its own settings, such as granular control on padding. The right-side panel automatically switches to a property panel for the selected content element.<br><br> For more information see [Editor Block Properties]({{site.baseurl}}/dnd/editor_blocks/)<br><br>
@@ -86,7 +94,9 @@ The Content section contains the editor. There are three key components within t
 This is very useful to build a coherent message very quickly.
 {% endsubtab %}
 {% subtab Preview and Test %}
+
 #### __Preview & Test__
+
 The Preview & Test section allows you to preview your email based on different users.
 
 - __Random User__: Braze will randomly select a user from the database and preview the email based on their attributes/event information.
@@ -96,10 +106,10 @@ Note: This user may or may not be part of your segmentation criteria. Segmentati
 {% endsubtab %}
 {% endsubtabs %}
 
-_Note: Inbox Vision is currently unavailable during this testing phase and will be made available in the future_
+Inbox Vision is currently unavailable during this testing phase and will be made available in the future.
 
 {% alert tip %}
-To read more about the different components of the drag & drop editing experience, visit our drag & drop documentation articles [here]({{site.baseurl}}/user_guide/message_building_by_channel/email/drag_and_drop/). 
+To read more about the different components of the drag & drop editing experience, visit our Drag & Drop Editor documentation articles [here]({{site.baseurl}}/user_guide/message_building_by_channel/email/drag_and_drop/). 
 {% endalert %}
 
 {% endtab %}
@@ -107,10 +117,11 @@ To read more about the different components of the drag & drop editing experienc
 
 Braze will add a footer with an unsubscribe link at the bottom of your email by default. You can customize this footer in the **Email Settings** tab of the **Manage Settings** page. For more information, please read our article on [custom footers][cf].
 
-#### Step 4a: Check for Email Errors
-Email errors are presented on the 'compose' tab of the message workflow. Errors prevent you from progressing forward, while "Warnings" indicate reminders to help you follow best practices. Depending on your business, you might choose to ignore them.
+#### Step 4a: Check for email errors
 
-![dnd_compose_error][1]{: style="float:right;max-width:40%;margin-left:15px;"}
+Email errors are presented on the **Compose** tab of the message workflow. Errors prevent you from progressing forward, while "Warnings" indicate reminders to help you follow best practices. Depending on your business, you might choose to ignore them.
+
+![Drag & Drop Compose Error][1]{: style="float:right;max-width:40%;margin-left:15px;"}
 
 Here's a list of errors that are accounted for in our editor:
 
@@ -120,7 +131,7 @@ Here's a list of errors that are accounted for in our editor:
 - Emails with a blank **Body** or **Subject**.
 - Emails with no unsubscribe link.
 
-#### Step 4b: Preview and Test Your Message
+#### Step 4b: Preview and test your message
 
 After you finish composing your template, you can test it before sending it out.
 
@@ -134,7 +145,7 @@ When you're ready for a final check, select **Test Send** and send a test messag
 
 If you see any issues with your template or want to make any changes, click **Edit Email** to return to the editor.
 
-### Step 5: Save Your Template
+### Step 5: Save your template
 
 Be sure to save your template by clicking **Save Template** in the bottom right corner of the editor. You're now ready to use this template in any campaign or Canvas step you choose.
 
@@ -142,18 +153,19 @@ Be sure to save your template by clicking **Save Template** in the bottom right 
 If you make any edits to an existing template, those changes will not be reflected in campaigns created using previous versions of that template.
 {% endalert %}
 
-## Using Your Templates in API Campaigns
+## Using your templates in API campaigns
+
 To use your email for an API campaign, you need an `email_template_id`, which can be found at the bottom of any email template created in Braze.
 
 ![Save Template][6]
 
-## Managing Email Templates
+## Managing email templates
 
 You can [duplicate]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/duplicate/) and [archive]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/archive/) email templates! Learn more about creating and managing templates and creative content in [Templates & Media]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/).
 
 ## FAQs
 
-For answers to frequently asked questions about email templates, check out our [Email and Link Templates FAQs][9] page.
+For answers to frequently asked questions about email templates, check out our [email and link templates FAQs][9] page.
 
 
 [2]: {% image_buster /assets/img/email_templates/template2.png %}

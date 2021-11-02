@@ -20,4 +20,6 @@ valid_partner_list:
   url: /docs/partners/message_orchestration/channel_extensions/loyalty/voucherify/
 - name: Jebbit
   url: /docs/partners/message_orchestration/channel_extensions/loyalty/jebbit/
+- name: Punchh
+  url: /docs/partners/message_orchestration/channel_extensions/loyalty/punchh/
 ---

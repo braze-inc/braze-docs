@@ -46,7 +46,7 @@ guide_menu_list:
 
 ---
 
-# Welcome to Our Help Articles
+# Welcome to our Help articles
 
 Use the navigation on the left to find the article you need.
 

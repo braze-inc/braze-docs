@@ -50,4 +50,7 @@ guide_menu_list:
 - name: "iOS 10.3 Customizable App Icon Feature"
   link: /docs/user_guide/message_building_by_channel/push/ios/customizable_app_icons/
   fa_icon: fas fa-cog
+- name: Push Reporting
+  link: /docs/user_guide/message_building_by_channel/push/push_reporting/
+  fa_icon: fas fa-file-alt
 ---

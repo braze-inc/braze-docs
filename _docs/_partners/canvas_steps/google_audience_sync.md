@@ -20,7 +20,8 @@ __Common use cases for syncing Custom Audiences include:__
 __Please note:__ This feature gives brands the option to control what specific first-party data is shared with Google. At Braze, the integrations with which you can and cannot share your first-party data are given the utmost consideration. To learn more about our Braze data privacy policy, please click [here](https://www.braze.com/privacy).
 
 ## Integration
-### Integration Requirements
+
+### Integration requirements
 
 You will need to ensure that you have the following items created and/or completed before setting up your Google Audience Step in Canvas.
 
@@ -30,8 +31,8 @@ You will need to ensure that you have the following items created and/or complet
 | Google Customer Match | [Google](https://support.google.com/google-ads/answer/6299717) |  Customer Match is not available for all advertisers.<br><br>__To use Customer Match, your account must have:__<br>• A good history of policy compliance<br>• A good payment history<br>• At least 90 days history in Google Ads<br>• More than USD 50,000 total lifetime spend. For advertisers whose accounts are managed in currencies other than USD, your spend amount will be converted to USD using the average monthly conversion rate for that currency.<br><br>If your account does not meet the above criteria, then your account is currently ineligible to use Customer Match.<br><br>Please chat with your Google Ads Rep for more guidance on Customer Match availability for your account. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
 
-## Implementation Process
-### Step 1: Connect Google Account
+## Implementation process
+### Step 1: Connect Google account
 To get started, go to the Google Ads technology partner page and then select __Connect Google Ads__. 
 
 ![Google Sync][1]
@@ -52,13 +53,13 @@ If you plan to export iOS IDFA or Google Advertising IDs within your audience sy
 ![Google Sync]({% image_buster /assets/img/google_sync/google_sync5.png %})
 {% endalert %}
 
-### Step 2: Add a Google Audience Step in Canvas
+### Step 2: Add a Google Audience step in Canvas
 
 Add a step in your Canvas, select the dropdown at the top of the step, and select the __Google Audience__ step.
 
 ![Google Sync][6]
 
-### Step 3: Sync Setup
+### Step 3: Sync setup
 
 Click on the __Custom Audience__ button to open the step editor.
 
@@ -102,13 +103,13 @@ Complete the remainder of your user journey within Canvas and then launch! If yo
 
 Users will then advance to the next step of the Canvas if there is one or exit the Canvas if it is the last step. 
 
-## User Syncing & Rate Limit Considerations
+## User syncing and rate limit considerations
 
 As users reach the Audience Sync Step, Braze will sync these users in near real-time while respecting Google Ads API rate limits. What this means in practice is that Braze will try to batch and process as many users every 5 seconds before sending these users to Google. 
 
 Once a customer is close to reaching the Google Ads API rate limit, Google will provide feedback back to Braze around retry recommendations. If a Braze customer reaches their rate limit, Braze the Canvas will retry the sync for up to &#126;13 hours. If the sync is not possible, these users are listed under the Users Errored metric.
 
-## Understanding Analytics 
+## Understanding analytics 
 <br>
 __Entered__: Number of users who entered this step to be synced to Google.
 

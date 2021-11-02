@@ -17,7 +17,7 @@ Use the Radar and Braze integration to add location context and tracking to your
 
 Additionally, Radar Geo APIs can be leveraged to enrich or personalize your marketing campaigns through [Connected Content]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/connected_content/about_connected_content/). 
 
-## Event Integration Details
+## Event integration details
 
 To map data between the Braze and Radar SDKs, you will need to set the same user IDs in both systems. This can be done by using the `changeUser()` method in the Braze SDK and the `setUserId()` method in the Radar SDK.
 
@@ -36,15 +36,15 @@ You can set separate API keys for the test and live environments.
 
 Whenever Radar events are generated, Radar will send custom events and user attributes to Braze. Events from iOS devices will be sent using your iOS API keys; events and user attributes from Android devices will be sent using your Android API keys.
 
-## Event and Attribute-Based Use Cases
+## Event and attribute-based use cases
 
 You can use custom events and user attributes to build location-based segments or trigger location-based campaigns.
 
-### Segment of Traveling Users
+### Segment of traveling users
 
 ![Radar Segment]({% image_buster /assets/img_archive/radar-segment.png %})
 
-### Trigger When a User Enters a Location with High Confidence
+### Trigger when a user enters a location with high confidence
 
 ![Radar Campaign]({% image_buster /assets/img_archive/radar-campaign.png %})
 

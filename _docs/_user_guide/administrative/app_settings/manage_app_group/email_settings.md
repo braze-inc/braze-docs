@@ -9,13 +9,13 @@ channel: email
 
 ---
 
-# Email Settings
+# Email settings
 
 Email settings can be found within the **Manage Settings** page of the Dashboard. Here, Braze allows you to set specific outbound email settings like display name, reply-to address, custom footers, custom opt-in and opt-out pages, and more. Including features like these in your outbound emails make for a fluid and cohesive customer experience.
 
-## Outbound Email Settings
+## Outbound email settings
 
-### Multiple Sending Emails
+### Multiple sending emails
 
 Use the outbound email settings below to change the name and email address used when Braze sends emails to your users. Using these settings, you may also include additional sending and reply-to addresses. These addresses will be available when building your campaign through the **Edit Sending Info** options available as you compose your campaign email.
 
@@ -31,7 +31,7 @@ This feature allows you to:
 
 When setting your "From" addresses, make sure your "From" email domain matches your sending domain (i.e., marketing.yourdomain.com). Failure to do this may result in SPF and DKIM misalignment. All reply-to emails can be set to your root domain.
 
-### BCC Addresses
+### BCC addresses
 
 The **BCC Address** settings allow you to add and manage BCC addresses that can be appended to outbound email messages sent from Braze. Appending a BCC address to an email message will send an identical copy of the message your user receives to your BCC inbox. This is a useful tool to retain copies of messages you sent your users for compliance requirements or customer support issues.
 
@@ -49,7 +49,7 @@ There is no need to change the existing API request to include the address. Chec
 
 ![Require BCC][12]
 
-### Custom Footer
+### Custom footer
 
 For commercial emails, the [CAN-SPAM Act][5] requires that all commercial emails include an unsubscribe option. With the custom footer settings, you are able to remain CAN-SPAM compliant while also customizing your email opt-out footer. In order to remain compliant, you must add your custom footer to all emails sent as part of campaigns for this app group. To read more about custom footer Liquid templating, check out our [documentation]({{site.baseurl}}/user_guide/message_building_by_channel/email/managing_user_subscriptions/#changing-email-subscriptions).
 
@@ -62,7 +62,7 @@ Requirements:
 
 Learn more about email best practices [here][7].
 
-## Custom Unsubscribe Page
+## Custom unsubscribe page
 
 Within the email settings, Braze lets you set a **Custom Unsubscribe Page**. This page will be viewable once a user has selected Unsubscribe from the bottom of an email. This feature is great if you want your branding and message to remain consistent throughout your user lifecycle.
 
@@ -75,7 +75,7 @@ Requirements:
 
 Learn more about best practices for email list management [here][7].
 
-## Custom Opt-In Page
+## Custom opt-in page
 
 Within the email settings, Braze lets you set a Custom Opt-In Page. This feature is great if you want your branding and message to remain consistent throughout your user lifecycle.
 
@@ -88,17 +88,17 @@ Requirements:
 
 Learn more about best practices for email list management [here][7].
 
-## Email Open Tracking Pixel
+## Email open tracking pixel
 
 The email opening tracking pixel is an invisible 1px by 1px image that automatically gets inserted into your email HTML. This pixel helps Braze detect whether the end-users have opened your email. Email open information can be very useful, helping users determine effective marketing strategies by understanding the corresponding open rates.
 
-### Placing the Tracking Pixel
+### Placing the tracking pixel
 
 Braze's default behavior is to append the tracking pixel to the bottom of your email. For the vast majority of users, this is the ideal place to put the pixel. While the pixel is already styled to cause as few visual changes as possible, any unintentional visual changes would be the least visible at the bottom of an email. This is also the default for email providers such as SendGrid and SparkPost.
 
 However, a small subset of companies may prefer that the pixel get templated to a different location. One advantage of not placing the tracking pixel at the bottom is avoiding cases where it gets cut off by clients (e.g., Gmail) that truncate emails after a certain amount of kilobytes.
 
-### Changing Location of Tracking Pixel
+### Changing location of tracking pixel
 
 Braze currently supports overriding the ESP's default open tracking pixel location (the last tag in the <body> of an email) to move it to the first tag in the <body>.
   
@@ -121,23 +121,23 @@ SSL enablement will wrap the URL of the tracking pixel with HTTPS instead of HTT
 
 The three email settings listed below are features that require no additional action other than toggling it on or off by using the corresponding switch. Please read each setting for further details.
 
-### Resubscribe Users when Their Email Changes
+### Resubscribe users when their email changes
 
 You may automatically resubscribe users when they change their email address. For example, if a previously unsubscribed app group user changes their email address to one that is not on Braze's unsubscribe list, they will automatically become resubscribed.
 
 Learn more about best practices for email list management [here][8].
 
-### Include a List-Unsubscribe Header
+### Include a list-unsubscribe header
 
 ![list_unsub_1][00]{: style="float:right;max-width:60%;margin-left:15px;"}
 
 This feature allows you to automatically include a List-Unsubscribe email header for emails sent to subscribed or opted-in users. This List-Unsubscribe header allows email providers to include an "Unsubscribe" button when displaying an email.
 
-#### Benefits of the List-Unsubscribe Header
+#### Benefits of the list-unsubscribe header
 
 Some recipients prefer to have an Unsubscribe link available in the same place for all emails, rather than having to find links in each mailing. When enabled, this feature puts a prominent Unsubscribe link in the header of the email client, making it easier to unsubscribe and therefore less likely that customers will mark your email as Spam. This has a significant impact on your reputation and deliverability as an email sender.
 
-#### How the List-Unsubscribe Header Works
+#### How the list-unsubscribe header works
 
 Navigate to **Email Settings** within your AppGroup. Toggle List-Unsubscribe to **ON**.
 
@@ -155,7 +155,7 @@ The header is not added for messages targeting “all users including unsubscrib
 If you use Mailjet, you do not have the flexibility to choose on/off for this feature - it will be `ON` by default.
 {% endalert %}
 
-### Inline CSS on New Emails by Default
+### Inline CSS on new emails by default
 
 CSS inlining is a technique that automatically inlines your emails' CSS styles. For some email clients, this can improve the way that your emails render. This feature automatically inlines CSS on new emails by default.
 

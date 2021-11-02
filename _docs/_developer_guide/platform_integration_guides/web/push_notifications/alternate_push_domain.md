@@ -9,7 +9,7 @@ channel: push
 
 ---
 
-# Alternate Web Push Domain
+# Alternate web push domain
 
 To integrate Push on the web, your domain must be [secure][2], which generally means `https`, `localhost`, and other exceptions as defined in the [W3C Push Standard][1]. You'll also need to be able to register a Service Worker at the root of your domain, or at least be able to control the HTTP headers for that file.
 
@@ -25,7 +25,7 @@ Keep in mind that like many workarounds on the web, browsers continually evolve 
 
 To make the example below more clear, we'll use use `http://insecure.com` and `https://secure.com` as our two domains with the goal of getting visitors to register for push on `http://insecure.com`. This example could also be applied to a `chrome-extension://` scheme for a browser extension's popup page.
 
-## Step 1: Initiate Prompting Flow
+## Step 1: Initiate prompting flow
 
 On `insecure.com`, open a new window to your secure domain using a URL parameter to pass the currently logged-in user's Braze External ID.
 
@@ -51,7 +51,7 @@ document.getElementById("opt-in").onclick = function(){
 </script>
 ```
 
-## Step 2: Register For Push
+## Step 2: Register for push
 
 At this point, `secure.com` will open a popup window in which you can initialize the Braze Web SDK for the same User ID, and request the user's permission for Web Push.
 

@@ -57,7 +57,7 @@ To integrate Braze with Adjust, you must configure Braze in Adjust's dashboard.
 4. Copy your specific Braze REST Endpoint into the `REST_endpoint` field.<br><br>
 5. Click __Save & Close__.
 
-### Attribution Parameters
+### Attribution parameters
 
 Assuming you configure your integration as suggested above, Braze will map Adjust's data to segment filters as described below.
 
@@ -74,11 +74,11 @@ Assuming you configure your integration as suggested above, Braze will map Adjus
   At this time, Braze only receives non-organic install attribution data from these attribution partners. This means that organic data will **not** appear as an attributed source within Braze.
 {% endalert %}
 
-## Facebook and Twitter Attribution Data
+## Facebook and Twitter attribution data
 
 Attribution data for Facebook and Twitter campaigns is __not available through our partners__. Facebook and Twitter do not permit their partners to share attribution data with third parties and, therefore, our partners __cannot send that data to Braze__.
 
-## Adjust Click Tracking URLs in Braze (Optional)
+## Adjust click tracking URls in Braze (optional)
 
 Using click tracking links in your Braze campaigns will allow you to easily see which campaigns are driving app installs and re-engagement. As a result, you'll be able to measure your marketing efforts more effectively and make data-driven decisions on where to invest more resources for the maximum ROI.
 

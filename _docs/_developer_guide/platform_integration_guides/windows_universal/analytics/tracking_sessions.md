@@ -9,11 +9,11 @@ description: "This reference article covers how to track sessions on the Windows
 
 # Analytics
 
-## Session Tracking
+## Session tracking
 
 The Braze SDK reports session data that is used by the Braze dashboard to calculate user engagement and other analytics integral to understanding your users. Based on the below session semantics, our SDK generates "start session" and "close session" data points that account for session length and session counts viewable within the Braze dashboard.
 
-### Session Lifecycle
+### Session lifecycle
 
 Our Windows integration logs session opens when the app is launched and logs session closes when the application is closed.
 
@@ -21,7 +21,7 @@ Our Windows integration logs session opens when the app is launched and logs ses
 
 **Note**: The minimum value for `sessionTimeoutInSeconds` is 1 second.
 
-### Testing Session Tracking
+### Testing session tracking
 
 To detect sessions via your user, find your user on the dashboard and navigate to "App Usage" on the user profile. You can confirm that session tracking is working by checking that the "Sessions" metric increases when you would expect it to.
 

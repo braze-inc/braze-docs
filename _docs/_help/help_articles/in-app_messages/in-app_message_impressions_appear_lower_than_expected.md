@@ -7,7 +7,7 @@ page_type: solution
 description: "This help article covers actions you can take if your in-app message impressions are lower than you'd like them to be."
 channel: in-app messages
 ---
-# Low In-App Message Impressions
+# Low in-app message impressions
 
 If your impressions are lower than you'd like them to be, we recommend that you:
 
@@ -17,28 +17,28 @@ If your impressions are lower than you'd like them to be, we recommend that you:
 * [Check Event Triggers](#event-triggers)
 * [Check Message Impressions](#message-impressions)
 
-## Segment Size
+## Segment size
 
 It’s important to ensure that your segment size in the campaign reflects your intended audience. There may be filters applied that are limiting your audience and causing your campaign to have fewer impressions.
 
-## Segment Changelogs
+## Segment changelogs
 
 If the impression count is low compared to where it once was, make sure no one unintentionally altered the segment or campaign since launch. Our segment and campaign changelogs will give you insight into changes that have been made, who made the change, and when it happened.
 
 ![Campaign Changelog][10]
 
-## Run Tests
+## Run tests
 
 A quick way to identify any obvious issues is to clone the campaign, target your own user ID or email, and launch the campaign. Once you perform the message trigger (session start, custom event, etc.), verify that you received the message correctly. Then, navigate to the dashboard, and refresh the page to see if your impression is logged correctly. If it is not, then the problem is likely within your implementation.
 
 
-## Event Triggers
+## Event triggers
 
 If the campaign is triggered by a session start or a custom event, you want to ensure that this event or session is happening frequently enough to trigger the message. Check this data on the [Overview][1] (for session data) or [Custom Events][2] pages:
 
 ![Custom Event Counts Statistic][11]
 
-## Message Impressions
+## Message impressions
 
 Customization of the in-app message UI or delivery mechanisms within the SDK may require your developers to utilize our methods to manually log in-app message impressions. Check with your developers to see if you use in-app message customization.
 

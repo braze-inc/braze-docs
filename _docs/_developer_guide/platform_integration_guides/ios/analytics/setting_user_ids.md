@@ -7,15 +7,15 @@ description: "This article shows how to set user IDs in your iOS app, suggested 
  
 ---
 
-# Setting User IDs for iOS
+# Setting user IDs for iOS
 
 {% include archive/setting_user_ids/setting_user_ids.md %}
 
-## Suggested User ID Naming Convention
+## Suggested user ID naming convention
 
 {% include archive/setting_user_ids/naming_convention.md %}
 
-## Assigning a User ID
+## Assigning a user ID
 
 You should make the following call as soon as the user is identified (generally after logging in) in order to set the user id:
 
@@ -47,11 +47,11 @@ Additionally, we recommend against changing the user ID when a user logs out, as
 
 - See the method declaration within the [`Appboy.h` file][4]. - In addition, you can refer to the [`changeUser` class documentation][5] for more information.
 
-## User ID Integration Best Practices & Notes
+## User ID integration best practices and notes
 
 {% include archive/setting_user_ids/best_practices.md %}
 
-## Aliasing Users
+## Aliasing users
 
 {% include archive/aliasing.md platform="iOS" %}
 

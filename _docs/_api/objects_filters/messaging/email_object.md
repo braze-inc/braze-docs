@@ -8,7 +8,7 @@ description: "This article explains the different components of Braze's Email Ob
 
 ---
 
-# Email Object Specification
+# Email object specification
 
 ```json
 {

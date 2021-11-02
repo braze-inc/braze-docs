@@ -24,9 +24,9 @@ search_tag: Partner
 | Digioh Account | Digioh | [https://www.digioh.com/](https://www.digioh.com/)  | You will need to have a Digioh account. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
 
-## Integration Details
+## Integration details
 
-### Step 1: Create Digioh Integration 
+### Step 1: Create Digioh integration 
 
 In the Digioh platform, click the **Integrations** tab, and create the **+ New Integration** button.
 
@@ -34,11 +34,11 @@ Next, select **Braze** from the **Integration** dropdown and name the integratio
 
 !["Select the correct integration from the dropdown"][2]{: style="max-width:50%;"}
 
-### Step 2: Map Additional Fields
+### Step 2: Map additional fields
 
 On the **Integrations** page, use the **Map Fields** link to map additional fields beyond email and name.
 
-### Step 3: Apply Integration
+### Step 3: Apply integration
 
 To apply the integration to a [lightbox](https://help.digioh.com/knowledgebase/digioh-platform-training-videos-video-series-getting-started-with-digioh/), use the **Add** or **Edit** link in the **Integrations** column on the **Boxes** page.
 

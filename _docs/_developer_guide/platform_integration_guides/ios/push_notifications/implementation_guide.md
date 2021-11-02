@@ -13,11 +13,11 @@ channel:
 Looking for the out-of-the-box Push developer integration guide? Find it [here]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/push_notifications/integration/).
 {% endalert %}
 
-# Push Notification Implementation Guide
+# Push notification implementation guide
 
 > This optional and advanced implementation guide covers ways to leverage push notification content app extensions to get the most out of your push messages. Included are three custom use cases built by our team, accompanying code snippets, and guidance on logging analytics. Visit our Braze Demo Repository [here](https://github.com/braze-inc/braze-growth-shares-ios-demo-app)! Please note that this implementation guide is centered around a Swift implementation, but Objective-C snippets are provided for those interested.
 
-## Notification Content App Extensions
+## Notification content app extensions
 
 ![Push Content Extension][1]{: style="max-width:65%;border:0;margin-top:10px"}
 
@@ -41,7 +41,7 @@ Objective-C<br>
 &#45; `NotificationViewController.m`<br>
 &#45; `MainInterface.storyboard`
 
-### Custom Category Configuration
+### Custom category configuration
 
 To set up a custom view in the dashboard you must toggle on notification buttons and enter your custom category. The pre-registered custom iOS category you provide is then checked against the `UNNotificationExtensionCategory` in the `.plist` of your Notification Content Extension Target. The value given here must match what is set in the Braze dashboard.
 
@@ -52,20 +52,20 @@ To set up a custom view in the dashboard you must toggle on notification buttons
 Since pushes with content extensions aren't always apparent, it is recommended to include a call to action to nudge your users to expand their push notifications.
 {% endalert %}
 
-## Use Case and Implementation Walkthrough
+## Use case and implementation walkthrough
 
 There are three push notification content app extension types provided. Each type has a concept walkthrough, potential use cases, and a look into how push notification variables may look and be used in the Braze dashboard:
 - [Interactive Push Notification](#interactive-push-notification)
 - [Personalized Push Notifications](#personalized-push-notifications)
 - [Information Capture Push Notifications](#information-capture-push-notification)
 
-### Interactive Push Notification
+### Interactive push notification
 
 Push notifications can respond to user actions inside a content extension. For users running iOS 12 or later, this means you can turn your push messages into fully interactive push notifications! This interactivity offers many possibilities to get your users engaged in your notifications. The example below shows a push where users are able to play a match game inside the expanded notification.
 
 ![Push Content Extension][12]{: style="border:0"}
 
-#### Dashboard Configuration
+#### Dashboard configuration
 
 To set up a custom view in the dashboard, within the notification button settings enter the specific category you would like to display. Next, in the `.plist` of your Notification Content Extension, you must also set the custom category to the `UNNotificationExtensionCategory` attribute. The value given here must match what is set in the Braze dashboard. Lastly, to enable user interactions in a push notification, set the `UNNotificationExtensionInteractionEnabled` key to true.
 
@@ -73,24 +73,24 @@ To set up a custom view in the dashboard, within the notification button setting
 
 ![Interactive Push Dashboard Example][14]{: style="max-width:50%;"}
 
-#### Other Use Cases
+#### Other use cases
 Push content extensions are an exciting option to introduce interactivity to your promotions and applications. Some examples include a game for users to play, a spin-to-win wheel for discounts, or a "like" button to save a listing or song.
 
 ##### Ready to log analytics?
 Visit the [following section](#logging-analytics) to get a better understanding of how the flow of data should look.
 
-### Personalized Push Notifications
+### Personalized push notifications
 ![Personalized Push Dashboard Example][6]{: style="float:right;max-width:40%;margin-left:15px;border:0"}
 
 Push notifications can display user-specific information inside a content extension. The example to the right shows a push notification after a user has completed a specific task (Braze LAB course) and is now encouraged to expand this notification to check their progress. The information provided here is user-specific and can be fired off as a session is completed or specific user action is taken by leveraging an API trigger. 
 
-#### Dashboard Configuration
+#### Dashboard configuration
 
 To set up a personalized push in the dashboard, you must register the specific category you would like to be displayed, and then within the key-value pairs using standard Liquid, set the appropriate user attributes you would like the message to show. These views can be personalized based on specific user attributes of a specific user profile.
 
 ![Personalized Push Dashboard Example][5]{: style="max-width:60%;"}
 
-#### Handling Key-Value Pairs
+#### Handling key-value pairs
 
 The method below, `didReceive` is called when the content extension has received a notification, it can be found within the `NotificationViewController`. The key-value pairs provided in the dashboard are represented in the code through the use of a `userInfo` dictionary.
 
@@ -127,14 +127,14 @@ func didReceive(_ notification: UNNotification) {
 {% endtab %}
 {% endtabs %}
 
-#### Other Use Cases
+#### Other use cases
 
 The ideas for progress-based and user-focused push content extensions are endless, some examples include adding the option to share your progress across different platforms, expressing achievements unlocked, punch cards, or even onboarding checklists. 
 
 ##### Ready to log analytics?
 Visit the [following section](#logging-analytics) to get a better understanding of how the flow of data should look.
 
-### Information Capture Push Notification
+### Information capture push notification
 
 Push notifications can capture user information inside a content extension, allowing you to push the limits of what is possible with a push. Examining the flow shown below, the view is able to respond to state changes. Those state change components are represented in each image. 
 
@@ -147,13 +147,13 @@ Push notifications can capture user information inside a content extension, allo
 
 Note that the information requested here can be a wide range of things such as SMS number capture, it doesn't have to be email-specific.
 
-#### Dashboard Configuration
+#### Dashboard configuration
 
 To set up an information capture capable push in the dashboard, you must register and set your custom category, and provide the key-value pairs that are needed. As seen in the example, you may also include an image in your push. To do this, you must integrate [rich notifications]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/push_notifications/rich/), set the notification style in your campaign to Rich Notification, and include a rich push image.
 
 ![Information Capture Push Dashboard Example][9]
 
-#### Handling Button Actions
+#### Handling button actions
 
 Each action button is uniquely identified. The code checks if your response identifier is equal to the `actionIndentifier`, and if so, knows that the user clicked the action button.
 
@@ -184,7 +184,7 @@ func didReceive(_ response: UNNotificationResponse, completionHandler completion
 {% endtab %}
 {% endtabs %}
 
-##### Dismissing Pushes
+##### Dismissing pushes
 
 Push notifications can be automatically dismissed from an action button press. There exist three pre-built push dismissal options that are recommended:
 
@@ -192,22 +192,22 @@ Push notifications can be automatically dismissed from an action button press. T
 2. `completion(.doNotDismiss)` - Notification stays open
 3. `completion(.dismissAndForward)` - Push dismisses and the user gets forwarded into the application.
 
-#### Other Use Cases
+#### Other use cases
 
 Requesting user input through push notifications is an exciting opportunity that many companies do not take advantage of. In these push messages, you can not only request basic information like name, email, or number, but you could also prompt users to complete a user profile if unfinished, or even to submit feedback. 
 
 ##### Ready to log analytics?
 Visit the section below to get a better understanding of how the flow of data should look. 
 
-## Logging Analytics
+## Logging analytics
 
-### Logging with the Braze API (Recommended)
+### Logging with the Braze API (recommended)
 
 Logging analytics can only be done in real-time with the help of the customer's server hitting Braze's API [users/track]({{site.baseurl}}/api/endpoints/user_data/post_user_track/) endpoint. To log analytics, send down the `braze_id` value in the key-value pairs field (as seen in the screenshot below) to identify which user profile to update.
 
 ![Personalized Push Dashboard Example][18]{: style="max-width:80%;"}
 
-### Logging Manually
+### Logging manually
 
 Logging manually will require you to first configure app groups within Xcode, and then create, save, and retrieve analytics. This will require some custom developer work on your end. The code snippets shown below will help address this. 
 
@@ -215,18 +215,18 @@ It's also important to note that analytics are not sent to Braze until the mobil
 
 ![Push Logging][13]
 
-#### Step 1: Configure App Groups within Xcode
+#### Step 1: Configure app groups within Xcode
 Add a Capability `App Groups`. If you haven’t had any app group in your app, go to the Capability of the main app target, turn on the `App Groups`, and click the “+”. Use your App’s bundle ID to create the App Group. For example, if your app’s bundle ID is `com.company.appname`, you can name your App Group `group.com.company.appname.xyz`. Make sure the `App Groups` are turned on for both your main app target and the content extension target.
 
 ![Add App Groups][19]
 
-#### Step 2: Integrate Code Snippets
+#### Step 2: Integrate code snippets
 The following code snippets are a helpful reference on how to save and send custom events, custom attributes, and user attributes. This guide will be speaking in terms of UserDefaults, but the code representation will be in the form of a helper file  `RemoteStorage`. There also exist additional helper files `UserAttributes` and `EventName Dictionary` that are used when sending and saving user attributes. All helper files can be found below.
 
 {% tabs local %}
 {% tab Custom Events %}
 
-##### Saving Custom Events
+##### Saving custom events
 
 To save custom events you must create the analytics from scratch. This is done by creating a dictionary, populating it with metadata, and saving the data through the use of a helper file.
 
@@ -279,7 +279,7 @@ func saveCustomEvent(with properties: [String: Any]? = nil) {
 {% endsubtab %}
 {% endsubtabs %}
 
-##### Sending Custom Events to Braze
+##### Sending custom events to Braze
 
 After the SDK is initialized is the best time to log any saved analytics from a notification content app extension. This can be done by, looping through any pending events, checking for the "Event Name" key, setting the appropriate values in Braze, and then clearing the storage for the next time this function is needed.
 
@@ -367,7 +367,7 @@ func logPendingCustomEventsIfNecessary() {
 {% endtab %}
 {% tab Custom Attributes %}
 
-##### Saving Custom Attributes
+##### Saving custom attributes
 
 To save custom attributes you must create the analytics from scratch. This is done by creating a dictionary, populating it with metadata, and saving the data through the use of a helper file.
 
@@ -420,7 +420,7 @@ func saveCustomAttribute() {
 {% endsubtab %}
 {% endsubtabs %}
 
-##### Sending Custom Attributes to Braze
+##### Sending custom attributes to Braze
 
 After the SDK is initialized is the best time to log any saved analytics from a notification content app extension. This can be done by looping through the pending attributes, setting the appropriate custom attribute in Braze, and then clearing the storage for the next time this function is needed.
 
@@ -484,7 +484,7 @@ func setCustomAttributesWith(keysAndValues: [String: Any]) {
 {% endtab %}
 {% tab User Attributes %}
 
-##### Saving User Attributes
+##### Saving user attributes
 
 When saving user attributes, it is recommended to create a custom object to decipher what type of attribute is being updated (`email`, `first_name`, `phone_number`, etc.). The object should be compatible with being stored/retrieved from `UserDefaults`. See the `UserAttribute` helper file for one example of how to accomplish this.
 
@@ -543,7 +543,7 @@ func saveUserAttribute() {
 {% endsubtab %}
 {% endsubtabs %}
 
-##### Sending User Attributes to Braze
+##### Sending user attributes to Braze
 
 After the SDK is initialized is the best time to log any saved analytics from a notification content app extension. This can be done by looping through the pending attributes, setting the appropriate custom attribute in Braze, and then clearing the storage for the next time this function is needed.
 
@@ -610,7 +610,7 @@ func logPendingUserAttributesIfNecessary() {
 {% endtab %}
 {% tab Helper Files %}
 
-##### Helper Files
+##### Helper files
 
 {% details RemoteStorage Helper File %}
 {% subtabs global %}

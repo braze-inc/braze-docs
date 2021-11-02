@@ -8,7 +8,7 @@ alias: /api/api_campaigns/
 tool: Campaigns
 
 ---
-# API Campaigns
+# API campaigns
 
 > This reference article covers how to generate a `campaign_id` to include in your API calls and how to configure that campaign.
 
@@ -16,12 +16,12 @@ tool: Campaigns
 Campaigns sent through the <a href="{{site.baseurl}}/api/endpoints/messaging/"> Messaging API </a>can have the same detailed reporting and retargeting options as campaigns created on the dashboard.
 {% endalert %}
 
-## Create a New Campaign
+## Create a new campaign
 Navigate to the **Campaigns** page in your company Braze account and click __Create Campaign__, then select __API Campaigns__.
 
 Now, you can move on to configuring your API campaign.
 
-## Configure Your Campaign
+## Configure your campaign
 
 ![Create API Campaigns][4]
 

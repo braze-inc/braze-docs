@@ -9,7 +9,7 @@ description: "This reference article describes how to request the number of unre
 
 ---
 
-# Requesting Unviewed Content Card Count
+# Requesting unviewed Content Card count
 
 You can request the number of unread cards at any time by calling:
 

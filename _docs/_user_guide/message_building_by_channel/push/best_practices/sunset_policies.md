@@ -8,7 +8,7 @@ channel: push
 
 ---
 
-# Sunset Policies for Push {#push-sunset-policies}
+# Sunset policies for push {#push-sunset-policies}
 
 Even when you make sure to send only relevant, timely push notifications, some users may still be unresponsive to them and find them spammy.  If a user shows a history of repeatedly ignoring your push notifications, it's a good idea to stop sending them pushes before they become annoyed with your app's communications or uninstall your app altogether.  To do this, create a sunset policy that eventually stops sending push notifications to users who haven't had a direct or influenced open for a long period of time. You can read about the advantages of a sunset policy and learn how to create one within our platform [here][19].
 

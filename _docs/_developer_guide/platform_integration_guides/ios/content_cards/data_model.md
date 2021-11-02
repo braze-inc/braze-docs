@@ -10,11 +10,11 @@ channel:
 
 ---
 
-# Content Cards View Controller Integration
+# Content Cards view controller integration
 
 Content Cards can be integrated with two view controller contexts: Navigation or Modal.
 
-## Navigation Context
+## Navigation context
 
 Example of pushing a `ABKContentCardsTableViewController` instance into a navigation controller:
 
@@ -45,7 +45,7 @@ navigationController?.pushViewController(contentCards, animated: true)
 To customize the navigation bar's title, set the title property of the `ABKContentCardsTableViewController` instance's `navigationItem`.
 {% endalert %}
 
-## Modal Context
+## Modal context
 
 This modal is used to present the view controller in a modal view, with a navigation bar on top and a Done button on the right side of the bar.
 
@@ -78,11 +78,11 @@ For examples of these view controllers, check out our [Content Cards sample app]
 To customize the header, set the title property of the `navigationItem` belonging to the `ABKContentCardsTableViewController` instance embedded in the parent `ABKContentCardsViewController` instance.
 {% endalert %}
 
-# Content Cards Data Model
+# Content Cards data model
 
 The Content Cards data model is available in the iOS SDK.
 
-## Getting the Data
+## Getting the data
 
 To access the Content Cards data model, subscribe to Content Cards update events:
 
@@ -131,11 +131,11 @@ NotificationCenter.default.addObserver(self, selector:
 
 If you want to change the card data after it's been sent by Braze, we recommend storing a deep copy of the card data locally, updating the data and displaying yourself. The cards are accessible via [ABKContentCardsController](https://appboy.github.io/appboy-ios-sdk/docs/interface_a_b_k_content_cards_controller.html).
 
-## Content Card Model
+## Content Card model
 
 Braze offers three content card types: Banner, Captioned Image and Classic. Each type inherits common properties from a base ABKContentCard class, plus has additional properties as described below.
 
-### Base Content Card Model Properties - ABKContentCard
+### Base Content Card model properties - ABKContentCard
 
 |Model|Description|
 |---|---|
@@ -151,7 +151,7 @@ Braze offers three content card types: Banner, Captioned Image and Classic. Each
 | `extras`| An optional NSDictionary of NSString values.|
 {: .reset-td-br-1 .reset-td-br-2}
 
-### Banner Content Card Properties - ABKBannerContentCard
+### Banner Content Card properties - ABKBannerContentCard
 
 |Model|Description|
 |---|---|
@@ -159,7 +159,7 @@ Braze offers three content card types: Banner, Captioned Image and Classic. Each
 | `imageAspectRatio` | This property is the aspect ratio of the card's image.|
 {: .reset-td-br-1 .reset-td-br-2}
 
-### Captioned Image Content Card Properties - ABKCaptionedImageCard
+### Captioned image Content Card properties - ABKCaptionedImageCard
 
 |Model|Description|
 |---|---|
@@ -170,7 +170,7 @@ Braze offers three content card types: Banner, Captioned Image and Classic. Each
 | `domain` | The link text for the property URL, like @"blog.braze.com". It can be displayed on the card's UI to indicate the action/direction of clicking on the card.|
 {: .reset-td-br-1 .reset-td-br-2}
 
-### Classic Content Card Properties - ABKClassicContentCard
+### Classic Content Card properties - ABKClassicContentCard
 
 |Model|Description|
 |---|---|
@@ -180,7 +180,7 @@ Braze offers three content card types: Banner, Captioned Image and Classic. Each
 | `domain` | The link text for the property url, like @"blog.braze.com". It can be displayed on the card's UI to indicate the action/direction of clicking on the card. |
 {: .reset-td-br-1 .reset-td-br-2}
 
-## Card Methods
+## Card methods
 
 |Method|Description|
 |---|---|
@@ -192,7 +192,7 @@ Braze offers three content card types: Banner, Captioned Image and Classic. Each
 
 For more details, view the full [class reference documentation](https://appboy.github.io/appboy-ios-sdk/docs/interface_a_b_k_content_card.html)
 
-## Log Content Cards Display
+## Log Content Cards display
 
 When displaying the Content Cards in your own user interface, you can manually record Content Cards impressions via the method `logContentCardsDisplayed;` on the `Appboy` interface. For example:
 

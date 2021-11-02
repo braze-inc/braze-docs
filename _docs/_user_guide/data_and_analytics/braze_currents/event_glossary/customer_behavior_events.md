@@ -30,7 +30,7 @@ Please note that these schemas only apply to the flat file event data we send to
 {% endalert %}
 {% api %}
 
-## Custom Events
+## Custom events
 
 {% apitags %}
 Custom Events
@@ -59,14 +59,14 @@ This event occurs when a specific custom event is triggered. Use this to track w
 }
 ```
 
-#### Property Details
+#### Property details
 - For `ad_id`, `ad_id_type` and `ad_tracking_enabled`, you will need to explicitly collect the iOS idfa and Android Google adid through the native SDKs. Learn more about them here: [iOS]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/initial_sdk_setup/optional_idfa_collection/#optional-idfa-collection/), [Android]({{site.baseurl}}/developer_guide/platform_integration_guides/android/initial_sdk_setup/optional_gaid_collection/#optional-google-advertising-id).
 - If you are using Kafka to ingest [Currents]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/) data, reach out to your Customer Success Manager or Account Manager to enable the feature flipper for sending `ad_id`.
 
 {% endapi %}
 {% api %}
 
-## Purchase Event
+## Purchase event
 
 {% apitags %}
 Purchases
@@ -99,7 +99,7 @@ Purchases are special custom events and come with a JSON encoded string of custo
   "ad_tracking_enabled": (boolean) whether advertising tracking is enabled for the device
 }
 ```
-#### Property Details
+#### Property details
 - For `ad_id`, `ad_id_type` and `ad_tracking_enabled`, you will need to explicitly collect the iOS idfa and Android Google adid through the native SDKs. Learn more about them here: [iOS]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/initial_sdk_setup/optional_idfa_collection/#optional-idfa-collection/), [Android]({{site.baseurl}}/developer_guide/platform_integration_guides/android/initial_sdk_setup/optional_gaid_collection/#optional-google-advertising-id).
 - If you are using Kafka to ingest [Currents]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/) data, reach out to your Customer Success Manager or Account Manager to enable the feature flipper for sending `ad_id`.
 {% endapi %}
@@ -107,7 +107,7 @@ Purchases are special custom events and come with a JSON encoded string of custo
 
 {% api %}
 
-## First Session Event
+## First session event
 
 {% apitags %}
 Sessions
@@ -143,7 +143,7 @@ When a user starts their first session, both a `FirstSession` and a `SessionStar
 
 {% api %}
 
-## Session Start Event
+## Session start event
 
 {% apitags %}
 Sessions
@@ -175,7 +175,7 @@ When a user starts their first session, both a `FirstSession` and a `SessionStar
 
 {% api %}
 
-## End Session Event
+## End session event
 
 {% apitags %}
 Sessions
@@ -207,7 +207,7 @@ When a user starts their first session, both a `FirstSession` and a `SessionStar
 
 {% api %}
 
-## Location Event
+## Location event
 
 {% apitags %}
 Locations
@@ -237,14 +237,14 @@ This event is triggered when a user visits a specified location. Use this to tra
   "ad_tracking_enabled": (boolean) whether advertising tracking is enabled for the device
 }
 ```
-#### Property Details
+#### Property details
 - For `ad_id`, `ad_id_type` and `ad_tracking_enabled`, you will need to explicitly collect the iOS idfa and Android Google adid through the native SDKs. Learn more about them here: [iOS]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/initial_sdk_setup/optional_idfa_collection/#optional-idfa-collection/), [Android]({{site.baseurl}}/developer_guide/platform_integration_guides/android/initial_sdk_setup/optional_gaid_collection/#optional-google-advertising-id).
 - If you are using Kafka to ingest [Currents]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/) data, reach out to your Customer Success Manager or Account Manager to enable the feature flipper for sending `ad_id`.
 {% endapi %}
 
 {% api %}
 
-## News Feed Impression Event
+## News Feed impression event
 
 {% apitags %}
 Impression, News Feed
@@ -273,7 +273,7 @@ We do track other News Feed events; these are located in [Message Engagement Eve
 
 {% endapi %}
 {% api %}
-## Uninstall Events
+## Uninstall events
 
 {% apitags %}
 Uninstall
@@ -301,7 +301,7 @@ Please note that this is not fired when the user actually uninstalls the app - t
 
 {% api %}
 
-## Attribution Events
+## Attribution events
 
 {% apitags %}
 Attribution
@@ -324,7 +324,7 @@ This event occurs when an app installation is attributed to a source. Use this t
 
 {% api %}
 
-## Random Bucket Number Event
+## Random bucket number event
 
 {% apitags %}
 Random Bucket Number

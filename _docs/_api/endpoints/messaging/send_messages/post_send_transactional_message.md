@@ -10,7 +10,7 @@ description: "This article outlines details about the Send Transactional Email M
 ---
 
 {% api %}
-# Sending Transactional Email via API-Triggered Delivery
+# Sending transactional email via API-triggered delivery
 {% apimethod post %}
 /transactional/v1/campaigns/YOUR_CAMPAIGN_ID_HERE/send
 {% endapimethod %}
@@ -19,7 +19,7 @@ The Send Transactional Email endpoint allows you to send immediate, ad-hoc messa
 
 Transactional Email is currently available as part of select Braze packages. Please reach out to your Braze Customer Success Manager for more details.
 
-## Request Body
+## Request body
 
 ```
 Content-Type: application/json
@@ -40,7 +40,7 @@ Authorization: Bearer YOUR-REST-API-KEY
 }
 ```
 
-## Request Parameters
+## Request parameters
 
 | Parameter | Required | Data Type | Description |
 | --------- | ---------| --------- | ----------- |
@@ -49,7 +49,8 @@ Authorization: Bearer YOUR-REST-API-KEY
 |`recipients`|Required|Object|See [recipients object]({{site.baseurl}}/api/objects_filters/recipient_object/). The user you are targeting this message to. <br><br>Note that if you provide an external user ID that doesn't already exist in Braze, passing any fields to the `attributes` object will create this user profile in Braze and send this message to the newly created user. <br><br>If you send multiple requests to the same user with different data in the `attributes` object, Braze will ensure that `first_name`, `last_name`, and `email` attributes will be updated synchronously and templated into your message. Custom attributes don't have this same protection, so proceed with caution when updating a user through this API and passing different custom attribute values in quick succession.|
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
 
-## Example Request
+## Example request
+
 ```
 curl -X POST \
   -H 'Content-Type:application/json' \
@@ -68,9 +69,11 @@ curl -X POST \
 ```
 
 ## Response 
+
 The Send Transactional Email endpoint will respond with the message's `dispatch_id` which represents the instance of this message send. This identifier can be used along with events from the Transactional HTTP event postback to trace the status of an individual email sent to a single user.
 
 ### Example response
+
 ```json
 {
     "dispatch_id": Out-of-the-box generated Unique ID of the instance of this send
@@ -79,7 +82,8 @@ The Send Transactional Email endpoint will respond with the message's `dispatch_
 }
 ```
 
-### Transactional HTTP Event Postback
+### Transactional HTTP event postback
+
 All Transactional Emails are complemented with event status postbacks sent as an HTTP request back to your specified URL. This will allow you to evaluate the message status in real-time and take action to reach the user on another channel if the message goes undelivered, or fallback to an internal system if Braze is experiencing latency.
 
 In order to associate the incoming events to a particular instance of send, you can choose to either capture and store the Braze Dispatch ID returned in the API response as detailed above, or pass your own identifier to the `external_send_id` field. An example of a value you may choose to pass to that field may be an order ID, where after completing order 1234, an order confirmation message is triggered to the user through Braze, and `external_send_id : 1234` is included in the request. All following event postbacks such as `Sent` and `Delivered` will include `external_send_id : 1234` in the payload allowing you to confirm that user successfully received their order confirmation email.
@@ -89,7 +93,7 @@ To get started using the Transactional HTTP Event Postback, navigate to Manage S
 ![Transactional Webhook URL Update]({% image_buster /assets/img/transactional_webhook_url.png %})
 
 
-### Postback Body
+### Postback body
 
 ```json
 {
@@ -121,7 +125,7 @@ To get started using the Transactional HTTP Event Postback, navigate to Manage S
 |`bounced`| Message was rejected by the user's email inbox provider. All bounced events include a `reason` field within the metadata object reflecting the bounce error code provided by the inbox provider |
 {: .reset-td-br-1 .reset-td-br-2}
 
-### Example Postback
+### Example postback
 ```json
 
 // Sent Event
