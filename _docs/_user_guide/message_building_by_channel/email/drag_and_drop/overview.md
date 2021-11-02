@@ -24,7 +24,11 @@ tool:
 Navigate to the email wizard and select your editing experience. Two editing options will be shown:
 
 - Select the __Drag & Drop Editor__ to select templates created using the Drag & Drop Editor.
-- Select the HTML Code Editor to use the existing editors and see your existing email templates.<br><br>![dnd_editor_workflow][6]{: style="max-width:80%;"}
+- Select the HTML Code Editor to use the existing editors and to see your existing email templates. <br><br>![Drag & Drop Editor Workflow][6]{: style="max-width:80%;"}
+
+{% alert tip %}
+You can also access all templates in the **Templates & Media** page under the **Engagement** section.
+{% endalert %}
 
 ### Step 2: Build out email structure
 
@@ -41,7 +45,9 @@ __Sending Settings__
 
 The Sending Settings section allows you to configure your from and reply-to address and set the subject line or pre-header. 
 
-_Note: Advanced functionality will appear in the campaign or Canvas step composer. In advanced functionality, you can modify your inline CSS setting, set a BCC email address, and enter in a header or extra key-value pairs (if configured)._
+{% alert note %}
+Advanced functionality will appear in the campaign or Canvas step composer. In advanced functionality, you can modify your inline CSS setting, set a BCC email address, and enter in a header or extra key-value pairs (if configured).
+{% endalert %}
 
 {% endtab %}
 {% tab Content %}
@@ -62,13 +68,17 @@ __Preview & Test__
 The Preview & Test section allows you to preview your email based on different users.
 
 - __Random User__: Braze will randomly select a user from the database and preview the email based on their attributes/event information.
-Note: This user may or may not be part of your segmentation criteria. Segmentation is selected afterward, so Braze is unaware of your target audience at this point.<br><br>
+{% alert note %}
+This user may or may not be part of your segmentation criteria. Segmentation is selected afterward, so Braze is unaware of your target audience at this point.
+{% endalert %}
 - __Select User__: You can select a specific user based on their email address or `external_id`. The email will preview based on that user's attributes and event information<br><br>
 - __Custom user__: You can customize a user. Braze will offer inputs for all available attributes and events. You can enter any information you would like to see in the preview email.
 {% endtab %}
 {% endtabs %}
 
-_Note: Inbox Vision is currently unavailable during this testing phase and will be made available in the future_
+{% alert note %}
+Inbox Vision is currently unavailable during this testing phase and will be made available in the future
+{% endalert %}
 
 ## Creative details 
 
@@ -76,23 +86,23 @@ _Note: Inbox Vision is currently unavailable during this testing phase and will 
 
 Images added to your email will automatically be set to __auto width__. To adjust this setting, toggle off __auto width__ and adjust the width percentage as needed. 
 
-![Drag & Drop Email PNG][2]
+![Drag & Drop Image Widths][2]
 
 ### Color layering
 
 The Drag & Drop Editor allows you to change the color of the email background, content area, and different content components. The color ordering from front to back is content component color, content area background color, and background color. 
 
-![Drag & Drop Email PNG][3]
+![Drag & Drop Color Layering][3]
 
 ### Content padding
 
-![Drag & Drop Email PNG][4]{: style="float:right;max-width:25%;margin-left:15px;"}
+![Drag & Drop Block Options][4]{: style="float:right;max-width:25%;margin-left:15px;"}
 
 To adjust padding, scroll down to __Block Options__, and toggle __More Options__. This will allow you to fine-tune your padding to get your email looking just right!
 <br><br>
 ### Adding liquid 
 
-![Drag & Drop Email PNG][5]{: style="float:right;max-width:25%;margin-left:15px;"}
+![Drag & Drop Personalization][5]{: style="float:right;max-width:25%;margin-left:15px;"}
 
 Basic Liquid is supported in our Drag & Drop Editor. To add Liquid into your email, select __Personalization__ under __Design / Build__. 
 
