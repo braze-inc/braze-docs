@@ -9,7 +9,7 @@ description: "This article outlines details about the Identify Users Braze endpo
 
 ---
 {% api %}
-# Identify Users
+# Identify users
 {% apimethod post %}
 /users/identify
 {% endapimethod %}
@@ -30,7 +30,7 @@ Subsequently, you can associate multiple additional user aliases with a single `
 A rate limit is applied to requests made to this endpoint for customers who onboarded with Braze on or after September 16, 2021. For more information, see [API Limits]({{site.baseurl}}/api/basics/#api-limits).
 {% endalert %}
 
-## Request Body
+## Request body
 
 ```
 Content-Type: application/json
@@ -43,14 +43,14 @@ Authorization: Bearer YOUR-REST-API-KEY
 }
 ```
 
-### Request Parameters
+### Request parameters
 
 | Parameter | Required | Data Type | Description |
 | -----------|----------| --------|------- |
 | `aliases_to_identify` | Required | Array of aliases to identify object | See [alias to identify object]({{site.baseurl}}/api/objects_filters/aliases_to_identify/) and [user alias object]({{site.baseurl}}/api/objects_filters/user_alias_object/). |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
 
-## Request Example
+## Request example
 ```
 curl --location --request POST 'https://rest.iad-01.braze.com/users/identify' \
 --header 'Content-Type: application/json' \

@@ -26,5 +26,6 @@ valid_partner_list:
   url: /docs/partners/message_personalization/dynamic_content/movable_ink/
 - name: Liftigniter
   url: /docs/partners/message_personalization/dynamic_content/liftigniter/
-
+- name: Judo
+  url: /docs/partners/message_orchestration/dynamic_content/judo/
 ---

@@ -30,9 +30,6 @@ guide_featured_list:
 - name: Message Format
   link: /docs/user_guide/message_building_by_channel/push/best_practices/message_format/
   fa_icon: fas fa-envelope
-- name: Reporting
-  link: /docs/user_guide/message_building_by_channel/push/best_practices/reporting
-  fa_icon: fas fa-file-alt
 - name: Push Enablement and Subscription
   link: /docs/user_guide/message_building_by_channel/push/users_and_subscriptions/
   fa_icon: fas fa-user-check

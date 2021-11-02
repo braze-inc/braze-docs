@@ -6,7 +6,7 @@ hide_breadcrumb: true
 ---
 
 
-<script type="text/javascript" src="{% image_buster /assets/js/broken_redirect_list.js %}" ></script>
+<script type="text/javascript" src="{{ site.baseurl }}/assets/js/broken_redirect_list.js?{{site.time | date: '%s'}}" ></script>
 <script type="text/javascript">
 
   function removeleadingslash(str){
@@ -19,6 +19,21 @@ hide_breadcrumb: true
 
 var validurls = (typeof validurls === "undefined")  ? {} : validurls;
 
+// multi language broken link redirects
+if (site_language && (site_language != 'en')){
+  var base_url = '{{ site.baseurl }}';
+  for (var url in validurls) {
+    var adjusted_url = url;
+    var adjusted_destination = validurls[url];
+    if (!adjusted_url.match(/^\/docs\/\w{2}\//)) {
+      adjusted_url = adjusted_url.replace(/^\/docs\//, `\/docs\/${site_language}\/`);
+    }
+    if (!adjusted_destination.match(/^\/docs\/\w{2}\//)) {
+      adjusted_destination = adjusted_destination.replace(/^\/docs\//, `\/docs\/${site_language}\/`);
+    }
+    validurls[adjusted_url] = adjusted_destination;
+  };
+}
 
 (function(){
   //lower case name => path name
@@ -26,7 +41,6 @@ var validurls = (typeof validurls === "undefined")  ? {} : validurls;
   var urlpath = removeleadingslash(window.location.pathname);
 
   var pagetype = urlpath.split('/');
-
   function redirecturl(ky,uh,redirect) {
     var val_urls = validurls[ky];
     var hashes = val_urls.split('#');
@@ -131,7 +145,7 @@ $(document).ready(function(k){
 
     <div id="broken-main">
       <div id="broken_banner">
-        <div id="broken_banner_img"><img src="{{ page.broken_image }}" /></div>
+        <div id="broken_banner_img"><img src="{{ page.broken_image | multi_lang }}" /></div>
         <div id="broken_banner_info" class="broken_info">
           <div class="broken_name">
               {{ page.broken_top_header }}

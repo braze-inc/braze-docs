@@ -9,7 +9,7 @@ description: "This article outlines details about the Schedule Messages Braze en
 
 ---
 {% api %}
-# Create Scheduled Messages
+# Create scheduled messages
 {% apimethod post core_endpoint|https://www.braze.com/docs/core_endpoints %} 
 /messages/schedule/create
 {% endapimethod %}
@@ -20,7 +20,7 @@ The create schedule endpoint allows you to schedule a campaign, Canvas, or other
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#25272fb8-bc39-41df-9a41-07ecfd76cb1d {% endapiref %}
 
-## Request Body
+## Request body
 
 ```
 Content-Type: application/json
@@ -62,7 +62,7 @@ Authorization: Bearer YOUR-REST-API-KEY
 }
 ```
 
-## Request Parameters
+## Request parameters
 
 | Parameter | Required | Data Type | Description |
 | --------- | ---------| --------- | ----------- |
@@ -80,7 +80,7 @@ Authorization: Bearer YOUR-REST-API-KEY
 | `messages` | Optional | Messaging object | See [available messaging objects](#available-messaging-objects), below. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
 
-### Available Messaging Objects {#available-messaging-objects}
+### Available messaging objects {#available-messaging-objects}
 
 You can use these objects in the [request body](#request-body) above.
 - [Android Objects]({{site.baseurl}}/api/objects_filters/android_objects/)
@@ -93,7 +93,7 @@ You can use these objects in the [request body](#request-body) above.
 - [Webhook Object]({{site.baseurl}}/api/objects_filters/webhook_object/)
 - [Windows Objects]({{site.baseurl}}/api/objects_filters/windows_objects/)
 
-## Example Request
+## Example request
 ```
 curl --location --request POST 'https://rest.iad-01.braze.com/messages/schedule/create' \
 --data-raw '{

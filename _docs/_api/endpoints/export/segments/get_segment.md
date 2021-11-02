@@ -9,7 +9,7 @@ description: "This article outlines details about and using the Segments List en
 
 ---
 {% api %}
-# Segment List Endpoint
+# Segment list endpoint
 {% apimethod get %}
 /segments/list
 {% endapimethod %}
@@ -18,7 +18,7 @@ This endpoint allows you to export a list of segments, each of which will includ
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#1349e6f4-3ce7-4e60-b3e9-951c99c0993f {% endapiref %}
 
-## Request Parameters
+## Request parameters
 
 | Parameter| Required | Data Type | Description |
 | -------- | -------- | --------- | ----------- |
@@ -26,7 +26,7 @@ This endpoint allows you to export a list of segments, each of which will includ
 | `sort_direction` | Optional | String | - Sort creation time from newest to oldest: pass in the value `desc`.<br> - Sort creation time from oldest to newest: pass in the value `asc`. <br><br>If `sort_direction` is not included, the default order is oldest to newest. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
 
-## Example Request
+## Example request
 ```
 curl --location --request GET 'https://rest.iad-01.braze.com/segments/list?page=1&sort_direction=desc' \
 --header 'Authorization: Bearer YOUR-REST-API-KEY'

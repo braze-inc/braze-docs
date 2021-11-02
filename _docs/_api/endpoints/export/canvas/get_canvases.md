@@ -9,7 +9,7 @@ description: "This article outlines details about the Canvas List endpoint."
 
 ---
 {% api %}
-# Canvas List Endpoint
+# Canvas list endpoint
 {% apimethod get %}
 /canvas/list
 {% endapimethod %}
@@ -20,7 +20,7 @@ Archived Canvases will not be included in the API response unless the `include_a
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#e6c150d7-fceb-4b10-91e2-a9ca4d5806d1 {% endapiref %}
 
-## Request Parameters
+## Request parameters
 
 | Parameter | Required | Data Type | Description |
 | --------- | -------- | --------- | ----------- |
@@ -30,7 +30,7 @@ Archived Canvases will not be included in the API response unless the `include_a
 | `last_edit.time[gt]` | Optional | Time | Filters the results and only returns Canvases that were edited greater than the time provided till now. Format is `yyyy-MM-DDTHH:mm:ss`. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
 
-## Example Request
+## Example request
 ```
 curl --location -g --request GET 'https://rest.iad-01.braze.com/canvas/list?page=1&include_archived=false&sort_direction=desc&last_edit.time[gt]=2020-06-28T23:59:59-5:00' \
 --header 'Authorization: Bearer YOUR-REST-API-KEY'

@@ -151,10 +151,20 @@ valid_partner_list:
   url: /docs/partners/data_and_infrastructure_agility/cohort_import/tinyclues/
 - name: Transcend
   url: /docs/partners/data_and_infrastructure_agility/data_privacy/transcend/
+- name: Punchh
+  url: /docs/partners/message_orchestration/channel_extensions/loyalty/punchh/
+- name: BlueConic
+  url: /docs/partners/data_and_infrastructure_agility/customer_data_platform/blueconic/
+- name: Line
+  url: /docs/partners/message_orchestration/additional_channels/messaging/line/  
+- name: Judo
+  url: /docs/partners/message_orchestration/dynamic_content/judo/    
 - name: Shopify
   url: /docs/partners/message_orchestration/channel_extensions/eCommerce/shopify/
 - name: Adobe
   url: /docs/partners/data_and_infrastructure_agility/customer_data_platform/adobe/
 - name: Worthy
   url: /docs/partners/message_personalization/dynamic_content/worthy/ 
+  url: /docs/partners/data_and_infrastructure_agility/customer_data_platform/adobe/ 
+
 ---

@@ -25,7 +25,7 @@ guide_featured_list:
 
 ## Overview
 
-![Predictive Purchases Overview][1]
+![predictive purchases overview][1]
 
 Predictive Purchases give marketers a powerful tool for identifying and messaging users based on their likelihood to make a purchase. When you create a Purchase Prediction, Braze trains a machine learning model using [gradient boosted decision trees](https://en.wikipedia.org/wiki/Gradient_boosting) to learn from previous purchase activity and predict future purchase activity. 
 

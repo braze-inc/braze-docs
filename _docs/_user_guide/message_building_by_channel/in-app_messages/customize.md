@@ -10,7 +10,7 @@ channel:
 
 # Customization
 
-In addition to the out-of-the-box [In-App Message templates][1], you can also create customized message templates with the following features:
+In addition to the out-of-the-box [in-app message templates][1], you can also create customized message templates with the following features:
 
 - [Custom HTML templates](#custom-html-messages) - create a customized template with HTML, JavaScript, and CSS.
 - [Modal with custom CSS (web only)](#web-modal-css) - add custom CSS to standard templates for more flexible styling options.
@@ -22,7 +22,7 @@ In addition to the out-of-the-box [In-App Message templates][1], you can also cr
 Additional customization of the appearance of your In-App Messages can be accomplished by your developers. See our [iOS]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/in-app_messaging/customization/), [Web]({{site.baseurl}}/developer_guide/platform_integration_guides/web/in_app_messaging/#in-app-message-customization), or [Android]({{site.baseurl}}/developer_guide/platform_integration_guides/android/in-app_messaging/customization/) integration documentation on In-App Messages for more details.
 {% endalert %}
 
-## HTML In-App Messages {#custom-html-messages}
+## HTML in-app messages {#custom-html-messages}
 
 While Braze’s out-of-the-box in-app messages can be customized in a variety of ways, you can gain even greater control over the look and feel of your campaigns using messages designed and built using HTML, CSS, and JavaScript. With some simple composition, you can unlock custom functionality and branding to match any of your needs. HTML in-app messages allow for greater control over the look and feel of a message, including:
 
@@ -41,8 +41,7 @@ Check out our [GitHub repository][2] that contains detailed instructions on how 
 To enable HTML in-app messages in the Web SDK, your SDK integration must supply the `allowUserSuppliedJavascript` initialization option to Braze: for example `appboy.initialize('YOUR-API_KEY', {allowUserSuppliedJavascript: true})`. This is for security reasons since HTML in-app messages can execute JavaScript, so we require a site maintainer to enable them.
 {% endalert %}
 
-
-### JavaScript Bridge {#javascript-bridge}
+### JavaScript bridge {#javascript-bridge}
 
 HTML in-app messages for Web, Android, and iOS support a JavaScript "bridge" interface to the Braze Web SDK, allowing you to trigger custom Braze actions when users click on elements with links or otherwise engage with your content. These methods exist with the global `appboyBridge` variable.
 
@@ -70,6 +69,7 @@ window.addEventListener("ab.BridgeReady", function(){
 }, false);
 </script>
 ```
+
 #### appboyBridge methods
 
 The following JavaScript methods are supported within Braze's HTML in-app messages:
@@ -90,11 +90,11 @@ The following JavaScript methods are supported within Braze's HTML in-app messag
 
 {% include archive/appboyBridge.md %}
 
-### Link-Based Actions
+### Link-based actions
 
 In addition to custom JavaScript, Braze SDKs can also send analytics data with these convenient URL shortcuts. Note that these query parameters and URL schemes are all case sensitive.
 
-#### Button Click Tracking
+#### Button click tracking
 
 {% alert warning %}
 The use of `abButtonID` is no longer supported in new "HTML with Preview" message types. Please see our [upgrade guide]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/preview/#backward-incompatible-changes) for more information.
@@ -118,19 +118,19 @@ As with other URL parameters, the first parameter should begin with a question m
 In-app messages support only Button 1 and Button 2 clicks. URLs that do not specify one of these two button IDs will be logged as generic "body clicks".
 {% endalert %}
 
-#### Open Link in New Window
+#### Open link in new window
 
 To open links in a new window, set `?abExternalOpen=true`. The message will be dismissed before opening the link.
 
 For deep linking, Braze will open your URL regardless of the value of `abExternalOpen`.
 
-#### Open as Deeplink (mobile only)
+#### Open as deeplink (mobile only)
 
 To have Braze handle your HTTP(S) link as a deep link, set `?abDeepLink=true`.
 
 When this query string parameter is absent or set to `false`, Braze will try to open the web link in an internal web browser inside the host app.
 
-#### Custom Events (mobile only)
+#### Custom events (mobile only)
 
 For mobile apps, you can log log a custom event by setting a link's URL to `appboy://customEvent` together with a `name` URL parameter.
 
@@ -148,19 +148,19 @@ For mobile apps, you can open the News Feed by setting a link's URL to `appboy:/
 
 For example, `<a href="appboy://feed">View Feed</a>`.
 
-#### Close In-App Message (mobile only)
+#### Close in-app message (mobile only)
 
 To close an in-app message, you can set a link's URL to `appboy://close`.
 
 For example, `<a href="appboy://close">Close</a>` will close the in-app message.
 
-## Modal with CSS (Web Only) {#web-modal-css}
+## Modal with CSS (web only) {#web-modal-css}
 
 If you choose to use a web-only Web Modal with CSS message, you can [apply your own template](#css-template) or write your own CSS in the provided space. This space is already pre-filled with the CSS shown in your message preview, but feel free to adjust it slightly to meet your needs.
 
 If you choose to apply your own template, click __Apply Template__ and choose from the In-App Message Template Gallery. If you don't have any options, you can upload a [CSS Template using the CSS Template builder](#in-app-message-templates).
 
-## Web Email Capture Form {#email-capture-form}
+## Web email capture form {#email-capture-form}
 
 Email capture messages allow you to easily prompt users of your site to submit their email address, after which it will be available within the Braze system for use in all your messaging campaigns.
 
@@ -172,7 +172,7 @@ To navigate to this option, you must create an in-app messaging campaign. From t
 To enable Email Capture in-app messages, your SDK integration must supply the `allowUserSuppliedJavascript` initialization option to Braze, e.g. `appboy.initialize('YOUR-API_KEY', {allowUserSuppliedJavascript: true})`. This is for security reasons since HTML in-app messages can execute JavaScript, so we require a site maintainer to enable them.
 {% endalert %}
 
-#### Customizable Features
+#### Customizable features
 
 - Header, body, and submit button text
 - An optional image
@@ -183,21 +183,21 @@ To enable Email Capture in-app messages, your SDK integration must supply the `a
 
 ![emailimage][5]
 
-## Reusable Message Templates {#reusable-color-profiles}
+## Reusable message templates {#reusable-color-profiles}
 
 You can save in-app message and in-browser message templates on the dashboard to swiftly build new campaigns and messages using your style. Go to __Templates & Media__, then the __In-App Message Templates__ tab. From this page, you can either edit existing templates or click __+ Create__ and choose __Color Profile__ or __CSS Template__ to create new templates to use in your in-app messages.
 
-### Color Profile
+### Color profile
 
 You can customize the color scheme of your message template by either entering HEX color code or by clicking the colored box and selecting a color with the color picker.
 
 Click __Save Color Profile__ on the bottom right when you’re finished.
 
-#### Managing Color Profiles
+#### Managing color profiles
 
 You can also [duplicate][6] and [archive][7] templates! Learn more about creating and managing templates and creative content in [Templates & Media][8].
 
-### CSS Template
+### CSS template
 
 You can customize a complete CSS template for your [Web Modal In-App Message](#web-modal-css).
 
@@ -253,7 +253,7 @@ Name and tag your CSS Template, then choose whether or not it will be your defau
 
 As you can see, you can edit everything from the background color to font size and weight, and so much more.
 
-#### Managing CSS Templates
+#### Managing CSS templates
 
 You can also [duplicate][6] and [archive][7] templates! Learn more about creating and managing templates and creative content in [Templates & Media][8].
 
@@ -286,7 +286,7 @@ Full screen videos will not render correctly on iOS and are not supported at thi
 
 
 [1]: {{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/creative_details/
-[2]: https://github.com/Appboy/appboy-custom-html5-in-app-message-templates
+[2]: https://github.com/braze-inc/in-app-message-templates
 [4]: {% image_buster /assets/img/email_capture_config.png %}
 [5]: {% image_buster /assets/img/email_capture.png %}
 [6]: {{site.baseurl}}/user_guide/engagement_tools/templates_and_media/duplicate/

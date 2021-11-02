@@ -7,7 +7,7 @@ description: "This article explains the different components of the User Alias o
 
 ---
 
-# User Alias Object Specification
+# User alias object specification
 
 An alias serves as an alternative unique user identifier. Use aliases to identify users along different dimensions than your core user ID:
 - Set a consistent identifier for analytics that will follow a given user both before and after they have logged in to a mobile app or website.
@@ -17,7 +17,7 @@ The User Alias Object consists of two parts: an `alias_name` for the identifier 
 
 This object is used frequently in all of our endpoints, and oftentimes within other objects.
 
-## Object Body
+## Object body
 ```json
 {
   "user_alias" : {

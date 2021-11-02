@@ -10,7 +10,7 @@ tool:
 
 ---
 
-# A/B Testing with Random Buckets
+# A/B testing with random buckets
 
 > This article will cover the concept of A/B testing and Variants, how you can use them in your Braze campaigns, as well as how to assign and implement random bucket numbers to help gather useful data.
 
@@ -45,25 +45,25 @@ You may want to use these types of segments if you want to run a test of three d
 
 For each of your created segments, including the control group, turn on [Analytics Tracking][14]. When evaluating the success of variants relative to the control group, you will be able to go into your [Custom Events][15] page and view how often each segment has completed certain custom events.
 
-## Step 2: Create Your Campaign Variants
+## Step 2: Create your campaign variants
 
-### Step 2a: Create Your First Variant
+### Step 2a: Create your first variant
 
 Create a campaign. On the **Target Users** page, select a segment of recipients. The segment you choose will be one that was created in the prior step.
 
 ![Select Campaign Recipient Segment][4]
 
-### Step 2b: Build Additional Variants
+### Step 2b: Build additional variants
 
 [Duplicate][18] your initial campaign variant and modify it accordingly. For instance, you may decide to change the send time or the combination of messaging channels used. When targeting users, select the segment you wish to receive this new campaign variant. Repeat this step to create your remaining campaign variants. Your control group should not receive any variant of this campaign.
 
-## Step 3: Build Additional Messages
+## Step 3: Build additional messages
 
 If you wish, you can continue to send campaign variants to your random bucket segments over time by repeating step 2. One example use case is to test the difference between sending one group 2 notifications in one week, compared to 1. 
 
 Be sure to plan the workflows of your campaign series variants in advance in order to maintain the integrity of your A/B test.
 
-## Common Use Cases
+## Common use cases
 
 Because creating a [multivariate test][16] allows you to easily test content, using random buckets is best suited for testing delivery, cadence, and channel combinations.
 
@@ -81,7 +81,7 @@ You can test multiple messaging flows over a period of time. For instance, you c
 
 You can test the effectiveness of different message channel combinations. For instance, you can compare the impact of using just one email versus an email combined with a push.
 
-### Campaign Variant Percentages
+### Campaign variant percentages
 
 In a campaign, if a variant percentage is modified after initial creation, you will find that the users may be redistributed to other variants.
 

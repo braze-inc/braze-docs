@@ -6,13 +6,13 @@ page_order: 3
 
 ---
 
-# Troubleshooting
+# Predictive Churn Troubleshooting
 
-> Predictive Churn, and any machine learning model, is only as good as the data available to the model. It also is highly dependent on having certain volumes of data to work with. This means that users may encounter some error messages, or low Prediction Quality, as they're getting to know this new feature. 
+> Predictive Churn, and any machine learning model, is only as good as the data available to the model. it also is highly dependent on having certain volumes of data to work with. this means that users may encounter some error messages, or low prediction quality, as they're getting to know this new feature. 
 
-## Potential Errors
+## Potential errors
 
-### Not Enough Data to Train 
+### Not enough data to train 
 
 This error message appears when your churn definition is too limiting and returns too few Churned users. 
 
@@ -22,7 +22,7 @@ To fix this, you will need to change either the number of days and/or actions th
 Note that while Predictive Churn is turned on at a company level, some App Groups may not have enough users to build predictions.  The typical recommendation is to have at least 500k MAU to guarantee there will be enough. 
 {% endalert %}
 
-### Problems with Prediction Audience Size
+### Problems with prediction audience size
 ![Predicition Size][3]{: style="float:right;max-width:60%;margin-left:15px;margin-bottom:15px;margin-top:15px;"}
 
 When building out your Prediction Audience to fine-tune the kind of use you want your model trained against, you might encounter this message notifying you your Prediction Audience has too few users. 
@@ -33,23 +33,23 @@ To fix this, you will need to either change the number of days and type of attri
 
 If your Prediction Audience continues to be a problem even after switching up your definitions, you may have too few users to support this optional feature. We would suggest trying to build a prediction without the extra layers and filters instead. 
 
-### Prediction Audience Size is too Big
+### Prediction audience size is too big
 
 A Prediction Audience definition cannot exceed 40 million users. If you see a message saying your audience is too large, then we recommend adding more layers to your audience and/or changing the window of time it's based on.
 
-### Prediction has Poor Quality
+### Prediction has poor quality
 ![Predicition Quality][1]{: style="float:right;max-width:40%;margin-left:15px;"}
 If your model has a prediction quality of 40% and above, you are in a great place! But if your prediction quality drops to 39% and below, you may need to edit your Churn, and Prediction Audience definitions to be more specific or have different time windows. 
 
 If you are unable to meet both the audience size requirement while building your prediction definitions and achieve a Prediction Quality of greater than 40%, it likely means that the data sent to Braze is not ideal for this use case, that there are not enough users with which to build a model against, or that your product lifecycle is longer than our current 30-day lookback window supports. 
 
-## Timing Clarifications
+## Timing clarifications
 
 You can look back up to 14 days for your churn prediction. Your "churn" definition and time window for any Last Made Purchase / Last Used App / Last Did Custom Event filters in the Prediction Audience definition cannot add up to more than 30 days.
 
 For example, if you define churn as not starting a session in the past ten days, then your Prediction Audience can be based on up to 20 days of data. 
 
-## Data Considerations
+## Data considerations
 
 Listed below are some questions to ask yourself as you set up Predictive Churn. Machine learning models are only as good as the data that trains them, so having good data hygiene practices and understanding what goes into the model will make a big difference.
 

@@ -49,7 +49,7 @@ Before you start sending emails, there are some things you need. Refer to the ch
 |IP Pools | These are an optional configuration used to separate out the reputation of different types of email (for example: "promotional" vs. "transactional") to prevent the reputation of one from impacting the other and ensure higher deliverability. | Braze onboarding will set up the pools for you; then, when composing your email, choose your email's IP pool from the IP Pool dropdown on the Target Users page.|
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
 
-## IP Warming
+## IP warming
 
 {% alert important %}
 IP Warming is the __most important step__ in the email setup process. Though it is not your first step (it's actually the last!), we're calling it out here to let you know that you must absolutely warm up your IP address or any emails you send will be sent to spam or be subject to other send barriers.
@@ -63,7 +63,6 @@ Send your first batch of emails to your most engaged users. This will help you g
 
 After you're done with your IP Warmup, feel free to [start creating and sending emails]({{site.baseurl}}/user_guide/message_building_by_channel/email/creating_an_email_campaign/)!
 
+## More resources
 
-### For more information on Email at Braze, check out our dedicated [Email section]({{site.baseurl}}/user_guide/message_building_by_channel/email/).
-
-<br>
+For more information on email at Braze, check out our dedicated [email section]({{site.baseurl}}/user_guide/message_building_by_channel/email/).

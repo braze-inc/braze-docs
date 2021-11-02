@@ -8,19 +8,20 @@ description: "This reference article covers how to create and configure a webhoo
 
 ---
 
-# Creating a Webhook
+# Creating a webhook
 
-## Feature Overview
+## Feature overview
 
 Creating a webhook campaign or including a webhook in a multichannel campaign allows you to trigger non-app actions. More specifically, [webhooks][14] can be used to provide other systems and applications with real-time information. You can use webhooks to send information to systems such as Salesforce or Marketo. You can also use webhooks to send information to your backend systems. For example, you might want to credit your customers' accounts with a promotion once they've performed a custom event a certain number of times.
 
-## Step 1: Set Up a Webhook
+## Step 1: Set up a webhook
 
 Add a new webhook message to a campaign or Canvas. You can then choose to build a webhook from scratch or use one of our existing templates.
 
-## Step 2: Enter the URL for Your Webhook
+## Step 2: Enter the URL for your webhook
 
 ### HTTP URL
+
 Enter the HTTP URL. This HTTP URL specifies your endpoint. The endpoint is the place where you'll be sending the information that you're capturing in the webhook. If you'd like to send information to a vendor, the vendor should provide this URL in their API documentation. If you're sending information to your own systems, check with your development or engineering team to ensure that you're using the correct URL. Braze only allows URLs that communicate over standard ports 80 (HTTP) and 443 (HTTPS).
 
 ### Personalization
@@ -29,19 +30,19 @@ Enter the HTTP URL. This HTTP URL specifies your endpoint. The endpoint is the p
 
 ### Internationalization
 
-[Internationalization][16] is supported in the URL and the request body. To internationalize your message, click 'add languages' and fill out the flyout.
+[Internationalization][16] is supported in the URL and the request body. To internationalize your message, click **Add Languages** and fill out the flyout.
 
-## Step 3: Create the Request Body
+## Step 3: Create the request body
 
 Create the body of your webhook request. This is the information that will be sent to the URL that you specified. There are two ways to create the body of your webhook request:
 
-### JSON Key-Value Pairs
+### JSON key-value pairs
 
 JSON key-value pairs allow you to easily write a request for an endpoint that expects a JSON format. Do note that you can only use this feature with an endpoint that expects a JSON request. For example, if your key is "message_body," the corresponding value might be "Your order just arrived." Once you've entered your key-value pair, the composer will configure your request in JSON syntax, and a preview of your JSON request will automatically populate.
 
 ![Webhook_JSON][21]
 
-### Raw Text
+### Raw text
 
 The raw text option gives you the flexibility to write a request for an endpoint that expects a body of any format. For example, you might use this feature to write a request for an endpoint that expects your request to be in XML format.
 
@@ -55,7 +56,7 @@ The raw text option gives you the flexibility to write a request for an endpoint
 
 [Internationalization][16] is supported in raw text.
 
-## Step 4: Request Headers and HTTP Method
+## Step 4: Request headers and HTTP method
 
 Certain endpoints may require that you include headers in your request. In the settings section of the composer, you can add as many headers as you'd like. Common use cases for request headers include a content-type specification (e.g., XML or JSON) and authorization headers that contain your credentials with your vendor or system. Content type specifications have the key "Content-Type" and common values are "application/json" or "application/x-www-form-urlencoded".
 
@@ -63,16 +64,17 @@ The HTTP method that you should use will vary depending on the endpoint to which
 
 ![Webhook_Request_Header][26]
 
-## Step 5: Test Send Your Message
+## Step 5: Test send your message
 
 Before making your campaign go live, you may wish to test the webhook to make sure the request is formatted properly. To do so, navigate to the preview tab and send the test webhook. You can test the webhook for a random user, a specific user (by entering their email address of external user ID), or a customized user with attributes of your choosing.  If the request is successful, a small message will appear at the top of your screen. If the webhook request is unsuccessful, a modal will appear with the error response message. The screenshot below is an example of the response of a webhook with an invalid webhook URL.
 
 ![Webhook Test Feature][64]
 
-## Step 6: Continue Campaign Creation
+## Step 6: Continue campaign creation
+
 Continuing creating your campaign the way that you normally would. As with all of our message types, you can preview what your request will look like for a particular user, random user, or user with specific attributes in the preview section of the webhook composer.
 
-## Errors, Retry Logic, and Timeouts
+## Errors, retry logic, and timeouts
 
 Webhooks rely on Braze's servers making requests to an external endpoint, and syntax and other errors may arise. The first step to avoiding webhook errors is to test your webhook campaign for syntax errors and to make sure that personalized variables have a default value. However, webhooks may still fail due to issues like expired API keys, rate limits, or unexpected server errors. If your webhook fails to send, an error message gets logged to the [Developer Console][42], under "Message Activity Log." This description contains the time the error occurred, the app name, and the error message:
 
@@ -96,9 +98,9 @@ When retrying, Braze will make five attempts using exponential backoff for a per
 
 Each webhook is allowed 90 seconds before it times out.
 
-## IP Whitelisting
+## IP whitelisting
 
-When a Webhook is sent from Braze, the Braze servers make network requests to our customers or third parties servers.
+When a webhook is sent from Braze, the Braze servers make network requests to our customers or third parties servers.
 
 With IP whitelisting, you can verify that Webhooks requests are actually coming from Braze, adding an additional layer of security.
 
@@ -120,12 +122,18 @@ Braze will send Webhooks from the IP ranges below.
 | `52.54.89.238`
 | `18.205.178.15`
 
-| For Instance `EU-01`: |
+| For Instances `EU-01` and `EU-02`: |
 |---|
 | `127.0.0.1`
 | `52.58.142.242`
 | `52.29.193.121`
 | `35.158.29.228`
+| `18.157.135.97`
+| `3.123.166.46`
+| `3.64.27.36`
+| `3.65.88.25`
+| `3.68.144.188`
+| `3.70.107.88` 
 
 | For Instance `US-08`: |
 |---|
@@ -148,7 +156,7 @@ Braze will send Webhooks from the IP ranges below.
 | `40.76.166.144`
 | `40.76.166.145`
 
-# Utilizing Webhooks
+## Utilizing webhooks
 
 There are many ways to utilize webhooks, and with Braze's technology partners (Alloys), you can use webhooks to uplevel your communication directly with your customers and users.
 
@@ -156,7 +164,7 @@ Check out:
 * [Messenger]({{site.baseurl}}/partners/additional_channels/instant_chat/messenger/)
 * [Remerge]({{site.baseurl}}/partners/advertising_technologies/retargeting/remerge/)
 * [Lob.com]({{site.baseurl}}/partners/additional_channels/direct_mail/lob/)
-* And many more in our [technology partners]({{site.baseurl}}/partners/home/) section of Braze Docs!
+* And many more of our [technology partners]({{site.baseurl}}/partners/home/)!
 
 [14]: https://sendgrid.com/blog/whats-webhook
 [15]: {{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/

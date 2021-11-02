@@ -21,8 +21,8 @@ Braze has two different integration strategies with Amazon S3 - one for [Braze C
 Follow the instructions on this page to get started with your AWS S3 integration. If you already have an S3 bucket, we still recommend creating a new bucket **specifically for Braze** so you can limit permissions.
 
 1.  To create a bucket for your app, open the [Amazon S3 console](https://console.aws.amazon.com/s3/) and follow the instructions to **Sign in** or **Create an Account with AWS**.
-2.  Once signed in, select "S3" from the "Storage & Content Delivery" category.
-3.  Select "Create Bucket" on the next screen and you"ll be prompted to create your bucket and select a region.
+2.  Once signed in, select **S3** from the **Storage & Content Delivery** category.
+3.  Select **Create Bucket** on the next screen. You'll be prompted to create your bucket and select a region.
 
 ## AWS secret key auth method
 
@@ -34,17 +34,17 @@ To retrieve your **Access Key ID** and **Secret Access Key**, you’ll need to [
 
 ### Step 2: Get credentials {#secret-key-2}
 
-Once a user has been created, click "Show User Security Credentials" so your **Access Key ID** and **Secret Access Key** will be revealed. Next, either note these credentials somewhere or click the blue "Download Credentials" button as you will need to input these into the Braze dashboard later on.
+Once a user has been created, click **Show User Security Credentials** so your Access Key ID and Secret Access Key will be revealed. Next, either note these credentials somewhere or click the **Download Credentials** button as you will need to input these into the Braze dashboard later on.
 
 ![Secret Key][11]
 
 ### Step 3: Create policy {#secret-key-3}
 
-Now, navigate to the **Policies** tab in the navigation bar and select "Get Started" then "Create Policy". This will allow you to add permissions for your user. Select "Create Your Own Policy". This will give limited permissions so we only have the ability to access the bucket that you specify.
+Now, navigate to the **Policies** tab in the navigation bar and select **Get Started** then **Create Policy**. This will allow you to add permissions for your user. Select **Create Your Own Policy**. This will give limited permissions so we only have the ability to access the bucket that you specify.
 
 ![Policy][12]
 
-Input the code below when creating your own policy. (Note that there are different policies required for "Currents" vs. "Dashboard Data Export".) Specify a "Policy Name" of your choice, and input the code below into the "Policy Document" section. Be sure to replace `INSERTBUCKETNAME` with your own bucket name.
+Input the code below when creating your own policy. Note that there are different policies required for "Currents" vs. "Dashboard Data Export". Specify a Policy Name of your choice, and input the code below into the **Policy Document** section. Be sure to replace `INSERTBUCKETNAME` with your own bucket name.
 
 {% tabs %}
 {% tab Braze Currents %}
@@ -105,11 +105,11 @@ You are now ready to link your AWS credentials to your Braze account.
 {% tabs %}
 {% tab Braze Currents %}
 
-Navigate to the "Currents" page on the Braze dashboard under the "Integrations" section, click the "Create Current" dropdown, and select "Amazon S3 Data Export".
+Navigate to the **Currents** page on the Braze dashboard under the **Integrations** section, click the **Create Current** dropdown, and select **Amazon S3 Data Export**.
 
 ![AWS Creds]({{site.baseurl}}/assets/img/currents-s3-example.png)
 
-Give your Current a name. Then, in the **Credentials** section, make sure the "AWS Secret Access Key" radio button is selected, then input your **AWS Access ID**, **AWS Secret Access Key**, and **AWS S3 Bucket Name** in the designated fields.
+Give your Current a name. Then, in the **Credentials** section, make sure the **AWS Secret Access Key** radio button is selected, then input your **AWS Access ID**, **AWS Secret Access Key**, and **AWS S3 Bucket Name** in the designated fields.
 
 {% alert warning %}
 Keep your AWS Access Key ID and AWS Secret Access Key up to date. If your connector's credentials expire, the connector will stop sending events. If this persists for more than **48 hours**, the connector's events will be dropped and data will be permanently lost.
@@ -120,21 +120,21 @@ You can also add the following customizations, based on your needs:
 -   Folder Path (defaults to `currents`) 
 -   Server-Side, At-Rest AES-256 Encryption (defaults to OFF) - Includes the "x-amz-server-side-encryption" header
 
-Click "Launch Current" to continue.
+Click **Launch Current** to continue.
 
 A notification will inform you whether your credentials have been successfully validated. AWS S3 should now be set up for Braze Currents.
 
 {% endtab %}
 {% tab Dashboard Data Export %}
 
-Navigate to the "Technology Partners" page on the Braze dashboard under the "Integrations" section and click on "Amazon S3".
+Navigate to the **Technology Partners** page on the Braze dashboard under the **Integrations** section and click **Amazon S3**.
 
 ![AWS Creds]({{site.baseurl}}/assets/img/s3_tech_partners.png)
 
-On the AWS Credentials page, make sure the "AWS Secret Access Key" radio button is selected, then input your AWS Access ID, AWS Secret Access Key, and AWS S3 Bucket Name in the designated fields. When inputting your secret key, click "Test Credentials" first to ensure your credentials work, then "Save" once this is successful.
+On the AWS Credentials page, make sure the **AWS Secret Access Key** radio button is selected, then input your AWS Access ID, AWS Secret Access Key, and AWS S3 Bucket Name in the designated fields. When inputting your secret key, click **Test Credentials** first to ensure your credentials work, then click **Save** once this is successful.
 
 {% alert tip %}
-You can always retrieve new credentials by navigating to your user and clicking "Create Access Key" on the Security Credentials tab within the AWS Console.
+You can always retrieve new credentials by navigating to your user and clicking **Create Access Key** on the **Security Credentials** tab within the AWS Console.
 {% endalert %}
 
 A notification will inform you whether your credentials have been successfully validated. AWS S3 should now be integrated into your Braze account.
@@ -148,11 +148,11 @@ This authentication method generates a Role ARN (Amazon Resource Name) that enab
 
 ### Step 1: Create policy {#role-arn-1}
 
-To get started, sign in to the AWS Management Console as an administrator of the account. Navigate to the IAM section of the AWS Console, click "Policies" in the navigation bar, and click "Create Policy".
+To get started, sign in to the AWS Management Console as an administrator of the account. Navigate to the IAM section of the AWS Console, click **Policies** in the navigation bar, and click **Create Policy**.
 
 ![Role ARN]({{site.baseurl}}/assets/img/create_policy_1_list.png)
 
-Open the "JSON" tab and input the code below into the “Policy Document” section. Be sure to replace INSERTBUCKETNAME with your own bucket name. Click "Review Policy" when you're finished.
+Open the **JSON** tab and input the code below into the **Policy Document** section. Be sure to replace `INSERTBUCKETNAME` with your own bucket name. Click **Review Policy** when you're finished.
 
 {% tabs %}
 {% tab Braze Currents %}
@@ -199,7 +199,7 @@ Open the "JSON" tab and input the code below into the “Policy Document” sect
 {% endtab %}
 {% endtabs %}
 
-Next, give the policy a name and a description and click "Create Policy".
+Next, give the policy a name and a description and click **Create Policy**.
 
 ![Role ARN]({{site.baseurl}}/assets/img/create_policy_3_name.png)
 
@@ -207,7 +207,7 @@ Next, give the policy a name and a description and click "Create Policy".
 
 ### Step 2: Create role {#role-arn-2}
 
-Now, still within the IAM section of the AWS Console, click "Roles" in the navigation bar and click "Create Role".
+Now, still within the IAM section of the AWS Console, click **Roles** in the navigation bar and click **Create Role**.
 
 ![Role ARN]({{site.baseurl}}/assets/img/create_role_1_list.png)
 
@@ -216,31 +216,31 @@ Retrieve your **Braze Account ID** and **External ID** from your Braze account.
 {% tabs %}
 {% tab Braze Currents %}
 
-Navigate to the "Currents" page in your Braze account under the "Integrations" section, click the "Create Current" dropdown, and select "Amazon S3 Data Export".
+Navigate to the **Currents** page in your Braze account under the **Integrations** section, click the **Create Current** dropdown, and select **Amazon S3 Data Export**.
 
 ![AWS Creds]({{site.baseurl}}/assets/img/currents-role-arn.png)
 
 {% endtab %}
 {% tab Dashboard Data Export %}
 
-Navigate to the "Technology Partners" page in your Braze account under the "Integrations" section and click on "Amazon S3".
+Navigate to the **Technology Partners** page in your Braze account under the **Integrations** section and click on **Amazon S3**.
 
 ![AWS Creds]({{site.baseurl}}/assets/img/data-export-role-arn.png)
 
 {% endtab %}
 {% endtabs %}
 
-Back on the AWS Console, select "Another AWS Account" from the type of trusted entity selector. Enter the **Braze Account ID**, check "Require external ID", and enter the **Braze External ID**. Click "Next" when complete.
+Back on the AWS Console, select **Another AWS Account** from the type of trusted entity selector. Enter the **Braze Account ID**, check **Require external ID**, and enter the **Braze External ID**. Click "**Next** when complete.
 
 ![Role ARN]({{site.baseurl}}/assets/img/create_role_2_another.png)
 
 ### Step 3: Attach policy {#role-arn-3}
 
-Next, attach the Policy you created earlier to the Role. Search for the policy in the search bar, and place a checkmark next to the policy to attach it. Click "Next" when complete.
+Next, attach the Policy you created earlier to the Role. Search for the policy in the search bar, and place a checkmark next to the policy to attach it. Click **Next** when complete.
 
 ![Role ARN]({{site.baseurl}}/assets/img/create_role_3_attach.png)
 
-Give the Role a name and a description, and click "Create Role".
+Give the Role a name and a description, and click **Create Role**.
 
 ![Role ARN]({{site.baseurl}}/assets/img/create_role_4_name.png)
 
@@ -261,18 +261,18 @@ Return to your Braze account and copy the Role ARN into the field provided.
 {% tabs %}
 {% tab Braze Currents %}
 
-Navigate to the "Currents" page in your Braze account under the "Integrations" section, click the "Create Current" dropdown, and select "Amazon S3 Data Export".
+Navigate to the **Currents** page in your Braze account under the **Integrations** section, click the **Create Current** dropdown, and select **Amazon S3 Data Export**.
 
 ![AWS Creds]({{site.baseurl}}/assets/img/currents-role-arn.png)
 
-Give your Current a name. Then, in the Credentials section, make sure the "AWS Role ARN" radio button is selected, then input your Role ARN, and AWS S3 Bucket Name in the designated fields.
+Give your Current a name. Then, in the **Credentials** section, make sure the **AWS Role ARN** radio button is selected, then input your Role ARN and AWS S3 Bucket Name in the designated fields.
 
 You can also add the following customizations, based on your needs:
 
 -   Folder Path (defaults to `currents`)
 -   Server-Side, At-Rest AES-256 Encryption (defaults to OFF) - Includes the "x-amz-server-side-encryption" header
 
-Click "Launch Current" to continue.
+Click **Launch Current** to continue.
 
 A notification will inform you whether your credentials have been successfully validated. AWS S3 should now be set up for Braze Currents.
 
@@ -283,14 +283,14 @@ If you receive a “S3 credentials are invalid” error, this may be due to inte
 {% endtab %}
 {% tab Dashboard Data Export %}
 
-Navigate to the "Technology Partners" page in your Braze account under the "Integrations" section and click on "Amazon S3".
+Navigate to the **Technology Partners** page in your Braze account under the **Integrations** section and click on **Amazon S3**.
 
 ![AWS Creds]({{site.baseurl}}/assets/img/data-export-role-arn.png)
 
-On the **AWS Credentials** page, make sure the "AWS Role ARN" radio button is selected, then input your Role ARN, and **AWS S3 Bucket Name** in the designated fields. Click "Test Credentials" first to ensure your credentials work properly, then "Save" once this is successful.
+On the **AWS Credentials** page, make sure the **AWS Role ARN** radio button is selected, then input your Role ARN and AWS S3 Bucket Name in the designated fields. Click **Test Credentials** first to ensure your credentials work properly, then click **Save** once this is successful.
 
 {% alert tip %}
-You can always retrieve new credentials by navigating to your user and clicking "Create Access Key" on the Security Credentials tab within the AWS Console.
+You can always retrieve new credentials by navigating to your user and clicking **Create Access Key** on the **Security Credentials** tab within the AWS Console.
 {% endalert %}
 
 A notification will inform you whether your credentials have been successfully validated. AWS S3 should now be integrated into your Braze account.

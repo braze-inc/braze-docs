@@ -8,7 +8,7 @@ channel:
 
 ---
 
-# In-App Messages HTML Preview
+# In-app messages HTML Preview
 
 Learn about the new Preview features for custom HTML In-App Messages.
 
@@ -16,9 +16,9 @@ Learn about the new Preview features for custom HTML In-App Messages.
 This is an opt-in feature. Ask your Braze account team to get access today!
 {% endalert %}
 
-## New Features
+## New features
 
-### Interactive Preview
+### Interactive preview
 
 The message preview screen now shows a more realistic preview that renders the JavaScript included in your message.
 
@@ -31,13 +31,13 @@ We'll ensure that any [`appboyBridge`]({{site.baseurl}}/user_guide/message_build
 {% endalert %}
 
 
-### Cross-Channel HTML Messages
+### Cross-channel HTML messages
 
 This new HTML message type now lets you create one message that can be sent to both mobile and web!
 
 ![New HTML In-App Message Cross Channel]({% image_buster /assets/img/iam-beta-html-cross-channel.png %})
 
-### New Asset Uploader
+### New asset uploader
 
 Upload campaign assets to the Braze Media Library using a simple drag-and-drop interface.
 
@@ -57,7 +57,7 @@ We've also added the ability to upload newly supported file types, including:
 Using Braze's Media Library CDN to host assets will ensure your messages are displayed on mobile devices even if a user has a poor internet connection or offline.
 {% endalert %}
 
-### Syntax Highlighting
+### Syntax highlighting
 
 The code editor now includes Syntax Highlighting with a number of different color themes to choose from.
 
@@ -65,7 +65,7 @@ This helps to easily spot potential code errors directly in the message composer
 
 ![New HTML In-App Message Syntax Highlighting]({% image_buster /assets/img/iam-beta-html-syntax-highlighting.png %})
 
-### Button Tracking Improvements
+### Button tracking improvements
 
 You can now track performance within your message using the new [`appboyBridge.logClick(button_id)`][1] JavaScript method. This allows you to programatically track  "Button 1", "Button 2", and "Body Clicks" using `appboyBridge.logClick("0")`, `appboyBridge.logClick("1")`, or `appboyBridge.logClick()`, respectively.
 
@@ -81,18 +81,18 @@ You can also track new custom button names - up to 100 unique names per campaign
 
 #### Requirements
 
-* Up to 100 unique Button IDs are allowed per campaign
+* up to 100 unique button ids are allowed per campaign
 * Each Button ID can not be longer than 255 characters
 * Only alphanumeric, space, dash, and underscore characters are allowed.
 
 **Note**: This method replaces the previous automatic click tracking methods (i.e. `?abButtonId=0`) which have been removed.
 
-## Backward Incompatible Changes {#backward-incompatible-changes}
+## Backward incompatible changes {#backward-incompatible-changes}
 
 1. The most notable incompatible change with this new message type is the SDK requirements. Users whose App SDK does not meet the minimum [SDK version requirements](#supported-sdk-versions) will not be shown the message.
 <br>
 
-2. Zip files are no longer used to manage a message's assets. Instead, you should use our new [Asset Uploader](#upload-assets) and paste absolute asset URLs directly into your HTML - just like you would for an email campaign. See the [Migration Steps](#migration-guide) for more information on transitioning away from zip files.
+2. ZIP files are no longer used to manage a message's assets. Instead, you should use our new [Asset Uploader](#upload-assets) and paste absolute asset URLs directly into your HTML - just like you would for an email campaign. See the [Migration Steps](#migration-guide) for more information on transitioning away from zip files.
 <br>
 
 3. The `appboy://close` deeplink which was previously supported on mobile apps has been removed in favor of the Javascript, `appboyBridge.closeMessage()`. This allows cross-platform HTML since the web does not support deep links.
@@ -106,9 +106,9 @@ You can also track new custom button names - up to 100 unique names per campaign
 |<code>&lt;a href="app://deeplink?abButtonId=0">Track button 1&lt;/a&gt;</code>|<code>&lt;a href="app://deeplink" onclick="appboyBridge.logClick('0')"&gt;Track button 1&lt;/a&gt;</code>|
 |<code>&lt;script&gt;<br>location.href = "appboy://close?abButtonId=1"<br>&lt;/script&gt;</code>|<code>&lt;script&gt;<br>window.addEventListener("ab.BridgeReady", function(){<br>&nbsp;&nbsp;appboyBridge.logClick("1");<br>&nbsp;&nbsp;appboyBridge.closeMessage();<br>});<br>&lt;/script&gt;</code>|
 
-## Creating a New Campaign {#instructions}
+## Creating a new campaign {#instructions}
 
-### SDK Requirements {#supported-sdk-versions}
+### SDK requirements {#supported-sdk-versions}
 
 These new features require upgrading to the following Braze SDK version:
 
@@ -119,11 +119,10 @@ These new features require upgrading to the following Braze SDK version:
 {% alert warning %}
 Because this message type can only be received by certain newer SDK versions, users that are on unsupported SDK versions will not receive the message. 
 
-
 Consider adopting this new message type once a significant portion of your user base is reachable, or target only those users whose app version is _above_ the requirements. [Learn More]({{ site.baseurl }}/user_guide/engagement_tools/campaigns/ideas_and_strategies/new_features/#filtering-by-most-recent-app-versions)
 {% endalert %}
 
-### New Message Type {#new-message-type}
+### New message type {#new-message-type}
 
 When creating a "Custom Code" message, choose the new "HTML Upload with Preview" option as shown below:
 
@@ -133,7 +132,7 @@ Keep in mind that your mobile app users need to upgrade to the supported SDK ver
 
 We recommend that you [nudge users to upgrade]({{site.baseurl}}/user_guide/engagement_tools/campaigns/ideas_and_strategies/new_features/) their mobile apps before launching campaigns that depend on newer Braze SDK versions. 
 
-### Uploading Asset Files {#upload-assets}
+### Uploading asset files {#upload-assets}
 
 Use Braze's Media Library to upload and host assets for your custom HTML messages.
 
@@ -156,13 +155,13 @@ Then, paste the copied asset URL into your HTML as you normally would when refer
 You can press `CTRL+F` or `CMD+F` within the HTML Editor to search within your code!
 {% endalert %}
 
-### Migrating Old "Zip File" Campaigns {#migration-guide}
+### Migrating old "ZIP file" campaigns {#migration-guide}
 
-Older campaigns that used zip-files are not supported in this new In-App Message composer.
+Older campaigns that used ZIP files are not supported in this new In-App Message composer.
 
-If you want to migrate those older zip-file campaigns, follow these instructions:
+If you want to migrate those older ZIP file campaigns, follow these instructions:
 
-1. Download the .zip asset file to your computer, and unzip the files
+1. Download the ZIP asset file to your computer, and extract the files
 2. Upload all of your asset files into the new campaign. (Tip: you can select all files and drag-and-drop them in)
 3. For each newly uploaded asset, copy its uploaded file URL and replace them in your HTML's older local asset references
 

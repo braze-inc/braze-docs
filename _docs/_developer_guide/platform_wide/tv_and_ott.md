@@ -72,7 +72,7 @@ Below is a list of features and messaging channels supported today.
             <td for="data-analytics"><i class="fas fa-check text-success"></i></td>
             <td for="iam"><i class="fas fa-check text-success"></i></td>
             <td for="content-cards"><i class="fas fa-check text-success"></i></td>
-            <td for="push">--</td>
+            <td for="push">N/A</td>
             <td for="canvas"><i class="fas fa-check text-success"></i></td>
         </tr>
         <tr>
@@ -80,7 +80,7 @@ Below is a list of features and messaging channels supported today.
             <td for="data-analytics"><i class="fas fa-check text-success"></i></td>
             <td for="iam"><i class="fas fa-check text-success"></i></td>
             <td for="content-cards"><i class="fas fa-check text-success"></i></td>
-            <td for="push">--</td>
+            <td for="push">N/A</td>
             <td for="canvas"><i class="fas fa-check text-success"></i></td>
         </tr>
         <tr>
@@ -88,8 +88,8 @@ Below is a list of features and messaging channels supported today.
             <td for="data-analytics"><i class="fas fa-check text-success"></i></td>
             <td for="iam"><i class="fas fa-times text-warning"></i></td>
             <td for="content-cards"><i class="fas fa-times text-warning"></i></td>
-            <td for="push">--</td>
-            <td for="canvas">--</td>
+            <td for="push">N/A</td>
+            <td for="canvas">N/A</td>
         </tr>
         <tr>
             <td>Apple TV OS</td>
@@ -97,10 +97,14 @@ Below is a list of features and messaging channels supported today.
             <td for="iam"><i class="fas fa-times text-warning"></i></td>
             <td for="content-cards"><i class="fas fa-times text-warning"></i></td>
             <td for="push"><i class="fas fa-times text-warning"></i></td>  
-            <td for="canvas">--</td>
+            <td for="canvas">N/A</td>
         </tr>
     </tbody>
 </table>
+
+- <i class="fas fa-check text-success"></i> = Supported
+- <i class="fas fa-times text-warning"></i> = Not supported by Braze
+- N/A = Not supported by platform
 
 ## Integration guides
 

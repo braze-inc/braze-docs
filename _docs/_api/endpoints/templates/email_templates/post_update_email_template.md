@@ -9,7 +9,7 @@ description: "This article outlines details about the Update Email Template Braz
 
 ---
 {% api %}
-# Update Existing Email Templates
+# Update existing email templates
 {% apimethod post %}
 /templates/email/update
 {% endapimethod %}
@@ -22,7 +22,7 @@ All fields other than the `email_template_id` are optional, but you must specify
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#afb25494-3350-458d-932d-5bf4220049fa {% endapiref %}
 
-## Request Body
+## Request body
 
 ```
 Content-Type: application/json
@@ -42,7 +42,7 @@ Authorization: Bearer YOUR-REST-API-KEY
 }
 ```
 
-## Request Parameters
+## Request parameters
 
 | Parameter | Required | Data Type | Description |
 | --------- | ---------| --------- | ----------- |
@@ -56,7 +56,7 @@ Authorization: Bearer YOUR-REST-API-KEY
 |`should_inline_css`|Optional|Boolean|Enables or disables the `inline_css` feature per template. If not provided, Braze will use the default setting for the AppGroup. One of `true` or `false` is expected.|
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
 
-## Request Example
+## Request example
 ```
 curl --location --request POST 'https://rest.iad-01.braze.com/templates/email/update' \
 --header 'Content-Type: application/json' \
@@ -72,7 +72,7 @@ curl --location --request POST 'https://rest.iad-01.braze.com/templates/email/up
 }'
 ```
 
-## Possible Errors
+## Possible errors
 - `Template Name is required`
 
 - `Tags must be an array.`

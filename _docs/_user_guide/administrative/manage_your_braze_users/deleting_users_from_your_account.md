@@ -7,7 +7,7 @@ description: "This reference article covers how to delete users."
 
 ---
 
-# Deleting Users
+# Deleting users
 
  Go to the Manage Users page and find their User Name. To delete a user, click on the trash icon.
 

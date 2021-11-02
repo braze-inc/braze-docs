@@ -51,7 +51,7 @@ Emojis can be a bit tricky, as there is no standard character count across all e
 Besides the charges for Short and Long Codes, billing is done by the number of message segments sent per country. To read more about how message segments are calculated see our [Message Segments and Copy Limits]({{site.baseurl}}/user_guide/message_building_by_channel/sms/campaign/segments/#segment-breakdown) guide. 
 For overages, your account manager will reach out to let you know if you are close to reaching your maximum, providing relevant reports to help inform you. For further questions regarding overages, please reach out to your Braze representative.
 
-### If a user texts STOP to our short code, are they unsubscribed from the subscription group?
+### If a user texts stop to our short code, are they unsubscribed from the subscription group?
 
 What does that look like on the user profile? The subscription group will revert to 2 dashes (- -), and there will be custom events for subscribe and unsubscribe.
 

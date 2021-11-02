@@ -7,7 +7,7 @@ channel: SMS
 description: "This article explains the different components of Braze's SMS Object."
 
 ---
-# SMS Object Specification
+# SMS object specification
 
 ```json
 {

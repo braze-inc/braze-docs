@@ -22,7 +22,7 @@ When using Intelligent Timing, Braze recommends that your campaign’s segment f
 
 ![Optimal Send Time][1]
 
-## Fallback Options
+## Fallback options
 
 For users who have insufficient data to calculate an optimal send time, there are two options to choose from.
 
@@ -34,15 +34,13 @@ You can also choose the most popular time at which your app is used by all other
 
 It’s important to be aware of the limitations of using Intelligent Timing early in a user’s lifecycle when limited data for Intelligent Timing is available. It can, however, still be valuable. Consider a user that has recorded only one session. The time in which that user recorded their session could very well be the best time to attempt to engage them. Intelligent Timing would only use data from the user’s first session, and as such would engage the user at that time. In general, Intelligent Timing more effectively calculates the optimal send time later in a user’s lifecycle.
 
-
-## Triggered Campaigns and Canvases
+## Triggered campaigns and Canvases
 
 If a triggered campaign or Canvas step is activated to send a user a message with Intelligent Timing, it's possible that the user's optimal send time is before the time of day at which the campaign or step was triggered. In this case, the message will send immediately.
 
-## Preview Chart
+## Preview chart
 
 ![Intelligent Timing Preview Chart][2]
-
 
 On the Delivery and Target Users pages, you can generate a chart to see how many users will receive the message according to Intelligent Timing in each hour of the day. First, make sure to specify an audience on the Target Users page. Once you do that, click “Refresh Data” to see the chart on the corresponding pages. Whenever you change any settings about Intelligent Timing or the audience, you’ll need to click “Refresh Data” again to get an updated chart.  
 

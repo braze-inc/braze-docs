@@ -9,7 +9,7 @@ description: "This article outlines details about the News Feed Cards List Endpo
 
 ---
 {% api %}
-# News Feed Cards List Endpoint
+# News Feed cards list endpoint
 {% apimethod get %}
 /feed/list
 {% endapimethod %}
@@ -18,7 +18,7 @@ This endpoint allows you to export a list of News Feed cards, each of which will
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#9fa7a3bc-4a02-4de2-bc4c-8f111750665e {% endapiref %}
 
-## Request Parameters
+## Request parameters
 
 | Parameter | Required | Data Type | Description |
 | --------- | -------- | --------- | ----------- |
@@ -27,7 +27,7 @@ This endpoint allows you to export a list of News Feed cards, each of which will
 | `sort_direction` | Optional | String | - Sort creation time from newest to oldest: pass in the value `desc`.<br> - Sort creation time from oldest to newest: pass in the value `asc`. <br><br>If `sort_direction` is not included, the default order is oldest to newest. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
 
-## Example Request
+## Example request
 ```
 curl --location --request GET 'https://rest.iad-01.braze.com/feed/list?page=1&include_archived=true&sort_direction=desc' \
 --header 'Authorization: Bearer YOUR-REST-API-KEY'

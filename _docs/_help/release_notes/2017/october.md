@@ -14,7 +14,7 @@ On iOS and Android, you can now [create notifications][74] with multiple pages, 
 
 ## Currents
 
-[currents][75] displays a set of real-time, high volume data connections for customer data with pre-built connections directly into technologies like data warehouses, business intelligence tools, and data management platforms. it launches with integrations for amazon redshift, amplitude, and data management platforms segment and mparticle. to gain access to this new product, please contact your customer success manager, account manager, or [open a support ticket][support].
+[Currents][75] displays a set of real-time, high volume data connections for customer data with pre-built connections directly into technologies like data warehouses, business intelligence tools, and data management platforms. It launches with integrations for Amazon Redshift, Amplitude, and data management platforms Segment and mParticle. To gain access to this new product, please contact your Customer Success Manager, Account Manager, or [open a support ticket][support].
 
 ## Okta single sign-on (October 2017)
 

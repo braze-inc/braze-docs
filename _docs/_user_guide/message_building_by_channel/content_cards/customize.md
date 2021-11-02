@@ -25,7 +25,7 @@ channel:
 ---
 <br>
 
-## Change "Empty Feed" Language
+## Change "empty feed" language
 
 You can change the language that appears automatically in empty Content Card feeds by [redefining the localizable content card strings](https://github.com/Appboy/appboy-ios-sdk/blob/3cca65b06f66085f5bc7c8e1ad267bf8bb1f0da7/AppboyUI/ABKContentCards/Resources/en.lproj/AppboyContentCardsLocalizable.strings) in your app’s localizable strings file: 
 ```
