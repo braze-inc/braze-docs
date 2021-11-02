@@ -1,7 +1,7 @@
 ---
 nav_title: Channel Extensions
 article_title: Channel Extension Partners
-page_order: 8
+page_order: 2
 
 page_type: landing
 description: "These partners allow you to expand your messaging strategy and connect or target across custom channels."

@@ -2,7 +2,7 @@
 nav_title: Data Privacy & Compliance
 article_title: Data & Privacy Compliance Partners
 layout: partner_page
-page_order: 1
+page_order: 6
 
 page_type: landing
 search_tag: Partner
