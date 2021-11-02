@@ -65,6 +65,9 @@ valid_partner_list:
 - name: optilyz
   url: /docs/partners/message_orchestration/additional_channels/direct_mail/optilyz/
 - name: Digioh
+  url: /docs/partners/message_orchestration/channel_extensions/surveys/digioh
+- name: Punchh
+  url: /docs/partners/message_orchestration/channel_extensions/loyalty/punchh/
   url: /docs/partners/message_orchestration/channel_extensions/surveys/digioh/
 - name: Line
   url: /docs/partners/message_orchestration/additional_channels/messaging/line/  
