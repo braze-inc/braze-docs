@@ -1,6 +1,6 @@
 ---
-nav_title: User Data
+nav_title: Purchases
 config_only: true
 noindex: true
-page_order: 9
+page_order: 6
 ---
