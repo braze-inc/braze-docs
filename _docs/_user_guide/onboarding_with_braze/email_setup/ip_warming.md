@@ -25,7 +25,7 @@ __IP Warming is required.__ If you fail to warm IPs appropriately, and the patte
       - If a significant number of spam reports occur, they might choose to relegate the remainder of that send to the spam folder rather than delivering it to the user's inbox.
       - If engagement is moderate, they may continue to throttle your email to collect more engagement data to determine whether or not the mail is spam with more certainty.
       - If the email has very high engagement metrics, they may cease to throttle this email entirely. They use that data to create an email reputation that will eventually determine whether or not your emails are filtered to spam automatically.<br><br>
-2. __Your domain and or IP could be blacklisted by the IPs, at which point all of your emails will begin going directly to the spam folder of your user's inbox.__
+2. __Your domain and or IP could be blacklisted by the ISPs, at which point all of your emails will begin going directly to the spam folder of your user's inbox.__
   - If this occurs, the response codes in the __Braze Developer Console__ will contain information about what websites to visit to appeal to these ISPs to get off those lists.
 
 ## IP warming best practices
