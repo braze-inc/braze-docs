@@ -168,5 +168,5 @@ valid_partner_list:
 - name: Worthy
   url: /docs/partners/message_personalization/dynamic_content/worthy/ 
 - name: Yotpo
-  url: /docs/partners/message_orchestration/channel_extenstions/ecommerce/yotpo/
+  url: /docs/partners/message_orchestration/channel_extenstions/ecommerce/yotpo/ 
 ---
