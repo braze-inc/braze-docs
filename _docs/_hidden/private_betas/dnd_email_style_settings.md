@@ -29,12 +29,12 @@ Updates made to the Email Global Style Settings will apply to all future email c
 
 ## Basic styling 
 
-In the **Basic Styling** dropdown, you can set your default email and content background colors for your email campaigns and Canvases. You can also select a default or font, add a custom font, and edit link colors.
+In the **Basic Styling** dropdown, you can set your default email and content background colors for your email campaigns and Canvases. You can also select a default font, add a custom font, and edit link colors.
 
 ![Basic Styling Options][2]
 
 ### Add a custom font
-To add a custom font, enter the same font name as your custom font source file for the **Font Name** field. Ensure that the name is capitalized and spaced correctly. Enter the corresponding **Font URL**. Check that the preview shows your custom font before saving. Click **Save** to use the custom font as your default email font. 
+To add a custom font, click **Add a custom font** and enter the font's name and source file URL. For the **Font Name** field, enter the same font name as your custom font source file. Ensure that the name is capitalized and spaced correctly. Enter the corresponding **Font URL**. Check that the preview shows your custom font before saving. Click **Save** to use the custom font as your default email font. 
 
 Currently, you can only add one custom font for the global style settings.
 
@@ -52,7 +52,7 @@ Optionally, you can override the default style of your Drag & Drop Editor theme.
 ## Text styling
 To set a default text style, in the **Text Styling** dropdown, enter the **Font Size** and select **Font Color** to choose a font color from the color picker. 
 
-You can also adjust the block styling for the body text by editing the **Padding Top**, **Padding Right**, **Padding Bottom**, and **Padding Left** values.
+You can also adjust the block styling for the body text by editing the **Padding Top**, **Padding Right**, **Padding Bottom**, and **Padding Left** values. This will apply to the spacing around all four areas surrounding the text block.
 
 ![Text Styling Options][4]{: style="max-width:60%;"}
 
