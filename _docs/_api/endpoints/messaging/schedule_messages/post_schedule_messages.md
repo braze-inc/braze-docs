@@ -71,7 +71,7 @@ Authorization: Bearer YOUR-REST-API-KEY
 | `user_aliases` | Optional | Array of user alias objects | See [user alias object]({{site.baseurl}}/api/objects_filters/user_alias_object/). |
 | `audience` | Optional | Connected audience object | See [connected audience]({{site.baseurl}}/api/objects_filters/connected_audience/). |
 | `segment_id` | Optional | String | See [segment identifier]({{site.baseurl}}/api/identifier_types/). |
-| `campaign_id`|Required|String| See [campaign identifier]({{site.baseurl}}/api/identifier_types/). |
+| `campaign_id`|Optional|String| See [campaign identifier]({{site.baseurl}}/api/identifier_types/). |
 | `recipients` | Optional | Array of recipients objects | See [recipients object]({{site.baseurl}}/api/objects_filters/recipient_object/). |
 | `send_id` | Optional | String | See [send identifier]({{site.baseurl}}/api/identifier_types/). | 
 | `override_messaging_limits` | Optional | Boolean | Ignore global rate limits for campaigns, defaults to false |
