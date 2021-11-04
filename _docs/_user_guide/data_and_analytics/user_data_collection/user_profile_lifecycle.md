@@ -13,15 +13,17 @@ description: "This reference article describes the user profile lifecycle in Bra
 
 All persistent data associated with a user will be stored against a user profile.
 
-Once a user profile is created, either after a user is recognized by the SDK or created via API, there are a number of identifiers that can be assigned to a profile to identify or reference that user. These are the:
+Once a user profile is created, either after a user is recognized by the SDK or created via API, there are a number of identifiers that can be assigned to a profile to identify or reference that user. 
+
+These identifiers are the following:
 
 * `braze_id`
 * `external_id`
-* Any number of aliases that you choose to set for your user base
+* Any number of aliases that you choose to set for your user base.
 
 ## Anonymous user profiles
 
-Initially, when a user profile is recognized via the SDK an 'anonymous' user profile is created with an associated `braze_id`: a unique user identifier that is set by Braze. This identifier can be used to delete users through the REST API.
+Initially, when a user profile is recognized via the SDK an anonymous user profile is created with an associated `braze_id`: a unique user identifier that is set by Braze. This identifier can be used to delete users through the REST API.
 
 The `braze_id` is automatically assigned by Braze, cannot be edited, and is device-specific.
 
@@ -29,12 +31,12 @@ The `braze_id` is automatically assigned by Braze, cannot be edited, and is devi
 
 Once a user is recognizable in your app (by providing a form of user ID or email address) we suggest [assigning an external_id][23] to that user's profile. The purpose of this is to recognize the same user across multiple devices to a single user profile.
 
-More benefits of user IDs include: 
+More benefits of user IDs include the following: 
 
 - Provide a consistent user experience across multiple devices and platforms (e.g. not sending lapsing user notifications to a user’s Android tablet when they are a loyal user of the app on the iPhone).
 - Improve the accuracy of your analytics by ensuring users aren’t creating a new user profile every time they uninstall and reinstall, or install the app on a different device.
-- Enable import of user data from sources outside the app using our RESTful User API, and target users with transactional messages using our RESTful Messaging API.
-- Search for individual users using our “Testing” filters within the segmenter, and on the **User Search** page.
+- Enable import of user data from sources outside the app using our [User API]({{site.baseurl}}/api/endpoints/user_data/), and target users with transactional messages using our [Messaging API]({{site.baseurl}}/api/endpoints/messaging/).
+- Search for individual users using our “Testing” [filters]({{site.baseurl}}/user_guide/engagement_tools/segments/segmentation_filters/) within the segmenter, and on the [User Search]({{site.baseurl}}/user_guide/engagement_tools/segments/using_user_search/) page.
 
 {% alert warning %}
 Do not assign an `external_id` to a user profile before you are able to uniquely identify them. Once you identify a user, you cannot revert them to anonymous.
@@ -72,18 +74,18 @@ For information on how to set a user alias please see our documentation for each
 
 ## Advanced use case information
 
-You can set a new user alias for existing identified user profiles via the SDK and [the API][27]. User aliases cannot be set via the API on an unknown user profile.
+You can set a new user alias for existing identified user profiles via our SDK and our API using the [new user alias endpoint][27]. However, user aliases can't be set via the API on an unknown user profile.
 
-If you attempt to set a pre-existing `external_id` on an anonymous user profile which share a matching alias name but with different labels, only the alias label on the pre-existing known user profile will be maintained.
+If you attempt to set a pre-existing `external_id` on an anonymous user profile which share a matching alias name, but have different labels, only the alias label on the pre-existing known user profile will be maintained.
 
 Uninstalling and reinstalling an app will cause a new anonymous user ID to be generated for that user.
 
 ## How to troubleshoot with Braze's IDs
 
-Aside from acting as a mechanism to organize user data and reference user profiles, all `braze_id`'s can be used to find and identify users within your dashboard for testing. To find your user in the Braze dashboard please see our [Adding Test Users][28] section.
+Aside from acting as a mechanism to organize user data and reference user profiles, all `braze_id`'s can be used to find and identify users within your dashboard for testing. To find your user in the Braze dashboard, refer to [Adding Test Users][28].
 
 {% alert important %}
-Braze will ban or block users ("dummy users") with over 5 million sessions and no longer ingest their SDK events because they are usually the result of misintegration. If you find that this has happened to a legitimate user, please reach out to your Braze account manager.
+Braze will ban or block users with over 5 million sessions ("dummy users") and no longer ingest their SDK events, as these users are generally the result of misintegration. If you find that this has happened to a legitimate user, please reach out to your Braze account manager.
 {% endalert %}
 
 [1]: {{site.baseurl}}/developer_guide/platform_integration_guides/ios/analytics/setting_user_ids/#aliasing-users

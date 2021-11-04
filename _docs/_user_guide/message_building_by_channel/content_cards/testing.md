@@ -8,23 +8,23 @@ channel:
   
 ---
 
-# Testing
+# Testing Content Cards
 
-It is __extremely important__ to __always__ test your content cards before sending your campaigns. Our preview and testing capabilities offer two ways to take a look at your content cards. You can preview your message to help you visualize as you compose it, as well as send a test message to yourself or a specific user's device. We recommend you take advantage of __both__.
+It is extremely important to always test your Content Cards before sending your campaigns. Our preview and testing capabilities offer two ways to take a look at your Content Cards. You can preview your message to help you visualize as you compose it, as well as send a test message to yourself or a specific user's device. We recommend you take advantage of both.
 
 ## Preview
 
-you can preview your card as you compose it. this should help you visualize what your final message will look like from your user's perspective.
+You can preview your card as you compose it. This should help you visualize what your final message will look like from your user's perspective.
 
-In __Preview__, the view of your message might not be identical to its actual rendering on the user's device. We __always__ recommend sending a test message to a device to ensure that your media, copy, personalization, and custom attributes generate correctly.
+In the __Preview__ tab of your composer, the view of your message might not be identical to its actual rendering on the user's device. We recommend always sending a test message to a device to ensure that your media, copy, personalization, and custom attributes generate correctly.
 
 ## Test
 
-to send a test to either [content test groups]({{site.baseurl}}/user_guide/administrative/app_settings/developer_console/internal_groups_tab/#content-test-groups) or individual users, push must be enabled on your test devices before sending.
+To send a test to either [content test groups]({{site.baseurl}}/user_guide/administrative/app_settings/developer_console/internal_groups_tab/#content-test-groups) or individual users, push must be enabled on your test devices before sending. For iOS users, you must tap the push notification sent by Braze in order to view the test Content Card. This behavior only applies to test Content Cards.
 
 ### Preview message as user
 
-You can also preview messages from the Test tab as though you were a user. You can select a specific user, a random user, or create a custom user.
+You can also preview messages from the **Test** tab as if you were a user. You can select a specific user, a random user, or create a custom user.
 
 ![Custom_User_Preview][3]
 

@@ -260,6 +260,12 @@ Add more Steps by pressing the <i class="fas fa-plus-circle"></i> plus button:
 
 ![Canvas More Step][17]{: style="max-width:75%;"}
 
+### Editing connections
+
+To move a connection between steps, click the arrow connecting the two steps, and select a different step. To break the connection, click the arrow and click **Cancel Connection** in the footer of the Canvas composer.
+
+![Move or break a connection between two Canvas steps][2]
+
 ## Step 4: Use multivariate testing using Canvas
 
 You can add a Control Group to your Canvas by clicking on the <i class="fas fa-plus-circle"></i> plus button to add a new variant. 
@@ -292,6 +298,7 @@ Once you've launched your Canvas, you'll be able to view analytics for your jour
 
 
 [1]:{% image_buster /assets/img_archive/canvas_dropdown.png %}
+[2]: {% image_buster /assets/img_archive/canvas_connection_edit.gif %}
 [6b]: {{site.baseurl}}/user_guide/engagement_tools/campaigns/testing_and_more/rate-limiting/#rate-limiting
 [6c]: {{site.baseurl}}/user_guide/engagement_tools/campaigns/testing_and_more/rate-limiting/#frequency-capping
 [11]:{% image_buster /assets/img_archive/canvas_add_variant.gif %}

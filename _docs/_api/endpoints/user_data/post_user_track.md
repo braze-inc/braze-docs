@@ -176,6 +176,8 @@ The following status codes and associated error messages will be returned if you
 | `5XX` | Internal server error, you should retry with exponential backoff. |
 {: .reset-td-br-1 .reset-td-br-2}
 
+If you receive the error "provided external_id is blacklisted and disallowed", your request may have included a "dummy user". For more information, refer to [Spam blocking]({{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/user_archival/#spam-blocking). 
+
 ## Importing legacy user data
 
 You may submit data through the Braze API for a user who has not yet used your mobile app in order to generate a user profile. If the user subsequently uses the application all information following their identification via the SDK will be merged with the existing user profile you created via the API call. Any user behavior that is recorded anonymously by the SDK prior to identification will be lost upon merging with the existing API-generated user profile.
