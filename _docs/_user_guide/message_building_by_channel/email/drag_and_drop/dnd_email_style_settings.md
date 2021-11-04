@@ -10,36 +10,73 @@ tool:
   - Canvas
 ---
 
-# Drag & Drop Email editor settings
+# Drag & Drop Editor settings
 
-With global style settings, you can personalize the look of your email campaigns and Canvases. You can add and customize a default theme for your Drag & Drop Email editor. This includes editing your styles for email titles, text, buttons, and more.
+With global style settings, you can personalize the look of your email campaigns and Canvases. You can add and customize a default theme for your Drag & Drop Editor. This includes editing your styles for email titles, text, buttons, and more.
 
 {% alert important %}
-Global style settings for the Drag & Drop editor are currently in early access. Please contact your Braze account manager if you are interested in participating in the early access.
+Global style settings for the Drag & Drop Editor are currently in early access. Please contact your Braze account manager if you are interested in participating in the early access.
 {% endalert %}
 
-To edit your global style settings, go to the Manage Settings page under the Settings and select the Email Settings tab. Select Drag & Drop Email Editor Settings.
+To edit your global style settings, go to the **Manage Settings** page and select the **Email Settings** tab. Select **Drag & Drop Email Editor Settings**.
+
+![Drag & Drop Email Editor Settings][1]
 
 {% alert note %}
-Changes made in the Email Global Style Settings will apply to all future email campaigns and Canvases. 
+Updates made to the Email Global Style Settings will apply to all future email campaigns and Canvases. 
 {% endalert %} 
 
-## Basic Styling 
+## Basic styling 
 
-In the Basic Styling drop down, you can set your default email and content background colors for your email campaigns and Canvases. You can also select a default font and link color.
+In the **Basic Styling** dropdown, you can set your default email and content background colors for your email campaigns and Canvases. You can also select a default or font, add a custom font, and edit link colors.
+
+![Basic Styling Options][2]
 
 ### Add a custom font
-To add a custom font, enter the **Font Name** and **Font URL**. Be sure that the preview shows your custom font before saving. Click **Save** to use the custom font as your default email font. 
+To add a custom font, enter the same font name as your custom font source file for the **Font Name** field. Ensure that the name is capitalized and spaced correctly. Enter the corresponding **Font URL**. Check that the preview shows your custom font before saving. Click **Save** to use the custom font as your default email font. 
 
-## Title Styling
+Currently, you can only add one custom font for the global style settings.
+
+![Add Custom Font][3]{: style="max-width:80%;"}
+
+## Title styling
 Here, you can adjust the styles of your email titles by editing the font size, font color, and text alignment. This applies to the main header and secondary header. 
 
-Click **Override default style** to apply the desired title styling.
+![Heading Styling Options][6]
 
-## Text Styling
-To set a default text style, enter the **Font Size** and **select a Font Color**. You can also adjust the block styling for the body text by editing the **Padding Top**, **Padding Right**, **Padding Bottom**, and **Padding Left** values.
+Optionally, you can override the default style of your Drag & Drop Editor theme. Click **Override default style** to apply your choice of title styling. This can include setting a different font and link color.
 
+![Default Override][7]{: style="max-width:60%;"}
 
-## Button Styling
+## Text styling
+To set a default text style, in the **Text Styling** dropdown, enter the **Font Size** and select **Font Color** to choose a font color from the color picker. 
+
+You can also adjust the block styling for the body text by editing the **Padding Top**, **Padding Right**, **Padding Bottom**, and **Padding Left** values.
+
+![Text Styling Options][4]{: style="max-width:60%;"}
+
+## Button styling
+
+In the **Button Styling** dropdown, you can edit the following defaut styles for the button:
+- Background color
+- Font size
+- Font color
+- Border radius
+- Border color
+- Border weight
+- Button padding
 
 Adjust the block styling for buttons by editing the **Padding Top**, **Padding Right**, **Padding Bottom**, and **Padding Left** values.
+
+![Button Styling Options][5]{: style="max-width:50%;"}
+
+After editing the styles in the Drag & Drop Email editor, click **Save**. To further customize your email campaigns and Canvases, check out [Drag & Drop Editor blocks][8]!
+
+[1]: {% image_buster /assets/img_archive/dnd_global_style_settings.png %}
+[2]: {% image_buster /assets/img_archive/dnd_basic_styling.png %}
+[3]: {% image_buster /assets/img_archive/dnd_custom_font.png %}
+[4]: {% image_buster /assets/img_archive/dnd_text_styling.png %}
+[5]: {% image_buster /assets/img_archive/dnd_button_styling.png %}
+[6]: {% image_buster /assets/img_archive/dnd_heading_styling.png %}
+[7]: {% image_buster /assets/img_archive/dnd_default_override.png %}
+[8]: {{site.baseurl}}/user_guide/message_building_by_channel/email/drag_and_drop/dnd_editor_blocks
