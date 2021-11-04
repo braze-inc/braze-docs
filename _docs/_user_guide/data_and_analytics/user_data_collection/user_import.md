@@ -161,7 +161,7 @@ If the import process runs into an error, a yellow warning icon will be displaye
 
 ## Segmenting
 
-User import creates and updates user profiles, and can also be used to create segments. To create a segment, check **create a segment from this csv**.
+User import creates and updates user profiles, and can also be used to create segments. To create a segment, select **Create a Segment from this CSV**.
 
 ![CSV Import Segmenting Users][7]{: style="max-width:80%;"}
 
