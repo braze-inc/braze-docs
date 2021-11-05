@@ -44,5 +44,5 @@ valid_partner_list:
 - name: Bluedot
   url: /docs/partners/message_personalization/location/bluedot/
 - name: Judo
-  url: /docs/partners/message_orchestration/dynamic_content/judo/
+  url: /docs/partners/message_personalization/dynamic_content/judo/
 ---
