@@ -13,7 +13,7 @@ Let's jump right in and take a look!
 
 Welcome to our unified Docs site - your new knowledge base for all things related to the Braze platform.
 
-![homepages][1]
+![Home Page][1]
 
 Learn more about the new sections of our Docs site below.
 
@@ -29,7 +29,7 @@ Learn more about the new sections of our Docs site below.
 
 Our new ways to navigate the site are absolutely top notch!
 
-![navigation][2]
+![Navigation][2]
 
 * __Top Navigation__: Quickly switch between the four main sections of Docs.
 * __Search__ and __Advanced Search__: Powered by [Algolia][5], our new search goes above and beyond to help you get where you need.
@@ -41,13 +41,13 @@ Our new ways to navigate the site are absolutely top notch!
 
 Our new [Help][10] section has everything from Help Articles and a Troubleshooting Guide to Release Notes and Best Practices.
 
-![help][3]
+![Help section][3]
 
 ## Help Us Help You
 
 Every page with content offers an opportunity to give feedback.
 
-![feedback][4]
+![Feedback][4]
 
 Your comments are sent directly to our Documentation Team for review! Let us know if our content helped you or just give general feedback. Every piece of feedback helps us adjust and improve our Docs!
 
