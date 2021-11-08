@@ -5,10 +5,10 @@ article_title: Braze User Guide
 layout: user_guide
 
 user_top_header: "Braze User Guide"
-user_top_text: "Meet us at the intersection of art and science. Find us in the moment,
+user_top_text: "Meet us at the intersection of art and science. Find us in the moment
 or light years ahead. Upon arrival, expect lifecycle engagement at its best. At Braze,
 we aim to create strong bonds between you and your customers or users."
-description: "Meet us at the intersection of art and science. Find us in the moment,
+description: "Meet us at the intersection of art and science. Find us in the moment
 or light years ahead. Upon arrival, expect lifecycle engagement at its best. At Braze,
 we aim to create strong bonds between you and your customers or users."
 

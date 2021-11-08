@@ -5,8 +5,8 @@ page_order: 2
 layout: featured
 
 guide_top_header: "Administrative"
-guide_top_text: "This section details how to administer your Braze dashboard, including initial setup for integrations, dashboard administration, user permission management, and more."
-description: "This section details how to administer your Braze dashboard, including initial setup for integrations, dashboard administration, user permission management, and more."
+guide_top_text: "This section explains how to administer your Braze dashboard, including initial setup for integrations, dashboard administration, user permission management, and more."
+description: "This section explains how to administer your Braze dashboard, including initial setup for integrations, dashboard administration, user permission management, and more."
 
 guide_featured_title: "Popular Topics"
 guide_featured_list:
