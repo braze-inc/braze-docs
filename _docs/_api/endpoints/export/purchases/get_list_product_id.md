@@ -23,7 +23,7 @@ This endpoint returns paginated lists of product IDs.
 
 | Parameter | Required | Data Type | Description |
 |---|---|---|---|
-| `page`  | Required | String | The page of your product list that you would like to view. |
+| `page`  | Optional | String | The page of your product list that you would like to view. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
 
 ## Example request
