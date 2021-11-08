@@ -5,7 +5,7 @@ page_order: 6.4
 layout: featured
 
 guide_top_header: "Predictive Suite"
-guide_top_text: "The new Braze Predictive Suite puts machine learning tools in the hands of marketers, enabling them to effectively leverage and act on data seamlessly within the Braze platform. As the first feature released in the Predictive Suite, Predictive Churn allows marketers to define and generate predictions, providing a proactive approach toward minimizing future churn. Learn more about the features below!"
+guide_top_text: "The Braze Predictive Suite puts machine learning tools in the hands of marketers, enabling them to effectively leverage and act on data seamlessly within the Braze platform. As the first feature released in the Predictive Suite, Predictive Churn allows marketers to define and generate predictions, providing a proactive approach toward minimizing future churn. Learn more about the features below!"
 description: "This landing page is a place for all this predictive at Braze! The Braze predictive suite offers solutions for churn and purchase prediction within your Braze campaigns and Canvases."
 
 guide_featured_title: "Features"
