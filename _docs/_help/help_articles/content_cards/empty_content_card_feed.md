@@ -16,6 +16,6 @@ If you want a new user to receive cards, [create a Content Cards campaign]({{sit
 
 Alternatively, you can send the card in their first session. Call `requestContentCardsRefresh` on the SDK during that session after calling `requestImmediateDataFlush`.
 
-Still need help? [Open a support ticket]({{site.baseurl}}/support_contact/).
+Still need help? Open a [support ticket]({{site.baseurl}}/braze_support/).
 
 _Last updated on June 3, 2021_

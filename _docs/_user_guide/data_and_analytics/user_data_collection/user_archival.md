@@ -42,7 +42,7 @@ In this case, these users cannot be messaged and are not engaging with your bran
 
 ## Spam blocking
 
-Braze blocks individual users with over 5 million sessions ("dummy users"), and no longer ingests their SDK events, because they are usually the result of an incorrect integration. If you find that this has happened for a legitimate user, please file a ticket with Braze Support.
+Braze blocks individual users with over 5 million sessions ("dummy users"), and no longer ingests their SDK events, because they are usually the result of an incorrect integration. If you find that this has happened for a legitimate user, please file a ticket with Braze [support]({{site.baseurl}}/braze_support/).
 
 To find your dashboard's dummy users, perform the following steps:
 

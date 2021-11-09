@@ -43,7 +43,7 @@ To confirm that the event properties are successfully tracked, you can view all 
 
 To check the specific property values that are being passed for each event, check the [Event User Logs][24] on your dashboard. After adding your user as a test user, you should perform the custom event within the app, wait around 10 seconds for the data to flush, and then refresh the event user log to view the custom event and the event property value that was passed with it.
 
-Still need help? [Open a support ticket]({{site.baseurl}}/support_contact/).
+Still need help? Open a [support ticket]({{site.baseurl}}/braze_support/).
 
 _Last updated on June 21, 2021_
 

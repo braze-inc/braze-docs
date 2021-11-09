@@ -118,6 +118,6 @@ If you want to learn more about things that were discussed in the article, check
 
 ### Still Lost?
 
-If this article didn't help, leave feedback below or [open a support ticket][support]!
+If this article didn't help, leave feedback below or open a [support ticket][support]!
 
-[support]: {{site.baseurl}}/support_contact/
+[support]: {{site.baseurl}}/braze_support/

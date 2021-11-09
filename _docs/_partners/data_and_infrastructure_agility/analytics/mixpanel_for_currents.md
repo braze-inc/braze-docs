@@ -33,7 +33,7 @@ A list of the events that can be exported from Braze to Mixpanel is below. All e
 
 You can export two types of events to Mixpanel: "Message Engagement Events" consisting of the Braze Events that are directly related to message sending, and "Customer Behavior Events" including other App or Website activity such as Sessions, Custom events, and Purchases tracked through the platform. All custom events are prefixed with `[Braze Custom Event]`. Custom event properties and purchase event properties are prefixed with `[Custom event property]` and `[Purchase property]`, respectively.
 
-Please contact your Account Manager or [open a support ticket][support] if you need access to additional event entitlements.
+Please contact your Account Manager or open a [support ticket][support] if you need access to additional event entitlements.
 
 ## Mixpanel Cohort Import
 
@@ -228,7 +228,7 @@ You can manage the Mixpanel Cohort Import process from the Technology Partners p
 }
 ```
 
-Behavior for `dispatch_id` differs between Canvas and campaigns because Braze treats Canvas steps (except for Entry Steps, which can be scheduled) as triggered events, even when they are "scheduled". [Learn more about `dispatch_id` behavior in Canvas and campaigns here]({{site.baseurl}}/help/help_articles/data/dispatch_id/). For additional information, refer to the [Customer Behavior and User Events]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/event_glossary/customer_behavior_events/) and [Message Engagement Events]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/event_glossary/message_engagement_events/).
+Behavior for `dispatch_id` differs between Canvas and campaigns because Braze treats Canvas steps (except for Entry Steps, which can be scheduled) as triggered events, even when they are "scheduled". Learn more about [`dispatch_id` behavior]({{site.baseurl}}/help/help_articles/data/dispatch_id/) in campaigns and Canvases. For additional information, refer to the [Customer Behavior and User Events]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/event_glossary/customer_behavior_events/) and [Message Engagement Events]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/event_glossary/message_engagement_events/).
 
 
 ### SMS events
@@ -484,4 +484,4 @@ Behavior for `dispatch_id` differs between Canvas and campaigns because Braze tr
 }
 ```
 
-[support]: {{site.baseurl}}/support_contact/
+[support]: {{site.baseurl}}/braze_support/
