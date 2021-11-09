@@ -26,7 +26,7 @@ For some Canvas and Campaign examples, please check out our guide here.
 | Requirement | Origin | Access | Description |
 | ----------- | ------ | ------ | ----------- |
 | Shopify Store | Shopify | [https://www.shopify.com](https://www.shopify.com) | You must have an active Shopify store.<br><br>Please note that at this time, you are only able to connect __one__ Shopify store per app group. |
-| Event Property Segmentation Enabled | Braze | Please reach out to your Customer Success Manager | To ensure you can segment your Shopify events properties, please work with your Customer Success Manager to confirm that you have event property segmentation enabled for your dashboard. |
+| Event Property Segmentation Enabled | Braze | Please reach out to your Customer Success Manager or contact Braze Support | To ensure you can segment your Shopify events properties, please work with your Customer Success Manager or Braze Support to confirm that you have event property segmentation enabled for your dashboard. |
 | Nested Custom Event Property Support in Segment Extensions | Braze | Enabled with the Shopify Integration | You will be given access to this feature to filter Shopify nested custom event properties for up to 365 days within Segment Extensions. |
 | Nested Custom Event Property Support for Message Triggering | Braze | Enabled with the Shopify Integration | You will be given access to this feature to trigger campaigns and Canvases using the nested properties within Shopify customer events. |
 | Nested Custom Attribute Support | Braze | Enabled with the Shopify Integration | You will be given access to this feature to receive Shopify marketing opt-in custom attributes. |
