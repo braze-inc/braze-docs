@@ -71,6 +71,9 @@ A common use case is trying to debug why a user can't see a particular Content C
 
 6. Go to the **Campaigns** page and search for the `campaign_id`.
 
+![Search for campaign_id on Campaigns page][1]
+
 From there, you can review your message settings and content to drill down and determine why a user can't see a particular Content Card.
 
+[1]: {% image_buster /assets/img_archive/cc_debug.png %}
 [3]: {% image_buster /assets/img/cc-user-preview.png %}
