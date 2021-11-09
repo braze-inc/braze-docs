@@ -102,7 +102,7 @@ In addition, you can also use Braze's breadth of purchase filter to create segme
 ![Shopify][14]
 
 {% alert note %}
-If you are looking to segment by custom event properties, please ensure that you work with your Customer Success Manager to enable filtering for all relevant event properties that you'd like to use within segmentation and Liquid.
+If you are looking to segment by custom event properties, please ensure that you work with your Customer Success Manager or Braze support to enable filtering for all relevant event properties that you'd like to use within segmentation and Liquid.
 {% endalert %} 
 
 ## Campaign and Canvas triggering 

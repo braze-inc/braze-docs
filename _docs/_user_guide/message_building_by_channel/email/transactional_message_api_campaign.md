@@ -25,7 +25,7 @@ Transactional Emails are emails sent to facilitate an agreed-upon transaction be
 In short, use Transactional Emails to send business-critical notifications originating from your service for a single user where speed is of the utmost importance.
 
 {% alert note %}
-Transactional Email is only available as part of select Braze packages. Please reach out to your Braze Customer Success Manager for more details.
+Transactional Email is only available as part of select Braze packages. Please reach out to your Braze Customer Success Manager or open a support ticket for more details.
 {% endalert %}
 
 ## Create a new campaign
