@@ -18,7 +18,7 @@ Before following these steps, make sure you have integrated the SDK using one of
 {% tabs %}
 {% tab OBJECTIVE-C %}
 
-If you are integrating the Braze SDK with CocoaPods, Carthage, or [manually with the dynamic XCFramework]({{site.baseUrl}}/docs/developer_guide/platform_integration_guides/ios/initial_sdk_setup/installation_methods/manual_integration_options/), add the following line of code to your `AppDelegate.m` file:
+If you are integrating the Braze SDK with CocoaPods, Carthage, or [with a dynamic manual integration]({{site.baseUrl}}/docs/developer_guide/platform_integration_guides/ios/initial_sdk_setup/installation_methods/manual_integration_options/), add the following line of code to your `AppDelegate.m` file:
 
 ```objc
 #import "Appboy-iOS-SDK/AppboyKit.h"
@@ -41,7 +41,7 @@ Within your `AppDelegate.m` file, add the following snippet within your `applica
 {% endtab %}
 {% tab swift %}
 
-If you are integrating the Braze SDK with CocoaPods, Carthage, or [manually with the dynamic XCFramework]({{site.baseUrl}}/docs/developer_guide/platform_integration_guides/ios/initial_sdk_setup/installation_methods/manual_integration_options/), add the following line of code to your `AppDelegate.m` file:
+If you are integrating the Braze SDK with CocoaPods, Carthage, or [with a dynamic manual integration]({{site.baseUrl}}/docs/developer_guide/platform_integration_guides/ios/initial_sdk_setup/installation_methods/manual_integration_options/), add the following line of code to your `AppDelegate.m` file:
 
 ```swift
 import Appboy_iOS_SDK
@@ -61,10 +61,10 @@ In `AppDelegate.swift`, add following snippet to your `application(application: 
 Appboy.start(withApiKey: "YOUR-APP-IDENTIFIER-API-KEY", in:application, withLaunchOptions:launchOptions)
 ```
 
-__Note__: Braze's `sharedInstance` singleton will be nil before `startWithApiKey:` is called, as that is a prerequisite to using any Braze functionality.
-
 {% endtab %}
 {% endtabs %}
+
+__Note__: Braze's `sharedInstance` singleton will be nil before `startWithApiKey:` is called, as that is a prerequisite to using any Braze functionality.
 
 {% alert important %}
 Be sure to update `YOUR-APP-IDENTIFIER-API-KEY` with the correct value from your **Settings** page. For more information on where to find your App Identifier API key, check out our [API documentation]({{site.baseurl}}/api/api_key/#the-app-identifier-api-key).
