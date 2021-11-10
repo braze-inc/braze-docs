@@ -35,4 +35,45 @@ You can also preview messages from the **Test** tab as if you were a user. You c
 - Is your copy clear, concise, and correct?
 - Do your links direct the user to where they should go?
 
+## Debug
+
+After your Content Cards are sent, you can break down or debug any issues from the [Event User Log]({{site.baseurl}}/user_guide/administrative/app_settings/developer_console/event_user_log_tab/) in the Developer Console. 
+
+A common use case is trying to debug why a user can't see a particular Content Card. To do so, you can look in the **Event User Logs** for the Content Cards delivered to the SDK on session start, but prior to an impression, and trace those back to a specific campaign:
+
+1. Go to the **Developer Console** and select the **Event User Log** tab.
+2. Locate and expand the SDK Request for your test user.
+3. Click **Raw Data**.
+4. Find the `id` for your session. An example excerpt is shown below:
+
+    ```json
+    [
+      {
+        "session_id": "D1B051E6-469B-47E2-B830-5A728D1D4AC5",
+        "data": {
+          "ids": [
+            "NjE4NTAwNWE5ZDliZWU3OTM4N2NjZTQzXyRfY2M9YzNiMjU3NDAtZjExMy1jMDQ3LTRiMWQtZDI5NmYyODBhZjRmJm12PTYxODUwMDViOWQ5YmVlNzkzODdjY2U0NSZwaT1jbXA="
+          ]
+        },
+        "name": "cci",
+        "time": 1636106490.155
+      }
+    ]
+    ```
+
+5. Use a decoding tool like [Base64 Decode and Encode](https://www.base64decode.org/) to decode the `id` from Base64 format and find the associated `campaign_id`. In our example above, this results in the following:
+
+    ```
+    6185005a9d9bee79387cce43_$_cc=c3b25740-f113-c047-4b1d-d296f280af4f&mv=6185005b9d9bee79387cce45&pi=cmp
+    ```
+
+    Where `6185005a9d9bee79387cce43` is the `campaign_id`.<br><br>
+
+6. Go to the **Campaigns** page and search for the `campaign_id`.
+
+![Search for campaign_id on Campaigns page][1]
+
+From there, you can review your message settings and content to drill down and determine why a user can't see a particular Content Card.
+
+[1]: {% image_buster /assets/img_archive/cc_debug.png %}
 [3]: {% image_buster /assets/img/cc-user-preview.png %}
