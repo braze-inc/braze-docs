@@ -125,7 +125,7 @@ If you would like to enforce two-factor authentication for the whole company, tu
 ![Two-Factor Authentication - Company Settings][53]
 
 When your company enforces two-factor authentication, account users must set up two-factor authentication on their own account upon log in or else they will be locked out. Account users can also go to their account settings page to enable it. There is an option to change your mobile phone number in case an account user would like to authenticate using a different mobile phone number.  In addition, if two-factor authentication is optional for your company under Security Settings, account users will have the option to disable two-factor authentication.
-If you have any trouble enabling/verifying with two-factor authentication, please contact your account administrator or [open a support ticket][support].
+If you have any trouble enabling/verifying with two-factor authentication, please contact your account administrator or open a [support ticket]({{site.baseurl}}/braze_support/).
 
 Under the Manage Users page, there will be an additional column that indicates which account users have turned on two-factor authentication.
 
@@ -137,7 +137,6 @@ Under the Manage Users page, there will be an additional column that indicates w
 [8]: https://dashboard-01.braze.com/app_settings/app_settings/email/ "Email App Settings"
 [19]: https://dashboard-01.braze.com/app_settings/app_settings/ "App Settings Page"
 [22]: {% image_buster /assets/img_archive/company_analytics_report_new.png %}
-[support]: {{site.baseurl}}/support_contact/
 [50]: {% image_buster /assets/img_archive/security_settings_new.png %}
 [51]: {% image_buster /assets/img_archive/authentication_rules_new.png %}
 [52]: {% image_buster /assets/img_archive/dashboard_ip_whitelisting_new.png %}

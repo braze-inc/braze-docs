@@ -32,7 +32,7 @@ For each conversion event that you select per campaign, you set the [deadline][4
 
 Check that you’ve reviewed information on [calculating conversions][45] in order to understanding your campaign metrics.
 
-Still need help? [Open a support ticket]({{site.baseurl}}/support_contact/).
+Still need help? Open a [support ticket]({{site.baseurl}}/braze_support/).
 
 _Last updated on May 6, 2021_
 

@@ -39,7 +39,7 @@ For example: `bounces+1234567@braze.online.docs.com`.
 
 Once added to your Apple Certificate page, emails from this `From` address domain will be delivered via the Apple Private Relay system.
 
-If you have any further questions, please [submit a support ticket]({{site.baseurl}}/support_contact/).
+If you have any further questions, please open a [support ticket]({{site.baseurl}}/braze_support/).
 
 {% alert important %}
 If your desired `From` address is an `abmail` address, please include that in your subdomain. For example, use `abmail.docs.braze.com` instead of `docs.braze.com`.

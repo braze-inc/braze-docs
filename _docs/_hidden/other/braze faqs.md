@@ -35,10 +35,10 @@ You do not need to make any changes to your REST API integrations now. However, 
 **No.** Braze is the same company owned by the same people providing the same Services.  Our new name better reflects who we are and what we do.
 
 ### Where do I go for support?
-Please contact your Customer Success Manager or [open a support ticket][support].
+Please contact your Customer Success Manager or open a [support ticket][support].
 
 ### If I email Appboy, will it bounce?
 **No.** Every `appboy.com` email address will get mapped to a new `braze.com` email address.
 
 [1]: {{site.baseurl}}/developer_guide/platform_wide/platform_features/
-[support]: {{site.baseurl}}/support_contact/
+[support]: {{site.baseurl}}/braze_support/
