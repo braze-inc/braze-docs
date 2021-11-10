@@ -1,10 +1,13 @@
 
 $(document).ready(function() {
     var snippets = $('.rouge-code');
-
+    var asset_path = '/docs';
+    if (site_language && ( site_language != 'en')) {
+      asset_path += "/" + site_language;
+    }
     snippets.each(function(k,v){
       var randid = Math.random().toString(36).replace(/[^a-z]+/g, '').substr(2, 10);
-      $(this).prepend('<button class="btn" data-clipboard-snippet data-toggle="Copied!" id="' + randid + '"><img class="clippy" src="/docs/assets/img/copy_icon.png" alt="Copy to clipboard" style="max-width:30px;max-height:30px;"></button>');
+      $(this).prepend('<button class="btn" data-clipboard-snippet data-toggle="Copied!" id="' + randid + '"><img class="clippy" src="' + asset_path + '/assets/img/copy_icon.png" alt="Copy to clipboard" style="max-width:30px;max-height:30px;"></button>');
       $(this).prepend('<div id="dv_' + randid + '"></div>');
     });
 

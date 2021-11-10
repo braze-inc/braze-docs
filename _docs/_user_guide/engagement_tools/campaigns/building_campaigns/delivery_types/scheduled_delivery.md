@@ -40,11 +40,11 @@ Segments targeted with local time zone campaigns should include, at minimum, a 2
 
 ### Use cases
 
-Designated time schedules are best suited for messages scheduled in advance and recurring campaigns - such as onboarding and retention - that run regularly on all qualified users.
+Designated time schedules are best suited for messages scheduled in advance and recurring campaigns, such as onboarding and retention, that run regularly on all qualified users.
 
 ## Option 3: Intelligent Timing
 
-[Intelligent Timing][8] allows you to deliver a campaign to each user at a different time. Braze calculates each individual's time based on when that user typically engages with your app and its notifications. You can optionally specify that Intelligent Timing campaigns send only during a certain portion of the day - for instance, if you are notifying users of a promotion that ends at midnight, you may want your messages to send by 10 pm at the latest.
+[Intelligent Timing][8] allows you to deliver a campaign to each user at a different time. Braze calculates each individual's time based on when that user typically engages with your app and its notifications. You can optionally specify that Intelligent Timing campaigns send only during a certain portion of the day. For instance, if you are notifying users of a promotion that ends at midnight, you may want your messages to send by 10 pm at the latest.
 
 ![Intelligent Timing][14]
 
@@ -56,7 +56,7 @@ If a user's profile does not have enough data to calculate an optimal time, you 
 
 ### Use cases
 
-Intelligent Timing campaigns work best for one-off and recurring messages where there is some flexibility regarding delivery time - for instance, they aren't well suited for breaking news or timed announcements.
+Intelligent Timing campaigns work best for one-off and recurring messages where there is some flexibility regarding delivery time such as when they aren't well suited for breaking news or timed announcements.
 
 [3]: {% image_buster /assets/img_archive/time_based.png %}
 [7]: {{site.baseurl}}/help/best_practices/user_onboarding/#user-onboarding

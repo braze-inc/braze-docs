@@ -143,11 +143,17 @@ Braze will send Connected Content requests from the IP ranges below. Braze has a
 | `52.54.89.238`
 | `18.205.178.15`
 
-| For Instance `EU-01`: |
+| For Instances `EU-01` and `EU-02`: |
 |---|
 | `52.58.142.242`
 | `52.29.193.121`
 | `35.158.29.228`
+| `18.157.135.97`
+| `3.123.166.46`
+| `3.64.27.36`
+| `3.65.88.25`
+| `3.68.144.188`
+| `3.70.107.88`
 
 | For Instance `US-08`: |
 |---|
@@ -170,7 +176,7 @@ Braze will send Connected Content requests from the IP ranges below. Braze has a
 | `40.76.166.144`
 | `40.76.166.145`
 
-[1]: #aborting-connected-content
+[1]: {{site.baseurl}}/user_guide/personalization_and_dynamic_content/connected_content/aborting_connected_content/
 [2]: {{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/using_liquid/#liquid-usage-use-cases--overview
 [16]: [success@braze.com](mailto:success@braze.com)
 [34]: {% image_buster /assets/img_archive/basic_auth_mgmt.png %}

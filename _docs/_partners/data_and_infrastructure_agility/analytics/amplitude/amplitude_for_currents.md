@@ -47,7 +47,7 @@ You can export two types of events to Amplitude: "Message Engagement Events" con
 
 All cohorts named and imported into Braze will be prefixed with `[Amplitude]` and suffixed with their `cohort_id`. This means that a cohort named "COHORT_NAME" with the `cohort_id` "cxyzz3hz" will be titled `[Amplitude] COHORT_NAME: cxyzz3hz` in Braze filters.
 
-Please contact your Account Manager or [open a support ticket][support] if you need access to additional event entitlements.
+Please contact your Account Manager or open a [support ticket][support] if you need access to additional event entitlements.
 
 ### Scheduled cohort syncs
 
@@ -498,4 +498,4 @@ To check out some of the common Amplitude API endpoints, view our dedicated [Amp
   "send_id": (string) id of the message if specified for the campaign (See Send Identifier under REST API Parameter Definitions)
 }
 ```
-[support]: {{site.baseurl}}/support_contact/
+[support]: {{site.baseurl}}/braze_support/

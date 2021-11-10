@@ -1,7 +1,7 @@
 ---
 nav_title: Data Warehouses
 article_title: Data Warehouse Partners
-page_order: 6
+page_order: 7
 
 page_type: landing
 description: "This page lists Braze partners (Alloys) who help make your data usable from your messaging campaigns."

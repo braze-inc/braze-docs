@@ -27,6 +27,6 @@ For example, if the Segment includes the event Session Start “Has Used App mor
 
 In short, avoid configuring an action-based campaign or Canvas with the same trigger as the audience filter (i.e., a changed attribute or performed a custom event). A race condition may occur in which the user is not in the audience at the time they perform the trigger event, which means they won't receive the campaign or enter the Canvas.  
 
-Still need help? [Open a support ticket]({{site.baseurl}}/support_contact/).
+Still need help? Open a [support ticket]({{site.baseurl}}/braze_support/).
 
 _Last updated on August 5, 2021_

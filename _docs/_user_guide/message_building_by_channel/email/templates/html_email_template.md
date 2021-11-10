@@ -34,7 +34,7 @@ Go to the __Templates & Media__ page, under the __Engagement__ section. This ope
 
 ### Step 2: Open the uploader
 
-In the section **Start from a Basic HTML Template**, select **From File**.
+Under the **Template Type** section, select **HTML Editor**. Then scroll down to the section **Start from a Basic HTML Template** and select **From File**.
 
 ### Step 3: Upload your template
 

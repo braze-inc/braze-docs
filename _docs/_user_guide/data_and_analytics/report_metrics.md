@@ -220,7 +220,7 @@ glossaries:
       - Webhook
       - SMS
   - name: Conversions (B, C, D)
-    description: The percentage of times a defined event occurred compared to all recipients of a sent message. This defined event is determined when you build the campaign.
+    description: Additional conversion events added after the <b>Primary Conversion Event</b>. The number of times a defined event occurred after interacting with or viewing a received message from a Braze campaign. This defined event is determined by the marketer when building the campaign. For Email, Push and Webhooks, we start tracking conversions after the initial send. For Content Cards and In-App Messages, this count begins when they view a Content Card or Message for the first time.
     tags:
       - Content Cards
       - Email

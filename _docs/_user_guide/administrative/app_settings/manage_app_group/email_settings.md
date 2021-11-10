@@ -36,7 +36,7 @@ When setting your "From" addresses, make sure your "From" email domain matches y
 The **BCC Address** settings allow you to add and manage BCC addresses that can be appended to outbound email messages sent from Braze. Appending a BCC address to an email message will send an identical copy of the message your user receives to your BCC inbox. This is a useful tool to retain copies of messages you sent your users for compliance requirements or customer support issues.
 
 {% alert important %} 
-Appending a BCC address to your campaign or Canvas step will result in your billable emails for the campaign or Canvas step being doubled as Braze sends one message to your user and one to your BCC address. Please contact your Customer Success Manager to enable this feature. 
+Appending a BCC address to your campaign or Canvas step will result in your billable emails for the campaign or Canvas step being doubled as Braze sends one message to your user and one to your BCC address. Please contact your Customer Success Manager or open a [support ticket]({{site.baseurl}}/braze_support/) to enable this feature. 
 {% endalert %}
 
 ![BCC Address][11]

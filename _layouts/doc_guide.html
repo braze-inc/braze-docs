@@ -51,7 +51,7 @@ hide_breadcrumb: true
       <div id="doc_list" class="row justify-content-between">
         {%- for doc_list in page.doc_menu_list  -%}
           {%- if doc_list.link -%}
-          <a href="{{ doc_list.link }}">
+          <a href="{{ doc_list.link | multi_lang }}">
             {%- endif %}
         <div id="{{ doc_list.name | handle }}" class="doc_item">
           <div class="doc_img">
@@ -122,7 +122,7 @@ hide_breadcrumb: true
         <div class="doc_description">
         {%- for doc_list in page.popular_topic_list  -%}
           <div>
-          <a href="{{ doc_list.link }}">{{ doc_list.name }}</a>
+          <a href="{{ doc_list.link | multi_lang }}">{{ doc_list.name }}</a>
           </div>
         {%- endfor -%}
       </div>
@@ -132,7 +132,7 @@ hide_breadcrumb: true
         <div class="doc_description">
         {%- for doc_list in page.helpful_resources_list  -%}
           <div>
-          <a href="{{ doc_list.link }}">{{ doc_list.name }}</a>
+          <a href="{{ doc_list.link | multi_lang }}">{{ doc_list.name }}</a>
           </div>
         {%- endfor -%}
         </div>
