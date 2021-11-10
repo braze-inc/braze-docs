@@ -55,7 +55,7 @@ There is a minimum interval at which we’ll allow in-app messages to be consecu
 
 These are customizable, however we have them in place to avoid over-messaging your users.
 
-Still need help? [Open a support ticket]({{site.baseurl}}/support_contact/).
+Still need help? Open a [support ticket]({{site.baseurl}}/braze_support/).
 
 _Last updated on July 15, 2021_
 

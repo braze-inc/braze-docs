@@ -49,7 +49,7 @@ If this is a single channel campaign or a Canvas with a control group, it’s po
   1. Check the [variant distribution][6] to see if there is a control group.
   2. If so, create a segment filtering for [in campaign control group][7] then [export the segment][8] and check if your user ID is on this list.
 
-  Still need help? [Open a support ticket]({{site.baseurl}}/support_contact/).
+Still need help? Open a [support ticket]({{site.baseurl}}/braze_support/).
 
 _Last updated on July 15, 2021_
 

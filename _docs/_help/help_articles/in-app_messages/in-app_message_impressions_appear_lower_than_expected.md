@@ -46,7 +46,7 @@ You can read more about this:
   * [iOS][12] In-app message documentation
   * [Android][13] In-app message documentation
 
-Still need help? [Open a support ticket]({{site.baseurl}}/support_contact/).
+Still need help? Open a [support ticket]({{site.baseurl}}/braze_support/).
 
 _Last updated on May 6, 2021_
 

@@ -20,10 +20,6 @@ When enabled, this feature will prevent unauthorized requests that use your app'
 - Updating standard user profile attributes
 - Receiving or triggering messages
 
-{% alert important %}
-To enable this feature, please contact our support team or your customer success manager.
-{% endalert %}
-
 ## Getting started
 
 There are four high-level steps to get started:

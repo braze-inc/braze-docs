@@ -18,7 +18,7 @@ Braze recommends that customers who use our News Feed tool move over to our Cont
 
 With Content Cards, you can send a highly targeted, dynamic stream of rich content to your customers right within the apps they love, without interrupting their experience. In addition, Content Cards support more personalized features, including card pinning, card dismissal, API-based delivery, custom card expiration times, card analytics, and easy coordination with push notifications.
 
-Content Cards are not available out-of-the-box and must be purchased. To get started with Content Cards, reach out to your Customer Success Manager for more information.
+Content Cards are not available out-of-the-box and must be purchased. To get started with Content Cards, reach out to your Customer Success Manager or our support team for more information.
 
 ## When to use Content Cards 
 

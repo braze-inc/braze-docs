@@ -35,7 +35,7 @@ Confirm that your developers are passing location data to Braze. Normally, the p
 - [iOS][27]
 - [Web][28]
 
-Still need help? [Open a support ticket]({{site.baseurl}}/support_contact/).
+Still need help? Open a [support ticket]({{site.baseurl}}/braze_support/).
 
 _Last updated on March 27, 2019_
 

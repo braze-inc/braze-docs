@@ -47,7 +47,7 @@ If we look back to the Entry Audience (active users), we can see that even thoug
 
 This means that even though we specified 90% of users to enter the variant, not all of those users are actually **able to** recieve a push notification. These users who are unable to recieve a push notification will still enter the variant regardless.
 
-Still need help? [Open a support ticket]({{site.baseurl}}/support_contact/).
+Still need help? Open a [support ticket]({{site.baseurl}}/braze_support/).
 
 _Last updated on December 3, 2020_
 

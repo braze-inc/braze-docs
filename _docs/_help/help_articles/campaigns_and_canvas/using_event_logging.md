@@ -25,7 +25,7 @@ Use Event Logging to test what behavior looks like for an anonymous user. It can
 
 This is a great way to find anonymous users. You can also use this information to test what data is being sent to Braze and check any discrepancies. From this view you are also able to identify whether the deltas of your data are being sent to Braze. If an email address or push token is being sent with every event logged that indicates that all data is being sent to Braze.
 
-Still need help? [Open a support ticket]({{site.baseurl}}/support_contact/).
+Still need help? Open a [support ticket]({{site.baseurl}}/braze_support/).
 
 _Last updated on March 27, 2019_
 

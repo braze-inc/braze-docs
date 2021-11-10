@@ -12,7 +12,7 @@ tool:
 
 # Simple Survey in-app message
 
-Use the new **Simple Survey** in-app message template to collect user attributes, insights, and preferences that power your campaign strategy.
+Use the new **Simple Survey** in-app message template to collect user attributes, insights, and preferences that power your campaign strategy. 
 
 For example, ask users how they'd like to use your app, learn more about their personal preferences, or even ask about their satisfaction with a particular feature.
 
