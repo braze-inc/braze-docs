@@ -74,7 +74,7 @@ Note that as of December 2019, custom endpoints are no longer given out, if you 
 
 Now that the libraries have been integrated, you have to create an `braze.xml` file in your project's `res/values` folder. If you are on a specific data cluster or have a pre-existing custom endpoint, you need to specify the endpoint in your `braze.xml` file as well. The contents of that file should resemble the following code snippet:
 
->  Be sure to substitute your [App Identifier API Key]({{site.baseurl}}/api/api_key/#the-app-identifier-api-key) found within the  **Settings** page of the Braze dashboard for `YOUR_APP_IDENTIFIER_API_KEY`. To find out your specific cluster or endpoint, please ask your Customer Success Manager or [open a support ticket][68].
+>  Be sure to substitute your [App Identifier API Key]({{site.baseurl}}/api/api_key/#the-app-identifier-api-key) found within the  **Settings** page of the Braze dashboard for `YOUR_APP_IDENTIFIER_API_KEY`. To find out your specific cluster or endpoint, please ask your Customer Success Manager or open a [support ticket][support].
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
@@ -175,5 +175,5 @@ Please see the following sections in order to enable [custom event tracking]({{s
 [60]: https://github.com/Appboy/appboy-android-sdk/releases
 [63]: https://appboy.github.io/appboy-android-sdk/javadocs/com/braze/BrazeActivityLifecycleCallbackListener.html#BrazeActivityLifecycleCallbackListener-boolean-boolean-
 [64]: https://appboy.github.io/appboy-android-sdk/javadocs/com/braze/ui/inappmessage/BrazeInAppMessageManager.html#ensureSubscribedToInAppMessageEvents-android.content.Context-
-[68]: {{site.baseurl}}/support_contact/
+[support]: {{site.baseurl}}/braze_support/
 [71]: https://appboy.github.io/appboy-android-sdk/sdk/com/braze

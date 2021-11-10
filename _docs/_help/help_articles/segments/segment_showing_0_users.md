@@ -31,7 +31,7 @@ It is possible that the data you are filtering on is not being sent to Braze. To
 The data that you see in the Braze dashboard may not have the same syntax as what you are sending to Braze. Ensure that these two match exactly.
 {% endalert %}
 
-Still need help? [Open a support ticket]({{site.baseurl}}/support_contact/).
+Still need help? Open a [support ticket]({{site.baseurl}}/braze_support/).
 
 _Last updated on January 5, 2021_
 

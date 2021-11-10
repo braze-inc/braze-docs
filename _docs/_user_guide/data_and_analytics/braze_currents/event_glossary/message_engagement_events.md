@@ -12,7 +12,7 @@ description: "This glossary lists the various Message Engagement Events that Bra
 tool: Currents
 ---
 
-Please contact your Account Manager or [open a support ticket][support] if you need access to additional event entitlements. If you can't find what you need below, check out our [Customer Behavior Events Library]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/customer_behavior_events/) or our [Currents sample data examples](https://github.com/Appboy/currents-examples/tree/master/sample-data).
+Please contact your Account Manager or open a [support ticket]({{site.baseurl}}/braze_support/) if you need access to additional event entitlements. If you can't find what you need below, check out our [Customer Behavior Events Library]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/customer_behavior_events/) or our [Currents sample data examples](https://github.com/Appboy/currents-examples/tree/master/sample-data).
 
 {% details Explanation of Message Engagement Event Structure %}
 <br>
@@ -1261,5 +1261,3 @@ This event occurs when a user is enrolled in a control variant set on a multi-va
 
 {% endapi %}
 
-
-[support]: {{site.baseurl}}/support_contact/

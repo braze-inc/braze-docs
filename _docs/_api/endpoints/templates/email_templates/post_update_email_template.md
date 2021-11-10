@@ -37,8 +37,8 @@ Authorization: Bearer YOUR-REST-API-KEY
   "body": (optional, string) the email template body that may include HTML,
   "plaintext_body": (optional, string) a plaintext version of the email template body,
   "preheader": (optional, string) the email preheader used to generate previews in some clients,
-  "tags": (optional, array of Strings) Tags must already exist
-  "should_inline_css": (optional, Boolean) One of 'true' or 'false' is expected
+  "tags": (optional, array of Strings) tags must already exist,
+  "should_inline_css": (optional, Boolean) one of 'true' or 'false' is expected
 }
 ```
 
