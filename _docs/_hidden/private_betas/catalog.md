@@ -114,7 +114,7 @@ This renders as the following:
 > Get Tales for just 7.49 USD!<br>
 > Get Reformation for just 22.49 USD!
 
-#### Using images
+#### Using images {#using-images}
 
 You can also reference images in the catalog to use in your messaging. To do so, use the `catalogs` tag and `item` object in the Liquid field for images.
 
@@ -132,7 +132,45 @@ For example, to add the `image_link` from our Games catalog to our promotional m
 
 Here's what this looks like when the Liquid is rendered:
 
-![Example iOS push notification with catalog Liquid tags rendered][4]{: style="max-width:60%" }
+![Example iOS push notification with catalog Liquid tags rendered][4]{: style="max-width:50%" }
+
+#### Templating catalog items with custom attributes
+
+You can also use templating to dynamically pull catalog items based on custom attributes. For example, let's say a user has the custom attribute `wishlist`, which contains an array of game IDs.
+
+```json
+{
+    "attributes": [
+        {
+            "external_id": "user_id",
+            "wishlist": ["tales_storefront", "teslagrad_storefront"]
+        }
+    ]
+}
+```
+
+Using Liquid templating, you can dynamically pull out the wishlist IDs and then use them in your message. To do so, [assign a variable]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/using_liquid/#assigning-variables) to your custom attribute, then use the `catalogs` tag to pull a specific item from the array.
+
+{% alert tip %}
+Remember, arrays start at `0`, not `1`.
+{% endalert %}
+
+For example, to let a user know that `tales_storefront` (an item in our catalog that they've wished for) is on sale, we can add the following to our message composer:
+
+{% raw %}
+```liquid
+{% assign wishlist = {{custom_attribute.${wishlist}}}%}
+{% catalogs /catalogs/6171a881759044006998ed9a/items/{{ wishlist[0] }} %}
+
+Get {{item.title}} now, for just {{item.sale_price}}!
+```
+{% endraw %}
+
+Which will display as the following:
+> Get Tales now, for just 7.49 USD!
+
+You can use this format for adding images from your catalog, as mentioned in the [Using images](#using-images) section above.
+
 
 [1]: {% image_buster /assets/img_archive/catalog_CSV_upload.png %}
 [2]: {% image_buster /assets/img_archive/catalog_id.png %}
