@@ -57,7 +57,7 @@ Add a partner, sometimes called a "Currents connector", by clicking the dropdown
 
 Each partner requires a different set of configuration steps. To enable each integration, [see the instructions in their respective pages]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/available_partners/).
 
-## Step 4: Cconfigure events
+## Step 4: Configure events
 
 Choose the events you wish to pass to that partner by checking from the available options. You can find listings of these events in our [Customer Behavior Events]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/customer_behavior_events/) and [Message Engagement Events]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/message_engagement_events/) libraries.
 

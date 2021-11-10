@@ -38,8 +38,8 @@ You can manage user permissions by group or on an individual basis using the Use
 |---|---|
 |Admin|Has access to all available features, default setting for all new users. Can update company settings (company name and time zone), which Limited Users are unable to do.|
 |Access Campaigns, Canvases, Cards, Segments, Media Library| User can view campaign and Canvas performance metrics, create drafts of campaigns and canvases, view News Feed, segments, templates and media, create templates, upload media, and view engagement reports. |
-|Send Campaigns, Canvases| Allows user to edit, archive, stop, duplicate campaigns and canvases, create campaigns, launch canvases. |
-|Publish Cards| Allows user to create and edit News Feed cards. (You can still view cards without this permission).|
+|Send Campaigns, Canvases| Allows user to edit, archive, stop, duplicate campaigns and canvases, create campaigns, launch canvases. To launch existing content blocks, both **Send campaigns, Canvases** and **Publish Cards** permissions are required. |
+|Publish Cards| Allows user to create and edit News Feed cards. You can still view cards without this permission. To launch existing content blocks, both **Publish Cards** and **Send campaigns, Canvases** permissions are required. |
 |Edit Segments| Allows users to create and edit segment. You can still create campaigns with existing segments and filters without this permission. You need this permission to generate a segment from users in a CSV or retarget the group of users in the CSV.|
 |Export User Data| Allows user to export your user data from Segments, campaigns and Canvases. |
 |View PII | Allows user to view personally identifiable information within the dashboard. Note that both email addresses and phone number will be visible. |

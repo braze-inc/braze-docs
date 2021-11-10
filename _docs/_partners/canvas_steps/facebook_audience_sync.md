@@ -151,7 +151,7 @@ Facebook does not provide this information for privacy reasons.
 {% enddetails %}
 
 {% details Does Braze support value-based custom audiences? %}
-At this time, value-based custom audiences are not supported by Braze. If you are interested in syncing these types of custom audiences please reach out to your Customer Success Manager.
+At this time, value-based custom audiences are not supported by Braze. If you are interested in syncing these types of custom audiences please reach out to your Customer Success Manager or contact support.
 {% enddetails %}
 
 [0]: https://www.braze.com/privacy

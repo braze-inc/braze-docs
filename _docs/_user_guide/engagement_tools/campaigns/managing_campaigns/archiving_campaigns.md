@@ -27,11 +27,11 @@ Archiving a campaign will accomplish the following:
 
 There are also bulk actions you can use, such as deactivating and archiving multiple campaigns by checking the boxes next to the campaigns and clicking the revelant button.
 
-![Archive selected][3]
+![Archive Selected][3]
 
 To view archived messages from the **Campaigns** page, select the **Archived** folder.
 
-![Include archived][2]
+![Include Archived][2]
 
 ## Unarchiving campaigns
 
