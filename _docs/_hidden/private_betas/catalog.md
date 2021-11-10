@@ -136,7 +136,7 @@ Here's what this looks like when the Liquid is rendered:
 
 #### Templating catalog items with custom attributes
 
-You can also use templating to dynamically pull catalog items based on custom attributes. For example, let's say a user has the custom attribute `wishlist`, which contains an array of game IDs.
+You can also use templating to dynamically pull catalog items based on custom attributes. For example, let's say a user has the custom attribute `wishlist`, which contains an array of game IDs from your catalog.
 
 ```json
 {
