@@ -75,9 +75,15 @@ If accidental exposure of a key occurs, it can be deleted from the [Developer Co
 
 #### API IP allowlisting
 
-For additional security, you can specify an allowlist of IP addresses and subnets which are allowed to make REST API requests for a given REST API Key. To allowlist specific IP addresses or subnets, add them to the **Whitelist IPs** section when creating a new REST API Key:
+For additional security, you can specify a list of IP addresses and subnets which are allowed to make REST API requests for a given REST API Key. This is referred to as allowlisting, or whitelisting. To allow specific IP addresses or subnets, add them to the **Whitelist IPs** section when creating a new REST API Key: 
 
 ![API IP Whitelisting][26]
+
+If you don’t specify any, requests can be sent from any IP address.
+
+{% alert tip %}
+Making a Braze-to-Braze webhook and using allowlisting? Check out our list of [IPs to whitelist]({{site.baseurl}}/docs/user_guide/message_building_by_channel/webhooks/creating_a_webhook/#ip-whitelisting).
+{% endalert %}
 
 #### Creating and managing REST API keys
 
