@@ -24,7 +24,7 @@ If you are integrating the Braze SDK with CocoaPods, Carthage, or [with a dynami
 #import "Appboy-iOS-SDK/AppboyKit.h"
 ```
 
-If you are integrating the Braze SDK with Swift Package Manager or with a static manual integration, add the following line of code to your `AppDelegate.m` file:
+If you are integrating with Swift Package Manager or with a static manual integration, use this line instead:
 
 ```objc
 #import "AppboyKit.h"
@@ -41,13 +41,13 @@ Within your `AppDelegate.m` file, add the following snippet within your `applica
 {% endtab %}
 {% tab swift %}
 
-If you are integrating the Braze SDK with CocoaPods, Carthage, or [with a dynamic manual integration]({{site.baseUrl}}/docs/developer_guide/platform_integration_guides/ios/initial_sdk_setup/installation_methods/manual_integration_options/), add the following line of code to your `AppDelegate.m` file:
+If you are integrating the Braze SDK with CocoaPods, Carthage, or [with a dynamic manual integration]({{site.baseUrl}}/docs/developer_guide/platform_integration_guides/ios/initial_sdk_setup/installation_methods/manual_integration_options/), add the following line of code to your `AppDelegate.swift` file:
 
 ```swift
 import Appboy_iOS_SDK
 ```
 
-If you are integrating the Braze SDK with Swift Package Manager or with a static manual integration, add the following line of code to your `AppDelegate.swift` file:
+If you are integrating with Swift Package Manager or with a static manual integration, use this line instead:
 
 ```swift
 import AppboyKit
