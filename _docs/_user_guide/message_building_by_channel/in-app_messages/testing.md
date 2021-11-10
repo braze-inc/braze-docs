@@ -10,17 +10,17 @@ channel:
 
 # Testing
 
-It is __extremely important__ to __always__ test your in-app messages before sending your campaigns. Our preview and testing capabilities offer two ways to take a look at your in-app messages. You can preview your message, to help you visualize as you compose it, as well as send a test message to your or a specific user's device. We recommend you take advantage of __both__.
+It is extremely important to always test your in-app messages before sending your campaigns. Our preview and testing capabilities offer two ways to take a look at your in-app messages. You can preview your message, to help you visualize as you compose it, as well as send a test message to your or a specific user's device. We recommend you take advantage of both.
 
 ## Preview
 
 You can preview your in-app message as you compose it. This should help you visualize what your final message will look like from your user's perspective.
 
 {% alert warning %}
-In __Preview__, the view of your message might not be identical to its actual rendering on the user's device. We __always__ recommend sending a test message to a device to ensure that your media, copy, personalization, and custom attributes generate correctly.
+In __Preview__, the view of your message might not be identical to its actual rendering on the user's device. We always recommend sending a test message to a device to ensure that your media, copy, personalization, and custom attributes generate correctly.
 {% endalert %}
 
-### In-app message generation peview
+### In-app message generation preview
 
 Preview what your message will look like to a random user, a specific user, or a customized user - the latter two are especially useful if your message contains personalization or multiple languages. You can also preview messages for either mobile devices or tablets to get a better idea of what users will experience.
 
@@ -38,7 +38,7 @@ Braze has three generations of in-app messages available. You can fine-tune to w
 
 ### Preview message as user
 
-You can also preview messages from the Test tab, as though you were a user. You can select a specific user, a random user, or create a custom user.
+You can also preview messages from the **Test** tab, as though you were a user. You can select a specific user, a random user, or create a custom user.
 
 ![Custom_User_Preview][3]
 
