@@ -42,8 +42,6 @@ Note the **External ID** as depicted above. The remaining details required to co
 
 Next, login to your dashboard [here](https://dashboard.braze.com) or with your [designated dashboard URL]({{site.baseurl}}/api/basics?redirected=true#endpoints) and click **Developer Console** on the bottom left corner of the Braze dashboard.
 
-![Braze Dashboard]({% image_buster /assets/img/fivetran_braze_developer_console.png %})
-
 From here, [create an API Key]({{site.baseurl}}/developer_guide/rest_api/basics/#app-group-rest-api-keys) for Fivetran and enable the following permissions for said key:
 
 * users.export.ids
@@ -110,8 +108,6 @@ Copy the policy below, replacing **{your-bucket-name}** with the name of your s3
 
 Now, click the **Review Policy** button to make any final changes before setup.
 
-![Amazon S3 Policy Review Button]({% image_buster /assets/img/fivetran_iam_policy_review.png %})
-
 Here, give the policy a unique name (something like "Fivetran-S3-Access") and an optional description before clicking the **Create Policy** button.
 
 ![Amazon S3 Policy Review Button]({% image_buster /assets/img/fivetran_iam_policy_meta.png %})
@@ -157,8 +153,6 @@ Locate your Fivetran email in the Fivetran setup form for Braze by logging into 
 ### Step 2: Create a Braze API key for Google Cloud Storage
 
 Next, login to your Braze account [here](https://dashboard.braze.com) or with your [designated dashboard URL]({{site.baseurl}}/api/basics?redirected=true#endpoints) and click **Developer Console** on the bottom left corner of the Braze dashboard.
-
-![Braze Dashboard]({% image_buster /assets/img/fivetran_braze_developer_console.png %})
 
 From here, [create an API Key]({{site.baseurl}}/developer_guide/rest_api/basics/#app-group-rest-api-keys) for Fivetran and enable the following permissions for said key:
 
