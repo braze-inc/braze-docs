@@ -98,7 +98,7 @@ Steps with in-app messages have specific advancement options that allow you to s
 
 ### Steps with multiple channels
 
-![iampush.png][3]
+![Push advancement behaior][3]
 
 Steps with an in-app message and another channel have the following advancement options:
 

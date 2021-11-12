@@ -172,7 +172,7 @@ __Then, the expected behavior is that:__
 
 You can combine regular frequency capping with frequency capping by tags, as shown below.
 
-![rule][12]
+![Frequency capping rule][12]
 
 The rules above ask that users receive:
 

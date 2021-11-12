@@ -66,7 +66,7 @@ Please make sure that your certificate follows this format when adding it to the
 
 When you save your Security Settings and log out, you should now be able to sign in with your IdP.
 
-![Login Page with SSO]({% image_buster /assets/img/sso1.png %}){: style="max-width:40%;"}
+![Login page with SSO]({% image_buster /assets/img/sso1.png %}){: style="max-width:40%;"}
 
 ### Create and enable a Braze API key for IdP login (optional)
 
@@ -82,7 +82,7 @@ Members who opt to use SSO will __no longer be able to use their password as the
 
 ## Restriction
 
-you can also choose to restrict the members of your organization to sign-in with either google sso or saml sso. in order to enable, go to **Company Settings** > **Security Settings** and select **Restrict Single Sign-On**.
+You can also choose to restrict the members of your organization to sign-in with either Google SSO or SAML SSO. In order to enable, go to **Company Settings** > **Security Settings** and select either __Enforce Google SSO only login__ or __Enforce custom SAML SSO only login__.
 
 ![SSO Restriction]({% image_buster /assets/img/sso3.png %})
 

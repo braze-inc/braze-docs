@@ -13,7 +13,7 @@ Purchase events are purchase actions taken by your users. These events are used 
 
 Once you have set up and begun logging purchase events, you can view this purchase data on the User Profile.
 
-![Purchase 5][5]{: style="max-width:80%;margin-left:15px;"}
+![User profile][5]{: style="max-width:80%;margin-left:15px;"}
 
 ## Logging purchase events
 
@@ -54,7 +54,7 @@ You can trigger any number or type of follow-up campaigns based on logged purcha
 
 **Example of Filtering based on Purchase Event:**
 
-![Purchase 1][1]{: style="max-width:80%;margin-left:15px;"}
+![Purchase targeting][1]{: style="max-width:80%;margin-left:15px;"}
 
 {% alert tip %} 
 If you would like to segment on the number of times a specific purchase has occurred, you should record that purchase individually as an [incrementing custom attribute]({{site.baseurl}}/developer_guide/platform_wide/analytics_overview/#custom-attribute-storage).
@@ -64,9 +64,9 @@ If you would like to segment on the number of times a specific purchase has occu
 
 In addition to tracking purchase metrics for segmentation, Braze also notes the number purchases for each product and the revenue generated over time. You can view this data on the [Revenue]({{site.baseurl}}/user_guide/data_and_analytics/export_braze_data/exporting_revenue_data/#revenue-data) page.
 
-![Purchase 4][4]
+![Purchase graph][4]
 
-![Purchase 3][3]
+![Purchase breakdown][3]
 
 ## Purchase event properties {#purchase-properties}
 
@@ -76,7 +76,7 @@ For example, if an eCommerce application wanted to send a message to a user afte
 
 **Example of Triggering based on Purchase Event Properties:**
 
-![Purchase 2][2]{: style="max-width:80%;margin-left:15px;"}
+![Purchase delivery][2]{: style="max-width:80%;margin-left:15px;"}
 
 Refer to [Purchase Properties Object]({{site.baseurl}}/api/objects_filters/purchase_object/#purchase-properties-object) for more.
 
@@ -97,5 +97,5 @@ For example, to reference the name of a product, replace `your_custom_event_prop
 [1]: {% image_buster /assets/img/purchase1.png %}
 [2]: {% image_buster /assets/img/purchase2.png %}
 [3]: {% image_buster /assets/img/purchase3.png %}
-[4]: {% image_buster /assets/img/purchase4.png %}
+[4]: {% image_buster /assets/img/purchase4.jpg %}
 [5]: {% image_buster /assets/img/purchase5.png %}
