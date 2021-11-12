@@ -24,7 +24,9 @@ How do you want to split your users? You can use Segments and Filters to draw th
 
 ![Define Split][2]{: style="max-width:80%;"}
 
-{% alert note %} By default, Filters and Segments for **Decision Split Steps** are checked right after receiving a previous step, unless you add a delay. {% endalert %} 
+{% alert note %} 
+By default, Filters and Segments for **Decision Split Steps** are checked right after receiving a previous step, unless you add a delay. 
+{% endalert %} 
 
 ## Use split steps
 
