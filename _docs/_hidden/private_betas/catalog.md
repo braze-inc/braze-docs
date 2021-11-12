@@ -134,7 +134,7 @@ Here's what this looks like when the Liquid is rendered:
 
 ![Example iOS push notification with catalog Liquid tags rendered][4]{: style="max-width:50%" }
 
-#### Templating catalog items with custom attributes
+#### Templating catalog items
 
 You can also use templating to dynamically pull catalog items based on custom attributes. For example, let's say a user has the custom attribute `wishlist`, which contains an array of game IDs.
 
@@ -169,8 +169,7 @@ Get {{item.title}} now, for just {{item.sale_price}}!
 Which will display as the following:
 > Get Tales now, for just 7.49 USD!
 
-You can use this format for adding images from your catalog, as mentioned in the [Using images](#using-images) section above.
-
+With templating, you can render a different catalog item for each user based on their individual custom attributes, event properties, or any other templatable field.
 
 [1]: {% image_buster /assets/img_archive/catalog_CSV_upload.png %}
 [2]: {% image_buster /assets/img_archive/catalog_id.png %}
