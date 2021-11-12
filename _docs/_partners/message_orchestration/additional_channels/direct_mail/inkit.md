@@ -23,7 +23,6 @@ You can access Inkit's services through Braze's webhook feature and send mail to
 | HTTP Header | Inkit | Inkit Account | You will combine this with your Inkit API Key to authorize the connection as a key-value pair within your Braze template. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
 
-
 ## Integration
 
 You will need to use both your Inkit and Braze accounts to use the Inkit integration.
@@ -66,7 +65,7 @@ Please ensure that your Liquid matches the proper custom attributes associated w
 ```
 Replace the necessary fields with the correct information - specifically `INKIT_API_TOKEN` and `INKIT_TEMPLATE_ID`.
 
-![Inkit Integration][5]{: height="70%" width="70%"}
+![Inkit Integration][5]
 
 Inkit also requires a `HTTP Header` for authorization that includes your Inkit API key. The following will already be included within the template as a key-value pair, but you will need to replace `INKIT_API_TOKEN` with your Inkit API key.
 
@@ -93,8 +92,7 @@ See Inkit's integration docs [here][2].
 
 If you hadn't created this in `Templates & Media`, you can go to `Campaigns`, then click `+ Create Campaign`. Select "Webhook" and choose your template from the "Saved Webhook Template" list. Create your [Webhook][6]!
 
-![Inkit Usage][4]{: height="70%" width="70%"}
-
+![Inkit Usage][4]
 
 [1]: https://www.inkit.com
 [2]: https://help.inkit.com/hc/en-us/articles/360036546873-Braze-Inkit-Integration
