@@ -14,7 +14,7 @@ tool: Canvas
 Message Steps allow you to add a standalone message where you want in your Canvas flow.
 
 {% alert important %}
-Support for Canvas Message Steps is currently in early access. Please contact your Braze account manager if you are interested in participating in the early access.
+Canvas Message Steps are currently in early access. Please contact your Braze account manager if you are interested in participating in the early access.
 {% endalert %}
 
 ## Create a Message Step
@@ -23,8 +23,6 @@ Support for Canvas Message Steps is currently in early access. Please contact yo
 
 To create a Message Step, add a step to your Canvas. Then, use the drop-down at the top of the new step to select Message Step.
 
-Then simply set up your messages as you do now in the “Messages” section of the Full Step.
-
 With a Message Step, all users who enter the step advance to the next step when any one of the following conditions is met:
 - Any message is sent
 - A message is not sent because the user is not reachable with a channel
@@ -32,6 +30,12 @@ With a Message Step, all users who enter the step advance to the next step when 
 - A message is not sent because it is aborted
 
 ![Canvas Message Step][2]{: style="max-width:80%;"} 
+
+The Message Step also contains settings for Intelligent Delivery and Quiet Hours overrides.
+
+The Message Step allows you to enable Intelligent Timing with a fallback option when a user’s profile does not have enough data to calculate an optimal time. You can specify either the most popular time or a specific fallback time. 
+
+If Quiet Hours are configured, the Message Step also allows you to override this setting should you so choose.
 
 ## Analytics
 
