@@ -52,7 +52,7 @@ guide_featured_list:
     link: /docs/api/endpoints/export/sms/get_query_invalid_numbers/
     fa_icon: fas fa-phone
 
-guide_menu_title: "Custom Events, KPIs, Segments, Sessions, and User Data Export Endpoints"
+guide_menu_title: "Custom Events, KPIs, Purchases, Segments, Sessions, and User Data Export Endpoints"
 guide_menu_list:
   - name: "GET: Custom Events List"
     link: /docs/api/endpoints/export/custom_events/get_custom_events/
@@ -72,6 +72,9 @@ guide_menu_list:
   - name: "GET: KPIs for Uninstalls by Date"
     link: /docs/api/endpoints/export/kpi/get_kpi_uninstalls_date/
     fa_icon: fas fa-bullseye
+  - name: "GET: List Product IDs"
+    link: /docs/api/endpoints/export/purchases/get_list_product_id/
+    fa_icon: fas fa-list
   - name: "GET: Segment List"
     link: /docs/api/endpoints/export/segments/get_segment/
     fa_icon: fas fa-users
