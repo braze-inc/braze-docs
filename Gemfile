@@ -1,5 +1,5 @@
 source "https://rubygems.org"
-ruby '~> 2.6.5'
+ruby '~> 2.7.4'
 gem "jekyll", "~> 3.9.0"
 # This is the default theme for new Jekyll sites. You may change this to anything you like.
 gem "minima", "~> 2.0"
@@ -11,7 +11,7 @@ gem 'rack-jekyll'
 gem 'rake'
 gem 'rack'
 gem 'rack-reverse-proxy', require: 'rack/reverse_proxy'
-gem 'puma', "4.3.9"
+gem 'puma'
 gem 'rack-rewrite'
 gem 'sinatra'
 gem 'uglifier'
