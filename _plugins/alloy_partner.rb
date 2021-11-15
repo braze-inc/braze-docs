@@ -50,7 +50,7 @@ module Jekyll
     end
 
     def fetchContent(url)
-      link = URI.parse(URI.encode(url.strip))
+      link = URI.parse(url.strip)
       http = Net::HTTP.new(link.host, link.port)
       http.open_timeout = 60
       http.read_timeout = 120
