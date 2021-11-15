@@ -11,6 +11,7 @@ tool:
 
 ---
 
+<br>
 {% alert important %}
 Push Primer campaigns require backend set up from your developers. <br>Check out the necessary Push Primer Integrations [here]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/push_primer/).
 {% endalert %}
@@ -20,7 +21,7 @@ Push Primer campaigns require backend set up from your developers. <br>Check out
 
 > This article will walk you through setting up and sending a Push Primer campaign to new or non-push enabled users. Push Primer campaigns encourage your users to enable push on their device for your app. Getting permission from users to send messages directly to their devices can be complex, but our guides can help!
 
-![push_primer_example_3][push_primer5]{: style="float:right;max-width:30%;margin-left:15px;"} 
+![Push Primer Example][push_primer5]{: style="float:right;max-width:30%;margin-left:15px;"} 
 
 Push Primer campaigns are useful because they address the issue of the dreaded iOS notification opt-in prompt that users receive upon opening any new iOS application. These prompts are disruptive and uninformative, with users likely choosing to opt-out of push notifications. This prompt is only ever shown once, and unfortunately, once those notifications are turned off, there's very little we can do to get users to turn them back on. 
 
@@ -46,13 +47,13 @@ From the **Campaigns** pane within the Dashboard, select **In-App Messaging** as
 
 ## Step 3: Set up initial campaign options
 
-![push_primer_message_type][push_primer7]
+![Push Primer Message Type][push_primer7]
 
 Once you have a blank in-app messaging campaign to work on, you must name your campaign, select where you would like your Push Primer to send to, select the message type, and pick the layout type. For your basic Push Primer campaign message type, we suggest either a full screen or modal message. Note that for a full-screen in-app message, an image is required.
 
 ## Step 4: Customize your message
 
-![push_primer][push_primer2]
+![Push Primer][push_primer2]{: style="max-width:75%"}
 
 After you have chosen the appropriate in-app message type, you can customize your message content and add buttons.
 
@@ -63,7 +64,7 @@ Remember that a push primer is supposed to prime the user to turn on push notifi
 
 Here are some example Push Primer Messages:
 
-![push_primer_example_1][push_primer3]{: height="225px"} ![push_primer_example_2][push_primer4]{: height="225px"} ![push_primer_example_3][push_primer5]{: height="225px"}
+![Push Primer Example 1][push_primer3]{: height="225px"} ![Push Primer Example 2][push_primer4]{: height="225px"} ![Push Primer Example 3][push_primer5]{: height="225px"}
 
 If you would like even further customization options, you can also set the message type to Custom code and provide the full HTML for your in-app message.
 
@@ -71,11 +72,11 @@ If you would like even further customization options, you can also set the messa
 
 To add buttons to your in-app message, you will find a Button 1 textbox and Button 2 textbox underneath the text body prompt. Here, you can choose the text that will show on these buttons. We recommend "Turn on Notifications" and "Not Now" as starter buttons, but there are many different button prompts you could assign. 
 
-![push_primer][push_primer6]{: style="float:right;max-width:40%;margin-left:15px;"}
+![Push Primer][push_primer6]{: style="float:right;max-width:40%;margin-left:15px;"}
 
 ### On-click behavior
 
-After your push primer message has been set up, on-click behavior must be assigned. For the corresponding "Turn on Notifications" button you had assigned, you must select "Deep Link Into App". 
+After your push primer message has been set up, on-click behavior must be assigned. For the corresponding "Turn on Notifications" button you had assigned, you must select **Deep Link Into App**. 
 
 #### Deep linking
 
@@ -89,17 +90,17 @@ To set your Push Primer to trigger when you want it to, you must set __Perform C
 
 ## Step 6: Targeting users
 
-Generally, for Push Primer campaigns, we want the push primer to trigger off of a certain segment of users. In these Targeting Users Options, you can decide what segment you feel most appropriate. We suggest taking some time with your marketing team to pick a compelling segment. For example, users that have completed a second purchase, users that have just made an account to become a member, or even users that visit your app more than twice a week. Targeting users for these crucial segments increases the likelihood of users opting in and becoming push enabled.
+Generally, for Push Primer campaigns, we want the push primer to trigger off of a certain segment of users. In these Targeting Users options, you can decide what segment you feel most appropriate. We suggest taking some time with your marketing team to pick a compelling segment. For example, users that have completed a second purchase, users that have just made an account to become a member, or even users that visit your app more than twice a week. Targeting users for these crucial segments increases the likelihood of users opting in and becoming push enabled.
 
-If you are not sure the best way to segment, you may also select All Users. This option will send your push primer to any iOS device that has not yet opted in or out of push. 
+If you are not sure the best way to segment, you may also select **All Users**. This option will send your push primer to any iOS device that has not yet opted in or out of push. 
 
 ## Step 7: Conversions
 Braze suggests default settings for conversions, but you may want to set up conversion events surrounding push primers.
 
 [integrations]: {{site.baseurl}}/developer_guide/platform_integration_guides/ios/push_primer/
-[push_primer2]: {% image_buster /assets/img/push_primer/push_primer_2.jpg %}
+[push_primer2]: {% image_buster /assets/img/push_primer/push_primer_2.png %}
 [push_primer3]: {% image_buster /assets/img/push_primer/push_primer_3.png %}
 [push_primer4]: {% image_buster /assets/img/push_primer/push_primer_4.png %}
 [push_primer5]: {% image_buster /assets/img/push_primer/push_primer_5.png %}
 [push_primer6]: {% image_buster /assets/img/push_primer/push_primer_6.jpg %}
-[push_primer7]: {% image_buster /assets/img/push_primer/push_primer_7.jpg %}
+[push_primer7]: {% image_buster /assets/img/push_primer/push_primer_7.png %}
