@@ -9,9 +9,9 @@ search_tag: Partner
 
 # Zeotap
 
-> [Zeotap](https://zeotap.com/) is a next-generation customer data platform that helps you discover and understand your mobile audience by onboarding and extending your data while providing valuable insights to help understand your customers.
+> [Zeotap](https://zeotap.com/) is a next-generation customer data platform that helps you discover and understand your mobile audience by providing identity resolution, insights, and data enrichment.
 
-With the Zeotap and Braze integration, customers can extend the scale and reach of their campaigns by finding users with similar data patterns. Common use cases include onboarding client online or offline data, data enrichment, and facilitating activation through other platforms. 
+With the Zeotap and Braze integration, customers can extend the scale and reach of their campaigns by syncing Zeotap customer segments to map Zeotap user data to Braze user accounts. Brands can then act on this data, delivering personalized target experiences to those users.
 
 ## Prerequisites
 
@@ -30,13 +30,13 @@ With the Zeotap and Braze integration, customers can extend the scale and reach 
 1. From the Zeotap Unity platform, navigate to the __DESTINATIONS__ application.
 2. Under __All Channels__, search for Braze.
 3. Select Braze and in the prompt that appears, enter the destination name, client name, and API key associated with the Braze account.
-4. Select the Braze REST Endpoint instance and save the destination. <br><br>![Zeotap Braze destination][1]
+4. Select the Braze REST endpoint instance and save the destination. <br><br>![Zeotap Braze destination][1]
 
 ### Step 2: Create and link a Zeotap segment to your destination 
  
 1. From the Zeotap Unity platform, navigate to the __CONNECT__ application.
 2. Create a segment and push it to Braze.
-3. Select the associated output identifier.<br>The supported output identifiers for this integration include MAID, sha56 email, and sha56 phone.<br>Only one of these identifiers can be used while using the Braze integration. These identifiers must be the same as the external ID set when collecting data using the Braze SDK.
+3. Select the associated output identifier.<br>The supported output identifiers for this integration include MAID, sha56 email, and sha56 phone.<br>Only one of these identifiers can be used for the Braze integration. These identifiers must be the same as the external ID set when collecting data using the Braze SDK.
 4. Click __Yes__ to activate the segment. 
 
 ![Zeotap segment][2]
@@ -51,7 +51,7 @@ After successfully creating, pushing, and process a segment in Zeotap, the Zeota
 
 ![Zeotap user profile][4]
 
-For each user, the Zeotap segment can be found as a custom attribute on their user profile with the boolean value True if the user is part of the Zeotap Segment. Note the customer attribute name as you will need it when creating a Braze segment. 
+For each user, the Zeotap segment can be found as a custom attribute on their user profile with the boolean value `true` if the user is part of the Zeotap Segment. Note the customer attribute name as you will need it when creating a Braze segment. 
 
 Next, you must create and define this segment within Braze by performing the following steps:
 1. From the Braze dashboard, select __Segments__ and then __Create Segment__.
