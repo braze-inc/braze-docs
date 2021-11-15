@@ -12,7 +12,7 @@ tool:
 
 # Creating an in-app message
 
-You can create an in-app message using the Braze platform using campaigns, Canvas, or as an API campaign. We highly recommend planning out your messages and preparing all materials ahead of time using our handy [In-App Message Prep Guide]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/best_practices/).
+You can create an in-app message or in-browser message using the Braze platform using campaigns, Canvas, or as an API campaign. We highly recommend planning out your messages and preparing all materials ahead of time using our handy [In-App Message Prep Guide]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/best_practices/).
 
 ## Step 1: Choose where to build your message {#create-new-campaign-in-app}
 
@@ -50,7 +50,7 @@ You cannot have multiple in-app message variants in a single step.
 
 ## Step 2: Specify delivery platforms
 
-Start by choosing which platforms should receive the message. Use this selection to limit the delivery of a campaign to a specific set of apps. You might choose __Web Browsers__ for a campaign encouraging users to download your mobile app to ensure they do not receive the message after already getting your app. Because platform selections are specific to each variant, you could try testing message engagement per platform!
+Start by choosing which platforms should receive the message. Use this selection to limit the delivery of a campaign to a specific set of apps. You might choose __Web Browsers__ for an in-browser message encouraging users to download your mobile app to ensure they do not receive the message after already getting your app. Because platform selections are specific to each variant, you could try testing message engagement per platform!
 
 Web Email Capture and Web Modal with CSS are both unique to the Web SDK and can only be used after selecting __Web Browsers__.
 
