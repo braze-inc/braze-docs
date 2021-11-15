@@ -110,7 +110,7 @@ A long code is a standard phone number used to send and receive voice calls and 
 
 | Pros |
 | ---- |
-| __Can be used immediately to send messages__<br>Long codes provide a localized and personal customer experience when sending messages for person-to-person use cases. Unlike SMS short codes, acquiring a long code is a fairly quick process. Long codes can also be set as a fallback number if a short code fails.<br><br>__Greater availability worldwide__<br>Long codes are available in over 100 major countries worldwide. Please reach out to your customer success manager for a list of available countries.<br><br>__MMS enabled__<br>Supports MMS, also known as Multimedia Message Service, allowing you to send messages containing multimedia assets(jpg, gif, png) to mobile phones. For more information on MMS at Braze, check out our documentation [here]({{site.baseurl}}/user_guide/message_building_by_channel/sms/mms/about_mms/).|
+| __Can be used immediately to send messages__<br>Long codes provide a localized and personal customer experience when sending messages for person-to-person use cases. Unlike SMS short codes, acquiring a long code is a fairly quick process. Long codes can also be set as a fallback number if a short code fails.<br><br>__Greater availability worldwide__<br>Long codes are available in over 100 major countries worldwide. Please reach out to your Customer Success Manager or Braze [support]({{site.baseurl}}/braze_support/) for a list of available countries.<br><br>__MMS enabled__<br>Supports MMS, also known as Multimedia Message Service, allowing you to send messages containing multimedia assets(jpg, gif, png) to mobile phones. For more information on MMS at Braze, check out our documentation [here]({{site.baseurl}}/user_guide/message_building_by_channel/sms/mms/about_mms/).|
 {: .reset-td-br-1}
 
 | Cons |
@@ -200,7 +200,7 @@ Depending on your situation, you may need to provide more or fewer flows like th
 You also must inform us, regardless of which number you use, of how many messages per month you plan to send.
 
 {% alert important %}
-If you have your own short code, reach out to your Customer Success Manager  __during the onboarding process__ to discuss migrating or transferring your short code. Short codes must be set up by your Customer Success Manager. 
+If you have your own short code, reach out to your Customer Success Manager during the onboarding process to discuss migrating or transferring your short code. Short codes must be set up by your Customer Success Manager. 
 {% endalert %}
 
 ## Application-to-Person 10-Digit Long Codes (A2P 10DLC)

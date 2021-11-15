@@ -39,7 +39,7 @@ For example: `bounces+1234567@braze.online.docs.com`.
 
 Once added to your Apple Certificate page, emails from this `From` address domain will be delivered via the Apple Private Relay system.
 
-If you have any further questions, please [submit a support ticket]({{site.baseurl}}/support_contact/).
+If you have any further questions, please open a [support ticket]({{site.baseurl}}/braze_support/).
 
 {% alert important %}
 If your desired `From` address is an `abmail` address, please include that in your subdomain. For example, use `abmail.docs.braze.com` instead of `docs.braze.com`.
@@ -57,13 +57,12 @@ This might not be the case for your address. Please check your DNS records in Se
 
 ## Sending emails to Apple Private Relay for Sparkpost
 
-Braze customers who use Sparkpost can also set up Apple Private Relay. 
+Braze customers who use Sparkpost can also set up Apple Private Relay. To do so, perform the following steps: 
 
-Create the necessary verification files according to the [Sing in with Apple](https://developer.apple.com/sign-in-with-apple/get-started/) page.
-
-Host the files in the '/.well-known/' directory of the given domains. Make sure your content delivery network (CDN) is pubicly accessible via the internet.
-
-Add an A record into DNS that points to the domain where your verification file is hosted. This is a one-time verification process. Select verify on Apple's end. 
+1. Create the necessary verification files according to Apple's documentation on [Sign in with Apple](https://developer.apple.com/sign-in-with-apple/get-started/).
+2. Host the files in the `/.well-known/` directory of the given domains. Make sure your content delivery network (CDN) is publicly accessible via the internet.
+3. Add an A record into DNS that points to the domain where your verification file is hosted. This is a one-time verification process. 
+4. Select verify on Apple's end.
 
 {% alert important %}
 Make sure you complete this process within 2 to 3 days of the verification files being created or else they will expire. Apple does not disclose how long they're valid for.

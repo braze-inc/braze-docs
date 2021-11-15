@@ -25,7 +25,7 @@ Tealium AudienceStream visitor profiles are segmented by shared behaviors to cre
 {: .reset-td-br-1 .reset-td-br-2}
 
 {% alert important %}
-Please note that Tealium AudienceStreams and EventStreams are batched according to Braze specifications so that our customers do not run the risk of exceeding the [/users/track]({{site.baseurl}}/api/endpoints/user_data/post_user_track/) rate limit. Please contact Braze Support or your CSM if you have any questions. 
+Please note that Tealium AudienceStreams and EventStreams are batched according to Braze specifications so that our customers do not run the risk of exceeding the [/users/track]({{site.baseurl}}/api/endpoints/user_data/post_user_track/) rate limit. Please contact Braze [support]({{site.baseurl}}/braze_support/) or your CSM if you have any questions. 
 {% endalert %}
 
 ## Step 1: Set up attributes and badges

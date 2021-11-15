@@ -44,7 +44,7 @@ Code analysis is a way for Braze to highlight issues that may exist with your HT
 
 ## Test accuracy
 
-All of our tests are run through actual email clients. We work hard to ensure that all renderings are as accurate as possible.  If you consistently see an issue with an email client, please [open a support ticket]({{site.baseurl}}/support_contact/).
+All of our tests are run through actual email clients. We work hard to ensure that all renderings are as accurate as possible.  If you consistently see an issue with an email client, please open a [support ticket]({{site.baseurl}}/braze_support/).
 
 [1]: {% image_buster /assets/img_archive/inboxvision1.png %}
 [2]: {% image_buster /assets/img_archive/inboxvision2.png %}

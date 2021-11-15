@@ -15,9 +15,13 @@ description: "This article outlines details about the Send Transactional Email M
 /transactional/v1/campaigns/YOUR_CAMPAIGN_ID_HERE/send
 {% endapimethod %}
 
-The Send Transactional Email endpoint allows you to send immediate, ad-hoc messages to designated users. This endpoint is used alongside the creation of a [Transactional Email Campaign]({{site.baseurl}}/api/api_campaigns/transactional_campaigns) and corresponding Campaign ID. Similar to the [Send Triggered Campaign endpoint]({{site.baseurl}}/api/endpoints/messaging/send_messages/post_send_triggered_campaigns/), this campaign type allows you to house message content inside of the Braze dashboard while dictating when and to whom a message is sent via your API. Unlike the Send Triggered Campaign Endpoint which accepts an audience or segment to send messages to, a request to this endpoint must specify a single user either by External User ID or User Alias as this campaign type is purpose-built for 1:1 messaging of alerts like order confirmations or password resets.
+The Send Transactional Email endpoint allows you to send immediate, ad-hoc messages to designated users. This endpoint is used alongside the creation of a [Transactional Email Campaign]({{site.baseurl}}/api/api_campaigns/transactional_campaigns) and corresponding Campaign ID. 
 
+{% alert important %}
 Transactional Email is currently available as part of select Braze packages. Please reach out to your Braze Customer Success Manager for more details.
+{% endalert %}
+
+Similar to the [Send Triggered Campaign endpoint]({{site.baseurl}}/api/endpoints/messaging/send_messages/post_send_triggered_campaigns/), this campaign type allows you to house message content inside of the Braze dashboard while dictating when and to whom a message is sent via your API. Unlike the Send Triggered Campaign Endpoint which accepts an audience or segment to send messages to, a request to this endpoint must specify a single user either by External User ID or User Alias as this campaign type is purpose-built for 1:1 messaging of alerts like order confirmations or password resets.
 
 ## Request body
 
