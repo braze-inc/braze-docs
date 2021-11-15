@@ -30,7 +30,7 @@ This endpoint returns paginated lists of product IDs.
 
 {% raw %}
 ```
-https://rest.iad-03.braze.com/purchases/product_list?page=1
+https://rest.iad-01.braze.com/purchases/product_list?page=1
 ```
 {% endraw %}
 
