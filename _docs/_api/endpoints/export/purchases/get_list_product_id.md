@@ -16,8 +16,7 @@ description: "This article outlines details about the List Product IDs Braze end
 
 This endpoint returns paginated lists of product IDs.
 
-<!---Update button link--->
-{% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#4b8515b8-067f-41fd-b213-8bb2d18b1557 {% endapiref %}
+{% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#dff4ed40-81f5-451d-9d44-accc0e932285{% endapiref %}
 
 ## Request parameters
 
