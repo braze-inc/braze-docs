@@ -35,6 +35,7 @@ GEM
       eventmachine (>= 0.12.9)
       http_parser.rb (~> 0.6.0)
     eventmachine (1.2.7)
+    execjs (2.8.1)
     ffi (1.15.3)
     filesize (0.2.0)
     forwardable-extended (2.6.0)
@@ -119,14 +120,17 @@ GEM
     sass-listen (4.0.0)
       rb-fsevent (~> 0.9, >= 0.9.4)
       rb-inotify (~> 0.9, >= 0.9.7)
+    sassc (2.4.0)
+      ffi (~> 1.9)
     sinatra (2.1.0)
       mustermann (~> 1.0)
       rack (~> 2.2)
       rack-protection (= 2.1.0)
       tilt (~> 2.0)
     tilt (2.0.10)
+    uglifier (4.2.0)
+      execjs (>= 0.3.0, < 3)
     verbal_expressions (0.1.5)
-    yui-compressor (0.12.0)
 
 PLATFORMS
   ruby
@@ -146,9 +150,9 @@ DEPENDENCIES
   rack-rewrite
   rake
   rouge
-  sass
+  sassc
   sinatra
-  yui-compressor
+  uglifier
 
 RUBY VERSION
    ruby 2.6.5p114
