@@ -21,7 +21,7 @@ Canvas Message Steps are currently in early access. Please contact your Braze ac
 
 ![Canvas Message Step][1]{: style="float:right;max-width:19%;margin-left:15px;"}
 
-To create a Message Step, add a step to your Canvas. Then, use the drop-down at the top of the new step to select Message Step.
+To create a Message Step, add a step to your Canvas. Then, use the drop-down at the top of the new step to select **Message**.
 
 With a Message Step, all users who enter the step advance to the next step when any one of the following conditions is met:
 - Any message is sent
@@ -29,13 +29,15 @@ With a Message Step, all users who enter the step advance to the next step when 
 - A message is not sent because it is frequency capped
 - A message is not sent because it is aborted
 
-![Canvas Message Step][2]{: style="max-width:80%;"} 
+![Canvas Message Step][2]{: style="max-width:75%;"} 
 
-The Message Step also contains settings for Intelligent Delivery and Quiet Hours overrides.
+The Message Step also includes settings for Intelligent Delivery and Quiet Hours overrides.
 
-The Message Step allows you to enable Intelligent Timing with a fallback option when a user’s profile does not have enough data to calculate an optimal time. You can specify either the most popular time or a specific fallback time. 
+The Message Step allows you to enable Intelligent Timing with a fallback option when a user’s profile does not have enough data to calculate an optimal time. Select **Using Intelligent Timing** in **Delivery Settings**. Here, you can select either the most popular time or a specific fallback time. 
 
-If Quiet Hours are configured, the Message Step also allows you to override this setting should you so choose.
+If Quiet Hours are enabled, the Message Step also allows you to override this setting.
+
+![Canvas Message Step][4]
 
 ## Analytics
 
@@ -52,6 +54,7 @@ If Quiet Hours are configured, the Message Step also allows you to override this
 ![Canvas Message Step][3]{: style="max-width:20%;"}
 
 
-[1]: {% image_buster /assets/img/canvas_components/components1.png %}
-[2]: {% image_buster /assets/img/canvas_components/components2.png %}
-[3]: {% image_buster /assets/img/canvas_components/components3.png %}
+[1]: {% image_buster /assets/img/canvas_components/message_step1.png %}
+[2]: {% image_buster /assets/img/canvas_components/message_step2.png %}
+[3]: {% image_buster /assets/img/canvas_components/message_step3.png %}
+[4]: {% image_buster /assets/img/canvas_components/message_step4.png %}
