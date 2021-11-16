@@ -1,39 +1,10 @@
 ## Campaign analytics
 
-Once you've launched your campaign, you can return to the details page for that campaign to view key metrics. Navigate to the **Campaigns** page and select your campaign to open the details page. For {% if include.channel == "Content Card" %}Content Cards{% elsif include.channel == "emails" %}email{% elsif include.channel == "in-app messages" %}in-app messages{% elsif include.channel == "push" %}push messages{% elsif include.channel == "SMS" %}SMS messages{% endif %} sent in Canvas, refer to [Canvas Analytics]({{site.baseurl}}/user_guide/engagement_tools/canvas/get_started/measuring_and_testing_with_canvas_analytics/).
-
-
-{% if include.channel == "Content Card" %}
+Once you've launched your campaign, you can return to the details page for that campaign to view key metrics. Navigate to the **Campaigns** page and select your campaign to open the details page. For {% if include.channel == "Content Card" %}Content Cards{% elsif include.channel == "email" %}email{% elsif include.channel == "in-app message" %}in-app messages{% elsif include.channel == "push" %}push messages{% elsif include.channel == "SMS" %}SMS messages{% endif %} sent in Canvas, refer to [Canvas Analytics]({{site.baseurl}}/user_guide/engagement_tools/canvas/get_started/measuring_and_testing_with_canvas_analytics/).
 
 {% alert tip %}
-Looking for definitions for the terms and metrics listed in your report? Refer to our [Report Metrics Glossary]({{site.baseurl}}/user_guide/data_and_analytics/report_metrics/) and filter by Content Cards.
+Looking for definitions for the terms and metrics listed in your report? Refer to our {% if include.channel == "email" %}[Email Analytics Glossary]({{site.baseurl}}/user_guide/message_building_by_channel/email/reporting_and_analytics/analytics_glossary/){% elsif include.channel == "Content Card" %}[Report Metrics Glossary]({{site.baseurl}}/user_guide/data_and_analytics/report_metrics/) and filter by Content Cards{% elsif include.channel == "in-app message" %}[Report Metrics Glossary]({{site.baseurl}}/user_guide/data_and_analytics/report_metrics/) and filter by In-App Message{% elsif include.channel == "push" %}[Report Metrics Glossary]({{site.baseurl}}/user_guide/data_and_analytics/report_metrics/) and filter by Push{% elsif include.channel == "SMS" %}[Report Metrics Glossary]({{site.baseurl}}/user_guide/data_and_analytics/report_metrics/) and filter by SMS{% endif %}.
 {% endalert %}
-
-{% elsif include.channel == "emails" %}
-
-{% alert tip %}
-Looking for definitions for the terms and metrics listed in your report? Refer to our [Email Analytics Glossary]({{site.baseurl}}/user_guide/message_building_by_channel/email/reporting_and_analytics/analytics_glossary/).
-{% endalert %}
-
-{% elsif include.channel == "in-app messages" %}
-
-{% alert tip %}
-Looking for definitions for the terms and metrics listed in your report? Refer to our [Report Metrics Glossary]({{site.baseurl}}/user_guide/data_and_analytics/report_metrics/) and filter by In-App Message.
-{% endalert %}
-
-{% elsif include.channel == "push" %}
-
-{% alert tip %}
-Looking for definitions for the terms and metrics listed in your report? Refer to our [Report Metrics Glossary]({{site.baseurl}}/user_guide/data_and_analytics/report_metrics/) and filter by Push.
-{% endalert %}
-
-{% elsif include.channel == "SMS" %}
-
-{% alert tip %}
-Looking for definitions for the terms and metrics listed in your report? Refer to our [Report Metrics Glossary]({{site.baseurl}}/user_guide/data_and_analytics/report_metrics/) and filter by SMS.
-{% endalert %}
-
-{% endif %}
 
 From the **Campaign Analytics** tab, you can view your reports in a series of panels. You may see more or less than those listed in the sections below, but each has its own useful purpose.
 
@@ -60,7 +31,7 @@ In Canvas, you'll see in-app message performance mapped onto the Canvas you've c
 To measure the impact of an individual Content Card, you can add a [Control Group][2] to an A/B Test. The top-level **Campaign Details** panel doesn't include metrics from the Control Group variant.
 
 {% alert warning %}
-If you have a customized feed, be sure to log impressions for control cards to inform our analytics of when a user _would have seen_ the control card in its feed position. For more detail, see the [iOS](/docs/developer_guide/platform_integration_guides/ios/content_cards/data_model/#card-methods), [Android](/docs/developer_guide/platform_integration_guides/android/content_cards/customization/#fully-custom-content-card-display-for-android), and [Web](/docs/developer_guide/platform_integration_guides/web/content_cards/integration/#control-group) developer guides.
+If you have a customized feed, be sure to log impressions for control cards to inform our analytics of when a user _would have seen_ the control card in its feed position. For more detail, see the [iOS]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/content_cards/data_model/#card-methods), [Android]({{site.baseurl}}/developer_guide/platform_integration_guides/android/content_cards/customization/#fully-custom-content-card-display-for-android), and [Web]({{site.baseurl}}/developer_guide/platform_integration_guides/web/content_cards/integration/#control-group) developer guides.
 {% endalert %}
 
 {% elsif include.channel == "SMS" %}
