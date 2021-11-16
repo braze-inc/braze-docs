@@ -176,5 +176,5 @@ For more information, check out our CSS Inlining [Documentation][10]
 [10]: {{site.baseurl}}/user_guide/message_building_by_channel/email/css_inline/
 [11]: {% image_buster /assets/img/email_settings/bcc_address.png %}
 [12]: {% image_buster /assets/img/email_settings/require_bcc.png %}
-[13]: {% image_buster /assets/open_pixel.png %}
+[13]: {% image_buster /assets/img/open_pixel.png %}
 [59]: {% image_buster /assets/img_archive/list_unsub_img3_new.png %}

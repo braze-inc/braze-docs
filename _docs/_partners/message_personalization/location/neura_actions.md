@@ -14,7 +14,7 @@ search_tag: Partner
 
 *Leverage Neura's [True Personas™][2] to create segments and audiences based on each users' lifestyle and preferences. Leverage [Neura Moments™][3] when triggering campaigns to reach each user when they're available and receptive.*
 
-![moments-of-availability.png][9]
+![Moments of availability][9]{: style="border:0"}
 
 See the [Neura Insights][4] Braze integration for further details on how to uncover these real-world behavioral insights.
 

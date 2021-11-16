@@ -19,7 +19,7 @@ Go to the __Manage Settings__ page and click __Manage Teams__. From there, you w
 
 This Team can later be used to filter end-users for engagement objects like campaigns, Canvases, cards, segments, and more, granting members of this team access. See [Tags and Filters](#tags-and-filters) below to learn more. 
 
-![adding_a_team][68]
+![Adding a team][68]
 
 ## Assign team roles
 
@@ -50,7 +50,7 @@ You can archive Teams from the **Manage Teams** page, under **Manage Settings**.
 If the team is not associated with any object within Braze, the team will be archived immediately.
 If the team is associated with an object, you will be presented with an option to 'remove the team after the archive process' or 'replace the team with another team'
 
-![archive_a_team][86]{: style="max-width:70%;"}
+![Archiving a team][86]{: style="max-width:70%;"}
 
 Admins can unarchive a team by selecting the archived team and then clicking **Unarchived**.
 

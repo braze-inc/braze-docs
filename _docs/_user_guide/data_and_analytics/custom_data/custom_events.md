@@ -91,7 +91,7 @@ Each custom event or purchase can have up to 256 distinct custom event propertie
 Custom event properties can also be used for personalization within the messaging template. Any campaign using [Action-Based Delivery][19] with a trigger event can use custom event properties from that event for messaging personalization. If a gaming application wanted to send a message to users who had completed a level, it could further personalize the message with a property for the time it took users to complete that level. In this example, the message is personalized for three different segments using [conditional logic][18].  The custom event property called ``time_spent``, can be included in the message by calling ``{% raw %} {{event_properties.${time_spent}}} {% endraw %}``.
 
 {% alert warning %}
-Triggered in-app messages with templated custom event properties (for example, ``{event_properties.${time_spent}}}``) will fail and not display if there is no internet connectivity.
+Triggered in-app messages with templated custom event properties (for example, ``{{event_properties.${time_spent}}}``) will fail and not display if there is no internet connectivity.
 {% endalert %}
 
 You can change the data type of your custom event property, but please be aware of [the impacts of changing data types]({{site.baseurl}}/help/help_articles/data/change_custom_data_type/) after data has been collected.
