@@ -1,4 +1,4 @@
-## Campaign analytics
+## Campaign Analytics
 
 Once you've launched your campaign, you can return to the details page for that campaign to view key metrics. Navigate to the **Campaigns** page and select your campaign to open the details page. For {% if include.channel == "Content Card" %}Content Cards{% elsif include.channel == "email" %}email{% elsif include.channel == "in-app message" %}in-app messages{% elsif include.channel == "push" %}push messages{% elsif include.channel == "SMS" %}SMS messages{% endif %} sent in Canvas, refer to [Canvas Analytics]({{site.baseurl}}/user_guide/engagement_tools/canvas/get_started/measuring_and_testing_with_canvas_analytics/).
 
@@ -8,7 +8,7 @@ Looking for definitions for the terms and metrics listed in your report? Refer t
 
 From the **Campaign Analytics** tab, you can view your reports in a series of panels. You may see more or less than those listed in the sections below, but each has its own useful purpose.
 
-### Campaign details
+### Campaign Details
 
 The **Campaign Details** panel shows a high-level overview of the entire performance for your {% if include.channel == "Content Card" %}Content Card.{% elsif include.channel == "email" %}email.{% elsif include.channel == "in-app message" %}in-app message.{% elsif include.channel == "push" %}push message.{% elsif include.channel == "SMS" %}SMS.{% endif %}
 
@@ -42,7 +42,7 @@ To measure the impact of an individual SMS message, you can add a [Control Group
 
 {% endif %}
 
-### Message performance
+### Message Performance
 
 The **Message Performance** panel outlines how well your message has performed across various dimensions. The metrics in this panel vary depending on your chosen messaging channel, and whether or not you are running a multivariate test. You can click on the <i class="fa fa-eye preview-icon"></i> **Preview** icon to view your message for each variant or channel.
 
@@ -179,7 +179,7 @@ Here is a breakdown of some key metrics you may see while reviewing your message
 
 {% endif %}
 
-### Historical performance
+### Historical Performance
 
 The **Historical Performance** panel allows you to view the metrics from the **Message Performance** panel as a graph over time. Use the filters at the top of the panel to modify the stats and channels shown in the graph. The time range of this graph will always mirror the time range specified at the top of the page. 
 
@@ -197,7 +197,7 @@ If you select to only send to users who can see the latest Braze version of in-a
 
 {% if include.channel == "SMS" %}
 
-### Keyword responses
+### Keyword Responses
 
 The **Keyword Responses** panel shows you a timeline of the inbound keywords users replied with after receiving your message.
 
@@ -205,13 +205,13 @@ The **Keyword Responses** panel shows you a timeline of the inbound keywords use
 
 {% endif %}
 
-### Conversion event details
+### Conversion Event Details
 
 The **Conversion Event Details** panel shows you the performance of your conversion events for your campaign. For more information, refer to [Conversion Events]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/conversion_events/#step-3-view-results).
 
 ![CC_Conversion]({% image_buster /assets/img/cc-conversion.png %})
 
-### Conversion correlation
+### Conversion Correlation
 
 The **Conversion Correlation** panel gives you insight into what user attributes and behaviors help or hurt the outcomes you set for campaigns. For more information, refer to [Conversion Correlation]({{site.baseurl}}/user_guide/engagement_tools/testing/conversion_correlation/).
 
@@ -229,11 +229,11 @@ Inbound messages are truncated past 1600 characters.
 
 {% endif %}
 
-## Retention reports
+## Retention Report
 
 Retention reports show you the rates at which your users have performed a selected retention event over time periods in a specific campaign or Canvas. For more information, refer to [Retention Reports]({{site.baseurl}}/user_guide/data_and_analytics/your_reports/retention_reports/).
 
-## Funnel reports
+## Funnel Report
 
 Funnel reporting offers a visual report that allows you to analyze the journeys your customers take after receiving a campaign or Canvas. If your campaign or Canvas uses a control group or multiple variants, you will be able to understand how the different variants have impacted the conversion funnel at a more granular level and optimize based on this data.
 
