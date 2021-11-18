@@ -9,7 +9,9 @@ search_tag: Partner
 
 # Amazon Personalize Workshop
 
-This article will walk you through the process of configuring Amazon Personalize and integrating it into your Braze environment using Connected Content. This is done using a hands-on workshop that will walk you through all the steps required to deploy and train Amazon Personalize solutions, and then to integrate these solutions into a Braze email campaign using Connected Content. These examples are deployed in a fully-functional example eCommerce site called the Retail Demo Store. The resources and code for this tutorial are published in the [AWS Samples Retail Demo Store](https://github.com/aws-samples/retail-demo-store/). You can use this reference architecture implementation as an outline to implement Amazon Personalize in your own environment.
+> This article will walk you through the process of configuring Amazon Personalize and integrating it into your Braze environment using Connected Content. This is done using a hands-on workshop that will walk you through all the steps required to deploy and train Amazon Personalize solutions, and then to integrate these solutions into a Braze email campaign using Connected Content. 
+
+The following examples are deployed in a fully-functional example eCommerce site called the Retail Demo Store. The resources and code for this tutorial are published in the [AWS Samples Retail Demo Store](https://github.com/aws-samples/retail-demo-store/). You can use this reference architecture implementation as an outline to implement Amazon Personalize in your own environment.
 
 ## Prerequisites
 
@@ -22,7 +24,6 @@ Before you set up Braze to send personalized messages to users, let's review the
 ![Braze personalization architecture]({% image_buster /assets/img/amazon_personalize/braze-personalize-arch.png %}){: style="max-width:70%" }
 
 **Key:**
-
 1. Retail Demo Store's web UI uses the AWS Amplify JavaScript library to send training events to Amazon Personalize.
 2. Braze campaign user records are updated from the Global Store User service.
 3. When a Braze campaign runs, a Connected Content template is used to fetch recommendations from Personalize and to populate an email template for a target user.
