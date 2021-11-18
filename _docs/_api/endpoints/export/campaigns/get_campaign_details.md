@@ -96,7 +96,7 @@ The `messages` response will contain information about each message. Example mes
 
 ```json
 {
-    "type": (string) description of in-app message type, such as "survey"
+    "type": (string) description of in-app message type, such as "survey",
     "data": {
         "pages": [
             {
