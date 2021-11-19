@@ -3,7 +3,7 @@ nav_title: User Import
 article_title: User Import
 page_order: 4
 page_type: reference
-description: "This reference article covers the topic of how to Import Users into your Braze dashboard and necessary best practices."
+description: "This reference article covers the topic of how to import users into your Braze dashboard and best practices."
 
 ---
 # User import
@@ -22,7 +22,11 @@ You can use Braze’s User Track REST API endpoint to record custom events, user
 
 You can also upload and update user profiles via CSV files from the **User Import** page. This feature supports recording and updating user attributes such as first name and email, in addition to custom attributes such as shoe size. There are two different ways you can approach a CSV import, depending on if your users have an `external_id` or not.
 
-### Import with external ID
+{% alert tip %}
+Need to upload a CSV larger than 100MB? Contact us at smb-product@braze.com and we may be able to help!  
+{% endalert %}
+
+### Importing with external ID
 
 When importing your customer data, you'll need to specify each customer’s unique identifier, also known as `external_id`. Before starting your CSV import it’s important to understand from your engineering team how users will be identified in Braze. Typically this would be a database ID used internally. This should align with how users will be identified by the Braze SDK on mobile and web, and ensures that each customer will have a single user profile within Braze across their devices. Read more about [Braze’s user profile lifecycle][13].
 
@@ -30,7 +34,7 @@ When you provide an `external_id` in your import, Braze will update any existing
 
 <i class="fas fa-file-download"></i> Download: [CSV Import Template][template]
 
-### Import with user alias
+### Importing with user alias
 
 To target users who don't have an `external_id`, you can import a list of users with user aliases. An alias serves as an alternative unique user identifier, and can be helpful if you are trying to market to anonymous users who haven't signed up or made an account with your app.
 
@@ -51,7 +55,7 @@ You can't use a CSV import to update an existing user with a `user_alias_name` i
 
 ### Constructing your CSV
 
-Braze has several data types in Braze. When importing or updating user profiles via CSV, you can create or update default user attributes or custom attributes.
+There are several data types in Braze. When importing or updating user profiles via CSV, you can create or update default user attributes or custom attributes.
 
 - Default user attributes are reserved keys in Braze. For example, `first_name` or `email`.
 - Custom attributes are custom to your business. For example, a travel booking app may have a custom attribute called `last_destination_searched`.
@@ -100,7 +104,7 @@ Setting `language` or `country` on a user via CSV import or API will prevent Bra
 
 
 {% alert note %}
-While `external_id` itself is not mandatory, you __must__ include one of these fields:
+While `external_id` itself is not mandatory, you **must** include one of these fields:
 - `external_id` - A unique user identifier for your customer <br> - OR -
 - `braze_id` - A unique user identifier pulled for existing Braze users <br> - OR -
 - `user_alias` - A unique user identifier for an anonymous user
@@ -109,9 +113,9 @@ While `external_id` itself is not mandatory, you __must__ include one of these f
 
 ### Importing custom data via CSV
 
-Any headers which do not exactly match default user data will create a custom attribute within Braze.
+Any headers that do not exactly match default user data will create a custom attribute within Braze.
 
-These data types are accepted in User Import:
+The following data types are accepted in User Import:
 - Datetime (Must be stored in [ISO-8601](https://en.wikipedia.org/wiki/ISO_8601) format)
 - Boolean (TRUE/FALSE)
 - Number (Integer or Float with no spaces or commas, floats must use a period ‘.’ as the decimal separator)
@@ -119,7 +123,7 @@ These data types are accepted in User Import:
 - Blank (Blank values will not overwrite existing values on the user profile, and you do not need to include all existing user attributes in your CSV file.)
 
 {% alert important %}
-Arrays, push tokens, and custom event data types are not supported in **User Import**.
+Arrays, push tokens, and custom event data types are not supported in User Import.
 Especially for arrays, commas in your CSV file will be interpreted as a column separator, so any commas in values will cause errors parsing the file.
 
 For uploading these kinds of values, please use the [User Track Endpoint]({{site.baseurl}}/developer_guide/rest_api/user_data/#user-track-endpoint).

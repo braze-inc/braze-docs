@@ -17,7 +17,7 @@ module Jekyll
         # converter = site.getConverterImpl(::Jekyll::Converters::Markdown)
         caption = converter.convert(@caption).gsub(/<\/?p[^>]*>/, '').chomp
         body = converter.convert(super(context))
-        "<h2 id='#{caption.downcase.strip.gsub(' ', '-').gsub(/[^\w-]/, '') }'></h2><details ><summary>#{caption}</summary>#{body}</details>"
+        "<h2 id='#{caption.downcase.strip.gsub(' ', '-').gsub(/[^\w-]/, '') }' class='details_title'></h2><details ><summary>#{caption}</summary>#{body}</details>"
       end
 
     end
