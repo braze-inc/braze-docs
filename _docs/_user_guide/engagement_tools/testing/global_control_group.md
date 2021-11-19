@@ -77,7 +77,7 @@ To view a report for your Global Control Group from the dashboard, navigate to _
 
 ### About your report
 
-The Global Control Group Report allows you to compare your group against a treatment sample. Your treatment sample is a random selection of con-control users, approximately the same number of users as your control, generated using the Random Bucket Number method.
+The Global Control Group Report allows you to compare your group against a treatment sample. Your treatment sample is a random selection of non-control users, approximately the same number of users as your control, generated using the Random Bucket Number method.
 
 When generating your report, choose an event—either sessions or any custom event—to compare across your treatment and control groups. Then choose a time period for which to view data for. Keep in mind that if you’ve saved multiple control group experiments at different time periods, you should avoid including data from more than one experiment in your report.
 
@@ -123,6 +123,14 @@ It's possible to have both a Global Control Group and also use a campaign-specif
 
 Users in your Global Control Group are withheld from receiving any messages other than those with tag exceptions, and if you add a control to a campaign or Canvas, Braze withholds a portion of your global treatment group from receiving that particular campaign or Canvas. That means if a member of the Global Control Group is not eligible to receive a particular campaign or Canvas, they will also not be present in the control group for that particular campaign or Canvas.
 
+> In short, users in the Global Control Group are filtered out of the campaign or Canvas audience prior to entry. Of the users who enter the campaign or Canvas, a percentage of those are then assigned to the control variant.
+
+#### Global Control Group segments on the Developer Console
+
+You may see multiple **Global Control** segments in the **Additional API Identifiers** section of the **Developer Console**. This is because each time the Global Control Group is enabled or disabled, a new Global Control Group is formed. This leads to multiple segments labeled "Global Control Group".
+
+Only one of these segments is active and can be queried using the [Users by Global Control Group]({{site.baseurl}}api/endpoints/export/user_data/post_users_global_control_group/) API endpoint, or exported from the dashboard. The export from the dashboard specifically states which subsegments make up this Global Control Group.
+
 ## Testing best practices
 
 ### Optimal control group size {#percentage-guidelines}
@@ -139,7 +147,13 @@ If you have a total audience that’s smaller than 10,000, you should increase y
 
 How long to run your experiment before reshuffling control group membership depends on what you’re testing and what your users’ baseline behaviors are. If you aren’t sure, a good place to start is one quarter (3 months), and you should not go shorter than 1 month.
 
-To determine the appropriate length of time for your experiment, consider what questions you’re hoping to answer. For instance, are you looking to see if there’s a difference in sessions? If so, think about how often your users have sessions organically—companies, where users have sessions every day, can run shorter experiments than companies where users have sessions only a couple of times a month. Or, maybe you’re interested in purchasing behaviors. Then your experiment would most likely need to run for longer than an experiment where you’re examining sessions since it’s likely your users make purchases less frequently.
+To determine the appropriate length of time for your experiment, consider what questions you’re hoping to answer. For instance, are you looking to see if there’s a difference in sessions? If so, think about how often your users have sessions organically. Brands whose users have sessions every day can run shorter experiments than brands whose users have sessions only a couple of times a month. 
+
+Or, maybe you’re interested in purchasing behaviors. Then your experiment would most likely need to run for longer than an experiment where you’re examining sessions, since it’s likely your users make purchases less frequently.
+
+{% alert tip %}
+The longer you hold the same control group out the more they diverge from the treatment group, which can create bias. Resetting the Global Control Group rebalances the population.
+{% endalert %}
 
 #### Try to limit ending experiments prematurely
 
