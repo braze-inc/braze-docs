@@ -12,7 +12,7 @@ description: "This glossary lists the various Message Engagement Events that Bra
 tool: Currents
 ---
 
-Please contact your Account Manager or [open a support ticket][support] if you need access to additional event entitlements. If you can't find what you need below, check out our [Customer Behavior Events Library]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/customer_behavior_events/) or our [Currents sample data examples](https://github.com/Appboy/currents-examples/tree/master/sample-data).
+Please contact your Account Manager or open a [support ticket]({{site.baseurl}}/braze_support/) if you need access to additional event entitlements. If you can't find what you need below, check out our [Customer Behavior Events Library]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/customer_behavior_events/) or our [Currents sample data examples](https://github.com/Appboy/currents-examples/tree/master/sample-data).
 
 {% details Explanation of Message Engagement Event Structure %}
 <br>
@@ -346,7 +346,7 @@ This event occurs when a user clicks an email. Multiple events may be generated 
   "canvas_step_id": (string) id of the step for this message if from a Canvas,
   "canvas_step_name": (string) name of the step for this message if from a Canvas,
   "send_id": (string) id of the message if specified for the campaign (See Send Identifier under API Identifier Types),
-  "dispatch_id": (string) id of the message dispatch (unique id for each 'transmission' sent from the Braze platform). Users who are sent a schedule message get the same dispatch_id. Action-based or API-triggered messages get a unique dispatch_id per user.,
+  "dispatch_id": (string) id of the message dispatch (unique id for each 'transmission' sent from the Braze platform). Only included when campaign_id is present. Users who are sent a schedule message get the same dispatch_id. Action-based or API-triggered messages get a unique dispatch_id per user.,
   "email_address": (string) email address for this event,
   "url": (string) the url that was clicked (Email Click events only),
   "user_agent": (string) description of the user's system and browser for the event (Email Click, Open, and MarkAsSpam events only),
@@ -1261,5 +1261,3 @@ This event occurs when a user is enrolled in a control variant set on a multi-va
 
 {% endapi %}
 
-
-[support]: {{site.baseurl}}/support_contact/

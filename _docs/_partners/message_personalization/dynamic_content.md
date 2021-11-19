@@ -27,5 +27,5 @@ valid_partner_list:
 - name: Liftigniter
   url: /docs/partners/message_personalization/dynamic_content/liftigniter/
 - name: Judo
-  url: /docs/partners/message_orchestration/dynamic_content/judo/
+  url: /docs/partners/message_personalization/dynamic_content/judo/
 ---

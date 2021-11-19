@@ -50,6 +50,24 @@ To do so, create a new tag, select **Nest Tag Under**, and choose which existing
 
 ![Create a nested tag][1]{: style ="max-width:70%;" }
 
+## Use cases
+
+Looking for inspiration on how to leverage tags to manage your messaging lifecycle? Here are some common use cases:
+
+### Throttling
+
+Limit how often your customers receive campaigns of a certain type. For example, you could set the following filters to limit the frequency of promotional campaigns:
+
+`Last received campaign` with tag `Promo` more than 5 days ago 
+<br>`OR`<br>
+`Has not received campaign` with tag `Promo`
+
+### Reporting
+
+Set up an Engagement Report to keep an eye on the volume of all campaigns with a certain tag. For example, if you want to monitor all of your push campaigns, you could add a tag like `Push Reporting` to those campaigns, then set up an [Engagement Report]({{site.baseurl}}/user_guide/data_and_analytics/your_reports/engagement_reports/#automatically-select-campaigns-or-canvases) to send you a report of those tagged campaigns every day.
+
+
+
 [1]: {% image_buster /assets/img_archive/tag_nested.png %}
 [2]: {% image_buster /assets/img_archive/tags_add_tag.png %}
 [3]: {% image_buster /assets/img_archive/tag_details_page.png %}

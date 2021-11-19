@@ -13,7 +13,7 @@ Tool:
 
 # Locations and geofences
 
-Geofences are only available in select Braze packages. For access please create a support ticket or speak with your Braze Customer Success Manager. Learn more in [Braze Docs]({{site.baseurl}}/developer_guide/platform_integration_guides/android/advanced_use_cases/locations_and_geofences/).
+Geofences are only available in select Braze packages. For access please create a [support ticket][support] or speak with your Braze Customer Success Manager. Learn more in [Braze Docs]({{site.baseurl}}/developer_guide/platform_integration_guides/android/advanced_use_cases/locations_and_geofences/).
 
 To support geofences for Android:
 
@@ -320,3 +320,4 @@ However, note that if your application is stopped, receiving a background push w
 [4]: https://github.com/Appboy/appboy-android-sdk/blob/91622eb6cd4bba2e625cc22f00ca38e6136a0596/droidboy/src/main/java/com/appboy/sample/util/RuntimePermissionUtils.java
 [10]: https://developers.google.com/android/guides/setup
 [11]: https://appboy.github.io/appboy-android-sdk/javadocs/com/appboy/Appboy.html#requestGeofences-double-double-
+[support]: {{site.baseurl}}/braze_support/

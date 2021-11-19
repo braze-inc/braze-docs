@@ -20,10 +20,6 @@ When enabled, this feature will prevent unauthorized requests that use your app'
 - Updating standard user profile attributes
 - Receiving or triggering messages
 
-{% alert important %}
-To enable this feature, please contact our support team or your customer success manager.
-{% endalert %}
-
 ## Getting started
 
 There are four high-level steps to get started:
@@ -349,7 +345,7 @@ In the dashboard `Settings` page, each app has three SDK Authentication states w
 | **Required** | Braze will verify requests for logged-in users and will reject invalid JWTs.|
 {: .reset-td-br-1 .reset-td-br-2}
 
-![dashboard][8]
+![Setting dashboard][8]
 
 The "**Optional**" setting is a useful way to monitor the potential impact this feature will have on your app's SDK traffic.
 
@@ -361,7 +357,7 @@ Each app will show a breakdown of SDK Authentication errors collected while this
 
 Data is available in real-time, and you can hover over points in the chart to see a breakdown of errors for a given date.
 
-![analytics][10]
+![Authentication Errors][10]
 
 ## Error codes {#error-codes}
 

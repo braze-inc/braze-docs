@@ -33,7 +33,7 @@ Select a trigger event, which can be:
 
 You can also further filter trigger events through Braze's [custom event properties][32], allowing for customizable event properties for custom events and in-app purchases. This feature allows you to further tailor which users receive a message based on the specific attributes of the custom event, allowing for greater campaign personalization and more sophisticated data collection. For example, in the following screenshot, an abandoned cart custom event is further targeted by the "cart value" property filter. This campaign will only reach users who've left between $100 and $200 worth of goods in their carts. 
 
-![Custom Event Properties Pic][34]
+![Custom Event Properties][34]
 
 {% alert note %}
 The trigger event "start session" can be the user's very first app open if your campaign's segment applies to new users (for instance, if your segment consists of those with no sessions).
@@ -48,7 +48,7 @@ With respect to the trigger event for when a user adds an email address to their
 
 In addition, triggered in-app messages still abide by in-app message delivery rules and appear at the beginning of an app session.
 
-![triggered 1][17]
+![Select Trigger][17]
 
 ### Step 2: Select delay length
 
@@ -56,12 +56,12 @@ Select how long to wait before sending the campaign after the trigger criteria a
 
 Additionally, users who complete the trigger event after your campaign is launched will be the first to start receiving the message once the delay has passed. Users who have completed the trigger event before the campaign launches will not qualify to receive the campaign.
 
-![triggered 2][19]
+![Select Delay][19]
 
 You may also elect to send the campaign on either a specific day of the week (by choosing "on the next" and then selecting a day) or a specific number of days (by selecting "in") in the future. Alternatively, you may choose to send your message using the [Intelligent Timing][8] feature instead of manually selecting a delivery time.
 
-![triggered 7][41]
-![triggered 8][50]
+![Schedule Delay Intelligent Timing][41]
+![Schedule Delay][50]
 
 ### Step 3: Select exception events
 
@@ -69,7 +69,7 @@ Select an exception event that will disqualify users from receiving this campaig
 
 You can read more about how to employ exception events in our section on [use cases]({{site.baseurl}}/user_guide/engagement_tools/campaigns/scheduling_and_organizing/delivery_types/triggered_delivery/#use-cases).
 
-![triggered 3][20]
+![Schedule Delay Exception][20]
 
 > If you send out a campaign with the trigger event that matches the exception event, the initial campaign will be canceled. Instead of sending out both campaigns, your user's first campaign will be canceled and Braze will automatically re-schedule a new campaign based on the exception event's message delivery time.<br><br>For example, if your first trigger event starts at 5 minutes and the exception event's time starts at 10 minutes, you would rely on the exception event's 10 minutes as the official campaign's message delivery time.
 
@@ -81,17 +81,17 @@ You cannot make a "session start" both the trigger event and exception event for
 
 Assign the campaign's duration by specifying a start time and optional end time. If a user completes a trigger event during the specified time frame but qualifies for the message outside of the time frame due to a scheduled delay, then they will not receive the campaign. Therefore, if you set a time delay longer than the message's time frame, no users will receive your campaign. In addition, you can elect to send the message in users' [local time zones]({{site.baseurl}}/user_guide/engagement_tools/campaigns/scheduling_and_organizing/delivery_types/scheduled_delivery/#local-time-zone-campaigns).
 
-![triggered 4][21]
+![Campaign Duration][21]
 
 ### Step 5: Select time frame
 
 Select whether the user will receive the campaign during a specific portion of the day. If you give the message a time frame and the user either completes the trigger event outside the time frame or the message delay causes them to miss the time frame, then by default, the user will not receive your message.
 
-![triggered 5][27]
+![Sepcific Time Frame][27]
 
 In the case where a user completes the trigger event within the time frame, but the message delay causes the user to fall out of the time frame, you can check the box below so that these users will still receive the campaign:
 
-![triggered next available][31]
+![Triggered Next Available][31]
 
 If a user doesn't receive the message because they miss the time frame, then they will still be qualified to receive it the next time they complete the trigger event, even if you did not elect for users to become [re-eligible]({{site.baseurl}}/user_guide/engagement_tools/campaigns/scheduling_and_organizing/delivery_types/reeligibility/). If you do elect for users to become re-eligible, then users can receive the campaign each time they complete the trigger event, assuming they qualify during the specified time frame.
 
@@ -101,7 +101,7 @@ If you have also assigned the campaign a certain duration, then a user must qual
 
 Determine whether users can become [re-eligible][24] for the campaign. If you allow users to become re-eligible, you may specify a time delay before the user can receive the campaign again. This will prevent your triggered campaigns from becoming "spammy".
 
-![triggered 6][28]
+![Campaign Re-eligibility][28]
 
 ## Use cases
 

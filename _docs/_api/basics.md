@@ -24,7 +24,7 @@ Below is some terminology that you may see in the Braze REST API documentation a
 
 ### Endpoints
 
-Braze manages a number of different instances for our dashboard and REST Endpoints. When your account is provisioned you will log in to one of the corresponding URLs below. Use the correct REST Endpoint based on which instance you are provisioned to. If you are unsure, open a support ticket or use the table below to match the URL of the dashboard you use to the correct REST Endpoint.
+Braze manages a number of different instances for our dashboard and REST Endpoints. When your account is provisioned you will log in to one of the corresponding URLs below. Use the correct REST Endpoint based on which instance you are provisioned to. If you are unsure, open a [support ticket][support] or use the table below to match the URL of the dashboard you use to the correct REST Endpoint.
 
 {% alert important %}
 When using endpoints for API calls, use the "REST Endpoint" located below.
@@ -71,13 +71,19 @@ A good security practice is to assign a user only as much access as is necessary
 Given that REST API Keys allow access to potentially sensitive REST API endpoints, ensure they are stored and used securely. For example, do not use this key to make AJAX calls from your website or expose it in any other public manner.
 {% endalert %}
 
-If accidental exposure of a key occurs, it can be deleted from the [Developer Console][8]. For help with this process, please [open a support ticket][support].
+If accidental exposure of a key occurs, it can be deleted from the [Developer Console][8]. For help with this process, please open a [support ticket][support].
 
 #### API IP allowlisting
 
-For additional security, you can specify an allowlist of IP addresses and subnets which are allowed to make REST API requests for a given REST API Key. To allowlist specific IP addresses or subnets, add them to the **Whitelist IPs** section when creating a new REST API Key:
+For additional security, you can specify a list of IP addresses and subnets which are allowed to make REST API requests for a given REST API Key. This is referred to as allowlisting, or whitelisting. To allow specific IP addresses or subnets, add them to the **Whitelist IPs** section when creating a new REST API Key: 
 
 ![API IP Whitelisting][26]
+
+If you don’t specify any, requests can be sent from any IP address.
+
+{% alert tip %}
+Making a Braze-to-Braze webhook and using allowlisting? Check out our list of [IPs to whitelist]({{site.baseurl}}/docs/user_guide/message_building_by_channel/webhooks/creating_a_webhook/#ip-whitelisting).
+{% endalert %}
 
 #### Creating and managing REST API keys
 
@@ -152,7 +158,7 @@ Header Name             | Description
 `X-RateLimit-Reset`     | The time at which the current rate limit window resets in UTC epoch seconds.
 {: .reset-td-br-1 .reset-td-br-2}
 
-If you have questions about API limits please contact your Customer Success Manager or please [open a support ticket][support].
+If you have questions about API limits please contact your Customer Success Manager or please open a [support ticket][support].
 
 ### Optimal delay between endpoints
 
@@ -166,7 +172,7 @@ Under normal conditions, the time for our data eventual consistency to occur is 
 [9]: {{site.baseurl}}/developer_guide/platform_integration_guides/ios/analytics/setting_user_ids/
 [10]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/analytics/setting_user_ids/
 [13]: {{site.baseurl}}/developer_guide/platform_integration_guides/windows_universal/analytics/setting_user_ids/#setting-user-ids
-[support]: {{site.baseurl}}/support_contact/
+[support]: {{site.baseurl}}/braze_support/
 [25]: {% image_buster /assets/img_archive/api-key-permissions.png %}
 [26]: {% image_buster /assets/img_archive/api-key-ip-whitelisting.png %}
 [27]: {% image_buster /assets/img_archive/rest-api-key.png %}

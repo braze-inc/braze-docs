@@ -182,7 +182,7 @@ You can set attributes for codes such as List Expiration and Threshold Alerts. H
 
 Upload the CSV file with Voucherify codes.
 
-![CSV IMPORT]({% image_buster /assets/img/voucherify-import-codes-braze.png %})
+![CSV Import]({% image_buster /assets/img/promocodes/promocode6.png %})
 
 When the import is done, click Save to confirm the list details.
  

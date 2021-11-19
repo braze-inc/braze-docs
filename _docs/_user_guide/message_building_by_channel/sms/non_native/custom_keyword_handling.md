@@ -23,7 +23,7 @@ Two-way messaging leverages custom events to make this seemingly smooth customer
 | Unknown Phone Numbers |  10-15 Seconds | An unknown number is one that has not yet been identifier. For more information on how Unknown phone numbers are dealt with, check out our [documentation][unknown].|
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
 
-If you require faster sending speeds for unknown phone numbers, reach out to your customer success manager to discuss your options.
+If you require faster sending speeds for unknown phone numbers, reach out to your Customer Success Manager or contact support to discuss your options.
 
 ## Custom keyword messaging handling
 

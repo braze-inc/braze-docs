@@ -82,7 +82,7 @@ Provisional Authorization has the potential dramatically increase your opt-in ra
 
 Whichever option the user chooses will add the appropriate token or [subscription status]({{site.baseurl}}/user_guide/message_building_by_channel/push/users_and_subscriptions/) to their [Contact Settings]({{site.baseurl}}/user_guide/engagement_tools/segments/using_user_search/#engagement-tab) (under the **Engagement** tab in their user profile, shown below).
 
-![User Profile Provisionally Authorized]({% image_buster /assets/img/profile-push-prov-auth.png %}){: width="50%"}
+![User profile provisionally authorized]({% image_buster /assets/img/profile-push-prov-auth.png %}){: width="50%"}
 
 You will be able to target your users based on whether they are provisionally authorized or not using our [segmentation filters]({{site.baseurl}}/user_guide/engagement_tools/segments/segmentation_filters/) (shown below).
 

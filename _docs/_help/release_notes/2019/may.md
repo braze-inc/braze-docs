@@ -73,8 +73,6 @@ While all customers who are sent a scheduled message get the same `dispatch_id`,
 
 When a user checks the `Only Show Mine` checkbox on the campaign grid, the results will filter down to campaigns show only created by the logged-in user. Additionally, the user can use the search bar by inputting `created_by_me:true`.
 
-![Created by Me][cbm]{: height="50%" width="50%"}
-
 Also, the campaign grid sidebar is now resizable!
 
 ## Delete users by alias
@@ -108,5 +106,4 @@ The Most Engaged Channel filter selects the portion of your audience for whom th
 
 Check this new filter out in [our Segmentation Filters library]({{site.baseurl }}/user_guide/engagement_tools/segments/segmentation_filters/).
 
-[cbm]: {% image_buster /assets/img/created_by_me2.png %}
 [plat_p]: {% image_buster /assets/img/iam_platforms.gif %}

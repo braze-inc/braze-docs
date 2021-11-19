@@ -55,7 +55,7 @@ When creating your segments, set the subscription group name as a filter. This w
 
 Archived subscription groups cannot be edited and will no longer appear in segment filters or in your Preference Center.  If you attempt to archive a group that is being used as a segment filter in any email, campaign, or Canvas, you will receive an error message that will prevent you from archiving the group until you remove all usages of it.
 
-You can archive your group from the __Subscription Groups__ page. Find your group in the list, then click the gear and select **Archive** from the dropdown menu.
+You can archive your group from the **Subscription Groups** page. Find your group in the list, then click the gear and select **Archive** from the dropdown menu.
 
 Braze will not process any state changes for users in archived groups. For example, if you archive "Subscription Group A" while Susie is considered `subscribed` to it, they will remain "`subscribed`" to this group, even if they clicks an unsubscribe link (this shouldn't matter to Susie, "Subscription Group A" is archived and you can't send any messages using it).
 
@@ -95,7 +95,7 @@ The Preference Center is intended to be used strictly within the email channel i
 
 #### Customize your Preference Center
 
-You can create a fully custom HTML Preference Center, which you will host, then sync to Braze using our [APIs][28]. Reach out to your Braze representative for more information.
+You can create and host a fully custom HTML Preference Center and sync to Braze using our [APIs][28].
 
 {% alert note %}
 At this time, you can only have one Preference Center, which will list all of your current subscription groups.
@@ -103,7 +103,7 @@ At this time, you can only have one Preference Center, which will list all of yo
 
 ##### Logo
 
-You can edit the logo and header of your preference center. Click the gear, then click __edit__ from the menu that appears.
+You can edit the logo and header of your preference center. Click the gear, then click **Edit** from the menu that appears.
 
 ### Changing email subscriptions {#changing-email-subscriptions}
 

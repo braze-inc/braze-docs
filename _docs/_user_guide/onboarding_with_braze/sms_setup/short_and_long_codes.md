@@ -88,7 +88,7 @@ Alphanumeric Sender IDs allow you to set your company name or brand as the Sende
 |- No additional charge to implement<br>- Improves brand awareness<br>- Increases SMS open rates<br>- Matches sending speed of phone numbers inside the subscription group.<br>- Available immediately if pre-registration is not required|- [Two-way messaging]({{site.baseurl}}/user_guide/message_building_by_channel/sms/keywords/#two-way-messaging-custom-keyword-responses) is not supported<br>- Not all countries support this feature<br>- Some countries require an additional approval processes. This may take additional time.<br>- MMS is not enabled |
 {: .reset-td-br-1 .reset-td-br-2}
 
-For more information on Alphanumeric Sender IDs, please reach out to your Customer Success Manager. 
+For more information on Alphanumeric Sender IDs, please reach out to your Customer Success Manager or contact support. 
 {% endtab %}
 {% tab Toll-Free Number %}
 

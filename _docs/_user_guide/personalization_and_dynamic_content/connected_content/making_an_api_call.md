@@ -89,7 +89,7 @@ Some API configurations require retrieval of an access token that can then be us
 
 ### Retrieve the access token
 
-The example below illustrates retrieving and saving an access token to a local variable which can then be used to authenticate the subsequent API call. A `:cache` parameter can be added to match the time that the access token is valid for and reduce the number of outbound Connected Content calls. See [Configurable Caching][36] for more information.
+The example below illustrates retrieving and saving an access token to a local variable which can then be used to authenticate the subsequent API call. A `:cache_max_age` parameter can be added to match the time that the access token is valid for and reduce the number of outbound Connected Content calls. See [Configurable Caching][36] for more information.
 
 {% raw %}
 ```
@@ -100,7 +100,7 @@ The example below illustrates retrieving and saving an access token to a local v
        "Content-Type": "YOUR-CONTENT-TYPE",
        "Authorization": "Bearer YOUR-APP-TOKEN"
  	}
-     :cache 900
+     :cache_max_age 900
      :save token_response
 %}
 ```
@@ -143,11 +143,17 @@ Braze will send Connected Content requests from the IP ranges below. Braze has a
 | `52.54.89.238`
 | `18.205.178.15`
 
-| For Instance `EU-01`: |
+| For Instances `EU-01` and `EU-02`: |
 |---|
 | `52.58.142.242`
 | `52.29.193.121`
 | `35.158.29.228`
+| `18.157.135.97`
+| `3.123.166.46`
+| `3.64.27.36`
+| `3.65.88.25`
+| `3.68.144.188`
+| `3.70.107.88`
 
 | For Instance `US-08`: |
 |---|

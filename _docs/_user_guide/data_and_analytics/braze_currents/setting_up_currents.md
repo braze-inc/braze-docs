@@ -53,11 +53,11 @@ To get started, visit the Currents page in the left sidebar, in the "Integration
 
 Add a partner, sometimes called a "Currents connector", by clicking the dropdown at the top right of the screen.
 
-![Adding an Integration]({% image_buster /assets/img/new_current.png %}){: height="50%" width="50%"}
+![Adding an Integration]({% image_buster /assets/img/new_current.png %}){: style="max-width:30%;"}
 
 Each partner requires a different set of configuration steps. To enable each integration, [see the instructions in their respective pages]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/available_partners/).
 
-## Step 4: Cconfigure events
+## Step 4: Configure events
 
 Choose the events you wish to pass to that partner by checking from the available options. You can find listings of these events in our [Customer Behavior Events]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/customer_behavior_events/) and [Message Engagement Events]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/message_engagement_events/) libraries.
 

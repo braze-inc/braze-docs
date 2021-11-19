@@ -31,7 +31,7 @@ guide_featured_list:
 guide_menu_title: "More Articles"
 guide_menu_list:
   - name: Campaign Analytics
-    link: /docs/user_guide/message_building_by_channel/sms/sms_campaign_analytics/#reporting-in-campaigns
+    link: /docs/user_guide/data_and_analytics/your_reports/campaign_analytics/
     fa_icon: fas fa-chart-bar
   - name: Canvas Analytics
     link: /docs/user_guide/engagement_tools/canvas/get_started/measuring_and_testing_with_canvas_analytics/
