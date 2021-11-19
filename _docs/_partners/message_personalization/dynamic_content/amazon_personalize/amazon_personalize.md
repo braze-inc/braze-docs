@@ -8,18 +8,18 @@ search_tag: Partner
 ---
 
 # Amazon Personalize
-
+<!--
+{% include video.html id="xFZ3HMleYYE" align="right" %}
+-->
 > Amazon Personalize is like having your very own all day Amazon machine learning recommendation system. Based on over 20 years of recommendation experience, Amazon Personalize enables you to improve customer engagement by powering real-time personalized product and content recommendations and targeted marketing promotions.
 
-Using machine learning and an algorithm you help define, Amazon Personalize can help you train a model that outputs high-quality recommendations for your websites and applications. These models will allow you to create lists of recommendations based on a user's past behaviors, sort items by relevancy, and recommend other items based on similarity. 
-
-Lists obtained from the Amazon Personalize API can be used in Braze Connected Content to run personalized recommendation campaigns. Amazon Personalize offers you the freedom to control the parameters used to train the models and the optional business objective that optimizes the algorithm's output.
+Using machine learning and an algorithm you help define, Amazon Personalize can help you train a model that outputs high-quality recommendations for your websites and applications. These models will allow you to create lists of recommendations based on user's past behaviors, sort items by relevancy, and recommend other items based on similarity. Lists obtained from the Amazon Personalize API can then be used in Braze Connected Content to run personalized Braze recommendation campaigns. By integrating with Amazon Personalize customers are given the freedom to control the parameters used to train the models and define optional business objectives that optimize the algorithm's output. 
 
 This article will help you understand the use cases Amazon Personalize offers, the data it works with, how to configure the service, and how to integrate this with Braze.
 
 ## Use Cases
 
-Before creating a model, we recommend determining your use case for this integration. Some common use cases include:
+Before creating a model, you must determine your use case for this integration. Some common use cases include:
 - Recommend items for users based on their previous interactions, creating a truly personalized experience for your users.
 - Provide a list of items or search results tailored to each user, increasing engagement by showing items by relevancy to the user.
 - Find recommendations for similar items, helping users discover new things.
@@ -46,7 +46,7 @@ For a user recommendations recipe, you must provide an interactions dataset cont
 
 ### Training
 
-Once datasets are imported, you can create a solution. A solution uses one of Amazon Personalize recipes (algorithms) to train a model. In our case, we will use the `USER_PERSONALIZATION` recipe. Training the solution creates in a solution version (a trained model) which you can evaluate based on the performance metrics of the model.
+Once datasets are imported, you can create a solution. A solution uses one of Amazon Personalize recipes (algorithms) to train a model. In our case, we will use the `USER_PERSONALIZATION` recipe. Training the solution creates a solution version (a trained model) which you can evaluate based on the performance metrics of the model.
 
 Amazon Personalize lets you adjust hyperparameters that the model uses for training. For example, the "user history length percentile" parameter lets you adjust the percentile of user history to include in the training. Adjusting the "minimum user history length percentile" excludes a percentage of users with very short history lengths, which can be helpful to eliminate popular items and build recommendations based on deeper underlying patterns. The "max user history length percentile setting", on the other hand, lets you adjust the percentage of users to take into account when training with very long history lengths.
 
