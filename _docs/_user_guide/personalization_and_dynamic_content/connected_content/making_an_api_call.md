@@ -89,7 +89,7 @@ Some API configurations require retrieval of an access token that can then be us
 
 ### Retrieve the access token
 
-The example below illustrates retrieving and saving an access token to a local variable which can then be used to authenticate the subsequent API call. A `:cache` parameter can be added to match the time that the access token is valid for and reduce the number of outbound Connected Content calls. See [Configurable Caching][36] for more information.
+The example below illustrates retrieving and saving an access token to a local variable which can then be used to authenticate the subsequent API call. A `:cache_max_age` parameter can be added to match the time that the access token is valid for and reduce the number of outbound Connected Content calls. See [Configurable Caching][36] for more information.
 
 {% raw %}
 ```
@@ -100,7 +100,7 @@ The example below illustrates retrieving and saving an access token to a local v
        "Content-Type": "YOUR-CONTENT-TYPE",
        "Authorization": "Bearer YOUR-APP-TOKEN"
  	}
-     :cache 900
+     :cache_max_age 900
      :save token_response
 %}
 ```
