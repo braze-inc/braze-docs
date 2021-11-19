@@ -13,7 +13,7 @@ search_tag: Partner
 -->
 > Amazon Personalize is like having your very own all day Amazon machine learning recommendation system. Based on over 20 years of recommendation experience, Amazon Personalize enables you to improve customer engagement by powering real-time personalized product and content recommendations and targeted marketing promotions.
 
-Using machine learning and an algorithm you help define, Amazon Personalize can help you train a model that outputs high-quality recommendations for your websites and applications. These models will allow you to create lists of recommendations based on user's past behaviors, sort items by relevancy, and recommend other items based on similarity. Lists obtained from the Amazon Personalize API can then be used in Braze Connected Content to run personalized Braze recommendation campaigns. By integrating with Amazon Personalize customers are given the freedom to control the parameters used to train the models and define optional business objectives that optimize the algorithm's output. 
+Using machine learning and an algorithm you help define, Amazon Personalize can help you train a model that outputs high-quality recommendations for your websites and applications. These models will allow you to create lists of recommendations based on users' past behaviors, sort items by relevancy, and recommend other items based on similarity. Lists obtained from the Amazon Personalize API can then be used in Braze Connected Content to run personalized Braze recommendation campaigns. By integrating with Amazon Personalize, customers are given the freedom to control the parameters used to train the models and define optional business objectives that optimize the algorithm's output. 
 
 This article will help you understand the use cases Amazon Personalize offers, the data it works with, how to configure the service, and how to integrate this with Braze.
 
@@ -46,13 +46,16 @@ For a user recommendations recipe, you must provide an interactions dataset cont
 
 ### Training
 
-Once datasets are imported, you can create a solution. A solution uses one of Amazon Personalize recipes (algorithms) to train a model. In our case, we will use the `USER_PERSONALIZATION` recipe. Training the solution creates a solution version (a trained model) which you can evaluate based on the performance metrics of the model.
+Once datasets are imported, you can create a solution. A solution uses one of Amazon Personalize recipes (algorithms) to train a model. In our case, we will use the `USER_PERSONALIZATION` recipe. Training the solution creates a solution version (trained model) which you can evaluate based on the performance metrics of the model.
 
-Amazon Personalize lets you adjust hyperparameters that the model uses for training. For example, the "user history length percentile" parameter lets you adjust the percentile of user history to include in the training. Adjusting the "minimum user history length percentile" excludes a percentage of users with very short history lengths, which can be helpful to eliminate popular items and build recommendations based on deeper underlying patterns. The "max user history length percentile setting", on the other hand, lets you adjust the percentage of users to take into account when training with very long history lengths.
+Amazon Personalize lets you adjust hyperparameters that the model uses for training. For example:
+- The "user history length percentile" parameter lets you adjust the percentile of user history to include in the training. 
+- Adjusting the "minimum user history length percentile" excludes a percentage of users with very short history lengths, which can be helpful to eliminate popular items and build recommendations based on deeper underlying patterns. 
+- The "max user history length percentile setting" lets you adjust the percentage of users to take into account when training with very long history lengths.
 
 The number of hidden dimensions helps detect more complicated patterns for complex datasets, while the back-propagation through time technique (BPTT) adjusts rewards for an early event after a chain of events took place that resulted in a high-value action.
 
-Additionally, Amazon Personalize offers automatic hyperparameter tuning by running multiple versions of the solution with different values simultaneously. To use the tuning, turn on `Perform HPO` when creating a solution.
+Additionally, Amazon Personalize offers automatic hyperparameter tuning by running multiple versions of the solution with different values simultaneously. To use the tuning, turn on __Perform HPO__ when creating a solution.
 
 ### Evaluating
 
@@ -77,7 +80,7 @@ Filters let you adjust the recommendation output by excluding items based on the
 ## Integrating results with Braze
 
 With the created model and recommendations campaign, you are ready to run a Braze campaign for your users using Content Cards and Connected Content.
-Before running a Braze campaign, you must create a service that can serve these recommendations through an API. You can follow [Step 3 in the workshop article][1] to deploy the service using AWS services. You can also deploy your own independent backend service that provides the recommendations.
+Before running a Braze campaign, you must create a service that can serve these recommendations through an API. You can follow [step 3 in the workshop article][1] to deploy the service using AWS services. You can also deploy your own independent backend service that provides the recommendations.
 
 Let's run a Content Card campaign with the first recommended item from the list.<br><br>
 In the examples below, we are going to query
@@ -103,7 +106,7 @@ In the examples below, we are going to query
 ]
 ```
 
-In the Braze dashboard, create a new Content Card campaign. In the message text field, create a Connected Content Liquid block to query the API and save the response in the `recommendations` variable:
+In the Braze dashboard, create a new [Content Card campaign]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards/create/). In the message text field, create a Connected Content Liquid block to query the API and save the response in the `recommendations` variable:
 
 {% raw %}
 

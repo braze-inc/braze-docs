@@ -46,14 +46,14 @@ Accept all the default parameter values for the template. The deployment of all 
 
 ### Step 2: Build Amazon Personalize campaigns
 
-Before you can provide personalized product recommendations, you first need to train the machine learning models and provide inference endpoints that will allow you to get recommendations from Amazon Personalize. The CloudFormation template deployed in Step 1 includes an Amazon SageMaker notebook instance that provides a Jupyter notebook with detailed step-by-step instructions.
+Before you can provide personalized product recommendations, you first need to train the machine learning models and provide inference endpoints that will allow you to get recommendations from Amazon Personalize. The CloudFormation template deployed in step 1 includes an Amazon SageMaker notebook instance that provides a Jupyter notebook with detailed step-by-step instructions.
 
-1. Sign in to the AWS account where you deployed the AWS CloudFormation template in Step 1.
+1. Sign in to the AWS account where you deployed the AWS CloudFormation template in step 1.
 2. On the Amazon SageMaker console, choose __Notebook instances__.
-3. If you don't see the **RetailDemoStore** notebook instance, make sure you are in the same region where you deployed the project in Step 1.
+3. If you don't see the **RetailDemoStore** notebook instance, make sure you are in the same region where you deployed the project in step 1.
 4. To access the notebook instance, choose **Open Jupyter** or **Open JupyterLab**.
 5. When the Jupyter web interface has loaded for the notebook instance, choose the `workshop/1-Personalization/1.1-Personalize.ipynb` notebook. You may have to choose the `workshop` folder to see the notebook subdirectories.
-6. Once you have the `1.1-Personalize` notebook open, step through the workshop by executing each cell. You can choose **Run** from the Jupyter toolbar to sequentially execute the code in the cells. The notebook takes approximately 2 hours to complete.
+6. Once you have the `1.1-Personalize` notebook open, step through the workshop by executing each cell. You can choose **Run** from the Jupyter toolbar to sequentially execute the code in the cells. The notebook takes approximately two hours to complete.
 
 ### Step 3: Send personalized emails from Braze
 
@@ -61,7 +61,7 @@ With the Amazon Personalize solutions and campaigns in place, your instance of t
 
 Similar to the Personalization workshop in step 2, the following Braze messaging workshop steps you through setting up the Braze and Amazon Personalize integration.
 
-1. Sign in to the AWS account where you deployed the AWS CloudFormation template in Step 1.
+1. Sign in to the AWS account where you deployed the AWS CloudFormation template in step 1.
 2. On the Amazon SageMaker console, choose **Notebook Instances**.
 3. If you don't see the **RetailDemoStore** notebook instance, make sure you are in the same AWS region where you deployed the project.
 4. To access the notebook instance, choose **Open Jupyter** or **Open JupyterLab**.
@@ -70,7 +70,7 @@ Similar to the Personalization workshop in step 2, the following Braze messaging
 
 ### Step 4: Clean up resources
 
-To avoid incurring future charges, delete the AWS resources the Retail Demo Store project created by deleting the AWS CloudFormation stack you created in Step 1.
+To avoid incurring future charges, delete the AWS resources the Retail Demo Store project created by deleting the AWS CloudFormation stack you created in step 1.
 
 [1]: {% image_buster /assets/img/amazon_personalize/braze-personalize-arch.png %}
 [2]: {% image_buster /assets/img/amazon_personalize/region.png %}
