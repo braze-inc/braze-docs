@@ -24,15 +24,9 @@ guide_featured_list:
   - name: Managing Canvases
     link: /docs/user_guide/engagement_tools/canvas/managing_canvases/
     fa_icon: fas fa-pen-square
-
-guide_menu_title: "More Articles"
-guide_menu_list:
-  - name: Retention Reports
-    link: /docs/user_guide/data_and_analytics/your_reports/retention_reports/
-    fa_icon: fas fa-chart-area
-  - name: Funnel Reports
-    link: /docs/user_guide/data_and_analytics/your_reports/funnel_reports/
-    fa_icon: fas fa-filter
+  - name: Testing Canvases
+    link: /docs/user_guide/engagement_tools/canvas/testing_canvases/
+    fa_icon: fas fa-vials
   - name: Frequently Asked Questions
     link: /docs/user_guide/engagement_tools/canvas/faqs/
     fa_icon: fas fa-question

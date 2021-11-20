@@ -472,4 +472,6 @@ validurls['/docs/user_guide/message_building_by_channel/push/best_practices/push
 
 validurls['/docs/help/best_practices/'] = '/docs/faqs/';
 
+validurls['/docs/user_guide/engagement_tools/canvas/get_started/measuring_and_testing_with_canvas_analytics/'] = '/docs/user_guide/engagement_tools/canvas/testing_canvases/measuring_and_testing_with_canvas_analytics/';
+
 
