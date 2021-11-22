@@ -20,4 +20,16 @@ guide_featured_list:
   - name: A/B Testing with Random Buckets
     link: /docs/user_guide/engagement_tools/campaigns/testing_and_more/ab_testing_with_random_buckets/
     fa_icon: fas fa-columns
+
+guide_menu_title: "Additional Articles"
+guide_menu_list:
+  - name: Campaign Analytics
+    link: /docs/user_guide/data_and_analytics/your_reports/campaign_analytics/
+    fa_icon: fas fa-chart-pie
+  - name: Retention Reports
+    link: /docs/user_guide/data_and_analytics/your_reports/retention_reports/
+    fa_icon: fas fa-chart-area
+  - name: Funnel Reports
+    link: /docs/user_guide/data_and_analytics/your_reports/funnel_reports/
+    fa_icon: fas fa-filter
 ---

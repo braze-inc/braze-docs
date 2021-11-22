@@ -27,15 +27,6 @@ guide_featured_list:
   - name: Ideas and Strategies
     link: /docs/user_guide/engagement_tools/campaigns/ideas_and_strategies/
     fa_icon: fas fa-lightbulb
-
-guide_menu_title: "More Articles"
-guide_menu_list:
-  - name: Retention Reports
-    link: /docs/user_guide/data_and_analytics/your_reports/retention_reports/
-    fa_icon: fas fa-chart-area
-  - name: Funnel Reports
-    link: /docs/user_guide/data_and_analytics/your_reports/funnel_reports/
-    fa_icon: fas fa-filter
   - name: Frequently Asked Questions
     link: /docs/user_guide/engagement_tools/campaigns/faq/
     fa_icon: fas fa-question
