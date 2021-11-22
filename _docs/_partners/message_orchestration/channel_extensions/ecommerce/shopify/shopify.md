@@ -283,7 +283,7 @@ Your install may still be pending for one of the following reasons:
   - When Braze is communicating with Shopify
 
 If your app installation is pending for 1 hour, Braze will fail the installation and you will be prompted to Retry Setup.<br><br>
-![Shopify]({% image_buster /assets/img/Shopify/shopify_integration15.png %}){: style="max-width:80%;"}
+![Shopify]({% image_buster /assets/img/Shopify/shopify_integration8.png %}){: style="max-width:80%;"}
 {% enddetails %}
 
 {% details Why did my Shopify app install fail? %}
@@ -307,7 +307,7 @@ You will need to go to your Shopify admin page located under __Apps__. You will 
 With respect to Personal Data submitted to Braze Services by or on behalf of its customers, Braze is the Data Processor, and our customers are the Data Controllers. Accordingly, Braze processes such Personal Data solely at the instruction of our customers and, when applicable, notify our customers of Data Subject requests. Our customers, as the Data Controllers, respond directly to Data Subject requests. As part of the Braze platform's Shopify integration, Braze automatically receives [Shopify's GDPR webhooks](https://shopify.dev/tutorials/add-gdpr-webhooks-to-your-app). However, Braze customers are ultimately responsible for responding to Data Subject requests from their Shopify customers through the use of [Braze SDKs]({{site.baseurl}}/developer_guide/home/) or [REST APIs]({{site.baseurl}}/api/endpoints/user_data/#user-track-endpoint) in accordance with our [GDPR compliance]({{site.baseurl}}/help/dp-technical-assistance/) policies.
 
 [2]: {% image_buster /assets/img/Shopify/shopify_integration2.png %} 
-[3]: {% image_buster /assets/img/Shopify/shopify_integration3-6.png %}
+[3]: {% image_buster /assets/img/Shopify/shopify_integration3-6.gif %}
 [4]: {% image_buster /assets/img/Shopify/arrow.jpeg %}
 [7]: {% image_buster /assets/img/Shopify/shopify_integration7.png %} 
 [8]: {% image_buster /assets/img/Shopify/shopify_integration8.png %} 

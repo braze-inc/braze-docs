@@ -107,7 +107,7 @@ If you are looking to segment by custom event properties, please ensure that you
 
 ## Campaign and Canvas triggering 
 
-With Shopify custom events in Braze, you can trigger Canvases or campaigns like you normally would with any other [custom event]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events/#custom-event-storage). Shown below is an example of a Canvas that triggers off of the Shopify `shopify_checkouts_abandon` event within the Canvas entry criteria. 
+With Shopify custom events in Braze, you can trigger Canvases or campaigns like you normally would with any other [custom event]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events/#custom-event-storage). For example, you may create an Action-Based Canvas that triggers off of the Shopify `shopify_checkouts_abandon` event within the Canvas entry criteria. 
 
 ![Shopify][5]
 
