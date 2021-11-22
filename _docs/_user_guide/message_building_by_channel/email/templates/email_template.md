@@ -48,10 +48,19 @@ When composing your email template copy, do not switch back and forth between di
 
 Braze will add a footer with an unsubscribe link at the bottom of your HTML emails by default. You can customize this footer in the **Email Settings** tab of the **Manage Settings** page. For more information, please read our [custom footer documentation]({{site.baseurl}}/user_guide/message_building_by_channel/email/managing_user_subscriptions/#custom-footer).
 
-![Enter Email Template Editing]({%image_buster/assets/img/email_templates/template3.jpg %})
+To enter a subject line, click <i class="fas fa-pencil-alt"></i> **Edit Sending Info**. 
+
+![Enter Email Template Editing]({%image_buster/assets/img/email_templates/template3.png %})
 <br>
 <br>
-![Email Template Editor Guide]({%image_buster/assets/img/email_templates/template4.jpg %})
+
+To enter the robust email editor, click <i class="fas fa-pencil-alt"></i> **Edit Email Body**. If desired, use the dropdown in the **Body** tab to select the Classic, Block, HTML, or Plaintext email editor. The right panel shows a real-time preview of the email being created.
+
+{% alert important %}
+Remember—when composing your email template copy, do not switch back and forth between different editor types (HTML/Block/Classic) as that may shift the previously created HTML leading to rendering issues. 
+{% endalert %}
+
+![Email Template Editor Guide]({%image_buster/assets/img/email_templates/template4.png %})
 
 Our editor supports **HTML Autocomplete** triggered by the `Tab` key.  This feature should be used on naked HTML tags. For example, using `Tab` on a `<head>` tag will result in:
 {% raw %}
@@ -170,10 +179,10 @@ For answers to frequently asked questions about email templates, check out our [
 
 [2]: {% image_buster /assets/img/email_templates/template2.png %}
 [1]: {% image_buster /assets/img/dnd_compose_error.png %}
-[3]: {% image_buster /assets/img/email_templates/template3.jpg %}
-[4]: {% image_buster /assets/img/email_templates/template4.jpg %}
+[3]: {% image_buster /assets/img/email_templates/template3.png %}
+[4]: {% image_buster /assets/img/email_templates/template4.png %}
 [cf]: {{site.baseurl}}/user_guide/message_building_by_channel/email/managing_user_subscriptions/#custom-footer
-[6]: {% image_buster /assets/img/email_templates/template5.jpg %}
+[6]: {% image_buster /assets/img/email_templates/template5.png %}
 [7]: {{site.baseurl}}/user_guide/message_building_by_channel/email/best_practices/
 [8]: {{site.baseurl}}/help/release_notes/2018/may/#mobile-responsive-email-templates
 [9]: {{site.baseurl}}/user_guide/message_building_by_channel/email/templates/faq/
