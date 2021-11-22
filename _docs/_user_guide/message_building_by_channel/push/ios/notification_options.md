@@ -86,7 +86,7 @@ Whichever option the user chooses will add the appropriate token or [subscriptio
 
 You will be able to target your users based on whether they are provisionally authorized or not using our [segmentation filters]({{site.baseurl}}/user_guide/engagement_tools/segments/segmentation_filters/) (shown below).
 
-![Provisionally Authorized Segment]({% image_buster /assets/img/segment-push-prov-auth.png %})
+![Provisionally authorized segment]({% image_buster /assets/img/segment-push-prov-auth.png %})
 
 {% alert tip %}
 If users choose to "Turn Off" provisional push from you, they won't see any more provisional push messages from you. Be thoughtful about the message content and cadence sent using this functionality!

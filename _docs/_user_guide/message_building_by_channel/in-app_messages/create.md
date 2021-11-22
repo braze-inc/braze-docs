@@ -95,7 +95,7 @@ If Braze detects that you don't have a close or dismissal button included in you
 
 The **Compose** tab allows you to edit all aspects of your message's content and behavior.
 
-![composeyouriam][24]
+![Compose your in-app message][24]
 
 The content of the Compose tab varies based on your chosen message options in the previous step, but may include any of the options below:
 
