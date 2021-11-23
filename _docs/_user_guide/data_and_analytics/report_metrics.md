@@ -146,7 +146,7 @@ glossaries:
       - iOS Push
       - Android Push
   - name: Total Clicks
-    description: The total number (and percentage) of users who clicked within the delivered email or card. Please note that clicks on an unsubscribe link will not be counted towards total clicks.
+    description: The total number (and percentage) of users who clicked within the delivered email or card. 
     calculation: (Total Clicks) / (Deliveries) (for Email) or (Total Clicks) / (Total Impressions) (for Content Cards)
     tags:
       - Email
