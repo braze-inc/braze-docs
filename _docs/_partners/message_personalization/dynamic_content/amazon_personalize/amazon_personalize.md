@@ -46,7 +46,7 @@ For a user recommendations recipe, you must provide an interactions dataset cont
 
 ### Training
 
-Once datasets are imported, you can create a solution. A solution uses one of Amazon Personalize recipes (algorithms) to train a model. In our case, we will use the `USER_PERSONALIZATION` recipe. Training the solution creates a solution version (trained model) which you can evaluate based on the performance metrics of the model.
+Once datasets are imported, you can create a solution. A solution uses one of Amazon Personalize [recipes](https://docs.aws.amazon.com/personalize/latest/dg/working-with-predefined-recipes.html) (algorithms) to train a model. In our case, we will use the `USER_PERSONALIZATION` recipe. Training the solution creates a solution version (trained model) which you can evaluate based on the performance metrics of the model.
 
 Amazon Personalize lets you adjust hyperparameters that the model uses for training. For example:
 - The "user history length percentile" parameter lets you adjust the percentile of user history to include in the training. 
