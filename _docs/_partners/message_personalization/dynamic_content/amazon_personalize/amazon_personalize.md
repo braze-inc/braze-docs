@@ -116,7 +116,7 @@ In the Braze dashboard, create a new [Content Card campaign]({{site.baseurl}}/us
 
 You can then reference the first item in the resulting array and display the content to the user:
 
-```
+```liquid
 This seems like a great fit for you:
 {% recommendations[0].name %}
 {% recommendations[0].price %}
