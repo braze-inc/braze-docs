@@ -110,7 +110,7 @@ In the Braze dashboard, create a new [Content Card campaign]({{site.baseurl}}/us
 
 {% raw %}
 
-```
+```liquid
 {% connected_content https:/<service-endpoint.com>/recommendations?user_id={{${user_id}}} :save recommendations %}
 ```
 
