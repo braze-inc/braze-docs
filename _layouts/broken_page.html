@@ -147,11 +147,9 @@ $(document).ready(function(k){
       <div id="broken_banner">
         <div id="broken_banner_img"><img src="{{ page.broken_image | multi_lang }}" /></div>
         <div id="broken_banner_info" class="broken_info">
-          <div class="broken_name">
-              {{ page.broken_top_header }}
-          </div>
-          <div class="broken_description">
-            {{ page.broken_top_text }}
+
+          <div id="broken_banner_text">
+            {{ page.broken_text }}
           </div>
 
         </div>
@@ -181,7 +179,7 @@ $(document).ready(function(k){
             Search
           </div>
           <div class="broken_description">
-            Can't find what you're looking for? Search below, or visit our <a href="{{site.baseurl}}/help/">Help page</a>.
+            Didn't find what you were looking for? Search below, or visit our <a href="{{site.baseurl}}/help/">Help page</a>.
           </div>
           <form id="help-search-form"  action="{{site.baseurl}}/search/" method="get" class="form-inline">
             <div class="input-group ">

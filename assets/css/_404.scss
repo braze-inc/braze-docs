@@ -24,32 +24,41 @@ $broken_transition_time : 0.25s;
   #broken_banner {
     color: $black-shark;
 
-    border: 1px solid $grey-ghost;
-
     margin-bottom: 30px;
-    box-shadow: 0 0 6px 0 rgba(32,32,36,0.12);
-    border-radius: 2px;
-    height: 200px;
-    display: flex;
-    @media (min-width:  $window-medium-px) {
-      height: 150px;
-    }
+    // height: 200px;
+    // @media (min-width:  $window-medium-px) {
+    //   height: 150px;
+    // }
 
     #broken_banner_img {
       //width: 30%;
 
-      margin-top: auto;
-      margin-bottom: auto;
-      margin-right: 15px;
-      //margin-left: 25px;
-      //display: inline-block;
-
+      margin-bottom: 30px;
       img {
         position: relative;
         max-height: 150px;
-        // top: 50%;
-        // transform: translateY(-50%);
+        margin-right: auto;
+        margin-left: auto;
+        display: block;
       }
+    }
+    #broken_banner_text {
+      margin-top: auto;
+      margin-bottom: auto;
+      color: $black-shark;
+      font-family: $braze-black;
+      font-size: 15px;
+      @media (min-width: $window-medium-px) {
+        font-size: 17px;
+      }
+
+      @media (min-width: $window-large-px) {
+        font-size: 21px;
+      }
+
+      line-height: 1.8;
+      display: block;
+      text-align: center;
     }
     #broken_banner_info {
 
