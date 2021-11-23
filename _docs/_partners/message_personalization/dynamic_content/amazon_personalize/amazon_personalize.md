@@ -21,7 +21,7 @@ This article will help you understand the use cases Amazon Personalize offers, t
 
 | Requirement| Description|
 | ---| ---| 
-| Amazon Web Service Account | Before using Amazon Personalize, you must have an Amazon Web Services (AWS) account. After you have an AWS account, you can access Amazon Personalize through the Amazon Personalize console, the AWS Command Line Interface (AWS CLI), or the AWS SDKs. |
+| Amazon Web Service account | Before using Amazon Personalize, you must have an Amazon Web Services (AWS) account. After you have an AWS account, you can access Amazon Personalize through the Amazon Personalize console, the AWS Command Line Interface (AWS CLI), or the AWS SDKs. |
 | Defined use cases | Before creating a model, you must determine your use case for this integration. Reference the following list for common use cases. |
 | Datasets | Amazon Personalize recommendation models require three different types of datasets, interactions, users, and items. Reference the following details to see the requirements for each dataset. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
