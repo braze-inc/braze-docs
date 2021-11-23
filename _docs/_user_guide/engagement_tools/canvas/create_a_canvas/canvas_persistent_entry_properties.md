@@ -26,16 +26,20 @@ Properties passed in from these objects can be referenced by using the `canvas_e
 
 When a Canvas includes a message with the `canvas_entry_properties` Liquid tag, the values associated with those properties will be saved for the duration of a user’s journey in the Canvas and deleted once the user exits the Canvas.
 
-{% alert important %} If your Canvas includes a re-eligibility window that is less than the total duration of the Canvas and you are using `canvas_entry_properties` beyond the first step of your Canvas, only **Message Steps** are allowed. **Full Steps** are not permitted with these settings due to the following edge case. <br><br>
+{% alert important %} 
+If your Canvas includes a re-eligibility window that is less than the total duration of the Canvas and you are using `canvas_entry_properties` beyond the first step of your Canvas, only **Message Steps** are allowed. **Full Steps** are not permitted with these settings due to the following edge case. <br><br>
 Should the window of re-eligibility be less than the maximum duration of the Canvas, a user will be allowed to re-enter and receive more than one message from each step. In the edge case where a user’s re-entry reaches the same step as its previous entry, Braze will only deduplicate that step’s messages if the messages are scheduled to send within 5 minutes of each other.
-
 {% endalert %}
 
 ## Action-based Canvas step
 
-When `canvas_entry_properties` and `event_properties` are both referenced in an action-based step of an Action-based or API-triggered Canvas:
+When `canvas_entry_properties` and `event_properties` are both referenced in an action-based step of an action-based or API-triggered Canvas:
 - `canvas_entry_properties` will template with properties associated with the custom event, purchase, or API call that triggered the Canvas.
 - `event_properties` will template with properties associated with the custom event or purchase that triggered the step.
+
+{% alert note %} 
+For Canvas Message Steps, `event_properties` are not supported. Instead, use `canvas_entry_properties`.
+{% endalert %}
 
 ## Updating Canvas to use entry properties
 
@@ -85,11 +89,11 @@ In the above request, the global value for “food allergies” is “none”. F
 
 If you have a Canvas that is triggered when a user browses an item in your e-commerce site but does not add it to their cart, the first step of the Canvas might be a push notification asking if they are interested in purchasing the item. You could reference the product name by using {% raw %}`{{canvas_entry_properties.$(product_name)}}`{% endraw %}
 
-![Image][1]{: style="border:0;margin-left:15px;"}
+![Product Name Example][1]{: style="border:0;margin-left:15px;"}
 
 The second step may send another push notification prompting the user to checkout if they added the item to their cart but have not purchased it yet. You can continue to reference the `product_name` entry property by using {% raw %}`{{canvas_entry_properties.$(product_name)}}`{% endraw %}.
 
-![Image][2]{: style="border:0;margin-left:15px;"}
+![Checkout Example][2]{: style="border:0;margin-left:15px;"}
 
 [1]:{% image_buster /assets/img/persistent_entry_properties/PEP1.png %}
 [2]:{% image_buster /assets/img/persistent_entry_properties/PEP12.png %}
