@@ -24,7 +24,9 @@ Additional customization of the appearance of your In-App Messages can be accomp
 
 ## HTML in-app messages {#custom-html-messages}
 
-While Braze’s out-of-the-box in-app messages can be customized in a variety of ways, you can gain even greater control over the look and feel of your campaigns using messages designed and built using HTML, CSS, and JavaScript. With some simple composition, you can unlock custom functionality and branding to match any of your needs. HTML in-app messages allow for greater control over the look and feel of a message, including:
+While Braze’s out-of-the-box in-app messages can be customized in a variety of ways, you can gain even greater control over the look and feel of your campaigns using messages designed and built using HTML, CSS, and JavaScript. With some simple composition, you can unlock custom functionality and branding to match any of your needs. 
+
+HTML in-app messages allow for greater control over the look and feel of a message, including the following:
 
 - Custom Fonts and Styles
 - Videos
@@ -33,9 +35,7 @@ While Braze’s out-of-the-box in-app messages can be customized in a variety of
 - Interactive Components
 - Custom Animations
 
-Custom HTML messages can use the [JavaScript Bridge](#javascript-bridge) methods to log events, set custom attributes, close the message, and more!
-
-Check out our [GitHub repository][2] that contains detailed instructions on how to use and customize HTML in-app messages for your needs, and for a set of HTML5 in-app messages templates to help you get started.
+Custom HTML messages can use the [JavaScript Bridge](#javascript-bridge) methods to log events, set custom attributes, close the message, and more! Check out our [GitHub repository][2] that contains detailed instructions on how to use and customize HTML in-app messages for your needs, and for a set of HTML5 in-app messages templates to help you get started.
 
 {% alert note %}
 To enable HTML in-app messages in the Web SDK, your SDK integration must supply the `allowUserSuppliedJavascript` initialization option to Braze: for example `appboy.initialize('YOUR-API_KEY', {allowUserSuppliedJavascript: true})`. This is for security reasons since HTML in-app messages can execute JavaScript, so we require a site maintainer to enable them.
@@ -97,7 +97,7 @@ In addition to custom JavaScript, Braze SDKs can also send analytics data with t
 #### Button click tracking
 
 {% alert warning %}
-The use of `abButtonID` is no longer supported in new "HTML with Preview" message types. Please see our [upgrade guide]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/preview/#backward-incompatible-changes) for more information.
+The use of `abButtonID` is not supported in [HTML with Preview]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/preview/) message types. For more information, see our [upgrade guide]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/preview/#backward-incompatible-changes).
 {% endalert %}
 
 To log button clicks for in-app message analytics, you can add `abButtonId` as a query parameter to any deep link, redirect URL, or `<a>` tag.
@@ -132,7 +132,7 @@ When this query string parameter is absent or set to `false`, Braze will try to 
 
 #### Custom events (mobile only)
 
-For mobile apps, you can log log a custom event by setting a link's URL to `appboy://customEvent` together with a `name` URL parameter.
+For mobile apps, you can log a custom event by setting a link's URL to `appboy://customEvent` together with a `name` URL parameter.
 
 For example, `appboy://customEvent?name=eventName` will log a custom event of `eventName`.
 
@@ -158,11 +158,23 @@ For example, `<a href="appboy://close">Close</a>` will close the in-app message.
 
 If you choose to use a web-only Web Modal with CSS message, you can [apply your own template](#css-template) or write your own CSS in the provided space. This space is already pre-filled with the CSS shown in your message preview, but feel free to adjust it slightly to meet your needs.
 
-If you choose to apply your own template, click __Apply Template__ and choose from the In-App Message Template Gallery. If you don't have any options, you can upload a [CSS Template using the CSS Template builder](#in-app-message-templates).
+If you choose to apply your own template, click __Apply Template__ and choose from the In-App Message Template Gallery. If you don't have any options, you can upload a [CSS Template](#in-app-message-templates) using the CSS Template builder.
 
 ## Web email capture form {#email-capture-form}
 
-Email capture messages allow you to easily prompt users of your site to submit their email address, after which it will be available within the Braze system for use in all your messaging campaigns.
+Email capture messages allow you to easily prompt users of your site to submit their email address, after which it will be available within on their user profile for use in all your messaging campaigns.
+
+{% details Identified versus anonymous users %}
+
+In general, the logic behind the web email capture form is straightforward. It will set the email address on the user profile in Braze for the user that is currently active. However, that means the behavior differs based on whether the user is identified (logged in, `changeUser` called) or not.
+
+If an anonymous user enters their email in the form and submits it, Braze adds the email address to their alias-only profile. If `changeUser` is called later on in their web journey and a new `external_id` is assigned (i.e., when a new user registers with the service), all anonymous user profile data is merged including the email address.
+
+If `changeUser` is called with an existing `external_id`, the anonymous user profile is orphaned and all data for that profile is lost, including the email address.
+
+For more information, refer to the [User profile lifecycle]({{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/user_profile_lifecycle/).
+
+{% enddetails %}
 
 To navigate to this option, you must create an in-app messaging campaign. From there, ensure **Send To** is set to **Web Browsers**, then select **Web Email Capture Form** for your **Message Type**.
 
@@ -197,7 +209,7 @@ Click __Save Color Profile__ on the bottom right when you’re finished.
 
 You can also [duplicate][6] and [archive][7] templates! Learn more about creating and managing templates and creative content in [Templates & Media][8].
 
-### CSS template
+### CSS template {#in-app-message-templates}
 
 You can customize a complete CSS template for your [Web Modal In-App Message](#web-modal-css).
 
@@ -257,10 +269,9 @@ As you can see, you can edit everything from the background color to font size a
 
 You can also [duplicate][6] and [archive][7] templates! Learn more about creating and managing templates and creative content in [Templates & Media][8].
 
-
 ## Video {#video}
 
-To play a video in an HTML In-App Message, include the following `<video>` element in your HTML, and replace the video names with your file's name (or the remote asset's URL).
+To play a video in an HTML in-app message, include the following `<video>` element in your HTML, and replace the video names with your file's name (or the remote asset's URL).
 
 To use a local video asset, be sure to include this file when uploading assets to your campaign.
 
@@ -270,9 +281,11 @@ To support iOS devices, you must include the `playsinline` attribute since full 
 iOS does not support autoplay by default. To update this default option, you can modify the [`ABKInAppMessageHTMLViewController`](https://github.com/Appboy/appboy-ios-sdk/blob/master/AppboyUI/ABKInAppMessage/ViewControllers/ABKInAppMessageHTMLViewController.m)
 {% endalert %}
 
+To embed video and other HTML5 content in HTML in-app messages on Android, hardware acceleration is required to be enabled in the Activity where the in-app message is displayed. For more information, refer to the [Android developer guide]({{site.baseurl}}/developer_guide/platform_integration_guides/android/in-app_messaging/customization/#youtube-in-html-in-app-messages).
+
 You can find other possible `<video>` options on [MDN Web Docs][9]
 
-```
+```html
 <video class="video" autoplay muted playsinline controls>
   <source src="https://video-provider.com/YOUR_VIDEO_FILE.mp4" type="video/mp4">
   <source src="https://video-provider.com/YOUR_VIDEO_FILE.ogg" type="video/ogg">
