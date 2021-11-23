@@ -2,7 +2,7 @@
 nav_title: Amazon Personalize
 article_title: Amazon Personalize
 alias: /partners/amazon_personalize/
-description: "This article outlines a reference architecture for and integration between Braze and Amazon Personalize."
+description: "This article outlines a reference architecture for and integration between Braze and Amazon Personalize. This article will help you understand the use cases Amazon Personalize offers, the data it works with, how to configure the service, and how to integrate this with Braze."
 page_type: partner
 search_tag: Partner
 ---
@@ -17,7 +17,19 @@ Using machine learning and an algorithm you help define, Amazon Personalize can 
 
 This article will help you understand the use cases Amazon Personalize offers, the data it works with, how to configure the service, and how to integrate this with Braze.
 
-## Use Cases
+## Prerequisites
+
+| Requirement| Description|
+| ---| ---| 
+| Amazon Web Service Account | Before using Amazon Personalize, you must have an Amazon Web Services (AWS) account. After you have an AWS account, you can access Amazon Personalize through the Amazon Personalize console, the AWS Command Line Interface (AWS CLI), or the AWS SDKs. |
+| Defined use cases | Before creating a model, you must determine your use case for this integration. Reference the following list for common use cases. |
+| Datasets | Amazon Personalize recommendation models require three different types of datasets, interactions, users, and items. Reference the following details to see the requirements for each dataset. |
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
+
+{% tabs %}
+{% tab Use Cases %}
+
+__Use Cases__
 
 Before creating a model, you must determine your use case for this integration. Some common use cases include:
 - Recommend items for users based on their previous interactions, creating a truly personalized experience for your users.
@@ -26,7 +38,10 @@ Before creating a model, you must determine your use case for this integration. 
 
 In the guide below, we will focus on the user personalized recommendations recipe.
 
-## Requirements
+{% endtab %}
+{% tab Datasets %}
+
+__Datasets__
 
 To get started with Amazon Personalize recommendation models, you need three types of datasets:
 
@@ -42,29 +57,32 @@ To get started with Amazon Personalize recommendation models, you need three typ
 
 For a user recommendations recipe, you must provide an interactions dataset containing at least 1000 points of interaction data from at least 25 unique users with at least two interactions each. These datasets can be uploaded in bulk using CSV files stored in S3 or incrementally through the API.
 
+{% endtab %}
+{% endtabs %}
+
 ## Creating Models
 
-### Training
+### Step 1: Training
 
 Once datasets are imported, you can create a solution. A solution uses one of Amazon Personalize [recipes](https://docs.aws.amazon.com/personalize/latest/dg/working-with-predefined-recipes.html) (algorithms) to train a model. In our case, we will use the `USER_PERSONALIZATION` recipe. Training the solution creates a solution version (trained model) which you can evaluate based on the performance metrics of the model.
 
 Amazon Personalize lets you adjust hyperparameters that the model uses for training. For example:
-- The "user history length percentile" parameter lets you adjust the percentile of user history to include in the training. 
-- Adjusting the "minimum user history length percentile" excludes a percentage of users with very short history lengths, which can be helpful to eliminate popular items and build recommendations based on deeper underlying patterns. 
-- The "max user history length percentile setting" lets you adjust the percentage of users to take into account when training with very long history lengths.
+- The "User history length percentile" parameter found in the Amazon Personalize console lets you adjust the percentile of user history to include in the training:<br><br>![Min max user profile setting][3]
+  - `min_user_history_length_percentile`: excludes a percentage of users with very short history lengths, which can be helpful to eliminate popular items and build recommendations based on deeper underlying patterns.
+  - `max_user_history_length_percentile`: adjust the percentage of users to take into account when training with very long history lengths.
 
 The number of hidden dimensions helps detect more complicated patterns for complex datasets, while the back-propagation through time technique (BPTT) adjusts rewards for an early event after a chain of events took place that resulted in a high-value action.
 
 Additionally, Amazon Personalize offers automatic hyperparameter tuning by running multiple versions of the solution with different values simultaneously. To use the tuning, turn on __Perform HPO__ when creating a solution.
 
-### Evaluating
+### Step 2: Evaluate and Compare
 
 Once a solution finishes training, you are ready to evaluate it and compare different versions. Each solution version displays computed metrics. Some of the available metrics include:
 
-- `Normalize discounted cumulative gain` - compares recommended order of items to the actual list of items and gives each item a weight corresponding to its position in the list
-- `Precision @k` - the amount of properly recommended items divided by the amount of all recommended items, where `k` is the number of items
-- `Mean reciprocal rank` - focuses on the first, highest ranked recommendation and calculates how many recommended items are seen before the first matched recommendation appears
-- `Coverage` - the proportion of unique recommended items to the total number of unique items in the dataset
+- `Normalize discounted cumulative gain`: compares recommended order of items to the actual list of items and gives each item a weight corresponding to its position in the list
+- `Precision @k`: the amount of properly recommended items divided by the amount of all recommended items, where `k` is the number of items
+- `Mean reciprocal rank`: focuses on the first, highest ranked recommendation and calculates how many recommended items are seen before the first matched recommendation appears
+- `Coverage`: the proportion of unique recommended items to the total number of unique items in the dataset
 
 ## Getting Recommendations
 
@@ -132,3 +150,4 @@ Including the title, the image, and linking the URL, this is what the complete C
 
 [1]: {{site.baseurl}}/partners/message_personalization/dynamic_content/amazon_personalize/workshop/#step-3-send-personalized-emails-from-braze
 [2]: {% image_buster /assets/img/amazon_personalize/content-card-campaign.png %}
+[3]: {% image_buster /assets/img/amazon_personalize/min_and_max_user_percentile.png %}
