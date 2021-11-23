@@ -47,13 +47,13 @@ $broken_transition_time : 0.25s;
       margin-bottom: auto;
       color: $black-shark;
       font-family: $braze-black;
-      font-size: 18px;
+      font-size: 15px;
       @media (min-width: $window-medium-px) {
-        font-size: 20px;
+        font-size: 17px;
       }
 
       @media (min-width: $window-large-px) {
-        font-size: 24px;
+        font-size: 21px;
       }
 
       line-height: 1.8;
