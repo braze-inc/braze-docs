@@ -147,11 +147,9 @@ $(document).ready(function(k){
       <div id="broken_banner">
         <div id="broken_banner_img"><img src="{{ page.broken_image | multi_lang }}" /></div>
         <div id="broken_banner_info" class="broken_info">
-          <div class="broken_name">
-              {{ page.broken_top_header }}
-          </div>
-          <div class="broken_description">
-            {{ page.broken_top_text }}
+
+          <div id="broken_banner_text">
+            {{ page.broken_text }}
           </div>
 
         </div>
