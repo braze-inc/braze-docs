@@ -20,14 +20,14 @@ Expand Braze's email capabilities to deliver your best content (high-quality vid
 Requirement | Description
 ----------- | -----
 An active Playable Account | If you do not already have a Playable account, [sign up here][signup]
-Video Content | You can upload video files to Playable or provide video URLs from websites like Facebook, Instagram, Youtube, Twitter, TikTok, and more!
+Video Content | You can upload video files to Playable or provide video URLs from websites like Facebook, Instagram, YouTube, Twitter, TikTok, and more!
 {: .reset-td-br-1 .reset-td-br-2}
 
 ## Implementation
 
 ### Step 1: Add your video to Playable
 
-You can upload video files into Playable or add videos by providing a URL of your video on Facebook, Instagram, Youtube, Twitter, TikTok, etc.
+You can upload video files into Playable or add videos by providing a URL of your video on Facebook, Instagram, YouTube, Twitter, TikTok, etc.
 
 ### Step 2: Copy the embed code from Playable
 

@@ -18,8 +18,6 @@ A Segment Extension expands our existing segmentation capabilities by enabling y
 
 From the left-hand side of the Dashboard under Engagement, expand the Segments section, and click **Segment Extension**. From the Segment Extensions table, click **+ Create New Extension**.
 
-![Segment Extension Nav][1]
-
 ## Step 2: Name your Segment Extension
 
 Name your Segment Extension by describing the type of users you intend to filter for. This will ensure that this extension can be easily and accurately discovered when applying it as a filter in your segment.
@@ -40,11 +38,11 @@ To increase targeting precision, select the **Add Property Filters** checkbox. T
 
 ![Arrow][16]{: style="border:0;"}
 
-![Event Property][13]{: style="max-width:85%;"}
+![Event Property][13]
 
-![Event Property][14]{: style="max-width:85%;"}
+![Event Property][14]
 
-![Event Property][15]{: style="max-width:85%;"}
+![Event Property][15]
 
 Segment Extensions rely on long term storage of event properties and don't have the 30-day custom event property storage limit. This means you can look back on event properties tracked within the past year, and tracking doesn't wait until the extension has been set up first.
 
@@ -84,11 +82,10 @@ From the Braze Segment Extension filter list, choose the extension you wish to i
 
 To view the extension criteria, click **View Extension Details** to show the details in a modal popup.
 
-![Segment Extension Details Modal][8]{: style="max-width:60%;"}
+![Segment Extension Details Modal][8]{: style="max-width:70%;"}
 
 Now you can proceed as usual with [creating your segment][11].
 
-[1]: {% image_buster /assets/img/segment/segment_extension1.png %}
 [2]: {% image_buster /assets/img/segment/segment_extension2.png %}
 [3]: {% image_buster /assets/img/segment/segment_extension3.png %}
 [5]: {% image_buster /assets/img/segment/segment_extension5.png %}

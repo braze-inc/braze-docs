@@ -24,7 +24,7 @@ The message preview screen now shows a more realistic preview that renders the J
 
 This means you can now preview _and interact_ with your custom messages (i.e. click-through pagination, submit forms or surveys, watch JavaScript animations, etc.)
 
-![New HTML In App Preview]({% image_buster /assets/img/iam-beta-javascript-preview.gif %})
+![New HTML in app preview]({% image_buster /assets/img/iam-beta-javascript-preview.gif %})
 
 {% alert tip %}
 We'll ensure that any [`appboyBridge`]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/customize/#javascript-bridge) javascript methods you use in your HTML won't actually update user profiles _while previewing in the dashboard_.
@@ -143,9 +143,7 @@ We recommend uploading assets to Braze's Media Library for two reasons:
 
 To add _new_ assets to your campaign, use the Drag-and-Drop section to upload a file _and_ add associate the file with this campaign.
 
-You can also add _existing_ assets to your campaign that you've already uploaded to Braze's Media Library.
-
-![New HTML In-App Message Asset Uploader]({% image_buster /assets/img/iam-beta-html-asset-uploader.gif %})
+You can also add _existing_ assets to your campaign that you've already uploaded to Braze's Media Library by selecting __Add from Media Library__.
 
 Once your assets are added to a campaign, you can use the _Copy Link_ button to store the file's URL to your clipboard.
 

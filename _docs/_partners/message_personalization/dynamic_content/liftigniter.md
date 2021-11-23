@@ -38,11 +38,11 @@ Then, write your message as shown below, defining the content you would like to 
 
 {% endraw %}
 
-![liftigniter][1]
+![Liftigniter composer][1]
 
 Once you put this message into the composer body, you can preview your message. You can even pull in images, as seen in the example below:
 
-![liftigniter][2]
+![Liftigniter Image][2]
 
 [1]: {% image_buster /assets/img/liftigniter.png %}
 [2]: {% image_buster /assets/img/liftigniter2.png %}

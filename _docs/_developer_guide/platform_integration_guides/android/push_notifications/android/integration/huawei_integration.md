@@ -114,11 +114,11 @@ In the **Campaigns** page, create a new campaign, and choose **Push Notification
 
 After you name your campaign, choose **Android Push** as the Push Platform.
 
-![Choose Android Push Channel][5]
+![Choose Android push channel][5]
 
 Next, compose your push campaign with a Title and Message.
 
-![Compose Android Huawei Push Message][6]
+![Compose Android Huawei push message][6]
 
 ### Send a test push
 

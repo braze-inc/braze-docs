@@ -31,14 +31,15 @@ GEM
       json (>= 1.5.1)
     colorator (1.1.0)
     concurrent-ruby (1.1.9)
-    em-websocket (0.5.2)
+    em-websocket (0.5.3)
       eventmachine (>= 0.12.9)
-      http_parser.rb (~> 0.6.0)
+      http_parser.rb (~> 0)
     eventmachine (1.2.7)
-    ffi (1.15.3)
+    execjs (2.8.1)
+    ffi (1.15.4)
     filesize (0.2.0)
     forwardable-extended (2.6.0)
-    http_parser.rb (0.6.0)
+    http_parser.rb (0.8.0)
     httpclient (2.8.3)
     i18n (0.9.5)
       concurrent-ruby (~> 1.0)
@@ -55,32 +56,24 @@ GEM
       pathutil (~> 0.9)
       rouge (>= 1.7, < 4)
       safe_yaml (~> 1.0)
-    jekyll-feed (0.15.1)
-      jekyll (>= 3.7, < 5.0)
     jekyll-sass-converter (1.5.2)
       sass (~> 3.4)
-    jekyll-seo-tag (2.7.1)
-      jekyll (>= 3.8, < 5.0)
     jekyll-watch (2.2.1)
       listen (~> 3.0)
     jekyll_asset_pipeline (0.6.2)
       jekyll (>= 3.5, < 5.0)
       liquid (~> 4.0)
-    json (2.5.1)
+    json (2.6.1)
     kramdown (2.3.1)
       rexml
     kramdown-parser-gfm (1.1.0)
       kramdown (~> 2.0)
     liquid (4.0.3)
-    listen (3.5.1)
+    listen (3.7.0)
       rb-fsevent (~> 0.10, >= 0.10.3)
       rb-inotify (~> 0.9, >= 0.9.10)
     mercenary (0.3.6)
     mini_portile2 (2.6.1)
-    minima (2.5.1)
-      jekyll (>= 3.5, < 5.0)
-      jekyll-feed (~> 0.9)
-      jekyll-seo-tag (~> 2.1)
     mustermann (1.1.1)
       ruby2_keywords (~> 0.0.1)
     nio4r (2.5.8)
@@ -91,9 +84,9 @@ GEM
       forwardable-extended (~> 2.6)
     progressbar (1.11.0)
     public_suffix (4.0.6)
-    puma (4.3.9)
+    puma (5.5.2)
       nio4r (~> 2.0)
-    racc (1.5.2)
+    racc (1.6.0)
     rack (2.2.3)
     rack-jekyll (0.3.5)
       jekyll
@@ -111,22 +104,25 @@ GEM
     rb-inotify (0.10.1)
       ffi (~> 1.0)
     rexml (3.2.5)
-    rouge (3.26.0)
-    ruby2_keywords (0.0.4)
+    rouge (3.26.1)
+    ruby2_keywords (0.0.5)
     safe_yaml (1.0.5)
     sass (3.7.4)
       sass-listen (~> 4.0.0)
     sass-listen (4.0.0)
       rb-fsevent (~> 0.9, >= 0.9.4)
       rb-inotify (~> 0.9, >= 0.9.7)
+    sassc (2.4.0)
+      ffi (~> 1.9)
     sinatra (2.1.0)
       mustermann (~> 1.0)
       rack (~> 2.2)
       rack-protection (= 2.1.0)
       tilt (~> 2.0)
     tilt (2.0.10)
+    uglifier (4.2.0)
+      execjs (>= 0.3.0, < 3)
     verbal_expressions (0.1.5)
-    yui-compressor (0.12.0)
 
 PLATFORMS
   ruby
@@ -138,20 +134,19 @@ DEPENDENCIES
   jekyll_asset_pipeline
   kramdown (>= 2.3.1)
   kramdown-parser-gfm
-  minima (~> 2.0)
-  puma (= 4.3.9)
+  puma
   rack
   rack-jekyll
   rack-reverse-proxy
   rack-rewrite
   rake
   rouge
-  sass
+  sassc
   sinatra
-  yui-compressor
+  uglifier
 
 RUBY VERSION
-   ruby 2.6.5p114
+   ruby 2.7.4p0
 
 BUNDLED WITH
-   1.17.3
+   2.2.23

@@ -49,7 +49,7 @@ To create a subscription group, go to the __Subscription Groups__ page, then cli
 
 When creating your segments, set the subscription group name as a filter. This will ensure users who have opted into your group will receive your emails. This is great for monthly newsletters, coupons, membership tiers, and more!
 
-![Use a Subscription Group][27]{: height="70%" width="70%"}
+![Use a Subscription Group][27]{: style="max-width:80%"}
 
 #### Archiving groups
 
