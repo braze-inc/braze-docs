@@ -14,11 +14,13 @@ tool: Reports
 
 > This article covers how to set up and properly use the Global Control Group. It also covers how to view reports and metrics brought on by the use of these groups.
 
-With the Global Control Group, you can set a percentage of all users as a control group. Once saved, users in the group will not receive any campaigns or Canvases. The Global Control Group allows you to analyze the overall impact of your messaging efforts over time. By comparing the behaviors of users that receive messaging to those that don't, you can further understand how your marketing campaigns and Canvases result in an uplift in sessions and custom events.
+Use the Global Control Group to specify a percentage of all users that shouldn't receive any campaigns or Canvases, allowing you to analyze the overall impact of your messaging efforts over time. By comparing the behaviors of users that receive messaging to those that don't, you can further understand how your marketing campaigns and Canvases result in an uplift in sessions and custom events.
 
 ## How the Global Control Group works
 
-Your Global Control Group is applied to all channels, campaigns, and Canvases, with the exception of News Feed Cards. Users in your control group will still receive News Feed Cards. This exception doesn't extend to Content Cards—if you're using Content Cards, users in your control group won't receive them.
+With the Global Control Group, you can set a percentage of all users as a control group. Once saved, users in the group will not receive any campaigns or Canvases. 
+
+Your Global Control Group is applied to all channels, campaigns, and Canvases, with the exception of News Feed Cards—users in your control group will still receive News Feed Cards. This exception doesn't extend to Content Cards—if you're using Content Cards, users in your control group won't receive them.
 
 __Assigning users randomly to the Global Control Group:__<br> Braze randomly selects multiple ranges of [Random Bucket Numbers]({{site.baseurl}}/user_guide/engagement_tools/campaigns/ideas_and_strategies/ab_testing_with_random_buckets/#step-1-segment-your-users-by-the-random-bucket-attribute) and includes users from those selected buckets. If you are currently using Random Bucket Numbers for any other purposes, please read the section [things to watch out for](#things-to-watch-for) below. <br><br>
 __Data tracking for reporting:__<br>Braze measures the behaviors of users in your control group and users in your treatment sample. Your treatment sample is a random selection of users not in your control group, generated using the same Random Bucket Number method mentioned above.
@@ -53,17 +55,19 @@ At this point, Braze generates a randomly selected group of users to comprise th
 
 ## Disable your Global Control Group
 
-You can disable your Global Control Group at any time, but keep in mind that doing so will result in users in this group immediately becoming eligible for campaigns and Canvases.
+You can disable your Global Control Group at any time from the **Global Control Group Settings** tab, but keep in mind that doing so will result in users in this group immediately becoming eligible for campaigns and Canvases.
 
 __Before disabling your Control Group__ we recommend [exporting](#export-group-members) a CSV of users in that group in case you need to reference it at a later point. Once you disable a control group, there is no way for Braze to restore the group or identify which users were in this group.
 
 __After disabling your Control Group__ you can save a new one. Once you enter a percentage and save it, Braze generates a new randomly selected group of users. If you enter the same percentage as before, Braze still generates a new group of users for your control and treatment groups.
 
-![Global Control Group][2]
+![Global Control Group][2]{: style="max-width:50%" }
 
 ## Export your control group members {#export-group-members}
 
-If you'd like to see which users are in your Global Control Group, you can export your Group's members via CSV or API. To run a CSV export, navigate to the **Global Control Group Settings** tab, on the **Global Message Settings** page. To export via API, use the [Users by Global Control Group]({{site.baseurl}}/api/endpoints/export/user_data/post_users_global_control_group/) API endpoint.
+If you'd like to see which users are in your Global Control Group, you can export your Group's members via CSV or API. 
+
+To run a CSV export, navigate to the **Global Control Group Settings** tab and click <i class="fas fa-download"></i>&nbsp;**Export**. To export via API, use the [Users by Global Control Group]({{site.baseurl}}/api/endpoints/export/user_data/post_users_global_control_group/) API endpoint.
 
 {% alert important %}
 Historical control groups are not preserved, so you can only export the members of your current group. Make sure to export any necessary information before disabling a control group.
