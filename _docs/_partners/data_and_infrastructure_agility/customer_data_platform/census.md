@@ -17,12 +17,12 @@ With Census, keeping your customer success, sales, and marketing teams on the sa
 
 ## Requirements
 
-| Requirement | Origin | Access | Description |
-|---|---|---|---|
-| Braze API Key | Braze | You will need to create a new API Key.<br><br>This can be created in the __Developer Console -> API Settings -> Create New API Key__ with __users.track__ permissions. | This description should tell you what to do with the Braze API Key. |
-| Braze REST Endpoint | Braze | [Braze REST Endpoint List][2] | Your REST Endpoint URL. Your endpoint will depend on the Braze URL for your instance. |
-| Census Account | Census | Your Census Instance | An active Census account with an active Braze service connection. |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
+| Requirement | Description |
+|---|---|
+| Braze API Key | Braze | You will need to create a new API Key.<br><br>This can be created in the __Developer Console -> API Settings -> Create New API Key__ with __users.track__ permissions. |
+| Braze REST Endpoint | Your REST [Endpoint URL][2]. Your endpoint will depend on the Braze URL for your instance. |
+| Census Account | An active Census account with an active Braze service connection. |
+{: .reset-td-br-1 .reset-td-br-2}
 
 ## Braze and Census integration
 
