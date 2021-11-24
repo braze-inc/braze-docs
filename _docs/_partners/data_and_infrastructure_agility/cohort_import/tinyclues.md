@@ -24,6 +24,8 @@ To integrate Braze and Tinyclues, you must export an existing Tinyclues campaign
 3. Create a Braze campaign and use the dedicated audience filtering option to target your Tinyclues cohort segment.
 
 ## Integration requirements
+
+You must have access to the following:
 - An active Tinyclues account.
 - An active Braze account with the ability to use the Tinyclues integration.
 - The API key corresponding to Tincylues' integration must be communicated to your Tinyclues Data Operation representative to set up the integration.
@@ -31,7 +33,7 @@ To integrate Braze and Tinyclues, you must export an existing Tinyclues campaign
 ## Implementation process
 
 ### Step 1: Get the Braze data import key
-In your Braze account, navigate to __Technology Partners__ and select __Tinyclues__. Here, you will find your REST Endpoint and generate your Braze data import key. 
+In your Braze account, navigate to **Technology Partners** and select **Tinyclues**. Here, you will find your REST Endpoint and generate your Braze data import key. 
 
 ![Tinyclues][6]{: style="max-width:70%;"}
 
@@ -60,13 +62,13 @@ Having trouble locating your cohort? Check out our [troubleshooting](#troublesho
 
 ### Step 5: Retrieve your audience in Braze
 
-On the Braze platform, create a campaign or Canvas. On the target audience step, select the Tinyclues cohort segment you just built.
+On the Braze platform, create a campaign or Canvas. For the target audience step, select the Tinyclues cohort segment you just built.
 
 ![Tinyclues][5]{: style="max-width:80%;"}
 
 ## Troubleshooting
 
-Are you having trouble finding the right cohort within the list? Verify the name in the Tinyclues UI by clicking on the campaign and checking the "Export File Name".
+Are you having trouble finding the right cohort within the list? Verify the name in the Tinyclues UI by clicking the campaign and checking **Export File Name**.
 
 ![Tinyclues][2]{: style="max-width:30%;"}
 
@@ -74,7 +76,7 @@ Still having trouble retrieving your audience? Contact the Tinyclues team for ad
 
 [1]: {% image_buster /assets/img/tinyclues/tinyclues_1.png %} 
 [2]: {% image_buster /assets/img/tinyclues/tinyclues_2.png %} 
-[3]: {% image_buster /assets/img/tinyclues/tiny_clues3.png %} 
-[4]: {% image_buster /assets/img/tinyclues/tiny_clues4.png %}
+[3]: {% image_buster /assets/img/tinyclues/tinyclues_3.png %} 
+[4]: {% image_buster /assets/img/tinyclues/tinyclues_4.png %}
 [5]: {% image_buster /assets/img/tinyclues/tinyclues_5.png %}  
 [6]: {% image_buster /assets/img/tinyclues/tinyclues_6.png %}  
