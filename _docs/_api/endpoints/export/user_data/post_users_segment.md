@@ -21,7 +21,7 @@ Note that a company may run at most one export per segment using this endpoint a
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#cfa6fa98-632c-4f25-8789-6c3f220b9457 {% endapiref %}
 
 {% alert important %}
-Beginning December 2021, the following changes will take effect for this API. First, the "fields_to_export" field in this API request will be __required__. The option to default to all field will be removed. Second, the fields for "custom_events," "purchases," "campaigns_received," and "canvases_received" will contain only custom events, purchases, campaigns received, and canvases received from the last 90 days. 
+Beginning December 2021, the following changes will take effect for this API:<br><br>1. The `fields_to_export` field in this API request will be __required__. The option to default to all fields will be removed.<br>2. The fields for `custom_events`, `purchases`, `campaigns_received`, and `canvases_received` will only contain data from the last 90 days.
 {% endalert %}
 
 ## Credentials-based response details
@@ -139,10 +139,10 @@ The following is a list of valid `fields_to_export`. Using `fields_to_export` to
 * `uninstalled_at`
 * `user_aliases`
 
-## Important Reminders
+## Important reminders
 
-- The fields for "custom_events," "purchases," "campaigns_received," and "canvases_received" will contain only custom events, purchases, campaigns received, and canvases received from the last 90 days.
-- "Custom_events" and "purchases" both contain fields for "first" and "count." Both of these fields will reflect information from all time, and will not be limited to just data from the last 90 days. For instance, if a particular user first did the event prior to 90 days ago, this will be accurately reflected in the "first" field, and the "count" field will take into account events that occurred prior to the last 90 days as well.
+- The fields for `custom_events`, `purchases`, `campaigns_received`, and `canvases_received` will contain only contain data from the last 90 days.
+- Both `custom_events` and `purchases` contain fields for `first` and `count`. Both of these fields will reflect information from all time, and will not be limited to just data from the last 90 days. For example, if a particular user first did the event prior to 90 days ago, this will be accurately reflected in the `first` field, and the `count` field will take into account events that occurred prior to the last 90 days as well.
 - The number of concurrent segment exports a company can run at the endpoint level is capped at 100. Attempts that surpass this limit will result in an error.
 
 
@@ -301,7 +301,7 @@ User export object (we will include the least data possible - if a field is miss
 ```
 
 {% alert tip %}
-For help with CSV and API exports, visit our troubleshooting article [here]({{site.baseurl}}/user_guide/data_and_analytics/export_braze_data/export_troubleshooting/).
+For help with CSV and API exports, refer to [Export troubleshooting]({{site.baseurl}}/user_guide/data_and_analytics/export_braze_data/export_troubleshooting/).
 {% endalert %}
 
 {% endapi %}
