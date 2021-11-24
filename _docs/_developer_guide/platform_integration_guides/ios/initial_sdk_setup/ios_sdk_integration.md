@@ -175,7 +175,9 @@ Proceed to compile your code and run your application.<br><br>At this point, the
 
 ##### Add push certificate
 
-Navigate to your existing app group in the Braze dashboard. Under __Push Notification Settings__ upload your push certificate file to your Braze dashboard and save it. <br><br>![Push Certificate]({% image_buster /assets/img/ios_sdk/ios_sdk2.png %}){: style="max-width:60%;"}
+Navigate to your existing app group in the Braze dashboard. Under __Push Notification Settings__ upload your push certificate file to your Braze dashboard and save it. 
+
+![Push Certificate]({% image_buster /assets/img/ios_sdk/ios_sdk2.png %}){: style="max-width:60%;"}
 
 {% endtab %}
 {% tab Step 2: Register for Notifications %}
