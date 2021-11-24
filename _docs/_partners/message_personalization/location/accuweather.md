@@ -10,9 +10,18 @@ search_tag: Partner
 
 # AccuWeather
 
-> If you have an AccuWeather account, you can enrich and personalize your marketing campaigns, as well as automate translations, through [Connected Content][60].
+> [AccuWeather](https://www.accuweather.com/) is a media company that provides weather forecasting services worldwide. With AccuWeather, you can enrich and personalize your marketing campaigns, as well as automate translations through the use of Braze [Connected Content][60]. 
 
-Here are all of the AccuWeather APIs you can reference within your Braze campaigns:
+## Prerequisites
+
+| Requirement | Description |
+|---|---|---|---|
+| AccuWeather API Key | Contact your Accuweather account manager for comaptible API keys to use in your request URLs.<br><br>Further instructions can be found on the [AccuWeather enterprise API page][57]. |
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
+
+## Available AccuWeather APIs
+
+The following are the AccuWeather APIs you can reference within your Braze campaigns and Canvases.
 
 | API | Description |
 |---|---|
@@ -27,11 +36,43 @@ Here are all of the AccuWeather APIs you can reference within your Braze campaig
 | [Translations][56] | Get a list of available languages. Get translations for specific groups of phrases. |
 {: .reset-td-br-1 .reset-td-br-2}
 
-In order to get started, you’ll need to have your app’s AccuWeather API key on-hand to use within your request urls. You will need to contact your Accuweather account manager for API keys that will work with the instructions listed on the [AccuWeather Enterprise API page][57].
+## Connected Content example
 
-For example, let’s say that you wanted to run a marketing campaign that has 3 different types of messages based on the current conditions of a user’s zip code in the US.
+The following example shows a Connected Content call displaying two different types of messages based on the current conditions of a user's zip code in the US. The AccuWeather locations and current conditions API endpoints are used.
+{% raw %}
 
-Within the first `connected_content` tag you will make a GET request to the [Locations API][48]. Here’s an example of what AccuWeather will return as the JSON object:
+```liquid
+{% connected_content http://api.accuweather.com/locations/v1/postalcodes/{{${country}}}/search?q={{custom_attribute.${Zip Code}}}&apikey={your API key} :save location_info %}
+
+{% connected_content http://api.accuweather.com/currentconditions/v1/{{location_info[0].Key}}?apikey={your API key} :save local_weather %}
+
+{% if {{local_weather[0].WeatherText}} == 'Cloudy' %}
+No sunscreen needed :)
+{% elsif {{local_weather[0].WeatherText}} == 'Rain' %}
+It's raining! Grab an umbrella!
+{% else %}
+Enjoy the weather!
+{% endif %}
+```
+{% endraw %}
+
+![Connected Content Push Example][17]{: style="max-width:40%"}
+
+A breakdown of the two Connected Content calls can be found below.
+
+{% tabs %}
+{% tab Locations %}
+#### Locations API example
+
+{% raw %}
+Within the first `connected_content` tag, a GET request is made to the [Locations API](https://apidev.accuweather.com/developers/locationsAPIguide). For this example, you can alternatively leverage the user's `{{${city}}}` if you do not have a zip code custom attribute.
+
+```
+{% connected_content http://api.accuweather.com/locations/v1/postalcodes/{{${country}}}/search?q={{custom_attribute.${Zip Code}}}&apikey={your API key} :save location_info %}
+```
+{% endraw %}
+
+Here's an example of what AccuWeather will return as the JSON object:
 
 ```json
 [
@@ -109,22 +150,21 @@ Within the first `connected_content` tag you will make a GET request to the [Loc
 ]
 ```
 
-Keep the “Key” ID on hand as you’ll need this for the second GET request. You can store the above JSON object into local variable `location_info` by specifying `:save location_info` after the url. Here is the example of the `connected_content` tag:
+The "Key" ID is a useful variable as it is used in the second GET request. 
+The above JSON object can be stored into a local variable `location_info` by specifying `:save location_info` after the URL. 
+{% endtab %}
+{% tab Current conditions %}
+
+#### Current conditions API example
+
+For the second `connected_content` tag, a GET request is made to the [Current Conditions API](https://apidev.accuweather.com/developers/currentConditionsAPIGuide). The **location key** will need to be added to the request URL. Here is the example `connected_content` tag:
 
 {% raw %}
-```
-{% connected_content http://api.accuweather.com/locations/v1/postalcodes/{{${country}}}/search?q={{custom_attribute.${Zip Code}}}&apikey={your API key} :save location_info %}
-```
-
-_**Note**: Alternatively, you could also leverage the user’s `{{${city}}}` if you do not have a zip code custom attribute._
-
-For the second `connected_content` tag, you will make a GET request to the [Current Conditions API][50]. You’ll need to add the **location key** to the request url. Here is the example `connected_content` tag:
-
 ```
 {% connected_content http://api.accuweather.com/currentconditions/v1/{{location_info[0].Key}}?apikey={your API key} :save local_weather %}
 ```
 
-Here is the returning JSON object:
+Here is the returned JSON object:
 
 ```json
 [
@@ -152,31 +192,15 @@ Here is the returning JSON object:
 ]
 ```
 
-As you can see from the `connect_content` tag above, we stored the JSON object into local variable `local_weather` by adding `:save local_weather` after the url.
+As seen in the `connected_content` tag above, the JSON object is stored into a local variable `local_weather` by adding `:save local_weather` after the URL.
 
-You can test what the output of the [WeatherText][59] should be by referencing `{{local_weather[0].WeatherText}}`.
+You can test what the output of the [WeatherText](https://apidev.accuweather.com/developers/currentConditionsAPIGuide) should be by referencing `{{local_weather[0].WeatherText}}`.
 
-Bringing our use-case together, here is what the syntax of the campaign would look like:
-
-```
-{% connected_content
-http://api.accuweather.com/locations/v1/postalcodes/{{${country}}}/search?q={{custom_attribute.${Zip Code}}}&apikey={your API key} :save location_info %}
-{% connected_content
-http://api.accuweather.com/currentconditions/v1/{{location_info[0].Key}}?apikey={your API key} :save local_weather %}
-{% if {{local_weather[0].WeatherText}} == 'Cloudy' %}
-No sunscreen needed :)
-{% elsif {{local_weather[0].WeatherText}} == 'Rain' %}
-It's raining! Grab an umbrella!
-{% else %}
-Enjoy the weather!
-{% endif %}
-```
-
-If the API responded with `{{local_weather[0].WeatherText}}` returning `Rain`, the user would then receive the following push:
-
-![Connected Content Push Example][17]
+If the API call responds with `{{local_weather[0].WeatherText}}` returning `Rain`, the user would then receive the push shown above. 
 
 {% endraw %}
+{% endtab %}
+{% endtabs %}
 
 [16]: [success@braze.com](mailto:success@braze.com)
 [17]: {% image_buster /assets/img_archive/connected_weather_push2.png %} "Connected Content Push Usage Example"
@@ -191,5 +215,4 @@ If the API responded with `{{local_weather[0].WeatherText}}` returning `Rain`, t
 [56]: https://apidev.accuweather.com/developers/translationsApiGuide
 [57]: https://apidev.accuweather.com/developers/
 [58]: https://apidev.accuweather.com/developers/weatheralarms
-[59]: https://apidev.accuweather.com/developers/weatheralarms
 [60]: {{site.baseurl}}/user_guide/personalization_and_dynamic_content/connected_content/about_connected_content/
