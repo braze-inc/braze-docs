@@ -68,7 +68,7 @@ On the Braze platform, create a campaign or Canvas. For the target audience step
 
 ## Troubleshooting
 
-Are you having trouble finding the right cohort within the list? Verify the name in the Tinyclues UI by clicking the campaign and checking **Export File Name**.
+Are you having trouble finding the right cohort within the list? Verify the name in the Tinyclues UI by clicking the campaign and checking the **Export File Name**.
 
 ![Tinyclues][2]{: style="max-width:30%;"}
 
