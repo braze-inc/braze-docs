@@ -9,10 +9,10 @@ noindex: true
 
 ---
 
-# Message type details
+# Previous in-app message generations
 
 {% alert important %}
-This section reviews previous information around our in-app messages. To see the most up-to date information on our current in-app message generation, see our [new in-app message overview documentation]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/).
+This page reviews previous information around our in-app messages. To see the most up-to date information on our current in-app message generation, see our current [in-app messages]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/) documentation.
 {% endalert %}
 
 ## Universal
@@ -125,28 +125,34 @@ This will review previous information around our in-app message creative specifi
 
 ### Character and image limits
 
-| Type                               | Aspect Ratio | Recommended Image Size | Max Image Size |   File Types  | Max Character Count |
-|------------------------------------|:------------:|:----------------------:|:--------------:|:-------------:|:-------------------:|
-| Portrait Full Screen (With Text)   |      5:4     |          500KB         |       5MB      | PNG, JPG, GIF |         240         |
-| Portrait Full Screen (Image Only)  |     10:16    |          500KB         |       5MB      | PNG, JPG, GIF |         240         |
-| Landscape Full Screen (With Text)  |     16:5     |          500KB         |       5MB      | PNG, JPG, GIF |         240         |
-| Landscape Full Screen (Image Only) |     16:10    |          500KB         |       5MB      | PNG, JPG, GIF |         240         |
-| Slideup                            |      1:1     |          500KB         |       5MB      | PNG, JPG, GIF |         140         |
-| Modal (Image Only)                 |      1:1     |          500KB         |       5MB      | PNG, JPG, GIF |         140         |
-| Modal (With Text)                  |     29:10    |          500KB         |       5MB      | PNG, JPG, GIF |         140         |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
+For all of the in-app message types listed in the table below, the following additional guidelines apply:
+
+- **Recommended image size:** 500KB
+- **Max image size:** 5MB
+- **Supported file types:** PNG, JPG, GIF
+
+| Type                               | Aspect Ratio | Max Character Count |
+| :--------------------------------- | :----------: | :-----------------: |
+| Portrait Full Screen (Image Only)  |    10:16     |         240         |
+| Portrait Full Screen (With Text)   |     5:4      |         240         |
+| Landscape Full Screen (With Text)  |     16:5     |         240         |
+| Landscape Full Screen (Image Only) |    16:10     |         240         |
+| Slideup                            |     1:1      |         140         |
+| Modal (Image Only)                 |     1:1      |         140         |
+| Modal (With Text)                  |    29:10     |         140         |
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
 
 ### Keeping in-app message file sizes small
 
 Braze recommends you keep your images, and HTML assets zips as small as possible for several reasons:
 
-- Smaller HTML & image message payloads will download faster, and display more quickly and reliably for your customers.
-- Smaller HTML & image message payloads will keep your customer's data costs down as well. Braze in-app messages are downloaded in the background on session start so they can be triggered in real-time based upon whatever criteria you select. As a result, if you have 10 HTML in-app messages of 1MB each, your customers would all incur 10MB of data charges even if they never triggered all of those messages. This can add up quickly over time, even though the in-app messages are cached and not re-downloaded session to session.
+- Smaller HTML and image message payloads will download faster, and display more quickly and reliably for your customers.
+- Smaller HTML and image message payloads will keep your customer's data costs down as well. Braze in-app messages are downloaded in the background on session start so they can be triggered in real-time based upon whatever criteria you select. As a result, if you have 10 HTML in-app messages of 1MB each, your customers would all incur 10MB of data charges even if they never triggered all of those messages. This can add up quickly over time, even though the in-app messages are cached and not re-downloaded session to session.
 
 The following strategies are helpful for keeping file sizes down:
 
-- Reference fonts embedded in your application / website to customize your HTML in-app messages rather than including the font files in your HTML asset zip folder.
-- Ensure no extraneous or duplicative CSS or JS are included in your HTML asset zips.
+- Reference fonts embedded in your application or website to customize your HTML in-app messages rather than including the font files in your HTML asset ZIP folder.
+- Ensure no extraneous or duplicative CSS or JavaScript are included in your HTML asset ZIPs.
 - Use [ImageOptim][25] on all images to compress images to their minimum possible size with no reduction in quality.
 
 ### iPhone 5 specs
