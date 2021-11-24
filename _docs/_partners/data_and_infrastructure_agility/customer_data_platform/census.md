@@ -21,7 +21,7 @@ With Census, keeping your customer success, sales, and marketing teams on the sa
 |---|---|
 | Braze API Key | You will need to create a new API Key.<br><br>This can be created in the **Developer Console -> API Settings -> Create New API Key** with **users.track** permissions. |
 | Braze REST Endpoint | Your REST [Endpoint URL][2]. Your endpoint will depend on the Braze URL for your instance. |
-| Census Account | An active Census account with an active Braze service connection. |
+| Census Account | An active Census account is required to take advantage of this Braze integration. |
 {: .reset-td-br-1 .reset-td-br-2}
 
 ## Braze and Census integration
