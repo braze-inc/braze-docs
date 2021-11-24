@@ -21,7 +21,7 @@ Note that a company may run at most one export per segment using this endpoint a
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#cfa6fa98-632c-4f25-8789-6c3f220b9457 {% endapiref %}
 
 {% alert important %}
-Beginning April 2021, the "fields_to_export" field in this API request will be __required for all new accounts__. The option to default to all field will be removed, and new customers will need to specify the specific fields they'd like to include in their export.
+Beginning December 2021, the following changes will take effect for this API. First, the "fields_to_export" field in this API request will be __required__. The option to default to all field will be removed. Second, the fields for "custom_events," "purchases," "campaigns_received," and "canvases_received" will contain only custom events, purchases, campaigns received, and canvases received from the last 90 days. 
 {% endalert %}
 
 ## Credentials-based response details
@@ -67,7 +67,7 @@ Authorization: Bearer YOUR-REST-API-KEY
 {
     "segment_id" : (required, string) identifier for the segment to be exported,
     "callback_endpoint" : (optional, string) endpoint to post a download url to when the export is available,
-    "fields_to_export" : (required*, array of string) name of user data fields to export, you may also export custom attributes. *Beginning April 2021, new accounts must specify specific fields to export.
+    "fields_to_export" : (required, array of string) name of user data fields to export, you may also export custom attributes. *Beginning April 2021, new accounts must specify specific fields to export.
     "output_format" : (optional, string) when using your own S3 bucket,  specifies file format as 'zip' or 'gzip'. Defaults to zip file format
 }
 ```
@@ -138,6 +138,13 @@ The following is a list of valid `fields_to_export`. Using `fields_to_export` to
 * `total_revenue`
 * `uninstalled_at`
 * `user_aliases`
+
+## Important Reminders
+
+- The fields for "custom_events," "purchases," "campaigns_received," and "canvases_received" will contain only custom events, purchases, campaigns received, and canvases received from the last 90 days.
+- "Custom_events" and "purchases" both contain fields for "first" and "count." Both of these fields will reflect information from all time, and will not be limited to just data from the last 90 days. For instance, if a particular user first did the event prior to 90 days ago, this will be accurately reflected in the "first" field, and the "count" field will take into account events that occurred prior to the last 90 days as well.
+- The number of concurrent segment exports a company can run at the endpoint level is capped at 100. Attempts that surpass this limit will result in an error.
+
 
 ## Response
 
