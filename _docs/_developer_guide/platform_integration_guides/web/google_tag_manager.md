@@ -49,7 +49,7 @@ Second, you should see network requests made to Braze, and the global `window.ap
 
 ### Actions tag template {#actions-tag}
 
-The Braze Actions Tag template lets you trigger custom events, track purchases, change user IDs, and stop/resume tracking for privacy requirements.
+The Braze Actions Tag template lets you trigger custom events, track purchases, change user IDs, and stop or resume tracking for privacy requirements.
 
 ![Actions Tag Template][5]
 
