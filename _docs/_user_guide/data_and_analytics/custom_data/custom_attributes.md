@@ -77,7 +77,7 @@ Money spent should not be recorded by this method. Rather it should be recorded 
 
 ### Strings (alpha-numeric characters) {#strings}
 
-String attributes are useful for storing user input, such as a favorite brand, a phone number, or a last search string within your application. 
+String attributes are useful for storing user input, such as a favorite brand, a phone number, or a last search string within your application. String attributes can be up to 256 characters long.
 
 | Segmentation Options | Dropdown Filter | Input Options |
 | ---------------------| --------------- | ------------- |
