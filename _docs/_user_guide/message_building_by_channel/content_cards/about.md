@@ -34,7 +34,7 @@ Wondering about the benefits of using Content Cards vs. having your tech team bu
 - **More control over the messaging experience:** While you'll still need your tech team to help with the initial setup of Content Cards, after that, you'll be able to control the message, recipients, timing, and more straight from your Braze dashboard.
 
 {% alert warning %}
-Content Cards do not offer control group support out-of-the-box. If you wish to leverage control groups, a custom feed must be built including custom cards and custom implementation tracking. For more details, visit our Content Card [reporting]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards/reporting/) article.
+Content Cards do not offer control group support out-of-the-box. If you wish to leverage control groups, a custom feed must be built including custom cards and custom implementation tracking. For more details, refer to [Content Card reporting]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards/reporting/).
 {% endalert %}
 
 ### Great use cases
