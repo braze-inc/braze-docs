@@ -6,15 +6,19 @@ page_type: reference
 tool: 
   - Segments
   - Location
-description: "This article briefly discusses Beacon and Geofence support and how to use your Gimbal account to begin location tracking."
+description: "This article briefly discusses Beacon and Geofence support and how to use your location partner account to begin location tracking."
 
 ---
 
 # Beacon and geofence support
 
-> This article briefly discusses Beacon and Geofence support and how to use your Gimbal account to begin location tracking.
+> This article briefly discusses Beacon and Geofence support and how to use your location partner account to begin location tracking.
 
 Combining existing beacon or geofence support with Braze's targeting and messaging features allows you to learn more about your user's physical actions and message them accordingly.
+
+## Radar support
+
+Radar has full support for unlimited custom geofences, pre-built POI geofences, beacon detection, region detection, trip tracking, and more. When you enable the Radar and Braze integration, Radar forwards real time location events and user attributes which can be used to trigger real time campaigns, power last mile pickup and delivery operations, optimize fleet tracking and shipping logistics, or build user segments based on location patterns. Additionally, Radar Geo APIs can be leveraged to enrich or personalize your marketing campaigns through Connected Content. Visit our [Radar integrations page](https://www.braze.com/docs/partners/message_personalization/location/radar/#radar) to learn more.
 
 ## Gimbal places support
 
