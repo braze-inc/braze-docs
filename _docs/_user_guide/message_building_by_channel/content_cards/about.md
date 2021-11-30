@@ -47,7 +47,7 @@ Content Cards do not offer control group support out-of-the-box. If you wish to 
 
 ## Content Cards and feed
 
-This is what it looks like for your users to open a standard Content Card feed. As you can see, three standard types of cards can sit in the feed - a Banner Card, a Captioned Content Card, and a Classic Content Card.
+This is what it looks like for your users to open a standard Content Card feed. As you can see, three standard types of cards can sit in the feed—a Banner Card, a Captioned Content Card, and a Classic Content Card.
 
 ![Content Cards Feed]({% image_buster /assets/img/cc-feed.png %}){: height="50%" width="50%"}
 
