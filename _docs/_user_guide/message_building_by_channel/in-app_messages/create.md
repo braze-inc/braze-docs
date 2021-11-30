@@ -12,7 +12,7 @@ tool:
 
 # Creating an in-app message
 
-You can create an in-app message or in-browser message using the Braze platform using campaigns, Canvas, or as an API campaign. We highly recommend planning out your messages and preparing all materials ahead of time using our handy [In-App Message Prep Guide]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/best_practices/).
+You can create an in-app message or in-browser message using the Braze platform using campaigns, Canvas, or as an API campaign. We highly recommend planning out your messages and preparing all materials ahead of time using our handy [In-app message prep guide]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/best_practices/).
 
 ## Step 1: Choose where to build your message {#create-new-campaign-in-app}
 
@@ -33,7 +33,7 @@ If all of the messages in your campaign are going to be similar or have the same
 
  {% endtab %}
  {% tab Canvas %}
- After you have [created and set up your Canvas using the Canvas wizard]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/create_a_canvas/),
+ After you have [created your Canvas]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/create_a_canvas/) using the Canvas wizard,
 
 1. Name your step something clear and meaningful.
 2. Add a Delay, as necessary. Note that steps containing in-app messages cannot be action-based.
@@ -44,6 +44,8 @@ If all of the messages in your campaign are going to be similar or have the same
 {% alert important %}
 You cannot have multiple in-app message variants in a single step.
 {% endalert %}
+
+You can find more Canvas-specific information in [In-app messages in Canvas]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/in-app_messages_in_canvas/).
 
 {% endtab %}
 {% endtabs %}
