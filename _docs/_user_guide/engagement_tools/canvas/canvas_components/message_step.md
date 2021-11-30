@@ -39,6 +39,10 @@ If Quiet Hours are enabled, the Message Step also allows you to override this se
 
 ![Canvas Message Step][4]
 
+{% alert note %} 
+For Canvas Message Steps, `event_properties` are not supported. Instead, use `canvas_entry_properties`.
+{% endalert %}
+
 ## Analytics
 
 | Metric | Description |

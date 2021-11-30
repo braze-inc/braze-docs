@@ -11,7 +11,7 @@ description: "This article covers how to use Google Tag Manager to deploy Braze 
 
 This article provides a step-by-step guide on how to add the Braze Web SDK to your website using Google Tag Manager.
 
-[Google Tag Manager][2] lets you remotely add, remove, and edit tags on your website, without requiring a production code release or engineering resources.
+[Google Tag Manager][2] lets you remotely add, remove, and edit tags on your website without requiring a production code release or engineering resources.
 
 ## Braze tag templates
 
@@ -25,9 +25,9 @@ Both tags can be added to your workspace from [Google's Community Gallery][15], 
 
 Use the Initialization Tag to add the Braze Web SDK to your website.
 
-#### Step 1: Choose the "initialization tag" from the community gallery
+#### Step 1: Select the initialization tag
 
-Search for "Braze" in the Community Template Gallery, and choose the Braze Initialization Tag as shown below:
+Search for "Braze" in the Community Template Gallery, and select the **Braze Initialization Tag** as shown below.
 
 ![Initialization Tag Template][4]
 
@@ -49,41 +49,41 @@ Second, you should see network requests made to Braze, and the global `window.ap
 
 ### Actions tag template {#actions-tag}
 
-The Braze Actions Tag template lets you trigger custom events, track purchases, change user IDs, and stop/resume tracking for privacy requirements.
+The Braze Actions Tag template lets you trigger custom events, track purchases, change user IDs, and stop or resume tracking for privacy requirements.
 
 ![Actions Tag Template][5]
 
 #### Changing user external ID {#external-id}
 
-The __Change User__ Tag Type calls the [`changeUser` method](https://js.appboycdn.com/web-sdk/latest/doc/modules/appboy.html#changeuser).
+The **Change User** tag type calls the [`changeUser` method](https://js.appboycdn.com/web-sdk/latest/doc/modules/appboy.html#changeuser).
 
-Use this tag whenever a user logs in, or is otherwise identified with their unique "external_id" identifier.
+Use this tag whenever a user logs in, or is otherwise identified with their unique `external_id` identifier.
 
-Be sure to enter the current user's unique ID in the "External User ID" field, typically populated using a datalayer variable sent by your website.
+Be sure to enter the current user's unique ID in the **External User ID** field, typically populated using a datalayer variable sent by your website.
 
 ![Change User Tag][8]
 
 #### Log custom events {#custom-events}
 
-The __Custom Event__ Tag Type calls the [`logCustomEvent` method](https://js.appboycdn.com/web-sdk/latest/doc/modules/appboy.html#logcustomevent).
+The __Custom Event__ tag type calls the [`logCustomEvent` method](https://js.appboycdn.com/web-sdk/latest/doc/modules/appboy.html#logcustomevent).
 
-Use this tag to send custom events to Braze, optionally including custom event properties
+Use this tag to send custom events to Braze, optionally including custom event properties.
 
-Enter the __Event Name__, either using a variable or by typing in an event name.
+Enter the **Event Name** by either using a variable or typing an event name.
 
-Use the __Add Row__ button to add event properties.
+Use the **Add Row** button to add event properties.
 
 ![Custom Event Tag][9]
 
 #### Track purchase {#purchases}
 
-The __Purchase__ Tag Type calls the [`logPurchase` method](https://js.appboycdn.com/web-sdk/latest/doc/modules/appboy.html#logpurchase).
+The **Purchase** tag type calls the [`logPurchase` method](https://js.appboycdn.com/web-sdk/latest/doc/modules/appboy.html#logpurchase).
 
 Use this tag to track purchase to Braze, optionally including Purchase properties.
 
-The _Product ID_ and _Price_ fields are required.
+The **Product ID** and **Price** fields are required.
 
-Use the __Add Row__ button to add Purchase properties.
+Use the **Add Row** button to add Purchase properties.
 
 ![Purchase Tag][10]
 
@@ -91,7 +91,7 @@ Use the __Add Row__ button to add Purchase properties.
 
 Sometimes, you might be required to disable or re-enable Braze tracking on your website, for example, after a user indicates they've opted out of web tracking for privacy reasons.
 
-Use the __Disable Tracking__ or __Resume Tracking__ Tag Type to disable web tracking or re-enable web tracking, respectively.
+Use the **Disable Tracking** or **Resume Tracking** tag type to disable web tracking or re-enable web tracking, respectively.
 
 #### Custom user attributes {#custom-attributes}
 
@@ -123,7 +123,7 @@ window.appboy.getUser().setGender("f")
 
 ### Enable tag debugging {#debugging}
 
-Each Braze Tag template has an optional "GTM Tag Debugging" checkbox which can be used to log debug messages to your webpage's Javascript console.
+Each Braze Tag template has an optional **GTM Tag Debugging** checkbox which can be used to log debug messages to your webpage's Javascript console.
 
 ![Tag Debugging Option][12]
 

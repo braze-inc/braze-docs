@@ -16,7 +16,7 @@ search_tag: Partner
 {% include video.html id="Zqdm33TWr0E" align="right" %}
 
 Treasure Data supports the Braze platform by allowing you to write job results from Treasure Data directly to Braze. This integration allows you to:
-* __Map external ids__: Map ids from your CRM system to the Braze user account. 
+* __Map external IDs__: Map IDs from your CRM system to the Braze user account. 
 * __Manage opt-out__: When an end-user updates their consent choosing not to participate.
 * __Upload your tracking of events, purchases, or custom profile attributes__. This information can help you build precise customer segments that enhance the user experience for your campaigns.
 
@@ -31,7 +31,7 @@ Treasure Data supports the Braze platform by allowing you to write job results f
 
 ## Export integration
 
-For more detail, check out the document on [Treasure Data Product Documentation][5]
+For more information, check out the [Treasure Data Product Documentation][5]
 
 ### Step 1: Obtain REST API key in Braze
 
@@ -72,7 +72,7 @@ The Export Results parameters are described in the following table.
 
 ## Use cases
 
-You can synchronize your consolidated customer profiles from Treasure Data into Braze to build-out target segments. Treasure Data supports 1st party cookie data, Mobile IDs, third-party systems like your CRM, and many more.
+You can synchronize your consolidated customer profiles from Treasure Data into Braze to build-out target segments. Treasure Data supports first-party cookie data, Mobile IDs, third-party systems like your CRM, and many more.
 
 ## Webhooks
 

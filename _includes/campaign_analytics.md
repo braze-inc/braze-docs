@@ -31,7 +31,9 @@ In Canvas, you'll see in-app message performance mapped onto the Canvas you've c
 To measure the impact of an individual Content Card, you can add a [Control Group][2] to an A/B Test. The top-level **Campaign Details** panel doesn't include metrics from the Control Group variant.
 
 {% alert warning %}
-If you have a customized feed, be sure to log impressions for control cards to inform our analytics of when a user _would have seen_ the control card in its feed position. For more detail, see the [iOS]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/content_cards/data_model/#card-methods), [Android]({{site.baseurl}}/developer_guide/platform_integration_guides/android/content_cards/customization/#fully-custom-content-card-display-for-android), and [Web]({{site.baseurl}}/developer_guide/platform_integration_guides/web/content_cards/integration/#control-group) developer guides.
+Content Cards do not offer control group support out-of-the-box. If you wish to leverage control groups, a custom feed must be built including custom cards and custom implementation tracking to make sure variants are registered correctly in the dashboard and to enable control group accuracy in your analytics. 
+<br><br>
+Be sure to log impressions for control cards to inform our analytics of when a user _would have seen_ the control card in its feed position. For more details, see the [iOS]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/content_cards/data_model/#card-methods), [Android]({{site.baseurl}}/developer_guide/platform_integration_guides/android/content_cards/customization/#fully-custom-content-card-display-for-android), and [Web]({{site.baseurl}}/developer_guide/platform_integration_guides/web/content_cards/data_models/?redirected=true#requesting-unviewed-content-card-count) developer guides.
 {% endalert %}
 
 {% elsif include.channel == "SMS" %}
@@ -106,6 +108,8 @@ Here are some key email-specific metrics that you won't see in other channels. T
 | Spam | The percentage of users that marked your email as spam, or the email was designated as spam. If this metric is above 0.08, that could be a sign that either your message copy is too salesy or you should reconsider your email address collection methods (to ensure you're messaging those that are interested in your correspondence).
 | Unique opens | The percentage of recipients that opened your email. This number should be between 10–20%. Anything above 20% is exceptional!
 | Unique clicks | The percentage of recipients that clicked within the email sent. This number should be between 5–10%. Anything above 10% is exceptional!
+| Machine opens | Includes emails that are opened without user engagement by Apple devices with enabled [Mail Privacy Protection]({{site.baseurl}}/user_guide/message_building_by_channel/email/mpp/). <br> This metric is tracked starting November 11, 2021 for Sendgrid and December 2, 2021 for Sparkpost. 
+| Other opens | Includes emails that haven't been identified as "Machine Opens" such as when a user opens an email.  
 | Unsubs | The percentage of recipients that clicked the "Unsubscribe" link in your email.
 {: .reset-td-br-1 .reset-td-br-2}
 
