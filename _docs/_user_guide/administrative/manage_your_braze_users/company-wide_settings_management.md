@@ -41,7 +41,6 @@ The available notifications are in the table below:
 | Scheduled Campaign Finished Sending | Notifies recipients when a scheduled campaign has finished sending.                                                                                     | Yes             |
 | Webhook Timeouts                    | Notifies recipients when a webhook URL times out more than 300 times in 5 minutes. This notification sends no more than once every two hours.           | Yes             |
 | Push Credential Errors              | Notifies recipients when an app's push credentials are invalid and when an app's push credentials are expiring soon.                                    | Yes             |
-| Connected Content Timeouts          | Notifies recipients when a Connected Content URL times out more than 300 times in 5 minutes. This notification sends no more than once every two hours. | Yes             |
 | News Feed Card Published/Live        | Notifies recipients when News Feed cards are scheduled or published.                                                                                     | Yes             |
 | Weekly Analytics Report             | Sends a summary of the past week's app group activity to recipients every Monday. Recipients receive a summary for each app group that they belong to.  | No              |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
