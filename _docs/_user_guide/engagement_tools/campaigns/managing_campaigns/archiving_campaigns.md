@@ -25,7 +25,7 @@ Archiving a campaign will accomplish the following:
 	- The Detailed Statistics graph on the **Revenue** page
 	- The Custom Events Over Time graph
 
-There are also bulk actions you can use, such as deactivating and archiving multiple campaigns by checking the boxes next to the campaigns and clicking the **Revelant** button.
+There are also bulk actions you can use, such as deactivating and archiving multiple campaigns by checking the boxes next to the campaigns and clicking the relevant button.
 
 ![Archive Selected][3]
 
