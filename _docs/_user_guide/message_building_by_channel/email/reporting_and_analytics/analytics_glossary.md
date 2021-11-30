@@ -4,9 +4,9 @@ article_title: Email Analytics Glossary
 page_order: 20
 layout: glossary_page
 glossary_top_header: "Email Analytics Glossary"
-glossary_top_text: "These are terms you'll find in the analytics section of your Email Campaign or Canvas, post-launch. Search for the metrics you need below. <br>  <br> This glossary does not necessarily include metrics you might see in Currents or in other downloaded reports outside of your Braze account."
+glossary_top_text: "These are terms you'll find in the analytics section of your email campaign or Canvas, post-launch. Search for the metrics you need below. <br>  <br> This glossary does not necessarily include metrics you might see in Currents or in other downloaded reports outside of your Braze account."
 
-description: "This glossary includes the terms you will find in the analytics section of your email campaign or canvas, post-launch. This glossary does not include Currents metrics."
+description: "This glossary includes the terms you will find in the analytics section of your email campaign or Canvas, post-launch. This glossary does not include Currents metrics."
 channel:
   - email
 
@@ -73,5 +73,11 @@ glossaries:
     calculation: Primary Conversions / Unique Recipients
   - name: Confidence
     description: The percentage of confidence that a certain variant of a message is outperforming the control group.
+  - name: Machine Opens
+    description: Includes emails that are opened without user engagement by MPP-enabled Apple devices.
+    calculation: Count
+  - name: Other Opens
+    description: Includes emails that haven't been identified as "Machine Opens" such as when a user opens an email. 
+    calculation: Count
 
 ---
