@@ -18,7 +18,7 @@ A Canvas Experiment Paths Step will randomly assign users to different paths (or
 
 ## Create an Experiment Paths Step
 
-To create an Experiment Paths Step, add a step to your Canvas. Then, using the dropdown at the top of the new step, select **Experiment**.
+To create an Experiment Paths Step, add a step to your Canvas. Then, using the dropdown at the top of the new step, select **Experiment Paths**.
 
 In the default configuration of this step, there are two default paths, **Path 1** and **Path 2**, with 50% of the audience being sent down each path. Click the Experiment Paths Step itself to expand the **Experiment Settings** panel, and you'll see the configuration options for the step. 
 
@@ -42,7 +42,7 @@ The Experiment Paths Step will record users who enter each step and convert whil
 
 ### Step 3: Create paths
 
-Lastly, you must build your downstream paths. Select **Done** and return to the Canvas builder. Click <i class="fas fa-plus-circle"></i>**Plus** under each path to begin creating journeys using the usual Canvas tools as you see fit, and launch the Canvas when you are ready. 
+Lastly, you must build your downstream paths. Select **Done** and return to the Canvas builder. Click <i class="fas fa-plus-circle"></i> under each path to begin creating journeys using the usual Canvas tools as you see fit, and launch the Canvas when you are ready. 
 
 Keep in mind that once created, **paths and their downstream steps cannot be removed from a Canvas**. However, once launched, you can modify the audience distribution across paths as you see fit. For example, if a day after launching a Canvas, you conclude that one path is superior to the rest based on the analytics, you can set that path to 100% and the others to 0%. Or, depending on your need, you can continue sending users down multiple paths.
 
