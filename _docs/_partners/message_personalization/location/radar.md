@@ -12,9 +12,9 @@ search_tag: Partner
 
 > [Radar](https://www.onradar.com/) is the leading geofencing and location tracking platform. The Radar platform has three core products: [Geofences](https://radar.io/product/geofencing), [Trip Tracking](https://radar.io/product/trip-tracking), and [Geo APIs](https://radar.io/product/api). Combining Braze’s industry-leading engagement platform and Radar’s industry-leading geofencing capabilities allows you to drive revenue and loyalty through a wide range of location-based product and service experiences.
 
-The Radar and Braze integration allows you to gain access to sophisticated location-based campaign triggers and user profile enrichment with rich, first-party location data. 
+The Radar and Braze integration allows you to access sophisticated location-based campaign triggers and user profile enrichment with rich, first-party location data. 
 
-Whenever Radar geofence or trip tracking events are generated, Radar will send custom events and user attributes to Braze in real time. You can use these events and attributes to trigger location-based campaigns, power last mile pickup and delivery operations, monitor fleet and shipping logistics, or build user segments based on location patterns. 
+When Radar geofence or trip tracking events are generated, Radar will send custom events and user attributes to Braze in real-time. You can use these events and attributes to trigger location-based campaigns, power last-mile pickup and delivery operations, monitor fleet and shipping logistics, or build user segments based on location patterns. 
 
 Additionally, Radar Geo APIs can be leveraged to enrich or personalize your marketing campaigns through [Connected Content]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/connected_content/about_connected_content/). 
 
@@ -24,7 +24,7 @@ Additionally, Radar Geo APIs can be leveraged to enrich or personalize your mark
 |---|---|---|---|
 | Braze REST API key | A Braze REST API Key with `users.track` permissions. <br><br> This can be created within the __Braze Dashboard -> Developer Console -> REST API Key -> Create New API Key__ |
 | Group identifier | Your group identifier can be found can be found within the __Braze Dashboard -> Developer Console__ page. |
-| iOS API key and Android API key | These API keys can be found within the __Braze Dashboard -> Manage Settings__ page. |
+| iOS API key<br>Android API key | These API keys can be found within the __Braze Dashboard -> Manage Settings__ page. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
 
 ## Integration
@@ -55,7 +55,7 @@ Send a push notification to the user when they’ve arrived at your store for a 
 
 ### Trigger when a user enters a location with high confidence
 
-Send a notification as a user walks into your store
+Send a notification as a user walks into your store.
 
 ![Radar Campaign]({% image_buster /assets/img_archive/radar-campaign.png %})
 
