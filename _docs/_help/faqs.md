@@ -53,6 +53,9 @@ guide_menu_list:
     link: /docs/user_guide/message_building_by_channel/push/best_practices/
     fa_icon: fas fa-comment-alt
 
+
+local_redirect: #what-does-local-time-zone-delivery-offer
+  what-does-local-time-zone-delivery-offer: '/docs/user_guide/engagement_tools/campaigns/faq/#what-does-local-time-zone-delivery-offer'
 ---
 
 <br>
