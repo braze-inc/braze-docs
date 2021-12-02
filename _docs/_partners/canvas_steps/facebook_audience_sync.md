@@ -31,9 +31,9 @@ You will need to ensure that you have the following items created and/or complet
 
 | Requirement | Origin | Description |
 | ----------- | ------ | ----------- |
-| Facebook Business Manager | [Facebook][3] | A centralized tool to manage your brand's Facebook assets (e.g., ad accounts, pages, apps). |
-| Facebook Ad Account | [Facebook][4] | An active Facebook ad account tied to your brand's Business Manager.<br><br>Please ensure that your Facebook Business Manager admin has granted you admin permissions to the Facebook ad accounts you plan to use with Braze and that you have accepted your ad account terms and conditions. |
-| Facebook Custom Audiences Terms | [Facebook][6] | Accept Facebook's Custom Audiences Terms for your Facebook ad accounts you plan to use with Braze. |
+| Facebook Business Manager | [Facebook][1] | A centralized tool to manage your brand's Facebook assets (e.g., ad accounts, pages, apps). |
+| Facebook Ad Account | [Facebook][2] | An active Facebook ad account tied to your brand's Business Manager.<br><br>Please ensure that your Facebook Business Manager admin has granted you admin permissions to the Facebook ad accounts you plan to use with Braze and that you have accepted your ad account terms and conditions. |
+| Facebook Custom Audiences Terms | [Facebook][3] | Accept Facebook's Custom Audiences Terms for your Facebook ad accounts you plan to use with Braze. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
 
 ## Integration
@@ -42,19 +42,19 @@ You will need to ensure that you have the following items created and/or complet
 
 In the Braze dashboard, go to __Technology Partners__ and select __Facebook__. In the Facebook Audience Export module, click __Connect Facebook__.
 
-![Activate Facebook][34]{: style="max-width:70%;"}
+![Activate Facebook][4]{: style="max-width:70%;"}
 
 A Facebook oAuth dialog window will appear to authorize Braze to create Custom Audiences into your Facebook ad accounts.
 
-![Facebook Dialog][36]{: style="max-width:30%;"}  ![Facebook Dialog][35]{: style="max-width:40%;"}
+![Facebook Dialog][6]{: style="max-width:30%;"}  ![Facebook Dialog][5]{: style="max-width:40%;"}
 
 Once you have linked Braze to your Facebook account, you will then be able to select which ad accounts you would like to sync within your Braze app group. 
 
-![Facebook Dialog][37]{: style="max-width:70%;"}
+![Facebook Dialog][7]{: style="max-width:70%;"}
 
 Once you have successfully connected, you will be taken back to the partner page, where you can view which accounts are connected and disconnect existing accounts.
 
-![Facebook Connected][38]{: style="max-width:70%;"}
+![Facebook Connected][8]{: style="max-width:70%;"}
 
 Your Facebook connection will be applied at the Braze app group level. If your Facebook admin removes you from your Facebook Business Manager or access to the connected Facebook accounts, Braze will detect an invalid token. As a result, your active Canvases using Facebook Audience Steps will show errors, and Braze will not be able to sync users. 
 
@@ -68,7 +68,7 @@ For customers who have previously undergone the Facebook App Review process for 
 
 Add a step in your Canvas, select the dropdown at the top of the step, and select __Facebook Audience Step__.
 
-![Audience Sync][20]{:style="max-width:70%"}
+![Add Audience Sync][11]{:style="max-width:70%"}
 
 ### Step 3: Sync setup
 
@@ -81,11 +81,11 @@ Select the desired Facebook ad account. Under the __Choose a New or Existing Aud
 __Create a New Audience__<br>
 Enter a name for the new custom audience, select __Add Users to Audience__ and select which fields you would like to sync with Facebook. Next, save your audience by clicking the __Create Audience__ button at the bottom of the step editor.
 
-![Facebook Sync]({% image_buster /assets/img/fb_audience_sync/google_sync7.png %})
+![Facebook Sync][13]
 
 Users will be notified at the top of the step editor if the audience is created successfully or if errors arise during this process. Users can also reference this audience for user removal later in the Canvas journey because the audience was created in draft mode. 
 
-![Facebook Sync]({% image_buster /assets/img/fb_audience_sync/google_sync11.png %})
+![Facebook Sync][14]
 
 When you launch a Canvas with a new audience, Braze will create the new custom audience upon launching the Canvas and subsequently sync users in near real-time as they enter the Facebook Audience Step. 
 
@@ -94,7 +94,7 @@ When you launch a Canvas with a new audience, Braze will create the new custom a
 __Sync with an Existing Audience__<br>
 Braze also offers the ability to either add or remove users from existing Facebook custom audiences to ensure that these audiences are up-to-date. To sync with an existing audience, type the existing audience name in the dropdown and choose whether you want to __Add to the Audience__ or __Remove from the Audience__. Braze will then either add or remove users in near real-time as they enter the Facebook Audience Step. 
 
-![Facebook Sync]({% image_buster /assets/img/fb_audience_sync/google_sync8.png %})
+![Facebook Sync][12]
 
 It's important to note that Facebook prohibits removing users from custom audiences where the audience sizes are too low (typically fewer than 1,000). As a result, Braze will be unable to sync users for a Remove from Audience step until the audience reaches the appropriate audience size.
 
@@ -107,7 +107,7 @@ Once you have configured your Facebook Audience Step, simply launch the Canvas! 
 
 The __History__ tab of the custom audience in the Facebook Audience Manager will reflect the number of users sent to the audience from Braze. If a user re-enters the step, they will be sent to Facebook again.
 
-![Google Sync][39]{: style="max-width:80%;"}
+![Audience History][9]{: style="max-width:80%;"}
 
 ## User syncing and rate limit considerations
  
@@ -116,6 +116,8 @@ As users reach the Audience Sync Step, Braze will sync these users in near real-
 Facebook's Marketing API rate limit states no more than &#126;190k API requests for each ad account in a 1 hour time period. If a Braze customer reaches this rate limit, Braze the Canvas will retry the sync for up to &#126;13 hours. If the sync is not possible, these users are listed under the Users Errored metric.
 
 ## Understanding analytics
+
+The following table includes metrics and descriptions to help you better understand analytics from your Audience Sync Step.
 
 | Metric | Description |
 | --- | --- |
@@ -128,7 +130,7 @@ Facebook's Marketing API rate limit states no more than &#126;190k API requests 
 | Exited Canvas | Number of users who have exited the Canvas. This occurs when the last step in a Canvas is a Facebook step. |
 {: .reset-td-br-1 .reset-td-br-2}
 
-![audience sync][16]{: style="max-width:25%;"}
+![Audience Sync Metrics Example][10]{: style="max-width:25%;"}
 
 {% alert important %}
 Remember that there will be a delay in reporting for users synced and users errored metrics due to the bulk flusher and the 13-hour retry, respectively.
@@ -155,15 +157,17 @@ At this time, value-based custom audiences are not supported by Braze. If you ar
 {% enddetails %}
 
 [0]: https://www.braze.com/privacy
-[3]: https://www.facebook.com/business/help/113163272211510
-[4]: https://www.facebook.com/business/help/910137316041095
-[6]: https://www.facebook.com/ads/manage/customaudiences/tos.php
-[34]: {% image_buster /assets/img/fb/afb_1.png %}
-[35]: {% image_buster /assets/img/fb/afb_2.png %}
-[36]: {% image_buster /assets/img/fb/afb_3.png %}
-[37]: {% image_buster /assets/img/fb/afb_4.png %}
-[38]: {% image_buster /assets/img/fb/afb_5.png %}
-[16]: {% image_buster /assets/img/fb_audience_sync/FB2.jpg %}
-[20]: {% image_buster /assets/img/fb_audience_sync/FB6.png %}
-[39]: {% image_buster /assets/img/fb_audience_sync/google_sync9.png %}
-[40]: {% image_buster /assets/img/fb_audience_sync/google_sync10.png %}
+[1]: https://www.facebook.com/business/help/113163272211510
+[2]: https://www.facebook.com/business/help/910137316041095
+[3]: https://www.facebook.com/ads/manage/customaudiences/tos.php
+[4]: {% image_buster /assets/img/fb/afb_1.png %}
+[5]: {% image_buster /assets/img/fb/afb_2.png %}
+[6]: {% image_buster /assets/img/fb/afb_3.png %}
+[7]: {% image_buster /assets/img/fb/afb_4.png %}
+[8]: {% image_buster /assets/img/fb/afb_5.png %}
+[9]: {% image_buster /assets/img/fb_audience_sync/audience_history.png %}
+[10]: {% image_buster /assets/img/fb_audience_sync/analytics_example.jpg %}
+[11]: {% image_buster /assets/img/fb_audience_sync/add_step.png %}
+[12]: {% image_buster /assets/img/fb_audience_sync/add_audience.png %}
+[13]: {% image_buster /assets/img/fb_audience_sync/create_audience.png %}
+[14]: {% image_buster /assets/img/fb_audience_sync/new_audience.png %}
