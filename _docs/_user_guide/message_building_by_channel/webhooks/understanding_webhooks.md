@@ -29,7 +29,7 @@ Webhooks are an excellent way to connect your systems together—after all, webh
 Some more specific use cases include the following:
 
 - If a user unsubscribes from email, you could have a webhook update your analytics database or CRM with that same information, ensuring a holistic view of that user's behavior.
-- Send [transactional messages]({{site.baseurl}}/api/api_campaigns/transactional_api_campaign/) to users within Facebook Messenger, Line, or Kik.
+- Send [transactional messages]({{site.baseurl}}/api/api_campaigns/transactional_api_campaign/) to users within Facebook Messenger or Line.
 - Send direct mail to customers in response to their in-app and web activity by using webhooks to communicate with third-party services like [Lob.com]({{site.baseurl}}/partners/message_orchestration/additional_channels/direct_mail/lob/).
 - If you’re a reservations app, you could send an SMS message powered by Twilio to confirm a customer’s in-app request.
 - If a gamer reaches a certain level or accrues a certain number of points, use webhooks and your existing API setup to send a character upgrade or coins directly to their account. If you send the webhook as part of a multichannel messaging campaign, you can send a push or other message to let the gamer know about the reward at the same time.
@@ -40,15 +40,18 @@ Some more specific use cases include the following:
 
 A webhook consists of the following three parts:
 
-- [HTTP method](#methods)
-- HTTP URL
-- Request body
+![Example webhook broken out into HTTP method, HTTP URL, and request body][2]
 
-Refer to the following interactive image for more information on these parts.
-
-<div class="iactiveImg" data-ii="34405"></div><script src="https://interactive-img.com/js/include.js"></script>
+| Part of Webhook | Description |
+| --- | --- |
+| [HTTP method](#methods) | Like APIs, webhooks need request methods. These are given to the URL the webhook hits, and tells the endpoint what to do with the information given. There are four HTTP methods you can specify: POST, GET, PUT, and DELETE. |
+| HTTP URL | The URL address of your webhook endpoint. The endpoint is the place where you’ll be sending the information that you’re capturing in the webhook. |
+| Request body | This part of the webhook contains the information that you're communicating to the endpoint. The request body can be JSON key-value pairs or raw text. |
+{: .reset-td-br-1 .reset-td-br-2}
 
 ### HTTP methods {#methods}
+
+The following table describes the four different HTTP methods you can specify in your webhook.
 
 | HTTP method | Description |
 | ----------- | ----------- |
@@ -93,3 +96,4 @@ Refer to [Creating a webhook]({{site.baseurl}}/user_guide/message_building_by_ch
 
 
 [1]: {{site.baseurl}}/user_guide/message_building_by_channel/webhooks/creating_a_webhook/
+[2]: {% image_buster /assets/img_archive/webhook_anatomy.png %}
