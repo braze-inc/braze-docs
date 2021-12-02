@@ -52,7 +52,7 @@ validurls['/docs/enabling_message_channels/push_notifications/ios'] = '/docs/dev
 
 validurls['/docs/ios/#push-notifications'] = '/docs/developer_guide/platform_integration_guides/ios/push_notifications/integration/';
 validurls['/docs/partner_integrations/#adjust'] = '/docs/partners/adjust/';
-validurls['/docs/frequently_asked_questions#local-timezone-delivery'] = '/docs/help/faqs/#what-does-local-time-zone-delivery-offer';
+validurls['/docs/frequently_asked_questions#local-timezone-delivery'] = '/docs/user_guide/engagement_tools/campaigns/faq/#what-does-local-time-zone-delivery-offer';
 validurls['/docs/frequently_asked_questions'] = '/docs/help/faqs/';
 
 validurls['/docs/partner_integrations/#appsflyer'] = '/docs/partners/appsflyer/';
@@ -471,7 +471,6 @@ validurls['/docs/partners/data_and_infrastructure_agility/customer_data_platform
 validurls['/docs/user_guide/message_building_by_channel/push/best_practices/push_reporting/'] = '/docs/user_guide/message_building_by_channel/push/push_reporting/';
 
 validurls['/docs/help/best_practices/'] = '/docs/faqs/';
-
 validurls['/docs/user_guide/engagement_tools/canvas/get_started/measuring_and_testing_with_canvas_analytics/'] = '/docs/user_guide/engagement_tools/canvas/testing_canvases/measuring_and_testing_with_canvas_analytics/';
 
 
