@@ -34,7 +34,7 @@ Some more specific use cases include the following:
 - If you’re a reservations app, you could send an SMS message powered by Twilio to confirm a customer’s in-app request.
 - If a gamer reaches a certain level or accrues a certain number of points, use webhooks and your existing API setup to send a character upgrade or coins directly to their account. If you send the webhook as part of a multichannel messaging campaign, you can send a push or other message to let the gamer know about the reward at the same time.
 - If you’re an airline, you can use webhooks and your existing API setup to credit a customer’s account with a discount once they’ve booked a certain number of flights.
-- Endless “If This Then That” ([IFTT](https://ifttt.com/about)) recipes—for instance, if a customer signs into the app via email, then that address can automatically be configured into Salesforce.
+- Endless “If This Then That” ([IFTTT](https://ifttt.com/about)) recipes—for instance, if a customer signs into the app via email, then that address can automatically be configured into Salesforce.
 
 ## Anatomy of a webhook
 
