@@ -22,6 +22,14 @@ The Braze and Judo integration provides bespoke experiences in your campaigns an
 | Judo SDK | Judo | [Judo iOS SDK](https://github.com/judoapp/judo-ios/) and [Judo Android SDK](https://github.com/judoapp/judo-android) | You'll need the Judo SDKs integrated into your iOS and/or Android apps. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4}
 
+## Use cases
+
+**Onboarding**: App publishers using Judo build and deploy rich, native onboarding experiences. These experiences can now be one element in a personalized cross-channel onboarding journey coordinated via Braze. Experiences may be personalized and quickly updated without any app updates to test the effectiveness of different in-app flows.
+
+**Conversion**: App publishers can use data from Braze to create a personalized rich in-app experience to drive in-app purchases, paid subscriptions, or contextual merchandising using integration hooks in Judo. Access to these experiences may be triggered via engagement marketing campaigns created in Braze.
+
+**Event-Driven Content**: A primary use for Judo in sports and entertainment is building rich experiences to preview, promote, and recap events. This capability has broad applications in other verticals for seasonal and news-driven content. Linking messaging to promote or highlight events in a timely manner to rich in-app experiences empowers publishers to drive engagement by being contextually relevant.
+
 ## Side-by-side SDK integration
 
 Judo offers additional libraries that automate some of the effort necessary to integrate the Judo and Braze SDKs side-by-side in your mobile apps. 
@@ -74,15 +82,6 @@ Set a [custom key-value pair]({{site.baseurl}}/user_guide/personalization_and_dy
 
 Lastly, complete the campaign, setting up a trigger for the campaign and selecting users via Segments in the __Delivery__ and __Target User__ sections. Visit our in-app message [article]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/create/) on the different components of a Braze in-app message.
 
-## Use cases
-
-The Judo no-code, server-driven UI platform can support the delivery of new custom user experiences to an application without any app updates. There are numerous use cases when used in conjunction with Braze's marketing automation.
-
-**Onboarding**: App publishers using Judo build and deploy rich, native onboarding experiences. These experiences can now be one element in a personalized cross-channel onboarding journey coordinated via Braze. Experiences may be personalized and quickly updated without any app updates to test the effectiveness of different in-app flows.
-
-**Conversion**: App publishers can use data from Braze to create a personalized rich in-app experience to drive in-app purchases, paid subscriptions, or contextual merchandising using integration hooks in Judo. Access to these experiences may be triggered via engagement marketing campaigns created in Braze.
-
-**Event-Driven Content**: A primary use for Judo in sports and entertainment is building rich experiences to preview, promote, and recap events. This capability has broad applications in other verticals for seasonal and news-driven content. Linking messaging to promote or highlight events in a timely manner to rich in-app experiences empowers publishers to drive engagement by being contextually relevant.
 
 [2]: {% image_buster /assets/img/judo/braze-campaign-select-custom-type.png %}
 [3]: {% image_buster /assets/img/judo/braze-html-boilerplate.png %}

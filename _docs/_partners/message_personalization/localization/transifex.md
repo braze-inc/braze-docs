@@ -10,7 +10,9 @@ search_tag: Partner
 
 # About Transifex
 
-Transifex enables robust localization across your user base, no matter the language. The Transifex and Braze integration leverage Connected Content allowing you to automate translation freeing up your teams to focus on delivering brilliant customer experiences.
+> Transifex enables robust localization across your user base, no matter the language. 
+
+The Transifex and Braze integration leverage Connected Content, allowing you to include a source string in your messages instead of lines of language-based conditional formatting. This, in turn, automates translation and frees up your teams to focus on delivering brilliant customer experiences.
 
 ## Prerequisites
 
@@ -23,17 +25,15 @@ Transifex enables robust localization across your user base, no matter the langu
 
 ### Step 1: Set up basic authentication
 
-To set up basic authentication for your account, navigate to the Braze platform and under __Manage Settings__, open the __Connected Content__ tab. Here you will provide the credentials used for all Connected Content calls to Transifex.
+To set up basic authentication for your account, navigate to the Braze platform, under __Manage Settings__, open the __Connected Content__ tab. Here you will provide the credentials used for all Connected Content calls to Transifex.
 
 ![Basic Authentication Credential Management][34]
 
-Click __New Credential__, name your credential and add your user name and password for your Transifex account.
+Click __New Credential__, name your credential, and add your user name and password for your Transifex account.
 
 ![Basic Authentication Credential Creation][35]
 
 ### Step 2: Connected Content
-
-This integration allows you to type in a source string instead of adding several lines of conditional formatting for each language in the message composer. 
 
 The Transifex integration uses Transifex's translation [strings API][31]. The following CURL will allow you to see if your Transifex account has context values associated with translations. Input the `PROJECT_NAME` and `RESOURCE_NAME` found in your Transifex account. 
 
@@ -45,11 +45,11 @@ For example, if your Transifex project is located at `https://www.transifex.com/
 
 An example response with a blank context field is pictured below:
 
-![terminal_response][33]
+![Terminal response][33]{: style="max-width:60%;"}
 
-## Transifex code example
+## Connnected Content message example
 
-This example code utilizes the Transifex Strings API and the user's `language` attribute. 
+This example code snippet utilizes the Transifex Strings API and the user's `language` attribute. 
 
 {% raw %}
 ```
