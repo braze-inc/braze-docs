@@ -12,7 +12,7 @@ tool:
 
 # Creating an in-app message
 
-You can create an in-app message or in-browser message using the Braze platform using campaigns, Canvas, or as an API campaign. We highly recommend planning out your messages and preparing all materials ahead of time using our handy [In-App Message Prep Guide]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/best_practices/).
+You can create an in-app message or in-browser message using the Braze platform using campaigns, Canvas, or as an API campaign. We highly recommend planning out your messages and preparing all materials ahead of time using our handy [In-app message prep guide]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/best_practices/).
 
 ## Step 1: Choose where to build your message {#create-new-campaign-in-app}
 
@@ -33,7 +33,7 @@ If all of the messages in your campaign are going to be similar or have the same
 
  {% endtab %}
  {% tab Canvas %}
- After you have [created and set up your Canvas using the Canvas wizard]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/create_a_canvas/),
+ After you have [created your Canvas]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/create_a_canvas/) using the Canvas wizard,
 
 1. Name your step something clear and meaningful.
 2. Add a Delay, as necessary. Note that steps containing in-app messages cannot be action-based.
@@ -44,6 +44,8 @@ If all of the messages in your campaign are going to be similar or have the same
 {% alert important %}
 You cannot have multiple in-app message variants in a single step.
 {% endalert %}
+
+You can find more Canvas-specific information in [In-app messages in Canvas]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/in-app_messages_in_canvas/).
 
 {% endtab %}
 {% endtabs %}
@@ -63,29 +65,109 @@ Web Email Capture and Web Modal with CSS are both unique to the Web SDK and can 
 
 ## Step 3: Specify your message types
 
-Once you've selected a sending platform, browse the Message Types, Layouts, and other options associated with it. Learn more about the expected behavior and look of each of these messages on our [Creative Details page]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/creative_details/), or by clicking on the linked message types in the following tables.
+Once you've selected a sending platform, browse the message types, layouts, and other options associated with it. Learn more about the expected behavior and look of each of these messages on our [Creative Details]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/creative_details/) page, or by clicking on the linked message types in the following tables.
+
+When deciding which message type to use, you should consider how intrusive your in-app message campaign needs to be. This is a measure how much screen real estate the message will take up and how much this interrupts your customer's regular experience in your app or site. The more rich content you want to deliver, the more intrusive your message will need to be.
+
+![Graphic showing a scale of less instrusive to more intrusive, with Slider being the least intrusive, followed by Modal, and Full screen being the most intrusive]({% image_buster /assets/img_archive/iam_intrusive.png %}){: style="max-width:80%" }
 
 ### Message types
 
 These in-app messages are accepted by both mobile apps and web applications.
 
-| Message Type | Type Description | Available Layouts| Other Options |
-|---|---|---|
-|[Full-Screen]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/creative_details/#full-screen)| Messages that cover the entire screen with a message block. | __Image & Text__ and __Image Only__ | Enforced Device Orientation (Portrait or Landscape)|
-|[Modal]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/creative_details/#modal)|  Messages that cover the entire screen with a screen overlay and a message block. | __Text (with Optional Image)__ and __Image Only__ | None |
-|[Slideup]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/creative_details/#slideup)|  Messages that slide into view in a designated place without blocking the rest of the screen. | None | None |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4}
+<style type="text/css">
+.tg td{word-break:normal;}
+.tg th{word-break:normal;}
+</style>
+
+<table class="tg">
+<thead>
+  <tr>
+    <th>Message Type</th>
+    <th>Type Description</th>
+    <th>Available Layouts</th>
+    <th>Other Options</th>
+    <th>Recommended Use</th>
+  </tr>
+</thead>
+<tbody>
+  <tr>
+    <td><a href='/docs/user_guide/message_building_by_channel/in-app_messages/creative_details/fullscreen'>Full-Screen</a></td>
+    <td>Messages that cover the entire screen with a message block.</td>
+    <td>
+      <ul>
+      <li>Image & Text</li>
+      <li>Image Only</li>
+      </ul>
+    </td>
+    <td>Enforced Device Orientation (Portrait or Landscape)</td>
+    <td>Big and bold! Use when you want to make sure users see your content, such as your most critical campaigns, important notifications, or massive promotions.</td>
+  </tr>
+  <tr>
+    <td><a href='/docs/user_guide/message_building_by_channel/in-app_messages/creative_details/modal'>Modal</a></td>
+    <td>Messages that cover the entire screen with a screen overlay and a message block.</td>
+    <td>
+      <ul>
+      <li>Text (with Optional Image)</li>
+      <li>Image Only</li>
+      </ul>
+    </td>
+    <td>N/A</td>
+    <td>A good middle ground. Use when you need an apparent way to catch your user's attention, such as encouraging users to try a new feature or take advantage of a promotion.</td>
+  </tr>
+  <tr>
+    <td><a href='/docs/user_guide/message_building_by_channel/in-app_messages/creative_details/slideup'>Slideup</a></td>
+    <td>Messages that slide into view in a designated place without blocking the rest of the screen.</td>
+    <td>N/A</td>
+    <td>N/A</td>
+    <td>Unobtrusive—takes up the least amount of screen real estate. Use when alerting users to small snippets of information, such as new features, announcements, use of cookies, etc.<br></td>
+  </tr>
+</tbody>
+</table>
 
 ### Advanced message types
 
 These in-app messages are customizable to your needs.
 
-| Message Type | Type Description |Available Layouts| Other Options |
-|---|---|---|
-|[Custom Web Message]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/customize/#custom-web-messages)| Custom messages that perform as defined in your custom code (HTML, CSS, and/or JavaScript).  |None | Must set `allowUserSuppliedJavascript` initialization option to `true` for your In-App Message to work. |
-|[Email Capture Form]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/customize/#email-capture-form) | Typically used to capture the viewer's email.  | None | Must set `allowUserSuppliedJavascript` initialization option to `true` for your IAM to work. |
-|[Web Modal with CSS]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/customize/#web-modal-css) | Modal messages for web with customizable CSS. | __Text (with Optional Image)__ and __Image Only__ | None |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4}
+<table class="tg">
+<thead>
+  <tr>
+    <th>Message Type</th>
+    <th>Type Description</th>
+    <th>Available Layouts</th>
+    <th>Requirements</th>
+    <th>Recommended Use</th>
+  </tr>
+</thead>
+<tbody>
+  <tr>
+    <td><a href='/docs/user_guide/message_building_by_channel/in-app_messages/customize/#custom-html-messages'>Custom HTML Message</a></td>
+    <td>Custom messages that perform as defined in your custom code (HTML, CSS, and/or JavaScript).</td>
+    <td>N/A</td>
+    <td>Must set <span style="white-space: nowrap"><code>allowUserSuppliedJavascript</code></span> initialization option to <code>true</code> for your in-app message to work.</td>
+    <td>This is a good option if you want all the advantages of IAMs but need additional functionality or for the appearance to stay "on brand". You can alter every little detail of the message—font, color, shape, size, buttons, etc. <br><br>Example use cases include asking users for app feedback, email capture forms, or paginated messages</td>
+  </tr>
+  <tr>
+    <td><a href='/docs/user_guide/message_building_by_channel/in-app_messages/customize/#email-capture-form'>Web Email Capture Form</a></td>
+    <td>Typically used to capture the viewer’s email.</td>
+    <td>N/A</td>
+    <td>Must set <span style="white-space: nowrap"><code>allowUserSuppliedJavascript</code></span> initialization option to <code>true</code> for your in-app message to work.</td>
+    <td>When prompting users to submit their email address.</td>
+  </tr>
+  <tr>
+    <td><a href='/docs/user_guide/message_building_by_channel/in-app_messages/customize/#web-modal-css'>Web Modal with CSS</a></td>
+    <td>Modal messages for web with customizable CSS.</td>
+    <td>
+      <ul>
+      <li>Text (with Optional Image)</li>
+      <li>Image Only</li>
+      </ul>
+    </td>
+    <td>N/A</td>
+    <td>When you want to upload or write custom CSS to create beautiful, all around custom-styled messaging. </td>
+  </tr>
+</tbody>
+</table>
 
 {% alert important %}
 If Braze detects that you don't have a close or dismissal button included in your code, we will request that you add one in. For your convenience, we have provided a snippet that you can copy and paste into your code: `<a href= "appboy://close">X</a>`.
@@ -283,6 +365,7 @@ Processing action-based in-app message campaigns that are still in an active sta
 There is a limit of 200 active, action-based in-app message campaigns per app group to optimize the speed of message delivery and to prevent timeouts.
 
 The 200 count includes active IAM campaigns that have not yet reached end time and those that have no end time. Active IAM campaigns that have passed their end times will not be counted. The average Braze customer has a total of 26 campaigns active at once—so it's unlikely that this limitation will impact you.
+
 
 [2]: {% image_buster /assets/img/iam-generations.gif %}
 [16]: {{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/in-app_messages_in_canvas/

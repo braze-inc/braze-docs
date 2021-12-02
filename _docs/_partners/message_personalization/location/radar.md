@@ -2,7 +2,7 @@
 nav_title: Radar
 article_title: Radar
 alias: /partners/radar/
-description: "This article outlines the partnership between Braze and Radar to add location context and tracking to your iOS and Android apps."
+description: "This article outlines the partnership between Braze and Radar, a geofencing platform, to add location context and tracking to your iOS and Android apps."
 page_type: partner
 search_tag: Partner
 
@@ -10,25 +10,32 @@ search_tag: Partner
 
 # Radar
 
-> [Radar](https://www.onradar.com/) is a geofencing platform for mobile and web apps. Combining Braze's industry-leading engagement platform and Radar's industry-leading geofencing capabilities allows you to drive digital engagement and loyalty. 
-The Radar platform has three products: [Geofences](https://radar.io/product/geofencing), [Trip Tracking](https://radar.io/product/trip-tracking), and [Geo APIs](https://radar.io/product/api).
+> [Radar](https://www.onradar.com/) is the leading geofencing and location tracking platform. The Radar platform has three core products: [Geofences](https://radar.io/product/geofencing), [Trip Tracking](https://radar.io/product/trip-tracking), and [Geo APIs](https://radar.io/product/api). Combining Braze’s industry-leading engagement platform and Radar’s industry-leading geofencing capabilities allows you to drive revenue and loyalty through a wide range of location-based product and service experiences.
 
-Use the Radar and Braze integration to add location context and tracking to your iOS and Android apps in less than ten lines of code, allowing you to easily retarget your customers and augment your marketing with rich location data. Whenever Radar geofence or trip tracking events are generated, Radar will send custom events and user attributes to Braze. You can use these events and attributes to build location-based segments or trigger location-based campaigns.
+The Radar and Braze integration allows you to access sophisticated location-based campaign triggers and user profile enrichment with rich, first-party location data. 
+
+When Radar geofence or trip tracking events are generated, Radar will send custom events and user attributes to Braze in real-time. You can use these events and attributes to trigger location-based campaigns, power last-mile pickup and delivery operations, monitor fleet and shipping logistics, or build user segments based on location patterns. 
 
 Additionally, Radar Geo APIs can be leveraged to enrich or personalize your marketing campaigns through [Connected Content]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/connected_content/about_connected_content/). 
 
-## Event integration details
+## Prerequisites
 
-To map data between the Braze and Radar SDKs, you will need to set the same user IDs in both systems. This can be done by using the `changeUser()` method in the Braze SDK and the `setUserId()` method in the Radar SDK.
+| Requirement | Description |
+|---|---|---|---|
+| Braze REST API key | A Braze REST API Key with `users.track` permissions. <br><br> This can be created within the __Braze Dashboard -> Developer Console -> REST API Key -> Create New API Key__ |
+| Group identifier | Your group identifier can be found can be found within the __Braze Dashboard -> Developer Console__ page. |
+| iOS API key<br>Android API key | These API keys can be found within the __Braze Dashboard -> Manage Settings__ page. |
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
 
-To enable the integration:
-1. Visit the Braze __Developer Console__ page and copy your group identifier
-2. On the Braze __Manage Settings__ page, copy your iOS API keys and Android API keys.
-3. On the Radar [Integrations page](https://www.onradar.com/integrations) under Braze:
-	- Set __Enabled__ to __Yes__
-	- Set your Braze endpoint
-	- Paste in your group identifier and API keys
-	- Input any event or event attribute filtering to ensure only relevant data is sent to Braze for engagement marketing
+## Integration
+
+To map data between the Braze and Radar SDKs, you must set the same user IDs in both systems. This can be done using the `changeUser()` method in the Braze SDK and the `setUserId()` method in the Radar SDK.
+
+To enable the integration on the [Radar integration page](https://www.onradar.com/integrations) under Braze:
+  - Set __Enabled__ to __Yes__
+  - Set your Braze endpoint
+  - Paste in your group identifier and API keys
+  - Input any event or event attribute filtering to ensure only relevant data is sent to Braze for engagement marketing
 
 {% alert note %}
 You can set separate API keys for the test and live environments.
@@ -42,9 +49,13 @@ You can use custom events and user attributes to build location-based segments o
 
 ### Segment of traveling users
 
+Send a push notification to the user when they’ve arrived at your store for a curbside pickup. 
+
 ![Radar Segment]({% image_buster /assets/img_archive/radar-segment.png %})
 
 ### Trigger when a user enters a location with high confidence
+
+Send a notification as a user walks into your store.
 
 ![Radar Campaign]({% image_buster /assets/img_archive/radar-campaign.png %})
 
@@ -111,7 +122,7 @@ Shown below is an example of what Radar will return as a JSON object from the AP
 
 To construct the Connected Content targeted and personalized Braze message, you can leverage the Braze `most_recent_location` attribute as an input for the `near` parameter in the API request's URL. The `most_recent_location` attribute is collected via the Radar event integration or directly through the Braze SDK.
 
-In the example below, the Radar chain filtering is applied for Target and Walmart locations, and the radius of the search for nearby locations is set to 2 km.
+In the example below, the Radar chain filtering is applied for Target and Walmart locations, and the search radius for nearby locations is set to 2 km.
 
 {% raw %}
 ```
@@ -119,7 +130,7 @@ In the example below, the Radar chain filtering is applied for Target and Walmar
 ```
 {% endraw %}
 
-As you can see from the `connect_content` tag above, we stored the JSON object into the local variable `nearbyplaces` by adding `:save nearbyplaces` after the URL.
+As you can see from the `connect_content` tag above, the JSON object is stored into the local variable `nearbyplaces` by adding `:save nearbyplaces` after the URL.
 You can test what the output should be by referencing {% raw %}`{{nearbyplaces.places}}`{% endraw%}.
 
 Bringing our use-case together, here is what the syntax of the campaign would look like. The code below iterates through the `nearbyplaces.places` object, extracting unique values and concatenating them with proper human-readable delimiters for the message.

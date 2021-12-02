@@ -81,8 +81,8 @@ _These reading paths assume that you've already completed your integration and s
 | 1 | [Configuring Reporting]({{site.baseurl}}/user_guide/data_and_analytics/configuring_reporting/) | How to set up an automatic weekly email report. |
 | 2 | [User Data Collection Overview]({{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/) | How Braze collects and categorizes user data. |
 | 3 | [User Import]({{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/user_import/) | Import users into your Braze account. |
-| 4 | [Custom Events]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events/) | Import users into your Braze account. |
-| 5 | [Custom Attributes]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_attributes/) | Import users into your Braze account. |
+| 4 | [Custom Events]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events/) | What custom events and custom event properties are and how to use them. |
+| 5 | [Custom Attributes]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_attributes/) | The different types of custom attributes and how they're stored in Braze. |
 | 6 | [Exporting Braze Data]({{site.baseurl}}/user_guide/data_and_analytics/export_braze_data/) | The many ways to export data from the Braze platform. |
 | 7 | [Understanding Your Overview Data]({{site.baseurl}}/user_guide/data_and_analytics/your_reports/understanding_your_app_usage_data/) | All about the **Overview** page and the data within it. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}

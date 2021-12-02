@@ -11,13 +11,15 @@ Tool:
 
 The Braze Audience Sync to Google integration enables brands to extend the reach of their cross-channel customer journeys to Google Search, Google Shopping, Gmail, YouTube, and Google Display. Using your first-party customer data, you can securely deliver ads based upon dynamic behavioral triggers, segmentation, and more. Any criteria you'd typically use to trigger a message (e.g., push, email, SMS, etc.) as part of a Braze Canvas can be used to trigger an ad to that user via Google's [Customer Match](https://support.google.com/google-ads/answer/6379332?hl=en).
 
-__Common use cases for syncing Custom Audiences include:__
+Common use cases for syncing Custom Audiences include:
 - Targeting high-value users via multiple channels to drive purchases or engagement.
 - Retargeting users who are less responsive to other marketing channels.
 - Creating suppression audiences to prevent users from receiving advertisements when they're already loyal consumers of your brand.
 - Creating similar audiences to acquire new users more efficiently.
 
-__Please note:__ This feature gives brands the option to control what specific first-party data is shared with Google. At Braze, the integrations with which you can and cannot share your first-party data are given the utmost consideration. To learn more about our Braze data privacy policy, please click [here](https://www.braze.com/privacy).
+{% alert note %}
+This feature gives brands the option to control what specific first-party data is shared with Google. At Braze, the integrations with which you can and cannot share your first-party data are given the utmost consideration. To learn more about our Braze data privacy policy, please click [here](https://www.braze.com/privacy).
+{% endalert %}
 
 ## Integration
 
@@ -33,13 +35,13 @@ You will need to ensure that you have the following items created and/or complet
 
 ## Implementation process
 ### Step 1: Connect Google account
-To get started, go to the Google Ads technology partner page and then select __Connect Google Ads__. 
+To get started, go to the **Google Ads** tab in the **Technology Partners** page and select __Connect Google Ads__. 
 
 ![Google Sync][1]
 
 You'll then be prompted with a modal to select the email associated with your Google Ads account and then grant Braze access to your Google Ads account.
 
-Please note that Braze will only be managing your audiences. 
+Note that Braze will only be managing your audiences. 
 
 ![Google Sync][2]{: style="max-width:30%;"}  ![Google Sync][3]{: style="max-width:29%;"}
 
@@ -74,11 +76,11 @@ Enter a name for the new custom audience, select __Add Users to Audience__ and s
 
 Next, save your audience by clicking the __Create Audience__ button at the bottom of the step editor.
 
-![Google Sync]({% image_buster /assets/img/google_sync/google_sync7.png %})
+![Google Sync][7]
 
 Users will be notified at the top of the step editor if the audience is created successfully or if errors arise during this process. Users can reference this audience for user removal later in the Canvas journey because the audience was created in draft mode. 
 
-![Google Sync]({% image_buster /assets/img/google_sync/google_sync11.png %})
+![Google Sync][9]
 
 When you launch a Canvas with a new audience, Braze will create a new custom audience upon launching the Canvas and subsequently sync users in near real-time as they enter the Google Audience Step. 
 
@@ -92,7 +94,7 @@ Braze also offers the ability to either add or remove users from existing Google
 
 Once you've configured your Google Audience step, select __Done__. Your Google Audience step will include details about the new audience.
 
-![Google Sync]({% image_buster /assets/img/google_sync/google_sync8.png %})
+![Google Sync][8]
 
 {% endtab %}
 {% endtabs %}
@@ -146,7 +148,7 @@ Check that your audiences contain at least __5,000__ users to ensure that ads st
 [2]: {% image_buster /assets/img/google_sync/google_sync2.png %}
 [3]: {% image_buster /assets/img/google_sync/google_sync3.png %}
 [4]: {% image_buster /assets/img/google_sync/google_sync4.png %}
-[5]: {% image_buster /assets/img/google_sync/google_sync5.png %}
 [6]: {% image_buster /assets/img/google_sync/google_sync6.png %}
 [7]: {% image_buster /assets/img/google_sync/google_sync7.png %}
 [8]: {% image_buster /assets/img/google_sync/google_sync8.png %}
+[9]: {% image_buster /assets/img/google_sync/google_sync9.png %}

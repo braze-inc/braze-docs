@@ -2,7 +2,7 @@
 nav_title: Transifex
 article_title: Transifex
 alias: /partners/transifex/
-description: "This article outlines the partnership between Braze and Transifex, a localization platform that allows you to automate translation so your teams are freed up to focus on delivering brilliant customer experiences."
+description: "This article outlines the partnership between Braze and Transifex, a localization platform that allows you to automate translation freeing up your teams to focus on delivering brilliant customer experiences."
 page_tpe: partner
 search_tag: Partner
 
@@ -10,7 +10,9 @@ search_tag: Partner
 
 # About Transifex
 
-Transifex enables powerful localization across your user base, no matter what the language is. Transifex and Braze's Connected Content feature empowers you to automate translation so your teams are freed up to focus on delivering brilliant customer experiences.
+> Transifex enables robust localization across your user base, no matter the language. 
+
+The Transifex and Braze integration leverage Connected Content, allowing you to include a source string in your messages instead of lines of language-based conditional formatting. This, in turn, automates translation and frees up your teams to focus on delivering brilliant customer experiences.
 
 ## Prerequisites
 
@@ -19,46 +21,43 @@ Transifex enables powerful localization across your user base, no matter what th
 |Transifex Account | Transifex | [https://www.transifex.com/signin/](https://www.transifex.com/signin/) | You must first have a Transifex account to access their SDK integration information. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
 
-Set up basic authentication for your account in the __Connected Content__ tab in __Manage Settings__.
+## Integration
+
+### Step 1: Set up basic authentication
+
+To set up basic authentication for your account, navigate to the Braze platform, under __Manage Settings__, open the __Connected Content__ tab. Here you will provide the credentials used for all Connected Content calls to Transifex.
 
 ![Basic Authentication Credential Management][34]
 
-Click __New Credential__. You can then name your credentials and put in your username and password for that account.
+Click __New Credential__, name your credential, and add your user name and password for your Transifex account.
 
 ![Basic Authentication Credential Creation][35]
 
-You can then use this basic authentication credential for calls to Transifex.
+### Step 2: Connected Content
 
-## Connected Content integration
-
-This integration will allow you to type in a source string instead of copying and pasting the translation for every language into the message composer.
-
-The code for our Transifex integration was built using Transifex's translation [strings API][31].
-
-The following CURL will allow you to see if your Transifex account has context values associated with translations:
+The Transifex integration uses Transifex's translation [strings API][31]. The following CURL will allow you to see if your Transifex account has context values associated with translations. Input the `PROJECT_NAME` and `RESOURCE_NAME` found in your Transifex account. 
 
 ```
-curl -i -L --user username:password -X GET https://www.transifex.com/api/2/project/<project_name>/resource/<resource_name>/translation/en/strings
+curl -i -L --user username:password -X GET https://www.transifex.com/api/2/project/<PROJECT_NAME>/resource/<RESOURCE_NAME>/translation/en/strings
 ```
 
-Input the project and resource name into CURL. You can find these values in the URL of your Transifex account. <br>For example, if your Transifex project is located at `https://www.transifex.com/appboy-3/french2/french_translationspo/`, the `project_name` will be "french2" and the `resource_name` will be "french_translationspo".
-
+For example, if your Transifex project is located at `https://www.transifex.com/appboy-3/french2/french_translationspo/`, the `project_name` will be "french2" and the `resource_name` will be "french_translationspo".
 
 An example response with a blank context field is pictured below:
 
-![terminal_response][33]
+![Terminal response][33]{: style="max-width:60%;"}
 
-## Transifex integration code example
+## Connnected Content message example
 
-Here is example code that utilizes the Transifex Strings API and the user's "language" attribute.
+This example code snippet utilizes the Transifex Strings API and the user's `language` attribute. 
 
 {% raw %}
 ```
-{% assign key = "<Insert Key Here>" %}
-{% assign context = "<Insert Context Here>" %}
+{% assign key = "<API_KEY>" %}
+{% assign context = "<CONTENT>" %}
 {% assign source_string = key | append: ':' | append: context %}
-{% assign project = "<Insert Project Name Here>" %}
-{% assign resource = "<Insert Resource Name Here" %}
+{% assign project = "<PROJECT_NAME>" %}
+{% assign resource = "<RESOURCE_NAME>" %}
 {% assign source_hash = source_string | md5 %}
 
 {% if {{${language}}} == "en" or {{${language}}} == "it" or {{${language}}} == "de" or {{${language}}} == "another_language_you_support"  %}
@@ -71,10 +70,12 @@ Here is example code that utilizes the Transifex Strings API and the user's "lan
   {% abort_message('null or blank') %}
 {% endif %}
 ```
-
-You can also leverage the user's `{{${most_recent_locale}}}` if you want to include a variation based upon a user's specific version of a language such as `zh_CN` or `pt_BR`.
-
 {% endraw %}
+
+{% alert tip %}
+You can also leverage the user's {% raw %}`{{${most_recent_locale}}}`{% endraw %} if you want to include a variation based upon a user's specific version of a language such as `zh_CN` or `pt_BR`.
+{% endalert %}
+
 
 [16]: [success@braze.com](mailto:success@braze.com)
 [31]: https://docs.transifex.com/api/translation-strings
