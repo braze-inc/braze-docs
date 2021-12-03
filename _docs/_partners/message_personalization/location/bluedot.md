@@ -21,6 +21,13 @@ The Braze and Bluedot integration allows you to use Bluedot geofence location se
 | Bluedot Account | An active Bluedot account is required to take advantage of this Braze integration. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
 
+## Use cases
+
+The custom event location information provided by Bluedot can be used in your campaigns to achieve common use cases like:
+- [`QSR`](https://bluedot.io/solutions/quick-service-restaurants/) (Quick Service Restaurant)
+- [`Click and Collect`](https://bluedot.io/solutions/click-and-collect/)
+- [`Drive-Thru`](https://bluedot.io/solutions/qsr-drive-thru/) 
+
 ## Integration
 
 ### Step 1: Create a Bluedot project
@@ -46,10 +53,3 @@ Set up an action-based campaign within Braze that will send messages based on a 
 
 Make sure to target **All Users** for your app group.
 ![Bluedot Campaign Compose]({%image_buster /assets/img_archive/Campaign-Target_users-BD.png %}){: style="max-width:80%"}
-
-## Use cases
-
-The custom event location information provided by Bluedot can be used in your campaigns to achieve common use cases like:
-- [`QSR`](https://bluedot.io/solutions/quick-service-restaurants/) (Quick Service Restaurant)
-- [`Click and Collect`](https://bluedot.io/solutions/click-and-collect/)
-- [`Drive-Thru`](https://bluedot.io/solutions/qsr-drive-thru/) 

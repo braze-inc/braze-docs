@@ -9,7 +9,7 @@ search_tag: Partner
 
 ---
 
-# optilyz direct mail automation
+# optilyz
 
 > [optilyz][1] is a direct mail automation platform that enables you to run more customer-centric, sustainable, and profitable direct mail campaigns. optilyz is used by hundreds of companies across Europe and empowers you to integrate letters, postcards, and self-mailers into your cross-channel marketing as well as automate and better personalize campaigns.
 

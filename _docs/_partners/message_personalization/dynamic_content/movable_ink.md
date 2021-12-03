@@ -23,6 +23,14 @@ Expand Braze's creative capabilities by leveraging Movable Ink's Intelligent Cre
 | Data source | You will need to connect a data source to Movable Ink. This can be done through CSV, website import, or API. Make sure that you pass data with a unifying identifier between Braze and Movable Ink (e.g., `external_id`).
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4}
 
+## Use cases
+- Personalized monthly or end-of-year recaps.
+- Dynamically personalize images for email, push, or rich notifications based on last known behavior.<br>
+	For Example: 
+	- Using a rich push message to dynamically create a schedule of events by pulling data from API. 
+	- Using the Countdown Timer feature to notify users when a big sale is approaching (e.g., Black Friday, Valentine's Day, Holiday Deals, etc.)
+	- Use the Scratch Off feature as a fun and interactive way to disburse Promo Codes.
+
 ## Supported Movable Ink capabilities
 
 Intelligent Creative has many offerings that Braze users can take advantage of. Below is a list of what is supported. 
@@ -111,14 +119,6 @@ Next, in the Braze Platform, paste the URL in the appropriate field. Appropriate
 1. In the Braze platform, paste the URL in the __Rich Notification Media__ field.<br><br>
 2. Provide a unique URL to help prevent caching. To ensure that Movable Ink’s real-time images work and will not be affected by caching, use Liquid to append a timestamp to the end of the Movable Ink image URL. <br> To do this, use the following syntax, replacing the image URL as needed:<br>{% raw %} ```{% assign timestamp = "now" | date: "%s" %}``` <br> ```{% assign img = "https://movable-ink-image-url-goes-here" |  append:timestamp %} {{img}}``` {% endraw %} <br>This template will take the current time (in seconds), append it to the end of the Movable Ink image tab (as a query param), and then output the final result. You can preview it with the **Test** tab  - this will evaluate the code and show a preview.<br><br>
 3. Lastly, re-evaluate segment membership. To do this, enable the `Re-evaluate Segment membership` option located on the "Target Users" step of a campaign. If this is option is not available, reach out to your Customer Success Manager or Braze support. This option will instruct Braze SDKs to re-request the campaign providing a unique URL each time an in-app message is triggered.
-
-## Use cases
-- Personalized monthly or end-of-year recaps.
-- Dynamically personalize images for email, push, or rich notifications based on last known behavior.<br>
-	For Example: 
-	- Using a rich push message to dynamically create a schedule of events by pulling data from API. 
-	- Using the Countdown Timer feature to notify users when a big sale is approaching (e.g., Black Friday, Valentine's Day, Holiday Deals, etc.)
-	- Use the Scratch Off feature as a fun and interactive way to disburse Promo Codes.
 
 ## Troubleshooting
 
