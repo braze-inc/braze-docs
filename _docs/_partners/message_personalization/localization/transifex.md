@@ -8,7 +8,7 @@ search_tag: Partner
 
 ---
 
-# About Transifex
+# Transifex
 
 > Transifex enables robust localization across your user base, no matter the language. 
 
@@ -35,7 +35,7 @@ Click __New Credential__, name your credential, and add your user name and passw
 
 ### Step 2: Connected Content
 
-The Transifex integration uses Transifex's translation [strings API][31]. The following CURL will allow you to see if your Transifex account has context values associated with translations. Input the `PROJECT_NAME` and `RESOURCE_NAME` found in your Transifex account. 
+The Transifex integration uses Transifex's translation [strings API][31]. The following cURL will allow you to see if your Transifex account has context values associated with translations. Input the `<PROJECT_NAME>` and `<RESOURCE_NAME>` found in your Transifex account. 
 
 ```
 curl -i -L --user username:password -X GET https://www.transifex.com/api/2/project/<PROJECT_NAME>/resource/<RESOURCE_NAME>/translation/en/strings
