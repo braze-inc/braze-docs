@@ -88,7 +88,7 @@ Next, preview your request in the left-hand panel or navigate to the __Test__ ta
 ![optilyz_testing][7]
 
 {% alert important %}
-Remember to save your template before leaving the page! <br>Updated webhook templates can be found in the **Saved Webhook Templates** list when creating a new webhook campaign. 
+Remember to save your template before leaving the page! <br>Updated webhook templates can be found in the **Saved Webhook Templates** list when creating a new [webhook campaign]({{site.baseurl}}/user_guide/message_building_by_channel/webhooks/creating_a_webhook/). 
 {% endalert %}
 
 [1]: https://optilyz.com
