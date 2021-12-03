@@ -8,7 +8,7 @@ search_tag: Partner
 
 ---
 
-# About Liftigniter
+# Liftigniter
 
 > LiftIgniter is a leading personalization platform helping enterprises transform their customer experiences through real-time personalization across every touch point.
 

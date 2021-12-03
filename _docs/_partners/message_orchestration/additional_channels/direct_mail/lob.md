@@ -8,7 +8,7 @@ search_tag: Partner
 
 ---
 
-# Lob direct mail automation
+# Lob
 
 > [Lob.com][38] is an online service which one can interact with through their API to send direct mail like letters, postcards, and checks through the mail.  
 
