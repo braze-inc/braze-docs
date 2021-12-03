@@ -51,7 +51,7 @@ Lob requires an HTTP Header for authorization and an HTTP method. The following 
 
 #### Request body
 
-The following request body is an example request body for the Lob postcards endpoint. While this request body is provided in the base Lob template in Braze, if you wish to use other endpoints, you must adjust your Liquid fields accordingly.
+The following is an example request body for the Lob postcards endpoint. While this request body is provided in the base Lob template in Braze, if you wish to use other endpoints, you must adjust your Liquid fields accordingly.
 
 ```json
 {% raw %}"description": "Demo Postcard",
