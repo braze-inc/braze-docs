@@ -27,11 +27,15 @@ Use this report to answer key engagement questions, for example:
 - How do different delivery methods (e.g. 3 scheduled pushes vs. 3 action-based pushes vs. 3 API-triggered pushes) impact your open rates, conversion rates, or purchase rates?
 - Have the ongoing improvements to lapsing user messages positively impacted your KPIs over time?
 
+{% alert tip %}
+Try to use the same conversion events for conversion A, B, etc across campaigns and Canvases you wish to compare, so that you can line up these conversions in your Report Builder reports.
+{% endalert %}
+
 ## Run a report
 
 ### Step 1: Create a new report
 
-Within the Dashboard, navigate to the **Report Builder** page in the lefthand navigation. Click **Create New Report** and select either a campaign comparison report or a Canvas comparison report. 
+Within the dashboard, navigate to the **Report Builder** page in the lefthand navigation. Click **Create New Report** and select either a campaign comparison report or a Canvas comparison report. 
 
 If you choose to run a report on campaigns, you can select between a __Manual__ or __Automated__ report. Reports may contain either campaigns or Canvases, but not both together.
 
@@ -82,7 +86,7 @@ For any multivariate campaigns, you can view these metrics broken down by your v
 
 ![Campaign Note][3]{: style="float:right;max-width:15%;margin-left:15px;"}
 
-The metrics populating the row for your overall campaign will reflect the performance of its variants, but will not include the performance of the control. For instance, Primary Conversion Event A for your overall campaign will be the sum of the Primary Conversion Event A for your variants, and this will not include the Primary conversion Event A for your control.
+The metrics populating the row for your overall campaign will reflect the performance of its variants, but will not include the performance of the control. For instance, Primary Conversion Event A for your overall campaign will be the sum of the Primary Conversion Event A for your variants, and this will not include the Primary Conversion Event A for your control.
 
 {% alert important %} If you delete a variant from a multivariant campaign, the data from that variant will not be available for use in a future report. {% endalert %}
 

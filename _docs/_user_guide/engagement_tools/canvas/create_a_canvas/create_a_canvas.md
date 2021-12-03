@@ -67,6 +67,10 @@ The Entry Wizard will guide you through setting up your Canvas—everything from
 
 Here, you'll name your Canvas, assign [Teams]({{site.baseurl}}/user_guide/administrative/manage_your_braze_users/teams/#teams), and create or add [Tags]({{site.baseurl}}/user_guide/administrative/app_settings/tags/#tags). Here, you'll also assign conversion events for the Canvas.
 
+{% alert tip %}
+Tag your Canvases so they’re easy to find and build reports out of. For instance, when using [Report Builder]({{site.baseurl}}/user_guide/data_and_analytics/your_reports/report_builder/), you can filter by particular tags.
+{% endalert %}
+
 ![Basics][51]
 
 #### Choose conversion events
