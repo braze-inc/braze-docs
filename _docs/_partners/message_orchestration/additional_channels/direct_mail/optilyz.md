@@ -29,7 +29,7 @@ Use the optilyz and Braze webhook integration to send your customers direct mail
 Running direct mail like a digital channel means moving away from mass mailings and leveraging the channel as part of your (digital) customer journeys. The benefits of a modern approach to direct mail are:
 - Increased conversion rates via increased relevance, additional use cases, easier A/B testing, and cross-channel effects
 - Reduced effort via automation and an end-to-end solution
-- Reduced cost via frame contracts & cost transparency
+- Reduced cost via frame contracts and cost transparency
 
 ## Integration
 
