@@ -11,36 +11,54 @@ search_tag: Partner
 
 # optilyz
 
-> [optilyz][1] is a direct mail automation platform that enables you to run more customer-centric, sustainable, and profitable direct mail campaigns. optilyz is used by hundreds of companies across Europe and empowers you to integrate letters, postcards, and self-mailers into your cross-channel marketing as well as automate and better personalize campaigns.
+> [optilyz][1] is a direct mail automation platform that enables you to run more customer-centric, sustainable, and profitable direct mail campaigns. 
 
-Use the optilyz and Braze webhook integration to send direct mail to your customers.
+Use the optilyz and Braze webhook integration to send your customers direct mail such as letters, postcards, and self-mailers.
 
-## Requirements
+## Prerequisites
 
-| Requirement | Origin | Access | Description |
-|---|---|---|---|
-| optilyz API Key<br><br>`OPTILYZ_API_KEY`| optilyz | Your optilyz customer success manager will provide you with your optilyz API key. | This API key will enable you to connect your Braze and optilyz accounts. |
-| optilyz Automation ID<br><br>`OPTILYZ_AUTOMATION_ID` | optilyz | The automation ID can be found in a box on the page header. | When logged into optilyz, you can navigate to the automation you want to send data into.<br><br>The automation must be activated first. |
+| Requirement | Description |
+|---|---|
+|optilyz account | An optilyz account is required to take advantage of this partnership. |
+| optilyz API key<br><br>`<OPTILYZ_API_KEY>`| Your optilyz customer success manager will provide you with your optilyz API key.<br><br>This API key will enable you to connect your Braze and optilyz accounts. |
+| optilyz automation ID<br><br>`<OPTILYZ_AUTOMATION_ID>` | The automation ID can be found in a box on the page header.<br><br>When logged into optilyz, you can navigate to the automation you want to send data into.<br>The automation must be activated first. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
+
+## Use cases
+
+Running direct mail like a digital channel means moving away from mass mailings and leveraging the channel as part of your (digital) customer journeys. The benefits of a modern approach to direct mail are:
+- Increased conversion rates via increased relevance, additional use cases, easier A/B testing, and cross-channel effects
+- Reduced effort via automation & an end-to-end solution
+- Reduced cost via frame contracts & cost transparency
 
 ## Integration
 
 To integrate with optilyz, use the [optilyz API][2] to send recipient data to the Braze webhook.
 
-### Step 1: Create a webhook template in Braze
+### Step 1: Create your Braze webhook template
 
-To create a webhook template, from the Braze dashboard, navigate to __Templates & Media__ and select __Blank Template__ under __Webhook Templates__. Name your template.
-
-### Step 2: Fill out your template
+In the Braze platform, to create an optilyz webhook template to use in future campaigns or Canvases, navigate to the **Templates & Media** section. If you would like to create a one-off optilyz webhook campaign or use an existing template, select **Webhook** in Braze when creating a new campaign.
 
 In your new Webhook template, fill out the following fields:
+- **Webhook URL**: `https://www.optilyz.com/api/v2/automations/<OPTILYZ_AUTOMATION_ID>/recipient`
+- **Request Body**: Raw Text
 
-- `Webhook URL`: https://www.optilyz.com/api/v2/automations/OPTILYZ_AUTOMATION_ID/recipient
-- `Request Body`: Raw Text
+#### Request headers and method
+
+optilyz also requires an HTTP Header for authorization and an HTTP method. The following will already be included within the template as a key-value pair, but in the **Settings** tab, you must replace the `<OPTILYZ_API_KEY>` with your optilyz API key. This key must include a ":" directly after the key and be encoded in base 64. 
+
+- **HTTP Method**: POST
+- **Request Headers**:
+  - **Authorization**: {% raw %} `{{ '<OPTILYZ_API_KEY>:' | base64_encode }}` {% endraw %}
+  - **Content-Type**: application/json
+
+![optilyz_settings][6]{: style="max-width:50%"}
+
+#### Request body
 
 In the following request body, you can use any Liquid personalization tags and build a custom request template according to optilyz' [API documentation][2].
 
-The `variation` field is optional and can be used to define which design inside the automation should be used. If a variation is omitted, optilyz will assign one of the defined variations randomly.
+The `variation` field is optional and can define which design inside the automation should be used. If a variation is omitted, optilyz will assign one of the defined variations randomly.
 
 {% raw %}
 ```json
@@ -63,37 +81,15 @@ The `variation` field is optional and can be used to define which design inside 
 
 ![optilyz_compose][5]
 
-### Step 3: Define request headers and HTTP method
-
-optilyz also requires an HTTP Header for authorization and an HTTP method. In the __Settings__ tab of the webhook editor, create a key-value pair and replace the `OPTILYZ_API_KEY` with your optilyz API key.
-
-- `HTTP Method`: POST
-- `Request Headers`:
-  - `Authorization`: {% raw %} `{{ 'OPTILYZ_API_KEY:' | base64_encode }}` {% endraw %}
-  - `Content-Type`: application/json
-
-![optilyz_settings][6]{: style="max-width:50%"}
-
-### Step 4: Preview your request and save your template
+### Step 2: Preview your request
 
 Next, preview your request in the left-hand panel or navigate to the __Test__ tab, where you can select a random user, an existing user, or customize your own to test your webhook. Remember to save your template before leaving the page!
 
-![optilyz_testing][7]{: style="max-width:80%"}
+![optilyz_testing][7]
 
-## Using this integration
-
-Create a campaign, select __Webhook__, and choose your template from the __Saved Webhook Template__ list.<br>For more information, check out our documentation on [Webhooks][9]!
-
-## Use cases
-
-Running direct mail like a digital channel means moving away from mass mailings and leveraging the channel as part of your (digital) customer journeys.
-
-Reach out to your optilyz customer success manager if you're interested in understanding how companies in your industry leverage letters, postcards, and more to enhance their customer experience. Our best practice and benchmark database help us assist you in setting up high-performing automation. These may be geared at converting one-time buyers into loyal fans, exciting your most valuable customers, and preventing churn.
-
-The benefits of a modern approach to direct mail are:
-- Increased conversion rates via increased relevance, additional use cases, easier A/B testing & cross-channel effects
-- Reduced effort via automation & an end-to-end solution
-- Reduced cost via frame contracts & cost transparency
+{% alert important %}
+Remember to save your template before leaving the page! <br>Updated webhook templates can be found in the **Saved Webhook Templates** list when creating a new webhook campaign. 
+{% endalert %}
 
 [1]: https://optilyz.com
 [2]: https://www.optilyz.com/doc/api/
