@@ -35,7 +35,7 @@ Create a Stripo email in the Stripo platform and click **Export**.
 
 In the dialogue that appears, select **Braze** as your method of export 
 
-Next, enter your `account name` (i.e. `Appgroup name`), `API key`, and your `cluster instance`.
+Next, enter your **account name** (i.e. Appgroup name), **API key**, and your **cluster instance**.
 
 ![Stripo Form]({% image_buster /assets/img_archive/stripo_form.png %})
 
