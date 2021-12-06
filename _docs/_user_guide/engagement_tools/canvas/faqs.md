@@ -75,3 +75,7 @@ There is a one-step Canvas with quiet hours:
 The user will count as converted in the overall Canvas variant, but not the step since they didn't receive the step.
 
 {% enddetails %}
+
+### When looking at the number of unique users, is Canvas analytics or the segmenter more accurate?
+
+The segmenter is a more accurate statistic for unique user data versus Canvas or campaign stats. This is because Canvas and campaign statistics are numbers that Braze increments when something happens—which means there are variables which could result in this number being different than that of the segmenter. For example, users can convert more than once for a Canvas or campaign.  

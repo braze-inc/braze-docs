@@ -14,6 +14,10 @@ tool: Campaigns
 
 Multichannel campaigns can be created by selecting __Create Campaign__ and then __Multichannel Campaign__ within the dashboard. Once in a multichannel campaign, select __Add Messaging Channel__ within the __compose__ tab to add your desired channels. Clicking on the channel icons that appear will allow you to toggle through different messaging composers as you build your campaign copy for the different channels.
 
+### What are some ways I can start testing and optimizing campaigns?
+
+Multivariate campaigns and running Canvases with multiple variants are a great way to start! For example, you can run a [multivariate campaign]({{site.baseurl}}/user_guide/engagement_tools/testing/multivariant_testing/) to test out one message that has different copies or subject lines. Canvases with multiple variants are helpful for tsting entire workflows.
+
 ### Why is there a difference between the number of unique recipients and the number of sends for a given campaign or Canvas?
 
 One potential explanation for this difference could be due to the campaign or Canvas having re-eligibility turned on. By having this on, users who qualify for the segment and delivery settings will be able to receive the message more than once. If re-eligibility is not turned on, then the probable explanation for the difference between sends and unique recipients may be due to users having multiple devices, across platforms, associated with their profiles. 
