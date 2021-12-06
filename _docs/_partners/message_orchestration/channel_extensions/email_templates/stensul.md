@@ -2,7 +2,7 @@
 nav_title: Stensul
 article_title: Stensul
 alias: /partners/stensul
-description: "This article outlines the partnership between Braze and Stensul, an enterpirse email platform that allows you to easily create mobile-responsive email templates across channels, at scale."
+description: "This article outlines the partnership between Braze and Stensul, an enterprise email platform that allows you to easily create mobile-responsive email templates across channels."
 page_type: partner
 search_tag: Partner
 
@@ -10,35 +10,44 @@ search_tag: Partner
 
 # Stensul
 
-[Stensul](https://stensul.com/) empowers email marketers to easily create mobile-responsive emails across channels, at scale.
+> [Stensul](https://stensul.com/) empowers email marketers to easily build mobile-responsive, on-brand emails in Stensul before sending them downstream to Braze, in real-time, for campaign creation.
 
-Build responsive, on-brand emails in Stensul before sending them downstream to Braze, in real-time, for segmentation and targeting.
+The Braze and Stensul integration allows you to export your HTML-formatted Stensul emails and upload them as templates within Braze.
 
-## Requirements
+## Prerequisites
 
-Requirement   | Source | Description
---------------|--------| -----
-Braze API Key | [Braze Platform](https://dashboard.braze.com/sign_in) | The API key must have the *Template's* permission enabled before use.
+| Requirement | Description |
+| ------------| ----------- |
+| Stensul account | A Stensul account is required to take advantage of this partnership. |
+| Braze REST API key | A Braze REST API Key with full **Templates** permissions. <br><br> This can be created within the __Braze Dashboard -> Developer Console -> REST API Key -> Create New API Key__ |
+| Cluster instance | Your Braze [cluster instance]({{site.baseurl}}/api/basics/#endpoints) aligns with your Braze dashboard and REST endpoint.  |
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
 
 ## Integration
 
-The export functionality from Stensul to Braze will allow users to send your HTML-formatted email as a new template within the Braze platform.
+Provide your Braze REST API key and cluster instance to your Stensul customer success team. Once provided, they will set up the initial integration for you.
 
-Braze is integrated directly into the Stensul platform. Thus, after providing your Stensul Customer Success team with your Braze API key and cluster instance, the integration will be set up for you, allowing you to push your completed email from Stensul to Braze as outlined below.
+{% alert important %}
+This is a one-time setup and any exports in the future will automatically utilize this API key.
+{% endalert %}
 
-### Step 1
-Once the email is created in Stensul, click **Complete**.
+### Step 1: Create Stensul email
+
+Create a Stensul email in the Stensul platform and click **Complete**.
+
 ![Stensul Save Options]({% image_buster /assets/img_archive/stensul_save_options.png %})
 
-### Step 2
-Select the **Upload to ESP** option on the Completion page, as shown below.
+### Step 2: Export template to Braze
+In the new dialogue that appears on the completion page, select **Upload to ESP**.
+
 ![Stensul Upload Options]({% image_buster /assets/img_archive/stensul_upload_options.png %})
 
-### Step 3
-Enter the `template name`, `subject`, and `preheader` for your email. Then, select **Upload**. You will then receive a confirmation that the upload was successful and a history of past uploads of the file if applicable.
+Next, enter the **template name**, **subject**, and **preheader** for your email and select **Upload**. You will then receive a confirmation that the upload was successful and a history of past uploads of the file, if applicable.
+
 ![Stensul Upload Success]({% image_buster /assets/img_archive/stensul_upload_success.png %})
 
 ## Usage
-To use this integration, look for your new email template in [Templates & Media > Email Templates][1] in your Braze account, or begin to create your email and choose your template from those presented.  
+
+Find your uploaded Stensul template in your Braze account's **Templates & Media > Email Templates** section. You can now use this email template to start sending engaging email messages to your customers!
 
 [1]: {{site.baseurl}}/user_guide/message_building_by_channel/email/creating_an_email_template/
