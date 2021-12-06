@@ -43,7 +43,7 @@ If you want to upload your template manually, view the published email template 
 ![Dyspatch Export Template]({% image_buster /assets/img/dyspatch/dyspatch_export.gif %})
 
 {% alert important %}
-Do not select Inline CSS in the **Sending Info** section for any Dyspatch email template in Braze. Dyspatch takes care of this by making sure your emails are robust, responsive, and ready to send.
+Do not select **Inline CSS** in the **Sending Info** section for any Dyspatch email template in Braze. Dyspatch takes care of this by making sure your emails are robust, responsive, and ready to send.
 {% endalert %}
 
 ### Usage
