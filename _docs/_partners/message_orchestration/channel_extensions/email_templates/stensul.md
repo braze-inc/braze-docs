@@ -42,7 +42,7 @@ In the new dialogue that appears on the completion page, select **Upload to ESP*
 
 ![Stensul Upload Options]({% image_buster /assets/img_archive/stensul_upload_options.png %})
 
-Next, enter the `template name`, `subject`, and `preheader` for your email and select **Upload**. You will then receive a confirmation that the upload was successful and a history of past uploads of the file, if applicable.
+Next, enter the **template name**, **subject**, and **preheader** for your email and select **Upload**. You will then receive a confirmation that the upload was successful and a history of past uploads of the file, if applicable.
 
 ![Stensul Upload Success]({% image_buster /assets/img_archive/stensul_upload_success.png %})
 
