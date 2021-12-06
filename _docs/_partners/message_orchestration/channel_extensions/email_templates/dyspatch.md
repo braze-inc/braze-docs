@@ -18,15 +18,15 @@ The Dyspatch and Braze integration allow you to simplify your email creation lif
 
 | Requirement | Description |
 | ----------- | ----------- |
-| Braze REST API key | A Braze REST API Key with full template permissions. <br><br> This can be created within the __Braze Dashboard -> Developer Console -> REST API Key -> Create New API Key__ |
 | Dyspatch account | A [Dyspatch account][3] with an [owner or admin role][4] is required to take advantage of this partnership. |
+| Braze REST API key | A Braze REST API Key with full **Templates** permissions. <br><br> This can be created within the __Braze Dashboard -> Developer Console -> REST API Key -> Create New API Key__ |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
 
 ## Integration
 
 The Braze and Dyspatch integration lets you export Dyspatch email templates directly into your Braze media library or download your template and manually upload it. 
 
-### Step 1: Create a Braze integration
+### Step 1: Create the Braze integration
 
 In the Dyspatch administration portal, open your username drop-down menu and select **Integrations**. Create a new integration, select **Braze**, and enter your Braze API key.
 
@@ -34,7 +34,7 @@ In the **Localize Exports By** field, you can choose how you would like to manag
 
 ![Dyspatch Export Template]({% image_buster /assets/img/dyspatch/dyspatch_integration_create.png %}){: style="max-width:50%;"}
 
-### Step 2: Export an email from Dyspatch into Braze
+### Step 2: Export template to Braze
 
 After completing an email in Dyspatch, to send your template to Braze, view the published email template and click **Download/Export** and then **Export to Integration**.
 
@@ -48,7 +48,7 @@ Do not select Inline CSS in the **Sending Info** section for any Dyspatch email 
 
 ### Usage
 
-Your Dyspatch email template can be found in your Braze account's **Templates & Media > Email Templates** section. You can now use this email template to start sending engaging email messages to your customers!
+Find your uploaded Dyspatch template in your Braze account's **Templates & Media > Email Templates** section. You can now use this email template to start sending engaging email messages to your customers!
 
 [1]: https://www.dyspatch.io
 [2]: https://dashboard.braze.com/sign_in

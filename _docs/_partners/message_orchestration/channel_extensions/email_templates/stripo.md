@@ -2,7 +2,7 @@
 nav_title: Stripo
 article_title: Stripo
 alias: /partners/stripo
-description: "This article outlines the partnership between Braze and Stripo, a drag-and-drop email template builder that allows you to quickly create sophisticated emails to use in the Braze platform."
+description: "This article outlines the partnership between Braze and Stripo, a drag-and-drop email template builder that allows you to easily create sophisticated emails with interactive elements."
 page_type: partner
 search_tag: Partner
 
@@ -10,36 +10,41 @@ search_tag: Partner
 
 # Stripo
 
-[Stripo](https://stripo.email/) is a Drag-n-Drop email template builder that helps create sophisticated emails in no time due to workflow automation. Design responsive emails, setting which elements to display/hide on various devices, add interactive elements to emails right in the Stripo editor. The HTML code editor allows working with pure code to design unique emails.
+> [Stripo](https://stripo.email/) is a drag and drop email template builder that helps you create and design responsive emails with interactive elements. Stripo users can also edit in HTML and decide which elements to display or hide on various devices through the Stripo editor.
 
-Create emails with Stripo faster with its comprehensive Drag-n-Drop editor and set of basic blocks. Embed custom HTML code with interactive elements. Then export those emails to Braze in 2 clicks, where you finalize them — personalize, add contact information prior to running email campaigns, and track conversions after. Combine the tools for easy, productive communication with clients.
+The Braze and Stripo integration allows you to export your customized Stripo emails and upload them as templates within Braze.
 
-## Requirements
+## Prerequisites
 
-Requirement   | Source | Description
---------------|--------| -----
-Braze API Key | [Braze Platform](https://dashboard.braze.com/sign_in) | The API key must have the *Template's* permission enabled before use.
+| Requirement | Description |
+| ------------| ----------- |
+| Stripo account | A Stripo account is required to take advantage of this partnership. |
+| Braze REST API key | A Braze REST API Key with full **Templates** permissions. <br><br> This can be created within the __Braze Dashboard -> Developer Console -> REST API Key -> Create New API Key__ |
+| Cluster instance | Your Braze [cluster instance]({{site.baseurl}}/api/basics/#endpoints) aligns with your Braze dashboard and REST endpoint.  |
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
 
-## Integration usage
+## Integration
 
-The export functionality from Stripo to Braze will allow users to send the HTML as a new template within the Braze platform.
+### Step 1: Create Stripo email
 
-### Step 1
-Once you have finished editing your email, click **export** located at the top next to the name field.
+Create a Stripo email in the Stripo platform and click **Export**. 
+
 ![Stripo Export]({% image_buster /assets/img_archive/stripo_export.png %})
 
-### Step 2
-Select **Braze** as your method of export.
+### Step 2: Export template to Braze
 
-### Step 3
-Enter your `account name` (i.e `Appgroup name`), `API key`, and your `cluster instance`.
+In the dialogue that appears, select **Braze** as your method of export 
+
+Next, enter your `account name` (i.e. `Appgroup name`), `API key`, and your `cluster instance`.
+
 ![Stripo Form]({% image_buster /assets/img_archive/stripo_form.png %})
 
 {% alert important %}
-This is a one-time setup and any exports in the future will automatically utilize this API key.
+This is a one-time setup, and any exports in the future will automatically utilize this API key.
 {% endalert %}
 
 ## Usage
-To use this integration, look for your new email template in [Templates & Media > Email Templates][1] in your Braze account, or begin to create your email and choose your template from those presented.  
+
+Find your uploaded Stripo template in your Braze account's **Templates & Media > Email Templates** section. You can now use this email template to start sending engaging email messages to your customers!
 
 [1]: {{site.baseurl}}/user_guide/message_building_by_channel/email/creating_an_email_template/
