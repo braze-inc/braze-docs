@@ -8,7 +8,7 @@ channel:
   - MMS
 
 guide_top_header: "SMS & MMS"
-guide_top_text: "SMS (Short Messaging Service) and MMS (Multimedia Messaging Service) offer more direct ways to reach your users and customers than most other messaging channels, as it utilizes their personal phone number to reach them. Note that SMS & MMS are __not__ available out-of-the-box and must be purchased. Check out the topics below to get started with Braze SMS or MMS!"
+guide_top_text: "SMS (Short Messaging Service) and MMS (Multimedia Messaging Service) offer more direct ways to reach your users and customers than most other messaging channels, as it utilizes their personal phone number to reach them. Check out the topics below to get started with Braze SMS or MMS!<br><br>Not ready for any of the topics below? Head to our <a href='/docs/user_guide/onboarding_with_braze/sms_setup/'>SMS setup</a> collection to get to know SMS at Braze. Note that SMS and MMS are __not__ available out-of-the-box and must be purchased."
 description: "SMS (Short Messaging Service) and MMS (Multimedia Messaging Service) offer more direct ways to reach your users and customers than most other messaging channels, as it utilizes their personal phone number to reach them."
 
 guide_featured_title: "SMS"
@@ -60,11 +60,3 @@ guide_menu_list:
   link: /docs/user_guide/message_building_by_channel/sms/mms/faqs/
   fa_icon: fas fa-comment
 ---
-
-<br>
-
-Not ready for any of the topics above? Head to our [SMS Set Up section]({{site.baseurl}}/user_guide/onboarding_with_braze/sms_setup/) to get to know SMS at Braze!
-
-<br>
-
-

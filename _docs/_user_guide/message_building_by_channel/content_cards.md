@@ -26,7 +26,7 @@ guide_featured_list:
 - name: Testing
   link: /docs/user_guide/message_building_by_channel/content_cards/testing/
   fa_icon: fas fa-vial
-- name: "Reporting & Analytics"
+- name: "Reporting"
   link: /docs/user_guide/message_building_by_channel/content_cards/reporting/
   fa_icon: fas fa-chart-pie
 - name: Migrating from News Feed
