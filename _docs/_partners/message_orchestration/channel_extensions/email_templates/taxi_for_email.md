@@ -10,7 +10,7 @@ search_tag: Partner
 
 # Taxi for Email
 
-[Taxi for Email](http://taxiforemail.com/) is an online email marketing tool that offers an easy-to-use drag and drop visual email editor. Taxi encourage teams to easily collaborate on email campaigns, allowing copywriters and editors the access and resources they need to build emails, all without code.
+[Taxi for Email](http://taxiforemail.com/) is an online email marketing tool that offers an intuitive drag-and-drop visual email editor. Taxi encourage teams to easily collaborate on email campaigns, allowing copywriters and editors the access and resources they need to build emails, all without code.
 
 The Braze and Taxi integration leverages Taxi's simple yet powerful syntax to create and export intelligent email templates to Braze. 
 
