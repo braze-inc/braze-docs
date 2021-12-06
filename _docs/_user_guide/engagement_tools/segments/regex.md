@@ -27,7 +27,7 @@ In the provided video, we show you how regular expressions can be used and teste
 This form allows for basic validation and testing of regular expressions.
 ​
 <div class="alert alert-important" role="alert"><div class="alert-msg"> <b>important: </b><br />
-<p>This tool is only meant as a reference, and does not guarantee that the regex matches 100% with the Braze Platform. Regex used within Braze are case sensitive, so make sure that your regexes can handle all cases. </p>
+<p>This tool is only meant as a reference, and does not guarantee that the regex matches 100% with the Braze Platform. Regular expressions in Braze automatically add the <code>gi</code> modifier. The <a href='https://w3schools.sinsixx.com/jsref/jsref_regexp_modifier_gi.asp.htm'>gi modifier</a> is used to do a case-insensitive search of all occurrences of a regular expression in a string. </p>
 </div></div>
 <div>
 Regex:
