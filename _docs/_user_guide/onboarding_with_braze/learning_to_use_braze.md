@@ -30,14 +30,13 @@ Choose from the paths below to fit your needs and get reading!
 | 3 | [User profile lifecycle]({{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/user_profile_lifecycle/) | What user profiles are in Braze and the various ways you can identify and reference a user’s profile. |
 | 4 | [Using User Search]({{site.baseurl}}/user_guide/engagement_tools/segments/using_user_search/) | How to search for users in the dashboard, the components of a user profile, and how you can use this feature to troubleshoot campaigns. |
 | 5 | [Creating a segment]({{site.baseurl}}/user_guide/engagement_tools/segments/creating_a_segment/) | Divide your user into specific audiences based on their attributes and actions within your site or app. |
-| 6 | [Regular expressions]({{site.baseurl}}/user_guide/engagement_tools/segments/regex/) | How to use regular expressions in your segments or campaign filtering. |
-| 7 | [Choosing a messaging channel]({{site.baseurl}}/user_guide/message_building_by_channel/#choosing-a-message-channel) | How to choose the right message channel for your content. |
-| 8 | [Create a campaign]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/creating_campaign/) | How to create a simple messaging campaign for each channel available in Braze. |
-| 9 | [Create a Canvas]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/create_a_canvas/) | How to build out a basic campaign using Braze's Canvas tool. |
-| 10 | [Personalization using Liquid]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/) | How to automatically substitute a customer’s user profile information into your messaging. |
-| 11 | [Connected Content]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/connected_content/) | How to expand on Liquid functionalities by pulling dynamic content from places outside of Braze. |
-| 12 | [Reports overview]({{site.baseurl}}/user_guide/data_and_analytics/your_reports/reports_overview/) | Which reports and analytics in Braze you can use to answer common marketing strategy questions. |
-| 13 | [Multivariate and A/B testing]({{site.baseurl}}/user_guide/engagement_tools/testing/multivariant_testing/) | How to A/B test your campaigns and best practices to keep in mind. |
+| 6 | [Choosing a messaging channel]({{site.baseurl}}/user_guide/message_building_by_channel/#choosing-a-message-channel) | How to choose the right message channel for your content. |
+| 7 | [Create a campaign]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/creating_campaign/) | How to create a simple messaging campaign for each channel available in Braze. |
+| 8 | [Create a Canvas]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/create_a_canvas/) | How to build out a basic campaign using Braze's Canvas tool. |
+| 9 | [Personalization using Liquid]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/) | How to automatically substitute a customer’s user profile information into your messaging. |
+| 10 | [Connected Content]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/connected_content/) | How to expand on Liquid functionalities by pulling dynamic content from places outside of Braze. |
+| 11 | [Reports overview]({{site.baseurl}}/user_guide/data_and_analytics/your_reports/reports_overview/) | Which reports and analytics in Braze you can use to answer common marketing strategy questions. |
+| 12 | [Multivariate and A/B testing]({{site.baseurl}}/user_guide/engagement_tools/testing/multivariant_testing/) | How to A/B test your campaigns and best practices to keep in mind. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
 
 ## Adept admin
@@ -96,5 +95,6 @@ Choose from the paths below to fit your needs and get reading!
 | 9 | [Custom events]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events/) | What custom events and custom event properties are and how to use them. |
 | 10 | [Custom attributes]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_attributes/) | The different types of custom attributes and how they're stored in Braze. |
 | 11 | [Event naming conventions]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/event_naming_conventions/) | Best practices to ensure consistency in your event and attribute naming taxonomy. |
-| 12 | [Exporting Braze data]({{site.baseurl}}/user_guide/data_and_analytics/export_braze_data/) | The many ways to export data from the Braze platform. |
+| 12 | [Regular expressions]({{site.baseurl}}/user_guide/engagement_tools/segments/regex/) | How to use regular expressions in your segments or campaign filtering. |
+| 13 | [Exporting Braze data]({{site.baseurl}}/user_guide/data_and_analytics/export_braze_data/) | The many ways to export data from the Braze platform. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
