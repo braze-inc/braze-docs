@@ -38,7 +38,7 @@ For iOS or Android, select your notification type:
 
 If you want to include images in your push campaign, refer to the following guides on creating a rich notification for [iOS]({{site.baseurl}}/user_guide/message_building_by_channel/push/ios/rich_notifications/) or [Android]({{site.baseurl}}/user_guide/message_building_by_channel/push/android/rich_notifications/).
 
-Now it's time to write your push message! Start typing in the message box and watch a preview appear in the preview box to the left. Don't forget to use [Liquid]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/) when writing your push messages to make them personalized and targeted.
+Now it's time to write your push message! Start typing in the message box and watch a preview appear in the preview box to the left. Push messages must be formatted in plain text, but can include [Liquid]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/) to make your push personalized and targeted.
 
 ### Additional push customization steps
 
@@ -48,7 +48,7 @@ Add copy in multiple languages using the __Add Languages__ button. Insert Liquid
 
 #### On click behavior
 
-Specify what happens when a user clicks the body of a push notification with **On Click Behavior**. For example, you can prompt customers to open your application, redirect customers to a specified Web URL, or even open a specific page of your application with a deep link.
+Specify what happens when a user clicks the body of a push notification with **On Click Behavior**. For example, you can prompt customers to open your application, redirect customers to a specified Web URL, or even open a specific page of your application with a [deep link]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/deep_linking_to_in-app_content/).
 
 Here, you can also set up button prompts within your push notification, such as:
 
