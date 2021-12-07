@@ -193,7 +193,7 @@ Once the app installation is complete, Braze automatically creates your webhook 
 {% tab Shopify Custom Attributes %}
 | Attribute Name | Description |
 | --- | --- |
-| `shopify_accepts_marketing` | The `shopify_accepts_marketing` custom attribute corresponds to the SMS marketing opt-in status that is captured on the checkout page. |
+| `shopify_accepts_marketing` | The `shopify_accepts_marketing` custom attribute corresponds to the email marketing opt-in status that is captured on the checkout page. |
 | `shopify_sms_consent` | The `shopify_sms_consent` custom attribute corresponds to the SMS marketing opt-in status that is captured on the checkout page. |
 | `shopify_tags`  | The `shopify_tags` custom attribute corresponds to the [Customer Tags](https://help.shopify.com/en/manual/shopify-admin/productivity-tools/using-tags#tag-types) set by Shopify admins. |
 {: .reset-td-br-1 .reset-td-br-2}
