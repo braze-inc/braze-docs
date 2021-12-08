@@ -206,7 +206,7 @@ Add a `sort` parameter in the format `sort[field]=direction`.
 
 Add a `limit` parameter in the format `limit=value`.
 
-For example, the following filters for items in the pants category that are in stock. The results are sorted by price with a maximum of three items displayed:
+For example, the following filters for items in the pants category that are in stock. The results are sorted by price with a maximum of two items displayed:
 
 {% tabs local %}
 {% tab Variables %}
