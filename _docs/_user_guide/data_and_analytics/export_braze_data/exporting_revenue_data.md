@@ -40,6 +40,8 @@ You can view revenue statistics on a case-by-case basis on the [Campaign Analyti
 For help with CSV and API exports, refer to [Export troubleshooting]({{site.baseurl}}/user_guide/data_and_analytics/export_braze_data/export_troubleshooting/).
 {% endalert %}
 
+{% comment %}
+
 ## Direct revenue
 
 You can view the following additional revenue metrics by generating a Campaign Comparison Report using the [Report Builder][1]:
@@ -54,6 +56,8 @@ These metrics are based on last-click attribution, which means that in order for
 1. Be the last campaign the user clicked prior to purchasing
     <br>**AND**<br>
 2. Be clicked by the user less than 3 days prior to purchasing
+
+{% endcomment %}
 
 [1]: {{site.baseurl}}/user_guide/data_and_analytics/your_reports/report_builder/
 [2]: {{site.baseurl}}/user_guide/data_and_analytics/report_metrics/#total-direct-revenue
