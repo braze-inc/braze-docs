@@ -27,6 +27,10 @@ On the **Campaigns** page, click **Create Campaign** and select **Email** as you
 
 From the campaign wizard, name your email and provide an optional description. You can also assign [tags][20] to keep track of engagement tactics.
 
+{% alert tip %}
+Tags make your campaigns easy to find and build reports out of. For instance, when using [Report Builder]({{site.baseurl}}/user_guide/data_and_analytics/your_reports/report_builder/), you can filter by particular tags.
+{% endalert %}
+
 Braze offers two editing experiences when creating an email campaign, our [Drag & Drop editor]({{site.baseurl}}/dnd/) or our standard HTML editor. Click on the appropriate tile to select which editing experience you'd prefer. Once selected, you must also select an existing [HTML][10] or [Drag & Drop][10] email template, [upload a template from a file][18] (HTML editor only), or use a blank template.
 
 ![Email Creation][3]

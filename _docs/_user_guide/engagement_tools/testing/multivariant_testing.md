@@ -221,6 +221,9 @@ To do this, create another test with the same messaging channel and variants, bu
 **Run a follow-up test based on insights from a previous test**<br>
 Use the insights you gather from past tests to guide your future ones. Does a previous test hint at one messaging technique being more effective? Are you unsure about what specific aspect of a variant made it better? Running follow-up tests based on these questions will help you generate insightful findings about your users.
 
+**Compare the long-term impact of different variants**<br>
+If you’re A/B testing re-engagement messages, don’t forget to compare the long-term impact of different variants via [Retention Reports]({{site.baseurl}}/user_guide/data_and_analytics/your_reports/retention_reports/). You can use Retention Reports to analyze how each variant impacted any user behavior of your choice days, weeks, a month after message receipt, and see if there’s uplift.
+
 [2]: {{site.baseurl}}/user_guide/engagement_tools/campaigns/testing_and_more/conversion_events/#conversion-events
 [70]: #tips-different-channels
 [80]: #choosing-a-segment

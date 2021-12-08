@@ -18,7 +18,7 @@ Braze enables you to send extra data payloads to user devices via key-value pair
 
 ### iOS
 
-apple push notifications service (apns) supports setting alert preferences and sending custom data using key-value pairs. apns makes use of the apple-reserved ```aps``` library, which includes predetermined keys and values that govern alert properties.
+Apple Push Notification service (APNs) supports setting alert preferences and sending custom data using key-value pairs. APNs makes use of the Apple-reserved ```aps``` library, which includes predetermined keys and values that govern alert properties.
 
 ##### APS library
 

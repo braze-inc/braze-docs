@@ -8,7 +8,7 @@ search_tag: Partner
 
 ---
 
-# About Certona
+# Certona
 
 > Certona's platform drives personalization across the customer lifecycle. From highly individualized email campaigns to machine-learning-powered product recommendations, Certona ensures that you're harnessing the power of personalization.
 

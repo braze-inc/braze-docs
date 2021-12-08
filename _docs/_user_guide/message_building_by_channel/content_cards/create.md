@@ -19,36 +19,40 @@ You can create a Content Card using the Braze platform using campaigns and Canva
 
 {% tabs %}
 {% tab Campaign %}
-__Build Your Message__
 
-Navigate to the Campaign section of the Dashboard and click __Create Campaign__ to open a new messaging wizard for your Content Card. Then, follow the flow of the messaging wizard to quickly create and launch your Content Card.
+### Build your message
+
+Navigate to the **Campaign** section of the dashboard and click __Create Campaign__ to open a new messaging wizard for your Content Card. Then, follow the flow of the messaging wizard to quickly create and launch your Content Card.
 
 ![Create Your Content Card]({% image_buster /assets/img/create-cc.gif %})
 
-1. Name your campaign something clear and meaningful.<br><br>
-2. Add __Teams__ and __Tags__, as necessary.<br><br>
-3. Add and name as many Variants as you need for this campaign.
+1. Name your campaign something clear and meaningful.
+2. Add __Teams__ and __Tags__, as necessary.
+  - Tags make your campaigns easy to find and build reports out of. For instance, when using [Report Builder]({{site.baseurl}}/user_guide/data_and_analytics/your_reports/report_builder/), you can filter by particular tags.
+3. Add and name as many variants as you need for this campaign.
   - You can choose different platforms, message types, and layouts for each of your added Variants.
 
 {% alert tip %}
-If all of the messages in your campaign are going to be similar or have the same content, compose your message before adding additional Variants - you will be able to choose **Copy from Variant** from the **Add Variant** dropdown.
+If all of the messages in your campaign are going to be similar or have the same content, compose your message before adding additional variants. You can then choose **Copy from Variant** from the **Add Variant** dropdown.
 {% endalert %}
 
 {% endtab %}
 {% tab Canvas %}
-__Setup Your Canvas__
 
-Navigate to the Canvas Section of the Dashboard and click __Create Canvas__ to open the Canvas Wizard to begin setting up your Canvas. Then, follow the flow of the Canvas wizard to quickly create and launch your Content Card.
+### Set up your Canvas
 
-1. __Name your Canvas__ something clear and meaningful.<br><br>
-2. __Add Teams and Tags__, as necessary.<br><br>
-3. __Define your conversion events__ - Canvas supports up to 4 conversion events. These events must be assigned during Canvas creation and cannot be changed once a Canvas has launched.<br><br>
-4. __Set up your Entry Schedule__ - Canvas offers Scheduled, Action-Based and API-Triggered entry. <br><br>
-5. __Select your Entry Audience__ - Here, you can determine who will enter this Canvas and target users by segments and filters; these conditions will not be re-evaluated at each step. Within this dialogue, you also have the option to select Entry Controls, such as allowing users to re-enter this Canvas and set an entry limit. You'll also automatically be given a snapshot of what that approximate target population looks like right now.<br><br>
-6. __Set your Send Settings__ - Here, you can set messages sending options for all steps within Canvas. Some of these options include setting subscription settings, adjusting the rate limit, toggle frequency capping, and more.<br><br>
-7. __Add a Step in the Canvas Builder__ - Within this step, click Messages and then select the Content Card Messaging Channel. Here you will create and configure your Content Card.<br>![Create Your Content Card]({% image_buster /assets/img/content_card.gif %}){: style="max-width:90%"}
+Navigate to the **Canvas** page of the dashboard and click __Create Canvas__ to begin setting up your Canvas. Then, follow the flow of the Canvas wizard to quickly create and launch your Content Card.
 
-For more in-depth details on setting up and configuring your Canvas, check out our [Canvas documentation]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/create_a_canvas/). 
+1. Name your Canvas something clear and meaningful.
+2. Add **Teams** and **Tags**, as necessary.
+  - Tags make your Canvases easy to find and build reports out of. For instance, when using [Report Builder]({{site.baseurl}}/user_guide/data_and_analytics/your_reports/report_builder/), you can filter by particular tags.
+3. Define your conversion events. Canvas supports up to four conversion events—these events must be assigned during Canvas creation and cannot be changed once a Canvas has launched.
+4. Set up your **Entry Schedule**. Canvas offers Scheduled, Action-Based and API-Triggered entry.
+5. Select your **Entry Audience**. Here, you can determine who will enter this Canvas and target users by segments and filters; these conditions will not be re-evaluated at each step. Within this dialogue, you also have the option to select Entry Controls, such as allowing users to re-enter this Canvas and set an entry limit. You'll also automatically be given a snapshot of what that approximate target population looks like right now.
+6. Set your **Send Settings**. Here, you can set messages sending options for all steps within Canvas. Some of these options include setting subscription settings, adjusting the rate limit, toggle frequency capping, and more.
+7. Add a step in the Canvas builder. Within this step, click **Messages** and then select the **Content Card** messaging channel. Here you will create and configure your Content Card.<br>![Create Your Content Card]({% image_buster /assets/img/content_card.gif %}){: style="max-width:90%"}
+
+For more in-depth details on setting up and configuring your Canvas, refer to [Creating a Canvas]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/create_a_canvas/). 
 
 {% endtab %}
 {% endtabs %}

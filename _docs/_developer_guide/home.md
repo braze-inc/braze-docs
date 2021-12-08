@@ -25,18 +25,24 @@ guide_menu_list:
   - name: Cordova iOS
     link: /docs/developer_guide/platform_integration_guides/cordova/initial_sdk_setup/ios/
     fa_icon: fab fa-apple
-  - name: ReactNative
+  - name: Flutter Android and iOS
+    link: /docs/developer_guide/platform_integration_guides/flutter/preview/
+    fa_icon: fas fa-mobile
+  - name: React Native
     link: /docs/developer_guide/platform_integration_guides/react_native/react_sdk_setup/
     fa_icon: fab fa-react
   - name: tvOS
     link: /docs/developer_guide/platform_integration_guides/tvos/initial_sdk_setup/
     fa_icon: fab fa-apple  
+  - name: MacOS
+    link: /developer_guide/platform_integration_guides/macOS/initial_sdk_setup/
+    fa_icon: fas fa-desktop  
   - name: Unity Android
     link: /docs/developer_guide/platform_integration_guides/unity/sdk_integration/android/
     fa_icon: fab fa-android  
   - name: Unity iOS
     link: /docs/developer_guide/platform_integration_guides/unity/sdk_integration/ios/
-    fa_icon: fab fa-apple  
+    fa_icon: fab fa-apple
   - name: Windows Universal
     link: /docs/developer_guide/platform_integration_guides/windows_universal/initial_sdk_setup/
     fa_icon: fab fa-windows
@@ -45,12 +51,6 @@ guide_menu_list:
     fa_icon: fas fa-times
   - name: Roku
     link: /docs/developer_guide/platform_integration_guides/roku/initial_sdk_setup/
-    fa_icon: fas fa-tv
-  - name: Flutter Android and iOS
-    link: /docs/developer_guide/platform_integration_guides/flutter/preview/
-    fa_icon: fas fa-mobile
-  - name: Smart TVs
-    link: /docs/developer_guide/platform_integration_guides/web/smart_tvs/
     fa_icon: fas fa-tv
   - name: Unreal Engine
     link: /docs/developer_guide/platform_integration_guides/unreal_engine/initial_sdk_setup/

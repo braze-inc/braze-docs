@@ -2,7 +2,7 @@
 nav_title: Data & Analytics
 article_title: Data & Analytics
 page_order: 3
-layout: dev_guide
+layout: featured
 
 guide_top_header: "Data & Analytics"
 guide_top_text: "Braze offers a breadth of metrics to use in measuring the performance of your campaigns. We also provide multiple reporting and tracking capabilities to ensure you get the numbers you need. <br> <br> You can also leverage Braze data to augment BI and analytics efforts in other best-in-class reporting platforms using <a href='/docs/user_guide/data_and_analytics/braze_currents/'>Currents</a>, Braze's data streaming export tool which enables your team to act on large amounts of granular customer data."
