@@ -84,7 +84,7 @@ The following data types can be stored as a custom attribute:
 
 For information regarding when you should use a custom event vs a custom attribute, see our [Best Practices - User Data Collection][15] documentation.
 
-#### Braze user profile fields
+#### Braze user profile fields {#braze-user-profile-fields}
 
 {% alert important %} 
 The following user profile fields are case sensitive, so be sure to reference these fields in lower case.

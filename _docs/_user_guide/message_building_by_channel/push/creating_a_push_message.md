@@ -38,7 +38,7 @@ For iOS or Android, select your notification type:
 
 If you want to include images in your push campaign, refer to the following guides on creating a rich notification for [iOS]({{site.baseurl}}/user_guide/message_building_by_channel/push/ios/rich_notifications/) or [Android]({{site.baseurl}}/user_guide/message_building_by_channel/push/android/rich_notifications/).
 
-Now it's time to write your push message! Start typing in the message box and watch a preview appear in the preview box to the left. Don't forget to use [Liquid]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/) when writing your push messages to make them personalized and targeted.
+Now it's time to write your push message! Start typing in the message box and watch a preview appear in the preview box to the left. Push messages must be formatted in plain text, but can include [Liquid]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/) to make your push personalized and targeted.
 
 ### Additional push customization steps
 
@@ -48,7 +48,7 @@ Add copy in multiple languages using the __Add Languages__ button. Insert Liquid
 
 #### On click behavior
 
-Specify what happens when a user clicks the body of a push notification with **On Click Behavior**. For example, you can prompt customers to open your application, redirect customers to a specified Web URL, or even open a specific page of your application with a deep link.
+Specify what happens when a user clicks the body of a push notification with **On Click Behavior**. For example, you can prompt customers to open your application, redirect customers to a specified Web URL, or even open a specific page of your application with a [deep link]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/deep_linking_to_in-app_content/).
 
 Here, you can also set up button prompts within your push notification, such as:
 
@@ -113,6 +113,12 @@ Under the Targeting Options section, you'll find a few options for who you can s
 4. __Users that fall under a series of filters (and are not defined by pre-existing segments).__ This means you do not need to target a campaign at a pre-existing segment. Instead, make an ad hoc audience during campaign creation by only using the additional filters and not selecting any segments under **Target Users By Segment**. This will allow you to skip segment creation when sending campaigns to one-off audiences.
 
 Detailed audience statistics for the channels targeted by your campaign are available in the footer. To see what percentage of your user base is being targeted and the Lifetime Value for this segment, click **Show Additional Stats**.
+
+{% details Why does my Total Reachable Users metric look smaller than it should be? %}
+
+When you click **Show Additional Stats** and view the Total Reachable Users for your filtered audience, you may notice that it's smaller than the sum of the other columns. This gap is usually because there are a number of users who qualify for the segment or filters in the campaign, but are not reachable through push (for example, because they don't have valid or active [push tokens]({{site.baseurl}}/user_guide/message_building_by_channel/push/push_registration/#push-tokens)).
+
+{% enddetails %}
 
 ![Reachable Users Footer][24]
 

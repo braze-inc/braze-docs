@@ -70,7 +70,7 @@ Once this is set up on your app, use the summary category by checking the __Noti
 
 Then, input the summary category identifier that you set in your app.
 
-### Provisional push authentication and quiet notifications
+### Provisional push authentication and quiet notifications {#provisional-push}
 
 Apple allows brands the option to send quiet push notifications to their users' Notification Centers before they officially, explicitly opt-in, giving you a chance to demonstrate the value of your messages early. All you need to do is [set up provisional push notifications](#set-up-provisional-push-notifications) in your app, then any user who has a provisional push token will receive your messages.
 
