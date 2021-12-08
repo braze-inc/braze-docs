@@ -65,5 +65,16 @@ $(document).ready(function () {
 				}
 			}
 		})
+    $('#guide_featured_list a, #guide_list a').click(function(e){
+			var $this = $(this);
+      var navlink = $this.attr('data-navlink');
+			if (navlink) {
+				navlink = 'parent_nav_top_platformintegrationguides_' + navlink;
+				if (platform_list.indexOf(navlink) > -1) {
+					Cookies.set('__dev_selected', navlink);
+				}
+			}
+    });
+
 	}
 });
