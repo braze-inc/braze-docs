@@ -177,24 +177,36 @@ With templating, you can render a different catalog item for each user based on 
 
 You can use filtered sets to define a set of criteria, and Braze will return matching items from your catalog in a special array of objects named `items`. You can then iterate through those items to pull them out and reference their different properties. Filtered sets are great for look-alike or "light recommendation engine" type use cases.
 
-To use filtered sets, your catalog CSV must have filters configured for each column. For example, here is a clothing catalog with fields for availability, category, brand, price, name, and color:
+For example, here is a clothing catalog with fields for availability, category, brand, price, name, and color:
 
 ![The table shows 15 example clothing items with columns for id, availability, category, brand, price, name, and color][6]
 
-In your message composer, first [assign variables][10] to the criteria you want to filter for in your catalog. This makes it easier for you to adjust your filters later on. For example, the following filters for items in the pants category that are in stock and the results are sorted by price with a maximum of three items displayed:
+In your message composer, first [assign variables][10] to the criteria you want to filter, sort, and limit by in your catalog. This makes it easier for you to adjust your filters later on.
 
 {% raw %}
 ```liquid
 {% assign var_category = 'pants' %}
 {% assign var_availability = 'in_stock' %}
 {% assign var_sort = 'price' %}
-{% assign var_limit = 3 %}
+{% assign var_limit = 2 %}
 ```
 {% endraw %}
 
-Then reference your catalog using the syntax mentioned in [Step 1: Retrieve an item](#step-one-retrieve-item). However, you also need to append query parameters to connect the variables you just assigned to the columns in your catalog. Add parameters in the format {% raw %}`column_name={{variable_name}}`{% endraw %} or `column_name=value`, where each parameter is separated with an ampersand `&`. 
+Then reference your catalog using the following syntax:
 
-For example, the following tabs show how you can add parameters using variables or by hard-coding values:
+{% raw %}
+```liquid
+{% catalogs /catalogs/<CATALOG_ID>/items?<QUERY_PARAMETERS> %}
+```
+{% endraw %}
+
+Add `filter` parameters in the format `field=value`, where each parameter is separated with an ampersand `&`.
+
+Add a `sort` parameter in the format `sort[field]=direction`.
+
+Add a `limit` parameter in the format `limit=value`.
+
+For example, the following filters for items in the pants category that are in stock. The results are sorted by price with a maximum of three items displayed:
 
 {% tabs local %}
 {% tab Variables %}
@@ -221,15 +233,26 @@ Finally, add your message copy and reference items from the array. To do so, use
 ```liquid
 title: {{ items[0].name }}, color: {{ items[0].color }}, price: {{items[0].price}}
 title: {{ items[1].name }}, color: {{ items[1].color }}, price: {{items[1].price}}
-title: {{ items[2].name }}, color: {{ items[2].color }}, price: {{items[2].price}}
-title: {{ items[3].name }}, color: {{ items[3].color }}, price: {{items[3].price}}
-title: {{ items[4].name }}, color: {{ items[4].color }}, price: {{items[4].price}}
 ```
 {% endraw %}
 
-Which displays as follows:
+Alternatively, you can iterate through all the `items` using:
+
+{% raw %}
+```liquid
+{% for item in items %}
+  title: {{ item.name }}, color: {{ item.color }}, price: {{item.price}}
+{% endfor %}
+```
+{% endraw %}
+
+Either of the above displays as follows:
 
 ![Example iOS push notification with filtered catalog items rendered][7]{: style="max-width:50%" }
+
+{% alert tip %}
+If no items meet the filter criteria, `items` will be an empty array.
+{% endalert %}
 
 #### Limitations
 
