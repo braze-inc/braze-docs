@@ -200,11 +200,9 @@ Then reference your catalog using the following syntax:
 ```
 {% endraw %}
 
-Add `filter` parameters in the format `field=value`, where each parameter is separated with an ampersand `&`.
-
-Add a `sort` parameter in the format `sort[field]=direction`.
-
-Add a `limit` parameter in the format `limit=value`.
+- Add `filter` parameters in the format `field=value`, where each parameter is separated with an ampersand `&`.
+- Add a `sort` parameter in the format `sort[field]=direction`.
+- Add a `limit` parameter in the format `limit=value`.
 
 For example, the following filters for items in the pants category that are in stock. The results are sorted by price with a maximum of two items displayed:
 
@@ -221,7 +219,7 @@ For example, the following filters for items in the pants category that are in s
 {% tab Values %}
 {% raw %}
 ```liquid
-{% catalogs /catalogs/61a52350d266a7006d5a529c/items?category=pants&availability=in_stock&sort[price]=asc&limit=3 %} 
+{% catalogs /catalogs/61a52350d266a7006d5a529c/items?category=pants&availability=in_stock&sort[price]=asc&limit=2 %} 
 ```
 {% endraw %}
 {% endtab %}
@@ -250,7 +248,7 @@ Either of the above displays as follows:
 
 ![Example iOS push notification with filtered catalog items rendered][7]{: style="max-width:50%" }
 
-{% alert tip %}
+{% alert note %}
 If no items meet the filter criteria, `items` will be an empty array.
 {% endalert %}
 
