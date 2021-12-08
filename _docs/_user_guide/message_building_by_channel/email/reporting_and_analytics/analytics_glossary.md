@@ -74,7 +74,7 @@ glossaries:
   - name: Confidence
     description: The percentage of confidence that a certain variant of a message is outperforming the control group.
   - name: Machine Opens
-    description: Includes emails that are opened without user engagement by MPP-enabled Apple devices.
+    description: Includes emails that are opened without user engagement by Apple devices with <a href='/docs/user_guide/message_building_by_channel/email/mpp/'>Mail Privacy Protection</a> enabled. <br> This metric is tracked starting November 11, 2021 for Sendgrid and December 2, 2021 for Sparkpost.
     calculation: Count
   - name: Other Opens
     description: Includes emails that haven't been identified as "Machine Opens" such as when a user opens an email. 
