@@ -10,13 +10,13 @@ channel: email
 
 # Email services {#email-services}
 
-If you need additional support with your email program, we offer recurring and one-time services at an additional cost. For more information reach out to your Account Manager.
+If you need additional support with your email program, Braze offers recurring and one-time services at an additional cost. For more information, reach out to your Account Manager.
 
 ## Premium deliverability services {#premium-deliverability-services}
 
 We offer two tiers of recurring email support: Premium Deliverability Services and Deliverability Monitoring.
 
-Services Description:
+Services can include:
 
 - Audit of historical/current email sending practices with a review of targeting, cadence, and messaging strategies
 - Whitelabel configuration and customized IP warming plan created by an email deliverability expert
@@ -24,5 +24,5 @@ Services Description:
 - Regular call with deliverability expert (twice per month for Premium Deliverability and monthly Deliverability Monitoring) to provide:
   - Monitoring of deliverability performance by domain
   - Recommendations to improve email program performance and results utilizing data and established best practices
-- Crisis Triage - in the event of a deliverability issue, like a block or blacklist, our team will help mitigate and remediate
+- Crisis Triage: In the event of a deliverability issue, like a block or blacklist, our team will help mitigate and remediate
 

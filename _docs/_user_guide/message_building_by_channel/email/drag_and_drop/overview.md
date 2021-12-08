@@ -100,7 +100,7 @@ The Drag & Drop Editor allows you to change the color of the email background, c
 
 To adjust padding, scroll down to __Block Options__, and toggle __More Options__. This will allow you to fine-tune your padding to get your email looking just right!
 <br><br>
-### Adding liquid 
+### Adding Liquid 
 
 ![Drag & Drop Personalization][5]{: style="float:right;max-width:25%;margin-left:15px;"}
 
