@@ -114,6 +114,12 @@ Under the Targeting Options section, you'll find a few options for who you can s
 
 Detailed audience statistics for the channels targeted by your campaign are available in the footer. To see what percentage of your user base is being targeted and the Lifetime Value for this segment, click **Show Additional Stats**.
 
+{% details Why does my Total Reachable Users metric look smaller than it should be? %}
+
+When you click **Show Additional Stats** and view the Total Reachable Users for your filtered audience, you may notice that it's smaller than the sum of the other columns. This gap is usually because there are a number of users who qualify for the segment or filters in the campaign, but are not reachable through push (for example, because they don't have valid or active [push tokens]({{site.baseurl}}/user_guide/message_building_by_channel/push/push_registration/#push-tokens)).
+
+{% enddetails %}
+
 ![Reachable Users Footer][24]
 
 Keep in mind that exact segment membership is always calculated right before the message is sent.

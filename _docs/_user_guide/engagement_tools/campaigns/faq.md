@@ -24,6 +24,10 @@ One potential explanation for this difference could be due to the campaign or Ca
 
 For example, should you have a Canvas that has both iOS and web push notifications, a given user with both mobile and desktop devices could receive more than one message.
 
+### Why does my campaign have a smaller reachable user base than the segment that I'm using for the campaign?
+
+If you have a [Global Control Group]({{site.baseurl}}/user_guide/engagement_tools/testing/global_control_group/) set up, this will prevent a percentage of your reachable audience from receiving campaigns. This means that the number of reachable users for your segment can sometimes be larger than the number of reachable users for your campaign, even if the campaign is using that same segment.
+
 ### What does local time zone delivery offer?
 
 Local time zone delivery allows you to deliver messaging campaigns to a segment based on a user’s individual time zone. Without local time zone delivery, campaigns will be scheduled based on your company’s time zone settings in Braze. 
