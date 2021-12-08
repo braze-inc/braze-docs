@@ -58,7 +58,7 @@ hide_breadcrumb: true
 
       {%- for menu_list in page.guide_featured_list  -%}
         {%- if menu_list.link -%}
-        <a href="{{ menu_list.link | multi_lang }}">
+        <a href="{{ menu_list.link | multi_lang }}" data-navlink="{{menu_list.nav_link}}">
             {%- endif %}
           <div id="{{ menu_list.name | handle }}" class="guide_item">
             {%- if menu_list.fa_icon -%}
@@ -83,7 +83,7 @@ hide_breadcrumb: true
 
       {%- for menu_list in page.guide_menu_list  -%}
         {%- if menu_list.link -%}
-        <a href="{{ menu_list.link | multi_lang }}">
+        <a href="{{ menu_list.link | multi_lang }}" data-navlink="{{menu_list.nav_link}}">
           {%- endif %}
       <div id="{{ menu_list.name | handle }}" class="guide_item">
         {%- if menu_list.fa_icon -%}
