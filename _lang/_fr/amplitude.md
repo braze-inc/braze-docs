@@ -1,7 +1,6 @@
 ---
 nav_title: Amplitude
-config_only: true
-layout: blank_config
-page_order: 0
+layout: redirect
+redirect_to: /docs/partners/data_and_infrastructure_agility/analytics/amplitude_for_currents/
 ---
 
