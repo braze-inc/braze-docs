@@ -1,11 +1,9 @@
 ---
 nav_title: Multiple Feeds
-article_title: Using Multiple Content Card Feeds for Android/FireOS
+article_title: Using Multiple Content Card Feeds for iOS
+platform: iOS
 page_order: 6
-platform:
-  - Android
-  - FireOS
-description: "This reference article covers how to implement multiple Content Card feeds in your Android application."
+description: "This reference article covers how to implement multiple Content Card feeds in your iOS application."
 channel:
   - content cards
 ---
@@ -18,127 +16,99 @@ The following documentation demonstrates an example implementation that can be c
 
 ## Step 1: Setting key-value pairs on cards
 
-When creating a Content Card campaign, key value pair data can be set on each Card. Our filtering logic will use this key-value pair data to categorize cards. Note that we do not recommend sending nested JSON values as key-value pairs. Instead, in order for things to correctly, we recommend flattening the JSON before sending.
+When creating a Content Card campaign, key value pair data can be set on each Card. Our filtering logic will use this key-value pair data to categorize cards.
 
 For the purposes of this example, we'll set a key-value pair with the key `feed_type` that will designate which Content Card feed the card should be displayed in. The value will be whatever your custom feeds will be, as in `Transactional`, `Marketing`, and more.
 
-## Step 2: Create a Content Card update handler
+## Step 2: Set Up a content card listener
 
-To perform filtering on a [`ContentCardsFragment`][1], we will create a use a custom [`IContentCardsUpdateHandler`][2]. A [`IContentCardsUpdateHandler`][2] takes a [`ContentCardsUpdatedEvent`][3] from the Braze SDK and returns a list of cards to display.
-
-In our example handler, we'll first sort the cards using the default [`IContentCardsUpdateHandler`][2]. The default Braze [`IContentCardsUpdateHandler`][2] only sorts cards and by default doesn't perform any removals or filtering on its own. Next, we'll remove any cards from the list that don't match our desired value for the `feed_type` that we set earlier.
+Use the following code snippet to add an observer to listen for Content Card updates.
 
 {% tabs %}
-{% tab JAVA %}
+{% tab OBJECTIVE-C %}
 
-```java
-private IContentCardsUpdateHandler getUpdateHandlerForFeedType(final String desiredFeedType) {
-  return new IContentCardsUpdateHandler() {
-    @Override
-    public List<Card> handleCardUpdate(ContentCardsUpdatedEvent event) {
-      // Use the default card update handler for a first
-      // pass at sorting the cards. This is not required
-      // but is done for convenience.
-      final List<Card> cards = new DefaultContentCardsUpdateHandler().handleCardUpdate(event);
-
-      final Iterator<Card> cardIterator = cards.iterator();
-      while (cardIterator.hasNext()) {
-        final Card card = cardIterator.next();
-
-        // Make sure the card has our custom KVP
-        // from the dashboard with the key "feed_type"
-        if (card.getExtras().containsKey("feed_type")) {
-          final String feedType = card.getExtras().get("feed_type");
-          if (!desiredFeedType.equals(feedType)) {
-            // The card has a feed type, but it doesn't match
-            // our desired feed type, remove it.
-            cardIterator.remove();
-          }
-        } else {
-          // The card doesn't have a feed
-          // type at all, remove it
-          cardIterator.remove();
-        }
-      }
-
-      // At this point, all of the cards in this list have
-      // a feed type that explicitly matches the value we put
-      // in the dashboard.
-      return cards;
-    }
-  };
-}
+```objc
+[[NSNotificationCenter defaultCenter] addObserver:self
+                                           selector:@selector(contentCardsUpdatedNotificationReceived:)
+                                               name:ABKContentCardsProcessedNotification
+                                             object:nil];
 ```
+
 {% endtab %}
-{% tab KOTLIN %}
+{% tab SWIFT %}
 
-```kotlin
-private fun getUpdateHandlerForFeedType(desiredFeedType: String): IContentCardsUpdateHandler {
-  return IContentCardsUpdateHandler { event ->
-    // Use the default card update handler for a first
-    // pass at sorting the cards. This is not required
-    // but is done for convenience.
-    val cards = DefaultContentCardsUpdateHandler().handleCardUpdate(event)
+```swift
+NotificationCenter.default.addObserver(self, selector:
+  #selector(contentCardsUpdated),
+  name:NSNotification.Name.ABKContentCardsProcessed, object: nil)
+```
 
-    val cardIterator = cards.iterator()
-    while (cardIterator.hasNext()) {
-      val card = cardIterator.next()
+{% endtab %}
+{% endtabs %}
 
-      // Make sure the card has our custom KVP
-      // from the dashboard with the key "feed_type"
-      if (card.extras.containsKey("feed_type")) {
-        val feedType = card.extras["feed_type"]
-        if (desiredFeedType != feedType) {
-          // The card has a feed type, but it doesn't match
-          // our desired feed type, remove it.
-          cardIterator.remove()
-        }
-      } else {
-        // The card doesn't have a feed
-        // type at all, remove it
-        cardIterator.remove()
-      }
-    }
+Add the following methods to respond to updates from the observer and filter the returned cards by type.
 
-    // At this point, all of the cards in this list have
-    // a feed type that explicitly matches the value we put
-    // in the dashboard.
-    cards
+The first method, `contentCardsUpdatedNotificationReceived:`, handles updates from the observer. It calls the second method, `getCardsForFeedType:`, with the desired feed type, in this case `Transactional`.
+
+{% tabs %}
+{% tab OBJECTIVE-C %}
+
+```objc
+- (void)contentCardsUpdatedNotificationReceived:(NSNotification *)notification {
+  BOOL updateIsSuccessful = [notification.userInfo[ABKContentCardsProcessedIsSuccessfulKey] boolValue];
+  if (updateIsSuccessful) {
+    // Get an array containing only cards that have the "Transactional" feed type set in their extras.
+    NSArray<ABKContentCard *> *filteredArray = [self getCardsForFeedType:@"Transactional"];
+    NSLog(@"Got filtered array of length: %lu", [filteredArray count]);
+
+    // Pass filteredArray to your UI layer for display.
   }
 }
+
+- (NSArray<ABKContentCard *> *)getCardsForFeedType:(NSString *)type {
+  NSArray<ABKContentCard *> *cards = [Appboy.sharedInstance.contentCardsController getContentCards];
+
+  NSArray<ABKContentCard *> *filteredArray = [cards filteredArrayUsingPredicate:[NSPredicate predicateWithBlock:^BOOL(ABKContentCard * card, NSDictionary *bindings) {
+    NSDictionary *extras = [card extras];
+    if (extras != nil && [extras objectForKey:@"feed_type"] != nil && [[extras objectForKey:@"feed_type"] isEqualToString:type]) {
+      NSLog(@"Got card: %@ ", card.idString);
+      return YES;
+    }
+    return NO;
+  }]];
+
+  return filteredArray;
+}
 ```
+
+{% endtab %}
+{% tab SWIFT %}
+
+```swift
+@objc private func contentCardsUpdatedNotificationReceived(notification: NSNotification) {
+    guard let updateSuccessful = notification.userInfo?[ABKContentCardsProcessedIsSuccessfulKey] as? Bool else { return }
+    if updateSuccessful {
+        // Get an array containing only cards that have the "Transactional" feed type set in their extras.
+        let filteredArray = getCards(forFeedType: "Transactional")
+        NSLog("Got filtered array of length: %@",filteredArray?.count ?? 0)
+
+        // Pass filteredArray to your UI layer for display.
+    }
+}
+
+func getCards(forFeedType type: String) -> [ABKContentCard]? {
+    guard let allCards = Appboy.sharedInstance()?.contentCardsController.contentCards as? [ABKContentCard] else { return nil }
+    // return filtered cards
+    return allCards.filter {
+        if $0.extras?["feed_type"] as? String == type {
+            NSLog("%@","Got card: \($0.idString)")
+            return true
+        } else {
+            return false
+        }
+    }
+}
+```
+
 {% endtab %}
 {% endtabs %}
-
-## Step 3: Create a Content Card feed using the custom update handler
-
-Now that we have a custom [`IContentCardsUpdateHandler`][2], we can create a [`ContentCardsFragment`][1] that uses it. In the following example code, we'll create a [`ContentCardsFragment`][1] that only displays cards with a "Transactional" value for `feed_type`:
-
-{% tabs %}
-{% tab JAVA %}
-
-```java
-// We want a Content Cards feed that only shows "Transactional" cards.
-ContentCardsFragment customContentCardsFragment = new ContentCardsFragment();
-customContentCardsFragment.setContentCardUpdateHandler(getUpdateHandlerForFeedType("Transactional"));
-```
-{% endtab %}
-{% tab KOTLIN %}
-
-```kotlin
-// We want a Content Cards feed that only shows "Transactional" cards.
-val customContentCardsFragment = ContentCardsFragment()
-customContentCardsFragment.contentCardUpdateHandler = getUpdateHandlerForFeedType("Transactional")
-```
-{% endtab %}
-{% endtabs %}
-
-## Step 4: Using the Content Cards fragment
-
-This custom feed can be used like any other [`ContentCardsFragment`][1]. In the different parts of your app, you can display different Content Card feeds based on the key provided on the dashboard. Each [`ContentCardsFragment`][1] feed will have a unique set of cards displayed thanks to the custom [`IContentCardsUpdateHandler`][2] on each fragment.
-
-When you create a Content Card campaign, set your key-value pair as: `feed_type` > `Transactional` or whatever feed type you desire.
-
-[1]: https://appboy.github.io/appboy-android-sdk/javadocs/com/braze/ui/contentcards/ContentCardsFragment.html
-[2]: https://appboy.github.io/appboy-android-sdk/javadocs/com/braze/ui/contentcards/handlers/IContentCardsUpdateHandler.html
-[3]: https://appboy.github.io/appboy-android-sdk/javadocs/com/braze/events/ContentCardsUpdatedEvent.html
