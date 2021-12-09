@@ -3,23 +3,31 @@ nav_title: November
 page_order: 2
 noindex: true
 page_type: update
-description: "This article contains release notes for November 2020."
+description: "This article contains release notes for November 2019."
 ---
- 
-# November 2020
 
-## Tealium partnership is live
+# November 2019
 
-[Tealium]({{site.baseurl}}/partners/data_and_infrastructure_agility/customer_data_platform/tealium/#about-tealium) is a data hub that makes it easy to connect mobile, web, and alternative data from third-party sources. When connected with Braze, Tealium enables a data flow of custom events, user attributes, and purchases for real-time data action.
+More to come! Check back later this month for more updates!
 
-## Braze Product Portal
+## Intelligence Suite
 
-The [Braze Product Portal]({{site.baseurl}}/user_guide/administrative/access_braze/portal/#product-portal-) contains the Braze product roadmap and opportunity for users to submit ideas. You can also see which features have been recently released. The product portal can be found in the upper-right section of the Braze dashboard, under “Resources”.
+Braze's [Intelligence Suite]({{site.baseurl}}/user_guide/intelligence/) helps you automate decision-making with data-based insights. From delivery time to multivariate testing, brands can use these tools and features to create dynamic, cross-channel experiences that optimize at scale. <br> <br> The Intelligence Suite comprises of three main features: [Intelligent Timing]({{site.baseurl}}/user_guide/intelligence/intelligent_timing/), [Intelligent Channel]({{site.baseurl}}/user_guide/intelligence/intelligent_channel/), and [Intelligent Selection]({{site.baseurl}}/user_guide/intelligence/intelligent_selection/).
 
-## iOS Content Card implementation guide
+{% alert note %}
+The "Intelligence Suite" is a revision and grouping of features previously known as "Most Engaged Channel", "Intelligent Timing", and "multivariate and A/B testing".
+{% endalert %}
 
-Embracing developer-centered technical strategy, Braze has released it's first implementation guide highlighting use-case driven iOS Content Card guidelines and best practices. This comprehensive guide provides unique use cases, video walkthroughs, accompanying code snippets, and guidance on how to log valuable user metrics. To read more about how you can get started implementing iOS Content Cards like a pro, check out our [Implementation Guide]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/content_cards/implementation_guide/).
+## Dark Mode themes for in-app messages
 
-## Swift Package Manager
+iOS 13 and Android 10 both introduced settings that allowed mobile phones to change their color themes to a "Dark Mode". Aligning with this feature, Braze has introduced [Dark Mode for in-app messages]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/dark-mode/)! This feature allows you to create in-app messages with a "light" and a "dark theme". If a device you send to has "Dark Mode" activated, the message will display your selected Dark Mode Theme.
 
-The Swift Package Manager is integrated with the Swift build system and automatically will download, compile, and link dependencies. Installing the iOS SDK via Swift Package Manager will automate the majority of the installation process for you. For more information, take a look at the [documentation]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/initial_SDK_setup/swift_package_manager).
+<img src="{% image_buster /assets/img_archive/iam-dark-mode.gif %}" style="width:100%;max-width:800px;" />
+
+## SMS metrics in Engagement Reports
+
+SMS Metrics are now available in [Engagement Reports]({{site.baseurl}}/user_guide/data_and_analytics/your_reports/engagement_reports/)!
+
+## Delete a Braze user's teams
+
+You can now delete a team from a Braze User's account!
