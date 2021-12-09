@@ -1,225 +1,142 @@
 ---
 nav_title: Google Tag Manager
-article_title: Google Tag Manager for iOS
-platform: iOS
-page_order: 7
-description: "This article covers how to initialize, configure, and implement the Google Tag manager into your iOS app."
+article_title: Google Tag Manager for Web
+platform: Web
+page_order: 20
+description: "This article covers how to use Google Tag Manager to deploy Braze to your website."
 ---
 
-# Google Tag Manager for iOS
+# Google Tag Manager
 
-## Initializing the SDK {#initializing-ios-google-tag-provider}
+This article provides a step-by-step guide on how to add the Braze Web SDK to your website using Google Tag Manager.
 
-Braze's iOS SDK can be initialized and controlled by tags configured within [Google Tag Manager][5].
+[Google Tag Manager][2] lets you remotely add, remove, and edit tags on your website without requiring a production code release or engineering resources.
 
-But first - before using Google Tag Manager - be sure to first follow our [Initial SDK Setup][1].
+## Braze tag templates
 
-## Configuring your Google Tag Manager {#configuring-ios-google-tag-manager}
+There are two Google Tag Manager templates built by Braze: the [Initialization Tag](#initialization-tag) and [Actions Tag](#actions-tag).
 
-In our example, we'll pretend we are a music streaming app that wants to log different events as users listen to songs. Using Google Tag Manager for iOS, we can control which of our 3rd party vendors receive this event, and create tags specific to Braze.
+Both tags can be added to your workspace from [Google's Community Gallery][15], or by searching for Braze when adding a new tag from the Community Templates.
 
-### Custom events
+!\[Community Gallery Search\]\[3\]
 
-Custom events are logged with `actionType` set to `logEvent`. The Braze custom tag provider in our example is expecting the custom event name to be set using `eventName`.
+### Initialization tag template {#initialization-tag}
 
-To get started, create a trigger that looks for an "Event Name" that equals `played song`
+Use the Initialization Tag to add the Braze Web SDK to your website.
 
-!\[Event Name Trigger for events\]\[3\]
+#### Step 1: Select the initialization tag
 
-Next, create a new Tag ("Function Call") and enter the Class Path of your [custom tag provider](#adding-ios-google-tag-provider) described later in this article.
+Search for "Braze" in the Community Template Gallery, and select the **Braze Initialization Tag** as shown below.
 
-This tag will be triggered when you log the `played song` event we just created.
+!\[Initialization Tag Template\]\[4\]
 
-In our example tag's custom parameters (key-value pairs), we've set `eventName` to `played song` - which will be the custom event name logged to Braze.
+#### Step 2. Configure settings
+
+Enter your Braze SDK API Key and SDK Endpoint, which can be found in your dashboard's \[Settings\]\[6\] page.
+
+#### Step 3. Choose initialization options
+
+Choose from the optional set of additional initialization options as described in the \[Initial Setup\]\[7\] guide.
+
+#### Step 4: Verify and QA
+
+Once you've deployed this tag, there are two ways you can verify a proper integration:
+
+First, using Google Tag Manager's Debug Mode, you should see the Braze Initialization Tag has been triggered on your configured pages or events.
+
+Second, you should see network requests made to Braze, and the global `window.appboy` library should now be defined on your webpage.
+
+### Actions tag template {#actions-tag}
+
+The Braze Actions Tag template lets you trigger custom events, track purchases, change user IDs, and stop or resume tracking for privacy requirements.
+
+!\[Actions Tag Template\]\[5\]
+
+#### Changing user external ID {#external-id}
+
+The **Change User** tag type calls the [`changeUser` method](https://js.appboycdn.com/web-sdk/latest/doc/modules/appboy.html#changeuser).
+
+Use this tag whenever a user logs in, or is otherwise identified with their unique `external_id` identifier.
+
+Be sure to enter the current user's unique ID in the **External User ID** field, typically populated using a datalayer variable sent by your website.
+
+!\[Change User Tag\]\[8\]
+
+#### Log custom events {#custom-events}
+
+The __Custom Event__ tag type calls the [`logCustomEvent` method](https://js.appboycdn.com/web-sdk/latest/doc/modules/appboy.html#logcustomevent).
+
+Use this tag to send custom events to Braze, optionally including custom event properties.
+
+Enter the **Event Name** by either using a variable or typing an event name.
+
+Use the **Add Row** button to add event properties.
+
+!\[Custom Event Tag\]\[9\]
+
+#### Track purchase {#purchases}
+
+The **Purchase** tag type calls the [`logPurchase` method](https://js.appboycdn.com/web-sdk/latest/doc/modules/appboy.html#logpurchase).
+
+Use this tag to track purchase to Braze, optionally including Purchase properties.
+
+The **Product ID** and **Price** fields are required.
+
+Use the **Add Row** button to add Purchase properties.
+
+!\[Purchase Tag\]\[10\]
+
+#### Stop and resume tracking {#stop-tracking}
+
+Sometimes, you might be required to disable or re-enable Braze tracking on your website, for example, after a user indicates they've opted out of web tracking for privacy reasons.
+
+Use the **Disable Tracking** or **Resume Tracking** tag type to disable web tracking or re-enable web tracking, respectively.
+
+#### Custom user attributes {#custom-attributes}
+
+Custom user attributes are not available due to a limitation in Google Tag Manager's scripting language. To log custom attributes, create a Custom HTML tag with the following content:
+
+```html
+<script>
+window.appboy.getUser().setCustomUserAttribute("attribute name", "attribute value");
+</script>
+```
 
 {% alert important %}
-When sending a custom event, be sure to set `actionType` to `logEvent`, and set a value for `eventName` as shown in the screenshot below.
-
-The custom tag provider in our example will use these key to determine what action to take, and what event name to send to Braze when it receives data from Google Tag Manager.
+The GTM template does not support nested properties on events or purchases at this time. You can use the above HTML to log any events or purchases that require nested properties.
 {% endalert %}
 
-!\[Function Call Tag\]\[4\]
+#### Default user attributes {#standard-attributes}
 
-You can also include additional key-value pair arguments to the tag, which will be sent as custom event properties to Braze. `eventName` and `actionType` will not be ignored for custom event properties. In our example tag below, we'll pass in `genre` which was defined using a tag Variable in Google Tag Manager - sourced from the custom event we logged in our app.
+Default user attributes, such as a user's first name, should be logged in the same manner as custom user attributes. Make sure the values you're passing in for default attributes match the expected format specified in the [User Class][16] documentation.
 
-The `genre` event property is sent to Google Tag Manager a "Firebase - Event Parameter" variable since Google Tag Manager for iOS uses Firebase as the data layer.
+For example, the gender attribute can accept any of the following as values: `"m" | "f" | "o" | "u" | "n" | "p"`. Therefore to set a user's gender as female, create a Custom HTML tag with the following content:
 
-!\[Tag Variable Event Name\]\[6\]
-
-Lastly, when a user plays a song in our app, we will log an event through Firebase/Google Tag Manager using the Firebase Analytics event name that matches our tag's trigger name, `played song`.
-
-{% tabs %}
-{% tab OBJECTIVE-C %}
-
-```obj-c
-NSDictionary *parameters = @{@"genre" : @"pop",
-                             @"number of times listened" : @42};
-[FIRAnalytics logEventWithName:@"played song" parameters:parameters];
+```html
+<script>
+window.appboy.getUser().setGender("f")
+</script>
 ```
 
-{% endtab %}
-{% endtabs %}
+## Troubleshooting steps {#troubleshooting}
 
-### Logging custom attributes
+### Enable tag debugging {#debugging}
 
-Custom attributes are set via an `actionType` set to `customAttribute`. The Braze custom tag provider is expecting the custom attribute key/value to be set via `customAttributeKey` and `customAttributeValue`.
+Each Braze Tag template has an optional **GTM Tag Debugging** checkbox which can be used to log debug messages to your webpage's Javascript console.
 
-{% tabs %}
-{% tab OBJECTIVE-C %}
+!\[Tag Debugging Option\]\[12\]
 
-```obj-c
-NSDictionary *parameters = @{@"customAttributeKey" : @"favorite song",
-                             @"customAttributeValue" : @"Private Eyes"};
-[FIRAnalytics logEventWithName:@"customAttribute" parameters:parameters];
-```
+### Enter debug mode
 
-{% endtab %}
-{% endtabs %}
+Another way to help debug your Google Tag Manager integration is using Google's [Preview Mode][14] feature.
 
-### Calling changeUser
+This will help identify what values are being sent from your webpage's datalayer to each triggered Braze tag, and will also explain which tags were or were not triggered.
 
-Calls to `changeUser()` are made via an `actionType` set to `changeUser`. The Braze custom tag provider is expecting the Braze user ID to be set via an `externalUserId` key-value pair within your tag.
+!\[Preview Mode\]\[13\]
+[3]: {% image_buster /assets/img/web-gtm/gtm-community-gallery-search.png %} [4]: {% image_buster /assets/img/web-gtm/gtm-initialization-tag.png %} [5]: {% image_buster /assets/img/web-gtm/gtm-actions-tag.png %} [6]: {{ site.baseurl }}/user_guide/administrative/app_settings/manage_app_group/app_group_management/#app-group-management [7]: {{ site.baseurl }}/developer_guide/platform_integration_guides/web/initial_sdk_setup/#step-2-initialize-braze [8]: {% image_buster /assets/img/web-gtm/gtm-change-user.png %} [9]: {% image_buster /assets/img/web-gtm/gtm-custom-event.png %} [10]: {% image_buster /assets/img/web-gtm/gtm-purchase.png %} [12]: {% image_buster /assets/img/web-gtm/gtm-tag-debugging.png %} [13]: {% image_buster /assets/img/web-gtm/gtm-debug-mode.png %}
 
-{% tabs %}
-{% tab OBJECTIVE-C %}
 
-```obj-c
-NSDictionary *parameters = @{@"externalUserId" : userId};
-[FIRAnalytics logEventWithName:@"changeUser" parameters:parameters];
-```
-
-{% endtab %}
-{% endtabs %}
-
-## Braze SDK custom tag provider {#adding-ios-google-tag-provider}
-
-With the tags and triggers set up, you will also need to implement Google Tag Manager in your iOS app which can be found in Google's [documentation][2].
-
-Once Google Tag Manager is installed in your app, add a custom tag provider to call Braze SDK methods based on the tags you've configured within Google Tag Manager.
-
-Be sure to note the "Class Path" to the file which - this is what you'll enter when setting up a Tag in the [Google Tag Manager][5] console.
-
-This example shows one of many ways to structure your custom tag provider, where we determine which Braze SDK method to call based on the `actionType` key-value pair sent down from the GTM Tag.
-
-The `actionType` we've supported in our example are `logEvent`, `customAttribute`, and `changeUser`, but you may prefer to change how your tag provider handles data from Google Tag Manager.
-
-Add the following code to your `BrazeGTMTagManager.h` file:
-
-{% tabs %}
-{% tab OBJECTIVE-C %}
-
-```obj-c
-@import Firebase;
-@import GoogleTagManager;
-
-@interface BrazeGTMTagManager : NSObject <TAGCustomFunction>
-
-@end
-```
-
-{% endtab %}
-{% endtabs %}
-
-And add the following code to your `BrazeGTMTagManager.m` file:
-
-{% tabs %}
-{% tab OBJECTIVE-C %}
-
-```obj-c
-#import <Foundation/Foundation.h>
-#import "BrazeGTMTagManager.h"
-#import "Appboy-iOS-SDK/AppboyKit.h"
-
-static NSString *const ActionTypeKey = @"actionType";
-
-// Custom Events
-static NSString *const LogEventActionType = @"logEvent";
-static NSString *const LogEventEventName = @"eventName";
-
-// Custom Attributes
-static NSString *const CustomAttributeActionType = @"customAttribute";
-static NSString *const CustomAttributeKey = @"customAttributeKey";
-static NSString *const CustomAttributeValueKey = @"customAttributeValue";
-
-// Change User
-static NSString *const ChangeUserActionType = @"changeUser";
-static NSString *const ChangeUserExternalUserId = @"externalUserId";
-
-@implementation BrazeGTMTagManager
-
-- (NSObject *)executeWithParameters:(NSDictionary *)parameters {
-  NSMutableDictionary *mutableParameters = [parameters mutableCopy];
-
-  NSString *actionType = mutableParameters[ActionTypeKey];
-  if (!actionType) {
-    NSLog(@"There is no Braze action type key in this call. Doing nothing.", nil);
-    return nil;
-  }
-
-  [mutableParameters removeObjectForKey:ActionTypeKey];
-
-  if ([actionType isEqualToString:LogEventActionType]) {
-    [self logEvent:mutableParameters];
-  } else if ([actionType isEqualToString:CustomAttributeActionType]) {
-    [self logCustomAttribute:mutableParameters];
-  } else if ([actionType isEqualToString:ChangeUserActionType]) {
-    [self changeUser:mutableParameters];
-  } else {
-    NSLog(@"Invalid action type. Doing nothing.");
-  }
-  return nil;
-}
-
-- (void)logEvent:(NSMutableDictionary *)parameters {
-  NSString *eventName = parameters[LogEventEventName];
-  [parameters removeObjectForKey:LogEventEventName];
-  [[Appboy sharedInstance] logCustomEvent:eventName withProperties:parameters];
-}
-
-- (void)logCustomAttribute:(NSMutableDictionary *)parameters {
-  NSString *customAttributeKey = parameters[CustomAttributeKey];
-  id customAttributeValue = parameters[CustomAttributeValueKey];
-
-  if ([customAttributeValue isKindOfClass:[NSString class]]) {
-    [[Appboy sharedInstance].user setCustomAttributeWithKey:customAttributeKey
-                                             andStringValue:customAttributeValue];
-  } else if ([customAttributeValue isKindOfClass:[NSDate class]]) {
-    [[Appboy sharedInstance].user setCustomAttributeWithKey:customAttributeKey
-                                               andDateValue:customAttributeValue];
-  } else if ([customAttributeValue isKindOfClass:[NSNumber class]]) {
-    if (strcmp([customAttributeValue objCType], [@(YES) objCType]) == 0) {
-      [[Appboy sharedInstance].user setCustomAttributeWithKey:customAttributeKey
-                                                 andBOOLValue:[(NSNumber *)customAttributeValue boolValue]];
-    } else if (strcmp([customAttributeValue objCType], @encode(short)) == 0 ||
-               strcmp([customAttributeValue objCType], @encode(int)) == 0 ||
-               strcmp([customAttributeValue objCType], @encode(long)) == 0) {
-      [[Appboy sharedInstance].user setCustomAttributeWithKey:customAttributeKey
-                                              andIntegerValue:[(NSNumber *)customAttributeValue integerValue]];
-    } else if (strcmp([customAttributeValue objCType], @encode(float)) == 0 ||
-               strcmp([customAttributeValue objCType], @encode(double)) == 0) {
-      [[Appboy sharedInstance].user setCustomAttributeWithKey:customAttributeKey
-                                               andDoubleValue:[(NSNumber *)customAttributeValue doubleValue]];
-    } else {
-      NSLog(@"Could not map NSNumber value to Appboy custom attribute:%@", customAttributeValue);
-    }
-  } else if ([customAttributeValue isKindOfClass:[NSArray class]]) {
-    [[Appboy sharedInstance].user setCustomAttributeArrayWithKey:customAttributeKey
-                                                           array:customAttributeValue];
-  }
-}
-
-- (void)changeUser:(NSMutableDictionary *)parameters {
-  NSString *userId = parameters[ChangeUserExternalUserId];
-  [[Appboy sharedInstance] changeUser:userId];
-}
-
-@end
-```
-
-{% endtab %}
-{% endtabs %}
-[3]: {% image_buster /assets/img/android_google_tag_manager/gtm_android_trigger.png %} [4]: {% image_buster /assets/img/android_google_tag_manager/gtm_android_function_call_tag.png %} [6]: {% image_buster /assets/img/android_google_tag_manager/gtm_android_eventname_variable.png %}
-
-[1]: {{site.baseurl}}/developer_guide/platform_integration_guides/ios/initial_sdk_setup/
-[2]: https://developers.google.com/tag-manager/ios/v5/
-[5]: https://tagmanager.google.com/
+[2]: https://support.google.com/tagmanager/answer/6103696
+[14]: https://support.google.com/tagmanager/answer/6107056
+[15]: https://tagmanager.google.com/gallery/#/?filter=braze
+[16]: https://js.appboycdn.com/web-sdk/latest/doc/classes/appboy.user.html
