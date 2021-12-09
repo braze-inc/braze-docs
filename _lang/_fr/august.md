@@ -1,27 +1,33 @@
 ---
 nav_title: August
-page_order: 6
+page_order: 5
 noindex: true
 page_type: update
-description: "This article contains release notes for August 2018."
+description: "This article contains release notes for August 2019."
 ---
 
-# August 2018
+# August 2019
 
-## iOS 12 notification groups
+## Campaign details in reports
 
-The recent iOS 12 release supports grouping notifications (similar to Android Notification Channels) for applications. [Braze allows you to utilize this grouping feature in iOS this using our message composer.]({{site.baseurl}}/user_guide/message_building_by_channel/push/creating_a_push_message/#notification-groups)
+Your campaign performance report will now list your campaign's details so you don't have to go back through your campaign to see which Delivery, Audience, or Conversion settings you chose while setting up your report.
 
-## Push story triggering
+![Campaign Details]({% image_buster /assets/img/campaign_details_update.png %})
 
-You can now retarget users based on specific page clicks on push story slides. Use the additional filter for __Interacted with Campaign__.
+## New email Content Block API endpoints
 
-## S3 and Azure data events from anonymous users
+You can now manage ([create]({{site.baseurl}}/api/endpoints/email_templates/#create-content-block), [list available]({{site.baseurl}}/api/endpoints/email_templates/#list-available-content-blocks), [get information]({{site.baseurl}}/api/endpoints/email_templates/#see-content-block-information)) your Email Content Blocks via API!
 
-Customers exporting data to Amazon S3 and Microsoft Azure can now include events from anonymous users. This functionality will default to on for all newly created integrations, but will remain off for for all existing integrations. If you have any questions, reach out to your account manager or open a [support ticket][support].
+{% alert update %}
+This feature is temporarily in limited availability. Please reach out to your Braze account manager for more information.
+{% endalert %}
 
-## Mixpanel Cohorts integration
+## Custom email unsubscribe landing page update
 
-Customers of both Braze and Mixpanel can now integrate and [send Mixpanel Cohorts to Braze as segment filters]({{site.baseurl}}/partners/insights/behavioral_analytics/mixpanel_for_currents/#mixpanel-cohort-import). You can either set up a one-time manual export or a dynamic export every two hours. Each updated user will count as a data point, but Mixpanel only sends changes since the last sync.
+The default [custom Email Unsubscribe page]({{site.baseurl}}/user_guide/message_building_by_channel/email/managing_user_subscriptions/#custom-unsubscribe-landing-page) has been updated with a sleek, more modern look.
 
-[support]: {{site.baseurl}}/braze_support/
+## iOS SDK: Notched phone support improvement
+
+Improved support for in-app messages on “notched” devices (for example, iPhone X, Pixel 3XL). Full-screen messages now expand to fill the entire screen of any phone, while covering the status bar.
+
+You won't see many updates in the Docs reflecting this change just yet - but they're on the way!
