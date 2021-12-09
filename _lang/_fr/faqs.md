@@ -1,45 +1,78 @@
 ---
 nav_title: FAQs
-article_title: Locations & Geofences FAQs
-page_order: 4
-page_type: FAQ
-description: "This reference article covers some frequently asked questions surrounding the use of Geofences."
-tool: Location
+article_title: Canvas FAQs
+page_order: 10
+description: "This article provides answers to frequently asked questions about Canvas."
+tool: Canvas
 ---
 
-# Locations and geofences FAQs
+# Canvas FAQs
 
-## Locations
+> This article provides answers to some frequently asked questions about Canvas.
 
-### When does Braze collect location data?
+### What happens if the audience and send time are identical for a Canvas that has one variant, but multiple branches?
 
-Braze only collects location when the application is in the foreground. As a result, our last known location filters target users based upon where they last opened the application.
+We enqueue a job for each step—they run at around the same time, and one of them "wins". In practice, this may be sorted somewhat evenly, but it's likely to have at least a slight bias toward the step that was created first.
 
-## Geofences
+Moreover, we can't make any guarantees about exactly what that distribution will look like. If you want to ensure an even split, add a [Random Bucket Number]({{site.baseurl}}/user_guide/engagement_tools/campaigns/ideas_and_strategies/ab_testing_with_random_buckets/) filter to ensure it.
 
-### Can I store more than X geofences?
+### What happens when you stop a Canvas?
 
-Per Android's [documentation][3], Android apps may only store up to 100 geofences locally at a time. Braze is configured to store only up to 20 geofences locally per app. For geofences to work correctly, you should ensure that your App is not using all available geofence spots.
+When you stop a Canvas, the following applies:
 
-iOS devices may monitor up to 20 [geofences][4] at a time per app. Braze will monitor up to 20 locations if space is available. For geofences to work correctly, you should ensure that your App is not using all available geofence spots.
+- Users will be prevented from entering the Canvas.
+- No further messages will be sent out, despite where a user is in the flow.
+- **Exception:** Email Canvases will not immediately stop. Once the send requests go to SendGrid, there is nothing we can do to stop them from being delivered to the user.
 
-### How accurate are Braze geofences?
+{% alert note %}
+Stopping a Canvas won't flush users who are waiting to receive messages. If you re-enable the Canvas and users are still waiting for the message, they will receive it (unless the time they should've been sent the message has passed, then they won't receive it).
+{% endalert %}
 
-Braze geofences use a combination of all location providers available to a device to triangulate the user's location. These include Wifi, GPS, and cellular towers.
+### When does an exception event trigger?
 
-Typical accuracy is in 20-50m range and best-case accuracy will be in the 5-10m range. In rural areas, accuracy may degrade significantly, potentially going up to several kilometers. Braze recommends creating geofences with larger radii in rural locations.
+[Exception events]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/exception_events/) only trigger while the user is waiting to receive the Canvas step it's associated with. If a user performs an action in advance, the exception event will not trigger.
 
-### How do geofences affect battery life?
+If you want to except users who have performed a certain event in advance, use [filters]({{site.baseurl}}/user_guide/engagement_tools/segments/segmentation_filters/) instead.
 
-Our geofencing solution uses the native geofence system service on iOS and Android and is tuned to intelligently trade off accuracy and power, ensuring best in class battery life and improvements in performance as the underlying service improves.
+### How does editing a Canvas affect users already in the Canvas?
 
-### How many geofences can I upload to Braze?
+If you edit some of the steps of a multi-step Canvas, users who were already in the audience but have not received the steps will receive the updated version of the message. Note that this will only happen if they haven't been evaulated for the step yet.
 
-You may create or upload an unlimited amount of geofences on the dashboard, allowing your marketing team to setup geofence sets and campaigns without needing to calculate numbers of geofences. However, each geofence set can hold a maximum of 10,000 geofences. Braze dynamically re-synchronizes the geofences that it tracks for each individual user, ensuring that the most relevant geofences to them are always available.
+For more information on what you can or can't edit after launch, check out [Changing Your Canvas After Launch]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/change_your_canvas_after_launch/).
 
-### When are geofences active?
+### How are user conversions tracked in a Canvas?
 
-Braze geofences work even when your app is closed, at all hours of the day.
+A user can only convert once per Canvas entry.
 
-[3]: https://developers.google.com/android/reference/com/google/android/gms/location/package-summary
-[4]: https://developer.apple.com/library/content/documentation/UserExperience/Conceptual/LocationAwarenessPG/RegionMonitoring/RegionMonitoring.html
+Conversions are assigned to the most recent message received by the user for that entry. The summary block at the beginning of a Canvas reflects all conversions performed by users within that path, whether or not they received a message. Each subsequent step will only show conversions that happened while that was the most recent step the user received.
+
+{% details Examples %}
+
+#### Example 1
+
+There is a Canvas path with 10 push notifications and the conversion event is "session start" ("Opens App"):
+
+- User A opens the app after entering but before receiving the first message.
+- User B opens the app after each push notification.
+
+**Result:** The summary will show two conversion while the individual steps will show a conversion of one on the first step and zero for all subsequent steps.
+
+{% alert note %}
+If quiet hours is active when the conversion event happens, the same rules apply.
+{% endalert %}
+
+#### Example 2
+
+There is a one-step Canvas with quiet hours:
+
+1. User enters the Canvas.
+2. First step has no delay, but is within quiet hours, so the message is suppressed.
+3. User performs the conversion event.
+
+**Result:** The user will count as converted in the overall Canvas variant, but not the step since they didn't receive the step.
+
+{% enddetails %}
+
+### When looking at the number of unique users, is Canvas analytics or the segmenter more accurate?
+
+The segmenter is a more accurate statistic for unique user data versus Canvas or campaign stats. This is because Canvas and campaign statistics are numbers that Braze increments when something happens—which means there are variables which could result in this number being different than that of the segmenter. For example, users can convert more than once for a Canvas or campaign.  
