@@ -3,19 +3,40 @@ nav_title: April
 page_order: 9
 noindex: true
 page_type: update
-description: "This article contains release notes for April 2021."
+description: "This article contains release notes for April 2018."
 ---
 
-# April 2021
+# April 2018
 
-## Segment Extension
+## Webhooks update on the way
 
-A [Segment Extension]({{site.baseurl}}/user_guide/engagement_tools/segments/segment_extension) expands our existing segmentation capabilities by enabling you to target more precise lists of users based on their custom event and purchase behavior in the past 365 days. Once these extension lists are generated, they can then be included/excluded as a filter in your Segments. When creating a Segment Extension, you can also specify that the list be regenerated once every 24 hours.
+In May, Braze will be implementing a security initiative for webhook redirects. Going forward, the webhook sender will not be able to follow those redirects. Instead, redirects will be treated as errors to prevent infinite redirect loops. Braze does not expect this to affect anyone, but if you have webhooks that redirect, we recommend revisiting and editing that campaign.
 
-## A2P 10DLC
+## CSV storage increased
 
-A2P 10DLC refers to a system in the United States that allows businesses to send Application-to-Person (A2P) type messaging via a standard 10-digit long code (10DLC) phone number. 10-digit long codes have traditionally been designed for Person-to-Person (P2P) traffic, causing businesses to be constrained by limited throughput and heightened filtering. __All customers who currently have and/or use long codes are required to register their long codes for 10DLC__. To read more about A2P 10DLC, visit our documentation [here]({{site.baseurl}}/user_guide/message_building_by_channel/sms/phone_numbers/short_and_long_codes/#application-to-person-10-digit-long-codes-a2p-10dlc).
+Braze has updated the CSV X filter to include the 100 most recent CSVs a user was updated in, as opposed to the previous 10.
 
-## Global Control Groups
+## Uninstall tracking on by default for Android apps
 
-[Global Control Groups]({{site.baseurl}}/user_guide/engagement_tools/testing/global_control_group/) allow you to analyze the overall impact of your messaging efforts over time. These Groups can help you understand how your marketing campaigns and Canvases result in an uplift in sessions and custom events, by comparing the behaviors of users that receive messaging to those that don’t. 
+The [Uninstall Tracking][94] function for all new Android apps will default to "on." All existing Android apps that have uninstall tracking turned off will now be changed to "on." Android uninstall tracking no longer sends push to the device, and no other updates or actions are required on your part.
+
+## Updated and improved search functions
+
+Braze has added tagging and better search functionality to Braze to improve your experience managing large-scale deployments of Braze while you search for [custom events and attributes][92], templates, and more.
+
+## Push stories
+
+[Create notifications][95] with multiple pages, an image, click behavior, and an optional title & subtitle. Just create a push message and select "Push Story" from the dropdown.
+
+_Please note that you must update to the latest version of Android (version 2.2.0+) and iOS (version 3.2.0+) to use this feature._
+
+
+## Inbox vision
+
+You can now [preview your emails][96] based on your customer's platform, either via an overview page of thumbnails or a list view that includes a large screenshot and more specific analysis of any issues that may exist with the HTML rendering for each client. Talk to your Customer Success Manager or Account Manager for pricing and options.
+
+
+[92]: {{site.baseurl}}/user_guide/onboarding/platform_administrative_features/#custom-event-and-attribute-management
+[94]: {{site.baseurl}}/user_guide/data_and_analytics/uninstall_tracking/#uninstall-tracking-for-campaigns
+[95]: {{site.baseurl}}/user_guide/message_building_by_channel/push/push_stories/#push-stories
+[96]: {{site.baseurl}}/user_guide/message_building_by_channel/email/inbox_vision/#inbox-vision
