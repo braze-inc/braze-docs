@@ -1,41 +1,17 @@
 ---
-nav_title: "Email Lists & Addresses"
-article_title: Email Lists & Addresses Endpoints
-search_tag: Endpoint
-page_order: 0
-layout: featured
-description: "This landing page explains and lists the Braze Email Lists and Addresses Endpoints."
+page_order: 3
+nav_title: Email
+layout: dev_guide
+guide_top_header: "Email Help Articles"
 page_type: landing
-guide_top_header: "Email Lists & Addresses Endpoints"
-guide_top_text: "Users’ email subscription status can be updated and retrieved via Braze using a RESTful API. You can use the API to set up bi-directional sync between Braze and other email systems or your own database."
-guide_featured_title: ""
-guide_featured_list:
+description: "This landing page is home to help articles related to common email issues."
+channel: email
+noindex: true
+guide_menu_title: ""
+guide_menu_list:
   - 
-    name: "GET: List Hard Bounces"
-    link: /docs/api/endpoints/email/get_list_hard_bounces/
-    fa_icon: fas fa-reply-all
-  - 
-    name: "GET: Query Unsubscribed Email Addresses"
-    link: /docs/api/endpoints/email/get_query_unsubscribed_email_addresses/
-    fa_icon: fas fa-envelope
-  - 
-    name: "POST: Change Email Subscription Status"
-    link: /docs/api/endpoints/email/post_email_subscription_status/
-    fa_icon: fas fa-at
-  - 
-    name: "POST: Remove Hard Bounces"
-    link: /docs/api/endpoints/email/post_remove_hard_bounces/
-    fa_icon: fas fa-reply-all
-  - 
-    name: "POST: Remove Spam"
-    link: /docs/api/endpoints/email/post_remove_spam/
-    fa_icon: fas fa-envelope-open
-  - 
-    name: "POST: Blacklist Email"
-    link: /docs/api/endpoints/email/post_blacklist/
-    fa_icon: fas fa-envelope-open
+    name: Troubleshooting HTML Rendering in Test Emails
+    link: /docs/help/help_articles/email/html_looks_strange/
+    fa_icon: fas fa-code
 ---
 
-{% comment %}
-redirect from email_sync.md
-{% endcomment %}
