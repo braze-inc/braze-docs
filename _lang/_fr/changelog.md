@@ -1,15 +1,12 @@
 ---
 nav_title: Changelog
-article_title: Changelog for Cordova SDK
+article_title: Changelog for iOS SDK
 page_order: 30
 page_type: update
-platform:
-  - Cordova
-  - iOS
-  - Android
-description: "This page lists updates to Braze's Cordova SDK changelog for Android and iOS."
+platform: iOS
+description: "This page lists updates to Braze's iOS SDK changelog."
 ---
 
-# Cordova SDK changelog
+# iOS SDK changelog
 
-{% markdown_embed https://raw.githubusercontent.com/Appboy/appboy-cordova-sdk/master/CHANGELOG.md %}
+{% markdown_embed https://raw.githubusercontent.com/Appboy/appboy-ios-sdk/master/CHANGELOG.md %}
