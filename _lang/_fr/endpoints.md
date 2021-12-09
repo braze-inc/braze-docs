@@ -1,0 +1,7 @@
+---
+nav_title: Endpoints
+config_only: true
+layout: blank_config
+page_order: 1
+---
+
