@@ -19,17 +19,13 @@ Please visit the Flutter [official website](https://flutter.dev/) to learn more 
 
 ## Step 1: Integrate the Braze library
 
-Add the Braze Flutter SDK package from the command line. This will also add the appropriate line to your `pubspec.yaml`.
+Add the Braze Flutter SDK package from the command line.
 
 ```bash
 flutter pub add braze_plugin
 ```
 
-To import the plugin into your Dart code, you can use:
-
-```
-import 'package:braze_plugin/braze_plugin.dart';
-```
+This will add the appropriate line to your `pubspec.yaml`.
 
 ## Step 2: Complete native setup
 
@@ -115,16 +111,16 @@ public void onNewIntent(Intent intent) {
 
 {% tab iOS %}
 
-#### Step 2.2a: Configure the Braze SDK
+#### Step 2.2: Configure the Braze SDK
 
 {% subtabs global %}
 {% subtab SWIFT %}
-Add Appboy SDK import at the top of the `AppDelegate.m` file:
+Add Appboy SDK import at the top of the `AppDelegate.swift` file:
 ```swift
 import Appboy_iOS_SDK
 ```
 
-In the same file, add the following snippet within the `application:didFinishLaunchingWithOptions` method:
+In the same file, add the following snippet within the `application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool` method:
 
 ```swift
 Appboy.start(withApiKey: "YOUR-APP-IDENTIFIER-API-KEY", in:application, withLaunchOptions:launchOptions)
@@ -163,3 +159,26 @@ Otherwise, add the following elements to the file:
 
 {% endtab %}
 {% endtabs %}
+
+## Step 3: Usage
+
+To import the plugin into your Dart code, you can use:
+
+```
+import 'package:braze_plugin/braze_plugin.dart';
+```
+
+Then, you can instantiate an instance of the Braze plugin by calling new BrazePlugin().
+
+## Test your basic integration
+
+At this point, you can verify that the SDK is integrated by checking session statistics in the dashboard. If you run your application on either platform, you should see a new session in dashboard (in the **Overview** section).
+
+You can open a session for a particular user by calling the following code in your app.
+
+```javascript
+BrazePlugin myBrazePlugin = BrazePlugin();
+myBrazePlugin.changeUser("some-user-id");
+```
+
+You can then search for the user with `some-user-id` in the dashboard under **User Search**. There, you can verify that session and device data have been logged.
