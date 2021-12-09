@@ -1,16 +1,17 @@
 ---
 nav_title: Reporting
-article_title: Content Card Reporting
+article_title: In-App Message Reporting
 page_order: 4
-description: "This reference article provides an overview of the different Content Card reporting metrics and analytics options provided in the Braze dashboard."
+description: "This reference article covers in-app message reporting and analytics including campaign details, message performance, and historical performance."
 channel:
-  - content cards
+  - in-app messages
 tool:
   - Reports
 ---
 
-# Content Card reporting
+# In-app message reporting {#iam-reporting}
 
-> This reference article provides an overview of the different Content Card reporting metrics and analytics options provided in the Braze dashboard.
+> This reference article covers in-app message reporting and analytics including campaign details, message performance, and historical performance.
 
-{% include campaign_analytics.md channel="Content Card" %}
+{% include campaign_analytics.md channel="in-app message" %}
+
