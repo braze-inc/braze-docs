@@ -1,41 +1,54 @@
 ---
 nav_title: FAQs
-article_title: Email FAQs
-page_order: 25
-description: "This page provides answers to frequently asked questions about Email messaging."
-channel: email
+article_title: In-App Messages FAQs
+page_order: 19
+description: "This article provides answers to frequently asked questions about In-App Messages."
+tool: in-app messages
 ---
 
-# Email FAQs
+# In-App Messages FAQs
 
-### Can I add a "view this email in a browser" link to my emails?
+> This article provides answers to some frequently asked questions about in-app messages.
 
-No, Braze does not offer this functionality. This is because an increasing majority of email is opened on mobile devices and modern email clients, which render images and content without any problems.
+### What is an in-browser message and how does it differ from an in-app message?
+In-browser messages are in-app messages sent to web browsers. To create an in-browser message, make sure to select __Web Browser__ under the __Send To__ field when creating your in-app message campaign or Canvas.
 
-**Workaround:** To achieve this same result, you can host the content of your email on an external landing page (such as your website), which can then be linked to from the email campaign you are building using the **Link** tool when editing the email body.
+### Will an in-app message display if a device is offline?
 
-### What happens when an email is sent out and multiple profiles have the same email address?
+It depends. Because in-app messages are delivered at session start, the device is able to download the payload prior to going offline, the in-app message can still be displayed while offline. If the payload is not downloaded, then the in-app message will not display.
 
-If multiple users with matching emails are all in-segment to receive a campaign, a random user profile with that email address is chosen at the time of send. This way the email is only sent once and is deduplicated, which ensures that it doesn’t hit the same email multiple times.
+### If a user already has an in-app message payload on their device and the message expiration is changed, will the expiration be updated on their device?
 
-Note that this deduplication occurs if the users targeted are included in the same dispatch. Therefore triggered campaigns may result in multiple sends to the same email address (even within a time period where users could be excluded due to reeligibility) if differing users with matching emails log the trigger event at different times. Users are not deduped by email on Canvas entry, so it’s possible that users are not deduped beyond the first step of a Canvas if they are progressing at slightly different times due to rate limited entry.
+When a user starts a session, Braze checks if changes have been made to any in-app messages that they are eligible for and updates them accordingly. So if the expiration has changed and they log a session, then the in-app message is sent to the device with the updated information.
 
-When a user tied to a given email address opens or clicks an email, all user profiles which share that email address are marked as opening and clicking the campaign. You can identify targeted users from the user profile download within **User Search**. The user who actually received the email will have a timestamp set for the “received_email” field in the associated campaign summary; other users won’t have this field, just “date”.
+### How do I set up quiet hours for an in-app message campaign?
 
-**Exception: API-Triggered Campaigns**
+The Quiet Hours feature isn't available for use with in-app message campaigns. This feature is used to prevent messages from being sent to your users during specific hours. For in-app message campaigns, your users will only receive in-app messages if they are active within the app.
 
-API-triggered campaigns will dedupe or send dupes depending on where the audience is defined. In short, the duplicate emails must be directly targeted as separate `User_ids` within the call in order to receive multiple details. Here are three possible scenarios for API-triggered campaigns:
+As a workaround to send in-app messages during a specific time, use the following sample Liquid code. This allows the message to be aborted if the in-app message is displayed after 7:59 pm or before 8 am at the specified timezone.
 
-- **Scenario 1: Duplicate emails in target segment (DEDUPED):** If the same email appears in multiple user profiles that are grouped together in dashboard’s audience filters for an API-triggered campaign, only one of the profiles will get the email.
-- **Scenario 2: Duplicate emails in different user_ids within recipients object (DUPE SENDS):** If the same email appears within multiple `External_user_IDs` referenced by the “recipients” object, the email will be sent twice.
-- **Scenario 3: Duplicate emails due to duplicate user_ids within recipients object (DEDUPED):** If you try to add the same user profile twice, only one of the profiles will get the email.
+{% raw %}
+```liquid
+{% assign time = 'now' | time_zone: ${time_zone} %}{% assign hour = time | date: '%H' | plus: 0 %}
+{% if hour > 19 or hour < 8 %}
+{% abort_message("Outside allowed time window") %}
+{% endif %}
+MESSAGE HERE
+```
+{% endraw %}
 
-### What is a "good" email deliverability rate?
+### When is eligibility for an in-app message calculated?
 
-Typically, the “magic number” is around 95% messages delivered, with a bounce rate no higher than 3%. If your deliverability dips below that, there is usually cause for concern.
+Eligibility for an in-app message is calculated at the time of delivery. If an in-app message is scheduled to send at 7 am, then eligibility is checked for this in-app message at 7 am.
 
-However, a rate can be above 95% and still have deliverability issues. For example, if all of your bounces are coming from one particular domain, that is a clear signal that there is a reputation issue with that provider.
+Once the in-app message is displayed, the eligibility will depend on when the in-app message is downloaded and triggered.
 
-Additionally, messages may be getting delivered and ending up in Spam, indicating potentially serious reputation issues. It’s important to monitor not just the number of messages being delivered, but also open and click rates to determine whether users are actually seeing the messages in their inboxes. Because providers usually don’t report every spam instance, a spam rate of even 1% could be cause for concern and further analysis.
+### Why is my archived in-app message campaign still delivering in-app message impressions?
 
-Finally, your business and the types of emails you send may also affect deliverability. For example, someone sending mostly transactional emails should expect to see a better rate than someone sending many marketing messages.
+This can occur for users who met the segment criteria when the in-app message campaign was active.
+
+To prevent this, during your campaign setup, select **Re-evaluate campaign eligibility before displaying**.
+
+### How does Braze calculate an in-app message expiration set to "after 1 day(s)"?
+
+Braze calculates an expiration time of one day as 24 hours after users are eligible to receive a message.
