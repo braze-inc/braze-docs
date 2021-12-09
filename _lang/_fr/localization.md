@@ -1,21 +1,18 @@
 ---
 nav_title: Localization
-article_title: Localization for Android/FireOS
-platform:
-  - Android
-  - FireOS
-page_order: 1
-description: "This reference article covers Android localization, listing all the current languages supported by Braze."
+article_title: Localization for iOS
+platform: iOS
+page_order: 2
+description: "This reference article covers iOS localization, listing all the current languages supported by Braze."
 ---
 
 # Localization
 
-Localization is supported within the Braze Android SDK. In addition to English, Braze supports several languages for our built-in SDK messages. These pertain to the default messages displayed in applications integrated with Braze, such as places in the app when there are connectivity issues ("Cannot establish network connection. Please try again later.") See below for a full list of messages (strings). If the phone language is set to one of the supported languages, any of the Braze default strings triggered within an integrated application will automatically appear in that language.
+In addition to English, Braze supports several languages for our built-in SDK messages. These pertain to the default messages displayed in applications integrated with Braze, such as places in the app when there are connectivity issues ("Cannot establish network connection. Please try again later.") See below for a full list of messages (strings). If the phone language is set to one of the supported languages, any of the Braze default strings triggered within an integrated application will automatically appear in that language.
 
 If you are looking for a complete list of supported languages you may attribute to your users in their profiles, please see our [User Language List][1].
 
 ## Languages supported
-
 - Arabic
 - Burmese
 - Catalan
@@ -53,7 +50,8 @@ If you are looking for a complete list of supported languages you may attribute 
 - Ukrainian
 - Vietnamese
 
-For more information see the [Android Localization Developer Docs][3].
+For more information see the [Apple Localization Developer Docs][3] as well as the [LOC standard language list][4].
 
-[3]: http://developer.android.com/guide/topics/resources/localization.html
 [1]: {{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/language_codes/
+[3]: https://developer.apple.com/library/ios/documentation/CoreFoundation/Reference/CFLocaleRef/
+[4]: http://www.loc.gov/standards/iso639-2/php/English_list.php
