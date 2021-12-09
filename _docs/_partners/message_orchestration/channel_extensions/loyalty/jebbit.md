@@ -11,45 +11,39 @@ search_tag: Partner
 
 # Jebbit
 
-> [Jebbit](https://www.jebbit.com/) is a PaaS to which you can build engaging experiences for users to capture first-party data.
+> [Jebbit](https://www.jebbit.com/) is a PaaS that allows you to build engaging experiences for users to capture first-party data.
 
-Jebbit has partnered with Braze so that you can pass user emails and attributes from your Jebbit campaigns as user data to Braze in real-time. This data can then be utilized to drive marketing initiatives like personalized email campaigns and triggers. 
+The Braze and Jebbit integration lets you pass user emails and attributes from your Jebbit campaigns as user data to Braze in real-time. This data can then be used to drive marketing initiatives like personalized email campaigns and triggers. 
 
-## Requirements
+## Prerequisites
 
-When requesting integrating with Jebbit, please communicate if any hard deadlines need to be met.
-Additionally, please make sure that you have the attributes mapped to your Jebbit experience(s) that you would like passed to Braze.
-It is also important to note that the attribute ID you have set in Jebbit is how the attribute field name will be shown in Braze.
+| Requirement | Description |
+|---|---|
+|Jebbit account | A Jebbit account is required to take advantage of this partnership. |
+| Braze REST API key | A Braze REST API Key with all user data permissions. <br><br> This can be created within the __Braze Dashboard -> Developer Console -> REST API Key -> Create New API Key__ |
+|Braze REST Endpoint | Your REST Endpoint URL. Your endpoint will depend on the Braze URL for [your instance](https://www.braze.com/docs/api/basics/#endpoints). |
+{: .reset-td-br-1 .reset-td-br-2}
 
-| Requirement | Origin | Access | Description |
-|---|---|---|---|
-|Braze App Group REST API Key | Braze platform | Developer Console > Rest API Keys | Please create an API Key with all permissions checked under “User Data”, and provide this key via [Dropbox File Request](https://www.dropbox.com/request/RqKQHkJHXw1cFBKbXpZx) |
-|Braze API Endpoint | Braze platform | Check out our [listed endpoints]({{site.baseurl}}/developer_guide/rest_api/basics/#endpoints) or open a [support ticket]({{site.baseurl}}/braze_support/). | We currently support the [user data]({{site.baseurl}}/api/endpoints/user_data/) endpoint specifically, but a request for a different endpoint can be supported. |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
+## Integration
 
-## Out-of-the box integration
+When requesting integrating with Jebbit, communicate if any hard deadlines need to be met. Additionally, ensure that you have the attributes mapped to your Jebbit experience(s) that you would like passed to Braze.
 
 ### Step 1: Provide API credentials
 
-Please provide your API credentials as required from the above table. 
-For security reasons, we ask that you transfer the information from a .txt file via a Dropbox File request. Please submit your file using the following [Dropbox URL](https://www.dropbox.com/request/RqKQHkJHXw1cFBKbXpZx).
+Provide your API credentials to Jebbit in a .txt file via a Dropbox file request. 
+Submit your file using the following [Dropbox URL](https://www.dropbox.com/request/RqKQHkJHXw1cFBKbXpZx).
 
 ### Step 2: Confirm test submission
 
-A Jebbit engineer assigned to your integration will push through a test submission for Jebbit to Braze so you are able to see exactly how the data will look in your Braze environment.
-This will be the final step prior to activating the integration.
+A Jebbit engineer assigned to your integration will push through a test submission from Jebbit to Braze, so you can see how the data will look in your Braze environment. This is the final step in activating the integration. Now that your Jebbit data is set up, use it to drive your marketing initiatives.
 
-### Step 3: Activate your Jebbit data
-
-Now that you have your Jebbit Data flowing into your Braze account, use it to drive your marketing initiatives.
+{% alert note %}
+The attribute ID you have set in Jebbit is how the attribute field name will be shown in Braze.
+{% endalert %}
 
 ## Customization
 
 We currently support the [user data]({{site.baseurl}}/api/endpoints/user_data/) endpoints specifically, but requests for different endpoints can be supported.
 Attribute field names can also be customized to your preference.
 
-## Using this integration
-
-There are no further steps required for you to connect your Jebbit data to Braze.
-If you want additional attributes from Jebbit in Braze, simply map the new attribute in your Jebbit account.
-The new attribute will automatically show in Braze as you collect data for that attribute.
+If you want additional attributes from Jebbit in Braze, map the new attribute in your Jebbit account. The attribute will automatically show in Braze as you collect data for that attribute.
