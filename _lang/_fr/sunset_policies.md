@@ -1,33 +1,19 @@
 ---
 nav_title: Sunset Policies
-article_title: Sunset Policies for Email
-page_order: 8
+article_title: Sunset Policies for Push
+page_order: 3
 page_type: reference
-description: "This article covers best practices surrounding sunset policies—understanding situations when it's better to discontinue messages to disengaged users."
-channel: email
+description: "This article provides best practices for sunsetting push notifications to a segment of users."
+channel: push
 ---
 
-# Sunset policies for email
+# Sunset policies for push {#push-sunset-policies}
 
-While you may be tempted to send campaigns to as many users as you can, there are situations where it's actually wise to discontinue messages to disengaged users.  For instance, in the case of emails, your sending IP has a reputation score that factors in engagement, spam reporting, blacklisting, etc. There are many free tools to monitor your IPs reputation score such as [Sender Score](https://www.senderscore.org/ "Sender Score") or [Outlook's Smart Network Data Service](https://postmaster.live.com/snds/ "Outlook's Smart Network Data Service"). If your reputation score is consistently low, ISP and mailbox filters might automatically sort your emails into a spam or low priority folder for all recipients, even engaged ones.  To prevent this from happening, you need to create a sunset policy that ensures your emails aren't delivered to inactive recipients. Braze's segmentation filters help prevent your messaging from appearing spammy or irrelevant by letting you easily implement sunset policies for emails, pushes, in-app notifications, and News Feed cards
+Even when you make sure to send only relevant, timely push notifications, some users may still be unresponsive to them and find them spammy.  If a user shows a history of repeatedly ignoring your push notifications, it's a good idea to stop sending them pushes before they become annoyed with your app's communications or uninstall your app altogether.  To do this, create a sunset policy that eventually stops sending push notifications to users who haven't had a direct or influenced open for a long period of time. You can read about the advantages of a sunset policy and learn how to create one within our platform [here][19].
 
-Here are some things to consider when you create a sunset policy:
+Before you stop sending push notifications to a segment of users, you should deliver one final notification that explains why they will no longer receive pushes and gives them a chance to demonstrate their interest in continued pushes by opening that notification. After the sunset policy goes into effect, use an in-app message and/ or News Feed card to remind these users that while they will no longer receive pushes, in-app messaging channels will continue to deliver interesting, helpful information.
 
-- What counts as an "unengaged" user? Is engagement defined by clicks and opens, purchases, app usage, or a combination of these behaviors?
-- How long does the lapse in engagement need to be for you to stop sending messages?
-- Will you deliver any special campaigns to users before excluding them from your segments?
-- Which messaging channels will your sunset policy apply to?
+Although you may be reluctant to stop sending pushes to users who originally opted in to them, keep in mind that there are other messaging channels that can more effectively reach these users, especially if they have previously ignored your pushes.  If the user opens your emails, then email campaigns are a good way to reach them outside of your app.  If not, then in-app messages and News Feed cards are the best way to deliver content without risking the user uninstalling your app.
+[46]:{% image_buster /assets/img_archive/Push_Window8_Toast.png %} [47]:{% image_buster /assets/img_archive/Push_Windows_Universal_Toast.png %}
 
-To incorporate sunset policies into your campaigns, [create segments][19] that automatically exclude users who have marked your emails as spam or have not interacted with a your messages for a certain period of time.
-
-To set up these segments, choose the "Has Marked You As Spam" and/or "Last Engaged With Message" filters, which are located under the **Marketing Activity** section in the filter dropdown.  When you apply the "Last Engaged With Message" filter, specify the type of messaging (push, email, or in-app notification) that the user has or has not interacted with, as well as the number of days it has been since the user last interacted. After you create a segment, choose to target this segment with any [messaging channel]({{site.baseurl}}/user_guide/message_building_by_channel/).
-
-!\[Segment Details page with the filter "Last Engaged with Message" selected\]\[20\]
-
-While Braze's platform automatically stops sending emails to users who have marked you as spam, the "Has Marked You As Spam" filter allows you to also send these users targeted push messages, in-app notifications, and News Feed cards.  This filter is useful for [retargeting campaigns][21] - for instance, you can send unengaged users messages or News Feed updates that remind them of the features and deals that they are missing out on when they don't open your emails.
-
-Sunset policies can be especially helpful in email campaigns that target lapsing users.  While these campaigns focus on segments that have not interacted with your app for a period of time, they can put the deliverability of your emails at risk if they repeatedly include unengaged recipients. Sunset policies allow you to target lapsing users without landing in the spam folder.
-[20]: {% image_buster /assets/img_archive/email_sunset_policies_new.png %}
-
-[19]: {{site.baseurl}}/user_guide/engagement_tools/segments/creating_a_segment/#creating-a-segment
-[21]: {{site.baseurl}}/user_guide/engagement_tools/campaigns/ideas_and_strategies/retargeting_campaigns/#retargeting-campaigns
+[19]: {{site.baseurl}}/user_guide/message_building_by_channel/email/best_practices/
