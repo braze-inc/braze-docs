@@ -3,34 +3,20 @@ nav_title: June
 page_order: 7
 noindex: true
 page_type: update
-description: "This article contains release notes for June 2021."
+description: "This article contains release notes for June 2018."
 ---
 
-# June 2021
+# June 2018
 
-## Conversion correlation
+## Password reusability
 
-This guide covers the [Conversion Correlation]({{site.baseurl}}/user_guide/engagement_tools/testing/conversion_correlation/) analysis on the **Campaign Analytics** page, which gives you insight into what user attributes and behaviors help or hurt the outcomes you set for campaigns. Covered is an overview of the analysis, what is checked, when it's available, and how Braze checks for significance.
+Administrators can now determine the minimum number of new, unique passwords other Braze users in their company must use before they can reuse a previous password. This can be controlled from the [Authentication Rules][98] panel in the _Company Settings_ tool (in the top-navigation dropdown menu), within the _Security Settings_ tab.
 
-## Global Control Group Report
+## Uninstall tracking for Canvas steps
 
-We've updated the metrics on the [Global Control Groups]({{site.baseurl}}/user_guide/engagement_tools/testing/global_control_group/) report to better help you analyze the overall impact of your messaging efforts over time. Key changes include adding **Events per User** and **Estimated Group Size**, and adjusting the calculation for **Incremental Uplift** to reflect the difference in total events between your treatment and control groups.
+Uninstalls per Canvas Steps are now tracked and viewable as a stat.
 
-## Reports Overview
+!\[uninstall_tracking\]\[1\]
+[1]: {% image_buster /assets/img/uninstall_tracking_canvas_step.png %}
 
-Not sure where to start with analyzing your campaigns or Canvases? The [Reports Overview]({{site.baseurl}}/user_guide/data_and_analytics/your_reports/reports_overview/) provides guidance on which reports and analytics you can use to answer common marketing strategy questions.
-
-## New US-05 cluster
-
-Braze supports a new US cluster, US-05. Refer to our list of dashboard and REST [Endpoints]({{site.baseurl}}/api/basics/#endpoints) to see more.
-
-## Braze UI updates
-
-In May 2021, Braze updated the following labels and terms in the Braze dashboard:
-
-- App Usage --> Overview
-- App Settings --> Settings
-- Manage App Group --> Manage Settings
-- Money Spent In-App --> Money Spent
-- App Usage (User Profile) --> Sessions Overview
-- Import a CSV of user information to add and/or update users in this App Group --> Import a CSV of user information to add or update users
+[98]: {{site.baseurl}}/user_guide/onboarding/platform_administrative_features/#authentication-rules
