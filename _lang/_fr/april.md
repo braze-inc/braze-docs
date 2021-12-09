@@ -3,40 +3,21 @@ nav_title: April
 page_order: 9
 noindex: true
 page_type: update
-description: "This article contains release notes for April 2018."
+description: "This article contains release notes for April 2019."
 ---
 
-# April 2018
+# April 2019
 
-## Webhooks update on the way
+## New Currents events & fields
 
-In May, Braze will be implementing a security initiative for webhook redirects. Going forward, the webhook sender will not be able to follow those redirects. Instead, redirects will be treated as errors to prevent infinite redirect loops. Braze does not expect this to affect anyone, but if you have webhooks that redirect, we recommend revisiting and editing that campaign.
+In addition to some corrections to the section, a new [Subscription Event]({{ site.baseurl}}/user_guide/data_and_analytics/braze_currents/message_engagement_events/#subscription-events) has been added to the Message Engagement Events page. You can now export Subscription Group State Change data from Braze to [Segment]({{ site.baseurl}}/partners/data_and_infrastructure_agility/customer_data_platform/segment_for_currents/#integration-details) and [mParticle]({{ site.baseurl}}/partners/data_and_infrastructure_agility/customer_data_platform/mParticle/mparticle_for_currents/), as well as that and Install Attribution Events in [Mixpanel]({{ site.baseurl}}/partners/insights/behavioral_analytics/mixpanel_for_currents).
 
-## CSV storage increased
+Additionally, the property `canvas_step_id` has been added to available [Conversion Events]({{ site.baseurl}}/user_guide/data_and_analytics/braze_currents/message_engagement_events/#conversion-events).
 
-Braze has updated the CSV X filter to include the 100 most recent CSVs a user was updated in, as opposed to the previous 10.
+{% alert important %}
+To take advantage of these updates, you will need to edit your Currents connector settings and enable the events you want to use. Reach out to your account manager if you have any questions.
+{% endalert %}
 
-## Uninstall tracking on by default for Android apps
+## Subscription groups archiving
 
-The [Uninstall Tracking][94] function for all new Android apps will default to "on." All existing Android apps that have uninstall tracking turned off will now be changed to "on." Android uninstall tracking no longer sends push to the device, and no other updates or actions are required on your part.
-
-## Updated and improved search functions
-
-Braze has added tagging and better search functionality to Braze to improve your experience managing large-scale deployments of Braze while you search for [custom events and attributes][92], templates, and more.
-
-## Push stories
-
-[Create notifications][95] with multiple pages, an image, click behavior, and an optional title & subtitle. Just create a push message and select "Push Story" from the dropdown.
-
-_Please note that you must update to the latest version of Android (version 2.2.0+) and iOS (version 3.2.0+) to use this feature._
-
-
-## Inbox vision
-
-You can now [preview your emails][96] based on your customer's platform, either via an overview page of thumbnails or a list view that includes a large screenshot and more specific analysis of any issues that may exist with the HTML rendering for each client. Talk to your Customer Success Manager or Account Manager for pricing and options.
-
-
-[92]: {{site.baseurl}}/user_guide/onboarding/platform_administrative_features/#custom-event-and-attribute-management
-[94]: {{site.baseurl}}/user_guide/data_and_analytics/uninstall_tracking/#uninstall-tracking-for-campaigns
-[95]: {{site.baseurl}}/user_guide/message_building_by_channel/push/push_stories/#push-stories
-[96]: {{site.baseurl}}/user_guide/message_building_by_channel/email/inbox_vision/#inbox-vision
+You can now [archive Subscription Groups]({{site.baseurl}}/user_guide/message_building_by_channel/email/managing_user_subscriptions/#archiving-groups)! Archived Subscription Groups cannot be edited and will no longer appear in Segment Filters.  If you attempt to archive a group which is being used as a Segment Filter in any email, campaign, or canvas, you will receive an error message that will prevent you from archiving the Group until you remove all usages of it.
