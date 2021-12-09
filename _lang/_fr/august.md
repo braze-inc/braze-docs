@@ -1,34 +1,27 @@
 ---
-nav_title: August page_order: 5 noindex: true page_type: update
-description: "This article contains release notes for August 2021."
+nav_title: August
+page_order: 6
+noindex: true
+page_type: update
+description: "This article contains release notes for August 2018."
 ---
 
-# August 2021
+# August 2018
 
-## Simple Survey in-app message
+## iOS 12 notification groups
 
-Use the new Simple Survey In-App Message template to collect user attributes, insights, and preferences that power your campaign strategy. For example, you can ask users how they’d like to use your app, learn more about their personal preferences, or even ask about their satisfaction with a particular feature. This survey template is supported for both mobile apps and web browsers. Visit our [documentation]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/templates/simple_survey/) to get started.
+The recent iOS 12 release supports grouping notifications (similar to Android Notification Channels) for applications. [Braze allows you to utilize this grouping feature in iOS this using our message composer.]({{site.baseurl}}/user_guide/message_building_by_channel/push/creating_a_push_message/#notification-groups)
 
-## Liquid use case library
+## Push story triggering
 
-Wondering how to do that one thing with Liquid? Just looking for inspiration? Check out our new [Liquid Use Case Library]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/liquid_use_cases/) for a collection of use cases ranging from Anniversaries and Birthdays to Platform Targeting and more.
+You can now retarget users based on specific page clicks on push story slides. Use the additional filter for __Interacted with Campaign__.
 
-## Email tracking
+## S3 and Azure data events from anonymous users
 
-Open pixel tracking and click tracking can now be disabled per user profile. This flexibility helps customers support regional privacy laws, where an individual user profile might indicate they no longer want to be tracked. Visit our [documentation]({{site.baseurl}}/user_guide/data_and_analytics/tracking/email_tracking/) to learn more.
+Customers exporting data to Amazon S3 and Microsoft Azure can now include events from anonymous users. This functionality will default to on for all newly created integrations, but will remain off for for all existing integrations. If you have any questions, reach out to your account manager or open a [support ticket][support].
 
-## SDK data collection options
+## Mixpanel Cohorts integration
 
-Learn more about how the Braze SDK can be integrated to allow for flexible data collection in our new documentation on [SDK Data Collection Options]({{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/sdk_data_collection/).
+Customers of both Braze and Mixpanel can now integrate and [send Mixpanel Cohorts to Braze as segment filters]({{site.baseurl}}/partners/insights/behavioral_analytics/mixpanel_for_currents/#mixpanel-cohort-import). You can either set up a one-time manual export or a dynamic export every two hours. Each updated user will count as a data point, but Mixpanel only sends changes since the last sync.
 
-## SSL overview
-
-Learn more about SSL at Braze, why SSL is important, and how you can acquire an SSL certificate in our new [SSL Overview]({{site.baseurl}}/user_guide/onboarding_with_braze/email_setup/ssl/) documentation.
-
-## Amplitude user profile API endpoints
-
-Amplitude’s User Profile API serves Amplitude user profiles. This includes user properties, computed user properties, a list of cohort IDs of cohorts that include the user, and recommendations. Refer to [Amplitude User Profile API Endpoints]({{site.baseurl}}/partners/data_and_infrastructure_agility/analytics/amplitude/amplitude_user_profile_api/) to learn more.
-
-## Campaign details endpoint
-
-The GET [`/campaigns/details`]({{site.baseurl}}/api/endpoints/export/campaigns/get_campaign_details/) API endpoint has added a dedicated `message` response for the in-app message channel. Documentation on this can be found [here]({{site.baseurl}}/api/endpoints/export/campaigns/get_campaign_details/#messages).
+[support]: {{site.baseurl}}/braze_support/
