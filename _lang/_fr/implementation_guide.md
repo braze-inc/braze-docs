@@ -1,591 +1,832 @@
 ---
 nav_title: Advanced Implementation (Optional)
-article_title: Content Card Implementation Guide for iOS (Optional)
+article_title: Advanced Push Notification Implementation for iOS (Optional)
 platform: iOS
-page_order: 7
-description: "This advanced implementation guide covers iOS Content Card code considerations, three use cases built by our team, accompanying code snippets, and guidance on logging impressions, clicks, and dismissals."
+page_order: 29
+description: "This advanced implementation guide covers how to leverage iOS push notification content app extensions to get the most out of your push messages. Also included are three use cases built by our team, accompanying code snippets, and guidance on logging analytics."
 channel:
-  - content cards
+  - push
 ---
 
+<br>
 {% alert important %}
-Looking for the out-of-the-box Content Card developer integration guide? Find it [here]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/content_cards/data_model/).
+Looking for the out-of-the-box Push developer integration guide? Find it [here]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/push_notifications/integration/).
 {% endalert %}
 
-# Content Card implementation guide
+# Push notification implementation guide
 
-> This optional and advanced implementation guide covers Content Card code considerations, three custom use cases built by our team, accompanying code snippets, and guidance on logging impressions, clicks, and dismissals. Visit our Braze Demo Repository [here](https://github.com/braze-inc/braze-growth-shares-ios-demo-app)! Please note that this implementation guide is centered around a Swift implementation, but Objective-C snippets are provided for those interested.
+> This optional and advanced implementation guide covers ways to leverage push notification content app extensions to get the most out of your push messages. Included are three custom use cases built by our team, accompanying code snippets, and guidance on logging analytics. Visit our Braze Demo Repository [here](https://github.com/braze-inc/braze-growth-shares-ios-demo-app)! Please note that this implementation guide is centered around a Swift implementation, but Objective-C snippets are provided for those interested.
 
-## Code considerations
+## Notification content app extensions
 
-### Content Cards as custom objects
+!\[Push Content Extension\]\[1\]{: style="max-width:65%;border:0;margin-top:10px"}
 
-Much like a rocketship adding a booster, your own custom objects can be extended to function as Content Cards. Limited API surfaces such as this provide flexibility to work with different data backends interchangeably. This can be done by conforming to the `ContentCardable` protocol and implementing the initializer (as seen below) and, through the use of the `ContentCardData` struct, allows you to access the `ABKContentCard` data. The `ABKContentCard` payload will be used to initialize the `ContentCardData` struct and the custom object itself, all from a `Dictionary` type via the initializer the protocol comes with.
+Push notifications while seemingly standard across different platforms, offer immense customization options past what is normally implemented in the default UI. When a push notification is expanded, content notification extensions enable a custom view of the expanded push notification.
 
-The initializer also includes a `ContentCardClassType` enum. This enum is used to decide which object to initialize. Through the use of key-value pairs within the Braze dashboard, you can set an explicit `class_type` key that will be used to determine what object to initialize. These key-value pairs for Content Cards come through in the `extras` variable on the `ABKContentCard`. Another core component of the initializer is the `metaData` dictionary parameter. The `metaData` includes everything from the `ABKContentCard` parsed out into a series of keys and values. Once the relevant cards are parsed and converted to your custom objects, the app is ready to begin working with them as if they were instantiated from JSON or any other source.
+Push notifications can be expanded in three different ways: <br>- A long press on the push banner<br>- Swiping down on the push banner<br>- Swiping the banner to the left and selecting "View"
 
-Once you have a solid understanding of these code considerations, check out our [use cases](#sample-use-cases) below to get started implementing your custom objects.
+These custom views offer smart ways to engage customers allowing you to display many distinct types of content including interactive notifications, notifications populated with user data, and even push messages that can capture information like phone numbers and email. While implementing push in this way may be unfamiliar to some, one of our well-known features at Braze, [Push Stories]({{site.baseurl}}/user_guide/message_building_by_channel/push/advanced_push_options/push_stories/), are a prime example of what a custom view for a notification content app extension can look like!
+
+#### Requirements:
+!\[Push Content Extension\]\[15\]{: style="float:right;max-width:50%;margin-left:10px; border:0;margin-top:10px"}
+- [Push notifications]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/push_notifications/integration/) successfully integrated in your app
+- iOS 10 or higher
+- The following files generated by Xcode based on your coding language:
+
+Swift<br> &#45; `NotificationViewController.swift`<br> &#45; `MainInterface.storyboard`<br><br> Objective-C<br> &#45; `NotificationViewController.h`<br> &#45; `NotificationViewController.m`<br> &#45; `MainInterface.storyboard`
+
+### Custom category configuration
+
+To set up a custom view in the dashboard you must toggle on notification buttons and enter your custom category. The pre-registered custom iOS category you provide is then checked against the `UNNotificationExtensionCategory` in the `.plist` of your Notification Content Extension Target. The value given here must match what is set in the Braze dashboard.
+
+!\[Push Content Extension\]\[16\]{: style="max-width:75%;border:0;margin-top:10px"} !\[Push Content Extension\]\[17\]{: style="max-width:75%;border:0;margin-top:10px"}
+
+{% alert tip %}
+Since pushes with content extensions aren't always apparent, it is recommended to include a call to action to nudge your users to expand their push notifications.
+{% endalert %}
+
+## Use case and implementation walkthrough
+
+There are three push notification content app extension types provided. Each type has a concept walkthrough, potential use cases, and a look into how push notification variables may look and be used in the Braze dashboard:
+- [Interactive Push Notification](#interactive-push-notification)
+- [Personalized Push Notifications](#personalized-push-notifications)
+- [Information Capture Push Notifications](#information-capture-push-notification)
+
+### Interactive push notification
+
+Push notifications can respond to user actions inside a content extension. For users running iOS 12 or later, this means you can turn your push messages into fully interactive push notifications! This interactivity offers many possibilities to get your users engaged in your notifications. The example below shows a push where users are able to play a match game inside the expanded notification.
+
+!\[Push Content Extension\]\[12\]{: style="border:0"}
+
+#### Dashboard configuration
+
+To set up a custom view in the dashboard, within the notification button settings enter the specific category you would like to display. Next, in the `.plist` of your Notification Content Extension, you must also set the custom category to the `UNNotificationExtensionCategory` attribute. The value given here must match what is set in the Braze dashboard. Lastly, to enable user interactions in a push notification, set the `UNNotificationExtensionInteractionEnabled` key to true.
+
+!\[Interactive Push Dashboard Example\]\[3\]{: style="float:right;max-width:45%;"}
+
+!\[Interactive Push Dashboard Example\]\[14\]{: style="max-width:50%;"}
+
+#### Other use cases
+Push content extensions are an exciting option to introduce interactivity to your promotions and applications. Some examples include a game for users to play, a spin-to-win wheel for discounts, or a "like" button to save a listing or song.
+
+##### Ready to log analytics?
+Visit the [following section](#logging-analytics) to get a better understanding of how the flow of data should look.
+
+### Personalized push notifications
+!\[Personalized Push Dashboard Example\]\[6\]{: style="float:right;max-width:40%;margin-left:15px;border:0"}
+
+Push notifications can display user-specific information inside a content extension. The example to the right shows a push notification after a user has completed a specific task (Braze LAB course) and is now encouraged to expand this notification to check their progress. The information provided here is user-specific and can be fired off as a session is completed or specific user action is taken by leveraging an API trigger.
+
+#### Dashboard configuration
+
+To set up a personalized push in the dashboard, you must register the specific category you would like to be displayed, and then within the key-value pairs using standard Liquid, set the appropriate user attributes you would like the message to show. These views can be personalized based on specific user attributes of a specific user profile.
+
+!\[Personalized Push Dashboard Example\]\[5\]{: style="max-width:60%;"}
+
+#### Handling key-value pairs
+
+The method below, `didReceive` is called when the content extension has received a notification, it can be found within the `NotificationViewController`. The key-value pairs provided in the dashboard are represented in the code through the use of a `userInfo` dictionary.
+
+__Parsing Key-Value Pairs from Push Notifications__<br>
+
+{% tabs %}
+{% tab Swift %}
+``` swift 
+func didReceive(_ notification: UNNotification) {
+  let userInfo = notification.request.content.userInfo
+
+  guard let value = userInfo["YOUR-KEY-VALUE-PAIR"] as? String,
+        let otherValue = userInfo["YOUR-OTHER-KEY-VALUE-PAIR"] as? String,
+  else { fatalError("Key-Value Pairs are incorrect.")}
+
+  ...
+}
+```
+{% endtab %}
+{% tab Objective-C %}
+```objc
+- (void)didReceiveNotification:(nonnull UNNotification *)notification {
+  NSDictionary *userInfo = notification.request.content.userInfo;
+
+  if (userInfo[@"YOUR-KEY-VALUE-PAIR"] && userInfo[@"YOUR-OTHER-KEY-VALUE-PAIR"]) {
+
+  ...
+
+  } else {
+    [NSException raise:NSGenericException format:@"Key-Value Pairs are incorrect"];
+  }
+}
+```
+{% endtab %}
+{% endtabs %}
+
+#### Other use cases
+
+The ideas for progress-based and user-focused push content extensions are endless, some examples include adding the option to share your progress across different platforms, expressing achievements unlocked, punch cards, or even onboarding checklists.
+
+##### Ready to log analytics?
+Visit the [following section](#logging-analytics) to get a better understanding of how the flow of data should look.
+
+### Information capture push notification
+
+Push notifications can capture user information inside a content extension, allowing you to push the limits of what is possible with a push. Examining the flow shown below, the view is able to respond to state changes. Those state change components are represented in each image.
+
+1. User receives a push notification.
+2. Push is opened and prompts the user for information.
+3. Information is provided and if valid, the register button is shown.
+3. Confirmation view is displayed, and push gets dismissed.
+
+!\[Information Capture Push Dashboard Example\]\[8\]{: style="border:0;"}
+
+Note that the information requested here can be a wide range of things such as SMS number capture, it doesn't have to be email-specific.
+
+#### Dashboard configuration
+
+To set up an information capture capable push in the dashboard, you must register and set your custom category, and provide the key-value pairs that are needed. As seen in the example, you may also include an image in your push. To do this, you must integrate [rich notifications]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/push_notifications/rich/), set the notification style in your campaign to Rich Notification, and include a rich push image.
+
+!\[Information Capture Push Dashboard Example\]\[9\]
+
+#### Handling button actions
+
+Each action button is uniquely identified. The code checks if your response identifier is equal to the `actionIndentifier`, and if so, knows that the user clicked the action button.
+
+__Handling Push Notification Action Button Responses__<br>
+
+{% tabs %}
+{% tab Swift %}
+``` swift 
+func didReceive(_ response: UNNotificationResponse, completionHandler completion: @escaping (UNNotificationContentExtensionResponseOption) -> Void) {
+  if response.actionIdentifier == "YOUR-REGISTER-IDENTIFIER" {
+    // do something
+  } else {
+    // do something else
+  }
+}
+```
+{% endtab %}
+{% tab Objective-C %}
+```objc
+- (void)didReceiveNotificationResponse:(UNNotificationResponse *)response completionHandler:(void (^)(UNNotificationContentExtensionResponseOption))completion {
+  if ([response.actionIdentifier isEqualToString:@"YOUR-REGISTER-IDENTIFIER"]) {
+    completion(UNNotificationContentExtensionResponseOptionDismiss);
+  } else {
+    completion(UNNotificationContentExtensionResponseOptionDoNotDismiss);
+  }
+}
+```
+{% endtab %}
+{% endtabs %}
+
+##### Dismissing pushes
+
+Push notifications can be automatically dismissed from an action button press. There exist three pre-built push dismissal options that are recommended:
+
+1. `completion(.dismiss)` - Dismisses the notification
+2. `completion(.doNotDismiss)` - Notification stays open
+3. `completion(.dismissAndForward)` - Push dismisses and the user gets forwarded into the application.
+
+#### Other use cases
+
+Requesting user input through push notifications is an exciting opportunity that many companies do not take advantage of. In these push messages, you can not only request basic information like name, email, or number, but you could also prompt users to complete a user profile if unfinished, or even to submit feedback.
+
+##### Ready to log analytics?
+Visit the section below to get a better understanding of how the flow of data should look.
+
+## Logging analytics
+
+### Logging with the Braze API (recommended)
+
+Logging analytics can only be done in real-time with the help of the customer's server hitting Braze's API [users/track]({{site.baseurl}}/api/endpoints/user_data/post_user_track/) endpoint. To log analytics, send down the `braze_id` value in the key-value pairs field (as seen in the screenshot below) to identify which user profile to update.
+
+!\[Personalized Push Dashboard Example\]\[18\]{: style="max-width:80%;"}
+
+### Logging manually
+
+Logging manually will require you to first configure app groups within Xcode, and then create, save, and retrieve analytics. This will require some custom developer work on your end. The code snippets shown below will help address this.
+
+It's also important to note that analytics are not sent to Braze until the mobile application is subsequently launched. This means that, depending on your dismissal settings, there often exists an indeterminate period of time between when a push notification is dismissed and the mobile app is launched and the analytics are retrieved. While this time buffer may not affect all use cases, users should consider the impact and if necessary, adjust their user journey to include opening the application to address this concern.
+
+!\[Push Logging\]\[13\]
+
+#### Step 1: Configure app groups within Xcode
+Add a Capability `App Groups`. If you haven’t had any app group in your app, go to the Capability of the main app target, turn on the `App Groups`, and click the “+”. Use your App’s bundle ID to create the App Group. For example, if your app’s bundle ID is `com.company.appname`, you can name your App Group `group.com.company.appname.xyz`. Make sure the `App Groups` are turned on for both your main app target and the content extension target.
+
+!\[Add App Groups\]\[19\]
+
+#### Step 2: Integrate code snippets
+The following code snippets are a helpful reference on how to save and send custom events, custom attributes, and user attributes. This guide will be speaking in terms of UserDefaults, but the code representation will be in the form of a helper file  `RemoteStorage`. There also exist additional helper files `UserAttributes` and `EventName Dictionary` that are used when sending and saving user attributes. All helper files can be found below.
 
 {% tabs local %}
-{% tab ContentCardable %}
+{% tab Custom Events %}
+
+##### Saving custom events
+
+To save custom events you must create the analytics from scratch. This is done by creating a dictionary, populating it with metadata, and saving the data through the use of a helper file.
+
+1. Initialize a dictionary with event metadata
+2. Initialize `userDefaults` to retrieve and store the event data
+3. If there is an existing array, append new data to the existing array and save
+4. If there is not an existing array, save the new array to `userDefaults`
+
 {% subtabs global %}
 {% subtab Swift %}
-__ContentCardable Protocol__<br> A `ContentCardData` object that represents the `ABKContentCard` data along with a `ContentCardClassType` enum. An initializer used to instantiate custom objects with `ABKContentCard` metadata.
-```swift
-protocol ContentCardable {
-  var contentCardData: ContentCardData? { get }
-  init?(metaData: [ContentCardKey: Any], classType contentCardClassType: ContentCardClassType)
-}
+``` swift 
+func saveCustomEvent(with properties: [String: Any]? = nil) {
+  // 1
+  let customEventDictionary = Dictionary(eventName: "YOUR-EVENT-NAME", properties: properties)
 
-extension ContentCardable {
-  var isContentCard: Bool {
-    return contentCardData != nil
-  }
+  // 2
+  let remoteStorage = RemoteStorage(storageType: .suite)
 
-  func logContentCardClicked() {
-    BrazeManager.shared.logContentCardClicked(idString: contentCardData?.contentCardId)
-  }
-
-  func logContentCardDismissed() {
-    BrazeManager.shared.logContentCardDismissed(idString: contentCardData?.contentCardId)
-  }
-
-  func logContentCardImpression() {
-    BrazeManager.shared.logContentCardImpression(idString: contentCardData?.contentCardId)
-  }
-}
-```
-__Content Card Data Struct__<br> `ContentCardData` represents the parsed out values of an `ABKContentCard`.
-
-```swift
-struct ContentCardData: Hashable {
-  let contentCardId: String
-  let contentCardClassType: ContentCardClassType
-  let createdAt: Double
-  let isDismissable: Bool
-  ...
-  // other Content Card properties such as expiresAt, pinned, etc.
-}
-
-extension ContentCardData: Equatable {
-  static func ==(lhs: ContentCardData, rhs: ContentCardData) -> Bool {
-    return lhs.contentCardId == rhs.contentCardId
+  // 3   
+  if var pendingEvents = remoteStorage.retrieve(forKey: .pendingCustomEvents) as? [[String: Any]] {
+    pendingEvents.append(contentsOf: [customEventDictionary])
+    remoteStorage.store(pendingEvents, forKey: .pendingCustomEvents)
+  } else {
+  // 4
+    remoteStorage.store([customEventDictionary], forKey: .pendingCustomEvents)
   }
 }
 ```
 {% endsubtab %}
 {% subtab Objective-C %}
-__ContentCardable Protocol__<br> A `ContentCardData` object that represents the `ABKContentCard` data along with a `ContentCardClassType` enum, an initializer used to instantiate custom objects with `ABKContentCard` metadata.
 ```objc
-@protocol ContentCardable <NSObject>
+- (void)saveCustomEvent:(NSDictionary<NSString *, id> *)properties {
+  // 1 
+  NSDictionary<NSString *, id> *customEventDictionary = [[NSDictionary alloc] initWithEventName:@"YOUR-EVENT-NAME" properties:properties];
 
-@property (nonatomic, strong) ContentCardData *contentCardData;
-- (instancetype __nullable)initWithMetaData:(NSDictionary *)metaData
-                                  classType:(enum ContentCardClassType)classType;
+  // 2
+  RemoteStorage *remoteStorage = [[RemoteStorage alloc] initWithStorageType:StorageTypeSuite];
+  NSMutableArray *pendingEvents = [[remoteStorage retrieveForKey:RemoteStorageKeyPendingCustomEvents] mutableCopy];
 
-- (BOOL)isContentCard;
-- (void)logContentCardImpression;
-- (void)logContentCardClicked;
-- (void)logContentCardDismissed;
+  // 3 
+  if (pendingEvents) {
+    [pendingEvents addObject:customEventDictionary];
+    [remoteStorage store:pendingEvents forKey:RemoteStorageKeyPendingCustomAttributes];
+  } else {
+  // 4
+    [remoteStorage store:@[ customEventDictionary ] forKey:RemoteStorageKeyPendingCustomAttributes];
+  }
+}
+```
+{% endsubtab %}
+{% endsubtabs %}
+
+##### Sending custom events to Braze
+
+After the SDK is initialized is the best time to log any saved analytics from a notification content app extension. This can be done by, looping through any pending events, checking for the "Event Name" key, setting the appropriate values in Braze, and then clearing the storage for the next time this function is needed.
+
+1. Loop through the array of pending events
+2. Loop through each key-value pair in the `pendingEvents` dictionary
+3. Explicitly checking key for “Event Name” to set the value accordingly
+4. Every other key-value will be added to the `properties` dictionary
+5. Log individual custom event
+6. Remove all pending events from storage
+
+{% subtabs global %}
+{% subtab Swift %}
+``` swift 
+func logPendingCustomEventsIfNecessary() {
+  let remoteStorage = RemoteStorage(storageType: .suite)
+  guard let pendingEvents = remoteStorage.retrieve(forKey: .pendingCustomEvents) as? [[String: Any]] else { return }
+
+  // 1    
+  for event in pendingEvents {
+    var eventName: String?
+    var properties: [AnyHashable: Any] = [:]
+
+  // 2
+    for (key, value) in event {
+      if key == PushNotificationKey.eventName.rawValue {
+  // 3      
+        if let eventNameValue = value as? String {
+          eventName = eventNameValue
+        } else {
+          print("Invalid type for event_name key")
+        }
+      } else {
+  // 4 
+        properties[key] = value
+      }
+    }
+  // 5    
+    if let eventName = eventName {
+      logCustomEvent(eventName, withProperties: properties)
+    }
+  }
+
+  // 6    
+  remoteStorage.removeObject(forKey: .pendingCustomEvents)
+}
+```
+{% endsubtab %}
+{% subtab Objective-C %}
+```objc
+- (void)logPendingEventsIfNecessary {
+  RemoteStorage *remoteStorage = [[RemoteStorage alloc] initWithStorageType:StorageTypeSuite];
+  NSArray *pendingEvents = [remoteStorage retrieveForKey:RemoteStorageKeyPendingCustomEvents];
+
+  // 1 
+  for (NSDictionary<NSString *, id> *event in pendingEvents) {
+    NSString *eventName = nil;
+    NSMutableDictionary *properties = [NSMutableDictionary dictionary];
+
+  // 2 
+    for (NSString* key in event) {
+      if ([key isEqualToString:@"event_name"]) {
+  // 3       
+        if ([[event objectForKey:key] isKindOfClass:[NSString class]]) {
+          eventName = [event objectForKey:key];
+        } else {
+          NSLog(@"Invalid type for event_name key");
+        }
+      } else {
+  // 4 
+        properties[key] = event[key];
+      }
+    }
+  // 5  
+    if (eventName != nil) {
+      [[Appboy sharednstance] logCustomEvent:eventName withProperties:properties];
+    }
+  }
+
+  // 6  
+  [remoteStorage removeObjectForKey:RemoteStorageKeyPendingCustomEvents];
+}
+```
+{% endsubtab %}
+{% endsubtabs %}
+{% endtab %}
+{% tab Custom Attributes %}
+
+##### Saving custom attributes
+
+To save custom attributes you must create the analytics from scratch. This is done by creating a dictionary, populating it with metadata, and saving the data through the use of a helper file.
+
+1. Initialize a dictionary with attribute metadata
+2. Initialize `userDefaults` to retrieve and store the attribute data
+3. If there is an existing array, append new data to the existing array and save
+4. If there is not an existing array, save the new array to `userDefaults`
+
+{% subtabs global %}
+{% subtab Swift %}
+``` swift 
+func saveCustomAttribute() {
+  // 1 
+  let customAttributeDictionary: [String: Any] = ["YOUR-CUSTOM-ATTRIBUTE-KEY": "YOUR-CUSTOM-ATTRIBUTE-VALUE"]
+
+  // 2 
+  let remoteStorage = RemoteStorage(storageType: .suite)
+
+  // 3 
+  if var pendingAttributes = remoteStorage.retrieve(forKey: .pendingCustomAttributes) as? [[String: Any]] {
+    pendingAttributes.append(contentsOf: [customAttributeDictionary])
+    remoteStorage.store(pendingAttributes, forKey: .pendingCustomAttributes)
+  } else {
+  // 4 
+    remoteStorage.store([customAttributeDictionary], forKey: .pendingCustomAttributes)
+  }
+}
+```
+{% endsubtab %}
+{% subtab Objective-C %}
+``` objc
+- (void)saveCustomAttribute {
+  // 1 
+  NSDictionary<NSString *, id> *customAttributeDictionary = @{ @"YOUR-CUSTOM-ATTRIBUTE-KEY": @"YOUR-CUSTOM-ATTRIBUTE-VALUE" };
+
+  // 2  
+  RemoteStorage *remoteStorage = [[RemoteStorage alloc] initWithStorageType:StorageTypeSuite];
+  NSMutableArray *pendingAttributes = [[remoteStorage retrieveForKey:RemoteStorageKeyPendingCustomAttributes] mutableCopy];
+
+  // 3
+  if (pendingAttributes) {
+    [pendingAttributes addObject:customAttributeDictionary];
+    [remoteStorage store:pendingAttributes forKey:RemoteStorageKeyPendingCustomAttributes];
+  } else {
+  // 4 
+    [remoteStorage store:@[ customAttributeDictionary ] forKey:RemoteStorageKeyPendingCustomAttributes];
+  }
+}
+```
+{% endsubtab %}
+{% endsubtabs %}
+
+##### Sending custom attributes to Braze
+
+After the SDK is initialized is the best time to log any saved analytics from a notification content app extension. This can be done by looping through the pending attributes, setting the appropriate custom attribute in Braze, and then clearing the storage for the next time this function is needed.
+
+1. Loop through the array of pending attributes
+2. Loop through each key-value pair in the `pendingAttributes` dictionary
+3. Log individual custom attribute with corresponding key and value
+4. Remove all pending attributes from storage
+
+{% subtabs global %}
+{% subtab Swift %}
+``` swift 
+func logPendingCustomAttributesIfNecessary() {
+  let remoteStorage = RemoteStorage(storageType: .suite)
+  guard let pendingAttributes = remoteStorage.retrieve(forKey: .pendingCustomAttributes) as? [[String: Any]] else { return }
+
+  // 1
+  pendingAttributes.forEach { setCustomAttributesWith(keysAndValues: $0) }
+
+  // 4 
+  remoteStorage.removeObject(forKey: .pendingCustomAttributes)
+}
+
+func setCustomAttributesWith(keysAndValues: [String: Any]) {
+  // 2 
+  for (key, value) in keysAndValues {
+  // 3
+    if let value = value as? [String] {
+      setCustomAttributeArrayWithKey(key, andValue: value)
+    } else {
+      setCustomAttributeWithKey(key, andValue: value)
+    }
+  }
+}
+```
+{% endsubtab %}
+{% subtab Objective-C %}
+```objc
+- (void)logPendingCustomAttributesIfNecessary {
+  RemoteStorage *remoteStorage = [[RemoteStorage alloc] initWithStorageType:StorageTypeSuite];
+  NSArray *pendingAttributes = [remoteStorage retrieveForKey:RemoteStorageKeyPendingCustomAttributes];
+
+  // 1
+  for (NSDictionary<NSString*, id> *attribute in pendingAttributes) {
+    [self setCustomAttributeWith:attribute];
+  }
+
+  // 4 
+  [remoteStorage removeObjectForKey:RemoteStorageKeyPendingCustomAttributes];
+}
+
+- (void)setCustomAttributeWith:(NSDictionary<NSString *, id> *)keysAndValues {
+  // 2
+  for (NSString *key in keysAndValues) {
+  // 3 
+    [self setCustomAttributeWith:key andValue:[keysAndValues objectForKey:key]];
+  }
+}
+```
+{% endsubtab %}
+{% endsubtabs %}
+{% endtab %}
+{% tab User Attributes %}
+
+##### Saving user attributes
+
+When saving user attributes, it is recommended to create a custom object to decipher what type of attribute is being updated (`email`, `first_name`, `phone_number`, etc.). The object should be compatible with being stored/retrieved from `UserDefaults`. See the `UserAttribute` helper file for one example of how to accomplish this.
+
+1. Initialize an encoded `UserAttribute` object with the corresponding type
+2. Initialize `userDefaults` to retrieve and store the event data
+3. If there is an existing array, append new data to the existing array and save
+4. If there is not an existing array, save the new array to `userDefaults`
+
+{% subtabs global %}
+{% subtab Swift %}
+``` swift 
+func saveUserAttribute() {
+  // 1 
+  guard let data = try? PropertyListEncoder().encode(UserAttribute.userAttributeType("USER-ATTRIBUTE-VALUE")) else { return }
+
+  // 2       
+  let remoteStorage = RemoteStorage(storageType: .suite)
+
+  // 3    
+  if var pendingAttributes = remoteStorage.retrieve(forKey: .pendingUserAttributes) as? [Data] {
+    pendingAttributes.append(contentsOf: [data])
+    remoteStorage.store(pendingAttributes, forKey: .pendingUserAttributes)
+  } else {
+  // 4 
+    remoteStorage.store([data], forKey: .pendingUserAttributes)
+  }
+}
+```
+{% endsubtab %}
+{% subtab Objective-C %}
+```objc
+- (void)saveUserAttribute {
+  // 1 
+  UserAttribute *userAttribute = [[UserAttribute alloc] initWithUserField:@"USER-ATTRIBUTE-VALUE" attributeType:UserAttributeTypeEmail];
+
+  NSError *error;
+  NSData *data = [NSKeyedArchiver archivedDataWithRootObject:userAttribute requiringSecureCoding:YES error:&error];
+
+  if (error != nil) {
+    // log error
+  }
+  // 2  
+  RemoteStorage *remoteStorage = [[RemoteStorage alloc] initWithStorageType:StorageTypeSuite];
+  NSMutableArray *pendingAttributes = [[remoteStorage retrieveForKey:RemoteStorageKeyPendingUserAttributes] mutableCopy];
+
+  // 3 
+  if (pendingAttributes) {
+    [pendingAttributes addObject:data];
+    [remoteStorage store:pendingAttributes forKey:RemoteStorageKeyPendingUserAttributes];
+  } else {
+  // 4 
+    [remoteStorage store:@[data] forKey:RemoteStorageKeyPendingUserAttributes];
+  }
+}
+```
+{% endsubtab %}
+{% endsubtabs %}
+
+##### Sending user attributes to Braze
+
+After the SDK is initialized is the best time to log any saved analytics from a notification content app extension. This can be done by looping through the pending attributes, setting the appropriate custom attribute in Braze, and then clearing the storage for the next time this function is needed.
+
+1. Loop through the array of `pendingAttributes` data
+2. Initialize an encoded `UserAttribute` object from attribute data
+3. Set specific user field based on the User Attribute type (email)
+4. Remove all pending user attributes from storage
+
+{% subtabs global %}
+{% subtab Swift %}
+``` swift 
+func logPendingUserAttributesIfNecessary() {
+  let remoteStorage = RemoteStorage(storageType: .suite)
+  guard let pendingAttributes = remoteStorage.retrieve(forKey: .pendingUserAttributes) as? [Data] else { return }
+
+  // 1    
+  for attributeData in pendingAttributes {
+  // 2 
+    guard let userAttribute = try? PropertyListDecoder().decode(UserAttribute.self, from: attributeData) else { continue }
+
+  // 3    
+    switch userAttribute {
+    case .email(let email):
+      user?.email = email
+    }
+  }
+  // 4   
+  remoteStorage.removeObject(forKey: .pendingUserAttributes)
+}
+```
+{% endsubtab %}
+{% subtab Objective-C %}
+```objc
+- (void)logPendingUserAttributesIfNecessary {
+  RemoteStorage *remoteStorage = [[RemoteStorage alloc] initWithStorageType:StorageTypeSuite];
+  NSArray *pendingAttributes = [remoteStorage retrieveForKey:RemoteStorageKeyPendingUserAttributes];
+
+  // 1  
+  for (NSData *attributeData in pendingAttributes) {
+    NSError *error;
+
+  // 2 
+    UserAttribute *userAttribute = [NSKeyedUnarchiver unarchivedObjectOfClass:[UserAttribute class] fromData:attributeData error:&error];
+
+    if (error != nil) {
+      // log error
+    }
+
+  // 3  
+    if (userAttribute) {
+      switch (userAttribute.attributeType) {
+        case UserAttributeTypeEmail:
+          [self user].email = userAttribute.userField;
+          break;
+      }
+    }
+  }
+  // 4 
+  [remoteStorage removeObjectForKey:RemoteStorageKeyPendingUserAttributes];
+}
+```
+{% endsubtab %}
+{% endsubtabs %}
+{% endtab %}
+{% tab Helper Files %}
+
+##### Helper files
+
+{% details RemoteStorage Helper File %}
+{% subtabs global %}
+{% subtab Swift %}
+```swift
+enum RemoteStorageKey: String, CaseIterable {
+
+  // MARK: - Notification Content Extension Analytics
+  case pendingCustomEvents = "pending_custom_events"
+  case pendingCustomAttributes = "pending_custom_attributes"
+  case pendingUserAttributes = "pending_user_attributes"
+}
+
+enum RemoteStorageType {
+  case standard
+  case suite
+}
+
+class RemoteStorage: NSObject {
+  private var storageType: RemoteStorageType = .standard
+  private lazy var defaults: UserDefaults = {
+    switch storageType {
+    case .standard:
+      return .standard
+    case .suite:
+      return UserDefaults(suiteName: "YOUR-DOMAIN-IDENTIFIER")!
+    }
+  }()
+
+  init(storageType: RemoteStorageType = .standard) {
+    self.storageType = storageType
+  }
+
+  func store(_ value: Any, forKey key: RemoteStorageKey) {
+    defaults.set(value, forKey: key.rawValue)
+  }
+
+  func retrieve(forKey key: RemoteStorageKey) -> Any? {
+    return defaults.object(forKey: key.rawValue)
+  }
+
+  func removeObject(forKey key: RemoteStorageKey) {
+    defaults.removeObject(forKey: key.rawValue)
+  }
+
+  func resetStorageKeys() {
+    for key in RemoteStorageKey.allCases {
+      defaults.removeObject(forKey: key.rawValue)
+    }
+  }
+}
+```
+{% endsubtab %}
+{% subtab Objective-C %}
+```objc
+@interface RemoteStorage ()
+
+@property (nonatomic) StorageType storageType;
+@property (nonatomic, strong) NSUserDefaults *defaults;
 
 @end
-```
-__Content Card Data Struct__<br> `ContentCardData` represents the parsed out values of an `ABKContentCard`.
 
-```objc
-@interface ContentCardData : NSObject
+@implementation RemoteStorage
 
-+ (ContentCardClassType)contentCardClassTypeForString:(NSString *)rawValue;
-
-- (instancetype)initWithIdString:(NSString *)idString
-                       classType:(ContentCardClassType)classType
-                       createdAt:(double)createdAt isDismissible:(BOOL)isDismissible;
-
-@property (nonatomic, readonly) NSString *contentCardId;
-@property (nonatomic) ContentCardClassType classType;
-@property (nonatomic, readonly) double *createdAt;
-@property (nonatomic, readonly) BOOL isDismissible;
-...
-// other Content Card properties such as expiresAt, pinned, etc.    
-
-@end
-```
-{% endsubtab %}
-{% endsubtabs %}
-{% endtab %}
-{% tab Custom Objects %}
-{% subtabs global %}
-{% subtab Swift %}
-__Custom Object Initializer__<br> MetaData from an `ABKContentCard` is used to populate your object's variables. The key-value pairs set up in the Braze dashboard are represented in the "extras" dictionary.
-
-```swift
-extension CustomObject: ContentCardable {
-  init?(metaData: [ContentCardKey: Any], classType contentCardClassType: ContentCardClassType) {
-    guard let idString = metaData[.idString] as? String,
-      let createdAt = metaData[.created] as? Double,
-      let isDismissable = metaData[.dismissable] as? Bool,
-      let extras = metaData[.extras] as? [AnyHashable: Any],
-      else { return nil }
-
-    let contentCardData = ContentCardData(contentCardId: idString, contentCardClassType: contentCardClassType, createdAt: createdAt, isDismissable: isDismissable)
-    let customObjectProperty = extras["YOUR-CUSTOM-OBJECT-PROPERTY"] as? String
-
-    self.init(contentCardData: contentCardData, property: customObjectProperty)
+- (id)initWithStorageType:(StorageType)storageType {
+  if (self = [super init]) {
+    self.storageType = storageType;
   }
+  return self;
 }
-```
 
-__Identifying Types__<br> The `ContentCardClassType` enum represents the `class_type` value in the Braze dashboard. This value is also used as a filter identifier to display Content Cards in different places.
+- (void)store:(id)value forKey:(RemoteStorageKey)key {
+  [[self defaults] setValue:value forKey:[self rawValueForKey:key]];
+}
 
-```swift
-enum ContentCardClassType: Hashable {
-  case yourValue
-  case yourOtherValue
-  ...
-  case none
+- (id)retrieveForKey:(RemoteStorageKey)key {
+  return [[self defaults] objectForKey:[self rawValueForKey:key]];
+}
 
-  init(rawType: String?) {
-    switch rawType?.lowercased() {
-    case "your_value": // these values much match the value set in the Braze dashboard
-      self = .yourValue
-    case "your_other_value": // these values much match the value set in the Braze dashboard
-      self = .yourOtherValue
-    ...
-    default:
-      self = .none
+- (void)removeObjectForKey:(RemoteStorageKey)key {
+  [[self defaults] removeObjectForKey:[self rawValueForKey:key]];
+}
+
+- (void)resetStorageKeys {
+  [[self defaults] removeObjectForKey:[self rawValueForKey:RemoteStorageKeyPendingCustomEvents]];
+  [[self defaults] removeObjectForKey:[self rawValueForKey:RemoteStorageKeyPendingCustomAttributes]];
+  [[self defaults] removeObjectForKey:[self rawValueForKey:RemoteStorageKeyPendingUserAttributes]];
+}
+
+- (NSUserDefaults *)defaults {
+  if (!self.defaults) {
+    switch (self.storageType) {
+      case StorageTypeStandard:
+        return [NSUserDefaults standardUserDefaults];
+        break;
+      case StorageTypeSuite:
+        return [[NSUserDefaults alloc] initWithSuiteName:@"YOUR-DOMAIN-IDENTIFIER"];
     }
-  }
-}
-```
-{% endsubtab %}
-{% subtab Objective-C %}
-__Custom Object Initializer__<br> MetaData from an `ABKContentCard` is used to populate your object's variables. The key-value pairs set up in the Braze dashboard are represented in the "extras" dictionary.
-
-
-```objc
-- (id _Nullable)initWithMetaData:(nonnull NSDictionary *)metaData classType:(enum ContentCardClassType)classType {
-  self = [super init];
-  if (self) {
-    if ([metaData objectForKey:ContentCardKeyIdString] && [metaData objectForKey:ContentCardKeyCreated] && [metaData objectForKey:ContentCardKeyDismissible] && [metaData objectForKey:ContentCardKeyExtras]) {
-      NSDictionary  *extras = metaData[ContentCardKeyExtras];
-      NSString *idString = metaData[ContentCardKeyIdString];
-      double createdAt = [metaData[ContentCardKeyCreated] doubleValue];
-      BOOL isDismissible = metaData[ContentCardKeyDismissible];
-
-      if ([extras objectForKey: @"YOUR-CUSTOM-PROPERTY")
-        _customObjectProperty = extras[@"YOUR-CUSTOM-OBJECT-PROPERTY"];
-
-      self.contentCardData = [[ContentCardData alloc] initWithIdString:idString classType:classType createdAt:createdAt isDismissible:isDismissible];
-
-      return self;
-    }
-  }
-  return nil;
-}
-```
-
-__Identifying Types__<br> The `ContentCardClassType` enum represents the `class_type` value in the Braze dashboard. This value is also used as a filter identifier to display Content Cards in different places.
-
-```objc
-typedef NS_ENUM(NSInteger, ContentCardClassType) {
-  ContentCardClassTypeNone = 0,
-  ContentCardClassTypeYourValue,
-  ContentCardClassTypeYourOtherValue,
-  ...
-};
-
-+ (NSArray *)contentCardClassTypeArray {
-  return @[ @"", @"your_value", @"your_other_value" ];
-}
-
-+ (ContentCardClassType)contentCardClassTypeForString:(NSString*)rawValue {
-  if ([[self contentCardClassTypeArray] indexOfObject:rawValue] == NSNotFound) {
-    return ContentCardClassTypeNone;
   } else {
-    NSInteger value = [[self contentCardClassTypeArray] indexOfObject:rawValue];
-    return (ContentCardClassType) value;
+    return self.defaults;
+  }
+}
+
+- (NSString*)rawValueForKey:(RemoteStorageKey)remoteStorageKey {
+    switch(remoteStorageKey) {
+    case RemoteStorageKeyPendingCustomEvents:
+      return @"pending_custom_events";
+    case RemoteStorageKeyPendingCustomAttributes:
+      return @"pending_custom_attributes";
+    case RemoteStorageKeyPendingUserAttributes:
+      return @"pending_user_attributes";
+    default:
+      [NSException raise:NSGenericException format:@"Unexpected FormatType."];
   }
 }
 ```
 {% endsubtab %}
 {% endsubtabs %}
-{% endtab %}
-
-{% tab Handling Content Cards %}
-{% subtabs global %}
-{% subtab Swift %}
-__Requesting Content Cards__<br> As long as the observer is still retained in memory, the notification callback from the Braze SDK can be expected.
-
-```swift
-func loadContentCards() {
-  BrazeManager.shared.addObserverForContentCards(observer: self, selector: #selector(contentCardsUpdated))
-  BrazeManager.shared.requestContentCardsRefresh()
-}
-```
-
-__Handling the Content Cards SDK Callback__<br> Forward the notification callback to the helper file to parse the payload data for your custom object(s).
-```swift
-@objc func contentCardsUpdated(_ notification: Notification) {
-  guard let contentCards = BrazeManager.shared.handleContentCardsUpdated(notification, for: [.yourValue]) as? [CustomObject],!contentCards.isEmpty else { return }
-
- // do something with your array of custom objects
-}
-```
-
-__Working with Content Cards__<br> The `class_type` is passed in as a filter to only return Content Cards that have a matching `class_type`.
-
-```swift
-func handleContentCardsUpdated(_ notification: Notification, for classTypes: [ContentCardClassType]) -> [ContentCardable] {
-  guard let updateIsSuccessful = notification.userInfo?[ABKContentCardsProcessedIsSuccessfulKey] as? Bool, updateIsSuccessful, let cards = contentCards else { return [] }
-
-  return convertContentCards(cards, for: classTypes)
-}
-```
-{% endsubtab %}
-{% subtab Objective-C %}
-__Requesting Content Cards__<br> As long as the observer is still retained in memory, the notification callback from the Braze SDK can be expected.
-
-```objc
-- (void)loadContentCards {
-  [[BrazeManager shared] addObserverForContentCards:self selector:@selector(contentCardsUpdated:)];
-  [[BrazeManager shared] requestContentCardsRefresh];
-}
-```
-
-__Handling the Content Cards SDK Callback__<br> Forward the notification callback to the helper file to parse the payload data for your custom object(s).
-```objc
-- (void)contentCardsUpdated:(NSNotification *)notification {
-  NSArray *classTypes = @[@(ContentCardClassTypeYourValue)];
-  NSArray *contentCards = [[BrazeManager shared] handleContentCardsUpdated:notification forClassTypes:classTypes];
-
-  // do something with your array of custom objects
-}
-```
-
-__Working with Content Cards__<br> The `class_type` is passed in as a filter to only return Content Cards that have a matching `class_type`.
-
-```objc
-- (NSArray *)handleContentCardsUpdated:(NSNotification *)notification forClassType:(ContentCardClassType)classType {  
-  BOOL updateIsSuccessful = [notification.userInfo[ABKContentCardsProcessedIsSuccessfulKey] boolValue];
-  if (updateIsSuccessful) {
-    return [self convertContentCards:self.contentCards forClassType:classType];
-  } else {
-    return @[];
-  }
-}
-```
-{% endsubtab %}
-{% endsubtabs %}
-{% endtab %}
-
-{% tab Working with Payload Data %}
-{% subtabs global %}
-{% subtab Swift %}
-__Working with Payload Data__<br> Loops through the array of Content Cards and only parses the cards with a matching `class_type`. The payload from an ABKContentCard is parsed into a `Dictionary`.
-
-```swift
-func convertContentCards(_ cards: [ABKContentCard], for classTypes: [ContentCardClassType]) -> [ContentCardable] {
-  var contentCardables: [ContentCardable] = []
-
-  for card in cards {
-    let classTypeString = card.extras?[ContentCardKey.classType.rawValue] as? String
-    let classType = ContentCardClassType(rawType: classTypeString)
-    guard classTypes.contains(classType) else { continue }
-
-    var metaData: [ContentCardKey: Any] = [:]
-    switch card {
-    case let banner as ABKBannerContentCard:
-      metaData[.image] = banner.image
-    case let captioned as ABKCaptionedImageContentCard:
-      metaData[.title] = captioned.title
-      metaData[.cardDescription] = captioned.cardDescription
-      metaData[.image] = captioned.image
-    case let classic as ABKClassicContentCard:
-      metaData[.title] = classic.title
-      metaData[.cardDescription] = classic.cardDescription
-    default:
-      break
-    }
-
-    metaData[.idString] = card.idString
-    metaData[.created] = card.created
-    metaData[.dismissible] = card.dismissible
-    metaData[.urlString] = card.urlString
-    metaData[.extras] = card.extras
-    ...
-    // other Content Card properties such as expiresAt, pinned, etc.
-
-    if let contentCardable = contentCardable(with: metaData, for: classType) {
-      contentCardables.append(contentCardable)
-    }
-  }
-  return contentCardables
-}
-```
-
-__Initializing your Custom Objects from Content Card Payload Data__<br> The `class_type` is used to determine which of your custom objects will be initialized from the payload data.
-
-```swift
-func contentCardable(with metaData: [ContentCardKey: Any], for classType: ContentCardClassType) -> ContentCardable? {
-  switch classType {
-  case .yourValue:
-    return CustomObject(metaData: metaData, classType: classType)
-  case .yourOtherValue:
-    return OtherCustomObject(metaData: metaData, classType: classType)
-  ...
-  default:
-    return nil
-  }
-}
-```
-{% endsubtab %}
-{% subtab Objective-C %}
-__Working with Payload Data__<br> Loops through the array of Content Cards and only parses the cards with a matching `class_type`. The payload from an ABKContentCard is parsed into a `Dictionary`.
-
-```objc
-- (NSArray *)convertContentCards:(NSArray<ABKContentCard*> *)cards forClassType:(ContentCardClassType)classType {
-  NSMutableArray *contentCardables = [[NSMutableArray alloc] init];      for (ABKContentCard *card in cards) {
-    NSString *classTypeString = [card.extras objectForKey:ContentCardKeyClassType];
-    ContentCardClassType cardClassType = [ContentCardData contentCardClassTypeForString: classTypeString];
-    if (cardClassType != classType) { continue; }
-
-    NSMutableDictionary *metaData = [[NSMutableDictionary alloc] init];
-    if ([card isKindOfClass:[ABKBannerContentCard class]]) {
-      ABKBannerContentCard *banner = (ABKBannerContentCard *)card;
-      metaData[ContentCardKeyImage] = banner.image;
-    } else if ([card isKindOfClass:[ABKCaptionedImageContentCard class]]) {
-      ABKCaptionedImageContentCard *captioned = (ABKCaptionedImageContentCard *)card;
-      metaData[ContentCardKeyTitle] = captioned.title;
-      metaData[ContentCardKeyCardDescription] = captioned.cardDescription;
-      metaData[ContentCardKeyImage] = captioned.image;
-    } else if ([card isKindOfClass:[ABKClassicContentCard class]]) {
-      ABKClassicContentCard *classic = (ABKClassicContentCard *)card;
-      metaData[ContentCardKeyCardDescription] = classic.title;
-      metaData[ContentCardKeyImage] = classic.image;
-    }
-
-    metaData[ContentCardKeyIdString] = card.idString;
-    metaData[ContentCardKeyCreated] = [NSNumber numberWithDouble:card.created];
-    metaData[ContentCardKeyDismissible] = [NSNumber numberWithBool:card.dismissible];
-    metaData[ContentCardKeyUrlString] = card.urlString;
-    metaData[ContentCardKeyExtras] = card.extras;
-    ...
-    // other Content Card properties such as expiresAt, pinned, etc.   
-
-    id<ContentCardable> contentCardable = [self contentCardableWithMetaData:metaData forClassType:classType];
-    if (contentCardable) {
-      [contentCardables addObject:contentCardable];
-    }
-  }
-
-  return contentCardables;
-}
-```
-
-__Initializing your Custom Objects from Content Card Payload Data__<br> The `class_type` is used to determine which of your custom objects will be initialized from the payload data.
-
-```obj-c
-- (id<ContentCardable>)contentCardableWithMetaData:(NSDictionary *)metaData forClassType:(ContentCardClassType)classType {
-  switch (classType) {
-    case ContentCardClassTypeYourValue:
-      return [[CustomObject alloc] initWithMetaData:metaData classType:classType];
-    case ContentCardClassTypeYourOtherValue:
-      return nil;
-    ...
-    default:
-      return nil;
-  }
-}
-```
-{% endsubtab %}
-{% endsubtabs %}
-{% endtab %}
-{% endtabs %}
-
-## Sample use cases
-
-There are three sample customer use cases provided. Each use case offers a detailed explanation, relevant code snippets, and a look into how Content Card variables may look and be used in the Braze dashboard:
-- [Content Cards As Supplemental Content](#content-cards-as-supplemental-content)
-- [Content Cards in a Message Center](#content-cards-in-a-message-center)
-- [Interactive Content Cards](#interactive-content-cards)
-
-### Content Cards as supplemental content
-
-!\[Supplementary Content PNG\]\[1\]{: style="float:right;max-width:25%;margin-left:15px;border:0;"}
-
-You can seamlessly blend Content Cards into an existing feed, allowing data from multiple feeds to load simultaneously. This creates a cohesive, harmonious experience with Braze Content Cards and existing feed content.
-
-The example to the right shows a `UICollectionView` with a hybrid list of items that are populated via local data and Content Cards powered by Braze. With this, Content Cards can be indistinguishable alongside existing content.
-
-#### Dashboard configuration
-
-This Content Card is delivered by an API-triggered campaign with API-triggered key-value pairs. This is ideal for campaigns where the card's values depend on external factors to determine what content to display to the user. Note that `class_type` should be known at set-up time.
-
-!\[Supplementary Content PNG\]\[2\]{: style="max-width:60%;"}
-
-##### Ready to log analytics?
-Visit the [following section](#logging-impressions-clicks-and-dismissals) to get a better understanding of how the flow of data should look.
-
-### Content Cards in a message center
-<br>
-Content Cards can be used in a message center format where each message is its own card. Each message in the message center is populated via a Content Card payload, and each card contains additional key-value pairs that power on-click UI/UX. In the example below, one message directs you to an arbitrary custom view, while another opens to a webview that displays custom HTML.
-
-!\[Message Center PNG\]\[3\]{: style="border:0;"}{: style="max-width:80%;border:0"}
-
-#### Dashboard configuration
-
-For the following message types, the key-value pair `class_type` should be added to your dashboard configuration. The values assigned here are arbitrary but should be distinguishable between class types. These key-value pairs are the key identifiers that the application looks at when deciding where to go when the user clicks on an abridged inbox message.
-
-| Arbitrary Custom View Message (Full Page)                                                                                                                                                                                                                  | Webview Message (HTML)                                                                                                                                                                                                                                                                                                                                                               |
-| ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| <br>The key-value pairs for this use case include:<br><br>- `message_header` set as `Full Page`<br>- `class_type` set as `message_full_page`<br><br><br>!\[Message Center JPG1\]\[4\]{: style="max-width:100%;"} | The key-value pairs for this use case include:<br><br>- `message_header` set as `HTML`<br>- `class_type` set as `message_webview`<br>- `message_title`<br><br>This message also looks for an HTML key-value pair, but if you are working with a web domain, a URL key-value pair is also valid.<br><br>!\[Message Center JPG2\]\[5\] |
-{: .reset-td-br-1 .reset-td-br-2}
-
-#### Further explanation
-
-The message center logic is driven by the `contentCardClassType` that is provided by the key-value pairs from Braze. Using the `addContentCardToView` method, you are able to both filter and identify these class types.
-
-{% tabs %}
-{% tab Swift %}
-__Using `class_type` for On Click Behavior__<br> When a message is clicked, the `ContentCardClassType` handles how the next screen should be populated.
-```swift
-func addContentCardToView(with message: Message) {
-    switch message.contentCardData?.contentCardClassType {
-      case .message(.fullPage):
-        loadContentCardFullPageView(with: message as! FullPageMessage)
-      case .message(.webView):
-        loadContentCardWebView(with: message as! WebViewMessage)
-      default:
-        break
-    }
-}
-```
-{% endtab %}
-{% tab Objective-C %}
-__Using `class_type` for On Click Behavior__<br> When a message is clicked, the `ContentCardClassType` handles how the next screen should be populated.
-```objc
-- (void)addContentCardToView:(Message *)message {
-  switch (message.contentCardData.classType) {
-    case ContentCardClassTypeMessageFullPage:
-      [self loadContentCardFullPageView:(FullPageMessage *)message];
-      break;
-    case ContentCardClassTypeMessageWebview:
-      [self loadContentCardWebView:(WebViewMessage *)message];
-      break;
-    default:
-      break;
-  }
-}
-```
-{% endtab %}
-{% endtabs %}
-
-##### Ready to log analytics?
-Visit the [following section](#logging-impressions-clicks-and-dismissals) to get a better understanding of how the flow of data should look.
-
-!\[Interactive Content PNG\]\[6\]{: style="border:0;"}{: style="float:right;max-width:45%;border:0;margin-left:15px;"}
-
-### Interactive Content Cards
-<br>
-Content Cards can be leveraged to create dynamic and interactive experiences for your users. In the example to the right, we have a Content Card pop-up appear at checkout providing users last-minute promotions.
-
-Well-placed cards like this are a great way to give users a "nudge" toward specific user actions. <br><br><br>
-#### Dashboard configuration
-
-The dashboard configuration for interactive Content Cards is quick and straightforward. The key-value pairs for this use case include a `discount_percentage` set as the desired discount amount and `class_type` set as `coupon_code`. These key-value pairs are how type-specific Content Cards get filtered and displayed on the checkout screen.
-
-!\[Interactive Content JPG\]\[7\]{: style="max-width:70%;"}
-
-##### Ready to log analytics?
-Visit the [following section](#logging-impressions-clicks-and-dismissals) to get a better understanding of how the flow of data should look.
-
-## Logging impressions, clicks, and dismissals
-
-After extending your custom objects to function as Content Cards, logging valuable metrics like impressions, clicks, and dismissals is quick and simple. This can be done through the use of a `ContentCardable` protocol that references and provides data to a helper file to be logged by the Braze SDK.
-
-#### __Implementation components__<br><br>
-
-{% tabs %}
-{% tab Swift %}
-__Logging Analytics__<br> The logging methods can be called directly from objects conforming to the `ContentCardable` protocol.
-```swift
-customObject.logContentCardImpression()
-customObject.logContentCardClicked()
-customObject.logContentCardDismissed()
-```
-
-__Retreiving the `ABKContentCard`__<br> The `idString` passed in from your custom object is used to identify the associated Content Card to log analytics.
-
-```swift
-extension BrazeManager {
-  func logContentCardImpression(idString: String?) {
-    guard let contentCard = getContentCard(forString: idString) else { return }
-
-    contentCard.logContentCardImpression()
-  }
-
-  private func getContentCard(forString idString: String?) -> ABKContentCard? {
-    return contentCards?.first(where: { $0.idString == idString })
-  }
-}
-```
-{% endtab %}
-{% tab Objective-C %}
-__Logging Analytics__<br> The logging methods can be called directly from objects conforming to the `ContentCardable` protocol.
-```objc
-[customObject logContentCardImpression];
-[customObject logContentCardClicked];
-[customObject logContentCardDismissed];
-```
-
-__Retreiving the `ABKContentCard`__<br> The `idString` passed in from your custom object is used to identify the associated Content Card to log analytics.
-
-```objc
-- (void)logContentCardImpression:(NSString *)idString {
-  ABKContentCard *contentCard = [self getContentCard:idString];
-  [contentCard logContentCardImpression];
-}
-
-- (ABKContentCard *)getContentCard:(NSString *)idString {
-  NSPredicate *predicate = [NSPredicate predicateWithFormat:@"self.idString == %@", idString];
-  NSArray *filteredArray = [self.contentCards filteredArrayUsingPredicate:predicate];
-
-  return filteredArray.firstObject;
-}
-```
-{% endtab %}
-{% endtabs %}
-
-{% alert important %}
-For a control variant Content Card, a custom object should still be instantiated, and UI logic should set the object's corresponding view as hidden. The object can then log an impression to inform our analytics of when a user would have seen the control card.
-{% endalert %}
-
-## Helper files
-
-{% details ContentCardKey Helper File %}
-{% tabs %}
-{% tab Swift %}
-```swift
-enum ContentCardKey: String {
-  case idString
-  case created
-  case classType = "class_type"
-  case dismissible
-  case extras
-  ...
-}
-```
-{% endtab %}
-{% tab Objective-C %}
-```objc
-static NSString *const ContentCardKeyIdString = @"idString";
-static NSString *const ContentCardKeyCreated = @"created";
-static NSString *const ContentCardKeyClassType = @"class_type";
-static NSString *const ContentCardKeyDismissible = @"dismissible";
-static NSString *const ContentCardKeyExtras = @"extras";
-...
-```
-{% endtab %}
-{% endtabs %}
 {% enddetails %}
-[1]: {% image_buster /assets/img/cc_implementation/supplementary.png %} [2]: {% image_buster /assets/img/cc_implementation/supplementary_content.png %} [3]: {% image_buster /assets/img/cc_implementation/message_center.png %} [4]: {% image_buster /assets/img/cc_implementation/full_page.png %} [5]: {% image_buster /assets/img/cc_implementation/html_webview.png %} [6]: {% image_buster /assets/img/cc_implementation/discount2.png %} [7]: {% image_buster /assets/img/cc_implementation/discount.png %}
+{% details UserAttribute Helper File %}
+{% subtabs global %}
+{% subtab Swift %}
+```swift
+enum UserAttribute: Hashable {
+  case email(String?)
+}
+
+// MARK: - Codable
+extension UserAttribute: Codable {
+  private enum CodingKeys: String, CodingKey {
+    case email
+  }
+
+  func encode(to encoder: Encoder) throws {
+    var values = encoder.container(keyedBy: CodingKeys.self)
+
+    switch self {
+    case .email(let email):
+      try values.encode(email, forKey: .email)
+    }
+  }
+
+  init(from decoder: Decoder) throws {
+    let values = try decoder.container(keyedBy: CodingKeys.self)
+
+    let email = try values.decode(String.self, forKey: .email)
+    self = .email(email)
+  }
+}
+```
+{% endsubtab %}
+{% subtab Objective-C %}
+```objc
+@implementation UserAttribute
+
+- (id)initWithUserField:(NSString *)userField attributeType:(UserAttributeType)attributeType {
+  if (self = [super init]) {
+    self.userField = userField;
+    self.attributeType = attributeType;
+  }
+  return self;
+}
+
+- (void)encodeWithCoder:(NSCoder *)encoder {
+  [encoder encodeObject:self.userField forKey:@"userField"];
+  [encoder encodeInteger:self.attributeType forKey:@"attributeType"];
+}
+
+- (id)initWithCoder:(NSCoder *)decoder {
+  if (self = [super init]) {
+    self.userField = [decoder decodeObjectForKey:@"userField"];
+
+    NSInteger attributeRawValue = [decoder decodeIntegerForKey:@"attributeType"];
+    self.attributeType = (UserAttributeType) attributeRawValue;
+  }
+  return self;
+}
+
+@end
+```
+{% endsubtab %}
+{% endsubtabs %}
+{% enddetails %}
+{% details EventName Dictionary Helper File %}
+{% subtabs global %}
+{% subtab Swift %}
+```swift
+extension Dictionary where Key == String, Value == Any {
+  init(eventName: String, properties: [String: Any]? = nil) {
+    self.init()
+    self[PushNotificationKey.eventName.rawValue] = eventName
+
+    if let properties = properties {
+      for (key, value) in properties {
+        self[key] = value
+      }
+    }
+  }
+}
+```
+{% endsubtab %}
+{% subtab Objective-C %}
+```objc
+@implementation NSDictionary (Helper)
+
+- (id)initWithEventName:(NSString *)eventName properties:(NSDictionary *)properties {
+  self = [self init];
+  if (self) {
+    dict[@"event_name"] = eventName;
+
+    for(id key in properties) {
+      dict[key] = properties[key];
+    }
+  }
+  return self;
+}
+
+@end
+```
+{% endsubtab %}
+{% endsubtabs %}
+{% enddetails %}
+<br>
+{% endtab %}
+{% endtabs %}
+[1]: {% image_buster /assets/img/push_implementation_guide/push1.png %} [3]: {% image_buster /assets/img/push_implementation_guide/push3.png %} [5]: {% image_buster /assets/img/push_implementation_guide/push5.png %} [6]: {% image_buster /assets/img/push_implementation_guide/push6.png %} [8]: {% image_buster /assets/img/push_implementation_guide/push8.png %} [9]: {% image_buster /assets/img/push_implementation_guide/push9.png %} [12]: {% image_buster /assets/img/push_implementation_guide/push12.png %} [13]: {% image_buster /assets/img/push_implementation_guide/push13.png %} [14]: {% image_buster /assets/img/push_implementation_guide/push14.png %} [15]: {% image_buster /assets/img/push_implementation_guide/push15.png %} [16]: {% image_buster /assets/img/push_implementation_guide/push16.png %} [17]: {% image_buster /assets/img/push_implementation_guide/push17.png %} [18]: {% image_buster /assets/img/push_implementation_guide/push18.png %} [19]: {% image_buster /assets/img/ios/push_story/add_app_groups.png %}
