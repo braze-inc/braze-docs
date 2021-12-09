@@ -1,15 +1,16 @@
 ---
-nav_title: Disabling iOS SDK Tracking
-article_title: Disabling SDK Tracking for iOS
-platform: iOS
-page_order: 8
-description: "This article shows how to disable data collection for your iOS application."
+nav_title: Disabling Web SDK Tracking
+article_title: Disabling Web SDK Tracking
+platform: Web
+page_order: 6
+page_type: reference
+description: "This article covers disabling Web SDK tracking, including why, how, and the implications of doing so."
 ---
 
-# Disabling data collection for iOS
+# Disable web SDK tracking
 
-In order to comply with data privacy regulations, data tracking activity on the iOS SDK can be stopped entirely using the method [`disableSDK`](http://appboy.github.io/appboy-ios-sdk/docs/interface_appboy.html#a8d3b78a98420713d8590ed63c9172733). This method will cause all network connections to be canceled, and the Braze SDK will not pass any data to Braze's servers. If you wish to resume data collection at a later point in time, you can use the [`requestEnableSDKOnNextAppRun`](http://appboy.github.io/appboy-ios-sdk/docs/interface_appboy.html#a781078a40a3db0de64ac82dcae3b595b) method in the future to resume data collection.
+To comply with data privacy regulations, data tracking activity on the Web SDK can be stopped entirely using the method [`stopWebTracking()`](https://js.appboycdn.com/web-sdk/latest/doc/module-appboy.html#.stopWebTracking). This method will sync data logged before when `stopWebTracking()` was called, and will cause all subsequent calls to the Braze Web SDK for this page and future page loads to be ignored. If you wish to resume data collection at a later point in time, you can use the [`resumeWebTracking()`](https://js.appboycdn.com/web-sdk/latest/doc/module-appboy.html#.resumeWebTracking) method in the future to resume data collection.
 
-Additionally, you can use the method [`wipeDataAndDisableForAppRun`](http://appboy.github.io/appboy-ios-sdk/docs/interface_appboy.html#ac8d580f60ec0608cd91240a8a3aa23a3) to fully clear all client-side data stored on the device.
+If you wish to provide users with the option to stop tracking, we recommend building a simple page with two links or buttons, one that calls `stopWebTracking()` when clicked, and another that calls `resumeWebTracking()` to allow users to opt back in. You can use these controls to start or stop tracking via other data sub-processors as well.
 
-Unless a user uninstalls *all* apps from a vendor on a given device, the next Braze SDK/app runs after calling `wipeDataAndDisableForAppRun()` will result in our server re-identifying that user via their device identifier (IDFV). In order to fully remove all user data, you should combine a call to `wipeDataAndDisableForAppRun` with a request to delete data on the server via the [Braze REST API]({{site.baseurl}}/developer_guide/rest_api/user_data/#user-delete-endpoint).
+Note that the Braze SDK does _not_ need to be initialized to call `stopWebTracking()`, allowing you to disable tracking for fully anonymous users. Conversely,`resumeWebTracking()` does not initialize the Braze SDK so you must also call `initialize()` afterward to enable tracking.
