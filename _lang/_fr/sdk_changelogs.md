@@ -1,6 +1,9 @@
 ---
-page_order: 20
+page_order: 10
 nav_title: SDK Changelogs
+article_title: Braze SDK Changelogs
+page_type: landing
+description: "This page lists updates to Braze's Android SDK changelog."
 layout: dev_guide
 guide_top_header: "Braze SDK Changelogs"
 guide_top_text: "The changelogs for each SDK are available within Docs or in their individual Github repositories linked below."
@@ -19,7 +22,7 @@ guide_featured_list:
     link: /docs/developer_guide/platform_integration_guides/web/changelog/
     fa_icon: fas fa-globe
   - 
-    name: Windows SDK
+    name: Windows Universal SDK
     link: /docs/developer_guide/platform_integration_guides/windows_universal/changelog/
     fa_icon: fab fa-windows
   - 
