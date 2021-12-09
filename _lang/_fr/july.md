@@ -1,51 +1,31 @@
 ---
-nav_title: July
-page_order: 6
-noindex: true
-page_type: update
-description: "This article contains release notes for July 2017."
+nav_title: July page_order: 6 noindex: true page_type: update
+description: "This article contains release notes for July 2020."
 ---
+# July 2020
 
-# July 2017
+## Promotion codes
 
-## Large images in web push
+Using Liquid, you can have your messages pull from a list of [promotion codes][1] you upload. This feature offers expiry dates of up to six months and supports u to 20MM individual codes per list.
 
-We’ve added support for large images for Web Push on Chrome for Windows and Android, giving you the ability to create rich, engaging customer experiences. Learn more about web push [here][58].
+## Variant Retention Report
 
-## Updates to email fields
+When looking at a retention report for a [campaign][2] or [canvas][3], you can now view the results broken down by variant.
 
-You can now lock emails to a specific set of from-addresses, ensuring that you don’t accidentally input the wrong address. The email composition form will be pre-populated with addresses used in the last 6 months to streamline the process. Learn more about email best practices [here][57].
+## 'Filter' option for campaigns and Canvases
 
-## Updates to campaign details API
+The filter option for Canvas and campaign GET list endpoints allow your customers to know the last time a campaign or Canvas message was updated.
 
-The /campaign/details API endpoint now gives information about its messages, allowing you to pull subject, HTML body, from-address, and reply-to fields using the API. Learn more about our APIs [here][56].
+## Currents `ad-id`
 
-## Updates to Liquid templating
+Updated [storage connect documentation][4] to reflect the new `ad-id` (advertiser ID) fields to Currents.
 
-We’ve added the ability to template variant attributes in Canvases and campaigns. In Canvas, you can now template both the variant’s API id as well as the variant’s name, and in campaigns you can now template a message’s message_api_id and message_name. Both updates allow for more flexibility in your messaging, allowing you to build personalized campaigns. Learn more about personalized messaging [here][55].
+## BCC functionality
 
-## New HTML email editor
+The [BCC Address setting][5] allows you to add and manage BCC address that can be appeneded to outbound email messages sent from Braze.
 
-You can now easily write and test emails with a full-screen HTML editor that enables live preview, personalization via Liquid and an improved full-screen text editor with line numbers and syntax highlighting. Learn more about email composition [here][54].
-
-## Updates to previews
-
-You can now follow the screen window as you scroll down message previews in campaigns & Canvas, ensuring that you can always see the changes reflected. Learn more about previewing and testing [here][53].
-
-## New segment membership filter
-
-We added a new filter, Segment Membership, enabling you to target users based off their membership in any of your existing segments. In addition, we’ve added the ability to use of both “And” and “Or” logic in segment filters, as well as the ability to nest segments within each other. These updates enable you to send customized messages to your customers with more precision. Learn more about filters [here][52].
-
-## Update to Android preview
-
-We updated the Android preview to reflect more recent versions of Android since Android N.  Learn more about preview messages [here][51].
-
-
-[51]: {{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/create/#step-5-preview-message
-[52]: {{site.baseurl}}/user_guide/engagement_tools/campaigns/ideas_and_strategies/new_features/#targeting-filters
-[53]: {{site.baseurl}}/user_guide/engagement_tools/campaigns/ideas_and_strategies/campaigns_in_multiple_languages/#step-6-preview-message
-[54]: {{site.baseurl}}/user_guide/message_building_by_channel/email/creating_an_email_template/#creating-an-email-template
-[55]: {{site.baseurl}}/user_guide/personalization_and_dynamic_content/personalized_messaging/#personalized-messaging
-[56]: {{site.baseurl}}/developer_guide/rest_api/basics/#what-is-a-rest-api
-[57]: {{site.baseurl}}/help/troubleshooting_guide/troubleshooting_guide/#email
-[58]: {{site.baseurl}}/help/best_practices/web_sdk/#web-push
+[1]: {{site.baseurl}}/user_guide/personalization_and_dynamic_content/promotion_codes/#promotion-codes
+[2]: {{site.baseurl}}/user_guide/engagement_tools/campaigns/testing_and_more/retention_reports/
+[3]: {{site.baseurl}}/user_guide/engagement_tools/canvas/retention_reports/
+[4]: {{site.baseurl}}/user_guide/data_and_analytics/braze_currents/event_glossary/message_engagement_events/#content-card-click-events
+[5]: {{site.baseurl}}/user_guide/administrative/app_settings/manage_app_group/email_settings/
