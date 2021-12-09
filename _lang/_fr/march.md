@@ -3,29 +3,18 @@ nav_title: March
 page_order: 10
 noindex: true
 page_type: update
-description: "This article contains release notes for March 2017."
+description: "This article contains release notes for March 2020."
 ---
 
-# March 2017
+# March 2020
 
-## New retargeting filter
+## Custom attribute filter behavior
 
-We've added a new "Converted from Canvas" filter to provide more seamless retargeting options. Learn more about using retargeting filters [here][27].
+The dashboard has improved filters to include more intuitive behaviors. There have been two significant changes to how certain custom attributes filters work. The custom attribute filter changes are reflected in the filters:
+- Less than __X__ Days Ago
+- Less than __X__ Days in the Future
+- Day of Recurring Event<br>
 
-## Webhook templates
+__If you use these filters in your segmentation, we recommend readjusting your segments to take these changes into account.__
 
-You can now save webhook messages as templates for easy reuse or start with a preconfigured templates for platforms like SMS with Twilio or chatbots like Facebook Messenger. Learn more about creating a webhook [here][26].
-
-## Multiple email support for Engagement Reports
-
-Engagement Reports may now be sent to multiple email addresses. To learn more about exporting data with Engagement Reports, visit [here][25].
-
-## Specify time on action-based delivery
-
-You now have the option, when using delayed action-based triggers, to send at a specific time after a delay. This functionality is available on both Canvas and campaigns. Learn more about sending action-based delivery campaigns [here][24].
-
-
-[24]: {{site.baseurl}}/user_guide/engagement_tools/campaigns/scheduling_and_organizing/delivery_types/triggered_delivery/
-[25]: {{site.baseurl}}/user_guide/data_and_analytics/your_reports/engagement_reports/#engagement-reports
-[26]: {{site.baseurl}}/user_guide/message_building_by_channel/webhooks/creating_a_webhook/#creating-a-webhook
-[27]: {{site.baseurl}}/user_guide/engagement_tools/campaigns/ideas_and_strategies/retargeting_campaigns/#retargeting-campaigns
+Check out our [documentation]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_attributes/#dates) for an explanation of the new behaviors.
