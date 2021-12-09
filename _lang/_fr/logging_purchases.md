@@ -1,86 +1,84 @@
 ---
 nav_title: Logging Purchases
-article_title: Logging Purchases for Android/FireOS
-platform:
-  - Android
-  - FireOS
+article_title: Logging Purchases for iOS
+platform: iOS
 page_order: 4
-description: "This reference article shows how to track in-app purchases and revenue and assign purchase properties in your Android application."
+description: "This reference article shows how to track in-app purchases and revenue and assign purchase properties in your iOS application."
 ---
 
-# Logging purchases for Android/FireOS
+# Logging purchases for iOS
 
 Record in-app purchases so that you can track your revenue over time and across revenue sources, as well as segment your users by their lifetime value.
 
 Braze supports purchases in multiple currencies. Purchases that you report in a currency other than USD will be shown in the dashboard in USD based on the exchange rate at the date they were reported.
 
-Before implementation, be sure to review examples of the segmentation options afforded by custom events vs. custom attributes vs. purchase events in our [Analytics Overview][3].
+Before implementation, be sure to review examples of the segmentation options afforded by custom events vs. custom attributes vs. purchase events in our [Best Practices section][5], as well as our notes on [event naming conventions]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/event_naming_conventions/).
 
 ## Tracking purchases and revenue
 
 To use this feature, add this method call after a successful purchase in your app:
 
 {% tabs %}
-{% tab JAVA %}
+{% tab OBJECTIVE-C %}
 
-```java
-Braze.getInstance(context).logPurchase(
-   String productId,
-   String currencyCode,
-   BigDecimal price,
-   int quantity
-);
+```objc
+[[Appboy sharedInstance] logPurchase:@"your product ID"
+inCurrency:@"USD"
+atPrice:[[[NSDecimalNumber alloc] initWithString:@"0.99"] autorelease]];
 ```
 
 {% endtab %}
-{% tab KOTLIN %}
+{% tab swift %}
 
-```kotlin
-Braze.getInstance(context).logPurchase(
-  productId: String,
-  currencyCode: String,
-  price: BigDecimal,
-  quantity: Int
-)
+```swift
+Appboy.sharedInstance()?.logPurchase("your product ID", inCurrency: "USD", atPrice: NSDecimalNumber(string: "0.99"))
 ```
 
 {% endtab %}
 {% endtabs %}
 
-__If the product Identifier is empty, the purchase will not be logged to Braze.__ See the [Javadoc][8] for more information.
+- Supported currency symbols include: USD, CAD, EUR, GBP, JPY, AUD, CHF, NOK, MXN, NZD, CNY, RUB, TRY, INR, IDR, ILS, SAR, ZAR, AED, SEK, HKD, SPD, DKK, and more.
+  - Any other provided currency symbol will result in a logged warning and no other action taken by the SDK.
+- The product ID can have a maximum of 255 characters
+- Please note that if the product identifier is empty, the purchase will not be logged to Braze.
 
-{% alert tip %}
-  If you pass in a value of `10 USD`, and a quantity of `3` then that will log to the user's profile as 3 purchases of 10 dollars for a total of 30 dollars. Quantities must be less than or equal to 100. Values of purchases can be negative.
-{% endalert %}
+### Adding properties {#properties-purchases}
+You can add metadata about purchases by passing an `NSDictionary` populated with `NSNumber`, `NSString`, or `NSDate` values.
 
-### Adding properties
+Please see the [iOS Class Documentation for additional details][8].
 
-You can add metadata about purchases by passing a [Braze Properties][4] object with your purchase information.
+### Adding quantity
+You can add a quantity to your purchases if customers make the same purchase multiple times in a single checkout. You can accomplish this by passing in a `NSUInteger` for the quantity.
 
-Properties are defined as key-value pairs.  Keys are `String` objects and values can be `String`, `int`, `float`, `boolean`, or [`Date`][5] objects.
+* A quantity input must be in the range of [0, 100] for the SDK to log a purchase.
+* Methods without a quantity input will have a default quantity value of 1.
+* Methods with a quantity input have no default value and **must** receive a quantity input for the SDK to log a purchase.
+
+Please see the [iOS Class Documentation for additional details][7].
+
+> If you pass in a value of 10 USD, and a quantity of 3 then that will log to the user's profile as 3 purchases of 10 dollars for a total of 30 dollars.
 
 {% tabs %}
-{% tab JAVA %}
+{% tab OBJECTIVE-C %}
 
-```java
-BrazeProperties purchaseProperties = new BrazeProperties();
-purchaseProperties.addProperty("key", "value");
-Braze.getInstance(context).logPurchase(..., purchaseProperties);
+```objc
+[[Appboy sharedInstance] logPurchase:@"your product ID"
+inCurrency:@"USD"
+atPrice:[[[NSDecimalNumber alloc] initWithString:@"0.99"] autorelease]
+withProperties:@{@"key1":"value1"}];
 ```
 
 {% endtab %}
-{% tab KOTLIN %}
+{% tab swift %}
 
-```kotlin
-val purchaseProperties = BrazeProperties()
-purchaseProperties.addProperty("key", "value")
-Braze.getInstance(context).logPurchase(..., purchaseProperties)
+```swift
+Appboy.sharedInstance()?.logPurchase("your product ID", inCurrency: "USD", atPrice: NSDecimalNumber(string: "0.99"), withProperties: ["key1":"value1"])
 ```
 
 {% endtab %}
 {% endtabs %}
 
-See the [Javadoc][6] for more information.
+See the [Technical Documentation][6] for more information.
 
 ### Reserved keys
 
@@ -93,13 +91,17 @@ The following keys are __RESERVED__ and __CANNOT__ be used as Purchase Propertie
 - `price`
 - `currency`
 
+**Additional Information
+
+- See the method declaration within the [`Appboy.h` file][2]. - In addition, you may refer to the [logPurchase documentation]() for more information.
+
 ### REST API
 
-You can also use our REST API to record purchases. Refer to the [User API documentation][1] for details.
+You can also use our REST API to record purchases. Refer to the [user API documentation][4] for details.
 
-[1]: {{site.baseurl}}/developer_guide/rest_api/user_data/#user-data
-[3]: {{site.baseurl}}/developer_guide/platform_wide/analytics_overview/#user-data-collection
-[4]: https://appboy.github.io/appboy-android-sdk/javadocs/com/braze/models/outgoing/BrazeProperties.html
-[5]: http://developer.android.com/reference/java/util/Date.html
-[6]: https://appboy.github.io/appboy-android-sdk/javadocs/com/appboy/Appboy.html#logPurchase-java.lang.String-java.lang.String-java.math.BigDecimal-int-com.braze.models.outgoing.BrazeProperties-
-[8]: https://appboy.github.io/appboy-android-sdk/javadocs/com/appboy/Appboy.html#logPurchase(java.lang.String,%20java.lang.String,%20java.math.BigDecimal,%20int)
+[2]: https://github.com/Appboy/appboy-ios-sdk/blob/master/AppboyKit/include/Appboy.h
+[4]: {{site.baseurl}}/developer_guide/rest_api/user_data/#user-data
+[5]: {{site.baseurl}}/developer_guide/platform_wide/analytics_overview/#user-data-collection
+[6]: http://appboy.github.io/appboy-ios-sdk/docs/interface_appboy.html#ad35bb238aaa4fe9d1ede0439a4c401db "logcustomevent:withproperties documentation"
+[7]: http://appboy.github.io/appboy-ios-sdk/docs/interface_appboy.html#ab50403068be47c0acba9943583e259fa "logpurchase w/ quantity class documentation"
+[8]: http://appboy.github.io/appboy-ios-sdk/docs/interface_appboy.html#aaca4b885a8f61ac9fad3936b091448cc "logpurchase w/ properties class documentation"
