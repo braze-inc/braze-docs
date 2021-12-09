@@ -1,37 +1,34 @@
 ---
-nav_title: August
-page_order: 6
-noindex: true
-page_type: update
-description: "This article contains release notes for August 2020."
+nav_title: August page_order: 5 noindex: true page_type: update
+description: "This article contains release notes for August 2021."
 ---
 
-# August
+# August 2021
 
-## External ID migration endpoints
+## Simple Survey in-app message
 
-Braze has released two new External ID Migration endpoints. These endpoints allow customers to rename or remove their users' Braze external IDs by utilizing the Braze API. These endpoints can be leveraged to migrate users with different naming schemas  while retaining historical data on those users. Check out our docs to learn more about the [`users.external_ids.rename`]({{site.baseurl}}/api/endpoints/user_data/external_id_migration/post_external_ids_rename/) and [`users.external_ids.remove`]({{site.baseurl}}/api/endpoints/user_data/external_id_migration/post_external_ids_remove/) endpoints.
+Use the new Simple Survey In-App Message template to collect user attributes, insights, and preferences that power your campaign strategy. For example, you can ask users how they’d like to use your app, learn more about their personal preferences, or even ask about their satisfaction with a particular feature. This survey template is supported for both mobile apps and web browsers. Visit our [documentation]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/templates/simple_survey/) to get started.
 
-## Predictive Churn
+## Liquid use case library
 
-Braze's Predictive Suite puts machine learning directly in your hands. Starting with [Predictive Churn]({{site.baseurl}}/user_guide/predictive_suite/), it’s easier than ever to effectively leverage and act on data seamlessly within the Braze platform. With it, you can create a tailored machine learning model to predict the risk of churn for a specific customer base, and then message the users that machine learning determines are at-risk before it’s too late. Previews of this feature will appear in eligible Braze customers' dashboards in early August. Contact your Account Manager for access to the full feature.
+Wondering how to do that one thing with Liquid? Just looking for inspiration? Check out our new [Liquid Use Case Library]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/liquid_use_cases/) for a collection of use cases ranging from Anniversaries and Birthdays to Platform Targeting and more.
 
-## Updates to Currents tracking properties
+## Email tracking
 
-Within certain Currents message engagement events (linked below), the tracking properties `canvas_variation_name` and `canvas_step_name` have been added. For a full list, check out the [Message Engagement Events Glossary]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/event_glossary/message_engagement_events/) and the [Currents Changelog]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/).
+Open pixel tracking and click tracking can now be disabled per user profile. This flexibility helps customers support regional privacy laws, where an individual user profile might indicate they no longer want to be tracked. Visit our [documentation]({{site.baseurl}}/user_guide/data_and_analytics/tracking/email_tracking/) to learn more.
 
-## Amazon Personalize partnership
+## SDK data collection options
 
-Amazon Personalize uses machine learnings to help create high-quality recommendations for your website and applications. Amazon personalize enables you to improve customer engagement by powering real-time personalized product and content recommendations, and targeted marketing promotions. For more information, check out our [Amazon Personalize]({{site.baseurl}}/partners/data_augmentation/recommendation/amazon_personalize/) documentation.
+Learn more about how the Braze SDK can be integrated to allow for flexible data collection in our new documentation on [SDK Data Collection Options]({{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/sdk_data_collection/).
 
-## Vizbee partnership
+## SSL overview
 
-Vizbee enables all smartphones and smart TVs in your home to work together as one seamless device for great user experiences. Vizbee helps leverage existing mobile app marketing channels like notifications, deep-links, and emails to acquire and engage viewership across all CTV devices (like Roku, FireTV, Samsung TV, LG TV, etc.) For more information, check out our [Vizbee]({{site.baseurl}}/partners/channel_extensions/deep_linking/vizbee_for_tv_deeplinking/) documentation.
+Learn more about SSL at Braze, why SSL is important, and how you can acquire an SSL certificate in our new [SSL Overview]({{site.baseurl}}/user_guide/onboarding_with_braze/email_setup/ssl/) documentation.
 
-## Bluedot partnership
+## Amplitude user profile API endpoints
 
-Bluedot is a location platform that provides an accurate and straightforward geofencing for apps. You can use Bluedot’s SDK to message smarter, automate mobile order check-ins, optimize workflows, and create functionless experiences. For more information, check out our [Bluedot]({{site.baseurl}}/partners/data_augmentation/contextual_location/bluedot/#bluedot) documentation.
+Amplitude’s User Profile API serves Amplitude user profiles. This includes user properties, computed user properties, a list of cohort IDs of cohorts that include the user, and recommendations. Refer to [Amplitude User Profile API Endpoints]({{site.baseurl}}/partners/data_and_infrastructure_agility/analytics/amplitude/amplitude_user_profile_api/) to learn more.
 
-## Iterate partnership
+## Campaign details endpoint
 
-Iterate makes it easy to learn from your customer, offering smart, user-friendly survey tools that look and feel like your brand. For more information, check out our [Iterate]({{site.baseurl}}/partners/additional_channels/surveys/iterate/) documentation. 
+The GET [`/campaigns/details`]({{site.baseurl}}/api/endpoints/export/campaigns/get_campaign_details/) API endpoint has added a dedicated `message` response for the in-app message channel. Documentation on this can be found [here]({{site.baseurl}}/api/endpoints/export/campaigns/get_campaign_details/#messages).
