@@ -1,34 +1,21 @@
 ---
 nav_title: Refreshing the Feed
-article_title: Refreshing the Content Card Feed for iOS
-platform: iOS
-page_order: 4
-description: "This reference article covers how to implement Content Card refreshing in your iOS application."
-channel:
-  - content cards
+article_title: Refeshing the Content Card Feed for Web
+page_order: 3
+platform: Web
+channel: content cards
+page_type: reference
+description: "This reference article describes how to queue a manual refresh of your Content Cards."
 ---
 
-# Refreshing the feed
+# Refreshing Content Cards
 
-## Refreshing Content Cards
+ You can queue a manual refresh of the Braze Content Cards at any time by calling:
 
-You can manually request Braze to refresh the user's Content Cards using the `requestContentCardsRefresh:` method on the `Appboy` interface. For example:
+`requestContentCardsRefresh()`
 
-{% tabs %}
-{% tab OBJECTIVE-C %}
+This will get all currently available cards from the last Content Cards refresh.
 
-```objc
-[[Appboy sharedInstance] requestContentCardsRefresh];
-```
+[JS Docs for getCachedContentCards](https://js.appboycdn.com/web-sdk/latest/doc/module-appboy.html#.getCachedContentCards)
 
-{% endtab %}
-{% tab swift %}
-
-```swift
-Appboy.sharedInstance()?.requestContentCardsRefresh()
-```
-
-{% endtab %}
-{% endtabs %}
-
-For more information see the [`Appboy.h` header file](https://github.com/Appboy/appboy-ios-sdk/blob/master/AppboyKit/include/Appboy.h).
+The feed will refresh automatically on new session or when the feed is opened and more than 60 seconds have elapsed since the last refresh.
