@@ -120,7 +120,7 @@ To set up the Braze and Punchh integration:
 2. Next, enable adapters by navigating to __Settings -> Webhooks Manager -> Configurations -> Show Adapters Tab__ and toggle on __Show Adapters Tab__.<br><br>
 3. Navigate to __Webhooks Manager__ under the __Settings__ tab, select the __Adapters__ tab, and click __Create Adapter__. <br><br>![Punch Platform][1]<br><br>
 5. Fill in the adapter name, description, and admin email. Select __Braze__ as your adapter and provide your Braze REST API endpoint and Braze API key.<br><br>
-6. Next, select the available events you would like to enable. A list of these events can be found [above](#available-events-to-sync).<br><br>![Punch Platform][3]<br><br>
+6. Next, select the available events you would like to enable. A list of these events can be found in [Available events to sync](#available-events-to-sync) above.<br><br>![Punch Platform][3]<br><br>
 7. Click __Submit__ to enable the webhook.
 comm
 ### Step 3: Create Punchh webhook in Braze
