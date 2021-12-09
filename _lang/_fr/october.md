@@ -3,23 +3,30 @@ nav_title: October
 page_order: 3
 noindex: true
 page_type: update
-description: "This article contains release notes for October 2019."
+description: "This article contains release notes for October 2017."
 ---
 
-# October 2019
+# October 2017
 
-## Improved Canvas variant analytics
+## Push stories
 
-Canvas has new and improved analytics to view the performance of each of your variants. There are new metrics, especially around conversion events and confidence, and new capabilities like copying cells, API IDs, and downloading a `.csv` of the results. [Learn more here]({{site.baseurl}}/user_guide/engagement_tools/canvas/get_started/measuring_and_testing_with_canvas_analytics/#performance-breakdown-by-variant).
+On iOS and Android, you can now [create notifications][74] with multiple pages, each of which contain an image, click behavior, and an optional title and subtitle. This feature requires iOS SDK 3.2.1 and Android SDK 2.2.0. To gain access to this new product, please contact your Customer Success Manager, Account Manager, or open a [support ticket][support].
 
-## SMS
+## Currents
 
-braze now provides sms with campaigns, canvas, and [currents]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/message_engagement_events/)! check out our [set up guide]({{site.baseurl}}/user_guide/onboarding_with_braze/sms_setup/) to get started and our [sms sending guide]({{site.baseurl}}/user_guide/message_building_by_channel/sms/) to learn more!
+[Currents][75] displays a set of real-time, high volume data connections for customer data with pre-built connections directly into technologies like data warehouses, business intelligence tools, and data management platforms. It launches with integrations for Amazon Redshift, Amplitude, and data management platforms Segment and mParticle. To gain access to this new product, please contact your Customer Success Manager, Account Manager, or open a [support ticket][support].
 
-## Content Block improvements
+## Okta single sign-on (October 2017)
 
-The API ID for a Content Block will now show on the selected Content Block page in the dashboard. Additionally, we will display where Content Blocks are being used.
+Companies can use Okta to control Braze access and allow or force their fellow Braze users to log in using Okta credentials. To gain access to this new product, please contact your Customer Success Manager, Account Manager, or open a [support ticket][support].
 
-## Alias-only user creation and identification via the API
+> Update: Information about how to access Okta can be found in our [May 2018 Release Notes]({{site.baseurl}}/help/release_notes/2017/august/#may-2018).
 
-You can now [use an API request]({{site.baseurl}}/api/endpoints/user_data/#user-attributes-object-specification) with any fields in the Attributes Object will create or update an attribute of that name with the given value on the specified user profile.
+## Updated email footer length restriction
+
+The limit to [email footers][76] is now 100kb. This update is in line with email best practices, as emails with bodies of larger than 400kb are more likely to land in spam.
+
+[74]: {{site.baseurl}}/user_guide/message_building_by_channel/push/push_stories/
+[75]: {{site.baseurl}}/partners/braze_currents/how_it_works/
+[76]: {{site.baseurl}}/user_guide/message_building_by_channel/email/managing_user_subscriptions/#custom-footer
+[support]: {{site.baseurl}}/braze_support/
