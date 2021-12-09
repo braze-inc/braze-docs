@@ -1,30 +1,43 @@
 ---
 nav_title: Logging Purchases
-article_title: Logging Purchases for Windows Universal
-platform: Windows Universal
+article_title: Logging Purchases for Web
+platform: Web
 page_order: 4
-description: "This reference article covers how to log purchases on the Windows Universal platform."
+page_type: reference
+description: "This article describes how to log purchases via the Braze SDK."
 ---
 
-# Logging purchases
+# Logging purchases for web
 
 Record in-app purchases so that you can track your revenue over time and across revenue sources, as well as segment your users by their lifetime value.
 
 Braze supports purchases in multiple currencies. Purchases that you report in a currency other than USD will be shown in the dashboard in USD based on the exchange rate at the date they were reported.
 
-Before implementation, be sure to review examples of the segmentation options afforded by custom events vs. custom attributes vs. purchase events in our [Best Practices section][3]. You should also check out our notes on [event naming conventions]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/event_naming_conventions/).
+Before implementation, be sure to review examples of the segmentation options afforded by custom events vs. custom attributes vs. purchase events in our [Best Practices section][3].
 
 To use this feature, add this method call after a successful purchase in your app:
 
-Purchases are logged by using the `EventLogger`, which is a property exposed in IAppboy. To obtain a reference to the `EventLogger`, call `Appboy.SharedInstance.EventLogger`.
-
-```csharp
-bool LogPurchase(string productId, string currencyCode, decimal price)
+```javascript
+appboy.logPurchase(productId, price, "USD", quantity);
 ```
+
+See the [JSdocs][8] for more information. Quantity must be less than or equal to 100.
+
+## Adding properties
+
+You can add metadata about purchases by passing an object of key-value pairs with your purchase information. Keys are `string` objects and values can be `string`, `numeric`, `boolean`, or `Date` objects.
+
+```javascript
+appboy.logPurchase(productId, price, "USD", quantity, {key: "value"});
+```
+
+See the [Jsdocs][8] for more information.
 
 ## REST API
 
-You can also use our REST API to record purchases. Refer to the [user API documentation][2] for details.
+You can also use our REST API to record purchases. Refer to the [User API documentation][1] for details.
 
-[2]: {{site.baseurl}}/developer_guide/rest_api/user_data/#user-data
+[1]: {{site.baseurl}}/developer_guide/rest_api/user_data/#user-data
 [3]: {{site.baseurl}}/developer_guide/platform_wide/analytics_overview/#user-data-collection
+[8]: https://js.appboycdn.com/web-sdk/latest/doc/module-appboy.html#.logPurchase
+[8]: https://js.appboycdn.com/web-sdk/latest/doc/module-appboy.html#.logPurchase
