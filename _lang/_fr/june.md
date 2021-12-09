@@ -3,20 +3,17 @@ nav_title: June
 page_order: 7
 noindex: true
 page_type: update
-description: "This article contains release notes for June 2018."
+description: "This article contains release notes for June 2019."
 ---
 
-# June 2018
+# June 2019
 
-## Password reusability
+## Snowflake partnership
 
-Administrators can now determine the minimum number of new, unique passwords other Braze users in their company must use before they can reuse a previous password. This can be controlled from the [Authentication Rules][98] panel in the _Company Settings_ tool (in the top-navigation dropdown menu), within the _Security Settings_ tab.
+Braze is proud to announce our partnership with Snowflake!
 
-## Uninstall tracking for Canvas steps
+Snowflake is a purpose-built SQL cloud data warehouse for all of your data and all of your users. With Snowflake's unique and patented architecture it's easy to amass all of your data, enable rapid analytics, and derive data-driven insights for all of your users.
 
-Uninstalls per Canvas Steps are now tracked and viewable as a stat.
+Braze leverages Snowflake’s Data Exchange to build a presence, find new customers, and expand reach through the ever-growing Snowflake customer base.
 
-!\[uninstall_tracking\]\[1\]
-[1]: {% image_buster /assets/img/uninstall_tracking_canvas_step.png %}
-
-[98]: {{site.baseurl}}/user_guide/onboarding/platform_administrative_features/#authentication-rules
+Learn more about this partnership [here](https://www.braze.com/perspectives/article/snowflake-partner-announcement) or in [our documentation]({{site.baseurl}}/partners/snowflake/).
