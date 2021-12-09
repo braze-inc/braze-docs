@@ -1,29 +1,40 @@
 ---
 nav_title: Read & Unread Indicators
-article_title: News Feed Read & Unread Indicators for Android/FireOS
-page_order: 4
-platform:
-  - Android
-  - FireOS
-description: "This reference article covers how to implement read and unread indicators in your News Feed for your Android application."
+article_title: Content Card Read & Unread Indicators for iOS
+platform: iOS
+page_order: 3
+description: "This reference article covers iOS read and unread indicators and how to implement them in your Content Cards."
 channel:
-  - news feed
+  - content cards
 ---
 
 # Read and unread indicators
 
-Braze allows you to optionally toggle on an Unread/Read indicator on News Feed cards as pictured below:
+## Disabling the unviewed indicator
 
-!\[UnreadvsRead\]\[25\]
+ ![Read & Unread Indicator]({% image_buster /assets/img/braze-content-cards-seen-unseen-behavior.png %}){: height="50%" width="50%"}
 
-## Enabling the indicators
+You can choose to disable the blue line at the bottom of the card which indicates whether or not the card has been viewed by setting the `disableUnviewedIndicator` property in `ABKContentCardsTableViewController` to YES.
 
-In order to enable this functionality add the following line to your `braze.xml` file:
+## Customizing the unviewed indicator
 
-```xml
-<bool name="com_appboy_newsfeed_unread_visual_indicator_on">true</bool>
+The Unviewed indicator can be accessed through the `unviewedLineView` property of the `ABKBaseContentCardCell` class. If you are utilizing Braze's `UITableViewCell` implementations, you should access the property before the cell is drawn.
+
+For example, to set the color of the unviewed indicator to red:
+
+{% tabs %}
+{% tab OBJECTIVE-C %}
+
+```objc
+((ABKBaseContentCardCell *)cell).unviewedLineView.backgroundColor = [UIColor redColor];
 ```
 
-## Customizing the indicators
-These indicators can be customized by altering the "icon_read" and "icon_unread" drawables.
-[25]: {% image_buster /assets/img_archive/UnreadvsReadNewsFeedCard.png %}
+{% endtab %}
+{% tab swift %}
+
+```swift
+(card as? ABKBaseContentCardCell).unviewedLineView.backgroundColor = UIColor.red
+```
+
+{% endtab %}
+{% endtabs %}
