@@ -17,7 +17,7 @@ To use them, drag one inside a column. It will auto-adjust to the column width. 
 
 ## Block types
 
-| Name | Description |
+| name | description |
 |---|---|
 | `Title`  | Allows users to add text with H1, H2, and H3 tags for email. | 
 | `Text`  |  Allows users to enter text into their message.  A toolbar helps with font and text editing functionality. | 
@@ -127,7 +127,7 @@ Automatic image resizing picks the best size for the image based on a combinatio
 
 ### Add Liquid personalization
 
-| Name | Description |
+| name | description |
 |---|---|
 | `Add Personalization` |  Located on the left menu.  Allows you to lookup standard liquid snippets such as default attributes, custom attributes, content blocks etc... | 
 {: .reset-td-br-1 .reset-td-br-2}
