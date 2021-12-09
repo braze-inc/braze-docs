@@ -119,7 +119,7 @@ Use Braze [Connected Content]({{site.baseurl}}/user_guide/personalization_and_dy
 {% endraw %}
 
 1. Add your Talon.One subdomain to the endpoint URL.<br><br>
-2. Add the authorization header and POST method of the request—further details on generating a Talon.One API key can be found [in the Talon.One API docs](https://docs.talon.one/management-api/#section/Authentication).<br><br>
+2. Add the authorization header and POST method of the request. Further details on generating a Talon.One API key can be found in the [Talon.One API docs](https://docs.talon.one/management-api/#section/Authentication).<br><br>
 3. Add the coupon code details mentioned in step 1 to the request body. The **identifier** parameter is necessary to prevent the creation of multiple coupons for one message, and each parameter should be separated with an "&" as shown above.<br><br>
 4. Store the Talon.One result. Use the `save` parameter at the end to store the Talon.One response as a Braze variable. <br><br>
 5. Show the value of the code in the message. Use Liquid to show the value of the generated message.
