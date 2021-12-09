@@ -1,41 +1,23 @@
 ---
-nav_title: July page_order: 6 noindex: true page_type: update
-description: "This article contains release notes for July 2021."
+nav_title: July
+page_order: 6
+noindex: true
+page_type: update
+description: "This article contains release notes for July 2018."
 ---
 
-# July 2021
+# July 2018
 
-## Transactional email campaigns
+## Triggers from attribute changes
 
-Transactional emails are those sent to facilitate an agreed-upon transaction between a sender and the recipient. Braze's Transactional email campaign type is purpose-built for sending automated, non-promotional email messages like order confirmations, password resets, billing alerts, or other business-critical notifications. In addition, a corresponding [transactional email endpoint]({{site.baseurl}}/api/endpoints/messaging/send_messages/post_send_transactional_message/) has been created. Transactional emails and the new endpoint are only available as part of select Braze packages. Visit our [documentation]({{site.baseurl}}/api/api_campaigns/transactional_campaigns) to learn more.
+You can now trigger campaigns and Canvas steps based on attribute value changes, such as Subscription Status changes and custom attribute changes. Previously, you needed to send Braze an event or API trigger in order to trigger a campaign in real time. but with attribute triggers, you can set up triggered workflows directly from Braze (without adding an event)!
 
-## Nested object support for event properties
+This feature is not yet available for all customers. Please reach out to your Account Manager if you are interested in enabling this feature for your Braze account.
 
-Braze now supports [nested objects]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/nested_object_support/) for custom events and purchase events. Nested objects allow you to send arrays of data as properties of custom events and purchases. This nested data can be used for templating personalized information in API-triggered messages through the use of Liquid and dot notation.
+## Canvas time option addition: Local time
 
-## New HMAC Liquid filters
+You can now choose to send a message at your company's local time, or your user's local time. When creating your Canvas step, just select "Scheduled", then "on the next" or "in". Then, you will be able to choose between "company time" and "user's local time".
 
-New `hmac_sha1` and `hmac_sha256` Liquid encoding filters have been added to the Braze platform. Documentation on these new filters can be found [here]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/advanced_filters/).
+## Campaign alerts
 
-## Purchase event page
-
-Curious about the details of purchase events at Braze? Visit our dedicated [purchase event documentation]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/purchase_events/) to learn more.
-
-## New Braze partnerships
-
-### Nexla - Workflow Automation
-
-[Nexla]({{site.baseurl}}/partners/nexla) is the leader in unified data operations and a 2021 Gartner Cool Vendor. Customers that use Currents to send data to data warehouses can leverage Nexla to extract, transform, and load that data to other locations, making data easily accessible across your entire ecosystem. Nexla enables you to use Braze Currents to get data in a custom format delivered to your destination of choice by a simple point and click.
-
-### Amperity - Customer Data Platform
-
-[Amperity]({{site.baseurl}}/partners/amperity/) is a comprehensive enterprise customer data platform, helping brands get to know their customers, make strategic decisions, and consistently take the right course of action to serve their consumers better. Amperity supports the Braze platform by providing a unified view of your customers across its CDP and Braze allowing you to send valuable Amperity data to Braze.
-
-### Digioh - Surveys
-
-[Digioh]({{site.baseurl}}/partners/digioh/) helps you grow your lists, capture first-party data, and put your data to use in your Braze campaigns. The drag-and-drop builder makes it easy to create on-brand forms, pop-ups, preference centers, landing pages, and surveys that connect you with your customers.
-
-### AppsFlyer Audiences - Attribution/Analytics
-
-[AppsFlyer]({{site.baseurl}}/partners/message_orchestration/attribution/appsflyer/) is a mobile marketing analytics and attribution platform that helps you analyze and optimize your apps through marketing analytics mobile attribution, and deep linking. [AppsFlyer Audiences]({{site.baseurl}}/partners/appsflyer_audiences/) allow you to build audience segments and pass these segments directly to Braze to create powerful customer engagement campaigns.
-
+Braze campaigns now allow you to set parameters around the number of sends within a campaign, enabling you to receive notifications about your campaign if it's sends dip below or rise above your chosen numbers. Click into the campaign you would like to monitor, then look to the first block, called "Campaign Monitoring." Click **Set Up Alert**, then set and save your alert! Learn more about Campaign Alerts [here]({{site.baseurl}}/user_guide/engagement_tools/campaigns/scheduling_and_organizing/campaign_alerts/#campaign-alerts).
