@@ -33,3 +33,133 @@ import 'package:braze_plugin/braze_plugin.dart';
 
 ## Step 2: Complete native setup
 
+Please complete the both Step 2.1 (Android) and Step 2.2 (iOS).
+
+{% tabs %}
+{% tab Android %}
+
+#### Step 2.1a: Configure the Braze SDK
+
+To connect to Braze servers, create a `braze.xml` file in your project's `android/res/values` folder. Paste the following code and replace the API key and endpoint with your values:
+
+```xml
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+<string name="com_appboy_api_key">YOU_APP_IDENTIFIER_API_KEY</string>
+<string translatable="false" name="com_appboy_custom_endpoint">YOUR_CUSTOM_ENDPOINT_OR_CLUSTER</string>
+</resources>
+```
+
+Add the required permissions to your `AndroidManifest.xml` file:
+
+```xml
+<uses-permission android:name="android.permission.INTERNET" />
+<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+```
+
+#### Step 2.1b: Implement user session tracking
+
+The calls to `openSession()` and `closeSession()` are handled automatically.
+Add the following code to the `onCreate()` method of your `MainApplication` class:
+
+{% subtabs global %}
+{% subtab JAVA %}
+```java
+import com.appboy.AppboyLifecycleCallbackListener;
+
+@Override
+public void onCreate() {
+    super.onCreate();
+    ...
+    registerActivityLifecycleCallbacks(new AppboyLifecycleCallbackListener());
+}
+```
+{% endsubtab %}
+{% subtab KOTLIN %}
+```kotlin
+import com.appboy.AppboyLifecycleCallbackListener
+
+override fun onCreate() {
+    super.onCreate()
+    ...
+    registerActivityLifecycleCallbacks(AppboyLifecycleCallbackListener())
+}
+```
+{% endsubtab %}
+{% endsubtabs %}
+
+#### Step 2.1c: Handle intent updates
+
+If your MainActivity has `android:launchMode` set to `singleTask`, add the following code to your `MainActivity` class:
+
+{% subtabs global %}
+{% subtab KOTLIN %}
+```kotlin
+override fun onNewIntent(intent: Intent) {
+    super.onNewIntent(intent)
+    setIntent(intent)
+}
+```
+{% endsubtab %}
+{% subtab JAVA %}
+```java
+@Override
+public void onNewIntent(Intent intent) {
+    super.onNewIntent(intent);
+    setIntent(intent);
+}
+```
+{% endsubtab %}
+{% endsubtabs %}
+{% endtab %}
+
+{% tab iOS %}
+
+#### Step 2.2a: Configure the Braze SDK
+
+{% subtabs global %}
+{% subtab SWIFT %}
+Add Appboy SDK import at the top of the `AppDelegate.m` file:
+```swift
+import Appboy_iOS_SDK
+```
+
+In the same file, add the following snippet within the `application:didFinishLaunchingWithOptions` method:
+
+```swift
+Appboy.start(withApiKey: "YOUR-APP-IDENTIFIER-API-KEY", in:application, withLaunchOptions:launchOptions)
+```
+{% endsubtab %}
+{% subtab OBJC %}
+Add Appboy SDK import at the top of the `AppDelegate.m` file:
+```objc
+#import "Appboy-iOS-SDK/AppboyKit.h"
+```
+
+In the same file, add the following snippet within the `application:didFinishLaunchingWithOptions` method:
+
+```objc
+[Appboy startWithApiKey:@"YOUR-APP-IDENTIFIER-API-KEY"
+         inApplication:application
+     withLaunchOptions:launchOptions];
+```
+{% endsubtab %}
+{% endsubtabs %}
+
+Then, add your SDK Endpoint in the `Info.plist` file. It is located in the `ios` project folder. If you're working in Xcode:
+
+1. Add a row with the name `Braze` and type of `Dictionary`.
+2. To that Dictionary, add a row with the name `Endpoint`, type `String` and as a value, input your [SDK endpoint]({{site.baseurl}}/api/basics/#endpoints).
+
+Otherwise, add the following elements to the file:
+
+```xml
+<key>Braze</key>
+  <dict>
+    <key>Endpoint</key>
+    <string>sdk.your-endpoint.com</string>
+  </dict>
+```
+
+{% endtab %}
+{% endtabs %}
