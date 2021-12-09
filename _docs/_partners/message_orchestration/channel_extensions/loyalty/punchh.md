@@ -28,7 +28,7 @@ The Braze and Punchh integration allows you to sync data for gifting and loyalty
 
 Punchh offers several endpoints available to Braze customers to help add external IDs into the Punchh platform using the Punchh API endpoints below. Once the external IDs have been added, create an adapter in Punchh, provide your Braze credentials, and select which events you'd like to sync. Next, you can take the Punchh segment ID and use it to build a Punchh webhook to trigger customer syncing in a Canvas journey.
 
-### Available Events to Sync
+### Available Events to Sync {#available-events-to-sync}
 1. Guest
 2. Loyalty Check-in
 3. Gift Check-in
