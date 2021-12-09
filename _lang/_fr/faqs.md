@@ -1,31 +1,45 @@
 ---
 nav_title: FAQs
-article_title: Export FAQs
-page_order: 11
+article_title: Locations & Geofences FAQs
+page_order: 4
 page_type: FAQ
-description: "This  article covers some frequently asked questions for API and CSV exports."
+description: "This reference article covers some frequently asked questions surrounding the use of Geofences."
+tool: Location
 ---
 
-# Export FAQs
+# Locations and geofences FAQs
 
-> This page provides answers to some commonly asked questions about API and CSV exports.
+## Locations
 
-### Can you make certain exports appear in a customer’s S3 bucket, and certain exports not?
+### When does Braze collect location data?
 
-No. If you have provided S3 credentials, all your exports will appear in your S3 bucket; otherwise, if no credentials are provided, all exports will appear in an S3 bucket belonging to Braze.
+Braze only collects location when the application is in the foreground. As a result, our last known location filters target users based upon where they last opened the application.
 
-### Do I have to add S3 credentials to Braze to export data?
+## Geofences
 
-No. Customers who do not add S3 credentials will have all of their exports appear in an S3 bucket belonging to Braze.
+### Can I store more than X geofences?
 
-### What happens if you set up S3 credentials in the dashboard, but don't select “make this the default data export destination?”
+Per Android's [documentation][3], Android apps may only store up to 100 geofences locally at a time. Braze is configured to store only up to 20 geofences locally per app. For geofences to work correctly, you should ensure that your App is not using all available geofence spots.
 
-That checkbox will impact whether exports go to S3 or Azure, assuming you've added credentials for both.
+iOS devices may monitor up to 20 [geofences][4] at a time per app. Braze will monitor up to 20 locations if space is available. For geofences to work correctly, you should ensure that your App is not using all available geofence spots.
 
-### Why did I receive multiple files when exporting user profiles to S3?
+### How accurate are Braze geofences?
 
-This is expected behavior for app groups with a lot of users. We split your export into multiple files, based on the number of users in your app group. Generally, there is one file output per 5,000 users. Note that if you are exporting a small segment within a large app group, you may still receive multiple files.
+Braze geofences use a combination of all location providers available to a device to triangulate the user's location. These include Wifi, GPS, and cellular towers.
 
-### Why do I see duplicates when I export users by segment via rest API?
+Typical accuracy is in 20-50m range and best-case accuracy will be in the 5-10m range. In rural areas, accuracy may degrade significantly, potentially going up to several kilometers. Braze recommends creating geofences with larger radii in rural locations.
 
-This is a very rare edge case caused by the underlying architecture of the database provider. Duplicates are cleaned out every week; however, most weeks, there are no duplicates cleared.
+### How do geofences affect battery life?
+
+Our geofencing solution uses the native geofence system service on iOS and Android and is tuned to intelligently trade off accuracy and power, ensuring best in class battery life and improvements in performance as the underlying service improves.
+
+### How many geofences can I upload to Braze?
+
+You may create or upload an unlimited amount of geofences on the dashboard, allowing your marketing team to setup geofence sets and campaigns without needing to calculate numbers of geofences. However, each geofence set can hold a maximum of 10,000 geofences. Braze dynamically re-synchronizes the geofences that it tracks for each individual user, ensuring that the most relevant geofences to them are always available.
+
+### When are geofences active?
+
+Braze geofences work even when your app is closed, at all hours of the day.
+
+[3]: https://developers.google.com/android/reference/com/google/android/gms/location/package-summary
+[4]: https://developer.apple.com/library/content/documentation/UserExperience/Conceptual/LocationAwarenessPG/RegionMonitoring/RegionMonitoring.html
