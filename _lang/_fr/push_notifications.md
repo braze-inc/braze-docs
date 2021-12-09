@@ -1,78 +1,71 @@
 ---
 nav_title: Push Notifications
-article_title: Push Notifications for Windows Universal
-platform: Windows Universal
+article_title: Push Notifications for Xamarin
+platform:
+  - Xamarin
+  - iOS
+  - Android
 page_order: 1
-description: "This article covers push notification integration instructions for the windows universal platform."
+description: "This article covers Android and FireOS push notification integration for the Xamarin platform."
 channel: push
 ---
 
-# Push notification integration
+# Push notifications
 
-!\[Sample Push\]\[10\]{: style="float:right;max-width:40%;margin-left:15px;"}
+## Android
 
-A push notification is an out-of-app alert that appears on the user's screen when an important update occurs. Push notifications are a valuable way to provide your users with time-sensitive and relevant content or to re-engage them with your app.
+See [the Android integration instructions][11] for information on how to integrate push into your Xamarin Android app. Furthermore, you can look at the [sample application][12] to see how the namespaces change from java to c#.
 
-Visit our [documentation][9] for additional best practices.
+## iOS
 
-## Step 1: Configure your application for push
+See [the iOS integration instructions][1] for information about setting up your application with push and storing your credentials on our server.
 
-Ensure that in your `Package.appxmanifest` file, the following settings are configured as noted below:
+### Requesting push permissions
 
-Within the __Application__ tab, ensure that `Toast Capable` is set to `YES`.
+Set up push permissions by adding the following code to the `FinishedLaunching` section of your `AppDelegate.cs`:
 
-## Step 2: Configure the Braze dashboard
-
-1. Find your SID and Client Secret - [Step By Step Instructions][4]
-2. Within the __Settings__ page of the Braze dashboard, add the SID and Client Secret in your settings.
-
-## Step 3: Update for background open logging
-
-In your `OnLaunched` method, after you have called `OpenSession` add the following code snippet.
-
-```
-string campaignId = e.Arguments.Split(new[] { "_ab_pn_cid" }, StringSplitOptions.None)[0];
-if (!string.IsNullOrEmpty(campaignId))
-{
-Appboy.SharedInstance.PushManager.LogPushNotificationOpened(campaignId);          
-}
+```csharp
+// C#
+UIUserNotificationSettings settings = UIUserNotificationSettings.GetSettingsForTypes(UIUserNotificationType.Badge | UIUserNotificationType.Alert | UIUserNotificationType.Sound, null);
+UIApplication.SharedApplication.RegisterForRemoteNotifications();
+UIApplication.SharedApplication.RegisterUserNotificationSettings(settings);
 ```
 
-!\[Windows SID Dashboard\]\[6\]
+> If you’ve implemented a custom push opt-in prompt, make sure that you’re calling the above code EVERY time the app runs after they grant push permissions to your app. Apps need to reregister with APNs as device tokens can change arbitrarily.
 
-## Step 4: Creating event handlers
+### Registering push tokens
 
-To listen to events that are fired when the push is received and activated (clicked by user), create event handlers and add them to the `PushManager` events:
+Register for your push tokens by adding the following code in the `RegisteredForRemoteNotifications` method of your `AppDelegate.cs`:
 
-- `Appboy.SharedInstance.PushManager.PushReceivedEvent += YourPushReceivedEventHandler;`
-- `Appboy.SharedInstance.PushManager.ToastActivatedEvent += YourToastActivatedEventHandler;`
+```csharp
+// C#
+Appboy.SharedInstance().RegisterDeviceToken (deviceToken);
+```
 
-Your event handlers should have the signatures:
+### Enabling push analytics
 
-- `void YourPushReceivedEventHandler(PushNotificationChannel sender, AppboyPushNotificationReceivedEventArgs args);`
-- `void YourToastActivatedEventHandler(ToastNotification sender, AppboyToastActivatedEventArgs args);`
+Enable open tracking on push notifications by adding the following code to the `DidReceiveRemoteNotification` method of your `AppDelegate.cs`:
 
-## Step 5: Deep linking from push into your app
+```csharp
+// C#
+public override void DidReceiveRemoteNotification (UIApplication application, NSDictionary userInfo, Action<UIBackgroundFetchResult> completionHandler)
+  {
+    Appboy.SharedInstance().RegisterApplicationWithFetchCompletionHandler(application, userInfo, completionHandler);
+  }
+```
 
-### Part 1: Creating deep links for your app
+### Badge count
 
-Deep links are used to navigate users from outside your application directly to a certain screen or page in your application. Typically this is done by registering a URL scheme (e.g. myapp://mypage) with an operating system and registering your application to handle that scheme; when the OS is asked to open a URL of that format it transfers control to your application.
+If [badge counts are enabled][2], Braze will display a badge when a customer has unread notifications. By default, this number is 1. Braze will only clear the badge count when the app is opened directly from a Braze push notification. To clear the badge count, you can refer to the [Xamarin documentation][3] and use the following code:
 
-WNS deep link support differs from this as it launches your application with data about where to send the user. When WNS push is created it can include a launch string that is passed through to your application's `OnLaunched` when the push is clicked and your application is opened. We already use this launch string to do campaign tracking, and we give users the ability to append their own data that can be parsed and used to navigate the user when the app is launched.
+```csharp
+// C#
+UIApplication.SharedApplication.ApplicationIconBadgeNumber = 0;
+```
 
-If you specify an extra launch string in the dashboard or the REST API, it will be added to the end of the launch string that we create, after the key "abextras=". So, an example launch string might look like `ab_cn_id=_trackingid_abextras=page=settings`, in which you specified `page=settings` in the extra launch string parameter so you can parse it and navigate the user to the settings page.
+[1]: {{site.baseurl}}/developer_guide/platform_integration_guides/ios/push_notifications/integration/
+[2]: {{site.baseurl}}/help/best_practices/utilizing_badge_count/#badge-count-with-braze
+[3]: https://developer.xamarin.com/guides/cross-platform/application_fundamentals/notifications/ios/local_notifications_in_ios/#Handling_Notifications
+[11]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/push_notifications/integration/standard_integration/
+[12]: https://github.com/Appboy/appboy-xamarin-bindings
 
-### Part 2: Deep linking through the dashboard
-
-Specify the string to be appended to the launch string in the “Additional Launch String Configuration” field in push notification settings.
-
-!\[Deep_Link_Dash_Example\]\[15\]
-
-### Part 3: Deep linking through the REST API
-
-Braze also allows sending deep links through the REST API. Windows Universal Push objects accept an optional `extra_launch_string` parameter. See the [Windows Universal Push Object Example.][13]
-[6]: {% image_buster /assets/img_archive/windows_sid.png %} "Windows SID Dashboard" [10]: {% image_buster /assets/img_archive/windows_uni_push_sample.png %} [15]: {% image_buster /assets/img_archive/windows_deep_link_click_action.png %} "Deep Link Click Action"
-
-[4]: http://msdn.microsoft.com/en-us/library/windows/apps/hh465407.aspx
-[9]: {{site.baseurl}}/user_guide/message_building_by_channel/push/best_practices/
-[13]: {{site.baseurl}}/api/objects_filters/messaging/windows_objects/
