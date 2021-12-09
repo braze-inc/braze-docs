@@ -1,24 +1,34 @@
 ---
 nav_title: Refreshing the Feed
-article_title: Refreshing the News Feed for Android/FireOS
-page_order: 7
-platform:
-  - Android
-  - FireOS
-description: "This reference article shows how to refresh the News Feed in your Android application."
+article_title: Refreshing the Content Card Feed for iOS
+platform: iOS
+page_order: 4
+description: "This reference article covers how to implement Content Card refreshing in your iOS application."
 channel:
-  - news feed
+  - content cards
 ---
 
 # Refreshing the feed
 
-You can queue a manual refresh of the Braze News Feed at any time by calling:
+## Refreshing Content Cards
 
-```java
-Appboy.requestFeedRefresh()
+You can manually request Braze to refresh the user's Content Cards using the `requestContentCardsRefresh:` method on the `Appboy` interface. For example:
+
+{% tabs %}
+{% tab OBJECTIVE-C %}
+
+```objc
+[[Appboy sharedInstance] requestContentCardsRefresh];
 ```
 
-See the [Javadoc][16] for more information.
+{% endtab %}
+{% tab swift %}
 
+```swift
+Appboy.sharedInstance()?.requestContentCardsRefresh()
+```
 
-[16]: https://appboy.github.io/appboy-android-sdk/javadocs/com/appboy/Appboy.html#requestFeedRefresh()
+{% endtab %}
+{% endtabs %}
+
+For more information see the [`Appboy.h` header file](https://github.com/Appboy/appboy-ios-sdk/blob/master/AppboyKit/include/Appboy.h).
