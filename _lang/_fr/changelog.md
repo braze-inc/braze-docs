@@ -1,15 +1,12 @@
 ---
 nav_title: Changelog
-article_title: Changelog for Unity SDK
+article_title: Changelog for Windows Universal SDK
 page_order: 30
 page_type: update
-platform:
-  - Unity
-  - iOS
-  - Android
-description: "This page lists updates to Braze's Unity SDK changelog."
+platform: Windows Universal
+description: "This page lists updates to Braze's Windows Universal SDK changelog."
 ---
 
-# Unity SDK changelog
+# Windows SDK changelog
 
-{% markdown_embed https://raw.githubusercontent.com/Appboy/appboy-unity-sdk/master/CHANGELOG.md %}
+{% markdown_embed https://raw.githubusercontent.com/Appboy/appboy-windows-sdk/master/CHANGELOG.md %}
