@@ -153,26 +153,5 @@ Then, paste the copied asset URL into your HTML as you normally would when refer
 You can press `CTRL+F` or `CMD+F` within the HTML Editor to search within your code!
 {% endalert %}
 
-### Migrating old "ZIP file" campaigns {#migration-guide}
-
-Older campaigns that used ZIP files are not supported in this new In-App Message composer.
-
-If you want to migrate those older ZIP file campaigns, follow these instructions:
-
-1. Download the ZIP asset file to your computer, and extract the files
-2. Upload all of your asset files into the new campaign. (Tip: you can select all files and drag-and-drop them in)
-3. For each newly uploaded asset, copy its uploaded file URL and replace them in your HTML's older local asset references
-
-For example, if your old HTML contains a reference that looks like this:
-
-```html
-<img src="/cat.png" />
-```
-
-Replace it with its respective uploaded asset URL, like this:
-
-```html
-<img src="https://cdn.braze.com/appboy/communication/assets/font_assets/files/5ee3869ae16e174f34fac566/original.png" />
-```
 
 [1]: {{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/customize/#javascript-bridge

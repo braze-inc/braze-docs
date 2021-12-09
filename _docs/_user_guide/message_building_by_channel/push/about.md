@@ -3,7 +3,7 @@ nav_title: "About Push"
 article_title: About Push
 page_order: 0
 page_type: reference
-description: "This reference article gives a brief overview of Push, provides resources to get started with push messages, and notes some regulations."
+description: "This reference article gives a brief overview of push, provides resources to get started with push messages, and notes some regulations."
 channel:
   - Push
 
@@ -11,7 +11,11 @@ channel:
 
 # What are push messages?
 
-> Push notifications are wonderful for time-sensitive calls to action, as well as re-engaging users who haven't come into the app in a while. Successful push campaigns drive the user directly to content and demonstrate the value of your application.
+> This reference article gives a brief overview of push, provides resources to get started with push messages, and notes some regulations.
+
+Push notifications are wonderful for time-sensitive calls to action, as well as re-engaging users who haven't come into the app in a while. Successful push campaigns drive the user directly to content and demonstrate the value of your application. 
+
+Keep in mind that users need to opt-in to push to receive your messages, which means it's a good idea to use in-app messages to explain to your customers why you want to send them push notifications, and how enabling push will benefit them. This process is called [push priming]({{site.baseurl}}/user_guide/message_building_by_channel/push/ios/create_push_primer/).
 
 ![Push Message Example][1]{: height="400px"}  ![Push Message Example][2]{: height="400px"}
 
@@ -19,7 +23,7 @@ _To see more examples of push notifications, check out our [Case Studies][8]._
 
 ## Potential use cases
 
-Push Notifications are a great tool for attracting new users and making re-engagement campaigns. Here are some examples of common Push message use cases. 
+Push notifications are a great tool for attracting new users and making re-engagement campaigns. Here are some examples of common push message use cases. 
 
 | Use Case | Explanation |
 | -------- | ----------- |
@@ -31,11 +35,17 @@ Push Notifications are a great tool for attracting new users and making re-engag
 
 For more information on re-engaging lapsed users, see our [Quick Wins][23] page on the topic.
 
-> Push should be formatted in plain-text. Key-value pairs allow for [deep linking][3] to external URLs or in-app features.
+## Prerequisites to use push
+
+Before you can create and send any push messages using Braze, you need to work with your developers to integrate push into your website or app. For detailed steps, refer to our integration guides for each platform:
+
+- [iOS]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/push_notifications/integration/)
+- [Android]({{site.baseurl}}/developer_guide/platform_integration_guides/android/push_notifications/android/integration/standard_integration/)
+- [Web]({{site.baseurl}}/developer_guide/platform_integration_guides/web/push_notifications/integration/)
 
 ## Push message regulations
 
-Because push messages are an intrusive type of messaging, going directly to the user's phone or browser, there are guidelines for sending push messages via apps and sites.
+Because push messages are an intrusive type of messaging that goes directly to your customer's phone or browser, there are guidelines for sending push messages via apps and sites.
 
 ### Mobile push regulations for apps
 
@@ -45,16 +55,18 @@ Your push messages must fall within the guidelines of the Apple App Store and Go
 
 |Apple App Store Policies|
 |---|
-|[4.5.4][9] Push Notifications must not be required for the app to function, and should not be used for advertising, promotions, or direct marketing purposes or to send sensitive personal or confidential information.|
+|[4.5.4][7] Push Notifications must not be required for the app to function, and should not be used for advertising, promotions, or direct marketing purposes or to send sensitive personal or confidential information.|
 |[3.2.2][9] (i) Creating an interface for displaying third-party apps, extensions, or plug-ins similar to the App Store or as a general-interest collection. (ii) Monetizing built-in capabilities provided by the hardware or operating system, such as Push Notifications, the camera, or the gyroscope; or Apple services, such as Apple Music access or iCloud storage.|
 {: .reset-td-br-1 .reset-td-br-2}
 
 |Google Play Store Policy|
 |---|
-|[We don’t allow apps or ads that mimic or interfere with system functionality, such as notifications or warnings.][10] System-level notifications may only be used for an app’s integral features, such as an airline app that notifies users of special deals, or a game that notifies users of in-game promotions.|
+|[Unauthorized Use or Imitation of System Functionality][10] We don't allow apps or ads that mimic or interfere with system functionality, such as notifications or warnings. System-level notifications may only be used for an app’s integral features, such as an airline app that notifies users of special deals, or a game that notifies users of in-game promotions.|
 {: .reset-td-br-1}
 
 ## Image and text specifications
+
+For best results, refer to the following image size and message length guidelines when crafting your push messages. There may be some variance depending on the presence of an image, the notification state (iOS) and display setting of the user’s device, as well as the size of the device. When in doubt, keep your copy short and sweet.
 
 ### Native mobile push notifications
 
@@ -136,6 +148,7 @@ Opera | macOS | 38 | 42
 [2]: {% image_buster /assets/img/ios_push.png %}
 [3]: {{site.baseurl}}/user_guide/personalization_and_dynamic_content/deep_linking_to_in-app_content/#deep-linking-to-in-app-content
 [8]: https://www.braze.com/customers
-[9]: https://developer.apple.com/app-store/review/guidelines/
-[10]: https://developers.google.com/android/play-protect/mobile-unwanted-software
+[7]: https://developer.apple.com/app-store/review/guidelines/#apple-sites-and-services
+[9]: https://developer.apple.com/app-store/review/guidelines/#unacceptable
+[10]: https://developers.google.com/android/play-protect/mobile-unwanted-software#muws-categories
 [23]: {{site.baseurl}}/user_guide/engagement_tools/campaigns/ideas_and_strategies/capturing_lapsing_users/#capturing-lapsing-users
