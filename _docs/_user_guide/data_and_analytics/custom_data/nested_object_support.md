@@ -107,6 +107,10 @@ Templating in Liquid in a message triggered by the "Ordered" event:
 
 To use these properties to trigger a campaign, select your custom event or purchase, and add a __Nested Property__ filter. Note that message triggering is not yet supported for in-app messages.
 
+{% alert important %}
+Nested objects is generally available, however triggering messages and segmenting users based on this data is in early access. For more information, please reach out to your Braze account manager.
+{% endalert %}
+
 {% tabs %}
 {% tab Music Example %}
 
