@@ -166,7 +166,10 @@ valid_partner_list:
 - name: Adobe
   url: /docs/partners/data_and_infrastructure_agility/customer_data_platform/adobe/
 - name: Worthy
-  url: /docs/partners/message_personalization/dynamic_content/worthy/
+  url: /docs/partners/message_personalization/dynamic_content/worthy/ 
+- name: Yotpo
+  url: /docs/partners/message_orchestration/channel_extenstions/ecommerce/yotpo/ 
 - name: Zeotap
   url: /docs/partners/data_and_infrastructure_agility/customer_data_platform/zeotap/
+
 ---

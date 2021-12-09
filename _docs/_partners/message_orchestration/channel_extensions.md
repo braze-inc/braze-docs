@@ -36,6 +36,8 @@ valid_partner_list:
   url: /docs/partners/message_orchestration/channel_extensions/loyalty/punchh/
 - name: Shopify
   url: /docs/partners/message_orchestration/channel_extensions/ecommerce/shopify/
+- name: Yotpo
+  url: /docs/partners/message_orchestration/channel_extenstions/ecommerce/yotpo/
 
 ---
 
