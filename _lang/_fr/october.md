@@ -1,45 +1,39 @@
 ---
 nav_title: October
-page_order: 4
+page_order: 3
 noindex: true
 page_type: update
-description: "This article contains release notes for October 2018."
+description: "This article contains release notes for October 2021."
 ---
 
-# October 2018
+# October 2021
 
-{% comment %}
-  Add these in at a later time... Intelligent Selection Control Group Toggle The Intelligent Selection box now has a checkbox that allows you to [toggle the use of a control group on or off]({{site.baseurl}}/user_guide/engagement_tools/campaigns/testing_and_more/multivariate_testing/#including-a-control-group). When on, the control group will be 20% of the audience size and will change as the Intelligent Selection feature optimizes the per variant audience sizes. Canvas Entry Settings Wizard (Beta) The Canvas UI will be simplified to prevent missed tasks and resulting errors. Canvas configurations, specifically, will now be displayed in a wizard, similar to the design of the Campaigns wizard. This is not currently reflected in our documentation, as it is being rolled out gradually. Check back for more on this soon! Subscription Group API (hidden) Braze has made a new GET call available to enable you to request based on an external ID or email address. You will then be provided all the subscription groups associated with that user.
-{% endcomment %}
+## iOS 15
 
-## Calculate exact audience stats for campaigns
+### Apple Mail Privacy Protection
 
-You can now go to **Campaign Analytics** and calculate the exact statistics for your audience. Press __Calculate Exact Stats__ in the footer of the __Target Users__ section and the exact audience stats will populate. You will have to save the campaign before calculating (draft campaigns will be saved as draft).
+Apple’s Mail Privacy Protection (MPP) is a privacy update that will be available for users of the Apple Mail app on iOS 15, iPadOS 15, macOS Monterey, and watchOS 8, released in mid-September. For users who opt-in to MPP, emails will now be preloaded using proxy servers, caching images and hindering the ability to leverage tracking pixels for metrics like [open tracking]({{site.baseurl}}/user_guide/administrative/app_settings/manage_app_group/email_settings/#email-open-tracking-pixel/). To learn more about MPP and issues regarding email deliverability metrics and issues with pre-existing campaigns and Canvases that trigger based on these metrics, visit our [documentation]({{site.baseurl}}/user_guide/message_building_by_channel/email/mpp/).
 
-## Windows 8 deprecation
+### Push features
 
-Braze no longer supports Windows 8 as of October 10, 2018.
+iOS 15 introduced new notification features to help users stay focused and avoid frequent interruptions throughout the day. We're excited to offer support for these new features, including [Interruption Levels and Relevance Scores]({{site.baseurl}}/user_guide/message_building_by_channel/push/ios/notification_options/).
 
-## Partnerships hub
+## Contact Cards
 
-You can now find a list of your integrations on the Braze platform under __Integrations__, along with integration keys and instructions.
+Contact Cards are a standardized file format for sending business and contact information that can be easily imported into address books or contact books. You can now upload and create Contact Cards for your SMS and MMS messages. To read more about how to build Contact Cards in our built-in Contact Card Generator, visit our [documentation]({{site.baseurl}}/user_guide/message_building_by_channel/sms/mms/contact_card/).
 
-## Email analytics calculations
+## Out-of-the-box Content Cards customization
 
-Braze is now calculating all email analytics using our email sending partner’s (ESP) event data in order to greatly improve the accuracy of our email analytics. This solution utilizes Postgres, an open source database solution, to ensure data integrity.
+You can create your own Content Cards interface by extending `ABKContentCardsTableViewController` to customize all UI elements and Content Cards behavior. To read more about how to customize the Content Cards Feed, visit our [documentation]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/content_cards/customization/#customizing-the-content-cards-feed/).
 
-{% alert important %}
-Unique Opens and Unique Clicks are currently still dependent on the aggregate data provided by our email sending partners. There is work in progress to calculate these uniqueness stats using the same infrastructure introduced in this release.
-{% endalert %}
+## API rate limits
 
-## Composer panel controls
+[Rate limits]({{site.baseurl}}/api/basics/#api-limits/) will apply to all customers onboarded after September 16, 2021.
 
-The Message Composer controls have been refreshed to include wording associated with icons to enable better usability and navigation.
+## Updates to Android and FireOS developer guides
 
-## Azure for Currents
+Android and FireOS developer guides have merged into one location. Dedicated FireOS articles will be available in this [new Android section]({{site.baseurl}}/developer_guide/platform_integration_guides/android/push_notifications/fireos/integration/).
 
-Braze customers using Currents can now see [Azure]({{site.baseurl}}/partners/braze_currents/data_storage_integrations/partners/microsoft_azure_blob_storage/) as a potential integration.
+## Updates to Funnel and Retention Reports
 
-## Input field expansions
-
-You can now expand the input boxes for Email subject lines and Push titles.
+[Funnel Reports]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_funnel_reports/) and [Retention Reports]({{site.baseurl}}/user_guide/engagement_tools/campaigns/testing_and_more/retention_reports/) are now available for SMS campaigns.
