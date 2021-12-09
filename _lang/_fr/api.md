@@ -1,7 +1,16 @@
 ---
-config_only: true
-layout: redirect
-redirect_to: /docs/api/basics/
-permalink: api/
+page_order: 1.1
+nav_title: API
+layout: dev_guide
+guide_top_header: "API Help Articles"
+page_type: landing
+description: "This landing page is home to help articles related to the Braze API."
+guide_menu_title: ""
+guide_menu_list:
+  - 
+    name: Deleting Users via API
+    link: /docs/help/help_articles/api/delete_user/
+    fa_icon: fas fa-user-times
+noindex: true
 ---
 
