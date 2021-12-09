@@ -1,30 +1,55 @@
 ---
 nav_title: Initial SDK Setup
-article_title: Initial SDK Setup for MacOS
-platform: MacOS
+article_title: Initial SDK Setup for Roku
+platform: Roku
 page_order: 0
 page_type: reference
-description: "This page provides resources for initial SDK setup steps on macOS."
+description: "This page describes initial setup steps for the Braze Roku SDK."
 ---
 
-# Initial SDK setup
+# Initial Roku SDK integration
 
-As of version [3.32.0][1], the Braze SDK supports macOS for apps using [Mac Catalyst][2] when integrating through Swift Package Manager. Currently, the SDK does not support Mac Catalyst when using Cocoapods or Carthage.
+Installing the Braze Roku SDK will provide you with basic analytics and segmentation functionality.
 
-{% alert note %}
-To build your app with Mac Catalyst, please reference <a href="https://developer.apple.com/documentation/uikit/mac_catalyst">Apple's documentation here</a>.
-{% endalert %}
+## Step 1: Add files
 
-Once your app supports Catalyst, follow [these instructions to use Swift Package Manager][3] to import the Braze SDK into your app.
+Braze SDK files can be found in the `sdk_files` directory in the [Braze Roku SDK repo](https://github.com/Appboy/appboy-roku-sdk).
 
-## Supported features
+1. Add `BrazeSDK.brs` to your app in the `source` directory.
+2. Add `BrazeTask.brs` and `BrazeTask.xml` to your app in the `components` directory.
 
-Braze supports push notifications and location features when running on Mac Catalyst. To integrate push in your Catalyst app, follow the [iOS SDK instructions here][4]. For enabling automatic location collection, follow the [setup instructions here][5].
+## Step 2: Add references
 
-Please note that Push Stories, Rich Push, and Geofences are not supported on MacOS.
+Add a reference to `BrazeSDK.brs` in your main scene using the following `script` element:
 
-[1]: https://github.com/Appboy/appboy-ios-sdk/releases/tag/3.32.0
-[2]: https://developer.apple.com/mac-catalyst/
-[3]: {{site.baseurl}}/developer_guide/platform_integration_guides/ios/initial_sdk_setup/installation_methods/swift_package_manager/
-[4]: {{site.baseurl}}/developer_guide/platform_integration_guides/ios/push_notifications/integration/
-[5]: {{site.baseurl}}/developer_guide/platform_integration_guides/ios/analytics/location_tracking/
+```
+<script type="text/brightscript" uri="pkg:/source/BrazeSDK.brs"/>
+```
+
+## Step 3: Configure
+
+Within `main.brs`, set the Braze configuration on the global node:
+
+```
+globalNode = screen.getGlobalNode()
+config = {}
+config_fields = BrazeConstants().BRAZE_CONFIG_FIELDS
+config[config_fields.API_KEY] = "YOUR_API_KEY_HERE"
+' example endpoint: "https://sdk.iad-01.braze.com/"
+config[config_fields.ENDPOINT] = "YOUR_ENDPOINT_HERE"
+config[config_fields.HEARTBEAT_FREQ_IN_SECONDS] = 5
+globalNode.addFields({brazeConfig: config})
+```
+
+## Step 4: Initialize Braze
+
+Initialize the Braze instance:
+
+```
+m.BrazeTask = createObject("roSGNode", "BrazeTask")
+m.Braze = getBrazeInstance(m.BrazeTask)
+```
+
+## Basic SDK integration complete
+
+Braze should now be collecting data from your application with the Braze Roku SDK. Please see the following sections on how to [log attributes]({{site.baseurl}}/developer_guide/platform_integration_guides/roku/analytics/setting_custom_attributes/), [events]({{site.baseurl}}/developer_guide/platform_integration_guides/roku/analytics/logging_custom_events/), and [purchases]({{site.baseurl}}/developer_guide/platform_integration_guides/roku/analytics/logging_purchases/) to our SDK.
