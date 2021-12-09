@@ -3,43 +3,24 @@ nav_title: January
 page_order: 12
 noindex: true
 page_type: update
-description: "This article contains release notes for January 2018."
+description: "This article contains release notes for January 2019."
 ---
 
-# January 2018
+# January 2019
 
-## CSS inlining
+Welcome to a new year!
 
-You can now toggle [CSS Inlining][84] on or off for individual email messages - do this from [your Email Settings page][83].
+## Push time to live (TTL)
 
-## New segment filters
+In your account, within __Manage Settings__, click the [Push TTL Settings]({{site.baseurl}}/user_guide/administrative/app_settings/push_ttl_settings/) tab to manage the time duration for attempted resends in the event that a device is offline.
 
-You can now create segments using the following filters:
-- Received Canvas Step
-- Opened/ Clicked Canvas Step
-- Last Received Specific Canvas Step
+## Connected Content IP whitelisting
 
-{% alert update %}
-As of March 2019, `Received Canvas Step` has been renamed to `Received Message from Canvas Step`, and `Last Received Specific Canvas Step` has been renamed to `Last Received Message from Specific Canvas Step`.
-{% endalert %}
+Braze is pleased to announce that due to a number of infrastructure upgrades made by our internal teams, we can now offer IP whitelisting for Connected Content on all clusters. In the future, we plan to add additional IPs for the non-EU clusters.
 
-## Exporting users using device ID
+## Canvas delay
 
-This endpoint now accepts a device identifier as a parameter, which lets you to [export profiles of anonymous users][82].
+We have added the option for any Canvas step to be sent __immediately__.
 
-You can use Device ID to export all user profiles on that device.
-
-## Engagement Reports update
-
-Additional stats, like **push open rate** and **conversion rate**, are [now available in reports][81].
-
-## Apple push certificates: Using .p8 files
-
-You can now use a [.p8 file][80] when uploading an Apple Push Certificate - ensuring that your iOS push credentials will never expire.
-
-
-[80]: {{site.baseurl}}/developer_guide/platform_integration_guides/ios/push_notifications/integration/#recommended-option-using-a-p8-file-authentication-tokens
-[81]: {{site.baseurl}}/user_guide/data_and_analytics/your_reports/engagement_reports/#engagement-reports
-[82]: {{site.baseurl}}/developer_guide/rest_api/export/#users-by-identifier-endpoint
-[83]: https://dashboard-01.braze.com/app_settings/app_settings/email/
-[84]: {{site.baseurl}}/user_guide/message_building_by_channel/email/css_inline/#css-inlining
+!\[Canvas Delay\]\[canvas_delay\]
+[canvas_delay]: {% image_buster /assets/img/canvas_delay_immediate.png %}
