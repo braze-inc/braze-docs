@@ -1,55 +1,143 @@
 ---
-nav_title: About Content Cards
-article_title: About Content Cards
+nav_title: "About Push"
+article_title: About Push
 page_order: 0
-description: "This reference article includes an overview of the Braze Content Card channel and common use cases."
+page_type: reference
+description: "This reference article gives a brief overview of push, provides resources to get started with push messages, and notes some regulations."
 channel:
-  - content cards
+  - Push
 ---
 
-# What are Content Cards?
+# What are push messages?
 
-{% alert note %}
-Braze recommends that customers who use our News Feed tool move over to our Content Cards messaging channel - it is more flexible, customizable, and reliable. It is also easier to find and use in the Braze product. See our [Migration Guide](/docs/user_guide/message_building_by_channel/content_cards/migrating_from_news_feed/) or contact your Braze account manager for more information.
+> This reference article gives a brief overview of push, provides resources to get started with push messages, and notes some regulations.
+
+Push notifications are wonderful for time-sensitive calls to action, as well as re-engaging users who haven't come into the app in a while. Successful push campaigns drive the user directly to content and demonstrate the value of your application.
+
+Keep in mind that users need to opt-in to push to receive your messages, which means it's a good idea to use in-app messages to explain to your customers why you want to send them push notifications, and how enabling push will benefit them. This process is called [push priming]({{site.baseurl}}/user_guide/message_building_by_channel/push/ios/create_push_primer/).
+
+!\[Push Message Example\]\[1\]{: height="400px"}  !\[Push Message Example\]\[2\]{: height="400px"}
+
+_To see more examples of push notifications, check out our [Case Studies][8]._
+
+## Potential use cases
+
+Push notifications are a great tool for attracting new users and making re-engagement campaigns. Here are some examples of common push message use cases.
+
+| Use Case              | Explanation                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     |
+| --------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Initial Onboarding    | Until users take the initial steps towards using your app (such as registering an account), their value is severely limited. Use push notifications to urge users to complete these steps so they can begin using your app in full.                                                                                                                                                                                                                                                                                                                             |
+| First Purchases       | After users are comfortable using your app, you can use push notifications to help convert them into in-app purchasers.                                                                                                                                                                                                                                                                                                                                                                                                                                         |
+| New Features          | Push notifications can be effective in notifying disengaged users about new features that might attract them back to your app.                                                                                                                                                                                                                                                                                                                                                                                                                                  |
+| Time Sensitive Offers | If you have a clock ticking on an offer, sometimes push is a great way to let your users know about it before it expires. These messages generally carry a high sense of urgency and are optimal for reminding recently-lapsed users about your app.<br><br> For example, suppose your app is a game and you offer your users an in-game currency bonus if they maintain a streak of playing the game daily. Alerting a user that that streak is in danger of being broken could be a reasonable push if they've exceeded a certain number of days. |
+{: .reset-td-br-1 .reset-td-br-2}
+
+For more information on re-engaging lapsed users, see our [Quick Wins][23] page on the topic.
+
+## Prerequisites to use push
+
+Before you can create and send any push messages using Braze, you need to work with your developers to integrate push into your website or app. For detailed steps, refer to our integration guides for each platform:
+
+- [iOS]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/push_notifications/integration/)
+- [Android]({{site.baseurl}}/developer_guide/platform_integration_guides/android/push_notifications/android/integration/standard_integration/)
+- [Web]({{site.baseurl}}/developer_guide/platform_integration_guides/web/push_notifications/integration/)
+
+## Push message regulations
+
+Because push messages are an intrusive type of messaging that goes directly to your customer's phone or browser, there are guidelines for sending push messages via apps and sites.
+
+### Mobile push regulations for apps
+
+{% alert important %}
+Your push messages must fall within the guidelines of the Apple App Store and Google's Play Store policies, specifically regarding using push messages as advertisements, spam, promotions, and more.
 {% endalert %}
 
-{% include video.html id="4FUPxkIq2xc" align="right" %}
+| Apple App Store Policies                                                                                                                                                                                                                                                                                                                                                   |
+| -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| [4.5.4][7] Push Notifications must not be required for the app to function, and should not be used for advertising, promotions, or direct marketing purposes or to send sensitive personal or confidential information.                                                                                                                                                    |
+| [3.2.2][9] (i) Creating an interface for displaying third-party apps, extensions, or plug-ins similar to the App Store or as a general-interest collection. (ii) Monetizing built-in capabilities provided by the hardware or operating system, such as Push Notifications, the camera, or the gyroscope; or Apple services, such as Apple Music access or iCloud storage. |
+{: .reset-td-br-1 .reset-td-br-2}
 
-With Content Cards, you can send a highly targeted, dynamic stream of rich content to your customers right within the apps they love without interrupting their experience. In addition, Content Cards support more personalized features, including card pinning, card dismissal, API-based delivery, custom card expiration times, card analytics, and easy coordination with push notifications.
+| Google Play Store Policy                                                                                                                                                                                                                                                                                                                                                   |
+| -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| [Unauthorized Use or Imitation of System Functionality][10] We don't allow apps or ads that mimic or interfere with system functionality, such as notifications or warnings. System-level notifications may only be used for an app’s integral features, such as an airline app that notifies users of special deals, or a game that notifies users of in-game promotions. |
+{: .reset-td-br-1}
 
-Content Cards are not available out-of-the-box and must be purchased. To get started with Content Cards, reach out to your Customer Success Manager or our support team for more information.
+## Image and text specifications
 
-## When to use Content Cards
+For best results, refer to the following image size and message length guidelines when crafting your push messages. There may be some variance depending on the presence of an image, the notification state (iOS) and display setting of the user’s device, as well as the size of the device. When in doubt, keep your copy short and sweet.
 
-Content Cards typically sit in a feed of sorts (but not necessarily), and help you take advantage of the visual space by incorporating images and graphics that stand out. You can personalize the cards based on user actions, onboard your customers with a checklist, and much more!
+### Native mobile push notifications
 
-### Advantages of using Content Cards
+{% tabs local %}
+{% tab Images %}
 
-Wondering about the benefits of using Content Cards vs. having your tech team build content into your app? Here are some advantages of using Content Cards:
+| **Image Type**                  | **Recommended Image Size** | **Max Image Size** | **File Types** |
+| ------------------------------- | -------------------------- | ------------------ | -------------- |
+| (iOS) 2:1 *Recommended*         | 500KB                      | 5MB                | PNG, JPG, GIF  |
+| (Android) Push Icon             | 500KB                      | 5MB                | PNG, JPG       |
+| (Android) Expanded Notification | 500KB                      | 5MB                | PNG, JPG       |
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
 
-- **Easier segmentation and personalization:** Your user data lives in Braze, making it easy to define your audience and personalize your messages with Content Cards.
-- **Centralized reporting:** Content Card analytics are tracked in Braze, so you have insight into all of your campaigns in one centralized location.
-- **Cohesive customer journeys:** You can combine Content Cards with other channels in Braze to create consistent customer experiences. A popular use case is sending a push notification, then saving that notification as a Content Card in your app for anyone who didn't engage with the push. If the content is built directly into your app by your tech team, then it's siloed from the rest of your messaging.
-- **More control over the messaging experience:** While you'll still need your tech team to help with the initial setup of Content Cards, after that, you'll be able to control the message, recipients, timing, and more straight from your Braze dashboard.
+{% endtab %}
+{% tab Text %}
 
-{% alert warning %}
-Content Cards do not offer control group support out-of-the-box. If you wish to leverage control groups, a custom feed must be built including custom cards and custom implementation tracking. For more details, refer to [Content Card reporting]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards/reporting/).
-{% endalert %}
+|                               | Message Type   | Recommended Message Length (Text only) | Recommended Message Length (Rich) |
+| ----------------------------- | -------------- | -------------------------------------- | --------------------------------- |
+| (iOS) Lock Screen             | 160 characters | 130 characters                         |                                   |
+| (iOS) Notification Center     | 160 characters | 130 characters                         |                                   |
+| (iOS) Banner Alert            | 80 characters  | 65 characters                          |                                   |
+| (Android) Lock Screen         | 49 characters  | N/A                                    |                                   |
+| (Android) Notification Drawer | 597 characters | N/A                                    |                                   |
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 }
 
-### Great use cases
+Wondering how many characters you can use in an iOS push notification without it being truncated? Check out our [iOS character count guidelines]({{site.baseurl}}/user_guide/message_building_by_channel/push/ios/rich_notifications/#character-count).
 
-- Showcase new content.
-- Coordinate with push messages to illustrate a persistent record of promotions.
-- Give customers without push enabled access to promotions.
-- Trigger order confirmations or other personalized communication with your customer.
-- Develop and deliver and an onboarding schedule.
+{% endtab %}
+{% tab Payload Size %}
 
-## Content Cards and feed
+| **Platform**  | **Size** |
+| ------------- | -------- |
+| pre iOS 8     | 0.256 KB |
+| post iOS 8    | 2 KB     |
+| Android (FCM) | 4 KB     |
+{: .reset-td-br-1 .reset-td-br-2}
 
-This is what it looks like for your users to open a standard Content Card feed. As you can see, three standard types of cards can sit in the feed—a Banner Card, a Captioned Content Card, and a Classic Content Card.
+{% endtab %}
+{% endtabs %}
 
-![Content Cards Feed]({% image_buster /assets/img/cc-feed.png %}){: height="50%" width="50%"}
+### Web push notifications
 
-{% alert note %}
-Content Cards have a maximum size limit of 2 KB for content you enter in the Braze dashboard. This includes message text, image URLs, links, and key-value pairs. Exceeding that amount will prevent the card from sending.
-{% endalert %}
+{% tabs local %}
+{% tab Images %}
+
+| **Browser** | **Recommended Icon Size** |
+| ----------- | ------------------------- |
+|             |                           |
+ Chrome | 192 x 192 ≥ Firefox | 192 x 192 ≥ Safari | Icons not configurable on a per-campaign basis Opera | 192x192 ≥
+{: .reset-td-br-1 .reset-td-br-2}
+
+| **Browser** | **Platform** | **Large Image Size** |
+| ----------- | ------------ | -------------------- |
+|             |              |                      |
+ Chrome | macOS | N/A Chrome | Android | 2 : 1 aspect ratio Chrome | Windows | 360 ≥ x 240 Firefox | macOS| N/A Safari | macOS | N/A Opera | macOS | N/A
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
+
+{% endtab %}
+{% tab Text %}
+
+| **Browser** | **Platform** | **Maximum Title Length** | **Maximum Message Body Length** |
+| ----------- | ------------ | ------------------------ | ------------------------------- |
+|             |              |                          |                                 |
+ Chrome | macOS | 35 | 50 Safari | macOS | 38 | 84 Firefox | macOS | 38 | 42 Opera | macOS | 38 | 42
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
+
+{% endtab %}
+{% endtabs %}
+[1]: {% image_buster /assets/img/red-dress.gif %} [2]: {% image_buster /assets/img/ios_push.png %}
+
+[8]: https://www.braze.com/customers
+[7]: https://developer.apple.com/app-store/review/guidelines/#apple-sites-and-services
+[9]: https://developer.apple.com/app-store/review/guidelines/#unacceptable
+[10]: https://developers.google.com/android/play-protect/mobile-unwanted-software#muws-categories
+[23]: {{site.baseurl}}/user_guide/engagement_tools/campaigns/ideas_and_strategies/capturing_lapsing_users/#capturing-lapsing-users
