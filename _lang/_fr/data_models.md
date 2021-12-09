@@ -1,97 +1,112 @@
 ---
 nav_title: Integration
-article_title: Content Card Integration for Android/FireOS
-page_order: 1
-platform:
-  - Android
-  - FireOS
-description: "This article covers the Content Card integration and the different data models and card-specific properties available for your Android application."
-channel:
-  - content cards
+article_title: Content Card Integration for Web
+page_order: 0.2
+platform: Web
+channel: content cards
+page_type: reference
+description: "This article covers the content card integration for Web, including contend card types and how to request the number of unread Content Cards."
 ---
 
-# Content Cards integration
+# Content Card integration
 
-In Android, the Content Cards feed is implemented as a [Fragment][2] that are available in the Braze Android UI project. View [Google's documentation on Fragments][3] for information on how to add a Fragment to an Activity.
+The Braze Web SDK includes a Content Cards Feed UI to speed up your integration efforts. If you would prefer to build your own UI instead, see our [Customization Guide](/docs/developer_guide/platform_integration_guides/web/content_cards/customization/).
 
-The [`ContentCardsFragment`][4] class will automatically refresh and display the contents of the Content Cards and log usage analytics. The cards that can appear in a user's ContentCards are created on the Braze dashboard.
+## Standard feed UI
 
-## Content Cards data model
-The Content Cards data model is available in the Android SDK.
+To use the included Content Cards UI, you'll need to specify where on your website to show the feed.
 
-## Card types {#card-types-for-android}
-Braze has 3 unique Content Cards card types that share a base model. Each card type also has additional card-specific properties which are listed below.
+In this example, we have a `<div id="feed"></div>` in which we want to place the Content Cards feed.
 
-### Base card {#base-card-for-android}
+We'll use three buttons to hide, show, or toggle (hide or show based on its current state) the feed.
 
-The [Base Card][29] model provides foundational behavior for all cards.
+```html
 
-| Property                | Description                                                                                                       |
-| ----------------------- | ----------------------------------------------------------------------------------------------------------------- |
-| `getId()`               | Returns the card’s ID set by Braze.                                                                               |
-| `getViewed()`           | Returns a boolean reflects if the card is read or unread by the user.                                             |
-| `getExtras()`           | Returns a map of key-value extras for this card.                                                                  |
-| `getCreated()`          | Returns the unix timestamp of the card’s creation time from Braze.                                                |
-| `getIsPinned`           | Returns a boolean that reflects whether the card is pinned.                                                       |
-| `getOpenUriInWebView()` | Returns a boolean that reflects whether Uris for this card should be opened <br> in Braze's WebView or not. |
-| `getExpiredAt()`        | Gets the expiration date of the card.                                                                             |
-| `getIsRemoved()`        | Returns a boolean that reflects whether the end user has dismissed this card.                                     |
-| `getIsDismissible()`    | Returns a boolean that reflects whether the card is pinned.                                                       |
+<button id="toggle" type="button">Toggle Cards Feed</button>
+<button id="hide" type="button">Hide Cards Feed</button>
+<button id="show" type="button">Show Cards Feed</button>
+
+<nav>
+    <h1>Your Personalized Feed</h1>
+    <div id="feed"></div>
+</nav>
+
+<script>
+   // we'll assume we have window.appboy
+   // you can also use our npm integration instead:
+   // import braze from "@braze/web-sdk";
+
+   const toggle = document.getElementById("toggle");
+   const hide = document.getElementById("hide");
+   const show = document.getElementById("show");
+   const feed = document.getElementById("feed");
+
+   toggle.onclick = function(){
+      appboy.display.toggleContentCards(feed);    
+   }
+
+   hide.onclick = function(){
+      appboy.display.hideContentCards();
+   }
+
+   show.onclick = function(){
+      appboy.display.showContentCards(feed);    
+   }
+</script>
+```
+
+When using the `toggleContentCards(parentNode, filterFunction)` and `showContentCards(parentNode, filterFunction)` methods, if no arguments are provided, all Content Cards will be shown in a fixed-position sidebar on the right-hand side of the page. Otherwise, the feed will be placed in the specified `parentNode` option.
+
+| Parameters       | Description                                                                                                                                                                                                                                               |
+| ---------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `parentNode`     | The HTML node to render the Content Cards into. If the parent node already has a Braze Content Cards view as a direct descendant, the existing Content Cards will be replaced. For example, you should pass in `document.querySelector(".my-container")`. |
+| `filterFunction` | A filter/sort function for cards displayed in this view. Invoked with the array of ab.Card objects, sorted by {pinned, date}. Expected to return an array of sorted ab.Card objects to render for this user. If omitted, all cards will be displayed.     |
 {: .reset-td-br-1 .reset-td-br-2}
 
-### Banner image card {#banner-image-card-for-android}
-[Banner Image Cards][30] are clickable full-sized images. In addition to the base card properties:
+[See the JS docs](https://js.appboycdn.com/web-sdk/latest/doc/module-display.html#.toggleContentCards) for more information on toggling Content Cards.
 
-| Property        | Description                                                                                               |
-| --------------- | --------------------------------------------------------------------------------------------------------- |
-| `getImageUrl()` | Returns the URL of the card’s image.                                                                      |
-| `getUrl()`      | Returns the URL that will be opened after the card is clicked. It can be a http(s) URL or a protocol URL. |
-| `getDomain()`   | Returns link text for the property URL.                                                                   |
-{: .reset-td-br-1 .reset-td-br-2}
+### Requesting unviewed Content Card count
 
-### Captioned image card {#captioned-image-card-for-android}
-[Captioned Image Cards][31] are clickable full-sized images with accompanying descriptive text. In addition to the base card properties:
+You can request the number of unread cards at any time by calling:
 
-| Property           | Description                                                                                               |
-| ------------------ | --------------------------------------------------------------------------------------------------------- |
-| `getImageUrl()`    | Returns the URL of the card’s image.                                                                      |
-| `getTitle()`       | Returns the title text for the card.                                                                      |
-| `getDescription()` | Returns the body text for the card.                                                                       |
-| `getUrl()`         | Returns the URL that will be opened after the card is clicked. It can be a http(s) URL or a protocol URL. |
-| `getDomain()`      | Returns the link text for the property URL.                                                               |
-{: .reset-td-br-1 .reset-td-br-2}
+```javascript
+appboy.getCachedContentCards().getUnviewedCardCount();
+```
 
-### Classic card {#text-Announcement-card-for-android}
-[Text Announcement Cards][32] are clickable cards containing descriptive text. [Short News Cards][41] are clickable cards that include text and images. In addition to the base card properties:
+This is often used to power badges signifying how many unread Content Cards there are. See the [JSDocs](https://js.appboycdn.com/web-sdk/latest/doc/ab.ContentCards.html#toc4) for more information.
 
-| Property           | Description                                                                                               |
-| ------------------ | --------------------------------------------------------------------------------------------------------- |
-| `getTitle()`       | Returns the title text for the card.                                                                      |
-| `getDescription()` | Returns the body text for the card.                                                                       |
-| `getUrl()`         | Returns the URL that will be opened after the card is clicked. It can be a http(s) URL or a protocol URL. |
-| `getDomain()`      | Returns the link text for the property URL.                                                               |
-| `getImageUrl()`    | Returns the URL of the card's image, applies only to the classic Short News Card.                         |
-{: .reset-td-br-1 .reset-td-br-2}
+{% comment %}
+Braze will not refresh Content Cards on new page loads (and so this function will return 0) until you show the feed or call `appboy.requestContentCardsRefresh();`.
+{% endcomment %}
 
-{% alert note %}
-Please note that a classic card without an image included will result in a Text Announcement Card. If an image is included, you will recieve a Short News Card.
-{% endalert %}
+### Control group
 
-## Card analytics methods
-All `Card` data model objects offer the following analytics methods for logging user events to Braze servers.
+If you use Braze's default Content Cards feed, impressions and clicks will be automatically tracked.
 
-| Method             | Description                                                                                                                                |
-| ------------------ | ------------------------------------------------------------------------------------------------------------------------------------------ |
-| `logImpression()`  | Manually log an impression to Braze for a particular card.                                                                                 |
-| `logClick()`       | Manually log a click to Braze for a particular card.                                                                                       |
-| `setIsDismissed()` | Manually log a dismissal to Braze for a particular card. If a card is already marked as dismissed, it cannot be marked as dismissed again. |
-{: .reset-td-br-1 .reset-td-br-2}
+If you use a custom integration for Content Cards, your integration needs to log impressions when a Control Card _would have been seen_.
 
-[29]: https://appboy.github.io/appboy-android-sdk/javadocs/com/appboy/models/cards/Card.html
-[30]: https://appboy.github.io/appboy-android-sdk/javadocs/com/appboy/models/cards/BannerImageCard.html
-[31]: https://appboy.github.io/appboy-android-sdk/javadocs/com/appboy/models/cards/CaptionedImageCard.html
-[32]: https://appboy.github.io/appboy-android-sdk/javadocs/com/appboy/models/cards/TextAnnouncementCard.html
-[41]: https://github.com/Appboy/android-sdk/blob/9a091979b4cbaff7f935c2cae03043a944c3ab53/android-sdk-base/src/main/java/com/appboy/models/cards/ShortNewsCard.java
-[2]: http://developer.android.com/guide/components/fragments.html
-[3]: http://developer.android.com/guide/components/fragments.html#Adding "Android Documentation: Fragments"
-[4]: https://appboy.github.io/appboy-android-sdk/javadocs/com/braze/ui/contentcards/ContentCardsFragment.html
+Here is an example of how to determine if a Content Card is a "Control" card:
+
+```javascript
+function isControlCard(card) {
+    return card instanceof appboy.ControlCard;
+}
+```
+
+### Key-value pairs
+
+`ab.Card` objects may optionally carry key-value pairs as `extras`. These can be used to send data down along with a card for further handling by the application. Call [`card.extras`](https://js.appboycdn.com/web-sdk/latest/doc/ab.Card.html) to access these values.
+
+### Additional card methods
+
+| Method                                       | Description                                                                                                               | Link                                                                                                                                         |
+| -------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------- |
+| `logCardImpressions`                         | Logs an impression event for the given list of cards. This is required when using a customized UI and not the Braze UI.   | [JS Docs for logCardImpressions](https://js.appboycdn.com/web-sdk/latest/doc/modules/appboy.html#logcardimpressions)                         |
+| `logCardClick`                               | Logs an click event for a given card. This is required when using a customized UI and not the Braze UI.                   | [JS Docs for logCardClick](https://js.appboycdn.com/web-sdk/latest/doc/modules/appboy.html#logcardclick)                                     |
+| `showContentCards`                           | Display the user's Content Cards.                                                                                         | [JS Docs for showContentCards](https://js.appboycdn.com/web-sdk/latest/doc/module-display.html#.showContentCards)                            |
+| `hideContentCards`                           | Hide any Braze Content Cards currently showing.                                                                           | [JS Docs for hideContentCards](https://js.appboycdn.com/web-sdk/latest/doc/module-display.html#.hideContentCards)                            |
+| `toggleContentCards`                         | Display the user's Content Cards.                                                                                         | [JS Docs for toggleContentCards](https://js.appboycdn.com/web-sdk/latest/doc/module-display.html#.toggleContentCards)                        |
+| `getCachedContentCards()`                    | Get all currently available cards from the last Content Cards refresh.                                                    | [JS Docs for getCachedContentCards](https://js.appboycdn.com/web-sdk/latest/doc/module-appboy.html#.getCachedContentCards)                   |
+| `subscribeToContentCardsUpdates(subscriber)` | Subscribe to Content Cards updates. <br> The subscriber callback will be called whenever Content Cards are updated. | [JS Docs for subscribeToContentCardsUpdates](https://js.appboycdn.com/web-sdk/latest/doc/module-appboy.html#.subscribeToContentCardsUpdates) |
+| `dismissCard()`                              | Dismiss the card programmatically (available in v2.4.1).                                                                  | [JS Docs for dismissCard](https://js.appboycdn.com/web-sdk/latest/doc/ab.Card.html#dismissCard)                                              |
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
