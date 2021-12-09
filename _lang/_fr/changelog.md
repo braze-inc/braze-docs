@@ -1,12 +1,12 @@
 ---
 nav_title: Changelog
-article_title: Changelog for iOS SDK
+article_title: Changlog for Web SDK
 page_order: 30
 page_type: update
-platform: iOS
-description: "This page lists updates to Braze's iOS SDK changelog."
+platform: Web
+description: "This page lists updates to Braze's Web SDK changelog."
 ---
 
-# iOS SDK changelog
+# Web SDK changelog
 
-{% markdown_embed https://raw.githubusercontent.com/Appboy/appboy-ios-sdk/master/CHANGELOG.md %}
+{% markdown_embed https://raw.githubusercontent.com/Appboy/appboy-web-sdk/master/CHANGELOG.md %}
