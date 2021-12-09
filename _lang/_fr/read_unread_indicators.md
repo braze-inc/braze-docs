@@ -1,40 +1,36 @@
 ---
 nav_title: Read & Unread Indicators
-article_title: Content Card Read & Unread Indicators for iOS
-platform: iOS
-page_order: 3
-description: "This reference article covers iOS read and unread indicators and how to implement them in your Content Cards."
-channel:
-  - content cards
+article_title: Content Card Read & Unread Indicators for Web
+page_order: 2
+platform: Web
+channel: content cards
+page_type: reference
+description: "This reference article covers read and unread indicators in Content Cards."
 ---
 
 # Read and unread indicators
 
-## Disabling the unviewed indicator
+Braze provides indicators on Content Cards as pictured below:
 
- ![Read & Unread Indicator]({% image_buster /assets/img/braze-content-cards-seen-unseen-behavior.png %}){: height="50%" width="50%"}
+| Indicator | Example                     |
+| --------- | --------------------------- |
+| Read      | !\[ReadContentCard\]\[2\]   |
+| Unread    | !\[UnreadContentCard\]\[3\] |
+{: .reset-td-br-1 .reset-td-br-2}
 
-You can choose to disable the blue line at the bottom of the card which indicates whether or not the card has been viewed by setting the `disableUnviewedIndicator` property in `ABKContentCardsTableViewController` to YES.
+## Changing colors
 
-## Customizing the unviewed indicator
+To change the color of the unread indicator of a card, add custom CSS to your webpage. For example, changing it to green with the following CSS:
 
-The Unviewed indicator can be accessed through the `unviewedLineView` property of the `ABKBaseContentCardCell` class. If you are utilizing Braze's `UITableViewCell` implementations, you should access the property before the cell is drawn.
-
-For example, to set the color of the unviewed indicator to red:
-
-{% tabs %}
-{% tab OBJECTIVE-C %}
-
-```objc
-((ABKBaseContentCardCell *)cell).unviewedLineView.backgroundColor = [UIColor redColor];
+```css
+.ab-unread-indicator { background-color: green !important; }
 ```
 
-{% endtab %}
-{% tab swift %}
+## Disabling the indicators
 
-```swift
-(card as? ABKBaseContentCardCell).unviewedLineView.backgroundColor = UIColor.red
+In order to disable this functionality, add the following style to your `css`:
+
+```css
+.ab-unread-indicator { display: none; }
 ```
-
-{% endtab %}
-{% endtabs %}
+[2]:{% image_buster /assets/img_archive/readcontentcard.png %} [3]:{% image_buster /assets/img_archive/unreadcontentcard.png %}
