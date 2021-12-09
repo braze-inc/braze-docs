@@ -1,129 +1,172 @@
 ---
 nav_title: Setting Custom Attributes
-article_title: Setting Custom Attributes for Roku
-platform: Roku
-page_order: 4
-page_type: reference
-description: "This page describes methods to assign custom attributes to users via the Braze SDK."
+article_title: Setting Custom Attributes for Unity
+platform:
+  - Unity
+  - iOS
+  - Android
+page_order: 2
+description: "This reference article covers how to set custom attributes on Unity platform."
 ---
 
 # Setting custom attributes
 
 Braze provides methods for assigning attributes to users. You'll be able to filter and segment your users according to these attributes on the dashboard.
 
-Before implementation, be sure to review examples of the segmentation options afforded by custom events vs. User attributes vs. purchase events in our [Best Practices section][7]. You should also check out our notes on [event naming conventions]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/event_naming_conventions/).
+Before implementation, be sure to review examples of the segmentation options afforded by custom events vs. custom attributes vs. purchase events in our [Best Practices section][1].
 
 ## Assigning default user attributes
 
-User attributes will be assigned to the currently active user. The following default fields may be set:
+To assign user attributes, you need to call the appropriate method on the BrazeBinding object. The following is a list of built-in attributes that can be called using this method.
 
-- `FirstName`
-- `LastName`
-- `Email`
-- `Gender`
-- `DateOfBirth`
-- `Country`
-- `Language`
-- `HomeCity`
-- `PhoneNumber`
-- `AvatarImageUrl`
+### First name
+`AppboyBinding.SetUserFirstName("first name");`
 
-**Implementation Example**<br>This is what setting a first name would look like in code:
+### Last name
+`AppboyBinding.SetUserLastName("last name");`
 
-```javascript
-m.Braze.setFirstName("User's First Name")
-```
+### User email
+`AppboyBinding.SetUserEmail("email@email.com");`
+
+> It's still valuable to set email addresses even if you're not sending emails through Braze. Email makes it easier to search for individual user profiles and troubleshoot issues as they arise.
+
+### Gender
+`AppboyBinding.SetUserGender(Appboy.Models.Gender);`
+
+### Birth date
+`AppboyBinding.SetUserDateOfBirth("year(int)", "month(int)", "day(int)");`
+
+### User country
+`AppboyBinding.SetUserCountry("country name");`
+
+### User home city
+`AppboyBinding.SetUserHomeCity("city name");`
+
+### User email subscription
+`AppboyBinding.SetUserEmailNotificationSubscriptionType(AppboyNotificationSubscriptionType);`
+
+### User push subscription
+`AppboyBinding.SetUserPushNotificationSubscriptionType(AppboyNotificationSubscriptionType);`
+
+### User phone number
+`AppboyBinding.SetUserPhoneNumber("phone number");`
 
 ## Assigning custom user attributes
 
-Beyond the default attributes above, Braze also allows you to define custom attributes using several different data types. For more information regarding the segmentation options, and how each of these attributes will affect you, see our [Best Practices documentation][1] within this section.
+Beyond the attributes above, Braze also allows you to define custom attributes using a number of different data types: For more information regarding the segmentation options each of these attributes will afford you see our ["Best Practices" documentation][1] within this section.
 
-### Settings custom attribute values
+### Setting custom attribute values
+
 {% tabs %}
-{% tab Boolean %}
-```javascript
-m.Braze.setCustomAttribute("boolAttribute", true)
+{% tab Boolean Value %}
+
+```csharp
+AppboyBinding.SetCustomUserAttribute("custom boolean attribute key", 'boolean value');
 ```
+
 {% endtab %}
 {% tab Integer %}
-```javascript
-m.Braze.setCustomAttribute("intAttribute", 5)
+
+```csharp
+// Set Integer Attribute
+AppboyBinding.SetCustomUserAttribute("custom int attribute key", 'integer value');
+// Increment Integer Attribute
+AppboyBinding.IncrementCustomUserAttribute("key", increment(int))
 ```
+
 {% endtab %}
-{% tab Float/Double %}
-```javascript
-m.Braze.setCustomAttribute("floatAttribute", 3.5)
+{% tab Double %}
+
+```csharp
+AppboyBinding.SetCustomUserAttribute("custom double attribute key", 'double value');
 ```
-Braze treats FLOAT and DOUBLE values exactly the same within our database.
+
 {% endtab %}
 {% tab String %}
-```javascript
-m.Braze.setCustomAttribute("stringAttribute", "stringValue")
+
+```csharp
+AppboyBinding.SetCustomUserAttribute("custom string attribute key", "string custom attribute");
 ```
+
 {% endtab %}
 {% tab Date %}
-```javascript
-dateAttribute = CreateObject("roDateTime")
-dateAttribute.fromISO8601String("1992-11-29 00:00:00.000")
-m.Braze.setCustomAttribute("dateAttribute", dateAttribute)
+
+```csharp
+AppboyBinding.SetCustomUserAttributeToNow("custom date attribute key");
 ```
+
+```csharp
+AppboyBinding.SetCustomUserAttributeToSecondsFromEpoch("custom date attribute key", 'integer value');
+```
+
+> Dates passed to Braze must either be in the [ISO 8601][2] format, e.g `2013-07-16T19:20:30+01:00` or in the `yyyy-MM-dd'T'HH:mm:ss:SSSZ` format e.g `2016-12-14T13:32:31.601-0800`
+
 {% endtab %}
 {% tab Array %}
-```javascript
-stringArray = createObject("roArray", 3, true)
-stringArray.Push("string1")
-stringArray.Push("string2")
-stringArray.Push("string3")
-m.Braze.setCustomAttribute("arrayAttribute", stringArray)
+
+```csharp
+// Setting An Array
+AppboyBinding.SetCustomUserAttributeArray("key", array(List), sizeOfTheArray(int))
+// Adding to an Array
+AppboyBinding.AddToCustomUserAttributeArray("key", "Attribute")
+// Removing an item from an Array
+AppboyBinding.RemoveFromCustomUserAttributeArray("key", "Attribute")
 ```
 {% endtab %}
 {% endtabs %}
-
-### Incrementing/decrementing custom attributes
-
-This code is an example of an incrementing custom attribute. You may increment the value of a custom attribute by any positive or negative integer value.
-
-```javascript
-m.Braze.incrementCustomUserAttribute("intAttribute", 3)
-```
-
 ### Unsetting a custom attribute
 
-Custom atributes can also be unset using the following method:
+Custom attributes can also be unset using the following method:
 
-```javascript
-m.Braze.unsetCustomAttribute("attributeName")
+```csharp
+AppboyBinding.UnsetCustomUserAttribute("custom attribute key");
 ```
 
-### Setting a custom attribute via the REST API
+## Setting a custom attribute via the REST API
+You can also use our REST API to set user attributes. To do so refer to the [user API documentation][3].
 
-You can also use our REST API to set user attributes. To do so refer to the [user API documentation][4].
+## Custom attribute value limits
+Custom attribute values have a maximum length of 255 characters; longer values will be truncated.
 
-### Custom attribute value limits
+## Setting up user subscriptions
 
-Custom attribute values have a maximum length of 255 characters.
-
-## Managing email subscription status
-
-You can set the following email subscription statuses for your users programmatically through the SDK.
+To set up a subscription for your users (either email or push), call the functions     
+`AppboyBinding.SetUserEmailNotificationSubscriptionType()` or `AppboyBinding.SetPushNotificationSubscriptionType()`, respectively. Both of these functions take the parameters `Appboy.Models.AppboyNotificationSubscriptionType` as arguments. This type has three different states:
 
 | Subscription Status | Definition                               |
 | ------------------- | ---------------------------------------- |
-| `OptedIn`           | Subscribed, and explicitly opted in      |
-| `Subscribed`        | Subscribed, but not explicitly opted in  |
-| `UnSubscribed`      | Unsubscribed and/or explicitly opted out |
+| `OPTED_IN`          | Subscribed, and explicitly opted in      |
+| `SUBSCRIBED`        | Subscribed, but not explicitly opted in  |
+| `UNSUBSCRIBED`      | Unsubscribed and/or explicitly opted out |
 {: .reset-td-br-1 .reset-td-br-2}
 
-> These types fall under `BrazeConstants().SUBSCRIPTION_STATES`
+> No explicit opt-in is required by Windows to send users push notifications. When a user is registered for push, they are set to `SUBSCRIBED` rather than `OPTED_IN` by default. To learn more, check out our documentation on [implementing subscriptions and explicit opt-ins][10].
 
-The method for setting email subscription status is `setEmailSubscriptionState()`. Users will be set to `Subscribed` automatically upon receipt of a valid email address, however, we suggest that you establish an explicit opt-in process and set this value to `OptedIn` upon receipt of explicit consent from your user. Visit our [Managing User Subscriptions][10] doc for more details.
+- `EmailNotificationSubscriptionType`
+  - Users will be set to `SUBSCRIBED` automatically upon receipt of a valid email address. However, we suggest that you establish an explicit opt-in process and set this value to `OPTED_IN` upon receipt of explicit consent from your user. Visit our [Changing User Subscriptions][8] doc for more details.
+- `PushNotificationSubscriptionType`
+  - Users will be set to `SUBSCRIBED` automatically upon valid push registration. However, we suggest that you establish an explicit opt-in process and set this value to `OPTED_IN` upon receipt of explicit consent from your user. Visit our [Changing User Subscriptions][8] doc for more details.
 
-Example usage:
-```javascript
-m.Braze.setEmailSubscriptionState(BrazeConstants().SUBSCRIPTION_STATES.OPTED_IN)
+> These types fall under `Appboy.Models.AppboyNotificationSubscriptionType`.
+
+## Sample code
+
+### Email subscription:
+
+```csharp
+AppboyBinding.SetUserEmailNotificationSubscriptionType(AppboyNotificationSubscriptionType.OPTED_IN);
 ```
 
-[1]: {{site.baseurl}}/developer_guide/platform_integration_guides/roku/analytics/setting_user_ids/#user-id-integration-best-practices--notes
-[4]: {{site.baseurl}}/developer_guide/rest_api/user_data/#user-data
-[7]: {{site.baseurl}}/developer_guide/platform_wide/analytics_overview/#user-data-collection
+### Push notification subscription:
+
+```csharp
+AppboyBinding.SetUserPushNotificationSubscriptionType(AppboyNotificationSubscriptionType.OPTED_IN);
+```
+
+[1]: {{site.baseurl}}/developer_guide/platform_wide/analytics_overview/#user-data-collection
+
+[1]: {{site.baseurl}}/developer_guide/platform_wide/analytics_overview/#user-data-collection
+[2]: http://en.wikipedia.org/wiki/ISO_8601
+[3]: {{site.baseurl}}/developer_guide/rest_api/user_data/#user-data
+[8]: {{site.baseurl}}/user_guide/administrative/manage_your_users/managing_user_subscriptions/#changing-subscriptions
 [10]: {{site.baseurl}}/user_guide/message_building_by_channel/email/managing_user_subscriptions/#managing-user-subscriptions
