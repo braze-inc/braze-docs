@@ -1,8 +1,22 @@
 ---
 nav_title: Cordova
-config_only: true
-layout: redirect
-redirect_to: /docs/developer_guide/platform_integration_guides/cordova/initial_sdk_setup/android/
-page_order: 3
+page_order: 2
+alias: /partners/cordova/
+description: "This article outlines the integration between Braze and Cordova, which enables developers to create, test, debug, and scale app development."
+page_type: partner
+platform: cordova
 ---
 
+# About Cordova
+
+> Cordova enables developers to create, test, debug, and scale app development.
+
+Empower developers to work smarter, not harder, as they lean on Cordova's app development solutions to utilize Braze across various native mobile and web apps.
+
+# Integration
+
+Please see Braze's Platform Integration Guides to integrate Cordova.
+
+For [iOS]({{site.baseurl}}/developer_guide/platform_integration_guides/cordova/initial_sdk_setup/ios/).
+
+For [Android and FireOS]({{site.baseurl}}/developer_guide/platform_integration_guides/cordova/initial_sdk_setup/android/).
