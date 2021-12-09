@@ -1,19 +1,12 @@
 ---
 nav_title: FAQs
-article_title: Email and Link Template FAQs
-page_order: 5
-page_type: FAQ
-description: "This page covers frequently asked questions about email templates and link templates."
-tool:
-  - Templates
+article_title: Email FAQs
+page_order: 25
+description: "This page provides answers to frequently asked questions about Email messaging."
 channel: email
 ---
 
-# Email and link templates FAQs
-
-> This page provides answers to some frequently asked questions about email templates and link templates.
-
-## Email templates
+# Email FAQs
 
 ### Can I add a "view this email in a browser" link to my emails?
 
@@ -21,33 +14,28 @@ No, Braze does not offer this functionality. This is because an increasing major
 
 **Workaround:** To achieve this same result, you can host the content of your email on an external landing page (such as your website), which can then be linked to from the email campaign you are building using the **Link** tool when editing the email body.
 
-### How do I create a custom unsubscribe link for my email templates?
+### What happens when an email is sent out and multiple profiles have the same email address?
 
-There is a redirection option for the unsubscribe page.
+If multiple users with matching emails are all in-segment to receive a campaign, a random user profile with that email address is chosen at the time of send. This way the email is only sent once and is deduplicated, which ensures that it doesn’t hit the same email multiple times.
 
-You could change the unsubscribe link in the custom footer from {% raw %} `{{${set_user_to_unsubscribed_url}}}` {% endraw %} to a link to your own website with a query parameter that includes the user ID. For example, something like: {% raw %}
-> https://www.braze.com/unsubscribe?user_id={{${user_id}}} 
-> 
-> {% endraw %}
+Note that this deduplication occurs if the users targeted are included in the same dispatch. Therefore triggered campaigns may result in multiple sends to the same email address (even within a time period where users could be excluded due to reeligibility) if differing users with matching emails log the trigger event at different times. Users are not deduped by email on Canvas entry, so it’s possible that users are not deduped beyond the first step of a Canvas if they are progressing at slightly different times due to rate limited entry.
 
-You could then call the [Email Status]({{site.baseurl}}/api/endpoints/email/post_email_subscription_status/) endpoint to update the user's subscription status. For more details, see our documentation on [changing email subscription status]({{site.baseurl}}/user_guide/message_building_by_channel/email/managing_user_subscriptions/#changing-email-subscriptions).
+When a user tied to a given email address opens or clicks an email, all user profiles which share that email address are marked as opening and clicking the campaign. You can identify targeted users from the user profile download within **User Search**. The user who actually received the email will have a timestamp set for the “received_email” field in the associated campaign summary; other users won’t have this field, just “date”.
 
-### What happens if I edit an email template that is currently being used in a campaign?
+**Exception: API-Triggered Campaigns**
 
-Edits made to an existing template won't be reflected in campaigns that were created using previous versions of that template.
+API-triggered campaigns will dedupe or send dupes depending on where the audience is defined. In short, the duplicate emails must be directly targeted as separate `User_ids` within the call in order to receive multiple details. Here are three possible scenarios for API-triggered campaigns:
 
-## Link templates
+- **Scenario 1: Duplicate emails in target segment (DEDUPED):** If the same email appears in multiple user profiles that are grouped together in dashboard’s audience filters for an API-triggered campaign, only one of the profiles will get the email.
+- **Scenario 2: Duplicate emails in different user_ids within recipients object (DUPE SENDS):** If the same email appears within multiple `External_user_IDs` referenced by the “recipients” object, the email will be sent twice.
+- **Scenario 3: Duplicate emails due to duplicate user_ids within recipients object (DEDUPED):** If you try to add the same user profile twice, only one of the profiles will get the email.
 
-### Can I upload multiple link templates to my email?
+### What is a "good" email deliverability rate?
 
-Yes, you can insert as many templates as you would like in your email messages. As a best practice, you should test your emails to ensure that the links are not exceeding 2,000 characters, as most browsers will shorten or cut the links.
+Typically, the “magic number” is around 95% messages delivered, with a bounce rate no higher than 3%. If your deliverability dips below that, there is usually cause for concern.
 
-### How do I preview my links with all of the tags applied?
+However, a rate can be above 95% and still have deliverability issues. For example, if all of your bounces are coming from one particular domain, that is a clear signal that there is a reputation issue with that provider.
 
-Once you have applied the Link Template, you can send yourself a test email to view all the links. Additionally, you can open the links from the preview pane in a new tab to view the links. Lastly, you can hover over the links in the Preview Pane and see them at the bottom of your browser.
+Additionally, messages may be getting delivered and ending up in Spam, indicating potentially serious reputation issues. It’s important to monitor not just the number of messages being delivered, but also open and click rates to determine whether users are actually seeing the messages in their inboxes. Because providers usually don’t report every spam instance, a spam rate of even 1% could be cause for concern and further analysis.
 
-### How does link templating work with liquid?
-
-Link Templates are expanded and added to the each URL prior to any Liquid expansion happening.
-
-As a best practice, if part of your URL is generated using a Liquid snippet, we recommended that the URL base and question mark (?) is hardcoded for Link Templates to be expanded correctly. Refrain from adding the question mark (?) to your Liquid as this will cause Link Templates to first add a question mark (?), and then later the Liquid expansion process will add a second question mark (?).
+Finally, your business and the types of emails you send may also affect deliverability. For example, someone sending mostly transactional emails should expect to see a better rate than someone sending many marketing messages.
