@@ -1,80 +1,37 @@
 ---
 nav_title: August
-page_order: 5
+page_order: 6
 noindex: true
 page_type: update
-description: "This article contains release notes for August 2017."
+description: "This article contains release notes for August 2020."
 ---
 
-# August 2017
+# August
 
-## Update to push action buttons
+## External ID migration endpoints
 
-We added support for [push action buttons][70] to our REST API messaging endpoints.
+Braze has released two new External ID Migration endpoints. These endpoints allow customers to rename or remove their users' Braze external IDs by utilizing the Braze API. These endpoints can be leveraged to migrate users with different naming schemas  while retaining historical data on those users. Check out our docs to learn more about the [`users.external_ids.rename`]({{site.baseurl}}/api/endpoints/user_data/external_id_migration/post_external_ids_rename/) and [`users.external_ids.remove`]({{site.baseurl}}/api/endpoints/user_data/external_id_migration/post_external_ids_remove/) endpoints.
 
-## Update to Liquid templating
+## Predictive Churn
 
-You can now [personalize a message][69] based on:
-- The device it was sent to,
-- Device ID,
-- Carrier,
-- IDFA,
-- Model,
-- OS, and
-- Platform
+Braze's Predictive Suite puts machine learning directly in your hands. Starting with [Predictive Churn]({{site.baseurl}}/user_guide/predictive_suite/), it’s easier than ever to effectively leverage and act on data seamlessly within the Braze platform. With it, you can create a tailored machine learning model to predict the risk of churn for a specific customer base, and then message the users that machine learning determines are at-risk before it’s too late. Previews of this feature will appear in eligible Braze customers' dashboards in early August. Contact your Account Manager for access to the full feature.
 
-## API-triggered Canvas
+## Updates to Currents tracking properties
 
-You can now trigger a [Canvas][68] via API endpoints (send, schedule, update, delete) that match the existing ones for campaigns, allowing you to further automate and optimize your marketing.
+Within certain Currents message engagement events (linked below), the tracking properties `canvas_variation_name` and `canvas_step_name` have been added. For a full list, check out the [Message Engagement Events Glossary]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/event_glossary/message_engagement_events/) and the [Currents Changelog]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/).
 
-## Web push action buttons
+## Amazon Personalize partnership
 
-We’ve added support for push action buttons on the web SDK for Chrome, allowing you increase your engagement by giving your users contextual choices that simplify their busy lives. Learn more about best practices for push notifications [here][66].
+Amazon Personalize uses machine learnings to help create high-quality recommendations for your website and applications. Amazon personalize enables you to improve customer engagement by powering real-time personalized product and content recommendations, and targeted marketing promotions. For more information, check out our [Amazon Personalize]({{site.baseurl}}/partners/data_augmentation/recommendation/amazon_personalize/) documentation.
 
-## New API endpoints
+## Vizbee partnership
 
-We’ve exposed new API endpoints, /email/hard_bounces, that lets you pull hard bounces by email address or in a given date range, and /messages/scheduled_broadcasts, that lets you pull the next time that scheduled campaigns and scheduled-entry Canvases will begin. These new endpoints allow you for further customization and optimization of your campaigns. Learn more about our API endpoints [here][65].
+Vizbee enables all smartphones and smart TVs in your home to work together as one seamless device for great user experiences. Vizbee helps leverage existing mobile app marketing channels like notifications, deep-links, and emails to acquire and engage viewership across all CTV devices (like Roku, FireTV, Samsung TV, LG TV, etc.) For more information, check out our [Vizbee]({{site.baseurl}}/partners/channel_extensions/deep_linking/vizbee_for_tv_deeplinking/) documentation.
 
-## Geofences
+## Bluedot partnership
 
-We’ve added a new feature, geofences, that allows you to trigger messages in real-time when customers enter and exit defined geographical areas, enabling personalized, relevant communication with your customers. learn more about location marketing in [our documentation][64].
+Bluedot is a location platform that provides an accurate and straightforward geofencing for apps. You can use Bluedot’s SDK to message smarter, automate mobile order check-ins, optimize workflows, and create functionless experiences. For more information, check out our [Bluedot]({{site.baseurl}}/partners/data_augmentation/contextual_location/bluedot/#bluedot) documentation.
 
-## Update to email editor
+## Iterate partnership
 
-We’ve added dynamic autocompleting to our new email editor, so you can now autocomplete with your customers’ actual custom attributes and events when using Liquid, making your life easier. Learn more about email best practices in [Academy][63].
-
-## Update to date filters
-
-We’ve added a “never” date filter so you can target customers who have never received or interacted with one of your message, enabling you to have clean customer lists and ensure email deliverability. Learn more about filters [here][62].
-
-## Update to Canvas
-
-We’ve added percentages to the top of each Canvas variant so now, you can see which variants are performing better at a glance. Learn more about Canvas [here][61].
-
-## Canvas with Intelligent Selection
-
-Canvas now has Intelligent Selection, allowing you to test your Canvases with more efficiency. Learn more about our Intelligence Suite [here][60].
-
-## Update to email display names
-
-We’ve added support of special UTF-8 characters in email display names, so you can create even more personalized emails for your customers. Learn more about email best practices [here][67].
-
-## Engagement Reports CSV aggregation
-
-Now, you can receive consolidated data for every campaign and every Canvas in two separate files regardless of how many campaigns or Canvases are selected, allowing you to have all the data you need, when you need it. Learn more about Engagement Reports [here][59].
-
-> Update: As noted in our [September 2017 release notes]({{site.baseurl}}/help/release_notes/2017/august/#september-2017), you can now aggregate data from a specific period of time as well as schedule exports to run on a recurring basis.
-
-
-
-[59]: {{site.baseurl}}/user_guide/data_and_analytics/engagement_reports/#creating-a-new-report
-[61]: {{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/create_a_canvas/
-[62]: {{site.baseurl}}/user_guide/engagement_tools/segments/segmentation_filters/#segmentation-filters
-[63]: {{site.baseurl}}/help/troubleshooting_guide/troubleshooting_guide/#email
-[64]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/advanced_use_cases/locations_and_geofences/
-[65]: {{site.baseurl}}/developer_guide/rest_api/basics/#what-is-a-rest-api
-[66]: {{site.baseurl}}/user_guide/message_building_by_channel/push/best_practices/
-[67]: {{site.baseurl}}/help/troubleshooting_guide/troubleshooting_guide/#email
-[68]: {{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/create_a_canvas/
-[69]: {{site.baseurl}}/user_guide/personalization_and_dynamic_content/personalized_messaging/#personalized-messaging
-[70]: {{site.baseurl}}/user_guide/message_building_by_channel/push/push_action_buttons/#how-to-use-action-buttons
+Iterate makes it easy to learn from your customer, offering smart, user-friendly survey tools that look and feel like your brand. For more information, check out our [Iterate]({{site.baseurl}}/partners/additional_channels/surveys/iterate/) documentation. 
