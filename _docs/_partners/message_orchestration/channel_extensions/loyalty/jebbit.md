@@ -30,7 +30,7 @@ When requesting integrating with Jebbit, communicate if any hard deadlines need 
 
 ### Step 1: Provide API credentials
 
-Provide your API credentials to Jebbit in a .txt file via a Dropbox file request. 
+Provide your API credentials to Jebbit in a text file via a Dropbox file request. 
 Submit your file using the following [Dropbox URL](https://www.dropbox.com/request/RqKQHkJHXw1cFBKbXpZx).
 
 ### Step 2: Confirm test submission
