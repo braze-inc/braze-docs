@@ -3,21 +3,34 @@ nav_title: June
 page_order: 7
 noindex: true
 page_type: update
-description: "This article contains release notes for June 2020."
+description: "This article contains release notes for June 2021."
 ---
 
-# June 2020
+# June 2021
 
-## Retention Reports
+## Conversion correlation
 
-Retention Reports now offer Range Retention - Range Retention measures how many users come back and perform a selected retention event during specific intervals of time. To read more about Range Retention and Retention Reports, visit out [Canvas][1] and [Campaign][2] docs.
+This guide covers the [Conversion Correlation]({{site.baseurl}}/user_guide/engagement_tools/testing/conversion_correlation/) analysis on the **Campaign Analytics** page, which gives you insight into what user attributes and behaviors help or hurt the outcomes you set for campaigns. Covered is an overview of the analysis, what is checked, when it's available, and how Braze checks for significance.
 
-## User track API updates
+## Global Control Group Report
 
-The [users/track][3] endpoint now has a default rate of 50,000 API requests per minute for dashboard companies created after June 2, 2020. Existing companies created before this date and their app groups will still be allowed unlimited API requests to the users/track endpoint.
+We've updated the metrics on the [Global Control Groups]({{site.baseurl}}/user_guide/engagement_tools/testing/global_control_group/) report to better help you analyze the overall impact of your messaging efforts over time. Key changes include adding **Events per User** and **Estimated Group Size**, and adjusting the calculation for **Incremental Uplift** to reflect the difference in total events between your treatment and control groups.
 
-Braze is imposing this default on our most heavily used customer-facing endpoint as a step toward our stability and reliability goals for our API and infrastructure. The limit imposed is very liberal, and will affect very few dashboard companies and their regular operations. In the event that you need an increase to this limit, please reach out to your Customer Success Manager or our support team to request an increase.
+## Reports Overview
 
-[1]: {{site.baseurl}}/user_guide/engagement_tools/canvas/retention_reports/
-[2]: {{site.baseurl}}/user_guide/engagement_tools/campaigns/testing_and_more/retention_reports/
-[3]: {{site.baseurl}}/api/endpoints/user_data/post_user_track/
+Not sure where to start with analyzing your campaigns or Canvases? The [Reports Overview]({{site.baseurl}}/user_guide/data_and_analytics/your_reports/reports_overview/) provides guidance on which reports and analytics you can use to answer common marketing strategy questions.
+
+## New US-05 cluster
+
+Braze supports a new US cluster, US-05. Refer to our list of dashboard and REST [Endpoints]({{site.baseurl}}/api/basics/#endpoints) to see more.
+
+## Braze UI updates
+
+In May 2021, Braze updated the following labels and terms in the Braze dashboard:
+
+- App Usage --> Overview
+- App Settings --> Settings
+- Manage App Group --> Manage Settings
+- Money Spent In-App --> Money Spent
+- App Usage (User Profile) --> Sessions Overview
+- Import a CSV of user information to add and/or update users in this App Group --> Import a CSV of user information to add or update users
