@@ -1,679 +1,674 @@
 ---
 nav_title: Customization
-article_title: Content Card Customization for Android/FireOS
+article_title: In-App Message Customization for Android/FireOS
 page_order: 2
 platform:
   - Android
   - FireOS
-description: "This article covers customization options for your Content Cards in your Android application."
+description: "This reference article covers in-app messaging customization options for your Android application."
 channel:
-  - content cards
+  - in-app messages
 ---
 
-# Customization
+# Customization {#in-app-message-customization}
 
-## Default styling {#default-styling-for-android}
+All of Braze’s in-app message types are highly customizable across messages, images, [Font Awesome][15] icons, click actions, analytics, editable styling, custom display options, and custom delivery options. Multiple options can be configured on a per in-app message basis from [within the dashboard]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/create/). Braze additionally provides multiple levels of advanced customization to satisfy a variety of use cases and needs.
 
-Braze In-App Messages and Content Cards come with a default look and feel that matches the Android standard UI guidelines and provide a seamless experience. You can see these default styles in the [`res/values/styles.xml`][42] file in the Braze SDK distribution.
+## Key-value pair extras
+
+In-app message objects may carry key-value pairs as `extras`. They are specified on the dashboard under "Advanced Settings" when creating an in-app message campaign. These can be used to send data down along with an in-app message for further handling by the application.
+
+Call the following when you get an in-app message object to retrieve its extras:
+
+{% tabs %}
+{% tab JAVA %}
+```java
+Map<String, String> getExtras()
+```
+{% endtab %}
+{% tab KOTLIN %}
+```kotlin
+extras: Map<String, String>
+```
+{% endtab %}
+{% endtabs %}
+
+See the [Javadoc][44] for more information.
+
+## Custom styling
+
+Braze UI elements come with a default look and feel that matches the Android standard UI guidelines and provides a seamless experience. You can see these default styles in the Braze SDK's [`styles.xml`][6] file.
 
 ```xml
-  <!-- Content Cards Example -->
-  <style name="Braze.ContentCards.CaptionedImage.Description">
-    <item name="android:textColor">@color/com_appboy_description</item>
-    <item name="android:textSize">15.0sp</item>
-    <item name="android:includeFontPadding">false</item>
-    <item name="android:paddingBottom">8.0dp</item>
-    <item name="android:layout_marginLeft">10.0dp</item>
-    <item name="android:layout_marginRight">10.0dp</item>
-    <item name="android:layout_marginTop">8.0dp</item>
+  <style name="Braze"/>
+  <style name="Braze.InAppMessage"/>
+  <style name="Braze.InAppMessage.Header">
+    <item name="android:layout_height">wrap_content</item>
     <item name="android:layout_width">match_parent</item>
-    <item name="android:layout_below">@id/com_appboy_content_cards_captioned_image_card_title_container</item>
+    <item name="android:padding">0.0dp</item>
+    <item name="android:background">@android:color/transparent</item>
+    <item name="android:textColor">@color/com_braze_inappmessage_header_text</item>
+    <item name="android:textSize">20.0sp</item>
+    <item name="android:lineSpacingMultiplier">1.3</item>
+    <item name="android:gravity">center</item>
+    <item name="android:textStyle">bold</item>
+    <item name="android:layout_centerHorizontal">true</item>
   </style>
 ```
 
-## Overriding styles {#overriding-styles-for-android}
+If you would prefer, you can override these styles to create a look and feel that better suits your app.
 
-If you would prefer, you can override these styles to create a look and feel that better suits your app. To override a style, copy it in its entirety to the `styles.xml` file in your project and make modifications. The whole style must be copied over to your local `styles.xml` file in order for all of the attributes to be correctly set.
+To override a style, copy it in its entirety to the `styles.xml` file in your project and make modifications. The whole style must be copied over to your local `styles.xml` file for all attributes to be correctly set. Please note that these custom styles are for changes to individual UI elements, not wholesale changes to layouts. Layout-level changes need to be handled with custom views.
 
-### Correct style override {#correct-style-override-for-android}
+### Using custom styling to set a custom font
 
-```xml
-<style name="Braze.ContentCardsDisplay">
-  <item name="android:background">@color/mint</item>
-  <item name="android:cacheColorHint">@color/mint</item>
-  <item name="android:divider">@android:color/transparent</item>
-  <item name="android:dividerHeight">16.0dp</item>
-  <item name="android:paddingLeft">12.5dp</item>
-  <item name="android:paddingRight">5.0dp</item>
-  <item name="android:scrollbarStyle">outsideInset</item>
-</style>
-```
+Braze allows for setting a custom font using the [font family guide][79]. To use it, override the style for message text, headers, and/or button text and use the `fontFamily` attribute to instruct Braze to use your custom font family.
 
-### Incorrect style override {#incorrect-style-override-for-android}
-
-```xml
-<style name="Braze.ContentCardsDisplay">
-  <item name="android:background">@color/mint</item>
-  <item name="android:cacheColorHint">@color/mint</item>
-</style>
-```
-
-## Customizing the default Content Card feed {#content-cards-fragment-customization}
-
-This section covers customization of the [ContentCardsFragment][49] whose source can be found [here][54].
-
-### Customizing the network connection error message
-
-If the [ContentCardsFragment][49] determines that a Content Card refresh has failed, it will display a network connection error message.
-
-A special adapter, the [AppboyEmptyContentCardsAdapter][50] replaces the standard [AppboyCardAdapter][53] to display the error message. To set the custom message itself, override the string resource `com_appboy_feed_empty`.
-
-The style used to display this message can be found via [`Appboy.ContentCardsDisplay.Empty`][52] and is reproduced below.
-
-```xml
-<style name="Braze.ContentCardsDisplay.Empty">
-  <item name="android:lineSpacingExtra">1.5dp</item>
-  <item name="android:text">@string/com_appboy_feed_empty</item>
-  <item name="android:textColor">@color/com_appboy_title</item>
-  <item name="android:textSize">18.0sp</item>
-  <item name="android:gravity">center</item>
-  <item name="android:layout_height">match_parent</item>
-  <item name="android:layout_width">match_parent</item>
-</style>
-```
-
-To fully customize the network error behavior, you can extend the [ContentCardsFragment][54] and set the `mShowNetworkUnavailableRunnable` variable to perform some other action.
-
-## Content Cards style elements {#content-cards-style-elements-for-android}
-
-### Custom font {#setting-a-custom-font-for-android}
-
-Braze allows for setting a custom font using the [font family guide][40]. To use it, override a style for cards and use the `fontFamily` attribute to instruct Braze to use your custom font family.
-
-For example, to update the font on all titles for Captioned Image Cards, override the `Appboy.ContentCards.CaptionedImage.Title` style and reference your custom font family. The attribute value should point to a font family in your `res/font` directory.
+For example, to update the font on your in-app message button text, override the `Braze.InAppMessage.Button` style and reference your custom font family. The attribute value should point to a font family in your `res/font` directory.
 
 Here is a truncated example with a custom font family, `my_custom_font_family`, referenced on the last line:
 
 ```xml
-  <style name="Braze.ContentCards.CaptionedImage.Title">
-    <item name="android:layout_width">wrap_content</item>
+  <style name="Braze.InAppMessage.Button">
+    <item name="android:layout_height">wrap_content</item>
     ...
+    <item name="android:paddingBottom">15.0dp</item>
     <item name="android:fontFamily">@font/my_custom_font_family</item>
     <item name="fontFamily">@font/my_custom_font_family</item>
   </style>
 ```
 
-### Custom pinned icon {#setting-a-custom-pinned-icon-for-android}
+Aside from the `Braze.InAppMessage.Button` style for button text, the style for message text is `Braze.InAppMessage.Message` and the style for message headers is `Braze.InAppMessage.Header`. If you want to use your custom font family across all possible in-app message text, you can set your font family on the `Braze.InAppMessage` style, which is the parent style for all in-app messages.
 
-To set a custom pinned icon, override the `Appboy.ContentCards.PinnedIcon` style. Your custom image asset should be declared in the `android:src` element.
+{% alert important %}
+As with other custom styles, the entire style must be copied over to your local `styles.xml` file for all attributes to be correctly set.
+{% endalert %}
 
-### Customizing displayed card order {#customizing-displayed-card-order-for-android}
+## Setting custom listeners
 
-The `ContentCardsFragment` relies on a [`IContentCardsUpdateHandler`][44] to handle any sorting or modifications of Content Cards before they are displayed in the feed. A custom update handler can be set via [`setContentCardUpdateHandler`][45] on your [`ContentCardsFragment`][49].
+Before customizing in-app messages with custom listeners, it's important to understand the [`BrazeInAppMessageManager`][34], which handles the majority of in-app message handling. As described in [Step 1][5], it must be registered for in-app messages to function appropriately.
 
-Filtering out Content Cards before they reach the user's feed is a common use-case and could be achieved by reading the key-value pairs set on the dashboard via [`Card.getExtras()`][36] and performing any logic you'd like in the update handler.
+`BrazeInAppMessageManager` manages in-app message display on Android.  It contains helper class instances that help it manage the lifecycle and display of in-app messages. All of these classes have standard implementations and defining custom classes is completely optional. However, doing so can add another level of control over the display and behavior of in-app messages.  These customizable classes include:
 
-The following is the default `IContentCardsUpdateHandler` and can be used as a starting point for customizations.
+- [`IInAppMessageManagerListener`][21] - Implement to [custom manage in-app message display and behavior](#setting-a-custom-manager-listener).
+- [`IInAppMessageViewFactory`][42] - Implement to [build custom in-app message views](#setting-a-custom-view-factory).
+- [`IInAppMessageAnimationFactory`][20] - Implement to [define custom in-app message animations](#setting-a-custom-animation-factory).
+- [`IHtmlInAppMessageActionListener`][86] - Implement to [custom manage HTML in-app message display and behavior](#setting-a-custom-html-in-app-message-action-listener).
+- [`IInAppMessageViewWrapperFactory`][88] - Implement to [custom manage in-app message view hierarchy interaction](#setting-a-custom-view-wrapper-factory).
+
+### Custom manager listener
+
+The `BrazeInAppMessageManager` automatically handles the display and lifecycle of in-app messages.  If you require more control over the lifecycle of a message, setting a custom manager listener will enable you to receive the in-app message object at various points in the in-app message lifecycle, allowing you to handle its display yourself, perform further processing, react to user behavior, process the object's [Extras][14], and much more.
+
+#### Step 1: Implement an in-app message manager listener
+
+Create a class that implements [`IInAppMessageManagerListener`][21].
+
+The callbacks in your `IInAppMessageManagerListener` will be called at various points in the in-app message lifecycle.
+
+For example, if you set a custom manager listener when an in-app message is received from Braze, the `beforeInAppMessageDisplayed()` method will be called. If your implementation of this method returns [`InAppMessageOperation.DISCARD`][83], that signals to Braze that the in-app message will be handled by the host app and should not be displayed by Braze. If `InAppMessageOperation.DISPLAY_NOW` is returned, Braze will attempt to display the in-app message. This method should be used if you choose to display the in-app message in a customized manner.
+
+`IInAppMessageManagerListener` also includes delegate methods for clicks on the message itself or one of the buttons.  A common use case would be intercepting a message when a button or message is clicked for further processing.
+
+#### Step 2: Hook into in-app message view lifecycle methods (optional)
+
+The [`IInAppMessageManagerListener`][21] interface has in-app message view methods that are called at distinct points in the in-app message view lifecycle. These methods are called in the following order:
+
+- [beforeInAppMessageViewOpened][92] - Called just before the in-app message is added to the Activity's view. The in-app message is not yet visible to the user at this time.
+- [afterInAppMessageViewOpened][93] - Called just after the in-app message is added to the Activity's view. The in-app message is now visible to the user at this time.
+- [beforeInAppMessageViewClosed][94] - Called just before the in-app message is removed from the Activity's view. The in-app message is still visible to the user at this time.
+- [afterInAppMessageViewClosed][95] - Called just after the in-app message is removed from the Activity's view. The in-app message is no longer visible to the user at this time.
+
+For further context, the time between [afterInAppMessageViewOpened][93] and [beforeInAppMessageViewClosed][94] is when the in-app message view is on screen, visible to the user.
+
+{% alert note %}
+  No implementation of these methods is required. They are merely provided to track/inform of the in-app message view lifecycle. It is functionally acceptable to leave these method implementations empty.
+{% endalert %}
+
+#### Step 3: Instruct Braze to use your in-app message manager listener
+
+Once your `IInAppMessageManagerListener` is created, call `BrazeInAppMessageManager.getInstance().setCustomInAppMessageManagerListener()` to instruct `BrazeInAppMessageManager` to use your custom `IInAppMessageManagerListener` instead of the default listener.
+
+We recommend setting your `IInAppMessageManagerListener` in your [`Application.onCreate()`][82] before any other calls to Braze. This will ensure that the custom listener is set before any in-app message is displayed.
+
+##### In-Depth: Altering in-app messages before display
+
+When a new in-app message is received, and there is already an in-app message being displayed, the new message will be put onto the top of the stack and can be displayed at a later time.
+
+However, if there is no in-app message being displayed, the following delegate method in `IInAppMessageManagerListener` will be called:
 
 {% tabs %}
 {% tab JAVA %}
-
 ```java
-public class DefaultContentCardsUpdateHandler implements IContentCardsUpdateHandler {
-
-  // Interface that must be implemented and provided as a public CREATOR
-  // field that generates instances of your Parcelable class from a Parcel.
-  public static final Parcelable.Creator<DefaultContentCardsUpdateHandler> CREATOR = new Parcelable.Creator<DefaultContentCardsUpdateHandler>() {
-    public DefaultContentCardsUpdateHandler createFromParcel(Parcel in) {
-      return new DefaultContentCardsUpdateHandler();
-    }
-
-    public DefaultContentCardsUpdateHandler[] newArray(int size) {
-      return new DefaultContentCardsUpdateHandler[size];
-    }
-  };
-
-  @Override
-  public List<Card> handleCardUpdate(ContentCardsUpdatedEvent event) {
-    List<Card> sortedCards = event.getAllCards();
-    // Sort by pinned, then by the 'updated' timestamp descending
-    // Pinned before non-pinned
-    Collections.sort(sortedCards, new Comparator<Card>() {
-      @Override
-      public int compare(Card cardA, Card cardB) {
-        // A displays above B
-        if (cardA.getIsPinned() && !cardB.getIsPinned()) {
-          return -1;
-        }
-
-        // B displays above A
-        if (!cardA.getIsPinned() && cardB.getIsPinned()) {
-          return 1;
-        }
-
-        // At this point, both A & B are pinned or both A & B are non-pinned
-        // A displays above B since A is newer
-        if (cardA.getUpdated() > cardB.getUpdated()) {
-          return -1;
-        }
-
-        // B displays above A since A is newer
-        if (cardA.getUpdated() < cardB.getUpdated()) {
-          return 1;
-        }
-
-        // At this point, every sortable field matches so keep the natural ordering
-        return 0;
-      }
-    });
-
-    return sortedCards;
-  }
-
-  // Parcelable interface method
-  @Override
-  public int describeContents() {
-    return 0;
-  }
-
-  // Parcelable interface method
-  @Override
-  public void writeToParcel(Parcel dest, int flags) {
-    // No state is kept in this class so the parcel is left unmodified
-  }
+@Override
+public InAppMessageOperation beforeInAppMessageDisplayed(IInAppMessage inAppMessageBase) {
+  return InAppMessageOperation.DISPLAY_NOW;
 }
 ```
-
 {% endtab %}
 {% tab KOTLIN %}
-
 ```kotlin
-class DefaultContentCardsUpdateHandler : IContentCardsUpdateHandler {
-  override fun handleCardUpdate(event: ContentCardsUpdatedEvent): List<Card> {
-    val sortedCards = event.allCards
-    // Sort by pinned, then by the 'updated' timestamp descending
-    // Pinned before non-pinned
-    sortedCards.sortWith(Comparator sort@{ cardA: Card, cardB: Card ->
-      // A displays above B
-      if (cardA.isPinned && !cardB.isPinned) {
-        return@sort -1
-      }
-
-      // B displays above A
-      if (!cardA.isPinned && cardB.isPinned) {
-        return@sort 1
-      }
-
-      // At this point, both A & B are pinned or both A & B are non-pinned
-      // A displays above B since A is newer
-      if (cardA.updated > cardB.updated) {
-        return@sort -1
-      }
-
-      // B displays above A since A is newer
-      if (cardA.updated < cardB.updated) {
-        return@sort 1
-      }
-      0
-    })
-    return sortedCards
-  }
-
-  // Parcelable interface method
-  override fun describeContents(): Int {
-    return 0
-  }
-
-  // Parcelable interface method
-  override fun writeToParcel(dest: Parcel, flags: Int) {
-    // No state is kept in this class so the parcel is left unmodified
-  }
-
-  companion object {
-    // Interface that must be implemented and provided as a public CREATOR
-    // field that generates instances of your Parcelable class from a Parcel.
-    val CREATOR: Parcelable.Creator<DefaultContentCardsUpdateHandler?> = object : Parcelable.Creator<DefaultContentCardsUpdateHandler?> {
-      override fun createFromParcel(`in`: Parcel): DefaultContentCardsUpdateHandler? {
-        return DefaultContentCardsUpdateHandler()
-      }
-
-      override fun newArray(size: Int): Array<DefaultContentCardsUpdateHandler?> {
-        return arrayOfNulls(size)
-      }
-    }
-  }
+override fun beforeInAppMessageDisplayed(inAppMessageBase: IInAppMessage): InAppMessageOperation {
+  return InAppMessageOperation.DISPLAY_NOW
 }
 ```
-
 {% endtab %}
 {% endtabs %}
 
-> This code can also be found here, [DefaultContentCardsUpdateHandler][46].
+The `InAppMessageOperation()` return value can be used to control when the message should be displayed. The suggested usage of this method would be to delay messages in certain parts of the app by returning `DISPLAY_LATER` when in-app messages would be distracting to the user's app experience.
 
-And here's how to use the above class:
+| `InAppMessageOperation` return value | Behavior                                                                                  |
+| ------------------------------------ | ----------------------------------------------------------------------------------------- |
+| `DISPLAY_NOW`                        | The message will be displayed                                                             |
+| `DISPLAY_LATER`                      | The message will be returned to the stack and displayed at the next available opportunity |
+| `DISCARD`                            | The message will be discarded                                                             |
+| `null`                               | The message will be ignored. This method should __NOT__ return `null`                     |
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
+
+See [`InAppMessageOperation.java`][45] for more details.
+
+{% alert tip %}
+If you choose to `DISCARD` the in-app message and replace it with your own in-app message view, you will need to manually log in-app message clicks and impressions.
+{% endalert %}
+
+On Android, this is done by calling `logClick` and `logImpression` on in-app messages, and `logButtonClick` on immersive in-app messages.
+
+{% alert tip %}
+Once an in-app message has been placed on the stack, you can request for it to be retrieved and displayed at any time by calling [`BrazeInAppMessageManager.getInstance().requestDisplayInAppMessage()`][98]. Calling this method requests Braze to display the next available in-app message from the stack.
+{% endalert %}
+
+#### Step 4: Customizing dark theme behavior (optional) {#android-in-app-message-dark-theme-customization}
+
+In the default `IInAppMessageManagerListener` logic, in `beforeInAppMessageDisplayed()`, the system settings are checked and conditionally enable Dark Theme styling on the message with the following code:
 
 {% tabs %}
 {% tab JAVA %}
-
 ```java
-IContentCardsUpdateHandler cardUpdateHandler = new DefaultContentCardsUpdateHandler();
-
-ContentCardsFragment fragment = getMyCustomFragment();
-fragment.setContentCardUpdateHandler(cardUpdateHandler);
+@Override
+public InAppMessageOperation beforeInAppMessageDisplayed(IInAppMessage inAppMessage) {
+  if (inAppMessage instanceof IInAppMessageThemeable && ViewUtils.isDeviceInNightMode(BrazeInAppMessageManager.getInstance().getApplicationContext())) {
+    ((IInAppMessageThemeable) inAppMessage).enableDarkTheme();
+  }
+  return InAppMessageOperation.DISPLAY_NOW;
+}
 ```
-
 {% endtab %}
 {% tab KOTLIN %}
-
 ```kotlin
-val cardUpdateHandler = DefaultContentCardsUpdateHandler()
-
-val fragment = getMyCustomFragment()
-fragment.setContentCardUpdateHandler(cardUpdateHandler)
+override fun beforeInAppMessageDisplayed(inAppMessage: IInAppMessage): InAppMessageOperation {
+  if (inAppMessage is IInAppMessageThemeable && ViewUtils.isDeviceInNightMode(BrazeInAppMessageManager.getInstance().applicationContext!!)) {
+    (inAppMessage as IInAppMessageThemeable).enableDarkTheme()
+  }
+  return InAppMessageOperation.DISPLAY_NOW
+}
 ```
-
 {% endtab %}
 {% endtabs %}
 
-### Customizing card rendering {#customizing-card-rendering-for-android}
+If you would like to use your own conditional logic, then you can call [`enableDarkTheme`][97] at any step in the pre-display process.
 
-Here's information on how to change how any card is rendered in the recyclerView. The `IContentCardsViewBindingHandler` interface defines how all Content Cards get rendered. You can customize this to change anything you want.
+### Custom view factory
+
+Braze's suite of in-app message types is versatile enough to cover the vast majority of custom use cases. However, if you would like to fully define the visual appearance of your in-app messages instead of using a default type, Braze makes this possible by setting a custom view factory.
+
+#### Step 1: Implement an in-app message view factory
+
+Create a class that implements [`IInAppMessageViewFactory`][87].
 
 {% tabs %}
 {% tab JAVA %}
-
 ```java
-public class DefaultContentCardsViewBindingHandler implements IContentCardsViewBindingHandler {
-  // Interface that must be implemented and provided as a public CREATOR
-  // field that generates instances of your Parcelable class from a Parcel.
-  public static final Parcelable.Creator<DefaultContentCardsViewBindingHandler> CREATOR = new Parcelable.Creator<DefaultContentCardsViewBindingHandler>() {
-    public DefaultContentCardsViewBindingHandler createFromParcel(Parcel in) {
-      return new DefaultContentCardsViewBindingHandler();
+public class CustomInAppMessageViewFactory implements IInAppMessageViewFactory {
+  @Override
+  public View createInAppMessageView(Activity activity, IInAppMessage inAppMessage) {
+    // Uses a custom view for slideups, modals, and full in-app messages.
+    // HTML in-app messages and any other types will use the Braze default in-app message view factories
+    switch (inAppMessage.getMessageType()) {
+      case SLIDEUP:
+      case MODAL:
+      case FULL:
+        // Use a custom view of your choosing
+        return createMyCustomInAppMessageView();
+      default:
+        // Use the default in-app message factories
+        final IInAppMessageViewFactory defaultInAppMessageViewFactory = BrazeInAppMessageManager.getInstance().getDefaultInAppMessageViewFactory(inAppMessage);
+        return defaultInAppMessageViewFactory.createInAppMessageView(activity, inAppMessage);
     }
-
-    public DefaultContentCardsViewBindingHandler[] newArray(int size) {
-      return new DefaultContentCardsViewBindingHandler[size];
-    }
-  };
-
-  /**
-   * A cache for the views used in binding the items in the {@link android.support.v7.widget.RecyclerView}.
-   */
-  private final Map<CardType, BaseContentCardView> mContentCardViewCache = new HashMap<CardType, BaseContentCardView>();
-
-  @Override
-  public ContentCardViewHolder onCreateViewHolder(Context context, List<Card> cards, ViewGroup viewGroup, int viewType) {
-    CardType cardType = CardType.fromValue(viewType);
-    return getContentCardsViewFromCache(context, cardType).createViewHolder(viewGroup);
-  }
-
-  @Override
-  public void onBindViewHolder(Context context, List<Card> cards, ContentCardViewHolder viewHolder, int adapterPosition) {
-    Card cardAtPosition = cards.get(adapterPosition);
-    BaseContentCardView contentCardView = getContentCardsViewFromCache(context, cardAtPosition.getCardType());
-    contentCardView.bindViewHolder(viewHolder, cardAtPosition);
-  }
-
-  @Override
-  public int getItemViewType(Context context, List<Card> cards, int adapterPosition) {
-    Card card = cards.get(adapterPosition);
-    return card.getCardType().getValue();
-  }
-
-  /**
-   * Gets a cached instance of a {@link BaseContentCardView} for view creation/binding for a given {@link CardType}.
-   * If the {@link CardType} is not found in the cache, then a view binding implementation for that {@link CardType}
-   * is created and added to the cache.
-   */
-  @VisibleForTesting
-  BaseContentCardView getContentCardsViewFromCache(Context context, CardType cardType) {
-    if (!mContentCardViewCache.containsKey(cardType)) {
-      // Create the view here
-      BaseContentCardView contentCardView;
-      switch (cardType) {
-        case BANNER:
-          contentCardView = new BannerImageContentCardView(context);
-          break;
-        case CAPTIONED_IMAGE:
-          contentCardView = new CaptionedImageContentCardView(context);
-          break;
-        case SHORT_NEWS:
-          contentCardView = new ShortNewsContentCardView(context);
-          break;
-        case TEXT_ANNOUNCEMENT:
-          contentCardView = new TextAnnouncementContentCardView(context);
-          break;
-        default:
-          contentCardView = new DefaultContentCardView(context);
-          break;
-      }
-      mContentCardViewCache.put(cardType, contentCardView);
-    }
-    return mContentCardViewCache.get(cardType);
-  }
-
-  // Parcelable interface method
-  @Override
-  public int describeContents() {
-    return 0;
-  }
-
-  // Parcelable interface method
-  @Override
-  public void writeToParcel(Parcel dest, int flags) {
-    // Retaining views across a transition could lead to a
-    // resource leak so the parcel is left unmodified
   }
 }
 ```
-
 {% endtab %}
 {% tab KOTLIN %}
-
 ```kotlin
-class DefaultContentCardsViewBindingHandler : IContentCardsViewBindingHandler {
-  // Interface that must be implemented and provided as a public CREATOR
-  // field that generates instances of your Parcelable class from a Parcel.
-  val CREATOR: Parcelable.Creator<DefaultContentCardsViewBindingHandler?> = object : Parcelable.Creator<DefaultContentCardsViewBindingHandler?> {
-    override fun createFromParcel(`in`: Parcel): DefaultContentCardsViewBindingHandler? {
-      return DefaultContentCardsViewBindingHandler()
-    }
-
-    override fun newArray(size: Int): Array<DefaultContentCardsViewBindingHandler?> {
-      return arrayOfNulls(size)
-    }
-  }
-
-  /**
-    * A cache for the views used in binding the items in the [RecyclerView].
-    */
-  private val mContentCardViewCache: MutableMap<CardType, BaseContentCardView<*>?> = HashMap()
-
-  override fun onCreateViewHolder(context: Context?, cards: List<Card?>?, viewGroup: ViewGroup?, viewType: Int): ContentCardViewHolder? {
-    val cardType = CardType.fromValue(viewType)
-    return getContentCardsViewFromCache(context, cardType)!!.createViewHolder(viewGroup)
-  }
-
-  override fun onBindViewHolder(context: Context?, cards: List<Card>, viewHolder: ContentCardViewHolder?, adapterPosition: Int) {
-    if (adapterPosition < 0 || adapterPosition >= cards.size) {
-      return
-    }
-    val cardAtPosition = cards[adapterPosition]
-    val contentCardView = getContentCardsViewFromCache(context, cardAtPosition.cardType)
-    if (viewHolder != null) {
-      contentCardView!!.bindViewHolder(viewHolder, cardAtPosition)
-    }
-  }
-
-  override fun getItemViewType(context: Context?, cards: List<Card>, adapterPosition: Int): Int {
-    if (adapterPosition < 0 || adapterPosition >= cards.size) {
-      return -1
-    }
-    val card = cards[adapterPosition]
-    return card.cardType.value
-  }
-
-  /**
-    * Gets a cached instance of a [BaseContentCardView] for view creation/binding for a given [CardType].
-    * If the [CardType] is not found in the cache, then a view binding implementation for that [CardType]
-    * is created and added to the cache.
-    */
-  @VisibleForTesting
-  fun getContentCardsViewFromCache(context: Context?, cardType: CardType): BaseContentCardView<Card>? {
-    if (!mContentCardViewCache.containsKey(cardType)) {
-      // Create the view here
-      val contentCardView: BaseContentCardView<*> = when (cardType) {
-        CardType.BANNER -> BannerImageContentCardView(context)
-        CardType.CAPTIONED_IMAGE -> CaptionedImageContentCardView(context)
-        CardType.SHORT_NEWS -> ShortNewsContentCardView(context)
-        CardType.TEXT_ANNOUNCEMENT -> TextAnnouncementContentCardView(context)
-        else -> DefaultContentCardView(context)
+class CustomInAppMessageViewFactory : IInAppMessageViewFactory {
+  override fun createInAppMessageView(activity: Activity, inAppMessage: IInAppMessage): View {
+    // Uses a custom view for slideups, modals, and full in-app messages.
+    // HTML in-app messages and any other types will use the Braze default in-app message view factories
+    when (inAppMessage.messageType) {
+      MessageType.SLIDEUP, MessageType.MODAL, MessageType.FULL ->
+        // Use a custom view of your choosing
+        return createMyCustomInAppMessageView()
+      else -> {
+        // Use the default in-app message factories
+        val defaultInAppMessageViewFactory = BrazeInAppMessageManager.getInstance().getDefaultInAppMessageViewFactory(inAppMessage)
+        return defaultInAppMessageViewFactory!!.createInAppMessageView(activity, inAppMessage)
       }
-      mContentCardViewCache[cardType] = contentCardView
     }
-    return mContentCardViewCache[cardType] as BaseContentCardView<Card>?
-  }
-
-  // Parcelable interface method
-  override fun describeContents(): Int {
-    return 0
-  }
-
-  // Parcelable interface method
-  override fun writeToParcel(dest: Parcel?, flags: Int) {
-    // Retaining views across a transition could lead to a
-    // resource leak so the parcel is left unmodified
   }
 }
 ```
-
 {% endtab %}
 {% endtabs %}
 
-> This code can also be found here, [DefaultContentCardsViewBindingHandler][56].
+#### Step 2: Instruct Braze to use your in-app message view factory
 
-And here's how to use the above class:
+Once your `IInAppMessageViewFactory` is created, call `BrazeInAppMessageManager.getInstance().setCustomInAppMessageViewFactory()` to instruct `BrazeInAppMessageManager` to use your custom `IInAppMessageViewFactory` instead of the default view factory.
 
-{% tabs %}
-{% tab JAVA %}
+{% alert tip %}
+We recommend setting your `IInAppMessageViewFactory` in your `Application.onCreate()` before any other calls to Braze. This will ensure that the custom view factory is set before any in-app message is displayed.
+{% endalert %}
 
-```java
-IContentCardsViewBindingHandler viewBindingHandler = new DefaultContentCardsViewBindingHandler();
+##### In-depth: Implementing a Braze view interface
 
-ContentCardsFragment fragment = getMyCustomFragment();
-fragment.setContentCardsViewBindingHandler(viewBindingHandler);
-```
+Braze's `slideup` in-app message view implements [`IInAppMessageView`][25].  Braze's `full` and `modal` type message views implement [`IInAppMessageImmersiveView`][24].  Implementing one of these classes will allow Braze to add click listeners to your custom view where appropriate.  All Braze view classes extend Android's [View][18] class.
 
-{% endtab %}
-{% tab KOTLIN %}
+Implementing `IInAppMessageView` allows you to define a certain portion of your custom view as clickable. Implementing [`IInAppMessageImmersiveView`][24] allows you to define message button views and a close button view.
 
-```kotlin
-val viewBindingHandler = DefaultContentCardsViewBindingHandler()
+### Custom animation factory
 
-val fragment = getMyCustomFragment()
-fragment.setContentCardsViewBindingHandler(viewBindingHandler)
-```
+In-app messages have preset animation behavior. `Slideup` type messages slide into the screen; `full` and `modal` messages fade in and out.  If you would like to define custom animation behaviors for your in-app messages, Braze makes this possible by setting a custom animation factory.
 
-{% endtab %}
-{% endtabs %}
+#### Step 1: Implement an in-app message animation factory
 
-There are additional relevant resources on this topic available [here](https://medium.com/google-developers/android-data-binding-recyclerview-db7c40d9f0e4).
-
-### Custom Content Cards click listener
-
-You can handle Content Cards clicks manually by setting a custom click listener. This enables use cases such as selectively using the native web browser to open web links.
-
-#### Step 1: Implement a Content Cards click listener
-
-Create a class that implements [IContentCardsActionListener][43] and register it with `BrazeContentCardsManager`. Implement the `onContentCardClicked()` method, which will be called when the user clicks a content card.
-
-#### Step 2: Instruct Braze to use your Content Card click listener
-
-You can see an example of steps 1 and 2 here:
+Create a class that implements [`IInAppMessageAnimationFactory`][20]
 
 {% tabs %}
 {% tab JAVA %}
-
 ```java
-BrazeContentCardsManager.getInstance().setContentCardsActionListener(new IContentCardsActionListener() {
+public class CustomInAppMessageAnimationFactory implements IInAppMessageAnimationFactory {
+
   @Override
-  public boolean onContentCardClicked(Context context, Card card, IAction cardAction) {
-    return false;
+  public Animation getOpeningAnimation(IInAppMessage inAppMessage) {
+    Animation animation = new AlphaAnimation(0, 1);
+    animation.setInterpolator(new AccelerateInterpolator());
+    animation.setDuration(2000L);
+    return animation;
   }
 
   @Override
-  public void onContentCardDismissed(Context context, Card card) {
+  public Animation getClosingAnimation(IInAppMessage inAppMessage) {
+    Animation animation = new AlphaAnimation(1, 0);
+    animation.setInterpolator(new DecelerateInterpolator());
+    animation.setDuration(2000L);
+    return animation;
+  }
+}
+```
+{% endtab %}
+{% tab KOTLIN %}
+```kotlin
+class CustomInAppMessageAnimationFactory : IInAppMessageAnimationFactory {
+  override fun getOpeningAnimation(inAppMessage: IInAppMessage): Animation {
+    val animation: Animation = AlphaAnimation(0, 1)
+    animation.interpolator = AccelerateInterpolator()
+    animation.duration = 2000L
+    return animation
+  }
 
+  override fun getClosingAnimation(inAppMessage: IInAppMessage): Animation {
+    val animation: Animation = AlphaAnimation(1, 0)
+    animation.interpolator = DecelerateInterpolator()
+    animation.duration = 2000L
+    return animation
+  }
+}
+```
+{% endtab %}
+{% endtabs %}
+
+#### Step 2: Instruct Braze to use your in-app message view factory
+
+Once your `IInAppMessageAnimationFactory` is created, call `BrazeInAppMessageManager.getInstance().setCustomInAppMessageAnimationFactory()` to instruct `BrazeInAppMessageManager` to use your custom `IInAppMessageAnimationFactory` instead of the default animation factory.
+
+We recommend setting your `IInAppMessageAnimationFactory` in your [`Application.onCreate()`][82] before any other calls to Braze. This will ensure that the custom animation factory is set before any in-app message is displayed.
+
+### Custom HTML in-app message action listener
+
+The Braze SDK has a default `DefaultHtmlInAppMessageActionListener` class that is used if no custom listener is defined and takes appropriate action automatically. If you require more control over how a user interacts with different buttons inside a custom HTML in-app message, implement a custom `IHtmlInAppMessageActionListener` class.
+
+#### Step 1: Implement a custom HTML in-app message action listener
+
+Create a class that implements [`IHtmlInAppMessageActionListener`][86].
+
+The callbacks in your `IHtmlInAppMessageActionListener` will be called whenever the user initiates any of the following actions inside the HTML in-app message:
+- Clicks on close button.
+- Clicks on News Feed button.
+- Fires a custom event.
+- Clicks on a URL inside HTML in-app message.
+
+{% tabs %}
+{% tab JAVA %}
+```java
+public class CustomHtmlInAppMessageActionListener implements IHtmlInAppMessageActionListener {
+  private final Context mContext;
+
+  public CustomHtmlInAppMessageActionListener(Context context) {
+    mContext = context;
+  }
+
+  @Override
+  public void onCloseClicked(IInAppMessage inAppMessage, String url, Bundle queryBundle) {
+    Toast.makeText(mContext, "HTML In App Message closed", Toast.LENGTH_LONG).show();
+    BrazeInAppMessageManager.getInstance().hideCurrentlyDisplayingInAppMessage(false);
+  }
+
+  @Override
+  public boolean onCustomEventFired(IInAppMessage inAppMessage, String url, Bundle queryBundle) {
+    Toast.makeText(mContext, "Custom event fired. Ignoring.", Toast.LENGTH_LONG).show();
+    return true;
+  }
+
+  @Override
+  public boolean onNewsfeedClicked(IInAppMessage inAppMessage, String url, Bundle queryBundle) {
+    Toast.makeText(mContext, "Newsfeed button pressed. Ignoring.", Toast.LENGTH_LONG).show();
+    BrazeInAppMessageManager.getInstance().hideCurrentlyDisplayingInAppMessage(false);
+    return true;
+  }
+
+  @Override
+  public boolean onOtherUrlAction(IInAppMessage inAppMessage, String url, Bundle queryBundle) {
+    Toast.makeText(mContext, "Custom url pressed: " + url + " . Ignoring", Toast.LENGTH_LONG).show();
+    BrazeInAppMessageManager.getInstance().hideCurrentlyDisplayingInAppMessage(false);
+    return true;
+  }
+}
+```
+{% endtab %}
+{% tab KOTLIN %}
+```kotlin
+class CustomHtmlInAppMessageActionListener(private val mContext: Context) : IHtmlInAppMessageActionListener {
+
+    override fun onCloseClicked(inAppMessage: IInAppMessage, url: String, queryBundle: Bundle) {
+        Toast.makeText(mContext, "HTML In App Message closed", Toast.LENGTH_LONG).show()
+        BrazeInAppMessageManager.getInstance().hideCurrentlyDisplayingInAppMessage(false)
+    }
+
+    override fun onCustomEventFired(inAppMessage: IInAppMessage, url: String, queryBundle: Bundle): Boolean {
+        Toast.makeText(mContext, "Custom event fired. Ignoring.", Toast.LENGTH_LONG).show()
+        return true
+    }
+
+    override fun onNewsfeedClicked(inAppMessage: IInAppMessage, url: String, queryBundle: Bundle): Boolean {
+        Toast.makeText(mContext, "Newsfeed button pressed. Ignoring.", Toast.LENGTH_LONG).show()
+        BrazeInAppMessageManager.getInstance().hideCurrentlyDisplayingInAppMessage(false)
+        return true
+    }
+
+    override fun onOtherUrlAction(inAppMessage: IInAppMessage, url: String, queryBundle: Bundle): Boolean {
+        Toast.makeText(mContext, "Custom url pressed: $url . Ignoring", Toast.LENGTH_LONG).show()
+        BrazeInAppMessageManager.getInstance().hideCurrentlyDisplayingInAppMessage(false)
+        return true
+    }
+}
+```
+{% endtab %}
+{% endtabs %}
+
+#### Step 2: Instruct Braze to use your HTML in-app message action listener
+
+Once your `IHtmlInAppMessageActionListener` is created, call `BrazeInAppMessageManager.getInstance().setCustomHtmlInAppMessageActionListener()` to instruct `BrazeInAppMessageManager` to use your custom `IHtmlInAppMessageActionListener` instead of the default action listener.
+
+We recommend setting your `IHtmlInAppMessageActionListener` in your [`Application.onCreate()`][82] before any other calls to Braze. This will ensure that the custom action listener is set before any in-app message is displayed.
+
+{% tabs %}
+{% tab JAVA %}
+```java
+BrazeInAppMessageManager.getInstance().setCustomHtmlInAppMessageActionListener(new CustomHtmlInAppMessageActionListener(context));
+```
+{% endtab %}
+{% tab KOTLIN %}
+```kotlin
+BrazeInAppMessageManager.getInstance().setCustomHtmlInAppMessageActionListener(CustomHtmlInAppMessageActionListener(context))
+```
+{% endtab %}
+{% endtabs %}
+
+### Custom view wrapper factory
+
+The `BrazeInAppMessageManager` automatically handles placing the in-app message model into the existing Activity view hierarchy by default using [`DefaultInAppMessageViewWrapper`][89]. If you need to customize how in-app messages are placed into the view hierarchy, you should use a custom [`IInAppMessageViewWrapperFactory`][88].
+
+#### Step 1: Implement an in-app message view wrapper factory
+
+Create a class that implements [`IInAppMessageViewWrapperFactory`][88] and returns an [IInAppMessageViewWrapper][90].
+
+This factory is called immediately after the in-app message view is created. The easiest way to implement a custom [IInAppMessageViewWrapper][90] is just to extend the default [`DefaultInAppMessageViewWrapper`][89].
+
+{% tabs %}
+{% tab JAVA %}
+```java
+public class CustomInAppMessageViewWrapper extends DefaultInAppMessageViewWrapper {
+  public CustomInAppMessageViewWrapper(View inAppMessageView,
+                                       IInAppMessage inAppMessage,
+                                       IInAppMessageViewLifecycleListener inAppMessageViewLifecycleListener,
+                                       BrazeConfigurationProvider brazeConfigurationProvider,
+                                       Animation openingAnimation,
+                                       Animation closingAnimation, View clickableInAppMessageView) {
+    super(inAppMessageView,
+        inAppMessage,
+        inAppMessageViewLifecycleListener,
+        brazeConfigurationProvider,
+        openingAnimation,
+        closingAnimation,
+        clickableInAppMessageView);
+  }
+
+  @Override
+  public void open(@NonNull Activity activity) {
+    super.open(activity);
+    Toast.makeText(activity.getApplicationContext(), "Opened in-app message", Toast.LENGTH_SHORT).show();
+  }
+
+  @Override
+  public void close() {
+    super.close();
+    Toast.makeText(mInAppMessageView.getContext().getApplicationContext(), "Closed in-app message", Toast.LENGTH_SHORT).show();
+  }
+}
+```
+{% endtab %}
+{% tab KOTLIN %}
+```kotlin
+class CustomInAppMessageViewWrapper(inAppMessageView: View,
+                                    inAppMessage: IInAppMessage,
+                                    inAppMessageViewLifecycleListener: IInAppMessageViewLifecycleListener,
+                                    brazeConfigurationProvider: BrazeConfigurationProvider,
+                                    openingAnimation: Animation,
+                                    closingAnimation: Animation, clickableInAppMessageView: View) : 
+    DefaultInAppMessageViewWrapper(inAppMessageView, 
+        inAppMessage, 
+        inAppMessageViewLifecycleListener, 
+        brazeConfigurationProvider, 
+        openingAnimation, 
+        closingAnimation, 
+        clickableInAppMessageView) {
+
+  override fun open(activity: Activity) {
+    super.open(activity)
+    Toast.makeText(activity.applicationContext, "Opened in-app message", Toast.LENGTH_SHORT).show()
+  }
+
+  override fun close() {
+    super.close()
+    Toast.makeText(mInAppMessageView.context.applicationContext, "Closed in-app message", Toast.LENGTH_SHORT).show()
+  }
+}
+```
+{% endtab %}
+{% endtabs %}
+
+#### Step 2: Instruct Braze to use your custom view wrapper factory
+
+Once your [IInAppMessageViewWrapper][90] is created, call [`BrazeInAppMessageManager.getInstance().setCustomInAppMessageViewWrapperFactory()`][91] to instruct `BrazeInAppMessageManager` to use your custom [`IInAppMessageViewWrapperFactory`][88] instead of the default view wrapper factory.
+
+We recommend setting your [`IInAppMessageViewWrapperFactory`][88] in your [`Application.onCreate()`][82] before any other calls to Braze. This will ensure that the custom view wrapper factory is set before any in-app message is displayed.
+
+{% tabs %}
+{% tab JAVA %}
+```java
+BrazeInAppMessageManager.getInstance().setCustomInAppMessageViewWrapperFactory(new CustomInAppMessageViewWrapper());
+```
+{% endtab %}
+{% tab KOTLIN %}
+```kotlin
+BrazeInAppMessageManager.getInstance().setCustomInAppMessageViewWrapperFactory(CustomInAppMessageViewWrapper())
+```
+{% endtab %}
+{% endtabs %}
+
+## Setting fixed orientation
+
+To set a fixed orientation for an in-app message, first [set a custom in-app message manager listener][19]. Then, call `setOrientation()` on the `IInAppMessage` object in the `beforeInAppMessageDisplayed()` delegate method.
+
+{% tabs %}
+{% tab JAVA %}
+```java
+public InAppMessageOperation beforeInAppMessageDisplayed(IInAppMessage inAppMessage) {
+  // Set the orientation to portrait
+  inAppMessage.setOrientation(Orientation.PORTRAIT);
+  return InAppMessageOperation.DISPLAY_NOW;
+}
+```
+{% endtab %}
+{% tab KOTLIN %}
+```kotlin
+override fun beforeInAppMessageDisplayed(inAppMessage: IInAppMessage): InAppMessageOperation {
+  // Set the orientation to portrait
+  inAppMessage.orientation = Orientation.PORTRAIT
+  return InAppMessageOperation.DISPLAY_NOW
+}
+```
+{% endtab %}
+{% endtabs %}
+
+For *tablet* devices, in-app messages will appear in the style of the user's preferred orientation regardless of actual screen orientation.
+
+## Disabling back button dismissal
+
+By default, the hardware back button dismisses Braze In-App Messages. This behavior can be disabled on a per-message basis via [`BrazeInAppMessageManager.setBackButtonDismissesInAppMessageView()`][96].
+
+In the following example, `disable_back_button` is a custom key-value pair set on the In-App Message that signifies whether the message should allow for the back button to dismiss the message.
+
+{% tabs %}
+{% tab JAVA %}
+```java
+BrazeInAppMessageManager.getInstance().setCustomInAppMessageManagerListener(new DefaultInAppMessageManagerListener() {
+  @Override
+  public void beforeInAppMessageViewOpened(View inAppMessageView, IInAppMessage inAppMessage) {
+    super.beforeInAppMessageViewOpened(inAppMessageView, inAppMessage);
+    final Map<String, String> extras = inAppMessage.getExtras();
+    if (extras != null && extras.containsKey("disable_back_button")) {
+      BrazeInAppMessageManager.getInstance().setBackButtonDismissesInAppMessageView(false);
+    }
+  }
+
+  @Override
+  public void afterInAppMessageViewClosed(IInAppMessage inAppMessage) {
+    super.afterInAppMessageViewClosed(inAppMessage);
+    BrazeInAppMessageManager.getInstance().setBackButtonDismissesInAppMessageView(true);
   }
 });
 ```
-
 {% endtab %}
 {% tab KOTLIN %}
-
 ```kotlin
-BrazeContentCardsManager.getInstance().contentCardsActionListener = object : IContentCardsActionListener {
-  override fun onContentCardClicked(context: Context, card: Card, cardAction: IAction): Boolean {
-    return false
-  }
-
-  override fun onContentCardDismissed(context: Context, card: Card) {
-
-  }
-}
-```
-
-{% endtab %}
-{% endtabs %}
-
-### Dark theme customization
-
-By default, Content Cards views will automatically respond to Dark Theme changes on the device with a set of themed colors and layout changes.
-
-To override this behavior, override the `values-night` values in `android-sdk-ui/src/main/res/values-night/colors.xml` and `android-sdk-ui/src/main/res/values-night/dimens.xml`.
-
-### Fully custom Content Card display {#fully-custom-content-card-display-for-android}
-
-If you would like to display the Content Cards in a completely custom manner, it is possible to do so by using your own views populated with data from our models. To obtain Braze’s Content Cards models, you will need to subscribe to content card updates and use the resulting model data to populate your views. You will also need to log analytics on the model objects as users interact with your views.
-
-#### Part 1: Subscribing to Content Card updates
-
-First, declare a private variable in your custom class to hold your subscriber:
-
-{% tabs %}
-{% tab JAVA %}
-
-```java
-// subscriber variable
-private IEventSubscriber<ContentCardsUpdatedEvent> mContentCardsUpdatedSubscriber;
-```
-
-{% endtab %}
-{% tab KOTLIN %}
-
-```kotlin
-private var mContentCardsUpdatedSubscriber: IEventSubscriber<ContentCardsUpdatedEvent>? = null
-```
-
-{% endtab %}
-{% endtabs %}
-
-Next, add the following code to subscribe to Content Card updates from Braze, typically inside of your custom Content Cards activity's `Activity.onCreate()`:
-
-{% tabs %}
-{% tab JAVA %}
-
-```java
-// Remove the previous subscriber before rebuilding a new one with our new activity.
-Braze.getInstance(context).removeSingleSubscription(mContentCardsUpdatedSubscriber, ContentCardsUpdatedEvent.class);
-mContentCardsUpdatedSubscriber = new IEventSubscriber<ContentCardsUpdatedEvent>() {
-    @Override
-    public void trigger(ContentCardsUpdatedEvent event) {
-        // List of all content cards
-        List<Card> allCards = event.getAllCards();
-
-        // Your logic below
+BrazeInAppMessageManager.getInstance().setCustomInAppMessageManagerListener(object : DefaultInAppMessageManagerListener() {
+  override fun beforeInAppMessageViewOpened(inAppMessageView: View, inAppMessage: IInAppMessage) {
+    super.beforeInAppMessageViewOpened(inAppMessageView, inAppMessage)
+    val extras = inAppMessage.extras
+    if (extras != null && extras.containsKey("disable_back_button")) {
+      BrazeInAppMessageManager.getInstance().setBackButtonDismissesInAppMessageView(false)
     }
-};
-Braze.getInstance(context).subscribeToContentCardsUpdates(mContentCardsUpdatedSubscriber);
-Braze.getInstance(context).requestContentCardsRefresh(true);
+  }
+
+  override fun afterInAppMessageViewClosed(inAppMessage: IInAppMessage) {
+    super.afterInAppMessageViewClosed(inAppMessage)
+    BrazeInAppMessageManager.getInstance().setBackButtonDismissesInAppMessageView(true)
+  }
+})
 ```
-
-{% endtab %}
-{% tab KOTLIN %}
-
-```kotlin
-// Remove the previous subscriber before rebuilding a new one with our new activity.
-Braze.getInstance(context).removeSingleSubscription(mContentCardsUpdatedSubscriber, ContentCardsUpdatedEvent::class.java)
-mContentCardsUpdatedSubscriber = IEventSubscriber { event ->
-  // List of all content cards
-  val allCards = event.allCards
-
-  // Your logic below
-}
-Braze.getInstance(context).subscribeToContentCardsUpdates(mContentCardsUpdatedSubscriber)
-Braze.getInstance(context).requestContentCardsRefresh(true)
-```
-
 {% endtab %}
 {% endtabs %}
 
-We also recommend unsubscribing when your custom activity moves out of view. Add the following code to your activity's `onDestroy()` lifecycle method:
+{% alert note %}
+Note that if this functionality is disabled, the host Activity's hardware back button default behavior will be used instead. This may lead to the back button instead of closing the application instead of the displayed in-app message.
+{% endalert %}
 
-{% tabs %}
-{% tab JAVA %}
+## Dismiss modal on outside tap
+
+The default and historical value is `false`, meaning that clicks outside the modal will not close the modal. Setting this value to `true` will result in the modal in-app message being dismissed when the user taps outside of the in-app message. This behvaior can be toggled on by calling:
 
 ```java
-Braze.getInstance(context).removeSingleSubscription(mContentCardsUpdatedSubscriber, ContentCardsUpdatedEvent.class);
+AppboyInAppMessageManager.getInstance().setClickOutsideModalViewDismissInAppMessageView(true)
 ```
 
-{% endtab %}
-{% tab KOTLIN %}
+## GIFs {#gifs-IAMs}
 
-```kotlin
-Braze.getInstance(context).removeSingleSubscription(mContentCardsUpdatedSubscriber, ContentCardsUpdatedEvent::class.java)
+{% include archive/android/gifs.md channel="In-App Messages" %}
+
+## Android dialogs
+
+Braze doesn't support displaying in-app messages in [Android Dialogs][85] at this time.
+
+## Google Play in-app review prompt
+
+Due to the limitations and restrictions set by Google, custom Google Play review prompts are not currently supported by Braze. While some users have been able to integrate these prompts successfully, others have shown low success rates due to [Google Play quotas](https://developer.android.com/guide/playcore/in-app-review#quotas). Please integrate at your own risk. Documentation on Google Play in-app review prompts can be found [here](https://developer.android.com/guide/playcore/in-app-review).
+
+## YouTube in HTML in-app messages
+
+YouTube and other HTML5 content can play in HTML in-app messages. This requires hardware acceleration to be enabled in the Activity where the in-app message is being displayed, please see the [Android developer guide][84] for more details. Hardware acceleration is only available on Android API versions 11 and above.
+
+The following is an example of an embedded YouTube video in an HTML snippet:
+
+```html
+<body>
+    <div class="box">
+        <div class="relativeTopRight">
+            <a href="appboy://close">X</a>
+        </div>
+        <iframe width="60%" height="50%" src="https://www.youtube.com/embed/_x45EB3BWqI">
+        </iframe>
+    </div>
+</body>
 ```
 
-{% endtab %}
-{% endtabs %}
-
-#### Part 2: Logging analytics
-
-When using custom views, you will need to log analytics manually as well, since analytics are only handled automatically when using Braze views.
-
-To log a display of the Content Cards, call [`Appboy.logContentCardsDisplayed()`][41].
-
-To log an impression or click on a Card, call [`Card.logClick()`][7] or [`Card.logImpression()`][8] respectively.
-
-For campaigns using Control Cards for A/B testing, you can use [`Card.isControl()`][55] to determine if a card will be blank, and used only for tracking purposes.
-
-#### Manually dismissing a Content Card
-
-You can manually log or set a Content Card as "dismissed" to Braze [for a particular card with `setIsDismissed`](https://appboy.github.io/appboy-android-sdk/javadocs/com/appboy/models/cards/Card.html#setIsDismissed-boolean-).
-
-If a card is already marked as dismissed, it cannot be marked as dismissed again.
-
-## Disabling swipe to dismiss
-
-Disabling swipe-to-dismiss functionality is done on a per-card basis via the [`card.setIsDismissibleByUser()`][48] method. Cards can be intercepted before display using the [`ContentCardsFragment.setContentCardUpdateHandler()`][45] method.
-
-## Key-value pairs
-
-`Card` objects may optionally carry key-value pairs as `extras`. These can be used to send data down along with a `Card` for further handling by the application.
-
-See the [Javadoc][36] for more information.
-
-{% alert note %}
-Content Cards have a maximum size limit of 2 KB for content you enter in the Braze dashboard. This includes message text, image URLs, links, and key-value pairs. Exceeding that amount will prevent the card from sending.
-{% endalert %}
-
-## GIFs {#gifs-news-content-cards}
-
-{% alert note %}
-This section applies to integrations which use the Braze SDK's default Content Cards Fragment or Views to display Content Cards.
-{% endalert %}
-
-{% include archive/android/gifs.md channel="Content Cards" %}
-
-[7]: https://appboy.github.io/appboy-android-sdk/javadocs/com/appboy/models/cards/Card.html#logClick--
-[8]: https://appboy.github.io/appboy-android-sdk/javadocs/com/appboy/models/cards/Card.html#logImpression--
-[36]: https://appboy.github.io/appboy-android-sdk/javadocs/com/appboy/models/cards/Card.html#getExtras--
-[36]: https://appboy.github.io/appboy-android-sdk/javadocs/com/appboy/models/cards/Card.html#getExtras--
-[40]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/advanced_use_cases/font_customization/#font-customization
-[41]: https://appboy.github.io/appboy-android-sdk/javadocs/com/appboy/Appboy.html#logContentCardsDisplayed--
-[42]: https://github.com/Appboy/appboy-android-sdk/blob/master/android-sdk-ui/src/main/res/values/styles.xml
-[43]: https://appboy.github.io/appboy-android-sdk/javadocs/com/appboy/ui/contentcards/listeners/IContentCardsActionListener.html
-[44]: https://appboy.github.io/appboy-android-sdk/javadocs/com/braze/ui/contentcards/handlers/IContentCardsUpdateHandler.html
-[45]: https://appboy.github.io/appboy-android-sdk/javadocs/com/braze/ui/contentcards/ContentCardsFragment.html#setContentCardUpdateHandler-com.appboy.ui.contentcards.handlers.IContentCardsUpdateHandler-
-[45]: https://appboy.github.io/appboy-android-sdk/javadocs/com/braze/ui/contentcards/ContentCardsFragment.html#setContentCardUpdateHandler-com.appboy.ui.contentcards.handlers.IContentCardsUpdateHandler-
-[46]: https://github.com/Appboy/appboy-android-sdk/blob/v11.0.0/android-sdk-ui/src/main/java/com/appboy/ui/contentcards/handlers/DefaultContentCardsUpdateHandler.java
-[48]: https://appboy.github.io/appboy-android-sdk/javadocs/com/appboy/models/cards/Card.html#setIsDismissibleByUser-boolean-
-[49]: https://appboy.github.io/appboy-android-sdk/javadocs/com/braze/ui/contentcards/ContentCardsFragment.html
-[49]: https://appboy.github.io/appboy-android-sdk/javadocs/com/braze/ui/contentcards/ContentCardsFragment.html
-[50]: https://appboy.github.io/appboy-android-sdk/javadocs/com/appboy/ui/contentcards/AppboyEmptyContentCardsAdapter.html
-[52]: https://github.com/Appboy/appboy-android-sdk/blob/master/android-sdk-ui/src/main/res/values/styles.xml#L552-L560
-[53]: https://appboy.github.io/appboy-android-sdk/javadocs/com/appboy/ui/contentcards/AppboyCardAdapter.html
-[54]: https://github.com/Appboy/appboy-android-sdk/blob/master/android-sdk-ui/src/main/java/com/braze/ui/contentcards/ContentCardsFragment.java
-[54]: https://github.com/Appboy/appboy-android-sdk/blob/master/android-sdk-ui/src/main/java/com/braze/ui/contentcards/ContentCardsFragment.java
-[55]: https://appboy.github.io/appboy-android-sdk/javadocs/com/appboy/models/cards/Card.html#isControl--
-[56]: https://github.com/Appboy/appboy-android-sdk/blob/v11.0.0/android-sdk-ui/src/main/java/com/appboy/ui/contentcards/handlers/DefaultContentCardsViewBindingHandler.java
+[5]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/in-app_messaging/integration/#step-1-braze-in-app-message-manager-registration
+[6]: https://github.com/Appboy/appboy-android-sdk/blob/master/android-sdk-ui/src/main/res/values/styles.xml
+[14]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/news_feed/key-value_pairs/
+[15]: http://fortawesome.github.io/Font-Awesome/
+[18]: http://developer.android.com/reference/android/view/View.html
+[19]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/in-app_messaging/customization/#setting-custom-listeners
+[20]: https://appboy.github.io/appboy-android-sdk/javadocs/com/appboy/ui/inappmessage/IInAppMessageAnimationFactory.html
+[21]: https://appboy.github.io/appboy-android-sdk/javadocs/com/braze/ui/inappmessage/listeners/IInAppMessageManagerListener.html
+[24]: https://appboy.github.io/appboy-android-sdk/javadocs/com/braze/ui/inappmessage/views/IInAppMessageImmersiveView.html
+[25]: https://github.com/Appboy/appboy-android-sdk/blob/master/android-sdk-ui/src/main/java/com/appboy/ui/inappmessage/IInAppMessageView.java
+[34]: https://appboy.github.io/appboy-android-sdk/javadocs/com/braze/ui/inappmessage/BrazeInAppMessageManager.html
+[42]: https://appboy.github.io/appboy-android-sdk/javadocs/com/appboy/ui/inappmessage/IInAppMessageViewFactory.html
+[44]: https://appboy.github.io/appboy-android-sdk/javadocs/com/braze/models/inappmessage/IInAppMessage.html#getExtras--
+[45]: https://appboy.github.io/appboy-android-sdk/javadocs/com/braze/ui/inappmessage/InAppMessageOperation.html
+[79]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/advanced_use_cases/font_customization/#font-customization
+[82]: https://developer.android.com/reference/android/app/Application.html#onCreate()
+[83]: https://appboy.github.io/appboy-android-sdk/javadocs/com/braze/ui/inappmessage/InAppMessageOperation.html#DISCARD
+[84]: https://developer.android.com/guide/topics/graphics/hardware-accel.html#controlling
+[85]: https://developer.android.com/guide/topics/ui/dialogs.html
+[86]: https://appboy.github.io/appboy-android-sdk/javadocs/com/appboy/ui/inappmessage/listeners/IHtmlInAppMessageActionListener.html
+[88]: https://appboy.github.io/appboy-android-sdk/javadocs/com/appboy/ui/inappmessage/IInAppMessageViewWrapperFactory.html
+[89]: https://appboy.github.io/appboy-android-sdk/javadocs/com/braze/ui/inappmessage/DefaultInAppMessageViewWrapper.html
+[90]: https://appboy.github.io/appboy-android-sdk/javadocs/com/appboy/ui/inappmessage/IInAppMessageViewWrapper.html
+[91]: https://appboy.github.io/appboy-android-sdk/javadocs/com/braze/ui/inappmessage/InAppMessageManagerBase.html#setCustomInAppMessageViewFactory-com.braze.ui.inappmessage.IInAppMessageViewFactory-
+[92]: https://appboy.github.io/appboy-android-sdk/javadocs/com/braze/ui/inappmessage/listeners/IInAppMessageManagerListener.html#beforeInAppMessageViewOpened-android.view.View-com.braze.models.inappmessage.IInAppMessage-
+[93]: https://appboy.github.io/appboy-android-sdk/javadocs/com/braze/ui/inappmessage/listeners/IInAppMessageManagerListener.html#afterInAppMessageViewOpened-android.view.View-com.braze.models.inappmessage.IInAppMessage-
+[94]: https://appboy.github.io/appboy-android-sdk/javadocs/com/braze/ui/inappmessage/listeners/IInAppMessageManagerListener.html#beforeInAppMessageViewClosed-android.view.View-com.braze.models.inappmessage.IInAppMessage-
+[95]: https://appboy.github.io/appboy-android-sdk/javadocs/com/braze/ui/inappmessage/listeners/IInAppMessageManagerListener.html#afterInAppMessageViewClosed-com.braze.models.inappmessage.IInAppMessage-
+[96]: https://appboy.github.io/appboy-android-sdk/javadocs/com/braze/ui/inappmessage/InAppMessageManagerBase.html#setBackButtonDismissesInAppMessageView-boolean-
+[97]: https://appboy.github.io/appboy-android-sdk/javadocs/com/braze/models/inappmessage/IInAppMessageThemeable.html#enableDarkTheme--
+[98]: https://appboy.github.io/appboy-android-sdk/javadocs/com/braze/ui/inappmessage/BrazeInAppMessageManager.html#requestDisplayInAppMessage--
