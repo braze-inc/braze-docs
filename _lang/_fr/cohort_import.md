@@ -1,29 +1,126 @@
 ---
-nav_title: Cohort Import
-article_title: Cohort Import Partners
-layout: partner_page
-page_order: 2
-page_type: landing
-search_tag: Partner
-description: "This page lists Braze partners (Alloys) who offer cohort imports to the Braze ."
-partner_api: "https://www.braze.com/api/v1/partners"
-partner_path: "https://www.braze.com/product/alloys/partners/"
-partner_top_header: "Cohort Import"
-valid_partner_list:
-  - 
-    name: Kubit
-    url: /docs/partners/data_and_infrastructure_agility/analytics/kubit/
-  - 
-    name: Mixpanel
-    url: /docs/partners/data_and_infrastructure_agility/analytics/mixpanel_for_currents/
-  - 
-    name: Amplitude
-    url: /docs/partners/data_and_infrastructure_agility/analytics/amplitude_for_currents/
-  - 
-    name: AppsFlyer
-    url: /docs/partners/message_orchestration/attribution/appsflyer/
-  - 
-    name: Tinyclues
-    url: /docs/partners/data_and_infrastructure_agility/cohort_import/tinyclues/
+nav_title: Cohort Import Integration
+alias: /cohort_import/
+hidden: true
 ---
 
+# Partner cohort import integration
+
+> The Partner Cohort Import integration feature allows our partners to integrate with Braze to send over cohorts of users that were generated within the partner’s application.
+
+## Cluster URls
+
+Braze hosts our application on multiple clusters throughout the US and EU. The URL for the import endpoints will be different depending on the cluster the client’s company instance is hosted on:
+
+| INSTANCE | REST ENDPOINT                   |
+| -------- | ------------------------------- |
+| US-01    | `https://rest.iad-01.braze.com` |
+| US-02    | `https://rest.iad-02.braze.com` |
+| US-03    | `https://rest.iad-03.braze.com` |
+| US-04    | `https://rest.iad-04.braze.com` |
+| US-05    | `https://rest.iad-05.braze.com` |
+| US-06    | `https://rest.iad-06.braze.com` |
+| US-08    | `https://rest.iad-08.braze.com` |
+| EU-01    | `https://rest.fra-01.braze.eu`  |
+{: .reset-td-br-1 .reset-td-br-2}
+
+## Endpoint URLs
+
+In addition to the top-level URLs being cluster-specific, each endpoint is also partner-specific. For example, when importing to our US01 cluster, the URL would have the format `https://rest.iad-01.braze.com/partners/[partner_name]/…`, where `[partner_name]` is typically the name of the partner’s business. Specifics for each endpoint are outlined below.
+
+## Authentication
+
+to import cohort data into braze, there are two authentication keys required.
+
+### Partner API key
+
+The Partner API Key identifies the integration partner and authenticates the request as being valid for import. The key should be included in the body of the request in the `partner_api_key` field.
+
+When setting up the integration in the partner’s application, the client should be asked to specify their Braze Cluster so the integration knows which Cluster URL and Partner API Key to use when importing data.
+
+Braze will provide the Partner API Key(s) to the partner prior to the partner beginning integration development. In general, we will provide a single key that is valid for all US clusters, and another key that is valid for our EU cluster.
+
+### Client data import key
+
+The Client Data Import Key identifies the client app group into which the cohort should be imported. The key should be included in the body of the request in the `client_secret` field.
+
+This key is generated in the client’s dashboard in the integrations settings for the partner. When setting up the integration in the partner’s application, the client should be asked to specify their Data Import Key so the integration knows which client and app group to send data to.
+
+## API endpoint specifications
+
+### Cohort name endpoint
+The Cohort Name Endpoint can be used to specify the name of a cohort based on its ID. This endpoint should be called whenever a cohort is initially exported to Braze, or when the name of a cohort already known to Braze is changed.
+
+| Field             | Type   | Required | Notes                                                                                                                                                                                               |
+| ----------------- | ------ | -------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `partner_api_key` | string | yes      | Partner-specific API Key, used in all requests from partner to Braze. This key will be cluster-specific (see above), so the partner will need to know the cluster to which cohorts will be written. |
+| `client_secret`   | string | yes      | Data Import Key for the client whose cohort this belongs to.                                                                                                                                        |
+| `cohort_id`       | string | yes      | Identifier for the cohort. This identifier should be unique for the specified client.                                                                                                               |
+| `name`            | string | yes      | Client-specified name for the cohort                                                                                                                                                                |
+| `created_at`      | string | yes      | Timestamp in ISO-8601 format                                                                                                                                                                        |
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
+
+#### Example request:
+
+`POST: https://rest.iad-01.braze.com/partners/[partner_name]/cohorts`
+```
+{
+    “partner_api_key” : “123456-1234-1234-12345678”,
+    “client_secret” : “234567-2345-2345-23456789”,
+    “cohort_id” : “[some unique identifier generated by the partner]”,
+    “name” : “Name of the cohort that will appear in the Braze Dashboard”,
+    “created_at” : “2021-01-21T19:20:30+05:00”
+}
+```
+
+### User cohort endpoint
+
+The User Cohort Endpoint allows for specifying which users have been added to or removed from a particular cohort. This endpoint should be called when a cohort is refreshed. Only users who have newly entered the cohort or who have left the cohort since the last refresh should be sent to Braze.
+
+| Field             | Type             | Required | Notes                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          |
+| ----------------- | ---------------- | -------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| `partner_api_key` | string           | yes      | Partner-specific API Key, used in all requests from partner to Braze. This key will be cluster-specific (see above), so the integration will need to know the cluster to which cohorts will be written.                                                                                                                                                                                                                                                                                                                                                                        |
+| `client_secret`   | string           | yes      | Data Import Key for the client whose cohort this belongs to.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   |
+| `cohort_id`       | string           | yes      | Identifier for the cohort. The identifier should be unique for the specified client..                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          |
+| `cohort_changes`  | array of objects | yes      | Objects can have two fields. One, “user_ids”, is required and is an array of strings. Each element is an ID for a user whose status in the cohort has changed. The second field, “should_remove”, is an optional boolean indicating whether the users in this object should be removed from the cohort instead of added. The default is false. At first, we will ignore any IDs that do not match the External User ID for a user, which means anonymous users cannot be added to or removed from a cohort. Max combined length of the user IDs in a single request is 1000. |
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
+
+#### Example request:
+
+`POST: https://rest.iad-01.braze.com/partners/[partner_name]/cohorts/users`
+```
+{
+    “partner_api_key” : “123456-1234-1234-12345678”,
+    “client_secret” : “234567-2345-2345-23456789”,
+    “cohort_id” : “[some unique identifier generated by the partner]”,
+    "cohort_changes" : "[
+       {"user_ids": ["test_user_1", "test_user_2"]}
+    ]"
+}
+```
+
+## Rate limiting
+
+Other than the maximum of 1000 user IDs per request in the User Cohort Endpoint, these endpoints are not specifically rate limited.
+
+## Cohort filter
+
+Braze will add a filter that allows a dashboard user to include or exclude users from a targeted audience if they are in a partner cohort. The filter will provide a dropdown list of the names of all cohorts known to Braze for that client. This filter will only be visible to clients that partner and Braze have agreed to partner with in this integration.
+
+## Troubleshooting
+
+Refer to the following table for errors codes specific to the Cohort Import endpoints, and how to troubleshoot them.
+
+| Error Code | Description                                                                                                                                      |
+| ---------- | ------------------------------------------------------------------------------------------------------------------------------------------------ |
+| `401`      | Invalid Partner API key                                                                                                                          |
+|            | Invalid client secret                                                                                                                            |
+|            | Partner not enabled for client with client secret: **<client secret>**                                                                           |
+| `400`      | `cohort_id` must be a valid string                                                                                                               |
+|            | `cohort_changes` must be an array of objects each with key `user_ids` and/or `device_ids` mapping to an array of strings, or an `aliases` object |
+|            | Only 1,000 `user_ids`, `device_ids`, and `aliases` are allowed per request                                                                       |
+|            | `name` must be a non-empty string                                                                                                                |
+|            | `created_at` must be a valid time as an [ISO-8601](https://en.wikipedia.org/wiki/ISO_8601) string                                                |
+{: .reset-td-br-1 .reset-td-br-2}
+
+For additional troubleshooting, refer to [Errors & Responses]({{site.baseurl}}/api/errors/), which covers the various errors and server responses that can come up while using the Braze API.
