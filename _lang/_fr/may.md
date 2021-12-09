@@ -3,106 +3,56 @@ nav_title: May
 page_order: 8
 noindex: true
 page_type: update
-description: "This article contains release notes for May 2019."
+description: "This article contains release notes for May 2017."
 ---
 
-# May 2019
+# May 2017
 
-## Content Cards
+## Update to Internal Groups
 
-Content Cards are persistent content that appear within customers’ app and web experiences.
+We’ve added new functionality to Internal Groups for Seed groups, making it easy for you to test your email. Now, you can add a bulk upload of users, send test emails in real-time with personalized user data, and use message templates. Learn more about Internal Groups [here][43].
 
-With Content Cards, you can send a highly targeted, dynamic stream of rich content to your customers right within the apps they love, without interrupting their experience. Or, you can pair Content Cards with other channels, like email or push notifications, to enable cohesive marketing strategies.
+## Update to tags
 
-![Content Cards Feed]({% image_buster /assets/img/cc-feed.png %}){: height="50%" width="50%"}
+You can now nest your Segment Tags to help better organize your dashboard. Learn more about Segment Tags [here][42].
 
-In addition, Content Cards support more personalized features, including card pinning, card dismissal, API-based delivery, custom card expiration times, card analytics.
+## Update to in-app messages configuration
 
-Use it to create notification centers, homepage feeds, and promotion feeds.
+You can now customize the dismissal of in-app messages to a specific duration of time, allowing you to further personalize your messaging to your customers. Learn more about creating in-app messages [here][41].
 
-You will need to update to a supported Braze SDK version:
-- __iOS__: 3.8.0 or above
-- __Android__: 2.6.0 or above
-- __Web__: 2.2.0 or above
+## Update to template galleries
 
-[Learn more about Content Cards here!]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards/overview/)
+We’ve consolidated all templates and image under the tab “Templates & Media” in Braze to streamline your marketing process. Learn more about templates [here][40].
 
-{% alert update %}
-Content Cards for Currents, as well as our API documentation for Content Cards, will be launched later this week. Stay tuned!
-{% endalert %}
+> Update: The Templates & Media page also houses link templates.
 
-## Roku platform addition
+## Push action buttons
 
-Braze has added a new channel to our capabilities! By expanding into new channels, we can enable our customers to enrich their data by understanding viewing behavior or provide meaningful experiences to their consumers across all relevant channels.
+You can now increase your engagement by using push action buttons to give your users contextual choices that simplify their busy lives. Learn more about best practices for push notifications [here][39].
 
-You can now retrieve data from Roku devices for data enrichment and custom event tracking.
+## Update to Liquid personalization
 
-[Check out the documentation here!]({{site.baseurl}}/developer_guide/platform_integration_guides/roku/initial_sdk_setup/)
+We’ve simplified Liquid personalization with a pop up that allows you to easily insert customer data into your messages. Learn more about Liquid personalization [here][38].
 
-## Notification preferences for Canvas & campaign updates
+## Dashboard UI updates
 
-This new notification will alert you via email when a campaign/Canvas is activated, updated, reactivated or deactivated. Activate this in Notification Preferences in your Braze account. [Learn more about this preference here.]({{site.baseurl}}/user_guide/administrative/company_settings/notification_preferences/#notification-preferences)
+Now, you will see only the statistics that are relevant to you with a table at the bottom of your dashboard on campaign targeting and segment details pages, enabling you to better build and track who is receiving your campaigns and how they're doing. Learn more about targeting and engagement reporting [here][37].
 
-## Jampp technology partner documentation
+## New quota alerts for IP warming
 
-Jampp is a performance marketing platform for acquiring and retargeting mobile customers. It combines behavioral data with predictive and programmatic technology to generate revenue for advertisers by showing personal, relevant ads that inspire consumers to purchase for the first time, or more often.
+We now have an alert to let you know when you’ve reached your quota depending on your IP warming schedule, making sure you never go off track. Learn more about IP warming [here][36].
 
-[Braze customers can integrate with Jampp]({{site.baseurl}}/partners/advertising_technologies/retargeting/jampp/) by configuring the Braze webhook channel to stream events into Jampp. As a result, customers have the ability to add richer data sets to their retargeting initiatives with Jampp within the mobile advertising ecosystem.
+## Canvas data in Engagement Reports
 
-## Platform picker for in-app messages
-
-We've made it easier to select where your in-app messages are going and which platforms they're built for with our platform picker, which emphasizes this step in the campaign creation process.
-
-!\[Platform Picker\]\[plat_p\]
-
-## Dispatch ID Currents field for email
-
-{% alert update %}
-Behavior for `dispatch_id` differs between Canvas and campaigns because Braze treats Canvas steps (except for Entry Steps, which can be scheduled) as triggered events, even when they are "scheduled". [Learn more about `dispatch_id` behavior in Canvas and campaigns here]({{site.baseurl}}/help/help_articles/data/dispatch_id/).
-
-_Update noted in August 2019._
-{% endalert %}
-
-In the effort to continue enhancing our Currents capabilities, we're adding `dispatch_id` as a field to Currents Email events across all connector types.
-
-The `dispatch_id` is the unique out-of-the-box ID generated for each transmission – or, dispatch – sent from the Braze platform.
-
-While all customers who are sent a scheduled message get the same `dispatch_id`, customers who receive either action-based or API-triggered messages will get a unique `dispatch_id` per message. The `dispatch_id` field enables you to identify which instance of a recurring campaign is responsible for conversion, thus equipping you with more insights and information on which types of campaigns are helping push the needle on your business goals.
-
-## Only Show Mine - campaign sorting feature
-
-When a user checks the `Only Show Mine` checkbox on the campaign grid, the results will filter down to campaigns show only created by the logged-in user. Additionally, the user can use the search bar by inputting `created_by_me:true`.
-
-Also, the campaign grid sidebar is now resizable!
-
-## Delete users by alias
-
-You can now use the `users/delete` endpoint to [delete users by alias]({{site.baseurl}}/api/endpoints/user_data/#user-delete-request)!
-
-## Unique calculation for email clicks and opens
-
-Unique Clicks and Unique Opens for Email are now captured and displayed on a 7-day time frame per user and increment a count of 1 within that 7 day window, per each `dispatch_id`.
-
-Using `dispatch_id` allows for recurring messages to reflect the true unique open or unique click count of each message. It will be easy for customers to match this data, now that the `dispatch_id` is available in Currents.
-
-Any users also using Mailjet will see a spike in these numbers, since the previous uniqueness timeframe was over 30 days. You should have been made aware of this change three (3) weeks ago.  Sendgrid customers should see no difference.
-
-You can search for these updated terms in our [Report Metrics Glossary]({{site.baseurl }}/user_guide/data_and_analytics/report_metrics/).
-
-{% alert update %}
-Behavior for `dispatch_id` differs between Canvas and campaigns because Braze treats Canvas steps (except for Entry Steps, which can be scheduled) as triggered events, even when they are "scheduled". [Learn more about `dispatch_id` behavior in Canvas and campaigns here]({{site.baseurl}}/help/help_articles/data/dispatch_id/).
-
-_Update noted in August 2019._
-{% endalert %}
+Canvas and campaign data can now be exported together in Engagement Report, streamlining your data analysis. Learn more about Engagement Reports [here][35].
 
 
-## Most engaged channel
-
-{% alert update %}
-As of the [November 2019 product release]({{site.baseurl}}/help/release_notes/2019/november/#intelligence-suite), "Most Engaged Channel" has been renamed to ["Intelligent Channel"]({{site.baseurl}}/user_guide/intelligence/intelligent_channel/).
-{% endalert %}
-
-The Most Engaged Channel filter selects the portion of your audience for whom the selected messaging channel is their “best” channel. In this case, “best” means “has the highest likelihood of engagement, given the user’s history”. You can select Email, Web Push, or Mobile Push (which includes any available mobile OS or device) as a channel.
-
-Check this new filter out in [our Segmentation Filters library]({{site.baseurl }}/user_guide/engagement_tools/segments/segmentation_filters/).
-[plat_p]: {% image_buster /assets/img/iam_platforms.gif %}
+[35]: {{site.baseurl}}/user_guide/data_and_analytics/your_reports/engagement_reports/#engagement-reports
+[36]: {{site.baseurl}}/user_guide/message_building_by_channel/email/best_practices/
+[37]: {{site.baseurl}}/user_guide/data_and_analytics/configuring_reporting/
+[38]: {{site.baseurl}}/user_guide/personalization_and_dynamic_content/personalized_messaging/#adding-personalizable-attributes-objects
+[39]: {{site.baseurl}}/user_guide/message_building_by_channel/push/best_practices/
+[40]: {{site.baseurl}}/user_guide/engagement_tools/templates_and_media/
+[41]: {{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/create/#creating-an-in-app-message
+[42]: {{site.baseurl}}/user_guide/administrative/app_settings/tags/#campaign-segment-and-news-feed-card-tags
+[43]: {{site.baseurl}}/user_guide/administrative/app_settings/developer_console/#content-test-groups
