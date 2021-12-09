@@ -1,29 +1,29 @@
 ---
 nav_title: Read & Unread Indicators
-article_title: Content Card Read & Unread Indicators for Android/FireOS
-page_order: 3
+article_title: News Feed Read & Unread Indicators for Android/FireOS
+page_order: 4
 platform:
   - Android
   - FireOS
-description: "This reference article covers Android read and unread indicators and how to implement them in your Content Cards."
+description: "This reference article covers how to implement read and unread indicators in your News Feed for your Android application."
 channel:
-  - content cards
+  - news feed
 ---
 
-# Read and unread indicators {#read-indicators-for-android}
+# Read and unread indicators
 
-Braze allows you to optionally toggle on an Unread/Read indicator on Content Cards.
+Braze allows you to optionally toggle on an Unread/Read indicator on News Feed cards as pictured below:
 
-!\[Read & Unread Indicators\]\[1\]
+!\[UnreadvsRead\]\[25\]
 
-## Customizing the indicators {#customizing-the-indicators-for-android}
-The color of these indicators can be customized by altering the values in `com_braze_content_cards_unread_bar_color` in your `colors.xml` file.
+## Enabling the indicators
+
+In order to enable this functionality add the following line to your `braze.xml` file:
 
 ```xml
-<?xml version="1.0" encoding="utf-8"?>
-<resources>
-  <!-- The color used to highlight unread Content Cards at their bottom edge -->
-  <color name="com_braze_content_cards_unread_bar_color">#1676d0</color>
-</resources>
+<bool name="com_appboy_newsfeed_unread_visual_indicator_on">true</bool>
 ```
-[1]: {% image_buster /assets/img/braze-content-cards-seen-unseen-behavior.png %}
+
+## Customizing the indicators
+These indicators can be customized by altering the "icon_read" and "icon_unread" drawables.
+[25]: {% image_buster /assets/img_archive/UnreadvsReadNewsFeedCard.png %}
