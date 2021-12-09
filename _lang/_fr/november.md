@@ -3,31 +3,24 @@ nav_title: November
 page_order: 2
 noindex: true
 page_type: update
-description: "This article contains release notes for November 2019."
+description: "This article contains release notes for November 2017."
 ---
 
-# November 2019
+# November 2017
 
-More to come! Check back later this month for more updates!
+## Braze notification preferences
 
-## Intelligence Suite
+You can use the Braze [Notification Preferences Center][77] within your Company Settings page to opt your team’s users into receiving different alerts from Braze via email, such as weekly analytics reports, notifications of when campaigns have sent, and push credential errors. You can also set up a webhook to display the notification in a different channel, [such as Slack][78].
 
-Braze's [Intelligence Suite]({{site.baseurl}}/user_guide/intelligence/) helps you automate decision-making with data-based insights. From delivery time to multivariate testing, brands can use these tools and features to create dynamic, cross-channel experiences that optimize at scale. <br> <br> The Intelligence Suite comprises of three main features: [Intelligent Timing]({{site.baseurl}}/user_guide/intelligence/intelligent_timing/), [Intelligent Channel]({{site.baseurl}}/user_guide/intelligence/intelligent_channel/), and [Intelligent Selection]({{site.baseurl}}/user_guide/intelligence/intelligent_selection/).
+## Updates to Media Library
 
-{% alert note %}
-The "Intelligence Suite" is a revision and grouping of features previously known as "Most Engaged Channel", "Intelligent Timing", and "multivariate and A/B testing".
-{% endalert %}
+You can now upload multiple assets and folders of assets to the [Media Library][79] from your Templates & Media page, as well as perform bulk actions, such as applying tags or deleting multiple assets.
 
-## Dark Mode themes for in-app messages
+## Branching for Canvas first steps
 
-iOS 13 and Android 10 both introduced settings that allowed mobile phones to change their color themes to a "Dark Mode". Aligning with this feature, Braze has introduced [Dark Mode for in-app messages]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/dark-mode/)! This feature allows you to create in-app messages with a "light" and a "dark theme". If a device you send to has "Dark Mode" activated, the message will display your selected Dark Mode Theme.
+You can now create branches on the first step of a variant. This feature will allow you to send multiple messages as the first step of a variant, opening up opportunities to further target your audience.
 
-<img src="{% image_buster /assets/img_archive/iam-dark-mode.gif %}" style="width:100%;max-width:800px;" />
 
-## SMS metrics in Engagement Reports
-
-SMS Metrics are now available in [Engagement Reports]({{site.baseurl}}/user_guide/data_and_analytics/your_reports/engagement_reports/)!
-
-## Delete a Braze user's teams
-
-You can now delete a team from a Braze User's account!
+[77]: {{site.baseurl}}/user_guide/onboarding/platform_administrative_features/#notification-preferences
+[78]: {{site.baseurl}}/user_guide/onboarding/platform_administrative_features/#slack-incoming-webhook-integration
+[79]: {{site.baseurl}}/user_guide/engagement_tools/templates_and_media/media_library/#media-library
