@@ -1,7 +1,7 @@
 ---
+page_order: 4
 nav_title: News Feed
 config_only: true
-noindex: true
-page_order: 5
+layout: blank_config
 ---
 
