@@ -1,250 +1,187 @@
 ---
 nav_title: Setting Custom Attributes
-article_title: Setting Custom Attributes for Android/FireOS
-platform:
-  - Android
-  - FireOS
+article_title: Setting Custom Attributes for iOS
+platform: iOS
 page_order: 3
-description: "This reference article shows how to set custom attributes in your Android application."
+description: "This reference article shows how to set custom attributes in your iOS application."
 ---
 
-# Setting custom attributes for Android/FireOS
+# Setting custom attributes for iOS
 
 Braze provides methods for assigning attributes to users. You'll be able to filter and segment your users according to these attributes on the dashboard.
 
-Before implementation, be sure to review examples of the segmentation options afforded by custom events vs. custom attributes vs purchase events in our [Analytics Overview][7], as well as our notes on [event naming conventions]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/event_naming_conventions/).
+Before implementation, be sure to review examples of the segmentation options afforded by custom events vs. custom attributes vs. purchase events in our [Best Practices section][1], as well as our notes on [event naming conventions]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/event_naming_conventions/).
 
 ## Assigning default user attributes
 
-To assign attributes to your users, call the `getCurrentUser()` method on your Braze instance to get a reference to the current user of your app. Once you have a reference to the current user, you can call methods to set predefined or custom attributes.
+To assign user attributes, you need to set the appropriate field on the shared `ABKUser` object.
 
-Braze provides predefined methods for setting the following user attributes within the [BrazeUser class][2]. See the [Javadocs for method specifications][2]:
-
-- First Name
-- Last Name
-- Country
-- Language
-- Date of Birth
-- Email
-- Avatar Image URLs for Braze User Profiles
-- Gender
-- Home City
-- Phone Number
-- Facebook Data
-- Twitter Data
-
-All string values such as first name, last name, country, and home city are limited to 255 characters. Avatar Image URLs are limited to 1024 characters.
-
-**Implementation Example** This is what setting a first name would look like in code:
+The following is an example of setting the first name attribute:
 
 {% tabs %}
-{% tab JAVA %}
+{% tab OBJECTIVE-C %}
 
-```java
-Braze.getInstance(context).getCurrentUser().setFirstName("first_name");
+```objc
+[Appboy sharedInstance].user.firstName = @"first_name";
 ```
 
 {% endtab %}
-{% tab KOTLIN %}
+{% tab swift %}
 
-```kotlin
-Braze.getInstance(context).currentUser?.setFirstName("first_name")
+```swift
+Appboy.sharedInstance()?.user.firstName = "first_name"
 ```
 
 {% endtab %}
 {% endtabs %}
 
+The following attributes should be set on the `ABKUser` object:
+
+- `firstName`
+- `lastName`
+- `email`
+- `dateOfBirth`
+- `country`
+- `language`
+- `homeCity`
+- `phone`
+- `userID`
+- `avatarImageURL`
+- `twitterAccountIdentifier`
+- `gender`
+
 ## Assigning custom user attributes
 
-In addition to our predefined user attribute methods, Braze also provides custom attributes to track data from your applications. Braze custom attributes can be set with the following data types:
+Beyond the attributes above, Braze also allows you to define custom attributes using a number of different data types: For more information regarding the segmentation options, each of these attributes will afford you, see our ["Best Practices" documentation][1] within this section.
 
-- Strings
-- Arrays
-  - Includes methods to set arrays, add items to existing arrays, and delete items from existing arrays.
-- Integers
-- Booleans
-- Dates
-- Longs
-- Floats
-- Doubles
+### Custom attribute with a string value
 
-Full method specifications for custom attributes can be found here within the [BrazeUser class within the Javadocs][2].
+{% tabs %}
+{% tab OBJECTIVE-C %}
 
-### Setting custom attribute values
-
-{% tabs local %}
-{% tab String %}
-{% subtabs global %}
-{% subtab JAVA %}
-
-```java
-Braze.getInstance(context).getCurrentUser().setCustomUserAttribute("your_attribute_key", "your_attribute_value");
+```objc
+[[Appboy sharedInstance].user setCustomAttributeWithKey:@"your_attribute_key" andStringValue:"your_attribute_value"];
 ```
-
-{% endsubtab %}
-{% subtab KOTLIN %}
-
-```kotlin
-Braze.getInstance(context).currentUser?.setCustomUserAttribute("your_attribute_key", "your_attribute_value")
-```
-
-{% endsubtab %}
-{% endsubtabs %}
-{% endtab %}
-{% tab Integer %}
-{% subtabs global %}
-{% subtab JAVA %}
-
-```java
-Braze.getInstance(context).getCurrentUser().setCustomUserAttribute, "your_attribute_key", YOUR_INT_VALUE);
-// Integer attributes may also be incremented using code like the following:
-Braze.getInstance(context).getCurrentUser().incrementCustomUserAttribute("your_attribute_key", YOUR_INCREMENT_VALUE);
-```
-
-{% endsubtab %}
-{% subtab KOTLIN %}
-
-```kotlin
-Braze.getInstance(context).currentUser?.setCustomUserAttribute, "your_attribute_key", YOUR_INT_VALUE)
-// Integer attributes may also be incremented using code like the following:
-Braze.getInstance(context).currentUser?.incrementCustomUserAttribute("your_attribute_key", YOUR_INCREMENT_VALUE)
-```
-
-{% endsubtab %}
-{% endsubtabs %}
-{% endtab %}
-{% tab Boolean %}
-{% subtabs global %}
-{% subtab JAVA %}
-
-```java
-Braze.getInstance(context).getCurrentUser().setCustomUserAttribute("your_attribute_key", YOUR_BOOLEAN_VALUE);
-```
-
-{% endsubtab %}
-{% subtab KOTLIN %}
-
-```kotlin
-Braze.getInstance(context).currentUser?.setCustomUserAttribute("your_attribute_key", YOUR_BOOLEAN_VALUE)
-```
-
-{% endsubtab %}
-{% endsubtabs %}
-{% endtab %}
-{% tab Long %}
-{% subtabs global %}
-{% subtab JAVA %}
-
-```java
-Braze.getInstance(context).getCurrentUser().setCustomUserAttribute("your_attribute_key", YOUR_LONG_VALUE);
-```
-
-{% endsubtab %}
-{% subtab KOTLIN %}
-
-```kotlin
-Braze.getInstance(context).currentUser?.setCustomUserAttribute("your_attribute_key", YOUR_LONG_VALUE)
-```
-
-{% endsubtab %}
-{% endsubtabs %}
-{% endtab %}
-{% tab Float %}
-{% subtabs global %}
-{% subtab JAVA %}
-
-```java
-Braze.getInstance(context).getCurrentUser().setCustomUserAttribute("your_attribute_key", YOUR_FLOAT_VALUE);
-```
-
-{% endsubtab %}
-{% subtab KOTLIN %}
-
-```kotlin
-Braze.getInstance(context).currentUser?.setCustomUserAttribute("your_attribute_key", YOUR_FLOAT_VALUE)
-```
-
-{% endsubtab %}
-{% endsubtabs %}
-{% endtab %}
-{% tab Double %}
-{% subtabs global %}
-{% subtab JAVA %}
-
-```java
-Braze.getInstance(context).getCurrentUser().setCustomUserAttribute("your_attribute_key", YOUR_DOUBLE_VALUE);
-```
-
-{% endsubtab %}
-{% subtab KOTLIN %}
-
-```kotlin
-Braze.getInstance(context).currentUser?.setCustomUserAttribute("your_attribute_key", YOUR_DOUBLE_VALUE)
-```
-
-{% endsubtab %}
-{% endsubtabs %}
-{% endtab %}
-{% tab Date %}
-{% subtabs global %}
-{% subtab JAVA %}
-
-```java
-Braze.getInstance(context).getCurrentUser().setCustomUserAttribute("your_attribute_key", YOUR_DATE_VALUE);
-// This method will assign the current time to a custom attribute at the time the method is called:
-Braze.getInstance(context).getCurrentUser().setCustomUserAttributeToNow("your_attribute_key");
-// This method will assign the date specified by SECONDS_FROM_EPOCH to a custom attribute:
-Braze.getInstance(context).getCurrentUser().setCustomUserAttributeToSecondsFromEpoch("your_attribute_key", SECONDS_FROM_EPOCH);
-```
-
-{% endsubtab %}
-{% subtab KOTLIN %}
-
-```kotlin
-Braze.getInstance(context).currentUser?.setCustomUserAttribute("your_attribute_key", YOUR_DATE_VALUE)
-// This method will assign the current time to a custom attribute at the time the method is called:
-Braze.getInstance(context).currentUser?.setCustomUserAttributeToNow("your_attribute_key")
-// This method will assign the date specified by SECONDS_FROM_EPOCH to a custom attribute:
-Braze.getInstance(context).currentUser?.setCustomUserAttributeToSecondsFromEpoch("your_attribute_key", SECONDS_FROM_EPOCH)
-```
-
-{% endsubtab %}
-{% endsubtabs %}
-
-{% alert warning %}
-Dates passed to Braze with this method must either be in the [ISO 8601](http://en.wikipedia.org/wiki/ISO_8601) format (e.g `2013-07-16T19:20:30+01:00`) or in the `yyyy-MM-dd'T'HH:mm:ss:SSSZ` format (e.g `2016-12-14T13:32:31.601-0800`).
-{% endalert %}
 
 {% endtab %}
-{% tab Array %}
+{% tab swift %}
 
-The maximum number of elements in custom attribute arrays defaults to 25. The maximum for individual arrays can be increased to up to 100 in the Braze dashboard, under __Manage Settings__ -> __Custom Attributes__. Arrays exceeding the maximum number of elements will be truncated to contain the maximum number of elements. For more information on custom attribute arrays and their behavior, see our [documentation on Arrays]({{site.baseurl}}/developer_guide/platform_wide/analytics_overview/#arrays).
+```swift
+Appboy.sharedInstance()?.user.setCustomAttributeWithKey("your_attribute_key", andStringValue: "your_attribute_value")
+```
 
-{% subtabs global %}
-{% subtab JAVA %}
+{% endtab %}
+{% endtabs %}
 
-```java
+### Custom attribute with an integer value
+
+{% tabs %}
+{% tab OBJECTIVE-C %}
+
+```objc
+[[Appboy sharedInstance].user setCustomAttributeWithKey:@"your_attribute_key" andIntegerValue:yourIntegerValue];
+```
+
+{% endtab %}
+{% tab swift %}
+
+```swift
+Appboy.sharedInstance()?.user.setCustomAttributeWithKey("your_attribute_key", andIntegerValue: yourIntegerValue)
+```
+
+{% endtab %}
+{% endtabs %}
+
+### Custom attribute with a double value
+
+{% tabs %}
+{% tab OBJECTIVE-C %}
+
+```objc
+[[Appboy sharedInstance].user setCustomAttributeWithKey:@"your_attribute_key" andDoubleValue:yourDoubleValue];
+```
+
+{% endtab %}
+{% tab swift %}
+
+```swift
+Appboy.sharedInstance()?.user.setCustomAttributeWithKey("your_attribute_key", andDoubleValue: yourDoubleValue)
+```
+
+{% endtab %}
+{% endtabs %}
+
+> Braze treats `float` and `double` values the same within our database.
+
+### Custom attribute with a boolean value
+
+{% tabs %}
+{% tab OBJECTIVE-C %}
+
+```objc
+[[Appboy sharedInstance].user setCustomAttributeWithKey:@"your_attribute_key" andBOOLValue:yourBOOLValue];
+```
+
+{% endtab %}
+{% tab swift %}
+
+```swift
+Appboy.sharedInstance()?.user.setCustomAttributeWithKey("your_attribute_key", andBOOLValue: yourBoolValue)
+```
+
+{% endtab %}
+{% endtabs %}
+
+### Custom attribute with a date value
+
+{% tabs %}
+{% tab OBJECTIVE-C %}
+
+```objc
+[[Appboy sharedInstance].user setCustomAttributeWithKey:@"your_attribute_key" andDateValue:yourDateValue];
+```
+
+{% endtab %}
+{% tab swift %}
+
+```swift
+Appboy.sharedInstance()?.user.setCustomAttributeWithKey("your_attribute_key", andDateValue:yourDateValue)
+```
+
+{% endtab %}
+{% endtabs %}
+
+> Dates passed to Braze with this method must either be in the [ISO 8601][2] format, e.g `2013-07-16T19:20:30+01:00` or in the `yyyy-MM-dd'T'HH:mm:ss:SSSZ` format e.g `2016-12-14T13:32:31.601-0800`
+
+### Custom attribute with an array value
+The maximum number of elements in custom attribute arrays defaults to 25. The maximum for individual arrays can be increased to up to 100. If you would like this maximum increased, please reach out to your Customer Service Manager. Arrays exceeding the maximum number of elements will be truncated to contain the maximum number of elements. For more information on custom attribute arrays and their behavior, see our [documentation on arrays][8].
+
+{% tabs %}
+{% tab OBJECTIVE-C %}
+
+```objc
 // Setting a custom attribute with an array value
-Braze.getInstance(context).getCurrentUser().setCustomAttributeArray("your_attribute_key", testSetArray);
+[[Appboy sharedInstance].user setCustomAttributeArrayWithKey:@"array_name" array:@[@"value1",  @"value2"]];
 // Adding to a custom attribute with an array value
-Braze.getInstance(context).getCurrentUser().addToCustomAttributeArray("your_attribute_key", "value_to_add");
+[[Appboy sharedInstance].user addToCustomAttributeArrayWithKey:@"array_name" value:@"value3"];
 // Removing a value from an array type custom attribute
-Braze.getInstance(context).getCurrentUser().removeFromCustomAttributeArray("your_attribute_key", "value_to_remove");
+[[Appboy sharedInstance].user removeFromCustomAttributeArrayWithKey:@"array_name" value:@"value2"];
+// Removing an entire array and key
+[[Appboy sharedInstance].user setCustomAttributeArrayWithKey:@"array_name" array:nil];
 ```
-{% endsubtab %}
-{% subtab KOTLIN %}
 
-```kotlin
+{% endtab %}
+{% tab swift %}
+
+```swift
 // Setting a custom attribute with an array value
-Braze.getInstance(context).currentUser?.setCustomAttributeArray("your_attribute_key", testSetArray)
+Appboy.sharedInstance()?.user.setCustomAttributeArrayWithKey("array_name", array: ["value1",  "value2"])
 // Adding to a custom attribute with an array value
-Braze.getInstance(context).currentUser?.addToCustomAttributeArray("your_attribute_key", "value_to_add")
+Appboy.sharedInstance()?.user.addToCustomAttributeArrayWithKey("array_name", value: "value3")
 // Removing a value from an array type custom attribute
-Braze.getInstance(context).currentUser?.removeFromCustomAttributeArray("your_attribute_key", "value_to_remove")
+Appboy.sharedInstance()?.user.removeFromCustomAttributeArrayWithKey("array_name", value: "value2")
 ```
 
-{% endsubtab %}
-{% endsubtabs %}
 {% endtab %}
 {% endtabs %}
 
@@ -253,93 +190,118 @@ Braze.getInstance(context).currentUser?.removeFromCustomAttributeArray("your_att
 Custom attributes can also be unset using the following method:
 
 {% tabs %}
-{% tab JAVA %}
+{% tab OBJECTIVE-C %}
 
-```java
-Braze.getInstance(context).getCurrentUser().unsetCustomUserAttribute("your_attribute_key");
+```objc
+[[Appboy sharedInstance].user unsetCustomAttributeWithKey:@"your_attribute_key"];
 ```
 
 {% endtab %}
-{% tab KOTLIN %}
+{% tab swift %}
 
-```kotlin
-Braze.getInstance(context).currentUser?.unsetCustomUserAttribute("your_attribute_key")
+```swift
+Appboy.sharedInstance()?.user.unsetCustomAttributeWithKey("your_attribute_key")
 ```
 
 {% endtab %}
 {% endtabs %}
 
-### Custom attribute via the REST API
+### Incrementing/decrementing custom attributes
 
-You can also use our REST API to set user attributes. To do so refer to the [User API documentation][4].
+This code is an example of an incrementing custom attribute. You may increment the value of a custom attribute by any positive or negative integer or long value.
 
-### Custom attribute length
+{% tabs %}
+{% tab OBJECTIVE-C %}
 
-Custom attribute keys and values have a maximum length of 255 characters.  Longer strings will be truncated to 255 characters.
+```objc
+[[Appboy sharedInstance].user incrementCustomUserAttribute:@"your_attribute_key" by:incrementIntegerValue];
+```
 
-Full class information can be found in the [javadocs][2].
+{% endtab %}
+{% tab swift %}
+
+```swift
+Appboy.sharedInstance()?.user.incrementCustomUserAttribute("your_attribute_key", by: incrementIntegerValue)
+```
+
+{% endtab %}
+{% endtabs %}
+
+### Setting a custom attribute via the REST API
+
+You can also use our REST API to set user attributes. To do so refer to the [user API documentation][3].
+
+### Custom attribute value limits
+
+Custom attribute values have a maximum length of 255 characters; longer values will be truncated.
+
+#### Additional information
+
+- More details can be found within the [`ABKUser.h` file][5].
+- Besides, you may refer to the [ABKUser documentation][6] for more information.
 
 ## Setting up user subscriptions
 
-To set up a subscription for your users (either email or push), call the functions `setEmailNotificationSubscriptionType()`  or `setPushNotificationSubscriptionType()`, respectively. Both of these functions take the enum type 'NotificationSubscriptionType' as arguments. This type has three different states:
+To set up a subscription for your users (either email or push), call the functions `setEmailNotificationSubscriptionType` or `setPushNotificationSubscriptionType`, respectively. Both of these functions take the enum type `ABKNotificationSubscriptionType` as arguments. This type has three different states:
 
 | Subscription Status | Definition                               |
 | ------------------- | ---------------------------------------- |
-| `OPTED_IN`          | Subscribed, and explicitly opted in      |
-| `SUBSCRIBED`        | Subscribed, but not explicitly opted in  |
-| `UNSUBSCRIBED`      | Unsubscribed and/or explicitly opted out |
+| `ABKOptedin`        | Subscribed, and explicitly opted in      |
+| `ABKSubscribed`     | Subscribed, but not explicitly opted in  |
+| `ABKUnsubscribed`   | Unsubscribed and/or explicitly opted out |
 {: .reset-td-br-1 .reset-td-br-2}
 
-{% alert important %}
-No explicit opt-in is required by Android to send users push notifications. When a user is registered for push, they are set to `SUBSCRIBED` rather than `OPTED_IN` by default. For more information on implementing subscriptions and explicit opt-ins, visit the topic in our [User Guide]({{site.baseurl}}/user_guide/message_building_by_channel/email/managing_user_subscriptions/#managing-user-subscriptions).
-{% endalert %}
+Users who grant permission for an app to send them push notifications default to the status of `ABKOptedin` as iOS requires an explicit opt-in.
 
-### Sample code
+> Users will be set to `ABKSubscribed` automatically upon receipt of a valid email address, however, we suggest that you establish an explicit opt-in process and set this value to `OptedIn` upon receipt of explicit consent from your user. [See the User Guide for details][12].
 
-#### Setting email subscriptions
+### Setting email subscriptions
 
 {% tabs %}
-{% tab JAVA %}
+{% tab OBJECTIVE-C %}
 
-```java
-Braze.getInstance(context).getCurrentUser().setEmailNotificationSubscriptionType(emailNotificationSubscriptionType);
+```objc
+[[Appboy sharedInstance].user setEmailNotificationSubscriptionType: ABKNotificationSubscriptionType]
 ```
 
 {% endtab %}
-{% tab KOTLIN %}
+{% tab swift %}
 
-```kotlin
-Braze.getInstance(context).currentUser?.setEmailNotificationSubscriptionType(emailNotificationSubscriptionType)
+```swift
+Appboy.sharedInstance()?.user.setEmailNotificationSubscriptionType(ABKNotificationSubscriptionType)
 ```
 
 {% endtab %}
 {% endtabs %}
 
-#### Setting push notification subscription
+### Setting push notification subscriptions
 
 {% tabs %}
-{% tab JAVA %}
+{% tab OBJECTIVE-C %}
 
-```java
-Braze.getInstance(context).getCurrentUser().setPushNotificationSubscriptionType(pushNotificationSubscriptionType);
+```objc
+[[Appboy sharedInstance].user setPushNotificationSubscriptionType: ABKNotificationSubscriptionType]
 ```
 
 {% endtab %}
-{% tab KOTLIN %}
+{% tab swift %}
 
-```kotlin
-Braze.getInstance(context).currentUser?.setPushNotificationSubscriptionType(pushNotificationSubscriptionType)
+```swift
+Appboy.sharedInstance()?.user.setPushNotificationSubscriptionType(ABKNotificationSubscriptionType)
 ```
 
 {% endtab %}
 {% endtabs %}
 
-[2]: https://appboy.github.io/appboy-android-sdk/javadocs/com/braze/BrazeUser.html
+For more information on implementing subscriptions, visit our page on [managing user subscriptions][10].
 
-[2]: https://appboy.github.io/appboy-android-sdk/javadocs/com/braze/BrazeUser.html
+[1]: {{site.baseurl}}/developer_guide/platform_wide/analytics_overview/#user-data-collection
 
-[2]: https://appboy.github.io/appboy-android-sdk/javadocs/com/braze/BrazeUser.html
-
-[2]: https://appboy.github.io/appboy-android-sdk/javadocs/com/braze/BrazeUser.html
-[4]: {{site.baseurl}}/developer_guide/rest_api/user_data/#user-data
-[7]: {{site.baseurl}}/developer_guide/platform_wide/analytics_overview/#user-data-collection
+[1]: {{site.baseurl}}/developer_guide/platform_wide/analytics_overview/#user-data-collection
+[2]: http://en.wikipedia.org/wiki/ISO_8601
+[3]: {{site.baseurl}}/developer_guide/rest_api/user_data/#user-data
+[5]: https://github.com/Appboy/appboy-ios-sdk/blob/master/AppboyKit/include/Appboy.h
+[6]: http://appboy.github.io/appboy-ios-sdk/docs/interface_a_b_k_user.html
+[8]: {{site.baseurl}}/developer_guide/platform_wide/analytics_overview/#arrays
+[10]: {{site.baseurl}}/user_guide/message_building_by_channel/email/managing_user_subscriptions/#managing-user-subscriptions
+[12]: {{site.baseurl}}/user_guide/message_building_by_channel/email/managing_user_subscriptions/#managing-user-subscriptions
