@@ -3,31 +3,20 @@ nav_title: February
 page_order: 11
 noindex: true
 page_type: update
-description: "This article contains release notes for February 2018."
+description: "This article contains release notes for February 2019."
 ---
 
-# February 2018
+# February 2019
 
-## iOS push badge count
+## Email subscription groups
 
-You can now [update badge count][89] within the push composer from Braze. For each push message, you can specify what badge count that notification triggers.
+[Subscription Groups]({{site.baseurl}}/user_guide/message_building_by_channel/email/managing_user_subscriptions/#subscription-groups) are segment filters that can further narrow your audience from the [Global Subscription States]({{site.baseurl}}/user_guide/message_building_by_channel/email/managing_user_subscriptions/) above. These Groups offer the ability to present more granular subscription options to end users.
 
-## Exporting users via API using email addresses
+For example, if you send out multiple categories of email campaigns, you can offer your customers the option to subscribe or unsubscribe from those groups in bulk from a single page, using our [Email Preference Center](#email-preference-center).
 
-You can now [export user profile data via API][88] by specifying email addresses. This export includes all profiles associated with that email address.
+Use the [Subscription Group REST APIs]({{site.baseurl}}/developer_guide/rest_api/subscription_group_api/) to programmatically manage the subscription groups that you have stored on the Braze dashboard to the Subscription Group page.
 
-## Email template APIs
+## Email Preference Center
 
-You can now create and update [email templates via API][87]. Each template will have an **email_template_id** that can be referenced in other API calls.
+The [Email Preference Center]({{site.baseurl}}/user_guide/message_building_by_channel/email/managing_user_subscriptions/#email-preference-center) is an easy way to manage which users receive certain groups of newsletters. Each Subscription Group you create is added to the Preference Center list. Click on the name of the Preference Center to see an interactive preview.
 
-## REST API keys permissions
-
-You can now create [multiple REST API keys][86] and configure access permissions for each. Each key can be configured to grant access to certain endpoints.
-
-You can also specify a [whitelist of IP addresses][85] and subnets that are allowed to make REST API requests for a given REST API Key.
-
-[85]: {{site.baseurl}}/developer_guide/rest_api/basics/#api-ip-whitelisting
-[86]: {{site.baseurl}}/developer_guide/rest_api/basics/#app-group-rest-api-keys
-[87]: {{site.baseurl}}/developer_guide/rest_api/email_templates/#email-templates
-[88]: {{site.baseurl}}/developer_guide/rest_api/export/#user-export
-[89]: {{site.baseurl}}/help/best_practices/utilizing_badge_count/#utilizing-badge-count
