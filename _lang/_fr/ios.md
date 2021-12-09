@@ -1,121 +1,85 @@
 ---
 nav_title: iOS
-article_title: Push Notifications for Unity
+article_title: SDK iOS Integration for Unity
 platform:
   - Unity
   - iOS
-channel: push
-ex_push_payload: archive/apple/push_payload.json
-page_order: 1
-description: "This reference article covers iOS push notification integration for the Unity platform."
+page_order: 0
+description: "This reference article covers the iOS SDK integration for the Unity platform."
 ---
 
-# Push notifications
+# SDK iOS integration
 
-## Step 1: Choose automatic or manual push integration
+Follow the below instructions to get Braze running in your Unity application. If you are transitioning from a manual integration, please read the instructions on [Transitioning From a Manual to an Automated Integration][5].
 
-Braze provides a native Unity solution for automating iOS push integrations.
+## Step 1: Choose your Braze Unity package
 
-- If you would prefer instead to complete the integration manually by modifying your built Xcode project, please follow our [native iOS Push instructions][8].
-- If you are transitioning from a manual integration to an automated one, follow the instructions on [Transitioning from Manual to Automated Integration][2].
-- Our automatic push notification solution takes advantage of iOS 12's Provisional Authorization feature and is not available to use with the native push prompt pop-up.
+The Braze [`.unitypackage`][41] bundles native bindings for the Android and iOS platforms, along with a C# interface.
 
-## Step 2 (Optional): Implement automatic push integration
+There are several Braze Unity packages available for download at [Braze Unity Releases Page][42]:
 
-### Configure push notifications
+* `Appboy.unitypackage`
+    - This package bundles the Braze Android and iOS SDKs as well as the [SDWebImage][unity-1] dependency for the iOS SDK, which is required for proper functionality of Braze's In-App Messaging, and Content Cards features on iOS. The [SDWebImage][unity-1] framework is used for downloading and displaying images, including GIFs. If you intend on utilizing full Braze functionality, download and import this package.<br>
+* `Appboy-nodeps.unitypackage`
+    - This package is similar to `Appboy.unitypackage` except for the [SDWebImage][unity-1] framework not being present. This package is useful if you do not want the [SDWebImage][unity-1] framework present in your iOS app. <br><br>
 
-Follow the instructions in our [iOS Push Notification Configuration documentation][8] to configure Braze using a `.p8` or `.p12` file.
+> iOS: To see if you require the [SDWebImage][unity-1] dependency for your iOS project, please visit the \[iOS In-App Message Documentation\]\[unity-4\].<br><br>Android: As of Unity 2.6.0, the bundled Braze Android SDK artifact requires  [AndroidX][unity-3] dependencies. If you were previously using a `jetified unitypackage`, then you can safely transition to the corresponding `unitypackage` above.
 
-### Enable automatic push integration
+## Step 2: Import the package
 
-In the Unity Editor, open the Braze Configuration Settings by navigating to "Braze" > "Braze Configuration".
+1. In the Unity Editor, import the package into your Unity project by navigating to `Assets > Import Package > Custom Package`.
+2. Click __Import__.
 
-!\[enable push notification\]\[24\]
+Alternatively, follow the Unity instructions for [Importing Asset packages][41] for a more detailed guide on importing custom Unity packages.
 
-Check "Integrate Push With Braze" to automatically register users for push notifications, pass push tokens to Braze, track analytics for push opens, and take advantage of Braze's default push notification handling.
+{% alert note %}
+If you only wish to import the iOS/Android plugin, deselect the `Plugins/Android`/`Plugins/iOS` subdirectory when importing the Braze `.unitypackage`.
+{% endalert %}
 
-!\[Integrate Push With Braze\]\[27\]
+## Step 3b: Set your API key
 
-### (Optional): Enable background push
+Braze provides a native Unity solution for automating the Unity iOS integration. This solution modifies the built Xcode project using Unity's [`PostProcessBuildAttribute`](http://docs.unity3d.com/ScriptReference/Callbacks.PostProcessBuildAttribute.html)) and subclasses the UnityAppController using the `IMPL_APP_CONTROLLER_SUBCLASS` macro.
 
-Check "Enable Background Push" if you would like to enable `background mode` for push notifications. This allows the system to wake your application from the `suspended` state when a push notification arrives, enabling your application to download content in response to push notifications. Checking this option is required for Braze's uninstall tracking functionality.
+1. In the Unity Editor, open the Braze Configuration Settings by navigating to Braze > Braze Configuration.
+2. Check the "Automate Unity iOS Integration" box.
+3. In the "Braze API Key" field, input your application's API key from the [Settings](https://dashboard-01.braze.com/app_settings/app_settings) page in the Braze dashboard. Your Braze Configuration settings should look like this:
 
-!\[Enabling Background Push\]\[29\]
+![Braze Config Editor]({% image_buster /assets/img_archive/unity-ios-appboyconfig.png %})
 
-### (Optional): Disable automatic registration
+> If your application is already using another `UnityAppController` subclass, you will need to merge your subclass implementation with `AppboyAppDelegate.mm`.
 
-Users who have not yet opted-in to push notifications will automatically be authorized for push upon opening your application. To disable this feature and manually register users for push, check "Disable Automatic Push Registration".
+## Basic SDK integration complete
 
-- If "Disable Provisional Authorization" is not checked, on iOS 12 and above, the user will be provisionally (silently) authorized to receive quiet push. If checked, the user will be shown the native push prompt.
+Braze should now be collecting data from your application and your basic integration should be complete.
 
-- If you need to configure exactly when the prompt is shown at runtime, disable automatic registration from the Braze configuration editor and use `AppboyBinding.PromptUserForPushPermissions()` instead.
+- __Push__: See the [Android][53] or [iOS][50] push documentation for information on integrating push.
+- __In-App Messages__: See the [In-App Message documentation][34] for information on integrating in-app messages.
+- __Content Cards__: See the [Content Cards documentation][40] for information on integrating Content Cards.
+- __News Feed__: See the [News Feed documentation][35] for information on integrating the News Feed.
 
-!\[Disable Automatic Push Registration\]\[28\]
+## Extending the SDK (iOS)
 
-## Step 3: Set push listeners
+To extend the SDK's behaviors, fork our [Braze Unity SDK Github project](https://github.com/appboy/appboy-unity-sdk) and make your required changes.
 
-If you would like to pass push notification payloads to Unity or take additional steps when a user receives a push notification, Braze provides the option of setting push notification listeners.
+To publish your modified code as a Unity package, see [Advanced Use Cases]({{site.baseurl}}/developer_guide/platform_integration_guides/unity/Advanced_Use_Cases/advanced_use_cases).
 
-### Push received listener
+## Transitioning from manual to automated integration (iOS)
 
-The Push Received listener is fired when a user receives a push notification while they are actively using the application (i.e., the app is foregrounded). Set the push received listener in the Braze configuration editor.
+To take advantage of the automated iOS integration offered in the Braze Unity SDK, follow these steps on transitioning from a manual to an automated integration.
 
-!\[Push Received Listener\]\[30\]
+1. Remove all Braze-related code from your Xcode project's `UnityAppController` subclass.
+2. Remove Braze's iOS libraries from your Unity or Xcode project (i.e., `Appboy_iOS_SDK.framework` and `SDWebImage.framework`) and [import the Braze Unity package](#step-1-importing-the-braze-unity-package) into your Unity project.
+3. Follow the integration instructions on [setting your API key through Unity](#step-2-setting-your-api-key).
+[unity-4]: {{ site.baseurl }}/developer_guide/platform_integration_guides/ios/in-app_messaging/customization/
 
-- If you need to configure your game object listener at runtime, use `AppboyBinding.ConfigureListener()` and specify `BrazeUnityMessageType.PUSH_RECEIVED`.
-
-### Push opened listener
-
-The Push Opened listener is fired when a user launches the app by clicking on a push notification. To send the push payload to Unity, set the name of your Game Object and Push Opened listener callback method under the "Set Push Opened Listener" foldout, like so:
-
-!\[Push Opened Listener\]\[31\]
-
-
-- If you need to configure your game object listener at runtime, use `AppboyBinding.ConfigureListener()` and specify `BrazeUnityMessageType.PUSH_OPENED`.
-
-### Push listener implementation example
-
-The following example implements the `AppboyCallback` game object using a callback method name of `PushNotificationReceivedCallback` and `PushNotificationOpenedCallback` respectively.
-
-!\[Game Object Linking\]\[32\]
-
-```csharp
-public class MainMenu : MonoBehaviour {
-  void PushNotificationReceivedCallback(string message) {
-#if UNITY_ANDROID
-    Debug.Log("PushNotificationReceivedCallback message: " + message);
-    PushNotification pushNotification = new PushNotification(message);
-    Debug.Log("Push Notification received: " + pushNotification);   
-#elif UNITY_IOS
-    ApplePushNotification pushNotification = new ApplePushNotification(message);
-    Debug.Log("Push received Notification event: " + pushNotification);   
-#endif  
-  }
-
-  void PushNotificationOpenedCallback(string message) {
-#if UNITY_ANDROID
-    Debug.Log("PushNotificationOpenedCallback message: " + message);
-    PushNotification pushNotification = new PushNotification(message);
-    Debug.Log("Push Notification opened: " + pushNotification);  
-#elif UNITY_IOS
-    ApplePushNotification pushNotification = new ApplePushNotification(message);
-    Debug.Log("Push opened Notification event: " + pushNotification);   
-#endif  
-  }
-}
-```
-
-## Advanced features
-
-### Push token callback
-
-To receive a copy of device tokens that Braze receives from the OS, set a delegate using `AppboyBinding.SetPushTokenReceivedFromSystemDelegate()`.
-
-### Other features
-
-To implement advanced features such as deep links, badge counts, and custom sounds, visit our [native iOS Push instructions][8].
-[10]: {% image_buster /assets/img_archive/ios_provisioning.png %} "pushNotification2.png" [11]: {% image_buster /assets/img_archive/AppleProvisioningOptions.png %} "AppleProvisioningOptions.png" [12]: {% image_buster /assets/img_archive/push_cert_gen.png %} "pushNotification3.png" [24]: {% image_buster /assets/img_archive/Enable_push_capabilities.png %} [27]: {% image_buster /assets/img/unity/ios/unity_ios_api_key.png %} [28]: {% image_buster /assets/img/unity/ios/unity_ios_disable_auto_push.png %} [29]: {% image_buster /assets/img/unity/ios/unity_ios_enable_background.png %} [30]: {% image_buster /assets/img/unity/ios/unity_ios_push_received.png %} [31]: {% image_buster /assets/img/unity/ios/unity_ios_push_opened.png %} [32]: {% image_buster /assets/img/unity/ios/unity_ios_appboy_callback.png %}
-
-[2]: {{site.baseurl}}/developer_guide/platform_integration_guides/unity/sdk_integration/ios/#transitioning-from-manual-to-automated-integration-ios
-[8]: {{site.baseurl}}/developer_guide/platform_integration_guides/unity/push_notifications/ios/
-[8]: {{site.baseurl}}/developer_guide/platform_integration_guides/unity/push_notifications/ios/
+[5]: #transitioning-from-manual-to-automated-integration
+[34]: {{site.baseurl}}/developer_guide/platform_integration_guides/unity/in-app_messaging/
+[35]: {{site.baseurl}}/developer_guide/platform_integration_guides/unity/news_feed/
+[40]: {{site.baseurl}}/developer_guide/platform_integration_guides/unity/content_cards/
+[41]: https://docs.unity3d.com/Manual/AssetPackages.html
+[41]: https://docs.unity3d.com/Manual/AssetPackages.html
+[42]: https://github.com/Appboy/appboy-unity-sdk/releases
+[50]: {{site.baseurl}}/developer_guide/platform_integration_guides/unity/push_notifications/ios/
+[53]: {{site.baseurl}}/developer_guide/platform_integration_guides/unity/push_notifications/android/
+[unity-1]: https://github.com/SDWebImage/SDWebImage
+[unity-3]: https://developer.android.com/jetpack/androidx
