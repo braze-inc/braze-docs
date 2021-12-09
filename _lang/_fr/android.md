@@ -1,111 +1,140 @@
 ---
-nav_title: Android and FireOS
-article_title: Initial Android SDK Setup for Cordova
+nav_title: Android
+article_title: Android Push Notifications for Unity
 platform:
-  - Cordova
-  - iOS
-page_order: 0
-page_type: reference
-description: "This article covers initial SDK setup steps for Android and FireOS apps running on Cordova."
+  - Unity
+  - Android
+channek: push
+page_order: 1
+description: "This reference article covers the Android push notification integration for the Unity platform."
 ---
 
-# Initial SDK Setup
+# Push notifications
 
-Download the SDK from [Github][1] and run the following from the root your project:
+These instructions are for integrating push with [Firebase Cloud Messaging (FCM)][9].
 
+For ADM integration instructions, see our [Unity ADM][64] documentation.
+
+## Step 1: Enable Firebase
+
+To get started, follow the instructions at [Firebase Unity Setup Docs][11].
+
+Note that integrating the Firebase Unity SDK may cause your `AndroidManifest.xml` to be overriden. If that occurs, make sure to revert it to its original self.
+
+## Step 2: Set your Firebase credentials
+
+You need to input your Firebase Server Key and Sender ID into the Braze dashboard:
+
+* On the app settings page (where your API keys are located), select your Android app.
+* Enter your Firebase Server Key in the field labeled "Firebase Cloud Messaging Server Key" under the Push Notification Settings section.
+* Enter your Firebase Sender ID in the field labeled "Firebase Cloud Messaging Sender ID" under the Push Notification Settings section.
+
+!\[FCMKey\]\[15\]
+
+If you're not familiar with the location of your Firebase Server Key and Sender ID, follow these steps:
+
+1. Login to the [Firebase Developers Console][58]
+
+2. Select your Firebase project
+
+3. Select Cloud Messaging under Settings and copy the Server Key and Sender ID: !\[FirebaseServerKey\]\[59\]
+
+## Step 3: Implement automatic push integration
+
+The Braze SDK can automatically handle push registration with the Firebase Cloud Messaging Servers in order to have devices receive push notifications.
+
+!\[AndroidPushSettings\]\[62\]
+
+- **"Automatic Firebase Cloud Messaging Registration Enabled"**
+
+Instructs the Braze SDK to automatically retrieve and send a FCM push token for a device.
+
+- **"Firebase Cloud Messaging Sender ID"**
+
+The Sender ID from your Firebase console.
+
+- **"Handle Push Deeplinks Automatically"**
+
+Whether the SDK should handle opening deeplinks or the opening the app when push notifications are clicked.
+
+- **"Small Notification Icon Drawable"**
+
+The drawable that should be displayed as the small icon whenever a push notification is received. If no icon is given, the notification will use the application icon as the small icon.
+
+## Step 4: Set push listeners
+
+If you would like to pass push notification payloads to Unity or take additional steps when a user receives a push notification, Braze provides the option of setting push notification listeners.
+
+* On the **Settings** page (where your API keys are located), select your Android app.
+* Enter your Firebase Server Key in the **Firebase Cloud Messaging Server Key** field, under the Push Notification Settings section.
+* Enter your Firebase Sender ID in the **Firebase Cloud Messaging Sender ID** field, under the Push Notification Settings section.
+
+#### Push received listener
+
+The Push Received listener is fired when a user receives a push notification. To send the push payload to Unity, set the name of your Game Object and Push Received listener callback method under the "Set Push Received Listener".
+
+#### Push opened listener
+
+The Push Opened listener is fired when a user launches the app by clicking on a push notification. To send the push payload to Unity, set the name of your Game Object and Push Opened listener callback method under the "Set Push Opened Listener".
+
+#### Push deleted listener (Android only)
+
+The Push Deleted listener is fired when a user swipes away or dismisses a push notification. To send the push payload to Unity, set the name of your Game Object and Push Deleted listener callback method under the "Set Push Deleted Listener".
+
+#### Push listener implementation example
+
+The following example implements the `BrazeCallback` game object using a callback method name of `PushNotificationReceivedCallback`, `PushNotificationOpenedCallback`, and `PushNotificationDeletedCallback` respectively.
+
+!\[Game Object Linking\]\[63\]
+
+```csharp
+public class MainMenu : MonoBehaviour {
+  void PushNotificationReceivedCallback(string message) {
+#if UNITY_ANDROID
+    Debug.Log("PushNotificationReceivedCallback message: " + message);
+    PushNotification pushNotification = new PushNotification(message);
+    Debug.Log("Push Notification received: " + pushNotification);   
+#elif UNITY_IOS
+    ApplePushNotification pushNotification = new ApplePushNotification(message);
+    Debug.Log("Push received Notification event: " + pushNotification);   
+#endif  
+  }
+
+  void PushNotificationOpenedCallback(string message) {
+#if UNITY_ANDROID
+    Debug.Log("PushNotificationOpenedCallback message: " + message);
+    PushNotification pushNotification = new PushNotification(message);
+    Debug.Log("Push Notification opened: " + pushNotification);  
+#elif UNITY_IOS
+    ApplePushNotification pushNotification = new ApplePushNotification(message);
+    Debug.Log("Push opened Notification event: " + pushNotification);   
+#endif  
+  }
+
+  void PushNotificationDeletedCallback(string message) {
+#if UNITY_ANDROID
+    Debug.Log("PushNotificationDeletedCallback message: " + message);
+    PushNotification pushNotification = new PushNotification(message);
+    Debug.Log("Push Notification dismissed: " + pushNotification);  
+#endif
+  }
+}
 ```
-cordova plugin add path_to_repo/appboy-cordova-sdk
-```
 
-Alternatively, if you are running Cordova 6 or later, you could install directly from Github:
+### Implementation example
 
-```
-cordova plugin add https://github.com/appboy/appboy-cordova-sdk#master
-```
+The sample project in the [Braze Unity SDK repository][13] contains a full working sample app that includes FCM.
 
-## Configure the plugin
+## Deep linking to in-app resources
 
-In your config.xml, add a `preference` element under the android `platform` element that contains your Braze API key with the name `com.appboy.api_key`:
+Although Braze can handle standard deep links (such as website urls, Android uris, etc.) out of the box, creating custom deep links requires additional Manifest setup.
 
-```xml
-<platform name="android">
-    <preference name="com.appboy.api_key" value="YOUR_API_KEY" />
-</platform>
-```
+See Android's documentation on ["Deep Linking" to In-App Resources][26]
+[15]: {% image_buster /assets/img_archive/fcm_api_insert.png %} "FCMKey" [59]: {% image_buster /assets/img_archive/finding_firebase_server_key.png %} "FirebaseServerKey" [62]: {% image_buster /assets/img/unity/android/unity_android_push_settings_config.png %} "Android Push Settings" [63]: {% image_buster /assets/img/unity/android/unity_android_full_push_listener.png %} "Android Full Listener Example"
 
-## Setting Extra Configuration
-
-The Cordova Android SDK also allows for various other settings to be configured via the config.xml file:
-
-```xml
-<platform name="android">
-    <preference name="com.appboy.android_small_notification_icon" value="RESOURCE_ENTRY_NAME_FOR_ICON_DRAWABLE" />
-    <preference name="com.appboy.android_large_notification_icon" value="RESOURCE_ENTRY_NAME_FOR_ICON_DRAWABLE" />
-    <preference name="com.appboy.android_notification_accent_color" value="str_ACCENT_COLOR_INTEGER" />
-    <preference name="com.appboy.android_default_session_timeout" value="str_SESSION_TIMEOUT_INTEGER" />
-    <preference name="com.appboy.android_handle_push_deep_links_automatically" value="true"/"false" />
-    <preference name="com.appboy.android_log_level" value=LOG_LEVEL_INTEGER />
-    <preference name="com.appboy.firebase_cloud_messaging_registration_enabled" value="true"/"false" />
-    <preference name="com.appboy.android_fcm_sender_id" value="str_YOUR_FCM_SENDER_ID" />
-    <preference name="com.appboy.enable_location_collection" value="true"/"false" />
-    <preference name="com.appboy.geofences_enabled" value="true"/"false" />
-    <preference name="com.appboy.android_disable_auto_session_tracking" value="true"/"false" />
-</platform>
-```
-
-See the [Android Cordova Plugin][2] for more details.
-
-
-> Due to how the Cordova 8.0.0+ framework handles preferences, entirely numerical preferences like sender IDs must be prefixed with `str_` in order to be properly read by the SDK. An example is included below:
-
-```xml
-<platform name="android">
-    <preference name="com.appboy.firebase_cloud_messaging_registration_enabled" value="true" />
-    <preference name="com.appboy.android_fcm_sender_id" value="str_64422926741" />
-</platform>
-```
-
-## Customized Setup
-
-Note that this plugin can be forked and modified for custom implementations. Find the platform-specific native source code in the `/plugin/src` directory, the JavaScript interface in the `/plugin/www` directory, and the main configuration file at `/plugin`.
-
-Users that check their platform directory into version control (enabling them to make permanent code edits there) will be able to further leverage Braze's UI elements by calling them directly from their platform specific project.
-
-### Removing automatic push setup (Android)
-
-To remove automatic push registration on Android set the following configuration preferences:
-
-```xml
-<platform name="android">
-    <preference name="com.appboy.firebase_cloud_messaging_registration_enabled" value="false" />
-</platform>
-```
-
-### Location Collection and Geofences
-
-To enable location collection and Braze Geofences, use the [`geofence-branch`][3] instead of the default `master` branch. By default, the Braze SDK disables location collection and Braze Geofences. Additionally, use the following preferences configuration:
-
-```xml
-<platform name="android">
-    <preference name="com.appboy.enable_location_collection" value="true" />
-    <preference name="com.appboy.geofences_enabled" value="true" />
-</platform>
-```
-
-The geofence-branch can be added to your Cordova project with the following:
-
-```
-cordova plugin add https://github.com/appboy/appboy-cordova-sdk#geofence-branch
-```
-
-### Delaying Automatic Session Tracking
-
-Set `<preference name="com.appboy.android_disable_auto_session_tracking" value="true" />` in your `config.xml` to disable the Android Cordova plugin from automatically tracking sessions. To start tracking sessions, call `AppboyPlugin.startSessionTracking()`. Note that this will not retroactively track sessions and will only start tracking sessions starting from the next `Activity.onStart()`.
-
-## Initial Setup Complete
-
-Once the initial setup is complete, you can access the `AppboyPlugin` JavaScript interface in your app.
-
-[1]: https://github.com/Appboy/appboy-cordova-sdk
-[2]: https://github.com/Appboy/appboy-cordova-sdk/blob/master/src/android/AppboyPlugin.java
-[3]: https://github.com/Appboy/appboy-cordova-sdk/tree/geofence-branch
+[9]: https://firebase.google.com/docs/cloud-messaging/
+[11]: https://firebase.google.com/docs/unity/setup
+[13]: https://github.com/Appboy/appboy-unity-sdk/tree/master/unity-samples
+[26]: https://developer.android.com/training/app-links/deep-linking
+[58]: https://console.firebase.google.com/
+[64]: {{site.baseurl}}/developer_guideplatform_integration_guides/unity/push_notifications/adm_push_notifications/
