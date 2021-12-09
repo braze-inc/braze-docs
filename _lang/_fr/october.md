@@ -3,24 +3,38 @@ nav_title: October
 page_order: 3
 noindex: true
 page_type: update
-description: "This article contains release notes for October 2016."
+description: "This article contains release notes for October 2020."
 ---
 
-# October 2016
+# October 2020
 
-## New security settings
-We’ve added enhanced security features to Braze, including password expiration rules, password length rules, password complexity rules, dashboard IP login whitelisting, and two-factor authentication.
+## Report Builder
 
-> Update: Braze's security settings, accessed from your [company settings page](https://dashboard-01.braze.com/company_settings/company_settings), also includes rules for password reusability and expiration.
+!\[Campaign Comparison Example\]\[5\]{: style="max-width:80%;"}
 
-## CSV download after import
-Braze users can now download CSVs of recently imported users. This gives you more visibilty in the data sync from your systems. Learn more on CSV importing on Braze [here]({{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/user_import/).
+The Report Builder allows you to compare the results of multiple campaigns in a single view so that you can easily determine which engagement strategies most impacted your key metrics. Read more [here]({{site.baseurl}}/report_builder)!
 
-## Anniversary filter
-In addition to the [birthday filter]({{site.baseurl}}/user_guide/Engagement_Tools/Segments/Segmentation_Filters/), Braze now supports an anniversary filter which gives you the ability to target users based on a calendar date for loyalty milestones, refill notices, and more! Access this feature by selecting the "Date of Custom Attribute" filter on the Segments page. Learn more on filters in Braze [here]({{site.baseurl}}/user_guide/engagement_tools/segments/segmentation_filters/#segmentation-filters).
+## iOS 14 upgrade guide
 
-## Frequency capping updates
-Previously, a campaign or Canvas that ignored the Frequency Capping restrictions would still count towards frequency caps. We’ve changed the behavior so that by default new campaigns and Canvases that do not obey Frequency Caps will also not count towards them. This is configurable for each campaign and Canvas. Learn more about Frequency Capping [here]({{site.baseurl}}/user_guide/engagement_tools/campaigns/testing_and_more/rate-limiting/#frequency-capping).
+The iOS 14 upgrade guide describes Braze-related changes introduced in iOS 14 and the required upgrade steps for your Braze iOS SDK integration. Some changes to note are future IDFA permission requirements, geofence support, and necessary Xcode upgrades. Check out our [upgrade guide]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/ios_14/) to read more.
 
-## In-App Message Color Profiles
-We’ve added Color Profiles for in-app messages, allowing customers to reuse on-brand color schemes when creating new messages in Braze. Learn about color profiles [here]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/customize/#color-profile).
+## Android 11 upgrade guide
+
+The Android 11 guide describes relevant changes introduced in the Android 11 release and the required upgrade steps for your Braze Android SDK integration. Some changes relate to deep links, HTML In-App Messages, and location permissions. Check out our [upgrade guide]({{site.baseurl}}/developer_guide/platform_integration_guides/android/android_11/) to read more.
+
+## Attribution partners - Click tracking guide
+
+Optional attribution partner click tracking documentation has now been added to each attribution partner page, this includes best practices and implementation guidelines to get click tracking working for your campaigns. Visit your [attribution partner]({{site.baseurl}}/partners/advertising_technologies/attribution/) page to read more.
+
+## New description field
+
+Users can now add descriptions to campaigns and Canvases! This new field can be found right under the campaign or Canvas name field when creating or editing an existing campaign or Canvas.
+
+## Canvas exception events
+
+New documention has beed added describing the expected behavior of exception events in Canvases. Visit our [documentation]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/exception_events/) to read more!
+
+## User delete updates
+
+Braze has made improvements to its APIs to enable customers to delete at the same time, without additional customer actions, not only the End User Profiles of data subjects requesting deletion of their data but also any subscription state associated with the data subject's phone number or email address. Updated documentation can be found [here](https://www.braze.com/docs/help/dp-technical-assistance/#braze-recommendation-2)
+[5]: {% image_buster /assets/img/campaign_comparison/campaign_main.png %} 
