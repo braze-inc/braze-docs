@@ -1,69 +1,31 @@
 ---
-nav_title: Best Practices and FAQs
-article_title: Frequently Asked Questions
-page_order: 3
-hide_toc: true
-layout: dev_guide
-guide_top_header: "Best Practices and Frequently Asked Questions"
-guide_top_text: "This page is home to articles on frequently asked questions and best practices about the Braze dashboard and its features."
-guide_featured_title: "FAQ Articles"
-guide_featured_list:
-  - 
-    name: Canvas FAQs
-    link: /docs/user_guide/engagement_tools/canvas/faqs/
-    fa_icon: fas fa-brush
-  - 
-    name: Campaign FAQs
-    link: /docs/user_guide/engagement_tools/campaigns/faq/
-    fa_icon: fas fa-paper-plane
-  - 
-    name: "Email and Link Templates FAQs"
-    link: /docs/user_guide/message_building_by_channel/email/templates/faq/
-    fa_icon: fas fa-link
-  - 
-    name: "Export FAQs"
-    link: /docs/user_guide/data_and_analytics/export_braze_data/faqs/
-    fa_icon: fas fa-file-export
-  - 
-    name: "In-App Messages FAQs"
-    link: /docs/user_guide/message_building_by_channel/in-app_messages/faq/
-    fa_icon: fas fa-mobile-alt
-  - 
-    name: "Locations & Geofences FAQs"
-    link: /docs/user_guide/engagement_tools/locations_and_geofences/faqs/
-    fa_icon: fas fa-map-marker-alt
-  - 
-    name: "Media Library FAQs"
-    link: /docs/user_guide/engagement_tools/templates_and_media/faqs/
-    fa_icon: fas fa-images
-  - 
-    name: "MMS FAQs"
-    link: /docs/user_guide/message_building_by_channel/sms/mms/faqs/
-    fa_icon: fas fa-comment
-  - 
-    name: "SMS FAQs"
-    link: /docs/user_guide/message_building_by_channel/sms/faqs/
-    fa_icon: fas fa-comment-dots
-guide_menu_title: "Best Practices"
-guide_menu_list:
-  - 
-    name: "Email Best Practices"
-    link: /docs/user_guide/message_building_by_channel/email/best_practices/
-    fa_icon: fas fa-envelope
-  - 
-    name: "In-App Message Best Practices"
-    link: /docs/user_guide/message_building_by_channel/in-app_messages/best_practices/
-    fa_icon: fas fa-mobile-alt
-  - 
-    name: "News Feed Best Practices"
-    link: /docs/user_guide/engagement_tools/news_feed/best_practices/
-    fa_icon: fas fa-newspaper
-  - 
-    name: "Push Best Practices"
-    link: /docs/user_guide/message_building_by_channel/push/best_practices/
-    fa_icon: fas fa-comment-alt
-local_redirect:  #what-does-local-time-zone-delivery-offer
-  what-does-local-time-zone-delivery-offer: '/docs/user_guide/engagement_tools/campaigns/faq/#what-does-local-time-zone-delivery-offer'
+nav_title: FAQs
+article_title: Export FAQs
+page_order: 11
+page_type: FAQ
+description: "This  article covers some frequently asked questions for API and CSV exports."
 ---
 
-<br>
+# Export FAQs
+
+> This page provides answers to some commonly asked questions about API and CSV exports.
+
+### Can you make certain exports appear in a customer’s S3 bucket, and certain exports not?
+
+No. If you have provided S3 credentials, all your exports will appear in your S3 bucket; otherwise, if no credentials are provided, all exports will appear in an S3 bucket belonging to Braze.
+
+### Do I have to add S3 credentials to Braze to export data?
+
+No. Customers who do not add S3 credentials will have all of their exports appear in an S3 bucket belonging to Braze.
+
+### What happens if you set up S3 credentials in the dashboard, but don't select “make this the default data export destination?”
+
+That checkbox will impact whether exports go to S3 or Azure, assuming you've added credentials for both.
+
+### Why did I receive multiple files when exporting user profiles to S3?
+
+This is expected behavior for app groups with a lot of users. We split your export into multiple files, based on the number of users in your app group. Generally, there is one file output per 5,000 users. Note that if you are exporting a small segment within a large app group, you may still receive multiple files.
+
+### Why do I see duplicates when I export users by segment via rest API?
+
+This is a very rare edge case caused by the underlying architecture of the database provider. Duplicates are cleaned out every week; however, most weeks, there are no duplicates cleared.
