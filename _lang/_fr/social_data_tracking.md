@@ -1,98 +1,110 @@
 ---
 nav_title: Social Data Tracking
-article_title: Social Data Tracking for iOS
-platform: iOS
+article_title: Social Data Tracking for Windows Universal
+platform: Windows Universal
 page_order: 5
-description: "This reference article shows how to implement social data tracking for your iOS application."
+description: "This reference article covers how to deal with social data tracking on the Windows Universal platform."
 ---
 
-# Social data tracking for iOS
+# Social data tracking
 
-## Collecting social account data
+Unlike the Braze iOS SDK, the Braze Windows SDK does not automatically collect Facebook and Twitter data. However, it's possible to add social media data to a Braze user's profile from the Windows SDK as well:
 
-The Braze iOS SDK does not automatically collect Facebook or Twitter user data. If you want to integrate Facebook user data in Braze user profiles, you need to fetch the user's data and pass it to Braze.
+- Obtain social media data within your application via the Facebook SDK and Twitter APIs.
+    - [Facebook Documentation][1] // [Twitter Documentation][2]
+- Initialize Facebook and Twitter User objects with social media data and pass them to Braze.
 
-## Passing Facebook data to Braze
+## Social network data constructors
 
-Initialize `ABKFacebookUser` objects with the Facebook data you have collected and pass it to Braze:
+```
+FacebookUser(
+  string Id,
+  string FirstName,
+  string LastName,
+  string Email,
+  // mm/dd/yyyy format.
+  string Birthday,
+  string Bio,
+  FacebookLocation LocationObject,
+  // "m" or "f".
+  string Gender,
+  List<FacebookLike> Likes,
+  int NumFriends
+)
 
-{% tabs %}
-{% tab OBJECTIVE-C %}
+FacebookLocation(
+  string CityName
+)
 
-```objc
-ABKFacebookUser *facebookUser = [[ABKFacebookUser alloc] initWithFacebookUserDictionary:self.facebookUserProfile numberOfFriends:self.numberOfFacebookFriends likes:self.facebookLikes];
-[Appboy sharedInstance].user.facebookUser = facebookUser;
+FacebookLike(
+  // The name of a page the user likes.
+  string Like
+)
+
+TwitterUser(
+  string Description,
+  int FollowersCount,
+  int FriendsCount,
+  int StatusesCount,
+  // Twitter's unique id for the user.
+  int Id,
+  string Name,
+  string ProfileImageURL,
+  // The user's handle.
+  string ScreenName
+)
 ```
 
-{% endtab %}
-{% tab SWIFT %}
+To pass data retrieved from social networks to Braze, you'll create a new FacebookUser or TwitterUser and then pass them to the method Appboy.SharedInstance.AppboyUser.SetFacebookData()/Appboy.SharedInstance.AppboyUser.SetTwitterData(). For example:
 
-```swift
-let facebookUser = ABKFacebookUser(facebookUserDictionary: facebookUserDictionary, numberOfFriends: numberOfFriends, likes: likes)
-Appboy.sharedInstance()?.user.facebookUser = facebookUser
+### Twitter
+
+```
+var twitterUser = new TwitterUser {
+  Description = "description",
+  FollowersCount = 10,
+  FriendsCount = 20,
+  StatusesCount = 150,
+  Id = 1000000,
+  Name = "Name",
+  ProfileImageURL = "https://si0.twimg.com/profile_images/00000/00000.jpeg",
+  ScreenName = "handle"
+};
+
+Appboy.SharedInstance.AppboyUser.SetTwitterData(twitterUser);
 ```
 
-{% endtab %}
-{% endtabs %}
+### Facebook
 
-> In ABKFacebookUser's init method `initWithFacebookUserDictionary:numberOfFriends:likes:`, all the parameters should be dictionaries and arrays returned directly from Facebook:
+```
+// Build a list of pages the user likes.
+List likes = new List();
+var like = new FacebookLike {
+  Like = "Page Name"
+};
+likes.Add(like);
 
-| Parameter             | Definition                                                                |
-| --------------------- | ------------------------------------------------------------------------- |
-| `facebookUserProfile` | The dictionary returned from the endpoint "/me".                          |
-| `numberOfFriends`     | The length of the friends array returned from the endpoint "/me/friends". |
-| `likes`               | The array of user's Facebook likes from the endpoint "/me/likes".         |
-{: .reset-td-br-1 .reset-td-br-2}
+// Specify the user's city in a FacebookLocation object.
+var location = new FacebookLocation {
+  CityName = "City"
+};
 
-> For additional information regarding the Facebook Graph API, please refer to [the Facebook Graph API Developer Documentation][10].
+// Populate the FacebookUser object.
+var facebookUser = new FacebookUser {
+  Id = "100000",
+  FirstName = "FirstName",
+  LastName = "LastName",
+  Email = "email@email.com",
+  Birthday = "04/13/1990",
+  Bio = "bio",
+  LocationObject = location,
+  Gender = "m",
+  Likes = likes,
+  NumFriends = 500
+};
 
-Additionally, you can tailor what Facebook data you're sending to Braze, in case you don't want to include the entire basic profile. For example:
-
-{% tabs %}
-{% tab OBJECTIVE-C %}
-
-```objc
-ABKFacebookUser *facebookUser = [[ABKFacebookUser alloc] initWithFacebookUserDictionary:facebookUserPublicProfile numberOfFriends:-1 likes:nil];  
+Appboy.SharedInstance.AppboyUser.SetFacebookData(facebookUser);
 ```
 
-{% endtab %}
-{% tab SWIFT %}
-
-```swift
-let facebookUser = ABKFacebookUser(facebookUserDictionary: facebookUserDictionary, numberOfFriends: -1, likes:nil)
-```
-
-{% endtab %}
-{% endtabs %}
-
-For more information about integrating the Facebook SDK, follow the steps in [Facebook SDK documentation][2].
-
-## Passing Twitter data to Braze
-
-Initialize `ABKTwitterUser` objects, set up the Twitter data you have collected and pass it to Braze:
-
-{% tabs %}
-{% tab OBJECTIVE-C %}
-
-```objc
-ABKTwitterUser *twitterUser = [[ABKTwitterUser alloc] init];
-twitterUser.userDescription = self.userDescription;
-twitterUser.twitterID = self.twitterID;
-[Appboy sharedInstance].user.twitterUser = twitterUser;
-```
-
-{% endtab %}
-{% tab SWIFT %}
-
-```swift
-let twitterUser = ABKTwitterUser()
-twitterUser.userDescription = twitterDserDescription
-twitterUser.twitterID = twitterID
-Appboy.sharedInstance()?.user.twitterUser = twitterUser
-```
-
-{% endtab %}
-{% endtabs %}
-
-[2]: https://developers.facebook.com/docs/ios "facebook iOS sdk docs"
-[10]: https://developers.facebook.com/docs/graph-api/reference/v4.0/user "facebook graph api docs"
+[1]: https://developers.facebook.com/docs/facebook-login/manually-build-a-login-flow/ "facebook"
+[2]: https://developer.twitter.com/en/docs "twitter"
