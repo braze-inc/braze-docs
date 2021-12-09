@@ -3,30 +3,39 @@ nav_title: June
 page_order: 7
 noindex: true
 page_type: update
-description: "This article contains release notes for June 2016."
+description: "This article contains release notes for June 2017."
 ---
 
-# June 2016
+# June 2017
 
-## Action-based trigger for performing an exception event
+## Update to external API
 
-“Exception events” are used to create powerful logic within action-based campaigns. They are used to remove end users from receiving a message; for example, “send users who abandon their shopping carts a push notification, unless they checkout.” By triggering off of an exception event, customers can direct additional messages and attention to the users who did checkout after abandoning their carts, creating a seamless and cohesive experience.
+We've updated the external API to support the collapse_id field for Apple push, giving you the ability to message your customers with precision. Learn more about the Braze messaging API [here][49].
 
-## "Received Message from Campaign with Tag" segment filter
+## Update to web push notifications
 
-Customers can now exclude users who have received groups of campaigns by the same "Tag" functionality they have already been using.
+We've added updates for web push notifications previews including a dropdown and correct image height renders, making it easier for you to test and send web push notifications. Learn more about web push [here][47].
 
-## Pause & resume multiple campaigns simultaneously
+## Improved security settings
 
-Customers can now pause and resume multiple campaigns simultaneously from the campaigns page.
+We've added the ability for customers to set password complexity rules, dashboard IP whitelisting, and two factor authentication, giving you more control. Learn more security settings [here][46].
 
-## Uninstall data API endpoint
+## Concurrent CSV imports
 
-Customers can now fetch uninstall tracking data from our export APIs directly. Please see our [Export API Documentation][4] for additional details.
+You can now upload multiple CSVs and process them at the same time, enabling you to move faster. Learn more about user imports [here][50].
 
-## Improved error log
+## Canvas template attributes
 
-We've improved your ability to sort by error type in the \[Message Error Log\]\[5\]!
-[5]: {% image_buster /assets/img_archive/improved_error_log.png %}
+We’ve added the ability to include templating attributes to messages sent from Canvas steps, helping you be more efficient. Learn more about Canvas [here][45].
 
-[4]: {{site.baseurl}}/developer_guide/rest_api/export/#kpi-export
+## Updates to targeting
+
+You can now select hours as a time unit when you are filtering for date and time, enabling you to target your messages with more precision. Learn more about filters [here][44].
+
+
+[44]: {{site.baseurl}}/user_guide/engagement_tools/segments/creating_a_segment/#step-4-add-filters-to-your-segment
+[45]: {{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/create_a_canvas/
+[46]: {{site.baseurl}}/user_guide/onboarding/platform_administrative_features/#security-settings
+[47]: {{site.baseurl}}/help/best_practices/web_sdk/#web-push
+[49]: {{site.baseurl}}/api/endpoints/messaging/
+[50]: {{site.baseurl}}/user_guide/administrative/manage_your_users/user_import/#user-import
