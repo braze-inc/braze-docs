@@ -1,47 +1,42 @@
 ---
 nav_title: FAQs
-article_title: Media Library FAQs
-page_order: 5
+article_title: MMS FAQs
+page_order: 4
+description: "This article covers some of the most frequently asked questions about MMS."
 page_type: FAQ
-tool: Media
-description: "This article provides answers to frequently asked questions about the Braze Media Library."
+channel:
+  - MMS
 ---
 
-# Media library FAQs
+# MMS FAQs
 
-> This page provides answers to frequently asked questions about the Braze Media Library.
+> On this page, we’ll attempt to answer your most stringent questions about MMS!
 
-### Are there storage limits for images within the Media Library?
+### Are there any changes to currents data when sending an MMS?
 
-No, there are no storage limits for images within the Media Library.
+No, the same level of insight will be provided when sending an MMS message.
 
-### Are there expiration dates for uploaded assets?
+### Can I control the order in which the image and message body of an MMS are delivered?
 
-No, uploaded assets will not expire once added to the Media Library.
+Braze has no control over the display order for when both a message-body and images are included in an MMS message. This is dependent on several factors including but not limited to:
 
-### Can I crop all image types?
+- The carrier receiving the message
+- The device receiving the message
+- The overall size of the message
 
-No, the Media Library doesn't support cropping GIF images.
+### Does MMS and SMS pricing differ?
 
-### How do I crop an existing image?
+MMS and SMS have different costs and are charged separately based on volume. Please reach out to the Braze Onboarding team for pricing information.
 
-You can crop an existing image by selecting the image from the Media Library and clicking **Crop & Save New Image**.
+### Does MMS require a separate onboarding process?
 
-!\[Media Library Crop\]\[2\]{: height="75%" width="75%"}
+Nope! MMS is now included in our SMS onboarding process. Existing customers who already went through onboarding can start sending MMS campaigns after completing the following steps:
 
-You'll then be redirected to a cropping composer where you can select your ratio type, and edit the name of the new image. Once you hit **Save**, your new image can be used!
+1. Purchase MMS.
+2. Reach out to the Braze Onboarding team to request the MMS feature to be flipped on. This will enable MMS and an SMS/MMS Subscription group will be created or updated for you.
 
-!\[Media Library Crop 2\]\[3\]{: height="75%" width="75%"}
+Next, the Braze onboarding team will make sure your short and long codes are enabled (in the US and Canada) for MMS. They will also update your subscription groups to show your current numbers that were added or enabled for MMS. Once these steps are complete, you can send MMS messages right away from our native SMS composer.
 
-### My image keeps timing out when I try to upload it. What can I do about this?
+### Why can’t I find MMS on my dashboard even though the feature is enabled?
 
-This can happen for a variety of reasons, but a common solution is to make sure your image is optimized before attempting to upload it. This means running your image through an image optimizer (such as [ImageOptim][5]).
-
-Additionally, if your image was built in Photoshop (or a similar software) and has many layers, merging and reducing the number of layers can also help.
-
-### Why can't I upload any image I want into the push composers?
-
-This is because most composers have restrictions on the image ratio size that is allowed.
-[2]: {% image_buster /assets/img_archive/media_library_crop1.png %} [3]: {% image_buster /assets/img_archive/media_library_crop2.png %}
-
-[5]: https://imageoptim.com/mac
+MMS is only displayed on the Braze dashboard when a subscription group is considered “MMS enabled”. This is reflected by an MMS tag when selecting the subscription group on the composer of an SMS/MMS message. This means that at least one number in the subscription group is capable of sending an MMS message.
