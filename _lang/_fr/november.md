@@ -3,16 +3,23 @@ nav_title: November
 page_order: 2
 noindex: true
 page_type: update
-description: "This article contains release notes for November 2016."
+description: "This article contains release notes for November 2020."
 ---
+ 
+# November 2020
 
-# November 2016
+## Tealium partnership is live
 
-## Connected audiences
+[Tealium]({{site.baseurl}}/partners/data_and_infrastructure_agility/customer_data_platform/tealium/#about-tealium) is a data hub that makes it easy to connect mobile, web, and alternative data from third-party sources. When connected with Braze, Tealium enables a data flow of custom events, user attributes, and purchases for real-time data action.
 
-Connected Audiences allows you to target messages to ad hoc subsets of your user base on the fly, without any pre-configuration in Braze. For example, a media app can use custom attribute arrays to track every category or TV show that a customer has favorited. Using Connected Audiences, you can connect a custom CMS with Braze and automatically send a push notification or email to anyone who has favorited a show whenever a new episode is released.
+## Braze Product Portal
 
-For more, refer to [Connected Audience Object][12] to learn more, or check out our blog on [Connected Audiences][13].
+The [Braze Product Portal]({{site.baseurl}}/user_guide/administrative/access_braze/portal/#product-portal-) contains the Braze product roadmap and opportunity for users to submit ideas. You can also see which features have been recently released. The product portal can be found in the upper-right section of the Braze dashboard, under “Resources”.
 
-[12]: {{site.baseurl}}/api/objects_filters/connected_audience/
-[13]: https://www.braze.com/blog/connected-audiences/
+## iOS Content Card implementation guide
+
+Embracing developer-centered technical strategy, Braze has released it's first implementation guide highlighting use-case driven iOS Content Card guidelines and best practices. This comprehensive guide provides unique use cases, video walkthroughs, accompanying code snippets, and guidance on how to log valuable user metrics. To read more about how you can get started implementing iOS Content Cards like a pro, check out our [Implementation Guide]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/content_cards/implementation_guide/).
+
+## Swift Package Manager
+
+The Swift Package Manager is integrated with the Swift build system and automatically will download, compile, and link dependencies. Installing the iOS SDK via Swift Package Manager will automate the majority of the installation process for you. For more information, take a look at the [documentation]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/initial_SDK_setup/swift_package_manager).
