@@ -1,62 +1,87 @@
 ---
 nav_title: Location Tracking
-article_title: Location Tracking for Android/FireOS
-platform:
-  - Android
-  - FireOS
+article_title: Location Tracking for iOS
+platform: iOS
 page_order: 6
-description: "This article shows how to configure location tracking for your Android application."
+description: "This article shows how to configure location tracking for your iOS application."
 Tool:
   - Location
 ---
 
-# Location tracking for Android/FireOS
+# Location tracking for iOS
 
-Add at least one of the following the following permission to your `AndroidManifest.xml` file to declare your app's intent to collect location data:
-
-```xml
-<uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
-```
-Or:
-
-```xml
-<uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
-```
+By default, Braze disables location tracking. We enable location tracking after the host application has opted in to location tracking and gained permission from the user. Provided that users have opted into location tracking, Braze will log a single location for each user on session start.
 
 {% alert important %}
-  With the release of Android M, Android switched from an install-time to a runtime permissions model. To enable location tracking on devices running M and above, the app must explicitly receive permission to use the location from the user (Braze will not do this). Once location permissions are obtained, Braze will automatically begin tracking location on the next session start, if location collection is enabled in `braze.xml`. Devices running earlier versions of Android only require location permissions to be declared in the `AndroidManifest.xml`. For more information, visit Android's [permission documentation](https://developer.android.com/training/permissions/index.html).
+In order for location tracking to work reliably in iOS 14 for users who give Approximate Location permission, you must update your SDK version to at least `3.26.1`.
 {% endalert %}
 
-`ACCESS_FINE_LOCATION` includes GPS data in reporting user location while `ACCESS_COARSE_LOCATION` includes data from the most battery-efficient non-GPS provider available (e.g. the network). Coarse location will likely be sufficient for the majority of location data use-cases; however, under the runtime permissions model, receiving location permission from the user implicitly authorizes the collection of fine location data. You can read more about the differences between these location permissions and how you ought to utilize them [here][1].
+## Enabling automatic location tracking
+Starting with Braze iOS SDK `v3.17.0`, location tracking is disabled by default. You can enable automatic location tracking using the `Info.plist` file. Add the `Braze` dictionary to your `Info.plist` file. Inside the `Braze` dictionary, add the `EnableAutomaticLocationCollection` boolean subentry and set the value to `YES`. Note that prior to Braze iOS SDK v4.0.2, the dictionary key `Appboy` must be used in place of `Braze`.
 
-## Disabling automatic location tracking
-
-To disable automatic location tracking, set `com_appboy_enable_location_collection` to false in `braze.xml`:
-
-```xml
-<bool name="com_appboy_enable_location_collection">false</bool>
-```
-
-Then you can manually log single location data points via the `setLastKnownLocation()` method on `BrazeUser` like this:
+ You can also enable automatic location tracking at app startup time via the [`startWithApiKey:inApplication:withLaunchOptions:withAppboyOptions`][4] method. In the `appboyOptions` dictionary, set `ABKEnableAutomaticLocationCollectionKey` to `YES`. For example:
 
 {% tabs %}
-{% tab JAVA %}
+{% tab OBJECTIVE-C %}
 
-```java
-Braze.getInstance(context).getCurrentUser().setLastKnownLocation(LATITUDE_DOUBLE_VALUE, LONGITUDE_DOUBLE_VALUE, ALTITUDE_DOUBLE_VALUE, ACCURACY_DOUBLE_VALUE);
+```objc
+[Appboy startWithApiKey:@"YOUR-API_KEY"
+          inApplication:application
+      withLaunchOptions:options
+      withAppboyOptions:@{ ABKEnableAutomaticLocationCollectionKey : @(YES) }];
 ```
 
 {% endtab %}
-{% tab KOTLIN %}
+{% tab swift %}
 
-```kotlin
-Braze.getInstance(context).currentUser?.setLastKnownLocation(LATITUDE_DOUBLE_VALUE, LONGITUDE_DOUBLE_VALUE, ALTITUDE_DOUBLE_VALUE, ACCURACY_DOUBLE_VALUE)
+```swift
+Appboy.start(withApiKey: "YOUR-API-KEY",
+                 in:application,
+                 withLaunchOptions:launchOptions,
+                 withAppboyOptions:[ ABKEnableAutomaticLocationCollectionKey : true ])
 ```
 
 {% endtab %}
 {% endtabs %}
 
-See [here in our Javadocs][4] for more information on the `setLastKnownLocation()` method.
+### Passing location data to Braze
 
-[1]: https://stuff.mit.edu/afs/sipb/project/android/docs/guide/topics/location/strategies.html
-[4]: https://appboy.github.io/appboy-android-sdk/javadocs/com/braze/BrazeUser.html#setLastKnownLocation-double-double-java.lang.Double-java.lang.Double-
+The following two methods can be used to manually set the last known location for the user.
+
+{% tabs %}
+{% tab OBJECTIVE-C %}
+
+```objc
+[[Appboy sharedInstance].user setLastKnownLocationWithLatitude:latitude
+                                                     longitude:longitude
+                                            horizontalAccuracy:horizontalAccuracy];
+
+```
+
+```objc
+[[Appboy sharedInstance].user setLastKnownLocationWithLatitude:latitude
+                                                     longitude:longitude
+                                            horizontalAccuracy:horizontalAccuracy
+                                                      altitude:altitude
+                                              verticalAccuracy:verticalAccuracy];
+
+```
+
+{% endtab %}
+{% tab swift %}
+
+```swift
+Appboy.sharedInstance()?.user.setLastKnownLocationWithLatitude(latitude: latitude, longitude: longitude, horizontalAccuracy: horizontalAccuracy)
+```
+
+```swift
+Appboy.sharedInstance()?.user.setLastKnownLocationWithLatitude(latitude: latitude, longitude: longitude, horizontalAccuracy: horizontalAccuracy, altitude: altitude, verticalAccuracy: verticalAccuracy)
+```
+
+{% endtab %}
+{% endtabs %}
+
+For more information, see [`ABKUser.h`][5].
+
+[4]: https://appboy.github.io/appboy-ios-sdk/docs/interface_appboy.html#aa9f1bd9e4a5c082133dd9cc344108b24
+[5]: https://github.com/Appboy/appboy-ios-sdk/blob/master/AppboyKit/include/ABKUser.h
