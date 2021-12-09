@@ -1,115 +1,98 @@
 ---
 nav_title: Social Data Tracking
-article_title: Social Data Tracking for Android/FireOS
-platform:
-  - Android
-  - FireOS
+article_title: Social Data Tracking for iOS
+platform: iOS
 page_order: 5
-description: "This reference article shows how to implement social data tracking for your Android application."
+description: "This reference article shows how to implement social data tracking for your iOS application."
 ---
 
-# Social data tracking for Android/FireOS
+# Social data tracking for iOS
 
-Similar to the Braze iOS SDK, the Braze Android SDK does not automatically collect Facebook and Twitter data. However, it's possible to add social media data to a Braze user's profile from the Android SDK as well:
+## Collecting social account data
 
-- Obtain social media data within your app via the Facebook SDK and Twitter APIs.
-  - [Facebook Documentation][1]
-  - [Twitter Documentation][2]
-- Initialize Facebook and Twitter User objects with social media data and pass them to Braze.
+The Braze iOS SDK does not automatically collect Facebook or Twitter user data. If you want to integrate Facebook user data in Braze user profiles, you need to fetch the user's data and pass it to Braze.
 
-## Social network data constructors
+## Passing Facebook data to Braze
+
+Initialize `ABKFacebookUser` objects with the Facebook data you have collected and pass it to Braze:
 
 {% tabs %}
-{% tab JAVA %}
+{% tab OBJECTIVE-C %}
 
-```java
-FacebookUser(
-  String facebookId,
-  String firstName,
-  String lastName,
-  String email,
-  String bio,
-  String cityName,
-  // Gender is a Braze enum.
-  Gender gender,
-  Integer numberOfFriends,
-  // Names of pages the user likes.
-  Collection<String> likes,
-  // mm/dd/yyyy format.
-  String birthday
-)
-TwitterUser(
-  Integer twitterUserId,
-  String twitterHandle,
-  String name,
-  String description,
-  Integer followerCount,
-  Integer followingCount,
-  Integer tweetCount,
-  String profileImageUrl
-)
+```objc
+ABKFacebookUser *facebookUser = [[ABKFacebookUser alloc] initWithFacebookUserDictionary:self.facebookUserProfile numberOfFriends:self.numberOfFacebookFriends likes:self.facebookLikes];
+[Appboy sharedInstance].user.facebookUser = facebookUser;
 ```
 
 {% endtab %}
-{% tab KOTLIN %}
+{% tab SWIFT %}
 
-```kotlin
-FacebookUser(
-  facebookId: String,
-  firstName: String,
-  lastName: String,
-  email: String,
-  bio: String,
-  cityName: String,
-  // Gender is a Braze enum.
-  gender: Gender gender,
-  numberOfFriends: Integer,
-  // Names of pages the user likes.
-  likes: Collection<String>,
-  // mm/dd/yyyy format.
-  birthday: String
-)
-TwitterUser(
-  twitterUserId: Integer,
-  twitterHandle: String,
-  name: String,
-  description: String,
-  followerCount: Integer,
-  followingCount: Integer,
-  tweetCount: Integer,
-  profileImageUrl: String
-)
+```swift
+let facebookUser = ABKFacebookUser(facebookUserDictionary: facebookUserDictionary, numberOfFriends: numberOfFriends, likes: likes)
+Appboy.sharedInstance()?.user.facebookUser = facebookUser
 ```
 
 {% endtab %}
 {% endtabs %}
 
-To pass data retrieved from social networks to Braze, you'll create a new FacebookUser or TwitterUser and then pass them to the method `BrazeUser.setFacebookData()`/`BrazeUser.setTwitterData()`. For example:
+> In ABKFacebookUser's init method `initWithFacebookUserDictionary:numberOfFriends:likes:`, all the parameters should be dictionaries and arrays returned directly from Facebook:
+
+| Parameter             | Definition                                                                |
+| --------------------- | ------------------------------------------------------------------------- |
+| `facebookUserProfile` | The dictionary returned from the endpoint "/me".                          |
+| `numberOfFriends`     | The length of the friends array returned from the endpoint "/me/friends". |
+| `likes`               | The array of user's Facebook likes from the endpoint "/me/likes".         |
+{: .reset-td-br-1 .reset-td-br-2}
+
+> For additional information regarding the Facebook Graph API, please refer to [the Facebook Graph API Developer Documentation][10].
+
+Additionally, you can tailor what Facebook data you're sending to Braze, in case you don't want to include the entire basic profile. For example:
 
 {% tabs %}
-{% tab JAVA %}
+{% tab OBJECTIVE-C %}
 
-```java
-FacebookUser facebookUser = new FacebookUser("100000", "FirstName", "LastName", "email@email.com", "bio", "City", Gender.MALE, 3, Arrays.asList(new String[]{ "like" }), "04/13/1990");
-Braze.getInstance(context).getCurrentUser().setFacebookData(facebookUser);
-
-TwitterUser twitterUser = new TwitterUser(100000, "handle", "Name", "description", 100, 50, 150, "image_url");
-Braze.getInstance(context).getCurrentUser().setTwitterData(twitterUser);
+```objc
+ABKFacebookUser *facebookUser = [[ABKFacebookUser alloc] initWithFacebookUserDictionary:facebookUserPublicProfile numberOfFriends:-1 likes:nil];  
 ```
 
 {% endtab %}
-{% tab KOTLIN %}
+{% tab SWIFT %}
 
-```kotlin
-val facebookUser = FacebookUser("100000", "FirstName", "LastName", "email@email.com", "bio", "City", Gender.MALE, 3, listOf("like"),"04/13/1990")
-Braze.getInstance(context).currentUser?.setFacebookData(facebookUser)
-
-val twitterUser = TwitterUser(100000, "handle", "Name", "description", 100, 50, 150, "image_url")
-Braze.getInstance(context).currentUser?.setTwitterData(twitterUser)
+```swift
+let facebookUser = ABKFacebookUser(facebookUserDictionary: facebookUserDictionary, numberOfFriends: -1, likes:nil)
 ```
 
 {% endtab %}
 {% endtabs %}
 
-[1]: https://developers.facebook.com/docs/howtos/androidsdk/3.0/login-with-facebook/#step1
-[2]: https://developer.twitter.com/en/docs
+For more information about integrating the Facebook SDK, follow the steps in [Facebook SDK documentation][2].
+
+## Passing Twitter data to Braze
+
+Initialize `ABKTwitterUser` objects, set up the Twitter data you have collected and pass it to Braze:
+
+{% tabs %}
+{% tab OBJECTIVE-C %}
+
+```objc
+ABKTwitterUser *twitterUser = [[ABKTwitterUser alloc] init];
+twitterUser.userDescription = self.userDescription;
+twitterUser.twitterID = self.twitterID;
+[Appboy sharedInstance].user.twitterUser = twitterUser;
+```
+
+{% endtab %}
+{% tab SWIFT %}
+
+```swift
+let twitterUser = ABKTwitterUser()
+twitterUser.userDescription = twitterDserDescription
+twitterUser.twitterID = twitterID
+Appboy.sharedInstance()?.user.twitterUser = twitterUser
+```
+
+{% endtab %}
+{% endtabs %}
+
+[2]: https://developers.facebook.com/docs/ios "facebook iOS sdk docs"
+[10]: https://developers.facebook.com/docs/graph-api/reference/v4.0/user "facebook graph api docs"
