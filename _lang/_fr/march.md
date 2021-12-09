@@ -3,18 +3,16 @@ nav_title: March
 page_order: 10
 noindex: true
 page_type: update
-description: "This article contains release notes for March 2020."
+description: "This article contains release notes for March 2021."
 ---
 
-# March 2020
+# March 2021
 
-## Custom attribute filter behavior
+## Fastly updates
 
-The dashboard has improved filters to include more intuitive behaviors. There have been two significant changes to how certain custom attributes filters work. The custom attribute filter changes are reflected in the filters:
-- Less than __X__ Days Ago
-- Less than __X__ Days in the Future
-- Day of Recurring Event<br>
+Beginning March 22, 2021, the Braze Services will require TLS connections support Server Name Indication (SNI), as our upstream content delivery network Fastly is migrating all TLS traffic to require SNI. All modern browsers, operating systems, and HTTPS connectivity protocols support SNI. Devices which do not support SNI will no longer be able to connect to Braze. Our traffic estimations indicate this is approximately 0.000001% of end user devices.
 
-__If you use these filters in your segmentation, we recommend readjusting your segments to take these changes into account.__
+## Audience Paths
 
-Check out our [documentation]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_attributes/#dates) for an explanation of the new behaviors.
+[Canvas Audience Paths]({{site.baseurl}}/audience_paths/) allows you to intuitively filter and segment users on a large scale with strategic priority-based user-groupings. This new Canvas step replaces the need to create excessive audience-based full steps, allowing you to combine what might have been 8 full steps into one! The introduction of this new step will help you simplify user targeting while clearing up your Canvases from unnecessary clutter and complexity.
+
