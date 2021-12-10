@@ -1,13 +1,13 @@
 ---
-nav_title: Connected Content Retries
-article_title: Connected Content Retries
+nav_title: Tentatives de contenu connecté
+article_title: Tentatives de contenu connecté
 page_order: 3
-description: "Because Connected Content relies on receiving data from APIs, there is the possibility that an API is intermittently unavailable while Braze makes the call. This article covers how to go about dealing with connected content retries."
+description: "Parce que le Contenu Connecté dépend de la réception de données provenant d'API, il est possible qu'une API soit indisponible par intermittence pendant que Braze fait l'appel. Cet article explique comment gérer les tentatives de contenu connecté."
 ---
 
-# Connected Content retries
+# Tentatives de contenu connecté
 
-Because Connected Content relies on receiving data from APIs, there is the possibility that an API is intermittently unavailable while Braze makes the call. In this case, Braze supports retry logic to re-attempt the request using exponential backoff. To enable retries, add `:retry` in the Connected Content call, as shown below:
+Parce que le Contenu Connecté dépend de la réception de données provenant d'API, il est possible qu'une API soit indisponible par intermittence pendant que Braze fait l'appel. Dans ce cas, Braze prend en charge la logique de retenter la requête en utilisant le backoff exponentiel. Pour activer les tentatives, ajoutez `:retry` dans l'appel de contenu connecté, comme indiqué ci-dessous:
 {% raw %}
 ```
 {% connected_content https://yourwebsite.com/api/endpoint :retry %}
@@ -15,12 +15,12 @@ Because Connected Content relies on receiving data from APIs, there is the possi
 ```
 {% endraw %}
 
-If the API call fails and this is enabled, Braze will retry the call while respecting the [rate limit][47] you set for each resend. Braze will move any failed messages to the back of the queue and add additional minutes, if necessary, to the total minutes it would take to send your message.
+Si l'appel API échoue et que ceci est activé, Braze va recommencer l'appel tout en respectant la [limite de taux][47] que vous avez définie pour chaque renvoyé. Braze déplacera tous les messages échoués à l'arrière de la file et ajoutera des minutes supplémentaires si nécessaire, au total les minutes qu'il faudrait pour envoyer votre message.
 
-If a retried attempt succeeds, the message is sent and no further retries are attempted for that message. If the Connected Content call errors out 5 times, the message is aborted similar to if an [abort message tag][1] was triggered.
+Si une tentative de réessai réussit, le message est envoyé et aucune nouvelle tentative n'est tentée pour ce message. Si les erreurs d'appel de contenu connecté sont 5 fois, le message est abandonné de la même façon que si une balise [d'annulation][1] a été déclenchée.
 
 {% alert note %}
-Connected Content `:retry` is not available for In-App Messages.
+Le contenu connecté `:retry` n'est pas disponible pour les messages In-App.
 {% endalert %}
 
 
