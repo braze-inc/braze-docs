@@ -1,34 +1,34 @@
 ---
-nav_title: Messaging Users
-article_title: Tagreting Users for Predictive Purchases
-description: "This reference article covers potential next steps after you have created a Purchase Prediction, such as filter implementation and strategic considerations."
+nav_title: Utilisateurs de messagerie
+article_title: Achats prédictifs par les utilisateurs
+description: "Cet article de référence couvre les prochaines étapes potentielles après avoir créé une prévision d'achat, comme l'implémentation de filtres et les considérations stratégiques."
 page_order: 3
 ---
 
-# Messaging users {#what-do-next}
+# Utilisateurs de messagerie {#what-do-next}
 
 {% alert note %}
-Preview and Demo Predictions will not allow users to be targeted for messaging, and the __Create Segment__, and __Create Campaign__ buttons will be disabled. To purchase this functionality, contact your account manager.
+Les prédictions d'aperçu et de démo ne permettront pas aux utilisateurs d'être ciblés pour recevoir des messages, et les boutons __Créer un segment__, et __Créer une campagne__ seront désactivés. Pour acheter cette fonctionnalité, contactez votre gestionnaire de compte.
 {% endalert %}
 
-## Implementing filters {#filters}
+## Filtres d'implémentation {#filters}
 
-From the individual __Predictions__ page, once you've decided what range of Purchase Likelihood Score or Category you want to target, you can use the __Create Segment__ or __Create Campaign__ buttons below the targeting sentences to create a new segment or campaign. This segment or campaign will filter for users with the Purchase Likelihood Score or Category selected with the slider.
+À partir de la page individuelle __Prédictions__ , une fois que vous avez décidé quelle gamme de points de probabilité d'achat ou de catégorie vous voulez cibler, vous pouvez utiliser les boutons __Créer un segment__ ou __Créer une campagne__ en dessous des phrases ciblées pour créer un nouveau segment ou une campagne. Ce segment ou cette campagne filtrera pour les utilisateurs avec le score de probabilité d'achat ou la catégorie sélectionnée avec le curseur.
 
-!\[Churn Filters\]\[5\]
+!\[Filtres Churn\]\[5\]
 
-You can also use filters in campaigns, Canvas, or segments to target user according to their Purchase Likelihood Score or Category, just like you use any other filter in Braze.
+Vous pouvez également utiliser des filtres dans des campagnes, des Canvas ou des segments pour cibler l'utilisateur en fonction de leur Score de probabilité d'achat ou de catégorie, comme vous utilisez n'importe quel autre filtre en Brésil.
 
-## Strategic considerations {#strategy}
+## Considérations stratégiques {#strategy}
 
-Now that you know who may or may not make a future purchase, start thinking about how you want to message customers and allocate your marketing resources.
+Maintenant que vous savez qui peut ou non faire un achat futur, commencer à réfléchir à la façon dont vous voulez envoyer des messages aux clients et allouer vos ressources marketing.
 
-__Here are a few ideas to jumpstart your Predictive Purchases strategy__:
+__Voici quelques idées pour lancer votre stratégie d'achat prédictif__:
 
-- Score a quick win by messaging users with the highest likelihood of purchasing. An email reminder about the items waiting in their carts, an in-app message prompt to "buy now!" or a personalized push notification might do the trick.<br><br>
-- Save the promotions for mid-likelihood users who need an extra nudge. Offer a special discount, retarget with relevant content on Facebook and Google, or share exclusive early access to a new experience (product, feature, or level).<br><br>
-- There are a couple of paths you can test out for low-likelihood purchasers. Think you can convince them to make a purchase? Dish out higher discounts or do a concentrated cross-channel blast for three days. Offer personalized recommendations or hands-on support to make the purchasing process as simple and easy as possible.<br><br>
-- Drop these users into a more passive campaign or Canvas as a resource-light way to keep your brand top-of-my mind. This could be a persona-specific weekly newsletter, a series of relevant customer case studies, or a monthly round-up of new tips & tricks.
+- Gagnez rapidement en envoyant des messages aux utilisateurs avec la plus grande probabilité d'achat. Un rappel par e-mail sur les articles en attente dans leurs paniers, un message dans l'application invite à "acheter maintenant! ou une notification push personnalisée peut faire l'affaire.<br><br>
+- Enregistrez les promotions pour les utilisateurs qui ont besoin d'un coup de pouce supplémentaire. Offrez une réduction spéciale, une redistribution avec du contenu pertinent sur Facebook et Google, ou partagez un accès exclusif à une nouvelle expérience (produit, fonctionnalité ou niveau).<br><br>
+- Il y a quelques pistes que vous pouvez tester pour les acheteurs à faible probabilité. Vous pensez pouvoir les convaincre de faire un achat? Dînez des rabais plus élevés ou faites une projection transversale concentrée pendant trois jours. Offrez des recommandations personnalisées ou un soutien pratique pour rendre le processus d'achat aussi simple et simple que possible.<br><br>
+- Déposez ces utilisateurs dans une campagne plus passive ou Canvas comme une façon de garder votre marque en tête de ma tête. Il peut s'agir d'une lettre d'information hebdomadaire spécifique à une personne, d'une série d'études de cas pertinents pour les clients, ou d'un aperçu mensuel de nouveaux conseils & astuces.
 
-Messaging users based on their Purchase Likelihood Score or Category doesn't just help you make money - it helps you save money too! Offer promotions on a sliding scale: the more likely users are to make a purchase, the fewer discounts they likely need. Finding this balance helps you give and get the right amount of value for each customer. Keep in mind that you can also layer other filters onto these segments to further qualify who gets which messages.
+Les utilisateurs de messagerie basés sur leur score de probabilité d'achat ou de catégorie ne vous aident pas seulement à gagner de l'argent - cela vous aide également à économiser de l'argent ! Offrez des promotions à une échelle glissante : plus les utilisateurs sont susceptibles de faire un achat, moins ils ont besoin de réductions. La recherche de ce solde vous aide à donner et à obtenir le bon montant de valeur pour chaque client. Gardez à l'esprit que vous pouvez également calquer d'autres filtres sur ces segments pour mieux qualifier qui reçoit quels messages.
 [5]: {% image_buster /assets/img/purchasePrediction/filters.png %}
