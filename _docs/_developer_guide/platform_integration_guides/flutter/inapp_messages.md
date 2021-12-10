@@ -37,7 +37,7 @@ myBrazePlugin.logInAppMessageButtonClicked(inAppMessage, 0);
 
 To disable automatic in-app message display for Android, first set `com_braze_flutter_enable_automatic_integration_initializer` to `false` in your `braze.xml` file.
 
-Then, implement the `IInAppMessageManagerListener` delegate as described in our Android section on [Custom Manager Listener][1] by following the steps below:
+Then, implement the `IInAppMessageManagerListener` delegate as described in our Android section on [Custom Manager Listener]({{site.baseurl}}/developer_guide/platform_integration_guides/android/in-app_messaging/customization/#custom-manager-listener) by following the steps below:
 
 1. In your `MainActivity.kt`, add this code to your `configureFlutterEngine` method:
 ```dart
@@ -67,11 +67,11 @@ private class BrazeInAppMessageManagerListener : IInAppMessageManagerListener {
 {% endtab %}
 {% tab iOS %}
 
-To disable automatic in-app message display for iOS, implement the `ABKInAppMessageControllerDelegate` delegate as described in our iOS section on [Core In-App Message Delegate][2].
+To disable automatic in-app message display for iOS, implement the `ABKInAppMessageControllerDelegate` delegate as described in our iOS section on [Core In-App Message Delegate]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/in-app_messaging/customization/#core-in-app-message-controller-delegate).
 
 Then, update your `beforeInAppMessageDisplayed` delegate implementation to return `ABKInAppMessageDisplayChoice.discardInAppMessage`.
 
-For an example, see [AppDelegate.swift][3] in our sample app.
+For an example, see [AppDelegate.swift](https://github.com/braze-inc/braze-flutter-sdk/blob/master/example/ios/Runner/AppDelegate.swift) in our sample app.
 
 {% endtab %}
 {% endtabs %}
@@ -92,11 +92,11 @@ This callback works with no additional integration required.
 {% endtab %}
 {% tab iOS %}
 
-Implement the `ABKInAppMessageControllerDelegate` delegate as described in our iOS section on [Core In-App Message Delegate][4].
+Implement the `ABKInAppMessageControllerDelegate` delegate as described in our iOS section on [Core In-App Message Delegate]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/in-app_messaging/customization/#core-in-app-message-controller-delegate).
 
 Your `beforeInAppMessageDisplayed` delegate implementation must call `BrazePlugin.process(inAppMessage)`.
 
-For an example, see [AppDelegate.swift][5] in our sample app.
+For an example, see [AppDelegate.swift](https://github.com/braze-inc/braze-flutter-sdk/blob/master/example/ios/Runner/AppDelegate.swift) in our sample app.
 
 {% endtab %}
 {% endtabs %}
@@ -113,17 +113,12 @@ BrazePlugin myBrazePlugin = new BrazePlugin(customConfigs: {replayCallbacksConfi
 Follow the steps below to test a sample in-app message.
 
 1. Set an active user in the React application by calling `myBrazePlugin.changeUser('your-user-id')` method.
-2. Head to **Campaigns** and follow [this guide][6] to create a new **In-App Messaging** campaign.
+2. Head to **Campaigns** and follow [this guide][1] to create a new **In-App Messaging** campaign.
 3. Compose your test in-app messaging campaign and head over to the **Test** tab. Add the same `user-id` as the test user and click **Send Test**.
 4. Tap the push notification and that should display the in-app message on your device.
 
-![In-App Messaging Campaign Test][7]
+![In-App Messaging Campaign Test][2]
 
 
-[1]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/in-app_messaging/customization/#custom-manager-listener
-[2]: {{site.baseurl}}/developer_guide/platform_integration_guides/ios/in-app_messaging/customization/#core-in-app-message-controller-delegate
-[3]: https://github.com/braze-inc/braze-flutter-sdk/blob/master/example/ios/Runner/AppDelegate.swift
-[4]: {{site.baseurl}}/developer_guide/platform_integration_guides/ios/in-app_messaging/customization/#core-in-app-message-controller-delegate
-[5]: https://github.com/braze-inc/braze-flutter-sdk/blob/master/example/ios/Runner/AppDelegate.swift
-[6]: {{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/create/
-[7]: {% image_buster /assets/img/react-native/iam-test.png %} "In-App Messaging Test"
+[1]: {{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/create/
+[2]: {% image_buster /assets/img/react-native/iam-test.png %} "In-App Messaging Test"
