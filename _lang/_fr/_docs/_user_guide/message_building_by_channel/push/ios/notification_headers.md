@@ -1,19 +1,19 @@
 ---
-nav_title: "iOS Push Message Titles"
-article_title: Push Message Tiles
+nav_title: "Titres des messages push iOS"
+article_title: Tuiles de message push
 page_order: 4
-page_type: reference
-description: "This reference article briefly covers how to use, setup and implement iOS Push Message Tiles."
+page_type: Référence
+description: "Cet article de référence couvre brièvement comment utiliser, configurer et implémenter les tuiles de messages Push iOS."
 platform: iOS
 channel:
-  - push
+  - Pousser
 ---
 
-# iOS push message titles
+# Titres des messages push iOS
 
-To add a headline to an iOS push notification, use the Title field in the Braze message composer. The headline will appear in bold once the message is sent.
+Pour ajouter un titre à une notification push iOS, utilisez le champ Titre dans le compositeur de message Braze. Le titre apparaîtra en gras une fois le message envoyé.
 
-!\[iOS Title Image\]\[1\]
+!\[Image Titre d'iOS\]\[1\]
 
-Wondering how many characters you can use in a title without it being truncated? Check out our [iOS character count guidelines]({{site.baseurl}}/user_guide/message_building_by_channel/push/ios/rich_notifications/#character-count).
+Vous vous demandez combien de caractères vous pouvez utiliser dans un titre sans qu'il soit tronqué? Consultez nos [lignes directrices pour le nombre de caractères iOS]({{site.baseurl}}/user_guide/message_building_by_channel/push/ios/rich_notifications/#character-count).
 [1]: {% image_buster /assets/img_archive/ios_title.png %}
