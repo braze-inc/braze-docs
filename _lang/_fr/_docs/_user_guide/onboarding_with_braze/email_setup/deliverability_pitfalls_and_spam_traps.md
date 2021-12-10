@@ -1,33 +1,33 @@
 ---
-nav_title: Deliverability Pitfalls & Spam Traps
-article_title: Deliverability Pitfalls & Spam Traps
+nav_title: Pièges de livrabilité & Pièges à Spam
+article_title: Pièges de livrabilité & Pièges à Spam
 page_order: 3
-page_type: reference
-description: "This reference article covers potential email deliverability pitfalls, spam traps, and how to avoid them."
-channel: email
+page_type: Référence
+description: "Cet article de référence couvre les pièges potentiels de délivrabilité des e-mails, les pièges à spams et la façon de les éviter."
+channel: Email
 ---
 
-# Deliverability pitfalls and spam traps
+# Pièges de livrabilité et spams
 
-Your email deliverability can be affected by any of the following spam traps:
+La délivrabilité de vos e-mails peut être affectée par l'un des pièges de spam suivants :
 
-| Trap             | Description                                                                               |
-| ---------------- | ----------------------------------------------------------------------------------------- |
-| Pristine Traps   | Email addresses and domains that have never been used.                                    |
-| Recycled Traps   | Email addresses that were once real users but are now dormant.                            |
-| Typo Traps       | Email addresses containing common typos.                                                  |
-| Spam Complaints  | When your email is marked as spam by a customer.                                          |
-| High Bounce Rate | When your email consistently fails to deliver because the recipient's address is invalid. |
+| Piège                | Libellé                                                                                                          |
+| -------------------- | ---------------------------------------------------------------------------------------------------------------- |
+| Pièges immaculés     | Adresses e-mail et domaines qui n'ont jamais été utilisés.                                                       |
+| Pièges recyclés      | Adresses email qui étaient jadis de vrais utilisateurs, mais sont dormantes.                                     |
+| Pièges Typo          | Adresses e-mail contenant des fautes de frappe communes.                                                         |
+| Spam Plaintes        | Lorsque votre e-mail est marqué comme spam par un client.                                                        |
+| Taux de rebond élevé | Lorsque votre e-mail ne parvient pas à livrer systématiquement parce que l'adresse du destinataire est invalide. |
 {: .reset-td-br-1 .reset-td-br-2}
 
-## Avoiding spam traps
+## Éviter les pièges à spams
 
-These traps can be avoided if you set up a confirmed opt-in process. By sending an initial opt-in email and asking customers to verify that they want your messages, you're ensuring you send to real, valid addresses and that your recipients want to hear from you.
+Ces pièges peuvent être évités si vous installez un processus d'opt-in confirmé. En envoyant un e-mail initial opt-in et en demandant aux clients de vérifier qu'ils veulent vos messages, vous vous assurez d'envoyer à des adresses réelles et valides et que vos destinataires veulent recevoir de votre part.
 
-Additional ways to avoid spam traps:
+Des moyens supplémentaires pour éviter les pièges à spams :
 
-1. Send a double-opt-in email.
-2. Implement a best-practice [sunset policy]({{site.baseurl}}/user_guide/message_building_by_channel/email/best_practices/).
-3. __Never purchase email lists.__
+1. Envoyer un e-mail à double opt-in.
+2. Implémenter une politique des meilleures pratiques [sunset policy]({{site.baseurl}}/user_guide/message_building_by_channel/email/best_practices/).
+3. __N'achetez jamais de listes de courriels.__
 
-The Braze Customer Success and Deliverability teams can help make sure you're following best practices to maximize deliverability across the globe.
+Les équipes de Brise Customer Success and Deliverability peuvent vous aider à suivre les meilleures pratiques pour maximiser la délivrabilité partout dans le monde.
