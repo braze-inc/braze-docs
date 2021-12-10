@@ -1,131 +1,131 @@
 ---
-nav_title: Editor Blocks
-article_title: Drag & Drop Editor Blocks
+nav_title: Blocs de l'éditeur
+article_title: Glisser & déposer les blocs de l'éditeur
 alias: "/dnd/editor_blocks/"
-channel: email
+channel: Email
 page_order: 2
-description: "This reference article covers the different editor blocks that are provided in the email Drag & Drop editor."
-tool: Media
+description: "Cet article de référence couvre les différents blocs d'éditeur qui sont fournis dans l'éditeur de courriel Glisser & Déposer."
+tool: Médias
 ---
 
-# Drag & Drop Editor blocks
+# Glisser & déposer les blocs de l'éditeur
 
-Editor blocks are the various blocks available in the Drag & Drop Editor under the 'Content' section.  This section includes a series of tiles that represent the different kinds of content you can use in your message. More will become available in the future.
+Les blocs de l'éditeur sont les différents blocs disponibles dans l'éditeur Glisser & Déposer sous la section 'Contenu'.  Cette section comprend une série de tuiles qui représentent les différents types de contenu que vous pouvez utiliser dans votre message. D'autres seront disponibles à l'avenir.
 
-To use them, drag one inside a column. It will auto-adjust to the column width.  Every content block has its owns settings, such as granular control on padding. The right-side panel automatically switches to a property panel for the selected content element.
+Pour les utiliser, faites glisser un à l'intérieur d'une colonne. Il s'ajuste automatiquement à la largeur de la colonne.  Chaque bloc de contenu a ses propres paramètres, tels que le contrôle granulaire du remplissage. Le panneau de droite passe automatiquement à un panneau de propriétés pour l'élément de contenu sélectionné.
 
-## Block types
+## Types de bloc
 
-| name      | description                                                                                               |
-| --------- | --------------------------------------------------------------------------------------------------------- |
-| `Title`   | Allows users to add text with H1, H2, and H3 tags for email.                                              |
-| `Text`    | Allows users to enter text into their message.  A toolbar helps with font and text editing functionality. |
-| `Image`   | Allows you to insert an image from the Media Library.                                                     |
-| `Button`  | Add a standard button.  Properties for this block allow for editing and setting links easily.             |
-| `Divider` | Insert a solid, dotted, or dashed line to help with spacing.                                              |
-| `HTML`    | Insert raw HTML.  Great for advanced Liquid such as Connected Content or conditional statements.          |
-| `Menu`    | Create a flexible menu for the message you're designing.                                                  |
-| `Spacer`  | Add space, or "padding", between other blocks.                                                            |
+| Nom                | Libellé                                                                                                                |
+| ------------------ | ---------------------------------------------------------------------------------------------------------------------- |
+| `Titre de la page` | Permet aux utilisateurs d'ajouter du texte avec les balises H1, H2 et H3 pour les courriels.                           |
+| `Texte du texte`   | Permet aux utilisateurs de saisir du texte dans leur message.  Une barre d'outils aide à éditer la police et le texte. |
+| `Image`            | Permet d'insérer une image de la médiathèque.                                                                          |
+| `Bouton`           | Ajouter un bouton standard.  Les propriétés de ce bloc permettent l'édition et le réglage des liens facilement.        |
+| `Diviseur`         | Insérez une ligne solide, pointillée ou pointillée pour faciliter l'espacement.                                        |
+| `HTML`             | Insert raw HTML.  Idéal pour les liquides avancés tels que le contenu connecté ou les instructions conditionnelles.    |
+| `Menu`             | Créez un menu flexible pour le message que vous concevez.                                                              |
+| `Espaceur`         | Ajouter de l'espace, ou "remplissage", entre les autres blocs.                                                         |
 {: .reset-td-br-1 .reset-td-br-2}
 
-## Block type properties
+## Propriétés du type de bloc
 
-Details for each block type are provided below.
+Les détails pour chaque type de bloc sont fournis ci-dessous.
 
-### Title
+### Titre de la page
 
-| properties       | description                                                     |
-| ---------------- | --------------------------------------------------------------- |
-| `Title`          | Select the heading style.  H1, H2, or H3 are available only.    |
-| `Font Family`    | The style to be used for your title                             |
-| `Font Size`      | The size of your text                                           |
-| `Text Color`     | Modifies the color of the title                                 |
-| `Link Color`     | Modifies the color of the link                                  |
-| `Align`          | Moves the title to be either left, center or right oriented     |
-| `Line Height`    | Modify the distance between lines of text                       |
-| `Line spacing`   | Modify the distance in between each character                   |
-| `Text direction` | Default left to right, but can be edited to write right-to-left |
+| Propriétés            | Libellé                                                                              |
+| --------------------- | ------------------------------------------------------------------------------------ |
+| `Titre de la page`    | Sélectionnez le style de l'en-tête.  H1, H2 ou H3 sont disponibles uniquement.       |
+| `Famille de police`   | Le style à utiliser pour votre titre                                                 |
+| `Font Size`           | La taille de votre texte                                                             |
+| `Couleur du texte`    | Modifie la couleur du titre                                                          |
+| `Couleur du lien`     | Modifie la couleur du lien                                                           |
+| `Align`               | Déplace le titre soit à gauche, au centre ou à droite                                |
+| `Hauteur de la ligne` | Modifier la distance entre les lignes de texte                                       |
+| `Interligne`          | Modifier la distance entre chaque caractère                                          |
+| `Direction du texte`  | Par défaut de gauche à droite, mais peut être modifié pour écrire de droite à gauche |
 {: .reset-td-br-1 .reset-td-br-2}
 
-### Text
+### Texte du texte
 
-| properties     | description                                   |
-| -------------- | --------------------------------------------- |
-| `Text Color`   | Modifies the color of the title               |
-| `Link Color`   | Modifies the color of the link                |
-| `Line Height`  | Modify the distance between lines of text     |
-| `Line spacing` | Modify the distance in between each character |
+| Propriétés            | Libellé                                        |
+| --------------------- | ---------------------------------------------- |
+| `Couleur du texte`    | Modifie la couleur du titre                    |
+| `Couleur du lien`     | Modifie la couleur du lien                     |
+| `Hauteur de la ligne` | Modifier la distance entre les lignes de texte |
+| `Interligne`          | Modifier la distance entre chaque caractère    |
 {: .reset-td-br-1 .reset-td-br-2}
 
 ### Image
 
-| properties       | description                                                                     |
-| ---------------- | ------------------------------------------------------------------------------- |
-| `Auto Width`     | Modifies the px of the image                                                    |
-| `Align`          | Moves the image to be either left, center or right oriented                     |
-| `URL`            | The hosted address for your image                                               |
-| `Alternate text` | The written copy that appears in place of an image when the image fails to load |
+| Propriétés         | Libellé                                                                              |
+| ------------------ | ------------------------------------------------------------------------------------ |
+| `Auto Width`       | Modifie le px de l'image                                                             |
+| `Align`            | Déplace l'image vers la gauche, le centre ou la droite                               |
+| `URL`              | L'adresse hébergée pour votre image                                                  |
+| `Texte alternatif` | La copie écrite qui apparaît à la place d'une image lorsque l'image ne se charge pas |
 {: .reset-td-br-1 .reset-td-br-2}
 
 {% alert tip %}
-_Note about Auto Width_ Automatic image resizing picks the best size for the image based on a combination of image width and available space in the layout:
-- Large images, wider than the available space, will be set at 100% width and will keep this ratio on mobile, using the entire device display width.
-- Small images, smaller than the available space, will use the image's natural size to avoid distortion effects or blurry pics.
+_Note à propos de la largeur automatique_ Le redimensionnement automatique de l'image choisit la meilleure taille pour l'image en se basant sur une combinaison de largeur d'image et d'espace disponible dans la mise en page :
+- Grandes images, plus larges que l'espace disponible, sera défini à 100% de largeur et conservera ce ratio sur mobile, en utilisant la largeur d'affichage de l'appareil entière.
+- Les petites images, plus petites que l'espace disponible, utilisent la taille naturelle de l'image pour éviter des effets de distorsion ou des images floues.
 {% endalert %}
 
-### Button
+### Bouton
 
-| properties  | description                                                                      |
-| ----------- | -------------------------------------------------------------------------------- |
-| `Link Type` | The desired action when clicking the button.  Sets the appropriate link protocol |
-| `URL`       | Dynamic based on the Link Type chosen.                                           |
+| Propriétés  | Libellé                                                                             |
+| ----------- | ----------------------------------------------------------------------------------- |
+| `Link Type` | L'action désirée en cliquant sur le bouton.  Définit le protocole de lien approprié |
+| `URL`       | Dynamique basé sur le type de lien choisi.                                          |
 {: .reset-td-br-1 .reset-td-br-2}
 
-### Divider
+### Diviseur
 
-| properties    | description                                                                                                                             |
-| ------------- | --------------------------------------------------------------------------------------------------------------------------------------- |
-| `Transparent` | If enabled, 'line' and 'width' options are removed.                                                                                     |
-| `Line`        | The different line formats, whether dotted, spotted, or solid.  In addition, you can modify the thickness and color of the divider line |
-| `Width`       | Adjusts the spread of the divider in increments of 5                                                                                    |
-| `Align`       | Moves the line to be either left, center, or right-oriented                                                                             |
+| Propriétés     | Libellé                                                                                                                                                           |
+| -------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `Transparence` | Si activé, les options 'ligne' et 'largeur' sont supprimées.                                                                                                      |
+| `Lignes`       | Les différents formats de ligne, qu'ils soient pointillés, pointés ou solides.  De plus, vous pouvez modifier l'épaisseur et la couleur de la ligne de séparation |
+| `Width`        | Ajuste le spread du diviseur par incréments de 5                                                                                                                  |
+| `Align`        | Déplace la ligne à gauche, centre ou à droite                                                                                                                     |
 {: .reset-td-br-1 .reset-td-br-2}
 
 ### HTML
 
-| properties    | description        |
-| ------------- | ------------------ |
-| `html editor` | Enter the raw HTML |
+| Propriétés     | Libellé                  |
+| -------------- | ------------------------ |
+| `Éditeur html` | Saisir le code HTML brut |
 {: .reset-td-br-1 .reset-td-br-2}
 
 ### Menu
 
-| properties             | description                                                                                                |
-| ---------------------- | ---------------------------------------------------------------------------------------------------------- |
-| `Configure menu items` | Add a menu item                                                                                            |
-| `Font Family`          | The style to be used for your menu                                                                         |
-| `Font Size`            | The size of your menu                                                                                      |
-| `Text Color`           | Modifies the color of the menu                                                                             |
-| `Link Color`           | Modifies the color of the menu text                                                                        |
-| `Align`                | Moves the menu to be either left, center or right oriented                                                 |
-| `Letter spacing`       | Modify the distance in between each character                                                              |
-| `Layout`               | Either horizontal or vertical                                                                              |
-| `Separator`            | Add character(s) in between the menu options                                                               |
-| `Mobile menu`          | Options to modify the icon size, color, and icon type when shown on a mobile device                        |
-| `Item padding`         | If enabled, you can modify the padding by using either the + or - button or by inputting a specific number |
-| `All sides`            | If 'item padding' is disabled, set a consistent padding number                                             |
+| Propriétés                        | Libellé                                                                                                                |
+| --------------------------------- | ---------------------------------------------------------------------------------------------------------------------- |
+| `Configurer les éléments du menu` | Ajouter un lien de menu                                                                                                |
+| `Famille de police`               | Le style à utiliser pour votre menu                                                                                    |
+| `Font Size`                       | La taille de votre menu                                                                                                |
+| `Couleur du texte`                | Modifie la couleur du menu                                                                                             |
+| `Couleur du lien`                 | Modifie la couleur du texte du menu                                                                                    |
+| `Align`                           | Déplace le menu vers la gauche, le centre ou la droite                                                                 |
+| `Espacement des lettres`          | Modifier la distance entre chaque caractère                                                                            |
+| `Mise en page`                    | horizontal ou vertical                                                                                                 |
+| `Séparateur`                      | Ajouter des caractères(s) entre les options du menu                                                                    |
+| `Menu mobile`                     | Options pour modifier la taille de l'icône, la couleur et le type d'icône lorsqu'il est affiché sur un appareil mobile |
+| `Item padding`                    | Si activé, vous pouvez modifier le remplissage en utilisant le bouton + ou - ou en entrant un numéro spécifique        |
+| `Tous les côtés`                  | Si le 'remplissage d'élément' est désactivé, définissez un numéro de remplissage cohérent                              |
 {: .reset-td-br-1 .reset-td-br-2}
 
-### Spacer
+### Espaceur
 
-| properties | description                                                  |
-| ---------- | ------------------------------------------------------------ |
-| `height`   | Adjusts the height of the spacer block. The default is 60px. |
+| Propriétés | Libellé                                                                |
+| ---------- | ---------------------------------------------------------------------- |
+| `Hauteur`  | Ajuste la hauteur du bloc intercalaire. La valeur par défaut est 60px. |
 {: .reset-td-br-1 .reset-td-br-2}
 
-### Add Liquid personalization
+### Ajouter une personnalisation Liquid
 
-| name                  | description                                                                                                                                   |
-| --------------------- | --------------------------------------------------------------------------------------------------------------------------------------------- |
-| `Add Personalization` | Located on the left menu.  Allows you to lookup standard liquid snippets such as default attributes, custom attributes, content blocks etc... |
+| Nom                            | Libellé                                                                                                                                                                            |
+| ------------------------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `Ajouter une personnalisation` | Situé dans le menu de gauche.  Permet de rechercher des extraits de liquides standard tels que les attributs par défaut, les attributs personnalisés, les blocs de contenu, etc... |
 {: .reset-td-br-1 .reset-td-br-2}
