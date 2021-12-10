@@ -1,107 +1,107 @@
 ---
-nav_title: Promotion Codes
-article_title: Promotion Codes
+nav_title: Codes de Promotion
+article_title: Codes de Promotion
 page_order: 5
-alias: "/promotion_codes/"
-description: "This reference article covers how to create promotion code lists and add them into your campaigns and Canvases."
+alias: "/fr/promotion_codes/"
+description: "Cet article de référence couvre la façon de créer des listes de codes promotionnels et de les ajouter à vos campagnes et à vos Canvases."
 ---
 
-# Promotion codes
+# Codes promotionnels
 
-> Promotion codes—also called promo codes—are a great way to keep users engaged by driving interactions with a heavy emphasis on purchases. <br><br>With Braze's Liquid functionality, we offer a way to make widespread promotion code usage a snap, allowing messages to now pull from the promotion list you provided, automatically and intuitively. The promotion codes feature offers expiry dates of up to six months and support for up to 20MM individual codes per list.
+> Les codes promotionnels, également appelés codes promotionnels, sont un excellent moyen de maintenir les utilisateurs engagés en conduisant des interactions avec une grande importance pour les achats. <br><br>Avec la fonctionnalité Liquid de Braze, nous offrons un moyen de faire de l'utilisation généralisée du code promotionnel un instantané, permettant maintenant aux messages de tirer de la liste de promotion que vous avez fournie, automatiquement et intuitivement. La fonction de codes promotionnels offre des dates d'expiration allant jusqu'à six mois et supporte jusqu'à 20 MM de codes individuels par liste.
 
 {% alert important %}
-Promotion codes can't be sent in in-app messages.
+Les codes promotionnels ne peuvent pas être envoyés dans les messages de l'application.
 {% endalert %}
 
-## Creating a promotion code list
+## Création d'une liste de codes promotionnels
 
 !\[Promo Codes 1\]\[1\]{: style="float:right;max-width:30%;margin-left:15px;"}
 
-### Step 1: Navigate to the Promotion Code section
+### Étape 1 : Accédez à la section Code de Promotion
 
-From the dashboard, go to **Promotion Codes**, located under the **Integrations** section, then select **Create Promotion Code List**.
+À partir du tableau de bord, allez sur **Codes de Promotion**, situé dans la section **Intégrations** , puis sélectionnez **Créer une liste de code promotionnel**.
 
-### Step 2: Naming and creating your promotion code
+### Étape 2 : Nommer et créer votre code de promotion
 
-Name your promotion code list and add an optional description.
+Nommez votre liste de codes promotionnels et ajoutez une description facultative.
 
 !\[Promo Codes 2\]\[2\]{: style="max-width:90%"}
 
-Next, create a code snippet for the promotion code. This code snippet will be what you will reference in Liquid to display this specific set of promotion codes. Make sure that it is a code snippet that is not already being used in another list.
+Ensuite, créez un extrait de code pour le code promotionnel. Ce code snippet sera ce que vous allez référencer dans Liquid pour afficher cet ensemble spécifique de codes promotionnels. Assurez-vous qu'il s'agit d'un extrait de code qui n'est pas déjà utilisé dans une autre liste.
 
 {% alert important %}
-Snippets are case sensitive, for example, “Birthday_promo” and “birthday_promo” will be recognized as two different snippets.
+Les extraits sont sensibles à la casse, par exemple, « Birthday_promo» et « birthday_promo» seront reconnus comme deux extraits différents.
 {% endalert %}
 
 !\[Promo Codes 3\]\[3\]{: style="max-width:90%"}
 
 {% alert warning %}
-You can't change the code snippet after saving!
+Vous ne pouvez pas changer le code snippet après la sauvegarde!
 {% endalert %}
 
-### Step 3: Promotion code options
+### Étape 3 : Options de code promotionnel
 
-Each promotion code list has a corresponding expiration date and time that get set upon creation. The max expiration length is six months into the future from the day you’re creating or editing your list. Within that time, you can change and update the expiration date repeatedly. This expiration date will apply to all codes added to this list. Upon expiration, the codes will be deleted from the Braze system and any messages calling that list’s code snippet will not be sent.
+Chaque liste de codes promotionnels a une date et une heure d'expiration correspondantes qui seront définies lors de la création. La durée maximale d'expiration est de six mois dans le futur à partir du jour où vous créez ou éditez votre liste. Dans ce délai, vous pouvez modifier et mettre à jour la date d'expiration à plusieurs reprises. Cette date d'expiration s'appliquera à tous les codes ajoutés à cette liste. À l’expiration, les codes seront supprimés du système Braze et tous les messages appelant le code snippet de cette liste ne seront pas envoyés.
 
 !\[Promo Codes 4\]\[4\]{: style="max-width:90%"}
 
-You also have the option to set up optional and customizable threshold alerts. If set up, these alerts will email the designated recipient either when the list is running low on available promotion codes in this list, or when your promotion code list is close to expiration. The recipient will be notified once a day.
+Vous avez également la possibilité de mettre en place des alertes de seuil facultatives et personnalisables. Si configuré, ces alertes enverront un e-mail au destinataire désigné soit lorsque la liste est faible sur les codes de promotion disponibles dans cette liste, ou lorsque votre liste de codes promotionnels est proche de l'expiration. Le destinataire sera averti une fois par jour.
 
-!\[Promo Codes 5\]\[5\]
+!\[Codes promo 5\]\[5\]
 
-### Step 4: Promotion code upload
+### Étape 4: Téléchargement de code promotionnel
 
-Braze does not manage code creation or redemption, so as a result, you’ll have to generate your promo codes to a CSV file and upload them to Braze. You can use our built-in integration with [Voucherify]({{site.baseurl}}/partners/channel_extensions/loyalty/voucherify/) or [Talon.One]({{site.baseurl}}/partners/channel_extensions/loyalty/talonone/) to create and export promo codes. Make sure that there is only one code on each row.
-
-{% alert note %}
-Max file size is 100MB and the max list size is 20MM of unused codes. If you find the wrong file was uploaded, simply upload a new file and the previous file will be replaced.
-{% endalert %}
-
-!\[Promo Codes 6\]\[6\]
-
-After the upload is complete, click **Save List** to save all the details and codes you just entered.
-
-!\[Promo Codes 7\]\[7\]
-
-Upon clicking save, you will see that a new row appears in the **Import History** below. To refresh the table to see if your import has finished, click <span style="font-size: 14px;margin-bottom: .5rem;height: 16px;width: 16px;" class="fas fa-sync" ></span> **Sync** at the top of the table.
-
-!\[Promo Codes 8\]\[8\]
+Braze ne gère pas la création ou le rachat de code, donc en conséquence, vous devrez générer vos codes promotionnels dans un fichier CSV et les télécharger sur Braze. Vous pouvez utiliser notre intégration intégrée avec [Voucherify]({{site.baseurl}}/partners/channel_extensions/loyalty/voucherify/) ou [Talon.One]({{site.baseurl}}/partners/channel_extensions/loyalty/talonone/) pour créer et exporter des codes promotionnels. Assurez-vous qu'il n'y a qu'un seul code sur chaque ligne.
 
 {% alert note %}
-Larger files will take a few minutes to import. While you wait, you are free to leave the page and work on something while the import is in progress. When the import is finished, you will see the status change to **Complete** in the table.
+La taille maximale du fichier est de 100 Mo et la taille maximale de la liste est de 20 MM de codes inutilisés. Si vous trouvez que le mauvais fichier a été téléchargé, téléchargez simplement un nouveau fichier et le fichier précédent sera remplacé.
 {% endalert %}
 
-#### Updating a promotion code list
+!\[Codes promo 6\]\[6\]
 
-To update a list, simply open up one of your existing lists. You can change the Name, Description, List Expiration, Threshold Alerts, and add more codes to the list by uploading new files and clicking **Update List**. All codes in the list will have the same expiration, regardless of the date of import.
+Une fois le téléchargement terminé, cliquez sur **Enregistrer la liste** pour enregistrer tous les détails et codes que vous venez de saisir.
 
-### Step 5: Use promotion codes
+!\[Codes promo 7\]\[7\]
 
-To send promotion codes in messages, click **Copy Snippet** to copy the code snippet you set when creating your promotion code list.
+En cliquant sur Enregistrer, vous verrez qu'une nouvelle ligne apparaît dans l' **Historique d'Importation** ci-dessous. Pour actualiser la table pour voir si votre importation est terminée, cliquez sur <span style="font-size: 14px;margin-bottom: .5rem;height: 16px;width: 16px;" class="fas fa-sync" ></span> **Synchroniser** en haut de la table.
+
+!\[Codes promo 8\]\[8\]
+
+{% alert note %}
+Les fichiers plus volumineux prendront quelques minutes à importer. Pendant que vous attendez, vous êtes libre de quitter la page et de travailler sur quelque chose pendant que l'importation est en cours. Une fois l'import terminé, vous verrez le changement de statut à **Compléter** dans le tableau.
+{% endalert %}
+
+#### Mise à jour d'une liste de codes promotionnels
+
+Pour mettre à jour une liste, ouvrez simplement une de vos listes existantes. Vous pouvez changer le nom, la description, l'expiration de la liste, les alertes de seuil, et ajoutez plus de codes à la liste en téléchargeant de nouveaux fichiers et en cliquant sur **Liste de mise à jour**. Tous les codes de la liste auront la même expiration, quelle que soit la date d'importation.
+
+### Étape 5 : Utilisez des codes promotionnels
+
+Pour envoyer des codes promotionnels dans des messages, cliquez sur **Copier le snippet** pour copier le snippet de code que vous avez défini lors de la création de votre liste de codes promotionnels.
 
 !\[Promo Codes 9\]\[9\]{: style="max-width:70%"}
 
-From there, you can paste this code into a message within the dashboard.
+À partir de là, tu peux coller ce code dans un message dans le tableau de bord.
 
 !\[Promo Codes 10\]\[10\]{: style="max-width:70%"}
 
-Now, using [Liquid][11], you can insert one of the unique promotion codes from the uploaded CSV file into a message. That code will be marked as sent on the Braze backend to ensure no other message sends that same code. When a code snippet is used a multichannel campaign or Canvas step, the same unique code will be sent to each user across the channels.
+Maintenant, en utilisant [Liquid][11], vous pouvez insérer un des codes de promotion uniques du fichier CSV téléchargé dans un message. Ce code sera marqué comme envoyé sur le backend de Braze pour s'assurer qu'aucun autre message n'envoie ce même code. Lorsqu'un extrait de code est utilisé pour une campagne multicanal ou l'étape Canvas , le même code unique sera envoyé à chaque utilisateur à travers les canaux.
 
 {% alert important %}
-Promotion codes can't be sent in In-App Messages.
+Les codes promotionnels ne peuvent pas être envoyés dans les messages In-App.
 {% endalert %}
 
-## Determining how many codes have been used
+## Déterminer combien de codes ont été utilisés
 
-You can find the remaining code count in the **Remaining** column of the promotion code list, located on the **Promotion Codes** page.
+Vous pouvez trouver le nombre de codes restants dans la colonne **Restant** de la liste des codes promotionnels, situé sur la page **Codes de Promotion**.
 
 !\[Promo Codes 12\]\[12\]{: style="max-width:90%"}
 
-This code count can also be found when revisited a pre-existing promotion code list page.
+Ce nombre de codes peut également être trouvé lors de la révision d'une liste de codes promotionnels préexistants.
 
 !\[Promo Codes 13\]\[13\]{: style="max-width:50%"}
-[1]:{% image_buster /assets/img/promocodes/promocode1.png %} [2]:{% image_buster /assets/img/promocodes/promocode2.png %} [3]:{% image_buster /assets/img/promocodes/promocode3.png %} [4]:{% image_buster /assets/img/promocodes/promocode4.png %} [5]:{% image_buster /assets/img/promocodes/promocode5.png %} [6]:{% image_buster /assets/img/promocodes/promocode6.png %} [7]:{% image_buster /assets/img/promocodes/promocode7.png %} [8]:{% image_buster /assets/img/promocodes/promocode8.png %} [9]:{% image_buster /assets/img/promocodes/promocode9.png %} [10]:{% image_buster /assets/img/promocodes/promocode10.png %} [12]: {% image_buster /assets/img/promocodes/promocode11.png %} [13]: {% image_buster /assets/img/promocodes/promocode12.png %}
+[1]:{% image_buster /assets/img/promocodes/promocode1.png %} [2]:{% image_buster /assets/img/promocodes/promocode2.png %} [3]:{% image_buster /assets/img/promocodes/promocode3. ng %} [4]:{% image_buster /assets/img/promocodes/promocode4.png %} [5]:{% image_buster /assets/img/promocodes/promocode5.png %} [6]:{% image_buster /assets/img/promocodes/promocode6. ng %} [7]:{% image_buster /assets/img/promocodes/promocode7.png %} [8]:{% image_buster /assets/img/promocodes/promocode8.png %} [9]:{% image_buster /assets/img/promocodes/promocode9. ng %} [10]:{% image_buster /assets/img/promocodes/promocode10.png %} [12]: {% image_buster /assets/img/promocodes/promocode11.png %} [13]: {% image_buster /assets/img/promocodes/promocode12.png %}
 
 [11]: {{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/
 
