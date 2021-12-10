@@ -1,33 +1,33 @@
 ---
-nav_title: Messaging Users
-article_title: Targeting Users for Predictive Churn
-description: "This reference article covers potential next steps after you have created a Churn Prediction such as implementing filter and strategic considerations."
+nav_title: Utilisateurs de messagerie
+article_title: Cibler les utilisateurs de la communauté prédictive
+description: "Cet article de référence couvre les prochaines étapes potentielles après avoir créé une prédiction de la communauté telle que la mise en œuvre du filtre et des considérations stratégiques."
 page_order: 3
 ---
 
-# Messaging users {#what-do-next}
+# Utilisateurs de messagerie {#what-do-next}
 
 {% alert note %}
-Preview and Demo Predictions will not allow users to be targeted for messaging, and the __Create Segment__, and __Create Campaign__ buttons will be disabled. To purchase this functionality, contact your account manager.
+Les prédictions d'aperçu et de démo ne permettront pas aux utilisateurs d'être ciblés pour recevoir des messages, et les boutons __Créer un segment__, et __Créer une campagne__ seront désactivés. Pour acheter cette fonctionnalité, contactez votre gestionnaire de compte.
 {% endalert %}
 
-## Implementing filters {#filters}
+## Filtres d'implémentation {#filters}
 
-Once you've decided what range of Churn Risk Score or Category you want to target, you can use the __Create Segment__ or __Create Campaign__ buttons below the targeting sentences to create a new segment or campaign that filters for users with the Churn Risk Score or Category selected with the slider.
+Une fois que vous avez décidé quel est le score de risque ou la catégorie que vous voulez cibler, vous pouvez utiliser les boutons __Créer un segment__ ou __Créer une campagne__ en dessous des phrases ciblées pour créer un nouveau segment ou une campagne qui filtre pour les utilisateurs avec le score de risque de retour ou la catégorie sélectionnée avec le curseur.
 
-!\[Churn Filters\]\[5\]
+!\[Filtres Churn\]\[5\]
 
-You can also use filters in campaigns or segments to target the users according to that threshold. You can filter for users by Churn Score or Churn Category in campaigns, Canvas, and Segments, just like you use any other filter in Braze.
+Vous pouvez également utiliser des filtres dans des campagnes ou des segments pour cibler les utilisateurs en fonction de ce seuil. Vous pouvez filtrer pour les utilisateurs par score ou catégorie de Churn dans les campagnes, Canvas et Segments, comme vous utilisez n'importe quel autre filtre au Brésil.
 
-## Strategic considerations
+## Considérations stratégiques
 
-Now that you've identified and selected the group of users at risk of churn that you feel require some incentives or a new messaging series to keep them active and engaged, what do you do? Do you just add them proactively to your current passive user series? Or do you build out a brand new series of Canvases and campaigns?
+Maintenant que vous avez identifié et sélectionné le groupe d'utilisateurs à risque de morsure qui vous semble nécessiter des incitations ou une nouvelle série de messages pour les maintenir actifs et engagés, que faites-vous ? Les ajouter de manière proactive à votre série d'utilisateurs passifs actuelle ? Ou bien construisez-vous une toute nouvelle série de Canvases et de campagnes ?
 
-__Here are a few ideas to consider:__
+__Voici quelques idées à considérer :__
 
-- Target your predicted medium-to-high-risk users with a special discount, free merchandise (physical gift or digital credits), exclusive content, or early access to a new experience (product, app feature, level).<br><br>
-- Drop these users into a daily Canvas for a week, delivering messages on the channel they prefer most, do a concentrated blast for three days, reaching customers on every channel, from email to Facebook, or send a message from a real person, asking for brand feedback or offering a pro tip.<br><br>
-- Maybe you just need a new, fun way to reiterate the value of your brand, and all the ways these customers have found value in yours before. This could look like a persona-specific weekly newsletter, a series of real stories from real users about your brand, or some other content marketing play.
+- Ciblez vos utilisateurs prédits de moyen à haut risque avec une remise spéciale, des produits gratuits (cadeau physique ou des crédits numériques), contenu exclusif, ou accès anticipé à une nouvelle expérience (produit, fonctionnalité de l'application, niveau).<br><br>
+- Déposez ces utilisateurs dans une Canvas quotidienne pendant une semaine, diffusant des messages sur le canal qu'ils préfèrent le plus, faites une explosion concentrée pendant trois jours, joindre les clients sur chaque chaîne, de l'e-mail à Facebook, ou envoyer un message d'une personne réelle, en demandant des commentaires sur la marque ou en offrant une astuce pro .<br><br>
+- Peut-être avez-vous juste besoin d'une nouvelle façon amusante de réitérer la valeur de votre marque, et toutes les façons dont ces clients ont déjà trouvé de la valeur dans le vôtre. Cela pourrait ressembler à une lettre d'information hebdomadaire personnalisée, une série de récits de vrais utilisateurs à propos de votre marque, ou tout autre jeu de marketing de contenu.
 
-Keep in mind that you can message different levels of at-risk users differently! So the highest-risk customers could get higher discounts than the medium-risk customers, while the lowest-risk customers simply get new kinds of messaging or content but no larger incentive. You can also layer other filters into these segments to further qualify who gets what offers, messages, etc.
+Gardez à l'esprit que vous pouvez envoyer un message différent à différents niveaux d'utilisateurs à risque! Ainsi, les clients les plus à risque pourraient obtenir des remises plus élevées que les clients à risque moyen, alors que les clients les moins à risque obtiennent simplement de nouveaux types de messages ou de contenu, mais pas d'incitations plus grandes. Vous pouvez également ajouter d'autres filtres à ces segments pour mieux qualifier qui obtient quelles offres, messages, etc.
 [5]: {% image_buster /assets/img/purchasePrediction/purchaseFilters.png %}
