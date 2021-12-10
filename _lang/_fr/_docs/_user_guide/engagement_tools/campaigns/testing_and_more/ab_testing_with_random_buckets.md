@@ -1,89 +1,89 @@
 ---
-nav_title: A/B Testing with Random Buckets
-article_title: A/B Testing with Random Buckets
+nav_title: Tests A/B avec Seaux Aléatoires
+article_title: Tests A/B avec Seaux Aléatoires
 page_order: 2
-page_type: reference
-description: "This how-to article goes over the concept of A/B testing and variants and how you can use them in your Braze campaigns."
+page_type: Référence
+description: "Cet article décrit le concept de tests A/B et de variantes et comment vous pouvez les utiliser dans vos campagnes de Braze."
 tool:
-  - Campaign
+  - Campagnes
 ---
 
-# A/B testing with random buckets
+# Tests A/B avec segments aléatoires
 
-> This article will cover the concept of A/B testing and Variants, how you can use them in your Braze campaigns, as well as how to assign and implement random bucket numbers to help gather useful data.
+> Cet article couvrira le concept de tests A/B et de variantes, comment vous pouvez les utiliser dans vos campagnes de Braze, ainsi que la façon d'affecter et d'implémenter des numéros de compartiments aléatoires pour aider à recueillir des données utiles.
 
-A random bucket number is a user attribute that can be used to create uniformly distributed segments of random users. These segments can be leveraged to conduct A/B tests for campaign variants over an extended period of time.
+Un numéro de bucket aléatoire est un attribut utilisateur qui peut être utilisé pour créer des segments uniformément distribués d'utilisateurs aléatoires. Ces segments peuvent être exploités pour effectuer des tests A/B sur des variantes de campagne sur une période prolongée.
 
-If you have [Canvas][13] in your Braze platform, you will be able to accomplish all of these use cases using Canvas UI.
+Si vous avez [Canvas][13] sur votre plateforme Braze, vous serez en mesure d'accomplir tous ces cas d'utilisation en utilisant l'interface utilisateur Canvan.
 
-Here's how you can set up an A/B test with random buckets:
+Voici comment vous pouvez configurer un test A/B avec des compartiments aléatoires:
 
-## Step 1: Segment your users by the random bucket attribute
+## Étape 1 : Segmentez vos utilisateurs par l'attribut Segcket aléatoire
 
-Apply the filter **Random Bucket #**. Once applied, the filter label will change to **Statistical sampling ID**.
+Applique le filtre **Seau aléatoire #**. Une fois appliqué, l'étiquette du filtre passera à **ID d'échantillonnage statistique**.
 
 {% alert note %}
-Each user of your app is randomly assigned a random bucket number between 0-9999 (inclusive).
+Chaque utilisateur de votre application reçoit aléatoirement un numéro de seau aléatoire compris entre 0 et 9999 (inclus).
 {% endalert %}
 
-The example below partially documents the creation of segments for a campaign with three variants and a control group. Note that segments receiving the campaign variants and the control segment do not necessarily need to be equal in size.
+L'exemple ci-dessous documente partiellement la création de segments pour une campagne avec trois variantes et un groupe de contrôle. Notez que les segments qui reçoivent les variantes de la campagne et le segment de contrôle n'ont pas nécessairement besoin d'être égaux en taille.
 
-Consider the following sample plan for creating segments of equal size for three campaign series variants and a control:
+Considérez le plan d'échantillonnage suivant pour la création de segments de taille égale pour trois variantes de la série de campagne et un contrôle :
 
-- Bucket numbers 0 to 2499 correspond to the control segment
-- Bucket numbers 2500 to 4999 correspond to the segment that will receive variant 1
-- Bucket numbers 5000 to 7499 correspond to the segment that will receive variant 2
-- Bucket numbers 7500 to 9999 correspond to the segment that will receive variant 3.
+- Les numéros du seau 0 à 2499 correspondent au segment de contrôle
+- Les numéros du segment 2500 à 4999 correspondent au segment qui recevra la variante 1
+- Les numéros de seau de 5000 à 7499 correspondent au segment qui recevra la variante 2
+- Les numéros de seau de 7500 à 9999 correspondent au segment qui recevra la variante 3.
 
-You may want to use these types of segments if you want to run a test of three different variants (for instance, three different send times or three different combinations of message channels) and also include a control group.
+Vous pouvez utiliser ces types de segments si vous voulez exécuter un test de trois variantes différentes (par exemple, trois heures d'envoi différentes ou trois combinaisons différentes de canaux de messagerie) et incluent également un groupe de contrôle.
 
-!\[Filter Selection\]\[1\]
+!\[Sélection de filtres\]\[1\]
 
-!\[Example Filter\]\[2\]
+!\[Filtre d'exemple\]\[2\]
 
-For each of your created segments, including the control group, turn on [Analytics Tracking][14]. When evaluating the success of variants relative to the control group, you will be able to go into your [Custom Events][15] page and view how often each segment has completed certain custom events.
+Pour chacun de vos segments créés, y compris le groupe de contrôle, activez [Suivi Analytiques][14]. Lors de l'évaluation du succès des variantes par rapport au groupe de contrôle, vous serez en mesure d'aller dans votre page d'événements [Personnalisés][15] et de voir à quelle fréquence chaque segment a complété certains événements personnalisés.
 
-## Step 2: Create your campaign variants
+## Étape 2 : Créez vos variantes de campagne
 
-### Step 2a: Create your first variant
+### Étape 2a : Créez votre première variante
 
-Create a campaign. On the **Target Users** page, select a segment of recipients. The segment you choose will be one that was created in the prior step.
+Créer une campagne. Sur la page **Utilisateurs cibles** , sélectionnez un segment de destinataires. Le segment que vous choisissez sera celui qui a été créé à l'étape précédente.
 
 !\[Select Campaign Recipient Segment\]\[4\]
 
-### Step 2b: Build additional variants
+### Étape 2b : Construire des variantes supplémentaires
 
-[Duplicate][18] your initial campaign variant and modify it accordingly. For instance, you may decide to change the send time or the combination of messaging channels used. When targeting users, select the segment you wish to receive this new campaign variant. Repeat this step to create your remaining campaign variants. Your control group should not receive any variant of this campaign.
+[Dupliquez][18] votre variante de campagne initiale et modifiez-la en conséquence. Par exemple, vous pouvez décider de changer l'heure d'envoi ou la combinaison des canaux de messagerie utilisés. Lors du ciblage des utilisateurs, sélectionnez le segment que vous souhaitez recevoir cette nouvelle variante de campagne. Répétez cette étape pour créer vos variantes de campagne restantes. Votre groupe de contrôle ne devrait recevoir aucune variante de cette campagne.
 
-## Step 3: Build additional messages
+## Étape 3 : Construire des messages supplémentaires
 
-If you wish, you can continue to send campaign variants to your random bucket segments over time by repeating step 2. One example use case is to test the difference between sending one group 2 notifications in one week, compared to 1.
+Si vous le souhaitez, vous pouvez continuer à envoyer des variantes de campagne à vos segments aléatoires au fil du temps en répétant l'étape 2. Un exemple de cas d'utilisation est de tester la différence entre l'envoi d'une notification de groupe 2 en une semaine, par rapport à 1.
 
-Be sure to plan the workflows of your campaign series variants in advance in order to maintain the integrity of your A/B test.
+Assurez-vous de planifier à l'avance les flux de travail des variantes de votre série de campagne afin de maintenir l'intégrité de votre test A/B.
 
-## Common use cases
+## Cas d'utilisation courants
 
-Because creating a [multivariate test][16] allows you to easily test content, using random buckets is best suited for testing delivery, cadence, and channel combinations.
+Parce que la création d'un [test multivarié][16] vous permet de tester facilement le contenu, utiliser des segments aléatoires est mieux adapté pour tester les combinaisons de livraison, de cadence et de canaux.
 
-All of the below use cases can be accomplished within [Canvas][13], a tool built with these types of experiments in mind.
+Tous les cas d'utilisation ci-dessous peuvent être réalisés dans [Canvas][13], un outil construit avec ces types d'expériences à l'esprit.
 
-### Delivery
+### Envoi
 
-You can compare results between a campaign sent with [scheduled][11], [action-based delivery][17] and [intelligent timing][12].
+Vous pouvez comparer les résultats d'une campagne envoyée avec [planifié][11], [livraison basée sur l'action][17] et [timing intelligent][12].
 
 ### Cadence
 
-You can test multiple messaging flows over a period of time. For instance, you can test two different onboarding cadences: one that sends two messages in the user's first two weeks, and one that sends three messages in the user's first two weeks. Or, when targeting lapsing users, you can test the effectiveness of sending two winback messages in a week, versus sending just one.
+Vous pouvez tester plusieurs flux de messagerie sur une période de temps. Par exemple, vous pouvez tester deux cadences d'intégration différentes : une qui envoie deux messages dans les deux premières semaines de l'utilisateur. et un qui envoie trois messages dans les deux premières semaines de l'utilisateur. Ou, en ciblant les utilisateurs qui sont en train de disparaître, vous pouvez tester l'efficacité de l'envoi de deux messages de retour en une semaine, contre en envoyant un seul.
 
-### Messaging channels
+### Canaux de messagerie
 
-You can test the effectiveness of different message channel combinations. For instance, you can compare the impact of using just one email versus an email combined with a push.
+Vous pouvez tester l'efficacité de différentes combinaisons de canaux de messages. Par exemple, vous pouvez comparer l'impact de l'utilisation d'un seul email par rapport à un email combiné à un push.
 
-### Campaign variant percentages
+### Pourcentage de variante de la campagne
 
-In a campaign, if a variant percentage is modified after initial creation, you will find that the users may be redistributed to other variants.
+Dans une campagne, si un pourcentage de variante est modifié après la création initiale, vous constaterez que les utilisateurs peuvent être redistribués à d'autres variantes.
 
-Initially, users are randomly assigned a particular variant before receiving a campaign for the first time. From then on, each successive time the campaign is received (or the user re-enters a campaign variant), they will receive the same variant unless the variant percentages are modified. If the variant percentages change, users may be redistributed to other variants. Users stay in these variants until percentages are modified again. Control groups remain consistent if the variant percentage is unchanged. Users who previously received messages cannot enter the control group on a later send, nor can any user in the control group ever receive a message.
+Au départ, une variante particulière est assignée aléatoirement aux utilisateurs avant de recevoir une campagne pour la première fois. À partir de là, chaque fois que la campagne est reçue (ou que l'utilisateur rentre une variante de campagne), ils recevront la même variante à moins que les pourcentages de variante ne soient modifiés. Si les pourcentages de variante changent, les utilisateurs peuvent être redistribués à d'autres variantes. Les utilisateurs restent dans ces variantes jusqu'à ce que les pourcentages soient à nouveau modifiés. Les groupes de contrôle restent cohérents si le pourcentage de variante est inchangé. Les utilisateurs qui ont déjà reçu des messages ne peuvent pas entrer dans le groupe de contrôle lors d'un envoi ultérieur, et aucun utilisateur du groupe de contrôle ne peut recevoir de message.
 [1]: {% image_buster /assets/img_archive/random_buckets_filter.png %} [2]: {% image_buster /assets/img_archive/random_buckets_filterexample.png %} [4]: {% image_buster /assets/img_archive/random_buckets_target.png %}
 
 [11]: {{site.baseurl}}/user_guide/engagement_tools/campaigns/scheduling_and_organizing/delivery_types/scheduled_delivery/
