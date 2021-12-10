@@ -1,38 +1,38 @@
 ---
-nav_title: Setting Default Values
-article_title: Setting Default Liquid Values
+nav_title: Réglage des valeurs par défaut
+article_title: Réglage des valeurs liquides par défaut
 page_order: 5
-description: "Set default fallback values for any personalization attribute that you use in your messages."
+description: "Définir les valeurs par défaut pour tout attribut de personnalisation que vous utilisez dans vos messages."
 ---
 
-# Setting default values
+# Réglage des valeurs par défaut
 
 {% raw %}
 
-Set default fallback values for any personalization attribute that you use in your messages. Default values can be added by specifying a [Liquid Filter][3] (use `|` to distinguish the filter inline, as shown below) with the name "default."
+Définir les valeurs par défaut pour tout attribut de personnalisation que vous utilisez dans vos messages. Les valeurs par défaut peuvent être ajoutées en spécifiant un [Filtre liquide][3] (utiliser `|` pour distinguer le filtre en ligne, comme indiqué ci-dessous) avec le nom "default."
 
 ```
-| default: 'Insert Your Desired Default Here'
+| par défaut : 'Insérer votre valeur par défaut désirée ici'
 ```
 
-If a default value is not provided and the field is missing or not set on the user, the field will be blank in the message.
+Si une valeur par défaut n'est pas fournie et que le champ est manquant ou non défini sur l'utilisateur, le champ sera vide dans le message.
 
-The example below shows the correct syntax for adding a default value. In this case, the words "Valued User" will replace the attribute `{{ ${first_name} }}` if a user's `first_name` field is blank or unavailable.
+L'exemple ci-dessous montre la syntaxe correcte pour ajouter une valeur par défaut. Dans ce cas, les mots "Utilisateur Valeur" remplaceront l'attribut `{{ ${first_name} }}` si le champ `prénom` d'un utilisateur est vide ou indisponible.
 
 ```liquid
-Hi {{ ${first_name} | default: 'Valued User' }}, thanks for using the App!
+Bonjour {{ ${first_name} | par défaut: 'Utilisateur valué' }}, merci d'utiliser l'application !
 ```
 
-To a user named Janet Doe, the message would appear to the user as either:
+Pour un utilisateur nommé Janet Doe, le message apparaît à l'utilisateur comme :
 
 ```
-Hi Janet, thanks for using the App!
+Bonjour Janet, merci d'utiliser l'application !
 ```
 
-Or...
+Ou...
 
 ```
-Hi Valued User, thanks for using the App!
+Utilisateur Hi Valued, merci d'utiliser l'application!
 ```
 
 {% endraw %}
