@@ -21,9 +21,10 @@ Consultez l'intégration de [Neura Insights][4] Braze pour plus de détails sur 
 
 | Exigences          | Libellé                                                                                                                                                                                                                                                  |
 | ------------------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Compte Neura       | Un compte Neura est requis pour profiter de ce partenariat.                                                                                                                                                                                              |
 | Braze clé API REST | Une clé d'API Braze REST avec les permissions `users.track`, `users.alias.new`, et `users.export.ids`. <br><br> Ceci peut être créé dans le __tableau de bord Braze -> Console développeur -> Clé d'API REST -> Créer une nouvelle clé API__ |
 | Région du serveur  | Ceci est votre point de terminaison de l'API REST Braze et peut être trouvé dans notre [documentation de l'API Braze]({{site.baseurl}}/api/basics/#endpoints).                                                                                           |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
+{: .reset-td-br-1 .reset-td-br-2}
 
 ## Intégration
 
