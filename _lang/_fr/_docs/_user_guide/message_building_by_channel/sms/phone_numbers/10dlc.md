@@ -2,120 +2,120 @@
 nav_title: "A2P 10DLC"
 article_title: A2P 10DLC
 page_order: 2.9
-description: "This article covers A2P 10DLC, why 10DLC registration is necessary for US long code customers, helpful costs and throughput information, and how to get started with registration."
-page_type: reference
+description: "Cet article couvre A2P 10DLC, pourquoi l'enregistrement 10DLC est nécessaire pour les clients de code long aux États-Unis des coûts utiles et des informations de débit, et comment commencer avec l'inscription."
+page_type: Référence
 channel:
   - SMS
 ---
 
-# Application-to-Person 10-Digit Long Codes (A2P 10DLC)
+# Codes longs à 10 chiffres de l'application à personne (A2P 10DLC)
 
-> A2P 10DLC refers to a system in the United States that allows businesses to send Application-to-Person (A2P) type messaging via a standard 10-digit long code (10DLC) phone number. These registered long codes are granted higher throughput, better deliverability, and improved compliance than the standard long code.
+> A2P 10DLC fait référence à un système aux États-Unis qui permet aux entreprises d'envoyer des messages de type Application-to-Person (A2P) via un numéro de téléphone standard à 10 chiffres long code (10DLC). Ces codes longs enregistrés reçoivent un débit plus élevé, une meilleure délivrabilité et une meilleure conformité par rapport au code standard long.
 
 {% alert important %}
-All customers who currently have and/or use US long codes to send to US customers are required to register their long codes for 10DLC; those who fail to do so will experience heavy filtering of all messages.
+Tous les clients qui ont et/ou utilisent actuellement des codes longs américains pour envoyer aux clients américains sont tenus d'enregistrer leurs codes longs pour 10DLC ; ceux qui ne le font pas connaîtront un filtrage intensif de tous les messages.
 {% endalert %}
 
-## Why it's necessary
+## Pourquoi c'est nécessaire
 
-10DLC service was created to specifically facilitate A2P messaging using long codes. Historically, long codes were meant for Person-to-Person (P2P) messaging, but when used for marketing reasons, they caused businesses to be constrained by limited throughput and heightened filtering.
+Le service 10DLC a été créé pour faciliter spécifiquement la messagerie A2P en utilisant des codes longs. Historiquement, de longs codes étaient destinés aux messages de personne à personne (P2P) mais utilisés pour des raisons de marketing. elles ont fait que les entreprises sont contraintes par un débit limité et un filtrage plus important.
 
-10DLC helps alleviate those issues by offering:
-- __Higher Throughput__: 10DLC numbers support a higher volume of messages than regular long codes.
-- __Better Deliverability__: 10DLC numbers are designated for A2P traffic, so messages sent with these numbers are more likely to reach the recipient and are less likely to get filtered or rejected by the carrier than messages sent via regular local long codes.
-- __Improved Compliance__: Using a local long code for commercial text messaging is against the [CTIA](https://api.ctia.org/wp-content/uploads/2019/07/190719-CTIA-Messaging-Principles-and-Best-Practices-FINAL.pdf) guidelines. 10DLC numbers were designated for mass messaging and allow brands to comply with industry regulations without relying on short codes.
-- __Budget Friendly__: 10DLC is a great option for companies who want to get started sending SMS or send SMS at small volumes. For brands sending at larger messaging volumes of over 100,000 messages a day, Braze would recommend using a short code.
+10DLC aide à soulager ces problèmes en offrant :
+- __Débit supérieur__: Les nombres 10DLC supportent un volume de messages supérieur à des codes longs réguliers.
+- __Une meilleure livrabilité__: les numéros 10DLC sont désignés pour le trafic A2P, de sorte que les messages envoyés avec ces numéros sont plus susceptibles d'atteindre le destinataire et sont moins susceptibles d'être filtrés ou rejetés par le transporteur que les messages envoyés via des codes locaux réguliers.
+- __Conformité améliorée__: L'utilisation d'un code local long pour la messagerie texte commerciale est contraire aux lignes directrices [CTIA](https://api.ctia.org/wp-content/uploads/2019/07/190719-CTIA-Messaging-Principles-and-Best-Practices-FINAL.pdf). Les numéros 10DLC ont été désignés pour la messagerie de masse et permettent aux marques de se conformer à la réglementation de l'industrie sans compter sur des codes courts.
+- __Budget Friendly__: 10DLC est une excellente option pour les entreprises qui veulent commencer à envoyer des SMS ou envoyer des SMS en petits volumes. Pour les marques envoyant à des volumes de messagerie plus importants de plus de 100 000 messages par jour, Braze recommanderait d’utiliser un code court.
 
-Since 2019, carriers have begun adopting 10DLC for commercial messaging, with Verizon and AT&T currently supporting 10DLC, and we expect all major carriers to follow soon. While it may cause inconveniences in the short term, in the long term, customers will enjoy better deliverability rates while protecting their consumers from unwanted messages.
+Depuis 2019, les transporteurs ont commencé à adopter 10DLC pour les messages commerciaux, avec Verizon et AT&T prenant actuellement en charge 10DLC, et nous attendons de tous les principaux transporteurs de suivre bientôt. Même si cela peut causer des inconvénients à court terme, à long terme, les clients bénéficieront de meilleurs taux de délivrabilité tout en protégeant leurs consommateurs contre les messages indésirables.
 
-## What you need to know
+## Ce que vous avez besoin de savoir
 
-### Costs
+### Coûts
 
-Registering with A2P 10DLC may include several types of fees:
+L'inscription à A2P 10DLC peut inclure plusieurs types de frais :
 
-| Fee Type               | Description                                                                                                                                                                                                                              |
-| ---------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Registration Fees      | Nominal fees applied when registering your brand and use case across all major US networks.                                                                                                                                              |
-| Secondary Vetting Fees | Brands can appeal their [Brand Trust Score](#trust-score) and request a secondary vetting process to improve their overall throughput; there is a fee associated with this process.                                                      |
-| Carrier Fees           | Fees charged by carriers for outbound SMS and MMS messages sent to users once registered for 10DLC. Starting October 1, 2021, carrier fees will be higher on unregistered traffic (standard long codes) than registered traffic (10DLC). |
+| Type de frais                   | Libellé                                                                                                                                                                                                                                                                                                       |
+| ------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Frais d'inscription             | Frais nominaux appliqués lors de l'enregistrement de votre marque et de votre cas d'utilisation sur tous les principaux réseaux américains.                                                                                                                                                                   |
+| Frais de prélèvement secondaire | Les marques peuvent faire appel à leur [Score de la marque](#trust-score) et demander un processus de contrôle secondaire pour améliorer leur débit global ; il y a des frais associés à ce processus.                                                                                                        |
+| Frais de transporteur           | Frais facturés par les transporteurs pour les messages SMS sortants et MMS envoyés aux utilisateurs une fois enregistrés pour 10DLC. À compter du 1er octobre 2021, les frais de transporteur seront plus élevés pour le trafic non enregistré (codes standards longs) que pour le trafic enregistré (10DLC). |
 {: .reset-td-br-1 .reset-td-br-2}
 
-Visit the Twilio 10DLC article to check out updated [fee estimates](https://support.twilio.com/hc/en-us/articles/1260803965530-What-pricing-and-fees-are-associated-with-the-A2P-10DLC-service-).
+Visitez l'article Twilio 10DLC pour consulter les [estimations des frais](https://support.twilio.com/hc/en-us/articles/1260803965530-What-pricing-and-fees-are-associated-with-the-A2P-10DLC-service-) mises à jour.
 
-### Throughput
+### Débit
 
-Message throughput for your 10dlc depends on several factors, including brand trust score, daily message limits, and your messaging use cases.
+Le débit de vos messages pour votre 10dlc dépend de plusieurs facteurs, dont le score de confiance de la marque, les limites quotidiennes des messages et les cas d'utilisation de vos messageries.
 
-#### Brand trust score {#trust-score}
+#### Score de confiance de la marque {#trust-score}
 
-The Campaign Registry (TCR) is a third-party agency that uses a reputation algorithm to review specific criteria relating to your company and assign a trust score that determines messaging throughput for each brand. This trust score will be assigned when a customer registers for US 10DLC messaging. The higher the trust score, the better the messages per second (MPS) you will experience.
+Le Registre de campagne (TCR) est une agence tierce qui utilise un algorithme de réputation pour examiner des critères spécifiques relatifs à votre entreprise et attribuer une note de confiance qui détermine le débit de la messagerie pour chaque marque. Ce score de confiance sera attribué lorsqu'un client s'inscrit pour la messagerie US 10DLC. Plus le score de confiance est élevé, plus les messages par seconde (MPS) seront élevés.
 
-|        | Trust Score | AT&T   | T-Mobile | Verizon |
-| ------ | ----------- | ------ | -------- | ------- |
-| High   | 76-100      | 60 MPS | 60 MPS   | 60 MPS  |
-| Medium | 51-75       | 10 MPS | 10 MPS   | 10 MPS  |
-| Low    | 16-50       | 1 MPS  | 1 MPS    | 1 MPS   |
+|         | Score de confiance | AT&T   | T-Mobile | Verizon |
+| ------- | ------------------ | ------ | -------- | ------- |
+| Élevé   | 76-100             | 60 MPS | 60 MPS   | 60 MPS  |
+| Moyenne | 51-75              | 10 MPS | 10 MPS   | 10 MPS  |
+| Bas     | 16-50              | 1 MPS  | 1 MPS    | 1 MPS   |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
 
 {% alert tip %}
-Companies listed in the Russel 3000 Index will be granted a high throughput and brand trust score after 10DLC registration and review.
+Les entreprises inscrites à l’indice Russel 3000 recevront un résultat de confiance et de rendement élevé après l’enregistrement et l’examen de 10DLC.
 {% endalert %}
 
-#### Daily message limits
+#### Limites de messages quotidiens
 
-Daily limits range from 2,000 to 200,000 messages depending on your brand trust score and apply across all long codes. While high brand trust scores come with a throughput of 60 messages per second, any daily message limits set by the carrier will still apply. This means that short codes would be a better option if a brand's daily peak messages are higher than the imposed daily limit.
+Les limites journalières varient de 2 000 à 200 000 messages selon le score de votre marque et s'appliquent à tous les codes longs. Alors que les scores élevés de la marque en fiducie sont fournis avec un débit de 60 messages par seconde, toutes les limites de messages quotidiens fixées par le transporteur s'appliqueront toujours. Cela signifie que les codes courts seraient une meilleure option si les messages de pointe quotidiens d'une marque sont plus élevés que la limite quotidienne imposée.
 
-#### Messaging use cases
+#### Cas d'utilisation des messages
 
-Throughput is also affected by the type of messaging use case you choose. Most customers will fall under the standard marketing or mixed marketing use case. Other less common use cases will be susceptible to differing throughput values.
+Le débit est également affecté par le type de cas d'utilisation de la messagerie que vous choisissez. La plupart des clients seront dans le cadre du marketing standard ou du marketing mixte. D'autres cas d'utilisation moins courants seront susceptibles de différer les valeurs de débit.
 
-Depending on your use case, the trust score needed to achieve the maximum throughput will vary. The tables below list standard use cases and common use case trust score ranges. For special use cases such as emergency services or charity, please reference the [Twilio docs](https://support.twilio.com/hc/en-us/articles/1260803225669-Message-throughput-MPS-and-Trust-Scores-for-A2P-10DLC-in-the-US).
+Selon votre cas d'utilisation, le score de confiance nécessaire pour atteindre le débit maximum variera. Les tableaux ci-dessous listent les cas d'utilisation standard et les plages de scores de confiance en cas d'utilisation courante. Pour des cas d'utilisation spéciale, tels que les services d'urgence ou les organismes de bienfaisance, veuillez consulter les [documentation Twilio](https://support.twilio.com/hc/en-us/articles/1260803225669-Message-throughput-MPS-and-Trust-Scores-for-A2P-10DLC-in-the-US).
 
-| Standard Use Cases     | Description                                                    |
-| ---------------------- | -------------------------------------------------------------- |
-| Marketing              | Promotional content such as sales and limited time offers.     |
-| Mixed                  | Campaign that covers multiple use cases such as Customer Care. |
-| Higher Education       | Campaigns for higher education institutions.                   |
-| Polling & Voting       | Non-political polling and voting such as customer surveys.     |
-| PSA                    | PSAs to raise awareness about a given topic.                   |
-| Customer Care          | Support, account management, and other customer interactions.  |
-| Delivery Notifications | Status of delivery messages.                                   |
-| Account Notifications  | Notifications about the status of an account.                  |
-| 2FA                    | Any authentication of account verification such as OTP.        |
-| Security Alerts        | Notification of a compromised system.                          |
-| Fraud Alerts           | Messaging about potentially fraudulent activity.               |
+| Cas d'utilisation standard    | Libellé                                                                                 |
+| ----------------------------- | --------------------------------------------------------------------------------------- |
+| Marketing                     | Contenu promotionnel comme les ventes et les offres à durée limitée.                    |
+| Mixte                         | Campagne qui couvre des cas d'utilisation multiples tels que le service à la clientèle. |
+| Enseignement supérieur        | Campagnes pour les établissements d'enseignement supérieur.                             |
+| Vote & Vote                   | Les sondages et les votes non politiques tels que les enquêtes auprès des clients.      |
+| PPS                           | Les ASP pour sensibiliser la population à un sujet donné.                               |
+| Service à la clientèle        | Support, gestion de compte et autres interactions avec les clients.                     |
+| Notifications de distribution | Statut de l'envoi des messages.                                                         |
+| Notifications du compte       | Notifications sur l'état d'un compte.                                                   |
+| A2F                           | Toute authentification de la vérification de compte telle que l'OTP.                    |
+| Alertes de sécurité           | Notification d'un système compromis.                                                    |
+| Alertes de fraude             | Messagerie au sujet d'une activité potentiellement frauduleuse.                         |
 {: .reset-td-br-1 .reset-td-br-2}
 
 {% tabs %}
 {% tab Declared Use Case %}
-A declared use case means you have chosen one specific non-marketing use case (for example, 2FA or Account Notifications).
+Un cas d'utilisation déclarée signifie que vous avez choisi un cas spécifique d'utilisation non commerciale (par exemple, 2FA ou avis de compte).
 
-| Trust Score | Total throughput toward major US networks | AT&T   | T-Mobile | Verizon |
-| ----------- | ----------------------------------------- | ------ | -------- | ------- |
-| 76-100      | 180 MPS                                   | 60 MPS | 60 MPS   | 60 MPS  |
-| 51-75       | 30 MPS                                    | 10 MPS | 10 MPS   | 10 MPS  |
-| 16-50       | 3 MPS                                     | 1 MPS  | 1 MPS    | 1 MPS   |
+| Score de confiance | Débit total vers les principaux réseaux américains | AT&T   | T-Mobile | Verizon |
+| ------------------ | -------------------------------------------------- | ------ | -------- | ------- |
+| 76-100             | 180 MPS                                            | 60 MPS | 60 MPS   | 60 MPS  |
+| 51-75              | 30 MPS                                             | 10 MPS | 10 MPS   | 10 MPS  |
+| 16-50              | 3 MPS                                              | 1 MPS  | 1 MPS    | 1 MPS   |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
 
 {% endtab %}
-{% tab Mixed/Marketing Use Case %}
+{% tab Mixed/Marketing Utilisation Cas %}
 
-Mixed/Marketing use cases can be registered for customers who want to send messages for multiple use cases from the same set of numbers or for marketing.
+Les cas d'utilisation mixte/marketing peuvent être enregistrés pour les clients qui veulent envoyer des messages pour des cas d'utilisation multiple à partir du même jeu de chiffres ou pour le marketing.
 
-| Trust Score | Total throughput toward major US networks | AT&T    | T-Mobile | Verizon |
-| ----------- | ----------------------------------------- | ------- | -------- | ------- |
-| 86-100      | 180 MPS                                   | 60 MPS  | 60 MPS   | 60 MPS  |
-| 66-85       | 30 MPS                                    | 10 MPS  | 10 MPS   | 10 MPS  |
-| 26-65       | 3 MPS                                     | 1 MPS   | 1 MPS    | 1 MPS   |
-| 15-25       | 2.2 MPS                                   | 0.2 MPS | 1 MPS    | 1 MPS   |
+| Score de confiance | Débit total vers les principaux réseaux américains | AT&T    | T-Mobile | Verizon |
+| ------------------ | -------------------------------------------------- | ------- | -------- | ------- |
+| 86-100             | 180 MPS                                            | 60 MPS  | 60 MPS   | 60 MPS  |
+| 66-85              | 30 MPS                                             | 10 MPS  | 10 MPS   | 10 MPS  |
+| 26-65              | 3 MPS                                              | 1 MPS   | 1 MPS    | 1 MPS   |
+| 15-25              | 2.2 MPS                                            | 0.2 MPS | 1 MPS    | 1 MPS   |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
 
 {% endtab %}
 {% endtabs %}
 
-Visit the Twilio 10DLC article to check out updated [throughput estimates](https://support.twilio.com/hc/en-us/articles/1260803225669-Message-throughput-MPS-and-Trust-Scores-for-A2P-10DLC-in-the-US).
+Visitez l'article Twilio 10DLC pour consulter les [estimations de débit](https://support.twilio.com/hc/en-us/articles/1260803225669-Message-throughput-MPS-and-Trust-Scores-for-A2P-10DLC-in-the-US) mises à jour.
 
-## Next steps
+## Étapes suivantes
 
-Customers who have not yet registered for 10DLC must work with their COM or CSM to register their long codes. __If customers fail to register their long codes, starting October 1, 2021, any A2P sender using long codes will experience heavy filtering of all messages.__ Reach out to your CSM to get started on your 10DLC registration. 
+Les clients qui ne sont pas encore inscrits à 10DLC doivent travailler avec leur COM ou CSM pour enregistrer leurs codes longs. __Si les clients ne parviennent pas à enregistrer leurs codes longs, à partir du 1er octobre 2021, tout expéditeur A2P utilisant des codes longs connaîtra un filtrage lourd de tous les messages.__ Atteignez votre CSM pour commencer votre enregistrement 10DLC. 
