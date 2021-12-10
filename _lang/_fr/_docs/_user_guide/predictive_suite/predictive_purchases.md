@@ -1,43 +1,43 @@
 ---
-nav_title: Predictive Purchases
-article_title: Predictive Purchases
+nav_title: Achats prédictifs
+article_title: Achats prédictifs
 page_order: 6.4
-layout: featured
-alias: /predictive_purchases/
-guide_top_header: "Predictive Purchases"
-guide_top_text: "Knowing which of your users is likely to make a purchase is a crucial insight for growing businesses. Without it, how do you decide which campaigns to build? Who should receive discounts and promotions? Where to spend a limited budget? Braze helps answer these questions with Predictive Purchases, a machine learning model that makes it easy for marketing teams to understand future purchasing behavior and focus their resources on revenue-maximizing campaigns."
-description: "Predictive Purchases gives marketers a powerful tool for identifying and messaging users based on their likelihood to make a purchase."
-guide_featured_title: "Topics"
+layout: en vedette
+alias: /achats prévisibles/
+guide_top_header: "Achats prédictifs"
+guide_top_text: "Savoir lequel de vos utilisateurs est susceptible de faire un achat est une idée cruciale pour les entreprises en pleine croissance. Sans elle, comment décidez-vous des campagnes à construire? Qui devrait recevoir des remises et des promotions? Où dépenser un budget limité ? Braze aide à répondre à ces questions avec des achats prévisionnels, un modèle d’apprentissage automatique qui permet aux équipes de marketing de comprendre facilement le comportement d’achat futur et de concentrer leurs ressources sur des campagnes de maximisation des revenus."
+description: "Les achats prédictifs offrent aux marketeurs un outil puissant pour identifier et envoyer des messages en fonction de leur probabilité de faire un achat."
+guide_featured_title: "Sujets"
 guide_featured_list:
   - 
-    name: Creating A Purchase Prediction
-    link: /docs/user_guide/predictive_suite/predictive_purchases/creating_a_purchase_prediction/
+    name: Créer une prédiction d'achat
+    link: /fr/docs/user_guide/predictive_suite/predictive_purchases/creating_a_purchase_prediction/
     fa_icon: fas fa-cogs
   - 
-    name: Prediction Analytics
-    link: /docs/user_guide/predictive_suite/predictive_purchases/prediction_analytics/
+    name: Analyses de prédiction
+    link: /fr/docs/user_guide/predictive_suite/predictive_purchases/prediction_analytics/
     fa_icon: fas fa-chart-bar
   - 
-    name: Messaging Users
-    link: /docs/user_guide/predictive_suite/predictive_purchases/messaging_users/
-    fa_icon: fas fa-arrow-right
+    name: Utilisateurs de messagerie
+    link: /fr/docs/user_guide/predictive_suite/predictive_purchases/messaging_users/
+    fa_icon: fas fa-flèche-droite
 ---
 
-## Overview
+## Aperçu
 
-!\[predictive purchases overview\]\[1\]
+!\[aperçu des achats prévisionnels\]\[1\]
 
-Predictive Purchases give marketers a powerful tool for identifying and messaging users based on their likelihood to make a purchase. When you create a Purchase Prediction, Braze trains a machine learning model using [gradient boosted decision trees](https://en.wikipedia.org/wiki/Gradient_boosting) to learn from previous purchase activity and predict future purchase activity.
+Les achats prédictifs offrent aux marketeurs un outil puissant pour identifier et envoyer des messages en fonction de leur probabilité de faire un achat. Lorsque vous créez une prévision d'achat, Braze forme un modèle d'apprentissage automatique à l'aide de [arbres de décision boostés par gradient](https://en.wikipedia.org/wiki/Gradient_boosting) pour apprendre de l'activité d'achat précédente et prédire l'activité d'achat future.
 
-Once a Prediction is built, users are assigned a [Purchase Likelihood Score]({{site.baseurl}}/user_guide/predictive_suite/predictive_purchases/prediction_analytics/#purchase_score) between 0 and 100 denoting how likely they are to make a purchase. The higher the score, the more likely a user is to make a purchase. Users are also sorted by Low, Medium, and High Purchase Likelihood Categories.
+Une fois qu'une prédiction est construite, les utilisateurs se voient assigner un [Achat Likelihood Score]({{site.baseurl}}/user_guide/predictive_suite/predictive_purchases/prediction_analytics/#purchase_score) entre 0 et 100 indiquant à quel point ils sont susceptibles de faire un achat. Plus le score est élevé, plus un utilisateur est susceptible de faire un achat. Les utilisateurs sont également triés par catégories de Likelihood Bas, Moyennes et Hautes Achats.
 
-The real value of Predictive Purchases lies using Prediction results to create a Segment or campaign. Marketers can build targeted campaigns directly on the __Prediction__ page for immediate revenue-boosting results or save a Segment for a future campaign or Canvas. Not sure who to target first? Read our [strategic considerations]({{site.baseurl}}/user_guide/predictive_suite/predictive_purchases/messaging_users/#strategy) for messaging users based on their Purchase Likelihood.
+La valeur réelle des achats prédictifs consiste à utiliser les résultats de prédiction pour créer un segment ou une campagne. Les marketeurs peuvent construire des campagnes ciblées directement sur la page __Prédiction__ pour obtenir des résultats immédiats qui stimulent les revenus ou enregistrer un segment pour une future campagne ou Canvas. Vous ne savez pas qui cibler en premier ? Lisez nos [considérations stratégiques]({{site.baseurl}}/user_guide/predictive_suite/predictive_purchases/messaging_users/#strategy) pour les utilisateurs de messagerie en fonction de leur probabilité d'achat.
 
-## Access Predictive Purchases
+## Accéder aux achats prédictifs
 
-The __Predictions__ page is accessible from the left navigation bar on the Braze dashboard. For full access, contact your account manager. Prior to purchasing this feature, it is available in Preview mode. This will allow you to see a Demo Purchase Prediction with synthetic data as well as create one Preview Purchase Prediction model at a time. This Prediction will be created based on your actual user data, but it will not allow you to target users for messaging according to Purchase Likelihood. It will also not update regularly after creation.
+La page __Prédictions__ est accessible à partir de la barre de navigation de gauche sur le tableau de bord de Braze. Pour un accès complet, contactez votre responsable de compte. Avant d'acheter cette fonctionnalité, elle est disponible en mode Aperçu. Cela vous permettra de voir une prédiction d'achat de démo avec des données synthétiques ainsi que de créer un modèle de prévision d'achat d'aperçu à la fois. Cette prédiction sera créée en fonction de vos données utilisateur réelles, mais cela ne vous permettra pas de cibler les utilisateurs pour la messagerie selon Achat Likelihood. Il ne sera pas mis à jour régulièrement après la création.
 
-With the Preview, you can also edit and rebuild this one Prediction or archive it and create others to test the expected [Prediction Quality]({{site.baseurl}}/user_guide/predictive_suite/predictive_purchases/prediction_analytics/#prediction_quality) of [different audiences]({{site.baseurl}}/user_guide/predictive_suite/predictive_purchases/creating_a_purchase_prediction/#audience) and become familiar with the analytics.
+Avec l'aperçu, vous pouvez également modifier et reconstruire cette Prédiction ou l'archiver et en créer d'autres pour tester la [Qualité de Prédiction]({{site.baseurl}}/user_guide/predictive_suite/predictive_purchases/prediction_analytics/#prediction_quality) attendue de [publics différents]({{site.baseurl}}/user_guide/predictive_suite/predictive_purchases/creating_a_purchase_prediction/#audience) et vous familiariser avec les analytiques.
 
 <br><br>
 [1]: {% image_buster /assets/img/purchasePrediction/purchasesOverview.png %}
