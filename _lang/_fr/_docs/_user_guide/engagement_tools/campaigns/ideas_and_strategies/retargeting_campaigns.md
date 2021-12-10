@@ -1,127 +1,127 @@
 ---
-nav_title: Retargeting Campaigns
-article_title: Retargeting Campaigns
+nav_title: Campagnes de redistribution
+article_title: Campagnes de redistribution
 page_order: 2
-page_type: reference
-description: "This reference article goes over how and why you should consider retargeting campaigns based on messages your users receive."
+page_type: Référence
+description: "Cet article de référence décrit comment et pourquoi vous devriez envisager des campagnes de redistribution basées sur les messages reçus par vos utilisateurs."
 tool:
-  - Campaigns
+  - Campagnes
 ---
 
-# Retargeting campaigns
+# Campagnes de redistribution
 
-> This reference article goes over the concept of retargeting campaigns and how it can be a beneficial marketing strategy. <br> <br> By retargeting campaigns based on the user's previous actions, like whether or not they opened an email, you can help reclassify your users, opening the door to an effective, data-driven marketing approach.
+> Cet article de référence va au-delà du concept de campagnes de redistribution et de la manière dont il peut être une stratégie de marketing bénéfique. <br> <br> En reciblant des campagnes basées sur les actions précédentes de l'utilisateur, que vous ayez ouvert ou non un courriel, vous pouvez aider à reclasser vos utilisateurs, en ouvrant la porte à une approche marketing efficace et axée sur les données.
 
-Braze provides support for retargeting users based on messages they have received. You can retarget users based upon their interactions with your campaigns, Canvases, and News Feed cards.
+Braze fournit un support pour les utilisateurs de reciblage en fonction des messages qu'ils ont reçus. Vous pouvez recibler les utilisateurs en fonction de leurs interactions avec vos campagnes, vos Canvases et vos cartes News Feed.
 
-!\[Retargeting Campaigns\]\[1\]{: style="max-width:80%;"}
+!\[Campagnes de Retargeting\]\[1\]{: style="max-width:80%;"}
 
-Each of these retargeting filters provides you with several options after you add them.
+Chacun de ces filtres de recul vous offre plusieurs options après les ajouter.
 
-For more on targeting users, check out our [Campaign Setup LAB course](http://lab.braze.com/campaign-setup-delivery-targeting-conversions)!
+Pour en savoir plus sur le ciblage des utilisateurs, consultez notre [cours LAB de configuration de campagne](http://lab.braze.com/campaign-setup-delivery-targeting-conversions)!
 
-## Retargeting filters
+## Filtres de redistribution
 
-### Clicked card filter
+### Filtre de carte cliqué
 
-!\[Click Card\]\[2\]
+!\[Carte clique\]\[2\]
 
-Use the filter to find users who Have/Have Not clicked a specific News Feed card (which you specify in the drop-down).
+Utilisez le filtre pour trouver les utilisateurs qui ont ou n'ont pas cliqué sur une carte de fil d'actualité spécifique (que vous spécifiez dans la liste déroulante).
 
-### Clicked/opened campaign filter
+### Filtre de campagne cliqué/ouvert
 
-!\[Clicked/Opened\]\[3\]
+!\[Clicked/Ouvert\]\[3\]
 
-Use this filter to find users who Have/Have Not:
+Utilisez ce filtre pour trouver les utilisateurs qui n'ont pas/n'ont pas:
 
-- Clicked Email
-- Clicked In-App Message
-- Directly Opened Push Notification
-- Opened Email
-- Viewed In-App Message
+- Courriel cliqué
+- Message In-App cliqué
+- Notification Push directement ouverte
+- Courriel ouvert
+- Message In-App consulté
 
-This can be further specified by selecting which campaign you want to retarget in the drop-down.
+Ceci peut être précisé en sélectionnant la campagne que vous voulez rediriger dans la liste déroulante.
 
-### Clicked/opened campaign or Canvas with tag filter
+### Campagne cliquée/ouverte ou Canvas avec filtre de balises
 
-!\[Clicked/Opened\]\[16\]
+!\[Clicked/Ouvert\]\[16\]
 
-Use this filter to find users who have or have not interacted with campaigns or Canvases with a given tag:
+Utilisez ce filtre pour trouver les utilisateurs qui ont ou n'ont pas interagi avec des campagnes ou des Canvases avec un tag donné:
 
-- Clicked Email
-- Clicked In-App Message
-- Directly Opened Push Notification
-- Opened Email
-- Viewed In-App Message
+- Courriel cliqué
+- Message In-App cliqué
+- Notification Push directement ouverte
+- Courriel ouvert
+- Message In-App consulté
 
-### Converted from campaign filter
+### Converti depuis le filtre de campagne
 
-!\[Converted from Campaign\]\[12\]
+!\[Converti de la campagne\]\[12\]
 
-Use this filter to find users who Have/Have Not converted (based on the primary conversion) in your target campaign, which is selected in the drop-down menu.
+Utilisez ce filtre pour trouver les utilisateurs qui ont / n'ont pas converti (basé sur la conversion primaire) dans votre campagne cible, qui est sélectionné dans le menu déroulant.
 
-> For recurring campaigns this filter refers to whether users have converted on the _most recent_ message from the campaign.
+> Pour les campagnes récurrentes, ce filtre indique si les utilisateurs ont converti le message _le plus récent_ de la campagne.
 
-### Converted from Canvas filter
+### Converti depuis le filtre Canvas
 
 !\[Converted from Canvas\]\[18\]
 
-Use this filter to find users who Have/Have Not converted (based on the primary conversion) in your target Canvas, which is selected in the drop-down menu.
+Utilisez ce filtre pour trouver les utilisateurs qui ont / n'ont pas converti (basé sur la conversion primaire) dans votre Canvas cible, qui est sélectionné dans le menu déroulant.
 
-> For recurring Canvases this filter refers to whether users have ever converted anytime they've gone through the Canvas.
+> Pour les Canvases récurrentes, ce filtre indique si les utilisateurs ont jamais converti depuis qu'ils ont traversé le Canvas.
 
-### In campaign control group filter
+### Filtre de groupe de contrôle de campagne
 
-!\[Campaign Control Group\]\[13\]
+!\[Groupe de contrôle de la campagne\]\[13\]
 
-Use this filter to find users who Are/Are Not in the control group of your target campaign, which can be selected in the drop-down.
+Utilisez ce filtre pour trouver les utilisateurs qui sont / ne sont pas dans le groupe de contrôle de votre campagne cible, qui peut être sélectionné dans la liste déroulante.
 
-### In Canvas control group filter
+### Filtre de groupe de contrôle de Canvas
 
-!\[Canvas Control Group\]\[19\]
+!\[Groupe de contrôle de Canvas\]\[19\]
 
-Use this filter to find users who Are/Are Not in the control group of your target Canvas, which can be selected in the drop-down.
+Utilisez ce filtre pour trouver les utilisateurs qui ne sont pas dans le groupe de contrôle de votre Canvas cible, qui peut être sélectionné dans le menu déroulant.
 
-### Last received message from specific campaign filter
+### Dernier message reçu d'un filtre de campagne spécifique
 
-!\[Last Received Specific Campaign Filter\]\[14\]
+!\[Dernier filtre de campagne spécifique reçu\]\[14\]
 
-Use this filter to find users who last received a specific campaign before or after a specified date or number of days.
+Utilisez ce filtre pour trouver les utilisateurs qui ont reçu la dernière fois une campagne spécifique avant ou après une date ou un nombre de jours précis.
 
-### Last received message from specific campaign or Canvas with tag filter
+### Dernier message reçu de campagne spécifique ou de Canvas avec filtre d'étiquettes
 
-!\[Last Received Campaign with Tag\]\[17\]
+!\[Dernière Campagne reçue avec Tag\]\[17\]
 
-Use this filter to find users who last received a specific campaign or Canvas with a given tag before or after a specified date or number of days.
+Utilisez ce filtre pour trouver les utilisateurs qui ont reçu la dernière fois une campagne ou Canvas spécifique avec une étiquette donnée avant ou après une date ou un nombre de jours spécifiés.
 
-### Received message from campaign filter
+### Message reçu du filtre de campagne
 
-!\[Received Campaign\]\[4\]
+!\[Campagne reçue\]\[4\]
 
-Use this filter to find users who have or have not received your target campaign, which you select in the drop-down.
+Utilisez ce filtre pour trouver les utilisateurs qui ont ou n'ont pas reçu votre campagne cible, que vous sélectionnez dans la liste déroulante.
 
-### Received message from campaign or canvas with tag filter
+### Message reçu de la campagne ou de la toile avec le filtre d'étiquette
 
-!\[Received Campaign with Tag\]\[15\]
+!\[Campagne reçue avec Tag\]\[15\]
 
-Use this filter to find users who have or have not received a campaign or Canvas that has your target tag, which you select in the drop-down.
+Utilisez ce filtre pour trouver les utilisateurs qui ont ou n'ont pas reçu une campagne ou Canvas qui a votre balise cible, que vous sélectionnez dans le menu déroulant.
 
-## Why use retargeting campaigns?
+## Pourquoi utiliser des campagnes de repositionnement ?
 
-Retargeting is particularly effective when the original segment also included a specific action you want to see users take. For example, let's say you have a card targeted at users who have never made a purchase. The card advertises a promotion for a discounted in-app purchase. The initial segment looks like the following:
+La redistribution est particulièrement efficace lorsque le segment original inclut également une action spécifique que vous souhaitez voir prendre. Par exemple, disons que vous avez une carte destinée aux utilisateurs qui n'ont jamais fait d'achat. La carte annonce une promotion pour un achat réduit dans l'application. Le segment initial ressemble à ce qui suit :
 
-- Money Spent in App is exactly 0
-- Last Used App less than 14 days ago
+- L'argent dépensé dans l'application est exactement 0
+- Dernière application utilisée il y a moins de 14 jours
 
-The total number of users in the segment is 100,000 and you know from the News Feed stats that 60,000 unique users viewed the card and 20,000 unique users clicked the card. Through the segmenter we can see how many of those users who clicked the card actually made a purchase:
+Le nombre total d'utilisateurs dans le segment est de 100 000 et vous savez à partir des statistiques du flux d'actualités que 60, 00 utilisateurs uniques ont consulté la carte et 20 000 utilisateurs uniques ont cliqué sur la carte. Grâce au segmenteur, nous pouvons voir combien d'utilisateurs qui ont cliqué sur la carte ont effectivement fait un achat:
 
-- Money Spent in App is more than 0
-- Clicked Card is {Name of Card}
+- L'argent dépensé dans l'application est supérieur à 0
+- La carte cliquée est {Name of Card}
 
-After examining those stats, we can make a segment of users who clicked the card, but did not make a purchase:
+Après avoir examiné ces statistiques, nous pouvons faire un segment d'utilisateurs qui ont cliqué sur la carte, mais qui n'ont pas fait d'achat:
 
-- Money Spent in App is exactly than 0
-- Clicked Card is {Name of Card}
+- L'argent dépensé dans l'application est exactement à 0
+- La carte cliquée est {Name of Card}
 
-We can retarget this segment with additional messaging around the promotion or another in-app purchase. Retargeting can be done via another News Feed card or through a messaging campaign. A multichannel approach allows you to reach users where they’re most likely to respond, thus increasing the effectiveness of your campaigns.
-[1]: {% image_buster /assets/img_archive/retarget.png %} [2]: {% image_buster /assets/img_archive/clickedcard.png %} [3]: {% image_buster /assets/img_archive/clickedopened.png %} [4]: {% image_buster /assets/img_archive/receivedcamp.png %} [12]: {% image_buster /assets/img_archive/converted_from_campaign.png %} [13]: {% image_buster /assets/img_archive/campaign_control_group.png %} [14]: {% image_buster /assets/img_archive/last_received_specific_campaign.png %} [15]: {% image_buster /assets/img_archive/received_campaign_with_tag.png %} [16]: {% image_buster /assets/img_archive/retarget_tag_filter.png %} [17]: {% image_buster /assets/img_archive/last_received_campaign_with_tag.png %} [18]: {% image_buster /assets/img_archive/converted_from_canvas.png %} [19]: {% image_buster /assets/img_archive/canvas_control_group.png %}
+Nous pouvons rediriger ce segment avec des messages supplémentaires autour de la promotion ou d'un autre achat dans l'application. La redistribution peut être effectuée via une autre carte de flux de nouvelles ou par le biais d'une campagne de messagerie. Une approche multicanale vous permet d'atteindre les utilisateurs où ils sont le plus susceptibles de répondre, augmentant ainsi l'efficacité de vos campagnes.
+[1]: {% image_buster /assets/img_archive/retarget.png %} [2]: {% image_buster /assets/img_archive/clickedcard.png %} [3]: {% image_buster /assets/img_archive/clickedopened. ng %} [4]: {% image_buster /assets/img_archive/receivedcamp.png %} [12]: {% image_buster /assets/img_archive/converted_from_campaign.png %} [13]: {% image_buster /assets/img_archive/campaign_control_group. ng %} [14]: {% image_buster /assets/img_archive/last_received_specific_campaign.png %} [15]: {% image_buster /assets/img_archive/received_campaign_with_tag.png %} [16]: {% image_buster /assets/img_archive/retarget_tag_filter. ng %} [17]: {% image_buster /assets/img_archive/last_received_campaign_with_tag. ng %} [18]: {% image_buster /assets/img_archive/converted_from_canvas.png %} [19]: {% image_buster /assets/img_archive/canvas_control_group.png %}
