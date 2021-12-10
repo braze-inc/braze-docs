@@ -2,50 +2,32 @@
 nav_title: Calendrier de Rokt
 article_title: Calendrier de Rokt
 alias: /fr/partners/rokt_calendar/
-description: "Cet article décrit le partenariat entre Braze et Rokt Calendar, une technologie dynamique de marketing de calendrier qui permet aux marques de pousser des événements 1:1 et des communications promotionnelles."
+description: "Cet article décrit le partenariat entre Braze et Rokt Calendar, une technologie dynamique de marketing de calendrier qui permet aux marques de pousser des événements 1:1 et des communications promotionnelles, sous la forme d'événements de calendrier et de notifications."
 page_type: partenaire
 search_tag: Partenaire
 ---
 
 # Calendrier de Rokt
 
-> Rokt Calendar est une technologie dynamique de marketing de calendrier qui permet aux marques de pousser des événements 1:1 et des communications promotionnelles. sous forme d'événements de calendrier et de notifications, à travers un réseau propriétaire de calendriers d'abonnés.
+> [Rokt Calendar](https://www.rokt.com/rokt-calendar/) est une technologie de marketing de calendrier dynamique qui permet aux marques de pousser des événements 1:1 et des communications promotionnelles sous la forme d'événements de calendrier et de notifications.
 
-L'intégration du calendrier Rokt et de Braze permet aux abonnés du calendrier Rokt et aux données d'abonnement associées d'être envoyés au Brésil.
-
-Les clients peuvent utiliser la toile de Braze pour définir le ciblage de voyages, un segment de votre public, en utilisant l'événement du calendrier comme méthode de communication, de la même manière que les notifications SMS, e-mail et push sont utilisées. La segmentation du public peut être effectuée sur n'importe lequel des attributs standard de l'utilisateur Braze ainsi que sur les attributs personnalisés générés par l'abonnement au calendrier.
-
-Rokt Calendar offre aux clients Braze la possibilité d’aligner leurs initiatives marketing personnalisées et d’étendre le contenu personnalisé au calendrier de l’utilisateur final. Ainsi, en faisant une expérience plus homogène pour l'utilisateur final et en développant davantage la coloration avec les services de nos clients.
+L'intégration du calendrier Braze et Rokt permet à vos abonnés du calendrier Rokt et à leurs données d'être poussées à Braze via le webhook de Braze. Vous pouvez ensuite utiliser ces données dans Braze Canvases pour cibler votre voyage et segmenter votre audience en utilisant n'importe lequel des attributs personnalisés du calendrier Rokt listés [ci-dessous](#audience-segmentation).
 
 ## Pré-requis
 
-| Exigences                               | Origine            | Qui                                        | Libellé                                                                                                                                                                                                                                                                                                                                  |
-| --------------------------------------- | ------------------ | ------------------------------------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Compte calendrier Rokt                  | Calendrier de Rokt | Gestionnaire de comptes calendrier de Rokt | Un compte de calendrier Rokt spécifique au client sera configuré.                                                                                                                                                                                                                                                                        |
-| Configuration du calendrier             | Calendrier de Rokt | Gestionnaire de comptes calendrier de Rokt | Un calendrier sera mis en place pour refléter les besoins du contexte et des paramètres du client : <br>- Drapeau de fusion<br>- Drapeau de secours de l'abonné ID<br>- Capture d'email si nécessaire                                                                                                                  |
-| Calendrier de Rokt - Identifiants OAuth | Calendrier de Rokt | Gestionnaire de comptes calendrier de Rokt | Cette clé vous permettra de connecter vos comptes de calendrier Braze et Rokt. Il est mis en place pour chaque nouveau client Braze et ajouté à ‘Contenu connecté’ en Brésil. <br><br> `Gérer les paramètres` > `Contenu connecté` > `+Ajouter des identifiants`                                                             |
-| Braze API Key and Permissions           | Brasero            | Client                                     | Chaque application a son propre jeu de clés API REST. Vous devrez créer une nouvelle clé API pouvant être créée dans la `Console développeur` > `Paramètres de l'API` > `+Créer une nouvelle clé API` avec `utilisateurs. les autorisations de rack`. <br>La clé API Braze devra être fournie à votre gestionnaire de compte Rokt. |
-| ID de l'abonné externe                  | Client             | Client                                     | C'est l'identifiant qui sera utilisé par le processus d'abonnement au calendrier Rokt pour faire correspondre l'abonné au calendrier avec l'utilisateur Braze. C'est quelque chose qui est passé par le client à Rokt Calendar ou e-mail est utilisé.                                                                                    |
-| Configuration du Webhook                | Calendrier de Rokt | Gestionnaire de comptes calendrier de Rokt | Ajoutez le type de webhook Braze au centre de gestion en utilisant votre [point d'extrémité de Braze]({{site.baseurl}}/api/basics?redirected=true#endpoints) et votre clé d'API REST                                                                                                                                                     |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4}
+| Exigences                                                                 | Libellé                                                                                                                                                                                                                                                                            |
+| ------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Compte calendrier Rokt                                                    | Un compte client spécifique à Rokt Calendar est nécessaire pour profiter de ce partenariat. Veuillez contacter [sales-calendar@rokt.com](mailto:sales-calendar@rokt.com) pour parler à un responsable de compte                                                                    |
+| Rokt Calendar setup                                                       | Votre gestionnaire de compte Rokt Calendar travaillera avec vous pour configurer le calendrier selon vos besoins, y compris les paramètres comme:<br>- Drapeau de fusion<br>- Drapeau de secours de l'abonné ID<br>- Capture d'e-mail, si nécessaire             |
+| Identifiants OAuth du calendrier de Rokt                                  | Cette clé fournie par votre gestionnaire de comptes Rokt vous permettra de connecter vos comptes de calendrier Braze et Rokt.<br><br>Ceci peut être créé dans le tableau de bord Braze sous **Gérer les paramètres > Contenu connecté > +Ajouter des identifiants**.   |
+| Braze clé API REST                                                        | Une clé API Braze REST avec les permissions `users.track`. Vous devrez fournir cette clé à votre gestionnaire de compte de Rokt.<br><br> Ceci peut être créé dans le __tableau de bord Braze -> Console développeur -> Clé d'API REST -> Créer une nouvelle clé API__. |
+| [Point de terminaison REST Braze]({{site.baseurl}}/api/basics/#endpoints) | Votre URL de terminaison REST. Votre point de terminaison dépendra de l'URL de Braze pour votre instance.                                                                                                                                                                          |
+| ID de l'abonné externe                                                    | Il s'agit de l'identifiant utilisé par le processus d'abonnement à Rokt Calendar pour faire correspondre l'abonné au calendrier avec l'utilisateur Braze. C'est quelque chose que vous passez au calendrier Rokt.                                                                  |
+{: .reset-td-br-1 .reset-td-br-2}
 
-## Intégration de l'API
+## Segmentation de l'audience {#audience-segmentation}
 
-### Établir une audience pour les abonnés au calendrier
-
-Afin d'envoyer des événements de calendrier depuis Canvas en utilisant l'intégration du calendrier Rokt, il est nécessaire que vous ayez une configuration de calendrier Rokt et que les utilisateurs se soient inscrits au calendrier. Pour ce faire, vous devrez informer vos utilisateurs où et comment vous abonner au calendrier.
-
-| Exigences                                     | Origine            | Qui                                        | Libellé                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 |
-| --------------------------------------------- | ------------------ | ------------------------------------------ | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Configuration du compte calendrier de Rokt    | Calendrier de Rokt | Gestionnaire de comptes calendrier de Rokt | Un compte de calendrier Rokt spécifique au client sera configuré, veuillez contacter [sales-calendar@rokt.com](mailto:sales-calendar@rokt.com) pour parler avec un gestionnaire de compte                                                                                                                                                                                                                                                                                               |
-| Rokt Calendar Calendar Setup                  | Calendrier de Rokt | Gestionnaire de comptes calendrier de Rokt | Un calendrier sera mis en place pour refléter les besoins du client. Le gestionnaire de compte travaillera avec vous pour mettre en place le calendrier le mieux adapté à vos besoins.                                                                                                                                                                                                                                                                                                  |
-| Fournir des points d’intégration d’abonnement | Client             | Client                                     | Afin de créer un public d'abonnés au calendrier, vous devrez offrir une destination à laquelle l'utilisateur peut naviguer et s'abonner au calendrier.<br><br>Exemples de point d'intégration de l'abonnement :<br>- Ajouter au bouton calendrier à votre site web<br>- Ajouter au bouton calendrier à votre application<br>- Ajouter au lien calendrier dans un e-mail ou un SMS<br>- Ajouter au lien calendrier sur les réseaux sociaux<br> |
-| Promouvoir le calendrier                      | Client             | Client                                     | Afin de créer un public d’abonnés au calendrier, vous devrez promouvoir le calendrier auprès de votre public afin qu’il sache où/comment s’abonner. <br><br>Exemples de promotion du calendrier :<br>- Posts sur les médias sociaux<br>- Courriels de newsletters et mises à jour<br>- Articles de blog<br>- Notifications dans l'application                                                                                                       |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4}
-
-### Segmentation de l'auditoire dans Braze
-
-Quand Rokt crée un nouvel utilisateur ou correspond à un abonné existant avec un utilisateur Braze, Rokt enverra les attributs d'abonnement suivants que vous pouvez filtrer au Brésil :
+Quand Rokt Calendar crée un nouvel utilisateur ou correspond à un abonné existant avec un utilisateur de Braze, Le calendrier Rokt enverra les attributs d'abonnement personnalisés suivants que vous pouvez filtrer au Brésil :
 
 | Attribut personnalisé     | Définition                                                                     | Exemple                                                                                            |
 | ------------------------- | ------------------------------------------------------------------------------ | -------------------------------------------------------------------------------------------------- |
@@ -67,69 +49,65 @@ Quand Rokt crée un nouvel utilisateur ou correspond à un abonné existant avec
 | `rokt:tags`               | Étiquettes de calendrier utilisées en relation avec l'abonnement créé.         | `Calendrier de test 1/Toutes les équipes/f5733866ade2 et Calendrier de test 1/TeamI//f5733866ade2` |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
 
-De plus, Rokt déclenchera également un événement personnalisé `subscribe` dès que l'utilisateur est abonné à votre calendrier Rokt qui peut être utilisé soit dans la segmentation de Braze soit comme déclencheur pour une étape de campagne ou de Canvan.
+Le calendrier Rokt déclenchera également un événement personnalisé `subscribe` dès que l'utilisateur s'est abonné à votre calendrier Rokt qui peut être utilisé soit dans la segmentation de Braze soit comme déclencheur pour une étape de campagne ou de Canvan.
 
-## Utiliser le calendrier Rokt dans vos campagnes de Braze et vos toiles
+## Intégration
+
+### Étape 1 : Créer une audience pour les abonnés du calendrier
+
+Pour envoyer des événements de calendrier depuis Canvas, vous devez d'abord avoir une configuration de calendrier Rokt avec les utilisateurs déjà abonnés. Pour ce faire, vous devrez informer vos utilisateurs où et comment vous abonner au calendrier. Le calendrier Rokt vous recommande :
+
+#### Fournir des points d’intégration d’abonnement
+Pour créer un public d'abonnés au calendrier, vous devez offrir une destination à laquelle un utilisateur peut naviguer et s'abonner. Quelques exemples de points d'intégration de l'abonnement incluent :
+  - Ajouter un bouton calendrier à votre site web
+  - Ajout d'un lien de calendrier dans un e-mail ou un SMS
+  - Ajouter un bouton calendrier à votre application
+  - Ajouter un lien de calendrier sur les réseaux sociaux
+
+#### Promouvoir le calendrier
+Pour créer un public d'abonnés, vous devrez promouvoir le calendrier auprès de votre public afin qu'il sache comment vous abonner. Certains exemples de promotion du calendrier incluent :
+  - Publications sur les réseaux sociaux
+  - Newsletters et mises à jour par e-mail
+  - Articles du blog
+  - Notifications In-App
+
+### Étape 2 : Créez un webhook de Rokt Calendar dans Braze
 
 Au sein de Braze, vous pouvez mettre en place une campagne de webhook ou un webhook dans un Canvas à soit :
 
-- __Envoyer un nouvel événement personnalisé__: cela permettra d'ajouter de nouveaux événements à un segment des calendriers des abonnés.
-- __Mise à jour événement personnalisé__: Ceci permettra de mettre à jour un événement qui a déjà été ajouté aux calendriers des abonnés.
+- Envoyer un nouvel événement personnalisé : Permettre l'ajout de nouveaux événements à un segment des calendriers des abonnés.
+- Mettre à jour un événement personnalisé : Permet de mettre à jour un événement existant dans les calendriers des abonnés.
 
-Avant de commencer, les champs ci-dessous détaillent les informations qui peuvent être personnalisées au niveau de l'événement.
-
-| Champ                                        | Définition                                                                                                                                                                                                | Exemple                                                                                    |
-| -------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------ |
-| `eventId` <br>*__Requis__              | Un identifiant unique pour l'événement à ajouter ou à mettre à jour                                                                                                                                       | `Événement_00001`                                                                          |
-| `titre de l'événement` <br>*__Requis__ | Le titre de l'événement tel qu'il apparaîtra dans le calendrier                                                                                                                                           | Soldes d'été 2019                                                                          |
-| `Description de l'événement`                 | La description de l'événement tel qu'il apparaîtra dans le calendrier                                                                                                                                     | La vente dure 3 jours, cliquez sur ce lien `www.mybusiness.com/sale` pour voir les offres. |
-| `Localisation de l'événement`                | L'emplacement de l'événement tel qu'il apparaîtra dans le calendrier, notez que cela est souvent utilisé comme un deuxième appel à l'action qui est complémentaire au titre de l'événement.               | Ouvrez l'événement pour obtenir 50 % de réduction                                          |
-| `eventStart` <br>*__Requis__           | La date et l'heure de début de l'événement telle qu'elle apparaît dans le calendrier                                                                                                                      | `2019-02-21T15:00:00`                                                                      |
-| `event End` <br>*__Requis__            | La date et l'heure de début de l'événement telle qu'elle apparaît dans le calendrier                                                                                                                      | `2019-02-21T16:00:00`                                                                      |
-| `eventTz` <br>*__Requis__              | Le fuseau horaire de l'événement tel qu'il apparaîtra dans le calendrier, Notez que la liste des fuseaux horaires applicables peut être trouvée [ici](https://roktcalendar-api.readme.io/docs/timezones). | `Heure normale de l'Est`                                                                   |
-| `notifyAvant` <br>*__Requis__          | L'heure de rappel de l'événement tel qu'il apparaîtra dans le calendrier, notez que ceci est exprimé en minutes                                                                                           | `15`                                                                                       |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
+Créer un modèle de webhook de Rokt Calendar à utiliser dans de futures campagnes ou Canvases, accédez à la section **Modèles & Médias** de la plateforme Braze. Si vous souhaitez créer une campagne de webhook unique de Rokt ou utiliser un modèle existant, sélectionnez **Webhook** dans Braze lors de la création d'une nouvelle campagne.
 
 {% tabs %}
-{% tab Send a New Event %}
-## Envoyer un nouvel événement
+{% tab Send a new event %}
+Une fois que vous avez sélectionné le modèle de webhook de Rokt Calendar, vous devriez voir ce qui suit :
+- **URL du Webhook**: {% raw %}`{% assigner accountCode = {{custom_attribute.${rokt:account_code}}}[0] | division : '/' | premier %}https://api.roktcalendar.com/v1/subscriptionevent/{{accountCode}}`{% endraw %}
+- **Corps de la requête**: Texte brut
+{% endtab %}
+{% tab Update an existing event %}
+Une fois que vous avez sélectionné le modèle de webhook de Rokt Calendar, vous devriez voir ce qui suit :
+- **URL du Webhook**: {% raw %}`{% assigner accountCode = {{custom_attribute.${rokt:account_code}}}[0] | division : '/' | premier %}https://api.roktcalendar.com/v1/subscriptionevent/{{accountCode}}/update`{% endraw %}
+- **Corps de la requête**: Texte brut
+{% endtab %}
+{% endtabs %}
 
-### Étape 1 : Créer un modèle de webhook dans Braze
+#### En-têtes de requête et méthode
 
-Pour créer un nouveau modèle de Webhook de calendrier Rokt, vous pouvez soit naviguer vers **Modèles & Médias** ou créer une nouvelle campagne de webhook via le tableau de bord.
+Le calendrier Rokt nécessite un `en-tête HTTP` pour être autorisé qui inclut votre nom d’identification de contenu connecté au calendrier Rokt. Les éléments suivants seront déjà inclus dans le modèle en tant que paires clé-valeur, mais dans l'onglet **Paramètres** , vous devez remplacer `<Rokt-Calendar-API>` par le nom d'identification trouvé dans `Gérer les paramètres > Contenu connecté > Identifiant`.
 
-Dans la liste des modèles, sélectionnez **Modèle vierge**.
+{% raw %}
+- **Méthode HTTP**: POST
+- **En-tête de la requête**:
+  - **Autorisation**: Porteur `{% connected_content https://api.roktcalendar.com/oauth2/token :method post :basic_auth <Rokt-Calendar-API> :body grant_type=client_credentials :save token :retry %}{{token.access_token}}`
+  - **Corps de la requête**: application/json
+{% endraw %}
 
-### Étape 2 : Remplissez votre modèle
+#### Corps de la requête
 
-Le modèle de Webhook vide se compose de deux composants principaux, l’onglet composition et paramètres. Ci-dessous nous allons décomposer les composants de chaque onglet et les paramètres que vous devez définir.
-
-#### Étape 2: Webhook - paramètres
-
-Naviguez dans l'onglet paramètres et éditez les champs __En-tête de requête__ et __Méthode HTTP__ avec les segments de texte correspondants.
-
-| En-têtes de la requête                                                                                                                                                                                                                                                                                                                                                                                             |
-| ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| Autorisation | {% raw %}Porteur {% connected_content https://api.roktcalendar. om/oauth2/token :method post :basic_auth Rokt-Calendar-API :body grant_type=client_credentials :save token :retry %}{{token.access_token}}{% endraw %} <br><br> Note: __Rokt-Calendar-API__ doit être remplacé par le nom d'identification trouvé dans `Gérer les paramètres` > `Contenu connecté` > `Identifiants` |
-| Content-Type | application/json                                                                                                                                                                                                                                                                                                                                                                                    |
-{: .reset-td-br-1 .reset-td-br-2}
-
-| Méthode HTTP |
-| ------------ |
-| POSTER       |
-{: .reset-td-br-1 .reset-td-br-2}
-
-#### Étape 2b: Webhook - composer
-
-Complétez la configuration en naviguant dans l'onglet Composer et définissez l'URL __Webhook__ et modifiez le contenu du __Corps de Requête__ en fonction des attributs et des tableaux de champs indiqués ci-dessus.
-
-| URL du Webhook                                                                                                                                                                                        |
-| ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| {% raw %}{% assigner accountCode = {{custom_attribute.${rokt:account_code}}}[0] &#124; divisé : '/' &#124; premier %}https://api.roktcalendar.com/v1/subscriptionevent/{{accountCode}} {% endraw %} |
-{: .reset-td-br-1}
-
-##### Corps de la requête
-
+{% tabs local %}
+{% tab Send a new event %}
 {% raw %}
 ```javascript
 {% capture eventId %}Event_0001{% endcapture %}
@@ -156,61 +134,8 @@ Complétez la configuration en naviguant dans l'onglet Composer et définissez l
 }
 ```
 {% endraw %}
-
-{% alert tip %}
-
-Pour une liste de fuseaux horaires valides, voir [https://roktcalendar-api.readme.io/docs/timefuseaux](https://roktcalendar.readme.io/docs/timezones).
-
-{% endalert %}
-
-### Étape 3 : Aperçu de votre demande
-
-Vous verrez que votre texte brut met automatiquement en évidence s'il s'agit d'une balise Braze applicable.
-
-Vous devriez être en mesure de prévisualiser votre demande dans le panneau de gauche ou de naviguer vers l’onglet `Tester` où vous pouvez sélectionner un utilisateur aléatoire, un utilisateur existant, ou personnaliser le vôtre pour tester votre webhook.
-
-N'oubliez pas d'enregistrer votre modèle avant de quitter la page!
-
 {% endtab %}
-{% tab Update to Existing Event %}
-
-## Mettre à jour un événement existant
-
-### Étape 1 : Créer un modèle de webhook dans Braze
-
-Pour créer un nouveau modèle de Webhook de calendrier Rokt, vous pouvez soit naviguer vers **Modèles & Médias** ou créer une nouvelle campagne de webhook via le tableau de bord.
-
-Dans la liste des modèles, sélectionnez **Modèle vierge**.
-
-### Étape 2 : Remplissez votre modèle
-
-Le modèle de Webhook vide se compose de deux composants principaux, l’onglet composition et paramètres. Ci-dessous nous allons décomposer les composants de chaque onglet et les paramètres que vous devez définir.
-
-#### Étape 2: Webhook - paramètres
-
-Naviguez dans l'onglet paramètres et éditez les champs __En-tête de requête__ et __Méthode HTTP__ avec les segments de texte correspondants.
-
-| En-têtes de la requête |                                                                                                                                                                                                                                                                                                                                                                                                     |
-| ---------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Autorisation           | {% raw %}Porteur {% connected_content https://api.roktcalendar. om/oauth2/token :method post :basic_auth Rokt-Calendar-API :body grant_type=client_credentials :save token :retry %}{{token.access_token}}{% endraw %} <br><br> Note: __Rokt-Calendar-API__ doit être remplacé par le nom d'identification trouvé dans `Gérer les paramètres` > `Contenu connecté` > `Identifiants` |
-| Type de contenu        | application/json                                                                                                                                                                                                                                                                                                                                                                                    |
-{: .reset-td-br-1 .reset-td-br-2}
-
-| Méthode HTTP |
-| ------------ |
-| POSTER       |
-{: .reset-td-br-1}
-
-#### Étape 2b: Webhook - composer
-
-Complétez la configuration en naviguant dans l'onglet Composer et définissez l'URL __Webhook__ et modifiez le contenu du __Corps de Requête__ en fonction des attributs et des tableaux de champs indiqués ci-dessus.
-
-| URL du Webhook                                                                                                                                                                                           |
-| -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| {% raw %}{% assigner accountCode = {{custom_attribute.${rokt:account_code}}}[0] &#124; split: '/' &#124; first %}https://api.roktcalendar.com/v1/subscriptionevent/{{accountCode}}/update {% endraw %} |
-{: .reset-td-br-1}
-
-##### Corps de la requête
+{% tab Update an existing event %}
 {% raw %}
 ```javascript
 {% capture eventId %}Event_0001{% endcapture %}
@@ -232,24 +157,36 @@ Complétez la configuration en naviguant dans l'onglet Composer et définissez l
     "fin": "{{eventEnd}}",
     "fuseau horaire": "{{eventTZ}}",
     "notifyBefore": "{{notifyBefore}}"
+  }
 }
-
 ```
 {% endraw %}
+{% endtab %}
+{% tab Event details %}
+La liste ci-dessous contient des informations qui peuvent être personnalisées au niveau de l'événement.
+
+| Champ                                        | Définition                                                                                                                                                                                                | Exemple                                                                                         |
+| -------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------- |
+| `eventId` <br>*__Requis__              | Un identifiant unique pour l'événement à ajouter ou à mettre à jour                                                                                                                                       | `Événement_00001`                                                                               |
+| `titre de l'événement` <br>*__Requis__ | Le titre de l'événement tel qu'il apparaîtra dans le calendrier                                                                                                                                           | Soldes d'été 2019                                                                               |
+| `Description de l'événement`                 | La description de l'événement tel qu'il apparaîtra dans le calendrier                                                                                                                                     | La vente dure trois jours ; cliquez sur ce lien `www.mybusiness.com/sale` pour voir les offres. |
+| `Localisation de l'événement`                | L'emplacement de l'événement tel qu'il apparaîtra dans le calendrier, notez que cela est souvent utilisé comme un deuxième appel à l'action, qui est complémentaire au titre de l'événement.              | Ouvrez l'événement pour obtenir 50 % de réduction                                               |
+| `eventStart` <br>*__Requis__           | La date et l'heure de début de l'événement telle qu'elle apparaît dans le calendrier                                                                                                                      | `2019-02-21T15:00:00`                                                                           |
+| `event End` <br>*__Requis__            | La date et l'heure de début de l'événement telle qu'elle apparaît dans le calendrier                                                                                                                      | `2019-02-21T16:00:00`                                                                           |
+| `eventTz` <br>*__Requis__              | Le fuseau horaire de l'événement tel qu'il apparaîtra dans le calendrier, Notez que la liste des fuseaux horaires applicables peut être trouvée [ici](https://roktcalendar-api.readme.io/docs/timezones). | `Heure normale de l'Est`                                                                        |
+| `notifyAvant` <br>*__Requis__          | L'heure de rappel de l'événement tel qu'il apparaîtra dans le calendrier, notez que ceci est exprimé en minutes                                                                                           | `15`                                                                                            |
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
+{% endtab %}
+{% endtabs %}
 
 {% alert tip %}
-
-Pour une liste de fuseaux horaires valides, voir [https://roktcalendar-api.readme.io/docs/timefuseaux](https://roktcalendar-api.readme.io/docs/timezones).
-
+Pour une liste de fuseaux horaires valides, voir [https://roktcalendar-api.readme.io/docs/fuseaux horaires](https://roktcalendar.readme.io/docs/timezones).
 {% endalert %}
 
 ### Étape 3 : Aperçu de votre demande
 
-Vous verrez que votre texte brut met automatiquement en évidence s'il s'agit d'une balise Braze applicable.
+Prévisualisez votre demande dans le panneau de gauche ou accédez à l’onglet `Test` où vous pouvez sélectionner un utilisateur aléatoire, un utilisateur existant ou personnaliser le vôtre pour tester votre webhook.
 
-Vous devriez être en mesure de prévisualiser votre demande dans le panneau de gauche ou de naviguer vers l’onglet `Tester` où vous pouvez sélectionner un utilisateur aléatoire, un utilisateur existant, ou personnaliser le vôtre pour tester votre webhook.
-
-N'oubliez pas d'enregistrer votre modèle avant de quitter la page!
-
-{% endtab %}
-{% endtabs %}
+{% alert important %}
+N'oubliez pas d'enregistrer votre modèle avant de quitter la page! <br>Les modèles de webhook mis à jour peuvent être trouvés dans la liste **Modèles de Webhook enregistrés** lors de la création d'une nouvelle [campagne webhook]({{site.baseurl}}/user_guide/message_building_by_channel/webhooks/creating_a_webhook/).
+{% endalert %}
