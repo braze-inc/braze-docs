@@ -1,77 +1,77 @@
 ---
-nav_title: Link Templates
-article_title: Link Templates
+nav_title: Modèles de lien
+article_title: Modèles de lien
 page_order: 4
-description: "Link Templates allow users to append parameters or prepend URLs to all links in an Email message. This article covers how to create different types of Link Templates."
+description: "Les modèles de liens permettent aux utilisateurs d'ajouter des paramètres ou de préfixer des URL à tous les liens dans un message email. Cet article couvre la façon de créer différents types de modèles de liens."
 tool:
-  - Templates
+  - Modèles
 channel:
-  - email
+  - Email
 ---
 
-# Link templates
+# Modèles de lien
 
-> This article covers how to create link templates for use in email messaging.
+> Cet article couvre la façon de créer des modèles de liens à utiliser dans la messagerie électronique.
 
-Link templates allow you to append parameters or prepend URLs to all links in an email message. This is most often used for the following use cases:
+Les modèles de liens vous permettent d'ajouter des paramètres ou de préfixer des URL à tous les liens dans un courriel. Ceci est le plus souvent utilisé pour les cas d'utilisation suivants :
 
-1. Appending Google Analytics query parameters to all links in a given email message
-2. Prepending a URL to all links in a given email message
+1. Ajout des paramètres de requête Google Analytics à tous les liens dans un e-mail donné
+2. Prévisualisation d'une URL vers tous les liens dans un e-mail donné
 
 {% alert note %}
-When using link templates and [Liquid]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/), Liquid code must only be added within the body tag to ensure consistent rendering.
+Lors de l'utilisation de modèles de lien et de [Liquid]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/), le code Liquid ne doit être ajouté qu'à l'intérieur de la balise body pour assurer un rendu cohérent.
 {% endalert %}
 
-## Creating a link template
+## Création d'un modèle de lien
 
 !\[Create Link Template\]\[11\]{: style="float:right;max-width:30%;"}
 
-To create a link template, navigate to the **Templates & Media** page, and select the **Link Templates** tab. You can create an unlimited number of link templates to support your various needs. Click **Create Link Template** to get started.
+Pour créer un modèle de lien, accédez à la page **Modèles & Média** et sélectionnez l'onglet **Modèles de liens**. Vous pouvez créer un nombre illimité de modèles de liens pour répondre à vos différents besoins. Cliquez sur **Créer un modèle de lien** pour commencer.
 
 {% alert note %}
-Link templates are an optional feature. If the **Link Templates** tab is missing from your **Templates & Media** page, reach out to your Customer Success Manager or Account Manager to enable the feature flipper for link templates.
+Les modèles de liens sont une fonctionnalité optionnelle. Si l'onglet **Modèles de lien** est manquant dans votre page **Modèles & Média** , contactez votre gestionnaire de service client ou votre gestionnaire de compte pour activer la fonction de flipper pour les modèles de liens.
 {% endalert %}
 
-There are two types of link templates you can create:
+Il y a deux types de modèles de liens que vous pouvez créer :
 
-- [Link template that inserts before a URL](#prepend-link-template)
-- [Link template that inserts after a URL](#append-link-template)
+- [Modèle de lien qui insère avant une URL](#prepend-link-template)
+- [Modèle de lien qui insère après une URL](#append-link-template)
 
-### Prepend: Create a link template that inserts before a URL {#prepend-link-template}
+### Précédent : Créer un modèle de lien qui s'insère avant une URL {#prepend-link-template}
 
-If you want to add a string or URL before the links in your email message, create a new link template and set the **Template Position** to **Before URL**.  This will allow you to enter a string that will always get prepended to your URL.
+Si vous voulez ajouter une chaîne ou une URL avant les liens dans votre message e-mail, créer un nouveau modèle de lien et définir la **Position du modèle** à **Avant l'URL**.  Cela vous permettra de saisir une chaîne de caractères qui sera toujours préfixé à votre URL.
 
-A preview section is provided to give you an example of the insertion process.
+Une section d'aperçu est fournie pour vous donner un exemple du processus d'insertion.
 
 ![Pre Append]({% image_buster /assets/img_archive/link_template_preappend.png %})
 
-### Append: Create a link template that inserts after a URL {#append-link-template}
+### Ajouter : Créer un modèle de lien qui insère après une URL {#append-link-template}
 
-If you want to add query parameters after a URL in your email message, create a new link template and set the **Template Position** to **After URL**.  This will allow you to enter query parameters (`value=something`) to the end of each URL.
+Si vous voulez ajouter des paramètres de requête après une URL dans votre message e-mail, créer un nouveau modèle de lien et définir la **Position du modèle** à **Après l'URL**.  Cela vous permettra de saisir les paramètres de la requête (`value=something`) à la fin de chaque URL.
 
-You can have multiple parameters appended to the end of a URL.
+Vous pouvez avoir plusieurs paramètres ajoutés à la fin d'une URL.
 
-![Post Append]({% image_buster /assets/img_archive/link_template_postappend.png %})
+![Ajouter une publication]({% image_buster /assets/img_archive/link_template_postappend.png %})
 
-## Using your templates in email campaigns
+## Utiliser vos modèles dans les campagnes de messagerie
 
-Once your templates are set up, you can select which template you would like to use in your email from the email editor.
+Une fois vos modèles configurés, vous pouvez sélectionner le modèle que vous souhaitez utiliser dans votre e-mail à partir de l'éditeur de courriel.
 
-From the email editor, click **Content Library** and select the **Link Templating** tab. You will see all the links present in your email and can add the template from there.
+À partir de l'éditeur de courriel, cliquez sur **Bibliothèque de contenu** et sélectionnez l'onglet **Lier le modèle**. Vous verrez tous les liens présents dans votre e-mail et pourrez y ajouter le modèle.
 
-!\[Message Composer\]\[1\]
+!\[Composeur de message\]\[1\]
 
-## Managing link templates
+## Gestion des modèles de liens
 
-You can also [duplicate]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/duplicate/) link templates! Learn more about creating and managing templates and creative content in [Templates & Media]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/).
+Vous pouvez aussi [dupliquer]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/duplicate/) modèles de liens ! En savoir plus sur la création et la gestion de modèles et de contenus créatifs dans [Modèles & Médias]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/).
 
 {% alert important %}
-Archiving templates is not currently available for [Link Templates]({{site.baseurl}}/user_guide/message_building_by_channel/email/link_templates/#link-templates).
+L'archivage des modèles n'est actuellement pas disponible pour les [Modèles de lien]({{site.baseurl}}/user_guide/message_building_by_channel/email/link_templates/#link-templates).
 {% endalert %}
 
-## FAQs
+## Foire aux questions
 
-For answers to frequently asked questions about link templates, check out our [email and link templates FAQs][10] page.
+Pour obtenir des réponses aux questions les plus fréquemment posées sur les modèles de liens, consultez notre page [FAQ][10] sur les modèles d'e-mails et de liens.
 [1]:{% image_buster /assets/img_archive/link_template_messagecomposer2.png %} [2]:{% image_buster /assets/img_archive/link_template_postappend.png %} [3]:{% image_buster /assets/img_archive/link_template_preappend.png %} [11]: {% image_buster /assets/img_archive/create_link_template.png %}
 
 [10]: {{site.baseurl}}/user_guide/message_building_by_channel/email/templates/faq/
