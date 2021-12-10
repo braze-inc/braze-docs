@@ -1,42 +1,42 @@
 ---
-nav_title: Media Library
-article_title: Media Library
+nav_title: Médiathèque
+article_title: Médiathèque
 page_order: 0
-page_type: reference
-description: "This reference article describes how to use the Media Library to manage your assets in a single, centralized location."
-tool: Media
+page_type: Référence
+description: "Cet article de référence décrit comment utiliser la Médiathèque pour gérer vos actifs dans un seul endroit centralisé."
+tool: Médias
 ---
 
-# Media library
+# Médiathèque
 
-> The Media Library allows you to manage your assets in a single, centralized location. To access this feature please go into the **Media Library** tab in the [Templates & Media][4] section of your dashboard.
+> La Médiathèque vous permet de gérer vos ressources en un seul endroit centralisé. Pour accéder à cette fonctionnalité, veuillez aller dans l'onglet **Médiathèque** dans la section [Modèles & Médias][4] de votre tableau de bord.
 
-You can use the **Media Library** to:
+Vous pouvez utiliser la **Médiathèque** pour :
 
-* Upload multiple images at one time
-* Upload Virtual Contact Files (.vcf)
-* Upload a folder with your images (max: 50 images)
-* Crop an existing image to create the right ratio for your messages
-* Add tags or teams to help further organize your images
-* Search by tags or teams in the new Media Library grid
-* Drag and drop images or folders to be uploaded
-* Delete images
+* Télécharger plusieurs images à la fois
+* Télécharger des fichiers de contact virtuel (.vcf)
+* Télécharger un dossier avec vos images (max: 50 images)
+* Recadrez une image existante pour créer le bon ratio pour vos messages
+* Ajouter des tags ou des équipes pour mieux organiser vos images
+* Rechercher par tags ou équipes dans la nouvelle grille de Médiathèque
+* Glissez et déposez des images ou des dossiers à télécharger
+* Supprimer les images
 
-!\[Media Library Page\]\[1\]
+!\[Page de la Médiathèque\]\[1\]
 
-## Stats available
+## Statistiques disponibles
 
-Within the Media Library, you can see the image dimensions, URL, type as well as the date it was added to the library.
+Dans la médiathèque, vous pouvez voir les dimensions de l'image, l'URL, le type ainsi que la date à laquelle elle a été ajoutée à la bibliothèque.
 
-## Accessing the Media Library from a message composer
+## Accès à la médiathèque depuis un compositeur de messages
 
-The Media Library acts as your dashboard's centralized location for assets, as all images are uploaded directly to it. This functionality gives you the flexibility to re-use images across different messages.
+La Médiathèque agit comme l'emplacement centralisé des actifs de votre tableau de bord, car toutes les images sont téléchargées directement. Cette fonctionnalité vous donne la flexibilité de réutiliser des images à travers différents messages.
 
-## Managing content
+## Gestion du contenu
 
-You can also [duplicate]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/duplicate/) and [archive]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/archive/) templates! Learn more about creating and managing templates and creative content in [Templates & Media]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/).
+Vous pouvez aussi [dupliquer des modèles]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/duplicate/) et [archiver]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/archive/)! En savoir plus sur la création et la gestion de modèles et de contenus créatifs dans [Modèles & Médias]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/).
 
-{% alert tip %} For more help with the Media Library, check out our [Templates & Media FAQs]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/faqs). {% endalert %}
+{% alert tip %} Pour plus d'aide avec la Médiathèque, consultez nos [Modèles & FAQ Médias]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/faqs). {% endalert %}
 [1]: {% image_buster /assets/img_archive/media_library_main.png %} [2]: {% image_buster /assets/img_archive/media_library_crop1.png %} [3]: {% image_buster /assets/img_archive/media_library_crop2.png %}
 
 [4]: {{site.baseurl}}/user_guide/engagement_tools/templates_and_media/
