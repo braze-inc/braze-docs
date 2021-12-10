@@ -1,74 +1,74 @@
 ---
-nav_title: Time-Based Functionalities for Canvas
-article_title: Time-Based Functionalities for Canvas
+nav_title: Fonctionnalités basées sur le temps pour Canvas
+article_title: Fonctionnalités basées sur le temps pour Canvas
 page_order: 1
-tools: Canvas
-page_type: reference
-description: "This reference article covers definitions, time zones, and examples of time-based functionalities for Canvas."
+tools: Toile
+page_type: Référence
+description: "Cet article de référence couvre les définitions, les fuseaux horaires et les exemples de fonctionnalités basées sur le temps pour Canvas."
 ---
 
-# Time-based functionalities for Canvas
+# Fonctionnalités basées sur le temps pour Canvas
 
-> This reference article covers time-based functionalities for Canvas to assist with strategies, troubleshooting, and to answer common questions.
+> Cet article de référence couvre les fonctionnalités basées sur le temps pour Canvas pour aider les stratégies, le dépannage et répondre aux questions courantes.
 
-## Schedule delay
+## Planifier un retard
 
-### Send immediately
+### Envoyer immédiatement
 
-| Definition                                                                                                                                      | Time Zone |
-| ----------------------------------------------------------------------------------------------------------------------------------------------- | --------- |
-| Send message immediately after the user receives the previous step, or if this is the first step, immediately after the user enters the Canvas. | N/A       |
+| Définition                                                                                                                                                                               | Fuseau horaire |
+| ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------- |
+| Envoyer un message immédiatement après que l'utilisateur ait reçu l'étape précédente, ou s'il s'agit de la première étape, immédiatement après l'entrée de l'utilisateur dans le Canvas. | N/A            |
 {: .reset-td-br-1 .reset-td-br-2}
 
-!\[Send immediately\]\[1\]
+!\[Envoyer immédiatement\]\[1\]
 
-### Send after X days
+### Envoyer après X jours
 
-| Definition                                                                                      | Time Zone |
-| ----------------------------------------------------------------------------------------------- | --------- |
-| Send message after a delay. You can specify a delay in seconds, minutes, hours, days, or weeks. | N/A       |
+| Définition                                                                                                         | Fuseau horaire |
+| ------------------------------------------------------------------------------------------------------------------ | -------------- |
+| Envoyer un message après un délai. Vous pouvez spécifier un délai en secondes, minutes, heures, jours ou semaines. | N/A            |
 {: .reset-td-br-1 .reset-td-br-2}
 
-!\[Send after X days\]\[2\]
+!\[Envoyer après X jours\]\[2\]
 
-### Send on the next [day of the week] at X time
+### Envoyer le [jour de la semaine] suivant à X heure
 
-| Definition                                                                     | Time Zone                                                |
-| ------------------------------------------------------------------------------ | -------------------------------------------------------- |
-| Send message on the next specified day of the week, at a selected time of day. | Select between **user's local time** or **company time** |
+| Définition                                                                            | Fuseau horaire                                                                  |
+| ------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- |
+| Envoyer un message le jour suivant spécifié de la semaine, à une heure de la journée. | Sélectionnez entre **heure locale de l'utilisateur** ou **heure de la société** |
 {: .reset-td-br-1 .reset-td-br-2}
 
-For example, suppose you select "Send on the next Saturday at 3:15pm". If a user enters the Canvas on a Saturday, they would receive that message on the next Saturday in 7 days. If they enter on a Friday, the next Saturday would be in 1 day.
+Par exemple, supposons que vous sélectionnez "Envoyer le samedi suivant à 15h15". Si un utilisateur entre sur Canvas un samedi, il recevra ce message le samedi suivant dans 7 jours. S'ils y entrent un vendredi, le samedi suivant serait dans 1 jour.
 
-!\[Send on the next\]\[3\]
+!\[Envoyer le prochain \]\[3\]
 
-### Send in X calendar days at Y time
+### Envoyer en X jours du calendrier à l'heure Y
 
-| Definition                                                     | Time Zone                                                |
-| -------------------------------------------------------------- | -------------------------------------------------------- |
-| Send message in a specific number of days at a specified time. | Select between **user's local time** or **company time** |
+| Définition                                                               | Fuseau horaire                                                                  |
+| ------------------------------------------------------------------------ | ------------------------------------------------------------------------------- |
+| Envoyer un message dans un nombre de jours spécifique à un moment donné. | Sélectionnez entre **heure locale de l'utilisateur** ou **heure de la société** |
 
-Canvas calculates the delay as `day of the week` + `calendar days`, then adds the `time`. For example, suppose a Canvas step is sent on Monday at 9pm, and the next step is scheduled to "Send in 1 day at 9am". That message will be delivered on Tuesday at 9am, because the Canvas calculates the delay as `Monday` + `1 calendar day`, then adds on `9am`.
+Canvas calcule le délai comme `jour de la semaine` + `jours du calendrier`, puis ajoute le `temps`. Par exemple, supposons qu'une étape de Canvas soit envoyée le lundi à 21h, et que l'étape suivante soit programmée pour « Envoyer dans 1 jour à 9h ». Ce message sera envoyé mardi à 9h, parce que Canvas calcule le délai comme `lundi` + `1 jour de calendrier`, puis ajoute le `9am`.
 
-!\[Send in X days\]\[4\]
+!\[Envoyer en X jours\]\[4\]
 
-### Intelligent Timing
+### Timing Intelligent
 
-| Definition                                                                                                                                                                                                                                | Time Zone                                                                                                                                                                        |
-| ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Braze calculates the optimal send time based on a statistical analysis of your user’s past interactions with your messaging (on a per channel basis) and app. [Learn more]({{site.baseurl}}/user_guide/intelligence/intelligent_timing/). | If you select **a specific time** as your [fallback]({{site.baseurl}}/user_guide/intelligence/intelligent_timing/#fallback-options), this will be sent in the user's local time. |
+| Définition                                                                                                                                                                                                                                                             | Fuseau horaire                                                                                                                                                                                        |
+| ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Braze calcule le temps d'envoi optimal basé sur une analyse statistique des interactions passées de votre utilisateur avec votre messagerie (sur une base par canal) et l'application. [En savoir plus]({{site.baseurl}}/user_guide/intelligence/intelligent_timing/). | Si vous sélectionnez **une heure spécifique** comme votre [repli]({{site.baseurl}}/user_guide/intelligence/intelligent_timing/#fallback-options), cela sera envoyé à l'heure locale de l'utilisateur. |
 {: .reset-td-br-1 .reset-td-br-2}
 
-!\[Intelligent timing\]\[5\]
+!\[Timing intelligent\]\[5\]
 
-## Global frequency capping
+## Plafond global de fréquence
 
-| Definition                                                                                                                                                                                                                                                                        | Time Zone                                                                                     |
-| --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------- |
-| Limit how many times each user should receive the Canvas within a certain time frame, which can be measured in minutes, days, weeks (7 days), and months. [Learn more]({{site.baseurl}}/user_guide/engagement_tools/campaigns/testing_and_more/rate-limiting/#frequency-capping). | User's local time. If a user's time zone isn't set, this will fall back to company time zone. |
+| Définition                                                                                                                                                                                                                                                                                                  | Fuseau horaire                                                                                                                               |
+| ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------- |
+| Limite le nombre de fois que chaque utilisateur doit recevoir le Canvas dans un certain laps de temps, qui peuvent être mesurées en minutes, jours, semaines (7 jours) et mois. [En savoir plus]({{site.baseurl}}/user_guide/engagement_tools/campaigns/testing_and_more/rate-limiting/#frequency-capping). | Heure locale de l'utilisateur. Si le fuseau horaire d'un utilisateur n'est pas défini, cela retombera sur le fuseau horaire de l'entreprise. |
 {: .reset-td-br-1 .reset-td-br-2}
 
-Frequency capping is based on calendar days, not a 24-hour period. This means that you could set up a frequency capping rule of sending no more than one campaign a day, but if a user receives a message at 11pm in their local time, they can still receive another message an hour later (on midnight the next calendar day).
+Le plafonnement de fréquence est basé sur les jours de calendrier, et non sur une période de 24 heures. Cela signifie que vous pouvez mettre en place une règle de plafonnement de fréquence d'envoi pas plus d'une campagne par jour, mais si un utilisateur reçoit un message à 23h dans son heure locale, ils peuvent toujours recevoir un autre message une heure plus tard (à minuit le jour suivant du calendrier).
 
-!\[Frequency Capping\]\[6\]
-[1]: {% image_buster /assets/img_archive/schedule_delay_immediately.png %} [2]: {% image_buster /assets/img_archive/schedule_delay_after.png %} [3]: {% image_buster /assets/img_archive/schedule_delay_next.png %} [4]: {% image_buster /assets/img_archive/schedule_delay_in.png %} [5]: {% image_buster /assets/img_archive/schedule_delay_intelligent.png %} [6]: {% image_buster /assets/img_archive/schedule_frequency_capping.png %}
+!\[Cappage Fréquence\]\[6\]
+[1]: {% image_buster /assets/img_archive/schedule_delay_immediately.png %} [2]: {% image_buster /assets/img_archive/schedule_delay_after.png %} [3]: {% image_buster /assets/img_archive/schedule_delay_next. ng %} [4]: {% image_buster /assets/img_archive/schedule_delay_in.png %} [5]: {% image_buster /assets/img_archive/schedule_delay_intelligent. ng %} [6]: {% image_buster /assets/img_archive/schedule_frequency_capping.png %}
