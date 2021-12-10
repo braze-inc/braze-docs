@@ -1,68 +1,68 @@
 ---
-nav_title: Apple Private Relay
-article_title: Sending Emails to Apple Private Relay
-alias: /email_relay/
+nav_title: Relais privé Apple
+article_title: Envoi d'e-mails au Relais privé Apple
+alias: /fr/email_relay/
 page_order: 8
-description: "This article covers the process of sending emails to Apple Private Relay. This will allow Sendgrid users to whitelist without haveing to make DNS changes."
+description: "Cet article traite du processus d’envoi de courriels à Apple Private Relay. Cela permettra aux utilisateurs de Sendgrid de mettre en liste blanche sans avoir à faire de modifications DNS."
 channel:
-  - email
+  - Email
 ---
 
-# Apple Private Relay system
+# Système de relais privé Apple
 
-With the iOS 13 release, Apple has introduced functionality for Apple customers, which impacts how email is sent to them. The new Apple single sign-on (SSO) feature allows Apple customers to share their email address (`example@icloud.com`) or to hide their email address, in which case a "masked" email address (`tq1234snin@privaterelay.appleid.com`) will be provided to brands (as opposed to the user's personal email address).
+Avec la version iOS 13, Apple a introduit des fonctionnalités pour les clients d'Apple, ce qui a un impact sur la façon dont les e-mails leur sont envoyés. La nouvelle fonctionnalité d'authentification unique d'Apple (SSO) permet aux clients Apple de partager leur adresse e-mail (`exemple@icloud. om`) ou de cacher leur adresse e-mail, auquel cas une adresse email "masquée" (`tq1234snin@privaterelay. ppleid.com`) sera fourni aux marques (par opposition à l'adresse e-mail personnelle de l'utilisateur).
 
-## Disable forwarding
+## Désactiver le transfert
 
-Users can manage the apps using Sign In With Apple from their Apple ID settings page (see [Apple's Documentation](https://support.apple.com/en-us/HT210426)).
+Les utilisateurs peuvent gérer les applications en utilisant Se connecter avec Apple à partir de leur page de paramètres Apple ID (voir la [Documentation d'Apple](https://support.apple.com/en-us/HT210426)).
 
-Should a user choose to disable the email forwarding to your app's relay email, Braze will receive email bounce information as usual.
+Si un utilisateur choisit de désactiver la redirection de courriel vers l'e-mail de votre application, Braze recevra comme d'habitude des informations de rebond par e-mail.
 
-## Sending emails to Apple Private Relay for SendGrid
+## Envoi d'emails à l'Apple Private Relay pour SendGrid
 
-Braze customers who use SendGrid as an email provider can now, essentially, "[whitelist](https://help.apple.com/developer-account/?lang=en#/devf822fb8fc)" with Apple without having to make DNS changes.
+Les clients qui utilisent SendGrid comme fournisseur de messagerie peuvent maintenant «[whitelist](https://help.apple.com/developer-account/?lang=en#/devf822fb8fc)» avec Apple sans avoir à apporter de modifications DNS.
 
-Go to your [Apple Certificate](https://help.apple.com/developer-account/?lang=en#/devf822fb8fc) page and whitelist the email address you wish to use for sending via Apple's Email Relay Service (your desired `From` address).
+Rendez-vous sur votre page [Certificat Apple](https://help.apple.com/developer-account/?lang=en#/devf822fb8fc) et mettez en liste blanche l'adresse e-mail que vous souhaitez utiliser pour envoyer via le service de relais de courrier électronique d'Apple (votre adresse souhaitée `De`).
 
-![Whitelabel the Address]({% image_buster /assets/img/email-relay-whitelabel-address.png %})
+![Etiquette blanche de l'adresse]({% image_buster /assets/img/email-relay-whitelabel-address.png %})
 
-To find the proper address, go to your Sendgrid DNS record and copy the UID, Whitelabel Subdomain, and Domain from the Host Value column.
+Pour trouver la bonne adresse, allez dans votre enregistrement DNS Sendgrid et copiez l'UID, le sous-domaine Whitelabel et le domaine dans la colonne Valeur de l'hôte.
 
-![HOST Value DNS Records]({% image_buster /assets/img/email-relay-dns-records.png %})
+![HOST valeur des enregistrements DNS]({% image_buster /assets/img/email-relay-dns-records.png %})
 
-The address should be formatted as:
+L'adresse doit être formatée comme :
 
 `bounces+<YOUR_UID>@<YOUR_WHITELABELED_SUBDOMAIN_AND_DOMAIN>`
 
-For example: `bounces+1234567@braze.online.docs.com`.
+Par exemple : `bounces+1234567@braze.online.docs.com`.
 
-Once added to your Apple Certificate page, emails from this `From` address domain will be delivered via the Apple Private Relay system.
+Une fois ajouté à votre page de certificat Apple, les e-mails de ce domaine `De` adresse seront livrés via le système Apple Private Relay.
 
-If you have any further questions, please open a [support ticket]({{site.baseurl}}/braze_support/).
+Si vous avez d'autres questions, veuillez ouvrir un [ticket d'assistance]({{site.baseurl}}/braze_support/).
 
 {% alert important %}
-If your desired `From` address is an `abmail` address, please include that in your subdomain. For example, use `abmail.docs.braze.com` instead of `docs.braze.com`.
+Si l'adresse `De` que vous souhaitez est une adresse `abmail` , veuillez l'inclure dans votre sous-domaine. Par exemple, utilisez `abmail.docs.braze.com` au lieu de `docs.braze.com`.
 
-This might not be the case for your address. Please check your DNS records in Sendgrid.
+Cela pourrait ne pas être le cas pour votre adresse. Veuillez vérifier vos enregistrements DNS dans Sendgrid.
 {% endalert %}
 
-### From address components for whitelisting with Apple email relay
+### Composants d'adresse pour la liste blanche avec le relais de messagerie Apple
 
-| Value                             | Description                                                                                                                                                                                                                                                                                                                                                                                           |
-| --------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| UID                               | This value is provided by Sendgrid in your DNS records. Do not include the "U" character in your UID in the email address you whitelabel. For example, if your UID is presented in Sendgrid as `u1234567.wl134.sendgrid.net`, then `1234567` is the UID value. <br> <br> _You can also ask your Braze representative to provide your UID, if you do not have access to your DNS records._ |
-| Whitelabeled Subdomain and Domain | This is the initial domain and subdomain you entered into Sendgrid. You can also use the HOST value in your DNS Records in Sendgrid. <br> <br> ![HOST Value DNS Records]({% image_buster /assets/img/email-relay-dns-records.png %})                                                                                                                                                      |
+| Valeur                                    | Libellé                                                                                                                                                                                                                                                                                                                                                                                                                                                                   |
+| ----------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| UID                                       | Cette valeur est fournie par Sendgrid dans vos enregistrements DNS. N'incluez pas le caractère "U" dans votre UID dans l'adresse e-mail que vous utilisez sur la marque blanche. Par exemple, si votre UID est présenté dans Sendgrid comme `u1234567.wl134.sendgrid.net`, alors `1234567` est la valeur UID. <br> <br> _Vous pouvez également demander à votre représentant Braze de fournir votre UID, si vous n'avez pas accès à vos enregistrements DNS._ |
+| Sous-domaine et domaine en marque blanche | Il s'agit du domaine initial et du sous-domaine que vous avez entré dans Sendgrid. Vous pouvez également utiliser la valeur HOST dans vos enregistrements DNS dans Sendgrid. <br> <br> ![HOST valeur des enregistrements DNS]({% image_buster /assets/img/email-relay-dns-records.png %})                                                                                                                                                                     |
 {: .reset-td-br-1 .reset-td-br-2}
 
-## Sending emails to Apple Private Relay for Sparkpost
+## Envoi d'e-mails à l'Apple Private Relay pour Sparkpost
 
-Braze customers who use Sparkpost can also set up Apple Private Relay. To do so, perform the following steps:
+Les clients de Braze qui utilisent Sparkpost peuvent également configurer Apple Private Relay. Pour ce faire, effectuez les étapes suivantes :
 
-1. Create the necessary verification files according to Apple's documentation on [Sign in with Apple](https://developer.apple.com/sign-in-with-apple/get-started/).
-2. Host the files in the `/.well-known/` directory of the given domains. Make sure your content delivery network (CDN) is publicly accessible via the internet.
-3. Add an A record into DNS that points to the domain where your verification file is hosted. This is a one-time verification process.
-4. Select verify on Apple's end.
+1. Créez les fichiers de vérification nécessaires selon la documentation d'Apple sur [Connectez-vous avec Apple](https://developer.apple.com/sign-in-with-apple/get-started/).
+2. Hébergez les fichiers dans le répertoire `/.well-known/` des domaines donnés. Assurez-vous que votre réseau de distribution de contenu (CDN) est accessible au public via Internet.
+3. Ajoutez un enregistrement A dans le DNS qui pointe vers le domaine où votre fichier de vérification est hébergé. Il s'agit d'un processus de vérification unique.
+4. Sélectionnez la vérification à la fin d'Apple.
 
 {% alert important %}
-Make sure you complete this process within 2 to 3 days of the verification files being created or else they will expire. Apple does not disclose how long they're valid for.
+Assurez-vous que vous terminez ce processus dans les 2 à 3 jours suivant la création des fichiers de vérification sinon ils expireront. Apple ne révèle pas combien de temps ils sont valides.
 {% endalert %}
