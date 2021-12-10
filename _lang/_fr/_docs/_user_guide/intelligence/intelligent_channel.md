@@ -1,43 +1,43 @@
 ---
-nav_title: Intelligent Channel
-article_title: Intelligent Channel Filter
+nav_title: Canal Intelligent
+article_title: Filtre de canal intelligent
 page_order: 0
-description: "The Intelligent Channel filter selects the portion of your audience for whom the selected messaging channel is their best channel. In this case, best means has the highest likelihood of engagement, given the user's history."
+description: "Le filtre Canal Intelligent sélectionne la portion de votre auditoire pour laquelle le canal de messagerie sélectionné est leur meilleur canal. Dans ce cas, les meilleurs moyens ont la plus grande probabilité d'engagement, compte tenu de l'historique de l'utilisateur."
 ---
 
-# Intelligent Channel filter
+# Filtre de canal intelligent
 
-The Intelligent, or "Most Engaged" Channel filter selects the portion of your audience for whom the selected messaging channel is their "best" channel. In this case, "best" means "has the highest likelihood of engagement, given the user's history". You can select Email, Web Push, or Mobile Push (which includes any available mobile OS or device) as a channel. !\[Intelligent Channel Filter\]\[1\]{: style="float:right;max-width:60%;margin-left:10px;margin-top:10px"}
+Le filtre de canal Intelligent, ou "Le plus engagé", sélectionne la portion de votre auditoire pour laquelle le canal de messagerie sélectionné est leur "meilleur". Dans ce cas, "meilleur" signifie "a la plus grande probabilité d'engagement, compte tenu de l'histoire de l'utilisateur". Vous pouvez sélectionner Email, Web Push, ou Mobile Push (qui comprend tout système d'exploitation ou appareil mobile disponible) comme chaîne. !\[Intelligent Channel Filter\]\[1\]{: style="float:right;max-width:60%;margin-left:10px;margin-top:10px"}
 
-The Intelligent Channel computes the engagement rate for each user for each of the three channels by taking the ratio of message interactions (opens or clicks) to the number of messages received over the last 6 months of activity. The available channels are ranked according to their respective engagement ratios, and the channel with the highest ratio is the "Most Engaged" for that user. Every time a message is sent to a user and every time they interact with a message, the Intelligent Channel is refreshed within seconds. Any interaction with a message causes it to be considered "interacted with" only once, e.g. an open and click on the same email will cause that message to be marked as having been engaged with only once, not twice.
+Le canal Intelligent calcule le taux d'engagement de chaque utilisateur pour chacun des trois canaux en prenant le ratio d'interactions de messages (ouverture ou clics) par rapport au nombre de messages reçus au cours des 6 derniers mois d'activité. Les canaux disponibles sont classés en fonction de leurs ratios d'engagement respectifs, et le canal avec le plus haut ratio est le "Plus Engagé" pour cet utilisateur. Chaque fois qu'un message est envoyé à un utilisateur et chaque fois qu'il interagit avec un message, le canal intelligent est actualisé en quelques secondes. Toute interaction avec un message ne peut être considérée comme "interagissant avec" qu'une seule fois, par ex. une ouverture et un clic sur le même courriel feront que ce message sera marqué comme ayant été engagé avec une seule fois, pas deux fois.
 
-## The "not enough data" option
+## L'option "pas assez de données"
 
-For Braze to determine which channel is "best", there needs to be adequate data. This means that a user must have received at least three (3) or more messages on at least two (2) of the three (3) available channels. The messages do not necessarily need to have been opened.
+Pour que Braze détermine quel canal est le « meilleur », il doit y avoir des données adéquates. Cela signifie qu'un utilisateur doit avoir reçu au moins trois (3) messages ou plus sur au moins deux (2) des trois (3) canaux disponibles. Les messages n'ont pas nécessairement besoin d'être ouverts.
 
-So, if a user only has data for one (1) channel, or less than three (3) messages received on two (2) or three (3) channels, that user will then fall under the "Not Enough Data" option of this filter. This will allow you to choose to use whichever messaging channel you wish for the users that do not have an "Intelligent Channel" reliably calculated.
+Donc, si un utilisateur n'a que des données pour un (1) canal, ou moins de trois (3) messages reçus sur deux (2) ou trois (3) canaux, cet utilisateur sera alors sous l'option "Données insuffisantes" de ce filtre. Cela vous permettra de choisir d'utiliser le canal de messagerie que vous souhaitez pour les utilisateurs qui n'ont pas de "canal intelligent" calculé de manière fiable.
 
-For example, if you want users who prefer _push messages_ to receive a push, as well as users for whom there is not enough data to receive the same push message, you could set the "Intelligent Channel" filter as "Mobile" and use __OR__ to add a second "Intelligent Channel" filter set to "Not Enough Data". This way users who prefer push will receive one as well as users for whom there isn't enough data to know. A separate campaign with the Most Engaged filter set to "Email" could address users who prefer email.
+Par exemple, si vous voulez que les utilisateurs qui préfèrent _les messages push_ reçoivent un push, ainsi que les utilisateurs pour lesquels il n'y a pas assez de données pour recevoir le même message push, vous pouvez définir le filtre "Intelligent Channel" comme "Mobile" et utiliser __OU__ pour ajouter un second filtre "Intelligent Channel" à "Not Enough Data". De cette façon, les utilisateurs qui préfèrent push recevront aussi bien qu'un utilisateur pour qui il n'y a pas assez de données à savoir. Une campagne séparée avec le filtre le plus Engagé réglé sur "Email" pourrait cibler les utilisateurs qui préfèrent le courriel.
 
 {% alert note %}
-Campaigns and Canvas Steps that ignore [Frequency Capping]({{site.baseurl}}/user_guide/engagement_tools/campaigns/testing_and_more/rate-limiting/#delivery-rules) will not be accounted for by Intelligent Channel and cannot contribute to the data requirements above.
+Campagnes et pas de Canvas qui ignorent le [plafonnement de fréquence]({{site.baseurl}}/user_guide/engagement_tools/campaigns/testing_and_more/rate-limiting/#delivery-rules) ne seront pas comptabilisés par le canal intelligent et ne peuvent pas contribuer aux exigences de données ci-dessus.
 {% endalert %}
 
-## The "mobile push" option
+## L'option "Push mobile"
 
-Mobile Push incorporates Android, iOS, Windows, Kindle, and all other mobile device channels available on Braze. When computing the Intelligent Channel, Braze looks at each kind of mobile device separately, but then chooses the highest engagement rate among them to represent the "Mobile Push" category when comparing against Email and Web Push. So a user with an iPhone, Android phone, and iPad with engagement rates of 0.1, 0.2, and 0.45, respectively would have their Mobile Push engagement rate calculated as the best of all those devices: 0.45. This would not, however, force that user to receive Push notifications on the iPad— they can still be considered as preferring “Mobile Push” even when using the filter on an Android push message.
+Mobile Push intègre Android, iOS, Windows, Kindle et tous les autres canaux mobiles disponibles sur Brésil. Lors de l'informatique du canal intelligent, Braze regarde chaque type d'appareil mobile séparément, mais choisit ensuite le taux d'engagement le plus élevé parmi eux pour représenter la catégorie "Mobile Push" lors de la comparaison avec le courrier électronique et Web Push. Donc un utilisateur avec un iPhone, téléphone Android, et iPad avec des taux d'engagement de 0,1, 0.2, et 0. 5, respectivement, aurait leur taux d'engagement Mobile Push être calculé comme le meilleur de tous ces appareils : 0,45. Mais cela ne serait pas le cas. forcer cet utilisateur à recevoir des notifications Push sur l’iPad — elles peuvent toujours être considérées comme préférant “Pousser Mobile” même lorsque vous utilisez le filtre sur un message push Android.
 
-## Best practices and effective use strategy
+## Meilleures pratiques et stratégie d'utilisation efficace
 
-### Tie-breaking
+### Délimité
 
-Because some users will have low numbers of messages received, it is not unusual to have "ties" in engagement rates across the available channels for a single given user (a single user has a 0.2 engagement rate for __both__ Email and Mobile Push). In such cases, ties will be broken by prioritizing (giving a higher ranking to) the channel with the most recent open events.
+Parce que certains utilisateurs auront un faible nombre de messages reçus, Il n'est pas rare d'avoir des "liens" dans les taux d'engagement sur les canaux disponibles pour un seul utilisateur donné (un seul utilisateur a un 0. Taux d'engagement pour __à la fois__ Email et Mobile Push). Dans de tels cas, les liens seront rompus en priorisant (donnant un rang supérieur à) le canal avec les événements ouverts les plus récents.
 
-### Unreachable channels
+### Chaînes injoignables
 
-When the user has sufficient data for a ranking to be determined but becomes unreachable on their "Intelligent Channel", the user will "fall out" and not receive any messages. Users who are unreachable on specific channels should be targeted separately.
+Quand l'utilisateur a suffisamment de données pour qu'un classement soit déterminé mais devient inaccessible sur son "Canal Intelligent", l'utilisateur "tombera" et ne recevra aucun message. Les utilisateurs qui ne sont pas joignables sur certains canaux doivent être ciblés séparément.
 
-### Audience sizing
+### Taille de l'audience
 
-Intelligent Channel allows you to selectively target in advance the fraction of users who have a much higher likelihood of engaging with a message than the rest of your audience. This is not likely to represent a majority of users in a typical audience. Rather, you can expect this filter to find the 5-20% from your usual audience who have an established record of engaging on a particular channel.
-[1]: {% image_buster /assets/img/intelligent_channel_filter.png %} "Intelligent Channel Filter"
+Le canal intelligent vous permet de cibler sélectivement à l'avance la fraction d'utilisateurs qui ont une probabilité beaucoup plus élevée de s'engager avec un message que le reste de votre public. Il est peu probable que cela représente une majorité d'utilisateurs dans un public typique. Au contraire, vous pouvez vous attendre à ce que ce filtre trouve les 5-20% de votre public habituel qui ont un record établi de s'engager sur un canal particulier.
+[1]: {% image_buster /assets/img/intelligent_channel_filter.png %} "Filtre de canal intelligent"
