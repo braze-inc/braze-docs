@@ -28,7 +28,7 @@ markdown_api: true
 github_baseurl: 'https://github.com/braze-inc/braze-docs/blob/develop/_lang/_fr'
 
 # Collections directory
-collections_dir: _lang/_fr
+collections_dir: _lang/_fr/_docs
 
 
 collections:
@@ -58,10 +58,10 @@ asset_pipeline:
 algolia:
   index_name: "DocSearch_French" # You can replace that with whatever name you want
   files_to_exclude:
-    - _lang/_fr/_hidden/*
-    - _lang/_fr/_hidden/*/* #exclude hidden subdirectories from indexing
-    - _lang/_fr/_hidden/*/*/* #exclude additional hidden subdirectories from indexing
-    - _lang/_fr/_docs_pages/*
-    - _lang/_fr/_docs_pages/*/* #exclude hidden subdirectories from indexing
-    - _lang/_fr/_docs_pages/*/*/* #exclude additional hidden subdirectories from indexing
-    - _lang/_fr/_home/Styling_Test_Page.md
+    - _lang/_fr/_docs/_hidden/*
+    - _lang/_fr/_docs/_hidden/*/* #exclude hidden subdirectories from indexing
+    - _lang/_fr/_docs/_hidden/*/*/* #exclude additional hidden subdirectories from indexing
+    - _lang/_fr/_docs/_docs_pages/*
+    - _lang/_fr/_docs/_docs_pages/*/* #exclude hidden subdirectories from indexing
+    - _lang/_fr/_docs/_docs_pages/*/*/* #exclude additional hidden subdirectories from indexing
+    - _lang/_fr/_docs/_home/Styling_Test_Page.md
