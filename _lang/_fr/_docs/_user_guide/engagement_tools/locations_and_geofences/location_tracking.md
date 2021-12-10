@@ -1,37 +1,37 @@
 ---
-nav_title: Location Tracking
-article_title: Location Tracking
+nav_title: Suivi de la localisation
+article_title: Suivi de la localisation
 page_order: 0
-page_type: reference
-description: "This reference article explains how to use location tracking and location targeting in your apps."
-tool: Location
+page_type: Référence
+description: "Cet article de référence explique comment utiliser le suivi de localisation et le ciblage de localisation dans vos applications."
+tool: Localisation
 ---
 
-# Location tracking
+# Suivi de localisation
 
-Location collection captures a user's most recent location when the app was opened using GPS location data. You can use this information to segment data based on users who were in a defined location.
+La collection de localisation capture l'emplacement le plus récent de l'utilisateur lorsque l'application a été ouverte en utilisant les données de localisation GPS. Vous pouvez utiliser ces informations pour segmenter les données en fonction des utilisateurs qui se trouvaient dans un emplacement défini.
 
-## Enabling location tracking
+## Activation du suivi de localisation
 
-To enable location collection on your app, take a look at the appropriate developer guide for the platform you are using:
+Pour activer la collecte de localisation sur votre application, jetez un œil au guide de développement approprié pour la plateforme que vous utilisez:
 
 - [iOS][2]
 - [Android][3]
 - [Web][4]
 
-In general, mobile apps will use the device's GPS chip and other systems (such as Wi-Fi scanning) to track a user's location. Web apps will use WPS (Wi-Fi Positioning System) to track a user's locations.
+En général, les applications mobiles utiliseront la puce GPS de l'appareil et d'autres systèmes (comme l'analyse Wi-Fi) pour suivre la localisation d'un utilisateur. Les applications Web utiliseront le WPS (système de positionnement Wi-Fi) pour suivre la localisation d'un utilisateur.
 
-Note that the accuracy of your location tracking data may be affected by whether or not your users have wi-fi enabled on their device. Android users can also choose different location modes—users that are on "Battery saving" or "Device only" mode may have inaccurate data.
+Notez que la précision de vos données de localisation peut être affectée par le fait que vos utilisateurs aient ou non activé le Wi-Fi sur leur appareil. Les utilisateurs d'Android peuvent également choisir différents modes de localisation : les utilisateurs qui sont en mode "Économie de batterie" ou "Périphérique uniquement" peuvent avoir des données inexactes.
 
-## Location targeting
+## Ciblage de l'emplacement
 
-Using location tracking data, you can set up location-based campaigns and strategies. For example, you may want to run a promotional campaign for users that live in a particular region, or exclude users in a region that has stricter regulations.
+En utilisant les données de suivi de la localisation, vous pouvez configurer des campagnes et des stratégies basées sur la localisation. Par exemple, vous pouvez organiser une campagne promotionnelle pour les utilisateurs qui vivent dans une région particulière, ou exclure les utilisateurs dans une région où les réglementations sont plus strictes.
 
-See [this article][1] for more information on location targeting.
+Voir [cet article][1] pour plus d'informations sur le ciblage de l'emplacement.
 
-## Hard setting the default location attribute
+## Paramétrage difficile de l'attribut d'emplacement par défaut
 
-You can also use the [`users/track`][8] endpoint in our API to update the [`current_location`][9] default attribute—for example:
+Vous pouvez également utiliser le point de terminaison [`utilisateurs/piste`][8] de notre API pour mettre à jour l'attribut par défaut [`current_location`][9] </a> -- par exemple :
 ```
 https://[your_braze_rest_endpoint]/users/track
 Content-Type: application/json
@@ -40,15 +40,15 @@ Authorization: Bearer YOUR-REST-API-KEY
   "attributes": [ 
     {
       "external_id" : "XXX",
-      "current_location" : {"longitude":-0.118092, "latitude": 51.509865}
+      "current_location" : {"longitude":-0. 18092, "latitude": 51.509865}
       }
    ]
 }
 ```
 
-## Technology partners
+## Partenaires technologiques
 
-You can also leverage location tracking with some of our partners, for example:
+Vous pouvez également tirer parti du suivi de la localisation avec certains de nos partenaires, par exemple :
 
 - [Neura][5]
 - [Radar][6]
