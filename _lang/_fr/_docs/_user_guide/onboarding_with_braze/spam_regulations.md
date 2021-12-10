@@ -1,111 +1,111 @@
 ---
-nav_title: Spam Regulations
-article_title: Spam Regulations
+nav_title: Réglementation sur les spams
+article_title: Réglementation sur les spams
 page_order: 4.2
-page_type: reference
-description: "This article provides summaries and resources on various spam regulations that may affect you or your users."
+page_type: Référence
+description: "Cet article fournit des résumés et des ressources sur diverses réglementations en matière de spam qui peuvent vous affecter ou affecter vos utilisateurs."
 channel:
-  - email
-  - push
+  - Email
+  - Pousser
   - SMS
 ---
 
-# Spam regulations
+# Règles de spam
 
-There are a number of laws that regulate senders of electronic communications, including email, push notifications and SMS. You should always be aware of [local regulations][4] that may affect you or your users. Braze is providing relevant information based on our own research, but you should also refer to the full text of these laws for complete and up-to-date details.
+Il existe un certain nombre de lois qui régissent les expéditeurs de communications électroniques, y compris les courriels, les notifications push et les SMS. Vous devez toujours être au courant des [réglementations locales][4] qui peuvent vous affecter ou affecter vos utilisateurs. Braze fournit des informations pertinentes basées sur nos propres recherches, mais vous devriez également vous référer au texte intégral de ces lois pour des détails complets et à jour.
 
 - [CAN-SPAM][1]
-- [Canadian Anti-Spam Law][2]
+- [Loi canadienne antispam][2]
 
 ## CAN-SPAM
 
-The CAN-SPAM Act of 2003 regulates email senders in the U.S. sending "any electronic mail message, the primary purpose of which is the commercial advertisement or promotion of a commercial product or service." You can read more details on the [FTC site][5].
+La loi CAN-SPAM de 2003 réglemente les expéditeurs de courriels aux États-Unis. en envoyant "tout message électronique dont l'objectif premier est la publicité commerciale ou la promotion d'un produit ou service commercial". Vous pouvez lire plus de détails sur le site [FTC][5].
 
-There are 7 key requirements for CAN-SPAM:
+Il y a 7 exigences clés pour le CAN-SPAM :
 
-1. Don’t use false or misleading header information (ie, "From", "To" and "Reply-To")
-2. Don’t use deceptive subject lines
-3. Identify the message as an ad
-4. Tell recipients where you’re located (ie, physical address)
-5. Tell recipients how to opt out of receiving future email from you
-6. Honor opt-out requests promptly
-7. Monitor what others are doing on your behalf
+1. N'utilisez pas d'informations d'en-tête fausses ou trompeuses (c.-à-d. "De", "À" et "Répondre à")
+2. Ne pas utiliser de lignes de sujet trompeuses
+3. Identifier le message comme une annonce
+4. Dites aux destinataires où vous vous trouvez (c.-à-d. adresse physique)
+5. Dites aux destinataires comment ne pas recevoir de futurs e-mails de votre part
+6. Honorer rapidement les demandes de désinscription
+7. Surveiller ce que d'autres font en votre nom
 
-Transactional emails are exempt from these rules with the exception of #1.
+Les courriels transactionnels sont exemptés de ces règles, à l'exception du numéro 1.
 
-## Canadian Anti-Spam Law (CASL) {#casl}
+## Loi canadienne antispam (CASL) {#casl}
 
-On July 1, 2014, the Canadian Anti-Spam Law (CASL) goes into effect for emails sent to Canadian residents. You can read the full text of the law [here][3]. The law essentially says that Canadian recipients of both email and push notifications need to provide "expressed or implied" consent to your communication with them.
+Le 1er juillet 2014, la Loi canadienne antispam (LCSP) entrera en vigueur pour les courriels envoyés aux résidents canadiens. Vous pouvez lire le texte complet de la loi [ici][3]. La loi stipule essentiellement que les destinataires canadiens de messages électroniques et de notifications push doivent fournir un consentement « explicite ou implicite » à votre communication avec eux.
 
 ### CASL vs CAN-SPAM
 
-There are a couple key differences between CASL and CAN-SPAM, most notably:
+Il y a quelques différences importantes entre l'ACPLS et le CAN-SPAM, notamment :
 
-- CASL applies to *where* the message is received, so senders outside of Canada are affected
-- Message recipients must up opt-in, instead of opt-out
+- L'ACHAT s'applique à *où* le message est reçu, donc les expéditeurs en dehors du Canada sont affectés
+- Les destinataires du message doivent opt-in, au lieu de l'opt-out
 
-### Liability
+### Responsabilité
 
-While CASL has a three-year transition period, ending july 1, 2017, the Canadian Radio-Television and Telecommunications Commission (CRTC), the Competition Bureau and the Office of the Privacy Ccommissioner of Canada may begin investigation and litigation during this period. At the end of the transition period, individuals may also litigate against entities they believe to be sending spam.
+Alors que l’ACPLS a une période de transition de trois ans, se terminant le 1er juillet 2017, le Conseil de la radiodiffusion et des télécommunications canadiennes (CRTC), le Bureau de la concurrence et le Commissariat à la protection de la vie privée du Canada peuvent entamer des enquêtes et des litiges au cours de cette période. À la fin de la période de transition, les personnes peuvent également se plaindre contre des entités qui, selon elles, envoient des pourriels.
 
-### Exempt messages
+### Messages exonérés
 
-The following types of messages are exempt from the requirements of CASL:
+Les types de messages suivants sont exemptés des exigences de l’ACPLS :
 
-- Messages opened outside of Canada
-- Messages to family members or other personal relations
-- Messages to individuals associated with your business, including employees or contractors
-- Messages providing warranty information, product recall information or safety or security information about a product or service the recipient has used or purchased
-- Messages providing notification of factual information about subscription, membership or account
-- Messages delivering a product or service, including product updates or upgrades
+- Messages ouverts à l'extérieur du Canada
+- Messages aux membres de la famille ou à d'autres relations personnelles
+- Messages aux personnes associées à votre entreprise, y compris aux employés ou aux sous-traitants
+- Messages fournissant des informations sur la garantie, des informations de rappel de produit ou des informations de sécurité sur un produit ou un service que le destinataire a utilisé ou acheté
+- Messages fournissant une notification d'informations factuelles sur l'abonnement, l'adhésion ou le compte
+- Messages fournissant un produit ou un service, y compris des mises à jour de produits ou des mises à jour de produits
 
-> This is not the complete list of exemptions. Please view the [full text of the law][3] for more details.
+> Ce n'est pas la liste complète des exemptions. Veuillez consulter le [texte complet de la loi][3] pour plus de détails.
 
-### Message consent
+### Consentement du message
 
-Messages that do not fall under one of the exemptions require "expressed or implied" consent from the message recipient.
+Les messages qui ne tombent pas sous l'une des exemptions requièrent un consentement « explicite ou implicite » de la part du destinataire.
 
-#### Implied consent
+#### Consentement implicite
 
-Implied consent is based on previous activity with a user through an existing business or non-business relationship. Messages can be sent based on implied consent during the transition period. After July 1, 2017, express consent is required, unless the implied consent is still valid (i.e., the 2 years after a purchase was made).
+Le consentement implicite est basé sur une activité antérieure avec un utilisateur dans le cadre d'une relation commerciale ou non commerciale. Les messages peuvent être envoyés en fonction du consentement implicite au cours de la période de transition. Après le 1er juillet 2017, un consentement explicite est exigé, à moins que le consentement implicite soit toujours valide (c'est-à-dire les 2 ans après l'achat).
 
-- The recipient of a message has purchased or leased a product, good, service or completed other business with your organization in the last 2 years
-- The electronic address has been published and does not explicitly forbid unsolicited emails
+- Le destinataire d'un message a acheté ou loué un produit, un bien, un service ou une autre entreprise avec votre organisation au cours des 2 dernières années
+- L'adresse électronique a été publiée et n'interdit pas explicitement les e-mails non sollicités
 
-Implied consent is only valid for 6 months if the recipient does not become a customer.
+Le consentement implicite n'est valide que pendant 6 mois si le destinataire ne devient pas client.
 
-#### Express consent
+#### Consentement express
 
-Express consent is written or oral confirmation from the message recipient and only valid if the message includes a clear and simple description of:
+Le consentement exprès est écrit ou oral de la part du destinataire du message et n'est valide que si le message contient une description claire et simple de:
 
-- Why consent is being sought
-- The person or organization seeking consent
+- Pourquoi demander un consentement
+- La personne ou l'organisation qui sollicite le consentement
 
-## Spam filters
+## Filtres anti-spam
 
-Just because your emails have successfully sent doesn’t mean that they have necessarily been seen. There is no cure-all solution to avoid all spam filters because each filter is unique in how they evaluate the “spamminess score” of an email. However, here are some tips to avoid having your emails labeled as “spam”:
+Ce n’est pas parce que vos courriels ont été envoyés avec succès qu’ils ont été nécessairement vus. Il n'y a pas de solution pour éviter tous les filtres anti-spam car chaque filtre est unique dans la façon dont ils évaluent le « score de la mine de spam » d'un courriel. Cependant, voici quelques conseils pour éviter que vos e-mails ne soient étiquetés comme « spam » :
 
-- Get Permission: A double opt-in process consists of sending a follow up email with a confirmation link after an initial opt-in. Using this provides validation that recipients want to receive your content. You can also take this even one step further by asking users to add you to their address book. Also be sure to grow your email lists organically: purchased lists often tend to be stale!
+- Get Permission: Un processus double opt-in consiste à envoyer un e-mail de suivi avec un lien de confirmation après un premier opt-in. Utiliser ceci fournit la validation que les destinataires veulent recevoir votre contenu. Vous pouvez également aller plus loin encore en demandant aux utilisateurs de vous ajouter à leur carnet d'adresses. Assurez-vous également de faire croître vos listes de courriels de façon organique: les listes achetées ont souvent tendance à être obsolètes!
 
-- Build Your Reputation: Make sure you set expectations when people are signing up to receive your emails. Be explicit about what you will send and how often you will send it. Then, encourage users to interact with your email campaigns by providing valuable content. Having personalized and relevant content decreases the probability of your recipients marking the messages as spam.
+- Construire votre réputation : Assurez-vous de définir les attentes lorsque des personnes s'inscrivent pour recevoir vos e-mails. Soyez explicite sur ce que vous allez envoyer et à quelle fréquence vous allez l'envoyer. Ensuite, encouragez les utilisateurs à interagir avec vos campagnes de courriel en fournissant un contenu précieux. Avoir un contenu personnalisé et pertinent réduit la probabilité que vos destinataires marquent les messages comme du spam.
 
-- Maintain Your Reputation: Be in constant contact with your users to prevent your email lists from becoming stale. Waiting too long to send a message may cause the recipient to forget about you and mark you as spam. Keep your email lists up to date by implementing a sunset policy to remove email addresses that bounce. Bounce rates are a key factor used by ISPs to evaluate a sender’s reputation.
+- Maintenez votre réputation : soyez en contact permanent avec vos utilisateurs pour éviter que vos listes de courriels ne deviennent obsolètes. En attendant trop longtemps pour envoyer un message, le destinataire peut oublier vous et vous marquer comme indésirable. Gardez vos listes de courriels à jour en implémentant une politique de couperet pour supprimer les adresses e-mail qui rebondissent. Les taux de rebond sont un facteur clé utilisé par les FSI pour évaluer la réputation d’un expéditeur.
 
-- Check and Test: Make sure your message does not contain anything that can trigger spam filters. This includes superfluous tags from external text editors like Microsoft Word, abnormal text formatting, over-usage of ! and ? as punctuation, writing in ALL CAPS, and spam trigger words (see [here][7] for a list of common trigger words). Send emails with varying content using Braze’s multivariate testing capabilities to make sure your emails are not going to spam.
+- Vérifiez et testez : assurez-vous que votre message ne contient rien qui puisse déclencher des filtres anti-spam. Cela inclut des balises superflues provenant d'éditeurs de texte externes comme Microsoft Word, mise en forme de texte anormale, surutilisation de ! et ? sous forme de ponctuation, d'écriture dans TOUTES les majuscules, et de spam les mots déclencheurs (voir [ici][7] pour une liste de mots de déclenchement courants). Envoyez des courriels avec du contenu varié en utilisant les capacités de test multivariées de Braze pour vous assurer que vos courriels ne vont pas spammer.
 
-## Messaging channel
+## Chaîne de messagerie
 
-### Email {#spam-email}
+### Courriel {#spam-email}
 
-The quality of your email list is especially important.  A handful of bad emails on your list can ruin your delivery for a million good users. Collecting a list of bad emails generates bounces, blacklisting, spam trap hits, and tanks your response rates. Culling emails that have no activity on a regular basis, and removing obvious bounces are the first step. Whether you implement a opt-in (check the box), opt-out (uncheck the box), confirm opt-in (an email that says thanks for signing up, and gives an unsubscribe link), or double opt-in (an email that that requires a click to confirm), what you want to think about is list quality.
+La qualité de votre liste de courriels est particulièrement importante.  Une poignée de mauvais courriels sur votre liste peut ruiner votre livraison pour un million de bons utilisateurs. La collecte d'une liste de mauvais e-mails génère des rebondissements, des listes noires, des attaques de spams et des tanks vos taux de réponse. La première étape consiste à abattre les courriels qui n'ont pas d'activité régulière, et à supprimer les rebonds évidents. Si vous implémentez un opt-in (cochez la boîte), opt-out (décochez la boîte), confirmez opt-in (un email qui dit merci de vous inscrire, et donne un lien de désinscription), ou double opt-in (un email qui nécessite un clic pour confirmer), ce que vous voulez penser est la qualité de la liste.
 
-### iOS and Windows {#spam-ios-windows}
+### iOS et Windows {#spam-ios-windows}
 
-In iOS, your users have always been asked to opt-in to push notifications. The iOS dialog boxed simply pops up on entry to the app and asks the user to opt-in for notifications to your app. The app user sees the same message pop-up the moment they open an app for the first time, so everyone who is on your iOS list for push notifications has, by definition, opted-in. Windows also requires explicit opt-ins by the user.
+Dans iOS, vos utilisateurs ont toujours été invités à opter pour les notifications push. La boîte de dialogue iOS apparaît simplement à l'entrée de l'application et demande à l'utilisateur d'opter pour les notifications à votre application. L'utilisateur de l'application voit apparaître le même message au moment où il ouvre une application pour la première fois ainsi tous ceux qui sont sur votre liste iOS pour les notifications push ont, par définition, opté-in. Windows requiert également des opt-ins explicites de la part de l'utilisateur.
 
 ### Android {#spam-android}
 
-In Android, your users can assume to be opted-in by the implied opt-in that is stated in your privacy policy or end user license agreement. You may want to implement an expressed opt-in process perhaps in an initial screen just as the user starts the app for the first time. Visit the [Push Best Practices][6] article for more details. You can also orient the user as to what types of push notifications they will receive, thereby increasing the opt-in rate.
+Dans Android, vos utilisateurs peuvent supposer être optés par l'opt-in implicite qui est indiqué dans votre politique de confidentialité ou votre contrat de licence d'utilisateur final. Vous pouvez implémenter un processus opt-in exprimé peut-être dans un écran initial, au moment où l'utilisateur lance l'application pour la première fois. Visitez l'article [Push Best Practices][6] pour plus de détails. Vous pouvez également orienter l'utilisateur vers les types de notifications push qu'il va recevoir, augmentant ainsi le taux d'opt-in.
 
 [1]: #can-spam
 [2]: #casl
