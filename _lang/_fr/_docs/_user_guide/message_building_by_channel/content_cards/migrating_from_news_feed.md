@@ -1,48 +1,48 @@
 ---
-nav_title: Migrating from News Feed
-article_title: Migrating from News Feed
+nav_title: Migration depuis le flux d'actualités
+article_title: Migration depuis le flux d'actualités
 page_order: 10
-description: "Content Cards offer many more capabilities that are not supported by Braze's News Feed. This article covers the differences between the two and guidance on migration and adoption."
+description: "Les Cartes de Contenu offrent beaucoup plus de fonctionnalités qui ne sont pas prises en charge par Braze News Feed. Cet article couvre les différences entre les deux et les orientations en matière de migration et d'adoption."
 channel:
-  - content cards
-  - news feed
+  - cartes de contenu
+  - fil d'actualité
 ---
 
-# Migrating from News Feed to Content Cards
+# Migration depuis le flux d'actualités vers les cartes de contenu
 
-Moving from News Feed to Content Cards takes time, but it is an easy adoption! You cannot automatically migrate content from News Feed to Content Cards - you must integrate Content Cards from scratch. However, with the new flexibility of Content Cards, we don't think you'll miss it or mind.
+Passer du fil d'actualités aux cartes de contenu prend du temps, mais c'est une adoption facile! Vous ne pouvez pas migrer automatiquement le contenu du flux d'actualités vers des cartes de contenu - vous devez intégrer des cartes de contenu à partir de zéro. Cependant, avec la nouvelle flexibilité des Cartes de Contenu, nous ne pensons pas que vous la raterez ou l'esprit.
 
-Reach out to your Braze account manager for more details.
+Contactez votre gestionnaire de compte Braze pour plus de détails.
 
-## Features and functionality
+## Fonctionnalités et fonctionnalités
 
-Content Cards offers many capabilities that are not supported by Braze's current News Feed, such as additional delivery options like action-based, API delivery, and enhanced analytics like conversion tracking.
+Les Cartes de Contenu offrent de nombreuses fonctionnalités qui ne sont pas prises en charge par le flux d'actualités actuel de Braze, tels que des options de livraison supplémentaires telles que la livraison par action, la livraison par API et des analyses améliorées telles que le suivi des conversions.
 
-As you plan your migration from the News Feed to Content Cards, it will be important to note the main differences between Content Cards and the News Feed:
+Au fur et à mesure que vous planifiez votre migration du flux d'actualités vers les cartes de contenu, il sera important de noter les principales différences entre les Cartes de Contenu et le Flux de Nouvelles :
 
-- Content Cards segmentation is evaluated at the time messages are sent, News Feed segmentation is evaluated at the time that News Feed Cards are viewed.
-- Content Cards personalization is templated at the time messages are sent, News Feed card personalization is templated at the time that News Feed Cards are viewed.
+- La segmentation des Cartes de Contenu est évaluée au moment où les messages sont envoyés, la segmentation des News Feed est évaluée au moment où les Cartes de News sont affichées.
+- La personnalisation des cartes de contenu est modélisée au moment de l'envoi des messages, La personnalisation des fiches d'actualités est modélisée au moment où les fiches d'actualités sont affichées.
 
-| Feature                                         | News Feed                  | Content Cards              |
-| ----------------------------------------------- | -------------------------- | -------------------------- |
-| Transactional and 1:1 Messaging                 | <i class="fas fa-times"></i>  | <i class="fas fa-check"></i>  |
-| Multivariate and Multichannel Campaigns         | <i class="fas fa-times"></i>  | <i class="fas fa-check"></i>  |
-| Scheduled, Action-Based, and API-Based Delivery | <i class="fas fa-times"></i>  | <i class="fas fa-check"></i>  |
-| API-Created Messages                            | <i class="fas fa-times"></i>  | <i class="fas fa-check"></i>  |
-| A/B Testing                                     | <i class="fas fa-times"></i>  | <i class="fas fa-check"></i>  |
-| [Dismissing and Pinning Cards][4]               | <i class="fas fa-times"></i> | <i class="fas fa-check"></i> |
-| [Rich Analytics][3]                             | <i class="fas fa-times"></i> | <i class="fas fa-check"></i> |
-| [Available in Canvas][2]                        | <i class="fas fa-times"></i> | <i class="fas fa-check"></i> |
-| [Connected Content][5]                          | <i class="fas fa-times"></i> | <i class="fas fa-check"></i> |
-| Personalization and Segmentation                | Templated at Impression    | Templated at Send          |
+| Fonctionnalités                                            | Flux d'actualité           | Cartes de contenu          |
+| ---------------------------------------------------------- | -------------------------- | -------------------------- |
+| Transactionnel et messagerie 1:1                           | <i class="fas fa-times"></i>  | <i class="fas fa-check"></i>  |
+| Campagnes multivariées et multi-canaux                     | <i class="fas fa-times"></i>  | <i class="fas fa-check"></i>  |
+| Livraison planifiée, basée sur l'action et basée sur l'API | <i class="fas fa-times"></i>  | <i class="fas fa-check"></i>  |
+| Messages créés par l'API                                   | <i class="fas fa-times"></i>  | <i class="fas fa-check"></i>  |
+| Tests A/B                                                  | <i class="fas fa-times"></i>  | <i class="fas fa-check"></i>  |
+| [Cartes de révocation et d'épinglage][4]                   | <i class="fas fa-times"></i> | <i class="fas fa-check"></i> |
+| [Analyses riches][3]                                       | <i class="fas fa-times"></i> | <i class="fas fa-check"></i> |
+| [Disponible en Toile][2]                                   | <i class="fas fa-times"></i> | <i class="fas fa-check"></i> |
+| [Contenu connecté][5]                                      | <i class="fas fa-times"></i> | <i class="fas fa-check"></i> |
+| Personnalisation et Segmentation                           | Templé à Impression        | Templated at Send          |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
 
-## Implementation
+## Implémentation
 
-- Content Cards and the News Feed are separate products, so a simple integration for your app or website is necessary in order to use content cards.
-- If desired, existing News Feed Cards will need to be manually migrated to Content Card campaigns when you switch.
-- Content Cards is not intended to be used at the same time as the News Feed, as it is a replacement for the News Feed.
-- Content Cards does not currently support categories - categories can be achieved via [customization and key-value pairs][1].
+- Les Cartes de Contenu et le Flux de Nouvelles sont des produits distincts, donc une intégration simple pour votre application ou votre site web est nécessaire pour utiliser les cartes de contenu.
+- Si vous le souhaitez, les cartes de flux d'actualités existantes devront être migrées manuellement vers les campagnes de cartes de contenu lorsque vous changez.
+- Les cartes de contenu ne sont pas destinées à être utilisées en même temps que le fil de nouvelles, car il remplace le fil d'actualité.
+- Les cartes de contenu ne supportent pas actuellement les catégories - les catégories peuvent être obtenues via [la personnalisation et les paires clé-valeur][1].
 
 
 [1]: {{site.baseurl}}/developer_guide/platform_integration_guides/web/content_cards/multiple_feeds/
