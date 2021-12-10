@@ -1,53 +1,53 @@
 ---
-nav_title: Message Format
-article_title: Push Messsage Format
+nav_title: Format du message
+article_title: Format du message push
 page_order: 5
-page_type: reference
-description: "This article describes message and image formats for iOS, Android, and Windows push notifications."
-channel: push
+page_type: Référence
+description: "Cet article décrit les formats de messages et d'images pour les notifications push iOS, Android et Windows."
+channel: Pousser
 ---
 
-# Message format
+# Format du message
 
-> This reference article describes message and image formats for iOS, Android, and Windows push notifications.
+> Cet article de référence décrit les formats de messages et d'images pour les notifications push iOS, Android et Windows.
 
 ## iOS
 
 {% tabs local %}
 {% tab General %}
 
-- **Message Length:**
-  - iOS Lock Screen: 110 Characters
-  - iOS Notification Center: 110 Characters
-  - iOS Banner Alert: 62 Characters
-  - iOS Pop Up Alert: 235 Characters
-- **Payload Size:**
-  - iOS: 2KB
-- **Number of Lines:**
-  - iOS Lock Screen: 4 Lines
-  - iOS Notification Center: 4 Lines
-  - iOS Banner Alert: 2 Lines
-  - iOS Pop Up Alert: 8 Lines
-- **Customizable UI:** No
-- **Deep Link Capable:** Yes
+- **Longueur du message :**
+  - Écran de verrouillage iOS : 110 caractères
+  - Centre de notification iOS : 110 caractères
+  - Alerte de bannière iOS : 62 caractères
+  - Alerte Pop Up iOS : 235 caractères
+- **Taille de la charge utile :**
+  - iOS: 2Ko
+- **Nombre de lignes:**
+  - Écran de verrouillage iOS : 4 Lignes
+  - Centre de notification iOS : 4 Lignes
+  - Alerte de bannière iOS : 2 lignes
+  - Alerte Pop Up iOS : 8 Lignes
+- **Interface utilisateur personnalisable :** Non
+- **Possibilité de lien profond :** Oui
 
 {% endtab %}
 {% tab Image Sizes %}
 
-|   Aspect Ratio    | Recommended Image Size | Maximum Image Size |  File Types   |
-|:-----------------:|:----------------------:|:------------------:|:-------------:|
-| 2:1 (recommended) |         500KB          |        5MB         | PNG, JPG, GIF |
+|  Ratio d'aspect  | Taille de l'image recommandée | Taille maximale de l'image | Types de fichiers |
+|:----------------:|:-----------------------------:|:--------------------------:|:-----------------:|
+| 2:1 (recommandé) |             500Ko             |            5 Mo            |   PNG, JPG, GIF   |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4}
 
 {% endtab %}
 {% tab Text Example %}
 
-![Small iOS Push Notification]({% image_buster /assets/img_archive/iOS_push_notification_small.png %})
+![Petite notification Push iOS]({% image_buster /assets/img_archive/iOS_push_notification_small.png %})
 
 {% endtab %}
 {% tab Image Example %}
 
-![iOS Rich Push]({% image_buster /assets/img_archive/braze_richpush1.png %}){: style="max-width:50%;"}
+![Push riche iOS]({% image_buster /assets/img_archive/braze_richpush1.png %}){: style="max-width:50%;"}
 ![iOS Rich Push On Hard Push]({% image_buster /assets/img_archive/braze_richpush2.png %}){: style="max-width:50%;"}
 
 {% endtab %}
@@ -58,67 +58,67 @@ channel: push
 {% tabs local %}
 {% tab General %}
 
-- **Message Length:**
-  - Lock Screen: 1 line (estimated 49 characters max)
-  - Notification Drawer: 1 line, up to 8 lines when expanded (estimated 597 characters max)
-- **Payload Size:**
+- **Longueur du message :**
+  - Écran de verrouillage : 1 ligne (estimée à 49 caractères max)
+  - Panneau de notification : 1 ligne, jusqu'à 8 lignes en cas d'extension (estimée à 597 caractères max)
+- **Taille de la charge utile :**
   - FCM: 4KB
-- **Customizable UI:** Yes
-- **Deep Link Capable:** Yes
+- **IU personnalisable :** Oui
+- **Possibilité de lien profond :** Oui
 
 {% endtab %}
 {% tab Image Sizes %}
 
-#### Push icon
+#### Icône Push
 
-|         Aspect Ratio         | Recommended Image Size |                         Maximum Image Size                         | File Types |
-|:----------------------------:|:----------------------:|:------------------------------------------------------------------:|:----------:|
-| 1:1 (400x400 pixels minimum) |         500KB          | N/A - however a balance should be  struck between quality and size |  PNG, JPG  |
+|        Ratio d'aspect        | Taille de l'image recommandée |                         Taille maximale de l'image                          | Types de fichiers |
+|:----------------------------:|:-----------------------------:|:---------------------------------------------------------------------------:|:-----------------:|
+| 1:1 (400x400 pixels minimum) |             500Ko             | N/A - cependant un équilibre doit être trouvé entre la qualité et la taille |     PNG, JPG      |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4}
 
-#### Expanded notification image
+#### Image de notification étendue
 
-|         Aspect Ratio         | Recommended Image Size |                         Maximum Image Size                         | File Types |
-|:----------------------------:|:----------------------:|:------------------------------------------------------------------:|:----------:|
-| 2:1 (600x300 pixels minimum) |         500KB          | N/A - however a balance should be  struck between quality and size |  PNG, JPG  |
+|        Ratio d'aspect        | Taille de l'image recommandée |                         Taille maximale de l'image                          | Types de fichiers |
+|:----------------------------:|:-----------------------------:|:---------------------------------------------------------------------------:|:-----------------:|
+| 2:1 (600x300 pixels minimum) |             500Ko             | N/A - cependant un équilibre doit être trouvé entre la qualité et la taille |     PNG, JPG      |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4}
 
 {% alert note %}
-Smaller, high quality images will load faster, so it’s recommended to use the smallest asset possible to achieve your desired output.
+Des images plus petites et de haute qualité se chargeront plus rapidement. Il est donc recommandé d'utiliser le plus petit actif possible pour atteindre la sortie souhaitée.
 {% endalert %}
 
 {% endtab %}
 {% tab Text Example %}
 
-![Android Push]({% image_buster /assets/img_archive/Push_Android_2.png %})
+![Push Android]({% image_buster /assets/img_archive/Push_Android_2.png %})
 
 {% endtab %}
 {% tab Image Example %}
 
-![Large Android Image]({% image_buster /assets/img_archive/android_push_img2.png %})
+![Grande image Android]({% image_buster /assets/img_archive/android_push_img2.png %})
 
 {% alert note %}
-Large image notifications display best when using an image of at least 600x300 pixels.
+Les notifications d'images de grande taille s'affichent mieux lorsque vous utilisez une image d'au moins 600x300 pixels.
 {% endalert %}
 
 {% endtab %}
 {% endtabs %}
 
-## Windows Universal
+## Univers Windows
 
 {% tabs local %}
 {% tab General %}
 
-- **Message Length:** Depends on Device
-- **Payload Size:** 3 kilobytes
-- **Number of lines:** 1-3 Lines
-- **Customizable UI:** No
-- **Deep Link Capable:** No
+- **Longueur du message :** Dépend de l'appareil
+- **Taille de la charge utile :** 3 kilo-octets
+- **Nombre de lignes :** 1-3 lignes
+- **Interface utilisateur personnalisable :** Non
+- **Possibilité de lien profond :** Non
 
 {% endtab %}
 {% tab Text Example %}
 
-![Push Window Universal]({% image_buster /assets/img_archive/Push_Window8_Toast.png %})
+![Universelle de la fenêtre Push]({% image_buster /assets/img_archive/Push_Window8_Toast.png %})
 
 {% endtab %}
 {% endtabs %}
@@ -128,17 +128,17 @@ Large image notifications display best when using an image of at least 600x300 p
 {% tabs local %}
 {% tab General %}
 
-- **Message Length:** Varies. If only title is set, about 40 characters can be displayed. If only content is set, about 47 characters can be displayed. If title and content is set, then about 41 characters can be displayed.
-- **Payload Size:** 5 kilobytes
-- **Number of lines:** 1
-- **Customizable UI:** No
-- **Deep Link Capable:** No
+- **Longueur du message :** Varies. Si seul le titre est défini, environ 40 caractères peuvent être affichés. Si seul le contenu est défini, environ 47 caractères peuvent être affichés. Si le titre et le contenu sont définis, alors environ 41 caractères peuvent être affichés.
+- **Taille de la charge utile :** 5 kilo-octets
+- **Nombre de lignes :** 1
+- **Interface utilisateur personnalisable :** Non
+- **Possibilité de lien profond :** Non
 
 {% endtab %}
 {% tab Text Example %}
 
-![Push Window8]({% image_buster /assets/img_archive/Push_Windows_Universal_Toast.png %})
+![Pousser Window8]({% image_buster /assets/img_archive/Push_Windows_Universal_Toast.png %})
 
 {% endtab %}
 {% endtabs %}
-[27]: {% image_buster /assets/img_archive/android_push_img2.png %} [42]: {% image_buster /assets/img_archive/iOS_push_notification_small.png %} [43]: {% image_buster /assets/img_archive/Push_Android_2.png %} [46]:{% image_buster /assets/img_archive/Push_Window8_Toast.png %} [47]:{% image_buster /assets/img_archive/Push_Windows_Universal_Toast.png %} [54]: {% image_buster /assets/img_archive/braze_richpush1.png %} [55]: {% image_buster /assets/img_archive/braze_richpush2.png %}
+[27]: {% image_buster /assets/img_archive/android_push_img2.png %} [42]: {% image_buster /assets/img_archive/iOS_push_notification_small. ng %} [43]: {% image_buster /assets/img_archive/Push_Android_2.png %} [46]:{% image_buster /assets/img_archive/Push_Window8_Toast. ng %} [47]:{% image_buster /assets/img_archive/Push_Windows_Universal_Toast.png %} [54]: {% image_buster /assets/img_archive/braze_richpush1.png %} [55]: {% image_buster /assets/img_archive/braze_richpush2.png %}
