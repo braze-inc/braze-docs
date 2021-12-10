@@ -1,54 +1,54 @@
 ---
-nav_title: News Feed Analytics
-article_title: News Feed Analytics and Retargeting Data
+nav_title: Analyses du flux d'actualités
+article_title: Flux d'actualités Analytics et données de redistribution
 page_order: 10
-page_type: reference
-description: "This reference article covers News Feed analytics, and various related filters."
+page_type: Référence
+description: "Cet article de référence couvre les analyses de News Feed et divers filtres connexes."
 tool:
-  - Reports
-channel: news feed
+  - Rapports
+channel: fil d'actualité
 ---
 
-# Analytics
+# Analyses
 
-Similar to scheduled campaigns, the News Feed tool comes with an analytics dashboard to monitor impressions, clicks, and clickthrough rates. Clicking on a specific News Feed message in your dashboard brings up a host of visual analytics to sort through. At the top of the page, you can select your data date range and see a quick visualization of your most important metrics. Additionally, you can see specifics about this news feed message, such as when it was sent and who it was sent to.
+Similaire aux campagnes planifiées, l'outil Flux d'actualités est fourni avec un tableau de bord d'analyse pour surveiller les impressions, les clics et les taux de clics. En cliquant sur un message spécifique de News Feed dans votre tableau de bord, une foule d'analyses visuelles peuvent être triées. En haut de la page, vous pouvez sélectionner votre plage de données et voir une visualisation rapide de vos indicateurs les plus importants. De plus, vous pouvez voir des détails sur ce message de flux de nouvelles, comme quand il a été envoyé et à qui il a été envoyé.
 
-!\[Newsfeed Analytics Top\]\[19\]
+!\[Top Analytiques du fil d'actualités\]\[19\]
 
-By scrolling down the page, you can see a larger breakdown of your clicks and impressions day-by-day. Total clicks/impressions are easily compared with unique clicks/impressions through line charts, while a clickthrough rate is presented as an interactive bar chart.
+En faisant défiler la page, vous pouvez voir une plus grande répartition de vos clics et des impressions jour après jour. Les clics/impressions totaux sont facilement comparés à des clics/impressions uniques à travers des diagrammes de ligne, tandis que le taux de clics est présenté sous la forme d'un diagramme à barres interactif.
 
-!\[NewsFeed Analytics Bottom\]\[20\]
+![InfoFeed Analytics en bas[20]
 
-## Retargeting data
+## Reciblage des données
 
-You can leverage Braze's data on which users are interacting with your News Feed via segment filters that let you retarget specific behaviors.
+Vous pouvez tirer parti des données de Braze sur lesquelles les utilisateurs interagissent avec votre fil d'actualité via des filtres de segment qui vous permettent de recibler des comportements spécifiques.
 
-### Feed impression filter
+### Filtre d'impressions de flux
 
-Braze automatically tracks when users view the feed and how many times they have viewed it. There are two filters available:
+Braze automatiquement les traces lorsque les utilisateurs consultent le flux et combien de fois ils l'ont vu. Il y a deux filtres disponibles :
 
-- Last Viewed News Feed
-- News Feed View Count
+- Dernier fil d'actualité consulté
+- Nombre de nouvelles vues de flux
 
-'Last Viewed News Feed' is an effective way to use other channels to draw users back into the feed. This can be easily done with push and in-app notifications. Braze has seen over 100% increases in News Feed impressions with effective targeting. As awareness of the feed increases, these benefits are sustained.
+'Dernier fil d'actualité consulté' est un moyen efficace d'utiliser d'autres canaux pour attirer les utilisateurs dans le flux. Cela peut être facilement fait avec les notifications push et in-app. Braze a vu plus de 100 % d'augmentation dans les impressions de News Feed avec un ciblage efficace. Au fur et à mesure que la prise de conscience des aliments augmente, ces bénéfices sont maintenus.
 
-'News Feed View Count' can be used to target users who have never viewed the feed or seldom viewed the feed to encourage more impressions of your cards.
+Le 'Nombre de Fil d'Actualités' peut être utilisé pour cibler les utilisateurs qui n'ont jamais vu le flux ou qui n'ont jamais vu le flux pour encourager plus d'impressions de vos cartes.
 
-Consider, using these filters in tandem or with other filters to create an even more targeted call to action.
+Considérez l'utilisation de ces filtres en tandem ou avec d'autres filtres pour créer un appel à l'action encore plus ciblé.
 
-### Clicked card filter
+### Filtre de carte cliqué
 
-You can create segments based on how users have interacted with specific cards in the feed. The filter is in the Retargeting section of the filter list and called Clicked Card.
+Vous pouvez créer des segments en fonction de la façon dont les utilisateurs ont interagi avec des cartes spécifiques dans le flux. Le filtre se trouve dans la section Retargeting de la liste de filtres et appelé Clicked Card.
 
-### Has clicked card filter
+### A cliqué sur le filtre de carte
 
-- Works well to retarget users who have clicked on a card, but not followed through on your call to action.
-- It is also useful to retarget users with related content that may of interest to them.
-- You can also use this filter to target users that did not click a card. This filter can be applied to specific cards so that they disappear from a user's feed after they click on them.
-  - To set this up, after you create a card go back and edit the target segment to include 'Has not clicked YOUR NEW CARD'.
-  - After a user clicks the card, the card will automatically leave the feed when the user's next session starts.
-  - Avoid over-using this targeting because user's may end up with empty feeds. Best practice is to use a combination of static and automatically removed content.
-- It also works well to retarget users who do not click on a card to follow up with another call to action.
+- Fonctionne bien pour les utilisateurs de retarget qui ont cliqué sur une carte, mais pas suivi lors de votre appel à l'action.
+- Il est également utile de recibler les utilisateurs avec un contenu connexe qui pourrait les intéresser.
+- Vous pouvez également utiliser ce filtre pour cibler les utilisateurs qui n'ont pas cliqué sur une carte. Ce filtre peut être appliqué à des cartes spécifiques pour qu'elles disparaissent du flux d'un utilisateur après avoir cliqué dessus.
+  - Pour configurer cela, après avoir créé une carte, retournez en arrière et éditez le segment cible pour inclure "N'a pas cliqué VOTRE NOUVELLE CARTE".
+  - Après avoir cliqué sur la carte, la carte quittera automatiquement le flux au début de la prochaine session de l'utilisateur.
+  - Évitez de trop utiliser ce ciblage car l'utilisateur peut se retrouver avec des flux vides. La meilleure pratique consiste à utiliser une combinaison de contenu statique et automatiquement retiré.
+- Il fonctionne aussi bien pour retarger les utilisateurs qui ne cliquent pas sur une carte pour suivre un autre appel à l'action.
 
-!\[Has not clicked card example\]\[14\]
+!\[N'a pas cliqué sur l'exemple de carte\]\[14\]
 [19]: {% image_buster /assets/img_archive/braze_newsfeedanalytics.png %} [20]: {% image_buster /assets/img_archive/braze_newsfeedanalytics2.png %} [14]: {% image_buster /assets/img_archive/braze_newsfeedsegment.png %}
