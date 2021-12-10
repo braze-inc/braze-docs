@@ -1,110 +1,110 @@
 ---
-nav_title: Creating an SMS Campaign
-article_title: Creating an SMS Campaign
+nav_title: Création d'une campagne SMS
+article_title: Création d'une campagne SMS
 page_order: 5
-description: "This reference article covers the steps involved in building out and creating an SMS campaign."
-page_type: reference
+description: "Cet article de référence couvre les étapes de l'élaboration et de la création d'une campagne SMS."
+page_type: Référence
 tool:
-  - Campaigns
+  - Campagnes
 channel:
   - SMS
 ---
 
-# Create an SMS campaign
+# Créer une campagne SMS
 
-> SMS campaigns are great for directly reaching and programmatically conversing with your customers. You can use Liquid and other dynamic content to create a personal experience with your users and create an environment that fosters and enhances an unobtrusive user experience with your brand.
+> Les campagnes SMS sont idéales pour atteindre directement et discuter avec vos clients de façon programmatique. Vous pouvez utiliser Liquid et d'autres contenus dynamiques pour créer une expérience personnelle avec vos utilisateurs et créer un environnement qui favorise et améliore une expérience utilisateur discrète avec votre marque.
 
-## Step 1: Choose where to build your message
+## Étape 1 : Choisissez où construire votre message
 
-SMS is available in both campaigns and Canvas.
+Les SMS sont disponibles dans les deux campagnes et dans Canvas.
 
 {% tabs local %}
   {% tab Campaigns %}
-  Click __Create Campaign__ to open a new messaging wizard for in-app message campaigns. Then, follow the flow of the messaging wizard to quickly create and launch your SMS campaign.
+  Cliquez sur __Créer une campagne__ pour ouvrir un nouvel assistant de messagerie pour les campagnes de messages dans l'application. Ensuite, suivez le flux de l'assistant de messagerie pour créer et lancer rapidement votre campagne SMS.
 
-  ![Create SMS Campaign]({% image_buster /assets/img/sms_campaign_setup.gif %})
+  ![Créer une campagne SMS]({% image_buster /assets/img/sms_campaign_setup.gif %})
 
-1. Name your campaign something clear and meaningful.
-2. Add __Teams__ and __Tags__, as necessary.
-3. Add and name as many Variants as you need for this campaign.
-  - You can choose different platforms, message types, and layouts for each of your added Variants.
-4. Select the __Subscription Group__ to ensure you're sending your message to the proper users. When selecting a subscription group, Braze will automatically add a segmenting filter, ensuring that only users subscribed will receive the campaign. Only long codes and short codes that belong to that subscription group will be used to send SMS to target users.
+1. Nommez votre campagne quelque chose de clair et significatif.
+2. Ajouter __Teams__ et __Tags__, si nécessaire.
+3. Ajoutez et nommez autant de variantes que vous avez besoin pour cette campagne.
+  - Vous pouvez choisir différentes plateformes, types de messages et mises en page pour chacune de vos variantes ajoutées.
+4. Sélectionnez le __Groupe d'Abonnement__ pour vous assurer que vous envoyez votre message aux utilisateurs appropriés. Lors de la sélection d'un groupe d'abonnement, Braze ajoutera automatiquement un filtre de segmentation, en s'assurant que seuls les utilisateurs inscrits recevront la campagne. Seuls les codes longs et les codes courts qui appartiennent à ce groupe d'abonnement seront utilisés pour envoyer des SMS aux utilisateurs cibles.
 
   {% alert tip %}
-If all of the messages in your campaign are going to be similar or have the same content, compose your message before adding additional Variants - you will be able to choose **Copy from Variant** from the **Add Variant** dropdown.
+Si tous les messages de votre campagne vont être similaires ou ont le même contenu, composez votre message avant d'ajouter des variantes supplémentaires - vous serez en mesure de choisir **Copier de la variante** dans le menu déroulant **Ajouter une variante**.
 {% endalert %}
 
  {% endtab %}
  {% tab Canvas %}
  After you have [created and set up your Canvas using the Canvas wizard]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/create_a_canvas/),
 
-1. Name your step something clear and meaningful.
-2. Add a Delay, as necessary.
-3. Filter your Audience, as necessary.
-4. Choose your advancement options, as necessary.
-5. Choose all other messaging channels which you would like to pair with your message.
+1. Nommez votre étape quelque chose de clair et de significatif.
+2. Ajouter un délai, si nécessaire.
+3. Filtrer votre audience, si nécessaire.
+4. Choisissez vos options d'avancement, si nécessaire.
+5. Choisissez tous les autres canaux de messagerie que vous souhaitez associer à votre message.
 
 {% alert important %}
-You cannot have multiple in-app message variants in a single step.
+Vous ne pouvez pas avoir plusieurs variantes de messages dans l'application en une seule étape.
 {% endalert %}
 
 {% endtab %}
 {% endtabs %}
 
-## Step 2: Compose your SMS
+## Étape 2 : Écrire votre SMS
 
-Composing an SMS is easy! Just write your message using languages and personalization (Liquid, Connected Content, and Emojis) as needed. Be sure to adhere to our Message Copy Limits to reduce your chances of overage charges.
+Écrire un SMS est facile ! Il vous suffit d'écrire votre message en utilisant les langues et la personnalisation (Liquid, Connected Content, et Emojis) au besoin. Veillez à respecter nos limites de copie de message pour réduire vos risques de surâge.
 
 {% alert important %}
-Before proceeding, read our [SMS Message Copy Limits and Message Segment documentation]({{site.baseurl}}/user_guide/message_building_by_channel/sms/campaign/segments/). SMS message segments are the character batches that phone carriers use to measure text messages. Messages are charged per message segment, so clients leveraging SMS greatly benefit from understanding the nuances of how messages will be split.
+Avant de continuer, lisez notre [SMS Message Copy Limits and Message Segment documentation]({{site.baseurl}}/user_guide/message_building_by_channel/sms/campaign/segments/). Les segments de messages SMS sont les caractères utilisés par les opérateurs téléphoniques pour mesurer les messages textuels. Les messages sont facturés par segment de message, de sorte que les clients qui utilisent les SMS profitent grandement de la compréhension des nuances de la façon dont les messages seront partagés.
 {% endalert %}
 
-![Compose SMS]({% image_buster /assets/img/sms_campaign_compose.gif %})
+![Écrire un SMS]({% image_buster /assets/img/sms_campaign_compose.gif %})
 
 {% alert tip %}
 {% raw %}
-If you plan to use Liquid, be sure to include a default value for your chosen personalization so, in the event your user profile of the recipient is incomplete, they will not receive a blank placeholder `Hi, !`, instead of their name or a coherent sentence.
+Si vous prévoyez d'utiliser Liquid, assurez-vous d'inclure une valeur par défaut pour la personnalisation de votre choix ainsi, dans le cas où votre profil utilisateur du destinataire est incomplet, il ne recevra pas de marqueur vide `Bonjour, !`, au lieu de leur nom ou d'une phrase cohérente.
 {% endraw %}
 {% endalert %}
 
-## Step 3: Preview and test your message
+## Étape 3 : Prévisualiser et tester votre message
 
-Braze always recommends previewing and testing your message before sending.
+Braze recommande toujours de prévisualiser et de tester votre message avant l'envoi.
 
-![Test SMS]({% image_buster /assets/img/sms_campaign_test.gif %})
-
-{% alert tip %}
-If you'd like to test how many segments yout SMS may be split into, test your copy length [here]({{site.baseurl}}/user_guide/message_building_by_channel/sms/campaign/segments/#sms-segment-calculator).
-{% endalert %}
-
-## Step 4: Configure message delivery
-
-Decide how, when, and why your message will be delivered. You can either schedule your message for a specific time or trigger it off of a user's action. You can also trigger it via API for both [campaigns]({{site.baseurl}}/api/endpoints/messaging/send_messages/post_send_triggered_campaigns/) and [Canvas]({{site.baseurl}}/api/endpoints/messaging/send_messages/post_send_triggered_canvases/).
-
-![SMS Delivery]({% image_buster /assets/img/sms_campaign_delivery.gif %})
-
-## Step 5: Target users and select segment
-
-In this step, you'll choose which users receive your message. You should have already chosen the Subscription Group, which narrows users by the level or category of communication they wish to have with you. In this step, you will select the larger audience from your Segments, and narrow that segment further with our Filters, if you choose.
-
-![SMS Targeting]({% image_buster /assets/img/sms_campaign_targeting.gif %})
+![Tester les SMS]({% image_buster /assets/img/sms_campaign_test.gif %})
 
 {% alert tip %}
-Interesting in SMS retargeting? Visit our SMS [retargeting article]({{site.baseurl}}/user_guide/message_building_by_channel/sms/campaign/retargeting/) to learn more.
+Si vous souhaitez tester combien de segments de SMS peuvent être divisés, testez la longueur de votre copie [ici]({{site.baseurl}}/user_guide/message_building_by_channel/sms/campaign/segments/#sms-segment-calculator).
 {% endalert %}
 
-## Step 6: Choose conversion events
+## Étape 4 : Configurer l'envoi du message
 
-Conversion events help you measure the success of your campaign:
-- If you are using Geotargeting to trigger an SMS message that has an end goal of the user making a purchase, set the conversion event to a "Purchase".
-- If you are attempting to drive the user to your app, set the conversion event to "Starts Session".
+Décidez comment, quand et pourquoi votre message sera envoyé. Vous pouvez soit programmer votre message pour une heure spécifique, soit le déclencher à partir de l'action d'un utilisateur. Vous pouvez également le déclencher via l'API pour les [campagnes]({{site.baseurl}}/api/endpoints/messaging/send_messages/post_send_triggered_campaigns/) et [Canvas]({{site.baseurl}}/api/endpoints/messaging/send_messages/post_send_triggered_canvases/).
 
-You can also set custom conversion events based on your specific use case. Get creative and think about how you truly want to measure this campaign's success.
+![Envoi de SMS]({% image_buster /assets/img/sms_campaign_delivery.gif %})
 
-![SMS Conversion Events]({% image_buster /assets/img/sms_campaign_conversion.gif %})
+## Étape 5 : les utilisateurs ciblés et sélectionnez le segment
 
-## Step 7: Confirm details and launch!
+Dans cette étape, vous choisissez quels utilisateurs reçoivent votre message. Vous devriez déjà avoir choisi le Groupe d'Abonnement, qui rétrécit les utilisateurs par le niveau ou la catégorie de communication qu'ils souhaitent avoir avec vous. Dans cette étape, vous sélectionnerez le plus grand public de vos Segments, et vous réduirez ce segment plus loin avec nos Filtres, si vous le souhaitez.
 
-If you're using campaigns, you'll have the opportunity to confirm its details. If you're using Canvas, be sure to confirm the details of each of the pieces.
+![Ciblage SMS]({% image_buster /assets/img/sms_campaign_targeting.gif %})
 
-![SMS Confirm]({% image_buster /assets/img/sms_campaign_confirm.gif %})
+{% alert tip %}
+Intéressant au repositionnement par SMS? Visitez notre [article de redistribution SMS]({{site.baseurl}}/user_guide/message_building_by_channel/sms/campaign/retargeting/) pour en savoir plus.
+{% endalert %}
+
+## Étape 6 : Choisissez les événements de conversion
+
+Les événements de conversion vous aident à mesurer le succès de votre campagne:
+- Si vous utilisez le géociblage pour déclencher un message SMS qui a un objectif final que l'utilisateur effectue un achat, réglez l'événement de conversion sur un « Achat ».
+- Si vous tentez de conduire l'utilisateur vers votre application, définissez l'événement de conversion à "Démarre la session".
+
+Vous pouvez également définir des événements de conversion personnalisés en fonction de votre cas d'utilisation spécifique. Soyez créatif et pensez à la façon dont vous voulez vraiment mesurer le succès de cette campagne.
+
+![Événements de conversion SMS]({% image_buster /assets/img/sms_campaign_conversion.gif %})
+
+## Étape 7 : Confirmez les détails et lancez !
+
+Si vous utilisez des campagnes, vous aurez la possibilité de confirmer ses détails. Si vous utilisez Canvas, assurez-vous de confirmer les détails de chacune des pièces.
+
+![Confirmation SMS]({% image_buster /assets/img/sms_campaign_confirm.gif %})
