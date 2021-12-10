@@ -1,31 +1,31 @@
 ---
-nav_title: Archive Templates
-article_title: Archive Templates
+nav_title: Modèles d'archives
+article_title: Modèles d'archives
 page_order: 4
-page_type: reference
-description: "This reference article covers how to archive templates in the templates and media section of the Braze dashboard."
+page_type: Référence
+description: "Cet article de référence couvre la façon d'archiver les modèles dans la section des modèles et des médias du tableau de bord Braze."
 tool:
-  - Templates
-  - Media
+  - Modèles
+  - Médias
 ---
 
-# Archive Templates in Templates & Media
+# Archiver les modèles dans Modèles & Médias
 
-> Archiving templates can help better organize and manage your templates. This reference article covers how to archive templates in the **Templates & Media** section of the Braze dashboard.
+> L'archivage des modèles peut aider à mieux organiser et gérer vos modèles. Cet article de référence couvre la façon d'archiver les modèles dans la section **Modèles & Médias** du tableau de bord Braze.
 
-## Archive an individual template
+## Archiver un modèle individuel
 
 !\[template_archive_cog\]\[10\]{: style="float:right;max-width:20%;margin-left:15px;"}
 
-To archive an individual template, click the settings icon on the template grid screen and select **Archive**.
+Pour archiver un modèle individuel, cliquez sur l’icône de paramètres sur la grille du modèle et sélectionnez **Archiver**.
 
-## Archive multiple templates
+## Archiver plusieurs modèles
 
-To archive multiple templates, select the checkbox next to each template that you want to archive. After you've selected multiple templates, click **Archive Selected**. You can find your archived templates by selecting **Archived** under **Show** in the template grid.
+Pour archiver plusieurs modèles, sélectionnez la case à cocher à côté de chaque modèle que vous voulez archiver. Après avoir sélectionné plusieurs modèles, cliquez sur **Archiver la sélection**. Vous pouvez trouver vos modèles archivés en sélectionnant **Archivé** sous **Afficher** dans la grille du modèle.
 
 !\[archive_multiple_template\]\[11\]
 
 {% alert important %}
-Archiving is not currently available for [Link Templates]({{site.baseurl}}/user_guide/message_building_by_channel/email/link_templates/#link-templates).
+L'archivage n'est actuellement pas disponible pour les [Modèles de lien]({{site.baseurl}}/user_guide/message_building_by_channel/email/link_templates/#link-templates).
 {% endalert %}
 [10]: {% image_buster /assets/img/template_archive_cog.png %} [11]: {% image_buster /assets/img/archive_multiple_template.png %}
