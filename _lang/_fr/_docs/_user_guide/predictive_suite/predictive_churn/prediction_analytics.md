@@ -1,69 +1,69 @@
 ---
-nav_title: Prediction Analytics
-article_title: Prediction Analytics
-description: "This reference article covers the different components included in the Churn Prediction Analytics Page and how they can be used to make insightful, driven decisions."
+nav_title: Analyses de prédiction
+article_title: Analyses de prédiction
+description: "Cet article de référence couvre les différents éléments inclus dans la page Analyses de la prédiction des Églises et la façon dont ils peuvent être utilisés pour prendre des décisions éclairées et éclairées."
 page_order: 2
 ---
 
-# Prediction analytics
+# Analyses de prédiction
 
-Once your Prediction has been built and trained, you will have access to the Prediction Analytics page. This page helps you decide what users you should target based on their Churn Risk Score or Category. As soon as the Prediction is done training and this page is populated, you can jump to simply using [Filters]({{site.baseurl}}/user_guide/predictive_suite/predictive_churn/messaging_users/#filters) in Segments or campaigns to begin using the outputs of the model. But, if you want help deciding who to target and why, this page can help based on the historical accuracy of the model and your own business goals.
+Une fois que votre prédiction aura été construite et formée, vous aurez accès à la page Analyses de prédiction. Cette page vous aide à décider quels utilisateurs vous devez cibler en fonction de leur Score de Risque de Coeur ou de leur Catégorie. Dès que la formation est terminée et que cette page est remplie, vous pouvez simplement utiliser [Filtres]({{site.baseurl}}/user_guide/predictive_suite/predictive_churn/messaging_users/#filters) dans des segments ou des campagnes pour commencer à utiliser les sorties du modèle. Mais si vous voulez aider à décider qui cibler et pourquoi, Cette page peut vous aider en fonction de la précision historique du modèle et de vos propres objectifs commerciaux.
 
-__Analytics Components__<br> &#45; [Churn Score and Category](#churn_score)<br> &#45; [Prediction Quality](#prediction_quality)<br> &#45; [Estimated Results](#estimated_results)<br> &#45; [Churn Correlation Table](#correlation_table)
+__Composants Analytiques__<br> &#45; [Score de coque et catégorie](#churn_score)<br> &#45; [Qualité de la prévision](#prediction_quality)<br> &#45; [Résultats estimés](#estimated_results)<br> &#45; [Tableau de corrélation des cotés](#correlation_table)
 
-## Overview
+## Aperçu
 
-The distribution of the scores for the entire Prediction Audience is displayed at the top of the page in a chart that you can view, by category or by score. Users in bins further to the right have higher scores and are more likely to churn. Users in bins further to the left are less likely to churn. The slider beneath the chart will allow you to select a swath of users and estimate what the results would be of targeting users in the selected range of Churn Risk Score or Category.
+La distribution des scores pour l'ensemble de l'audience de prédiction est affichée en haut de la page dans un graphique que vous pouvez voir, par catégorie ou par score. Les utilisateurs dans les bacs plus à droite ont des scores plus élevés et sont plus susceptibles de comploter. Les utilisateurs dans les bacs plus à gauche sont moins susceptibles de se tourner. Le curseur au-dessous du graphique vous permettra de sélectionner un échantillon d'utilisateurs et d'estimer quels seraient les résultats de ciblage des utilisateurs dans la gamme sélectionnée de Colin Risk Score ou Catégorie.
 
 !\[Churn Targeting\]\[4\]{: style="max-width:90%"}
 
-As you move the slider, the bar in the left half of the lower panel will inform you how many users out of the entire Prediction Audience would be targeted.
+Lorsque vous déplacez le curseur, la barre de la moitié gauche du panneau inférieur vous informera du nombre d'utilisateurs qui seraient visés par l'audience prévisionnelle.
 
-## Churn score and category {#churn_score}
+## Score de cobaye et catégorie {#churn_score}
 
-Users in the Prediction Audience will be assigned a Churn Score between 0 and 100. The higher the score, the greater the likelihood of Churn.
-- Users with Churn Scores between 0 and 50 will be labeled in the Low Churn Risk category.
-- Users with scores between 50 and 75, and 75 and 100 will be labeled in the Medium and High Churn Risk categories, respectively.
+Les utilisateurs de l'audience de prédiction se verront attribuer un score entre 0 et 100. Plus le score est élevé, plus la probabilité d'une Église est élevée.
+- Les utilisateurs ayant des scores de type Churn entre 0 et 50 seront étiquetés dans la catégorie Risque de faible coque.
+- Les utilisateurs ayant des scores entre 50 et 75 et 100 seront étiquetés dans les catégories de risque moyen et de risque élevé respectivement.
 
-The scores and the corresponding categories will be updated according to the schedule you chose on the model creation page. The number of users with Churn Scores in each of 20 equally sized buckets is displayed in the chart at the top of the page. This can help you determine what the churn risk looks like across the population according to this Prediction.
+Les scores et les catégories correspondantes seront mis à jour selon le calendrier que vous avez choisi sur la page de création du modèle. Le nombre d'utilisateurs ayant des cotes de cote dans chacun des 20 segments de même taille est affiché dans le graphique en haut de la page. Selon cette prédiction, cela peut vous aider à déterminer à quoi ressemble le risque de mordus dans toute la population.
 
-## Targeting users to reduce churn
+## Cibler les utilisateurs pour réduire leur consommation
 
-### Prediction quality {#prediction_quality}
+### Qualité de la prédiction {#prediction_quality}
 
-To measure the accuracy of your model, the __Prediction Quality__ metric will show you how effective this particular machine learning model appears to be when tested on historical data. Check out this doc to read more about what goes into [Prediction Quality]({{site.baseurl}}/user_guide/predictive_suite/predictive_churn/prediction_analytics/prediction_quality/).
+Pour mesurer la précision de votre modèle, la métrique __Qualité de Prédiction__ vous montrera à quel point ce modèle d’apprentissage automatique particulier semble être efficace lors des tests sur des données historiques. Consultez ce document pour en savoir plus sur ce qui se trouve dans la [Qualité Prédiction]({{site.baseurl}}/user_guide/predictive_suite/predictive_churn/prediction_analytics/prediction_quality/).
 
-Here's what we recommend for various ranges of Prediction Quality:
+Voici ce que nous recommandons pour différentes gammes de qualité de prédiction :
 
-| Prediction Quality Range (%) | Recommendation                                                                                                                           |
-| ---------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------- |
-| 60 - 100                     | Excellent. Top tier accuracy. Changing the audience definitions is unlikely to provide additional benefit.                               |
-| 40 - 60                      | Good. This model will produce accurate predictions, but trying different audience settings may achieve even better results.              |
-| 20 - 40                      | Fair. This model can provide accuracy and value, but consider trying different audience definitions to see if they increase performance. |
-| 0 - 20                       | Poor. We recommend you change your audience definitions and try again.                                                                   |
+| Plage de qualité de la prédiction (%) | Recommandation                                                                                                                                                           |
+| ------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| 60 - 100                              | Excellent. Précision du niveau supérieur. Il est peu probable que la modification des définitions du public apporte un avantage supplémentaire.                          |
+| 40 - 60                               | Bien. Ce modèle produira des prédictions précises, mais essayer différents paramètres d'audience peut donner de meilleurs résultats.                                     |
+| 20 - 40                               | Foire. Ce modèle peut fournir de la précision et de la valeur, mais envisagez d'essayer différentes définitions d'audience pour voir si elles augmentent la performance. |
+| 0 - 20                                | « Paul. » Nous vous recommandons de modifier les définitions de votre audience et de réessayer.                                                                          |
 {: .reset-td-br-1 .reset-td-br-2}
 
-The Prediction will be trained again every two weeks and updated alongside the Prediction Quality metric to keep your predictions updated on the most recent user behavior patterns. The last time this retraining occurred will be displayed on the Predictions list page as well as on your Prediction's analytics page.
+La prédiction sera de nouveau formée toutes les deux semaines et mise à jour parallèlement à la métrique de qualité de la prédiction pour garder vos prévisions à jour sur les derniers comportements de l'utilisateur. La dernière fois que cette reformation s'est produite sera affichée sur la page de la liste des prédictions ainsi que sur la page d'analyse de votre prédiction.
 
-## Estimated results {#estimated_results}
+## Résultats estimés {#estimated_results}
 
-!\[Estimated Results\]\[6\]{: style="float:right;max-width:30%;margin-left:15px;"}
+!\[Résultats estimés\]\[6\]{: style="float:right;max-width:30%;margin-left:15px;"}
 
-In the right half of the panel beneath the chart, we show estimates of the expected accuracy of targeting this swath of the Prediction Audience. Based on data about users in the Prediction Audience in the past, and the apparent accuracy for the model for discriminating between churning and non-churning users on that past data, these progress bars estimate for a future potential message using the audience highlighted with the slider:
+Dans la moitié droite du panel sous le graphique, nous montrons des estimations de la précision prévue de cibler cette largeur de l'audience de prévision. Basé sur les données sur les utilisateurs dans l'Audience Prédiction dans le passé, et la précision apparente du modèle de discrimination entre les utilisateurs qui ne font pas partie de ces données passées, ces barres de progression estiment pour un message potentiel futur en utilisant le public mis en évidence avec le curseur :
 
-1. An estimate of how many actual churners will be correctly targeted <br><br> Of course, we don't know the future perfectly, so we don't know precisely which users from the Prediction Audience will churn in the future. But the Prediction is a reliable inference. Based on past performance, this progress bar indicates how many of the total "actual" or "true" churners expected in the Prediction Audience (based on prior churn rates) will be targeted with the current targeting selection. We would expect this number of users to churn if you do not target them with any extra or unusual messaging. <br><br>
+1. Une estimation du nombre de membres réels sera correctement ciblée <br><br> Bien sûr, nous ne connaissons pas le futur parfaitement, donc nous ne savons pas précisément quels utilisateurs de l'Audience Prédiction seront à l'origine dans le futur. Mais la prédiction est une inférence fiable. Basé sur les performances passées, cette barre de progression indique le nombre total de membres « réels » ou « vrais » attendus dans l'audience prévisionnelle (basée sur les taux de départ antérieurs) qui seront ciblés en fonction de la sélection ciblée actuelle. Nous nous attendrions à ce que ce nombre d'utilisateurs s'abstiennent si vous ne les ciblez pas avec un message supplémentaire ou inhabituel. <br><br>
 
-2. An estimate of how many users who wouldn't have actually churned will be incorrectly targeted<br><br>All machine learning models make errors. There may be users in your selection who have a high Churn Risk Score but do not end up churning. They would not churn even if you took no action. They will be targeted anyway, so this is an error or "false positive." The full width of this second progress bar represents the expected number of users who will not churn, and the red portion is those who will be incorrectly targeted using the current slider position.
+2. Une estimation du nombre d'utilisateurs qui n'auraient pas réellement participé sera mal ciblée<br><br>Tous les modèles d'apprentissage automatique font des erreurs. Il se peut que certains utilisateurs de votre choix aient un score de risque élevé mais ne finissent pas par se retrouver. Ils ne se moqueraient pas même si vous ne preniez aucune mesure. Ils seront de toute façon ciblés, donc c'est une erreur ou un "faux positif". La largeur totale de cette deuxième barre de progression représente le nombre attendu d'utilisateurs qui ne seront pas abonnés, et la portion rouge est celle qui sera mal ciblée en utilisant la position courante.
 
-Using this information, we encourage you to decide how many of the churners you want to capture and what the cost of a false positive error is for your business. If you are sending out a valuable promo, you may want to keep non-churners targeted to a minimum while getting as many expected true churners as the model will allow. Or, if you're less sensitive to false positives and users receive extra messaging, you can message more of the audience to capture more expected churners and ignore the likely errors.
+Utilisation de ces informations Nous vous encourageons à choisir le nombre de personnes que vous voulez capturer et le coût d'une erreur fausse positive pour votre entreprise. Si vous envoyez une promotion précieuse, vous voudrez peut-être garder les personnes qui ne sont pas des personnes qui sont ciblées à un minimum tout en obtenant autant de vraies personnes que le modèle le permettra. Ou, si vous êtes moins sensible aux faux positifs et que les utilisateurs reçoivent un message supplémentaire, vous pouvez envoyer un message à un plus grand nombre de personnes afin de capturer plus de gens attendus et ignorer les erreurs probables.
 
-## Churn correlation table {#correlation_table}
+## Table de corrélation de la coque {#correlation_table}
 
-This analysis displays any user attributes or behaviors that are correlated with user churn in the historical Prediction Audience. The tables are split into left and right for more and less likely to churn, respectively. For each row, the ratio by which the users with the behavior or attribute in the left column are more or less likely to churn is displayed in the right column. This number is the ratio of churn likelihood of users with this behavior or attribute divided by the likelihood to churn off the entire Prediction Audience.
+Cette analyse affiche tous les attributs ou comportements de l'utilisateur qui sont corrélés avec l'utilisateur à l'Audience de Prédiction historique. Les tables sont divisées en gauche et droite pour plus et moins susceptibles de s'abîmer respectivement. Pour chaque ligne, le ratio selon lequel les utilisateurs ayant le comportement ou l'attribut dans la colonne de gauche sont plus ou moins susceptibles de s'afficher dans la colonne de droite. Ce nombre est le rapport entre la probabilité des utilisateurs avec ce comportement ou cet attribut divisé par la probabilité de s'abattre sur l'ensemble de l'Audience de la Prédiction.
 
-This table is updated only when the Prediction retrains and not when user Churn Risk Scores are updated.
+Ce tableau n'est mis à jour que lorsque la prédiction se reforme et non lorsque les scores de risque de la part de l'utilisateur sont mis à jour.
 
 {% alert note %}
-Correlation data for Preview Predictions will be partially hidden. A purchase is required to reveal this information. Please contact your account manager for more information.
+Les données de corrélation pour les prédictions d'aperçu seront partiellement masquées. Un achat est nécessaire pour divulguer ces informations. Veuillez contacter votre responsable de compte pour plus d'informations.
 {% endalert %}
-[6]: {% image_buster /assets/img/churn/churnEstimatedResults.png %} [4]: {% image_buster /assets/img/churn/churnTargeting.gif %}
+[6]: {% image_buster /assets/img/churn/churmatedResults.png %} [4]: {% image_buster /assets/img/churn/churnTargeting.gif %}
