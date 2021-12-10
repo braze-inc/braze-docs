@@ -1,81 +1,81 @@
 ---
-nav_title: SSL Click Tracking
-article_title: SSL Click Tracking
+nav_title: Suivi des clics SSL
+article_title: Suivi des clics SSL
 page_order: 9
-page_type: reference
-description: "This reference article covers SSL click-tracking, best practices, and how to get started."
-channel: email
+page_type: Référence
+description: "Cet article de référence couvre le suivi des clics SSL, les meilleures pratiques et la façon de commencer."
+channel: Email
 ---
 
-# SSL click tracking
+# Suivi des clics SSL
 
-A Secured Socket Layer (SSL) encrypts a URL with HTTPS instead of the less secure HTTP. Customers at Braze can set up their links and domains to apply SSL certificates. These certificates, similar to SPM and DKIM for email authentication, are insurances that links in your emails are sending your users to reputable locations, and not malicious websites. While not required, SSL certificates are quickly becoming the standard and are strongly recommended to ensure links and images display properly.
+Un Socket Layer (SSL) sécurisé crypte une URL avec HTTPS au lieu du HTTP moins sécurisé. Les clients de Braze peuvent configurer leurs liens et leurs domaines pour appliquer les certificats SSL. Ces certificats, similaires à SPM et DKIM pour l'authentification par e-mail, sont des assurances que des liens dans vos courriels envoient vos utilisateurs à des emplacements réputés, et non des sites Web malveillants. Bien que non requis, les certificats SSL deviennent rapidement la norme et sont fortement recommandés pour s'assurer que les liens et les images s'affichent correctement.
 
-## How do I get started?
+## Comment puis-je commencer ?
 
-1. You must reach out to a COM or CSM to initiate a full Braze email setup.
-2. Braze will provide DNS records to add to your domain registry.
-3. Braze will verify if records have been added to your registry correctly.
-4. You will then select a CDN and obtain SSL certificates from a third-party provider.
-5. You will set up your CDN. Please note that Braze will not be able to help troubleshoot CDN configuration. Please reach out to your CDN provider for help.
-6. Lastly, reach out to your COM or CSM to get SSL turned on.
+1. Vous devez contacter un COM ou un CSM pour lancer une configuration complète de l'e-mail Braze.
+2. Braze fournira des enregistrements DNS à ajouter à votre registre de domaine.
+3. Braze vérifiera si des enregistrements ont été ajoutés correctement à votre registre.
+4. Vous allez ensuite sélectionner un CDN et obtenir des certificats SSL auprès d'un fournisseur tiers.
+5. Vous allez configurer votre CDN. Veuillez noter que Braze ne sera pas en mesure de vous aider à résoudre les problèmes de configuration CDN. Veuillez contacter votre fournisseur CDN pour obtenir de l'aide.
+6. Enfin, contactez votre COM ou CSM pour activer SSL.
 
-## What is a CDN, and why do I need it?
+## Qu'est-ce qu'un CDN, et pourquoi en ai-je besoin?
 
-A Content Delivery Network (CDN) is a platform of servers that help ensure quick load times of high-quality content across multiple mediums while also handling security certificates.
+Un réseau de distribution de contenu (CDN) est une plate-forme de serveurs qui permet d'assurer des temps de chargement rapides de contenu de haute qualité sur plusieurs supports tout en gérant les certificats de sécurité.
 
-At Braze, to do click and open tracking, our delivery partners transform links using a branded subdomain, and the CDN applies the SSL certificate to those newly transformed links. Often, our delivery partners are required to present valid and trusted certificates to your email recipient's browser for links and images to display correctly. Because Braze cannot request or manage such certificates, this must be set up on your end through a CDN.
+Au Brésil, pour effectuer un clic et ouvrir le suivi, nos partenaires de livraison transforment les liens en utilisant un sous-domaine de marque, et le CDN applique le certificat SSL à ces liens nouvellement transformés. Souvent, nos partenaires de livraison sont tenus de présenter des certificats valides et fiables au navigateur de votre destinataire de courrier électronique pour que les liens et les images s'affichent correctement. Parce que Braze ne peut pas demander ou gérer de tels certificats, cela doit être configuré à votre fin via un CDN.
 
-Below we have outlined and linked out to relevant CDN partner resources to help make this process easy.
+Ci-dessous nous avons décrit et lié à des ressources de partenaires du CDN pertinentes pour faciliter ce processus.
 
 {% alert important %}
-Please note that CDN configuration always follows after getting your DNS records validated by Braze. If you have not yet initiated this step, reach out to your COM or CSM for more information on how to get started.
+Veuillez noter que la configuration CDN suit toujours après avoir validé vos enregistrements DNS par Braze. Si vous n'avez pas encore initié cette étape, contactez votre COM ou votre CSM pour plus d'informations sur la façon de commencer.
 {% endalert %}
 
 {% alert note %}
-If you are unable or do not wish to use the CDNs listed above when setting up SSL for click and open tracking, you may set up a custom SSL configuration. Note that alternate CDNs or custom proxies may result in a more complex and nuanced setup. Check out the [Sendgrid](https://sendgrid.com/docs/ui/account-and-settings/custom-ssl-configurations/) and [Sparkpost](https://www.sparkpost.com/docs/tech-resources/using-proxy-https-tracking-domain/) documentation on this topic.
+Si vous ne pouvez pas ou ne souhaitez pas utiliser les CDN listés ci-dessus lors de la configuration de SSL pour cliquer et ouvrir le suivi, vous pouvez configurer une configuration SSL personnalisée. Notez que les CDN alternatifs ou mandataires personnalisés peuvent entraîner une configuration plus complexe et nuancée. Consultez la documentation [Sendgrid](https://sendgrid.com/docs/ui/account-and-settings/custom-ssl-configurations/) et [Sparkpost](https://www.sparkpost.com/docs/tech-resources/using-proxy-https-tracking-domain/) sur ce sujet.
 {% endalert %}
 
-### CDN resources
+### Ressources CDN
 
-Listed below are step-by-step guides written by Sendgrid and Sparkpost on how to configure certain CDNs. While your specific CDN may not be listed below, you must make sure your CDN has the ability to apply SSL certificates.
+Listé ci-dessous sont des guides étape par étape écrits par Sendgrid et Sparkpost sur la façon de configurer certains CDN. Bien que votre CDN spécifique ne soit pas listé ci-dessous, vous devez vous assurer que votre CDN a la possibilité d'appliquer des certificats SSL.
 
 {% alert important %}
-Braze will be unable to help you troubleshoot your CDN configuration. You must reach out to your CDN provider to help troubleshoot your CDN configuration.
+Braze ne pourra pas vous aider à résoudre votre configuration CDN. Vous devez contacter votre fournisseur de CDN pour aider à résoudre le problème de la configuration de votre CDN.
 {% endalert %}
 
-| Sendgrid Step-By-Step Guides                                                                                                                                                                                                                                                                                                                                                                                                                        | Sparkpost Step-By-Step Guides                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   |
-| --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| [AWS Cloudfront](https://sendgrid.com/docs/ui/sending-email/universal-links/#setting-up-universal-links-using-cloudfront)<br>[CloudFlare](https://sendgrid.com/docs/ui/sending-email/content-delivery-networks/#using-cloudflare)<br>[Fastly](https://sendgrid.com/docs/ui/sending-email/content-delivery-networks/#using-fastly)<br>[KeyCDN](https://sendgrid.com/docs/ui/sending-email/content-delivery-networks/#using-keycdn) | [AWS Cloudfront](https://www.sparkpost.com/docs/tech-resources/enabling-https-engagement-tracking-on-sparkpost/#aws-create)<br>[CloudFlare](https://www.sparkpost.com/docs/tech-resources/enabling-https-engagement-tracking-on-sparkpost/#step-by-step-guide-with-cloudflare)<br>[Cloudfront](https://www.sparkpost.com/docs/tech-resources/enabling-https-engagement-tracking-on-sparkpost/)<br>[Fastly](https://www.sparkpost.com/docs/tech-resources/enabling-https-engagement-tracking-on-sparkpost/#step-by-step-guide-with-fastly)<br>[Google Cloud Platform](https://www.sparkpost.com/docs/tech-resources/enabling-https-engagement-tracking-on-sparkpost/#gcp-create)<br>[Microsoft Azure](https://www.sparkpost.com/docs/tech-resources/enabling-https-engagement-tracking-on-sparkpost/#azure-create) |
+| Tutoriels pas à pas Sendgrid                                                                                                                                                                                                                                                                                                                                                                                                                                | Tutoriels pas à pas Sparkpost                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       |
+| ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| [AWS Cloudfront](https://sendgrid.com/docs/ui/sending-email/universal-links/#setting-up-universal-links-using-cloudfront)<br>[Fusée nuageuse](https://sendgrid.com/docs/ui/sending-email/content-delivery-networks/#using-cloudflare)<br>[Rapidement](https://sendgrid.com/docs/ui/sending-email/content-delivery-networks/#using-fastly)<br>[KeyCDN](https://sendgrid.com/docs/ui/sending-email/content-delivery-networks/#using-keycdn) | [AWS Cloudfront](https://www.sparkpost.com/docs/tech-resources/enabling-https-engagement-tracking-on-sparkpost/#aws-create)<br>[CloudFlare](https://www.sparkpost.com/docs/tech-resources/enabling-https-engagement-tracking-on-sparkpost/#step-by-step-guide-with-cloudflare)<br>[Cloudfront](https://www.sparkpost.com/docs/tech-resources/enabling-https-engagement-tracking-on-sparkpost/)<br>[Rapidement](https://www.sparkpost.com/docs/tech-resources/enabling-https-engagement-tracking-on-sparkpost/#step-by-step-guide-with-fastly)<br>[Google Cloud Platform](https://www.sparkpost.com/docs/tech-resources/enabling-https-engagement-tracking-on-sparkpost/#gcp-create)<br>[Microsoft Azure](https://www.sparkpost.com/docs/tech-resources/enabling-https-engagement-tracking-on-sparkpost/#azure-create) |
 
-### CDN troubleshooting
+### Dépannage CDN
 
-While CDN configuration, certificates, and proxy issues should be handled with your selected CDN, we offer some basic troubleshooting tips to identify where your SSL click tracking setup may be failing.
+Pendant que la configuration CDN, les certificats et les problèmes de proxy doivent être traités avec votre CDN sélectionné, nous offrons quelques conseils de dépannage de base pour identifier où votre configuration de suivi des clics SSL peut échouer.
 
 {% tabs %}
 {% tab Domain Registry %}
 
-#### Check for domain registry issues
+#### Vérifier les problèmes de registre de domaine
 
-A dig command can tell you whether you are pointing your link tracking at the CDN. This can be done through the terminal by running `dig CNAME link_tracking_subdomain`.
+Une commande de fouille peut vous dire si vous pointez votre suivi de lien sur le CDN. Cela peut être fait via le terminal en exécutant `fouiller le domaine CNAME link_tracking_subdomain`.
 
-Once the command is run, under `ANSWER SECTION` it should list where your CNAME is pointed to. If it pointed to your chosen email service provider (Sendgrid or Sparkpost) and not your CDN, you must reconfigure your domain registry to point to your CDN.
+Une fois que la commande est exécutée, sous `ANSWER SECTION` elle devrait lister où votre CNAME est pointé. Si cela pointe vers le fournisseur de service de messagerie (Sendgrid ou Sparkpost) et non vers votre CDN, vous devez reconfigurer votre registre de domaine pour qu'il pointe vers votre CDN.
 
 {% endtab %}
 {% tab CDN %}
 
-#### Check for CDN issues
+#### Vérifier les problèmes de CDN
 
-If your live email links start breaking during setup, this often means you've pointed your DNS toward your CDN without it being properly configured. This often comes up as a "Wrong Link" error.
+Si vos liens de courriel en direct commencent à se briser pendant l'installation, cela signifie souvent que vous avez pointé votre DNS vers votre CDN sans qu'il soit correctement configuré. Cela apparaît souvent comme une erreur de "Mauvais lien".
 
-Please reach out to your CDN provider and review their documentation to help to troubleshoot your CDN configuration.
+Veuillez contacter votre fournisseur de CDN et consulter leur documentation pour aider à résoudre votre configuration CDN.
 
 {% endtab %}
 {% tab HTTP Messages Persisting %}
 
-#### Check if SSL is enabled by Braze
+#### Vérifier si SSL est activé par Braze
 
-If you have completed your SSL setup and are still seeing your links come up as HTTP and not HTTPS, reach out to your Braze COM or CSM and make sure SSL has been enabled by Braze. SSL can only be enabled by Braze once all aspects of your SSL setup have been completed.
+Si vous avez terminé votre configuration SSL et que vous voyez toujours vos liens apparaître comme HTTP et non HTTPS, contactez votre Braze COM ou CSM et assurez-vous que SSL a été activé par Braze. Le protocole SSL ne peut être activé par Braze qu'une fois que tous les aspects de votre configuration SSL sont terminés.
 
 {% endtab %}
 {% endtabs %}
