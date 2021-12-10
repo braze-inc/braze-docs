@@ -1,56 +1,56 @@
 ---
-nav_title: User Retargeting
-article_title: SMS User Retargeting
+nav_title: Reciblage des utilisateurs
+article_title: Reciblage des utilisateurs SMS
 page_order: 5
-description: "This reference article covers how users can retarget their messages by users SMS interactions."
-page_type: reference
+description: "Cet article de référence couvre la façon dont les utilisateurs peuvent redimensionner leurs messages par les interactions SMS des utilisateurs."
+page_type: Référence
 tool:
-  - Campaigns
+  - Campagnes
 channel:
   - SMS
 ---
 
-# SMS retargeting
+# Remise en attente de SMS
 
-In addition to changing the user’s subscription state and sending auto-responders based on incoming keywords, Braze will also record interactions to the user profile for filtering and triggering messages. These filters and triggers allow you to filter users that have received SMS messages, received SMS messages from a specific SMS campaign, and trigger messages as users receive SMS messages from a specific SMS campaign.
+En plus de changer l'état d'abonnement de l'utilisateur et d'envoyer des réponses automatiques basées sur des mots clés entrants, Braze enregistrera également les interactions avec le profil de l'utilisateur pour le filtrage et le déclenchement des messages. Ces filtres et déclencheurs vous permettent de filtrer les utilisateurs qui ont reçu des SMS, a reçu des messages SMS d'une campagne SMS spécifique, et déclenche des messages lorsque les utilisateurs reçoivent des messages SMS d'une campagne SMS spécifique.
 
 {% alert tip %}
-To read more about custom keywords and how to set up two-way messaging to take advantage of these retargeting options, visit our [custom keyword]({{site.baseurl}}/user_guide/message_building_by_channel/sms/keywords/keyword_handling/) article.
+Pour en savoir plus sur les mots-clés personnalisés et comment mettre en place des messages bidirectionnels pour tirer parti de ces options de repositionnement, visitez notre article [mot-clé personnalisé]({{site.baseurl}}/user_guide/message_building_by_channel/sms/keywords/keyword_handling/).
 {% endalert %}
 
-## Retargeting options
+## Options de redistribution
 
-### Filter users by SMS
+### Filtrer les utilisateurs par SMS
 
-Users can be filtered by when they last received an SMS or if they have received an SMS from a specific SMS campaign. Filters can be set in the Target Users step of the campaign builder.
+Les utilisateurs peuvent être filtrés quand ils ont reçu un SMS pour la dernière fois ou s'ils ont reçu un SMS d'une campagne SMS spécifique. Les filtres peuvent être définis dans l'étape Utilisateurs cibles du constructeur de campagne.
 
-__Filter by Last Received SMS__<br> !\[Filter 1\]\[2\]
+__Filtrer par le dernier SMS reçu__<br> !\[Filtre 1\]\[2\]
 
-__Filter by Received Messages from SMS Campaign__<br> Filters users who have received a message from a specific SMS campaign. With this filter, you also have the option to filter off those that have not received messages from an SMS campaign. <br> !\[Filter 2\]\[1\]
+__Filtrer par messages reçus de la campagne SMS__<br> Filtre les utilisateurs qui ont reçu un message d'une campagne SMS spécifique. Avec ce filtre, vous avez également la possibilité de filtrer ceux qui n'ont pas reçu les messages d'une campagne SMS. <br> !\[Filtre 2\]\[1\]
 
-### Trigger messages as users receive SMS
+### Déclencher les messages lorsque les utilisateurs reçoivent des SMS
 
-To trigger messages as users receive SMS messages from a specific campaign, select __Interact with Campaign__ as the trigger action. Next, select __Receive SMS__ and the SMS campaign you would like to use. <br><br> !\[Trigger\]\[3\]
+Pour déclencher des messages en tant qu'utilisateurs reçoivent des messages SMS d'une campagne spécifique, sélectionnez __Interact with Campaign__ comme action de déclenchement. Ensuite, sélectionnez __Recevoir des SMS__ et la campagne SMS que vous souhaitez utiliser. <br><br> !\[Trigger\]\[3\]
 
-## Keyword category-specific retargeting
+## Reciblage par catégorie de mots clés
 
-In addition to the three default keyword categories (Opt-in, Opt-out, and Help), you are also able to create up to 10 of your own keyword categories, allowing you to identify arbitrary keywords and responses. These categories can be used for filtering and retargeting. To read more about SMS keyword categories and how to set them up, visit our documentation [here]({{site.baseurl}}/user_guide/message_building_by_channel/sms/campaign/retargeting/).
+En plus des trois catégories de mots clés par défaut (opt-in, opt-out et aide), vous pouvez également créer jusqu'à 10 de vos propres catégories de mots clés, ce qui vous permet d'identifier des mots-clés et des réponses arbitraires. Ces catégories peuvent être utilisées pour le filtrage et le repositionnement. Pour en savoir plus sur les catégories de mots clés SMS et comment les configurer, visitez notre documentation [ici]({{site.baseurl}}/user_guide/message_building_by_channel/sms/campaign/retargeting/).
 
-### Filter by recency
+### Filtrer par récurrence
 
-Filter for the recency of a user responding to your SMS Program. This filter will evaluate the LAST date a user sent an inbound SMS that is within one of the keyword categories.
+Filtrer pour la récurrence d'un utilisateur répondant à votre programme SMS. Ce filtre évaluera la date de DERNIÈRE qu'un utilisateur a envoyé un SMS entrant qui se trouve dans une des catégories de mots-clés.
 
 !\[picture\]\[6\]
 
-### Trigger messages by keyword
+### Déclencher les messages par mot clé
 
-Messages can be triggered as users send messages inbound based on keyword categories (user sent any one of the keywords) or other keywords (user sent a keyword that does not fall into one of the existing categories). These triggers are set in the Delivery step of the campaign builder.
+Les messages peuvent être déclenchés lorsque les utilisateurs envoient des messages entrants en fonction de catégories de mots clés (l'utilisateur a envoyé n'importe lequel des mots-clés) ou d'autres mots-clés (l'utilisateur a envoyé un mot clé qui ne tombe pas dans l'une des catégories existantes). Ces déclencheurs sont définis dans l'étape de livraison du constructeur de campagne.
 
-__Trigger by Inbound Keyword Category__<br> !\[picture\]\[7\]{: style="margin-top:10px;"}
+__Déclencher par catégorie de mots-clés entrant__<br> !\[picture\]\[7\]{: style="margin-top:10px;"}
 
-__Trigger by Arbitrary Keywords__<br> Note when triggering a message on an "Other" keyword response, you will have the opportunity to evaluate the keyword body on an exact text match. This match follows the same rules as noted above: Only the __exact, single-word message__ will be processed (case _insensitive_). A keyword sent of `Hello Braze!` would not match the criteria shown in the example below. !\[picture\]\[8\]{: style="margin-top:10px;"}
+__Déclencher par les mots-clés Arbitraires__<br> Note lors du déclenchement d'un message sur une réponse par mot clé « Autre », vous aurez la possibilité d'évaluer le corps du mot clé sur une correspondance de texte exacte. Cette correspondance suit les mêmes règles que celles indiquées ci-dessus : seul le message __exact, à mot unique__ sera traité (cas _insensible_). Un mot clé envoyé de `Bonjour le Brésil !` ne correspond pas aux critères indiqués dans l'exemple ci-dessous. !\[picture\]\[8\]{: style="margin-top:10px;"}
 
-__Template Keywords__<br> When triggering a campaign or Canvas Step on an inbound SMS or MMS, you can optionally template the text and/or media attachments that your user sent into the body of your campaign or Canvas with Liquid. This will enable you to access the user's response which you can then include in your reply, apply conditional logic to, or anything else you can do with Liquid.
+__Mots-clés de modèle__<br> Lors du déclenchement d'une campagne ou d'une étape de Canvas sur un SMS ou un MMS entrants, vous pouvez éventuellement modéliser le texte et/ou les pièces jointes que votre utilisateur a envoyées dans le corps de votre campagne ou Canvas avec Liquid. Cela vous permettra d'accéder à la réponse de l'utilisateur que vous pourrez ensuite inclure dans votre réponse, appliquer la logique conditionnelle à ou à tout autre chose que vous pouvez faire avec Liquid.
 
-!\[picture\]\[16\]{: style="max-width:80%;"} <br><br> !\[picture\]\[17\]{: style="max-width:80%;"}
-[1]: {% image_buster /assets/img/sms/filter1.png %} [2]: {% image_buster /assets/img/sms/filter2.png %} [3]: {% image_buster /assets/img/sms/trigger.png %} [6]: {% image_buster /assets/img/sms/retargeting1.png %} [7]: {% image_buster /assets/img/sms/retargeting2.png %} [8]: {% image_buster /assets/img/sms/retargeting3.png %} [16]: {% image_buster /assets/img/keyword_example1.jpg %} [17]: {% image_buster /assets/img/keyword_example2.jpg %}
+\[picture\]\[16\]{: style="max-width:80%;"} <br><br> !\[picture\]\[17\]{: style="max-width:80%;"}
+[1]: {% image_buster /assets/img/sms/filter1.png %} [2]: {% image_buster /assets/img/sms/filter2. ng %} [3]: {% image_buster /assets/img/sms/trigger.png %} [6]: {% image_buster /assets/img/sms/retargeting1. ng %} [7]: {% image_buster /assets/img/sms/retargeting2.png %} [8]: {% image_buster /assets/img/sms/retargeting3. ng %} [16]: {% image_buster /assets/img/keyword_example1.jpg %} [17]: {% image_buster /assets/img/keyword_example2.jpg %}
