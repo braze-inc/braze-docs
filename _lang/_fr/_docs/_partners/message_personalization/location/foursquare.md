@@ -17,9 +17,9 @@ search_tag: Partenaire
 
 | Exigences                   | Libellé                                                                                                                                                                                                      |
 | --------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| Compte Foursquare           | Un compte Foursquare est requis pour profiter de ce partenariat.                                                                                                                                             |
 | Braze clé API REST          | Une clé API Braze REST avec les permissions `users.track`. <br><br> Ceci peut être créé dans le __tableau de bord Braze -> Console développeur -> Clé d'API REST -> Créer une nouvelle clé API__ |
 | Braze App Group and App IDs | Le groupe d'applications Braze et les ID d'applications se trouvent dans la [console développeur]({{site.baseurl}}/docs/api/api_key/).                                                                       |
-| Compte Foursquare           | Vous devez avoir un compte Foursquare actif pour utiliser leurs services avec Braze                                                                                                                          |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
 
 ## Intégration
