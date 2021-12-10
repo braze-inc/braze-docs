@@ -1,6 +1,6 @@
 ---
-nav_title: "Templates"
+nav_title: "Modèles"
 page_order: 10
-config_only: true
+config_only: vrai
 ---
 
