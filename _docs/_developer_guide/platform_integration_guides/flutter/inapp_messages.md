@@ -58,9 +58,9 @@ On iOS, you will additionally need to implement the `ABKInAppMessageControllerDe
 
 To log analytics using your `BrazeInAppMessage`, pass the instance into the `logInAppMessageClicked`, `logInAppMessageImpression`, and `logInAppMessageButtonClicked` methods available on the main plugin interface.
 
-### Replaying in-app messages
+### Replaying the callback for in-app messages
 
-To store any in-app messages triggered before the callback available and replay them once it is set, add the following entry to the `customConfigs` map in the `BrazePlugin` constructor:
+To store any in-app messages triggered before the callback is available and replay them once it is set, add the following entry to the `customConfigs` map in the `BrazePlugin` constructor:
 ```
 replayCallbacksConfigKey : true
 ```
