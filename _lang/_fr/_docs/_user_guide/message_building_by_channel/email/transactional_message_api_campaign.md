@@ -1,63 +1,63 @@
 ---
-nav_title: Transactional Campaigns
-article_title: Transactional Email Campaigns
+nav_title: Campagnes transactionnelles
+article_title: Campagnes d'email transactionnelles
 page_order: 5
-description: "This reference article covers how to create and configure a new Braze Transactional Email campaign."
-page_type: reference
+description: "Cet article de référence traite de la façon de créer et de configurer une nouvelle campagne d'email transactionnel de Braze."
+page_type: Référence
 tool:
-  - Campaigns
-channel: email
+  - Campagnes
+channel: Email
 alias: "/api/api_campaigns/transactional_campaigns"
 ---
 
-# Transactional Email campaigns
+# Campagnes d'email transactionnelles
 
-> This reference article covers how to create a Transactional Email campaign in the Braze dashboard and generate a `campaign_id` to include in your API calls for our [Transactional Email API endpoint]({{site.baseurl}}/api/endpoints/messaging/send_messages/post_send_transactional_message).
+> Cet article de référence couvre la façon de créer une campagne d'email transactionnelle dans le tableau de bord de Braze et de générer un `campaign_id` pour inclure dans votre API des appels pour notre [point de terminaison d'API d'email transactionnel]({{site.baseurl}}/api/endpoints/messaging/send_messages/post_send_transactional_message).
 
-Transactional Emails are emails sent to facilitate an agreed-upon transaction between you and your customers. You can create Transactional Email campaigns to send automated, non-promotional email messages, such as:
+Les courriels transactionnels sont des courriels envoyés pour faciliter une transaction convenue entre vous et vos clients. Vous pouvez créer des campagnes transactionnelles d'emails pour envoyer des messages électroniques automatisés et non promotionnels, tels que:
 
-- Order confirmations
-- Password resets
-- Billing alerts
+- Confirmation de commande
+- Réinitialisation du mot de passe
+- Alertes de facturation
 
-In short, use Transactional Emails to send business-critical notifications originating from your service for a single user where speed is of the utmost importance.
+En bref, utilisez les courriels transactionnels pour envoyer des notifications critiques pour les entreprises provenant de votre service pour un seul utilisateur où la vitesse est de la plus haute importance.
 
 {% alert important %}
-Transactional Email is only available as part of select Braze packages. Please reach out to your Braze Customer Success Manager or open a [support ticket]({{site.baseurl}}/braze_support/) for more details.
+Le courrier électronique transactionnel n'est disponible que dans le cadre de certains paquets Braze. Veuillez contacter votre gestionnaire de service client Braze ou ouvrez un [ticket d'assistance]({{site.baseurl}}/braze_support/) pour plus de détails.
 {% endalert %}
 
-## Create a new campaign
+## Créer une nouvelle campagne
 
-To create a new Transaction Email campaign, navigate to the **Campaigns** page and click **Create Campaign**, then select **Transactional Email** from the dropdown.
+Pour créer une nouvelle campagne d'e-mail de transaction, accédez à la page **Campagnes** et cliquez sur **Créer une campagne**, puis sélectionnez **Email transactionnel** dans le menu déroulant.
 
 !\[Select Transactional Email Campaign\]\[1\]{: style="float:right;max-width:30%;margin-left:15px;"}
 
-Now, you can move on to configuring your Transactional Email campaign.
+Maintenant, vous pouvez passer à la configuration de votre campagne Transactional Email campaign.
 
-## Configure your campaign
+## Configurer votre campagne
 
-The campaign creation flow for Transaction Email campaigns is simplified compared to that of a [standard email campaign]({{site.baseurl}}/user_guide/message_building_by_channel/email/creating_an_email_campaign/) to ensure your business-critical transaction email can reach all users.
+Le flux de création de campagne pour les campagnes d'emails de transaction est simplifié par rapport à celui d'une [campagne d'e-mail standard]({{site.baseurl}}/user_guide/message_building_by_channel/email/creating_an_email_campaign/) pour s'assurer que votre e-mail de transaction critique en entreprise peut atteindre tous les utilisateurs.
 
-As a result, you'll notice a few settings you may be familiar with from other Braze campaign types are not required when setting up this campaign type:
+Résultat: vous remarquerez quelques paramètres avec lesquels vous pouvez être familier avec d'autres types de campagne Braze ne sont pas requis lors de la configuration de ce type de campagne :
 
-- The **Delivery** step has been simplified to remove scheduling options. Transactional Emails will always be triggered through Braze's REST API using the Campaign ID shown on the **Delivery** page. Additional settings you may be used to finding on this page, like re-eligibility controls and frequency capping settings, have also been removed to ensure all users are reachable for these critical transactional alerts when your service triggers a send request.
-- The **Target Users** step has been removed. As Transactional Emails enroll your entire user base as eligible (including unsubscribed users) there is no need to specify filters or segments. As a result, if you have any logic to apply to who should receive this message, we recommend applying that logic before determining whether to make the API request to Braze to trigger the message to a specific user.
-- The **Conversions** step has been removed. Transactional Emails do not support Conversion Event Tracking at this time.
+- L'étape **Delivery** a été simplifiée pour supprimer les options de planification. Les e-mails transactionnels seront toujours déclenchés par l'API REST de Braze en utilisant l'ID de la campagne affiché sur la page **Delivery**. Des paramètres supplémentaires que vous pouvez utiliser pour trouver sur cette page, tels que les contrôles de rééligibilité et les paramètres de plafonnement de fréquence, ont également été supprimés pour s'assurer que tous les utilisateurs sont joignables pour ces alertes transactionnelles critiques lorsque votre service déclenche une demande d'envoi.
+- L'étape **Utilisateurs cibles** a été supprimée. Étant donné que les E-mails transactionnels inscrivent toute votre base d'utilisateurs comme éligibles (y compris les utilisateurs désabonnés), il n'est pas nécessaire de spécifier des filtres ou des segments. Par conséquent, si vous avez une logique à appliquer à qui doit recevoir ce message, nous vous recommandons d'appliquer cette logique avant de déterminer si vous devez faire une requête API à Braze pour déclencher le message à un utilisateur spécifique.
+- L'étape **Conversions** a été supprimée. Les courriels transactionnels ne prennent pas en charge le suivi des événements de conversion pour le moment.
 
-!\[Transactional Campaign Creation Flow\]\[2\]
+!\[Flux de création de campagne transactionnelle\]\[2\]
 
-To configure your Transactional Email campaign, follow these general steps:
+Pour configurer votre campagne d'email transactionnel, suivez ces étapes générales :
 
-1. Add a descriptive name so you can find the results on your **Campaigns** page after you've sent your messages.
-2. Compose your email or select from a template.
-3. Take note of your `campaign_id`. After you save your API campaign, you must include the generated `campaign_id` fields with your API request where noted in the [Transactional Email Endpoint]({{site.baseurl}}/api/endpoints/messaging/send_messages/post_send_transactional_message) article.
-4. Click **Save Campaign** and you're set to begin your API campaign!
+1. Ajoutez un nom descriptif pour que vous puissiez trouver les résultats sur votre page **Campagnes** après avoir envoyé vos messages.
+2. Écrivez votre courriel ou sélectionnez à partir d'un modèle.
+3. Prenez note de votre `campaign_id`. Après avoir enregistré votre campagne API, vous devez inclure les champs générés `campaign_id` avec votre requête API où il est noté dans l'article [Transactional Email Endpoint]({{site.baseurl}}/api/endpoints/messaging/send_messages/post_send_transactional_message).
+4. Cliquez sur **Enregistrer la campagne** et vous êtes configuré pour démarrer votre campagne API !
 
-### Disallowed tags in transactional emails
+### Étiquettes interdites dans les courriels transactionnels
 
-The `Connected Content` and `Promotion Code` Liquid tags are currently not available within Transactional Email campaigns.
+Les balises `Contenus connectés` et `Code promotionnel` Liquid ne sont actuellement pas disponibles dans les campagnes transactionnelles d'E-mail.
 
-Using the `Connected Content` tag requires Braze to make an outbound API request during our sending process, which can slow down the message sending process if the external service we request is experiencing latency. Similarly, the `Promotion Code` tag requires Braze to perform additional processing to evaluate the availability of a promotion before sending, which can slow the sending process should one not be available.
+L'utilisation de la balise `Contenu connecté` nécessite que Braze fasse une demande d'API sortante pendant notre processus d'envoi, qui peut ralentir le processus d'envoi du message si le service externe que nous demandons est en latence. De même, la balise `Promotion Code` nécessite que Braze effectue un traitement supplémentaire pour évaluer la disponibilité d'une promotion avant l'envoi, qui peut ralentir le processus d'envoi s'il n'est pas disponible.
 
-As a result, we do not support including `Connected Content` or `Promotion Code` tags within any field of your Transactional Email campaign.
+Résultat: nous ne prenons pas en charge l'inclusion des balises `Contenus connectés` ou `Code promotionnel` dans aucun domaine de votre campagne Transactionnelle d'E-mail.
 [1]: {% image_buster /assets/img/transactional_email_campaign.png %} [2]: {% image_buster /assets/img/transactional_campaign_compose.png %}
