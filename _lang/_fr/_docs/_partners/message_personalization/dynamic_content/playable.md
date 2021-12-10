@@ -16,10 +16,10 @@ L'intégration de Braze et Playable vous permet de fournir votre meilleur conten
 
 ## Pré-requis
 
-| Exigences               | Libellé                                                                                                                                                             |
-| ----------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Un compte jouable actif | Vous aurez besoin d'un compte Jouable pour profiter de ce partenariat. Si vous n'avez pas encore de compte jouable, [inscrivez-vous ici][signup]                    |
-| Contenu vidéo           | Téléchargez des fichiers vidéo sur Playable ou fournissez des URL vidéo à partir de sites Web comme Facebook, Instagram, YouTube, Twitter, TikTok, et plus encore ! |
+| Exigences      | Libellé                                                                                                                                  |
+| -------------- | ---------------------------------------------------------------------------------------------------------------------------------------- |
+| Compte jouable | Un compte jouable est requis pour profiter de ce partenariat. Si vous n'avez pas encore de compte jouable, [inscrivez-vous ici][signup]. |
+ Contenu vidéo | Téléchargez des fichiers vidéo sur Playable ou fournissez des URL vidéo à partir de sites Web comme Facebook, Instagram, YouTube, Twitter, TikTok, et plus! |
 {: .reset-td-br-1 .reset-td-br-2}
 
 ## Implémentation
