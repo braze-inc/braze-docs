@@ -1,27 +1,27 @@
 ---
-nav_title: Drag & Drop Editor
-article_title: Drag & Drop Editor
+nav_title: Editeur Glisser & Déposer
+article_title: Editeur Glisser & Déposer
 alias: /dnd/
 page_order: 2.1
-description: "This article covers how to set up and properly use the drag & drop editor provided by Braze."
-layout: featured
-guide_top_header: "Drag & Drop Editor"
-guide_top_text: "With Braze Email, you can create completely custom and personalized email messages in either campaigns or Canvas using a drag & drop editing experience. Check out the articles below to learn more."
-channel: email
-tool: Media
+description: "Cet article couvre la façon de mettre en place et d'utiliser correctement l'éditeur drag & drop fourni par Braze."
+layout: en vedette
+guide_top_header: "Editeur Glisser & Déposer"
+guide_top_text: "Avec Braze Email, vous pouvez créer des messages électroniques entièrement personnalisés et personnalisés dans les campagnes ou Canvas en utilisant une expérience d'édition par glisser & déposer. Consultez les articles ci-dessous pour en savoir plus."
+channel: Email
+tool: Médias
 guide_featured_title: "Articles"
 guide_featured_list:
   - 
-    name: Overview
-    link: /docs/dnd/overview/
-    fa_icon: fas fa-paint-brush
+    name: Aperçu
+    link: /fr/docs/dnd/overview/
+    fa_icon: fa-paint-brush fas
   - 
-    name: Creating an Email Template
-    link: /docs/dnd/email_template/
+    name: Création d'un modèle d'e-mail
+    link: /fr/docs/dnd/email_template/
     fa_icon: fas fa-table
   - 
-    name: Editor Blocks
-    link: /docs/dnd/editor_blocks/
+    name: Blocs de l'éditeur
+    link: /fr/docs/dnd/editor_blocks/
     fa_icon: fas fa-align-left
 ---
 
