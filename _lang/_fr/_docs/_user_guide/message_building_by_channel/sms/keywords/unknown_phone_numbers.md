@@ -1,32 +1,32 @@
 ---
-nav_title: Handling Unknown Phone Numbers
-article_title: Handling Unknown SMS Phone Numbers
+nav_title: Gestion des numéros de téléphone inconnus
+article_title: Gestion des numéros de téléphone SMS inconnus
 page_order: 2
-description: "This reference article covers how Braze processes unknown SMS phone numbers from new users."
-page_type: reference
+description: "Cet article de référence décrit comment Braze traite les numéros de téléphone SMS inconnus des nouveaux utilisateurs."
+page_type: Référence
 channel:
   - SMS
 ---
 
-# Handling unknown phone numbers - new users
+# Gestion des numéros de téléphone inconnus - nouveaux utilisateurs
 
-You may find that once you get SMS up and running with Braze that you receive messages from unknown users. Noted below are the steps through which an unidentified user and number get processed.
+Une fois que vous aurez mis en place un SMS avec Braze, vous pourrez recevoir des messages d'utilisateurs inconnus. Noté ci-dessous les étapes par lesquelles un utilisateur et un numéro non identifiés sont traités.
 
 {% alert important %}
-Are you currently a non-native SMS client? If so, please visit the [non-native SMS documentaion](/docs/user_guide/message_building_by_channel/sms/non_native/) for your corresponding handling unknown phone numbers article.
+Êtes-vous actuellement un client SMS non-natif ? Si c'est le cas, veuillez visiter le [documentaion SMS non-natif](/docs/user_guide/message_building_by_channel/sms/non_native/) pour la gestion de votre numéro de téléphone correspondant à l'article des numéros de téléphone inconnus.
 {% endalert %}
 
-## Opt-in/out and custom keyword workflow for unknown numbers
+## Opt-in/out et le workflow personnalisé de mots clés pour les numéros inconnus
 
-Braze automatically addresses an unknown number in one of three ways:
+Braze adresse automatiquement un numéro inconnu de l'une des trois façons suivantes :
 
-1. If an opt-in keyword is texted:
-  * Braze creates an anonymous profile
-  * Our system sets the phone attribute
-  * Subscribes the user to the corresponding subscription group based on what opt-in keyword was received by Braze.<br><br>
-2. If an opt-out keyword is texted:
-  * Braze creates an anonymous profile
-  * Our system sets the phone attribute
-  * Unsubscribes the user from the corresponding subscription group based on what opt-out keyword was received by Braze.<br><br>
-3. If any other custom keyword is texted:
-  * Braze ignores the text message and does nothing.
+1. Si un mot clé opt-in est texté :
+  * Braze crée un profil anonyme
+  * Notre système définit l'attribut du téléphone
+  * Inscrit l'utilisateur au groupe d'abonnement correspondant en fonction du mot clé opt-in reçu par Braze.<br><br>
+2. Si un mot clé opt-out est texté :
+  * Braze crée un profil anonyme
+  * Notre système définit l'attribut du téléphone
+  * Désabonne l'utilisateur du groupe d'abonnement correspondant en fonction du mot clé opt-out reçu par Braze.<br><br>
+3. Si un autre mot clé personnalisé est texté :
+  * Braze ignore le message texte et ne fait rien.
