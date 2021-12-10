@@ -1,47 +1,47 @@
 ---
-nav_title: Predictive Churn
-article_title: Predictive Churn
+nav_title: Église prédictive
+article_title: Église prédictive
 page_order: 6.4
-layout: featured
-alias: /predictive_churn/
-guide_top_header: "Predictive Churn"
-guide_top_text: "Customer Churn, also known as customer turnover or client loss, is one of the most important metrics for growing businesses to consider. Having the right tools to address churn is crucial in minimizing loss and maximizing customer retention. To get a jump on these potentially churning users, Braze offers Predictive Churn, providing a proactive approach toward minimizing future churn."
-description: "With Predictive Churn, you can define what churn means for your business Churn Definition as well as the users you'd like to prevent from churning Prediction Audience."
-guide_featured_title: "Topics"
+layout: en vedette
+alias: /fr_FR/fr_FR/
+guide_top_header: "Église prédictive"
+guide_top_text: "L'Église de la clientèle, également connue sous le nom de chiffre d'affaires de la clientèle ou de perte de la clientèle, est l'une des mesures les plus importantes à prendre en compte pour les entreprises en croissance. Il est essentiel de disposer des outils adéquats pour s’attaquer à la perte et maximiser la rétention de la clientèle. Pour faire un saut sur ces utilisateurs potentiellement mordants, Braze offre une Église prédictive qui offre une approche proactive pour minimiser la désunion future."
+description: "Avec Église prédictive, vous pouvez définir ce que churn signifie pour la définition de votre entreprise ainsi que pour les utilisateurs que vous souhaitez empêcher de faire des audiences prévisionnelles."
+guide_featured_title: "Sujets"
 guide_featured_list:
   - 
-    name: Creating A Churn Prediction
-    link: /docs/user_guide/predictive_suite/predictive_churn/creating_a_churn_prediction/
+    name: Créer une prédiction de la nature
+    link: /fr/docs/user_guide/predictive_suite/predictive_churn/creating_a_churn_prediction/
     fa_icon: fas fa-cogs
   - 
-    name: Prediction Analytics
-    link: /docs/user_guide/predictive_suite/predictive_churn/prediction_analytics/
+    name: Analyses de prédiction
+    link: /fr/docs/user_guide/predictive_suite/predictive_churn/prediction_analytics/
     fa_icon: fas fa-chart-bar
   - 
-    name: Messaging Users
-    link: /docs/user_guide/predictive_suite/predictive_churn/messaging_users/
-    fa_icon: fas fa-arrow-right
+    name: Utilisateurs de messagerie
+    link: /fr/docs/user_guide/predictive_suite/predictive_churn/messaging_users/
+    fa_icon: fas fa-flèche-droite
   - 
-    name: Frequently Asked Questions
-    link: /docs/user_guide/predictive_suite/predictive_churn/prediction_faq/
+    name: Foire aux questions
+    link: /fr/docs/user_guide/predictive_suite/predictive_churn/prediction_faq/
     fa_icon: fas fa-question
 ---
 
-!\[Churn Overview\]\[1\]
+!\[Vue d'ensemble de Churn\]\[1\]
 
-## Overview
+## Aperçu
 
-With Predictive Churn, you can define what churn means for your business ([Churn Definition]({{site.baseurl}}/user_guide/predictive_suite/predictive_churn/creating_a_churn_prediction/#step-2-define-churn)) as well as the users you'd like to prevent from churning ([Prediction Audience]({{site.baseurl}}/user_guide/predictive_suite/predictive_churn/creating_a_churn_prediction/#step-3-filter-your-prediction-audience)). When you create a Prediction, Braze trains a machine learning model using [gradient boosted decision trees](https://en.wikipedia.org/wiki/Gradient_boosting) to identify users at risk of churn by learning from activity patterns of past users who did and did not churn according to your definition.
+Avec Église prédictive, vous pouvez définir ce que churn signifie pour votre entreprise ([Churn Definition]({{site.baseurl}}/user_guide/predictive_suite/predictive_churn/creating_a_churn_prediction/#step-2-define-churn)) ainsi que les utilisateurs que vous souhaitez empêcher de retourner ([Prediction Audience]({{site.baseurl}}/user_guide/predictive_suite/predictive_churn/creating_a_churn_prediction/#step-3-filter-your-prediction-audience)). Lorsque vous créez une prédiction, Braze forme un modèle d'apprentissage automatique à l'aide de [arbres de décision rehaussés de gradient](https://en.wikipedia.org/wiki/Gradient_boosting) pour identifier les utilisateurs à risque de morsure en apprenant à partir des modèles d'activité des utilisateurs précédents qui ont fait et n'ont pas croulé selon votre définition.
 
-Once the Prediction model is built, users in the Prediction Audience will be assigned a [Churn Risk Score]({{site.baseurl}}/user_guide/predictive_suite/predictive_churn/prediction_analytics/#churn_score) between 0 and 100 denoting how likely they are to Churn according to your definition. The higher the score, the more likely a user is to churn.
+Une fois que le modèle de prédiction est construit, les utilisateurs de l'Audience de Prédiction seront assignés à un [Score de Risque de Coeur]({{site.baseurl}}/user_guide/predictive_suite/predictive_churn/prediction_analytics/#churn_score) entre 0 et 100 indiquant la probabilité qu'ils soient à Churn selon votre définition. Plus le score est élevé, plus un utilisateur est susceptible de comploter.
 
-Updating the risk scores of the Prediction Audience can be done with a [frequency you choose]({{site.baseurl}}/user_guide/predictive_suite/predictive_churn/creating_a_churn_prediction/#step-4-choose-the-update-frequency-for-churn-predictions). This way, you can reach out to users who are at risk of churning before they actually do and prevent it from happening in the first place. Using up to three active Predictions, you can leverage Predictive Churn to tailor individual models to help prevent churn within specific segments of your users that you deem to be the most valuable.
+La mise à jour des scores de risque de l'Audience de Prédiction peut être faite avec une [fréquence que vous choisissez]({{site.baseurl}}/user_guide/predictive_suite/predictive_churn/creating_a_churn_prediction/#step-4-choose-the-update-frequency-for-churn-predictions). De cette façon, vous pouvez contacter les utilisateurs qui risquent de cracher avant qu'ils ne le fassent réellement et éviter que cela ne se produise. Utiliser jusqu'à trois prédictions actives, vous pouvez utiliser Predictive Churn pour adapter des modèles individuels afin de prévenir la présence de véhicules dans certains segments de vos utilisateurs que vous jugez les plus précieux.
 
-## Access Predictive Churn
+## Accéder à la église prédictive
 
-The Predictions page is accessible from the left navigation bar on the Braze dashboard. For full access, contact your account manager. Prior to purchasing this feature, it is available in Preview mode. This will allow you to see a Demo Churn Prediction with synthetic data as well as create one Churn Prediction model at a time. This Prediction will be created based on your actual user data, but it will not allow you to target users for messaging according to Churn Risk. It will also not update regularly after creation.
+La page Predictions est accessible à partir de la barre de navigation de gauche sur le tableau de bord de Braze. Pour un accès complet, contactez votre responsable de compte. Avant d'acheter cette fonctionnalité, elle est disponible en mode Aperçu. Cela vous permettra de voir une prédiction de la communauté de démonstration avec des données synthétiques ainsi que de créer un modèle de prédiction de la communauté à la fois. Cette prédiction sera créée en fonction de vos données utilisateur réelles, mais cela ne vous permettra pas de cibler les utilisateurs pour la messagerie selon Churn Risk. Il ne sera pas mis à jour régulièrement après la création.
 
-With the Preview, you can also edit and rebuild this one Prediction or archive it and create others to test the expected [Prediction Quality]({{site.baseurl}}/user_guide/predictive_suite/predictive_churn/prediction_analytics/prediction_quality/) of different [definitions]({{site.baseurl}}/user_guide/predictive_suite/predictive_churn/creating_a_churn_prediction/#step-2-define-churn).
+Avec l'aperçu, vous pouvez également modifier et reconstruire cette Prédiction ou l'archiver et en créer d'autres pour tester la [Qualité de Prédiction]({{site.baseurl}}/user_guide/predictive_suite/predictive_churn/prediction_analytics/prediction_quality/) attendue de [définitions]({{site.baseurl}}/user_guide/predictive_suite/predictive_churn/creating_a_churn_prediction/#step-2-define-churn).
 
 <br><br>
 [1]: {% image_buster /assets/img/churn/churn_overview.png %}
