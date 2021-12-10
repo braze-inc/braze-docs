@@ -3,7 +3,7 @@ nav_title: Campagnes transactionnelles
 article_title: Campagnes transactionnelles
 page_order: 5
 description: "Cet article de référence couvre la façon de créer et de configurer une nouvelle campagne d'email transactionnelle Braze."
-page_type: Référence
+page_type: reference
 alias: "/api/api_campaigns/transactional_campaigns"
 tool: Campagnes
 ---
