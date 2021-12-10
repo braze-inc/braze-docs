@@ -1,17 +1,17 @@
 ---
-nav_title: Conversion Tracking
-article_title: Conversion Tracking
+nav_title: Suivi de la conversion
+article_title: Suivi de la conversion
 page_order: 4
-page_type: reference
-description: "This article describes what it means to set a conversion event for a push campaign to 'opens app'."
-channel: push
+page_type: Référence
+description: "Cet article décrit ce que cela signifie de définir un événement de conversion pour une campagne de push à 'ouvrir l'application'."
+channel: Pousser
 ---
 
-# Conversion tracking
+# Suivi de la conversion
 
-When assigning [conversion events][34] to a push campaign, you'll have the option to track app opens for a certain period after the campaign is received. Setting app opens as a conversion event provides different insight from the results statistics you normally receive after after a push campaign. While all push campaigns results break down a message's direct opens and opens ([which include both direct and influenced opens][35]), conversion tracking will track any type of open, whether it is direct or influenced.
+Lors de l'affectation des [événements de conversion][34] à une campagne de push, vous aurez la possibilité de suivre les ouvertures de l'application pendant une certaine période après la réception de la campagne. Définir l'application s'ouvre comme un événement de conversion fournit un aperçu différent des statistiques de résultats que vous recevez normalement après une campagne push. Alors que les résultats de toutes les campagnes poussées décomposent l'ouverture directe d'un message et s'ouvre ([qui inclut à la fois les ouvertures directes et influencées][35]), le suivi de la conversion suivra tout type d'ouverture, qu'il soit direct ou influencé.
 
-In addition, by using the conversion event "opens app," you are tracking app opens that occur before that conversion deadline (for instance, 3 days). This differs from an influenced open in that the time a user has to register an influenced open can vary from individual to individual, and is on each user's past engagement behavior. For more information, refer to [Influenced Opens][48].
+De plus, en utilisant l'événement de conversion "Ouverture de l'application", vous ouvrez l'application de suivi qui se produit avant la date limite de conversion (par exemple, 3 jours). Cela diffère d'un ouvert influencé dans la mesure où le temps où un utilisateur doit enregistrer un ouvert influencé peut varier d'une personne à l'autre, et est sur le comportement d'engagement passé de chaque utilisateur. Pour plus d'informations, reportez-vous à [Ouvertures influentes][48].
 [46]:{% image_buster /assets/img_archive/Push_Window8_Toast.png %} [47]:{% image_buster /assets/img_archive/Push_Windows_Universal_Toast.png %}
 
 
