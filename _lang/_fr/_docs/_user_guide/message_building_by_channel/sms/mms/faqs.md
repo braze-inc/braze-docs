@@ -1,42 +1,42 @@
 ---
-nav_title: FAQs
-article_title: MMS FAQs
+nav_title: Foire aux questions
+article_title: FAQ MMS
 page_order: 4
-description: "This article covers some of the most frequently asked questions about MMS."
-page_type: FAQ
+description: "Cet article couvre certaines des questions les plus fréquemment posées sur le MMS."
+page_type: Foire Aux Questions
 channel:
   - MMS
 ---
 
-# MMS FAQs
+# FAQ MMS
 
-> On this page, we’ll attempt to answer your most stringent questions about MMS!
+> Sur cette page, nous tenterons de répondre à vos questions les plus strictes sur les MMS !
 
-### Are there any changes to currents data when sending an MMS?
+### Y a-t-il des modifications aux données courantes lors de l'envoi d'un MMS ?
 
-No, the same level of insight will be provided when sending an MMS message.
+Non, le même niveau de connaissance sera fourni lors de l'envoi d'un message MMS.
 
-### Can I control the order in which the image and message body of an MMS are delivered?
+### Puis-je contrôler l'ordre dans lequel le corps de l'image et du message d'un MMS est délivré ?
 
-Braze has no control over the display order for when both a message-body and images are included in an MMS message. This is dependent on several factors including but not limited to:
+Braze n'a aucun contrôle sur l'ordre d'affichage pour lequel un corps de message et des images sont inclus dans un message MMS. Cela dépend de plusieurs facteurs, y compris mais non limité à:
 
-- The carrier receiving the message
-- The device receiving the message
-- The overall size of the message
+- L'opérateur qui reçoit le message
+- L'appareil qui reçoit le message
+- La taille globale du message
 
-### Does MMS and SMS pricing differ?
+### Les prix des MMS et SMS diffèrent-ils ?
 
-MMS and SMS have different costs and are charged separately based on volume. Please reach out to the Braze Onboarding team for pricing information.
+Les MMS et SMS ont des coûts différents et sont facturés séparément en fonction du volume. Veuillez contacter l'équipe d'embarquement de Braze pour obtenir des informations sur les prix.
 
-### Does MMS require a separate onboarding process?
+### Les MMS requièrent-ils un processus d'intégration séparé ?
 
-Nope! MMS is now included in our SMS onboarding process. Existing customers who already went through onboarding can start sending MMS campaigns after completing the following steps:
+NON ! Les MMS sont maintenant inclus dans notre processus d’intégration par SMS. Les clients existants qui ont déjà été intégrés peuvent commencer à envoyer des campagnes MMS après avoir terminé les étapes suivantes :
 
-1. Purchase MMS.
-2. Reach out to the Braze Onboarding team to request the MMS feature to be flipped on. This will enable MMS and an SMS/MMS Subscription group will be created or updated for you.
+1. Acheter des MMS.
+2. Contactez l'équipe d'embarquement de Braze pour demander que la fonction MMS soit retournée. Ceci activera les MMS et un groupe d'abonnement SMS/MMS sera créé ou mis à jour pour vous.
 
-Next, the Braze onboarding team will make sure your short and long codes are enabled (in the US and Canada) for MMS. They will also update your subscription groups to show your current numbers that were added or enabled for MMS. Once these steps are complete, you can send MMS messages right away from our native SMS composer.
+Ensuite, l'équipe d'intégration de Braze s'assurera que vos codes courts et longs sont activés aux États-Unis et au Canada pour les MMS. Ils mettront également à jour vos groupes d'abonnement pour afficher vos numéros actuels qui ont été ajoutés ou activés pour les MMS. Une fois ces étapes terminées, vous pouvez envoyer des messages MMS directement de notre compositeur SMS natif.
 
-### Why can’t I find MMS on my dashboard even though the feature is enabled?
+### Pourquoi ne puis-je pas trouver de MMS sur mon tableau de bord même si la fonctionnalité est activée ?
 
-MMS is only displayed on the Braze dashboard when a subscription group is considered “MMS enabled”. This is reflected by an MMS tag when selecting the subscription group on the composer of an SMS/MMS message. This means that at least one number in the subscription group is capable of sending an MMS message.
+Les MMS ne sont affichés sur le tableau de bord Braze que lorsqu'un groupe d'abonnement est considéré comme étant « MMS activé ». Ceci est reflété par une balise MMS lors de la sélection du groupe d'abonnement sur le compositeur d'un message SMS/MMS. Cela signifie qu'au moins un numéro du groupe d'abonnement est capable d'envoyer un message MMS.
