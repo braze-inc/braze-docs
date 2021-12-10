@@ -1,39 +1,39 @@
 ---
-nav_title: Localizing a Campaign
-article_title: Localizing a Campaign
+nav_title: Localisation d'une campagne
+article_title: Localisation d'une campagne
 page_order: 3
-page_type: reference
-description: "This reference article goes over how user locale is retrieved and accessed by the Braze platform."
+page_type: Référence
+description: "Cet article de référence décrit comment la locale de l'utilisateur est récupérée et consultée par la plateforme Braze."
 tool:
-  - Campaigns
+  - Campagnes
 ---
 
-# Localizing a campaign
+# Localisation d'une campagne
 
-> This reference article briefly goes over the information Braze collects from SDK integration and how it is used to classify locale and customize a user's experience.
+> Cet article de référence passe brièvement sur les informations que Braze recueille à partir de l'intégration SDK et comment il est utilisé pour classer la locale et personnaliser l'expérience d'un utilisateur.
 
-Braze automatically collects relevant data to help you localize campaigns. Our customers send localized content on a daily basis to their audience to keep content relevant and accessible.
+Braze collecte automatiquement des données pertinentes pour vous aider à localiser des campagnes. Nos clients envoient quotidiennement du contenu localisé à leur public afin de garder le contenu pertinent et accessible.
 
-## Technical details
+## Détails techniques
 
-Braze automatically collects locale information from user devices after the SDK has been integrated. The locale contains a language and region identifier.
+Braze collecte automatiquement les informations locales des périphériques utilisateur après que le SDK a été intégré. La locale contient un identifiant de langue et de région.
 
-For example, a user who has set their device to English (US) will have a language `EN`. The users' country is collected from their device IP address. These filters will be available in Braze's segmentation tool under Country and Language.
+Par exemple, un utilisateur qui a mis son appareil en français (US) aura une langue `EN`. Le pays des utilisateurs est collecté à partir de l'adresse IP de leur appareil. Ces filtres seront disponibles dans l'outil de segmentation de Braze sous Pays et Langue.
 
-!\[Filter Select Screenshot\]\[7\]
+!\[Filtre Select Screenshot\]\[7\]
 
-More technical details on how locale is retrieved can be accessed by platform:
+Plus de détails techniques sur la façon dont la locale est récupérée peut être accédée par la plateforme :
 
 - [iOS][1]
 - [Android][2]
-- [Windows Store][3]
+- [Magasin Windows][3]
 - [Windows Phone][4]
 
-## Internationalize campaigns
+## Internationaliser les campagnes
 
-You can take advantage of this language identifier and our personalization capabilities to internationalize campaigns. For more information on internationalization, see [Campaigns in Multiple Languages][12]
+Vous pouvez profiter de cet identifiant de langue et de nos capacités de personnalisation pour internationaliser les campagnes. Pour plus d'informations sur l'internationalisation, voir [Campagnes dans plusieurs langues][12]
 
-Braze automatically collects the most recent location of users' devices (if location permission is granted to your app). You can use this information to run a localized campaign that is targeted at users within a specific geographic area. For more information, see [Location Targeting][13].
+Braze collecte automatiquement la position la plus récente des appareils des utilisateurs (si l'autorisation de localisation est accordée à votre application). Vous pouvez utiliser ces informations pour lancer une campagne localisée ciblant les utilisateurs dans une zone géographique spécifique. Pour plus d'informations, voir [ciblage de l'emplacement][13].
 [7]: {% image_buster /assets/img_archive/language-filter-select.png %}
 
 [1]: https://developer.apple.com/library/ios/documentation/MacOSX/Conceptual/BPInternational/LanguageandLocaleIDs/LanguageandLocaleIDs.html
