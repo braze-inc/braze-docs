@@ -1,106 +1,106 @@
 ---
-nav_title: FAQs
-article_title: Campaign FAQs
+nav_title: Foire aux questions
+article_title: FAQ de la campagne
 page_order: 10
-page_type: FAQ
-description: "This page provides answers to frequently asked questions about campaigns."
-tool: Campaigns
+page_type: Foire Aux Questions
+description: "Cette page fournit des réponses aux questions les plus fréquemment posées sur les campagnes."
+tool: Campagnes
 ---
 
-# Campaign FAQs
+# FAQ de la campagne
 
-### How do you create a multichannel campaign?
+### Comment créer une campagne multicanal ?
 
-Multichannel campaigns can be created by selecting __Create Campaign__ and then __Multichannel Campaign__ within the dashboard. Once in a multichannel campaign, select __Add Messaging Channel__ within the __compose__ tab to add your desired channels. Clicking on the channel icons that appear will allow you to toggle through different messaging composers as you build your campaign copy for the different channels.
+Les campagnes multi-canaux peuvent être créées en sélectionnant __Créer une campagne__ puis __Campagne multicanal__ dans le tableau de bord. Une fois dans une campagne multi-canaux, sélectionnez __Ajouter un canal de messagerie__ dans l'onglet __composer__ pour ajouter vos canaux désirés. Cliquer sur les icônes des canaux qui apparaissent vous permettra de basculer à travers différents compositeurs de messagerie au fur et à mesure que vous construisez votre copie de campagne pour les différents canaux.
 
-### What are some ways I can start testing and optimizing campaigns?
+### Quelles sont les façons dont je peux commencer à tester et optimiser les campagnes ?
 
-Multivariate campaigns and running Canvases with multiple variants are a great way to start! For example, you can run a [multivariate campaign]({{site.baseurl}}/user_guide/engagement_tools/testing/multivariant_testing/) to test out one message that has different copies or subject lines. Canvases with multiple variants are helpful for tsting entire workflows.
+Des campagnes multivariées et des Canvases avec plusieurs variantes sont une excellente façon de commencer! Par exemple, vous pouvez exécuter une [campagne multivariée]({{site.baseurl}}/user_guide/engagement_tools/testing/multivariant_testing/) pour tester un message qui a des copies ou des lignes de sujet différentes. Les toiles avec plusieurs variantes sont utiles pour tresser des flux de travail entiers.
 
-### Why is there a difference between the number of unique recipients and the number of sends for a given campaign or Canvas?
+### Pourquoi y a-t-il une différence entre le nombre de destinataires uniques et le nombre d’envois pour une campagne donnée ou Canvas?
 
-One potential explanation for this difference could be due to the campaign or Canvas having re-eligibility turned on. By having this on, users who qualify for the segment and delivery settings will be able to receive the message more than once. If re-eligibility is not turned on, then the probable explanation for the difference between sends and unique recipients may be due to users having multiple devices, across platforms, associated with their profiles.
+Une explication potentielle de cette différence pourrait être due à la rééligibilité de la campagne ou de Canvas qui a été activée. En ayant ceci activé, les utilisateurs qui se qualifient pour le segment et les paramètres de livraison pourront recevoir le message plus d'une fois. Si la rééligibilité n'est pas activée, alors l'explication probable de la différence entre les envois et les destinataires uniques peut être due aux utilisateurs ayant plusieurs périphériques, à travers des plates-formes, associées à leurs profils.
 
-For example, should you have a Canvas that has both iOS and web push notifications, a given user with both mobile and desktop devices could receive more than one message.
+Par exemple, si vous avez un Canvas qui a à la fois des notifications de push iOS et web, un utilisateur donné avec des appareils mobiles et de bureau pourrait recevoir plus d'un message.
 
-### Why does my campaign have a smaller reachable user base than the segment that I'm using for the campaign?
+### Pourquoi ma campagne a-t-elle une base d'utilisateurs plus petite que le segment que j'utilise pour la campagne ?
 
-If you have a [Global Control Group]({{site.baseurl}}/user_guide/engagement_tools/testing/global_control_group/) set up, this will prevent a percentage of your reachable audience from receiving campaigns. This means that the number of reachable users for your segment can sometimes be larger than the number of reachable users for your campaign, even if the campaign is using that same segment.
+Si vous avez mis en place un [Groupe de contrôle global]({{site.baseurl}}/user_guide/engagement_tools/testing/global_control_group/) , cela empêchera un pourcentage de votre public accessible de recevoir des campagnes. Cela signifie que le nombre d'utilisateurs accessibles pour votre segment peut parfois être plus grand que le nombre d'utilisateurs accessibles pour votre campagne, même si la campagne utilise ce même segment.
 
-### What does local time zone delivery offer?
+### Que propose la livraison des fuseaux horaires locaux?
 
-Local time zone delivery allows you to deliver messaging campaigns to a segment based on a user’s individual time zone. Without local time zone delivery, campaigns will be scheduled based on your company’s time zone settings in Braze.
+La livraison locale de fuseaux horaires vous permet de livrer des campagnes de messagerie à un segment basé sur le fuseau horaire individuel de l’utilisateur. Sans livraison locale du fuseau horaire, les campagnes seront planifiées en fonction des paramètres du fuseau horaire de votre entreprise au Brésil.
 
-For example, a London-based company sending a campaign at 12pm will reach users on the west coast of America at 4am. If your app is only available in certain countries, this may not be a risk for you, otherwise, we highly recommend avoiding sending early morning push notifications to your user base!
+Par exemple, une société londonienne qui envoie une campagne à 12 heures atteindra les utilisateurs de la côte ouest de l'Amérique à 4 heures. Si votre application n'est disponible que dans certains pays, cela peut ne pas être un risque pour vous, sinon, Nous vous recommandons fortement d'éviter d'envoyer des notifications push tôt le matin à votre base d'utilisateurs !
 
-### How does Braze recognize a user's time zone?
+### Comment Braze reconnaît-il le fuseau horaire d'un utilisateur ?
 
-Braze will automatically determine a user’s time zone from their device. This ensures time zone accuracy and full coverage of your users. Users created through the User API or otherwise without a time zone will have your company’s time zone as their default time zone until they are recognized in your app by the SDK.
+Braze déterminera automatiquement le fuseau horaire d'un utilisateur à partir de son appareil. Cela garantit la précision du fuseau horaire et la couverture complète de vos utilisateurs. Les utilisateurs créés via l'API utilisateur ou autrement sans fuseau horaire auront le fuseau horaire de votre entreprise comme fuseau horaire par défaut jusqu'à ce qu'ils soient reconnus dans votre application par le SDK.
 
-To check your company’s time zone, look at your [Company Settings]({{site.baseurl}}/user_guide/administrative/manage_your_braze_users/company-wide_settings_management/) on the dashboard. Click on your name in the top toolbar and then click **Company Settings**.
+Pour vérifier le fuseau horaire de votre entreprise, consultez vos [Paramètres de la société]({{site.baseurl}}/user_guide/administrative/manage_your_braze_users/company-wide_settings_management/) sur le tableau de bord. Cliquez sur votre nom dans la barre d'outils du haut, puis cliquez sur **Paramètres de la société**.
 
-### How do I schedule a local time zone campaign?
+### Comment planifier une campagne locale de fuseau horaire?
 
-When scheduling a campaign, you need to choose to send it at a designated time, and then check **Send campaign to users in their local time zone**.
+Lorsque vous planifiez une campagne, vous devez choisir de l'envoyer à une heure désignée, puis cochez **Envoyer une campagne aux utilisateurs dans leur fuseau horaire local**.
 
-Braze highly recommends that all local time zone campaigns are scheduled 24 hours in advance. Since such a campaign needs to send over the course of an entire day, scheduling them 24 hours in advance ensures that your message will reach your entire segment. However, you can schedule these campaigns less than 24 hours in advance if necessary. Keep in mind that Braze will not send messages to any users that have missed the send time by more than 1 hour.
+Braze recommande vivement que toutes les campagnes locales de fuseau horaire soient planifiées 24 heures à l'avance. Étant donné qu'une telle campagne doit être envoyée au cours d'une journée entière, Les planifier 24 heures à l'avance garantit que votre message parviendra à tout votre segment. Cependant, vous pouvez planifier ces campagnes moins de 24 heures à l'avance si nécessaire. Gardez à l'esprit que Braze n'enverra pas de messages aux utilisateurs qui ont manqué le temps d'envoi de plus d'une heure.
 
-For example, if it is 1pm and you schedule a local time zone campaign for 3pm, then the campaign will immediately send to all users whose local time is 3-4pm, but not to users whose local time is 5pm. In addition, the send time you choose for your campaign needs to have not yet occurred in your company’s time zone.
+Par exemple, s'il est 13h et que vous planifiez une campagne locale de fuseau horaire pour 15h, alors la campagne enverra immédiatement à tous les utilisateurs dont l'heure locale est de 3-16 heures, mais pas aux utilisateurs dont l'heure locale est de 17 heures. De plus, le temps d'envoi que vous avez choisi pour votre campagne doit ne pas avoir encore eu lieu dans le fuseau horaire de votre entreprise.
 
-Editing a local time zone campaign that is scheduled less than 24 hours in advance will not alter the message’s schedule. If you decide to edit a local time zone campaign to send at a later time (for instance, 7pm instead of 6pm), users who were in the targeted segment when the original send time was chosen will still receive the message at the original time (6pm). If you edit a local time zone to send at an earlier time (for instance, 4pm instead of 5pm), then the campaign will still send to all segment members at the original time (5pm).
+Modifier une campagne locale de fuseau horaire qui est programmée moins de 24 heures à l’avance ne modifiera pas le calendrier du message. Si vous décidez de modifier une campagne locale de fuseau horaire à envoyer plus tard (par exemple, 19h au lieu de 18h), les utilisateurs qui se trouvaient dans le segment ciblé lorsque l'heure d'envoi originale a été choisie, recevront toujours le message à l'heure d'origine (6hm). Si vous modifiez un fuseau horaire local à envoyer à une heure antérieure (par exemple, 16h au lieu de 17h), alors la campagne sera toujours envoyée à tous les membres du segment à l'heure initiale (5h).
 
 {% alert note %}
-For Canvas steps, users do not need to be in the step for 24 hours to receive the next step for local time zone delivery.
+Pour les étapes de Canvas , les utilisateurs n'ont pas besoin d'être à l'étape pendant 24 heures pour recevoir l'étape suivante de la livraison locale du fuseau horaire.
 {% endalert %}
 
-If you have allowed users to become re-eligible for the campaign, then they will receive it again at the original time (5pm). For all subsequent occurrences of your campaign, however, your messages only send at your updated time.
+Si vous avez autorisé les utilisateurs à redevenir éligibles pour la campagne, ils le recevront à nouveau à la date initiale (5h). Cependant, pour tous les événements subséquents de votre campagne, vos messages ne vous sont envoyés qu'à l'heure à laquelle vous avez été mis à jour.
 
-### When do changes to local time zone campaigns take effect?
+### Quand les changements de fuseau horaire local entrent-ils en vigueur?
 
-Target segments for local time zone campaigns should include at least a 48-hour window for any time-based filters to guarantee delivery to the entire segment. For example, consider a segment targeting users on their second day with the following filters:
+Les segments cibles pour les campagnes locales de fuseau horaire devraient inclure au moins une fenêtre de 48 heures pour tous les filtres basés sur le temps afin de garantir la livraison à l'ensemble du segment. Par exemple, envisagez un segment ciblant les utilisateurs sur leur deuxième jour avec les filtres suivants :
 
-- First used app more than 1 day ago
-- First used app less than 2 days ago
+- Première application utilisée il y a plus d'un jour
+- Première application utilisée il y a moins de 2 jours
 
-Local time zone delivery may miss users in this segment based on the delivery time and the users’ local time zone. This is because a user can leave the segment by the time their time zone triggers delivery.
+La livraison locale du fuseau horaire peut manquer les utilisateurs de ce segment en fonction de l'heure de livraison et du fuseau horaire local des utilisateurs. Ceci est dû au fait qu'un utilisateur peut laisser le segment avant que son fuseau horaire ne déclenche la livraison.
 
-### What changes can I make to scheduled campaigns ahead of launch?
+### Quels changements puis-je apporter aux campagnes planifiées avant le lancement ?
 
-When the campaign is scheduled, edits to anything other than the message composition need to be made before we enqueue the messages to send. As per all campaigns, you can’t edit conversion events after it is launched.
+Lorsque la campagne est programmée, les modifications à autre chose que la composition du message doivent être faites avant de faire la file d'attente des messages à envoyer. Comme pour toutes les campagnes, vous ne pouvez pas modifier les événements de conversion après son lancement.
 
-For Canvas entries, refer to above. For Canvas steps, refer to the following:
+Pour les entrées Canvas reportez-vous à la section ci-dessus. Pour les étapes de Canvas reportez-vous aux éléments suivants :
 
-- Scheduled changes will only apply to users who are not already waiting to receive the step.
-- Audience changes default to apply to everyone unless you’ve selected **Evaluate At Enqueue Time**, in which case it’s similar behavior to above.
+- Les modifications planifiées ne s'appliqueront qu'aux utilisateurs qui n'attendent pas déjà de recevoir l'étape.
+- L'audience change par défaut pour s'appliquer à tout le monde à moins que vous n'ayez sélectionné **Évaluer au moment de la file d'attente**, auquel cas c'est un comportement similaire à celui ci-dessus.
 
-### What is the "safe zone" before messages on a scheduled campaign are enqueued?
+### Qu'est-ce que la « zone de sécurité » avant que les messages sur une campagne planifiée ne soient mis en file d'attente ?
 
-- **One-time scheduled campaigns**—can be edited up until the scheduled send time.
-- **Recurring scheduled campaigns**—can be edited up until the scheduled send time.
-- **Local Send Time campaigns**—can be edited up to 24 hours prior to the scheduled send time.
-- **Optimal Send Time campaigns**—can be edited up to 24 hours prior to the day the campaign is scheduled to send on.
+- **Des campagnes ponctuelles planifiées**- peuvent être modifiées jusqu'à l'heure d'envoi prévue.
+- **Campagnes planifiées récurrentes**- peuvent être modifiées jusqu'à l'heure d'envoi planifiée.
+- **Campagnes locales d'envoi**- peut être modifié jusqu'à 24 heures avant l'heure d'envoi prévue.
+- **Campagnes optimales pour l'envoi du temps**- peut être modifié jusqu'à 24 heures avant le jour où la campagne est programmée à envoyer.
 
-### What if I make an edit within the "safe zone"?
+### Que faire si je fais un montage dans la "zone sûre"?
 
-Changing the send time on campaigns within this time can lead to undesired behavior, for example:
+Changer le temps d'envoi des campagnes dans ce délai peut conduire à un comportement indésirable, par exemple :
 
-- Braze will not send messages to any users that have missed the send time by more than 1 hour.
-- Pre-enqueued messages may still send at the originally enqueued time, rather than the adjusted time.
+- Braze n'enverra pas de messages aux utilisateurs qui ont manqué le temps d'envoi de plus d'une heure.
+- Les messages préalablement mis en file d'attente peuvent toujours être envoyés au moment de la mise en file d'attente initiale, plutôt que dans le délai ajusté.
 
-### What should I do if the "safe zone" has already passed?
+### Que dois-je faire si la "zone sûre" est déjà passée?
 
-To ensure campaigns operate as desired, we recommend stopping the current campaign (this will abort any enqueued messages). You can then duplicate the campaign, making the changes as necessary and launch the new campaign. You may need to exclude users from this campaign who have already received the first campaign.
+Pour s'assurer que les campagnes fonctionnent comme vous le souhaitez, nous vous recommandons d'arrêter la campagne actuelle (cela annulera tous les messages mis en attente). Vous pouvez ensuite dupliquer la campagne, faire les changements si nécessaire et lancer la nouvelle campagne. Vous devrez peut-être exclure les utilisateurs de cette campagne qui ont déjà reçu la première campagne.
 
-Please ensure you re-adjust campaign schedule times to allow for time zone sending.
+Veuillez vous assurer de réajuster les horaires de la campagne pour permettre l'envoi du fuseau horaire.
 
-### When does Braze evaluate users for local time zone delivery?
+### Quand Braze évalue-t-il les utilisateurs pour la livraison des fuseaux horaires locaux?
 
-For local time zone delivery, Braze evaluates users for their entry eligibility during these two instances:
-- At Samoa time (UTC+13) of the scheduled day
-- At local time of the scheduled day
+Pour la livraison locale du fuseau horaire, Braze évalue les utilisateurs pour l'éligibilité de leur entrée dans ces deux instances :
+- A l'heure Samoa (UTC+13) du jour programmé
+- À l'heure locale du jour programmé
 
-In order for a user to be eligible for entry, the must must be eligible for both checks. For example, if a Canvas is scheduled to launch on August 7, 2021 at 2pm local time zone,  then targeting a user located in New York would require the following checks for eligibility:
-- New York on August 6, 2021 at 9pm
-- New York on August 7, 2021 at 2pm
+Pour qu'un utilisateur puisse être éligible à l'inscription, il doit être admissible aux deux vérifications. Par exemple, si une Canvas est prévue pour le lancement le 7 août 2021 à 14h, fuseau horaire local, alors cibler un utilisateur situé à New York nécessiterait les vérifications suivantes pour son éligibilité :
+- New York le 6 août 2021 à 21h
+- New York le 7 août 2021 à 14h
 
-Note that the user needs to be in the segment for 24 hours prior to the launch. If the user is not eligible in the first check, then Braze will not attempt the second check.
+Notez que l'utilisateur doit être dans le segment pendant 24 heures avant le lancement. Si l'utilisateur n'est pas éligible lors de la première vérification, alors Braze ne tentera pas la deuxième vérification.
