@@ -80,8 +80,8 @@ In the same file, add the following snippet within the `application:didFinishLau
 
 ```objc
 [Appboy startWithApiKey:@"YOUR-APP-IDENTIFIER-API-KEY"
-         inApplication:application
-     withLaunchOptions:launchOptions];
+          inApplication:application
+      withLaunchOptions:launchOptions];
 ```
 {% endsubtab %}
 {% endsubtabs %}

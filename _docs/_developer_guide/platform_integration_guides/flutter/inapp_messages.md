@@ -42,19 +42,19 @@ Then, implement the `IInAppMessageManagerListener` delegate as described in our 
 1. In your `MainActivity.kt`, add this code to your `configureFlutterEngine` method:
 ```dart
 override fun configureFlutterEngine(flutterEngine: FlutterEngine) {
-	// [...]
+  // [...]
 
-	this.application.registerActivityLifecycleCallbacks(BrazeActivityLifecycleCallbackListener())
-	BrazeInAppMessageManager.getInstance().setCustomInAppMessageManagerListener(
-	    BrazeInAppMessageManagerListener()
-	)
+  this.application.registerActivityLifecycleCallbacks(BrazeActivityLifecycleCallbackListener())
+  BrazeInAppMessageManager.getInstance().setCustomInAppMessageManagerListener(
+      BrazeInAppMessageManagerListener()
+  )
 }
 ```
 
 2. Add this inside your `MainActivity` class:
 ```dart
 private class BrazeInAppMessageManagerListener : IInAppMessageManagerListener {
-	override fun beforeInAppMessageDisplayed(inAppMessage: IInAppMessage): InAppMessageOperation {
+  override fun beforeInAppMessageDisplayed(inAppMessage: IInAppMessage): InAppMessageOperation {
     super.beforeInAppMessageDisplayed(inAppMessage)
     BrazePlugin.processInAppMessage(inAppMessage)
 
