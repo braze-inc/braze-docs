@@ -9,13 +9,17 @@ description: "This reference introduces the Flutter SDK and explains how to inte
 
 # Initial SDK setup
 
-Follow these instructions to install the [Braze Flutter SDK](https://pub.dev/packages/braze_plugin) that contains a specialized package that allows integrators to use certain Braze APIs from Flutter app code written in Dart. This plugin provides basic analytics functionality and lets you integrate in-app messages and Content Cards for both iOS and Android with a single codebase.
+Follow these instructions to install the [Braze Flutter SDK](https://pub.dev/packages/braze_plugin) that contains a package to allows integrators to use Braze APIs from [Flutter apps](https://flutter.dev/) written in Dart. This plugin provides basic analytics functionality and lets you integrate in-app messages and Content Cards for both iOS and Android with a single codebase.
 
 You will need to complete installation steps on both platforms separately.
 
 To complete the installation, you will need the [App Identifier API key]({{site.baseurl}}/api/api_key/#the-app-identifier-api-key) as well as the [SDK endpoint]({{site.baseurl}}/api/basics/#endpoints). Both are located in the **Developer Console** under **Settings** in the dashboard.
 
-Please visit the Flutter [official website](https://flutter.dev/) to learn more about it and complete the [setup of the Flutter SDK](https://docs.flutter.dev/get-started/install).
+Please follow the Flutter guide to complete the [setup of the Flutter SDK](https://docs.flutter.dev/get-started/install).
+
+### Requirements
+* Dart SDK 2.0.0+
+* Flutter SDK 1.10.0+
 
 ## Step 1: Integrate the Braze library
 
@@ -29,7 +33,7 @@ This will add the appropriate line to your `pubspec.yaml`.
 
 ## Step 2: Complete native setup
 
-Please complete the both Step 2.1 (Android) and Step 2.2 (iOS).
+Please complete the both the Android and iOS steps below.
 
 {% tabs %}
 {% tab Android %}
@@ -59,6 +63,17 @@ The calls to `openSession()` and `closeSession()` are handled automatically.
 Add the following code to the `onCreate()` method of your `MainApplication` class:
 
 {% subtabs global %}
+{% subtab KOTLIN %}
+```kotlin
+import com.appboy.AppboyLifecycleCallbackListener
+
+override fun onCreate() {
+    super.onCreate()
+    ...
+    registerActivityLifecycleCallbacks(AppboyLifecycleCallbackListener())
+}
+```
+{% endsubtab %}
 {% subtab JAVA %}
 ```java
 import com.appboy.AppboyLifecycleCallbackListener;
@@ -68,17 +83,6 @@ public void onCreate() {
     super.onCreate();
     ...
     registerActivityLifecycleCallbacks(new AppboyLifecycleCallbackListener());
-}
-```
-{% endsubtab %}
-{% subtab KOTLIN %}
-```kotlin
-import com.appboy.AppboyLifecycleCallbackListener
-
-override fun onCreate() {
-    super.onCreate()
-    ...
-    registerActivityLifecycleCallbacks(AppboyLifecycleCallbackListener())
 }
 ```
 {% endsubtab %}
