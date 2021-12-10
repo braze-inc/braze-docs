@@ -1,110 +1,110 @@
 ---
-nav_title: Creating a News Feed Item
-article_title: Creating a News Feed Item
+nav_title: Création d'un fil d'actualité
+article_title: Création d'un fil d'actualité
 page_order: 3
-page_type: reference
-description: "This reference article covers how to create a News Feed item. News-Feed items allow you to insert permanent content directly into your app from our web dashboard."
-channel: news feed
+page_type: Référence
+description: "Cet article de référence couvre la façon de créer un fil d'actualité. Les éléments Flux d'actualité vous permettent d'insérer du contenu permanent directement dans votre application à partir de notre tableau de bord web."
+channel: fil d'actualité
 ---
 
-# Creating a News Feed item
+# Création d'un fil d'actualités
 
-News Feed items allow you to insert permanent content directly into your app from our web dashboard. Better yet, the News Feed also is targetable to individual segments just like all of our other message types. This means what you see in the feed might be completely different from another individual. The possibilities for the news-feed are nearly limitless.
+Les fils d'actualité vous permettent d'insérer du contenu permanent directement dans votre application à partir de notre tableau de bord web. Mieux encore, le fil de nouvelles est également ciblable pour des segments individuels, comme tous nos autres types de messages. Cela signifie que ce que vous voyez dans le flux peut être complètement différent d'un autre individu. Les possibilités pour les nouveaux aliments sont presque illimitées.
 
-To see examples of News Feeds and helpful tips, check out our [Case Studies][13], and our [use case][15] and [best practice][16] docs.
+Pour voir des exemples de flux d'actualités et des conseils utiles, consultez notre [Études de cas][13], et notre [cas d'utilisation][15] et [meilleures pratiques][16] docs.
 
-## Step 1: Click create card
+## Étape 1 : Cliquez sur créer une carte
 
-First, you must choose the type of News Feed item you want to send down to your users. From the dropdown menu, you can select any of our four News Feed card types.
+Tout d'abord, vous devez choisir le type d'élément du fil d'actualité que vous voulez envoyer à vos utilisateurs. À partir du menu déroulant, vous pouvez sélectionner l'un de nos quatre types de fiches d'actualité.
 
-!\[Create News Feed\]\[1\]
+!\[Créer un fil d'actualité\]\[1\]
 
-### News Feed card specifications
+### Caractéristiques des fiches d'actualités
 
-#### News Feed cards
+#### Cartes de flux d'actualités
 
 <br>!\[Classic Card\]\[2\]{: style="max-width:40%;"}
 
-Standard News Feed cards consist of:
+Les cartes de flux d'actualités standard consistent en :
 
-- 110x110 image
-- Title
-- Body Text
-- Link (In-App/Web)
+- Image 110x110
+- Titre de la page
+- Corps du texte
+- Lien (In-App/Web)
 
-#### Captioned image cards
+#### Cartes d'images sous-titrées
 
-<br>!\[Captioned Image\]\[3\]{: style="max-width:40%;"}
+<br>!\[Image sous-titrée\]\[3\]{: style="max-width:40%;"}
 
-Captioned Image cards consist of:
+Les cartes d'image sous-titrées consistent en :
 
-- 600x450 image
-- Title
-- Body Text
-- Link (In-App/Web)
+- Image 600x450
+- Titre de la page
+- Corps du texte
+- Lien (In-App/Web)
 
-#### Banner cards
+#### Cartes de bannière
 
-<br>!\[NewsFeed Banner\]\[4\]{: style="max-width:40%;"}
+<br>!\[Bannière NewsFeed\]\[4\]{: style="max-width:40%;"}
 
-Banner cards consist of:
+Les cartes de bannière consistent en :
 
-- 600x100 image
-- Link (In-App/Web)
+- Image 600x100
+- Lien (In-App/Web)
 
-#### Image guidelines
+#### Directives de l'image
 
-|    Card type    |         Aspect Ratio          | Recommended Image Size | Maximum Image Size | File Types    |
-|:---------------:|:-----------------------------:|:----------------------:|:------------------:| ------------- |
-|     Classic     | 1:1 (110 pixels wide minimum) |         500KB          |        1MB         | PNG, JPG, GIF |
-| Captioned image | 4:3 (600 pixels wide minimum) |         500KB          |        1MB         | PNG, JPG, GIF |
-|     Banner      | 6:1 (600 pixels wide minimum) |         500KB          |        1MB         | PNG, JPG, GIF |
+|   Type de carte   |          Ratio d'aspect           | Taille de l'image recommandée | Taille maximale de l'image | Types de fichiers |
+|:-----------------:|:---------------------------------:|:-----------------------------:|:--------------------------:| ----------------- |
+|     Classique     | 1:1 (110 pixels de large minimum) |             500Ko             |            1 Mo            | PNG, JPG, GIF     |
+| Image sous-titrée | 4:3 (600 pixels de large minimum) |             500Ko             |            1 Mo            | PNG, JPG, GIF     |
+|     Bannière      | 6:1 (600 pixels de large minimum) |             500Ko             |            1 Mo            | PNG, JPG, GIF     |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4}
 
-- PNG files are recommended.
-- A custom image loading library is required to display Gifs on Android. We recommend Glide.
-- Smaller, high-quality images will load faster, so it’s recommended to use the smallest asset possible to achieve your desired output.
+- Les fichiers PNG sont recommandés.
+- Une bibliothèque de chargement d'images personnalisée est nécessaire pour afficher les Gifs sur Android. Nous recommandons Glide.
+- Des images plus petites et de haute qualité se chargeront plus rapidement. Il est donc recommandé d'utiliser le plus petit actif possible pour atteindre la sortie souhaitée.
 
-## Step 2: Add a title, summary, image, and links
+## Étape 2 : Ajouter un titre, un résumé, une image et des liens
 
-!\[News Feed Title Summary\]\[6\]
+!\[Résumé du titre du fil d'actualité\]\[6\]
 
-Time to compose your News Feed card! Create a title and summary for your card and upload an image to go alongside it. You can also set link behavior on this page. This link can be a standard link or a ["Deep Link"][7] to in-app content.
+Il est temps de composer votre carte de flux d'actualités! Créez un titre et un résumé pour votre carte et téléchargez une image pour aller à côté de celle-ci. Vous pouvez également définir le comportement des liens sur cette page. Ce lien peut être un lien standard ou un ["Deep Link"][7] vers le contenu de l'application.
 
-## Step 3: Select a schedule
+## Étape 3 : Sélectionnez un calendrier
 
-!\[News Feed Schedule\]\[8\]
+!\[Calendrier des fils d'actualités\]\[8\]
 
-Below the News Feed Card editor, you will find options for when to publish this item. You can choose to publish it immediately after creation or set a time in the future to publish it. You can also choose to deliver the News Feed card at a particular time in your users' local time by selecting the "Publish to Users in their Local Time Zone" checkbox.
+En dessous de l'éditeur de la fiche d'actualité, vous trouverez les options pour publier cet article. Vous pouvez choisir de le publier immédiatement après la création ou définir une heure dans le futur pour le publier. Vous pouvez également choisir de livrer la carte de flux d'actualités à un moment particulier à l'heure locale de vos utilisateurs en cochant la case "Publier aux utilisateurs dans leur fuseau horaire local".
 
-## Step 4: Select a segment
+## Étape 4 : Sélectionnez un segment
 
-You can configure your News Feed Card to target any [segment][10] you've defined within the dashboard at any schedule you desire. Select your target segment by clicking on the dropdown menu. Here you can see high-level statistics, including email availability and lifetime value per user.
+Vous pouvez configurer votre carte de flux d'actualités pour cibler n'importe quel [segment][10] que vous avez défini dans le tableau de bord à n'importe quel horaire que vous souhaitez. Sélectionnez votre segment cible en cliquant sur le menu déroulant. Ici vous pouvez voir des statistiques de haut niveau, y compris la disponibilité des emails et la valeur à vie par utilisateur.
 
 !\[Target Segment\]\[11\]
 
-## Step 5: Review details and publish
+## Étape 5 : Examiner les détails et publier
 
-Next, you will be taken to a page that displays all of the details about your card (and companion in-app message, if applicable). You can review any of the details about these items and edit them if you need to by clicking the pencil icon in any of the headers.
+Ensuite, vous serez redirigé vers une page qui affiche tous les détails sur votre carte (et le cas échéant un autre message dans l'application). Vous pouvez consulter les détails de ces éléments et les modifier si vous en avez besoin en cliquant sur l'icône crayon dans l'un des en-têtes.
 
-!\[News Feed Preview\]\[12\]
+!\[Aperçu du flux d'actualités\]\[12\]
 
-That's it! You're done! You've published your first news-feed card!
+Voilà! Vous avez terminé ! Vous avez publié votre première fiche d'actualité!
 
-## Optional: Link a News Feed card to an in-app message
+## Optionnel: Associer une carte de flux d'actualité à un message dans l'application
 
-!\[Linked In App\]\[14\]
+!\[Application Liée dans l'application\]\[14\]
 
-Multichannel campaigns often lead to better overall conversion and engagement rates, so Braze has made it easy to link an in-app message to a specific News Feed card. After launching a News Feed card, a button will appear in the new feed statistics page allowing you to "create an associated in-app message." Clicking on this will take you to the campaign composer for a new in-app message campaign. While you would input the copy, look, and feel of the in-app message, Braze automatically copies the delivery and targeting rules of the associated News Feed card to make sure the campaigns launch together.
+Les campagnes multicanaux mènent souvent à de meilleurs taux de conversion et d'engagement globaux, ainsi Braze a rendu facile le lien entre un message dans l'application et une carte de News Feed spécifique. Après avoir lancé une carte de flux d'actualités, un bouton apparaîtra dans la nouvelle page de statistiques du flux vous permettant de "créer un message associé dans l'application". En cliquant dessus, vous serez dirigé vers le compositeur de campagne pour une nouvelle campagne de message dans l'application. Pendant que vous saisissez la copie, l'apparence et la sensation du message dans l'application, Braze copie automatiquement les règles de livraison et de ciblage de la carte de flux de nouvelles associée pour s'assurer que les campagnes se lancent ensemble.
 
-## Organizing your News Feed
+## Organiser votre flux d'actualités
 
-You can re-order your cards within Braze's News Feed page.
-- Cards in the feed are ordered first by whether or not they have been seen by the user, unseen items are at the top of the feed.
-  - A card is considered read if it has received an impression in the feed.
-  - Impressions are only counted if the card is viewable in the feed (ie, if a user does not scroll down to read a card, an impression is not counted).
-- Cards are then ordered by the date and time of creation, where more recent items are first.
-[1]: {% image_buster /assets/img_archive/newsfeed1_new.png %} [2]: {% image_buster /assets/img_archive/classiccard.png %} [3]: {% image_buster /assets/img_archive/captionedimage.png %} [4]: {% image_buster /assets/img_archive/newsfeedbanner.png %} [6]: {% image_buster /assets/img_archive/news-feed-title-summary_new.png %} [8]: {% image_buster /assets/img_archive/newsfeed2_new.png %} [11]: {% image_buster /assets/img_archive/targetsegment_new.png %} [12]: {% image_buster /assets/img_archive/newsfeedpreview_new.png %} [14]: {% image_buster /assets/img_archive/linked-in-app_new.png %}
+Vous pouvez réorganiser vos cartes à partir de la page Flux d'actualités de Braze.
+- Les cartes dans le flux sont d'abord ordonnées par si elles ont été vues ou non par l'utilisateur, les éléments invisibles sont en haut du flux.
+  - Une carte est considérée comme lue si elle a reçu une impression dans le flux.
+  - Les impressions ne sont comptées que si la carte est visible dans le flux (c.-à-d. si un utilisateur ne fait pas défiler vers le bas pour lire une carte, une impression n'est pas comptée).
+- Les cartes sont ensuite commandées par date et heure de création, où les éléments les plus récents sont en premier.
+[1]: {% image_buster /assets/img_archive/newsfeed1_new.png %} [2]: {% image_buster /assets/img_archive/classiccard.png %} [3]: {% image_buster /assets/img_archive/captionedimage. ng %} [4]: {% image_buster /assets/img_archive/newsfeedbanner.png %} [6]: {% image_buster /assets/img_archive/news-feed-title-summary_new. ng %} [8]: {% image_buster /assets/img_archive/newsfeed2_new.png %} [11]: {% image_buster /assets/img_archive/targetsegment_new. ng %} [12]: {% image_buster /assets/img_archive/newsfeedpreview_new.png %} [14]: {% image_buster /assets/img_archive/linked-in-app_new.png %}
 
 [7]: {{site.baseurl}}/developer_guide/platform_integration_guides/ios/advanced_use_cases/linking/#deep-linking-to-app-settings
 [10]: {{site.baseurl}}/user_guide/engagement_tools/segments/creating_a_segment/#creating-a-segment
