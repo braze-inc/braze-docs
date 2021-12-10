@@ -1,45 +1,45 @@
 ---
-nav_title: Campaign Alerts
-article_title: Campaign Alerts
+nav_title: Alertes de campagne
+article_title: Alertes de campagne
 page_order: 3
-page_type: reference
-description: "This reference article gives an overview of campaign alerts, their benefits, as well as how to set them up to help provide you peace of mind."
-tool: Campaigns
+page_type: Référence
+description: "Cet article de référence donne un aperçu des alertes de campagne, leurs avantages, ainsi que la façon de les mettre en place pour vous procurer la tranquillité d'esprit."
+tool: Campagnes
 channel:
-  - email
+  - Email
   - webhooks
 ---
 
-# Campaign alerts
+# Alertes de campagne
 
-> This reference article gives an overview of campaign alerts, their benefits, as well as how to set them up to help provide you peace of mind.
+> Cet article de référence donne un aperçu des alertes de campagne, leurs avantages, ainsi que la façon de les mettre en place pour vous procurer la tranquillité d'esprit.
 
-## Overview
+## Aperçu
 
-We want to alert you when something doesn’t seem quite as expected and give you peace of mind that the ship is sailing smoothly. Campaign threshold alerts provide peace of mind — be the first to know if an important campaign sends more or fewer messages than you expect.
+Nous voulons vous avertir lorsque quelque chose ne semble pas tout à fait attendu et vous donner la tranquillité d’esprit que le navire navigue en douceur. Les alertes sur les seuils de campagne procurent une tranquillité d'esprit — soyez les premiers à savoir si une campagne importante envoie plus ou moins de messages que vous ne vous y attendez.
 
-Campaign alerts are available for the following campaigns:
+Des alertes de campagne sont disponibles pour les campagnes suivantes :
 
-- Recurring scheduled campaigns
-- Action-based campaigns
-- API-triggered campaigns
+- Campagnes planifiées récurrentes
+- Campagnes basées sur l'action
+- Campagnes déclenchées par l'API
 
-## Setting up your campaign alert
+## Paramétrage de l'alerte de votre campagne
 
-Navigate to the analytics page of your campaign to start setting up your alert. Once you hit "Set Up Alert," you'll be able to specify upper and lower alert thresholds as well as the alert recipients and channels.
+Accédez à la page Analytics de votre campagne pour commencer à configurer votre alerte. Lorsque vous appuyez sur "Configurer l'alerte", vous serez en mesure de spécifier des seuils d'alerte supérieurs et inférieurs ainsi que les destinataires et les canaux.
 
-For a scheduled recurring campaign, you can set upper and lower thresholds for the messages sent each time the campaign sends. For a triggered campaign, you can set upper and lower thresholds for the number of messages sent hourly and daily.
+Pour une campagne récurrente planifiée, vous pouvez définir des seuils supérieurs et inférieurs pour les messages envoyés chaque fois que la campagne envoie. Pour une campagne déclenchée, vous pouvez définir des seuils supérieurs et inférieurs pour le nombre de messages envoyés par heure et par jour.
 
-You can set up an email alert, a webhook alert or both. Webhook alerts can be very useful, as they allow you to send an alert to a Slack channel. For more information on integrating campaign alerts with Slack, see our [documentation][1].
+Vous pouvez configurer une alerte par courriel, une alerte par webhook ou les deux. Les alertes Webhook peuvent être très utiles, car elles vous permettent d'envoyer une alerte à un canal Slack. Pour plus d'informations sur l'intégration des alertes de campagne avec Slack, consultez notre [documentation][1].
 
-!\[Setting up Campaign Alert\]\[2\]
+!\[Mise en place de l'alerte de campagne\]\[2\]
 
-## Campaign alert webhook payload
+## Charge utile sur le webhook d'alerte de campagne
 
-The following is a sample payload for the body of a campaign alert webhook. This example uses an alert that is configured to send when messages sent falls below 500 for a given campaign send.
+Ce qui suit est un exemple de charge utile pour le corps d'un webhook d'alerte de campagne. Cet exemple utilise une alerte qui est configurée pour envoyer quand les messages envoyés tombent en dessous de 500 pour l'envoi d'une campagne donnée.
 
 ```
-{"text":"Your campaign 'Sample campaign' had fewer than 500 messages sent this run. It had 4 messages sent this run. See https://dashboard-01.braze.com/engagement/campaigns/5b44b00ffbe76a7024f242e6/51804f26dd365acfa700026a?page=-2",
+{"text":"Votre campagne "Exemple de campagne" avait moins de 500 messages envoyés cette exécution. Il avait 4 messages envoyés cette exécution. Voir https://dashboard-01.braze.com/engagement/campaigns/5b44b00ffbe76a7024f242e6/51804f26dd365acfa700026a?page=-2",
 "data":{"url":"https://dashboard-01.braze.com/engagement/campaigns/5b44b00ffbe76a7024f242e6/51804f26dd365acfa700026a?page=-2",
 "app_group_name":"Sample App Group",
 "campaign_name":"Sample campaign",
