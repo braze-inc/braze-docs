@@ -1,28 +1,28 @@
 ---
-nav_title: Testing Canvases
-article_title: Testing Canvases
+nav_title: Tests de toiles
+article_title: Tests de toiles
 layout: dev_guide
-guide_top_header: "Testing Canvases"
-guide_top_text: "After you send your Canvas, you should always look at the results to ensure your Canvas went well and will affect your future messaging positively.<br><br> Here you can find resources on Canvas analytics and other reports to help you measure the effectiveness of your messaging."
+guide_top_header: "Tests de toiles"
+guide_top_text: "Après avoir envoyé votre Canvas, vous devriez toujours regarder les résultats pour vous assurer que votre Canvas va bien et aura une incidence positive sur votre future messagerie.<br><br> Ici vous pouvez trouver des ressources sur les analyses de Canvas et d'autres rapports pour vous aider à mesurer l'efficacité de votre messagerie."
 page_order: 4
 tool:
-  - Canvas
-  - Reports
-page_type: landing
-description: "This landing page is home to resources on Canvas analytics and testing."
-guide_featured_title: "Section Articles"
+  - Toile
+  - Rapports
+page_type: atterrissage
+description: "Cette page d'accueil contient des ressources sur les analyses et les tests de Canvas ."
+guide_featured_title: "Articles de la section"
 guide_featured_list:
   - 
-    name: Canvas Analytics
+    name: Analyses de la toile
     link: /docs/user_guide/engagement_tools/canvas/testing_canvases/measuring_and_testing_with_canvas_analytics/
-    fa_icon: fas fa-chart-pie
+    fa_icon: fas fa-chart-tarte
   - 
-    name: Retention Reports
+    name: Rapports de rétention
     link: /docs/user_guide/data_and_analytics/your_reports/retention_reports/
     fa_icon: fas fa-chart-area
   - 
-    name: Funnel Reports
+    name: Rapports de l'entonnoir
     link: /docs/user_guide/data_and_analytics/your_reports/funnel_reports/
-    fa_icon: fas fa-filter
+    fa_icon: filtre Fas Fas
 ---
 
