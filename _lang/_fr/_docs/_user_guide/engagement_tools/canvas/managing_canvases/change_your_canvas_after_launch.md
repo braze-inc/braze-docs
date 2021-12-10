@@ -1,85 +1,85 @@
 ---
-nav_title: Change Your Canvas After Launch
-article_title: Change Your Canvas After Launch
+nav_title: Changez votre canevas après le lancement
+article_title: Changez votre canevas après le lancement
 page_order: 1
-description: "This reference article covers the different aspects of a Canvas that can be changed after the initial launch."
-page_type: reference
+description: "Cet article de référence couvre les différents aspects d'une toile qui peut être modifiée après le lancement initial."
+page_type: Référence
 tool:
-  - Canvas
+  - Toile
 ---
 
-# Changing your Canvas after launch
+# Changement de Canvas après le lancement
 
-> This reference article covers the different aspects of a Canvas that can be changed after the initial launch.
+> Cet article de référence couvre les différents aspects d'une toile qui peut être modifiée après le lancement initial.
 
-## Initial conditions
+## Conditions initiales
 
-| **Editable**                | **Not-Editable**  |
-| --------------------------- | ----------------- |
-| Canvas Name and Description | Conversion Events |
-| Teams and Tags              |                   |
-| Entry Type                  |                   |
-| Entry Schedule              |                   |
-| Entry Controls              |                   |
-| Subscription Status         |                   |
-| Rate Limiting               |                   |
-| Frequency Capping           |                   |
-| Quiet Hours                 |                   |
-| Target Audience             |                   |
+| **Modifiable**                 | **Non modifiable**       |
+| ------------------------------ | ------------------------ |
+| Nom et description de la toile | Événements de conversion |
+| Équipes et Tags                |                          |
+| Type d'entrée                  |                          |
+| Calendrier des entrées         |                          |
+| Contrôles d'entrée             |                          |
+| Statut de l'abonnement         |                          |
+| Limitation des taux            |                          |
+| Plafond de fréquence           |                          |
+| Heures silencieuses            |                          |
+| Public cible                   |                          |
 {: .reset-td-br-1 .reset-td-br-2}
 
-## Canvas graph
+## Graphique en toile
 
-| **Editable**                                | **Not-Editable**     |
-| ------------------------------------------- | -------------------- |
-| Stop / Resume Execution of All Canvas Steps | Deleting Steps       |
-| Insert Canvas Steps                         | Deleting Variants    |
-| Add New Connections                         | Deleting Connections |
-| Add New Variants                            |                      |
-| Variant Distribution*                       |                      |
+| **Modifiable**                                                | **Non modifiable**         |
+| ------------------------------------------------------------- | -------------------------- |
+| Arrêt / Reprendre l'exécution de toutes les étapes du canevas | Suppression des étapes     |
+| Insérer des marches de toile                                  | Suppression des variantes  |
+| Ajouter de nouvelles connexions                               | Suppression des connexions |
+| Ajouter de nouvelles variantes                                |                            |
+| Distribution de variants*                                     |                            |
 {: .reset-td-br-1 .reset-td-br-2}
 
-*Control variant distribution may only be decreased after launch.
+*La distribution de variantes de contrôle ne peut être réduite qu'après le lancement.
 
-## Individual step
+## Étape individuelle
 
-| **Editable**                        | **Not-Editable**                             |
-| ----------------------------------- | -------------------------------------------- |
-| Name                                | Schedule Type (change from delay to trigger) |
-| Message Content                     | Control Percentages                          |
-| Step Message Platforms (add/delete) |                                              |
-| Triggers                            |                                              |
-| Audience                            |                                              |
-| Exception Events                    |                                              |
-| Delays / Windows                    |                                              |
+| **Modifiable**                              | **Non modifiable**                                     |
+| ------------------------------------------- | ------------------------------------------------------ |
+| Nom                                         | Type de planification (passer du délai au déclencheur) |
+| Contenu du message                          | Contrôler les pourcentages                             |
+| Étape Message Platforms (ajouter/supprimer) |                                                        |
+| Déclencheurs                                |                                                        |
+| Audience                                    |                                                        |
+| Événements d'exception                      |                                                        |
+| Délai / Windows                             |                                                        |
 {: .reset-td-br-1 .reset-td-br-2}
 
-## Making edits post launch
+## Réalisation du lancement des publications de modification
 
-There are a number of things to know if you plan to edit or add more steps to any other step in Canvas after launching:
+Il y a un certain nombre de choses à savoir si vous prévoyez de modifier ou ajouter d'autres étapes à une autre étape de Canvas après le lancement :
 
-- Users who have not yet entered the Canvas will be eligible for newly created steps.
-- Users who have already passed newly created steps will be eligible next time they re-enter if you have allowed users to re-enter the Canvas in Canvas Entry Settings.
-- Users who are currently in a Canvas, but have not reached the points where new steps are added will be eligible to receive those new steps.
-- You cannot edit or delete existing connections nor can you insert a step between existing connected steps once a Canvas is launched.
-- If you update the Delay or Window for a step, only new users entering the Canvas and users that haven't been queued for that step yet will receive the message at the updated delay.
+- Les utilisateurs qui ne sont pas encore entrés dans Canvas seront admissibles aux étapes nouvellement créées.
+- Les utilisateurs qui ont déjà franchi les étapes nouvellement créées seront éligibles la prochaine fois qu'ils entreront à nouveau dans les paramètres d'entrée de Canvas si vous avez autorisé les utilisateurs à entrer à nouveau dans le Canvas dans les paramètres.
+- Utilisateurs qui sont actuellement dans un Canvas, mais n'ont pas atteint les points où de nouvelles étapes sont ajoutées sera éligible pour recevoir ces nouvelles étapes.
+- Vous ne pouvez pas modifier ou supprimer des connexions existantes, pas plus que vous ne pouvez insérer une étape entre les étapes connectées existantes une fois qu'un Canvas est lancé.
+- Si vous mettez à jour le délai ou la fenêtre pour une étape, Seuls les nouveaux utilisateurs qui entrent dans le Canvas et les utilisateurs qui n'ont pas encore été mis en file d'attente pour cette étape recevront le message au délai mis à jour.
 
 {% alert note %}
-Stopping a Canvas won’t flush users who are waiting to receive messages. If you re-enable the Canvas and users are still waiting for the message, they will receive it (unless the time they should’ve been sent the message has passed, then they won’t receive it).
+Arrêt d'une Canvas n'effacera pas les utilisateurs qui attendent de recevoir des messages. Si vous réactivez le Canvas et que les utilisateurs attendent toujours le message, ils le recevront (sauf si le temps qu’il leur faut pour être envoyés, le message est passé, alors ils ne le recevront pas).
 {% endalert %}
 
-## Canvas variant percentages
+## Pourcentages de variantes de la toile
 
-In Canvas, if a variant percentage is modified, you will find that the users may be redistributed to other variants.
+Dans Canvas, si un pourcentage de variante est modifié, vous constaterez que les utilisateurs peuvent être redistribués à d'autres variantes.
 
-Initially, users are randomly assigned a particular variant before receiving a campaign for the first time. From then on, each successive time the campaign is received (or the user re-enters a Canvas variant)—they will receive the same variant unless the variant percentages are modified.
+Au départ, une variante particulière est assignée aléatoirement aux utilisateurs avant de recevoir une campagne pour la première fois. À partir de là, chaque fois que la campagne est reçue (ou que l'utilisateur entre à nouveau dans une variante de Canvas) — ils recevront la même variante à moins que les pourcentages de variantes ne soient modifiés.
 
-If the variant percentages change, users may be redistributed to other variants. Users stay in these variants until percentages are modified again.
+Si les pourcentages de variante changent, les utilisateurs peuvent être redistribués à d'autres variantes. Les utilisateurs restent dans ces variantes jusqu'à ce que les pourcentages soient à nouveau modifiés.
 
-### Control groups
+### Groupes de contrôle
 
-Control groups remain consistent if the variant percentage is unchanged. Users who previously received messages cannot enter the control group on a later send, nor can any user in the control group ever receive a message.
+Les groupes de contrôle restent cohérents si le pourcentage de variante est inchangé. Les utilisateurs qui ont déjà reçu des messages ne peuvent pas entrer dans le groupe de contrôle lors d'un envoi ultérieur, et aucun utilisateur du groupe de contrôle ne peut recevoir de message.
 
-## Local send time
+## Heure d'envoi locale
 
-Local send time Canvases can be edited up to 24 hours prior to the schedules send time. This window is called is "safe zone". Note that if you intend to make changes to your Canvas that require you to make a new Canvas entirely, remember to exclude users who received the first Canvas and re-adjust the Canvas schedule times to allow for time zone sending.
+Les Canvases à l'heure locale d'envoi peuvent être modifiées jusqu'à 24 heures avant l'envoi des horaires. Cette fenêtre s'appelle "zone sûre". Notez que si vous avez l'intention d'apporter des changements à votre Canvas qui vous obligent à faire un nouveau Canvas entièrement, N'oubliez pas d'exclure les utilisateurs qui ont reçu le premier Canvas et de réajuster les horaires de Canvas pour permettre l'envoi du fuseau horaire.
