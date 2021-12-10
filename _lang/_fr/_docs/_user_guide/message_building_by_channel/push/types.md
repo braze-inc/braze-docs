@@ -1,15 +1,15 @@
 ---
-nav_title: "Types of Push Notifications"
-article_title: Types of Push Notifications
+nav_title: "Types de notifications push"
+article_title: Types de notifications push
 page_order: 1
 page_type: glossary
-description: "This glossary lists the different types of Push Notifications you can use Braze to send."
-channel: push
+description: "Ce glossaire répertorie les différents types de Notifications Push que vous pouvez utiliser Braze pour envoyer."
+channel: Pousser
 layout: glossary_page
-glossary_top_header: "Types of Push Notifications"
-glossary_top_text: "There are many types of push notifications you can use to interact with your customers. These can be narrowed by channel and used to meet the needs of many different users. You can configure most of these settings in your Push Campaigns, but there are notes in the descriptions below that will indicate whether any backend configurations are needed and what those might be."
-glossary_tag_name: Channels
-glossary_filter_text: "Select any channel below to narrow Push Type options."
+glossary_top_header: "Types de notifications push"
+glossary_top_text: "Il existe de nombreux types de notifications push que vous pouvez utiliser pour interagir avec vos clients. Ils peuvent être rétrécis par canal et utilisés pour répondre aux besoins de plusieurs utilisateurs. Vous pouvez configurer la plupart de ces paramètres dans vos campagnes push, mais il y a des notes dans les descriptions ci-dessous qui indiquent si des configurations d'arrière-plan sont nécessaires et ce qu'elles pourraient être."
+glossary_tag_name: Canaux
+glossary_filter_text: "Sélectionnez n'importe quel canal ci-dessous pour affiner les options de type poussé."
 #category to icon/fa or image mapping
 glossary_tags:
   - 
@@ -20,75 +20,75 @@ glossary_tags:
     name: Web
 glossaries:
   - 
-    name: "Regular Push"
-    description: "The all-encompassing Push Message. These appear on your user's device with a notification sound and message which slides in or appears in a notification bar or stack."
+    name: "Push normal"
+    description: "Le message Push tout à fait complet. Celles-ci apparaissent sur l'appareil de votre utilisateur avec un son de notification et un message qui se glisse dans une barre de notification ou dans une pile."
     tags:
       - iOS
       - Android
       - Web
   - 
-    name: "Web Push"
-    description: "These push messages appear in Web Apps or Browsers. They still require permission to reach the customer. Note that Web Push does not work if the user is using a hidden browser."
+    name: "Push Web"
+    description: "Ces messages push apparaissent dans les applications Web ou les navigateurs. Ils doivent toujours être autorisés à rejoindre le client. Notez que Web Push ne fonctionne pas si l'utilisateur utilise un navigateur caché."
     tags:
       - Web
   - 
-    name: "Push Primer Campaigns"
-    description: "In-app message campaigns used to gain explicit push opt-in or opt-out signal from users. Through the primer, you can avoid sending notifications to users that are likely to turn off push through the device settings. For iOS, push campaigns are relevant as foreground push notifications (i.e. notifications that wake up the device) are not enabled until a user explicitly opts into iOS' native push prompt."
-    tags:
-      - iOS
-      - Android
-      - Web
-  - 
-    name: "Push Stories"
-    description: "Push Stories are immersive messages that take your user through a visual journey in the form of a carousel. These are available for mobile devices only."
-    tags:
-      - iOS
-      - Android
-  - 
-    name: "Push with Action Buttons"
-    description: "Push with Action Buttons are messages that allow you to provide options to your users and offer several calls to action."
+    name: "Pousser les campagnes primaires"
+    description: "Campagnes de messages intégrés utilisées pour obtenir des utilisateurs un signal explicite d'opt-in ou d'opt-out. Grâce à l'astérisque, vous pouvez éviter d'envoyer des notifications aux utilisateurs qui sont susceptibles de désactiver push via les paramètres de l'appareil. Pour iOS, les campagnes de push sont pertinentes en tant que notifications push de premier plan (i.e. les notifications de réveil de l'appareil) ne sont pas activées tant qu'un utilisateur n'opte pas explicitement dans l'invite push native d'iOS."
     tags:
       - iOS
       - Android
       - Web
   - 
-    name: "Rich Push Notifications"
-    description: "Rich Push Notifications are notifications with immersive images and creative content that can expand beyond a simple icon and call to action text."
+    name: "Envoyer des histoires"
+    description: "Les Histoires Push sont des messages immersifs qui transmettent à votre utilisateur un voyage visuel sous la forme d’un carrousel. Ceux-ci ne sont disponibles que pour les appareils mobiles."
     tags:
       - iOS
       - Android
   - 
-    name: "Silent Push Notification"
-    description: "A push notification that does not wake up the device when rendering on the device. Instead, the notification will be stored in the device's notification tray."
-    tags:
-      - iOS
-      - Web
-  - 
-    name: "Provisional Push Notifications for iOS"
-    description: "Introduced by Apple in iOS 12, provisional authorization automatically occurs on install for iOS apps, allowing brands to send silent notifications without displaying a push prompt to users. When the silent push is sent and viewed in the device's notification tray, users will be given the option to allow or discontinue push notifications."
-    tags:
-      - iOS
-  - 
-    name: "HTML Push Notifications"
-    description: "HTML Push Notifications are push messages that are hard coded in HTML and do not use the pre-set push templates that Braze provides. Having the option to create HTML push notifications allows your company to have full creative freedom and consistent branding when it comes to how you want these push messages to look."
-    tags:
-      - Android
-  - 
-    name: "Notification IDs & Channel IDs"
-    description: "Notification IDs and Channel IDs allow you to replace or update push notifications already received, but not opened, by the user."
-    tags:
-      - iOS
-      - Android
-  - 
-    name: "Background Push Notifications"
-    description: "Push notifications that are not rendered for the device. Usually used to send packets of information down to the app for background processes and uninstall tracking. A Background-enabled push token is required for background push to be sent."
+    name: "Appuyer avec les boutons d'action"
+    description: "Les boutons Push avec Action sont des messages qui vous permettent de fournir des options à vos utilisateurs et de proposer plusieurs appels à l'action."
     tags:
       - iOS
       - Android
       - Web
   - 
-    name: "Wearable Push Notifications"
-    description: "These push notifications allow brands to send messages directly to wearable devices like the Apple Watch."
+    name: "Notifications Rich Push"
+    description: "Les notifications Rich Push sont des notifications avec des images immersives et du contenu créatif qui peuvent s'étendre au-delà d'une simple icône et appeler au texte d'action."
+    tags:
+      - iOS
+      - Android
+  - 
+    name: "Notification Push silencieuse"
+    description: "Une notification push qui ne réveille pas l'appareil lors de l'affichage sur l'appareil. À la place, la notification sera stockée dans la zone de notification de l'appareil."
+    tags:
+      - iOS
+      - Web
+  - 
+    name: "Notifications push provisoires pour iOS"
+    description: "Introduit par Apple dans iOS 12, l'autorisation provisoire se produit automatiquement à l'installation des applications iOS, permettant aux marques d'envoyer des notifications silencieuses sans afficher une invite push aux utilisateurs. Lorsque le push silencieux est envoyé et visualisé dans la barre de notification de l'appareil, les utilisateurs auront la possibilité d'autoriser ou d'arrêter les notifications push."
+    tags:
+      - iOS
+  - 
+    name: "Notifications Push HTML"
+    description: "Les notifications Push HTML sont des messages push qui sont codés en HTML et n'utilisent pas les modèles de push prédéfinis que Braze fournit. Avoir la possibilité de créer des notifications push HTML permet à votre entreprise d'avoir une totale liberté créative et une image de marque cohérente quand il s'agit de la façon dont vous voulez que ces messages push apparaissent."
+    tags:
+      - Android
+  - 
+    name: "IDs de notification & ID de canal"
+    description: "Les ID de notification et les ID de canal vous permettent de remplacer ou de mettre à jour les notifications push déjà reçues, mais pas ouvertes, par l'utilisateur."
+    tags:
+      - iOS
+      - Android
+  - 
+    name: "Notifications Push en arrière-plan"
+    description: "Notifications push qui ne sont pas affichées pour l'appareil. Habituellement utilisé pour envoyer des paquets d'informations à l'application pour les processus en arrière-plan et le suivi de la désinstallation. Un jeton de push en arrière-plan est requis pour l'envoi d'un push en arrière-plan."
+    tags:
+      - iOS
+      - Android
+      - Web
+  - 
+    name: "Notifications Push portables"
+    description: "Ces notifications push permettent aux marques d’envoyer des messages directement à des appareils portables comme l’Apple Watch."
     tags:
       - iOS
 ---
