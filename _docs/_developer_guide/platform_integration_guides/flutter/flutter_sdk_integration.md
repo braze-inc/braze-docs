@@ -110,7 +110,7 @@ Otherwise, add the following elements to the file:
 
 To import the plugin into your Dart code, use:
 
-```
+```dart
 import 'package:braze_plugin/braze_plugin.dart';
 ```
 
@@ -122,7 +122,7 @@ At this point, you can verify that the SDK is integrated by checking session sta
 
 You can open a session for a particular user by calling the following code in your app.
 
-```javascript
+```dart
 BrazePlugin myBrazePlugin = BrazePlugin();
 myBrazePlugin.changeUser("some-user-id");
 ```

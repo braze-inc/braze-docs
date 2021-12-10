@@ -51,7 +51,7 @@ Your `ABKContentCardsProcessedNotification` callback implementation must call `m
 ### Replaying the callback for content cards
 
 To store any content cards triggered before the callback is available and replay them once it is set, add the following entry to the `customConfigs` map in the `BrazePlugin` constructor:
-```
+```dart
 BrazePlugin myBrazePlugin = new BrazePlugin(customConfigs: {replayCallbacksConfigKey: true});
 ```
 

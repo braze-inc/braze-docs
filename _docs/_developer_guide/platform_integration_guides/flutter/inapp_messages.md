@@ -35,11 +35,34 @@ myBrazePlugin.logInAppMessageButtonClicked(inAppMessage, 0);
 {% tabs %}
 {% tab Android %}
 
-// Need to update this for automatic registration since you can't do this anymore - it is in IntegrationInitializer.kt
+To disable automatic in-app message display for Android, first set `com_braze_flutter_enable_automatic_integration_initializer` to `false` in your `braze.xml` file.
 
-To disable automatic in-app message display for Android, implement the `IInAppMessageManagerListener` delegate as described in our Android section on [Custom Manager Listener]({{site.baseurl}}/developer_guide/platform_integration_guides/android/in-app_messaging/customization/#custom-manager-listener). Your `beforeInAppMessageDisplayed` method implementation should return `InAppMessageOperation.DISCARD`.
+Then, implement the `IInAppMessageManagerListener` delegate as described in our Android section on [Custom Manager Listener]({{site.baseurl}}/developer_guide/platform_integration_guides/android/in-app_messaging/customization/#custom-manager-listener) by following the steps below.
 
-// For an example, see `MainActivity.kt` in our sample app.
+1. In your `MainActivity.kt`, add this code to your `configureFlutterEngine` method:
+```dart
+override fun configureFlutterEngine(flutterEngine: FlutterEngine) {
+	// [...]
+
+	this.application.registerActivityLifecycleCallbacks(BrazeActivityLifecycleCallbackListener())
+	BrazeInAppMessageManager.getInstance().setCustomInAppMessageManagerListener(
+	    BrazeInAppMessageManagerListener()
+	)
+}
+```
+
+2. Then, add this inside your `MainActivity` class:
+```dart
+private class BrazeInAppMessageManagerListener : IInAppMessageManagerListener {
+	override fun beforeInAppMessageDisplayed(inAppMessage: IInAppMessage): InAppMessageOperation {
+    super.beforeInAppMessageDisplayed(inAppMessage)
+    BrazePlugin.processInAppMessage(inAppMessage)
+
+    // InAppMessageOperation.DISCARD will disable automatic display
+    return InAppMessageOperation.DISCARD
+  }
+}
+```
 
 {% endtab %}
 {% tab iOS %}
@@ -81,7 +104,7 @@ For an example, see [AppDelegate.swift](https://github.com/braze-inc/braze-flutt
 ### Replaying the callback for in-app messages
 
 To store any in-app messages triggered before the callback is available and replay them once it is set, add the following entry to the `customConfigs` map in the `BrazePlugin` constructor:
-```
+```dart
 BrazePlugin myBrazePlugin = new BrazePlugin(customConfigs: {replayCallbacksConfigKey: true});
 ```
 
