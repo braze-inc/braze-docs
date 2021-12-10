@@ -1,98 +1,98 @@
 ---
-nav_title: "In-App Messages"
-article_title: In-App Messages
+nav_title: "Messages In-App"
+article_title: Messages In-App
 page_order: 2
-alias: /in-app_messages/
-layout: featured
-guide_top_header: "In-App Messages"
-guide_top_text: "In-App Messages help you get content to your user without interrupting their day with a push notification. Customized and tailored in-app messages enhance the user experience and help your audience get the most value out of your app. With a variety of layouts and customization tools to choose from, in-app messages engage your users more than ever before."
-description: "In-App Messages help you get content to your user without interrupting their day with a push notification. Customized and tailored in-app messages enhance the user experience and help your audience get the most value out of your app."
+alias: /fr/in-app_messages/
+layout: en vedette
+guide_top_header: "Messages In-App"
+guide_top_text: "Les messages intégrés vous aident à obtenir du contenu à votre utilisateur sans interrompre sa journée avec une notification push. Des messages personnalisés et personnalisés dans l'application améliorent l'expérience utilisateur et aident votre public à tirer le meilleur parti de votre application. Avec une variété de mises en page et d'outils de personnalisation à choisir, les messages intégrés attirent plus que jamais vos utilisateurs."
+description: "Les messages intégrés vous aident à obtenir du contenu à votre utilisateur sans interrompre sa journée avec une notification push. Des messages personnalisés et personnalisés dans l'application améliorent l'expérience utilisateur et aident votre public à tirer le meilleur parti de votre application."
 channel:
-  - in-app messages
-guide_featured_title: "Popular Articles"
+  - messages intégrés à l'application
+guide_featured_title: "Articles populaires"
 guide_featured_list:
   - 
-    name: "Creating an In-App Message"
-    link: /docs/user_guide/message_building_by_channel/in-app_messages/create/
-    fa_icon: fas fa-mobile-alt
+    name: "Création d'un Message In-App"
+    link: /fr/docs/user_guide/message_building_by_channel/in-app_messages/create/
+    fa_icon: Fas fa-mobile-alt
   - 
-    name: Creative Details
+    name: Détails de la création
     link: /docs/user_guide/message_building_by_channel/in-app_messages/creative_details/
-    fa_icon: fas fa-paint-brush
+    fa_icon: fa-paint-brush fas
   - 
-    name: Customize
-    link: /docs/user_guide/message_building_by_channel/in-app_messages/customize/
+    name: Personnaliser
+    link: /fr/docs/user_guide/message_building_by_channel/in-app_messages/customize/
     fa_icon: fas fa-cog
   - 
-    name: Testing
+    name: Tests en cours
     link: /docs/user_guide/message_building_by_channel/in-app_messages/testing/
     fa_icon: fas fa-vial
   - 
-    name: "Reporting & Analytics"
+    name: "Rapports & Analytiques"
     link: /docs/user_guide/message_building_by_channel/in-app_messages/reporting/
     fa_icon: fas fa-chart-bar
   - 
-    name: "Dark Mode"
-    link: /docs/user_guide/message_building_by_channel/in-app_messages/dark-mode/
+    name: "Mode Sombre"
+    link: /fr/docs/user_guide/message_building_by_channel/in-app_messages/dark-mode/
     fa_icon: fas fa-mobile
   - 
-    name: HTML Preview
+    name: Aperçu HTML
     link: /docs/user_guide/message_building_by_channel/in-app_messages/preview/
     fa_icon: fas fa-file-code
 ---
 
-To see examples of in-app messages, check out our [Case Studies][11].
+Pour voir des exemples de messages dans l'application, consultez notre [Études de cas][11].
 
-## When to use in-app messages
+## Quand utiliser les messages dans l'application
 
-In-app messages are good for a lot of things. These messages don't deliver outside of the user's app and won't intrude on their home screen. In-app messages, by their nature, exist within your app and come with context and are almost never unwelcome! They're always delivered when the user is active within your app.
+Les messages intégrés sont bons pour beaucoup de choses. Ces messages ne sont pas distribués en dehors de l'application de l'utilisateur et ne s'immiscent pas sur son écran d'accueil. Les messages dans l'application, par leur nature, existent dans votre application et viennent avec leur contexte et ne sont presque jamais indésirables ! Ils sont toujours livrés lorsque l'utilisateur est actif dans votre application.
 
-### Great use cases
+### Caisses d'utilisation géniales
 
-- New App Features
-- App Management
-- Reviews
-- App Upgrades/Updates
-- Giveaways & Sweepstakes
-- Sales and Promotions
-- Product Sales
-- Encouraging and rewarding discovery
-- [Permission Requests/Push Priming][21]
+- Nouvelles fonctionnalités de l'application
+- Gestion des applications
+- Revues
+- Mises à jour/mises à jour de l'application
+- Cadeaux & Sweepstakes
+- Ventes et Promotions
+- Ventes du produit
+- Découverte stimulante et gratifiante
+- [Demandes de permissions/Push d'activation][21]
 
-## Expected behaviors by message types
+## Comportements attendus par type de message
 
-These are what it looks like for your users to open one of our out-of-the-box in-app message types.
+Voici ce à quoi il semble que vos utilisateurs ouvrent un de nos types de messages dans l'application.
 
 {% tabs %}
   {% tab Slideup %}
 
-  Our Slideups typically appear at the top and bottom of the app screen (you can set this when you create your message). These are great for alerting your users about new terms of service, cookies, and other snippets of information.
+  Nos Slideups apparaissent généralement en haut et en bas de l'écran de l'application (vous pouvez le définir lorsque vous créez votre message). Ils sont parfaits pour avertir vos utilisateurs des nouvelles conditions de service, des cookies et d'autres extraits d'informations.
 
   <br>
 
-  ![Slideup Behavior]({% image_buster /assets/img/slideup-behavior.gif %}){: style="border:0px;"}
+  ![Comportement de glissement]({% image_buster /assets/img/slideup-behavior.gif %}){: style="border:0px;"}
 
   <br>
 
 {% endtab %}
 {% tab Modal %}
 
-  Modals appear in the center of the device's screen with a screen overlay that helps it stand out from your app in the background. These are great call-to-action These are perfect for not-so-subtly suggesting that your user take advantage of a sale or giveaway.
+  Les modales apparaissent au centre de l'écran de l'appareil avec une superposition d'écran qui l'aide à se démarquer de votre application en arrière-plan. Ce sont des appels à action géniaux. Ils sont parfaits pour suggérer à votre utilisateur de profiter d'une vente ou d'un don.
 
   <br>
 
-  ![Modal Behavior]({% image_buster /assets/img/modal-behavior.gif %}){: style="border:0px;"}
+  ![Comportement modal]({% image_buster /assets/img/modal-behavior.gif %}){: style="border:0px;"}
 
   <br>
 
 {% endtab %}
 {% tab Full-Screen %}
 
-Full-Screen messages are exactly what you'd expect - they take up the whole screen of the device! This message type is great when you really need your user's attention, like for mandatory app updates.
+Les messages en plein écran sont exactement ce que vous attendiez - ils prennent tout l'écran de l'appareil ! Ce type de message est parfait lorsque vous avez vraiment besoin de l'attention de votre utilisateur, comme pour les mises à jour obligatoires de l'application.
 
 <br>
 
-![Full-Screen Behavior]({% image_buster /assets/img/full-screen-behavior.gif %}){: style="border:0px;"}
+![Comportement plein écran]({% image_buster /assets/img/full-screen-behavior.gif %}){: style="border:0px;"}
 
 <br>
 
