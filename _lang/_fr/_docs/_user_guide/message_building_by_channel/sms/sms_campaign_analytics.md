@@ -1,18 +1,18 @@
 ---
-nav_title: "Reporting"
-article_title: SMS Reporting
+nav_title: "Rapports"
+article_title: Rapports SMS
 page_order: 7
-description: "This reference article covers SMS metrics used at Braze, as well as how to view them in your SMS campaigns."
-page_type: reference
+description: "Cet article de référence couvre les paramètres SMS utilisés au Brésil, ainsi que la façon de les consulter dans vos campagnes SMS."
+page_type: Référence
 tool:
-  - Reports
+  - Rapports
 channel:
   - SMS
 ---
 
-# SMS reporting
+# Rapports SMS
 
-> This reference article covers SMS metrics used at Braze, as well as how to view them in your SMS campaigns.
+> Cet article de référence couvre les paramètres SMS utilisés au Brésil, ainsi que la façon de les consulter dans vos campagnes SMS.
 
 {% include campaign_analytics.md channel="SMS" %}
 
