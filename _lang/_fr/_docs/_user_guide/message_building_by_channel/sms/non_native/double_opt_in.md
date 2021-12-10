@@ -1,27 +1,27 @@
 ---
-nav_title: Double Opt-In Process
-article_title: Non-Native SMS Double Opt-In Process
+nav_title: Processus de double opt-in
+article_title: Processus de double opt-in SMS non-natif
 page_order: 5
-description: "This reference article covers how Braze processes certain keywords for non-native SMS users, as well as best practices when creating an SMS webhook campaign."
-page_type: reference
+description: "Cet article de référence décrit comment Braze traite certains mots-clés pour les utilisateurs non natifs de SMS, ainsi que les meilleures pratiques lors de la création d'une campagne de webhook SMS."
+page_type: Référence
 channel:
   - SMS
   - webhooks
 ---
 
-# Double opt-in process
+# Processus double opt-in
 
-You might find that some users who might send a text to your short or long code, won't yet be opted-in to your SMS Subscription Group. Regulations require that you obtain a user’s explicit consent before you send them any promotional or informational messaging. We highly recommend implementing a double opt-in to ensure compliance.
+Vous pouvez trouver que certains utilisateurs qui peuvent envoyer un texte à votre code court ou long ne sera pas encore pris en compte dans votre groupe d'abonnement SMS. Le règlement exige que vous obteniez le consentement explicite d’un utilisateur avant de lui envoyer tout message promotionnel ou informatif. Nous recommandons vivement la mise en œuvre d'un double opt-in pour garantir la conformité.
 
-!\[picture\]\[IMAGE1\]{: style="float:right;max-width:30%;margin-left:15px;"} We suggest setting a __triggered entry__ in Canvas whenever there's an incoming event `sms_response_subscriptionGroupName_custom`.
+!\[picture\]\[IMAGE1\]{: style="float:right;max-width:30%;margin-left:15px;"} Nous vous suggérons de définir une __entrée déclenchée__ dans Canvas chaque fois qu'il y a un événement entrant `sms_response_subscriptionGroupName_custom`.
 
-## Step 1: Create webhook
+## Étape 1 : Créer un webhook
 
-We first suggest creating a webhook campaign that makes a request to the [subscription/status/set endpoint][SSSendpoint] to subscribe the user to that SMS subscription group.
+Nous suggérons tout d'abord de créer une campagne de webhook qui fait une demande à [abonnement/statut/point de terminaison][SSSendpoint] pour s'abonner à ce groupe d'abonnement SMS.
 
-## Step 2: Send an SMS campaign
+## Étape 2 : Envoyer une campagne SMS
 
-Next, we recommend sending an SMS campaign a few seconds later, with clear call-to-actions along the lines of:
+Ensuite, nous vous recommandons d'envoyer une campagne de SMS quelques secondes plus tard, avec des appels clairs le long des lignes de :
 
 !\[picture\]\[IMAGE\]{: style="border: 0"}
 [IMAGE]: {% image_buster /assets/img/sms/sms_cta.png %} [IMAGE1]: {% image_buster /assets/img/sms/sms_canvas.png %}
