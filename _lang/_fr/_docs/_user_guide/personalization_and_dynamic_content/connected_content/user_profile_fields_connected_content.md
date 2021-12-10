@@ -1,35 +1,35 @@
 ---
-nav_title: Pulling User Profile Data
-article_title: Pulling User Profile Data in Connected Content Calls
+nav_title: Récupération des données du profil utilisateur
+article_title: Récupération des données du profil utilisateur dans les appels de contenu connectés
 page_order: 5
-description: "This article covers how to pull user profiles into your Connected Content calls, and best practices involving Liquid templating."
+description: "Cet article explique comment intégrer les profils des utilisateurs dans vos appels de contenu connecté et les meilleures pratiques concernant le modèle Liquid."
 ---
 
-# Pulling user profile data in Connected Content calls
+# Récupération des données du profil utilisateur dans les appels de contenu connecté
 
-If a Connected Content response contains user profile fields (within a Liquid personalization tag), these values must be defined earlier in the message via Liquid, before the Connected Content call in order to render the Liquid passback properly. Similarly, the `:rerender` flag must be included in the request.
+Si une réponse au contenu connecté contient des champs de profil utilisateur (à l'intérieur d'une étiquette de personnalisation Liquid), ces valeurs doivent être définies plus tôt dans le message via Liquid, avant l'appel de contenu connecté afin de rendre le mot de passe Liquid correctement. De même, le drapeau `:rerender` doit être inclus dans la requête.
 
 {% alert note %}
-The `:rerender` flag is only one level deep, meaning that it will not apply to any nested Connected Content tags.
+Le drapeau `:rerender` est un seul niveau de profondeur, ce qui signifie qu'il ne s'appliquera pas aux balises de contenu connecté imbriquées.
 {% endalert %}
 
-For personalization, Braze pulls user profile fields before passing that field to Liquid—so if the response from Connected Content has user profile fields, it must be defined beforehand.
+Pour la personnalisation, Braze tire les champs du profil utilisateur avant de passer ce champ à Liquid—donc si la réponse du contenu connecté a des champs de profil d'utilisateur, il doit être défini au préalable.
 
-For example, if this were the Connected Content call:
+Par exemple, s'il s'agit de l'appel de contenu connecté:
 {% raw %}
 ```liquid
-Hi ${first_name},
+Bonjour ${first_name},
 {% connected_content https://examplewebsite.com :rerender %}
 ```
 {% endraw %}
-And the Connected Content response is {% raw %}`Your language is ${language}`{% endraw %}, the content displayed in this scenario will be `Hi Jon, your language is`. The language itself will not be templated.
+Et la réponse au contenu connecté est {% raw %}`Votre langue est ${language}`{% endraw %}, le contenu affiché dans ce scénario sera `Bonjour Jon, votre langue est`. La langue elle-même ne sera pas modélisée.
 
-In order to render the Liquid passback properly, you must put the {% raw %}`${language}`{%endraw%} tag anywhere in the body, as shown below.
+Afin de rendre le mot de passe Liquid correctement, vous devez mettre la balise {% raw %}`${language}`{%endraw%} n'importe où dans le corps, comme indiqué ci-dessous.
 {%raw%}
 ```liquid
-"Hi ${first_name}, {% connected_content https://examplewebsite.com?language=${language} :rerender %}
+"Bonjour ${first_name}, {% connected_content https://examplewebsite.com?language=${language} :rerender %}
 ```
 {% endraw %}
 {% alert important %}
-Remember that the `:rerender` flag option is only one level deep. If the Connected Content response itself has more Connected Content tags, Braze will not re-render those additional tags.
+N'oubliez pas que l'option du drapeau `:rerender` n'est qu'un niveau de profondeur. Si la réponse au contenu connecté a elle-même plus de balises de contenu connecté, Braze ne rendra pas ces balises supplémentaires.
 {% endalert %}
