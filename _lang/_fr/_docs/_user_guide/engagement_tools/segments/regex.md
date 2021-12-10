@@ -1,33 +1,33 @@
 ---
-nav_title: "Regular Expressions"
-article_title: Regular Expressions
+nav_title: "Expressions régulières"
+article_title: Expressions régulières
 page_order: 5
-description: "This reference article covers what regular expressions (regex) are, how to begin using them, and offers debugger functionality to validate and test regular expressions."
-page_type: reference
+description: "Cet article de référence couvre ce que sont les expressions régulières, comment commencer à les utiliser, et offre des fonctionnalités de débogueur pour valider et tester les expressions régulières."
+page_type: Référence
 tool:
-  - Testing Tools
+  - Outils de test
 ---
 
-# Regular expressions with Braze
+# Expressions régulières avec Braze
 
 {% include video.html id="3h5Xbhl-TxE" align="right" %}
 
-> Regular expressions, known commonly as regex, is a sequence of characters that define a search pattern. Regular expressions let you do validation of text grouping and find and replace actions. <br><br>Regex is used at Braze to give you a more flexible string matching solution in your segmentation and campaign filtering for your target audience.
+> Les expressions régulières, communément appelées regex, sont une séquence de caractères qui définissent un motif de recherche. Les expressions régulières vous permettent de valider le regroupement de texte et de trouver et de remplacer les actions. <br><br>Regex est utilisé à Braze pour vous donner une solution de correspondance de chaînes plus flexible dans votre segmentation et le filtrage de campagne pour votre public cible.
 
-In the provided video, we show you how regular expressions can be used and tested on the [Regex101][regex] site. Below we also offer an inhouse regex tester, a helpful cheatsheet, sample data referenced in the Regex LAB video, as well as some frequently asked questions.
+Dans la vidéo fournie, nous vous montrons comment les expressions régulières peuvent être utilisées et testées sur le site [Regex101][regex]. Ci-dessous, nous offrons également un testeur d'expressions régulières, une feuille de triche utile, des exemples de données référencées dans la vidéo Regex LAB, ainsi que des questions fréquemment posées.
 
-\[Downloadable Regex Cheat Sheet PDF\]\[cheatsheet\]<br> \[Downloadable Sample Data RTF\]\[dummydata\]
+\[Feuille de triche Regex téléchargeable PDF\]\[cheatsheet\]<br> \[Données téléchargeables RTF\]\[dummydata\]
 
 {% tabs %}
 {% tab Regex Debugger %}
 
-This form allows for basic validation and testing of regular expressions. ​
-<div class="alert alert-important" role="alert"><div class="alert-msg"> <b>important: </b><br />
-<p>This tool is only meant as a reference, and does not guarantee that the regex matches 100% with the Braze Platform. Regular expressions in Braze automatically add the <code>gi</code> modifier. The <a href='https://w3schools.sinsixx.com/jsref/jsref_regexp_modifier_gi.asp.htm'>gi modifier</a> is used to do a case-insensitive search of all occurrences of a regular expression in a string. </p>
+Ce formulaire permet la validation et le test de base des expressions régulières. ​
+<div class="alert alert-important" role="alert"><div class="alert-msg"> <b>importance: </b><br />
+<p>Cet outil est uniquement conçu comme une référence, et ne garantit pas que le regex corresponde à 100% avec la plateforme de Braze. Expressions régulières dans Braze ajoute automatiquement le modificateur <code>gi</code>. Le modificateur <a href='https://w3schools.sinsixx.com/jsref/jsref_regexp_modifier_gi.asp.htm'>gi</a> est utilisé pour effectuer une recherche insensible à la casse de toutes les occurrences d'une expression régulière dans une chaîne. </p>
 </div></div>
 <div>
 Regex:
-​
+ <unk>
 <div class="input-group">
   <div class="input-group-prepend"><span class="input-group-text">/</span>
   </div>
@@ -36,9 +36,9 @@ Regex:
  </div>
 </div>
 <br />
-Check Value(s): <textarea style="" placeholder="match string" id="regex_text"></textarea><br /><br />
-​
-Matched Results<span id="reg_count"></span>: <div id="regex_results"></div>
+Valeur(s) de contrôle : <textarea style="" placeholder="chaîne de correspondance" id="regex_text"></textarea><br /><br />
+<unk>
+Résultats correspondants<span id="reg_count"></span>: <div id="regex_results"></div>
 </div>
 <style type="text/css">
 #regex_text {
@@ -125,44 +125,44 @@ $( document ).ready(function() {
 {% endtab %}
 {% tab Frequently Asked Questions %}
 
-{% details How do I filter for inbox specific email addresses when segmenting? %}
+{% détails Comment puis-je filtrer les adresses e-mail spécifiques à la boîte de réception lors de la segmentation ? %}
 
-Use the email address filter, set it to "matches regex". Reference the regex for email addresses, <font color="red">[a-zA-Z0-9.+_-]+ </font>@<font color="blue">[a-zA-Z0-9.-]+</font>\.<font color="green">[a-zA-Z.-]+</font> where:
-- <font color="red">[a-zA-Z0-9.+_-]+</font> is the beginning of the email address before the '@' character. So the "name" in "name@example.com".
-- <font color="blue">[a-zA-Z0-9.-]+</font> is the first part of the domain. So the "example" in "name@example.com".
-- <font color="green">[a-zA-Z.-]+</font> is the last part of the domain. So the "com" in "name@example.com".
+Utilisez le filtre d'adresse de courriel, définissez-le à "correspond à l'expression régulière". Référez la regex pour les adresses emails, <font color="red">[a-zA-Z0-9.+_-]+ </font>@<font color="blue">[a-zA-Z0-9.-]+</font>\.<font color="green">[a-zA-Z.-]+</font> où:
+- <font color="red">[a-zA-Z0-9.+_-]+</font> est le début de l'adresse e-mail avant le caractère '@'. Donc le "nom" dans "nom@exemple.com".
+- <font color="blue">[a-zA-Z0-9.-]+</font> est la première partie du domaine. Donc l'"exemple" dans "nom@exemple.com".
+- <font color="green">[a-zA-Z.-]+</font> est la dernière partie du domaine. Donc le "com" dans "name@example.com".
 
 {% enddetails %}
 
-{% details How do I filter for email addresses associated to a specific domain? %}
+{% détails Comment puis-je filtrer les adresses e-mail associées à un domaine spécifique ? %}
 
-Say you want to filter for emails ending with @braze.com. You would use the email address filter, set it to matches regex, and enter "@braze.com" in the field.
+Dites que vous voulez filtrer pour les e-mails se terminant par @braze.com. Vous utiliserez le filtre d'adresse e-mail, le définissez comme correspondant à regex, et saisissez "@braze.com" dans le champ.
 
 ![image1]({% image_buster /assets/img/regex/regeximg1.png %})
 
 {% enddetails%}
 
-{% details How can I use regex on number strings to filter for values ≥ x or ≤ x? %}
-If you're searching for __values ≥ x__, the regex to use would be __^([x-y]|\d{z,})$__ where x-y is the range of numbers (0-9) of the first digit, and z is the one more the number of digits of x.<br>__Example__<br> For values ≥ 50, the regex would then be ^(\[5-9\]\[0-9\]|\d{3,})$
+{% détails Comment puis-je utiliser des expressions rationnelles sur des chaînes de nombres pour filtrer les valeurs †x ou <unk> x? %}
+Si vous recherchez des valeurs __†x__, la regex à utiliser serait __^([x-y]|\d{z, )$__ où x-y est l'intervalle des nombres (0-9) du premier chiffre, et z est le plus le nombre de chiffres de x.<br>__Example__<br> Pour les valeurs de †50, la regex sera alors ^(\[5-9\]\[0-9\]|\d{3,})$
 
-If you're searching for __values ≤ x__, the regex would be __^([x-y]|[a-b])$__ where x-y is the range of numbers (0-9) of the first digit, and a-b is lower bound range of x.<br>__Example__<br> For values ≤ 50, the regex would then be ^(\[5-9\]\[0-9\]|\[0-4\]\[0-9\])$
+Si vous recherchez des valeurs __<unk> x__, la regex serait __^([x-y]|[a-b])$__ où x-y est l'intervalle de nombres (0-9) du premier chiffre, et a-b est une limite inférieure de x.<br>__Example__<br> Pour les valeurs de la valeur "number@@050, la regex sera alors ^(\[5-9\]\[0-9\]|\[0-4\]\[0-9\])$
 {% enddetails %}
-{% details How to filter custom attributes that start with a specific string? %}
-Use the __^__ to character to denote what the string starts with and enter the name of you're trying to specify.
+{% details Comment filtrer les attributs personnalisés qui commencent par une chaîne spécifique ? %}
+Utilisez le caractère __^__ pour indiquer par quoi commence la chaîne de caractères et entrez le nom que vous essayez de spécifier.
 
-__Example__<br> If you're trying to target users who live in cities that start with "San", your regex would be __^San \w__. In such a case, you would successfully target users from cities like San Francisco, San Diego, San Jose, etc.
+__Exemple__<br> Si vous essayez de cibler les utilisateurs qui vivent dans des villes commençant par "San", votre regex serait __^San \w__. Dans un tel cas, vous cibliez avec succès les utilisateurs de villes telles que San Francisco, San Diego, San Jose, etc.
 
 ![image2]({% image_buster /assets/img/regex/regeximg2.png %})
 {% enddetails %}
 {% details How to filter for certain phone numbers with regex %}
 
-Before using regex to filter phone numbers, please take note that numbers logged for user profiles should already be in an [E.164 format](https://en.wikipedia.org/wiki/E.164) as specified in our [documentation]({{site.baseurl}}/user_guide/message_building_by_channel/sms/phone_numbers/).
+Avant d'utiliser regex pour filtrer les numéros de téléphone, veuillez prendre note que les numéros enregistrés pour les profils d'utilisateur devraient déjà être dans un [E. 64 format](https://en.wikipedia.org/wiki/E.164) comme spécifié dans notre [documentation]({{site.baseurl}}/user_guide/message_building_by_channel/sms/phone_numbers/).
 
-Assuming US phone numbers, the regex you'll want to use is in the format __1?\d\d\d\d\d\d\d\d\d\d__, where each "\d" is a digit you want to specify - the first 3 of which would be the area code.
+En supposant que les numéros de téléphone américains, la regex que vous voulez utiliser est au format __1? d\d\d\d\d\d\d\d\d\d\d__, où chaque "\d" est un chiffre que vous voulez spécifier - dont les 3 premiers seraient l'indicatif régional.
 
-Likewise, the format for __UK phone numbers__ are __^\+4\d\d\d\d\d\d\d\d\d\d\d__ and any other country would be the the respective __country code followed by the necessary number of "\d" characters for each remaining digit__. So in the case of Lithuania with country code 3, their regex would be __^\+3\d\d\d\d\d\d\d\d\d\d.__
+De même, le format de __numéros de téléphone au Royaume-Uni__ est __^\+4\d\d\d\d\d\d\d\d\d\d\d\d__ et tout autre pays serait l'indicatif de pays respectif __suivi du nombre nécessaire de caractères "\d" pour chaque chiffre restant__. Donc, dans le cas de la Lituanie avec le code pays 3, leur regex serait __^\+3\d\d\d\d\d\d\d\d\d\d\d\d\d.__
 
-__Example__<br> Let's say you wanted to filter users by phone number for a specific area code, 718. Use the phone number filter, set it to "matches regex", and enter __^1?718\d\d\d\d\d\d\d__
+__Exemple__<br> Supposons que vous vouliez filtrer les utilisateurs par numéro de téléphone pour un indicatif régional spécifique, 718. Utilisez le filtre de numéro de téléphone, définissez-le à "correspond à regex", et entrez __^1?718\d\d\d\d\d\d\d\d__
 
 ![image3]({% image_buster /assets/img/regex/regeximg3.png %})
 {% enddetails %}
