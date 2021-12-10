@@ -1,40 +1,40 @@
 ---
-nav_title: Slideup
-article_title: Slideup In-app Messages
+nav_title: Glissement vers le haut
+article_title: Faire glisser les messages dans l'application
 page_order: 2
 channel:
-  - in-app messages
+  - messages intégrés à l'application
 tool:
-  - Media
-description: "This reference article covers the message and design requirements of sliedup in-app messages."
+  - Médias
+description: "Cet article de référence couvre les exigences de message et de conception des messages glissants dans l'application."
 ---
 
-# Slideup in-app messages
+# Faire glisser les messages dans l'application
 
-Our slideups typically appear at the top or bottom of the app screen (you can set this when you create your message). These are great for alerting your users about new terms of service, cookies, and other snippets of information. These are non-obtrusive and allow your end users to continue to interact with your app while the message displays.
+Nos slideups apparaissent généralement en haut ou en bas de l'écran de l'application (vous pouvez le définir lorsque vous créez votre message). Ils sont parfaits pour avertir vos utilisateurs des nouvelles conditions de service, des cookies et d'autres extraits d'informations. Elles ne sont pas discrètes et permettent à vos utilisateurs finaux de continuer à interagir avec votre application pendant que le message s'affiche.
 
 !\[Slideup Specs\]\[2a\]{: style="max-width: 459px; border: none;"}
 
-## Image and copy behavior
+## Comportement de l'image et de la copie
 
-Slideup messages can contain up to three lines of copy before truncation with ellipses. Images in slideups will never be cropped or clipped - they will always scale down to fit within the 50X50 image container.
+Les messages de glissement peuvent contenir jusqu'à trois lignes de copie avant de tronquer avec des ellipses. Les images dans les diapositives ne seront jamais recadrées ou coupées - elles seront toujours réduites pour tenir dans le conteneur d'image 50X50.
 
-- __All images must be less than 5MB.__
-- We only accept `PNG`, `JPG`, and `GIF` file types.
-- We recommend that your images be 500KB.
+- __Toutes les images doivent être inférieures à 5 Mo.__
+- Nous n'acceptons que les types de fichiers `PNG`, `JPG`, et `GIF`.
+- Nous recommandons que vos images soient de 500 Ko.
 
-{% alert tip %} Create assets with confidence! Our in-app message image templates and safe zone overlays are designed to play nicely with devices of all sizes. [Download Design Templates ZIP]({% image_buster /assets/download_file/Braze-In-App-Message-Design-Templates.zip %}) {% endalert %}
+{% alert tip %} Créez des actifs en toute confiance! Nos modèles d'images de messages intégrés et nos surcouches de zone sécurisées sont conçus pour jouer avec des appareils de toutes tailles. [Télécharger le ZIP des modèles de design]({% image_buster /assets/download_file/Braze-In-App-Message-Design-Templates.zip %}) {% endalert %}
 
-| Layout       | Asset Size                                                            | Notes                                                                                     |
-| ------------ | --------------------------------------------------------------------- | ----------------------------------------------------------------------------------------- |
-| Image + Text | 1:1 aspect ratio<br>Hi-Res 150 x 150px<br> Min. 50 x 50px | Images of various aspect ratios will fit into a square image container, without cropping. |
+| Mise en page  | Taille de l'actif                                                         | Notes                                                                                                |
+| ------------- | ------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- |
+| Image + Texte | Rapport d'aspect 1:1<br>Hi-Res 150 x 150px<br> Min. 50 x 50px | Les images de différents ratios d'aspect s'insèrent dans un conteneur d'image carré, sans recadrage. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
 
-You should __always__ [preview and test your messages]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/testing/) on a variety of devices to ensure that the most important areas of your image and message appear as expected.
-[2a]: {% image_buster /assets/img/slideup-spec.png %} [2b]: {% image_buster /assets/img/slideup-large-viewport.png %}
+Vous devriez __toujours__ [prévisualiser et tester vos messages]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/testing/) sur une variété de périphériques pour vous assurer que les zones les plus importantes de votre image et message apparaissent comme prévu.
+[2a]: {% image_buster /assets/img/slideup-spec.png %} [2b]: {% image_buster /assets/img/slideup-Large viewport.png %}
 
-### Larger screens
+### Ecrans plus grands
 
-On a tablet or desktop browser, a slideup in-app message will sit in the corner of the app screen as shown below (unless designated otherwise when creating the in-app message).
+Sur une tablette ou un navigateur de bureau, un message glissant dans l'application s'assied dans le coin de l'écran de l'application comme indiqué ci-dessous (sauf indication contraire lors de la création du message dans l'application).
 
 !\[Slideup Viewport\]\[2b\]{: style="max-width: 800px; border: none;"}
