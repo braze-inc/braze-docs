@@ -1,97 +1,97 @@
 ---
-nav_title: Message Copy and Segment Calculator
-article_title: SMS Message Copy and Segment Calculator
+nav_title: Copie de message et Calculatrice de segment
+article_title: Copie de message SMS et Calculatrice de segment
 page_order: 5
-description: "This reference article covers what an SMS segment is, how they are counted for billing, as well as things to keep in mind when creating SMS message copy."
-page_type: reference
+description: "Cet article de référence couvre ce qu'est un segment SMS, comment ils sont comptabilisés pour la facturation, ainsi que les choses à garder à l'esprit lors de la création de la copie de message SMS."
+page_type: Référence
 tool:
-  - Testing Tools
+  - Outils de test
 channel:
   - SMS
 ---
 
-# SMS message segments and copy limits
+# Segments de SMS et limites de copie
 
-> SMS messages at Braze are charged per message segment. Understanding what defines a segment and how these messages will be split is key in understanding how you will be billed for messages and will help prevent accidental overages.
+> Les messages SMS à Braze sont facturés par segment de message. Comprendre ce qui définit un segment et comment ces messages seront divisés est essentiel pour comprendre comment vous serez facturé pour les messages et vous aidera à prévenir les dépassements accidentels.
 
-## What is an SMS segment?
+## Qu'est-ce qu'un segment de SMS ?
 
-SMS message segments are the character batches that phone carriers use to measure text messages. Messages are charged per message segment, so clients leveraging SMS greatly benefit from understanding the nuances of how messages will be split.
+Les segments de messages SMS sont les caractères utilisés par les opérateurs téléphoniques pour mesurer les messages textuels. Les messages sont facturés par segment de message, de sorte que les clients qui utilisent les SMS profitent grandement de la compréhension des nuances de la façon dont les messages seront partagés.
 
-As you create an SMS campaign or Canvas using Braze, the messages you build in the wizard are representative of what your users may see when the message gets delivered to their phone, but __is not indicative of how your message will be split into segments and ultimately how you be charged__. Understanding how many segments will be sent and being aware of the potential overages that could occur is your responsibility, but we provide some resources to make this easier for you. Check out our in-house [segment calculator](#segment-calculator) below.
+Lorsque vous créez une campagne SMS ou Canvas en utilisant Braze, les messages que vous construisez dans l'assistant sont représentatifs de ce que vos utilisateurs peuvent voir lorsque le message est transmis à leur téléphone, mais __n'est pas indicatif de la façon dont votre message sera divisé en segments et finalement de la façon dont vous serez facturé__. Il est de votre responsabilité de comprendre combien de segments seront envoyés et d'être au courant des éventuels excédents qui pourraient se produire. mais nous fournissons quelques ressources pour vous faciliter la tâche. Consultez notre [calculatrice de segment](#segment-calculator) en interne ci-dessous.
 
-![SMS Segment Picture]({% image_buster /assets/img/sms_segment_pic.png %}){: style="border:0;"}
+![Image du segment SMS]({% image_buster /assets/img/sms_segment_pic.png %}){: style="border:0;"}
 
-### Segment breakdown
+### Répartition du segment
 
-The character limit for __a stand-alone SMS segment__ is 160 characters ([GSM-7](https://en.wikipedia.org/wiki/GSM_03.38) encoding) or 70 characters ([UCS-2](https://en.wikipedia.org/wiki/Universal_Coded_Character_Set) encoding) based on the encoding type. However, most phones and networks support concatenation, offering longer-form SMS messages of up to 1530 characters (GSM-7) or 670 characters (UCS-2).
+La limite de caractères pour __un segment SMS autonome__ est de 160 caractères ([GSM-7](https://en.wikipedia.org/wiki/GSM_03.38) encodage) ou 70 caractères ([encodage UCS-2](https://en.wikipedia.org/wiki/Universal_Coded_Character_Set) ) basés sur le type d'encodage. Cependant, la plupart des téléphones et des réseaux supportent la concaténation, offrant des messages SMS de forme plus longue allant jusqu'à 1530 caractères (GSM-7) ou 670 caractères (UCS-2).
 
-It's important to note that __as you pass the character limit of your first segment, additional characters will cause your entire message to be split and segmented based on new character limits__:
-- __GSM-7 Encoding__
-    - Messages exceeding the 160 character limit will now be segmented into 153 character segments and sent individually, then rebuilt by the recipient's device. For example, a 161 character message will be sent as two messages, one with 153 characters and the second with 8 characters.
-- __UCS-2 Encoding__
-    - If you include non-GSM characters such as Emojis, Chinese, Korean, or Japanese script in SMS messages, those messages have to be sent via UCS-2 encoding. Messages exceeding the initial segment limit of 70 characters will cause the entire message to be concatenated into 67 character message segments. For example, a 71 character message will be sent as two messages, one with 67 characters and the second with 4 characters.
+Il est important de noter que __lorsque vous passez la limite de caractères de votre premier segment, les caractères additionnels provoqueront la division et la segmentation de votre message entier en fonction des nouvelles limites de caractères__:
+- __Encodage GSM-7__
+    - Les messages dépassant la limite de 160 caractères seront maintenant segmentés en segments de 153 caractères et envoyés individuellement, puis reconstruits par l'appareil du destinataire. Par exemple, un message de 161 caractères sera envoyé sous la forme de deux messages, l'un avec 153 caractères et l'autre avec 8 caractères.
+- __Encodage UCS-2__
+    - Si vous incluez dans les SMS des caractères non-GSM tels que les Emojis, les Chinois, les Coréens ou les Japonais, ces messages doivent être envoyés via l'encodage UCS-2. Les messages dépassant la limite du segment initial de 70 caractères provoqueront la concaténation du message entier en segments de messages de 67 caractères. Par exemple, un message de 71 caractères sera envoyé sous la forme de deux messages, l'un avec 67 caractères et l'autre avec 4 caractères.
 
-Regardless of the encoding type, each SMS message sent out by Braze has a limit of up to 10 segments and is compatible with [Liquid templating]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/using_liquid/), [Connected Content]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/connected_content/), Emojis, and links.
+Indépendamment du type d'encodage, chaque SMS envoyé par Braze a une limite de 10 segments et est compatible avec le [modèle Liquid]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/using_liquid/), [Contenu connecté]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/connected_content/), Emojis, et liens.
 
 {% tabs %}
 {% tab GSM-7 Encoding %}
-| Number of Characters   | How many segments? |
-| ---------------------- | ------------------ |
-| 0 - 160 characters     | 1 segment          |
-| 161 - 306 characters   | 2 segments         |
-| 307 - 459 characters   | 3 segments         |
-| 460 - 612 characters   | 4 segments         |
-| 613 - 765 characters   | 5 segments         |
-| 766 - 918 characters   | 6 segments         |
-| 919 - 1071 characters  | 7 segments         |
-| 1072 - 1224 characters | 8 segments         |
-| 1225 - 1377 characters | 9 segments         |
-| 1378 - 1530 characters | 10 segments        |
+| Nombre de caractères   | Combien de segments ? |
+| ---------------------- | --------------------- |
+| 0 à 160 caractères     | 1 segment             |
+| 161 - 306 caractères   | 2 segments            |
+| 307 - 459 caractères   | 3 segments            |
+| 460 - 612 caractères   | 4 segments            |
+| 613 - 765 caractères   | 5 segments            |
+| 766 - 918 caractères   | 6 segments            |
+| 919 - 1071 caractères  | 7 segments            |
+| 1072 - 1224 caractères | 8 segments            |
+| 1225 - 1377 caractères | 9 segments            |
+| 1378 - 1530 caractères | 10 segments           |
 {: .reset-td-br-1 .reset-td-br-2}
 {% endtab %}
 {% tab UCS-2 Encoding %}
-| Number of Characters | How many segments? |
-| -------------------- | ------------------ |
-| 0 - 70 characters    | 1 segment          |
-| 71 - 134 characters  | 2 segments         |
-| 135 - 201 characters | 3 segments         |
-| 202 - 268 characters | 4 segments         |
-| 269 - 335 characters | 5 segments         |
-| 336 - 402 characters | 6 segments         |
-| 403 - 469 characters | 7 segments         |
-| 470 - 536 characters | 8 segments         |
-| 537 - 603 characters | 9 segments         |
-| 604 - 670 characters | 10 segments        |
+| Nombre de caractères | Combien de segments ? |
+| -------------------- | --------------------- |
+| 0 à 70 caractères    | 1 segment             |
+| 71 - 134 caractères  | 2 segments            |
+| 135 - 201 caractères | 3 segments            |
+| 202 - 268 caractères | 4 segments            |
+| 269 - 335 caractères | 5 segments            |
+| 336 - 402 caractères | 6 segments            |
+| 403 - 469 caractères | 7 segments            |
+| 470 - 536 caractères | 8 segments            |
+| 537 - 603 caractères | 9 segments            |
+| 604 - 670 caractères | 10 segments           |
 {: .reset-td-br-1 .reset-td-br-2}
 {% endtab %}
 {% endtabs %}
 
-## Things to keep in mind as you create your copy
+## Les choses à garder à l'esprit lorsque vous créez votre copie
 
-- __Character Limit per Segment__
-    - [GSM-7](https://en.wikipedia.org/wiki/GSM_03.38) has a 160 character limit for a single SMS segment. For messages with more than 160 characters, all messages will be segmented with a 153 character limit.
-    - [UCS-2](https://en.wikipedia.org/wiki/Universal_Coded_Character_Set) has a 70 character limit per message segment. For messages with more than 70 characters, all messages will be segmented with a 67 character limit.<br><br>
-- __Segment Limit per Message__
-    - No more than __10 segments__ of messages may be sent in a single Braze SMS message.
-    - Those 10 segments will be limited to 1530 characters (GSM-7 encoding) or 670 characters (UCS-2 encoding).<br><br>
-- __Compatible with Liquid Templating, Connected Content, Emojis, and Links__
-    - Liquid templating and Connected Content may put your message at risk of going over the character limit for your encoding type. You may be able to use the [truncate words filter](https://help.shopify.com/en/themes/liquid/filters/string-filters#truncatewords) to limit the number of words that your Liquid could bring to the message.
-    - Emojis have no standard character count across all emojis, so make sure to test that your messages are segmenting and displaying correctly.
-    - Links may make use of many characters, resulting in more message segments than intended. Though the use of link shorteners is possible, they are best used with short codes. Please visit our [SMS FAQs]({{site.baseurl}}/user_guide/message_building_by_channel/sms/faqs/) for more information.<br><br>
-- __Testing__
-    - Always test your SMS messages before launch, especially when using Liquid and Connected Content as going over message or copy limits may result in additional charges. Please note that test messages will count toward your message limits.
+- __Limite de caractères par segment__
+    - [GSM-7](https://en.wikipedia.org/wiki/GSM_03.38) a une limite de 160 caractères pour un seul segment SMS. Pour les messages de plus de 160 caractères, tous les messages seront segmentés avec une limite de 153 caractères.
+    - [UCS-2](https://en.wikipedia.org/wiki/Universal_Coded_Character_Set) a une borne de 70 caractères par segment de message. Pour les messages de plus de 70 caractères, tous les messages seront segmentés avec une limite de 67 caractères.<br><br>
+- __Limite de segment par message__
+    - Pas plus de __10 segments__ de messages ne peuvent être envoyés en un seul message SMS Braze.
+    - Ces 10 segments seront limités à 1530 caractères (encodage GSM-7) ou 670 caractères (encodage UCS-2).<br><br>
+- __Compatible avec les modèles liquides, Contenus connectés, Emojis, et Liens__
+    - Les modèles de liquides et le contenu connecté peuvent mettre votre message à risque de dépasser la limite de caractères de votre type d'encodage. Vous pouvez utiliser le filtre [tronquer les mots](https://help.shopify.com/en/themes/liquid/filters/string-filters#truncatewords) pour limiter le nombre de mots que votre Liquid pourrait apporter au message.
+    - Les émojis n'ont pas de nombre de caractères standard à travers tous les émojis, donc assurez-vous de vérifier que vos messages sont segmentés et affichés correctement.
+    - Les liens peuvent utiliser de nombreux caractères, ce qui peut donner lieu à plus de segments de message que prévu. Bien que l'utilisation de raccourcisseurs de liens soit possible, ils sont mieux utilisés avec des codes courts. Veuillez visiter notre [FAQ SMS]({{site.baseurl}}/user_guide/message_building_by_channel/sms/faqs/) pour plus d'informations.<br><br>
+- __Tests en cours__
+    - Toujours tester vos messages SMS avant le lancement, surtout lorsque vous utilisez Liquid et le Contenu connecté comme dépassement de message ou de copie des limites peuvent entraîner des frais supplémentaires. Veuillez noter que les messages de test seront pris en compte dans les limites de vos messages.
 
-## SMS segment calculator {#segment-calculator}
+## Calculatrice de segment SMS {#segment-calculator}
 ---
 
 {% alert tip %}
 
-__Test Your SMS Copy Length__
+__Tester la longueur de votre copie SMS__
 
 <br>
 
-If you'd like to see how many segments your message will dispatch, enter your copy below. Please note that this will not process or predict the output of Liquid or Connected Content.
+Si vous souhaitez voir combien de segments votre message va envoyer, entrez votre copie ci-dessous. Veuillez noter que cela ne traitera ni ne préviendra la sortie de Liquid ou du Contenu Connecté.
 <style>
   .segment_data_hide {
     display: none;
@@ -123,15 +123,15 @@ If you'd like to see how many segments your message will dispatch, enter your co
   }
 </style>
 <form id="sms_split">
-  <textarea id="sms_message_split" placeholder="Type your SMS copy here..." style="width:100%;border: 1px solid #33333333;" rows="5"></textarea><br />
-  <input type="radio" name="sms_type" value="auto" checked="checked" id="sms_type_auto" /> <label for="sms_type_auto" style="padding-left: 5px;"> Auto Detect</label><label id="auto_encoding" style="padding-left: 5px;"></label><br />
-  <input type="radio" name="sms_type" value="gsm" id="sms_type_gsm" /> <label for="sms_type_gsm" style="padding-left: 5px;">GSM-7 Encoding</label><br />
-  <input type="radio" name="sms_type" value="ucs2" id="sms_type_ucs2" /> <label for="sms_type_ucs2" style="padding-left: 5px;">USC-2 Encoding</label><br />
+  <textarea id="sms_message_split" placeholder="Tapez votre copie SMS ici..." style="width:100%;border: 1px solid #33333333;" rows="5"></textarea><br />
+  <input type="radio" name="sms_type" value="Automatique" checked="checked" id="sms_type_auto" /> <label for="sms_type_auto" style="padding-left: 5px;"> Détection automatique</label><label id="auto_encoding" style="padding-left: 5px;"></label><br />
+  <input type="radio" name="sms_type" value="gsm" id="sms_type_gsm" /> <label for="sms_type_gsm" style="padding-left: 5px;">Encodage GSM-7</label><br />
+  <input type="radio" name="sms_type" value="ucs2" id="sms_type_ucs2" /> <label for="sms_type_ucs2" style="padding-left: 5px;">Encodage USC-2</label><br />
   <br />
-  Message Length: <span id="sms_length" style="padding-left: 5px;">0</span> characters.<br />
-  SMS Segments Count: <span id="sms_segments" style="padding-left: 5px;">0</span> segments. <br />
-  Message Output: <span id="sms_output" style="padding-left: 5px;"></span><br />
-  <input type="checkbox" id="segment_section" name="segment_section"> <label style="padding-left: 5px; margin-bottom: 0px;">Display Segments: </label>
+  Longueur du message : <span id="sms_length" style="padding-left: 5px;">0</span> caractères.<br />
+  nombre de segments SMS : <span id="sms_segments" style="padding-left: 5px;">0</span> segments. <br />
+  Sortie de message : <span id="sms_output" style="padding-left: 5px;"></span><br />
+  <input type="checkbox" id="segment_section" name="segment_section"> <label style="padding-left: 5px; margin-bottom: 0px;">Affichage Segments : </label>
   <span class="segment_data_hide" id="sms_segments_data"></span>
 </form>
 <script type="text/javascript">
