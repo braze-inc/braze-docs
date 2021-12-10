@@ -1,104 +1,104 @@
 ---
-nav_title: Email Analytics Glossary
-article_title: Email Analytics Glossary
+nav_title: Glossaire de l'email Analytics
+article_title: Glossaire de l'email Analytics
 page_order: 20
 layout: glossary_page
-glossary_top_header: "Email Analytics Glossary"
-glossary_top_text: "These are terms you'll find in the analytics section of your email campaign or Canvas, post-launch. Search for the metrics you need below. <br>  <br> This glossary does not necessarily include metrics you might see in Currents or in other downloaded reports outside of your Braze account."
-description: "This glossary includes the terms you will find in the analytics section of your email campaign or Canvas, post-launch. This glossary does not include Currents metrics."
+glossary_top_header: "Glossaire de l'email Analytics"
+glossary_top_text: "Ce sont des termes que vous trouverez dans la section analytique de votre campagne de courriel ou de Canvas, après le lancement. Recherchez les mesures dont vous avez besoin ci-dessous. <br>  <br> Ce glossaire n'inclut pas nécessairement des métriques que vous pourriez voir dans des courants ou dans d'autres rapports téléchargés en dehors de votre compte Braze."
+description: "Ce glossaire comprend les termes que vous trouverez dans la section analytique de votre campagne de courriel ou de Canvas, après le lancement. Ce glossaire n'inclut pas les métriques de courants."
 channel:
-  - email
+  - Email
 glossaries:
   - 
     name: Variation
-    description: Variation of a campaign, differing as defined by the creator.
-    calculation: Count
+    description: Variation d'une campagne, différente de celle définie par le créateur.
+    calculation: Compter
   - 
     name: Emailable
-    description: Users who have an email address on record and have explicitly opted in or subscribed.
-    calculation: Count
+    description: Les utilisateurs qui ont une adresse e-mail enregistrée et qui ont explicitement choisi ou abonné.
+    calculation: Compter
   - 
-    name: "Audience %"
-    description: Percentage of users who received a particular variant.
-    calculation: Number of Recipients in Variant / Unique Recipients
+    name: "% d'audience"
+    description: Pourcentage d'utilisateurs ayant reçu une variante particulière.
+    calculation: Nombre de destinataires dans la variante / Destinataires uniques
   - 
-    name: Unique Recipients
-    description: Unique Daily Recipients. The number of users who received a particular message in a day. This number is received from Braze.
-    calculation: Count
+    name: Destinataires uniques
+    description: Destinataires quotidiens uniques. Le nombre d'utilisateurs qui ont reçu un message particulier dans une journée. Ce numéro est reçu du Brésil.
+    calculation: Compter
   - 
-    name: Sends or Messages Sent
-    description: The total number of messages sent in an email campaign. This number is received from Braze.
-    calculation: Count
+    name: Envois ou messages envoyés
+    description: Le nombre total de messages envoyés dans une campagne de courriel. Ce numéro est reçu du Brésil.
+    calculation: Compter
   - 
-    name: "Deliveries"
-    description: The total number of messages (Sends) successfully sent to and received by emailable parties.
-    calculation: Sends - Bounces
+    name: "Livraisons"
+    description: Le nombre total de messages envoyés avec succès et reçus par les parties par courriel.
+    calculation: Envois - Bounces
   - 
-    name: "Deliveries %"
-    description: The total number of messages (Sends) successfully sent to and received by emailable parties.
-    calculation: (Sends - Bounces) / (Sends)
+    name: "Livraisons %"
+    description: Le nombre total de messages envoyés avec succès et reçus par les parties par courriel.
+    calculation: (Envois - Bounces) / (Sends)
   - 
     name: Bounces
-    description: 'The total number of messages that were unsuccessfully sent or designated as ''returned'' or ''not received'' from send services used or not received by the intended emailable users. This could occur because there is not a valid push token, the email addresses were incorrect or deactivated, or the user unsubscribed after the campaign was launched. <br><br> <b>Hard Bounces</b>&#58; A hard bounce is an email message that has been returned to the sender because the recipient''s address is invalid. A hard bounce might occur because the domain name doesn''t exist or because the recipient is unknown. If an email has received a hard bounce, we will stop any future requests to this email address. <br><br><b>Soft Bounces</b>&#58; A soft bounce is an email message that gets as far as the recipient''s mail server but is bounced back undelivered before it gets to the recipient. A soft bounce might occur because the recipient''s inbox is full, the server was down, or the message was too large for the receipient''s inbox. If an email has received a soft bounce, we will usually retry within a 72 hour period, but the number of retry attempts varies from receiver to receiver. <br><br> You can also track hard and soft bounces in the <a href=''/docs/user_guide/administrative/app_settings/developer_console/message_activity_log_tab/#message-activity-log-tab''>Message Activity Log</a>. <br><br><i> An email bounce for customers using Sendgrid consists of hard bounces, spam, and emails sent to invalid addresses. </i>'
-    calculation: Count
+    description: 'Le nombre total de messages qui ont été envoyés sans succès ou désignés comme « retournés » ou « non reçus » des services d''envoi utilisés ou non reçus par les utilisateurs désirés. Cela peut se produire parce qu''il n''y a pas de jeton de push valide, les adresses e-mail sont incorrectes ou désactivées, ou l''utilisateur s''est désabonné après le lancement de la campagne. <br><br> <b>Hard Bounces</b>&#58 ; Un rebond dur est un message e-mail qui a été retourné à l''expéditeur parce que l''adresse du destinataire est invalide. Un rebond dur peut se produire parce que le nom de domaine n''existe pas ou parce que le destinataire est inconnu. Si un email a reçu un rebond dur, nous arrêterons toute demande future à cette adresse e-mail. <br><br><b>Bounces Soft</b>&#58 ; Un "soft bounce" est un message d''e-mail qui va aussi loin que le serveur de messagerie du destinataire mais est rebondi non distribué avant qu''il ne soit envoyé au destinataire. Un rebond souple peut se produire parce que la boîte de réception du destinataire est pleine, le serveur était en panne, ou le message était trop grand pour la boîte de réception du destinataire. Si un e-mail a reçu un rebond en douceur, nous allons généralement réessayer dans un délai de 72 heures. mais le nombre de tentatives de réessai varie d''un récepteur à l''autre. <br><br> Vous pouvez également suivre les bounces durs et durs dans le <a href=''/docs/user_guide/administrative/app_settings/developer_console/message_activity_log_tab/#message-activity-log-tab''>Journal d''activité des messages</a>. <br><br><i> Un e-mail bounce pour les clients utilisant Sendgrid consiste en des bounces durs, du spam et des e-mails envoyés à des adresses invalides. </i>'
+    calculation: Compter
   - 
-    name: "Bounces % or Bounce Rate"
-    description: The percentage of messages that were unsuccessfully sent or designated as 'returned' or 'not received' from send services used or not received by the intended emailable users. This could occur because there is not a valid push token, the email addresses were incorrect or deactivated, or the user unsubscribed after the campaign was launched. <br> <i> An email bounce for customers using Sendgrid consists of hard bounces, spam (`spam_report_drops`), and emails sent to invalid addresses (`invalid_emails`). </i>
-    calculation: Bounces / Sends
+    name: "Bounces % ou Bounce Rate"
+    description: Le pourcentage de messages qui ont été envoyés ou désignés comme « retournés » ou « non reçus » de la part des services d'envoi utilisés ou non reçus par les utilisateurs désirés. Cela peut se produire parce qu'il n'y a pas de jeton de push valide, les adresses e-mail sont incorrectes ou désactivées, ou l'utilisateur s'est désabonné après le lancement de la campagne. <br> <i> Un email bounce pour les clients utilisant Sendgrid consiste en des bounces durs, du spam (`spam_report_drops`) et des emails envoyés à des adresses invalides (`invalid_emails`). </i>
+    calculation: Bounces / Envoie
   - 
     name: Spam
-    description: The total number of emails delivered that were marked as "spam." Braze automatically unsubscribes users that marked an email as spam, and those users won’t be targeted by future emails.
-    calculation: (Marked as Spam) / (Sends)
+    description: Le nombre total d'e-mails envoyés qui ont été marqués comme "spam". Braze désabonne automatiquement les utilisateurs qui ont marqué un e-mail comme spam, et ces utilisateurs ne seront pas ciblés par de futurs e-mails.
+    calculation: (Marqué comme Spam) / (Sends)
   - 
-    name: "Spam % or Spam Rate"
-    description: The percentage of emails delivered that were marked or otherwise designated as "spam." Braze automatically unsubscribes users that marked an email as spam, and those users won’t be targeted by future emails.
-    calculation: (Marked as Spam) / (Sends)
+    name: "% Spam ou Spam Rate"
+    description: Le pourcentage d'e-mails envoyés qui ont été marqués ou autrement désignés comme « spam ». Braze désabonne automatiquement les utilisateurs qui ont marqué un e-mail comme spam, et ces utilisateurs ne seront pas ciblés par de futurs e-mails.
+    calculation: (Marqué comme Spam) / (Sends)
   - 
-    name: Unique Opens
-    description: The total number of delivered emails that have been opened by a single user at least once. This is tracked over a 7 day period for Email.
-    calculation: (Unique Opens) / (Deliveries)
+    name: Ouvertures uniques
+    description: Le nombre total d'e-mails livrés qui ont été ouverts par un seul utilisateur au moins une fois. Ce suivi est effectué sur une période de 7 jours pour l'Email.
+    calculation: (Ouverts uniques) / (Livraisons)
   - 
-    name: "Unique Opens % or Unique Open Rate"
-    description: The percentage of delivered emails that have been opened by a single user at least once. This is tracked over a 7 day period for Email.
-    calculation: (Unique Opens) / (Deliveries)
+    name: "Ouverture unique % ou Taux d'ouverture unique"
+    description: Le pourcentage d'e-mails livrés qui ont été ouverts par un seul utilisateur au moins une fois. Ce suivi est effectué sur une période de 7 jours pour l'Email.
+    calculation: (Ouverts uniques) / (Livraisons)
   - 
-    name: Unique Clicks
-    description: Distinct number of recipients who have clicked within a message at least once. This is tracked over a 7 day period for Email.
-    calculation: Count
+    name: Clics uniques
+    description: Nombre de destinataires différents qui ont cliqué dans un message au moins une fois. Ce suivi est effectué sur une période de 7 jours pour l'Email.
+    calculation: Compter
   - 
-    name: "Unique Clicks % or Click Rate"
-    description: Distinct number of recipients who have clicked within a message at least once. This is tracked over a 7 day period for Email.
-    calculation: Unique Clicks / Deliveries
+    name: "Clics uniques % ou Taux de clics"
+    description: Nombre de destinataires différents qui ont cliqué dans un message au moins une fois. Ce suivi est effectué sur une période de 7 jours pour l'Email.
+    calculation: Clics uniques / Livraisons
   - 
-    name: Unsubscribers or Unsub
-    description: Number of messages resulting in an unsubscription. Unsubscriptions occur when a user clicks on the Braze unsubscribe link.
-    calculation: Count
+    name: Désabonnés ou désabonnés
+    description: Nombre de messages aboutissant à une désinscription. Les désinscriptions se produisent lorsqu'un utilisateur clique sur le lien de désinscription de Braze.
+    calculation: Compter
   - 
-    name: "Unsubscribers % or Unsub Rate"
-    description: Percentage of messages delivered which resulted in an unsubscription. Unsubscriptions occur when a user clicks on the Braze unsubscribe link.
-    calculation: Unsubscribes / Deliveries
+    name: "Unsubscribers % ou Unsub Rate"
+    description: Pourcentage de messages envoyés, ce qui a entraîné une désinscription. Les désinscriptions se produisent lorsqu'un utilisateur clique sur le lien de désinscription de Braze.
+    calculation: Désabonnements/Livraisons
   - 
-    name: Revenue
-    description: 'The total revenue in dollars from campaign recipients within the set <a href=''/docs/user_guide/engagement_tools/campaigns/testing_and_more/conversion_events/#primary-conversion-event''>primary conversion window</a>.'
-    calculation: Count
+    name: Revenus
+    description: 'Le revenu total en dollars des bénéficiaires de la campagne dans la fenêtre de conversion <a href=''/docs/user_guide/engagement_tools/campaigns/testing_and_more/conversion_events/#primary-conversion-event''>principale</a> définie.'
+    calculation: Compter
   - 
-    name: Primary Conversions (A) or Primary Conversion Event
-    description: The number of times a defined event occurred after interacting with or viewing a received message from a Braze campaign. This defined event is determined by the marketer when building the campaign.
-    calculation: Count
+    name: Conversions Principales (A) ou Événement de Conversion Primaire
+    description: Le nombre de fois où un événement défini s'est produit après avoir interagi ou vu un message reçu d'une campagne de Braze. Cet événement défini est déterminé par le marketeur lors de la construction de la campagne.
+    calculation: Compter
   - 
-    name: Primary Conversions (A) or Primary Conversion Event
-    description: The percentage of times a defined event occurred after interacting with or viewing a received message from a Braze campaign. This defined event is determined by the marketer when building the campaign.
-    calculation: Primary Conversions / Unique Recipients
+    name: Conversions Principales (A) ou Événement de Conversion Primaire
+    description: Le pourcentage de fois qu'un événement défini s'est produit après avoir interagi ou vu un message reçu d'une campagne de Braze. Cet événement défini est déterminé par le marketeur lors de la construction de la campagne.
+    calculation: Conversions primaires / Destinataires uniques
   - 
-    name: Confidence
-    description: The percentage of confidence that a certain variant of a message is outperforming the control group.
+    name: Confiance
+    description: Le pourcentage de confiance qu'une certaine variante d'un message surpasse le groupe de contrôle.
   - 
-    name: Machine Opens
-    description: Includes emails that are opened without user engagement by Apple devices with <a href='/docs/user_guide/message_building_by_channel/email/mpp/'>Mail Privacy Protection</a> enabled. <br> This metric is tracked starting November 11, 2021 for Sendgrid and December 2, 2021 for Sparkpost.
-    calculation: Count
+    name: Ouverture de la machine
+    description: Inclut les e-mails qui sont ouverts sans engagement utilisateur par les appareils Apple avec <a href='/docs/user_guide/message_building_by_channel/email/mpp/'>Mail Privacy Protection</a> activé. <br> Cette métrique est tracée à partir du 11 novembre 2021 pour Sendgrid et le 2 décembre 2021 pour Sparkpost.
+    calculation: Compter
   - 
-    name: Other Opens
-    description: Includes emails that haven't been identified as "Machine Opens" such as when a user opens an email.
-    calculation: Count
+    name: Autres Ouvertures
+    description: Inclut les courriels qui n'ont pas été identifiés comme "Machine Opens", comme quand un utilisateur ouvre un courriel.
+    calculation: Compter
 ---
 
