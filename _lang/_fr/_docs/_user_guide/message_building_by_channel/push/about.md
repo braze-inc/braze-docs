@@ -1,135 +1,135 @@
 ---
-nav_title: "About Push"
-article_title: About Push
+nav_title: "À propos de Push"
+article_title: À propos de Push
 page_order: 0
-page_type: reference
-description: "This reference article gives a brief overview of push, provides resources to get started with push messages, and notes some regulations."
+page_type: Référence
+description: "Cet article de référence donne un bref aperçu de push, fournit des ressources pour commencer avec des messages push, et note quelques règlements."
 channel:
-  - Push
+  - Pousser
 ---
 
-# What are push messages?
+# Que sont les messages push ?
 
-> This reference article gives a brief overview of push, provides resources to get started with push messages, and notes some regulations.
+> Cet article de référence donne un bref aperçu de push, fournit des ressources pour commencer avec des messages push, et note quelques règlements.
 
-Push notifications are wonderful for time-sensitive calls to action, as well as re-engaging users who haven't come into the app in a while. Successful push campaigns drive the user directly to content and demonstrate the value of your application.
+Les notifications push sont merveilleuses pour les appels temporaires à l'action, ainsi que pour les utilisateurs qui ne sont pas entrés dans l'application depuis un certain temps. Des campagnes de push réussies poussent l'utilisateur directement vers le contenu et démontrent la valeur de votre application.
 
-Keep in mind that users need to opt-in to push to receive your messages, which means it's a good idea to use in-app messages to explain to your customers why you want to send them push notifications, and how enabling push will benefit them. This process is called [push priming]({{site.baseurl}}/user_guide/message_building_by_channel/push/ios/create_push_primer/).
+Gardez à l'esprit que les utilisateurs doivent opter pour pousser pour recevoir vos messages, ce qui signifie que c'est une bonne idée d'utiliser des messages dans l'application pour expliquer à vos clients pourquoi vous voulez leur envoyer des notifications push, et la manière dont la promotion de la poussée leur sera bénéfique. Ce processus s'appelle [amorçage push]({{site.baseurl}}/user_guide/message_building_by_channel/push/ios/create_push_primer/).
 
-!\[Push Message Example\]\[1\]{: height="400px"}  !\[Push Message Example\]\[2\]{: height="400px"}
+!\[Exemple de Message Push\]\[1\]{: height="400px"} !\[Exemple de Message Push\]\[2\]{: height="400px"}
 
-_To see more examples of push notifications, check out our [Case Studies][8]._
+_Pour voir plus d'exemples de notifications push, consultez notre [Études de cas][8]._
 
-## Potential use cases
+## Cas d'utilisation potentiels
 
-Push notifications are a great tool for attracting new users and making re-engagement campaigns. Here are some examples of common push message use cases.
+Les notifications push sont un excellent outil pour attirer de nouveaux utilisateurs et faire des campagnes de réengagement. Voici quelques exemples de cas courants d'utilisation de messages push.
 
-| Use Case              | Explanation                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     |
-| --------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Initial Onboarding    | Until users take the initial steps towards using your app (such as registering an account), their value is severely limited. Use push notifications to urge users to complete these steps so they can begin using your app in full.                                                                                                                                                                                                                                                                                                                             |
-| First Purchases       | After users are comfortable using your app, you can use push notifications to help convert them into in-app purchasers.                                                                                                                                                                                                                                                                                                                                                                                                                                         |
-| New Features          | Push notifications can be effective in notifying disengaged users about new features that might attract them back to your app.                                                                                                                                                                                                                                                                                                                                                                                                                                  |
-| Time Sensitive Offers | If you have a clock ticking on an offer, sometimes push is a great way to let your users know about it before it expires. These messages generally carry a high sense of urgency and are optimal for reminding recently-lapsed users about your app.<br><br> For example, suppose your app is a game and you offer your users an in-game currency bonus if they maintain a streak of playing the game daily. Alerting a user that that streak is in danger of being broken could be a reasonable push if they've exceeded a certain number of days. |
+| Cas d'utilisation         | Explication                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   |
+| ------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Intégration initiale      | Jusqu'à ce que les utilisateurs prennent les mesures initiales pour utiliser votre application (comme l'enregistrement d'un compte), leur valeur est sévèrement limitée. Utilisez les notifications push pour inviter les utilisateurs à compléter ces étapes afin qu'ils puissent commencer à utiliser votre application dans son intégralité.                                                                                                                                                                                                                                                                                                               |
+| Premiers achats           | Une fois que les utilisateurs sont à l'aise avec votre application, vous pouvez utiliser les notifications push pour les aider à les convertir en acheteurs intégrés à l'application.                                                                                                                                                                                                                                                                                                                                                                                                                                                                         |
+| Nouvelles fonctionnalités | Les notifications push peuvent être efficaces pour avertir les utilisateurs désengagés des nouvelles fonctionnalités qui pourraient les attirer vers votre application.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       |
+| Offres sensibles au temps | Si vous avez une horloge à cocher sur une offre, pousser est parfois un excellent moyen de le faire savoir à vos utilisateurs avant qu'il n'expire. Ces messages ont généralement un sens aigu de l'urgence et sont optimaux pour rappeler aux utilisateurs récemment devenus obsolètes à propos de votre application.<br><br> Par exemple, supposons que votre application est un jeu et que vous offrez à vos utilisateurs un bonus en devise s'ils maintiennent une série de jeux tous les jours. Avertir un utilisateur que cette série risque d'être cassée pourrait être une poussée raisonnable s'il a dépassé un certain nombre de jours. |
 {: .reset-td-br-1 .reset-td-br-2}
 
-For more information on re-engaging lapsed users, see our [Quick Wins][23] page on the topic.
+Pour plus d'informations sur les utilisateurs réengageants, consultez notre page [Victoires Rapides][23] sur le sujet.
 
-## Prerequisites to use push
+## Pré-requis pour utiliser push
 
-Before you can create and send any push messages using Braze, you need to work with your developers to integrate push into your website or app. For detailed steps, refer to our integration guides for each platform:
+Avant de pouvoir créer et envoyer des messages push en utilisant Braze, vous devez travailler avec vos développeurs pour intégrer push dans votre site web ou application. Pour des étapes détaillées, reportez-vous à nos guides d'intégration pour chaque plateforme :
 
 - [iOS]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/push_notifications/integration/)
 - [Android]({{site.baseurl}}/developer_guide/platform_integration_guides/android/push_notifications/android/integration/standard_integration/)
 - [Web]({{site.baseurl}}/developer_guide/platform_integration_guides/web/push_notifications/integration/)
 
-## Push message regulations
+## Réglages des messages push
 
-Because push messages are an intrusive type of messaging that goes directly to your customer's phone or browser, there are guidelines for sending push messages via apps and sites.
+Parce que les messages push sont un type intrusif de messagerie qui va directement au téléphone ou au navigateur de votre client, il y a des directives pour envoyer des messages push via des applications et des sites.
 
-### Mobile push regulations for apps
+### Réglages de push pour les applications mobiles
 
 {% alert important %}
-Your push messages must fall within the guidelines of the Apple App Store and Google's Play Store policies, specifically regarding using push messages as advertisements, spam, promotions, and more.
+Vos messages push doivent être conformes aux directives de l'Apple App Store et des politiques du Play Store de Google. en particulier en ce qui concerne l'utilisation des messages push comme publicités, spam, promotions, et plus encore.
 {% endalert %}
 
-| Apple App Store Policies                                                                                                                                                                                                                                                                                                                                                   |
-| -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| [4.5.4][7] Push Notifications must not be required for the app to function, and should not be used for advertising, promotions, or direct marketing purposes or to send sensitive personal or confidential information.                                                                                                                                                    |
-| [3.2.2][9] (i) Creating an interface for displaying third-party apps, extensions, or plug-ins similar to the App Store or as a general-interest collection. (ii) Monetizing built-in capabilities provided by the hardware or operating system, such as Push Notifications, the camera, or the gyroscope; or Apple services, such as Apple Music access or iCloud storage. |
+| Politiques de l'App Store d'Apple                                                                                                                                                                                                                                                                                                                                                                              |
+| -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| [4.5.][7] Les notifications Push ne doivent pas être requises pour que l'application fonctionne, et ne doivent pas être utilisées pour la publicité, des promotions, ou des fins de marketing direct ou pour envoyer des informations personnelles ou confidentielles sensibles.                                                                                                                               |
+| [3.2.2][9] (i) Créer une interface pour afficher des applications, extensions ou plugins tiers similaires à l'App Store ou en tant que collection d'intérêt général. (ii) Monétiser les capacités intégrées fournies par le matériel ou le système d'exploitation, telles que les notifications push, la caméra ou le gyroscope ; ou des services Apple, tels que l'accès à Apple Music ou le stockage iCloud. |
 {: .reset-td-br-1 .reset-td-br-2}
 
-| Google Play Store Policy                                                                                                                                                                                                                                                                                                                                                   |
-| -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| [Unauthorized Use or Imitation of System Functionality][10] We don't allow apps or ads that mimic or interfere with system functionality, such as notifications or warnings. System-level notifications may only be used for an app’s integral features, such as an airline app that notifies users of special deals, or a game that notifies users of in-game promotions. |
+| Règles du Google Play Store                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               |
+| ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| [Utilisation ou Imitation non autorisée de la fonctionnalité système][10] Nous n'autorisons pas les applications ou les publicités qui imitent ou interfèrent avec la fonctionnalité du système, comme des notifications ou des avertissements. Les notifications au niveau du système ne peuvent être utilisées que pour les fonctionnalités intégrales d'une application, comme une application aérienne qui avertit les utilisateurs d'offres spéciales, ou un jeu qui informe les utilisateurs des promotions en jeu. |
 {: .reset-td-br-1}
 
-## Image and text specifications
+## Caractéristiques de l'image et du texte
 
-For best results, refer to the following image size and message length guidelines when crafting your push messages. There may be some variance depending on the presence of an image, the notification state (iOS) and display setting of the user’s device, as well as the size of the device. When in doubt, keep your copy short and sweet.
+Pour de meilleurs résultats, reportez-vous aux directives de taille d'image et de longueur de message suivantes lors de la création de vos messages push. Il peut y avoir une certaine variance selon la présence d'une image, l'état de la notification (iOS) et le réglage de l'affichage du périphérique de l'utilisateur, ainsi que la taille du périphérique. En cas de doute, gardez votre copie courte et sucrée.
 
-### Native mobile push notifications
+### Notifications push mobiles natives
 
 {% tabs local %}
 {% tab Images %}
 
-| **Image Type**                  | **Recommended Image Size** | **Max Image Size** | **File Types** |
-| ------------------------------- | -------------------------- | ------------------ | -------------- |
-| (iOS) 2:1 *Recommended*         | 500KB                      | 5MB                | PNG, JPG, GIF  |
-| (Android) Push Icon             | 500KB                      | 5MB                | PNG, JPG       |
-| (Android) Expanded Notification | 500KB                      | 5MB                | PNG, JPG       |
+| **Type d'image**               | **Taille de l'image recommandée** | **Taille maximale de l'image** | **Types de fichiers** |
+| ------------------------------ | --------------------------------- | ------------------------------ | --------------------- |
+| (iOS) 2:1 *Recommandé*         | 500Ko                             | 5 Mo                           | PNG, JPG, GIF         |
+| (Android) Icône Push           | 500Ko                             | 5 Mo                           | PNG, JPG              |
+| (Android) Notification étendue | 500Ko                             | 5 Mo                           | PNG, JPG              |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
 
 {% endtab %}
 {% tab Text %}
 
-|                               | Message Type   | Recommended Message Length (Text only) | Recommended Message Length (Rich) |
-| ----------------------------- | -------------- | -------------------------------------- | --------------------------------- |
-| (iOS) Lock Screen             | 160 characters | 130 characters                         |                                   |
-| (iOS) Notification Center     | 160 characters | 130 characters                         |                                   |
-| (iOS) Banner Alert            | 80 characters  | 65 characters                          |                                   |
-| (Android) Lock Screen         | 49 characters  | N/A                                    |                                   |
-| (Android) Notification Drawer | 597 characters | N/A                                    |                                   |
+|                                  | Type de message | Longueur du message recommandé (texte seulement) | Longueur du message recommandé (Rich) |
+| -------------------------------- | --------------- | ------------------------------------------------ | ------------------------------------- |
+| (iOS) Écran de verrouillage      | 160 caractères  | 130 caractères                                   |                                       |
+| (iOS) Centre de Notification     | 160 caractères  | 130 caractères                                   |                                       |
+| (iOS) Alerte de bannière         | 80 caractères   | 65 caractères                                    |                                       |
+| (Android) Écran de verrouillage  | 49 caractères   | N/A                                              |                                       |
+| (Android) Tiroir de notification | 597 caractères  | N/A                                              |                                       |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 }
 
-Wondering how many characters you can use in an iOS push notification without it being truncated? Check out our [iOS character count guidelines]({{site.baseurl}}/user_guide/message_building_by_channel/push/ios/rich_notifications/#character-count).
+Vous vous demandez combien de caractères vous pouvez utiliser dans une notification push iOS sans qu'elle soit tronquée ? Consultez nos [lignes directrices pour le nombre de caractères iOS]({{site.baseurl}}/user_guide/message_building_by_channel/push/ios/rich_notifications/#character-count).
 
 {% endtab %}
 {% tab Payload Size %}
 
-| **Platform**  | **Size** |
-| ------------- | -------- |
-| pre iOS 8     | 0.256 KB |
-| post iOS 8    | 2 KB     |
-| Android (FCM) | 4 KB     |
+| **Plateforme** | **Taille** |
+| -------------- | ---------- |
+| pre iOS 8      | 0.256 Ko   |
+| publier iOS 8  | 2 Ko       |
+| Android (FCM)  | 4 Ko       |
 {: .reset-td-br-1 .reset-td-br-2}
 
 {% endtab %}
 {% endtabs %}
 
-### Web push notifications
+### Notifications push Web
 
 {% tabs local %}
 {% tab Images %}
 
-| **Browser** | **Recommended Icon Size** |
-| ----------- | ------------------------- |
-|             |                           |
- Chrome | 192 x 192 ≥ Firefox | 192 x 192 ≥ Safari | Icons not configurable on a per-campaign basis Opera | 192x192 ≥
+| **Navigateur** | **Taille de l'icône recommandée** |
+| -------------- | --------------------------------- |
+|                |                                   |
+ Chrome | 192 x 192 † Firefox | 192 x 192 † Safari | Icônes non configurables par campagne Opera | 192x192 †.
 {: .reset-td-br-1 .reset-td-br-2}
 
-| **Browser** | **Platform** | **Large Image Size** |
-| ----------- | ------------ | -------------------- |
-|             |              |                      |
- Chrome | macOS | N/A Chrome | Android | 2 : 1 aspect ratio Chrome | Windows | 360 ≥ x 240 Firefox | macOS| N/A Safari | macOS | N/A Opera | macOS | N/A
+| **Navigateur** | **Plateforme** | **Grande taille d'image** |
+| -------------- | -------------- | ------------------------- |
+|                |                |                           |
+ Chrome | macOS | N/A Chrome | Android | 2 : 1 aspect ratio Chrome | Windows | 360 ・x 240 Firefox | macOS| N/A Safari | macOS | N/A Opera | macOS | macOS | N/A
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
 
 {% endtab %}
 {% tab Text %}
 
-| **Browser** | **Platform** | **Maximum Title Length** | **Maximum Message Body Length** |
-| ----------- | ------------ | ------------------------ | ------------------------------- |
-|             |              |                          |                                 |
- Chrome | macOS | 35 | 50 Safari | macOS | 38 | 84 Firefox | macOS | 38 | 42 Opera | macOS | 38 | 42
+| **Navigateur** | **Plateforme** | **Longueur maximale du titre** | **Longueur maximale du corps du message** |
+| -------------- | -------------- | ------------------------------ | ----------------------------------------- |
+|                |                |                                |                                           |
+ Chrome | macOS | 35 | 50 Safari | macOS | macOS | 38 | 84 Firefox | macOS | 38 | 42 Opera | macOS | 38 | 42
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
 
 {% endtab %}
