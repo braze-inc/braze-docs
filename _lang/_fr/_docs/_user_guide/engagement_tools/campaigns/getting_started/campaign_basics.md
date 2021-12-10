@@ -1,106 +1,106 @@
 ---
-nav_title: Campaign Basics
-article_title: Campaign Basics
+nav_title: Les Bases de la Campagne
+article_title: Les Bases de la Campagne
 page_order: 1
-page_type: reference
-description: '“This reference article covers the basics of campaigns, covering various questions you should ask yourself as you set up your first campaigns.”'
-tool: Campaigns
+page_type: Référence
+description: '« Cet article de référence couvre les bases des campagnes, couvrant diverses questions que vous devriez vous poser lors de la mise en place de vos premières campagnes ».'
+tool: Campagnes
 ---
 
-# Campaigns: The basics
+# Campagnes : Les bases
 
-## Find your strategy with the five W’s of visualization
+## Trouvez votre stratégie avec les cinq W de visualisation
 
-Answer the questions below to get started:
+Répondez aux questions ci-dessous pour commencer:
 
-* __What__ am I trying to help the customer do or understand? (Campaign Name)
+* __Qu'est-ce que__ j'essaie d'aider le client à faire ou à comprendre ? (Camp<unk> Nom)
 
-* __When__ will a user start this experience? Pick one.
-  * Enter users at a designated time: __Scheduled__
-    * Start a session
-    * Perform a custom event
-    * Enter a location
-    * Interact with or leave another campaign or Canvas
-  * Enter user when they perform actions: __Action-Based__
-    * Make a purchase
-    * Start a session
-    * Perform a custom event
-    * Enter a location
-    * Interact with or leave another campaign or Canvas
-  * Enter users when they perform a specific action that triggers an API request to Braze (advanced): __API-Triggered__
-    * API-triggered campaigns give you the flexibility to house message content inside of the Braze dashboard while dictating when a message is sent and to whom, via your API.<br><br>
+* __Quand__ un utilisateur commencera-t-il cette expérience ? Choisissez un.
+  * Entrez les utilisateurs à une heure désignée : __Planifié__
+    * Démarrer une session
+    * Effectuer un événement personnalisé
+    * Entrez un emplacement
+    * Interagissez avec ou quittez une autre campagne ou Canvas
+  * Entrez l'utilisateur quand il effectue des actions : __-Based Action__
+    * Effectuer un achat
+    * Démarrer une session
+    * Effectuer un événement personnalisé
+    * Entrez un emplacement
+    * Interagissez avec ou quittez une autre campagne ou Canvas
+  * Entrez les utilisateurs lorsqu'ils effectuent une action spécifique qui déclenche une requête API à Braze (avancé): __API-Triggered__
+    * Les campagnes déclenchées par l'API vous donnent la flexibilité d'héberger le contenu des messages dans le tableau de bord Braze tout en dictant quand un message est envoyé et à qui, via votre API.<br><br>
 
-* __Who__ are we trying to reach? (Segment Name with _optional_ additional filters)
-  * Custom Data
-  * User Activity
-  * Retargeting
-  * Marketing Activity
-  * User Attributes
-  * Install Attribution
-  * Social Activity<br><br>
+* __Qui__ essayons-nous d'atteindre ? (Nom du segment avec _filtres supplémentaires_ optionnels)
+  * Données personnalisées
+  * Activité de l'utilisateur
+  * Reciblage
+  * Activité marketing
+  * Attributs de l'utilisateur
+  * Installer Attribution
+  * Activité sociale<br><br>
 
-* __Why__ am I creating this campaign?
-  * Start Session: I want them coming back and engaging with the app.
-  * Make Purchase: I want them to buy.
-  * Perform Custom Event: I want them to perform a specific action that I’m tracking as a custom event.
-  * Upgrades App: I want them to upgrade their app version<br><br>
+* __Pourquoi__ est-ce que je crée cette campagne ?
+  * Démarrer la session : je veux qu'ils reviennent et s'engagent avec l'application.
+  * Faire un achat: Je veux qu'ils achètent.
+  * Effectuer un événement personnalisé : je veux qu'ils effectuent une action spécifique que je traque en tant qu'événement personnalisé.
+  * Application de mise à jour : je veux qu'ils mettent à jour leur version de l'application<br><br>
 
-* __Where__ will we reach them?
-  * Email
-  * Push (Android, iOS, Windows, web)
-  * In-app Messages
-  * Content Cards
-  * SMS or MMS
+* __Où__ les atteindrons-nous ?
+  * Courriel
+  * Pousser (Android, iOS, Windows, web)
+  * Messages dans l'application
+  * Cartes de contenu
+  * SMS ou MMS
   * Webhook<br><br>
 
-* __How__ will we reach them? (Great place to test different messaging configurations)
-  * Timing: Schedule or trigger messages using tools like Intelligent Timing and delays after trigger events
-  * Cadence & Channel: Use one channel and then another or sent messages on multiple channels simultaneously
-  * Content: Build creative copy with strong appeals, value propositions, and CTAs
-  * Targeting: Add additional segments and/or filters
-  * Triggers: Use customer actions to trigger messages<br><br>
+* __Comment__ allons-nous les atteindre ? (Excellent endroit pour tester différentes configurations de messagerie)
+  * Timing : Planifier ou déclencher des messages à l'aide d'outils tels que le Timing Intelligent et les retards après les événements déclencheurs
+  * Cadence & Canal: Utiliser un canal puis un autre ou envoyer des messages sur plusieurs canaux simultanément
+  * Contenu: Construire une copie créative avec des appels forts, des propositions de valeur et des CGA
+  * Ciblage : Ajouter des segments et/ou des filtres supplémentaires
+  * Déclencheurs : Utilisez les actions client pour déclencher des messages<br><br>
 
-## Building the customer journey campaign
+## Construire la campagne de voyage client
 
-### Name your campaign: The “what”
+### Nommez votre campagne: Le “quoi”
 
-Never underestimate the power of the name. Braze is built for collaboration, so this is an excellent time to get grounded in how you’ll communicate goals with your team. You can add Tags (including Teams Tags) and name both steps and variants within the campaign. For more on customer journeys, check out our [Mapping User Lifecycles LAB course](http://lab.braze.com/mapping-customer-lifecycles)!
+Ne sous-estimez jamais la puissance du nom. Braze est construit pour la collaboration, donc le moment est idéal pour se familiariser avec la façon dont vous communiquerez vos objectifs avec votre équipe. Vous pouvez ajouter des Tags (y compris des Tags Teams) et nommer à la fois les étapes et les variantes dans la campagne. Pour en savoir plus sur les voyages des clients, consultez notre [cours LAB](http://lab.braze.com/mapping-customer-lifecycles) de cartographie de la vie des utilisateurs !
 
-### Create starting conditions: The “when”
+### Créer les conditions de départ : Le « Quand »
 
-When will a customer run into this campaign? Users can enter your campaign in three ways: scheduled, action-based, or API-triggered.
+Quand un client va-t-il se lancer dans cette campagne ? Les utilisateurs peuvent entrer dans votre campagne de trois manières: planifiée, basée sur l'action ou déclenchée par l'API.
 
-| Scheduled                                                                                                                                                                          | Action-Based                                                                                                                                                                                                           | API-Triggered                                                                                                                                                                           |
-| ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| You can use scheduled delivery when you want to send a campaign out immediately to your target audience, have it regularly sent, or schedule it for a specific time in the future. | These campaigns respond to specific customer behaviors as they happen. These action-based triggers can include opening your app, making a purchase, interacting with another campaign, or triggering any custom event. | Your marketing team and engineers will work together to determine key customer actions on your platform that, once achieved, will trigger an API call to Braze and send your campaigns. |
+| Planifié                                                                                                                                                                                                           | Action-Based                                                                                                                                                                                                                                                                                                            | Déclenché par l'API                                                                                                                                                                                                  |
+| ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Vous pouvez utiliser la livraison prévue lorsque vous souhaitez envoyer une campagne immédiatement à votre public cible, le faire envoyer régulièrement, ou le programmer pour une heure spécifique dans le futur. | Ces campagnes répondent à des comportements spécifiques des clients au fur et à mesure qu'ils se produisent. Ces déclencheurs basés sur l'action peuvent inclure l'ouverture de votre application, la réalisation d'un achat, l'interaction avec une autre campagne ou le déclenchement de tout événement personnalisé. | Votre équipe de marketing et vos ingénieurs travailleront ensemble pour déterminer les actions clés du client sur votre plateforme que, une fois réalisé, déclenchera un appel API à Braze et enverra vos campagnes. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
 
-### Select an entry audience for entry: The “who”
+### Sélectionnez un public d'entrée pour l'entrée: Le « qui»
 
-Who are you trying to reach? Here you can use a pre-defined segment and add further filters. Filters include:
+« Qui tentez de vous atteindre? » Ici, vous pouvez utiliser un segment prédéfini et ajouter d'autres filtres. Les filtres incluent:
 
-| Filter              | Description                                                                                                                                         |
-| ------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Custom Data         | Custom data filters allow you to segment users based on events and attributes you define. With them, you can use features specific to your product. |
-| User Activity       | User activity filters allow you to segment customers based on their actions and purchases.                                                          |
-| Retargeting         | Retargeting filters allow you to segment customers who have been sent, received, or interacted with previous campaigns or Canvases.                 |
-| Marketing Activity  | Marketing filters segment customers based on universal behaviors like last engagement or received campaigns.                                        |
-| User Attributes     | User attribute filters segment customers by their constant attributes and characteristics.                                                          |
-| Install Attribution | Install attribution filters segment customers by their first source, adgroup, campaign, or ad.                                                      |
-| Social Activity     | Social activity filters segment customers by their social media activity, namely through connection to Facebook and Twitter.                        |
+| Filtre                     | Libellé                                                                                                                                                                                                                             |
+| -------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Données personnalisées     | Les filtres de données personnalisés vous permettent de segmenter les utilisateurs en fonction des événements et des attributs que vous définissez. Avec eux, vous pouvez utiliser des fonctionnalités spécifiques à votre produit. |
+| Activité de l'utilisateur  | Les filtres d'activité utilisateur vous permettent de segmenter les clients en fonction de leurs actions et achats.                                                                                                                 |
+| Reciblage                  | Les filtres de redistribution vous permettent de segmenter les clients qui ont été envoyés, reçus ou interagissés avec les campagnes précédentes ou les Canvases.                                                                   |
+| Activité marketing         | Les filtres de marketing filtrent les clients en fonction de comportements universels comme le dernier engagement ou les campagnes reçues.                                                                                          |
+| Attributs de l'utilisateur | Les clients du segment des filtres d'attributs utilisateur par leurs attributs et caractéristiques constants.                                                                                                                       |
+| Installer Attribution      | Installez des filtres d'attribution pour les clients par leur première source, adgroup, campagne ou publicité.                                                                                                                      |
+| Activité sociale           | L'activité sociale filtre les clients en fonction de leur activité sur les réseaux sociaux, notamment par la connexion à Facebook et Twitter.                                                                                       |
 {: .reset-td-br-1 .reset-td-br-2}
 
-Only the users who match these target audience criteria can enter the journey.
+Seuls les utilisateurs qui correspondent à ces critères d'audience cible peuvent entrer dans le voyage.
 
-### Identify conversion events: The “why”
+### Identifier les événements de conversion : le « pourquoi»
 
-Why are you building this campaign? It’s always important to have a defined goal in mind, and campaigns help you understand how you perform against KPIs like session engagement, purchases, and custom events.
+Pourquoi construisez-vous cette campagne? Il est toujours important d'avoir un objectif défini en tête, et campagnes vous aident à comprendre comment vous vous exécutez contre des KPIs tels que l'engagement de session, les achats et les événements personnalisés.
 
-Selecting at least one conversion event will give you the ability to understand your campaign performance.
+La sélection d'au moins un événement de conversion vous permettra de comprendre la performance de votre campagne.
 
-### Build the experience: The “how” and “where”
+### Construisez l’expérience : « comment» et « où»
 
-Consider setting up variants and A/B testing. A variant is a trail each customer follows on their journey. Campaigns support up to eight variants with a control group. While not required, you can name each variant and control the distribution of the target audience following each variant. The sky’s the limit from there—so how do you decide on the shape of your campaign? That’s where your goals, data, and hypothesis come into play. The “how” and “where” brainstorm from above will help you map out the right user journey for your campaign. There are a couple of approaches you can use:
-- __Work backward:__ Some goals have smaller sub-goals. For instance, if you’re aiming for converting a free user into a subscription, you may need a page with your subscription services outlined. A visitor may need to see the options before they purchase. You may focus your messaging efforts on showing them this page before a checkout page. Working backward to understand the journey a customer must go through to get to your goal is key to guiding them through to conversion.
-- __Start with the status quo and add more:__ Have you ran a similar campaign in the past? Or is one currently running? Use that one message and add to it. Try a new filter or add a follow-up message. Look at your performance and keep optimizing by making incremental changes.
-- __Look to others:__ Imitation is the highest form of flattery. Don’t reinvent the wheel. Don’t worry; we have you covered. At the end of this guide, you’ll find some outlines that can help you get started.
+Considérez la mise en place de variantes et de tests A/B. Une variante est un parcours que chaque client suit tout au long de son voyage. Les campagnes prennent en charge jusqu'à huit variantes avec un groupe de contrôle. Bien qu'il ne soit pas obligatoire, vous pouvez nommer chaque variante et contrôler la distribution du public cible en suivant chaque variante. Le ciel est la limite à partir de là, donc comment décidez-vous de la forme de votre campagne? C’est là que vos objectifs, vos données et vos hypothèses entrent en jeu. Le remue-méninges « comment » et « où» de la partie supérieure de votre cerveau vous aidera à tracer le bon voyage des utilisateurs pour votre campagne. Il y a quelques approches que vous pouvez utiliser:
+- __Travail en arrière :__ Certains buts ont des sous-objectifs plus petits. Par exemple, si vous visez à convertir un utilisateur gratuit en abonnement, vous aurez peut-être besoin d’une page avec vos services d’abonnement. Un visiteur peut avoir besoin de voir les options avant d'acheter. Vous pouvez concentrer vos efforts de messagerie sur leur montrer cette page avant une page de paiement. Travailler en arrière pour comprendre le voyage que le client doit parcourir pour atteindre son objectif est essentiel pour le guider vers la conversion.
+- __Commencez par le statu quo et ajoutez-en plus :__ Avez-vous mené une campagne similaire par le passé ? Ou bien est-il actuellement en cours d'exécution ? Utilisez ce message et ajoutez-le. Essayez un nouveau filtre ou ajoutez un message de suivi. Regardez vos performances et continuez à optimiser en apportant des changements incrémentaux.
+- __Regardez vers les autres :__ L'imitation est la forme la plus élevée de flatterie. Ne réinventez pas la roue. Ne vous inquiétez pas, nous vous avons couverts. À la fin de ce guide, vous trouverez quelques lignes qui peuvent vous aider à commencer.
