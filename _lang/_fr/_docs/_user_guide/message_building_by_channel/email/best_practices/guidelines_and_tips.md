@@ -1,34 +1,34 @@
 ---
-nav_title: Email Guidelines & Tips
-article_title: Email Guidelines & Tips
+nav_title: Lignes directrices & Conseils
+article_title: Lignes directrices & Conseils
 page_order: 1
-page_type: reference
-description: "This article covers content-specific, styling, and technical tips and tricks for various email use cases."
-channel: email
+page_type: Référence
+description: "Cet article couvre le contenu spécifique, le style et les astuces techniques pour divers cas d'utilisation de courriels."
+channel: Email
 ---
 
-# Email guidelines and tips
+# Directives et astuces pour les e-mails
 
-> This article covers technical, styling, and content-specific tips and tricks for various email use cases and topics.
+> Cet article traite des trucs et astuces techniques, du style et du contenu spécifiques à divers cas et sujets d'utilisation des courriels.
 
-## Technical guidelines
+## Directives techniques
 
-### General
+### Généraux
 
-- If you would like one email template for both mobile and desktop, keep the width below 500 pixels.
-- Use inline style sheets to format your email as CSS or it will not be recognized by Email Service Providers (ESPs).
-- Images uploaded to the email template must be less than 5MB and either PNG, JPG, GIF.
-- Always use alt-tags for images in case they don't appear in the email (blocked, fail to load, etc.)
-- Don't set heights and widths for images as this will cause unnecessary white space in a degraded email.
-- `div` tags should not be used as most email clients do not support their use. Instead, use nested tables.
-- Don’t use JavaScript because it does not work with any ESP.
-- Braze improves load times by using a global CDN to host all email images.
+- Si vous souhaitez un modèle de courrier électronique à la fois pour mobile et pour bureau, gardez la largeur inférieure à 500 pixels.
+- Utilisez des feuilles de style en ligne pour formater votre courriel en tant que CSS ou il ne sera pas reconnu par les fournisseurs de services de messagerie (ESP).
+- Les images téléchargées vers le modèle d'email doivent être inférieures à 5 Mo et soit PNG, JPG, GIF.
+- Toujours utiliser les alt-tags pour les images si elles n'apparaissent pas dans l'email (bloqué, ne pas charger, etc.)
+- Ne définissez pas les hauteurs et les largeurs des images car cela provoquera des espaces inutiles dans un courriel dégradé.
+- Les balises `div` ne doivent pas être utilisées car la plupart des clients de messagerie ne supportent pas leur utilisation. Utilisez plutôt des tables imbriquées.
+- N'utilisez pas JavaScript car il ne fonctionne pas avec ESP.
+- Braze améliore les temps de chargement en utilisant un CDN global pour héberger toutes les images de courriel.
 
-### Email validation
+### Validation de l'adresse e-mail
 
-Braze automatically adjusts inputted email addresses to trim any whitespace. Email addresses targeted via the Braze servers must be validated per the [RFC 2822][24] standards. In addition to these standards, Braze does not accept certain characters (noted below) and recognizes them as invalid.
+Braze ajuste automatiquement les adresses e-mail saisies pour supprimer tous les espaces. Les adresses e-mail ciblées via les serveurs Braze doivent être validées selon les normes de la [RFC 2822][24]. En plus de ces normes, Braze n'accepte pas certains caractères (indiqués ci-dessous) et les reconnaît comme non valides.
 
-If an email is bounced, Braze marks the email as invalid and the subscription status is not changed.
+Si un e-mail est rebondi, Braze marque l'email comme non valide et le statut de l'abonnement n'est pas changé.
 {% details Unaccepted characters outside of RFC Standards %}
 - *
 - /
@@ -49,9 +49,9 @@ If an email is bounced, Braze marks the email as invalid and the subscription st
 - ,
 {% enddetails %}
 
-### Disallowed HTML tags
+### Balises HTML interdites
 
-The following HTML tags are disallowed as they may potentially let malicious code run in the browser. As a result, end-user mail clients often filter emails that contain them.
+Les balises HTML suivantes sont interdites car elles peuvent potentiellement permettre l'exécution de code malveillant dans le navigateur. En conséquence, les clients de messagerie des utilisateurs finaux filtrent souvent les courriels qui les contiennent.
 - `<!doctype>`
 - `<applet>`
 - `<bgsound>`
@@ -68,7 +68,7 @@ The following HTML tags are disallowed as they may potentially let malicious cod
 - `<xml>`
 - `<svg>`
 
-The following HTML attributes are disallowed as well:
+Les attributs HTML suivants sont également interdits :
 
 - `<animationend>`
 - `<animationiteration>`
@@ -213,185 +213,185 @@ The following HTML attributes are disallowed as well:
 - `<seeksegmenttime>`
 - `<transitionend>`
 
-### Implementing 'alt' tags
+### Implémentation des balises 'alt'
 
-Since spam filters watch for both an HTML and a plain text version of a message, utilizing plain text alternatives is a great way to lower your spam score. In addition, ALT texts can serve to complement and in some cases stand in lieu of images included in your email body that may have been filtered out by a user's email provider.
+Puisque les filtres anti-spam surveillent à la fois une version HTML et une version texte d'un message, Utiliser des alternatives en texte brut est un excellent moyen de réduire votre score de spam. De plus, Les textes ALT peuvent servir à compléter et, dans certains cas, remplacer les images incluses dans votre corps de courrier électronique qui peuvent avoir été filtrées par le fournisseur de messagerie d'un utilisateur.
 
-### Setting from and reply-to addresses
+### Paramétrage et adresse de réponse
 
-When setting your "From" addresses, make sure your "From" email domain, matches your sending domain (i.e. `marketing.yourdomain.com`), failure to do this may result in SPF and DKIM misalignment. All reply-to emails can be set to your root domain.
+Lorsque vous définissez vos adresses "De", assurez-vous que votre domaine de messagerie "De" corresponde à votre domaine d'envoi (i.e. `marketing.yourdomain.com`), l'échec de cette opération peut entraîner un déséquilibre entre SPF et DKIM. Tous les e-mails de réponse peuvent être configurés sur votre domaine racine.
 
-## Styling tips
+## Astuces de style
 
-### Address styling
+### Style d'adresse
 
-- The **Subject Line** is one of the first things that recipients will see upon receiving your message.
-  - Keeping it to 6 to 10 words will yield the highest open rates.
-  - There are also different approaches to creating a good subject line, ranging from asking a question to pique the reader’s interest or being more direct, to personalizing it as to engage your clientele.
-  - Don’t just stick with one subject line, try new ones out and gauge their effectiveness.
-  - Subject line should be no more than 35 characters to display appropriately on mobile.
+- La **Ligne de Sujet** est l'une des premières choses que les destinataires verront après réception de votre message.
+  - Le maintien de 6 à 10 mots donnera les taux d'ouverture les plus élevés.
+  - Il y a également différentes approches pour créer une bonne ligne de sujet, de poser une question à pique l’intérêt du lecteur ou d’être plus direct, à la personnalisation de sa clientèle.
+  - Ne restez pas avec une seule ligne de sujet, essayez de nouvelles lignes et évaluez leur efficacité.
+  - La ligne du sujet ne doit pas contenir plus de 35 caractères à afficher correctement sur mobile.
 
-- The **“From Field”** should clearly show who the sender is.
-  - Try not to use an unknown person’s name or an uncommon abbreviation, instead try using something recognizable like the company name.
-  - If using a person’s name suits your company methods of personalizing email, stay consistent and retain the same “From Name” to develop a relationship with the recipient.
-  -  “From” name should be no more than 25 characters to display appropriately on mobile.
+- Le **« De Champ»** devrait clairement montrer qui est l'expéditeur.
+  - Essayez de ne pas utiliser le nom d'une personne inconnue ou une abréviation inhabituelle, plutôt essayez d'utiliser quelque chose de reconnaissable comme le nom de la société.
+  - Si vous utilisez le nom d'une personne correspond aux méthodes de votre entreprise pour personnaliser l'e-mail, rester cohérent et conserver le même « De Nom » pour développer une relation avec le destinataire.
+  -  Le nom « De » ne doit pas contenir plus de 25 caractères à afficher correctement sur mobile.
 
-### Body styling
+### Style du corps
 
-- Many users use **Email Previewing**, either in Gmail or Outlook.
-  - These preview areas generally allow for around 300 pixels or 85 characters of content to be shown.
-  - It is recommended that the email communicate the main point of the message efficiently within that space, engaging the reader’s interest to encourage opens.
+- De nombreux utilisateurs utilisent **Aperçu du courrier électronique**, soit dans Gmail ou Outlook.
+  - Ces zones d'aperçu permettent généralement d'afficher environ 300 pixels ou 85 caractères de contenu.
+  - Il est recommandé que le courriel communique le point principal du message efficacement dans cet espace, en engageant l'intérêt du lecteur à encourager les ouvertures.
 
-- **No-reply** email addresses are generally not recommended for multiple reasons as they disengage your readers.
-  - Many recipients reply to the email to unsubscribe, so if they are not allowed to do that, the next course of action is more often than not marking the email as spam.
-  - Getting out of office replies can actually provide valuable information, increasing open rates and decreasing spam reports (by removing those who don’t want to be emailed).
-  - On a personal level, a no-reply can appear impersonal, lazy and arrogant to recipients (suggesting “You aren’t worth my time”), and may turn them off from receiving further email from your company.
+- **Les adresses e-mail** non répondues ne sont généralement pas recommandées pour plusieurs raisons car elles désengagent vos lecteurs.
+  - De nombreux destinataires répondent à l'e-mail pour se désabonner, donc s'ils ne sont pas autorisés à le faire, la prochaine action est plus souvent que de ne pas marquer l'e-mail comme spam.
+  - Sortir des réponses du bureau peut en fait fournir des informations précieuses, augmenter les taux d'ouverture et diminuer les rapports de spam (en supprimant ceux qui ne veulent pas être envoyés).
+  - Sur un plan personnel, une non-réponse peut paraître impersonnelle, paresseuse et arrogante aux destinataires (suggérant “Vous ne valez pas mon temps”), et peut les désactiver de recevoir d'autres courriels de votre entreprise.
 
-- **Preheader Text** is often used by email marketers to provide additional information on an email's contents.
-  - A preheader is the preview text displayed immediately after an email subject. In the example below, the preheader is `- Brand. New. Lounge Shorts`.
+- **Le texte de préen-tête** est souvent utilisé par les vendeurs de courriels pour fournir des informations supplémentaires sur le contenu d'un courriel.
+  - Un préen-tête est le texte de l'aperçu affiché immédiatement après un sujet d'e-mail. Dans l'exemple ci-dessous, le préen-tête est `- Marque. Nouveau. Shorts de salon`.
 
-!\[Preheader Example\]\[61\]
+!\[Exemple\]\[61\]
 
-  - The amount of visible preheader text is dependent on the User's email client and the length of the email's subject line. Generally, we suggest email preheaders to be between 50 and 100 characters.
+  - La quantité de texte de préen-tête visible dépend du client de messagerie de l'utilisateur et de la longueur de la ligne d'objet de l'e-mail. Généralement, nous suggérons que les préen-têtes de courriel soient compris entre 50 et 100 caractères.
 
-### Preheader character limits
+### Limites de caractères de préen-tête
 
-  | Mobile Email Client | Limit |
-  |:-------------------:|:-----:|
-  |     iOS Outlook     |  74   |
-  |   Android Native    |  43   |
-  |    Android Gmail    |  24   |
-  |     iOS Native      |  82   |
-  |      iOS Gmail      |  30   |
+  | Client de messagerie mobile | Limite |
+  |:---------------------------:|:------:|
+  |         Outlook iOS         |   74   |
+  |       Natif d'Android       |   43   |
+  |        Android Gmail        |   24   |
+  |          Natif iOS          |   82   |
+  |          Gmail iOS          |   30   |
   {: .reset-td-br-1 .reset-td-br-2}
 
-  | Desktop Email Client | Limit |
-  |:--------------------:|:-----:|
-  |      Apple Mail      |  33   |
-  |     Outlook '13      |  38   |
-  | Outlook for Mac '15  |  53   |
-  |     Outlook '16      |  50   |
-  {: .reset-td-br-1 .reset-td-br-2}
-
-
-  | Webmail Email Client | Limit |
-  |:--------------------:|:-----:|
-  |       AOL Mail       |  81   |
-  |        Gmail         |  119  |
-  |     Outlook.com      |  49   |
-  |      Office 365      |  40   |
-  |       Mail.ru        |  64   |
+  | Client de messagerie de bureau | Limite |
+  |:------------------------------:|:------:|
+  |           Mail Apple           |   33   |
+  |          Outlook '13           |   38   |
+  |      Outlook pour Mac '15      |   53   |
+  |          Outlook '16           |   50   |
   {: .reset-td-br-1 .reset-td-br-2}
 
 
-  Source: [Email on Acid][62]
+  | Webmail Email Client | Limite |
+  |:--------------------:|:------:|
+  |     Courrier AOL     |   81   |
+  |        Gmail         |  119   |
+  |     Outlook.com      |   49   |
+  |      Bureau 365      |   40   |
+  |       Mail.ru        |   64   |
+  {: .reset-td-br-1 .reset-td-br-2}
 
 
-- **Call to actions** come into play once readers have opened your email.
-  - Point your readers in the right direction, whether you want them to subscribe, purchase a product or visit your website.
-  - Use strong words so that the reader knows exactly what you are asking of them, but make sure it reflects your company’s brand voice and that every call to action exhibits some sort of value to the consumer.
-  - Pre-header should be no more than 85 characters and have some sort of descriptive call to action that supports the subject line.
+  Source: [Email sur Acid][62]
 
-- **Email and landing sites** to which you direct your users to should be mobile optimized:
-  - No interstitial boxes
-  - Large form-fields
-  - Easy navigation
-  - Large text
-  - "Finger Friendly"
-  - Generous white space
-  - Short concise body copy
-  - Clear calls to action
 
-### Email size
+- **Appel aux actions** entrent en jeu une fois que les lecteurs ont ouvert votre email.
+  - Pointez vos lecteurs dans la bonne direction, que vous vouliez qu'ils s'abonnent, achètent un produit ou visitent votre site Web.
+  - Utilisez des mots forts pour que le lecteur sache exactement ce que vous leur demandez, mais assurez-vous qu'il reflète la voix de la marque de votre entreprise et que chaque appel à l'action présente une sorte de valeur pour le consommateur.
+  - Pré-en-tête ne doit pas contenir plus de 85 caractères et avoir une sorte d'appel descriptif à l'action qui prend en charge la ligne sujet.
 
-|  Text Only   | Text With Images |    Email Width     |
-|:------------:|:----------------:|:------------------:|
-| 25KB maximum |   60KB maximum   | 600 pixels maximum |
+- **Emails et sites d'atterrissage** vers lesquels vous dirigez vos utilisateurs doivent être optimisés pour mobile :
+  - Pas de boîtes interstitielles
+  - Champs de formulaire volumineux
+  - Navigation facile
+  - Texte volumineux
+  - « Doigts amicaux»
+  - Espace blanc généreux
+  - Copie courte et concise du corps
+  - Effacer les appels à l'action
+
+### Taille de l'e-mail
+
+| Texte uniquement | Texte avec des images | Largeur de l'e-mail |
+|:----------------:|:---------------------:|:-------------------:|
+|   25Ko maximum   |     60 Ko maximum     | 600 pixels maximum  |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
 
-Make sure to limit your **Body Size**: Large E-Mail bodies (larger than 102kb) are not only extremely taxing on Braze and SendGrid's servers, but are also clipped by Gmail and other E-Mail clients. We recommend keeping the size of your email under 25kb for just text, or 60kb with images.
+Assurez-vous de limiter votre **taille de corps**: les gros corps de courrier électronique (plus de 102kb) ne sont pas seulement extrêmement taxables sur les serveurs de Braze et SendGrid, mais sont également coupées par Gmail et d'autres clients E-Mail. Nous vous recommandons de garder la taille de votre e-mail sous 25kb pour juste du texte, ou 60kb avec des images.
 
-If you are receiving this error in the editor, you likely have base64 encoded images that have been embedded in the email itself. This is not an effective way to send emails with images. We highly encourage you to use Braze's image uploader to host images and to reference these images by href.
+Si vous recevez cette erreur dans l'éditeur, vous avez probablement des images encodées en base64 qui ont été intégrées dans le courriel lui-même. Ce n'est pas un moyen efficace d'envoyer des courriels avec des images. Nous vous encourageons vivement à utiliser le chargeur d'images de Braze pour héberger des images et les référencer par href.
 
-### Text length
+### Longueur du texte
 
-| **Text Specifications** | **Recommended Properties**                                         |
-| ----------------------- | ------------------------------------------------------------------ |
-| Subject Line Length     | 35 characters maximum (for optimal mobile display) (6 to 10 words) |
-| Sender Name Length      | 25 characters maximum (for optimal mobile display)                 |
-| Pre-Header Length       | 85 characters maximum                                              |
+| **Caractéristiques du texte**   | **Propriétés recommandées**                                            |
+| ------------------------------- | ---------------------------------------------------------------------- |
+| Longueur de la ligne du sujet   | 35 caractères maximum (pour un affichage mobile optimal) (6 à 10 mots) |
+| Longueur du nom de l'expéditeur | 25 caractères maximum (pour un affichage mobile optimal)               |
+| Longueur du pré-en-tête         | 85 caractères maximum                                                  |
 {: .reset-td-br-1 .reset-td-br-2}
 
-### Image size
+### Taille de l'image
 
-|    Size     | Header Image Width |  Body Image Width  |  File Types   |
-|:-----------:|:------------------:|:------------------:|:-------------:|
-| 5MB maximum | 600 pixels maximum | 480 pixels maximum | PNG, JPG, GIF |
+|    Taille    | Largeur de l'image de l'en-tête | Largeur de l'image du corps | Types de fichiers |
+|:------------:|:-------------------------------:|:---------------------------:|:-----------------:|
+| 5 Mo maximum |       600 pixels maximum        |     480 pixels maximum      |   PNG, JPG, GIF   |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4}
 
-Smaller, high quality images will load faster, so it’s recommended to use the smallest asset possible to achieve your desired output.
+Des images plus petites et de haute qualité se chargeront plus rapidement. Il est donc recommandé d'utiliser le plus petit actif possible pour atteindre la sortie souhaitée.
 
-### Deep linking
+### Liaison profonde
 
-A high percentage of emails are read on mobile devices. Utilizing deep linking is a great practice for engaging with these mobile email recipients. With push notifications and in-app messages, a deep link takes the user directly to a specified destination within an app. Email, on the other hand, gives no way of knowing whether recipients have the app installed. As such, providing a deep link to the app could link to an error message for these recipients who do not have the app.
+Un pourcentage élevé des courriels sont lus sur les appareils mobiles. L’utilisation de liens profonds est une excellente pratique pour s’engager avec ces destinataires de courriels mobiles. Avec les notifications push et les messages dans l'application, un lien profond mène l'utilisateur directement à une destination spécifiée dans une application. Par contre, le courrier électronique ne donne aucun moyen de savoir si les destinataires ont installé l'application. En tant que tel, fournir un lien profond vers l'application pourrait être lié à un message d'erreur pour ces destinataires qui n'ont pas l'application.
 
-## Content-specific tips and tricks
+## Conseils et astuces spécifiques au contenu
 
-### Onboarding
+### Embarquement
 
-- provide tips to help users get started.
-- Showcase only the most essential features - too much information can be overwhelming and potentially confusing if the user is still unfamiliar with your app.
-- Provide links to your documentation and let users know how they can get support.
-- Try to always send a welcome email after a user signs up. Below is an example from LivingSocial that contains simple but clear calls to action and lets users know about a deal:
+- fournir des conseils pour aider les utilisateurs à commencer.
+- Ne montrer que les fonctionnalités les plus essentielles - trop d'informations peuvent être accablantes et potentiellement déroutantes si l'utilisateur n'est toujours pas familier avec votre application.
+- Fournissez des liens vers votre documentation et indiquez aux utilisateurs comment ils peuvent obtenir de l'aide.
+- Essayez de toujours envoyer un e-mail de bienvenue après l'inscription d'un utilisateur. Ci-dessous est un exemple de LivingSocial qui contient des appels simples mais clairs à l'action et permet aux utilisateurs de connaître une affaire :
 
 !\[LivingSocial email\]\[26\]{: style="max-width:70%;"}
 
-### Sales and promotional
+### Ventes et promotions
 
-- Within seconds of opening your email, users should know the value of the promotion (what the discounts are and what is on sale) and how long the offer lasts.
-- Provide graphics to illustrate any products that you're promoting.
-- Keep your copy concise and simple so that it doesn't clutter your email and distract users from the essential content.
-- Make your call to action clear and give recipients an easy way to immediately participate in the promotion.
-- If you're recommending certain products, try to present them as curated, personal suggestions that the user may like.
-- Use social proof to promote your products. Show users any items their friends have liked or purchased.
-- If you're promoting a limited time offer, be sure to let users know! Ideeli does a great job at conveying urgency in this email:
+- Quelques secondes après l'ouverture de votre e-mail, les utilisateurs doivent connaître la valeur de la promotion (ce que sont les remises et ce qui est en vente) et combien de temps l'offre durera.
+- Fournissez des graphiques pour illustrer tous les produits que vous promouvez.
+- Gardez votre copie concise et simple pour ne pas encombrer votre e-mail et distraire les utilisateurs du contenu essentiel.
+- Faites votre appel à l'action claire et donnez aux bénéficiaires un moyen facile de participer immédiatement à la promotion.
+- Si vous recommandez certains produits, essayez de les présenter comme supervisés, des suggestions personnelles que l'utilisateur pourrait aimer.
+- Utilisez la preuve sociale pour promouvoir vos produits. Afficher aux utilisateurs les objets que leurs amis ont aimés ou achetés.
+- Si vous faites la promotion d'une offre de temps limité, n'oubliez pas de faire savoir aux utilisateurs ! Ideeli fait un excellent travail pour transmettre l'urgence dans cet e-mail:
 
 !\[Ideeli email\]\[27\]{: style="max-width:70%;"}
 
-### Transactional
+### Transactionnel
 
-- If the user recently made an in-app purchase, you should thank them and provide any tips that can help them make the most of that purchase.
-- If the user recently made an out-of-app purchase, provide them with shipping confirmation and a way to ask questions about their shipment.
-- Asking users to give feedback after a purchase is a good way to solicit input without being pushy. Because you've just provided users with a service, they may be more likely to share their thoughts. Here's an example of an email from Restaurant.com:
+- Si l'utilisateur a récemment fait un achat dans l'application, vous devriez les remercier et fournir tous les conseils qui peuvent les aider à tirer le meilleur parti de cet achat.
+- Si l'utilisateur a récemment fait un achat hors application, fournissez-lui une confirmation d'expédition et un moyen de poser des questions sur son envoi.
+- Demander aux utilisateurs de donner des commentaires après un achat est un bon moyen de solliciter des commentaires sans être pushy. Parce que vous venez de fournir un service aux utilisateurs, ils sont plus susceptibles de partager leurs pensées. Voici un exemple de courrier électronique de Restaurant.com
 
-!\[Restaurant email\]\[28\]{: style="max-width:80%;"}
+!\[Email du restaurant\]\[28\]{: style="max-width:80%;"}
 
-### Retention
+### Rétention
 
-- Keep your tone friendly.
-- This may be your last chance to win users back, so be sure to include content that showcases your app's value.
-- If the user has been relatively inactive since installing, offer helpful hints for getting started.
-- For social apps, keep users updated on their friends' activities.
-- Offer discounts or any other incentives that may bring users back.
-- Try to make your message personal to show the user that he is still valued. Rue La La, for instance, frames its retention email as a note from its CEO:
+- Gardez votre ton convivial.
+- Ceci peut être votre dernière chance de gagner des utilisateurs, alors assurez-vous d'inclure du contenu qui montre la valeur de votre application.
+- Si l'utilisateur a été relativement inactif depuis l'installation, offrez des conseils utiles pour commencer.
+- Pour les applications sociales, gardez les utilisateurs à jour sur les activités de leurs amis.
+- Offrez des réductions ou toute autre incitation susceptible de ramener les utilisateurs.
+- Essayez de rendre votre message personnel pour montrer à l'utilisateur qu'il est toujours valorisé. Rue La La, par exemple, encadre son e-mail de rétention comme une note de son PDG :
 
 !\[Ruelala email\]\[29\]{: style="max-width:80%;"}
 
-### Social
+### Réseaux sociaux
 
-- Email can help you build up a social fanbase by directing recipients toward your Facebook, Twitter, Instagram, Pinterest, YouTube channel, etc.
-- Include links to your social media accounts within the email to make it easy for users to connect.
-- Make it fun! Try running a photo contest, promoting a hashtag, or having a giveaway. Below is an email from Hailo that offers a reward for participating in photo challenges:
+- Les courriels peuvent vous aider à construire une base de fans en dirigeant les destinataires vers votre Facebook, Twitter, Instagram, Pinterest, chaîne YouTube, etc.
+- Inclure des liens vers vos comptes de réseaux sociaux dans l'e-mail pour faciliter la connexion des utilisateurs.
+- Rends-le amusant! Essayez de lancer un concours photo, de promouvoir un hashtag ou de faire un cadeau. Ci-dessous se trouve un e-mail de Hailo qui offre une récompense pour avoir participé aux défis photo:
 
 !\[Hailo social email\]\[30\]{: style="max-width:70%;"}
 
-### Updates
+### Mises à jour
 
-- Send updates of new or improved features to all of your users.
-- Updating users on new features is also a re-engagement tool because it reminds lapsing users of your app's value.
-- If your feature requires an explanation or demo, include a link in the message. Here's an example by Allrecipes.com:
+- Envoyez des mises à jour des fonctionnalités nouvelles ou améliorées à tous vos utilisateurs.
+- Mettre à jour les utilisateurs sur de nouvelles fonctionnalités est également un outil de réengagement car il rappelle aux utilisateurs en perte de valeur de votre application.
+- Si votre fonctionnalité nécessite une explication ou une démo, incluez un lien dans le message. Voici un exemple de Allrecipes.com :
 
-!\[Allrecipes email\]\[31\]{: style="max-width:70%;"}
+!\[Toutes recettes email\]\[31\]{: style="max-width:70%;"}
 [26]: {% image_buster /assets/img_archive/Livingsocial_email.png %} [27]: {% image_buster /assets/img_archive/Ideeli_email.png %} [28]: {% image_buster /assets/img_archive/Restaurant_email.png %} [29]: {% image_buster /assets/img_archive/Ruelala_email.png %} [30]: {% image_buster /assets/img_archive/Hailo_social_email.png %} [31]: {% image_buster /assets/img_archive/Allrecipes_email.png %}
 [61]: {% image_buster /assets/img_archive/preheader_example.png %}
 
