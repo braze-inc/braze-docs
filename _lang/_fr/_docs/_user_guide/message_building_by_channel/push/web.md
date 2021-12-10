@@ -1,30 +1,30 @@
 ---
-nav_title: "Push for Web"
-article_title: Push for Web
+nav_title: "Push pour le Web"
+article_title: Push pour le Web
 page_order: 9
-page_type: reference
-description: "This reference page briefly covers web push, and links out to the necessary steps to create one."
+page_type: Référence
+description: "Cette page de référence couvre brièvement le web push, et renvoie aux étapes nécessaires pour en créer une."
 platform: Web
 channel:
-  - push
+  - Pousser
 ---
 
-# Web push
+# Push Web
 
-> Web push is another great way to engage with users of your web application. Customers visiting your website via Chrome, Safari, Firefox, and Opera can opt-in to receive web push from your web application whether or not the web page is loaded. This feature is also supported on Android Chrome and Firefox Mobile on Android allowing for mobile web notifications.
+> Le Web push est un autre excellent moyen de s’engager auprès des utilisateurs de votre application web. Clients visitant votre site Web via Chrome, Safari, Firefox, et Opera peut choisir de recevoir des push web de votre application web, que la page web soit chargée ou non. Cette fonctionnalité est également prise en charge sur Android Chrome et Firefox Mobile sur Android permettant des notifications Web mobiles.
 
-Web push works the same way app push notifications operate on your phone. For more information on composing a web push, see our page on [creating a push notification][11]. See to the right for a sample web push sent by Braze.
+Le Web push fonctionne de la même façon que les notifications push des applications fonctionnent sur votre téléphone. Pour plus d'informations sur la composition d'une push web, consultez notre page sur [la création d'une notification push][11]. Voir à droite pour un exemple de push web envoyé par Braze.
 
-!\[Web Push Example\]\[12\]
+![Exemple[12]
 
-Users of your web application need to opt-in to receive web push. See below.
+Les utilisateurs de votre application web doivent opter pour recevoir un push web. Voir ci-dessous.
 
 !\[web-push-optin\]\[13\]
 
-For more information on the push protocol standards and browser support, you can review resources from [Apple][3] [Mozilla][1] and [Microsoft][2]
+Pour plus d'informations sur les normes du protocole push et le support du navigateur, vous pouvez consulter les ressources de [Apple][3] [Mozilla][1] et [Microsoft][2]
 
 {% alert important %}
-Private browsing windows do not currently support web push.
+Les fenêtres de navigation privée ne prennent actuellement pas en charge le push web.
 {% endalert %}
 [12]: {% image_buster /assets/img_archive/Macbook_Push.png %} [13]: {% image_buster /assets/img_archive/WebPush_Prompt.png %}
 
