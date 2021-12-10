@@ -1,63 +1,63 @@
 ---
-nav_title: Next Steps...
-article_title: SMS Next Steps
+nav_title: Étapes suivantes...
+article_title: Étapes suivantes SMS
 layout: dev_guide
 page_order: 10
-guide_top_header: "Next Steps..."
-guide_top_text: "Now that you understand the basics of SMS required for onboarding, get ready to visit our <a href='/docs/user_guide/message_building_by_channel/sms/'>dedicated SMS section</a> for more topics like how to create an SMS campaign, understanding campaign analytics, and SMS keyword processing."
-page_type: landing
-description: "This landing page includes next steps for after you've completed your initial SMS setup."
+guide_top_header: "Étapes suivantes..."
+guide_top_text: "Maintenant que vous comprenez les bases de SMS requis pour l'intégration, préparez-vous à visiter notre <a href='/docs/user_guide/message_building_by_channel/sms/'>section SMS dédiée</a> pour plus de sujets tels que la création d'une campagne SMS, comprendre les analyses de campagne et le traitement des mots clés SMS."
+page_type: atterrissage
+description: "Cette page d'accueil comprend les étapes suivantes pour une fois que vous avez terminé votre configuration SMS initial."
 channel:
   - SMS
   - MMS
-noindex: true
+noindex: vrai
 guide_featured_title: "SMS"
 guide_featured_list:
   - 
-    name: Create an SMS Campaign
-    link: /docs/user_guide/message_building_by_channel/sms/create/
+    name: Créer une campagne SMS
+    link: /fr/docs/user_guide/message_building_by_channel/sms/create/
     fa_icon: fas fa-table
   - 
-    name: SMS Campaign Analytics
-    link: /docs/user_guide/message_building_by_channel/sms/sms_campaign_analytics/
-    fa_icon: fas fa-mobile-alt
+    name: Analyses de la campagne SMS
+    link: /fr/docs/user_guide/message_building_by_channel/sms/sms_campaign_analytics/
+    fa_icon: Fas fa-mobile-alt
   - 
-    name: Retargeting
+    name: Reciblage
     link: /docs/user_guide/onboarding_with_braze/sms_setup/sms_laws_and_regulations/
     fa_icon: fas fa-dot-circle
   - 
-    name: User Phone Numbers
+    name: Numéros de téléphone de l'utilisateur
     link: /docs/user_guide/message_building_by_channel/sms/phone_numbers/user_phone_numbers/
-    fa_icon: fas fa-phone
+    fa_icon: fa-phone fas
   - 
-    name: Keyword Management
+    name: Gestion des mots clés
     link: '/docs/user_guide/message_building_by_channel/sms/keywords/optin_optout/#managing-keywords-and-auto-responses'
-    fa_icon: far fa-handshake
+    fa_icon: fa-handshake
   - 
-    name: Custom Keyword Handling
-    link: /docs/user_guide/message_building_by_channel/sms/keywords/keyword_handling/
-    fa_icon: far fa-handshake
+    name: Manipulation des mots clés personnalisés
+    link: /fr/docs/user_guide/message_building_by_channel/sms/keywords/keyword_handling/
+    fa_icon: fa-handshake
   - 
-    name: SMS FAQs
-    link: /docs/user_guide/message_building_by_channel/sms/faqs/
-    fa_icon: fas fa-comment
+    name: FAQ SMS
+    link: /fr/docs/user_guide/message_building_by_channel/sms/faqs/
+    fa_icon: Fas fa-commentaire
 guide_menu_title: "MMS"
 guide_menu_list:
   - 
-    name: "About MMS"
+    name: "À propos des MMS"
     link: /docs/user_guide/message_building_by_channel/sms/mms/about_mms/
-    fa_icon: fas fa-paint-brush
+    fa_icon: fa-paint-brush fas
   - 
-    name: "MMS Short and Long Codes"
+    name: "Codes courts et longs MMS"
     link: /docs/user_guide/message_building_by_channel/sms/mms/mms_short_long_codes/
-    fa_icon: fas fa-phone-square
+    fa_icon: fa-phone-carré fas
   - 
-    name: "Creating an MMS Campaign"
-    link: /docs/user_guide/message_building_by_channel/sms/mms/create/
+    name: "Création d'une campagne MMS"
+    link: /fr/docs/user_guide/message_building_by_channel/sms/mms/create/
     fa_icon: fas fa-table
   - 
-    name: "MMS FAQs"
-    link: /docs/user_guide/message_building_by_channel/sms/mms/faqs/
-    fa_icon: fas fa-comment
+    name: "FAQ MMS"
+    link: /fr/docs/user_guide/message_building_by_channel/sms/mms/faqs/
+    fa_icon: Fas fa-commentaire
 ---
 
