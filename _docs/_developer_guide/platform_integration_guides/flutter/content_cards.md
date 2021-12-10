@@ -11,7 +11,7 @@ channel: content cards
 
 # Content Cards
 
-The Braze SDKs include a default card feed to get you started with Content Cards. To show the card feed, you can use the `myBrazePlugin.launchContentCards()` method. The default card feed included with the Braze SDK will handle all analytics tracking, dismissals, and rendering for a user's Content Cards.
+The Braze SDK include a default card feed to get you started with Content Cards. To show the card feed, you can use the `myBrazePlugin.launchContentCards()` method. The default card feed included with the Braze SDK will handle all analytics tracking, dismissals, and rendering for a user's Content Cards.
 
 ## Customization
 
@@ -31,7 +31,7 @@ You can use these additional methods to build a custom Content Cards Feed within
 
 You may set a callback in Dart to receive Braze Content Card data in the Flutter host app.
 
-To set the callback, call `BrazePlugin.setBrazeContentCardsCallback()` from your Flutter app with a function that takes a `List<BrazeContentCard>` instance. The `BrazeContentCard` object supports a subset of fields available in the native model objects, including `description`, `title`, `image`, `url`, `extras`, and more.
+To set the callback, call `myBrazePlugin.setBrazeContentCardsCallback()` from your Flutter app with a function that takes a `List<BrazeContentCard>` instance. The `BrazeContentCard` object supports a subset of fields available in the native model objects, including `description`, `title`, `image`, `url`, `extras`, and more.
 
 {% tabs %}
 {% tab Android %}
@@ -41,9 +41,9 @@ On Android, this callback works with no additional integration required.
 {% endtab %}
 {% tab iOS %}
 
-On iOS, you will additionally need to create an `NSNotificationCenter` listener for `ABKContentCardsProcessedNotification` events as described in our [public documentation](https://www.braze.com/docs/developer_guide/platform_integration_guides/ios/content_cards/data_model/).
+Create an `NSNotificationCenter` listener for `ABKContentCardsProcessedNotification` events as described [here](https://www.braze.com/docs/developer_guide/platform_integration_guides/ios/content_cards/data_model/).
 
-Your `ABKContentCardsProcessedNotification` callback implementation must call `BrazePlugin.processContentCards(contentCards)`. For an example, see [AppDelegate.swift in our sample app](https://github.com/braze-inc/braze-flutter-sdk/blob/master/example/ios/Runner/AppDelegate.swift).
+Your `ABKContentCardsProcessedNotification` callback implementation must call `myBrazePlugin.processContentCards(contentCards)`. For an example, see [AppDelegate.swift](https://github.com/braze-inc/braze-flutter-sdk/blob/master/example/ios/Runner/AppDelegate.swift) in our sample app.
 
 {% endtab %}
 {% endtabs %}
@@ -52,21 +52,21 @@ Your `ABKContentCardsProcessedNotification` callback implementation must call `B
 
 To store any content cards triggered before the callback is available and replay them once it is set, add the following entry to the `customConfigs` map in the `BrazePlugin` constructor:
 ```
-replayCallbacksConfigKey : true
+BrazePlugin myBrazePlugin = new BrazePlugin(customConfigs: {replayCallbacksConfigKey: true});
 ```
 
 ## Test displaying sample Content Card
 
 Follow the steps below to test a sample content card.
 
-1. Set an active user in the React application by calling `myBrazePlugin.changeUserId('user-id')` method.
+1. Set an active user in the React application by calling `myBrazePlugin.changeUserId('your-user-id')` method.
 2. Head to **Campaigns** and follow [this guide][4] to create a new **Content Card** campaign.
 3. Compose your test Content Card campaign and head over to the **Test** tab. Add the same `user-id` as the test user and click **Send Test**.
 4. Tap the push notification and that should launch a Content Card on your device. You may need to refresh your feed for it to display.
 
 ![Content Card Campaign Test][5]
 
-For more integrations, follow the [Android integration instructions][2] or the [iOS integration instructions][3], depending on your platform.
+For more details on each platform, follow the [Android integration instructions][2] and the [iOS integration instructions][3].
 
 
 [2]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/content_cards/data_models/

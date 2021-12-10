@@ -93,7 +93,6 @@ ReactAppboy.logInAppMessageClicked(inAppMessage);
 ReactAppboy.logInAppMessageImpression(inAppMessage);
 // Log button index `0` being clicked
 ReactAppboy.logInAppMessageButtonClicked(inAppMessage, 0);
-
 ```
 
 ## Test displaying a sample in-app message
