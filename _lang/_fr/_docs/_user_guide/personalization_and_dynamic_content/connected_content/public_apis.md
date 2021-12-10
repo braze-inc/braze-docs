@@ -1,86 +1,86 @@
 ---
-nav_title: Public APIs
-article_title: Public APIs for Connected Content
+nav_title: API publiques
+article_title: API publiques pour le contenu connecté
 page_order: 4
-description: "This articles covers a list of publicly available APIs that can be used with Connected Content."
+description: "Cet article couvre une liste des API publiquement disponibles qui peuvent être utilisées avec du contenu connecté."
 ---
 
-# Public APIs
+# API publiques
 
-There are a variety of publicly available APIs that can be used for Connected Content. Public APIs allow you to insert custom data in messages.  We've compiled a list below of public APIs that could be used for Connected Content. However, there are many more APIs out there, providing a wide variety of potential Connected Content uses.  [Let us know](mailto:success@braze.com) if you have an API to share!
+Il existe une variété d'API disponibles publiquement qui peuvent être utilisées pour le contenu connecté. Les API publiques vous permettent d'insérer des données personnalisées dans les messages.  Nous avons compilé une liste ci-dessous des API publiques qui pourraient être utilisées pour le contenu connecté. Cependant, il y a beaucoup plus d'APIs disponibles qui fournissent une grande variété d'utilisations potentielles de contenu connecté.  [Faites-nous savoir](mailto:success@braze.com) si vous avez une API à partager !
 
-> Public APIs can be subject to usage restrictions and rate limiting.  Be sure to read through API documentations and contact API providers about your intended use.
+> Les API publiques peuvent être soumises à des restrictions d'utilisation et à des limitations de taux.  N’oubliez pas de lire les documentations de l’API et de contacter les fournisseurs de l’API à propos de votre utilisation prévue.
 
-## News and information
+## Actualités et informations
 
-| API                     | Description                                                                              |
-| ----------------------- | ---------------------------------------------------------------------------------------- |
-| [OpenWeatherMap][7]     | Provides current weather data, 5 and 16 day forecast, and historical data.               |
-| [NYT Article Search][8] | Provides NYT article data which includes headline, topic, URL, date, abstract, etc.      |
-| [The Guardian API][9]   | Provides Guardian article data which includes headline, topic, URL, date, abstract, etc. |
+| API                          | Libellé                                                                                                      |
+| ---------------------------- | ------------------------------------------------------------------------------------------------------------ |
+| [OpenWeatherMap][7]          | Fournit des données météorologiques actuelles, des prévisions de 5 et 16 jours et des données historiques.   |
+| [Recherche d'article NYT][8] | Fournit des données d'article NYT qui incluent le titre, le sujet, l'URL, la date, le résumé, etc.           |
+| [L'API Guardian][9]          | Fournit des données de l'article Guardian qui incluent les titres, le sujet, l'URL, la date, le résumé, etc. |
 {: .reset-td-br-1 .reset-td-br-2}
 
-## Events and ticketing
+## Événements et billetterie
 
-| API                | Description                                                                      |
-| ------------------ | -------------------------------------------------------------------------------- |
-| [SeatGeek][11]     | Provides ticket information for concerts, sports, and theater events.            |
-| [OnConnect][12]    | Provides box-office movie information and showtimes in US and Canadian theaters. |
-| [Eventbrite][19]   | Provides data on a variety of public events.                                     |
-| [Eventful][20]     | Provides data on a variety of public events                                      |
-| [Ticketmaster][38] | Provides data on public events, venues, and prices                               |
+| API                      | Libellé                                                                                                    |
+| ------------------------ | ---------------------------------------------------------------------------------------------------------- |
+| [Geek des sièges][11]    | Fournit des informations sur les billets pour les concerts, les sports et les événements de théâtre.       |
+| [Connecter][12]          | Fournit des informations sur les salles de cinéma et les salles de spectacles des États-Unis et du Canada. |
+| [Eventbrite][19]         | Fournit des données sur une variété d'événements publics.                                                  |
+| [Évènement][20]          | Fournit des données sur une variété d'événements publics                                                   |
+| [Maître des tickets][38] | Fournit des données sur les événements publics, les lieux et les prix                                      |
 {: .reset-td-br-1 .reset-td-br-2}
 
-## Food and drink
+## Nourriture et boisson
 
-| API             | Description                                                |
-| --------------- | ---------------------------------------------------------- |
-| [BreweryDB][40] | Provides information on breweries, beers, and beer events. |
+| API                                   | Libellé                                                                             |
+| ------------------------------------- | ----------------------------------------------------------------------------------- |
+| [Base de données de la brasserie][40] | Fournit des informations sur les brasseries, les bières et les événements de bière. |
 {: .reset-td-br-1 .reset-td-br-2}
 
-## Finance
+## Financement
 
-| api                     | description                                                      |
-| ----------------------- | ---------------------------------------------------------------- |
-| [Barchart OnDemand][36] | Provides a variety of stock, futures, and foreign exchange data. |
-| [CoinDesk][37]          | Provides a variety of cryptocurrency data.                       |
+| api                     | Libellé                                                                                           |
+| ----------------------- | ------------------------------------------------------------------------------------------------- |
+| [Barchart OnDemand][36] | Fournit une variété de données sur les actions, les contrats à terme et les opérations de change. |
+| [CoinDesk][37]          | Fournit une variété de données de cryptomonnaie.                                                  |
 {: .reset-td-br-1 .reset-td-br-2}
 
-## Health
+## Santé
 
-| api                      | description                                        |
-| ------------------------ | -------------------------------------------------- |
-| [AirVisual][42]          | Provides Air quality and weather data.             |
-| [Nutritionix Worlds][43] | Provides verified nutrition data.                  |
-| [USDA Nutrients][45]     | Provides access to the National Nutrient Database. |
+| api                      | Libellé                                                                        |
+| ------------------------ | ------------------------------------------------------------------------------ |
+| [AirVisual][42]          | Fournit des données sur la qualité de l'air et les conditions météorologiques. |
+| [Mondes Nutritionix][43] | Fournit des données nutritionnelles vérifiées.                                 |
+| [Nutriments USDA][45]    | Fournit un accès à la base de données nationale sur les nutriments.            |
 {: .reset-td-br-1 .reset-td-br-2}
 
-## Music
+## Musique
 
-| api               | description                                                                                   |
-| ----------------- | --------------------------------------------------------------------------------------------- |
-| [Last.fm][14]     | Provides a variety of music data including artist information, recommended artists, and more. |
-| [iTunes][24]      | Provides data on a variety of items in the iTunes, App Store, and iBooks stores.              |
-| [Bandsintown][13] | Provides local concert information and recommends live music events.                          |
-| [Songkick][22]    | Provides live music information with artists, venues, locations, etc.                         |
-| [Discogs][21]     | Provides information on artists, labels, and recordings.                                      |
+| api                      | Libellé                                                                                                                          |
+| ------------------------ | -------------------------------------------------------------------------------------------------------------------------------- |
+| [Last.fm][14]            | Fournit une variété de données musicales, y compris des informations sur les artistes, les artistes recommandés, et plus encore. |
+| [iTunes][24]             | Fournit des données sur une variété d'articles dans les magasins iTunes, l'App Store et iBooks.                                  |
+| [Ville de Bandsinus][13] | Fournit des informations sur les concerts locaux et recommande des événements en direct.                                         |
+| [format@@0 Songkick][22] | Fournit des informations sur la musique en direct avec les artistes, les lieux, les lieux, etc.                                  |
+| [Discogs][21]            | Fournit des renseignements sur les artistes, les étiquettes et les enregistrements.                                              |
 {: .reset-td-br-1 .reset-td-br-2}
 
-## Product information
+## Informations sur le produit
 
-| API        | Description                                                              |
-| ---------- | ------------------------------------------------------------------------ |
-| [eBay][15] | Provides live eBay data including item data, popular searches, and more. |
+| API        | Libellé                                                                                                        |
+| ---------- | -------------------------------------------------------------------------------------------------------------- |
+| [eBay][15] | Fournit des données eBay en direct, y compris des données d'objets, des recherches populaires, et plus encore. |
 {: .reset-td-br-1 .reset-td-br-2}
 
-## Miscellaneous
+## Divers
 
-| api                                    | description                                                                       |
-| -------------------------------------- | --------------------------------------------------------------------------------- |
-| [Numbers API][18]                      | Provides random numerical trivia facts.                                           |
-| [Clearbit][27]                         | Provides company logo images.                                                     |
-| [London Unified][28] and [NYC MTA][29] | Provide realtime public transit data including line statuses, arrival times, etc. |
-| [Sunrise and Sunset][39]               | Provides Sunset and sunrise times for a given latitude and longitude.             |
+| api                                   | Libellé                                                                                                           |
+| ------------------------------------- | ----------------------------------------------------------------------------------------------------------------- |
+| [Numéros API][18]                     | Fournit des données numériques aléatoires.                                                                        |
+| [Clair][27]                           | Fournit des images du logo de l'entreprise.                                                                       |
+| [Londres unifié][28] et [NYC MTA][29] | Fournir des données de transport en commun en temps réel, y compris l'état des lignes, les heures d'arrivée, etc. |
+| [Lever et coucher du soleil][39]      | Fournit le coucher du soleil et le lever du soleil pour une latitude et une longitude données.                    |
 {: .reset-td-br-1 .reset-td-br-2}
 
 [7]: http://openweathermap.org/api
