@@ -1,181 +1,181 @@
 ---
-nav_title: Supported Personalization Tags
-article_title: Supported Liquid Personalization Tags
+nav_title: Tags de personnalisation pris en charge
+article_title: Tags de personnalisation Liquid pris en charge
 page_order: 1
-description: "This reference article covers a complete list of supported Liquid personalization tags."
+description: "Cet article de référence couvre une liste complète des tags de personnalisation Liquid pris en charge."
 ---
 
-# Supported personalization tags
+# Tags de personnalisation pris en charge
 
-As a convenience, a summary of supported personalization tags are listed below. For more detail on each kind of tag and best practices, continue reading.
+Pour plus de commodité, un résumé des balises de personnalisation sont listées ci-dessous. Pour plus de détails sur chaque type de balises et les meilleures pratiques, continuez à lire.
 
 {% raw %}
 
-| Personalization Tag Type                                           | Tags                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      |
-| ------------------------------------------------------------------ | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Default Attributes                                                 | `{{${city}}}` <br> `{{${country}}}` <br> `{{${date_of_birth}}}` <br> `{{${email_address}}}` <br> `{{${first_name}}}` <br> `{{${gender}}}` <br> `{{${language}}}` <br> `{{${last_name}}}` <br> `{{${last_used_app_date}}}` <br> `{{${most_recent_app_version}}}` <br> `{{${most_recent_locale}}}` <br> `{{${most_recent_location}}}` <br> `{{${phone_number}}}` <br> `{{${time_zone}}}` <br> `{{${twitter_handle}}}` <br> `{{${user_id}}}` <br> `{{${braze_id}}}` <br> `{{${random_bucket_number}}}` |
-| Device Attributes                                                  | `{{most_recently_used_device.${carrier}}}` <br> `{{most_recently_used_device.${id}}}` <br> `{{most_recently_used_device.${idfa}}}` <br> `{{most_recently_used_device.${model}}}` <br> `{{most_recently_used_device.${os}}}` <br> `{{most_recently_used_device.${platform}}}` <br> `{{most_recently_used_device.${google_ad_id}}}` <br> `{{most_recently_used_device.${roku_ad_id}}}` <br> `{{most_recently_used_device.${windows_ad_id}}}`                                                                                                                |
-| Email List Attributes <br> (Learn more [here][43])           | `{{${set_user_to_unsubscribed_url}}}` <br> `{{${set_user_to_subscribed_url}}}` <br> `{{${set_user_to_opted_in_url}}}`                                                                                                                                                                                                                                                                                                                                                                                                                                                                         |
-| SMS Attributes <br> (Learn more [here][48])                  | `{{sms.${inbound_message_body}}}` <br> `{{sms.${inbound_media_urls}}}`                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              |
-| Campaign Attributes                                                | `{{campaign.${api_id}}}` <br> `{{campaign.${dispatch_id}}}` <br> `{{campaign.${name}}}` <br> `{{campaign.${message_name}}}` <br> `{{campaign.${message_api_id}}}`                                                                                                                                                                                                                                                                                                                                                                                                                 |
-| Canvas Attributes                                                  | `{{canvas.${name}}}` <br> `{{canvas.${api_id}}}` <br> `{{canvas.${variant_name}}}` <br> `{{canvas.${variant_api_id}}}`                                                                                                                                                                                                                                                                                                                                                                                                                                                                  |
-| Canvas Step Attributes                                             | `{{campaign.${api_id}}}` <br> `{{campaign.${dispatch_id}}}` <br> `{{campaign.${name}}}` <br> `{{campaign.${message_name}}}` <br> `{{campaign.${message_api_id}}}`                                                                                                                                                                                                                                                                                                                                                                                                                 |
-| Card Attributes                                                    | `{{card.${api_id}}}` <br> `{{card.${name}}}`                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        |
-| Geofencing Events                                                  | `{{event_properties.${geofence_name}}}` <br> `{{event_properties.${geofence_set_name}}}`                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            |
-| Event Properties <br> (These are custom to your app group.)  | `{{event_properties.${your_custom_event_property}}}`                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      |
-| Custom Attributes <br> (These are custom to your app group.) | `{{custom_attribute.${your_custom_attribute}}}`                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           |
+| Type d'étiquette de personnalisation                                                                    | Tags                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      |
+| ------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Attributs par défaut                                                                                    | `{{${city}}}` <br> `{{${country}}}` <br> `{{${date_of_birth}}}` <br> `{{${email_address}}}` <br> `{{${first_name}}}` <br> `{{${gender}}}` <br> `{{${language}}}` <br> `{{${last_name}}}` <br> `{{${last_used_app_date}}}` <br> `{{${most_recent_app_version}}}` <br> `{{${most_recent_locale}}}` <br> `{{${most_recent_location}}}` <br> `{{${phone_number}}}` <br> `{{${time_zone}}}` <br> `{{${twitter_handle}}}` <br> `{{${user_id}}}` <br> `{{${braze_id}}}` <br> `{{${random_bucket_number}}}` |
+| Attributs de l'appareil                                                                                 | `{{most_recently_used_device.${carrier}}}` <br> `{{most_recently_used_device.${id}}}` <br> `{{most_recently_used_device.${idfa}}}` <br> `{{most_recently_used_device.${model}}}` <br> `{{most_recently_used_device.${os}}}` <br> `{{most_recently_used_device.${platform}}}` <br> `{{most_recently_used_device.${google_ad_id}}}` <br> `{{most_recently_used_device.${roku_ad_id}}}` <br> `{{most_recently_used_device.${windows_ad_id}}}`                                                                                                                |
+| Attributs de la liste d'emails <br> (gagnez plus de [ici][43])                                    | `{{${set_user_to_unsubscribed_url}}}` <br> `{{${set_user_to_subscribed_url}}}` <br> `{{${set_user_to_opted_in_url}}}`                                                                                                                                                                                                                                                                                                                                                                                                                                                                         |
+| Attributs SMS <br> (Gagnez plus de [ici][48])                                                     | `{{sms.${inbound_message_body}}}` <br> `{{sms.${inbound_media_urls}}}`                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              |
+| Attributs de la campagne                                                                                | `{{campagne.${api_id}}}` <br> `{{campagne.${dispatch_id}}}` <br> `{{campagne.${name}}}` <br> `{{campagne.${message_name}}}` <br> `{{campagne.${message_api_id}}}`                                                                                                                                                                                                                                                                                                                                                                                                                 |
+| Attributs de la toile                                                                                   | `{{toile.${name}}}` <br> `{{toile.${api_id}}}` <br> `{{toile.${variant_name}}}` <br> `{{toile.${variant_api_id}}}`                                                                                                                                                                                                                                                                                                                                                                                                                                                                      |
+| Attributs de pas de canvas                                                                              | `{{campagne.${api_id}}}` <br> `{{campagne.${dispatch_id}}}` <br> `{{campagne.${name}}}` <br> `{{campagne.${message_name}}}` <br> `{{campagne.${message_api_id}}}`                                                                                                                                                                                                                                                                                                                                                                                                                 |
+| Attributs de la carte                                                                                   | `{{card.${api_id}}}` <br> `{{card.${name}}}`                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        |
+| Événements de géorepérage                                                                               | `{{event_properties.${geofence_name}}}` <br> `{{event_properties.${geofence_set_name}}}`                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            |
+| Propriétés de l'événement <br> (Ces propriétés sont personnalisées à votre groupe d'application.) | `{{event_properties.${your_custom_event_property}}}`                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      |
+| Attributs personnalisés <br> (Ces attributs sont personnalisés pour votre groupe d'application.)  | `{{custom_attribut.${your_custom_attribute}}}`                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            |
 {: .reset-td-br-1 .reset-td-br-2}
 
 {% endraw %}
 
 {% alert important %}
-Campaign, Card, and Canvas attributes are only supported in their corresponding messaging templates (for example, `dispatch_id` is not available in in-app message campaigns).
+Les attributs Campaign, Card et Canvas ne sont pris en charge que dans leurs modèles de messagerie correspondants (par exemple, `dispatch_id` n'est pas disponible dans les campagnes de messages dans l'application).
 {% endalert %}
 
-#### Canvas and campaign tag differences
+#### Différences de balises de toile et de campagne
 
-The behavior for the following tags differs between Canvas and campaigns:
+Le comportement des tags suivants diffère entre Canvas et les campagnes :
 {% raw %}
-- `dispatch_id` differs between Canvas and campaigns because Braze treats Canvas steps (except for Entry Steps, which can be scheduled) as triggered events, even when they are "scheduled". [Learn more about `dispatch_id` behavior in Canvas and campaigns here]({{site.baseurl}}/help/help_articles/data/dispatch_id/).
-- Using the `{{campaign.${name}}}` tag with Canvas will display the Canvas step name. When using this tag with campaigns, it will display the campaign name.
+- `dispatch_id` diffère entre Canvas et les campagnes car Braze traite les pas de Canvas (sauf les pas d'entrée, qui peuvent être programmés) en tant qu'événements déclenchés, même lorsqu'ils sont "programmés". [En savoir plus sur le comportement de `dispatch_id` dans Canvas et les campagnes ici]({{site.baseurl}}/help/help_articles/data/dispatch_id/).
+- En utilisant la balise `{{campaign.${name}}}` avec Canvas affichera le nom de l'étape Canvas . Lorsque vous utilisez ce tag avec des campagnes, il affichera le nom de la campagne.
 {% endraw %}
 
-## Most recently used device information
+## Informations de l'appareil les plus récentes
 
-You can template in the following attributes for the user's most recent device across all platforms. If a user has not used your application (e.g., you imported the user via REST API), then these values will all be `null`.
+Vous pouvez modéliser les attributs suivants pour le périphérique le plus récent de l'utilisateur sur toutes les plateformes. Si un utilisateur n'a pas utilisé votre application (par ex. vous avez importé l'utilisateur via REST API), alors ces valeurs seront toutes `null`.
 
 {% raw %}
 
-| Tag                                                    | Description                                                                                                                                                                                                                     |
-| ------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `{{most_recently_used_device.${browser}}}`             | The most recently used browser on the user's device. Examples include "Chrome" and "Safari".                                                                                                                                    |
-| `{{most_recently_used_device.${id}}}`                  | This is Braze's device identifier. On iOS, this is the Apple Identifier for Vendor (IDFV). For Android and other platforms, it is Braze's device identifier, a randomly generated GUID.                                         |
-| `{{most_recently_used_device.${carrier}}}`             | The most recently used device's telephone service carrier, if available. Examples include "Verizon" and "Orange".                                                                                                               |
-| `{{most_recently_used_device.${ad_tracking_enabled}}}` | If the device has ad tracking enabled or not. This is a boolean value (`true` or `false`).                                                                                                                                      |
-| `{{most_recently_used_device.${idfa}}}`                | For iOS devices, this value will be the Identifier for Advertising (IDFA) if your application is configured with Braze's [optional IDFA collection][40]. For non-iOS devices, this value will be null.                          |
-| `{{most_recently_used_device.${google_ad_id}}}`        | For Android devices, this value will be the Google Play Advertising Identifier if your application is configured with Braze's optional Google Play Advertising ID collection. For non-Android devices, this value will be null. |
-| `{{most_recently_used_device.${roku_ad_id}}}`          | For Roku devices, this value will be the Roku Advertising Identifier that is collected when your application is configured with Braze. For non-Roku devices, this value will be null.                                           |
-| `{{most_recently_used_device.${windows_ad_id}}}`       | For Windows devices, this value will be the Windows Advertising Identifier that is collected when your application is configured with Braze. For non-Windows devices, this value will be null.                                  |
-| `{{most_recently_used_device.${model}}}`               | The device's model name, if available. Examples include "iPhone 6S" and "Nexus 6P" and "Firefox".                                                                                                                               |
-| `{{most_recently_used_device.${os}}}`                  | The device's operating system, if available. Examples include "iOS 9.2.1" and "Android (Lollipop)" and "Windows".                                                                                                               |
-| `{{most_recently_used_device.${platform}}}`            | The device's platform, if available. If set, the value will be one of `ios`, `android`, `windows`, `windows8`, `kindle`, `android_china`, `web`, or `tvos`.                                                                     |
+| Étiquette                                              | Libellé                                                                                                                                                                                                                                                            |
+| ------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| `{{most_recently_used_device.${browser}}}`             | Le navigateur le plus récemment utilisé sur le périphérique de l'utilisateur. Les exemples incluent "Chrome" et "Safari".                                                                                                                                          |
+| `{{most_recently_used_device.${id}}}`                  | Il s'agit de l'identifiant de l'appareil de Brase. Sur iOS, il s'agit de l'Apple Identifier for Vendor (IDFV). Pour Android et d'autres plates-formes, c'est l'identifiant de l'appareil de Braze, un GUID généré aléatoirement.                                   |
+| `{{most_recently_used_device.${carrier}}}`             | Le transporteur de services téléphoniques de l'appareil le plus récent, s'il est disponible. Des exemples incluent "Verizon" et "Orange".                                                                                                                          |
+| `{{most_recently_used_device.${ad_tracking_enabled}}}` | Si l'appareil a activé ou non le suivi des annonces. C'est une valeur booléenne (`true` ou `false`).                                                                                                                                                               |
+| `{{most_recently_used_device.${idfa}}}`                | Pour les appareils iOS, cette valeur sera l'Identificateur pour la publicité (IDFA) si votre application est configurée avec la [collection optionnelle IDFA][40] de Braze. Pour les appareils non-iOS, cette valeur sera nulle.                                   |
+| `{{most_recently_used_device.${google_ad_id}}}`        | Pour les appareils Android, cette valeur sera l'identifiant Google Play Advertising Identifier si votre application est configurée avec la collection optionnelle de Google Play Advertising ID de Braze. Pour les appareils non Android, cette valeur sera nulle. |
+| `{{most_recently_used_device.${roku_ad_id}}}`          | Pour les appareils Roku, cette valeur sera le Roku Advertising Identifier qui est collecté lorsque votre application est configurée avec Braze. Pour les appareils non-Roku, cette valeur sera nulle.                                                              |
+| `{{most_recently_used_device.${windows_ad_id}}}`       | Pour les appareils Windows, cette valeur sera l'identifiant de publicité Windows qui est collecté lorsque votre application est configurée avec Braze. Pour les périphériques non-Windows, cette valeur sera nulle.                                                |
+| `{{most_recently_used_device.${model}}}`               | Le nom du modèle de l'appareil, si disponible. Des exemples incluent "iPhone 6S" et "Nexus 6P" et "Firefox".                                                                                                                                                       |
+| `{{most_recently_used_device.${os}}}`                  | Le système d'exploitation de l'appareil, s'il est disponible. Des exemples incluent "iOS 9.2.1" et "Android (Lollipop)" et "Windows".                                                                                                                              |
+| `{{most_recently_used_device.${platform}}}`            | La plate-forme de l'appareil, si disponible. Si défini, la valeur sera parmi `ios`, `android`, `fenêtres`, `windows8`, `allumer`, `android_china`, `web`, ou `tvos`.                                                                                               |
 {: .reset-td-br-1 .reset-td-br-2}
 
 
-Because there are such a wide range of device carriers, model names, and operating systems, we advise that you thoroughly test any Liquid that conditionally depends on any of those values. These values will be `null` if they are not available on a particular device.
+Parce qu'il existe une telle gamme de transporteurs de périphériques, de noms de modèles et de systèmes d'exploitation, Nous vous conseillons de tester minutieusement tout liquide qui dépend conditionnellement de l'une de ces valeurs. Ces valeurs seront `nulles` si elles ne sont pas disponibles sur un appareil particulier.
 
-## Targeted device information
+## Informations sur l'appareil ciblé
 
-For push notification and in-app message channels, you can template in the following attributes for the device to which a message is being sent. That is, a push notification or in-app message can include device attributes of the device on which the message is being read. Note that these attributes will not work for Content Cards.
+Pour les notifications push et les canaux de messages intégrés à l'application, vous pouvez modéliser les attributs suivants pour l'appareil vers lequel un message est envoyé. Autrement dit, une notification push ou un message dans l'application peuvent inclure des attributs de l'appareil sur lequel le message est en cours de lecture. Notez que ces attributs ne fonctionneront pas pour les cartes de contenu.
 
-| Tag                                    | Description                                                                                                                                                                                                                       |
-| -------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `{{targeted_device.${id}}}`            | This is Braze's device identifier. On iOS, this is the Apple Identifier for Vendor (IDFV). For Android and other platforms, it is Braze's device identifier, a randomly generated GUID.                                           |
-| `{{targeted_device.${carrier}}}`       | The most recently used device's telephone service carrier, if available. Examples include "Verizon" and "Orange".                                                                                                                 |
-| `{{targeted_device.${idfa}}}`          | For iOS devices, this value will be the Identifier for Advertising (IDFA) if your application is configured with Braze's [optional IDFA collection][40]. For non-iOS devices, this value will be null.                            |
-| `{{targeted_device.${google_ad_id}}}`  | For Android devices, this value will be the Google Play Advertising Identifier if your application is configured with Braze's [optional Google Play Advertising ID collection]. For non-Android devices, this value will be null. |
-| `{{targeted_device.${roku_ad_id}}}`    | For Roku devices, this value will be the Roku Advertising Identifier that is collected when your application is configured with Braze. For non-Roku devices, this value will be null.                                             |
-| `{{targeted_device.${windows_ad_id}}}` | For Windows devices, this value will be the Windows Advertising Identifier that is collected when your application is configured with Braze. For non-Windows devices, this value will be null.                                    |
-| `{{targeted_device.${model}}}`         | The device's model name, if available. Examples include "iPhone 6S" and "Nexus 6P" and "Firefox".                                                                                                                                 |
-| `{{targeted_device.${os}}}`            | The device's operating system, if available. Examples include "iOS 9.2.1" and "Android (Lollipop)" and "Windows".                                                                                                                 |
-| `{{targeted_device.${platform}}}`      | The device's platform, if available. If set, the value will be one of `ios`, `android`, `windows`, `windows8`, `kindle`, `android_china`, `web`, or `tvos`. You can also use the `most_recently_used_device` personalization tag. |
+| Étiquette                             | Libellé                                                                                                                                                                                                                                                        |
+| ------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `{{targted_device.${id}}}`            | Il s'agit de l'identifiant de l'appareil de Brase. Sur iOS, il s'agit de l'Apple Identifier for Vendor (IDFV). Pour Android et d'autres plates-formes, c'est l'identifiant de l'appareil de Braze, un GUID généré aléatoirement.                               |
+| `{{targted_device.${carrier}}}`       | Le transporteur de services téléphoniques de l'appareil le plus récent, s'il est disponible. Des exemples incluent "Verizon" et "Orange".                                                                                                                      |
+| `{{targted_device.${idfa}}}`          | Pour les appareils iOS, cette valeur sera l'Identificateur pour la publicité (IDFA) si votre application est configurée avec la [collection optionnelle IDFA][40] de Braze. Pour les appareils non-iOS, cette valeur sera nulle.                               |
+| `{{targted_device.${google_ad_id}}}`  | Pour les appareils Android, cette valeur sera l'identifiant Google Play Advertising Identifier si votre application est configurée avec la [collection facultative de Google Play Advertising ID]. Pour les appareils non Android, cette valeur sera nulle.    |
+| `{{targted_device.${roku_ad_id}}}`    | Pour les appareils Roku, cette valeur sera le Roku Advertising Identifier qui est collecté lorsque votre application est configurée avec Braze. Pour les appareils non-Roku, cette valeur sera nulle.                                                          |
+| `{{targted_device.${windows_ad_id}}}` | Pour les appareils Windows, cette valeur sera l'identifiant de publicité Windows qui est collecté lorsque votre application est configurée avec Braze. Pour les périphériques non-Windows, cette valeur sera nulle.                                            |
+| `{{targted_device.${model}}}`         | Le nom du modèle de l'appareil, si disponible. Des exemples incluent "iPhone 6S" et "Nexus 6P" et "Firefox".                                                                                                                                                   |
+| `{{targted_device.${os}}}`            | Le système d'exploitation de l'appareil, s'il est disponible. Des exemples incluent "iOS 9.2.1" et "Android (Lollipop)" et "Windows".                                                                                                                          |
+| `{{targted_device.${platform}}}`      | La plate-forme de l'appareil, si disponible. Si défini, la valeur sera parmi `ios`, `android`, `fenêtres`, `windows8`, `allumer`, `android_china`, `web`, ou `tvos`. Vous pouvez également utiliser la balise de personnalisation `most_recently_used_device`. |
 {: .reset-td-br-1 .reset-td-br-2}
 
 
 {% endraw %}
 
 
-Because there are such a wide range of device carriers, model names, and operating systems, we advise that you thoroughly test any logic that conditionally depends on any of those values. These values will be `null` if they are not available on a particular device. Furthermore, for push notifications, it is possible that Braze may be unable to discern the device attached to the push notification under certain circumstances such as if the push token was imported via API, resulting in values being `null` for those messages.
+Parce qu'il existe une telle gamme de transporteurs de périphériques, de noms de modèles et de systèmes d'exploitation, Nous vous conseillons de tester en profondeur toute logique qui dépend conditionnellement de l'une de ces valeurs. Ces valeurs seront `nulles` si elles ne sont pas disponibles sur un appareil particulier. En outre, pour les notifications push, il est possible que Braze ne soit pas en mesure de détecter l'appareil attaché à la notification push dans certaines circonstances, par exemple si le jeton push a été importé via API, les valeurs étant `null` pour ces messages.
 
 !\[Personalization\]\[4\]
 
-In some circumstances, you may opt to use [conditional logic][17] instead of setting a default value. Conditional logic allows you to send messages that differ based on the value of a custom attribute.
+Dans certaines circonstances, vous pouvez choisir d'utiliser la [logique conditionnelle][17] au lieu de définir une valeur par défaut. La logique conditionnelle vous permet d'envoyer des messages qui diffèrent en fonction de la valeur d'un attribut personnalisé.
 
-Additionally, you can use conditional logic to [abort messages][18] to customers with null or blank attribute values.
+De plus, vous pouvez utiliser la logique conditionnelle pour [annuler les messages][18] aux clients avec des valeurs d'attributs nuls ou vides.
 
-For example, if you're sending a rewards balance notification to customers, there isn't a good way to account for customers with low and null balances using default values.
+Par exemple, si vous envoyez une notification de solde de récompenses aux clients, il n'y a pas de bonne façon de comptabiliser pour les clients avec des soldes faibles et nuls en utilisant des valeurs par défaut.
 
-In this case, there are two options that may work better than setting a default value:
+Dans ce cas, il y a deux options qui peuvent fonctionner mieux que de définir une valeur par défaut :
 
-1. Abort the message for customers with low, null and blank balances.
+1. Annuler le message pour les clients avec des soldes faibles, nuls et vierges.
 
     !\[NoBalanceAbort\]\[34\]
 
 
-2. Send a completely different message to these customers, perhaps something along the lines of:
+2. Envoyez un message complètement différent à ces clients, peut-être quelque chose comme suit :
 
 {% raw %}
 
 ```liquid
-{% if ${first_name} != blank and ${first_name} != null %}
-Hello {{${first_name} | default: 'there'}}, thanks for downloading!
+{% if ${first_name} != vide et ${first_name} != null %}
+Bonjour {{${first_name} | default: 'there'}}, merci de télécharger !
 {% else %}
-Thanks for downloading!
+Merci pour le téléchargement !
 {% endif %}
 ```
-In this example, a user with a blank or null first name will get the message "Thanks for downloading". You should include a [default value][47] for first name to ensure that your customer does not see Liquid in the event of a mistake.
+Dans cet exemple, un utilisateur avec un prénom vide ou nul recevra le message "Merci d'avoir téléchargé". Vous devez inclure une valeur par défaut [][47] pour le prénom afin de vous assurer que votre client ne voit pas Liquid en cas d'erreur.
 
 {% endraw %}
 
-## Variable tags
+## Tags de la variable
 
-You can use the `assign` tag to create a variable in the message composer. Once you create a variable, you can reference that variable in your messaging logic or message.
+Vous pouvez utiliser la balise `assigner` pour créer une variable dans le composeur du message. Une fois que vous avez créé une variable, vous pouvez référencer cette variable dans votre logique de messagerie ou votre message.
 
-Let's say that you allow your customers to cash in their rewards points for prizes once they accrue 100 rewards points. So, you only want to message customers who would have a points balance above or equal to 100 if they made that additional purchase:
+Disons que vous permettez à vos clients d'encaisser dans leurs points de récompense des prix une fois qu'ils ont accumulé 100 points de récompense. Donc, vous ne voulez envoyer un message aux clients qui auraient un solde de points supérieur ou égal à 100 s'ils faisaient cet achat supplémentaire:
 
 {% raw %}
 ```liquid
-{% assign new_points_balance = {{custom_attribute.${current_rewards_balance} | plus: 50}} %}
+{% assignez new_points_balance = {{custom_attribute.${current_rewards_balance} | plus: 50}} %}
 {% if new_points_balance >= 100 %}
-Make a purchase to bring your rewards points to {{new_points_balance}} and cash in today!
+Effectuez un achat pour apporter vos points de récompense à {{new_points_balance}} et en espèces aujourd'hui !
 {% else %}
 {% abort_message('not enough points') %}
 {% endif %}
 ```
-This tag comes in handy when you want to reformat content that is returned from our \[Connected Content\]\[4\] feature. You can read more about variable tags [here][31].
+Cette balise est pratique lorsque vous voulez reformater le contenu qui est retourné à partir de notre fonctionnalité\[4\] \[Contenu connecté\]. Vous pouvez en savoir plus sur les balises variables [ici][31].
 
 {% endraw %}
 
 {% alert tip %}
-Find yourself assigning the same variables in every message? Instead of writing out the `assign` tag over and over again, you can save that tag as a Content Block and put it at the top of your message instead.
+Vous vous trouvez à assigner les mêmes variables dans chaque message ? Au lieu d'écrire encore et encore la balise `assigner` vous pouvez enregistrer ce tag en tant que bloc de contenu et le placer en haut de votre message à la place.
 
-1. [Create a Content Block]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/content_blocks/#create-a-content-block).
-2. Give your Content Block a name (no spaces or special characters).
-3. Click **Edit** at the bottom of the page.
-4. Type in your `assign` tags.
+1. [Créer un bloc de contenu]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/content_blocks/#create-a-content-block).
+2. Donnez un nom à votre Bloc de Contenu (sans espaces ni caractères spéciaux).
+3. Cliquez sur **Modifier** au bas de la page.
+4. Tapez vos tags `assigner`.
 
-As long as the Content Block is at the top of your message, every time the variable is inserted into your message as an object, it will refer to your chosen custom attribute!
+Tant que le bloc de contenu est en haut de votre message, chaque fois que la variable est insérée dans votre message en tant qu'objet, elle fera référence à l'attribut personnalisé que vous avez choisi !
 {% endalert %}
 
-## Iteration tags
+## Tags d'itération
 
 {% raw %}
-Iteration tags can be used to run a block of code repeatedly. This example features the `for` tag.
+Les balises d'itération peuvent être utilisées pour exécuter un bloc de code de façon répétée. Cet exemple présente la balise `pour`.
 
-Let's say that you're having a sale on Nike sneakers and want to message customers who've expressed interest in Nike. You have an array of product brands viewed on each customer's profile. This array could contain up to 25 product brands, but you only want to message customers who viewed a Nike product as one of their 5 most recent product views.
+Disons que vous avez une vente sur les baskets Nike et que vous voulez envoyer des messages aux clients qui ont exprimé leur intérêt pour Nike. Vous avez une gamme de marques de produits consultées sur le profil de chaque client. Ce tableau peut contenir jusqu'à 25 marques de produits, mais vous voulez seulement envoyer un message aux clients qui ont vu un produit Nike comme l'une de leurs 5 vues les plus récentes des produits.
 
 ```liquid
-{% for items in {{custom_attribute.${Brands Viewed}}} limit:5 %}
-{% if {{items}} contains 'Converse' %}
+{% pour les articles dans {{custom_attribute.{Brands Viewed}}} limite:5 %}
+{% si {{items}} contient 'Convertir' %}
 {% assign converse_viewer = true %}
 {% endif %}
 {% endfor %}
 {% if converse_viewer == true %}
-Sale on Converse!
+Vente en Convertissement!
 {% else %}
 {% abort_message() %}
 {% endif %}
 ```
 
-In this example, we check the first five items in the sneaker brands viewed array. If one of those items is converse, we create the converse_viewer variable and set it to true.
+Dans cet exemple, nous vérifions les cinq premiers éléments des marques de sneaker vues tableau. Si l'un de ces éléments est converti, nous créons la variable converse_viewer et la définissons à true.
 
-Then, we send the sale message when converse_viewer is true. Otherwise, we abort the message.
+Ensuite, nous envoyons le message de vente lorsque converse_viewer est vrai. Sinon, nous annulons le message.
 
-This is a simple example of how iteration tags can be used in Braze's message composer. You can find more information [here][32].
+Ceci est un exemple simple de la façon dont les balises d'itération peuvent être utilisées dans le compositeur de message de Brase. Vous pouvez trouver plus d'informations [ici][32].
 
-## HTTP status codes {#http-personalization}
+## Codes de statut HTTP {#http-personalization}
 
-You can utilize the HTTP status from a [Connected Content][38] call by first saving it as a local variable and then using the `__http_status_code__` key. For example:
+Vous pouvez utiliser le statut HTTP à partir d'un appel [Contenu Connecté][38] en le sauvegardant d'abord en tant que variable locale, puis en utilisant la clé `__http_status_code__`. Par exemple :
 
 ```html
 {% connected_content https://example.com/api/endpoint :save connected %}
@@ -185,47 +185,47 @@ You can utilize the HTTP status from a [Connected Content][38] call by first sav
 ```
 
 {% alert tip %}
-  Be aware that this key will only be automatically added to the Connected Content object if the endpoint returns a JSON object. If the endpoint returns an array or other type, then that key cannot be set automatically in the response.
+  Sachez que cette clé ne sera automatiquement ajoutée à l'objet Contenu connecté que si le point de terminaison renvoie un objet JSON. Si le point de terminaison retourne un tableau ou un autre type, alors cette clé ne peut pas être définie automatiquement dans la réponse.
 {% endalert %}
 
-## Sending messages based on language, most recent locale, and time zone
+## Envoi de messages en fonction de la langue, de la langue locale, et du fuseau horaire le plus récent
 
-In some situations you may wish to send messages that are specific to particular locales. For example, Brazilian Portuguese is typically different than European Portuguese.
+Dans certaines situations, vous pouvez vouloir envoyer des messages spécifiques à des locales particulières. Par exemple, le portugais brésilien est typiquement différent du portugais européen.
 
-Here's an example of how you can use most recent locale to further localize an internationalized message.
+Voici un exemple de la façon dont vous pouvez utiliser la dernière locale pour localiser un message internationalisé.
 
 ```liquid
-{% if ${language} == 'en' %}
-Message in English
+{% if ${language} == 'fr' %}
+Message en anglais
 {% elsif  ${language} == 'fr' %}
-Message in French
+Message en français
 {% elsif  ${language} == 'ja' %}
-Message in Japanese
+Message en japonais
 {% elsif  ${language} == 'ko' %}
-Message in Korean
+Message en coréen
 {% elsif  ${language} == 'ru' %}
-Message in Russian
+Message en russe
 {% elsif ${most_recent_locale} == 'pt_BR' %}
-Message in Brazilian Portuguese
+Message en portugais brésilien
 {% elsif ${most_recent_locale} == 'pt_PT' %}
-Message in European Portuguese
+Message en portugais européen
 {% elsif  ${language} == 'pt' %}
-Message in default Portuguese
+Message par défaut portugais
 {% else %}
-Message in default language
+Message en langue par défaut
 {% endif %}
 ```
 
-In this example, customers with a most recent locale of 'pt_BR' will get a message in Brazilian Portuguese, customers with a most recent locale of 'pt_PT' will get a message in European Portuguese and customers who don't meet the first two conditions but have their language set to Portuguese will get a message in whatever you'd like the default Portuguese language type to be.
+Dans cet exemple, les clients ayant une locale la plus récente de 'pt_BR' recevront un message en portugais brésilien, les clients avec une locale la plus récente de 'pt_PT' recevront un message en portugais européen et les clients qui ne remplissent pas les deux premières conditions mais qui ont leur langue définie en portugais recevront un message dans ce que vous voulez que le type de langue par défaut soit le portugais.
 
-You can also target users based off of their time zone. For example, send one message if they are based in EST and another if they are PST. To do this, save the current time in UTC, and compare an if/else statement with the user's current time to ensure you're sending the right message for the right time zone. You should set the campaign to send in the user's local time zone, to ensure they are getting the campaign at the right time. See below for an example of how to write a message that will go out between 2PM and 3PM and will have a specific message for each time zone.
+Vous pouvez également cibler les utilisateurs en fonction de leur fuseau horaire. Par exemple, envoyez un message s'ils sont basés sur EST et un autre s'ils sont PST. Pour cela, économisez le temps actuel en UTC, et comparez une requête si/autre avec l'heure actuelle de l'utilisateur pour vous assurer que vous envoyez le bon message pour le bon fuseau horaire. Vous devriez configurer la campagne à envoyer dans le fuseau horaire local de l'utilisateur, pour vous assurer qu'il obtient la campagne au bon moment. Voir ci-dessous pour un exemple de comment écrire un message qui sortira entre 14h et 15h et qui aura un message spécifique pour chaque fuseau horaire.
 
 ```liquid
-{% assign hour_in_utc = 'now' | date: '%H' | plus:0 %}
+{% assigner hour_in_utc = 'maintenant' | date: '%H' | plus:0 %}
 {% if hour_in_utc >= 19 && hour_in_utc < 20 %}
-It is between 2:00:00pm and 2:59:59pm ET!
+C'est entre 14:00:00:00 et 14:59:59:59pm ET!
 {% elsif hour_in_utc >= 22 && hour_in_utc < 23 %}
-It is between 2:00:00pm and 2:59:59pm PT!
+C'est entre 14h00 et 14h59:59 pm PT!
 {% else %}
 {% abort_message %}
 {% endif %}
@@ -241,5 +241,6 @@ It is between 2:00:00pm and 2:59:59pm PT!
 [18]: {{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/aborting_messages/
 [40]: {{site.baseurl}}/developer_guide/platform_integration_guides/ios/initial_sdk_setup/optional_idfa_collection/
 [43]: {{site.baseurl}}/user_guide/message_building_by_channel/email/managing_user_subscriptions/#managing-user-subscriptions
+[47]: {{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/setting_default_values/
 [47]: {{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/setting_default_values/
 [48]: {{site.baseurl}}/user_guide/message_building_by_channel/sms/keywords/keyword_handling/#trigger-messages-by-keyword
