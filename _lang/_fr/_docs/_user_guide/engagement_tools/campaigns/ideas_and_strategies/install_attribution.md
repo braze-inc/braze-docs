@@ -1,37 +1,37 @@
 ---
-nav_title: Install Attribution Campaign
-article_title: Understanding User Installs
+nav_title: Installer la campagne d'attribution
+article_title: Comprendre les installations de l'utilisateur
 page_order: 7
-page_type: reference
-description: "This reference article describes user installs (install attribution tracking) and different ways to apply this information within your campaign."
+page_type: Référence
+description: "Cet article de référence décrit les installations de l'utilisateur (installation de suivi d'attribution) et différentes façons d'appliquer cette information dans votre campagne."
 tool:
-  - Campaigns
+  - Campagnes
   - Segments
 ---
 
-# Understanding user installs
+# Comprendre les installations de l'utilisateur
 
-> This reference article goes over the concept of user installs (install attribution tracking) and different ways to apply this information within your campaign.
+> Cet article de référence dépasse le concept de l'utilisateur installe (installation de suivi d'attribution) et différentes façons d'appliquer cette information dans votre campagne.
 
-Install attribution tracking is a great way to improve your initial relationship with your user. Knowing how, where, and even more importantly, why a user installs your app allows you to get a better understanding of who your user is and how you should introduce them to your app. While Braze does not provide install attribution tracking, we can integrate with services such as Fiksu and Tune to seamlessly provide you with install data.
+Installer le suivi des attributions est un excellent moyen d'améliorer votre relation initiale avec votre utilisateur. Savoir comment, où et plus important encore, pourquoi un utilisateur installe votre application vous permet de mieux comprendre qui est votre utilisateur et comment vous devriez le présenter à votre application. Bien que Braze ne fournisse pas de suivi d'attribution d'installation, nous pouvons intégrer avec des services tels que Fiksu et Tune pour vous fournir des données d'installation de façon transparente.
 
-## Segment your users
+## Segment de vos utilisateurs
 
-Once your user installs your app, you can begin segmenting them based on the following [install attribution filters][2]. For instance, a travel app could add users that came from an ad relating to beach vacation deals to a "Beach Lovers" segment. Similarly, a music app could segment users based on the genre of music displayed in the advertisement that led to the install.
+Une fois que votre utilisateur installera votre application, vous pourrez commencer à les segmenter en fonction des [filtres d'attribution d'installation][2] suivants. Par exemple, une application de voyage pourrait ajouter des utilisateurs provenant d'une annonce relative aux offres de vacances sur la plage à un segment "Beach Lovers". De même, une application de musique pourrait segmenter les utilisateurs en fonction du genre de musique affiché dans la publicité qui a conduit à l'installation.
 
-## Best practices
+## Meilleures pratiques
 
-### Personalized onboarding
+### Intégration personnalisée
 
-Now that you have more information about your user, you can personalize their onboarding process. This could be as simple as changing the images in your messages to fit their preferences, or as complex as creating a unique user onboarding for each ad that could lead to an install. To scale out a fully comprehensive sequence of messages that can take user behavior into consideration, please take a look at our documentation on [Canvas][5]
+Maintenant que vous avez plus d'informations sur votre utilisateur, vous pouvez personnaliser leur processus d'intégration. Cela peut être aussi simple que de changer les images dans vos messages pour correspondre à leurs préférences, ou aussi complexe que la création d'un utilisateur unique pour chaque annonce qui pourrait conduire à une installation. Pour mettre à jour une séquence complète de messages qui peut prendre en compte le comportement de l'utilisateur, veuillez consulter notre documentation sur [Canvas][5]
 
-### Reference data from the ad
+### Données de référence de l'annonce
 
-Users may be attracted to your app by a promotional offer or giveaway. Using install attribution data allows you to send campaigns containing discount codes or offers to only the users who installed due to these promotions. In a similar manner, if your ad contains information on a particular product (such as a specific movie in a video app or sale in an eCommerce app), you can send campaigns directing users to the correct page of your app.
+Les utilisateurs peuvent être attirés vers votre application par une offre promotionnelle ou un don. Grâce à l'installation des données d'attribution, vous pouvez envoyer des campagnes contenant des codes de réduction ou des offres aux seuls utilisateurs qui ont installé à cause de ces promotions. De la même manière, si votre annonce contient des informations sur un produit particulier (comme un film spécifique dans une application vidéo ou une vente dans une application eCommerce), vous pouvez envoyer des campagnes dirigant les utilisateurs vers la page correcte de votre application.
 
-## Evaluate advertising efforts
+## Évaluer les efforts de publicité
 
-Install attribution data can be valuable in assessing the effectiveness of different marketing campaigns. Looking through to see which ads and campaigns are leading to the most installs and which are falling behind can be used to focus your resources in the most compelling ads.
+L'installation de données d'attribution peut être précieuse pour évaluer l'efficacité des différentes campagnes de marketing. Pour savoir quelles publicités et quelles campagnes mènent au plus grand nombre d'installations, et qui sont en retard peut être utilisé pour concentrer vos ressources dans les publicités les plus convaincantes.
 [3]: {% image_buster /assets/img_archive/install_onboarding.png %}
 
 [2]: {{site.baseurl}}/user_guide/engagement_tools/segments/segmentation_filters/#install-attribution
