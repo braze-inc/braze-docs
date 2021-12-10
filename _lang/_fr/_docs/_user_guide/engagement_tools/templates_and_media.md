@@ -1,51 +1,51 @@
 ---
-nav_title: "Templates & Media"
-article_title: Templates & Media
+nav_title: "Modèles & Médias"
+article_title: Modèles & Médias
 page_order: 5
-layout: featured
-guide_top_header: "Templates & Media"
-guide_top_text: "The Templates & Media feature of Braze allows you to manage templates and upload images for messages in a single, centralized location. You can consolidate and organize your templates across the dashboard for a coherent look and feel."
-page_type: landing
+layout: en vedette
+guide_top_header: "Modèles & Médias"
+guide_top_text: "La fonctionnalité Modèles & Médias de Braze vous permet de gérer les modèles et de télécharger des images pour les messages dans un seul emplacement centralisé. Vous pouvez consolider et organiser vos modèles à travers le tableau de bord pour une apparence et une impression cohérentes."
+page_type: atterrissage
 tool:
-  - Templates
-  - Media
-description: "This landing page is home to Templates and Media articles. Here you can find resources on how to manage templates, upload images, and create Content Blocks."
-guide_featured_title: "Popular Articles"
+  - Modèles
+  - Médias
+description: "Cette page d'accueil contient des modèles et des articles de média. Ici vous pouvez trouver des ressources sur la façon de gérer des modèles, télécharger des images et créer des blocs de contenu."
+guide_featured_title: "Articles populaires"
 guide_featured_list:
   - 
-    name: Media Library
-    link: /docs/user_guide/engagement_tools/templates_and_media/media_library/
+    name: Médiathèque
+    link: /fr/docs/user_guide/engagement_tools/templates_and_media/media_library/
     fa_icon: fas fa-book-open
   - 
-    name: Content Blocks
-    link: /docs/user_guide/engagement_tools/templates_and_media/content_blocks/
+    name: Blocs de contenu
+    link: /fr/docs/user_guide/engagement_tools/templates_and_media/content_blocks/
     fa_icon: fas fa-columns
   - 
-    name: Duplicate Templates
-    link: /docs/user_guide/engagement_tools/templates_and_media/duplicate/
-    fa_icon: fas fa-copy
+    name: Dupliquer les modèles
+    link: /fr/docs/user_guide/engagement_tools/templates_and_media/duplicate/
+    fa_icon: fa-copy fas
   - 
-    name: Archive Templates
-    link: /docs/user_guide/engagement_tools/templates_and_media/archive/
+    name: Modèles d'archives
+    link: /fr/docs/user_guide/engagement_tools/templates_and_media/archive/
     fa_icon: fas fa-archive
 ---
 
-## About templates & media
+## À propos des modèles & des médias
 
-To access Templates & Media, navigate to __Engagement__ in your left navigation bar of your Braze account, then select __Templates & Media__. !\[Templates and Media\]\[1\]
+Pour accéder aux Modèles & Médias, accédez à __Engagement__ dans votre barre de navigation gauche de votre compte Braze, puis sélectionnez __Modèles & Médias__. !\[Modèles et Médias\]\[1\]
 
-You can use and manage templates and creative content in Templates & Media for the following features:
+Vous pouvez utiliser et gérer des modèles et du contenu créatif dans Modèles & Médias pour les fonctionnalités suivantes :
 
-- [Email Templates][2]
-- [Content Blocks][7]
-- [Webhook Templates][3]
-- [Link Templates][6]
-- [In-App Message Color Profiles and CSS Templates][4]
-- [Manage Assets in the Media Library][5]
+- [Modèles d'email][2]
+- [Blocs de contenu][7]
+- [Modèles de Webhook][3]
+- [Modèles de lien][6]
+- [Profils de couleur de message intégré et modèles CSS][4]
+- [Gérer les actifs dans la Médiathèque][5]
 
 <br>
 
-You can also [duplicate]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/duplicate/) and [archive]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/archive/) templates! Learn more about creating and managing templates and creative content in [Templates & Media]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/).
+Vous pouvez aussi [dupliquer des modèles]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/duplicate/) et [archiver]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/archive/)! En savoir plus sur la création et la gestion de modèles et de contenus créatifs dans [Modèles & Médias]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/).
 [1]: {% image_buster /assets/img_archive/templates_and_media.png %}
 
 [2]: {{site.baseurl}}/user_guide/message_building_by_channel/email/creating_an_email_template/#creating-an-email-template
