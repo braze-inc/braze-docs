@@ -1,48 +1,48 @@
 ---
-nav_title: Capturing Lapsing Users
-article_title: Capturing Lapsing Users
+nav_title: Capturer des utilisateurs en train de tourner
+article_title: Capturer des utilisateurs en train de tourner
 page_order: 1
-page_type: tutorial
-description: "This how-to article addresses the issue of lapsing users and how to effectively use Braze Campaigns to re-engage those users."
+page_type: tutoriel
+description: "Cet article traite de la question de la disparition des utilisateurs et de la manière d'utiliser efficacement Braze Campaigns pour réengager ces utilisateurs."
 tool:
   - Segments
-  - Campaigns
+  - Campagnes
 ---
 
-# Capturing lapsing users
+# Capturer des utilisateurs en cours d'expiration
 
-> This how-to article addresses the issue of lapsing users and how to effectively use Braze campaigns to re-engage those users.
+> Cet article traite de la question de la disparition des utilisateurs et de la manière d'utiliser efficacement les campagnes de Braze pour réengager ces utilisateurs.
 
-If your audience is dwindling, it’s crucial to try wooing them back. Recognizing this necessity, Braze makes it easy to set up automated recurring re-engagement campaigns to capture lapsing users. You can choose the re-engagement timeframe and recurrence that best suits your app, but to demonstrate, we'll get started with a 14 day (2 week) weekly re-engagement plan.
+Si votre auditoire est en baisse, il est crucial d'essayer de les obturer. Reconnaissant cette nécessité, Braze facilite la mise en place de campagnes automatisées de réengagement récurrent pour capturer les utilisateurs qui sont en train de disparaître. Vous pouvez choisir la période de réengagement et la récurrence qui convient le mieux à votre application, mais pour démontrer, nous allons commencer avec un plan de réengagement hebdomadaire de 14 jours (2 semaines).
 
-For more on targeting users, check out our [Campaign Set Up LAB course](http://lab.braze.com/campaign-setup-delivery-targeting-conversions)!
+Pour en savoir plus sur le ciblage des utilisateurs, consultez notre [cours LAB de mise en place de campagne](http://lab.braze.com/campaign-setup-delivery-targeting-conversions)!
 
-## Step 1: Segmentation
+## Étape 1 : Segmentation
 
-First, we’ll create a segment to target users who have not used the app in the past two weeks, using the following filters:
+Tout d'abord, nous allons créer un segment pour cibler les utilisateurs qui n'ont pas utilisé l'application au cours des deux dernières semaines, en utilisant les filtres suivants :
 
-- Last Used App more than 2 weeks ago
-- Last Used App less than 3 weeks ago
+- Dernière application utilisée il y a plus de 2 semaines
+- Dernière application utilisée il y a moins de 3 semaines
 
 !\[SCREENSHOT\]\[1\]
 
-Don’t forget to name the segment something simple and memorable, like “Lapsed Users – 2 Weeks.” Since we’ll be setting up the campaign to recur on a weekly basis, we’ll want to make sure there’s at least 1 week of users captured in the segment. That’s why we’ve selected users who last used the app between 2 and 3 weeks ago.
+N’oubliez pas de nommer le segment quelque chose de simple et mémorable, comme « Utilisateurs laborieux – 2 Semaines». Puisque nous allons mettre en place la campagne pour qu'elle se répète chaque semaine, Nous voulons nous assurer qu’il y a au moins une semaine d’utilisateurs capturés dans le segment. C'est pourquoi nous avons sélectionné les utilisateurs qui ont utilisé l'application pour la dernière fois il y a 2 à 3 semaines.
 
-## Step 2: Campaign creation
+## Étape 2: Création de la campagne
 
-Next, we’ll click **Create Campaign** and choose what type of campaign we will be sending to this segment.
+Ensuite, nous allons cliquer sur **Créer une campagne** et choisir le type de campagne que nous allons envoyer à ce segment.
 
 !\[SCREENSHOT\]\[5\]
 
-We’ll automatically name the campaign “Message to Lapsed Users - 2 Weeks” and select the segment. Here, we will create the content of our message. In the example, we’ll only target iOS users, but you can use Braze for Android and iOS push notifications. The closer to the last time a user was in the app, the more important it is to be topical and relevant. Messaging a user after two weeks of not using the app, it's important to surface relevant content and highlight the benefits of using the app.
+Nous allons automatiquement nommer la campagne « Message aux utilisateurs les moins actifs - 2 semaines » et sélectionner le segment. Ici, nous allons créer le contenu de notre message. Dans l’exemple, nous ne ciblerons que les utilisateurs iOS, mais vous pouvez utiliser Braze pour les notifications push Android et iOS. Plus près de la dernière fois qu'un utilisateur était dans l'application, plus il est important d'être d'actualité et pertinent. Messagerie d'un utilisateur après deux semaines de non-utilisation de l'application, il est important de surfacer le contenu pertinent et de souligner les avantages de l'utilisation de l'application.
 
 !\[SCREENSHOT\]\[2\]
 
-Step 2 is where we’ll create a recurring schedule. We’ll use [local time zone delivery][4] at 5 PM. It’s recommended that you look at your sessions graph to target users just prior to high-usage periods. This ensures that you attempt to re-engage people when they’re most likely to use the app. In addition to local time zone delivery, also check recurring and select weekly. Again, choose the day of the week that you think will resonate most with lapsed users. You can change this later and test your initial hypothesis.
+L'étape 2 est l'endroit où nous allons créer un planning récurrent. Nous utiliserons [la livraison locale du fuseau horaire][4] à 17h. Il est recommandé que vous regardiez le graphique de vos sessions aux utilisateurs cibles juste avant les périodes d'utilisation élevées. Cela vous assure que vous tentez de relancer les contacts quand ils sont le plus susceptibles d'utiliser l'application. En plus de la livraison locale des fuseaux horaires, vérifiez également les récurrents et sélectionnez chaque semaine. Encore une fois, choisissez le jour de la semaine qui, selon vous, résonnera le plus avec les utilisateurs dépassés. Vous pourrez modifier cela plus tard et tester votre hypothèse initiale.
 
 !\[SCREENSHOT\]\[3\]
 
-Now, you’re ready to send the campaign. Confirm the settings on the last page of the wizard and click **Launch Campaign**!
-[1]: {% image_buster /assets/img_archive/2weeklapse1.png %} [2]: {% image_buster /assets/img_archive/2weeklapse3.png %} [3]: {% image_buster /assets/img_archive/2weeklapse4.png %} [5]: {% image_buster /assets/img_archive/2weeklapse2.png %}
+Maintenant, vous êtes prêt à envoyer la campagne. Confirmez les paramètres sur la dernière page de l'assistant et cliquez sur **Lancer la Campagne**!
+[1]: {% image_buster /assets/img_archive/2weeklapse1.png %} [2]: {% image_buster /assets/img_archive/2weeklapse3. ng %} [3]: {% image_buster /assets/img_archive/2weeklapse4.png %} [5]: {% image_buster /assets/img_archive/2weeklapse2.png %}
 
 [4]: {{site.baseurl}}/help/faqs/#what-does-local-time-zone-delivery-offer
