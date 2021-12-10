@@ -1,183 +1,183 @@
 ---
-nav_title: Sending Test Messages
-article_title: Sending Test Messages
+nav_title: Envoi de messages de test
+article_title: Envoi de messages de test
 page_order: 0
 tool:
-  - Campaigns
-page_type: reference
-description: "This reference article covers how to send test messages across the different Braze channels and how to incorporate custom event properties or user attributes."
+  - Campagnes
+page_type: Référence
+description: "Cet article de référence décrit comment envoyer des messages de test à travers les différents canaux de Braze et comment incorporer des propriétés d'événements personnalisés ou des attributs utilisateurs."
 ---
 
-# Sending test messages
+# Envoi de messages de test
 
-> This reference article goes over how to send test messages across the different Braze channels and how to incorporate custom event properties and user attributes. <br> <br> By testing out your campaigns, you can make sure everything about it is just right!
+> Cet article de référence décrit comment envoyer des messages de test à travers les différents canaux de Braze et comment incorporer des propriétés d'événements personnalisés et des attributs utilisateurs. <br> <br> En testant vos campagnes, vous pouvez vous assurer que tout est correct !
 
-Before sending out a messaging campaign to your users, you may want to test it to make sure it looks right and operates in the intended manner. You can create and send test messages to select devices or team members using the tools in the dashboard.
+Avant d'envoyer une campagne de messagerie à vos utilisateurs, vous voudrez peut-être le tester pour vous assurer qu'il a l'air correct et qu'il fonctionne de la manière prévue. Vous pouvez créer et envoyer des messages de test pour sélectionner des appareils ou des membres de l'équipe en utilisant les outils du tableau de bord.
 
 {% alert important %}
-Make sure to save your campaign draft after testing to avoid deleting your campaign. You can send test messages without saving the message as a draft.
+Assurez-vous de sauvegarder le brouillon de votre campagne après avoir testé pour éviter de supprimer votre campagne. Vous pouvez envoyer des messages de test sans enregistrer le message en tant que brouillon.
 {% endalert %}
 
-## Channel-specific test sending
+## Envoi du test spécifique au canal
 
-For steps to send test messages, refer to the section for your channel below.
+Pour les étapes pour envoyer des messages de test, reportez-vous à la section pour votre canal ci-dessous.
 
 {% tabs %}
 {% tab Email %}
 
-#### Email
+#### Courriel
 
-After drafting your email message, click **Preview and Test**. From this page, select the **test send** tab and add your email address or user ID in the **add individual users** field. When you're ready, click **send test** to send your drafted email to your inbox.
+Après avoir rédigé votre message e-mail, cliquez sur **Aperçu et Tester**. À partir de cette page, sélectionnez l'onglet **test send** et ajoutez votre adresse e-mail ou votre ID d'utilisateur dans le champ **ajouter des utilisateurs individuels**. Lorsque vous êtes prêt, cliquez sur **envoyer le test** pour envoyer votre e-mail brouillé dans votre boîte de réception.
 
-![Test Email]({% image_buster /assets/img_archive/testemail.png %}){: style="max-width:40%;" }
+![Test Email]({% image_buster /assets/img_archive/testemail.png %}){: style="largeur-max-40%;" }
 
 {% endtab %}
 {% tab Push %}
 
-#### Mobile push
+#### Push mobile
 
-After drafting your mobile push, select the **Settings** tab and add your email address or user ID in the **Add Individual Users** field. When you're ready, click **Send Test** to send your drafted message to your device.
+Après avoir rédigé votre push mobile, sélectionnez l'onglet **Paramètres** et ajoutez votre adresse e-mail ou votre identifiant d'utilisateur dans le champ **Ajouter des utilisateurs individuels**. Lorsque vous êtes prêt, cliquez sur **Envoyer le test** pour envoyer votre message brouillé à votre appareil.
 
-![Test Push]({% image_buster /assets/img_archive/testpush.png %})
+![Tester la Push]({% image_buster /assets/img_archive/testpush.png %})
 
-#### Web push
+#### Push Web
 
-After creating your web push, select the **Settings** tab. Check **Send Test to Myself** and click **Send Test**.
+Après avoir créé votre push web, sélectionnez l'onglet **Paramètres**. Vérifiez **Envoyer le test à moi-même** et cliquez sur **Envoyer le test**.
 
 ![Test Web Push]({% image_buster /assets/img_archive/testwebpush.png %})
 
-If you have already accepted push messages from the Braze dashboard, you will see the push come through in the corner of your screen. Otherwise, click **Allow** when prompted, and the message will appear.
+Si vous avez déjà accepté les messages push du tableau de bord de Braze, vous verrez apparaître le push dans le coin de votre écran. Sinon, cliquez sur **Autoriser** lorsque vous y êtes invité, et le message apparaîtra.
 
 {% endtab %}
 {% tab In-App Message %}
 
-#### In-app message
+#### Message dans l'application
 
-If you have push notifications set up within your app and on your test device, you can send test in-app messages to your app to see what it looks like in real-time. After drafting your in-app message, select the **Test** tab and add your email address or user ID to the **Add Individual Users** field. When you're ready, click **Send Test**. A test push message will appear at the top of your device screen.
+Si vous avez des notifications push configurées dans votre application et sur votre appareil de test, vous pouvez envoyer des messages de test dans l'application à votre application pour voir à quoi il ressemble en temps réel. Après avoir rédigé votre message dans l'application, sélectionnez l'onglet **Testez** et ajoutez votre adresse e-mail ou votre identifiant d'utilisateur au champ **Ajouter des utilisateurs individuels**. Lorsque vous êtes prêt, cliquez sur **Envoyer le test**. Un message de test push apparaîtra en haut de l'écran de votre appareil.
 
-![Test In App]({% image_buster /assets/img_archive/test-in-app.png %})
+![Tester dans l'application]({% image_buster /assets/img_archive/test-in-app.png %})
 
-Directly clicking and opening the push message will send you to your app, where you'll be able to view your in-app message test.
+En cliquant directement et en ouvrant le message push, vous serez envoyé à votre application, où vous pourrez voir votre test de message dans l'application.
 
 {% endtab %}
 {% tab Content Card %}
 
-#### Content card
+#### Carte de contenu
 
-After creating your Content Card, you can send a test Content Card to your app to see what it will look like in real-time. After drafting your Content Card, select the __Test__ tab and select at least one Content Test Group or individual user to receive this test message.
+Après avoir créé votre Carte de Contenu, vous pouvez envoyer une Carte de Contenu de test à votre application pour voir à quoi elle ressemblera en temps réel. Après avoir rédigé votre carte de contenu, sélectionnez l'onglet __Testez__ et sélectionnez au moins un groupe de test de contenu ou un utilisateur individuel pour recevoir ce message de test.
 
-![Test Content Card]({% image_buster /assets/img/contentcard_test.png %})
+![Tester la carte de contenu]({% image_buster /assets/img/contentcard_test.png %})
 
 {% endtab %}
 {% tab SMS/MMS %}
 
 #### SMS/MMS
 
-After creating your SMS/MMS message, you can send a test message to your phone to see what it will look like in real-time. After drafting your message, select the __Test__ tab and select at least one Content Test Group or individual user to receive this test message.
+Après avoir créé votre message SMS/MMS, vous pouvez envoyer un message de test à votre téléphone pour voir à quoi il ressemblera en temps réel. Après avoir rédigé votre message, sélectionnez l'onglet __Testez__ et sélectionnez au moins un groupe de test de contenu ou un utilisateur individuel pour recevoir ce message de test.
 
-![Test Content Card]({% image_buster /assets/img/sms_test.png %})
+![Tester la carte de contenu]({% image_buster /assets/img/sms_test.png %})
 
 {% endtab %}
 {% tab Webhook %}
 
 #### Webhook
 
-After creating your webhook, you can do a test send to check the webhook response. Select the __test__ tab and select __send test__ to send a test send to the supplied webhook URL. You may also select an individual user to preview the response as a specific user.
+Après avoir créé votre webhook, vous pouvez effectuer un test d'envoi pour vérifier la réponse du webhook. Sélectionnez l'onglet __test__ et sélectionnez __envoyer le test__ pour envoyer un test à l'URL du webhook fournie. Vous pouvez également sélectionner un utilisateur individuel pour prévisualiser la réponse en tant qu'utilisateur spécifique.
 
-![Test Content Card]({% image_buster /assets/img/webhook_test.png %})
+![Tester la carte de contenu]({% image_buster /assets/img/webhook_test.png %})
 
 {% endtab %}
 {% tab News Feed %}
 
-#### News Feed card
+#### Carte de flux d'actualités
 
-Sending a test News Feed card requires you to set up a test segment and subsequently send a test campaign out.
+L'envoi d'une carte de test News Feed nécessite que vous mettiez en place un segment de test et que vous envoyiez ensuite une campagne de test.
 
-##### Step 1: Create a designated test segment
+##### Étape 1 : Créer un segment de test désigné
 
-Once you set up a test segment, you can utilize these messaging channels. The process takes a few short steps and, if configured properly, will only need to be done once.
+Une fois que vous avez configuré un segment de test, vous pouvez utiliser ces canaux de messagerie. Le processus prend quelques étapes courtes et, s'il est correctement configuré, ne devra être fait qu'une seule fois.
 
-Go to the **Segments** page and create a new segment. In the dropdown menu under **Add Filter**, locate the testing filters at the bottom of the list.
+Allez à la page **Segments** et créez un nouveau segment. Dans le menu déroulant sous **Ajouter un filtre**, localisez les filtres de test en bas de la liste.
 
-![Testing Filters]({% image_buster /assets/img_archive/testmessages1.png %})
+![Tester les filtres]({% image_buster /assets/img_archive/testmessages1.png %})
 
-Use these testing filters to select users with specific email addresses or external [user IDs]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/analytics/setting_user_ids/).
+Utilisez ces filtres de test pour sélectionner des utilisateurs avec des adresses e-mail spécifiques ou des [identifiants d'utilisateurs externes]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/analytics/setting_user_ids/).
 
-![Testing Filter Options]({% image_buster /assets/img_archive/testmessages2.png %})
+![Options de filtre de test]({% image_buster /assets/img_archive/testmessages2.png %})
 
-These filters have the following options:
+Ces filtres ont les options suivantes :
 
-1. **Equals** - Looks for an exact match of the email or user ID you provide. Use this if you only want to send the test campaigns to devices associated with a single email or user ID.
-2. **Does not equal** - Use this if you want to exclude a particular email or user ID from test campaigns.
-3. **Matches** - Finds users that have email addresses or user IDs that match part of the search term you provide. You could use this to find only the users with an "@yourcompany.com" address, allowing you to send messages to everyone on your team.
+1. **Equals** - Recherche une correspondance exacte de l'e-mail ou de l'identifiant utilisateur que vous fournissez. Utilisez ceci si vous voulez seulement envoyer les campagnes de test à des appareils associés à un seul e-mail ou identifiant d'utilisateur.
+2. **Ne correspond pas à** - Utilisez ceci si vous voulez exclure un e-mail ou un identifiant utilisateur particulier des campagnes de test.
+3. **Matches** - Trouve les utilisateurs qui ont des adresses e-mail ou des identifiants d'utilisateur qui correspondent à une partie du terme de recherche que vous fournissez. Vous pouvez l'utiliser pour trouver uniquement les utilisateurs avec une adresse "@yourcompany.com", vous permettant d'envoyer des messages à tous les membres de votre équipe.
 
-These filters can also be used in conjunction to narrow down your list of test users. For example, the test segment could include an email address filter that `matches` "@braze.com" and another filter that `does not equal` "sales@braze.com". You can also select multiple specific emails by using the `matches` option and separating the email addresses with a "\|" character (e.g. `matches` "email1@braze.com\|email2@braze.com").
+Ces filtres peuvent également être utilisés en conjonction pour affiner votre liste d'utilisateurs de test. Par exemple, le segment de test pourrait inclure un filtre d'adresse e-mail `correspondant à` "@braze. om" et un autre filtre que `ne correspond pas à` "sales@braze.com". Vous pouvez également sélectionner plusieurs e-mails spécifiques en utilisant l'option `correspond à` et en séparant les adresses e-mail avec un caractère "\|" (e. . `correspond à` "email1@braze.com\|email2@braze.com").
 
-After adding the testing filters to your test segment, verify that you've selected only the users you intended by clicking **Preview** at the top of the segment editor or by exporting that segment's user data to CSV. To export segment user data, click the **User Data** dropdown and select **CSV Export All User Data**.
+Après avoir ajouté les filtres de test à votre segment de test, vérifiez que vous n'avez sélectionné que les utilisateurs que vous avez voulu en cliquant sur **Aperçu** en haut de l'éditeur de segment ou en exportant les données utilisateur de ce segment vers CSV. Pour exporter les données utilisateur du segment, cliquez sur le menu déroulant **Données utilisateur** et sélectionnez **CSV Exporter toutes les données utilisateur**.
 
-![Verify Test Segment]({% image_buster /assets/img_archive/testmessages3.png %})
+![Vérifier le segment de test]({% image_buster /assets/img_archive/testmessages3.png %})
 
-> Exporting the segment's User Data to CSV will give you the most accurate picture of who falls under that segment. The **Preview** tab is only a sample of users in the segment and therefore may appear to have not selected all intended members. For more information, check out [Viewing and Understanding Segment Data][7].
+> Exporter les données utilisateur du segment vers CSV vous donnera l'image la plus précise de qui tombe sous ce segment. L'onglet **Aperçu** n'est qu'un exemple d'utilisateurs dans le segment et peut donc ne pas avoir sélectionné tous les membres prévus. Pour plus d'informations, consultez [Voir et comprendre les données du segment][7].
 
-Once you've confirmed that you're only targeting the users you want to receive the test message, you can either select this segment in an existing campaign that you want to test or click the **Start Campaign** button in the segment menu.
+Une fois que vous avez confirmé que vous ne visez que les utilisateurs que vous souhaitez recevoir le message de test. vous pouvez soit sélectionner ce segment dans une campagne existante que vous voulez tester, soit cliquer sur le bouton **Démarrer la campagne** dans le menu du segment.
 
-##### Step 2: Send a test campaign
+##### Étape 2 : Envoyer une campagne de test
 
-To send test News Feed cards, you need to target your previously created test segment. Begin by creating a multichannel campaign and following the usual steps. When you reach the **Target Users** step, select your test segment as shown below.
+Pour envoyer des cartes de test de flux d'actualités, vous devez cibler votre segment de test précédemment créé. Commencez par créer une campagne multicanal et suivez les étapes habituelles. Lorsque vous atteignez l'étape **Utilisateurs cibles** , sélectionnez votre segment de test comme indiqué ci-dessous.
 
-![Test Segment]({% image_buster /assets/img_archive/test_segment.png %})
+![Groupe de test]({% image_buster /assets/img_archive/test_segment.png %})
 
-Finish confirming your campaign and launch it to test your News Feed cards.
+Terminez la confirmation de votre campagne et lancez-la pour tester vos cartes de flux d'actualités.
 
-> Be sure to check the box titled "Allow users to become re-eligible to receive campaign" under the __Schedule__ portion of the campaign wizard if you intend to use a single campaign to send a test message to yourself more than once.
+> Assurez-vous de cocher la case intitulée « Autoriser les utilisateurs à redevenir éligibles pour recevoir une campagne » dans la section __Planifier__ de l'assistant de campagne si vous avez l'intention d'utiliser une seule campagne pour vous envoyer un message de test plus d'une fois.
 
 {% endtab %}
 {% endtabs %}
 
-## Campaign personalized with user attributes
+## Campagne personnalisée avec les attributs de l'utilisateur
 
-If you are using [personalization][26] in your message, you'll need to take additional steps to properly preview your campaign and check that user data is properly populating the content.
+Si vous utilisez [la personnalisation][26] dans votre message, vous devrez prendre des mesures supplémentaires pour prévisualiser correctement votre campagne et vérifier que les données utilisateur sont correctement remplies.
 
-When sending a test message, make sure to choose either the option to **Select Existing User** or preview as a **Custom User**.
+Lors de l'envoi d'un message de test, assurez vous de choisir soit l'option de **Sélectionner l'utilisateur existant** ou de prévisualiser en tant que **Utilisateur Personnalisé**.
 
 !\[Testing a personalized message\]\[23\]{: style="max-width:70%;" }
 
-If selecting an existing user, enter a specific app user's user ID or email in the search field. Then use the dashboard preview to see how your message would appear to that user, and send a test message to your device that reflects what that user would see.
+Si vous sélectionnez un utilisateur existant, entrez l'ID d'utilisateur ou l'email d'un utilisateur de l'application spécifique dans le champ de recherche. Ensuite, utilisez l'aperçu du tableau de bord pour voir comment votre message apparaîtrait à cet utilisateur, et envoyer un message de test à votre appareil qui reflète ce que cet utilisateur verrait.
 
-!\[Select a user\]\[24\]
+!\[Sélectionnez un utilisateur\]\[24\]
 
-If previewing as a customized user, enter text for various fields available for personalization, such as the user's first name and any custom attributes. Once again, you can enter your own email address to send a test to your device.
+Si vous prévisualisez en tant qu'utilisateur personnalisé, entrez du texte pour différents champs disponibles pour la personnalisation, tels que le prénom de l'utilisateur et les attributs personnalisés. Une fois de plus, vous pouvez entrer votre propre adresse e-mail pour envoyer un test à votre appareil.
 
-!\[Custom user\]\[25\]
+!\[Utilisateur personnalisé\]\[25\]
 
-## Campaign personalized with custom event properties
+## Campagne personnalisée avec des propriétés d'événement personnalisées
 
-Testing campaigns [personalized][20] with [custom event properties][19] differs slightly from testing other types of campaigns outlined above. The most robust way to test campaigns personalized using custom event properties is to trigger the campaign yourself. Begin by writing up the copy involving the event property:
+Le test des campagnes [personnalisées][20] avec [propriétés d'événement personnalisées][19] diffère légèrement du test des autres types de campagnes décrits ci-dessus. La façon la plus robuste de tester des campagnes personnalisées en utilisant des propriétés d'événement personnalisées est de déclencher la campagne vous-même. Commencez par écrire la copie de la propriété de l'événement:
 
 !\[Composing Test Message with Properties\]\[15\]
 
-Then use [action-based delivery][21] to deliver the campaign when the event occurs.
+Ensuite, utilisez [la distribution basée sur l'action][21] pour livrer la campagne lorsque l'événement se produit.
 
 {% alert note %}
-If you're testing an iOS Push campaign, you must set the delay to 1 minute to allow yourself time to exit the app since iOS doesn't deliver push notifications for the currently open app. Other types of campaigns can be set to deliver immediately.
+Si vous testez une campagne Push iOS, vous devez définir le délai à 1 minute pour vous laisser le temps de quitter l'application car iOS ne délivre pas de notifications push pour l'application actuellement ouverte. D'autres types de campagnes peuvent être configurées pour être livrées immédiatement.
 {% endalert %}
 
 !\[Test Message Delivery\]\[16\]
 
-As described above, target the users as you would for testing using either a testing filter or by targeting your own email address and finish creating the campaign.
+Comme décrit ci-dessus, cibler les utilisateurs comme vous le feriez pour tester soit en utilisant un filtre de test, soit en ciblant votre propre adresse e-mail et en finissant la création de la campagne.
 
 !\[Test Message Targeting\]\[17\]
 
-Go into your app and complete the custom event, and the campaign will trigger, and you should see the message customized with the event property:
+Allez dans votre application et complétez l'événement personnalisé, et la campagne se déclenchera, et vous devriez voir le message personnalisé avec la propriété de l'événement:
 
-!\[Test Message Example\]\[18\]
+!\[Exemple de message de test\]\[18\]
 
-Alternatively, if you are saving custom user IDs, you can also test the campaign by sending a customized test message to yourself. After writing the copy for your campaign, select the **Test** tab and choose **Customized User**. Add the custom event property on the bottom of the page, add your user ID or email address to the top box, and click **Send Test**.
+Alternativement, si vous enregistrez des identifiants d'utilisateur personnalisés, vous pouvez également tester la campagne en vous envoyant un message de test personnalisé. Après avoir écrit la copie de votre campagne, sélectionnez l'onglet **Test** et choisissez **Utilisateur personnalisé**. Ajouter la propriété événement personnalisé en bas de la page, ajoutez votre ID d'utilisateur ou votre adresse e-mail à la case supérieure, et cliquez sur **Envoyer le test**.
 
-You should receive a message personalized with the property.
+Vous devriez recevoir un message personnalisé avec la propriété.
 
-!\[Testing Using Customized User\]\[22\]
-[13]: {% image_buster /assets/img_archive/test-push-for-in-app.png %} [15]: {% image_buster /assets/img_archive/testeventproperties-compose.png %} [16]: {% image_buster /assets/img_archive/testeventproperties-delivery.png %} [17]: {% image_buster /assets/img_archive/testeventproperties-target.png %} [18]: {% image_buster /assets/img_archive/testeventproperties-message.PNG %} [22]: {% image_buster /assets/img_archive/testeventproperties-customuser.png %} [23]: {% image_buster /assets/img_archive/personalized_testing.png %} [24]: {% image_buster /assets/img_archive/personalized_testing_select.png %} [25]: {% image_buster /assets/img_archive/personalized_testing_custom.png %}
+!\[Testing using Customized User\]\[22\]
+[13]: {% image_buster /assets/img_archive/test-push-for-in-app.png %} [15]: {% image_buster /assets/img_archive/testeventproperties-compose.png %} [16]: {% image_buster /assets/img_archive/testeventproperties-delivery. ng %} [17]: {% image_buster /assets/img_archive/testeventproperties-target.png %} [18]: {% image_buster /assets/img_archive/testeventproperties-message. NG %} [22]: {% image_buster /assets/img_archive/testeventproperties-customuser.png %} [23]: {% image_buster /assets/img_archive/personalized_testing. ng %} [24]: {% image_buster /assets/img_archive/personalized_testing_select.png %} [25]: {% image_buster /assets/img_archive/personalized_testing_custom.png %}
 
 [7]: {{site.baseurl}}/user_guide/data_and_analytics/your_reports/viewing_and_understanding_segment_data/#user-preview
 [19]: {{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/#custom-event-properties
