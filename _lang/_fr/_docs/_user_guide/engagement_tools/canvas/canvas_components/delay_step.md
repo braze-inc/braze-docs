@@ -1,70 +1,70 @@
 ---
-nav_title: Delay Step
-article_title: Delay Step
-alias: "/delay_step/"
+nav_title: Délai
+article_title: Délai
+alias: "/fr/delay_step/"
 page_order: 3
-page_type: reference
-description: "This reference article covers how to add a delay to your Canvas without needing to add an associated message."
-tool: Canvas
+page_type: Référence
+description: "Cet article de référence explique comment ajouter un délai à votre Canvas sans avoir à ajouter un message associé."
+tool: Toile
 ---
 
-# Delay Step
+# Délai
 
-Delay Steps allow you to add a stand-alone delay to a Canvas. You can add a delay to your Canvas without needing to add an associated message. Delay Steps can make your Canvas cleaner. Where you've previously needed to create two full steps, you can create one delay step and a single, full step.
+Les étapes de délai vous permettent d'ajouter un délai autonome à un Canvas. Vous pouvez ajouter un délai à votre Canvas sans avoir à ajouter un message associé. Les étapes de délai peuvent rendre votre Canvas plus propre. Là où vous avez précédemment besoin de créer deux étapes complètes, vous pouvez créer une étape de délai et une étape unique et complète.
 
-You can also use Canvas Delay Steps to delay a step until an exact date, until a specific day, or until a specific day of the week.
+Vous pouvez également utiliser Canvas Delay Steps pour retarder une étape jusqu'à une date exacte, jusqu'à un jour spécifique, ou jusqu'à un jour précis de la semaine.
 
 !\[Canvas Delay Step\]\[1\]{: style="float:right;max-width:30%;margin-left:15px;"}
 
-## Create a delay step
+## Créer une étape de délai
 
-To create a Delay Step, add a step to your Canvas. Then, use the drop-down at the top of the new step to select **Delay**.
+Pour créer une étape de délai, ajoutez une étape à votre Canevas. Ensuite, utilisez le menu déroulant en haut de la nouvelle étape pour sélectionner **Delay**.
 
-- A Delay Step cannot have full step sibling steps. In other words, you cannot create a full step that branches into a Delay Step and a full step. This restriction exists because if there was a branch with a Delay Step and a full step, it wouldn’t be clear which branch users would go down.
-- A Delay Step can only connect to one next step.
+- Une étape de délai ne peut pas avoir des étapes fraternelles en pleine étapes. En d'autres termes, vous ne pouvez pas créer une étape complète qui branche en une étape de délai et une étape complète. Cette restriction existe car s'il y avait une branche avec une étape de délai et une étape complète, il ne serait pas clair quels utilisateurs de la branche descendraient.
+- Une étape de délai ne peut se connecter qu'à une étape suivante.
 
-### Time delay options
+### Options de délai
 
-You can choose the type of delay before the next message in your Canvas. You can either set a delay for your users to last until after a designated time period, or delay your users until a specific date and time.
+Vous pouvez choisir le type de délai avant le message suivant dans votre Canvas. Vous pouvez soit définir un délai pour que vos utilisateurs puissent durer après une période spécifiée, ou retardez vos utilisateurs jusqu'à une date et heure précises.
 
 {% tabs %}
   {% tab After a duration %}
 
-  The **After a duration** option allows you to delay users for a set number of seconds, minutes, hours, days or weeks, and at a specific time. For example, you can delay users for four hours or for one day.
+  L'option **Après une durée** vous permet de retarder les utilisateurs pour un nombre défini de secondes, minutes, heures, jours ou semaines, et à une heure précise. Par exemple, vous pouvez retarder les utilisateurs pour quatre heures ou pour une journée.
 
   {% endtab %}
   {% tab Until a specific date %}
 
-  The **Until a specific date** option allows you to hold users in the step until a specific date and time.
+  L'option **Jusqu'à une date spécifique** vous permet de maintenir les utilisateurs à l'étape jusqu'à une date et heure spécifique.
 
   {% alert important %}
-  If the selected date and time have already passed by the time users proceed to the delay step, users will exit the Canvas. There can be a maximum of 31 days between the start of the Canvas and the dates chosen for “Wait until Exact Date” steps.
+  Si la date et l'heure sélectionnées sont déjà passées par le moment où les utilisateurs passent à l'étape de retard, les utilisateurs quitteront le Canvas. Il peut y avoir un maximum de 31 jours entre le début de la toile et les dates choisies pour les étapes « Attendre jusqu’à la date exacte ».
   {% endalert %}
   {% endtab %}
   {% tab Until a specific day of the week %}
 
-  The **Until a specific day of the week** option allows you to hold users in the step until a specific day of the week, at a specific time. For example, you can delay users until the next time Thursday arrives at 4pm in the company’s timezone.
+  L'option **Jusqu'à un jour spécifique de la semaine** vous permet de conserver les utilisateurs à l'étape jusqu'à un jour spécifique de la semaine, à un moment précis. Par exemple, vous pouvez retarder les utilisateurs jusqu'à ce que le jeudi suivant arrive à 16h dans le fuseau horaire de la société.
 
-  To successfully configure this, you will also need to select what happens if the user enters the Canvas on the selected day of the week (e.g. Thursday), but after the specified time. You can choose to either advance the user on the same day or hold them until the following week.
+  Pour configurer cela avec succès vous devrez également sélectionner ce qui se passera si l'utilisateur entre dans Canvas le jour de la semaine sélectionné (e. Jeudi), mais après l'heure spécifiée. Vous pouvez choisir d'avancer l'utilisateur le même jour ou de le maintenir jusqu'à la semaine suivante.
   {% endtab %}
 {% endtabs %}
 
-## Using delay steps
+## Utiliser les étapes de délai
 
-Let’s say that it’s June 10. On June 11, you’d like users to enter the Canvas and receive a message about an upcoming promotion. Then, you want to hold users in the Canvas until June 17 at 3pm local time. At 3pm local time on June 17, you want to send users a reminder message about the promotion.
+Disons que c’est le 10 juin. Le 11 juin, vous aimeriez que les utilisateurs entrent sur le Canvas et reçoivent un message au sujet d’une promotion à venir. Ensuite, vous voulez tenir les utilisateurs dans le Canvas jusqu'au 17 juin à 15h heure locale. À 15h heure locale le 17 juin, vous voulez envoyer aux utilisateurs un message de rappel au sujet de la promotion.
 
-You’d start by adding a full step that sends immediately after users enter the Canvas on June 11. Then, you’d create a delay step that holds users in the step until 3pm local time on June 17. After that, you’d link the delay step to a full step that sends it’s message immediately.
+Vous commencerez par ajouter une étape complète qui vous enverra immédiatement après l’entrée des utilisateurs sur Canvas le 11 juin. Ensuite, vous créerez une étape de retard qui contiendra les utilisateurs à l’étape jusqu’à 15h heure locale le 17 juin. Après cela, vous liez le délai à une étape complète qui envoie un message immédiatement.
 
-## Delay step analytics
+## Délai de l'analyse des étapes
 
-Delay steps have three statistics available in the analytics view of an active or previously active Canvas.
+Les étapes de retard comportent trois statistiques disponibles dans la vue analytique d'un Canvas actif ou déjà actif.
 
-| Metric                   | Description                                                                                                                                                   |
-| ------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `Entered`                | Reflects the number of times the step has been entered. If your Canvas has re-eligibility and a user enters a delay step twice, two entries will be recorded. |
-| `Proceeded to Next Step` | Reflects the number of entries that proceeded to the next step in the Canvas.                                                                                 |
-| `Exited Canvas`          | Reflects the number of entries that exited the Canvas and did not proceed to the next step.                                                                   |
+| Métrique                     | Libellé                                                                                                                                                                      |
+| ---------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `Entré`                      | Reflète le nombre de fois où l'étape a été entrée. Si votre Canvas a une rééligibilité et qu'un utilisateur entre deux fois dans un délai, deux entrées seront enregistrées. |
+| `Procédé à l'étape suivante` | Reflète le nombre d'entrées qui ont franchi l'étape suivante dans le Canvas.                                                                                                 |
+| `Toile Sortie`               | Reflète le nombre d'entrées qui ont quitté le Canvas et ne sont pas passées à l'étape suivante.                                                                              |
 {: .reset-td-br-1 .reset-td-br-2}
 
-Time series for these analytics are available in the expanded step view.
+Les séries temporelles pour ces analyses sont disponibles dans la vue étapes.
 [1]: {% image_buster /assets/img/canvas_delay.png %}
