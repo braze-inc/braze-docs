@@ -1,27 +1,27 @@
 ---
-nav_title: Email Services
-article_title: Email Services
+nav_title: Services de messagerie
+article_title: Services de messagerie
 page_order: 3
-page_type: reference
-description: "This article covers the types of email support available through Braze."
-channel: email
+page_type: Référence
+description: "Cet article couvre les types de support par email disponibles via Braze."
+channel: Email
 ---
 
-# Email services {#email-services}
+# Services de messagerie {#email-services}
 
-If you need additional support with your email program, we offer recurring and one-time services at an additional cost. For more information reach out to your Account Manager.
+Si vous avez besoin de soutien supplémentaire pour votre programme de messagerie, nous offrons des services récurrents et ponctuels à un coût supplémentaire. Pour plus d'informations, contactez votre gestionnaire de comptes.
 
-## Premium deliverability services {#premium-deliverability-services}
+## Services de livraison premium {#premium-deliverability-services}
 
-We offer two tiers of recurring email support: Premium Deliverability Services and Deliverability Monitoring.
+Nous offrons deux niveaux de support par e-mail récurrent : Services de livraison Premium et suivi de la livraison.
 
-Services Description:
+Description des services :
 
-- Audit of historical/current email sending practices with a review of targeting, cadence, and messaging strategies
-- Whitelabel configuration and customized IP warming plan created by an email deliverability expert
-  - Regular check-in calls during your first month (three times per week for Premium Deliverability and once per week for Deliverability Monitoring)
-- Regular call with deliverability expert (twice per month for Premium Deliverability and monthly Deliverability Monitoring) to provide:
-  - Monitoring of deliverability performance by domain
-  - Recommendations to improve email program performance and results utilizing data and established best practices
-- Crisis Triage - in the event of a deliverability issue, like a block or blacklist, our team will help mitigate and remediate
+- Audit des pratiques historiques et actuelles d'envoi de courriels avec un examen des stratégies de ciblage, de cadence et de messagerie
+- Configuration du label blanc et plan de réchauffement IP personnalisé créé par un expert en délivrance de courrier électronique
+  - Appels d'enregistrement réguliers au cours de votre premier mois (trois fois par semaine pour la livraison Premium et une fois par semaine pour le suivi de la livraison)
+- Appel régulier avec expert en délivrabilité (deux fois par mois pour la capacité de livraison Premium et le suivi mensuel de la livraison) pour fournir :
+  - Surveillance des performances de délivrabilité par domaine
+  - Recommandations pour améliorer la performance du programme de messagerie et les résultats en utilisant les données et les meilleures pratiques établies
+- Triage de crise - en cas de problème de délivrabilité, comme un bloc ou une liste noire, notre équipe aidera à atténuer et à remédier
 
