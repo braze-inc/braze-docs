@@ -1,65 +1,65 @@
 ---
-nav_title: Previous Generations
-article_title: Previous In-App Message Generations
+nav_title: Générations précédentes
+article_title: Génération de messages dans l'application précédente
 page_order: 20
-page_type: reference
-description: "This article reviews prevous information around in-app messages in Braze."
-channel: in-app messages
-noindex: true
+page_type: Référence
+description: "Cet article passe en revue les informations sur les messages dans l'application en Brésil."
+channel: messages intégrés à l'application
+noindex: vrai
 ---
 
-# Previous in-app message generations
+# Générer les messages précédents dans l'application
 
 {% alert important %}
-This page reviews previous information around our in-app messages. To see the most up-to date information on our current in-app message generation, see our current [in-app messages]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/) documentation.
+Cette page passe en revue les informations précédentes autour de nos messages dans l'application. Pour voir les informations les plus à jour sur la génération actuelle de messages dans l'application, consultez notre documentation actuelle de [messages dans l'application]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/).
 {% endalert %}
 
-## Universal
+## Universel
 
-This will review previous information around our in-app messages. To see the most up-to date information on our current in-app message generation, see our [in-app message overview documentation]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/).
+Ceci va examiner les informations précédentes autour de nos messages dans l'application. Pour voir les informations les plus à jour sur la génération actuelle de messages dans l'application, consultez notre [documentation d'aperçu des messages dans l'application]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/).
 
 {% details Full-Screen %}
-These are the most engaging, but also the most intrusive since they cover your user’s entire screen. They are great for displaying large, rich images, and can be useful in conveying very important information, such as crucial new features and expiring promotions. Since they are more disruptive of the user experience, use these sparingly for top priority content.
+Celles-ci sont les plus intéressantes, mais aussi les plus intrusives puisqu’elles couvrent l’écran entier de votre utilisateur. Ils sont parfaits pour afficher de grandes images riches, et peuvent être utiles pour transmettre des informations très importantes, telles que des nouvelles fonctionnalités cruciales et des promotions qui expirent. Etant donné qu'ils sont plus perturbateurs de l'expérience de l'utilisateur, utilisez-les avec parcimonie pour le contenu prioritaire.
 
-![Full-Screen Message]({% image_buster /assets/img_archive/braze_fullscreen.png %}){: style="max-width:80%;"}
+![Message plein écran]({% image_buster /assets/img_archive/braze_fullscreen.png %}){: style="largeur-max-80%;"}
 
-__Customizable Features__
+__Fonctionnalités personnalisables__
 
-- Header and body text
-- A large image
-- Up to two call to action buttons with separate on click behavior and deep links
-- Different colors for the header and body text, buttons and background
-- Key-value pairs
+- En-tête et corps du texte
+- Une grande image
+- Jusqu'à deux boutons d'appel à l'action avec un comportement séparé au clic et des liens profonds
+- Couleurs différentes pour l'en-tête et le corps du texte, les boutons et l'arrière-plan
+- Paires clé-valeur
 
 {% enddetails %}
 {% details  Modal %}
-These messages aren’t as intrusive as full-screen messages, as they still allow users to see part of your app’s UI. Since they still contain buttons and images, modal messages may be a better option than slideups if you desire a more interactive, visual campaign. These are great for medium priority content, such as app updates and non-urgent deals and events.
+Ces messages ne sont pas aussi intrusifs que les messages en plein écran, car ils permettent toujours aux utilisateurs de voir une partie de l'interface utilisateur de votre application. Comme ils contiennent toujours des boutons et des images, les messages modaux peuvent être une meilleure option que les slideups si vous souhaitez une campagne visuelle plus interactive. Celles-ci sont idéales pour les contenus de priorité moyenne, tels que les mises à jour des applications et les événements non urgents.
 
-![Modal Message]({% image_buster /assets/img_archive/braze_modal.png %}){: style="max-width:80%;"}
+![Message modal]({% image_buster /assets/img_archive/braze_modal.png %}){: style="largeur-max-80%;"}
 
-__Customizable Features__
+__Fonctionnalités personnalisables__
 
-- Header and body text
-- An image or customizable badge icon
-- Up to two call to action buttons with separate on click behavior and deep links
-- Different colors for the header and body text, buttons and background
-- Key-value pairs
+- En-tête et corps du texte
+- Une image ou une icône de badge personnalisable
+- Jusqu'à deux boutons d'appel à l'action avec un comportement séparé au clic et des liens profonds
+- Couleurs différentes pour l'en-tête et le corps du texte, les boutons et l'arrière-plan
+- Paires clé-valeur
 
 {% enddetails %}
 
 {% details Traditional Slideup %}
-These are the least intrusive message type, though they can be more or less attention-grabbing depending on your usage of colors and badge icons. This may be the message format to use when onboarding new users and directing them towards particular in-app features, as they don’t pause the app experience and allow for continuous exploration.
+Il s'agit du type de message le moins intrusif, mais il peut être plus ou moins attentif en fonction de votre utilisation des couleurs et des icônes de badges. Ceci peut être le format de message à utiliser lors de l'intégration de nouveaux utilisateurs et de les diriger vers des fonctionnalités spécifiques dans l'application. puisqu'ils ne mettent pas en pause l'expérience de l'application et permettent une exploration continue.
 
-![Slideup Message]({% image_buster /assets/img_archive/stopwatch_slideup_IAM.gif %}){: style="max-width:50%;"}
+![Message Slideup]({% image_buster /assets/img_archive/stopwatch_slideup_IAM.gif %}){: style="max-width:50%;"}
 
-__Customizable Features__
+__Fonctionnalités personnalisables__
 
-- Body text
-- An image or customizable badge icon
-- Different colors for slideup background, text and icon
-- Message close behavior
-- Slideup position (top or bottom of the app screen)
-- Key-value pairs
+- Corps du texte
+- Une image ou une icône de badge personnalisable
+- Couleurs différentes pour l'arrière-plan du slideup, le texte et l'icône
+- Comportement de fermeture des messages
+- Position du glissement (haut ou bas de l'écran de l'application)
+- Paires clé-valeur
 
 {% enddetails %}
 
@@ -67,100 +67,100 @@ __Customizable Features__
 
 ## Web
 
-This will review previous information around more customized in-app messages. To see the most up-to date information on our current in-app message generation, see our [customization documentation]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/customize/).
+Ceci va examiner les informations précédentes autour de messages plus personnalisés dans l'application. Pour voir les informations les plus à jour sur la génération actuelle de messages dans l'application, consultez notre [documentation de personnalisation]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/customize/).
 
 {% details Email Capture Message %}
-Email capture messages allow you to easily prompt users of your site to submit their email address, after which it will be available within the Braze system for use in all your messaging campaigns.
+Les messages de capture de courriel vous permettent d'inviter facilement les utilisateurs de votre site à soumettre leur adresse e-mail, après quoi il sera disponible dans le système Braze pour être utilisé dans toutes vos campagnes de messagerie.
 
-![Email Capture Message]({% image_buster /assets/img_archive/web-email-capture.png %}){: style="max-width:60%;"}
+![Message de capture d'email]({% image_buster /assets/img_archive/web-email-capture.png %}){: style="largeur-max-60%;"}
 
-> To enable Email Capture in-app messages, your SDK integration must supply the `allowUserSuppliedJavascript` initialization option to Braze, e.g. `appboy.initialize('YOUR-API_KEY', {allowUserSuppliedJavascript: true})`. This is for security reasons - HTML in-app messages can execute JavaScript so we require a site maintainer to enable them.
+> Pour activer les messages de capture d'email dans l'application, votre intégration de SDK doit fournir l'option d'initialisation `allowUserSuppliedJavascript` à Braze, . `appboy.initialize('VOTRE API_KEY', {allowUserSuppliedJavascript: true})`. Ceci est pour des raisons de sécurité - les messages HTML dans l'application peuvent exécuter JavaScript donc nous avons besoin d'un responsable du site pour les activer.
 
-__Customizable Features__
+__Fonctionnalités personnalisables__
 
-- Header, body, and submit button text
-- An optional image
-- An optional "Terms of Service" link
-- Different colors for the header and body text, buttons and background
-- Key-value pairs
+- En-tête, corps et texte du bouton Soumettre
+- Une image optionnelle
+- Un lien optionnel "Conditions d'utilisation"
+- Couleurs différentes pour l'en-tête et le corps du texte, les boutons et l'arrière-plan
+- Paires clé-valeur
 
 {% enddetails %}
 
 {% details Custom HTML Message %}
 
-While Braze’s out-of-the box in-app messages can be customized in a variety of ways, you can gain even greater control over the look and feel of your campaigns using messages designed and built using HTML, CSS, and JavaScript. With some simple composition, you can unlock custom functionality and branding to match any of your needs. HTML in-app messages allow for greater control over the look and feel of a message, and anything supported by HTML5 is also supported by Braze.
+Pendant que Braze est sorti de la boite de messages dans l'application peut être personnalisé de différentes manières, vous pouvez prendre encore plus de contrôle sur l'apparence de vos campagnes en utilisant des messages conçus et construits en utilisant HTML, CSS et JavaScript. Avec une composition simple, vous pouvez déverrouiller des fonctionnalités personnalisées et une image de marque pour répondre à vos besoins. Les messages HTML intégrés à l'application permettent un plus grand contrôle sur l'apparence d'un message, et tout ce qui est supporté par HTML5 est également pris en charge par Braze.
 
-__JavaScript Bridge (appboyBridge)__
+__Pont JavaScript (appboyBridge)__
 
-HTML in-app messages support a JavaScript "bridge" interface to the Braze Web SDK, allowing you to trigger custom Braze actions when users click on elements with links or otherwise engage with your content. The following JavaScript methods are supported in Braze's HTML in-app messages:
+Les messages HTML dans l'application prennent en charge une interface JavaScript « pont » vers le SDK Web de Braze, vous permettant de déclencher des actions personnalisées de Braze lorsque les utilisateurs cliquent sur des éléments avec des liens ou s'engagent autrement avec votre contenu. Les méthodes JavaScript suivantes sont prises en charge dans les messages HTML de Braze dans l'application:
 
 {% include archive/appboyBridge.md platform="web" %}
 
-Additionally, for analytics tracking, any `<a>` or `<button>` elements in your HTML will automatically log a "click" action to the campaign associated with the in-app message. To log a "button click" instead of a "body click," either provide a query string value of abButtonId on your link's href (e.g. `<a href="http://mysite.com?abButtonId=0">click me</a>`), or provide an id on the HTML element (e.g. `<a id="0" href="http://mysite.com">click me</a>`). Note that the only button ids currently accepted are "0" and "1." A link with a button id of 0 will be represented as "Button 1" on the Dashboard, while a link with a button id of 1 will be represented as "Button 2."
+De plus, pour le suivi des analytiques, tous les éléments `<a>` ou `<button>` dans votre HTML enregistreront automatiquement une action "clic" à la campagne associée au message dans l'application. Pour enregistrer un "clic de bouton" au lieu d'un "body click", indiquez soit la valeur de la chaîne de requête abButtonId sur le href de votre lien (par ex. `<a href="http://mysite.com?abButtonId=0">cliquez sur moi</a>`), ou fournissez un id sur l'élément HTML (e. . `<a id="0" href="http://mysite.com">cliquez sur moi</a>`). Notez que les seuls identifiants de bouton actuellement acceptés sont "0" et "1." Un lien avec un id de bouton de 0 sera représenté comme "Bouton 1" sur le Tableau de bord, alors qu'un lien avec un identifiant de bouton de 1 sera représenté comme "Bouton 2."
 
-> To enable HTML in-app messages, your SDK integration must supply the `allowUserSuppliedJavascript` initialization option to Braze: for example `appboy.initialize('YOUR-API_KEY', {allowUserSuppliedJavascript: true})`. This is for security reasons - HTML in-app messages can execute JavaScript so we require a site maintainer to enable them.
+> Pour activer les messages HTML dans l'application, votre intégration SDK doit fournir l'option d'initialisation `allowUserSuppliedJavascript` au Brésil : par exemple `appboy. nitialize('VOTRE API_COUR', {allowUserSuppliedJavascript: true})`. Ceci est pour des raisons de sécurité - les messages HTML dans l'application peuvent exécuter JavaScript donc nous avons besoin d'un responsable du site pour les activer.
 
 {% enddetails %}
 
 {% details HTML In App-Message Templates %}
 
-We've designed a set of HTML5 in-app messages templates to help you get started. Check out our [Github repository](https://github.com/Appboy/appboy-custom-html5-in-app-message-templates) which contains detailed instructions on how to use and customize these templates for your needs.
+Nous avons conçu un ensemble de modèles de messages HTML5 dans l'application pour vous aider à démarrer. Consultez notre [dépôt Github](https://github.com/Appboy/appboy-custom-html5-in-app-message-templates) qui contient des instructions détaillées sur la façon d'utiliser et de personnaliser ces modèles pour vos besoins.
 
-__Customizable Features__
+__Fonctionnalités personnalisables__
 
-- Fonts
+- Polices
 - Styles
-- Images + Videos
-- On-click behaviors
-- Interactive Components
+- Images + Vidéos
+- Comportements du clic
+- Composants interactifs
 
 {% enddetails %}
 
 <br>
 
-## Specifications
+## Caractéristiques
 
-This will review previous information around our in-app message creative specifications. to see the most up-to date information on our current in-app message generation, see our [creative specs documentation]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/creative_details/).
+Ceci va examiner les informations précédentes autour des spécifications créatives de notre message dans l'application. pour voir les informations les plus à jour sur la génération de messages actuels dans l'application, consultez notre [documentation de spécification créative]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/creative_details/).
 
-### Character and image limits
+### Limites de caractères et d'images
 
-For all of the in-app message types listed in the table below, the following additional guidelines apply:
+Pour tous les types de messages dans l'application listés dans le tableau ci-dessous, les directives supplémentaires suivantes s'appliquent :
 
-- **Recommended image size:** 500KB
-- **Max image size:** 5MB
-- **Supported file types:** PNG, JPG, GIF
+- **Taille d'image recommandée :** 500 Ko
+- **Taille maximale de l'image :** 5 Mo
+- **Types de fichiers supportés :** PNG, JPG, GIF
 
-| Type                               | Aspect Ratio | Max Character Count |
-|:---------------------------------- |:------------:|:-------------------:|
-| Portrait Full Screen (Image Only)  |    10:16     |         240         |
-| Portrait Full Screen (With Text)   |     5:4      |         240         |
-| Landscape Full Screen (With Text)  |     16:5     |         240         |
-| Landscape Full Screen (Image Only) |    16:10     |         240         |
-| Slideup                            |     1:1      |         140         |
-| Modal (Image Only)                 |     1:1      |         140         |
-| Modal (With Text)                  |    29:10     |         140         |
+| Type de texte                          | Ratio d'aspect | Nombre maximum de caractères |
+|:-------------------------------------- |:--------------:|:----------------------------:|
+| Portrait plein écran (Image seulement) |     10:16      |             240              |
+| Portrait plein écran (avec texte)      |      5:4       |             240              |
+| Paysage plein écran (avec texte)       |      16:5      |             240              |
+| Paysage plein écran (Image seulement)  |     16:10      |             240              |
+| Glissement vers le haut                |      1:1       |             140              |
+| Modal (Image uniquement)               |      1:1       |             140              |
+| Modal (Avec du texte)                  |     29:10      |             140              |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
 
-### Keeping in-app message file sizes small
+### Garder la taille des fichiers de messages dans l'application petite
 
-Braze recommends you keep your images, and HTML assets zips as small as possible for several reasons:
+Braze vous recommande de garder vos images, et les assets HTML aussi petits que possible pour plusieurs raisons:
 
-- Smaller HTML and image message payloads will download faster, and display more quickly and reliably for your customers.
-- Smaller HTML and image message payloads will keep your customer's data costs down as well. Braze in-app messages are downloaded in the background on session start so they can be triggered in real-time based upon whatever criteria you select. As a result, if you have 10 HTML in-app messages of 1MB each, your customers would all incur 10MB of data charges even if they never triggered all of those messages. This can add up quickly over time, even though the in-app messages are cached and not re-downloaded session to session.
+- Les petits payloads HTML et images de messages seront téléchargés plus rapidement et s'afficheront plus rapidement et de manière plus fiable pour vos clients.
+- Les petits blocs HTML et de messages image réduiront également les coûts de données de votre client. Les messages Braze dans l'application sont téléchargés en arrière-plan au démarrage de la session afin qu'ils puissent être déclenchés en temps réel en fonction des critères que vous avez sélectionnés. Par conséquent, si vous avez 10 messages HTML dans l'application de 1 Mo chacun, vos clients auraient tous des frais de 10 Mo de données même s'ils n'ont jamais déclenché tous ces messages. Cela peut s'ajouter rapidement au fil du temps, même si les messages dans l'application sont mis en cache et non retéléchargés session en session.
 
-The following strategies are helpful for keeping file sizes down:
+Les stratégies suivantes sont utiles pour maintenir la taille des fichiers vers le bas :
 
-- Reference fonts embedded in your application or website to customize your HTML in-app messages rather than including the font files in your HTML asset ZIP folder.
-- Ensure no extraneous or duplicative CSS or JavaScript are included in your HTML asset ZIPs.
-- Use [ImageOptim][25] on all images to compress images to their minimum possible size with no reduction in quality.
+- Polices de référence intégrées dans votre application ou votre site Web pour personnaliser vos messages HTML dans l'application plutôt que d'inclure les fichiers de police dans votre dossier ZIP de contenu HTML.
+- Assurez-vous qu'aucun code source CSS ou JavaScript externe ou duplicatif ne soit inclus dans vos ZIP de l'asset HTML.
+- Utilisez [ImageOptim][25] sur toutes les images pour compresser les images à leur taille minimum sans aucune réduction de la qualité.
 
-### iPhone 5 specs
+### Spécifications de l'iPhone 5
 
-!\[iPhone 5 Specs\]\[18\]
+!\[Spécifications iPhone 5\]\[18\]
 
-### iPhone 6 specs
+### Spécifications de l'iPhone 6
 
-!\[iPhone 6 Specs\]\[19\]
+!\[Spécifications iPhone 6\]\[19\]
 [18]: {% image_buster /assets/img_archive/In-AppMsg_Mockups+Specs_05.png %}
 [19]: {% image_buster /assets/img_archive/In-AppMsg_Mockups+Specs_06.png %}
 
