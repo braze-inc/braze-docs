@@ -1,103 +1,103 @@
 ---
-nav_title: Creative Details
-article_title: Creative Details
+nav_title: Détails de la création
+article_title: Détails de la création
 page_order: 1
-layout: featured
-guide_top_header: "Creative Details"
-guide_top_text: "Get creative with our in-app messages! But you should know some of the guidelines, first! All in-app messages templates are designed to display varying lengths of text and sizes of images across modern devices. In order to ensure your message displays well on all phones, tablets, and computers, we recommend you follow these guidelines and always <a href='/docs/user_guide/message_building_by_channel/in-app_messages/testing/'>test your messages</a> before launching. Check out the individual message type's Creative Specs or the global Creative Details below."
-description: "This landing hub covers the design and content requirements for the three types of in-app messages, modal, slideup, and full-screen."
+layout: en vedette
+guide_top_header: "Détails de la création"
+guide_top_text: "Soyez créatif avec nos messages dans l'application! Mais vous devriez d'abord connaître certaines lignes directrices! Tous les modèles de messages intégrés sont conçus pour afficher des longueurs de texte et des tailles d'images variées sur les appareils modernes. Afin de s'assurer que votre message s'affiche bien sur tous les téléphones, tablettes et ordinateurs, nous vous recommandons de suivre ces directives et de toujours <a href='/docs/user_guide/message_building_by_channel/in-app_messages/testing/'>tester vos messages</a> avant de lancer. Consultez les spécifications créatives de chaque type de message ou les détails créatifs globaux ci-dessous."
+description: "Ce hub d'atterrissage couvre la conception et les exigences de contenu pour les trois types de messages intégrés, de messages modaux, de glissements et en plein écran."
 channel:
-  - in-app messages
+  - messages intégrés à l'application
 tools:
-  - Media
-guide_featured_title: "Specifications for Each Message Type"
+  - Médias
+guide_featured_title: "Spécifications pour chaque type de message"
 guide_featured_list:
   - 
     name: Modal
     link: /docs/user_guide/message_building_by_channel/in-app_messages/creative_details/modal/
     image: /assets/img/icon_modal.png
   - 
-    name: Slideup
+    name: Glissement vers le haut
     link: /docs/user_guide/message_building_by_channel/in-app_messages/creative_details/slideup/
     image: /assets/img/icon_slideup.png
   - 
-    name: "Full-Screen"
+    name: "Plein écran"
     link: /docs/user_guide/message_building_by_channel/in-app_messages/creative_details/fullscreen/
     image: /assets/img/icon_full_screen.png
 ---
 
-## Content guidelines
+## Directives de contenu
 
-### Text
+### Texte du texte
 
-For in-app message bodies or headers, we recommend you keep it short and sweet - one to two lines for headers; up to three for bodies. After three lines, the message will likely need to vertically scroll, and users might not engage with all of the content. The threshold that triggers the scroll can vary depending on the end user’s device size, custom styling, or presence of images within messages, but three lines is usually safe!
+Pour les corps de messages intégrés ou les en-têtes, nous vous recommandons de le garder court et doux - une à deux lignes pour les en-têtes; jusqu'à trois pour les corps. Après trois lignes, le message devra probablement faire défiler verticalement, et les utilisateurs pourraient ne pas s'engager avec tout le contenu. Le seuil qui déclenche le défilement peut varier en fonction de la taille du périphérique de l'utilisateur final, style personnalisé, ou présence d'images dans les messages, mais trois lignes sont généralement sûres!
 
-If you are using the newest generation of in-app messages (Generation 3), you'll find that the fonts default to the Operating System default Sans Serif for iOS and Android. Web in-app messages will default to Helvetica.
+Si vous utilisez la dernière génération de messages dans l'application (Génération 3), vous trouverez que les polices sont par défaut sans Serif pour iOS et Android. Les messages Web dans l'application seront par défaut à Helvetica.
 
 ### Images
 
-Our guidelines for images are more structured than those for text, as we want to ensure your messages display as-intended, and beautifully across phones, tablets, and computers of all models and sizes.
+Nos directives pour les images sont plus structurées que celles pour le texte, comme nous voulons nous assurer que vos messages s'affichent comme prévu, et magnifiquement sur les téléphones, les tablettes et les ordinateurs de tous les modèles et tailles.
 
-In general, Braze recommends using images that fit into a 16:10 screen.
+En général, Braze recommande d'utiliser des images qui s'intègrent dans un écran 16:10.
 
-- __All images must be less than 5MB.__
-- We only accept `PNG`, `JPG`, and `GIF` file types.
-- We recommend hosting images in the [Braze Media Library]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/media_library/) to enable the Braze SDK to download assets from our CDN for offline message display.
-- For full-screen messages, follow our guidelines for [Image Safe Zone]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/creative_details/fullscreen/#image-safe-zone).
+- __Toutes les images doivent être inférieures à 5 Mo.__
+- Nous n'acceptons que les types de fichiers `PNG`, `JPG`, et `GIF`.
+- Nous vous recommandons d'héberger des images dans la [Braze Media Library]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/media_library/) pour permettre au Braze SDK de télécharger des ressources de notre CDN pour l'affichage de messages hors ligne.
+- Pour les messages en plein écran, suivez nos consignes pour la [Zone de sécurité d'image]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/creative_details/fullscreen/#image-safe-zone).
 
-{% alert tip %} Create assets with confidence! Our in-app message image templates and safe zone overlays are designed to play nicely with devices of all sizes. [Download Design Templates ZIP]({% image_buster /assets/download_file/Braze-In-App-Message-Design-Templates.zip %}) {% endalert %}
+{% alert tip %} Créez des actifs en toute confiance! Nos modèles d'images de messages intégrés et nos surcouches de zone sécurisées sont conçus pour jouer avec des appareils de toutes tailles. [Télécharger le ZIP des modèles de design]({% image_buster /assets/download_file/Braze-In-App-Message-Design-Templates.zip %}) {% endalert %}
 
 {% tabs %}{% tab Full-Screen %}
 
-![Full-Screen Behavior]({% image_buster /assets/img/full-screen-behavior.gif %}){: style="border:0px;"}
+![Comportement plein écran]({% image_buster /assets/img/full-screen-behavior.gif %}){: style="border:0px;"}
 
-[Further details for full-screens]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/creative_details/fullscreen)
+[Plus de détails pour les écrans entiers]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/creative_details/fullscreen)
 
-| Layout       | Asset Size                                                                 | Notes                                                                                       |
-| ------------ | -------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------- |
-| Image + Text | 6:5 aspect ratio<br>Hi-Res 1200 x 1000px<br> Min. 600 x 500px  | Cropping can occur on all sides, but the image will always fill the top 50% of the viewport |
-| Image Only   | 3:5 aspect ratio<br>Hi-Res 1200 x 2000px<br> Min. 600 x 1000px | Cropping can occur on the left and right edges on taller devices                            |
+| Mise en page     | Taille de l'actif                                                            | Notes                                                                                                                 |
+| ---------------- | ---------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------- |
+| Image + Texte    | Ratio d'aspect 6:5<br>Hi-Res 1200 x 1000px<br> Min. 600 x 500px  | Le recadrage peut se produire sur tous les côtés, mais l'image remplira toujours le top 50% de la fenêtre d'affichage |
+| Image uniquement | Ratio d'aspect 3:5<br>Hi-Res 1200 x 2000px<br> Min. 600 x 1000px | Le recadrage peut se produire sur les bords gauche et droit sur les appareils plus grands                             |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
 
 
 {% endtab %}
 {% tab Modal %}
 
-![Modal Behavior]({% image_buster /assets/img/modal-behavior.gif %}){: style="border:0px;"}
+![Comportement modal]({% image_buster /assets/img/modal-behavior.gif %}){: style="border:0px;"}
 
-[Further details for modals]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/creative_details/modal)
+[Plus de détails pour les modals]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/creative_details/modal)
 
-| Layout       | Asset Size                                                                             | Notes                                                                                                              |
-| ------------ | -------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------ |
-| Image + Text | 29:10 aspect ratio<br>Hi-Res 1450 x 500px<br> Min. 600 x 205px             | Tall images will scale down and be horizontally centered. Wide images will be clipped on the left and right edges. |
-| Image Only   | Nearly any aspect ratio<br>Hi-Res up to 1200 x 2000px<br> Min. 600 x 600px | The message will resize to fit images of most aspect ratios.                                                       |
+| Mise en page     | Taille de l'actif                                                                                      | Notes                                                                                                                             |
+| ---------------- | ------------------------------------------------------------------------------------------------------ | --------------------------------------------------------------------------------------------------------------------------------- |
+| Image + Texte    | Rapport d'aspect 29:10<br>Hi-Res 1450 x 500px<br> Min. 600 x 205 px                        | Les grandes images seront réduites et centrées horizontalement. Les grandes images seront coupées sur les bords gauche et droite. |
+| Image uniquement | Presque n'importe quel ratio d'aspect<br>Hi-Res jusqu'à 1200 x 2000px<br> Min. 600 x 600px | Le message va être redimensionné pour correspondre aux images de la plupart des proportions de la taille.                         |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
 
 {% endtab %}
 {% tab Slideup %}
 
-![Slideup Behavior]({% image_buster /assets/img/slideup-behavior.gif %}){: style="border:0px;"}
+![Comportement de glissement]({% image_buster /assets/img/slideup-behavior.gif %}){: style="border:0px;"}
 
-[Further details for slideups]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/creative_details/slideup)
+[Plus de détails pour les slideups]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/creative_details/slideup)
 
-| Layout       | Asset Size                                                            | Notes                                                                                     |
-| ------------ | --------------------------------------------------------------------- | ----------------------------------------------------------------------------------------- |
-| Image + Text | 1:1 aspect ratio<br>Hi-Res 150 x 150px<br> Min. 50 x 50px | Images of various aspect ratios will fit into a square image container, without cropping. |
+| Mise en page  | Taille de l'actif                                                         | Notes                                                                                                |
+| ------------- | ------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- |
+| Image + Texte | Rapport d'aspect 1:1<br>Hi-Res 150 x 150px<br> Min. 50 x 50px | Les images de différents ratios d'aspect s'insèrent dans un conteneur d'image carré, sans recadrage. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
 
 {% endtab %}
 {% endtabs %}
 
-### GIFs and videos
+### GIFs et vidéos
 
-Braze currently supports GIFs for Web (included), [Android]({{site.baseurl}}/developer_guide/platform_integration_guides/android/in-app_messaging/customization/#gifs-IAMs), and iOS (included) in-app messaging, given that it has been enabled during the desired platform integration. For more on video in in-app messages, see our [Customization documentation]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/customize/#video).
+Braze supporte actuellement les GIFs pour le Web (inclus), [Android]({{site.baseurl}}/developer_guide/platform_integration_guides/android/in-app_messaging/customization/#gifs-IAMs), et la messagerie iOS (incluse) dans l'application, étant donné qu'elle a été activée lors de l'intégration de la plate-forme souhaitée. Pour plus d'informations sur la vidéo dans les messages de l'application, consultez notre [documentation de personnalisation]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/customize/#video).
 
-## Additional considerations
+## Considérations supplémentaires
 
-Braze in-app messages have both global and individual creative specifications. For more information about fully customizing in-app messages, go to our [Customize]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/customize/) page.
+Les messages de Braze dans l'application ont des spécifications à la fois globales et individuelles créatives. Pour plus d'informations sur la personnalisation complète des messages dans l'application, allez sur notre page [Personnaliser]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/customize/).
 
 {% alert important %}
-  These details only apply to our most recent in-app message generation (Generation 3). If you are not using our newest generation of in-app messages, check out our [previous in-app message generations]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/best_practices/previous_in-app_message_generations/) documentation.
+  Ces détails ne s'appliquent qu'à notre plus récente génération de messages dans l'application (Génération 3). Si vous n'utilisez pas notre dernière génération de messages dans l'application, consultez notre documentation de [précédentes générations de messages]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/best_practices/previous_in-app_message_generations/) dans l'application.
 {% endalert %}
 
 <br>
