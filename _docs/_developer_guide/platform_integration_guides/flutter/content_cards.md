@@ -15,7 +15,7 @@ The Braze SDK includes a default card feed to get you started with Content Cards
 
 ## Customization
 
-You can use these additional methods to build a custom Content Cards Feed within your app by using these methods that are available on the [plugin public interface](https://github.com/braze-inc/braze-flutter-sdk/blob/master/lib/braze_plugin.dart):
+You can use these additional methods to build a custom Content Cards Feed within your app by using these methods that are available on the [plugin public interface][7]:
 
 | Method                                         | Description                                                                                            |
 | ---------------------------------------------- | ------------------------------------------------------------------------------------------------------ |
@@ -41,11 +41,11 @@ On Android, this callback works with no additional integration required.
 {% endtab %}
 {% tab iOS %}
 
-Create an `NSNotificationCenter` listener for `ABKContentCardsProcessedNotification` events as described [here](https://www.braze.com/docs/developer_guide/platform_integration_guides/ios/content_cards/data_model/).
+Create an `NSNotificationCenter` listener for `ABKContentCardsProcessedNotification` events as described [here][1].
 
 Your `ABKContentCardsProcessedNotification` callback implementation must call `myBrazePlugin.processContentCards(contentCards)`.
 
-For an example, see [AppDelegate.swift](https://github.com/braze-inc/braze-flutter-sdk/blob/master/example/ios/Runner/AppDelegate.swift) in our sample app.
+For an example, see [AppDelegate.swift][2] in our sample app.
 
 {% endtab %}
 {% endtabs %}
@@ -62,16 +62,19 @@ BrazePlugin myBrazePlugin = new BrazePlugin(customConfigs: {replayCallbacksConfi
 Follow the steps below to test a sample content card.
 
 1. Set an active user in the React application by calling `myBrazePlugin.changeUserId('your-user-id')` method.
-2. Head to **Campaigns** and follow [this guide][4] to create a new **Content Card** campaign.
+2. Head to **Campaigns** and follow [this guide][3] to create a new **Content Card** campaign.
 3. Compose your test Content Card campaign and head over to the **Test** tab. Add the same `user-id` as the test user and click **Send Test**.
 4. Tap the push notification and that should launch a Content Card on your device. You may need to refresh your feed for it to display.
 
-![Content Card Campaign Test][5]
+![Content Card Campaign Test][4]
 
-For more details on each platform, follow the [Android integration instructions][2] or the [iOS integration instructions][3].
+For more details on each platform, follow the [Android integration instructions][5] or the [iOS integration instructions][6].
 
 
-[2]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/content_cards/data_models/
-[3]: {{site.baseurl}}/developer_guide/platform_integration_guides/ios/content_cards/data_model/
-[4]: {{site.baseurl}}/user_guide/message_building_by_channel/content_cards/create
-[5]: {% image_buster /assets/img/react-native/content-card-test.png %} "Content Card Campaign Test"
+[1]: https://www.braze.com/docs/developer_guide/platform_integration_guides/ios/content_cards/data_model/
+[2]: https://github.com/braze-inc/braze-flutter-sdk/blob/master/example/ios/Runner/AppDelegate.swift
+[3]: {{site.baseurl}}/user_guide/message_building_by_channel/content_cards/create
+[4]: {% image_buster /assets/img/react-native/content-card-test.png %} "Content Card Campaign Test"
+[5]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/content_cards/data_models/
+[6]: {{site.baseurl}}/developer_guide/platform_integration_guides/ios/content_cards/data_model/
+[7]: https://github.com/braze-inc/braze-flutter-sdk/blob/master/lib/braze_plugin.dart
