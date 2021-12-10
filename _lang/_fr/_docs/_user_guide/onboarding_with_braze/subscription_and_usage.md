@@ -1,96 +1,96 @@
 ---
-nav_title: Subscriptions and Usage
-article_title: Dashboard Subscription and Usage
-alias: /subscription_and_usage/
+nav_title: Abonnements et utilisation
+article_title: Abonnement et utilisation du tableau de bord
+alias: /abonnement_et_utilisation/
 page_order: 4.1
-page_type: reference
-description: "This reference article covers the Subscriptions and Usage page, where you can monitor and check your data consumption."
-tool: Dashboard
+page_type: Référence
+description: "Cet article de référence couvre la page Abonnements et Usage où vous pouvez surveiller et vérifier votre consommation de données."
+tool: Tableau de bord
 ---
 
-# Subscriptions and usage
+# Abonnements et utilisation
 
-To navigate to the **Subscriptions and Usage** page, select your account icon on the dashboard and select __Subscriptions and Usage__ from the dropdown menu. Customers are encouraged to use this page as a self-serve tool to monitor and check their data consumption.
+Pour accéder à la page **Abonnements et Utilisation** sélectionnez l'icône de votre compte sur le tableau de bord et sélectionnez __Abonnements et Usage__ dans le menu déroulant. Nous encourageons les clients à utiliser cette page comme outil libre-service pour surveiller et vérifier leur consommation de données.
 
-## Page contents
+## Contenu de la page
 
-### Usage graphs
+### Graphiques d'utilisation
 
-Here, you will find usage graphs that apply to your app groups. You may find your own dashboard shows different usage metrics based on the products you have purchased.
+Ici, vous trouverez des graphiques d'utilisation qui s'appliquent à vos groupes d'applications. Vous pouvez trouver que votre propre tableau de bord montre différentes mesures d'utilisation en fonction des produits que vous avez achetés.
 
 !\[Usage Graphs\]\[3\]{: style="max-width:90%;"}
 
-Usage graphs like these are particularly helpful when trying to budget usage and gain a deeper understanding of what app groups contribute to overall usage.
+Les graphiques d'utilisation tels que ceux-ci sont particulièrement utiles lorsque vous essayez de budgétiser l'utilisation et de mieux comprendre ce que les groupes d'applications contribuent à l'utilisation globale.
 
-### Contract details
+### Détails du contrat
 
-Contract details list the start and end date of your current contract with Braze.
+Les détails du contrat listent la date de début et de fin de votre contrat actuel avec Braze.
 
-## Total data points dashboard
+## Tableau de bord des points de données
 
-Your **Total Data Points Dashboard** can be found under the __Total Data Points Dashboard__ tab. You can view all data in this section aggregated by either weeks or months. Click **Run** to apply any changes.
+Votre **Tableau de bord des Points de données totaux** se trouve sous l'onglet __Tableau de bord des Points de données totaux__. Vous pouvez consulter toutes les données de cette section agrégée soit par semaines soit par mois. Cliquez sur **Exécuter** pour appliquer les modifications.
 
-!\[Subscription and Usage\]\[2\]{: style="max-width:80%;"}
+!\[Abonnement and Usage\]\[2\]{: style="max-width:80%;"}
 
-### Contract details
+### Détails du contrat
 
-Here, you’ll find information on when your current Braze contract starts and ends, as well as allotted data points and a sum of all data points that have been used thus far in your current contract.
+Ici, vous trouverez des informations sur le début et la fin de votre contrat de Braze, ainsi que des points de données alloués et une somme de tous les points de données qui ont été utilisés jusqu'à présent dans votre contrat actuel.
 
-!\[Contract Details\]\[5\]
+!\[Détails du contrat\]\[5\]
 
-### Current billing cycle
+### Cycle de facturation actuel
 
-This section of the dashboard displays the data point usage for the current billing cycle. This includes the following information for the current billing cycle:
-- Start date
-- End date
-- Allotted number of data points
-- Total data point usage
+Cette section du tableau de bord affiche l'utilisation des points de données pour le cycle de facturation en cours. Ceci inclut les informations suivantes pour le cycle de facturation actuel :
+- Date de début
+- Date de fin
+- Nombre de points de données alloués
+- Consommation totale de points de données
 
-!\[Current Billing Cycle Info\]\[6\]{: style="max-width:90%;"}
+!\[Infos sur le cycle de facturation actuel\]\[6\]{: style="max-width:90%;"}
 
-### Company billing data
+### Données de facturation de la société
 
-#### Usage across app groups
+#### Utilisation à travers les groupes d'applications
 
-This table allows you to assess the total data point usage of a company by app group. This table gives you the ability to assess how each app group is contributing to the company's data point usage.
+Ce tableau vous permet d'évaluer l'utilisation totale de points de données d'une entreprise par groupe d'applications. Ce tableau vous permet d'évaluer comment chaque groupe d'applications contribue à l'utilisation du point de données de l'entreprise.
 
 !\[App Group Data Point Usage\]\[7\]{: style="max-width:90%;"}
 
-#### Data point usage over time
+#### Utilisation des points de données au fil du temps
 
-This table gives you the ability to quickly see your total data point usage vs your allotted amount of data points.
+Ce tableau vous donne la possibilité de voir rapidement votre utilisation totale des points de données par rapport à la quantité de points de données allouée.
 
 !\[Data Point Usage over Time\]\[8\]{: style="max-width:90%;"}
 
-### App group billing data
+### Données de facturation du groupe d'applications
 
 {% alert note %}
-The app group billing data and app group charts only display for dates after October 1, 2021.
+Les données de facturation du groupe d'applications et les graphiques des groupes d'applications ne s'affichent que pour les dates postérieures au 1er octobre 2021.
 {% endalert %}
 
-#### Drill to app groups
+#### Perçage vers les groupes d'applications
 
-The **Drill to App Groups** lets you view granular data point data for each of your app groups. Click an app group to see its data point details.
+Les **Groupes de Perçage d'Apps** vous permettent de voir les données de points de données granulaires pour chacun de vos groupes d'applications. Cliquez sur un groupe d'applications pour voir les détails de ses points de données.
 
 !\[App Group Drill Down\]\[9\]{: style="max-width:90%;"}
 
-The **App Group Level Data Point Usage by Category** table enables you to see data point counts for each category of data points. For example, you can see the number of data points driven by sessions and custom events. You can use this table to identify the categories of data points that are driving data point consumption for the app group.
+Le tableau **Utilisation par point de données de groupe d'application par catégorie** vous permet de voir le nombre de points de données pour chaque catégorie de points de données. Par exemple, vous pouvez voir le nombre de points de données pilotés par des sessions et des événements personnalisés. Vous pouvez utiliser ce tableau pour identifier les catégories de points de données qui conduisent la consommation de points de données pour le groupe d'applications.
 
-!\[App Group Level Data Point Usage by Category\]\[10\]{: style="max-width:90%;"}
+!\[Utilisation de Point de Données de Niveau par Catégorie\]\[10\]{: style="max-width:90%;"}
 
-The **App Group Level Data Point Usage over Time** table enables you to see how that app group’s data point usage has changed throughout your billing cycle.
+La table **Utilisation des points de données de groupe d'applications au fil du temps** vous permet de voir comment l'utilisation des points de données de ce groupe d'applications a changé tout au long de votre cycle de facturation.
 
-!\[App Group Level Data Point Usage over Time\]\[11\]{: style="max-width:90%;"}
+!\[Utilisation de Point de Données de Niveau de l'App au fil du temps\]\[11\]{: style="max-width:90%;"}
 
-The **App Level Stats** table enables you to see data point usage for each of the apps in your app group. You can use this table to identify which apps are driving data point consumption for the app group.
+La table **Statistiques de niveau d'application** vous permet de voir l'utilisation des points de données pour chacune des applications de votre groupe d'applications. Vous pouvez utiliser ce tableau pour identifier les applications qui conduisent la consommation de points de données pour le groupe d'applications.
 
-!\[App Level Stats\]\[12\]{: style="max-width:90%;"}
+!\[Statistiques de niveau de l'application\]\[12\]{: style="max-width:90%;"}
 
-## Most used events and attributes by app
+## Événements et attributs les plus utilisés par application
 
-The **Most Used Events and Attributes By App** page is a useful tool to understand the drivers of your attribute and custom event data point consumption. For each app, you can find an estimated count of each specific custom attribute, profile attribute, and custom event for the selected time period as well as the percentage of that app’s attribute and event updates that were driven by that attribute or event.
+La page **Événements et attributs les plus utilisés par application** est un outil utile pour comprendre les intentions de votre attribut et la consommation personnalisée de vos données d'événement. Pour chaque application, vous pouvez trouver un nombre estimé de chaque attribut personnalisé, attribut de profil, et événement personnalisé pour la période sélectionnée, ainsi que le pourcentage d'attributs et de mises à jour d'événements de cette application qui ont été pilotés par cet attribut ou l'événement.
 
-Data breakdowns like these can help customers understand what specific data points are taking up large percentages of your allotment. We recommend customers monitor this information from time to time to make sure they aren’t spending data points in accidental and unnecessary ways.
+Les pannes de données comme celles-ci peuvent aider les clients à comprendre quels points de données spécifiques prennent en charge de grands pourcentages de votre allocation de données. Nous recommandons aux clients de surveiller cette information de temps à autre afin de s’assurer qu’ils ne dépensent pas des points de données de manière accidentelle et inutile.
 
-!\[Most Used Events and Attributes By App\]\[4\]
-[2]: {% image_buster /assets/img/subscription_and_billing2.png %} [3]: {% image_buster /assets/img/subscription_and_billing3.png %} [4]: {% image_buster /assets/img/most_used_events_attributes_time.png %} [5]: {% image_buster /assets/img/contract_details.png %} [6]: {% image_buster /assets/img/current_billing_cycle.png %} [7]: {% image_buster /assets/img/appgroup_datapoint_usage.png %} [8]: {% image_buster /assets/img/company_data_point_usage_time.png %} [9]: {% image_buster /assets/img/appgroup_drilldown.png %} [10]: {% image_buster /assets/img/appgroup_level_datapoint_usage_bycategory.png %} [11]: {% image_buster /assets/img/appgroup_level_usage_time.png %} [12]: {% image_buster /assets/img/app_level_stats.png %}
+!\[Événements et attributs les plus utilisés par application\]\[4\]
+[2]: {% image_buster /assets/img/subscription_and_billing2.png %} [3]: {% image_buster /assets/img/subscription_and_billing3.png %} [4]: {% image_buster /assets/img/most_used_events_attributes_time. ng %} [5]: {% image_buster /assets/img/contract_details.png %} [6]: {% image_buster /assets/img/current_billing_cycle.png %} [7]: {% image_buster /assets/img/appgroup_datapoint_usage. ng %} [8]: {% image_buster /assets/img/company_data_point_usage_time.png %} [9]: {% image_buster /assets/img/appgroup_drilldown.png %} [10]: {% image_buster /assets/img/appgroup_level_datapoint_usage_bycategory. ng %} [11]: {% image_buster /assets/img/appgroup_level_usage_time.png %} [12]: {% image_buster /assets/img/app_level_stats.png %}
