@@ -1,50 +1,50 @@
 ---
-nav_title: Testing
-article_title: Testing In-App Messages
+nav_title: Tests en cours
+article_title: Tester les messages In-App
 page_order: 3
-description: "It is extremely important to always test your in-app messages before sending your campaigns. Our preview and testing capabilities offer two ways to take a look at your in-app messages."
+description: "Il est extrêmement important de toujours tester vos messages dans l'application avant d'envoyer vos campagnes. Nos capacités de prévisualisation et de test offrent deux façons de regarder vos messages dans l'application."
 channel:
-  - in-app messages
+  - messages intégrés à l'application
 ---
 
-# Testing
+# Tests en cours
 
-It is extremely important to always test your in-app messages before sending your campaigns. Our preview and testing capabilities offer two ways to take a look at your in-app messages. You can preview your message, to help you visualize as you compose it, as well as send a test message to your or a specific user's device. We recommend you take advantage of both.
+Il est extrêmement important de toujours tester vos messages dans l'application avant d'envoyer vos campagnes. Nos capacités de prévisualisation et de test offrent deux façons de regarder vos messages dans l'application. Vous pouvez prévisualiser votre message pour vous aider à le visualiser au fur et à mesure que vous le composez, en plus d'envoyer un message de test à votre appareil ou à celui d'un utilisateur spécifique. Nous vous recommandons de profiter des deux.
 
-## Preview
+## Aperçu
 
-You can preview your in-app message as you compose it. This should help you visualize what your final message will look like from your user's perspective.
+Vous pouvez prévisualiser votre message dans l'application lorsque vous le composez. Cela devrait vous aider à visualiser à quoi ressemblera votre message final du point de vue de votre utilisateur.
 
 {% alert warning %}
-In __Preview__, the view of your message might not be identical to its actual rendering on the user's device. We always recommend sending a test message to a device to ensure that your media, copy, personalization, and custom attributes generate correctly.
+Dans __Aperçu__, la vue de votre message peut ne pas être identique à son affichage réel sur l'appareil de l'utilisateur. Nous vous recommandons toujours d'envoyer un message de test à un appareil afin de vous assurer que vos supports, copies, personnalisations et attributs personnalisés génèrent correctement.
 {% endalert %}
 
-### In-app message generation preview
+### Aperçu de la génération des messages dans l'application
 
-Preview what your message will look like to a random user, a specific user, or a customized user - the latter two are especially useful if your message contains personalization or multiple languages. You can also preview messages for either mobile devices or tablets to get a better idea of what users will experience.
+Prévisualiser à quoi ressemblera votre message à un utilisateur aléatoire, un utilisateur spécifique, ou un utilisateur personnalisé - les deux derniers sont particulièrement utiles si votre message contient une personnalisation ou plusieurs langues. Vous pouvez également prévisualiser les messages pour les appareils mobiles ou les tablettes pour avoir une meilleure idée de ce que les utilisateurs vont vivre.
 
 !\[In-App_Message_Preview\]\[1\]
 
-Braze has three generations of in-app messages available. You can fine-tune to which devices your messages should be sent, based on which Generation they support.
+Braze a trois générations de messages dans l'application disponibles. Vous pouvez affiner les appareils sur lesquels vos messages doivent être envoyés, en fonction de la génération qu'ils supportent.
 
 !\[In-App_Messages_Generations\]\[2\]{: height="50%" width="50%"}
 
-## Test
+## Tester
 
 {% alert warning %}
-  To send a test to either [Content Test Groups]({{site.baseurl}}/user_guide/administrative/app_settings/developer_console/internal_groups_tab/#content-test-groups) or individual users, push must be enabled on your test devices before sending.
+  Pour envoyer un test à [groupes de test de contenu]({{site.baseurl}}/user_guide/administrative/app_settings/developer_console/internal_groups_tab/#content-test-groups) ou à des utilisateurs individuels, le push doit être activé sur vos appareils de test avant l'envoi.
 {% endalert %}
 
-### Preview message as user
+### Aperçu du message en tant qu'utilisateur
 
-You can also preview messages from the **Test** tab, as though you were a user. You can select a specific user, a random user, or create a custom user.
+Vous pouvez également prévisualiser les messages de l’onglet **Test** comme si vous étiez un utilisateur. Vous pouvez sélectionner un utilisateur spécifique, un utilisateur au hasard, ou créer un utilisateur personnalisé.
 
 !\[Custom_User_Preview\]\[3\]
 
 ### Test checklist
 
-- Do the images and media show up and act as expected?
-- Does the Liquid function as expected? Have you accounted for a [default attribute value]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/conditional_logic/#accounting-for-null-attribute-values) in the event that the Liquid returns no information?
-- Is your copy clear, concise, and correct?
-- Do your buttons direct the user where they should go?
+- Est-ce que les images et les médias apparaissent et agissent comme prévu?
+- Est-ce que le Liquid fonctionne comme prévu ? Avez-vous comptabilisé une [valeur d'attribut par défaut]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/conditional_logic/#accounting-for-null-attribute-values) dans le cas où le Liquid ne renvoie aucune information ?
+- Votre copie est-elle claire, concise et correcte?
+- Est-ce que vos boutons dirigent l'utilisateur où il devrait aller ?
 [1]: {%image_buster /assets/img/in-app-message-preview.png %} [2]: {% image_buster /assets/img/iam-generations.gif %} [3]: {% image_buster /assets/img/iam-user-preview.png %}
