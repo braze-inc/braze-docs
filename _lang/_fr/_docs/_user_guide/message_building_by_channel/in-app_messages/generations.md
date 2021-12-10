@@ -1,24 +1,24 @@
 ---
-nav_title: Generations
-article_title: In-App Message Generations
-hidden: true
-description: "This reference article covers in-app messaging generation support."
+nav_title: Générations
+article_title: Génération de messages dans l'application
+hidden: vrai
+description: "Cet article de référence couvre le support de la génération de messages dans l'application."
 channel:
-  - in-app messages
+  - messages intégrés à l'application
 ---
 
-# In-app messages generations
+# Générer des messages dans l'application
 
-Braze currently has three generations of in-app messages. Each comes with it own level of support. To take advantage of the newest features of our in-app messages, we recommend upgrading to the newest [Web]({{site.baseurl}}/developer_guide/platform_integration_guides/web/initial_sdk_setup/#upgrading-the-sdk), iOS, and Android SDKs.
+Braze a actuellement trois générations de messages dans l'application. Chacun d'entre eux est doté de son propre niveau de soutien. Pour profiter des dernières fonctionnalités de nos messages dans l'application, nous vous recommandons de passer à la dernière version [Web]({{site.baseurl}}/developer_guide/platform_integration_guides/web/initial_sdk_setup/#upgrading-the-sdk), iOS et SDK Android.
 
-This chart highlights the features and message types that are currently available and when they were introduced in each generation. This chart also explicitly states what isn't supported within a given generation.
+Ce tableau met en évidence les fonctionnalités et les types de messages actuellement disponibles et quand ils ont été introduits dans chaque génération. Ce graphique indique aussi explicitement ce qui n'est pas pris en charge dans une génération donnée.
 
-| Generation       | New Features                                                                                                                                                                                                                                     | Unsupported Features                                                                            |
-| ---------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ----------------------------------------------------------------------------------------------- |
-| __Generation 1__ | • In-app triggered Full-Screen, Modal, and Slideup message types                                                                                                                                                                                 | Custom HTML Messages <br> • Web Email Capture Form <br> • Web Modal with Custom CSS |
-| __Generation 2__ | • Text Alignment Controls <br> • Overlay behind Modal <br> • Image Safe Zone in Preview Window                                                                                                                                       | Button Border                                                                                   |
-| __Generation 3__ | • Button Border <br> • Refined Look & Feel for All Message Types <br> • Concept of Generations 1, 2 and 3 <br> • New Close X Asset <br> • Improved accessibility on Web <br> • Improved support on Notched Devices | (The latest Generation always has full feature support!)                                        |
+| Générer          | Nouvelles fonctionnalités                                                                                                                                                                                                                                                                       | Fonctionnalités non prises en charge                                                                                      |
+| ---------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------- |
+| __Génération 1__ | • Types de messages plein écran, modal et Slideup déclenchés par l'application                                                                                                                                                                                                                  | Messages HTML personnalisés <br> • Formulaire de capture d'e-mails Web <br> • Modal Web avec CSS personnalisé |
+| __Génération 2__ | • Contrôles d'alignement du texte <br> • Superposition derrière la fenêtre modale <br> • Zone de sécurité d'image dans la fenêtre d'aperçu                                                                                                                                          | Bordure du bouton                                                                                                         |
+| __Génération 3__ | • Bordure des boutons <br> • Refined Look & Feel for All Message Types <br> • Concept of Generations 1, 2 et 3 <br> • Nouveau bien Fermer X <br> • Amélioration de l'accessibilité sur le Web <br> • Amélioration de la prise en charge sur les appareils Notched | (La dernière génération a toujours un support complet des fonctionnalités!)                                               |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
 
-![Difference in Generations]({% image_buster /assets/img/iam-generations-of-modals.png %})
+![Différence dans les générations]({% image_buster /assets/img/iam-generations-of-modals.png %})
 
