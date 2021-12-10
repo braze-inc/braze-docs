@@ -1,589 +1,589 @@
 ---
 page_order: 1
-nav_title: Segmentation Filters
-article_title: Segmentation Filters
+nav_title: Filtres de segmentation
+article_title: Filtres de segmentation
 layout: glossary_page
-glossary_top_header: "Segmentation Filters"
-glossary_top_text: Braze’s SDK provides you with a powerful arsenal of filters to segment and target your users based off of specific features and attributes. As you can see, you can search or narrow these filters by Filter Category.
+glossary_top_header: "Filtres de segmentation"
+glossary_top_text: Le SDK de Braze vous fournit un arsenal puissant de filtres pour segmenter et cibler vos utilisateurs en fonction de caractéristiques et d'attributs spécifiques. Comme vous pouvez le voir, vous pouvez rechercher ou restreindre ces filtres par catégorie de filtres.
 page_type: glossary
 tool: Segments
-description: "This glossary lists available filters to segment and target your users."
-glossary_tag_name: Filter Category
-glossary_filter_text: "Select Categories below to narrow the glossary:"
+description: "Ce glossaire répertorie les filtres disponibles pour segmenter et cibler vos utilisateurs."
+glossary_tag_name: Filtrer la catégorie
+glossary_filter_text: "Sélectionnez les catégories ci-dessous pour affiner le glossaire :"
 #category to icon/fa or image mapping
 glossary_tags:
   - 
-    name: Custom Data
+    name: Données personnalisées
   - 
-    name: User Activity
+    name: Activité de l'utilisateur
   - 
-    name: Retargeting
+    name: Reciblage
   - 
-    name: Marketing Activity
+    name: Activité marketing
   - 
-    name: User Attributes
+    name: Attributs de l'utilisateur
   - 
-    name: Install Attribution
+    name: Installer Attribution
   - 
-    name: Social Activity
+    name: Activité sociale
   - 
-    name: Testing
+    name: Tests en cours
   - 
-    name: Other
+    name: Autres
 glossaries:
   - 
-    name: Custom Attributes
-    description: Determines whether or not a user matches a custom recorded attribute value. (24-hour period) <br><br>Time zone:<br>Company's Time Zone
+    name: Attributs personnalisés
+    description: Détermine si un utilisateur correspond ou non à une valeur d'attribut enregistrée personnalisée. (24 heures) <br><br>Fuseau horaire :<br>Fuseau horaire de la compagnie
     tags:
-      - Custom Data
+      - Données personnalisées
   - 
-    name: Custom Event
-    description: Determines whether or not a user has performed a specially recorded event.<br><br> Example:<br>Activity completed with property activty_name.<br><br>Time zone:<br>UTC - Calendar Day = 1 calendar day will look at 24-48 hours of user history
+    name: Événement personnalisé
+    description: Détermine si un utilisateur a effectué ou non un événement enregistré spécialement.<br><br> Exemple :<br>Activité complétée avec la propriété activty_name.<br><br>Fuseau horaire :<br>UTC - Jours du calendrier = 1 jour du calendrier examinera 24-48 heures de l'historique de l'utilisateur
     tags:
-      - Custom Data
+      - Données personnalisées
   - 
-    name: First Did Custom Event
-    description: Determines the earliest time that a user has performed a specially recorded event. (24-hour period) <br><br>Example:<br> First Abandoned Cart Less than 1 day ago<br><br>Time zone:<br>Company's Time Zone
+    name: Premier événement personnalisé
+    description: Détermine la première fois qu'un utilisateur a effectué un événement enregistré. (Période 24 heures) <br><br>Exemple :<br> Premier Panier Abandonné moins d'un jour il y a<br><br>Fuseau horaire de la société :<br>Fuseau horaire de la société
     tags:
-      - Custom Data
+      - Données personnalisées
   - 
-    name: Last Did Custom Event
-    description: Determines the latest time that a user has performed a specially recorded event. (24-hour period) <br><br>Example:<br> Last Abandoned Cart Less than 1 day ago<br><br>Time zone:<br>Company's Time Zone
+    name: Dernier événement personnalisé
+    description: Détermine la dernière fois qu'un utilisateur a effectué un événement enregistré. (Période de 24 heures) <br><br>Exemple :<br> Dernier Panier Abandonné moins d'un jour il y a<br><br>Fuseau horaire de la société :<br>Fuseau horaire de la société
     tags:
-      - Custom Data
+      - Données personnalisées
   - 
-    name: Last Received SMS
-    description: Segments your users by the last time that they have received an SMS. (24-hour period)<br><br>Time zone:<br>Company's Time Zone
+    name: Dernier SMS reçu
+    description: Segments de vos utilisateurs par la dernière fois qu'ils ont reçu un SMS. (24 heures)<br><br>Fuseau horaire :<br>Fuseau horaire de la compagnie
     tags:
-      - Marketing Activity
+      - Activité marketing
   - 
-    name: X Custom Event in Y Days
+    name: X Événement personnalisé en Y jours
     description:
-      - Custom Data
+      - Données personnalisées
   - 
-    name: X Custom Event Property in Y Days
-    description: Determines whether or not a user has performed a specially recorded event in relation to a specific property between 0 and 50 times in the last specified number of calendar days between 1 and 30. (Calendar Day = 1 calendar day will look at 24-48 hours of user history)<br><a href="/docs/x-in-y-behavior/">Learn more about X-in-Y behavior here.</a> <br><br>Example:<br> Added to Favorites w/ property "event_name" exactly 0 times in the last 1 calendar day<br><br>Time zone:<br>UTC - To account for all time zones, 1 calendar day will look at 24-28 hours of user history, depending on the time the segment is evaluated; for 2 calendar days, will look at 48-72 hours of user history, etc.
+    name: Propriété d'événements personnalisés X en Y jours
+    description: Détermine si un utilisateur a effectué ou non un événement enregistré spécialement par rapport à une propriété spécifique, entre 0 et 50 fois dans le dernier nombre de jours du calendrier entre 1 et 30. (Calendar Day = 1 jour du calendrier examinera 24-48 heures de l'historique de l'utilisateur)<br><a href="/docs/x-in-y-behavior/">En savoir plus sur le comportement X-in-Y ici.</a> <br><br>Exemple :<br> Ajouté aux Favoris avec la propriété "event_name" exactement 0 fois dans le dernier 1 jour du calendrier<br><br>Fuseau horaire :<br>UTC - Pour tenir compte de tous les fuseaux horaires, Un jour du calendrier examinera 24-28 heures de l'historique de l'utilisateur, en fonction de l'heure à laquelle le segment est évalué; pendant 2 jours de calendrier, regardera 48-72 heures de l'historique de l'utilisateur, etc.
     tags:
-      - Custom Data
+      - Données personnalisées
   - 
-    name: Date of Recurring Event
-    description: 'This filter looks at the month and day of custom attribute with the data type of "date", but does not look at the year. This filter is useful for annual events.<br><br>Time zone&#58;<br>This filter adjusts for whatever time zones the user is in.'
+    name: Date de l'évènement récurrent
+    description: 'Ce filtre regarde le mois et le jour de l''attribut personnalisé avec le type de données de "date", mais ne regarde pas l''année. Ce filtre est utile pour les événements annuels.<br><br>Fuseau horaire&#58 ;<br>Ce filtre s''ajuste pour n''importe quel fuseau horaire de l''utilisateur.'
     tags:
-      - Custom Data
+      - Données personnalisées
   - 
-    name: First Made Purchase
-    description: Segments your users by the earliest recorded time that they have made a purchase in your app. (24-hour period)<br><br>Time zone:<br>UTC
+    name: Premier achat
+    description: Segments de vos utilisateurs dans les plus brefs délais enregistrés qu'ils ont fait un achat dans votre application. (24 heures)<br><br>Fuseau horaire :<br>UTC
     tags:
-      - User Activity
+      - Activité de l'utilisateur
   - 
-    name: First Purchase for App
-    description: Segments your users by the earliest recorded time that they have bought any item from your app. (24-hour period)<br><br>Time zone:<br>Company's Time Zone
+    name: Premier achat pour l'application
+    description: Segments que vos utilisateurs ont enregistrés le plus tôt temps qu'ils ont acheté n'importe quel élément de votre application. (24 heures)<br><br>Fuseau horaire :<br>Fuseau horaire de la compagnie
     tags:
-      - User Activity
+      - Activité de l'utilisateur
   - 
-    name: First Purchased Product
-    description: Segments your users by the earliest recorded time that they have bought a specific item from your app (special membership, gift certificate, etc…). (24-hour period)<br><br>Time zone:<br>Company's Time Zone
+    name: Premier produit acheté
+    description: Segments de vos utilisateurs dès le plus tôt temps enregistré qu'ils ont acheté un élément spécifique de votre application (adhésion spéciale, certificat cadeau, etc…). (24 heures)<br><br>Fuseau horaire :<br>Fuseau horaire de la compagnie
     tags:
-      - User Activity
+      - Activité de l'utilisateur
   - 
-    name: First Used App
-    description: Segments your users by the earliest recorded time that they opened your app. <em>Note that this will capture the first session they have using a version of your app with the Braze SDK integrated.</em> (24-hour period)<br><br>Time zone:<br>Company's Time Zone
+    name: Première application utilisée
+    description: Segmente vos utilisateurs par le plus tôt temps enregistré où ils ont ouvert votre application. <em>Notez que cela va capturer la première session qu'ils ont en utilisant une version de votre application avec le SDK Braze intégré.</em> (période 24 heures)<br><br>Fuseau horaire :<br>Fuseau horaire de la société
     tags:
-      - User Activity
+      - Activité de l'utilisateur
   - 
-    name: First Used Specific App
-    description: Segments your users by the earliest recorded time that they opened any of your apps within your app group. (24-hour period)<br><br>Time zone:<br>Company's Time Zone
+    name: Première application spécifique utilisée
+    description: Segments de vos utilisateurs dès le plus jeune moment où ils ont ouvert l'une de vos applications dans votre groupe d'applications. (24 heures)<br><br>Fuseau horaire :<br>Fuseau horaire de la compagnie
     tags:
-      - User Activity
+      - Activité de l'utilisateur
   - 
-    name: Last Made Purchase
-    description: Segments your users by the most recent time that they have made a purchase in your app. (24-hour period)<br><br>Time zone:<br>Company's Time Zone
+    name: Dernier achat
+    description: Segmente vos utilisateurs par le moment le plus récent où ils ont effectué un achat dans votre application. (24 heures)<br><br>Fuseau horaire :<br>Fuseau horaire de la compagnie
     tags:
-      - User Activity
+      - Activité de l'utilisateur
   - 
-    name: Last Purchase for App
-    description: Segments your users by the most recent time that they have bought an item from your app. (24-hour period)<br><br>Time zone:<br>Company's Time Zone
+    name: Dernier achat pour l'app
+    description: Segmente vos utilisateurs par la dernière fois qu'ils ont acheté un article de votre application. (24 heures)<br><br>Fuseau horaire :<br>Fuseau horaire de la compagnie
     tags:
-      - User Activity
+      - Activité de l'utilisateur
   - 
-    name: Last Purchased Product
-    description: Segments your users by the most recent time that they have bought a specific item from your app (special membership, gift certificate, etc…). (24-hour period)<br><br>Time zone:<br>Company's Time Zone
+    name: Dernier produit acheté
+    description: Segmente vos utilisateurs par la dernière fois qu'ils ont acheté un article spécifique de votre application (adhésion spéciale, certificat cadeau, etc…). (24 heures)<br><br>Fuseau horaire :<br>Fuseau horaire de la compagnie
     tags:
-      - User Activity
+      - Activité de l'utilisateur
   - 
-    name: Last Used App
-    description: Segments your users by the most recent time that they have opened your app. (24-hour period)<br><br>Time zone:<br>Company's Time Zone
+    name: Dernière application utilisée
+    description: Segmente vos utilisateurs par la période la plus récente où ils ont ouvert votre application. (24 heures)<br><br>Fuseau horaire :<br>Fuseau horaire de la compagnie
     tags:
-      - User Activity
+      - Activité de l'utilisateur
   - 
-    name: Last Used Specific App
-    description: Segments your users by the most recent time that they have opened a specific, designated app. (24-hour period)<br><br>Time zone:<br>Company's Time Zone
+    name: Dernière application spécifique utilisée
+    description: Segmente vos utilisateurs par le moment le plus récent où ils ont ouvert une application spécifique et désignée. (24 heures)<br><br>Fuseau horaire :<br>Fuseau horaire de la compagnie
     tags:
-      - User Activity
+      - Activité de l'utilisateur
   - 
-    name: Median Session Duration
-    description: Segments your users by the median length of their sessions in your app.
+    name: Durée de la session médiane
+    description: Segmente vos utilisateurs par la durée médiane de leurs sessions dans votre application.
     tags:
-      - User Activity
+      - Activité de l'utilisateur
   - 
-    name: Money Spent
-    description: Segments your users by the amount of money that they have spent in your app.
+    name: Argent dépensé
+    description: Segmente vos utilisateurs par le montant d'argent qu'ils ont dépensé dans votre application.
     tags:
-      - User Activity
+      - Activité de l'utilisateur
   - 
-    name: Most Recent App Version
-    description: Segments your users by the latest version of your app that they have used.
+    name: Version de l'application la plus récente
+    description: Segmente vos utilisateurs par la dernière version de votre application qu'ils ont utilisée.
     tags:
-      - User Activity
+      - Activité de l'utilisateur
   - 
-    name: App Version Code
-    description: "App Version Code filters based on your app's version numbers. This filter supports numerical comparisons to target a range of app versions. For example, you can filter using 'below', 'above', and 'equal to' certain app versions. Support for this feature is available with Braze Android SDK v3.6.0 and above, and can be enabled by your Braze account manager."
+    name: Code de version de l'application
+    description: "Filtres de code de version de l'application basés sur les numéros de version de votre application. Ce filtre prend en charge les comparaisons numériques pour cibler une gamme de versions d'applications. Par exemple, vous pouvez filtrer en utilisant « ci-dessous», « ci-dessus» et « égal à» certaines versions de l’application. Le support de cette fonctionnalité est disponible avec Braze Android SDK v3.6.0 et plus récent, et peut être activé par votre gestionnaire de compte Braze."
     tags:
-      - User Activity
+      - Activité de l'utilisateur
   - 
-    name: Most Recent Location
-    description: Segments your users by the last recorded location at which they have used your app.
+    name: Lieu le plus récent
+    description: Segments de vos utilisateurs par le dernier emplacement enregistré où ils ont utilisé votre application.
     tags:
-      - User Activity
+      - Activité de l'utilisateur
   - 
-    name: Purchased Product
-    description: Segments your users by products purchased in your app.
+    name: Produit acheté
+    description: Segments de vos utilisateurs par produits achetés dans votre application.
     tags:
-      - User Activity
+      - Activité de l'utilisateur
   - 
-    name: Session Count
-    description: Segments your users by the number of sessions they have had in any of your apps within your app group.
+    name: Nombre de sessions
+    description: Segmente vos utilisateurs par le nombre de sessions qu'ils ont eues dans n'importe laquelle de vos applications dans votre groupe d'applications.
     tags:
-      - User Activity
+      - Activité de l'utilisateur
   - 
-    name: Session Count For App
-    description: Segments your users by the number of sessions they have had in a specific, designated app.
+    name: Nombre de sessions pour l'application
+    description: Segments de vos utilisateurs par le nombre de sessions qu'ils ont eues dans une application spécifique et désignée.
     tags:
-      - User Activity
+      - Activité de l'utilisateur
   - 
-    name: Total Number of Purchases
-    description: Segments your users by how many purchases they have made in your app.
+    name: Nombre total d'Achats
+    description: Segmente vos utilisateurs en fonction du nombre d'achats qu'ils ont effectués dans votre application.
     tags:
-      - User Activity
+      - Activité de l'utilisateur
   - 
-    name: Uninstall Date
-    description: Segments your users by the date they uninstalled your app.
+    name: Date de désinstallation
+    description: Segmente vos utilisateurs en fonction de la date de désinstallation de votre application.
     tags:
-      - User Activity
+      - Activité de l'utilisateur
   - 
-    name: Uninstalled
-    description: Segments your users by whether they have uninstalled your app and have not reinstalled it.
+    name: Désinstallé
+    description: Segmente vos utilisateurs en fonction de s'ils ont désinstallé votre application et ne l'ont pas réinstallée.
     tags:
-      - User Activity
+      - Activité de l'utilisateur
   - 
-    name: X Money Spent in Last Y Days
-    description: Segments your users by the amount of money that they have spent in your app in the last specified number of calendar days between 1 and 30. This amount will only include the sum of the last 50 purchases. <br> <a href="/docs/x-in-y-behavior/">Learn more about X-in-Y behavior here.</a>
+    name: X Argent dépensé dans les derniers Y Jours
+    description: Segmente vos utilisateurs par le montant d'argent qu'ils ont dépensé dans votre application dans le dernier nombre de jours de calendrier entre 1 et 30. Ce montant ne comprendra que la somme des 50 derniers achats. <br> <a href="/docs/x-in-y-behavior/">En savoir plus sur le comportement X-in-Y ici.</a>
     tags:
-      - User Activity
+      - Activité de l'utilisateur
   - 
-    name: X Product Purchased in Last Y Days
-    description: Segments your users by the number of times (between 0 and 50) they have bought a specific item from your app in the last specified number of calendar days between 1 and 30 (special membership, gift certificate, etc…). <br> <a href="/docs/x-in-y-behavior/">Learn more about X-in-Y behavior here.</a>
+    name: Produit X acheté au cours des Y derniers jours
+    description: Segments de vos utilisateurs par le nombre de fois (entre 0 et 50) qu'ils ont acheté un élément spécifique à votre application dans le dernier nombre de jours de calendrier entre 1 et 30 (adhésion spéciale, certificat cadeau, etc…). <br> <a href="/docs/x-in-y-behavior/">En savoir plus sur le comportement X-in-Y ici.</a>
     tags:
-      - User Activity
+      - Activité de l'utilisateur
   - 
-    name: X Purchase Property in Y Days
-    description: Segments your users by the number of times a purchase was made in relation to a certain purchase property in the last specified number of calendar days between 1 and 30. <br> <a href="/docs/x-in-y-behavior/">Learn more about X-in-Y behavior here.</a>
+    name: X Achat de propriété en Y Jours
+    description: Segments de vos utilisateurs par le nombre de fois qu'un achat a été effectué par rapport à une certaine propriété d'achat dans le dernier nombre de jours calendaires spécifiés entre 1 et 30. <br> <a href="/docs/x-in-y-behavior/">En savoir plus sur le comportement X-in-Y ici.</a>
     tags:
-      - User Activity
+      - Activité de l'utilisateur
   - 
-    name: X Purchases in Last Y Days
-    description: Segments your users by the number of times (between 0 and 50) they have made a purchase in the last specified number of calendar days between 1 and 30. <br> <a href="/docs/x-in-y-behavior/">Learn more about X-in-Y behavior here.</a>
+    name: X Achats au cours des derniers Y jours
+    description: Segments de vos utilisateurs par le nombre de fois (entre 0 et 50) qu'ils ont fait un achat dans le dernier nombre spécifié de jours de calendrier entre 1 et 30. <br> <a href="/docs/x-in-y-behavior/">En savoir plus sur le comportement X-in-Y ici.</a>
     tags:
-      - User Activity
+      - Activité de l'utilisateur
   - 
-    name: X Sessions in Last Y Days
-    description: Segments your users by the number of sessions (between 0 and 50) they have had in your app in the last specified number of calendar days between 1 and 30. <br> <a href="/docs/x-in-y-behavior/">Learn more about X-in-Y behavior here.</a>
+    name: X sessions dans les derniers Y jours
+    description: Segmente vos utilisateurs par le nombre de sessions (entre 0 et 50) qu'ils ont eu dans votre application au cours du dernier nombre spécifié de jours de calendrier entre 1 et 30. <br> <a href="/docs/x-in-y-behavior/">En savoir plus sur le comportement X-in-Y ici.</a>
     tags:
-      - User Activity
+      - Activité de l'utilisateur
   - 
-    name: Clicked Card
-    description: Segments your users by whether or not they have clicked a specific card or promotion.
+    name: Carte cliquée
+    description: Segmente vos utilisateurs par s'ils ont cliqué sur une carte ou une promotion spécifique.
     tags:
-      - Retargeting
+      - Reciblage
   - 
-    name: Clicked/Opened Campaign
-    description: Segments your users by whether or not they have interacted with a specific campaign.
+    name: Campagne cliquée/ouverte
+    description: Segmente vos utilisateurs selon qu'ils ont ou non interagi avec une campagne spécifique.
     tags:
-      - Retargeting
+      - Reciblage
   - 
-    name: Clicked/Opened Campaign or Canvas With Tag
-    description: Segments your users by whether or not they have interacted with a specific campaign or Canvas with a specific tag.
+    name: Campagne ou Canvas avec étiquette cliqué/ouverte
+    description: Segmente vos utilisateurs selon qu'ils ont ou non interagi avec une campagne spécifique ou Canvas avec un tag spécifique.
     tags:
-      - Retargeting
+      - Reciblage
   - 
-    name: Clicked/Opened Step
-    description: Segments your users by whether or not they have interacted with a specific Canvas step.
+    name: Étape cliquée/ouverte
+    description: Segmente vos utilisateurs selon qu'ils ont ou non interagi avec une étape spécifique de Canvas .
     tags:
-      - Retargeting
+      - Reciblage
   - 
-    name: Converted From Campaign
-    description: Segments your users by whether or not they have converted on a specific campaign.
+    name: Converti de la campagne
+    description: Segmente vos utilisateurs en fonction de s'ils ont ou non converti sur une campagne spécifique.
     tags:
-      - Retargeting
+      - Reciblage
   - 
-    name: Converted From Canvas
-    description: Segments your users by whether or not they have converted on a specific Canvas.
+    name: Converti depuis Canvas
+    description: Segmente vos utilisateurs en fonction de s'ils ont ou non converti sur une toile spécifique.
     tags:
-      - Retargeting
+      - Reciblage
   - 
-    name: Entered Canvas Variation
-    description: Segments your users by whether or not they have entered a variation path of a specific Canvas.
+    name: Variation de la toile entrée
+    description: Segmente vos utilisateurs selon qu'ils ont ou non entré un chemin de variation d'un Canvas spécifique.
     tags:
-      - Retargeting
+      - Reciblage
   - 
-    name: Has Never Received A Campaign or Canvas Step
-    description: Segments your users by whether or not they have received any campaign or Canvas step.
+    name: N'a jamais reçu l'étape d'une campagne ou d'une toile
+    description: Segmente vos utilisateurs en fonction de s'ils ont ou non reçu une campagne ou une étape de Canvan.
     tags:
-      - Retargeting
+      - Reciblage
   - 
-    name: In Campaign Control Group
-    description: Segments your users by whether or not they were in the control group for a specific multivariate campaign.
+    name: Groupe de contrôle de campagne
+    description: Segmente vos utilisateurs selon qu'ils étaient ou non dans le groupe de contrôle pour une campagne multivariée spécifique.
     tags:
-      - Retargeting
+      - Reciblage
   - 
-    name: In Canvas Control Group
-    description: Segments your users by whether or not they were in the control group for a specific Canvas.
+    name: Dans le Groupe de Contrôle de Canvas
+    description: Segmente vos utilisateurs selon qu'ils étaient ou non dans le groupe de contrôle pour un Canva spécifique.
     tags:
-      - Retargeting
+      - Reciblage
   - 
-    name: Is Not In Segment
-    description: Segments your users by whether or not they are included in an already existing segment.
+    name: N'est pas dans le segment
+    description: Segmente vos utilisateurs en fonction de s'ils sont inclus ou non dans un segment existant.
     tags:
-      - Retargeting
+      - Reciblage
   - 
-    name: Last Received Campaign or Canvas With Tag
-    description: Segments your users by when they received a specific campaign or Canvas with a specific tag. (24-hour period)<br><br>Time zone:<br>Company's Time Zone
+    name: Dernière campagne ou toile reçue avec étiquette
+    description: Segmente vos utilisateurs quand ils ont reçu une campagne spécifique ou Canvas avec un tag spécifique. (24 heures)<br><br>Fuseau horaire :<br>Fuseau horaire de la compagnie
     tags:
-      - Retargeting
+      - Reciblage
   - 
-    name: Last Received Specific Campaign
-    description: Segments your users by when they last received a specific campaign. (24-hour period)<br><br>Time zone:<br>Company's Time Zone
+    name: Dernière campagne spécifique reçue
+    description: Segmente vos utilisateurs en fonction de la dernière fois qu'ils ont reçu une campagne spécifique. (24 heures)<br><br>Fuseau horaire :<br>Fuseau horaire de la compagnie
     tags:
-      - Retargeting
+      - Reciblage
   - 
-    name: Last Received Specific Canvas Step
-    description: Segments your users by selecting those who received a specific, designated Canvas Step. (24-hour period)<br><br>Time zone:<br>Company's Time Zone
+    name: Dernière étape de Canvas Spécifique Reçu
+    description: Segmente vos utilisateurs en sélectionnant ceux qui ont reçu un Canvas Step. (24 heures)<br><br>Fuseau horaire :<br>Fuseau horaire de la compagnie
     tags:
-      - Retargeting
+      - Reciblage
   - 
-    name: Received Campaign
-    description: Segments your users by whether or not they have received a specific campaign.
+    name: Campagne reçue
+    description: Segmente vos utilisateurs selon qu'ils ont ou non reçu une campagne spécifique.
     tags:
-      - Retargeting
+      - Reciblage
   - 
-    name: Received Campaign Variant
-    description: Segments your users by which variant of a multivariate campaign they have received.
+    name: Variante de campagne reçue
+    description: Segments de vos utilisateurs par lesquels la variante d'une campagne multivariée qu'ils ont reçue.
     tags:
-      - Retargeting
+      - Reciblage
   - 
-    name: Received Campaign or Canvas with Tag
-    description: Segments your users by whether or not they have received a specific campaign or Canvas with a specific tag.
+    name: Campagne reçue ou Canvas avec étiquette
+    description: Segmente vos utilisateurs selon qu'ils ont reçu ou non une campagne spécifique ou Canvas avec un tag spécifique.
     tags:
-      - Retargeting
+      - Reciblage
   - 
-    name: Received Canvas Step
-    description: Segments your users by whether or not they have received a specific Canvas step.
+    name: Étape de la toile reçue
+    description: Segmente vos utilisateurs selon qu'ils ont ou non reçu ou non une étape de Canvas spécifique.
     tags:
-      - Retargeting
+      - Reciblage
   - 
-    name: Has Marked You As Spam
-    description: Segments your users by whether or not they have marked your messages as spam.
+    name: Vous a marqué comme spam
+    description: Segmente vos utilisateurs en fonction de s'ils ont marqué ou non vos messages comme spams.
     tags:
-      - Marketing Activity
+      - Activité marketing
   - 
-    name: Last Engaged With Message
-    description: Segments your users by the last time that they have clicked or opened one of your messaging channels (email, in-app, push). (24-hour period)<br><br>Time zone:<br>Company's Time Zone
+    name: Dernier engagement avec le message
+    description: Segmente vos utilisateurs par la dernière fois qu'ils ont cliqué ou ouvert un de vos canaux de messagerie (e-mail, dans l'application, push). (24 heures)<br><br>Fuseau horaire :<br>Fuseau horaire de la compagnie
     tags:
-      - Marketing Activity
+      - Activité marketing
   - 
-    name: Last Enrolled in Any Control Group
-    description: Segments your users by the last time that they fell into the control group in a campaign. (24-hour period)<br><br>Time zone:<br>Company's Time Zone
+    name: Dernier inscrit dans n'importe quel groupe de contrôle
+    description: Segments de vos utilisateurs pour la dernière fois qu'ils sont tombés dans le groupe de contrôle dans une campagne. (24 heures)<br><br>Fuseau horaire :<br>Fuseau horaire de la compagnie
     tags:
-      - Marketing Activity
+      - Activité marketing
   - 
-    name: Last In-App Message Impression
-    description: Segments your users by determining the last in-app message impression was received. (24-hour period)<br><br>Time zone:<br>Company's Time Zone
+    name: Impression du dernier message dans l'application
+    description: Segments de vos utilisateurs en déterminant la dernière impression de message dans l'application a été reçue. (24 heures)<br><br>Fuseau horaire :<br>Fuseau horaire de la compagnie
     tags:
-      - Marketing Activity
+      - Activité marketing
   - 
-    name: Last Received Any Message
-    description: Segments your users by determining the last message that was received. (24-hour period)<br><br>Example:<br>Last Received Message Less than 1 Day ago = less than 24 hours ago<br><br>Time zone:<br>Company's Time Zone
+    name: Dernier message reçu
+    description: Segmente vos utilisateurs en déterminant le dernier message reçu. (Période de 24 heures)<br><br>Exemple :<br>Dernier Message Reçu Il y a moins d'un jour = il y a moins de 24 heures<br><br>Fuseau horaire de la société :<br>Fuseau horaire de l'entreprise
     tags:
-      - Marketing Activity
+      - Activité marketing
   - 
-    name: Last Received Email
-    description: Segments your users by the last time that they have received one of your email messages. (24-hour period)<br><br>Time zone:<br>Company's Time Zone
+    name: Dernier e-mail reçu
+    description: Segments de vos utilisateurs pour la dernière fois qu'ils ont reçu un de vos courriels. (24 heures)<br><br>Fuseau horaire :<br>Fuseau horaire de la compagnie
     tags:
-      - Marketing Activity
+      - Activité marketing
   - 
-    name: Last Received Push
-    description: Segments your users by the last time that they received one of your push notifications. (24-hour period)<br><br>Time zone:<br>Company's Time Zone
+    name: Dernier Push reçu
+    description: Segmente vos utilisateurs par la dernière fois qu'ils ont reçu une de vos notifications push. (24 heures)<br><br>Fuseau horaire :<br>Fuseau horaire de la compagnie
     tags:
-      - Marketing Activity
+      - Activité marketing
   - 
-    name: Last Received Webhook
-    description: Segments your users by the last time that Braze sent a webhook for that user. (24-hour period)<br><br>Time zone:<br>Company's Time Zone
+    name: Dernier Webhook reçu
+    description: Segments de vos utilisateurs par la dernière fois que Braze a envoyé un webhook pour cet utilisateur. (24 heures)<br><br>Fuseau horaire :<br>Fuseau horaire de la compagnie
     tags:
-      - Marketing Activity
+      - Activité marketing
   - 
-    name: Last Viewed News Feed
-    description: Segments your users by the last time that they have visited your app’s News Feed interface.
+    name: Dernier fil d'actualité consulté
+    description: Segmente vos utilisateurs pour la dernière fois qu'ils ont visité l'interface du fil d'actualité de votre application.
     tags:
-      - Marketing Activity
+      - Activité marketing
   - 
-    name: News Feed View Count
-    description: Segments your users by the number of times that they have viewed your app’s News Feed interface.
+    name: Nombre de nouvelles vues de flux
+    description: Segmente vos utilisateurs par le nombre de fois qu'ils ont consulté l'interface du fil d'actualité de votre application.
     tags:
-      - Marketing Activity
+      - Activité marketing
   - 
-    name: Age
-    description: Segments your users by their age, as they indicated from within your app.
+    name: Âge
+    description: Segmente vos utilisateurs selon leur âge, comme ils l'ont indiqué dans votre application.
     tags:
-      - User Attributes
+      - Attributs de l'utilisateur
   - 
-    name: Amplitude Extension
-    description: Clients who use Amplitude to supplement their segments may import and choose from those exntensions.
+    name: Extension d'Amplitude
+    description: Les clients qui utilisent Amplitude pour compléter leurs segments peuvent importer et choisir parmi ces exntensions.
     tags:
-      - User Attributes
+      - Attributs de l'utilisateur
   - 
-    name: Background Push Enabled
-    description: Segments your users on whether they have enabled background push or not.
+    name: Push d'arrière-plan activé
+    description: Segmente vos utilisateurs sur s'ils ont activé ou non le push en arrière-plan.
     tags:
-      - User Attributes
+      - Attributs de l'utilisateur
   - 
-    name: Birthday
-    description: Segments your users by their birthday, as they indicated from within your app. <br> Users with a birthday on the 29th of February will be included in segments including March 1.
+    name: Date d'anniversaire
+    description: Segments de vos utilisateurs d'ici leur anniversaire, comme ils l'ont indiqué dans votre application. <br> Les utilisateurs ayant un anniversaire le 29 février seront inclus dans les segments y compris le 1er mars.
     tags:
-      - User Attributes
+      - Attributs de l'utilisateur
   - 
-    name: Braze Segment Extension
-    description: After creating a Segment Extension in the Braze dashboard, you can choose to include/exclude those extensions in your segment.
+    name: Extension du segment de Braze
+    description: Après avoir créé une extension de segment dans le tableau de bord de Braze, vous pouvez choisir d'inclure/exclure ces extensions dans votre segment.
     tags:
-      - User Attributes
+      - Attributs de l'utilisateur
   - 
-    name: City
-    description: Segments your users by their last indicated city location.
+    name: Ville
+    description: Segmente vos utilisateurs par leur dernier emplacement de ville.
     tags:
-      - User Attributes
+      - Attributs de l'utilisateur
   - 
-    name: Country
-    description: Segments your users by their last indicated country location.
+    name: Pays
+    description: Segmente vos utilisateurs par leur dernier emplacement de pays indiqué.
     tags:
-      - User Attributes
+      - Attributs de l'utilisateur
   - 
-    name: Device Carrier
-    description: Segments your users by their device carrier.
+    name: Transporteur de l'appareil
+    description: Segmente vos utilisateurs par leur opérateur de périphérique.
     tags:
-      - User Attributes
+      - Attributs de l'utilisateur
   - 
-    name: Device Count
-    description: Segments your users by how many devices they have used your app on.
+    name: Nombre d'appareils
+    description: Segmente vos utilisateurs en fonction du nombre d'appareils sur lesquels votre application a été utilisée.
     tags:
-      - User Attributes
+      - Attributs de l'utilisateur
   - 
-    name: Device Model
-    description: Segments your users by their mobile phone’s model version.
+    name: Modèle de l'appareil
+    description: Segmente vos utilisateurs par la version modèle de leur téléphone mobile.
     tags:
-      - User Attributes
+      - Attributs de l'utilisateur
   - 
-    name: Device OS
-    description: Segments your users by their mobile phone’s operating system.
+    name: Système d'exploitation de l'appareil
+    description: Segmente vos utilisateurs par le système d'exploitation de leur téléphone mobile.
     tags:
-      - User Attributes
+      - Attributs de l'utilisateur
   - 
-    name: Email Available
-    description: 'Segments your users by whether or not they have a valid email address, and if they are subscribed/opted-in to email. The email available filter checks for three criteria&#58; if the user is unsubscribed from emails, if Braze has received a hard bounce, and if the email was marked as spam. If any of these criteria are met, or if an email doesn''t doesn''t exist for a user, the user will not be included.'
+    name: Courriel disponible
+    description: 'Segmente vos utilisateurs en fonction de s''ils ont ou non une adresse e-mail valide, et s''ils sont abonnés/optés à l''email. Le filtre de courriel disponible vérifie trois critères&#58; si l''utilisateur est désabonné des e-mails, si Braze a reçu un bounce dur, et si l''e-mail a été marqué comme spam. Si l''un de ces critères est satisfait, ou si un email n''existe pas pour un utilisateur, l''utilisateur ne sera pas inclus.'
     tags:
-      - User Attributes
+      - Attributs de l'utilisateur
   - 
-    name: Email Opt-In Date
-    description: Segments your users by the date on which they opted into email.
+    name: Date d'activation de l'e-mail
+    description: Segments de vos utilisateurs avant la date à laquelle ils ont choisi de recevoir des e-mails.
     tags:
-      - User Attributes
+      - Attributs de l'utilisateur
   - 
-    name: Email Subscription Status
-    description: Segments your users by their subscription status for email.
+    name: Statut de l'abonnement par courriel
+    description: Segmente vos utilisateurs par leur statut d'abonnement pour l'email.
     tags:
-      - User Attributes
+      - Attributs de l'utilisateur
   - 
-    name: Subscription Groups
-    description: Segments your users by their Subscription Group for email or SMS/MMS. Archived Groups will not appear and cannot be used.
+    name: Groupes d'Abonnement
+    description: Segments de vos utilisateurs par leur groupe d'abonnement pour e-mail ou SMS/MMS. Les groupes archivés n'apparaîtront pas et ne pourront pas être utilisés.
     tags:
-      - Other
+      - Autres
   - 
-    name: Email Unsubscribed Date
-    description: Segments your users by the date on which they unsubscribed from future emails.
+    name: Date de désinscription par e-mail
+    description: Segments de vos utilisateurs avant la date à laquelle ils se sont désabonnés de futurs e-mails.
     tags:
-      - User Attributes
+      - Attributs de l'utilisateur
   - 
-    name: First Name
-    description: Segments your users by their first name, as they indicated from within your app.
+    name: Prénom
+    description: Segmente vos utilisateurs par leur prénom, comme ils l'ont indiqué dans votre application.
     tags:
-      - User Attributes
+      - Attributs de l'utilisateur
   - 
-    name: Gender
-    description: Segments your users by gender, as they indicated from within your app.
+    name: Sexe
+    description: Segmente vos utilisateurs par sexe, comme indiqué dans votre application.
     tags:
-      - User Attributes
+      - Attributs de l'utilisateur
   - 
-    name: Has App
-    description: Segments by whether or not a user has ever installed your app. This will include users who currently have your app installed and those that have uninstalled in the past.
+    name: A une application
+    description: Segments selon si un utilisateur a déjà installé ou non votre application. Cela inclura les utilisateurs qui ont actuellement votre application installée et ceux qui ont désinstallé dans le passé.
     tags:
-      - User Attributes
+      - Attributs de l'utilisateur
   - 
-    name: Language
-    description: Segments your users by their preferred language.
+    name: Langue
+    description: Segments de vos utilisateurs par leur langue préférée.
     tags:
-      - User Attributes
+      - Attributs de l'utilisateur
   - 
-    name: Last Name
-    description: Segments your users by their last name, as they indicated from within your app.
+    name: Nom de famille
+    description: Segmente vos utilisateurs par leur nom de famille, comme ils l'ont indiqué dans votre application.
     tags:
-      - User Attributes
+      - Attributs de l'utilisateur
   - 
-    name: Location Available
-    description: Segments your users by whether or not they have reported their locations. In order to use this filter, your app needs to have <a href="/docs/search/?query=location%20tracking">location tracking integrated.</a>
+    name: Localisation disponible
+    description: Segmente vos utilisateurs en fonction de s'ils ont signalé ou non leurs emplacements. Afin d'utiliser ce filtre, votre application a besoin que <a href="/docs/search/?query=location%20tracking">le suivi de localisation soit intégré.</a>
     tags:
-      - User Attributes
+      - Attributs de l'utilisateur
   - 
-    name: Most Recent Watch Model
-    description: Segments your users by their most recent smartwatch model.
+    name: Modèle de veille le plus récent
+    description: Segments de vos utilisateurs par leur dernier modèle intelligent.
     tags:
-      - User Attributes
+      - Attributs de l'utilisateur
   - 
-    name: Phone Number
-    description: Segments your users by their phone number. Only use digits [0-9]. Do not include parenthesis, dashes, etc.
+    name: Numéro de téléphone
+    description: Segmente vos utilisateurs par leur numéro de téléphone. Utilisez uniquement des chiffres [0-9]. Ne pas inclure les parenthèses, tirets, etc.
     tags:
-      - User Attributes
+      - Attributs de l'utilisateur
   - 
-    name: Push Enabled
-    description: Segments your users who have explicitly activated push notifications for any of the apps in your app group. This count includes only foreground push, and does not include users who have unsubscribed. <br><br>After segmenting with this filter, you will be able to see a breakdown of who is in that segment for Android, iOS, and web in the bottom panel, called <em>Reachable Users</em>.
+    name: Push activé
+    description: Segmente vos utilisateurs qui ont explicitement activé les notifications push pour toutes les applications de votre groupe d'applications. Ce nombre ne comprend que la poussée en premier plan, et n'inclut pas les utilisateurs qui se sont désabonnés. <br><br>Après la segmentation avec ce filtre, vous serez en mesure de voir une ventilation de qui est dans ce segment pour Android, iOS, et web dans le panneau inférieur, appelé <em>Utilisateurs accessibles</em>.
     tags:
-      - User Attributes
+      - Attributs de l'utilisateur
   - 
-    name: Push Enabled For App
-    description: Segments by whether or not your user has push enabled for your app on their device. This count includes both foreground and background push.
+    name: Push activé pour l'application
+    description: Segments selon si votre utilisateur a activé ou non pour votre application sur son appareil. Ce nombre comprend à la fois la poussée en premier et en arrière-plan.
     tags:
-      - User Attributes
+      - Attributs de l'utilisateur
   - 
-    name: Push Opt-In Date
-    description: Segments your users by the date on which they opted into push.
+    name: Date d'Opt-In Push
+    description: Segments de vos utilisateurs à la date à laquelle ils ont choisi push.
     tags:
-      - User Attributes
+      - Attributs de l'utilisateur
   - 
-    name: Push Subscription Status
-    description: 'Segments your users by their <a href="/docs/user_guide/message_building_by_channel/push/users_and_subscriptions/#push-subscription-state">subscription status</a> for push.'
+    name: Statut de l'abonnement Push
+    description: 'Segmente vos utilisateurs par leur <a href="/docs/user_guide/message_building_by_channel/push/users_and_subscriptions/#push-subscription-state">statut d''abonnement</a> pour push.'
     tags:
-      - User Attributes
+      - Attributs de l'utilisateur
   - 
-    name: Push Unsubscribed Date
-    description: Segments your users by the date on which they unsubscribed from future push notifications.
+    name: Date de désinscription
+    description: Segmente vos utilisateurs avant la date à laquelle ils se sont désabonnés des futures notifications push.
     tags:
-      - User Attributes
+      - Attributs de l'utilisateur
   - 
-    name: Random Bucket Number
-    description: Segments your users by a randomly assigned number (0 to 9999 inclusive). It can enable the creation of uniformly distributed segments of truly random users for A/B and multivariate testing.
+    name: Nombre aléatoire de Seaux
+    description: Segmente vos utilisateurs par un nombre assigné aléatoirement (0 à 9999 inclus). Il peut permettre la création de segments uniformément distribués d'utilisateurs vraiment aléatoires pour les tests A/B et multivariés.
     tags:
-      - User Attributes
+      - Attributs de l'utilisateur
   - 
-    name: Update/Imported from CSV
-    description: Segments your users based on whether they were a part of a CSV upload or not.
+    name: Mise à jour/Importé à partir de CSV
+    description: Segments de vos utilisateurs en fonction du fait qu'ils faisaient ou non partie d'un téléchargement CSV.
     tags:
-      - User Attributes
+      - Attributs de l'utilisateur
   - 
-    name: Web Browser
-    description: Segments your users by the web browser they use to access your website.
+    name: Navigateur Web
+    description: Segments de vos utilisateurs par le navigateur Web qu'ils utilisent pour accéder à votre site Web.
     tags:
-      - User Attributes
+      - Attributs de l'utilisateur
   - 
-    name: Install Attribution Ad
-    description: Segments your users by the ad that their install was attributed to.
+    name: Installer la pub d'attribution
+    description: Segmente vos utilisateurs par la publicité à laquelle leur installation a été attribuée.
     tags:
-      - User Attributes
+      - Attributs de l'utilisateur
   - 
-    name: Hard Bounce
-    description: Segment your users by whether or not their email address has hard bounced (i.e. the email address is invalid).
+    name: Bounce dur
+    description: Segmentez vos utilisateurs en fonction si leur adresse e-mail a un rebond dur (c'est-à-dire que l'adresse e-mail n'est pas valide).
     tags:
-      - Install Attribution
+      - Installer Attribution
   - 
-    name: Install Attribution Adgroup
-    description: Segments your users by the adgroup that their install was attributed to.
+    name: Installer le groupe d'attribution
+    description: Segments de vos utilisateurs par le groupe de publicités auquel leur installation a été attribuée.
     tags:
-      - Install Attribution
+      - Installer Attribution
   - 
-    name: Install Attribution Campaign
-    description: Segments your users by the ad campaign that their install was attributed to.
+    name: Installer la campagne d'attribution
+    description: Segmente vos utilisateurs par la campagne publicitaire à laquelle leur installation a été attribuée.
     tags:
-      - Install Attribution
+      - Installer Attribution
   - 
-    name: Install Attribution Source
-    description: Segments your users by the source that their install was attributed to.
+    name: Installer la source d'attribution
+    description: Segmente vos utilisateurs par la source à laquelle leur installation a été attribuée.
     tags:
-      - Install Attribution
+      - Installer Attribution
   - 
-    name: Connected to Facebook
-    description: Segments your users who have granted Facebook account access within your app.
+    name: Connecté à Facebook
+    description: Segmente vos utilisateurs qui ont donné accès à votre compte Facebook dans votre application.
     tags:
-      - Social Activity
+      - Activité sociale
   - 
-    name: Connected to Twitter
-    description: Segments your users who have granted Twitter account access within your app.
+    name: Connecté à Twitter
+    description: Segmente vos utilisateurs qui ont accordé l'accès à votre compte Twitter dans votre application.
     tags:
-      - Social Activity
+      - Activité sociale
   - 
-    name: Number of Facebook Friends Using App
-    description: Segments your users by the number of friends that they have on Facebook that are using your app.
+    name: Nombre d'amis Facebook utilisant l'application
+    description: Segmente vos utilisateurs par le nombre d'amis qu'ils ont sur Facebook qui utilisent votre application.
     tags:
-      - Social Activity
+      - Activité sociale
   - 
-    name: Number of Twitter Followers
-    description: Segments your users by the number of followers that they have on Twitter.
+    name: Nombre de suiveurs Twitter
+    description: Segmente vos utilisateurs par le nombre de suiveurs qu'ils ont sur Twitter.
     tags:
-      - Social Activity
+      - Activité sociale
   - 
-    name: Device IDFA
-    description: Allows you to designate your campaign recipients by IDFA for testing.
+    name: Périphérique IDFA
+    description: Vous permet de désigner les destinataires de votre campagne par IDFA pour les tests.
     tags:
-      - Testing
+      - Tests en cours
   - 
-    name: Device IDFV
-    description: Allows you to designate your campaign recipients by IDFV for testing.
+    name: Périphérique IDFV
+    description: Vous permet de désigner les destinataires de votre campagne par IDFV pour les tests.
     tags:
-      - Testing
+      - Tests en cours
   - 
-    name: Email Address
-    description: Allows you to designate your campaign recipients by individual email addresses for testing. This can also be used to send transactional emails to all your users (including unsubscribed) using the "Email Address is not Blank" specifier within the filter.
+    name: Adresse e-mail
+    description: Vous permet de désigner les destinataires de votre campagne par des adresses e-mail individuelles pour les tests. Ceci peut également être utilisé pour envoyer des courriels transactionnels à tous vos utilisateurs (y compris ceux qui se sont désabonnés) en utilisant le spécificateur « Adresse e-mail n'est pas vide » dans le filtre.
     tags:
-      - Testing
+      - Tests en cours
   - 
-    name: External User ID
-    description: Allows you to designate your campaign recipients by individual user IDs for testing.
+    name: ID d'utilisateur externe
+    description: Vous permet de désigner les destinataires de votre campagne par des identifiants individuels pour les tests.
     tags:
-      - Testing
+      - Tests en cours
   - 
-    name: Segment Membership
-    description: Allows you to filter based on segment membership anywhere that filters are used (i.e. segments, campaigns, etc) and target multiple different segments within one campaign. Please note that segments already using the Segment Membership Filter cannot be further included/nested into other segments.
+    name: Adhésion au segment
+    description: Vous permet de filtrer en fonction de l'appartenance à un segment où les filtres sont utilisés (segments, campagnes, etc.) et de cibler plusieurs segments différents au sein d'une seule campagne. Veuillez noter que les segments qui utilisent déjà le filtre d'abonnement de segment ne peuvent pas être inclus ou imbriqués dans d'autres segments.
     tags:
-      - Other
+      - Autres
   - 
-    name: Provisionally Authorized on iOS
-    description: Allows you to find users who are provisionally authorized on iOS 12 for a given app.
+    name: Autorisé provisoirement sur iOS
+    description: Permet de trouver des utilisateurs qui sont provisoirement autorisés sur iOS 12 pour une application donnée.
     tags:
-      - Other
+      - Autres
   - 
-    name: "Intelligent Channel"
-    description: 'Filters the portion of your audience whose most active channel (the channel which has the highest likelihood of engagement given the user''s past three months or activity) is the one you select in the subsequent dropdown (Email, Mobile push, or Web push). <br> You can also elect to filter by Not Enough Data, which only sends to users who have received messages from at least two of the three available channels in the drop-down but have not had enough distinct channel activity to determine a most engaged channel. <br> <a href="/docs/user_guide/intelligence/intelligent_channel/">Learn more about this filter here.</a> <br> <br> _As of the <a href="/docs/help/release_notes/2019/november/#intelligence-suite">November 2019 product release</a>, ''Most Engaged Channel'' has been renamed to ''Intelligent Channel''._'
+    name: "Canal Intelligent"
+    description: 'Filtre la portion de votre auditoire dont le canal le plus actif (le canal qui a la plus grande probabilité d''engagement étant donné les trois derniers mois de l''utilisateur ou l''activité) est celui que vous sélectionnez dans la liste déroulante suivante (Email), Push mobile, ou Push Web). <br> Vous pouvez également choisir de filtrer par données insuffisantes, qui envoie uniquement aux utilisateurs qui ont reçu des messages d''au moins deux des trois canaux disponibles dans la liste déroulante, mais qui n''ont pas eu assez d''activité distincte pour déterminer un canal le plus engagé. <br> <a href="/docs/user_guide/intelligence/intelligent_channel/">En savoir plus sur ce filtre ici.</a> <br> <br> À partir de la <a href="/docs/help/release_notes/2019/november/#intelligence-suite">version de produit de novembre 2019</a>, ''Chaîne la plus gagnée'' a été renommée en ''Chaîne intelligente''._'
     tags:
-      - User Activity
+      - Activité de l'utilisateur
   - 
-    name: Ad Tracking Enabled
-    description: Allows you to filter based on if your users have opted-in to ad tracking. Ad tracking relates to the IDFA or "identifier for advertisers" assigned to all iOS devices by Apple. This identifier allows advertisers to track users and serve them targeted ads.
+    name: Suivi des publicités activé
+    description: Vous permet de filtrer selon si vos utilisateurs ont opté pour le suivi des annonces. Le suivi des publicités se rapporte à l'IDFA ou "identifiant pour les annonceurs" attribué à tous les appareils iOS par Apple. Cet identifiant permet aux annonceurs de suivre les utilisateurs et de les diffuser des publicités ciblées.
     tags:
-      - Testing
+      - Tests en cours
 ---
 
