@@ -1,114 +1,114 @@
 ---
-nav_title: Custom Keyword Handling
-article_title: Custom Keyword Handling
+nav_title: Manipulation des mots clés personnalisés
+article_title: Manipulation des mots clés personnalisés
 page_order: 2
-description: "This reference article covers how Braze deals with two-way SMS messaging and auto-responses. This includes explanations on how keyword triggering works as well as custom keyword categories and multi-language support."
-page_type: reference
+description: "Cet article de référence traite de la manière dont Braze traite la messagerie SMS bidirectionnelle et les réponses automatiques. Cela inclut des explications sur le fonctionnement du déclenchement de mots clés ainsi que des catégories de mots clés personnalisées et le support multi-langage."
+page_type: Référence
 channel:
   - SMS
 ---
 
 <br>
 {% alert important %}
-Are you currently a non-native SMS client? If so, please visit the [non-native SMS documentation](/docs/user_guide/message_building_by_channel/sms/non_native/) for your corresponding keyword handling article.
+Êtes-vous actuellement un client SMS non-natif ? Si c'est le cas, veuillez visiter la [documentation SMS non-native](/docs/user_guide/message_building_by_channel/sms/non_native/) pour votre article de gestion des mots clés correspondants.
 {% endalert %}
 
-## Two-way messaging (custom keyword responses)
+## Messagerie bidirectionnelle (réponses personnalisées aux mots-clés)
 
-Two-way messaging allows you to send messages and process the responses to those messages. It requires end-users to send a keyword to Braze, to which that user will receive an automatic reply. Applied correctly, two-way messaging can be a simple, immediate, and dynamic solution to customer marketing, saving time and resources along the way.
+La messagerie bidirectionnelle vous permet d'envoyer des messages et de traiter les réponses à ces messages. Il faut que les utilisateurs envoient un mot clé à Braze, auquel cet utilisateur recevra une réponse automatique. Appliquée correctement, la messagerie bidirectionnelle peut être une solution simple, immédiate et dynamique pour le marketing de la clientèle, en économisant du temps et des ressources.
 
-## Managing keywords and auto responses
+## Gestion des mots-clés et des réponses automatiques
 
-SMS with Braze gives you the option to create keyword triggers, custom responses, define keyword sets for multiple languages, and establish custom keyword categories.
+SMS avec Braze vous donne la possibilité de créer des déclencheurs de mots-clés, des réponses personnalisées, de définir des ensembles de mots clés pour plusieurs langues, et d'établir des catégories de mots clés personnalisées.
 
 {% tabs %}
 {% tab Add Keyword Triggers %}
 
-#### Add keyword triggers
+#### Ajouter des déclencheurs de mots clés
 
-In addition to the default opt-in and opt-out keywords listed above, you may also define your own keywords to trigger Opt-In, Opt-Out, and Help responses.
+En plus des mots-clés opt-in et opt-out par défaut listés ci-dessus, vous pouvez également définir vos propres mots-clés pour déclencher les réponses Opt-In, Opt-Out et Help .
 
-![Home]({% image_buster /assets/img/sms/keyword_edit2.png %}){: style="float:right;max-width:40%;margin-left:10px;"}
-1. To define your own keywords, navigate to the SMS section of the dashboard located under Subscription Groups.<br><br>
-2. Under SMS Global Keywords, select a keyword category to add a keyword to by selecting the pencil icon.<br><br>
-3. In the dialogue box that pops up, add a keyword you would like to trigger this keyword category. Note that keywords are case sensitive, and universal keywords like `START`, `YES`, and `UNSTOP` cannot be changed. Please read the rules below that apply to keywords and keyword responses.<br><br>![picture]({% image_buster /assets/img/sms/sms_keywords.png %})
+![Domicile]({% image_buster /assets/img/sms/keyword_edit2.png %}){: style="float:right;max-width:40%;margin-left:10px;"}
+1. Pour définir vos propres mots clés, accédez à la section SMS du tableau de bord situé sous Groupes d'abonnement.<br><br>
+2. Sous SMS Global Keywords, sélectionnez une catégorie de mots clés pour ajouter un mot-clé en sélectionnant l'icône crayon.<br><br>
+3. Dans la boîte de dialogue qui apparaît, ajoutez un mot clé que vous souhaitez déclencher dans cette catégorie de mots-clés. Notez que les mots-clés sont sensibles à la casse, et les mots-clés universels comme `START`, `OUI`, et `UNSTOP` ne peuvent pas être changés. Veuillez lire les règles ci-dessous qui s'appliquent aux mots-clés et aux réponses par mots-clés.<br><br>![photo]({% image_buster /assets/img/sms/sms_keywords.png %})
 
-| Keywords                                                                                                                                                                                                                                                                                       | Keyword Responses                                                                              |
-| ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- |
-| - Valid UTF8 encoded characters<br>- Maximum of 20 keywords per category total<br>- Maximum length of 34 characters<br>- Minimum length of 1 character <br>- Cannot contain spaces<br>- Required to be case insensitive and unique across the subscription group | - Cannot be blank<br>- Maximum length of 300 characters<br>- Valid UTF8 characters |
+| Mots clés                                                                                                                                                                                                                                                                                                                 | Réponses par mot clé                                                                                      |
+| ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------- |
+| - Caractères UTF8 valides encodés<br>- Maximum de 20 mots-clés par catégorie au total<br>- Longueur maximale de 34 caractères<br>- Longueur minimale de 1 caractère <br>- Ne peut pas contenir d'espaces<br>- Requis pour être insensible à la casse et unique dans le groupe d'abonnements | - Ne peut pas être vide<br>- Longueur maximale de 300 caractères<br>- Caractères UTF8 valides |
 {: .reset-td-br-1 .reset-td-br-2}
 
 {% alert tip %}
-Interested in seeing how these keywords can be used in your campaigns and Canvases to retarget and trigger messages? Visit our [SMS retargeting article]({{site.baseurl}}/user_guide/message_building_by_channel/sms/campaign/retargeting/) for more information.
+Intéressé par la façon dont ces mots-clés peuvent être utilisés dans vos campagnes et Canvases pour repérer et déclencher des messages ? Visitez notre [article de relocalisation par SMS]({{site.baseurl}}/user_guide/message_building_by_channel/sms/campaign/retargeting/) pour plus d'informations.
 {% endalert %}
 {% endtab %}
 
 {% tab Manage Responses %}
 
-#### Manage responses
+#### Gérer les réponses
 
-You are able to manage your own responses that get sent to users after they text in a keyword to a specific keyword category.
+Vous pouvez gérer vos propres réponses qui sont envoyées aux utilisateurs après avoir écrit un mot clé dans une catégorie spécifique de mots-clés.
 
-![Home]({% image_buster /assets/img/sms/keyword_edit2.png %}){: style="float:right;max-width:40%;margin-left:10px;"}
-1. To manage your keyword responses, navigate to the SMS section of the dashboard located under Subscription Groups. <br><br>
-2. Under SMS Global Keywords, select a keyword category to edit a response for by selecting the pencil icon.<br><br>
-3. In the dialogue box that pops up, edit and save your response. Please be mindful of the [Six Rules to get Compliance Right]({{site.baseurl}}/user_guide/message_building_by_channel/sms/sms_laws_and_regulations/#the-six-rules-to-get-compliance-right) as you create your response and read the rules below that apply to keywords and keyword responses.<br><br> ![Responses]({% image_buster /assets/img/sms/keyword_home.png %})
+![Domicile]({% image_buster /assets/img/sms/keyword_edit2.png %}){: style="float:right;max-width:40%;margin-left:10px;"}
+1. Pour gérer vos réponses par mots-clés, accédez à la section SMS du tableau de bord situé sous Groupes d'abonnement. <br><br>
+2. Sous SMS Global Keywords, sélectionnez une catégorie de mots clés pour éditer une réponse en sélectionnant l'icône crayon.<br><br>
+3. Dans la boîte de dialogue qui apparaît, modifiez et enregistrez votre réponse. Veuillez garder à l'esprit les [six règles pour obtenir le droit à la conformité]({{site.baseurl}}/user_guide/message_building_by_channel/sms/sms_laws_and_regulations/#the-six-rules-to-get-compliance-right) au fur et à mesure que vous créez votre réponse et lisez les règles ci-dessous qui s'appliquent aux mots-clés et aux réponses par mots-clés.<br><br> ![Réponses]({% image_buster /assets/img/sms/keyword_home.png %})
 
-| Keywords                                                                                                                                                                                                                                                                                       | Keyword Responses                                                                              |
-| ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- |
-| - Valid UTF8 encoded characters<br>- Maximum of 20 keywords per category total<br>- Maximum length of 34 characters<br>- Minimum length of 1 character <br>- Cannot contain spaces<br>- Required to be case insensitive and unique across the subscription group | - Cannot be blank<br>- Maximum length of 300 characters<br>- Valid UTF8 characters |
+| Mots clés                                                                                                                                                                                                                                                                                                                 | Réponses par mot clé                                                                                      |
+| ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------- |
+| - Caractères UTF8 valides encodés<br>- Maximum de 20 mots-clés par catégorie au total<br>- Longueur maximale de 34 caractères<br>- Longueur minimale de 1 caractère <br>- Ne peut pas contenir d'espaces<br>- Requis pour être insensible à la casse et unique dans le groupe d'abonnements | - Ne peut pas être vide<br>- Longueur maximale de 300 caractères<br>- Caractères UTF8 valides |
 {: .reset-td-br-1 .reset-td-br-2}
 
 {% endtab %}
 {% endtabs %}
 
-## Multi-language support
+## Prise en charge multi-langues
 
-When sending to certain countries, a sender may be required to support inbound keywords and outbound replies with a local language. To support this, Braze allows you to create a language-specific keyword setting.
+Lors de l'envoi à certains pays, un expéditeur peut être requis pour supporter les mots-clés entrants et les réponses sortantes dans une langue locale. Pour cela, Braze vous permet de créer un paramètre de mot clé spécifique à la langue.
 
-!\[picture\]\[16\]{: style="float:right;max-width:40%;margin-left:10px;"} To get started, click "Add A Language" and select your target language or search for a language within the dropdown.
+!\[picture\]\[16\]{: style="float:right;max-width:40%;margin-left:10px; } Pour commencer, cliquez sur "Ajouter une langue" et sélectionnez votre langue cible ou recherchez une langue dans le menu déroulant.
 
-Please note that other languages do NOT come with preset keywords/responses like English, so senders will need to work with their marketing and legal teams to add any required keywords to this set. Otherwise, Braze will not handle localized incoming messages for those languages. If you need to delete a language, click the "Delete Language" button at the bottom right.
+Veuillez noter que les autres langues ne sont PAS livrées avec des mots-clés prédéfinis comme l'anglais, ainsi les expéditeurs devront travailler avec leurs équipes de marketing et légales pour ajouter tous les mots-clés requis à cet ensemble. Sinon, Braze ne gérera pas les messages entrants localisés pour ces langues. Si vous avez besoin de supprimer une langue, cliquez sur le bouton "Supprimer la langue" en bas à droite.
 
 !\[picture\]\[5\]
 
-## Custom keyword categories
+## Catégories de mots clés personnalisés
 
-In addition to the three default keyword categories (Opt-in, Opt-out, and Help), you are also able to create up to 10 of your own keyword categories. This allows you to identify arbitrary keywords and set up responses specific to your business. An example category might be "PROMO" or "DISCOUNT" which might prompt a response about promos that are happening this month.
+En plus des trois catégories de mots clés par défaut (opt-in, opt-out et aide), vous pouvez également créer jusqu'à 10 de vos propres catégories de mots-clés. Cela vous permet d'identifier des mots-clés arbitraires et de configurer des réponses spécifiques à votre entreprise. Un exemple de catégorie pourrait être "PROMO" ou "DISCOUNT" qui pourrait déclencher une réponse sur les promotions qui se déroulent ce mois-ci.
 
-These custom keywords operate in an "always-on" capacity, meaning that any user subscribed to your message service can text keywords and receive a response at any point. In addition to this behavior, you also have the option to define specific keywords that can only be sent to at [certain points]({{site.baseurl}}/user_guide/message_building_by_channel/sms/keywords/keyword_handling/#lifecycle-specific-keywords) of your user's lifecycle.
+Ces mots-clés personnalisés fonctionnent dans une capacité "toujours", ce qui signifie que tout utilisateur abonné à votre service de message peut écrire des mots clés et recevoir une réponse à n'importe quel moment. En plus de ce comportement, vous avez également la possibilité de définir des mots-clés spécifiques qui ne peuvent être envoyés qu'à [certains points]({{site.baseurl}}/user_guide/message_building_by_channel/sms/keywords/keyword_handling/#lifecycle-specific-keywords) du cycle de vie de votre utilisateur.
 
 !\[picture\]\[12\]
 
-### Create a custom category
+### Créer une catégorie personnalisée
 
-!\[picture\]\[13\]{: style="float:right;max-width:40%;margin-left:10px;"} To create a custom keyword category, edit the appropriate subscription group, and click "Add Custom Keyword Category". Here, you will be able to provide a keyword category name and define which keywords a user can text in to receive the reply message.
+!\[picture\]\[13\]{: style="float:right;max-width:40%;margin-left:10px;"} Pour créer une catégorie de mot clé personnalisée, éditez le groupe d'abonnements approprié, et cliquez sur "Ajouter une catégorie de mot clé personnalisé". Ici, vous serez en mesure de fournir un nom de catégorie de mots-clés et de définir les mots-clés dans lesquels un utilisateur peut écrire pour recevoir le message de réponse.
 
-Once created, this keyword category will be available to [filter and trigger]({{site.baseurl}}/user_guide/message_building_by_channel/sms/campaign/retargeting/) against in your campaigns and Canvases.
+Une fois créée, cette catégorie de mots-clés sera disponible pour [filtrer et déclencher]({{site.baseurl}}/user_guide/message_building_by_channel/sms/campaign/retargeting/) contre vos campagnes et vos Canvases.
 
-Keywords created in custom keyword categories adhere to all of the rules and validations stated above for the creation of new keywords.
+Les mots-clés créés dans les catégories de mots-clés personnalisés adhèrent à toutes les règles et validations indiquées ci-dessus pour la création de nouveaux mots-clés.
 
-### Lifecycle-specific keywords
+### Mots-clés spécifiques au cycle de vie
 
-If you have a use case where you would like to limit when a customer can send a specific keyword during their lifecycle (e.g., during their first initial onboarding) to receive a response, you can use the trigger "Sent inbound SMS to subscription group within keyword category OTHER" in your campaign/Canvas and define some ad-hoc keywords that your users can send in at a point in time. This trigger supports filtering on the specific inbound message using is/is not comparisons of the message, as well as matches/does not match regex rules to validate the user's input.
+Si vous avez un cas d'utilisation où vous souhaitez limiter quand un client peut envoyer un mot clé spécifique pendant son cycle de vie (par ex. lors de leur première intégration initiale) pour recevoir une réponse, vous pouvez utiliser le déclencheur "Envoyer les SMS entrants à un groupe d'abonnement dans la catégorie des mots clés AUTRE" dans votre campagne/Canvas et définir des mots-clés ad hoc que vos utilisateurs peuvent envoyer à un moment donné. Ce déclencheur prend en charge le filtrage sur le message entrant spécifique en utilisant / n'est pas une comparaison du message, ainsi que les correspondances/ne correspondent pas aux règles regex pour valider l'entrée de l'utilisateur.
 
-#### Canvas
+#### Toile
 
 !\[picture\]\[14\]{: style="max-width:80%;"}
 
-#### Campaign
+#### Campagnes
 
 !\[picture\]\[15\]{: style="max-width:80%;"}
 
-### Dealing with unknown keywords
+### Traitement avec des mots-clés inconnus
 
-While not required, we strongly recommend setting up an auto-response for when users send inbound SMS keywords that do not match an existing keyword. This message will notify the user that the keyword is not recognized and offer some guidance.
+Bien que ce ne soit pas obligatoire, nous recommandons fortement de configurer une réponse automatique lorsque les utilisateurs envoient des mots-clés SMS entrants qui ne correspondent pas à un mot clé existant. Ce message avertira l'utilisateur que le mot clé n'est pas reconnu et offre un certain conseil.
 
-This can be done by creating an SMS campaign with a message like "Sorry! We didn't recognize that keyword, text STOP to stop or HELP to help." Next, in the delivery step, select "Action-Based Delivery" and use the trigger "Sent inbound SMS to subscription group within keyword category OTHER".
+Cela peut être fait en créant une campagne SMS avec un message comme "Désolé! Nous n'avons pas reconnu ce mot clé, le texte STOP pour arrêter ou aider à l'aide." Ensuite, dans l'étape de livraison, sélectionnez « Livraison à portée d'action » et utilisez le déclencheur « Envoyer SMS entrant à un groupe d'abonnement au sein de la catégorie de mots clés AUTRES ».
 
-![SMS Confirm]({% image_buster /assets/img/sms/sms_other.png %})
+![Confirmation SMS]({% image_buster /assets/img/sms/sms_other.png %})
 
 {% alert tip %}
-Interested in seeing how these keywords and keyword categories can be used in your campaigns and Canvases to retarget and trigger messages? Visit our [SMS retargeting article]({{site.baseurl}}/user_guide/message_building_by_channel/sms/campaign/retargeting/) for more information.
+Intéressé par la façon dont ces mots-clés et ces catégories de mots clés peuvent être utilisés dans vos campagnes et Canvases pour redimensionner et déclencher des messages ? Visitez notre [article de relocalisation par SMS]({{site.baseurl}}/user_guide/message_building_by_channel/sms/campaign/retargeting/) pour plus d'informations.
 {% endalert %}
-[1]: {% image_buster /assets/img/sms/keyword_edit2.png %} [2]: {% image_buster /assets/img/sms/keyword_home.png %} [IMAGE2]: {% image_buster /assets/img/sms/sms_message_body.png %} [5]: {% image_buster /assets/img/sms/multi-language2.png %} [12]: {% image_buster /assets/img/sms/sms_custom_keyword.png %} [13]: {% image_buster /assets/img/sms/sms_custom_step.png %} [14]: {% image_buster /assets/img/sms/canvas_trigger.png %} [15]: {% image_buster /assets/img/sms/campaign_trigger.png %} [16]: {% image_buster /assets/img/sms/multi-language.png %}
+[1]: {% image_buster /assets/img/sms/keyword_edit2.png %} [2]: {% image_buster /assets/img/sms/keyword_home.png %} [IMAGE2]: {% image_buster /assets/img/sms/sms_message_body. ng %} [5]: {% image_buster /assets/img/sms/multi-language2.png %} [12]: {% image_buster /assets/img/sms/sms_custom_keyword. ng %} [13]: {% image_buster /assets/img/sms/sms_custom_step.png %} [14]: {% image_buster /assets/img/sms/canvas_trigger. ng %} [15]: {% image_buster /assets/img/sms/campaign_trigger.png %} [16]: {% image_buster /assets/img/sms/multi-language.png %}
