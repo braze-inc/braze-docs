@@ -1,117 +1,117 @@
 ---
 page_order: 0
-nav_title: Terms to Know
-article_title: Onboarding Terms to Know
+nav_title: Termes à connaître
+article_title: Conditions d’intégration à connaître
 layout: glossary_page
-glossary_top_header: "Terms to Know"
-glossary_top_text: "These terms should help you as you begin your journey to better customer and user bonds with Braze! Give this a read before you begin your onboarding."
+glossary_top_header: "Termes à connaître"
+glossary_top_text: "Ces termes devraient vous aider à commencer votre voyage vers de meilleurs liens avec les clients et les utilisateurs brésiliens ! Donnez ceci une lecture avant de commencer votre intégration."
 page_type: glossary
-description: "This glossary covers important terms to know as you go through the Braze onboarding process."
+description: "Ce glossaire couvre les termes importants à savoir au fur et à mesure que vous passez par le processus d'intégration de Braze."
 glossaries:
   - 
-    name: Active User
-    description: Braze defines an <a href="https://www.braze.com/docs/user_guide/engagement_tools/campaigns/ideas_and_strategies/active_user_campaigns/">active user</a> for a given period as any user who has a session at that time.
+    name: Utilisateur actif
+    description: Braze définit un utilisateur <a href="https://www.braze.com/docs/user_guide/engagement_tools/campaigns/ideas_and_strategies/active_user_campaigns/">actif</a> pour une période donnée comme tout utilisateur qui a une session à ce moment-là.
   - 
-    name: "A/B Multivariate Testing"
-    description: 'A type of testing where one or more variables are changed and tested to see which changes perform best. <a href="https://www.braze.com/docs/user_guide/engagement_tools/campaigns/testing_and_more/multivariate_testing/#multivariate--ab-testing">A/B Testing</a> can be done within dashboard campaigns.'
+    name: "Tests multivariés A/B"
+    description: 'Un type de test où une ou plusieurs variables sont modifiées et testées pour voir quels changements sont les plus performants. Les <a href="https://www.braze.com/docs/user_guide/engagement_tools/campaigns/testing_and_more/multivariate_testing/#multivariate--ab-testing">tests A/B</a> peuvent être effectués dans le cadre des campagnes du tableau de bord.'
   - 
-    name: Alloys
-    description: <a href = "https://www.braze.com/docs/partners/home/"> Alloys</a> are Braze's Technology Partners.
+    name: Alliages
+    description: <a href = "https://www.braze.com/docs/partners/home/"> Alliages</a> sont des partenaires technologiques de Braze.
   - 
-    name: "Application Program Interface (API)"
-    description: 'The <a href="https://www.braze.com/docs/api/basics/#api-overview">Braze API</a> provides a web service where you can record actions taken by your users directly via HTTP, rather than through the mobile SDKs. This allows you to, for example, pass user data to Braze that is not tracked within your app or website.'
+    name: "Interface du programme d'application (API)"
+    description: 'La <a href="https://www.braze.com/docs/api/basics/#api-overview">Braze API</a> fournit un service web où vous pouvez enregistrer les actions prises par vos utilisateurs directement via HTTP, plutôt que via les SDK mobiles. Cela vous permet, par exemple, de passer des données utilisateur à Braze qui ne sont pas suivies dans votre application ou votre site web.'
   - 
-    name: "Braze (The Product)"
-    description: Sometimes referred to as the dashboard, this product controls all of the data and interactions at the heart of the Braze platform. Braze Customers use it to manage notifications, set up targeted messaging campaigns, and view analytics. Developers use it to manage settings for integrating apps, such as API keys and push notification credentials.
+    name: "Braze (Le produit)"
+    description: Parfois appelé tableau de bord, ce produit contrôle toutes les données et interactions au cœur de la plate-forme Braze. Les clients Braze l'utiliser pour gérer les notifications, mettre en place des campagnes de messagerie ciblées et afficher les analyses. Les développeurs l'utilisent pour gérer les paramètres d'intégration des applications, telles que les clés API et les identifiants de notification push.
   - 
-    name: Braze Engagement Tools
-    description: Braze offers many <a href="https://www.braze.com/docs/user_guide/engagement_tools/">tools</a> to reach your customers and users with our campaigns, Canvas tools, and you can optimize for consistency (and upload images and other content) using our Templates & Media tools. From there, you can create Segments and Geofences to target your audience by location or other attributes.
+    name: Outils d'engagement de Braze
+    description: Braze offre de nombreux <a href="https://www.braze.com/docs/user_guide/engagement_tools/">outils</a> pour atteindre vos clients et utilisateurs grâce à nos campagnes, outils Canvas et vous pouvez optimiser pour la cohérence (et télécharger des images et d'autres contenus) en utilisant nos Modèles & Outils Médias. À partir de là, vous pouvez créer des Segments et des Geofences pour cibler votre public par emplacement ou d'autres attributs.
   - 
-    name: Braze Teams
-    description: Braze Admins can divide a subset of dashboard users into <a href="https://www.braze.com/docs/user_guide/administrative/manage_your_braze_users/teams/">Teams</a> with varying user roles and permissions. This allows Admins to limit access to certain features by group membership.
+    name: Équipes de Braze
+    description: Les administrateurs de Braze peuvent diviser un sous-ensemble d'utilisateurs du tableau de bord en <a href="https://www.braze.com/docs/user_guide/administrative/manage_your_braze_users/teams/">Équipes</a> avec des rôles et des permissions d'utilisateurs variables. Cela permet aux administrateurs de limiter l'accès à certaines fonctionnalités par appartenance à un groupe.
   - 
-    name: Canvas
-    description: A single unified interface where marketers can set up campaigns with multiple messages and steps to form a cohesive journey. <a href="https://www.braze.com/docs/user_guide/engagement_tools/canvas/">Canvas</a> also lets you compare and optimize those experiences using comprehensive analytics for the full user experience.
+    name: Toile
+    description: Une interface unifiée unique où les marketeurs peuvent mettre en place des campagnes avec plusieurs messages et étapes pour former un voyage cohérent. <a href="https://www.braze.com/docs/user_guide/engagement_tools/canvas/">Canvas</a> vous permet également de comparer et d'optimiser ces expériences en utilisant des analyses complètes pour une expérience utilisateur complète.
   - 
-    name: Connected Content
-    description: Braze's <a href="https://www.braze.com/docs/user_guide/personalization_and_dynamic_content/connected_content/">Connected Content</a> feature expands on marketing personalization to boost customer engagement and conversions. This feature allows you to insert any information accessible via API directly into messages you send to users. Connected Content allows for pulling content either directly from your web server or publicly accessible APIs.
+    name: Contenu connecté
+    description: La fonctionnalité <a href="https://www.braze.com/docs/user_guide/personalization_and_dynamic_content/connected_content/">Contenu connecté</a> de Braze étend la personnalisation du marketing pour augmenter l'engagement des clients et les conversions. Cette fonction vous permet d'insérer toutes les informations accessibles via l'API directement dans les messages que vous envoyez aux utilisateurs. Le contenu connecté permet d'extraire du contenu soit directement de votre serveur web, soit des API accessibles au public.
   - 
-    name: Content Cards
-    description: Content cards allow you to send a highly targeted, dynamic stream of rich content to your customers right within the apps they love, without interrupting their experience. Content cards can be sent to both <a href="https://www.braze.com/docs/developer_guide/platform_integration_guides/ios/content_cards/">iOS</a> and <a href="https://www.braze.com/docs/developer_guide/platform_integration_guides/android/content_cards/overview/">Android</a> users.
+    name: Cartes de contenu
+    description: Les cartes de contenu vous permettent d'envoyer un contenu hautement ciblé, flux dynamique de contenu riche pour vos clients directement dans les applications qu'ils aiment, sans interrompre leur expérience. Les cartes de contenu peuvent être envoyées aux utilisateurs <a href="https://www.braze.com/docs/developer_guide/platform_integration_guides/ios/content_cards/">iOS</a> et <a href="https://www.braze.com/docs/developer_guide/platform_integration_guides/android/content_cards/overview/">Android</a>.
   - 
-    name: Currents
-    description: <a href = "https://www.braze.com/docs/user_guide/data_and_analytics/braze_currents/">Currents</a>, our data streaming export, are included in certain Braze packages. Braze Currents allows you to integrate through Data Storage using flat files or to our Behavioral Analytics and Customer Data partners using a batched JSON payloads to a designated endpoint.
+    name: Courants
+    description: Les <a href = "https://www.braze.com/docs/user_guide/data_and_analytics/braze_currents/">Courants</a>, notre exportation de flux de données, sont inclus dans certains forfaits Braze. Braze Currents vous permet d'intégrer à travers le stockage de données à l'aide de fichiers plats ou à nos partenaires Behavioral Analytics et de données clients à l'aide d'une charge utile JSON battue à un point de terminaison désigné.
   - 
-    name: Custom Attributes
-    description: 'Braze provides methods within the dashboard for assigning custom attributes to users. You’ll be able to filter and segment your users according to these attributes for both <a href="https://www.braze.com/docs/developer_guide/platform_integration_guides/ios/analytics/setting_custom_attributes/#setting-custom-attributes">iOS</a> and <a href="https://www.braze.com/docs/developer_guide/platform_integration_guides/android/analytics/setting_custom_attributes/">Android</a> Campaigns.'
+    name: Attributs personnalisés
+    description: 'Braze fournit des méthodes dans le tableau de bord pour assigner des attributs personnalisés aux utilisateurs. Vous pourrez filtrer et segmenter vos utilisateurs en fonction de ces attributs pour les campagnes <a href="https://www.braze.com/docs/developer_guide/platform_integration_guides/ios/analytics/setting_custom_attributes/#setting-custom-attributes">iOS</a> et <a href="https://www.braze.com/docs/developer_guide/platform_integration_guides/android/analytics/setting_custom_attributes/">Android</a>.'
   - 
-    name: Custom Events
-    description: 'Braze''s <a href="https://www.braze.com/docs/user_guide/data_and_analytics/custom_data/custom_events/#custom-events">Custom events</a> are actions taken by your users; they’re best suited for tracking high-value user interactions with your application.'
+    name: Événements personnalisés
+    description: 'Les <a href="https://www.braze.com/docs/user_guide/data_and_analytics/custom_data/custom_events/#custom-events">événements personnalisés</a> de Braze sont des actions prises par vos utilisateurs ; ils sont les mieux adaptés pour suivre les interactions utilisateur de grande valeur avec votre application.'
   - 
-    name: Data Point
-    description: A data point is counted when a custom attribute is set or updated (even if you’re updating it with the same value), a custom event or purchase event is logged, any standard data (e.g. email, first_name, last_name, country, home_city, etc) is logged, when a session starts, and when a session ends.
+    name: Point de données
+    description: Un point de données est compté lorsqu'un attribut personnalisé est défini ou mis à jour (même si vous le mettez à jour avec la même valeur), un événement personnalisé ou un événement d'achat est enregistré, toute donnée standard (e. , prénom, nom, pays, home_city, etc) est enregistré, quand une session démarre, et quand une session se termine.
   - 
-    name: Dormant Users
-    description: 'A user is considered <a href="https://www.braze.com/docs/user_guide/data_and_analytics/user_data_collection/user_archival/#dormant-users">dormant</a> when there has been no activity in the last twelve months.'
+    name: Utilisateurs en sommeil
+    description: 'Un utilisateur est considéré comme <a href="https://www.braze.com/docs/user_guide/data_and_analytics/user_data_collection/user_archival/#dormant-users">inactif</a> alors qu''il n''y a eu aucune activité au cours des douze derniers mois.'
   - 
     name: Endpoint
-    description: An end of a communication channel also known as an API <a href="https://www.braze.com/docs/api/endpoints/messaging/">endpoint</a> is used within the Braze messaging API for sending and scheduling messages.
+    description: Une fin d'un canal de communication également connu sous le nom de point de terminaison API <a href="https://www.braze.com/docs/api/endpoints/messaging/"></a> est utilisée dans l'API de messagerie Braze pour envoyer et planifier des messages.
   - 
     name: HIPAA
-    description: 'An Acronym for Health Insurance Portability and Accountability Act, Braze is <a href="https://www.braze.com/docs/developer_guide/disclosures/security_qualifications/#hipaa">HIPAA</a> compliant. HIPAA requirements involve administrative, physical and technical security.'
+    description: 'Un Acronyme de la Loi sur la transférabilité et la responsabilité de l''assurance-maladie, Braze est conforme à la <a href="https://www.braze.com/docs/developer_guide/disclosures/security_qualifications/#hipaa">HIPAA</a>. Les exigences HIPAA concernent la sécurité administrative, physique et technique.'
   - 
-    name: "In-App Messages"
-    description: <a href="https://www.braze.com/docs/user_guide/message_building_by_channel/in-app_messages/">In-app messages</a> are mobile messages that appear within your application. They help you get content to your user without interrupting their day with a push notification. Customized and tailored in-app messages enhance the user experience and help your audience get the most value out of your app.
+    name: "Messages In-App"
+    description: <a href="https://www.braze.com/docs/user_guide/message_building_by_channel/in-app_messages/">Les messages intégrés</a> sont des messages mobiles qui apparaissent dans votre application. Ils vous aident à obtenir du contenu à votre utilisateur sans interrompre sa journée avec une notification push. Des messages personnalisés et personnalisés dans l'application améliorent l'expérience utilisateur et aident votre public à tirer le meilleur parti de votre application.
   - 
-    name: Inactive Users
-    description: 'A user is considered <a href="https://www.braze.com/docs/user_guide/data_and_analytics/user_data_collection/user_archival/#inactive-users">inactive</a> when they reach certain criteria like no longer receiving email or push messages and have not been active for over 6 months.'
+    name: Utilisateurs inactifs
+    description: 'Un utilisateur est considéré comme <a href="https://www.braze.com/docs/user_guide/data_and_analytics/user_data_collection/user_archival/#inactive-users">inactif</a> lorsqu''il atteint certains critères, comme ne reçoit plus d''e-mails ou de messages push et n''a pas été actif depuis plus de 6 mois.'
   - 
-    name: IP Warming
-    description: 'The practice of gradually increasing the amount of mail sent out from a dedicated IP. <a href="https://www.braze.com/docs/user_guide/onboarding_with_braze/email_setup/ip_warming/#ip-warming">IP warming</a> helps establish a reputation with Internet Service Providers, minimizing the probability of your messages getting flagged.'
+    name: Réchauffement IP
+    description: 'La pratique consistant à augmenter progressivement la quantité de courrier envoyé à partir d''une adresse IP dédiée. <a href="https://www.braze.com/docs/user_guide/onboarding_with_braze/email_setup/ip_warming/#ip-warming">Le réchauffement de l''IP</a> permet d''établir une réputation auprès des Fournisseurs de services Internet, ce qui réduit la probabilité que vos messages soient signalés.'
   - 
-    name: Liquid
-    description: An open-source, customer-facing template language created by Shopify and written in Ruby; <a href="https://www.braze.com/docs/user_guide/personalization_and_dynamic_content/liquid/">Liquid</a> is used to load/pull dynamic content. Liquid allows you to use objects, Tags, and filters to add personal customization.
+    name: Liquide
+    description: Un langage de modèle open-source, orienté client créé par Shopify et écrit en Ruby; <a href="https://www.braze.com/docs/user_guide/personalization_and_dynamic_content/liquid/">Liquid</a> est utilisé pour charger/tirer du contenu dynamique. Liquid vous permet d'utiliser des objets, des balises et des filtres pour ajouter une personnalisation personnelle.
   - 
-    name: Messaging Channel
-    description: <a href="https://www.braze.com/docs/user_guide/message_building_by_channel/">Messaging channels</a> are ways you can virtually communicate with your customers - through push notifications on their phone or web browser, email, in-app messages, and so much more!
+    name: Chaîne de messagerie
+    description: <a href="https://www.braze.com/docs/user_guide/message_building_by_channel/">Les canaux de messagerie</a> sont des moyens que vous pouvez pratiquement communiquer avec vos clients - par le biais de notifications push sur leur téléphone ou leur navigateur Web, courriel, messages dans l'application, et bien plus encore !
   - 
-    name: "Monthly Active User (MAU)"
-    description: Any user who has a session within the last 30 days.
+    name: "Utilisateur actif mensuel (MAU)"
+    description: N'importe quel utilisateur qui a une session dans les 30 derniers jours.
   - 
-    name: Multichannel Messaging
-    description: 'Messaging a user across various mediums - like a combination of email, web push, and mobile push notifications. <a href="https://www.braze.com/docs/developer_guide/platform_wide/platform_features/#multi-channel-messaging">Messaging channels</a> are best used in concert and with regularity to re-engage lost users, retain active users, and energize your brand ambassadors.'
+    name: Messagerie multicanale
+    description: 'Messagerie d''un utilisateur sur différents supports - comme une combinaison de courriels, de messages push sur le Web et de notifications push sur les mobiles. Les <a href="https://www.braze.com/docs/developer_guide/platform_wide/platform_features/#multi-channel-messaging">canaux de messagerie</a> sont mieux utilisés en concert et avec régularité pour réengager les utilisateurs perdus, retenir les utilisateurs actifs et dynamiser les ambassadeurs de votre marque.'
   - 
-    name: News Feed
-    description: The News Feed is a fully customizable in-app content feed for your users. Braze targeting and segmentation allows you to create a stream of content that is individually catered to the interests of each user for both <a href="https://www.braze.com/docs/developer_guide/platform_integration_guides/ios/news_feed/">iOS</a> and <a href="https://www.braze.com/docs/developer_guide/platform_integration_guides/android/news_feed/integration_overview/">Android</a>.
+    name: Flux d'actualité
+    description: Le fil d'actualité est un flux de contenu entièrement personnalisable dans l'application pour vos utilisateurs. Le ciblage de Braze et la segmentation vous permettent de créer un flux de contenu qui est individuellement pris en charge par chaque utilisateur à la fois pour <a href="https://www.braze.com/docs/developer_guide/platform_integration_guides/ios/news_feed/">iOS</a> et <a href="https://www.braze.com/docs/developer_guide/platform_integration_guides/android/news_feed/integration_overview/">Android</a>.
   - 
-    name: New User
-    description: Braze considers a new user as anyone who has newly installed your app. Alternatively, a new user can also be defined as a user with a user ID that has not been previously identified within Braze.
+    name: Nouvel utilisateur
+    description: Braze considère un nouvel utilisateur comme quiconque vient d'installer votre application. Alternativement, un nouvel utilisateur peut également être défini comme un utilisateur avec un identifiant utilisateur qui n'a pas été identifié précédemment au Brésil.
   - 
-    name: Push Messages
-    description: A <a href="https://www.braze.com/docs/user_guide/message_building_by_channel/push/">push</a> notification or push message is a notification that appears from a mobile application. Push notifications often appear as pop-up dialogs and banners for both iOS and Android.
+    name: Messages Push
+    description: Une notification <a href="https://www.braze.com/docs/user_guide/message_building_by_channel/push/">push</a> ou un message push est une notification qui apparaît à partir d'une application mobile. Les notifications push apparaissent souvent sous la forme de fenêtres pop-up et de bannières pour iOS et Android.
   - 
     name: Push Token
-    description: 'A push token is a unique key, created and assigned by Apple or Google to create a connection between an app and an iOS, Android, or web device. <a href="https://www.braze.com/docs/help/help_articles/push/push_token_migration/#push-token-migration">Push Token migration</a> is the importing of those already-generated keys into Braze’s platform.'
+    description: 'Un jeton push est une clé unique, créé et assigné par Apple ou Google pour créer une connexion entre une application et un appareil iOS, Android ou web. <a href="https://www.braze.com/docs/help/help_articles/push/push_token_migration/#push-token-migration">La migration de jetons Push</a> est l''importation de ces clés déjà générées dans la plate-forme de Brase.'
   - 
-    name: Push Time to Live
-    description: Also known as <a href="https://www.braze.com/docs/user_guide/administrative/app_settings/push_ttl_settings/">Push TTL</a>, time to live refers to the period campaigns will continue to attempt to be delivered to an offline user.
+    name: Temps de Push pour Live
+    description: Aussi connu sous le nom de <a href="https://www.braze.com/docs/user_guide/administrative/app_settings/push_ttl_settings/">Push TTL</a>, temps à vivre se réfère aux campagnes de période continuera à essayer d'être livré à un utilisateur hors ligne.
   - 
-    name: Race Condition
-    description: A race condition is a software engineering concept that describes some undesirable situation that occurs when a system tries to perform several operations simultaneously, but because of the nature of the system, the operations must be done in the correct sequence to be done correctly. <br><br>In the Braze platform, segmenting a triggered campaign on user data recorded at the time of the event may cause a race condition. This happens when a change in the user attribute on which the campaign is segmented hasn't yet been processed for the user at the time segment membership is determined and the campaign is sent and can lead to the user not receiving the campaign.
+    name: Condition de la course
+    description: Une condition de course est un concept d'ingénierie logicielle qui décrit une situation indésirable qui se produit lorsqu'un système tente d'effectuer plusieurs opérations simultanément, mais en raison de la nature du système, les opérations doivent être faites dans la bonne séquence pour être faites correctement. <br><br>Dans la plate-forme Braze, segmenter une campagne déclenchée sur les données utilisateur enregistrées au moment de l'événement peut causer une condition de course. Cela se produit lorsqu'un changement dans l'attribut utilisateur sur lequel la campagne est segmentée n'a pas encore été traitée pour l'utilisateur au moment où l'adhésion au segment est déterminée et la campagne est envoyée et peut conduire à ce que l'utilisateur ne reçoive pas la campagne.
   - 
     name: Tags
-    description: '<a href="https://www.braze.com/docs/user_guide/administrative/app_settings/tags/#tags">Tags</a> are a tool that help you categorize, organize, and sort your engagement across one or multiple campaigns.'
+    description: '<a href="https://www.braze.com/docs/user_guide/administrative/app_settings/tags/#tags">Les balises</a> sont un outil qui vous aide à catégoriser, organiser et trier votre engagement sur une ou plusieurs campagnes.'
   - 
     name: Segmentation
-    description: Dashboard <a href="https://www.braze.com/docs/user_guide/engagement_tools/segments/">Segmentation</a> allows you to create groups or extensions of users based on powerful filters of their in-app behavior, demographic data, social data, etc.
+    description: Tableau de bord <a href="https://www.braze.com/docs/user_guide/engagement_tools/segments/">Segmentation</a> vous permet de créer des groupes ou des extensions d'utilisateurs basés sur des filtres puissants de leur comportement dans l'application, données démographiques, données sociales, etc.
   - 
-    name: "Software Development Kit (SDK)"
-    description: '<a href="https://www.braze.com/docs/developer_guide/platform_integration_guides/sdk_primer/">SDKs</a> are integrated into iOS and Android applications and provides powerful marketing, customer support, and analytics tools. Braze offers SDK integration for both <a href="https://www.braze.com/docs/developer_guide/platform_integration_guides/ios/initial_sdk_setup/">iOS</a> and <a href="https://www.braze.com/docs/developer_guide/platform_integration_guides/android/initial_sdk_setup/android_sdk_integration/#initial-sdk-setup">Android</a>.'
+    name: "Kit de développement logiciel (SDK)"
+    description: 'Les <a href="https://www.braze.com/docs/developer_guide/platform_integration_guides/sdk_primer/">SDKs</a> sont intégrés dans les applications iOS et Android et fournissent des outils puissants de marketing, de support client et d''analytique. Braze offre une intégration SDK pour <a href="https://www.braze.com/docs/developer_guide/platform_integration_guides/ios/initial_sdk_setup/">iOS</a> et <a href="https://www.braze.com/docs/developer_guide/platform_integration_guides/android/initial_sdk_setup/android_sdk_integration/#initial-sdk-setup">Android</a>.'
   - 
-    name: User Archival
-    description: <a href="https://www.braze.com/docs/user_guide/data_and_analytics/user_data_collection/user_archival/">User archival</a> refers to users that have been archived. At Braze this includes both inactive and dormant users.
+    name: Archivage de l'utilisateur
+    description: <a href="https://www.braze.com/docs/user_guide/data_and_analytics/user_data_collection/user_archival/">L'archivage de l'utilisateur</a> fait référence aux utilisateurs qui ont été archivés. Chez Braze, ceci inclut à la fois les utilisateurs inactifs et dormants.
   - 
     name: Webhooks
-    description: <a href="https://www.braze.com/docs/user_guide/message_building_by_channel/webhooks/">Webhooks</a> allow you to trigger non-app actions such as SMS text message delivery. You can use webhooks to provide other systems and applications with real-time information. The flexibility of this feature allows you to send information to any endpoint.
+    description: <a href="https://www.braze.com/docs/user_guide/message_building_by_channel/webhooks/">Les Webhooks</a> vous permettent de déclencher des actions non-applicatives telles que l'envoi de SMS de messagerie. Vous pouvez utiliser des webhooks pour fournir des informations en temps réel à d'autres systèmes et applications. La flexibilité de cette fonction vous permet d'envoyer des informations à n'importe quel terminal.
 ---
 
