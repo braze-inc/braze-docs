@@ -27,8 +27,8 @@ L'intégration de [digne](https://worthy.ai/) et de Braze vous permet de créer 
 
 | Exigences                          | Libellé                                                                                                                |
 | ---------------------------------- | ---------------------------------------------------------------------------------------------------------------------- |
+| Compte [digne](https://worthy.ai/) | Un compte utile est requis pour profiter de ce partenariat.                                                            |
 | SDK Braze                          | Vous devrez configurer le Braze SDK dans votre application mobile pour envoyer des messages riches dans l'application. |
-| Compte [digne](https://worthy.ai/) | Vous aurez besoin d'un compte digne pour utiliser le créateur de message digne.                                        |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4}
 
 ## Intégration
