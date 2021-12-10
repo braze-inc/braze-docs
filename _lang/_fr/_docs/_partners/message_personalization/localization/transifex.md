@@ -15,10 +15,10 @@ L'effet de levier de l'intégration Transifex et Braze du contenu connecté, vou
 
 ## Pré-requis
 
-| Exigences        | Origine   | Accès                                                                 | Libellé                                                                                           |
-| ---------------- | --------- | --------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------- |
-| Compte Transifex | Transifex | [https://www.transifex.com/login/](https://www.transifex.com/signin/) | Vous devez d'abord avoir un compte Transifex pour accéder à leurs informations d'intégration SDK. |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
+| Exigences        | Libellé                                                                                              |
+| ---------------- | ---------------------------------------------------------------------------------------------------- |
+| Compte Transifex | Un [compte Transifex](https://www.transifex.com/signin/) est requis pour profiter de ce partnerhsip. |
+{: .reset-td-br-1 .reset-td-br-2}
 
 ## Intégration
 
