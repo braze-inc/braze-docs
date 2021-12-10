@@ -1,70 +1,70 @@
 ---
-nav_title: Prediction Analytics
-article_title: Prediction Analytics
-description: "This reference article covers the different components included in the Predictive Purchases Analytics Page and how they can be used to make insightful driven decisions."
+nav_title: Analyses de prédiction
+article_title: Analyses de prédiction
+description: "Cet article de référence couvre les différents composants inclus dans la page Analyses des achats prédictifs et comment ils peuvent être utilisés pour prendre des décisions éclairées."
 page_order: 2
 ---
 
-# Prediction analytics
+# Analyses de prédiction
 
-Once your Prediction has been built and trained, you will have access to the __Prediction Analytics__ page. This page helps you decide what users you should target based on their Purchase Likelihood Score or Category. As soon as the Prediction is done training and this page is populated, you can jump to simply using [filters]({{site.baseurl}}/user_guide/predictive_suite/predictive_churn/messaging_users/#filters) in segments or campaigns to begin using the outputs of the model. If you want help deciding who to target and why, this page can help based on the historical accuracy of the model and your own business goals.
+Une fois que votre prédiction aura été construite et formée, vous aurez accès à la page __Analyses de prédiction__. Cette page vous aide à décider quels utilisateurs vous devez cibler en fonction de leur Score de probabilité d'achat ou de catégorie. Dès que la formation est terminée et que cette page est remplie, vous pouvez simplement utiliser [filtres]({{site.baseurl}}/user_guide/predictive_suite/predictive_churn/messaging_users/#filters) dans des segments ou des campagnes pour commencer à utiliser les sorties du modèle. Si vous voulez aider à décider qui cibler et pourquoi, Cette page peut vous aider en fonction de la précision historique du modèle et de vos propres objectifs commerciaux.
 
 __Analytics Components__<br> &#45; [Purchase Likelihood Score](#purchase_score)<br> &#45; [Targeting Users](#target_users)<br> &#45; [Prediction Quality](#prediction_quality)<br> &#45; [Estimated Results](#estimated_results)<br> &#45; [Purchase Correlation Table](#correlation_table)
 
-## Purchase likelihood score {#purchase_score}
+## Acheter le score de probabilité {#purchase_score}
 
-Users in the Prediction Audience will be assigned a Purchase Likelihood Score between 0 and 100. The higher the score, the greater the likelihood of Purchase.
+Les utilisateurs de l'audience de prédiction se verront attribuer un score de probabilité d'achat entre 0 et 100. Plus le score est élevé, plus la probabilité d’achat est élevée.
 
-- Users with Purchase Likelihood Scores between 0 and 50 will be labeled in the Low category.
-- Users with scores between 50 and 75, and 75 and 100 will be labeled in the Medium and High likelihood categories, respectively.
+- Les utilisateurs ayant des cotes de probabilité d'achat entre 0 et 50 seront étiquetés dans la catégorie Basse
+- Les utilisateurs ayant des scores entre 50 et 75 et 100 seront étiquetés respectivement dans les catégories moyenne et haute probabilité.
 
-The scores and the corresponding categories will be updated according to the schedule you chose in the __Prediction Creation__ page. The number of users with Purchase Likelihood Scores in each of the 20 equally sized buckets or in each of the Purchase Likelihood Categories, is displayed in the chart at the top of the page.
+Les scores et les catégories correspondantes seront mis à jour selon le calendrier que vous avez choisi dans la page __Création de Prédiction__. Le nombre d'utilisateurs ayant acheté des scores de probabilité dans chacun des 20 segments de même taille ou dans chacune des catégories de probabilité d'achat, est affiché dans le graphique en haut de la page.
 
-## Audience builder {#target_users}
+## Constructeur d'audience {#target_users}
 
-The distribution of the Purchase Likelihood Scores for the entire Prediction Audience is displayed at the top of the page. Users in buckets further to the right have higher scores and are more likely to purchase. Users in buckets further to the left are less likely to purchase. The slider beneath the chart will allow you to select a swath of users and estimate what the results would be of targeting those users.
+La distribution des cotes de probabilité d'achat pour l'ensemble de l'audience de prédiction est affichée en haut de la page. Les utilisateurs situés dans des seaux plus à droite ont des scores plus élevés et sont plus susceptibles d'acheter. Les utilisateurs situés dans des compartiments plus à gauche sont moins susceptibles d'acheter. Le curseur situé sous le graphique vous permettra de sélectionner un échantillon d'utilisateurs et d'estimer les résultats de ciblage de ces utilisateurs.
 
 !\[Churn Targeting\]\[4\]{: style="max-width:90%"}
 
-As you move the slider handles to different positions, the bar in the left half of the panel below it will inform you how many users out of the entire Prediction Audience would be targeted using the part of the population you've selected.
+Lorsque vous déplacez les poignées du curseur à différentes positions, la barre de la moitié gauche du panneau ci-dessous vous informera du nombre d'utilisateurs de l'ensemble de l'audience prédiction qui serait ciblée en utilisant la partie de la population que vous avez sélectionnée.
 
-### Estimated results {#estimated_results}
+### Résultats estimés {#estimated_results}
 
-!\[Estimated Results\]\[6\]
+!\[Résultats estimés\]\[6\]
 
-In the right half of the panel beneath the chart, we show estimates of the expected accuracy of targeting the portion of the Prediction Audience you selected above in two ways:
+Dans la moitié droite du panneau sous le graphique, nous montrons les estimations de la précision attendue du ciblage de la portion de l'audience de prédiction que vous avez sélectionnée ci-dessus de deux manières:
 
-1. How many selected users are expected to purchase<br><br> The Prediction isn't perfectly accurate, and no Prediction ever is, meaning Braze will not be able to identify every single future purchaser. The Likelihood Scores are like a set of informed and reliable predictions. The progress bar indicates how many of "actual" or "true" purchasers expected in the Prediction Audience will be targeted with the audience selected above. Note that we expect this number of users to purchase even if you don't send them a message. <br><br>
+1. Combien d'utilisateurs sélectionnés sont censés acheter<br><br> La prédiction n'est pas parfaitement exacte, et aucune prédiction ne l'est jamais, ce qui signifie que Braze ne sera pas en mesure d'identifier chaque acheteur futur. Les cotes de probabilité sont comme un ensemble de prédictions fiables et informées. La barre de progression indique combien d'acheteurs « réels » ou « vrais » attendus dans l'audience de prédiction seront ciblés en fonction du public sélectionné ci-dessus. Notez que nous attendons de ce nombre d'utilisateurs qu'ils achètent même si vous ne leur envoyez pas de message. <br><br>
 
-2. How many selected users are expected not to purchase<br><br>All machine learning models make errors. There may be users in your selection who have a high Purchase Likelihood Score but do not end up actually making a purchase. They would not make a purchase if you took no action. They will be targeted anyway, so this is an error or "false positive." The full width of this second progress bar represents the expected number of users who will not purchase, and the red portion is those who will be incorrectly targeted using the current slider position.
+2. Combien d'utilisateurs sélectionnés doivent ne pas acheter<br><br>Tous les modèles d'apprentissage automatique font des erreurs. Il se peut que certains utilisateurs de votre choix aient un score de probabilité d'achat élevé, mais ne finissent pas par faire un achat. Ils ne feraient pas d’achat si vous ne preniez aucune mesure. Ils seront de toute façon ciblés, donc c'est une erreur ou un "faux positif". La largeur totale de cette deuxième barre de progression représente le nombre attendu d'utilisateurs qui n'achèteront pas, et la portion rouge est celle qui sera mal ciblée en utilisant la position courante.
 
-Using this information, we encourage you to decide how many of the purchasers you want to capture, how many non-purchasers you can accept being targeted, and what the cost of errors is for your business. If you are sending out a valuable promo, you may want to target only non-purchasers by favoring the left side of the chart. Or, you may want to encourage buyers who often purchase to do so again by selecting a swath of users that favors the right side of the chart.
+En utilisant ces informations, nous vous encourageons à décider combien d'acheteurs vous souhaitez capturer, le nombre de non-acheteurs que vous pouvez accepter d'être ciblé et le coût des erreurs pour votre entreprise. Si vous envoyez une promotion précieuse, vous voudrez peut-être cibler uniquement les non-acheteurs en privilégiant le côté gauche du graphique. Ou, vous pouvez encourager les acheteurs qui achètent souvent pour le faire à nouveau en sélectionnant un échantillon d'utilisateurs qui privilégie le côté droit du graphique.
 
-### Prediction quality {#prediction_quality}
+### Qualité de la prédiction {#prediction_quality}
 
-To measure the accuracy of your model, the __Prediction Quality__ metric will show you how effective this particular machine learning model appears to be. Essentially, it's a measure of how good this Prediction is at telling apart the buyers from non-buyers. A Prediction Quality of 100 would mean it perfectly knows who will and will not purchase without error (this never happens!), and 0 meaning it's randomly guessing. Check out this doc to read more about what goes into [Prediction Quality]({{site.baseurl}}/user_guide/predictive_suite/predictive_churn/prediction_analytics/prediction_quality/).
+Pour mesurer la précision de votre modèle, la métrique __Qualité de Prédiction__ vous montrera à quel point ce modèle d’apprentissage automatique particulier semble être efficace. Essentiellement, il s'agit de mesurer à quel point cette prédiction est bonne à distinguer les acheteurs des non-acheteurs. Une qualité de Prédiction de 100 signifierait qu'il sait parfaitement qui veut et ne va pas acheter sans erreur (cela ne se produit jamais! , et 0 signifie qu'il est aléatoire de deviner. Consultez ce document pour en savoir plus sur ce qui se trouve dans la [Qualité Prédiction]({{site.baseurl}}/user_guide/predictive_suite/predictive_churn/prediction_analytics/prediction_quality/).
 
-Here’s what we recommend for various ranges of Prediction Quality:
+Voici ce que nous recommandons pour différentes gammes de qualité de prédiction :
 
-| Prediction Quality Range (%) | Recommendation                                                                                                                           |
-| ---------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------- |
-| 60 - 100                     | Excellent. Top tier accuracy. Changing the audience definitions is unlikely to provide additional benefit.                               |
-| 40 - 60                      | Good. This model will produce accurate predictions, but trying different audience settings may achieve even better results.              |
-| 20 - 40                      | Fair. This model can provide accuracy and value, but consider trying different audience definitions to see if they increase performance. |
-| 0 - 20                       | Poor. We recommend you change your audience definitions and try again.                                                                   |
+| Plage de qualité de la prédiction (%) | Recommandation                                                                                                                                                           |
+| ------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| 60 - 100                              | Excellent. Précision du niveau supérieur. Il est peu probable que la modification des définitions du public apporte un avantage supplémentaire.                          |
+| 40 - 60                               | Bien. Ce modèle produira des prédictions précises, mais essayer différents paramètres d'audience peut donner de meilleurs résultats.                                     |
+| 20 - 40                               | Foire. Ce modèle peut fournir de la précision et de la valeur, mais envisagez d'essayer différentes définitions d'audience pour voir si elles augmentent la performance. |
+| 0 - 20                                | « Paul. » Nous vous recommandons de modifier les définitions de votre audience et de réessayer.                                                                          |
 {: .reset-td-br-1 .reset-td-br-2}
 
-The Prediction will be trained again every two weeks and updated alongside the Prediction Quality metric to keep your predictions updated on the most recent user behavior patterns. The last time this retraining occurred will be displayed on the Predictions list page as well as on your Prediction's analytics page.
+La prédiction sera de nouveau formée toutes les deux semaines et mise à jour parallèlement à la métrique de qualité de la prédiction pour garder vos prévisions à jour sur les derniers comportements de l'utilisateur. La dernière fois que cette reformation s'est produite sera affichée sur la page de la liste des prédictions ainsi que sur la page d'analyse de votre prédiction.
 
-When a Prediction is first created, the Prediction Quality will be based upon historical data that is queried when you click __Build Prediction__. Every two weeks thereafter, the Prediction Quality is derived by comparing prediction scores to real-world outcomes.
+Quand une prédiction est créée pour la première fois, la Qualité de Prédiction sera basée sur les données historiques qui sont interrogées lorsque vous cliquez sur __Prédiction de Construction__. Toutes les deux semaines par la suite, la qualité de la prédiction est obtenue en comparant les scores de prédiction aux résultats du monde réel.
 
-## Purchase correlation table {#correlation_table}
+## Acheter la table de corrélation {#correlation_table}
 
-This analysis displays user attributes or behaviors that are correlated with purchases in the Prediction Audience. The attributes assessed are Age, Country, Gender, and Language. Behaviors that are analyzed include sessions, purchases, total dollars spent, custom events, and campaigns & Canvas steps received in the last 30 days. The tables are split into left and right for more and less likely to purchase, respectively. For each row, the ratio by which the users with the behavior or attribute in the left column are more or less likely to purchase is displayed in the right column. This number is the ratio of Purchase Likelihood of users with this behavior or attribute divided by the likelihood to purchase off the entire Prediction Audience.
+Cette analyse affiche les attributs ou comportements de l'utilisateur qui sont corrélés avec les achats dans l'audience de prédiction. Les attributs évalués sont l'âge, le pays, le sexe et la langue. Les comportements analysés comprennent les sessions, les achats, le total des dollars dépensés, les événements personnalisés et les campagnes & Les étapes de Canvas reçues au cours des 30 derniers jours. Les tables sont divisées en gauche et droite pour plus et moins susceptibles d'acheter, respectivement. Pour chaque ligne, le ratio selon lequel les utilisateurs ayant le comportement ou l'attribut dans la colonne de gauche sont plus ou moins susceptibles d'acheter est affiché dans la colonne de droite. Ce nombre est le ratio de la probabilité d'achat des utilisateurs avec ce comportement ou cet attribut divisé par la probabilité d'acheter sur l'ensemble de l'audience prévisionnelle.
 
-This table is updated only when the Prediction retrains and not when user Purchase Likelihood Scores are updated.
+Ce tableau n'est mis à jour que lorsque la Prédiction se reforme et non lorsque l'utilisateur achète des notes de Likelihood Scores est mis à jour.
 
 {% alert note %}
-Correlation data for Preview Predictions will be partially hidden. A purchase is required to reveal this information. Please contact your account manager for more information.
+Les données de corrélation pour les prédictions d'aperçu seront partiellement masquées. Un achat est nécessaire pour divulguer ces informations. Veuillez contacter votre responsable de compte pour plus d'informations.
 {% endalert %}
-[6]: {% image_buster /assets/img/purchasePrediction/purchaseEstimatedResults.png %} [4]: {% image_buster /assets/img/purchasePrediction/purchaseTargeting.png %}
+[6]: {% image_buster /assets/img/purchasePrediction/purchaseEstimatedResults.png %} [4]: {% image_buster /assets/img/purchasePrediction/purchaseTargeTargeting.png %}
