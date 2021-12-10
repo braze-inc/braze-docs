@@ -1,73 +1,73 @@
 ---
-nav_title: "Push Stories"
-article_title: Push Stories
+nav_title: "Envoyer des histoires"
+article_title: Envoyer des histoires
 page_order: 2
-page_type: reference
-description: "This reference article covers what Push Stories are, how to create one, as well as some frequently asked questions."
+page_type: Référence
+description: "Cet article de référence couvre ce que sont les Histoires Push, comment en créer un, ainsi que quelques questions fréquemment posées."
 channel:
-  - push
+  - Pousser
 ---
 
-# Push Stories
+# Envoyer des histoires
 
-> This reference article covers what Push Stories are, how to create one, as well as some frequently asked questions.
+> Cet article de référence couvre ce que sont les Histoires Push, comment en créer un, ainsi que quelques questions fréquemment posées.
 
-Push Stories are a new type of push notification introduced by Braze. This feature takes the photo carousel functionality popularized in Instagram and Facebook and allows marketers to create a carousel of pages within a push that tells a rich, cohesive story. These pages consist of an image, click action, title, and description. Your users can swipe through these pages and view the story—as told by you.
+Push Stories est un nouveau type de notification push introduit par Braze. Cette fonctionnalité prend la fonctionnalité de carrousel photo popularisée dans Instagram et Facebook et permet aux marketeurs de créer un carrousel de pages dans une poussée qui raconte un riche, histoire cohérente. Ces pages se composent d'une image, d'une action de clic, d'un titre et d'une description. Vos utilisateurs peuvent glisser à travers ces pages et voir l'histoire, comme vous l'avez dit.
 
-| Android Example (Expanded) | IOS Example (Expanded) |
-|:--------------------------:|:----------------------:|
-| !\[Android Preview\]\[1\]  | !\[IOS Preview\]\[2\]  |
+| Exemple Android (Expandu) | Exemple IOS (Expandu) |
+|:-------------------------:|:---------------------:|
+| !\[Aperçu Android\]\[1\]  | !\[Aperçu IOS\]\[2\]  |
 {: .reset-td-br-1 .reset-td-br-2}
 
 {% alert note %}
-On iOS SDK versions 3.13.0+, due to a change in how the SDK downloads images, a thumbnail of the first image will not show on the condensed view of the push. Ensure that your message copy prompts users to expand the push to see the images.
+Sur iOS SDK versions 3.13. +, en raison d'un changement dans la façon dont le SDK télécharge les images, une vignette de la première image ne sera pas affichée sur la vue condensée de la push. Assurez-vous que votre copie de message invite les utilisateurs à étendre le push pour voir les images.
 {% endalert %}
 
-## Prerequisites
+## Pré-requis
 
-Users must update to the latest version of Android (version 2.2.0+) and iOS (version 3.2.0+) to receive Push Stories.
+Les utilisateurs doivent mettre à jour vers la dernière version d'Android (version 2.2.0+) et d'iOS (version 3.2.0+) pour recevoir des histoires push.
 
-## How to use Push Stories
+## Comment utiliser Push Stories
 
 !\[Composer dropdown\]\[6\]{: style="float:right;max-width:50%;margin-left:15px;margin-bottom:15px;"}
 
-To use Push Stories, create a [push campaign]({{site.baseurl}}/user_guide/message_building_by_channel/push/creating_a_push_message/) and select **Push Stories** as your **Notification Type**.
+Pour utiliser les Histoires Push, créez une [campagne de push]({{site.baseurl}}/user_guide/message_building_by_channel/push/creating_a_push_message/) et sélectionnez **Histoires Push** comme votre **Type de Notification**.
 
-### Push Story composer
+### Compositeur de l'Histoire Push
 
-To create a page, perform the following steps:
+Pour créer une page, effectuez les étapes suivantes :
 
-1. Click **Manage Pages** from the main composer. <br><br>!\[Manage pages\]\[4\]{: style="max-width:70%"}<br><br>
-2. Insert an image for each page, along with the click behavior for that image.
-3. If desired, add a **Title** and **Description** for each page. If you use a title and decription for one page, they must be inserted for all pages.
+1. Cliquez sur **Gérer les pages** du compositeur principal. <br><br>!\[Gérer les pages\]\[4\]{: style="max-width:70%"}<br><br>
+2. Insérez une image pour chaque page, avec le comportement de clic pour cette image.
+3. Si vous le souhaitez, ajoutez un **Titre** et **Description** pour chaque page. Si vous utilisez un titre et une décription pour une page, elles doivent être insérées pour toutes les pages.
 
-The previews will be reflected and are interactive.
+Les aperçus seront réfléchis et interactifs.
 
 !\[Composer Workflow\]\[3\]{: style="max-width:60%"}
 
 {% alert important %}
-If you are pulling in images with [Connected Content]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/connected_content/about_connected_content/#about-connected-content), please ensure that your image URL begins with `https://`. Using `http://` will crash your app.
+Si vous tirez des images avec [Contenu connecté]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/connected_content/about_connected_content/#about-connected-content), assurez-vous que l'URL de votre image commence par `https://`. L'utilisation de `http://` va faire planter votre application.
 {% endalert %}
 
-### Push Story segmentation
+### Segmentation de l'histoire poussée
 
-When you create a campaign or Canvas, you can filter which users you want to target based on whether they have clicked on a Push Story page. Then, select the campaign and the page you want to use to target your users.
+Lorsque vous créez une campagne ou Canvas, vous pouvez filtrer les utilisateurs que vous voulez cibler en fonction de s'ils ont cliqué sur une page de l'Histoire. Ensuite, sélectionnez la campagne et la page que vous souhaitez utiliser pour cibler vos utilisateurs.
 
-### Push Stories analytics
+### Analyses des Histoires Push
 
-!\[Push Story Analytics\]\[5\]
+!\[Analyses de l'histoire Push\]\[5\]
 
-The analytics will look very similar to the current analytics section for Push Notification. The only difference is when you open the “Direct Opens” section, you can now see clicks per page.
+Les analytiques ressembleront beaucoup à la section d'analyse actuelle pour la notification push. La seule différence est que lorsque vous ouvrez la section « Débit direct », vous pouvez maintenant voir les clics par page.
 
-## Troubleshooting
+## Dépannage
 
-### I sent myself a Push Story on iOS but didn't receive the notification
+### Je me suis envoyé une histoire Push Story sur iOS mais je n'ai pas reçu la notification
 
-Apple has specific rules in place that will prevent certain types of notifications from being sent to a device based on a number of different factors—this includes evaluating the customers' data plan, notification size, and the customers' storage capacity. As a result, sometimes no notification will be sent to your customers.
+Apple a mis en place des règles spécifiques qui empêcheront que certains types de notifications soient envoyés à un appareil en fonction d'un certain nombre de facteurs différents, ce qui inclut l'évaluation du plan de données des clients, la taille de la notification et la capacité de stockage du client. Par conséquent, parfois, aucune notification ne sera envoyée à vos clients.
 
-These are limitations imposed by Apple that should be considered when designing your Push Story.
+Ce sont des limitations imposées par Apple qui devraient être prises en compte lors de la conception de votre histoire Pushing.
 
-### I sent myself a push story on iOS but saw the condensed view instead
+### Je me suis envoyé une histoire sur iOS mais j'ai vu la vue condensée à la place
 
-In certain situations where all the pages do not load, for example, due to a loss of data connection, the Push Story will only show the condensed notification.
-[1]: {% image_buster /assets/img_archive/pushstories_android_preview.png %} [2]: {% image_buster /assets/img_archive/pushstories_ios_preview.png %} [3]: {% image_buster /assets/img_archive/pushstories_composer.png %} [4]: {% image_buster /assets/img_archive/pushstories_add_pages.png %} [5]: {% image_buster /assets/img_archive/pushstories_analytics.png %} [6]: {% image_buster /assets/img_archive/pushstories_composer_dropdown2.png %}
+Dans certaines situations où toutes les pages ne sont pas chargées, par exemple, en raison d'une perte de connexion de données, le message Push Story n'affichera que la notification condensée.
+[1]: {% image_buster /assets/img_archive/pushstories_android_preview.png %} [2]: {% image_buster /assets/img_archive/pushstories_ios_preview.png %} [3]: {% image_buster /assets/img_archive/pushstories_composer. ng %} [4]: {% image_buster /assets/img_archive/pushstories_add_pages.png %} [5]: {% image_buster /assets/img_archive/pushstories_analytics. ng %} [6]: {% image_buster /assets/img_archive/pushstories_composer_dropdown2.png %}
