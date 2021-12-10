@@ -1,22 +1,22 @@
 ---
-nav_title: Conditional Messaging Logic
-article_title: Conditional Liquid Messaging Logic
+nav_title: Logique de la messagerie conditionnelle
+article_title: Logique de Messagerie Liquide Conditionnelle
 page_order: 6
-description: "Tags allow you to include programming logic in your messaging campaigns. This reference article covers how tags can and should be used in your campaigns."
+description: "Les balises vous permettent d'inclure la logique de programmation dans vos campagnes de messagerie. Cet article de référence couvre comment les tags peuvent et doivent être utilisés dans vos campagnes."
 ---
 
-# Conditional messaging logic (tags)
+# La logique de messagerie conditionnelle (tags)
 
-[Tags][7] allow you to include programming logic in your messaging campaigns.
+[Les balises][7] vous permettent d'inclure la logique de programmation dans vos campagnes de messagerie.
 
 {% raw %}
-A tag must be wrapped in `{% %}`.
+Un tag doit être enveloppé dans `{% %}`.
 {% endraw %}
 
-Tags can be used for executing conditional statements as well as for advanced use cases, like assigning variables or iterating through a block of code.
+Les balises peuvent être utilisées pour exécuter des instructions conditionnelles ainsi que pour des cas d'utilisation avancés, comme l'assignation de variables ou l'itération à travers un bloc de code.
 
 {% alert tip %}
-To make your life a bit easier, Braze has included color-formatting that will activate in green and purple if you correctly format your Liquid syntax. <br><br> If you're having a hard time using conditional messaging, try writing out the conditional syntax before you insert your custom attributes and other Liquid elements. <br><br> For example, add the following into the message field first:
+Pour vous faciliter un peu la vie, Braze a inclus le formatage de couleur qui s'activera en vert et violet si vous formatez correctement votre syntaxe Liquid. <br><br> Si vous avez du mal à utiliser la messagerie conditionnelle, essayez d'écrire la syntaxe conditionnelle avant d'insérer vos attributs personnalisés et d'autres éléments Liquid. <br><br> Par exemple, ajoutez d'abord ce qui suit dans le champ de message :
 {% raw %}
 ```liquid
 {% if X >0 %}
@@ -24,80 +24,80 @@ To make your life a bit easier, Braze has included color-formatting that will ac
 {% endif %}
 ```
 
-Be sure it highlights in green, then replace the `X` with your chosen Liquid or Connected Content using the blue `+` in the message field corner, and the `0` with your desired value. <br><br> Then, add your message variations as you need them between the `else` conditionals:
+Veillez à ce que les points forts soient en vert, puis remplacez le `X` avec le Liquid ou le Contenu Connecté de votre choix en utilisant le bleu `+` dans le coin du champ message, et le `0` avec la valeur désirée. <br><br> Ensuite, ajoutez les variations de votre message comme vous en avez besoin entre les conditions `else`:
 ```liquid
 {% if {{custom_attribute.${total_spend}}} >0 %}
-Thanks for purchasing! Here's another 10% off!
+Merci d'avoir acheté ! Voici encore 10% de réduction !
 {% else %}
-Buy now! Would 5% off convince you?
+Achetez maintenant ! 5% de réduction vous convaincraient-ils?
 {% endif %}
 ```
 {% endraw %}
 {% endalert %}
 
-## Conditional logic
+## Logique conditionnelle
 
-You can include many types of [intelligent logic within messages][1] — one example is a conditional statement. See the following example which uses [conditionals][8] to internationalize a campaign:
+Vous pouvez inclure de nombreux types de [logique intelligente dans les messages][1] — un exemple est une instruction conditionnelle. Voir l'exemple suivant qui utilise [conditions][8] pour internationaliser une campagne :
 {% raw %}
 
 ```liquid
-{% if ${language} == 'en' %}
-This is a message in English from Braze!
+{% if ${language} == 'fr' %}
+Ceci est un message en anglais du Brésil !
 {% elsif ${language} == 'es' %}
-Este es un mensaje en español de Braze !
+Este es un mensaje en español de Braze !
 {% elsif ${language} == 'zh' %}
-这是一条来自Braze的中文消息。
+<unk> <unk> <unk> <unk> <unk> <unk> <unk> Braze<unk> 中文<unk> <unk> い
 {% else %}
-This is a message from Braze! This is going to go to anyone who did not match the other specified languages!
+Ceci est un message du Brésil ! Cela va aller à tous ceux qui ne correspondent pas aux autres langues spécifiées !
 {% endif %}
 ```
 
-### Step by step example
+### Exemple étape par étape
 
-In this example, we use tags with "if", "elsif" and "else" statements to deliver internationalized content.
+Dans cet exemple, nous utilisons des balises avec des instructions "si", "elsif" et "else" pour fournir du contenu internationalisé.
 
 ```liquid
-{% if ${language} == 'en' %}
-This is a message in English from Braze!
+{% if ${language} == 'fr' %}
+Ceci est un message en anglais du Brésil !
 ```
-If the customer's language is English, the first condition is met and the customer will receive a message in English.
+Si la langue du client est l'anglais, la première condition est remplie et le client recevra un message en anglais.
 
 ```liquid
 {% elsif ${language} == 'es' %}
-Este es un mensaje en español de Braze !
+Este es un mensaje en español de Braze !
 {% elsif ${language} == 'zh' %}
 这是一条来自Braze的中文消息。
 ```
 
-You can specify as many conditional statements as you'd like- subsequent conditions will be checked if the previous conditions are not met. In this example, if a customer's device is not set to English this code will check to see if the customer's device is set to Spanish or Chinese. If the customer's device meets one of these conditions, the customer will receive a message in the relevant language.
+Vous pouvez spécifier autant d'instructions conditionnelles que vous le souhaitez- les conditions suivantes seront vérifiées si les conditions précédentes ne sont pas remplies. Dans cet exemple, si l'appareil d'un client n'est pas configuré en anglais, ce code vérifiera si l'appareil du client est réglé sur l'espagnol ou le chinois. Si l'appareil du client remplit l'une de ces conditions, le client recevra un message dans la langue concernée.
 
 ```liquid
 {% else %}
-This is a message from Braze! This is going to go to anyone who did not match the other specified languages!
+Ceci est un message du Brésil ! Cela va aller à tous ceux qui ne correspondent pas aux autres langues spécifiées !
 ```
 
-You have the option to include an `{% else %}` statement in your conditional logic. If none of the conditions that you set are met, the `{% else %}`  statement specifies the message that should send. In this case, we default to English if a customer's language is not English, Spanish or Chinese.
+Vous avez la possibilité d'inclure une instruction `{% else %}` dans votre logique conditionnelle. Si aucune des conditions que vous avez définies n'est remplie, l'instruction `{% else %}`  spécifie le message qui doit être envoyé. Dans ce cas, nous utilisons par défaut l'anglais si la langue d'un client n'est pas l'anglais, l'espagnol ou le chinois.
 
 ```liquid
 {% endif %}
 ```
 
-The `{% endif %}`  tag signals that you've finished your conditional logic. You must include the `{% endif %}`  tag in any message with conditional logic. If you do not include an `{% endif %}`  tag in your conditional logic, you'll get an error as Braze will be unable to parse your message.
+La balise `{% endif %}`  indique que vous avez terminé votre logique conditionnelle. Vous devez inclure le tag `{% endif %}`  dans n'importe quel message avec une logique conditionnelle. Si vous n'incluez pas une balise `{% endif %}`  dans votre logique conditionnelle, vous obtiendrez une erreur car Braze ne pourra pas analyser votre message.
 
 {% endraw %}
 
-## Accounting for null attribute values
+## Comptabilisation des valeurs d'attribut NULL
 
-Conditional logic is a useful way to account for null attribute values. A null value occurs when the value of a custom attribute has not been set. For example, a user who has not yet set their first name will not have a first name in Braze's database.
+La logique conditionnelle est un moyen utile de tenir compte des valeurs d'attributs nuls. Une valeur NULL se produit lorsque la valeur d'un attribut personnalisé n'a pas été définie. Par exemple, un utilisateur qui n'a pas encore défini son prénom n'aura pas de prénom dans la base de données de Brase.
 
-In some circumstances, you may wish to send a completely different message to users who have a first name set and users who do not have a first name set.
+Dans certaines circonstances, vous pouvez envoyer un message complètement différent aux utilisateurs qui ont un prénom défini et aux utilisateurs qui n'ont pas de prénom.
 
-The following tag allows you to specify a message for users with a null "first name" attribute:
+Le tag suivant vous permet de spécifier un message pour les utilisateurs avec un attribut null "prénome" :
 
 {% raw %}
 ```liquid
-{% if ${first_name} == blank %}
-  ....
+{% if ${first_name} == vide %}
+....
 {% endif %}
 
 ```
@@ -105,33 +105,33 @@ The following tag allows you to specify a message for users with a null "first n
 
 !\[NullValues\]\[36\]
 
-## Referencing custom attributes
+## Référencement des attributs personnalisés
 
-After you have created [custom attributes][2] from **Manage Settings** > **Custom Attributes**, you can reference these custom attributes in your Liquid messaging.
+Après avoir créé [attributs personnalisés][2] à partir de **Gérer les paramètres** > **Attributs personnalisés**, vous pouvez référencer ces attributs personnalisés dans votre message Liquid.
 
-When using conditional logic, you'll need to know the custom attribute's data type to ensure you're using the correct syntax. From the [Custom Attributes][4] page in the dashboard, look for the data type associated with your custom attribute, then reference the examples listed below for each data type.
+Lorsque vous utilisez une logique conditionnelle, vous devrez connaître le type de données de l'attribut personnalisé pour vous assurer que vous utilisez la bonne syntaxe. À partir de la page [Attributs personnalisés][4] dans le tableau de bord, rechercher le type de données associé à votre attribut personnalisé, puis référencer les exemples listés ci-dessous pour chaque type de données.
 
-!\[Custom Attribute Data Type\]\[20\]{: style="max-width:80%;"}
+!\[Type de données d'attribut personnalisé\]\[20\]{: style="max-width:80%;"}
 
 {% alert tip %}
-Strings and arrays require straight apostrophes around them, while booleans and integers will never have apostrophes.
+Les chaînes de caractères et les tableaux requièrent des apostrophes droits autour d'eux, tandis que les booléens et les entiers n'auront jamais d'apostrophes.
 {% endalert %}
 
 #### Boolean
 
-[Booleans][9] are binary values, and can be set to either `true` or `false`, such as `registration_complete: true`. Boolean values don't have apostrophes around them.
+[Les booléens][9] sont des valeurs binaires, et peuvent être réglés à `true` ou `false`, comme `registration_complete : true`. Les valeurs booléennes n'ont pas d'apostrophes autour d'elles.
 
 {% raw %}
 
 ```liquid
-{% if {{custom_attribute.${registration_complete}}} == true %}
+{% if {{custom_attribute.${registration_complete}}} == vrai %}
 ```
 
 {% endraw %}
 
-#### Number
+#### Numéros
 
-[Numbers][10] are numeric values, which can be integers or floats. For example, a user may have `shoe_size: 10` or `levels_completed: 287`. Number values don't have apostrophes around them.
+[Nombres][10] sont des valeurs numériques, qui peuvent être des entiers ou des nombres flottants. Par exemple, un utilisateur peut avoir `shoe_size: 10` ou `levels_completed: 287`. Les valeurs de nombre n'ont pas d'apostrophes autour d'elles.
 
 {% raw %}
 
@@ -141,7 +141,7 @@ Strings and arrays require straight apostrophes around them, while booleans and 
 
 {% endraw %}
 
-You can also use other [basic operators](https://shopify.dev/docs/themes/liquid/reference/basics/operators) such as less than (<) or greater than (>) for integers:
+Vous pouvez également utiliser d'autres [opérateurs de base](https://shopify.dev/docs/themes/liquid/reference/basics/operators) comme inférieurs à (<) ou supérieurs à (>) pour des entiers :
 
 {% raw %}
 
@@ -151,9 +151,9 @@ You can also use other [basic operators](https://shopify.dev/docs/themes/liquid/
 
 {% endraw %}
 
-#### String
+#### Chaîne de caractères
 
-A [string][11] is made up of alpha-numeric characters and stores a piece of data about your user. For example, you may have `favorite_color: red` or `phone_number: 3025981329`. String values must have apostrophes around them.
+Une chaîne [][11] est composée de caractères alphanumériques et stocke une partie de données sur votre utilisateur. Par exemple, vous pouvez avoir `favite_color: rouge` ou `phone_number: 3025981329`. Les valeurs de chaîne de caractères doivent avoir des apostrophes autour d'eux.
 
 {% raw %}
 
@@ -163,25 +163,25 @@ A [string][11] is made up of alpha-numeric characters and stores a piece of data
 
 {% endraw %}
 
-For strings, you can use both "==" or "contains" in your Liquid.
+Pour les cordes, vous pouvez utiliser à la fois "==" ou "contains" dans votre liquide.
 
-#### Array
+#### Tableau
 
-An [array][12] is a list of information about your user. For example, a user may have `last_viewed_shows: stranger things, planet earth, westworld`. Array values must have apostrophes around them.
+Un tableau [][12] est une liste d'informations sur votre utilisateur. Par exemple, un utilisateur peut avoir `last_viewed_shows : choses inconnues, planète terre, monde occidental`. Les valeurs des tableaux doivent avoir des apostrophes autour d'eux.
 
 {% raw %}
 
 ```liquid
-{% if {{custom_attribute.${last_viewed_shows}}} contains 'homeland' %}
+{% if {{custom_attribute.${last_viewed_shows}}} contient 'homeland' %}
 ```
 
 {% endraw %}
 
-For arrays, you must use "contains" and can't use "==".
+Pour les tableaux, vous devez utiliser "contains" et ne pouvez pas utiliser "==".
 
-#### Time
+#### Date et heure
 
-A time stamp of when an event took place. [Time][13] values must have a [math filter][5] on them to be used in conditional logic.
+Un timbre de l'heure de la tenue d'un événement. [Instant][13] les valeurs doivent avoir un [filtre mathématique][5] sur elles pour être utilisées en logique conditionnelle.
 
 {% raw %}
 
@@ -201,5 +201,7 @@ A time stamp of when an event took place. [Time][13] values must have a [math fi
 [9]: {{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_attributes/#booleans
 [10]: {{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_attributes/#numbers
 [11]: {{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_attributes/#strings
+[11]: {{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_attributes/#strings
+[12]: {{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_attributes/#arrays
 [12]: {{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_attributes/#arrays
 [13]: {{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_attributes/#time
