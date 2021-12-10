@@ -1,81 +1,81 @@
 ---
-nav_title: Advanced Filters
-article_title: Advanced Liquid Filters
+nav_title: Filtres avancés
+article_title: Filtres liquides avancés
 page_order: 4
-description: "This reference article lists advanced filters, examples, and how they can be used in your campaign."
+description: "Cet article de référence liste des filtres avancés, des exemples et comment ils peuvent être utilisés dans votre campagne."
 ---
 
-# Advanced filters
+# Filtres avancés
 
-## Encoding filters
+## Filtres d'encodage
 
 {% raw %}
-| filter name | filter description | example input | example output |
-| ----------- | ------------------ | ------------- | -------------- |
-|             |                    |               |                |
+| nom du filtre | description du filtre | example input | exemple de sortie |
+| ------------- | --------------------- | ------------- | ----------------- |
+|               |                       |               |                   |
 
 
-`md5` | Returns md5 encoded string | `{{'hey' | md5}}` | 6057f13c496ecf7fd777ceb9e79ae285 | `sha1` | Returns sha1 encoded string | `{{'hey' | sha1}}` | 7f550a9f4c44173a37664d938f1355f0f92a47a7 | `sha2` | Returns sha2 (256-bit, also known as SHA-256) encoded string | `{{'hey' | sha2}}` | fa690b82061edfd2852629aeba8a8977b57e40fcb77d1a7a28b26cba62591204 | `base64` | Returns base64 encoded string | `{{'blah' | base64_encode}}` | YmxhaA== | `hmac_sha1_hex` (previously `hmac_sha1`) | Returns hmac-sha1 signature, encoded as a hex string | `{{'hey' | hmac_sha1_hex: 'secret_key'}}` | 2a3969bed25bfeefb00aca4063eb9590b4df8f0e | `hmac_sha1_base64` | Returns hmac-sha1 signature, encoded as a base64 string | `{{'hey' | hmac_sha1_base64: 'secret_key'}}` | KjlpvtJb/u+wCspAY+uVkLTfjw4= | `hmac_sha256_hex` | Returns hmac-sha256 signature, encoded as a hex string | `{{'hey' | hmac_sha256_hex: 'secret_key'}}` | 8df897f8da3d7992fe57c8dbc6f27578cfbf2dcc4d0fbb4000b8c924841d508e | `hmac_sha256_base64` | Returns hmac-sha256 signature, encoded as a base64 string | `{{'hey' | hmac_sha256_base64: 'secret_key'}}` | jfiX+No9eZL+V8jbxvJ1eM+/LcxND7tAALjJJIQdUI4= |
+`md5` | Renvoie une chaîne encodée md5 | `{{'hey' | md5}}` | 6057f13c496ecf7fd777ceb9e79ae285 | `sha1` | Renvoie une chaîne encodée sha1 | `{{'hey' | sha1}}` | 7f550a9f4c44173a37664d938f1355f0f92a47a7 | `sha2` | Retourne sha2 (256-bit, également connu sous le nom de chaîne SHA-256) encodée | `{{'hey' | sha2}}` | fa690b82061edfd2852629aeba8a8977b57e40fcb77d1a7a28b26cba62591204 | `base64` | Retourne une chaîne encodée en base64 | `{{'blah' | base64_encode}}` | YmxhaA== | `hmac_sha1_hex` (précédemment `hmac_sha1`) | Retourne une signature hmac-sha1, encodée en tant que chaîne hexadécimale | `{{'hey' | hmac_sha1_hex: 'secret_key'}}` | 2a3969bed25bfeefb00aca4063eb9590b4df8f0e | `hmac_sha1_base64` | Retourne une signature hmac-sha1, encodée comme une chaîne de caractères base64 | `{{'hey' | hmac_sha1_base64: 'secret_key'}}` | KjlpvtJb/u+wCspAY+uVkLTfjw4= | `hmac_sha256_hex` | Retourne une signature hmac-sha256, encodée en tant que chaîne hexadécimale | `{{'hey' | hmac_sha256_hex: 'secret_key'}}` | 8df897f8da3d7992fe57c8dbc6f27578cfbf2dcc4d0fbb4000b8c924841d508e | `hmac_sha256_base64` | Retourne la signature hmac-sha256, encodée comme une chaîne de caractères base64 | `{{'hey' | hmac_sha256_base64: 'secret_key'}}` | jfiX+No9eZL+V8jbxvJ1eM+/LcxND7tAALjJJIQdUI4= |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
 
-## URL filters
+## Filtres d'URL
 
-| filter name        | filter description                                                                                                          | example input                                | example output |
-| ------------------ | --------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------- | -------------- |
-| `url_escape`       | Identifies all characters in a string that are not allowed in URLS, and replaces the characters with their escaped variants | `{{'hey<>hi' | url_escape}}`           | hey%3C%3Ehi    |
-| `url_param_escape` | Replaces all characters in a string that are not allowed in URLs with their escaped variants, including the ampersand (&)   | `{{'hey<&>hi' | url_param_escape}` | hey%3C%26%3Ehi |
-| `url_encode`       | Encodes a string that is url friendly                                                                                       | `{{ 'google search' | url_encode }}`         | google+search  |
+| nom du filtre           | description du filtre                                                                                                                                     | example input                                | exemple de sortie |
+| ----------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------- | ----------------- |
+| `Echappe_URL`           | Identifie tous les caractères dans une chaîne qui ne sont pas autorisés dans les URLs, et remplace les caractères par leurs variantes échappées           | `{{'hey<>hi' | url_escape}}`           | hey%3C%3Ehi       |
+| `Echapper un paramètre` | Remplace tous les caractères d'une chaîne de caractères qui ne sont pas autorisés dans les URL par leurs variantes échappées, y compris l'esperluette (&) | `{{'hey<&>hi' | url_param_escape}` | hey%3C%26%3Ehi    |
+| `Encoder l'url`         | Encode une chaîne de caractères conviviale                                                                                                                | `{{ 'google search' | url_encode }}`         | google+search     |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
 
 {% endraw %}
 {% alert tip %}
-The `assign` tag can be combined with HTML to save you time and effort when creating multiple hyperlinks.
+La balise `assigner` peut être combinée avec du HTML pour vous faire gagner du temps et de l'effort lors de la création de plusieurs hyperliens.
 {% raw %}
 ```
-{% assign url = "https://www.examplelink.com" %}
-<a href='{{url}}'>Click this Link!</a>
+{% assigner url = "https://www.examplelink.com" %}
+<a href='{{url}}'>Cliquez sur ce lien !</a>
 ```
 {% endraw %}
 {% endalert %}
 {% raw %}
 
-## Property accessor filter
+## Filtre d'accesseur de propriété
 
-| filter name         | filter description                                                       |
-| ------------------- | ------------------------------------------------------------------------ |
-| `property_accessor` | Takes a hash and hash key and returns the value in that hash at that key |
+| nom du filtre                | description du filtre                                                                  |
+| ---------------------------- | -------------------------------------------------------------------------------------- |
+| `Propriétés de l'accessoire` | Prend un hachage et une clé de hachage et retourne la valeur de ce hachage à cette clé |
 {: .reset-td-br-1 .reset-td-br-2}
 
-Example hash : `{“a” => 42, “b” => 0}`
+Exemple de hachage : `{« a » => 42, « b » => 0}`
 
 Example input: `{{hash | property_accessor: 'a'}}`
 
-Example output: `42`
+Exemple de sortie : `42`
 
-Additionally, the property accessor filter allows you to template a custom attribute into a hash key to access a particular hash value.
+De plus, le filtre d'accesseur de propriété vous permet de modéliser un attribut personnalisé dans une clé de hachage pour accéder à une valeur de hachage particulière.
 
 {% endraw %}
 
 {% alert note %}
-There is no way to instantiate a hash as a variable (i.e. expression) in Liquid within Braze.
+Il n'y a aucun moyen d'instancier un hachage en tant que variable (i.e. l'expression) dans Liquid à l'intérieur du Brésil.
 {% endalert %}
 
 {% raw %}
 
-## Number formatting filters
+## Filtres de mise en forme des nombres
 
-| filter name             | filter description           | example input                          | example output |
-| ----------------------- | ---------------------------- | -------------------------------------- | -------------- |
-| `number_with_delimiter` | Formats a number with commas | `{{ 123456 | number_with_delimiter }}` | 123,456        |
+| nom du filtre            | description du filtre                | example input                          | exemple de sortie |
+| ------------------------ | ------------------------------------ | -------------------------------------- | ----------------- |
+| `nombre avec délimiteur` | Formater un nombre avec des virgules | `{{ 123456 | number_with_delimiter }}` | 123,456           |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
 
-## JSON escape / string escape filter
+## Filtre d'échappement JSON / chaîne d'échappement
 
-| filter name   | filter description                                                                      |
-| ------------- | --------------------------------------------------------------------------------------- |
-| `json_escape` | Escapes any special characters in a string (i.e. double quote `""` and backslash '\'). |
+| nom du filtre           | description du filtre                                                                                   |
+| ----------------------- | ------------------------------------------------------------------------------------------------------- |
+| `format@@0 json_escape` | Échappe tous les caractères spéciaux dans une chaîne (c.-à-d. guillemet double `""` et antislash '\'). |
 {: .reset-td-br-1 .reset-td-br-2}
 
-This filter should always be used when personalizing a string in a JSON dictionary and is useful for webhooks in particular.
+Ce filtre doit toujours être utilisé lors de la personnalisation d'une chaîne dans un dictionnaire JSON et est utile pour les webhooks en particulier.
 {% endraw %}
 [34]:{% image_buster /assets/img_archive/personalized_iflogic_.png %}
