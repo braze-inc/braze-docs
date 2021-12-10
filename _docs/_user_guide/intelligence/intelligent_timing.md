@@ -8,13 +8,17 @@ description: "When scheduling a campaign, you can use Intelligent Timing to deli
 
 # Intelligent Timing
 
-For more on Campaign Delivery, check out our [Campaign Set Up LAB course](http://lab.braze.com/campaign-setup-delivery-targeting-conversions)!
+For more on campaign delivery, check out our [campaign set up LAB course](http://lab.braze.com/campaign-setup-delivery-targeting-conversions)!
 
 > When scheduling a campaign, you can use Intelligent Timing (previously Intelligent Delivery) to deliver your message to each user at the time which Braze determines that an individual is most likely to engage. 
 
-Braze calculates the optimal send time based on a statistical analysis of your user’s past interactions with your messaging (on a per channel basis) and app. To enable Intelligent Timing, simply select Intelligent Timing on the Delivery page when creating a scheduled delivery campaign. Note that this feature is not available for Action-Based or API-Triggered campaigns.
+Braze calculates the optimal send time based on a statistical analysis of your user’s past interactions with your messaging (on a per-channel basis) and app. To enable Intelligent Timing, select **Intelligent Timing** on the **Delivery** page when creating a scheduled delivery campaign. Note that this feature is not available for action-based and API-triggered campaigns.
 
-With Intelligent Timing, you may choose the __day(s) on which your message will send__ and, optionally, choose to send the campaign on a recurring schedule. We recommend only using Intelligent Timing when you can schedule the campaign __at least 24 hours in advance__ of the send date to ensure that users optimal times’ have not passed when the campaign is launched. If a campaign is launched and a user’s optimal time has already passed, the message goes out immediately. If it is more than an hour in the past, the message is not sent at all.
+## Campaign sending
+
+With Intelligent Timing, you may choose the day(s) on which your message will send and, optionally, choose to send the campaign on a recurring schedule. We recommend only using Intelligent Timing when you can schedule the campaign at least 24 hours in advance of the send date to ensure that users optimal times’ have not passed when the campaign is launched. If a campaign is launched and a user’s optimal time has already passed, the message goes out immediately. If it is more than an hour in the past, the message is not sent at all.
+
+### Window of time
 
 You may also designate __a window of time__ during the day in which Intelligent Timing should send messages. This is useful if your campaign pertains to a specific event, sale or promotion. If a user’s optimal time is calculated as being outside this window, the message will be scheduled at the edge of the window closest to the initially calculated optimal time. This "edge" is the time closest to the user's optimal time. For example, if the optimal time is 10pm but the intelligent delivery is 1pm to 8pm, the given message will be sent at 8pm.
 
