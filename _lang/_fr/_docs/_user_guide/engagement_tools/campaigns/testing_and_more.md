@@ -1,38 +1,38 @@
 ---
-nav_title: Testing Campaigns
-article_title: Testing Campaigns
+nav_title: Campagnes de test
+article_title: Campagnes de test
 layout: dev_guide
-guide_top_header: "Testing Campaigns"
-guide_top_text: "Before you send your campaigns, you should always test your messages. After, you should always look at the results to ensure your campaign went well and will affect your future campaigns positively.<br><br> Here you can find resources on testing campaigns, such as sending test messages and performing A/B testing."
+guide_top_header: "Campagnes de test"
+guide_top_text: "Avant d'envoyer vos campagnes, vous devriez toujours tester vos messages. Ensuite, vous devriez toujours regarder les résultats pour vous assurer que votre campagne se déroule bien et aura une incidence positive sur vos futures campagnes.<br><br> Ici vous pouvez trouver des ressources sur les campagnes de test, telles que l'envoi de messages de test et la réalisation de tests A/B."
 page_order: 4
 tool:
-  - Campaigns
-  - Reports
-page_type: landing
-description: "This landing page is home to campaign testing and tips. Here you can find resources on testing campaigns, such as sending test messages and performing A/B testing."
-guide_featured_title: "Section Articles"
+  - Campagnes
+  - Rapports
+page_type: atterrissage
+description: "Cette page d'accueil contient des tests de campagne et des conseils. Vous trouverez ici des ressources sur les campagnes de test, telles que l'envoi de messages de test et la réalisation de tests A/B."
+guide_featured_title: "Articles de la section"
 guide_featured_list:
   - 
-    name: Sending Test Messages
+    name: Envoi de messages de test
     link: /docs/user_guide/engagement_tools/campaigns/testing_and_more/sending_test_push_notifications/
-    fa_icon: fas fa-envelope
+    fa_icon: fas fa-enveloppe
   - 
-    name: A/B Testing with Random Buckets
+    name: Tests A/B avec Seaux Aléatoires
     link: /docs/user_guide/engagement_tools/campaigns/testing_and_more/ab_testing_with_random_buckets/
     fa_icon: fas fa-columns
-guide_menu_title: "Additional Articles"
+guide_menu_title: "Articles supplémentaires"
 guide_menu_list:
   - 
-    name: Campaign Analytics
-    link: /docs/user_guide/data_and_analytics/your_reports/campaign_analytics/
-    fa_icon: fas fa-chart-pie
+    name: Analyses de campagne
+    link: /fr/docs/user_guide/data_and_analytics/your_reports/campaign_analytics/
+    fa_icon: fas fa-chart-tarte
   - 
-    name: Retention Reports
+    name: Rapports de rétention
     link: /docs/user_guide/data_and_analytics/your_reports/retention_reports/
     fa_icon: fas fa-chart-area
   - 
-    name: Funnel Reports
+    name: Rapports de l'entonnoir
     link: /docs/user_guide/data_and_analytics/your_reports/funnel_reports/
-    fa_icon: fas fa-filter
+    fa_icon: filtre Fas Fas
 ---
 
