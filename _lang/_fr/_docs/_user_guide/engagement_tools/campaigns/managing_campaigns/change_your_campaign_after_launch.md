@@ -1,46 +1,46 @@
 ---
-nav_title: Changing Your Campaign After Launch
-article_title: Changing Your Campaign After Launch
+nav_title: Changement de votre campagne après le lancement
+article_title: Changement de votre campagne après le lancement
 page_order: 0
-tool: Campaigns
-page_type: reference
-description: "This reference article gives an overview of the result of editing certain aspects of a campaign post-launch."
+tool: Campagnes
+page_type: Référence
+description: "Cet article de référence donne un aperçu du résultat de l'édition de certains aspects d'une campagne après le lancement."
 ---
 
-# Changing your campaign after launch
+# Modification de votre campagne après le lancement
 
-> This article gives an overview of the result of editing certain aspects of a campaign post-launch.
+> Cet article donne un aperçu du résultat de l'édition de certains aspects d'une campagne après le lancement.
 
-## Triggered campaigns
+## Campagnes déclenchées
 
-All changes to Action-Based Delivery campaigns and API-Triggered Delivery campaigns take effect immediately for go-forward sends.
+Tous les changements apportés aux campagnes de livraison par Action-Based Delivery et aux campagnes de livraison déclenchées par l'API prennent effet immédiatement pour les envois directs.
 
-If these campaigns have been triggered, but not yet sent (for example, an Action-Based Delivery campaign with a 1-day delay is edited during the 1-day delay period), please refer to the guidance for Scheduled campaigns below.
+Si ces campagnes ont été déclenchées, mais pas encore envoyées (par exemple, une campagne de livraison avec un délai de 1 jour est éditée pendant la période de retard de 1 jour), veuillez vous référer aux conseils pour les campagnes planifiées ci-dessous.
 
-## Scheduled campaigns
+## Campagnes planifiées
 
-If you need to make changes to a campaign post-launch, please take note of the items below when editing your campaign to ensure your changes have the desired effects.
+Si vous avez besoin d'apporter des modifications à une campagne après le lancement, Veuillez prendre note des éléments ci-dessous lors de l'édition de votre campagne pour vous assurer que vos changements ont les effets souhaités.
 
-### Message content
+### Contenu du message
 
-Any message content changes (including titles, bodies, images, etc.) take effect immediately on saving for all message sends going forward. It is not possible to change the contents of messages that have already been dispatched.
+Tout changement de contenu du message (y compris les titres, les corps, les images, etc.) prend effet immédiatement après l'enregistrement de tous les messages envoyés vers l'avenir. Il n'est pas possible de modifier le contenu des messages qui ont déjà été envoyés.
 
-### Scheduling and audience
+### Planification et audience
 
-If you edit your campaign's scheduled send time, or its audience, those changes won't be reflected in the actual campaign until after the end of the current 24 hour period.
+Si vous modifiez l'heure d'envoi prévue de votre campagne, ou son public, ces changements ne seront pas reflétés dans la campagne actuelle avant la fin de la période actuelle de 24 heures.
 
-### Send rate
+### Taux d'envoi
 
-When using a send rate limit, Braze "schedules" your messages in minute-granularity time slots, so if you want to change the message sending rate, you should follow the process below for immediate changes.
+Lorsque vous utilisez une limite de taux d'envoi, Braze "planifie" vos messages en minute-granularité, donc si vous voulez modifier le taux d'envoi des messages, vous devriez suivre le processus ci-dessous pour des changements immédiats.
 
-## Making immediate changes
+## Effectuer des changements immédiats
 
-If you need changes to take effect immediately, do the following:
+Si vous avez besoin de changements pour prendre effet immédiatement, faites ce qui suit :
 
-1. Stop the affected campaign.
-2. Duplicate the campaign.
-3. Make edits on the duplicate campaign.
+1. Arrêter la campagne concernée.
+2. Dupliquer la campagne.
+3. Effectuer des modifications sur la campagne en double.
 
 {% alert important %}
-This resets eligibility for people who already received the original campaign, so you may need to filter the duplicate campaign for people who did not receive the original.
+Cela réinitialise l'éligibilité des personnes qui ont déjà reçu la campagne initiale, pour que vous ayez besoin de filtrer la campagne en double pour les personnes qui n'ont pas reçu l'original.
 {% endalert %}
