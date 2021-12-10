@@ -1,7 +1,7 @@
 ---
-nav_title: "Phone Numbers"
-config_only: true
-noindex: true
+nav_title: "Numéros de téléphone"
+config_only: vrai
+noindex: vrai
 page_order: 3
 ---
 
