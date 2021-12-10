@@ -1,67 +1,67 @@
 ---
 page_order: 2
-nav_title: Terms to Know
-article_title: SMS Terms to Know
+nav_title: Termes à connaître
+article_title: Conditions d'utilisation du SMS
 layout: glossary_page
-glossary_top_header: "SMS Terms to Know"
-glossary_top_text: "SMS - everyone has it and knows what it is. What they don't know is the nuance. Check out the terms below to learn more about SMS ecosystems, technologies, and processes."
+glossary_top_header: "Conditions d'utilisation du SMS"
+glossary_top_text: "SMS - tout le monde l'a et sait ce qu'il est. Ce qu'ils ne savent pas, c'est la nuance. Consultez les termes ci-dessous pour en savoir plus sur les écosystèmes, les technologies et les processus SMS."
 page_type: glossary
-description: "This glossary defines various SMS terms you should know."
+description: "Ce glossaire définit différents termes SMS que vous devriez connaître."
 channel: SMS
 glossaries:
   - 
-    name: SMS (Short Message Service)
-    description: A messaging channel created in 1980 and one of the oldest texting technologies. It also happens to be one of the most wide-spread and more frequently used, of all texting channels. This channel is a more direct way to reach your users and customers than most other messaging channels, as it utilizes their personal phone number to reach them. As such, SMS has more rules and regulations around it than other messaging channels.
+    name: SMS (Service de messagerie court)
+    description: Un canal de messagerie créé en 1980 et l'une des plus anciennes technologies de texte. Il se trouve aussi être l'un des canaux les plus répandus et les plus fréquemment utilisés, de tous les canaux de texte. Ce canal est un moyen plus direct d'atteindre vos utilisateurs et vos clients que la plupart des autres canaux de messagerie, car il utilise leur numéro de téléphone personnel pour les atteindre. Ainsi, les SMS ont plus de règles et de règlements autour de lui que les autres canaux de messagerie.
   - 
-    name: Short Code
-    description: This is a short, memorable 5-6 digit sequence that allows senders to send more messages at more consistent rates than long numbers (one message per second).<br><br>Either a short or a long code is required.
+    name: Code court
+    description: Ceci est court, une séquence mémorable de 5 à 6 chiffres qui permet aux expéditeurs d'envoyer plus de messages à des tarifs plus cohérents que les nombres longs (un message par seconde).<br><br>Un code court ou long est requis.
   - 
-    name: Long Code
-    description: This is the standard, 10-digit phone number (in most countries) that allows senders to send more messages at the rate of one message per second.<br><br>Either a short or a long code is required.
+    name: Code Long
+    description: Il s'agit du numéro de téléphone standard à 10 chiffres (dans la plupart des pays) qui permet aux expéditeurs d'envoyer plus de messages au rythme d'un message par seconde.<br><br>Un code court ou long est requis.
   - 
-    name: Encoding
-    description: The conversion of anything into a coded form. SMS content can be encoded in either GSM-7 or UCS-2.
+    name: Encodage
+    description: La conversion de tout ce qui est en une forme codée. Le contenu des SMS peut être encodé en GSM-7 ou UCS-2.
   - 
-    name: GSM-7 Encoding (Global System for Mobile Communications)
-    description: 'GSM-7 is the most seen encoding standard for most SMS messaging. It uses most of the Greek and English alphabets, as well as some additional characters. You can <a href=''https://en.wikipedia.org/wiki/GSM_03.38#GSM_7-bit_default_alphabet_and_extension_table_of_3GPP_TS_23.038_.2F_GSM_03.38''>learn more about GSM-7 encoding and which character sets you can use here</a>. Languages such as Chinese, Korean, or Japanese must be transferred using the 16-bit UCS-2 character encoding. <br> <br> You can estimate that the character limit per segment for this type of encoding is 128 characters.'
+    name: Encodage GSM-7 (Global System for Mobile Communications)
+    description: 'GSM-7 est la norme d''encodage la plus connue pour la plupart des messages SMS. Il utilise la plupart des alphabets grecs et anglais ainsi que quelques caractères supplémentaires. Vous pouvez <a href=''https://en.wikipedia.org/wiki/GSM_03.38#GSM_7-bit_default_alphabet_and_extension_table_of_3GPP_TS_23.038_.2F_GSM_03.38''>en savoir plus sur l''encodage GSM-7 et les jeux de caractères que vous pouvez utiliser ici</a>. Les langues telles que le chinois, le coréen ou le japonais doivent être transférées en utilisant l''encodage de caractères UCS-2 16 bits. <br> <br> Vous pouvez estimer que la borne de caractères par segment pour ce type d''encodage est 128 caractères.'
   - 
-    name: UCS-2 Encoding (Universal Coded Character Set)
-    description: UCS-2 encoding is a fallback encoding standard, especially when a message cannot be encoded using GSM-7 or when a language needs more than 128 characters to be rendered. USC-2 is better measured by <a href='https://en.wikipedia.org/wiki/Code_point'>"code points"</a>, as opposed to "characters". Regardless, you could estimate that the character limit per segment for this type of encoding is 67 characters.
+    name: Encodage UCS-2 (jeu de caractères universel)
+    description: L'encodage UCS-2 est un standard d'encodage par défaut surtout quand un message ne peut pas être encodé en utilisant le GSM-7 ou quand un langage a besoin de plus de 128 caractères pour être affiché. USC-2 est mieux mesuré par <a href='https://en.wikipedia.org/wiki/Code_point'>"points de code"</a>, par opposition aux "caractères". Quoi qu'il en soit, vous pouvez estimer que la limite de caractères par segment pour ce type d'encodage est de 67 caractères.
   - 
-    name: Subscription Groups for SMS
-    description: Subscription Groups are a Braze tool that allows you to target specific subscription levels of users or customers. Subscription Groups for SMS are constructed internally based on your message service and cannot be shared across App Groups.
+    name: Groupes d'abonnement pour SMS
+    description: Les groupes d'abonnement sont un outil Braze qui vous permet de cibler des niveaux d'abonnement spécifiques d'utilisateurs ou de clients. Les groupes d'abonnement pour SMS sont construits en interne en fonction de votre service de messagerie et ne peuvent pas être partagés entre les groupes d'applications.
   - 
-    name: Message Segments
-    description: A message segment is a grouping of up to a defined number of characters (160 for GSM-7 encoding; 67 for UCS-2 encoding) that will be sent in a single SMS dispatch. If you dispatch an SMS with 161 characters using GSM-7 encoding, you will see that there are two (2) message segments that were sent. Sending multiple message segments may result in additional charges.
+    name: Segments de message
+    description: Un segment de message est un regroupement de jusqu'à un nombre défini de caractères (160 pour l'encodage GSM-7 ; 67 pour l'encodage UCS-2) qui sera envoyé en un seul envoi de SMS. Si vous envoyez un SMS avec 161 caractères en utilisant l'encodage GSM-7, vous verrez qu'il y a deux (2) segments de messages qui ont été envoyés. L'envoi de plusieurs segments de messages peut entraîner des frais supplémentaires.
   - 
-    name: Message Service
-    description: A collection of long codes, short codes, and alpha-numeric IDs used to send your SMS message with Braze.
+    name: Service de messages
+    description: Une collection de codes longs, de codes courts et d'identifiants alphanumériques utilisés pour envoyer votre message SMS avec Braze.
   - 
     name: Keyword
-    description: "A short word that is sent to a short or long code to interact with a pre-defined SMS program or to request to OPT-OUT of a specific program or all programs on a code. For example, <code>STOP</code>. Keywords should <br> - be alphanumeric <br> - have no spaces <br> - be less than 10 characters. <br> <br> A specific keyword and short code combination may only be used on one active program at a time. If a keyword is entered that is already in use by another program, a validation error will appear. <br> <br> There are two mandatory keyword categories that all SMS content providers must comply with: <code>STOP</code> and <code>HELP</code>."
+    description: "Un mot court qui est envoyé à un code court ou long pour interagir avec un programme SMS prédéfini ou pour demander à OPT-OUT d'un programme spécifique ou tous les programmes sur un code. Par exemple, <code>STOP</code>. Les mots-clés doivent <br> - être alphanumériques <br> - n'ont pas d'espaces <br> - être de moins de 10 caractères. <br> <br> Une combinaison de mot clé et de code court spécifiques ne peut être utilisée que sur un programme actif à la fois. Si un mot clé est entré qui est déjà utilisé par un autre programme, une erreur de validation apparaît. <br> <br> Il y a deux catégories de mots-clés obligatoires que tous les fournisseurs de contenu de SMS doivent respecter : <code>STOP</code> et <code>AIDE</code>."
   - 
     name: Mandatory Keyword HELP
-    description: For each program that is created in the SMS Campaign Manager platform, content for this keyword must be provided and has to meet the best practices and carrier compliance per country or region in which the SMS traffic is being sent and received. In most cases, this content should have a brief explanation of the SMS program, and how to OPT-OUT.
+    description: Pour chaque programme qui est créé sur la plateforme SMS Campaign Manager, le contenu de ce mot clé doit être fourni et doit respecter les meilleures pratiques et la conformité des transporteurs par pays ou région où le trafic de SMS est envoyé et reçu. Dans la plupart des cas, ce contenu devrait avoir une brève explication du programme SMS et comment OPT-OUT.
   - 
-    name: Global STOP Keywords
-    description: Variations include <code>STOP</code>, <code>END</code>, <code>QUIT</code>, <code>UNSUBSCRIBE</code>, <code>CANCEL</code>, <code>STOPALL</code>. These are referred to as <code>Global-Stop-Keywords</code>. If any of these keywords are texted in to a short or long code, it results in the mobile number (the originating mobile phone number) being opted-out of every active SMS program on that code it is associated with.
+    name: Mots-clés Globaux Arrêt
+    description: Les variantes incluent <code>STOP</code>, <code>END</code>, <code>QUIT</code>, <code>Désabonner</code>, <code>ANNULER</code>, <code>STOPALL</code>. On appelle ces mots clés <code>Global-Stop-Keywords</code>. Si l'un de ces mots-clés est écrit en un code court ou long, il en résulte que le numéro de portable (le numéro de téléphone portable originaire) est exclu de chaque programme SMS actif sur le code auquel il est associé.
   - 
-    name: Vanity Code
-    description: A vanity short code is a 5-6 digit phone number that is specifically selected by a brand. Vanity short codes are branded and easier for consumers to remember.
+    name: Code Vanity
+    description: Un code court de vanité est un numéro de téléphone de 5 à 6 chiffres qui est spécifiquement sélectionné par une marque. Les codes abrégés Vanity sont de marque et plus faciles à retenir pour les consommateurs.
   - 
-    name: Shared Short Code
-    description: When using a shared short code, all text messages, no matter what business or organization sends them, arrives on a consumer's mobile device from the same 5-6 phone number. While shared short codes are relatively low cost and immediately available, this means that your business will not have a dedicated short code, and are subject to other businesses following the correct protocol with your shared short code.
+    name: Code court partagé
+    description: Lorsque vous utilisez un code court partagé, tous les messages textuels, peu importe ce que l'entreprise ou l'organisation les envoie, arrive sur l'appareil mobile d'un consommateur à partir du même numéro de téléphone 5-6. Bien que les codes courts partagés soient relativement peu coûteux et immédiatement disponibles, cela signifie que votre entreprise n'aura pas de code court dédié. et sont soumis à d'autres entreprises suivant le protocole correct avec votre code court partagé.
   - 
-    name: Alphanumeric Sender ID
-    description: Alphanumeric Sender ID allows you to set your company name or brand as the Sender ID using alphanumeric characters when sending one-way messages to supported countries.
+    name: ID de l'expéditeur alphanumérique
+    description: Alphanumeric Sender ID vous permet de définir le nom ou la marque de votre entreprise en tant que Sender ID en utilisant des caractères alphanumériques lors de l'envoi de messages à sens unique vers les pays pris en charge.
   - 
-    name: Toll-Free Number
-    description: An toll-free telephone number or freephone number is a telephone number that is billed for all arriving calls instead of incurring charges to the originating telephone subscriber. Toll-free numbers in the US and Canada are SMS-enabled, where subscribers are charged for incoming and outgoing texts.<br><br>Toll-Free messaging works best when your use case is person-to-person, such as customer support or sales, with both the sender and the recipient having a conversation via text.
+    name: Numéro sans frais
+    description: Un numéro sans frais ou un numéro de téléphone gratuit est un numéro de téléphone qui est facturé pour tous les appels qui arrivent plutôt que de percevoir des frais à l'abonné du téléphone originaire. Les numéros sans frais aux États-Unis et au Canada sont activés par SMS, où les abonnés sont facturés pour les textes entrants et sortants.<br><br>La messagerie sans frais fonctionne mieux lorsque votre cas d'utilisation est de personne à personne, comme l'assistance à la clientèle ou les ventes, avec à la fois l'expéditeur et le destinataire ayant une conversation par texte.
   - 
-    name: One-Way Messaging
-    description: One-way messaging allows you to communicate with your customers by sending text messages. One-way messaging is useful if you are implementing an alphanumeric sender ID in markets where long and short codes are not available.
+    name: Messagerie à sens unique
+    description: La messagerie unique vous permet de communiquer avec vos clients en envoyant des SMS. La messagerie unique est utile si vous implémentez un identifiant alphanumérique de l'expéditeur dans les marchés où les codes longs et courts ne sont pas disponibles.
   - 
-    name: Two-Way Messaging
-    description: Two-way messaging allows you to carry on a conversation by both sending and receiving text messages.
+    name: Messagerie à deux voies
+    description: La messagerie bidirectionnelle vous permet de poursuivre une conversation en envoyant et en recevant des SMS.
 ---
 
