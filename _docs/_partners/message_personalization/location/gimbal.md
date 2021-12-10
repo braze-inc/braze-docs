@@ -21,8 +21,8 @@ Combine your beacon or geofence support with Braze’s targeting and messaging f
 
 | Requirement| Description|
 | ---| ---|
+| [Gimbal manager account][1] | A Gimbal manager account is required to take advatage of this partnership. |
 |[Gimbal Location SDK](https://docs.gimbal.com/index.html) | The Gimbal Location SDK powers macro and micro location-based mobile experiences using proximity beacons and geofences that allow you to communicate more effectively with your app users. You must have the SDK implemented, and geofences (or beacons) set up. |
-| [Gimbal manager account][1] | You must have an active Gimbal manager account to utilize their services with Braze |
 | Braze REST API key | A Braze REST API Key with `users.track` permissions. <br><br> This can be created within the __Braze Dashboard -> Developer Console -> REST API Key -> Create New API Key__ |
 {: .reset-td-br-1 .reset-td-br-2}
 

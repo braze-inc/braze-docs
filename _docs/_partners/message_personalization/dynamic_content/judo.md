@@ -16,11 +16,11 @@ The Braze and Judo integration provides bespoke experiences in your campaigns an
 
 ## Prerequisites
 
-| Requirement | Origin | Access | Description |
-|---|---|---|---|
-| Judo Account | Judo | [Judo](https://www.judo.app/) | You'll need a Judo account in order to host Experiences for launch from Braze. |
-| Judo SDK | Judo | [Judo iOS SDK](https://github.com/judoapp/judo-ios/) and [Judo Android SDK](https://github.com/judoapp/judo-android) | You'll need the Judo SDKs integrated into your iOS and/or Android apps. |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4}
+| Requirement | Description |
+|---|---|
+| Judo Account | A [Judo](https://www.judo.app/) account is required to take advantage of this partnership. |
+| Judo SDK | You'll need the Judo SDKs integrated into your [iOS](https://github.com/judoapp/judo-ios/) and [Judo Android SDK](https://github.com/judoapp/judo-android) and/or [Android]((https://github.com/judoapp/judo-android)) apps. |
+{: .reset-td-br-1 .reset-td-br-2}
 
 ## Use cases
 

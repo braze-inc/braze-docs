@@ -16,10 +16,10 @@ The Transifex and Braze integration leverage Connected Content, allowing you to 
 
 ## Prerequisites
 
-| Requirement| Origin| Access| Description|
-| ---| ---| ---|
-|Transifex Account | Transifex | [https://www.transifex.com/signin/](https://www.transifex.com/signin/) | You must first have a Transifex account to access their SDK integration information. |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
+| Requirement| Description|
+| ---| ---|
+|Transifex Account | A [Transifex account](https://www.transifex.com/signin/) is required to take advantage of this partnerhsip. |
+{: .reset-td-br-1 .reset-td-br-2}
 
 ## Integration
 

@@ -15,7 +15,7 @@ search_tag: Partner
 ## Prerequisites
 
 | Requirement | Description |
-|---|---|---|---|
+|---|---|
 | AccuWeather API Key | Contact your Accuweather account manager for comaptible API keys to use in your request URLs.<br><br>Further instructions can be found on the [AccuWeather enterprise API page][57]. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
 

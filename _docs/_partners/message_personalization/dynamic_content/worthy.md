@@ -28,8 +28,8 @@ The [Worthy](https://worthy.ai/) and Braze integration allows you to easily crea
 
 | Requirement | Description |
 | --- | --- |
+| [Worthy](https://worthy.ai/) account | A Worthy account is required to take advantage of this partnership. |
 | Braze SDK | You will need to configure the Braze SDK in your mobile application to send rich in-app messages. |
-| [Worthy](https://worthy.ai/) account | You will need a Worthy account to use the Worthy message creator. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4}
 
 ## Integration
