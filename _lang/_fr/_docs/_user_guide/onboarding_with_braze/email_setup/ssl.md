@@ -1,28 +1,28 @@
 ---
-nav_title: SSL Overview
-article_title: SSL Overview
+nav_title: Aperçu SSL
+article_title: Aperçu SSL
 page_order: 9
-page_type: reference
-description: "This reference article covers SSL, what's it is used for, and how it's used at Braze."
-channel: email
+page_type: Référence
+description: "Cet article de référence couvre le SSL, ce qui est utilisé et comment il est utilisé au Brésil."
+channel: Email
 ---
 
-# SSL at Braze
+# SSL à Braze
 
 {% include video.html id="zP1N_wN0SsQ" align="right" %}
 
-> A Secure Socket Layer (SSL) encrypts a URL with HTTPS instead of the less secure HTTP. URLs with HTTPS indicate that an SSL or TLS certificate that is valid and trusted exists and that the site is safe to visit and not a scam or the source of dangerous malware.
+> Un Secure Socket Layer (SSL) crypte une URL avec HTTPS au lieu du protocole HTTP moins sécurisé. Les URL avec HTTPS indiquent qu'un certificat SSL ou TLS valide et digne de confiance existe et que le site est en toute sécurité à visiter et non pas une arnaque ou la source de logiciels malveillants dangereux.
 
-## Why is SSL important?
+## Pourquoi SSL est-il important ?
 
-While most domains do not require SSL, these are the reasons we strongly recommend SSL to our users:
-1. __Required by some Major Browsers__: SSL protocols are becoming more prevalent today as major browsers like Google Chrome are starting to restrict traffic through non-secure URLs to protect their users. Companies with SSL on their website ensure to these major browsers that their content is trusted, minimizing content viewing issues like broken links and images in their emails.<br><br>
-2. __Neccesary for Click and Open Tracking__: At Braze, when we send out emails, we first transform your links using your branded link tracking subdomain to track user clicks and opens. By default, these links will begin with HTTP. This means that users with a browser or extension that restricts non-secure traffic may have difficulty passing through the redirect before landing at the destination URL, even if the URL is secure. This can lead to broken images and inaccurate click and open tracking throughout your emails. For this reason, it is a best practice to apply an SSL layer to the link tracking subdomain to ensure secure redirects in your emails. <br><br>
-3. __HSTS Domains Require SSL__: Regardless of which browsers your users may be accessing your emails from, you must set up SSL if you have an HTTP Strict Transport Security (HSTS) domain and configure a CDN to send the necessary security certificates. Failure to set up SSL will cause both image and web links to break.<br><br>
-4. __General Best Practice__: Securing your website and links with SSL is a common practice even for companies that don't deal directly with sensitive customer information. Users are more trusting of links that are secured with SSL, and the additional layer of authentication helps protect your data.
+Bien que la plupart des domaines ne requièrent pas de SSL, ce sont les raisons pour lesquelles nous recommandons fortement SSL à nos utilisateurs :
+1. __Requis par certains navigateurs principaux__: les protocoles SSL sont de plus en plus répandus aujourd'hui car les principaux navigateurs comme Google Chrome commencent à restreindre le trafic à travers des URL non sécurisées pour protéger leurs utilisateurs. Les entreprises avec SSL sur leur site Web s'assurent à ces principaux navigateurs que leur contenu est fiable, minimiser les problèmes de visualisation de contenu tels que les liens cassés et les images dans leurs e-mails.<br><br>
+2. __Nécessaire pour Click and Open Tracking__: Au Brésil, quand nous envoyons des emails, nous transformons d'abord vos liens à l'aide de votre sous-domaine de suivi de liens de marque pour suivre les clics utilisateur et s'ouvrir. Par défaut, ces liens commenceront par HTTP. Cela signifie que les utilisateurs avec un navigateur ou une extension qui restreint le trafic non sécurisé peuvent avoir des difficultés à traverser la redirection avant d'atterrir à l'URL de destination, même si l'URL est sécurisée. Cela peut conduire à des images cassées et des clics inexacts et ouvrir le suivi à travers vos e-mails. Pour cette raison, il est préférable d'appliquer une couche SSL au sous-domaine de suivi des liens pour assurer des redirections sécurisées dans vos e-mails. <br><br>
+3. __Les domaines HSTS requièrent SSL__: indépendamment de quels navigateurs vos utilisateurs peuvent accéder à vos e-mails, vous devez configurer SSL si vous avez un domaine HTTP Strict Transport Security (HSTS) et configurer un CDN pour envoyer les certificats de sécurité nécessaires. Si la configuration de SSL échoue, l'image et les liens web seront cassés.<br><br>
+4. __Meilleures pratiques générales__: sécuriser votre site Web et les liens avec SSL est une pratique courante même pour les entreprises qui ne traitent pas directement avec des informations clients sensibles. Les utilisateurs font plus confiance aux liens qui sont sécurisés avec SSL, et la couche supplémentaire d'authentification aide à protéger vos données.
 
-## Acquiring an SSL certificate
+## Acquisition d'un certificat SSL
 
-Acquiring an SSL certificate can be done by utilizing a third party, usually a Content Delivery Network (CDN). A CDN can host the SSL certificate and serve it to the browser any time one of your links is clicked. This is done by redirecting the traffic through the CDN to apply necessary certificates before sending it through to our email partners Sendgrid or Sparkpost.
+L'acquisition d'un certificat SSL peut se faire en utilisant un tiers, généralement un réseau de distribution de contenu (CDN). Un CDN peut héberger le certificat SSL et le servir au navigateur à chaque fois qu'un de vos liens est cliqué. Cela se fait en redirigeant le trafic à travers le CDN pour appliquer les certificats nécessaires avant de l'envoyer à nos partenaires de courriel Sendgrid ou Sparkpost.
 
-Ready to get started with your SSL setup? View our next SSL article [here]({{site.baseurl}}/user_guide/onboarding_with_braze/email_setup/ssl/ssl_clicktracking/). 
+Prêt à démarrer avec votre installation SSL? Consultez notre prochain article SSL [ici]({{site.baseurl}}/user_guide/onboarding_with_braze/email_setup/ssl/ssl_clicktracking/). 
