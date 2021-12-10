@@ -1,80 +1,80 @@
 ---
-nav_title: Upload an Email Template
-article_title: How to Upload an HTML Email Template
+nav_title: Télécharger un modèle d'email
+article_title: Comment télécharger un modèle de courriel HTML
 page_order: 2.1
-description: "This reference article covers how to create, manage, and troubleshoot an HTML email template using the Braze dashboard."
+description: "Cet article de référence traite de la création, de la gestion et du dépannage d'un modèle de courriel HTML à l'aide du tableau de bord Braze."
 tool:
-  - Templates
+  - Modèles
 channel:
-  - email
+  - Email
 ---
 
-# How to upload an HTML email template
+# Comment télécharger un modèle de courriel HTML
 
-> This article covers creating, managing, and troubleshooting HTML email templates in the Braze dashboard.
+> Cet article couvre la création, la gestion et le dépannage des modèles de courriels HTML dans le tableau de bord de Braze.
 
-Email messages are great for delivering content to the user on their terms. They are also wonderful tools to re-engage users who may have even uninstalled your app. The Braze dashboard has an email template editor that allows you to create custom-tailored, eye-catching emails and save them for later use in campaigns. You can also [create an Email Template]({{site.baseurl}}/user_guide/message_building_by_channel/email/creating_an_email_template/) using our editor.
+Les messages électroniques sont parfaits pour diffuser du contenu à l'utilisateur selon ses conditions. Ce sont également de merveilleux outils pour réengager les utilisateurs qui ont même désinstallé votre application. Le tableau de bord de Braze a un éditeur de modèle d'e-mail qui vous permet de créer des e-mails personnalisés et attractifs et de les enregistrer pour une utilisation ultérieure dans des campagnes. Vous pouvez également [créer un modèle d'e-mail]({{site.baseurl}}/user_guide/message_building_by_channel/email/creating_an_email_template/) en utilisant notre éditeur.
 
-## Prerequisites {#upload-requirements}
+## Pré-requis {#upload-requirements}
 
-Before you begin, you need to create your HTML email template. This must be a single ZIP file containing the following:
+Avant de commencer, vous devez créer votre modèle de courriel HTML. Ce doit être un seul fichier ZIP contenant les éléments suivants :
 
-* A single HTML file—the body of your email
-* A folder of images that are referenced in the HTML file
-* Less than 50 image files
+* Un seul fichier HTML - le corps de votre e-mail
+* Un dossier d'images référencées dans le fichier HTML
+* Moins de 50 fichiers image
 
-This ZIP file should be under 5 MB.
+Ce fichier ZIP doit être inférieur à 5 Mo.
 
-## Uploading your template
+## Téléchargement de votre modèle
 
-### Step 1: Navigate to the email template editor
+### Étape 1 : Accédez à l'éditeur de modèle d'e-mail
 
-Go to the __Templates & Media__ page, under the __Engagement__ section. This opens the __Email Templates__ page.
+Allez à la page __Modèles & Médias__ , sous la section __Engagement__. Ceci ouvre la page __Modèles d'e-mail__.
 
-### Step 2: Open the uploader
+### Étape 2 : Ouvrir le chargeur
 
-Under the **Template Type** section, select **HTML Editor**. Then scroll down to the section **Start from a Basic HTML Template** and select **From File**.
+Sous la section **Type de gabarit** , sélectionnez **Éditeur HTML**. Faites ensuite défiler vers le bas jusqu'à la section **Commencez à partir d'un modèle HTML de base** et sélectionnez **À partir du fichier**.
 
-### Step 3: Upload your template
+### Étape 3 : Téléchargez votre modèle
 
-Click **Upload From File** and select your template from your computer. Refer to the [Prerequisites](#upload-requirements) section to ensure your template meets the upload requirements.
+Cliquez sur **Télécharger à partir du fichier** et sélectionnez votre modèle à partir de votre ordinateur. Reportez-vous à la section [Prérequis](#upload-requirements) pour vous assurer que votre modèle répond aux exigences de téléchargement.
 
-#### Solve upload email template errors
+#### Résoudre les erreurs du modèle d'email de téléchargement
 
-There are several email error messages you may receive when uploading an HTML template file. If you receive an error, refer to the table below for common issues and their recommended fixes:
+Il y a plusieurs messages d'erreur par courriel que vous pouvez recevoir lorsque vous téléchargez un fichier modèle HTML. Si vous recevez une erreur, reportez-vous au tableau ci-dessous pour les problèmes courants et leurs corrections recommandées :
 
-| Error           | Fix                                                                                                                                                                                                                                                                                                       |
-| --------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| .zip over 5MB   | Reduce your file size and try uploading again.                                                                                                                                                                                                                                                            |
-| .zip corrupt    | Inspect your file and try uploading again.                                                                                                                                                                                                                                                                |
-| Missing HTML    | Add HTML file to your ZIP file and try uploading again.                                                                                                                                                                                                                                                   |
-| Multiple HTML   | Remove one of the HTML files and try uploading again.                                                                                                                                                                                                                                                     |
-| Images over 5MB | Reduce the number of images and try uploading again.                                                                                                                                                                                                                                                      |
-| Extra Images    | You may have additional images in your file that are not referenced in your HTML file. This will not cause a fail error, but the extra images will be discarded. If those images were supposed to be referenced in the HTML file, please check its contents, correct any errors, and try uploading again. |
-| Missing Images  | If there are images referenced in your HTML file, but those images are not included in the image folder of the ZIP file, you will receive a file error. Inspect your file and correct any errors (like misspellings), or add the missing images to your ZIP file and try uploading again.                 |
+| Erreur                 | Corriger                                                                                                                                                                                                                                                                                                                                                                 |
+| ---------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| .zip de plus de 5 Mo   | Réduisez la taille de votre fichier et essayez de télécharger à nouveau.                                                                                                                                                                                                                                                                                                 |
+| .zip corrompu          | Inspectez votre fichier et essayez de le télécharger à nouveau.                                                                                                                                                                                                                                                                                                          |
+| HTML manquant          | Ajoutez un fichier HTML à votre fichier ZIP et essayez à nouveau de le télécharger.                                                                                                                                                                                                                                                                                      |
+| HTML multiple          | Supprimez l'un des fichiers HTML et essayez de télécharger à nouveau.                                                                                                                                                                                                                                                                                                    |
+| Images de plus de 5 Mo | Réduisez le nombre d'images et essayez de télécharger à nouveau.                                                                                                                                                                                                                                                                                                         |
+| Images supplémentaires | Il se peut que vous ayez des images supplémentaires dans votre fichier qui ne sont pas référencées dans votre fichier HTML. Cela ne causera pas d'erreur, mais les images supplémentaires seront ignorées. Si ces images étaient censées être référencées dans le fichier HTML, veuillez vérifier son contenu, corriger les erreurs et essayez de télécharger à nouveau. |
+| Images manquantes      | S'il y a des images référencées dans votre fichier HTML, mais ces images ne sont pas incluses dans le dossier image du fichier ZIP, vous recevrez une erreur de fichier. Inspectez votre fichier et corrigez toutes les erreurs (comme les erreurs d'orthographe), ou ajoutez les images manquantes à votre fichier ZIP et essayez de télécharger à nouveau.             |
 {: .reset-td-br-1 .reset-td-br-2}
 
-### Step 4: Finish and save your template
+### Étape 4 : Terminer et enregistrer votre modèle
 
-Be sure to save your template by clicking **Save Template** in the bottom right corner of the editor. You're now ready to use this template in any campaign or Canvas you choose.
+Assurez-vous de sauvegarder votre modèle en cliquant sur **Enregistrer le modèle** dans le coin inférieur droit de l'éditeur. Vous êtes maintenant prêt à utiliser ce modèle dans n'importe quelle campagne ou Canvas que vous choisissez.
 
 {% alert note %}
-If you make any edits to an existing template, those changes will not be reflected in campaigns that were created using previous versions of that template.
+Si vous faites des modifications à un modèle existant, ces modifications ne seront pas reflétées dans les campagnes qui ont été créées en utilisant les versions précédentes de ce modèle.
 {% endalert %}
 
-## Using your templates in API campaigns {#api_for_upload_email_templates}
+## Utiliser vos modèles dans les campagnes API {#api_for_upload_email_templates}
 
-To use your email for an API campaign, you need an `email_template_id`, which can be found at the bottom of any email template created in Braze.
+Pour utiliser votre email pour une campagne API, vous avez besoin d'un `email_template_id`, qui peuvent être trouvés au bas de n'importe quel modèle d'e-mail créé en Brésil.
 
-!\[API Identifier section of an HTML email template\]\[4\]
+!\[Section de l'identifiant de l'API d'un modèle d'e-mail HTML\]\[4\]
 
-## Managing email templates
+## Gestion des modèles d'e-mails
 
-You can [duplicate]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/duplicate/) and [archive]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/archive/) email templates! Learn more about creating and managing templates and creative content in [Templates & Media]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/).
+Vous pouvez [dupliquer]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/duplicate/) et [archiver]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/archive/) modèles d'e-mails ! En savoir plus sur la création et la gestion de modèles et de contenus créatifs dans [Modèles & Médias]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/).
 
-## FAQs
+## Foire aux questions
 
-For answers to frequently asked questions about email templates, check out our [email and link templates FAQs][10] page.
+Pour obtenir des réponses aux questions les plus fréquemment posées sur les modèles de courriel, consultez notre page [FAQ][10] sur les modèles d'e-mails et de liens.
 [4]: {% image_buster /assets/img_archive/email_template_id.png %}
 
 [10]: {{site.baseurl}}/user_guide/message_building_by_channel/email/templates/faq/
