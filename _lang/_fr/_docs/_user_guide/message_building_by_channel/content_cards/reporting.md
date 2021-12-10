@@ -1,16 +1,16 @@
 ---
-nav_title: Reporting
-article_title: Content Card Reporting
+nav_title: Rapports
+article_title: Rapports de la carte de contenu
 page_order: 4
-description: "This reference article provides an overview of the different Content Card reporting metrics and analytics options provided in the Braze dashboard."
+description: "Cet article de référence fournit une vue d'ensemble des différentes options de rapport de la carte de contenu fournies dans le tableau de bord de Braze."
 channel:
-  - content cards
+  - cartes de contenu
 tool:
-  - Reports
+  - Rapports
 ---
 
-# Content Card reporting
+# Rapports de la carte de contenu
 
-> This reference article provides an overview of the different Content Card reporting metrics and analytics options provided in the Braze dashboard.
+> Cet article de référence fournit une vue d'ensemble des différentes options de rapport de la carte de contenu fournies dans le tableau de bord de Braze.
 
 {% include campaign_analytics.md channel="Content Card" %}
