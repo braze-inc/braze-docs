@@ -18,7 +18,7 @@ Développez les capacités créatives de Braze en exploitant les fonctionnalité
 
 | Exigences             | Libellé                                                                                                                                                                                                                                                                   |
 | --------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Compte d'encre mobile | Vous aurez besoin d'un compte d'encre mobile pour profiter de ce partenariat.                                                                                                                                                                                             |
+| Compte d'encre mobile | Un compte d'encre mobile est requis pour profiter de ce partenariat.                                                                                                                                                                                                      |
 | Source de données     | Vous devrez connecter une source de données à Movable Ink. Cela peut se faire par le biais du CSV, de l'importation de sites Web ou de l'API. Assurez-vous de passer des données avec un identifiant unificateur entre Braze et Movable Ink (par exemple, `external_id`). |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4}
 
