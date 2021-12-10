@@ -1,107 +1,107 @@
 ---
-nav_title: Creating a Canvas
-article_title: Creating a Canvas
+nav_title: Créer une toile
+article_title: Créer une toile
 page_order: 0
-page_type: reference
-description: "This reference article covers the necessary steps involved in creating, maintaining, and testing a Canvas."
-tool: Canvas
+page_type: Référence
+description: "Cet article de référence couvre les étapes nécessaires à la création, à la maintenance et à l’essai d’un Canvas."
+tool: Toile
 ---
 
-# Creating a Canvas
+# Créer une toile
 
-Follow this guide, or check out our [LAB course](http://lab.braze.com/quick-overview-canvas-setup)!
+Suivez ce guide, ou consultez notre [cours LAB](http://lab.braze.com/quick-overview-canvas-setup)!
 
-## Step 1: Create a new Canvas
+## Étape 1 : Créer une nouvelle toile
 
 !\[Canvas\]\[1\]{: style="float:right;max-width:20%;margin-left:10px;margin-top:10px;margin-bottom:10px;"}
 
-Go to the **Canvas** page, located under the **Engagement** section, then click __Create a New Canvas__.
+Allez à la page **Canvas** , située sous la section **Engagement** , puis cliquez sur __Créer une nouvelle toile__.
 
-## Step 2: Use the entry wizard to set up your Canvas
+## Étape 2 : Utilisez l'assistant d'entrée pour configurer votre Canvas
 
-The Entry Wizard will guide you through setting up your Canvas—everything from naming it to setting conversion events and bringing the right users into your customer journey. Click on each of the tabs below to see what settings you can adjust in each of the Entry Wizard steps.
+L'assistant d'entrée vous guidera à travers la configuration de votre Canvas—de la nommer aux événements de conversion en passant par la mise en place des bons utilisateurs dans votre voyage client. Cliquez sur chacun des onglets ci-dessous pour voir quels paramètres vous pouvez ajuster dans chacune des étapes de l'Assistant d'entrée.
 
 {% tabs local %}
   {% tab Basics %}
-    Here, you will set up the basics of your Canvas: - Name Your Canvas - Add Teams to Your Canvas - Add Tags to Your Canvas - Assign Conversion Events and Choose Their Event Types and Deadlines
+    Ici, vous allez configurer les bases de votre Canvas : - Nommez votre Canvas - Ajoutez des équipes à votre Canvas - Ajoutez des mots clés à votre Canvas - Assignez des événements de conversion et choisissez leurs types d'événements et échéances
 
-    [Learn more about the Basics step.](#step-2a-set-up-your-canvas-basics)
+    [En savoir plus sur l'étape de base.](#step-2a-set-up-your-canvas-basics)
   {% endtab %}
   {% tab Entry Schedule %}
-    Here, you will decide how your users will enter your Canvas: - Scheduled: This is a time-based Canvas entry - Action-Based: Your user will enter your Canvas after they perform a defined action - API-Triggered: Use an API request to enter users into your Canvas
+    Ici, vous déciderez comment vos utilisateurs entreront dans votre Canvas : - Planifié : Ceci est une entrée de Canvas basée sur le temps - Action-Basé : Votre utilisateur entrera dans votre Canvas après avoir effectué une action définie - API-Déclenché : Utilisez une requête API pour entrer des utilisateurs dans votre Canvas
 
-    [Learn more about the Entry Schedule step.](#step-2b-set-your-canvas-entry-schedule)
+    [En savoir plus sur l'étape du calendrier d'entrée.](#step-2b-set-your-canvas-entry-schedule)
   {% endtab %}
   {% tab Entry Audience %}
-    Here, you will select your Canvas Entry Audience: - Create Your Audience by Adding Segments and Filters - Fine-tune Canvas Re-Entry and Entry Limits - See a Summary of Your Target Audience
+    Ici, vous allez sélectionner votre audience d'entrée sur le canevas : - Créer votre audience en ajoutant des segments et des filtres - affiner la reentrée du canevas et les limites d'entrée - Voir un résumé de votre public cible
 
-    [Learn more about the Entry Audience step.](#step-2c-set-your-target-entry-audience)
+    [En savoir plus sur l'étape de l'entrée.](#step-2c-set-your-target-entry-audience)
   {% endtab %}
   {% tab Send Settings %}
-    Here, you will select your Canvas Send Settings: - Select Your Subscription Settings - Set a Send Rate Limit for Your Canvas Messages - Enable and Set Quiet Hours
+    Ici, vous allez sélectionner vos paramètres d'envoi de Canvas : - Sélectionnez vos paramètres d'abonnement - Définissez une limite de taux d'envoi pour vos messages de toile - Activez et réglez les heures silencieuses
 
-    [Learn more about the Send Settings step.](#step-2d-select-your-send-settings)
+    [En savoir plus sur l'étape Envoyer les paramètres.](#step-2d-select-your-send-settings)
   {% endtab %}
   {% tab Build Canvas %}
-    Here you will build your Canvas.
+    Ici, vous construirez votre Canevas.
 
-    [Learn how to build your Canvas using the Canvas builder.](#step-3-build-your-canvas)
+    [Apprenez comment construire votre Canvas en utilisant le constructeur de Canvas.](#step-3-build-your-canvas)
   {% endtab %}
 {% endtabs %}
 
-### Step 2a: Set up your Canvas basics
+### Étape 2 : Configurez les bases de votre Canvas
 
-Here, you'll name your Canvas, assign [Teams]({{site.baseurl}}/user_guide/administrative/manage_your_braze_users/teams/#teams), and create or add [Tags]({{site.baseurl}}/user_guide/administrative/app_settings/tags/#tags). Here, you'll also assign conversion events for the Canvas.
+Ici, tu nommeras ton Canvas, assigne des équipes []({{site.baseurl}}/user_guide/administrative/manage_your_braze_users/teams/#teams)et créeras ou ajouteras des [Tags]({{site.baseurl}}/user_guide/administrative/app_settings/tags/#tags). Ici, vous assignerez également des événements de conversion pour les Canvas.
 
 {% alert tip %}
-Tag your Canvases so they’re easy to find and build reports out of. For instance, when using [Report Builder]({{site.baseurl}}/user_guide/data_and_analytics/your_reports/report_builder/), you can filter by particular tags.
+Étiquetez vos toiles pour qu'elles soient faciles à trouver et à construire des rapports. Par exemple, lorsque vous utilisez [Report Builder]({{site.baseurl}}/user_guide/data_and_analytics/your_reports/report_builder/), vous pouvez filtrer par balises particulières.
 {% endalert %}
 
 !\[Basics\]\[51\]
 
-#### Choose conversion events
+#### Choisir les événements de conversion
 
-Choose your Conversion Event Type, then select the conversions you would like to record.
+Choisissez votre type d'événement de conversion, puis sélectionnez les conversions que vous souhaitez enregistrer.
 
 !\[Conversion\]\[52\]
 
-We will use the [Conversion Event]({{site.baseurl}}/user_guide/engagement_tools/campaigns/testing_and_more/conversion_events/) that you set from this screen to measure the efficiency of your Canvas.
+Nous utiliserons [l'événement de conversion]({{site.baseurl}}/user_guide/engagement_tools/campaigns/testing_and_more/conversion_events/) que vous avez défini à partir de cet écran pour mesurer l'efficacité de votre Canvas.
 
-If your Canvas has multiple variants or a Control Group, Braze will use this Conversion Event to determine the best variation for achieving this Conversion goal. Using the same logic, you can create multiple Conversion Events.
+Si votre Canvas a plusieurs variantes ou un groupe de contrôle, Braze utilisera cet événement de conversion pour déterminer la meilleure variation pour atteindre cet objectif de conversion. En utilisant la même logique, vous pouvez créer plusieurs événements de conversion.
 
-### Step 2b: Set your Canvas entry schedule
+### Étape 2b : Définissez le calendrier de saisie de votre Canvas
 
-You can choose one of three ways in which users can enter your Canvas:
+Vous pouvez choisir l'une des trois façons dont les utilisateurs peuvent entrer dans votre Canvas :
 
-- Scheduled Delivery
-- Action-Based Delivery
-- API-Triggered Delivery
+- Livraison programmée
+- Livraison par action
+- Livraison déclenchée par l'API
 
-After you choose which you'll use, adjust those settings appropriately, and move on to setting your target audience.
+Après avoir choisi quels paramètres vous utiliserez, ajustez ces paramètres de manière appropriée et passez à la configuration de votre public cible.
 
-!\[Entry Schedule\]\[53\]
+!\[Calendrier des entrées\]\[53\]
 
-#### Entry schedule types
+#### Types d'horaires d'entrée
 
 {% tabs local %}
   {% tab Scheduled Delivery %}
-    __Scheduled Delivery__<br> With scheduled delivery, users will enter on a time schedule, similarly to how you would schedule a campaign. You can enroll users in a Canvas as soon as it is launched, or enter them into your journey at some point in the future, or on a recurring basis.
+    __Livraison planifiée__<br> Avec livraison planifiée, les utilisateurs entreront sur un calendrier temporel, de même que la façon dont vous planifiez une campagne. Vous pouvez inscrire des utilisateurs sur un Canvas dès son lancement, ou de les entrer dans votre voyage à un moment donné dans le futur, ou sur une base récurrente.
 
-    ![Canvas Scheduled Delivery]({% image_buster /assets/img_archive/Canvas_Scheduled_Delivery.png %})
+    ![Canvas Planning Delivery]({% image_buster /assets/img_archive/Canvas_Scheduled_Delivery.png %})
   {% endtab %}
   {% tab Action-Based Delivery %}
-    __Action-Based Delivery__<br> With action-based delivery, you can choose to enter users into a Canvas when they perform certain triggers. Users will enter your Canvas and begin receiving messages when they take particular actions, such as opening your app, making a purchase, or triggering a custom event. <br><br>Note that action-based delivery is unavailable for Canvas steps with in-app messages.
+    __Livraisons à l'aide d'Action-Based Delivery__<br> Avec une livraison basée sur l'action, vous pouvez choisir d'entrer des utilisateurs dans un Canvas quand ils exécutent certains déclencheurs. Les utilisateurs entreront dans votre Canvas et commenceront à recevoir des messages lorsqu'ils prendront des mesures particulières, comme ouvrir votre application, faire un achat ou déclencher un événement personnalisé. <br><br>Notez que la distribution par action n'est pas disponible pour les étapes de Canvas avec les messages dans l'application.
 
-    ![Canvas Action-Based Delivery]({% image_buster /assets/img_archive/Canvas_Action_Based_Delivery.png %})
+    ![Canvas Action-Based Delivery]({% image_buster /assets/img_archive/Canvas_Action_Based_Delivery. ng %})
     
-    You can control other aspects of your Canvas' behavior from the **Entry Audience** window, including rules for re-eligibility and frequency capping settings.
+    Vous pouvez contrôler d'autres aspects du comportement de votre Canvas à partir de la fenêtre **Public d'entrée**, y compris des règles pour la rééligibilité et les paramètres de plafonnement des fréquences.
   {% endtab %}
   {% tab API-Triggered Delivery %}
-    __API-Triggered Delivery__<br> With API-triggered deliver, you can choose to enter users into a Canvas via an API request. In the Dashboard, you can find an example cURL request that does this as well as assign optional [`canvas_entry_properties`]({{site.baseurl}}/api/endpoints/messaging/send_messages/post_send_triggered_canvases/) using the [`Canvas Entry Properties Object`]({{site.baseurl}}/api/objects_filters/canvas_entry_properties_object/). <br><br>Users will enter your Canvas and begin receiving messages once they have been added using the [`/canvas/trigger/send`]({{site.baseurl}}/api/endpoints/messaging/send_messages/post_send_triggered_canvases/) endpoint via the API.
+    __Livraisons déclenchées par l'API__<br> Vous pouvez choisir d'entrer des utilisateurs dans un Canvas via une requête API. Dans le tableau de bord, vous pouvez trouver un exemple de requête cURL qui fait cela ainsi que d'affecter des propriétés facultatives [`canvas_entry_properties`]({{site.baseurl}}/api/endpoints/messaging/send_messages/post_send_triggered_canvases/) en utilisant le [`Canvas Entry Properties Object`]({{site.baseurl}}/api/objects_filters/canvas_entry_properties_object/). <br><br>Les utilisateurs entreront dans votre Canvas et commenceront à recevoir des messages une fois qu'ils auront été ajoutés en utilisant le [`/canvas/trigger/send`]({{site.baseurl}}/api/endpoints/messaging/send_messages/post_send_triggered_canvases/) endpoint via l'API.
 
-    ![Canvas API-Triggered Delivery]({% image_buster /assets/img_archive/Canvas_API_Triggered_Delivery.png %})
+    ![Canvas API-Triggered Delivery]({% image_buster /assets/img_archive/Canvas_API_Triggered_Delivery. ng %})
     
-    API-Triggered Delivery Endpoints:
+    API Triggered Delivery Endpoints:
     - [POST: Send Canvas Messages via API-Triggered Delivery]({{site.baseurl}}/api/endpoints/messaging/send_messages/post_send_triggered_canvases/)
     - [POST: Schedule API-Triggered Canvases]({{site.baseurl}}/api/endpoints/messaging/schedule_messages/post_schedule_triggered_canvases/)
     - [POST: Update Scheduled API-Triggered Canvases]({{site.baseurl}}/api/endpoints/messaging/schedule_messages/post_update_scheduled_triggered_canvases/)
@@ -113,175 +113,175 @@ After you choose which you'll use, adjust those settings appropriately, and move
 <a id="important-edge-case"></a>
 
 {% alert important %}
-Should the window of re-eligibility be less than the maximum duration of the Canvas, a user will be allowed to re-enter and receive more than one step's messages. In the edge case where a user's re-entry reaches the same step as its previous entry, Braze will deduplicate that step's messages. <br><br>In the event where a user re-enters the Canvas, reaches the same step as their previous entry, and is eligible for an in-app message for each entry, the user will get the message twice (depending on in-app message priority) as long as they re-open a session two times.
+Si la fenêtre de rééligibilité est inférieure à la durée maximale du Canvas, un utilisateur sera autorisé à ré-entrer et à recevoir plus d'une étape de message. Dans le cas où la réentrée d'un utilisateur atteint la même étape que son entrée précédente, Braze dédoublera les messages de cette étape. <br><br>Dans le cas où un utilisateur réentre dans le Canvas, atteint la même étape que leur entrée précédente, et est éligible pour un message dans l'application pour chaque entrée, l'utilisateur obtiendra le message deux fois (selon la priorité du message dans l'application) tant qu'il réouvrira une session deux fois.
 {% endalert %}
 
-### Step 2c: Set your target entry audience
+### Étape 2c: Définissez votre audience d'entrée cible
 
-You can set the target audience for your Canvas on the **Entry Audience** step. Only the users who match your defined criteria can enter the journey.
+Vous pouvez définir le public cible de votre Canvas à l'étape **Entrée Public**. Seuls les utilisateurs qui correspondent à vos critères définis peuvent entrer le trajet.
 
-!\[Canvas Target Audience\]\[54\]
+!\[Public cible Canvas\]\[54\]
 
-For example, if you want to target new users, you can limit a particular journey to users who first used your app less than 3 weeks ago. You can also control settings such as whether messages should be sent to users who are subscribed or opted-in to your notifications.
+Par exemple, si vous voulez cibler de nouveaux utilisateurs, vous pouvez limiter un voyage particulier aux utilisateurs qui ont utilisé votre application pour la première fois il y a moins de 3 semaines. Vous pouvez également contrôler les paramètres tels que si les messages doivent être envoyés aux utilisateurs qui sont abonnés ou qui ont opté pour vos notifications.
 
 {% alert warning %}
-Avoid configuring an action-based campaign or Canvas with the same trigger as the audience filter (i.e., a changed attribute or performed a custom event). A race condition may occur in which the user is not in the audience at the time they perform the trigger event, which means they won't receive the campaign or enter the Canvas.
+Évitez de configurer une campagne basée sur l'action ou Canvas avec le même déclencheur que le filtre d'audience (c'est-à-dire un attribut modifié ou effectué un événement personnalisé). Une condition de course peut se produire dans laquelle l'utilisateur n'est pas dans le public au moment où il effectue l'événement de déclenchement ce qui signifie qu'ils ne recevront pas la campagne ou n'entreront pas dans le Canvas.
 {% endalert %}
 
-### Step 2d: Select your send settings
+### Étape 2: Sélectionnez vos paramètres d'envoi
 
-Click **Send Settings** to select your Subscription Settings, turn on rate limiting, and to enable Quiet Hours.
+Cliquez sur **Envoyer les paramètres** pour sélectionner vos paramètres d'abonnement, activer la limitation du taux et pour activer les heures silencieuses.
 
-!\[Send Settings\]\[55\]
+!\[Paramètres d'envoi\]\[55\]
 
-By turning on [Rate Limiting][6b] or [Frequency Capping][6c], you can ease the marketing pressure placed on your users and ensure you aren't over messaging them.
+En activant [la limitation de débit][6b] ou [le plafonnement de fréquence][6c], vous pouvez alléger la pression de marketing exercée sur vos utilisateurs et vous assurer que vous n'avez pas fini de les envoyer.
 
 {% alert note %}
-Visit your [Global Message Settings](https://dashboard-01.braze.com/engagement/global_message_settings/) page in your Braze account to manage your Frequency Capping rules.
+Visitez votre page de [Paramètres globaux de messages](https://dashboard-01.braze.com/engagement/global_message_settings/) dans votre compte Braze pour gérer vos règles de plafonnement des fréquences.
 {% endalert %}
 
-For Canvases targeting email and push channels, you may want to limit your Canvas so that only the users who are explicitly opted in will receive the message (excluding subscribed or unsubscribed users). For example, say you have three users of different opt-in status:
+Pour les Canvases ciblant les canaux de messagerie et de push, vous pouvez vouloir limiter votre Canvas de sorte que seuls les utilisateurs qui sont explicitement inscrits recevront le message (excluant les utilisateurs abonnés ou désabonnés). Par exemple, dites que vous avez trois utilisateurs de différents statuts d'opt-in :
 
-- **User A** is subscribed to email and is push enabled. This user doesn't receive the email but will receive the push.
-- **User B** is opted-in to email but is not push enabled. This user will receive the email but doesn't receive the push.
-- **User C** is opted-in to email and is push enabled. This user will receive both the email and the push.
+- **L'utilisateur A** est abonné à l'e-mail et est push activé. Cet utilisateur ne reçoit pas l'email mais recevra le push.
+- **L'utilisateur B** est opté pour l'email mais n'est pas poussé activé. Cet utilisateur recevra l'email mais ne recevra pas le push.
+- **L'utilisateur C** est opté pour l'email et est push activé. Cet utilisateur recevra à la fois l'email et le push.
 
-To do so, set the **Subscription Settings** to send this Canvas to "opted-in users only". This option will ensure that only opted-in users will receive your email, and Braze will only send your push to users who are push enabled by default.
+Pour ce faire, définissez les **paramètres d'abonnement** pour envoyer ce Canvas à "utilisateurs optés seulement". Cette option vous assurera que seuls les utilisateurs optés recevront votre courriel. et Braze enverra uniquement votre push aux utilisateurs qui sont activés par défaut.
 
 {% alert important %}
-With this configuration, don't include any filters in the **Target Users** step that limit the audience to a single channel (e.g., `Push Enabled = True` or `Email Subscription = Opted-In`).
+Avec cette configuration, n'incluez aucun filtre dans l'étape **Utilisateurs cibles** qui limitent l'audience à un seul canal (e. ., `Push Activé = True` ou `Abonnement par courriel = Opted-In`).
 {% endalert %}
 
-If desired, specify Quiet Hours (the time during which your messages will not send) for your Canvas. Check **Enable Quiet Hours** in your __Send Settings__. Then, select your Quiet Hours in your user's local time and what action will follow if the message triggers inside of those Quiet Hours.
+Si vous le désirez, indiquez les heures silencieuses (l'heure pendant laquelle vos messages ne seront pas envoyés) pour votre Canvas. Cochez **Activer les heures silencieuses** dans vos __paramètres d'envoi__. Ensuite, sélectionnez vos heures silencieuses dans l'heure locale de votre utilisateur et quelle action suivra si le message se déclenche à l'intérieur de ces heures silencieuses.
 
-!\[Quiet Hours\]\[50\]
+!\[Heures silencieures\]\[50\]
 
-## Step 3: Build your Canvas
+## Étape 3: Construisez votre Canevas
 
-### Adding a variant
+### Ajout d'une variante
 
 !\[Canvas Add Variant\]\[11\]{: style="float:right;max-width:40%;margin-left:15px;"}
 
-Click **Add Variant** and select the option to add a new variant to your Canvas. Variants represent a journey that your users will take, and can contain multiple steps and branches.
+Cliquez sur **Ajouter une variante** et sélectionnez l'option pour ajouter une nouvelle variante à votre Canvas. Les variantes représentent un voyage que vos utilisateurs prendront, et peuvent contenir plusieurs étapes et branches.
 
-You can add additional variants by pressing the <i class="fas fa-plus-circle"></i> plus button. When you add new variants, you'll be able to adjust how your users will be distributed between them so that you can cross-compare and analyze the efficacy of different engagement strategies.
+Vous pouvez ajouter des variantes supplémentaires en appuyant sur le bouton <i class="fas fa-plus-circle"></i> plus . Lorsque vous ajoutez de nouvelles variantes, vous serez en mesure d'ajuster la façon dont vos utilisateurs seront répartis entre eux afin que vous puissiez comparer et analyser l'efficacité des différentes stratégies d'engagement.
 
-!\[Canvas Multiple Variants\]\[12\]
+!\[Variantes multiples de Canvas \]\[12\]
 
 {% alert tip %}
-By default, Canvas variant assignment is locked in when users enter the Canvas, meaning that if a user first enters a variant, that will be their variant every time they re-enter the Canvas. However, there are ways to circumvent this behavior. <br><br>To do so, you can create a random number generator using Liquid, run it at the beginning of each user's Canvas entry, store the value as a custom attribute, and then use that attribute to randomly divide users.
+Par défaut, l'affectation des variantes de Canvas est verrouillée lorsque les utilisateurs entrent dans le Canvas, ce qui signifie que si un utilisateur entre pour la première fois dans une variante, ce sera sa variante à chaque fois qu'il entrera à nouveau dans le Canvas. Cependant, il y a des moyens de contourner ce comportement. <br><br>Pour ce faire, vous pouvez créer un générateur de nombres aléatoires en utilisant Liquid, exécutez-le au début de l'entrée Canvas de chaque utilisateur, stocker la valeur comme un attribut personnalisé, puis utiliser cet attribut pour diviser aléatoirement les utilisateurs.
 
 {% details Expand for steps %}
 
-1. Create a custom attribute to store your random number. Name it something easy to locate, like "lottery_number" or "random_assignment". You can create the attribute either [in your dashboard]({{site.baseurl}}/user_guide/administrative/app_settings/manage_app_group/custom_event_and_attribute_management/), or through API calls to our [User Track]({{site.baseurl}}/api/endpoints/user_data/post_user_track/) endpoint.<br><br>
-2. Create a webhook campaign at the beginning of your Canvas. This campaign will be the medium in which you create your random number, and store it as a custom attribute. Refer to [Creating a Webhook]({{site.baseurl}}/user_guide/message_building_by_channel/webhooks/creating_a_webhook/#step-1-set-up-a-webhook) for more. Set the URL to our User Track endpoint.<br><br>
-3. Create the random number generator. You can do so with the code [outlined here](https://www.131-studio.com/blogs/shopify-conversion/generate-random-numbers-using-liquid-shopify), which takes advantage of each user's unique time of entry to create a random number. Set the resulting number as a Liquid variable within your webhook campaign.<br><br>
-4. Format the `users/track` call on your webhook campaign so that it sets the custom attribute you created in step 1 to the random number you've generated on your current user's profile. When this step runs, you will have successfully made a random number that changes each time a user enters your campaign.<br><br>
-5. Adjust the branches of your Canvas so that, instead of being divided by randomly chosen variants, they are divided based on audience rules. In the audience rules of each branch, set the audience filter according to your custom attribute. <br><br>For example, one branch may have "lottery_number is less than 3" as an audience filter, while another branch may have "lottery_number is more than 3 and less than 6" as an audience filter.
+1. Créez un attribut personnalisé pour stocker votre nombre aléatoire. Nommez-le quelque chose de facile à localiser, comme "lottery_number" ou "random_assignment". Vous pouvez créer l'attribut soit [dans votre tableau de bord]({{site.baseurl}}/user_guide/administrative/app_settings/manage_app_group/custom_event_and_attribute_management/), soit via les appels API vers notre point de terminaison [User Track]({{site.baseurl}}/api/endpoints/user_data/post_user_track/).<br><br>
+2. Créez une campagne de webhook au début de votre Canvas. Cette campagne sera le média dans lequel vous créerez votre nombre aléatoire, et la conserverez comme un attribut personnalisé. Reportez-vous à [Créer un Webhook]({{site.baseurl}}/user_guide/message_building_by_channel/webhooks/creating_a_webhook/#step-1-set-up-a-webhook) pour en savoir plus. Définissez l'URL à notre point de terminaison de suivi utilisateur.<br><br>
+3. Créer le générateur de nombres aléatoires. Vous pouvez le faire avec le code [décrit ici](https://www.131-studio.com/blogs/shopify-conversion/generate-random-numbers-using-liquid-shopify), qui tire parti de l'heure d'entrée unique de chaque utilisateur pour créer un nombre aléatoire. Définissez le numéro résultant comme une variable Liquid dans votre campagne de webhook.<br><br>
+4. Formatez l'appel `utilisateurs/piste` dans votre campagne de webhook afin qu'il définisse l'attribut personnalisé que vous avez créé à l'étape 1 sur le nombre aléatoire que vous avez généré sur le profil de l'utilisateur actuel. Lorsque cette étape s'exécute, vous aurez fait un nombre aléatoire qui change chaque fois qu'un utilisateur entre dans votre campagne.<br><br>
+5. Ajustez les branches de votre Canevas pour qu'au lieu d'être divisés par des variantes choisies au hasard, elles soient divisées selon les règles du public. Dans les règles d'audience de chaque branche, définissez le filtre d'audience selon votre attribut personnalisé. <br><br>Par exemple, une branche peut avoir "lottery_number est inférieur à 3" en tant que filtre d'audience, alors qu'une autre branche peut avoir "lottery_number est plus de 3 et moins de 6" comme filtre d'audience.
 
 {% enddetails %}
 {% endalert %}
 
-### Editing a step
+### Modification d'une étape
 
-Click anywhere on a Step, and Braze will open the Step editing interface. Steps can be configured to send messages after either a fixed delay (maximum of 31 days) or when a user performs a particular action. For example, you can use Canvas to configure a Day 1, Day 3, Day 7 onboarding campaign with time delays between messages:
+Cliquez n'importe où sur une étape, et Braze ouvrira l'interface d'édition des étapes. Les étapes peuvent être configurées pour envoyer des messages après un délai fixe (maximum de 31 jours) ou lorsqu'un utilisateur effectue une action particulière. Par exemple, vous pouvez utiliser Canvas pour configurer une campagne d'intégration de Day 1, Day 3, Day 7 avec des délais entre les messages :
 
 !\[Canvas One Day\]\[13\]
 
-Or you can set a group of messages to be sent after your users take a particular action, with a configurable window, delay, and [exception events][56]:
+Ou vous pouvez définir un groupe de messages à envoyer après que vos utilisateurs aient fait une action particulière, avec une fenêtre configurable, un délai et des [événements d'exception][56]:
 
 !\[Canvas Exception Events\]\[14\]
 
-You can also apply **Filters** to each Step of a Canvas. Use this to add additional control flow logic, such as dropping users out of a journey when they're not likely to need additional engagement encouragement:
+Vous pouvez également appliquer **Filtres** à chaque étape d'un canevas. Utilisez ceci pour ajouter une logique de flux de contrôle supplémentaire, comme retirer les utilisateurs d'un voyage lorsqu'ils n'ont pas besoin d'encouragement d'engagement supplémentaire :
 
-!\[Canvas Additional Engagement\]\[15\]
+!\[Canvas Engagement\]\[15\]
 
 {% alert note %}
-By default, Filters and Segments for **Full Steps** in Canvas are checked at send time. However, for [Decision Split Steps]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/decision_split/), audience evaluation occurs right after receiving the previous step, or after a delay (if you have configured one).
+Par défaut, les filtres et les segments pour les **étapes complètes** dans Canvas sont vérifiés au moment de l'envoi. Cependant, pour [pas de séparation de décision]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/decision_split/), l'évaluation du public se produit juste après avoir reçu l'étape précédente, ou après un délai (si vous en avez configuré une).
 {% endalert %}
 
-#### Messages in Canvas
+#### Messages dans Canvas
 
-Edit the Messages in a Canvas Step to control messages that a particular Step will send. Canvas can send Email, Mobile & Web Push messages, and Webhooks to integrate with other systems.
+Éditez les messages dans une Étape de Canvas pour contrôler les messages qu'une étape particulière enverra. Canvas peut envoyer des messages Email, Mobile & Web Push et Webhooks pour les intégrer à d'autres systèmes.
 
-Similar to campaign messages, you may use certain Liquid templating. Refer to the tabs below for limitations.
+Similaire aux messages de campagne, vous pouvez utiliser certains modèles de Liquid. Reportez-vous aux onglets ci-dessous pour connaître les limitations.
 
 !\[Canvas Message Edit\]\[16\]
 
-Select your desired **Advancement Behavior**. Learn more about [advancing your users through Canvas steps]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/advancement/).
+Sélectionnez votre **comportement d'avancement** désiré. En savoir plus sur [l'avancement de vos utilisateurs à travers les étapes de Canvas]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/advancement/).
 
-!\[Canvas Advancement Behavior\]\[20\]
+!\[Comportement de l'avancement de Canvas\]\[20\]
 
-Click **Done** once you've finished configuring your Step.
+Cliquez sur **Terminé** une fois que vous avez terminé la configuration de votre étape.
 
 {% tabs local %}
 {% tab Canvas Entry Properties %}
-Canvas Entry Properties are the properties mapped by you when triggering or scheduling a Canvas via the API.
+Les propriétés d'entrée de Canvas sont les propriétés que vous avez définies lorsque vous déclenchez ou planifiez un Canvas via l'API.
 {% raw %}
-- For example, a request with `\"canvas_entry_properties\" : {\"product_name\" : \"shoes\", \"product_price\" : 79.99}` could add the word \"shoes\" to a message by adding the Liquid `{{canvas_entry_properties.${product_name}}}`.
+- Par exemple, une requête avec `\"canvas_entry_properties\" : {\"product_name\" : \"shoes\", \"product_price\" : 79. 9}` pourrait ajouter le mot \"chaussures\" à un message en ajoutant le liquide `{{canvas_entry_properties.${product_name}}}`.
 {% endraw %}
 
-__Canvas Entry Properties can be referenced in the first step of a Canvas - but only the first step__!
+__Les Propriétés de l'entrée du canevas peuvent être référencées dans la première étape d'une toile - or seulement le premier pas__!
 
-For more information on the Canvas Entry Properties Object, check out our [documentation]({{site.baseurl}}/api/objects_filters/canvas_entry_properties_object/).
+Pour plus d'informations sur l'objet Propriétés de l'entrée de Canvas , consultez notre [documentation]({{site.baseurl}}/api/objects_filters/canvas_entry_properties_object/).
 {% endtab %}
 
 {% tab Custom Event Properties %}
-Custom event properties are the properties set by you on custom events and purchases, used mainly in action-based delivery campaigns. These properties are ephemeral and can only be used at the time when they happen. <br><br>Event properties don’t persist, so if you are scheduling a Canvas step rather than using action-based delivery, you wouldn’t be able to use an event property (as we don’t store that data). You can't reference the event property for an event that’s already happened.
+Les propriétés d'événements personnalisés sont les propriétés que vous avez définies sur des événements et des achats personnalisés, utilisés principalement dans des campagnes de livraison basées sur des actions. Ces propriétés sont éphémères et ne peuvent être utilisées qu'au moment où elles se produisent. <br><br>Les propriétés événement ne persistent pas, donc si vous planifiez une étape de Canvas plutôt que d'utiliser une distribution basée sur des actions, vous ne seriez pas en mesure d’utiliser une propriété événementielle (comme nous ne stockons pas ces données). Vous ne pouvez pas référencer la propriété événement pour un événement qui s'est déjà produit.
 
-__Custom event properties can be referenced in the first step of a Canvas - but only the first step__!
+__Les propriétés d'événements personnalisés peuvent être référencées dans la première étape d'une toile - or seulement la première étape__!
 
-For more information on custom event properties, check out our [documentation]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events/#custom-event-properties).
+Pour plus d'informations sur les propriétés d'événement personnalisées, consultez notre [documentation]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events/#custom-event-properties).
 
 {% endtab %}
 {% endtabs %}
 
 {% alert tip %}
-Did you know you can include Canvas step names in your messages and link templates?<br> Use the `campaign.${name}` Liquid tag in Canvas to display the current Canvas step name.
+Saviez-vous que vous pouvez inclure les noms des étapes de Canvas dans vos messages et modèles de liens ?<br> Utilisez la campagne `.${name}` Balise Liquid dans Canvas pour afficher le nom de l'étape actuelle de Canvas .
 {% endalert %}
 
-### Adding more steps
+### Ajout de nouvelles étapes
 
-Add more Steps by pressing the <i class="fas fa-plus-circle"></i> plus button:
+Ajouter plus d'étapes en appuyant sur le bouton <i class="fas fa-plus-circle"></i> plus :
 
 !\[Canvas More Step\]\[17\]{: style="max-width:75%;"}
 
-### Editing connections
+### Modification des connexions
 
-To move a connection between steps, click the arrow connecting the two steps, and select a different step. To break the connection, click the arrow and click **Cancel Connection** in the footer of the Canvas composer.
+Pour déplacer une connexion entre les étapes, cliquez sur la flèche qui relie les deux étapes, et sélectionnez une étape différente. Pour rompre la connexion, cliquez sur la flèche et cliquez sur **Annuler la connexion** dans le pied de page du compositeur de Canvas .
 
 !\[Move or break a connection between two Canvas steps\]\[2\]
 
-## Step 4: Use multivariate testing using Canvas
+## Étape 4 : Utilisez des tests multivariés avec Canvas
 
-You can add a Control Group to your Canvas by clicking on the <i class="fas fa-plus-circle"></i> plus button to add a new variant.
+Vous pouvez ajouter un groupe de contrôle à votre toile en cliquant sur le bouton <i class="fas fa-plus-circle"></i> plus pour ajouter une nouvelle variante.
 
-Braze will track the Conversions for users who are placed into the Control Group, although they will not receive any messages. To preserve an accurate test, we will track the number of conversions for your variants and the Control Group for exactly the same amount of time, as shown on the Conversion Event selection screen.
+Braze suivra les conversions pour les utilisateurs qui sont placés dans le groupe de contrôle, bien qu'ils ne recevront aucun message. Pour préserver un test précis, nous suivrons le nombre de conversions pour vos variantes et le groupe de contrôle pour exactement le même temps comme indiqué sur l'écran de sélection de l'événement de conversion.
 
-You can adjust the distribution between your messages by double-clicking the **Variant Name** headers.
+Vous pouvez ajuster la distribution entre vos messages en double-cliquant sur les entêtes de **Variant Name**.
 
 !\[Canvas Multivariate\]\[18\]
 
-### Intelligent Selection for Canvas
+### Sélection intelligente pour la toile
 
-Intelligent Selection capabilities are now available within multivariate Canvases. Similar to the [Intelligent Selection][18a] feature for multivariate Campaigns, Intelligent Selection for Canvas analyzes the performance of each Canvas variant and adjusts the percentage of users being funneled through each variant. This distribution is based off each variant's performance metrics to maximize the total expected number of conversions.
+Des fonctions de sélection intelligente sont maintenant disponibles dans les vasques multivariés. Similaire à la fonctionnalité [de sélection intelligente][18a] pour les campagnes multivariées, La Sélection Intelligente pour Canvas analyse la performance de chaque variante de Canvas et ajuste le pourcentage d'utilisateurs qui sont mis en œuvre par chaque variante. Cette distribution est basée sur les paramètres de performance de chaque variante pour maximiser le nombre total prévu de conversions.
 
-Keep in mind that multivariate Canvases allow you to test more than copy, but timing and channels as well. Through Intelligent Selection, you can test Canvases more efficiently and have confidence that your users will be sent on the best possible Canvas journey.
+Gardez à l'esprit que les Canvases multivariées vous permettent de tester plus que la copie, mais aussi le timing et les canaux. Grâce à Intelligent Selection, vous pouvez tester vos Canvases plus efficacement et vous assurer que vos utilisateurs seront envoyés dans le meilleur voyage possible sur Canvas .
 
 !\[Intelligent Selection\]\[18b\]
 
-Intelligent Selection for Canvas optimizes your Canvas's results by making gradual real-time adjustments to the distribution of users sorted into each variant. When the statistical algorithm determines a decisive winner among your variants it will rule out the underperforming variants and slot all future eligible recipients of the Canvas into the winning variants.
+La sélection intelligente de Canvas optimise les résultats de votre Canvas en effectuant des ajustements en temps réel progressifs à la distribution des utilisateurs triés dans chaque variante. Lorsque l'algorithme statistique détermine un gagnant décisif parmi vos variantes, il exclut les variantes sous-performantes et place tous les futurs bénéficiaires admissibles du Canvas dans les variantes gagnantes.
 
-For this reason, Intelligent Selection works best on Canvases that have new users entering frequently.
+Pour cette raison, Intelligent Selection fonctionne mieux sur les Canevas qui ont de nouveaux utilisateurs qui entrent fréquemment.
 
-## Step 5: Save and launch your Canvas
+## Étape 5 : Sauvegardez et lancez votre Canvas
 
-Once you're done, press **Launch Canvas** at the bottom right to save and launch your Canvas. You can also save your Canvas as a draft if you need to come back to it.
+Une fois que vous avez terminé, appuyez sur **Lancez Canvas** en bas à droite pour enregistrer et lancer votre Canvas. Vous pouvez également enregistrer votre Canevas comme brouillon si vous avez besoin d'y revenir.
 
-Once you've launched your Canvas, you'll be able to view analytics for your journey as they come in on the **Canvas Details** page:
+Une fois que vous aurez lancé votre Canvas, vous serez en mesure de voir les analyses de votre voyage au fur et à mesure qu'elles arrivent sur la page **Détails sur Canvas**:
 
-!\[Canvas Analytics\]\[19\]
-[1]:{% image_buster /assets/img_archive/canvas_dropdown.png %} [2]: {% image_buster /assets/img_archive/canvas_connection_edit.gif %} [11]:{% image_buster /assets/img_archive/canvas_add_variant.gif %} [12]:{% image_buster /assets/img_archive/Canvas_Multiple_Variants.png %} [13]:{% image_buster /assets/img_archive/Canvas_One_Day.png %} [14]:{% image_buster /assets/img_archive/Canvas_Exception_Events.png %} [15]:{% image_buster /assets/img_archive/Canvas_Additional_Engagement.png %} [16]:{% image_buster /assets/img_archive/Canvas_Message_Edit.png %} [17]:{% image_buster /assets/img_archive/Canvas_More_Step.png %} [18]:{% image_buster /assets/img_archive/Canvas_Multivariate.png %} [18b]: {% image_buster /assets/img_archive/canvas_intelligent_selection.png %} [19]:{% image_buster /assets/img_archive/Canvas_Analytics.png %} [20]:{% image_buster /assets/img_archive/Canvas_Advancement_Behavior.png %} [50]: {% image_buster /assets/img/quiet_hours.png %} [51]: {% image_buster /assets/img/Basics1.gif %} [52]: {% image_buster /assets/img/Conversions-canvas-1.gif %} [53]: {% image_buster /assets/img/entry-schedule-canvas-1.gif %} [54]: {% image_buster /assets/img/entry-audience-canvas-1.gif %} [55]: {% image_buster /assets/img/canvas-send-settings-1.gif %}
+!\[Analyses de Canvas\]\[19\]
+\[1]:{% image_buster /assets/img_archive/canvas_dropdown.png %} [2]: {% image_buster /assets/img_archive/canvas_connection_edit.gif %} [11]:{% image_buster /assets/img_archive/canvas_add_variant. if %} [12]:{% image_buster /assets/img_archive/Canvas_Multiple_Variants.png %} [13]:{% image_buster /assets/img_archive/Canvas_One_Day. ng %} [14]:{% image_buster /assets/img_archive/Canvas_Exception_Events.png %} [15]:{% image_buster /assets/img_archive/Canvas_Additional_Engagement. ng %} [16]:{% image_buster /assets/img_archive/Canvas_Message_Edit.png %} [17]:{% image_buster /assets/img_archive/Canvas_More_Step. ng %} [18]:{% image_buster /assets/img_archive/Canvas_Multivariate.png %} [18b]: {% image_buster /assets/img_archive/canvas_intelligent_selection. ng %} [19\]\[19\] :{% image_buster /assets/img_archive/Canvas_Analytics.png %} \[20\]\[20\] :{% image_buster /assets/img_archive/Canvas_Advancement_Behavior.png %} [50]: {% image_buster /assets/img/quiet_hours. ng %} [51]: {% image_buster /assets/img/Basics1.gif %} [52]: {% image_buster /assets/img/Conversions-canvas-1.gif %} [53]: {% image_buster /assets/img/entry-schedule-canvas-1. if %} [54]: {% image_buster /assets/img/entry-audience-canvas-1.gif %} [55]: {% image_buster /assets/img/canvas-send-settings-1.gif %}
 
 [6b]: {{site.baseurl}}/user_guide/engagement_tools/campaigns/testing_and_more/rate-limiting/#rate-limiting
 [6c]: {{site.baseurl}}/user_guide/engagement_tools/campaigns/testing_and_more/rate-limiting/#frequency-capping
