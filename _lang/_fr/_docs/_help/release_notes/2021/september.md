@@ -1,40 +1,40 @@
 ---
-nav_title: September
+nav_title: Septembre
 page_order: 4
-noindex: true
-page_type: update
-description: "This article contains release notes for September 2021."
+noindex: vrai
+page_type: Mettre à jour
+description: "Cet article contient des notes de mise à jour pour septembre 2021."
 ---
 
-# September 2021
+# Septembre 2021
 
-## Google Audience Sync
+## Synchronisation Google Audience
 
-The Braze [Audience Sync to Google]({{site.baseurl}}/partners/canvas_steps/google_audience_sync/) integration enables brands to extend the reach of their cross-channel customer journeys to Google Search, Google Shopping, Gmail, YouTube, and Google Display. Using your first-party customer data, you can securely deliver ads based upon dynamic behavioral triggers, segmentation, and more. Any criteria you'd typically use to trigger a message (e.g., push, email, SMS, etc.) as part of a Braze Canvas can be used to trigger an ad to that user via Google's Customer Match.
+L'intégration de Braze [Synchronisation de l'audience vers Google]({{site.baseurl}}/partners/canvas_steps/google_audience_sync/) permet aux marques d'étendre la portée de leurs trajets clients inter-canaux à Google Search, Google Shopping, Gmail, YouTube et Google Display. En utilisant les données de vos clients de première partie, vous pouvez livrer des publicités en toute sécurité en fonction des déclencheurs de comportement, de la segmentation et plus encore. Tous les critères que vous utilisez généralement pour déclencher un message (par exemple, push, email, SMS, etc.). dans le cadre d'un Braze Canvas peut être utilisé pour déclencher une publicité pour cet utilisateur via Google Customer Match.
 
-## Best practice iOS SDK integration guide
+## Guide d'intégration des meilleures pratiques pour iOS SDK
 
-This optional [iOS integration SDK guide]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/initial_sdk_setup/ios_sdk_integration/) takes you on a step-by-step journey on setup best practices when first integrating the iOS SDK and its core components into your application. This guide will help you build a `BrazeManager.swift` helper file that will decouple any dependencies on the Braze iOS SDK from the rest of your production code, resulting in one `import AppboyUI` in your entire application. This approach limits issues that arise from excessive SDK imports, making it easier to track, debug, and alter code.
+Ce guide SDK facultatif d'intégration [iOS]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/initial_sdk_setup/ios_sdk_integration/) vous emmène étape par étape dans la mise en place des meilleures pratiques lors de l'intégration du SDK iOS et de ses composants principaux dans votre application. Ce guide vous aidera à construire un `Gestionnaire de Brase. wift` fichier d'aide qui découplera toutes les dépendances du Braze iOS SDK du reste de votre code de production. ce qui a entraîné une `importation AppboyUI` dans toute votre application. Cette approche limite les problèmes liés aux importations excessives de SDK, facilitant le suivi, le débogage et le changement de code.
 
-## Predictive Purchases
+## Achats prédictifs
 
-Predictive Purchases give marketers a powerful tool for identifying and messaging users based on their likelihood to make a purchase. When you create a Purchase Prediction, Braze trains a machine learning model using [gradient boosted decision trees](https://en.wikipedia.org/wiki/Gradient_boosting) to learn from previous purchase activity and predict future purchase activity. Visit our [Predicitve Purchases]({{site.baseurl}}/user_guide/predictive_suite/predictive_purchases/) doc to learn more.
+Les achats prédictifs offrent aux marketeurs un outil puissant pour identifier et envoyer des messages en fonction de leur probabilité de faire un achat. Lorsque vous créez une prévision d'achat, Braze forme un modèle d'apprentissage automatique à l'aide de [arbres de décision boostés par gradient](https://en.wikipedia.org/wiki/Gradient_boosting) pour apprendre de l'activité d'achat précédente et prédire l'activité d'achat future. Visitez notre documentation [Achats prédicitvés]({{site.baseurl}}/user_guide/predictive_suite/predictive_purchases/) pour en savoir plus.
 
-## Drag & Drop Editor
+## Editeur Glisser & Déposer
 
-With Braze Email, you can create completely custom and personalized email messages in either Campaigns or Canvas using our new Drag & Drop editing experience. Users can now drag editor blocks into their emails, allowing more intuitive customization. To learn how to get started with the Drag & Drop Editor, visit our [documentation]({{site.baseurl}}/user_guide/message_building_by_channel/email/drag_and_drop/overview/).
+Avec Braze Email, vous pouvez créer des messages électroniques personnalisés et personnalisés dans les campagnes ou Canvas en utilisant notre nouvelle expérience d'édition par glisser & Déposer. Les utilisateurs peuvent maintenant faire glisser des blocs d'éditeur dans leurs e-mails, permettant une personnalisation plus intuitive. Pour savoir comment commencer avec l'éditeur Drag & Drop, visitez notre [documentation]({{site.baseurl}}/user_guide/message_building_by_channel/email/drag_and_drop/overview/).
 
-## User alias import
+## Import des alias de l'utilisateur
 
-To target users who don't have an `external_id`, you can import a list of users with user aliases. An alias serves as an alternative unique user identifier. It can be helpful if you are trying to market to anonymous users who haven't signed up or made an account with your app. Visit our [documentation]({{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/user_import/#import-with-user-alias) to learn more.
+Pour cibler les utilisateurs qui n'ont pas d' `external_id`, vous pouvez importer une liste d'utilisateurs avec des alias d'utilisateur. Un alias sert d'identifiant d'utilisateur unique alternatif. Cela peut être utile si vous essayez de commercialiser des utilisateurs anonymes qui n'ont pas créé de compte avec votre application. Visitez notre [documentation]({{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/user_import/#import-with-user-alias) pour en savoir plus.
 
-## iOS 15 upgrade guide
+## Guide de mise à jour iOS 15
 
-This [guide]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/ios_15/) outlines changes introduced in iOS 15 (WWDC21) and the required upgrade steps for your Braze iOS SDK integration.
+Ce [guide]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/ios_15/) décrit les changements introduits dans iOS 15 (WWDC21) et les étapes nécessaires à la mise à jour de votre intégration dans Braze iOS SDK.
 
-## Android 12 upgrade guide
+## Guide de mise à jour d'Android 12
 
-This [guide]({{site.baseurl}}/developer_guide/platform_integration_guides/android/android_12/) describes relevant changes introduced in Android 12 (2021) and the required upgrade steps for your Braze Android SDK integration.
+Ce [guide]({{site.baseurl}}/developer_guide/platform_integration_guides/android/android_12/) décrit les changements pertinents introduits dans Android 12 (2021) et les étapes de mise à jour requises pour votre intégration à Braze Android SDK.
 
 ## A2P 10DLC
 
