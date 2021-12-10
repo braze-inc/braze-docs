@@ -1,41 +1,41 @@
 ---
-nav_title: Utilizing Badge Count
-article_title: Utilizing Badge Count
+nav_title: Utiliser le nombre de badges
+article_title: Utiliser le nombre de badges
 page_order: 8
-page_type: reference
-description: "This article covers using the iOS badge count to re-engage users who didn't notice a push, or who have disabled foreground push notifications."
+page_type: Référence
+description: "Cet article couvre l'utilisation du nombre de badges iOS pour réengager les utilisateurs qui n'ont pas remarqué de push, ou qui ont désactivé les notifications push en premier plan."
 platform: iOS
 channel:
-  - push
-  - in-app messages
-  - news feed
+  - Pousser
+  - messages intégrés à l'application
+  - fil d'actualité
 ---
 
-# Utilizing badge count
+# Utilisation du nombre de badges
 
-The iOS badge count displays the number of unread notifications within your application, taking the form of a red circle in the upper-right hand corner of the app icon. In recent years, badging has come to be an effective means for re-engaging app users.
+Le nombre de badges iOS affiche le nombre de notifications non lues dans votre application, en prenant la forme d'un cercle rouge dans le coin supérieur droit de l'icône de l'application. Ces dernières années, le badging est devenu un moyen efficace de réengager les utilisateurs de l'application.
 
-The badge count can be used to re-engage your users who did not notice a push, or who have disabled foreground push notifications. Similarly, it can be used to notify your users about unviewed messages such as News Feed changes or in-app updates.
+Le nombre de badges peut être utilisé pour réengager vos utilisateurs qui n'ont pas remarqué de push, ou qui ont désactivé les notifications push en premier plan. De même, il peut être utilisé pour informer vos utilisateurs des messages non consultés tels que les changements de flux d'actualités ou les mises à jour dans l'application.
 
-## Badge count with Braze
+## Nombre de badges avec Braze
 
-You can specify the desired badge count when you compose a push notification through Braze's dashboard. This can be set to a user attribute with Braze's personalized messaging, allowing endlessly customizable logic. If you wish to send a silent push that updates the badge count without disturbing the user, add the "Content-Available" flag to your push and leave its message contents empty.
+Vous pouvez spécifier le nombre de badges désirés lorsque vous composez une notification push via le tableau de bord de Brase. Cela peut être réglé sur un attribut utilisateur avec la messagerie personnalisée de Brase, permettant une logique infiniment personnalisable. Si vous souhaitez envoyer un push silencieux qui met à jour le nombre de badges sans déranger l'utilisateur, ajouter le drapeau "Content-Available" à votre push et laisser son contenu vide.
 
-### Removing the badge count
+### Suppression du nombre de badges
 
-Set the badge count to 0 or "" to remove the badge count from the app's icon. Braze will also automatically clear the badge when a push notification is received while the app is in the foreground.
+Définissez le nombre de badges à 0 ou "" pour supprimer le nombre de badges de l'icône de l'application. Braze effacera également automatiquement le badge quand une notification push est reçue lorsque l'application est au premier plan.
 
-## Best practices
+## Meilleures pratiques
 
-In order to optimize the re-engagement power of badging, it is crucial that you configure your badge settings in a way that most simplifies the user's experience.
+Afin d'optimiser la puissance de réengagement du badging, il est crucial de configurer les paramètres de votre badge de manière à simplifier au maximum l'expérience de l'utilisateur.
 
-### Keep the badge count low
-Research shows that once the badge count increases past double digits, users generally lose interest in the updates and often stop using the app altogether.
+### Garder le nombre de badges bas
+La recherche montre qu'une fois que le nombre de badges augmente les doubles chiffres passés, les utilisateurs perdent généralement de l'intérêt pour les mises à jour et cessent souvent d'utiliser l'application tout à fait ensemble.
 
-> There can be exceptions to this rule depending on the nature of your app (e.g. email and group messaging apps).
+> Il peut y avoir des exceptions à cette règle en fonction de la nature de votre application (par exemple, des applications de messagerie électronique et de messagerie de groupe).
 
-### Limit the things a badge count can represent
-When badging, you want to make the notifications as clear and direct as possible. By limiting the number of things that a badge notification can represent, you can provide your users with a sense of familiarity with your app's features and updates.
+### Limiter les choses qu'un nombre de badges peut représenter
+Lorsque vous insignez, vous voulez rendre les notifications aussi claires et directes que possible. En limitant le nombre de choses qu'un badge peut représenter, vous pouvez fournir à vos utilisateurs un sentiment de familiarité avec les fonctionnalités et les mises à jour de votre application.
 
-### News Feed and in-app badging
-One of the most powerful features of badging is that it allows you to engage with your users without the immediacy of a push notification through the News Feed and in-app updates. To ensure that your users stay interested in the in-app badging notifications, you should try to focus such badge updates on personalized or urgent messages.
+### Flux d'actualité et badge dans l'application
+L'une des fonctionnalités les plus puissantes du badging est qu'il vous permet de vous engager avec vos utilisateurs sans l'urgence d'une notification push par le biais des mises à jour des News Feed et de l'application. Pour vous assurer que vos utilisateurs restent intéressés par les notifications de badge in-app, vous devez essayer de concentrer ces mises à jour de badge sur des messages personnalisés ou urgents.
