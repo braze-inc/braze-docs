@@ -1,79 +1,79 @@
 ---
-nav_title: FAQs
-article_title: SMS FAQs
+nav_title: Foire aux questions
+article_title: FAQ SMS
 page_order: 8
-description: "This article addresses some of the most frequently asked questions that arise when setting up SMS campaigns."
-page_type: FAQ
+description: "Cet article répond à certaines des questions les plus fréquemment posées lors de la mise en place de campagnes de SMS."
+page_type: Foire Aux Questions
 channel:
   - SMS
 ---
 
-# SMS FAQs
+# FAQ SMS
 
-> On this page, we'll attempt to answer your most stringent questions about SMS!
+> Sur cette page, nous allons essayer de répondre à vos questions les plus strictes sur les SMS!
 
-### Can you include links in an SMS?
+### Pouvez-vous inclure des liens dans un SMS?
 
-You can include any link in any SMS campaign you would like. However, there are a few concerns to consider:
+Vous pouvez inclure n'importe quel lien dans n'importe quelle campagne SMS que vous souhaitez. Toutefois, il y a quelques préoccupations à considérer:
 
-- Links may take up much of the 160 character limit for SMS. If you include a link and text, it may result in two SMS messages, instead of just one.
-- Companies often use link shorteners to limit the character count impact of a link. However, if sending a shortened link through a long code, carriers may block or deny the message, as they may be suspicious of the link redirect.
-- Using a [short code]({{site.baseurl}}/user_guide/message_building_by_channel/sms/phone_numbers/short_and_long_codes/) would be the most reliable number type for including links.
+- Les liens peuvent prendre une grande partie de la limite de 160 caractères pour les SMS. Si vous incluez un lien et un texte, cela peut entraîner deux messages SMS, au lieu d'un seul.
+- Les entreprises utilisent souvent des raccourcis de liens pour limiter l'impact du nombre de caractères d'un lien. Cependant, si vous envoyez un lien raccourci via un code long, les transporteurs peuvent bloquer ou refuser le message, car ils peuvent se méfier de la redirection du lien.
+- Utiliser un [code court]({{site.baseurl}}/user_guide/message_building_by_channel/sms/phone_numbers/short_and_long_codes/) serait le type de numéro le plus fiable pour inclure des liens.
 
-### Do test text messages count toward limits?
+### Les messages de test sont-ils comptés dans les limites ?
 
-Yes, they do. Please keep this in mind when testing messages.
+Oui, ils le font. Veuillez garder cela à l'esprit lors du test des messages.
 
-### Do you need to rate-limit how fast you send SMS messages?
+### Vous avez besoin de limiter la vitesse d'envoi des SMS?
 
-The default concurrency rate and throughput enables about 360,000 messages an hour per short code. Additional throughput requires additional short codes.
+La vitesse par défaut de la concurrence et du débit permet environ 360 000 messages par heure par code court. Le débit supplémentaire nécessite des codes courts supplémentaires.
 
-### How can I avoid overages?
+### Comment puis-je éviter les excédentaires?
 
-While we can't promise that you won't occasionally have an overage, you could follow these precautions to decrease the chances of going over your allotted limits:
+Bien que nous ne puissions pas vous promettre que vous n'aurez pas occasionnellement un surage, vous pouvez suivre ces précautions pour réduire les chances de dépasser vos limites allouées :
 
-- Pay attention to the number of characters in your SMS. Unintentionally sending more than one segment could cause overages. More details [here]({{site.baseurl}}/user_guide/message_building_by_channel/sms/campaign/segments/#segment-breakdown).
-- Carefully calculate your SMS characters to account for Liquid or Connected Content. The Braze SMS composer in your dashboard does not estimate or factor in the usage of either of these features.
-- Consider the type of encoding your message uses - if your message uses GSM-7 encoding, you can usually estimate that you can send a message with 128 characters per message segment. If your message uses [UCS-2](https://en.wikipedia.org/wiki/Universal_Coded_Character_Set) encoding, you can usually estimate that you can send a message with 67 characters per message segment.
-- Test test test! Always test your SMS messages before launch, especially when using Liquid and Connected Content.
+- Faites attention au nombre de caractères de votre SMS. Envoi involontaire de plus d'un segment pourrait provoquer des dépassements. Plus de détails [ici]({{site.baseurl}}/user_guide/message_building_by_channel/sms/campaign/segments/#segment-breakdown).
+- Calculez soigneusement vos caractères SMS pour tenir compte de Liquid ou du contenu connecté. Le compositeur de SMS Braze dans votre tableau de bord n'estime pas l'utilisation de l'une ou l'autre de ces fonctionnalités.
+- Considérez le type d'encodage que votre message utilise - si votre message utilise l'encodage GSM-7, vous pouvez généralement estimer que vous pouvez envoyer un message avec 128 caractères par segment de message. Si votre message utilise l'encodage [UCS-2](https://en.wikipedia.org/wiki/Universal_Coded_Character_Set) , vous pouvez généralement estimer que vous pouvez envoyer un message de 67 caractères par segment de message.
+- Test de test ! Testez toujours vos messages SMS avant le lancement, en particulier lorsque vous utilisez Liquid et le contenu connecté.
 
-### How do you create logic for selective opt-ins to SMS so users are in the right subscription group?
+### Comment créer une logique pour les opt-ins sélectifs pour les SMS afin que les utilisateurs soient dans le bon groupe d'abonnement ?
 
-Custom keywords would be written as custom events, so you would want to create segments based on the keywords customers can text in. For example, if a user opts in to SMS for VIP messages, but not Alerts, you can create a VIP segment and an Alerts segment, then assign the user to the appropriate segment.
+Les mots-clés personnalisés seraient écrits en tant qu'événements personnalisés, vous souhaiteriez donc créer des segments en fonction des mots-clés dans lesquels les clients peuvent écrire. Par exemple, si un utilisateur opte pour les SMS pour les messages VIP, mais pas les alertes, vous pouvez créer un segment VIP et un segment Alertes, puis assigner l'utilisateur au segment approprié.
 
-### How many characters does an emoji utilize?
+### Combien de caractères un émoji utilise-t-il ?
 
-Emojis can be a bit tricky, as there is no standard character count across all emojis. There is the risk the emoji will exceed the character limit and break the SMS into multiple messages, despite it showing as one message in the Braze composer. When QA'ing your messages, you can better verify if a message will be split using [this tool]({{site.baseurl}}/user_guide/message_building_by_channel/sms/campaign/segments/#segment-calculator).
+Les émojis peuvent être un peu délicats, car il n'y a pas de nombre de personnages standard sur tous les émojis. Il y a le risque que les émoticônes dépassent la limite de caractères et fractionnent le SMS en plusieurs messages, malgré qu'il se montre comme un message dans le compositeur de Braze. Quand QA vos messages, vous pouvez mieux vérifier si un message sera divisé en utilisant [cet outil]({{site.baseurl}}/user_guide/message_building_by_channel/sms/campaign/segments/#segment-calculator).
 
-### How will I be billed for SMS?
+### Comment serai-je facturé pour les SMS ?
 
-Besides the charges for Short and Long Codes, billing is done by the number of message segments sent per country. To read more about how message segments are calculated see our [Message Segments and Copy Limits]({{site.baseurl}}/user_guide/message_building_by_channel/sms/campaign/segments/#segment-breakdown) guide. For overages, your account manager will reach out to let you know if you are close to reaching your maximum, providing relevant reports to help inform you. For further questions regarding overages, please reach out to your Braze representative.
+En plus des frais pour les codes courts et longs, la facturation est effectuée par le nombre de segments de messages envoyés par pays. Pour en savoir plus sur la façon dont les segments de messages sont calculés, consultez notre guide [Segments de messages et Copier les limites]({{site.baseurl}}/user_guide/message_building_by_channel/sms/campaign/segments/#segment-breakdown). Pour les excédents, votre gestionnaire de compte vous contactera pour vous informer si vous êtes près d'atteindre votre maximum, fournir des rapports pertinents pour vous aider à vous informer. Pour de plus amples questions concernant les excédents, veuillez contacter votre représentant de Braze.
 
-### If a user texts stop to our short code, are they unsubscribed from the subscription group?
+### Si les textes d'un utilisateur s'arrêtent à notre code court, se désabonnent-ils du groupe d'abonnement ?
 
-What does that look like on the user profile? The subscription group will revert to 2 dashes (- -), and there will be custom events for subscribe and unsubscribe.
+À quoi cela ressemble-t-il sur le profil de l'utilisateur ? Le groupe d'abonnement retournera à 2 tirets (-), et il y aura des événements personnalisés pour s'abonner et se désabonner.
 
-### Is there a way to see if an alias exists on a user profile?
+### Y a-t-il un moyen de voir si un alias existe sur un profil utilisateur ?
 
-Aliases are not visible on the user profile, you would need to use the Export User Data endpoints to confirm aliases being set.
+Les alias ne sont pas visibles sur le profil de l'utilisateur, vous devrez utiliser les points de terminaison d'exportation des données utilisateur pour confirmer les alias à définir.
 
-### What are shared short codes?
+### Quels sont les codes courts partagés ?
 
-With a shared short code, all text messages, no matter what business or organization sends them, arrive on a consumer's mobile device from the same 5-6 digit phone number. While shared short codes are relatively low cost and immediately available, this means that your business will not have a dedicated short code.
+Avec un code court partagé, tous les messages textuels, quelle que soit l'entreprise ou l'organisation qui les envoie, arriver sur un appareil mobile d'un consommateur à partir du même numéro de téléphone à 5-6 chiffres. Bien que les codes courts partagés soient relativement peu coûteux et immédiatement disponibles, cela signifie que votre entreprise n'aura pas de code court dédié.
 
-Some downsides to this approach include:
+Parmi les inconvénients de cette approche, citons :
 
-- If your customers opts-out of another business's messages that have a shared short code with you, they will have opted out of your messages as well.
-- If one business violates the rules, all businesses' messages are suspended.
-- Security Issues
+- Si vos clients se désintègrent des messages d'une autre entreprise qui ont un code court partagé avec vous, ils auront également choisi de ne plus recevoir vos messages.
+- Si une entreprise viole les règles, tous les messages de l'entreprise sont suspendus.
+- Problèmes de sécurité
 
-### What happens if multiple users have the same phone number?
+### Que se passe-t-il si plusieurs utilisateurs ont le même numéro de téléphone ?
 
-Braze will de-dupe users on the Canvas step level, so it should not be possible for a user to receive more than one SMS text for a Canvas step, even if multiple users share the same phone number.
+Braze va déduper les utilisateurs au niveau de l'étape de Canvas il ne devrait donc pas être possible pour un utilisateur de recevoir plus d'un SMS pour une étape de Canvas même si plusieurs utilisateurs partagent le même numéro de téléphone.
 
-{% alert important %} If you stagger your users into a Canvas and have different schedule times for each Canvas step, you can send a user with the same email or phone duplicate messages. {% endalert %}
+{% alert important %} Si vous étourdissez vos utilisateurs dans une toile et que vous avez des horaires différents pour chaque étape de Canvas vous pouvez envoyer un utilisateur avec le même e-mail ou téléphone en double messages. {% endalert %}
 
-### Will SMS event properties capture keywords in a sentence?
+### Les propriétés de l'évènement SMS captureront-elles des mots-clés dans une phrase ?
 
-In order for a keyword to be recognized within a sentence, (e.g. "please stop texting me") you'll need to use a Liquid statement in the message to recognize the specific word. Event properties have a character limit of 256, otherwise, there is no character limit.
+Pour qu'un mot clé soit reconnu dans une phrase, (p. ex. "s'il vous plaît arrêter de m'envoyer un texte") vous devrez utiliser une instruction Liquid dans le message pour reconnaître le mot spécifique. Les propriétés d'événement ont une limite de caractères de 256, sinon, il n'y a pas de limite de caractères.
 
