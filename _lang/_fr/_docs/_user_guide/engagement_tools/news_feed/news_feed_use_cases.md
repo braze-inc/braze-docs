@@ -1,31 +1,31 @@
 ---
-nav_title: News Feed Use Cases
-article_title: News Feed Use Cases
+nav_title: Cas d'utilisation du flux d'actualités
+article_title: Cas d'utilisation du flux d'actualités
 page_order: 3
-page_type: reference
-description: "This reference article lists helpful News Feed use cases."
-channel: news feed
+page_type: Référence
+description: "Cet article de référence liste les cas d'utilisation utiles du fil d'actualité."
+channel: fil d'actualité
 ---
 
-# News Feed use cases {#news-feed-use-cases}
+# Cas d'utilisation du flux d'actualités {#news-feed-use-cases}
 
-At Braze, we value the customization that News Feed brings to the table. Here are some of our favorite use cases to help you get ideas on how to get the most out of Braze.
+Chez Braze, nous apprécions la personnalisation que le fil de nouvelles apporte à la table. Voici quelques-uns de nos cas d'utilisation préférés pour vous aider à obtenir des idées sur la façon de tirer le meilleur parti du Brésil.
 
-- Advertising app updates
-- "Drip Marketing" Welcome Campaigns
-- Teasing out a user's willingness to pay.
-  - Offering a schedule of steadily increasing discounts using targeted News Feed cards can help you see exactly how much your service is worth to different user segments.
-- Achievements and badges At Braze, we value the customization that News Feed brings to the table. Here are some of our best practices and tips to help you get the most out of our Product.
-  - When a user completes a noteworthy task or takes a desired action after being targeted by a marketing campaign, you can isolate that segment in order to recognize their accomplishment with a News Feed card.
-    - You might even want to tie a specific reward to this acknowledgment such as an in-app discount.
-- Prompting users to share to various social networks.
-- ["Deep-linking"][1]
-  - You can use protocol URLs to point users at any resource housed within your app.
-  - For example, a video messaging app might want to have a News Feed card point at a video that is elsewhere within the app.
-  - You could even potentially use this to design your entire app navigation scheme around our News Feed!
+- Mises à jour des applications publicitaires
+- Campagnes de bienvenue "Drip Marketing"
+- Faire du thé à la volonté de payer un utilisateur.
+  - Offrir un calendrier d'augmentation constante des remises à l'aide de cartes RSS ciblées peut vous aider à voir exactement combien votre service vaut pour différents segments d'utilisateurs.
+- Réalisations et badges Au Brésil, nous apprécions la personnalisation que le fil de nouvelles apporte à la table. Voici quelques-unes de nos meilleures pratiques et conseils pour vous aider à tirer le meilleur parti de notre produit.
+  - Lorsqu'un utilisateur accomplit une tâche remarquable ou prend une action désirée après avoir été ciblé par une campagne de marketing, vous pouvez isoler ce segment afin de reconnaître leur accomplissement avec une carte News Feed.
+    - Vous pouvez même lier une récompense spécifique à cet accusé de réception, comme une réduction dans l'application.
+- Demander aux utilisateurs de partager sur différents réseaux sociaux.
+- ["Liaison profonde"][1]
+  - Vous pouvez utiliser des URL de protocole pour pointer les utilisateurs vers n'importe quelle ressource située dans votre application.
+  - Par exemple, une application de messagerie vidéo pourrait vouloir avoir un point de carte de flux d'actualités sur une vidéo qui se trouve ailleurs dans l'application.
+  - Vous pourriez même potentiellement utiliser ceci pour concevoir l'ensemble de votre système de navigation d'application autour de notre flux d'actualités!
 
 {% alert note %}
-Braze recommends that customers who use our News Feed tool move over to our Content Cards messaging channel - it is more flexible, customizable, and reliable. It is also easier to find and use in the Braze product. Contact your Braze account manager for more information.
+Braze recommande que les clients qui utilisent notre outil News Feed passent à notre canal de messagerie de cartes de contenu - il est plus flexible, personnalisable et fiable. Il est également plus facile à trouver et à utiliser dans le produit Braze. Contactez votre responsable de compte Braze pour plus d'informations.
 {% endalert %}
 
 
