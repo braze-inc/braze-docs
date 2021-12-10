@@ -1,101 +1,101 @@
 ---
-nav_title: "Create a Push Primer Campaign"
-article_title: Create a Push Primer Campaign
+nav_title: "Créer une Campagne Push Primer"
+article_title: Créer une Campagne Push Primer
 page_order: 5
-page_type: tutorial
-description: "This walkthrough will show you how to get your users qualified and ready to receive your push messages by sending out a push primer."
+page_type: tutoriel
+description: "Cette présentation vous montrera comment faire en sorte que vos utilisateurs se qualifient et se préparent à recevoir vos messages push en envoyant un précurseur de poussage."
 channel:
-  - push
+  - Pousser
 tool:
-  - Campaigns
+  - Campagnes
 ---
 
 <br>
 {% alert important %}
-Push Primer campaigns require backend set up from your developers. <br>Check out the necessary Push Primer Integrations [here]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/push_primer/).
+Les campagnes Push Primer nécessitent la configuration de backend de vos développeurs. <br>Consultez les intégrations d'amorçage nécessaires [ici]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/push_primer/).
 {% endalert %}
 
 
-# Create a push primer campaign
+# Créer une campagne de push primer
 
-> This article will walk you through setting up and sending a Push Primer campaign to new or non-push enabled users. Push Primer campaigns encourage your users to enable push on their device for your app. Getting permission from users to send messages directly to their devices can be complex, but our guides can help!
+> Cet article vous guidera à travers la mise en place et l'envoi d'une campagne Push Primer aux nouveaux utilisateurs ou non autorisés. Les campagnes Push Primer encouragent vos utilisateurs à activer le push sur leur appareil pour votre application. Obtenir la permission des utilisateurs d'envoyer des messages directement à leurs appareils peut être complexe, mais nos guides peuvent vous aider !
 
 !\[Push Primer Example\]\[push_primer5\]{: style="float:right;max-width:30%;margin-left:15px;"}
 
-Push Primer campaigns are useful because they address the issue of the dreaded iOS notification opt-in prompt that users receive upon opening any new iOS application. These prompts are disruptive and uninformative, with users likely choosing to opt-out of push notifications. This prompt is only ever shown once, and unfortunately, once those notifications are turned off, there's very little we can do to get users to turn them back on.
+Les campagnes Push Primer sont utiles car elles traitent le problème de l'invite de notification redoutée iOS opt-in que les utilisateurs reçoivent à l'ouverture d'une nouvelle application iOS. Ces messages sont perturbateurs et peu informatifs, les utilisateurs ayant tendance à opter pour la suppression des notifications push. Cette invite n'est jamais affichée qu'une seule fois, et malheureusement, une fois que ces notifications sont désactivées, il y a très peu de choses que nous pouvons faire pour que les utilisateurs les réallument.
 
-To address this, Braze offers steps on how to set up Push Primer campaigns. Push Primers allow you to hold off on delivering that initial disruptive push message as well as offer re-deliverability, letting you decide when and how you want to prompt your users for a push opt-in. These Push Primers should provide users valuable information on why notifications for your application are important.
+Pour y remédier, Braze propose des étapes sur la façon de mettre en place des campagnes Push Primer. Push Primers vous permet de suspendre la livraison de ce message perturbant initial ainsi que d'offrir une nouvelle délivrabilité, vous permettant de décider quand et comment vous voulez demander à vos utilisateurs un opt-in. Ces Primers Push devraient fournir aux utilisateurs des informations précieuses sur les raisons pour lesquelles les notifications pour votre application sont importantes.
 
-For a user to qualify to receive your Push Messages, they must enable push at the app-level _and_ the device-level. Please note that these levels translate differently for iOS and Android. You can learn more about them here:
-- [Android Push Enabled]({{site.baseurl}}/user_guide/message_building_by_channel/push/users_and_subscriptions/#ios-android-details)
-- [iOS Push Enabled]({{site.baseurl}}/user_guide/message_building_by_channel/push/users_and_subscriptions/#ios-android-details)
+Pour qu'un utilisateur puisse se qualifier pour recevoir vos messages push, il doit activer push au niveau de l'application _et_ au niveau de l'appareil. Veuillez noter que ces niveaux se traduisent différemment pour iOS et Android. Vous pouvez en apprendre plus sur eux ici :
+- [Push Android activé]({{site.baseurl}}/user_guide/message_building_by_channel/push/users_and_subscriptions/#ios-android-details)
+- [Push iOS activé]({{site.baseurl}}/user_guide/message_building_by_channel/push/users_and_subscriptions/#ios-android-details)
 
 {% alert note %}
-__Should I be using Push Primers?__ Depends on your iOS version.<br><br>
-- __iOS 12__: With the iOS 12 update offering [provisional authorization]({{site.baseurl}}/user_guide/message_building_by_channel/push/ios/notification_options/#provisional-push-authentication--quiet-notifications), allowing this initial push prompt to be delivered silently to your notification center, some may find Push Primers no longer needed, while others may continue its use. We recognize not every iOS app will have its developers incorporate provisional authorization, so push primers are still a great approach for those applications. We recommend meeting with your Customer Success Manager to discuss if incorporating push primers are the right move.
-- __iOS 11 and Later__: Because these iOS versions only allow foreground Push, the intrusive native iOS Push opt-in prompt will still get sent, in turn sacrificing your marketability to those users. We strongly suggest setting up Push Primers for these versions.
+__Devrais-je utiliser Push Primers?__ Dépend de votre version iOS.<br><br>
+- __iOS 12__: Avec l'offre de mise à jour iOS 12 [autorisation provisoire]({{site.baseurl}}/user_guide/message_building_by_channel/push/ios/notification_options/#provisional-push-authentication--quiet-notifications), permettant à cette invite de push initiale d'être envoyée silencieusement à votre centre de notification, Certains trouvent peut-être que les Primères Push ne sont plus nécessaires, tandis que d'autres peuvent continuer à l'utiliser. Nous reconnaissons que toutes les applications iOS auront leurs développeurs incorporent une autorisation provisoire, donc les primers de poussée sont toujours une excellente approche pour ces applications. Nous vous recommandons de rencontrer votre gestionnaire de service clientèle pour discuter si l'intégration des primaires pousses est la bonne solution.
+- __iOS 11 et plus tard__: parce que ces versions iOS ne permettent que Push, au premier plan, l'invite native iOS Push opt-in sera toujours envoyée, ce qui sacrifiera à son tour votre commerciabilité à ces utilisateurs. Nous vous suggérons fortement de mettre en place Push Primers pour ces versions.
 {% endalert %}
 
-## Step 1: Push primer integrations
+## Étape 1 : Poussez les intégrations des primeurs
 
-We leverage in-app messages to drive Push Primer campaigns. Unlike many of our out-of-the-box features that come ready to use, this essential tool does require some backend setup from your developers. We have included the code snippets required here: [Push Primer Integrations][integrations].
+Nous tirons parti des messages dans l'application pour lancer des campagnes Push Primer. Contrairement à beaucoup de nos fonctionnalités hors de la boite qui sont prêtes à être utilisées, cet outil essentiel nécessite une configuration de backend de la part de vos développeurs. Nous avons inclus les extraits de code requis ici : [Intégrations Push Primer][integrations].
 
-## Step 2: Select your channel of choice
+## Étape 2 : Sélectionnez votre canal de choix
 
-From the **Campaigns** pane within the Dashboard, select **In-App Messaging** as the messaging channel under **Create Campaign**.
+À partir du volet **Campagnes** dans le tableau de bord, sélectionnez **Messagerie In-App** comme canal de messagerie dans **Créer Campagne**.
 
-## Step 3: Set up initial campaign options
+## Étape 3: Configurez les options de la campagne initiale
 
 !\[Push Primer Message Type\]\[push_primer7\]
 
-Once you have a blank in-app messaging campaign to work on, you must name your campaign, select where you would like your Push Primer to send to, select the message type, and pick the layout type. For your basic Push Primer campaign message type, we suggest either a full screen or modal message. Note that for a full-screen in-app message, an image is required.
+Une fois que vous avez une campagne de messagerie dans l'application vide sur laquelle travailler, vous devez nommer votre campagne, sélectionnez où vous voulez que votre Primer Push soit envoyé, sélectionnez le type de message et choisissez le type de mise en page. Pour votre type de message Push Primer de base, nous vous suggérons un message en plein écran ou un message modal. Notez que pour un message en plein écran dans l'application, une image est requise.
 
-## Step 4: Customize your message
+## Étape 4 : Personnaliser votre message
 
 !\[Push Primer\]\[push_primer2\]{: style="max-width:75%"}
 
-After you have chosen the appropriate in-app message type, you can customize your message content and add buttons.
+Une fois que vous avez choisi le type de message approprié dans l'application, vous pouvez personnaliser le contenu de votre message et ajouter des boutons.
 
-Here are some resources to get you started:
-- Braze supports using [Font Awesome v4.3.0 icons](https://fontawesome.com/v4.7.0/cheatsheet/) for modal in-app message icons.
+Voici quelques ressources pour vous aider à démarrer :
+- Braze prend en charge l'utilisation des icônes [Font Awesome v4.3.0](https://fontawesome.com/v4.7.0/cheatsheet/) pour les icônes de messages modaux dans l'application.
 
-Remember that a push primer is supposed to prime the user to turn on push notifications. <br>In your message body, we suggest __highlighting the reasons your users should have push notifications turned on__.
+Rappelez-vous qu'un préfixe de push est censé prioriser l'utilisateur pour activer les notifications push. <br>Dans votre corps de message, nous suggérons __de mettre en évidence les raisons pour lesquelles vos utilisateurs devraient avoir activé les notifications push__.
 
-Here are some example Push Primer Messages:
+Voici quelques exemples de Push Primer Messages:
 
 !\[Push Primer Example 1\]\[push_primer3\]{: height="225px"} !\[Push Primer Example 2\]\[push_primer4\]{: height="225px"} !\[Push Primer Example 3\]\[push_primer5\]{: height="225px"}
 
-If you would like even further customization options, you can also set the message type to Custom code and provide the full HTML for your in-app message.
+Si vous souhaitez encore plus d'options de personnalisation, vous pouvez également définir le type de message en code personnalisé et fournir le HTML complet pour votre message dans l'application.
 
-### Button set-up
+### Réglage du bouton
 
-To add buttons to your in-app message, you will find a Button 1 textbox and Button 2 textbox underneath the text body prompt. Here, you can choose the text that will show on these buttons. We recommend "Turn on Notifications" and "Not Now" as starter buttons, but there are many different button prompts you could assign.
+Pour ajouter des boutons à votre message dans l'application, vous trouverez une zone de texte du bouton 1 et le bouton 2 sous l'invite de saisie du corps du texte. Ici, vous pouvez choisir le texte qui s'affichera sur ces boutons. Nous recommandons "Activer les notifications" et "Pas maintenant" en tant que bouton de démarrage, mais il y a beaucoup de boutons différents que vous pouvez assigner.
 
 !\[Push Primer\]\[push_primer6\]{: style="float:right;max-width:40%;margin-left:15px;"}
 
-### On-click behavior
+### Comportement du clic
 
-After your push primer message has been set up, on-click behavior must be assigned. For the corresponding "Turn on Notifications" button you had assigned, you must select **Deep Link Into App**.
+Une fois que votre message "push" a été configuré, le comportement "clic" doit être assigné. Pour le bouton correspondant "Activer les notifications" que vous avez assigné, vous devez sélectionner **Lien Profond dans l'app**.
 
-#### Deep linking
+#### Liaison profonde
 
-Because Push Primer campaigns are not an out-of-the-box feature, the deep-link link that prompts the native push prompt must be set up by your developers before it becomes available.
+Parce que les campagnes Push Primer ne sont pas une fonctionnalité hors de la boîte, le lien de lien profond qui invite l'invite native de push doit être configuré par vos développeurs avant qu'il ne devienne disponible.
 
-Documentation on push primer integrations and deep linking customization can be found [here][integrations].
+Vous trouverez de la documentation sur les intégrations d'amorçage et la personnalisation de liens profonds [ici][integrations].
 
-## Step 5: Selecting the delivery method
+## Étape 5 : Sélection du mode de livraison
 
-To set your Push Primer to trigger when you want it to, you must set __Perform Custom Event__ as the trigger action. Your developers will set up a custom event that you can choose to trigger off of for your Push Primer campaign. To figure out how your company references this custom event, check with your developers. __This custom event counts as one data point toward your allotment.__ This customer event will check if a user has already been provided a native push prompt, and if not, it will trigger the push primer in-app message.
+Pour définir votre Push Primer à déclencher quand vous le souhaitez, vous devez définir __Effectuer un événement personnalisé__ comme action de déclenchement. Vos développeurs mettront en place un événement personnalisé que vous pourrez choisir de déclencher pour votre campagne Push Primer. Pour savoir comment votre entreprise fait référence à cet événement personnalisé, vérifiez avec vos développeurs. __Cet événement personnalisé compte comme un point de données vers votre attribution.__ Cet événement client vérifiera si un utilisateur a déjà été fourni une invite push native, et, si ce n'est pas le cas, cela déclenchera le message dans l'application.
 
-## Step 6: Targeting users
+## Étape 6 : cibler les utilisateurs
 
-Generally, for Push Primer campaigns, we want the push primer to trigger off of a certain segment of users. In these Targeting Users options, you can decide what segment you feel most appropriate. We suggest taking some time with your marketing team to pick a compelling segment. For example, users that have completed a second purchase, users that have just made an account to become a member, or even users that visit your app more than twice a week. Targeting users for these crucial segments increases the likelihood of users opting in and becoming push enabled.
+Généralement, pour les campagnes Push Primer, nous voulons que le poussoir déclenche un certain segment d'utilisateurs. Dans ces options d'utilisateurs ciblés, vous pouvez décider quel segment vous trouvez le plus approprié. Nous vous suggérons de prendre un peu de temps avec votre équipe de marketing pour choisir un segment convaincant. Par exemple, les utilisateurs qui ont terminé un deuxième achat, les utilisateurs qui viennent de faire un compte pour devenir membre, ou même les utilisateurs qui visitent votre application plus de deux fois par semaine. Cibler les utilisateurs de ces segments cruciaux augmente la probabilité que les utilisateurs optent et deviennent activés.
 
-If you are not sure the best way to segment, you may also select **All Users**. This option will send your push primer to any iOS device that has not yet opted in or out of push.
+Si vous n'êtes pas sûr de la meilleure façon de segmenter, vous pouvez également sélectionner **Tous les utilisateurs**. Cette option enverra votre push primer à n'importe quel appareil iOS qui n'a pas encore choisi ou qui n'a pas encore choisi de push.
 
-## Step 7: Conversions
-Braze suggests default settings for conversions, but you may want to set up conversion events surrounding push primers.
-[push_primer2]: {% image_buster /assets/img/push_primer/push_primer_2.png %} [push_primer3]: {% image_buster /assets/img/push_primer/push_primer_3.png %} [push_primer4]: {% image_buster /assets/img/push_primer/push_primer_4.png %} [push_primer5]: {% image_buster /assets/img/push_primer/push_primer_5.png %} [push_primer6]: {% image_buster /assets/img/push_primer/push_primer_6.jpg %} [push_primer7]: {% image_buster /assets/img/push_primer/push_primer_7.png %}
+## Étape 7 : Conversions
+Braze suggère des paramètres par défaut pour les conversions, mais vous pouvez configurer des événements de conversion autour des primers.
+[push_primer2]: {% image_buster /assets/img/push_primer/push_primer_2.png %} [push_primer3]: {% image_buster /assets/img/push_primer/push_primer_3.png %} [push_primer4]: {% image_buster /assets/img/push_primer/push_primer_4. ng %} [push_primer5]: {% image_buster /assets/img/push_primer/push_primer_5.png %} [push_primer6]: {% image_buster /assets/img/push_primer/push_primer_6. pg %} [push_primer7]: {% image_buster /assets/img/push_primer/push_primer_7.png %}
 
 [integrations]: {{site.baseurl}}/developer_guide/platform_integration_guides/ios/push_primer/
 
