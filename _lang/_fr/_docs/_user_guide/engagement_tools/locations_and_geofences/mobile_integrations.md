@@ -1,65 +1,65 @@
 ---
-nav_title: Mobile Integrations
-article_title: Geofence Mobile Integrations
+nav_title: Intégrations mobiles
+article_title: Intégrations de Geofence Mobile
 page_order: 2
-page_type: reference
-description: "This reference article covers the neccesary mobile integrations involved in using Geofences."
-tool: Location
+page_type: Référence
+description: "Cet article de référence couvre les intégrations nécessaires à l'utilisation de Geofences."
+tool: Localisation
 ---
 
-# Mobile integrations
+# Intégrations mobiles
 
-## Cross-platform requirements
+## Exigences inter-plateformes
 
-Geofence-triggered campaigns are available on iOS and Android. To support geofences, the following must be in place:
+Les campagnes déclenchées par le géofence sont disponibles sur iOS et Android. Pour soutenir les géofences, ce qui suit doit être en place :
 
-1. Your integration must support background push notifications.
-2. Braze geofences or location collection must be enabled.
-3. For devices on iOS version 11 and up, the user must allow location access always for geofencing to work.
+1. Votre intégration doit prendre en charge les notifications push en arrière-plan.
+2. Les géorepérages ou la collecte de localisation doivent être activés.
+3. Pour les appareils sur iOS version 11 et supérieure, l'utilisateur doit toujours autoriser l'accès à la localisation pour que le géorepérage fonctionne.
 
 {% alert important %}
-Starting with Braze SDK version 3.6.0 Braze location collection is disabled by default. To verify location collection is enabled on Android, ensure that `com_appboy_enable_location_collection` is set to `true` in your `braze.xml`.
+La collection d'emplacement Braze SDK 3.6.0 Braze est désactivée par défaut. Pour vérifier que la collection d'emplacement est activée sur Android, assurez-vous que `com_appboy_enable_location_collection` est défini à `true` dans votre `braze.xml`.
 {% endalert %}
 
-## Geofence configuration
+## Configuration du géorepérage
 
-### Latitude and longitude
+### Latitude et longitude
 
-The geographic center of the geofence.
+Le centre géographique du géorepérage.
 
 ### Radius
 
-The radius of the geofence in meters, measured from the geographic center. We recommend setting a minimum radius of 100 meters for all geofences.
+Le rayon du géorepérage en mètres, mesuré à partir du centre géographique. Nous vous recommandons de fixer un rayon minimum de 100 mètres pour tous les géofences.
 
-### Cooldown
+### Refroidissement
 
-Users receive geofence triggered notifications after performing enter or exit transitions on individual geofences. After a transition occurs, there is a pre-defined period of time during which that user may not perform the same transition on that individual geofence again. This period of time is called the "cooldown" and is pre-defined by Braze. Its main purpose is to prevent unnecessary network requests.
+Les utilisateurs reçoivent des notifications déclenchées par la géorepérage après avoir effectué des transitions d'entrée ou de sortie sur des géorepérages individuels. Après une transition, il y a une période de temps prédéfinie au cours de laquelle l'utilisateur peut ne pas effectuer à nouveau la même transition sur cette fonction individuelle. Cette période de temps est appelée le « temps de recharge » et est prédéfinie par le Brésil. Son principal objectif est d'éviter les requêtes réseau inutiles.
 
-## Frequently asked questions
+## Foire aux questions
 
-##### How do geofences affect battery life?
+##### Comment les géofences affectent-elles la durée de vie de la batterie?
 
-Our geofencing solution uses the native geofence system service on iOS and Android and is tuned to intelligently trade off accuracy and power, ensuring best in class battery life and improvements in performance as the underlying service improves.
+Notre solution de géorepérage utilise le service système de géorepérage natif sur iOS et Android et est optimisée pour échanger intelligemment la précision et la puissance assurer une meilleure autonomie de la batterie et une meilleure performance au fur et à mesure que le service sous-jacent s'améliore.
 
-##### How many geofences can I upload to Braze?
+##### Combien de géorepérages puis-je télécharger en Brésil?
 
-You may create or upload an unlimited amount of geofences on the Dashboard, allowing your marketing team to setup geofence sets and campaigns without needing to calculate numbers of geofences. However, each geofence set can hold a maximum of 10,000 geofences. Braze dynamically re-synchronizes the geofences that it tracks for each individual user, ensuring that the most relevant geofences to them are always available.
+Vous pouvez créer ou télécharger un nombre illimité de géorepérages sur le tableau de bord, permettant à votre équipe de marketing de mettre en place des ensembles et des campagnes de géorepérage sans avoir à calculer le nombre de géofences. Cependant, chaque ensemble de géorepérage peut contenir un maximum de 10 000 géofences. Braze resynchronise dynamiquement les géorepérages qu'il suit pour chaque utilisateur individuel, en veillant à ce que les géorepérages les plus pertinents soient toujours disponibles.
 
-##### Can I store more than X geofences?
+##### Puis-je stocker plus de X géo-encres ?
 
-Per Android's [documentation][3], Android apps may only store up to 100 geofences locally at a time. Braze is configured to store only up to 20 geofences locally per app. For geofences to work correctly, you should ensure that your App is not using all available geofence spots.
+Par [documentation][3]d'Android, les applications Android ne peuvent stocker que jusqu'à 100 géorepérages localement à la fois. Braze est configuré pour stocker seulement jusqu'à 20 géofences localement par application. Pour que les géorepérages fonctionnent correctement, vous devez vous assurer que votre application n'utilise pas tous les points de géorepérage disponibles.
 
-iOS devices may monitor up to 20 [geofences][4] at a time per app. Braze will monitor up to 20 locations if space is available. For geofences to work correctly, you should ensure that your App is not using all available geofence spots.
+Les appareils iOS peuvent surveiller jusqu'à 20 [géorepérages][4] à la fois par application. Braze surveillera jusqu'à 20 emplacements si de la place est disponible. Pour que les géorepérages fonctionnent correctement, vous devez vous assurer que votre application n'utilise pas tous les points de géorepérage disponibles.
 
-##### When are geofences active?
+##### Quand les géorepérages sont-ils actifs?
 
-Braze geofences work even when your app is closed, at all hours of the day.
+Les géorepérages fonctionnent même lorsque votre application est fermée, à toutes les heures de la journée.
 
-##### How accurate are Braze geofences?
+##### Quelle est la précision des géorepérages de Braze ?
 
-Braze geofences use a combination of all location providers available to a device to triangulate the user's location. These include Wifi, GPS, and cellular towers.
+Les géofences de Braze utilisent une combinaison de tous les fournisseurs de localisation disponibles à un appareil pour trianguler l'emplacement de l'utilisateur. Il s'agit notamment du Wifi, du GPS et des tours cellulaires.
 
-Typical accuracy is in 20-50m range and best-case accuracy will be in the 5-10m range. In rural areas, accuracy may degrade significantly, potentially going up to several kilometers. Braze recommends creating geofences with larger radii in rural locations.
+La précision typique est de 20-50m et la meilleure précision des cas sera dans la gamme 5-10m. Dans les zones rurales, la précision peut se dégrader de manière significative, pouvant atteindre plusieurs kilomètres. Braze recommande de créer des géorepérages avec un rayon plus large dans les zones rurales.
 
 [3]: https://developers.google.com/android/reference/com/google/android/gms/location/package-summary
 [4]: https://developer.apple.com/library/content/documentation/UserExperience/Conceptual/LocationAwarenessPG/RegionMonitoring/RegionMonitoring.html
