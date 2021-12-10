@@ -1,48 +1,48 @@
 ---
-nav_title: Creating Custom Opt-In Prompts
-article_title: Creating Custom Opt-In Prompts
+nav_title: Création de messages personnalisés d'opt-in
+article_title: Création de messages personnalisés d'opt-in
 page_order: 2
-page_type: reference
-description: "This article covers best practices for creating custom opt-in prompts that clearly list and demonstrate the benefits of push messaging."
-channel: push
+page_type: Référence
+description: "Cet article couvre les meilleures pratiques pour la création de messages opt-in personnalisés qui listent et démontrent clairement les avantages de la messagerie push."
+channel: Pousser
 ---
 
-# Creating custom opt-in prompts
+# Création d'invitations opt-in personnalisées
 
-Even if you keep best practices in mind when designing and sending push messages, some users may turn them off before realizing any of the benefits that they would provide. Users may have had previous negative experiences with spammy, irrelevant push messages from other apps and now will decline any request to receive push messages from any app.
+Même si vous gardez à l'esprit les meilleures pratiques lors de la conception et de l'envoi de messages push. Certains utilisateurs peuvent les désactiver avant de réaliser les avantages qu'ils pourraient leur offrir. Il se peut que les utilisateurs aient déjà eu des expériences négatives avec le spammy, messages push non pertinents provenant d'autres applications et va maintenant refuser toute demande de recevoir des messages push depuis n'importe quelle application.
 
-Furthermore, the legal environment surrounding electronic messaging in some locales is becoming increasingly strict. For example, [Canada's Anti-Spam Legislation][13] requires explicit consent from users to send them marketing-related messages. Other countries may make similar legislative moves, so acquiring that explicit consent from your users should be a priority. Not having a double opt-in system in place now may leave you with time-consuming migration to a compliant system in the future.
+En outre, l'environnement juridique entourant la messagerie électronique dans certaines régions devient de plus en plus strict. Par exemple, [la législation antispam du Canada][13] exige le consentement explicite des utilisateurs pour leur envoyer des messages liés au marketing. D'autres pays peuvent prendre des mesures législatives similaires, donc obtenir le consentement explicite de vos utilisateurs devrait être une priorité. Le fait de ne pas disposer d'un système double opt-in en place peut vous faire passer du temps à un système conforme dans le futur.
 
-Creating an opt-in prompt that clearly lists and demonstrates the benefits of push can only help you, given the evolving attitudes of both consumers and governments toward push messaging. Instead of ambushing your users with a permission request when they open the app for the first time, explain the benefits of your push messages, and then ask for permission.
+Créer une invite de participation qui répertorie clairement et démontre les avantages de la poussée ne peut que vous aider étant donné les attitudes évolutives des consommateurs et des gouvernements à l’égard du message incitatif. Au lieu d'embusquer vos utilisateurs avec une demande d'autorisation lorsqu'ils ouvrent l'application pour la première fois expliquez les avantages de vos messages push, puis demandez la permission.
 
 !\[Breaking News 1\]\[16\]
 
 !\[Breaking News 2\]\[17\]
 
-Adding a simple pop-up to prompt user action can allow you to effectively request permission from your users more than once, if needed. Relying on iOS's permission request alone means that most users will never think twice about enabling your push messages.
+Ajouter une fenêtre pop-up simple pour une action utilisateur rapide peut vous permettre de demander l'autorisation à vos utilisateurs plus d'une fois, si nécessaire. En se basant sur la seule demande de permission d'iOS, la plupart des utilisateurs ne réfléchiront jamais à l'activation de vos messages push.
 
-For example, the Fandango app has a pop-up that states the benefits of enabling push notifications in a clear and concise manner. After receiving this notification, users have enough information to decide if they will find Fandango's pushes valuable and can act accordingly.
+Par exemple, l'application Fandango a une fenêtre pop-up qui indique les avantages de l'activation des notifications push de manière claire et concise. Après avoir reçu cette notification, les utilisateurs ont suffisamment d'informations pour décider s'ils trouveront que Fandango a de la valeur et peuvent agir en conséquence.
 
 !\[fandango_prompt\]\[37\]
 
-Another example of an app that does a great job with custom opt-in prompts is textPlus. Upon downloading textPlus, a user receives a pop-up prompt that explains the benefits of push notifications and walks the user through the process of enabling them.
+Un autre exemple d'application qui fait un excellent travail avec des instructions opt-in personnalisées est textPlus. Lors du téléchargement de textPlus, un utilisateur reçoit une invite pop-up qui explique les avantages des notifications push et guide l'utilisateur à travers le processus de leur activation.
 
 !\[textplus_prompt\]\[24\]
 
-After the user taps **Next**, the user receives the real iOS push prompt. If the user doesn't enable push notifications at this stage, then he will have to enable them in Settings. textPlus makes this easier for users to do by featuring a reminder on their Inbox page.
+Après que l'utilisateur ait tapé **Next**, l'utilisateur reçoit la véritable invite push iOS. Si l'utilisateur n'active pas les notifications push à ce stade, il devra les activer dans les paramètres. textPlus permet aux utilisateurs de le faire plus facilement en mettant en place un rappel sur leur page Boîte de réception.
 
 !\[textplus_reminder\]\[25\]
 
-If users taps **Turn on**, they are presented with detailed steps for how to enable push notifications. This removes some of the effort involved in turning on push notifications
+Si les utilisateurs tapent sur **Activer**, ils se voient proposer des étapes détaillées pour activer les notifications push. Cela supprime une partie des efforts impliqués dans l'activation des notifications push
 
 !\[textplus_directions\]\[26\]
 
-Another app that does a wonderful job of priming its' users to accept push notifications is Hopper. See their [Medium article][49] on how to best onboard when it comes to push.
+Une autre application qui fait un travail merveilleux en démarrant ses utilisateurs pour accepter les notifications push est Hopper. Voir leur [article moyen][49] sur la meilleure façon de monter à bord quand il s'agit de pousser.
 
-> If you've implemented a custom push prompt as described above in an iOS app, make sure that you're [reregistering with APNs][44] every time the app runs after they grant push permissions to your app. Apple advises this as [device tokens can change arbitrarily][45].
+> Si vous avez implémenté une invite push personnalisée comme décrit ci-dessus dans une application iOS, assurez-vous que vous [vous réinscrivez avec les APN][44] à chaque fois que l'application s'exécute après qu'ils accordent des autorisations push à votre application. Apple conseille cela car les [jetons de l'appareil peuvent changer arbitrairement][45].
 
-For additional information, refer to our article on [Managing User Subscriptions][36].
-[16]: {% image_buster /assets/img_archive/bn_push1.png %} [17]: {% image_buster /assets/img_archive/bn_push2.png %} [24]: {% image_buster /assets/img_archive/textplus_prompt.png %} [25]: {% image_buster /assets/img_archive/textplus_reminder.png %} [26]: {% image_buster /assets/img_archive/textplus_directions.png %} [37]: {% image_buster /assets/img_archive/PushPrimeFandango.png %} [46]:{% image_buster /assets/img_archive/Push_Window8_Toast.png %} [47]:{% image_buster /assets/img_archive/Push_Windows_Universal_Toast.png %}
+Pour plus d'informations, reportez-vous à notre article sur [Gestion des abonnements d'utilisateurs][36].
+[16]: {% image_buster /assets/img_archive/bn_push1.png %} [17]: {% image_buster /assets/img_archive/bn_push2. ng %} [24]: {% image_buster /assets/img_archive/textplus_prompt.png %} [25]: {% image_buster /assets/img_archive/textplus_reminder. ng %} [26]: {% image_buster /assets/img_archive/textplus_directions.png %} [37]: {% image_buster /assets/img_archive/PushPrimeFandango. ng %} [46]:{% image_buster /assets/img_archive/Push_Window8_Toast.png %} [47]:{% image_buster /assets/img_archive/Push_Windows_Universal_Toast.png %}
 
 [13]: {{site.baseurl}}/help/best_practices/spam_regulations/#can-spam
 [36]: {{site.baseurl}}/user_guide/message_building_by_channel/email/managing_user_subscriptions/#managing-user-subscriptions
