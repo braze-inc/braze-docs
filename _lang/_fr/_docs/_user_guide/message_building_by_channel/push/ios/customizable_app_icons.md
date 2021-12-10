@@ -1,18 +1,18 @@
 ---
-nav_title: "Custom App Icon Feature (iOS)"
-article_title: Custom App Icon Feature
+nav_title: "Fonctionnalité de l'icône de l'application personnalisée (iOS)"
+article_title: Fonctionnalité de l'icône de l'application personnalisée
 page_order: 7
-page_type: reference
-description: "This reference article covers the iOS 10.3 update on Customizable App Icon."
+page_type: Référence
+description: "Cet article de référence couvre la mise à jour iOS 10.3 sur l'icône Application personnalisable."
 platform: iOS
 channel:
-  - push
+  - Pousser
 ---
 
-# iOS 10.3 customizable app icon feature
+# Fonctionnalité de l'icône d'application personnalisable iOS 10.3
 
-With iOS 10.3 Apple introduced the ability to change an app’s home screen icon without having to update the application from the Apple App Store. The developer can now allow the user to change the home screen icon inside of their app. Apple requires all of the app icon images that the developer wants to make available to the user to be included in the binary that is submitted to Apple for review during the publishing of the app on the Apple App Store.
+Avec iOS 10.3, Apple a introduit la possibilité de changer l'icône de l'écran d'accueil d'une application sans avoir à mettre à jour l'application depuis l'Apple App Store. Le développeur peut maintenant permettre à l'utilisateur de changer l'icône de l'écran d'accueil dans son application. Apple exige que toutes les images d'icônes de l'application que le développeur veut mettre à la disposition de l'utilisateur pour être inclus dans le binaire qui est soumis à Apple pour examen lors de la publication de l'application sur l'App Store d'Apple.
 
-To notify your users of this feature it is possible to send an In-App Message or push notification through Braze to the user explaining this functionality or asking the user if they would like to change their icon. The developer would only need to create a deep link into the application where the native iOS prompt can be shown to make the icon change. This is similar to the same guidance we provide around setting up a Push Notification Primer for APNs today.
+Pour avertir vos utilisateurs de cette fonctionnalité, il est possible d'envoyer un message In-App ou une notification push via Braze à l'utilisateur expliquant cette fonctionnalité ou demandant à l'utilisateur s'il souhaite modifier son icône. Le développeur aurait seulement besoin de créer un lien profond vers l'application où l'invite native iOS peut être montrée pour faire le changement d'icône. Ceci est similaire à la même orientation que celle que nous fournissons pour mettre en place un Primeur de Notification Push pour les APN aujourd'hui.
 
-In addition, this messaging can take full advantage of Braze’s segmentation ability to make the message copy highly contextual to a user. You can also leverage Braze’s A/B testing of messages to see which messaging makes the most impact on your desired result.
+De plus, cette messagerie peut tirer pleinement parti de la capacité de segmentation de Braze pour rendre le message très contextuel à un utilisateur. Vous pouvez également tirer parti des tests A/B de Braze pour voir quelles messages ont le plus d'impact sur le résultat souhaité.
