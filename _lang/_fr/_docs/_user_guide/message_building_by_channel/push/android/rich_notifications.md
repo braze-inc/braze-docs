@@ -1,54 +1,54 @@
 ---
-nav_title: "Create Rich Notifications for Android"
-article_title: Create Rich Push Notifications
+nav_title: "Créer des notifications riches pour Android"
+article_title: Créer des notifications Rich Push
 page_order: 3
-page_layout: tutorial
-description: "This tutorial covers how to set up Android Rich notifications for your Braze Campaigns."
+page_layout: tutoriel
+description: "Ce tutoriel explique comment configurer des notifications riches Android pour vos campagnes de Braze."
 platform: Android
 channel:
-  - Push
+  - Pousser
 tool:
-  - Campaigns
+  - Campagnes
 ---
 
-# Create rich notifications for Android
+# Créer des notifications riches pour Android
 
-> Rich notifications allow for more customization in your push notifications by adding additional content beyond just copy. Android notifications have included images in push notifications for some time now, messaged as an ‘Expanded Notification Image’.
+> Les notifications riches permettent une plus grande personnalisation de vos notifications push en ajoutant du contenu supplémentaire au-delà de la simple copie. Les notifications Android ont inclus des images dans les notifications push depuis un certain temps maintenant, les messages sous forme de « Image de notification étendue».
 
 !\[Rich Not Blog\]\[7\]
 
-## Requirements
+## Exigences
 
-- Note that the expanded notification view is only available on devices using Jelly Bean (Android 4.1) or above. If a user's device is not running on these systems, they will not see the notification image.
-- Android Extended Notification images must be 2:1 ratio, but __do not have a size limit__.
-- Android also allows for setting a separate image for the standard notification view. <br>Recommended size images: 512x256 for Small, 1024x512 for Medium, and 2048x1024 for Large.
-- Currently, Android rich notifications only allow for static images including jpg and png file formats, gifs and other image formats are not yet supported.
+- Notez que la vue de notification étendue n'est disponible que sur les appareils utilisant Jelly Bean (Android 4.1) ou supérieur. Si le périphérique d'un utilisateur ne fonctionne pas sur ces systèmes, il ne verra pas l'image de notification.
+- Les images Android Extended Notification doivent être de 2:1, mais __n'ont pas de limite de taille__.
+- Android permet également de définir une image séparée pour la vue de notification standard. <br>Taille recommandée des images : 512x256 pour Small, 1024x512 pour Medium, et 2048x1024 pour Large.
+- Actuellement, les notifications riches d'Android ne permettent que les images statiques, y compris les formats de fichiers jpg et png, les gifs et autres formats d'image ne sont pas encore pris en charge.
 
 {% alert note %}
-While Braze provides instructions on how to set up rich push, that actual rendering of rich push notifications can vary depending on outside factors such as device aspect ratio, android version, OEM- specific constraints, etc. <br><br> We recommend doing a send test to multiple Android devices to make sure your rich push notifications are appearing as you intend them to.
+Pendant que Braze fournit des instructions sur la façon de mettre en place une poussée riche, que le rendu réel des notifications poussées riches peut varier en fonction de facteurs extérieurs tels que le rapport d'aspect de l'appareil, la version androïde, les contraintes spécifiques à OEM, etc. <br><br> Nous vous recommandons de faire un test d'envoi sur plusieurs appareils Android pour vous assurer que vos notifications push riches apparaissent comme vous les avez prévues.
 {% endalert %}
 
-## Setting up your Android rich notification
+## Configuration de votre notification enrichie Android
 
-### Step 1: Create campaign
+### Étape 1 : Créer une campagne
 
-Follow the [campaign steps][3] you normally do to compose a push notification for Android. You will be using the same composer that you use for setting up push notifications that do not contain rich content.
+Suivez les [étapes de la campagne][3] que vous faites normalement pour rédiger une notification push pour Android. Vous utiliserez le même compositeur que vous utilisez pour configurer les notifications push qui ne contiennent pas de contenu riche.
 
-### Step 2: Add captioning
+### Étape 2: Ajouter un sous-titrage
 
-Add the **Summary Text/Image Caption** that you'd like to display above the image in the notification.
+Ajoutez le **Résumé Texte/Image Légende** que vous souhaitez afficher au-dessus de l'image dans la notification.
 
-!\[Add Android Summary Text\]\[9\]
+!\[Ajouter un texte de résumé Android\]\[9\]
 
-### Step 3: Add media
+### Étape 3 : Ajouter un média
 
-Add your image in the **Expanded Notification Image** field in the composer of the message. Images can be uploaded directly through the dashboard or by specifying a content URL that is hosted elsewhere.
+Ajoutez votre image dans le champ **Image de notification étendue** dans le compositeur du message. Les images peuvent être téléchargées directement via le tableau de bord ou en spécifiant une URL de contenu hébergée ailleurs.
 
-!\[Add Android Image\]\[8\]
+!\[Ajouter une image Android\]\[8\]
 
-### Step 4: Continue creating your campaign
+### Étape 4 : Continuer à créer votre campagne
 
-Once your rich notification content is uploaded to the dashboard, you can simply continue [scheduling your campaign][6] the way you always do.
+Une fois que votre contenu de notification enrichie est téléchargé sur le tableau de bord, vous pouvez simplement continuer [à planifier votre campagne][6] comme vous le faites toujours.
 [7]: {% image_buster /assets/img_archive/RichNot_BlogImage.png %} [8]: {% image_buster /assets/img_archive/android_rich_image.png %} [9]: {% image_buster /assets/img_archive/android_rich_summarytext.png %}
 
 [3]: {{site.baseurl}}/user_guide/message_building_by_channel/push/creating_a_push_message/#creating-a-push-message
