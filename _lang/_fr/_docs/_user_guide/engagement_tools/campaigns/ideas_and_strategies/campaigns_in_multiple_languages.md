@@ -1,96 +1,96 @@
 ---
-nav_title: Campaigns in Multiple Languages
-article_title: Campaigns in Multiple Languages
+nav_title: Campagnes en plusieurs langues
+article_title: Campagnes en plusieurs langues
 page_order: 4
-page_type: tutorial
-description: "This how-to article will walk you through how to send messages in different languages from within Braze dashboard campaigns."
-tool: Campaigns
+page_type: tutoriel
+description: "Cet article pratique vous guidera dans la façon d'envoyer des messages en différentes langues depuis les campagnes du tableau de bord de Braze."
+tool: Campagnes
 ---
 
-# Campaigns in multiple languages
+# Campagnes en plusieurs langues
 
-> This how-to article will go over how to send messages in different languages from within Braze dashboard campaigns. <br> <br> Being able to deliver messages in multiple languages allows users to interact and reach their customers in a truly personalized way.
+> Cet article sur la façon d'envoyer des messages en différentes langues à partir des campagnes du tableau de bord de Braze. <br> <br> Être en mesure de livrer des messages en plusieurs langues permet aux utilisateurs d'interagir et d'atteindre leurs clients de manière vraiment personnalisée.
 
-Braze allows you to send messages in different languages from our Dashboard. When composing a campaign, our language templating feature enables you to easily create one message that appears in different languages depending on the user's phone settings.
+Braze vous permet d'envoyer des messages dans différentes langues depuis notre tableau de bord. Lors de la composition d'une campagne, notre fonction de template de langue vous permet de créer facilement un message qui apparaît dans différentes langues selon les paramètres du téléphone de l'utilisateur.
 
-Here's how you can set up a message in multiple languages:
+Voici comment configurer un message dans plusieurs langues :
 
-## Step 1: Feature opt-in
+## Étape 1 : Opt-in de la fonctionnalité
 
-When composing your campaign, click on **Add Languages**.
+Lors de la rédaction de votre campagne, cliquez sur **Ajouter des langues**.
 
-!\[Add Languages\]\[1\]{: style="max-width:60%;" }
+!\[Ajouter des langues\]\[1\]{: style="max-width:60%;" }
 
-## Step 2: Select languages
+## Étape 2 : Sélectionnez les langues
 
-Select the languages that your message will be in. The selections offered in the dropdown menu will be all of the languages that your users currently have. Braze automatically tracks the language in users' device settings and includes this information in each user's profile. After you select your languages, the snippet textbox will alter to feature a template that you can copy and paste into the content of your message. This template uses [conditional logic][3] to handle multiple languages in a single campaign.
+Sélectionnez les langues dans lesquelles votre message sera envoyé. Les sélections proposées dans le menu déroulant seront toutes les langues que vos utilisateurs ont actuellement. Braze suit automatiquement la langue dans les paramètres de l'appareil des utilisateurs et inclut cette information dans le profil de chaque utilisateur. Après avoir sélectionné vos langues, la zone de texte du snippet sera modifiée pour mettre en vedette un modèle que vous pouvez copier et coller dans le contenu de votre message. Ce modèle utilise la [logique conditionnelle][3] pour gérer plusieurs langues dans une seule campagne.
 
 !\[Select Languages\]\[2\]
 
-## Step 3: Select fields
+## Étape 3: Sélectionnez les champs
 
-Select the fields that you want to appear in different languages. These fields will differ depending on the message channel:
+Sélectionnez les champs que vous souhaitez afficher dans différentes langues. Ces champs seront différents en fonction du canal de message :
 
-- Email: Subject and body
-- Android Push: Message, Title, Summary Text, Sound, and Custom URL
-- iOS Push: Message, Sound, and Custom URL
-- In-App Message: Message
-- Windows Universal Push: Text 1, Text 2, Text 3, and Image Name
+- E-mail: Sujet et Corps
+- Push Android : Message, titre, texte sommaire, son et URL personnalisée
+- Push iOS : Message, son et URL personnalisée
+- Message In-App : Message
+- Push universel Windows : Texte 1, Texte 2, Texte 3, et Nom de l'image
 
-In addition, a warning will display if you have already entered content in any of the selected fields. You can choose to replace existing content with the templated text or insert the templated text after the existing text.
+De plus, un avertissement s'affichera si vous avez déjà entré du contenu dans l'un des champs sélectionnés. Vous pouvez choisir de remplacer le contenu existant par le texte modèle ou d'insérer le texte modèle après le texte existant.
 
 !\[Select Fields\]\[4\]
 
-## Step 4: Insert fields
+## Étape 4: Insérer des champs
 
-Using the buttons at the bottom of the dialogue, choose how you wish to insert the templated text into the message composer. Or, copy and paste the template into the desired location.
+En utilisant les boutons en bas de la boîte de dialogue, choisissez comment vous souhaitez insérer le texte du modèle dans le compositeur de messages. Ou copiez et collez le modèle à l'emplacement souhaité.
 
-## Step 5: Add language variations
+## Étape 5 : Ajouter des variations de langue
 
-After your templated text is inserted into the desired fields, type in different variations for each language. For each field where there is templating, you should enter the variations after the bracketed segment of templating. The variation should correspond to the language code referenced in the brackets before it. For instance, in the message's body, this might look like:
+Après l'insertion de votre texte gabarit dans les champs souhaités, tapez différentes variations pour chaque langue. Pour chaque champ où il y a un modèle, vous devez entrer les variations après le segment entre parenthèses. La variation doit correspondre au code de langue référencé dans les crochets précédents. Par exemple, dans le corps du message, cela peut ressembler à :
 
 {% raw %}
 
 ```liquid
 {% if ${language} == 'en' %}
-Hello!
+Bonjour !
 {% elsif ${language} == 'fr' %}
 Bonjour!
 {% else %}
-Hello!
+Bonjour !
 {% endif %}
 ```
 
-In the title of an Android push, this might look like:
+Dans le titre d'une poussée Android, cela peut ressembler à :
 
 ```liquid
 {% if ${language} == 'en' %}Hello!{% elsif ${language} == 'fr' %}Bonjour!{% else %}Hello!{% endif %}
 ```
 
-The text you enter after `{% else %}` will display to users who:
+Le texte que vous entrez après `{% else %}` s'affichera aux utilisateurs qui :
 
-- Have a language that was not selected in Step 2.
-- Have a language that is not supported by Braze. Braze supports the languages represented by ISO 639-1 two-letter codes, as well as a few additional ones not included in that set. For a complete list, check out our [iOS Localization page][8].
-- Have a device where the language is undetectable. (This is highly unlikely).
+- Ayez une langue qui n'a pas été sélectionnée à l'étape 2.
+- Ayez une langue qui n'est pas prise en charge par le Brésil. Braze prend en charge les langues représentées par les codes à deux lettres ISO 639-1, ainsi que quelques autres langues qui ne sont pas incluses dans cet ensemble. Pour une liste complète, consultez notre [page de traduction iOS][8].
+- Avoir un appareil où la langue n'est pas détectable. (C'est très peu probable).
 
-A best practice is to enter text here that you think your users are most likely to understand. To ensure smooth delivery, you should always enter content after `{% else %}`.
+Une meilleure pratique est d'entrer du texte ici que vous pensez que vos utilisateurs sont le plus susceptibles de comprendre. Pour assurer une livraison fluide, vous devez toujours entrer le contenu après `{% else %}`.
 
 {% endraw %}
 
-Anything entered outside of the template block will behave like normal content and display for all users.
+Tout ce qui est entré en dehors du bloc de gabarit se comportera comme du contenu normal et sera affiché pour tous les utilisateurs.
 
 !\[Type Variations\]\[6\]
 
-## Step 6: Preview message
+## Étape 6: Prévisualiser le message
 
-Click the Personalized Preview button and enter a user's ID or email to see how the message would appear to that individual, depending on their language. In addition, you'll be able to see how your entire message looks as a whole and decide whether to add languages to more fields than the ones you had previously chosen.
+Cliquez sur le bouton Aperçu personnalisé et entrez l'ID ou l'e-mail d'un utilisateur pour voir comment le message apparaîtrait, en fonction de leur langue. De plus, vous serez en mesure de voir à quoi ressemble votre message dans son ensemble et de décider si vous souhaitez ajouter des langues à plus de champs que ceux que vous aviez précédemment choisis.
 
-!\[Preview Message\]\[7\]
+!\[Prévisualiser le message\]\[7\]
 
-## Step 7: Finish campaign
+## Étape 7 : Terminer la campagne
 
-Continue through the remaining steps of message creation. This includes finishing composing the message (for instance, editing Advanced Settings).
-[1]: {% image_buster /assets/img_archive/languages_1.png %} [2]: {% image_buster /assets/img_archive/languages_2.png %} [4]: {% image_buster /assets/img_archive/languages_3.png %} [6]: {% image_buster /assets/img_archive/languages_5.png %} [7]: {% image_buster /assets/img_archive/languages_6.png %}
+Continuez à travers les étapes restantes de la création du message. Cela inclut la fin de la rédaction du message (par exemple, la modification des paramètres avancés).
+[1]: {% image_buster /assets/img_archive/languages_1.png %} [2]: {% image_buster /assets/img_archive/languages_2.png %} [4]: {% image_buster /assets/img_archive/languages_3. ng %} [6]: {% image_buster /assets/img_archive/languages_5.png %} [7]: {% image_buster /assets/img_archive/languages_6.png %}
 
 [3]: {{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/conditional_logic/
 [8]: {{site.baseurl}}/developer_guide/platform_integration_guides/ios/advanced_use_cases/localization/
