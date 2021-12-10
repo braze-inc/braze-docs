@@ -1,39 +1,39 @@
 ---
-nav_title: Content Blocks
-article_title: Content Blocks
+nav_title: Blocs de contenu
+article_title: Blocs de contenu
 page_order: 1
-page_type: reference
-description: "This reference article explains how to use the Content Blocks Library to manage your reusable, cross-channel content in a single, centralized location."
+page_type: Référence
+description: "Cet article de référence explique comment utiliser la bibliothèque de blocs de contenu pour gérer votre contenu réutilisable et inter-canal dans un seul emplacement centralisé."
 tool:
-  - Templates
-  - Media
+  - Modèles
+  - Médias
 ---
 
-# Content Blocks
+# Blocs de contenu
 
-> The Content Blocks Library allows you to manage your reusable, cross-channel content in a single, centralized location. To access this feature, go into the __Content Blocks Library__ tab in the [Templates & Media][6] section of your Braze account.
+> La bibliothèque de blocs de contenu vous permet de gérer votre contenu réutilisable et multi-canal dans un seul et même emplacement. Pour accéder à cette fonctionnalité, allez dans l'onglet __Content Blocks Library__ dans la section [Modèles & Média][6] de votre compte Braze.
 
-With Content Blocks, you can:
+Avec les blocs de contenu, vous pouvez:
 
-- Create a consistent look and feel to your Email campaigns using Content Blocks as Headers and Footers.
-- Distribute the same offer codes through different channels.
-- Create pre-defined assets that can be used to build messages with consistent information and assets.
-- Copy entire message bodies to other messages.
+- Créez une apparence et une apparence cohérentes à vos campagnes de courriels en utilisant des blocs de contenu comme entêtes et pied de page.
+- Distribuez les mêmes codes de l'offre par le biais de canaux différents.
+- Créer des actifs prédéfinis qui peuvent être utilisés pour construire des messages avec des informations et des actifs cohérents.
+- Copier le corps entier du message vers d'autres messages.
 
-## Create a Content Block
+## Créer un bloc de contenu
 
-Creating a Content Block is easy — go to __Templates & Media__, then select the __Content Blocks Library__ tab. Click __Create Content Block.__
+Créer un bloc de contenu est facile — allez dans __Modèles & Médias__, puis sélectionnez l'onglet __Bibliothèque de blocs de contenu__. Cliquez sur __Créer un bloc de contenu.__
 
-Then, create your Content Block!
+Ensuite, créez votre bloc de contenu !
 
-!\[Create new Content Block\]\[1\]
+!\[Créer un nouveau bloc de contenu\]\[1\]
 
-Content Blocks have two types: `HTML` or `text`. Braze will select the type for you based on the content you inserted into the block. If Braze detects `HTML` markup in the Content Block, the block type will switch to `HTML` automatically. Otherwise, it will be considered `text`.
+Les blocs de contenu ont deux types : `HTML` ou `texte`. Braze sélectionnera le type pour vous en fonction du contenu que vous avez inséré dans le bloc. Si Braze détecte le balisage `HTML` dans le bloc de contenu, le type de bloc passera automatiquement à `HTML`. Sinon, il sera considéré comme `texte`.
 
-You can also [create and manage your Content Blocks via API][5].
+Vous pouvez également [créer et gérer vos blocs de contenu via l'API][5].
 
 {% alert tip %}
-When creating Content Blocks, it sometimes helps to visualize HTML and Liquid by adding line breaks. If these line breaks are left in during sending, you risk having extraneous spaces that can affect how the block will render. To avoid this, utilize the __Capture__ tag on your block along with the __&#124; strip__ filter.
+Lors de la création de blocs de contenu, il aide parfois à visualiser HTML et Liquid en ajoutant des sauts de ligne. Si ces sauts de ligne sont laissés pendant l'envoi, vous risquez d'avoir des espaces extérieurs qui peuvent affecter la façon dont le bloc sera affiché. Pour éviter cela, utilisez la balise __Capture__ sur votre bloc avec le filtre __&#124; bande__.
 {% raw %}
 ```
 {% capture your_variable %}
@@ -43,63 +43,63 @@ When creating Content Blocks, it sometimes helps to visualize HTML and Liquid by
 {% endraw %}
 {% endalert %}
 
-## Using Content Blocks
+## Utiliser les blocs de contenu
 
-1. Create your Content Block.
-2. Copy the Content Block Liquid Tag from your Content Block page.
-3. Insert the Content Block Liquid Tag into the message. You can also begin typing the Liquid and have the tag auto-populate.
+1. Créez votre bloc de contenu.
+2. Copiez la balise Liquid de bloc de contenu de votre page de bloc de contenu.
+3. Insérez la balise Liquid du bloc de contenu dans le message. Vous pouvez également commencer à taper le Liquid et faire remplir automatiquement le tag.
 
-## Updating and copying Content Blocks
+## Mise à jour et copie des blocs de contenu
 
-If you choose to update a Content Block, it will update in all messages the Content Block is used.
+Si vous choisissez de mettre à jour un bloc de contenu, il sera mis à jour dans tous les messages que le bloc de contenu est utilisé.
 
-If you want to update a Content Block for a single message or make a copy to use in other messages, you can copy the HTML from the original message to your new one, or edit the original Content Block (it must have been used in a message already) and save it. You will then get a prompt that allows you to save it as a new Content Block.
+Si vous voulez mettre à jour un bloc de contenu pour un seul message ou faire une copie à utiliser dans d'autres messages, vous pouvez copier le HTML du message original vers votre nouveau message ou modifiez le bloc de contenu original (il doit déjà avoir été utilisé dans un message) et enregistrez-le. Vous obtiendrez alors une invite qui vous permettra de l'enregistrer en tant que nouveau bloc de contenu.
 
 !\[Save Content Block dialog\]\[2\]{: height="70%" width="70%"}
 
-You can also [duplicate a Content Block]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/duplicate/) with our Templates & Media feature. When you do this, a "draft" copy is created.
+Vous pouvez également [dupliquer un bloc de contenu]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/duplicate/) avec nos Modèles & Fonctionnalité Média. Lorsque vous faites cela, une copie "brouillon" est créée.
 
-## Nesting Content Blocks
+## Blocs de contenu imbriqués
 
-Content Blocks can be nested, but only once! You can nest _Content Block A_ into _Content Block B_, but you will not be able to then nest _Content Block B_ into _Content Block C_.
+Les blocs de contenu peuvent être imbriqués, mais une seule fois ! Vous pouvez imbriquer _Bloc de contenu A_ dans _Bloc de contenu B_, mais vous ne pourrez pas imbriquer le _Bloc de contenu B_ dans le _Bloc de contenu C_.
 
 {% alert warning %}
-Nothing will prevent you from nesting a third level of Content Block, but you will not see the content expand in nests beyond the second. The content and the Liquid snippet are removed from the message.
+Rien ne vous empêchera d’imbriquer un troisième niveau de bloc de contenu, mais vous ne verrez pas le contenu s’étendre dans les nids au-delà du second. Le contenu et le snippet Liquid sont supprimés du message.
 {% endalert %}
 
-Additionally, Content Blocks cannot be used within an email footer, though email footers can be used within Content Blocks.
+De plus, les blocs de contenu ne peuvent pas être utilisés dans un pied de page de courriel, même si les pieds de page peuvent être utilisés dans les blocs de contenu.
 
-## Archiving Content Blocks
+## Archivage des blocs de contenu
 
-!\[Expand settings icon and select Archive\]\[3\]{: style="max-width:20%;float:right;margin-left:15px;" }
+!\[Développer l'icône des paramètres et sélectionner Archive\]\[3\]{: style="max-width:20%;float:right;margin-left:15px;" }
 
-Once you have finished using a Content Block, you can archive it from the [Templates & Media]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/archive/) page.
+Une fois que vous avez fini d'utiliser un bloc de contenu, vous pouvez l'archiver à partir de la page [Modèles & Média]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/archive/).
 
-Messages using the archived Block will still perform as though it was there. However, we recommend several best practices to ensure that outdated information is not accidentally included in your emails.
+Les messages utilisant le bloc archivé se feront toujours comme s'il était là. Cependant, nous vous recommandons plusieurs pratiques exemplaires afin de vous assurer que les informations périmées ne sont pas incluses accidentellement dans vos courriels.
 
-1. When your Block is only used in a few emails, we recommend archiving the outdated Block and updating your live messages with a newer Block that has not been archived.
-2. When your Block only has a typo or needs a minor change, we do not recommend archiving the Block. Just update and get sending!
-3. When your Block is used in more messages than you can reasonably manage with the first suggestion in this list, we recommend removing __all__ content from the Block, then archiving it. This will ensure no outdated information makes its way into any newly sent emails.
+1. Lorsque votre bloc n'est utilisé que dans quelques e-mails, Nous vous recommandons d'archiver le bloc obsolète et de mettre à jour vos messages en direct avec un nouveau bloc qui n'a pas été archivé.
+2. Lorsque votre bloc a seulement une faute de frappe ou a besoin d'un changement mineur, nous ne recommandons pas d'archiver le bloc. Il vous suffit de mettre à jour et d'envoyer !
+3. Lorsque votre bloc est utilisé dans plus de messages que vous ne pouvez raisonnablement gérer avec la première suggestion de cette liste, nous vous recommandons de supprimer __tout le contenu__ du bloc, puis de l'archiver. Ainsi, aucune information obsolète ne sera transmise dans les courriels qui viennent d'être envoyés.
 
 {% alert tip %}
-  You can save a Content Block without content in it.
+  Vous pouvez enregistrer un bloc de contenu sans le contenu.
 {% endalert %}
 
-If you made a mistake in archiving a Content Block, you can unarchive it.
+Si vous avez fait une erreur dans l'archivage d'un bloc de contenu, vous pouvez le désarchiver.
 
-!\[Expand settings icon and select Unarchive\]\[4\]
+!\[Développer l'icône des paramètres et sélectionner Déarchiver\]\[4\]
 
-## Content Block specifications
+## Caractéristiques du bloc de contenu
 
-| Content Block Attribute | Specifications                                                                                                                                                                                                                              |
-| ----------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Name                    | Required field limited to 100 characters. It cannot be renamed after Content Block has been saved. Additionally, you cannot name a new Content Block the same name as a previous Content Block, even if the previous one has been archived. |
-| Description             | Optional field limited to 250 characters. Describe the Content Block so that others viewing it in the Braze product will know what it's for and where it's being used.                                                                      |
-| Content Size            | Limited to 50kB (Kilobyte).                                                                                                                                                                                                                 |
-| Placement               | Content Blocks cannot be used within an email footer.                                                                                                                                                                                       |
-| Creation                | HTML or Text.                                                                                                                                                                                                                               |
+| Attribut de bloc de contenu | Caractéristiques                                                                                                                                                                                                                                                            |
+| --------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Nom                         | Champ obligatoire limité à 100 caractères. Il ne peut pas être renommé après que le bloc de contenu ait été enregistré. De plus, vous ne pouvez pas nommer un nouveau bloc de contenu avec le même nom qu'un bloc de contenu précédent, même si le précédent a été archivé. |
+| Libellé                     | Champ facultatif limité à 250 caractères. Décrivez le bloc de contenu pour que les autres personnes qui le consulteront dans le produit Braze sachent à quoi il sert et où il est utilisé.                                                                                  |
+| Taille du contenu           | Limité à 50 Ko (Kilobyte).                                                                                                                                                                                                                                                  |
+| Placement                   | Les blocs de contenu ne peuvent pas être utilisés dans un pied de page de courriel.                                                                                                                                                                                         |
+| Création                    | HTML ou Texte.                                                                                                                                                                                                                                                              |
 {: .reset-td-br-1 .reset-td-br-2}
-[1]: {% image_buster /assets/img/create-content-blocks.gif %} [2]: {% image_buster /assets/img/copy-content-block.png %} [3]: {% image_buster /assets/img/template_archive_cog.png %} [4]: {% image_buster /assets/img/unarchive-content-block.png %}
+[1]: {% image_buster /assets/img/create-content-blocks.gif %} [2]: {% image_buster /assets/img/copy-content-block. ng %} [3]: {% image_buster /assets/img/template_archive_cog.png %} [4]: {% image_buster /assets/img/unarchive-content-block.png %}
 
 [5]: {{site.baseurl}}/api/endpoints/templates/
 [6]: {{site.baseurl}}/user_guide/engagement_tools/templates_and_media/
