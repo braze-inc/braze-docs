@@ -1,49 +1,49 @@
 ---
-nav_title: Inbox Vision
-article_title: Inbox Vision
+nav_title: Vision de la boîte de réception
+article_title: Vision de la boîte de réception
 page_order: 5
-description: "Inbox Vision allows marketers to view their emails from the perspective of various email clients and mobile devices. This reference article covers how to set up and use Inbox Vision."
+description: "Inbox Vision permet aux marketeurs de visualiser leurs courriels du point de vue de divers clients de messagerie et appareils mobiles. Cet article de référence traite de la façon de mettre en place et d'utiliser Inbox Vision."
 tool:
-  - Dashboard
+  - Tableau de bord
 channel:
-  - email
+  - Email
 ---
 
-# Inbox Vision
+# Vision de la boîte de réception
 
-Inbox Vision allows marketers to view their emails from the perspective of various email clients and mobile devices. Access Inbox Vision from the email editor by clicking **Preview and Test**.  It also allows you to spam test from the **Spam Test** tab.
+Inbox Vision permet aux marketeurs de visualiser leurs courriels du point de vue de divers clients de messagerie et appareils mobiles. Accédez à la Vision de boîte de réception à partir de l'éditeur d'e-mail en cliquant sur **Aperçu et test**.  Il vous permet également de spam test depuis l'onglet **Spam Test**.
 
-## Test your email
+## Testez votre adresse e-mail
 
-To test your email message in Inbox Vision, click **Preview and Test** within the email composer. Braze then sends an HTML version of your email to various email clients used across the globe, which may take between two and ten minutes to complete.
+Pour tester votre message dans Réception Vision, cliquez sur **Aperçu et Tester** dans le compositeur de courriel. Braze envoie ensuite une version HTML de votre e-mail à divers clients de messagerie utilisés à travers le monde, qui peut prendre entre deux et dix minutes à compléter.
 
-Braze will then display screenshots of a sample, rendered HTML on desktops, mobile devices, and tablets. The devices in which screenshots are displayed are scrollable, to allow for better viewing. If you encounter unclear screenshots for certain email clients, click **Reprocess Screenshot** to create another screenshot.
+Braze affichera ensuite des captures d'écran d'un échantillon, du HTML affiché sur les ordinateurs de bureau, les appareils mobiles et les tablettes. Les périphériques dans lesquels les captures d'écran sont affichées sont scrollable, pour permettre une meilleure vue. Si vous rencontrez des captures d'écran non claires pour certains clients de messagerie, cliquez sur **Retraiter la capture d'écran** pour créer une autre capture d'écran.
 
-If you run an Inbox Vision test, you will also receive a code analysis and spam testing results.
+Si vous effectuez un test de Vision Boîte de réception, vous recevrez également des résultats d'analyse de code et de test de spam.
 
 !\[inboxvision1\]\[1\]
 
-Once you make changes to a template, you will need to click **Re-Run Test** to see the effect of the changes on the previews.
+Une fois que vous apportez des modifications à un modèle, vous devrez cliquer sur **Re-Run Test** pour voir l'effet des modifications sur les aperçus.
 
-{% alert important %} In general, your email will not work with Inbox Vision if your email content relies on templating info such as user profile information. This is because Braze templates in an empty user when we send emails using this feature. {% endalert %}
+{% alert important %} En général, votre e-mail ne fonctionnera pas avec la Vision Boîte de réception si votre contenu de courrier électronique repose sur des informations de modèle telles que les informations de profil de l'utilisateur. Ceci est dû au fait que les modèles Braze dans un utilisateur vide lorsque nous envoyons des e-mails en utilisant cette fonctionnalité. {% endalert %}
 
-## Code analysis
+## Analyse de code
 
-Code analysis is a way for Braze to highlight issues that may exist with your HTML, showing the number of occurrences of each issue and providing insight into which HTML elements are not supported. This information can be found on the Inbox Vision preview page by selecting the list icon in the upper left-hand corner.
+L'analyse de code est un moyen pour Braze de mettre en évidence les problèmes qui peuvent exister avec votre HTML, indiquant le nombre d'occurrences de chaque fiche et fournissant un aperçu des éléments HTML qui ne sont pas pris en charge. Cette information se trouve sur la page Aperçu de la Vision de la boîte de réception en sélectionnant l'icône de la liste dans le coin supérieur gauche.
 
 !\[inboxvision2\]\[2\]
 
 !\[inboxvision3\]\[3\]
 
-{% alert note %} Sometimes the code analysis will show up faster than the preview for a particular email client. This is because we wait until the email arrives in the inbox before taking the screenshot. {% endalert %}
+{% alert note %} Parfois, l'analyse de code s'affichera plus rapidement que l'aperçu d'un client de messagerie particulier. C'est parce que nous attendons que l'email arrive dans la boîte de réception avant de prendre la capture d'écran. {% endalert %}
 
-## Spam testing
+## Tests de spam
 
-[Spam testing][4] attempts to predict whether your email will land in spam folders or your customers' inboxes.  Spam testing runs across major spam filters, such as IronPort, SpamAssassin, and Barracuda, as well as major ISP filters such as Gmail.com and Outlook.com.
+[Le test de spam][4] tente de prédire si votre e-mail va atterrir dans des dossiers de spam ou dans les boîtes de réception de vos clients.  Les tests de spam se déroulent sur les principaux filtres de spam tels que IronPort, SpamAssassin, Barracuda, ainsi que sur les principaux filtres ISP tels que Gmail.com et Outlook.com.
 
-## Test accuracy
+## Précision du test
 
-All of our tests are run through actual email clients. We work hard to ensure that all renderings are as accurate as possible.  If you consistently see an issue with an email client, please open a [support ticket]({{site.baseurl}}/braze_support/).
+Tous nos tests sont exécutés par des clients de messagerie réels. Nous nous efforçons de nous assurer que tous les renders sont aussi précis que possible.  Si vous constatez un problème avec un client de messagerie, veuillez ouvrir un [ticket de support]({{site.baseurl}}/braze_support/).
 [1]: {% image_buster /assets/img_archive/inboxvision1.png %} [2]: {% image_buster /assets/img_archive/inboxvision2.png %} [3]: {% image_buster /assets/img_archive/inboxvision3.png %}
 
 [4]: {{site.baseurl}}/email_spam_testing/
