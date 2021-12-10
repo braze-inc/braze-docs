@@ -1,94 +1,94 @@
 ---
-nav_title: Understanding Webhooks
-article_title: Understanding Webhooks
+nav_title: Comprendre les Webhooks
+article_title: Comprendre les Webhooks
 page_order: 0
 channel:
   - webhooks
-description: "This reference article covers the basics of webhooks."
+description: "Cet article de référence couvre les bases des webhooks."
 ---
 
-# Understanding Webhooks
+# Comprendre les Webhooks
 
-> This reference article covers the basics of webhooks to give you the building blocks you need to create your own. Lookings for steps on how to create a webhook in Braze? Refer to [Creating a webhook][1].
+> Cet article de référence couvre les bases des webhooks pour vous donner les blocs de construction dont vous avez besoin pour créer vos propres crochets. Vous cherchez des étapes sur la façon de créer un webhook au Brésil? Reportez-vous à [Créer un webhook][1].
 
-Webhooks are a common way for applications to communicate—to share data in real time. In this day and age, we rarely have one standalone application that can do everything. Most of the time, you're working in many different apps or systems that are specialized to perform certain tasks, and these apps all need to be able to communicate with one another. That's where webhooks come in.
+Les Webhooks sont un moyen courant pour les applications de communiquer, de partager des données en temps réel. À notre époque, nous avons rarement une application autonome qui peut tout faire. La plupart du temps, vous travaillez dans plusieurs applications ou systèmes différents qui sont spécialisés pour exécuter certaines tâches, et ces applications ont besoin d'être en mesure de communiquer entre elles. C'est là que les webhooks entrent.
 
-A webhook is an automated message from one system to another after a certain criteria has been met. In Braze, this criteria is usually the triggering of a custom event.
+Un webhook est un message automatisé d'un système à l'autre après avoir rempli certains critères. En Brésil, ce critère est généralement le déclenchement d'un événement personnalisé.
 
-At its core, a webhook is an event-based method for two separate systems to take effective action based on data transmitted in real time. That message contains instructions that tells the receiving system when and how to perform a specific task. Because of this, webhooks can provide you with more dynamic and flexible access to data and programmatic functionality, and empower you to set up customer journeys that streamline processes.
+En son cœur, un webhook est une méthode événementielle permettant à deux systèmes distincts de prendre des mesures efficaces en fonction des données transmises en temps réel. Ce message contient des instructions qui indiquent au système de réception quand et comment effectuer une tâche spécifique. Grâce à cela, les webhooks peuvent vous fournir un accès plus dynamique et plus flexible aux données et aux fonctionnalités programmatiques, et vous permettre de mettre en place des trajets clients qui simplifient les processus.
 
-## Use cases
+## Cas d'utilisation
 
-Webhooks are an excellent way to connect your systems together—after all, webhooks are how apps communicate. Here are some general scenarios where webhooks can be particularly useful:
+Les Webhooks sont un excellent moyen de connecter vos systèmes ensemble — après tout, les webhooks sont la façon dont les applications communiquent. Voici quelques scénarios généraux où les webhooks peuvent être particulièrement utiles :
 
-- Sending data to and from Braze
-- Sending messages to your customers via channels not directly supported by Braze
-- Posting to Braze APIs
+- Envoi de données vers et depuis Braze
+- Envoi de messages à vos clients via des canaux qui ne sont pas directement pris en charge par Braze
+- Envoi sur Braze APIs
 
-Some more specific use cases include the following:
+Quelques cas d'utilisation plus spécifiques incluent les suivants :
 
-- If a user unsubscribes from email, you could have a webhook update your analytics database or CRM with that same information, ensuring a holistic view of that user's behavior.
-- Send [transactional messages]({{site.baseurl}}/api/api_campaigns/transactional_api_campaign/) to users within Facebook Messenger or Line.
-- Send direct mail to customers in response to their in-app and web activity by using webhooks to communicate with third-party services like [Lob.com]({{site.baseurl}}/partners/message_orchestration/additional_channels/direct_mail/lob/).
-- If you’re a reservations app, you could send an SMS message powered by Twilio to confirm a customer’s in-app request.
-- If a gamer reaches a certain level or accrues a certain number of points, use webhooks and your existing API setup to send a character upgrade or coins directly to their account. If you send the webhook as part of a multichannel messaging campaign, you can send a push or other message to let the gamer know about the reward at the same time.
-- If you’re an airline, you can use webhooks and your existing API setup to credit a customer’s account with a discount once they’ve booked a certain number of flights.
-- Endless “If This Then That” ([IFTTT](https://ifttt.com/about)) recipes—for instance, if a customer signs into the app via email, then that address can automatically be configured into Salesforce.
+- Si un utilisateur se désabonne de l'e-mail, vous pourriez avoir un webhook mettre à jour votre base de données d'analyse ou CRM avec les mêmes informations, en garantissant une vue d'ensemble du comportement de cet utilisateur.
+- Envoyez [messages transactionnels]({{site.baseurl}}/api/api_campaigns/transactional_api_campaign/) aux utilisateurs dans Facebook Messenger ou Line.
+- Envoyez du courrier direct aux clients en réponse à leur activité dans l'application et Web en utilisant des webhooks pour communiquer avec des services tiers tels que [Lob. om]({{site.baseurl}}/partners/message_orchestration/additional_channels/direct_mail/lob/).
+- Si vous êtes une application de réservation, vous pouvez envoyer un message SMS propulsé par Twilio pour confirmer la demande de l'application d'un client.
+- Si un joueur atteint un certain niveau ou accède à un certain nombre de points, utilisez les webhooks et votre configuration API existante pour envoyer une mise à niveau de personnage ou des pièces directement sur leur compte. Si vous envoyez le webhook dans le cadre d'une campagne de messagerie multi-canaux, vous pouvez envoyer un message push ou autre pour informer le joueur de la récompense en même temps.
+- Si vous êtes une compagnie aérienne, vous pouvez utiliser des webhooks et votre configuration API existante pour créditer le compte d'un client avec une remise une fois qu'il a réservé un certain nombre de vols.
+- Recettes sans fin « Si cela alors » ([IFTTT](https://ifttt.com/about)) — par exemple, si un client se connecte à l'application par e-mail, cette adresse peut être automatiquement configurée dans Salesforce.
 
-## Anatomy of a webhook
+## Anatomie d'un webhook
 
-A webhook consists of the following three parts:
+Un webhook se compose des trois parties suivantes :
 
-!\[Example webhook broken out into HTTP method, HTTP URL, and request body\]\[2\]
+!\[Exemple de webhook divisé en méthode HTTP, URL HTTP, et corps de requête\]\[2\]
 
-| Part of Webhook         | Description                                                                                                                                                                                                                   |
-| ----------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| [HTTP method](#methods) | Like APIs, webhooks need request methods. These are given to the URL the webhook hits, and tells the endpoint what to do with the information given. There are four HTTP methods you can specify: POST, GET, PUT, and DELETE. |
-| HTTP URL                | The URL address of your webhook endpoint. The endpoint is the place where you’ll be sending the information that you’re capturing in the webhook.                                                                             |
-| Request body            | This part of the webhook contains the information that you're communicating to the endpoint. The request body can be JSON key-value pairs or raw text.                                                                        |
+| Partie du Webhook        | Libellé                                                                                                                                                                                                                                                                                        |
+| ------------------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| [Méthode HTTP](#methods) | Tout comme les API, les webhooks ont besoin de méthodes de requête. Celles-ci sont données à l'URL à laquelle le webhook accède et indiquent au endpoint ce qu'il faut faire avec les informations fournies. Il y a quatre méthodes HTTP que vous pouvez spécifier : POST, GET, PUT et DELETE. |
+| URL HTTP                 | L'adresse URL du point de terminaison de votre webhook. Le point de terminaison est l'endroit où vous enverrez les informations que vous capturez dans le webhook.                                                                                                                             |
+| Corps de la requête      | Cette partie du webhook contient les informations que vous communiquez à la terminaison. Le corps de la requête peut être des paires de clés JSON ou du texte brut.                                                                                                                            |
 {: .reset-td-br-1 .reset-td-br-2}
 
-### HTTP methods {#methods}
+### Méthodes HTTP {#methods}
 
-The following table describes the four different HTTP methods you can specify in your webhook.
+Le tableau suivant décrit les quatre méthodes HTTP que vous pouvez spécifier dans votre webhook.
 
-| HTTP method | Description                                                                                                                                                                                                                                                                                                                                                |
-| ----------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| POST        | This method writes new information on the receiving server. A common example of the POST method in real world application is a [contact form](https://www.braze.com/company/contact) on a website. Whatever information you put into the form becomes part of a request body and is sent to a receiver. This is most common method used when sending data. |
-| GET         | This method retrieves existing information, as opposed to writing new information. This is the most common method used when asking for data from a server. For example, consider the [segments/list]({{site.baseurl}}/api/endpoints/export/segments/get_segment/) endpoint. If you were to make a GET request, it would return a list of your segments.    |
-| PUT         | This method updates information on the endpoint, replacing any existing information with what’s in the request body.                                                                                                                                                                                                                                       |
-| DELETE      | This method deletes the resource in the HTTP URL.                                                                                                                                                                                                                                                                                                          |
+| Méthode HTTP | Libellé                                                                                                                                                                                                                                                                                                                                                                                                                               |
+| ------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| POSTER       | Cette méthode écrit de nouvelles informations sur le serveur récepteur. Un exemple commun de la méthode POST dans l'application réelle est un [formulaire de contact](https://www.braze.com/company/contact) sur un site web. Toutes les informations que vous mettez dans le formulaire font partie d'un corps de demande et sont envoyées à un destinataire. C'est la méthode la plus courante utilisée lors de l'envoi de données. |
+| OBTENIR      | Cette méthode récupère les informations existantes, plutôt que d'écrire de nouvelles informations. C'est la méthode la plus courante utilisée pour demander des données à partir d'un serveur. Par exemple, considérez le point de terminaison [segments/liste]({{site.baseurl}}/api/endpoints/export/segments/get_segment/). Si vous faites une demande GET, elle retournera une liste de vos segments.                              |
+| EFFACER      | Cette méthode met à jour les informations sur la terminaison, en remplaçant toutes les informations existantes par ce qui se trouve dans le corps de la requête.                                                                                                                                                                                                                                                                      |
+| SUPPRIMER    | Cette méthode supprime la ressource dans l'URL HTTP.                                                                                                                                                                                                                                                                                                                                                                                  |
 {: .reset-td-br-1 .reset-td-br-2}
 
-## Webhooks in Braze
+## Webhooks à Braze
 
-In Braze, you can create a webhook as a webhook campaign, API campaign, or Canvas step.
+Au Brésil, vous pouvez créer un webhook comme une campagne de webhook, une campagne API ou une étape de Canvan.
 
 {% tabs %}
 {% tab Webhook Campaign %}
 
-1. In the Braze dashboard, go to **Campaigns**.
-2. Click **Create Campaign** and select **Webhook**.
+1. Dans le tableau de bord de Braze, allez dans **Campagnes**.
+2. Cliquez sur **Créer une campagne** et sélectionnez **Webhook**.
 
-Refer to [Creating a webhook]({{site.baseurl}}/user_guide/message_building_by_channel/webhooks/creating_a_webhook/) for more information.
+Reportez-vous à [Créer un webhook]({{site.baseurl}}/user_guide/message_building_by_channel/webhooks/creating_a_webhook/) pour plus d'informations.
 
 {% endtab %}
 {% tab API Campaign %}
 
-1. In the Braze dashboard, go to **Campaigns**.
-2. Click **Create Campaign** and select **API Campaign**.
-3. Click **Add Messages** and select **Webhook**.
-4. Format your API call to include a [webhook object]({{site.baseurl}}/api/objects_filters/messaging/webhook_object/).
+1. Dans le tableau de bord de Braze, allez dans **Campagnes**.
+2. Cliquez sur **Create Campaign** et sélectionnez **API Campaign**.
+3. Cliquez sur **Ajouter des messages** et sélectionnez **Webhook**.
+4. Formatez votre appel API pour inclure un objet [webhook]({{site.baseurl}}/api/objects_filters/messaging/webhook_object/).
 
-Refer to [Creating a webhook]({{site.baseurl}}/user_guide/message_building_by_channel/webhooks/creating_a_webhook/) for more information.
+Reportez-vous à [Créer un webhook]({{site.baseurl}}/user_guide/message_building_by_channel/webhooks/creating_a_webhook/) pour plus d'informations.
 
 {% endtab %}
 {% tab Canvas Step %}
 
-1. In your Canvas, create a new step.
-2. In the **Message** section of your step, select **Webhook**.
+1. Dans votre Canva, créez une nouvelle étape.
+2. Dans la section **Message** de votre étape, sélectionnez **Webhook**.
 
-Refer to [Creating a webhook]({{site.baseurl}}/user_guide/message_building_by_channel/webhooks/creating_a_webhook/) for more information.
+Reportez-vous à [Créer un webhook]({{site.baseurl}}/user_guide/message_building_by_channel/webhooks/creating_a_webhook/) pour plus d'informations.
 
 {% endtab %}
 {% endtabs %}
