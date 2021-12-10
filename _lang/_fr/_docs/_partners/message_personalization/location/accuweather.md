@@ -15,7 +15,7 @@ search_tag: Partenaire
 
 | Exigences           | Libellé                                                                                                                                                                                                                                                     |
 | ------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Clé API AccuWeather | Contactez votre gestionnaire de comptes Accuweather pour obtenir des clés API comaptibles à utiliser dans vos URLs de requête.<br><br>Des instructions supplémentaires peuvent être trouvées sur la page [de l'API AccuWeather enterprise][57]. |
+| Clé API AccuWeather | Contactez votre gestionnaire de compte AccuWeather pour obtenir des clés API compatibles à utiliser dans les URLs de votre requête.<br><br>Des instructions supplémentaires peuvent être trouvées sur la page [AccuWeather Enterprise API][57]. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
 
 ## APIs AccuWeather disponibles
