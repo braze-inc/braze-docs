@@ -1,87 +1,87 @@
 ---
-nav_title: Content Cards In Canvas
-article_title: Content Cards in Canvas
+nav_title: Cartes de contenu dans la toile
+article_title: Cartes de contenu dans Canvas
 page_order: 7
-page_type: reference
-description: "This reference article describes features and nuances specific to using Content Cards as a messaging channel within Canvas."
-tool: Canvas
-channel: content cards
+page_type: Référence
+description: "Cet article de référence décrit les caractéristiques et les nuances propres à l'utilisation des Cartes de Contenu comme canal de messagerie dans Canvas."
+tool: Toile
+channel: cartes de contenu
 ---
 
-# Content Cards in Canvas
+# Cartes de contenu dans Canvas
 
-Content Cards can be sent to your customers as part of their Canvas journey. This article describes features and nuances specific to using Content Cards as a messaging channel within Canvas.
+Les cartes de contenu peuvent être envoyées à vos clients dans le cadre de leur voyage sur Canvas . Cet article décrit les fonctionnalités et les nuances propres à l'utilisation des Cartes de Contenu comme canal de messagerie dans Canvas.
 
-As with other Canvas messaging channels, Content Cards will be sent to a user's device when they meet the audience and targeting criteria specified for its step. After the Content Card is sent, it will be available in each eligible user's feed the next time their cards feed is refreshed.
+Comme les autres canaux de messagerie Canvas Les cartes de contenu seront envoyées à l'appareil d'un utilisateur lorsqu'il répond aux critères d'audience et de ciblage spécifiés pour cette étape. Une fois la carte de contenu envoyée, elle sera disponible dans le fil de chaque utilisateur éligible la prochaine fois que le flux de sa carte sera actualisé.
 
-!\[content cards in canvas\]\[1\]
+!\[cartes de contenu in canvas\]\[1\]
 
-Two options that will change how the Content Card step will interact with Canvas are its [Expiration](#content-card-expiration) and [Advancement Behavior](#advancement-behavior-options).
+Deux options qui vont changer la façon dont l'étape de la carte de contenu interagira avec Canvas sont son [Expiration](#content-card-expiration) et [Comportement d'avancement](#advancement-behavior-options).
 
-## Content Card expiration {#content-card-expiration}
+## Expiration de la carte de contenu {#content-card-expiration}
 
-When composing a new Content Card you have the option to choose when it should expire from the user's feed, based on its send time. The expiration time begins when a user reaches its Canvas step and the card is sent.
+Lorsque vous composez une nouvelle carte de contenu, vous avez la possibilité de choisir quand elle doit expirer du flux de l'utilisateur, en fonction de son heure d'envoi. La durée d'expiration commence quand un utilisateur atteint l'étape Canvas et que la carte est envoyée.
 
-If a sent card expires before a user has viewed it in your app, it will be removed from their feed the next time their cards are refreshed.
+Si une carte envoyée expire avant qu'un utilisateur ne la consulte dans votre application, il sera retiré de leur flux la prochaine fois que leurs cartes seront actualisées.
 
 {% alert important %}
- The content card will be available until it expires, even if the user has moved to subsequent steps. If you do not want the content card to be live when the next steps in the Canvas are delivered, ensure that the expiration is shorter than the delay on subsequent steps.
+ La carte de contenu sera disponible jusqu'à ce qu'elle expire, même si l'utilisateur est passé à l'étape suivante. Si vous ne voulez pas que la carte de contenu soit en direct lorsque les prochaines étapes du Canvas sont livrées, s'assurer que l'expiration est plus courte que le délai lors des étapes suivantes.
 {% endalert %}
 
-## Advancement Behavior options {#advancement-behavior-options}
+## Options de comportement d'avancement {#advancement-behavior-options}
 
-The Advancement Behavior option allows you to control when a user should advance to their next eligible step. [Steps that send only Content Cards](#steps-with-in-content-cards-only) have different advancement options than [steps with multiple message types](#steps-with-multiple-message-channels) (push, email, etc.).
+L'option de comportement d'avancement vous permet de contrôler quand un utilisateur doit passer à sa prochaine étape admissible. [Les étapes qui n'envoient que des cartes de contenu](#steps-with-in-content-cards-only) ont des options d'avancement différentes que [étapes avec plusieurs types de messages](#steps-with-multiple-message-channels) (push, email, etc.).
 
-### Steps with Content Cards only {#steps-with-in-content-cards-only}
+### Étapes uniquement avec des cartes de contenu {#steps-with-in-content-cards-only}
 
-If a step contains only Content Cards (and no other messaging channel), you can control the advancement behavior with the following options:
+Si une étape ne contient que des cartes de contenu (et aucun autre canal de messagerie), vous pouvez contrôler le comportement d'avancement avec les options suivantes :
 
 !\[content-card-in-canvas-single-channel.png\]\[2\]
 
-| Option                       | Description                                                                                                                                                                                                                                                                                           |
-| ---------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Advance When Message Sent    | Users will advance to the next steps of the Canvas when the Content Card has been successfully sent. Use this option when you want users to advance only if the card will be sent and not aborted.                                                                                                    |
-| Immediately Advance Audience | Users will advance to the next steps of the Canvas when the Content Card sending is attempted. If the card is aborted and not sent, users will still advance to the next step. Use this option when you want users to advance regardless of whether the content card is sent successfully or aborted. |
+| Option                                  | Libellé                                                                                                                                                                                                                                                                                                                                         |
+| --------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Avancer lorsque le message a été envoyé | Les utilisateurs passeront aux étapes suivantes de la toile lorsque la carte de contenu aura été envoyée avec succès. Utilisez cette option lorsque vous voulez que les utilisateurs avancent seulement si la carte sera envoyée et non abandonnée.                                                                                             |
+| Audience immédiatement Avancée          | Les utilisateurs passeront aux étapes suivantes de Canvas lorsque la carte de contenu sera envoyée. Si la carte est abandonnée et non envoyée, les utilisateurs passeront toujours à l'étape suivante. Utilisez cette option lorsque vous voulez que les utilisateurs avancent, que la carte de contenu soit envoyée avec succès ou abandonnée. |
 {: .reset-td-br-1 .reset-td-br-2}
 
-### Steps with multiple channels {#steps-with-multiple-message-channels}
+### Étapes avec plusieurs canaux {#steps-with-multiple-message-channels}
 
 !\[content-cards-in-canvas-multiple-channels.png\]\[3\]
 
-Canvas steps with a Content Card and another messaging channel have the following advancement options:
+Les étapes de Canvas avec une carte de contenu et un autre canal de messagerie ont les options d'avancement suivantes :
 
-| Option                       | Description                                                                                                                                                                                                                                                                       |
-| ---------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Advance When Message Sent    | Users will advance to the next steps of the Canvas when at least one of the message types in this step have been sent successfully.                                                                                                                                               |
-| Immediately Advance Audience | When this option is selected, everyone in the step's audience will advance to the next steps after the delay elapses, whether they have seen the noted message or not.  <br> <br> _Users must match the step's segment and filter criteria to advance to next steps._ |
+| Option                                  | Libellé                                                                                                                                                                                                                                                                                                    |
+| --------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Avancer lorsque le message a été envoyé | Les utilisateurs passeront aux étapes suivantes du Canvas quand au moins un des types de messages de cette étape a été envoyé avec succès.                                                                                                                                                                 |
+| Audience immédiatement Avancée          | Lorsque cette option est sélectionnée, tous les participants de l'étape passeront aux étapes suivantes après le délai, s'ils ont vu ou non le message noté.  <br> <br> _Les utilisateurs doivent correspondre au segment de l'étape et filtrer les critères pour passer aux étapes suivantes._ |
 {: .reset-td-br-1 .reset-td-br-2}
 
-## Reporting and analytics
+## Rapports et analyses
 
-After launching a Content Cards step in Canvas you can begin to analyze several different metrics for this step. These metrics include the number of messages sent, unique recipients, conversion rates, total revenue, and more.
+Après avoir lancé une étape sur Canvas d'une carte de contenu, vous pouvez commencer à analyser plusieurs métriques différentes pour cette étape. Ces paramètres comprennent le nombre de messages envoyés, les destinataires uniques, les taux de conversion, les revenus totaux et plus encore.
 
-For more information on the available metrics and their definitions, see our [Report Metrics Glossary][6].
+Pour plus d'informations sur les métriques disponibles et leurs définitions, consultez notre [Glossaire des métriques de rapport][6].
 
 !\[content-card-in-canvas-analytics.png\]\[4\]
 
-## Use cases
+## Cas d'utilisation
 
-#### Promotional offers
+#### Offres promotionnelles
 
-Add cards to a user's feed as they qualify for specific promotions and advertisements. For example, if a user becomes eligible for a new offer after performing an action or making a purchase, using Canvas you can send them a Content Card, in addition to other messaging channels, so that the next time they open the app the offer is available to them.
+Ajoutez des cartes au flux d'un utilisateur qui se qualifie pour des promotions et des publicités spécifiques. Par exemple, si un utilisateur devient éligible à une nouvelle offre après avoir effectué une action ou effectué un achat, en utilisant Canvas vous pouvez leur envoyer une Carte de Contenu, en plus des autres salons de messagerie, de sorte que la prochaine fois qu'ils ouvriront l'application, l'offre est disponible pour eux.
 
-#### Push notification inbox
+#### Boîte de réception des notifications push
 
-There are times when a user may dismiss a push notification or delete an email, but you want to remind them or promote the offer in case they change their mind.
+Il y a des moments où un utilisateur peut rejeter une notification push ou supprimer un e-mail, mais vous voulez leur rappeler ou promouvoir l'offre au cas où ils changeraient d'avis.
 
-Using Canvas, you can add a step that sends both a Content Card and Push Notification to give users a persistent "inbox" of cards that align with promotional messages sent via Push.
+Utilisation de Canvas, vous pouvez ajouter une étape qui envoie à la fois une fiche de contenu et une notification Push pour donner aux utilisateurs une boîte de réception persistante de cartes qui s'alignent avec les messages promotionnels envoyés via Push.
 
-#### Multiple feeds based on categories
+#### Flux multiples basés sur des catégories
 
-You can separate your Content Cards into multiple feeds based on categories. For example, different topics users can browse, or transactional vs. marketing feeds. For more information, see these guides for creating different feeds using key-value pairs:
+Vous pouvez séparer vos cartes de contenu en plusieurs flux en fonction de catégories. Par exemple, différents sujets que les utilisateurs peuvent consulter, ou transactionnels vs flux marketing. Pour plus d'informations, consultez ces guides pour créer différents flux en utilisant des paires clé-valeur :
 
-* [Multiple Feeds for Web SDK]({{site.baseurl}}/developer_guide/platform_integration_guides/web/content_cards/multiple_feeds/)
-* [Multiple Feeds for Android SDK]({{site.baseurl}}/developer_guide/platform_integration_guides/android/content_cards/multiple_feeds/)
-[1]: {% image_buster /assets/img_archive/content-cards-in-canvas.png %} [2]: {% image_buster /assets/img_archive/content-cards-in-canvas-single-channel.png %} [3]: {% image_buster /assets/img_archive/content-cards-in-canvas-multiple-channels.png %} [4]: {% image_buster /assets/img_archive/content-cards-in-canvas-analytics.png %}
+* [Flux multiples pour SDK Web]({{site.baseurl}}/developer_guide/platform_integration_guides/web/content_cards/multiple_feeds/)
+* [Flux multiples pour le SDK Android]({{site.baseurl}}/developer_guide/platform_integration_guides/android/content_cards/multiple_feeds/)
+[1]: {% image_buster /assets/img_archive/content-cards-in-canvas.png %} [2]: {% image_buster /assets/img_archive/content-cards-in-canvas-single-channel. ng %} [3]: {% image_buster /assets/img_archive/content-cards-in-canvas-multiple-channels.png %} [4]: {% image_buster /assets/img_archive/content-cards-in-canvas-analytics.png %}
 
 [6]: {{site.baseurl}}/user_guide/data_and_analytics/report_metrics/
