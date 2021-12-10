@@ -1,29 +1,29 @@
 ---
 page_order: 26
-nav_title: Best Practices
-article_title: Email Best Practices
+nav_title: Meilleures pratiques
+article_title: Envoyer les meilleures pratiques par e-mail
 layout: dev_guide
-guide_top_header: "Email Best Practices"
-guide_top_text: "Email is a tried and tested approach for communicating with your users. Email is extremely adaptable and can reach users across a variety of platforms—mobile or otherwise—with dynamic HTML content. But it's a science and an art—and we're here to help you refine it! Use the following articles to refine your email practices."
-page_type: landing
-description: "This landing page is home to email best practices. Here you can find tips, use cases, and best practices to refine your email messaging."
-channel: email
-guide_featured_title: "Section Articles"
+guide_top_header: "Envoyer les meilleures pratiques par e-mail"
+guide_top_text: "Le courriel est une approche éprouvée pour communiquer avec vos utilisateurs. Le courrier électronique est extrêmement adaptable et peut atteindre les utilisateurs sur une variété de plates-formes – mobiles ou autres – avec un contenu HTML dynamique. Mais c'est une science et un art — et nous sommes là pour vous aider à le raffiner ! Utilisez les articles suivants pour affiner vos pratiques de messagerie."
+page_type: atterrissage
+description: "Cette page d'accueil accueille les meilleures pratiques de courrier électronique. Ici vous pouvez trouver des conseils, des cas d'utilisation et des meilleures pratiques pour affiner votre messagerie électronique."
+channel: Email
+guide_featured_title: "Articles de la section"
 guide_featured_list:
   - 
-    name: "Guidelines & Tips"
+    name: "Lignes directrices & Conseils"
     link: /docs/user_guide/message_building_by_channel/email/best_practices/guidelines_and_tips/
     fa_icon: fas fa-award
   - 
-    name: "Email Services"
+    name: "Services de messagerie"
     link: /docs/user_guide/message_building_by_channel/email/best_practices/email_services/
-    fa_icon: fas fa-concierge-bell
+    fa_icon: fas fa-concierge-cloche
   - 
-    name: "Managing Email Subscriptions"
+    name: "Gestion des abonnements par e-mail"
     link: /docs/user_guide/message_building_by_channel/email/best_practices/managing_email_subscriptions/
     fa_icon: fas fa-tasks
   - 
-    name: "Sunset Policies"
+    name: "Politiques du coucher du soleil"
     link: /docs/user_guide/message_building_by_channel/email/best_practices/sunset_policies/
     fa_icon: fas fa-sun
 ---
