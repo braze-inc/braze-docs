@@ -1,97 +1,97 @@
 ---
-nav_title: "SMS Laws & Regulations"
-article_title: SMS Laws & Regulations
+nav_title: "Lois SMS & Règlements"
+article_title: Lois SMS & Règlements
 page_order: 1
-description: "This reference article covers laws and regulations surrounding SMS and MMS."
-page_type: reference
+description: "Cet article de référence couvre les lois et règlements entourant les SMS et MMS."
+page_type: Référence
 channel:
   - SMS
 ---
 
-# SMS laws, regulations, and abuse prevention
+# Lois, règlements et prévention des abus par SMS
 
-Because SMS messages are one of the most direct ways to reach customers and users, going directly to the user’s phone, regulations must exist that prevent brands from abusing or over-using this relationship, and fines for violations could cost thousands of dollars.
+Parce que les messages SMS sont l'un des moyens les plus directs d'atteindre les clients et les utilisateurs, en allant directement au téléphone de l'utilisateur, il doit exister des règlements qui empêchent les marques d'abuser ou de surexploiter cette relation, et des amendes en cas de violation pourraient coûter des milliers de dollars.
 
 {% alert warning %}
-This article is not intended to provide, nor may it be relied upon as providing legal advice. The use of SMS is subject to specific legal requirements. To ensure that you are using the SMS Services in compliance with all applicable laws, you should seek the advice of your legal counsel.
+Cet article n'est pas destiné à fournir, et ne peut pas être invoqué comme un conseil juridique. L'utilisation de SMS est soumise à des exigences légales spécifiques. Pour vous assurer que vous utilisez les Services de SMS conformément à toutes les lois applicables, vous devriez demander conseil à votre conseiller juridique.
 {% endalert %}
 
-## The six rules to get compliance right
+## Les six règles pour se conformer à la loi
 
-In general, we encourage using your best judgment when approaching SMS sending. Braze, as well as our sending partners, have checks in place that prevent most SMS abuses.
+En général, nous vous encourageons à utiliser votre meilleur jugement lorsque vous approchez de l'envoi de SMS. Le Brésil, ainsi que nos partenaires d’envoi, ont mis en place des contrôles qui empêchent la plupart des abus par SMS.
 
-__There are the six rules you should follow:__
+__Il y a les six règles que vous devriez suivre :__
 
-1. __Obtain explicit consent from users before sending them SMS.__ Whenever users provide consent, it's your responsibility to log, update, and maintain that information in a compliant user database. According to basic legal guidelines, the most important information you need to retain regarding consent is:
-- __The time and date the user gave consent__
-- __The type of SMS messaging they consented to__
-- __The users' phone number__
-- __The language in which they opted-in__<br><br>
+1. __Obtenir le consentement explicite des utilisateurs avant de leur envoyer des SMS.__ Chaque fois que les utilisateurs donnent leur consentement, il est de votre responsabilité de connecter, de mettre à jour et de maintenir ces informations dans une base de données utilisateur conforme. Selon les directives juridiques de base, les informations les plus importantes que vous devez conserver concernant le consentement sont les suivantes :
+- __L'heure et la date à laquelle l'utilisateur a donné son consentement__
+- __Le type de messagerie SMS auquel ils ont consenti__
+- __Le numéro de téléphone des utilisateurs__
+- __La langue dans laquelle ils se sont optés__<br><br>
 
-2. __Clearly communicate the types of SMS you'll be sending__. Users should understand what messages to expect from your brand in this channel and the kinds of information or offers they'll be receiving. Explicitly state the purpose of your future campaigns, message frequency, and remind users that message/data rates apply.<br><br>
+2. __Communiquez clairement les types de SMS que vous enverrez__. Les utilisateurs doivent comprendre quels messages attendre de votre marque dans ce canal et quels types d'informations ou d'offres ils vont recevoir. Indiquez explicitement le but de vos futures campagnes, de la fréquence des messages et rappelez aux utilisateurs que les taux de messages et de données s'appliquent.<br><br>
 
-3. __Keep essential information updated and visible__. Ensure that the most up-to-date version of your brand's Terms and Conditions and your SMS Marketing Privacy Policy are clearly visible and easily accessible from your SMS opt-in page.<br><br>
+3. __Gardez les informations essentielles à jour et visibles__. Veillez à ce que la version la plus à jour des Termes et Conditions de votre marque et de votre politique de confidentialité par SMS Marketing soient clairement visibles et facilement accessibles à partir de votre page d'opt-in SMS.<br><br>
 
-4. __Only send SMS to legally obtained, opted-in phone numbers__. As part of technical migration planning, ensure that your team understands the mechanism for tying opt-in statuses to each and every user profile in your customer engagement platform.<br><br>
+4. __Envoyez uniquement des SMS aux numéros de téléphone optés et obtenus légalement__. Dans le cadre de la planification de la migration technique, assurez-vous que votre équipe comprend le mécanisme pour lier les statuts opt-in à chaque profil utilisateur de votre plateforme d'engagement client.<br><br>
 
-5. __Ensure SHAFT compliance in the US and other relevant regions.__ Sending SMS messages that contain language around sex, hate, alcohol, firearms, and tobacco (SHAFT) is generally considered to be illegal in the US and some other regions.<br><br>
+5. __Assurer la conformité SHAFT aux Etats-Unis et dans les autres régions concernées.__ Envoi de messages SMS qui contiennent un langage autour du sexe, de la haine, de l'alcool, des armes à feu, et le tabac (SHAFT) est généralement considéré comme illégal aux États-Unis et dans certaines autres régions.<br><br>
 
-6. __Double-check everything__. Work with your legal team to ensure that your SMS program is fully compliant with all applicable rules and regulations for the regions your brand operates in.<br><br>
+6. __Vérifiez toutes les__ fois. Travaillez avec votre équipe juridique pour vous assurer que votre programme SMS est entièrement conforme à toutes les règles et réglementations applicables pour les régions dans lesquelles votre marque opère.<br><br>
 
-## Resources
+## Ressource
 
-Here are some links you might need to consult as you build up your SMS campaign:
+Voici quelques liens que vous pourriez avoir besoin de consulter lors de la création de votre campagne SMS :
 
-- [CTIA's Messaging Principles and Best Practices for 2019](https://api.ctia.org/wp-content/uploads/2019/07/190719-CTIA-Messaging-Principles-and-Best-Practices-FINAL.pdf)
-- [Twilio's Guide to US SMS Compliance](https://www.twilio.com/learn/call-and-text-marketing/guide-to-us-sms-compliance)
-- [IBM's Introduction to SMS Compliance](https://www.ibm.com/support/knowledgecenter/en/SSWU4L/Mobile/imc_Mobile/SMS_Compliance_Information.html)
+- [Principes de messagerie de l'ACTIA et meilleures pratiques pour 2019](https://api.ctia.org/wp-content/uploads/2019/07/190719-CTIA-Messaging-Principles-and-Best-Practices-FINAL.pdf)
+- [Guide de Twilio sur la conformité des SMS aux États-Unis](https://www.twilio.com/learn/call-and-text-marketing/guide-to-us-sms-compliance)
+- [Introduction d'IBM à la conformité par SMS](https://www.ibm.com/support/knowledgecenter/en/SSWU4L/Mobile/imc_Mobile/SMS_Compliance_Information.html)
 
-## Considerations for compliance
+## Considérations de conformité
 
-### Data and privacy
+### Données et confidentialité
 
-A customer's privacy is key to a meaningful and respectful relationship. Respecting a customer's privacy and information is just another opportunity to create a bond between them and your brand. Sometimes, using marketing tools can put data and privacy last.
+La vie privée d'un client est essentielle à une relation significative et respectueuse. Le respect de la vie privée et des informations d'un client est une autre occasion de créer un lien entre eux et votre marque. Parfois, l'utilisation d'outils de marketing peut faire durcir les données et la vie privée.
 
-Luckily for you, Braze follows the guidelines of [many security regulations]({{site.baseurl}}/developer_guide/disclosures/security_qualifications/#security-qualifications), including [GDPR]({{site.baseurl}}/help/dp-technical-assistance/).
+Heureusement pour vous, Braze suit les directives de [nombreux règlements de sécurité]({{site.baseurl}}/developer_guide/disclosures/security_qualifications/#security-qualifications), y compris le [RGPD]({{site.baseurl}}/help/dp-technical-assistance/).
 
-The CTIA recommends that you maintain and conspicuously display a clear and easy-to-understand privacy policy.
+L'ACTIA vous recommande de maintenir et d'afficher une politique de confidentialité claire et facile à comprendre.
 
-### Consent
+### Consentement
 
-Opt-in, help, and opt-out options are an absolute must when creating SMS campaigns.
+Les options opt-in, aide et opt-out sont absolument indispensables lors de la création de campagnes SMS.
 
-The [TCPA](https://en.wikipedia.org/wiki/Telephone_Consumer_Protection_Act_of_1991) (Telephone Consumer Protection Act) mandates that a business must receive "express written consent" to send customers messages - you can do this in a multitude of ways, including web or mobile. You must be clear with the customer about how you intend to use SMS to communicate with them.
+La [TCPA](https://en.wikipedia.org/wiki/Telephone_Consumer_Protection_Act_of_1991) (Loi sur la protection du consommateur par téléphone) stipule qu'une entreprise doit recevoir un « consentement écrit express » pour envoyer des messages à ses clients - vous pouvez le faire de plusieurs manières. y compris web ou mobile. Vous devez être clair avec le client sur la façon dont vous avez l'intention d'utiliser des SMS pour communiquer avec lui.
 
-Remember to comply with the [National Do Not Call Registry](https://www.donotcall.gov/).
+N'oubliez pas de vous conformer au [Registre national de non-appels](https://www.donotcall.gov/).
 
-Braze uses [Subscription Groups]({{site.baseurl}}/user_guide/message_building_by_channel/sms/sms_subscription_group/) to manage groups of users based on their level of consent.
+Braze utilise [Groupes d'abonnement]({{site.baseurl}}/user_guide/message_building_by_channel/sms/sms_subscription_group/) pour gérer des groupes d'utilisateurs en fonction de leur niveau de consentement.
 
-### Spam and cadence
+### Spam et cadence
 
-Similar to email, your users or customer can experience inbox burnout. But this is only one reason not to relentlessly message your customers. You should look specifically at [Section 5 of the FTC Act to ensure compliance (in the U.S.)](https://www.federalreserve.gov/boarddocs/supmanual/cch/ftca.pdf).
+Similaire à l'e-mail, vos utilisateurs ou vos clients peuvent ressentir l'épuisement de la boîte de réception. Mais ce n'est qu'une raison pour ne pas inlassablement envoyer des messages à vos clients. Vous devriez consulter spécifiquement la section [Section 5 de la Loi de la CFC pour vous assurer de la conformité (aux États-Unis)](https://www.federalreserve.gov/boarddocs/supmanual/cch/ftca.pdf).
 
-Some spam considerations are built into SMS capabilities in general (long and short code sending limits), as well as Braze's rate limits. However, you should still consider compliance laws when planning your campaigns.
+Certaines considérations relatives au spam sont intégrées dans les capacités de SMS en général (limites d'envoi de code long et court), ainsi que dans les limites de taux de Brase. Cependant, vous devriez toujours tenir compte des lois de conformité lors de la planification de vos campagnes.
 
-### Content
+### Contenus
 
-This can be a tricky one, but when in doubt, avoid topics that involve violence, sex, drugs, tobacco, or other paraphernalia. Be wise when sending messages regarding these topics - you may still be charged for messages that are blocked by various carriers.
+Cela peut être délicat, mais en cas de doute, évitez les sujets qui impliquent violence, sexe, drogue, tabac ou autre paraphernalia. Soyez prudent lorsque vous envoyez des messages concernant ces sujets - vous pouvez toujours être facturé pour les messages qui sont bloqués par divers transporteurs.
 
-The [CTIA](https://www.ctia.org/) (a trade association representing the wireless communications industry in the United States) recommends that you follow __SHAFT Compliance__, which defines the following topics as generally "illegal" when messaging in the United States:
+La [CTIA](https://www.ctia.org/) (une association commerciale représentant l'industrie des communications sans fil aux États-Unis) vous recommande de suivre __la conformité SHAFT__, qui définit les sujets suivants comme généralement "illégaux" lors de la messagerie aux États-Unis :
 
-- Sex
-- Hate
-- Alcohol
-- Firearms
-- Tobacco
+- Sexe
+- Haine
+- Alcool
+- Armes à feu
+- Tabac
 
-You can [read more about the CTIA's Messaging Principles and Best Practices for 2019 here](https://api.ctia.org/wp-content/uploads/2019/07/190719-CTIA-Messaging-Principles-and-Best-Practices-FINAL.pdf).
+Vous pouvez [en savoir plus sur les Principes de messagerie et les meilleures pratiques de l'ACTIA pour 2019 ici](https://api.ctia.org/wp-content/uploads/2019/07/190719-CTIA-Messaging-Principles-and-Best-Practices-FINAL.pdf).
 
-### Scheduling
+### Planification en cours
 
-Please ensure you comply with the [Telephone Consumer Protection Act](https://en.wikipedia.org/wiki/telephone_consumer_protection_act_of_1991) (TCPA), which dictates that you shouldn't send messages during late hours (see the regulation's contents for exact hours). However, you shouldn't send messages that late anyway - don't you want high engagement?
+Veuillez vous assurer que vous respectez la [Loi sur la protection des consommateurs du téléphone](https://en.wikipedia.org/wiki/telephone_consumer_protection_act_of_1991) (TCPA), qui stipule que vous ne devriez pas envoyer de messages pendant les heures tardives (voir le contenu du règlement pour les heures exactes). Cependant, vous ne devriez pas envoyer de messages aussi tard de toute façon - ne voulez pas un engagement élevé?
 
 ### International
 
-Most of these best practices apply to guidelines set forth in the United States of America. If you are reaching customers outside of u.s. regions, _please research best practices and laws in those areas_. It is always best practice to act in a way that _adheres to the most stringent regulations_, which are usually applied in the United States, Canada, and countries part of the European Union.
+La plupart de ces pratiques exemplaires s'appliquent aux lignes directrices établies aux États-Unis. Si vous atteignez des clients en dehors de u.s. régions, _veuillez rechercher les meilleures pratiques et lois dans ces domaines_. Il est toujours préférable d'agir de manière à ce que _adhère aux réglementations les plus strictes_, qui sont généralement appliquées aux États-Unis, au Canada et dans les pays de l'Union européenne.
 
-Better to be safe than sorry!
+Mieux vaut être en sécurité que de regretter !
