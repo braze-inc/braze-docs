@@ -1,102 +1,102 @@
 ---
-nav_title: Feature Awareness and New App Version
-article_title: Feature Awareness and New App Version
+nav_title: Sensibilisation aux fonctionnalités et nouvelle version de l'application
+article_title: Sensibilisation aux fonctionnalités et nouvelle version de l'application
 page_order: 7
-page_type: reference
-description: "This reference article discusses how to keep your users knowledgeable and excited about when you release new features or versions."
-tool: Campaigns
+page_type: Référence
+description: "Cet article de référence explique comment garder vos utilisateurs informés et enthousiastes quand vous publiez de nouvelles fonctionnalités ou versions."
+tool: Campagnes
 ---
 
-# Feature awareness and new app version
+# Sensibilisation aux fonctionnalités et nouvelle version de l'application
 
-> This reference article addresses how to use the Braze platform to keep your customers up to date on new features and versions of your app.
+> Cet article de référence explique comment utiliser la plateforme Braze pour tenir vos clients au courant des nouvelles fonctionnalités et versions de votre application.
 
-You work hard to continually update and improve your app, and you want your users to experience these exciting new features and new app versions.  Learn how to teach users about the new features they have yet to use, and encourage them to explore the app to get the most you have to offer.
+Vous travaillez dur pour continuellement mettre à jour et améliorer votre application, et vous voulez que vos utilisateurs profitent de ces nouvelles fonctionnalités excitantes et de nouvelles versions d'applications.  Apprenez à enseigner aux utilisateurs les nouvelles fonctionnalités qu'ils n'ont pas encore utilisées, et les encourager à explorer l'application pour obtenir le maximum que vous avez à offrir.
 
-## Why use feature awareness campaigns
+## Pourquoi utiliser des campagnes de sensibilisation de fonctionnalités
 
-Feature awareness campaigns are a great way to encourage users to stay engaged with your app as you continue to improve your app's functionality.  Keeping users up to date is a great way to keep them active, boost ratings and ensure user engagement.
+Les campagnes de sensibilisation aux fonctionnalités sont un excellent moyen d'encourager les utilisateurs à rester engagés dans votre application tout en continuant à améliorer les fonctionnalités de votre application.  Garder les utilisateurs à jour est un excellent moyen de les maintenir actifs, d'augmenter les notes et d'assurer l'engagement des utilisateurs.
 
-## Filtering by most recent app versions
+## Filtrage par les dernières versions de l'application
 
-Braze SDKs automatically track a user's _most recent_ app version. These versions can be used in filters and segments to determine which users should receive a message or campaign.
+Braze SDKs suit automatiquement la version _de l'application_ la plus récente d'un utilisateur. Ces versions peuvent être utilisées dans les filtres et les segments pour déterminer quels utilisateurs doivent recevoir un message ou une campagne.
 
-!\[App Version Filter\]\[1\]
+!\[Filtre de version de l'application\]\[1\]
 
-### App version number
+### Numéro de version de l'application
 
-Use the _App Version Number_ filter to segment users by the app's version/build number.
+Utilisez le filtre _Numéro de version_ pour segmenter les utilisateurs par le numéro de version/build de l'application.
 
-This filter supports numerical comparisons to target a range of app versions. For example, you can target users whose app is "below", "above", and "equal to" app version "1.2.3", which might be beneficial to promote a new feature which requires an app upgrade.
+Ce filtre prend en charge les comparaisons numériques pour cibler une gamme de versions d'applications. Par exemple, vous pouvez cibler les utilisateurs dont l'application est « ci-dessous», « ci-dessus» et « égale à» version de l'application « 1. .3", qui peut être bénéfique pour promouvoir une nouvelle fonctionnalité qui nécessite une mise à niveau de l'application.
 
-This new filter can replace the legacy "App Version Name" filter which would require explicitly listing each older version or using a regular expression.
+Ce nouveau filtre peut remplacer le filtre "Nom de la version de l'application" qui nécessiterait explicitement de lister chaque version antérieure ou d'utiliser une expression régulière.
 
-**How it works**
+**Comment ça marche**
 
-* Each part of the `major.minor.patch` version sent in your app's app version are compared as integers
-* If the major numbers are equal, the minor numbers are compared, etc.
+* Chaque partie de la version `major.minor.patch` envoyée dans la version de votre application est comparée à des entiers
+* Si les nombres principaux sont égaux, les nombres mineurs sont comparés, etc.
 
 **Important**
 
-* Android apps have both a human readable [`versionName`][7] and an internal [`versionCode`][9]. The App Version Number filter uses `versionCode` because it is guaranteed to be incremented with each app store release.
-* This can cause confusion when your app's `versionName` and `versionCode` get out of sync, especially since both fields can be viewed from the Braze dashboard. As a best practice, ensure your app's `versionName` and `versionCode` are incremented together.
-* If you need to filter by the human readable `versionName` field instead (uncommon), use the App Version Name filter.
+* Les applications Android ont à la fois un [`versionName`][7] lisible par l'homme et un [`versionCode`][9] interne. Le filtre du numéro de version de l'application utilise le `code de version` car il est garanti qu'il sera incrémenté avec chaque version de l'app store.
+* Cela peut causer de la confusion lorsque le `versionName` et le `versionCode` de votre application sont désynchronisés, surtout puisque les deux champs peuvent être vus depuis le tableau de bord de Braze. En tant que bonnes pratiques, assurez-vous que le `versionName` et le `versionCode` de votre application sont incrémentés ensemble.
+* Si vous avez besoin de filtrer par le champ `versionName` lisible par l'homme au lieu (rare), utilisez le filtre du nom de version de l'appli.
 
-#### SDK requirements
+#### Exigences du SDK
 
-Values for this filter are collected starting with Braze Android SDK v3.6.0+ and iOS SDK v3.21.0+. Even though this filter has SDK requirements, you will still be able to target users who are on lower (older) versions of your app using this feature!
+Les valeurs pour ce filtre sont collectées à partir de Braze Android SDK v3.6.0+ et iOS SDK v3.21.0+. Même si ce filtre a des exigences de SDK, vous serez toujours en mesure de cibler les utilisateurs qui sont sur des versions inférieures (plus anciennes) de votre application en utilisant cette fonctionnalité !
 
-For Android, this version number is based on the [Package Long Version Code][9] for the app.
+Pour Android, ce numéro de version est basé sur le [Package Long Version Code][9] pour l'application.
 
-For iOS, this version number is based on the [Short Version String][8] for the app.
+Pour iOS, ce numéro de version est basé sur la [chaîne de version courte][8] pour l'application.
 
 {% alert tip %}
-This filter will populate values once users upgrade their apps to the supported Braze SDK Versions. Until then, the filter won't show any versions when selected.
+Ce filtre remplira les valeurs une fois que les utilisateurs mettront leurs applications à niveau vers les versions supportées de Braze SDK. En attendant, le filtre n'affichera aucune version lorsqu'il sera sélectionné.
 {% endalert %}
 
-#### Example scenarios
+#### Exemples de scénarios
 
-In the following scenario, let's assume that you first upgraded to the Braze SDKs which supports this filter in version `2.0.0` of your app.
+Dans le scénario suivant, supposons que vous avez d'abord mis à jour vers les SDK Braze qui prennent en charge ce filtre dans la version `2. .0` de votre application.
 
-Once Braze receives data from version 2.0.0 of your app, you can target users below or above this version.
+Une fois que Braze reçoit des données de la version 2.0.0 de votre application, vous pouvez cibler les utilisateurs ci-dessous ou au-dessus de cette version.
 
-|  | Filter                        | User's App Version | Result                                                                                            |
-|: |:----------------------------- |:------------------ | ------------------------------------------------------------------------------------------------- |
-|  | _Less than 2.0.0_             | 1.0.0              | User is in the segment, even though their Braze SDK did not support the App Version Number filter |
-|  | _Greater than 2.0.0_          | 2.5.1              | This user, and all future installs will be in the segment                                         |
-|  | _Greater than 2.0.0_          | 1.9.9              | User is not in the segment                                                                        |
-|  | _Less than or equal to 2.0.0_ | 3.0.1              | User is not in the segment                                                                        |
+|  | Filtre                      | Version de l'application de l'utilisateur | Résultat                                                                                                                        |
+|: |:--------------------------- |:----------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------- |
+|  | _Moins de 2.0.0_            | 1.0.0                                     | L'utilisateur est dans le segment, même si son Braze SDK n'a pas pris en charge le filtre de numéro de version de l'application |
+|  | _Supérieur à 2.0.0_         | 2.5.1                                     | Cet utilisateur, et toutes les installations futures seront dans le segment                                                     |
+|  | _Supérieur à 2.0.0_         | 1.9.9                                     | L'utilisateur n'est pas dans le segment                                                                                         |
+|  | _Inférieur ou égal à 2.0.0_ | 3.0.1                                     | L'utilisateur n'est pas dans le segment                                                                                         |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
 
-### App version name
+### Nom de la version d'application
 
-Use the _App Version Name_ filter to segment users by the app's user-facing "build name".
+Utilisez le filtre _App Version Name_ pour segmenter les utilisateurs par le "nom de la version" de l'application.
 
-This filter supports matching with "is", "is not", and regular expressions. For example, you can target users who have an app that is not version "1.2.3-test-build".
+Ce filtre supporte la correspondance avec "is", "n'est pas", et les expressions régulières. Par exemple, vous pouvez cibler les utilisateurs qui ont une application qui n'est pas la version "1.2.3-test-build".
 
-For Android, this version name is based on the [Package Version Name][7] for the app.
+Pour Android, le nom de cette version est basé sur le [Nom de la version du package][7] pour l'application.
 
-For iOS, this version name is based on the [Short Version String][8] for the app.
+Pour iOS, ce nom de version est basé sur la [chaîne de version courte][8] pour l'application.
 
-### Have not used feature
+### Fonctionnalité non utilisée
 
-When you release a new app version and introduce new features, users may not notice new content.  Running a feature awareness campaign is a great way to teach users about new features or features they have never used. To do so you must create a [custom attribute][3] that is assigned to users who have never completed a certain action within your app or use a [custom event][4] to track a particular action.  You can use this attribute (or event) to segment users that you want to send the campaign to.
+Lorsque vous publiez une nouvelle version de l'application et introduisez de nouvelles fonctionnalités, il se peut que les utilisateurs ne remarquent pas de nouveau contenu.  Lancer une campagne de sensibilisation aux fonctionnalités est un excellent moyen d'enseigner aux utilisateurs de nouvelles fonctionnalités ou fonctionnalités qu'ils n'ont jamais utilisées. Pour ce faire, vous devez créer un [attribut personnalisé][3] qui est attribué aux utilisateurs qui n'ont jamais terminé une certaine action dans votre application ou utiliser un [événement personnalisé][4] pour suivre une action particulière.  Vous pouvez utiliser cet attribut (ou l'événement) pour segmenter les utilisateurs vers lesquels vous voulez envoyer la campagne.
 
-## Best practices
+## Meilleures pratiques
 
-### Be convincing
+### Soyez convaincant
 
-Persuading a user to update their app or change the way they use your app can be difficult.  Make sure the let them know all the benefits of the new version/features and how it will improve their experience with your app.  Let them know all of the utility they will gain, and the benefits they will miss out on if they choose not to update or engage with new features.
+Permettre à un utilisateur de mettre à jour son application ou de modifier la façon dont il utilise votre application peut être difficile.  Assurez-vous de leur indiquer tous les avantages de la nouvelle version/fonctionnalités et comment elle améliorera leur expérience avec votre application.  Faites-leur savoir tout l'utilitaire qu'ils gagneront, et les avantages qu'ils manqueront s'ils choisissent de ne pas mettre à jour ou de ne pas engager de nouvelles fonctionnalités.
 
-### Send at the right time
+### Envoyer au bon moment
 
-Convincing your users to update their app can be difficult as they must navigate to the app store to do so.  In general, it is best to ask users to update as soon as the app is updated, however, if they choose not to do not spam them with messages. Rather, wait until they have a positive experience within the app, for instance beating a level, redeeming a coupon, or favoriting a song.
+Il peut être difficile de convaincre vos utilisateurs de mettre à jour leur application car ils doivent naviguer vers l'App Store pour le faire.  En général, il est préférable de demander aux utilisateurs de mettre à jour dès que l'application est mise à jour, Cependant, s'ils choisissent de ne pas les spammer avec des messages. Au contraire, attendez qu'ils aient une expérience positive dans l'application, par exemple en battant un niveau, en échangeant un coupon ou en favorisant une chanson.
 
-For feature awareness campaigns, timing is also key.  Onboarding should familiarize users with the app, however, users may forget features or not notice new features that are added. When new features are added, be sure to let your users know. Hopefully, users will discover new features easily, however, if users are not engaging with major features within the app it may be best to remind them. Do so when they are engaging with your app and the unused feature would be of use.
+Pour les campagnes de sensibilisation, le timing est également essentiel.  L'intégration devrait familiariser les utilisateurs avec l'application, mais les utilisateurs peuvent oublier les fonctionnalités ou ne pas remarquer les nouvelles fonctionnalités qui sont ajoutées. Lorsque de nouvelles fonctionnalités sont ajoutées, assurez-vous de prévenir vos utilisateurs. Espérons toutefois que les utilisateurs découvriront facilement de nouvelles fonctionnalités, si les utilisateurs ne s'engagent pas avec les fonctionnalités majeures de l'application, il est peut-être préférable de leur le rappeler. Faites-le quand ils s'engagent avec votre application et la fonctionnalité inutilisée serait utile.
 
-### Use non-intrusive channels
+### Utiliser des canaux non intrusifs
 
-Because they are relatively intrusive, push notifications and emails that ask users to update can come off as needy if sent too often. Be sure to use a multichannel strategy when making your request, focusing on in-app channels if possible. [In-app messages][5] and [Content Cards][6] cards are less disruptive and easily ignored if the user doesn’t wish to update immediately. Be sure to include deep links to the appropriate app store. Simple in-app messages pointing out new features can be a great way to expose users to new content without getting in their way and cluttering them with messages.
+Parce qu'ils sont relativement intrusifs, les notifications push et les courriels qui demandent aux utilisateurs de mettre à jour peuvent s'avérer utiles s'ils sont envoyés trop souvent. Assurez-vous d'utiliser une stratégie multicanal lorsque vous faites votre demande, en vous concentrant sur les canaux de l'application si possible. Les cartes [messages intégrés][5] et [cartes de contenu][6] sont moins perturbantes et facilement ignorées si l'utilisateur ne souhaite pas mettre à jour immédiatement. Assurez-vous d'inclure des liens profonds vers le magasin d'application approprié. Des messages simples dans l'application signalant les nouvelles fonctionnalités peuvent être un excellent moyen d'exposer les utilisateurs à de nouveaux contenus sans les gêner et les encombrer de messages.
 [1]: {% image_buster /assets/img_archive/new_app_version.png %}
 
 [3]: {{site.baseurl}}/user_guide/engagement_tools/segments/segmentation_filters/#custom-data
