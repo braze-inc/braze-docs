@@ -1,44 +1,44 @@
 ---
-nav_title: Getting High Ratings
-article_title: Getting High Ratings
+nav_title: Obtenir des évaluations élevées
+article_title: Obtenir des évaluations élevées
 page_order: 5
-page_type: reference
-description: "This reference article discusses best practices when using Braze to drive your customer platforms toward success."
+page_type: Référence
+description: "Cet article de référence décrit les meilleures pratiques lors de l'utilisation de Braze pour conduire vos plateformes clients vers le succès."
 tool:
-  - Campaigns
+  - Campagnes
 ---
 
-# Getting high ratings
+# Obtention de notes élevées
 
-> This reference article discusses best practices when using Braze to drive your customer platforms toward success. <br> <br> We all know high ratings are invaluable for a mobile application, and by applying Braze's functionality in clever ways we can help you increase your customer engagement.
+> Cet article de référence décrit les meilleures pratiques lors de l'utilisation de Braze pour conduire vos plateformes clients vers le succès. <br> <br> Nous savons tous que les évaluations élevées sont inestimables pour une application mobile, et en appliquant les fonctionnalités de Braze de manière intelligente, nous pouvons vous aider à augmenter votre engagement client.
 
-Getting five-star ratings in the app store is on every mobile marketer's wish list because it drives downloads and makes your app stand out among the millions. Achieving positive reviews, however, is no easy task because it requires extra work by your users. Learn how to ask users for ratings the right way.
+Obtenir des évaluations cinq étoiles dans l'app store est sur la liste de souhaits de chaque marketing mobile parce qu'il conduit les téléchargements et fait que votre application se démarque parmi les millions. Réaliser des avis positifs n'est cependant pas une tâche facile car cela nécessite un travail supplémentaire de la part de vos utilisateurs. Apprenez à demander aux utilisateurs de noter la bonne manière.
 
-## Best practices
+## Meilleures pratiques
 
 ### Target power users
 
-To ensure higher ratings, ask only your power users to review you in the app store. They are more likely to have great things to say. Although they differ from app to app, power users tend to have:
+Pour assurer des évaluations plus élevées, demandez seulement à vos utilisateurs d'énergie de vous revoir dans l'App Store. Ils sont plus susceptibles d'avoir de grandes choses à dire. Bien qu'ils diffèrent d'une application à l'autre, les utilisateurs d'énergie ont tendance à avoir:
 
-- Logged many sessions
-- Used the app recently
-- Spent money and made purchases
+- Connecté plusieurs sessions
+- Application utilisée récemment
+- Dépenser de l'argent et faire des achats
 
-For instance, you could create the following segment:
+Par exemple, vous pouvez créer le segment suivant :
 
 !\[Segment\]\[6\]
 
-### Ask at the right time
+### Demander au bon moment
 
-Visiting the app store website takes time on the part of your users. To maximize the likelihood that they will go through the extra effort, request a rating or review after they just had a positive experience with your app. For instance, ask them after they beat a game level or made a purchase using a discount code.
+Visiter le site Web de l'app store prend du temps de la part de vos utilisateurs. Pour maximiser la probabilité qu'ils passent par les efforts supplémentaires, demander une évaluation ou un avis après avoir eu une expérience positive avec votre application. Par exemple, demandez-leur une fois qu'ils ont battu un niveau de jeu ou qu'ils ont fait un achat en utilisant un code de réduction.
 
-Our page on [Data Opt-in][7] has more information on ways to ensure your request agrees with users' workflow expectations. In addition, our [guide on user conversions][8] includes tips on associating your messaging with positive moments.
+Notre page sur [Data Opt-in][7] a plus d'informations sur les moyens de s'assurer que votre demande est conforme aux attentes des utilisateurs. De plus, notre [guide sur les conversions d'utilisateurs][8] contient des conseils sur l'association de votre messagerie à des moments positifs.
 
-### Use non-intrusive messaging channels
+### Utiliser des canaux de messagerie non intrusifs
 
-Because they are relatively intrusive, push notifications and emails that ask users to rate you can come off as needy if sent too often. Be sure to use a \[multichannel strategy\]\[9\] when making your request, focusing on in-app channels if possible. In-app messages and News Feed cards are less disruptive and easily ignored if the user doesn't wish to provide a review. Be sure to include deep links to the appropriate app store.
+Parce qu'ils sont relativement intrusifs, les notifications push et les courriels qui demandent aux utilisateurs de noter que vous pouvez vous absenter comme dans le besoin s'ils sont envoyés trop souvent. Assurez-vous d'utiliser une \[stratégie multicanal\]\[9\] lorsque vous faites votre demande, en vous concentrant sur les canaux de l'application si possible. Les messages dans l'application et les cartes de News Feed sont moins perturbants et facilement ignorés si l'utilisateur ne souhaite pas fournir de revue. Assurez-vous d'inclure des liens profonds vers le magasin d'application approprié.
 
-!\[In-app message\]\[9\]
+!\[Message dans l'application\]\[9\]
 [6]: {% image_buster /assets/img_archive/ratings_power_users.png %} [9]: {% image_buster /assets/img_archive/Ratings_inapp.png %}
 
 [7]: {{site.baseurl}}/user_guide/message_building_by_channel/email/managing_user_subscriptions/#subscription-states
