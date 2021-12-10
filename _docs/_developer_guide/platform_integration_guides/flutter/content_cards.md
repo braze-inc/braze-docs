@@ -45,8 +45,6 @@ On iOS, you will additionally need to create an `NSNotificationCenter` listener 
 
 Your `ABKContentCardsProcessedNotification` callback implementation must call `BrazePlugin.processContentCards(contentCards)`. For an example, see [AppDelegate.swift in our sample app](https://github.com/braze-inc/braze-flutter-sdk/blob/master/example/ios/Runner/AppDelegate.swift).
 
-{% endsubtab %}
-{% endsubtabs %}
 {% endtab %}
 {% endtabs %}
 
@@ -66,9 +64,12 @@ Follow the steps below to test a sample content card.
 3. Compose your test Content Card campaign and head over to the **Test** tab. Add the same `user-id` as the test user and click **Send Test**.
 4. Tap the push notification and that should launch a Content Card on your device. You may need to refresh your feed for it to display.
 
+![Content Card Campaign Test][5]
+
 For more integrations, follow the [Android integration instructions][2] or the [iOS integration instructions][3], depending on your platform.
 
 
 [2]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/content_cards/data_models/
 [3]: {{site.baseurl}}/developer_guide/platform_integration_guides/ios/content_cards/data_model/
 [4]: {{site.baseurl}}/user_guide/message_building_by_channel/content_cards/create
+[5]: {% image_buster /assets/img/react-native/content-card-test.png %} "Content Card Campaign Test"
