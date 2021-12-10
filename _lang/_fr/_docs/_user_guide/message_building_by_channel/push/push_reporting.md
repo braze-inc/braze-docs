@@ -1,16 +1,16 @@
 ---
-nav_title: Reporting
-page_title: Push Reporting
+nav_title: Rapports
+page_title: Rapports push
 page_order: 21
-page_type: reference
-description: "This article covers push reporting, which you can use to view and analyze the success of your push campaigns."
-channel: push
-tool: Reports
+page_type: Référence
+description: "Cet article couvre les rapports push, que vous pouvez utiliser pour visualiser et analyser le succès de vos campagnes de push."
+channel: Pousser
+tool: Rapports
 ---
 
-# Push reporting
+# Rapports Push
 
-> This article covers push reporting, which you can use to view and analyze the success of your push campaigns.
+> Cet article couvre les rapports push, que vous pouvez utiliser pour visualiser et analyser le succès de vos campagnes de push.
 
 {% include campaign_analytics.md channel="push" %}
 
