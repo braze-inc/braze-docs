@@ -1,42 +1,42 @@
 ---
-nav_title: "User Data Migration"
-article_title: User Data Migration
+nav_title: "Migration des données utilisateur"
+article_title: Migration des données utilisateur
 page_order: 4
-description: "This reference article runs through all the considerations you’ll need to keep in mind when you’re migrating your user data to Braze."
-page_type: reference
+description: "Cet article de référence passe en revue toutes les considérations dont vous devrez tenir compte lors de la migration de vos données utilisateur vers Braze."
+page_type: Référence
 channel:
   - SMS
-noindex: true
+noindex: vrai
 ---
 
-# User data migration
+# Migration des données utilisateur
 
-Let’s run through all the considerations you’ll need to keep in mind when you’re migrating your user data to Braze.
+Parlons de toutes les considérations que vous devrez garder à l’esprit lorsque vous migrez vos données utilisateur vers Braze.
 
 {% alert important %}
-Are you currently a non-native SMS client? If so, please visit the [non native SMS docs](/docs/user_guide/message_building_by_channel/sms/non_native/) for your corresponding user data migration doc.
+Êtes-vous actuellement un client SMS non-natif ? Si tel est le cas, veuillez visiter les [docs SMS non natifs](/docs/user_guide/message_building_by_channel/sms/non_native/) pour votre documentation de migration de données utilisateur correspondante.
 {% endalert %}
 
-## Format user phone numbers to carrier standards
+## Formater les numéros de téléphone des utilisateurs selon les normes de l'opérateur
 
-Phone carriers have a specific type of format they expect called E.164 which is the international telephone numbering plan that ensures that each device has a globally unique number. This is what allows phone calls and text messages to be correctly routed to individual phones in different countries. E.164 numbers are formatted as shown below and can have a maximum of fifteen (15) digits. [Learn more here.][userphone]<br> !\[e164\]\[picture\]{: style="max-width:50%;border: 0;"}
+Les opérateurs téléphoniques ont un format spécifique qu'ils s'attendent à appeler E. 64 qui est le plan international de numérotation téléphonique qui assure que chaque appareil a un numéro unique à l'échelle mondiale. C'est ce qui permet aux appels téléphoniques et aux SMS d'être correctement acheminés vers des téléphones individuels dans différents pays. Les numéros E.164 sont formatés comme indiqué ci-dessous et peuvent avoir un maximum de quinze (15) chiffres. [En savoir plus ici.][userphone]<br> !\[e164\]\[picture\]{: style="max-width:50%;border: 0;"}
 
-## Update historical information on users subscription states
+## Mettre à jour l'historique des informations sur les états d'abonnement des utilisateurs
 
-If you have any historical information about your user’s [subscription states][subscriptionstate] for your various messaging channels, please be sure to update this information in Braze.
+Si vous avez des informations historiques sur les [états d'abonnement de votre utilisateur][subscriptionstate] pour vos différents canaux de messagerie, Assurez-vous de mettre à jour cette information au Brésil.
 
-## Example migration steps
+## Étapes de migration d'exemple
 
-Before you begin composing SMS campaigns through Braze, you’ll need to update your user data to ensure that all of this works.
+Avant de commencer à rédiger des campagnes SMS via Braze, vous devrez mettre à jour vos données utilisateur pour vous assurer que tout cela fonctionne.
 
-__Here's a quick summary of the user data you'll need to update in Braze:__
+__Voici un bref résumé des données utilisateur dont vous aurez besoin pour mettre à jour au Brésil :__
 
-1. __Import users' phone numbers in the correct format__ ([E.164][]) formatting requires a '+' and a country code, e.g. +12408884782. For more information on how to import user phone numbers, check out our [documentation][userphone].
-  - Use the [users/track][1] REST API endpoint to assign the `phone` value.<br><br>
+1. __Importer les numéros de téléphone des utilisateurs dans le format correct__ ([E.164][]) formatage nécessite un '+' et un code de pays, par exemple +12408884782. Pour plus d'informations sur la façon d'importer les numéros de téléphone de l'utilisateur, consultez notre [documentation][userphone].
+  - Utilisez le point de terminaison [utilisateurs/piste][1] de l'API REST pour affecter la valeur du `téléphone`.<br><br>
 
-2. __Assign your user's SMS [subscription state][subscriptionstate]__ (e.g. subscribed or unsubscribed) if you have this information.
-  - Use the [subscription/status/set][6] REST API endpoint to set users as subscribed or unsubscribed from your SMS Subscription Group(s).
-  - Note that once the SMS Subscription Groups have been configured in your dashboard, you'll be able to grab the necessary `subscription_group_id` which you'll need for your API request.
+2. __Assigner l'état d'abonnement [SMS de votre utilisateur][subscriptionstate]__ (par exemple, souscrit ou désabonné) si vous avez ces informations.
+  - Utilisez le point de terminaison [abonnement/statut/set][6] de l'API REST pour définir les utilisateurs comme abonnés ou désabonnés de votre/vos groupe(s) d'abonnement SMS.
+  - Notez qu'une fois que les groupes d'abonnement SMS ont été configurés dans votre tableau de bord, vous pourrez récupérer les `subscription_group_id nécessaires` dont vous aurez besoin pour votre requête API.
 [picture]: {% image_buster /assets/img/sms/e164.jpg %}
 
 [E.164]: https://en.wikipedia.org/wiki/E.164
