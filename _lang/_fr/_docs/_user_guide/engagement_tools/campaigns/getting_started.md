@@ -1,22 +1,22 @@
 ---
-nav_title: Getting Started
-article_title: Getting Started with Campaigns
+nav_title: Commencer
+article_title: Commencer avec des campagnes
 layout: dev_guide
-guide_top_header: "Getting Started with Campaigns"
-guide_top_text: "Before you create a campaign, use these articles to guide your planning for your campaign and understand what you can do."
+guide_top_header: "Commencer avec des campagnes"
+guide_top_text: "Avant de créer une campagne, utilisez ces articles pour guider votre planification de votre campagne et comprendre ce que vous pouvez faire."
 page_order: 0
-tool: Campaigns
-page_type: landing
-description: "This section provides an introduction to campaigns, and how you can use them to build your message strategy."
-guide_featured_title: "Section Articles"
+tool: Campagnes
+page_type: atterrissage
+description: "Cette section fournit une introduction aux campagnes et comment vous pouvez les utiliser pour construire votre stratégie de message."
+guide_featured_title: "Articles de la section"
 guide_featured_list:
   - 
-    name: Campaign Basics
-    link: /docs/user_guide/engagement_tools/campaigns/getting_started/campaign_basics/
+    name: Les Bases de la Campagne
+    link: /fr/docs/user_guide/engagement_tools/campaigns/getting_started/campaign_basics/
     fa_icon: fas fa-list
   - 
-    name: Understanding Campaign Status
-    link: /docs/user_guide/engagement_tools/campaigns/getting_started/understanding_campaign_status/
-    fa_icon: fas fa-envelope
+    name: Comprendre le statut de la campagne
+    link: /fr/docs/user_guide/engagement_tools/campaigns/getting_started/understanding_campaign_status/
+    fa_icon: fas fa-enveloppe
 ---
 
