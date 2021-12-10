@@ -1,29 +1,29 @@
 ---
-nav_title: Geofence Configuration
-article_title: Geofence Configuration
+nav_title: Configuration du Geofence
+article_title: Configuration du Geofence
 page_order: 3
-page_type: reference
-description: "This reference article covers various Geofence configurations."
-tool: Location
+page_type: Référence
+description: "Cet article de référence couvre diverses configurations de Geofence."
+tool: Localisation
 ---
 
-# Geofence configuration
+# Configuration du géorepérage
 
-## Latitude and longitude
+## Latitude et longitude
 
-The geographic center of the geofence.
+Le centre géographique du géorepérage.
 
 ## Radius
 
-The radius of the geofence in meters, measured from the geographic center. we recommend setting a minimum radius of 100 meters for all geofences.
+Le rayon du géorepérage en mètres, mesuré à partir du centre géographique. Nous vous recommandons de fixer un rayon minimum de 100 mètres pour tous les géofences.
 
-## Cooldown
+## Refroidissement
 
-Users receive geofence triggered notifications after performing enter or exit transitions on individual geofences. After a transition occurs, there is a pre-defined period of time during which that user may not perform the same transition on that individual geofence again. This period of time is called the "cooldown" and is pre-defined by Braze. Its main purpose is to prevent unnecessary network requests.
+Les utilisateurs reçoivent des notifications déclenchées par la géorepérage après avoir effectué des transitions d'entrée ou de sortie sur des géorepérages individuels. Après une transition, il y a une période de temps prédéfinie au cours de laquelle l'utilisateur peut ne pas effectuer à nouveau la même transition sur cette fonction individuelle. Cette période de temps est appelée le « temps de recharge » et est prédéfinie par le Brésil. Son principal objectif est d'éviter les requêtes réseau inutiles.
 
-## Technology partners
+## Partenaires technologiques
 
-You can also leverage geofences with some of our partners, for example:
+Vous pouvez également tirer parti des géorepérages avec certains de nos partenaires, par exemple :
 
 - [Neura][1]
 - [Radar][2]
