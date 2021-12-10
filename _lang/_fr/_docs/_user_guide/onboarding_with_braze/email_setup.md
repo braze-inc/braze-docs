@@ -1,75 +1,75 @@
 ---
-nav_title: Email Setup
-article_title: Onboarding Email Setup
-layout: featured
+nav_title: Configuration de l'e-mail
+article_title: Configuration de l'e-mail d'intégration
+layout: en vedette
 page_order: 5
-guide_top_header: "Email Setup"
-guide_top_text: "So you want to start sending email campaigns? Braze Onboarding can help you with that! Either follow our guide below or check out our <a href='https://lab.braze.com/email-onboarding-for-pro-and-enterprise-achieving-high-deliverability' target='_blank'>LAB course on deliverability</a>."
-page_type: landing
-description: "This landing page includes resources on getting started with email campaigns."
-channel: email
-guide_featured_title: "Section Articles"
+guide_top_header: "Configuration de l'e-mail"
+guide_top_text: "Vous voulez donc commencer à envoyer des campagnes d'e-mail? Braze Onboarding peut vous aider avec cela! Suivez notre guide ci-dessous ou consultez notre <a href='https://lab.braze.com/email-onboarding-for-pro-and-enterprise-achieving-high-deliverability' target='_blank'>cours LAB sur la livrabilité</a>."
+page_type: atterrissage
+description: "Cette page d'accueil contient des ressources pour démarrer avec des campagnes de courriel."
+channel: Email
+guide_featured_title: "Articles de la section"
 guide_featured_list:
   - 
-    name: "Setting Up IPs & Domains"
-    link: /docs/user_guide/onboarding_with_braze/email_setup/setting_up_ips_and_domains/
-    fa_icon: far fa-dot-circle
+    name: "Configuration des IPs & Domaines"
+    link: /fr/docs/user_guide/onboarding_with_braze/email_setup/setting_up_ips_and_domains/
+    fa_icon: fa-dot-circle
   - 
-    name: Authentication
-    link: /docs/user_guide/onboarding_with_braze/email_setup/authentication/
+    name: Authentification
+    link: /fr/docs/user_guide/onboarding_with_braze/email_setup/authentication/
     fa_icon: fas fa-user-shield
   - 
-    name: "Consent & Address Collection"
-    link: /docs/user_guide/onboarding_with_braze/email_setup/consent_and_address_collection/
-    fa_icon: fas fa-address-book
+    name: "Consentement & Collecte d'adresse"
+    link: /fr/docs/user_guide/onboarding_with_braze/email_setup/consent_and_address_collection/
+    fa_icon: fa-carnet d'adresses
   - 
-    name: "Deliverability Pitfalls & Spam Traps"
+    name: "Pièges de livrabilité & Pièges à Spam"
     link: /docs/user_guide/onboarding_with_braze/email_setup/deliverability_pitfalls_and_spam_traps/
-    fa_icon: fas fa-exclamation-triangle
+    fa_icon: fa-exclamation-triangle
   - 
-    name: Importing Your Email List into Braze
-    link: /docs/user_guide/onboarding_with_braze/email_setup/import_your_email_list/
+    name: Importation de votre liste d'emails dans Braze
+    link: /fr/docs/user_guide/onboarding_with_braze/email_setup/import_votre_email_list/
     fa_icon: fas fa-list
   - 
-    name: Email Validation
-    link: /docs/user_guide/onboarding_with_braze/email_setup/email_validation/
+    name: Validation de l'email
+    link: /fr/docs/user_guide/onboarding_with_braze/email_setup/email_validation/
     fa_icon: fas fa-envelope-square
   - 
-    name: IP Warming
-    link: /docs/user_guide/onboarding_with_braze/email_setup/ip_warming/
+    name: Réchauffement IP
+    link: /fr/docs/user_guide/onboarding_with_braze/email_setup/ip_warming/
     fa_icon: fas fa-exclamation
   - 
-    name: SSL Overview
-    link: /docs/user_guide/onboarding_with_braze/email_setup/ssl/
-    fa_icon: fas fa-mouse-pointer
+    name: Aperçu SSL
+    link: /fr/docs/user_guide/onboarding_with_braze/email_setup/ssl/
+    fa_icon: fas fa-mouse-pointeur
 ---
 
-## Requirements
+## Exigences
 
-Before you start sending emails, there are some things you need. Refer to the chart below to learn more.
+Avant de commencer à envoyer des e-mails, il y a des choses dont vous avez besoin. Consultez le tableau ci-dessous pour en savoir plus.
 
-| Requirement                        | Description                                                                                                                                                                                                                                      | Acquirement                                                                                                                                                           |
-| ---------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | --------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| A Dedicated IP (Internet Protocol) | A dedicated IP is a unique Internet address provided exclusively to a single hosting account.                                                                                                                                                    | Braze gives its customers dedicated IPs, to ensure control of your email sender reputation. Braze onboarding will set this up for you.                                |
-| Whitelabeled Domains               | These consist of a domain and a subdomain. Whitelabling ensures you pass email authentication checks for DKIM and SPF.                                                                                                                           | Braze onboarding will generate these domains for you, but you must choose their names.                                                                                |
-| Subdomains                         | This is a subdivision of a domain and typically looks like: `@news.company.com` within your email address. Having a subdomain will prevent any errors that could damage your company's official email reputation.                                | Braze onboarding will generate this for you, but you must decide the name of the subdomain. You cannot use subdomains that are currently being used outside of Braze. |
-| IP Pools                           | These are an optional configuration used to separate out the reputation of different types of email (for example: "promotional" vs. "transactional") to prevent the reputation of one from impacting the other and ensure higher deliverability. | Braze onboarding will set up the pools for you; then, when composing your email, choose your email's IP pool from the IP Pool dropdown on the Target Users page.      |
+| Exigences                          | Libellé                                                                                                                                                                                                                                                           | Acquisition                                                                                                                                                                                                           |
+| ---------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Une IP dédiée (protocole Internet) | Une adresse IP dédiée est une adresse Internet unique fournie exclusivement à un seul compte d’hébergement.                                                                                                                                                       | Braze donne à ses clients des adresses IP dédiées, pour assurer le contrôle de la réputation de votre expéditeur de courriel. L'embarquement de Braze le configurera pour vous.                                       |
+| Domaines en marque blanche         | Celles-ci se composent d'un domaine et d'un sous-domaine. La Whitelabling vous permet de passer les vérifications d'authentification par e-mail pour DKIM et SPF.                                                                                                 | L'intégration à Braze générera ces domaines pour vous, mais vous devez choisir leurs noms.                                                                                                                            |
+| Sous-domaines                      | Ceci est une subdivision d'un domaine et ressemble généralement à : `@news.company.com` dans votre adresse e-mail. Avoir un sous-domaine empêchera toute erreur qui pourrait nuire à la réputation officielle de votre entreprise.                                | L'intégration de Braze va générer pour vous, mais vous devez décider du nom du sous-domaine. Vous ne pouvez pas utiliser de sous-domaines qui sont actuellement utilisés en dehors de Braze.                          |
+| Pools IP                           | Il s'agit d'une configuration optionnelle utilisée pour séparer la réputation de différents types d'e-mails (par exemple: "promotionnel" vs. "transactionnel") pour éviter que la réputation de l'un n'affecte l'autre et pour assurer une livraison plus élevée. | L'embarquement de Braze mettra en place les piscines pour vous ; Puis, lors de la rédaction de votre courriel, choisissez la réserve IP de votre courrier à partir du menu déroulant sur la page Utilisateurs cibles. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
 
-## IP warming
+## Le réchauffement IP
 
 {% alert important %}
-IP Warming is the __most important step__ in the email setup process. Though it is not your first step (it's actually the last!), we're calling it out here to let you know that you must absolutely warm up your IP address or any emails you send will be sent to spam or be subject to other send barriers.
+Le réchauffement IP est l'étape __la plus importante__ du processus de configuration de l'email. Bien que ce ne soit pas votre première étape (c'est en fait la dernière! , nous l'appelons ici pour vous faire savoir que vous devez absolument réchauffer votre adresse IP ou que tous les courriels que vous envoyez seront envoyés au spam ou seront soumis à d'autres barrières d'envoi.
 {% endalert %}
 
-[IP Warmup]({{site.baseurl}}/user_guide/onboarding_with_braze/email_setup/ip_warming/) is when you send a relatively small number of emails out in your first batch, then over time, slightly increase the volume in the following batches until you reach your typical daily volume. This is done at the very end of your email set up process.
+[IP Warmup]({{site.baseurl}}/user_guide/onboarding_with_braze/email_setup/ip_warming/) est quand vous envoyez un nombre relativement réduit d'e-mails dans votre premier lot, puis au fil du temps, augmentez légèrement le volume des lots suivants jusqu'à ce que vous atteigniez votre volume quotidien typique. Cela se fait à la fin du processus de configuration de votre e-mail.
 
-By starting with smaller volumes of email, you are establishing a level of trust with your mailbox provider, showing you are only sending emails to relevant users.
+En commençant par de plus petits volumes de courriels, vous établissez un niveau de confiance avec votre fournisseur de messagerie, montrant que vous envoyez uniquement des courriels aux utilisateurs pertinents.
 
-Send your first batch of emails to your most engaged users. This will help you gain trust faster with your provider.
+Envoyez votre premier lot d'emails à vos utilisateurs les plus engagés. Cela vous aidera à gagner la confiance plus rapidement avec votre fournisseur.
 
-After you're done with your IP Warmup, feel free to [start creating and sending emails]({{site.baseurl}}/user_guide/message_building_by_channel/email/creating_an_email_campaign/)!
+Une fois que vous avez terminé avec votre IP Warmup, n'hésitez pas à [commencer à créer et envoyer des e-mails]({{site.baseurl}}/user_guide/message_building_by_channel/email/creating_an_email_campaign/)!
 
-## More resources
+## Plus de ressources
 
-For more information on email at Braze, check out our dedicated [email section]({{site.baseurl}}/user_guide/message_building_by_channel/email/).
+Pour plus d'informations sur les courriels au Brésil, consultez notre section dédiée [e-mail]({{site.baseurl}}/user_guide/message_building_by_channel/email/).
