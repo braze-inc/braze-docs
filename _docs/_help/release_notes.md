@@ -11,6 +11,9 @@ description: "This landing page is home to Braze Release Notes. This is where yo
 
 guide_featured_title: "Release Notes"
 guide_featured_list:
+  - name: 2022
+    link: /docs/help/release_notes/2022/
+    fa_icon: fas fa-calendar-alt
   - name: 2021
     link: /docs/help/release_notes/2021/
     fa_icon: fas fa-calendar-alt
