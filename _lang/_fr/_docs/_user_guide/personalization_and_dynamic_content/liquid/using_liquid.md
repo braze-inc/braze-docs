@@ -1,79 +1,79 @@
 ---
-nav_title: Using Liquid
-article_title: Liquid Use Case and Overview
+nav_title: Utilisation de Liquid
+article_title: Caisse d'utilisation des liquides et Vue d'ensemble
 page_order: 0
-description: "Liquid can elevate the personalization in your messages to impressive heights. Liquid tags act as placeholders in your messages that can pull in consented information from your user's account and enable personalization and relevant messaging practices."
+description: "Liquid peut élever la personnalisation de vos messages à des hauteurs impressionnantes. Les balises liquides agissent comme des espaces réservés dans vos messages qui peuvent extraire des informations consensuelles à partir du compte de votre utilisateur et permettre la personnalisation et les pratiques de messagerie pertinentes."
 ---
 
-# Liquid use cases and overview
+# Cas d'utilisation des liquides et aperçu
 
 {% raw %}
 
-There are a variety of user attributes that you can use to dynamically insert personal info into your messaging.
+Il existe une variété d'attributs utilisateur que vous pouvez utiliser pour insérer dynamiquement des informations personnelles dans votre messagerie.
 
-If you include the following text in your message: `{{${first_name}}}`, the user's first name (pulled from the user's profile) will be substituted when the message is sent. If you would like to use the value of a custom attribute, you must add the namespace "custom_attribute" to the variable. For example, to use a custom attribute named "zip code", you would include `{{custom_attribute.${zip code}}}` in your message.
+Si vous incluez le texte suivant dans votre message : `{{${first_name}}}`, le prénom de l'utilisateur (tiré du profil de l'utilisateur) sera remplacé lorsque le message sera envoyé. Si vous souhaitez utiliser la valeur d'un attribut personnalisé, vous devez ajouter l'espace de noms "custom_attribute" à la variable. Par exemple, pour utiliser un attribut personnalisé nommé "code zip", vous devez inclure `{{custom_attribute.${zip code}}}` dans votre message.
 
-The following values can be substituted into a message, depending on their availability:
+Les valeurs suivantes peuvent être substituées dans un message, selon leur disponibilité:
 
-- [Basic User Information][1] (e.g. `first_name`, `last_name`, `email_address`)
-- [Custom Attributes][2]
-- [Custom Event Properties][11]
-- [Most Recently Used Device Information][39]
-- [Target Device Information][40]
+- [Informations utilisateur de base][1] (par exemple `prénom`, `nom de famille`, `email_address`)
+- [Attributs personnalisés][2]
+- [Propriétés personnalisées de l'événement][11]
+- [Informations sur l'appareil le plus récemment utilisé][39]
+- [Informations sur le périphérique cible][40]
 
-You can also pull content directly from a web server via Braze's [Connected Content][9] feature.
+Vous pouvez également extraire du contenu directement depuis un serveur web via la fonctionnalité [Contenu connecté][9] de Braze.
 {% endraw %}
 
 {% alert important %}
-Braze currently supports Liquid up to and including __Liquid 3 from Shopify__. We do not currently support Liquid 4 and beyond.
+Braze prend actuellement en charge Liquid jusqu'à __Liquid 3 de Shopify__. Nous ne supportons pas actuellement Liquid 4 et au-delà.
 {% endalert %}
 
-## Using Liquid
+## Utilisation de Liquid
 
 {% raw %}
 
-Once you know the [Liquid tags available][1], using Liquid can elevate the personalization in your messages to impressive heights. Liquid tags act as placeholders in your messages that can pull in consented information from your user's account and enable personalization and relevant messaging practices.
+Une fois que vous connaissez les [balises Liquid disponibles][1], l'utilisation de Liquid peut élever la personnalisation de vos messages à des hauteurs impressionnantes. Les balises liquides agissent comme des espaces réservés dans vos messages qui peuvent extraire des informations consensuelles à partir du compte de votre utilisateur et permettre la personnalisation et les pratiques de messagerie pertinentes.
 
-In the block below, you can see that a dual usage of a Liquid tag to call the user's first name, as well as a default tag in the event that a user would not have their first name registered.
+Dans le bloc ci-dessous, vous pouvez voir qu'une double utilisation d'un tag Liquid pour appeler le prénom de l'utilisateur ainsi qu'une balise par défaut dans le cas où un utilisateur ne serait pas enregistré.
 
 ```liquid
-Hi {{ ${first_name} | default: 'Valued User' }}, thanks for using the App!
+Bonjour {{ ${first_name} | par défaut: 'Utilisateur valué' }}, merci d'utiliser l'application !
 ```
 
-To a user named Janet Doe, the message would appear to the user as either:
+Pour un utilisateur nommé Janet Doe, le message apparaît à l'utilisateur comme :
 
 ```
-Hi Janet, thanks for using the App!
+Bonjour Janet, merci d'utiliser l'application !
 ```
 
-Or...
+Ou...
 
 ```
-Hi Valued User, thanks for using the App!
+Utilisateur Hi Valued, merci d'utiliser l'application!
 ```
 
-### Liquid syntax
+### Syntaxe des liquides
 
-Liquid follows a specific structure, or syntax, that you'll need to keep in mind as you're crafting dynamic personalization. Here are a few basic rules to keep in mind:
+Liquid suit une structure spécifique, ou syntaxe, que vous devrez garder à l'esprit lorsque vous créez une personnalisation dynamique. Voici quelques règles de base à garder à l'esprit :
 
-1. **Use straight quotes in Braze:** There is a difference between curly quotes (**‘’**) and straight quotes (**''**). Use straight quotes (**''**) in your Liquid in Braze. You may see curly quotes when copying and pasting from certain text editors, which can cause issues in your Liquid. If you're inputting quotes direclty into the Braze dashboard, you'll be fine!
-2. **Brackets come in pairs:** Every bracket must both open and close **{ }**. Make sure to use curly brackets!
-3. **If statements come in pairs:** For every `if`, you need an `endif` to indicate the `if` statement has ended.
+1. **Utilisez des guillemets droits en Brésil :** Il y a une différence entre les guillemets bouclés (**'''****et les guillemets droits(** '**). Utilisez des guillemets droits (**''**) dans votre liquide au Brésil. Vous pouvez voir des guillemets bouclés lorsque vous copiez et collez à partir de certains éditeurs de texte, ce qui peut causer des problèmes dans votre Liquid. Si vous saisissez des guillemets dans le tableau de bord de Braze, vous allez très bien!</li>
+2 **Des crochets viennent en couples :** Chaque crochet doit à la fois ouvrir et fermer **{ }** Assurez-vous d'utiliser des accolades !
+3 **Si les déclarations viennent en paires :** Pour chaque `si`, vous avez besoin d'un `endif` pour indiquer l'instruction `si` est terminée.</ol>
 
-### Inserting tags
+### Insertion de balises
 
-You can insert tags by typing `{{` in any message, which will trigger an auto-completion feature that will continue to update as you type. You can even select a variable from the options that appear as you type.
+Vous pouvez insérer des balises en tapant `{{` dans n'importe quel message, qui déclenchera une fonction de complétion automatique qui continuera à se mettre à jour pendant que vous tapez. Vous pouvez même sélectionner une variable parmi les options qui apparaissent lorsque vous tapez.
 
-If you're using a custom tag, you can copy and paste the tag into whatever message you desire.
+Si vous utilisez un tag personnalisé, vous pouvez copier et coller le tag dans le message que vous voulez.
 
 {% endraw %}
 
 {% alert note %}
 
-If you choose to use Liquid in your Email messages, be sure to:
+Si vous choisissez d'utiliser Liquid dans vos messages électroniques, assurez-vous de :
 
-1. Insert it using the HTML editor as opposed to the classic editor. The Classic Editor may parse the Liquid as plaintext.
-2. Place Liquid code within the `<body>` tag only. Placing it outside this tag may cause inconsistent rendering upon delivery.
+1. Insérez-le en utilisant l'éditeur HTML par opposition à l'éditeur classique. L'Éditeur Classique peut analyser le Liquide en texte clair.
+2. Placez uniquement le code Liquid dans la balise `<body>`. Le placer en dehors de cette balise peut causer un rendu incohérent lors de la livraison.
 
 {% endalert %}
 
@@ -82,56 +82,56 @@ If you choose to use Liquid in your Email messages, be sure to:
 
 ### Pre-formatted variables
 
-You can insert pre-formatted variables with defaults through the "Insert Personalization Attribute" modal located on the top-right of any templated text field.
+Vous pouvez insérer des variables pré-formatées avec des valeurs par défaut dans la modale "Insérer un attribut de personnalisation" située en haut à droite de n'importe quel champ de texte modèle.
 
 !\[Modal buttons\]\[44\]{: style="max-width:70%;"}
 
-The modal will insert Liquid with your specified default value at the point that your cursor was. The insertion point is also specified via the preview box, which has the before and after text. If a block of text is highlighted, the highlighted text will be replaced.
+Le modal insérera Liquid avec la valeur par défaut spécifiée au point où se trouvait votre curseur. Le point d'insertion est également spécifié via la zone de prévisualisation, qui a le texte avant et après. Si un bloc de texte est mis en surbrillance, le texte surligné sera remplacé.
 
 !\[Modal\]\[45\]
 
 {% endraw %}
 
-### Assigning variables
+### Attribution de variables
 
 {% raw %}
-Some operations in Liquid require you to store the value you want to manipulate as a variable. This is often the case if your Liquid statement includes multiple attributes, event properties, or filters.
+Certaines opérations dans Liquid nécessitent de stocker la valeur que vous voulez manipuler en tant que variable. C'est souvent le cas si votre requête Liquid inclut plusieurs attributs, propriétés d'événement ou filtres.
 
-For example, let's say you want to add two custom data integers together. You can't simply use:
+Par exemple, disons que vous voulez ajouter deux entiers de données personnalisées ensemble. Vous ne pouvez pas simplement utiliser :
 
 ```liquid
 {{custom_attribute.${one}}} | plus: {{custom_attribute.${two}}} 
 ```
 
-This Liquid doesn't work because you can't reference multiple attributes in one line; you would need to assign a variable to at least one of these values before the math functions take place. Adding two custom attributes would require two lines of Liquid: one to assign the custom attribute to a variable, and one to perform the addition.
+Ce Liquid ne fonctionne pas car vous ne pouvez pas référencer plusieurs attributs sur une seule ligne; vous devrez assigner une variable à au moins une de ces valeurs avant que les fonctions mathématiques ne se déroulent. Ajouter deux attributs personnalisés nécessiterait deux lignes de Liquid : l'une pour assigner l'attribut personnalisé à une variable, et l'autre pour effectuer l'ajout.
 
-#### Example
+#### Exemple
 
-For example, let's calculate a user's current balance by adding their gift card balance and rewards balance:
+Par exemple, calculons le solde actuel d'un utilisateur en ajoutant son solde de carte-cadeau et son solde de récompense :
 
-First, use the `assign` tag to subsitute the custom attribute of `current_rewards_balance` with the term "balance". This means that you now have a variable named `balance`, which you can manipulate.
+Premièrement, utilisez la balise `assigner` pour sous-situer l'attribut personnalisé de `current_rewards_balance` avec le terme "balance". Cela signifie que vous avez maintenant une variable nommée `balance`, que vous pouvez manipuler.
 
 ```liquid
-{% assign balance = {{custom_attribute.${current_rewards_balance}}} %}
+{% balance assignée = {{custom_attribute.${current_rewards_balance}}} %}
 ```
 
-Next, we're using the `plus` filter combine each user's gift card balance with their reawards balance, signified by `{{balance}}`.
+Ensuite, nous utilisons le filtre `plus` qui combine le solde de la carte-cadeau de chaque utilisateur avec son solde de remises, signifié par `{{balance}}`.
 
 ```liquid
-{% assign balance = {{custom_attribute.${current_rewards_balance}}} %}
-You have ${{custom_attribute.${giftcard_balance} | plus: {{balance}}}} to spend! 
+{% balance assignée = {{custom_attribute.${current_rewards_balance}}} %}
+Vous avez ${{custom_attribute.${giftcard_balance} | plus : {{balance}}}} à dépenser ! 
 ```
 {% endraw %}
 
 {% alert tip %}
-Find yourself assigning the same variables in every message? Instead of writing out the `assign` tag over and over again, you can save that tag as a Content Block and put it at the top of your message instead.
+Vous vous trouvez à assigner les mêmes variables dans chaque message ? Au lieu d'écrire encore et encore la balise `assigner` vous pouvez enregistrer ce tag en tant que bloc de contenu et le placer en haut de votre message à la place.
 
-1. [Create a Content Block]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/content_blocks/#create-a-content-block).
-2. Give your Content Block a name (no spaces or special characters).
-3. Click **Edit** at the bottom of the page.
-4. Type in your `assign` tags.
+1. [Créer un bloc de contenu]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/content_blocks/#create-a-content-block).
+2. Donnez un nom à votre Bloc de Contenu (sans espaces ni caractères spéciaux).
+3. Cliquez sur **Modifier** au bas de la page.
+4. Tapez vos tags `assigner`.
 
-As long as the Content Block is at the top of your message, every time the variable is inserted into your message as an object, it will refer to your chosen custom attribute!
+Tant que le bloc de contenu est en haut de votre message, chaque fois que la variable est insérée dans votre message en tant qu'objet, elle fera référence à l'attribut personnalisé que vous avez choisi !
 {% endalert %}
 [44]: {% image_buster /assets/img_archive/insert_liquid_var_arrow.png %} [45]: {% image_buster /assets/img_archive/insert_var_shot.png %}
 
