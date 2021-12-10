@@ -1,47 +1,47 @@
 ---
-nav_title: FAQs
-article_title: Media Library FAQs
+nav_title: Foire aux questions
+article_title: FAQ sur la Médiathèque
 page_order: 5
-page_type: FAQ
-tool: Media
-description: "This article provides answers to frequently asked questions about the Braze Media Library."
+page_type: Foire Aux Questions
+tool: Médias
+description: "Cet article fournit des réponses aux questions fréquemment posées sur la bibliothèque médiatique de Braze."
 ---
 
-# Media library FAQs
+# FAQ de la bibliothèque multimédia
 
-> This page provides answers to frequently asked questions about the Braze Media Library.
+> Cette page contient les réponses aux questions les plus fréquemment posées sur la bibliothèque médiatique de Braze.
 
-### Are there storage limits for images within the Media Library?
+### Y a-t-il des limites de stockage pour les images au sein de la Médiathèque ?
 
-No, there are no storage limits for images within the Media Library.
+Non, il n'y a pas de limite de stockage pour les images dans la médiathèque.
 
-### Are there expiration dates for uploaded assets?
+### Existe-t-il des dates d'expiration pour les actifs téléchargés ?
 
-No, uploaded assets will not expire once added to the Media Library.
+Non, les actifs téléchargés n'expireront pas une fois ajoutés à la médiathèque.
 
-### Can I crop all image types?
+### Puis-je recadrer tous les types d'images ?
 
-No, the Media Library doesn't support cropping GIF images.
+Non, la Médiathèque ne prend pas en charge le recadrage des images GIF.
 
-### How do I crop an existing image?
+### Comment puis-je recadrer une image existante ?
 
-You can crop an existing image by selecting the image from the Media Library and clicking **Crop & Save New Image**.
+Vous pouvez recadrer une image existante en sélectionnant l'image de la bibliothèque de médias et en cliquant sur **Recadrer & Enregistrer une nouvelle image**.
 
 !\[Media Library Crop\]\[2\]{: height="75%" width="75%"}
 
-You'll then be redirected to a cropping composer where you can select your ratio type, and edit the name of the new image. Once you hit **Save**, your new image can be used!
+Vous serez ensuite redirigé vers un compositeur de recadrage où vous pourrez sélectionner votre type de ratio et modifier le nom de la nouvelle image. Une fois que vous appuyez sur **Enregistrer**, votre nouvelle image peut être utilisée!
 
 !\[Media Library Crop 2\]\[3\]{: height="75%" width="75%"}
 
-### My image keeps timing out when I try to upload it. What can I do about this?
+### Mon image reste chronométrée quand j'essaie de la télécharger. Que puis-je faire à ce sujet?
 
-This can happen for a variety of reasons, but a common solution is to make sure your image is optimized before attempting to upload it. This means running your image through an image optimizer (such as [ImageOptim][5]).
+Cela peut se produire pour diverses raisons, mais une solution commune est de s'assurer que votre image est optimisée avant d'essayer de la télécharger. Cela signifie que vous exécutez votre image à travers un optimiseur d'image (comme [ImageOptim][5]).
 
-Additionally, if your image was built in Photoshop (or a similar software) and has many layers, merging and reducing the number of layers can also help.
+De plus, si votre image a été construite dans Photoshop (ou un logiciel similaire) et a beaucoup de calques, la fusion et la réduction du nombre de couches peuvent également être utiles.
 
-### Why can't I upload any image I want into the push composers?
+### Pourquoi ne puis-je pas télécharger une image que je veux dans les compositeurs push?
 
-This is because most composers have restrictions on the image ratio size that is allowed.
+Ceci est dû au fait que la plupart des compositeurs ont des restrictions sur la taille du ratio d'image qui est autorisé.
 [2]: {% image_buster /assets/img_archive/media_library_crop1.png %} [3]: {% image_buster /assets/img_archive/media_library_crop2.png %}
 
 [5]: https://imageoptim.com/mac
