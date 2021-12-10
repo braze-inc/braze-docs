@@ -1,50 +1,50 @@
 ---
-nav_title: Archiving Campaigns
-article_title: Archiving Campaigns
+nav_title: Archivage des campagnes
+article_title: Archivage des campagnes
 page_order: 1
-page_type: reference
-description: "This reference article goes over how to archive a pre-existing campaign, the effects of archiving a campaign, and how to resume that campaign if needed."
+page_type: Référence
+description: "Cet article de référence décrit comment archiver une campagne préexistante, les effets de l'archivage d'une campagne, et comment reprendre cette campagne si nécessaire."
 tool:
-  - Campaigns
+  - Campagnes
 ---
 
-# Archiving campaigns
+# Archivage des campagnes
 
-> This reference article goes over how to archive a pre-existing campaign, the effects of archiving a campaign, and how to resume that campaign if needed.
+> Cet article de référence décrit comment archiver une campagne préexistante, les effets de l'archivage d'une campagne, et comment reprendre cette campagne si nécessaire.
 
-If you'd like to stop a campaign from sending or clear it from your dashboard, you can archive it. Go to the **Campaigns** page, click the gear icon next to the campaign's name and click **Archive**.
+Si vous souhaitez empêcher une campagne de l'envoyer ou de l'effacer de votre tableau de bord, vous pouvez l'archiver. Allez à la page **Campagnes** , cliquez sur l’icône d’équipement à côté du nom de la campagne et cliquez sur **Archive**.
 
 !\[Archiving\]\[1\]
 
-Archiving a campaign will accomplish the following:
+Archiver une campagne accomplira ce qui suit :
 
-- No further messages from that campaign will be delivered. In the case of in-app messages, no further in-app messages from that campaign will be displayed to users.
-- The campaign's indicators will be removed from:
-    - The Detailed Statistics graph on the **Overview** page
-    - The Detailed Statistics graph on the **Revenue** page
-    - The Custom Events Over Time graph
+- Aucun autre message de cette campagne ne sera envoyé. Dans le cas de messages intégrés à l'application, aucun autre message dans l'application ne sera affiché aux utilisateurs.
+- Les indicateurs de la campagne seront supprimés de :
+    - Le graphique des statistiques détaillées sur la page **Aperçu**
+    - Le graphique des statistiques détaillées sur la page **Revenus**
+    - Le graphique des événements personnalisés au fil du temps
 
-There are also bulk actions you can use, such as deactivating and archiving multiple campaigns by checking the boxes next to the campaigns and clicking the relevant button.
+Il y a aussi des actions de masse que vous pouvez utiliser, comme la désactivation et l'archivage de plusieurs campagnes en cochant les cases à côté des campagnes et en cliquant sur le bouton correspondant.
 
-!\[Archive Selected\]\[3\]
+!\[Archives sélectionnées\]\[3\]
 
-To view archived messages from the **Campaigns** page, select the **Archived** folder.
+Pour afficher les messages archivés de la page **Campagnes** , sélectionnez le dossier **Archivé**.
 
 !\[Include Archived\]\[2\]
 
-## Unarchiving campaigns
+## Désarchivage des campagnes
 
-While clicking on an archived campaign will allow you to view its past results, you won't be able to edit the campaign. You will need to unarchive campaign in order to edit it. To unarchive a campaign, you must select the campaign within the **Archived** folder and click **Unarchive Selected**.
+En cliquant sur une campagne archivée vous permettra de voir ses résultats passés, vous ne pourrez pas modifier la campagne. Vous devrez désarchiver la campagne pour la modifier. Pour désarchiver une campagne, vous devez sélectionner la campagne dans le dossier **Archivé** et cliquer sur **Désarchiver la sélection**.
 
-!\[Unarchive Campaign\]\[4\]
+!\[Désarchiver la campagne\]\[4\]
 
-Unarchiving a campaign does not make it live. This will simply move your campaign to the **Active** campaign folder where you can make edits and review how the campaign is set up. At this point, your campaign will be stopped and won't send any messages.
+La désarchivage d'une campagne ne la rend pas vivante. Cela déplacera simplement votre campagne vers le dossier de campagne **Active** où vous pourrez faire des modifications et examiner comment la campagne est configurée. À ce stade, votre campagne sera interrompue et n'enverra aucun message.
 
-If you wish to resume the campaign and begin sending messages, click the gear icon next to the campaign and select **Resume**.
+Si vous souhaitez reprendre la campagne et commencer à envoyer des messages, cliquez sur l'icône d'engrenage à côté de la campagne et sélectionnez **Reprendre**.
 
-!\[Resume Campaign\]\[5\]
+!\[Campagne de reprise \]\[5\]
 
 {% alert warning %}
-When you archive a Segment, any campaigns using it will __also be archived__.
+Lorsque vous archivez un Segment, toutes les campagnes qui l'utilisent seront __également archivées__.
 {% endalert %}
-[1]: {% image_buster /assets/img_archive/Archiving.png %} [2]: {% image_buster /assets/img_archive/Include_archived.png %} [3]: {% image_buster /assets/img_archive/Archive_pause_selected.png %} [4]: {% image_buster /assets/img_archive/unarchive_selected.png %} [5]: {% image_buster /assets/img_archive/resume_unarchived.png %}
+[1]: {% image_buster /assets/img_archive/Archiving.png %} [2]: {% image_buster /assets/img_archive/Include_archived.png %} [3]: {% image_buster /assets/img_archive/Archive_pause_selected ng %} [4]: {% image_buster /assets/img_archive/unarchive_selected.png %} [5]: {% image_buster /assets/img_archive/resume_unarchived.png %}
