@@ -1,44 +1,44 @@
 ---
-nav_title: Operators
-article_title: Liquid Operators
+nav_title: Opérateurs
+article_title: Opérateurs Liquid
 page_order: 2
-description: "This reference page notes the operators that Liquid supports, as well as relevant examples."
+description: "Cette page de référence note les opérateurs que Liquid supporte, ainsi que les exemples pertinents."
 ---
 
-# Operators
+# Opérateurs
 
-Liquid supports many [operators][25] that can be used in your conditional statements.
+Liquid prend en charge de nombreux [opérateurs][25] qui peuvent être utilisés dans vos instructions conditionnelles.
 
-| Syntax   | Operator Description                                        |
-| -------- | ----------------------------------------------------------- |
-| ==       | equals                                                      |
-| !=       | does not equal                                              |
-| >        | greater than                                                |
-| <        | less than                                                   |
-| >=       | greater than or equal to                                    |
-| <=       | less than or equal to                                       |
-| or       | condition A or condition B                                  |
-| and      | condition A and condition B                                 |
-| contains | checks to see if a string or string array contains a string |
+| Syntaxe  | Description de l'opérateur                                                                        |
+| -------- | ------------------------------------------------------------------------------------------------- |
+| ==       | est égal à                                                                                        |
+| !=       | n'est pas égal à                                                                                  |
+| >        | supérieur à                                                                                       |
+| <        | inférieur à                                                                                       |
+| >=       | supérieur ou égal à                                                                               |
+| <=       | inférieur ou égal à                                                                               |
+| ou       | condition A ou condition B                                                                        |
+| et       | condition A et condition B                                                                        |
+| contient | vérifie si une chaîne de caractères ou une chaîne de caractères contient une chaîne de caractères |
 {: .reset-td-br-1 .reset-td-br-2}
 
-## Operator examples
+## Exemples d'opérateur
 
-Here are some examples of how these operators could be helpful for your marketing campaigns:
+Voici quelques exemples de la manière dont ces opérateurs pourraient être utiles pour vos campagnes de marketing:
 
-### Choose message via integer custom attribute
+### Choisir un message via un attribut personnalisé entier
 
 !\[Total Spend\]\[13\]{: width="100%"}
 
-In this example, if a customer’s "Total Spend" custom attribute is greater than `0`, they will get the message:
+Dans cet exemple, si l'attribut personnalisé "Total Dépend" d'un client est supérieur à `0`, il recevra le message :
 
 ```
-Thanks for purchasing! Here's another 10% off!
+Merci pour votre achat! Voici encore 10% de réduction !
 ```
-If a customer’s "Total Spend" custom attribute does not exist or is equal to `0`, they will get the following message:
+Si l'attribut personnalisé "Total Dépend" d'un client n'existe pas ou est égal à `0`, il recevra le message suivant :
 
 ```
-Buy now! Would 5% off convince you?
+Achetez maintenant ! 5% de réduction vous convaincraient-ils?
 ```
 
 {% details Copyable Code for this Example: %}
@@ -46,9 +46,9 @@ Buy now! Would 5% off convince you?
 
 ```liquid
 {% if {{custom_attribute.${Game}}} == Game1 %}
-You played our Game! We're so happy!
+Vous avez joué à notre jeu! Nous sommes tellement heureux!
 {% else %}
-Hey! Get in here and play this Game!
+Hé ! Entrez ici et jouez à ce jeu!
 {% endif %}
 ```
 {% endraw %}
@@ -57,26 +57,26 @@ Hey! Get in here and play this Game!
 
 <br>
 
-### Choose message via string custom attribute
+### Choisir un message via un attribut personnalisé de chaîne de caractères
 
-!\[Games Played\]\[14\]
+!\[Jeux joués\]\[14\]
 
-In this example, if you have played a certain game, you'll receive the following message:
-
-```
-You played our Game! We're so happy!
-```
-
-If you played another specified game:
+Dans cet exemple, si vous avez joué à un certain jeu, vous recevrez le message suivant :
 
 ```
-You played our other Game! Woop!
+Vous avez joué à notre jeu! Nous sommes tellement heureux!
 ```
 
-If you haven’t played any games, or that custom attribute doesn’t exist on your profile, you’d get the following message:
+Si vous avez joué à une autre partie spécifiée:
 
 ```
-Hey! Get in here and play this Game!
+Vous avez joué à notre autre jeu! Oups !
+```
+
+Si vous n’avez joué à aucun jeu, ou que cet attribut personnalisé n’existe pas sur votre profil, vous recevrez le message suivant :
+
+```
+Hé ! Entrez ici et jouez à ce jeu!
 ```
 
 {% details Copyable Code for this Example: %}
@@ -85,11 +85,11 @@ Hey! Get in here and play this Game!
 
 ```liquid
 {% if {{custom_attribute.${Game}}} == Game1 %}
-You played our Game! We're so happy!
+Vous avez joué à notre jeu! Nous sommes tellement heureux!
 {% elsif{{custom_attribute.${Game}}} == Game2 %}
-You played our other Game! Woop!
+Vous avez joué à notre autre jeu! Oups !
 {% else %}
-Hey! Get in here and play this Game!
+Hé ! Entrez ici et jouez à ce jeu!
 {% endif %}
 ```
 {% endraw %}
@@ -97,19 +97,19 @@ Hey! Get in here and play this Game!
 {% enddetails %}
 <br>
 
-### Abort message based on location
+### Annuler le message en fonction de l'emplacement
 
-You can abort a message based on just about anything. The example below shows how you can abort a message if a user is not based in a specified area, as they might not qualify for the promotion, show, or delivery.
+Vous pouvez annuler un message basé sur n'importe quoi. L'exemple ci-dessous montre comment vous pouvez annuler un message si un utilisateur n'est pas basé dans une zone spécifiée, étant donné qu'ils ne sont pas admissibles à la promotion, à la présentation ou à la livraison.
 
-!\[Abort Message If\]\[26\]
+!\[Message d'Abort If\]\[26\]
 
-You can also [abort messages based on Connected Content][1].
+Vous pouvez aussi [annuler les messages en fonction du contenu connecté][1].
 
 {% details Copyable Code for this Example: %}
 {% raw %}
 ```liquid
-{% if {{${time_zone.$}}} =='America/Los_Angeles' %}
-Stream now!
+{% if {{{time_zone.$}}} $ =='Amérique/Los_Angeles' %}
+Stream now !
 {% else %}
 {% abort_message () %}
 {% endif %}
