@@ -1,38 +1,38 @@
 ---
-nav_title: Duplicating Segments, Campaigns, and Canvases
-article_title: Duplicating Segments, Campaigns, and Canvases
+nav_title: Dupliquer les segments, les campagnes et les toiles
+article_title: Dupliquer les segments, les campagnes et les toiles
 page_order: 2
-page_type: reference
-description: "This reference article goes over how to duplicate segments, campaigns, and Canvases for reuse."
+page_type: Référence
+description: "Cet article de référence décrit comment dupliquer des segments, des campagnes et des Canvases pour être réutilisés."
 tool:
-  - Campaigns
-  - Canvas
+  - Campagnes
+  - Toile
   - Segments
 ---
 
-# Duplicating segments, campaigns, and Canvases
+# Duplication des segments, des campagnes et des Canvases
 
-> This reference article goes over how to duplicate segments, campaigns, and Canvases for reuse. <br> <br> Not only is duplicating engagement tools a time-saver, but it also allows you to continually build off and iterate over successful campaigns, segments, and Canvases.
+> Cet article de référence décrit comment dupliquer des segments, des campagnes et des Canvases pour être réutilisés. <br> <br> Non seulement la duplication des outils d'engagement est un gain de temps, mais il vous permet aussi de construire et d'itérer continuellement des campagnes réussies, des segments et des Canvases.
 
-Braze allows you to duplicate pre-existing segments, campaigns, and Canvases. This can be useful in cases where you wish to create a new engagement tool that is very similar to an old one. By our cloning feature, you can create a second version of an old segment, campaign, or Canvas and make the necessary edits.
+Braze vous permet de dupliquer des segments préexistants, des campagnes et des canvases. Cela peut être utile dans les cas où vous souhaitez créer un nouvel outil d'engagement très similaire à un ancien. Grâce à notre fonction de clonage, vous pouvez créer une deuxième version d'un vieux segment, campagne ou Canvas et faire les modifications nécessaires.
 
-For more on segments and campaigns, check out our [LAB course](http://lab.braze.com/quick-overview-segment-and-campaign-setup)!
+Pour en savoir plus sur les segments et les campagnes, consultez notre [cours LAB](http://lab.braze.com/quick-overview-segment-and-campaign-setup)!
 
-## Cloning a segment
+## Clonage d'un segment
 
-To clone a segment, click the gear icon next to a segment and select **Duplicate**. Your new segment will automatically be titled "Copy of [Original Segment]" and you'll be brought to its editing page.
+Pour cloner un segment, cliquez sur l'icône d'engrenage à côté d'un segment et sélectionnez **Dupliquer**. Votre nouveau segment sera automatiquement intitulé « Copie du [segment original] » et vous serez amené à sa page d'édition.
 
 !\[Segment\]\[3\]
 
-## Cloning a campaign
+## Clonage d'une campagne
 
-To clone a campaign, click the gear icon next to a campaign and select **Duplicate**. Your new campaign will automatically be titled "Copy of [Original Campaign]" and you'll be brought to its editing page. Duplicates of campaigns will remain drafts until you edit and launch them.
+Pour cloner une campagne, cliquez sur l'icône d'engrenage à côté d'une campagne et sélectionnez **Dupliquer**. Votre nouvelle campagne sera automatiquement intitulée « Copie de [Campagne originale] » et vous serez amené à sa page d'édition. Des doublons de campagnes resteront des brouillons jusqu'à ce que vous les éditiez et les lancez.
 
 !\[Campaign\]\[4\]
 
-## Cloning a Canvas
+## Cloner une toile
 
-To clone a Canvas, click the gear icon next to a Canvas and select **Duplicate**. Your new Canvas will automatically be titled "Copy of [Original Canvas]" and you'll be brought to its editing page. Duplicates of Canvases will remain drafts until you edit and launch them.
+Pour cloner un Canevas, cliquez sur l'icône d'engrenage à côté d'un Canvas et sélectionnez **Dupliquer**. Votre nouvelle toile sera automatiquement intitulée « Copie de [Canevas original] » et vous serez amené à sa page d'édition. Les doublons de Canvases resteront des ébauches jusqu'à ce que vous les modifiiez et les lancerez.
 
 !\[Canvas\]\[5\]
 [3]: {% image_buster /assets/img_archive/duplicate_segment.png %} [4]: {% image_buster /assets/img_archive/duplicate_campaign.png %} [5]: {% image_buster /assets/img_archive/duplicate_canvas.png %}
