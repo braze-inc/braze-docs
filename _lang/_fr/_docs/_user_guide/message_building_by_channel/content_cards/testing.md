@@ -1,49 +1,49 @@
 ---
-nav_title: Testing
-article_title: Testing Content Cards
+nav_title: Tests en cours
+article_title: Tester les cartes de contenu
 page_order: 3
-description: "This reference article covers how to preview and test Content Cards, as well as some best practices."
+description: "Cet article de référence couvre la façon de prévisualiser et de tester les Cartes de Contenu, ainsi que certaines meilleures pratiques."
 channel:
-  - content cards
+  - cartes de contenu
 ---
 
-# Testing Content Cards
+# Tester les cartes de contenu
 
-It is extremely important to always test your Content Cards before sending your campaigns. Our preview and testing capabilities offer two ways to take a look at your Content Cards. You can preview your message to help you visualize as you compose it, as well as send a test message to yourself or a specific user's device. We recommend you take advantage of both.
+Il est extrêmement important de toujours tester vos cartes de contenu avant d'envoyer vos campagnes. Nos capacités de prévisualisation et de test vous permettent de regarder vos cartes de contenu. Vous pouvez prévisualiser votre message pour vous aider à le visualiser au fur et à mesure que vous le composez, en plus de vous envoyer un message de test à vous-même ou au périphérique d'un utilisateur spécifique. Nous vous recommandons de profiter des deux.
 
-## Preview
+## Aperçu
 
-You can preview your card as you compose it. This should help you visualize what your final message will look like from your user's perspective.
+Vous pouvez prévisualiser votre carte à mesure que vous la composez. Cela devrait vous aider à visualiser à quoi ressemblera votre message final du point de vue de votre utilisateur.
 
-In the __Preview__ tab of your composer, the view of your message might not be identical to its actual rendering on the user's device. We recommend always sending a test message to a device to ensure that your media, copy, personalization, and custom attributes generate correctly.
+Dans l'onglet __Aperçu__ de votre compositeur, la vue de votre message pourrait ne pas être identique à son affichage actuel sur le périphérique de l'utilisateur. Nous vous recommandons de toujours envoyer un message de test à un appareil afin de vous assurer que vos supports, copies, personnalisations et attributs personnalisés génèrent correctement.
 
-## Test
+## Tester
 
-To send a test to either [content test groups]({{site.baseurl}}/user_guide/administrative/app_settings/developer_console/internal_groups_tab/#content-test-groups) or individual users, push must be enabled on your test devices before sending. For iOS users, you must tap the push notification sent by Braze in order to view the test Content Card. This behavior only applies to test Content Cards.
+Pour envoyer un test à [groupes de test de contenu]({{site.baseurl}}/user_guide/administrative/app_settings/developer_console/internal_groups_tab/#content-test-groups) ou à des utilisateurs individuels, push doit être activé sur vos appareils de test avant l'envoi. Pour les utilisateurs d'iOS, vous devez appuyer sur la notification push envoyée par Braze pour voir la carte de contenu de test. Ce comportement s'applique uniquement aux cartes de contenu de test.
 
-### Preview message as user
+### Aperçu du message en tant qu'utilisateur
 
-You can also preview messages from the **Test** tab as if you were a user. You can select a specific user, a random user, or create a custom user.
+Vous pouvez également prévisualiser les messages de l'onglet **Test** comme si vous étiez un utilisateur. Vous pouvez sélectionner un utilisateur spécifique, un utilisateur au hasard, ou créer un utilisateur personnalisé.
 
 !\[Custom_User_Preview\]\[3\]
 
 ### Test checklist
 
-- Do the images and media show up and act as expected?
-- Does the Liquid function as expected? Have you accounted for a [default attribute value]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/conditional_logic/#accounting-for-null-attribute-values) in the event that the Liquid returns no information?
-- Is your copy clear, concise, and correct?
-- Do your links direct the user to where they should go?
+- Est-ce que les images et les médias apparaissent et agissent comme prévu?
+- Est-ce que le Liquid fonctionne comme prévu ? Avez-vous comptabilisé une [valeur d'attribut par défaut]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/conditional_logic/#accounting-for-null-attribute-values) dans le cas où le Liquid ne renvoie aucune information ?
+- Votre copie est-elle claire, concise et correcte?
+- Vos liens dirigent-ils l'utilisateur vers l'endroit où il doit aller ?
 
 ## Debug
 
-After your Content Cards are sent, you can break down or debug any issues from the [Event User Log]({{site.baseurl}}/user_guide/administrative/app_settings/developer_console/event_user_log_tab/) in the Developer Console.
+Après l'envoi de vos Cartes de Contenu, vous pouvez décomposer ou déboguer n'importe quel problème depuis le [Journal de l'Utilisateur d'événement]({{site.baseurl}}/user_guide/administrative/app_settings/developer_console/event_user_log_tab/) dans la Console Développeur.
 
-A common use case is trying to debug why a user can't see a particular Content Card. To do so, you can look in the **Event User Logs** for the Content Cards delivered to the SDK on session start, but prior to an impression, and trace those back to a specific campaign:
+Un cas d'utilisation courant est d'essayer de déboguer pourquoi un utilisateur ne peut pas voir une carte de contenu particulière. Pour cela, vous pouvez chercher dans les **Logs des utilisateurs d'événement** les Cartes de Contenu livrées au SDK au démarrage de la session, mais avant une impression, et retracez celles à une campagne spécifique:
 
-1. Go to the **Developer Console** and select the **Event User Log** tab.
-2. Locate and expand the SDK Request for your test user.
-3. Click **Raw Data**.
-4. Find the `id` for your session. An example excerpt is shown below:
+1. Allez dans la **Console développeur** et sélectionnez l'onglet **Journal des utilisateurs d'événements**.
+2. Localisez et développez la requête SDK pour votre utilisateur de test.
+3. Cliquez sur **Données brutes**.
+4. Trouvez l'id `` de votre session. Un extrait d'exemple est affiché ci-dessous:
 
     ```json
     [
@@ -60,17 +60,17 @@ A common use case is trying to debug why a user can't see a particular Content C
     ]
     ```
 
-5. Use a decoding tool like [Base64 Decode and Encode](https://www.base64decode.org/) to decode the `id` from Base64 format and find the associated `campaign_id`. In our example above, this results in the following:
+5. Utilisez un outil de décodage comme [Decode et Encode Base64](https://www.base64decode.org/) pour décoder l' `id` du format Base64 et trouver le `campaign_id` associé. Dans notre exemple ci-dessus, cela donne les résultats suivants :
 
     ```
     6185005a9d9bee79387cce43_$_cc=c3b25740-f113-c047-4b1d-d296f280af4f&mv=6185005b9d9bee79387cce45&pi=cmp
     ```
 
-    Where `6185005a9d9bee79387cce43` is the `campaign_id`.<br><br>
+    Où `6185005a9d9bee79387cce43` est le `campaign_id`.<br><br>
 
-6. Go to the **Campaigns** page and search for the `campaign_id`.
+6. Rendez-vous sur la page **Campagnes** et recherchez le `campaign_id`.
 
 !\[Search for campaign_id on Campaigns page\]\[1\]
 
-From there, you can review your message settings and content to drill down and determine why a user can't see a particular Content Card.
+À partir de là, vous pouvez examiner les paramètres de vos messages et le contenu pour les dessuser et déterminer pourquoi un utilisateur ne peut pas voir une carte de contenu particulière.
 [1]: {% image_buster /assets/img_archive/cc_debug.png %} [3]: {% image_buster /assets/img/cc-user-preview.png %}
