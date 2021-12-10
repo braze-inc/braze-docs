@@ -1,90 +1,90 @@
 ---
-nav_title: Segment Extensions
-article_title: Segment Extensions
+nav_title: Extensions de segment
+article_title: Extensions de segment
 page_order: 3.1
-page_type: tutorial
-description: "This how-to article will walk you through how to use a Segment Extension with Braze Segments."
+page_type: tutoriel
+description: "Cet article vous guidera à travers comment utiliser une extension de segment avec les segments de Braze."
 tool: Segments
 ---
 
-# Segment Extensions
+# Extensions de segment
 
-> This article will walk you through how to use a Segment Extension to enhance your segmentation capabilities
+> Cet article vous guidera à travers comment utiliser une extension de segment pour améliorer vos capacités de segmentation
 
-A Segment Extension expands our existing segmentation capabilities by enabling you to target more precise lists of users based on their custom event and purchase behavior in the past 365 days. You can create a maximum of 10 Segment Extensions per App Group. After these extension lists are generated, they can then be included or excluded as a [filter][10] in your segments. When creating a Segment Extension, you can also specify that the list be regenerated once every 24 hours.
+Une extension de segment étend nos capacités de segmentation existantes en vous permettant de cibler des listes d'utilisateurs plus précises en fonction de leur événement personnalisé et de leur comportement d'achat au cours des 365 derniers jours. Vous pouvez créer un maximum de 10 extensions de segment par groupe d'applications. Une fois ces listes d'extensions générées, elles peuvent ensuite être incluses ou exclues comme un [filtre][10] dans vos segments. Lors de la création d'une extension de segment, vous pouvez également spécifier que la liste sera régénérée une fois toutes les 24 heures.
 
-## Step 1: Navigate to Segment Extensions
+## Étape 1 : Accédez aux extensions de segment
 
-From the left-hand side of the Dashboard under Engagement, expand the Segments section, and click **Segment Extension**. From the Segment Extensions table, click **+ Create New Extension**.
+À partir du côté gauche du tableau de bord sous Engagement, développez la section Segments, et cliquez sur **Extension de segment**. À partir de la table des extensions de segments, cliquez sur **+ Créer une nouvelle extension**.
 
-## Step 2: Name your Segment Extension
+## Étape 2 : Nommez votre extension de segment
 
-Name your Segment Extension by describing the type of users you intend to filter for. This will ensure that this extension can be easily and accurately discovered when applying it as a filter in your segment.
+Nommez votre Extension de Segment en décrivant le type d'utilisateurs pour lequel vous souhaitez filtrer. Cela permettra de s'assurer que cette extension peut être facilement et précisément découverte lors de son application comme filtre dans votre segment.
 
-!\[Segment Extension Name\]\[2\]
+!\[Nom de l'extension de segment\]\[2\]
 
-## Step 3: Choose your criteria
+## Étape 3 : Choisissez vos critères
 
-Select between a purchase or custom event criteria for targeting. Once you've selected the desired event type criteria, choose which purchased item or specific custom event you'd like to target for your user list. Then choose how many times (more than, less than, or equal to) the user would need to have completed the event, and how many days to look back, up to 365 days.
+Sélectionnez parmi les critères d'achat ou d'événement personnalisé pour le ciblage. Une fois que vous avez sélectionné les critères de type d'événement souhaités, choisissez celui qui a acheté un article ou un événement personnalisé spécifique que vous souhaitez cibler pour votre liste d'utilisateurs. Puis choisissez combien de fois (plus de, moins que, ou égal à) l'utilisateur aurait besoin d'avoir terminé l'événement, et combien de jours pour regarder en arrière, jusqu'à 365 jours.
 
-!\[Segment Extension Criteria\]\[3\]
+!\[Critères d'extension du segment\]\[3\]
 
-### Event property segmentation
+### Segmentation des propriétés de l'événement
 
-To increase targeting precision, select the **Add Property Filters** checkbox. This will enable you to drill down based on the specific properties of your purchase or custom event. We support event property segmentation based on string, numeric, boolean, and time objects. We also support segmentation based on [nested event properties]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/nested_object_support/).
+Pour augmenter la précision de ciblage, cochez la case **Ajouter des filtres de propriétés**. Cela vous permettra de percer en fonction des propriétés spécifiques de votre achat ou de votre événement personnalisé. Nous prenons en charge la segmentation des propriétés d'événement basée sur des objets de chaîne, numérique, booléen et horaire. Nous supportons également la segmentation basée sur les propriétés [d'événements imbriqués]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/nested_object_support/).
 
-!\[Event Property\]\[12\]
+!\[Propriété de l'événement\]\[12\]
 
 !\[Arrow\]\[16\]{: style="border:0;"}
 
-!\[Event Property\]\[13\]
+!\[Propriété de l'événement\]\[13\]
 
-!\[Event Property\]\[14\]
+!\[Propriété de l'événement\]\[14\]
 
-!\[Event Property\]\[15\]
+!\[Propriété de l'événement\]\[15\]
 
-Segment Extensions rely on long term storage of event properties and don't have the 30-day custom event property storage limit. This means you can look back on event properties tracked within the past year, and tracking doesn't wait until the extension has been set up first.
+Les extensions de segment s'appuient sur le stockage à long terme des propriétés d'événement et ne disposent pas de la limite de stockage personnalisée de 30 jours. Cela signifie que vous pouvez regarder en arrière les propriétés de l'événement suivies au cours de l'année écoulée, et le suivi n'attend pas que l'extension ait été configurée d'abord.
 
-{% alert note %} Using event properties within Segment Extensions does not impact data point usage.  {% endalert %}
+{% alert note %} L'utilisation des propriétés d'événement dans les extensions de segment n'affecte pas l'utilisation du point de données.  {% endalert %}
 
-### Extension regeneration
+### Régénération de l'extension
 
-You can specify whether you want this extension to represent a single snapshot in time, or whether you want this extension to regenerate on a daily basis. Your extension will always begin processing after the initial save. If you would like the extension to be regenerated daily, select the **Regenerate Extension Daily** checkbox and the regeneration will begin processing at around midnight each day in your company’s time zone.
+Vous pouvez spécifier si vous voulez que cette extension représente un seul instantané dans le temps, ou si vous voulez que cette extension se régénère quotidiennement. Votre extension commencera toujours le traitement après la sauvegarde initiale. Si vous souhaitez que l'extension soit régénérée quotidiennement, cochez la case **Régénérer l'extension Quotidienne** et la régénération commencera à être traitée vers minuit chaque jour dans le fuseau horaire de votre entreprise.
 
 {% alert important %}
-Starting on January 10, 2022, the setting to regenerate extensions daily will be automatically turned off for unused Segment Extensions. Braze defines unused extensions as ones that meet the following criteria:
+À partir du 10 janvier 2022, le paramètre de régénération des extensions quotidiennes sera automatiquement désactivé pour les extensions de segment non utilisées. Braze définit les extensions inutilisées comme celles qui répondent aux critères suivants :
 
-- Not used in any active campaigns, Canvases, or segments
-- Not used in any inactive (draft, stopped, archived) campaigns, Canvases, or segments
-- Have not been modified in over 7 days
+- Non utilisé dans aucune campagne active, Canvases ou segments actifs
+- Non utilisé dans aucune campagne inactive (brouillon, arrêté, archivé), Canvases ou segments
+- N'a pas été modifié depuis plus de 7 jours
 
-Braze will notify the company contact and creator of the extension when this setting is turned off. The option to regenerate extensions daily can be turned on again at any time.
+Braze informera le contact de la société et le créateur de l'extension lorsque ce paramètre est désactivé. L'option de régénérer les extensions quotidiennement peut être activée à tout moment.
 {% endalert %}
 
-## Step 4: Save your segment extension
+## Étape 4 : Enregistrez votre extension de segment
 
-Once you click **Save**, your extension will begin processing. The length of time it takes to generate your extension depends on how many users you have, how many custom events or purchase events you're capturing, and how many days you're looking back in history.
+Une fois que vous cliquez sur **Enregistrer**, votre extension commencera à être traitée. La durée de génération de votre extension dépend du nombre d'utilisateurs que vous avez, combien d'événements personnalisés ou d'acheter des événements que vous capturez, et combien de jours vous regardez dans l'histoire.
 
-While your extension is processing, you will see a small animation next to the name of the extension, and the word "Processing" in the **Last Processed** column on the extension list. Note that you will not be able to edit an extension while it is processing.
+Pendant le traitement de votre extension, vous verrez une petite animation à côté du nom de l'extension, et le mot "Traitement" dans la colonne **Dernier traité** de la liste des extensions. Notez que vous ne serez pas en mesure de modifier une extension pendant son traitement.
 
-!\[Segment Extension Processing\]\[5\]
+!\[Traitement de l'extension du segment\]\[5\]
 
-## Step 5: Use your extension in a segment
+## Étape 5 : Utilisez votre extension dans un segment
 
-Once you have created an extension, you can use it as a filter when creating a segment or defining an audience for a campaign or Canvas. Start by choosing **Braze Segment Extension** from the filter list under the **User Attributes** section.
+Une fois que vous avez créé une extension, vous pouvez l'utiliser comme un filtre lors de la création d'un segment ou de la définition d'un public pour une campagne ou Canvas. Commencez par choisir **Braze Segment Extension** dans la liste de filtres sous la section **Attributs Utilisateurs**.
 
-!\[Segment Extension as a Segment Filter\]\[6\]
+!\[Extension de segment comme filtre de segment\]\[6\]
 
-From the Braze Segment Extension filter list, choose the extension you wish to include or exclude in this segment.
+Dans la liste des filtres d'extension de segment de Braze, choisissez l'extension que vous souhaitez inclure ou exclure dans ce segment.
 
-!\[Segment Extension as a Segment Filter\]\[7\]
+!\[Extension de segment comme filtre de segment\]\[7\]
 
-To view the extension criteria, click **View Extension Details** to show the details in a modal popup.
+Pour afficher les critères d'extension, cliquez sur **Voir les détails de l'extension** pour afficher les détails dans une fenêtre contextuelle.
 
-!\[Segment Extension Details Modal\]\[8\]{: style="max-width:70%;"}
+!\[Module de détails d'extension de Segment \]\[8\]{: style="max-width:70%;"}
 
-Now you can proceed as usual with [creating your segment][11].
-[2]: {% image_buster /assets/img/segment/segment_extension2.png %} [3]: {% image_buster /assets/img/segment/segment_extension3.png %} [5]: {% image_buster /assets/img/segment/segment_extension5.png %} [6]: {% image_buster /assets/img/segment/segment_extension7.png %} [7]: {% image_buster /assets/img/segment/segment_extension6.png %} [8]: {% image_buster /assets/img/segment/segment_extension8.png %} [12]: {% image_buster /assets/img/segment/property1.png %} [13]: {% image_buster /assets/img/segment/property2.png %} [14]: {% image_buster /assets/img/segment/property3.png %} [15]: {% image_buster /assets/img/segment/property4.png %} [16]: {% image_buster /assets/img/Shopify/arrow.jpeg %}
+Maintenant, vous pouvez continuer comme d'habitude avec [la création de votre segment][11].
+[2]: {% image_buster /assets/img/segment/segment_extension2.png %} [3]: {% image_buster /assets/img/segment/segment_extension3.png %} [5]: {% image_buster /assets/img/segment/segment_extension5. ng %} [6]: {% image_buster /assets/img/segment/segment_extension7.png %} [7]: {% image_buster /assets/img/segment/segment_extension6. ng %} [8]: {% image_buster /assets/img/segment/segment_extension8.png %} [12]: {% image_buster /assets/img/segment/property1.png %} [13]: {% image_buster /assets/img/segment/property2. ng %} [14]: {% image_buster /assets/img/segment/property3.png %} [15]: {% image_buster /assets/img/segment/property4. ng %} [16]: {% image_buster /assets/img/Shopify/arrow.jpeg %}
 
 [10]: {{site.baseurl}}/user_guide/engagement_tools/segments/segmentation_filters/
 [11]: {{site.baseurl}}/user_guide/engagement_tools/segments/creating_a_segment/
