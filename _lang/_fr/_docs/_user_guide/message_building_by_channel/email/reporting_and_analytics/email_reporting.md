@@ -1,17 +1,17 @@
 ---
-nav_title: Reporting
-article_title: Email Reporting
+nav_title: Rapports
+article_title: Rapports par e-mail
 page_order: 20
-description: "Braze provides you with a detailed report of each of your email campaigns. This article covers the different components of the report and where it can be found in the dashboard."
+description: "Braze vous fournit un rapport détaillé de chacune de vos campagnes de courriel. Cet article couvre les différents composants du rapport et où il se trouve dans le tableau de bord."
 tool:
-  - Reports
+  - Rapports
 channel:
-  - email
+  - Email
 ---
 
-# Email reporting
+# Rapports par e-mail
 
-> This article covers the different components of your email reporting and where it can be found in the dashboard.
+> Cet article couvre les différents composants de votre rapport de courriel et où il peut être trouvé dans le tableau de bord.
 
 {% include campaign_analytics.md channel="email" %}
 
