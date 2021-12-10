@@ -1,49 +1,49 @@
 ---
-nav_title: Understanding Campaign Status
-article_title: Understanding Campaign Status
+nav_title: Comprendre le statut de la campagne
+article_title: Comprendre le statut de la campagne
 page_order: 2
-tool: Campaigns
-page_type: reference
-description: "This reference article gives an overview of the various statuses a campaign can have and what they mean."
+tool: Campagnes
+page_type: Référence
+description: "Cet article de référence donne un aperçu des différents statuts qu'une campagne peut avoir et de ce qu'elle signifie."
 ---
 
-# Understanding campaign status
+# Comprendre le statut de la campagne
 
-> This reference article gives an overview of the various statuses a campaign can have and what they mean.
+> Cet article de référence donne un aperçu des différents statuts qu'une campagne peut avoir et de ce qu'elle signifie.
 
-On your Braze dashboard, your campaigns are grouped by their status. Below are the different statuses your campaigns could have and descriptions on what they mean:
+Sur votre tableau de bord Braze, vos campagnes sont regroupées par statut. Voici les différents statuts que vos campagnes pourraient avoir et les descriptions de ce qu'elles signifient :
 
-- __Draft__
-    - Campaigns that are saved but not launched. Clicking on them allows you to continue editing and begin sending.
-
-
-- __Active__
-    - Campaigns that are in the process of sending and fall under one of the following behaviors:
-        - Scheduled to send once and has not yet begun sending
-        - Scheduled to send once and is currently sending (local time zone and Intelligent Timing campaigns send over the course of 24 hours)
-        - Scheduled to send on a recurring schedule and has at least one occurrence that hasn't finished sending
+- __Brouillon__
+    - Campagnes sauvegardées mais non lancées. Cliquer dessus vous permet de continuer à éditer et à commencer à envoyer.
 
 
-- __Archived__
-    - Campaigns that are no longer sending and are cleared from the "All Active" tab on the Dashboard, as well as the Detailed Statics graphs on the **Overview** and **Revenue** pages.
-    - To [archive campaigns][2] click on the gear icon to the right of the campaign, or simply check it off and select **Archive Selected**.
-    - You cannot edit an archived campaign, and would therefore need to unarchive it to do so.
+- __Actif__
+    - Les campagnes qui sont en cours d'envoi et qui sont soumises à l'un des comportements suivants :
+        - Prévu pour envoyer une fois et n'a pas encore commencé à envoyer
+        - Prévu pour envoyer une fois et est en cours d'envoi (fuseau horaire local et campagnes de Timing intelligentes envoyées sur 24 heures)
+        - Planifié pour envoyer sur un planning récurrent et a au moins une occurrence qui n'a pas fini d'envoyer
 
 
-- __Inactive__
-    - Campaigns that have been paused but are still rendered editable. You can resume an inactive campaign by clicking the gear icon by the campaign's name and selecting **Resume**.
+- __Archivé__
+    - Campagnes qui ne sont plus envoyées et qui sont effacées de l'onglet "Toutes Actives" sur le Tableau de bord, ainsi que les graphiques des statistiques détaillées sur les pages **Aperçu** et **Revenu**.
+    - Pour [archiver des campagnes][2] cliquez sur l'icône d'engrenage à droite de la campagne, ou tout simplement cochez la case et sélectionnez **Archive Sélectionnée**.
+    - Vous ne pouvez pas modifier une campagne archivée, et vous devez donc la désarchiver pour le faire.
 
 
-- __Multivariate Testing in Progress__
-    - Campaigns with [multivariate tests][1] still running. Should they reach a point where a variant outperforms others with better than 95% confidence, the variant will be marked as the "winner."
+- __Inactif__
+    - Les campagnes qui ont été mises en pause mais sont toujours rendues éditables. Vous pouvez reprendre une campagne inactive en cliquant sur l'icône d'engrenage par le nom de la campagne et en sélectionnant **Reprendre**.
 
 
-- __Inactive Multivariate Test - Winner Selection Needed__
-    - Campaigns with multivariate tests that have finished running and are in need of a Dashboard user to declare a winner to inform which variant the remaining users will receive.
+- __Tests multivariés en cours__
+    - Campagnes avec [tests multivariés][1] encore en cours d'exécution. Si elles atteignent un point où une variante surpasse les autres avec plus de 95 % de confiance, la variante sera marquée comme le « gagnant ».
 
 
-- __Completed__
-    - Campaigns that have finished sending and are not scheduled to send again in the future.
+- __Test multivarié inactif - Sélection du gagnant requise__
+    - Campagnes avec des tests multivariés qui ont terminé leur exécution et ont besoin d'un utilisateur du tableau de bord pour déclarer un gagnant pour informer la variante que les utilisateurs restants recevront .
+
+
+- __Terminé__
+    - Les campagnes qui ont fini d'envoyer et qui ne sont pas planifiées pour envoyer à nouveau à l'avenir.
 
 
 
