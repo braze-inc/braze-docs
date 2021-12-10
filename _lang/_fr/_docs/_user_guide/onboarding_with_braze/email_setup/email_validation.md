@@ -1,24 +1,24 @@
 ---
-nav_title: Email Validation
-article_title: Email Validation
-alias: "/email_validation/"
+nav_title: Validation de l'email
+article_title: Validation de l'email
+alias: "/fr/email_validation/"
 page_order: 4.5
-page_type: reference
-description: "This reference article covers local and host part validation rules for email addresses."
-channel: email
+page_type: Référence
+description: "Cet article de référence couvre les règles de validation de la partie locale et hôte pour les adresses e-mail."
+channel: Email
 ---
 
-# Email technical guidelines and notes
+# Instructions et notes techniques par e-mail
 
-> This reference article covers local and host part validation rules for email addresses.
+> Cet article de référence couvre les règles de validation de la partie locale et hôte pour les adresses e-mail.
 
-## Email validation
+## Validation de l'adresse e-mail
 
 {% alert important %}
-Validation is used for dashboard email addresses, end-user email addresses (your customers), and from and reply-to addresses done of an email message.
+La validation est utilisée pour les adresses de messagerie du tableau de bord, les adresses e-mail de l'utilisateur final (vos clients) et les adresses de provenance et de réponse d'un message électronique.
 {% endalert %}
 
-Email validation is done when a user's email address has been updated or is being imported into Braze via API, CSV Upload, or modified in the dashboard. Braze automatically adjusts inputted email addresses to trim any whitespace. Email addresses targeted via the Braze servers must be validated per [RFC 2822](http://tools.ietf.org/html/rfc2822) standards. In addition to these standards, Braze does not accept certain characters (noted below) and recognizes them as invalid.
+La validation de l'e-mail est effectuée quand l'adresse e-mail d'un utilisateur a été mise à jour ou est en cours d'import dans Braze via API, Upload CSV, ou modifié dans le tableau de bord. Braze ajuste automatiquement les adresses e-mail saisies pour supprimer tous les espaces. Les adresses e-mail ciblées via les serveurs Braze doivent être validées par les normes [RFC 2822](http://tools.ietf.org/html/rfc2822). En plus de ces normes, Braze n'accepte pas certains caractères (indiqués ci-dessous) et les reconnaît comme non valides.
 
 {% details Unaccepted characters outside of RFC Standards %}
 - *
@@ -40,66 +40,66 @@ Email validation is done when a user's email address has been updated or is bein
 - ,
 {% enddetails %}
 
-This validation is not to be confused with a validation service like Briteverify. This is a check to verify that the syntax of an email address is correct. One of the main drivers to use this new validation process is to support international characters (i.e., UTF-8) in the local part of the email address.
+Cette validation ne doit pas être confondue avec un service de validation comme Briteverify. Ceci est une vérification pour vérifier que la syntaxe d'une adresse e-mail est correcte. Un des principaux moteurs pour utiliser ce nouveau processus de validation est de prendre en charge les caractères internationaux (i. ., UTF-8) dans la partie locale de l'adresse e-mail.
 
-Email syntax validation looks at both the local and host part of an email address. The local part is anything before the @ symbol, and the host part is anything after the @ symbol. Note that this process is only validating the syntax of the email address and does not consider whether the domain has a valid MX server or if the user exists on the domain listed.
+La validation de la syntaxe par courriel examine à la fois la partie locale et l'hôte d'une adresse e-mail. La partie locale est quelque chose avant le symbole @, et la partie hôte est quelque chose après le symbole @. Notez que ce processus ne valide que la syntaxe de l'adresse e-mail et ne considère pas si le domaine a un serveur MX valide ou si l'utilisateur existe sur le domaine répertorié.
 
 {% alert note %}
-If the domain part contains any non-[ASCII](https://en.wikipedia.org/wiki/ASCII) characters, it will need to be [Punycode-encoded](https://www.punycoder.com/) before being supplied to Braze.
+Si la partie domaine contient des caractères non[ASCII](https://en.wikipedia.org/wiki/ASCII) , elle devra être [encodée par Punycode](https://www.punycoder.com/) avant d'être fournie à Braze.
 {% endalert %}
 
-If Braze receives a request to add a user and the email address is considered invalid, you would see an error response in the API. When uploading via CSV, a user would be created, but the email address would not be added.
+Si Braze reçoit une demande pour ajouter un utilisateur et que l'adresse e-mail est considérée comme invalide, vous verrez une réponse d'erreur dans l'API. Lors du téléchargement via CSV, un utilisateur serait créé, mais l'adresse e-mail ne serait pas ajoutée.
 
-## Local part validation rules
+## Règles de validation de la pièce locale
 
 ### Microsoft domains
 
-If the host domain includes "msn", "hotmail", "outlook", or "live", then the following regex will be used to validate the local part:<br> `/\A\w[\-\w]*(?:\.[\-\w]+)*\z/i`
+Si le domaine hôte inclut "msn", "hotmail", "outlook", ou "live", alors la regex suivante sera utilisée pour valider la partie locale :<br> `/\A\w[\-\w]*(?:\. \-\w]+)*\z/i`
 
-The Microsoft address local part must follow these parameters:
+La partie locale de l'adresse Microsoft doit suivre ces paramètres :
 
-- Can start with a character (a-z), an underscore (_), or a number (0-9).
-- Can contain any alphanumeric character (a-z or 0-9) or an underscore (_)
-- Can contain the following characters (.) or (-)
-- Cannot start with a period (.) or hyphen (-)
-- Cannot contain two or more consecutive periods (.)
-- Cannot end with a period (.)
+- Peut commencer par un caractère (a-z), un tiret bas (_), ou un nombre (0-9).
+- Peut contenir n'importe quel caractère alphanumérique (a-z ou 0-9) ou un tiret bas (_)
+- Peut contenir les caractères suivants (.) ou (-)
+- Impossible de commencer par un point (.) ou un tiret (-)
+- Ne peut pas contenir deux ou plusieurs périodes consécutives (.)
+- Impossible de terminer par une période (.)
 
-### All other domains
+### Tous les autres domaines
 
-For all other domains, Braze allows email addresses matching the following regex for the local part:<br> `\A[\p{L}\p{N}_](?:[\.\+\'\p{L}\p{N}_&#\/\-]*[\p{L}\p{N}_\-])?\z`
+Pour tous les autres domaines, Braze autorise les adresses e-mail correspondant aux expressions régulières suivantes pour la partie locale :<br> `\A[\p{L}\p{N}_](? [\. +\'\p{L}\p{N}_&#\/\-]*[\p{L}\p{N}_\-])?\z`
 
-The local part must follow these parameters:
-- Can contain any letter, number, or underscore, including Unicode letters and numbers
-- Can contain but may not start or end with the following characters: (.) (+) (&) (#) (/) or (")
-- Can contain and end with, but may not start with the following character: (-)
+La partie locale doit suivre ces paramètres:
+- Peut contenir n'importe quelle lettre, chiffre ou trait de soulignement, y compris des lettres et des chiffres Unicode
+- Peut contenir mais ne peut pas commencer ou se terminer par les caractères suivants : (.) (+) (&) (#) (/) ou (")
+- Peut contenir et se terminer, mais ne peut pas commencer par le caractère suivant : (-)
 
 {% alert important %}
-If the domain part is a Gmail address, the local part needs to be at least five characters long. This is in addition to the regex validation specified above under "All other domains".
+Si la partie domaine est une adresse Gmail, la partie locale doit comporter au moins cinq caractères. Ceci est en plus de la validation par regex spécifiée ci-dessus sous "Tous les autres domaines".
 {% endalert %}
 
-## Host part validation rules
+## Règles de validation de la pièce hôte
 
-IPv4 or IPv6 addresses are not allowed in the host part of an email address. Also, the top-level domain (e.g. .com, .org, .net, etc.) may not be fully numeric.
+Les adresses IPv4 ou IPv6 ne sont pas autorisées dans la partie hôte d'une adresse email. De plus, le domaine de premier niveau (par exemple, .com, .org, .net, etc.) peut ne pas être entièrement numérique.
 
-The following regex is used to validate the domain:<br> `/^[a-z\d](?:[a-z\d-]{0,61}[a-z\d])?(?:\.[a-z\d](?:[a-z\d-]{0,61}[a-z\d])?)+$/i`
+L'expression régulière suivante est utilisée pour valider le domaine :<br> `/^[a-z\d](?:[a-z\d-]{0,61}[a-z\d])?(?:\.[a-z\d](?:[a-z\d-]{0,61}[a-z\d])+$/i`
 
-The domain name must follow these parameters:
+Le nom de domaine doit suivre ces paramètres :
 
-- Consists of two or more period-separated labels
-    - (Each part of a domain name is referred to as a "label". e.g., the domain name "example.com" consists of the "example" label and the "com" label.)
-- Must contain at least one period (.)
-- Cannot contain two or more consecutive periods
-- Each period-separated label must:
-    - Only contain alphanumeric character (a-z or 0-9) and the hyphen (-)
-    - Start with an alphanumeric character (a-z or 0-9)
-    - End with an alphanumeric character (a-z or 0-9)
-    - Contain 1 to 63 characters
+- Contient deux ou plusieurs étiquettes séparées par des périodes
+    - (Chaque partie d'un nom de domaine est appelée "label". par exemple, le nom de domaine "example.com" se compose de l'étiquette "exemple" et de l'étiquette "com").
+- Doit contenir au moins un point (.)
+- Ne peut pas contenir deux périodes consécutives ou plus
+- Chaque étiquette séparée par des périodes doit:
+    - Ne contient que des caractères alphanumériques (a-z ou 0-9) et le trait d'union (-)
+    - Commencez par un caractère alphanumérique (a-z ou 0-9)
+    - Terminer avec un caractère alphanumérique (a-z ou 0-9)
+    - Contient 1 à 63 caractères
 
-**Additional Validation Required:**<br> The final label of the domain must be a valid top-level domain (TLD) which is determined by anything after the final period (.). This TLD should be in [ICANN's TLD list][2]. The Braze email validator only ensures the syntax of the email is correct according to the regex listed above. It does not catch typos or addresses that don't exist.
+**Validation supplémentaire Requise :**<br> L'étiquette finale du domaine doit être un domaine de premier niveau (TLD) valide qui est déterminé par quoi que ce soit après la période finale(.). Ce TLD devrait être dans la [liste TLD d'ICANN][2]. Le validateur d'email Braze s'assure seulement que la syntaxe de l'email est correcte selon les regex énumérés ci-dessus. Il ne détecte pas les fautes de frappe ou les adresses qui n'existent pas.
 
 {% alert important %}
-Unicode is accepted only for the local part of the email address.<br> Unicode is not accepted for the domain part, but it may be Punycode-encoded.
+L'Unicode n'est accepté que pour la partie locale de l'adresse email.<br> L'Unicode n'est pas accepté pour la partie domaine, mais il peut être Punycode-encodé.
 {% endalert %}
 
 [2]: https://data.iana.org/TLD/tlds-alpha-by-domain.txt
