@@ -1,19 +1,19 @@
 ---
-nav_title: News Feed Categories
+nav_title: Catégories de fils d'actualité
 page_order: 9
-page_type: reference
-description: "This reference article describes News Feed Categories, which make it possible to integrate multiple instances of the News Feed into your application."
-tool: Dashboard
-channel: news feed
+page_type: Référence
+description: "Cet article de référence décrit les catégories de fils d'actualité, qui permettent d'intégrer plusieurs instances du flux de nouvelles dans votre application."
+tool: Tableau de bord
+channel: fil d'actualité
 ---
 
-# News Feed categories
+# Catégories de flux d'actualités
 
-News Feed categories make it possible to integrate multiple instances of the News Feed into your application. It's possible to integrate feeds within different windows that only display News Feed cards of a certain category.
+Les catégories de fils d'actualité permettent d'intégrer plusieurs instances du fil d'actualité dans votre application. Il est possible d'intégrer des flux dans différentes fenêtres qui n'affichent que les cartes des fils d'actualité d'une certaine catégorie.
 
-!\[News Feed Categories Image\]\[1\]
+!\[Image des catégories de flux d'actualités\]\[1\]
 
-Marking a News Feed as being from a specific category is not visible to the end user. By default, the Braze News Feed will display cards of all categories, unless a feed is specifically configured in the app code to display specific categories. For more information on the app code configuration, see [Defining a News Feed Category][2].
+Marquer un fil d'actualité comme appartenant à une catégorie spécifique n'est pas visible pour l'utilisateur final. Par défaut, le flux Braze News affichera des cartes de toutes les catégories, à moins qu'un flux soit spécifiquement configuré dans le code de l'application pour afficher des catégories spécifiques. Pour plus d'informations sur la configuration du code de l'application, voir [Définir une catégorie de flux d'actualités][2].
 [1]: {% image_buster /assets/img_archive/Newsfeed_category.png %}
 
 [2]: {{site.baseurl}}/developer_guide/platform_integration_guides/ios/news_feed/defining_a_news_feed_category/
