@@ -1,203 +1,203 @@
 ---
-nav_title: Create a Content Card
-article_title: Create a Content Card
+nav_title: Créer une carte de contenu
+article_title: Créer une carte de contenu
 page_order: 0
-description: "This reference article covers how to create, compose, configure and send Content Cards using Braze campaigns and Canvases."
+description: "Cet article de référence couvre la façon de créer, composer, configurer et envoyer des Cartes de Contenu à l'aide de campagnes Braze et de Canvases."
 tool:
-  - Canvas
-  - Campaigns
+  - Toile
+  - Campagnes
 channel:
-  - content cards
+  - cartes de contenu
 ---
 
-# Creating a Content Card
+# Création d'une carte de contenu
 
-You can create a Content Card using the Braze platform using campaigns and Canvases.
+Vous pouvez créer une Carte de Contenu à l'aide de la plateforme Braze à l'aide de campagnes et de Canvases.
 
-## Content Card creation in campaigns and Canvases
+## Création de la carte de contenu dans les campagnes et les toiles
 
 {% tabs %}
 {% tab Campaign %}
 
-### Build your message
+### Construire votre message
 
-Navigate to the **Campaign** section of the dashboard and click __Create Campaign__ to open a new messaging wizard for your Content Card. Then, follow the flow of the messaging wizard to quickly create and launch your Content Card.
+Naviguez vers la section **Campagne** du tableau de bord et cliquez sur __Créer une campagne__ pour ouvrir un nouvel assistant de messagerie pour votre carte de contenu. Ensuite, suivez le flux de l'assistant de messagerie pour créer et lancer rapidement votre carte de contenu.
 
-![Create Your Content Card]({% image_buster /assets/img/create-cc.gif %})
+![Créez votre carte de contenu]({% image_buster /assets/img/create-cc.gif %})
 
-1. Name your campaign something clear and meaningful.
-2. Add __Teams__ and __Tags__, as necessary.
-  - Tags make your campaigns easy to find and build reports out of. For instance, when using [Report Builder]({{site.baseurl}}/user_guide/data_and_analytics/your_reports/report_builder/), you can filter by particular tags.
-3. Add and name as many variants as you need for this campaign.
-  - You can choose different platforms, message types, and layouts for each of your added Variants.
+1. Nommez votre campagne quelque chose de clair et significatif.
+2. Ajouter __Teams__ et __Tags__, si nécessaire.
+  - Les balises facilitent la recherche et la création de rapports à partir de vos campagnes. Par exemple, lorsque vous utilisez [Report Builder]({{site.baseurl}}/user_guide/data_and_analytics/your_reports/report_builder/), vous pouvez filtrer par balises particulières.
+3. Ajoutez et nommez autant de variantes que vous avez besoin pour cette campagne.
+  - Vous pouvez choisir différentes plateformes, types de messages et mises en page pour chacune de vos variantes ajoutées.
 
 {% alert tip %}
-If all of the messages in your campaign are going to be similar or have the same content, compose your message before adding additional variants. You can then choose **Copy from Variant** from the **Add Variant** dropdown.
+Si tous les messages de votre campagne vont être similaires ou ont le même contenu, écrivez votre message avant d'ajouter des variantes supplémentaires. Vous pouvez ensuite choisir **Copier de la variante** dans le menu déroulant **Ajouter une variante**.
 {% endalert %}
 
 {% endtab %}
 {% tab Canvas %}
 
-### Set up your Canvas
+### Configurez votre toile
 
-Navigate to the **Canvas** page of the dashboard and click __Create Canvas__ to begin setting up your Canvas. Then, follow the flow of the Canvas wizard to quickly create and launch your Content Card.
+Naviguez vers la page **Canvas** du tableau de bord et cliquez sur __Créer Canvas__ pour commencer à configurer votre Canevas. Ensuite, suivez le flux de l'assistant Canvas pour créer et lancer rapidement votre carte de contenu.
 
-1. Name your Canvas something clear and meaningful.
-2. Add **Teams** and **Tags**, as necessary.
-  - Tags make your Canvases easy to find and build reports out of. For instance, when using [Report Builder]({{site.baseurl}}/user_guide/data_and_analytics/your_reports/report_builder/), you can filter by particular tags.
-3. Define your conversion events. Canvas supports up to four conversion events—these events must be assigned during Canvas creation and cannot be changed once a Canvas has launched.
-4. Set up your **Entry Schedule**. Canvas offers Scheduled, Action-Based and API-Triggered entry.
-5. Select your **Entry Audience**. Here, you can determine who will enter this Canvas and target users by segments and filters; these conditions will not be re-evaluated at each step. Within this dialogue, you also have the option to select Entry Controls, such as allowing users to re-enter this Canvas and set an entry limit. You'll also automatically be given a snapshot of what that approximate target population looks like right now.
-6. Set your **Send Settings**. Here, you can set messages sending options for all steps within Canvas. Some of these options include setting subscription settings, adjusting the rate limit, toggle frequency capping, and more.
-7. Add a step in the Canvas builder. Within this step, click **Messages** and then select the **Content Card** messaging channel. Here you will create and configure your Content Card.<br>![Create Your Content Card]({% image_buster /assets/img/content_card.gif %}){: style="max-width:90%"}
+1. Nommez votre toile quelque chose de clair et de significatif.
+2. Ajouter **Teams** et **Tags**, si nécessaire.
+  - Les étiquettes rendent vos toiles faciles à trouver et à construire des rapports. Par exemple, lorsque vous utilisez [Report Builder]({{site.baseurl}}/user_guide/data_and_analytics/your_reports/report_builder/), vous pouvez filtrer par balises particulières.
+3. Définissez vos événements de conversion. Canvas prend en charge jusqu'à quatre événements de conversion. Ces événements doivent être attribués lors de la création de Canvas et ne peuvent pas être modifiés une fois que Canvas a démarré.
+4. Configurez votre **Schedule d'Entrée**. Canvas offre une entrée planifiée, basée sur l'action et déclenchée par API.
+5. Sélectionnez votre **Audience d'Entrée**. Ici, vous pouvez déterminer qui entrera dans ce Canvas et les utilisateurs cibles par segments et filtres; ces conditions ne seront pas réévaluées à chaque étape. Dans ce dialogue, vous avez également la possibilité de sélectionner les contrôles d'entrée, par exemple permettre aux utilisateurs de ré-entrer ce canevas et de définir une limite d'entrée. Vous recevrez également automatiquement un instantané de ce à quoi ressemble cette population ciblée approximativement en ce moment.
+6. Définissez vos **paramètres d'envoi**. Ici, vous pouvez définir les options d'envoi de messages pour toutes les étapes de Canvas. Certaines de ces options incluent la configuration des paramètres d'abonnement, l'ajustement de la limite de débit, le plafonnement de fréquence de basculement et plus encore.
+7. Ajoutez une étape dans le constructeur de Canvas . Dans cette étape, cliquez sur **Messages** puis sélectionnez le canal de messagerie de la **Carte de contenu**. Ici, vous allez créer et configurer votre Carte de Contenu.<br>![Create Your Content Card]({% image_buster /assets/img/content_card.gif %}){: style="max-width:90%"}
 
-For more in-depth details on setting up and configuring your Canvas, refer to [Creating a Canvas]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/create_a_canvas/).
+Pour plus de détails sur la configuration et la configuration de votre Canvas, reportez-vous à [Créer un Canvas]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/create_a_canvas/).
 
 {% endtab %}
 {% endtabs %}
 
-## Step 1: Specify your message types
+## Étape 1 : Spécifiez vos types de messages
 
-### Message types
+### Types de messages
 
-Learn more about the expected behavior and look of each of these messages on our [Creative Details page]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards/creative_details/), or by clicking on the linked message types in the tables.
+En savoir plus sur le comportement et l'apparence attendus de chacun de ces messages sur notre [page de détails créatifs]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards/creative_details/), ou en cliquant sur les types de messages liés dans les tables.
 
-These Content Card types are accepted by both mobile apps and web applications.
+Ces types de cartes de contenu sont acceptés par les applications mobiles et par les applications web.
 
-| Message Type                                                                                                               | Type Description                                                                                                                                                                                    |
-| -------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| [Classic]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards/creative_details/#classic)                 | This Card has a simple layout with a bolded title, message text, and an optional image that sits to the left of the title and text. It is best to use a square image or icon with the Classic Card. |
-| [Captioned Image]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards/creative_details/#captioned-image) | This Card allows you to showcase your content with copy and an attention-grabbing image!                                                                                                            |
-| [Banner]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards/creative_details/#banner)                   | The Banner Card allows you to get creative and command attention with space for images, gifs, and other non-text based content.                                                                     |
+| Type de message                                                                                                              | Description du type                                                                                                                                                                                                                        |
+| ---------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| [Classique]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards/creative_details/#classic)                 | Cette carte a une mise en page simple avec un titre en gras, le texte du message et une image optionnelle qui se trouve à gauche du titre et du texte. Il est préférable d'utiliser une image carrée ou une icône avec la Carte Classique. |
+| [Image sous-titrée]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards/creative_details/#captioned-image) | Cette carte vous permet de présenter votre contenu avec copie et une image attrayant d'attention!                                                                                                                                          |
+| [Bannière]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards/creative_details/#banner)                   | La Bannière Card vous permet d'obtenir une attention créative et de commande avec de l'espace pour les images, gifs et autres contenus non textuels.                                                                                       |
 {: .reset-td-br-1 .reset-td-br-2}
 
-## Step 2: Compose a Content Card
+## Étape 2 : Composer une carte de contenu
 
-The Compose tab in the Campaign Wizard (located in the step wizard in Canvas) allows you to edit all aspects of your message's content and behavior.
+L'onglet Composer dans l'Assistant Campagne (situé dans l'assistant étape de Canvas) vous permet de modifier tous les aspects du contenu et du comportement de votre message.
 
-!\[Compose Content Card\]\[24\]
+!\[Composer une fiche de contenu\]\[24\]
 
-The content here varies based on the Message Type chosen in the previous step but may include any of the options below:
+Le contenu ici varie en fonction du type de message choisi lors de l'étape précédente, mais peut inclure n'importe laquelle des options ci-dessous :
 
-| Content              | Options                                                                                                  | Description                                                                                                                                                                                                                                                                                                                                                                                            |
-| -------------------- | -------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| Language             | See our [full list of available languages][18].                                                          | Click __Add Languages__ and select your desired languages from the provided list. This will insert Liquid into your message. We recommend selecting your languages before writing your content so you can fill in your text where it belongs in the Liquid.                                                                                                                                            |
-| Title & Message Text | We recommend clear and concise titles and message content.                                               | Write anything you want. There are no limits, but the faster you can get your message across and get your customer clicking - the better!                                                                                                                                                                                                                                                              |
-| Image                | Click __Add Image__ or use an image URL.                                                                 | Where applicable, click __Include Image__ or __Upload Image__ and follow the presented instructions. Each message type and platform may have its own suggested proportions and requirements - be sure to check what those are before commissioning or making an image from scratch! <br> <br> Content Card message fields are limited to 2kb in total size, as noted in the section below. |
-| Pinning              | A pinned card will display at the top of a user's feed and cannot be dismissed by the user.              | If more than one card in a user's feed is pinned, the pinned cards will display in chronological order. Once a card has been sent, you can not update its pinned option retroactively. Changing this option after a campaign has been sent will only affect future sends.                                                                                                                              |
-| On Click Behavior    | For either Android, iOS, or Web: <br> __Redirect to Web URL__, __Deep Link into App__ or __None__. | When your customer clicks on a presented link in the card, your link can either lead them deeper into your app or to another site.                                                                                                                                                                                                                                                                     |
+| Contenus                 | Options                                                                                                        | Libellé                                                                                                                                                                                                                                                                                                                                                                                                                                                             |
+| ------------------------ | -------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Langue                   | Consultez notre [liste complète des langues disponibles][18].                                                  | Cliquez sur __Ajouter des langues__ et sélectionnez les langues désirées dans la liste fournie. Ceci insérera Liquid dans votre message. Nous vous recommandons de sélectionner vos langues avant d'écrire votre contenu afin que vous puissiez renseigner votre texte où il appartient dans le Liquid.                                                                                                                                                             |
+| Titre & Texte du message | Nous recommandons des titres et des messages clairs et concis.                                                 | Écrivez tout ce que vous voulez. Il n'y a pas de limites, mais plus vite vous pouvez recevoir votre message et faire cliquer, mieux c'est.                                                                                                                                                                                                                                                                                                                          |
+| Image                    | Cliquez sur __Ajouter une image__ ou utilisez une URL d'image.                                                 | Le cas échéant, cliquez sur __Include Image__ ou __Upload Image__ et suivez les instructions présentées. Chaque type de message et plate-forme peut avoir ses propres proportions et exigences suggérées - assurez-vous de vérifier ce qui est avant de mettre en service ou de faire une image à partir de zéro ! <br> <br> Les champs de messages de carte de contenu sont limités à 2 kb de taille totale, comme indiqué dans la section ci-dessous. |
+| Épinglage                | Une carte épinglée s'affichera en haut du flux d'un utilisateur et ne peut pas être rejetée par l'utilisateur. | Si plusieurs cartes dans le flux d'un utilisateur sont épinglées, les cartes épinglées s'afficheront dans l'ordre chronologique. Une fois qu'une carte a été envoyée, vous ne pouvez pas mettre à jour son option épinglée rétroactivement. Changer cette option après l'envoi d'une campagne n'affectera que les envois futurs.                                                                                                                                    |
+| Comportement au clic     | Pour Android, iOS, ou Web : <br> __Rediriger vers l'URL Web__, __Lien Profond vers l'app__ ou __Aucun__. | Lorsque votre client clique sur un lien présenté dans la carte, votre lien peut l'approfondir dans votre application ou sur un autre site.                                                                                                                                                                                                                                                                                                                          |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
 
 {% alert warning %}
-Content Card message fields are limited to 2kb in total size, calculated by adding the byte-size length of the following fields: Title, Message, Image URL, Link Text, Link URL(s), and Key/Value Pairs (names + values). Messages that exceed this size will not be sent. Note that this does not include the size of the image but rather the length of the Image URL.
+Les champs de message de la carte de contenu sont limités à 2 Ko dans la taille totale, calculée en ajoutant la taille d'octet des champs suivants : Titre, Message, URL de l'image, texte de lien, URL de lien et paire clé/valeur (noms + valeurs). Les messages qui dépassent cette taille ne seront pas envoyés. Notez que cela n'inclut pas la taille de l'image mais plutôt la longueur de l'URL de l'image.
 {% endalert %}
 
 {% alert note %}
 
-Each user is eligible to receive up to 100 non-expired and non-dismissed Content Cards. As a user becomes eligible for more than 100 cards, Braze will begin to remove older cards from their feed, even if they were unread.
+Chaque utilisateur peut recevoir jusqu'à 100 cartes de contenu non expirées et non rejetées. Comme un utilisateur devient éligible pour plus de 100 cartes, Braze commencera à retirer les anciennes cartes de son flux, même si elles n'ont pas été lues.
 
 {% endalert %}
 
-## Step 3: Configure additional settings
+## Étape 3 : Configurer les paramètres supplémentaires
 
-Add [key-value pairs][19] to your message, if needed.
+Ajoutez [paires clé-valeur][19] à votre message, si nécessaire.
 
-You can use key-value pairs to create categories for your Cards, create multiple Content Card Feeds ([Android]({{site.baseurl}}/developer_guide/platform_integration_guides/android/content_cards/multiple_feeds/), [Web]({{site.baseurl}}/developer_guide/platform_integration_guides/web/content_cards/multiple_feeds/), [iOS]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/content_cards/multiple_feeds/), and customize how Cards are sorted.
+Vous pouvez utiliser des paires de valeur clé pour créer des catégories pour vos cartes, créer plusieurs fils de cartes de contenu ([Android]({{site.baseurl}}/developer_guide/platform_integration_guides/android/content_cards/multiple_feeds/), [Web]({{site.baseurl}}/developer_guide/platform_integration_guides/web/content_cards/multiple_feeds/), [iOS]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/content_cards/multiple_feeds/), et personnaliser le tri des cartes.
 
-## Step 4: Build the remainder of your campaign or Canvas
+## Étape 4 : Construisez le reste de votre campagne ou Canvas
 
 {% tabs %}
 {% tab Campaign %}
 
-Build the remainder of your campaign; see the sections below for further details on how to best utilize our tools to build Content Cards.
+Construisez le reste de votre campagne; consultez les sections ci-dessous pour plus de détails sur la meilleure façon d'utiliser nos outils pour construire des Cartes de Contenu.
 
-#### Choose delivery schedule or trigger
+#### Choisissez le calendrier de livraison ou le déclencheur
 
-- Content Cards can be delivered based on a scheduled time, an action, or based on an API trigger.
-- You can also set the campaign's duration and Quiet Hours in this step.
-- Determine the Content Card's expiration. Set a specific expiration date or the days until a Card expires, up to 30 days. All variants have identical expiration dates.
-- Frequency Capping does not apply to Content Cards.
+- Les cartes de contenu peuvent être livrées en fonction d'une heure planifiée, d'une action, ou en fonction d'un déclencheur API.
+- Vous pouvez également définir la durée de la campagne et les heures tranquilles dans cette étape.
+- Déterminer l'expiration de la carte de contenu. Définissez une date d'expiration spécifique ou les jours jusqu'à ce qu'une carte expire, jusqu'à 30 jours. Toutes les variantes ont des dates d'expiration identiques.
+- Le plafonnement de fréquence ne s'applique pas aux cartes de contenu.
 
-#### Choose target segment
+#### Choisir le segment cible
 
-- Next, you need to choose the target segment from the dropdown menu.
-- You'll automatically be given a snapshot of what that approximate segment population looks like right now.
-- Keep in mind that exact segment membership is always calculated just before the message is sent.
+- Ensuite, vous devez choisir le segment cible dans le menu déroulant.
+- Vous recevrez automatiquement un instantané de ce à quoi ressemble cette population approximative de segments.
+- Gardez à l'esprit que l'adhésion exacte au segment est toujours calculée juste avant l'envoi du message.
 
-#### Choose conversion events
+#### Choisir les événements de conversion
 
-- Braze allows you to track how often users perform specific actions (i.e., conversion events) after receiving a campaign.
-- You have the option of allowing up to a 30-day window during which a conversion will be counted if the user takes the specified action.
+- Braze vous permet de suivre la fréquence à laquelle les utilisateurs effectuent des actions spécifiques (c'est-à-dire des événements de conversion) après avoir reçu une campagne.
+- Vous avez la possibilité d'autoriser jusqu'à une fenêtre de 30 jours au cours de laquelle une conversion sera comptée si l'utilisateur prend l'action spécifiée.
 
-After you've finished building the last of your campaign, review its details, [test it]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards/testing/), then send it!
+Une fois que vous avez terminé la construction de la dernière de votre campagne, révisez ses détails, [testez-la]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards/testing/), puis envoyez-la !
 
 {% alert warning %}
-Once a Content Card is launched, it cannot be edited. It can only be stopped from sending to new users and removed from users' feeds.
+Une fois qu'une carte de contenu est lancée, elle ne peut pas être modifiée. Il ne peut qu'être empêché d'envoyer aux nouveaux utilisateurs et supprimé des flux d'utilisateurs.
 {% endalert %}
 
 {% endtab %}
 
 {% tab Canvas %}
 
-Complete the remaining sections of your Canvas step; see the sections below for further details on how to best utilize our tools to build Content Cards. After you have created and configured your step, check out our [Canvas Documentation]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/create_a_canvas/#step-3-build-your-canvas) for further details on how build out the rest of your Canvas, implement multivariate testing and Intelligent selection, and more.
+Complétez les sections restantes de votre étape sur Canvas ; voir les sections ci-dessous pour plus de détails sur la meilleure façon d'utiliser nos outils pour construire des cartes de contenu. Après avoir créé et configuré votre étape, Consultez notre [Documentation sur le Canvas]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/create_a_canvas/#step-3-build-your-canvas) pour plus de détails sur la façon de construire le reste de votre Canvas, implémentez des tests multivariés et une sélection intelligente, et plus encore.
 
-#### Choose step schedule
+#### Choisir le calendrier des étapes
 
-- Content Cards can be delivered based on a scheduled time or Action in Canvas
+- Les cartes de contenu peuvent être livrées en fonction de l'heure programmée ou de l'action sur Canvas
 
-#### Choose audience
+#### Choisir un public
 
-- Next, you need to adjust Audience Options for this step. Here, you can further refine the recipients of this step by specifying segments and adding additional filters. Audience options will be checked after the delay, at the time messages are sent.
+- Ensuite, vous devez régler les options de l'audience pour cette étape. Ici, vous pouvez affiner davantage les destinataires de cette étape en spécifiant des segments et en ajoutant des filtres supplémentaires. Les options de l'audience seront vérifiées après le délai, au moment où les messages sont envoyés.
 
-#### Choose advancement behavior
+#### Choisir le comportement d'avancement
 
-- Lastly, select your Advancement behavior for this step. Here you can choose to either "Advance when Message Sent" that advances your users to the next steps when the Content Card is sent, or "Immediately Advance Audience" that advances users when either the Content Card is sent, or the Content Card was not sent because it got aborted.
-- To read more about Canvas Advancement Behavior, check out of [Canvas Documentation]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/advancement/?redirected=true).
+- Enfin, sélectionnez votre comportement d'avancement pour cette étape. Ici, vous pouvez choisir soit "Avancer lorsque le message est envoyé" qui fait passer vos utilisateurs aux étapes suivantes lorsque la Carte de Contenu est envoyée, ou « Audience immédiatement avancée » qui avise les utilisateurs lorsque soit la Carte de Contenu est envoyée, soit la Carte de Contenu n'a pas été envoyée parce qu'elle a été abandonnée.
+- Pour en savoir plus sur le comportement de l'avancement de Canvas , consultez la [Documentation sur Canvas]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/advancement/?redirected=true).
 
-After you've finished building out your Canvas Step, review its details and [test it]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards/testing/)!
+Une fois que vous avez fini de construire votre Canvas Step, passez en revue ses détails et [testez-le]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards/testing/)!
 
 {% endtab %}
 {% endtabs %}
 
-## Things to know
+## Choses à savoir
 
-### Capabilities not yet supported
+### Capacités non encore prises en charge
 
-The following capabilities are not yet supported for Content Cards:
-- Vouchers
-- Frequency Capping
-- Re-ordering Content Cards from the Braze UI
-- Post-launch Edits
+Les fonctionnalités suivantes ne sont pas encore supportées pour les cartes de contenu :
+- Bons de réduction
+- Plafond de fréquence
+- Réordonner les Cartes de Contenu de Braze
+- Modifications post-lancement
 
 
-### Sending behavior
+### Comportement d'envoi
 
-Once Content Cards have been sent, similar to emails, they sit waiting in an "inbox" ready to be delivered to the user. Once content is pulled into the Content Card (at time of displaying), the content cannot be changed during its lifespan. This applies even if you are calling an API through Connected Content, and the data from the endpoint changes; this data will not get updated. It can only be stopped from sending to new users and removed from users' feeds. If you modify a campaign, only __future__ cards that are sent will have the update.
+Une fois que les Cartes de Contenu ont été envoyées, comme les e-mails, elles restent en attente dans une "boîte de réception" prête à être envoyée à l'utilisateur. Une fois que le contenu est intégré à la Carte de Contenu (au moment de l'affichage), le contenu ne peut pas être modifié au cours de sa durée. Cela s'applique même si vous appelez une API via le contenu connecté, et les données à partir du point de terminaison changent ; ces données ne seront pas mises à jour. Il ne peut qu'être empêché d'envoyer aux nouveaux utilisateurs et supprimé des flux d'utilisateurs. Si vous modifiez une campagne, seules les __futures__ cartes envoyées auront la mise à jour.
 
-If you need to remove old cards, you must stop the campaign to do so. This can be done by navigating to your Content Card campaign and selecting `Stop Campaign`. Stopping the campaign brings up the prompt shown below. If you would like to remove Content Cards, check the box to remove any cards that have been sent. This will cause the card to be hidden by the SDK on the next sync.
+Si vous avez besoin de supprimer les anciennes cartes, vous devez arrêter la campagne pour le faire. Cela peut être fait en naviguant vers votre campagne de carte de contenu et en sélectionnant `Stop Campaign`. L'arrêt de la campagne affiche l'invite affichée ci-dessous. Si vous souhaitez supprimer les Cartes de Contenu, cochez la case pour supprimer toutes les cartes qui ont été envoyées. Cela rendra la carte cachée par le SDK lors de la prochaine synchronisation.
 
-!\[Content Card\]\[25\]
+!\[Carte de contenu\]\[25\]
 
-### Card removal events {#action-based-card-removal}
+### Événements de suppression de carte {#action-based-card-removal}
 
-Some Content Cards are only relevant up until a user performs some action. For example, a card nudging users to activate their account shouldn't be shown once the user completes that onboarding task.
+Certaines Cartes de Contenu ne sont pertinentes que jusqu'à ce qu'un utilisateur effectue une action. Par exemple, une carte incitant les utilisateurs à activer leur compte ne devrait pas être affichée une fois que l'utilisateur a terminé cette tâche d'intégration.
 
-Within a campaign or Canvas Message, you can optionally add a __Removal Event__ to specify which custom events or purchases should cause previously sent cards to be removed from that user's feed; triggered via SDK or REST API.
+Dans une campagne ou Canvas Message, vous pouvez éventuellement ajouter un __Événement de suppression__ pour spécifier quels événements ou achats personnalisés devraient entraîner la suppression des cartes précédemment envoyées du flux de cet utilisateur ; déclenchée via SDK ou REST API.
 
 {% alert tip %}
-You can specify multiple custom events and purchases that should remove a card from a user's feed. Once **any** of those actions are performed by the user, any existing cards sent by the campaign's cards will be removed. Any future eligible cards will continue to be sent according to the message's schedule.
+Vous pouvez spécifier plusieurs événements personnalisés et achats qui devraient supprimer une carte du flux d'un utilisateur. Une fois que **n'importe quelle** de ces actions sont effectuées par l'utilisateur, toutes les cartes existantes envoyées par les cartes de la campagne seront supprimées. Les futures cartes éligibles continueront d'être envoyées selon le calendrier du message.
 {% endalert %}
 
-![Content Card Removal Event]({% image_buster /assets/img/content_cards/content_card_removal_event.png %})
+![Événement de suppression de carte de contenu]({% image_buster /assets/img/content_cards/content_card_removal_event.png %})
 
-### Updating already sent cards
+### Mise à jour des cartes déjà envoyées
 
-If you find you need to make changes to cards that have already been sent:
+Si vous trouvez que vous devez apporter des modifications aux cartes qui ont déjà été envoyées:
 
-1. Stop your campaign
-2. Remove active Content Cards from users' feeds
-3. Edit your campaign as needed
-4. Restart your campaign
+1. Arrêter votre campagne
+2. Supprimer les cartes de contenu actives des flux d'utilisateurs
+3. Modifier votre campagne si nécessaire
+4. Redémarrez votre campagne
 [24]: {% image_buster /assets/img/content_card_compose.png %} [25]: {% image_buster /assets/img/cc_remove.png %}
 
 [18]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/advanced_use_cases/localization/#languages-supported
