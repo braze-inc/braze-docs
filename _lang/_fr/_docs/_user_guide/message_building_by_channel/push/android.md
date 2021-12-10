@@ -1,34 +1,34 @@
 ---
-nav_title: "Android Options"
-article_title: Android Push Options
+nav_title: "Options Android"
+article_title: Options de Push Android
 page_order: 7
-layout: featured
-page_type: landing
-channel: push
+layout: en vedette
+page_type: atterrissage
+channel: Pousser
 platform: android
-description: "This landing page is a hub for all things that are solely Android Push for Braze."
-guide_top_header: "Android Push Articles"
-guide_top_text: "This landing page is a hub for all things that are solely Android Push for Braze."
-guide_featured_title: "Articles in this Section"
+description: "Cette page d'accueil est un concentrateur pour toutes les choses qui sont uniquement Android Push pour le Brésil."
+guide_top_header: "Articles push Android"
+guide_top_text: "Cette page d'accueil est un concentrateur pour toutes les choses qui sont uniquement Android Push pour le Brésil."
+guide_featured_title: "Articles dans cette section"
 guide_featured_list:
   - 
-    name: "Notification Channels"
-    link: /docs/user_guide/message_building_by_channel/push/android/notification_channels/
-    fa_icon: fas fa-mobile-alt
+    name: "Chaînes de notification"
+    link: /fr/docs/user_guide/message_building_by_channel/push/android/notification_channels/
+    fa_icon: Fas fa-mobile-alt
   - 
-    name: "Notification IDs"
-    link: /docs/user_guide/message_building_by_channel/push/android/notification_ids/
-    fa_icon: fas fa-paint-brush
+    name: "IDs de notification"
+    link: /fr/docs/user_guide/message_building_by_channel/push/android/notification_ids/
+    fa_icon: fa-paint-brush fas
   - 
-    name: "Notification Options"
-    link: /docs/user_guide/message_building_by_channel/push/android/notification_options/
+    name: "Options de notification"
+    link: /fr/docs/user_guide/message_building_by_channel/push/android/notification_options/
     fa_icon: fas fa-cog
   - 
-    name: "Rich Notifications"
+    name: "Notifications riches"
     link: /docs/user_guide/message_building_by_channel/push/android/rich_notifications/
     fa_icon: fas fa-vial
   - 
-    name: "Advanced Campaign Settings"
+    name: "Paramètres de campagne avancés"
     link: /docs/user_guide/message_building_by_channel/push/android/advanced_campaign_settings/
     fa_icon: fas fa-chart-bar
 ---
