@@ -1,36 +1,36 @@
 ---
-nav_title: Duplicate Templates
-article_title: How to Duplicate Templates
+nav_title: Dupliquer les modèles
+article_title: Comment dupliquer les modèles
 page_order: 3
-page_type: reference
-description: "This reference article describes how to duplicate templates in the Templates & Media section of the Braze dashboard."
+page_type: Référence
+description: "Cet article de référence décrit comment dupliquer les modèles dans la section Modèles & Médias du tableau de bord Braze."
 tool:
-  - Templates
-  - Media
+  - Modèles
+  - Médias
 ---
 
-# How to duplicate templates in Templates & Media
+# Comment dupliquer les modèles dans Modèles & Médias
 
-> Duplicating a template can save a lot of time. You can duplicate a single template or multiple.
+> Dupliquer un modèle peut gagner beaucoup de temps. Vous pouvez dupliquer un modèle unique ou multiple.
 
-## Duplicate an individual template
+## Dupliquer un modèle individuel
 
 !\[template_duplicate_cog\]\[8\]{: style="float:right;max-width:15%;margin-left:15px;"}
 
-Duplicating an individual template can be achieved by clicking the cog located on the template grid screen and selecting `duplicate` from the drop-down. <br><br>
+La duplication d'un modèle individuel peut être obtenue en cliquant sur le routeur situé sur l'écran de la grille du modèle et en sélectionnant `dupliqué` à partir du menu déroulant. <br><br>
 {% alert note %}
-For [Content Block]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/content_blocks/) templates, a 'draft' copy is created. For all other templates a new duplicate copy is automatically created.
+Pour les gabarits [Content Block]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/content_blocks/) , une copie 'brouillon' est créée. Pour tous les autres modèles, une nouvelle copie en double est automatiquement créée.
 {% endalert %}
 
-## Duplicate multiple templates
+## Dupliquer plusieurs modèles
 
 {% raw %}
 
-Duplicating multiple templates can be achieved by selecting the checkbox next to the template name. Select multiple templates and then click the "Duplicate" button that appears.
+La duplication de plusieurs modèles peut être obtenue en sélectionnant la case à cocher à côté du nom du modèle. Sélectionnez plusieurs modèles, puis cliquez sur le bouton "Dupliquer" qui apparaît.
 
-Duplicated templates can be found by sorting the 'last edited' column.
+Les questionnaires dupliqués peuvent être trouvés en triant la colonne 'dernière édition'.
 
-By default, new templates will by named `Copy of {{original template name}}`.
+Par défaut, les nouveaux modèles seront nommés `Copie de {{original template name}}`.
 
 {% endraw %}
 
