@@ -1,44 +1,44 @@
 ---
 nav_title: Prep Guide
-article_title: In-App Message Prep Guide
+article_title: Guide de préparation des messages dans l'application
 page_order: 0.5
-page_type: reference
-description: "This article covers some questions and best practices you should consider before building your in-app messages."
-channel: in-app messages
+page_type: Référence
+description: "Cet article couvre certaines questions et pratiques exemplaires que vous devriez considérer avant de construire vos messages dans l'application."
+channel: messages intégrés à l'application
 ---
 
-# In-app message prep guide
+# Guide de préparation des messages dans l'application
 
-Before you start building your in-app message, you should consider a few of the following topics so building your message is quick and easy.
+Avant de commencer à créer votre message dans l'application, vous devriez considérer certains des sujets suivants, de sorte que la création de votre message est rapide et facile.
 
-## General considerations
+## Considérations générales
 
-- If you are building in campaigns, how many variants of this message would you like to display? For variant testing ideas, check out [Tips for different channels]({{site.baseurl}}/user_guide/engagement_tools/testing/multivariant_testing/#tips-different-channels).
-- If you are building in Canvas, will this message be paired with other messaging channels in that step?
-- When would you like [your message to expire]({{site.baseurl}}/canvas_in-app_messages/)?
+- Si vous construisez en campagne, combien de variantes de ce message souhaitez-vous afficher ? Pour les idées de test de variantes, consultez [Conseils pour différents canaux]({{site.baseurl}}/user_guide/engagement_tools/testing/multivariant_testing/#tips-different-channels).
+- Si vous construisez en Canvas, ce message sera-t-il jumelé à d'autres canaux de messagerie à cette étape?
+- Quand souhaitez-vous que [votre message expire]({{site.baseurl}}/canvas_in-app_messages/)?
 
-## Targeting considerations
+## Considérations ciblées
 
-- In-app messages are best for users who regularly visit your app—are you including this audience?
-- Where do you want your users to meet your message? In your Web app? In your mobile app?
-- Which event triggers this message?
-- Are any of your users using older versions of your app? If so, they might not be able to see some elements of your message. Learn more about [generations]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/generations/).
-- What type of device or devices are you building this message for? Remember, you can preview your message using the **Preview** box or **Test** tab. Refer to [Testing]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/testing/) for more information.
+- Les messages intégrés sont les meilleurs pour les utilisateurs qui visitent régulièrement votre application – incluez-vous ce public ?
+- Où voulez-vous que vos utilisateurs rencontrent votre message ? Dans votre application Web ? Dans votre application mobile ?
+- Quel événement déclenche ce message ?
+- Est-ce que certains de vos utilisateurs utilisent des versions plus anciennes de votre application ? Dans l'affirmative, ils pourraient ne pas pouvoir voir certains éléments de votre message. En savoir plus sur les [générations]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/generations/).
+- Pour quel type d'appareil ou d'appareils êtes-vous en train de construire ce message ? N'oubliez pas que vous pouvez prévisualiser votre message en utilisant l'onglet **Aperçu** ou **Tester**. Reportez-vous à [Tester]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/testing/) pour plus d'informations.
 
-## Content considerations
+## Considérations de contenu
 
-- Which languages will you be using in this message?
-- What is your Header and Body copy? Are they eye-catching and relevant to your user?
-- In-app messages only appear for a set amount of time. Is your copy concise and memorable?
-- Will you be using [Liquid]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/using_liquid/) to build more custom copy?
-- For full-screen in-app messages, is your image or other media within the [safe zone]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/creative_details/fullscreen/#image-safe-zone).
+- Quelles langues utiliserez-vous dans ce message ?
+- Quelle est la copie de votre en-tête et de votre corps? Sont-ils attirants et pertinents pour votre utilisateur?
+- Les messages dans l'application n'apparaissent que pour un temps défini. Votre copie est-elle concise et mémorable?
+- Allez-vous utiliser [Liquid]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/using_liquid/) pour construire une copie plus personnalisée ?
+- Pour les messages en plein écran dans l'application, votre image ou tout autre média se trouve dans la [zone sûre]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/creative_details/fullscreen/#image-safe-zone).
 
-## Conversion considerations
+## Considérations de conversion
 
-- What is your goal for this message? How can you represent that in your message?
-- Do your buttons offer options that make sense to your user? What is your [primary call to action]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/create/#buttons)?
-- Are you [deep-linking to other in-app content][1]? Are you using this in-app message to send and accept a [permission or push priming request][21]?
-- Do you have a message exit option? If not, you can always copy and paste this snippet to create a quick button:
+- Quel est votre objectif pour ce message ? Comment pouvez-vous représenter cela dans votre message ?
+- Est-ce que vos boutons offrent des options qui ont un sens pour votre utilisateur? Quel est votre appel principal [à l'action]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/create/#buttons)?
+- Êtes-vous [profondément lié à un autre contenu dans l'application][1]? Utilisez-vous ce message dans l'application pour envoyer et accepter une [demande d'autorisation ou d'amorçage push][21]?
+- Avez-vous une option de sortie de message ? Sinon, vous pouvez toujours copier et coller ce snippet pour créer un bouton rapide :
     ```html
     <a href="appboy://close">X</a>
     ```
