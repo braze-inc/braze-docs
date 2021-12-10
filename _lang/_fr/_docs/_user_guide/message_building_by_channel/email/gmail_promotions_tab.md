@@ -1,68 +1,68 @@
 ---
-nav_title: Gmail Promotions Tab
-article_title: Gmail Promotions Tab
+nav_title: Onglet Promotions Gmail
+article_title: Onglet Promotions Gmail
 page_order: 7
-description: "Gmail has updated the mobile Promotions tab to allow marketers to send more information via annotations in a 'card'. This article covers how to use Braze to help you build the card from our product."
+description: "Gmail a mis à jour l'onglet Promotions mobiles pour permettre aux marketeurs d'envoyer plus d'informations via des annotations dans une \"carte\". Cet article explique comment utiliser Braze pour vous aider à construire la carte à partir de notre produit."
 channel:
-  - email
+  - Email
 ---
 
-# Gmail Promotion tool
+# Outil de promotion Gmail
 
-Gmail has updated [the mobile Promotions tab][1] to allow marketers to send more information via annotations in a "card" rather than just the subject line or pre-header information. Braze has built a tool to help you build the card from our product.
+Gmail a mis à jour [l'onglet Promotions mobiles][1] pour permettre aux marketeurs d'envoyer plus d'informations via des annotations dans une "carte" plutôt que simplement la ligne de sujet ou des informations pré-en-tête. Braze a construit un outil pour vous aider à construire la carte à partir de notre produit.
 
-## Building the card with Braze
+## Construire la carte avec Braze
 
-Building the card in Braze is easy!
+Construire la carte à Braze est facile!
 
-First, create your email campaign, as you normally would. Then, as you're editing the content of your email, click the **Gmail Promo** tab. Here, you'll be able to fill out fields that will generate the script for your Gmail Promo Tab card.
+Tout d'abord, créez votre campagne de courriel, comme vous le feriez normalement. Ensuite, lorsque vous éditez le contenu de votre e-mail, cliquez sur l'onglet **Gmail Promo**. Ici, vous serez en mesure de remplir les champs qui vont générer le script pour votre carte Gmail Promo Tab.
 
-!\[Build Your Card\]\[2\]
+!\[Construisez votre carte\]\[2\]
 
-After you've finished filling out the fields, you'll see a completed script at the bottom of your editor. Copy and paste it into the "`<head>` "section/element of your email's `HTML`.
+Une fois que vous aurez rempli les champs, vous verrez un script terminé au bas de votre éditeur. Copiez et collez le dans la "`<head>` "section/élément de votre message `HTML`.
 
-!\[Copy Your Script\]\[3\]
+!\[Copiez votre script\]\[3\]
 
 {% alert warning %}
 
-The Promotions script will only appear if your email lands in the Gmail **Promotions Tab**. Currently, Gmail uses algorithms to determine where your email will land. However, if a user ever marks your email as a promotion, Gmail's algorithm would be ignored, and your email will automatically land in the **Promotions Tab** moving forward.
+The Promotions script will only appear if your email lands in the Gmail **Promotions Tab**. Actuellement, Gmail utilise des algorithmes pour déterminer la destination de votre courriel. Cependant, si un utilisateur marque un jour votre e-mail comme une promotion, l'algorithme de Gmail sera ignoré, et votre email sera automatiquement positionné dans l'onglet **Promotions** avancer.
 
 {% endalert %}
 
-### Customize your card
+### Personnaliser votre carte
 
-You can customize many variables for your card, which will map to the locations shown in the card layout below.
+Vous pouvez personnaliser de nombreuses variables pour votre carte, qui seront mappées aux emplacements indiqués dans la disposition de la carte ci-dessous.
 
-!\[Promo Card Map\]\[4\]
+!\[Carte promotionnelle\]\[4\]
 
-| Customizable Variable                | Description                                                                                                                                                                                                                                                                                                                                                                     |
-| ------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Company Logo                         | Logos should be a square or circle shape and should be uploaded in "`https` ", not "`http` ".                                                                                                                                                                                                                                                                                   |
-| Product Image (Single Image Preview) | This is a blank Canvas for you to bring in product or lifestyle images. In Gmail's preview, they show a sample image that is "`538x138` "with a "`3.9` "aspect ratio.                                                                                                                                                                                                           |
-| Discount Offer (Green Deal Badge)    | One or two words used to quickly highlight an offer or as a call to action, such as "Free Gift", "2 for 1", or "Limited Offer."                                                                                                                                                                                                                                                 |
-| Discount Code (Promo Code)           | Use your regular promo code. Only use if there is a promo code.                                                                                                                                                                                                                                                                                                                 |
-| Expiration Date                      | The start date should be when your email sends or the promotion starts (if this date is in the future, your email __will not populate__ in a bundle). The end date should only be used if you have an expiring offer, and the date needs to be in the future. Old or past-due expiration dates will cause our system to see the offer as stale and will not preview your email. |
+| Variable personnalisable                        | Libellé                                                                                                                                                                                                                                                                                                                                                                                                                                          |
+| ----------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| Logo de la société                              | Les logos doivent être une forme carrée ou circulaire et doivent être téléchargés dans "`https` ", et non "`http`".                                                                                                                                                                                                                                                                                                                              |
+| Image du produit (aperçu de l'image)            | Il s'agit d'une toile vierge pour que vous puissiez apporter des images de produits ou de style de vie. Dans l'aperçu de Gmail, ils montrent un exemple d'image qui est "`538x138` "avec un "`3.9` "rapport d'aspect.                                                                                                                                                                                                                            |
+| Offre de réduction (badge « Green Deal Badge ») | Un ou deux mots utilisés pour mettre rapidement en évidence une offre ou comme un appel à l'action, comme "Cadeau Gratuit", "2 pour 1", ou "Offre Limitée".                                                                                                                                                                                                                                                                                      |
+| Code de réduction (code promo)                  | Utilisez votre code promo régulier. Utiliser uniquement s'il y a un code promotionnel.                                                                                                                                                                                                                                                                                                                                                           |
+| Date d'expiration                               | La date de début doit être le moment où votre e-mail envoie ou la promotion commence (si cette date est dans le futur, votre adresse e-mail __ne remplira pas__ dans un bundle). La date de fin ne doit être utilisée que si vous avez une offre d'expiration, et la date doit être dans le futur. Les dates d'expiration antérieures ou antérieures entraîneront notre système de voir l'offre comme obsolète et n'afficheront pas votre email. |
 {: .reset-td-br-1 .reset-td-br-2}
 
 {% alert tip %}
-We recommend that you upload your logo and product image to the Braze Media Library, then copy and paste the URLs from there into the appropriate fields. Only static image formats like `.png` and `.jpeg` are accepted. Some image formats, like `.gif`, will upload but not act as expected.
+Nous vous recommandons de télécharger votre logo et votre image de produit dans la médiathèque de Braze, puis copiez et collez les URLs à partir de là dans les champs appropriés. Seuls les formats d'images statiques comme `.png` et `.jpeg` sont acceptés. Certains formats d'image, comme `.gif`, seront téléchargés mais n'agiront pas comme prévu.
 {% endalert %}
 
 {% alert warning %}
-While you can use Liquid within this script, we strongly suggest that you test as much as possible to avoid an error.
+Bien que vous puissiez utiliser Liquid dans ce script, nous vous recommandons fortement de tester autant que possible pour éviter une erreur.
 {% endalert %}
 
-### Best practices
+### Meilleures pratiques
 
-In addition to adhering to the following best practices recommended by Gmail, you can use their [Preview Your Annotations][5] tool to see what their cards look like.
+En plus de respecter les meilleures pratiques recommandées par Gmail, vous pouvez utiliser leur outil [Aperçu de vos annotations][5] pour voir à quoi ressemblent leurs cartes.
 
-#### Product image
+#### Image du produit
 
-Gmail has seen better results with strong imagery related to the email message. Gmail does not recommend using a text-only design, as this space was designed to bring that visual language, vital to email marketing, to the preview. Don't use images with cut-off text or repeat images in multiple campaigns.
+Gmail a vu de meilleurs résultats avec de fortes images liées au message électronique. Gmail ne recommande pas d'utiliser un design texte uniquement, car cet espace a été conçu pour apporter ce langage visuel, vital pour le marketing par courriel, à l'aperçu. N'utilisez pas d'images avec du texte coupé ou répétez des images dans plusieurs campagnes.
 
-#### Discount offer
+#### Offre de réduction
 
-Gmail does not suggest using sentences or phrases, such as "You Can Buy 1 Get 1 Free or Discounts on All Shorts and Shirts", as it may clip, no longer draw the eye, and compete with the subject line. Again, this space should only be used for your messaging to engage your customers with your email, so avoid any language around "Open this email now" or "Click here for deals". Do not repeat your subject line.
+Gmail ne suggère pas d'utiliser des phrases ou des phrases, telles que "Vous pouvez acheter 1 Gratuit, 1 Gratuit ou des Remises sur tous les Shorts et Shirts", comme il peut clip, ne plus dessiner l'œil, et concurrencer avec la ligne du sujet. Encore une fois, cet espace ne devrait être utilisé que pour votre messagerie afin d'engager vos clients avec votre courriel. donc évitez toute langue autour de "Ouvrir cet e-mail maintenant" ou "Cliquez ici pour les affaires". Ne répétez pas votre ligne d'objet.
 [2]: {% image_buster /assets/img/create-gmail-promo.gif %} [3]: {% image_buster /assets/img/copy-gmail-promo-script.gif %} [4]: {% image_buster /assets/img/promocardmap.png %}
 
 [1]: https://developers.google.com/gmail/promotab/
