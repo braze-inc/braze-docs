@@ -1,145 +1,145 @@
 ---
-nav_title: Canvas Basics
-article_title: Canvas Basics
+nav_title: Bases de la toile
+article_title: Bases de la toile
 page_order: 1
-page_type: reference
-description: "This reference article covers the basics of Canvas, covering various questions you should ask your self as you set up your first Canvas."
-tool: Canvas
+page_type: Référence
+description: "Cet article de référence couvre les bases de Canvas, couvrant diverses questions que vous devriez vous poser lors de la mise en place de votre premier Canvas."
+tool: Toile
 ---
 
 {% comment %}
-Separate "The Basics" section into "Find Your Strategy" and "Building Your Customer Journey" and "Anatomy of a Canvas" - move Anatomy of a Canvas to Create a Canvas and put it 1st. Also, create a real form for them to download - need to write in where this information will become useful.
+Séparez la section « Les Bases » dans « Trouvez votre stratégie » et « Bâtir votre voyage client » et « Anatomie d'un Canevas » - déplacez Anatomie d'une toile pour créer une toile et la mettre 1er. De plus, créez un formulaire réel pour qu'ils téléchargent - besoin d'écrire dans l'endroit où cette information deviendra utile.
 {% endcomment %}
 
-# Canvas: The basics
+# Canevas : Les bases
 
-## Find your strategy with the five W’s of visualization
+## Trouvez votre stratégie avec les cinq W de visualisation
 
-Answer the questions below to get started:
+Répondez aux questions ci-dessous pour commencer:
 
-* __What__ am I trying to help the customer do or understand? (Canvas Name)
+* __Qu'est-ce que__ j'essaie d'aider le client à faire ou à comprendre ? (Nom du canevas)
 
-* __When__ will a user start this experience? Pick one.
-  * Enter users at a designated time: __Scheduled__
-    * Start a session
-    * Perform a custom event
-    * Enter a location
-    * Interact with or leave another campaign or Canvas
-  * Enter user when they perform actions: __Action-Based__
-    * Make a purchase
-    * Start a session
-    * Perform a custom event
-    * Enter a location
-    * Interact with or leave another campaign or Canvas
-  * Enter users when they perform a specific action that triggers an API request to Braze (advanced): __API-Triggered__
-    * API-triggered campaigns give you the flexibility to house message content inside of the Braze dashboard while dictating when a message is sent and to whom, via your API.<br><br>
+* __Quand__ un utilisateur commencera-t-il cette expérience ? Choisissez un.
+  * Entrez les utilisateurs à une heure désignée : __Planifié__
+    * Démarrer une session
+    * Effectuer un événement personnalisé
+    * Entrez un emplacement
+    * Interagissez avec ou quittez une autre campagne ou Canvas
+  * Entrez l'utilisateur quand il effectue des actions : __-Based Action__
+    * Effectuer un achat
+    * Démarrer une session
+    * Effectuer un événement personnalisé
+    * Entrez un emplacement
+    * Interagissez avec ou quittez une autre campagne ou Canvas
+  * Entrez les utilisateurs lorsqu'ils effectuent une action spécifique qui déclenche une requête API à Braze (avancé): __API-Triggered__
+    * Les campagnes déclenchées par l'API vous donnent la flexibilité d'héberger le contenu des messages dans le tableau de bord Braze tout en dictant quand un message est envoyé et à qui, via votre API.<br><br>
 
-* __Who__ are we trying to reach? (Segment Name with _optional_ additional filters)
-  * Custom Data
-  * User Activity
-  * Retargeting
-  * Marketing Activity
-  * User Attributes
-  * Install Attribution
-  * Social Activity<br><br>
+* __Qui__ essayons-nous d'atteindre ? (Nom du segment avec _filtres supplémentaires_ optionnels)
+  * Données personnalisées
+  * Activité de l'utilisateur
+  * Reciblage
+  * Activité marketing
+  * Attributs de l'utilisateur
+  * Installer Attribution
+  * Activité sociale<br><br>
 
-* __Why__ am I creating this Canvas?
-  * Start Session: I want them coming back and engaging with the app.
-  * Make Purchase: I want them to buy.
-  * Perform Custom Event: I want them to perform a specific action that I’m tracking as a custom event.
-  * Upgrades App: I want them to upgrade their app version<br><br>
+* __Pourquoi__ est-ce que je crée ce Canvas ?
+  * Démarrer la session : je veux qu'ils reviennent et s'engagent avec l'application.
+  * Faire un achat: Je veux qu'ils achètent.
+  * Effectuer un événement personnalisé : je veux qu'ils effectuent une action spécifique que je traque en tant qu'événement personnalisé.
+  * Application de mise à jour : je veux qu'ils mettent à jour leur version de l'application<br><br>
 
-* __Where__ will we reach them?
-  * Email
-  * Push (Android, iOS, Windows, web)
-  * In-app Messages
-  * Content Cards
-  * SMS or MMS
+* __Où__ les atteindrons-nous ?
+  * Courriel
+  * Pousser (Android, iOS, Windows, web)
+  * Messages dans l'application
+  * Cartes de contenu
+  * SMS ou MMS
   * Webhook<br><br>
 
-* __How__ will we reach them? (Great place to test different messaging configurations)
-  * Timing: Schedule or trigger messages using tools like Intelligent Timing and delays after trigger events
-  * Cadence & Channel: Use one channel and then another or sent messages on multiple channels simultaneously
-  * Content: Build creative copy with strong appeals, value propositions, and CTAs
-  * Targeting: Add additional segments and/or filters
-  * Triggers: Use customer actions to trigger messages<br><br>
+* __Comment__ allons-nous les atteindre ? (Excellent endroit pour tester différentes configurations de messagerie)
+  * Timing : Planifier ou déclencher des messages à l'aide d'outils tels que le Timing Intelligent et les retards après les événements déclencheurs
+  * Cadence & Canal: Utiliser un canal puis un autre ou envoyer des messages sur plusieurs canaux simultanément
+  * Contenu: Construire une copie créative avec des appels forts, des propositions de valeur et des CGA
+  * Ciblage : Ajouter des segments et/ou des filtres supplémentaires
+  * Déclencheurs : Utilisez les actions client pour déclencher des messages<br><br>
 
-## Anatomy of Canvas
+## Anatomie de la toile
 
 {% comment %}
-Replace all images below. Thinking of restructuring section with one labeled image and clickable tabs
+Remplacer toutes les images ci-dessous. Penser à la section restructuration avec une image étiquetée et des onglets cliquables
 {% endcomment %}
 
 {% tabs %}
   {% tab Canvas %}
-    __Canvas__ refers to the workspace and overall visualization.<br><br> ![Journey]({% image_buster /assets/img/Canvas2.png %})
+    __Canvas__ fait référence à l'espace de travail et à la visualisation globale.<br><br> ![Voyage]({% image_buster /assets/img/Canvas2.png %})
   {% endtab %}
 
   {% tab Journey %}
-    A __journey or customer journey__ is an individual user's experience within the Canvas.<br><br> ![Journey for New User]({% image_buster /assets/img_archive/Journey_2.png %})
+    Un voyage de __ou un voyage client__ est l'expérience d'un utilisateur individuel au sein du Canvas.<br><br> ![Voyage pour un nouvel utilisateur]({% image_buster /assets/img_archive/Journey_2.png %})
   {% endtab %}
 
   {% tab Entry Step %}
-    __The Entry Step__ and __The Entry Wizard__ is the first step you take when creating your Canvas. Here, you can control the way your users begin and fulfill their customer journey.<br><br> ![Journey_3]({% image_buster /assets/img/entry-wizard.gif %})
+    __L'Étape__ et __L'Assistant d'entrée__ sont la première étape que vous prenez lors de la création de votre Canevas. Ici, vous pouvez contrôler la façon dont vos utilisateurs commencent et accomplissent leur voyage client.<br><br> ![Voyage_3]({% image_buster /assets/img/entry-wizard.gif %})
   {% endtab %}
 
   {% tab Variants %}
-    __Variants__ are the variant flows marketers build that create personalized journeys.<br><br> ![Journey_3]({% image_buster /assets/img/variants.gif %})
+    __Variantes__ sont les flux de variantes que les marketeurs construisent qui créent des trajets personnalisés.<br><br> ![Voyage_3]({% image_buster /assets/img/variants.gif %})
   {% endtab %}
 
   {% tab Steps %}
-    __Steps__ are individual decision points (like messages) within a variant.<br><br> ![Journey_4]({% image_buster /assets/img/steps.gif %})
+    __Les étapes__ sont des points de décision individuels (comme les messages) dans une variante.<br><br> ![Voyage_4]({% image_buster /assets/img/steps.gif %})
   {% endtab %}
 {% endtabs %}
 
-## Building the customer journey in Canvas
+## Construire le voyage du client sur Canvas
 
-### Name your Canvas: The “what”
+### Nommez votre Canevas : Le “quoi”
 
-Never underestimate the power of the name. Braze is built for collaboration so this is a good time to get grounded in how you’ll communicate goals with your team. You can add Tags (including Teams Tags) and name both steps and variants within the Canvas. For more on customer journeys, check out our [Mapping User Lifecycles LAB course](http://lab.braze.com/mapping-customer-lifecycles)!
+Ne sous-estimez jamais la puissance du nom. Braze est construit pour la collaboration, c'est donc le moment idéal pour se familiariser avec la façon dont vous communiquerez vos objectifs avec votre équipe. Vous pouvez ajouter des balises (y compris des balises d’équipe) et nommer à la fois les étapes et les variantes à l’intérieur du canevas. Pour en savoir plus sur les voyages des clients, consultez notre [cours LAB](http://lab.braze.com/mapping-customer-lifecycles) de cartographie de la vie des utilisateurs !
 
-### Create starting conditions: The “when”
+### Créer les conditions de départ : Le « Quand »
 
-When will a customer run into this Canvas? Users can enter your Canvas in two ways: scheduled or action-based triggers.
+Quand un client rencontrera-t-il ce Canvas? Les utilisateurs peuvent entrer dans votre Canvas de deux façons : des déclencheurs planifiés ou axés sur l'action.
 
-| Scheduled                                                                                                                                                                        | Action-Based                                                                                                                                                                                                          |
-| -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| You can use scheduled delivery when you want to send a Canvas out immediately to your target audience, have it regularly sent, or schedule it for a specific time in the future. | These Canvases respond to specific customer behaviors as they happen. These action-based triggers can include opening your app, making a purchase, interacting with another campaign, or triggering any custom event. |
+| Planifié                                                                                                                                                                                                        | Action-Based                                                                                                                                                                                                                                                                                                                |
+| --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Vous pouvez utiliser la livraison planifiée lorsque vous voulez envoyer un Canvas immédiatement à votre public cible, le faire envoyer régulièrement, ou le programmer pour une heure spécifique dans le futur. | Ces Canvases répondent à des comportements particuliers de la clientèle au fur et à mesure qu'ils se produisent. Ces déclencheurs basés sur l'action peuvent inclure l'ouverture de votre application, la réalisation d'un achat, l'interaction avec une autre campagne ou le déclenchement de tout événement personnalisé. |
 {: .reset-td-br-1 .reset-td-br-2}
 
-### Select an entry audience for entry: The “who”
+### Sélectionnez un public d'entrée pour l'entrée: Le « qui»
 
-Who are you trying to reach? Here you can use a pre-defined segment and add further filters. Filters include:
+« Qui tentez de vous atteindre? » Ici, vous pouvez utiliser un segment prédéfini et ajouter d'autres filtres. Les filtres incluent:
 
-| Filter              | Description                                                                                                                                         |
-| ------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Custom Data         | Custom data filters allow you to segment users based on events and attributes you define. With them, you can use features specific to your product. |
-| User Activity       | User activity filters allow you to segment customers based on their actions and purchases.                                                          |
-| Retargeting         | Retargeting filters allow you to segment customers who have been sent, received, or interacted with previous Campaigns or Canvases.                 |
-| Marketing Activity  | Marketing filters segment customers based on universal behaviors like last engagement or received campaigns.                                        |
-| User Attributes     | User attribute filters segment customers by their constant attributes and characteristics.                                                          |
-| Install Attribution | Install attribution filters segment customers by their first source, adgroup, campaign, or ad.                                                      |
-| Social Activity     | Social activity filters segment customers by their social media activity namely through connection to Facebook and Twitter.                         |
+| Filtre                     | Libellé                                                                                                                                                                                                                             |
+| -------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Données personnalisées     | Les filtres de données personnalisés vous permettent de segmenter les utilisateurs en fonction des événements et des attributs que vous définissez. Avec eux, vous pouvez utiliser des fonctionnalités spécifiques à votre produit. |
+| Activité de l'utilisateur  | Les filtres d'activité utilisateur vous permettent de segmenter les clients en fonction de leurs actions et achats.                                                                                                                 |
+| Reciblage                  | Les filtres de redistribution vous permettent de segmenter les clients qui ont été envoyés, reçus ou interagissés avec des campagnes ou des toiles précédentes.                                                                     |
+| Activité marketing         | Les filtres de marketing filtrent les clients en fonction de comportements universels comme le dernier engagement ou les campagnes reçues.                                                                                          |
+| Attributs de l'utilisateur | Les clients du segment des filtres d'attributs utilisateur par leurs attributs et caractéristiques constants.                                                                                                                       |
+| Installer Attribution      | Installez des filtres d'attribution pour les clients par leur première source, adgroup, campagne ou publicité.                                                                                                                      |
+| Activité sociale           | L'activité sociale filtre les clients en fonction de leur activité sur les réseaux sociaux, notamment par la connexion à Facebook et Twitter.                                                                                       |
 {: .reset-td-br-1 .reset-td-br-2}
 
-Only the users who match these target audience criteria can enter the journey.
+Seuls les utilisateurs qui correspondent à ces critères d'audience cible peuvent entrer dans le voyage.
 
-### Identify conversion events: The “why”
+### Identifier les événements de conversion : le « pourquoi»
 
-Why are you building this Canvas? It’s always important to have a defined goal in mind and Canvas helps you understand how you are performing against KPIs like session engagement, purchases, and custom events.
+Pourquoi construisez-vous ce Canvas? Il est toujours important d'avoir un objectif défini en tête et Canvas vous aide à comprendre comment vous vous exécutez contre les indicateurs de performance comme l'engagement de session, achats, et événements personnalisés.
 
-Selecting at least one conversion event will give you the ability to understand your campaign performance and also to help you optimize performance within the Canvas as if your Canvas has multiple variants and/or a control group Braze will use the conversion event to determine the best variation for achieving this goal.
+En sélectionnant au moins un événement de conversion, vous aurez la possibilité de comprendre la performance de votre campagne et aussi de vous aider à optimiser la performance de votre Canvas comme si votre Canvas possède plusieurs variantes et/ou un groupe de contrôle Braze utilisera l'événement de conversion pour déterminer la meilleure variation pour atteindre cet objectif.
 
-### Build the experience: The “how” and “where”
+### Construisez l’expérience : « comment» et « où»
 
-1. __Setting up variants:__ A variant is the trail each customer follows on their journey. Canvas supports up to eight variants with a control group. While not required, you can name each variant, as well as control the distribution of the target audience following each variant.
+1. __Configuration des variantes :__ Une variante est la piste que chaque client suit pendant son voyage. Canvas prend en charge jusqu'à huit variantes avec un groupe de contrôle. Bien que non requis, vous pouvez nommer chaque variante, ainsi que contrôler la distribution du public cible en suivant chaque variante.
 
-2. __Building steps:__ A step is a marketing decision point—what is the experience you’re creating? Within a step, you can set triggers or schedule delivery, refine targeting by adding filters or marking [exception events][1] and add channels from email to push to webhooks.
+2. __Étapes de construction :__ Une étape est un point de décision de marketing — quelle est l'expérience que vous créez ? Dans une étape, vous pouvez définir des déclencheurs ou planifier la livraison, affiner le ciblage en ajoutant des filtres ou en marquant [les événements d'exception][1] et ajouter des canaux à partir d'e-mails pour pousser sur les webhooks.
 
-3. __Determining when and how to use steps & variants:__ Each Canvas must have at least one variant and at least one step. The sky's the limit from there—so how do you decide on the shape of your Canvas? That’s where your goals, data, and hypothesis come into play. The “how” and “where” brainstorm from above will help you map out the right shape and structure of your Canvas. There are a couple approaches you can use:
-    - __Work backward:__ Some goals have smaller sub-goals. For instance, if you’re aiming for converting a free user into a subscription, you may need a page with your subscription services outlined. A visitor may need to see the options before they purchase. You may focus your messaging efforts on showing them this page before a checkout page. Working backward to understand the journey a customer must go through to get to your goal is key to guiding them through to conversion.
-    - __Start with the status quo and add more:__ Have you ran a similar campaign in the past? Or is one currently running? Use that one message and add to it. Try a new filter or add a followup message. Look at your performance and keep optimizing by making incremental changes.
-    - __Look to others:__ Imitation is the highest form of flattery. Don’t reinvent in the wheel. Don’t worry, we have you covered. At the end of this guide, you’ll find some outlines that can help you get started.
+3. __Déterminer quand et comment utiliser les étapes & variantes :__ Chaque toile doit avoir au moins une variante et au moins un pas. La limite du ciel à partir de là, alors comment décidez-vous de la forme de votre Canvas ? C’est là que vos objectifs, vos données et vos hypothèses entrent en jeu. La tempête de cerveau « Comment » et « Où » venue d'en haut vous aidera à tracer la forme et la structure de votre Canevas. Il y a quelques approches que vous pouvez utiliser:
+    - __Travail en arrière :__ Certains buts ont des sous-objectifs plus petits. Par exemple, si vous visez à convertir un utilisateur gratuit en abonnement, vous aurez peut-être besoin d’une page avec vos services d’abonnement. Un visiteur peut avoir besoin de voir les options avant d'acheter. Vous pouvez concentrer vos efforts de messagerie sur leur montrer cette page avant une page de paiement. Travailler en arrière pour comprendre le voyage que le client doit parcourir pour atteindre son objectif est essentiel pour le guider vers la conversion.
+    - __Commencez par le statu quo et ajoutez-en plus :__ Avez-vous mené une campagne similaire par le passé ? Ou bien est-il actuellement en cours d'exécution ? Utilisez ce message et ajoutez-le. Essayez un nouveau filtre ou ajoutez un message de suivi. Regardez vos performances et continuez à optimiser en apportant des changements incrémentaux.
+    - __Regardez vers les autres :__ L'imitation est la forme la plus élevée de flatterie. Ne pas réinventer dans la roue. Ne vous inquiétez pas, nous vous avons couvert. À la fin de ce guide, vous trouverez quelques lignes qui peuvent vous aider à commencer.
 
 
 [1]: {{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/exception_events/
