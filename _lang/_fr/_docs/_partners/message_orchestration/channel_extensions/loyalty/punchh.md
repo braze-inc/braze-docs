@@ -2,7 +2,7 @@
 nav_title: Punchh
 article_title: Punchh
 page_order: 5
-description: "This article outlines the partnership between Braze and Punchh, a loyalty and engagement platform, enabling you to sync data across the two platforms. Data published in Braze will be available for segmentation and can sync user data back into Punchh via webhook templates setup in Braze."
+description: "Cet article décrit le partenariat entre Braze et Punchh, une plateforme de fidélité et d'engagement, vous permettant de synchroniser les données sur les deux plateformes. Les données publiées à Braze seront disponibles pour la segmentation et pourront à nouveau synchroniser les données utilisateur avec Punchh via la configuration des modèles de webhook au Brésil."
 alias: /fr/partners/punchh/
 page_type: partenaire
 search_tag: Partenaire
@@ -10,24 +10,24 @@ search_tag: Partenaire
 
 # Punchh
 
-> [Punchh](https://punchh.com/) is an industry-leading loyalty and engagement platform that enables brands to deliver omnichannel customer loyalty programs both in-store and digitally.
+> [Punchh](https://punchh.com/) est une plateforme de fidélisation et d'engagement leader dans l'industrie qui permet aux marques de fournir des programmes de fidélisation omnichannel de la clientèle tant en magasin qu'en numérique.
 
-The Braze and Punchh integration allows you to sync data for gifting and loyalty purposes across the two platforms. Data published in Braze will be available for segmentation and can sync user data back into Punchh via Braze webhooks.
+L'intégration de Braze et Punchh vous permet de synchroniser les données à des fins de don et de loyauté sur les deux plateformes. Les données publiées à Braze seront disponibles pour la segmentation et pourront synchroniser les données de l'utilisateur à Punchh via les webhooks de Braze.
 
-## Prerequisites
+## Pré-requis
 
-| Exigences           | Description                                                                                                                                                                             |
-| ------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Punchh Account      | You need an active Punchh account to take advantage of this partnership.                                                                                                                |
-| Braze REST API key  | A Braze REST API Key with `users.track` permissions. <br><br> This can be created within the __Braze Dashboard -> Developer Console -> REST API Key -> Create New API Key__ |
-| Braze REST Endpoint | [Your REST Endpoint URL][6]. Your endpoint depends on the Braze URL for your instance.                                                                                                  |
+| Exigences                       | Libellé                                                                                                                                                                                                      |
+| ------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| Compte Punchh                   | Vous avez besoin d'un compte Punchh actif pour profiter de ce partenariat.                                                                                                                                   |
+| Braze clé API REST              | Une clé API Braze REST avec les permissions `users.track`. <br><br> Ceci peut être créé dans le __tableau de bord Braze -> Console développeur -> Clé d'API REST -> Créer une nouvelle clé API__ |
+| Point de terminaison REST Braze | [Votre REST Endpoint URL][6]. Votre point de terminaison dépend de l'URL de Braze pour votre instance.                                                                                                       |
 {: .reset-td-br-1 .reset-td-br-2}
 
 ## Intégration
 
-Punchh offers several endpoints available to Braze customers to help add external IDs into the Punchh platform using the Punchh API endpoints below. Once the external IDs have been added, create an adapter in Punchh, provide your Braze credentials, and select which events you'd like to sync. Next, you can take the Punchh segment ID and use it to build a Punchh webhook to trigger customer syncing in a Canvas journey.
+Punchh offre plusieurs terminaux disponibles aux clients de Braze pour aider à ajouter des identifiants externes à la plateforme Punchh en utilisant les terminaux de l'API Punchh ci-dessous. Une fois que les identifiants externes ont été ajoutés, créez un adaptateur dans Punchh, fournissez vos identifiants Braze et sélectionnez quels événements vous souhaitez synchroniser. Ensuite, vous pouvez prendre l'ID de segment Punchh et l'utiliser pour construire un webhook Punchh pour déclencher la synchronisation des clients dans un voyage sur Canvas .
 
-### Available Events to Sync {#available-events-to-sync}
+### Événements disponibles à synchroniser {#available-events-to-sync}
 1. Invité
 2. Check-in de fidélité
 3. Check-in cadeau
@@ -40,24 +40,24 @@ Punchh offers several endpoints available to Braze customers to help add externa
 Reportez-vous à la documentation Punchh sur les exemples de charges disponibles pour ces événements.
 {% endalert %}
 
-### Step 1: Set up external ID ingestion endpoints
+### Étape 1 : Mettre en place des terminaux d'ingestion d'ID externe
 
-External IDs from Braze can be added using the following endpoints for new and existing Punchh users.
+Les identifiants externes de Braze peuvent être ajoutés en utilisant les points de terminaison suivants pour les nouveaux utilisateurs et les utilisateurs existants de Punchh.
 
 {% alert important %}
-The `external_source` and `external_source_id` field values must be unique to Punchh and not associated with existing profiles.
+Les valeurs du champ `external_source` et `external_source_id` doivent être uniques à Punchh et non associées à des profils existants.
 {% endalert %}
 
-1. New Punchh users<br> Create new users in Punchh with a Punchh signup endpoint using the `external_source` and `external_source_id` fields. Punchh allows external identifiers to be sent with a user profile via one of the following signup endpoints:
+1. Nouveaux utilisateurs Punchh<br> Créez de nouveaux utilisateurs dans Punchh avec un point de terminaison d'inscription Punchh en utilisant les champs `external_source` et `external_source_id`. Punchh permet d'envoyer des identifiants externes avec un profil utilisateur via l'un des points de terminaison d'inscription suivants :
 - [API d'inscription mobile](https://developers.punchh.com/mobile-apis/users/mobile-sign-up)
 - [SSO Inscription API](https://developers.punchh.com/sso-online-apis/single-sign-on/sso-signup)<br><br>
-2. Existing Punchh users <br> Update `external_source_id` for existing Punchh users. Punchh allows external identifiers to be added to a profile via a user API update endpoint:
-- [Mobile User Update](https://developers.punchh.com/mobile-apis/users/mobile-update-user-profile)
-- [SSO User Update](https://developers.punchh.com/sso-online-apis/single-sign-on/sso-update-user-information)
-- [Dashboard User Update](https://developers.punchh.com/platform-functions-apis/users/dashboard-users-update) <br><br>
+2. Utilisateurs Punchh existants <br> Mettre à jour `external_source_id` pour les utilisateurs Punchh existants. Punchh permet d'ajouter des identifiants externes à un profil via un point de terminaison de mise à jour de l'API utilisateur:
+- [Mise à jour de l'utilisateur mobile](https://developers.punchh.com/mobile-apis/users/mobile-update-user-profile)
+- [Mise à jour de l'utilisateur SSO](https://developers.punchh.com/sso-online-apis/single-sign-on/sso-update-user-information)
+- [Mise à jour de l'utilisateur du tableau de bord](https://developers.punchh.com/platform-functions-apis/users/dashboard-users-update) <br><br>
 {% tabs %}
 {% tab User signup API example %}
-This example allows you to send external identifiers with a user profile at the time of signup. This is done below by sending `external_source` as “customer_id” and `external_source_id` as “556644557788334412” as a string data type.
+Cet exemple vous permet d'envoyer des identifiants externes avec un profil utilisateur au moment de l'inscription. Ceci est fait ci-dessous en envoyant `external_source` comme « customer_id » et `external_source_id` comme « 556644557788334412 » comme type de données de chaîne de caractères.
 
 ```json
 curl --location --request POST 'https://sandbox.punchh. om/api2/mobile/users' \
@@ -84,7 +84,7 @@ curl --location --request POST 'https://sandbox.punchh. om/api2/mobile/users' \
 ```
 {% endtab %}
 {% tab User update API example %}
-This example allows you to update external identifiers with a user profile. This is done below by sending `external_source` as “customer_id” and `external_source_id` as “556644557788334412” as a string data type.
+Cet exemple vous permet de mettre à jour les identifiants externes avec un profil utilisateur. Ceci est fait ci-dessous en envoyant `external_source` comme « customer_id » et `external_source_id` comme « 556644557788334412 » comme type de données de chaîne de caractères.
 
 ```json
 curl --location --request PUT 'https://sandbox.punchh. om/api2/mobile/users' \
@@ -105,28 +105,28 @@ curl --location --request PUT 'https://sandbox.punchh. om/api2/mobile/users' \
 {% endtabs %}
 
 {% alert note %}
-Platform configuration: In order to enable external identifiers in Punchh, from the Punchh dashboard, navigate to __Cockpit -> Dashboard -> External User Identifier__.
+Configuration de la plateforme : afin d'activer les identifiants externes dans Punchh, depuis le tableau de bord Punchh, Naviguez vers __Cockpit -> Tableau de bord -> Identifiant utilisateur externe__.
 {% endalert %}
 
-### Step 2: Braze adapter setup in Punchh
+### Étape 2 : Configuration de l'adaptateur Braze à Punchh
 
-To set up the Braze and Punchh integration:
+Pour mettre en place l'intégration Braze et Punchh :
 
-1. In the Punchh dashboard, navigate to __Cockpit -> Dashboard -> Major Features -> Enable Webhook Management__ and toggle on __Enable Webhook Management__.<br><br>
-2. Next, enable adapters by navigating to __Settings -> Webhooks Manager -> Configurations -> Show Adapters Tab__ and toggle on __Show Adapters Tab__.<br><br>
-3. Navigate to __Webhooks Manager__ under the __Settings__ tab, select the __Adapters__ tab, and click __Create Adapter__. <br><br>!\[Punch Platform\]\[1\]<br><br>
-5. Fill in the adapter name, description, and admin email. Select __Braze__ as your adapter and provide your Braze REST API endpoint and Braze API key.<br><br>
-6. Next, select the available events you would like to enable. A list of these events can be found in [Available events to sync](#available-events-to-sync) above.<br><br>!\[Punch Platform\]\[3\]<br><br>
-7. Click __Submit__ to enable the webhook. comm
-### Step 3: Create Punchh webhook in Braze
+1. Dans le tableau de bord Punchh, Naviguez vers __Cockpit -> Tableau de bord -> Fonctionnalités majeures -> Activez la gestion de Webhook__ et activez __Activer la gestion de Webhook__.<br><br>
+2. Ensuite, activez les adaptateurs en naviguant dans __Paramètres -> Gestionnaire de Webhooks -> Configurations -> Afficher l'onglet des adaptateurs__ et activer/désactiver __Afficher l'onglet des adaptateurs__.<br><br>
+3. Naviguez vers __Gestionnaire de Webhooks__ sous l'onglet __Paramètres__ , sélectionnez l'onglet __Adaptateurs__ et cliquez sur __Créer Adaptateur__. <br><br>!\[Punch Platform\]\[1\]<br><br>
+5. Remplissez le nom de l'adaptateur, la description et l'e-mail de l'admin. Sélectionnez __Braze__ comme adaptateur et fournissez votre point de terminaison API Braze REST et votre clé API Braze.<br><br>
+6. Ensuite, sélectionnez les événements disponibles que vous souhaitez activer. Une liste de ces événements peut être trouvée dans [Événements disponibles pour synchroniser](#available-events-to-sync) ci-dessus.<br><br>!\[Plate-forme Punch\]\[3\]<br><br>
+7. Cliquez sur __Soumettre__ pour activer le webhook. virgule
+### Étape 3 : Créez un webhook Punchh dans Braze
 
-The Braze and Punchh integration allows you to leverage Braze webhook capabilities to create Punchh segments:
+L'intégration de Braze et Punchh vous permet de tirer parti des fonctionnalités de Braze Webhook pour créer des segments Punchh :
 
 1. Créez un segment personnalisé dans Punchh et notez le `custom_segment_id` présent dans l'URL du tableau de bord du segment Punchh. <br><br>Par exemple, la page ci-dessous est située à `www.dashboard.punchhtest.com/segments/11646`. Le numéro "11646" à la fin de ce lien est le `custom_segment_id`.<br><br>!\[Punch Platform\]\[5\]<br><br>
-2. Next, navigate to __Webhook Templates__ in Braze and select the Punchh template. Ici, vous pouvez fournir les paires `custom_segment_id` et `user_id` comme valeur clé.<br><br>!\[Punch Platform\]\[4\]<br><br>
-3. Once the webhook is saved, it can be triggered in Canvas to sync users as shown below:<br><br>!\[Punch Platform\]\[7\]
+2. Ensuite, naviguez vers __Modèles de Webhook__ dans Braze et sélectionnez le modèle Punchh. Ici, vous pouvez fournir les paires `custom_segment_id` et `user_id` comme valeur clé.<br><br>!\[Punch Platform\]\[4\]<br><br>
+3. Une fois le webhook enregistré, il peut être déclenché dans Canvas pour synchroniser les utilisateurs comme indiqué ci-dessous :<br><br>!\[Punch Platform\]\[7\]
 
-For more information on how webhooks are used at Braze, check out [Creating a webhook]({{site.baseurl}}/user_guide/message_building_by_channel/webhooks/creating_a_webhook/).
-[1]: {% image_buster /assets/img/punchh/punchh1.png %} [2]: {% image_buster /assets/img/punchh/punchh2.png %} [3]: {% image_buster /assets/img/punchh/punchh3.png %} [4]: {% image_buster /assets/img/punchh/punchh4.png %} [5]: {% image_buster /assets/img/punchh/punchh5.png %} [7]: {% image_buster /assets/img/punchh/punchh6.png %}
+Pour plus d'informations sur la façon dont les webhooks sont utilisés au Brésil, consultez [Créer un webhook]({{site.baseurl}}/user_guide/message_building_by_channel/webhooks/creating_a_webhook/).
+[1]: {% image_buster /assets/img/punchh/punchh1.png %} [2]: {% image_buster /assets/img/punchh/punchh2.png %} [3]: {% image_buster /assets/img/punchh/punchh3. ng %} [4]: {% image_buster /assets/img/punchh/punchh4.png %} [5]: {% image_buster /assets/img/punchh/punchh5. ng %} [7]: {% image_buster /assets/img/punchh/punchh6.png %}
 
 [6]: {{site.baseurl}}/api/basics?redirected=true#endpoints
