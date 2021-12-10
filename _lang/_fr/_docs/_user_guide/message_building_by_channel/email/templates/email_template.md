@@ -1,73 +1,73 @@
 ---
-nav_title: Create an Email Template
-article_title: Creating an Email Template
+nav_title: Créer un modèle d'e-mail
+article_title: Création d'un modèle d'e-mail
 page_order: 2
-description: "Email messages are great for delivering content to the user on their terms. This reference article covers how to create, customize, and manage email templates."
+description: "Les messages électroniques sont parfaits pour diffuser du contenu à l'utilisateur selon ses conditions. Cet article de référence couvre la façon de créer, personnaliser et gérer les modèles de courriels."
 tool:
-  - Templates
+  - Modèles
 channel:
-  - email
+  - Email
 alias: "/dnd/email_template/"
 ---
 
-# How to create an email template
+# Comment créer un modèle d'e-mail
 
-> This article covers how to create, customize, and manage email templates.
+> Cet article traite de la façon de créer, personnaliser et gérer les modèles de courriels.
 
-Email messages are great for delivering content to the user on their terms. They are also wonderful tools to re-engage users who may have even uninstalled your app. The Braze dashboard has an email template editor that allows you to create custom-tailored, eye-catching emails and save them for later use in campaigns. You can also upload your own [HTML Email Template]({{site.baseurl}}/user_guide/message_building_by_channel/email/templates/html_email_template/).
+Les messages électroniques sont parfaits pour diffuser du contenu à l'utilisateur selon ses conditions. Ce sont également de merveilleux outils pour réengager les utilisateurs qui ont même désinstallé votre application. Le tableau de bord de Braze a un éditeur de modèle d'e-mail qui vous permet de créer des e-mails personnalisés et attractifs et de les enregistrer pour une utilisation ultérieure dans des campagnes. Vous pouvez également télécharger votre propre [modèle d'e-mail HTML]({{site.baseurl}}/user_guide/message_building_by_channel/email/templates/html_email_template/).
 
-## Creating your template
+## Création de votre modèle
 
-### Step 1: Navigate to the email template editor
+### Étape 1 : Accédez à l'éditeur de modèle d'e-mail
 
-In the left navigation, click __Templates & Media__, under the __Engagement__ section. This will open up the __Email Template Gallery__.
+Dans la navigation de gauche, cliquez sur __Modèles & Médias__, dans la section __Engagement__. Ceci ouvrira la __Galerie de modèles d'e-mail__.
 
-### Step 2: Create or choose a template
+### Étape 2 : Créer ou choisir un modèle
 
-Now, you can create a new template or edit an existing template (plain or [mobile responsive][8]) using either the drag & drop editing experience or standard HTML experience. If you'd like to create a new template, then you can choose from Braze's predesigned templates, or you can choose to create a new layout.
+Maintenant, vous pouvez créer un nouveau modèle ou modifier un modèle existant (simple ou [mobile responsive][8]) en utilisant soit l'expérience d'édition par glisser & déposer soit l'expérience HTML standard. Si vous souhaitez créer un nouveau modèle, vous pouvez choisir parmi les modèles préconçus de Braze, ou vous pouvez choisir de créer une nouvelle mise en page.
 
-!\[New Template\]\[2\]
+!\[Nouveau modèle\]\[2\]
 
 {% alert note %}
-Any existing custom HTML templates will need to be re-created using the Drag & Drop Editor.
+Tous les modèles HTML personnalisés existants devront être recréés en utilisant l'éditeur Glisser & Déposer.
 {% endalert %}
 
-### Step 3: Customize your template
+### Étape 3 : Personnaliser votre modèle
 
-You can write your message within the rich-text editor or optionally flip over to our HTML editor or Drag & Drop Editor to customize your content. Once selected, you will be guided to the editor experience you chose. An 'HTML Editor' or 'Drag & Drop Editor' badge will appear, indicating that you are about to use this editing experience for template creation.
+Vous pouvez écrire votre message dans l'éditeur de texte riche ou retourner optionnellement à notre éditeur HTML ou à l'éditeur Glisser & Déposer pour personnaliser votre contenu. Une fois sélectionné, vous serez guidé vers l'expérience de l'éditeur que vous avez choisi. Un badge 'Éditeur HTML' ou 'Glisser & Déposer Éditeur' va apparaître, indiquant que vous êtes sur le point d'utiliser cette expérience d'édition pour la création de modèles.
 
 {% alert important %}
-When composing your email template copy, do not switch back and forth between different editor types (HTML/Block/Classic) as that may shift the previously created HTML leading to rendering issues.
+Lors de la rédaction de votre modèle de courriel, ne pas basculer entre les différents types d'éditeur (HTML/Block/Classic) car cela peut déplacer le HTML précédemment créé menant à des problèmes de rendu.
 {% endalert %}
 
-![Drag and Drop Editor Icon]({% image_buster /assets/img/dnd_badge_icon.png %})
+![Icône de l'éditeur de glisser-déposer]({% image_buster /assets/img/dnd_badge_icon.png %})
 
 {% tabs %}
 {% tab HTML Editor %}
 
-Braze will add a footer with an unsubscribe link at the bottom of your HTML emails by default. You can customize this footer in the **Email Settings** tab of the **Manage Settings** page. For more information, please read our [custom footer documentation]({{site.baseurl}}/user_guide/message_building_by_channel/email/managing_user_subscriptions/#custom-footer).
+Braze ajoutera un pied de page avec un lien de désinscription au bas de vos e-mails HTML par défaut. Vous pouvez personnaliser ce pied de page dans l'onglet **Paramètres de messagerie** de la page **Gérer les paramètres**. Pour plus d'informations, veuillez lire notre [documentation personnalisée de pied de page]({{site.baseurl}}/user_guide/message_building_by_channel/email/managing_user_subscriptions/#custom-footer).
 
-To enter a subject line, click <i class="fas fa-pencil-alt"></i> **Edit Sending Info**.
+Pour entrer une ligne d'objet, cliquez sur <i class="fas fa-pencil-alt"></i> **Modifier l'info d'envoi**.
 
-![Enter Email Template Editing]({%image_buster/assets/img/email_templates/template3.png %})
+![Saisir l'édition du modèle d'e-mail]({%image_buster/assets/img/email_templates/template3.png %})
 <br>
 <br>
 
-To enter the robust email editor, click <i class="fas fa-pencil-alt"></i> **Edit Email Body**. If desired, use the dropdown in the **Body** tab to select the Classic, Block, HTML, or Plaintext email editor. The right panel shows a real-time preview of the email being created.
+Pour entrer dans l'éditeur de courrier électronique robuste, cliquez sur <i class="fas fa-pencil-alt"></i> **Modifier le corps du message**. Si vous le souhaitez, utilisez le menu déroulant dans l'onglet **Body** pour sélectionner l'éditeur d'email Classic, Block, HTML ou Texte Plain. Le panneau de droite affiche un aperçu en temps réel de l'e-mail en cours de création.
 
 {% alert important %}
-Remember—when composing your email template copy, do not switch back and forth between different editor types (HTML/Block/Classic) as that may shift the previously created HTML leading to rendering issues.
+N'oubliez pas — en écrivant votre modèle de courriel, ne pas basculer entre les différents types d'éditeur (HTML/Block/Classic) car cela peut déplacer le HTML précédemment créé menant à des problèmes de rendu.
 {% endalert %}
 
-![Email Template Editor Guide]({%image_buster/assets/img/email_templates/template4.png %})
+![Guide de l'éditeur de modèle d'e-mail]({%image_buster/assets/img/email_templates/template4.png %})
 
-Our editor supports **HTML Autocomplete** triggered by the `Tab` key.  This feature should be used on naked HTML tags. For example, using `Tab` on a `<head>` tag will result in:
+Notre éditeur prend en charge **la saisie automatique HTML** déclenchée par la touche `Tab`.  Cette fonctionnalité doit être utilisée sur les balises HTML nues. Par exemple, en utilisant `Tab` sur une balise `<head>` se traduira dans:
 {% raw %}
 ```
 <head>
   <meta http-equiv="content-type" content="text/html; charset=utf-8" />
 
-  <title>`substitute(Filename('', 'Page Title'), '^.', '\u&', '')`</title>
+  <title>`substitute(Filename('', 'Titre de la page'), '^.', '\u&', '')`</title>
 
 </head>
 ```
@@ -75,105 +75,105 @@ Our editor supports **HTML Autocomplete** triggered by the `Tab` key.  This feat
 {% endtab %}
 {% tab Drag & Drop Editor %}
 
-The drag & drop editing experience is broken out into three sections: __Sending Settings__, __Content__, and __Preview & Test__.
+L'expérience d'édition par glisser & déposer est divisée en trois sections : __Paramètres d'envoi__, __Contenu__et __Aperçu & Test__.
 
 {% subtabs %}
 {% subtab Send Settings %}
 
-#### __Sending settings__
+#### __Envoi des paramètres__
 
-The Sending Settings section allows you to configure your from and reply-to address as well as set the subject line or pre-header.
+La section Paramètres d'envoi vous permet de configurer votre adresse de départ et de réponse ainsi que de définir la ligne de sujet ou le pré-en-tête.
 
 {% alert note %}
-Advanced functionality will appear in the campaign or Canvas step composer. In advanced functionality, you can modify your inline CSS setting, set a BCC email address, and enter in a header or extra key-value pairs (if configured).
+Des fonctionnalités avancées apparaîtront dans la campagne ou dans le compositeur de pas de Canvas . Dans les fonctionnalités avancées, vous pouvez modifier vos paramètres CSS en ligne, définir une adresse email BCC, et entrer dans un en-tête ou des paires de valeur clé supplémentaire (si configuré).
 {% endalert %}
 
 {% endsubtab %}
 {% subtab Content %}
 
-#### __Content__
+#### __Contenus__
 
-The Content section contains the editor. There are three key components within this section.
+La section Contenu contient l'éditeur. Il y a trois composants clés dans cette section.
 
-- __Content__: This section includes a series of tiles that represent the different kinds of content you can use in your message. More will become available in the future. To use them, just drag one inside an existing row segment; it will auto-adjust to the column width. Every block has its own settings, such as granular control on padding. The right-side panel automatically switches to a property panel for the selected content element.<br><br> For more information see [Editor Block Properties]({{site.baseurl}}/dnd/editor_blocks/)<br><br>
-- __Rows__: Rows are structural units that define the horizontal composition of a section of the message by using columns. Using more than one column allows you to put different content elements side by side. You can add all the structural elements you need to your message, regardless of the template you selected when you started.<br><br>
-- __Settings__: General settings for the message. They are inherited by Rows and Content sections. For example, the font family set in the message settings will be used everywhere in your message, except where you use a custom setting.
+- __Contenu__: Cette section comprend une série de tuiles qui représentent les différents types de contenu que vous pouvez utiliser dans votre message. D'autres seront disponibles à l'avenir. Pour les utiliser, faites simplement glisser un à l'intérieur d'un segment de ligne existant; il s'ajustera automatiquement à la largeur de la colonne. Chaque bloc a ses propres paramètres, tels que le contrôle granulaire du remplissage. Le panneau de droite passe automatiquement à un panneau de propriétés pour l'élément de contenu sélectionné.<br><br> Pour plus d'informations, voir [Propriétés de bloc de l'éditeur]({{site.baseurl}}/dnd/editor_blocks/)<br><br>
+- __Lignes__: Les lignes sont des unités de structure qui définissent la composition horizontale d'une section du message en utilisant des colonnes. L'utilisation de plus d'une colonne vous permet de mettre différents éléments de contenu côte à côte. Vous pouvez ajouter tous les éléments structurels dont vous avez besoin à votre message, quel que soit le modèle que vous avez sélectionné au démarrage.<br><br>
+- __Paramètres__: Paramètres généraux du message. Ils sont hérités par les sections Lignes et Contenus. Par exemple, la famille de police définie dans les paramètres du message sera utilisée partout dans votre message, sauf lorsque vous utilisez un paramètre personnalisé.
 
-This is very useful to build a coherent message very quickly.
+Ceci est très utile pour construire un message cohérent très rapidement.
 {% endsubtab %}
 {% subtab Preview and Test %}
 
-#### __Preview & Test__
+#### __Aperçu & Test__
 
-The Preview & Test section allows you to preview your email based on different users.
+La section Aperçu & Test vous permet de prévisualiser votre e-mail en fonction de différents utilisateurs.
 
-- __Random User__: Braze will randomly select a user from the database and preview the email based on their attributes/event information. Note: This user may or may not be part of your segmentation criteria. Segmentation is selected afterward, so Braze is unaware of your target audience at this point.<br><br>
-- __Select User__: You can select a specific user based on their email address or `external_id`. The email will preview based on that user's attributes and event information<br><br>
-- __Custom user__: You can customize a user. Braze will offer inputs for all available attributes and events. You can enter any information you would like to see in the preview email.
+- __Utilisateur Aléatoire__: Braze sélectionnera aléatoirement un utilisateur dans la base de données et prévisualisera l'email en fonction de ses attributs/informations sur l'événement. Note: Cet utilisateur peut ou non faire partie de vos critères de segmentation. La segmentation est ensuite sélectionnée, de sorte que Braze ne connaît pas votre public cible à ce stade.<br><br>
+- __Sélectionner l'utilisateur__: Vous pouvez sélectionner un utilisateur spécifique en fonction de son adresse e-mail ou `external_id`. L'e-mail sera prévisualisé en fonction des attributs et des informations de l'événement de cet utilisateur<br><br>
+- __Utilisateur personnalisé__: Vous pouvez personnaliser un utilisateur. Braze offrira des entrées pour tous les attributs et événements disponibles. Vous pouvez entrer toutes les informations que vous souhaitez voir dans l'e-mail de prévisualisation.
 {% endsubtab %}
 {% endsubtabs %}
 
-Inbox Vision is currently unavailable during this testing phase and will be made available in the future.
+Vision Boîte de réception est actuellement indisponible durant cette phase de test et sera disponible dans le futur.
 
 {% alert tip %}
-To read more about the different components of the drag & drop editing experience, visit our Drag & Drop Editor documentation articles [here]({{site.baseurl}}/user_guide/message_building_by_channel/email/drag_and_drop/).
+Pour en savoir plus sur les différents composants de l'expérience de glisser & déposer visitez nos articles de documentation de drag & Drop Editor [ici]({{site.baseurl}}/user_guide/message_building_by_channel/email/drag_and_drop/).
 {% endalert %}
 
 {% endtab %}
 {% endtabs %}
 
-Braze will add a footer with an unsubscribe link at the bottom of your email by default. You can customize this footer in the **Email Settings** tab of the **Manage Settings** page. For more information, please read our article on [custom footers][cf].
+Braze va ajouter un pied de page avec un lien de désinscription au bas de votre e-mail par défaut. Vous pouvez personnaliser ce pied de page dans l'onglet **Paramètres de messagerie** de la page **Gérer les paramètres**. Pour plus d'informations, veuillez lire notre article sur [les pieds de page personnalisés][cf].
 
-#### Step 4a: Check for email errors
+#### Étape 4 : Vérifier les erreurs de messagerie
 
-Email errors are presented on the **Compose** tab of the message workflow. Errors prevent you from progressing forward, while "Warnings" indicate reminders to help you follow best practices. Depending on your business, you might choose to ignore them.
+Les erreurs de courriel sont présentées dans l'onglet **Composer** du flux de travail des messages. Les erreurs vous empêchent de progresser, tandis que les « Avertissements » indiquent des rappels pour vous aider à suivre les meilleures pratiques. Selon votre entreprise, vous pouvez choisir de les ignorer.
 
 !\[Drag & Drop Compose Error\]\[1\]{: style="float:right;max-width:40%;margin-left:15px;"}
 
-Here's a list of errors that are accounted for in our editor:
+Voici une liste d'erreurs qui sont comptabilisées dans notre éditeur :
 
-- Incorrect Liquid Syntax
-- [Email bodies larger than 400kb; bodies are highly recommended to be less than 102kb][7]
-- Templates without an unsubscribe link
-- Emails with a blank **Body** or **Subject**.
-- Emails with no unsubscribe link.
+- Syntaxe de liquides incorrecte
+- [Corps de courrier électronique de plus de 400kb; les corps sont fortement recommandés pour être inférieur à 102kb][7]
+- Modèles sans lien de désinscription
+- Emails avec un **corps ** vide** ou **sujet**.</li>
+- E-mails sans lien de désinscription.</ul>
 
-#### Step 4b: Preview and test your message
+#### Étape 4b: Prévisualiser et tester votre message
 
-After you finish composing your template, you can test it before sending it out.
+Une fois que vous avez fini de composer votre modèle, vous pouvez le tester avant de l'envoyer.
 
-From the bottom of the overview screen, click **Preview and Test**. Here you can preview how your email will appear in a customer's inbox. With **Preview as User** selected, you can preview your email as a random user, select a specific user, or create a custom user. This allows you to test that your Connected Content and personalization calls are working as they should.
+À partir du bas de l'écran d'aperçu, cliquez sur **Aperçu et Tester**. Ici vous pouvez prévisualiser comment votre e-mail apparaîtra dans la boîte de réception d'un client. Avec **Aperçu en tant qu'utilisateur** sélectionné, vous pouvez prévisualiser votre e-mail en tant qu'utilisateur aléatoire, sélectionner un utilisateur spécifique, ou créer un utilisateur personnalisé. Cela vous permet de tester que vos appels de contenu connecté et de personnalisation fonctionnent comme ils le devraient.
 
-You can also switch between desktop, mobile, and plaintext views to get a sense of how your message will appear in different contexts.
+Vous pouvez également basculer entre les vues bureau, mobile et texte en clair pour avoir une idée de la façon dont votre message apparaîtra dans différents contextes.
 
-When you're ready for a final check, select **Test Send** and send a test message to yourself or a group of content testers to ensure that your email displays properly on a variety of devices and email clients.
+Quand vous êtes prêt pour une vérification finale, sélectionnez **Test Send** et envoyez un message de test à vous-même ou à un groupe de testeurs de contenu pour vous assurer que votre e-mail s'affiche correctement sur une variété de périphériques et de clients de messagerie.
 
-!\[New Email Preview\]\[15\]
+!\[Nouveau aperçu de courriel\]\[15\]
 
-If you see any issues with your template or want to make any changes, click **Edit Email** to return to the editor.
+Si vous voyez des problèmes avec votre modèle ou si vous souhaitez apporter des modifications, cliquez sur **Modifier l'e-mail** pour retourner à l'éditeur.
 
-### Step 5: Save your template
+### Étape 5 : Enregistrez votre modèle
 
-Be sure to save your template by clicking **Save Template** in the bottom right corner of the editor. You're now ready to use this template in any campaign or Canvas step you choose.
+Assurez-vous de sauvegarder votre modèle en cliquant sur **Enregistrer le modèle** dans le coin inférieur droit de l'éditeur. Vous êtes maintenant prêt à utiliser ce modèle dans toutes les étapes de campagne ou de Canvas que vous choisissez.
 
 {% alert note %}
-If you make any edits to an existing template, those changes will not be reflected in campaigns created using previous versions of that template.
+Si vous faites des modifications à un modèle existant, ces modifications ne seront pas prises en compte dans les campagnes créées en utilisant les versions précédentes de ce modèle.
 {% endalert %}
 
-## Using your templates in API campaigns
+## Utiliser vos modèles dans les campagnes API
 
-To use your email for an API campaign, you need an `email_template_id`, which can be found at the bottom of any email template created in Braze.
+Pour utiliser votre email pour une campagne API, vous avez besoin d'un `email_template_id`, qui peuvent être trouvés au bas de n'importe quel modèle d'e-mail créé en Brésil.
 
-!\[Save Template\]\[6\]
+!\[Enregistrer le modèle\]\[6\]
 
-## Managing email templates
+## Gestion des modèles d'e-mails
 
-You can [duplicate]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/duplicate/) and [archive]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/archive/) email templates! Learn more about creating and managing templates and creative content in [Templates & Media]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/).
+Vous pouvez [dupliquer]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/duplicate/) et [archiver]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/archive/) modèles d'e-mails ! En savoir plus sur la création et la gestion de modèles et de contenus créatifs dans [Modèles & Médias]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/).
 
-## FAQs
+## Foire aux questions
 
-For answers to frequently asked questions about email templates, check out our [email and link templates FAQs][9] page.
-[2]: {% image_buster /assets/img/email_templates/template2.png %} [1]: {% image_buster /assets/img/dnd_compose_error.png %} [3]: {% image_buster /assets/img/email_templates/template3.png %} [4]: {% image_buster /assets/img/email_templates/template4.png %} [6]: {% image_buster /assets/img/email_templates/template5.png %} [15]: {% image_buster /assets/img_archive/newEmailTest.png %}
+Pour obtenir des réponses aux questions les plus fréquemment posées sur les modèles de courriel, consultez notre page [FAQ][9] sur les modèles d'e-mails et de liens.
+[2]: {% image_buster /assets/img/email_templates/template2.png %} [1]: {% image_buster /assets/img/dnd_compose_error.png %} [3]: {% image_buster /assets/img/email_templates/template3. ng %} [4]: {% image_buster /assets/img/email_templates/template4.png %} [6]: {% image_buster /assets/img/email_templates/template5. ng %} [15]: {% image_buster /assets/img_archive/newEmailTest.png %}
 
 [cf]: {{site.baseurl}}/user_guide/message_building_by_channel/email/managing_user_subscriptions/#custom-footer
 [7]: {{site.baseurl}}/user_guide/message_building_by_channel/email/best_practices/
