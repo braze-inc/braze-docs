@@ -11,7 +11,7 @@ channel: content cards
 
 # Content Cards
 
-The Braze SDK include a default card feed to get you started with Content Cards. To show the card feed, you can use the `myBrazePlugin.launchContentCards()` method. The default card feed included with the Braze SDK will handle all analytics tracking, dismissals, and rendering for a user's Content Cards.
+The Braze SDK includes a default card feed to get you started with Content Cards. To show the card feed, you can use the `myBrazePlugin.launchContentCards()` method. The default card feed included with the Braze SDK will handle all analytics tracking, dismissals, and rendering for a user's Content Cards.
 
 ## Customization
 
@@ -43,14 +43,16 @@ On Android, this callback works with no additional integration required.
 
 Create an `NSNotificationCenter` listener for `ABKContentCardsProcessedNotification` events as described [here](https://www.braze.com/docs/developer_guide/platform_integration_guides/ios/content_cards/data_model/).
 
-Your `ABKContentCardsProcessedNotification` callback implementation must call `myBrazePlugin.processContentCards(contentCards)`. For an example, see [AppDelegate.swift](https://github.com/braze-inc/braze-flutter-sdk/blob/master/example/ios/Runner/AppDelegate.swift) in our sample app.
+Your `ABKContentCardsProcessedNotification` callback implementation must call `myBrazePlugin.processContentCards(contentCards)`.
+
+For an example, see [AppDelegate.swift](https://github.com/braze-inc/braze-flutter-sdk/blob/master/example/ios/Runner/AppDelegate.swift) in our sample app.
 
 {% endtab %}
 {% endtabs %}
 
 ### Replaying the callback for content cards
 
-To store any content cards triggered before the callback is available and replay them once it is set, add the following entry to the `customConfigs` map in the `BrazePlugin` constructor:
+To store any content cards triggered before the callback is available and replay them once it is set, add the following entry to the `customConfigs` map when intializing the `BrazePlugin`:
 ```dart
 BrazePlugin myBrazePlugin = new BrazePlugin(customConfigs: {replayCallbacksConfigKey: true});
 ```
@@ -66,7 +68,7 @@ Follow the steps below to test a sample content card.
 
 ![Content Card Campaign Test][5]
 
-For more details on each platform, follow the [Android integration instructions][2] and the [iOS integration instructions][3].
+For more details on each platform, follow the [Android integration instructions][2] or the [iOS integration instructions][3].
 
 
 [2]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/content_cards/data_models/

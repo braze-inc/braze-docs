@@ -9,13 +9,13 @@ description: "This reference introduces the Flutter SDK and explains how to inte
 
 # Initial SDK setup
 
-Follow these instructions to install the [Braze Flutter SDK](https://pub.dev/packages/braze_plugin) that contains a package to allows integrators to use Braze APIs from [Flutter apps](https://flutter.dev/) written in Dart. This plugin provides basic analytics functionality and lets you integrate in-app messages and Content Cards for both iOS and Android with a single codebase.
+Follow these instructions to install the [Braze Flutter SDK](https://pub.dev/packages/braze_plugin) that contains a package to allows integrators to use Braze APIs in [Flutter apps](https://flutter.dev/) written in Dart. This plugin provides basic analytics functionality and lets you integrate in-app messages and Content Cards for both iOS and Android with a single codebase.
 
 You will need to complete installation steps on both platforms separately.
 
 To complete the installation, you will need the [App Identifier API key]({{site.baseurl}}/api/api_key/#the-app-identifier-api-key) as well as the [SDK endpoint]({{site.baseurl}}/api/basics/#endpoints). Both are located in the **Developer Console** under **Settings** in the dashboard.
 
-Please follow the Flutter guide to complete the [setup of the Flutter SDK](https://docs.flutter.dev/get-started/install).
+Before following the steps below, please install and set up [the Flutter SDK](https://docs.flutter.dev/get-started/install).
 
 ### Requirements
 * Dart SDK 2.0.0+
@@ -32,8 +32,6 @@ flutter pub add braze_plugin
 This will add the appropriate line to your `pubspec.yaml`.
 
 ## Step 2: Complete native setup
-
-Please complete the both the Android and iOS steps below.
 
 {% tabs %}
 {% tab Android %}
@@ -114,7 +112,7 @@ To import the plugin into your Dart code, use:
 import 'package:braze_plugin/braze_plugin.dart';
 ```
 
-Then, instantiate an instance of the Braze plugin by calling `new BrazePlugin()` like in [our sample app](https://github.com/braze-inc/braze-flutter-sdk/blob/master/example/lib/main.dart).
+Then, initialize an instance of the Braze plugin by calling `new BrazePlugin()` like in [our sample app](https://github.com/braze-inc/braze-flutter-sdk/blob/master/example/lib/main.dart).
 
 ## Test your basic integration
 
@@ -127,4 +125,4 @@ BrazePlugin myBrazePlugin = BrazePlugin();
 myBrazePlugin.changeUser("some-user-id");
 ```
 
-You can then search for the user with `some-user-id` in the dashboard under **User Search**. There, you can verify that session and device data have been logged.
+Then, search for the user with `some-user-id` in the dashboard under **User Search**. There, you can verify that session and device data have been logged.

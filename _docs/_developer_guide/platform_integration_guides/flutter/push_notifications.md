@@ -19,7 +19,7 @@ Integrating push notifications in Flutter requires setting up each native platfo
 
 ## Step 2: Test displaying push notifications
 
-At this point, you should be able to send notifications to the devices. Follow the steps below to test your push integration.
+Follow the steps below to test your push integration.
 
 {% alert important %}
 You can't test push notification related app behavior on an iOS simulator because simulators don't support the device tokens required to send and receive a push notification.
@@ -28,7 +28,7 @@ You can't test push notification related app behavior on an iOS simulator becaus
 1. Set an active user in the Flutter application by initializing your plugin by calling `myBrazePlugin.changeUser('your-user-id')`.
 2. Head to **Campaigns** and create a new **Push Notification** campaign. Choose the platforms that you'd like to test.
 3. Compose your test notification and head over to the **Test** tab. Add the same `user-id` as the test user and click **Send Test**.
-4. You should receive the notification on your device shortly. You may need to check in the Notification Center or update Settings if it doesn't display immediately.
+4. You should receive the notification on your device shortly. You may need to check in the Notification Center or update Settings if it doesn't display.
 
 
 [1]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/push_notifications/integration/standard_integration/
