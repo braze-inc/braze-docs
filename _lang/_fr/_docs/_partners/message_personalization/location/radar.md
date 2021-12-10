@@ -21,6 +21,7 @@ De plus, les API de Radar Geo peuvent être mises à profit pour enrichir ou per
 
 | Exigences                            | Libellé                                                                                                                                                                                                      |
 | ------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| Compte radar                         | Un compte Radar est requis pour profiter de ce partenariat.                                                                                                                                                  |
 | Braze clé API REST                   | Une clé API Braze REST avec les permissions `users.track`. <br><br> Ceci peut être créé dans le __tableau de bord Braze -> Console développeur -> Clé d'API REST -> Créer une nouvelle clé API__ |
 | Identifiant du groupe                | L'identifiant de votre groupe peut être trouvé dans la page __Tableau de bord Braze -> Console développeur__.                                                                                                |
 | Clé iOS API<br>clé Android API | Ces clés API se trouvent dans la page __du tableau de bord Braze -> Gérer les paramètres__.                                                                                                                  |
