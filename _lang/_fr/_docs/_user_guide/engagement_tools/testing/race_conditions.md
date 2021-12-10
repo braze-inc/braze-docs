@@ -1,44 +1,44 @@
 ---
-nav_title: Race Conditions
-article_title: Race Conditions
-alias: /race_conditions/
+nav_title: Conditions de la course
+article_title: Conditions de la course
+alias: /fr/race_conditions/
 page_order: 9
-page_type: reference
-description: "This article covers best practices to avoid race conditions from affecting your messaging campaigns."
+page_type: Référence
+description: "Cet article couvre les meilleures pratiques pour éviter que les conditions de course n'affectent vos campagnes de messagerie."
 ---
 
-# Race conditions
+# Conditions de la course
 
-A **race condition** is a concept where an outcome is dependent on the sequence or timing of other events. For example, if the desired sequence of events is "Event A" and then "Event B", but sometimes "Event A" comes first and other times "Event B" comes first—that is known as a race condition.
+Une **condition de course** est un concept où un résultat dépend de la séquence ou du calendrier d'autres événements. Par exemple, si la séquence désirée d'événements est "Événement A" puis "Événement B", mais parfois "Evénement A" vient en premier et d'autres fois "Evénement B" vient en premier, ce qui est connu comme une condition de course.
 
 {% include video.html id="LyJaxDoMtMs" align="right" %}
 
-## Targeting new users
+## Cibler les nouveaux utilisateurs
 
-In the Braze platform, one of the most common race conditions occurs with messages that target newly created users. Here, the expected order of events is:
+Sur la plateforme de Braze, une des conditions de course les plus courantes se produit avec des messages ciblant les nouveaux utilisateurs. Ici, l'ordre des événements attendu est :
 
-1. A user gets created;
-2. The same user is immediately targeted for a message.
+1. Un utilisateur est créé;
+2. Le même utilisateur est immédiatement ciblé pour un message.
 
-However, in some cases, the second event will trigger first. This means that a message is attempting to be sent to a user that has not been created yet, and as a result, the user never receives it.
+Cependant, dans certains cas, le deuxième événement se déclenchera en premier. Cela signifie qu'un message tente d'être envoyé à un utilisateur qui n'a pas encore été créé. et en conséquence, l'utilisateur ne le reçoit jamais.
 
-## Using multiple API endpoints
+## Utilisation de plusieurs terminaux API
 
-If you're using separate API endpoints to create users and trigger Canvases/campaigns, this can also result in this race condition. When user information is sent to Braze via the `users/track` endpoint, it may occasionally take a few seconds to process. As a result, when requests are made to the `users/track` and [messaging endpoints][4] at the same time, there is no guarantee that the user information will be updated before a message is sent. If these requests are made in the same API call, there should be no issue. Please note that if you are sending a scheduled message API call, these requests __must__ be separate, and a user must be created before sending the schdeuled API call.
+Si vous utilisez des points de terminaison API distincts pour créer des utilisateurs et déclencher des campagnes Canvas/s, cela peut également entraîner cette condition de course. Lorsque les informations de l'utilisateur sont envoyées à Braze via le point de terminaison `utilisateurs/piste,` il peut parfois prendre quelques secondes à traiter. En conséquence, lorsque des requêtes sont faites aux `utilisateurs/pistes` et [terminaux de messagerie][4] en même temps, il n'y a aucune garantie que les informations de l'utilisateur seront mises à jour avant l'envoi d'un message. Si ces requêtes sont effectuées dans le même appel API, il ne devrait pas y avoir de problème. Veuillez noter que si vous envoyez un appel API de message planifié, ces requêtes __doivent__ être séparées, et un utilisateur doit être créé avant d'envoyer un appel API échappé.
 
 {% alert note %}
-If user attributes are sent via SDK or in the same user/track call as the event, then Braze will automatically process those first before attempting to send any message.
+Si les attributs de l'utilisateur sont envoyés via le SDK ou dans le même utilisateur/appel de suivi que l'événement, alors Braze traitera automatiquement ceux avant de tenter d'envoyer un message.
 {% endalert %}
 
-One way to avoid this race condition is by adding a delay—around a minute or so—between the creation of a user, and the targeting of that user by your Canvas or campaign.
+Une façon d'éviter cette condition de course est d'ajouter un retard, environ une minute, entre la création d'un utilisateur, et le ciblage de cet utilisateur par votre Canvas ou campagne.
 
-Similarly, you can use the [`Attributes`][1] object to add/create/update a user, and then target them using either the [`canvas/trigger/send`][2] or [`campaign/trigger/send`][3] endpoint. This API call will process the `Attributes` object before targeting the users.
+De même, vous pouvez utiliser l'objet [`Attributs`][1] pour ajouter/créer/mettre à jour un utilisateur, puis les cibler en utilisant soit le [`canvas/trigger/send`][2] ou [`campagne/trigger/send`][3] endpoint. Cet appel API traitera l'objet `Attributs` avant de cibler les utilisateurs.
 
-Attributes that are included in this object will be processed before Braze begins to send the campaign. If the `send_to_existing_only` flag is set to false, and an `external_user_id` does not exist in Braze’s database, Braze will create a user profile for the `external_user_id` and process the associated attributes to the user profile before Braze begins to send the campaign. Also note, if the `send_to_existing_only` flag is set to false, then the attributes object must be included in order to create the user.
+Les attributs qui sont inclus dans cet objet seront traités avant que Braze ne commence à envoyer la campagne. Si le drapeau `send_to_existing_only` est défini à false, et qu'un `external_user_id` n'existe pas dans la base de données de Braze, Braze va créer un profil utilisateur pour le `external_user_id` et traiter les attributs associés au profil utilisateur avant que Braze ne commence à envoyer la campagne. Notez également que si le flag `send_to_existing_only` est défini à false, alors l'objet attributs doit être inclus afin de créer l'utilisateur.
 
-## Matching action-based triggers and audience filters
+## Les déclencheurs d'actions correspondants et les filtres d'audience
 
-Another common race condition may occur if you configure an action-based campaign or Canvas with the same trigger as the audience filter (i.e., a changed attribute or performed a custom event). The user may not be in the audience at the time they perform the trigger event, which means they won't receive the campaign or enter the Canvas. In this case, Braze recommends you avoid configuring your trigger to match your audience filter.
+Une autre condition de course courante peut se produire si vous configurez une campagne basée sur l'action ou Canvas avec le même déclencheur que le filtre d'audience (i. ., un attribut modifié ou effectué un événement personnalisé). L'utilisateur ne peut pas être dans le public au moment où il effectue l'événement de déclenchement ce qui signifie qu'ils ne recevront pas la campagne ou n'entreront pas dans le Canvas. Dans ce cas, Braze vous recommande d'éviter de configurer votre déclencheur pour qu'il corresponde à votre filtre d'audience.
 
 
 [1]: {{site.baseurl}}/api/objects_filters/user_attributes_object/
