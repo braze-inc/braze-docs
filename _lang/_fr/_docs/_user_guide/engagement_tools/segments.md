@@ -4,50 +4,50 @@ article_title: Segments
 page_order: 1
 layout: dev_guide
 guide_top_header: "Segments"
-guide_top_text: "Audience segmentation is key to strategic marketing - it can keep you from over-targeting, bothering, or missing a potential connection with a customer. Check out the articles below to learn how to segment and filter your audience to your (and their) greatest benefit!"
-descriptions: "Audience segmentation is key to strategic marketing - it can keep you from over-targeting, bothering, or missing a potential connection with a customer. Check out this landing page to learn how to segment and filter your audience to your (and their) greatest benefit!"
+guide_top_text: "La segmentation de l'audience est essentielle au marketing stratégique - elle peut vous empêcher de cibler, d'ennuyer ou de manquer une connexion potentielle avec un client. Consultez les articles ci-dessous pour apprendre à segmenter et filtrer votre public à votre (et leur) plus grand avantage!"
+descriptions: "La segmentation de l'audience est essentielle au marketing stratégique - elle peut vous empêcher de cibler, d'ennuyer ou de manquer une connexion potentielle avec un client. Consultez cette page d'accueil pour apprendre à segmenter et filtrer votre public à votre (et leur) plus grand avantage!"
 tool: Segments
-page_type: landing
-description: "This is the landing page for Segmentation within Dashboard campaigns. Here you can find information on how to set up and maintain effective Segments."
-guide_featured_title: "Popular Articles"
+page_type: atterrissage
+description: "Ceci est la page de destination pour la Segmentation dans les campagnes du tableau de bord. Vous trouverez ici des informations sur la façon de mettre en place et de maintenir des segments efficaces."
+guide_featured_title: "Articles populaires"
 guide_featured_list:
   - 
-    name: Creating a Segment
-    link: /docs/user_guide/engagement_tools/segments/creating_a_segment/
-    fa_icon: fas fa-chart-pie
+    name: Créer un segment
+    link: /fr/docs/user_guide/engagement_tools/segments/creating_a_segment/
+    fa_icon: fas fa-chart-tarte
   - 
-    name: Segmentation Filters
-    link: /docs/user_guide/engagement_tools/segments/segmentation_filters/
-    fa_icon: fas fa-filter
+    name: Filtres de segmentation
+    link: /fr/docs/user_guide/engagement_tools/segments/segmentation_filters/
+    fa_icon: filtre Fas Fas
   - 
-    name: Segment Funnels
-    link: /docs/user_guide/engagement_tools/segments/segment_funnels/
+    name: Funnels de Segment
+    link: /fr/docs/user_guide/engagement_tools/segments/segment_funnels/
     fa_icon: fas fa-user-slash
-guide_menu_title: "More Articles"
+guide_menu_title: "Plus d'articles"
 guide_menu_list:
   - 
-    name: Segment Insights
-    link: /docs/user_guide/engagement_tools/segments/segment_insights/
-    fa_icon: fas fa-chart-pie
+    name: Aperçus du segment
+    link: /fr/docs/user_guide/engagement_tools/segments/segment_insights/
+    fa_icon: fas fa-chart-tarte
   - 
-    name: Segment Extension
-    link: /docs/user_guide/engagement_tools/segments/segment_extensions/
+    name: Extension de segment
+    link: /fr/docs/user_guide/engagement_tools/segments/segment_extensions/
     fa_icon: fas fa-users
   - 
-    name: Using User Search
-    link: /docs/user_guide/engagement_tools/segments/using_user_search/
+    name: Utiliser la recherche d'utilisateur
+    link: /fr/docs/user_guide/engagement_tools/segments/using_user_search/
     fa_icon: fas fa-users
   - 
-    name: Location Targeting
-    link: /docs/user_guide/engagement_tools/segments/location_targeting/
-    fa_icon: fas fa-street-view
+    name: Ciblage de l'emplacement
+    link: /fr/docs/user_guide/engagement_tools/segments/location_targeting/
+    fa_icon: Fas fa-street-view
   - 
-    name: Beacon and Geofence Support
-    link: /docs/user_guide/engagement_tools/segments/beacon_support/
-    fa_icon: fas fa-map-marker-alt
+    name: Support Beacon et Geofence
+    link: /fr/docs/user_guide/engagement_tools/segments/beacon_support/
+    fa_icon: fas fa-map-marqueur-alt
   - 
-    name: Regular Expressions
-    link: /docs/user_guide/engagement_tools/segments/regex/
+    name: Expressions régulières
+    link: /fr/docs/user_guide/engagement_tools/segments/regex/
     fa_icon: fas fa-search
 ---
 
