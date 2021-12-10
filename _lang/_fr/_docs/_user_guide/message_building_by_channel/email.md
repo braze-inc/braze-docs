@@ -1,74 +1,74 @@
 ---
-nav_title: Email
-article_title: Email
+nav_title: Courriel
+article_title: Courriel
 page_order: 1
-layout: featured
-guide_top_header: "Email"
-guide_top_text: "With Braze Email, you can create completely custom and personalized email messages in either campaigns or Canvas that will grab your user's attention fast. Check out the articles below to learn more."
-description: "With Braze Email, you can create completely custom and personalized email messages in either campaigns or Canvas that will grab your user's attention fast. Check out the articles below to learn more."
+layout: en vedette
+guide_top_header: "Courriel"
+guide_top_text: "Grâce à Braze Email, vous pouvez créer des messages électroniques personnalisés et personnalisés dans les campagnes ou Canvas qui attireront l'attention de votre utilisateur rapidement. Consultez les articles ci-dessous pour en savoir plus."
+description: "Grâce à Braze Email, vous pouvez créer des messages électroniques personnalisés et personnalisés dans les campagnes ou Canvas qui attireront l'attention de votre utilisateur rapidement. Consultez les articles ci-dessous pour en savoir plus."
 channel:
-  - email
-guide_featured_title: "Popular Articles"
+  - Email
+guide_featured_title: "Articles populaires"
 guide_featured_list:
   - 
-    name: Creating an Email Campaign
-    link: /docs/user_guide/message_building_by_channel/email/creating_an_email_campaign/
-    fa_icon: fas fa-envelope
+    name: Création d'une campagne d'email
+    link: /fr/docs/user_guide/message_building_by_channel/email/creating_an_email_campaign/
+    fa_icon: fas fa-enveloppe
   - 
-    name: Create an Email Template
-    link: /docs/user_guide/message_building_by_channel/email/templates/email_template/
+    name: Créer un modèle d'e-mail
+    link: /fr/docs/user_guide/message_building_by_channel/email/templates/email_template/
     fa_icon: fas fa-table
   - 
     name: CSS Inlining
-    link: /docs/user_guide/message_building_by_channel/email/css_inline/
+    link: /fr/docs/user_guide/message_building_by_channel/email/css_inline/
     fa_icon: fas fa-align-left
   - 
-    name: Link Templates
-    link: /docs/user_guide/message_building_by_channel/email/templates/link_template/
+    name: Modèles de lien
+    link: /fr/docs/user_guide/message_building_by_channel/email/templates/link_template/
     fa_icon: fas fa-link
   - 
-    name: Upload an HTML Email Template
+    name: Télécharger un modèle de courriel HTML
     link: /docs/user_guide/message_building_by_channel/email/templates/html_email_template/
-    fa_icon: fas fa-upload
+    fa_icon: fa-upload fas
   - 
-    name: Inbox Vision
-    link: /docs/user_guide/message_building_by_channel/email/inbox_vision/
+    name: Vision de la boîte de réception
+    link: /fr/docs/user_guide/message_building_by_channel/email/inbox_vision/
     fa_icon: fas fa-inbox
   - 
-    name: Managing User Subscriptions
+    name: Gestion des abonnements aux utilisateurs
     link: /docs/user_guide/message_building_by_channel/email/managing_user_subscriptions/
     fa_icon: fas fa-users
   - 
-    name: Gmail Promotion Tool
-    link: /docs/user_guide/message_building_by_channel/email/gmail_promotions_tab/
-    fa_icon: fas fa-trophy
+    name: Outil de promotion Gmail
+    link: /fr/docs/user_guide/message_building_by_channel/email/gmail_promotions_tab/
+    fa_icon: fas fa-trophée
   - 
-    name: Email Reporting
+    name: Rapports par e-mail
     link: /docs/user_guide/message_building_by_channel/email/reporting_and_analytics/email_reporting/
     fa_icon: fas fa-chart-bar
   - 
-    name: Email Analytics Glossary
+    name: Glossaire de l'email Analytics
     link: /docs/user_guide/message_building_by_channel/email/reporting_and_analytics/analytics_glossary/
-    fa_icon: fas fa-chart-pie
+    fa_icon: fas fa-chart-tarte
   - 
-    name: Apple Private Relay SSO
+    name: Relais privé Apple SSO
     link: /docs/user_guide/message_building_by_channel/email/email_private_relay_apple_sso/
-    fa_icon: fab fa-apple
+    fa_icon: fa-pomme fab
   - 
-    name: Frequently Asked Questions
-    link: /docs/user_guide/message_building_by_channel/email/faq/
+    name: Foire aux questions
+    link: /fr/docs/user_guide/message_building_by_channel/email/faq/
     fa_icon: fas fa-question
 ---
 
-## Use cases {#email-use-cases}
+## Cas d'utilisation {#email-use-cases}
 
-You can do a lot with email! Here are some common use cases to get you inspired:
+Vous pouvez faire beaucoup avec l'email! Voici quelques cas d'utilisation courants pour vous inspirer :
 
-- **Re-engagement:** Because email can reach users outside of your app, including those who have not installed the app, emails are well-suited for re-engagement.
-- **Onboarding:** Email campaigns are also useful for onboarding new users and encouraging them to turn on push notifications or share the app via social networks.
-- **Rich Messages:** For content that requires more than a simple push or slide, emails allow for rich and dynamic HTML messages.
-- **Multimedia:** Using email allows for the placement of multimedia content like videos and images that engage users.
-- **Newsletters:** Emails are convenient for sending monthly or weekly newsletters to maintain user engagement.
-- **Transactions:** Transactional emails notify users of recent purchases and deliver important product and shipping information.
+- **Ré-engagement :** Parce que les e-mails peuvent atteindre les utilisateurs en dehors de votre application, y compris ceux qui n'ont pas installé l'application, les e-mails sont bien adaptés pour la réengagement.
+- **Intégration :** Les campagnes e-mail sont également utiles pour intégrer de nouveaux utilisateurs et les encourager à activer les notifications push ou à partager l'application via les réseaux sociaux.
+- **Messages enrichis :** Pour le contenu qui nécessite plus qu'un simple push ou slide, les e-mails permettent de recevoir des messages HTML riches et dynamiques.
+- **Multimédia :** L'utilisation de l'e-mail permet de placer du contenu multimédia comme des vidéos et des images qui intéressent les utilisateurs.
+- **Lettres d'information :** Les e-mails sont pratiques pour envoyer des newsletters mensuelles ou hebdomadaires afin de maintenir l'engagement des utilisateurs.
+- **Opérations :** Les e-mails transactionnels informent les utilisateurs des achats récents et fournissent des informations importantes sur les produits et les envois.
 
 <br><br>
