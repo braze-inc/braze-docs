@@ -1,93 +1,93 @@
 ---
-nav_title: "Advanced Push Campaign Settings"
-article_title: Advanced Push Campaign Settings
+nav_title: "Paramètres avancés de la campagne Push"
+article_title: Paramètres avancés de la campagne Push
 page_order: 5
-page_layout: reference
-description: "This reference article covers some Advanced Push Campaign settings like priority, custom URLs, delivery options, and more."
+page_layout: Référence
+description: "Cet article de référence couvre certains paramètres de la campagne Push Avancée comme la priorité, les URL personnalisées, les options de livraison, et plus encore."
 platform: Android
 channel:
-  - push
+  - Pousser
 tool:
-  - Campaigns
+  - Campagnes
 ---
 
-# Advanced push campaign settings
+# Paramètres avancés de la campagne de push
 
-> There are many advanced settings available for Android and Fire OS push notifications sent through the Braze dashboard. This article will describe these features and how to use them successfully.
+> Il y a beaucoup de paramètres avancés disponibles pour les notifications push Android et Fire OS envoyées via le tableau de bord Braze. Cet article décrira ces fonctionnalités et comment les utiliser avec succès.
 
-!\[Advanced Settings\]\[1\]
+!\[Paramètres avancés\]\[1\]
 
-## Notification ID {#notification-id}
+## ID de notification {#notification-id}
 
-A __"Notification ID"__ is a unique identifier for a message category of your choosing that informs the messaging service to only respect the most recent message from that ID. Setting a Notification ID allows you to send just the most recent and relevant message, rather than a stack of outdated, irrelevant ones.
+Un __« ID de notification »__ est un identifiant unique pour une catégorie de message de votre choix qui informe le service de messagerie de ne respecter que le message le plus récent de cet ID. Définir un ID de notification vous permet d'envoyer le message le plus récent et le plus pertinent, plutôt qu'une pile de messages obsolètes et non pertinents.
 
-## Time to live (TTL) {#ttl}
+## Temps de vie (TTL) {#ttl}
 
-The __"Time to Live"__ (TTL) field allows you to set a custom length of time to store messages with the push messaging service. Braze's default values for time to live are 4 weeks for FCM and 31 days for ADM. If the hypothetical user from the example above were to reconnect their device 4 weeks after the game with the time to live set to the default, then those messages would have already expired in the messaging service and would not be delivered.
+Le champ __"Time to Live"__ (TTL) vous permet de définir une durée personnalisée pour stocker des messages avec le service de messagerie push. Les valeurs par défaut de Braze pour le temps de vivre sont de 4 semaines pour FCM et 31 jours pour ADM. Si l'utilisateur hypothétique de l'exemple ci-dessus devait reconnecter son appareil 4 semaines après le jeu avec le temps de mise à jour par défaut, alors ces messages auraient déjà expiré dans le service de messagerie et ne seraient pas livrés.
 
-## Firebase messaging delivery priority {#fcm-priority}
+## Priorité de livraison de messagerie Firebase {#fcm-priority}
 
-The __"Firebase Messaging Delivery Priority"__ field lets you control whether a push is sent with "normal" or "high" priority to Firebase Cloud Messaging. See [FCM documentation](https://firebase.google.com/docs/cloud-messaging/concept-options#setting-the-priority-of-a-message) to learn more.
+Le champ __"Firebase Messaging Delivery Priority"__ vous permet de contrôler si un push est envoyé avec une priorité « normale » ou « haute » à Firebase Cloud Messaging. Consultez la [documentation FCM](https://firebase.google.com/docs/cloud-messaging/concept-options#setting-the-priority-of-a-message) pour en savoir plus.
 
-## Summary text
+## Texte de résumé
 
-The summary text allows you to set additional text in the "Expanded Notification" view. It also serves as a caption for notifications with images.
+Le texte de résumé vous permet de définir un texte supplémentaire dans la vue "Notification élargie". Il sert également de légende pour les notifications avec des images.
 
-!\[Summary Text Example\]\[9\]
+!\[Exemple de Texte Résumé\]\[9\]
 
-The summary text will display below the body of the message in the expanded view.
+Le texte du résumé s'affichera sous le corps du message dans la vue étendue.
 
-For push notifications that include images, the message text will be shown in the collapsed view, while the summary text will be displayed as the image caption when the notification is expanded. See the animation below for an example of this behavior.
+Pour les notifications push qui incluent des images, le texte du message sera affiché dans la vue réduite. alors que le texte de résumé sera affiché comme légende de l'image lorsque la notification sera étendue. Voir l'animation ci-dessous pour un exemple de ce comportement.
 
-!\[Summary Text Behavior\]\[15\]
+!\[Résumé du texte comportement\]\[15\]
 
-## Custom URIs
+## URIs personnalisés
 
-The __"Custom URI"__ feature allows you to specify a Web URL or an Android resource to navigate to when the notification is clicked. If no custom URI is specified, clicking on the notification brings users into your app. You can use the custom URI to deep-link inside your app as well as direct users to resources that exist outside of your app as well. This can be specified via our [Messaging API][13] or via our dashboard under "Advanced Settings" in the push composer wizard as pictured below:
+La fonction __"URI personnalisé"__ vous permet de spécifier une URL Web ou une ressource Android vers laquelle naviguer lorsque la notification est cliquée. Si aucune URI personnalisée n'est spécifiée, cliquer sur la notification amène des utilisateurs dans votre application. Vous pouvez utiliser l'URI personnalisé pour établir des liens profonds dans votre application ainsi que diriger les utilisateurs vers des ressources qui existent en dehors de votre application. Ceci peut être spécifié via notre [API de messagerie][13] ou via notre tableau de bord sous "Paramètres avancés" dans l'assistant du compositeur de push, comme illustré ci-dessous:
 
-> To enable Custom URI, your app's `BroadcastReceiver` must be configured to properly handle opening the URI.  This involves parsing incoming message contents for the custom URI and navigating to it.  Our [example receiver][14] provides a sample implementation.
+> Pour activer l'URI personnalisé, le `BroadcastReceiver` de votre application doit être configuré pour gérer correctement l'ouverture de l'URI.  Cela implique d'analyser le contenu des messages entrants pour l'URI personnalisé et d'y accéder.  Notre [exemple de récepteur][14] fournit un exemple d'implémentation.
 
 !\[Custom URI\]\[12\]
 
-## Notification display priority
+## Priorité d'affichage des notifications
 
 {% alert important %}
-The Notification Display Priority setting is no longer used on devices running Android O or newer. For newer devices, set the priority through [notification channel configuration](https://developer.android.com/training/notify-user/channels#importance).
+Le paramètre Priorité d'affichage des notifications n'est plus utilisé sur les appareils fonctionnant sous Android O ou plus récent. Pour les appareils plus récents, définissez la priorité via [la configuration du canal de notification](https://developer.android.com/training/notify-user/channels#importance).
 {% endalert %}
 
-The priority level of a push notification affects how your notification is displayed in the notification tray relative to other notifications. It can also affect the speed and manner of delivery, as normal and lower priority messages may be sent with slightly higher latency or batched to preserve battery life, whereas high priority messages are always sent immediately.
+Le niveau de priorité d'une notification push affecte la façon dont votre notification est affichée dans la zone de notification par rapport aux autres notifications. Cela peut également affecter la vitesse et la manière de livrer, car les messages de priorité normale et inférieure peuvent être envoyés avec une latence légèrement plus élevée ou par lots pour préserver l'autonomie de la batterie. alors que les messages de haute priorité sont toujours envoyés immédiatement.
 
-This feature is useful for differentiating your messages based on how critical or time-sensitive they are. For example, a notification about dangerous road conditions would be a good candidate to receive a high priority, while a notification about an ongoing sale should receive a lower priority. You should consider whether or not using a disruptive priority is actually necessary for the notification that you are sending, as constantly taking the top spot in your users' inbox or interrupting their other activities may have a negative impact.
+Cette fonctionnalité est utile pour différencier vos messages en fonction de leur caractère critique ou de leur caractère temporel. Par exemple, une notification sur les conditions routières dangereuses serait un bon candidat à recevoir une grande priorité, alors qu'une notification sur une vente en cours devrait recevoir une priorité plus faible. Vous devriez vous demander si une priorité perturbatrice est réellement nécessaire pour la notification que vous envoyez, car prendre constamment le dessus dans la boîte de réception de vos utilisateurs ou interrompre leurs autres activités peut avoir un impact négatif.
 
-In Android O, notification priority became a property of notification channels. You will need to work with your developer to define the priority for a channel during its configuration and then use the dashboard to select the proper channel when sending your notification sounds. For devices running versions of Android before O, specifying a priority level for Android and Fire OS notifications is possible via the Braze dashboard and Messaging API.
+Dans Android O, la priorité de notification est devenue une propriété des canaux de notification. Vous devrez travailler avec votre développeur pour définir la priorité d'un canal pendant sa configuration, puis utiliser le tableau de bord pour sélectionner le canal approprié lors de l'envoi de vos sons de notification. Pour les appareils qui utilisent des versions d'Android avant O, spécifier un niveau de priorité pour les notifications Android et Fire OS est possible via le tableau de bord Braze et l'API Messaging.
 
 To message your full user base with a specific priority, we recommend that you indirectly specify the priority through [notification channel configuration][17] (to target O+ devices) *and* send the individual priority from the dashboard (to target <O devices).
 
-The priority levels that you can set on Android or Fire OS push notifications are:
+Les niveaux de priorité que vous pouvez définir sur Android ou les notifications push Fire OS sont:
 
-| Priority | Description/Intended Use                                                                               | `priority` value (for API messages) |
-| -------- | ------------------------------------------------------------------------------------------------------ | ----------------------------------- |
-| Max      | Urgent or time-critical messages                                                                       | `2`                                 |
-| High     | Important communication, such as a new message from a friend                                           | `1`                                 |
-| Default  | Most notifications - use if your message doesn't explicitly fall under any of the other priority types | `0`                                 |
-| Low      | Information that you want users to know about but does not require immediate action                    | `-1`                                |
-| Min      | Contextual or background information.                                                                  | `-2`                                |
+| Priorité   | Description/Utilisation prévue                                                                                        | `valeur de priorité` (pour les messages API) |
+| ---------- | --------------------------------------------------------------------------------------------------------------------- | -------------------------------------------- |
+| Max.       | Messages urgents ou urgents                                                                                           | `2`                                          |
+| Élevé      | Communication importante, comme un nouveau message d'un ami                                                           | `1`                                          |
+| Par défaut | La plupart des notifications - utilisez si votre message ne tombe pas explicitement sous aucun autre type de priorité | `0`                                          |
+| Bas        | Les informations que vous voulez que les utilisateurs soient au courant, mais ne nécessitent aucune action immédiate  | `-1`                                         |
+| Min        | Informations contextuelles ou de fond.                                                                                | `-2`                                         |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
 
-For more information, please consult [Google's documentation on Android notifications][2].
+Pour plus d'informations, veuillez consulter la documentation de [Google sur les notifications Android][2].
 
-## Sounds
+## Sons
 
-In android O, notification sounds became a property of notification channels. You will need to work with your developer to define the sound for a channel during its configuration and then use the dashboard to select the proper channel when sending your notifications.
+Dans android O, les sons de notification sont devenus la propriété des canaux de notification. Vous devrez travailler avec votre développeur pour définir le son d'un canal pendant sa configuration, puis utiliser le tableau de bord pour sélectionner le canal approprié lors de l'envoi de vos notifications.
 
-For devices running versions of Android before Android O, Braze allows you to set the sound of an individual push message through the dashboard composer. You can do so by specifying a local sound resource on the device (e.g., `android.resource://com.mycompany.myapp/raw/mysound`). Specifying "default" in this field will play the default notification sound on the device. This can be specified via our [Messaging API][13] or via our dashboard under "Advanced Settings" in the push composer wizard as pictured below:
+Pour les appareils exécutant des versions d'Android avant Android O, Braze vous permet de définir le son d'un message push individuel à travers le compositeur du tableau de bord. Vous pouvez le faire en spécifiant une ressource sonore locale sur l'appareil (par exemple, `android.resource://com.mycompany.myapp/raw/mysound`). Spécifier "default" dans ce champ jouera le son de notification par défaut sur l'appareil. Ceci peut être spécifié via notre [API de messagerie][13] ou via notre tableau de bord sous "Paramètres avancés" dans l'assistant du compositeur de push, comme illustré ci-dessous:
 
 !\[Sounds\]\[11\]
 
-Enter the full sound resource URI (e.g. `android.resource://com.mycompany.myapp/raw/mysound`) into the dashboard prompt.
+Entrez l'URI de la ressource son complète (par exemple `android.resource://com.mycompany.myapp/raw/mysound`) dans l'invite du tableau de bord.
 
 To message your full user base with a specific sound, we recommend that you indirectly specify the sound through [notification channel configuration][16] (to target O+ devices) *and* send the individual sound from the dashboard (to target <O devices).
-[1]: {% image_buster /assets/img_archive/android_advanced_settings.png %} [9]: {% image_buster /assets/img_archive/summary_text.png %} [11]: {% image_buster /assets/img_archive/sound_android.png %} [12]: {% image_buster /assets/img_archive/deep_link.png %} [15]: {% image_buster /assets/img_archive/messagesummary.gif %}
+[1]: {% image_buster /assets/img_archive/android_advanced_settings.png %} [9]: {% image_buster /assets/img_archive/summary_text.png %} [11]: {% image_buster /assets/img_archive/sound_android. ng %} [12]: {% image_buster /assets/img_archive/deep_link.png %} [15]: {% image_buster /assets/img_archive/messagesummary.gif %}
 
 [2]: http://developer.android.com/design/patterns/notifications.html
 [13]: {{site.baseurl}}/api/endpoints/messaging/
