@@ -1,165 +1,165 @@
 ---
-nav_title: "Creating a Push Message"
-article_title: Creating a Push Campaign
+nav_title: "Création d'un message Push"
+article_title: Création d'une campagne Push
 page_order: 4
-page_type: tutorial
-description: "This tutorial page covers the different components involved in creating a Push Message, including configuration, sending, targeting, and more."
-channel: push
+page_type: tutoriel
+description: "Cette page de tutoriel couvre les différents composants impliqués dans la création d'un message push, y compris la configuration, l'envoi, le ciblage, et plus encore."
+channel: Pousser
 tool:
-  - Campaigns
+  - Campagnes
 ---
 
-# Creating a push message
+# Création d'un message push
 
-> Push notifications are wonderful for time-sensitive calls to action, as well as re-engaging users who haven't come into the app in a while. <br><br> Successful push campaigns drive the user directly to content and demonstrate the value of your app.
+> Les notifications push sont merveilleuses pour les appels temporaires à l'action, ainsi que pour les utilisateurs qui ne sont pas entrés dans l'application depuis un certain temps. <br><br> Des campagnes de push réussies poussent l'utilisateur directement vers le contenu et démontrent la valeur de votre application.
 
-_To see examples of push notifications, check out our [Case Studies][8]._
+_Pour voir des exemples de notifications push, consultez notre [Études de cas][8]._
 
-## Step 1: Create a new push campaign {#create-new-campaign-push}
+## Étape 1 : Créer une nouvelle campagne de push {#create-new-campaign-push}
 
 !\[Create new push campaign\]\[1\]{: style="float:right;max-width:25%;margin-left:15px;"}
 
-Navigate to the **Campaigns** page and create a new push campaign. Click __Create Campaign__ and select __Push Notification__. Or, if you want to include multiple channels in addition to Push, select **Multichannel Campaign**.
+Accédez à la page **Campagnes** et créez une nouvelle campagne de push. Cliquez sur __Créer une campagne__ et sélectionnez __Notification Push__. Ou, si vous voulez inclure plusieurs canaux en plus de Push, sélectionnez **Campagne multi-canaux**.
 
-## Step 2a: Name your campaign, choose messaging types, and compose your message
+## Étape 2: Nommez votre campagne, choisissez les types de messages et composez votre message
 
-Give your campaign a name and select the platform you want to target. For multichannel campaigns, click **Add Messaging Channel** to add additional push platforms.
+Donnez un nom à votre campagne et sélectionnez la plateforme que vous voulez cibler. Pour les campagnes multi-canaux, cliquez sur **Ajouter un canal de messagerie** pour ajouter des plateformes push supplémentaires.
 
 !\[Select push platform\]\[2\]
 
 !\[Select notification type\]\[3\]{: style="float:right;max-width:50%;margin-left:15px;"}
 
-For iOS or Android, select your notification type:
+Pour iOS ou Android, sélectionnez votre type de notification :
 
-- Standard Push
-- [Push Stories]({{site.baseurl}}/user_guide/message_building_by_channel/push/advanced_push_options/push_stories/)
-- Inline Image (Android only)
+- Push standard
+- [Envoyer des histoires]({{site.baseurl}}/user_guide/message_building_by_channel/push/advanced_push_options/push_stories/)
+- Image en ligne (Android uniquement)
 
-If you want to include images in your push campaign, refer to the following guides on creating a rich notification for [iOS]({{site.baseurl}}/user_guide/message_building_by_channel/push/ios/rich_notifications/) or [Android]({{site.baseurl}}/user_guide/message_building_by_channel/push/android/rich_notifications/).
+Si vous voulez inclure des images dans votre campagne de push, reportez-vous aux guides suivants sur la création d'une notification enrichie pour [iOS]({{site.baseurl}}/user_guide/message_building_by_channel/push/ios/rich_notifications/) ou [Android]({{site.baseurl}}/user_guide/message_building_by_channel/push/android/rich_notifications/).
 
-Now it's time to write your push message! Start typing in the message box and watch a preview appear in the preview box to the left. Push messages must be formatted in plain text, but can include [Liquid]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/) to make your push personalized and targeted.
+Maintenant, il est temps d'écrire votre message push ! Commencez à taper dans la boîte de message et regardez un aperçu apparaître dans la zone de prévisualisation à gauche. Les messages push doivent être formatés en texte brut, mais peuvent inclure [Liquid]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/) pour que votre push soit personnalisé et ciblé.
 
-### Additional push customization steps
+### Étapes supplémentaires de personnalisation du push
 
-#### Languages
+#### Langues
 
-Add copy in multiple languages using the __Add Languages__ button. Insert Liquid into your message to set custom messages and fields in specific languages based on a customer's language preferences. Check out example use cases in our [Liquid Use Case Library]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/liquid_use_cases/#language).
+Ajouter une copie dans plusieurs langues en utilisant le bouton __Ajouter des langues__. Insérez Liquid dans votre message pour définir des messages et des champs personnalisés dans des langues spécifiques basées sur les préférences de langue d'un client. Consultez des exemples de cas d'utilisation dans notre [bibliothèque de cas d'utilisation liquide]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/liquid_use_cases/#language).
 
-#### On click behavior
+#### Comportement au clic
 
-Specify what happens when a user clicks the body of a push notification with **On Click Behavior**. For example, you can prompt customers to open your application, redirect customers to a specified Web URL, or even open a specific page of your application with a [deep link]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/deep_linking_to_in-app_content/).
+Spécifiez ce qui se passe lorsqu'un utilisateur clique sur le corps d'une notification push avec **Sur le bouton Comportement**. Par exemple, vous pouvez inviter les clients à ouvrir votre application, rediriger les clients vers une URL Web spécifiée, ou même ouvrir une page spécifique de votre application avec un [lien profond]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/deep_linking_to_in-app_content/).
 
-Here, you can also set up button prompts within your push notification, such as:
+Ici, vous pouvez également configurer des invites de boutons dans votre notification push, tels que:
 
-- Yes/No
-- Confirm/Cancel
-- More
+- Oui/Non
+- Confirmer/Annuler
+- En savoir plus
 
 {% alert note %}
-For more information on platform-specific notification options, see [iOS Notification Options]({{site.baseurl}}/user_guide/message_building_by_channel/push/notification_options_ios/) or [Android Notification Options]({{site.baseurl}}/user_guide/message_building_by_channel/push/notification_options_android/).
+Pour plus d'informations sur les options de notification spécifiques à la plate-forme, voir [Options de notification iOS]({{site.baseurl}}/user_guide/message_building_by_channel/push/notification_options_ios/) ou [Options de notification Android]({{site.baseurl}}/user_guide/message_building_by_channel/push/notification_options_android/).
 {% endalert %}
 
-### Step 2b: Preview and test your message
+### Étape 2b: Prévisualiser et tester votre message
 
 !\[Test push message\]\[7\]{: style="float:right;max-width:30%;margin-left:15px;"}
 
-Testing is arguably one of the most critical steps. After you finish composing your perfect push message, test it before sending it out. Select the **Test** tab and use **Preview Message as User** to get a sense of how your message may view on mobile. Use **Send Test** to send yourself a test push and ensure that your message displays properly.
+Le test est sans doute l'une des étapes les plus critiques. Une fois que vous avez fini de composer votre message push parfait, testez-le avant de l'envoyer. Sélectionnez l'onglet **Testez** et utilisez **Aperçu du message en tant qu'utilisateur** pour avoir une idée de la façon dont votre message peut être affiché sur mobile. Utilisez **Envoyer le test** pour vous envoyer une poussée de test et vous assurer que votre message s'affiche correctement.
 
-## Step 3: Schedule your push messaging campaign {#schedule-push-campaign}
+## Étape 3 : Planifiez votre campagne de messagerie push {#schedule-push-campaign}
 
-Choose between sending your campaign at a scheduled time, after users complete an action, or via an API request.
+Choisissez entre envoyer votre campagne à un moment planifié, une fois que les utilisateurs ont terminé une action, ou via une requête API.
 
 !\[Schedule\]\[4\]
 
 {% tabs %}
   {% tab Scheduled Delivery %}
-Use [Scheduled Delivery]({{site.baseurl}}/user_guide/engagement_tools/campaigns/scheduling_and_organizing/delivery_types/scheduled_delivery/) to specify the time you want your campaign to send, either immediately or at a future time (you can also consider a user's local time in your scheduling).
+Utilisez [Livraison planifiée]({{site.baseurl}}/user_guide/engagement_tools/campaigns/scheduling_and_organizing/delivery_types/scheduled_delivery/) pour spécifier l'heure à laquelle vous voulez que votre campagne soit envoyée, soit immédiatement ou à une date ultérieure (vous pouvez également considérer l'heure locale d'un utilisateur dans votre programme).
 
-Not sure what the best time is to send your campaign? Use [Intelligent Timing]({{site.baseurl}}/user_guide/intelligence/intelligent_timing/) to send your campaign when a user is most likely to engage. Braze makes this calculation based on a statistical analysis of the user's interactions with your app.
+Vous ne savez pas quel est le meilleur moment pour envoyer votre campagne? Utilisez [Timing Intelligent]({{site.baseurl}}/user_guide/intelligence/intelligent_timing/) pour envoyer votre campagne quand un utilisateur est le plus susceptible de vous engager. Braze effectue ce calcul en se basant sur une analyse statistique des interactions de l'utilisateur avec votre application.
 
-Messages can also be configured to recur on a daily, weekly (optionally on specific days), or monthly basis.
+Les messages peuvent également être configurés pour se reproduire sur une base journalière, hebdomadaire (optionnellement sur certains jours) ou mensuelle.
 
 {% endtab %}
 {% tab Action-Based Delivery %}
 
-Use [Action-Based Delivery]({{site.baseurl}}/user_guide/engagement_tools/campaigns/scheduling_and_organizing/delivery_types/triggered_delivery/) to specify the time a message will send after a user takes a particular action. Configure messages to send immediately or after a delay (you can also consider a user's local time in your scheduling).
+Utilisez [Action-Based Delivery]({{site.baseurl}}/user_guide/engagement_tools/campaigns/scheduling_and_organizing/delivery_types/triggered_delivery/) pour spécifier le temps qu'un message enverra après qu'un utilisateur prenne une action particulière. Configurer les messages à envoyer immédiatement ou après un délai (vous pouvez également considérer l'heure locale d'un utilisateur dans votre planification).
 
 {% endtab %}
 {% tab API-Triggered Delivery %}
-Use [API-Triggered Delivery]({{site.baseurl}}/user_guide/engagement_tools/campaigns/scheduling_and_organizing/delivery_types/api_triggered_delivery/) for more advanced transactional use cases.
+Utilisez [la distribution déclenchée par l'API]({{site.baseurl}}/user_guide/engagement_tools/campaigns/scheduling_and_organizing/delivery_types/api_triggered_delivery/) pour des cas d'utilisation transactionnelle plus avancés.
 
 {% endtab %}
 {% endtabs %}
 
 {% alert warning %}
-Unless you check the box titled "Allow users to become re-eligible to receive campaign" under the __Schedule__ portion of the campaign wizard, each user will only receive the contents of a campaign once, and only new users that meet the criteria will receive the campaign on subsequent deliveries.
+Sauf si vous cochez la case intitulée « Autoriser les utilisateurs à redevenir éligibles pour recevoir une campagne» dans la partie __Planifier__ de l'assistant de campagne, chaque utilisateur ne recevra le contenu d'une campagne qu'une seule fois, et seuls les nouveaux utilisateurs qui satisfont aux critères recevront la campagne sur les livraisons subséquentes.
 {% endalert %}
 
 ## Step 4: Target users
 
-On the **Target Users** step of the campaign setup, choose the target audience for your campaign.
+À l'étape **Utilisateurs cibles** de la configuration de la campagne, choisissez le public cible pour votre campagne.
 
-!\[Targeting Options\]\[25\]
+!\[Options de ciblage\]\[25\]
 
-Under the Targeting Options section, you'll find a few options for who you can send your campaign to:
+Dans la section Options de ciblage, vous trouverez quelques options pour qui vous pouvez envoyer votre campagne à :
 
-1. __Members of a previously created segment.__ To do this, select one segment from the dropdown under **Target Users By Segment**. <br><br>
-2. __Users that fall into multiple previously created segments.__ To do this, add multiple segments from the dropdown under **Target Users By Segment**. The resulting target audience will be users in the first segment *and* the second segment *and* the third segment, etc. <br><br>
-3. __Users of one or more previously created segments that also fall under additional filters.__ After first selecting your segments, further refine your audience under the **Additional Filters** section. This is demonstrated in the screenshot below, which targets users that are in the 10 Unread Messages segment *and* are in the Active Users segment, *and* made a purchase less than 30 days ago. <br><br>
-4. __Users that fall under a series of filters (and are not defined by pre-existing segments).__ This means you do not need to target a campaign at a pre-existing segment. Instead, make an ad hoc audience during campaign creation by only using the additional filters and not selecting any segments under **Target Users By Segment**. This will allow you to skip segment creation when sending campaigns to one-off audiences.
+1. __Membres d'un segment créé précédemment.__ Pour faire cela, sélectionnez un segment dans la liste déroulante sous **Utilisateurs cibles par segment**. <br><br>
+2. __Utilisateurs qui tombent en plusieurs segments précédemment créés.__ Pour ce faire, ajoutez plusieurs segments à partir du menu déroulant sous **Utilisateurs cibles par segment**. L'audience cible résultante sera les utilisateurs dans le premier segment *et* le second segment *et* le troisième segment, etc. <br><br>
+3. __Utilisateurs d'un ou de plusieurs segments précédemment créés qui tombent également sous des filtres supplémentaires.__ Après avoir d'abord sélectionné vos segments, affinez encore davantage votre public sous la section **Filtres Supplémentaires**. Ceci est démontré dans la capture d'écran ci-dessous, qui cible les utilisateurs qui sont dans le segment des 10 messages non lus *et* sont dans le segment Utilisateurs actifs, *et* ont fait un achat il y a moins de 30 jours. <br><br>
+4. __Utilisateurs qui tombent sous une série de filtres (et ne sont pas définis par des segments préexistants).__ Cela signifie que vous n'avez pas besoin de cibler une campagne sur un segment préexistant. Au lieu de cela, faire une audience ad hoc lors de la création de la campagne en utilisant uniquement les filtres supplémentaires et non en sélectionnant des segments sous **Utilisateurs cibles par segment**. Cela vous permettra d'ignorer la création de segment lors de l'envoi de campagnes à un public unique.
 
-Detailed audience statistics for the channels targeted by your campaign are available in the footer. To see what percentage of your user base is being targeted and the Lifetime Value for this segment, click **Show Additional Stats**.
+Des statistiques détaillées sur les auditoires des canaux ciblés par votre campagne sont disponibles dans le pied de page. Pour voir quel pourcentage de votre base d'utilisateurs est ciblé et la valeur à vie de ce segment, cliquez sur **Afficher des statistiques supplémentaires**.
 
-{% details Why does my Total Reachable Users metric look smaller than it should be? %}
+{% détails Pourquoi mes utilisateurs réalisables ont-ils l'air plus petit que ce qui devrait être le cas ? %}
 
-When you click **Show Additional Stats** and view the Total Reachable Users for your filtered audience, you may notice that it's smaller than the sum of the other columns. This gap is usually because there are a number of users who qualify for the segment or filters in the campaign, but are not reachable through push (for example, because they don't have valid or active [push tokens]({{site.baseurl}}/user_guide/message_building_by_channel/push/push_registration/#push-tokens)).
+Lorsque vous cliquez sur **Afficher les statistiques supplémentaires** et afficher le nombre total d'utilisateurs accessibles pour votre public filtré, vous remarquerez peut-être qu'il est plus petit que la somme des autres colonnes. Cet écart est généralement dû au fait qu'il y a un certain nombre d'utilisateurs qui se qualifient pour le segment ou les filtres dans la campagne, mais ne sont pas accessibles par push (par exemple, parce qu'ils n'ont pas de jetons de poussée [valides ou actifs]({{site.baseurl}}/user_guide/message_building_by_channel/push/push_registration/#push-tokens)).
 
 {% enddetails %}
 
-!\[Reachable Users Footer\]\[24\]
+!\[Pied de page des utilisateurs atteignables\]\[24\]
 
-Keep in mind that exact segment membership is always calculated right before the message is sent.
+Gardez à l'esprit que l'adhésion exacte au segment est toujours calculée juste avant l'envoi du message.
 
-### Multichannel campaigns with push and email
+### Campagnes multi-canaux avec push et email
 
-For multichannel campaigns targeting both push and email channels, you may want to limit your campaign so that only the users who are explicitly opted in will receive the message (excluding subscribed or unsubscribed users). For example, say you have three users of different opt-in status:
+Pour les campagnes multicanaux ciblant à la fois les canaux push et email, vous voudrez peut-être limiter votre campagne de sorte que seuls les utilisateurs qui sont explicitement inscrits recevront le message (excluant les utilisateurs abonnés ou désabonnés). Par exemple, dites que vous avez trois utilisateurs de différents statuts d'opt-in :
 
-- **User A** is subscribed to email and is push enabled. This user doesn't receive the email but will receive the push.
-- **User B** is opted-in to email but is not push enabled. This user will receive the email but doesn't receive the push.
-- **User C** is opted-in to email and is push enabled. This user will receive both the email and the push.
+- **L'utilisateur A** est abonné à l'e-mail et est push activé. Cet utilisateur ne reçoit pas l'email mais recevra le push.
+- **L'utilisateur B** est opté pour l'email mais n'est pas poussé activé. Cet utilisateur recevra l'email mais ne recevra pas le push.
+- **L'utilisateur C** est opté pour l'email et est push activé. Cet utilisateur recevra à la fois l'email et le push.
 
-To do so, under **Audience Summary**, select to send this campaign to "opted-in users only". This option will ensure that only opted-in users will receive your email, and Braze will only send your push to users who are push enabled by default.
+Pour ce faire, sous **Résumé de l'audience**, sélectionnez pour envoyer cette campagne à "utilisateurs opted-in seulement". Cette option vous assurera que seuls les utilisateurs optés recevront votre courriel. et Braze enverra uniquement votre push aux utilisateurs qui sont activés par défaut.
 
 {% alert important %}
-With this configuration, don't include any filters in the **Target Users** step that limit the audience to a single channel (e.g., `Push Enabled = True` or `Email Subscription = Opted-In`).
+Avec cette configuration, n'incluez aucun filtre dans l'étape **Utilisateurs cibles** qui limitent l'audience à un seul canal (e. ., `Push Activé = True` ou `Abonnement par courriel = Opted-In`).
 {% endalert %}
 
-## Step 5: Choose conversion events
+## Étape 5 : Choisissez les événements de conversion
 
-Braze allows you to track whether users perform specific actions (Conversion Events) after receiving a campaign. You can specify any of the following actions as a "Conversion Event":
+Braze vous permet de vérifier si les utilisateurs effectuent des actions spécifiques (Conversion Events) après avoir reçu une campagne. Vous pouvez spécifier l'une des actions suivantes en tant qu'"Événement de conversion":
 
-- Opens App
-- Makes Purchase
-  - This can be a generic purchase or a specific item
-- Performs specific custom event
+- Ouvre l'application
+- Effectue un achat
+  - Cela peut être un achat générique ou un article spécifique
+- Effectue un événement spécifique personnalisé
 
-You have the option of allowing a conversion event within a time frame that is relevant for your campaign. The conversion window for a conversion event can range from 5 minutes to 30 days. The event will count as a conversion if it takes place during the specified time.
+Vous avez la possibilité d'autoriser un événement de conversion dans un délai approprié pour votre campagne. La fenêtre de conversion pour un événement de conversion peut varier de 5 minutes à 30 jours. L'événement comptera comme une conversion s'il a lieu pendant la période spécifiée.
 
-!\[Conversion Event\]\[15\]
+!\[Événement de conversion\]\[15\]
 
-## Step 6: Review and deploy {#review-and-deploy-push}
+## Étape 6 : Réviser et déployer {#review-and-deploy-push}
 
-The final page will give you a summary of the campaign you've just designed. Clicking **Launch Campaign** will enable it to send. Confirm all the relevant details and watch the data roll in!
+La page finale vous donnera un résumé de la campagne que vous venez de concevoir. En cliquant sur **Lancer la campagne** vous pourrez l'envoyer. Confirmez tous les détails pertinents et regardez les données rouler !
 
-!\[Confirmation Page\]\[5\]
+!\[Page de confirmation\]\[5\]
 
-## Results data {#results-data-push}
+## Données des résultats {#results-data-push}
 
-Braze will show you the number of messages sent and opened over time for each push campaign you deploy, as shown below:
+Braze vous montrera le nombre de messages envoyés et ouverts au fil du temps pour chaque campagne de push que vous déployez, comme indiqué ci-dessous:
 
 !\[Results\]\[6\]
 
-For push notifications, you'll be able to view statistics for the number of messages sent, delivered, bounced, opened, and directly opened.
-[1]: {% image_buster /assets/img_archive/new_campaign_push.png %} [2]: {% image_buster /assets/img_archive/push_1.png %} [3]: {% image_buster /assets/img_archive/push_2.png %} [4]: {% image_buster /assets/img_archive/schedule.png %} [5]: {% image_buster /assets/img_archive/confirmation_page.png %} [6]: {% image_buster /assets/img_archive/push-results-statistics.png %} [7]: {% image_buster /assets/img_archive/push_3.png %} [15]: {% image_buster /assets/img_archive/conversion_event_selection.png %} [24]: {% image_buster /assets/img_archive/multi_channel_footer.png %} [25]: {% image_buster /assets/img_archive/target_segmenter.png %}
+Pour les notifications push, vous serez en mesure de voir les statistiques du nombre de messages envoyés, distribués, rebondis, ouverts, et directement ouverts.
+[1]: {% image_buster /assets/img_archive/new_campaign_push.png %} [2]: {% image_buster /assets/img_archive/push_1.png %} [3]: {% image_buster /assets/img_archive/push_2. ng %} [4]: {% image_buster /assets/img_archive/schedule.png %} [5]: {% image_buster /assets/img_archive/confirmation_page. ng %} [6]: {% image_buster /assets/img_archive/push-results-statistics.png %} [7]: {% image_buster /assets/img_archive/push_3.png %} [15]: {% image_buster /assets/img_archive/conversion_event_selection. ng %} [24]: {% image_buster /assets/img_archive/multi_channel_footer.png %} [25]: {% image_buster /assets/img_archive/target_segmenter.png %}
 
 [8]: https://www.braze.com/customers 
