@@ -1,52 +1,52 @@
 ---
-nav_title: Custom Keyword Handling
-article_title: Non-Native SMS Custom Keyword Handling
+nav_title: Manipulation des mots clés personnalisés
+article_title: Gestion des mots clés personnalisés non natifs par SMS
 page_order: 1.5
-description: "This reference article covers how Braze processes custom keywords for non-native SMS users."
-page_type: reference
+description: "Cet article de référence décrit comment Braze traite les mots-clés personnalisés pour les utilisateurs non natifs de SMS."
+page_type: Référence
 channel:
   - SMS
 ---
 
-# Two-way messaging (custom keyword responses)
+# Messagerie bidirectionnelle (réponses personnalisées aux mots-clés)
 
-Two-way messaging uses short codes and keywords to deliver text messages to mobile users. It requires end users to send a keyword to Braze to which that user will receive an automatic reply. Applied correctly, two-way messaging can be a simple, immediate, and dynamic solution to customer marketing, saving time and resources along the way.
+La messagerie bidirectionnelle utilise des codes courts et des mots-clés pour livrer des messages texte aux utilisateurs de téléphones mobiles. Il faut que les utilisateurs envoient un mot clé à Braze auquel cet utilisateur recevra une réponse automatique. Appliquée correctement, la messagerie bidirectionnelle peut être une solution simple, immédiate et dynamique pour le marketing de la clientèle, en économisant du temps et des ressources.
 
-## Two-way messaging speeds
+## Vitesse de messagerie bidirectionnelle
 
-Two-way messaging leverages custom events to make this seemingly smooth customer client exchange possible. Due to the nature of two-way messaging, you may find a slight increase in response time. Below are the implications of including two-way messaging:
+La messagerie bidirectionnelle tire parti des événements personnalisés pour rendre possible cet échange client en apparence fluide. En raison de la nature des messages bidirectionnels, il se peut que vous trouviez une légère augmentation du temps de réponse. Voici les implications de l'inclusion du message bidirectionnel :
 
-| Type                  | Speed         | Notes                                                                                                                                                                |
-| --------------------- | ------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Known Phone Numbers   | 3-5 Seconds   | A known number is a number that has already been assigned a phone attribute and is already subscribed to a subscription group within Braze.                          |
-| Unknown Phone Numbers | 10-15 Seconds | An unknown number is one that has not yet been identifier. For more information on how Unknown phone numbers are dealt with, check out our [documentation][unknown]. |
+| Type de texte                 | Rapidité       | Notes                                                                                                                                                                                                    |
+| ----------------------------- | -------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Numéros de téléphone connus   | 3-5 secondes   | Un nombre connu est un nombre qui a déjà été assigné à un attribut téléphone et est déjà abonné à un groupe d'abonnement au Brésil.                                                                      |
+| Numéros de téléphone inconnus | 10-15 secondes | Un numéro inconnu est un numéro qui n'a pas encore été identifiant. Pour plus d'informations sur la façon dont les numéros de téléphone inconnus sont traités, consultez notre [documentation][unknown]. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
 
-If you require faster sending speeds for unknown phone numbers, reach out to your Customer Success Manager or contact support to discuss your options.
+Si vous avez besoin de vitesses d'envoi plus rapides pour des numéros de téléphone inconnus, contactez votre Responsable du service clientèle ou contactez le support pour discuter de vos options.
 
-## Custom keyword messaging handling
+## Gestion de la messagerie par mot clé personnalisé
 
-| Custom Event Fired                                                                  |
-| ----------------------------------------------------------------------------------- |
-| `sms_response_subscriptionName_custom` | Response Examples => Status, Coupons, News |
+| Événement personnalisé déclenché                                                            |
+| ------------------------------------------------------------------------------------------- |
+| `sms_response_subscriptionName_custom` | Exemples de réponse => Status, Coupons, Actualités |
 {: .reset-td-br-1 .reset-td-br-2}
 
-| Included Event Properties                                                                                                                                                                                                                                                          |
-| ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| - `message_body`: users SMS response<br>- `to_number`: usually short code the clients used to send SMS<br>- `from_number`: user's phone number<br>- `sms_message_id`: messaging service ID | Message Body => <br>Users response returned as all lower case |
+| Propriétés de l'événement incluses                                                                                                                                                                                                                                                                                                               |
+| ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| - `message_body`: réponse SMS des utilisateurs<br>- `to_number`: généralement code court les clients utilisés pour envoyer des SMS<br>- `from_number`: numéro de téléphone de l'utilisateur<br>- `sms_message_id`: service de messagerie ID | Message Body => <br>La réponse des utilisateurs est retournée en minuscule |
 {: .reset-td-br-1 .reset-td-br-2}
 
-- Anytime a user texts an SMS response that is not a default keyword to a phone number in a given Subscription Group, a custom event like `sms_response_SubscriptionGroupName_custom` with event properties `message_body`, `to_number`, `from_number`, and `sms_message_id` will be sent to Braze.
-- Use this custom event with the property `message_body` assigned as a custom keyword to trigger an SMS campaign from Braze.
-- The `message_body` custom keyword value must be __lowercase__.
+- Chaque fois qu'un utilisateur envoie une réponse par SMS qui n'est pas un mot clé par défaut à un numéro de téléphone dans un groupe d'abonnement, un événement personnalisé comme `sms_response_SubscriptionGroupName_custom` avec les propriétés d'événement `message_body`, `to_number`, `from_number`, et `sms_message_id` seront envoyés au Brésil.
+- Utilisez cet événement personnalisé avec la propriété `message_body` assigné comme mot-clé personnalisé pour déclencher une campagne SMS de Braze.
+- La valeur du `message_body` mot clé personnalisé doit être __minuscule__.
 
 !\[picture\]\[IMAGE2\]
 
-Note: This feature relies on user aliases in order to properly assign custom events to user profiles in Braze. If no Braze profile exists with a user alias of the user's phone number in E.164 format, the call to the users/track endpoint will fail silently. The alias should be set in the format below either through the SDK or the [new user alias endpoint][endpoint]:
-1. alias_label: `phone` and alias_name: `users_phone_number`
-2. Phone numbers must be in the E.164 format (e.g +19173337578).
+Note : Cette fonctionnalité repose sur des alias d'utilisateurs afin d'assigner correctement des événements personnalisés aux profils d'utilisateurs en Brésil. Si aucun profil Braze n'existe avec un alias utilisateur du numéro de téléphone de l'utilisateur en E. 64 format, l'appel à la terminaison utilisateur/piste échouera silencieusement. L'alias doit être défini dans le format ci-dessous soit via le SDK soit le [nouveau point de terminaison d'alias utilisateur][endpoint]:
+1. alias_label : `téléphone` et alias : `users_phone_number`
+2. Les numéros de téléphone doivent être au format E.164 (par exemple +19173337578).
 
-If using the new user alias endpoint, to ensure E.164 compliance, please add a "+" prefix as the default "phone" field does not automatically include this symbol.
+Si vous utilisez le nouveau point de terminaison d'alias de l'utilisateur, pour assurer E. 64 conformité, veuillez ajouter un préfixe "+" car le champ "téléphone" par défaut n'inclut pas automatiquement ce symbole.
 [1]: {% image_buster /assets/img/sms/keyword_edit2.png %} [2]: {% image_buster /assets/img/sms/keyword_home.png %} [IMAGE2]: {% image_buster /assets/img/sms/sms_message_body.png %}
 
 [unknown]: {{site.baseurl}}/user_guide/message_building_by_channel/sms/phone_numbers/sending_phone_numbers/#handling-unknown-phone-numbers
