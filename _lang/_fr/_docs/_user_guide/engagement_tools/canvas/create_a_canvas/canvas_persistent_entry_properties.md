@@ -1,77 +1,77 @@
 ---
-nav_title: Persistent Entry Properties
-article_title: Persistent Entry Properties
-alias: "/persistent_entry/"
-page_type: reference
-description: "This reference article describes how to use persistent entry properties in your Canvas to send more curated messages, and create a highly refined end-user experience."
-tool: Canvas
+nav_title: Propriétés d'entrées persistantes
+article_title: Propriétés d'entrées persistantes
+alias: "/entrée_persistante/"
+page_type: Référence
+description: "Cet article de référence décrit comment utiliser les propriétés d'entrée persistantes dans votre Canvas pour envoyer plus de messages organisés et créer une expérience utilisateur finale."
+tool: Toile
 page_order: 5
 ---
 
-# Canvas persistent entry properties
+# Propriétés de l'entrée persistante de la toile
 
-When a Canvas is triggered by a custom event, purchase, or an API call, customers are now able to use metadata from the API call, custom event, or purchase event for personalization in each step of the Canvas. __Prior to this feature, the entry properties could only be used in the first step of Canvas__. The ability to use entry properties throughout a Canvas journey allows customers to send more curated messages and create a highly refined end-user experience.
-
-{% alert important %}
-This feature is currently in beta. Please reach out to your Braze account manager for more information.
-{% endalert %}
-
-## Using entry properties
-
-Entry properties can be used in Action-based and API-Triggered Canvases. These entry properties are defined when a Canvas is triggered by a custom event, purchase, or API call. Check out our documentation to learn more about the [Canvas Entry Properties Object]({{site.baseurl}}/api/objects_filters/canvas_entry_properties_object/), [Event Properties Object]({{site.baseurl}}/api/objects_filters/event_object/), and [Purchase Object]({{site.baseurl}}/api/objects_filters/purchase_object/#purchase-product_id).
-
-Properties passed in from these objects can be referenced by using the `canvas_entry_properties` Liquid tag.
-
-- For example, a request with `\"canvas_entry_properties\" : {\"product_name\" : \"shoes\", \"product_price\" : 79.99}` could add the word "shoes" to a message by adding the Liquid {% raw %}`{{canvas_entry_properties.${product_name}}}`{% endraw %}.
-
-When a Canvas includes a message with the `canvas_entry_properties` Liquid tag, the values associated with those properties will be saved for the duration of a user’s journey in the Canvas and deleted once the user exits the Canvas.
+Lorsqu'un Canvas est déclenché par un événement personnalisé, un achat ou un appel API, les clients sont maintenant en mesure d'utiliser des métadonnées à partir de l'appel API, un événement personnalisé ou un événement pour la personnalisation à chaque étape du Canvas. __Avant cette fonctionnalité, les propriétés d'entrée ne pouvaient être utilisées qu'à la première étape de Canvas__. La possibilité d’utiliser les propriétés d’entrée à travers un parcours de Canvas permet aux clients d’envoyer plus de messages organisés et de créer une expérience utilisateur très raffinée.
 
 {% alert important %}
-If your Canvas includes a re-eligibility window that is less than the total duration of the Canvas and you are using `canvas_entry_properties` beyond the first step of your Canvas, only **Message Steps** are allowed. **Full Steps** are not permitted with these settings due to the following edge case. <br><br> Should the window of re-eligibility be less than the maximum duration of the Canvas, a user will be allowed to re-enter and receive more than one message from each step. In the edge case where a user’s re-entry reaches the same step as its previous entry, Braze will only deduplicate that step’s messages if the messages are scheduled to send within 5 minutes of each other.
+Cette fonctionnalité est actuellement en version bêta. Veuillez contacter votre responsable de compte Braze pour plus d'informations.
 {% endalert %}
 
-## Action-based Canvas step
+## Utiliser les propriétés de l'entrée
 
-When `canvas_entry_properties` and `event_properties` are both referenced in an action-based step of an action-based or API-triggered Canvas:
-- `canvas_entry_properties` will template with properties associated with the custom event, purchase, or API call that triggered the Canvas.
-- `event_properties` will template with properties associated with the custom event or purchase that triggered the step.
+Les propriétés d'entrée peuvent être utilisées dans les Canvasses basées sur l'action et déclenchées par API. Ces propriétés d'entrée sont définies lorsqu'un Canvas est déclenché par un événement, un achat ou un appel API. Consultez notre documentation pour en savoir plus sur l'objet [Propriétés de l'entrée du canvas]({{site.baseurl}}/api/objects_filters/canvas_entry_properties_object/), [Event Properties Object]({{site.baseurl}}/api/objects_filters/event_object/), et [Purchase Object]({{site.baseurl}}/api/objects_filters/purchase_object/#purchase-product_id).
+
+Les propriétés passées de ces objets peuvent être référencées en utilisant la balise `canvas_entry_properties` Liquid.
+
+- Par exemple, une requête avec `\"canvas_entry_properties\" : {\"product_name\" : \"shoes\", \"product_price\" : 79. 9}` pourrait ajouter le mot "chaussures" à un message en ajoutant les Liquides {% raw %}`{{canvas_entry_properties.${product_name}}}`{% endraw %}.
+
+Lorsqu'une toile inclut un message avec la balise `canvas_entry_properties` Liquid, les valeurs associées à ces propriétés seront enregistrées pour la durée du voyage d'un utilisateur dans le Canvas et supprimées une fois que l'utilisateur quittera le Canvas.
+
+{% alert important %}
+Si votre Canevas comprend une fenêtre de rééligibilité inférieure à la durée totale du Canvas et que vous utilisez `canvas_entry_properties` au-delà de la première étape de votre Canvas, Seules les **étapes de message** sont autorisées. **Les pas complets** ne sont pas autorisés avec ces paramètres en raison du cas d'arête suivant. <br><br> La fenêtre de rééligibilité devrait-elle être inférieure à la durée maximale du Canvas, un utilisateur sera autorisé à re-saisir et à recevoir plus d'un message de chaque étape. Dans le cas où la ré-entrée d'un utilisateur atteint la même étape que son entrée précédente, Braze ne fera que dédupliquer les messages de cette étape si les messages sont programmés pour s’envoyer dans les 5 minutes qui suivent.
+{% endalert %}
+
+## Étape de Canvas basée sur l'action
+
+Lorsque `canvas_entry_properties` et `event_properties` sont tous deux référencés dans une étape basée sur l'action d'un Canvas basé sur l'action ou déclenchée par l'API :
+- `canvas_entry_properties` va modéliser avec des propriétés associées à l'événement personnalisé, achat ou appel API qui a déclenché le Canvas.
+- `event_properties` va modéliser avec des propriétés associées à l'événement personnalisé ou acheter qui a déclenché l'étape.
 
 {% alert note %}
-For Canvas Message Steps, `event_properties` are not supported. Instead, use `canvas_entry_properties`.
+Pour les étapes de message Canvas , `event_properties` ne sont pas pris en charge. Au lieu de cela, utilisez `canvas_entry_properties`.
 {% endalert %}
 
-## Updating Canvas to use entry properties
+## Mise à jour de Canvas pour utiliser les propriétés d'entrée
 
-If an active Canvas that previously did not include any messages that use `canvas_entry_properties` is edited to include `canvas_entry_properties`, the value corresponding to that property will not be available for users who entered the Canvas before `canvas_entry_properties` was added to the Canvas. The values will only be saved for users that enter the Canvas after the change is made.
+Si une toile active qui n'incluait pas auparavant de messages qui utilisent `canvas_entry_properties` est modifiée pour inclure `canvas_entry_properties`, la valeur correspondant à cette propriété ne sera pas disponible pour les utilisateurs qui sont entrés dans le Canvas avant que `canvas_entry_properties` n'ait été ajouté aux Canevas. Les valeurs ne seront enregistrées que pour les utilisateurs qui entrent dans le Canvas après la modification.
 
-For example: If you initially launched a Canvas that did not use any entry properties on November 3, then added a new property `product_name` to the Canvas on November 11, values for `product_name` would only be saved for users that entered the Canvas on November 11 onward.
+Par exemple : Si vous lancez initialement une toile qui n'utilise aucune propriété d'entrée le 3 novembre, puis a ajouté une nouvelle propriété `product_name` sur le Canvas le 11 Novembre, les valeurs pour `product_name` ne seront enregistrées que pour les utilisateurs qui sont entrés dans Canvas le 11 novembre.
 
-In the case that a Canvas entry property is null or blank, you can abort messages using conditionals. The following code snippet is an example of how you may use Liquid to abort a message.
+Dans le cas où une propriété d'entrée Canvas est nulle ou vide, vous pouvez annuler les messages en utilisant des conditions. Le code snippet suivant est un exemple de la façon dont vous pouvez utiliser Liquid pour annuler un message.
 {%raw%}
 ```
-{% if canvas_entry_properties.${product_name} == blank %}
+{% si canvas_entry_properties.${product_name} == vide %}
 {% abort_message() %}
 {% endif %}
 ```
 {%endraw%}
 
-To read more about aborting messages with Liquid, check out our [Liquid documentation]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/aborting_messages/#aborting-messages).
+Pour en savoir plus sur les messages d'abandon avec Liquid, consultez notre [documentation Liquid]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/aborting_messages/#aborting-messages).
 
-## Global canvas entry properties
+## Propriétés globales de l'entrée du canevas
 
-With `canvas_entry_properties`, you can set global properties that apply to all users or user-specific properties that only apply to the specified user. The user-specific property will supersede the global property for that user.
+Avec `canvas_entry_properties`, vous pouvez définir des propriétés globales qui s'appliquent à tous les utilisateurs ou aux propriétés spécifiques à l'utilisateur qui s'appliquent uniquement à l'utilisateur spécifié. La propriété spécifique à l'utilisateur remplacera la propriété globale pour cet utilisateur.
 
-Example API request using global Canvas entry properties:
+Exemple de requête API en utilisant les propriétés d'entrée de Canvas globales :
 ```
 url -X POST \
 -H 'Content-Type:application/json' \
 -d '{
-      "api_key": "a valid rest api key",
-      "canvas_id": "the ID of your canvas",
+      "api_key": "une clé api de repos valide",
+      "canvas_id": "l'ID de votre toile",
          "canvas_entry_properties": {
-            "food_allergies": “none”
+            "food_allergies": "none"
           },
-      "recipients": [
+      "destinataires": [
         {
           "external_user_id": Customer_123,
           "canvas_entry_properties": {
@@ -82,15 +82,15 @@ url -X POST \
     }' \
 ```
 
-In the above request, the global value for “food allergies” is “none”. For Customer_123, the value is “dairy”. Messages in this Canvas containing the Liquid snippet {%raw%}`{{canvas_entry_properties.${food_allergies}}}`{%endraw%} will template with “dairy” for Customer_123 and “none” for everyone else.
+Dans la demande ci-dessus, la valeur globale des « allergies alimentaires » est « nulle ». Pour le client_123, la valeur est « dairy ». Messages dans ce Canvas contenant le snippet de Liquide {%raw%}`{{canvas_entry_properties.${food_allergies}}}`{%endraw%} va modéliser avec « dairy» pour le client_123 et « aucun» pour tout le monde.
 
-## Use cases
+## Cas d'utilisation
 
-If you have a Canvas that is triggered when a user browses an item in your e-commerce site but does not add it to their cart, the first step of the Canvas might be a push notification asking if they are interested in purchasing the item. You could reference the product name by using {% raw %}`{{canvas_entry_properties.$(product_name)}}`{% endraw %}
+Si vous avez une toile qui est déclenchée lorsqu'un utilisateur navigue un article dans votre site de commerce électronique mais ne l'ajoute pas à son panier, la première étape de la Canvas pourrait être une notification push demandant si elle est intéressée par l'achat de l'objet. Vous pouvez référencer le nom du produit en utilisant {% raw %}`{{canvas_entry_properties.$(product_name)}}`{% endraw %}
 
-!\[Product Name Example\]\[1\]{: style="border:0;margin-left:15px;"}
+!\[Exemple de nom de produit\]\[1\]{: style="border:0;margin-left:15px;"}
 
-The second step may send another push notification prompting the user to checkout if they added the item to their cart but have not purchased it yet. You can continue to reference the `product_name` entry property by using {% raw %}`{{canvas_entry_properties.$(product_name)}}`{% endraw %}.
+La deuxième étape peut envoyer une autre notification push invitant l'utilisateur à passer la commande s'il a ajouté l'article à son panier mais ne l'a pas encore acheté. Vous pouvez continuer à référencer la propriété `product_name` entrée en utilisant {% raw %}`{{canvas_entry_properties.$(product_name)}}`{% endraw %}.
 
-!\[Checkout Example\]\[2\]{: style="border:0;margin-left:15px;"}
+!\[Exemple\]\[2\]{: style="border:0;margin-left:15px;"}
 [1]:{% image_buster /assets/img/persistent_entry_properties/PEP1.png %} [2]:{% image_buster /assets/img/persistent_entry_properties/PEP12.png %}
