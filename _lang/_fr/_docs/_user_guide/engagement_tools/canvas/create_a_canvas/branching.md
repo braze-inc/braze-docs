@@ -1,44 +1,44 @@
 ---
-nav_title: Branching
-article_title: Branching
+nav_title: Branchement en cours
+article_title: Branchement en cours
 page_order: 2
-page_type: reference
-description: "This reference article covers what branching is, and how it can be useful in your Canvases."
-tool: Canvas
+page_type: Référence
+description: "Cet article de référence couvre ce qu'est la branche, et comment il peut être utile dans vos Canvases."
+tool: Toile
 ---
 
-# Branching
+# Branchement en cours
 
-> this reference article covers what branching is, and how it can be useful in your canvases.
+> cet article de référence couvre ce qu'est la branche, et comment il peut être utile dans vos toiles.
 
-## Create a branch
+## Créer une branche
 
-You can harness the power of Braze’s action-based delivery and powerful realtime segmentation to deliver personalized experiences for your users.
+Vous pouvez exploiter la puissance de la livraison basée sur l'action de Braze et de la segmentation puissante en temps réel pour offrir des expériences personnalisées à vos utilisateurs.
 
-To create a branch, click on the blue circle at the bottom of a Step. Then click on one of the shadowed icons to create a new step.
+Pour créer une branche, cliquez sur le cercle bleu en bas d'une étape. Cliquez ensuite sur l'une des icônes ombragées pour créer une nouvelle étape.
 
 !\[Canvas Create Branch 1\]\[1\]
 
-Create another step, branching from the first:
+Créer une autre étape, branchement depuis la première:
 
 !\[Canvas Create Branch 2\]\[2\]
 
-You can set up filters to determine how users should flow to subsequent steps.
+Vous pouvez configurer des filtres pour déterminer comment les utilisateurs doivent se déplacer vers les étapes suivantes.
 
 !\[Canvas Create Branch 3\]\[3\]
 
-Or you can have users flow between branches based upon actions that they take.
+Ou vous pouvez faire circuler les utilisateurs entre les branches en fonction des actions qu'ils entreprennent.
 
 !\[Canvas Create Branch 4\]\[4\]
 
-## Warnings
+## Avertissements
 
-### Overlapping filters
+### Filtres de chevauchement
 
-When setting up your Canvas, you should ensure that the Filters that you use to split users down different branches do not overlap. If a user can match multiple steps, Braze will pick a branch to send them down. For example:
+Lorsque vous configurez votre Canvas, vous devez vous assurer que les filtres que vous utilisez pour scinder les utilisateurs de différentes branches ne se chevauchent pas. Si un utilisateur peut faire correspondre plusieurs étapes, Braze choisira une branche pour les envoyer vers le bas. Par exemple :
 
 !\[Canvas Create Branch 5\]\[5\]
 
-If a user first made a purchase 7 days ago, they will be randomly slotted into one of the branches above.
-[1]: {% image_buster /assets/img_archive/canvas_branch_1.gif %} [2]: {% image_buster /assets/img_archive/canvas_branch_2.gif %} [3]: {% image_buster /assets/img_archive/canvas_branch_3.png %} [4]: {% image_buster /assets/img_archive/canvas_branch_4.png %} [5]: {% image_buster /assets/img_archive/canvas_branch_5.png %}
+Si un utilisateur a fait un achat il y a 7 jours, il sera placé aléatoirement dans l'une des branches ci-dessus.
+[1]: {% image_buster /assets/img_archive/canvas_branch_1.gif %} [2]: {% image_buster /assets/img_archive/canvas_branch_2.gif %} [3]: {% image_buster /assets/img_archive/canvas_branch_3. ng %} [4]: {% image_buster /assets/img_archive/canvas_branch_4.png %} [5]: {% image_buster /assets/img_archive/canvas_branch_5.png %}
 
