@@ -1,43 +1,43 @@
 ---
-nav_title: "iOS Options"
-article_title: iOS Push Options
+nav_title: "Options iOS"
+article_title: Options de Push iOS
 page_order: 8
-layout: featured
-page_type: landing
-channel: push
+layout: en vedette
+page_type: atterrissage
+channel: Pousser
 platform: iOS
-description: "This landing page is a hub for all things that are solely iOS Push for Braze."
-guide_top_header: "iOS Push Articles"
-guide_top_text: "This landing page is a hub for all things that are solely iOS Push for Braze."
-guide_featured_title: "Articles in this Section"
+description: "Cette page d'accueil est un hub pour toutes les choses qui sont uniquement iOS Push pour Braze."
+guide_top_header: "Articles push iOS"
+guide_top_text: "Cette page d'accueil est un hub pour toutes les choses qui sont uniquement iOS Push pour Braze."
+guide_featured_title: "Articles dans cette section"
 guide_featured_list:
   - 
-    name: "Push Primer Campaign"
-    link: /docs/user_guide/message_building_by_channel/push/ios/create_push_primer/
-    fa_icon: fas fa-comment-alt
+    name: "Pousser la campagne primaire"
+    link: /fr/docs/user_guide/message_building_by_channel/push/ios/create_push_primer/
+    fa_icon: Fas fa-comment-alt
   - 
-    name: "Customizable App Icons"
-    link: /docs/user_guide/message_building_by_channel/push/ios/customizable_app_icons/
-    fa_icon: fas fa-mobile-alt
+    name: "Icônes d'application personnalisables"
+    link: /fr/docs/user_guide/message_building_by_channel/push/ios/customizable_app_icons/
+    fa_icon: Fas fa-mobile-alt
   - 
-    name: "Notification Headers"
-    link: /docs/user_guide/message_building_by_channel/push/ios/notification_headers/
-    fa_icon: fas fa-paint-brush
+    name: "En-têtes de notification"
+    link: /fr/docs/user_guide/message_building_by_channel/push/ios/notification_headers/
+    fa_icon: fa-paint-brush fas
   - 
-    name: "Notification Options"
-    link: /docs/user_guide/message_building_by_channel/push/ios/notification_options/
+    name: "Options de notification"
+    link: /fr/docs/user_guide/message_building_by_channel/push/ios/notification_options/
     fa_icon: fas fa-cog
   - 
-    name: "Rich Notifications"
-    link: /docs/user_guide/message_building_by_channel/push/ios/rich_notifications/
+    name: "Notifications riches"
+    link: /fr/docs/user_guide/message_building_by_channel/push/ios/rich_notifications/
     fa_icon: fas fa-vial
   - 
-    name: "Advanced Campaign Settings"
+    name: "Paramètres de campagne avancés"
     link: /docs/user_guide/message_building_by_channel/push/ios/advanced_campaign_settings/
     fa_icon: fas fa-chart-bar
   - 
-    name: "Utilizing Badge Count"
-    link: /docs/user_guide/message_building_by_channel/push/ios/utilizing_badge_count/
+    name: "Utiliser le nombre de badges"
+    link: /fr/docs/user_guide/message_building_by_channel/push/ios/utilizing_badge_count/
     fa_icon: fas fa-bell
 ---
 
