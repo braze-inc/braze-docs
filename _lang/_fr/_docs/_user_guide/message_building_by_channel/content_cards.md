@@ -1,43 +1,43 @@
 ---
-nav_title: Content Cards
-article_title: Content Cards
+nav_title: Cartes de contenu
+article_title: Cartes de contenu
 page_order: 0
-layout: featured
-guide_top_header: "Content Cards"
-guide_top_text: "With Content Cards, you can send a highly targeted, dynamic stream of rich content to your customers right within the apps they love, without interrupting their experience. In addition, Content Cards support more personalized features, including card pinning, card dismissal, API-based delivery, Connected Content, custom card expiration times, card analytics, and easy coordination with push notifications. Note that Content Cards are __not__ available out-of-the-box and must be purchased. To get started with Content Cards, reach out to your Account Manager or Customer Success Manager for more information."
-description: "With Content Cards, you can send a highly targeted, dynamic stream of rich content to your customers right within the apps they love, without interrupting their experience."
+layout: en vedette
+guide_top_header: "Cartes de contenu"
+guide_top_text: "Avec les Cartes de Contenu, vous pouvez envoyer un très ciblé, flux dynamique de contenu riche pour vos clients directement dans les applications qu'ils aiment, sans interrompre leur expérience. De plus, les cartes de contenu prennent en charge des fonctionnalités plus personnalisées, y compris le épinglage de cartes, le rejet de carte, la livraison basée sur API, Contenu connecté, temps d'expiration de la carte personnalisée, analyse de la carte et coordination facile avec les notifications push. Notez que les Cartes de Contenu sont disponibles en mode __not__ et doivent être achetées. Pour commencer avec les Cartes de Contenu, contactez votre Responsable de Compte ou Responsable de Succès Client pour plus d'informations."
+description: "Avec les Cartes de Contenu, vous pouvez envoyer un très ciblé, flux dynamique de contenu riche pour vos clients directement dans les applications qu'ils aiment, sans interrompre leur expérience."
 channel:
-  - content cards
-guide_featured_title: "Section Articles"
+  - cartes de contenu
+guide_featured_title: "Articles de la section"
 guide_featured_list:
   - 
-    name: About Content Cards
-    link: /docs/user_guide/message_building_by_channel/content_cards/about/
-    fa_icon: fas fa-check
+    name: À propos des cartes de contenu
+    link: /fr/docs/user_guide/message_building_by_channel/content_cards/about/
+    fa_icon: vérification du fas fa-check
   - 
-    name: Create a Content Card
-    link: /docs/user_guide/message_building_by_channel/content_cards/create/
+    name: Créer une carte de contenu
+    link: /fr/docs/user_guide/message_building_by_channel/content_cards/create/
     fa_icon: fas fa-columns
   - 
-    name: Creative Details
+    name: Détails de la création
     link: /docs/user_guide/message_building_by_channel/content_cards/creative_details/
-    fa_icon: fas fa-paint-brush
+    fa_icon: fa-paint-brush fas
   - 
-    name: Customize
-    link: /docs/user_guide/message_building_by_channel/content_cards/customize/
+    name: Personnaliser
+    link: /fr/docs/user_guide/message_building_by_channel/content_cards/customize/
     fa_icon: fas fa-cog
   - 
-    name: Testing
-    link: /docs/user_guide/message_building_by_channel/content_cards/testing/
+    name: Tests en cours
+    link: /fr/docs/user_guide/message_building_by_channel/content_cards/testing/
     fa_icon: fas fa-vial
   - 
-    name: "Reporting"
-    link: /docs/user_guide/message_building_by_channel/content_cards/reporting/
-    fa_icon: fas fa-chart-pie
+    name: "Rapports"
+    link: /fr/docs/user_guide/message_building_by_channel/content_cards/reporting/
+    fa_icon: fas fa-chart-tarte
   - 
-    name: Migrating from News Feed
-    link: /docs/user_guide/message_building_by_channel/content_cards/migrating_from_news_feed/
-    fa_icon: fas fa-suitcase
+    name: Migration depuis le flux d'actualités
+    link: /fr/docs/user_guide/message_building_by_channel/content_cards/migrating_from_news_feed/
+    fa_icon: fas fa-valise
 ---
 
 <br><br>
