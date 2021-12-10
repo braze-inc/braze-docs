@@ -1,33 +1,33 @@
 ---
-nav_title: "MMS Short and Long Codes"
-article_title: MMS Short and Long Codes
+nav_title: "Codes courts et longs MMS"
+article_title: Codes courts et longs MMS
 page_order: 1
-description: "This reference article covers the differences between SMS and MMS short codes and long codes."
-page_type: reference
+description: "Cet article de référence couvre les différences entre les codes courts SMS et MMS et les codes longs."
+page_type: Référence
 channel:
   - MMS
 ---
 
-# MMS short and long codes
+# Codes court et long MMS
 
-MMS and SMS are both tied to the Braze SMS channel. To access MMS on your account requires the purchase of SMS for those who have not yet purchased access. Existing SMS customers can access MMS once they purchase it.
+Les MMS et les SMS sont tous deux liés au canal SMS de Braze. Pour accéder aux MMS de votre compte nécessite l'achat de SMS pour ceux qui n'ont pas encore acheté d'accès. Les clients SMS existants peuvent accéder aux MMS une fois qu'ils l'ont acheté.
 
-MMS is currently supported for US and Canada short codes (5-6 digit numbers) and long codes (10-digit numbers), as well as US and Canada customer numbers. Sending numbers to numbers outside of the US/Canada is possible, but MMS messages will be converted into an SMS message with a link to the media asset. To read more about short and long codes, check out [this]({{site.baseurl}}/user_guide/message_building_by_channel/sms/phone_numbers/sending_phone_numbers/) documentation.
+Les MMS sont actuellement supportés pour les codes courts américains et canadiens (5-6 chiffres) et les codes longs (10 chiffres), ainsi que les numéros de clients des États-Unis et du Canada. L'envoi de numéros à des numéros en dehors des États-Unis/Canada est possible, mais les messages MMS seront convertis en un message SMS avec un lien vers l'actif média. Pour en savoir plus sur les codes courts et longs, consultez [cette documentation]({{site.baseurl}}/user_guide/message_building_by_channel/sms/phone_numbers/sending_phone_numbers/).
 
-## MMS short codes
+## Codes courts MMS
 
-All new short code applications will include MMS by default. Typically, short codes must be explicitly requested during the short code application, but now are included by default. Some users may not implement or use this functionality but will be available if needed at a later date.
+Toutes les nouvelles applications de code court incluront les MMS par défaut. Généralement, les codes courts doivent être explicitement demandés lors de l'application de code court, mais sont maintenant inclus par défaut. Certains utilisateurs peuvent ne pas implémenter ou utiliser cette fonctionnalité, mais seront disponibles si nécessaire à une date ultérieure.
 
-For those users who got their short codes before Braze supported MMS, all existing US and Canada customers with US and Canada short codes are eligible to instantly enable MMS. Please reach out to your CSM if this situation applies to you and you would like MMS enabled.
+Pour les utilisateurs qui ont obtenu leurs codes courts avant que Braze ne prenne en charge les MMS, tous les clients actuels des États-Unis et du Canada ayant des codes abrégés américains et canadiens sont admissibles à activer instantanément les MMS. Veuillez contacter votre CSM si cette situation s'applique à vous et si vous souhaitez que les MMS soient activés.
 
-### MMS short code best practices
+### Meilleures pratiques de code court MMS
 
-- At Braze, we strongly recommend keeping transaction and promotional messaging separate, each with different short codes. Because MMS is tied to the SMS channel, and the SMS channel is highly regulated, customers may be required to pay a monetary penalty for misusing the channel and get their short code suspended (which is irreversible). Keep transaction and promotional messaging tied to different short codes safeguards their transactional messaging.
+- Chez Braze, nous vous recommandons fortement de séparer les transactions et les messages promotionnels, chacun avec des codes courts différents. Parce que le MMS est lié au canal SMS, et que le canal SMS est fortement réglementé, les clients peuvent être tenus de payer une pénalité monétaire pour avoir mal utilisé le canal et avoir leur code court suspendu (ce qui est irréversible). Gardez les transactions et les messages promotionnels liés à des codes courts différents protège leur message transactionnel.
 
-- If customers already have a short code dedicated to promotional messaging, and it is MMS enabled, they do not need a separate short code for MMS.
+- Si les clients ont déjà un code court dédié à la messagerie promotionnelle, et il est MMS activé, ils n'ont pas besoin d'un code court séparé pour les MMS.
 
-## MMS long codes
+## Codes longs MMS
 
-Customers may send MMS with long codes. To do this, you must ensure your long codes are MMS-enabled. This can be done initially during set up, or later on from within your account.
+Les clients peuvent envoyer des MMS avec des codes longs. Pour ce faire, vous devez vous assurer que vos codes longs sont activés MMMS. Cela peut être fait initialement pendant la configuration, ou plus tard à partir de votre compte.
 
-Note that our MMS messages cannot be sent with an alphanumeric sender ID. To learn more about alphanumeric IDs, check out [Alphanumeric sender ID]({{site.baseurl}}/user_guide/message_building_by_channel/sms/phone_numbers/sending_phone_numbers/#alphanumeric-sender-id).
+Notez que nos MMS ne peuvent pas être envoyés avec un identifiant alphanumérique de l'expéditeur. Pour en savoir plus sur les identifiants alphanumériques, consultez [l'identifiant de l'expéditeur alphanumérique]({{site.baseurl}}/user_guide/message_building_by_channel/sms/phone_numbers/sending_phone_numbers/#alphanumeric-sender-id).
