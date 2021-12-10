@@ -20,11 +20,11 @@ Cet article vous aidera à comprendre les cas d'utilisation que Amazon Personnal
 
 ## Pré-requis
 
-| Exigences                    | Libellé                                                                                                                                                                                                                                                                     |
-| ---------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Compte du Service Web Amazon | Avant d'utiliser Amazon Personalize, vous devez avoir un compte Amazon Web Services (AWS). Une fois que vous avez un compte AWS, vous pouvez accéder à Amazon Personalize via la console Amazon Personalize l'interface en ligne de commande AWS (AWS CLI), ou les SDK AWS. |
-| Cas d'utilisation définis    | Avant de créer un modèle, vous devez déterminer votre cas d'utilisation pour cette intégration. Référez-vous à la liste suivante pour les cas d'utilisation courante.                                                                                                       |
-| Datasets                     | Les modèles de recommandation personnalisés Amazon requièrent trois types différents de jeux de données, d'interactions, d'utilisateurs et d'éléments. Référez les détails suivants pour voir les exigences pour chaque jeu de données.                                     |
+| Exigences                    | Libellé                                                                                                                                                                                                                                    |
+| ---------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| Compte du Service Web Amazon | Un compte AWS est requis pour profiter de ce partenariat. Une fois que vous avez un compte AWS, vous pouvez accéder à Amazon Personalize via la console Amazon Personalize l'interface en ligne de commande AWS (AWS CLI), ou les SDK AWS. |
+| Cas d'utilisation définis    | Avant de créer un modèle, vous devez déterminer votre cas d'utilisation pour cette intégration. Référez-vous à la liste suivante pour les cas d'utilisation courante.                                                                      |
+| Datasets                     | Les modèles de recommandation personnalisés Amazon requièrent trois types différents de jeux de données, d'interactions, d'utilisateurs et d'éléments. Référez les détails suivants pour voir les exigences pour chaque jeu de données.    |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
 
 {% tabs %}
