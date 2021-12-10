@@ -1,55 +1,55 @@
 ---
-nav_title: Dark Mode Themes
-article_title: Dark Mode for In-App Messages
+nav_title: Thèmes du mode sombre
+article_title: Mode sombre pour les messages In-App
 page_order: 5.20
-description: "Braze in-app messages support adding an alternate Dark theme to help deliver the right color message to your users based on their preference, and helps provide consistency with your app's design."
+description: "Braze les messages dans l'application prennent en charge l'ajout d'un thème sombre alternatif pour aider à fournir le bon message de couleur à vos utilisateurs, en fonction de leurs préférences, et aide à assurer la cohérence avec le design de votre application."
 channel:
-  - in-app messages
+  - messages intégrés à l'application
 ---
 
-# Dark Mode for in-app messages
+# Mode sombre pour les messages dans l'application
 
-Dark Mode offers users the opportunity to set a system-wide color preference (introduced on [Android 10](https://developer.android.com/guide/topics/ui/look-and-feel/darktheme) and [iOS 13](https://developer.apple.com/documentation/appkit/supporting_dark_mode_in_your_interface/)). The "Dark" themes are intended to conserve battery life, and reduce strain on users' eyes, while providing app developers an easier way to implement the dark color themes that users prefer.
+Dark Mode offre aux utilisateurs la possibilité de définir une préférence de couleur à l'échelle du système (disponible sur [Android 10](https://developer.android.com/guide/topics/ui/look-and-feel/darktheme) et [iOS 13](https://developer.apple.com/documentation/appkit/supporting_dark_mode_in_your_interface/)). Les thèmes "sombre" sont destinés à économiser la durée de vie de la batterie et à réduire la pression sur les yeux des utilisateurs, tout en fournissant aux développeurs d'applications un moyen plus facile d'implémenter les thèmes de couleurs sombres que les utilisateurs préfèrent.
 
-Braze in-app messages support adding an alternate Dark theme to help deliver the right color message to your users based on their preference, and helps provide consistency with your app's design.
+Braze les messages dans l'application prennent en charge l'ajout d'un thème sombre alternatif pour aider à fournir le bon message de couleur à vos utilisateurs, en fonction de leurs préférences, et aide à assurer la cohérence avec le design de votre application.
 
-## How Dark Mode works
+## Comment fonctionne le mode sombre
 
-Users with versions of at least Android 10 or iOS 13 and above can toggle Dark Mode on or off in their device's settings.
+Les utilisateurs avec des versions d'au moins Android 10 ou iOS 13 et plus peuvent activer/désactiver le mode sombre dans les paramètres de leur appareil.
 
-When Dark Mode is enabled, the device's native menus and screens (push notifications, device settings, etc.) will change to a dark grey. Apps can also choose to support dark mode by specifying the alternate themes in the app's code.
+Lorsque le mode sombre est activé, les menus et écrans natifs de l'appareil (notifications push, paramètres de l'appareil, etc.) changeront en gris foncé. Les applications peuvent également choisir de prendre en charge le mode sombre en spécifiant les thèmes alternatifs dans le code de l'application.
 
-## Setting a Dark Mode theme
+## Définir un thème en mode sombre
 
-The new Dark Mode option, located in the Style tab when [creating an in-app message]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/create/), lets you easily add an alternate color theme for users who are in Dark Mode on their device.
+La nouvelle option Mode Sombre, située dans l'onglet Style lorsque [crée un message dans l'application]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/create/), vous permet d'ajouter facilement un thème de couleur alternatif pour les utilisateurs qui sont en mode sombre sur leur appareil.
 
 <img src="{% image_buster /assets/img_archive/iam-dark-mode.gif %}" style="width:100%;max-width:800px;" />
 
-When this option is enabled, you can choose dark theme colors for your in-app message using the color picker, or by selecting existing [Color Profiles][2] to re-use existing Dark or Light themes.
+Lorsque cette option est activée, vous pouvez choisir les couleurs du thème foncé pour votre message dans l'application en utilisant le sélecteur de couleur, ou en sélectionnant les [profils de couleur][2] existants pour réutiliser les thèmes Dark ou Light existants.
 
 {% alert note %}
-You may still use this feature even if your app does not offer its own dark theme. However, devices which do not support Dark Mode will display the _Light_ theme by default. Additionally, changing the devices theme on Android while an in-app message is being displayed won't change which theme is used for that in-app message.
+Vous pouvez toujours utiliser cette fonctionnalité même si votre application n'offre pas son propre thème sombre. Cependant, les appareils qui ne prennent pas en charge le mode sombre afficheront par défaut le thème _Light_. En outre, le changement du thème des appareils sur Android alors qu'un message intégré est affiché ne changera pas quel thème est utilisé pour ce message dans l'application.
 {% endalert %}
 
-### Using Dark Mode consistently
+### Utilisation constante du mode sombre
 
-To use Dark Mode for all in-app messages, go to Templates & Media, then In-App Message Templates. From there, select [`Create Color Profile`][2] from the dropdown. Create a Color Profile that aligns with your Dark Mode theme. Then, anytime you create a Dark Mode version of an in-app message, you can select that Color Profile and keep the look of your in-app messages consistent.
+Pour utiliser le mode sombre pour tous les messages dans l'application, allez dans Modèles & Médias, puis dans Modèles de message In-App. À partir de là, sélectionnez [`Créer un profil de couleur`][2] dans le menu déroulant. Créez un profil de couleur qui s'aligne sur votre thème Mode foncé. Ensuite, à chaque fois que vous créez une version en mode sombre d'un message dans l'application, vous pouvez sélectionner ce profil de couleur et garder l'apparence de vos messages dans l'application.
 
-## Compatibility
-- End users must be on iOS devices version 13 or higher, or Android devices version 10 or higher.
-- Braze iOS SDK v3.21.0+ Braze Android SDK v3.8.0+ is required.
+## Compatibilité
+- Les utilisateurs finaux doivent être sur les appareils iOS version 13 ou supérieure, ou sur les appareils Android version 10 ou supérieure.
+- Braze iOS SDK v3.21.0+ Braze Android SDK v3.8.0+ est nécessaire.
 
 {% alert tip %}
-Dark Mode apps were introduced with Android 10 and iOS 13. Users who have not upgraded their phones to at least these versions will only be shown the light theme.
+Des applications en mode sombre ont été introduites avec Android 10 et iOS 13. Les utilisateurs qui n'ont pas mis à niveau leur téléphone au moins ces versions ne seront montrés que le thème lumineux.
 
-Campaigns will still be served to all users who are eligible for the audience you have selected, regardless of users' Dark Mode setting or OS version.
+Les campagnes seront toujours servies à tous les utilisateurs éligibles pour le public que vous avez sélectionné, quel que soit le paramètre Dark Mode des utilisateurs ou la version de l'OS.
 {% endalert %}
 
-## Using HTML in-app messages
+## Utiliser des messages HTML dans l'application
 
-To create a Dark and Light theme for HTML in-app messages, you can use the [`prefers-color-scheme`](https://developer.mozilla.org/en-US/docs/Web/CSS/@media/prefers-color-scheme) CSS media feature to detect the user's preference.
+Créer un thème sombre et léger pour les messages HTML dans l'application. vous pouvez utiliser la fonction média CSS [`prefers-color-scheme`](https://developer.mozilla.org/en-US/docs/Web/CSS/@media/prefers-color-scheme) pour détecter les préférences de l'utilisateur.
 
-For example:
+Par exemple :
 
 ```css
 @media (prefers-color-scheme: dark) {
@@ -62,7 +62,7 @@ For example:
 @media (prefers-color-scheme: light) {
   body {
     background: white;
-    color: #555;
+    couleur : #555 ;
   }
 }
 ```
