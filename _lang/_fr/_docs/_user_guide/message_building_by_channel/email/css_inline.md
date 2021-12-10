@@ -2,30 +2,30 @@
 nav_title: CSS Inlining
 article_title: CSS Inlining
 page_order: 3
-description: "CSS inlining can improve the way emails render. This reference article covers how to enable CSS inlining and some best practices."
+description: "L'inlining CSS peut améliorer le rendu des courriels. Cet article de référence traite de la façon d'activer la mise en page CSS et certaines bonnes pratiques."
 channel:
-  - email
+  - Email
 ---
 
 # CSS inlining
 
-## What is CSS inlining?
+## Qu'est-ce que le contenu CSS ?
 
-CSS inlining is a form of email preprocessing that moves styles in a CSS style sheet into the body of an HTML email. The term "inlining" refers to the fact that styles are applied "inline" to individual HTML elements.
+L'inlining CSS est une forme de prétraitement d'email qui déplace les styles dans une feuille de style CSS dans le corps d'un e-mail HTML. Le terme « inlining » désigne le fait que les styles sont appliqués « inline » à chaque élément HTML.
 
-## Why use CSS inlining?
+## Pourquoi utiliser l'inlining CSS ?
 
-For some email clients, CSS inlining can improve the way that emails render and help ensure that your emails look the way you expect.
+Pour certains clients de messagerie, la mise en page CSS peut améliorer la façon dont les courriels sont affichés et aider à assurer que vos courriels ressemblent à ce que vous attendez.
 
-## How do I enable or disable CSS inlining?
+## Comment puis-je activer ou désactiver l'inlining CSS ?
 
-You can control whether CSS inlining is turned on or off for any email message through a checkbox in the **Sending Info** tab of the HTML Composer, and the **Advanced** tab of the Drag & Drop Editor.
+Vous pouvez contrôler si l'inlining CSS est activé ou désactivé pour tout message de courriel via une case à cocher dans l'onglet **Sending Info** du Compositeur HTML, et l'onglet **Avancé** de l'Éditeur Glisser & Déposer.
 
-| HTML Composer                                                            | Drag & Drop Editor                                                            |
-| ------------------------------------------------------------------------ | ----------------------------------------------------------------------------- |
-| !\[Manage CSS inlining in HTML composer\]\[2\]{: style="max-width:80%;"} | !\[Manage CSS inlining in Drag & Drop Editor\]\[3\]{: style="max-width:80%;"} |
+| Compositeur HTML                                                        | Editeur Glisser & Déposer                                                    |
+| ----------------------------------------------------------------------- | ---------------------------------------------------------------------------- |
+| !\[Gérer CSS inlining in HTML composer\]\[2\]{: style="max-width:80%;"} | !\[Gérer CSS inlining in Drag & Drop Editor\]\[3\]{: style="max-width:80%;"} |
 
-Additionally, you can set a default on or off state globally from **Manage Settings** > **Email Settings** > **Inline CSS**. This setting ensures that all new email messages start with the desired default value. Note that changing this setting will not affect any of your existing email messages. You can also override this default at any time while composing email messages.
+De plus, vous pouvez définir un état par défaut sur ou éteint globalement à partir de **Gérer les paramètres** > **Paramètres de messagerie** > **CSS en ligne**. Ce paramètre garantit que tous les nouveaux courriels commencent par la valeur par défaut souhaitée. Notez que le changement de ce paramètre n'affectera aucun de vos courriels existants. Vous pouvez également remplacer cette valeur par défaut à tout moment lors de la rédaction de messages électroniques.
 
 !\[css-inline1\]\[1\]
 [1]:{% image_buster /assets/img_archive/css-inline1.png %} [2]:{% image_buster /assets/img_archive/css-inline2.png %} [3]:{% image_buster /assets/img_archive/css-inline3.png %}
