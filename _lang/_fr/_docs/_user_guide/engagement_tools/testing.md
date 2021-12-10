@@ -1,7 +1,7 @@
 ---
-nav_title: "Engagement Testing"
-config_only: true
-noindex: true
+nav_title: "Tests d'engagement"
+config_only: vrai
+noindex: vrai
 page_order: 30
 ---
 
