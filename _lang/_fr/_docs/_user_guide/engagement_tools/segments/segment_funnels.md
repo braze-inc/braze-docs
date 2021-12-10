@@ -1,53 +1,53 @@
 ---
-nav_title: Segment Funnels
-article_title: Segment Funnels
+nav_title: Funnels de Segment
+article_title: Funnels de Segment
 page_order: 3
-page_type: reference
+page_type: Référence
 tool: Segments
-description: "This reference article explains how to use Braze Segment Funnels, their best practices, and example use cases."
+description: "Cet article de référence explique comment utiliser Braze Segment Funnels, leurs meilleures pratiques et des exemples de cas d'utilisation."
 ---
 
-# Segment Funnels
+# Funnels de Segment
 
-> This reference article explains how to use Braze Segment Funnels, their best practices, and use cases. <br> <br> Segment funnels are great for narrowing your audience for a specific campaign use case, learning about that audience and their interactions, and using that knowledge to strategize and develop effective campaigns.
+> Cet article de référence explique comment utiliser Braze Segment Funnels, leurs meilleures pratiques et les cas d'utilisation. <br> <br> Les entonnoirs de segment sont parfaits pour rétrécir votre public pour un cas d'utilisation de campagne spécifique. en apprenant sur ce public et sur leurs interactions et en utilisant ces connaissances pour stratégier et développer des campagnes efficaces.
 
-Segment funnels allow you to see how each added filter impacts your segment statistics. When creating a segment, a row of data will appear under each filter. This data will provide the following information for users that are targeted by all filters up to that point:
+Les entonnoirs de segment vous permettent de voir comment chaque filtre ajouté impacte les statistiques de vos segments. Lors de la création d'un segment, une ligne de données apparaîtra sous chaque filtre. Ces données fourniront les informations suivantes aux utilisateurs qui sont ciblés par tous les filtres jusqu'à ce point :
 
-- Total number of users targeted and the percentage of your audience base
-- LTV and LTV for paying users
-- Number of users emailable
-- Number of users opted in to email
-- Number of users that are push enabled
-- Number of users opted in to push
+- Nombre total d'utilisateurs ciblés et le pourcentage de votre audience de base
+- LTV et LTV pour les utilisateurs payants
+- Nombre d'utilisateurs par e-mail
+- Nombre d'utilisateurs dans l'e-mail
+- Nombre d'utilisateurs qui sont activés par push
+- Nombre d'utilisateurs ayant choisi de pousser
 
-!\[Segment funnel overview\]\[1\]
+!\[Vue d'ensemble de l'entonnoir du segment\]\[1\]
 
-## Best practices
+## Meilleures pratiques
 
-- By adding filters that document your user flow, you can see the points where users fall off. For instance, if you're a social networking app and you want to see where you might be losing users during your onboarding process, you may want to add custom data filters for signing up, adding friends, and sending the first message. If you find that 85% of users are signing up and adding friends, but only 45% sent the first message, then you'll know to focus on encouraging more message sends during your onboarding and marketing campaigns.
+- En ajoutant des filtres qui documentent votre flux d'utilisateurs, vous pouvez voir les points où les utilisateurs tombent. Par exemple, si vous êtes une application de réseau social et que vous voulez voir où vous pourriez perdre des utilisateurs pendant votre processus d'intégration, vous pouvez ajouter des filtres de données personnalisés pour vous inscrire, ajouter des amis et envoyer le premier message. Si vous trouvez que 85% des utilisateurs s'inscrivent et ajoutent des amis, mais seulement 45% ont envoyé le premier message, vous saurez alors vous concentrer sur l'encouragement des messages envoyés lors de vos campagnes d'intégration et de marketing.
 
-- Segment funnels let you compare the percentage of users who commit different actions. For instance, do active users, or those with high LTV, [tend to interact more with push or email][4]? To find out, create a segment of active users with one or more filters, and then see how statistics change when you add a filter for opting in to push, and when you add a filter for opting in to email.
+- Les entonnoirs de segment vous permettent de comparer le pourcentage d'utilisateurs qui commettent différentes actions. Par exemple, les utilisateurs actifs, ou ceux ayant une haute TV LTV, [ont tendance à interagir davantage avec les messages push ou email][4]? Pour le savoir, créez un segment d'utilisateurs actifs avec un ou plusieurs filtres, puis voir comment les statistiques changent lorsque vous ajoutez un filtre pour opter pour pousser, et lorsque vous ajoutez un filtre pour vous inscrire au courriel.
 
-- Analyze how LTV changes as you add filters. For active users, do those who connect to Facebook or those who connect to Twitter have a higher LTV? Or is LTV significantly higher for those who have connected to both? If you find, for instance, that connecting to Twitter has very little impact on LTV but connecting to Facebook has a large impact, you may want your marketing campaigns to focus on incentivizing Facebook connections.
+- Analysez comment LTV change au fur et à mesure que vous ajoutez des filtres. Pour les utilisateurs actifs, ceux qui se connectent à Facebook ou ceux qui se connectent à Twitter ont-ils un LTV plus élevé ? Ou est-ce que LTV est beaucoup plus élevé pour ceux qui se sont connectés aux deux ? Si vous trouvez, par exemple, que la connexion à Twitter a très peu d'impact sur LTV mais la connexion à Facebook a un impact important, vous pouvez vouloir que vos campagnes de marketing se concentrent sur l'incitation aux connexions Facebook.
 
-## Sample use cases
+## Exemple de cas d'utilisation
 
-### Impact of a specific user action on conversions {#push-email}
+### Impact d'une action utilisateur spécifique sur les conversions {#push-email}
 
-By analyzing the impact of a certain user action (such as adding items to a wish list) on a conversion (such as making purchases) you can answer the following questions:
+En analysant l'impact d'une action d'un certain utilisateur (comme ajouter des éléments à une liste de souhaits) sur une conversion (comme faire des achats) vous pouvez répondre aux questions suivantes :
 
-- Does the user action coincide with more purchases?
-- How prevalent is the user action? Should you create marketing campaigns that encourage more of that action?
+- L'action de l'utilisateur coïncide-t-elle avec plus d'achats?
+- Quelle est la prévalence de l'action de l'utilisateur ? Devriez-vous créer des campagnes de marketing qui encouragent davantage cette action?
 
-In the example below, all users who added items to a wish list also made a purchase. Since only a small percentage of users added items to a wish list, this app may want to incentivize this behavior more through marketing campaigns.
+Dans l'exemple ci-dessous, tous les utilisateurs qui ont ajouté des articles à une liste de souhaits ont également fait un achat. Comme seulement un petit pourcentage d'utilisateurs ont ajouté des éléments à une liste de souhaits, cette application peut vouloir encourager davantage ce comportement par le biais de campagnes de marketing.
 
-!\[Segment funnel for users\]\[3\]
+!\[Entonnoir de segment pour les utilisateurs\]\[3\]
 
-### Compare messaging channels
+### Comparer les canaux de messagerie
 
-Create a segment of active users (or users with desired traits) and compare their interactions with different engagement channels, such as the News Feed, email and push notifications. For instance, if more loyal users are subscribed to push, you may want to spend more time on sending active user campaigns via push. However, if you find that the LTV is higher for those who are subscribed to email, you might want to prompt more active users to subscribe to email.
+Créer un segment d'utilisateurs actifs (ou utilisateurs avec les traits souhaités) et comparer leurs interactions avec les différents canaux d'engagement, comme le fil d'actualité, les messages électroniques et les notifications push. Par exemple, si des utilisateurs plus fidèles sont abonnés à push, vous pouvez passer plus de temps à envoyer des campagnes utilisateur actives via push. Cependant, si vous trouvez que le LTV est plus élevé pour ceux qui sont abonnés à l'email, vous pouvez demander à des utilisateurs plus actifs de vous abonner au courriel.
 
-!\[Segment funnel for email\]\[5\]
+!\[Entonnoir de segment pour courriel\]\[5\]
 [1]: {% image_buster /assets/img_archive/segment_funnel_example.png %} [3]: {% image_buster /assets/img_archive/Wish_List_2.png %} [5]: {% image_buster /assets/img_archive/Wish_List_Email.png %}
 
 [4]: #push-email
