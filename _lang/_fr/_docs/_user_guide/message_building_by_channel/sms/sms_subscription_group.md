@@ -1,51 +1,51 @@
 ---
-nav_title: "SMS Subscription Groups"
-article_title: SMS Subscription Groups
+nav_title: "Groupes d'abonnement SMS"
+article_title: Groupes d'abonnement SMS
 page_order: 2
-description: "Subscription Groups are the foundation for sending SMS & MMS through Braze. A Subscription Group is a collection of sending phone numbers (i.e. short codes, long codes, and/or alphanumeric sender IDs) that are used for a specific type of messaging purpose."
-page_type: reference
+description: "Les groupes d'abonnement sont la base de l'envoi de SMS & MMS via Braze. Un groupe d'abonnement est une collection de numéros de téléphone (c.-à-d. les codes courts, les codes longs et/ou les identifiants alphanumériques de l'expéditeur) qui sont utilisés pour un type spécifique de messagerie."
+page_type: Référence
 channel:
   - SMS
 ---
 
-# SMS Subscription Groups
+# Groupes d'abonnement SMS
 
-> Subscription Groups are the foundation for sending SMS & MMS through Braze. A Subscription Group is a collection of [sending phone numbers][2] (i.e. short codes, long codes, and/or alphanumeric sender IDs) that are used for a specific type of messaging purpose. For example, if a brand has plans to send both transactional and promotional SMS messaging, two Subscription Groups with separate pools of sending phone numbers will need to be set up within your Braze dashboard.
+> Les groupes d'abonnement sont la base de l'envoi de SMS & MMS via Braze. Un groupe d'abonnement est une collection de [numéros de téléphone d'envoi][2] (i.e. les codes courts, les codes longs et/ou les identifiants alphanumériques de l'expéditeur) qui sont utilisés pour un type spécifique de messagerie. Par exemple, si une marque a l'intention d'envoyer des messages SMS transactionnels et promotionnels, deux groupes d'abonnement avec des groupes séparés d'envoi de numéros de téléphone devront être configurés dans votre tableau de bord Braze.
 
-## SMS subscription states
+## État de l'abonnement par SMS
 
-There are two subscription states for SMS users: `subscribed` and `unsubscribed`. A user's subscription state is not shared across Subscription Groups, meaning a user can be `subscribed` to a transactional Subscription Group but `unsubscribed` to a promotional one. For brands, this separation of states ensures that they can continue to send relevant SMS messages to their users.
+Il y a deux états d'abonnement pour les utilisateurs de SMS : `abonné` et `désabonné`. L'état d'abonnement d'un utilisateur n'est pas partagé entre les groupes d'abonnement, ce qui signifie qu'un utilisateur peut être `abonné` à un groupe d'abonnement transactionnel mais `désabonné` à un groupe promotionnel. Pour les marques, cette séparation des états assure qu'ils peuvent continuer à envoyer des messages SMS pertinents à leurs utilisateurs.
 
-| State        | Definition                                                                                                                                                                                                                                                                                                                                                                                                                              |
-| ------------ | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Subscribed   | User has explicitly confirmed that they want to receive SMS from a specific Subscription Group. A user can be subscribed either by having their subscription state updated through the Braze subscription API or by texting an opt-in keyword response. A user must be subscribed to an SMS Subscription Group in order to receive an SMS                                                                                               |
-| Unsubscribed | User has explicitly opt-ed out of messaging from your SMS Subscription group and the sending-phone numbers inside the Subscription Group. They can unsubscribe by texting an opt-out keyword response or a brand can unsubscribed users through the \[Braze subscription API\]\[4\]. Users unsubscribed from an SMS subscription Group will no longer receive any SMS from sending phone numbers that belong to the Subscription Group. |
+| État      | Définition                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     |
+| --------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Inscrit   | L'utilisateur a explicitement confirmé qu'il souhaite recevoir des SMS d'un groupe d'abonnement spécifique. Un utilisateur peut être abonné soit par la mise à jour de son état d'abonnement via l'API d'abonnement à Braze, soit en envoyant une réponse par mot clé opt-in. Un utilisateur doit être abonné à un groupe d'abonnement SMS pour recevoir un SMS                                                                                                                                |
+| Désabonné | L'utilisateur a explicitement choisi de ne plus recevoir de messages de votre groupe d'abonnement SMS et les numéros de téléphone d'envoi à l'intérieur du groupe d'abonnement. Ils peuvent se désabonner en envoyant une réponse par mot clé opt-out ou une marque peut se désabonner via \[l'API d'abonnement à Braze\]\[4\]. Les utilisateurs désabonnés d'un groupe d'abonnement par SMS ne recevront plus de SMS en envoyant des numéros de téléphone appartenant au groupe d'abonnement. |
 {: .reset-td-br-1 .reset-td-br-2}
 
-### How users' SMS subscription groups get set
+### Comment les groupes d'abonnement SMS des utilisateurs sont définis
 
-- __Rest API:__ User profiles can be programmatically set by the \[/subscription/status/set\]\[4\] endpoint by using Braze's REST API.
-- __Web SDK:__ Users can be added to an email or SMS subscription group using the addToSubscriptionGroup method for [Android][11], [iOS]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/changelog/#433), or [Web]({{site.baseurl}}/developer_guide/platform_integration_guides/web/changelog/#340).
-- __Automatically Handled Upon User Opt-In/Opt-Out:__ By users texting a default opt-in or opt-out [keyword][7], Braze automatically sets and updates users' subscription state.
+- __API de Rest :__ Les profils utilisateur peuvent être définis par programme par le point de terminaison \[/subscription/status/set\]\[4\] en utilisant l'API REST de Braze.
+- __SDK Web :__ Les utilisateurs peuvent être ajoutés à un groupe d'abonnement par e-mail ou SMS en utilisant la méthode addToSubscriptionGroup pour [Android][11], [iOS]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/changelog/#433), ou [Web]({{site.baseurl}}/developer_guide/platform_integration_guides/web/changelog/#340).
+- __Manipulation automatique lors de l'opt-in/opt-out utilisateur :__ par les utilisateurs envoyant un opt-in ou opt-out par défaut [mot-clé][7], Braze définit et met à jour automatiquement l'état d'abonnement des utilisateurs.
 
-### How to check a user's SMS subscription group
+### Comment vérifier le groupe d'abonnement par SMS d'un utilisateur
 
-- __User Profile:__ Individual user profiles can be accessed through the Braze dashboard by selecting User Search from the right sidebar. Here, you can look up user profiles by email address, phone number, or external user ID. Once in a user profile, under the Engagement tab, you can view a user's SMS subscription groups.
-- __Rest API:__ Individual user profiles subscription group can be viewed by the [Get Subscription Group][9] endpoint or [Subscription Group Status][8] endpoint by using Braze’s REST API.
+- __Profil utilisateur :__ Les profils utilisateur individuels sont accessibles via le tableau de bord Braze en sélectionnant la recherche d'utilisateur dans la barre latérale de droite. Ici, vous pouvez rechercher des profils d'utilisateurs par adresse e-mail, numéro de téléphone ou ID d'utilisateur externe. Une fois dans un profil d'utilisateur, sous l'onglet Engagement, vous pouvez afficher les groupes d'abonnement SMS d'un utilisateur.
+- __API de repos :__ Le groupe d'abonnement à des profils utilisateur individuels peut être consulté par le [Groupe d'abonnement][9] ou [Statut de groupe d'abonnement][8] en utilisant l'API REST de Braze.
 
-## Sending with a Subscription Group
+## Envoi avec un groupe d'abonnement
 
-To launch an SMS campaign through Braze, a Subscription Group must be selected in the dropdown (see below). Once selected, an audience filter will be added to your campaign or Canvas automatically, ensuring that only users `subscribed` to the selected Subscription Group are in the target audience. To adhere to international [telecommunication compliance and guidelines][3], Braze will never send SMS to users that have not subscribed to the selected Subscription Group.
+Pour lancer une campagne de SMS via Braze, un groupe d'abonnement doit être sélectionné dans la liste déroulante (voir ci-dessous). Une fois sélectionné, un filtre d'audience sera automatiquement ajouté à votre campagne ou à Canvas automatiquement, s'assurer que seuls les utilisateurs `inscrits` au groupe d'abonnement sélectionné sont dans le public cible. Adhérer à la [conformité et aux directives internationales en matière de télécommunication][3], Braze n'enverra jamais de SMS aux utilisateurs qui ne sont pas abonnés au groupe d'abonnement sélectionné.
 
 !\[picture\]\[6\]
 
-## Setup process
+## Processus de configuration
 
-During your SMS onboarding process, a Braze onboarding manager will setup Subscription Groups for your dashboard account. They will work with you to determine how many Subscription Groups you need and add the appropriate sending phone numbers to your Subscription Groups. Timelines for setting up a Subscription Group will depend on the type of phone numbers you're adding. For example, short code applications can take anywhere between 8-12 weeks, while long codes can be set up within a day. If you have questions about your Braze dashboard setup, please reach out to your Braze representative for support.
+Au cours de votre processus d'intégration de SMS, un gestionnaire d'intégration de Braze configurera les Groupes d'abonnement pour votre compte de tableau de bord. Ils travailleront avec vous pour déterminer le nombre de Groupes d'Abonnement dont vous avez besoin et ajouter les numéros de téléphone appropriés à vos Groupes d'Abonnement. Les échéanciers de mise en place d'un groupe d'abonnement dépendront du type de numéros de téléphone que vous ajoutez. Par exemple, les applications de code court peuvent prendre entre 8 et 12 semaines, tandis que les codes longs peuvent être configurés en une journée. Si vous avez des questions sur la configuration de votre tableau de bord Braze, veuillez contacter votre représentant de Braze pour obtenir de l'aide.
 
-## Subscription group MMS enablement
+## Activation des MMS du groupe d'abonnement
 
-In order to send an MMS message, at least one number within your Subscription Group has to be enabled to send MMS. This is indicated by a tag located next to the Subscription Group.
+Pour envoyer un message MMS, il faut activer au moins un numéro au sein de votre groupe d'abonnement pour envoyer des MMS. Ceci est indiqué par un tag situé à côté du Groupe d'Abonnement.
 
 !\[picture\]\[10\]{: style="max-width:40%"}
 [1]: {% image_buster /assets/img/sms/multi_country_subgroups.png %} [4]: {{ site.baseurl}}/api/endpoints/subscription_groups/post_update_user_subscription_group_status/ [6]: {% image_buster /assets/img/sms/sms_subgroup_select.png %} [10]: {% image_buster /assets/img/sms/mms_sub_group_tag.png %}
