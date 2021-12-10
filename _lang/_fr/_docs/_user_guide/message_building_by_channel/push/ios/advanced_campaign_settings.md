@@ -1,7 +1,7 @@
 ---
 nav_title: "Paramètres avancés de la campagne Push"
 article_title: Paramètres avancés de la campagne Push
-page_type: Référence
+page_type: reference
 page_order: 6
 description: "Cet article de référence couvre plusieurs paramètres avancés de campagne Push tels que les options d'alerte, les drapeaux, les sons, l'expiration et plus encore."
 platform: iOS
