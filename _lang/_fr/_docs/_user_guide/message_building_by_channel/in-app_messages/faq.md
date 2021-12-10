@@ -1,54 +1,54 @@
 ---
-nav_title: FAQs
-article_title: In-App Messages FAQs
+nav_title: Foire aux questions
+article_title: Foire aux questions sur les messages dans l'application
 page_order: 19
-description: "This article provides answers to frequently asked questions about In-App Messages."
-tool: in-app messages
+description: "Cet article fournit des réponses aux questions fréquemment posées sur les messages In-App."
+tool: messages intégrés à l'application
 ---
 
-# In-App Messages FAQs
+# Foire aux questions sur les messages dans l'application
 
-> This article provides answers to some frequently asked questions about in-app messages.
+> Cet article fournit des réponses à certaines questions fréquemment posées sur les messages dans l'application.
 
-### What is an in-browser message and how does it differ from an in-app message?
-In-browser messages are in-app messages sent to web browsers. To create an in-browser message, make sure to select __Web Browser__ under the __Send To__ field when creating your in-app message campaign or Canvas.
+### Qu'est-ce qu'un message dans le navigateur et en quoi cela diffère-t-il d'un message dans l'application ?
+Les messages dans le navigateur sont des messages dans l'application envoyés aux navigateurs Web. Créer un message dans le navigateur assurez-vous de sélectionner __Web Browser__ dans le champ __Envoyer à__ lors de la création de votre campagne de message ou de Canvas.
 
-### Will an in-app message display if a device is offline?
+### Un message dans l'application s'affichera-t-il si un appareil est hors ligne ?
 
-It depends. Because in-app messages are delivered at session start, the device is able to download the payload prior to going offline, the in-app message can still be displayed while offline. If the payload is not downloaded, then the in-app message will not display.
+Cela dépend. Comme les messages intégrés sont envoyés au démarrage de la session, l'appareil est en mesure de télécharger la charge utile avant de se déconnecter, le message dans l'application peut toujours être affiché en mode hors connexion. Si la charge utile n'est pas téléchargée, le message dans l'application ne s'affichera pas.
 
-### If a user already has an in-app message payload on their device and the message expiration is changed, will the expiration be updated on their device?
+### Si un utilisateur a déjà une charge utile de message dans l'application sur son appareil et que le message d'expiration est modifié, l'expiration sera-t-elle mise à jour sur leur appareil?
 
-When a user starts a session, Braze checks if changes have been made to any in-app messages that they are eligible for and updates them accordingly. So if the expiration has changed and they log a session, then the in-app message is sent to the device with the updated information.
+Lorsqu'un utilisateur démarre une session, Braze vérifie si des modifications ont été apportées aux messages dans l'application pour lesquels ils sont éligibles et les met à jour en conséquence. Donc, si l'expiration a changé et qu'ils enregistrent une session, alors le message dans l'application est envoyé à l'appareil avec les informations mises à jour.
 
-### How do I set up quiet hours for an in-app message campaign?
+### Comment puis-je configurer des heures silencieuses pour une campagne de message in-app ?
 
-The Quiet Hours feature isn't available for use with in-app message campaigns. This feature is used to prevent messages from being sent to your users during specific hours. For in-app message campaigns, your users will only receive in-app messages if they are active within the app.
+La fonction Heures silencieuses n'est pas disponible pour les campagnes de messages dans l'application. Cette fonction est utilisée pour empêcher l'envoi de messages à vos utilisateurs pendant des heures précises. Pour les campagnes de messages intégrés à l'application, vos utilisateurs ne recevront des messages dans l'application que s'ils sont actifs dans l'application.
 
-As a workaround to send in-app messages during a specific time, use the following sample Liquid code. This allows the message to be aborted if the in-app message is displayed after 7:59 pm or before 8 am at the specified timezone.
+En guise de contournement pour envoyer des messages dans l'application pendant une période spécifique, utilisez l'exemple suivant de code Liquid. Cela permet d'annuler le message si le message est affiché dans l'application après 19h59 heures ou avant 8h au fuseau horaire spécifié.
 
 {% raw %}
 ```liquid
-{% assign time = 'now' | time_zone: ${time_zone} %}{% assign hour = time | date: '%H' | plus: 0 %}
-{% if hour > 19 or hour < 8 %}
+{% assigner heure = 'maintenant' | fuseau horaire : ${time_zone} %}{% assigner heure = heure | date: '%H' | plus: 0 %}
+{% si heure > 19 ou heure < 8 %}
 {% abort_message("Outside allowed time window") %}
 {% endif %}
-MESSAGE HERE
+MESSAGE ICI
 ```
 {% endraw %}
 
-### When is eligibility for an in-app message calculated?
+### Quand l'éligibilité à un message dans l'application est-elle calculée ?
 
-Eligibility for an in-app message is calculated at the time of delivery. If an in-app message is scheduled to send at 7 am, then eligibility is checked for this in-app message at 7 am.
+L'éligibilité pour un message intégré est calculée au moment de la livraison. Si un message intégré est programmé pour être envoyé à 7 heures du matin, alors l'éligibilité est vérifiée pour ce message dans l'application à 7 heures.
 
-Once the in-app message is displayed, the eligibility will depend on when the in-app message is downloaded and triggered.
+Une fois que le message intégré sera affiché, l'éligibilité dépendra du moment où le message sera téléchargé et déclenché dans l'application.
 
-### Why is my archived in-app message campaign still delivering in-app message impressions?
+### Pourquoi ma campagne de message in-app archivée donne-t-elle toujours des impressions de messages dans l'application ?
 
-This can occur for users who met the segment criteria when the in-app message campaign was active.
+Cela peut se produire pour les utilisateurs qui remplissaient les critères de segment lorsque la campagne de message dans l'application était active.
 
-To prevent this, during your campaign setup, select **Re-evaluate campaign eligibility before displaying**.
+Pour éviter cela, lors de la configuration de votre campagne, sélectionnez **Ré-évaluer l'éligibilité de la campagne avant d'afficher**.
 
-### How does Braze calculate an in-app message expiration set to "after 1 day(s)"?
+### Comment Braze calcule-t-il une expiration de message dans l'application définie à "après 1 jour(s)"?
 
-Braze calculates an expiration time of one day as 24 hours after users are eligible to receive a message.
+Braze calcule la durée d'expiration d'un jour comme 24 heures après que les utilisateurs aient droit à recevoir un message.
