@@ -1,53 +1,53 @@
 ---
-nav_title: Action Paths Step
-article_title: Action Paths Step
-alias: /action_paths/
+nav_title: Étape des chemins d'action
+article_title: Étape des chemins d'action
+alias: /fr/action_paths/
 page_order: 1
-page_type: reference
-description: "This reference article covers Action Paths and how to use them in your Canvases."
-tool: Canvas
+page_type: Référence
+description: "Cet article de référence couvre les Chemins d'Action et comment les utiliser dans vos Canvases."
+tool: Toile
 ---
 
-# Action Paths Step
+# Étape des chemins d'action
 
-Action Paths in Canvas allow you to sort your users based on their actions. Using Action Paths, you can do the following:
+Les chemins d'action dans Canvas vous permettent de trier vos utilisateurs en fonction de leurs actions. En utilisant les chemins d'action, vous pouvez faire ce qui suit :
 
-* Customize user paths based on a specific action
-* Hold users for a given duration to prioritize their next path based on their actions during this evaluation period
+* Personnaliser les chemins de l'utilisateur en fonction d'une action spécifique
+* Conservez les utilisateurs pendant une durée donnée pour prioriser leur chemin suivant en fonction de leurs actions pendant cette période d'évaluation
 
 {% alert important %}
-Canvas Action Paths are currently in early access. Please contact your Braze account manager if you are interested in participating in the early access.
+Les Chemins de Canvas Action sont actuellement en accès anticipé. Veuillez contacter votre responsable de compte Braze si vous êtes intéressé à participer à l'accès anticipé.
 {% endalert %}
 
-## Create Action Paths
+## Créer des chemins d'action
 
 !\[canvas_actionpath\]\[1\]{: style="float:right;max-width:40%;margin-left:15px;"}
 
-To create Action Paths, add a step to your Canvas. Then, using the drop-down at the top of the new step, select **Action Paths**.
+Pour créer des chemins d'action, ajoutez une étape à votre Canevas. Ensuite, en utilisant le menu déroulant en haut de la nouvelle étape, sélectionnez **Chemins d'action**.
 
-### Define action settings
+### Définir les paramètres d'action
 
-In the **Action Settings** module, you can choose how long you’d like to hold users in the action step.
+Dans le module **Paramètres d'action** , vous pouvez choisir la durée de conservation des utilisateurs dans l'étape d'action.
 
-When the **Ranking** is off, users who perform actions after they enter the action path and before the end of the evaluation window will immediately advance through the relevant action group as soon as they perform the action. Users who do not perform a relevant action during the evaluation period will advance through the default **Everyone Else** group at the end of the evaluation period.
+Lorsque le classement **** est désactivé, les utilisateurs qui effectuent des actions après avoir entré le chemin de l'action et avant la fin de la fenêtre d'évaluation vont immédiatement passer par le groupe d'action concerné dès qu'ils effectuent l'action. Les utilisateurs qui n'effectuent pas une action pertinente pendant la période d'évaluation passeront par le groupe par défaut **Tout le monde d'autre** à la fin de la période d'évaluation.
 
-When the **Ranking** is on, all users will be held until the end of the evaluation period. At the end of the evaluation period, users will advance through the highest priority action group that they are eligible for. Users who do not perform any action during the evaluation period will advance through the default **Everyone Else** group.
+Lorsque le **Classement** est activé, tous les utilisateurs seront tenus jusqu'à la fin de la période d'évaluation. À la fin de la période d'évaluation, les utilisateurs passeront par le groupe d'action prioritaire auquel ils sont éligibles. Les utilisateurs qui n'effectuent aucune action pendant la période d'évaluation passeront par le groupe par défaut **Tout le monde d'autre**.
 
-### Define action groups
+### Définir les groupes d'action
 
-Add a trigger or multiple triggers to define your action groups.
+Ajoutez un déclencheur ou plusieurs déclencheurs pour définir vos groupes d'action.
 
-When **Ranking** is off, users who perform one or more of the triggers will immediately advance through the relevant action group.
+Lorsque le classement **** est désactivé, les utilisateurs qui effectuent un ou plusieurs des déclencheurs avanceront immédiatement à travers le groupe d'action concerné.
 
-When **Ranking** is on, you can prioritize action groups. The user will continue down the highest priority group that they are eligible for at the end of the evaluation period.
+Quand **le classement** est activé, vous pouvez prioriser les groupes d'action. L'utilisateur poursuivra vers le bas le groupe de priorité le plus élevé auquel il est admissible à la fin de la période d'évaluation.
 
-### Canvases with re-eligibility
+### Canevas avec rééligibilité
 
-If users enter into an action path multiple times and have multiple entries in the action path at the same time, the expected behavior varies depending on **Ranking**:
+Si les utilisateurs entrent dans un chemin d'action plusieurs fois et ont plusieurs entrées dans le chemin d'action en même temps, le comportement attendu varie en fonction du **Classement**:
 
-| Ranking Filter | Action Path Behavior                                                                                                                                                                                                                                                                                            |
-| -------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| **Off**        | * When a relevant action is performed, Braze will deduplicate entries and immediately advance the earliest entry through the relevant action group. <br /> * When a relevant action is not performed, all entries will advance at the end of the relevant evaluation window. No deduplication will occur. |
-| **On**         | All entries will advance at the end of the relevant evaluation window. No deduplication will occur.                                                                                                                                                                                                             |
+| Filtre de Classement | Comportement du chemin d'action                                                                                                                                                                                                                                                                                                                                |
+| -------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **Désactivé**        | * Lorsqu'une action pertinente est effectuée, Braze dédupliquera les entrées et fera avancer immédiatement l'entrée la plus précoce à travers le groupe d'action concerné. <br /> * Lorsqu'une action pertinente n'est pas effectuée, toutes les entrées avanceront à la fin de la fenêtre d'évaluation pertinente. Aucune déduplication ne se produira. |
+| **Activé**           | Toutes les inscriptions se feront à la fin de la fenêtre d'évaluation pertinente. Aucune déduplication ne se produira.                                                                                                                                                                                                                                         |
 {: .reset-td-br-1 .reset-td-br-2}
 [1]: {% image_buster /assets/img/canvas_actionpath.png %} 
