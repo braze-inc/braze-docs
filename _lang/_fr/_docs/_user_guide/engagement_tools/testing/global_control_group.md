@@ -1,166 +1,166 @@
 ---
-nav_title: Global Control Group
-article_title: Global Control Group
-alias: /global_control_group/
+nav_title: Groupe de contrôle global
+article_title: Groupe de contrôle global
+alias: /fr/global_control_group/
 page_order: 0
-description: "This article covers how to set up and properly use the Global Control Group. It also covers how to view reports and metrics brought on by the use of these groups."
-page_type: reference
-tool: Reports
+description: "Cet article traite de la manière de mettre en place et d'utiliser correctement le Groupe Global Control. Il couvre également la façon de voir les rapports et les paramètres fournis par l'utilisation de ces groupes."
+page_type: Référence
+tool: Rapports
 ---
 
-# Global Control Group
+# Groupe de contrôle global
 
-> This article covers how to set up and properly use the Global Control Group. It also covers how to view reports and metrics brought on by the use of these groups.
+> Cet article traite de la manière de mettre en place et d'utiliser correctement le Groupe Global Control. Il couvre également la façon de voir les rapports et les paramètres fournis par l'utilisation de ces groupes.
 
-Use the Global Control Group to specify a percentage of all users that shouldn't receive any campaigns or Canvases, allowing you to analyze the overall impact of your messaging efforts over time. By comparing the behaviors of users that receive messaging to those that don't, you can further understand how your marketing campaigns and Canvases result in an uplift in sessions and custom events.
+Utilisez le Groupe de Contrôle Global pour spécifier un pourcentage de tous les utilisateurs qui ne devraient recevoir aucune campagne ou Canvases, vous permettant d'analyser l'impact global de vos efforts de messagerie au fil du temps. En comparant les comportements des utilisateurs qui reçoivent des messages à ceux qui ne le font pas, vous pouvez mieux comprendre comment vos campagnes de marketing et Canvases se traduisent par une augmentation des sessions et des événements personnalisés.
 
-## How the Global Control Group works
+## Comment fonctionne le Groupe de Contrôle Mondial
 
-With the Global Control Group, you can set a percentage of all users as a control group. Once saved, users in the group will not receive any campaigns or Canvases.
+Avec le Global Control Group, vous pouvez définir un pourcentage de tous les utilisateurs comme un groupe de contrôle. Une fois enregistrés, les utilisateurs du groupe ne recevront aucune campagne ou Canvases.
 
-Your Global Control Group is applied to all channels, campaigns, and Canvases, with the exception of News Feed Cards—users in your control group will still receive News Feed Cards. This exception doesn't extend to Content Cards—if you're using Content Cards, users in your control group won't receive them.
+Votre groupe de contrôle global est appliqué à tous les canaux, campagnes et canvases, à l’exception des Fil d’actualités – les utilisateurs de votre groupe de contrôle recevront toujours les Fil d’Actualité. Cette exception ne s'applique pas aux cartes de contenu — si vous utilisez des cartes de contenu, les utilisateurs de votre groupe de contrôle ne les recevront pas.
 
-__Assigning users randomly to the Global Control Group:__<br> Braze randomly selects multiple ranges of [Random Bucket Numbers]({{site.baseurl}}/user_guide/engagement_tools/campaigns/ideas_and_strategies/ab_testing_with_random_buckets/#step-1-segment-your-users-by-the-random-bucket-attribute) and includes users from those selected buckets. If you are currently using Random Bucket Numbers for any other purposes, please read the section [things to watch out for](#things-to-watch-for) below. <br><br> __Data tracking for reporting:__<br>Braze measures the behaviors of users in your control group and users in your treatment sample. Your treatment sample is a random selection of users not in your control group, generated using the same Random Bucket Number method mentioned above.
+__Assigner des utilisateurs aléatoirement au groupe de contrôle global :__<br> Braze sélectionne aléatoirement plusieurs plages de [nombres de seaux aléatoires]({{site.baseurl}}/user_guide/engagement_tools/campaigns/ideas_and_strategies/ab_testing_with_random_buckets/#step-1-segment-your-users-by-the-random-bucket-attribute) et inclut les utilisateurs de ces compartiments sélectionnés. Si vous utilisez actuellement des nombres aléatoires à d'autres fins, veuillez lire la section [choses à faire attention à](#things-to-watch-for) ci-dessous. <br><br> __Suivi des données pour signaler :__<br>Braze mesure les comportements des utilisateurs de votre groupe de contrôle et des utilisateurs dans votre échantillon de traitement. Votre échantillon de traitement est une sélection aléatoire d'utilisateurs qui ne font pas partie de votre groupe de contrôle, générée en utilisant la même méthode Random Bucket Number mentionnée ci-dessus.
 
-## Create a Global Control Group
+## Créer un groupe de contrôle global
 
-### Step 1: Navigate to the Global Control Group Settings.
+### Étape 1 : Accédez aux paramètres du groupe de contrôle global.
 
-From the dashboard, go to **Global Message Settings** under **Engagement**, and select the **Global Control Group Settings** tab.
+À partir du tableau de bord, allez dans **Paramètres globaux des messages** sous **Engagement**, et sélectionnez l'onglet **Paramètres des groupes de contrôle globaux**.
 
-### Step 2: Assign a percentage of all users to this control group
+### Étape 2 : Assigner un pourcentage de tous les utilisateurs à ce groupe de contrôle
 
-Input a percentage for your control group and click __Save__. Once entered, Braze shows you an estimate of how many users will fall into your Global Control, treatment, and treatment sample. Keep in mind that the more users you have in your app group, the more accurate this estimate will be.
+Entrez un pourcentage pour votre groupe de contrôle et cliquez sur __Enregistrer__. Une fois saisi, Braze vous montre une estimation du nombre d'utilisateurs qui vont tomber dans votre échantillon de contrôle global, de traitement et de traitement. Gardez à l'esprit que plus vous avez d'utilisateurs dans votre groupe d'applications, plus cette estimation sera précise.
 
-The number of users in your Global Control Group is automatically updated after its initial setup to remain proportionate to this audience percentage when more users are added to your app group. For percentage guidelines, refer to the [best practices section](#percentage-guidelines) below.
+Le nombre d'utilisateurs dans votre groupe de contrôle global est automatiquement mis à jour après sa configuration initiale pour rester proportionné à ce pourcentage d'audience lorsque plus d'utilisateurs sont ajoutés à votre groupe d'applications. Pour des lignes directrices en pourcentage, reportez-vous à la section [des meilleures pratiques](#percentage-guidelines) ci-dessous.
 
-!\[Global Control Group\]\[4\]
+!\[Groupe de contrôle global\]\[4\]
 
-### Step 3: Assign exclusion settings
+### Étape 3 : Assigner les paramètres d'exclusion
 
-Use tags to add exclusion settings to your Global Control Group. Any campaigns or Canvases that use the tags included in the exclusion settings don't use your Global Control Group. These campaigns and Canvases continue to send to every user in the target audience, including those in your Global Control Group.
+Utilisez des balises pour ajouter des paramètres d'exclusion à votre groupe de contrôle global. Les campagnes ou Canvases qui utilisent les balises incluses dans les paramètres d'exclusion n'utilisent pas votre Groupe de Contrôle Global. Ces campagnes et Canvases continuent à être envoyées à tous les utilisateurs du public cible, y compris ceux de votre groupe de contrôle global.
 
 {% alert tip %}
-You may want to add exclusion settings if you have transactional messages that should send to every user.
+Vous pouvez ajouter des paramètres d'exclusion si vous avez des messages transactionnels qui doivent être envoyés à chaque utilisateur.
 {% endalert %}
 
-!\[Global Control Group\]\[5\]
+!\[Groupe de contrôle global\]\[5\]
 
-### Step 4: Save your control group
+### Étape 4 : Enregistrez votre groupe de contrôle
 
-At this point, Braze generates a randomly selected group of users to comprise the selected percentage of your total user base. Once saved, all currently active and future campaigns and Canvases no longer send to users in this group, except for campaigns or Canvases that contain any of the tags in your exclusion settings.
+À ce stade, Braze génère un groupe d’utilisateurs sélectionné au hasard pour représenter le pourcentage sélectionné de votre base d’utilisateurs. Une fois enregistrés, toutes les campagnes actuelles et futures et les Canvases ne sont plus envoyées aux utilisateurs de ce groupe, à l'exception des campagnes ou des Canvases qui contiennent l'une des balises dans vos paramètres d'exclusion.
 
-## Disable your Global Control Group
+## Désactiver votre groupe de contrôle global
 
-You can disable your Global Control Group at any time from the **Global Control Group Settings** tab, but keep in mind that doing so will result in users in this group immediately becoming eligible for campaigns and Canvases.
+Vous pouvez désactiver votre groupe de contrôle global à tout moment à partir de l’onglet **Paramètres du groupe de contrôle global** , mais gardez à l'esprit que cela entraînera que les utilisateurs de ce groupe seront immédiatement éligibles pour les campagnes et les Canvases.
 
-__Before disabling your Control Group__ we recommend [exporting](#export-group-members) a CSV of users in that group in case you need to reference it at a later point. Once you disable a control group, there is no way for Braze to restore the group or identify which users were in this group.
+__Avant de désactiver votre Groupe de Contrôle__ nous vous recommandons [d'exporter](#export-group-members) un CSV d'utilisateurs dans ce groupe au cas où vous auriez besoin de le référencer à un point ultérieur. Une fois que vous désactivez un groupe de contrôle, il n'y a aucun moyen pour Braze de restaurer le groupe ou d'identifier quels utilisateurs étaient dans ce groupe.
 
-__After disabling your Control Group__ you can save a new one. Once you enter a percentage and save it, Braze generates a new randomly selected group of users. If you enter the same percentage as before, Braze still generates a new group of users for your control and treatment groups.
+__Après avoir désactivé votre Groupe de Contrôle__ vous pouvez en enregistrer un nouveau. Une fois que vous entrez un pourcentage et sauvegardez-le, Braze génère un nouveau groupe d'utilisateurs aléatoirement sélectionnés. Si vous entrez le même pourcentage qu'avant, Braze génère toujours un nouveau groupe d'utilisateurs pour vos groupes de contrôle et de traitement.
 
 !\[Global Control Group\]\[2\]{: style="max-width:50%" }
 
-## Export your control group members {#export-group-members}
+## Exporter les membres de votre groupe de contrôle {#export-group-members}
 
-If you'd like to see which users are in your Global Control Group, you can export your Group's members via CSV or API.
+Si vous souhaitez voir quels sont les utilisateurs de votre groupe de contrôle global, vous pouvez exporter les membres de votre groupe via CSV ou API.
 
-To run a CSV export, navigate to the **Global Control Group Settings** tab and click <i class="fas fa-download"></i>&nbsp;**Export**. To export via API, use the [Users by Global Control Group]({{site.baseurl}}/api/endpoints/export/user_data/post_users_global_control_group/) API endpoint.
+Pour exécuter une exportation CSV, accédez à l'onglet **Paramètres du groupe de contrôle global** et cliquez sur <i class="fas fa-download"></i>&nbsp;**Exporter**. Pour exporter via API, utilisez le point de terminaison de l'API [Utilisateurs par Groupe de Contrôle Global]({{site.baseurl}}/api/endpoints/export/user_data/post_users_global_control_group/).
 
 {% alert important %}
-Historical control groups are not preserved, so you can only export the members of your current group. Make sure to export any necessary information before disabling a control group.
+Les groupes de contrôle historique ne sont pas préservés, vous ne pouvez donc exporter que les membres de votre groupe actuel. Assurez-vous d'exporter toutes les informations nécessaires avant de désactiver un groupe de contrôle.
 {% endalert %}
 
-## View reporting
+## Voir le rapport
 
-To view a report for your Global Control Group from the dashboard, navigate to __Global Control Group__ under __Data__. Next, select the parameter you wish to run your report with (sessions or a particular custom event) and click __Run Report__.
+Pour afficher un rapport pour votre groupe de contrôle global à partir du tableau de bord, accédez à __Groupe de contrôle global__ sous __Données__. Ensuite, sélectionnez le paramètre avec lequel vous souhaitez exécuter votre rapport (sessions ou événements personnalisés particuliers) et cliquez sur __Exécuter le rapport__.
 
-!\[Global Control Group\]\[6\]
+!\[Groupe de contrôle global\]\[6\]
 
-### About your report
+### À propos de votre rapport
 
-The Global Control Group Report allows you to compare your group against a treatment sample. Your treatment sample is a random selection of non-control users, approximately the same number of users as your control, generated using the Random Bucket Number method.
+Le rapport Global Control Group vous permet de comparer votre groupe à un échantillon de traitement. Votre échantillon de traitement est une sélection aléatoire d'utilisateurs non contrôlés, environ le même nombre d'utilisateurs que votre contrôle, généré en utilisant la méthode Random Bucket Num.
 
-When generating your report, choose an event—either sessions or any custom event—to compare across your treatment and control groups. Then choose a time period for which to view data for. Keep in mind that if you’ve saved multiple control group experiments at different time periods, you should avoid including data from more than one experiment in your report.
+Lors de la génération de votre rapport, choisissez un événement, soit une session, soit un événement personnalisé, pour comparer vos groupes de traitement et de contrôle. Choisissez ensuite une période de temps pour laquelle afficher les données. Gardez à l'esprit que si vous avez sauvegardé plusieurs expériences de groupe de contrôle à différentes périodes de temps, vous devriez éviter d'inclure des données provenant de plus d'une expérience dans votre rapport.
 
-Lastly, as with several other reports on our platform, this report displays a [confidence]({{site.baseurl}}/user_guide/engagement_tools/testing/multivariant_testing/#understanding-confidence) percentage for your change from control metric. Note that in cases where the conversion rate between your control and treatment are identical, a confidence of 0% is to be expected; this indicates that there is a 0% chance that there is a difference in performance between the two groups.
+Enfin, comme pour plusieurs autres rapports sur notre plate-forme, ce rapport affiche un pourcentage de [confiance]({{site.baseurl}}/user_guide/engagement_tools/testing/multivariant_testing/#understanding-confidence) pour votre changement de métrique de contrôle. Notez que dans les cas où le taux de conversion entre votre contrôle et le traitement est identique, une confiance de 0 % est à prévoir ; cela indique qu'il y a 0 % de chances qu'il y ait une différence de performance entre les deux groupes.
 
-### Report metrics
+### Signaler les métriques
 
-| Metric                     | Definition                                                                                                                                                                                                                                  | Calculation                                                                                                            |
-| -------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------- |
-| Change from Control        | This calculates the uplift between the conversion rate for your treatment and control groups.                                                                                                                                               | ((Treatment conversion rate – control conversion rate) ÷ control conversion rate) * 100                                |
-| Incremental Uplift         | The difference in total events between your treatment and control groups. This metric seeks to answer the question of “How many more conversion events did the treatment group achieve?”.                                                   | Total events for treatment – total events for control                                                                  |
-| Incremental Uplift Percent | The percentage of your treatment’s total events that can be attributed to your treatment (versus natural user behavior). This is calculated by dividing incremental uplift (number) by the total number of events for your treatment group. | Incremental uplift (number) ÷ Total events for treatment group                                                         |
-| Conversion Rate            | On average, the percentage of users in your control/ treatment group that complete your selected event each day during the chosen time period.                                                                                              | Average (mean) of the percent of users that perform your selected event each day during the chosen time period.        |
-| Estimated Group Size       | The estimated number of users in your control and treatment groups during selected time period.                                                                                                                                             | The maximum membership size your control and treatment groups reached during the time period you chose for the report. |
-| Total Number of Events     | The total number of times the selected event occurred during the chosen time period. This is not unique (ie. if a user performs an event twice during time period, the event gets incremented twice).                                       | Sum of the number of times event occurred each day during the chosen time period.                                      |
-| Events Per User            | The estimated average number of times users in each group completed your conversion events during the selected time period.                                                                                                                 | Total events ÷ estimated group size.                                                                                   |
+| Métrique                             | Définition                                                                                                                                                                                                                                                                          | Calcul                                                                                                                                                |
+| ------------------------------------ | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Changer depuis le contrôle           | Cela calcule la hausse entre le taux de conversion de vos groupes de traitement et de contrôle.                                                                                                                                                                                     | (Taux de conversion de traitement – contrôle du taux de conversion) (taux de conversion de contrôle) * 100                                            |
+| Incrémentiel                         | La différence dans les événements totaux entre votre traitement et les groupes de contrôle. Cette métrique cherche à répondre à la question de « Combien d’autres événements de conversion ont-ils été réalisés par le groupe de traitement ? ».                                    | Total des événements pour le traitement - total des événements pour le contrôle                                                                       |
+| Pourcentage d'élévation incrémentale | Le pourcentage des événements totaux de votre traitement qui peuvent être attribués à votre traitement (contre le comportement naturel de l'utilisateur). Ceci est calculé en divisant la hausse incrémentale (nombre) par le nombre total d’événements pour votre groupe de soins. | Augmentation incrémentale (nombre) ÷ Événements totaux pour le groupe de traitement                                                                   |
+| Taux de conversion                   | En moyenne, le pourcentage d'utilisateurs de votre groupe de contrôle/traitement qui terminent l'événement sélectionné chaque jour au cours de la période choisie.                                                                                                                  | Moyenne (moyenne) du pourcentage d'utilisateurs qui effectuent votre événement sélectionné chaque jour au cours de la période choisie.                |
+| Taille estimée du groupe             | Le nombre estimé d'utilisateurs dans vos groupes de contrôle et de traitement au cours de la période sélectionnée.                                                                                                                                                                  | La taille maximale de votre adhésion à vos groupes de contrôle et de traitement atteint au cours de la période que vous avez choisie pour le rapport. |
+| Nombre total d'événements            | Le nombre total de fois où l'événement sélectionné s'est produit au cours de la période choisie. Ce n'est pas unique (c'est à dire si un utilisateur effectue un événement deux fois pendant la période de temps, l'événement est incrémenté deux fois).                            | La somme du nombre de fois de l'événement a eu lieu chaque jour pendant la période choisie.                                                           |
+| Événements par utilisateur           | Le nombre moyen estimé de fois que les utilisateurs de chaque groupe ont terminé vos événements de conversion pendant la période sélectionnée.                                                                                                                                      | Total des événements (taille estimée au nombre de groupes).                                                                                           |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
 
-## Troubleshooting
+## Dépannage
 
-As you set up your global control groups and view reporting, here are errors you may run into:
+Au fur et à mesure que vous configurez vos groupes de contrôle globaux et que vous affichez les rapports, voici les erreurs dans lesquelles vous pouvez exécuter :
 
-| Issue                                                                                              | Troubleshooting                                                                                                                                                                           |
-| -------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Unable to save the percentage entered when designating a Global Control Group.                     | This issue occurs if you enter a non-integer or an integer that is not between 1 and 15 (inclusive).                                                                                      |
-| "Braze is not able to update your Global Control Group" error on the Global Control settings page. | This usually indicates that some component of this page has changed, likely due to actions taken by another user on your Braze account. In this case, refresh the page and retry.         |
-| Global Control Group report does not have any data.                                                | If you access the Global Control Group Report without having saved a Global Control Group, you will not see any data in the report. Create and save a Global Control Group and try again. |
+| Problème                                                                                                                             | Dépannage                                                                                                                                                                                                                 |
+| ------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Impossible d'enregistrer le pourcentage saisi lors de la désignation d'un groupe de contrôle global.                                 | Ce problème se produit si vous entrez un entier non entier ou un entier qui n'est pas compris entre 1 et 15 (inclus).                                                                                                     |
+| L'erreur "Braze n'est pas en mesure de mettre à jour votre groupe de contrôle global" sur la page des paramètres de contrôle global. | Ceci indique généralement que certains composants de cette page ont changé, probablement en raison des actions prises par un autre utilisateur sur votre compte Braze. Dans ce cas, rafraîchissez la page et réessayez.   |
+| Le rapport Global Control Group ne contient aucune donnée.                                                                           | Si vous accédez au rapport de groupe de contrôle global sans avoir enregistré un groupe de contrôle global, vous ne verrez aucune donnée dans le rapport. Créez et enregistrez un groupe de contrôle global et réessayez. |
 {: .reset-td-br-1 .reset-td-br-2}
 
-### Things to watch out for {#things-to-watch-for}
+### Les choses à surveiller {#things-to-watch-for}
 
-#### Overlapping Random Bucket Numbers
+#### Recouvrement des nombres de Seau Aléatoire
 
-Your Global Control Group is formed using Random Bucket Numbers, and thus if you are running any other tests using Random Bucket Numbers segment filters, keep in mind that there could be an overlap between those segments you create, and your Global Control Group users.
+Votre groupe de contrôle global est formé à l'aide de numéros de Bucket aléatoires, et donc si vous exécutez d'autres tests en utilisant des filtres de segments de Bucket Numbers aléatoires, Gardez à l'esprit qu'il pourrait y avoir un chevauchement entre ces segments que vous créez, et les utilisateurs de votre Groupe de Contrôle Global.
 
-#### Duplicate email addresses
+#### Dupliquer les adresses e-mail
 
-If two users who have different external user IDs have the same email address, and one of these users is in the control group and the other is not, then an email will still be sent to that email address whenever the non-control group user is eligible for an email. When this occurs, we will mark both user profiles as having received the campaign or Canvas containing that email.
+Si deux utilisateurs ayant des identifiants d'utilisateurs externes différents ont la même adresse e-mail, et l'un de ces utilisateurs est dans le groupe de contrôle et l'autre ne l'est pas, alors un courriel sera toujours envoyé à cette adresse dès que l'utilisateur du groupe non contrôlé aura droit à un courriel. Lorsque cela se produit, nous marquerons les deux profils d'utilisateurs comme ayant reçu la campagne ou Canvas contenant ce courriel.
 
-#### Global Control Group and message-specific control groups
+#### Groupe de contrôle global et groupes de contrôle spécifiques aux messages
 
-It's possible to have both a Global Control Group and also use a campaign-specific or Canvas-specific control group. Having a campaign-specific or Canvas-specific control group lets you measure the impact of a particular message.
+Il est possible d'avoir à la fois un groupe de contrôle global et un groupe de contrôle spécifique à une campagne ou à un groupe de contrôle spécifique à Canvas. Avoir un groupe de contrôle spécifique à une campagne ou spécifique à Canvas vous permet de mesurer l’impact d’un message particulier.
 
-Users in your Global Control Group are withheld from receiving any messages other than those with tag exceptions, and if you add a control to a campaign or Canvas, Braze withholds a portion of your global treatment group from receiving that particular campaign or Canvas. That means if a member of the Global Control Group is not eligible to receive a particular campaign or Canvas, they will also not be present in the control group for that particular campaign or Canvas.
+Les utilisateurs de votre groupe de contrôle global ne peuvent pas recevoir de messages autres que ceux ayant des exceptions de tags, et si vous ajoutez un contrôle à une campagne ou à Canvas, Braze empêche une partie de votre groupe de traitement mondial de recevoir cette campagne ou Canva en particulier. Cela signifie que si un membre du Groupe de Contrôle Mondial n'est pas éligible pour recevoir une campagne particulière ou Canvas, ils ne seront pas non plus présents dans le groupe de contrôle pour cette campagne particulière ou Canvas.
 
-> In short, users in the Global Control Group are filtered out of the campaign or Canvas audience prior to entry. Of the users who enter the campaign or Canvas, a percentage of those are then assigned to the control variant.
+> En bref, les utilisateurs du Groupe de contrôle mondial sont filtrés hors de la campagne ou du public de Canvas avant l'inscription. Parmi les utilisateurs qui entrent dans la campagne ou Canvas, un pourcentage de ces derniers sont ensuite affectés à la variante de contrôle.
 
-#### Global Control Group segments on the Developer Console
+#### Segments du groupe de contrôle global dans la console de développement
 
-You may see multiple **Global Control** segments in the **Additional API Identifiers** section of the **Developer Console**. This is because each time the Global Control Group is enabled or disabled, a new Global Control Group is formed. This leads to multiple segments labeled "Global Control Group".
+Vous pouvez voir plusieurs segments **Contrôle global** dans la section **Identifiants d'API supplémentaires** de la **console développeur**. Ceci est dû au fait que chaque fois que le Groupe de contrôle global est activé ou désactivé, un nouveau Groupe de contrôle global est formé. Ceci mène à plusieurs segments marqués "Groupe de contrôle global".
 
-Only one of these segments is active and can be queried using the [Users by Global Control Group]({{site.baseurl}}api/endpoints/export/user_data/post_users_global_control_group/) API endpoint, or exported from the dashboard. The export from the dashboard specifically states which subsegments make up this Global Control Group.
+Un seul de ces segments est actif et peut être interrogé en utilisant le point de terminaison de l'API [Utilisateurs par Groupe de Contrôle Global,]({{site.baseurl}}api/endpoints/export/user_data/post_users_global_control_group/) ou exporté depuis le tableau de bord. L'exportation depuis le tableau de bord indique spécifiquement quels sous-segments composent ce Groupe de Contrôle Global.
 
-## Testing best practices
+## Tester les meilleures pratiques
 
-### Optimal control group size {#percentage-guidelines}
+### Contrôle optimal de la taille du groupe {#percentage-guidelines}
 
-<br>__Two main rules to keep in mind are__:<br>- Your control group should be no smaller than 1000 users.<br>- Your control group should be no more than 10% of your entire audience.
+<br>__Deux règles principales à garder à l'esprit sont__:<br>- Votre groupe de contrôle ne devrait pas être inférieur à 1000 utilisateurs.<br>- Votre groupe de contrôle ne doit pas dépasser 10 % de l'ensemble de votre audience.
 
-If you have a total audience that’s smaller than 10,000, you should increase your percentage to create a group of over 1000 users; in this case, you should not increase your percentage above 15%. Keep in mind that the smaller your overall app group size is, the more challenging it will be to run a statistically rigorous test.
-- Some trade-offs to consider when thinking about your control group size are that you need a significantly large number of customers in your control group so that any behavior analysis created is trustworthy. However, the larger your control group is, the fewer customers are getting your campaigns, which is a downside if you’re using your campaigns to drive engagement and conversions.
-- The ideal percentage of your total audience will depend on how large your total audience is. The bigger your total audience is, the smaller your percentage can be. If you have a small audience, however, you will need a larger percentage for your control group.
+Si vous avez un public total inférieur à 10 000 personnes, vous devriez augmenter votre pourcentage pour créer un groupe de plus de 1000 utilisateurs ; dans ce cas, vous ne devriez pas augmenter votre pourcentage de plus de 15%. Gardez à l'esprit que la taille globale de votre groupe d'applications est plus petite, plus il sera difficile de faire un test statistiquement rigoureux.
+- Certains compromis à considérer lorsque vous pensez à la taille de votre groupe de contrôle sont que vous avez besoin d'un nombre important de clients dans votre groupe de contrôle afin que toute analyse de comportement créée soit digne de confiance. Cependant, plus votre groupe de contrôle est grand, moins de clients reçoivent de vos campagnes, qui est un inconvénient si vous utilisez vos campagnes pour stimuler l'engagement et les conversions.
+- Le pourcentage idéal de votre auditoire total dépendra de la taille de votre auditoire. Plus votre audience est grande, plus votre pourcentage peut être petit. Toutefois, si vous avez un petit public, vous aurez besoin d'un pourcentage plus important pour votre groupe de contrôle.
 
-### Experiment duration
+### Durée de l'expérience
 
-#### Choose an ideal duration {#reshuffle}
+#### Choisissez une durée idéale {#reshuffle}
 
-How long to run your experiment before reshuffling control group membership depends on what you’re testing and what your users’ baseline behaviors are. If you aren’t sure, a good place to start is one quarter (3 months), and you should not go shorter than 1 month.
+La durée de votre expérience avant de remanier la composition du groupe de contrôle dépend de ce que vous testez et des comportements de base de vos utilisateurs. Si vous n'êtes pas sûr, un bon endroit pour commencer est un quart (3 mois), et vous ne devriez pas aller plus court que 1 mois.
 
-To determine the appropriate length of time for your experiment, consider what questions you’re hoping to answer. For instance, are you looking to see if there’s a difference in sessions? If so, think about how often your users have sessions organically. Brands whose users have sessions every day can run shorter experiments than brands whose users have sessions only a couple of times a month.
+Pour déterminer la durée appropriée de votre expérience, examinez les questions auxquelles vous comptez répondre. Par exemple, êtes-vous à la recherche de voir s’il y a une différence dans les sessions ? Si c'est le cas, pensez à la fréquence à laquelle vos utilisateurs ont des sessions organiques. Les marques dont les utilisateurs ont des sessions chaque jour peuvent faire des expériences plus courtes que les marques dont les utilisateurs n'ont des sessions que deux fois par mois.
 
-Or, maybe you’re interested in purchasing behaviors. Then your experiment would most likely need to run for longer than an experiment where you’re examining sessions, since it’s likely your users make purchases less frequently.
+Ou peut-être que vous êtes intéressé par des comportements d’achat. Alors votre expérience devrait probablement être exécutée plus longtemps qu'une expérience où vous examinez des sessions, car il est probable que vos utilisateurs fassent des achats moins fréquemment.
 
 {% alert tip %}
-The longer you hold the same control group out the more they diverge from the treatment group, which can create bias. Resetting the Global Control Group rebalances the population.
+Plus vous détenez le même groupe de contrôle, plus ils se différencient du groupe de traitement, ce qui peut créer des partis. La réinitialisation du Groupe de contrôle mondial rééquilibre la population.
 {% endalert %}
 
-#### Try to limit ending experiments prematurely
+#### Essayez de limiter prématurément les expériences de fin de vie
 
-You should decide how long to run your experiment before beginning it, and then you should only end your experiment and gather final results once you’ve reached this pre-determined point. Ending your experiment early, or whenever you see promising data, will introduce bias.
+Vous devez décider de la durée de votre expérience avant de la lancer, puis vous ne devriez terminer votre expérience et récolter les résultats finaux qu'une fois que vous avez atteint ce point prédéterminé. Mettre fin à votre expérience tôt ou chaque fois que vous voyez des données prometteuses, introduira un parti pris.
 
-#### Think about valuable metrics
+#### Pensez à des indicateurs de valeur
 
-Consider any baseline behaviors for the metrics you’re most interested in. Are you interested in purchase rates for subscription plans that are renewed only on an annual basis? Or do customers have a weekly habit for the event you’d like to measure? Think about how long it takes users to potentially alter their behaviors due to your messaging. Once you decide how long your experiment should run, be sure to not end your experiment or record final results early, or your findings may be biased.
-[2]: {% image_buster /assets/img/control_group/control_group2.png %} [4]: {% image_buster /assets/img/control_group/control_group4.png %} [5]: {% image_buster /assets/img/control_group/control_group5.png %} [6]: {% image_buster /assets/img/control_group/control_group6.png %}
+Considérez tout comportement de base pour les paramètres qui vous intéressent le plus. Êtes-vous intéressé par les tarifs d’achat pour les abonnements renouvelés uniquement sur une base annuelle? Ou les clients ont-ils une habitude hebdomadaire pour l’événement que vous souhaitez mesurer ? Pensez au temps qu'il faut aux utilisateurs pour modifier leurs comportements en raison de votre messagerie. Une fois que vous décidez combien de temps votre expérience doit courir, Assurez-vous de ne pas mettre fin à votre expérience ou de ne pas enregistrer les résultats finaux tôt ou vos conclusions peuvent être partiales.
+[2]: {% image_buster /assets/img/control_group/control_group2.png %} [4]: {% image_buster /assets/img/control_group/control_group4. ng %} [5]: {% image_buster /assets/img/control_group/control_group5.png %} [6]: {% image_buster /assets/img/control_group/control_group6.png %}
