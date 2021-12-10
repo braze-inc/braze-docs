@@ -1,73 +1,73 @@
 ---
-nav_title: Deep Linking to In-App Content
-article_title: Deep Linking to In-App Content
+nav_title: Liaison profonde vers le contenu de l'application
+article_title: Liaison profonde vers le contenu de l'application
 page_order: 2
-description: "Deep linking is a way of launching a native app and providing additional information telling it to do some specific action or show specific content. This reference article covers how to deep-link in your in-app message content."
+description: "Un lien profond est un moyen de lancer une application native et de fournir des informations supplémentaires lui demandant de faire une action spécifique ou d'afficher un contenu spécifique. Cet article de référence couvre la façon de créer un lien profond dans le contenu de votre message dans l'application."
 ---
 
-# Deep linking to in-app content
+# Liaison profonde vers le contenu de l'application
 
-## What is deep linking?
+## Qu'est-ce que le lien profond?
 
-Deep linking is a way of launching a native app and providing additional information telling it to do some specific action or show specific content.
+Un lien profond est un moyen de lancer une application native et de fournir des informations supplémentaires lui demandant de faire une action spécifique ou d'afficher un contenu spécifique.
 
-There are three parts to this:
+Il y a trois parties à cela:
 
-1. Identify which app to launch
-2. Instruct the app which action to perform
-3. Provide the action with any additional data it will need
+1. Identifier quelle application à lancer
+2. Indiquer à l'application quelle action effectuer
+3. Fournir à l'action toutes les données supplémentaires dont elle aura besoin
 
-Deep links are custom URIs that link to a specific part of the app and contain all of the above parts. The key is defining a custom scheme. `http:` is the scheme with which almost everyone is familiar but schemes can begin with any word. A scheme must start with a letter, but can then contain letters, numbers, plus-signs, minus-signs or dots. Practically speaking, there is no central registry to prevent conflicts, so it is a best practice to include your domain name in the scheme. For example, `twitter://` is the iOS URI to launch Twitter's mobile app.
+Les liens profonds sont des URIs personnalisés qui lien vers une partie spécifique de l'application et contiennent toutes les parties ci-dessus. La clé est de définir un schéma personnalisé. `http:` est le schéma avec lequel presque tout le monde est familier mais les schémas peuvent commencer par n'importe quel mot. Un schéma doit commencer par une lettre, mais peut ensuite contenir des lettres, des chiffres, des signes de plus, des signes de moins ou des points. Pratiquement parlant, il n'y a pas de registre central pour prévenir les conflits, donc il est préférable d'inclure votre nom de domaine dans le schéma. Par exemple, `twitter://` est l'URI iOS pour lancer l'application mobile de Twitter.
 
-Everything after the colon within a deep link is free-form text. It's up to you to define its structure and interpretation, however, a common convention is to model it after `http:` URLs, including a leading `//` and query parameters (e.g. `?foo=1&bar=2`). For the Twitter example, `twitter://user?screen_name=[id]` would be utilized to launch a specific profile in the app.
+Tout après le deux-point dans un lien profond est texte de forme libre. C'est à vous de définir sa structure et son interprétation, cependant, une convention commune est de la modéliser après `http:` URLs, y compris les paramètres de `//` et de la requête (e. . `?foo=1&bar=2`). Pour l'exemple Twitter, `twitter://user?screen_name=[id]` serait utilisé pour lancer un profil spécifique dans l'application.
 
-These deep links are a powerful tool when used in tandem with the Braze [News Feed][11]. Providing deep links as the URI within News Feed items allows you to use the News Feed as an individualized navigation tool to direct users to content inside in your app. They can also be used to direct users from [push notifications][1] and in-app messages to relevant app sections and content.
+Ces liens profonds sont un outil puissant lorsqu'il est utilisé en tandem avec le Flux d'Actualités [Braze][11]. Fournir des liens profonds comme URI dans les éléments du flux d'actualités vous permet d'utiliser le fil d'actualité comme outil de navigation personnalisé pour diriger les utilisateurs vers le contenu de votre application. Ils peuvent également être utilisés pour diriger les utilisateurs depuis [les notifications push][1] et les messages dans l'application vers les sections et le contenu de l'application concernées.
 
 {% alert note %}
-Keep in mind that enabling these deep links requires some additional setup within your app. Please reference our documentation on [deep links for iOS]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/advanced_use_cases/linking/#deep-links) and on how to [deep link to the News Feed for Android]({{site.baseurl}}/developer_guide/platform_integration_guides/android/advanced_use_cases/deep_linking/#Android_Deep_Advance) to understand the requirements for implementation.
+Gardez à l'esprit que l'activation de ces liens profonds nécessite une configuration supplémentaire dans votre application. Veuillez consulter notre documentation sur les [liens profonds pour iOS]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/advanced_use_cases/linking/#deep-links) et sur la façon de [lien profond vers le flux d'actualités pour Android]({{site.baseurl}}/developer_guide/platform_integration_guides/android/advanced_use_cases/deep_linking/#Android_Deep_Advance) pour comprendre les exigences d'implémentation.
 {% endalert %}
 
-## UTM tags and campaign attribution
+## Tags UTM et attribution de campagne
 
-### What is a UTM tag?
+### Qu'est-ce qu'une balise UTM ?
 
-[UTM (Urchin Traffic Manager) tags][4] allow you to include campaign attribution details directly within links. UTM tags are used by Google Analytics to collect campaign attribution data, and can be used to track the following properties:
+[Les balises UTM (Urchin Traffic Manager)][4] vous permettent d'inclure les détails d'attribution de la campagne directement dans les liens. Les tags UTM sont utilisés par Google Analytics pour collecter des données d'attribution de campagne, et peuvent être utilisés pour suivre les propriétés suivantes:
 
-- `utm_source`: the identifier for the source of the traffic (e.g. `my_app`)
-- `utm_medium`: the campaign medium (e.g. `newsfeed`)
-- `utm_campaign`: the identifier for the campaign (e.g. `spring_2016_campaign`)
-- `utm_term`: identifier for a paid search term that brought the user to your app or website (e.g. `pizza`)
-- `utm_content`: an identifier for the specific link/content that the user clicked on (e.g. `toplink` or `android_iam_button2`)
+- `utm_source`: l'identifiant de la source du trafic (par exemple `my_app`)
+- `utm_medium`: le média de la campagne (par exemple `le fil d'actualité`)
+- `utm_campaign`: l'identifiant de la campagne (par exemple `spring_2016_campaign`)
+- `utm_term`: identifiant pour un terme de recherche payant qui a amené l'utilisateur sur votre application ou votre site web (par exemple `pizza`)
+- `utm_content`: un identifiant pour le lien/contenu spécifique sur lequel l'utilisateur a cliqué (par exemple `toplink` ou `android_iam_button2`)
 
-UTM tags can be embedded into both regular HTTP (web) links and deep links and tracked using Google Analytics.
+Les balises UTM peuvent être intégrées à la fois dans des liens HTTP (web) réguliers et dans des liens profonds et suivies à l'aide de Google Analytics.
 
-### Using UTM tags with Braze
+### Utiliser des balises UTM avec Braze
 
-If you want to use UTM tags with regular HTTP (web) links—for example, to do campaign attribution for your email campaigns—and your organization already uses Google Analytics, you can simply use [Google's URL builder][6] to generate UTM links. These links can be readily embedded into Braze campaign copy just like any other link.
+Si vous voulez utiliser des balises UTM avec des liens HTTP (web), par exemple, pour faire l'attribution de la campagne pour vos campagnes de messagerie — et votre organisation utilise déjà Google Analytics, vous pouvez simplement utiliser [le constructeur d'URL de Google][6] pour générer des liens UTM. Ces liens peuvent être facilement intégrés dans la copie de campagne Braze comme tout autre lien.
 
-In order to use UTM tags in deep links to your app, your app must have the relevant [Google Analytics SDK][5] integrated and [correctly configured to handle deep links][7]. Check with your developers if you're unsure about this.
+Afin d'utiliser les balises UTM dans les liens profonds vers votre application, votre application doit avoir intégré le [SDK Google Analytics][5] pertinent et [correctement configuré pour gérer les liens profonds][7]. Vérifiez avec vos développeurs si vous n'êtes pas sûr de cela.
 
-Once the Analytics SDK is integrated and configured, UTM tags can be used with deep links in Braze campaigns. To set up UTM tags for your campaign, simply include the necessary UTM tags in the destination URL or deep links. The examples below show how to use UTM tags in push notifications, News Feed cards and in-app messages.
+Une fois que le SDK Analytics est intégré et configuré, les balises UTM peuvent être utilisées avec des liens profonds dans les campagnes de Braze. Pour configurer les balises UTM pour votre campagne, il vous suffit d'inclure les balises UTM nécessaires dans l'URL de destination ou les liens profonds. Les exemples ci-dessous montrent comment utiliser les balises UTM dans les notifications push, les cartes de News Feed et les messages dans l'application.
 
-#### Attributing push opens with UTM tags
+#### Attribuer un push s'ouvre avec des tags UTM
 
-To include UTM tags in your deep links for push notifications, simply set the on click behavior of the push message to be a deep link, write the deep link address and include the desired UTM tags in the following fashion:
+Pour inclure les tags UTM dans vos liens profonds pour les notifications push, définissez simplement le comportement de clic du message push comme un lien profond, écrire l'adresse du lien profond et inclure les balises UTM désirées de la manière suivante:
 
 ```
 myapp://products/20-gift-card?utm_source=my_app&utm_medium=push&utm_campaign=spring2016giftcards&utm_content=ios_deeplink
 ```
 
-!\[UTM Tags in Push Message\]\[8\]
+!\[Tags UTM in Push Message\]\[8\]
 
-#### Attributing News Feed clicks with UTM tags
+#### Attribuer des clics sur le fil d'actualité avec des tags UTM
 
-News Feed items deep linking into your app can be configured to use UTM tags as well. Note that you can use `utm_content` to separate between deep links on different OSes.
+Les éléments du flux d'actualités profondément liés à votre application peuvent également être configurés pour utiliser les balises UTM. Notez que vous pouvez utiliser `utm_content` pour séparer les liens profonds sur différents systèmes d'exploitation.
 
-!\[UTM Tags in News Feed\]\[9\]
+!\[Tags UTM in News Fe\]\[9\]
 
-#### Attributing in-app message clicks with UTM tags
+#### Attribuer des clics de message dans l'application avec des tags UTM
 
-Similarly to push notifications and News Feed cards, you can include UTM tags in the deep links included within your in-app messages.
+De la même manière que les notifications push et les cartes News Feed, vous pouvez inclure des balises UTM dans les liens profonds inclus dans vos messages dans l'application.
 
 !\[UTM Tags in In-App Message\]\[10\]
 [8]: {% image_buster /assets/img_archive/push_utm_tags.png %} [9]: {% image_buster /assets/img_archive/news_feed_utm_tags.png %} [10]: {% image_buster /assets/img_archive/iam_utm_tags.png %}
