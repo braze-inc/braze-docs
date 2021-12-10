@@ -1,78 +1,78 @@
 ---
-nav_title: FAQs
-article_title: Canvas FAQs
+nav_title: Foire aux questions
+article_title: FAQ sur la toile
 page_order: 10
-description: "This article provides answers to frequently asked questions about Canvas."
-tool: Canvas
+description: "Cet article fournit des réponses aux questions fréquemment posées sur Canvas."
+tool: Toile
 ---
 
-# Canvas FAQs
+# FAQ sur la toile
 
-> This article provides answers to some frequently asked questions about Canvas.
+> Cet article fournit des réponses à certaines questions fréquemment posées au sujet de Canvas.
 
-### What happens if the audience and send time are identical for a Canvas that has one variant, but multiple branches?
+### Que se passe-t-il si le public et le temps d'envoi sont identiques pour une toile qui a une variante, mais plusieurs branches?
 
-We enqueue a job for each step—they run at around the same time, and one of them "wins". In practice, this may be sorted somewhat evenly, but it's likely to have at least a slight bias toward the step that was created first.
+Nous mettons en file d'attente un emploi pour chaque étape, ils courent à la même heure, et l'un d'eux "gagne". Dans la pratique, cela peut être trié de manière un peu égale, mais il est probable qu'il y ait au moins un léger parti pris pour l'étape qui a été créée en premier.
 
-Moreover, we can't make any guarantees about exactly what that distribution will look like. If you want to ensure an even split, add a [Random Bucket Number]({{site.baseurl}}/user_guide/engagement_tools/campaigns/ideas_and_strategies/ab_testing_with_random_buckets/) filter to ensure it.
+De plus, nous ne pouvons pas garantir exactement à quoi ressemblera cette distribution. Si vous voulez vous assurer une division pair, ajoutez un filtre [Random Bucket Number]({{site.baseurl}}/user_guide/engagement_tools/campaigns/ideas_and_strategies/ab_testing_with_random_buckets/) pour vous assurer qu'il soit bien divisé.
 
-### What happens when you stop a Canvas?
+### Que se passe-t-il lorsque vous arrêtez un Canvas?
 
-When you stop a Canvas, the following applies:
+Lorsque vous arrêtez un Canvas, ce qui suit s'applique :
 
-- Users will be prevented from entering the Canvas.
-- No further messages will be sent out, despite where a user is in the flow.
-- **Exception:** Email Canvases will not immediately stop. Once the send requests go to SendGrid, there is nothing we can do to stop them from being delivered to the user.
+- Les utilisateurs ne seront pas autorisés à entrer dans le Canvas.
+- Aucun autre message ne sera envoyé, malgré l'endroit où un utilisateur est dans le flux.
+- **Exception :** Les Canevas Email ne s'arrêteront pas immédiatement. Une fois que les demandes d'envoi sont envoyées à SendGrid, nous ne pouvons rien faire pour les empêcher d'être livrés à l'utilisateur.
 
 {% alert note %}
-Stopping a Canvas won't flush users who are waiting to receive messages. If you re-enable the Canvas and users are still waiting for the message, they will receive it (unless the time they should've been sent the message has passed, then they won't receive it).
+Arrêt d'une Canvas n'effacera pas les utilisateurs qui attendent de recevoir des messages. Si vous réactivez le Canvas et que les utilisateurs attendent toujours le message, ils le recevront (sauf si le temps où le message leur a été envoyé, alors ils ne le recevront pas).
 {% endalert %}
 
-### When does an exception event trigger?
+### Quand un événement d’exception se déclenche-t-il?
 
-[Exception events]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/exception_events/) only trigger while the user is waiting to receive the Canvas step it's associated with. If a user performs an action in advance, the exception event will not trigger.
+[Événements d'exception]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/exception_events/) ne se déclenche que lorsque l'utilisateur attend de recevoir l'étape Canvas à laquelle elle est associée. Si un utilisateur effectue une action à l'avance, l'événement d'exception ne se déclenchera pas.
 
-If you want to except users who have performed a certain event in advance, use [filters]({{site.baseurl}}/user_guide/engagement_tools/segments/segmentation_filters/) instead.
+Si vous voulez exclure les utilisateurs qui ont effectué un certain événement à l'avance, utilisez [filtres]({{site.baseurl}}/user_guide/engagement_tools/segments/segmentation_filters/) à la place.
 
-### How does editing a Canvas affect users already in the Canvas?
+### Comment la modification d'un Canvas affecte-t-elle les utilisateurs déjà présents dans le Canvas?
 
-If you edit some of the steps of a multi-step Canvas, users who were already in the audience but have not received the steps will receive the updated version of the message. Note that this will only happen if they haven't been evaulated for the step yet.
+Si vous modifiez certaines des étapes d'une toile en plusieurs étapes, les utilisateurs qui étaient déjà dans le public mais qui n'ont pas reçu les étapes recevront la version mise à jour du message. Notez que cela ne se produira que si elles n'ont pas encore été évitées.
 
-For more information on what you can or can't edit after launch, check out [Changing Your Canvas After Launch]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/change_your_canvas_after_launch/).
+Pour plus d'informations sur ce que vous pouvez ou ne pouvez pas modifier après le lancement, consultez [Changer votre Canvas après le lancement]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/change_your_canvas_after_launch/).
 
-### How are user conversions tracked in a Canvas?
+### Comment les conversions d’utilisateurs sont-elles suivies dans un Canvas?
 
-A user can only convert once per Canvas entry.
+Un utilisateur ne peut convertir qu'une seule fois par entrée sur Canvas .
 
-Conversions are assigned to the most recent message received by the user for that entry. The summary block at the beginning of a Canvas reflects all conversions performed by users within that path, whether or not they received a message. Each subsequent step will only show conversions that happened while that was the most recent step the user received.
+Les conversions sont assignées au message le plus récent reçu par l'utilisateur pour cette entrée. Le bloc de résumé au début d'une toile reflète toutes les conversions effectuées par les utilisateurs dans ce chemin, qu'ils aient reçu ou non un message. Chaque étape suivante ne montrera que les conversions qui se sont produites alors que c'était l'étape la plus récente que l'utilisateur a reçu.
 
 {% details Examples %}
 
-#### Example 1
+#### Exemple 1
 
-There is a Canvas path with 10 push notifications and the conversion event is "session start" ("Opens App"):
+Il y a un chemin Canvas avec 10 notifications push et l'événement de conversion est "démarrage de la session" ("Ouvre l'application") :
 
-- User A opens the app after entering but before receiving the first message.
-- User B opens the app after each push notification.
+- L'utilisateur A ouvre l'application après avoir entré mais avant de recevoir le premier message.
+- L'utilisateur B ouvre l'application après chaque notification push.
 
-**Result:** The summary will show two conversion while the individual steps will show a conversion of one on the first step and zero for all subsequent steps.
+**Résultat :** Le résumé montrera deux conversions alors que les étapes individuelles montreront une conversion d'une sur la première étape et zéro pour toutes les étapes suivantes.
 
 {% alert note %}
-If quiet hours is active when the conversion event happens, the same rules apply.
+Si des heures silencieuses sont actives lorsque l'événement de conversion se produit, les mêmes règles s'appliquent.
 {% endalert %}
 
-#### Example 2
+#### Exemple 2
 
-There is a one-step Canvas with quiet hours:
+Il y a une toile en une étape avec des heures silencieuses :
 
-1. User enters the Canvas.
-2. First step has no delay, but is within quiet hours, so the message is suppressed.
-3. User performs the conversion event.
+1. L'utilisateur entre dans le Canevas.
+2. La première étape n'a pas de délai, mais est dans les heures silencieuses, donc le message est supprimé.
+3. L'utilisateur effectue l'événement de conversion.
 
-**Result:** The user will count as converted in the overall Canvas variant, but not the step since they didn't receive the step.
+**Résultat :** L'utilisateur comptera comme converti dans la variante globale de Canvas, mais pas l'étape depuis qu'il n'a pas reçu l'étape.
 
 {% enddetails %}
 
-### When looking at the number of unique users, is Canvas analytics or the segmenter more accurate?
+### Lorsqu’on regarde le nombre d’utilisateurs uniques, l’analyse de Canvas ou le segmenteur est-il plus précis?
 
-The segmenter is a more accurate statistic for unique user data versus Canvas or campaign stats. This is because Canvas and campaign statistics are numbers that Braze increments when something happens—which means there are variables which could result in this number being different than that of the segmenter. For example, users can convert more than once for a Canvas or campaign.  
+Le segmenteur est une statistique plus précise pour les données utilisateur uniques contre Canvas ou les statistiques de campagne. C'est parce que les statistiques de Canvas et de campagne sont des nombres que Braze incrémente quand quelque chose se passe — ce qui signifie qu'il y a des variables qui pourraient faire que ce nombre soit différent de celui du segmenter. Par exemple, les utilisateurs peuvent convertir plusieurs fois pour une Canvas ou une campagne.  
