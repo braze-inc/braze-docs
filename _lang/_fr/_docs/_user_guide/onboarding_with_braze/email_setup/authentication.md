@@ -1,36 +1,36 @@
 ---
-nav_title: Email Authentication
-article_title: Email Authentication
+nav_title: Authentification par e-mail
+article_title: Authentification par e-mail
 page_order: 1
-page_type: reference
-description: "This reference article covers email authentication, a collection of techniques aimed at equipping your email with verifiable information about its origin."
-channel: email
+page_type: Référence
+description: "Cet article de référence couvre l'authentification par e-mail, un ensemble de techniques visant à équiper votre e-mail d'informations vérifiables sur son origine."
+channel: Email
 ---
 
-# Email authentication
+# Authentification par e-mail
 
-> Email authentication is a collection of techniques that equip your emails with verifiable information about its origin.
+> L'authentification par courriel est un ensemble de techniques qui équipent vos e-mails d'informations vérifiables sur son origine.
 
-Proper authentication is crucial for ISPs to recognize you as a sender of desirable emails. It's how the ISPs know it's you and how they know to deliver your mail immediately. Without authentication, your outreach is presumed fraudulent.
+Une authentification adéquate est cruciale pour que les FSI vous reconnaissent en tant qu'expéditeur d'e-mails désirés. C'est ainsi que les FSI savent que c'est vous et comment ils savent livrer votre courrier immédiatement. Sans authentification, votre accès est présumé frauduleux.
 
-## Methods of authentication
+## Méthodes d'authentification
 
-### Sender Policy Framework (SPF)
+### Cadre de politique de l'expéditeur (SPF)
 
-This method confirms that your Braze email sending IP address is authorized to send mail on your behalf. SPF is your basic authentication and is accomplished by publishing the text records in DNS settings. The receiving server will check the DNS records and determine whether it is authentic or not. This method is designed to validate the email sender.
+Cette méthode confirme que votre adresse IP d'envoi de courriel Braze est autorisée à envoyer du courrier en votre nom. SPF est votre authentification de base et s'accomplit en publiant les enregistrements texte dans les paramètres DNS. Le serveur de réception vérifiera les enregistrements DNS et déterminera s'il est authentique ou non. Cette méthode est conçue pour valider l'expéditeur du courriel.
 
-Your SPF record will be set up when Braze configures your IPs and domains - beyond adding the DNS records we give to you, no further action is required.
+Votre enregistrement SPF sera configuré lorsque Braze configurera vos adresses IP et vos domaines - au-delà de l'ajout des enregistrements DNS que nous vous donnons, aucune action supplémentaire n'est requise.
 
 ### Domain Keys Identified Mail (DKIM)
 
-This method confirms that your Braze email sending domain is authorized to send mail on your behalf. This method is designed to validate the authenticity of the sender AND ensure the integrity of the message is preserved. It also uses individual cryptographic digital signatures so ISPs can be sure the mail they're delivering is the same as the mail you sent.
+Cette méthode confirme que votre domaine d'envoi de courriels Braze est autorisé à envoyer du courrier en votre nom. Cette méthode est conçue pour valider l'authenticité de l'expéditeur ET s'assurer que l'intégrité du message est préservée. Il utilise également des signatures numériques cryptographiques individuelles afin que les FAI puissent être sûrs que le courrier qu'ils délivrent est le même que le courrier que vous avez envoyé.
 
-Braze signs the mail with your secret private key. The ISPs verify the signature against your public key, which is stored in your custom DNS record. No two signatures are exactly alike, and only your public key can successfully verify your private key signature.
+Braze signe le courrier avec votre clé privée secrète. Les FAI vérifient la signature par rapport à votre clé publique, qui est stockée dans votre enregistrement DNS personnalisé. Il n'y a pas deux signatures exactement identiques et seule votre clé publique peut vérifier avec succès votre signature de clé privée.
 
-Your DKIM record will be set up when Braze configures your IPs and domains - beyond adding the DNS records we give to you, no further action is required.
+Votre enregistrement DKIM sera configuré lorsque Braze configurera vos IP et vos domaines - au-delà de l'ajout des enregistrements DNS que nous vous donnons, aucune action supplémentaire n'est requise.
 
-### Domain-based Message Authentication, Reporting, and Conformance (DMARC)
+### Authentification de messages par domaine, Rapports et Conformité (DMARC)
 
-This method takes the SPF and DKIM authentication protocols one step further.
+Cette méthode va plus loin dans les protocoles d'authentification SPF et DKIM.
 
-If you decide to use [DMARC](https://dmarc.org/), you can instruct ISPs on how they should handle mail that failed your signature or authentication checks. Failures could be a sign that others are trying to imitate you or your email. You can tell the ISPs to reject or quarantine the mail and even send you automated reports about the bad mail.
+Si vous décidez d'utiliser [DMARC](https://dmarc.org/), vous pouvez indiquer aux FAI comment ils doivent gérer le courrier qui a échoué à votre signature ou aux vérifications d'authentification. Les échecs pourraient être un signe que d'autres tentent de vous imiter, vous ou votre email. Vous pouvez dire aux FAI de rejeter ou de mettre en quarantaine le courrier et même de vous envoyer des rapports automatisés sur le mauvais courrier.
