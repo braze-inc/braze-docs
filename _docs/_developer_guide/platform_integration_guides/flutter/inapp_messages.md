@@ -8,3 +8,70 @@ description: "This article covers in-app messages for iOS and Android apps using
 channel: in-app messages
 
 ---
+
+# In-app messages
+
+Native in-app messages display automatically out of the box on Android and iOS when using Flutter. This article covers different customization options for in-app messages when using Flutter.
+
+
+## Disabling automatic display
+
+{% tabs %}
+{% tab Android %}
+
+// Need to update this for automatic registration since you can't do this anymore - it is in IntegrationInitializer.kt
+
+To disable automatic in-app message display for Android, implement the `IInAppMessageManagerListener` delegate as described in our Android section on [Custom Manager Listener]({{site.baseurl}}/developer_guide/platform_integration_guides/android/in-app_messaging/customization/#custom-manager-listener). Your `beforeInAppMessageDisplayed` method implementation should return `InAppMessageOperation.DISCARD`.
+
+// For an example, see `MainActivity.kt` in our sample app.
+
+{% endtab %}
+{% tab iOS %}
+
+To disable automatic in-app message display for iOS, implement the `ABKInAppMessageControllerDelegate` delegate as described in our iOS section on [Core In-App Message Delegate]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/in-app_messaging/customization/#core-in-app-message-controller-delegate). Your `beforeInAppMessageDisplayed` delegate implementation should return `ABKInAppMessageDisplayChoice.discardInAppMessage`. For an example, see [AppDelegate.swift in our sample app](https://github.com/braze-inc/braze-flutter-sdk/blob/master/example/ios/Runner/AppDelegate.swift).
+
+{% endsubtab %}
+{% endsubtabs %}
+{% endtab %}
+{% endtabs %}
+
+## In-app message data callback
+
+You may set a callback in Dart to receive Braze in-app message data in the Flutter host app.
+
+To set the callback, call `BrazePlugin.setBrazeInAppMessageCallback()` from your Flutter app with a function that takes a `BrazeInAppMessage` instance. The `BrazeInAppMessage` object supports a subset of fields available in the native model objects, including `uri`, `message`, `header`, `buttons`, `extras`, and more.
+
+{% tabs %}
+{% tab Android %}
+
+On Android, this callback works with no additional integration required.
+
+{% endtab %}
+{% tab iOS %}
+
+On iOS, you will additionally need to implement the `ABKInAppMessageControllerDelegate` delegate as described in our iOS section on [Core In-App Message Delegate]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/in-app_messaging/customization/#core-in-app-message-controller-delegate). Your `beforeInAppMessageDisplayed` delegate implementation must call `BrazePlugin.process(inAppMessage)`. For an example, see [AppDelegate.swift in our sample app](https://github.com/braze-inc/braze-flutter-sdk/blob/master/example/ios/Runner/AppDelegate.swift).
+
+{% endsubtab %}
+{% endsubtabs %}
+{% endtab %}
+{% endtabs %}
+
+To log analytics using your `BrazeInAppMessage`, pass the instance into the `logInAppMessageClicked`, `logInAppMessageImpression`, and `logInAppMessageButtonClicked` methods available on the main plugin interface.
+
+### Replaying in-app messages
+
+To store any in-app messages triggered before the callback available and replay them once it is set, add the following entry to the `customConfigs` map in the `BrazePlugin` constructor:
+```
+replayCallbacksConfigKey : true
+```
+
+## Test displaying a sample in-app message
+
+Follow the steps below to test a sample in-app message.
+
+1. Set an active user in the React application by calling `myBrazePlugin.changeUser('user-id')` method.
+2. Head to **Campaigns** and follow [this guide][5] to create a new **In-App Messaging** campaign.
+3. Compose your test in-app messaging campaign and head over to the **Test** tab. Add the same `user-id` as the test user and click **Send Test**.
+4. Tap the push notification and that should display the in-app message on your device.
+
+[5]: {{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/create/
