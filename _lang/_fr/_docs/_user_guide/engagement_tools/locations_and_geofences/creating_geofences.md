@@ -1,44 +1,44 @@
 ---
-nav_title: Creating Geofences
-article_title: Creating Geofences
+nav_title: Création de géorepérages
+article_title: Création de géorepérages
 page_order: 1
-page_type: reference
-description: "This reference article covers how to create and configure Geofences."
+page_type: Référence
+description: "Cet article de référence couvre la façon de créer et de configurer Geofences."
 tool:
-  - Location
+  - Localisation
 ---
 
-# Geofences
+# Géorepérages
 
-> this reference article covers how to create and configure geofences.
+> cet article de référence couvre la façon de créer et de configurer des géofences.
 
-At the core of Braze's real-time location offering is the concept of a "geofence." A geofence is a virtual geographic area, represented as latitude/longitude pairs combined with a radius, forming a circle in a specific position on the globe. Geofences can vary in size from the size of a building to the size of an entire city.
+Au cœur de l'offre de l'emplacement en temps réel de Braze se trouve le concept de "géorepérage". Un géorepérage est une zone géographique virtuelle, représentée par des paires de latitude/longitude combinées à un rayon, formant un cercle dans une position spécifique sur le globe. Les Geofences peuvent varier de la taille d'un bâtiment à la taille d'une ville entière.
 
-You can define geofences on the Braze dashboard and trigger campaigns in real-time as users enter and exit them across the globe. Geofences are deeply integrated into Braze's segmentation and messaging capabilities. Campaigns can be delivered in real-time to users as they exit or enter geofences, or sent as followups hours or days later. As users enter or exit your geofences, they add a new layer of user data that can be used for segmentation and re-targeting.
+Vous pouvez définir des géorepérages sur le tableau de bord de Braze et déclencher des campagnes en temps réel lorsque les utilisateurs entrent et les quittent à travers le monde. Les géofences sont profondément intégrées dans les capacités de segmentation et de messagerie de Brase. Les campagnes peuvent être livrées en temps réel aux utilisateurs lorsqu'ils quittent ou entrent dans les géofences, ou envoyées sous forme de suivi des heures ou des jours plus tard. Au fur et à mesure que les utilisateurs saisissent ou quittent vos géorepérages, ils ajoutent une nouvelle couche de données utilisateur qui peut être utilisée pour la segmentation et le re-ciblage.
 
-Geofences are managed in the **Locations** page in the **Engagement** section. Geofences are organized into geofence sets - a group of geofences that can be used to segment or engage users throughout the platform. Example geofence sets include `All Northeast Regional Stores` or `September Events`. A given geofence set may only contain up to 10,000 geofences.
+Les géorepérages sont gérés dans la page **Emplacements** dans la section **Engagement**. Les géorepérages sont organisés en ensembles de géorepérage - un groupe de géorepérages qui peuvent être utilisés pour segmenter ou engager les utilisateurs sur toute la plate-forme. Les ensembles d'exemples de géorepérage incluent `Tous les magasins régionaux du nord-est` ou `les événements de septembre`. Un ensemble de géorepérage donné ne peut contenir que 10 000 géorepéres.
 
-## Creating geofence sets manually
+## Création manuelle de jeux de géorepérage
 
-!\[Geofence Location Main Screen\]\[1\]
+!\[Écran principal d'emplacement Geofence\]\[1\]
 
-Once you have created a geofence set, you can manually add geofences by drawing them on the map. We recommend creating geofences with a radius of at least 100 meters for optimal functionality.
+Une fois que vous avez créé un ensemble de géorepérages, vous pouvez ajouter manuellement des géorepérages en les dessinant sur la carte. Nous recommandons de créer des géorepérages avec un rayon d'au moins 100 mètres pour une fonctionnalité optimale.
 
-## Creating geofence sets via bulk upload
+## Création des ensembles de géorepérage via envoi groupé
 
-Geofences may be uploaded in bulk as a GeoJSON object of type `FeatureCollection`. Each individual geofence is a `Point` geometry type in the feature collection. The properties for each feature require a `"radius"` key, and an optional `"name"` key for each geofence.
+Les géorepérages peuvent être téléchargés en vrac en tant qu'objet GeoJSON de type `FeatureCollection`. Chaque géorepérage individuel est un type de géométrie `point` dans la collection de fonctionnalités. Les propriétés de chaque fonctionnalité requièrent une clé `"radius"` et une clé facultative `"nom"` pour chaque géorepérage.
 
-The sample below represents the correct GeoJSON for specifying two geofences: one for Braze's headquarters in NYC, and one for the Statue of Liberty south of Manhattan. We recommend uploading geofences with a radius of at least 100 meters for optimal functionality.
+L'échantillon ci-dessous représente le GeoJSON correct pour spécifier deux géoreences: un pour le siège de Braze à NYC, et un pour la Statue de la Liberté au sud de Manhattan. Nous recommandons de télécharger des géorepérages avec un rayon d'au moins 100 mètres pour une fonctionnalité optimale.
 
 ```
 {
   "type": "FeatureCollection",
-  "features": [
+  "caractéristiques": [
     {
-      "type": "Feature",
-      "geometry": {
+      "type": "Fonctionnalité",
+      "géométrie": {
         "type": "Point",
-        "coordinates": [-73.992473, 40.755669]
+        "coordonnées": [-73. 92473, 40. 55669]
       },
       "properties": {
         "radius": 200,
@@ -46,35 +46,35 @@ The sample below represents the correct GeoJSON for specifying two geofences: on
       }
     },
     {
-      "type": "Feature",
-      "geometry": {
+      "type": "Fonctionnalité",
+      "géométrie": {
         "type": "Point",
-        "coordinates": [-74.044468, 40.689225]
+        "coordonnées": [-74. 44468, 40. 89225]
        },
-      "properties": {
+      "propriétés": {
         "radius": 100,
-        "name": "Statue of Liberty"
+        "name": "Statue de la Liberté"
       }
     }, ...
   ]
 ```
-> The "coordinates" value in the GeoJSON needs to be formatted [Longitude, Latitude]
+> La valeur "coordonnées" dans le GeoJSON doit être formatée [Longitude, Latitude]
 
-> The maximum geofence radius that may be uploaded is 100000 meters (100km/62mi).
+> Le rayon maximal de géorepérage qui peut être téléchargé est de 100000 mètres (100km/62mi).
 
-## Using geofence events
+## Utiliser les événements de géorepérage
 
-Once geofences have been configured, you can use them to enhance and enrich how you communicate with your users.
+Une fois les géorepérages configurés, vous pouvez les utiliser pour améliorer et enrichir la façon dont vous communiquez avec vos utilisateurs.
 
-### Triggering
+### Déclenchement
 
-To use geofence data as part of campaign and Canvas triggers, choose "action-based delivery" for its delivery method. next, add a trigger action of `trigger a geofence`. Finally, choose the geofence set and geofence transition event types for your message. You can also advance users through a Canvas using geofence events.
+Pour utiliser les données de géorepérage dans le cadre de la campagne et des déclencheurs de Canvan, choisissez « la livraison basée sur l'action » pour sa méthode de livraison. Ensuite, ajoute une action de déclenchement de `déclenche une zone de géorepérage`. Enfin, choisissez les types d'événements de transition de géorepérage et de géorepérage pour votre message. Vous pouvez également faire avancer les utilisateurs à travers un Canvas en utilisant des événements de géorepérage.
 
 !\[action_based_geofence_trigger\]\[2\]
 
-### Personalization
+### Personnalisation
 
-To use geofence data to personalize a message, you may use the following Liquid personalization syntax:
+Pour utiliser les données de géorepérage pour personnaliser un message, vous pouvez utiliser la syntaxe de personnalisation Liquid suivante :
 
 {% raw %}
 * `{{event_properties.${geofence_name}}}`
