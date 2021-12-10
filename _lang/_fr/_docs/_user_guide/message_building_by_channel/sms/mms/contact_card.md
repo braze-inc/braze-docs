@@ -1,53 +1,53 @@
 ---
-nav_title: Contact Cards
-article_title: Contact Cards
+nav_title: Cartes de contact
+article_title: Cartes de contact
 page_order: 3
-description: "This reference article covers how to create a Contact Card to include in your MMS and SMS messages."
-page_type: reference
+description: "Cet article de référence traite de la façon de créer une carte de contact à inclure dans vos messages MMS et SMS."
+page_type: Référence
 channel:
   - MMS
 ---
 
-# Contact Cards
+# Cartes de contact
 
-> Contact Cards (sometimes known as vCard or Virtual Contact Files (VCF)) are a standardized file format for sending business and contact information that can be easily imported into address books or contact books.
+> Les Cartes de contact (parfois appelées vCard ou fichiers de contact virtuel (VCF)) sont un format de fichier normalisé pour envoyer des informations commerciales et de contact qui peuvent être facilement importées dans des carnets d'adresses ou des carnets de contacts.
 
-Contact Cards can be created [programmatically](https://www.twilio.com/blog/send-vcard-twilio-sms) and uploaded to the Braze [Media Library]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/media_library/#media-library) or created through our built-in Contact Card Generator. You can assign common properties to these cards, such as your company's name, phone number, address, email, and a small photo.
+Les fiches de contact peuvent être créées [par programme](https://www.twilio.com/blog/send-vcard-twilio-sms) et téléchargées dans la [Médiathèque de Braze]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/media_library/#media-library) ou créées via notre générateur de carte de contact. Vous pouvez assigner des propriétés communes à ces cartes, telles que le nom de votre entreprise, le numéro de téléphone, l'adresse, l'e-mail et une petite photo.
 
-## Contact Card generator
+## Générateur de carte de contact
 
 <script src="https://fast.wistia.com/embed/medias/7m77mdfr4y.jsonp" async></script><script src="https://fast.wistia.com/assets/external/E-v1.js" async></script><div class="wistia_responsive_padding" style="padding:56.25% 0 0 0;position:relative;"><div class="wistia_responsive_wrapper" style="height:100%;left:0;position:absolute;top:0;width:100%;"><div class="wistia_embed wistia_async_7m77mdfr4y videoFoam=true" style="height:100%;position:relative;width:100%"><div class="wistia_swatch" style="height:100%;left:0;opacity:0;overflow:hidden;position:absolute;top:0;transition:opacity 200ms;width:100%;"><img src="https://fast.wistia.com/embed/medias/7m77mdfr4y/swatch" style="filter:blur(5px);height:100%;object-fit:contain;width:100%;" alt="" aria-hidden="true" onload="this.parentNode.style.opacity=1;" /></div></div></div></div>
 
-### Step 1: Assign name
+### Étape 1 : Assigner un nom
 
-Contact Cards can be created from the SMS and MMS composer. Select the __Contact Card Generator__ tab to get started.
+Les fiches de contact peuvent être créées à partir du composant SMS et MMS. Sélectionnez l'onglet __Générateur de carte de contact__ pour commencer.
 
-Next, you will be prompted to input your company name or nickname. This is the name that your users will see when they save the card. A 20 character limit is enforced to ensure the user can see your whole company name or alias in their contacts and messaging app.
+Ensuite, vous serez invité à entrer le nom ou le pseudo de votre entreprise. C'est le nom que vos utilisateurs verront quand ils enregistreront la carte. Une limite de 20 caractères est appliquée pour s'assurer que l'utilisateur peut voir le nom ou l'alias de votre entreprise dans son application de contacts et de messagerie.
 
-![Contact Card Composer]({% image_buster /assets/img/sms/contact_card1.png %})
+![Contacter le compositeur de la carte]({% image_buster /assets/img/sms/contact_card1.png %})
 
-### Step 2: Assign phone number
+### Étape 2 : Assigner un numéro de téléphone
 
-Select the subscription group and desired phone number from the available drop-down options. This number will be listed in your Contact Card and available on their phone to text to once saved.
+Sélectionnez le groupe d'abonnement et le numéro de téléphone désiré dans les options déroulantes disponibles. Ce numéro sera répertorié dans votre carte de contact et disponible sur leur téléphone à texte une fois enregistré.
 
-Note that alphanumeric codes are not compatible with two-way messaging and are not supported for Contact Cards.
+Notez que les codes alphanumériques ne sont pas compatibles avec la messagerie bidirectionnelle et ne sont pas pris en charge pour les Cartes de contact.
 
-### Step 3: Optional fields
+### Étape 3 : Champs optionnels
 
-![Contact Card Options]({% image_buster /assets/img/sms/contact_card2.png %}){: style="float:right;max-width:35%;margin-left:15px;"}
+![Options de la carte de contact]({% image_buster /assets/img/sms/contact_card2.png %}){: style="float:right;max-width:35%;margin-left:15px;"}
 
-__Contact Card Contact Photo__<br> You can upload an optional thumbnail contact photo for your Contact Card. We recommend a 240x240 jpeg or png image. Any high-resolution images uploaded will be resized to 240x240 to ensure the deliverability of your message, as MMS messages larger than 5MB may fail.
+__Contact Card Contact Photo__<br> Vous pouvez télécharger une photo de contact optionnelle pour votre fiche de contact. Nous recommandons une image de 240x240 jpeg ou png. Toutes les images haute résolution téléchargées seront redimensionnées à 240x240 pour assurer la délivrabilité de votre message, car les messages MMS de plus de 5 Mo peuvent échouer.
 
-__Other Information__<br> Other fields allow you to insert your name, subheader, address, and other contact information that your user may want to have handy.
+__Autres informations__<br> D'autres champs vous permettent d'insérer votre nom, sous-en-tête, adresse et autres informations de contact que votre utilisateur peut vouloir avoir à portée de main.
 
 <br>
 
-### Step 4: Saving your contact card
+### Étape 4 : Enregistrement de votre fiche de contact
 
-Once you've input all the necessary fields, click __Generate Contact Card__, and it will be automatically attached to your campaign or Canvas. From here, you can add a message, test your Contact Card, and launch your campaign or Canvas.
+Une fois que vous aurez entré tous les champs nécessaires, cliquez sur __Générer la fiche de contact__et elle sera automatiquement jointe à votre campagne ou à votre Canvas. À partir de là, vous pouvez ajouter un message, tester votre carte de contact, et lancer votre campagne ou Canvas.
 
-The Contact card will also be saved in the [Media Library]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/media_library/#media-library) to easily reuse in future campaigns and Canvases.
+La fiche de contact sera également enregistrée dans la [Médiathèque]({{site.baseurl}}/user_guide/engagement_tools/templates_and_media/media_library/#media-library) pour la réutiliser facilement dans les futures campagnes et Canvases.
 
-## Adding an existing contact card
+## Ajout d'une fiche de contact existante
 
-To add an existing Contact Card, create a campaign or Canvas and select your desired subscription group. Next, an __Add Media__ option will appear in the message composer window. Here, you can upload an existing Contact Card file or locate one through the Media Library.
+Pour ajouter une fiche de contact existante, créez une campagne ou Canvas et sélectionnez le groupe d'abonnement souhaité. Ensuite, une option __Ajouter un média__ apparaîtra dans la fenêtre du compositeur de messages. Ici, vous pouvez télécharger un fichier de carte de contact existant ou en trouver un par le biais de la médiathèque.
