@@ -1,56 +1,56 @@
 ---
-nav_title: "Full-Screen"
-article_title: Full Screen In-App Messages
-description: "This reference article covers the message and design requirements of full-screen in-app messages."
-page_type: reference
+nav_title: "Plein écran"
+article_title: Messages intégrés en plein écran
+description: "Cet article de référence couvre les exigences de message et de conception des messages en plein écran dans l'application."
+page_type: Référence
 page_order: 0
 channel:
-  - in-app messages
+  - messages intégrés à l'application
 tool:
-  - Media
+  - Médias
 ---
 
-# Full-screen in-app messages
+# Messages en plein écran dans l'application
 
-Full-screen messages take up the whole screen of the device! This message type is great when you really need your user's attention, like for mandatory app updates.
+Les messages en plein écran prennent la totalité de l'écran de l'appareil ! Ce type de message est parfait lorsque vous avez vraiment besoin de l'attention de votre utilisateur, comme pour les mises à jour obligatoires de l'application.
 
 !\[Full-Screen Specs\]\[3a\]{: style="max-width: 801px; border: none;"}
 
 ## Images
 
-Full-screen in-app messages will fill the entire height of a device and crop horizontally (left and right sides) as needed. Image and text full-screen messages will fill 50% of the height of a device. All full-screen in-app messages will fill the status bar on "notched" devices.
+Les messages en plein écran dans l'application rempliront toute la hauteur d'un appareil et recadreront horizontalement (côtés gauche et droite) au besoin. Les messages image et texte plein écran remplissent 50% de la hauteur d'un appareil. Tous les messages en plein écran dans l'application rempliront la barre d'état sur les appareils "incochés".
 
-- __All images must be less than 5MB.__
-- We only accept `PNG`, `JPG`, and `GIF` file types.
-- We recommend that your images be 500KB.
+- __Toutes les images doivent être inférieures à 5 Mo.__
+- Nous n'acceptons que les types de fichiers `PNG`, `JPG`, et `GIF`.
+- Nous recommandons que vos images soient de 500 Ko.
 
-{% alert tip %} Create assets with confidence! Our in-app message image templates and safe zone overlays are designed to play nicely with devices of all sizes. [Download Design Templates ZIP]({% image_buster /assets/download_file/Braze-In-App-Message-Design-Templates.zip %}) {% endalert %}
+{% alert tip %} Créez des actifs en toute confiance! Nos modèles d'images de messages intégrés et nos surcouches de zone sécurisées sont conçus pour jouer avec des appareils de toutes tailles. [Télécharger le ZIP des modèles de design]({% image_buster /assets/download_file/Braze-In-App-Message-Design-Templates.zip %}) {% endalert %}
 
 #### Portrait
 
-| layout       | asset size                                                                 | notes                                                                                       |
-| ------------ | -------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------- |
-| Image + Text | 6:5 aspect ratio<br>Hi-Res 1200 x 1000px<br> Min. 600 x 500px  | Cropping can occur on all sides, but the image will always fill the top 50% of the viewport |
-| Image Only   | 3:5 aspect ratio<br>Hi-Res 1200 x 2000px<br> Min. 600 x 1000px | Cropping can occur on the left and right edges on taller devices                            |
+| mise en page     | taille de la ressource                                                       | notes                                                                                                                 |
+| ---------------- | ---------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------- |
+| Image + Texte    | Ratio d'aspect 6:5<br>Hi-Res 1200 x 1000px<br> Min. 600 x 500px  | Le recadrage peut se produire sur tous les côtés, mais l'image remplira toujours le top 50% de la fenêtre d'affichage |
+| Image uniquement | Ratio d'aspect 3:5<br>Hi-Res 1200 x 2000px<br> Min. 600 x 1000px | Le recadrage peut se produire sur les bords gauche et droit sur les appareils plus grands                             |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
 
-#### Landscape
+#### Paysage
 
-| layout       | asset size                                                                 | notes                                                                                       |
-| ------------ | -------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------- |
-| Image + Text | 10:3 aspect ratio<br>Hi-Res 2000 x 600px<br> Min. 1000 x 300px | Cropping can occur on all sides, but the image will always fill the top 50% of the viewport |
-| Image Only   | 5:3 aspect ratio<br>Hi-Res 2000 x 1200px<br> Min. 1000 x 600px | Cropping can occur on the left and right edges on taller devices                            |
+| mise en page     | taille de la ressource                                                       | notes                                                                                                                 |
+| ---------------- | ---------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------- |
+| Image + Texte    | ratio d'aspect 10:3<br>Hi-Res 2000 x 600px<br> Min. 1000 x 300px | Le recadrage peut se produire sur tous les côtés, mais l'image remplira toujours le top 50% de la fenêtre d'affichage |
+| Image uniquement | 5:3 ratio aspect<br>Hi-Res 2000 x 1200px<br> Min. 1000 x 600px   | Le recadrage peut se produire sur les bords gauche et droit sur les appareils plus grands                             |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
 
-### Image safe zone
+### Zone de sécurité de l'image
 
-When previewing a full-screen in-app message in the Braze platform, you can enable the Image Safe Zone to the area of the message that is safe from cropping when displayed across devices. In addition to testing the Image Safe Zone in the preview pane, we recommend you [test your message]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/testing/) as always.
+Lorsque vous prévisualisez un message en plein écran dans l'application sur la plateforme Braze, vous pouvez activer la Zone de sécurité d'image dans la zone du message qui est protégée contre le recadrage lorsqu'elle est affichée sur tous les appareils. En plus de tester la zone de sécurité d'image dans le volet de prévisualisation, nous vous recommandons [de tester votre message]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/testing/) comme toujours.
 
-!\[Image Safe Zone\]\[3c\]
+!\[Zone de sécurité des images\]\[3c\]
 
-## Larger screens
+## Ecrans plus grands
 
-On a tablet or desktop browser, a full-screen in-app message will sit in the center of the app screen, as shown below.
+Sur une tablette ou un navigateur de bureau, un message intégré en plein écran s'assied au centre de l'écran de l'application, comme indiqué ci-dessous.
 
 !\[Full-Screen Viewport\]\[3b\]{: style="max-width: 800px; border: none;"}
-[3a]: {% image_buster /assets/img/full-screen-spec.png %} [3b]: {% image_buster /assets/img/full-screen-large-viewport.png %} [3c]: {% image_buster /assets/img/image-safe-zone-full-screen-in-app-message.png %}
+[3a]: {% image_buster /assets/img/full-screen-spec.png %} [3b]: {% image_buster /assets/img/full-screen-Large viewport.png %} [3c]: {% image_buster /assets/img/image-safe-zone-full-screen-in-app-message.png %}
