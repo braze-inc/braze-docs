@@ -1,43 +1,43 @@
 ---
-nav_title: Aborting Messages
-article_title: Aborting Liquid Messages
+nav_title: Abandon des messages
+article_title: Abandon des messages Liquid
 page_order: 7
-description: "Messages may now be aborted within conditional statements. In this reference article, we list some example use cases for this functionality."
+description: "Les messages peuvent maintenant être abandonnés dans les instructions conditionnelles. Dans cet article de référence, nous listons quelques exemples de cas d'utilisation de cette fonctionnalité."
 ---
 
-# Aborting Liquid messages
+# Abandon des messages Liquid
 
-Optionally, you can also abort messages within conditionals. Here are some examples of how this feature can be used in marketing campaigns:
+Optionnellement, vous pouvez également annuler les messages dans les conditions. Voici quelques exemples de la façon dont cette fonctionnalité peut être utilisée dans les campagnes de marketing:
 
-**Aborting message if "Number Games Attended" = 0:**
+**Abandon du message si "Nombre de parties participantes" = 0:**
 
-For example, let’s say that you did not want to send the above message to customers who had not attended a game:
+Par exemple, disons que vous ne vouliez pas envoyer le message ci-dessus aux clients qui n'avaient pas assisté à un jeu:
 
-!\[Liquid Abort Message Example\]\[15\]
+!\[Exemple de Message d'Abort Liquid\]\[15\]
 
-This message will only send to customers who are known to have attended a game.
+Ce message ne sera envoyé qu'aux clients qui sont connus pour avoir participé à un jeu.
 
-**Messaging English speaking customers only:**
+**Messagerie de clients anglophones uniquement :**
 
-You can message English speaking customers only by creating an "if" statement that'll match when a customer's language is English and an else statement that'll abort the message for anyone who does not speak English or does not have a language on their profile.
+Vous pouvez envoyer un message aux clients anglophones uniquement en créant une déclaration "si" qui correspondra quand la langue d'un client est l'anglais et une autre déclaration qui annulera le message pour toute personne qui ne parle pas l'anglais ou qui n'a pas de langue sur son profil.
 
 {% raw %}
 ```liquid
 
-{% if ${language} == 'en' %}
-Send this message in English!
+{% if ${language} == 'fr' %}
+Envoyez ce message en anglais !
 {% else %}
 {% abort_message() %}
 {% endif %}
 ```
 
-By default Braze will log a generic error message to your Developer Console log:
+Par défaut, Braze va enregistrer un message d'erreur générique dans votre journal de votre Console Développeur:
 
 ```text
-{% abort_message %} called
+{% abort_message %} appelée
 ```
 
-You can also have the abort_message log something to your Developer Console log by including a string inside the parentheses:
+Vous pouvez également enregistrer quelque chose dans le journal de votre console de développement en incluant une chaîne entre parenthèses :
 
 ```liquid
 {% abort_message('language was nil') %}
