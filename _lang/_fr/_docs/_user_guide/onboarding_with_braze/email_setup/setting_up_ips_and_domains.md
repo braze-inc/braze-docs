@@ -1,36 +1,36 @@
 ---
-nav_title: Setting Up IPs & Domains
-article_title: Setting Up IPs & Domains
+nav_title: Configuration des IPs & Domaines
+article_title: Configuration des IPs & Domaines
 page_order: 0
-page_type: tutorial
-channel: email
-description: "This how-to article will walk you through how to set up your IPs and Domains for sending emails through Braze."
+page_type: tutoriel
+channel: Email
+description: "Cet article pratique vous guidera dans la façon de configurer vos adresses IP et vos domaines pour l'envoi d'emails via Braze."
 ---
 
-# Setting up IPs and domains
+# Configuration des IPs et des domaines
 
 {% include video.html id="iTm3yQkJ0UU" align="right"  %}
 
-> This article will walk you through the requirements and steps needed to set up your IP addresses and pools, as well as domains and subdomains needed before you can begin sending emails with Braze.<br><br>Though most of the setup process is done by Braze, we have outlined the requirements and materials for this setup below.
+> Cet article vous guidera à travers les exigences et les étapes nécessaires à la mise en place de vos adresses IP et de vos pools, ainsi que les domaines et sous-domaines nécessaires avant que vous puissiez commencer à envoyer des e-mails avec Braze.<br><br>Bien que la plupart du processus de configuration soit fait par Braze, nous avons décrit les exigences et les matériaux pour cette configuration ci-dessous.
 
-## Step 1: Outline information
+## Étape 1 : Informations sur le contour
 
-Send the following information to your Braze representative:
+Envoyez les informations suivantes à votre représentant de Braze :
 
-* Your chosen domains and subdomains.
-* The approximate number of emails you'll be sending each month, this will help us determine how many IPs you'll need.
-* Whether you'll be using IP Pools and what those will be.
+* Les domaines et sous-domaines que vous avez choisis.
+* Le nombre approximatif de courriels que vous enverrez chaque mois, cela nous aidera à déterminer le nombre d'adresses IP dont vous aurez besoin.
+* Si vous utiliserez ou non des pools d'IP et ce que seront ces pools d'IP.
 
-## Step 2: Braze configures information
+## Étape 2 : Braze configure les informations
 
-After receiving your email, we'll get to work configuring your IPs, domains and subdomains, and IP pools.
+Après avoir reçu votre courriel, nous nous mettrons au travail pour configurer vos IP, vos domaines et sous-domaines, et vos groupes d'IP.
 
-## Step 3: Add DNS records
+## Étape 3 : Ajouter des enregistrements DNS
 
-After your IPs, domains, subdomains, and IP pools are configured, we'll send you a list of DNS records. Ask your engineers/developers to add these DNS records where needed, and, after they have been added, let us know!
+Après la configuration de vos IP, domaines, sous-domaines et pools IP, nous vous enverrons une liste d'enregistrements DNS. Demandez à vos ingénieurs/développeurs d'ajouter ces enregistrements DNS le cas échéant et, après les avoir ajoutés, faites-le nous savoir !
 
-## Next steps
+## Étapes suivantes
 
-We will then check your setup and validate all information in our internal systems.
+Nous vérifierons ensuite votre configuration et validerons toutes les informations dans nos systèmes internes.
 
-Our onboarding team will let you know when you're ready to go or if there are issues with your DNS records that you must address with your engineering team.
+Notre équipe d’intégration vous informera quand vous êtes prêt à partir ou s’il y a des problèmes avec vos dossiers DNS que vous devez traiter avec votre équipe d’ingénierie.
