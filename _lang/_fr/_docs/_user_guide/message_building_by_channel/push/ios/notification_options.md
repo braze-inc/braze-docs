@@ -1,110 +1,110 @@
 ---
-nav_title: "Notification Options (iOS)"
-article_title: Push Notification Options
+nav_title: "Options de notification (iOS)"
+article_title: Options de notification push
 page_order: 2
-page_layout: reference
-description: "This reference article covers iOS notification options like critical alerts, quiet notifications, provisional push notifications, and more."
+page_layout: Référence
+description: "Cet article de référence couvre les options de notification iOS telles que les alertes critiques, les notifications silencieuses, les notifications push provisoires, et plus encore."
 platform: iOS
 channel:
-  - push
+  - Pousser
 ---
 
-# iOS notification options
+# Options de notification iOS
 
-> With the release of Apple's iOS 12, Braze offers support for several of its features, including [Notification Groups](#notification-groups), [Quiet Notifications/Provisional Authorization](#provisional-push-authentication--quiet-notifications), and [Critical Alerts](#critical-alerts).
+> Avec la sortie d'iOS 12 d'Apple, Braze offre la prise en charge de plusieurs de ses fonctionnalités, y compris [Groupes de Notification](#notification-groups), [Notifications silencieuses / Autorisation provisoire](#provisional-push-authentication--quiet-notifications), et [Alertes critiques](#critical-alerts).
 
-## Notification groups
+## Groupes de notifications
 
-If you want to categorize your messages and group them in your user's notification tray, you can utilize iOS's Notification Groups feature through Braze.
+Si vous souhaitez catégoriser vos messages et les regrouper dans la barre de notification de votre utilisateur, vous pouvez utiliser la fonctionnalité Groupes de notifications d'iOS via Braze.
 
-Create your iOS push campaign, then look to the top of the **Compose** tab for the **Notification Groups** dropdown.
+Créez votre campagne de push iOS, puis regardez en haut de l'onglet **Composer** pour le menu déroulant **Groupes de Notification**.
 
 !\[notificationgroupsdropdown\]\[26\]{: style="max-width:60%;" }
 
-Select your Notification Groups from the dropdown. If your notification group settings malfunction or you select __None__ from the dropdown, the message will automatically send as normal to all defined users in the app group.
+Sélectionnez vos groupes de notification dans la liste déroulante. Si les paramètres de votre groupe de notification ne fonctionnent pas ou si vous sélectionnez __Aucun__ dans la liste déroulante, le message enverra automatiquement comme normal à tous les utilisateurs définis dans le groupe d'applications.
 
-If you don't have any Notification Groups listed here, you can add one using the iOS Thread ID. You will need one iOS Thread ID for every Notification Group you want to add. Then, add it to your Notification Groups by clicking __Manage Notification Groups__ in the dropdown and filling out the required fields in the __Manage iOS Push Notification Groups__ window that appears.
+Si vous n'avez aucun groupe de notification listé ici, vous pouvez en ajouter un en utilisant l'identifiant de discussion iOS. Vous aurez besoin d'un ID de sujet iOS pour chaque groupe de notification que vous souhaitez ajouter. Ensuite, ajoutez-la à vos groupes de notification en cliquant sur __Gérer les groupes de notification__ dans la liste déroulante et en remplissant les champs requis dans la fenêtre __Gérer les groupes de notification__ iOS qui apparaît.
 
-!\[Manage Notification Groups\]\[27\]
+!\[Gérer les groupes de notifications\]\[27\]
 
-Create your iOS push campaign, then look to the top of the composer. There, you'll see a dropdown labeled **Notification Groups**.
+Créez votre campagne de push iOS, puis regardez en haut du compositeur. Là, vous verrez un menu déroulant étiqueté **Groupes de notification**.
 
-### Summary arguments
+### Arguments sommaires
 
-In addition to grouping notifications by Thread IDs, Apple allows you to edit the summaries that appear when notifications are grouped. Braze Users can specify the summary category, summary count, and summary argument when composing a push campaign using our tool.
+En plus de regrouper les notifications par ID de thread, Apple vous permet de modifier les résumés qui apparaissent lorsque les notifications sont groupées. Les utilisateurs de Braze peuvent spécifier la catégorie récapitulative, le nombre de résumés et l'argument de résumé lors de la rédaction d'une campagne de push en utilisant notre outil.
 
 {% alert tip %}
-Note that the way notifications with the same Thread ID are grouped in the notification tray is under the control of the OS. iOS may choose to display notifications with the same Thread ID separately or in groups depending on what it deems optimal.
+Notez que la façon dont les notifications avec le même ID de discussion sont regroupées dans la zone de notification est sous le contrôle de l'OS. iOS peut choisir d'afficher les notifications avec le même ID de discussion séparément ou dans les groupes selon ce qu'il juge optimal.
 {% endalert %}
 
-Check the __Alert Options__ box in the __Push Composer__.
+Vérifiez la case __Options d'alerte__ dans le __Composer Push__.
 
-Then, select `summary-arg` and `summary-arg-count` as keys and input those values in the corresponding column. If you do not set a value for `summary-arg`, it will default to 1.
+Ensuite, sélectionnez `summary-arg` et `summary-arg-count` comme clés et saisissez ces valeurs dans la colonne correspondante. Si vous ne définissez pas de valeur pour `summary-arg`, elle sera par défaut 1.
 
-### Summary categories
+### Catégories sommaires
 
-Summary Categories allow you to customize the entire summary that appears when notifications are grouped. You can create and apply multiple categories.
+Les catégories résumées vous permettent de personnaliser le résumé complet qui apparaît lorsque les notifications sont groupées. Vous pouvez créer et appliquer plusieurs catégories.
 
-To use a category in your message, work with your developers to implement using the following example:
+Pour utiliser une catégorie dans votre message, travaillez avec vos développeurs pour implémenter en utilisant l'exemple suivant :
 
 ```
 UNNotificationCategory *newsCategory = [UNNotificationCategory categoryWithIdentifier:@"news"
                                                       actions:@[likeAction, unlikeAction]
                                                       intentIdentifiers:@[]
                                                       hiddenPreviewsBodyPlaceholder:@""
-                                                      categorySummaryFormat:@"%u more news articles from %@"
+                                                      categorySummaryFormat:@"%u articles de nouvelles supplémentaires de %@"
                                                        Options:0];
 ```
 
 {% alert important %}
-This will not require an SDK update.
+Cela ne nécessitera pas de mise à jour du SDK.
 {% endalert %}
 
 {% alert tip %}
-Please note that `%u` and `%@` are formatting strings for the summary count and summary argument, respectively. When the summary is shown, these placeholders will be replaced with the values for `summary-count` and `summary-arg`.
+Veuillez noter que `%u` et `%@` sont en train de formater des chaînes pour le nombre de résumés et l'argument de récapitulation, respectivement. Lorsque le résumé est affiché, ces espaces réservés seront remplacés par les valeurs pour `résumé-count` et `résumé-arg`.
 {% endalert %}
 
-Once this is set up on your app, use the summary category by checking the __Notification Buttons__ box and selecting __Enter Pre-registered iOS Category__.
+Une fois que cela est configuré sur votre application, utilisez la catégorie de résumé en cochant la case __Boutons de notification__ et en sélectionnant __Entrer dans la catégorie iOS préenregistrée__.
 
-Then, input the summary category identifier that you set in your app.
+Ensuite, entrez l'identifiant de la catégorie récapitulative que vous avez défini dans votre application.
 
-### Provisional push authentication and quiet notifications {#provisional-push}
+### Authentification provisoire push et notifications silencieuses {#provisional-push}
 
-Apple allows brands the option to send quiet push notifications to their users' Notification Centers before they officially, explicitly opt-in, giving you a chance to demonstrate the value of your messages early. All you need to do is [set up provisional push notifications](#set-up-provisional-push-notifications) in your app, then any user who has a provisional push token will receive your messages.
+Apple permet aux marques d'envoyer des notifications push silencieuses aux centres de notification de leurs utilisateurs avant de les envoyer officiellement, explicitement opt-in, vous donnant la possibilité de démontrer la valeur de vos messages plus tôt. Tout ce que vous avez à faire est de [configurer des notifications push provisoires](#set-up-provisional-push-notifications) dans votre application, alors tout utilisateur ayant un jeton de push provisoire recevra vos messages.
 
-Unlike a traditional iOS push token, a provisional push token acts as a "trial pass" that allows brands to reach out to new users before they've seen and clicked Apple's native push opt-in prompt. With this feature, your push notification will be delivered directly to your new user's notification tray with the option to "Keep" or "Turn Off" future notifications. Instead of experiencing an "opt-in" journey, users will experience something more akin to an "opt-out" journey.
+Contrairement à un jeton de poussée traditionnel pour iOS, Un jeton de push provisoire agit comme un "passe d'essai" qui permet aux marques de rejoindre de nouveaux utilisateurs avant qu'ils n'aient vu et cliqué sur l'invite native d'Apple. Avec cette fonctionnalité, votre notification push sera envoyée directement dans la zone de notification de votre nouvel utilisateur avec l'option de « Garder » ou « Désactiver » les futures notifications. Au lieu de faire l'expérience d'un voyage "opt-in", les utilisateurs verront quelque chose de plus similaire à un voyage "opt-out".
 
 {% alert tip %}
-Provisional Authorization has the potential dramatically increase your opt-in rate, but only if users see value in your messages. Be sure to use our [user segmentation]({{site.baseurl}}/user_guide/engagement_tools/segments/creating_a_segment/), [location targeting]({{site.baseurl}}/user_guide/engagement_tools/locations_and_geofences/), and [personalization]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/supported_personalization_tags/) features to ensure that the appropriate users are getting these "trial" notifications at the right time. Then, you can encourage users to fully opt-in to your push notifications, knowing that they add value to your users' experience with your app.
+L'autorisation provisoire peut augmenter considérablement votre taux d'opt-in, mais seulement si les utilisateurs voient de la valeur dans vos messages. N'oubliez pas d'utiliser notre segmentation [utilisateur]({{site.baseurl}}/user_guide/engagement_tools/segments/creating_a_segment/), [localisation ciblée]({{site.baseurl}}/user_guide/engagement_tools/locations_and_geofences/), et [la personnalisation]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/supported_personalization_tags/) des fonctionnalités pour s'assurer que les utilisateurs appropriés reçoivent ces notifications « d'essai » au bon moment. Ensuite, vous pouvez encourager les utilisateurs à opter pleinement pour vos notifications push, sachant qu'elles ajoutent de la valeur à l'expérience de vos utilisateurs avec votre application.
 {% endalert %}
 
-Whichever option the user chooses will add the appropriate token or [subscription status]({{site.baseurl}}/user_guide/message_building_by_channel/push/users_and_subscriptions/) to their [Contact Settings]({{site.baseurl}}/user_guide/engagement_tools/segments/using_user_search/#engagement-tab) (under the **Engagement** tab in their user profile, shown below).
+Quelle que soit l'option choisie par l'utilisateur, l'utilisateur ajoutera le jeton approprié ou le [statut d'abonnement]({{site.baseurl}}/user_guide/message_building_by_channel/push/users_and_subscriptions/) à son [Paramètres de contact]({{site.baseurl}}/user_guide/engagement_tools/segments/using_user_search/#engagement-tab) (sous l'onglet **Engagement** dans son profil d'utilisateur, montrée ci-dessous).
 
-![User profile provisionally authorized]({% image_buster /assets/img/profile-push-prov-auth.png %}){: width="50%"}
+![Profil utilisateur provisoirement autorisé]({% image_buster /assets/img/profile-push-prov-auth.png %}){: width="50%"}
 
-You will be able to target your users based on whether they are provisionally authorized or not using our [segmentation filters]({{site.baseurl}}/user_guide/engagement_tools/segments/segmentation_filters/) (shown below).
+Vous serez en mesure de cibler vos utilisateurs en fonction de s'ils sont provisoirement autorisés ou non à utiliser nos [filtres de segmentation]({{site.baseurl}}/user_guide/engagement_tools/segments/segmentation_filters/) (illustrés ci-dessous).
 
-![Provisionally authorized segment]({% image_buster /assets/img/segment-push-prov-auth.png %})
+![Segment provisoirement autorisé]({% image_buster /assets/img/segment-push-prov-auth.png %})
 
 {% alert tip %}
-If users choose to "Turn Off" provisional push from you, they won't see any more provisional push messages from you. Be thoughtful about the message content and cadence sent using this functionality!
+Si les utilisateurs choisissent de « désactiver » les push provisoires de votre part, ils ne verront plus de messages push provisoires de votre part. Soyez attentif au contenu et à la cadence du message envoyé en utilisant cette fonctionnalité!
 {% endalert %}
 
 {% alert important %}
-If you utilize additional push prompts or [in-app push primers](https://www.braze.com/resources/glossary/priming-for-push/) (an in-app message that encourages users to opt-in to push notifications), please reach out to your Braze representative for additional guidance.
+Si vous utilisez des messages push supplémentaires ou des [primers de push dans l'application](https://www.braze.com/resources/glossary/priming-for-push/) (un message dans l'application qui encourage les utilisateurs à opter pour les notifications push), veuillez contacter votre représentant de Braze pour obtenir des conseils supplémentaires.
 {% endalert %}
 
-#### Set up provisional push notifications
+#### Mettre en place des notifications push provisoires
 
-Braze allows you to register for Provisional Authentication by updating your code in your _token registration snippet_ within your Braze iOS SDK implementation using the snippets below as an example (send these to your developers or ensure they [implement provisional push authentication during the integration process]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/push_notifications/integration/#using-usernotification-framework-ios-10)).
+Braze vous permet de vous inscrire à l'authentification provisoire en mettant à jour votre code dans votre _snippet d'enregistrement de jetons_ dans l'implémentation de Braze iOS SDK en utilisant les snippets ci-dessous comme exemple (envoyez-les à vos développeurs ou assurez-vous qu'ils [implémentent une authentification push provisoire pendant le processus d'intégration]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/push_notifications/integration/#using-usernotification-framework-ios-10)).
 
 {% alert warning %}
-The implementation of Provisional Push Authentication only supports iOS 12+ and will error out if the deployment target is before that. You can learn more about this [in our more detailed implementation documentation here]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/push_notifications/integration/#using-usernotification-framework-ios-10).
+L'implémentation de l'authentification Provisional Push prend uniquement en charge iOS 12+ et échouera si la cible de déploiement est avant cela. Vous pouvez en apprendre plus à ce sujet [dans notre documentation d'implémentation plus détaillée ici]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/push_notifications/integration/#using-usernotification-framework-ios-10).
 {% endalert %}
 
 {% tabs local %}
   {% tab Swift %}
-__Swift__
+__Rapide__
 
 ```
 var options: UNAuthorizationOptions = [.alert, .sound, .badge]
@@ -115,63 +115,63 @@ if #available(iOS 12.0, *) {
   {% endtab %}
   {% tab Objective-C %}
 
-__Objective-C__
+__Objectif-C__
 
 ```
 UNUserNotificationCenter *center = [UNUserNotificationCenter currentNotificationCenter];
-center.delegate = self;
+centre. elegate = self;
 UNAuthorizationOptions options = UNAuthorizationOptionAlert | UNAuthorizationOptionSound | UNAuthorizationOptionBadge;
-if (@available(iOS 12.0, *)) {
+if (@available(iOS 12. , *)) {
     options = options | UNAuthorizationOptionProvisional;
 }
 ```
   {% endtab %}
 {% endtabs %}
 
-### Interruption level (iOS 15+) {#interruption-level}
+### Niveau d'interruption (iOS 15+) {#interruption-level}
 
-![Notification Settings]({% image_buster /assets/img/ios/ios15-notification-settings.png %}){: style="float:right;max-width:25%;margin-left:15px;border:0"}
+![Paramètres de notification]({% image_buster /assets/img/ios/ios15-notification-settings.png %}){: style="float:right;max-width:25%;margin-left:15px;border:0"}
 
-With iOS 15's new Focus Mode, users are more in control over when app notifications can "interrupt" them with a sound or vibration.
+Avec le nouveau mode Focus d'iOS 15, les utilisateurs contrôlent davantage quand les notifications des applications peuvent les "interrompre" avec un son ou une vibration.
 
-Apps can now specify what level of interruption a notification should include, based on its urgency.
+Les applications peuvent maintenant spécifier quel niveau d'interruption doit inclure une notification, en fonction de son urgence.
 
-Keep in mind that users are ultimately the ones in control of their focus, and even if a Time Sensitive notification is delivered, they can specify which apps are not allowed to break through their focus.
+Gardez à l'esprit que les utilisateurs sont en fin de compte ceux qui contrôlent leur attention, et même si une notification sensible au temps est envoyée, ils peuvent spécifier quelles applications ne sont pas autorisées à perturber leur focalisation.
 
-The four new Interruption Level options are:
+Les quatre nouvelles options de niveau d'interruption sont :
 
-| Interruption Level                                                                                                          | Description                                                                                                                                                                                                                                      | When To Use                                                                                                                   | Break Through Focus Mode |
-| --------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ----------------------------------------------------------------------------------------------------------------------------- | ------------------------ |
-| [Passive](https://developer.apple.com/documentation/usernotifications/unnotificationinterruptionlevel/passive)              | Sends a notification without sound, vibration, or turning on the screen.                                                                                                                                                                         | Notifications that do not require immediate attention.                                                                        | No                       |
-| [Active](https://developer.apple.com/documentation/usernotifications/unnotificationinterruptionlevel/active) (default)      | Will only make a sound, vibration, and turn on the screen if the user is not in Focus Mode.                                                                                                                                                      | Notifications that require immediate attention, unless the user has Focus Mode enabled.                                       | No                       |
-| [Time Sensitive](https://developer.apple.com/documentation/usernotifications/unnotificationinterruptionlevel/timesensitive) | Will make a sound, vibrate, and turn on the screen even while in Focus Mode. This requires that the __Time Sensitive Notifications capability__ is added your app in Xcode                                                                       | Timely notifications that should disturb users regardless of their Focus mode, such as a ride share or delivery notification. | Yes                      |
-| [Critical](https://developer.apple.com/documentation/usernotifications/unnotificationinterruptionlevel/critical)            | Will make a sound, vibrate, and turn on the screen even if the phone's **Do Not Disturb** switch is enabled. This [requires explicit approval by Apple](https://developer.apple.com/contact/request/notifications-critical-alerts-entitlement/). | Emergencies such as severe weather or safety alerts                                                                           | Yes                      |
+| Niveau d'interruption                                                                                                          | Libellé                                                                                                                                                                                                                                                  | Quand utiliser                                                                                                                                                 | Mode pause à travers la mise au point |
+| ------------------------------------------------------------------------------------------------------------------------------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------- |
+| [Passif](https://developer.apple.com/documentation/usernotifications/unnotificationinterruptionlevel/passive)                  | Envoie une notification sans son, vibration ou activation de l'écran.                                                                                                                                                                                    | Les notifications qui ne nécessitent pas une attention immédiate.                                                                                              | Non                                   |
+| [Actif](https://developer.apple.com/documentation/usernotifications/unnotificationinterruptionlevel/active) (par défaut)       | Ne fera un son, des vibrations et allumera l'écran que si l'utilisateur n'est pas en mode Focus.                                                                                                                                                         | Notifications nécessitant une attention immédiate, sauf si le mode Focus de l'utilisateur est activé.                                                          | Non                                   |
+| [Sensible au temps](https://developer.apple.com/documentation/usernotifications/unnotificationinterruptionlevel/timesensitive) | Faire un son, vibrer et allumer l'écran, même en mode Focus. Cela nécessite que la fonctionnalité __Notifications sensibles au temps__ soit ajoutée à votre application en Xcode                                                                         | Notifications opportunes qui devraient perturber les utilisateurs quel que soit leur mode Focus, comme un partage de courses ou une notification de livraison. | Oui                                   |
+| [Critique](https://developer.apple.com/documentation/usernotifications/unnotificationinterruptionlevel/critical)               | Fait un son, vibreur et allumera l'écran même si le commutateur **Ne pas déranger** du téléphone est activé. Ce [nécessite une approbation explicite par Apple](https://developer.apple.com/contact/request/notifications-critical-alerts-entitlement/). | Des urgences telles que des avertissements météorologiques sévères ou des alertes de sécurité                                                                  | Oui                                   |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4}
 
-To change the Interruption Level for an iOS Push Notification, choose the desired level from the **Settings** tab within your message:
+Pour modifier le niveau d'interruption pour une notification push iOS, choisissez le niveau souhaité dans l'onglet **Paramètres** de votre message :
 
-!\[Interruption Level Option\]\[28\]
+!\[Option de Niveau d'Interruption\]\[28\]
 
-This feature does not have minimum SDK version requirements, but is only applied for devices running iOS 15+.
+Cette fonctionnalité n'a pas de version de SDK minimale requise, mais n'est appliquée que pour les appareils fonctionnant sous iOS 15+.
 
-### Relevance score (iOS 15+) {#relevance-score}
+### Score de pertinence (iOS 15+) {#relevance-score}
 
-![Notification Summary]({% image_buster /assets/img/ios/ios15-notification-summary.png %}){: style="float:right;max-width:25%;margin-left:15px;border:0"}
+![Résumé des notifications]({% image_buster /assets/img/ios/ios15-notification-summary.png %}){: style="float:right;max-width:25%;margin-left:15px;border:0"}
 
-iOS 15 also introduces a new way for users to (optionally) schedule a digest grouping of multiple notifications at designated times throughout the day. This is done to prevent constant interruptions throughout the day for notifications which don’t need immediate attention.
+iOS 15 introduit également une nouvelle façon pour les utilisateurs de programmer (optionnellement) un regroupement de plusieurs notifications à des heures désignées tout au long de la journée. Ceci est fait pour éviter des interruptions constantes tout au long de la journée pour les notifications qui n'ont pas besoin d'une attention immédiate.
 
-Apps can specify which push notifications are most relevant by setting a __Relevance Score__. Apple will use this score to determine which notifications should be showcased in the scheduled Notification Summary while others are made available when users click into the summary.
+Les applications peuvent spécifier quelles notifications push sont les plus pertinentes en définissant un __Score de Pertinence__. Apple utilisera ce score pour déterminer quelles notifications doivent être affichées dans le Résumé de la notification programmée tandis que d'autres seront disponibles lorsque les utilisateurs cliqueront dans le résumé.
 
-All notifications will still be accessible in the user's notification center.
+Toutes les notifications seront toujours accessibles dans le centre de notification de l'utilisateur.
 
-To set an iOS Notification's Relevance Score, enter a value between `0.0` and `1.0` within the **Settings** tab. For example, the most important message should be sent with `1.0`, whereas a medium-importance message can be sent with `0.5`.
+Pour définir le score de pertinence d'une notification iOS, entrez une valeur entre `0.0` et `1.0` dans l'onglet **Paramètres**. Par exemple, le message le plus important doit être envoyé avec `1.`, alors qu'un message de moyenne importance peut être envoyé avec `0.5`.
 
-!\[Relevance Score Option\]\[29\]
+!\[Option de Score de Relevance\]\[29\]
 
-This feature does not have minimum SDK version requirements, but is only applied for devices running iOS 15+.
+Cette fonctionnalité n'a pas de version de SDK minimale requise, mais n'est appliquée que pour les appareils fonctionnant sous iOS 15+.
 
-For more information on maximum message lengths for different message types, refer to the following resources:
+Pour plus d'informations sur la longueur maximale des messages pour les différents types de messages, reportez-vous aux ressources suivantes :
 
-- [Image and text specifications]({{site.baseurl}}/user_guide/message_building_by_channel/push/about/#image-and-text-specifications)
-- [iOS character count guidelines]({{site.baseurl}}/user_guide/message_building_by_channel/push/ios/rich_notifications/#character-count)
-[26]: {% image_buster /assets/img_archive/notification_group_dropdown.png %} [27]: {% image_buster /assets/img_archive/managenotgroups.png %} [28]: {% image_buster /assets/img/ios/interruption-level.png %} [29]: {% image_buster /assets/img/ios/relevance-score.png %}
+- [Caractéristiques de l'image et du texte]({{site.baseurl}}/user_guide/message_building_by_channel/push/about/#image-and-text-specifications)
+- [Règles pour le nombre de caractères iOS]({{site.baseurl}}/user_guide/message_building_by_channel/push/ios/rich_notifications/#character-count)
+[26]: {% image_buster /assets/img_archive/notification_group_dropdown.png %} [27]: {% image_buster /assets/img_archive/managenotgroups. ng %} [28]: {% image_buster /assets/img/ios/interruption-level.png %} [29]: {% image_buster /assets/img/ios/relevance-score.png %}
