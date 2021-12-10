@@ -1,33 +1,33 @@
 ---
-nav_title: Archiving Canvases
-article_title: Archiving Canvases
+nav_title: Canevas d'archivage
+article_title: Canevas d'archivage
 page_order: 0
-description: "This reference article covers how to stop or archive a Canvas after the initial launch."
-page_type: reference
-tool: Canvas
+description: "Cet article de référence décrit comment arrêter ou archiver un Canvas après le lancement initial."
+page_type: Référence
+tool: Toile
 ---
 
-# Archiving Canvases
+# Canevas d'archivage
 
-> This reference article explains how to archive a pre-existing Canvas and the effects of archiving a Canvas.
+> Cet article de référence explique comment archiver un Canevas préexistant et les effets de l'archivage d'un Canvas.
 
-To stop a Canvas from sending or to remove it from your Dashboard, you can archive a Canvas. Go to the **Canvas** page, click the gear icon next to the selected Canvas, and click **Archive**.
+Pour empêcher un Canvas de l'envoyer ou de le supprimer de votre Tableau de bord, vous pouvez archiver un Canvas. Allez à la page **Canevas** , cliquez sur l'icône d'engrenage à côté du Canevas sélectionné, puis cliquez sur **Archive**.
 
-There are also bulk actions you can use, such as archiving multiple Canvases, by checking the boxes next to the Canvases and selecting the revelant button.
+Il y a également des actions en masse que vous pouvez utiliser, telles que l'archivage de plusieurs canvases, en cochant les cases à côté des toiles et en sélectionnant le bouton révélateur.
 
-!\[Archive Canvas option\]\[1\]
+!\[Option Canvas Archive\]\[1\]
 
-When you archive a Canvas, the following will apply:
-- No further messages from the Canvas will be sent.
-- Segments associated with the archived Canvas will also be archived.
+Lorsque vous archivez un Canvas, ce qui suit s'appliquera :
+- Aucun autre message du Canvas ne sera envoyé.
+- Les segments associés à la toile archivée seront également archivés.
 
-You can view all previously archived Canvases in the **Archived folder** on the **Canvas** page.
+Vous pouvez consulter tous les Canevas précédemment archivés dans le dossier **Archivé** sur la page **Canvas**.
 
-!\[List of archived Canvases\]\[2\]
+!\[Liste des toiles archivées\]\[2\]
 
-## Unarchiving Canvases
+## Désarchivage des toiles
 
-You can also choose to unarchive a Canvas. Go to the **Archived folder** on the **Canvas** page, click the gear icon next to the selected Canvas, and click **Unarchive**. Note that when you unarchive a Canvas, the associated archived Segments will also be unarchived.
+Vous pouvez également choisir de désarchiver un Canvas. Allez dans le **dossier archivé** sur la page **Canvas** cliquez sur l'icône d'engrenage à côté du Canvas sélectionné, puis cliquez sur **Désarchiver**. Notez que lorsque vous désarchivez un Canvas, les segments archivés associés seront également désarchivés.
 
-!\[Unarchive Canvas option\]\[3\]
+!\[Désarchiver Canvas option\]\[3\]
 [1]: {% image_buster /assets/img_archive/archive_canvas1.png %} [2]: {% image_buster /assets/img_archive/archived_canvas.png %} [3]: {% image_buster /assets/img_archive/unarchive_canvas.png %}
