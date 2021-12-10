@@ -15,10 +15,10 @@ L'intégration de Braze et Bluedot vous permet d'utiliser les services de locali
 
 ## Pré-requis
 
-| Exigences      | Libellé                                                                             |
-| -------------- | ----------------------------------------------------------------------------------- |
-| Compte Bluedot | Un compte Bluedot actif est nécessaire pour profiter de cette intégration de Braze. |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
+| Exigences      | Libellé                                                              |
+| -------------- | -------------------------------------------------------------------- |
+| Compte Bluedot | Un compte Bluedot est nécessaire pour profiter de cette intégration. |
+{: .reset-td-br-1 .reset-td-br-2}
 
 ## Cas d'utilisation
 
