@@ -1,23 +1,23 @@
 ---
-nav_title: Exception Events
-article_title: Exception Events
+nav_title: Événements d'exception
+article_title: Événements d'exception
 page_order: 4
-page_type: reference
-description: "This reference article describes exception events and how they impact your Canvas steps."
-tool: Canvas
+page_type: Référence
+description: "Cet article de référence décrit les événements d'exception et leur impact sur les étapes de votre Canvas ."
+tool: Toile
 ---
 
-# Canvas exception events
+# Événements d'exception sur Canvas
 
-When scheduling a step for a [Canvas][2], you have the option to set up an exception event while scheduling your canvas. You can add an exception event to a step as long as the audience is not immediately advanced. Users who perform the exception event will not be [advanced through the step][3] and will drop out of your Canvas audience.
+Lorsque vous planifiez une étape pour un [Canvas][2], vous avez la possibilité de configurer un événement d’exception tout en planifiant votre canevas. Vous pouvez ajouter un événement d’exception à une étape tant que le public n’est pas immédiatement avancé. Les utilisateurs qui effectuent l'événement d'exception ne seront pas [avancés à l'étape][3] et seront exclus de votre public de Canvas .
 
 !\[Canvas Exception Events\]\[1\]
 
-Exception events will only trigger while a user is waiting to receive the Canvas step it’s associated with. If a user performs the same action on a previous Canvas step, the exception event will not trigger.
+Les événements d'exception ne se déclencheront que lorsqu'un utilisateur attend de recevoir l'étape Canvas à laquelle il est associé. Si un utilisateur effectue la même action sur une étape Canvas précédente, l'événement d'exception ne se déclenchera pas.
 
-Exception events for an action-based step will work during the step delay or window. Scheduled steps don't have a window, and as a result, the exception event will only work if it happens during the delay.
+Les événements d'exception pour une étape basée sur l'action fonctionneront pendant le délai d'étape ou la fenêtre. Les étapes planifiées n'ont pas de fenêtre, et par conséquent, l'événement d'exception ne fonctionnera que si cela se produit pendant le délai.
 
-For example, if you have an exception event for “Abandoned Cart” on the third step of your canvas, but a user abandons their cart while they are on the second step, the exception event will not trigger. In this example, the exception event will only trigger if the user abandons their cart while on the third step of your Canvas.
+Par exemple, si vous avez un événement d'exception pour le « Panier abandonné » à la troisième étape de votre toile, mais un utilisateur abandonne son panier pendant qu'il est à la deuxième étape, l'événement d'exception ne se déclenchera pas. Dans cet exemple, l’événement d’exception ne se déclenchera que si l’utilisateur abandonne son panier pendant la troisième étape de votre Canvas.
 [1]:{% image_buster /assets/img_archive/Canvas_Exception_Events.png %}
 
 [2]: {{site.baseurl}}/user_guide/engagement_tools/canvas/
