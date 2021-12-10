@@ -1,22 +1,22 @@
 ---
-nav_title: "Advanced Push Options"
-article_title: Advanced Push Options
+nav_title: "Options avancées de Push"
+article_title: Options avancées de Push
 page_order: 5
-layout: featured
-page_type: landing
-channel: push
-description: "This landing page is a hub for several advanced Push options like Push stories and the Push action button."
-guide_top_header: "Advanced Push Options"
-guide_top_text: "This landing page is a hub for several advanced Push options like Push stories and the Push action button."
-guide_featured_title: "Articles in this Section"
+layout: en vedette
+page_type: atterrissage
+channel: Pousser
+description: "Cette page d'accueil est un concentrateur pour plusieurs options avancées de Push comme les histoires Push et le bouton Push action."
+guide_top_header: "Options avancées de Push"
+guide_top_text: "Cette page d'accueil est un concentrateur pour plusieurs options avancées de Push comme les histoires Push et le bouton Push action."
+guide_featured_title: "Articles dans cette section"
 guide_featured_list:
   - 
-    name: "Push Action Buttons"
+    name: "Boutons d'Action Push"
     link: /docs/user_guide/message_building_by_channel/push/advanced_push_options/push_action_buttons/
-    fa_icon: far fa-dot-circle
+    fa_icon: fa-dot-circle
   - 
-    name: "Push Stories"
+    name: "Envoyer des histoires"
     link: /docs/user_guide/message_building_by_channel/push/advanced_push_options/push_stories/
-    fa_icon: far fa-book-open
+    fa_icon: fa-book-open loin
 ---
 
