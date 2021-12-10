@@ -1,28 +1,28 @@
 ---
-nav_title: Prediction Quality
-title: Prediction Quality
-description: "This reference article takes an in-depth look at the prediction quality metric located on the Prediction Analytics Page."
+nav_title: Qualité de la prédiction
+title: Qualité de la prédiction
+description: "Cet article de référence examine en profondeur la métrique de qualité de la prédiction située sur la page Analytiques de la prédiction."
 page_order: 1
 Tool:
-  - Dashboard
+  - Tableau de bord
 ---
 
-# Prediction quality
+# Qualité de la prédiction
 
-To measure the accuracy of your model, the __Prediction Quality__ metric will show you how effective this particular machine learning model appears to be when tested on historical data. Braze pulls data according to the groups you specified in the model creation page. The model is trained on one data set (the “training” set) and then tested on a new, separate data set (the “test” set).
+Pour mesurer la précision de votre modèle, la métrique __Qualité de Prédiction__ vous montrera à quel point ce modèle d’apprentissage automatique particulier semble être efficace lors des tests sur des données historiques. Braze tire des données en fonction des groupes que vous avez spécifiés dans la page de création du modèle. Le modèle est formé sur un ensemble de données (le « jeu de formation ») puis testé sur un nouveau jeu de données distinct (le « jeu de test »).
 
-Our measure of Prediction Quality is [Lift Quality](https://dl.acm.org/doi/10.1145/380995.381018). You are probably familiar with "lift", which often measures the increase, as a ratio or percentage, of some successful outcome like a conversion. In this case, the successful outcome is correctly identifying a user who would have churned. Lift Quality is the average lift the Prediction provides across all possible audience sizes for messaging the test set. This approach measures how much better than random guessing the model is. With this measure, 0% means the model is no better than randomly guessing about who will churn, and 100% indicates perfect knowledge of who will churn.
+Notre mesure de la qualité de la prédiction est [Qualité de levage](https://dl.acm.org/doi/10.1145/380995.381018). Vous êtes probablement familier avec le "lift", qui mesure souvent l'augmentation, en tant que ratio ou pourcentage, d'un résultat réussi comme une conversion. Dans ce cas, le résultat réussi est d'identifier correctement un utilisateur qui aurait tourné. La qualité de levage est le levier moyen que la prédiction fournit à tous les auditoires possibles pour la messagerie de l'ensemble de test. Cette approche mesure à quel point il est préférable de deviner le modèle. Avec cette mesure, 0% signifie que le modèle ne vaut pas mieux que de deviner aléatoirement qui va rouler, et 100% indique une parfaite connaissance de qui va rouler.
 
-Here’s what we recommend for various ranges of Prediction Quality:
+Voici ce que nous recommandons pour différentes gammes de qualité de prédiction :
 
-| Prediction Quality Range (%) | Recommendation                                                                                                                           |
-| ---------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------- |
-| 60 - 100                     | Excellent. Top tier accuracy. Changing the audience definitions is unlikely to provide additional benefit.                               |
-| 40 - 60                      | Good. This model will produce accurate predictions, but trying different audience settings may achieve even better results.              |
-| 20 - 40                      | Fair. This model can provide accuracy and value, but consider trying different audience definitions to see if they increase performance. |
-| 0 - 20                       | Poor. We recommend you change your audience definitions and try again.                                                                   |
+| Plage de qualité de la prédiction (%) | Recommandation                                                                                                                                                           |
+| ------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| 60 - 100                              | Excellent. Précision du niveau supérieur. Il est peu probable que la modification des définitions du public apporte un avantage supplémentaire.                          |
+| 40 - 60                               | Bien. Ce modèle produira des prédictions précises, mais essayer différents paramètres d'audience peut donner de meilleurs résultats.                                     |
+| 20 - 40                               | Foire. Ce modèle peut fournir de la précision et de la valeur, mais envisagez d'essayer différentes définitions d'audience pour voir si elles augmentent la performance. |
+| 0 - 20                                | « Paul. » Nous vous recommandons de modifier les définitions de votre audience et de réessayer.                                                                          |
 {: .reset-td-br-1 .reset-td-br-2}
 
-The Prediction will be trained again every two weeks and updated alongside the Prediction Quality metric to keep your predictions updated on the most recent user behavior patterns. The last time this retraining occurred will be displayed on the Predictions list page as well as on an individual Prediction's analytics page.
-> __Prediction Quality Details__ <br><br> Example: If 20% of your users usually churn on average, and you pick a random subset of 20% of your users and label them as churned at random (whether they truly are or not), you’d expect to correctly identify only 20% of the actual churners. That's random guessing. If the model were to only do that well, the lift would be 1 for this case.<br> If the model, on the other hand, allowed you to message 20% of the users and, in doing so capture all the “true” churners and no one else, the lift would be 100% / 20% = 5. If you chart this ratio for every proportion of the likeliest churners you could message, you get the [Lift Curve](https://towardsdatascience.com/the-lift-curve-unveiled-998851147871). <br><br>Another way to think of Lift Quality (and also Prediction Quality) is how far along the way between random guessing (0%) and perfection (100%) the Prediction's lift curve is at identifying churners on the test set. For the original paper on Lift Quality see [here](https://dl.acm.org/doi/10.1145/380995.381018).
+La prédiction sera de nouveau formée toutes les deux semaines et mise à jour parallèlement à la métrique de qualité de la prédiction pour garder vos prévisions à jour sur les derniers comportements de l'utilisateur. La dernière fois que cette reformation a eu lieu sera affichée sur la page de la liste des prédictions ainsi que sur la page d'analyse d'une prédiction.
+> __Détails de la qualité de la prédiction__ <br><br> Exemple : Si 20 % de vos utilisateurs sont habitués en moyenne, et vous choisissez un sous-ensemble aléatoire de 20% de vos utilisateurs et les étiquetez comme étant au hasard (qu'ils soient ou non réels), On s’attendrait à n’identifier correctement que 20 % des habitants de la ville. C'est une supposition aléatoire. Si le modèle devait se contenter de le faire, l'ascenseur serait 1 pour ce cas.<br> Si le modèle, par contre, vous permet de transmettre un message à 20% des utilisateurs et, pour capturer ainsi tous les « vrais » clochers et personne d’autre, l’ascenseur serait 100% / 20% = 5. Si vous classez ce ratio pour chaque proportion des membres les plus probables que vous pourriez écrire, vous obtenez la [Left Curve](https://towardsdatascience.com/the-lift-curve-unveiled-998851147871). <br><br>Une autre façon de penser à la Qualité de Lift (et aussi à la Qualité de Prédiction) est de déterminer jusqu'où se situent entre la devinaison aléatoire (0%) et la perfection (100%) la courbe de levage de la prédiction est d'identifier les aberrants sur l'essai. Pour le papier original sur la qualité de soulagement voir [ici](https://dl.acm.org/doi/10.1145/380995.381018).
 
