@@ -1,52 +1,52 @@
 ---
-nav_title: Active User Campaigns
-article_title: Active User Campaigns
+nav_title: Campagnes d'utilisateurs actifs
+article_title: Campagnes d'utilisateurs actifs
 page_order: 0
-page_type: tutorial
-description: "This how-to article describes Active User Campaigns within the Braze dashboard and the steps to create and set up one."
+page_type: tutoriel
+description: "Cet article décrit les campagnes d'utilisateurs actifs dans le tableau de bord de Braze et les étapes pour en créer et en configurer."
 tool:
-  - Campaigns
+  - Campagnes
 ---
 
-# Active user campaigns
+# Campagnes utilisateur actives
 
-> This article will discuss the benefits of Active User Campaigns within the Braze dashboard, as well as how to identify and reach out to your top users. <br> <br> Knowing which users are active, or "top" users can help you make tailored campaigns and reward those who frequent your platform.
+> Cet article discutera des avantages des campagnes d'utilisateurs actifs dans le tableau de bord de Braze, ainsi que la façon d'identifier et de contacter vos meilleurs utilisateurs. <br> <br> Savoir quels utilisateurs sont actifs, ou les utilisateurs « top » peuvent vous aider à faire des campagnes sur mesure et à récompenser ceux qui fréquentent votre plateforme.
 
-Reaching out to already active users of your app can be a powerful tool in helping to build a dedicated following of consistent app users. A little bit of personalized recognition of your power users can turn them into evangelists for your app.
+Atteindre des utilisateurs déjà actifs de votre application peut être un outil puissant pour aider à construire une suite dédiée aux utilisateurs cohérents de l'application. Un peu de reconnaissance personnalisée de vos utilisateurs de puissance peut les transformer en évangélistes pour votre application.
 
-You can also check out [our LAB course](http://lab.braze.com/quick-overview-segment-and-campaign-setup) on marketing strategy for email and recommended lifecycle campaigns!
+Vous pouvez également consulter [notre cours LAB](http://lab.braze.com/quick-overview-segment-and-campaign-setup) sur la stratégie de marketing pour les campagnes de cycle de vie recommandées !
 
-## Understanding active users
+## Comprendre les utilisateurs actifs
 
-Braze defines an "active user" for a given period of time as any user who has a session in that time period.
+Braze définit un "utilisateur actif" pour une période donnée comme tout utilisateur ayant une session pendant cette période.
 
-If a user loses connectivity, we will cache the session data locally and upload it when the user regains a network connection. These sessions will also be applied to the active user count. Additionally, if your app has a registration process, Braze will count all users as active—registered or unregistered.
+Si un utilisateur perd la connectivité, nous mettrons en cache les données de session localement et les chargerons lorsque l'utilisateur retrouvera une connexion réseau. Ces sessions seront également appliquées au nombre d'utilisateurs actifs. De plus, si votre application a un processus d'inscription, Braze comptera tous les utilisateurs comme actifs, enregistrés ou non enregistrés.
 
-If you set User IDs to identify users when a new user logs in they will be counted as a separate active user. Users who are updated via the API will also be counted as an active user in the time period that they are updated.
+Si vous définissez les identifiants d'utilisateur pour identifier les utilisateurs lorsqu'un nouvel utilisateur se connecte, ils seront comptés comme un utilisateur actif séparé. Les utilisateurs qui sont mis à jour via l'API seront également comptés comme un utilisateur actif dans la période de temps où ils sont mis à jour.
 
-## Step 1: Identifying your top users
+## Étape 1 : Identifier vos meilleurs utilisateurs
 
-Using Braze's selection of filters, create a user segment that you feel encompasses your most loyal, consistent user base. A sample segment to define your top users is shown below.
+En utilisant la sélection de filtres de Braze, créez un segment utilisateur qui correspond à votre base d'utilisateurs la plus fidèle et la plus cohérente. Un exemple de segment pour définir vos meilleurs utilisateurs est affiché ci-dessous.
 
-!\[Define top users\]\[1\]
+!\[Définir les meilleurs utilisateurs\]\[1\]
 
-Additionally, you will not have to continue updating this segment, as users who pass in or out of the campaign's restrictions will be correspondingly targeted or dismissed.
+De plus, vous n'aurez pas à continuer à mettre à jour ce segment, que les utilisateurs qui passent ou ne respectent pas les restrictions de la campagne seront ciblés ou rejetés en conséquence.
 
 {% alert note %}
-The example above segments users by general app usage. In most cases, the total collection of filters needed to define your top user segment will largely be defined by the specificities of your app.
+L'exemple ci-dessus segmente les utilisateurs par utilisation générale de l'application. Dans la plupart des cas, la collection totale de filtres nécessaires à la définition de votre segment utilisateur haut de gamme sera largement définie par les spécificités de votre application.
 {% endalert %}
 
-## Step 2: Reach out to your top users
+## Étape 2 : Atteignez vos meilleurs utilisateurs
 
-### Make your users feel appreciated
+### Faites que vos utilisateurs se sentent appréciés
 
-Make your users feel appreciated by thanking them for their loyalty and dedication to your app. Give your users more reasons to keep coming back to your app to encourage further activity. This can take the form of special deals or bonuses exclusively for your top users.
+Rendez vos utilisateurs appréciés en les remerciant pour leur fidélité et leur dévouement à votre application. Donnez à vos utilisateurs plus de raisons de revenir à votre application pour encourager d'autres activités. Cela peut prendre la forme d'offres spéciales ou de bonus exclusivement pour vos meilleurs utilisateurs.
 
-Unexpected rewards can be more effective at encouraging continued user actions than if you had promised them from the start!
+Les récompenses inattendues peuvent être plus efficaces pour encourager la poursuite des actions des utilisateurs que si vous leur aviez promis dès le début!
 
-!\[Congrats Push\]\[2\]
+!\[Brats Push\]\[2\]
 
-### Keep track of your results
+### Garder une trace de vos résultats
 
-Keep track of opens to ensure that you are targeting the proper collection of users with the optimal message type. Additionally, keep track of any push opt-outs and be wary of losing these crucial users.
-[1]: {% image_buster /assets/img_archive/define_top_users.png %} "Define your top users" [2]: {% image_buster /assets/img/congratulations_push.jpg %}
+Gardez une trace des ouvertures afin de vous assurer que vous ciblez la bonne collection d'utilisateurs avec le type de message optimal. De plus, gardez une trace de toutes les opt-outs de push et soyez prudent de perdre ces utilisateurs cruciaux.
+[1]: {% image_buster /assets/img_archive/define_top_users.png %} "Définissez vos meilleurs utilisateurs" [2]: {% image_buster /assets/img/congratulations_push.jpg %}
