@@ -1,25 +1,25 @@
 ---
-nav_title: Keyword Processing
-article_title: SMS Keyword Processing
+nav_title: Traitement des mots-clés
+article_title: Traitement des mots clés SMS
 page_order: 6
-layout: featured
-guide_top_header: "Keyword Processing"
-guide_top_text: "Keywords are a foundational aspect of automated SMS messaging. With keywords, your users are able to message a preset list of single-word commands that do some type of action. For example, opting in and out of receiving SMS messages. With Braze, you also have the capability of setting custom keywords that can be leveraged for more marketing options. This topic will cover how Braze approaches Keyword Processing and Management, as well as some best practices."
-description: "Keywords are a foundational aspect of automated SMS messaging. With keywords, your users are able to message a preset list of single-word commands that do some type of action."
-guide_featured_title: "Section Articles"
+layout: en vedette
+guide_top_header: "Traitement des mots-clés"
+guide_top_text: "Les mots-clés sont un aspect fondamental de la messagerie automatique de SMS. Avec les mots clés, vos utilisateurs peuvent envoyer une liste de commandes par mot unique qui font un certain type d'action. Par exemple, opter pour ou contre la réception de messages SMS. Avec Braze, vous avez également la possibilité de définir des mots-clés personnalisés qui peuvent être exploités pour plus d'options de marketing. Ce sujet portera sur la façon dont Braze aborde le traitement et la gestion des mots clés, ainsi que certaines pratiques exemplaires."
+description: "Les mots-clés sont un aspect fondamental de la messagerie automatique de SMS. Avec les mots clés, vos utilisateurs peuvent envoyer une liste de commandes par mot unique qui font un certain type d'action."
+guide_featured_title: "Articles de la section"
 guide_featured_list:
   - 
-    name: Default Opt-In/Opt-Out
-    link: /docs/user_guide/message_building_by_channel/sms/keywords/optin_optout/
-    fa_icon: fas fa-commenting
+    name: Opt-In/Opt-Out par défaut
+    link: /fr/docs/user_guide/message_building_by_channel/sms/keywords/optin_optout/
+    fa_icon: fas fa-commenter
   - 
-    name: Custom Keyword Handing
-    link: /docs/user_guide/message_building_by_channel/sms/keywords/custom_keyword_handling/
-    fa_icon: fas fa-mobile-alt
+    name: Prise de mot clé personnalisée
+    link: /fr/docs/user_guide/message_building_by_channel/sms/keywords/custom_keyword_handling/
+    fa_icon: Fas fa-mobile-alt
   - 
-    name: Handling Unknown Phone Numbers
-    link: /docs/user_guide/message_building_by_channel/sms/keywords/unknown_phone_numbers/
-    fa_icon: fas fa-phone-volume
+    name: Gestion des numéros de téléphone inconnus
+    link: /fr/docs/user_guide/message_building_by_channel/sms/keywords/unknown_phone_numbers/
+    fa_icon: volume fa-phone-fr
 ---
 
 <br><br>
