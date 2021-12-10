@@ -1,7 +1,7 @@
 ---
-nav_title: Multivariate & A/B Testing
+nav_title: Tests multivariés & A/B
 page_order: 20
-layout: redirect
-redirect_to: /docs/user_guide/engagement_tools/testing/multivariant_testing/
+layout: rediriger
+redirect_to: /fr/docs/user_guide/engagement_tools/testing/multivariant_testing/
 ---
 
