@@ -1,219 +1,219 @@
 ---
-nav_title: Multivariate & A/B Testing
-article_title: Multivariate and A/B Testing
+nav_title: Tests multivariés & A/B
+article_title: Tests multivariés et A/B
 page_order: 2
-page_type: reference
-description: "This reference article explains Multivariate and A/B Testing, their benefits, and how to create them with Braze."
+page_type: Référence
+description: "Cet article de référence explique les tests Multivariate et A/B, leurs avantages et comment les créer avec Braze."
 ---
 
-# Multivariate and A/B testing
+# Tests multivariés et A/B
 
-Multivariate and A/B Testing can be quickly utilized using our [Intelligent Selection]({{site.baseurl}}/user_guide/intelligence/intelligent_selection/) feature.
+Les tests multivariés et A/B peuvent être rapidement utilisés en utilisant notre fonctionnalité [Sélection intelligente]({{site.baseurl}}/user_guide/intelligence/intelligent_selection/).
 
-## What are multivariate and A/B testing?
+## Que sont les tests multivariés et A/B?
 
-An A/B test is an experiment that compares users’ responses to multiple versions of the same marketing campaign. These versions share similar marketing goals but differ in wording and style.
+Un test A/B est une expérience qui compare les réponses des utilisateurs à plusieurs versions de la même campagne marketing. Ces versions partagent des objectifs de marketing similaires, mais diffèrent en termes de formulation et de style.
 
-The objective is to identify the version of the campaign that best accomplishes your marketing goals. In this section, we'll walk through how to test the effectiveness of differences in content.
+L'objectif est d'identifier la version de la campagne qui réalise le mieux vos objectifs marketing. Dans cette section, nous allons examiner comment tester l'efficacité des différences de contenu.
 
 {% alert note %}
-If you'd like to evaluate differences in message scheduling or timing (for instance, sending an abandoned cart message after 1 hour of inactivity versus 1 day of inactivity), please refer to our section on setting up a [Canvas]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/create_a_canvas/).
+Si vous souhaitez évaluer les différences dans la planification des messages ou le chronométrage (par exemple, envoyer un message de panier abandonné après 1 heure d'inactivité contre 1 jour d'inactivité), veuillez vous référer à notre section sur la mise en place d'un [Canvas]({{site.baseurl}}/user_guide/engagement_tools/canvas/create_a_canvas/create_a_canvas/).
 {% endalert %}
 
-Suppose you have two options for a push notification:
+Supposons que vous ayez deux options pour une notification push :
 
-- "This deal expires tomorrow!"
-- "This deal expires in 24 hours!"
+- « Cette offre expire demain! »
+- « Cette offre expire dans 24 heures! »
 
-Using an A/B test, you can see which wording results in a higher conversion rate. The next time you send a push notification about a deal, you’ll know which type of wording is more effective.
+En utilisant un test A/B, vous pouvez voir quel libellé donne un taux de conversion plus élevé. La prochaine fois que vous enverrez une notification push à propos d’un accord, vous saurez quel type de libellé est plus efficace.
 
-The above test only examines the effect of one variable—the copy in the push notification. A multivariate test is similar, except it tests the effects of two or more variables. Another variable we might want to test is whether to include an emoji at the end of the message. We'd now be testing two variables (or variates—not to be confused with variants), hence the term "multivariate". To do this, we'd need to test four total versions of the message—two options for the copy multiplied by two options for the emoji (present or not) equals four total message variants.
+Le test ci-dessus n'examine que l'effet d'une seule variable : la copie de la notification push. Un test multivarié est similaire, sauf qu'il teste les effets de deux ou plusieurs variables. Une autre variable que nous pourrions tester est d'inclure un émoji à la fin du message. Nous testions maintenant deux variables (ou variates) — à ne pas confondre avec des variantes; d'où le terme "multivariate". Pour cela, nous aurions besoin de tester quatre versions totales du message — deux options pour la copie multipliée par deux options pour l'émoji (présent ou non) équivaut à quatre variantes de message total.
 
-In Braze documentation, "multivariate test" is used interchangeably with "A/B test".
+Dans la documentation de Braze, "multivariate test" est utilisé de manière interchangeable avec "A/B test".
 
-## The benefits of multivariate and A/B testing {#the-benefits-of}
+## Les avantages des tests multivariés et A/B {#the-benefits-of}
 
-Multivariate and A/B testing gives you an easy, clear way to learn about your audience. You no longer have to guess what users will respond to—every campaign becomes an opportunity to try different variants of a message and gauge audience response.
+Les tests multivariés et A/B vous permettent de mieux connaître votre public. Vous n'avez plus à deviner à quoi les utilisateurs répondront. Chaque campagne devient l'occasion d'essayer différentes variantes d'un message et de mesurer la réponse de l'auditoire.
 
-Specific scenarios in which multivariate and A/B testing could come in handy include:
+Des scénarios spécifiques dans lesquels des tests multivariés et A/B pourraient s'avérer utiles:
 
-- **When trying out a messaging type for the first time:** Worried about getting in-app messaging right the first time? Multivariate testing allows you to experiment and learn what resonates with your users.
-- **When creating onboarding campaigns and other campaigns that are constantly sent out:** Since most of your users will encounter this campaign, why not ensure that it's as effective as possible?
-- **When you have multiple ideas for messages to send:** If you're unsure of which to choose, run a test and then make a data-driven decision.
-- **When investigating whether your users respond to "tried and true" marketing techniques:**  Marketers often stick to conventional tactics to engage with users, but every product’s user base is different. Sometimes, repeating your call-to-action and using social proof won’t get you the results you desired. Multivariate and A/B testing lets you step outside the box and discover unconventional tactics that work for your specific audience.
+- **Lorsque vous essayez un type de messagerie pour la première fois :** Vous avez peur de recevoir la messagerie dans l'application dès la première fois ? Les tests multivariés vous permettent d’expérimenter et d’apprendre ce qui résonne avec vos utilisateurs.
+- **Lors de la création de campagnes d'intégration et d'autres campagnes qui sont constamment envoyées :** Puisque la plupart de vos utilisateurs rencontreront cette campagne, pourquoi ne pas s'assurer que c'est aussi efficace que possible?
+- **Lorsque vous avez plusieurs idées à envoyer des messages :** Si vous n'êtes pas sûr de savoir lequel choisir, exécuter un test et ensuite prendre une décision basée sur les données.
+- **En vérifiant si vos utilisateurs répondent à des techniques de marketing "éprouvées et vraies" :**  Les marketeurs s'en tiennent souvent à des tactiques conventionnelles pour s'engager auprès des utilisateurs, mais la base d'utilisateurs de chaque produit est différente. Parfois, répéter votre appel à l'action et utiliser la preuve sociale ne vous donnera pas les résultats souhaités. Les tests multivariés et A/B vous permettent de sortir de la boîte et de découvrir des tactiques non conventionnelles qui conviennent à votre public spécifique.
 
-## Five rules for multivariate and A/B testing {#five-rules-for}
+## Cinq règles pour les tests multivariés et A/B {#five-rules-for}
 
-Multivariate and A/B testing can unveil powerful insights regarding your users. To ensure that your test results are truly reflective of your users’ behaviors, follow these guidelines:
+Les tests multivariés et A/B peuvent révéler de puissantes connaissances concernant vos utilisateurs. Pour vous assurer que les résultats de votre test reflètent réellement les comportements de vos utilisateurs, suivez ces directives :
 
-1. **Run the test on a large number of users.** Large samples ensure that your results reflect the preferences of your average user and are less likely to be swayed by outliers. Larger sample sizes also allow you to identify winning variants that have smaller margins of victory.
-2. **Randomly sort users into different test groups.** Braze's multivariate feature allows you to create up to eight randomly selected test groups. Randomizing is designed to remove bias in the test set and increase the odds of the test groups being similar in composition. This ensures that differing response rates are due to differences in your messages rather than your samples.
-3. **Know what elements you're trying to test.** Multivariate and A/B testing allows you to test the differences between several versions of a message. In some cases, a simple test may be most effective, since isolating changes allows you to identify which elements had the greatest impact on response. Other times, presenting more differences between variants will let you examine outliers and compare different sets of elements. Neither method is necessarily wrong, provided you are clear from the beginning what you are trying to test for.
-4. **Decide how long your test will run for before beginning the test, and don’t end your test early!** Marketers are often tempted to stop tests after they see results that they like, biasing their findings. Resist the temptation to peek and never end your test early!
-5. **If possible, include a control group.** Including a [control group](#including-a-control-group) lets you know whether your messages have a greater impact on user conversion than sending no message at all.
+1. **Exécutez le test sur un grand nombre d'utilisateurs.** Les grands échantillons vous assurent que vos résultats reflètent les préférences de votre utilisateur moyen et sont moins susceptibles d'être influencés par des externes. De plus grandes tailles d'échantillons vous permettent également d'identifier les variantes gagnantes qui ont des marges de victoire plus petites.
+2. **Triez aléatoirement les utilisateurs dans différents groupes de tests.** La fonctionnalité multivariée de Braze vous permet de créer jusqu'à huit groupes de test sélectionnés aléatoirement. Le Randomisation est conçu pour supprimer les biais dans le jeu de tests et augmenter la probabilité que les groupes de tests soient similaires dans la composition. Cela permet de s'assurer que les taux de réponse différents sont dus à des différences dans vos messages plutôt qu'à vos échantillons.
+3. **Sachez quels éléments vous essayez de tester.** Le test multivarié et A/B vous permet de tester les différences entre plusieurs versions d'un message. Dans certains cas, un simple test peut être le plus efficace, car l'isolement des changements vous permet d'identifier les éléments qui ont le plus d'impact sur la réponse. D'autres fois, présenter plus de différences entre les variantes vous permettra d'examiner les antécédents et de comparer différents ensembles d'éléments. Aucune des deux méthodes n'est nécessairement erronée, à condition que vous sachiez dès le début pour quoi vous essayez de tester.
+4. **Décidez combien de temps votre test sera exécuté avant de commencer le test, et ne finissez pas votre test tôt !** Les marketeurs sont souvent tentés d'arrêter les tests après avoir vu les résultats qu'ils aiment, en biaisant leurs conclusions. Résistez à la tentation de jeter un coup d'œil et de ne jamais terminer votre test tôt !
+5. **Si possible, inclure un groupe de pilotage.** Y compris un [groupe de contrôle](#including-a-control-group) vous permet de savoir si vos messages ont un impact plus important sur la conversion de l'utilisateur que d'envoyer un message du tout.
 
-## Creating multivariate and A/B tests with Braze {#creating-tests}
+## Création de tests multivariés et A/B avec Braze {#creating-tests}
 
-### Step 1: Create your campaign
+### Étape 1 : Créer votre campagne
 
-Click **Create Campaign** and select a channel for the campaign from the section that allows multivariate and A/B testing. For detailed documentation on each messaging channel, refer to [Create a Campaign]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/creating_campaign/).
+Cliquez sur **Créer une campagne** et sélectionnez un canal pour la campagne dans la section qui permet le test multivarié et A/B. Pour une documentation détaillée sur chaque canal de messagerie, reportez-vous à [Créer une Campagne]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/creating_campaign/).
 
 !\[Create Your Campaign\]\[160\]{: style="max-width:30%" }
 
-### Step 2: Compose your variants
+### Étape 2 : Composez vos variantes
 
-You can create up to eight variants of your message, differentiating between titles, content, images, and more. The number of differences between the messages determines whether this is a multivariate or A/B test.
+Vous pouvez créer jusqu'à huit variantes de votre message, différenciant entre les titres, le contenu, les images et plus encore. Le nombre de différences entre les messages détermine s'il s'agit d'un test multivarié ou A/B.
 
-For some ideas on how to get started differentiating your variants, see the section in this article on [Tips for different channels][70].
+Pour quelques idées sur la façon de commencer à différencier vos variantes, consultez la section dans cet article sur [Conseils pour différents canaux][70].
 
-!\[Compose Your Variants\]\[170\]
+!\[Composez vos variants\]\[170\]
 
-### Step 3: Schedule your campaign
+### Étape 3 : Planifier votre campagne
 
-Test scheduling works the same as scheduling any other Braze campaign. All of Braze's standard [delivery types][175] are available.
+Le test de planification fonctionne de la même façon que la planification de toute autre campagne de Braze. Tous les [types de livraison standard de Braze][175] sont disponibles.
 
-### Step 4: Choose a segment and distribute your users across variants
+### Étape 4 : Choisissez un segment et distribuez vos utilisateurs entre les variantes
 
-Select segments to target, then distribute its members across your selected variants, as well as reserving a portion to send to the winning variant, if necessary.
+Sélectionnez les segments à cibler, puis distribuez ses membres à travers les variantes sélectionnées, en plus de réserver une portion à envoyer à la variante gagnante, si nécessaire.
 
-Decide what percentage of your target segment should receive each of your variants, be in the control group (if any), and what percentage should receive the winning variant once the A/B test is complete.
+Décidez quel pourcentage de votre segment cible doit recevoir chacune de vos variantes, être dans le groupe de contrôle (le cas échéant), et quel pourcentage doit recevoir la variante gagnante une fois que le test A/B est terminé.
 
-#### Including a control group {#including-a-control-group}
+#### Y compris un groupe de contrôle {#including-a-control-group}
 
-When you create a multivariate or A/B test, you can reserve a percentage of your target audience for a randomized control group. Users in the control group don't receive the test, but Braze monitors their conversion rate for the duration of the campaign.
+Lorsque vous créez un test multivarié ou A/B, vous pouvez réserver un pourcentage de votre public cible à un groupe de contrôle aléatoire. Les utilisateurs du groupe de contrôle ne reçoivent pas le test, mais Braze surveille leur taux de conversion pour la durée de la campagne.
 
-When viewing your results, you can compare the conversion rates of your variants against a baseline conversion rate provided by your control group. This lets you compare not only the effects of your variants, but also compare the effects of your variants against the conversion rate that would result if you didn’t send a message at all.
+Lorsque vous visualisez vos résultats, vous pouvez comparer les taux de conversion de vos variantes à un taux de conversion de base fourni par votre groupe de contrôle. Cela vous permet de comparer non seulement les effets de vos variantes, mais comparez aussi les effets de vos variantes avec le taux de conversion qui résulterait si vous n'aviez pas envoyé de message du tout.
 
-The size of the control group for a campaign with [Intelligent Selection][intelselection] is based on the number of variants. If each variant is sent to more than 20% of users, then the control group is 20% and the variants are split evenly across the remaining 80%. However, if you have multiple variants such that each variant is sent to less than 20% of users, then the control group must become smaller. Once Intelligent Selection starts analyzing the performance of your test, the control group grows or shrinks based on the results.
+La taille du groupe de contrôle pour une campagne avec [Sélection intelligente][intelselection] est basée sur le nombre de variantes. Si chaque variante est envoyée à plus de 20% des utilisateurs, alors le groupe de contrôle est de 20% et les variantes sont réparties uniformément sur les 80% restants. Cependant, si vous avez plusieurs variantes de sorte que chaque variante est envoyée à moins de 20% des utilisateurs, alors le groupe de contrôle doit devenir plus petit. Une fois que la sélection intelligente commence à analyser les performances de votre test, le groupe de contrôle grandit ou se rétrécit en fonction des résultats.
 
 {% alert important %}
-Using a control group when determining winner by Opens or Clicks is not recommended. Because the control group won’t receive the message, those users cannot perform any opens or clicks. Therefore, that group’s conversion rate is 0% by definition and does not constitute a meaningful comparison to the variants.
+Il n'est pas recommandé d'utiliser un groupe de contrôle pour déterminer le gagnant par Ouvertures ou Clics. Parce que le groupe de contrôle ne reçoit pas le message, ces utilisateurs ne peuvent effectuer aucune ouverture ou aucun clic. Par conséquent, le taux de conversion de ce groupe est de 0 % par définition et ne constitue pas une comparaison significative avec les variantes.
 {% endalert %}
 
-Sending the winning variant automatically is only available for Email, Push, and Webhook campaigns scheduled to send once.
+L'envoi automatique de la variante gagnante n'est disponible que pour les campagnes Email, Push et Webhook qui doivent être envoyées une fois.
 
-!\[Choose a Segment\]\[180\]
+!\[Choisissez un Segment\]\[180\]
 
-For best practices around choosing a segment to test with, see the section below on [Choosing a Segment][80].
+Pour les meilleures pratiques concernant le choix d'un segment à tester, reportez-vous à la section ci-dessous sur [Choisir un segment][80].
 
-### Step 5: Pick the action that determines the winner
+### Étape 5 : Choisissez l'action qui détermine le gagnant
 
-The Winning Variant can be measured by `Unique Opens` or `Clicks` for email, `Opens` for Push, or `Primary Conversion Rate` for all channels. Selecting `Opens` or `Clicks` to determine the winner does not affect what you choose for the campaign’s [conversion events][2].
+La Variante gagnante peut être mesurée en `Ouvertures uniques` ou `Clics` pour l'e-mail, `Ouvre` pour Push, ou `Taux de Conversion Primaire` pour tous les canaux. La sélection de `Ouvre` ou `Clics` pour déterminer le gagnant n'affecte pas ce que vous choisissez pour les [événements de conversion][2] de la campagne.
 
-Keep in mind that if you’re using a control group, users in the control group can't perform `Opens` or `Clicks`, so the “performance” of the control group is guaranteed to be `0`. As a result, the control group cannot “win” the A/B test. However, you may still want to use a control group to track other metrics for users who do not receive a message.
+Gardez à l'esprit que si vous utilisez un groupe de contrôle, les utilisateurs du groupe de contrôle ne peuvent pas effectuer `Ouvre` ou `Clics`, ainsi la « performance » du groupe de contrôle est garantie d'être `0`. Par conséquent, le groupe de contrôle ne peut pas « gagner » le test A/B. Cependant, vous pouvez toujours utiliser un groupe de contrôle pour suivre d'autres mesures pour les utilisateurs qui ne reçoivent pas de message.
 
-### Step 6: Schedule when to send the winning variant
+### Étape 6: Planifier quand envoyer la variante gagnante
 
-Choose a date and time when the winning variant should be sent out.
+Choisissez une date et une heure où la variante gagnante doit être envoyée.
 
 {% alert note %}
-When sending in users’ local time or with Intelligent Timing, the winning variant must be sent at least 24 hours after the A/B test to ensure delivery to all users in the winning variant group.
+Lors de l'envoi de l'heure locale des utilisateurs ou avec le Timing Intelligent, la variante gagnante doit être envoyée au moins 24 heures après le test A/B pour assurer la livraison à tous les utilisateurs du groupe de variantes gagnantes.
 {% endalert %}
 
-In the dropdown below the date, you can also choose whether or not to send the best performing variant even if it does not win by a statistically significant margin.
+Dans la liste déroulante en dessous de la date, vous pouvez également choisir d'envoyer ou non la meilleure variante performante même si elle ne gagne pas par une marge statistiquement significative.
 
-#### (Optional) Designate a conversion event
+#### (Facultatif) Désigne un événement de conversion
 
-Setting a conversion event for a campaign allows you to see how many recipients of that campaign performed a particular action after receiving it.
+Définir un événement de conversion pour une campagne vous permet de voir combien de destinataires de cette campagne ont effectué une action particulière après l'avoir reçue.
 
-This only affects the test if you chose **Primary Conversion Rate** in the previous steps. For more information, refer to [Conversion events][2].
+Cela n'affecte le test que si vous avez choisi **Taux de conversion primaire** dans les étapes précédentes. Pour plus d'informations, reportez-vous à [Événements de conversion][2].
 
-### Step 7: Review and launch
+### Étape 7 : Réviser et lancer
 
-On the confirmation page, review the details of your multivariate campaign and launch the test!
+Sur la page de confirmation, vérifiez les détails de votre campagne multivariée et lancez le test!
 
-## Viewing results of a multivariate campaign
+## Visualisation des résultats d'une campagne multivariée
 
-Once your campaign has launched, you can check how each variant is performing by selecting your campaign from the **Campaigns** section of the dashboard. When the testing campaign is complete, you can see a summary of how all the variants performed and whether or not there was a winner during the test.
+Une fois votre campagne lancée, vous pouvez vérifier la performance de chaque variante en sélectionnant votre campagne dans la section **Campagnes** du tableau de bord. Une fois la campagne de test terminée, vous pouvez voir un résumé de la façon dont toutes les variantes ont été réalisées et s'il y a eu ou non un gagnant pendant le test.
 
-If one variant outperformed all the others with better than 95% [confidence][confidence], Braze marks that variant with a “Winner” banner. If no variant beats all the others with 95% confidence and you chose to send the best performing variant anyway, the “best” performing variant will still be sent out and indicated with a label that reads “Sent as Winning Variant”.
+If one variant outperformed all the others with better than 95% [confidence][confidence], Braze marks that variant with a “Winner” banner. Si aucune variante ne bat tous les autres avec 95% de confiance et que vous avez choisi d'envoyer la meilleure variante de toute façon, la « meilleure » variante performante sera toujours envoyée et indiquée avec une étiquette indiquant « Envoyée comme Variante gagnante ».
 
-On the analytics page, you can also see the performance of the Winning Variant throughout the campaign (including the A/B test sends).
+Sur la page Analytics, vous pouvez également voir les performances de la Variante gagnante tout au long de la campagne (y compris les envois de test A/B).
 
-!\[View Results\]\[210\]
+!\[Voir les résultats\]\[210\]
 
 {% alert note %}
-Braze tests all the variants against each other with [Pearson’s chi-squared tests](https://en.wikipedia.org/wiki/Pearson%27s_chi-squared_test). This measures whether or not one variant statistically outperforms all others at a significance level of p < 0.05, or what we refer to as 95% significance. If so, the winning variant is indicated with the “Winner” label. <br><br> This is a separate test from the confidence score, which only describes the performance of a variant compared to the control with a numeric value between 0 and 100%.
+Braze teste toutes les variantes les unes contre les autres grâce aux tests [Pearson du carré](https://en.wikipedia.org/wiki/Pearson%27s_chi-squared_test). Cela mesure si oui ou non une variante surpasse statistiquement toutes les autres à un niveau de signification de p < 0. 5, ou ce que nous appelons une signification de 95 %. Si oui, la variante gagnante est indiquée avec le label « Gagnant ». <br><br> Ceci est un test séparé du score de confiance, qui ne décrit que la performance d'une variante par rapport au contrôle avec une valeur numérique comprise entre 0 et 100%.
 {% endalert %}
 
-A variant can do better than the control group, but the chi-squared testing checks if one variant is better than all of the rest. [Follow-up tests](#recommended-follow-ups) may yield more details.
+Une variante peut faire mieux que le groupe de contrôle, mais le test de chi-squared vérifie si une variante est meilleure que tout le reste. [tests de suivi](#recommended-follow-ups) peuvent donner plus de détails.
 
-### Understanding confidence {#understanding-confidence}
+### Comprendre la confiance {#understanding-confidence}
 
-An important part of your results is the confidence of your results. For example, what if the Control Group had a 20% conversion rate and Variant A had a 25% conversion rate? This seems to indicate that sending Variant A is more effective than sending no message. Having a confidence of 95% means that the difference between the two conversion rates is likely due to an actual difference in users’ responses and that there is only a 5% likelihood that the difference has occurred by chance.
+Une partie importante de vos résultats est la confiance de vos résultats. Par exemple, que se passe-t-il si le groupe de contrôle avait un taux de conversion de 20 % et que la variante A avait un taux de conversion de 25 %? Cela semble indiquer que l'envoi de la variante A est plus efficace que d'envoyer aucun message. Ayant une confiance de 95% signifie que la différence entre les deux taux de conversion est probablement due à une différence réelle dans les réponses des utilisateurs et qu’il n’y a que 5% de probabilité que la différence ait eu lieu par hasard.
 
-Braze compares each variant’s conversion rate against the control’s conversion rate with a statistical procedure called a [Z&nbsp;Test](https://en.wikipedia.org/wiki/Z-test). A result of 95% or greater confidence, as in the above example, indicates that the difference is statistically meaningful. This is true anywhere you see a confidence metric in the Braze dashboard that describes the difference between two messages or user populations.
+Braze compare le taux de conversion de chaque variante au taux de conversion du contrôle avec une procédure statistique appelée [Z&nbsp;Test](https://en.wikipedia.org/wiki/Z-test). Un résultat de 95 % ou plus de confiance, comme dans l'exemple ci-dessus, indique que la différence est statistiquement significative. Ceci est vrai partout où vous voyez une métrique de confiance dans le tableau de bord de Braze qui décrit la différence entre deux messages ou des populations d'utilisateurs.
 
-In general, a confidence of at least 95% is necessary to show that your results are reflective of users’ actual preferences, and not due to chance. In rigorous scientific tests, 95% confidence (or otherwise commonly referred to as the “p” value being less than 0.05) is the common benchmark used to determine statistical significance. If you continually fail to achieve 95% confidence, try increasing your sample size or decreasing the number of variants. Confidence does not describe whether one variant is better than the others.
+En général, une confiance d'au moins 95% est nécessaire pour montrer que vos résultats reflètent les préférences réelles des utilisateurs, et non en raison du hasard. Dans le cadre de tests scientifiques rigoureux, 95% de confiance (ou autrement communément appelée la valeur « p » étant inférieure à 0. 5) est le point de référence commun utilisé pour déterminer l'importance statistique. Si vous ne parvenez pas à obtenir 95 % de confiance, essayez d'augmenter la taille de votre échantillon ou de diminuer le nombre de variantes. La confiance ne décrit pas si une variante est meilleure que les autres.
 
 {% details Statistically insignificant results %}
 
-A test that doesn’t have a confidence of 95% can still hold important insights. Here are a few things you can learn from a test with statistically insignificant results:
+Un test qui n’a pas confiance en 95 % peut toujours avoir des idées importantes. Voici quelques choses que vous pouvez apprendre d'un test avec des résultats statistiquement insignifiants :
 
-- It’s possible that all of your variants had roughly the same effect. Knowing this saves you the time you would’ve spent making these changes. Sometimes, you may find that conventional marketing tactics, such as repeating your call to action, don’t necessarily work for your audience.
-- While your results may have been due to chance, they can inform the hypothesis for your next test. If multiple variants appear to have roughly the same results, run some of them again alongside new variants to see if you can find a more effective alternative. If one variant does better, but not by a significant amount, you can perform another test in which this variant’s difference is more exaggerated.
-- Keep testing! A test with insignificant results should lead to certain questions. Was there truly no difference between your variants? Should you have structured your test differently? You can answer these questions by running follow-up tests.
-- While testing is useful for discovering which type of messaging generates the most response from your audience, it’s also important to understand which alterations in messaging have only a negligible effect.  This allows you to either continue testing for another more effective alternative, or save the time that may have been spent deciding between two alternate messages.
+- Il est possible que toutes vos variantes aient eu le même effet. Savoir cela vous permet d'économiser le temps que vous auriez passé à effectuer ces changements. Parfois, il se peut que vous trouviez que les tactiques de marketing conventionnelles, comme la répétition de votre appel à l’action, ne fonctionnent pas nécessairement pour votre public.
+- Bien que vos résultats aient été dus au hasard, ils peuvent vous informer de l'hypothèse pour votre prochain test. Si plusieurs variantes semblent avoir les mêmes résultats à peu près exécuter certaines d'entre elles à nouveau à côté des nouvelles variantes pour voir si vous pouvez trouver une alternative plus efficace. Si une variante fait mieux, mais pas par une quantité significative, vous pouvez effectuer un autre test dans lequel la différence de cette variante est plus exagérée.
+- Continuez à tester! Un test avec des résultats insignifiants devrait conduire à certaines questions. N'y a-t-il vraiment pas de différence entre vos variantes? Devriez-vous avoir structuré votre test différemment ? Vous pouvez répondre à ces questions en effectuant des tests de suivi.
+- Tout en testant est utile pour découvrir quel type de messagerie génère le plus de réponse de votre public, Il est également important de comprendre quelles modifications de la messagerie ont seulement un effet négligeable.  Cela vous permet soit de continuer à tester pour une autre alternative plus efficace, ou économiser le temps qui a pu être passé à décider entre deux messages alternatifs.
 
-Whether or not your test has a clear winner, it can be helpful to run follow-up test to confirm your results or apply your findings to a slightly different scenario.
+Si votre test a ou non un gagnant clair, il peut être utile d'exécuter un test de suivi pour confirmer vos résultats ou appliquer vos résultats à un scénario légèrement différent.
 
 {% enddetails %}
 
-### Tips for different channels {#tips-different-channels}
+### Conseils pour différents canaux {#tips-different-channels}
 
-Depending on which channel you select, you’ll be able to test different components of your message. Try to compose variants with an idea of what you want to test and what you hope to prove.
+Selon le canal que vous choisissez, vous pourrez tester différents composants de votre message. Essayez de composer des variantes avec une idée de ce que vous voulez tester et de ce que vous espérez prouver.
 
-What levers do you have to pull and what are the desired effects? While there are millions of possibilities that you can investigate using a multivariate and A/B test, we have some suggestions to get you started:
+Quels leviers faut-il tirer et quels sont les effets souhaités? Bien qu'il y ait des millions de possibilités que vous pouvez étudier à l'aide d'un test multivarié et A/B, nous avons quelques suggestions pour vous aider à démarrer :
 
-| Channel             | Aspects of Message You Can Change                                                                                                                                                                                                                                     | Results To Look For               |
-| ------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------- |
-| Push                | Copy <br> Image and Emoji Usage <br> Deep Links  <br> Presentation of numbers (e.g. "triple" vs. "increase by 200%")  <br> Presentation of time (e.g. "ends at midnight" vs. "ends in 6 hours")                                               | Opens  <br> Conversion Rate |
-| Email               | Subject <br> Display Name <br> Salutation <br> Body Copy <br> Image and Emoji Usage <br> Presentation of numbers (e.g. "triple" vs. "increase by 200%") <br> Presentation of time (e.g. "ends at midnight" vs. "ends in 6 hours") | Opens  <br> Conversion Rate |
-| In-app Notification | Aspects listed for "push" <br> [Message format][273]                                                                                                                                                                                                            | Click <br> Conversion Rate  |
+| Chaîne              | Les aspects du message que vous pouvez modifier                                                                                                                                                                                                                                                  | Résultats à rechercher                     |
+| ------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------ |
+| Pousser             | Copier <br> Utilisation des images et des émoticônes <br> Liens profonds  <br> Présentation des nombres (par ex. "triple" vs. "augmentation de 200%")  <br> Présentation du temps (par exemple "se termine à minuit" vs. "se termine dans 6 heures")                     | Ouvre le taux de conversion de  <br> |
+| Courriel            | Sujet <br> Nom affiché <br> Salutation <br> Corps Copie <br> Image et Utilisation Emoji <br> Présentation des nombres (e. . "triple" vs. "augmentation de 200%") <br> Présentation du temps (par exemple "se termine à minuit" vs. "se termine en 6 heures") | Ouvre le taux de conversion de  <br> |
+| Notification In-App | Aspects listés pour "push" <br> [Format de message][273]                                                                                                                                                                                                                                   | Taux de conversion de clic <br>      |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
 
 {% alert tip %}
-When running A/B tests, don’t forget to generate [funnel reports]({{site.baseurl}}/user_guide/data_and_analytics/your_reports/funnel_reports/) that let you understand how each variant impacted your conversion funnel, especially if "conversion" for your business involves taking multiple steps or actions.
+Lorsque vous exécutez des tests A/B, n'oubliez pas de générer des [rapports d'entonnoir]({{site.baseurl}}/user_guide/data_and_analytics/your_reports/funnel_reports/) qui vous permettent de comprendre l'impact de chaque variante sur votre entonnoir de conversion, surtout si la "conversion" pour votre entreprise implique de prendre plusieurs mesures ou actions.
 {% endalert %}
 
-In addition, the ideal length of your test may also vary depending on the channel. Keep in mind the average amount of time most users may need to engage with each channel.
+De plus, la durée idéale de votre test peut également varier selon le canal. Gardez à l'esprit le temps moyen que la plupart des utilisateurs peuvent avoir à engager avec chaque canal.
 
-For instance, if you’re testing a push, you may achieve significant results faster than when testing email, since users see pushes immediately, but it may be days before they see or open an email. If you’re testing in-app messages, keep in mind that users must open the app in order to see the campaign, so you should wait longer in order to collect results from both your most active app openers as well as your more typical users.
+Par exemple, si vous testez une push, vous pouvez obtenir des résultats significatifs plus rapidement que lors du test de courriel, car les utilisateurs voient les messages pushes immédiatement, mais il peut s'écouler des jours avant qu'ils ne voient ou n'ouvrent un courriel. Si vous testez des messages dans l'application, gardez à l'esprit que les utilisateurs doivent ouvrir l'application pour voir la campagne, donc vous devriez attendre plus longtemps afin de recueillir les résultats de vos ouvertures d'applications les plus actives ainsi que de vos utilisateurs les plus ordinaires.
 
-If you're unsure how long your test should run for, the [Intelligent Selection][272] feature can be useful for finding a winning variant efficiently.
+Si vous n'êtes pas sûr de la durée de votre test, la fonctionnalité [Sélection intelligente][272] peut être utile pour trouver une variante gagnante efficacement.
 
-### Choosing a segment {#choosing-a-segment}
+### Choix d'un segment {#choosing-a-segment}
 
-Since different segments of your users may respond differently to messaging, the success of a particular message says something about both the message itself and its target segment. Therefore, try to design a test with your target segment in mind.
+Puisque différents segments de vos utilisateurs peuvent répondre différemment à la messagerie, le succès d'un message particulier dit quelque chose à la fois sur le message lui-même et sur son segment cible. Par conséquent, essayez de concevoir un test en gardant à l'esprit votre segment cible.
 
-For instance, while active users may have equal response rates to “This deal expires tomorrow!” and “This deal expires in 24 hours!”, users who haven’t opened the app for a week may be more responsive toward the latter wording since it creates a greater sense of urgency.
+Par exemple, alors que les utilisateurs actifs peuvent avoir des taux de réponse égaux à « Cette transaction expire demain ! » et « Cette transaction expire dans 24 heures ! , les utilisateurs qui n'ont pas ouvert l'application pendant une semaine peuvent être plus réceptifs à ce dernier libellé car il crée un plus grand sens de l'urgence.
 
-Additionally, when choosing which segment to run your test on, be sure to consider whether the size of that segment will be large enough for your test. In general, multivariate and A/B tests with more variants require a larger test group to achieve statistically significant results. This is because more variants will result in fewer users seeing each individual variant.
+De plus, lors du choix du segment sur lequel exécuter votre test, Assurez-vous de vérifier si la taille de ce segment sera suffisamment grande pour votre test. En général, les tests multivariés et A/B avec un plus grand nombre de variantes nécessitent un plus grand groupe de tests pour obtenir des résultats statistiquement significatifs. Ceci est dû au fait que plus de variantes auront pour conséquence que moins d'utilisateurs verront chaque variante individuelle.
 
 {% alert tip %}
-As a crude guide, you likely need around 15,000 users per variant (including the control) to achieve 95% confidence in your test results. However, the exact number of users you need could be higher or lower than that depending on your particular case. For more exact guidance on variant sample sizes, consider referring to [Optimizely's Sample Size Calculator](https://www.optimizely.com/resources/sample-size-calculator/).
+À titre de guide brut, vous aurez probablement besoin d'environ 15 000 utilisateurs par variante (y compris le contrôle) pour obtenir 95% de confiance dans vos résultats de test. Cependant, le nombre exact d'utilisateurs dont vous avez besoin pourrait être supérieur ou inférieur à celui qui dépend de votre cas particulier. Pour une orientation plus exacte sur les tailles d'échantillons de variantes, envisagez de vous référer à [Calculateur de taille d'échantillon d'optimisation](https://www.optimizely.com/resources/sample-size-calculator/).
 {% endalert %}
 
-## Recommended follow-ups {#recommended-follow-ups}
+## Suivi recommandé {#recommended-follow-ups}
 
-One multivariate and A/B test can (and should!) inspire ideas for future tests, as well as guide you toward changes in your messaging strategy. Possible follow-up actions include the following:
+Un test multivarié et A/B peut (et devrait être !) inspirer des idées pour de futurs tests, ainsi que vous guider vers des changements dans votre stratégie de messagerie. Les actions de suivi possibles incluent les éléments suivants :
 
-**Change your messaging strategy based on test results**<br> Your multivariate results may lead you to change the way you word or format your messaging.
+**Changez votre stratégie de messagerie en fonction des résultats de test**<br> Vos résultats multivariés peuvent vous conduire à modifier la façon dont vous parlez ou formatez votre messagerie.
 
-**Change the way you understand your users**<br> Each test will shed light on your users’ behaviors, how users respond to different messaging channels, and the differences (and similarities) among your segments.
+**Changez la façon dont vous comprenez vos utilisateurs**<br> Chaque test fera la lumière sur les comportements de vos utilisateurs, comment les utilisateurs réagissent aux différents canaux de messagerie et les différences (et similaires) entre vos segments.
 
-**Improve the way you structure future tests**<br> Was your sample size too small? Were the differences between your variants too subtle? Each test provides an opportunity to learn how to improve future tests. If your confidence is low, your sample size is too small and should be enlarged for future tests.  If you find no clear difference between how your variants performed, it’s possible that the differences were too subtle to have a discernible effect on users' responses.
+**Améliore la façon dont vous structurez les tests futurs**<br> Votre taille d'échantillon était-elle trop petite ? Les différences entre vos variantes étaient-elles trop subtiles ? Chaque test offre l’occasion d’apprendre comment améliorer les tests futurs. Si votre confiance est faible, la taille de votre échantillon est trop petite et devrait être agrandie pour de futurs tests.  Si vous ne trouvez pas de différence claire entre la façon dont vos variantes ont été effectuées, il est possible que les différences soient trop subtiles pour avoir un effet perceptible sur les réponses des utilisateurs.
 
-**Run a follow-up test with a larger sample size**<br> Larger samples will increase the chances of detecting small differences between variants.
+**Exécuter un test de suivi avec une taille d'échantillon plus grande**<br> Des échantillons plus grands augmenteront les chances de détecter de petites différences entre les variantes.
 
-**Run a follow-up test using a different messaging channel**<br> If you find that a particular strategy is very effective in one channel, you may want to test that strategy in other channels.  If one type of message is effective in one channel but not effective in another, you may be able to conclude that certain channels are more conducive to certain types of messages.  Or, perhaps there is a difference between users who are more likely to enable push notifications and those who are more likely to pay attention to in-app messages.  Ultimately, running this sort of test will help you learn about how your audience interacts with your different communication channels.
+**Exécuter un test de suivi en utilisant un canal de messagerie différent**<br> Si vous trouvez qu'une stratégie particulière est très efficace dans un canal, vous voudrez peut-être tester cette stratégie dans d'autres canaux.  Si un type de message est efficace dans un canal mais n'est pas efficace dans un autre, vous pouvez peut-être conclure que certains canaux sont plus propices à certains types de messages.  Ou peut-être y a-t-il une différence entre les utilisateurs qui sont plus susceptibles d'activer les notifications push et ceux qui sont plus susceptibles de prêter attention aux messages dans l'application.  En fin de compte, exécuter ce type de test vous aidera à apprendre comment votre public interagit avec vos différents canaux de communication.
 
-**Run a follow-up test on a different segment of users**<br> To do this, create another test with the same messaging channel and variants, but choose a different segment of users.  For instance, if one type of messaging was extremely effective for engaged users, it may be useful to investigate its effect on lapsed users. It’s possible that the lapsed users will respond similarly, or they may prefer another one of the other variants.  This sort of test will help you learn more about your different segments and how they respond to different sorts of messages.  Why make assumptions about your segments when you can base your strategy on data?
+**Exécuter un test de suivi sur un segment différent d'utilisateurs**<br> Pour faire cela, créer un autre test avec le même canal de messagerie et les mêmes variantes, mais choisir un segment différent des utilisateurs.  Par exemple, si un type de messagerie était extrêmement efficace pour les utilisateurs engagés, il peut être utile d'étudier son effet sur les utilisateurs en retard. Il est possible que les utilisateurs obsolètes répondent de la même manière, ou ils préfèrent peut-être une autre variante.  Ce type de test vous aidera à en savoir plus sur vos différents segments et comment ils répondent à différentes sortes de messages.  Pourquoi faire des hypothèses sur vos segments quand vous pouvez baser votre stratégie sur des données ?
 
-**Run a follow-up test based on insights from a previous test**<br> Use the insights you gather from past tests to guide your future ones. Does a previous test hint at one messaging technique being more effective? Are you unsure about what specific aspect of a variant made it better? Running follow-up tests based on these questions will help you generate insightful findings about your users.
+**Effectuez un test de suivi basé sur les connaissances d'un test précédent**<br> Utilisez les aperçus que vous avez récoltés lors des tests passés pour guider vos futurs tests. Est-ce qu'un test précédent indique qu'une technique de messagerie est plus efficace ? Vous n'êtes pas sûr de quel aspect spécifique d'une variante l'a amélioré? Exécuter des tests de suivi basés sur ces questions vous aidera à générer des conclusions perspicaces sur vos utilisateurs.
 
-**Compare the long-term impact of different variants**<br> If you’re A/B testing re-engagement messages, don’t forget to compare the long-term impact of different variants via [Retention Reports]({{site.baseurl}}/user_guide/data_and_analytics/your_reports/retention_reports/). You can use Retention Reports to analyze how each variant impacted any user behavior of your choice days, weeks, a month after message receipt, and see if there’s uplift.
-[160]: {% image_buster /assets/img/ab_create_1.png %} [170]: {% image_buster /assets/img/ab_create_2.png %} [180]: {% image_buster /assets/img/ab_create_4.png %} [210]: {% image_buster /assets/img/ab_create_8.png %}
+**Comparer l'impact à long terme de différentes variantes**<br> Si vous testez des messages de réengagement A/B n'oubliez pas de comparer l'impact à long terme de différentes variantes via [Rapports de conservation]({{site.baseurl}}/user_guide/data_and_analytics/your_reports/retention_reports/). Vous pouvez utiliser les rapports de rétention pour analyser l'impact de chaque variante sur le comportement de l'utilisateur des jours de votre choix semaines, un mois après le reçu du message, et voir s'il y a un ascenseur.
+[160]: {% image_buster /assets/img/ab_create_1.png %} [170]: {% image_buster /assets/img/ab_create_2. ng %} [180]: {% image_buster /assets/img/ab_create_4.png %} [210]: {% image_buster /assets/img/ab_create_8.png %}
 
 [2]: {{site.baseurl}}/user_guide/engagement_tools/campaigns/testing_and_more/conversion_events/#conversion-events
 
