@@ -1,81 +1,81 @@
 ---
-nav_title: Creating A Churn Prediction
-article_title: Creating A Churn Prediction
-description: "This article covers how to create a Churn Prediction within the Braze dashboard"
+nav_title: Créer une prédiction de la nature
+article_title: Créer une prédiction de la nature
+description: "Cet article couvre la façon de créer une prédiction de Churchn dans le tableau de bord de Braze"
 page_order: 1
 ---
 
-# Creating a Churn Prediction
+# Créer une prédiction de la nature
 
-### Step 1: Create a new prediction
+### Étape 1 : Créer une nouvelle prédiction
 
-On the left navigation bar of the Braze dashboard, choose the __Predictions__ page. A Prediction is one instance of a trained machine learning model and all the parameters and data it uses. On this page, you will see a list of current active Predictions along with some basic info about them. Here you can rename, archive, and create new Predictions. Archived predictions are inactive and do not update user scores.
+Sur la barre de navigation gauche du tableau de bord Braze, choisissez la page __Prédictions__. Une prédiction est une instance d'un modèle d'apprentissage automatique formé et de tous les paramètres et données qu'il utilise. Sur cette page, vous verrez une liste des prédictions actives actuelles ainsi que quelques informations de base à leur sujet. Ici vous pouvez renommer, archiver et créer de nouvelles prédictions. Les prédictions archivées sont inactives et ne mettent pas à jour les scores des utilisateurs.
 
-To create a new Prediction, choose __Create Prediction__ in the upper right corner, and select a new __Churn Prediction__.
+Pour créer une nouvelle prédiction, choisissez __Créer une prédiction__ dans le coin supérieur droit et sélectionnez une nouvelle __prédiction de la coque__.
 
 {% alert note %}
-There is a limit of 3 concurrently active Churn Predictions. Prior to purchasing Predictive Churn, the limit is one active Preview Churn Prediction. A Preview Churn Prediction will not regularly update scores or allow you to target users based on the Prediction's output. Contact your Account Manager for details.
+Il y a une limite de 3 Églises prédictions simultanément actives. Avant d'acheter une Église prédictive, la limite est une Prévisualisation active de la prédiction. Un aperçu de la prévision ne mettra pas régulièrement à jour les scores ou ne vous permettra pas de cibler les utilisateurs en fonction de la sortie de la prédiction. Contactez votre gestionnaire de compte pour plus de détails.
 {% endalert %}
 
-On the Edit page, give your new Prediction a unique name.
+Sur la page Édition, donnez à votre nouvelle prédiction un nom unique.
 
-### Step 2: Define churn
+### Étape 2 : Définir le churn
 
-In the __Churn Definition__ panel, use the provided filters to define what churn means for your business. In other words, what does a user have to do in what time frame for you to consider them churned? Remember, you don’t need to explain what behaviors might precede churn - only what makes a user a churned user. This should also generally be a description of what behavior a user does or doesn't do to churn as opposed to an attribute a user has. For example, you might consider users who haven’t opened your app in 7 days to be churned.
+Dans le panneau __Définition de la coque__ , utilisez les filtres fournis pour définir ce que churn signifie pour votre entreprise. En d'autres termes, qu'est-ce qu'un utilisateur a à faire dans quel délai pour que vous les considériez foulés ? Rappelez-vous que vous n’avez pas besoin d’expliquer quels comportements pourraient précéder churn - seulement ce qui fait de l’utilisateur un utilisateur désagréé. Cela devrait aussi être une description du comportement qu'un utilisateur fait ou ne fait pas à churn par opposition à un attribut qu'il possède. Par exemple, vous pouvez considérer que les utilisateurs qui n'ont pas ouvert votre application depuis 7 jours doivent être abonnés.
 
-To implement this example, enter 7 days in the time window at the top of the panel.
+Pour implémenter cet exemple, entrez 7 jours dans la fenêtre de temps en haut du panneau.
 
 !\[Churn 1\]\[1\]
 
-Then, use the available filters to select which behaviors in that time frame constitute churn. For this case, select "do not" and "start a session". You can combine other filters with "and" and "or" as you see fit to create the definition you need. Uninstalling, making or not making purchases, or performing or not performing particular custom events are other filters that can be included.
+Ensuite, utilisez les filtres disponibles pour sélectionner quels comportements dans ce laps de temps constituent une apparition. Dans ce cas, sélectionnez « ne pas » et « démarrer une session ». Vous pouvez combiner d'autres filtres avec "et" et "ou" comme bon vous semble pour créer la définition dont vous avez besoin. Désinstaller, faire ou ne pas faire d’achats, ou exécuter ou ne pas exécuter d’événements personnalisés particuliers sont d’autres filtres qui peuvent être inclus.
 
-Interested in some potential churn definitions to consider? You’ll find some inspiration [here](#sample-definitions).
+Intéressé par certaines définitions potentielles de churn à prendre en considération? Vous trouverez de l'inspiration [ici](#sample-definitions).
 
-### Step 3: Filter your prediction audience
+### Étape 3 : Filtrer votre audience de prédiction
 
-Your Prediction Audience is the group of users you want to target to keep from churning. Although you can try to prevent churn as defined above in your entire population of users, the model will likely perform better if you narrow down and filter the group of users you want to prevent from churning with some criteria. Think about the specific users who mean the most to you that you’d like to retain and define them here. For example, you might want to retain users who first used the app more than a month ago or have ever made a purchase.
+Votre Audience de Prédiction est le groupe d'utilisateurs que vous voulez cibler pour vous empêcher de tourner. Bien que vous puissiez essayer de prévenir la présence de churn comme défini ci-dessus dans toute votre population d'utilisateurs, le modèle sera probablement plus performant si vous affinez et filtrez le groupe d'utilisateurs que vous voulez éviter de retourner avec certains critères. Pensez aux utilisateurs spécifiques qui veulent le plus pour vous que vous souhaitez conserver et définir ici. Par exemple, vous pourriez vouloir conserver les utilisateurs qui ont utilisé l'application pour la première fois il y a plus d'un mois ou qui ont déjà fait un achat.
 
 {% alert note %}
-The Prediction Audience cannot exceed 40 million users.
+L'audience de la prédiction ne peut excéder 40 millions d'utilisateurs.
 {% endalert %}
 
-For filters that begin with “Last...” like Last Used App and Last Made Purchase, the time window to look back for these filters __cannot exceed 30 days minus the number of days of the window specified__ in the Churn Definition. For example, if your Churn definition has a window of 14 days, the time window for the “Last...” filters cannot exceed 30 - 14 = 16 days.
+Pour les filtres qui commencent par « ... comme Dernier App Utilisé et Dernier Achat, la fenêtre de temps pour regarder en arrière pour ces filtres __ne peut pas excéder 30 jours moins le nombre de jours de la fenêtre spécifiée__ dans la définition de la Churn. Par exemple, si votre définition de Churn a une fenêtre de 14 jours, la fenêtre de temps pour le « Dast ». .” les filtres ne doivent pas excéder 30 - 14 = 16 jours.
 
-For a sample list of Prediction Audience definitions, check out our sample definitions at the [bottom of this page](#sample-definitions).
+Pour une liste d'exemples de définitions d'audience prévisionnelle, consultez nos exemples de définitions au [bas de cette page](#sample-definitions).
 
-### Step 4: Choose the update frequency for Churn Predictions
+### Étape 4 : Choisissez la fréquence de mise à jour pour les prédictions de type Churn
 
-The machine learning model created when you complete this page will be used on a schedule you select here to generate fresh scores of users’ probability to churn. Please select the __maximum frequency of updates__ that you’ll find useful. For example, if you’re going to send a weekly promotion to prevent users from churning, set the update frequency to __Weekly__ on the day and time of your choosing.
+Le modèle d’apprentissage automatique créé lorsque vous complétez cette page sera utilisé sur un calendrier que vous sélectionnez ici pour générer de nouveaux scores de probabilité des utilisateurs à l’effervescence. Veuillez sélectionner la __fréquence maximale de mises à jour__ que vous trouverez utile. Par exemple, si vous allez envoyer une promotion hebdomadaire pour empêcher les utilisateurs de s'absenter, réglez la fréquence de mise à jour sur __Hebdomadaire__ le jour et l'heure de votre choix.
 
 !\[Churn 2\]\[2\]
 
 {% alert note %}
-Preview and Demo Predictions will never update users' risk of churn. Additionally, daily updates for predictions require an additional purchase beyond Weekly or Monthly updates with Predictive Churn. To purchase this functionality, contact your Account Manager.
+Les prédictions d'aperçu et de démo ne mettront jamais à jour le risque d'apparition des utilisateurs. En outre, les mises à jour quotidiennes des prédictions nécessitent un achat supplémentaire au-delà des mises à jour hebdomadaires ou mensuelles auprès de l’Église prédictive. Pour acheter cette fonctionnalité, contactez votre responsable de compte.
 {% endalert %}
 
-### Step 5: Build prediction
+### Étape 5 : Construire la prédiction
 
-Verify that the details you’ve provided are correct, and choose __Build Prediction__. You can also save your changes in draft form by selecting __Save As Draft__ to return to this page and build the model later. Once you click __Build Prediction__, the process that generates the model will begin. This could take between 30 minutes to a few hours depending on data volumes. For this Prediction, you will see a page explaining that training is in progress for the duration of the model building process.
+Vérifiez que les détails que vous avez fournis sont corrects et choisissez __Prédiction de construction__. Vous pouvez également enregistrer vos modifications dans le formulaire brouillon en sélectionnant __Enregistrer comme brouillon__ pour revenir à cette page et construire le modèle plus tard. Une fois que vous cliquez sur __Build Prediction__, le processus qui génère le modèle va commencer. Cela peut prendre entre 30 minutes et quelques heures selon les volumes de données. Pour cette prédiction, vous verrez une page expliquant que la formation est en cours pour la durée du processus de construction du modèle.
 
-Once it’s done, the page will switch to the Analytics view automatically, and you will also get an email informing you that the Prediction and results are ready. In the event of an error, the page will return to the Editing mode with an explanation of what went wrong.
+Une fois terminée, la page passera à la vue Analytics automatiquement, et vous recevrez également un courriel vous informant que la Prédiction et les résultats sont prêts. En cas d'erreur, la page retournera au mode Édition avec une explication de ce qui s'est mal passé.
 
-The Prediction will be rebuilt ("retrained") again every __two weeks automatically__ to keep it updated on the most recent data available. Note that this is a separate process from when users' Churn Risk Scores, the output of the Prediction, are produced. The latter is determined by the update frequency you chose in Step 4.
+La prédiction sera reconstruite ("reformée") toutes les __deux semaines automatiquement__ pour la tenir à jour sur les données les plus récentes disponibles. Notez que ce processus est séparé du moment où les résultats de la prédiction sont produits par les utilisateurs. Cette dernière est déterminée par la fréquence de mise à jour que vous avez choisie à l'étape 4.
 
-## Sample churn and prediction audience definitions {#sample-definitions}
+## Exemple de définitions d'orthographe et d'audience de prédiction {#sample-definitions}
 
-__Sample Churn Definitions__<br>
-- “Within 7 days, did custom event ‘Subscription Cancellation’”<br>
-- “Within 14 days, did custom event ‘Trial Expired’”<br>
-- “Within 1 day did uninstall.” <br>
-- “Within 14 days did not Make a Purchase.” <br>
+__Échantillons de définitions__<br>
+- « En 7 jours, l'événement personnalisé « Annulation de l'abonnement »<br>
+- « En 14 jours, l'événement personnalisé « Épreuve expirée »<br>
+- « Dans un délai d'un jour il a été désinstallé. » <br>
+- « En 14 jours, il n’y a pas eu d’achat. » <br>
 
-For the Churn definitions we outlined above, there might be some corresponding Prediction Audience definitions:<br>
-- __Started subscription more than 2 weeks ago OR Started subscription less than two weeks ago__<br>You might want to create 2 predictions in this case and then message new subscribers differently than longer-term subscribers. You could also define this as “First Made Purchase more than 30 days ago.”<br>
-- __Uninstallers__<br>You might focus on customers who have purchased something in the recent past or used the app very recently.<br>
-- __Those at Risk of Not Purchasing as a Definition of Churn__<br>You may want to focus on customers who have been browsing or searching or engaging with your app more recently. Perhaps the right discount intervention will prevent this more engaged group from churning.
+Pour les définitions des Églises que nous avons décrites ci-dessus, il peut y avoir des définitions correspondantes d'Audience de Prédiction :<br>
+- __Un abonnement démarré il y a plus de 2 semaines OU un abonnement démarré il y a moins de deux semaines__<br>Vous pouvez créer 2 prédictions dans ce cas, puis envoyer un message aux nouveaux abonnés différemment des abonnés à plus long terme. Vous pourriez également définir ceci comme « premier achat fait il y a plus de 30 jours ».<br>
+- __Uninstallers__<br>Vous pouvez vous concentrer sur les clients qui ont acheté quelque chose dans le passé récent ou utilisé l'application très récemment.<br>
+- __Ceux qui risquent de ne pas acheter en tant que définition de Churn__<br>Vous pouvez vous concentrer sur les clients qui ont navigué ou recherché ou engagé plus récemment avec votre application. Peut-être que la bonne intervention de réduction empêchera ce groupe plus engagé de s'effondrer.
 
-## Archived predictions
+## Prédictions archivées
 
-Archived Predictions will cease updating user scores. Any archived Prediction that is unarchived will continue updating user scores on its predetermined schedule. Archived Predictions are never deleted and remain in the list.
+Les prédictions archivées cesseront de mettre à jour les scores des utilisateurs. Toute prédiction archivée qui est désarchivée continuera à mettre à jour les scores des utilisateurs selon son calendrier prédéterminé. Les prédictions archivées ne sont jamais supprimées et restent dans la liste.
 [1]: {% image_buster /assets/img/churn/churn1.png %} [2]: {% image_buster /assets/img/churn/churn2.png %}
 
