@@ -1,32 +1,32 @@
 ---
-nav_title: Managing Email Subscriptions
-article_title: Managing Email Subscriptions
+nav_title: Gestion des abonnements par e-mail
+article_title: Gestion des abonnements par e-mail
 page_order: 7
-page_type: reference
-description: "This article covers best practices for managing email subscriptions, such as unsubscribed, invalid, or duplicate emails."
-channel: email
+page_type: Référence
+description: "Cet article couvre les meilleures pratiques de gestion des abonnements aux e-mails, tels que la désinscription, l'invalidité ou les courriels en double."
+channel: Email
 ---
    
-# Managing email subscriptions
+# Gestion des abonnements aux e-mails
 
-Make sure you are familiar with the tools that Braze provides for [managing users' email subscriptions and targeting campaigns at users with particular subscription states][22]. These tools are critical for compliance with [anti-spam laws][23].
+Assurez-vous d'être familier avec les outils que Braze fournit pour la gestion [des abonnements aux emails des utilisateurs et des campagnes de ciblage sur les utilisateurs avec des états d'abonnement particuliers][22]. Ces outils sont essentiels au respect des [lois anti-spam][23].
 
-## Unsubscribed email addresses
+## Adresses e-mail désabonnées
 
-Braze will automatically unsubscribe any user that either manually unsubscribes from your email through a custom footer or marks an email as spam. These users won't be targeted by future emails. To read more about how to set up your custom footer, visit this [documentation]({{site.baseurl}}/user_guide/message_building_by_channel/email/managing_user_subscriptions/#changing-email-subscriptions).
+Braze désabonnera automatiquement tout utilisateur qui se désabonnera manuellement de votre e-mail via un pied de page personnalisé ou marquera un email comme spam. Ces utilisateurs ne seront pas ciblés par des e-mails futurs. Pour en savoir plus sur la façon de configurer votre pied de page personnalisé, visitez cette [documentation]({{site.baseurl}}/user_guide/message_building_by_channel/email/managing_user_subscriptions/#changing-email-subscriptions).
 
-If a user unsubscribes and later changes their email, their new email will also be unsubscribed. In other words, once an external user ID is associated with an unsubscribe, future email addresses for that user ID will also be unsubscribed.
+Si un utilisateur se désabonne et change ultérieurement son e-mail, son nouvel e-mail sera également désabonné. En d'autres termes, une fois qu'un identifiant d'utilisateur externe est associé à une désinscription, les futures adresses e-mail pour cet identifiant d'utilisateur seront également désabonnées.
 
-## Bounces and invalid emails
+## Bounces et e-mails non valides
 
-If an email address hard bounces (due to the fact that the email is invalid or doesn't exist) then we will mark the user's email address as invalid and will not attempt to send further emails to that email address. If that user changes their email address, we will resume sending emails to them, as their new email may be valid. Soft Bounces (inbox full, etc) are automatically retried for 72 hours.
+Si une adresse de courriel rebondit en dur (en raison du fait que le courriel est invalide ou n'existe pas), alors nous marquerons l'adresse e-mail de l'utilisateur comme non valide et n'essaierons pas d'envoyer d'autres courriels à cette adresse e-mail. Si cet utilisateur modifie son adresse e-mail, nous recommencerons à lui envoyer des e-mails, car leur nouvel e-mail peut être valide. Les Soft Bounces (boîte de réception pleine, etc) sont automatiquement ré-essayés pendant 72 heures.
 
-## Duplicate emails
+## E-mails en double
 
-Braze automatically checks for and removes duplicate email addresses when an email campaign is sent. This way an email is only sent once and is "deduped" which ensures that it doesn't hit the same email multiple times even if multiple user profiles share a common address. Because deduplication occurs when targeted users are included in the same dispatch, triggered campaigns (excluding API-triggered campaigns, see below) may result in multiple sends to the same email address (even within a time period where users could be excluded due to reeligibility) if differing users with matching emails log the trigger event at different times.
+Braze vérifie automatiquement et supprime les adresses e-mail en double lorsqu'une campagne de courriel est envoyée. De cette façon, un email n'est envoyé qu'une seule fois et est "dupé" qui assure qu'il ne frappe pas le même email plusieurs fois, même si plusieurs profils d'utilisateurs partagent une adresse commune. Parce que la déduplication se produit lorsque les utilisateurs ciblés sont inclus dans le même expédition, les campagnes déclenchées (excluant les campagnes déclenchées par l'API, voir ci-dessous) peut entraîner des envois multiples à la même adresse de courriel (même dans un délai où les utilisateurs pourraient être exclus en raison de leur rééligibilité) si des utilisateurs différents avec des emails correspondants enregistrent l'événement de déclenchement à différents moments.
 
 {% alert important %}
-If you send an API campaign through an API call (excluding API-triggered campaigns), and multiple users are specified in the segment audience with the same email address, we will send it to that address as many times are listed in the call. This is because we assume that API calls are purposefully constructed. <br><br> __API-Triggered Campaigns__<br> Please note that API-triggered campaigns will dedupe or send duplicates __depending on where the audience is defined__. <br>- __Deduping__ will occur if there are duplicate emails in a target segment or duplicate emails due to duplicate IDs within the [recipient field]({{site.baseurl}}/api/endpoints/messaging/send_messages/post_send_triggered_campaigns/) of an API-triggered call. <br>- __Duplicate emails__ will occur if you directly target separate user IDs within the [recipient field]({{site.baseurl}}/api/endpoints/messaging/send_messages/post_send_triggered_campaigns/) of an API-triggered call.
+Si vous envoyez une campagne API via un appel API (excluant les campagnes déclenchées par l'API), et plusieurs utilisateurs sont spécifiés dans le segment public avec la même adresse e-mail, nous l'enverrons à cette adresse car plusieurs fois sont listés dans l'appel. C'est parce que nous supposons que les appels API sont construits de manière ciblée. <br><br> __Campagnes déclenchées par l'API__<br> Veuillez noter que les campagnes déclenchées par l'API vont déduper ou envoyer des doublons __selon l'endroit où l'audience est définie__. <br>- __Deduping__ se produira s'il y a des e-mails en double dans un segment cible ou des e-mails en double en raison d'IDs en double dans le [champ destinataire]({{site.baseurl}}/api/endpoints/messaging/send_messages/post_send_triggered_campaigns/) d'un appel déclenché par l'API. <br>- __E-mails dupliqués__ se produira si vous ciblez directement des identifiants utilisateur séparés dans le [champ destinataire]({{site.baseurl}}/api/endpoints/messaging/send_messages/post_send_triggered_campaigns/) d'un appel déclenché par API.
 {% endalert %}
 
 [22]: {{site.baseurl}}/user_guide/message_building_by_channel/email/managing_user_subscriptions/#managing-user-subscriptions
