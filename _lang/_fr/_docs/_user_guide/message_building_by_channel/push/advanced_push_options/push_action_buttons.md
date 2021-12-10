@@ -1,73 +1,73 @@
 ---
-nav_title: "Push Action Buttons"
-article_title: Push Action Buttons
+nav_title: "Boutons d'Action Push"
+article_title: Boutons d'Action Push
 page_order: 1
-page_type: reference
-description: "This reference article covers what push action buttons are and the difference across iOS and Android platforms."
+page_type: Référence
+description: "Cet article de référence couvre ce que sont les boutons d'action push et la différence entre les plateformes iOS et Android."
 channel:
-  - Push
+  - Pousser
 ---
 
-# Push action buttons
+# Appuyer sur les boutons d'action
 
-!\[Push Action Buttons\]\[1\]{: style="float:right;max-width:40%;margin-left:15px;"}
+!\[Boutons d'Action Push\]\[1\]{: style="float:right;max-width:40%;margin-left:15px;"}
 
-> This reference article covers what push action buttons are and the difference across iOS and Android platforms.
+> Cet article de référence couvre ce que sont les boutons d'action push et la différence entre les plateformes iOS et Android.
 
-Push action buttons enable you to set content and actions for buttons when utilizing Braze's iOS and Android push notifications. With action buttons, your users can interact directly with your app from a notification without needing to click into an app experience to take action.
+Les boutons d'action push vous permettent de définir du contenu et des actions pour les boutons lors de l'utilisation des notifications push iOS et Android de Braze. Grâce aux boutons d'action, vos utilisateurs peuvent interagir directement avec votre application à partir d'une notification sans avoir à cliquer sur une application pour agir.
 
-## How to use action buttons
+## Comment utiliser les boutons d'action
 
-Each interactive button can link to a webpage, a deep link, open the app, or dismiss the notification. You can specify your push action buttons in the **On Click Behavior** section of the push message composer in the dashboard.
+Chaque bouton interactif peut créer un lien vers une page Web, un lien profond, ouvrir l'application ou rejeter la notification. Vous pouvez spécifier vos boutons d'action push dans la section **On Click Behavior** du compositeur de messages push dans le tableau de bord.
 
-### iOS push action buttons {#ios}
+### Boutons d'action push iOS {#ios}
 
-To use action buttons in your iOS push messages, create a [push campaign]({{site.baseurl}}/user_guide/message_building_by_channel/push/creating_a_push_message/) and enable action buttons in the **Compose** tab.
+Pour utiliser les boutons d'action dans vos messages push iOS, créez une [campagne push]({{site.baseurl}}/user_guide/message_building_by_channel/push/creating_a_push_message/) et activez les boutons d'action dans l'onglet **Composer**.
 
-![Enable push action buttons]({% image_buster /assets/img_archive/push_action_enable.png %}){: style="max-width:60%"}
+![Activer les boutons d'action push]({% image_buster /assets/img_archive/push_action_enable.png %}){: style="largeur-max-60%"}
 
-Then select your **Notification Category**. You can select from the following available button combinations:
+Sélectionnez ensuite votre **Catégorie de Notification**. Vous pouvez sélectionner parmi les combinaisons de boutons disponibles suivantes:
 
-- Accept / Decline
-- Yes / No
-- Confirm / Cancel
-- More
-- Pre-registered Custom Category
+- Accepter / refuser
+- Oui / Non
+- Confirmer / Annuler
+- En savoir plus
+- Catégorie personnalisée préenregistrée
 
-![iOS Push Action Buttons]({% image_buster /assets/img_archive/push_action_buttons_ios.png %}){: style="max-width:70%"}
+![Boutons d'action Push iOS]({% image_buster /assets/img_archive/push_action_buttons_ios.png %}){: style="largeur-max-70%"}
 
-> Due to iOS’s handling of buttons, you will need to perform additional integration steps when setting up push action buttons, which are outlined in our [developer documentation]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/push_notifications/customization/action_buttons/). In particular, you will need to either configure iOS Categories or will need to select from certain default button options. For Android integrations, these buttons will work out of the box.
+> En raison de la gestion des boutons par iOS, vous devrez effectuer des étapes d'intégration supplémentaires lors de la configuration des boutons d'action push, qui sont décrits dans notre [documentation développeur]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/push_notifications/customization/action_buttons/). En particulier, vous devrez soit configurer les catégories iOS, soit sélectionner à partir de certaines options du bouton par défaut. Pour les intégrations Android, ces boutons fonctionneront sans problème.
 
-### Android push action buttons {#android}
+### Boutons d'action push Android {#android}
 
-To use action buttons in your Android push messages, create a [push campaign]({{site.baseurl}}/user_guide/message_building_by_channel/push/creating_a_push_message/) and enable notification buttons in the **Compose** tab.
+Pour utiliser les boutons d'action dans vos messages push Android, créez une [campagne push]({{site.baseurl}}/user_guide/message_building_by_channel/push/creating_a_push_message/) et activez les boutons de notification dans l'onglet **Composer**.
 
-![Enable push action buttons]({% image_buster /assets/img_archive/push_action_enable2.png %}){: style="max-width:60%"}
+![Activer les boutons d'action push]({% image_buster /assets/img_archive/push_action_enable2.png %}){: style="largeur-max-60%"}
 
-Then click <i class="fas fa-plus-circle"></i> **Add Button** and specify your button text and **On-Click Behavior**. You can select from the following available actions:
+Puis cliquez sur <i class="fas fa-plus-circle"></i> **Ajouter le bouton** et spécifiez le texte de votre bouton et **Comportement au clic sur**. Vous pouvez sélectionner parmi les actions disponibles suivantes :
 
-- Open App
-- Redirect to Web URL
-- [Deep Link]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/deep_linking_to_in-app_content/) into Application
-- Dismiss Notification
+- Ouvrir l'application
+- Rediriger vers l'URL Web
+- [Lien profond]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/deep_linking_to_in-app_content/) vers l'application
+- Rejeter la notification
 
-You can add up to three buttons in your push.
+Vous pouvez ajouter jusqu'à trois boutons à votre appui.
 
-![Android Push Action Buttons]({% image_buster /assets/img_archive/push_action_buttons_android.png %}){: style="max-width:70%"}
+![Boutons d'action de poussée Android]({% image_buster /assets/img_archive/push_action_buttons_android.png %}){: style="largeur-max-70%"}
 
-#### Character limits
+#### Limites de caractères
 
-Unlike iOS buttons, which are stacked, Android buttons are displayed side-by-side in a row. This means that the more buttons you add (up to three), the less space you have for your button copy.
+Contrairement aux boutons iOS, qui sont empilés, les boutons Android sont affichés côte à côte dans une rangée. Cela signifie que plus vous ajoutez de boutons (jusqu'à trois), moins vous avez d'espace pour votre copie de bouton.
 
-![Android push action buttons with truncated text]({% image_buster /assets/img_archive/push_action_truncated.png %}){: style="max-width:50%" }
+![Boutons d'action push Android avec texte tronqué]({% image_buster /assets/img_archive/push_action_truncated.png %}){: style="largeur-max:50%" }
 
-The following table outlines how many characters you can add before your button copy is truncated, depending on how many buttons you have:
+Le tableau suivant indique combien de caractères vous pouvez ajouter avant que la copie de votre bouton soit tronquée, selon le nombre de boutons que vous avez :
 
-| Number of Buttons | Max characters per button |
-| ----------------- | ------------------------- |
-| 1                 | 46 characters             |
-| 2                 | 20 characters             |
-| 3                 | 11 characters             |
+| Nombre de boutons | Nombre maximum de caractères par bouton |
+| ----------------- | --------------------------------------- |
+| 1                 | 46 caractères                           |
+| 2                 | 20 caractères                           |
+| 3                 | 11 caractères                           |
 {: .reset-td-br-1 .reset-td-br-2}
 [1]: {% image_buster /assets/img_archive/push_action_example.png %} [2]: {% image_buster /assets/img_archive/push_action_enable.png %}
 
