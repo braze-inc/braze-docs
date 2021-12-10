@@ -1,92 +1,92 @@
 ---
-nav_title: Creative Details
-article_title: Creative Details
+nav_title: Détails de la création
+article_title: Détails de la création
 page_order: 1
-layout: featured
-guide_top_header: "Creative Details"
-guide_top_text: "Get creative with Content Cards! But you should know some of the guidelines first! After all, you have to know the rules to break them! Check out the individual message type's Creative Specs or the global Creative Details below."
-description: "Get creative with Content Cards! This reference article covers creative details such as image size recommendations and dismissal behavior across the three Content Card types."
-guide_featured_title: "Message Type Creative Specs"
+layout: en vedette
+guide_top_header: "Détails de la création"
+guide_top_text: "Soyez créatif avec les cartes de contenu ! Mais vous devriez d'abord connaître certaines lignes directrices! Après tout, vous devez connaître les règles pour les enfreindre! Consultez les spécifications créatives de chaque type de message ou les détails créatifs globaux ci-dessous."
+description: "Soyez créatif avec les cartes de contenu ! Cet article de référence couvre des détails créatifs tels que les recommandations de taille d’image et le comportement de rejet dans les trois types de Cartes de Contenu."
+guide_featured_title: "Caractéristiques de type de message"
 guide_featured_list:
   - 
-    name: Classic
+    name: Classique
     link: '/docs/user_guide/message_building_by_channel/content_cards/creative_details/#classic'
     image: /assets/img/icon-classic-cc.png
   - 
-    name: Captioned Image
+    name: Image sous-titrée
     link: '/docs/user_guide/message_building_by_channel/content_cards/creative_details/#captioned-image'
     image: /assets/img/captioned-cc.png
   - 
-    name: Banner
+    name: Bannière
     link: '/docs/user_guide/message_building_by_channel/content_cards/creative_details/#banner'
     image: /assets/img/icon-banner-cc.png
 channel:
-  - content cards
-tool: Media
+  - cartes de contenu
+tool: Médias
 ---
 
-## Content Card types
+## Types de carte de contenu
 
-### Classic
+### Classique
 
-The classic card is great for standard messaging and notifications or even visually categorizing messages with icons. The image is optional, but it must be at a 1:1 ratio.
+La carte classique est idéale pour la messagerie standard et les notifications ou même pour catégoriser visuellement les messages avec des icônes. L'image est optionnelle, mais elle doit être à un ratio 1:1.
 
 !\[Classic\]\[1\]{: height="50%" width="50%"}
 
-| Card Capability | Details                                                                                                                             |
-| --------------- | ----------------------------------------------------------------------------------------------------------------------------------- |
-| Header Text     | 18px; Bolded <br> One line of text is ideal. <br> You may use Liquid here to personalize your message.                  |
-| Message Text    | 13px; Regular Weight <br> Two to four lines of text is ideal. <br> You may use Liquid here to personalize your message. |
-| Link Text       | Optional. <br> 13px <br> Link to webpage or deep link to within  your app.                                              |
-| Image           | Optional. <br> Must be 1:1 ratio. <br> We recommend an image quality of 60px by 60px.                                   |
+| Capacité de la carte | Détails du produit                                                                                                                                   |
+| -------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Texte de l'en-tête   | 18px ; Bolded <br> Une ligne de texte est idéale. <br> Vous pouvez utiliser Liquid ici pour personnaliser votre message.                 |
+| Texte du message     | 13px ; Poids normal <br> Deux à quatre lignes de texte est idéal. <br> Vous pouvez utiliser Liquid ici pour personnaliser votre message. |
+| Texte du lien        | Optionnel. <br> 13px <br> Lien vers une page Web ou un lien profond vers votre application.                                              |
+| Image                | Optionnel. <br> Doit être un ratio 1:1. <br> Nous recommandons une qualité d'image de 60px par 60px.                                     |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
 
-### Captioned image
+### Image sous-titrée
 
-The Captioned Image card is a great way to show off and attract attention to important content, like a big sale or a new app feature!
+La carte d'image sous-titrée est un excellent moyen de montrer et d'attirer l'attention sur un contenu important, comme une grosse vente ou une nouvelle fonctionnalité d'application!
 
-!\[Captioned Image\]\[2\]{: height="50%" width="50%"}
+!\[Image captionnée\]\[2\]{: height="50%" width="50%"}
 
-| Card Capability | Details                                                                                                                             |
-| --------------- | ----------------------------------------------------------------------------------------------------------------------------------- |
-| Header Text     | 18px; Bolded <br> One line of text is ideal. <br> You may use Liquid here to personalize your message.                  |
-| Message Text    | 13px; Regular Weight <br> Two to four lines of text is ideal. <br> You may use Liquid here to personalize your message. |
-| Link Text       | Optional. <br> 13px <br> Link to webpage or deep link to within your app.                                               |
-| Image           | Suggested be 4:3 ratio. <br> 600px minimum width.  <br> Supports hi-res PNG, JPEG, and GIF.                             |
+| Capacité de la carte | Détails du produit                                                                                                                                   |
+| -------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Texte de l'en-tête   | 18px ; Bolded <br> Une ligne de texte est idéale. <br> Vous pouvez utiliser Liquid ici pour personnaliser votre message.                 |
+| Texte du message     | 13px ; Poids normal <br> Deux à quatre lignes de texte est idéal. <br> Vous pouvez utiliser Liquid ici pour personnaliser votre message. |
+| Texte du lien        | Optionnel. <br> 13px <br> Lien vers une page Web ou un lien profond vers votre application.                                              |
+| Image                | Le rapport suggéré est de 4:3. <br> Largeur minimale de 600px.  <br> Prise en charge du PNG, du JPEG et du GIF.                          |
 {: .reset-td-br-1 .reset-td-br-2}
 
-### Banner
+### Bannière
 
-If you want fancy, the banner card is for you! this is completely custom to what you want it to be. Just create your content elsewhere and upload it for a beautiful card that's all your own.
+Si vous voulez de la fantaisie, la carte de bannière est pour vous ! est complètement coutume à ce que vous voulez qu'il soit. Il vous suffit de créer votre contenu ailleurs et de le télécharger pour une belle carte qui est la vôtre.
 
 !\[Banner\]\[3\]{: height="50%" width="50%"}
 
-| Card Capability | Details                                                                                                      |
-| --------------- | ------------------------------------------------------------------------------------------------------------ |
-| Linked Card     | Optional. <br> 13px <br> On-click behavior link to a webpage or a deep link to within  your app. |
-| Image           | Any aspect ratio supported. <br> 600px minimum width.  <br> Supports hi-res PNG, JPEG, and GIF.  |
+| Capacité de la carte | Détails du produit                                                                                                                         |
+| -------------------- | ------------------------------------------------------------------------------------------------------------------------------------------ |
+| Carte associée       | Optionnel. <br> 13px <br> En cliquant sur le lien de comportement vers une page Web ou un lien profond vers votre application. |
+| Image                | Tout rapport d'aspect supporté. <br> Largeur minimale de 600px.  <br> Prise en charge du PNG, du JPEG et du GIF.               |
 {: .reset-td-br-1 .reset-td-br-2}
 
-## Creative details {#general}
+## Détails de la création {#general}
 
-Content Cards come with great out-of-the-box functionality. At this time, card styling cannot be done natively in your Braze account, but you can style your Content Card by type and the Content Card feed during integration. More information on Content Cards can be found on our [Customization page][4].
+Les cartes de contenu sont fournies avec une excellente fonctionnalité « Out-of-the-box». Pour le moment, le style de la carte ne peut pas être fait nativement dans votre compte Braze, mais vous pouvez styliser votre Carte de Contenu par type et le flux de la Carte de Contenu pendant l'intégration. Plus d'informations sur les Cartes de Contenu peuvent être trouvées sur notre [page de Personnalisation][4].
 
-### Dismissal behavior
+### Comportement de rejet
 
-For a user to dismiss a card, they can either swipe it away on mobile, or use a `close X` function, as shown below. The `x` will appear on hover for the Web SDK only.
+Pour qu'un utilisateur rejette une carte, il peut soit la balayer sur mobile, ou utilisez une fonction `fermer X` , comme indiqué ci-dessous. Le `x` apparaîtra au survol pour le SDK Web uniquement.
 
-!\[Dismissal Behavior\]\[5\]{: height="70%" width="70%"}
+!\[Comportement de Remise\]\[5\]{: height="70%" width="70%"}
 
-If a user has dismissed all of their cards or you haven't pushed out any new updates, the user's feed will usually look something like this:
+Si un utilisateur a rejeté toutes ses cartes ou si vous n'avez pas poussé de nouvelles mises à jour, le flux de l'utilisateur ressemblera généralement à ceci :
 
-!\[Empty Feed\]\[6\]{: height="50%" width="50%"}
+!\[Fil vide\]\[6\]{: height="50%" width="50%"}
 
-### Using GIFs in Content Cards
+### Utiliser les GIFs dans les Cartes de Contenu
 
-| Content Cards for Android                                                                                                                                  | Content Cards for iOS    | Content Cards for Web    |
-| ---------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------ | ------------------------ |
-| [Install Custom Image Library.]({{site.baseurl}}/developer_guide/platform_integration_guides/android/content_cards/customization/#gifs-news-content-cards) | Included in integration. | Included in Integration. |
+| Cartes de contenu pour Android                                                                                                                                                 | Cartes de contenu pour iOS | Cartes de contenu pour le Web |
+| ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | -------------------------- | ----------------------------- |
+| [Installer la bibliothèque d'images personnalisée.]({{site.baseurl}}/developer_guide/platform_integration_guides/android/content_cards/customization/#gifs-news-content-cards) | Inclus dans l'intégration. | Inclus dans l'intégration.    |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
-[1]: {% image_buster /assets/img/classic-cc.png %} [2]: {% image_buster /assets/img/captioned-image-cc.png %} [3]: {% image_buster /assets/img/banner-cc.png %} [5]: {% image_buster /assets/img/dismissal-cc.png %} [6]: {% image_buster /assets/img/empty-cc.png %}
+[1]: {% image_buster /assets/img/classic-cc.png %} [2]: {% image_buster /assets/img/captioned-image-cc.png %} [3]: {% image_buster /assets/img/banner-cc. ng %} [5]: {% image_buster /assets/img/dismissal-cc.png %} [6]: {% image_buster /assets/img/empty-cc.png %}
 
 [4]: {{site.baseurl}}/user_guide/message_building_by_channel/content_cards/customize/
