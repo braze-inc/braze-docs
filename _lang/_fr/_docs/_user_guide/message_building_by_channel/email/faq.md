@@ -1,41 +1,41 @@
 ---
-nav_title: FAQs
+nav_title: Foire aux questions
 article_title: Email FAQs
 page_order: 25
-description: "This page provides answers to frequently asked questions about Email messaging."
-channel: email
+description: "Cette page fournit des réponses aux questions fréquemment posées sur la messagerie électronique."
+channel: Email
 ---
 
 # Email FAQs
 
-### Can I add a "view this email in a browser" link to my emails?
+### Puis-je ajouter un lien "Voir cet e-mail dans un navigateur" à mes courriels?
 
-No, Braze does not offer this functionality. This is because an increasing majority of email is opened on mobile devices and modern email clients, which render images and content without any problems.
+Non, Braze n'offre pas cette fonctionnalité. Ceci est dû au fait qu'une majorité croissante de courriels est ouverte sur les appareils mobiles et les clients de messagerie modernes, qui rendent les images et le contenu sans aucun problème.
 
-**Workaround:** To achieve this same result, you can host the content of your email on an external landing page (such as your website), which can then be linked to from the email campaign you are building using the **Link** tool when editing the email body.
+**Solution de contournement :** Pour atteindre ce même résultat, vous pouvez héberger le contenu de votre e-mail sur une page de renvoi externe (comme votre site Web), qui peut ensuite être lié à partir de la campagne d'email que vous construisez en utilisant l'outil **Lien** lors de l'édition du corps du courriel.
 
-### What happens when an email is sent out and multiple profiles have the same email address?
+### Que se passe-t-il lorsqu'un email est envoyé et que plusieurs profils ont la même adresse e-mail ?
 
-If multiple users with matching emails are all in-segment to receive a campaign, a random user profile with that email address is chosen at the time of send. This way the email is only sent once and is deduplicated, which ensures that it doesn’t hit the same email multiple times.
+Si plusieurs utilisateurs avec des e-mails correspondants sont tous dans le segment pour recevoir une campagne, un profil utilisateur aléatoire avec cette adresse email est choisi au moment de l'envoi. De cette façon, le courriel n’est envoyé qu’une seule fois et est dédupliqué, ce qui garantit qu’il ne frappe pas le même e-mail plusieurs fois.
 
-Note that this deduplication occurs if the users targeted are included in the same dispatch. Therefore triggered campaigns may result in multiple sends to the same email address (even within a time period where users could be excluded due to reeligibility) if differing users with matching emails log the trigger event at different times. Users are not deduped by email on Canvas entry, so it’s possible that users are not deduped beyond the first step of a Canvas if they are progressing at slightly different times due to rate limited entry.
+Notez que cette déduplication se produit si les utilisateurs ciblés sont inclus dans la même expédition. Par conséquent, les campagnes déclenchées peuvent entraîner des envois multiples à la même adresse de courriel (même dans un délai où les utilisateurs pourraient être exclus en raison de leur rééligibilité) si des utilisateurs différents avec des emails correspondants enregistrent l'événement de déclenchement à différents moments. Les utilisateurs ne sont pas déduits par email sur Canvas entrée, Il est donc possible que les utilisateurs ne soient pas déconnectés au-delà de la première étape d’un Canvas s’ils progressent à des moments légèrement différents en raison d’une entrée limitée.
 
-When a user tied to a given email address opens or clicks an email, all user profiles which share that email address are marked as opening and clicking the campaign. You can identify targeted users from the user profile download within **User Search**. The user who actually received the email will have a timestamp set for the “received_email” field in the associated campaign summary; other users won’t have this field, just “date”.
+Lorsqu'un utilisateur lié à une adresse e-mail donnée ouvre ou clique sur un e-mail, tous les profils d'utilisateurs qui partagent cette adresse e-mail sont marqués comme ouvrant et en cliquant sur la campagne. Vous pouvez identifier les utilisateurs ciblés à partir du profil de l'utilisateur téléchargez dans **Recherche d'utilisateur**. L'utilisateur qui a réellement reçu l'e-mail aura un horodatage défini pour le champ « received_email» dans le résumé de la campagne associée; les autres utilisateurs n’auront pas ce champ, juste « date ».
 
-**Exception: API-Triggered Campaigns**
+**Exception : Campagnes déclenchées par l'API**
 
-API-triggered campaigns will dedupe or send dupes depending on where the audience is defined. In short, the duplicate emails must be directly targeted as separate `User_ids` within the call in order to receive multiple details. Here are three possible scenarios for API-triggered campaigns:
+Les campagnes déclenchées par l'API vont déduper ou envoyer des dupes selon l'endroit où le public est défini. En bref, les emails en double doivent être directement ciblés en tant que `User_ids` séparés dans l'appel afin de recevoir plusieurs détails. Voici trois scénarios possibles pour les campagnes déclenchées par l'API :
 
-- **Scenario 1: Duplicate emails in target segment (DEDUPED):** If the same email appears in multiple user profiles that are grouped together in dashboard’s audience filters for an API-triggered campaign, only one of the profiles will get the email.
-- **Scenario 2: Duplicate emails in different user_ids within recipients object (DUPE SENDS):** If the same email appears within multiple `External_user_IDs` referenced by the “recipients” object, the email will be sent twice.
-- **Scenario 3: Duplicate emails due to duplicate user_ids within recipients object (DEDUPED):** If you try to add the same user profile twice, only one of the profiles will get the email.
+- **Scénario 1 : Dupliquer les e-mails dans le segment cible (DEDUPED):** Si le même e-mail apparaît dans plusieurs profils d'utilisateurs qui sont regroupés dans les filtres d'audience du tableau de bord pour une campagne déclenchée par l'API, seul un des profils recevra l'email.
+- **Scénario 2 : Dupliquer les e-mails dans différents user_ids dans l'objet destinataire (DUPE SENDS):** Si le même email apparaît dans plusieurs `External_user_IDs` référencé par l'objet "destinataires", le courriel sera envoyé deux fois.
+- **Scénario 3: Emails dupliqués à cause de dupliquer user_ids dans l'objet destinataire (DEDUPED):** Si vous essayez d'ajouter le même profil utilisateur deux fois, seul un des profils recevra l'email.
 
-### What is a "good" email deliverability rate?
+### Qu'est-ce qu'un "bon" taux de délivrabilité du courrier électronique?
 
-Typically, the “magic number” is around 95% messages delivered, with a bounce rate no higher than 3%. If your deliverability dips below that, there is usually cause for concern.
+Généralement, le « nombre magique» est d’environ 95% des messages envoyés, avec un taux de rebond inférieur à 3%. Si votre livrabilité diminue en dessous de cela, il y a généralement lieu de s'inquiéter.
 
-However, a rate can be above 95% and still have deliverability issues. For example, if all of your bounces are coming from one particular domain, that is a clear signal that there is a reputation issue with that provider.
+Cependant, un taux peut être supérieur à 95% et comporte toujours des problèmes de délivrabilité. Par exemple, si tous vos rebonds proviennent d'un domaine particulier, c'est un signal clair qu'il y a un problème de réputation avec ce fournisseur.
 
-Additionally, messages may be getting delivered and ending up in Spam, indicating potentially serious reputation issues. It’s important to monitor not just the number of messages being delivered, but also open and click rates to determine whether users are actually seeing the messages in their inboxes. Because providers usually don’t report every spam instance, a spam rate of even 1% could be cause for concern and further analysis.
+De plus, les messages peuvent être envoyés et se retrouver dans le courrier indésirable, ce qui peut entraîner de graves problèmes de réputation. Il est important de ne pas seulement surveiller le nombre de messages envoyés, mais aussi ouvrir et cliquer sur les tarifs pour déterminer si les utilisateurs voient réellement les messages dans leurs boîtes de réception. Étant donné que les prestataires ne signalent généralement pas toutes les instances de spam, un taux de spam même de 1 % pourrait être source de préoccupation et d'analyses plus approfondies.
 
-Finally, your business and the types of emails you send may also affect deliverability. For example, someone sending mostly transactional emails should expect to see a better rate than someone sending many marketing messages.
+Enfin, votre entreprise et les types d'e-mails que vous envoyez peuvent également affecter la livraison. Par exemple, quelqu'un qui envoie des courriels transactionnels pour la plupart devrait s'attendre à voir un meilleur taux que celui qui envoie de nombreux messages de marketing.
