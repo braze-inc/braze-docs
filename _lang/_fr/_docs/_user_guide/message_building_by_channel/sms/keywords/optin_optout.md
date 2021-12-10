@@ -1,32 +1,32 @@
 ---
 nav_title: Opt-In / Opt-Out
-article_title: SMS Opt-In/Opt-Out Keywords
+article_title: Mots clés "Opt-In/Opt-out" SMS
 page_order: 0
-description: "This reference article covers how Braze processes basic opt-in and opt-out keywords for SMS messaging."
-page_type: reference
+description: "Cet article de référence décrit comment Braze traite les mots clés de base opt-in et opt-out pour la messagerie SMS."
+page_type: Référence
 tool:
-  - Dashboard
+  - Tableau de bord
 channel:
   - SMS
 ---
 
-# Opt-in and opt-out keywords
+# Mots clés opt-in et opt-out
 
-Regulations require that there are responses to all opt-in, opt-out, and help/info keyword responses. Braze automatically processes the following _exact, single-word, case-insensitive_ messages, automatically updating the [Subscription Group state]({{site.baseurl}}/user_guide/message_building_by_channel/sms/sms_subscription_group/) for the user and their associated phone number on all inbound requests.
+Le règlement exige qu'il y ait des réponses à toutes les réponses aux mots clés opt-in, opt-out et help/info. Braze traite automatiquement les messages _exacts, mot unique et insensible à la casse_ suivants mise à jour automatique du [statut du groupe d'abonnement]({{site.baseurl}}/user_guide/message_building_by_channel/sms/sms_subscription_group/) pour l'utilisateur et son numéro de téléphone associé sur toutes les demandes entrantes.
 
-## Keyword overview
+## Aperçu des mots clés
 
-Braze will process the following keywords automatically and update the Subscription Group state for the phone number on all inbound requests. Note that these default keywords and responses may also be customized.
+Braze traitera automatiquement les mots-clés suivants et mettra à jour l'état du groupe d'abonnement pour le numéro de téléphone sur toutes les demandes entrantes. Notez que ces mots-clés et réponses par défaut peuvent également être personnalisés.
 
-| Type    | Keyword                                                                                                | Change                                                                                                                                                                                                                                                                                                                                         |
-| ------- | ------------------------------------------------------------------------------------------------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Opt-In  | `START`<br> `YES`<br> `UNSTOP`                                                             | Any inbound request with one of these `Opt-In` keywords will result in a Subscription Group state change to `subscribed`. Additionally, the pool of numbers associated with that subscription group will now be able to send an SMS message to that customer. <br><br>User will receive your defined Opt-In auto response.         |
-| Opt-Out | `STOP`<br> `STOPALL`<br> `UNSUBSCRIBE`<br> `CANCEL`<br> `END`<br> `QUIT` | Any inbound request with one of these `Opt-In` keywords will result in a Subscription Group state change to `unsubscribed`. Additionally, the pool of numbers associated with that Subscription Group will no longer be able to send an SMS message to that customer.<br><br>User will receive your defined Opt-Out auto response. |
-| Help    | `HELP`<br> `INFO`                                                                                | User will receive your defined Help auto response.                                                                                                                                                                                                                                                                                             |
+| Type de texte  | Keyword                                                                                              | Changement                                                                                                                                                                                                                                                                                                                                    |
+| -------------- | ---------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Opt-In         | `COMMENCER`<br> `OUI`<br> `INSTALLER`                                                    | Toute requête entrante avec l'un de ces mots-clés `Opt-In` entraînera un changement d'état du groupe d'abonnement à `inscrit`. De plus, le groupement de numéros associés à ce groupe d'abonnement pourra maintenant envoyer un message SMS à ce client. <br><br>L'utilisateur recevra votre réponse automatique d'opt-in.        |
+| Désinscription | `STOP`<br> `STOPALL`<br> `DEBONNER`<br> `ANNULER`<br> `END`<br> `QUIT` | Toute requête entrante avec l'un de ces mots-clés `Opt-In` entraînera un changement d'état du groupe d'abonnement à `désabonné`. De plus, le groupement de numéros associés à ce groupe d'abonnement ne pourra plus envoyer de SMS à ce client.<br><br>L'utilisateur recevra votre réponse automatique de désinscription définie. |
+| Aide           | `AIDEZ`<br> `INFOS`                                                                            | L'utilisateur recevra votre réponse automatique d'aide définie.                                                                                                                                                                                                                                                                               |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
 
-Only the __exact, single-word message__ will be processed (case _insensitive_). Keywords such as `STOP PLEASE` will be ignored.
+Seul le message __exact, un mot simple__ sera traité (cas _insensible_). Les mots-clés tels que `STOP VEUILLEZ` seront ignorés.
 
-If a recipient uses the keywords `HELP` or `INFO`, a response will be triggered automatically. The SMS template for these automatic response messages will be set during your [onboarding][oblink] and phone number procurement period. Note that you may continue to update these responses after the initial onboarding period.
+Si un destinataire utilise les mots-clés `AIDE` ou `INFO`, une réponse sera déclenchée automatiquement. Le modèle de SMS pour ces messages de réponse automatique sera défini pendant votre [période d'intégration][oblink] et de numéro de téléphone de la période d'achat. Notez que vous pouvez continuer à mettre à jour ces réponses après la période d’intégration initiale.
 
 [oblink]: {{site.baseurl}}/user_guide/message_building_by_channel/sms/sms_subscription_group/#setup-process
