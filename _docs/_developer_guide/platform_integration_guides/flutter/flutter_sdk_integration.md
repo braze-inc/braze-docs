@@ -17,10 +17,6 @@ To complete the installation, you will need the [App Identifier API key][3] as w
 
 Before following the steps below, please install and set up [the Flutter SDK][5].
 
-### Requirements
-* Dart SDK 2.0.0+
-* Flutter SDK 1.10.0+
-
 ## Step 1: Integrate the Braze library
 
 Add the Braze Flutter SDK package from the command line.
