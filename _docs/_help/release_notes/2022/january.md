@@ -29,6 +29,17 @@ New properties have been added for select [message engagement events]({{site.bas
 - Add `MACHINE_OPEN` to:
   - Email Open
 
+## New Liquid personalization tag
+
+We now support targeting users who have foreground push enabled on their device with the following Liquid tags:
+
+{% raw %}
+- `{{most_recently_used_device.${foreground_push_enabled}}}`
+- `{{targeted_device.${foreground_push_enabled}}}`
+{% endraw %}
+
+For more information, refer to [Supported personalization tags]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/supported_personalization_tags/).
+
 ## Understanding webhooks
 
 Webhooks are powerful, flexible tools—but they can be a bit confusing. If you're wondering what webhooks are and how you can use them in Braze, check out our new article on [Understanding webhooks]({{site.baseurl}}/user_guide/message_building_by_channel/webhooks/understanding_webhooks/).
