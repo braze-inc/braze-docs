@@ -222,8 +222,12 @@ Vous pouvez gérer le processus d'import de Mixpanel Cohort à partir de la page
   "canvas_step_id": (string) id de l'étape pour ce message si à partir d'un Canvas,
   "send_id": (string) id du message si spécifié pour la campagne (Voir Send Identifier under API Identifier Types),
   "dispatch_id": (string) id de l'envoi de message (id unique pour chaque 'transmission' envoyée depuis la plate-forme Braze). Les utilisateurs qui reçoivent un message de planification reçoivent le même dispatch_id. Les messages basés sur l'action ou sur l'API obtiennent un dispatch_id unique par utilisateur.
-  "email_address": (chaîne) adresse email pour cet événement
-  "url": (chaîne) l'URL qui a été cliquée (Email Click events seulement)
+  "email_address": (chaîne) adresse email pour cet événement,
+  "url": (chaîne) l'URL qui a été cliquée (Email Click events seulement),
+  "user_agent": (string) description du système et du navigateur de l'utilisateur pour l'événement (Email Click, Ouvrir et MarkAsSpam seulement),
+  "link_id": (chaîne) valeur unique générée par Braze pour l'URL (Email Click events seulement),
+  "link_alias": (chaîne) nom d'alias défini lors de l'envoi du message (Email Click events seulement),
+  "machine_open": (chaîne) Indicateur pour savoir si le courrier électronique a été ouvert par un processus automatisé, tel qu'Apple ou Google mail pre-fetching. Actuellement "vrai" ou nul, mais une granularité supplémentaire (par exemple "Apple" ou "Google" pour indiquer quel processus a fait le fetch) peut être ajoutée dans le futur. (Évènements ouverts seulement)
 }
 ```
 
