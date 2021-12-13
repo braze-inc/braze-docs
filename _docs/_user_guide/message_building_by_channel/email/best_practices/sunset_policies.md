@@ -25,7 +25,7 @@ To set up these segments, choose the "Has Marked You As Spam" and/or "Last Engag
 
 ![Segment Details page with the filter "Last Engaged with Message" selected][20]
 
-While Braze's platform automatically stops sending emails to users who have marked you as spam, the "Has Marked You As Spam" filter allows you to also send these users targeted push messages, in-app notifications, and News Feed cards.  This filter is useful for [retargeting campaigns][21] - for instance, you can send unengaged users messages or News Feed updates that remind them of the features and deals that they are missing out on when they don't open your emails.
+While Braze's platform automatically stops sending emails to users who have marked you as spam, the "Has Marked You As Spam" filter allows you to also send these users targeted push messages, in-app notifications, and News Feed cards.  This filter is useful for [retargeting campaigns][21]. For instance, you can send unengaged users messages or News Feed updates that remind them of the features and deals that they are missing out on when they don't open your emails.
 
 Sunset policies can be especially helpful in email campaigns that target lapsing users.  While these campaigns focus on segments that have not interacted with your app for a period of time, they can put the deliverability of your emails at risk if they repeatedly include unengaged recipients. Sunset policies allow you to target lapsing users without landing in the spam folder.
 
