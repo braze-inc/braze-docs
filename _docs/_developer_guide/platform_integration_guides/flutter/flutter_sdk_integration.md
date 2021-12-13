@@ -121,8 +121,8 @@ At this point, you can verify that the SDK is integrated by checking session sta
 You can open a session for a particular user by calling the following code in your app.
 
 ```dart
-BrazePlugin myBrazePlugin = BrazePlugin();
-myBrazePlugin.changeUser("some-user-id");
+BrazePlugin braze = BrazePlugin();
+braze.changeUser("some-user-id");
 ```
 
 Then, search for the user with `some-user-id` in the dashboard under **User Search**. There, you can verify that session and device data have been logged.

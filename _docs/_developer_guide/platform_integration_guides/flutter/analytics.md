@@ -22,7 +22,7 @@ The Braze SDK reports session data used by the Braze dashboard to calculate user
 To set a user ID or start a session, use the `changeUser` method, which takes a user ID parameter.
 
 ```dart
-myBrazePlugin.changeUser('user_id');
+braze.changeUser('user_id');
 ```
 
 ## Logging custom events
@@ -32,13 +32,13 @@ myBrazePlugin.changeUser('user_id');
 You can record custom events in Braze to learn more about your app’s usage patterns and to segment your users by their actions in the dashboard.
 
 ```dart
-myBrazePlugin.logCustomEvent('my_custom_event');
+braze.logCustomEvent('my_custom_event');
 ```
 
 You can add metadata about the event by passing a properties object with your custom event.
 
 ```dart
-myBrazePlugin.logCustomEvent('custom_event_with_properties', properties: {
+braze.logCustomEvent('custom_event_with_properties', properties: {
     'key1': 'value1',
     'key2': ['value2', 'value3'],
     'key3': false,
@@ -56,7 +56,7 @@ Braze provides methods for assigning attributes to users. You’ll be able to fi
 To assign user attributes automatically collected by Braze, you can use setter methods that come with the SDK.
 
 ```dart
-myBrazePlugin.setFirstName('Name');
+braze.setFirstName('Name');
 ```
 
 The following attributes are supported:
@@ -79,7 +79,7 @@ All string values such as first name, last name, country, and home city are limi
 #### Unsetting a custom attribute
 
 ```dart
-myBrazePlugin.unsetCustomUserAttribute('attribute_key');
+braze.unsetCustomUserAttribute('attribute_key');
 ```
 
 ## Logging purchases
@@ -91,13 +91,13 @@ Record in-app purchases so that you can track your revenue over time and across 
 Braze supports purchases in multiple currencies. Purchases that you report in a currency other than USD will be shown in the dashboard in USD based on the exchange rate at the date they were reported.
 
 ```dart
-myBrazePlugin.logPurchase(productId, currencyCode, price, quantity, properties: properties);
+braze.logPurchase(productId, currencyCode, price, quantity, properties: properties);
 ```
 
 For example:
 
 ```dart
-myBrazePlugin.logPurchase('product_id', 'USD', 9.99, 1, properties: {
+braze.logPurchase('product_id', 'USD', 9.99, 1, properties: {
     'key1': 'value'
 });
 ```

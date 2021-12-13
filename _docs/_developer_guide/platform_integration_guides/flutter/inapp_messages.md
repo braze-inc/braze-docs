@@ -23,11 +23,11 @@ To log analytics using your `BrazeInAppMessage`, pass the instance into the desi
 For example:
 ```dart
 // Log a click
-myBrazePlugin.logInAppMessageClicked(inAppMessage);
+braze.logInAppMessageClicked(inAppMessage);
 // Log an impression
-myBrazePlugin.logInAppMessageImpression(inAppMessage);
+braze.logInAppMessageImpression(inAppMessage);
 // Log button index `0` being clicked
-myBrazePlugin.logInAppMessageButtonClicked(inAppMessage, 0);
+braze.logInAppMessageButtonClicked(inAppMessage, 0);
 ```
 
 ## Disabling automatic display
@@ -105,14 +105,14 @@ For an example, see [AppDelegate.swift](https://github.com/braze-inc/braze-flutt
 
 To store any in-app messages triggered before the callback is available and replay them once it is set, add the following entry to the `customConfigs` map when intializing the `BrazePlugin`:
 ```dart
-BrazePlugin myBrazePlugin = new BrazePlugin(customConfigs: {replayCallbacksConfigKey: true});
+BrazePlugin braze = new BrazePlugin(customConfigs: {replayCallbacksConfigKey: true});
 ```
 
 ## Test displaying a sample in-app message
 
 Follow the steps below to test a sample in-app message.
 
-1. Set an active user in the React application by calling `myBrazePlugin.changeUser('your-user-id')` method.
+1. Set an active user in the React application by calling `braze.changeUser('your-user-id')` method.
 2. Head to **Campaigns** and follow [this guide][1] to create a new **In-App Messaging** campaign.
 3. Compose your test in-app messaging campaign and head over to the **Test** tab. Add the same `user-id` as the test user and click **Send Test**.
 4. Tap the push notification and that should display the in-app message on your device.
