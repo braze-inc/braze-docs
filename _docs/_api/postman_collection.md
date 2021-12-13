@@ -1,6 +1,6 @@
 ---
-nav_title: Postman & Sample Requests
-article_title: Postman & Sample Requests
+nav_title: Postman and Sample Requests
+article_title: Postman and Sample Requests
 page_order: 3
 description: "This reference article covers the Braze Postman Collection, what it is, how to set up and use the collection, as well as how to edit and send requests."
 page_type: reference
@@ -22,6 +22,8 @@ You can see or [download our Postman Collection here.](https://www.getpostman.co
 If you have a Postman account (you can download macOS, Windows, and Linux versions [from the Postman website][1]), you can open our Postman documentation in your own Postman app (click the orange **Run in Postman** button below). You can then [create an environment](#setting-up-your-postman-environment), or use our Braze REST API environment as a template, and edit the available `POST` and `GET` requests to suit your own needs.
 
 [![Run in Postman](https://run.pstmn.io/button.svg)](https://app.getpostman.com/run-collection/29baa41d7ba930673ef0?action=collection%2Fimport)
+
+We also have a [public workspace](https://www.postman.com/braze-inc/workspace/braze-public-workspace/overview) available on Postman.
 
 ### Setting up your Postman environment
 
