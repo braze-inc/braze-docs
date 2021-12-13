@@ -303,9 +303,10 @@ Cet événement se produit lorsqu'un utilisateur ouvre un e-mail. Plusieurs év�
   "canvas_step_name": (string) nom de l'étape pour ce message si à partir d'un Canvas,
   "send_id": (string) id du message si spécifié pour la campagne (Voir Send Identifier under API Identifier Types),
   "dispatch_id": (string) id de l'envoi de message (id unique pour chaque 'transmission' envoyée depuis la plate-forme Braze). Les utilisateurs qui reçoivent un message de planification reçoivent le même dispatch_id. Les messages basés sur l'action ou sur l'API obtiennent un dispatch_id unique par utilisateur.
-  "email_address": (chaîne) adresse email pour cet événement
-  "user_agent": (string) description du système de l'utilisateur et du navigateur pour l'événement (Email Click, Open, et les événements MarkAsSpam seulement),
-  "ip_pool": (string) pool IP utilisé pour l'envoi de message
+  "email_address": (chaîne) adresse email pour cet événement,
+  "ip_pool": (chaîne) pool d'IP utilisé pour l'envoi de messages,
+  "user_agent": (string) description du système et du navigateur de l'utilisateur pour l'événement,
+  "machine_open": (chaîne) Indicateur permettant de déterminer si le courrier électronique a été ouvert par un processus automatisé, tel que la pré-récupération d'Apple ou de Google mail. Actuellement "vrai" ou nul, mais une granularité supplémentaire (par exemple "Apple" ou "Google" pour indiquer quel processus a fait le fetch) peut être ajoutée dans le futur. 
 }
 ```
 #### Détails de la propriété
@@ -343,10 +344,12 @@ Cet événement se produit lorsqu'un utilisateur clique sur un email. Plusieurs 
   "canvas_step_name": (string) nom de l'étape pour ce message si à partir d'un Canvas,
   "send_id": (string) id du message si spécifié pour la campagne (Voir Send Identifier under API Identifier Types),
   "dispatch_id": (string) id de l'envoi de message (id unique pour chaque 'transmission' envoyée depuis la plate-forme Braze). Uniquement inclus lorsque campaign_id est présent. Les utilisateurs qui reçoivent un message de planification reçoivent le même dispatch_id. Les messages basés sur l'action ou sur l'API obtiennent un dispatch_id unique par utilisateur.
-  "email_address": (chaîne) adresse email pour cet événement,
-  "url": (chaîne) l'url qui a été cliqué (Email Click events seulement),
-  "user_agent": (string) description du système de l'utilisateur et du navigateur pour l'événement (Email Click, Open, et les événements MarkAsSpam seulement),
-  "ip_pool": (string) pool IP utilisé pour l'envoi de messages
+  "email_address": (chaîne) adresse email pour cet événement
+  "url": (chaîne) l'url qui a été cliquée,
+  "ip_pool": (string) pool IP utilisé pour l'envoi de messages,
+  "user_agent": (string) description du système et du navigateur de l'utilisateur pour l'événement,
+  "link_id": (chaîne) valeur unique générée par Braze pour l'URL,
+  "link_alias": (chaîne) nom d'alias défini lors de l'envoi du message
 }
 ```
 #### Détails de la propriété
@@ -460,9 +463,9 @@ Cet événement se produit lorsque l'utilisateur final clique sur le bouton « s
   "canvas_step_name": (string) nom de l'étape pour ce message si à partir d'un Canvas,
   "send_id": (string) id du message si spécifié pour la campagne (Voir Send Identifier under API Identifier Types),
   "dispatch_id": (string) id de l'envoi de message (id unique pour chaque 'transmission' envoyée depuis la plate-forme Braze). Les utilisateurs qui reçoivent un message de planification reçoivent le même dispatch_id. Les messages basés sur l'action ou sur l'API obtiennent un dispatch_id unique par utilisateur.
-  "email_address": (chaîne) adresse email pour cet événement
-  "user_agent": (string) description du système de l'utilisateur et du navigateur pour l'événement (Email Click, Open, et les événements MarkAsSpam seulement),
-  "ip_pool": (string) pool IP utilisé pour l'envoi de message
+  "email_address": (chaîne) adresse email pour cet événement,
+  "ip_pool": (chaîne) pool d'IP utilisé pour l'envoi de messages,
+  "user_agent": (string) description du système et du navigateur de l'utilisateur pour l'événement
 }
 ```
 #### Détails de la propriété
