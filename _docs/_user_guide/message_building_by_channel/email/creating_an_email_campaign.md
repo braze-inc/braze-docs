@@ -35,7 +35,7 @@ Braze offers two editing experiences when creating an email campaign, our [Drag 
 
 ![Email Creation][3]
 
-Once you selected your template, you will see an overview of your email where you can quickly jump to the full-screen editor to draft your email, change your sending info, and view warnings about deliverability or law compliance. 
+Once you've selected your template, you'll see an overview of your email where you can quickly jump to the full-screen editor to draft your email, change your sending info, and view warnings about deliverability or law compliance. 
 
 ![New Email Overview][14]
 
@@ -110,7 +110,7 @@ Unless you check **Allow users to become re-eligible to receive campaign**, each
 {% endtab %}
 {% tab Action-Based Delivery %}
 
-Action-Based Delivery allows you to specify the time a message will send after a user takes a particular action (selected from the __New Trigger Action__ dropdown.)
+Action-Based Delivery allows you to specify the time a message will send after a user takes a particular action (selected from the **New Trigger Action** dropdown.)
 
 ![Action]({% image_buster /assets/img_archive/action_delivery_new.png %}){: height="80%"" width="80%"}
 
@@ -118,7 +118,7 @@ Action-Based Delivery allows you to specify the time a message will send after a
 {% tab API-Triggered Delivery %}
 
 {% alert note %}
-When the trigger action is set to "Interact With Campaign", selecting a "Receive" option as the interaction will cause your new campaign to trigger as soon as Braze marks the selected campaign as sent, even if that message bounces or fails to be delivered.
+When the trigger action is set to **Interact With Campaign**, selecting a **Receive** option as the interaction will cause your new campaign to trigger as soon as Braze marks the selected campaign as sent, even if that message bounces or fails to be delivered.
 {% endalert %}
 
 Check out our [API-Triggered endpoints found in the API Guide]({{site.baseurl}}/developer_guide/rest_api/messaging/#sending-messages-via-api-triggered-delivery) for more information on API-Triggered Delivery.
@@ -166,7 +166,7 @@ The final page will give you a summary of the campaign you've just designed. Con
 
 Now just wait for all the data to roll in!
 
-![email2][6]
+![Launch Campaign][6]
 
 ## Email reporting
 
@@ -186,7 +186,7 @@ Additionally, you can see how successful different links in a single email campa
 Date ranges are not taken into consideration for email heat maps.
 {% endalert %}
 
-![email_analytics][17]
+![Email Analytics][17]
 
 When looking at clicks for your variant, the clicks will reflect unique clicks. When you expand each variation, the clicks for each link within the variation will reflect total clicks (not unique).
 
