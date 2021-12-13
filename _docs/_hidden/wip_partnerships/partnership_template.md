@@ -1,5 +1,6 @@
 ---
 nav_title: Your Partner Page
+article_title: Your Partner Page
 page_order: 1
 
 description: "This is the Google Search and SEO description that will appear; try to make this informative and concise, yet brief."
@@ -29,10 +30,10 @@ The requirements listed below are typical requirements you might need from Braze
 | ----------- | ----------- |
 | Partner account | A partner account is required to take advantage of this partnership. |
 | Braze REST API key | A Braze REST API Key with `users.track` permissions. <br><br> This can be created within the __Braze Dashboard -> Developer Console -> REST API Key -> Create New API Key__ |
-| Braze REST Endpoint | [Your REST Endpoint URL][1]. Your endpoint will depend on the Braze URL for your instance. |
+| Braze REST endpoint | [Your REST endpoint URL][1]. Your endpoint will depend on the Braze URL for your instance. |
 {: .reset-td-br-1 .reset-td-br-2}
 
-## Use Cases
+## Use cases
 
 Use cases can be a critical part of your documentation. Although optional, this is a good place to outline typical or even novel use cases for the integration. This can be used as a way to sell or upsell the relationship - it provides context, ideas, and most importantly, a way to visualize the capabilities of the integration.
 
@@ -40,7 +41,7 @@ Use cases can be a critical part of your documentation. Although optional, this 
 
 This is where you break down the integration into steps. Do not just write endless paragraphs - these are technical documents that will be used by marketers and developers alike to get the integration up and running. Your main goal is to write descriptive documentation that helps the Braze user get the job done. 
 
-Optionally, you can also provide details on if this is a side-by-side, server-to-server, or out-of-the-Box integration. This enables you to have multiple integration sections if more than one way to integrate exists.
+Optionally, you can also provide details on if this is a side-by-side, server-to-server, or out-of-the-box integration. This enables you to have multiple integration sections if more than one way to integrate exists.
 
 ### Step 1: Short description of step one 
 
@@ -54,7 +55,7 @@ You also can add images to your documentation. We recommend including images of 
 
 Outline thorough integration usage, especially if it includes inserting Liquid into our message composer. If your integration leverages a Braze webhook, we recommend including the following webhook formatting steps into your partner page.
 
-{% details Webhook Formatting %}
+{% details Webhook formatting %}
 ```
 ### Step 2: Create a [Partner] webhook in Braze
 
