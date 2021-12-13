@@ -1,6 +1,6 @@
 ---
-nav_title: Postman & Exemples de demandes
-article_title: Postman & Exemples de demandes
+nav_title: Postman et exemples de demandes
+article_title: Postman et exemples de demandes
 page_order: 3
 description: "Cet article de référence couvre la collection Braze Postman, ce qu'elle est, comment configurer et utiliser la collection, ainsi que comment éditer et envoyer des requêtes."
 page_type: Référence
@@ -21,6 +21,8 @@ Vous pouvez voir ou [télécharger notre collection Postman ici.](https://www.ge
 Si vous avez un compte Postman (vous pouvez télécharger les versions macOS, Windows et Linux [à partir du site Web de Postman][1]), vous pouvez ouvrir notre documentation Postman dans votre propre application Postman (cliquez sur le bouton orange **Exécuter dans Postman** ci-dessous). Vous pouvez alors [créer un environnement](#setting-up-your-postman-environment), ou utiliser notre environnement API Braze REST comme modèle, et modifiez les requêtes disponibles `POST` et `GET` pour répondre à vos propres besoins.
 
 [![Exécuter dans Postman](https://run.pstmn.io/button.svg)](https://app.getpostman.com/run-collection/29baa41d7ba930673ef0?action=collection%2Fimport)
+
+Nous avons également un [espace de travail public](https://www.postman.com/braze-inc/workspace/braze-public-workspace/overview) disponible sur Postman.
 
 ### Mise en place de votre environnement Postman
 
