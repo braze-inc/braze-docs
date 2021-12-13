@@ -16,6 +16,19 @@ Beginning December 2021, the following changes take effect for the [export users
 1. The `fields_to_export` field in this API request will be required. The option to default to all fields will be removed.
 2. The fields for `custom_events`, `purchases`, `campaigns_received`, and `canvases_received` will only contain data from the last 90 days.
 
+## New properties for Currents message engagement events
+
+New properties have been added for select [message engagement events]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/event_glossary/message_engagement_events/). This update applies to the following Currents message engagement events and all partners that use them:
+
+- Add `LINK_ID`, `LINK_ALIAS` to:
+  - Email Click (all destinations)
+- Add `USER_AGENT` to:
+  - Email Open
+  - Email Click
+  - Email Mark As Spam
+- Add `MACHINE_OPEN` to:
+  - Email Open
+
 ## Understanding webhooks
 
 Webhooks are powerful, flexible tools—but they can be a bit confusing. If you're wondering what webhooks are and how you can use them in Braze, check out our new article on [Understanding webhooks]({{site.baseurl}}/user_guide/message_building_by_channel/webhooks/understanding_webhooks/).
