@@ -34,7 +34,7 @@ Then, click on the tab in the top bar to navigate to the settings you want to ma
 ![CompanySettings][2]
 
 {% alert warning %}
-Please note that whatever you edit in this section will apply to _every_ Braze user's account (attached to your company).
+Any edits to the **Company Settings** section will apply to every Braze user's account (attached to your company).
 {% endalert %}
 
 <br>
