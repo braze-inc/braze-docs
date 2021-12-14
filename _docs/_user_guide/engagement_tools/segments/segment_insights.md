@@ -11,30 +11,31 @@ description: "This how-to article will walk you through how to use, interpret, a
 
 # Segment Insights
 
-> This how-to article will walk you through how to use, interpret, and share Segment Insights. 
-> <br>
-> <br> 
-> These insights can be used to target users and develop effective marketing campaigns.
+> This how-to article will walk you through how to use, interpret, and share Segment Insights. These insights can be used to target users and develop effective marketing campaigns. In addition to this article, we recommend you also check out our [Segmentation LAB course](https://lab.braze.com/segmentation-course).
+
+Segment Insights allows you to quickly and easily see how a segment is performing compared to another across a set of pre-selected KPIs. Go to the **Segment Insights** page of your dashboard, under **Segments**, and click <i class="fas fa-plus"></i> **Add Segment** to view up to four different segments compared against a baseline. 
 
 ![Segment Insights Dash][1]
 
-Segment Insights allows you to quickly and easily see how a segment is performing compared to another across a set of pre-selected KPIs. From the segment section of your dashboard, clicking on the “Segment Insights” button in the top right of the page brings you to a screen where up to four different segments can be compared against a baseline. The baseline can either be a specific segment you select or the stats for all of your users.  Currently, Braze can compare the following statistics on the Segment Insights page:
+The baseline segment can either be a specific segment you select, or a segment containing all of your users. You can compare the following statistics using Segment Insights:
 
 | Measurement | Description | Formula |
 | --------------------- | ------------- | ------------- |
-| Session Frequency | Average number of segment users' sessions per day | (total # of sessions)/(# days since first session) |
-| Time Since First Session | Average time between segment users' first session and now | today - date of first session |
-| Time Since Last Session | Average time between segment users' last session and now | today - date of last session |
+| Session Frequency | Average number of segment users' sessions per day | (total # of sessions) / (# days since first session) |
+| Time Since First Session | Average time between segment users' first session and now | today – date of first session |
+| Time Since Last Session | Average time between segment users' last session and now | today – date of last session |
 | Lifetime Revenue | Average lifetime revenue for segment users | user lifetime spend |
-| Time to First Purchase | Average time between segment users' first session and first purchase | date of first purchase - date of first session |
-| Time Since Last Purchase | Average time between segment users' last purchase and now | today - date of last purchase |
+| Time to First Purchase | Average time between segment users' first session and first purchase | date of first purchase – date of first session |
+| Time Since Last Purchase | Average time between segment users' last purchase and now | today – date of last purchase |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
 
-You can easily share specific comparisons with the page’s unique URL, and users can also click beneath each segment to reveal more information about that segment. These comparisons will reset when a user changes app groups.
+You can easily share specific comparisons with your teammates using the page’s unique URL, and you can also click beneath each segment to reveal more information about that segment. These comparisons will reset when you switch between app groups.
 
 ![Segment Insights Expanded][2]
 
-Segment Insights have also been built right into the segment details view. When looking at a particular segment you’ve previously set up, you can find the same six statistics outlined within the dynamic, grey Segment Statistics box. From here, you can quickly launch the Segment Insights tool to compare this particular segment with any others you’ve previously set up, but note that this will overwrite any segments you've previously selected within the Segment Insights tool.
+## Segment Details page
+
+Segment Insights have also been built right into the **Segment Details** view. When looking at a particular segment you’ve previously set up, you can find the same six statistics outlined within the dynamic, grey Segment Statistics box. From here, you can quickly launch the Segment Insights tool to compare this particular segment with any others you’ve previously set up, but note that this will overwrite any segments you've previously selected within the Segment Insights tool.
 
 ![Segment Insights Details][3]
 
