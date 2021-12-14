@@ -36,7 +36,7 @@ Ensuite, cliquez sur l’onglet dans la barre supérieure pour accéder aux para
 !\[CompanySettings\]\[2\]
 
 {% alert warning %}
-Veuillez noter que tout ce que vous modifiez dans cette section s'appliquera à _chaque compte utilisateur_ Braze (attaché à votre entreprise).
+Toute modification de la section **Paramètres de la société** s'appliquera au compte de chaque utilisateur de Braze (attaché à votre entreprise).
 {% endalert %}
 
 <br>
