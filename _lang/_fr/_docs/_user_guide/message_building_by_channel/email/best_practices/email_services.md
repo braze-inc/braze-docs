@@ -9,13 +9,13 @@ channel: Email
 
 # Services de messagerie {#email-services}
 
-Si vous avez besoin de soutien supplémentaire pour votre programme de messagerie, nous offrons des services récurrents et ponctuels à un coût supplémentaire. Pour plus d'informations, contactez votre gestionnaire de comptes.
+Si vous avez besoin d'aide supplémentaire avec votre programme de messagerie, Braze offre des services récurrents et ponctuels à un coût supplémentaire. Pour plus d'informations, contactez votre responsable de compte Braze.
 
 ## Services de livraison premium {#premium-deliverability-services}
 
 Nous offrons deux niveaux de support par e-mail récurrent : Services de livraison Premium et suivi de la livraison.
 
-Description des services :
+Ces services peuvent inclure :
 
 - Audit des pratiques historiques et actuelles d'envoi de courriels avec un examen des stratégies de ciblage, de cadence et de messagerie
 - Configuration du label blanc et plan de réchauffement IP personnalisé créé par un expert en délivrance de courrier électronique
@@ -23,5 +23,5 @@ Description des services :
 - Appel régulier avec expert en délivrabilité (deux fois par mois pour la capacité de livraison Premium et le suivi mensuel de la livraison) pour fournir :
   - Surveillance des performances de délivrabilité par domaine
   - Recommandations pour améliorer la performance du programme de messagerie et les résultats en utilisant les données et les meilleures pratiques établies
-- Triage de crise - en cas de problème de délivrabilité, comme un bloc ou une liste noire, notre équipe aidera à atténuer et à remédier
+- Défi en crise: En cas de problème de délivrabilité, comme un bloc ou une liste noire, notre équipe aidera à atténuer et à remédier
 
