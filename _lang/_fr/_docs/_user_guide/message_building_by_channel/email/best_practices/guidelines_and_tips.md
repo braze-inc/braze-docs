@@ -219,7 +219,7 @@ Puisque les filtres anti-spam surveillent à la fois une version HTML et une ver
 
 ### Paramétrage et adresse de réponse
 
-Lorsque vous définissez vos adresses "De", assurez-vous que votre domaine de messagerie "De" corresponde à votre domaine d'envoi (i.e. `marketing.yourdomain.com`), l'échec de cette opération peut entraîner un déséquilibre entre SPF et DKIM. Tous les e-mails de réponse peuvent être configurés sur votre domaine racine.
+Lorsque vous définissez vos adresses "De", assurez-vous que votre domaine de messagerie "De" corresponde à votre domaine d'envoi (c'est-à-dire `marketing.yourdomain.com`). Si vous ne le faites pas, cela peut entraîner un déséquilibre entre SPF et DKIM. Tous les e-mails de réponse peuvent être configurés sur votre domaine racine.
 
 ## Astuces de style
 
