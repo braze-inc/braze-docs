@@ -14,9 +14,15 @@ channel:
 
 > This article covers how to create an email campaign in Braze. Here, we'll cover steps and best practices on how to compose your message, preview your content, and schedule your campaign.
 
-Email messages are great for delivering content to your users on their terms. They are also excellent tools to re-engage users who may have even uninstalled your app. Sending customized and tailored email messages will enhance your users' experience, and help your users get the most value out of your app.
+Email messages are great for delivering content to your users on their terms. They are also excellent tools to re-engage users who may have even uninstalled your app. Sending customized and tailored email messages will enhance your users' experience, and help your users get the most value out of your app. To see examples of email campaigns, check out our [Case Studies](https://www.braze.com/customers). 
 
-To see examples of email campaigns, check out our [Case Studies][9].
+{% alert tip %}
+If this is your first time creating an email campaign, we highly recommend that you check out the following LAB courses:<br>
+
+- [Email](https://lab.braze.com/messaging-channels-email)
+- [Project: Build a Basic Email Marketing Program](https://lab.braze.com/project-build-a-basic-email-marketing-program)
+
+{% endalert %}
 
 ## Step 1: Create a new campaign
 
@@ -207,7 +213,6 @@ On the **Funnel Report** page, you can analyze the journeys your customers take 
 [3]: {% image_buster /assets/img_archive/choose_email_creation.png %}
 [5]: {% image_buster /assets/img_archive/targetsegment_email_new.png %}
 [6]: {% image_buster /assets/img_archive/confirm_email.png %}
-[9]: https://www.braze.com/customers
 [10]: {{site.baseurl}}/user_guide/message_building_by_channel/email/creating_an_email_template/#creating-an-email-template
 [13]: {{site.baseurl}}/user_guide/intelligence/intelligent_selection/
 [14]: {% image_buster /assets/img/email.png %}
