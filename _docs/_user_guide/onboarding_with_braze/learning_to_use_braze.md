@@ -9,17 +9,17 @@ description: "This page includes several reading paths that will enable you to b
 
 # Learning to use Braze
 
-Braze is a complex tool that can allow you to send an amazing range of campaigns that take your customers and users through professional, tailored, and personalized journeys that not only get you the results _you_ want, but the results _they_ want. No surprises, no unwanted contact, no annoying contact - just you letting your customers know that you care about what they want from you.
+Braze is a complex tool that can allow you to send an amazing range of campaigns that take your customers and users through professional, tailored, and personalized journeys that not only get you the results _you_ want, but the results _they_ want. No surprises, no unwanted contact, no annoying contact—just you letting your customers know that you care about what they want from you.
 
-Because of Braze's beautiful complexity, we recommend the several reading paths (outlined below) that will enable you to best utilize our platform to your advantage. There's no need to follow these exactly - cater them to your needs!
+Because of Braze's beautiful complexity, we recommend the several reading paths (outlined below) that will enable you to best utilize our platform to your advantage. There's no need to follow these exactly—cater them to your needs!
 
 {% alert tip %}
-Don't forget - you can always [access and take LAB courses](https://lab.braze.com) once you have access to the Braze platform! We highly recommend this in conjunction with these reading paths!
+Don't forget that you can always access and take [LAB courses](https://lab.braze.com) once you have access to the Braze platform! We highly recommend this (especially [Braze 101](https://lab.braze.com/braze-101)) in conjunction with these reading paths!
 {% endalert %}
 
 Choose from the paths below to fit your needs and get reading!
 
-_These reading paths assume that you've already completed your integration and set up for your messaging channels, so the readings in the Onboarding with Braze section are not included._
+> These reading paths assume that you've already completed your integration and set up for your messaging channels, so the readings in the Onboarding with Braze section are not included.
 
 ## Braze beginner
 
