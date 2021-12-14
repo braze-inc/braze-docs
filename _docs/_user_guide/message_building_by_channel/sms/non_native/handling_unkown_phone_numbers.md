@@ -13,7 +13,7 @@ channel:
 
 You may find that once you get SMS up and running with Braze that you receive messages from unknown users. Noted below are the steps through which an unidentified user and number get processed.
 
-Braze can automatically create a user when a user with a new phone number responds with a `START` or `STOP` (or any other variation of these keywords).  When creating the user, Braze will set their phone field with the [E.164][e.164] number provided by our SMS provider.  In addition, the [User Alias][ualink] ('phone') will be set with the same value.<br><br>Customers can use the [User Attributes Object][uaolink] in tandem with the [Track Endpoint][telink] to find users based on their alias and set an `external_id`.
+Braze can automatically create a user when a user with a new phone number responds with a `START` or `STOP` (or any other variation of these keywords).  When creating the user, Braze will set their phone field with the [E.164][e.164] number provided by our SMS provider.  In addition, the [user alias][ualink] ('phone') will be set with the same value.<br><br>Customers can use the [user attributes object][uaolink] in tandem with the [track endpoint][telink] to find users based on their alias and set an `external_id`.
 
 ## Opt-in/out and custom keyword workflow for unknown numbers
 
@@ -30,7 +30,7 @@ Braze automatically addresses an unknown number in one of three ways:
   * Braze ignores the text message and does nothing.
 
 {% alert important %}
-If you would like to enable this functionality, please contact your Onboarding Manager or Customer Success Manager.
+If you would like to enable this functionality, please contact your onboarding manager or customer success manager.
 {% endalert %}
 
 [ualink]: {{site.baseurl}}/api/objects_filters/user_alias_object/

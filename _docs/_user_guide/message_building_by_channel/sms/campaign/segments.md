@@ -28,16 +28,16 @@ As you create an SMS campaign or Canvas using Braze, the messages you build in t
 The character limit for __a stand-alone SMS segment__ is 160 characters ([GSM-7](https://en.wikipedia.org/wiki/GSM_03.38) encoding) or 70 characters ([UCS-2](https://en.wikipedia.org/wiki/Universal_Coded_Character_Set) encoding) based on the encoding type. However, most phones and networks support concatenation, offering longer-form SMS messages of up to 1530 characters (GSM-7) or 670 characters (UCS-2). 
 
 It's important to note that __as you pass the character limit of your first segment, additional characters will cause your entire message to be split and segmented based on new character limits__:
-- __GSM-7 Encoding__
+- __GSM-7 encoding__
     - Messages exceeding the 160 character limit will now be segmented into 153 character segments and sent individually, then rebuilt by the recipient's device. For example, a 161 character message will be sent as two messages, one with 153 characters and the second with 8 characters. 
-- __UCS-2 Encoding__
+- __UCS-2 encoding__
     - If you include non-GSM characters such as Emojis, Chinese, Korean, or Japanese script in SMS messages, those messages have to be sent via UCS-2 encoding. Messages exceeding the initial segment limit of 70 characters will cause the entire message to be concatenated into 67 character message segments. For example, a 71 character message will be sent as two messages, one with 67 characters and the second with 4 characters. 
 
 Regardless of the encoding type, each SMS message sent out by Braze has a limit of up to 10 segments and is compatible with [Liquid templating]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/using_liquid/), [Connected Content]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/connected_content/), Emojis, and links.
 
 {% tabs %}
-{% tab GSM-7 Encoding %}
-| Number of Characters | How many segments? |
+{% tab GSM-7 encoding %}
+| Number of characters | How many segments? |
 | -------------------- | ----------------- |
 | 0 - 160 characters | 1 segment |
 | 161 - 306 characters | 2 segments |
@@ -51,8 +51,8 @@ Regardless of the encoding type, each SMS message sent out by Braze has a limit 
 | 1378 - 1530 characters | 10 segments |
 {: .reset-td-br-1 .reset-td-br-2}
 {% endtab %}
-{% tab UCS-2 Encoding %}
-| Number of Characters | How many segments? |
+{% tab UCS-2 encoding %}
+| Number of characters | How many segments? |
 | -------------------- | ----------------- |
 | 0 - 70 characters | 1 segment |
 | 71 - 134 characters | 2 segments |
@@ -70,13 +70,13 @@ Regardless of the encoding type, each SMS message sent out by Braze has a limit 
 
 ## Things to keep in mind as you create your copy
 
-- __Character Limit per Segment__
+- __Character limit per segment__
     - [GSM-7](https://en.wikipedia.org/wiki/GSM_03.38) has a 160 character limit for a single SMS segment. For messages with more than 160 characters, all messages will be segmented with a 153 character limit.
     - [UCS-2](https://en.wikipedia.org/wiki/Universal_Coded_Character_Set) has a 70 character limit per message segment. For messages with more than 70 characters, all messages will be segmented with a 67 character limit.<br><br>
-- __Segment Limit per Message__
+- __Segment limit per message__
     - No more than __10 segments__ of messages may be sent in a single Braze SMS message.
     - Those 10 segments will be limited to 1530 characters (GSM-7 encoding) or 670 characters (UCS-2 encoding).<br><br>
-- __Compatible with Liquid Templating, Connected Content, Emojis, and Links__
+- __Compatible with Liquid templating, Connected Content, emojis, and links__
     - Liquid templating and Connected Content may put your message at risk of going over the character limit for your encoding type. You may be able to use the [truncate words filter](https://help.shopify.com/en/themes/liquid/filters/string-filters#truncatewords) to limit the number of words that your Liquid could bring to the message.
     - Emojis have no standard character count across all emojis, so make sure to test that your messages are segmenting and displaying correctly.
     - Links may make use of many characters, resulting in more message segments than intended. Though the use of link shorteners is possible, they are best used with short codes. Please visit our [SMS FAQs]({{site.baseurl}}/user_guide/message_building_by_channel/sms/faqs/) for more information.<br><br>

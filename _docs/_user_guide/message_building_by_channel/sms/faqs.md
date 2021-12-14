@@ -49,7 +49,7 @@ While we can't promise that you won't occasionally have an overage, you could fo
 - Consider the type of encoding your message uses - if your message uses GSM-7 encoding, you can usually estimate that you can send a message with 128 characters per message segment. If your message uses [UCS-2](https://en.wikipedia.org/wiki/Universal_Coded_Character_Set) encoding, you can usually estimate that you can send a message with 67 characters per message segment.
 - Test test test! Always test your SMS messages before launch, especially when using Liquid and Connected Content.
 
-### What are the best sending practices to avoid Spam detection for SMS?
+### What are the best sending practices to avoid spam detection for SMS?
 
 1. Make sure opt-in and opt-out instructions are clear.
 2. Ensure you(the brand) have a relationship with the customer.
