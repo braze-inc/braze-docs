@@ -51,17 +51,13 @@ Braze calculates the optimal time at midnight in Samoan time, the first timezone
 
 ### Why is my intelligent timing campaign showing little to no sends?
 
-Braze needs a baseline number of data points to make a good estimate. If there is not enough session data or the users targeted have little to no email clicks or opens (e.g., new users), intelligent timing may default to the app group's most popular hour on that day of the week. If there is insufficient information about the app group, we fall back to a default time defined in `DEFAULT_HOUR`. Note that there is also an option to set a fallback time. 
+Braze needs a baseline number of data points to make a good estimate. If there is not enough session data or the users targeted have little to no email clicks or opens (e.g., new users), intelligent timing may default to the app group's most popular hour on that day of the week. If there is insufficient information about the app group, we fall back to a default time of 5pm. Note that there is also an option to set a fallback time. 
 
 ### Why is my intelligent timing campaign sending past the scheduled date? 
 
 Your intelligent timing campaign might be sending past the scheduled date because you are leveraging A/B testing. Campaigns using A/B testing can automatically send the winning variant after the A/B test is over, increasing the duration of campaign sending. By default, intelligent timing campaigns will be scheduled to send out the winning variant to the remaining users for the following day, but customers can change this send date. 
 
 We recommend that users with intelligent timing campaigns leave more time for the A/B test to finish and schedule the winning variant to send for two days out instead of one. 
-
-### What does "the edge of the window" mean? 
-
-The edge of the window is defined as the time closest to the user's optimal time. For example, if the optimal time is 10 pm, but the intelligent timing is 1 pm - 8 pm, the message will be sent at 8 pm. 
 
 ### When do we check the eligibility criteria for users segment and/or audience fitlers?
 

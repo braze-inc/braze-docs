@@ -15,7 +15,7 @@ A variant that appears to be performing better than others will get sent to more
 ![Intelligence selection][3]
 
 Intelligent Selection will:
-- Repeatedly look at performance data and shift campaign traffic toward winning variants gradually
+- Repeatedly look at performance data and shift campaign traffic toward winning variants gradually.
 - Ensure that more users receive your best-performing variant without sacrificing satistical confidence.
 - Rule out underperforming variants and identify high-performing variants faster than a [traditional A/B test][1].
 - Allows you to test more frequently and with greater confidence that your users will see your best message. 
@@ -29,6 +29,10 @@ Intelligent Selection can be added to any multi-send campaign in the "Target Use
 
 Canvas:
 When adding variants into your Canvas, click on one of the variant percentages. This will allow you to edit the variant distribution and turn on Intelligent Selection. Intelligent Selection will not be available if you have not yet added conversion events to your Canvas or if your campaign is composed of a solo variant or solo control group.<br><br>![Canvas intelligent selection][2]
+
+{% alert note %}
+We do not allow intelligent selection campaigns to have re-eligibility enabled because it would affect the integrity of the control variant. Check out [Intelligence FAQ]({{site.baseurl}}/user_guide/intelligence/faqs/#why-is-re-eligibility-not-available-when-combined-with-intelligent-selection) to learn more.
+{% endalert %}
 
 ## For how long will it run?
 
