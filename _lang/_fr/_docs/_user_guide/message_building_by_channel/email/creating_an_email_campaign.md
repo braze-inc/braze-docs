@@ -33,7 +33,7 @@ Braze offre deux expériences d'édition lors de la création d'une campagne de 
 
 !\[Création de courriel\]\[3\]
 
-Une fois que vous avez sélectionné votre modèle, vous verrez un aperçu de votre e-mail où vous pouvez rapidement aller à l'éditeur plein écran pour rédiger votre courriel, modifiez vos informations d'envoi et affichez les avertissements concernant la délivrabilité ou la conformité à la loi.
+Une fois que vous aurez sélectionné votre modèle, vous verrez un aperçu de votre e-mail où vous pourrez rapidement aller à l'éditeur plein écran pour rédiger votre courriel. modifiez vos informations d'envoi et affichez les avertissements concernant la délivrabilité ou la conformité à la loi.
 
 !\[Nouvelle vue d'ensemble des e-mails\]\[14\]
 
@@ -107,7 +107,7 @@ Sauf si vous cochez **Autoriser les utilisateurs à être de nouveau éligibles 
 {% endtab %}
 {% tab Action-Based Delivery %}
 
-La distribution par action vous permet de spécifier l'heure à laquelle un message sera envoyé après qu'un utilisateur prenne une action particulière (sélectionnée dans la liste déroulante __Nouvelle action de déclenchement__)
+La distribution par action vous permet de spécifier l'heure à laquelle un message sera envoyé après qu'un utilisateur prenne une action particulière (sélectionnée dans la liste déroulante **Nouvelle action de déclenchement**)
 
 ![Action]({% image_buster /assets/img_archive/action_delivery_new.png %}){: height="80%"" width="80%"}
 
@@ -115,7 +115,7 @@ La distribution par action vous permet de spécifier l'heure à laquelle un mess
 {% tab API-Triggered Delivery %}
 
 {% alert note %}
-Quand l'action de déclenchement est définie à "Interagir avec la campagne", en sélectionnant une option "Recevoir" car l'interaction déclenchera votre nouvelle campagne dès que Braze marque la campagne sélectionnée comme envoyée, même si ce message rebondit ou échoue.
+Lorsque l'action de déclenchement est définie à **Interagir avec la campagne**, sélectionner une option **Recevoir** car l'interaction provoquera votre nouvelle campagne dès que Braze marque la campagne sélectionnée comme envoyée, même si ce message rebondit ou échoue.
 {% endalert %}
 
 Consultez nos [terminaux déclenchés par l'API trouvés dans le Guide de l'API]({{site.baseurl}}/developer_guide/rest_api/messaging/#sending-messages-via-api-triggered-delivery) pour plus d'informations sur la livraison déclenchée par API.
@@ -163,7 +163,7 @@ La page finale vous donnera un résumé de la campagne que vous venez de concevo
 
 Maintenant, il suffit d'attendre que toutes les données se déroulent!
 
-!\[email2\]\[6\]
+!\[Campagne de lancement\]\[6\]
 
 ## Rapports par e-mail
 
@@ -183,7 +183,7 @@ De plus, vous pouvez voir comment différents liens réussis dans une seule camp
 Les plages de dates ne sont pas prises en compte pour les cartes de chaleur des e-mails.
 {% endalert %}
 
-!\[email_analytics\]\[17\]
+!\[Analyses de Courriel\]\[17\]
 
 Lorsque vous regardez des clics pour votre variante, les clics reflètent des clics uniques. Lorsque vous développez chaque variation, les clics pour chaque lien dans la variation reflètent le total des clics (pas unique).
 
