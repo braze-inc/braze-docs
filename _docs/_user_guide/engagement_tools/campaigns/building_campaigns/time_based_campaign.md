@@ -9,7 +9,7 @@ description: "This reference article covers time-based functionalities for Campa
 ---
 # Time-based functionalities for campaigns
 
-> This reference article covers time-based functionalities for campaigns to assist with strategies, troubleshooting, and to answer common questions.
+> This reference article covers time-based functionalities for campaigns to assist with strategies, troubleshooting, and to answer common questions. You can also check out our [Campaign Setup](https://lab.braze.com/campaign-setup-delivery-targeting-conversions) LAB course for more on campaign delivery. 
 
 ## Scheduled delivery
 

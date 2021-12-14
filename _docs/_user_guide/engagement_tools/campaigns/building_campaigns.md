@@ -3,7 +3,7 @@ nav_title: Building Campaigns
 article_title: Building Campaigns
 layout: dev_guide
 guide_top_header: "Building Campaigns"
-guide_top_text: "This landing page is home to resources on building your campaigns. After you've created your <a href='/docs/user_guide/engagement_tools/segments/'>segments</a>, use the resources here to set up your campaign and learn about the different options available."
+guide_top_text: "This landing page is home to resources on building your campaigns. After you've created your <a href='/docs/user_guide/engagement_tools/segments/'>segments</a>, use the resources here to set up your campaign and learn about the different options available.<br><br>We also highly recommend you check out our <a href='https://lab.braze.com/campaign-setup-delivery-targeting-conversions'>Campaign Setup</a> LAB course."
 page_order: 2
 
 tool: Campaigns
