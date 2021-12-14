@@ -13,7 +13,7 @@ Welcome, Braze Partners, and thank you for contributing to our customer knowledg
 Partnership Documentation Overview
 - [Set up your local environment](#setup_env)
 - [Create and add content to your page](#create_page)
-- [Image, link and code snippet formatting](#image_links)
+- [Image, link, and code snippet formatting](#image_links)
 - [Reviewing and testing](#testing)
 - [Commiting to Github](#committing)
 - [Review process](#review)
@@ -119,7 +119,7 @@ This last section is located at the very end of your document. Here, you will li
 {% endtab %}
 {% endtabs %}
 
-## Step 3: Image, link and code snippet formatting {#image_links}
+## Step 3: Image, link, and code snippet formatting {#image_links}
 
 Links and images are a necessary part of any integration document. They help supplement your instructions with helpful pictures, communicate information to users that might be hard or unnecessary to explain in words. 
 
