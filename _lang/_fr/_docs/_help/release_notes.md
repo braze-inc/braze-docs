@@ -10,6 +10,10 @@ description: "Cette page d'accueil accueille les notes de version de Braze. C'es
 guide_featured_title: "Notes de version"
 guide_featured_list:
   - 
+    name: 2022
+    link: /fr/docs/help/release_notes/2022/
+    fa_icon: fas fa-calendar-alt
+  - 
     name: 2021
     link: /fr/docs/help/release_notes/2021/
     fa_icon: fas fa-calendar-alt
@@ -46,6 +50,61 @@ guide_featured_list:
 # Notes de version les plus récentes de Braze {#most-recent}
 
 > Braze publie des informations sur les mises à jour des produits sur une cadence mensuelle, en s'alignant sur les principales versions du produit, bien que le produit soit mis à jour avec des améliorations diverses semaine à semaine. <br> <br> Pour plus d'informations sur l'une des mises à jour listées dans cette section, contactez votre responsable de compte ou [ouvrez un ticket de support][support]. Vous pouvez également consulter [nos Changelogs SDK]({{site.baseurl}}/developer_guide/platform_integration_guides/sdk_changelogs/) pour voir plus d'informations sur nos versions, mises à jour et améliorations mensuelles du SDK.
+
+## Janvier 2022
+
+Bienvenue dans une nouvelle année !
+
+### Mettre à jour pour exporter les utilisateurs par segment de terminaison
+
+À partir de décembre 2021, les modifications suivantes prennent effet pour les [utilisateurs d'exporter par segment]({{site.baseurl}}/api/endpoints/export/user_data/post_users_segment/):
+
+1. Le champ `fields_to_export` dans cette requête API sera requis. L'option par défaut pour tous les champs sera supprimée.
+2. Les champs pour `custom_events`, `achats`, `campagnes_received`, et `canvases_received` ne contiendra que les données des 90 derniers jours.
+
+### Nouvelles propriétés pour les événements d'engagement de messages courants
+
+De nouvelles propriétés ont été ajoutées pour la sélection des [événements d'engagement de message]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/event_glossary/message_engagement_events/). Cette mise à jour s'applique aux événements d'engagement de messages courants suivants et à tous les partenaires qui les utilisent :
+
+- Ajouter `LINK_ID`, `LINK_ALIAS` à :
+  - Clique sur l'email (toutes les destinations)
+- Ajouter `USER_AGENT` à :
+  - Courriel ouvert
+  - Email Click
+  - Email Marquer comme spam
+- Ajouter `MACHINE_OPEN` à :
+  - Courriel ouvert
+
+### Nouveau tag de personnalisation Liquid
+
+Nous supportons maintenant le ciblage des utilisateurs qui ont activé la poussée au premier plan sur leur appareil avec les balises Liquid suivantes :
+
+{% raw %}
+- `{{most_recently_used_device.${foreground_push_enabled}}}`
+- `{{targted_device.${foreground_push_enabled}}}`
+{% endraw %}
+
+Pour plus d'informations, reportez-vous à [balises de personnalisation supportées]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/supported_personalization_tags/).
+
+### Comprendre les webhooks
+
+Les Webhooks sont des outils puissants et flexibles, mais ils peuvent être un peu déroutants. Si vous vous demandez quels sont les webhooks et comment vous pouvez les utiliser au Brésil, consultez notre nouvel article sur [Comprendre les webhooks]({{site.baseurl}}/user_guide/message_building_by_channel/webhooks/understanding_webhooks/).
+
+### Personnaliser Amazon
+
+Amazon Personalize est comme avoir votre propre système de recommandation automatique Amazon pour toute la journée. Basé sur plus de 20 ans d'expérience dans les recommandations, La personnalisation d'Amazon vous permet d'améliorer l'engagement de vos clients en faisant fonctionner en temps réel des recommandations de produits et de contenu personnalisés et des promotions marketing ciblées.
+
+Si vous souhaitez en savoir plus, visitez notre nouvel article [Amazon Personalize]({{site.baseurl}}/partners/message_personalization/dynamic_content/amazon_personalize/amazon_personalize/) pour comprendre les cas d'utilisation que Amazon Personnalise les offres, les données avec lesquelles il fonctionne, comment configurer le service et comment l'intégrer avec Braze.
+
+### Nouveaux partenariats Braze
+
+#### Yotpo – commerce électronique
+
+L'intégration de [Yotpo]({{site.baseurl}}/partners/message_orchestration/channel_extensions/ecommerce/yotpo/) et de Braze vous permet de tirer et d'afficher dynamiquement les notes des étoiles, les meilleurs commentaires, et le contenu visuel généré par les utilisateurs sur les produits dans les e-mails et les autres canaux de communication au Brésil. Vous pouvez également inclure des données de fidélisation au niveau du client dans les courriels et d'autres méthodes de communication pour créer une interaction plus personnalisée, boostant les ventes et fidélisation.
+
+#### Zeotap – Plateforme de données client
+
+Avec l'intégration de [Zeotap]({{site.baseurl}}/partners/data_and_infrastructure_agility/customer_data_platform/zeotap/) et de Braze, vous pouvez étendre l'échelle et la portée de vos campagnes en synchronisant les segments de clients de Zeotap pour associer les données utilisateur à Braze. Vous pouvez ensuite agir sur ces données, en fournissant des expériences ciblées personnalisées à vos utilisateurs.
 
 ## Décembre 2021
 
@@ -253,40 +312,6 @@ L’API de profil d’Amplitude sert les profils des utilisateurs d’Amplitude.
 
 Le point de terminaison GET [`/campaigns/details`]({{site.baseurl}}/api/endpoints/export/campaigns/get_campaign_details/) de l'API a ajouté une réponse dédiée `message` pour le canal de message intégré dans l'application. Vous trouverez de la documentation à ce sujet [ici]({{site.baseurl}}/api/endpoints/export/campaigns/get_campaign_details/#messages).
 
-## Juillet 2021
-
-### Campagnes d'email transactionnelles
-
-Les courriels transactionnels sont ceux envoyés pour faciliter une transaction convenue entre l'expéditeur et le destinataire. Le type de campagne transactionnelle d'email de Braze est conçu pour envoyer des messages électroniques automatisés et non promotionnels tels que les confirmations de commande, les réinitialisations de mot de passe, les alertes de facturation ou d'autres notifications critiques pour l'entreprise. De plus, un [point de terminaison d'e-mail transactionnel]({{site.baseurl}}/api/endpoints/messaging/send_messages/post_send_transactional_message/) correspondant a été créé. Les courriels transactionnels et le nouveau point de terminaison ne sont disponibles que dans le cadre de certains paquets Braze. Visitez notre [documentation]({{site.baseurl}}/api/api_campaigns/transactional_campaigns) pour en savoir plus.
-
-### Support d'objet imbriqué pour les propriétés d'événement
-
-Braze prend maintenant en charge [objets imbriqués]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/nested_object_support/) pour des événements personnalisés et acheter des événements. Les objets imbriqués vous permettent d'envoyer des tableaux de données en tant que propriétés d'événements personnalisés et d'achats. Ces données imbriquées peuvent être utilisées pour modéliser des informations personnalisées dans des messages déclenchés par l'API par l'utilisation de la notation Liquid et point.
-
-### Nouveaux filtres d'encodage HMAC Liquid
-
-De nouveaux `hmac_sha1` et `hmac_sha256` filtres d'encodage liquides ont été ajoutés à la plate-forme Braze. La documentation sur ces nouveaux filtres peut être trouvée [ici]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/advanced_filters/).
-
-### Acheter la page de l'événement
-
-Vous êtes curieux des détails de l'achat des événements au Brésil? Visitez notre [documentation dédiée à l'achat de l'événement]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/purchase_events/) pour en savoir plus.
-
-### Nouveaux partenariats Braze
-
-#### Nexla - Automatisation du flux de travail
-
-[Nexla]({{site.baseurl}}/partners/nexla) est le leader des opérations de données unifiées et un vendeur de Gartner Cool 2021. Les clients qui utilisent les courants pour envoyer des données à des entrepôts de données peuvent tirer parti de Nexla pour extraire, transformer, transformer, et chargez ces données dans d'autres endroits, ce qui rend les données facilement accessibles dans l'ensemble de votre écosystème. Nexla vous permet d'utiliser les courants de Braze pour obtenir des données dans un format personnalisé livré à votre destination de choix en un simple point et en un clic.
-
-#### Amperity - Plateforme de données client
-
-[Amperity]({{site.baseurl}}/partners/amperity/) est une plate-forme de données globale pour les clients d'entreprise, aidant les marques à connaître leurs clients, prendre des décisions stratégiques et prendre systématiquement la bonne voie pour mieux servir les consommateurs. L'ampérité supporte la plateforme Braze en fournissant une vue unifiée de vos clients à travers ses CDP et Braze vous permettant d'envoyer de précieuses données d'Amperity au Brésil.
-
-#### Digioh - Enquêtes
-
-[Digioh]({{site.baseurl}}/partners/digioh/) vous aide à agrandir vos listes, à capturer des données de premier groupe et à mettre vos données à utiliser dans vos campagnes de Braze. Le constructeur de glisser-déposer facilite la création de formulaires de marque, de pop-ups, de centres de préférences, de pages d'atterrissage et d'enquêtes qui vous connectent à vos clients.
-
-#### Audiences AppsFlyer - Attribution/Analytique
-
-[AppsFlyer]({{site.baseurl}}/partners/message_orchestration/attribution/appsflyer/) est une plateforme d'analyse et d'attribution de marketing mobile qui vous aide à analyser et optimiser vos applications grâce à l'attribut analytique marketing mobile, et le lien profond. [Les audiences AppsFlyer]({{site.baseurl}}/partners/appsflyer_audiences/) vous permettent de construire des segments d'audience et de passer ces segments directement à Braze pour créer de puissantes campagnes d'engagement client.
+<br><br>
 
 [support]: {{site.baseurl}}/support_contact/
