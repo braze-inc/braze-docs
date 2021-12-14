@@ -90,11 +90,9 @@ Vous pouvez également suivre les nouveaux noms de boutons personnalisés - jusq
 
 1. Le changement le plus notable incompatible avec ce nouveau type de message est la configuration SDK. Les utilisateurs dont l'App SDK ne répond pas aux exigences minimales de version [SDK](#supported-sdk-versions) ne seront pas affichés le message. <br>
 
-2. Les fichiers ZIP ne sont plus utilisés pour gérer les actifs d'un message. Au lieu de cela, vous devriez utiliser notre nouveau [chargeur d'actifs](#upload-assets) et coller les URL d'actifs absolues directement dans votre HTML - tout comme vous le feriez pour une campagne d'email. Consultez les [étapes de migration](#migration-guide) pour plus d'informations sur la transition des fichiers zip. <br>
+2. The `appboy://close` deeplink which was previously supported on mobile apps has been removed in favor of the Javascript, `appboyBridge.closeMessage()`. Cela permet le cross-platform HTML car le web ne supporte pas les liens profonds.
 
-3. The `appboy://close` deeplink which was previously supported on mobile apps has been removed in favor of the Javascript, `appboyBridge.closeMessage()`. Cela permet le cross-platform HTML car le web ne supporte pas les liens profonds.
-
-4. Le suivi automatique des clics, qui a utilisé `?abButtonId=0` pour les identifiants des boutons, et le suivi "body click" sur les boutons de fermeture ont été supprimés. Les exemples de code ci-dessous montrent comment changer votre HTML pour utiliser nos nouvelles méthodes javascript de suivi des clics :
+3. Le suivi automatique des clics, qui a utilisé `?abButtonId=0` pour les identifiants des boutons, et le suivi "body click" sur les boutons de fermeture ont été supprimés. Les exemples de code ci-dessous montrent comment changer votre HTML pour utiliser nos nouvelles méthodes javascript de suivi des clics :
 
 | Avant                     | Après                     |
 |:------------------------- |:------------------------- |
@@ -150,26 +148,5 @@ Ensuite, collez l'URL de la ressource copiée dans votre code HTML comme vous le
 Vous pouvez appuyer sur `CTRL+F` ou `CMD+F` dans l'éditeur HTML pour rechercher dans votre code !
 {% endalert %}
 
-### Migration des anciennes campagnes "ZIP" {#migration-guide}
-
-Les campagnes plus anciennes qui ont utilisé des fichiers ZIP ne sont pas prises en charge dans ce nouveau compositeur de message In-App.
-
-Si vous souhaitez migrer ces anciennes campagnes de fichiers ZIP, suivez ces instructions :
-
-1. Téléchargez le fichier ZIP de l'asset sur votre ordinateur et extrayez les fichiers
-2. Téléchargez tous vos fichiers de ressources dans la nouvelle campagne. (Astuce : vous pouvez sélectionner tous les fichiers et les déplacer par glisser-déposer)
-3. Pour chaque ressource nouvellement téléchargée, copiez son URL de fichier téléchargée et remplacez-les dans les anciennes références de ressources locales de votre HTML
-
-Par exemple, si votre ancien HTML contient une référence qui ressemble à ceci :
-
-```html
-<img src="/cat.png" />
-```
-
-Remplacez-le par son URL de ressource téléchargée respectivement, comme ceci :
-
-```html
-<img src="https://cdn.braze.com/appboy/communication/assets/font_assets/files/5ee3869ae16e174f34fac566/original.png" />
-```
 
 [1]: {{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/customize/#javascript-bridge
