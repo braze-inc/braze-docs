@@ -1,5 +1,6 @@
 ---
 nav_title: Your Partner Page
+article_title: Your Partner Page
 page_order: 1
 
 description: "This is the Google Search and SEO description that will appear; try to make this informative and concise, yet brief."
@@ -13,55 +14,92 @@ hidden: true
 
 # [Partner Name]
 
-> Welcome to the Partner Page Template! Here, you'll find everything you need to create your partner page. In this first section, you should provide a brief description of the partner. Also, include a link to that partner's main site.
+> Welcome to the Braze partner template! Here, you'll find everything you need to create your partner page. In this first section, include a brief description of your company. Also, include a link to your main site. 
 
-In the second paragraph, you should explore and explain the relationship between Braze and this partner. This paragraph should explain how Braze and this partner work together to tighten the bond between the Braze User and their customer. Explain the "elevation" that occurs when a Braze user integrates with or leverages this partner and their services.
+In this second paragraph, explore the relationship between your company and Braze. This paragraph should explain how Braze and your company partner together to tighten the bond between the Braze user and their customer. Explain the "elevation" that occurs when a Braze user integrates with or leverages your partnership and the services you offer.
 
 ## Prerequisites
 
-This section is all about what you need to integrate with the partner and start using their services. The best way to deliver this information is with a quick instructional paragraph that describes any non-technically important details or "need to know" information, like whether or not your integration will be subject to additional security checks or clearances. Then, you should use a chart to describe the technical requirements of the integration.
+This section should list what you need to complete this partnership integration. The best way to deliver this information is with a quick instructional paragraph that describes any non-technically important details or "need to know" information, like whether or not your integration will be subject to additional security checks or clearances. Then, use a chart to describe the technical requirements of the integration.
 
 {% alert important %}
-The requirements listed below are typical requirements you might need from Braze. We recommend using the attributed titling, origin, links, and phrasing listed in the chart below. Be sure to adjust the description so customers know what each of these requirements is used to do.
+The requirements listed below are typical requirements you might need from Braze. We recommend using the attributed titling and phrasing listed in the chart below. Be sure to adjust the descriptions and tailor them to your partnership integration. 
 {% endalert %}
 
-| Requirement | Origin | Access | Description |
-|---|---|---|---|
-| Braze API Key | Braze | You will need to create a new API Key.<br><br>This can be created in the __Developer Console -> API Settings -> Create New API Key__ with __users.track__ permissions. | This description should tell you what to do with the Braze API Key. |
-| Braze REST Endpoint | Braze | [Braze REST Endpoint List][1] | Your REST Endpoint URL. Your endpoint will depend on the Braze URL for your instance. |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
+| Requirement | Description |
+| ----------- | ----------- |
+| Partner account | A partner account is required to take advantage of this partnership. |
+| Braze REST API key | A Braze REST API Key with `users.track` permissions. <br><br> This can be created within the __Braze Dashboard -> Developer Console -> REST API Key -> Create New API Key__ |
+| Braze REST endpoint | [Your REST endpoint URL][1]. Your endpoint will depend on the Braze URL for your instance. |
+{: .reset-td-br-1 .reset-td-br-2}
 
-## [Type of Integration] Integration Details
+## Use cases
 
-This is where you break down the integration into steps. Do not just write endless paragraphs - these are technical documents that will be used by marketers and developers alike to get the integration up and running. Your main goal is to write descriptive documentation that helps the Braze user get the job done. By 'Type of Integration' in the section title, we mean to indicate whether or not this is a side-by-side integration, server-to-server, or out-of-the-Box. This enables you to have multiple integration sections if more than one way to integrate with this partner exists.
+Use cases can be a critical part of your documentation. Although optional, this is a good place to outline typical or even novel use cases for the integration. This can be used as a way to sell or upsell the relationship - it provides context, ideas, and most importantly, a way to visualize the capabilities of the integration.
 
-### Step 1: This is a Short Description of Step One
+## Integration
 
-Just break this down, including any code as necessary. Remember that you can offer several different sets of code - there's no need to only offer one way to integrate.
+This is where you break down the integration into steps. Do not just write endless paragraphs - these are technical documents that will be used by marketers and developers alike to get the integration up and running. Your main goal is to write descriptive documentation that helps the Braze user get the job done. 
 
-### Step 2: This Step Will Describe Images
+Optionally, you can also provide details on if this is a side-by-side, server-to-server, or out-of-the-box integration. This enables you to have multiple integration sections if more than one way to integrate exists.
 
-You have the option to put images in your documentation, so we recommend you do and do so mindfully.
+### Step 1: Short description of step one 
 
-### Step 3: How Many Steps
+Provide a short description for each step, including any code, as necessary. Remember that you can offer several different code sets - there's no need to only provide one way to integrate.
 
-Outline thorough usage of the integration - especially if it means inserting Liquid into our message composer.
+### Step 2: Short description of step two 
+
+You also can add images to your documentation. We recommend including images of key integration steps as images do a great job of confirming what users should be seeing as they progress through the various steps.
+
+### Step 3: Short description of step three 
+
+Outline thorough integration usage, especially if it includes inserting Liquid into our message composer. If your integration leverages a Braze webhook, we recommend including the following webhook formatting steps into your partner page.
+
+{% details Webhook formatting %}
+```
+### Step 2: Create a [Partner] webhook in Braze
+
+To create a [Partner] webhook template to use in future campaigns or Canvases, navigate to the **Templates & Media** section in the Braze platform. If you would like to create a one-off [Partner] webhook campaign or use an existing template, select **Webhook** in Braze when creating a new campaign.
+
+Once you have selected the [Partner] webhook template, you should see the following:
+- **Webhook URL**: [Partner Webhook URL]
+- **Request Body**: Raw Text
+
+#### Request headers and method
+
+[Partner] requires an `HTTP Header` for authorization. The following will already be included within the template as key-value pairs.
+
+{% raw %}
+- **HTTP Method**: POST
+- **Request Header**:
+  - **Authorization**: Bearer [PARTNER_AUTHORIZATION_HEADER]
+  - **Request Body**: application/json
+{% endraw %}
+
+#### Request body
+
+Include code of your webhook request body. 
+
+### Step 3: Preview your request
+
+Preview your request in the left-hand panel or navigate to the `Test` tab, where you can select a random user, an existing user or customize your own to test your webhook.
+
+{% alert important %}
+Remember to save your template before leaving the page! <br>Updated webhook templates can be found in the **Saved Webhook Templates** list when creating a new [webhook campaign]({{site.baseurl}}/user_guide/message_building_by_channel/webhooks/creating_a_webhook/). 
+{% endalert %}
+```
+{% enddetails %}
 
 ## Customization
 
-Customization options is an __optional__ section. Here, you could outline any specific ways to customize your integration between the two partners.
+Customization is an **optional** section. Here, you could outline specific ways to customize your integration between the two partners.
 
-## Using This Integration
+## Using this integration
 
-This section should describe how to use the integration - let your reader know if they need to push a few buttons or don't need to do anything after the integration.
+This section should describe how to use the integration in Braze. Let users know how to access the data (if any) provided to Braze through the integration and how to leverage it in Braze messaging.
 
-### Step 1: This Is a Short Description of Step One
+### Step 1: Short description of step one 
 
-Just your typical step-by-step how-to.
-
-## Use Cases
-
-Use cases can be a critical part of your documentation. Though this is optional, this is a good place to outline typical or even novel use cases for the integration. This can be used as a way to sell or upsell the relationship - it provides context, ideas, and most importantly, a way to visualize the capabilities of the integration.
+This set of steps will walk your users through how to use this integration in Braze.
 
 [1]: {{site.baseurl}}/developer_guide/rest_api/basics/#endpoints
-

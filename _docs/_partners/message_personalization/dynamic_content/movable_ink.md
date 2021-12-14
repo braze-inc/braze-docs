@@ -18,8 +18,8 @@ Expand Braze's creative capabilities by leveraging Movable Ink's Intelligent Cre
 ## Prerequisites
 
 | Requirement | Description |
-|---|---|---|---|
-| Movable Ink account | You'll need a Movable Ink account to take advantage of this partnership. |
+|---|---|
+| Movable Ink account | A Movable Ink account is required to take advantage of this partnership. |
 | Data source | You will need to connect a data source to Movable Ink. This can be done through CSV, website import, or API. Make sure that you pass data with a unifying identifier between Braze and Movable Ink (e.g., `external_id`).
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4}
 

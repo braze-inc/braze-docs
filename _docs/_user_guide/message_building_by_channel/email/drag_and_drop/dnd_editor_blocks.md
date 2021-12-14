@@ -17,7 +17,7 @@ To use them, drag one inside a column. It will auto-adjust to the column width. 
 
 ## Block types
 
-| Name | Description |
+| name | description |
 |---|---|
 | `Title`  | Allows users to add text with H1, H2, and H3 tags for email. | 
 | `Text`  |  Allows users to enter text into their message.  A toolbar helps with font and text editing functionality. | 
@@ -26,11 +26,12 @@ To use them, drag one inside a column. It will auto-adjust to the column width. 
 | `Divider` |  Insert a solid, dotted, or dashed line to help with spacing.|
 | `HTML` |  Insert raw HTML.  Great for advanced Liquid such as Connected Content or conditional statements. | 
 | `Menu` |  Create a flexible menu for the message you're designing. |
+| `Spacer` |  Add space, or "padding", between other blocks. |
 {: .reset-td-br-1 .reset-td-br-2} 
 
 ## Block type properties
 
-Details for each block type are provided below
+Details for each block type are provided below.
 
 ### Title
 
@@ -117,9 +118,16 @@ Automatic image resizing picks the best size for the image based on a combinatio
 |`All sides`| If 'item padding' is disabled, set a consistent padding number|
 {: .reset-td-br-1 .reset-td-br-2}
 
+### Spacer
+
+| properties | description |
+|---|---|
+|`height`| Adjusts the height of the spacer block. The default is 60px.|
+{: .reset-td-br-1 .reset-td-br-2}
+
 ### Add Liquid personalization
 
-| Name | Description |
+| name | description |
 |---|---|
 | `Add Personalization` |  Located on the left menu.  Allows you to lookup standard liquid snippets such as default attributes, custom attributes, content blocks etc... | 
 {: .reset-td-br-1 .reset-td-br-2}
