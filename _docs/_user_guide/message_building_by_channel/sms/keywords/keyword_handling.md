@@ -31,10 +31,10 @@ In addition to the default opt-in and opt-out keywords listed above, you may als
 
 ![Home]({% image_buster /assets/img/sms/keyword_edit2.png %}){: style="float:right;max-width:40%;margin-left:10px;"}
 1. To define your own keywords, navigate to the SMS section of the dashboard located under Subscription Groups.<br><br>
-2. Under SMS Global Keywords, select a keyword category to add a keyword to by selecting the pencil icon.<br><br>
-3. In the dialogue box that pops up, add a keyword you would like to trigger this keyword category. Note that keywords are not case sensitive. Universal keywords like `START`, `YES`, and `UNSTOP` cannot be changed. Review the rules below that apply to keywords and keyword responses.<br><br>![picture]({% image_buster /assets/img/sms/sms_keywords.png %})
+2. Under SMS global keywords, select a keyword category to add a keyword to by selecting the pencil icon.<br><br>
+3. In the dialogue box that pops up, add a keyword you would like to trigger this keyword category. Note that keywords are case sensitive, and universal keywords like `START`, `YES`, and `UNSTOP` cannot be changed. Please read the rules below that apply to keywords and keyword responses.<br><br>![picture]({% image_buster /assets/img/sms/sms_keywords.png %})
 
-| Keywords | Keyword Responses |
+| Keywords | Keyword responses |
 | -------- | ----------------- |
 | - Valid UTF-8 encoded characters<br>- Maximum of 20 keywords per category total<br>- Maximum length of 34 characters<br>- Minimum length of 1 character <br>- Cannot contain spaces<br>- Required to be case insensitive and unique across the subscription group | - Cannot be blank<br>- Maximum length of 300 characters<br>- Valid UTF-8 characters |
 {: .reset-td-br-1 .reset-td-br-2}
@@ -44,7 +44,7 @@ Interested in seeing how these keywords can be used in your campaigns and Canvas
 {% endalert %}
 {% endtab %}
 
-{% tab Manage Responses %}
+{% tab Manage responses %}
 
 #### Manage responses
 
@@ -53,10 +53,11 @@ You are able to manage your own responses that get sent to users after they text
 ![Home]({% image_buster /assets/img/sms/keyword_edit2.png %}){: style="float:right;max-width:40%;margin-left:10px;"}
 1. To manage your keyword responses, navigate to the SMS section of the dashboard located under Subscription Groups. <br><br>
 2. Under SMS Global Keywords, select a keyword category to edit a response for by selecting the pencil icon.<br><br> 
-3. In the dialogue box that pops up, edit, and save your response. Please be mindful of the [Six Rules to get Compliance Right]({{site.baseurl}}/user_guide/message_building_by_channel/sms/sms_laws_and_regulations/#the-six-rules-to-get-compliance-right) as you create your response and read the rules below that apply to keywords and keyword responses.<br><br>
+3. In the dialogue box that pops up, edit and save your response. Please be mindful of the [Six rules to get compliance right]({{site.baseurl}}/user_guide/message_building_by_channel/sms/sms_laws_and_regulations/#the-six-rules-to-get-compliance-right) as you create your response and read the rules below that apply to keywords and keyword responses.<br><br>
+
 ![Responses]({% image_buster /assets/img/sms/keyword_home.png %})
 
-| Keywords | Keyword Responses |
+| Keywords | Keyword responses |
 | -------- | ----------------- |
 | - Valid UTF-8 encoded characters<br>- Maximum of 20 keywords per category total<br>- Maximum length of 34 characters<br>- Minimum length of 1 character <br>- Cannot contain spaces<br>- Required to be case insensitive and unique across the subscription group | - Cannot be blank<br>- Maximum length of 300 characters<br>- Valid UTF-8 characters |
 {: .reset-td-br-1 .reset-td-br-2}
@@ -67,8 +68,8 @@ You are able to manage your own responses that get sent to users after they text
 ## Multi-language support
 
 When sending to certain countries, a sender may be required to support inbound keywords and outbound replies with a local language. To support this, Braze allows you to create a language-specific keyword setting. 
+![Multi-language sending][16]{: style="float:right;max-width:40%;margin-left:10px;"}
 
-![Select Language][16]{: style="float:right;max-width:40%;margin-left:10px;"}
 To get started, click **Add A Language** and select your target language or search for a language within the dropdown.
 
 {% alert important %}
@@ -90,6 +91,7 @@ These custom keywords operate in an "always-on" capacity, meaning that any user 
 ### Create a custom category
 
 ![Custom Keyword Category][13]{: style="float:right;max-width:40%;margin-left:10px;"}
+
 To create a custom keyword category, edit the appropriate subscription group, and click **Add Custom Keyword Category**. Here, you will be able to provide a keyword category name and define which keywords a user can text in to receive the reply message.
 
 Once created, this keyword category will be available to [filter and trigger]({{site.baseurl}}/user_guide/message_building_by_channel/sms/campaign/retargeting/) against in your campaigns and Canvases.
@@ -112,9 +114,10 @@ If you have a use case where you would like to limit when a customer can send a 
 
 While not required, we strongly recommend setting up an auto-response for when users send inbound SMS keywords that do not match an existing keyword. This message will notify the user that the keyword is not recognized and offer some guidance. 
 
-This can be done by creating an SMS campaign with a message like "Sorry! We didn't recognize that keyword, text STOP to stop or HELP to help." Next, in the delivery step, select **Action-Based Delivery** and use the trigger "Sent inbound SMS to subscription group within keyword category OTHER".
+This can be done by creating an SMS campaign with a message like "Sorry! We didn't recognize that keyword, text STOP to stop or HELP to help." Next, in the delivery step, select **Action-Based Delivery** and use the trigger **Sent inbound SMS to subscription group within keyword category OTHER**.
 
-![SMS Confirm]({% image_buster /assets/img/sms/sms_other.png %})
+
+![SMS confirm]({% image_buster /assets/img/sms/sms_other.png %})
 
 {% alert tip %}
 Interested in seeing how these keywords and keyword categories can be used in your campaigns and Canvases to retarget and trigger messages? Visit our [SMS retargeting article]({{site.baseurl}}/user_guide/message_building_by_channel/sms/campaign/retargeting/) for more information.
