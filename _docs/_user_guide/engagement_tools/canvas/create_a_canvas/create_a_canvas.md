@@ -10,7 +10,7 @@ tool: Canvas
 
 # Creating a Canvas
 
-Follow this guide, or check out our [LAB course](http://lab.braze.com/quick-overview-canvas-setup)!
+> This reference article covers the necessary steps involved in creating, maintaining, and testing a Canvas. Follow this guide, or check out our [Canvas LAB course](http://lab.braze.com/quick-overview-canvas-setup)!
 
 ## Step 1: Create a new Canvas 
 

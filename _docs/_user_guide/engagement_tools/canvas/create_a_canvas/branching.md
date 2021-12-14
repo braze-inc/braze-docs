@@ -10,7 +10,7 @@ tool: Canvas
 
 # Branching
 
-> this reference article covers what branching is, and how it can be useful in your canvases.
+> This reference article covers what branching is, and how it can be useful in your Canvases. You can also check out our [Canvas LAB course](https://lab.braze.com/canvas-course) to learn more about branching.
 
 ## Create a branch
 
