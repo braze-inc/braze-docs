@@ -12,29 +12,33 @@ For more on campaign delivery, check out our [campaign set up LAB course](http:/
 
 > When scheduling a campaign, you can use Intelligent Timing (previously Intelligent Delivery) to deliver your message to each user at the time which Braze determines that an individual is most likely to engage. 
 
-Braze calculates the optimal send time based on a statistical analysis of your user’s past interactions with your messaging (on a per-channel basis) and app. To enable Intelligent Timing, select **Intelligent Timing** on the **Delivery** page when creating a scheduled delivery campaign. Note that this feature is not available for action-based and API-triggered campaigns.
+Braze calculates the optimal send time based on a statistical analysis of your user’s past interactions with your messaging (on a per-channel basis) and app. To enable Intelligent Timing, select **Intelligent Timing** on the **Delivery** page when creating a scheduled delivery campaign. Note that this feature is not available for action-based and API-triggered campaigns, and not to be used with [quiet hours]({{site.baseurl}}/user_guide/intelligence/faqs/#/#can-i-use-quiet-hours-in-my-intelligent-timing-campaign), [rate-limiting]({{site.baseurl}}/user_guide/intelligence/faqs/#can-i-use-intelligent-timing-and-rate-limiting), or [IP warming]({{site.baseurl}}/user_guide/intelligence/faqs/#can-i-use-intelligent-timing-while-ip-warming) campaigns. 
 
 ## Campaign sending
 
 With Intelligent Timing, you may choose the day(s) on which your message will send and, optionally, choose to send the campaign on a recurring schedule. We recommend only using Intelligent Timing when you can schedule the campaign at least 24 hours in advance of the send date to ensure that users optimal times’ have not passed when the campaign is launched. If a campaign is launched and a user’s optimal time has already passed, the message goes out immediately. If it is more than an hour in the past, the message is not sent at all.
 
+![Optimal Send Time][1]
+
 ### Window of time
 
-You may also designate __a window of time__ during the day in which Intelligent Timing should send messages. This is useful if your campaign pertains to a specific event, sale or promotion. If a user’s optimal time is calculated as being outside this window, the message will be scheduled at the edge of the window closest to the initially calculated optimal time. This "edge" is the time closest to the user's optimal time. For example, if the optimal time is 10pm but the intelligent delivery is 1pm to 8pm, the given message will be sent at 8pm.
+You may also designate a window of time during the day in which Intelligent Timing should send messages. This is useful if your campaign pertains to a specific event, sale or promotion. 
 
-When using Intelligent Timing, Braze recommends that your campaign’s segment filters allow for at least a 3-day window. For instance, instead of using the filters “first used more than 1 day ago” and “first used less than 3 days ago,” we recommend using the filters “first used more than 1 day ago” and “first used less than 4 days ago.” This is because time windows of less than 3 days may result in some users falling out of the segment before their optimal send time is reached. 
+If a user’s optimal time is calculated as being outside this window, the message will be scheduled at the edge of the window closest to the initially calculated optimal time. This "edge" is the time closest to the user's optimal time. For example, if the optimal time is 10pm but the intelligent delivery is 1pm to 8pm, the given message will be sent at 8pm.
 
-![Optimal Send Time][1]
+## Segment filtering
+
+When using Intelligent Timing, Braze recommends that your campaign’s segment filters allow for at least a 3-day window. For example, instead of using the filters “first used more than 1 day ago” and “first used less than 3 days ago”, we recommend using the filters “first used more than 1 day ago” and “first used less than 4 days ago.” This is because time windows of less than 3 days may result in some users falling out of the segment before their optimal send time is reached.<br><br>![Intelligent timing filter example][3]
 
 ## Fallback options
 
 For users who have insufficient data to calculate an optimal send time, there are two options to choose from.
 
-__Option 1: Specify Fallback Time__<br>
-You can specify a fallback time in users’ local time zones by choosing the Custom Fallback option and entering your desired time. (If the user has no time zone, the company time zone will be used instead.) If you launch a campaign with Intelligent Timing within 24 hours of the send date, and you enable the Custom Fallback, users whose optimal times have already passed will instead receive the campaign at the specified Custom Fallback time in their local time (or company time if they have no time zone). If the specified Custom Fallback has already passed in a user’s time zone, the message will send immediately.
+__Option 1: Specify Fallback Time__
+- You can specify a fallback time in users’ local time zones by choosing **Custom Fallback** and entering your desired time. If the user has no time zone, the company time zone will be used instead.<br><br>If you launch a campaign with Intelligent Timing within 24 hours of the send date, and you enable a Custom Fallback, users whose optimal times have already passed will instead receive the campaign at the specified Custom Fallback time in their local time (or company time if they have no time zone). If the specified Custom Fallback has already passed in a user’s time zone, the message will send immediately.
 
-__Option 2: Choose Most Popular Time Amongst Users__<br>
-You can also choose the most popular time at which your app is used by all other users as the fallback. If the most popular app usage time falls outside the delivery window you specified, the closest edge of this span will be used instead. In the rare event that you are sending to an app where there’s not enough data to calculate when the app is most used (e.g. a completely new app with no data) Intelligent Timing falls back on 5PM in the user’s local time zone (or company time zone if the user has no local time).
+__Option 2: Choose Most Popular Time Amongst Users__
+- You can also choose the most popular time at which your app is used by all other users as the fallback. If the most popular app usage time falls outside the delivery window you specified, the closest edge of this span will be used instead.<br><br>In the rare event that you are sending to an app where there’s not enough data to calculate when the app is most used (e.g. a completely new app with no data) Intelligent Timing falls back on 5PM in the user’s local time zone (or company time zone if the user has no local time).
 
 It’s important to be aware of the limitations of using Intelligent Timing early in a user’s lifecycle when limited data for Intelligent Timing is available. It can, however, still be valuable. Consider a user that has recorded only one session. The time in which that user recorded their session could very well be the best time to attempt to engage them. Intelligent Timing would only use data from the user’s first session, and as such would engage the user at that time. In general, Intelligent Timing more effectively calculates the optimal send time later in a user’s lifecycle.
 
@@ -52,3 +56,4 @@ The chart also separately displays users who had enough data to compute an optim
 
 [1]: {% image_buster /assets/img/optimal-send-time.png %}
 [2]: {% image_buster /assets/img/intel-timing-preview.png %}
+[3]: {% image_buster /assets/img/intelligent_timing.png %}
