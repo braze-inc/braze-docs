@@ -4,7 +4,7 @@ article_title: Créer une campagne
 layout: dev_guide
 page_order: 0
 guide_top_header: "Créer une campagne"
-guide_top_text: "Maintenant que vous comprenez les bases des campagnes au Brésil, consultez les <a href='/docs/user_guide/message_building_by_channel/'>différents canaux de messagerie</a> disponibles pour vous aider à décider quel type de messages vous souhaitez envoyer ! Sélectionnez un canal de messagerie dans la liste ci-dessous pour apprendre à créer et à composer une campagne de messagerie unique de ce type, ou combinez des types en créant une campagne multicanal."
+guide_top_text: "Maintenant que vous comprenez les bases des campagnes au Brésil, consultez les différents <a href='/docs/user_guide/message_building_by_channel/'>canaux de messagerie</a> disponibles pour vous aider à décider quel type de messages vous souhaitez envoyer ! Sélectionnez un canal de messagerie dans la liste ci-dessous pour apprendre à créer et à composer une campagne de messagerie unique de ce type, ou combinez des types en créant une campagne multicanal.<br><br>Nous vous recommandons également de consulter notre cours LAB <a href='https://lab.braze.com/campaign-setup-delivery-targeting-conversions'>Configuration de la Campagne</a>!"
 page_type: atterrissage
 description: "Cette page d'accueil contient des liens vers des articles sur la façon de créer des campagnes pour différents canaux de messagerie Braze."
 noindex: vrai
