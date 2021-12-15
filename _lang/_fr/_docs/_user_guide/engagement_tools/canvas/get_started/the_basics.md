@@ -96,7 +96,7 @@ Remplacer toutes les images ci-dessous. Penser à la section restructuration ave
 
 ### Nommez votre Canevas : Le “quoi”
 
-Ne sous-estimez jamais la puissance du nom. Braze est construit pour la collaboration, c'est donc le moment idéal pour se familiariser avec la façon dont vous communiquerez vos objectifs avec votre équipe. Vous pouvez ajouter des balises (y compris des balises d’équipe) et nommer à la fois les étapes et les variantes à l’intérieur du canevas. Pour en savoir plus sur les voyages des clients, consultez notre [cours LAB](http://lab.braze.com/mapping-customer-lifecycles) de cartographie de la vie des utilisateurs !
+Ne sous-estimez jamais la puissance du nom. Braze est construit pour la collaboration, c'est donc le moment idéal pour se familiariser avec la façon dont vous communiquerez vos objectifs avec votre équipe. Vous pouvez ajouter des balises (y compris des balises d’équipe) et nommer à la fois les étapes et les variantes à l’intérieur du canevas. Pour en savoir plus sur les voyages des clients, consultez notre cours LAB [Mapping User Lifecycles](http://lab.braze.com/mapping-customer-lifecycles)!
 
 ### Créer les conditions de départ : Le « Quand »
 
