@@ -11,15 +11,15 @@ description: "This reference article describes custom attributes, and explains t
 
 Custom attributes are a collection of your users' unique traits. Custom attributes are best for storing attributes about your users, or information about low-value actions within your application. You should keep in mind that we don't store time-series information for custom attributes, so you won't be able to get any graphs based upon them like you can for custom events.
 
-> We get that custom attributes can be confusing, so read closely and check out our LAB course on [Custom Events & Attributes](http://lab.braze.com/custom-events-and-attributes)!
-
-## Custom attribute storage
-
-All data stored on the **User Profile**, including custom attribute data, is retained indefinitely as long as each profile is active.
+{% alert tip %}
+We get that custom attributes can be confusing. For more on using custom attributes in your messaging strategies, check out our [Custom Events and Attributes](http://lab.braze.com/custom-events-and-attributes) LAB course!
+{% endalert %}
 
 ## Setting custom attributes
 
 Listed below are the methods across various platforms that are used to set custom attributes.
+
+{% details Expand for documentation by platform %}
 
 - [Android and FireOS]({{site.baseurl}}/developer_guide/platform_integration_guides/android/analytics/setting_custom_attributes/)
 - [iOS]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/analytics/setting_custom_attributes/)
@@ -29,6 +29,12 @@ Listed below are the methods across various platforms that are used to set custo
 - [Windows Universal]({{site.baseurl}}/developer_guide/platform_integration_guides/windows_universal/analytics/setting_custom_attributes/)
 - [Xamarin]({{site.baseurl}}/developer_guide/platform_integration_guides/xamarin/analytics/#setting-custom-attributes)
 - [Roku]({{site.baseurl}}/developer_guide/platform_integration_guides/roku/analytics/setting_custom_attributes/)
+
+{% enddetails %}
+
+## Custom attribute storage
+
+All data stored on the **User Profile**, including custom attribute data, is retained indefinitely as long as each profile is active.
 
 ## Custom attribute data types
 

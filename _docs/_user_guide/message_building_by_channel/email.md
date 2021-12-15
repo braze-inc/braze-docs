@@ -4,7 +4,7 @@ article_title: Email
 page_order: 1
 layout: featured
 guide_top_header: "Email"
-guide_top_text: "With Braze Email, you can create completely custom and personalized email messages in either campaigns or Canvas that will grab your user's attention fast. Check out the articles below to learn more."
+guide_top_text: "With email at Braze, you can create completely customized and personalized email messages in either campaigns or Canvas that will grab your user's attention fast. Check out the articles below to learn more. <br><br>We recommend you also take our <a href='https://lab.braze.com/messaging-channels-email'>Email LAB course</a> to learn more about email use cases, see real world examples, and understand how to leverage email in a multichannel messaging strategy."
 description: "With Braze Email, you can create completely custom and personalized email messages in either campaigns or Canvas that will grab your user's attention fast. Check out the articles below to learn more."
 channel:
   - email
