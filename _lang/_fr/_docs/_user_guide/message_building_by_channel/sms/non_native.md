@@ -13,7 +13,7 @@ guide_featured_list:
     link: /docs/user_guide/message_building_by_channel/sms/non_native/handling_unkown_phone_numbers/
     fa_icon: volume fa-phone-fr
   - 
-    name: Prise de mot clé personnalisée
+    name: Prise en charge des mots clés personnalisés
     link: /docs/user_guide/message_building_by_channel/sms/non_native/custom_keyword_handling/
     fa_icon: Fas fa-mobile-alt
   - 
@@ -21,7 +21,7 @@ guide_featured_list:
     link: /fr/docs/user_guide/message_building_by_channel/sms/non_native/user_data_migration/
     fa_icon: fas fa-globe-americas
   - 
-    name: Processus de double opt-in
+    name: Processus double opt-in
     link: /docs/user_guide/message_building_by_channel/sms/non_native/double_opt_in/
     fa_icon: fas fa-commenter
 ---
