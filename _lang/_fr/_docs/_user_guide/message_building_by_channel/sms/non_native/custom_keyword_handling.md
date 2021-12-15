@@ -16,10 +16,10 @@ La messagerie bidirectionnelle utilise des codes courts et des mots-clés pour l
 
 La messagerie bidirectionnelle tire parti des événements personnalisés pour rendre possible cet échange client en apparence fluide. En raison de la nature des messages bidirectionnels, il se peut que vous trouviez une légère augmentation du temps de réponse. Voici les implications de l'inclusion du message bidirectionnel :
 
-| Type de texte                 | Rapidité       | Notes                                                                                                                                                                                                    |
-| ----------------------------- | -------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Numéros de téléphone connus   | 3-5 secondes   | Un nombre connu est un nombre qui a déjà été assigné à un attribut téléphone et est déjà abonné à un groupe d'abonnement au Brésil.                                                                      |
-| Numéros de téléphone inconnus | 10-15 secondes | Un numéro inconnu est un numéro qui n'a pas encore été identifiant. Pour plus d'informations sur la façon dont les numéros de téléphone inconnus sont traités, consultez notre [documentation][unknown]. |
+| Type de texte               | Rapidité       | Notes                                                                                                                                                                                                    |
+| --------------------------- | -------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Numéros de téléphone connus | 3-5 secondes   | Un nombre connu est un nombre qui a déjà été assigné à un attribut téléphone et est déjà abonné à un groupe d'abonnement au Brésil.                                                                      |
+| Numéro de téléphone inconnu | 10-15 secondes | Un numéro inconnu est un numéro qui n'a pas encore été identifiant. Pour plus d'informations sur la façon dont les numéros de téléphone inconnus sont traités, consultez notre [documentation][unknown]. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
 
 Si vous avez besoin de vitesses d'envoi plus rapides pour des numéros de téléphone inconnus, contactez votre Responsable du service clientèle ou contactez le support pour discuter de vos options.
@@ -31,9 +31,9 @@ Si vous avez besoin de vitesses d'envoi plus rapides pour des numéros de télé
 | `sms_response_subscriptionName_custom` | Exemples de réponse => Status, Coupons, Actualités |
 {: .reset-td-br-1 .reset-td-br-2}
 
-| Propriétés de l'événement incluses                                                                                                                                                                                                                                                                                                               |
-| ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| - `message_body`: réponse SMS des utilisateurs<br>- `to_number`: généralement code court les clients utilisés pour envoyer des SMS<br>- `from_number`: numéro de téléphone de l'utilisateur<br>- `sms_message_id`: service de messagerie ID | Message Body => <br>La réponse des utilisateurs est retournée en minuscule |
+| Propriétés de l'événement incluses                                                                                                                                                                                                                                                                                                                   |
+| ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| - `message_body`: réponse SMS des utilisateurs<br>- `to_number`: généralement code court les clients utilisés pour envoyer des SMS<br>- `from_number`: numéro de téléphone de l'utilisateur<br>- `sms_message_id`: service de messagerie ID | corps du message => <br>La réponse des utilisateurs est retournée en minuscule |
 {: .reset-td-br-1 .reset-td-br-2}
 
 - Chaque fois qu'un utilisateur envoie une réponse par SMS qui n'est pas un mot clé par défaut à un numéro de téléphone dans un groupe d'abonnement, un événement personnalisé comme `sms_response_SubscriptionGroupName_custom` avec les propriétés d'événement `message_body`, `to_number`, `from_number`, et `sms_message_id` seront envoyés au Brésil.
