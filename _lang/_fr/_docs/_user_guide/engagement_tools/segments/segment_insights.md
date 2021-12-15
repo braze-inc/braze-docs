@@ -11,27 +11,31 @@ description: "Cet article pratique vous guidera dans la façon d'utiliser, d'int
 
 # Aperçus du segment
 
-> Cet article pratique vous guidera dans la façon d'utiliser, d'interpréter et de partager des vues sur les segments. <br> <br> Ces informations peuvent être utilisées pour cibler les utilisateurs et développer des campagnes marketing efficaces.
+> Cet article pratique vous guidera dans la façon d'utiliser, d'interpréter et de partager des vues sur les segments. Ces connaissances peuvent être utilisées pour cibler les utilisateurs et développer des campagnes de marketing efficaces. En plus de cet article, nous vous recommandons de consulter notre [cours de Segmentation LAB](https://lab.braze.com/segmentation-course).
+
+Segment Insights vous permet de voir rapidement et facilement comment un segment est performant par rapport à un autre segment à travers un ensemble d'ICP présélectionnés. Allez à la page **Segment Insights** de votre tableau de bord, sous **Segments**, et cliquez sur <i class="fas fa-plus"></i> **Ajouter un segment** pour afficher jusqu'à quatre segments différents par rapport à une ligne de base.
 
 !\[Segment Insights Dash\]\[1\]
 
-Segment Insights vous permet de voir rapidement et facilement comment un segment est performant par rapport à un autre segment à travers un ensemble d'ICP présélectionnés. Depuis la section segment de votre tableau de bord, En cliquant sur le bouton « Intuition de segmentations » en haut à droite de la page, vous trouverez un écran où jusqu'à quatre segments différents peuvent être comparés par rapport à une ligne de base. La ligne de base peut être soit un segment spécifique que vous sélectionnez soit les statistiques pour tous vos utilisateurs.  Actuellement, Braze peut comparer les statistiques suivantes sur la page Segment Insights :
+Le segment de référence peut être soit un segment spécifique que vous avez sélectionné, soit un segment contenant tous vos utilisateurs. Vous pouvez comparer les statistiques suivantes à l'aide de Segment Insights:
 
-| Mesure                                  | Libellé                                                                               | Formule                                                         |
-| --------------------------------------- | ------------------------------------------------------------------------------------- | --------------------------------------------------------------- |
-| Fréquence de la session                 | Nombre moyen d'utilisateurs du segment par jour                                       | (nombre total de sessions)/(# jours depuis la première session) |
-| Temps écoulé depuis la première session | Temps moyen entre la première session des utilisateurs du segment et maintenant       | aujourd'hui - date de la première session                       |
-| Temps écoulé depuis la dernière session | Temps moyen entre la dernière session des utilisateurs du segment et maintenant       | aujourd'hui - date de la dernière session                       |
-| Revenus à vie                           | Revenus moyens à vie pour les utilisateurs du segment                                 | durée de vie de l'utilisateur                                   |
-| Il est temps de commencer à acheter     | Temps moyen entre la première session des utilisateurs du segment et le premier achat | date du premier achat - date de la première session             |
-| Temps écoulé depuis le dernier achat    | Temps moyen entre le dernier achat des utilisateurs du segment et maintenant          | aujourd'hui - date du dernier achat                             |
+| Mesure                                  | Libellé                                                                               | Formule                                                           |
+| --------------------------------------- | ------------------------------------------------------------------------------------- | ----------------------------------------------------------------- |
+| Fréquence de la session                 | Nombre moyen d'utilisateurs du segment par jour                                       | (nombre total de sessions) / (# jours depuis la première session) |
+| Temps écoulé depuis la première session | Temps moyen entre la première session des utilisateurs du segment et maintenant       | aujourd'hui - date de la première session                         |
+| Temps écoulé depuis la dernière session | Temps moyen entre la dernière session des utilisateurs du segment et maintenant       | aujourd'hui – date de la dernière session                         |
+| Revenus à vie                           | Revenus moyens à vie pour les utilisateurs du segment                                 | durée de vie de l'utilisateur                                     |
+| Il est temps de commencer à acheter     | Temps moyen entre la première session des utilisateurs du segment et le premier achat | date du premier achat – date de la première session               |
+| Temps écoulé depuis le dernier achat    | Temps moyen entre le dernier achat des utilisateurs du segment et maintenant          | aujourd'hui - date du dernier achat                               |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
 
-Vous pouvez facilement partager des comparaisons spécifiques avec l'URL unique de la page, et les utilisateurs peuvent également cliquer sous chaque segment pour révéler plus d'informations sur ce segment. Ces comparaisons seront réinitialisées lorsqu'un utilisateur change de groupe d'applications.
+Vous pouvez facilement partager des comparaisons spécifiques avec vos coéquipiers en utilisant l'URL unique de la page, et vous pouvez aussi cliquer sous chaque segment pour révéler plus d'informations sur ce segment. Ces comparaisons seront réinitialisées lorsque vous basculez entre les groupes d'applications.
 
 !\[Segment Insights étendu\]\[2\]
 
-Segment Insights a également été intégré directement dans la vue détaillée du segment. Lorsque vous regardez un segment particulier que vous avez déjà mis en place, vous pouvez trouver les six mêmes statistiques décrites dans la boîte de statistiques dynamiques et grises. À partir d’ici, vous pouvez rapidement lancer l’outil Segment Insights pour comparer ce segment particulier avec tous les autres que vous avez précédemment configurés, mais notez que cela écrasera tous les segments que vous avez précédemment sélectionnés dans l'outil Segment Insights.
+## Page de détails du segment
+
+Les Segment Insights ont également été construits directement dans la vue **Détails du segment**. Lorsque vous regardez un segment particulier que vous avez déjà mis en place, vous pouvez trouver les six mêmes statistiques décrites dans la boîte de statistiques dynamiques et grises. À partir d’ici, vous pouvez rapidement lancer l’outil Segment Insights pour comparer ce segment particulier avec tous les autres que vous avez précédemment configurés, mais notez que cela écrasera tous les segments que vous avez précédemment sélectionnés dans l'outil Segment Insights.
 
 !\[Détails des Insights du Segment\]\[3\]
 
