@@ -67,12 +67,11 @@ La partie locale de l'adresse Microsoft doit suivre ces paramètres :
 
 ### Tous les autres domaines
 
-Pour tous les autres domaines, Braze autorise les adresses e-mail correspondant aux expressions régulières suivantes pour la partie locale :<br> `\A[\p{L}\p{N}_](? [\. +\'\p{L}\p{N}_&#\/\-]*[\p{L}\p{N}_\-])?\z`
+Pour tous les autres domaines, Braze autorise les adresses e-mail correspondant à la regex suivante pour la partie locale :<br> `\A [\p{L}\p{N}_\-] (? [\. +\'\p{L}\p{N}_&#\/\-]* [\p{L}\p{N}_\-] ? \z`
 
 La partie locale doit suivre ces paramètres:
-- Peut contenir n'importe quelle lettre, chiffre ou trait de soulignement, y compris des lettres et des chiffres Unicode
+- Peut contenir n'importe quelle lettre, nombre, tiret bas ou tiret, y compris des lettres et des chiffres Unicode
 - Peut contenir mais ne peut pas commencer ou se terminer par les caractères suivants : (.) (+) (&) (#) (/) ou (")
-- Peut contenir et se terminer, mais ne peut pas commencer par le caractère suivant : (-)
 
 {% alert important %}
 Si la partie domaine est une adresse Gmail, la partie locale doit comporter au moins cinq caractères. Ceci est en plus de la validation par regex spécifiée ci-dessus sous "Tous les autres domaines".
