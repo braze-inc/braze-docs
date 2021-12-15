@@ -20,15 +20,15 @@ Les SMS sont disponibles dans les deux campagnes et dans Canvas.
 
 {% tabs local %}
   {% tab Campaigns %}
-  Cliquez sur __Créer une campagne__ pour ouvrir un nouvel assistant de messagerie pour les campagnes de messages dans l'application. Ensuite, suivez le flux de l'assistant de messagerie pour créer et lancer rapidement votre campagne SMS.
+  Cliquez sur **Créer une campagne** pour ouvrir un nouvel assistant de messagerie pour les campagnes de messages dans l'application. Ensuite, suivez le flux de l'assistant de messagerie pour créer et lancer rapidement votre campagne SMS.
 
   ![Créer une campagne SMS]({% image_buster /assets/img/sms_campaign_setup.gif %})
 
 1. Nommez votre campagne quelque chose de clair et significatif.
-2. Ajouter __Teams__ et __Tags__, si nécessaire.
+2. Ajouter des équipes et des tags, si nécessaire.
 3. Ajoutez et nommez autant de variantes que vous avez besoin pour cette campagne.
   - Vous pouvez choisir différentes plateformes, types de messages et mises en page pour chacune de vos variantes ajoutées.
-4. Sélectionnez le __Groupe d'Abonnement__ pour vous assurer que vous envoyez votre message aux utilisateurs appropriés. Lors de la sélection d'un groupe d'abonnement, Braze ajoutera automatiquement un filtre de segmentation, en s'assurant que seuls les utilisateurs inscrits recevront la campagne. Seuls les codes longs et les codes courts qui appartiennent à ce groupe d'abonnement seront utilisés pour envoyer des SMS aux utilisateurs cibles.
+4. Sélectionnez le groupe d'abonnement pour vous assurer que vous envoyez votre message aux utilisateurs appropriés. Lors de la sélection d'un groupe d'abonnement, Braze ajoutera automatiquement un filtre de segmentation, en s'assurant que seuls les utilisateurs inscrits recevront la campagne. Seuls les codes longs et les codes courts qui appartiennent à ce groupe d'abonnement seront utilisés pour envoyer des SMS aux utilisateurs cibles.
 
   {% alert tip %}
 Si tous les messages de votre campagne vont être similaires ou ont le même contenu, composez votre message avant d'ajouter des variantes supplémentaires - vous serez en mesure de choisir **Copier de la variante** dans le menu déroulant **Ajouter une variante**.
@@ -40,7 +40,7 @@ Si tous les messages de votre campagne vont être similaires ou ont le même con
 
 1. Nommez votre étape quelque chose de clair et de significatif.
 2. Ajouter un délai, si nécessaire.
-3. Filtrer votre audience, si nécessaire.
+3. Filtrer votre public, si nécessaire.
 4. Choisissez vos options d'avancement, si nécessaire.
 5. Choisissez tous les autres canaux de messagerie que vous souhaitez associer à votre message.
 
@@ -53,10 +53,10 @@ Vous ne pouvez pas avoir plusieurs variantes de messages dans l'application en u
 
 ## Étape 2 : Écrire votre SMS
 
-Écrire un SMS est facile ! Il vous suffit d'écrire votre message en utilisant les langues et la personnalisation (Liquid, Connected Content, et Emojis) au besoin. Veillez à respecter nos limites de copie de message pour réduire vos risques de surâge.
+Écrire un SMS est facile ! Il vous suffit d'écrire votre message en utilisant les langues et la personnalisation (Liquid, Connected Content, et Emojis) au besoin. Assurez-vous de respecter les limites de copie de notre message afin de réduire vos risques de surâge.
 
 {% alert important %}
-Avant de continuer, lisez notre [SMS Message Copy Limits and Message Segment documentation]({{site.baseurl}}/user_guide/message_building_by_channel/sms/campaign/segments/). Les segments de messages SMS sont les caractères utilisés par les opérateurs téléphoniques pour mesurer les messages textuels. Les messages sont facturés par segment de message, de sorte que les clients qui utilisent les SMS profitent grandement de la compréhension des nuances de la façon dont les messages seront partagés.
+Avant de continuer, lisez [les limites de copie des messages SMS et les directives de segment de message]({{site.baseurl}}/user_guide/message_building_by_channel/sms/campaign/segments/). Les segments de messages SMS sont les caractères utilisés par les opérateurs téléphoniques pour mesurer les messages textuels. Les messages sont facturés par segment de message, de sorte que les clients qui utilisent les SMS profitent grandement de la compréhension des nuances de la façon dont les messages seront partagés.
 {% endalert %}
 
 ![Écrire un SMS]({% image_buster /assets/img/sms_campaign_compose.gif %})
@@ -87,7 +87,7 @@ Décidez comment, quand et pourquoi votre message sera envoyé. Vous pouvez soit
 
 Dans cette étape, vous choisissez quels utilisateurs reçoivent votre message. Vous devriez déjà avoir choisi le Groupe d'Abonnement, qui rétrécit les utilisateurs par le niveau ou la catégorie de communication qu'ils souhaitent avoir avec vous. Dans cette étape, vous sélectionnerez le plus grand public de vos Segments, et vous réduirez ce segment plus loin avec nos Filtres, si vous le souhaitez.
 
-![Ciblage SMS]({% image_buster /assets/img/sms_campaign_targeting.gif %})
+![Ciblage de SMS]({% image_buster /assets/img/sms_campaign_targeting.gif %})
 
 {% alert tip %}
 Intéressant au repositionnement par SMS? Visitez notre [article de redistribution SMS]({{site.baseurl}}/user_guide/message_building_by_channel/sms/campaign/retargeting/) pour en savoir plus.
@@ -107,4 +107,4 @@ Vous pouvez également définir des événements de conversion personnalisés en
 
 Si vous utilisez des campagnes, vous aurez la possibilité de confirmer ses détails. Si vous utilisez Canvas, assurez-vous de confirmer les détails de chacune des pièces.
 
-![Confirmation SMS]({% image_buster /assets/img/sms_campaign_confirm.gif %})
+![Confirmation par SMS]({% image_buster /assets/img/sms_campaign_confirm.gif %})
