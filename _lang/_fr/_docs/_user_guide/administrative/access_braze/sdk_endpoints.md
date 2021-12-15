@@ -24,6 +24,7 @@ Un kit de développement de logiciels (SDK) est un ensemble d'outils qui peuvent
 | US-06    | sdk.iad-06.braze.com     |
 | US-08    | sdk.iad-08.braze.com     |
 | EU-01    | sdk.fra-01.braze.eu      |
+| EU-02    | sdk.fra-02.braze.eu      |
 {: .reset-td-br-1 .reset-td-br-2}
 
 Lors de l'utilisation de points de terminaison pour l'intégration du SDK, utilisez le __point de terminaison SDK__ listé sur cette page, __pas__ le [point de repos]({{site.baseurl}}/api/basics/#endpoints) utilisé pour les appels API.
