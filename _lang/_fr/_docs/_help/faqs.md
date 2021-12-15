@@ -44,6 +44,10 @@ guide_featured_list:
     name: "FAQ SMS"
     link: /fr/docs/user_guide/message_building_by_channel/sms/faqs/
     fa_icon: fa-comment-dots
+  - 
+    name: "FAQ sur l'intelligence"
+    link: /fr/docs/user_guide/intelligence/faqs/
+    fa_icon: fa fa-lightbulb-o
 guide_menu_title: "Meilleures pratiques"
 guide_menu_list:
   - 
