@@ -80,7 +80,7 @@ Send your users rich HTML messages by adding your existing HTML templates or usi
 
 ### Webhooks {#platform-features-webhooks}
 
-Braze's webhooks allow you to trigger non-app actions such as SMS text message delivery. You can use webhooks to provide other systems and applications with real-time information. The flexibility of this feature allows you to send information to any endpoint.
+Braze's webhooks allow you to trigger non-app actions provide other systems and applications with real-time information. The flexibility of this feature allows you to send information to any endpoint.
 
 ![Webhooks][22]
 
