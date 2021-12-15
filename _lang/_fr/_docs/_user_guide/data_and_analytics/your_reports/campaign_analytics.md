@@ -4,7 +4,7 @@ article_title: Analyses de campagne
 page_order: 4.5
 layout: dev_guide
 guide_top_header: "Analyses de campagne"
-guide_top_text: "L'analytique de campagne vous donne des mises à jour en temps réel sur les résultats de haut niveau de chaque campagne et variante au sein de cette campagne, ainsi que des détails au niveau du message. Choisissez votre canal de messagerie ci-dessous pour commencer."
+guide_top_text: "L'analytique de campagne vous donne des mises à jour en temps réel sur les résultats de haut niveau de chaque campagne et variante au sein de cette campagne, ainsi que des détails au niveau du message. Choisissez votre canal de messagerie ci-dessous pour en savoir plus sur les Analyses de campagne spécifiques à ce canal. Nous vous recommandons également de consulter notre cours de LAB <a href='https://lab.braze.com/campaign-setup-delivery-targeting-conversions'>Configuration de la campagne</a> pour une vue d'ensemble de ces analyses."
 page_type: atterrissage
 description: "Cette page d'accueil contient des articles sur Campagnes Analytics pour chaque canal de messagerie."
 tool: Rapports
