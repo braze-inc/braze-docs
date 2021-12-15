@@ -8,6 +8,8 @@ description: "Cet article de référence décrit le journal d'activité des mess
 
 # Onglet Journal d'activité des messages {#dev-console-troubleshooting}
 
+> Cet article de référence décrit le journal d'activité des messages dans la Console développeur, qui vous montre les messages associés à vos campagnes et envois. En plus de cet article, nous vous recommandons également de consulter notre cours LAB [Assurance Qualité et Outils de débogage](https://lab.braze.com/quality-assurance-and-debugging-tools-in-the-dashboard/) qui couvre la façon d'utiliser le journal d'activité des messages pour effectuer votre propre dépannage et débogage.
+
 Le journal d'activité des messages, dans la Console Développeurs, vous donne la possibilité de voir tous les messages, en particulier les messages d'erreur, associés à vos campagnes et envois. Vous pouvez voir les transactions de campagne de l’API, les détails de dépannage sur les messages échoués et recueillir des informations sur la façon d’améliorer la livraison des notifications ou de résoudre les problèmes techniques existants.
 
 !\[Journal d'activité du message\]\[2\]
