@@ -9,9 +9,11 @@ description: "This page includes several reading paths that will enable you to b
 
 # Learning to use Braze
 
+> This page includes several reading paths that will enable you to best utilize our platform to your advantage. Before continuing, make sure you've already completed your integration and set up for your messaging channels.
+
 Braze is a complex tool that can allow you to send an amazing range of campaigns that take your customers and users through professional, tailored, and personalized journeys that not only get you the results _you_ want, but the results _they_ want. No surprises, no unwanted contact, no annoying contact—just you letting your customers know that you care about what they want from you.
 
-Because of Braze's beautiful complexity, we recommend the several reading paths (outlined below) that will enable you to best utilize our platform to your advantage. There's no need to follow these exactly—cater them to your needs!
+Because of Braze's beautiful complexity, we recommend the several reading paths (outlined below) that will enable you to best utilize our platform to your advantage. There's no need to follow these exactly—cater them to your needs! These reading paths assume that you've already completed your integration and set up for your messaging channels, so the readings in the [Onboarding with Braze]({{site.baseurl}}/user_guide/onboarding_with_braze/) section aren't included.
 
 {% alert tip %}
 Don't forget that you can always access and take [LAB courses](https://lab.braze.com) once you have access to the Braze platform. We highly recommend this in conjunction with these reading paths.
@@ -19,9 +21,9 @@ Don't forget that you can always access and take [LAB courses](https://lab.braze
 
 Choose from the paths below to fit your needs and get reading!
 
-> These reading paths assume that you've already completed your integration and set up for your messaging channels, so the readings in the [Onboarding with Braze]({{site.baseurl}}/user_guide/onboarding_with_braze/) section aren't included.
-
 ## Braze beginner
+
+Everything you should know to get started with Braze. As you’re going through this learning path, keep our [Terms to Know]({{site.baseurl}}/user_guide/onboarding_with_braze/terms_to_know/) glossary handy in case you have questions on Braze terms.
 
 | Order | Article | What You'll Learn|
 |---|---|---|
@@ -41,6 +43,8 @@ Choose from the paths below to fit your needs and get reading!
 
 ## Adept admin
 
+Learn how to manage user access for your organization, best practices for dashboard maintenance, and how to use the key features that help you do so. In addition to these articles, we also recommend checking out our [Admin and Dashboard Management](https://lab.braze.com/admin-dashboard-management) LAB course!
+
 | Order | Article | What You'll Learn |
 |---|---|---|
 | 1 | [Braze instances]({{site.baseurl}}/user_guide/administrative/access_braze/braze_instances/) | The URLs used to access Braze. |
@@ -54,19 +58,9 @@ Choose from the paths below to fit your needs and get reading!
 | 9 | [Message activity log]({{site.baseurl}}/user_guide/administrative/app_settings/developer_console/message_activity_log_tab/) | Learn about and utilize the message activity log, including all associated errors. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
 
-## Email expert
-
-| Order | Article | What You'll Learn |
-|---|---|---|
-| 1 | [IP warming]({{site.baseurl}}/user_guide/onboarding_with_braze/email_setup/ip_warming/) | About the best practices of setting up your email for success. |  
-| 2 | [Managing user subscriptions]({{site.baseurl}}/user_guide/message_building_by_channel/email/managing_user_subscriptions/) | What email subscription statuses are and how to target them in your campaigns. |
-| 3 | [Creating an email campaign]({{site.baseurl}}/user_guide/message_building_by_channel/email/creating_an_email_campaign/) | How to create and send an email campaign. |
-| 4 | [Email guidelines and tips]({{site.baseurl}}/user_guide/message_building_by_channel/email/best_practices/guidelines_and_tips/) | Technical, styling, and content-specific guidelines for email. |
-| 5 | [Email templates]({{site.baseurl}}/user_guide/message_building_by_channel/email/creating_an_email_template/) | Create reusable email templates. |
-| 6 | [Email reporting]({{site.baseurl}}/user_guide/message_building_by_channel/email/reporting_and_analytics/email_reporting/) | How to access and interpret your email campaign reporting. |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
-
 ## Personalization prodigy
+
+Learn how to interact with your customers in a way that feels personal and human—taking into account their likes and preferences, and talking directly to them by name.
 
 | Order | Article | What You'll Learn |
 |---|---|---|
@@ -78,9 +72,88 @@ Choose from the paths below to fit your needs and get reading!
 | 6 | [Connected Content]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/connected_content/about_connected_content/) | Utilizing resources outside of Braze to pull in dynamic content to up-level your content. |
 | 7 | [Key-value pairs]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/key_value_pairs/) | How to send extra data payloads to user devices via key-value pairs. |
 | 8 | [Deep-linking to in-app content]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/deep_linking_to_in-app_content/) | How to launch a native app and provide additional information from a message. |
+| 9 | [Promotion codes]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/promotion_codes/) | How to create promotion code lists and send those promotion codes in your messaging. |
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
+
+## Messaging maestro
+
+Feeling a little more comfortable with the Braze platform? Let's dive into messaging channels! You can find all of our channel-specific documentation under [Message Building by Channel]({{site.baseurl}}/user_guide/message_building_by_channel/), but to help you get started, we've curated key articles on each channel below. Before continuing, we recommend first checking out our section on [Choosing a message channel]({{site.baseurl}}/user_guide/message_building_by_channel/#choosing-a-message-channel).
+
+Some messaging channels, like Content Cards and SMS, aren't available out-of-the-box and must be purchased. If you're interested in these channels, reach out to your Account Manager or Customer Success Manager for more information.
+
+### Content Cards*
+
+| Order | Article | What You'll Learn |
+|---|---|---|
+| 1 | [About Content Cards]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards/about/) | What Content Cards are, advantages of using Content Cards, and some common use cases. |
+| 2 | [Creative details]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards/creative_details/) | The types of Content Cards and their image and text specifications. |
+| 3 | [Creating a Content Card]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards/create/) | How to create and send Content Cards using campaigns or Canvases and key points to keep in mind. |
+| 4 | [Testing Content Cards]({{site.baseurl}}/user_guide/message_building_by_channel/content_cards/testing/) | How to preview and test Content Cards before sending them to your customers. |
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
+
+*Content cards aren't available out-of-the-box and must be purchased. Reach out to your Account Manager or Customer Success Manager for more information.
+
+### Email
+
+{% alert checkpoint %}
+Before proceeding with this learning path, make sure you’ve already followed the articles in our [Email Setup]({{site.baseurl}}/user_guide/onboarding_with_braze/email_setup/) section. Remember, [IP warming]({{site.baseurl}}/user_guide/onboarding_with_braze/email_setup/ip_warming/) is required! We also highly recommend setting up [SSL]({{site.baseurl}}/user_guide/onboarding_with_braze/email_setup/ssl/) to allow for open and click tracking, and to make sure your images appear as they should.
+{% endalert %}
+
+| Order | Article | What You'll Learn |
+|---|---|---|
+| 1 | About email | All about email, such as what scenarios you should use email for and nuances to keep in mind. |
+| 2 | [Managing user subscriptions]({{site.baseurl}}/user_guide/message_building_by_channel/email/managing_user_subscriptions/) | What email subscription statuses are and how to target them in your campaigns. |
+| 3 | [Creating an email campaign]({{site.baseurl}}/user_guide/message_building_by_channel/email/creating_an_email_campaign/) | How to create and send an email campaign. |
+| 4 | [Email guidelines and tips]({{site.baseurl}}/user_guide/message_building_by_channel/email/best_practices/guidelines_and_tips/) | Technical, styling, and content-specific guidelines for email. |
+| 5 | [Email templates]({{site.baseurl}}/user_guide/message_building_by_channel/email/creating_an_email_template/) | Create reusable email templates. |
+| 6 | [Email reporting]({{site.baseurl}}/user_guide/message_building_by_channel/email/reporting_and_analytics/email_reporting/) | How to access and interpret your email campaign reporting. |
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
+
+### In-app and in-browser messaging
+
+| Order | Article | What You'll Learn |
+|---|---|---|
+| 1 | About in-app messages |
+| 2 | [Creative details]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/creative_details/) | About the in-app message types, and specifications and recommendations to follow to ensure your message displays well on all devices. |
+| 3 | [Creating an in-app message]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/create/) | How to create an in-app message or in-browser message using campaigns or Canvas. |
+| 4 | [Testing in-app messages]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/testing/) | How to preview and test your in-app messages before sending them to your customers. |
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
+
+### Push notifications
+
+| Order | Article | What You'll Learn |
+|---|---|---|
+| 1 | [About push]({{site.baseurl}}/user_guide/message_building_by_channel/push/about/) | What push messages are, resources to get started with push messages, and some regulations to keep in mind. |
+| 2 | [Push registration]({{site.baseurl}}/user_guide/message_building_by_channel/push/push_registration/) | How a user gets assigned a push token, and how Braze sends push messages to your users. |
+| 3 | [Push enablement and subscription]({{site.baseurl}}/user_guide/message_building_by_channel/push/users_and_subscriptions/) | The different push subscription states, what push enablement means, and fundamental push differences between iOS and Android. |
+| 4 | [Creating a push message]({{site.baseurl}}/user_guide/message_building_by_channel/push/creating_a_push_message/) | How to create a push message using campaigns or Canvas.
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
+
+### SMS and MMS*
+
+| Order | Article | What You'll Learn |
+|---|---|---|
+| 1 | [About SMS]({{site.baseurl}}/user_guide/message_building_by_channel/sms/about_sms/) | What SMS messages are, common use cases to draw from, SMS requirements, and terms to know.
+| 2 | [SMS laws and regulations]({{site.baseurl}}/user_guide/message_building_by_channel/sms/sms_laws_and_regulations/) | About the laws and regulations that you must follow to prevent abuse or over-use of SMS messages. |
+| 3 | [SMS subscription groups]({{site.baseurl}}/user_guide/message_building_by_channel/sms/sms_subscription_group/) | What subscription groups are and how to target them. |
+| 4 | [Create an SMS campaign]({{site.baseurl}}/user_guide/message_building_by_channel/sms/campaign/create/) | How to create and send SMS messages in a campaign or Canvas. |
+| 5 | [About MMS]({{site.baseurl}}/user_guide/message_building_by_channel/sms/mms/about_mms/) | What MMS messages are, where they're available, and other key details. |
+| 6 | [Create an MMS campaign]({{site.baseurl}}/user_guide/message_building_by_channel/sms/mms/create/) | How to create and send MMS messages in a campaign or Canvas. |
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
+
+*SMS and MMS messages aren't available out-of-the-box and must be purchased. Reach out to your Account Manager or Customer Success Manager for more information.
+
+### Webhooks
+
+| Order | Article | What You'll Learn |
+|---|---|---|
+| 1 | [About webhooks]({{site.baseurl}}/user_guide/message_building_by_channel/webhooks/understanding_webhooks/) | What webhooks are, the parts of a webhook, and some common use cases. |
+| 2 | [Creating webhooks]({{site.baseurl}}/user_guide/message_building_by_channel/webhooks/creating_a_webhook/) | How to set up and troubleshoot a webhook campaign and other important details around sending webhooks from Braze. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
 
 ## Data doctor
+
+How can you make data-driven decisions without data? Braze offers a breadth of metrics and tools to use in measuring the performance of your messaging efforts—learn how to leverage these tools to improve your content.
 
 | Order | Article | What You'll Learn |
 |---|---|---|
@@ -97,4 +170,9 @@ Choose from the paths below to fit your needs and get reading!
 | 11 | [Event naming conventions]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/event_naming_conventions/) | Best practices to ensure consistency in your event and attribute naming taxonomy. |
 | 12 | [Regular expressions]({{site.baseurl}}/user_guide/engagement_tools/segments/regex/) | How to use regular expressions in your segments or campaign filtering. |
 | 13 | [Exporting Braze data]({{site.baseurl}}/user_guide/data_and_analytics/export_braze_data/) | The many ways to export data from the Braze platform. |
+| Opt* | [Predictive Suite]({{site.baseurl}}/user_guide/predictive_suite/) | How to effectively leverage and act on data seamlessly within Braze using tools in the Predictive Suite. |
+| Opt* | [Intelligence Suite]({{site.baseurl}}/user_guide/intelligence/) | How to automate decision-making with data-based insights using tools in the Intelligence Suite. |
+| Opt* | [Currents]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/) | How to set up and use Currents to stream data to one of our many data partners. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
+
+*The Predictive Suite, Intelligence Suite, and Currents are not available out-of-the-box and must be purchased. Reach out to your Account Manager or Customer Success Manager for more information.
