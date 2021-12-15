@@ -11,9 +11,9 @@ channel:
 
 # Processus double opt-in
 
-Vous pouvez trouver que certains utilisateurs qui peuvent envoyer un texte à votre code court ou long ne sera pas encore pris en compte dans votre groupe d'abonnement SMS. Le règlement exige que vous obteniez le consentement explicite d’un utilisateur avant de lui envoyer tout message promotionnel ou informatif. Nous recommandons vivement la mise en œuvre d'un double opt-in pour garantir la conformité.
+Vous pouvez trouver que certains utilisateurs qui peuvent envoyer un texte à votre code court ou long ne sera pas encore inscrit à votre groupe d'abonnement SMS. Le règlement exige que vous obteniez le consentement explicite d’un utilisateur avant de lui envoyer tout message promotionnel ou informatif. Nous recommandons vivement la mise en œuvre d'un double opt-in pour garantir la conformité.
 
-!\[picture\]\[IMAGE1\]{: style="float:right;max-width:30%;margin-left:15px;"} Nous vous suggérons de définir une __entrée déclenchée__ dans Canvas chaque fois qu'il y a un événement entrant `sms_response_subscriptionGroupName_custom`.
+!\[picture\]\[IMAGE1\]{: style="float:right;max-width:30%;margin-left:15px;"} Nous vous suggérons de définir une entrée déclenchée dans Canvas chaque fois qu'il y a un événement entrant `sms_response_subscriptionGroupName_custom`.
 
 ## Étape 1 : Créer un webhook
 
