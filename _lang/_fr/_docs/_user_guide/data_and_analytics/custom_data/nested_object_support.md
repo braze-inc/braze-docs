@@ -105,6 +105,10 @@ Templating in Liquid dans un message déclenché par l'événement "Ordéré" :
 
 Pour utiliser ces propriétés pour déclencher une campagne, sélectionnez votre événement personnalisé ou votre achat, et ajoutez un filtre __Propriété imbriquée__. Notez que le déclenchement de messages n'est pas encore pris en charge pour les messages dans l'application.
 
+{% alert important %}
+Les objets imbriqués sont généralement disponibles, cependant les messages déclenchants et la segmentation des utilisateurs basés sur ces données sont en accès anticipé. Pour plus d'informations, veuillez contacter votre responsable de compte Braze.
+{% endalert %}
+
 {% tabs %}
 {% tab Music Example %}
 
