@@ -10,11 +10,15 @@ description: "Cet article de référence décrit les événements et propriété
 
 Les événements personnalisés sont des actions prises ou mises à jour à propos de vos utilisateurs. Ils sont les mieux adaptés pour suivre les interactions utilisateur de grande valeur dans votre application. Loguer un événement personnalisé peut déclencher n'importe quel nombre et n'importe quel type de campagnes de suivi, et active les filtres de segmentation listés sur la récurrence et la fréquence de cet événement.
 
-> Pour en savoir plus sur l'utilisation d'événements personnalisés dans vos stratégies de messagerie, consultez notre cours LAB sur [Événements personnalisés & Attributs](http://lab.braze.com/custom-events-and-attributes)!
+{% alert tip %}
+Pour en savoir plus sur l'utilisation d'événements personnalisés dans vos stratégies de messagerie, consultez notre cours LAB [Événements et attributs personnalisés](http://lab.braze.com/custom-events-and-attributes)!
+{% endalert %}
 
 ## Journalisation des événements personnalisés
 
 Voici la liste des méthodes utilisées par les différentes plates-formes pour enregistrer les événements personnalisés. Dans ces pages, vous pourrez également trouver de la documentation sur la façon d'ajouter des propriétés et des quantités à vos événements personnalisés.
+
+{% details Expand for documentation by platform %}
 
 - [Android et FireOS]({{site.baseurl}}/developer_guide/platform_integration_guides/android/analytics/tracking_custom_events/)
 - [iOS]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/analytics/tracking_custom_events/)
@@ -25,7 +29,15 @@ Voici la liste des méthodes utilisées par les différentes plates-formes pour 
 - [Xamarin]({{site.baseurl}}/developer_guide/platform_integration_guides/xamarin/analytics/#tracking-custom-events)
 - [Roku]({{site.baseurl}}/developer_guide/platform_integration_guides/roku/analytics/logging_custom_events/)
 
+{% enddetails %}
+
+## Stockage d'événements personnalisés
+
+Toutes les données stockées sur le **Profil utilisateur**, y compris les métadonnées d'événement personnalisées (première/dernière occurrence, le nombre total et X en Y sur 30 jours) sont conservés indéfiniment tant que chaque profil est actif.
+
 ## Filtres de segmentation d'événements personnalisés
+
+Le tableau suivant montre les filtres disponibles pour segmenter les utilisateurs par des événements personnalisés.
 
 | Options de segmentation                                                                             | Filtre de liste déroulante | Input Options                                      |
 | --------------------------------------------------------------------------------------------------- | -------------------------- | -------------------------------------------------- |
@@ -54,10 +66,6 @@ Braze note le nombre de fois où ces événements se sont produits ainsi que la 
 ### Analyses personnalisées des événements ne s'affichent pas ?
 
 Veuillez noter que les segments créés avec des données d'événement personnalisées ne peuvent pas afficher les données historiques précédentes avant qu'elles n'aient été créées.
-
-## Stockage d'événements personnalisés
-
-Toutes les données de profil d'utilisateur, y compris les métadonnées d'événement personnalisées (première/dernière occurrence, le nombre total et X en Y sur 30 jours) sont stockés tant que chaque profil est actif.
 
 ## Propriétés personnalisées de l'événement
 
