@@ -9,7 +9,7 @@ description: "Cet article de référence couvre les fonctionnalités basées sur
 
 # Fonctionnalités basées sur le temps pour les campagnes
 
-> Cet article de référence couvre les fonctionnalités basées sur le temps pour les campagnes d'aide aux stratégies, de dépannage et de répondre à des questions courantes.
+> Cet article de référence couvre les fonctionnalités basées sur le temps pour les campagnes d'aide aux stratégies, de dépannage et de répondre à des questions courantes. Vous pouvez également consulter notre cours de LAB [Configuration de la campagne](https://lab.braze.com/campaign-setup-delivery-targeting-conversions) pour en savoir plus sur la livraison de la campagne.
 
 ## Livraison planifiée
 
