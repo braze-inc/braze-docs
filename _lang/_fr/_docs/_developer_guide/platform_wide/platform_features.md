@@ -79,7 +79,7 @@ Envoyez à vos utilisateurs des messages HTML enrichis en ajoutant vos modèles 
 
 ### Webhooks {#platform-features-webhooks}
 
-Les webhooks de Braze vous permettent de déclencher des actions non-applicatives telles que l'envoi de SMS de messagerie. Vous pouvez utiliser des webhooks pour fournir des informations en temps réel à d'autres systèmes et applications. La flexibilité de cette fonction vous permet d'envoyer des informations à n'importe quel terminal.
+Les webhooks de Braze vous permettent de déclencher des actions non-applicatives qui fournissent à d'autres systèmes et applications des informations en temps réel. La flexibilité de cette fonction vous permet d'envoyer des informations à n'importe quel terminal.
 
 !\[Webhooks\]\[22\]
 [2]: {% image_buster /assets/img_archive/dashboard_segment_example.png %} "Exemple de segmentation" [6]: {% image_buster /assets/img_archive/news_feed_dashboard_example. ng %} "News Feed Dashboard" [8]: {% image_buster /assets/img_archive/UOiOSPush. ng %} "Exemple Push Dashboard" [9]: {% image_buster /assets/img_archive/In-App_Modal.png %} "Slideup Example" [10]: {% image_buster /assets/img_archive/EmailTemplateEditor. ng %} "Éditeur de modèle d'e-mail" [22]: {% image_buster /assets/img_archive/Webhook_Body_Edit.png %}
