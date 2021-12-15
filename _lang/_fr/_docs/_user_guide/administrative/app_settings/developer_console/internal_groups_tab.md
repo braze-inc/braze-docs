@@ -8,6 +8,8 @@ description: "Cet article de référence couvre les groupes internes, un excelle
 
 # Onglet Groupes internes
 
+> Cet article de référence couvre les Groupes Internes, et comment les créer et les utiliser. En plus de cet article, nous vous recommandons également de consulter notre cours LAB [Assurance Qualité et Outils de débogage](https://lab.braze.com/quality-assurance-and-debugging-tools-in-the-dashboard/) qui couvre la façon d'utiliser des groupes internes pour effectuer votre propre dépannage et débogage.
+
 Les groupes internes sont un excellent moyen de construire et d'organiser des groupes de tests internes ou tiers et de fournir un aperçu du SDK ou des journaux API disponibles sur votre périphérique de test pendant le test d'intégration SDK. Vous pouvez créer un nombre illimité de groupes internes personnalisés avec jusqu'à 1 000 membres.
 
 {% alert note %}
@@ -22,7 +24,6 @@ Pour créer un groupe interne, effectuez les étapes suivantes :
 2. Cliquez sur **Créer un groupe interne**.
 3. Donnez à votre groupe un nom significatif.
 4. Choisissez un ou plusieurs types de groupe (définis ci-dessous).
-
 
 !\[Groupe interne\]\[7\]
 
