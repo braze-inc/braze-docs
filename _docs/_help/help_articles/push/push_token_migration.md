@@ -68,7 +68,7 @@ To do this, use the `users/track` endpoint and post the following information:
 ```json
 "attributes": [ 
   {
-    "push_token_import" : true,
+	"push_token_import" : true,
 	"email": "braze.test1@testbraze.com",
 	"country": "US",
 	"language": "en",

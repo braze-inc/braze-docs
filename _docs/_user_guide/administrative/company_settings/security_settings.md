@@ -43,7 +43,7 @@ When two-factor authentication is enabled, in addition to entering a password, u
 
 {% alert tip %} Braze recommends setting up two-factor authentication via the Authy app rather than just SMS, in case you experience any issues receiving SMS in the future. {% endalert %}
 
-Two-factor authentication is optional by default. However, when enabled, users who fail to set up their two-factor authentication will be locked out of their Braze account. Braze account users also can set up two-factor authentication on their own, even if not required by the administrator.
+Two-factor authentication is optional by default. However, when enabled, users who fail to set up their two-factor authentication will be locked out of their Braze account. Braze account users also can set up two-factor authentication on their own in __Account Settings__, even if not required by the administrator.
 
 ### Remember me
 ![Remember Me][0]{: style="float:right;max-width:30%;margin-left:15px;"}
@@ -53,7 +53,7 @@ Upon toggling on two-factor authentication for your company, the __Remember Me__
 
 Be sure to save your changes before leaving the page!
 
-### User authetication reset
+### User authentication reset
 
 Users experiencing issues logging in via two-factor authentication can reach out to their company admins to reset their two-factor authentication. To do this, have an admin navigate to __Manage Users__, select the user from the provided list, and select __Reset__ under __Two-Factor Authentication__. A reset can solve common authentication issues such as trouble with Authy, login failure due to SMS outages or user error, and more.
 

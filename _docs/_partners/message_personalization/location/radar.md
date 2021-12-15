@@ -21,7 +21,8 @@ Additionally, Radar Geo APIs can be leveraged to enrich or personalize your mark
 ## Prerequisites
 
 | Requirement | Description |
-|---|---|---|---|
+|---|---|
+| Radar account | A Radar account is required to take advantage of this partnership. |
 | Braze REST API key | A Braze REST API Key with `users.track` permissions. <br><br> This can be created within the __Braze Dashboard -> Developer Console -> REST API Key -> Create New API Key__ |
 | Group identifier | Your group identifier can be found can be found within the __Braze Dashboard -> Developer Console__ page. |
 | iOS API key<br>Android API key | These API keys can be found within the __Braze Dashboard -> Manage Settings__ page. |

@@ -11,11 +11,15 @@ description: "This reference article describes custom events and properties, the
 
 Custom events are actions taken by, or updates about, your users. They're best suited for tracking high-value user interactions within your application. Logging a custom event can trigger any number and type of follow-up campaigns, and enables the listed segmentation filters on the recency and frequency of that event.
 
-> For more on using custom events in your messaging strategies, check out our LAB course on [Custom Events & Attributes](http://lab.braze.com/custom-events-and-attributes)!
+{% alert tip %}
+For more on using custom events in your messaging strategies, check out our [Custom Events and Attributes](http://lab.braze.com/custom-events-and-attributes) LAB course!
+{% endalert %}
 
 ## Logging custom events
 
 Listed below are the methods across various platforms that are used to log custom events. Within these pages, you will also be able to find documentation on how to add properties and quantities to your custom events.
+
+{% details Expand for documentation by platform %}
 
 - [Android and FireOS]({{site.baseurl}}/developer_guide/platform_integration_guides/android/analytics/tracking_custom_events/)
 - [iOS]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/analytics/tracking_custom_events/)
@@ -26,7 +30,15 @@ Listed below are the methods across various platforms that are used to log custo
 - [Xamarin]({{site.baseurl}}/developer_guide/platform_integration_guides/xamarin/analytics/#tracking-custom-events)
 - [Roku]({{site.baseurl}}/developer_guide/platform_integration_guides/roku/analytics/logging_custom_events/)
 
+{% enddetails %}
+
+## Custom event storage
+
+All data store on the **User Profile**, including custom event metadata (first/last occurrence, total count, and X in Y over 30 days) is retained indefinitely as long as each profile is active.
+
 ## Custom event segmentation filters
+
+The following table shows the filters available for segmenting users by custom events.
 
 | Segmentation Options | Dropdown Filter | Input Options |
 | ---------------------| --------------- | ------------- |
@@ -55,10 +67,6 @@ Braze notes the number of times these events have occurred as well as the last t
 ### Custom events analytics not showing?
 
 Please note that Segments created with custom event data cannot show previous historic data from before they were created.
-
-## Custom event storage
-
-All User Profile data, including custom event metadata (first/last occurrence, total count, and X in Y over 30 days) is stored as long as each profile is active.
 
 ## Custom event properties
 

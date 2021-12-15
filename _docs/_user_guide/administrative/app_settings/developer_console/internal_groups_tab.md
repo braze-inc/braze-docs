@@ -9,6 +9,8 @@ description: "This reference article covers Internal Groups, a great way to get 
 
 # Internal Groups tab
 
+> This reference article covers Internal Groups, and how to create and use them. In addition to this article, we also recommend checking out our [Quality Assurance and Debugging Tools](https://lab.braze.com/quality-assurance-and-debugging-tools-in-the-dashboard/) LAB course, which covers how to use internal groups to conduct your own troubleshooting and debugging.
+
 Internal Groups are a great way to build and organize internal or third-party test groups and provide insight into the SDK or API logs available from your test device during SDK integration testing. You can create an unlimited number of custom Internal Groups with up to 1,000 members.
 
 {% alert note %}
@@ -24,14 +26,13 @@ To create an Internal Group, perform the following steps:
 3. Give your group a meaningful name.
 4. Choose one or more group types (defined below).
 
-
 ![Internal Group][7]
 
 | Group Type     | Use Case     |
 | :------------- | :------------- |
 | User Event Group| Used for verifying events or logs from your test device.|
-|Content Test Group| A similar concept to Test Lists. Can be used across push, email, and in-app messages to send a rendered copy of the message.|
-|Seed Group | Automatically sends a copy of the email to everyone the Seed Group upon send.|
+| Content Test Group | A similar concept to Test Lists. Can be used across push, email, and in-app messages to send a rendered copy of the message.|
+| Seed Group | Automatically sends a copy of the email to everyone the Seed Group upon send.|
 {: .reset-td-br-1 .reset-td-br-2}
 
 ### Adding test users
