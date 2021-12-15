@@ -10,7 +10,7 @@ channel:
 
 # Numéros de téléphone utilisateur
 
-> Cet article discutera de différents sujets autour des numéros de téléphone de vos utilisateurs ou de vos clients - si vous recherchez des informations sur vos propres numéros, veuillez consulter notre article sur [Short & Long Codes]({{site.baseurl}}/user_guide/onboarding_with_braze/sms_setup/short_and_long_codes/#short--long-codes).
+> Cet article discutera de différents sujets autour des numéros de téléphone de vos utilisateurs ou de vos clients - si vous recherchez des informations sur vos propres numéros, veuillez consulter notre article sur les [codes courts et longs]({{site.baseurl}}/user_guide/onboarding_with_braze/sms_setup/short_and_long_codes/#short--long-codes).
 
 Les numéros de téléphone sont affichés dans le profil de l'utilisateur au format local, mais ne sera pas dans le format que vous utilisez pour importer le numéro (`(724) 123 4567`).
 
@@ -41,7 +41,7 @@ Vous pouvez voir les différences entre le formatage de nombres locaux et le for
 
 ### Ajout d'utilisateurs aux groupes d'abonnement SMS
 
-Pour qu'un client reçoive un message SMS, il doit __avoir un numéro de téléphone valide et être inscrit à un groupe d'abonnement__. Les groupes d'abonnement sont liés au programme SMS que vous exécutez ([assurez-vous de suivre les lois légales pour les SMS et d'avoir enregistré le consentement pour chaque client]({{site.baseurl}}/user_guide/message_building_by_channel/sms/sms_laws_and_regulations/)). Pour plus d'informations, reportez-vous à [SMS Subscription Groups][1].
+Pour qu'un client reçoive un message SMS, il doit avoir un numéro de téléphone valide et être inscrit à un groupe d'abonnement. Les groupes d'abonnement sont liés au programme SMS que vous exécutez ([assurez-vous de suivre les lois légales pour les SMS et d'avoir enregistré le consentement pour chaque client]({{site.baseurl}}/user_guide/message_building_by_channel/sms/sms_laws_and_regulations/)). Pour plus d'informations, reportez-vous aux [groupes d'abonnement SMS][1].
 [picture]: {% image_buster /assets/img/sms/e164.png %}
 
 [1]: {{site.baseurl}}/user_guide/message_building_by_channel/sms/sms_subscription_group/
