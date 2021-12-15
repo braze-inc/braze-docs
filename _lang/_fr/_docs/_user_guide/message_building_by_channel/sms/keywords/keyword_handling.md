@@ -30,10 +30,10 @@ En plus des mots-clés opt-in et opt-out par défaut listés ci-dessus, vous pou
 
 ![Domicile]({% image_buster /assets/img/sms/keyword_edit2.png %}){: style="float:right;max-width:40%;margin-left:10px;"}
 1. Pour définir vos propres mots clés, accédez à la section SMS du tableau de bord situé sous Groupes d'abonnement.<br><br>
-2. Sous SMS Global Keywords, sélectionnez une catégorie de mots clés pour ajouter un mot-clé en sélectionnant l'icône crayon.<br><br>
-3. Dans la boîte de dialogue qui apparaît, ajoutez un mot clé que vous souhaitez déclencher dans cette catégorie de mots-clés. Notez que les mots-clés ne sont pas sensibles à la casse. Les mots-clés universels comme `START`, `OUI`, et `UNSTOP` ne peuvent pas être changés. Examinez les règles ci-dessous qui s'appliquent aux mots-clés et aux réponses par mots-clés.<br><br>![photo]({% image_buster /assets/img/sms/sms_keywords.png %})
+2. Sous les mots clés globaux SMS, sélectionnez une catégorie de mots clés pour ajouter un mot clé en sélectionnant l'icône du crayon.<br><br>
+3. Dans la boîte de dialogue qui apparaît, ajoutez un mot clé que vous souhaitez déclencher dans cette catégorie de mots-clés. Notez que les mots-clés sont sensibles à la casse, et les mots-clés universels comme `START`, `OUI`, et `UNSTOP` ne peuvent pas être changés. Veuillez lire les règles ci-dessous qui s'appliquent aux mots-clés et aux réponses par mots-clés.<br><br>![photo]({% image_buster /assets/img/sms/sms_keywords.png %})
 
-| Mots clés                                                                                                                                                                                                                                                                                                                  | Réponses par mot clé                                                                                       |
+| Mots clés                                                                                                                                                                                                                                                                                                                  | Réponses aux mots clés                                                                                     |
 | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- |
 | - Caractères encodés UTF-8 valides<br>- Maximum de 20 mots-clés par catégorie au total<br>- Longueur maximale de 34 caractères<br>- Longueur minimale de 1 caractère <br>- Ne peut pas contenir d'espaces<br>- Requis pour être insensible à la casse et unique dans le groupe d'abonnements | - Ne peut pas être vide<br>- Longueur maximale de 300 caractères<br>- Caractères UTF-8 valides |
 {: .reset-td-br-1 .reset-td-br-2}
@@ -43,7 +43,7 @@ Intéressé par la façon dont ces mots-clés peuvent être utilisés dans vos c
 {% endalert %}
 {% endtab %}
 
-{% tab Manage Responses %}
+{% tab Manage responses %}
 
 #### Gérer les réponses
 
@@ -52,9 +52,11 @@ Vous pouvez gérer vos propres réponses qui sont envoyées aux utilisateurs apr
 ![Domicile]({% image_buster /assets/img/sms/keyword_edit2.png %}){: style="float:right;max-width:40%;margin-left:10px;"}
 1. Pour gérer vos réponses par mots-clés, accédez à la section SMS du tableau de bord situé sous Groupes d'abonnement. <br><br>
 2. Sous SMS Global Keywords, sélectionnez une catégorie de mots clés pour éditer une réponse en sélectionnant l'icône crayon.<br><br>
-3. Dans la boîte de dialogue qui apparaît, éditez et enregistrez votre réponse. Veuillez garder à l'esprit les [six règles pour obtenir le droit à la conformité]({{site.baseurl}}/user_guide/message_building_by_channel/sms/sms_laws_and_regulations/#the-six-rules-to-get-compliance-right) au fur et à mesure que vous créez votre réponse et lisez les règles ci-dessous qui s'appliquent aux mots-clés et aux réponses par mots-clés.<br><br> ![Réponses]({% image_buster /assets/img/sms/keyword_home.png %})
+3. Dans la boîte de dialogue qui apparaît, modifiez et enregistrez votre réponse. Veuillez garder à l'esprit les [six règles pour être en conformité]({{site.baseurl}}/user_guide/message_building_by_channel/sms/sms_laws_and_regulations/#the-six-rules-to-get-compliance-right) lorsque vous créez votre réponse et lisez les règles ci-dessous qui s'appliquent aux mots-clés et aux réponses par mots-clés.<br><br>
 
-| Mots clés                                                                                                                                                                                                                                                                                                                  | Réponses par mot clé                                                                                       |
+![Réponses]({% image_buster /assets/img/sms/keyword_home.png %})
+
+| Mots clés                                                                                                                                                                                                                                                                                                                  | Réponses aux mots clés                                                                                     |
 | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- |
 | - Caractères encodés UTF-8 valides<br>- Maximum de 20 mots-clés par catégorie au total<br>- Longueur maximale de 34 caractères<br>- Longueur minimale de 1 caractère <br>- Ne peut pas contenir d'espaces<br>- Requis pour être insensible à la casse et unique dans le groupe d'abonnements | - Ne peut pas être vide<br>- Longueur maximale de 300 caractères<br>- Caractères UTF-8 valides |
 {: .reset-td-br-1 .reset-td-br-2}
@@ -64,9 +66,9 @@ Vous pouvez gérer vos propres réponses qui sont envoyées aux utilisateurs apr
 
 ## Prise en charge multi-langues
 
-Lors de l'envoi à certains pays, un expéditeur peut être requis pour supporter les mots-clés entrants et les réponses sortantes dans une langue locale. Pour cela, Braze vous permet de créer un paramètre de mot clé spécifique à la langue.
+Lors de l'envoi à certains pays, un expéditeur peut être requis pour supporter les mots-clés entrants et les réponses sortantes dans une langue locale. Pour cela, Braze vous permet de créer un paramètre de mot clé spécifique à la langue. !\[Envoi multi-langues\]\[16\]{: style="float:right;max-width:40%;margin-left:10px;"}
 
-!\[Select Language\]\[16\]{: style="float:right;max-width:40%;margin-left:10px; } Pour commencer, cliquez sur **Ajouter une langue** et sélectionnez votre langue cible ou recherchez une langue dans le menu déroulant.
+Pour commencer, cliquez sur **Ajouter une langue** et sélectionnez votre langue cible ou recherchez une langue dans le menu déroulant.
 
 {% alert important %}
 Notez que les autres langues ne sont pas fournies avec des mots-clés prédéfinis et des réponses comme l'anglais, ainsi les expéditeurs devront travailler avec leurs équipes de marketing et légales pour ajouter tous les mots-clés requis à cet ensemble. Sinon, Braze ne gérera pas les messages entrants localisés pour ces langues.
@@ -86,7 +88,9 @@ Ces mots-clés personnalisés fonctionnent dans une capacité "toujours", ce qui
 
 ### Créer une catégorie personnalisée
 
-!\[Catégorie de mots-clés personnalisée\]\[13\]{: style="float:right;max-width:40%;margin-left:10px; } Pour créer une catégorie de mots clés personnalisés, éditez le groupe d'abonnement approprié, et cliquez sur **Ajouter une catégorie de mots clés personnalisés**. Ici, vous serez en mesure de fournir un nom de catégorie de mots-clés et de définir les mots-clés dans lesquels un utilisateur peut écrire pour recevoir le message de réponse.
+!\[Catégorie de mots-clés personnalisée\]\[13\]{: style="float:right;max-width:40%;margin-left:10px;"}
+
+Pour créer une catégorie de mots clés personnalisés, éditez le groupe d'abonnement approprié, et cliquez sur **Ajouter une catégorie de mots clés personnalisés**. Ici, vous serez en mesure de fournir un nom de catégorie de mots-clés et de définir les mots-clés dans lesquels un utilisateur peut écrire pour recevoir le message de réponse.
 
 Une fois créée, cette catégorie de mots-clés sera disponible pour [filtrer et déclencher]({{site.baseurl}}/user_guide/message_building_by_channel/sms/campaign/retargeting/) contre vos campagnes et vos Canvases.
 
@@ -108,9 +112,10 @@ Si vous avez un cas d'utilisation où vous souhaitez limiter quand un client peu
 
 Bien que ce ne soit pas obligatoire, nous recommandons fortement de configurer une réponse automatique lorsque les utilisateurs envoient des mots-clés SMS entrants qui ne correspondent pas à un mot clé existant. Ce message avertira l'utilisateur que le mot clé n'est pas reconnu et offre un certain conseil.
 
-Cela peut être fait en créant une campagne SMS avec un message comme "Désolé! Nous n'avons pas reconnu ce mot clé, le texte STOP pour arrêter ou aider à l'aide." Ensuite, dans l'étape de livraison, sélectionnez **Livraison à l'aide** et utilisez le déclencheur "Envoyer SMS entrants à un groupe d'abonnement dans la catégorie de mots clés AUTRE".
+Cela peut être fait en créant une campagne SMS avec un message comme "Désolé! Nous n'avons pas reconnu ce mot clé, le texte STOP pour arrêter ou aider à l'aide." Ensuite, à l'étape de la livraison, sélectionnez **Action-Based Delivery** et utilisez le déclencheur **Envoyé SMS entrant vers le groupe d'abonnement dans la catégorie des mots clés AUTRE**.
 
-![Confirmation SMS]({% image_buster /assets/img/sms/sms_other.png %})
+
+![Confirmation par SMS]({% image_buster /assets/img/sms/sms_other.png %})
 
 {% alert tip %}
 Intéressé par la façon dont ces mots-clés et ces catégories de mots clés peuvent être utilisés dans vos campagnes et Canvases pour redimensionner et déclencher des messages ? Visitez notre [article de relocalisation par SMS]({{site.baseurl}}/user_guide/message_building_by_channel/sms/campaign/retargeting/) pour plus d'informations.
