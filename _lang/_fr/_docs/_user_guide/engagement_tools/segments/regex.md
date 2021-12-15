@@ -12,18 +12,26 @@ tool:
 
 {% include video.html id="3h5Xbhl-TxE" align="right" %}
 
-> Les expressions régulières, communément appelées regex, sont une séquence de caractères qui définissent un motif de recherche. Les expressions régulières vous permettent de valider le regroupement de texte et de trouver et de remplacer les actions. <br><br>Regex est utilisé à Braze pour vous donner une solution de correspondance de chaînes plus flexible dans votre segmentation et le filtrage de campagne pour votre public cible.
+> Cet article de référence couvre ce que sont les expressions régulières, comment commencer à les utiliser, et offre des fonctionnalités de débogueur pour valider et tester les expressions régulières.
 
-Dans la vidéo fournie, nous vous montrons comment les expressions régulières peuvent être utilisées et testées sur le site [Regex101][regex]. Ci-dessous, nous offrons également un testeur d'expressions régulières, une feuille de triche utile, des exemples de données référencées dans la vidéo Regex LAB, ainsi que des questions fréquemment posées.
+Une expression régulière, communément appelée regex, est une séquence de caractères qui définit un motif de recherche. Les expressions régulières vous permettent de valider les regroupements de texte et d'effectuer des recherches et des remplacements d'actions. Chez Braze, nous mettons à profit les expressions régulières pour vous offrir une solution de correspondance plus souple dans votre segmentation et votre filtrage de campagne pour votre public cible.
 
-\[Feuille de triche Regex téléchargeable PDF\]\[cheatsheet\]<br> \[Données téléchargeables RTF\]\[dummydata\]
+Dans la vidéo fournie, nous vous montrons comment les expressions régulières peuvent être utilisées et testées sur le site [Regex101][regex]. Ci-dessous, nous offrons également un testeur d'expressions régulières, une feuille de triche utile, des exemples de données référencées dans la vidéo regex LAB, ainsi que des questions fréquemment posées.
+
+## Ressource
+
+- [Expression régulière](https://lab.braze.com/regular-expression-basics-for-braze) cours LAB
+- <i class="fas fa-file-pdf"></i> \[Feuille de triche PDF\]\[cheatsheet\]
+- <i class="fas fa-file-alt"></i> \[Exemple de données RTF\]\[dummydata\]
+
+## Débogueur Regex
 
 {% tabs %}
 {% tab Regex Debugger %}
 
 Ce formulaire permet la validation et le test de base des expressions régulières. ​
 <div class="alert alert-important" role="alert"><div class="alert-msg"> <b>importance: </b><br />
-<p>Cet outil est uniquement conçu comme une référence, et ne garantit pas que le regex corresponde à 100% avec la plateforme de Braze. Expressions régulières dans Braze ajoute automatiquement le modificateur <code>gi</code>. Le modificateur <a href='https://w3schools.sinsixx.com/jsref/jsref_regexp_modifier_gi.asp.htm'>gi</a> est utilisé pour effectuer une recherche insensible à la casse de toutes les occurrences d'une expression régulière dans une chaîne. </p>
+<p>Cet outil est uniquement conçu comme une référence, et ne garantit pas que le regex corresponde à 100% avec la plateforme Braze. Expressions régulières dans Braze ajoute automatiquement le modificateur <code>gi</code>. Le modificateur <a href='https://w3schools.sinsixx.com/jsref/jsref_regexp_modifier_gi.asp.htm'>gi</a> est utilisé pour effectuer une recherche insensible à la casse de toutes les occurrences d'une expression régulière dans une chaîne. </p>
 </div></div>
 <div>
 Regex:
@@ -122,53 +130,77 @@ $( document ).ready(function() {
   });
 });
 </script>
+
 {% endtab %}
-{% tab Frequently Asked Questions %}
+{% endtabs %}
 
-{% détails Comment puis-je filtrer les adresses e-mail spécifiques à la boîte de réception lors de la segmentation ? %}
+## Foire aux questions
 
-Utilisez le filtre d'adresse de courriel, définissez-le à "correspond à l'expression régulière". Référez la regex pour les adresses emails, <font color="red">[a-zA-Z0-9.+_-]+ </font>@<font color="blue">[a-zA-Z0-9.-]+</font>\.<font color="green">[a-zA-Z.-]+</font> où:
-- <font color="red">[a-zA-Z0-9.+_-]+</font> est le début de l'adresse e-mail avant le caractère '@'. Donc le "nom" dans "nom@exemple.com".
-- <font color="blue">[a-zA-Z0-9.-]+</font> est la première partie du domaine. Donc l'"exemple" dans "nom@exemple.com".
-- <font color="green">[a-zA-Z.-]+</font> est la dernière partie du domaine. Donc le "com" dans "name@example.com".
+#### Comment puis-je filtrer les adresses e-mail spécifiques à la boîte de réception lors de la segmentation ?
 
-{% enddetails %}
+{% raw %}
+Utilisez le filtre d'adresse e-mail, définissez-le à `correspondances regex`. Faites ensuite référence à la regex pour les adresses e-mail:
 
-{% détails Comment puis-je filtrer les adresses e-mail associées à un domaine spécifique ? %}
+```
+[a-zA-Z0-9.+_-]+@[a-zA-Z0-9.-]+\.[a-zA-Z.-]+
+```
 
-Dites que vous voulez filtrer pour les e-mails se terminant par @braze.com. Vous utiliserez le filtre d'adresse e-mail, le définissez comme correspondant à regex, et saisissez "@braze.com" dans le champ.
+Nous pouvons briser cette regex pour les trois parties suivantes :
+
+- `[a-zA-Z0-9.+_-]+` est le début de l'adresse e-mail avant le caractère `@`. Donc le "nom" dans "nom@exemple.com".
+- `[a-zA-Z0-9.-]+` est la première partie du domaine. Donc l'"exemple" dans "nom@exemple.com".
+- `[a-zA-Z.-]+` est la dernière partie du domaine. Donc le "com" dans "name@example.com".
+
+{% endraw %}
+
+#### Comment filtrer les adresses e-mail associées à un domaine spécifique ?
+
+Dites que vous voulez filtrer pour les e-mails se terminant par "@braze.com". Vous utiliseriez le filtre d'adresse e-mail, définissez-le à `correspondances regex`et entrez "@braze.com" dans le champ regex. Il en va de même pour tout autre domaine de messagerie.
 
 ![image1]({% image_buster /assets/img/regex/regeximg1.png %})
 
-{% enddetails%}
+#### Comment puis-je utiliser les chaînes de nombre de filtre pour les valeurs de †x ou de <unk> x?
 
-{% détails Comment puis-je utiliser des expressions rationnelles sur des chaînes de nombres pour filtrer les valeurs †x ou <unk> x? %}
-Si vous recherchez des valeurs __†x__, la regex à utiliser serait __^([x-y]|\d{z, )$__ où x-y est l'intervalle des nombres (0-9) du premier chiffre, et z est le plus le nombre de chiffres de x.<br>__Example__<br> Pour les valeurs de †50, la regex sera alors ^(\[5-9\]\[0-9\]|\d{3,})$
+Si vous recherchez des valeurs supérieures ou égales à (<unk> ) x, utilisez les expressions régulières suivantes :
 
-Si vous recherchez des valeurs __<unk> x__, la regex serait __^([x-y]|[a-b])$__ où x-y est l'intervalle de nombres (0-9) du premier chiffre, et a-b est une limite inférieure de x.<br>__Example__<br> Pour les valeurs de la valeur "number@@050, la regex sera alors ^(\[5-9\]\[0-9\]|\[0-4\]\[0-9\])$
-{% enddetails %}
-{% details Comment filtrer les attributs personnalisés qui commencent par une chaîne spécifique ? %}
-Utilisez le caractère __^__ pour indiquer par quoi commence la chaîne de caractères et entrez le nom que vous essayez de spécifier.
+```
+^([x-y]|\d{z<unk> )$
+```
 
-__Exemple__<br> Si vous essayez de cibler les utilisateurs qui vivent dans des villes commençant par "San", votre regex serait __^San \w__. Dans un tel cas, vous cibliez avec succès les utilisateurs de villes telles que San Francisco, San Diego, San Jose, etc.
+Où `x-y` est la plage de nombres (0-9) du premier chiffre, et `z` est le plus le nombre de chiffres de x. Par exemple, pour les valeurs supérieures ou égales à 50, la regex serait alors `^([5-9][0-9]|\d{3,})$`.
+
+Si vous recherchez des valeurs inférieures ou égales à (<unk> ) x, utilisez les expressions régulières suivantes :
+
+```
+^([x-y]|[a-b])$
+```
+
+Où `x-y` est la plage de nombres (0-9) du premier chiffre, et `a-b` est la plage limite inférieure de x. Par exemple, pour des valeurs inférieures ou égales à 50, le regex serait alors `^([5-9][0-9]|[0-4][0-9])$`.
+
+#### Comment filtrer les attributs personnalisés qui commencent par une chaîne spécifique ?
+
+Utilisez le symbole caret (`^`) pour indiquer par quoi commence la chaîne de caractères puis entrez le nom de l'attribut personnalisé que vous voulez spécifier.
+
+Par exemple, si vous essayez de cibler les utilisateurs qui vivent dans des villes qui commencent par "San", votre regex serait `^San \w`. Avec ce regex, vous cibliez avec succès des utilisateurs de villes comme San Francisco, San Diego, San Jose, et ainsi de suite.
 
 ![image2]({% image_buster /assets/img/regex/regeximg2.png %})
-{% enddetails %}
-{% details How to filter for certain phone numbers with regex %}
 
-Avant d'utiliser regex pour filtrer les numéros de téléphone, veuillez prendre note que les numéros enregistrés pour les profils d'utilisateur devraient déjà être dans un [E. 64 format](https://en.wikipedia.org/wiki/E.164) comme spécifié dans notre [documentation]({{site.baseurl}}/user_guide/message_building_by_channel/sms/phone_numbers/).
+#### Comment filtrer les numéros de téléphone spécifiques?
 
-En supposant que les numéros de téléphone américains, la regex que vous voulez utiliser est au format __1? d\d\d\d\d\d\d\d\d\d\d__, où chaque "\d" est un chiffre que vous voulez spécifier - dont les 3 premiers seraient l'indicatif régional.
+Avant d'utiliser regex pour filtrer les numéros de téléphone, rappelez-vous que les numéros enregistrés pour les profils d'utilisateur doivent être dans [E. 64 format](https://en.wikipedia.org/wiki/E.164), comme spécifié dans [les numéros de téléphone de l'utilisateur]({{site.baseurl}}/user_guide/message_building_by_channel/sms/phone_numbers/user_phone_numbers/).
 
-De même, le format de __numéros de téléphone au Royaume-Uni__ est __^\+4\d\d\d\d\d\d\d\d\d\d\d\d__ et tout autre pays serait l'indicatif de pays respectif __suivi du nombre nécessaire de caractères "\d" pour chaque chiffre restant__. Donc, dans le cas de la Lituanie avec le code pays 3, leur regex serait __^\+3\d\d\d\d\d\d\d\d\d\d\d\d\d.__
+En supposant que vous recherchez des numéros de téléphone américains, utilisez le format regex `1? d\d\d\d\d\d\d\d\d\d\d\d`, où chaque répétition de `\d` est un chiffre que vous voulez préciser. Les trois premiers chiffres sont l'indicatif régional.
 
-__Exemple__<br> Supposons que vous vouliez filtrer les utilisateurs par numéro de téléphone pour un indicatif régional spécifique, 718. Utilisez le filtre de numéro de téléphone, définissez-le à "correspond à regex", et entrez __^1?718\d\d\d\d\d\d\d\d__
+De même, le format des numéros de téléphone au Royaume-Uni est `^\+4\d\d\d\d\d\d\d\d\d\d\d\d`. Tout autre pays serait le code de pays respectif, suivi du nombre nécessaire de `\d` répétitions pour chaque chiffre restant. Donc, dans le cas de la Lituanie avec un code pays de "3", leur regex serait `^\+3\d\d\d\d\d\d\d\d\d\d`.
+
+Par exemple, disons que vous voulez filtrer les utilisateurs par numéro de téléphone pour un indicatif régional spécifique, "718". Utilisez le filtre de numéro de téléphone, définissez-le à `correspond à regex`, et entrez les regex suivants :
+
+```
+^1?718\d\d\d\d\d\d\d
+```
 
 ![image3]({% image_buster /assets/img/regex/regeximg3.png %})
-{% enddetails %}
-<br><br>
-{% endtab %}
-{% endtabs %}
 [cheatsheet]: {% image_buster /assets/download_file/regex-cheatsheet.pdf %} [dummydata]: {% image_buster /assets/download_file/regex-dummy-data.rtf %}
+
 
 [regex]: https://regex101.com/
