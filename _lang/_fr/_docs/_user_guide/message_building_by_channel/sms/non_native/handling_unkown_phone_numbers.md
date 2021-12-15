@@ -12,7 +12,7 @@ channel:
 
 Une fois que vous aurez mis en place un SMS avec Braze, vous pourrez recevoir des messages d'utilisateurs inconnus. Noté ci-dessous les étapes par lesquelles un utilisateur et un numéro non identifiés sont traités.
 
-Braze peut créer automatiquement un utilisateur lorsqu'un utilisateur avec un nouveau numéro de téléphone répond avec un `START` ou `STOP` (ou toute autre variation de ces mots-clés).  Lors de la création de l'utilisateur, Braze définira son champ de téléphone avec le numéro [E.164][e.164] fourni par notre fournisseur de SMS.  De plus, l'alias d'utilisateur [][ualink] ('phone') sera défini avec la même valeur.<br><br>Les clients peuvent utiliser l'objet [Attributs utilisateur][uaolink] en tandem avec le [Point d'extrémité de traquage][telink] pour trouver des utilisateurs en fonction de leur alias et définir un `external_id`.
+Braze peut créer automatiquement un utilisateur lorsqu'un utilisateur avec un nouveau numéro de téléphone répond avec un `START` ou `STOP` (ou toute autre variation de ces mots-clés).  Lors de la création de l'utilisateur, Braze définira son champ de téléphone avec le numéro [E.164][e.164] fourni par notre fournisseur de SMS.  De plus, l'alias utilisateur [][ualink] ('phone') sera défini avec la même valeur.<br><br>Les clients peuvent utiliser l'objet [attributs utilisateur][uaolink] en tandem avec le [point de terminaison de piste][telink] pour trouver des utilisateurs en fonction de leur alias et définir un `external_id`.
 
 ## Opt-in/out et le workflow personnalisé de mots clés pour les numéros inconnus
 
@@ -29,7 +29,7 @@ Braze adresse automatiquement un numéro inconnu de l'une des trois façons suiv
   * Braze ignore le message texte et ne fait rien.
 
 {% alert important %}
-Si vous souhaitez activer cette fonctionnalité, veuillez contacter votre Responsable d'intégration ou Responsable du Service Clientèle.
+Si vous souhaitez activer cette fonctionnalité, veuillez contacter votre gestionnaire d'intégration ou votre gestionnaire de succès client.
 {% endalert %}
 
 [ualink]: {{site.baseurl}}/api/objects_filters/user_alias_object/
