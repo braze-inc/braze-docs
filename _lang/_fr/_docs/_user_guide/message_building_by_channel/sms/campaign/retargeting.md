@@ -26,7 +26,7 @@ Les utilisateurs peuvent être filtrés quand ils ont reçu un SMS pour la derni
 
 __Filtrer par le dernier SMS reçu__<br> !\[Filtre 1\]\[2\]
 
-__Filtrer par messages reçus de la campagne SMS__<br> Filtre les utilisateurs qui ont reçu un message d'une campagne SMS spécifique. Avec ce filtre, vous avez également la possibilité de filtrer ceux qui n'ont pas reçu les messages d'une campagne SMS. <br> !\[Filtre 2\]\[1\]
+__Filtrer par les messages reçus de la campagne SMS__<br> Filtre les utilisateurs qui ont reçu un message d'une campagne SMS spécifique. Avec ce filtre, vous avez également la possibilité de filtrer ceux qui n'ont pas reçu les messages d'une campagne SMS. <br> !\[Filtre 2\]\[1\]
 
 ### Déclencher les messages lorsque les utilisateurs reçoivent des SMS
 
@@ -46,11 +46,11 @@ Filtrer pour la récurrence d'un utilisateur répondant à votre programme SMS. 
 
 Les messages peuvent être déclenchés lorsque les utilisateurs envoient des messages entrants en fonction de catégories de mots clés (l'utilisateur a envoyé n'importe lequel des mots-clés) ou d'autres mots-clés (l'utilisateur a envoyé un mot clé qui ne tombe pas dans l'une des catégories existantes). Ces déclencheurs sont définis dans l'étape de livraison du constructeur de campagne.
 
-__Déclencher par catégorie de mots-clés entrant__<br> !\[picture\]\[7\]{: style="margin-top:10px;"}
+__Déclencher par mot clé entrant__<br> !\[picture\]\[7\]{: style="margin-top:10px;"}
 
-__Déclencher par les mots-clés Arbitraires__<br> Note lors du déclenchement d'un message sur une réponse par mot clé « Autre », vous aurez la possibilité d'évaluer le corps du mot clé sur une correspondance de texte exacte. Cette correspondance suit les mêmes règles que celles indiquées ci-dessus : seul le message __exact, à mot unique__ sera traité (cas _insensible_). Un mot clé envoyé de `Bonjour le Brésil !` ne correspond pas aux critères indiqués dans l'exemple ci-dessous. !\[picture\]\[8\]{: style="margin-top:10px;"}
+__Trigger by arbitrary keywords__<br> Note when triggering a message on an "Other" keyword response, you will have the opportunity to evaluate the keyword body on an exact text match. Cette correspondance suit les mêmes règles que celles indiquées ci-dessus : seul le message __exact, à mot unique__ sera traité (cas _insensible_). Un mot clé envoyé de `Bonjour le Brésil !` ne correspond pas aux critères indiqués dans l'exemple ci-dessous. !\[picture\]\[8\]{: style="margin-top:10px;"}
 
-__Mots-clés de modèle__<br> Lors du déclenchement d'une campagne ou d'une étape de Canvas sur un SMS ou un MMS entrants, vous pouvez éventuellement modéliser le texte et/ou les pièces jointes que votre utilisateur a envoyées dans le corps de votre campagne ou Canvas avec Liquid. Cela vous permettra d'accéder à la réponse de l'utilisateur que vous pourrez ensuite inclure dans votre réponse, appliquer la logique conditionnelle à ou à tout autre chose que vous pouvez faire avec Liquid.
+__Mots clés du modèle__<br> Lors du déclenchement d'une campagne ou d'une étape de Canvas sur un SMS ou un MMS entrants, vous pouvez éventuellement modéliser le texte et/ou les pièces jointes que votre utilisateur a envoyées dans le corps de votre campagne ou Canvas avec Liquid. Cela vous permettra d'accéder à la réponse de l'utilisateur que vous pourrez ensuite inclure dans votre réponse, appliquer la logique conditionnelle à ou à tout autre chose que vous pouvez faire avec Liquid.
 
 \[picture\]\[16\]{: style="max-width:80%;"} <br><br> !\[picture\]\[17\]{: style="max-width:80%;"}
 [1]: {% image_buster /assets/img/sms/filter1.png %} [2]: {% image_buster /assets/img/sms/filter2. ng %} [3]: {% image_buster /assets/img/sms/trigger.png %} [6]: {% image_buster /assets/img/sms/retargeting1. ng %} [7]: {% image_buster /assets/img/sms/retargeting2.png %} [8]: {% image_buster /assets/img/sms/retargeting3. ng %} [16]: {% image_buster /assets/img/keyword_example1.jpg %} [17]: {% image_buster /assets/img/keyword_example2.jpg %}
