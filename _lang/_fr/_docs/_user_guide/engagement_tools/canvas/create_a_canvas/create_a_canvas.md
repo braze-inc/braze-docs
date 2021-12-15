@@ -9,7 +9,7 @@ tool: Toile
 
 # Créer une toile
 
-Suivez ce guide, ou consultez notre [cours LAB](http://lab.braze.com/quick-overview-canvas-setup)!
+> Cet article de référence couvre les étapes nécessaires à la création, à la maintenance et à l’essai d’un Canvas. Suivez ce guide, ou consultez notre [cours de Canvas LAB](http://lab.braze.com/quick-overview-canvas-setup)!
 
 ## Étape 1 : Créer une nouvelle toile
 
