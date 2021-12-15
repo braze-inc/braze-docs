@@ -12,7 +12,7 @@ tool:
 
 # A/B testing with random buckets
 
-> This article will cover the concept of A/B testing and Variants, how you can use them in your Braze campaigns, as well as how to assign and implement random bucket numbers to help gather useful data.
+> This article will cover the concept of A/B testing and variants, how you can use them in your Braze campaigns, as well as how to assign and implement random bucket numbers to help gather useful data.
 
 A random bucket number is a user attribute that can be used to create uniformly distributed segments of random users. These segments can be leveraged to conduct A/B tests for campaign variants over an extended period of time.
 
@@ -57,6 +57,16 @@ Create a campaign. On the **Target Users** page, select a segment of recipients.
 
 [Duplicate][18] your initial campaign variant and modify it accordingly. For instance, you may decide to change the send time or the combination of messaging channels used. When targeting users, select the segment you wish to receive this new campaign variant. Repeat this step to create your remaining campaign variants. Your control group should not receive any variant of this campaign.
 
+### Modifying campaign variant percentages
+
+In a campaign, if a variant percentage is modified after initial creation, users can be redistributed to other variants.
+
+Users are randomly assigned to a particular variant prior to receiving the campaign for the first time. Each successive time the campaign is received (or the user re-enters a Canvas variant), they will receive the same variant unless the variant percentages are modified.
+
+If the variant percentages change, users may be redistributed to other variants. Users then stay in these variants until percentages are modified again. Users will only be redistributed for the variants that were edited. For example, if you only changed Variant A and Variant B, then users in your third Variant C would not be redistributed because Variant C's variant percentage wasn't changed.
+
+Control groups remain consistent if the variant percentage is unchanged. Users who previously received messages cannot enter the control group on a later send, nor can any user in the control group ever receive a message.
+
 ## Step 3: Build additional messages
 
 If you wish, you can continue to send campaign variants to your random bucket segments over time by repeating step 2. One example use case is to test the difference between sending one group 2 notifications in one week, compared to 1. 
@@ -80,12 +90,6 @@ You can test multiple messaging flows over a period of time. For instance, you c
 ### Messaging channels
 
 You can test the effectiveness of different message channel combinations. For instance, you can compare the impact of using just one email versus an email combined with a push.
-
-### Campaign variant percentages
-
-In a campaign, if a variant percentage is modified after initial creation, you will find that the users may be redistributed to other variants.
-
-Initially, users are randomly assigned a particular variant before receiving a campaign for the first time. From then on, each successive time the campaign is received (or the user re-enters a campaign variant), they will receive the same variant unless the variant percentages are modified. If the variant percentages change, users may be redistributed to other variants. Users stay in these variants until percentages are modified again. Control groups remain consistent if the variant percentage is unchanged. Users who previously received messages cannot enter the control group on a later send, nor can any user in the control group ever receive a message.
 
 
 [1]: {% image_buster /assets/img_archive/random_buckets_filter.png %}
