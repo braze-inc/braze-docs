@@ -3,7 +3,7 @@ nav_title: Construire des campagnes
 article_title: Construire des campagnes
 layout: dev_guide
 guide_top_header: "Construire des campagnes"
-guide_top_text: "Cette page d'accueil contient des ressources sur la construction de vos campagnes. Après avoir créé vos <a href='/docs/user_guide/engagement_tools/segments/'>segments</a>, utilisez les ressources ici pour configurer votre campagne et en apprendre plus sur les différentes options disponibles."
+guide_top_text: "Cette page d'accueil contient des ressources sur la construction de vos campagnes. Après avoir créé vos <a href='/docs/user_guide/engagement_tools/segments/'>segments</a>, utilisez les ressources ici pour configurer votre campagne et en apprendre plus sur les différentes options disponibles.<br><br>Nous vous recommandons également de consulter notre cours LAB <a href='https://lab.braze.com/campaign-setup-delivery-targeting-conversions'>Configuration de la Campagne</a>."
 page_order: 2
 tool: Campagnes
 page_type: atterrissage
