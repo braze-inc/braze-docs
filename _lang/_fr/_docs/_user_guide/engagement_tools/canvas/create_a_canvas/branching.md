@@ -9,7 +9,7 @@ tool: Toile
 
 # Branchement en cours
 
-> cet article de référence couvre ce qu'est la branche, et comment il peut être utile dans vos toiles.
+> Cet article de référence couvre ce qu'est la branche, et comment il peut être utile dans vos Canvases. Vous pouvez également consulter notre [cours LAB Canvas](https://lab.braze.com/canvas-course) pour en savoir plus sur le branchement.
 
 ## Créer une branche
 
