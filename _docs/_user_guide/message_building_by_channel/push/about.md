@@ -9,7 +9,7 @@ channel:
 
 ---
 
-# What are push messages?
+# About push notifications
 
 > This reference article gives a brief overview of push, provides resources to get started with push messages, and notes some regulations.
 

@@ -83,9 +83,9 @@ We now support targeting users who have foreground push enabled on their device 
 
 For more information, refer to [Supported personalization tags]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/supported_personalization_tags/).
 
-### Understanding webhooks
+### About webhooks
 
-Webhooks are powerful, flexible tools—but they can be a bit confusing. If you're wondering what webhooks are and how you can use them in Braze, check out our new article on [Understanding webhooks]({{site.baseurl}}/user_guide/message_building_by_channel/webhooks/understanding_webhooks/).
+Webhooks are powerful, flexible tools—but they can be a bit confusing. If you're wondering what webhooks are and how you can use them in Braze, check out our new article on [About webhooks]({{site.baseurl}}/user_guide/message_building_by_channel/webhooks/understanding_webhooks/).
 
 ### Amazon Personalize
 
