@@ -8,7 +8,7 @@ channel:
   - SMS
 ---
 
-# About SMS
+# About SMS messages
 
 ![SMS about][picture]{: style="float:right;max-width:30%;margin-left:15px;border: 0;"}
 
