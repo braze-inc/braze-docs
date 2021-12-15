@@ -4,7 +4,7 @@ article_title: Administratif
 page_order: 2
 layout: en vedette
 guide_top_header: "Administratif"
-guide_top_text: "Cette section explique comment administrer votre tableau de bord Braze, y compris la configuration initiale pour les intégrations, l'administration du tableau de bord, la gestion des permissions des utilisateurs, et plus encore."
+guide_top_text: "Cette section explique comment administrer votre tableau de bord Braze, y compris la configuration initiale pour les intégrations, l'administration du tableau de bord, la gestion des permissions des utilisateurs, et plus encore.<br><br>En plus des sujets et des articles inclus dans cette section, nous vous recommandons également de consulter notre cours LAB <a href='https://lab.braze.com/admin-dashboard-management/'>Admin and Dashboard Management</a> qui couvre la façon de gérer l'accès des utilisateurs et les meilleures pratiques pour la maintenance du tableau de bord."
 description: "Cette section explique comment administrer votre tableau de bord Braze, y compris la configuration initiale pour les intégrations, l'administration du tableau de bord, la gestion des permissions des utilisateurs, et plus encore."
 guide_featured_title: "Sujets populaires"
 guide_featured_list:
