@@ -10,15 +10,15 @@ description: "Cet article de référence décrit les attributs personnalisés et
 
 Les attributs personnalisés sont une collection de traits uniques de vos utilisateurs. Les attributs personnalisés sont les meilleurs pour stocker des attributs à propos de vos utilisateurs, ou des informations sur les actions à faible valeur dans votre application. Vous devez garder à l'esprit que nous ne stockons pas les informations de séries temporelles pour les attributs personnalisés, de sorte que vous ne serez pas en mesure d'obtenir des graphiques basés sur eux comme vous le pouvez pour des événements personnalisés.
 
-> Nous obtenons que ces attributs personnalisés peuvent être confus, alors lisez attentivement et consultez notre cours LAB sur [Événements personnalisés & Attributs](http://lab.braze.com/custom-events-and-attributes)!
-
-## Stockage d'attributs personnalisés
-
-Toutes les données stockées sur le **Profil utilisateur**, y compris les données d'attributs personnalisés, sont conservées indéfiniment tant que chaque profil est actif.
+{% alert tip %}
+Nous obtenons que les attributs personnalisés peuvent être confus. Pour en savoir plus sur l'utilisation d'attributs personnalisés dans vos stratégies de messagerie, consultez notre cours LAB [Événements et attributs personnalisés](http://lab.braze.com/custom-events-and-attributes)!
+{% endalert %}
 
 ## Paramétrage des attributs personnalisés
 
 Voici la liste des méthodes utilisées par les différentes plateformes pour définir des attributs personnalisés.
+
+{% details Expand for documentation by platform %}
 
 - [Android et FireOS]({{site.baseurl}}/developer_guide/platform_integration_guides/android/analytics/setting_custom_attributes/)
 - [iOS]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/analytics/setting_custom_attributes/)
@@ -28,6 +28,12 @@ Voici la liste des méthodes utilisées par les différentes plateformes pour d�
 - [Univers Windows]({{site.baseurl}}/developer_guide/platform_integration_guides/windows_universal/analytics/setting_custom_attributes/)
 - [Xamarin]({{site.baseurl}}/developer_guide/platform_integration_guides/xamarin/analytics/#setting-custom-attributes)
 - [Roku]({{site.baseurl}}/developer_guide/platform_integration_guides/roku/analytics/setting_custom_attributes/)
+
+{% enddetails %}
+
+## Stockage d'attributs personnalisés
+
+Toutes les données stockées sur le **Profil utilisateur**, y compris les données d'attributs personnalisés, sont conservées indéfiniment tant que chaque profil est actif.
 
 ## Types de données d'attributs personnalisés
 
