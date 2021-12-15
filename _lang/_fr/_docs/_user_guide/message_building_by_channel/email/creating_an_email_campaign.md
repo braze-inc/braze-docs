@@ -13,9 +13,15 @@ channel:
 
 > Cet article traite de la façon de créer une campagne d'email en Brésil. Ici, nous aborderons les étapes et les meilleures pratiques sur la façon de composer votre message, de prévisualiser votre contenu et de planifier votre campagne.
 
-Les messages électroniques sont parfaits pour diffuser du contenu à vos utilisateurs selon leurs conditions. Ce sont également d'excellents outils pour réengager les utilisateurs qui ont même désinstallé votre application. Envoyer des messages électroniques personnalisés et personnalisés améliorera l'expérience de vos utilisateurs et aidera vos utilisateurs à tirer le meilleur parti de votre application.
+Les messages électroniques sont parfaits pour diffuser du contenu à vos utilisateurs selon leurs conditions. Ce sont également d'excellents outils pour réengager les utilisateurs qui ont même désinstallé votre application. Envoyer des messages électroniques personnalisés et personnalisés améliorera l'expérience de vos utilisateurs et aidera vos utilisateurs à tirer le meilleur parti de votre application. Pour voir des exemples de campagnes de courriel, consultez notre [Études de cas](https://www.braze.com/customers).
 
-Pour voir des exemples de campagnes de courriel, consultez notre [Études de cas][9].
+{% alert tip %}
+Si c'est la première fois que vous créez une campagne de courriel, nous vous recommandons vivement de consulter les cours LAB suivants :<br>
+
+- [Courriel](https://lab.braze.com/messaging-channels-email)
+- [Projet: Construire un programme de marketing par e-mail de base](https://lab.braze.com/project-build-a-basic-email-marketing-program)
+
+{% endalert %}
 
 ## Étape 1 : Créer une nouvelle campagne
 
@@ -202,7 +208,6 @@ Sur la page du **Rapport de rétention** , vous pouvez exécuter divers rapports
 Sur la page **Rapport d'entonnoir** , vous pouvez analyser les trajets que vos clients prennent après avoir reçu votre campagne. Si votre campagne utilise un groupe de contrôle ou plusieurs variantes, vous serez en mesure de comprendre comment les différentes variantes ont eu un impact sur l'entonnoir de conversion à un niveau plus granulaire, et optimiser sur la base de ces données. [En savoir plus]({{site.baseurl}}/user_guide/engagement_tools/campaigns/testing_and_more/campaign_funnel_report/).
 [3]: {% image_buster /assets/img_archive/choose_email_creation.png %} [5]: {% image_buster /assets/img_archive/targetsegment_email_new. ng %} [6]: {% image_buster /assets/img_archive/confirm_email.png %} [14]: {% image_buster /assets/img/email. ng %} [15]: {% image_buster /assets/img_archive/newEmailTest.png %} [17]: {% image_buster /assets/img_archive/email_click_results_heatmap. if %} [19]: {% image_buster /assets/img_archive/new_campaign_email.png %}
 
-[9]: https://www.braze.com/customers
 [10]: {{site.baseurl}}/user_guide/message_building_by_channel/email/creating_an_email_template/#creating-an-email-template
 [10]: {{site.baseurl}}/user_guide/message_building_by_channel/email/creating_an_email_template/#creating-an-email-template
 [13]: {{site.baseurl}}/user_guide/intelligence/intelligent_selection/
