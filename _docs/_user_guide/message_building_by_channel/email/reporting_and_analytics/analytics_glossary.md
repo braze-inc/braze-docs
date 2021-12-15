@@ -45,7 +45,7 @@ glossaries:
     description: The percentage of emails delivered that were marked or otherwise designated as "spam." Braze automatically unsubscribes users that marked an email as spam, and those users won’t be targeted by future emails.
     calculation: (Marked as Spam) / (Sends)
   - name: Unique Opens
-    description: The total number of delivered emails that have been opened by a single user at least once. This is tracked over a 7 day period for Email.
+    description: The total number of delivered emails that have been opened by a single user or machine at least once. This is tracked over a 7 day period for Email.
     calculation: (Unique Opens) / (Deliveries)
   - name: "Unique Opens % or Unique Open Rate"
     description: The percentage of delivered emails that have been opened by a single user at least once. This is tracked over a 7 day period for Email.
@@ -77,7 +77,7 @@ glossaries:
     description: Includes emails that are opened without user engagement by Apple devices with <a href='/docs/user_guide/message_building_by_channel/email/mpp/'>Mail Privacy Protection</a> enabled. <br> This metric is tracked starting November 11, 2021 for Sendgrid and December 2, 2021 for Sparkpost.
     calculation: Count
   - name: Other Opens
-    description: Includes emails that haven't been identified as "Machine Opens" such as when a user opens an email. 
+    description: Includes emails that haven't been identified as "Machine Opens" such as when a user opens an email. If a user opens an email once (or more) after a machine open event from a non-Apple Mail inbox, then the amount of times that the user opens the email is calculated towards "Other Opens" and only once towards "Unique Opens". 
     calculation: Count
 
 ---
