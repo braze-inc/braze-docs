@@ -35,7 +35,7 @@ Il est important de noter que __lorsque vous passez la limite de caractères de 
 Indépendamment du type d'encodage, chaque SMS envoyé par Braze a une limite de 10 segments et est compatible avec le [modèle Liquid]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/using_liquid/), [Contenu connecté]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/connected_content/), Emojis, et liens.
 
 {% tabs %}
-{% tab GSM-7 Encoding %}
+{% tab GSM-7 encoding %}
 | Nombre de caractères   | Combien de segments ? |
 | ---------------------- | --------------------- |
 | 0 à 160 caractères     | 1 segment             |
@@ -50,7 +50,7 @@ Indépendamment du type d'encodage, chaque SMS envoyé par Braze a une limite de
 | 1378 - 1530 caractères | 10 segments           |
 {: .reset-td-br-1 .reset-td-br-2}
 {% endtab %}
-{% tab UCS-2 Encoding %}
+{% tab UCS-2 encoding %}
 | Nombre de caractères | Combien de segments ? |
 | -------------------- | --------------------- |
 | 0 à 70 caractères    | 1 segment             |
@@ -75,7 +75,7 @@ Indépendamment du type d'encodage, chaque SMS envoyé par Braze a une limite de
 - __Limite de segment par message__
     - Pas plus de __10 segments__ de messages ne peuvent être envoyés en un seul message SMS Braze.
     - Ces 10 segments seront limités à 1530 caractères (encodage GSM-7) ou 670 caractères (encodage UCS-2).<br><br>
-- __Compatible avec les modèles liquides, Contenus connectés, Emojis, et Liens__
+- __Compatible avec le modèle Liquid, le contenu connecté, les émoticônes et les liens__
     - Les modèles de liquides et le contenu connecté peuvent mettre votre message à risque de dépasser la limite de caractères de votre type d'encodage. Vous pouvez utiliser le filtre [tronquer les mots](https://help.shopify.com/en/themes/liquid/filters/string-filters#truncatewords) pour limiter le nombre de mots que votre Liquid pourrait apporter au message.
     - Les émojis n'ont pas de nombre de caractères standard à travers tous les émojis, donc assurez-vous de vérifier que vos messages sont segmentés et affichés correctement.
     - Les liens peuvent utiliser de nombreux caractères, ce qui peut donner lieu à plus de segments de message que prévu. Bien que l'utilisation de raccourcisseurs de liens soit possible, ils sont mieux utilisés avec des codes courts. Veuillez visiter notre [FAQ SMS]({{site.baseurl}}/user_guide/message_building_by_channel/sms/faqs/) pour plus d'informations.<br><br>
