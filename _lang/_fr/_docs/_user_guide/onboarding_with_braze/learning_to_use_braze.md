@@ -8,17 +8,17 @@ description: "Cette page comprend plusieurs chemins de lecture qui vous permettr
 
 # Apprendre à utiliser Braze
 
-Braze est un outil complexe qui peut vous permettre d'envoyer un éventail incroyable de campagnes qui amènent vos clients et utilisateurs par le biais de professionnels, tailored, et des trajets personnalisés qui non seulement vous donnent les résultats _que vous_ souhaitez, mais les résultats _ils_ veulent. Pas de surprises, pas de contact non désiré, pas de contact ennuyeux - simplement en faisant savoir à vos clients que vous vous souciez de ce qu'ils attendent de vous.
+Braze est un outil complexe qui peut vous permettre d'envoyer un éventail incroyable de campagnes qui amènent vos clients et utilisateurs par le biais de professionnels, tailored, et des trajets personnalisés qui non seulement vous donnent les résultats _que vous_ souhaitez, mais les résultats _ils_ veulent. Pas de surprises, pas de contact non désiré, pas de contact gênant, tout simplement en faisant savoir à vos clients que vous vous souciez de ce qu'ils attendent de vous.
 
-En raison de la belle complexité de Braze, nous vous recommandons les différents chemins de lecture (décrits ci-dessous) qui vous permettront d'utiliser au mieux notre plate-forme à votre avantage. Il n'y a pas besoin de les suivre exactement - répondez à vos besoins!
+En raison de la belle complexité de Braze, nous vous recommandons les différents chemins de lecture (décrits ci-dessous) qui vous permettront d'utiliser au mieux notre plate-forme à votre avantage. Il n'y a pas besoin de les suivre exactement — répondez à vos besoins !
 
 {% alert tip %}
-N'oubliez pas - vous pouvez toujours [accéder et suivre des cours LAB](https://lab.braze.com) une fois que vous avez accès à la plateforme Braze ! Nous vous le recommandons vivement en conjonction avec ces chemins de lecture!
+N'oubliez pas que vous pouvez toujours accéder et suivre des [cours LAB](https://lab.braze.com) une fois que vous avez accès à la plateforme Braze ! Nous vous recommandons vivement (surtout [Braze 101](https://lab.braze.com/braze-101)) en conjonction avec ces chemins de lecture !
 {% endalert %}
 
 Choisissez parmi les chemins ci-dessous pour répondre à vos besoins et obtenir des lectures !
 
-_Ces chemins de lecture supposent que vous avez déjà terminé votre intégration et configuré pour vos canaux de messagerie, de sorte que les lectures dans l'embarquement avec Braze section ne sont pas incluses._
+> Ces chemins de lecture supposent que vous avez déjà terminé votre intégration et configuré pour vos canaux de messagerie, de sorte que les lectures dans l'embarquement avec Braze section ne sont pas incluses.
 
 ## Débutant du Braze
 
