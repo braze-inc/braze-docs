@@ -8,6 +8,8 @@ description: "Cet article de référence couvre le journal Event User Log, qui p
 
 # Onglet du journal de l'utilisateur de l'événement
 
+> Cet article de référence couvre le journal des utilisateurs d'événement, y compris comment accéder et utiliser les journaux pour le dépannage. En plus de cet article, nous vous recommandons également de consulter notre cours LAB [Assurance Qualité et Outils de débogage](https://lab.braze.com/quality-assurance-and-debugging-tools-in-the-dashboard/) qui couvre la façon d'utiliser le journal des utilisateurs d'événements pour effectuer votre propre dépannage et débogage.
+
 Le journal des utilisateurs des événements peut vous aider à vous décomposer, déboguer ou résoudre des problèmes dans votre intégration de Braze. Cet onglet vous donne un journal d'erreurs qui détaille le type d'erreur, à quelle application il est associé, quand cela s'est produit, et souvent une occasion de voir les données brutes qui lui sont associées.
 
 Pour trouver facilement vos logs, vous pouvez filtrer en fonction de :
