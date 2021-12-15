@@ -4,7 +4,7 @@ article_title: Courriel
 page_order: 1
 layout: en vedette
 guide_top_header: "Courriel"
-guide_top_text: "Grâce à Braze Email, vous pouvez créer des messages électroniques personnalisés et personnalisés dans les campagnes ou Canvas qui attireront l'attention de votre utilisateur rapidement. Consultez les articles ci-dessous pour en savoir plus."
+guide_top_text: "Avec le courriel chez Braze, vous pouvez créer des messages de courriel entièrement personnalisés et personnalisés dans les campagnes ou Canvas qui attireront l'attention de votre utilisateur rapidement. Consultez les articles ci-dessous pour en savoir plus. <br><br>Nous vous recommandons également de suivre notre cours <a href='https://lab.braze.com/messaging-channels-email'>Email LAB cours</a> pour en savoir plus sur les cas d'utilisation des e-mails. voir des exemples du monde réel, et comprendre comment tirer parti du courrier électronique dans une stratégie de messagerie multicanal."
 description: "Grâce à Braze Email, vous pouvez créer des messages électroniques personnalisés et personnalisés dans les campagnes ou Canvas qui attireront l'attention de votre utilisateur rapidement. Consultez les articles ci-dessous pour en savoir plus."
 channel:
   - Email
