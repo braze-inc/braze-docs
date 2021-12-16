@@ -1,13 +1,13 @@
 ---
-nav_title: Comprendre les Webhooks
-article_title: Comprendre les Webhooks
+nav_title: À propos des Webhooks
+article_title: À propos des Webhooks
 page_order: 0
 channel:
   - webhooks
 description: "Cet article de référence couvre les bases des webhooks."
 ---
 
-# Comprendre les Webhooks
+# À propos des Webhooks
 
 > Cet article de référence couvre les bases des webhooks pour vous donner les blocs de construction dont vous avez besoin pour créer vos propres crochets. Vous cherchez des étapes sur la façon de créer un webhook au Brésil? Reportez-vous à [Créer un webhook][1].
 
