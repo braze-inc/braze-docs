@@ -7,9 +7,9 @@ description: "Lors de la planification d'une campagne, vous pouvez utiliser Inte
 
 # Timing Intelligent
 
-Pour en savoir plus sur la livraison de la campagne, consultez notre [campagne mise en place du cours LAB](http://lab.braze.com/campaign-setup-delivery-targeting-conversions)!
+> Cet article explique comment implémenter le Timing Intelligent dans vos campagnes et Canvases. Pour plus de détails sur le Timing Intelligent et ses avantages, consultez notre cours [Intelligent Timing](https://lab.braze.com/intelligent-timing) LAB.
 
-> Lors de la planification d'une campagne, vous pouvez utiliser Intelligent Timing (précédemment Intelligent Delivery) pour envoyer votre message à chaque utilisateur lorsque Braze détermine qu'une personne est le plus susceptible de s'engager (ouvrir ou cliquer).
+Lorsque [planifiez une campagne]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/delivery_types/), vous pouvez utiliser Intelligent Timing (précédemment Intelligent Delivery) pour envoyer votre message à chaque utilisateur lorsque Braze détermine qu'une personne est le plus susceptible de s'engager (ouvrir ou cliquer).
 
 Braze calcule le temps d'envoi optimal basé sur une analyse statistique des interactions passées de votre utilisateur avec votre messagerie (sur une base par canal) et l'application. Pour activer le Timing intelligent, sélectionnez **Timing intelligent** sur la page **Livraison** lors de la création d'une campagne de livraison planifiée. Notez que cette fonctionnalité n'est pas disponible pour les campagnes basées sur l'action et déclenchées par API, et ne doit pas être utilisée avec [heures silencieuses]({{site.baseurl}}/user_guide/intelligence/faqs/#/#can-i-use-quiet-hours-in-my-intelligent-timing-campaign), [limitation de taux]({{site.baseurl}}/user_guide/intelligence/faqs/#can-i-use-intelligent-timing-and-rate-limiting), ou [campagnes de réchauffement IP]({{site.baseurl}}/user_guide/intelligence/faqs/#can-i-use-intelligent-timing-while-ip-warming).
 
