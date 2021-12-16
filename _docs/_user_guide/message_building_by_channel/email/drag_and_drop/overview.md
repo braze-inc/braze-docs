@@ -23,7 +23,7 @@ tool:
 
 Navigate to the email wizard and select your editing experience. Two editing options will be shown:
 
-- Select the __Drag & Drop Editor__ to select templates created using the Drag & Drop Editor.
+- Select the **Drag & Drop Editor** to select templates created using the Drag & Drop Editor.
 - Select the HTML Code Editor to use the existing editors and to see your existing email templates. <br><br>![Drag & Drop Editor Workflow][6]{: style="max-width:80%;"}
 
 {% alert tip %}
@@ -84,7 +84,7 @@ Inbox Vision is currently unavailable during this testing phase and will be made
 
 ### Auto width images
 
-Images added to your email will automatically be set to __auto width__. To adjust this setting, toggle off __auto width__ and adjust the width percentage as needed. 
+Images added to your email will automatically be set to **auto width**. To adjust this setting, toggle off **auto width** and adjust the width percentage as needed. 
 
 ![Drag & Drop Image Widths][2]
 
@@ -104,7 +104,7 @@ To adjust padding, scroll down to __Block Options__, and toggle __More Options__
 
 ![Drag & Drop Personalization][5]{: style="float:right;max-width:25%;margin-left:15px;"}
 
-Basic Liquid is supported in our Drag & Drop Editor. To add Liquid into your email, select __Personalization__ under __Design / Build__. 
+Basic Liquid is supported in our Drag & Drop Editor. To add Liquid into your email, select **Personalization** under **Design / Build**. 
 
 Here, you can add various personalization types such as default attributes, device attributes, custom attributes, and more! 
 

@@ -11,9 +11,9 @@ tool: Media
 
 # Drag & Drop Editor blocks
 
-Editor blocks are the various blocks available in the Drag & Drop Editor under the 'Content' section.  This section includes a series of tiles that represent the different kinds of content you can use in your message. More will become available in the future.
+Editor blocks are the various blocks available in the Drag & Drop Editor under the **Content** section.  This section includes a series of tiles that represent the different kinds of content you can use in your message. More blocks will become available in the future.
 
-To use them, drag one inside a column. It will auto-adjust to the column width.  Every content block has its owns settings, such as granular control on padding. The right-side panel automatically switches to a property panel for the selected content element.
+To use them, drag a content block inside a column. It will auto-adjust to the column width.  Every content block has its owns settings, such as granular control on padding. The right-side panel automatically switches to a property panel for the selected content element.
 
 ## Block types
 
@@ -37,7 +37,7 @@ Details for each block type are provided below.
 
 | properties | description |
 |---|---|
-| `Title`  | Select the heading style.  H1, H2, or H3 are available only. | 
+| `Title`  | Select the heading style. Only H1, H2, or H3 are available. | 
 |`Font Family`| The style to be used for your title|
 |`Font Size`| The size of your text |
 |`Text Color`| Modifies the color of the title|
@@ -69,10 +69,9 @@ Details for each block type are provided below.
 {: .reset-td-br-1 .reset-td-br-2}
 
 {% alert tip %}
-_Note about Auto Width_
-Automatic image resizing picks the best size for the image based on a combination of image width and available space in the layout:
+For `Auto Width`, automatic image resizing picks the best size for the image based on a combination of image width and available space in the layout:
 - Large images, wider than the available space, will be set at 100% width and will keep this ratio on mobile, using the entire device display width.
-- Small images, smaller than the available space, will use the image's natural size to avoid distortion effects or blurry pics.
+- Small images that are smaller than the available space will use the image's natural size to avoid distortion effects or blurry pictures.
 {% endalert %}
 
 ### Button
@@ -114,8 +113,8 @@ Automatic image resizing picks the best size for the image based on a combinatio
 |`Layout`| Either horizontal or vertical|
 |`Separator`| Add character(s) in between the menu options |
 |`Mobile menu`| Options to modify the icon size, color, and icon type when shown on a mobile device|
-|`Item padding`| If enabled, you can modify the padding by using either the + or - button or by inputting a specific number|
-|`All sides`| If 'item padding' is disabled, set a consistent padding number|
+|`Item padding`| If enabled, you can modify the padding by using either the **+** or **-** button or by inputting a specific number|
+|`All sides`| If `Item padding` is disabled, set a consistent padding number|
 {: .reset-td-br-1 .reset-td-br-2}
 
 ### Spacer
