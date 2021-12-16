@@ -9,7 +9,7 @@ description: "Cet article de référence traite du concept de limitation de taux
 
 # Limitation de fréquence et plafonnement de fréquence
 
-> Cet article de référence traite du concept de limitation de taux et de plafonnement de fréquence, et de la manière dont vous pouvez appliquer cette pression de commercialisation pour améliorer l'expérience des utilisateurs. <br> <br> Nous voulons tous que nos utilisateurs aient la meilleure expérience possible, avec limitation de débit et plafonnement de fréquence, vous pouvez vous assurer que vos utilisateurs reçoivent le message dont ils ont besoin et qu'aucun de ceux qu'ils n'ont pas.
+> Cet article de référence traite du concept de limitation de taux et de plafonnement de fréquence, et de la manière dont vous pouvez appliquer cette pression de commercialisation pour améliorer l'expérience des utilisateurs. <br> <br> Nous voulons tous que nos utilisateurs aient la meilleure expérience possible. Avec limitation de débit et plafonnement de fréquence, vous pouvez vous assurer que vos utilisateurs reçoivent le message dont ils ont besoin et qu'aucun de ceux qu'ils n'ont pas.
 
 ## Limitation de taux
 
@@ -164,9 +164,11 @@ __Ensuite, le comportement attendu est que :__
 
 ### Fréquence plafonnée par tag
 
-[Les règles de plafonnement de fréquence](#updated-frequency-capping-rules) peuvent être appliquées à des groupes d'applications en utilisant des balises spécifiques que vous avez appliquées à vos Campagnes/Canvases, vous permettant essentiellement de baser votre plafonnement de fréquence sur des groupes nommés sur mesure.
+[Les règles de plafonnement de fréquence](#updated-frequency-capping-rules) peuvent être appliquées à des groupes d'applications en utilisant des balises spécifiques que vous avez appliquées à vos campagnes et à vos Canvases, vous permettant de baser essentiellement votre plafonnement de fréquence sur des groupes nommés sur mesure.
 
-Vous pouvez combiner le plafonnement de fréquence régulier avec le plafonnement de fréquence par tags, comme indiqué ci-dessous.
+Avec le plafonnement de fréquence par tag, les règles peuvent être définies sur les balises principales et imbriquées, de sorte que Braze prendra en compte toutes les balises. Par exemple, si vous avez choisi d'utiliser la balise principale A à la limite de fréquence, Nous inclurons également des informations dans toutes les balises imbriquées (par exemple, les balises B et C) lors de la détermination de la limite.
+
+Vous pouvez également combiner le plafonnement de fréquence régulier avec le plafonnement de fréquence par balises comme indiqué ci-dessous.
 
 !\[Règle de plafonnement de fréquence\]\[12\]
 
@@ -185,7 +187,7 @@ Les toiles sont taguées au niveau de la Toile plutôt que de taguer par Step. A
 
 En cas de conflit de règles, la règle de limitation de fréquence la plus restrictive et la plus applicable sera appliquée à vos utilisateurs.
 
-!\[global\]\[11\]
+!\[Règles en conflit\]\[11\]
 
 Dans cet exemple, votre utilisateur ne recevra pas plus d'une campagne de notification push ou pas de Canvas avec le tag "promotionnel" dans une semaine donnée. parce que vous avez spécifié que les utilisateurs ne devraient pas recevoir plus d'une campagne de notification push ou Canvas pas de toutes les campagnes et étapes de Canvas . En d'autres termes, la règle de fréquence applicable la plus restrictive est la règle qui sera appliquée à un utilisateur donné.
 
