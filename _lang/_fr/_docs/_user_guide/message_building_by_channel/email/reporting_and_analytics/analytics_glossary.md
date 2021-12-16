@@ -55,7 +55,7 @@ glossaries:
     calculation: (Marqué comme Spam) / (Sends)
   - 
     name: Ouvertures uniques
-    description: Le nombre total d'e-mails livrés qui ont été ouverts par un seul utilisateur au moins une fois. Ce suivi est effectué sur une période de 7 jours pour l'Email.
+    description: Le nombre total de courriels livrés qui ont été ouverts par un seul utilisateur ou une seule machine au moins une fois. Ce suivi est effectué sur une période de 7 jours pour l'Email.
     calculation: (Ouverts uniques) / (Livraisons)
   - 
     name: "Ouverture unique % ou Taux d'ouverture unique"
@@ -98,7 +98,7 @@ glossaries:
     calculation: Compter
   - 
     name: Autres Ouvertures
-    description: Inclut les courriels qui n'ont pas été identifiés comme "Machine Opens", comme quand un utilisateur ouvre un courriel.
+    description: Inclut les courriels qui n'ont pas été identifiés comme "Machine Opens", comme quand un utilisateur ouvre un courriel. Si un utilisateur ouvre un courriel une fois (ou plus) après un événement ouvert par une machine à partir d'une boîte de réception non Apple Mail, alors le nombre de fois où l'utilisateur ouvre l'email est calculé vers "Autres Opens" et seulement une fois vers "Opens" unique.
     calculation: Compter
 ---
 
