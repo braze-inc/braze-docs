@@ -25,16 +25,16 @@ guide_featured_list:
 
 ## Additional information
 
-If you're looking for more information about your own account settings, look [here][1].
+If you're looking for more information about your own account settings, check out our [Administrative][1] articles.
 
-You can get to the __Company Settings__ section by clicking on your name, then clicking `Company Settings` in the drop-down.
+You can get to the **Company Settings** section by clicking on your name, then selecting **Company Settings** in the drop-down.
 
 Then, click on the tab in the top bar to navigate to the settings you want to manage.
 
-![CompanySettings][2]
+![Company Settings][2]
 
 {% alert warning %}
-Any edits to the **Company Settings** section will apply to every Braze user's account (attached to your company).
+Any edits to the **Company Settings** section will apply to every Braze user account that is attached to your company.
 {% endalert %}
 
 <br>

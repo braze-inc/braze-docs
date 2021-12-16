@@ -1,48 +1,48 @@
 ---
-nav_title: Company Wide Settings
-article_title: Company Wide Settings
+nav_title: Company Settings
+article_title: Company Settings
 page_order: 5
 page_type: reference
 description: "This reference article covers company-wide settings, like changing the name of your company, setting your time zone, and requesting to delete your company."
 
 ---
 
-# Company-wide settings management
+# Company Settings
 
-## Company Settings page
+## Managing your company settings
 
-The [Company Settings][1] page allows you to change the name of your company, set your time zone and request to delete your company.
+The [Company Settings][1] page allows you to change the name of your company, set your time zone, and request to delete your company.
 
 {% alert note %}
-Only Admins and users with explicit permissions to manage Company Settings will see this page.
+Only admins and users with explicit permissions to manage company settings will see this page.
 {% endalert %}
 
 ### Consequences of switching your time zone
 
-If you choose to switch your time zone, you may face a variety of consequences:
+If you choose to switch your time zone, you may experience a variety of consequences, including:
 
 - While campaigns scheduled for specific times in specific locations (i.e. 9pm Eastern Time) will run properly on schedule until edited, both campaign analytics and future campaign schedules will be affected by the change.
-- Any card scheduling that is not assigned to Local Time may be affected, with active cards potentially appearing as finished (or vice versa).
+- Any card scheduling that is not assigned to local time may be affected, with active cards potentially appearing as finished (or vice versa).
 - Segmentation filters of the form "Has done X before/after `Date`" will have the time adjusted because the initial date will now be localized in Pacific Time.
 
 ### Notification preferences
 
-The Notification Preferences Page is where you can configure who (if anyone) receives notifications about your company. You can configure who should receive notifications regarding campaign and News Feed Card delivery, technical errors. You can also specify recipients for the weekly analytics report. For most notifications, Braze supports email and webhook channels.
+The **Notification Preferences** page is where you can configure who (if anyone) receives notifications about your company. You can configure who should receive notifications about campaign and News Feed Card delivery or technical errors. You can also specify recipients for the weekly analytics report. For most notifications, Braze supports email and webhook channels.
 
-![Notification_Preferences][61]
+![Notification Preferences][61]
 
-The available notifications are in the table below:
+The table below lists available notifications:
 
 | Notification | Description | Webhook Support |
 |--------------|-------------|-----------------|
-| AWS Credential Errors               | Notifies recipients when Braze receives an error while attempting to use your Amazon Web Services credentials for a data export.                        | Yes             |
-| Scheduled Campaign Sent/Not Sent    | Notifies recipients when scheduled campaigns begin sending or when scheduled campaigns attempted to send, but had no eligible users to send to.         | Yes             |
-| Scheduled Campaign Limit Met        | Notifies recipients when a scheduled recurring campaign is not sent because the total campaign limit has been met.                                      | Yes             |
-| Scheduled Campaign Finished Sending | Notifies recipients when a scheduled campaign has finished sending.                                                                                     | Yes             |
-| Webhook Timeouts                    | Notifies recipients when a webhook URL times out more than 300 times in 5 minutes. This notification sends no more than once every two hours.           | Yes             |
-| Push Credential Errors              | Notifies recipients when an app's push credentials are invalid and when an app's push credentials are expiring soon.                                    | Yes             |
-| News Feed Card Published/Live        | Notifies recipients when News Feed cards are scheduled or published.                                                                                     | Yes             |
-| Weekly Analytics Report             | Sends a summary of the past week's app group activity to recipients every Monday. Recipients receive a summary for each app group that they belong to.  | No              |
+| AWS Credential Errors | Notifies recipients when Braze receives an error while attempting to use your Amazon Web Services credentials for a data export. | Yes |
+| Scheduled Campaign Sent/Not Sent | Notifies recipients when scheduled campaigns begin sending or when scheduled campaigns attempted to send, but had no eligible users to send to. | Yes |
+| Scheduled Campaign Limit Met | Notifies recipients when a scheduled recurring campaign is not sent because the total campaign limit has been met. | Yes |
+| Scheduled Campaign Finished Sending | Notifies recipients when a scheduled campaign has finished sending. | Yes |
+| Webhook Timeouts | Notifies recipients when a webhook URL times out more than 300 times in 5 minutes. This notification sends no more than once every two hours. | Yes |
+| Push Credential Errors | Notifies recipients when an app's push credentials are invalid and when an app's push credentials are expiring soon. | Yes |
+| News Feed Card Published/Live | Notifies recipients when News Feed cards are scheduled or published. | Yes |
+| Weekly Analytics Report | Sends a summary of the past week's app group activity to recipients every Monday. Recipients receive a summary for each app group that they belong to. | No |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
 
 ### Slack incoming webhook integration
@@ -50,10 +50,10 @@ The available notifications are in the table below:
 Slack has an incoming webhook app that [allows messages to be posted from external sources into Slack][62]. To get started, open the [incoming webhook app][67].
 
 1. Select the Slack channel that you'd like the notifications to go to and click **Add Incoming Webhooks Integration**.<br><br>
-    ![add_configuration][63]<br><br>
+    ![Add Configuration][63]<br><br>
   Slack will generate a URL that you'll need to enter into Braze for the notifications that you wish to receive.<br><br>
 2. Copy the **Webhook URL**.<br><br>
-    ![copy_url][64]<br><br>
+    ![Copy URL][64]<br><br>
 3. Navigate to the **Notification Preferences** tab in **Company Settings**.<br><br>
 4. Select the notification that you wish to enable for Slack. Or, if you have multiple notifications that you want to send to this Slack channel, use **Bulk Add** to add the webhook to multiple notifications.<br><br>
     ![Select Slack Notifications][65]{: style="max-width:80%;"}<br><br>
@@ -63,7 +63,7 @@ That's it! You should start receiving notifications about your company to this S
 
 ### Weekly analytics reporting
 
-Braze optionally sends a weekly report via email to individuals you designate within your company every Monday at 5AM EST. The custom events to be included in the weekly report are selected on the **Custom Events** tab within the [Manage Settings][19] page of the dashboard. You may select up to 5 events to be included in your weekly report:
+Braze optionally sends a weekly report via email to individuals you designate within your company every Monday at 5am EST. The custom events to be included in the weekly report are selected on the **Custom Events** tab within the [Manage Settings][19] page of the dashboard. You may select up to 5 events to be included in your weekly report:
 
 ![Analytics Report Event Selection][22]
 
@@ -80,9 +80,9 @@ You also can access the [Email Settings][8] tab to edit:
 
 ## List-unsubscribe settings
 
-![list_unsub_1] [57]{: style="float:right;max-width:60%;margin-left:15px;"}
+![List Unsubscribe][57]{: style="float:right;max-width:60%;margin-left:15px;"}
 
-Although most marketers add a one-click Unsubscribe link to their email, it is best practice to provide a special email header (“List-Unsubscribe”) that allows email service providers such as Gmail and Windows Live Hotmail to provide their own Unsubscribe functionality:
+Although most marketers add a one-click unsubscribe link to their email, it is best practice to provide a special email header (“List-Unsubscribe”) that allows email service providers such as Gmail and Windows Live Hotmail to provide their own Unsubscribe functionality:
 
 For more information about list-unsubscribe, refer to [Email Settings][2]
 
@@ -114,21 +114,21 @@ Two-factor authentication adds an extra layer of identity verification upon logi
 
 #### Two-factor authentication Authy set up overview
 1. Download the Authy App.
-2. Navigate to Two-Factor Authentication under Account Settings and enter your phone number.
+2. Navigate to **Two-Factor Authentication** under **Account Settings** and enter your phone number.
 3. There will be a notification sent to the device instructing to open Authy to obtain the code for Braze.
 4. Open the Authy App on the device linked to obtain the code. 
-5. Navigate to Two-Factor Authentication settings and enter the code. 
+5. Navigate to **Two-Factor Authentication** settings and enter the code. 
 
-If you would like to enforce two-factor authentication for the whole company, turn on two-factor authentication under the Security Settings tab and press Save Changes at the bottom of the page.
+If you would like to enforce two-factor authentication for the whole company, turn on two-factor authentication under the **Security Settings** tab and click **Save Changes** at the bottom of the page.
 
-![Two-Factor Authentication - Company Settings][53]
+![Two-Factor Authentication][53]
 
-When your company enforces two-factor authentication, account users must set up two-factor authentication on their own account upon log in or else they will be locked out. Account users can also go to their account settings page to enable it. There is an option to change your mobile phone number in case an account user would like to authenticate using a different mobile phone number.  In addition, if two-factor authentication is optional for your company under Security Settings, account users will have the option to disable two-factor authentication.
-If you have any trouble enabling/verifying with two-factor authentication, please contact your account administrator or open a [support ticket]({{site.baseurl}}/braze_support/).
+When your company enforces two-factor authentication, account users must set up two-factor authentication on their own account upon log in or else they will be locked out. Account users can also go to their account settings page to enable it. There is an option to change your mobile phone number in case an account user would like to authenticate using a different mobile phone number.  In addition, if two-factor authentication is optional for your company under **Security Settings**, account users will have the option to disable two-factor authentication.
+If you have any trouble enabling or verifying with two-factor authentication, contact your account administrator or open a [support ticket]({{site.baseurl}}/braze_support/).
 
-Under the Manage Users page, there will be an additional column that indicates which account users have turned on two-factor authentication.
+Under the **Manage Users** tab, there will be an additional column that indicates which account users have turned on two-factor authentication.
 
-![Two-Factor Authentication - Manage Users][55]
+![Manage Users][55]
 
 [1]: https://dashboard-01.braze.com/company_settings/company_settings/ "Company Settings Page"
 [2]: {{site.baseurl}}/user_guide/administrative/app_settings/manage_app_group/email_settings/#include-a-list-unsubscribe-header
