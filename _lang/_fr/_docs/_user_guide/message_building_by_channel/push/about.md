@@ -8,7 +8,7 @@ channel:
   - Pousser
 ---
 
-# Que sont les messages push ?
+# À propos des notifications push
 
 > Cet article de référence donne un bref aperçu de push, fournit des ressources pour commencer avec des messages push, et note quelques règlements.
 
