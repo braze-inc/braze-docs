@@ -12,9 +12,9 @@ channel:
 
 ![SMS about][picture]{: style="float:right;max-width:30%;margin-left:15px;border: 0;"}
 
-SMS, also known as Short Message Service, is used to send text messages to mobile phones. Currently, there are over 23 billion text messages sent every day worldwide, with SMS being the most direct way to reach users and customers. This widespread usage and proven value have made SMS an effective marketing tool for businesses of all sizes. 
+> This article shares some common use cases to draw from, requirements, and terms to know that will aid your SMS integration and allow you to communicate effectively and strategically with your customers. In addition to this article, you can also check out our [SMS & MMS](https://lab.braze.com/messaging-channels-sms) LAB course.
 
-This article shares some common use cases to draw from, requirements, and terms to know that will aid your SMS integration and allow you to communicate effectively and strategically with your customers.
+SMS, also known as Short Message Service, is used to send text messages to mobile phones. Currently, there are over 23 billion text messages sent every day worldwide, with SMS being the most direct way to reach users and customers. This widespread usage and proven value have made SMS an effective marketing tool for businesses of all sizes. 
 
 ## Potential use cases
 

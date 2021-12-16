@@ -9,16 +9,16 @@ description: "This reference article covers how to disable open pixel and click 
 
 # Open pixel and click tracking overview
 
-[Open pixel tracking][open_tracking] and click tracking can now be disabled per user profile. This flexibility helps customers support regional privacy laws, where an individual user profile might indicate they no longer want to be tracked.
+[Open pixel tracking][open_tracking] and click tracking can now be disabled per user profile. This flexibility helps you follow regional privacy laws, where an individual user profile might indicate they no longer want to be tracked.
 
 ## Implementation
 
-when either importing or updating a user profile via [api][api_doc] or [csv][csv_doc], two new fields are now available for you to modify.
+When either importing or updating a user profile via [API][api_doc] or [CSV][csv_doc], two new fields are now available for you to modify:
 
 - email_open_tracking_disabled
 - email_click_tracking_disabled
 
-_For easy reference, this information is reflected on the user profile in the Email Contact Settings._
+For easy reference, this information is reflected on the user profile in the email **Contact Settings**, located in the **Engagement** tab.
 
 ![open_click_user_profile][1]{: style="max-width:60%;"}
 
