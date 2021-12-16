@@ -2,22 +2,24 @@
 nav_title: À propos des cartes de contenu
 article_title: À propos des cartes de contenu
 page_order: 0
-description: "Cet article de référence comprend un aperçu du canal de la carte de contenu Braze et des cas d'utilisation courante."
+description: "Cet article de référence donne un aperçu du canal de la carte de contenu Braze et des cas d'utilisation courante."
 channel:
   - cartes de contenu
 ---
 
 # À propos des cartes de contenu
 
-{% alert note %}
-Braze recommande que les clients qui utilisent notre outil News Feed passent à notre canal de messagerie de cartes de contenu - il est plus flexible, personnalisable et fiable. Il est également plus facile à trouver et à utiliser dans le produit Braze. Consultez notre [Guide de Migration](/docs/user_guide/message_building_by_channel/content_cards/migrating_from_news_feed/) ou contactez votre responsable de compte Braze pour plus d'informations.
-{% endalert %}
+> Cet article de référence donne un aperçu du canal de la carte de contenu Braze et des cas d'utilisation courante. Pour en savoir plus sur ce sujet, consultez notre cours LAB [Cartes de Contenu](https://lab.braze.com/messaging-channels-content-cards)!
 
 {% include video.html id="4FUPxkIq2xc" align="right" %}
 
 Avec les Cartes de Contenu, vous pouvez envoyer un très ciblé, flux dynamique de contenu riche pour vos clients directement dans les applications qu'ils aiment sans interrompre leur expérience. De plus, les cartes de contenu prennent en charge des fonctionnalités plus personnalisées, y compris le épinglage de carte, le rejet de la carte, Livraison basée sur API, temps d'expiration des cartes personnalisées, analyse des cartes et coordination facile avec les notifications push.
 
 Les cartes de contenu ne sont pas disponibles hors de la boîte et doivent être achetées. Pour commencer avec les Cartes de Contenu, contactez votre Responsable du Succès Client ou notre équipe d'assistance pour plus d'informations.
+
+{% alert note %}
+Si vous utilisez notre outil Flux d'actualités, nous vous recommandons de passer au canal de messagerie de nos Cartes de Contenu — il est plus flexible, personnalisable et fiable. Les cartes de contenu sont également plus faciles à trouver et à utiliser dans le produit Braze. Consultez notre [Guide de Migration](/docs/user_guide/message_building_by_channel/content_cards/migrating_from_news_feed/) ou contactez votre responsable de compte Braze pour plus d'informations.
+{% endalert %}
 
 ## Quand utiliser les cartes de contenu
 
