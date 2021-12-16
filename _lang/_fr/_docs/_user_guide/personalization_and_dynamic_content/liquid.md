@@ -4,7 +4,7 @@ article_title: Liquide
 page_order: 0
 layout: en vedette
 guide_top_header: "Personnalisation en utilisant des balises Liquid"
-guide_top_text: "Braze peut automatiquement remplacer les valeurs d'un utilisateur donné dans vos messages. Placez votre expression entre deux ensembles de parenthèses pour avertir Braze que vous utiliserez une valeur interpolée. À l'intérieur de ces accolades, toute valeur utilisateur que vous voulez remplacer doit être entourée d'un ensemble de parenthèses supplémentaires avec un signe dollar devant eux."
+guide_top_text: "Braze peut automatiquement remplacer les valeurs d'un utilisateur donné dans vos messages. Placez votre expression entre deux ensembles de parenthèses pour avertir Braze que vous utiliserez une valeur interpolée. À l'intérieur de ces accolades, toute valeur utilisateur que vous voulez remplacer doit être entourée d'un ensemble de parenthèses supplémentaires avec un signe dollar devant eux.<br><br>Pour en savoir plus sur Liquid, consultez notre guide <b><a href='https://lab.braze.com/dynamic-personalization-with-liquid'>Personnalisation dynamique avec cours Liquid</a></b> LAB !"
 description: "Braze peut automatiquement remplacer les valeurs d'un utilisateur donné dans vos messages. Placez votre expression entre deux ensembles de parenthèses pour avertir Braze que vous utiliserez une valeur interpolée."
 guide_featured_title: "Articles de la section"
 guide_featured_list:
@@ -48,9 +48,7 @@ guide_featured_list:
 
 ## À propos de Liquid
 
-Les messages de campagne prennent en charge les messages tempérés en utilisant le langage de template Liquid. La documentation détaillée de la syntaxe et de l'utilisation de Liquid est disponible [**ici**][1].
-
-Pour en savoir plus sur la Personnalisation Dynamique avec Liquid, consultez notre [cours de LAB**détaillé**](https://lab.braze.com/dynamic-personalization-with-liquid)!
+Les messages de campagne prennent en charge les messages tempérés en utilisant le langage de template Liquid. Pour plus d'informations sur la syntaxe et l'utilisation de Liquid, reportez-vous aux balises de personnalisation [**prises en charge**][1].
 
 Le langage de template Liquid supporte l'utilisation d'objets, de balises et de filtres.
 
