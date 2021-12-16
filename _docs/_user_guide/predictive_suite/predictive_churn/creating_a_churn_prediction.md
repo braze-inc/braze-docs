@@ -20,7 +20,7 @@ There is a limit of 3 concurrently active Churn Predictions. Prior to purchasing
 
 On the **Basics** page, give your new Prediction a unique name. You can also provide an optional description to take any notes on this particular Prediction.
 
-Click __Forward__ to move to the next step. Optionally, you can click __Build Now__ to use all the default settings and skip to the last step of creation. You will have a chance to review the settings before starting the build process. You can return to any step later by selecting it in the top bar. 
+Click __Forward__ to move to the next step. Optionally, you can click __Build Now__ to use all the default settings and skip to the last step of creation. You will have a chance to review the settings before starting the build process. You can return to any step later by selecting it in the progress tracker on the top.
 
 ## Step 2: Define churn
 
@@ -42,7 +42,7 @@ Underneath the definition, you will see estimates of how many users (in the past
 
 ## Step 3: Filter your prediction audience
 
-Your Prediction Audience is the group of users you want to target to keep from churning. By default, this will be set to __All Users__, which means that this Prediction will create Churn likelihood scores for all of your active users. Usually, the model will likely perform better if you narrow down and filter the group of users you want to prevent from churning with some criteria. Think about the specific users who mean the most to you that you’d like to retain and define them here. For example, you might want to retain users who first used the app more than a month ago or have ever made a purchase. 
+Your Prediction Audience is the group of users you want to predict churn risk for. By default, this will be set to __All Users__, which means that this Prediction will create Churn Risk Scores for all of your active users. Usually, the model will likely perform better if you narrow down and filter the group of users you want to prevent from churning with some criteria. Think about the specific users who mean the most to you that you’d like to retain and define them here. For example, you might want to retain users who first used the app more than a month ago or have ever made a purchase.
 
 {% alert note %}
 The Prediction Audience cannot exceed 100 million users.
@@ -58,7 +58,7 @@ Just like the previous page, the bottom panel will show you the estimated number
 
 ## Step 4: Choose the update frequency for Churn Predictions
 
-The machine learning model created when you complete this page will be used on a schedule you select here to generate fresh scores of users’ probability to churn. Please select the __maximum frequency of updates__ that you’ll find useful. For example, if you’re going to send a weekly promotion to prevent users from churning, set the update frequency to __Weekly__ on the day and time of your choosing. 
+The machine learning model created when you complete this page will be used on a schedule you select here to generate fresh Churn Risk Scores. Please select the __maximum frequency of updates__ that you’ll find useful. For example, if you’re going to send a weekly promotion to prevent users from churning, set the update frequency to __Weekly__ on the day and time of your choosing. 
 
 ![Prediction Update Schedule][2]
 
