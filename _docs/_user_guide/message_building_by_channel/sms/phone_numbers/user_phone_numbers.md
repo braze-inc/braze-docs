@@ -11,9 +11,9 @@ channel:
 
 # User phone numbers
 
-> This article will discuss different topics around your users' or customers' phone numbers - if you're looking for information about your own numbers, please go to our article on [Short & Long Codes]({{site.baseurl}}/user_guide/onboarding_with_braze/sms_setup/short_and_long_codes/#short--long-codes).
+> This article will discuss different topics around your users' or customers' phone numbers - if you're looking for information about your own numbers, please go to our article on [short and long codes]({{site.baseurl}}/user_guide/onboarding_with_braze/sms_setup/short_and_long_codes/#short--long-codes).
 
-Phone numbers are shown in the User Profile in local formats, but will not be in the format you use to import the number (`(724) 123 4567`).
+Phone numbers are shown in the user profile in local formats, but will not be in the format you use to import the number (`(724) 123 4567`).
 
 ## Importing phone numbers
 
@@ -42,7 +42,7 @@ You can see the differences between local number formatting as well as universal
 
 ### Adding users to SMS subscription groups
 
-For a customer to receive an SMS message, they __must have a valid phone number and be opted-in to a Subscription Group__. Subscription Groups are tied to the SMS program you are running ([make sure you follow the legal laws for SMS and have recorded consent for each customer]({{site.baseurl}}/user_guide/message_building_by_channel/sms/sms_laws_and_regulations/)). For more information, refer to [SMS Subscription Groups][1]. 
+For a customer to receive an SMS message, they must have a valid phone number and be opted-in to a subscription group. Subscription groups are tied to the SMS program you are running ([make sure you follow the legal laws for SMS and have recorded consent for each customer]({{site.baseurl}}/user_guide/message_building_by_channel/sms/sms_laws_and_regulations/)). For more information, refer to [SMS subscription groups][1]. 
 
 [1]: {{site.baseurl}}/user_guide/message_building_by_channel/sms/sms_subscription_group/
 [picture]: {% image_buster /assets/img/sms/e164.png %}

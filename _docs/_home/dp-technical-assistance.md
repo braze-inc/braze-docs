@@ -1,7 +1,8 @@
 ---
 nav_title: Data Protection Technical Assistance
 article_title: Data Protection Technical Assistance
-page_order: 8
+page_order: 10
+noindex: false
 
 page_type: reference
 description: "This page provides technical instructions to enable you to manage, through the Braze Platform, requests from individuals in relation to their personal data rights."

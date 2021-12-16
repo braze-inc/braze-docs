@@ -34,7 +34,7 @@ MMS and SMS have different costs and are charged separately based on volume. Ple
 Nope! MMS is now included in our SMS onboarding process. Existing customers who already went through onboarding can start sending MMS campaigns after completing the following steps:
 
 1. Purchase MMS.
-2. Reach out to the Braze Onboarding team to request the MMS feature to be flipped on. This will enable MMS and an SMS/MMS Subscription group will be created or updated for you.
+2. Reach out to the Braze onboarding team to request the MMS feature to be flipped on. This will enable MMS and an SMS/MMS Subscription group will be created or updated for you.
 
 Next, the Braze onboarding team will make sure your short and long codes are enabled (in the US and Canada) for MMS. They will also update your subscription groups to show your current numbers that were added or enabled for MMS. Once these steps are complete, you can send MMS messages right away from our native SMS composer.
 

@@ -9,9 +9,9 @@ channel:
 
 ---
 
-# What are push messages?
+# About push notifications
 
-> This reference article gives a brief overview of push, provides resources to get started with push messages, and notes some regulations.
+> This reference article gives a brief overview of push, provides resources to get started with push messages, and notes some regulations. For more on this topic, check out our [Push LAB course](https://lab.braze.com/messaging-channels-push)!
 
 Push notifications are wonderful for time-sensitive calls to action, as well as re-engaging users who haven't come into the app in a while. Successful push campaigns drive the user directly to content and demonstrate the value of your application. 
 

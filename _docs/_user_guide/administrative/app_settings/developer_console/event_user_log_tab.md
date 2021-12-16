@@ -9,6 +9,8 @@ description: "This reference article covers the Event User Log, which can help y
 
 # Event User Log tab
 
+> This reference article covers the Event User Log, including how to access and use the logs for troubleshooting. In addition to this article, we also recommend checking out our [Quality Assurance and Debugging Tools](https://lab.braze.com/quality-assurance-and-debugging-tools-in-the-dashboard/) LAB course, which covers how to use the Event User Log to conduct your own troubleshooting and debugging.
+
 The Event User Log can help you break down, debug, or otherwise troubleshoot issues in your Braze Integration. This tab gives you a log of errors that details the type of error, which app it's associated with, when it happened, and often an opportunity to view the raw data associated with it.
 
 To find your logs easily, you can filter based on:

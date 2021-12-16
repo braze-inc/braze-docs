@@ -14,12 +14,19 @@ tool:
 
 {% include video.html id="3h5Xbhl-TxE" align="right" %}
 
->  Regular expressions, known commonly as regex, is a sequence of characters that define a search pattern. Regular expressions let you do validation of text grouping and find and replace actions. <br><br>Regex is used at Braze to give you a more flexible string matching solution in your segmentation and campaign filtering for your target audience. 
+>  This reference article covers what regular expressions are, how to begin using them, and offers debugger functionality to validate and test regular expressions.
 
-In the provided video, we show you how regular expressions can be used and tested on the [Regex101][regex] site. Below we also offer an inhouse regex tester, a helpful cheatsheet, sample data referenced in the Regex LAB video, as well as some frequently asked questions.
+A regular expression, known commonly as a regex, is a sequence of characters that defines a search pattern. Regular expressions let you validate text groupings and perform find and replace actions. At Braze, we leverage regular expressions to give you a more flexible string matching solution in your segmentation and campaign filtering for your target audience.
 
-[Downloadable Regex Cheat Sheet PDF][cheatsheet]<br>
-[Downloadable Sample Data RTF][dummydata]
+In the provided video, we show you how regular expressions can be used and tested on the [Regex101][regex] site. Below we also offer an inhouse regex tester, a helpful cheatsheet, sample data referenced in the regex LAB video, as well as some frequently asked questions.
+
+## Resources
+
+- [Regular expression basics](https://lab.braze.com/regular-expression-basics-for-braze) LAB course
+- <i class="fas fa-file-pdf"></i> [Regex Cheat Sheet PDF][cheatsheet]
+- <i class="fas fa-file-alt"></i> [Sample Data RTF][dummydata]
+
+## Regex debugger
 
 {% tabs %}
 {% tab Regex Debugger %}
@@ -27,7 +34,7 @@ In the provided video, we show you how regular expressions can be used and teste
 This form allows for basic validation and testing of regular expressions.
 ​
 <div class="alert alert-important" role="alert"><div class="alert-msg"> <b>important: </b><br />
-<p>This tool is only meant as a reference, and does not guarantee that the regex matches 100% with the Braze Platform. Regular expressions in Braze automatically add the <code>gi</code> modifier. The <a href='https://w3schools.sinsixx.com/jsref/jsref_regexp_modifier_gi.asp.htm'>gi modifier</a> is used to do a case-insensitive search of all occurrences of a regular expression in a string. </p>
+<p>This tool is only meant as a reference, and does not guarantee that the regex matches 100% with the Braze platform. Regular expressions in Braze automatically add the <code>gi</code> modifier. The <a href='https://w3schools.sinsixx.com/jsref/jsref_regexp_modifier_gi.asp.htm'>gi modifier</a> is used to do a case-insensitive search of all occurrences of a regular expression in a string. </p>
 </div></div>
 <div>
 Regex:
@@ -126,59 +133,77 @@ $( document ).ready(function() {
   });
 });
 </script>
+
 {% endtab %}
-{% tab Frequently Asked Questions %}
+{% endtabs %}
 
-{% details How do I filter for inbox specific email addresses when segmenting? %}
+## Frequently asked questions
 
-Use the email address filter, set it to "matches regex". Reference the regex for email addresses, <font color="red">[a-zA-Z0-9.+_-]+ </font>@<font color="blue">[a-zA-Z0-9.-]+</font>\.<font color="green">[a-zA-Z.-]+</font> where:
-- <font color="red">[a-zA-Z0-9.+_-]+</font> is the beginning of the email address before the '@' character. So the "name" in "name@example.com".
-- <font color="blue">[a-zA-Z0-9.-]+</font> is the first part of the domain. So the "example" in "name@example.com".
-- <font color="green">[a-zA-Z.-]+</font> is the last part of the domain. So the "com" in "name@example.com".
+#### How do I filter for inbox-specific email addresses when segmenting?
 
-{% enddetails %}
+{% raw %}
+Use the email address filter, set it to `matches regex`. Then reference the regex for email addresses:
 
-{% details How do I filter for email addresses associated to a specific domain? %}
+```
+[a-zA-Z0-9.+_-]+@[a-zA-Z0-9.-]+\.[a-zA-Z.-]+
+```
 
-Say you want to filter for emails ending with @braze.com. You would use the email address filter, set it to matches regex, and enter "@braze.com" in the field.
+We can break this regex down to the following three parts:
+
+- `[a-zA-Z0-9.+_-]+` is the beginning of the email address before the at `@` character. So the "name" in "name@example.com".
+- `[a-zA-Z0-9.-]+` is the first part of the domain. So the "example" in "name@example.com".
+- `[a-zA-Z.-]+` is the last part of the domain. So the "com" in "name@example.com".
+
+{% endraw %}
+
+#### How do I filter for email addresses associated to a specific domain?
+
+Say you want to filter for emails ending with "@braze.com". You would use the email address filter, set it to `matches regex`, and enter "@braze.com" in the regex field. The same applies for any other email domain.
 
 ![image1]({% image_buster /assets/img/regex/regeximg1.png %})
 
-{% enddetails%}
+#### How can I use filter number strings for values ≥ x or ≤ x?
 
-{% details How can I use regex on number strings to filter for values ≥ x or ≤ x? %}
-If you're searching for __values ≥ x__, the regex to use would be __^([x-y]|\d{z,})$__
-where x-y is the range of numbers (0-9) of the first digit, and z is the one more the number of digits of x.<br>__Example__<br>
-For values ≥ 50, the regex would then be ^([5-9][0-9]|\d{3,})$
+If you're searching for values greater than or equal to (≥) x, use the following regex:
 
-If you're searching for __values ≤ x__, the regex would be __^([x-y]|[a-b])$__
-where x-y is the range of numbers (0-9) of the first digit, and a-b is lower bound range of x.<br>__Example__<br>
-For values ≤ 50, the regex would then be ^([5-9][0-9]|[0-4][0-9])$
-{% enddetails %}
-{% details How to filter custom attributes that start with a specific string? %}
-Use the __^__ to character to denote what the string starts with and enter the name of you're trying to specify. 
+```
+^([x-y]|\d{z,})$
+```
 
-__Example__<br>
-If you're trying to target users who live in cities that start with "San", your regex would be __^San \w__. In such a case, you would successfully target users from cities like San Francisco, San Diego, San Jose, etc.
+Where `x-y` is the range of numbers (0-9) of the first digit, and `z` is the one more the number of digits of x. For example, for values greater than or equal to 50, the regex would then be `^([5-9][0-9]|\d{3,})$`.
+
+If you're searching for values less than or equal to (≤) x, use the following regex:
+
+```
+^([x-y]|[a-b])$
+```
+
+Where `x-y` is the range of numbers (0-9) of the first digit, and `a-b` is the lower bound range of x. For example, for values less than or equal to 50, the regex would then be `^([5-9][0-9]|[0-4][0-9])$`.
+
+#### How do I filter custom attributes that start with a specific string?
+
+Use the caret symbol (`^`) to denote what the string starts with, then enter the name of the custom attribute you want to specify.
+
+For example, if you're trying to target users who live in cities that start with "San", your regex would be `^San \w`. With this regex, you would successfully target users from cities like San Francisco, San Diego, San Jose, and so on.
 
 ![image2]({% image_buster /assets/img/regex/regeximg2.png %})
-{% enddetails %}
-{% details How to filter for certain phone numbers with regex %}
 
-Before using regex to filter phone numbers, please take note that numbers logged for user profiles should already be in an [E.164 format](https://en.wikipedia.org/wiki/E.164) as specified in our [documentation]({{site.baseurl}}/user_guide/message_building_by_channel/sms/phone_numbers/).
+#### How do I filter for specific phone numbers?
 
-Assuming US phone numbers, the regex you'll want to use is in the format __1?\d\d\d\d\d\d\d\d\d\d__, where each "\d" is a digit you want to specify - the first 3 of which would be the area code.
+Before using regex to filter phone numbers, remember that numbers logged for user profiles must be in [E.164 format](https://en.wikipedia.org/wiki/E.164), as specified in [User phone numbers]({{site.baseurl}}/user_guide/message_building_by_channel/sms/phone_numbers/user_phone_numbers/).
 
-Likewise, the format for __UK phone numbers__ are __^\+4\d\d\d\d\d\d\d\d\d\d\d__ and any other country would be the the respective __country code followed by the necessary number of "\d" characters for each remaining digit__. So in the case of Lithuania with country code 3, their regex would be __^\+3\d\d\d\d\d\d\d\d\d\d.__
+Assuming you're searching for US phone numbers, use the regex format `1?\d\d\d\d\d\d\d\d\d\d`, where each repetition of `\d` is a digit you want to specify. The first three digits are the area code.
 
-__Example__<br>
-Let's say you wanted to filter users by phone number for a specific area code, 718. Use the phone number filter, set it to "matches regex", and enter __^1?718\d\d\d\d\d\d\d__  
+Likewise, the format for UK phone numbers is `^\+4\d\d\d\d\d\d\d\d\d\d\d`. Any other country would be the the respective country code, followed by the necessary number of `\d` repetitions for each remaining digit. So in the case of Lithuania with a country code of "3", their regex would be `^\+3\d\d\d\d\d\d\d\d\d\d`.
+
+For example, let's say you wanted to filter users by phone number for a specific area code, "718". Use the phone number filter, set it to `matches regex`, and enter the following regex:
+
+```
+^1?718\d\d\d\d\d\d\d
+```
 
 ![image3]({% image_buster /assets/img/regex/regeximg3.png %})
-{% enddetails %}
-<br><br>
-{% endtab %}
-{% endtabs %}
+
 
 [regex]: https://regex101.com/
 [cheatsheet]: {% image_buster /assets/download_file/regex-cheatsheet.pdf %}
