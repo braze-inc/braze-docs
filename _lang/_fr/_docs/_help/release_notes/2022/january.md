@@ -41,9 +41,9 @@ Nous supportons maintenant le ciblage des utilisateurs qui ont activé la pouss�
 
 Pour plus d'informations, reportez-vous à [balises de personnalisation supportées]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/supported_personalization_tags/).
 
-## Comprendre les webhooks
+## À propos des webhooks
 
-Les Webhooks sont des outils puissants et flexibles, mais ils peuvent être un peu déroutants. Si vous vous demandez quels sont les webhooks et comment vous pouvez les utiliser au Brésil, consultez notre nouvel article sur [Comprendre les webhooks]({{site.baseurl}}/user_guide/message_building_by_channel/webhooks/understanding_webhooks/).
+Les Webhooks sont des outils puissants et flexibles, mais ils peuvent être un peu déroutants. Si vous vous demandez quels sont les webhooks et comment vous pouvez les utiliser au Brésil, consultez notre nouvel article sur [À propos des webhooks]({{site.baseurl}}/user_guide/message_building_by_channel/webhooks/understanding_webhooks/).
 
 ## Personnaliser Amazon
 
