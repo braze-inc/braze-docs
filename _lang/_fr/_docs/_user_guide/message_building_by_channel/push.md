@@ -4,7 +4,7 @@ article_title: Pousser
 page_order: 3
 layout: dev_guide
 guide_top_header: "Pousser"
-guide_top_text: "Les messages push sont un moyen éprouvé de joindre vos clients via mobile ou web. Ils sont utiles pour conduire un utilisateur vers un endroit spécifique, mais vous devriez les utiliser avec sagesse ! Lisez n'importe quel article ci-dessous pour savoir qui vous pouvez envoyer un push, comment l'envoyer, et ce que les capacités avancées de push Braze offre!"
+guide_top_text: "Les messages push sont un moyen éprouvé de joindre vos clients via mobile ou web. Ils sont utiles pour conduire un utilisateur vers un endroit spécifique, mais vous devriez les utiliser avec sagesse ! Lisez n'importe quel article ci-dessous ou consultez notre [cours Push LAB](https://lab.braze. om/messaging-channels-push) pour savoir à qui vous pouvez envoyer un push, comment l'envoyer et quelles capacités avancées Braze offre."
 description: "Les messages push sont un moyen éprouvé de joindre vos clients via mobile ou web. Ils sont utiles pour conduire un utilisateur vers un endroit spécifique, mais vous devriez les utiliser avec sagesse !"
 channel:
   - Pousser
