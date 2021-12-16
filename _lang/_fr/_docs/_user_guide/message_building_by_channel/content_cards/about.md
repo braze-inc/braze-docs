@@ -7,7 +7,7 @@ channel:
   - cartes de contenu
 ---
 
-# Que sont les cartes de contenu ?
+# À propos des cartes de contenu
 
 {% alert note %}
 Braze recommande que les clients qui utilisent notre outil News Feed passent à notre canal de messagerie de cartes de contenu - il est plus flexible, personnalisable et fiable. Il est également plus facile à trouver et à utiliser dans le produit Braze. Consultez notre [Guide de Migration](/docs/user_guide/message_building_by_channel/content_cards/migrating_from_news_feed/) ou contactez votre responsable de compte Braze pour plus d'informations.
