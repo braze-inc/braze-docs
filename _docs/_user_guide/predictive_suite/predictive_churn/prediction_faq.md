@@ -1,7 +1,7 @@
 ---
 nav_title: Troubleshooting
 article_title: Predictive Churn Troubleshooting
-description: "This reference article covers some troubleshooting steps and considerations to keep in mind while using predictive churn."
+description: "This reference article covers some troubleshooting steps and considerations to keep in mind while using Predictive Churn."
 page_order: 3
 
 ---
@@ -19,7 +19,7 @@ This error message appears when your churn definition is too limiting and return
 To fix this, you will need to change either the number of days and/or actions that define churn to capture more users. Make sure you are using AND/OR correctly so as to not create overly restrictive definitions. 
 
 {% alert important %}
-Note that while Predictive Churn is turned on at a company level, some App Groups may not have enough users to build predictions.  The typical recommendation is to have at least 300,000 Monthly Active Users to ensure there will be enough. 
+Note that while Predictive Churn is turned on at a company level, some App Groups may not have enough users to build predictions.  Typically, 300,000 Monthly Active Users are required in a single App Group. 
 {% endalert %}
 
 ### Problems with prediction audience size
@@ -55,7 +55,7 @@ Listed below are some questions to ask yourself as you set up Predictive Churn. 
 
 - What high-value actions lead to retention and loyalty?
 - Have you set up custom events that map back to these specific actions? Predictive Churn works with custom events as opposed to custom attributes.
-- Are you thinking in "Short Windows" of time within which you'll denim churn. Predictive churn has a lookback window of 14 days. 
+- Are you thinking in windows of time within which you'll define churn? You can define churn as something that happens in up to 14 days.
 - Have you considered times of the year that lead to atypical user behaviors - like holidays. Rapid shifts in consumer behavior will impact your predictions. 
 
 [1]: {% image_buster /assets/img/churn/churn3.png %}
