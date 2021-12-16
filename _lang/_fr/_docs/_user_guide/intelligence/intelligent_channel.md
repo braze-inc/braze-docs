@@ -7,7 +7,9 @@ description: "Le filtre Canal Intelligent sélectionne la portion de votre audit
 
 # Filtre de canal intelligent
 
-> Le filtre de canal Intelligent ou « Le plus âgé » sélectionne la portion de votre auditoire pour laquelle le canal de messagerie sélectionné est leur « meilleur ». Dans ce cas, "meilleur" signifie "a la plus grande probabilité d'engagement, compte tenu de l'histoire de l'utilisateur". Vous pouvez sélectionner le courrier électronique, le Web push, ou la push mobile (y compris tout système d'exploitation mobile ou appareil disponible) en tant que canal.
+> Cet article décrit le filtre de la Chaîne Intelligente et fournit les meilleures pratiques pour utiliser efficacement cette fonctionnalité. Pour en savoir plus sur ce qu'est le canal intelligent, comment il fonctionne, ses avantages, reportez-vous à notre cours LAB [Intelligent Channel](https://lab.braze.com/most-engaged-channel).
+
+Le filtre Intelligent ou `Canal` le plus engagé sélectionne la portion de votre public pour laquelle le canal de messagerie sélectionné est leur « meilleur» canal. Dans ce cas, "le meilleur" désigne le canal qui a la plus grande probabilité d'engagement, compte tenu de l'historique de l'utilisateur. Vous pouvez sélectionner le courrier électronique, le Web push, ou la push mobile (y compris tout système d'exploitation mobile ou appareil disponible) en tant que canal.
 
 !\[Intelligent Channel filter\]\[1\]{: style="float:right;max-width:50%;margin-left:10px;margin-top:10px;border:0"}
 
