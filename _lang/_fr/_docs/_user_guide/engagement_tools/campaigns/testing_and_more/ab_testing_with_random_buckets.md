@@ -55,6 +55,16 @@ Créer une campagne. Sur la page **Utilisateurs cibles** , sélectionnez un segm
 
 [Dupliquez][18] votre variante de campagne initiale et modifiez-la en conséquence. Par exemple, vous pouvez décider de changer l'heure d'envoi ou la combinaison des canaux de messagerie utilisés. Lors du ciblage des utilisateurs, sélectionnez le segment que vous souhaitez recevoir cette nouvelle variante de campagne. Répétez cette étape pour créer vos variantes de campagne restantes. Votre groupe de contrôle ne devrait recevoir aucune variante de cette campagne.
 
+### Modification des pourcentages de variantes de la campagne
+
+Dans une campagne, si un pourcentage de variante est modifié après la création initiale, les utilisateurs peuvent être redistribués à d'autres variantes.
+
+Les utilisateurs sont assignés au hasard à une variante particulière avant de recevoir la campagne pour la première fois. Chaque fois que la campagne est reçue successivement (ou que l'utilisateur entre à nouveau dans une variante de Canvas), ils recevront la même variante à moins que les pourcentages de variante ne soient modifiés.
+
+Si les pourcentages de variante changent, les utilisateurs peuvent être redistribués à d'autres variantes. Les utilisateurs restent ensuite dans ces variantes jusqu'à ce que les pourcentages soient à nouveau modifiés. Les utilisateurs ne seront redistribués que pour les variantes qui ont été modifiées. Par exemple, si vous avez seulement changé la variante A et la variante B, les utilisateurs de votre troisième variante C ne seraient pas redistribués parce que le pourcentage de variante de la variante C n'a pas été modifié.
+
+Les groupes de contrôle restent cohérents si le pourcentage de variante est inchangé. Les utilisateurs qui ont déjà reçu des messages ne peuvent pas entrer dans le groupe de contrôle lors d'un envoi ultérieur, et aucun utilisateur du groupe de contrôle ne peut recevoir de message.
+
 ## Étape 3 : Construire des messages supplémentaires
 
 Si vous le souhaitez, vous pouvez continuer à envoyer des variantes de campagne à vos segments aléatoires au fil du temps en répétant l'étape 2. Un exemple de cas d'utilisation est de tester la différence entre l'envoi d'une notification de groupe 2 en une semaine, par rapport à 1.
@@ -78,12 +88,6 @@ Vous pouvez tester plusieurs flux de messagerie sur une période de temps. Par e
 ### Canaux de messagerie
 
 Vous pouvez tester l'efficacité de différentes combinaisons de canaux de messages. Par exemple, vous pouvez comparer l'impact de l'utilisation d'un seul email par rapport à un email combiné à un push.
-
-### Pourcentage de variante de la campagne
-
-Dans une campagne, si un pourcentage de variante est modifié après la création initiale, vous constaterez que les utilisateurs peuvent être redistribués à d'autres variantes.
-
-Au départ, une variante particulière est assignée aléatoirement aux utilisateurs avant de recevoir une campagne pour la première fois. À partir de là, chaque fois que la campagne est reçue (ou que l'utilisateur rentre une variante de campagne), ils recevront la même variante à moins que les pourcentages de variante ne soient modifiés. Si les pourcentages de variante changent, les utilisateurs peuvent être redistribués à d'autres variantes. Les utilisateurs restent dans ces variantes jusqu'à ce que les pourcentages soient à nouveau modifiés. Les groupes de contrôle restent cohérents si le pourcentage de variante est inchangé. Les utilisateurs qui ont déjà reçu des messages ne peuvent pas entrer dans le groupe de contrôle lors d'un envoi ultérieur, et aucun utilisateur du groupe de contrôle ne peut recevoir de message.
 [1]: {% image_buster /assets/img_archive/random_buckets_filter.png %} [2]: {% image_buster /assets/img_archive/random_buckets_filterexample.png %} [4]: {% image_buster /assets/img_archive/random_buckets_target.png %}
 
 [11]: {{site.baseurl}}/user_guide/engagement_tools/campaigns/scheduling_and_organizing/delivery_types/scheduled_delivery/
