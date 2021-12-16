@@ -10,7 +10,7 @@ channel:
 
 # À propos des notifications push
 
-> Cet article de référence donne un bref aperçu de push, fournit des ressources pour commencer avec des messages push, et note quelques règlements.
+> Cet article de référence donne un bref aperçu de push, fournit des ressources pour commencer avec des messages push, et note quelques règlements. Pour en savoir plus sur ce sujet, consultez notre [cours Push LAB](https://lab.braze.com/messaging-channels-push)!
 
 Les notifications push sont merveilleuses pour les appels temporaires à l'action, ainsi que pour les utilisateurs qui ne sont pas entrés dans l'application depuis un certain temps. Des campagnes de push réussies poussent l'utilisateur directement vers le contenu et démontrent la valeur de votre application.
 
