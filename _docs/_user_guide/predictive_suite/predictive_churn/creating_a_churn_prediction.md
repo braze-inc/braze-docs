@@ -25,21 +25,26 @@ Click __Forward__ to move to the next step. Optionally, you can click __Build No
 
 ### Step 2: Define churn
 
-In the __Churn Definition__ panel, use the provided filters to define what churn means for your business. In other words, what does a user have to do in what time frame for you to consider them churned? Remember, you don’t need to explain what behaviors might precede churn - only what makes a user a churned user. This should also generally be a description of what behavior a user does or doesn't do to churn as opposed to an attribute a user has. For example, you might consider users who haven’t opened your app in 7 days to be churned. 
+In the __Churn Definition__ panel, use the provided filters to specify how you define user churn for your business. In other words, what does a user have to do in what time frame for you to consider them churned? 
 
-To implement this example, enter 7 days in the time window at the top of the panel.
+Remember, you don’t need to explain what behaviors might precede churn - only what makes a user a churned user. Think of this in terms of something a user either does once ("__do__") or stops doing ("__do not__") that constitutes churning. For example, you might consider users who haven’t opened your app in 7 days to be churned. You might consider uninstalling, or custom events like unsubscribing, disabling an account, or others to cause a user to become churned. 
+
+Here's an example of a simple definition based on lapsing sessions in the last 7 days.
 
 ![Churn Definition][1]
 
-Then, use the available filters to select which behaviors in that time frame constitute churn. For this case, select "do not" and "start a session". You can combine other filters with "and" and "or" as you see fit to create the definition you need. Uninstalling, making or not making purchases, or performing or not performing particular custom events are other filters that can be included.
-
+For this case, we select "__do not__" and "__start a session__". You can combine other filters with "and" and "or" as you see fit to create the definition you need. 
 Interested in some potential churn definitions to consider? You’ll find some inspiration [here](#sample-definitions).
+
+Note:
+- For "__do__": we assume that active users did __not__ take the action you specify for this row prior to becoming churned. Doing the action causes them to become churned.
+- For "__do not__": we consider active users to be those that __did__ do that action in the days prior (and then stopped.)
 
 Underneath the definition, you will see estimates of how many users (in the past who churned and who didn't churn according to your definition) are available. You will also see the minimum values required. Braze must have this minimum count of users available in historical data so that the Prediction has enough data to learn from.
 
 ### Step 3: Filter your prediction audience
 
-Your Prediction Audience is the group of users you want to target to keep from churning. By default, this will be set to _All Users_, which means that this Prediction will create Churn likelihood scores for all of your active users. Usually, the model will likely perform better if you narrow down and filter the group of users you want to prevent from churning with some criteria. Think about the specific users who mean the most to you that you’d like to retain and define them here. For example, you might want to retain users who first used the app more than a month ago or have ever made a purchase. 
+Your Prediction Audience is the group of users you want to target to keep from churning. By default, this will be set to __All Users__, which means that this Prediction will create Churn likelihood scores for all of your active users. Usually, the model will likely perform better if you narrow down and filter the group of users you want to prevent from churning with some criteria. Think about the specific users who mean the most to you that you’d like to retain and define them here. For example, you might want to retain users who first used the app more than a month ago or have ever made a purchase. 
 
 {% alert note %}
 The Prediction Audience cannot exceed 100 million users.
@@ -74,10 +79,10 @@ The Prediction will be rebuilt ("retrained") again every __two weeks automatical
 ## Sample churn and prediction audience definitions {#sample-definitions}
 
 __Sample Churn Definitions__<br>
-- “Within 7 days, did custom event ‘Subscription Cancellation’”<br>
-- “Within 14 days, did custom event ‘Trial Expired’”<br>
-- “Within 1 day did uninstall.” <br>
-- “Within 14 days did not Make a Purchase.” <br>
+- “Within 7 days, do custom event ‘Subscription Cancellation’”<br>
+- “Within 14 days, do custom event ‘Trial Expired’”<br>
+- “Within 1 day do uninstall.” <br>
+- “Within 14 days do not Make a Purchase.” <br>
 
 For the Churn definitions we outlined above, there might be some corresponding Prediction Audience definitions:<br>
 - __Started subscription more than 2 weeks ago OR Started subscription less than two weeks ago__<br>You might want to create 2 predictions in this case and then message new subscribers differently than longer-term subscribers. You could also define this as “First Made Purchase more than 30 days ago.”<br>
