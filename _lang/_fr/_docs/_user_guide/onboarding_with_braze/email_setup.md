@@ -4,7 +4,7 @@ article_title: Configuration de l'e-mail d'intégration
 layout: en vedette
 page_order: 5
 guide_top_header: "Configuration de l'e-mail"
-guide_top_text: "Vous voulez donc commencer à envoyer des campagnes d'e-mail? Braze Onboarding peut vous aider avec cela! Suivez notre guide ci-dessous ou consultez notre <a href='https://lab.braze.com/email-onboarding-for-pro-and-enterprise-achieving-high-deliverability' target='_blank'>cours LAB sur la livrabilité</a>."
+guide_top_text: "Vous voulez donc commencer à envoyer des campagnes d'e-mail? Braze peut vous aider avec cela! Suivez nos guides ci-dessous ou consultez notre cours <a href='https://lab.braze.com/email-onboarding-for-pro-and-enterprise-achieving-high-deliverability' target='_blank'>Email Onboarding</a> LAB."
 page_type: atterrissage
 description: "Cette page d'accueil contient des ressources pour démarrer avec des campagnes de courriel."
 channel: Email
@@ -48,7 +48,7 @@ guide_featured_list:
 
 Avant de commencer à envoyer des e-mails, il y a des choses dont vous avez besoin. Consultez le tableau ci-dessous pour en savoir plus.
 
-| Exigences                          | Libellé                                                                                                                                                                                                                                                           | Acquisition                                                                                                                                                                                                           |
+| Exigences                          | Libellé                                                                                                                                                                                                                                                           | Source                                                                                                                                                                                                                |
 | ---------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Une IP dédiée (protocole Internet) | Une adresse IP dédiée est une adresse Internet unique fournie exclusivement à un seul compte d’hébergement.                                                                                                                                                       | Braze donne à ses clients des adresses IP dédiées, pour assurer le contrôle de la réputation de votre expéditeur de courriel. L'embarquement de Braze le configurera pour vous.                                       |
 | Domaines en marque blanche         | Celles-ci se composent d'un domaine et d'un sous-domaine. La Whitelabling vous permet de passer les vérifications d'authentification par e-mail pour DKIM et SPF.                                                                                                 | L'intégration à Braze générera ces domaines pour vous, mais vous devez choisir leurs noms.                                                                                                                            |
@@ -59,17 +59,15 @@ Avant de commencer à envoyer des e-mails, il y a des choses dont vous avez beso
 ## Le réchauffement IP
 
 {% alert important %}
-Le réchauffement IP est l'étape __la plus importante__ du processus de configuration de l'email. Bien que ce ne soit pas votre première étape (c'est en fait la dernière! , nous l'appelons ici pour vous faire savoir que vous devez absolument réchauffer votre adresse IP ou que tous les courriels que vous envoyez seront envoyés au spam ou seront soumis à d'autres barrières d'envoi.
+Le réchauffement IP est l'étape __la plus importante__ du processus de configuration du courriel. Bien que ce ne soit pas votre première étape (c'est en fait la dernière! , nous l'appelons ici pour vous faire savoir que vous devez absolument réchauffer votre adresse IP ou que tous les courriels que vous envoyez seront envoyés au spam ou seront soumis à d'autres barrières d'envoi.
 {% endalert %}
 
-[IP Warmup]({{site.baseurl}}/user_guide/onboarding_with_braze/email_setup/ip_warming/) est quand vous envoyez un nombre relativement réduit d'e-mails dans votre premier lot, puis au fil du temps, augmentez légèrement le volume des lots suivants jusqu'à ce que vous atteigniez votre volume quotidien typique. Cela se fait à la fin du processus de configuration de votre e-mail.
+[L'échauffement de l'IP]({{site.baseurl}}/user_guide/onboarding_with_braze/email_setup/ip_warming/) est quand vous envoyez un nombre relativement réduit d'e-mails dans votre premier lot, puis au fil du temps, augmentez légèrement le volume des lots suivants jusqu'à ce que vous atteigniez votre volume quotidien typique. Cela se fait à la fin du processus de configuration de votre e-mail.
 
-En commençant par de plus petits volumes de courriels, vous établissez un niveau de confiance avec votre fournisseur de messagerie, montrant que vous envoyez uniquement des courriels aux utilisateurs pertinents.
+En commençant par de plus petits volumes de courriels, vous établissez un niveau de confiance avec votre fournisseur de messagerie, montrant que vous envoyez uniquement des courriels aux utilisateurs pertinents. Envoyez votre premier lot d'emails à vos utilisateurs les plus engagés. Cela vous aidera à gagner la confiance plus rapidement avec votre fournisseur.
 
-Envoyez votre premier lot d'emails à vos utilisateurs les plus engagés. Cela vous aidera à gagner la confiance plus rapidement avec votre fournisseur.
-
-Une fois que vous avez terminé avec votre IP Warmup, n'hésitez pas à [commencer à créer et envoyer des e-mails]({{site.baseurl}}/user_guide/message_building_by_channel/email/creating_an_email_campaign/)!
+Une fois que vous avez terminé de réchauffer votre IP, n'hésitez pas à [commencer à créer et envoyer des e-mails]({{site.baseurl}}/user_guide/message_building_by_channel/email/creating_an_email_campaign/)!
 
 ## Plus de ressources
 
-Pour plus d'informations sur les courriels au Brésil, consultez notre section dédiée [e-mail]({{site.baseurl}}/user_guide/message_building_by_channel/email/).
+Pour plus d'informations sur les courriels au Brésil, consultez notre section dédiée [e-mail]({{site.baseurl}}/user_guide/message_building_by_channel/email/).<br><br>
