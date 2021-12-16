@@ -13,7 +13,7 @@ description: "This reference article discusses the concept of rate limiting and 
 > This reference article discusses the concept of rate limiting and frequency capping, and how you can apply that marketing pressure to improve user experience.
 > <br>
 > <br>
-> We all want our users to have the best experience possible, with rate limiting and frequency capping, you can make sure your users are getting the message they need to, and none of the ones they don't.
+> We all want our users to have the best experience possible. With rate limiting and frequency capping, you can make sure your users are getting the message they need to, and none of the ones they don't.
 
 ## Rate-limiting
 
@@ -168,9 +168,11 @@ __Then, the expected behavior is that:__
 
 ### Frequency capping by tag
 
-[Frequency Capping rules](#updated-frequency-capping-rules) can be applied to app groups using specific tags you have applied to your Campaigns/Canvases, allowing you to, essentially, base your frequency capping on custom-named groups.
+[Frequency Capping rules](#updated-frequency-capping-rules) can be applied to app groups using specific tags you have applied to your campaigns and Canvases, allowing you to essentially base your frequency capping on custom-named groups.
 
-You can combine regular frequency capping with frequency capping by tags, as shown below.
+With frequency capping by tag, rules can be set on the main and nested tags, so Braze will take into account all tags. For example, if you've selected to use the main tag A to frequency cap, we'll also include information in all the nested tags (for example, tags B and C) when determining the limit.
+
+You can also combine regular frequency capping with frequency capping by tags as shown below.
 
 ![Frequency capping rule][12]
 
@@ -189,7 +191,7 @@ Canvases are tagged at the Canvas level, as opposed to tagging by Step. So, each
 
 When rules conflict, the most restrictive, applicable frequency capping rule will be applied to your users.
 
-![global][11]
+![Conflicting Rules][11]
 
 In this example, your user will not receive more than one push notification campaign or Canvas steps with the tag "promotional" in a given week, because you've specified that users should not receive more than one push notification campaign or Canvas step from all campaigns and Canvas steps. In other words, the most restrictive applicable frequency rule is the rule that will be applied to a given user.
 
