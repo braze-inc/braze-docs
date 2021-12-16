@@ -8,7 +8,7 @@ channel:
   - MMS
 ---
 
-# Qu'est-ce qu'un message MMS ?
+# À propos des MMS
 
 !\[MMS\]\[picture\]{: style="float:right; max-width:30%; margin-left:15px; margin-bottom:15px; border:0"} MMS, également connu sous le nom de service de message multimédia, est utilisé pour envoyer des messages contenant des ressources multimédia (jpg, gif, png) aux téléphones mobiles.
 
