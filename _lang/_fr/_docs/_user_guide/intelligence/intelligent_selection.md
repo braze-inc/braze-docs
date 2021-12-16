@@ -7,9 +7,9 @@ description: "La sélection intelligente est une fonctionnalité qui analyse les
 
 # Sélection intelligente {#intelligent-selection}
 
-> La sélection intelligente est une fonctionnalité qui analyse les performances d'une campagne récurrente ou de Canvas deux fois par jour et ajuste automatiquement le pourcentage d'utilisateurs qui reçoivent chaque variante de message.
+> Cet article donne un aperçu de la sélection intelligente et de la façon dont vous pouvez l'implémenter dans vos campagnes et vos canvases.
 
-Une variante qui semble être plus performante que les autres sera envoyée à plus d'utilisateurs, tandis que les variantes sous-performantes seront ciblées sur moins d'utilisateurs. Chaque ajustement est effectué à l'aide d'un [algorithme statistique][227] qui s'assure que nous ajustons pour des différences réelles de performances et pas seulement pour des chances aléatoires.
+La sélection intelligente est une fonctionnalité qui analyse les performances d'une campagne récurrente ou de Canvas deux fois par jour et ajuste automatiquement le pourcentage d'utilisateurs qui reçoivent chaque variante de message. Une variante qui semble être plus performante que les autres sera envoyée à plus d'utilisateurs, tandis que les variantes sous-performantes seront ciblées sur moins d'utilisateurs. Chaque ajustement est effectué à l'aide d'un [algorithme statistique][227] qui s'assure que nous ajustons pour des différences réelles de performances et pas seulement pour des chances aléatoires.
 
 !\[Sélection Intelligence\]\[3\]
 
