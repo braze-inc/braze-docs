@@ -1,13 +1,13 @@
 ---
 nav_title: Dépannage
 article_title: Dépannage de la région prédictive
-description: "Cet article de référence couvre certaines étapes de dépannage et les considérations à garder à l'esprit tout en utilisant la réaction prédictive."
+description: "Cet article de référence couvre certaines étapes de dépannage et les considérations à garder à l'esprit lors de l'utilisation de la Église prédictive."
 page_order: 3
 ---
 
 # Dépannage de la région prédictive
 
-> Église prédictive, et tout modèle d'apprentissage automatique, n'est aussi bonne que les données disponibles pour le modèle. il est aussi très dépendant d'avoir certains volumes de données avec lesquels travailler. Cela signifie que les utilisateurs peuvent rencontrer des messages d'erreur, ou une faible qualité de prédiction, car ils apprennent à connaître cette nouvelle fonctionnalité.
+> Église prédictive (et tout modèle d'apprentissage automatique) n'est pas aussi bonne que les données disponibles pour le modèle. il est aussi très dépendant d'avoir certains volumes de données avec lesquels travailler. Cela signifie que les utilisateurs peuvent rencontrer des messages d'erreur, ou une faible qualité de prédiction, car ils apprennent à connaître cette nouvelle fonctionnalité.
 
 ## Erreurs potentielles
 
@@ -15,10 +15,10 @@ page_order: 3
 
 Ce message d’erreur apparaît lorsque votre définition de churn est trop limitée et renvoie trop peu d’utilisateurs.
 
-Pour résoudre ce problème, vous devrez changer le nombre de jours et/ou d'actions qui définissent churn pour capturer plus d'utilisateurs. Assurez-vous que vous utilisez ET/OU correctement pour ne pas créer de définitions trop restrictives.
+Pour résoudre ce problème, vous devrez changer le nombre de jours et/ou d'actions qui définissent churn pour capturer plus d'utilisateurs. Assurez-vous que vous utilisez correctement les filtres `ET/OU` afin de ne pas créer de définitions trop restrictives.
 
 {% alert important %}
-Notez que bien que la Peine prédictive soit activée au niveau de l'entreprise, certains groupes d'applications peuvent ne pas avoir assez d'utilisateurs pour construire des prédictions.  La recommandation typique est de disposer d'au moins 500k MAU pour garantir qu'il y en aura assez.
+Bien que Predictive Churn soit activé au niveau de l'entreprise, certains groupes d'applications peuvent ne pas avoir assez d'utilisateurs pour construire des prédictions. Généralement, vous avez besoin de 300 000 utilisateurs actifs mensuels dans un seul groupe d'applications.
 {% endalert %}
 
 ### Problèmes avec la taille de l'audience de prédiction
@@ -34,7 +34,7 @@ Si votre Audience de Prédiction reste un problème même après avoir modifié 
 
 ### La taille de l'audience de prédiction est trop grande
 
-Une définition d'audience de prédiction ne peut excéder 40 millions d'utilisateurs. Si vous voyez un message disant que votre audience est trop grande, alors nous vous recommandons d'ajouter plus de calques à votre auditoire et/ou de changer la fenêtre de l'heure sur laquelle il se base.
+Une définition d'audience de prédiction ne peut excéder 100 millions d'utilisateurs. Si vous voyez un message disant que votre audience est trop grande, alors nous vous recommandons d'ajouter plus de calques à votre auditoire et/ou de changer la fenêtre de l'heure sur laquelle il se base.
 
 ### La prédiction a une mauvaise qualité
 !\[Predicition Quality\]\[1\]{: style="float:right;max-width:40%;margin-left:15px;"} Si votre modèle a une qualité de prédiction de 40% et plus, vous êtes dans un endroit génial! Mais si votre qualité de prédiction tombe à 39% et ci-dessous, vous devrez peut-être modifier votre Église, et les définitions de l'audience de prédiction pour être plus spécifiques ou avoir des fenêtres de temps différentes.
@@ -53,6 +53,6 @@ Vous trouverez ci-dessous quelques questions à vous poser lorsque vous aurez mi
 
 - Quelles actions de grande valeur mènent à la rétention et à la loyauté?
 - Avez-vous configuré des événements personnalisés qui correspondent à ces actions spécifiques ? Predictive Churn fonctionne avec des événements personnalisés par opposition aux attributs personnalisés.
-- Pensez-vous dans les "brèves fenêtres" du temps à l'intérieur de laquelle vous denim de l'église. La bombe prédictive a une fenêtre de retour de 14 jours.
+- Pensez-vous dans des fenêtres de temps à l'intérieur desquelles vous définissez l'église? Vous pouvez définir churn comme quelque chose qui se passe en 14 jours.
 - Avez-vous pensé à des périodes de l'année qui conduisent à des comportements atypiques des utilisateurs - comme des vacances. Des changements rapides dans le comportement des consommateurs influenceront vos prédictions.
-[1]: {% image_buster /assets/img/churn/churn3.png %} [3]: {% image_buster /assets/img/churn/churn5.png %}
+[1]: {% image_buster /assets/img/churn/churn3.png %} [3]: {% image_buster /assets/img/churn/audience_size_error.png %}
