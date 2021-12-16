@@ -1,7 +1,7 @@
 ---
 nav_title: Data Protection Technical Assistance
 article_title: Data Protection Technical Assistance
-page_order: 8
+layout: documents
 noindex: false
 
 page_type: reference
