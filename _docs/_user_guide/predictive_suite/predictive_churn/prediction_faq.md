@@ -8,7 +8,7 @@ page_order: 3
 
 # Predictive Churn Troubleshooting
 
-> Predictive Churn, and any machine learning model, is only as good as the data available to the model. it also is highly dependent on having certain volumes of data to work with. this means that users may encounter some error messages, or low prediction quality, as they're getting to know this new feature. 
+> Predictive Churn (and any machine learning model) is only as good as the data available to the model. it also is highly dependent on having certain volumes of data to work with. this means that users may encounter some error messages, or low prediction quality, as they're getting to know this new feature. 
 
 ## Potential errors
 
@@ -19,7 +19,7 @@ This error message appears when your churn definition is too limiting and return
 To fix this, you will need to change either the number of days and/or actions that define churn to capture more users. Make sure you are using AND/OR correctly so as to not create overly restrictive definitions. 
 
 {% alert important %}
-Note that while Predictive Churn is turned on at a company level, some App Groups may not have enough users to build predictions.  The typical recommendation is to have at least 500k MAU to guarantee there will be enough. 
+Note that while Predictive Churn is turned on at a company level, some App Groups may not have enough users to build predictions.  The typical recommendation is to have at least 300,000 Monthly Active Users to ensure there will be enough. 
 {% endalert %}
 
 ### Problems with prediction audience size
@@ -35,7 +35,7 @@ If your Prediction Audience continues to be a problem even after switching up yo
 
 ### Prediction audience size is too big
 
-A Prediction Audience definition cannot exceed 40 million users. If you see a message saying your audience is too large, then we recommend adding more layers to your audience and/or changing the window of time it's based on.
+A Prediction Audience definition cannot exceed 100 million users. If you see a message saying your audience is too large, then we recommend adding more layers to your audience and/or changing the window of time it's based on.
 
 ### Prediction has poor quality
 ![Predicition Quality][1]{: style="float:right;max-width:40%;margin-left:15px;"}
@@ -59,4 +59,4 @@ Listed below are some questions to ask yourself as you set up Predictive Churn. 
 - Have you considered times of the year that lead to atypical user behaviors - like holidays. Rapid shifts in consumer behavior will impact your predictions. 
 
 [1]: {% image_buster /assets/img/churn/churn3.png %}
-[3]: {% image_buster /assets/img/churn/churn5.png %}
+[3]: {% image_buster /assets/img/churn/audience_size_error.png %}
