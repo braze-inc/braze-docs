@@ -8,7 +8,7 @@ channel:
   - SMS
 ---
 
-# Que sont les messages SMS ?
+# A propos des messages SMS
 
 !\[SMS about\]\[picture\]{: style="float:right;max-width:30%;margin-left:15px;border: 0;"}
 
