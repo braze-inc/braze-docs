@@ -42,6 +42,7 @@ Pour l'intégration au SDK, utilisez le ["SDK Endpoint"]({{site.baseurl}}/user_g
 | US-06    | `https://dashboard-06.braze.com` | `https://rest.iad-06.braze.com` | `sdk.iad-06.braze.com`   |
 | US-08    | `https://dashboard-08.braze.com` | `https://rest.iad-08.braze.com` | `sdk.iad-08.braze.com`   |
 | EU-01    | `https://dashboard-01.braze.eu`  | `https://rest.fra-01.braze.eu`  | `sdk.fra-01.braze.eu`    |
+| EU-02    | `https://dashboard-02.braze.eu`  | `https://rest.fra-02.braze.eu`  | `sdk.fra-02.braze.eu`    |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
 
 ### Explication secrète de l'entreprise
