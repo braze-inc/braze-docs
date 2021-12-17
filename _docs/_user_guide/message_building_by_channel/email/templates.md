@@ -2,6 +2,6 @@
 nav_title: "Templates"
 config_only: true
 noindex: true
-page_order: 2
+page_order: 5
 ---
 

@@ -2,7 +2,7 @@
 nav_title: Drag & Drop Editor
 article_title: Drag & Drop Editor
 alias: /dnd/
-page_order: 2.1
+page_order: 2
 description: "This article covers how to set up and properly use the drag & drop editor provided by Braze."
 layout: featured
 guide_top_header: "Drag & Drop Editor"

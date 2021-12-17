@@ -1,6 +1,6 @@
 ---
-nav_title: Creating an Email Campaign
-article_title: Creating an Email Campaign
+nav_title: Create an Email Campaign
+article_title: Create an Email Campaign
 page_order: 1
 description: "This reference article covers how to create an email campaign using the Braze platform. Included are best practices on how to compose your messages, preview your content, and schedule your campaign."
 tool:
