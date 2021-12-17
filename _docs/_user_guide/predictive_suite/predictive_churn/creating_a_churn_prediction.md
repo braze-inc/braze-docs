@@ -1,6 +1,6 @@
 ---
-nav_title: Creating A Churn Prediction
-article_title: Creating A Churn Prediction
+nav_title: Creating a Churn Prediction
+article_title: Creating a Churn Prediction
 description: "This article covers how to create a Churn Prediction within the Braze dashboard"
 page_order: 1
 
