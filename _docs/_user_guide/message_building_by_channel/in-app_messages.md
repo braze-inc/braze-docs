@@ -12,6 +12,9 @@ channel:
 
 guide_featured_title: "Popular Articles"
 guide_featured_list:
+- name: "About In-App Messages"
+  link: /docs/user_guide/message_building_by_channel/in-app_messages/about/
+  fa_icon: fas fa-check
 - name: "Creating an In-App Message"
   link: /docs/user_guide/message_building_by_channel/in-app_messages/create/
   fa_icon: fas fa-mobile-alt
@@ -35,64 +38,4 @@ guide_featured_list:
   fa_icon: fas fa-file-code
 
 ---
-
-To see examples of in-app messages, check out our [Case Studies][11].
-
-## When to use in-app messages
-
-In-app messages are good for a lot of things. These messages don't deliver outside of the user's app and won't intrude on their home screen. In-app messages, by their nature, exist within your app and come with context and are almost never unwelcome! They're always delivered when the user is active within your app.
-
-### Great use cases
-
-- New App Features
-- App Management
-- Reviews
-- App Upgrades/Updates
-- Giveaways & Sweepstakes
-- Sales and Promotions
-- Product Sales
-- Encouraging and rewarding discovery
-- [Permission Requests/Push Priming][21]
-
-## Expected behaviors by message types
-
-These are what it looks like for your users to open one of our out-of-the-box in-app message types.
-
-{% tabs %}
-  {% tab Slideup %}
-
-  Our Slideups typically appear at the top and bottom of the app screen (you can set this when you create your message). These are great for alerting your users about new terms of service, cookies, and other snippets of information.
-
-  <br>
-
-  ![Slideup Behavior]({% image_buster /assets/img/slideup-behavior.gif %}){: style="border:0px;"}
-
-  <br>
-
-{% endtab %}
-{% tab Modal %}
-
-  Modals appear in the center of the device's screen with a screen overlay that helps it stand out from your app in the background. These are great call-to-action These are perfect for not-so-subtly suggesting that your user take advantage of a sale or giveaway.
-
-  <br>
-
-  ![Modal Behavior]({% image_buster /assets/img/modal-behavior.gif %}){: style="border:0px;"}
-
-  <br>
-
-{% endtab %}
-{% tab Full-Screen %}
-
-Full-Screen messages are exactly what you'd expect - they take up the whole screen of the device! This message type is great when you really need your user's attention, like for mandatory app updates.
-
-<br>
-
-![Full-Screen Behavior]({% image_buster /assets/img/full-screen-behavior.gif %}){: style="border:0px;"}
-
-<br>
-
-{% endtab %}
-{% endtabs %}
-
-[11]: https://www.braze.com/customers
-[21]: {{site.baseurl}}/user_guide/message_building_by_channel/push/best_practices/
+<br><br>
