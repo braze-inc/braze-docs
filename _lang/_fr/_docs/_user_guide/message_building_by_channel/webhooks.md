@@ -13,7 +13,7 @@ guide_featured_list:
   - 
     name: À propos des Webhooks
     link: /fr/docs/user_guide/message_building_by_channel/webhooks/understanding_webhooks/
-    fa_icon: fas fa-book-open
+    fa_icon: vérification du fas fa-check
   - 
     name: Création d'un Webhook
     link: /fr/docs/user_guide/message_building_by_channel/webhooks/creating_a_webhook/
