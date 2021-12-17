@@ -62,8 +62,8 @@ Data included in the exports:
     - Email Opt-in Date
 
 {% alert tip %}
-For help with CSV and API exports, visit our troubleshooting article [here]({{site.baseurl}}/user_guide/data_and_analytics/export_braze_data/export_troubleshooting/).
-{% endalert %}
+For help with CSV and API exports, visit our [troubleshooting]({{site.baseurl}}/user_guide/data_and_analytics/export_braze_data/export_troubleshooting/) article.
+{% endalert %} 
 
 [1]: {% image_buster /assets/img_archive/csvexport.png %}
 [2]: {% image_buster /assets/img_archive/csvexport2.png %}
