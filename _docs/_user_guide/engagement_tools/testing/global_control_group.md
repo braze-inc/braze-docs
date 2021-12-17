@@ -35,7 +35,7 @@ From the dashboard, go to **Global Message Settings** under **Engagement**, and 
 
 Input a percentage for your control group and click __Save__. Once entered, Braze shows you an estimate of how many users will fall into your Global Control, treatment, and treatment sample. Keep in mind that the more users you have in your app group, the more accurate this estimate will be. 
 
-The number of users in your Global Control Group is automatically updated after its initial setup to remain proportionate to this audience percentage when more users are added to your app group. For percentage guidelines, refer to the [best practices section](#percentage-guidelines) below.
+The number of users in your Global Control Group is automatically updated after its initial setup to remain proportionate to this audience percentage when more users are added to your app group. For instance, if the number of users in your app group grows, then the number of users in your Global Control Group will also grow so that your Control Group remains a constant percentage of your app group audience. For percentage guidelines, refer to the [best practices section](#percentage-guidelines) below.
 
 ![Global Control Group][4]
 
@@ -85,6 +85,8 @@ The Global Control Group Report allows you to compare your group against a treat
 
 When generating your report, choose an event—either sessions or any custom event—to compare across your treatment and control groups. Then choose a time period for which to view data for. Keep in mind that if you’ve saved multiple control group experiments at different time periods, you should avoid including data from more than one experiment in your report.
 
+Keep in mind that the percentage metrics in your report are rounded. For instance, in cases where the number of conversions is a very low percentage of your overall control or treatment group, the conversion rate may round fo 0%.
+
 Lastly, as with several other reports on our platform, this report displays a [confidence]({{site.baseurl}}/user_guide/engagement_tools/testing/multivariant_testing/#understanding-confidence) percentage for your change from control metric. Note that in cases where the conversion rate between your control and treatment are identical, a confidence of 0% is to be expected; this indicates that there is a 0% chance that there is a difference in performance between the two groups.
 
 ### Report metrics
@@ -94,7 +96,7 @@ Lastly, as with several other reports on our platform, this report displays a [c
 | Change from Control | This calculates the uplift between the conversion rate for your treatment and control groups. | ((Treatment conversion rate – control conversion rate) ÷ control conversion rate) * 100 |
 | Incremental Uplift | The difference in total events between your treatment and control groups. This metric seeks to answer the question of “How many more conversion events did the treatment group achieve?”. | Total events for treatment – total events for control |
 | Incremental Uplift Percent | The percentage of your treatment’s total events that can be attributed to your treatment (versus natural user behavior). This is calculated by dividing incremental uplift (number) by the total number of events for your treatment group. | Incremental uplift (number) ÷ Total events for treatment group |
-| Conversion Rate | On average, the percentage of users in your control/ treatment group that complete your selected event each day during the chosen time period. | Average (mean) of the percent of users that perform your selected event each day during the chosen time period. |
+| Conversion Rate | On average, the percentage of users in your control/ treatment group that complete your selected event each day during the chosen time period. Note that if the number of conversions is very small and your control/ treatment groups are very large, then the conversion rate may round to 0%. | Average (mean) of the percent of users that perform your selected event each day during the chosen time period. |
 | Estimated Group Size | The estimated number of users in your control and treatment groups during selected time period. | The maximum membership size your control and treatment groups reached during the time period you chose for the report. |
 | Total Number of Events | The total number of times the selected event occurred during the chosen time period. This is not unique (ie. if a user performs an event twice during time period, the event gets incremented twice). | Sum of the number of times event occurred each day during the chosen time period. |
 | Events Per User | The estimated average number of times users in each group completed your conversion events during the selected time period. | Total events ÷ estimated group size. |
@@ -109,6 +111,8 @@ As you set up your global control groups and view reporting, here are errors you
 | Unable to save the percentage entered when designating a Global Control Group. | This issue occurs if you enter a non-integer or an integer that is not between 1 and 15 (inclusive). |
 | "Braze is not able to update your Global Control Group" error on the Global Control settings page. | This usually indicates that some component of this page has changed, likely due to actions taken by another user on your Braze account. In this case, refresh the page and retry. |
 | Global Control Group report does not have any data. | If you access the Global Control Group Report without having saved a Global Control Group, you will not see any data in the report. Create and save a Global Control Group and try again. |
+| My conversion rate is 0%/ I'm not seeing the graph display, even though there are more than zero events occurring. | Note that if the number of conversions is very small and your control/ treatment groups are very large, then the conversion rate may round to 0%, and thus not show up in the graph. You can verify this by checking the Total Number of Events metric. You could compare the effectiveness of your two groups using the incremental uplift percent metric.  |
+| My conversion rate (or other metrics) are changing drastically depending on the time period I'm viewing data for. | If you're viewing data over short time periods, it's possible for your metrics to fluctuate day to day or week to week. We recommend that you view metrics over the course of at last one month. |
 {: .reset-td-br-1 .reset-td-br-2}
 
 ### Things to watch out for {#things-to-watch-for}
