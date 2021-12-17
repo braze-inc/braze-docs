@@ -38,10 +38,10 @@ Autorisation : Bearer YOUR-REST-API-KEY
   "destinataires": (optionnel, tableau; si non fourni et que la diffusion n'est pas définie à `false`, message enverra à tout le segment ciblé par la campagne)
     [{
       // "external_user_id" ou "user_alias" est requis. Les requêtes ne doivent spécifier qu'une seule fois.
-      "user_alias": alias de l'utilisateur (optionnel, objet d'alias de l'utilisateur) pour recevoir le message,
-      "external_user_id": (optionnel, chaîne) identificateur externe de l'utilisateur pour recevoir le message,
+      "user_alias": (optionnel, objet alias utilisateur) alias de l'utilisateur pour recevoir le message,
+      "external_user_id": (optionnel, string) identificateur externe de l'utilisateur à recevoir le message,
       "trigger_properties": (optionnel, objet) la personnalisation des paires clé-valeur qui s'appliqueront à cet utilisateur (ces paires clé-valeur remplaceront toutes les clés qui entrent en conflit avec trigger_properties ci-dessus),
-      "send_to_existing_only": (optionnel, booléen) par défaut à true, si réglé sur `false`, un objet d'attributs doit également être inclus,
+      "send_to_existing_only": (optionnel, booléen) par défaut à true, ne peut pas être utilisé avec les alias de l'utilisateur ; si défini à `false`, un objet d'attributs doit également être inclus,
       "attributs": (optionnel, objet) les champs dans l'objet attributs créeront ou mettront à jour un attribut de ce nom avec la valeur donnée sur le profil utilisateur spécifié avant l'envoi du message et les valeurs existantes seront écrasées
     }]
 }
@@ -67,7 +67,7 @@ Autorisation : Bearer YOUR-REST-API-KEY
 - [Destinataires]({{site.baseurl}}/api/objects_filters/recipient_object/)
 - [Objet Alias de l'utilisateur]({{site.baseurl}}/api/objects_filters/user_alias_object/)
 - [Objet Attribut Utilisateur]({{site.baseurl}}/api/objects_filters/user_attributes_object/)
-- [Paramètres API]({{site.baseurl}}/api/parameters) <br><br> La table de destinataires peut contenir jusqu'à 50 objets, avec chaque objet contenant une seule chaîne `external_user_id` et `trigger_properties` objet. <br><br> Lorsque `send_to_existing_only` est `vrai`, Braze n'enverra le message qu'aux utilisateurs existants. Quand `send_to_existing_only` est `false` et qu'un utilisateur avec l'identifiant `donné n'existe pas,` Braze créera un utilisateur avec cet identifiant et les attributs avant d'envoyer le message.
+- [Paramètres API]({{site.baseurl}}/api/parameters) <br><br> La table de destinataires peut contenir jusqu'à 50 objets, avec chaque objet contenant une seule chaîne `external_user_id` et `trigger_properties` objet. <br><br> Lorsque `send_to_existing_only` est `vrai`, Braze n'enverra le message qu'aux utilisateurs existants. Cependant, ce drapeau ne peut pas être utilisé avec les alias utilisateurs. Quand `send_to_existing_only` est `false` et qu'un utilisateur avec l'identifiant `donné n'existe pas,` Braze créera un utilisateur avec l' `id` et les attributs avant d'envoyer le message.
 
 ## Exemple de demande
 ```
