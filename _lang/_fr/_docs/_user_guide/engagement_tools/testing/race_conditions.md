@@ -34,7 +34,7 @@ Une façon d'éviter cette condition de course est d'ajouter un retard, environ 
 
 De même, vous pouvez utiliser l'objet [`Attributs`][1] pour ajouter/créer/mettre à jour un utilisateur, puis les cibler en utilisant soit le [`canvas/trigger/send`][2] ou [`campagne/trigger/send`][3] endpoint. Cet appel API traitera l'objet `Attributs` avant de cibler les utilisateurs.
 
-Les attributs qui sont inclus dans cet objet seront traités avant que Braze ne commence à envoyer la campagne. Si le drapeau `send_to_existing_only` est défini à false, et qu'un `external_user_id` n'existe pas dans la base de données de Braze, Braze va créer un profil utilisateur pour le `external_user_id` et traiter les attributs associés au profil utilisateur avant que Braze ne commence à envoyer la campagne. Notez également que si le flag `send_to_existing_only` est défini à false, alors l'objet attributs doit être inclus afin de créer l'utilisateur.
+Les attributs qui sont inclus dans cet objet seront traités avant que Braze ne commence à envoyer la campagne. Si le drapeau `send_to_existing_only` est défini à false, et qu'un `external_user_id` n'existe pas dans la base de données de Braze, Braze va créer un profil utilisateur pour le `external_user_id` et traiter les attributs associés au profil utilisateur avant que Braze ne commence à envoyer la campagne. Notez également que si le flag `send_to_existing_only` est défini à false, alors l'objet attributs doit être inclus afin de créer l'utilisateur. Le drapeau `send_to_existing_only` ne peut pas être utilisé avec les alias utilisateur.
 
 ## Les déclencheurs d'actions correspondants et les filtres d'audience
 
