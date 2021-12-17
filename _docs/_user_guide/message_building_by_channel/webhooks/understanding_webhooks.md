@@ -1,6 +1,6 @@
 ---
-nav_title: Understanding Webhooks
-article_title: Understanding Webhooks
+nav_title: About Webhooks
+article_title: About Webhooks
 page_order: 0
 channel:
   - webhooks
@@ -8,7 +8,7 @@ description: "This reference article covers the basics of webhooks."
 
 ---
 
-# Understanding Webhooks
+# About Webhooks
 
 > This reference article covers the basics of webhooks to give you the building blocks you need to create your own. Lookings for steps on how to create a webhook in Braze? Refer to [Creating a webhook][1].
 

@@ -11,7 +11,7 @@ channel:
 
 guide_featured_title: "Section Articles"
 guide_featured_list:
-- name: Understanding Webhooks
+- name: About Webhooks
   link: /docs/user_guide/message_building_by_channel/webhooks/understanding_webhooks/
   fa_icon: fas fa-book-open
 - name: Creating a Webhook

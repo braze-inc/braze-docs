@@ -19,22 +19,22 @@ Two-way messaging leverages custom events to make this seemingly smooth customer
 
 | Type | Speed | Notes | 
 | ----- | ----- | ---- | 
-| Known Phone Numbers | 3-5 Seconds | A known number is a number that has already been assigned a phone attribute and is already subscribed to a subscription group within Braze.
-| Unknown Phone Numbers |  10-15 Seconds | An unknown number is one that has not yet been identifier. For more information on how Unknown phone numbers are dealt with, check out our [documentation][unknown].|
+| Known phone numbers | 3-5 Seconds | A known number is a number that has already been assigned a phone attribute and is already subscribed to a subscription group within Braze.
+| Unknown phone numbers |  10-15 Seconds | An unknown number is one that has not yet been identifier. For more information on how Unknown phone numbers are dealt with, check out our [documentation][unknown].|
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
 
 If you require faster sending speeds for unknown phone numbers, reach out to your Customer Success Manager or contact support to discuss your options.
 
 ## Custom keyword messaging handling
 
-| Custom Event Fired |
+| Custom event fired |
 | ------- | ------ |
-| `sms_response_subscriptionName_custom` | Response Examples => Status, Coupons, News |
+| `sms_response_subscriptionName_custom` | Response examples => Status, Coupons, News |
 {: .reset-td-br-1 .reset-td-br-2}
 
-| Included Event Properties |
+| Included event properties |
 | ------- | ------ |
-| - `message_body`: users SMS response<br>- `to_number`: usually short code the clients used to send SMS<br>- `from_number`: user's phone number<br>- `sms_message_id`: messaging service ID | Message Body => <br>Users response returned as all lower case |
+| - `message_body`: users SMS response<br>- `to_number`: usually short code the clients used to send SMS<br>- `from_number`: user's phone number<br>- `sms_message_id`: messaging service ID | Message body => <br>Users response returned as all lower case |
 {: .reset-td-br-1 .reset-td-br-2}
 
 - Anytime a user texts an SMS response that is not a default keyword to a phone number in a given Subscription Group, a custom event like `sms_response_SubscriptionGroupName_custom` with event properties `message_body`, `to_number`, `from_number`, and `sms_message_id` will be sent to Braze. 

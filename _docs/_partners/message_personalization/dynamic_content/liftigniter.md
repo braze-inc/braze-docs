@@ -18,7 +18,7 @@ The LiftIgniter and Braze integration leverage Connected Content to allow you to
 
 | Requirement| Description|
 | ---| ---|
-|LiftIgniter account | A [LiftIgniter account](https://console.liftigniter.com/login) is required to take advantage of this partnership.
+| LiftIgniter account | A [LiftIgniter account](https://console.liftigniter.com/login) is required to take advantage of this partnership. |
 | LiftIgniter API integration | You must [integrate](https://support.liftigniter.com/support/solutions/articles/30000024667-api-integration-overview) LiftIgniter into your site or app to be able to pull recommendations from there. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
 

@@ -25,6 +25,7 @@ A Software Development Kit (SDK) is a set of tools that can be used to develop s
 |US-06 | sdk.iad-06.braze.com |
 |US-08 | sdk.iad-08.braze.com |
 |EU-01 | sdk.fra-01.braze.eu |
+|EU-02 | sdk.fra-02.braze.eu |
 {: .reset-td-br-1 .reset-td-br-2}
 
 When using endpoints for SDK integration, use the __SDK Endpoint__ listed on this page, __not__ the [Rest Endpoint]({{site.baseurl}}/api/basics/#endpoints) used for API calls.

@@ -73,5 +73,7 @@ valid_partner_list:
   url: /docs/partners/message_orchestration/additional_channels/messaging/line/  
 - name: Shopify
   url: /docs/partners/message_orchestration/channel_extensions/eCommerce/shopify/
+- name: Yotpo
+  url: /docs/partners/message_orchestration/channel_extenstions/ecommerce/yotpo/
 
 ---

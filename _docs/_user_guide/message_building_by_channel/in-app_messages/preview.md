@@ -92,12 +92,9 @@ You can also track new custom button names - up to 100 unique names per campaign
 1. The most notable incompatible change with this new message type is the SDK requirements. Users whose App SDK does not meet the minimum [SDK version requirements](#supported-sdk-versions) will not be shown the message.
 <br>
 
-2. ZIP files are no longer used to manage a message's assets. Instead, you should use our new [Asset Uploader](#upload-assets) and paste absolute asset URLs directly into your HTML - just like you would for an email campaign. See the [Migration Steps](#migration-guide) for more information on transitioning away from zip files.
-<br>
+2. The `appboy://close` deeplink which was previously supported on mobile apps has been removed in favor of the Javascript, `appboyBridge.closeMessage()`. This allows cross-platform HTML since the web does not support deep links.
 
-3. The `appboy://close` deeplink which was previously supported on mobile apps has been removed in favor of the Javascript, `appboyBridge.closeMessage()`. This allows cross-platform HTML since the web does not support deep links.
-
-4. Automatic click tracking, which used `?abButtonId=0` for button IDs, and "body click" tracking on close buttons have been removed. The code examples below show how to change your HTML to use our new Click Tracking javascript methods:
+3. Automatic click tracking, which used `?abButtonId=0` for button IDs, and "body click" tracking on close buttons have been removed. The code examples below show how to change your HTML to use our new Click Tracking javascript methods:
 
 | Before | After |
 |:-------- |:------------|
@@ -153,26 +150,5 @@ Then, paste the copied asset URL into your HTML as you normally would when refer
 You can press `CTRL+F` or `CMD+F` within the HTML Editor to search within your code!
 {% endalert %}
 
-### Migrating old "ZIP file" campaigns {#migration-guide}
-
-Older campaigns that used ZIP files are not supported in this new In-App Message composer.
-
-If you want to migrate those older ZIP file campaigns, follow these instructions:
-
-1. Download the ZIP asset file to your computer, and extract the files
-2. Upload all of your asset files into the new campaign. (Tip: you can select all files and drag-and-drop them in)
-3. For each newly uploaded asset, copy its uploaded file URL and replace them in your HTML's older local asset references
-
-For example, if your old HTML contains a reference that looks like this:
-
-```html
-<img src="/cat.png" />
-```
-
-Replace it with its respective uploaded asset URL, like this:
-
-```html
-<img src="https://cdn.braze.com/appboy/communication/assets/font_assets/files/5ee3869ae16e174f34fac566/original.png" />
-```
 
 [1]: {{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/customize/#javascript-bridge
