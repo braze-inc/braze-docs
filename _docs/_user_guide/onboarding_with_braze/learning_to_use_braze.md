@@ -113,7 +113,7 @@ Before proceeding with this learning path, make sure you’ve already followed t
 
 | Order | Article | What You'll Learn |
 |---|---|---|
-| 1 | About in-app messages |
+| 1 | [About in-app messages]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/about/) | What in-app messages are, the message types Braze offers, potential use cases, and more. |
 | 2 | [Creative details]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/creative_details/) | About the in-app message types, and specifications and recommendations to follow to ensure your message displays well on all devices. |
 | 3 | [Creating an in-app message]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/create/) | How to create an in-app message or in-browser message using campaigns or Canvas. |
 | 4 | [Testing in-app messages]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/testing/) | How to preview and test your in-app messages before sending them to your customers. |
