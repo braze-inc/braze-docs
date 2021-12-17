@@ -14,7 +14,7 @@ description: "Cet article décrit les détails et l'utilisation du point de term
 /fr/segments/data_series
 {% endapimethod %}
 
-Ce point de terminaison vous permet de récupérer une série quotidienne de la taille d'un segment au fil du temps pour un segment.
+Ce point de terminaison vous permet de récupérer une série quotidienne de la taille estimée d'un segment au fil du temps pour un segment.
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#62d9d142-cdec-4aea-a287-c13efea7415e {% endapiref %}
 
