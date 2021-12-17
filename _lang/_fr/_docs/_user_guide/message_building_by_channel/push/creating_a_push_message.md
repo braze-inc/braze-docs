@@ -110,9 +110,9 @@ Dans la section Options de ciblage, vous trouverez quelques options pour qui vou
 
 Des statistiques détaillées sur les auditoires des canaux ciblés par votre campagne sont disponibles dans le pied de page. Pour voir quel pourcentage de votre base d'utilisateurs est ciblé et la valeur à vie de ce segment, cliquez sur **Afficher des statistiques supplémentaires**.
 
-{% détails Pourquoi mes utilisateurs réalisables ont-ils l'air plus petit que ce qui devrait être le cas ? %}
+{% détails Pourquoi mes utilisateurs totaux ne correspondent pas à la somme de tous les canaux? %}
 
-Lorsque vous cliquez sur **Afficher les statistiques supplémentaires** et afficher le nombre total d'utilisateurs accessibles pour votre public filtré, vous remarquerez peut-être qu'il est plus petit que la somme des autres colonnes. Cet écart est généralement dû au fait qu'il y a un certain nombre d'utilisateurs qui se qualifient pour le segment ou les filtres dans la campagne, mais ne sont pas accessibles par push (par exemple, parce qu'ils n'ont pas de jetons de poussée [valides ou actifs]({{site.baseurl}}/user_guide/message_building_by_channel/push/push_registration/#push-tokens)).
+Lorsque vous consultez le nombre total d'utilisateurs accessibles pour votre public filtré, vous pouvez remarquer que la somme des colonnes individuelles est plus petite que la somme totale des utilisateurs accessibles. Cet écart est généralement dû au fait qu'il y a un certain nombre d'utilisateurs qui se qualifient pour le segment ou les filtres dans la campagne, mais ne sont pas accessibles par push (par exemple, parce qu'ils n'ont pas de jetons de poussée [valides ou actifs]({{site.baseurl}}/user_guide/message_building_by_channel/push/push_registration/#push-tokens)).
 
 {% enddetails %}
 
