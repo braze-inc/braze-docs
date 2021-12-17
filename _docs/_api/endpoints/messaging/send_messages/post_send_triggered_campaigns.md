@@ -41,7 +41,7 @@ Authorization: Bearer YOUR-REST-API-KEY
       "user_alias": (optional, user alias object) user alias of user to receive message,
       "external_user_id": (optional, string) external identifier of user to receive message,
       "trigger_properties": (optional, object) personalization key-value pairs that will apply to this user (these key-value pairs will override any keys that conflict with trigger_properties above),
-      "send_to_existing_only": (optional, boolean) defaults to true, if set to `false`, an attributes object must also be included,
+      "send_to_existing_only": (optional, boolean) defaults to true, can't be used with user aliases; if set to `false`, an attributes object must also be included,
       "attributes": (optional, object) fields in the attributes object will create or update an attribute of that name with the given value on the specified user profile before the message is sent and existing values will be overwritten
     }]
 }
@@ -71,7 +71,7 @@ Authorization: Bearer YOUR-REST-API-KEY
 <br><br>
 The recipients array may contain up to 50 objects, with each object containing a single `external_user_id` string and `trigger_properties` object.
 <br><br>
-When `send_to_existing_only` is `true`, Braze will only send the message to existing users. When `send_to_existing_only` is `false` and a user with the given `id` does not exist, Braze will create a user with that id and attributes before sending the message.
+When `send_to_existing_only` is `true`, Braze will only send the message to existing users—however this flag can't be used with user aliases. When `send_to_existing_only` is `false` and a user with the given `id` does not exist, Braze will create a user with that id and attributes before sending the message.
 
 ## Example request
 ```
