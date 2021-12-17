@@ -14,7 +14,7 @@ description: "This article outlines details about and using the Get Segment Anal
 /segments/data_series
 {% endapimethod %}
 
-This endpoint allows you to retrieve a daily series of the size of a segment over time for a segment. Please note that these segment sizes are estimates.
+This endpoint allows you to retrieve a daily series of the estimated size of a segment over time for a segment.
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#62d9d142-cdec-4aea-a287-c13efea7415e {% endapiref %}
 
