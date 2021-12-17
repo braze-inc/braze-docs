@@ -68,7 +68,7 @@ Une fois que vous avez sélectionné une plate-forme d'envoi, parcourez les type
 
 Lorsque vous décidez du type de message à utiliser, vous devriez considérer à quel point votre campagne de message doit être intrusive. Ceci est une mesure de la quantité d'écran que prendra le message et de la quantité que cela perturbe l'expérience régulière de votre client dans votre application ou votre site. Plus vous souhaitez fournir de contenu riche, plus votre message devra être intrusif.
 
-![Graphique montrant une échelle de moins instrumentale à plus intrusive, le Slider étant le moins intrusif, suivi par Modal, et plein écran étant le plus intrusif]({% image_buster /assets/img_archive/iam_intrusive.png %}){: style="largeur-max-80%" }
+![Graphique montrant une échelle de moins instrusive à plus intrusive, le curseur étant le moins intrusif, suivi par la modale, et le plein écran étant le plus intrusif]({% image_buster /assets/img_archive/iam_intrusive.png %}){: style="largeur-max-80%" }
 
 ### Types de messages
 
