@@ -14,7 +14,7 @@ guide_featured_list:
   - 
     name: "À propos des SMS"
     link: /fr/docs/user_guide/message_building_by_channel/sms/about_sms/
-    fa_icon: fa-paint-brush fas
+    fa_icon: vérification du fas fa-check
   - 
     name: "Lois SMS & Règlements"
     link: /docs/user_guide/message_building_by_channel/sms/sms_laws_and_regulations/
