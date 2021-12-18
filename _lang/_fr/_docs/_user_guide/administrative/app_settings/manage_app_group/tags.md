@@ -8,23 +8,23 @@ description: "Cet article de référence couvre les tags dans le tableau de bord
 
 # Tags
 
-Braze suit l'auteur, l'éditeur, la date et l'état des informations sur les segments, les campagnes, les Canvases, et les cartes de flux d'actualités, et vous donne la possibilité de créer des tags pour organiser et trier votre engagement.
+Braze suit l'auteur, l'éditeur, la date et l'état des informations sur les segments, les campagnes et les Canvases, et vous donne la possibilité de créer des tags pour organiser et trier votre engagement.
 
-## Balises de la campagne, du segment et de la carte du flux d'actualité
+## Balises de campagne, Canvas et segment
 
-Vous pouvez ajouter des balises lors de la création ou de l'édition d'une campagne, de Canvas, d'un segment ou d'une carte Flux d'actualités. Cliquez sur <span style="font-size: 14px;margin-bottom: .5rem;height: 16px;width: 16px;" class="fas fa-tag" ></span>**Tags** en dessous du nom de l'engagement et sélectionnez un tag existant, ou commencez à taper pour ajouter un nouveau tag.
+Vous pouvez ajouter des tags lors de la création ou de l'édition d'une campagne, de Canvas ou d'un segment. Cliquez sur <span style="font-size: 14px;margin-bottom: .5rem;height: 16px;width: 16px;" class="fas fa-tag" ></span>**Tags** en dessous du nom de l'engagement et sélectionnez un tag existant, ou commencez à taper pour ajouter un nouveau tag.
 
 !\[Création de la campagne\]\[2\]
 
-Vous pouvez également ajouter des tags à plusieurs campagnes, Canvases, segments, ou Cartes de flux d'actualités en sélectionnant plusieurs engagements et en cliquant sur <span style="font-size: 14px;margin-bottom: .5rem;height: 16px;width: 16px;" class="fas fa-tag" ></span>**Étiqueter comme**.
+Vous pouvez également ajouter des balises à plusieurs campagnes, Canvases ou segments en sélectionnant plusieurs engagements et en cliquant sur <span style="font-size: 14px;margin-bottom: .5rem;height: 16px;width: 16px;" class="fas fa-tag" ></span>**Tag as**.
 
 !\[Tagging multiple\]\[5\]
 
-Les balises définies sur une campagne, Canvas, un segment ou une carte de fil d’actualités sont visibles sur la page de détail sous le nom de l’engagement.
+Les balises définies sur une campagne, Canvas ou segment sont visibles sur la page de détail sous le nom de la participation.
 
 !\[Détails de la campagne\]\[3\]
 
-Ils sont également visibles dans la liste des campagnes, des vases, des segments et des fiches de News Feed sous forme de bulles au-dessus du nom de l'engagement, ainsi que les étiquettes de statut telles que **Archivées** et **Brouillon**.
+Ils sont également visibles dans la liste des campagnes, des vases, ou des segments comme des bulles au-dessus du nom de l'engagement, ainsi que les étiquettes de statut telles que **Archivées** et **Brouillon**.
 
 !\[Campaigns\]\[4\]{: style ="max-width:70%;" }
 
@@ -34,13 +34,13 @@ Pour filtrer par tag, sélectionnez le nom de la balise dans la barre d'outils d
 
 ## Meilleures pratiques {#tags-best-practices}
 
-Les balises peuvent être un outil organisationnel utile pour garder une trace des tactiques d'engagement. Vous pouvez lier des segments, des campagnes et des cartes de flux d'actualités aux objectifs de l'entreprise, aux étapes de l'entonnoir et autres.
+Les balises peuvent être un outil organisationnel utile pour garder une trace des tactiques d'engagement. Vous pouvez relier les segments et les campagnes aux objectifs de l’entreprise, aux étapes de l’entonnoir et autres.
 
 Ci-dessous est un exemple de tags qu'une application eCommerce peut trouver utile:
 
 !\[Potential Tags\]\[7\]
 
-Vous pouvez utiliser les mêmes tags entre les segments, les campagnes et les cartes de News Feed. Pour renommer, supprimer ou ajouter efficacement des tags dans votre tableau de bord, allez à la page **Gérer les paramètres** et sélectionnez l'onglet **Tags**.
+Vous pouvez utiliser les mêmes balises à travers les campagnes, les canevas et les segments. Pour renommer, supprimer ou ajouter efficacement des tags dans votre tableau de bord, allez à la page **Gérer les paramètres** et sélectionnez l'onglet **Tags**.
 
 !\[affichage des balises\]\[8\]
 
