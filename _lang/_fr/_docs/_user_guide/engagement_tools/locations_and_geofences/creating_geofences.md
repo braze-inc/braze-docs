@@ -3,20 +3,20 @@ nav_title: Création de géorepérages
 article_title: Création de géorepérages
 page_order: 1
 page_type: Référence
-description: "Cet article de référence couvre la façon de créer et de configurer Geofences."
+description: "Cet article de référence couvre ce que sont les géofences et comment les créer et les configurer."
 tool:
   - Localisation
 ---
 
 # Géorepérages
 
-> cet article de référence couvre la façon de créer et de configurer des géofences.
+> Cet article de référence couvre ce que sont les géofences et comment les créer et les configurer.
 
 Au cœur de l'offre de l'emplacement en temps réel de Braze se trouve le concept de "géorepérage". Un géorepérage est une zone géographique virtuelle, représentée par des paires de latitude/longitude combinées à un rayon, formant un cercle dans une position spécifique sur le globe. Les Geofences peuvent varier de la taille d'un bâtiment à la taille d'une ville entière.
 
 Vous pouvez définir des géorepérages sur le tableau de bord de Braze et déclencher des campagnes en temps réel lorsque les utilisateurs entrent et les quittent à travers le monde. Les géofences sont profondément intégrées dans les capacités de segmentation et de messagerie de Brase. Les campagnes peuvent être livrées en temps réel aux utilisateurs lorsqu'ils quittent ou entrent dans les géofences, ou envoyées sous forme de suivi des heures ou des jours plus tard. Au fur et à mesure que les utilisateurs saisissent ou quittent vos géorepérages, ils ajoutent une nouvelle couche de données utilisateur qui peut être utilisée pour la segmentation et le re-ciblage.
 
-Les géorepérages sont gérés dans la page **Emplacements** dans la section **Engagement**. Les géorepérages sont organisés en ensembles de géorepérage - un groupe de géorepérages qui peuvent être utilisés pour segmenter ou engager les utilisateurs sur toute la plate-forme. Les ensembles d'exemples de géorepérage incluent `Tous les magasins régionaux du nord-est` ou `les événements de septembre`. Un ensemble de géorepérage donné ne peut contenir que 10 000 géorepéres.
+Les géorepérages sont gérés dans la page **Emplacements** dans la section **Engagement**. Les géorepérages sont organisés en ensembles de géorepérage — un groupe de géorepérages qui peuvent être utilisés pour segmenter ou engager les utilisateurs sur toute la plate-forme. Les ensembles d'exemples de géorepérage incluent `Tous les magasins régionaux du nord-est` ou `les événements de septembre`. Un ensemble de géorepérage donné ne peut contenir que 10 000 géorepéres.
 
 ## Création manuelle de jeux de géorepérage
 
