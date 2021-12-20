@@ -14,16 +14,21 @@ alias: "/api/api_campaigns/transactional_campaigns"
 
 > Cet article de référence couvre la façon de créer une campagne d'email transactionnelle dans le tableau de bord de Braze et de générer un `campaign_id` pour inclure dans votre API des appels pour notre [point de terminaison d'API d'email transactionnel]({{site.baseurl}}/api/endpoints/messaging/send_messages/post_send_transactional_message).
 
-Les courriels transactionnels sont des courriels envoyés pour faciliter une transaction convenue entre vous et vos clients. Vous pouvez créer des campagnes transactionnelles d'emails pour envoyer des messages électroniques automatisés et non promotionnels, tels que:
+{% alert important %}
+Le courrier électronique transactionnel n'est disponible que dans le cadre de certains paquets Braze. Veuillez contacter votre gestionnaire de service client Braze ou ouvrez un [ticket d'assistance]({{site.baseurl}}/braze_support/) pour plus de détails.
+{% endalert %}
+
+Les courriels transactionnels sont votre solution unique pour envoyer des messages électroniques automatisés et non promotionnels afin de faciliter une transaction convenue entre vous et vos clients. Cela inclut des informations telles que:
 
 - Confirmation de commande
 - Réinitialisation du mot de passe
 - Alertes de facturation
+- Alertes d'expédition
 
 En bref, utilisez les courriels transactionnels pour envoyer des notifications critiques pour les entreprises provenant de votre service pour un seul utilisateur où la vitesse est de la plus haute importance.
 
-{% alert important %}
-Le courrier électronique transactionnel n'est disponible que dans le cadre de certains paquets Braze. Veuillez contacter votre gestionnaire de service client Braze ou ouvrez un [ticket d'assistance]({{site.baseurl}}/braze_support/) pour plus de détails.
+{% alert note %}
+Les e-mails transactionnels diffèrent des campagnes transactionnelles qui peuvent être utilisées pour cibler vos utilisateurs sans frais supplémentaires. Consultez [options de ciblage du public]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/targeting_users/) pour plus d'informations.
 {% endalert %}
 
 ## Créer une nouvelle campagne
@@ -53,7 +58,7 @@ Pour configurer votre campagne d'email transactionnel, suivez ces étapes géné
 3. Prenez note de votre `campaign_id`. Après avoir enregistré votre campagne API, vous devez inclure les champs générés `campaign_id` avec votre requête API où il est noté dans l'article [Transactional Email Endpoint]({{site.baseurl}}/api/endpoints/messaging/send_messages/post_send_transactional_message).
 4. Cliquez sur **Enregistrer la campagne** et vous êtes configuré pour démarrer votre campagne API !
 
-### Étiquettes interdites dans les courriels transactionnels
+### Tags interdits dans les courriels transactionnels
 
 Les balises `Contenus connectés` et `Code promotionnel` Liquid ne sont actuellement pas disponibles dans les campagnes transactionnelles d'E-mail.
 
