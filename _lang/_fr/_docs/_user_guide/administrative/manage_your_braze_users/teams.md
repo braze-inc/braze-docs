@@ -8,47 +8,51 @@ description: "Cet article de référence couvre différents aspects des équipes
 
 # Équipes
 
-Les administrateurs de Braze peuvent diviser les sous-ensembles des utilisateurs de leur tableau de bord en équipes avec des rôles et des permissions d'utilisateurs variables. Les équipes peuvent être configurées à travers la localisation de la base client, la langue, et des attributs personnalisés tels que les membres et les non-membres ont un accès différent aux fonctionnalités de messagerie et aux données du client. Une fois créés, des filtres et des tags d'équipe peuvent être assignés à travers divers outils d'engagement fournissant l'accès aux équipes et le filtrage des utilisateurs finaux en fonction des définitions d'équipes assignées.
+Les administrateurs de Braze peuvent regrouper leurs utilisateurs du tableau de bord en équipes avec différents rôles et permissions d'utilisateur. Les équipes peuvent être configurées à travers la localisation de la base client, la langue, et les attributs personnalisés pour que les membres et les non-membres aient un accès différent aux fonctionnalités de messagerie et aux données du client. Des filtres et des balises d'équipe peuvent être assignés à travers différents outils d'engagement.
 
 {% include video.html id="UYjKrFcL9sQ" align="right" %}
 
-## Création d'une équipe
+## Création d'équipes
 
-Allez à la page __Gérer les paramètres__ et cliquez sur __Gérer les équipes__. À partir de là, vous verrez une option pour __+Ajouter une équipe__ qui remplit ensuite une fenêtre modale. Ici non seulement vous donnerez un nom à l'équipe, mais vous aurez également la possibilité d'utiliser un attribut personnalisé, , ou la langue pour mieux définir l'accès qui sera accordé.
+Allez à la page **Gérer les paramètres** , sélectionnez **Gérer les équipes**et cliquez sur <i class="fas fa-plus"></i> **Ajouter une équipe**. Entrez le **nom d'équipe**. Utilisez l'équipe **Définir (facultatif)** pour sélectionner un attribut, un emplacement ou une langue personnalisés pour définir davantage les permissions.
 
-Cette équipe peut plus tard être utilisée pour filtrer les utilisateurs finaux pour les objets d'engagement tels que les campagnes, les canvases, les cartes, les segments et plus, en accordant aux membres de cette équipe. Voir [Tags et Filtres](#tags-and-filters) ci-dessous pour en savoir plus.
+Les équipes peuvent être utilisées pour filtrer les utilisateurs finaux pour les objets d'engagement tels que les campagnes, les Canvases, les Cartes de Contenu, les segments, etc. Voir [Tags et Filtres](#tags-and-filters) ci-dessous pour en savoir plus.
 
-!\[Ajout d'une équipe\]\[68\]
+{% alert note %}
+Notez que les équipes ne sont pas disponibles sur tous les contrats de Braze. Si vous souhaitez accéder à cette fonctionnalité, contactez votre gestionnaire de compte Braze ou [contactez-nous](mailto:success@braze.com) pour une consultation.
+{% endalert %}
 
-## Assigner des rôles d'équipe
+!\[Ajout d'équipe\]\[68\]
 
-Les administrateurs de Braze peuvent assigner des rôles d'équipe à leurs utilisateurs du tableau de bord, qui sont limités à seulement des données en lecture/écriture disponibles pour leurs équipes particulières. Les rôles prédéfinis de l'équipe incluent la langue et l'emplacement (par pays et régions).
+## Attribution de rôles
 
-Pour assigner un rôle d'équipe, accédez à __Gérer les utilisateurs__ et sélectionnez un utilisateur que vous souhaitez ajouter à votre équipe. En utilisant l'icône crayon, modifiez leur rôle utilisateur à __Limité__ et ajoutez-les au groupe d'application approprié. Le groupe d'applications assigné remplira une ligne de cases à cocher en bas de la page. Ensuite, une liste déroulante d'équipe apparaîtra, sélectionnez l'équipe que vous souhaitez appliquer et attribuez des permissions spécifiques en utilisant la ligne de permission d'équipe qui apparaît.
+Les administrateurs de Braze peuvent assigner des rôles d'équipe à leurs utilisateurs du tableau de bord qui sont limités à seulement lire ou écrire des données disponibles pour leurs équipes particulières. Les rôles prédéfinis de l'équipe incluent la langue et l'emplacement.
+
+Pour assigner un rôle d'équipe, accédez à **Gérer les utilisateurs** et sélectionnez un utilisateur que vous souhaitez ajouter à votre équipe. En utilisant l'icône crayon, modifiez leur rôle utilisateur à **Limité** et ajoutez-les au groupe d'application approprié. Le groupe d'applications assigné remplira une ligne de cases à cocher en bas de la page. Ensuite, une liste déroulante de l'équipe apparaît, sélectionnez l'équipe que vous souhaitez appliquer et attribuez des permissions spécifiques en utilisant la ligne de permission d'équipe qui apparaît.
 
 !\[Teams\]\[2\]
 
 Pour voir les descriptions de ce que chaque utilisateur inclut et comment les utiliser, consultez notre section [Permissions utilisateur]({{site.baseurl}}/user_guide/administrative/manage_your_braze_users/user_permissions/#editing-user-permissions).
 
-## Affecter les tags et les filtres des équipes {#tags-and-filters}
+## Attribution de tags et de filtres {#tags-and-filters}
 
 Les objets du tableau de bord peuvent être assignés aux équipes. Les canvases, les campagnes, les cartes, les segments, les modèles de courrier électronique et les ressources de la bibliothèque de médias peuvent tous être étiquetés avec un filtre et un tag d'équipe.
 
-!\[Teams\]\[3\]{: style="max-width:70%;"}
+!\[Team Tags\]\[3\]{: style="max-width:70%;"}
 
 Basé sur les définitions appliquées à l'équipe créée, lorsqu'un filtre d'équipe est attribué, vous limitez automatiquement les profils d'utilisateurs qu'un objet tableau de bord peut inclure en fonction de la définition de votre équipe. Par exemple, TeamA est défini comme les utilisateurs finaux des États-Unis. Lorsqu'un filtre d'équipe TeamA est affecté à CampaignA, CampaignA n'inclut que les utilisateurs finaux des États-Unis, et seule TeamA (autre que les administrateurs du tableau de bord) pourra accéder à CampaignA.
 
 Basé sur les autorisations assignées, les membres des équipes ne seront autorisés qu'à accéder aux outils d'engagement du tableau de bord qui ont le filtre d'équipe défini. Les membres sont également en mesure de filtrer les Canvases, campagnes, cartes et segments par équipe pour identifier les objets du tableau de bord qui leur sont pertinents.
 
-Notez que les équipes ne sont pas disponibles sur tous les contrats de Braze. Si vous souhaitez accéder à cette fonctionnalité, contactez votre responsable de compte et votre gestionnaire de succès client ou contactez-nous à [hello@braze. om](mailto:success@braze.com) pour une consultation.
-
-## Archiver une équipe existante
+## Archivage d'une équipe existante
 
 Vous pouvez archiver les équipes à partir de la page **Gérer les équipes** , sous **Gérer les paramètres**. Sélectionnez une ou plusieurs équipes à archiver.
 
-Si l'équipe n'est associée à aucun objet au sein de Braze, l'équipe sera immédiatement archivée. Si l'équipe est associée à un objet, une option vous sera présentée pour « supprimer l'équipe après le processus d'archive » ou « remplacer l'équipe par une autre équipe »
+Si l'équipe n'est associée à aucun objet au sein de Braze, l'équipe sera immédiatement archivée.
 
-!\[Archiving a team\]\[86\]{: style="max-width:70%;"}
+Si l'équipe est associée à un objet, une option vous sera présentée pour supprimer l'équipe après le processus d'archivage ou pour remplacer l'équipe.
 
-Les administrateurs peuvent désarchiver une équipe en sélectionnant l'équipe archivée, puis en cliquant sur **Désarchivé**.
+!\[Archiving Team\]\[86\]{: style="max-width:70%;"}
+
+Les administrateurs de Braze peuvent désarchiver une équipe en sélectionnant l'équipe archivée et en cliquant sur **désarchivé**.
 [2]: {% image_buster /assets/img/teams.png %} [3]: {% image_buster /assets/img/teams1. ng %} [68]: {% image_buster /assets/img_archive/adding_a_team.png %} [86]: {% image_buster /assets/img_archive/archive_a_team.png %}
