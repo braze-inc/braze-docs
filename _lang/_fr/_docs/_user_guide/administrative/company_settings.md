@@ -27,16 +27,16 @@ guide_featured_list:
 
 ## Informations complémentaires
 
-Si vous recherchez plus d'informations sur les paramètres de votre propre compte, regardez [ici][1].
+Si vous recherchez plus d'informations sur vos propres paramètres de compte, consultez nos articles [Administrative][1].
 
-Vous pouvez accéder à la section __Paramètres de la société__ en cliquant sur votre nom, puis en cliquant sur `Paramètres de la société` dans le menu déroulant.
+Vous pouvez accéder à la section **Paramètres de la société** en cliquant sur votre nom, puis en sélectionnant **Paramètres de la société** dans le menu déroulant.
 
 Ensuite, cliquez sur l’onglet dans la barre supérieure pour accéder aux paramètres que vous souhaitez gérer.
 
-!\[CompanySettings\]\[2\]
+!\[Paramètres de l'entreprise\]\[2\]
 
 {% alert warning %}
-Toute modification de la section **Paramètres de la société** s'appliquera au compte de chaque utilisateur de Braze (attaché à votre entreprise).
+Toute modification de la section **Paramètres de la société** s'appliquera à chaque compte utilisateur Braze qui est rattaché à votre entreprise.
 {% endalert %}
 
 <br>
