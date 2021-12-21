@@ -1,7 +1,7 @@
 ---
 nav_title: Protection de la vie privée d'Apple Mail
 article_title: Protection de la vie privée d'Apple Mail pour iOS 15
-page_order: 8.1
+page_order: 9.1
 description: "Cet article de référence couvre la mise à jour de la protection de la vie privée d'Apple Mail, qui en sera affectée, et quelques étapes suivantes pour se préparer à la fonctionnalité."
 channel:
   - Email
