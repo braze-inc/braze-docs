@@ -2,7 +2,7 @@
 nav_title: Modèles de lien
 article_title: Modèles de lien
 page_order: 4
-description: "Les modèles de liens permettent aux utilisateurs d'ajouter des paramètres ou de préfixer des URL à tous les liens dans un message email. Cet article couvre la façon de créer différents types de modèles de liens."
+description: "Les modèles de liens permettent aux utilisateurs d'ajouter des paramètres ou de préfixer des URL à tous les liens dans un courriel. Cet article couvre la façon de créer différents types de modèles de liens."
 tool:
   - Modèles
 channel:
@@ -11,7 +11,7 @@ channel:
 
 # Modèles de lien
 
-> Cet article couvre la façon de créer des modèles de liens à utiliser dans la messagerie électronique.
+> Cet article traite de la façon de créer des modèles de liens à utiliser pour la messagerie électronique.
 
 Les modèles de liens vous permettent d'ajouter des paramètres ou de préfixer des URL à tous les liens dans un courriel. Ceci est le plus souvent utilisé pour les cas d'utilisation suivants :
 
