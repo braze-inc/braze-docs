@@ -4,7 +4,7 @@ article_title: Manager Your Braze Users
 page_order: 2
 layout: dev_guide
 guide_top_header: "Manage Your Braze Users"
-guide_top_text: "As your company's Braze account administrator, you may find that you need to manage users on a more granular or case by case basis. Braze can help you do that with Team and User permissions, as well as managing your company-wide Settings."
+guide_top_text: "As your company's Braze account administrator, you may find that you need to manage users on a more granular or case-by-case basis. Braze can help you do that by creating Teams and managing user permissions and company-wide settings."
 
 page_type: landing
 description: "This landing page includes articles on managing your Braze users, such as adding and deleting users, setting user permissions, or creating teams."
@@ -23,7 +23,7 @@ guide_featured_list:
 - name: Teams
   link: /docs/user_guide/administrative/manage_your_braze_users/teams/
   fa_icon: fas fa-users
-- name: "Company-Wide Settings Management"
+- name: Company Settings
   link: /docs/user_guide/administrative/manage_your_braze_users/company-wide_settings_management/
   fa_icon: fas fa-cogs
 ---

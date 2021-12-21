@@ -23,7 +23,7 @@ tool:
 
 Navigate to the email wizard and select your editing experience. Two editing options will be shown:
 
-- Select the __Drag & Drop Editor__ to select templates created using the Drag & Drop Editor.
+- Select the **Drag & Drop Editor** to select templates created using the Drag & Drop Editor.
 - Select the HTML Code Editor to use the existing editors and to see your existing email templates. <br><br>![Drag & Drop Editor Workflow][6]{: style="max-width:80%;"}
 
 {% alert tip %}
@@ -37,7 +37,7 @@ You can also access all templates in the **Templates & Media** page under the **
 
 ## Editing experience
 
-The drag & drop editing experience is broken out into 3 sections: __Sending Settings__, __Content__, and __Preview & Test__.
+The drag & drop editing experience is broken out into 3 sections: **Sending Settings**, **Content**, and **Preview & Test**.
 
 {% tabs %}
 {% tab Send Settings %}
@@ -67,7 +67,7 @@ __Preview & Test__
 
 The Preview & Test section allows you to preview your email based on different users.
 
-- __Random User__: Braze will randomly select a user from the database and preview the email based on their attributes/event information.
+- __Random User__: Braze will randomly select a user from the database and preview the email based on their attributes or event information.
 {% alert note %}
 This user may or may not be part of your segmentation criteria. Segmentation is selected afterward, so Braze is unaware of your target audience at this point.
 {% endalert %}
@@ -84,7 +84,7 @@ Inbox Vision is currently unavailable during this testing phase and will be made
 
 ### Auto width images
 
-Images added to your email will automatically be set to __auto width__. To adjust this setting, toggle off __auto width__ and adjust the width percentage as needed. 
+Images added to your email will automatically be set to **Auto width**. To adjust this setting, toggle off **Auto width** and adjust the width percentage as needed. 
 
 ![Drag & Drop Image Widths][2]
 
@@ -98,13 +98,13 @@ The Drag & Drop Editor allows you to change the color of the email background, c
 
 ![Drag & Drop Block Options][4]{: style="float:right;max-width:25%;margin-left:15px;"}
 
-To adjust padding, scroll down to __Block Options__, and toggle __More Options__. This will allow you to fine-tune your padding to get your email looking just right!
+To adjust padding, scroll down to **Block Options**, and toggle **More Options**. This will allow you to fine-tune your padding to get your email looking just right!
 <br><br>
 ### Adding Liquid 
 
 ![Drag & Drop Personalization][5]{: style="float:right;max-width:25%;margin-left:15px;"}
 
-Basic Liquid is supported in our Drag & Drop Editor. To add Liquid into your email, select __Personalization__ under __Design / Build__. 
+Basic Liquid is supported in our Drag & Drop Editor. To add Liquid into your email, select **Personalization** under **Design / Build**. 
 
 Here, you can add various personalization types such as default attributes, device attributes, custom attributes, and more! 
 

@@ -11,7 +11,7 @@ channel:
 
 guide_featured_title: "Popular Articles"
 guide_featured_list:
-- name: Creating an Email Campaign
+- name: Create an Email Campaign
   link: /docs/user_guide/message_building_by_channel/email/creating_an_email_campaign/
   fa_icon: fas fa-envelope
 - name: Create an Email Template
