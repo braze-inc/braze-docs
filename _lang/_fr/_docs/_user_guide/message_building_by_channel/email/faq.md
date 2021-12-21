@@ -1,7 +1,7 @@
 ---
 nav_title: Foire aux questions
 article_title: Email FAQs
-page_order: 25
+page_order: 12
 description: "Cette page fournit des réponses aux questions fréquemment posées sur la messagerie électronique."
 channel: Email
 ---
