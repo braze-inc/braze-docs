@@ -209,6 +209,8 @@ There are a few reasons why the number of users imported might not match the tot
 
 There must be a header row in order to properly import data. Each row must have the same number of cells as the header row. Rows whose length has more or fewer values than the header row will be excluded from the import. Commas in a value will be interpreted as a separator and can lead to this error being thrown. Additionally, all data must be UTF-8 encoded.
 
+If your CSV file has blank rows and imports less rows than the total lines in the CSV file, this may not indicate a problem with the import since the blank rows wouldn't need to be imported. Check the number of lines that were correctly imported and make sure it matches the number of users you're attempting to import.
+
 ### Multiple data types
 
 Braze expects each value in a column to be of the same data type. Values that do not match their attribute’s data type will cause errors in segmenting.
