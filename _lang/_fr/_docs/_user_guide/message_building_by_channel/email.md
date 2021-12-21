@@ -11,7 +11,7 @@ channel:
 guide_featured_title: "Articles populaires"
 guide_featured_list:
   - 
-    name: Création d'une campagne d'email
+    name: Créer une campagne d'email
     link: /fr/docs/user_guide/message_building_by_channel/email/creating_an_email_campaign/
     fa_icon: fas fa-enveloppe
   - 
