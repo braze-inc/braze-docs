@@ -1,5 +1,5 @@
 ---
-nav_title: Créer un modèle d'e-mail
+nav_title: Création d'un modèle d'e-mail
 article_title: Création d'un modèle d'e-mail
 page_order: 2
 description: "Les messages électroniques sont parfaits pour diffuser du contenu à l'utilisateur selon ses conditions. Cet article de référence couvre la façon de créer, personnaliser et gérer les modèles de courriels."
@@ -10,7 +10,7 @@ channel:
 alias: "/dnd/email_template/"
 ---
 
-# Comment créer un modèle d'e-mail
+# Création d'un modèle d'e-mail
 
 > Cet article traite de la façon de créer, personnaliser et gérer les modèles de courriels.
 
@@ -24,7 +24,7 @@ Dans la navigation de gauche, cliquez sur __Modèles & Médias__, dans la sectio
 
 ### Étape 2 : Créer ou choisir un modèle
 
-Maintenant, vous pouvez créer un nouveau modèle ou modifier un modèle existant (simple ou [mobile responsive][8]) en utilisant soit l'expérience d'édition par glisser & déposer soit l'expérience HTML standard. Si vous souhaitez créer un nouveau modèle, vous pouvez choisir parmi les modèles préconçus de Braze, ou vous pouvez choisir de créer une nouvelle mise en page.
+Maintenant, vous pouvez créer un nouveau modèle ou modifier un modèle existant (simple ou [mobile responsive][8]) en utilisant l'expérience d'édition par glisser & déposer ou l'expérience HTML standard. Si vous souhaitez créer un nouveau modèle, vous pouvez choisir parmi les modèles préconçus de Braze ou créer une nouvelle mise en page.
 
 !\[Nouveau modèle\]\[2\]
 
@@ -82,7 +82,7 @@ L'expérience d'édition par glisser & déposer est divisée en trois sections :
 
 #### __Envoi des paramètres__
 
-La section Paramètres d'envoi vous permet de configurer votre adresse de départ et de réponse ainsi que de définir la ligne de sujet ou le pré-en-tête.
+La section **Paramètres d'envoi** vous permet de configurer votre adresse de départ et de réponse ainsi que de définir la ligne de sujet ou le pré-en-tête.
 
 {% alert note %}
 Des fonctionnalités avancées apparaîtront dans la campagne ou dans le compositeur de pas de Canvas . Dans les fonctionnalités avancées, vous pouvez modifier vos paramètres CSS en ligne, définir une adresse email BCC, et entrer dans un en-tête ou des paires de valeur clé supplémentaire (si configuré).
@@ -93,7 +93,7 @@ Des fonctionnalités avancées apparaîtront dans la campagne ou dans le composi
 
 #### __Contenus__
 
-La section Contenu contient l'éditeur. Il y a trois composants clés dans cette section.
+La section **Contenu** contient l'éditeur. Il y a trois composants clés dans cette section.
 
 - __Contenu__: Cette section comprend une série de tuiles qui représentent les différents types de contenu que vous pouvez utiliser dans votre message. D'autres seront disponibles à l'avenir. Pour les utiliser, faites simplement glisser un à l'intérieur d'un segment de ligne existant; il s'ajustera automatiquement à la largeur de la colonne. Chaque bloc a ses propres paramètres, tels que le contrôle granulaire du remplissage. Le panneau de droite passe automatiquement à un panneau de propriétés pour l'élément de contenu sélectionné.<br><br> Pour plus d'informations, voir [Propriétés de bloc de l'éditeur]({{site.baseurl}}/dnd/editor_blocks/)<br><br>
 - __Lignes__: Les lignes sont des unités de structure qui définissent la composition horizontale d'une section du message en utilisant des colonnes. L'utilisation de plus d'une colonne vous permet de mettre différents éléments de contenu côte à côte. Vous pouvez ajouter tous les éléments structurels dont vous avez besoin à votre message, quel que soit le modèle que vous avez sélectionné au démarrage.<br><br>
@@ -105,7 +105,7 @@ Ceci est très utile pour construire un message cohérent très rapidement.
 
 #### __Aperçu & Test__
 
-La section Aperçu & Test vous permet de prévisualiser votre e-mail en fonction de différents utilisateurs.
+La section **Aperçu & Test** vous permet de prévisualiser votre e-mail en fonction de différents utilisateurs.
 
 - __Utilisateur Aléatoire__: Braze sélectionnera aléatoirement un utilisateur dans la base de données et prévisualisera l'email en fonction de ses attributs/informations sur l'événement. Note: Cet utilisateur peut ou non faire partie de vos critères de segmentation. La segmentation est ensuite sélectionnée, de sorte que Braze ne connaît pas votre public cible à ce stade.<br><br>
 - __Sélectionner l'utilisateur__: Vous pouvez sélectionner un utilisateur spécifique en fonction de son adresse e-mail ou `external_id`. L'e-mail sera prévisualisé en fonction des attributs et des informations de l'événement de cet utilisateur<br><br>
@@ -126,7 +126,7 @@ Braze va ajouter un pied de page avec un lien de désinscription au bas de votre
 
 #### Étape 4 : Vérifier les erreurs de messagerie
 
-Les erreurs de courriel sont présentées dans l'onglet **Composer** du flux de travail des messages. Les erreurs vous empêchent de progresser, tandis que les « Avertissements » indiquent des rappels pour vous aider à suivre les meilleures pratiques. Selon votre entreprise, vous pouvez choisir de les ignorer.
+Les erreurs de courriel sont présentées dans l'onglet **Composer** du flux de travail des messages. Les erreurs vous empêchent de progresser. Les « Avertissements » indiquent des rappels pour vous aider à suivre les meilleures pratiques. Selon votre entreprise, vous pouvez choisir de les ignorer.
 
 !\[Drag & Drop Compose Error\]\[1\]{: style="float:right;max-width:40%;margin-left:15px;"}
 
