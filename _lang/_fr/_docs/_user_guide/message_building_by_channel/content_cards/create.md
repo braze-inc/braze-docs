@@ -1,6 +1,6 @@
 ---
-nav_title: Créer une carte de contenu
-article_title: Créer une carte de contenu
+nav_title: Création d'une carte de contenu
+article_title: Création d'une carte de contenu
 page_order: 0
 description: "Cet article de référence couvre la façon de créer, composer, configurer et envoyer des Cartes de Contenu à l'aide de campagnes Braze et de Canvases."
 tool:
