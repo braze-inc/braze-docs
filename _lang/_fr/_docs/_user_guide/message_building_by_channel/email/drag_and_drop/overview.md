@@ -22,7 +22,7 @@ tool:
 
 Accédez à l'assistant de messagerie et sélectionnez votre expérience d'édition. Deux options d'édition seront affichées :
 
-- Sélectionnez __Éditeur Glisser & Déposer__ pour sélectionner les modèles créés en utilisant l'éditeur Glisser & Déposer.
+- Sélectionnez **Éditeur Glisser & Déposer** pour sélectionner les modèles créés en utilisant l'éditeur Glisser & Déposer.
 - Sélectionnez l'éditeur de code HTML pour utiliser les éditeurs existants et pour voir vos modèles de courriels existants. <br><br>!\[Drag & Drop Editor Workflow\]\[6\]{: style="max-width:80%;"}
 
 {% alert tip %}
@@ -36,7 +36,7 @@ Vous pouvez également accéder à tous les modèles dans la page **Modèles & M
 
 ## Édition de l'expérience
 
-L'expérience d'édition par glisser & déposer est divisée en 3 sections : __Paramètres d'envoi__, __Contenu__et __Aperçu & Test__.
+L'expérience d'édition par glisser & déposer est divisée en 3 sections : **Paramètres d'envoi**, **Contenu**et **Aperçu & Test**.
 
 {% tabs %}
 {% tab Send Settings %}
@@ -66,7 +66,7 @@ __Aperçu & Test__
 
 La section Aperçu & Test vous permet de prévisualiser votre e-mail en fonction de différents utilisateurs.
 
-- __Utilisateur Aléatoire__: Braze sélectionnera aléatoirement un utilisateur dans la base de données et prévisualisera l'email en fonction de ses attributs/informations sur l'événement.
+- __Utilisateur Aléatoire__: Braze sélectionnera aléatoirement un utilisateur dans la base de données et prévisualisera l'e-mail en fonction de ses attributs ou informations sur l'événement.
 {% alert note %}
 Cet utilisateur peut ou non faire partie de vos critères de segmentation. La segmentation est ensuite sélectionnée, de sorte que Braze ne connaît pas votre public cible à ce stade.
 {% endalert %}
@@ -83,7 +83,7 @@ Vision de la boîte de réception est actuellement indisponible durant cette pha
 
 ### Auto width images
 
-Les images ajoutées à votre e-mail seront automatiquement réglées à __largeur automatique__. Pour ajuster ce paramètre, désactivez __autowidth__ et ajustez le pourcentage de largeur au besoin.
+Les images ajoutées à votre e-mail seront automatiquement réglées à **Largeur automatique**. Pour ajuster ce paramètre, désactivez **Auto width** et ajustez le pourcentage de largeur au besoin.
 
 !\[Drag & Drop Image Widths\]\[2\]
 
@@ -97,12 +97,12 @@ L'éditeur Drag & Drop vous permet de changer la couleur de l'arrière-plan de l
 
 !\[Drag & Drop Block Options\]\[4\]{: style="float:right;max-width:25%;margin-left:15px;"}
 
-Pour ajuster le remplissage, faites défiler vers le bas vers __Options de bloc__et activez __Plus d'options__. Cela vous permettra de peaufiner votre remplissage pour que votre e-mail soit juste ! <br><br>
+Pour ajuster le remplissage, faites défiler vers le bas vers **Options de bloc**et activez **Plus d'options**. Cela vous permettra de peaufiner votre remplissage pour que votre e-mail soit juste ! <br><br>
 ### Ajout de liquide
 
 !\[Drag & Drop Personalization\]\[5\]{: style="float:right;max-width:25%;margin-left:15px;"}
 
-Liquid de base est pris en charge dans notre éditeur Drag & Drop. Pour ajouter Liquid dans votre e-mail, sélectionnez __Personnalisation__ sous __Conception / Build__.
+Liquid de base est pris en charge dans notre éditeur Drag & Drop. Pour ajouter Liquid dans votre e-mail, sélectionnez **Personnalisation** sous **Conception / Build**.
 
 Ici, vous pouvez ajouter différents types de personnalisation tels que les attributs par défaut, les attributs périphériques, les attributs personnalisés et plus encore !
 
