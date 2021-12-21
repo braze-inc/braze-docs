@@ -10,9 +10,9 @@ tool: Médias
 
 # Glisser & déposer les blocs de l'éditeur
 
-Les blocs de l'éditeur sont les différents blocs disponibles dans l'éditeur Glisser & Déposer sous la section 'Contenu'.  Cette section comprend une série de tuiles qui représentent les différents types de contenu que vous pouvez utiliser dans votre message. D'autres seront disponibles à l'avenir.
+Les blocs de l'éditeur sont les différents blocs disponibles dans l'éditeur Glisser & Déposer sous la section **Contenu**.  Cette section comprend une série de tuiles qui représentent les différents types de contenu que vous pouvez utiliser dans votre message. Plus de blocs seront disponibles à l'avenir.
 
-Pour les utiliser, faites glisser un à l'intérieur d'une colonne. Il s'ajuste automatiquement à la largeur de la colonne.  Chaque bloc de contenu a ses propres paramètres, tels que le contrôle granulaire du remplissage. Le panneau de droite passe automatiquement à un panneau de propriétés pour l'élément de contenu sélectionné.
+Pour les utiliser, faites glisser un bloc de contenu dans une colonne. Il s'ajuste automatiquement à la largeur de la colonne.  Chaque bloc de contenu a ses propres paramètres, tels que le contrôle granulaire du remplissage. Le panneau de droite passe automatiquement à un panneau de propriétés pour l'élément de contenu sélectionné.
 
 ## Types de bloc
 
@@ -36,7 +36,7 @@ Les détails pour chaque type de bloc sont fournis ci-dessous.
 
 | Propriétés            | Libellé                                                                              |
 | --------------------- | ------------------------------------------------------------------------------------ |
-| `Titre de la page`    | Sélectionnez le style de l'en-tête.  H1, H2 ou H3 sont disponibles uniquement.       |
+| `Titre de la page`    | Sélectionnez le style de l'en-tête. Seulement H1, H2 ou H3 sont disponibles.         |
 | `Famille de police`   | Le style à utiliser pour votre titre                                                 |
 | `Font Size`           | La taille de votre texte                                                             |
 | `Couleur du texte`    | Modifie la couleur du titre                                                          |
@@ -68,9 +68,9 @@ Les détails pour chaque type de bloc sont fournis ci-dessous.
 {: .reset-td-br-1 .reset-td-br-2}
 
 {% alert tip %}
-_Note à propos de la largeur automatique_ Le redimensionnement automatique de l'image choisit la meilleure taille pour l'image en se basant sur une combinaison de largeur d'image et d'espace disponible dans la mise en page :
-- Grandes images, plus larges que l'espace disponible, sera défini à 100% de largeur et conservera ce ratio sur mobile, en utilisant la largeur d'affichage de l'appareil entière.
-- Les petites images, plus petites que l'espace disponible, utilisent la taille naturelle de l'image pour éviter des effets de distorsion ou des images floues.
+Pour `Largeur automatique`, le redimensionnement automatique de l'image choisit la meilleure taille pour l'image en se basant sur une combinaison de largeur d'image et d'espace disponible dans la mise en page :
+- Les images plus larges que l'espace disponible seront réglées à 100% de largeur et conserveront ce ratio sur mobile, en utilisant la largeur d'affichage de l'appareil entière.
+- Les images plus petites que l'espace disponible utiliseront la taille naturelle de l'image pour éviter des effets de distorsion ou des images floues.
 {% endalert %}
 
 ### Bouton
@@ -100,20 +100,20 @@ _Note à propos de la largeur automatique_ Le redimensionnement automatique de l
 
 ### Menu
 
-| Propriétés                        | Libellé                                                                                                                |
-| --------------------------------- | ---------------------------------------------------------------------------------------------------------------------- |
-| `Configurer les éléments du menu` | Ajouter un lien de menu                                                                                                |
-| `Famille de police`               | Le style à utiliser pour votre menu                                                                                    |
-| `Font Size`                       | La taille de votre menu                                                                                                |
-| `Couleur du texte`                | Modifie la couleur du menu                                                                                             |
-| `Couleur du lien`                 | Modifie la couleur du texte du menu                                                                                    |
-| `Align`                           | Déplace le menu vers la gauche, le centre ou la droite                                                                 |
-| `Espacement des lettres`          | Modifier la distance entre chaque caractère                                                                            |
-| `Mise en page`                    | horizontal ou vertical                                                                                                 |
-| `Séparateur`                      | Ajouter des caractères(s) entre les options du menu                                                                    |
-| `Menu mobile`                     | Options pour modifier la taille de l'icône, la couleur et le type d'icône lorsqu'il est affiché sur un appareil mobile |
-| `Item padding`                    | Si activé, vous pouvez modifier le remplissage en utilisant le bouton + ou - ou en entrant un numéro spécifique        |
-| `Tous les côtés`                  | Si le 'remplissage d'élément' est désactivé, définissez un numéro de remplissage cohérent                              |
+| Propriétés                        | Libellé                                                                                                                 |
+| --------------------------------- | ----------------------------------------------------------------------------------------------------------------------- |
+| `Configurer les éléments du menu` | Ajouter un lien de menu                                                                                                 |
+| `Famille de police`               | Le style à utiliser pour votre menu                                                                                     |
+| `Font Size`                       | La taille de votre menu                                                                                                 |
+| `Couleur du texte`                | Modifie la couleur du menu                                                                                              |
+| `Couleur du lien`                 | Modifie la couleur du texte du menu                                                                                     |
+| `Align`                           | Déplace le menu vers la gauche, le centre ou la droite                                                                  |
+| `Espacement des lettres`          | Modifier la distance entre chaque caractère                                                                             |
+| `Mise en page`                    | horizontal ou vertical                                                                                                  |
+| `Séparateur`                      | Ajouter des caractères(s) entre les options du menu                                                                     |
+| `Menu mobile`                     | Options pour modifier la taille de l'icône, la couleur et le type d'icône lorsqu'il est affiché sur un appareil mobile  |
+| `Item padding`                    | Si activé, vous pouvez modifier le remplissage en utilisant le bouton **+** ou **-** ou en entrant un numéro spécifique |
+| `Tous les côtés`                  | Si `le remplissage d'élément` est désactivé, définissez un numéro de remplissage cohérent                               |
 {: .reset-td-br-1 .reset-td-br-2}
 
 ### Espaceur
