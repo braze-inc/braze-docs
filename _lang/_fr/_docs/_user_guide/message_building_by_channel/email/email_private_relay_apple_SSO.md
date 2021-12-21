@@ -2,13 +2,13 @@
 nav_title: Relais privé Apple
 article_title: Envoi d'e-mails au Relais privé Apple
 alias: /fr/email_relay/
-page_order: 8
+page_order: 9
 description: "Cet article traite du processus d’envoi de courriels à Apple Private Relay. Cela permettra aux utilisateurs de Sendgrid de mettre en liste blanche sans avoir à faire de modifications DNS."
 channel:
   - Email
 ---
 
-# Système de relais privé Apple
+# Envoi d'e-mails au Relais privé Apple
 
 Avec la version iOS 13, Apple a introduit des fonctionnalités pour les clients d'Apple, ce qui a un impact sur la façon dont les e-mails leur sont envoyés. La nouvelle fonctionnalité d'authentification unique d'Apple (SSO) permet aux clients Apple de partager leur adresse e-mail (`exemple@icloud. om`) ou de cacher leur adresse e-mail, auquel cas une adresse email "masquée" (`tq1234snin@privaterelay. ppleid.com`) sera fourni aux marques (par opposition à l'adresse e-mail personnelle de l'utilisateur).
 
