@@ -2,7 +2,7 @@
 nav_title: Editeur Glisser & Déposer
 article_title: Editeur Glisser & Déposer
 alias: /dnd/
-page_order: 2.1
+page_order: 2
 description: "Cet article couvre la façon de mettre en place et d'utiliser correctement l'éditeur drag & drop fourni par Braze."
 layout: en vedette
 guide_top_header: "Editeur Glisser & Déposer"
