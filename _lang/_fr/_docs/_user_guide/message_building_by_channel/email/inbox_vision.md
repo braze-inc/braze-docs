@@ -1,7 +1,7 @@
 ---
 nav_title: Vision de la boîte de réception
 article_title: Vision de la boîte de réception
-page_order: 5
+page_order: 6
 description: "Inbox Vision permet aux marketeurs de visualiser leurs courriels du point de vue de divers clients de messagerie et appareils mobiles. Cet article de référence traite de la façon de mettre en place et d'utiliser Inbox Vision."
 tool:
   - Tableau de bord
