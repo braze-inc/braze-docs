@@ -2,14 +2,14 @@
 nav_title: Apple Private Relay
 article_title: Sending Emails to Apple Private Relay
 alias: /email_relay/
-page_order: 8
+page_order: 9
 description: "This article covers the process of sending emails to Apple Private Relay. This will allow Sendgrid users to whitelist without haveing to make DNS changes."
 channel:
   - email
   
 ---
 
-# Apple Private Relay system
+# Sending Emails to Apple Private Relay
 
 With the iOS 13 release, Apple has introduced functionality for Apple customers, which impacts how email is sent to them. The new Apple single sign-on (SSO) feature allows Apple customers to share their email address (`example@icloud.com`) or to hide their email address, in which case a "masked" email address (`tq1234snin@privaterelay.appleid.com`) will be provided to brands (as opposed to the user's personal email address).
 

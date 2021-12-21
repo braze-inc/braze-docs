@@ -1,5 +1,5 @@
 ---
-nav_title: Create an Email Template
+nav_title: Creating an Email Template
 article_title: Creating an Email Template
 page_order: 2
 description: "Email messages are great for delivering content to the user on their terms. This reference article covers how to create, customize, and manage email templates."
@@ -11,7 +11,7 @@ alias: "/dnd/email_template/"
 
 ---
 
-# How to create an email template
+# Creating an email template
 
 > This article covers how to create, customize, and manage email templates.
 
@@ -25,7 +25,7 @@ In the left navigation, click __Templates & Media__, under the __Engagement__ se
 
 ### Step 2: Create or choose a template
 
-Now, you can create a new template or edit an existing template (plain or [mobile responsive][8]) using either the drag & drop editing experience or standard HTML experience. If you'd like to create a new template, then you can choose from Braze's predesigned templates, or you can choose to create a new layout.
+Now, you can create a new template or edit an existing template (plain or [mobile responsive][8]) using the drag & drop editing experience or standard HTML experience. If you'd like to create a new template, you can choose from Braze's predesigned templates or create a new layout.
 
 ![New Template][2]
 
@@ -83,7 +83,7 @@ The drag & drop editing experience is broken out into three sections: __Sending 
 
 #### __Sending settings__
 
-The Sending Settings section allows you to configure your from and reply-to address as well as set the subject line or pre-header. 
+The **Sending Settings** section allows you to configure your from and reply-to address as well as set the subject line or pre-header. 
 
 {% alert note %}
 Advanced functionality will appear in the campaign or Canvas step composer. In advanced functionality, you can modify your inline CSS setting, set a BCC email address, and enter in a header or extra key-value pairs (if configured).
@@ -94,7 +94,7 @@ Advanced functionality will appear in the campaign or Canvas step composer. In a
 
 #### __Content__
 
-The Content section contains the editor. There are three key components within this section.
+The **Content** section contains the editor. There are three key components within this section.
 
 - __Content__: This section includes a series of tiles that represent the different kinds of content you can use in your message. More will become available in the future. To use them, just drag one inside an existing row segment; it will auto-adjust to the column width. Every block has its own settings, such as granular control on padding. The right-side panel automatically switches to a property panel for the selected content element.<br><br> For more information see [Editor Block Properties]({{site.baseurl}}/dnd/editor_blocks/)<br><br>
 - __Rows__: Rows are structural units that define the horizontal composition of a section of the message by using columns. Using more than one column allows you to put different content elements side by side. You can add all the structural elements you need to your message, regardless of the template you selected when you started.<br><br>
@@ -106,7 +106,7 @@ This is very useful to build a coherent message very quickly.
 
 #### __Preview & Test__
 
-The Preview & Test section allows you to preview your email based on different users.
+The **Preview & Test** section allows you to preview your email based on different users.
 
 - __Random User__: Braze will randomly select a user from the database and preview the email based on their attributes/event information.
 Note: This user may or may not be part of your segmentation criteria. Segmentation is selected afterward, so Braze is unaware of your target audience at this point.<br><br>
@@ -128,7 +128,7 @@ Braze will add a footer with an unsubscribe link at the bottom of your email by 
 
 #### Step 4a: Check for email errors
 
-Email errors are presented on the **Compose** tab of the message workflow. Errors prevent you from progressing forward, while "Warnings" indicate reminders to help you follow best practices. Depending on your business, you might choose to ignore them.
+Email errors are presented on the **Compose** tab of the message workflow. Errors prevent you from progressing forward. "Warnings" indicate reminders to help you follow best practices. Depending on your business, you might choose to ignore them.
 
 ![Drag & Drop Compose Error][1]{: style="float:right;max-width:40%;margin-left:15px;"}
 

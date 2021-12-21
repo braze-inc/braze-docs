@@ -1,7 +1,7 @@
 ---
 nav_title: FAQs
 article_title: Email FAQs
-page_order: 25
+page_order: 12
 description: "This page provides answers to frequently asked questions about Email messaging."
 channel: email
 

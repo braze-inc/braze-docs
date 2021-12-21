@@ -1,6 +1,6 @@
 ---
-nav_title: Create an In-App Message
-article_title: Create an In-App Message
+nav_title: Creating an In-App Message
+article_title: Creating an In-App Message
 page_order: 0
 description: "You can create an in-app message using the Braze platform using campaigns, Canvas, or as an API campaign. This article will guide you through this process."
 channel:
@@ -69,7 +69,7 @@ Once you've selected a sending platform, browse the message types, layouts, and 
 
 When deciding which message type to use, you should consider how intrusive your in-app message campaign needs to be. This is a measure how much screen real estate the message will take up and how much this interrupts your customer's regular experience in your app or site. The more rich content you want to deliver, the more intrusive your message will need to be.
 
-![Graphic showing a scale of less instrusive to more intrusive, with Slider being the least intrusive, followed by Modal, and Full screen being the most intrusive]({% image_buster /assets/img_archive/iam_intrusive.png %}){: style="max-width:80%" }
+![Graphic showing a scale of less instrusive to more intrusive, with slider being the least intrusive, followed by modal, and full-screen being the most intrusive]({% image_buster /assets/img_archive/iam_intrusive.png %}){: style="max-width:80%" }
 
 ### Message types
 
