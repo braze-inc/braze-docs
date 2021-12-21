@@ -1,7 +1,7 @@
 ---
-nav_title: Gestion des abonnements aux utilisateurs
-article_title: Gestion des abonnements aux utilisateurs
-page_order: 1.9
+nav_title: Abonnements utilisateur
+article_title: Abonnements utilisateur
+page_order: 4
 description: "Cet article de référence couvre les différents états d'abonnement, comment créer et gérer des groupes d'abonnement, et comment segmenter les utilisateurs en fonction de leurs abonnements."
 channel:
   - Email
