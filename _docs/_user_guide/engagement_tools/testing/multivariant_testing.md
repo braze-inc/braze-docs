@@ -148,7 +148,7 @@ Braze compares each variant’s conversion rate against the control’s conversi
 
 In general, a confidence of at least 95% is necessary to show that your results are reflective of users’ actual preferences, and not due to chance. In rigorous scientific tests, 95% confidence (or otherwise commonly referred to as the “p” value being less than 0.05) is the common benchmark used to determine statistical significance. If you continually fail to achieve 95% confidence, try increasing your sample size or decreasing the number of variants. 
 
-Confidence does not describe whether one variant is better than the others, and there isn't a correlation between confidence rate and conversion rate. For instance, just because the conversion rate on a particular variant is high or low does not mean the confidence should be high or low. It's possible for one variant to have a very different conversion rate from another and yet not have a 95% or higher confidence. It's also possible for two sets of variants to have similar conversion/ uplift rates, and yet different confidence.
+Confidence does not describe whether one variant is better than the others. It is purely a measure of how sure we are that the two (or more) conversion rates are actually different than each other. This is only a function of the sample size and the differences between the apparent conversion rates. Whether the overall rates are high or low does not affect the strength of the confidence measure. It's possible for one variant to have a very different conversion rate from another and yet not have a 95% or higher confidence. It's also possible for two sets of variants to have similar conversion/uplift rates, and yet different confidence.
 
 {% details Statistically insignificant results %}
 
