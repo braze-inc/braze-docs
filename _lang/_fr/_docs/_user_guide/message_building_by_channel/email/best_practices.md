@@ -1,5 +1,5 @@
 ---
-page_order: 26
+page_order: 11
 nav_title: Meilleures pratiques
 article_title: Envoyer les meilleures pratiques par e-mail
 layout: dev_guide
