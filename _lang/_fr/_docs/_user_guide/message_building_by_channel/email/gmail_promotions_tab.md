@@ -1,7 +1,7 @@
 ---
 nav_title: Onglet Promotions Gmail
 article_title: Onglet Promotions Gmail
-page_order: 7
+page_order: 8
 description: "Gmail a mis à jour l'onglet Promotions mobiles pour permettre aux marketeurs d'envoyer plus d'informations via des annotations dans une \"carte\". Cet article explique comment utiliser Braze pour vous aider à construire la carte à partir de notre produit."
 channel:
   - Email
