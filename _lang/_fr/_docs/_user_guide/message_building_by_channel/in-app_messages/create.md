@@ -1,6 +1,6 @@
 ---
-nav_title: Créer un message In-App
-article_title: Créer un message In-App
+nav_title: Création d'un Message In-App
+article_title: Création d'un Message In-App
 page_order: 0
 description: "Vous pouvez créer un message dans l'application en utilisant la plateforme Braze en utilisant des campagnes, Canvas, ou en tant que campagne API. Cet article vous guidera tout au long de ce processus."
 channel:
