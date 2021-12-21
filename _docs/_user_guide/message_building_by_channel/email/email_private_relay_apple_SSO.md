@@ -9,7 +9,7 @@ channel:
   
 ---
 
-# Apple Private Relay system
+# Sending Emails to Apple Private Relay
 
 With the iOS 13 release, Apple has introduced functionality for Apple customers, which impacts how email is sent to them. The new Apple single sign-on (SSO) feature allows Apple customers to share their email address (`example@icloud.com`) or to hide their email address, in which case a "masked" email address (`tq1234snin@privaterelay.appleid.com`) will be provided to brands (as opposed to the user's personal email address).
 

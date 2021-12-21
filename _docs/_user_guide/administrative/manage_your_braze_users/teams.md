@@ -20,7 +20,7 @@ Go to the **Manage Settings** page, select **Manage Teams**, and click <i class=
 Teams can be used to filter end-users for engagement objects like campaigns, Canvases, Content Cards, segments, and more. See [Tags and Filters](#tags-and-filters) below to learn more. 
 
 {% alert note %}
-Note that Teams are not available on all Braze contracts. If you’d like to access this feature, reach out to your Braze Account Manager or contact us at [hello@braze.com](mailto:success@braze.com) for a consultation.
+Note that Teams are not available on all Braze contracts. If you’d like to access this feature, reach out to your Braze Account Manager or [contact us](mailto:success@braze.com) for a consultation.
 {% endalert %}
 
 ![Adding Team][68]

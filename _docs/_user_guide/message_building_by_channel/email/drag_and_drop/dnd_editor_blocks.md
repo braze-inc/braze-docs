@@ -70,8 +70,8 @@ Details for each block type are provided below.
 
 {% alert tip %}
 For `Auto Width`, automatic image resizing picks the best size for the image based on a combination of image width and available space in the layout:
-- Large images, wider than the available space, will be set at 100% width and will keep this ratio on mobile, using the entire device display width.
-- Small images that are smaller than the available space will use the image's natural size to avoid distortion effects or blurry pictures.
+- Images wider than the available space will be set at 100% width and will keep this ratio on mobile, using the entire device display width.
+- Images smaller than the available space will use the image's natural size to avoid distortion effects or blurry pictures.
 {% endalert %}
 
 ### Button
