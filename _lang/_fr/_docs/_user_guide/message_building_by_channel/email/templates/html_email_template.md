@@ -1,6 +1,6 @@
 ---
-nav_title: Télécharger un modèle d'email
-article_title: Comment télécharger un modèle de courriel HTML
+nav_title: Téléchargement d'un modèle d'e-mail
+article_title: Téléchargement d'un modèle de courriel HTML
 page_order: 2.1
 description: "Cet article de référence traite de la création, de la gestion et du dépannage d'un modèle de courriel HTML à l'aide du tableau de bord Braze."
 tool:
@@ -9,7 +9,7 @@ channel:
   - Email
 ---
 
-# Comment télécharger un modèle de courriel HTML
+# Téléchargement d'un modèle d'e-mail HTML
 
 > Cet article couvre la création, la gestion et le dépannage des modèles de courriels HTML dans le tableau de bord de Braze.
 
