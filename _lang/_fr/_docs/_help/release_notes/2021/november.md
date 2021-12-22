@@ -14,7 +14,7 @@ Utilisez le tableau de bord **Utilisation totale de points de données** pour su
 
 ## Passer à la régénération d'extension de segment
 
-À partir du 10 janvier 2022, le paramètre de régénération des extensions quotidiennes sera automatiquement désactivé pour les [extensions de segment non utilisées]({{site.baseurl}}/user_guide/engagement_tools/segments/segment_extension/). Braze définit les extensions inutilisées comme celles qui répondent aux critères suivants :
+À partir du 1er février 2022, le paramètre de régénération des extensions quotidiennes sera automatiquement désactivé pour les [extensions de segment non utilisées]({{site.baseurl}}/user_guide/engagement_tools/segments/segment_extension/). Braze définit les extensions inutilisées comme celles qui répondent aux critères suivants :
 
 - Non utilisé dans aucune campagne active, Canvases ou segments actifs
 - Non utilisé dans aucune campagne inactive (brouillon, arrêté, archivé), Canvases ou segments
