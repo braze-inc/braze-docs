@@ -208,6 +208,8 @@ Il y a quelques raisons pour lesquelles le nombre d'utilisateurs importés peut 
 
 Il doit y avoir une ligne d'en-tête afin d'importer correctement les données. Chaque ligne doit avoir le même nombre de cellules que la ligne d'en-tête. Les lignes dont la longueur a plus ou moins de valeurs que la ligne d'en-tête seront exclues de l'importation. Les virgules dans une valeur seront interprétées comme un séparateur et peuvent conduire à ce que cette erreur soit levée. De plus, toutes les données doivent être encodées en UTF-8.
 
+Si votre fichier CSV a des lignes vides et importe moins de lignes que le total des lignes dans le fichier CSV, cela peut ne pas indiquer un problème avec l'import car les lignes vides n'auraient pas besoin d'être importées. Vérifiez le nombre de lignes qui ont été correctement importées et assurez-vous qu'elles correspondent au nombre d'utilisateurs que vous essayez d'importer.
+
 ### Types de données multiples
 
 Braze attend que chaque valeur d'une colonne soit du même type de données. Les valeurs qui ne correspondent pas au type de données de leur attribut provoqueront des erreurs dans la segmentation.
