@@ -22,6 +22,7 @@ Braze héberge notre application sur plusieurs grappes à travers les États-Uni
 | US-06    | `https://rest.iad-06.braze.com` |
 | US-08    | `https://rest.iad-08.braze.com` |
 | EU-01    | `https://rest.fra-01.braze.eu`  |
+| EU-02    | `https://rest.fra-02.braze.eu`  |
 {: .reset-td-br-1 .reset-td-br-2}
 
 ## URL du point de terminaison
