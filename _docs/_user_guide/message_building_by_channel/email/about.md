@@ -31,7 +31,7 @@ Here are some great use cases to get you inspired!
 | --- | --- |
 | Re-engagement | Reach users outside of your app, including those who have not installed the app |
 | Onboarding | Onboard and encourage new users to turn on push notifications or share the app on social networks. |
-| Rich messages | Allow for rich and dyanimic HTML messages
+| Rich messages | Allow for rich and dynamic HTML messages. |
 | Multimedia content | Ease of multimedia content placement that engages users, like videos and images. |
 | Newsletters | Convenient method for sending monthly or weekly newsletters to maintain user engagement. |
 | Transactions | Notify users of recent purchases and deliver important product and shipping information with [Transactional Emails][3].
