@@ -23,6 +23,7 @@ tool:
 - Les images Android Extended Notification doivent être de 2:1, mais __n'ont pas de limite de taille__.
 - Android permet également de définir une image séparée pour la vue de notification standard. <br>Taille recommandée des images : 512x256 pour Small, 1024x512 pour Medium, et 2048x1024 pour Large.
 - Actuellement, les notifications riches d'Android ne permettent que les images statiques, y compris les formats de fichiers jpg et png, les gifs et autres formats d'image ne sont pas encore pris en charge.
+- Notez que l'ajout de boutons d'action à votre notification push peut affecter la zone de l'image qui est affichable. Veuillez tester avec l'aperçu du tableau de bord et les appareils en direct pour vous assurer que les résultats sont comme prévu.
 
 {% alert note %}
 Pendant que Braze fournit des instructions sur la façon de mettre en place une poussée riche, que le rendu réel des notifications poussées riches peut varier en fonction de facteurs extérieurs tels que le rapport d'aspect de l'appareil, la version androïde, les contraintes spécifiques à OEM, etc. <br><br> Nous vous recommandons de faire un test d'envoi sur plusieurs appareils Android pour vous assurer que vos notifications push riches apparaissent comme vous les avez prévues.
