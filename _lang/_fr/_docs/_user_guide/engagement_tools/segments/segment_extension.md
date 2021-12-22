@@ -52,7 +52,7 @@ Les extensions de segment s'appuient sur le stockage à long terme des propriét
 Vous pouvez spécifier si vous voulez que cette extension représente un seul instantané dans le temps, ou si vous voulez que cette extension se régénère quotidiennement. Votre extension commencera toujours le traitement après la sauvegarde initiale. Si vous souhaitez que l'extension soit régénérée quotidiennement, cochez la case **Régénérer l'extension Quotidienne** et la régénération commencera à être traitée vers minuit chaque jour dans le fuseau horaire de votre entreprise.
 
 {% alert important %}
-À partir du 10 janvier 2022, le paramètre de régénération des extensions quotidiennes sera automatiquement désactivé pour les extensions de segment non utilisées. Braze définit les extensions inutilisées comme celles qui répondent aux critères suivants :
+À partir du 1er février 2022, le paramètre de régénération des extensions quotidiennes sera automatiquement désactivé pour les extensions de segment non utilisées. Braze définit les extensions inutilisées comme celles qui répondent aux critères suivants :
 
 - Non utilisé dans aucune campagne active, Canvases ou segments actifs
 - Non utilisé dans aucune campagne inactive (brouillon, arrêté, archivé), Canvases ou segments
