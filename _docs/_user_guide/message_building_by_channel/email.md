@@ -11,6 +11,9 @@ channel:
 
 guide_featured_title: "Popular Articles"
 guide_featured_list:
+- name: About Email
+  link: /docs/user_guide/message_building_by_channel/email/about/
+  fa_icon: fas fa-check
 - name: Create an Email Campaign
   link: /docs/user_guide/message_building_by_channel/email/creating_an_email_campaign/
   fa_icon: fas fa-envelope
