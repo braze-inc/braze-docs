@@ -53,7 +53,7 @@ Segment Extensions rely on long term storage of event properties and don't have 
 You can specify whether you want this extension to represent a single snapshot in time, or whether you want this extension to regenerate on a daily basis. Your extension will always begin processing after the initial save. If you would like the extension to be regenerated daily, select the **Regenerate Extension Daily** checkbox and the regeneration will begin processing at around midnight each day in your company’s time zone.
 
 {% alert important %}
-Starting on January 10, 2022, the setting to regenerate extensions daily will be automatically turned off for unused Segment Extensions. Braze defines unused extensions as ones that meet the following criteria:
+Starting on February 1, 2022, the setting to regenerate extensions daily will be automatically turned off for unused Segment Extensions. Braze defines unused extensions as ones that meet the following criteria:
 
 - Not used in any active campaigns, Canvases, or segments
 - Not used in any inactive (draft, stopped, archived) campaigns, Canvases, or segments
