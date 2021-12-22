@@ -2,16 +2,16 @@
 nav_title: Paires clé-valeur
 article_title: Paires clé-valeur
 page_order: 3
-description: "Braze vous permet d'envoyer des charges payantes supplémentaires aux appareils utilisateurs via des paires clés-valeurs. Cette fonctionnalité est disponible sur les canaux de messagerie push, dans l'application et dans les fils d'actualité."
+description: "Braze vous permet d'envoyer des charges payantes supplémentaires aux appareils utilisateurs via des paires clés-valeurs. Cette fonctionnalité est disponible sur les canaux de messagerie push, in-app et Content Card."
 channel:
   - Pousser
   - messages intégrés à l'application
-  - fil d'actualité
+  - cartes de contenu
 ---
 
 # Paires clé-valeur
 
-Braze vous permet d'envoyer des charges payantes supplémentaires aux appareils utilisateurs via des paires clés-valeurs. Cette fonctionnalité est disponible sur les canaux de messagerie push, dans l'application et dans les fils d'actualité. Des blocs de données supplémentaires peuvent vous aider à mettre à jour les paramètres internes et le contenu de l'application, ainsi que personnaliser les propriétés de notification push, comme la priorisation des alertes, la localisation et les sons.
+Braze vous permet d'envoyer des charges payantes supplémentaires aux appareils utilisateurs via des paires clés-valeurs. Cette fonctionnalité est disponible sur les canaux de messagerie push, in-app et Content Card. Des blocs de données supplémentaires peuvent vous aider à mettre à jour les paramètres internes et le contenu de l'application, ainsi que personnaliser les propriétés de notification push, comme la priorisation des alertes, la localisation et les sons.
 
 ## Notifications push
 
