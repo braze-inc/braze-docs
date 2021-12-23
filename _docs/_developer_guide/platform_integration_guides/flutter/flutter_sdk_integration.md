@@ -85,7 +85,7 @@ In the same file, add the following snippet within the `application:didFinishLau
 Then, add your SDK Endpoint in the `Info.plist` file. It is located in the `ios` project folder. If you're working in Xcode:
 
 1. Add a row with the name `Braze` and type of `Dictionary`.
-2. To that Dictionary, add a row with the name `Endpoint`, type `String` and as a value, input your [SDK endpoint][6].
+2. To that Dictionary, add a row with the name `Endpoint`, type `String` and as a value, input your [SDK endpoint]({{site.baseurl}}/api/basics/#endpoints).
 
 Otherwise, add the following elements to the file:
 
@@ -108,7 +108,7 @@ To import the plugin into your Dart code, use:
 import 'package:braze_plugin/braze_plugin.dart';
 ```
 
-Then, initialize an instance of the Braze plugin by calling `new BrazePlugin()` like in [our sample app][7].
+Then, initialize an instance of the Braze plugin by calling `new BrazePlugin()` like in [our sample app][6].
 
 ## Test your basic integration
 
@@ -128,5 +128,4 @@ Then, search for the user with `some-user-id` in the dashboard under **User Sear
 [3]: {{site.baseurl}}/api/api_key/#the-app-identifier-api-key
 [4]: {{site.baseurl}}/api/basics/#endpoints
 [5]: https://docs.flutter.dev/get-started/install
-[6]: {{site.baseurl}}/api/basics/#endpoints
-[7]: https://github.com/braze-inc/braze-flutter-sdk/blob/master/example/lib/main.dart
+[6]: https://github.com/braze-inc/braze-flutter-sdk/blob/master/example/lib/main.dart

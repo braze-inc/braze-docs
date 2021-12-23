@@ -41,9 +41,9 @@ This callback works with no additional integration required.
 {% endtab %}
 {% tab iOS %}
 
-1. Create an `NSNotificationCenter` listener for `ABKContentCardsProcessedNotification` events as described [here]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/content_cards/data_model/).
+1. Create a `NotificationCenter` listener for `NSNotification.Name.ABKContentCardsProcessed` events as described [here]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/content_cards/data_model/#getting-the-data).
 
-2. Your `ABKContentCardsProcessedNotification` callback implementation must call `braze.processContentCards(contentCards)`.
+2. Your `NotificationCenter` callback implementation must call `BrazePlugin.processContentCards(contentCards)`.
 
 For an example, see [AppDelegate.swift](https://github.com/braze-inc/braze-flutter-sdk/blob/master/example/ios/Runner/AppDelegate.swift) in our sample app.
 

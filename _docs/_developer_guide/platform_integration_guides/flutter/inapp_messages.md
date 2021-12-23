@@ -72,7 +72,7 @@ This callback works with no additional integration required.
 {% endtab %}
 {% tab iOS %}
 
-1. Implement the `ABKInAppMessageControllerDelegate` delegate as described in our iOS section on [Core In-App Message Delegate]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/in-app_messaging/customization/#core-in-app-message-controller-delegate).
+1. Implement the `ABKInAppMessageControllerDelegate` delegate as described in our iOS section on [Core In-App Message Delegate]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/in-app_messaging/customization/#core-in-app-message-delegate).
 
 2. Update your `beforeInAppMessageDisplayed` delegate implementation to call `BrazePlugin.process(inAppMessage)`.
 

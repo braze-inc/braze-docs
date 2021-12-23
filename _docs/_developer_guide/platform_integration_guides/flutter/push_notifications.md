@@ -14,8 +14,8 @@ Integrating push notifications in Flutter requires setting up each native platfo
 
 ## Step 1: Complete native setup
 
-- Android: Follow [the Android integration instructions][1].
-- iOS: Follow [the iOS integration instructions][2].
+- Android: Follow the [Android integration instructions][1].
+- iOS: Follow the [iOS integration instructions][2].
 
 ## Step 2: Test displaying push notifications
 
