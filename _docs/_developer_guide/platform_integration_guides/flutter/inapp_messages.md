@@ -32,46 +32,24 @@ braze.logInAppMessageButtonClicked(inAppMessage, 0);
 
 ## Disabling automatic display
 
+To disable automatic in-app message display, make these updates in the native layer.
+
 {% tabs %}
 {% tab Android %}
 
-To disable automatic in-app message display for Android, first set `com_braze_flutter_enable_automatic_integration_initializer` to `false` in your `braze.xml` file.
+1. Ensure you are using the automatic integration intializer, which is enabled by default starting in version `2.2.0`.
+2. Set the In-App Message operation default to `DISCARD` by adding the line below to your `braze.xml` file.
 
-Then, implement the `IInAppMessageManagerListener` delegate as described in our Android section on [Custom Manager Listener]({{site.baseurl}}/developer_guide/platform_integration_guides/android/in-app_messaging/customization/#custom-manager-listener) by following the steps below:
-
-1. In your `MainActivity.kt`, add this code to your `configureFlutterEngine` method:
-```dart
-override fun configureFlutterEngine(flutterEngine: FlutterEngine) {
-  // [...]
-
-  this.application.registerActivityLifecycleCallbacks(BrazeActivityLifecycleCallbackListener())
-  BrazeInAppMessageManager.getInstance().setCustomInAppMessageManagerListener(
-      BrazeInAppMessageManagerListener()
-  )
-}
-```
-
-2. Add this inside your `MainActivity` class:
-```dart
-private class BrazeInAppMessageManagerListener : IInAppMessageManagerListener {
-  override fun beforeInAppMessageDisplayed(inAppMessage: IInAppMessage): InAppMessageOperation {
-    super.beforeInAppMessageDisplayed(inAppMessage)
-    BrazePlugin.processInAppMessage(inAppMessage)
-
-    // InAppMessageOperation.DISCARD will disable automatic display
-    return InAppMessageOperation.DISCARD
-  }
-}
+```xml
+<string name="com_braze_flutter_automatic_integration_iam_operation">DISCARD</string>
 ```
 
 {% endtab %}
 {% tab iOS %}
 
-To disable automatic in-app message display for iOS, implement the `ABKInAppMessageControllerDelegate` delegate as described in our iOS section on [Core In-App Message Delegate]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/in-app_messaging/customization/#core-in-app-message-controller-delegate).
+1. Implement the `ABKInAppMessageControllerDelegate` delegate as described in our iOS section on [Core In-App Message Delegate]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/in-app_messaging/customization/#core-in-app-message-delegate).
 
-Then, update your `beforeInAppMessageDisplayed` delegate implementation to return `ABKInAppMessageDisplayChoice.discardInAppMessage`.
-
-For an example, see [AppDelegate.swift](https://github.com/braze-inc/braze-flutter-sdk/blob/master/example/ios/Runner/AppDelegate.swift) in our sample app.
+2. Update your `beforeInAppMessageDisplayed` delegate implementation to return `ABKInAppMessageDisplayChoice.discardInAppMessage`.
 
 {% endtab %}
 {% endtabs %}
