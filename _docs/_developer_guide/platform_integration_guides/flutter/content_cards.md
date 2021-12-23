@@ -36,14 +36,14 @@ To set the callback, call `braze.setBrazeContentCardsCallback()` from your Flutt
 {% tabs %}
 {% tab Android %}
 
-On Android, this callback works with no additional integration required.
+This callback works with no additional integration required.
 
 {% endtab %}
 {% tab iOS %}
 
-Create an `NSNotificationCenter` listener for `ABKContentCardsProcessedNotification` events as described [here][1].
+1. Create an `NSNotificationCenter` listener for `ABKContentCardsProcessedNotification` events as described [here]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/content_cards/data_model/).
 
-Your `ABKContentCardsProcessedNotification` callback implementation must call `braze.processContentCards(contentCards)`.
+2. Your `ABKContentCardsProcessedNotification` callback implementation must call `braze.processContentCards(contentCards)`.
 
 For an example, see [AppDelegate.swift](https://github.com/braze-inc/braze-flutter-sdk/blob/master/example/ios/Runner/AppDelegate.swift) in our sample app.
 
@@ -71,7 +71,6 @@ Follow the steps below to test a sample content card.
 For more details on each platform, follow the [Android integration instructions][5] or the [iOS integration instructions][6].
 
 
-[1]: https://www.braze.com/docs/developer_guide/platform_integration_guides/ios/content_cards/data_model/
 [3]: {{site.baseurl}}/user_guide/message_building_by_channel/content_cards/create
 [4]: {% image_buster /assets/img/react-native/content-card-test.png %} "Content Card Campaign Test"
 [5]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/content_cards/data_models/

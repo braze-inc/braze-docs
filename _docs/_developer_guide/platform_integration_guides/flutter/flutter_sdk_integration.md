@@ -66,7 +66,7 @@ In the same file, add the following snippet within the `application(application:
 Appboy.start(withApiKey: "YOUR-APP-IDENTIFIER-API-KEY", in:application, withLaunchOptions:launchOptions)
 ```
 {% endsubtab %}
-{% subtab OBJC %}
+{% subtab OBJECTIVE-C %}
 Add Appboy SDK import at the top of the `AppDelegate.m` file:
 ```objc
 #import "Appboy-iOS-SDK/AppboyKit.h"
