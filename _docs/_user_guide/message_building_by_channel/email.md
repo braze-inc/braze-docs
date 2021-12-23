@@ -4,13 +4,16 @@ article_title: Email
 page_order: 1
 layout: featured
 guide_top_header: "Email"
-guide_top_text: "With email at Braze, you can create completely customized and personalized email messages in either campaigns or Canvas that will grab your user's attention fast. Check out the articles below to learn more. <br><br>We recommend you also take our <a href='https://lab.braze.com/messaging-channels-email'>Email LAB course</a> to learn more about email use cases, see real world examples, and understand how to leverage email in a multichannel messaging strategy."
+guide_top_text: "With email at Braze, you can create completely customized and personalized email messages in either campaigns or Canvas that will grab your user's attention fast. Check out the articles below to learn more."
 description: "With Braze Email, you can create completely custom and personalized email messages in either campaigns or Canvas that will grab your user's attention fast. Check out the articles below to learn more."
 channel:
   - email
 
 guide_featured_title: "Popular Articles"
 guide_featured_list:
+- name: About Email
+  link: /docs/user_guide/message_building_by_channel/email/about/
+  fa_icon: fas fa-check
 - name: Create an Email Campaign
   link: /docs/user_guide/message_building_by_channel/email/creating_an_email_campaign/
   fa_icon: fas fa-envelope
@@ -49,16 +52,5 @@ guide_featured_list:
   fa_icon: fas fa-question
 
 ---
-
-## Use cases {#email-use-cases}
-
-You can do a lot with email! Here are some common use cases to get you inspired:
-
-- **Re-engagement:** Because email can reach users outside of your app, including those who have not installed the app, emails are well-suited for re-engagement.
-- **Onboarding:** Email campaigns are also useful for onboarding new users and encouraging them to turn on push notifications or share the app via social networks.
-- **Rich Messages:** For content that requires more than a simple push or slide, emails allow for rich and dynamic HTML messages.
-- **Multimedia:** Using email allows for the placement of multimedia content like videos and images that engage users.
-- **Newsletters:** Emails are convenient for sending monthly or weekly newsletters to maintain user engagement.
-- **Transactions:** Transactional emails notify users of recent purchases and deliver important product and shipping information.
 
 <br><br>
