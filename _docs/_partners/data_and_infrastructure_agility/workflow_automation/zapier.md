@@ -11,7 +11,7 @@ search_tag: Partner
 
 > [Zapier][1] is an automation web tool that allows you to share data between web apps and then use that information to automate actions. 
 
-The Braze and Zapier partnership leverages Braze API endpoints and [webhooks][3] to connect with third-party applications—such as Google Workplace, Slack, Salesforce, etc.—and automate various actions.
+The Braze and Zapier partnership leverages the Braze API and Braze [webhooks][3] to connect with third-party applications—such as Google Workplace, Slack, Salesforce, WordPress, etc. to automate various actions.
 
 ## Prerequisites
 
@@ -29,7 +29,7 @@ In the Zapier example below, we will be sending information from WordPress to Br
 
 Using Zapier's terminology, a "zap" is an automated workflow that connects your apps and services. The first part of any zap is to designate a trigger. Once your zap is enabled, Zapier will automatically perform the respective actions whenever your trigger is detected.
 
-Using our WordPress example, we'll set up our zap to trigger when a new WordPress post gets added and select **Published** and **Posts** as **Post Status** and **Post Type**. 
+Using our WordPress example, in the Zapier platform, we'll set up our zap to trigger when a new WordPress post gets added and select **Published** and **Posts** as **Post Status** and **Post Type**. 
 
 ![Zapier new post] [5]
 
@@ -58,7 +58,7 @@ These data fields are key-value pairs that will be used for the data portion of 
 
 ![Zapier campaign] [12]
 
-Once you've successfully set up your zap, you can now use the information being sent to Braze and Liquid to customize your campaign or Canvas.
+Once you've successfully set up your zap, you can customize your Braze campaigns or Canvases with Wordpress data by using Liquid formatting to display the information in your messages.
 
 [0]: {{site.baseurl}}/api/basics/#api-definitions
 [1]: https://zapier.com/
