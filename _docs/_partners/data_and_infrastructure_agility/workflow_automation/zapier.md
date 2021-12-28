@@ -9,51 +9,58 @@ search_tag: Partner
 ---
 # Zapier integration
 
-[Zapier][1] is an automation web tool that allows you to share data between web apps, and then use that information to automate actions. You can use the Braze platform's API endpoints and [webhooks][3] to connect with third-party applications—such as Google Workplace, Slack, Salesforce, etc—and automate a variety of actions.
+> [Zapier][1] is an automation web tool that allows you to share data between web apps and then use that information to automate actions. 
 
-In the Zapier example below, we'll be sending information from Wordpress to Braze using a POST webhook. We'll then use that information to create a Braze campaign. 
+The Braze and Zapier partnership leverages Braze API endpoints and [webhooks][3] to connect with third-party applications—such as Google Workplace, Slack, Salesforce, etc.—and automate various actions.
 
-### Step 1: Add WordRress as a trigger and select new post after you connect your account:
+## Prerequisites
 
-Using Zapier's terminology, a "zap"  is an automated workflow that connects your apps and services together. The first part of any zap is to designate a trigger. Once your zap is enabled, whenever your trigger is detected, Zapier will automatically perform its respective actions.
+| Requirements | Description |
+|---|---|
+| Zapier account | A Zapier account is required to take advantage of this partnership. |
+| Braze REST Endpoint | Your REST Endpoint URL. Your endpoint will depend on the [Braze URL for your instance][0]. |
+{: .reset-td-br-1 .reset-td-br-2}
 
-Using our Wordpress example, we'll set up our trigger as a published Wordpress post.
+## Integration
 
-![zapier1] [5]
+In the Zapier example below, we will be sending information from WordPress to Braze using a POST webhook. This information can then be used to create a Braze campaign or Canvas.
 
-![zapier2] [6]
+### Step 1: Create a Zapier trigger
 
-### Step 3: Add an action “webhook”:
+Using Zapier's terminology, a "zap" is an automated workflow that connects your apps and services. The first part of any zap is to designate a trigger. Once your zap is enabled, Zapier will automatically perform the respective actions whenever your trigger is detected.
 
-The second part of any zap is the action. When your zap is enabled and your trigger is detected, the action will automatically occur. 
+Using our WordPress example, we'll set up our zap to trigger when a new WordPress post gets added and select **Published** and **Posts** as **Post Status** and **Post Type**. 
 
-Using the same example, our action will send a POST request as a JSON to a Braze endpoint. 
+![Zapier new post] [5]
 
-![zapier3] [7]
+![Zapier published options] [6]
 
-### Step 4: Choose POST as the type:
+### Step 3: Add an action webhook
 
-![zapier4] [8]
+Next, define the zap action. When your zap is enabled, and your trigger is detected, the action will automatically occur.
 
-### Step 5: Setup Braze POST:
+Continuing our example, we want to send a POST request as a JSON to a Braze endpoint. This can be done by selecting the **Webhooks** option under **Apps**.
 
-URL : `https://rest.iad-01.braze.com/campaigns/trigger/send`
+![Zapier webhook] [7]
 
-Payload Type : JSON
+### Step 4: Set up Braze POST
 
-Data : `trigger_properties__name`, `api_key`, `campaign_id`
-These data fields are key-value pairs that will for the data portion of the request.
+First, choose **POST** as the webhook action type. Next, make sure to fill out the following fields using your Braze REST endpoint in the webhook URL:
 
-![zapier5] [10]
+- **Webhook URL**: `https://rest.iad-01.braze.com/campaigns/trigger/send`
+- **Payload Type** : JSON
+- **Data** : `trigger_properties__name`, `api_key`, and `campaign_id`
+These data fields are key-value pairs that will be used for the data portion of the request.
 
->  The above is an example for customers on the `US-01` instance. If you are not on this instance please refer to our [API documentation][66] to see which endpoint to make requests to.
+![Zapier POST] [10]
 
-## Step 6: Create a Braze campaign:
+### Step 5: Create a Braze campaign
 
-![zapier6] [12]
+![Zapier campaign] [12]
 
-Once you've successfully set up your zap, you can now use that information you're being sent to customize your campaign and send off any messages. You can also use trigger_properties with Liquid to filter what or if the message is sent.
+Once you've successfully set up your zap, you can now use the information being sent to Braze and Liquid to customize your campaign or Canvas.
 
+[0]: {{site.baseurl}}/api/basics/#api-definitions
 [1]: https://zapier.com/
 [3]: {{site.baseurl}}/user_guide/message_building_by_channel/webhooks/creating_a_webhook/#creating-a-webhook
 [5]:{% image_buster /assets/img_archive/zapier1.png %}
@@ -62,4 +69,3 @@ Once you've successfully set up your zap, you can now use that information you'r
 [8]:{% image_buster /assets/img_archive/zapier4.png %}
 [10]:{% image_buster /assets/img_archive/zapier5.png %}
 [12]:{% image_buster /assets/img_archive/zapier6.png %}
-[66]: {{site.baseurl}}/developer_guide/rest_api/messaging/#sending-messages-via-api-triggered-delivery
