@@ -10,65 +10,58 @@ search_tag: Partner
 
 # AppsFlyer Audiences
 
-> [AppsFlyer][1] is a mobile marketing analytics and attribution platform that helps you analyze and optimize your apps through marketing analytics, mobile attribution, and deep linking. [AppsFlyer Audiences][2] allows you to build and connect audience segments to your partner networks.
+> [AppsFlyer][1] is a mobile marketing analytics and attribution platform that helps you analyze and optimize your apps through marketing analytics, [mobile attribution][3], and deep linking. [AppsFlyer Audiences][2] allows you to build and connect audience segments to your partner networks.
 
-Drive user engagement and increase the efficiency of your remarketing programs by leveraging the power of the user segments built in AppsFlyer Audiences. Pass your AppsFlyer audiences (cohorts) directly to Braze to create powerful customer engagement campaigns targeted toward just the right users at just the right time.
+The Braze and AppsFlyer integration allows you to drive user engagement and increase the efficiency of your remarketing programs by leveraging the power of the user segments built in AppsFlyer Audiences. Pass your AppsFlyer audiences (cohorts) directly to Braze to create powerful customer engagement campaigns targeted toward just the right users at just the right time. 
 
-## Requirements
-- __AppsFlyer Account__ - This Braze integration is only available to AppsFlyer customers.
-- __Braze Data Import Key and REST Endpoint__ - This integration invokes the braze [/users/track/ endpoint]({{site.baseurl}}/api/endpoints/user_data/post_user_track/) to function.
-- __SDKs Integrated__ - The Braze SDK and AppsFlyer SDK must be integrated into your app 
+## Prerequisites
 
-## AppsFlyer and Braze cohort import
+| Requirement | Description |
+|---|---|
+| AppsFlyer account | An AppsFlyer account is required to take advantage of this partnership. |
+| iOS or Android app | This integration supports iOS and Android apps. Depending on your platform, code snippets may be required in your application. Details on these requirements can be found in step 1 of the integration process. |
+| AppsFlyer SDK | In addition to the required Braze SDK, you must install the [AppsFlyer SDK](https://support.appsflyer.com/hc/en-us/categories/201114756-SDK-integration-). |
+{: .reset-td-br-1 .reset-td-br-2}
 
-The following describes the Braze and AppsFlyer Audiences integration for importing cohorts into Braze. This integration supports iOS and Android apps. If you are looking for information about passing AppsFlyer attribution data to Braze, you can find it [here][3].
+## Cohort import integration
 
 ### Step 1: Configure the AppsFlyer SDK
 
-To use this integration, you must pass the user's Braze External ID to AppsFlyer using the `setPartnerData` function of the AppsFlyer SDK:
+To use this integration, you must pass the user's Braze external ID to AppsFlyer using the `setPartnerData()` function of the AppsFlyer SDK:
 
-{% tabs local %}
-{% tab Android %}
+#### Android 
 ```java
 Map<String, Object> brazeData = new HashMap<>();
 partnerData.put("external_user_id", "some-braze-external-id-value");
 AppsFlyerLib.getInstance().setPartnerData("braze_int", brazeData);
 ```
-{% endtab %}
-{% tab iOS %}
+
+#### iOS
 ```objc
 NSDictionary *brazeInfo = @{
      @"external_user_id":@"some-braze-external-id-value"
 };
 [[AppsFlyerLib shared]  setPartnerDataWithPartnerId:@"braze_int" partnerInfo:brazeInfo];
 ```
-{% endtab %}
-{% endtabs %}
 
-### Step 2: Get the Braze data import key and REST endpoint
+### Step 2: Get the Braze data import key
 
-In the Braze platform:
-
-1. Navigate to __Integrations__ > __Technology Partners__, and select __AppsFlyer__. 
-2. In the __Data Import Using Cohort Import__ section at the bottom of the page, click __Generate New Key__ to generate your Data Import Key. 
-3. Copy this key and the REST endpoint to use when configuring a Braze connection in AppsFlyer Audiences.<br><br>![data_import_key][5]{: style="max-width:70%;"}
+In Braze, navigate to **Attribution** under **Technology Partners** and select **AppsFlyer**. Here, you will find the REST Endpoint and generate your Braze data import key. Once generated, you can create a new key or invalidate an existing one. The data import key and the REST endpoint are used in the next step when setting up a postback in AppsFlyer's dashboard.<br><br>![AppsFlyer Image][5]{: style="max-width:90%;"}
 
 ### Step 3: Configure a Braze connection in AppsFlyer Audiences
 
-In the AppsFlyer platform, within AppsFlyer Audiences: 
-
-1. Go to the **Connections** tab and click **Add partner connection**.
+1. In [AppsFlyer Audiences][4], go to the **Connections** tab and click **Add partner connection**.
 2. Select Braze as the partner and give the connection a name.
-3. Enter the data import key and the REST endpoint you copied from your Braze account in step two.
-4. Save the connection, and it will be available to link to any new or existing audience.<br><br>![partner_connection][6]{: style="max-width:70%;"}
+3. Provide the data import key and Braze REST endpoint.
+4. Save the connection, and it will be available to link to any new or existing audience.
 
-Learn more about working with partner connections in the [AppsFlyer documentation][4].
+![Partner connection][6]{: style="max-width:80%;"}
 
 ### Step 4: Using AppsFlyer Audiences cohorts in Braze
 
 Once an AppsFlyer audience has been uploaded to Braze, you can use it as a filter when defining segments in Braze by selecting the __AppsFlyer Cohorts__ filter.
 
-![cohort_filter][7]{: style="max-width:70%;"}
+![Cohort filter][7]
 
 [1]: https://www.appsflyer.com/
 [2]: https://www.appsflyer.com/product/audiences/
@@ -77,4 +70,3 @@ Once an AppsFlyer audience has been uploaded to Braze, you can use it as a filte
 [5]: {% image_buster /assets/img/appsflyer_audiences/appsflyer_data_import_key.png %}
 [6]: {% image_buster /assets/img/appsflyer_audiences/appsflyer_braze_connection.png %}
 [7]: {% image_buster /assets/img/appsflyer_audiences/appsflyer_cohorts_as_filter.png %}
-
