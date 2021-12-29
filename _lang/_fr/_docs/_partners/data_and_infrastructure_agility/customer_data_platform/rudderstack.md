@@ -42,7 +42,7 @@ Vous pouvez choisir d'intégrer les bibliothèques web et natives de RudderStack
 {: .reset-td-br-1 .reset-td-br-2}
 
 {% alert note %}
-En savoir plus sur les modes de connexion de RudderStack et les avantages de chaque [ici](https://docs.rudderstack.com/get-started/rudderstack-connection-modes).
+En savoir plus sur les modes de connexion de RudderStack et les avantages de chaque [ici](https://rudderstack.com/docs/connections/rudderstack-connection-modes/).
 {% endalert %}
 
 ### Étape 2.1a : Intégration côte à côte (mode périphérique)
