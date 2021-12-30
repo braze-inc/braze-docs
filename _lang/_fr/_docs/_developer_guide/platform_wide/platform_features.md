@@ -47,17 +47,11 @@ La segmentation vous permet de créer des groupes d'utilisateurs basés sur des 
 
 Une fois que vous avez défini un segment, les outils de messagerie de Braze permettent la communication multicanale avec vos utilisateurs. Par exemple, envoyez une notification push et un courriel au segment d'exemple défini dans la section précédente. Les canaux de messagerie sont mieux utilisés en concert et avec régularité pour réengager les utilisateurs perdus, retenir les utilisateurs actifs et dynamiser les ambassadeurs de votre marque. De plus, vous pouvez utiliser nos options de planification avancées pour automatiser les campagnes vers des groupes spécifiques de ces utilisateurs qui vont plus loin.
 
-### Flux d'actualité {#platform-features-news-feed}
+### Cartes de contenu {#platform-features-content-cards}
 
-Quand votre application s'ouvre, le Braze SDK tire automatiquement vers le bas le fil d'actualité de l'utilisateur -- un ensemble d'articles d'actualités qui sont contrôlés sur le tableau de bord Braze. En faisant un appel à la bibliothèque Braze, vous pouvez afficher le flux d'actualités lorsqu'un bouton ou une action est déclenchée dans votre application, en fournissant un centre de notification intégré qui peut être mis à jour par des membres non techniques de l'équipe sans avoir à modifier votre code ou votre base de données.
+Avec les Cartes de Contenu, vous pouvez envoyer un très ciblé, flux dynamique de contenu riche pour vos clients directement dans les applications qu'ils aiment, sans interrompre leur expérience. De plus, les cartes de contenu prennent en charge des fonctionnalités plus personnalisées, y compris le épinglage de cartes, le rejet de carte, la livraison basée sur API, Contenu connecté, temps d'expiration de la carte personnalisée, analyse de la carte et coordination facile avec les notifications push.
 
-- Braze va suivre combien de clics et d'impressions chaque carte dans le flux de nouvelles reçoit
-- Vous pouvez planifier une période spécifique quand les cartes s'affichent, ce qui permet de profonds [dayparting][4]
-- Les cartes dans le flux d'actualités peuvent être ciblées sur les segments des utilisateurs comme tout autre message
-- Les messages dans l'application apparaîtront automatiquement lorsqu'un utilisateur a de nouveaux éléments dans son fil d'actualité
-- Les éléments du flux d'actualités peuvent [« Lien profond»][5] vers le contenu dans l'application, ce qui permet au marketeur de fournir une navigation de contenu personnalisée pour chaque utilisateur. Tous les processus, de l'intégration à la surface de contenu riche dans l'application, peuvent être ciblés et personnalisés sur le plan comportemental en utilisant le fil d'actualité et ["Deep Links"][5]
-
-!\[Tableau de bord des fils d'actualités\]\[6\]
+![Flux de cartes de contenu]({% image_buster /assets/img/cc_feed_new.png %}){: style="largeur-max-60%"}
 
 ### Notifications push {#platform-features-push}
 
@@ -67,15 +61,21 @@ Braze prend en charge le service Apple Push Notification Service (APN) pour iOS 
 
 ### Messagerie intégrée {#platform-features-in-app-messaging}
 
-Braze fournit des notifications discrètes dans l'application via notre interface utilisateur native sur mesure. Les messages peuvent être présentés à tout moment de votre choix (par ex. lorsque les utilisateurs démarrent une nouvelle session ou effectuent une action spécifique) en s'assurant que votre message arrive au moment le plus efficace pour engager l'utilisateur. En savoir plus sur [la création d'un message dans l'application ici][13].
+Braze fournit des notifications discrètes dans l'application via notre interface utilisateur native sur mesure. Les messages peuvent être présentés à tout moment de votre choix (par ex. lorsque les utilisateurs démarrent une nouvelle session ou effectuent une action spécifique) en s'assurant que votre message arrive au moment le plus efficace pour engager l'utilisateur. En savoir plus sur [la création d'un message dans l'application][13].
 
 !\[IAM Example\]\[9\]
 
 ### Courriel {#platform-features-email}
 
-Envoyez à vos utilisateurs des messages HTML enrichis en ajoutant vos modèles HTML existants ou en utilisant notre éditeur de texte riche. Braze facilite l'inclusion du courrier électronique dans votre stratégie d'engagement mobile.
+Envoyez à vos utilisateurs des messages HTML enrichis en ajoutant vos modèles HTML existants, en utilisant notre éditeur de texte riche, ou notre éditeur de glisser-déposer. Braze facilite l'inclusion du courrier électronique dans votre stratégie d'engagement mobile.
 
 !\[Tableau de bord des e-mails\]\[10\]
+
+### SMS et MMS {#platform-features-sms-mms}
+
+Utilisez des SMS avec Braze pour envoyer des notifications transactionnelles, partager des promotions, envoyer des rappels et plus encore. Avec plus de 23 milliards de SMS envoyés chaque jour dans le monde entier, le SMS est le moyen le plus direct d'atteindre les utilisateurs et les clients.
+
+![Exemple d'aperçu SMS]({% image_buster /assets/img_archive/sms_preview.png %})
 
 ### Webhooks {#platform-features-webhooks}
 
@@ -84,7 +84,4 @@ Les webhooks de Braze vous permettent de déclencher des actions non-applicative
 !\[Webhooks\]\[22\]
 [2]: {% image_buster /assets/img_archive/dashboard_segment_example.png %} "Exemple de segmentation" [6]: {% image_buster /assets/img_archive/news_feed_dashboard_example. ng %} "News Feed Dashboard" [8]: {% image_buster /assets/img_archive/UOiOSPush. ng %} "Exemple Push Dashboard" [9]: {% image_buster /assets/img_archive/In-App_Modal.png %} "Slideup Example" [10]: {% image_buster /assets/img_archive/EmailTemplateEditor. ng %} "Éditeur de modèle d'e-mail" [22]: {% image_buster /assets/img_archive/Webhook_Body_Edit.png %}
 
-[4]: http://en.wikipedia.org/wiki/Dayparting
-[5]: {{site.baseurl}}/developer_guide/platform_integration_guides/ios/advanced_use_cases/linking/#deep-links
-[5]: {{site.baseurl}}/developer_guide/platform_integration_guides/ios/advanced_use_cases/linking/#deep-links
 [13]: {{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/create/#creating-an-in-app-message
