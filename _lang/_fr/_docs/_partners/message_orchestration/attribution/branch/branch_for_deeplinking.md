@@ -11,41 +11,32 @@ search_tag: Partenaire
 
 {% include video.html id="PwGKqfwV-Ss" align="right" %}
 
-> [Branche][1], une plateforme mobile de liaison, vous aide à acquérir, engager, et mesurer sur tous les appareils, canaux et plates-formes en fournissant une vue globale de tous les points de contact de l'utilisateur. Cet article vous guidera à travers la façon d'utiliser la Branche avec Braze pour répondre à vos besoins de liens profonds.
+> [Branche][1], une plateforme mobile de liaison, vous aide à acquérir, engager, et mesurer sur tous les appareils, canaux et plates-formes en fournissant une vue globale de tous les points de contact de l'utilisateur.
 
-Branche, avec Braze, vous permet de fournir de meilleures expériences à vos clients en vous permettant d'attribuer correctement le début de leur voyage utilisateur & de les connecter à travers des liens profonds vers leur emplacement prévu.
+L'intégration de Braze et de la Branche vous permet de fournir de meilleures expériences à vos clients en vous permettant d'attribuer correctement []({{site.baseurl}}/partners/advertising_technologies/attribution/branch_for_attribution/) le début de leur voyage utilisateur et de les connecter par le biais de liens profonds à l'emplacement prévu.
 
-La branche et Braze vous aident à comprendre exactement quand et où les utilisateurs ont été acquis, ainsi que comment personnaliser leurs voyages grâce à une [attribution]({{site.baseurl}}/partners/advertising_technologies/attribution/branch_for_attribution/) robuste et un lien profond.
+## Intégration
 
+Suivez le guide d'intégration [SDK de la branche](https://help.branch.io/developers-hub/docs/native-sdks-overview) pour démarrer avec votre intégration de branche. Pour des cas d'utilisation supplémentaires, voir ci-dessous.
 
-## Installer l'attribution {#branch-install-attribution}
+### Soutenir les liens universels iOS
 
-La succursale offre une fonction d'attribution d'installation pour mesurer l'acquisition des utilisateurs. Consultez notre [documentation d'attribution][2] pour des instructions d'intégration.
+Pour soutenir l'envoi de liens universels iOS en tant que liens profonds de l'intérieur du Brésil :
 
-## Liaison profonde
+1. Suivez la documentation de la branche pour la mise en place de [liens universels][3].
+2. Ajoutez le `ABKURLDelegate` à votre intégration Braze SDK pour [router les liens universels][4] depuis votre application.
 
-Suivez le guide d'intégration SDK de la branche pour démarrer avec votre intégration Branch et Braze. Pour des cas d'utilisation supplémentaires, voir ci-dessous.
+### Lien profond dans l'e-mail
 
-## Prise en charge des liens universels iOS
+Consultez la documentation de la [Branche](https://docs.branch.io/pages/integrations/braze/) pour configurer des liens profonds à partir des e-mails envoyés par l'intermédiaire du Brésil.
 
-Pour soutenir l'envoi de liens iOS Universal en tant que liens profonds de l'intérieur du Brésil :
-
-1. Suivez la documentation de la branche [pour la configuration des liens universels][3].
-2. Ajoutez `ABKURLDelegate` à votre intégration Braze SDK pour acheminer les liens universels depuis votre application. Consultez notre [documentation de personnalisation de lien][4] pour plus de détails sur l'implémentation.
-
-## Lien profond dans l'e-mail
-
-Pour configurer des liens profonds à partir des e-mails envoyés via Braze, consultez la documentation de la [Branche](https://docs.branch.io/pages/integrations/braze/).
-
-Selon votre ESP, une personnalisation supplémentaire est nécessaire pour supporter les liens universels suivis de clic:
+Selon votre ESP, une personnalisation supplémentaire peut être nécessaire pour supporter les liens universels suivis de clic:
 
 - [SendGrid][5]
 - [Mailjet][6]
 - [Poteau étincelant][7]
 
-
 [1]: https://branch.io/
-[2]: {{site.baseurl}}/partners/branch_for_attribution/
 [3]: https://docs.branch.io/pages/deep-linking/universal-links/#search
 [4]: {{site.baseurl}}/developer_guide/platform_integration_guides/ios/advanced_use_cases/linking/#linking-customization
 [5]: https://help.branch.io/using-branch/page/braze-sendgrid
