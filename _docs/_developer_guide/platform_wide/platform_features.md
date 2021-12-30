@@ -48,17 +48,11 @@ Segmentation allows you to create groups of users based on powerful filters of t
 
 Once you have defined a segment, Braze's messaging tools allow for multichannel communication with your users. For example, send a push notification and email to the example segment defined in the previous section. Messaging channels are best used in concert and with regularity to re-engage lost users, retain active users, and energize your brand ambassadors. Moreover, you can use our advanced scheduling options to automate campaigns to specific groups of those users going forward.
 
-### News Feed {#platform-features-news-feed}
+### Content Cards {#platform-features-content-cards}
 
-When your app opens, the Braze SDK automatically pulls down the user's News Feed -- a set of News Items that are controlled on the Braze dashboard. By making a call to the Braze library, you can display the News Feed when a button or action is triggered in your app, providing an in-app notification center that can be updated by non-technical team members without having to change your code or database.
+With Content Cards, you can send a highly targeted, dynamic stream of rich content to your customers right within the apps they love, without interrupting their experience. In addition, Content Cards support more personalized features, including card pinning, card dismissal, API-based delivery, Connected Content, custom card expiration times, card analytics, and easy coordination with push notifications.
 
-- Braze will track how many clicks and impressions each card in the News Feed receives
-- You can schedule a specific time-frame when cards will display, allowing for deep [dayparting][4]
-- Cards within the News Feed may be targeted at user segments just like any other message
-- In-app messages will automatically appear when a user has new items in their News Feed
-- News Feed Items can ["Deeply Link"][5] to in-app content enabling the marketer to provide individualized content navigation for each user. Every process, from onboarding to the surfacing of rich in-app content, can be behaviorally targeted and customized using the News Feed and ["Deep Links"][5]
-
-![News Feed Dashboard][6]
+![Content Cards Feed]({% image_buster /assets/img/cc_feed_new.png %}){: style="max-width:60%"}
 
 ### Push notifications {#platform-features-push}
 
@@ -68,15 +62,21 @@ Braze supports the Apple Push Notification Service (APNs) for iOS and Firebase C
 
 ### In-app messaging {#platform-features-in-app-messaging}
 
-Braze provides unobtrusive in-app notifications via our custom-built native user interface. Messages can be presented at any time of your choosing (e.g., when users start a new session or complete a specific action) ensuring that your message arrives at the most effective time to engage the user. Learn more about [creating an in-app message here][13].
+Braze provides unobtrusive in-app notifications via our custom-built native user interface. Messages can be presented at any time of your choosing (e.g., when users start a new session or complete a specific action) ensuring that your message arrives at the most effective time to engage the user. Learn more about [creating an in-app message][13].
 
 ![IAM Example][9]
 
 ### Email {#platform-features-email}
 
-Send your users rich HTML messages by adding your existing HTML templates or using our rich text editor. Braze makes it easy to include email as part of your mobile engagement strategy.
+Send your users rich HTML messages by adding your existing HTML templates, using our rich text editor, or our drag and drop editor. Braze makes it easy to include email as part of your mobile engagement strategy.
 
 ![Email Dashboard][10]
+
+### SMS and MMS {#platform-features-sms-mms}
+
+Use SMS with Braze to send transactional notifications, share promotions, send reminders, and more. With over 23 billion text messages sent every day worldwide, SMS is the most direct way to reach users and customers.
+
+![SMS preview example]({% image_buster /assets/img_archive/sms_preview.png %})
 
 ### Webhooks {#platform-features-webhooks}
 
