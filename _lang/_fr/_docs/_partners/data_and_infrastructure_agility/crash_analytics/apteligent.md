@@ -2,26 +2,33 @@
 nav_title: Apteligent
 article_title: Apteligent
 alias: /fr/partners/apteligent/
-description: "Cet article décrit le partenariat entre Braze et Apteligent, qui détaille les rapports de plantage, vous permettant d'enregistrer des données critiques dans votre solution Braze existante."
+description: "Cet article décrit le partenariat entre Braze et Apteligent, une application mobile qui détaille les rapports de plantage, vous permettant d'enregistrer des données critiques dans votre solution Braze existante."
 page_type: partenaire
 search_tag: Partenaire
 ---
 
 # Apteligent
 
-> Braze est dédié à la création d’intégrations de partenaires qui fournissent des approches basées sur des données pour améliorer l’expérience utilisateur de votre application. Le partenariat [Apteligent][1] et Braze combine l'automatisation de l'engagement multicanal de Braze avec le rapport détaillé de plantage d'Apteligent, vous permettant d'enregistrer des données critiques dans votre solution Braze existante. Ensemble, Apteligent et Braze peuvent vous aider à segmenter, comprendre et engager avec vos utilisateurs qui ont connu des plantages d'applications.
+> [Apteligent](https://kb.vmtestdrive.com/hc/en-us/articles/360001544114-Apteligent-by-VMware-Walkthrough) est une plate-forme mobile de performance d'applications fournissant des outils et des connaissances pour les développeurs et les gestionnaires de produits.
+
+L'intégration de Braze et Apteligent fournit des rapports détaillés sur les plantages d'iOS, vous permettant d'enregistrer des données critiques dans votre solution Braze existante ainsi que dans votre segment, comprenez et engagez avec les utilisateurs qui ont connu des plantages d'applications.
+
+## Pré-requis
+
+| Exigences        | Libellé                                                                                                                                                     |
+| ---------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Compte TestDrive | Un [compte TestDrive](https://kb.vmtestdrive.com/hc/en-us/articles/360001372254-Getting-Started-with-TestDrive) est requis pour profiter de ce partenariat. |
+{: .reset-td-br-1 .reset-td-br-2}
 
 {% alert warning %}
 Cette intégration n'est actuellement prise en charge que sur iOS.
 {% endalert %}
 
-## Intégration iOS {#apteligent-ios-integration}
+## Intégration {#apteligent-ios-integration}
 
-Pour intégrer Apteligent à Braze sur iOS, faites ce qui suit :
+### Étape 1 : Inscrire un observateur
 
-### Étape 1
-
-Enregistrer un observateur. Assurez-vous que cela est fait avant d'initialiser Apteligent.
+Tout d'abord, vous devez enregistrer un observateur. Assurez-vous que cela est fait avant d'initialiser Apteligent.
 
 ```objc
 [[NSNotificationCenter defaultCenter] addObserver:self
@@ -30,7 +37,7 @@ Enregistrer un observateur. Assurez-vous que cela est fait avant d'initialiser A
                                            object:nil];
 ```
 
-### Étape 2
+### Étape 2: Journal des analyses de plantage personnalisées
 
 Le SDK Apteligent lancera une notification lorsque l'utilisateur chargera l'application après un crash. La notification contiendra le nom du plantage, la raison et la date d'occurrence.
 
@@ -46,6 +53,4 @@ Lors de la réception de la notification, enregistrer un événement de plantage
 }
 ```
 
-Voilà! Maintenant, vous pourrez exploiter la puissance de la segmentation, de l'analyse et de l'engagement de Braze en utilisant les informations de crash fournies par Apteligent.
-
-[1]: https://www.apteligent.com/
+Une fois terminé, vous pourrez exploiter la puissance des analyses de segmentation et d'engagement de Braze en utilisant les informations de crash trouvées dans la plateforme Apteligent.
