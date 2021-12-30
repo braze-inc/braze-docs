@@ -87,6 +87,8 @@ Si un utilisateur a rejeté toutes ses cartes ou si vous n'avez pas poussé de n
 | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | -------------------------- | ----------------------------- |
 | [Installer la bibliothèque d'images personnalisée.]({{site.baseurl}}/developer_guide/platform_integration_guides/android/content_cards/customization/#gifs-news-content-cards) | Inclus dans l'intégration. | Inclus dans l'intégration.    |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
+
+<br><br>
 [1]: {% image_buster /assets/img/classic-cc.png %} [2]: {% image_buster /assets/img/captioned-image-cc.png %} [3]: {% image_buster /assets/img/banner-cc. ng %} [5]: {% image_buster /assets/img/dismissal-cc.png %} [6]: {% image_buster /assets/img/empty-cc.png %}
 
 [4]: {{site.baseurl}}/user_guide/message_building_by_channel/content_cards/customize/
