@@ -194,10 +194,10 @@ Vous pouvez spécifier plusieurs événements personnalisés et achats qui devra
 
 Si vous trouvez que vous devez apporter des modifications aux cartes qui ont déjà été envoyées:
 
-1. Arrêter votre campagne
-2. Supprimer les cartes de contenu actives des flux d'utilisateurs
-3. Modifier votre campagne si nécessaire
-4. Redémarrez votre campagne
+1. Arrêtez votre campagne.
+2. Retirer les cartes de contenu actives des flux des utilisateurs.
+3. Modifiez votre campagne si nécessaire.
+4. Redémarrez votre campagne.
 [24]: {% image_buster /assets/img/content_card_compose.png %} [25]: {% image_buster /assets/img/cc_remove.png %}
 
 [18]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/advanced_use_cases/localization/#languages-supported
