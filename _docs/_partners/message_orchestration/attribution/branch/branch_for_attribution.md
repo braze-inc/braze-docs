@@ -79,7 +79,7 @@ For Android, Braze allows customers to opt-in to [Google Advertising ID collecti
 {% raw %}
 ```
 {% if most_recently_used_device.${platform} == 'android' %}
-aifa={{most_recently_used_device.${google_ad_id}}}
+user_data_aaid={{most_recently_used_device.${google_ad_id}}}
 {% endif %}
 ```
 {% endraw %}
@@ -91,7 +91,7 @@ For iOS, both Braze and Branch automatically collect the IDFV natively through o
 {% raw %}
 ```
 {% if most_recently_used_device.${platform} == 'ios' %}
-idfv={{most_recently_used_device.${id}}}
+user_data_idfv={{most_recently_used_device.${id}}}
 {% endif %}
 ```
 {% endraw %}
