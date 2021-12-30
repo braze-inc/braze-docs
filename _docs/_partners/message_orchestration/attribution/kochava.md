@@ -42,7 +42,7 @@ Braze will still store IDFA values for users that have opted-in if you are colle
 
 ### Step 2: Get the Braze data import key
 
-In Braze, navigate to **Attribution** under **Technology Partners** and select **Kochava**. Here, you will find the REST Endpoint and generate your Braze data import key. Once generated, you can create a new key or invalidate an existing one. The data import key and the REST endpoint are used in the next step when setting up a postback in Kochava's dashboard.<br><br>![Kochava Image][4]{: style="max-width:90%;"}
+In Braze, navigate to **Technology Partners** and select **Kochava**. Here, you will find the REST Endpoint and generate your Braze data import key. Once generated, you can create a new key or invalidate an existing one. The data import key and the REST endpoint are used in the next step when setting up a postback in Kochava's dashboard.<br><br>![Kochava Image][4]{: style="max-width:90%;"}
 
 ### Step 3: Set up a postback from Kochava
 
