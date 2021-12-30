@@ -12,7 +12,7 @@ tool: Currents
 
 # Mixpanel for Currents
 
-> [Mixpanel](https://mixpanel.com/) is a business analytics platform. You can export events from your Braze integration to Mixpanel in order to perform deeper analysis. Data collected is used to build custom reports and measure user engagement and retention.
+> [Mixpanel](https://mixpanel.com/) is a business analytics platform that allows you to export events from Braze to Mixpanel to perform deeper analysis. The data collected can then be used to build custom reports and measure user engagement and retention.
 
 To get started, find the following information from your Mixpanel dashboard under the `Settings > Project Settings` menu:
 
