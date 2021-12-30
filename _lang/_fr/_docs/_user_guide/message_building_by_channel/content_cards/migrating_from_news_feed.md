@@ -10,30 +10,32 @@ channel:
 
 # Migration depuis le flux d'actualités vers les cartes de contenu
 
-Passer du fil d'actualités aux cartes de contenu prend du temps, mais c'est une adoption facile! Vous ne pouvez pas migrer automatiquement le contenu du flux d'actualités vers des cartes de contenu - vous devez intégrer des cartes de contenu à partir de zéro. Cependant, avec la nouvelle flexibilité des Cartes de Contenu, nous ne pensons pas que vous la raterez ou l'esprit.
+Passer du fil d'actualités aux cartes de contenu prend du temps, mais c'est une adoption facile! Vous ne pouvez pas migrer automatiquement le contenu du flux d'actualités vers les cartes de contenu. Vous devez intégrer des cartes de contenu à partir de zéro. Cependant, avec la nouvelle flexibilité des Cartes de Contenu, nous ne pensons pas que vous la raterez ou l'esprit.
 
 Contactez votre gestionnaire de compte Braze pour plus de détails.
 
 ## Fonctionnalités et fonctionnalités
 
-Les Cartes de Contenu offrent de nombreuses fonctionnalités qui ne sont pas prises en charge par le flux d'actualités actuel de Braze, tels que des options de livraison supplémentaires telles que la livraison par action, la livraison par API et des analyses améliorées telles que le suivi des conversions.
+Les Cartes de Contenu offrent de nombreuses fonctionnalités qui ne sont pas prises en charge par le fil d'actualité de Braze, comme des options de livraison supplémentaires telles que la livraison par action et API, et des analyses améliorées comme le suivi des conversions.
 
 Au fur et à mesure que vous planifiez votre migration du flux d'actualités vers les cartes de contenu, il sera important de noter les principales différences entre les Cartes de Contenu et le Flux de Nouvelles :
 
-- La segmentation des Cartes de Contenu est évaluée au moment où les messages sont envoyés, la segmentation des News Feed est évaluée au moment où les Cartes de News sont affichées.
-- La personnalisation des cartes de contenu est modélisée au moment de l'envoi des messages, La personnalisation des fiches d'actualités est modélisée au moment où les fiches d'actualités sont affichées.
+- **Segmentation :** La segmentation des Cartes de Contenu est évaluée lors de l'envoi des messages, La segmentation des fils d'actualité est évaluée au moment où les fiches de nouvelles sont affichées.
+- **Personnalisation :** La personnalisation des Cartes de Contenu est tempérée lors de l'envoi des messages, La personnalisation des fiches d'actualités est modélisée au moment où les fiches d'actualités sont affichées.
+
+Le tableau suivant décrit plus loin la différence entre les fonctionnalités prises en charge entre les fils d'actualités et les cartes de contenu :
 
 | Fonctionnalités                                            | Flux d'actualité           | Cartes de contenu          |
 | ---------------------------------------------------------- | -------------------------- | -------------------------- |
-| Transactionnel et messagerie 1:1                           | <i class="fas fa-times"></i>  | <i class="fas fa-check"></i>  |
-| Campagnes multivariées et multi-canaux                     | <i class="fas fa-times"></i>  | <i class="fas fa-check"></i>  |
-| Livraison planifiée, basée sur l'action et basée sur l'API | <i class="fas fa-times"></i>  | <i class="fas fa-check"></i>  |
-| Messages créés par l'API                                   | <i class="fas fa-times"></i>  | <i class="fas fa-check"></i>  |
-| Tests A/B                                                  | <i class="fas fa-times"></i>  | <i class="fas fa-check"></i>  |
-| [Cartes de révocation et d'épinglage][4]                   | <i class="fas fa-times"></i> | <i class="fas fa-check"></i> |
-| [Analyses riches][3]                                       | <i class="fas fa-times"></i> | <i class="fas fa-check"></i> |
-| [Disponible en Toile][2]                                   | <i class="fas fa-times"></i> | <i class="fas fa-check"></i> |
-| [Contenu connecté][5]                                      | <i class="fas fa-times"></i> | <i class="fas fa-check"></i> |
+| Transactionnel et messagerie 1:1                           | <i class="fas fa-times" title="Non pris en charge"></i>  | <i class="fas fa-check" title="Supporté"></i>  |
+| Campagnes multivariées et multi-canaux                     | <i class="fas fa-times" title="Non pris en charge"></i>  | <i class="fas fa-check" title="Supporté"></i>  |
+| Livraison planifiée, basée sur l'action et basée sur l'API | <i class="fas fa-times" title="Non pris en charge"></i>  | <i class="fas fa-check" title="Supporté"></i>  |
+| Messages créés par l'API                                   | <i class="fas fa-times" title="Non pris en charge"></i>  | <i class="fas fa-check" title="Supporté"></i>  |
+| Tests A/B                                                  | <i class="fas fa-times" title="Non pris en charge"></i>  | <i class="fas fa-check" title="Supporté"></i>  |
+| [Cartes de révocation et d'épinglage][4]                   | <i class="fas fa-times" title="Non pris en charge"></i> | <i class="fas fa-check" title="Supporté"></i> |
+| [Analyses riches][3]                                       | <i class="fas fa-times" title="Non pris en charge"></i> | <i class="fas fa-check" title="Supporté"></i> |
+| [Disponible en Toile][2]                                   | <i class="fas fa-times" title="Non pris en charge"></i> | <i class="fas fa-check" title="Supporté"></i> |
+| [Contenu connecté][5]                                      | <i class="fas fa-times" title="Non pris en charge"></i> | <i class="fas fa-check" title="Supporté"></i> |
 | Personnalisation et Segmentation                           | Templé à Impression        | Templated at Send          |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
 
@@ -42,7 +44,7 @@ Au fur et à mesure que vous planifiez votre migration du flux d'actualités ver
 - Les Cartes de Contenu et le Flux de Nouvelles sont des produits distincts, donc une intégration simple pour votre application ou votre site web est nécessaire pour utiliser les cartes de contenu.
 - Si vous le souhaitez, les cartes de flux d'actualités existantes devront être migrées manuellement vers les campagnes de cartes de contenu lorsque vous changez.
 - Les cartes de contenu ne sont pas destinées à être utilisées en même temps que le fil de nouvelles, car il remplace le fil d'actualité.
-- Les cartes de contenu ne supportent pas actuellement les catégories - les catégories peuvent être obtenues via [la personnalisation et les paires clé-valeur][1].
+- Les cartes de contenu ne supportent pas actuellement les catégories. Les catégories peuvent être obtenues via [des paires de personnalisation et de valeur clé][1].
 
 
 [1]: {{site.baseurl}}/developer_guide/platform_integration_guides/web/content_cards/multiple_feeds/
