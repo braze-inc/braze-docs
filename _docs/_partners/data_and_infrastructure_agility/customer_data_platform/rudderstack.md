@@ -43,7 +43,7 @@ You can choose to integrate RudderStack's web and native client-side libraries w
 {: .reset-td-br-1 .reset-td-br-2}
 
 {% alert note %} 
-Learn more about RudderStack's connection modes and the benefits of each [here](https://docs.rudderstack.com/get-started/rudderstack-connection-modes).
+Learn more about RudderStack's connection modes and the benefits of each [here](https://rudderstack.com/docs/connections/rudderstack-connection-modes/).
 {% endalert %}
 
 ### Step 2.1a: Side-by-side integration (device mode)

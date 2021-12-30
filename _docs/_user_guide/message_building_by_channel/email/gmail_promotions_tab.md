@@ -1,7 +1,7 @@
 ---
 nav_title: Gmail Promotions Tab
 article_title: Gmail Promotions Tab
-page_order: 7
+page_order: 8
 description: "Gmail has updated the mobile Promotions tab to allow marketers to send more information via annotations in a 'card'. This article covers how to use Braze to help you build the card from our product."
 channel:
   - email

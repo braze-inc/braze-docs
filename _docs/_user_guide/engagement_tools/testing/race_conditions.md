@@ -35,7 +35,7 @@ One way to avoid this race condition is by adding a delay—around a minute or s
 
 Similarly, you can use the [`Attributes`][1] object to add/create/update a user, and then target them using either the [`canvas/trigger/send`][2] or [`campaign/trigger/send`][3] endpoint. This API call will process the `Attributes` object before targeting the users.
 
-Attributes that are included in this object will be processed before Braze begins to send the campaign. If the `send_to_existing_only` flag is set to false, and an `external_user_id` does not exist in Braze’s database, Braze will create a user profile for the `external_user_id` and process the associated attributes to the user profile before Braze begins to send the campaign. Also note, if the `send_to_existing_only` flag is set to false, then the attributes object must be included in order to create the user.
+Attributes that are included in this object will be processed before Braze begins to send the campaign. If the `send_to_existing_only` flag is set to false, and an `external_user_id` does not exist in Braze’s database, Braze will create a user profile for the `external_user_id` and process the associated attributes to the user profile before Braze begins to send the campaign. Also note, if the `send_to_existing_only` flag is set to false, then the attributes object must be included in order to create the user. The `send_to_existing_only` flag can't be used with user aliases.
 
 ## Matching action-based triggers and audience filters
 
