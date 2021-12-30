@@ -50,7 +50,7 @@ Les Cartes de Contenu n'offrent pas de support de groupe de contrôle. Si vous s
 
 C'est à quoi il semble que vos utilisateurs ouvrent un flux de carte de contenu standard. Comme vous pouvez le voir, trois types de cartes standard peuvent s'asseoir dans le flux : une carte de bannière, une carte de contenu sous-titrée et une carte de contenu classique.
 
-![Flux de cartes de contenu]({% image_buster /assets/img/cc-feed.png %}){: height="50%" width="50%"}
+![Flux de cartes de contenu]({% image_buster /assets/img/cc_feed_new.png %}){: style="largeur-max-60%"}
 
 {% alert note %}
 Les cartes de contenu ont une taille maximale de 2 Ko pour le contenu que vous entrez dans le tableau de bord Braze. Ceci inclut le texte du message, les URL de l'image, les liens et les paires clé-valeur. Le dépassement de ce montant empêchera l'envoi de la carte.
