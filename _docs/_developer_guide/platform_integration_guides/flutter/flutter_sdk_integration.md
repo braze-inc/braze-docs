@@ -11,7 +11,11 @@ description: "This reference introduces the Flutter SDK and explains how to inte
 
 Follow these instructions to install the [Braze Flutter SDK][1] that contains a package to allows integrators to use Braze APIs in [Flutter apps][2] written in Dart. This plugin provides basic analytics functionality and lets you integrate in-app messages and Content Cards for both iOS and Android with a single codebase.
 
+{% alert note %}
 You will need to complete installation steps on both platforms separately.
+{% endalert %}
+
+## Prerequisites
 
 To complete the installation, you will need the [App Identifier API key][3] as well as the [SDK endpoint][4]. Both are located in the **Developer Console** under **Settings** in the dashboard.
 
@@ -37,7 +41,7 @@ To connect to Braze servers, create a `braze.xml` file in your project's `androi
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-<string name="com_braze_api_key">YOU_APP_IDENTIFIER_API_KEY</string>
+<string name="com_braze_api_key">YOUR_APP_IDENTIFIER_API_KEY</string>
 <string translatable="false" name="com_braze_custom_endpoint">YOUR_CUSTOM_ENDPOINT_OR_CLUSTER</string>
 </resources>
 ```
@@ -82,7 +86,7 @@ In the same file, add the following snippet within the `application:didFinishLau
 {% endsubtab %}
 {% endsubtabs %}
 
-Then, add your SDK Endpoint in the `Info.plist` file. It is located in the `ios` project folder. If you're working in Xcode:
+Then, add your SDK endpoint in the `Info.plist` file. It is located in the `ios` project folder. If you're working in Xcode, perform the following steps:
 
 1. Add a row with the name `Braze` and type of `Dictionary`.
 2. To that Dictionary, add a row with the name `Endpoint`, type `String` and as a value, input your [SDK endpoint]({{site.baseurl}}/api/basics/#endpoints).
@@ -102,7 +106,7 @@ Otherwise, add the following elements to the file:
 
 ## Step 3: Usage
 
-To import the plugin into your Dart code, use:
+To import the plugin into your Dart code, use the following:
 
 ```dart
 import 'package:braze_plugin/braze_plugin.dart';

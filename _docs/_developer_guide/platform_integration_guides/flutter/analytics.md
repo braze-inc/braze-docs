@@ -100,7 +100,7 @@ If you pass in a value of `10 USD` and a quantity of `3`, this will log three pu
 
 ### Reserved keys
 
-The following keys are **reserved** and **cannot** be used as purchase properties:
+The following keys are reserved and cannot be used as purchase properties:
 
 - `time`
 - `product_id`

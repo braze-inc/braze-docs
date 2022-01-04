@@ -15,7 +15,7 @@ The Braze SDK includes a default card feed to get you started with Content Cards
 
 ## Customization
 
-You can use these additional methods to build a custom Content Cards Feed within your app by using these methods that are available on the [plugin public interface][7]:
+You can use these additional methods to build a custom Content Cards Feed within your app by using the following methods available on the [plugin public interface][7]:
 
 | Method                                         | Description                                                                                            |
 | ---------------------------------------------- | ------------------------------------------------------------------------------------------------------ |
@@ -24,7 +24,6 @@ You can use these additional methods to build a custom Content Cards Feed within
 | `braze.logContentCardClicked(contentCard)`    | Logs a click for the given Content Card object.                                                            |
 | `braze.logContentCardImpression(contentCard)` | Logs an impression for the given Content Card object.                                                      |
 | `braze.logContentCardDismissed(contentCard)`  | Logs a dismissal for the given Content Card object.                                                        |
-
 {: .reset-td-br-1 .reset-td-br-2}
 
 ## Content Card data callback
@@ -41,7 +40,7 @@ This callback works with no additional integration required.
 {% endtab %}
 {% tab iOS %}
 
-1. Create a `NotificationCenter` listener for `NSNotification.Name.ABKContentCardsProcessed` events as described [here]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/content_cards/data_model/#getting-the-data).
+1. Create a `NotificationCenter` listener for `NSNotification.Name.ABKContentCardsProcessed` events as described in our [Content Cards view controller integration]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/content_cards/data_model/#getting-the-data) article.
 
 2. Your `NotificationCenter` callback implementation must call `BrazePlugin.processContentCards(contentCards)`.
 
@@ -50,16 +49,16 @@ For an example, see [AppDelegate.swift](https://github.com/braze-inc/braze-flutt
 {% endtab %}
 {% endtabs %}
 
-### Replaying the callback for content cards
+### Replaying the callback for Content Cards
 
-To store any content cards triggered before the callback is available and replay them once it is set, add the following entry to the `customConfigs` map when intializing the `BrazePlugin`:
+To store any Content Cards triggered before the callback is available and replay them once it is set, add the following entry to the `customConfigs` map when intializing the `BrazePlugin`:
 ```dart
 BrazePlugin braze = new BrazePlugin(customConfigs: {replayCallbacksConfigKey: true});
 ```
 
 ## Test displaying sample Content Card
 
-Follow the steps below to test a sample content card.
+Follow the steps below to test a sample Content Card.
 
 1. Set an active user in the React application by calling `braze.changeUserId('your-user-id')` method.
 2. Head to **Campaigns** and follow [this guide][3] to create a new **Content Card** campaign.
@@ -68,7 +67,7 @@ Follow the steps below to test a sample content card.
 
 ![Content Card Campaign Test][4]
 
-For more details on each platform, follow the [Android integration instructions][5] or the [iOS integration instructions][6].
+For more details on each platform, follow the [Android integration][5] or [iOS integration][6] guides.
 
 
 [3]: {{site.baseurl}}/user_guide/message_building_by_channel/content_cards/create
