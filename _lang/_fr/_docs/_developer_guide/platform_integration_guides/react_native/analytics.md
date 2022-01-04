@@ -14,8 +14,6 @@ Avant de commencer, lisez notre article [Aperçu de l'analyse][] pour en savoir 
 
 ## Suivi de session
 
-<!-- COPIED: Android/Analytics/Tracking Sessions -->
-
 Le Braze SDK rapporte les données de session utilisées par le tableau de bord Braze pour calculer l'engagement des utilisateurs et d'autres analyses intégrales à la compréhension de vos utilisateurs. Basé sur la sémantique de session ci-dessous, notre SDK génère des points de données « démarrer la session » et « fermer la session » qui tiennent compte de la durée de la session et du nombre de sessions visibles dans le tableau de bord de Braze.
 
 Pour définir un identifiant utilisateur ou démarrer une session, utilisez la méthode `changeUser` , qui prend un paramètre d'identifiant utilisateur.
@@ -25,8 +23,6 @@ ReactAppboy.changeUser("user_id");
 ```
 
 ## Journalisation des événements personnalisés
-
-<!-- Copied ios/android/analytics/tracking custom events -->
 
 Vous pouvez enregistrer des événements personnalisés dans Braze pour en savoir plus sur les habitudes d'utilisation de votre application et pour segmenter vos utilisateurs par leurs actions dans le tableau de bord.
 
@@ -45,8 +41,6 @@ reactAppboy.logCustomEvent("custom_event_with_properties", {
 ```
 
 ## Logging des attributs personnalisés
-
-<!-- Copied ios/android/analytics/setting custom attributes -->
 
 Braze fournit des méthodes pour assigner des attributs aux utilisateurs. Vous pourrez filtrer et segmenter vos utilisateurs en fonction de ces attributs sur le tableau de bord.
 
@@ -94,8 +88,6 @@ ReactAppboy.unsetCustomUserAttribute("attribute_key", function(){
 ```
 
 ## Achats de journalisation
-
-<!-- Copied ios/android/analytics/logging purchases -->
 
 Enregistrez vos achats dans l'application afin de pouvoir suivre vos revenus au fil du temps et à travers les sources de revenus. ainsi que segmenter vos utilisateurs par leur valeur à vie.
 
