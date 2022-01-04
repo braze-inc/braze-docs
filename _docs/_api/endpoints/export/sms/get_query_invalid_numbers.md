@@ -2,11 +2,10 @@
 nav_title: "GET: Query Invalid Phone Numbers"
 article_title: "GET: Query Invalid Phone Numbers"
 search_tag: Endpoint
-page_order: 0
+page_order: 1
 layout: api_page
 page_type: reference
 description: "This article outlines the usage of and parameters for using the retrieve a List of Invalid Phone Numbers Braze endpoint."
-hidden: true
 ---
 {% api %}
 # Query or list invalid phone numbers

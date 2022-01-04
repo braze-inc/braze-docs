@@ -44,8 +44,20 @@ You can see the differences between local number formatting as well as universal
 
 For a customer to receive an SMS message, they must have a valid phone number and be opted-in to a subscription group. Subscription groups are tied to the SMS program you are running ([make sure you follow the legal laws for SMS and have recorded consent for each customer]({{site.baseurl}}/user_guide/message_building_by_channel/sms/sms_laws_and_regulations/)). For more information, refer to [SMS subscription groups][1]. 
 
+### Removing invalid phone numbers
+When a phone number is deemed unreachable or invalid, Braze will mark the user's phone number as invalid and will not attempt to send further communications to that phone number. An invalid phone number is marked in the **Engagement Tab** of a user profile.
+
+A phone number is considered invalid in the following cases:
+- The phone number supplied is not a valid phone number or was incorrectly formatted.
+- The phone number is a landline.
+
+{% alert note %}
+If multiple user profiles have the same phone number and that phone number is marked invalid, then all User Profiles will display as invalid.
+{% endalert %}
+
+You can also include or exclude any users with invalid phone numbers when [creating a segement][2].
+
 [1]: {{site.baseurl}}/user_guide/message_building_by_channel/sms/sms_subscription_group/
+[2]: {{site.baseurl}}/user_guide/engagement_tools/segments/creating_a_segment/#step-4-add-filters-to-your-segment
 [picture]: {% image_buster /assets/img/sms/e164.png %}
-
-
 
