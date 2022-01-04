@@ -14,7 +14,7 @@ In addition to the out-of-the-box [in-app message templates][1], you can also cr
 
 - [Custom HTML templates](#custom-html-messages) - create a customized template with HTML, JavaScript, and CSS.
 - [Modal with custom CSS (web only)](#web-modal-css) - add custom CSS to standard templates for more flexible styling options.
-- [Email Capture Form (web only)](#email-capture-form) - collect email addresses into Braze.
+- [Email Capture Form](#email-capture-form) - collect email addresses into Braze.
 - [Reusable Color profiles and CSS](#reusable-color-profiles) - save and re-use color profiles for in-app message templates.
 - [Video](#video) - add video to a custom in-app message.
 
@@ -160,7 +160,7 @@ If you choose to use a web-only Web Modal with CSS message, you can [apply your 
 
 If you choose to apply your own template, click __Apply Template__ and choose from the In-App Message Template Gallery. If you don't have any options, you can upload a [CSS Template](#in-app-message-templates) using the CSS Template builder.
 
-## Web email capture form {#email-capture-form}
+## Email capture form {#email-capture-form}
 
 Email capture messages allow you to easily prompt users of your site to submit their email address, after which it will be available within on their user profile for use in all your messaging campaigns.
 
@@ -181,7 +181,7 @@ When an end-user enters their email address to this form, the email address will
 
 {% details More on identified versus anonymous users %}
 
-In general, the logic behind the web email capture form is straightforward. It will set the email address on the user profile in Braze for the user that is currently active. However, that means the behavior differs based on whether the user is identified (logged in, `changeUser` called) or not.
+In general, the logic behind the email capture form is straightforward. It will set the email address on the user profile in Braze for the user that is currently active. However, that means the behavior differs based on whether the user is identified (logged in, `changeUser` called) or not.
 
 If an anonymous user enters their email in the form and submits it, Braze adds the email address to their alias-only profile. If `changeUser` is called later on in their web journey and a new `external_id` is assigned (i.e., when a new user registers with the service), all anonymous user profile data is merged including the email address.
 
@@ -191,12 +191,11 @@ For more information, refer to the [User profile lifecycle]({{site.baseurl}}/use
 
 {% enddetails %}
 
-
 ### Step 1: Create in-app message campaign
 
-To navigate to this option, you must create an in-app messaging campaign. From there, ensure **Send To** is set to **Web Browsers**, then select **Web Email Capture Form** for your **Message Type**.
+To navigate to this option, you must create an in-app messaging campaign. From there, depending on your use case, set **Send To** to either **Web Browsers**, **Mobile Apps**, or **Both Mobile Apps & Web Browsers**, then select **Email Capture Form** as your **Message Type**.
 
-![Select Web Email Capture Form][4]
+![Select Email Capture Form][4]
 
 {% alert note %}
 To enable Email Capture in-app messages, your SDK integration must supply the `allowUserSuppliedJavascript` initialization option to Braze, e.g. `appboy.initialize('YOUR-API_KEY', {allowUserSuppliedJavascript: true})`. This is for security reasons since HTML in-app messages can execute JavaScript, so we require a site maintainer to enable them.
@@ -223,17 +222,17 @@ If you only want to send this form to users without existing email addresses, us
 
 ![Filter by email available is false][10]{: style="max-width:50%"}
 
-If you only want to send this form to users without external IDs (that is, anonymous users), use the filter `External User ID is blank`.
+If you only want to send this form to users without external IDs (anonymous users), use the filter `External User ID is blank`.
 
 ![Filter by external user ID is blank][11]{: style="max-width:50%"}
 
 You can also combine the two filters using `AND` logic, if desired.
 
-### Step 4: Target users who filled out the form
+### Step 4: Target users who filled out the form (optional)
 
-After you've launched the web email capture form and collected email addresses from your users, you can target those users with the filter `Clicked/Opened Campaign`. 
+After you've launched the email capture form and collected email addresses from your users, you can target those users with the filter `Clicked/Opened Campaign`. 
 
-Set the filter to `Has clicked in-app message button 1` for campaign `<CAMPAIGN_NAME>`. Replace `<CAMPAIGN_NAME>` with the name of your web email capture form campaign.
+Set the filter to `Has clicked in-app message button 1` for campaign `<CAMPAIGN_NAME>`. Replace `<CAMPAIGN_NAME>` with the name of your email capture form campaign.
 
 ![Filter for has clicked in-app message button 1 for your web email capture form campaign][12]
 
