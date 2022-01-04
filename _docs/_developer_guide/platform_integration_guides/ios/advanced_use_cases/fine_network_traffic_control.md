@@ -83,7 +83,7 @@ These policies can be set at app startup time from the [`startWithApiKey:inAppli
 ```objc
 NSDictionary *appboyOptions = @{
   // Other entries
-  ABKRequestProcessingPolicyOptionKey : @(ABKAutomaticRequestProcessing),
+  ABKRequestProcessingPolicyOptionKey : @(ABKAutomaticRequestProcessing)
 };
 ```
 
@@ -93,7 +93,7 @@ NSDictionary *appboyOptions = @{
 ```swift
 let appboyOptions: [AnyHashable: Any] = [
   // Other entries
-  ABKRequestProcessingPolicyOptionKey: ABKRequestProcessingPolicy.automaticRequestProcessing.rawValue,
+  ABKRequestProcessingPolicyOptionKey: ABKRequestProcessingPolicy.automaticRequestProcessing.rawValue
 ]
 ```
 
