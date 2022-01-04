@@ -11,44 +11,58 @@ search_tag: Partner
 
 # Digioh
 
-> [Digioh](https://www.digioh.com/) helps you grow your lists, capture first-party data, and put your data to use in your Braze campaigns. The drag-and-drop builder makes it easy to create on-brand forms, pop-ups, preference centers, landing pages, and surveys that connect you with your customers. Integration setup is included in every package, and Digioh will also help build, design, and launch your first campaign for you.
+> [Digioh](https://www.digioh.com/) helps you grow your lists, capture first-party data, and put your data to use in your Braze campaigns.
+
+The Braze and Digioh integration allows you to use their flexible drag-and-drop builder to create on-brand forms, pop-ups, performance centers, landing pages, and surveys that connect you with your customers. Digioh will aid in integration set up and help build, design, and launch your first campaign for you.
 
 !["Create flexible email and communications preference centers with Digioh"][5]{: style="border:0"}
 
-## Requirements
+## Prerequisites
 
-| Requirement | Origin | Access | Description |
-|---|---|---|---|
-| Braze API Key | Braze | You will need to create a new API Key.<br><br>This can be created in the __Developer Console -> API Settings -> Create New API Key__ with __users.track__ permissions. | You will need to copy this key to your Digioh account - see the instructions below. |
-| Braze REST Endpoint | Braze | You will need the server endpoint your account uses to access Braze's API. [See Braze's API documentation for details][6].  | You will need to copy this URL to your Digioh account - see the instructions below. |
-| Digioh Account | Digioh | [https://www.digioh.com/](https://www.digioh.com/)  | You will need to have a Digioh account. |
+| Requirement | Description |
+|---|---|
+|Digioh account | A [Digioh account](https://www.digioh.com/) is required to take advantage of this partnership. |
+| Braze REST API key | A Braze REST API Key with `users.track` permissions. <br><br> This can be created within the __Braze Dashboard -> Developer Console -> REST API Key -> Create New API Key__ |
+| Braze API `/users/track/` endpoint | Your REST endpoint URL with the `/users/track/` details appended to it. Your endpoint will depend on the [Braze URL for your instance][6].<br><br>For example, if your REST API endpoint is `https://rest.iad-01.braze.com` your `/users/track/` endpoint will be `https://rest.iad-01.braze.com/users/track/`. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
 
-## Integration details
+## Integration 
+
+To integrate Digioh, you must first configure the Braze connector. Once completed, you will need to apply the integration to a lightbox (widget). Visit [Digioh](https://help.digioh.com/knowledgebase/digioh-integration-basics/) to read more about integration basics.
 
 ### Step 1: Create Digioh integration 
 
-In the Digioh platform, click the **Integrations** tab, and create the **+ New Integration** button.
-
-Next, select **Braze** from the **Integration** dropdown and name the integration. Enter the **Braze API Key** and **Braze REST Endpoint** from your Braze account in the fields provided. Click **Create Integration**. 
+In Digioh, click the **Integrations** tab and then the **New Integration** button. Select **Braze** from the **Integration** dropdown and name the integration. 
 
 !["Select the correct integration from the dropdown"][2]{: style="max-width:50%;"}
 
-### Step 2: Map additional fields
+Next, enter the Braze REST API key and your Braze API `/users/track/` endpoint. 
 
-On the **Integrations** page, use the **Map Fields** link to map additional fields beyond email and name.
+Lastly, use the map fields section to map additional custom fields beyond email and name. An example payload can be found below. Once completed, select **Create Integration**.
+
+```json
+{
+    "attributes" : [
+         {
+           "external_id": "[EMAIL_MD5]",
+           "email" : "[EMAIL]"
+         }
+     ]
+}
+```
+
+### Step 2: Create a Digioh lightbox
+
+Use the Digioh [design editor](https://help.digioh.com/knowledgebase/digioh-platform-training-videos-video-series-getting-started-with-digioh/) to build a lightbox (widget). <br>
+Interested in seeing a gallery of ways to leverage the design editor? Visit the Digioh [theme gallery](https://www.digioh.com/theme-gallery).
 
 ### Step 3: Apply integration
 
-To apply the integration to a [lightbox](https://help.digioh.com/knowledgebase/digioh-platform-training-videos-video-series-getting-started-with-digioh/), use the **Add** or **Edit** link in the **Integrations** column on the **Boxes** page.
+To apply this integration to a Digioh [lightbox](https://help.digioh.com/knowledgebase/digioh-platform-training-videos-video-series-getting-started-with-digioh/), navigate to the **Boxes** page and select **Add** or **Edit** link in the **Integrations** column. This can also be added from the **Integration** section of the editor.
 
-!["Add the integration to a box"][3]{: style="max-width:80%"}
+!["Add the integration to a lightbox"][3]{: style="max-width:90%"}
 
-You can also add it from the **Integration** section of the editor.
-
-!["Add the integration to a box in the editor"][4]{: style="max-width:30%"}
-
-That's all there is to it! Digioh will now pass your captured leads to Braze in real-time.
+Here, select **Add Integration**, choose your desired integration, and **Save**. Digioh will now pass your captured leads to Braze in real-time.
 
 [2]: {% image_buster /assets/img/digioh/2.png %}
 [3]: {% image_buster /assets/img/digioh/3.png %}
