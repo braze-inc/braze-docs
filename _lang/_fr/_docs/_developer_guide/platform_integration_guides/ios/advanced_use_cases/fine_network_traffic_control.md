@@ -74,15 +74,15 @@ Appboy.sharedInstance()?.flushDataAndProcessRequestQueue()
 
 ### Définir la politique de demande au démarrage
 
-Ces règles peuvent être définies au démarrage de l'application à partir de la méthode [`startWithApiKey:inApplication:withLaunchOptions:withAppboyOptions`][3]. Dans le dictionnaire `appboyOptions` , définissez la `ABKRequestProcessingPolicyOptionKey` à l'une des `valeurs suivantes <code> ABKRequestProcessingPolicy` enum définies ci-dessous :
+Ces règles peuvent être définies au démarrage de l'application à partir de la méthode [`startWithApiKey:inApplication:withLaunchOptions:withAppboyOptions`][3]. Dans le dictionnaire `appboyOptions` , définissez la `ABKRequestProcessingPolicyOptionKey` comme indiqué ci-dessous :
 
 {% tabs %}
 {% tab OBJECTIVE-C %}
 
 ```objc
-typedef NS_ENUM(NSInteger, ABKRequestProcessingPolicy) {
-  ABKAutomaticRequestProcessing,
-  ABKManualRequestProcessing
+NSDictionary *appboyOptions = @{
+  // Autres entrées
+  ABKRequestProcessingOptionKey : @(ABKAutomaticRequestProcessing)
 };
 ```
 
@@ -90,10 +90,10 @@ typedef NS_ENUM(NSInteger, ABKRequestProcessingPolicy) {
 {% tab swift %}
 
 ```swift
-public enum ABKRequestProcessingPolicy : Int {
-    case automaticRequestProcessing
-    case manualRequestProcessing
-}
+let appboyOptions : [AnyHashable: Any] = [
+  // Autres entrées
+  ABKRequestProcessingPolicyOptionKey: ABKRequestProcessingPolicy.automaticRequestProcessing.rawValue
+]
 ```
 
 {% endtab %}
