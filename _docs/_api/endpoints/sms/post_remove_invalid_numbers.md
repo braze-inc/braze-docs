@@ -32,7 +32,7 @@ Authorization: Bearer YOUR-REST-API-KEY
 
 | Parameter | Required | Data Type | Description |
 | ----------|-----------| ---------|------ |
-| `phone_number` | Required | Array | An array of up to 50 phone numbers to modify. |
+| `phone_number` | Required | Array of Strings in e.164 format | An array of up to 50 phone numbers to modify. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
 
 ## Example request
