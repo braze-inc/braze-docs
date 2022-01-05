@@ -57,7 +57,7 @@ Define additional export results parameters as outlined below in the [customizat
 
 Finally, select **Done**, run your query, and validate that your data moved to Braze.
 
-## Customization
+### Customization
 
 The export results parameters are included in the following table:
 
