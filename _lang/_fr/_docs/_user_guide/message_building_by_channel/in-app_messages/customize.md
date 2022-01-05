@@ -13,7 +13,7 @@ En plus des [modèles de messages intégrés à l'application][1], vous pouvez �
 
 - [Modèles HTML personnalisés](#custom-html-messages) - créez un modèle personnalisé avec HTML, JavaScript et CSS.
 - [Modal avec CSS personnalisé (web seulement)](#web-modal-css) - ajouter des CSS personnalisés aux modèles standards pour des options de style plus flexibles.
-- [Formulaire de capture d'email (web seulement)](#email-capture-form) - collectez les adresses e-mail en brési.
+- [Formulaire de capture d'e-mail](#email-capture-form) - collectez des adresses e-mail en Brésil.
 - [Profils de couleurs réutilisables et CSS](#reusable-color-profiles) - enregistrer et réutiliser les profils de couleurs pour les modèles de messages intégrés à l'application.
 - [Vidéo](#video) - ajoute une vidéo à un message personnalisé dans l'application.
 
@@ -159,7 +159,7 @@ Si vous choisissez d'utiliser un Web modal uniquement avec un message CSS vous p
 
 Si vous choisissez d'appliquer votre propre modèle, cliquez sur __Appliquer le modèle__ et choisissez dans la Galerie de modèle de message In-App. Si tu n'as pas d'options, tu peux télécharger un [modèle CSS](#in-app-message-templates) en utilisant le constructeur de modèles CSS.
 
-## Formulaire de capture d'email Web {#email-capture-form}
+## Formulaire de capture d'email {#email-capture-form}
 
 Les messages de capture de courriel vous permettent d'inviter facilement les utilisateurs de votre site à soumettre leur adresse e-mail, après quoi il sera disponible dans leur profil utilisateur pour être utilisé dans toutes vos campagnes de messagerie.
 
@@ -180,7 +180,7 @@ Lorsqu'un utilisateur final saisit son adresse e-mail dans ce formulaire, l'adre
 
 {% details More on identified versus anonymous users %}
 
-En général, la logique derrière le formulaire de saisie de courriel web est simple. Il définira l'adresse e-mail sur le profil de l'utilisateur à Braze pour l'utilisateur actuellement actif. Cependant, cela signifie que le comportement diffère selon que l'utilisateur est identifié (connecté, `changeUser` appelé) ou non.
+En général, la logique derrière le formulaire de saisie de courriel est simple. Il définira l'adresse e-mail sur le profil de l'utilisateur à Braze pour l'utilisateur actuellement actif. Cependant, cela signifie que le comportement diffère selon que l'utilisateur est identifié (connecté, `changeUser` appelé) ou non.
 
 Si un utilisateur anonyme entre son email dans le formulaire et le soumet, Braze ajoute l'adresse e-mail à son profil d'alias uniquement. Si `changeUser` est appelé plus tard dans leur voyage web et qu'un nouveau `external_id` est assigné (i. ., lorsqu'un nouvel utilisateur s'inscrit avec le service), toutes les données de profil d'utilisateur anonymes sont fusionnées, y compris l'adresse e-mail.
 
@@ -190,12 +190,11 @@ Pour plus d'informations, reportez-vous au [cycle de vie du profil utilisateur](
 
 {% enddetails %}
 
-
 ### Étape 1 : Créer une campagne de message dans l'application
 
-Pour accéder à cette option, vous devez créer une campagne de messagerie intégrée à l'application. À partir de là, assurez-vous que **Envoyer à** est réglé sur **Navigateurs Web**, puis sélectionnez **Formulaire de capture de courriel Web** pour votre **Type de message**.
+Pour accéder à cette option, vous devez créer une campagne de messagerie intégrée à l'application. De là, selon votre cas d'utilisation, définissez **Envoyer à** sur l'un ou l'autre **Navigateurs Web**, **Applications mobiles**, ou **Les deux applications mobiles & Navigateurs Web**, puis sélectionnez **Formulaire de capture d'email** comme votre **Type de message**.
 
-!\[Select Web Email Capture Form\]\[4\]
+!\[Select Email Capture Form\]\[4\]
 
 {% alert note %}
 Pour activer les messages de capture d'email dans l'application, votre intégration de SDK doit fournir l'option d'initialisation `allowUserSuppliedJavascript` à Braze, . `appboy.initialize('VOTRE API_KEY', {allowUserSuppliedJavascript: true})`. Ceci est pour des raisons de sécurité puisque les messages HTML dans l'application peuvent exécuter JavaScript, donc nous avons besoin d'un responsable du site pour les activer.
@@ -222,17 +221,17 @@ Si vous voulez seulement envoyer ce formulaire aux utilisateurs sans adresses e-
 
 !\[Filtre par email disponible est false\]\[10\]{: style="max-width:50%"}
 
-Si vous voulez seulement envoyer ce formulaire aux utilisateurs sans ID externe (c'est-à-dire, utilisateurs anonymes), utilisez le filtre `ID d'utilisateur externe est vide`.
+Si vous voulez seulement envoyer ce formulaire aux utilisateurs sans ID externe (utilisateurs anonymes), utiliser le filtre `ID d'utilisateur externe est vide`.
 
 !\[Filter by external user ID is blank\]\[11\]{: style="max-width:50%"}
 
 Vous pouvez également combiner les deux filtres en utilisant la logique `ET` , si désiré.
 
-### Étape 4 : Destiner les utilisateurs qui ont rempli le formulaire
+### Étape 4 : Destiner les utilisateurs qui ont rempli le formulaire (facultatif)
 
-Après avoir lancé le formulaire de saisie de courriels web et récupéré les adresses e-mail de vos utilisateurs, vous pouvez cibler ces utilisateurs avec le filtre `Cliqué/Ouvert Campagne`.
+Après avoir lancé le formulaire de saisie de courriels et récupéré les adresses e-mail de vos utilisateurs, vous pouvez cibler ces utilisateurs avec le filtre `Cliqué/Ouvert Campagne`.
 
-Définit le filtre à `A cliqué sur le bouton de message 1` pour la campagne `<CAMPAIGN_NAME>`. Remplacez `<CAMPAIGN_NAME>` par le nom de votre campagne de saisie de courrier électronique.
+Définit le filtre à `A cliqué sur le bouton de message 1` pour la campagne `<CAMPAIGN_NAME>`. Remplacez `<CAMPAIGN_NAME>` par le nom de votre campagne de saisie de courriel.
 
 !\[Filter for has clicked in-app message button 1 for your web email capture form campaign\]\[12\]
 
