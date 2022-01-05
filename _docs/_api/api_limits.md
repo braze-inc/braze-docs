@@ -21,13 +21,13 @@ The following table lists specific API rate limits for different request types. 
 
 | Request Type | Default API Rate Limit |
 | --- | --- |
-| `/users/track` | **Requests:** 50,000 requests per minute. This limit can be increased upon request. Reach out to your Customer Success Manager for more information.<br><br>**Batching:** 75 events, 75 purchases, and 75 attributes per API request. See [Batching User Track requests](#batch-user-track) below for more. |
-| `/users/export/ids` | 2,500 requests per minute. |
-| `/users/delete`<br>`/users/alias/new`<br>`/users/identify`<br>`/push_notification/remove` | 20,000 requests per minute, shared between the four endpoints. |
-| `/events/lists` | 1,000 requests per hour, shared with the `/purchases/product_ids` endpoint. |
-| `/purchases/product_ids` | 1,000 requests per hour, shared with the `/events/lists` endpoint. |
-| `/messages/send` | 250 requests per minute when specifying a segment or Connected Audience. Otherwise, 250,000 requests per hour. |
-| `/sends/id/create` | 100 requests per day. |
+| [`/users/track`][10] | **Requests:** 50,000 requests per minute. This limit can be increased upon request. Reach out to your Customer Success Manager for more information.<br><br>**Batching:** 75 events, 75 purchases, and 75 attributes per API request. See [Batching User Track requests](#batch-user-track) below for more. |
+| [`/users/export/ids`][11] | 2,500 requests per minute. |
+| [`/users/delete`][12]<br>[`/users/alias/new`][13]<br>[`/users/identify`][14]<br>`/push_notification/remove` | 20,000 requests per minute, shared between the four endpoints. |
+| [`/events/list`][15] | 1,000 requests per hour, shared with the `/purchases/product_list` endpoint. |
+| [`/purchases/product_list`][16] | 1,000 requests per hour, shared with the `/events/list` endpoint. |
+| [`/messages/send`][17] | 250 requests per minute when specifying a segment or Connected Audience. Otherwise, 250,000 requests per hour. |
+| [`/sends/id/create`][18] | 100 requests per day. |
 {: .reset-td-br-1 .reset-td-br-2}
 
 ## Batching API requests
@@ -82,3 +82,13 @@ Under normal conditions, the time for our data eventual consistency to occur is 
 [1]: {{site.baseurl}}/api/endpoints/messaging/
 [2]: {{site.baseurl}}/api/objects_filters/connected_audience/
 [support]: {{site.baseurl}}/braze_support/
+
+[10]: {{site.baseurl}}/api/endpoints/user_data/post_user_track/
+[11]: {{site.baseurl}}/api/endpoints/export/user_data/post_users_identifier/
+[12]: {{site.baseurl}}/api/endpoints/user_data/post_user_delete/
+[13]: {{site.baseurl}}/api/endpoints/user_data/post_user_alias/
+[14]: {{site.baseurl}}/api/endpoints/user_data/post_user_identify/
+[15]: {{site.baseurl}}/api/endpoints/export/custom_events/get_custom_events/
+[16]: {{site.baseurl}}/api/endpoints/export/purchases/get_list_product_id/
+[17]: {{site.baseurl}}/api/endpoints/messaging/send_messages/post_send_messages/
+[18]: {{site.baseurl}}/api/endpoints/messaging/send_messages/post_create_send_ids/
