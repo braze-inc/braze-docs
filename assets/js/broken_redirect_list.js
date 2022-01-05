@@ -481,3 +481,5 @@ validurls['/docs/partners/data_and_infrastructure_agility/wrapper_sdks/xamarin/'
 validurls['/docs/partners/data_and_infrastructure_agility/wrapper_sdks/react_native/'] = '/docs/partners/data_and_infrastructure_agility/wrapper_sdks/';
 validurls['/docs/partners/data_and_infrastructure_agility/wrapper_sdks/unity/'] = '/docs/partners/data_and_infrastructure_agility/wrapper_sdks/';
 validurls['/docs/partners/data_and_infrastructure_agility/wrapper_sdks/cordova/'] = '/docs/partners/data_and_infrastructure_agility/wrapper_sdks/';
+
+validurls['/docs/api/basics/#api-limits'] = '/docs/api/api_limits/';
