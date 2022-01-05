@@ -13,7 +13,7 @@ search_tag: Partner
 
 > [RudderStack][1] is an open-source customer data infrastructure for collecting and routing customer event data to your preferred data warehouse and dozens of other analytics providers, such as Braze. It is enterprise-ready and offers a robust transformation framework to process your event data on the fly.
 
-The Braze and Rudderstack integration offers a native SDK integration for your Android, iOS and web applications, as well as a server-to-server integration from your backend services.
+The Braze and RudderStack integration offers a native SDK integration for your Android, iOS, and web applications, as well as a server-to-server integration from your backend services.
 
 ## Prerequisites
 
@@ -22,7 +22,7 @@ The Braze and Rudderstack integration offers a native SDK integration for your A
 | RudderStack account | A [RudderStack account](https://app.rudderstack.com/) is required to take advantage of this partnership. |
 | Configured source | A [source][3] is essentially the origin of any data sent to RudderStack, such as websites, mobile apps, or backend servers. You are required to configure the source before setting up Braze as a destination in RudderStack. |
 | Braze REST API key | A Braze REST API Key with `users.track`, `users.identify`, and `users.alias.new` permissions.<br><br>This can be created within the **Braze Dashboard -> Developer Console -> REST API Key -> Create New API Key** |
-| Braze app key | To get your app key, navigate to **Braze Dashboard -> Developer Console -> Identification** and find your app name. The will then be the associated identifier string.
+| Braze app key | To get your app key, navigate to **Braze Dashboard -> Developer Console -> Identification** and find your app name. Save the associated identifier string.
 | Data center | Your data center aligns with your Braze dashboard [instance][15].  |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
 
@@ -30,13 +30,13 @@ The Braze and Rudderstack integration offers a native SDK integration for your A
 
 ### Step 1: Add a source
 
-To start sending data to Braze, you will first need to make sure a source is setup in your rudderstack app. Visit [RudderStack](https://rudderstack.com/docs/connections/adding-source-and-destination-rudderstack/) to learn how to set up your data source.
+To start sending data to Braze, you first need to make sure a source is set up in your RudderStack app. Visit [RudderStack](https://rudderstack.com/docs/connections/adding-source-and-destination-rudderstack/) to learn how to set up your data source.
 
 ### Step 2: Configure destination
 
-Now that you have your data source setup, in the RudderStack dashboard, select **ADD DESTINATION** under **Destinations**. From the list of available destinations, select **Braze**, and click **Next**.
+Now that you have your data source set up, in the RudderStack dashboard, select **ADD DESTINATION** under **Destinations**. From the list of available destinations, select **Braze**and click **Next**.
 
-In the Braze destination, provide the app key, Braze REST API key, data cluster, and native SDK option (device mode only). If toggled on, the native SDK option will use the Braze native SDK to send events. 
+In the Braze destination, provide the app key, Braze REST API key, data cluster, and native SDK option (device mode only). The native SDK option will use the Braze native SDK to send events if toggled on. 
 
 ![Braze Settings][0]{: style="max-width:40%;margin-bottom:15px;"}
 
@@ -67,10 +67,11 @@ With this mode, the Braze SDK sends the event data directly to RudderStack. Rudd
 To enable the integration, you will need to map the RudderStack methods to Braze, as described in step 4.
 
 {% alert note %} 
-All of RudderStack's server-side SDKs (Java, Python, Node.js, Go, Ruby) support only Cloud Mode. This is because their server-side SDKs operate in the RudderStack backend, and cannot load any Braze-specific SDK. 
+RudderStack's server-side SDKs (Java, Python, Node.js, Go, Ruby) support only Cloud Mode. This is because their server-side SDKs operate in the RudderStack backend and cannot load any Braze-specific SDK. 
 {% endalert %}
 
-{% alert important %} The server-to-server integration does not support Braze's UI features, such as push notifications or in-app messaging. These features are, however, supported by the Device Mode integration. {% endalert %}
+{% alert important %} The server-to-server integration does not support Braze's UI features, such as push notifications or in-app messaging. These features are, however, supported by the Device Mode integration. 
+{% endalert %}
 
 ## Step 4: SDK methods
 
@@ -95,20 +96,9 @@ RudderStack's [`page` method](https://rudderstack.com/docs/destinations/marketin
 
 RudderStack's [`group` method](https://rudderstack.com/docs/destinations/marketing/braze/#group) allows you to associate a user with a group.
 
-
 [0]: {% image_buster /assets/img/RudderStack/braze_settings.png %}
 [1]: https://rudderstack.com/
-[2]: https://app.rudderstack.com/
 [3]: https://docs.rudderstack.com/how-to-guides/adding-source-and-destination-rudderstack
-[4]: {{site.baseurl}}/developer_guide/platform_integration_guides/web/initial_sdk_setup/
-[5]: {{site.baseurl}}/developer_guide/platform_integration_guides/ios/initial_sdk_setup/
-[6]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/initial_sdk_setup/android_sdk_integration/
-[13]: https://dashboard.braze.com/app_settings/developer_console
-[14]: {{site.baseurl}}/api/basics/?redirected=true#creating-and-managing-rest-api-keys
 [15]: {{site.baseurl}}/user_guide/administrative/access_braze/braze_instances/
-[16]: https://docs.rudderstack.com/rudderstack-api-spec
-[18]: https://docs.rudderstack.com/destinations/braze#identify
-[19]: https://docs.rudderstack.com/destinations/braze#track
 [20]: https://docs.rudderstack.com/rudderstack-api-spec/rudderstack-ecommerce-events-specification
 [21]: {{site.baseurl}}/user_guide/data_and_analytics/export_braze_data/exporting_revenue_data/#revenue-data
-[22]: https://docs.rudderstack.com/destinations/braze#page
