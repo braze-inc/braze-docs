@@ -87,7 +87,7 @@ Si une notification push n'est pas envoyée, assurez-vous qu'elle n'a pas rebond
 
 2. `Non enregistré` peut également se produire lorsque de multiples enregistrements se produisent et qu'une seconde inscription invalide le premier jeton.
 
-### Notifications envoyées mais non jouées sur les appareils des utilisateurs
+### Notifications envoyées mais non affichées sur les appareils des utilisateurs
 
 Il y a quelques raisons pour lesquelles cela pourrait se produire:
 
