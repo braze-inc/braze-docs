@@ -118,7 +118,7 @@ Neura recognizes real-world behavioral traits for each user. Using Braze, you ca
 
 Neura's generic data import allows for two types of import methods:
 
-1. Export your Currents data to Amazon S3. Our customer success team will work with you to translate the data to Neura.
+1. Export your Currents data to Amazon S3. Our Customer Success team will work with you to translate the data to Neura.
 2. Follow the instructions to use the Neura [Insights API](https://dev.theneura.com/pages/how-to-use-engagement-api/?ref=braze).
 
 Neura closes the loop by sending actionable data back to Braze, so you can seamlessly execute on Neura's real-world insights right within Braze.
