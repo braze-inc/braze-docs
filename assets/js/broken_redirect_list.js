@@ -471,6 +471,7 @@ validurls['/docs/user_guide/message_building_by_channel/push/best_practices/push
 
 validurls['/docs/help/best_practices/'] = '/docs/faqs/';
 validurls['/docs/user_guide/engagement_tools/canvas/get_started/measuring_and_testing_with_canvas_analytics/'] = '/docs/user_guide/engagement_tools/canvas/testing_canvases/measuring_and_testing_with_canvas_analytics/';
+validurls['/docs/developer_guide/platform_integration_guides/flutter/preview/'] = '/docs/developer_guide/platform_integration_guides/flutter/flutter_sdk_integration/';
 
 validurls['/docs/developer_guide/platform_integration_guides/xamarin/ios/sdk_integration/'] = '/docs/developer_guide/platform_integration_guides/xamarin/initial_sdk_setup/';
 validurls['/docs/developer_guide/platform_integration_guides/cordova/ios/initial_sdk_setup/'] = '/docs/developer_guide/platform_integration_guides/cordova/initial_sdk_setup/ios/';
@@ -480,3 +481,6 @@ validurls['/docs/partners/data_and_infrastructure_agility/wrapper_sdks/xamarin/'
 validurls['/docs/partners/data_and_infrastructure_agility/wrapper_sdks/react_native/'] = '/docs/partners/data_and_infrastructure_agility/wrapper_sdks/';
 validurls['/docs/partners/data_and_infrastructure_agility/wrapper_sdks/unity/'] = '/docs/partners/data_and_infrastructure_agility/wrapper_sdks/';
 validurls['/docs/partners/data_and_infrastructure_agility/wrapper_sdks/cordova/'] = '/docs/partners/data_and_infrastructure_agility/wrapper_sdks/';
+validurls['/docs/partners/data_and_infrastructure_agility/analytics/neura_insights/#neura-insights'] = '/docs/partners/neura/';
+validurls['/docs/partners/message_personalization/location/neura_actions/#neura-actions'] = '/docs/partners/neura/';
+validurls['/docs/api/basics/#api-limits'] = '/docs/api/api_limits/';

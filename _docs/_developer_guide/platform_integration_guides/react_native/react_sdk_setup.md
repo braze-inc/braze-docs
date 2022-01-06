@@ -202,5 +202,5 @@ const App = () => {
 You can then search for the user with `some-user-id` in the dashboard under **User Search**. There, you can verify that session and device data have been logged.
 
 
-[1]: https://www.braze.com/docs/developer_guide/platform_integration_guides/android/initial_sdk_setup/android_sdk_integration/ "Android SDK Install"
-[2]: https://www.braze.com/docs/developer_guide/platform_integration_guides/ios/initial_sdk_setup/overview/ "iOS SDK Install"
+[1]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/initial_sdk_setup/android_sdk_integration/ "Android SDK Install"
+[2]: {{site.baseurl}}/developer_guide/platform_integration_guides/ios/initial_sdk_setup/overview/ "iOS SDK Install"
