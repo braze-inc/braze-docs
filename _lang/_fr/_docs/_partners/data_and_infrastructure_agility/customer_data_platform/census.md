@@ -10,50 +10,60 @@ search_tag: Partenaire
 
 # Recensement
 
-> [Recensement][1] est la plate-forme d'intégration de données qui vous permet de synchroniser les données clients et produits de votre entrepôt cloud avec les applications de vente et de marketing de votre choix.
+> [Recensement][1] est la plate-forme d'intégration de données qui vous permet de synchroniser les données clients et produits de votre entrepôt cloud aux applications de vente et de marketing de votre choix, le tout sans l'aide continue de votre service d'ingénierie.
 
-Avec le recensement, la réussite de vos clients, les ventes et les équipes de marketing sur la même page n'ont jamais été aussi faciles. En tant que partenaire technologique de Braze, le recensement maintient les données de vos clients synchronisées sans l'aide continue de votre service d'ingénierie.
+L'intégration de Braze et Recensement vous permet d'importer dynamiquement les données de vos produits de recensement dans Braze pour créer des segments d'utilisateurs ciblés. Par exemple, après avoir testé et implémenté avec succès l'intégration, Braze peut créer un segment utilisateur à partir des nouvelles données de 'Utilisateurs actifs dans les 30 derniers jours' pour cibler des utilisateurs spécifiques pour leur demander de tester une prochaine fonctionnalité bêta.
 
 ## Pré-requis
 
-| Exigences                       | Libellé                                                                                                                                                                                                      |
-| ------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| Clé API Braze                   | Vous devrez créer une nouvelle clé d'API.<br><br>Ceci peut être créé dans la **Console Développeur -> Paramètres API -> Créer une nouvelle clé API** avec **utilisateurs. permissions** de rack. |
-| Point de terminaison REST Braze | Votre REST [Endpoint URL][2]. Votre point de terminaison dépendra de l'URL de Braze pour votre instance.                                                                                                     |
-| Compte de recensement           | Un compte de recensement actif est nécessaire pour profiter de cette intégration de Braze.                                                                                                                   |
-{: .reset-td-br-1 .reset-td-br-2}
+| Exigences                                | Libellé                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        |
+| ---------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| Compte de recensement                    | Un [compte de recensement][1] est requis pour profiter de ce partenariat.                                                                                                                                                                                                                                                                                                                                                                                                                                                      |
+| Braze clé API REST                       | Une clé API Braze REST avec toutes les permissions de données utilisateur (à l'exception des permissions `users.delete`) et `segments.list`. Les permissions peuvent changer car le recensement ajoute la prise en charge de plus d'objets Braze, donc vous pouvez soit accorder plus de permissions maintenant, soit planifier de mettre à jour ces permissions à l'avenir. <br><br> Ceci peut être créé dans le **tableau de bord Braze -> Console développeur -> Clé d'API REST -> Créer une nouvelle clé API** |
+| Point de terminaison REST Braze          | Votre URL de terminaison REST. Votre point de terminaison dépendra de l'URL [Braze pour votre instance][2].                                                                                                                                                                                                                                                                                                                                                                                                                    |
+| Entrepôt de données et modèle de données | Avant de commencer l'intégration, vous devez avoir un entrepôt de données installé dans le recensement et définir un modèle du sous-ensemble de données que vous voulez synchroniser avec Braze. Visitez la [documentation de recensement](https://docs.getcensus.com/destinations/braze) pour une liste des sources de données disponibles et des conseils sur la création de modèles.                                                                                                                                        |
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4}
 
-## Intégration de Braze et Recensement
+## Intégration
 
-L'intégration de Braze et Recensement vous permet d'utiliser les données de vos produits pour créer dynamiquement des segments d'utilisateurs ciblés au Brésil. Par exemple, après avoir testé et implémenté avec succès l'intégration, Braze peut créer un segment utilisateur de 'Utilisateurs actifs dans les 30 derniers jours' pour cibler des utilisateurs spécifiques pour leur demander de tester une prochaine fonctionnalité bêta.
+### Étape 1 : Créer une connexion au service Braze
 
-### Étape 1 : Créer une clé API Braze
+Pour intégrer le recensement, dans la plate-forme de recensement, accédez à l'onglet **Paramètres** et sélectionnez **Add Service** pour créer une nouvelle connexion au service Braze.
 
-Braze vous permet de créer plusieurs clés API, chacune avec ses propres permissions. Dans la plupart des cas, la pratique recommandée est de créer une nouvelle clé API pour le recensement plutôt que de réutiliser une clé existante.
+Dans l'invite qui apparaît, nommez cette connexion, et fournissez votre URL de terminaison Braze et la clé d'API de Braze REST.
 
-1. Dans Braze, accédez à **Paramètres** en bas de la barre de navigation de gauche et cliquez sur **Console développeur**.
-2. Dans l'onglet **Paramètres de l'API** , sous **Clefs d'API Rest**, cliquez sur **+ Créer une nouvelle clé API**.
-3. Nommez cette clé API et sélectionnez toutes les autorisations de données utilisateur, à l'exception de `users.delete`. Les permissions peuvent changer car le recensement ajoute la prise en charge de plus d'objets Braze, donc vous pouvez soit accorder plus de permissions maintenant, soit planifier de mettre à jour ces permissions à l'avenir. Ensuite, sélectionnez **Enregistrer la clé API**.
-4. Enfin, copiez la clé API trouvée sous **Identificateur** à utiliser lors de la création de votre connexion de recensement.
+!\[Add service\]\[8\]{: style="max-width:60%;"}
 
-### Étape 2 : Sélectionnez votre point de terminaison de l'API Braze
+### Étape 2 : Créer une synchronisation de recensement
 
-Localisez et notez votre point de terminaison de l'API REST Braze ; cela sera nécessaire lors de la création de votre connexion de recensement avec Braze. Votre point de terminaison dépendra de l'URL [Braze][2] pour votre instance.
+Pour synchroniser vos clients avec Braze, vous devez construire une synchronisation. Ici, vous allez définir où synchroniser les données et comment vous voulez que les champs soient mappés sur les deux plateformes.
 
-### Étape 3 : Créer la connexion de recensement
+1. Naviguez dans l'onglet **Synchronisations** et sélectionnez **Ajouter une synchro**.
+2. Dans l'invite qui apparaît, sous **Connexion**, sélectionnez votre entrepôt de données désiré.
+3. Ensuite, sélectionnez la source. Il s'agit du modèle de données construit à partir des données de votre entrepôt de données.
+4. Configurer où le modèle sera synchronisé. Sélectionnez **Braze** comme connexion, et le [type d'objet pris en charge](#supported-objects) pour synchroniser.<br>!\[Census sync\]\[10\]{: style="max-width:80%;"}<br><br>
+5. Assurez-vous que **Mettre à jour ou Créer** est sélectionné comme une règle de synchronisation.
+6. Ensuite, à des fins de concordance d'enregistrement, choisissez l'identifiant utilisateur [Braze que vous souhaitez](#supported-objects) pour votre type d'objet Braze et le champ de modèle associé.<br>!\[Sync\]\[9\]{: style="max-width:80%;"}<br><br>
+7. Enfin, mappez les champs de données de recensement aux champs équivalents de Braze.<br>!\[Recensement mapping\]\[11\]{: style="max-width:80%;"}<br><br>
+8. Confirmez les détails et créez la synchronisation.
 
-1. Dans l'onglet **Paramètres du recensement** , sélectionnez **Ajouter un service** et créez un nouveau **Braze Service Connection**.
-2. Nommez cette connexion et fournissez votre URL de point de terminaison Braze et votre clé API.<br><br>!\[add_service\]\[8\]{: style="max-width:60%;"}
+Une fois que la synchronisation est créée, vous trouverez les données utilisateur déjà en Brésil. Vous pouvez maintenant créer un segment Braze et l'ajouter aux futures campagnes Braze et Canvases pour cibler ces utilisateurs finaux.
 
-## Synchronisation dans le recensement
-
+{% alert note %}
 Lors de l'utilisation de l'intégration du recensement et de Braze, le recensement enverra uniquement les deltas (changement de données) à chaque synchronisation au Brésil.
+{% endalert %}
 
-### Comportements de synchronisation pris en charge
+## Objets pris en charge
 
-Le recensement prend en charge la synchronisation de vos données à la fois à l'utilisateur et à l'objet événement au Brésil. Visitez la [documentation de recensement](https://docs.getcensus.com/destinations/braze) suivante pour en savoir plus sur cette intégration et les comportements de synchronisation de recensement.
-[8]: {% image_buster /assets/img/census/add_service.png %}
+Le recensement prend actuellement en charge la synchronisation des objets Braze suivants :
+
+| Nom de l'objet | Identifiants             |
+| -------------- | ------------------------ |
+| Utilisateur    | ID d'utilisateur externe |
+| Evénement      | ID de l'événement        |
+[8]: {% image_buster /assets/img/census/add_service.png %} [9]: {% image_buster /assets/img/census/census_1. ng %} [10]: {% image_buster /assets/img/census/census_2.png %} [11]: {% image_buster /assets/img/census/census_3.png %}
 
 [1]: https://www.getcensus.com/
-[2]: {{site.baseurl}}/developer_guide/rest_api/basics/#endpoints
+
+[1]: https://www.getcensus.com/
 [2]: {{site.baseurl}}/developer_guide/rest_api/basics/#endpoints
