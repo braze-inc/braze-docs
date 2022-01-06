@@ -377,9 +377,9 @@ Data is available in real-time, and you can hover over points in the chart to se
 
 ## Frequently asked questions {#faq}
 
-#### Can I use this feature on only some of my apps? {#faq-app-by-app}
+#### Does this feature need to be enabled on all of my apps at the same time? {#faq-app-by-app}
 
-Yes, this feature can be enabled for specific apps and doesn't need to be used on all of your apps.
+No, this feature can be enabled for specific apps and doesn't need to be used on all of your apps, all at once.
 
 #### What happens to users who are still on older versions of my app? {#faq-sdk-backward-compatibility}
 
