@@ -49,7 +49,7 @@ You can choose to integrate RudderStack's web and native client-side libraries w
   - [Server-to-Server / Cloud Mode](#cloud-mode): The Braze SDK sends the event data directly to RudderStack, which is then transformed and routed to Braze.
 
 {% alert note %} 
-Learn more about RudderStack's connection modes and the benefits of [each](https://rudderstack.com/docs/connections/rudderstack-connection-modes/).
+Learn more about RudderStack's [connection modes](https://rudderstack.com/docs/connections/rudderstack-connection-modes/) and the benefits of each.
 {% endalert %}
 
 ### Step 3a: Side-by-side integration (device mode) {#device-mode}
