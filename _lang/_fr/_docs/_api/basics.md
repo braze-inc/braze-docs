@@ -124,56 +124,12 @@ Pour plus d'informations, reportez-vous à l'article suivant basé sur votre pla
 
 ## Limites de l'API
 
-L'infrastructure de l'API Braze est conçue pour gérer des volumes élevés de données à travers notre clientèle. Nous appliquons les limites de débit de l'API, par groupe d'applications, afin d'assurer une utilisation responsable de l'API. Tous les messages doivent suivre l'encodage [UTF-8][1].
-
-| Type de requête                                                                                                                                                     | Limite de débit API par défaut                                                                                                                                                                                                    |
-| ------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Requêtes au point de terminaison `/users/track`                                                                                                                     | User Track a une limite de vitesse de base de 50 000 demandes par minute pour tous les clients. Cette limite peut être augmentée sur demande. Veuillez contacter votre Responsable du service clientèle pour plus d'informations. |
-| Requêtes au point de terminaison `/users/export/ids`                                                                                                                | 2 500 demandes par minute.                                                                                                                                                                                                        |
-| Traitement par lots avec le point de terminaison `/users/track`                                                                                                     | 75 événements, 75 achats et 75 attributs par requête API.                                                                                                                                                                         |
-| Requêtes aux points de terminaison suivants :<br>`/events/lists`<br>`/purchases/product_ids`                                                            | 1 000 requêtes par heure, réparties entre les deux extrémités.                                                                                                                                                                    |
-| Requêtes aux points de terminaison suivants : <br>`/users/delete`<br>`/users/alias/new`<br>`/users/identify`<br>`/push_notification/remove` | 20 000 demandes par minute, réparties entre les quatre extrémités.                                                                                                                                                                |
-| Requêtes au point de terminaison d'envoi spécifiant un segment ou une audience connectée                                                                            | 250 par minute.                                                                                                                                                                                                                   |
-| Envoyer la création de l'identifiant                                                                                                                                | 100 par jour.                                                                                                                                                                                                                     |
-| Demandes de tout autre type                                                                                                                                         | 250.000 par heure.                                                                                                                                                                                                                |
-{: .reset-td-br-1 .reset-td-br-2}
-
-{% alert warning %}
-Les limites de taux de l'API et leurs valeurs (limitées ou illimitées) sont sujettes à changement selon l'utilisation correcte de notre système. Nous encourageons les limites raisonnables lors d'un appel à l'API pour prévenir les dommages ou les mauvais usages.
-{% endalert %}
-
-Les augmentations de taux d'API REST sont prises en compte en fonction des besoins des clients qui utilisent les capacités de traitement de lots de l'API. S'il vous plaît demander par lot à nos points de terminaison API:
-
-- Chaque requête `/users/track` peut contenir jusqu'à 75 événements, 75 mises à jour d'attributs et 75 achats. Chaque composant (événement, attribut et tableau d'achat), peut mettre à jour jusqu'à 75 utilisateurs chacun (maximum de 225 utilisateurs individuels). Chaque mise à jour peut également appartenir au même utilisateur pour un maximum de 225 mises à jour à un seul utilisateur dans une requête. Les demandes faites à ce point de terminaison commenceront généralement à être traitées dans cette commande : attributs, événements et achats. <br><br>
-- Une seule requête aux terminaux de messagerie peut atteindre n'importe laquelle des éléments suivants :
-  - Jusqu'à 50 `external_ids`spécifiques, chacun avec des paramètres de message individuels
-  - Un segment de toute taille créé dans le tableau de bord Braze, spécifié par son `segment_id`
-  - Un segment d'audience ad hoc de toute taille, défini dans la requête en tant qu'objet [Audience connectée][7]
-
-Les en-têtes de réponse pour toute requête valide incluent le statut de limite de taux actuel :
-
-| Nom de l'en-tête      | Libellé                                                                                                  |
-| --------------------- | -------------------------------------------------------------------------------------------------------- |
-| `Limite de taux X`    | Le nombre maximum de demandes que le consommateur peut faire par jour/heure/minute/seconde.              |
-| `X-RateLimit-Restant` | Le nombre de requêtes restantes dans la fenêtre de limite de taux actuelle.                              |
-| `X-RateLimit-Reset`   | Le temps à partir duquel la fenêtre de limite de taux actuelle se réinitialise en secondes d'époque UTC. |
-{: .reset-td-br-1 .reset-td-br-2}
-
-Si vous avez des questions au sujet des limites de l’API, veuillez contacter votre Responsable du Succès Client ou ouvrez un [ticket d’assistance][support].
-
-### Délai optimal entre les terminaux
-
-Comprendre un délai optimal entre les points de terminaison est crucial lors des appels consécutifs à l'API Braze. Des problèmes surviennent lorsque les terminaux dépendent du traitement réussi d'autres terminaux, et s'ils sont appelés trop tôt, ils pourraient déclencher des erreurs. Par exemple, si vous assignez aux utilisateurs un alias via notre point de terminaison nouvel alias puis en appuyant sur cet alias pour envoyer un événement personnalisé via notre point de terminaison Usertrack, combien de temps devriez-vous attendre ?
-
-Dans des conditions normales, le temps de cohérence de nos données est de 10-100 ms (1/10 de seconde). Cependant, il peut y avoir des cas où il faut plus de temps pour que cette cohérence se produise. Par conséquent, nous recommandons que les clients autorisent un délai de __5 minutes__ entre les appels suivants pour minimiser la probabilité d'erreur.
+Pour la plupart des API, Braze a une limite par défaut de 250 000 requêtes par heure. Cependant, certains types de requêtes ont leur propre limite de taux pour mieux gérer les volumes élevés de données sur notre clientèle. Pour plus de détails, reportez-vous aux [limites de taux de l'API]({{site.baseurl}}/api/api_limits/).
 [25]: {% image_buster /assets/img_archive/api-key-permissions.png %} [26]: {% image_buster /assets/img_archive/api-key-ip-whitelisting.png %} [27]: {% image_buster /assets/img_archive/rest-api-key. ng %} [28]: {% image_buster /assets/img_archive/create-new-key.png %} [29]: {% image_buster /assets/img_archive/api-key-options.png %}
 
-[1]: https://en.wikipedia.org/wiki/UTF-8
-[7]: {{site.baseurl}}/api/objects_filters/connected_audience/
 [8]: https://dashboard-01.braze.com/app_settings/developer_console/ "Developer Console"
 [8]: https://dashboard-01.braze.com/app_settings/developer_console/ "Developer Console"
 [9]: {{site.baseurl}}/developer_guide/platform_integration_guides/ios/analytics/setting_user_ids/
 [10]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/analytics/setting_user_ids/
 [13]: {{site.baseurl}}/developer_guide/platform_integration_guides/windows_universal/analytics/setting_user_ids/#setting-user-ids
-[support]: {{site.baseurl}}/braze_support/
 [support]: {{site.baseurl}}/braze_support/
