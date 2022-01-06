@@ -75,15 +75,15 @@ Appboy.sharedInstance()?.flushDataAndProcessRequestQueue()
 
 ### Set request policy on startup
 
-These policies can be set at app startup time from the [`startWithApiKey:inApplication:withLaunchOptions:withAppboyOptions`][3] method. In the `appboyOptions` dictionary, set the `ABKRequestProcessingPolicyOptionKey` to any of the following `ABKRequestProcessingPolicy` enum values defined below:
+These policies can be set at app startup time from the [`startWithApiKey:inApplication:withLaunchOptions:withAppboyOptions`][3] method. In the `appboyOptions` dictionary, set the `ABKRequestProcessingPolicyOptionKey` as shown below:
 
 {% tabs %}
 {% tab OBJECTIVE-C %}
 
 ```objc
-typedef NS_ENUM(NSInteger, ABKRequestProcessingPolicy) {
-  ABKAutomaticRequestProcessing,
-  ABKManualRequestProcessing
+NSDictionary *appboyOptions = @{
+  // Other entries
+  ABKRequestProcessingPolicyOptionKey : @(ABKAutomaticRequestProcessing)
 };
 ```
 
@@ -91,10 +91,10 @@ typedef NS_ENUM(NSInteger, ABKRequestProcessingPolicy) {
 {% tab swift %}
 
 ```swift
-public enum ABKRequestProcessingPolicy : Int {
-    case automaticRequestProcessing
-    case manualRequestProcessing
-}
+let appboyOptions: [AnyHashable: Any] = [
+  // Other entries
+  ABKRequestProcessingPolicyOptionKey: ABKRequestProcessingPolicy.automaticRequestProcessing.rawValue
+]
 ```
 
 {% endtab %}

@@ -124,48 +124,7 @@ For more information, refer to the following article based on your platform:
 
 ## API limits
 
-The Braze API infrastructure is designed to handle high volumes of data across our customer base. We enforce API rate limits, per app group, in order to ensure responsible use of the API. All messages should follow [UTF-8][1] encoding.
-
-|Request Type|Default API Rate Limit|
-|---|---|
-|Requests to the `/users/track` endpoint| User Track has a base speed limit of 50,000 requests per minute for all customers. This limit can be increased upon request. Please reach out to your Customer Success Manager for more information. |
-|Requests to the `/users/export/ids` endpoint|2,500 requests per minute. |
-|Batching with the `/users/track` endpoint|75 Events, 75 Purchases, and 75 Attributes per API request. |
-|Requests to the following endpoints:<br>`/events/lists`<br>`/purchases/product_ids`|1,000 requests per hour, shared between the two endpoints.|
-|Requests to the following endpoints: <br>`/users/delete`<br>`/users/alias/new`<br>`/users/identify`<br>`/push_notification/remove`|20,000 requests per minute, shared between the four endpoints.|
-|Requests to the Send endpoint specifying a Segment or Connected Audience|250 per minute. |
-|Send Identifier Creation|100 per day. |
-|Requests of any other kind|250,000 per hour. |
-{: .reset-td-br-1 .reset-td-br-2}
-
-{% alert warning %}
-API Rate Limits and their Values (limited or unlimited) are subject to change depending on the proper usage of our system. We encourage sensible limits when making an API call to prevent damage or misuse.
-{% endalert %}
-
-REST API rate limit increases are considered based on need for customers who are making use of the API batching capabilities. Please batch requests to our API endpoints:
-
-- Each `/users/track` request can contain up to 75 events, 75 attribute updates, and 75 purchases. Each component (event, attribute, and purchase arrays), can update up to 75 users each (max of 225 individual users). Each update can also belong to the same user for a max of 225 updates to a single user in a request. Requests made to this endpoint will generally begin processing in this order: attributes, events, and purchases. <br><br>
-- A single request to the Messaging endpoints can reach any one of the following:
-  - Up to 50 specific `external_ids`, each with individual message parameters
-  - A segment of any size created in the Braze dashboard, specified by its `segment_id`
-  - An ad-hoc audience segment of any size, defined in the request as a [Connected Audience][7] object
-
-The response headers for any valid request include the current rate limit status:
-
-Header Name             | Description
------------------------ | -----------------------
-`X-RateLimit-Limit`     | The maximum number of requests that the consumer is permitted to make per day/hour/minute/second.
-`X-RateLimit-Remaining` | The number of requests remaining in the current rate limit window.
-`X-RateLimit-Reset`     | The time at which the current rate limit window resets in UTC epoch seconds.
-{: .reset-td-br-1 .reset-td-br-2}
-
-If you have questions about API limits please contact your Customer Success Manager or please open a [support ticket][support].
-
-### Optimal delay between endpoints
-
-Understanding Optimal Delay between endpoints is crucial when making consecutive calls to the Braze API. Problems arise when endpoints depend on the successful processing of other endpoints, and if called too soon, could raise errors. For example, if you're assigning users an alias via our New User Alias endpoint, and then hitting that alias to send a custom event via our Usertrack endpoint, how long should you wait?
-
-Under normal conditions, the time for our data eventual consistency to occur is 10-100 ms (1/10 of a second). However, there can be some cases where it takes longer for that consistency to occur. Therefore, we recommend that customers allow a __5-minute delay__ between making subsequent calls to minimize the probability of error.
+For most APIs, Braze has a default rate limit of 250,000 requests per hour. However, certain request types have their own rate limit applied to better handle high volumes of data across our customer base. For details, refer to [API rate limits]({{site.baseurl}}/api/api_limits/).
 
 [1]: https://en.wikipedia.org/wiki/UTF-8
 [7]: {{site.baseurl}}/api/objects_filters/connected_audience/
