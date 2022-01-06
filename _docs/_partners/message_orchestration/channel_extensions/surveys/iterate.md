@@ -12,7 +12,7 @@ search_tag: Partner
 
 > [Iterate](https://iteratehq.com) makes it easy to learn from your customers, offering smart, user-friendly research tools that look and feel like your brand.
 
-The Braze and Iterate integration lets you include iterate survey links in your email, push, or in-app messages. These links, once received, can automatically record and attribute Iterate survey responses as Braze custom user attributes, allowing you to create powerful new audiences and segments to use in your campaigns. 
+The Braze and Iterate integration lets you include Iterate survey links in your email, push, or in-app messages. These links, once received, can automatically record and attribute Iterate survey responses as Braze custom user attributes, allowing you to create powerful new audiences and segments to use in your campaigns. 
 
 ## Prerequisites
 
