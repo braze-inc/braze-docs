@@ -10,44 +10,57 @@ search_tag: Partenaire
 
 # Digioh
 
-> [Digioh](https://www.digioh.com/) vous aide à agrandir vos listes, à capturer des données de premier groupe et à mettre vos données à utiliser dans vos campagnes de Braze. Le constructeur de glisser-déposer facilite la création de formulaires de marque, de pop-ups, de centres de préférences, de pages d'atterrissage et d'enquêtes qui vous connectent à vos clients. La configuration de l’intégration est incluse dans chaque paquet, et Digioh aidera également à construire, concevoir et lancer votre première campagne pour vous.
+> [Digioh](https://www.digioh.com/) vous aide à agrandir vos listes, à capturer des données de premier groupe et à mettre vos données à utiliser dans vos campagnes de Braze.
+
+L'intégration de Braze et Digioh vous permet d'utiliser leur constructeur flexible de glisser-déposer pour créer des formes sur marque, pop-ups, centres de performance, pages d'atterrissage et sondages qui vous connectent à vos clients. Digioh vous aidera à mettre en place et à aider à construire, concevoir et lancer votre première campagne pour vous.
 
 !\["Create flexible email and communication preference centers with Digioh"\]\[5\]{: style="border:0"}
 
-## Exigences
+## Pré-requis
 
-| Exigences                       | Origine | Accès                                                                                                                                                                                                        | Libellé                                                                                  |
-| ------------------------------- | ------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ---------------------------------------------------------------------------------------- |
-| Clé API Braze                   | Brasero | Vous devrez créer une nouvelle clé d'API.<br><br>Ceci peut être créé dans la __Console Développeur -> Paramètres API -> Créer une nouvelle clé API__ avec __utilisateurs. permissions__ de rack. | Vous devrez copier cette clé sur votre compte Digioh - voir les instructions ci-dessous. |
-| Point de terminaison REST Braze | Brasero | Vous aurez besoin du point de terminaison du serveur que votre compte utilise pour accéder à l'API de Braze. [Voir la documentation API de Braze pour plus de détails][6].                                   | Vous devrez copier cette URL sur votre compte Digioh - voir les instructions ci-dessous. |
-| Compte Digioh                   | Digioh  | [https://www.digioh.com/](https://www.digioh.com/)                                                                                                                                                           | Vous devrez avoir un compte Digioh.                                                      |
+| Exigences                                      | Libellé                                                                                                                                                                                                                                                                                                                                                                             |
+| ---------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Compte Digioh                                  | Un [compte Digioh](https://www.digioh.com/) est requis pour profiter de ce partenariat.                                                                                                                                                                                                                                                                                             |
+| Braze clé API REST                             | Une clé API Braze REST avec les permissions `users.track`. <br><br> Ceci peut être créé dans le __tableau de bord Braze -> Console développeur -> Clé d'API REST -> Créer une nouvelle clé API__                                                                                                                                                                        |
+| Braze API `/users/track/` point de terminaison | L'URL de votre point de terminaison REST avec les détails `/users/track/` y est ajoutée. Votre point de terminaison dépendra de l'URL [Braze pour votre instance][6].<br><br>Par exemple, si votre point de terminaison de l'API REST est `https://rest. ad-01.braze.com` votre point de terminaison `/users/track/` sera `https://rest.iad-01.braze.com/users/track/`. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
 
-## Détails de l'intégration
+## Intégration
+
+Pour intégrer Digioh, vous devez d'abord configurer le connecteur Braze. Une fois terminé, vous devrez appliquer l'intégration à un lightbox (widget). Visitez [Digioh](https://help.digioh.com/knowledgebase/digioh-integration-basics/) pour en savoir plus sur les bases de l'intégration.
 
 ### Étape 1 : Créer une intégration Digioh
 
-Dans la plate-forme Digioh, cliquez sur l'onglet **Intégrations** et créez le bouton **+ Nouvelle Intégration**.
-
-Ensuite, sélectionnez **Braze** dans la liste déroulante **Intégration** et nommez l'intégration. Entrez la **clé API Braze** et **Braze REST Endpoint** de votre compte Braze dans les champs fournis. Cliquez sur **Créer une intégration**.
+Dans Digioh, cliquez sur l'onglet **Intégrations** puis sur le bouton **Nouvelle Intégration**. Sélectionnez **Braze** dans le menu déroulant **Intégration** et nommez l'intégration.
 
 !\["Select the correct integration from the dropdown"\]\[2\]{: style="max-width:50%;"}
 
-### Étape 2 : Mapper des champs supplémentaires
+Ensuite, entrez la clé de l'API Braze REST et votre point de terminaison `/users/track/`.
 
-Sur la page **Intégrations** , utilisez le lien **Champs de la carte** pour mapper les champs supplémentaires au-delà de l'e-mail et du nom.
+Enfin, utilisez la section des champs de la carte pour mapper les champs personnalisés supplémentaires au-delà de l'email et du nom. Un exemple de charge utile peut être trouvé ci-dessous. Une fois terminé, sélectionnez **Créer une intégration**.
+
+```json
+{
+    "attributes" : [
+         {
+           "external_id": "[EMAIL_MD5]",
+           "email" : "[EMAIL]"
+         }
+     ]
+
+```
+
+### Étape 2 : Créer une lightbox Digioh
+
+Utilisez l'éditeur de design [Digioh](https://help.digioh.com/knowledgebase/digioh-platform-training-videos-video-series-getting-started-with-digioh/) pour construire un lightbox (widget). <br> Vous aimeriez voir une galerie de façons de tirer parti de l'éditeur de design ? Visitez la galerie de thème Digioh [](https://www.digioh.com/theme-gallery).
 
 ### Étape 3 : Appliquer l'intégration
 
-Pour appliquer l'intégration à un [lightbox](https://help.digioh.com/knowledgebase/digioh-platform-training-videos-video-series-getting-started-with-digioh/), utilisez le lien **Ajouter** ou **Modifier** dans la colonne **Intégrations** de la page **Boîtes**.
+Pour appliquer cette intégration à une lightbox Digioh [](https://help.digioh.com/knowledgebase/digioh-platform-training-videos-video-series-getting-started-with-digioh/), accédez à la page **Boîtes** et sélectionnez **Ajouter** ou **Modifier le lien** dans la colonne **Intégrations**. Ceci peut également être ajouté à partir de la section **Intégration** de l'éditeur.
 
-!\["Add the integration to a box"\]\[3\]{: style="max-width:80%"}
+!\["Add the integration to a lightbox"\]\[3\]{: style="max-width:90%"}
 
-Vous pouvez également l'ajouter à partir de la section **Intégration** de l'éditeur.
-
-!\["Add the integration to a box in the editor"\]\[4\]{: style="max-width:30%"}
-
-C'est tout ce qu'il y a à faire! Digioh va maintenant passer votre capturé mène à Braze en temps réel.
+Ici, sélectionnez **Ajouter une intégration**, choisissez votre intégration souhaitée et **Enregistrer**. Digioh va maintenant passer votre capturé mène à Braze en temps réel.
 [2]: {% image_buster /assets/img/digioh/2.png %} [3]: {% image_buster /assets/img/digioh/3. ng %} [4]: {% image_buster /assets/img/digioh/4.png %} [5]: {% image_buster /assets/img/digioh/pref_pop_examples.png %}
 
 [6]: https://www.braze.com/docs/api/basics/#endpoints
