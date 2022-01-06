@@ -88,7 +88,7 @@ If a push notification isn't delivered, make sure it didn't bounce by looking in
 
 2. `NotRegistered` may also occur when multiple registrations are occurring and a second registration is invalidating the first token.
 
-### Push notifications sent but not sisplayed on users' devices
+### Push notifications sent but not displayed on users' devices
 
 There are a few reasons why this could be occurring:
 
