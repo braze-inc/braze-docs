@@ -481,5 +481,6 @@ validurls['/docs/partners/data_and_infrastructure_agility/wrapper_sdks/xamarin/'
 validurls['/docs/partners/data_and_infrastructure_agility/wrapper_sdks/react_native/'] = '/docs/partners/data_and_infrastructure_agility/wrapper_sdks/';
 validurls['/docs/partners/data_and_infrastructure_agility/wrapper_sdks/unity/'] = '/docs/partners/data_and_infrastructure_agility/wrapper_sdks/';
 validurls['/docs/partners/data_and_infrastructure_agility/wrapper_sdks/cordova/'] = '/docs/partners/data_and_infrastructure_agility/wrapper_sdks/';
-
+validurls['/docs/partners/data_and_infrastructure_agility/analytics/neura_insights/#neura-insights'] = '/docs/partners/neura/';
+validurls['/docs/partners/message_personalization/location/neura_actions/#neura-actions'] = '/docs/partners/neura/';
 validurls['/docs/api/basics/#api-limits'] = '/docs/api/api_limits/';
