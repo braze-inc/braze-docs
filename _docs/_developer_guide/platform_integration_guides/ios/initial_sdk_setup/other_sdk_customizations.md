@@ -32,7 +32,7 @@ You can configure log level to any available value. However, setting log level t
 
 ### Setting Log Level
 
-Log Level can be assigned either at compile time or at runtime:
+Log level can be assigned either at compile time or at runtime:
 
 {% tabs local %}
 {% tab Compile Time %}
