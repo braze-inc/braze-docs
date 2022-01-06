@@ -88,7 +88,7 @@ Appboy.start(withApiKey: "YOUR-API-KEY", in:application, withLaunchOptions:launc
 {% endtabs %}
 
 {% alert note %}
-Log Level can only be set at runtime with Braze iOS SDK v4.4.0 or newer. If using an earlier version of the SDK, set the LogLevel at compile time instead.
+Log level can only be set at runtime with Braze iOS SDK v4.4.0 or newer. If using an earlier version of the SDK, set log level at compile time instead.
 {% endalert %} 
 
 {% endtab %}
