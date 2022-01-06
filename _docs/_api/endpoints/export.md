@@ -48,9 +48,6 @@ guide_featured_list:
   - name: "GET: News Feed Card List"
     link: /docs/api/endpoints/export/news_feed/get_news_feed_cards/
     fa_icon: fas fa-stream
-  - name: "GET: Query Invalid Phone Numbers"
-    link: /docs/api/endpoints/export/sms/get_query_invalid_numbers/
-    fa_icon: fas fa-phone
 
 guide_menu_title: "Custom Events, KPIs, Purchases, Segments, Sessions, and User Data Export Endpoints"
 guide_menu_list:
