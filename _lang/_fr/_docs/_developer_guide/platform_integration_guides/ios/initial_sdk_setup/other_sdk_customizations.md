@@ -8,18 +8,35 @@ page_order: 3
 
 # Autres personnalisations du SDK
 
-## Niveau de la bûche de Braze
+## Niveau de rondins de Braze
 
-Le LogLevel par défaut pour Braze iOS SDK est `8`. Ce niveau supprime la plupart des logs afin qu'aucune information sensible ne soit enregistrée dans une application en production.
+Le niveau de journal par défaut pour Braze iOS SDK est Minimal, ou `8` dans le graphique ci-dessous. Ce niveau supprime la plupart des logs afin qu'aucune information sensible ne soit enregistrée dans une application en production.
 
-Vous pouvez définir le niveau de connexion à `0` pour activer la journalisation verbeuse pour le débogage. Ce niveau est destiné uniquement à être utilisé dans des environnements de développement et ne doit pas être défini dans une application publiée.
+Voir la liste suivante des niveaux de log disponibles :
 
-Ceci peut être assigné soit à la compilation, soit à l'exécution:
+### Niveaux des logs
+
+| Niveau | Libellé                                                                                                     |
+| ------ | ----------------------------------------------------------------------------------------------------------- |
+| 0      | Verbose. Toutes les informations de log seront enregistrées sur la console iOS.                             |
+| 1      | Debug. Le débogage et les informations de log plus élevées seront enregistrées sur la console iOS.          |
+| 2      | Attention. Avertissement et des informations de log plus élevées seront enregistrées sur la console iOS.    |
+| 4      | Erreur. Erreur et des informations de log plus élevées seront enregistrées sur la console iOS.              |
+| 8      | Minimal. Des informations minimales seront enregistrées sur la console iOS. Le paramètre par défaut du SDK. |
+{: .reset-td-br-1 .reset-td-br-2}
+
+### Journalisation détaillée
+
+Vous pouvez configurer le niveau du journal à n'importe quelle valeur disponible. Cependant, définir le niveau de journal à Verbose, ou `0`, peut être très utile pour déboguer des problèmes avec votre intégration. Ce niveau est destiné uniquement à être utilisé dans des environnements de développement et ne doit pas être défini dans une application publiée.
+
+### Réglage du niveau du journal
+
+Le niveau du journal peut être assigné soit à la compilation, soit à l'exécution:
 
 {% tabs local %}
 {% tab Compile Time %}
 
-#### Réglage du niveau de log au moment de la compilation
+#### Réglage du niveau du journal au moment de la compilation
 
 Ajouter un dictionnaire nommé `Braze` à votre fichier `Info.plist`. Dans le dictionnaire `Braze` , ajoutez la sous-entrée String `LogLevel` et définissez la valeur à `0`.
 
@@ -40,24 +57,41 @@ Exemple `Info.plist` contenu:
 {% endtab %}
 {% tab Runtime %}
 
-#### Réglage de LogLevel à l'exécution
+#### Réglage du niveau du journal lors de l'exécution
 
 Ajoute la `ABKLogLevelKey` dans le paramètre `appboyOptions` passé à `startWithApiKey:inApplication:withLaunchOptions:withAppboyOptions:`. Définit sa valeur à l'entier `0`.
 
+{% subtabs %}
+{% subtab OBJECTIVE-C %}
+
+```objc
+NSMutableDictionary *appboyOptions = [NSMutableDictionary dictionary];
+appboyOptions[ABKLogLevelKey] = @(0);
+[Appboy startWithApiKey:@"YOUR-API-KEY"
+          inApplication:application
+      withLaunchOptions:launchOptions
+      withAppboyOptions:appboyOptions];
+```
+
+{% endsubtab %}
+{% subtab swift %}
+
+```swift
+let appboyOptions: [AnyHashable: Any] = [
+  ABKLogLevelKey : 0
+]
+Appboy.start(withApiKey: "YOUR-API-KEY", in:application, withLaunchOptions:launchOptions, withAppboyOptions:appboyOptions)
+```
+
+{% endsubtab %}
+{% endsubtabs %}
+
 {% alert note %}
-LogLevel ne peut être configuré qu'au moment de l'exécution avec Braze iOS SDK v4.4.0 ou plus récent. Si vous utilisez une version antérieure du SDK, définissez LogLevel au moment de la compilation.
+Le niveau de log ne peut être défini qu'au moment de l'exécution, avec Braze iOS SDK v4.4.0 ou plus récent. Si vous utilisez une version antérieure du SDK, définissez le niveau de log au moment de la compilation.
 {% endalert %}
 
 {% endtab %}
 {% endtabs %}
-
-### Description de LogLevels
-
-| Niveau de log | Libellé                                                                |
-| ------------- | ---------------------------------------------------------------------- |
-| 0             | Toutes les informations de log seront enregistrées dans la console iOS |
-| 8             | Par défaut, enregistrement minimal.                                    |
-{: .reset-td-br-1 .reset-td-br-2}
 
 ## Collection facultative IDFA
 
