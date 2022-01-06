@@ -57,7 +57,7 @@ These invalid phone numbers can be managed using [SMS endpoints]({{site.baseurl}
 If multiple user profiles have the same phone number and that phone number is marked invalid, then all User Profiles will display as invalid.
 {% endalert %}
 
-You can also include or exclude any users with invalid phone numbers when [creating a segement][2]. 
+You can also include or exclude any users with invalid phone numbers when [creating a segment][2]. 
 
 [1]: {{site.baseurl}}/user_guide/message_building_by_channel/sms/sms_subscription_group/
 [2]: {{site.baseurl}}/user_guide/engagement_tools/segments/creating_a_segment/#step-4-add-filters-to-your-segment
