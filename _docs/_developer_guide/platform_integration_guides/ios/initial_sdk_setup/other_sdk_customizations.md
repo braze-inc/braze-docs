@@ -62,8 +62,8 @@ Example `Info.plist` contents:
 
 Add the `ABKLogLevelKey` inside the `appboyOptions` parameter passed to `startWithApiKey:inApplication:withLaunchOptions:withAppboyOptions:`. Set its value to the integer `0`.
 
-{% tabs %}
-{% tab OBJECTIVE-C %}
+{% subtabs %}
+{% subtab OBJECTIVE-C %}
 
 ```objc
 NSMutableDictionary *appboyOptions = [NSMutableDictionary dictionary];
@@ -74,8 +74,8 @@ appboyOptions[ABKLogLevelKey] = @(0);
       withAppboyOptions:appboyOptions];
 ```
 
-{% endtab %}
-{% tab swift %}
+{% endsubtab %}
+{% subtab swift %}
 
 ```swift
 let appboyOptions: [AnyHashable: Any] = [
@@ -84,8 +84,8 @@ let appboyOptions: [AnyHashable: Any] = [
 Appboy.start(withApiKey: "YOUR-API-KEY", in:application, withLaunchOptions:launchOptions, withAppboyOptions:appboyOptions)
 ```
 
-{% endtab %}
-{% endtabs %}
+{% endsubtab %}
+{% endsubtabs %}
 
 {% alert note %}
 Log level can only be set at runtime with Braze iOS SDK v4.4.0 or newer. If using an earlier version of the SDK, set log level at compile time instead.
