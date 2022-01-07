@@ -18,6 +18,10 @@ Utilisez ce point de terminaison ci-dessous pour mettre à jour un [bloc de cont
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#4782239a-cb60-4217-9de0-51411434d57d {% endapiref %}
 
+## Limite de taux
+
+{% include rate_limits.md endpoint='default' %}
+
 ## Corps de la requête
 
 ```
