@@ -18,6 +18,10 @@ This endpoint allows you to remove email addresses from your Braze spam list. We
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#1614a82f-510a-4c37-95a6-8207a125e487 {% endapiref %}
 
+## Rate limit
+
+{% include rate_limits.md endpoint='default' %}
+
 ## Request body
 ```
 Content-Type: application/json

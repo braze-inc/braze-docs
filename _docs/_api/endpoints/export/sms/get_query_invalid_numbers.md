@@ -17,6 +17,11 @@ hidden: true
 This endpoint allows you to pull a list of phone numbers that have been deemed "invalid" within a certain time frame.
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#7c2ef84f-ddf5-451a-a72c-beeabc06ad9d {% endapiref %}
+
+## Rate limit
+
+{% include rate_limits.md endpoint='default' %}
+
 ## Request parameters
 
 You must provide either a `start_date` and an `end_date` OR `phone_numbers`.
