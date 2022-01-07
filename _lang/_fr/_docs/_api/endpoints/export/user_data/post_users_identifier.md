@@ -18,9 +18,9 @@ Ce point de terminaison vous permet d'exporter des données depuis n'importe que
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#b9750447-9d94-4263-967f-f816f0c76577 {% endapiref %}
 
-{% alert important %}
-Les clients qui embarquent à bord le 16 août 2021 ou après le 16 août 2021 auront une limite de 2 500 demandes par minute sur ce point d'accès.
-{% endalert %}
+## Limite de taux
+
+{% include rate_limits.md endpoint='users export ids' %}
 
 ## Corps de la requête
 
