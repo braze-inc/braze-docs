@@ -18,6 +18,10 @@ Ce point de terminaison vous permet d'exporter des métadonnées sur un Canvas, 
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#5188873c-13a3-4aaf-a54b-9fa1daeac5f8 {% endapiref %}
 
+## Limite de taux
+
+{% include rate_limits.md endpoint='default' %}
+
 ## Paramètres de la requête
 
 | Paramètre  | Requis | Type de données      | Libellé                                                              |
