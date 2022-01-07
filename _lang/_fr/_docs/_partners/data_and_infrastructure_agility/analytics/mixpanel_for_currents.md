@@ -11,7 +11,7 @@ tool: Courants
 
 # Mixpanel pour les courants
 
-> [Mixpanel](https://mixpanel.com/) est une plate-forme d'analyse commerciale. Vous pouvez exporter des événements de votre intégration Braze vers Mixpanel pour effectuer une analyse plus approfondie. Les données recueillies servent à établir des rapports personnalisés et à mesurer l'engagement et la rétention des utilisateurs.
+> [Mixpanel](https://mixpanel.com/) est une plateforme d'analyse commerciale qui vous permet d'exporter des événements de Braze vers Mixpanel pour effectuer une analyse plus approfondie. Les données collectées peuvent ensuite être utilisées pour construire des rapports personnalisés et mesurer l'engagement et la rétention des utilisateurs.
 
 Pour commencer, trouvez les informations suivantes dans votre tableau de bord Mixpanel dans le menu `Paramètres > Paramètres du projet`:
 
