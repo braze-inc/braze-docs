@@ -20,12 +20,12 @@ Ce point de terminaison vous permet de supprimer n'importe quel profil utilisate
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#22e91d00-d178-4b4f-a3df-0073ecfcc992 {% endapiref %}
 
 {% alert warning %}
-La suppression des profils d'utilisateur ne peut PAS être annulée. Cela supprimera PERMANENTEMENT les utilisateurs qui peuvent causer des anomalies dans vos données. En savoir plus sur [ce qui se passe lorsque vous supprimez un profil utilisateur via l'API]({{site.baseurl}}/help/help_articles/api/delete_user/) dans notre documentation d'aide.
+La suppression des profils d'utilisateur ne peut pas être annulée. Cela supprimera définitivement les utilisateurs qui peuvent causer des divergences dans vos données. En savoir plus sur ce qui se passe lorsque vous [supprimez un profil utilisateur via l'API]({{site.baseurl}}/help/help_articles/api/delete_user/) dans notre documentation d'aide.
 {% endalert %}
 
-{% alert note %}
-Une limite de taux est appliquée aux demandes faites à ce point de terminaison pour les clients embarqués avec Braze le ou après le 16 septembre 2021. Pour plus d'informations, voir [les limites de l'API]({{site.baseurl}}/api/basics/#api-limits).
-{% endalert %}
+## Limite de taux
+
+{% include rate_limits.md endpoint='users delete' %}
 
 ## Corps de la requête
 
