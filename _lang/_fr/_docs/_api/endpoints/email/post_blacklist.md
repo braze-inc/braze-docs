@@ -19,6 +19,10 @@ La mise en liste noire d'une adresse e-mail désabonnera l'utilisateur de l'e-ma
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#d51155a1-a6e8-4dcc-9f2b-88c54ab9e8c6 {% endapiref %}
 
+## Limite de taux
+
+{% include rate_limits.md endpoint='default' %}
+
 ## Corps de la requête
 
 ```
