@@ -26,9 +26,9 @@ __La création d'un nouvel utilisateur uniquement alias__ nécessite que le `ext
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#5cf18e64-fd02-452f-8c90-9a0f7c4d0487 {% endapiref %}
 
-{% alert note %}
-Une limite de taux est appliquée aux demandes faites à ce point de terminaison pour les clients embarqués avec Braze le ou après le 16 septembre 2021. Pour plus d'informations, voir [les limites de l'API]({{site.baseurl}}/api/basics/#api-limits).
-{% endalert %}
+## Limite de taux
+
+{% include rate_limits.md endpoint='users alias new' %}
 
 ## Corps de la requête
 
