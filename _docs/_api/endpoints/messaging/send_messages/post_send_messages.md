@@ -22,7 +22,7 @@ The send endpoint allows you to send immediate, ad-hoc messages to designated us
 
 ## Rate limit
 
-{% include rate_limits.md endpoint='send endpoints' %}
+{% include rate_limits.md endpoint='send endpoints' category='message endpoints' %}
 
 ## Request body
 

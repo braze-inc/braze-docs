@@ -22,7 +22,7 @@ The create schedule endpoint allows you to schedule a campaign, Canvas, or other
 
 ## Rate limit
 
-{% include rate_limits.md endpoint='default' %}
+{% include rate_limits.md endpoint='default' category='message endpoints' %}
 
 ## Request body
 

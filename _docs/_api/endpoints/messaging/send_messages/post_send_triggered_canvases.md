@@ -22,7 +22,7 @@ This endpoint allows you to send Canvas messages via API-Triggered delivery, all
 
 ## Rate limit
 
-{% include rate_limits.md endpoint='send endpoints' %}
+{% include rate_limits.md endpoint='send endpoints' category='message endpoints' %}
 
 ## Request body
 

@@ -22,7 +22,7 @@ This endpoint allows you to send campaign messages (up to 90 days in advance) vi
 
 ## Rate limit
 
-{% include rate_limits.md endpoint='default' %}
+{% include rate_limits.md endpoint='default' category='message endpoints' %}
 
 ## Request body
 

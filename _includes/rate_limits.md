@@ -59,3 +59,15 @@ Transactional emails are not subject to a rate limit. Depending on your chosen p
 The daily maximum number of custom send identifiers that can be created via this endpoint is 100 for a given app group. Each `send_id` and `campaign_id` combination that you create will count towards your daily limit. The response headers for any valid request include the current rate limit status, see [API rate limits]({{site.baseurl}}/api/api_limits/) for details.
 
 {% endif %}
+
+<!---Additional if statement for Messaging endpoints-->
+
+{% if include.category == "message endpoints" %}
+
+Braze endpoints support [batching API requests]({{site.baseurl}}/api/api_limits/#batching-api-requests). A single request to the messaging endpoints can reach any of the following:
+
+- Up to 50 specific `external_ids`, each with individual message parameters
+- A segment of any size created in the Braze dashboard, specified by its `segment_id`
+- An ad-hoc audience segment of any size, defined in the request as a [Connected Audience]({{site.baseurl}}/api/objects_filters/connected_audience/) object
+
+{% endif %}

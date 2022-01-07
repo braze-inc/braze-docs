@@ -20,7 +20,7 @@ The delete scheduled messages endpoint allows you to cancel a message that you p
 
 ## Rate limit
 
-{% include rate_limits.md endpoint='default' %}
+{% include rate_limits.md endpoint='default' category='message endpoints' %}
 
 ## Request body
 
