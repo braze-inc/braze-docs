@@ -20,6 +20,10 @@ Les Canevas archivés ne seront pas inclus dans la réponse de l'API, sauf si le
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#e6c150d7-fceb-4b10-91e2-a9ca4d5806d1 {% endapiref %}
 
+## Limite de taux
+
+{% include rate_limits.md endpoint='default' %}
+
 ## Paramètres de la requête
 
 | Paramètre                         | Requis    | Type de données      | Libellé                                                                                                                                                                                                                                                                                                                  |
