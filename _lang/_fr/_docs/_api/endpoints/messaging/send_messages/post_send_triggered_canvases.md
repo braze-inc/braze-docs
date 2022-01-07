@@ -20,6 +20,10 @@ Ce point de terminaison vous permet d'envoyer des messages Canvas via une livrai
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#c9a8a5fe-a101-4755-99f2-73aa8fc146fe {% endapiref %}
 
+## Limite de taux
+
+{% include rate_limits.md endpoint='send endpoints' category='message endpoints' %}
+
 ## Corps de la requête
 
 ```
