@@ -31,7 +31,7 @@ guide_menu_list:
     fa_icon: fas fa-chart-tarte
   - 
     name: Extension de segment
-    link: /fr/docs/user_guide/engagement_tools/segments/segment_extensions/
+    link: /fr/docs/user_guide/engagement_tools/segments/segment_extension/
     fa_icon: fas fa-users
   - 
     name: Utiliser la recherche d'utilisateur
