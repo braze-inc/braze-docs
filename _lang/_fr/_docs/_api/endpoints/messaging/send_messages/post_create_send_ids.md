@@ -16,9 +16,11 @@ description: "Cet article décrit les détails sur le point de terminaison Creat
 
 L’identifiant d’envoi de Braze ajoute la possibilité d’envoyer des messages et de suivre les performances entièrement programmatiques, sans créer de campagne pour chaque envoi. Utiliser l'identifiant d'envoi pour suivre et envoyer des messages est utile si vous prévoyez de générer et d'envoyer du contenu par programme.
 
-Le nombre maximum quotidien d'identifiants d'envoi personnalisés qui peuvent être créés via ce point de terminaison pour un groupe d'applications donné est de 100. Chaque id d'envoi - combinaison d'identifiant de campagne que vous créez comptera dans votre limite quotidienne. Les en-têtes de réponse pour toute requête valide incluent le statut de limite de taux actuel, voir [Limites API]({{site.baseurl}}/api/basics/#api-limits).
-
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#74a04e53-659f-4473-abc5-0f6f735550ff {% endapiref %}
+
+## Limite de taux
+
+{% include rate_limits.md endpoint='sends id create' category='message endpoints' %}
 
 ## Corps de la requête
 
