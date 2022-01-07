@@ -18,6 +18,10 @@ Ce point de terminaison vous permet de récupérer une série quotidienne du nom
 
 {% apiref postman %}https://documentmenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#07756c39-cfa0-40a0-8101-03f8791cec01 {% endapiref %}
 
+## Limite de taux
+
+{% include rate_limits.md endpoint='default' %}
+
 ## Paramètres de la requête
 
 | Paramètre        | Requis    | Type de données                                                                | Libellé                                                                                                                                                                   |
