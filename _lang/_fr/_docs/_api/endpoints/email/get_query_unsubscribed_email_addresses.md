@@ -18,6 +18,10 @@ Utilisez le point de terminaison /email/unsubscribes pour renvoyer les e-mails q
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#d2966b81-188a-407b-ba7e-e6c252c44b4a {% endapiref %}
 
+## Limite de taux
+
+{% include rate_limits.md endpoint='default' %}
+
 ## Paramètres de la requête
 
 Vous devez fournir un `end_date`, ainsi qu'un `email` ou un `start_date`.
