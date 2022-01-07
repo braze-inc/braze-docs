@@ -18,6 +18,10 @@ Cet endpoint appellera des informations pour vos [blocs de contenu d'e-mail exis
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#589adda3-0def-4369-9ddc-eae71923c0ee {% endapiref %}
 
+## Limite de taux
+
+{% include rate_limits.md endpoint='default' %}
+
 ## Paramètres de la requête
 
 | Paramètre                         | Requis    | Type de données      | Libellé                                                                                                                                                                                                                                                                                          |
