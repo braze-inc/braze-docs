@@ -18,6 +18,10 @@ Le point de terminaison des messages planifiés de suppression vous permet d'ann
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#5e89355c-0a5d-4d8b-8d89-2fd99bac36b0 {% endapiref %}
 
+## Limite de taux
+
+{% include rate_limits.md endpoint='default' category='message endpoints' %}
+
 ## Corps de la requête
 
 ```
