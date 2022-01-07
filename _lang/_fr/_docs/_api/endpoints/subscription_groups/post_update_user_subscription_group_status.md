@@ -24,6 +24,10 @@ Si vous voulez voir des exemples ou tester ce point de terminaison pour __SMS Su
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#72558b32-7dbe-4cba-bd22-a7ce513076dd {% endapiref %}
 
+## Limite de taux
+
+{% include rate_limits.md endpoint='default' %}
+
 ## Corps de la requête
 
 {% tabs %}
