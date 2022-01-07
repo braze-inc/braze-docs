@@ -20,6 +20,10 @@ This endpoint allows you to send Canvas messages via API-Triggered delivery, all
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#c9a8a5fe-a101-4755-99f2-73aa8fc146fe {% endapiref %}
 
+## Rate limit
+
+{% include rate_limits.md endpoint='send endpoints' %}
+
 ## Request body
 
 ```

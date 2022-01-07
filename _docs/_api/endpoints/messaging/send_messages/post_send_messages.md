@@ -20,6 +20,10 @@ The send endpoint allows you to send immediate, ad-hoc messages to designated us
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#946cb701-96e3-48d7-868c-f079785b6d24 {% endapiref %}
 
+## Rate limit
+
+{% include rate_limits.md endpoint='send endpoints' %}
+
 ## Request body
 
 ```

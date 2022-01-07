@@ -23,6 +23,10 @@ Transactional Email is currently available as part of select Braze packages. Ple
 
 Similar to the [Send Triggered Campaign endpoint]({{site.baseurl}}/api/endpoints/messaging/send_messages/post_send_triggered_campaigns/), this campaign type allows you to house message content inside of the Braze dashboard while dictating when and to whom a message is sent via your API. Unlike the Send Triggered Campaign Endpoint which accepts an audience or segment to send messages to, a request to this endpoint must specify a single user either by External User ID or User Alias as this campaign type is purpose-built for 1:1 messaging of alerts like order confirmations or password resets.
 
+## Rate limit
+
+{% include rate_limits.md endpoint='transactional email' %}
+
 ## Request body
 
 ```

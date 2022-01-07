@@ -27,6 +27,8 @@ The following table lists specific API rate limits for different request types. 
 | [`/events/list`][15] | 1,000 requests per hour, shared with the `/purchases/product_list` endpoint. |
 | [`/purchases/product_list`][16] | 1,000 requests per hour, shared with the `/events/list` endpoint. |
 | [`/messages/send`][17] | 250 requests per minute when specifying a segment or Connected Audience. Otherwise, 250,000 requests per hour. |
+| [`/campaigns/trigger/send`][17.1] | 250 requests per minute when specifying a segment or Connected Audience. Otherwise, 250,000 requests per hour. |
+| [`/canvas/trigger/send`][17.2] | 250 requests per minute when specifying a segment or Connected Audience. Otherwise, 250,000 requests per hour. |
 | [`/sends/id/create`][18] | 100 requests per day. |
 {: .reset-td-br-1 .reset-td-br-2}
 
@@ -91,4 +93,6 @@ Under normal conditions, the time for our data eventual consistency to occur is 
 [15]: {{site.baseurl}}/api/endpoints/export/custom_events/get_custom_events/
 [16]: {{site.baseurl}}/api/endpoints/export/purchases/get_list_product_id/
 [17]: {{site.baseurl}}/api/endpoints/messaging/send_messages/post_send_messages/
+[17.1]: {{site.baseurl}}/api/endpoints/messaging/send_messages/post_send_triggered_campaigns/
+[17.2]: {{site.baseurl}}/api/endpoints/messaging/send_messages/post_send_triggered_canvases/
 [18]: {{site.baseurl}}/api/endpoints/messaging/send_messages/post_create_send_ids/
