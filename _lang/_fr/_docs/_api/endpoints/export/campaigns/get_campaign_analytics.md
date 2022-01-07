@@ -18,6 +18,10 @@ Ce point de terminaison vous permet de récupérer une série quotidienne de sta
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#c07b5ebd-0246-471e-b154-416d63ae28a1 {% endapiref %}
 
+## Limite de taux
+
+{% include rate_limits.md endpoint='default' %}
+
 ## Paramètres de la requête
 
 | Paramètre        | Requis    | Type de données                                                                | Libellé                                                                                                                                                                                                                                                                                                                                                   |
