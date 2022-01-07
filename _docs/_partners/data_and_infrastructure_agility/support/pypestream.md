@@ -2,7 +2,7 @@
 nav_title: Pypestream
 article_title: Pypestream
 page_order: 5
-description: "This article outlines the partnership between Braze and Pypestream, a full-stack conversational AI platform allowing you to enhance digital engagement with your Brand."
+description: "This article outlines the partnership between Braze and Pypestream, a full-stack conversational AI platform that allows you to enhance digital engagement with your brand."
 alias: /partners/pypestream/
 page_type: partner
 search_tag: Partner
@@ -11,32 +11,37 @@ search_tag: Partner
 
 # Pypestream
 
-> [Pypestream](https://www.pypestream.com) is a full-stack, conversational AI platform offering patented, all-in-one cloud messaging to transform brands into “always-on” digital entities. With Pypestream, brands can now engage in omnichannel conversations at scale with every customer, while leveraging an immersive user experience, advanced NLU capabilities, and real-time integrations to backend systems.
+> [Pypestream](https://www.pypestream.com) is a full-stack, conversational AI platform offering patented, all-in-one cloud messaging to transform brands into “always-on” digital entities. With Pypestream, brands can now engage in omnichannel conversations at scale with every customer while leveraging an immersive user experience, advanced NLU capabilities, and real-time integrations to backend systems.
 
-With the Braze-Pypestream partnership, brands can seamlessly orchestrate the end-to-end customer lifecycle from initial outreach, routed into a conversational experience, and through to omnichannel follow-up(s) via intelligent retargeting. Through the course of their conversation with a brand (facilitated via Pypestream), customers are segmented based on their engagement path, preferences, and responses, all of which are sent back to Braze to subsequently retarget those customers appropriately with Canvas. Brands can finally have an all-in-one 360° view of their conversations with their customers across all channels.
+The Braze and Pypestream integration allows you to seamlessly orchestrate the end-to-end customer lifecycle from initial outreach, routed into a conversational experience, and through to omnichannel follow-up(s) via intelligent retargeting. 
 
 ## Prerequisites
 
-| Requirement | Origin | Access | Description |
-|---|---|---|---|
-| Pypestream Subscription | Pypestream | If not already a Pypestream customer, please reach out via Pypestream's [Contact Page](https://www.pypestream.com/contact-us/) | Once subscribed, the Pypestream team will help you set up your dedicated environment to begin building your conversational AI solution to integrate with Braze. |
-| Braze API Key | Braze | You will need to create a new API Key.<br><br>This can be created in the __Developer Console -> API Settings -> Create New API Key__ with __users.track__ permissions. | The Braze API Key will be used in the API calls to the Braze REST Endpoint URLs to authenticate the service. |
-| Braze REST Endpoint | Braze | [Braze REST Endpoint List]({{site.baseurl}}/api/basics/?redirected=true) | Your REST Endpoint URL. Your endpoint will depend on the Braze URL for your instance. |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
+| Requirement | Description |
+|---|---|
+| Pypestream account | A [Pypestream account](https://www.pypestream.com/contact-us/) is required to take advantage of this partnership.<br><br>Once subscribed, the Pypestream team will help you set up your dedicated environment to begin building your conversational AI solution to integrate with Braze. |
+| Braze REST API key | A Braze REST API key with `users.track` permissions. <br><br> This can be created within the __Braze Dashboard -> Developer Console -> REST API Key -> Create New API Key__ |
+| Braze REST endpoint  | Your REST endpoint URL. Your endpoint will depend on the [Braze URL for your instance]({site.baseurl}}/api/basics/?redirected=true). |
+{: .reset-td-br-1 .reset-td-br-2}
 
-## Overview
+## Use cases
 
-There are multiple ways to leverage the [Braze API Endpoints]({{site.baseurl}}/api/basics/?redirected=true) when designing a conversational solution using Pypestream. The document outlines what is required to set up the initial integration into the Braze Endpoint using Pypestream’s action node structure. The benefit of action nodes is the flexibility it provides when integrating into a service. Once an action node is instantiated, it provides the flexibility of integrating into any Braze API Endpoint and allows the results to be evaluated in a multitude of ways. 
+The Braze and Pypestream partnership can be used in your Canvases to achieve common use cases like:
+* **Intelligent retargeting**: Retarget users with Braze Canvas after their conversational engagement with your brand by leveraging all the rich data points collected via Pypestream.
+* **Dynamic targeting**: Reach out to existing and prospective customers based on their specific cohorts and segments, serving them with tailored conversational experiences via Pypestream.
+* **Contextual customer insights**: Once an end-user (existing or prospective customer) is engaging on your website, combine webpage tags ingested from the Pypestream Event Listener with customer data stored within Braze to provide a fully-personalized and contextual conversational interaction.
 
-## Action node integration
+## Integration
 
-Pypestream leverages a server-less integration layer to perform custom integrations into various platforms. This layer is used to interface with services or systems to support the data requirements of the conversational flow that is being built. These integrations, which are referred to as Action Node Integrations, are typically written in Python and deployed using the Pypestream platform. The steps below highlight how to utilize an action node to integrate a Pypestream conversational flow into the Braze REST APIs. 
+Pypestream leverages a server-less integration layer to perform custom integrations into various platforms. This layer is used to interface with services or systems to support the data requirements of the conversational flow that is being built. These integrations, referred to as Action Node Integrations, are typically written in Python and deployed using the Pypestream platform. Once an action node is instantiated, it provides the flexibility of integrating into any Braze API endpoint and allows the results to be evaluated in many ways. 
 
-*Note: For an overview and configuration steps for Pypestream action nodes, refer to the [Pypestream documentation](https://pypestream.atlassian.net/servicedesk/customer/kb/view/669352070). To access the documentation, you must be a Pypestream customer.*
+{% alert note %}
+Visit this [Pypestream article](https://pypestream.atlassian.net/servicedesk/customer/kb/view/669352070) for an overview and configuration steps for Pypestream action nodes. You must be a Pypestream customer to access this documentation.
+{% endalert %}
 
 ### Step 1: Set endpoint configurations
 
-The primary configuration values, such as the **Braze REST Endpoint URL** and the **Braze API Keys**, should be set in the *app.py* file of the solution: 
+The primary configuration values, such as the **Braze REST Endpoint URL** and the **Braze API Keys**, should be set in the `app.py` file of the solution: 
 
 ```
 import os
@@ -48,12 +53,10 @@ PATH = os.path.dirname(__file__)
 
 PARAMS = {
     'sandbox': {
-
         #Braze
         'braze_url': '{ BRAZE ENDPOINT URL }',
         'braze_api_key': '{ BRAZE API KEY }',
         'braze_user_track': 'users/track'
-
     },
     'prod': {
 
@@ -61,14 +64,13 @@ PARAMS = {
         'braze_url': '{ BRAZE ENDPOINT URL }',
         'braze_api_key': '{ BRAZE API KEY }',
         'braze_user_track': 'users/track'
-
     },
 }
 ```
 
-### Step 2: Develop action node template for integration
+### Step 2: Develop action node template
 
-Action nodes leverage the environment that the solution is deployed to interact with, with the respective Braze endpoints(s) set in the previous step. This step develops an action node to perform the integration into the specific Braze endpoints. The following template can be used as a guide in developing the integrations: 
+Action nodes leverage the environment that the solution is deployed to interact with, with the respective Braze endpoints(s) set in the previous step. This step develops an action node to integrate specific Braze endpoints. Use the following template as a guide in developing the integrations: 
 
 ```
 # -*- coding: utf-8 -*-
@@ -150,34 +152,37 @@ class BrazeExample:
 
         return {'success': 'error'}
 ```
-### Step 3: Update the solution designs to leverage action node integration
+### Step 3: Update the solution designs
 
-The final step of integrating with the Braze REST API involves configuring the flows within Pypestream’s [Design Studio](https://platform.pypestream.com/design-studio/) to leverage the action node that was developed in Step 2. 
+The final step of integrating with the Braze REST API involves configuring the flows within Pypestream’s [Design Studio](https://platform.pypestream.com/design-studio/) to use the action node that was developed in the previous step. 
 
-*Note: For additional information on how to configure nodes within Design Studio, please refer to the [Pypestream documentation](https://pypestream.atlassian.net/servicedesk/customer/kb/view/669352070). To access the documentation, you must be a Pypestream customer.*
+{% alert note %}
+Visit this [Pypestream article](https://pypestream.atlassian.net/servicedesk/customer/kb/view/669352070) for an overview on how to configure modes within Design Studio. You must be a Pypestream customer to access this documentation.
+{% endalert %}
 
-## Example integration - track users for targeting (user/track) 
+## Example integration
 
-Once the prerequisites are met and an action node structure has been created, the developer has a blank Canvas to work from when interacting with the Braze API Endpoints. Listed below are the steps required to integrate an action node into the Braze [User Track Endpoint]({{site.baseurl}}/api/endpoints/user_data/post_user_track/) - specifically to create a user profile to track a specific user entering a Pypestream conversational flow:
+Once the prerequisites are met, and an action node structure has been created, the developer has a blank Canvas to work from when interacting with the Braze API endpoints. This example shows the steps required to integrate an action node into the Braze [user track endpoint]({{site.baseurl}}/api/endpoints/user_data/post_user_track/) - specifically to create a user profile to track a specific user entering a Pypestream conversational flow.
 
-### Step 1: Collect data from user in conversation
+### Step 1: Collect data from the user in conversation
 
-When a user enters into a Pypestream session, the specifics of the data collected are entirely dependent on the use case at hand. To be able to create a user profile within Braze, the conversation must collect data to send to Braze via the [User Track Endpoint]({{site.baseurl}}/api/endpoints/user_data/post_user_track/). 
+When a user enters into a Pypestream session, the specifics of the data collected are entirely dependent on the use case at hand. To be able to create a user profile within Braze, the conversation must collect necessary fields 
+required by the desired endpoint.
 
-For example, if the solution collected the following information from the user during the conversation: 
+For example, if the solution collected the following information from the user during the conversation for the [user track endpoint]({{site.baseurl}}/api/endpoints/user_data/post_user_track/): 
 
-* First Name
-* Last Name
-* Email Address
-* Date of Birth
-* City of Residence
-* Operating System
+* First name
+* Last name
+* Email address
+* Date of birth
+* City of residence
+* Operating system
 
-This data can now be sent to the Braze platform to track this user’s engagement with the ability to potentially retarget them in the future. Please check out the use case list to view some common applications.
+This data can now be sent to the Braze platform to track this user’s engagement with the ability to potentially retarget them in the future. Check out the [use case list](#use-cases) to view common applications.
 
-### Step 2: Populate data in action node structure
+### Step 2: Populate data in the action node structure
 
-Leveraging the same structure for developing action nodes as outlined above, the data collected from the user can be populated in the action node to be sent to Braze via the [User Track Endpoint]({{site.baseurl}}/api/endpoints/user_data/post_user_track/):
+Leveraging the same structure for developing action nodes as outlined above, the data collected from the user can be populated in the action node to be sent to Braze via the [user track endpoint]({{site.baseurl}}/api/endpoints/user_data/post_user_track/).
 
 ```
 # -*- coding: utf-8 -*-
@@ -272,11 +277,4 @@ class BrazeExample:
 
 ### Step 3: Update solution flows to redirect upon success/failure of action node
 
-In each solution’s design, the solution designer can route users to nodes based on if the action node API call was successful. If the action node received an error message, the end-user should be handled with care. 
-
-## Use cases
-
-When it comes to the Braze-Pypestream partnership, the possibilities are nearly endless! We’ve highlighted a few common applications below to summarize the most common ways that brands have leveraged the combined capabilities:
-* **Intelligent Retargeting**: Retarget users with Braze Canvas after their conversational engagement with your brand by leveraging all the rich data points collected via Pypestream.<br><br>
-* **Dynamic Targeting**: Reach out to existing and prospective customers based on their specific cohorts and segments (as defined with Braze), serving them with tailored conversational experiences via Pypestream.<br><br>
-* **Contextual Customer Insights**: Once an end-user (existing or prospective customer) is engaging on your website, combine webpage tags ingested from the Pypestream Event Listener with customer data stored within Braze to provide a fully-personalized and contextual conversational interaction.
+Lastly, in each solution’s design, you can route users to nodes based on if the action node API call was successful. If the action node receives an error message, the end-user should be handled with care. 
