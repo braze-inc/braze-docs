@@ -22,6 +22,10 @@ Le courrier électronique transactionnel est actuellement disponible dans le cad
 
 Similaire au [Envoyer le point de terminaison de la campagne déclenchée]({{site.baseurl}}/api/endpoints/messaging/send_messages/post_send_triggered_campaigns/), ce type de campagne vous permet d'héberger le contenu des messages dans le tableau de bord Braze tout en dictant quand et à qui un message est envoyé via votre API. Contrairement au point de terminaison de la campagne déclenchée qui accepte un public ou un segment pour envoyer des messages, une requête à ce point de terminaison doit spécifier un seul utilisateur soit par un ID Utilisateur Externe, soit par un Alias Utilisateur, ce type de campagne est conçu pour la messagerie 1:1 d'alertes comme les confirmations de commande ou les réinitialisations de mot de passe.
 
+## Limite de taux
+
+{% include rate_limits.md endpoint='transactional email' %}
+
 ## Corps de la requête
 
 ```
