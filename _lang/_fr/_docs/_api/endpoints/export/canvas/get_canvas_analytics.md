@@ -18,6 +18,10 @@ Ce point de terminaison vous permet d'exporter des données de séries temporell
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#0fd61e93-7edf-4d87-a8dc-052420aefb73 {% endapiref %}
 
+## Limite de taux
+
+{% include rate_limits.md endpoint='default' %}
+
 ## Paramètres de la requête
 
 | Paramètre                                   | Requis     | Type de données                                                                | Libellé                                                                                                                                                                                             |
