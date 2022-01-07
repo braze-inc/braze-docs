@@ -21,8 +21,12 @@ Note that a company may run at most one export per segment using this endpoint a
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#cfa6fa98-632c-4f25-8789-6c3f220b9457 {% endapiref %}
 
 {% alert important %}
-Beginning December 2021, the following changes will take effect for this API:<br><br>1. The `fields_to_export` field in this API request will be __required__. The option to default to all fields will be removed.<br>2. The fields for `custom_events`, `purchases`, `campaigns_received`, and `canvases_received` will only contain data from the last 90 days.
+Beginning December 2021, the following changed for this API:<br><br>1. The `fields_to_export` field in this API request is __required__. The option to default to all fields has been removed.<br>2. The fields for `custom_events`, `purchases`, `campaigns_received`, and `canvases_received` only contain data from the last 90 days.
 {% endalert %}
+
+## Rate limit
+
+{% include rate_limits.md endpoint='default' %}
 
 ## Credentials-based response details
 

@@ -20,12 +20,12 @@ This endpoint allows you to delete any user profile by specifying a known user i
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#22e91d00-d178-4b4f-a3df-0073ecfcc992 {% endapiref %}
 
 {% alert warning %}
-Deleting user profiles CANNOT be undone. It will PERMANENTLY remove users which may cause discrepancies in your data. Learn more about [what happens when you delete a user profile via API]({{site.baseurl}}/help/help_articles/api/delete_user/) in our Help documentation.
+Deleting user profiles cannot be undone. It will permanently remove users which may cause discrepancies in your data. Learn more about what happens when you [delete a user profile via API]({{site.baseurl}}/help/help_articles/api/delete_user/) in our Help documentation.
 {% endalert %}
 
-{% alert note %}
-A rate limit is applied to requests made to this endpoint for customers who onboarded with Braze on or after September 16, 2021. For more information, see [API Limits]({{site.baseurl}}/api/basics/#api-limits).
-{% endalert %}
+## Rate limit
+
+{% include rate_limits.md endpoint='users delete' %}
 
 ## Request body
 
