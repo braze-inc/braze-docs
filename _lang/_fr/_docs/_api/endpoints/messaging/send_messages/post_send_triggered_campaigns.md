@@ -20,6 +20,10 @@ Le point de terminaison d'envoi vous permet d'envoyer immédiatement des message
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#aef185ae-f591-452a-93a9-61d4bc023b05 {% endapiref %}
 
+## Limite de taux
+
+{% include rate_limits.md endpoint='send endpoints' category='message endpoints' %}
+
 ## Corps de la requête
 
 ```
