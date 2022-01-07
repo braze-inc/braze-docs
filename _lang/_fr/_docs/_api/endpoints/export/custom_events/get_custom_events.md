@@ -18,9 +18,9 @@ Ce point de terminaison vous permet d'exporter une liste d'événements personna
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#93ecd8a5-305d-4b72-ae33-2d74983255c1 {% endapiref %}
 
-{% alert note %}
-Une limite de taux est appliquée aux demandes faites à ce point de terminaison pour les clients embarqués avec Braze le ou après le 16 septembre 2021. Pour plus d'informations, voir [les limites de l'API]({{site.baseurl}}/api/basics/#api-limits).
-{% endalert %}
+## Limite de taux
+
+{% include rate_limits.md endpoint='events list' %}
 
 ## Paramètres de la requête
 
