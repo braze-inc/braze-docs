@@ -24,6 +24,10 @@ Les modèles construits à l'aide de l'éditeur Drag & Drop ne sont pas accepté
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#e98d2d5b-62fe-4358-b391-9fe9e460d0ac {% endapiref %}
 
+## Limite de taux
+
+{% include rate_limits.md endpoint='default' %}
+
 ## Paramètres de la requête
 
 | Paramètre                | Requis | Type de données      | Libellé                                                                      |
