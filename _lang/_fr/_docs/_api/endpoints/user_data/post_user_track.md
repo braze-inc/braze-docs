@@ -16,14 +16,15 @@ description: "Cet article décrit les détails sur le point de terminaison de la
 
 Utilisez ce point de terminaison pour enregistrer des événements personnalisés, des achats et mettre à jour les attributs du profil utilisateur.
 
-User Track a une limite de vitesse de base de 50 000 demandes par minute pour tous les clients. Chaque demande peut contenir jusqu'à 75 événements, 75 mises à jour d'attributs et 75 achats. Chaque composant (événement, attribut et tableau d'achat), peut mettre à jour jusqu'à 75 utilisateurs chacun (maximum de 225 utilisateurs individuels). Chaque mise à jour peut également appartenir au même utilisateur pour un maximum de 225 mises à jour à un seul utilisateur dans une requête. Veuillez consulter notre page sur les limites de l’API pour plus de détails, et contactez votre Responsable du service clientèle si vous avez besoin d’une augmentation de votre limite.
-
 {% alert note %}
-Braze traite les données passées via l'API à la valeur faciale et les clients ne doivent passer des deltas (changement de données) que pour minimiser la consommation inutile de points de données. Pour en savoir plus, consultez notre [documentation]({{site.baseurl}}/user_guide/onboarding_with_braze/data_points/#data-points) du point de données .
+Braze traite les données passées via l'API à la valeur faciale et les clients ne doivent passer des deltas (changement de données) que pour minimiser la consommation inutile de points de données. Pour en savoir plus, reportez-vous à [Data points]({{site.baseurl}}/user_guide/onboarding_with_braze/data_points/#data-points).
 {% endalert %}
 
-
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#4cf57ea9-9b37-4e99-a02e-4373c9a4ee59 {% endapiref %}
+
+## Limite de taux
+
+{% include rate_limits.md endpoint='users track' %}
 
 ## Corps de la requête
 
