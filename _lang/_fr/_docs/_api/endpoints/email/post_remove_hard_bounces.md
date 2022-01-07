@@ -18,6 +18,10 @@ Ce point de terminaison vous permet de supprimer les adresses e-mail de votre li
 
 {% apiref postman %}https://documentmenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#7b87a884-fa20-4085-b9f1-18363103575f {% endapiref %}
 
+## Limite de taux
+
+{% include rate_limits.md endpoint='default' %}
+
 ## Corps de la requête
 
 ```
