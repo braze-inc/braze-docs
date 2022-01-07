@@ -18,6 +18,10 @@ Ce point de terminaison vous permet de récupérer des informations pertinentes 
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#5b1401a6-f12c-4827-82c9-8dc604f1671e {% endapiref %}
 
+## Limite de taux
+
+{% include rate_limits.md endpoint='default' %}
+
 ## Paramètres de la requête
 
 | Paramètre        | Requis | Type de données      | Libellé                                                                                                                                                                                                                                                                                                                                                                                                                 |
