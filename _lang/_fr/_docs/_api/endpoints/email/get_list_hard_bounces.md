@@ -18,6 +18,10 @@ Ce point de terminaison vous permet de tirer une liste d'adresses e-mail qui ont
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#7c2ef84f-ddf5-451a-a72c-beeabc06ad9d {% endapiref %}
 
+## Limite de taux
+
+{% include rate_limits.md endpoint='default' %}
+
 ## Paramètres de la requête
 
 Vous devez fournir soit un `start_date` et `end_date` OU un `email`.
