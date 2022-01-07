@@ -18,6 +18,10 @@ Ce point de terminaison vous permet d'exporter une liste de campagnes, dont chac
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#f3b0b3ef-04fb-4a31-8570-e6ad88dacb18 {% endapiref %}
 
+## Limite de taux
+
+{% include rate_limits.md endpoint='default' %}
+
 ## Paramètres de la requête
 
 | Paramètre                         | Requis    | Type de données      | Libellé                                                                                                                                                                                                                                                                                                                  |
