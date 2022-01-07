@@ -22,6 +22,10 @@ Utilisez les points de terminaison ci-dessous pour créer des modèles d'e-mail 
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#5eb1fe0d-2795-474d-aaf2-c4e2977dc94b {% endapiref %}
 
+## Limite de taux
+
+{% include rate_limits.md endpoint='default' %}
+
 ## Corps de la requête
 
 ```
