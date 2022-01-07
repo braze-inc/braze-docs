@@ -18,6 +18,10 @@ Ce point de terminaison va vous lister les [blocs de contenu existants]({{site.b
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#6d87048f-68fd-46c9-aa15-3a970e99540e {% endapiref %}
 
+## Limite de taux
+
+{% include rate_limits.md endpoint='default' %}
+
 ## Paramètres de la requête
 
 | Paramètre       | Requis    | Type de données                                                     | Libellé                                                                                                                              |
