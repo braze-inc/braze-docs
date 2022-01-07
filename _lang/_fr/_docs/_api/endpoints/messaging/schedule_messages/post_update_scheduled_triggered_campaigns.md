@@ -21,6 +21,10 @@ Toute planification écrasera complètement celle que vous avez fournie dans la 
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#6d2a6e66-9d6f-4ae1-965a-79fa52b86b1d {% endapiref %}
 
+## Limite de taux
+
+{% include rate_limits.md endpoint='default' category='message endpoints' %}
+
 ## Corps de la requête
 
 ```
