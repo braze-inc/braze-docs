@@ -20,6 +20,10 @@ Ce point de terminaison vous permet d'envoyer des messages de campagne (jusqu'à
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#b7e61de7-f2c2-49c9-9e46-b85a0aa01bba {% endapiref %}
 
+## Limite de taux
+
+{% include rate_limits.md endpoint='default' category='message endpoints' %}
+
 ## Corps de la requête
 
 ```
