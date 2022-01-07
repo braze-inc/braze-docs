@@ -33,7 +33,7 @@ The Braze and Pypestream partnership can be used in your Canvases to achieve com
 
 ## Integration
 
-Pypestream leverages a server-less integration layer to perform custom integrations into various platforms. This layer is used to interface with services/systems to support the data requirements of the conversational flow that is being built. These integrations, referred to as Action Node Integrations, are typically written in Python and deployed using the Pypestream platform. Once an action node is instantiated, it provides the flexibility of integrating into any Braze API endpoint and allows the results to be evaluated in many ways. 
+Pypestream leverages a server-less integration layer to perform custom integrations into various platforms. This layer is used to interface with services or systems to support the data requirements of the conversational flow that is being built. These integrations, referred to as Action Node Integrations, are typically written in Python and deployed using the Pypestream platform. Once an action node is instantiated, it provides the flexibility of integrating into any Braze API endpoint and allows the results to be evaluated in many ways. 
 
 {% alert note %}
 Visit this [Pypestream article](https://pypestream.atlassian.net/servicedesk/customer/kb/view/669352070) for an overview and configuration steps for Pypestream action nodes. You must be a Pypestream customer to access this documentation.
@@ -162,7 +162,7 @@ Visit this [Pypestream article](https://pypestream.atlassian.net/servicedesk/cus
 
 ## Example integration
 
-Once the prerequisites are met, and an action node structure has been created, the developer has a blank Canvas to work from when interacting with the Braze API Endpoints. This example shows the steps required to integrate an action node into the Braze [user track endpoint]({{site.baseurl}}/api/endpoints/user_data/post_user_track/) - specifically to create a user profile to track a specific user entering a Pypestream conversational flow.
+Once the prerequisites are met, and an action node structure has been created, the developer has a blank Canvas to work from when interacting with the Braze API endpoints. This example shows the steps required to integrate an action node into the Braze [user track endpoint]({{site.baseurl}}/api/endpoints/user_data/post_user_track/) - specifically to create a user profile to track a specific user entering a Pypestream conversational flow.
 
 ### Step 1: Collect data from the user in conversation
 
