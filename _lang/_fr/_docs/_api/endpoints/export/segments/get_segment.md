@@ -18,6 +18,10 @@ Ce point de terminaison vous permet d'exporter une liste de segments, dont chacu
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#1349e6f4-3ce7-4e60-b3e9-951c99c0993f {% endapiref %}
 
+## Limite de taux
+
+{% include rate_limits.md endpoint='default' %}
+
 ## Paramètres de la requête
 
 | Paramètre       | Requis    | Type de données      | Libellé                                                                                                                                                                                                                                                                                                                  |
