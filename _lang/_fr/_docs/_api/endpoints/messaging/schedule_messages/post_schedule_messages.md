@@ -20,6 +20,10 @@ Le point de terminaison de l'horaire de création vous permet de planifier une c
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#25272fb8-bc39-41df-9a41-07ecfd76cb1d {% endapiref %}
 
+## Limite de taux
+
+{% include rate_limits.md endpoint='default' category='message endpoints' %}
+
 ## Corps de la requête
 
 ```
