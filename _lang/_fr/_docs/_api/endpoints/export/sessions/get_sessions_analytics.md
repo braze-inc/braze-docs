@@ -18,6 +18,10 @@ Ce point de terminaison vous permet de récupérer une série de sessions pour v
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#79efb6a9-62ec-4b8a-bf4a-e96313aa4be1 {% endapiref %}
 
+## Limite de taux
+
+{% include rate_limits.md endpoint='default' %}
+
 ## Paramètres de la requête
 
 | Paramètre             | Requis    | Type de données                                                                | Libellé                                                                                                                                                               |
