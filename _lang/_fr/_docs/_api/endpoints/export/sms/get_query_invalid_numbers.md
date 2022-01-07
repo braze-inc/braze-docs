@@ -18,6 +18,11 @@ hidden: vrai
 Ce point de terminaison vous permet de tirer une liste de numéros de téléphone qui ont été considérés comme « invalides » dans un certain laps de temps.
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#7c2ef84f-ddf5-451a-a72c-beeabc06ad9d {% endapiref %}
+
+## Limite de taux
+
+{% include rate_limits.md endpoint='default' %}
+
 ## Paramètres de la requête
 
 Vous devez fournir soit un `start_date` et un `end_date` OU `phone_numbers`.
