@@ -20,6 +20,10 @@ Ce point de terminaison vous permet de planifier les messages de Canvas (jusqu'Ã
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#4bc75890-b807-405d-b226-5aca284e6b7d {% endapiref %}
 
+## Limite de taux
+
+{% include rate_limits.md endpoint='default' category='message endpoints' %}
+
 ## Corps de la requÃªte
 
 ```
