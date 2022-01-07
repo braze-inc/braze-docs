@@ -22,7 +22,7 @@ At a minimum, you will need to enable the integration from the RevenueCat dashbo
 | RevenueCat account and app | A [RevenueCat account][9] is required to take advantage of this partnership. You must also have a configured RevenueCat app. |
 | RevenueCat SDK | In addition to the required Braze SDK, we recommend installing the [RevenueCat SDK][8] to provide user aliases to RevenueCat. |
 | Braze instance | Your Braze instance can be obtained from your Braze onboarding manager or can be found on the [API overview page]({{site.baseurl}}/api/basics/#endpoints).<br><br>RevenueCat requires the Braze instance to send server-side to the correct Braze REST endpoint. |
-| Braze REST API key | A Braze REST API Key with `users.track` permissions. <br><br> This can be created within the **Braze Dashboard -> Developer Console -> REST API Key -> Create New API Key** |
+| Braze REST API key | A Braze REST API key with `users.track` permissions. <br><br> This can be created within the **Braze Dashboard -> Developer Console -> REST API Key -> Create New API Key** |
 | Braze test REST API key (optional) | A test API key can be used for test and production purchases if you'd like these requests sent to separate Braze instances. |
 {: .reset-td-br-1 .reset-td-br-2}
 
