@@ -20,6 +20,10 @@ Utilisez les API REST de modèle pour gérer programmatiquement les modèles d'e
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#eec24bf4-a3f4-47cb-b4d8-bb8f03964cca {% endapiref %}
 
+## Limite de taux
+
+{% include rate_limits.md endpoint='default' %}
+
 ## Paramètres de la requête
 
 | Paramètre       | Requis    | Type de données                                                     | Libellé                                                                                                                     |
