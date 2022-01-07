@@ -21,8 +21,12 @@ Notez qu'une entreprise peut fonctionner à un maximum d'un export par segment e
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#cfa6fa98-632c-4f25-8789-6c3f220b9457 {% endapiref %}
 
 {% alert important %}
-À partir de décembre 2021, les modifications suivantes prendront effet pour cette API :<br><br>1. Le champ `fields_to_export` dans cette requête API sera __requis__. L'option par défaut à tous les champs sera supprimée.<br>2. Les champs pour `custom_events`, `achats`, `campagnes_received`, et `canvases_received` ne contiendra que les données des 90 derniers jours.
+À partir de décembre 2021, ce qui suit a changé pour cette API :<br><br>1. Le champ `fields_to_export` dans cette requête API est __requis__. L'option par défaut à tous les champs a été supprimée.<br>2. Les champs pour `custom_events`, `achats`, `campagnes_received`, et `canvases_received` ne contiennent que des données des 90 derniers jours.
 {% endalert %}
+
+## Limite de taux
+
+{% include rate_limits.md endpoint='default' %}
 
 ## Détails de la réponse basée sur les identifiants
 
