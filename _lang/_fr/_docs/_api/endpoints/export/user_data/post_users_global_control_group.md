@@ -18,6 +18,10 @@ Ce point de terminaison vous permet d'exporter tous les utilisateurs du Groupe d
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#aa3d8b90-d984-48f0-9287-57aa30469de2 {% endapiref %}
 
+## Limite de taux
+
+{% include rate_limits.md endpoint='default' %}
+
 ## Détails de la réponse basée sur les identifiants
 
 Si vous avez ajouté vos identifiants S3 à Braze, alors chaque fichier sera téléchargé dans votre seau sous forme de fichier zip avec le format de clé qui ressemble à `segment-export/SEGMENT_ID/YYYY-MM-dd/RANDOM_UUID-TIMESTAMP_WHEN_EXPORT_STARTED/filename. ip`. Nous allons créer 1 fichier par 5000 utilisateurs pour optimiser le traitement. Vous pouvez ensuite décompresser les fichiers et concaténer tous les fichiers `json` dans un seul fichier si nécessaire. Si vous spécifiez un `output_format` de `gzip`, l'extension du fichier sera `. z` au lieu de `.zip`.
