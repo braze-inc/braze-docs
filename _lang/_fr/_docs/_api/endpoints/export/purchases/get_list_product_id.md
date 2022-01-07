@@ -18,6 +18,10 @@ Ce point de terminaison renvoie les listes paginées des identifiants de produit
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#dff4ed40-81f5-451d-9d44-accc0e932285{% endapiref %}
 
+## Limite de taux
+
+{% include rate_limits.md endpoint='purchases product list' %}
+
 ## Paramètres de la requête
 
 | Paramètre | Requis    | Type de données      | Libellé                                                          |
