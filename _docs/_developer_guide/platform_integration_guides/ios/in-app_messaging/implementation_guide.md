@@ -77,9 +77,11 @@ There are three sample customer use cases provided. Each sample has video walkth
 
 ### Custom slideup in-app message
 
-While building out your slide-up in-app message, you may notice you aren't able to modify the placement of the message. While this option is not explicitly offered out-of-the-box, modification like this is made possible by subclassing the `ABKInAppMessageSlideupViewController` and overriding the `slideConstraint` value with your own custom constraint value. Visit the [SlideFromBottomViewController](https://github.com/braze-inc/braze-growth-shares-ios-demo-app/blob/master/Braze-Demo/ViewController/In-App-Messages/SlideFromBottomViewController.swift) to get started.
+![Slideup in-app message][2]{: style="float:right;max-width:45%;margin-left:15px;border:0;"}
 
-{% include video.html id="j6dvNSbK2-8" align="center" %}
+While building out your slide-up in-app message, you may notice you aren't able to modify the placement of the message. While this option is not explicitly offered out-of-the-box, modification like this is made possible by subclassing the `ABKInAppMessageSlideupViewController` and overriding the `slideConstraint` value with your own custom constraint value. The image to the right shows two examples of how this can be used to adjust both slide-up and slide-down in-app messages. 
+
+Visit the [SlideFromBottomViewController](https://github.com/braze-inc/braze-growth-shares-ios-demo-app/blob/master/Braze-Demo/ViewController/In-App-Messages/SlideFromBottomViewController.swift) to get started.
 
 #### __Adding additional behavior to our default UI__<br><br>
 
@@ -206,9 +208,23 @@ Adjust the respective value in `viewWillTransition()` because the subclass assum
 
 ### Custom modal in-app message
 
-An `ABKInAppMessageModalViewController` can be subclassed to leverage a `UIPickerView` offering engaging ways to collect valuable user attributes. The example below shows how you can use Connected Content to capture custom attributes from a dynamic list of items. Visit the [ModalPickerViewController](https://github.com/braze-inc/braze-growth-shares-ios-demo-app/blob/master/Braze-Demo/ViewController/In-App-Messages/ModalPickerViewController/ModalPickerViewController.swift) to get started.
+![Modal in-app message][3]{: style="float:right;max-width:23%;margin-left:15px;border:0;"}
 
-{% include video.html id="FhRCxkLRr3M" align="center" %}
+An `ABKInAppMessageModalViewController` can be subclassed to leverage a `UIPickerView` offering engaging ways to collect valuable user attributes. The custom modal in-app message allows you to use Connected Content or any other available list to display and caputure attributes from a dynamic list of items. 
+
+The example to the right displays a custom view listing American baseball teams that a user can select from. Once selected, this team will be saved as a custom attribute to their user profile.
+
+Visit the [ModalPickerViewController](https://github.com/braze-inc/braze-growth-shares-ios-demo-app/blob/master/Braze-Demo/ViewController/In-App-Messages/ModalPickerViewController/ModalPickerViewController.swift) to get started.
+
+#### Dashboard configuration
+
+To set up a modal in-app message in the dashboard, your must provide a list of items formatted as an array of strings. In our example, we used Connected Content to pull a JSON list of team names, and formatted them accordingly.
+
+![Modal dashboard][4]
+
+In the key-value pairs, provide an `attribute_key`, this key, along with the user's selected value will be saved to their user profile as a custom attribute. Next, add a key `view_type` with the value picker, this will override the load view, providing the in-app message with our custom view. User attributes sent to Braze must be dealt with by our custom view handling.
+
+![Modal dashboard key-value pairs][5]{: style="max-width:65%;"}
 
 {% tabs %}
 {% tab Swift %}
@@ -331,10 +347,22 @@ Using the subclass, after a user presses submit, pass the attribute with its cor
 
 Use custom full in-app messages to create interactive, user-friendly prompts to collect valuable customer data. The example below shows an implementation of the custom full in-app message reimagined as an interactive push primer with notification preferences. Visit the [FullListViewController](https://github.com/braze-inc/braze-growth-shares-ios-demo-app/blob/master/Braze-Demo/ViewController/In-App-Messages/FullListViewController/FullListViewController.swift) to get started.
 
-{% include video.html id="_P-LNHpXI88" align="center" %}
+Building our own view as a reimagined push primer with the push preferences in the message itself. In this, the user gets that much needed context why to subscribe to push, and give the user the option to pick and choose what they want to subscribe to. 
+
+## Dashboard Setup
+
+Setting this up in the dashboard is fairly simple, we just need to add our list of push tags which should be converted from a string to an array, and then use the KVP from IAM so the app can handle the appropriate logic to use the custom view.
+
+How that works is we have our helper method to provide the correct view controller for full IAM from the UIdelegate. We query the extras dictionary on the IAM to check if it has a view_type value, then check if it has a valid vaue, then render inAppMessage with the custom view. In our XIB, we set the view controller view to ABKclasses, and hook up the outlets accordingly. We define our own custom behavior and buttons in the subclass while the super class handles the default action for button presses such as dismiss in-app message.
+
+How to deal with immersive messages and intercept touches from the superclass, ABKinappmessages immersive messages add a tap gesture recognizer to dismiss messages with zero buttons. This is useful, but we need our custom view to handle these touches instead, so when a user configures these push tabs, they update accordingly in the view. We have a UI table view but the tableviewdidselect method is ignored due to the recognize, This is not a problem through the use of a UI button or UI button switch in the table view cell, we are able to handle these touches as we normally would.
 
 #### Intercepting in-app message touches
 ![Touches][1]{: style="float:right;max-width:30%;margin-left:10px;border:0"}
 Intercepting in-app message touches is crucial in making the custom full in-app message buttons function correctly. By default, the `ABKInAppMessageImmersive` adds a tap gesture recognizer onto the message so users are able to dismiss messages without buttons. Through the use of adding a `UISwitch` or button to the `UITableViewCell` view hierarchy, the touches now get handled by our custom view. As of iOS 6, buttons and other controls have precedence when working with gesture recognizers, making our custom full in-app message work as it should. 
 
 [1]: {% image_buster /assets/img/iam_implementation_guide.png %}
+[2]: {% image_buster /assets/img/iam_implementation/slideup.png %}
+[3]: {% image_buster /assets/img/iam_implementation/modal.png %}
+[4]: {% image_buster /assets/img/iam_implementation/dashboard1.png %}
+[5]: {% image_buster /assets/img/iam_implementation/dashboard2.png %}
