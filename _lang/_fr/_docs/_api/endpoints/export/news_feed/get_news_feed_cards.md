@@ -18,6 +18,10 @@ Ce point de terminaison vous permet d'exporter une liste de cartes de flux d'act
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#9fa7a3bc-4a02-4de2-bc4c-8f111750665e {% endapiref %}
 
+## Limite de taux
+
+{% include rate_limits.md endpoint='default' %}
+
 ## Paramètres de la requête
 
 | Paramètre         | Requis    | Type de données      | Libellé                                                                                                                                                                                                                                                                                                                  |
