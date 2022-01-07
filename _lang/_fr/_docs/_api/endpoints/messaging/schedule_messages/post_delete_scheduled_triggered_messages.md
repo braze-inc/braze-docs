@@ -18,6 +18,10 @@ Le point de terminaison de la suppression du planning vous permet d'annuler un m
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#7d34037f-4bf2-4fab-bc9c-c972988051a7 {% endapiref %}
 
+## Limite de taux
+
+{% include rate_limits.md endpoint='default' category='message endpoints' %}
+
 ## Corps de la requête
 
 Les messages planifiés ou les déclencheurs qui sont supprimés très près ou pendant la période où ils étaient censés être envoyés seront mis à jour avec le maximum d'efforts, de sorte que les suppressions de dernière seconde puissent être appliquées à tous, à certains ou à aucun de vos utilisateurs ciblés.
