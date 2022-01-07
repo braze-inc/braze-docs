@@ -376,9 +376,9 @@ Les données sont disponibles en temps réel et vous pouvez survoler les points 
 
 ## Foire aux questions {#faq}
 
-#### Puis-je utiliser cette fonctionnalité uniquement sur certaines de mes applications ? {#faq-app-by-app}
+#### Cette fonctionnalité doit-elle être activée sur toutes mes applications en même temps ? {#faq-app-by-app}
 
-Oui, cette fonctionnalité peut être activée pour des applications spécifiques et n'a pas besoin d'être utilisée sur toutes vos applications.
+Non, cette fonctionnalité peut être activée pour des applications spécifiques et n'a pas besoin d'être utilisée sur toutes vos applications, tout cela en même temps.
 
 #### Qu'advient-il des utilisateurs qui sont encore sur des versions plus anciennes de mon application ? {#faq-sdk-backward-compatibility}
 
