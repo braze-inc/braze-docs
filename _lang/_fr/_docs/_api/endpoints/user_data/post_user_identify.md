@@ -26,9 +26,9 @@ Par la suite, vous pouvez associer plusieurs alias utilisateurs supplémentaires
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#5f74e0f7-0620-4c7b-b0a2-f5f38fdbff58 {% endapiref %}
 
-{% alert note %}
-Une limite de taux est appliquée aux demandes faites à ce point de terminaison pour les clients embarqués avec Braze le ou après le 16 septembre 2021. Pour plus d'informations, voir [les limites de l'API]({{site.baseurl}}/api/basics/#api-limits).
-{% endalert %}
+## Limite de taux
+
+{% include rate_limits.md endpoint='users identify' %}
 
 ## Corps de la requête
 
