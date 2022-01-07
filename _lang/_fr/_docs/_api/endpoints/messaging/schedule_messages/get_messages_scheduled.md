@@ -18,6 +18,10 @@ Vous pouvez afficher une liste JSON de campagnes à venir et planifiées et de C
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#6f623cc3-383b-4bf7-b14d-7c56fc5562f5 {% endapiref %}
 
+## Limite de taux
+
+{% include rate_limits.md endpoint='default' category='message endpoints' %}
+
 ## Paramètres de la requête
 
 | Paramètre      | Requis | Type de données                                                     | Libellé                                                                                                                                       |
