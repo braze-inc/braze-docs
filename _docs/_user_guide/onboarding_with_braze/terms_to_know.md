@@ -16,10 +16,12 @@ glossaries:
     description: A type of testing where one or more variables are changed and tested to see which changes perform best. <a href="https://www.braze.com/docs/user_guide/engagement_tools/campaigns/testing_and_more/multivariate_testing/#multivariate--ab-testing">A/B Testing</a> can be done within dashboard campaigns.
   - name: Alloys
     description: <a href = "https://www.braze.com/docs/partners/home/"> Alloys</a> are Braze's Technology Partners.
+  - name: Anonymous Users
+    description: When a user profile is recognized via the SDK, an anonymous user profile is created with the associated Braze User ID. 
   - name: Application Program Interface (API)
     description: The <a href="https://www.braze.com/docs/api/basics/#api-overview">Braze API</a> provides a web service where you can record actions taken by your users directly via HTTP, rather than through the mobile SDKs. This allows you to, for example, pass user data to Braze that is not tracked within your app or website.
   - name: Braze (The Product)
-    description: Sometimes referred to as the dashboard, this product controls all of the data and interactions at the heart of the Braze platform. Braze Customers use it to manage notifications, set up targeted messaging campaigns, and view analytics. Developers use it to manage settings for integrating apps, such as API keys and push notification credentials.
+    description: Sometimes referred to as the dashboard, this product controls all of the data and interactions at the heart of the Braze platform. Braze customers use it to manage notifications, set up targeted messaging campaigns, and view analytics. Developers use it to manage settings for integrating apps, such as API keys and push notification credentials.
   - name: Braze Engagement Tools
     description: Braze offers many <a href="https://www.braze.com/docs/user_guide/engagement_tools/">tools</a> to reach your customers and users with our campaigns, Canvas tools, and you can optimize for consistency (and upload images and other content) using our Templates & Media tools. From there, you can create Segments and Geofences to target your audience by location or other attributes.
   - name: Braze Teams
@@ -52,14 +54,16 @@ glossaries:
     description: A user is considered <a href="https://www.braze.com/docs/user_guide/data_and_analytics/user_data_collection/user_archival/#inactive-users">inactive</a> when they reach certain criteria like no longer receiving email or push messages and have not been active for over 6 months.
   - name: IP Warming
     description: The practice of gradually increasing the amount of mail sent out from a dedicated IP. <a href="https://www.braze.com/docs/user_guide/onboarding_with_braze/email_setup/ip_warming/#ip-warming">IP warming</a> helps establish a reputation with Internet Service Providers, minimizing the probability of your messages getting flagged.
+  - name: Key-Value Pairs
+    description: Two linked data items where the key is a unique identifier and the value is the content. <a href="http://www.braze.com/docs/user_guide/personalization_and_dynamic_content/key_value_pairs/">Key-value pairs</a> can be used to send extra data payloads to user devices.
   - name: Liquid
     description: An open-source, customer-facing template language created by Shopify and written in Ruby. <a href="https://www.braze.com/docs/user_guide/personalization_and_dynamic_content/liquid/">Liquid</a> is used to load and pull dynamic content. Liquid allows you to use objects, Tags, and filters to <a href="http://www.braze.com/docs/user_guide/personalization_and_dynamic_content/liquid/supported_personalization_tags/">add personal customization</a>.
   - name: Messaging Channel
-    description: <a href="https://www.braze.com/docs/user_guide/message_building_by_channel/">Messaging channels</a> are ways you can virtually communicate with your customers - through push notifications on their phone or web browser, email, in-app messages, and so much more!
+    description: <a href="https://www.braze.com/docs/user_guide/message_building_by_channel/">Messaging channels</a> are ways you can virtually communicate with your customers–through push notifications on their phone or web browser, email, in-app messages, and so much more!
   - name: Monthly Active User (MAU)
     description: Any user who has a session within the last 30 days.
   - name: Multichannel Messaging
-    description: Messaging a user across various mediums - like a combination of email, web push, and mobile push notifications. <a href="https://www.braze.com/docs/developer_guide/platform_wide/platform_features/#multi-channel-messaging">Messaging channels</a> are best used in concert and with regularity to re-engage lost users, retain active users, and energize your brand ambassadors.
+    description: Messaging a user across various mediums, such as a combination of email, web push, and mobile push notifications. <a href="https://www.braze.com/docs/developer_guide/platform_wide/platform_features/#multi-channel-messaging">Messaging channels</a> are best used in concert and with regularity to re-engage lost users, retain active users, and energize your brand ambassadors.
   - name: News Feed
     description: The <a href="http://www.braze.com/docs/user_guide/engagement_tools/news_feed/">News Feed</a> is a fully customizable in-app content feed for your users. Braze targeting and segmentation allows you to create a stream of content that is individually catered to the interests of each user for both <a href="https://www.braze.com/docs/developer_guide/platform_integration_guides/ios/news_feed/">iOS</a> and <a href="https://www.braze.com/docs/developer_guide/platform_integration_guides/android/news_feed/integration_overview/">Android</a>.
   - name: New User
