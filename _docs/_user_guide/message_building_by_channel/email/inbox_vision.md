@@ -14,8 +14,8 @@ channel:
 
 Inbox Vision allows marketers to view their emails from the perspective of various email clients and mobile devices. Access Inbox Vision from the email editor by clicking **Preview and Test**.  It also allows you to spam test from the **Spam Test** tab.
 
-{% alert tip %}
-You can also use Inbox Vision with the [drag & drop editing experience]({{site.baseurl}}/user_guide/message_building_by_channel/email/drag_and_drop/overview/#editing-experience/) to test and preview your emails.
+{% alert important %}
+Inbox Vision for the [drag & drop editing experience]({{site.baseurl}}/user_guide/message_building_by_channel/email/drag_and_drop/overview/#editing-experience/) is currently in early access. Please contact your Braze account manager if you are interested in participating in early access.
 {% endalert %}
 
 

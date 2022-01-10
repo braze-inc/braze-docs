@@ -59,16 +59,20 @@ This is very useful to build a coherent message very quickly.
 
 {% endtab %}
 {% tab Preview and Test %}
-The **Preview & Test** section includes Inbox Vision to see previews of your emails across different email clients and devices. By previewing your email campaign as a user, you can ensure that the details are aligned across all platforms.
+The **Preview & Test** section allows you to preview of your emails across different email clients and devices. By previewing your email campaign as a user, you can ensure that the details are aligned across all platforms.
 
-You can also view your email previews for these user types:
+{% alert important %}
+Inbox Vision for the Drag & Drop Editor is currently in early access. Please contact your Braze account manager if you are interested in participating in early access.
+{% endalert %}
+
+You can also view your email previews with these user types:
 
 - __Random User__: Braze will randomly select a user from the database and preview the email based on their attributes or event information.
 {% alert note %}
 This user may or may not be part of your segmentation criteria. Segmentation is selected afterward, so Braze is unaware of your target audience at this point.
 {% endalert %}
 - __Select User__: You can select a specific user based on their email address or `external_id`. The email will preview based on that user's attributes and event information<br><br>
-- __Custom user__: You can customize a user. Braze will offer inputs for all available attributes and events. You can enter any information you would like to see in the preview email.
+- __Custom User__: You can customize a user. Braze will offer inputs for all available attributes and events. You can enter any information you would like to see in the preview email.
 
 {% endtab %}
 {% endtabs %}
