@@ -585,5 +585,10 @@ glossaries:
     description: Vous permet de filtrer selon si vos utilisateurs ont opté pour le suivi des annonces. Le suivi des publicités se rapporte à l'IDFA ou "identifiant pour les annonceurs" attribué à tous les appareils iOS par Apple. Cet identifiant permet aux annonceurs de suivre les utilisateurs et de les diffuser des publicités ciblées.
     tags:
       - Tests en cours
+  - 
+    name: Numéro de téléphone non valide
+    description: Segmente vos utilisateurs selon si leur numéro de téléphone est invalide ou non.
+    tags:
+      - Attributs de l'utilisateur
 ---
 
