@@ -1,7 +1,7 @@
 ---
 nav_title: Groupes d'Abonnement
 article_title: Points de terminaison du groupe d'abonnement
-page_order: 3
+page_order: 4
 layout: en vedette
 #Required
 description: "Cette page d'accueil explique et liste les points de terminaison des groupes d'abonnement Braze pour les courriels et les SMS."
