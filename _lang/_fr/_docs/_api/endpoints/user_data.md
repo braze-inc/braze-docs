@@ -2,7 +2,7 @@
 nav_title: Données de l'utilisateur
 article_title: Points de terminaison des données utilisateur
 search_tag: Endpoint
-page_order: 5
+page_order: 6
 local_redirect:  #event-object-specification #purchase-object-specification
   event-object-specification: '/fr/docs/api/objects_filters/event_object/'
   purchase-object-specification: '/fr/docs/api/objects_filters/purchase_object/'
