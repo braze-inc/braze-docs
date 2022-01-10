@@ -2,7 +2,7 @@
 nav_title: User Data
 article_title: User Data Endpoints
 search_tag: Endpoint
-page_order: 5
+page_order: 6
 
 local_redirect: #event-object-specification #purchase-object-specification
   event-object-specification: '/docs/api/objects_filters/event_object/'
