@@ -10,7 +10,7 @@ channel:
 
 # Numéros de téléphone utilisateur
 
-> Cet article discutera de différents sujets autour des numéros de téléphone de vos utilisateurs ou de vos clients - si vous recherchez des informations sur vos propres numéros, veuillez consulter notre article sur les [codes courts et longs]({{site.baseurl}}/user_guide/onboarding_with_braze/sms_setup/short_and_long_codes/#short--long-codes).
+> Cet article discutera de différents sujets autour des numéros de téléphone de vos utilisateurs ou de vos clients. Si vous recherchez des informations sur vos propres numéros, veuillez consulter notre article sur [codes courts et longs]({{site.baseurl}}/user_guide/onboarding_with_braze/sms_setup/short_and_long_codes/#short--long-codes).
 
 Les numéros de téléphone sont affichés dans le profil de l'utilisateur au format local, mais ne sera pas dans le format que vous utilisez pour importer le numéro (`(724) 123 4567`).
 
@@ -42,9 +42,23 @@ Vous pouvez voir les différences entre le formatage de nombres locaux et le for
 ### Ajout d'utilisateurs aux groupes d'abonnement SMS
 
 Pour qu'un client reçoive un message SMS, il doit avoir un numéro de téléphone valide et être inscrit à un groupe d'abonnement. Les groupes d'abonnement sont liés au programme SMS que vous exécutez ([assurez-vous de suivre les lois légales pour les SMS et d'avoir enregistré le consentement pour chaque client]({{site.baseurl}}/user_guide/message_building_by_channel/sms/sms_laws_and_regulations/)). Pour plus d'informations, reportez-vous aux [groupes d'abonnement SMS][1].
+
+### Gestion des numéros de téléphone non valides
+Lorsqu'un numéro de téléphone est jugé injoignable ou non valide, Braze marquera le numéro de téléphone de l'utilisateur comme non valide et n'essaiera pas d'envoyer d'autres communications à ce numéro de téléphone. Un numéro de téléphone invalide est marqué dans l'onglet **Engagement** d'un profil utilisateur.
+
+Un numéro de téléphone est considéré comme invalide dans les cas suivants :
+- Le numéro de téléphone fourni n'est pas un numéro de téléphone valide ou a été mal formaté.
+- Le numéro de téléphone est une ligne fixe.
+
+Ces numéros de téléphone non valides peuvent être gérés en utilisant [les terminaux SMS]({{site.baseurl}}/api/endpoints/sms/).
+
+{% alert note %}
+Si plusieurs profils d'utilisateurs ont le même numéro de téléphone et que ce numéro de téléphone est marqué comme invalide, alors tous les profils d'utilisateurs s'afficheront comme non valides.
+{% endalert %}
+
+Vous pouvez également inclure ou exclure des utilisateurs avec des numéros de téléphone non valides lorsque [créez un segment][2].
 [picture]: {% image_buster /assets/img/sms/e164.png %}
 
 [1]: {{site.baseurl}}/user_guide/message_building_by_channel/sms/sms_subscription_group/
-
-
+[2]: {{site.baseurl}}/user_guide/engagement_tools/segments/creating_a_segment/#step-4-add-filters-to-your-segment
 
