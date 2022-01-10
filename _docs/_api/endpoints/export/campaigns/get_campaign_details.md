@@ -18,6 +18,10 @@ This endpoint allows you to retrieve relevant information on a specified campaig
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#aad2a811-7237-43b1-9d64-32042eabecd9 {% endapiref %}
 
+## Rate limit
+
+{% include rate_limits.md endpoint='default' %}
+
 ## Request parameters
 
 | Parameter     | Required | Data Type | Description             |

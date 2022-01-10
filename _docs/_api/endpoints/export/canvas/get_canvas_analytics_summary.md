@@ -18,6 +18,10 @@ This endpoint allows you to export rollups of time series data for a Canvas, pro
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#1eb1b760-6b00-4c03-bcfb-12646f2ba6da {% endapiref %}
 
+## Rate limit
+
+{% include rate_limits.md endpoint='default' %}
+
 ## Request parameters
 
 | Parameter | Required | Data Type | Description |

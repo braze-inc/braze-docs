@@ -106,7 +106,6 @@ The following user profile fields are case sensitive, so be sure to reference th
 | first_name | (string) |
 | gender | (string) "M", "F", "O" (other), "N" (not applicable), "P" (prefer not to say) or nil (unknown). |
 | home_city | (string) |
-| image_url | (string) URL of image to be associated with user profile. |
 | language | (string) we require that language be passed to Braze in the [ISO-639-1 standard][24].<br>[List of accepted Languages][2] |
 | last_name | (string) |
 |marked_email_as_spam_at| (string) Date at which the user's email was marked as spam. Appears in ISO 8601 format or in yyyy-MM-dd'T'HH:mm:ss:SSSZ format.|

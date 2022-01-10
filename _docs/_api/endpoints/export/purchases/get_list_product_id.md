@@ -18,6 +18,10 @@ This endpoint returns paginated lists of product IDs.
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#dff4ed40-81f5-451d-9d44-accc0e932285{% endapiref %}
 
+## Rate limit
+
+{% include rate_limits.md endpoint='purchases product list' %}
+
 ## Request parameters
 
 | Parameter | Required | Data Type | Description |

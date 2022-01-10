@@ -20,6 +20,10 @@ This endpoint allows you to send campaign messages (up to 90 days in advance) vi
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#b7e61de7-f2c2-49c9-9e46-b85a0aa01bba {% endapiref %}
 
+## Rate limit
+
+{% include rate_limits.md endpoint='default' category='message endpoints' %}
+
 ## Request body
 
 ```

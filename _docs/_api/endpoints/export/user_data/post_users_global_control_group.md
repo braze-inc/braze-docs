@@ -18,6 +18,10 @@ This endpoint allows you to export all the users within the Global Control Group
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#aa3d8b90-d984-48f0-9287-57aa30469de2 {% endapiref %}
 
+## Rate limit
+
+{% include rate_limits.md endpoint='default' %}
+
 ## Credentials-based response details
 
 If you have added your S3 credentials to Braze, then each file will be uploaded in your bucket as a zip file with the key format that looks like `segment-export/SEGMENT_ID/YYYY-MM-dd/RANDOM_UUID-TIMESTAMP_WHEN_EXPORT_STARTED/filename.zip`. We will create 1 file per 5,000 users to optimize processing. You can then unzip the files and concatenate all of the `json` files to a single file if needed. If you specify an `output_format` of `gzip`, then the file extension will be `.gz` instead of `.zip`.

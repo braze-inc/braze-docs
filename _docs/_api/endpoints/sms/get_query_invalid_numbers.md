@@ -15,6 +15,10 @@ description: "This article outlines the usage of and parameters for using the re
 
 This endpoint allows you to pull a list of phone numbers that have been deemed "invalid" within a certain time frame.
 
+## Rate limit
+
+{% include rate_limits.md endpoint='default' %}
+
 ## Request parameters
 
 You must provide either a `start_date` and an `end_date` OR `phone_numbers`.
