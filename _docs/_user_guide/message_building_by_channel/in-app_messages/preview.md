@@ -12,6 +12,8 @@ channel:
 
 Learn about the new Preview features for custom HTML In-App Messages.
 
+{% sdk_min_versions web:2.5.0 android:8.0.0 ios:3.23.0 %}
+
 {% alert important %}
 This is an opt-in feature. Ask your Braze account team to get access today!
 {% endalert %}
@@ -109,9 +111,7 @@ You can also track new custom button names - up to 100 unique names per campaign
 
 These new features require upgrading to the following Braze SDK version:
 
-* Web SDK v2.5+ [Changelog]({{site.baseurl}}/developer_guide/platform_integration_guides/web/changelog/#250)
-* iOS SDK - v3.23.0+ [Changelog]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/changelog/#3230)
-* Android SDK - v8.0.0+ [Changelog]({{site.baseurl}}/developer_guide/platform_integration_guides/android/changelog/#800)
+{% sdk_min_versions web:2.5.0 android:8.0.0 ios:3.23.0 %}
 
 {% alert warning %}
 Because this message type can only be received by certain newer SDK versions, users that are on unsupported SDK versions will not receive the message. 
