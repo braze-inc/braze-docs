@@ -24,6 +24,10 @@ Templates built using the Drag & Drop Editor are not accepted
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#e98d2d5b-62fe-4358-b391-9fe9e460d0ac {% endapiref %}
 
+## Rate limit
+
+{% include rate_limits.md endpoint='default' %}
+
 ## Request parameters
 
 | Parameter | Required | Data Type | Description |

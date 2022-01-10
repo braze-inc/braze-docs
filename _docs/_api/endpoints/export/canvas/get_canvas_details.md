@@ -18,6 +18,10 @@ This endpoint allows you to export metadata about a Canvas, such as its name, wh
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#5188873c-13a3-4aaf-a54b-9fa1daeac5f8 {% endapiref %}
 
+## Rate limit
+
+{% include rate_limits.md endpoint='default' %}
+
 ## Request parameters
 
 | Parameter   | Required | Data Type | Description            |

@@ -18,6 +18,10 @@ This endpoint allows you to retrieve relevant information on the segment, which 
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#aab56ed9-0a28-476a-8b57-b79786dbb9c1 {% endapiref %}
 
+## Rate limit
+
+{% include rate_limits.md endpoint='default' %}
+
 ## Request parameters
 
 | Parameter    | Required | Data Type | Description            |

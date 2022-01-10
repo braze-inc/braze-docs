@@ -21,6 +21,10 @@ Any schedule will completely overwrite the one that you provided in the create s
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#6d2a6e66-9d6f-4ae1-965a-79fa52b86b1d {% endapiref %}
 
+## Rate limit
+
+{% include rate_limits.md endpoint='default' category='message endpoints' %}
+
 ## Request body
 
 ```

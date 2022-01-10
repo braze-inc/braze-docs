@@ -18,6 +18,10 @@ Use this endpoint below to update an [Email Content Block]({{site.baseurl}}/user
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#4782239a-cb60-4217-9de0-51411434d57d {% endapiref %}
 
+## Rate limit
+
+{% include rate_limits.md endpoint='default' %}
+
 ## Request body
 
 ```

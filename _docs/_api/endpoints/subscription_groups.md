@@ -1,7 +1,7 @@
 ---
 nav_title: Subscription Groups
 article_title: Subscription Group Endpoints
-page_order: 3
+page_order: 4
 layout: featured
 
 #Required

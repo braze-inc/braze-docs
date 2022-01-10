@@ -11,62 +11,49 @@ search_tag: Partner
 
 # Zendesk
 
-> [Zendesk Support Suite](https://www.zendesk.com/support-suite/) (ZSS) offers businesses the ability to have natural conversations with their customers through omnichannel support using email, webchat, voice, or social messaging apps. ZSS values customer support through tracking and prioritizing interactions, allowing businesses to have a unified historical view of their customers. Powerful tools such as a streamlined ticketing system allow businesses to reach out directly to customers with a personalized approach. 
+> [Zendesk Support Suite](https://www.zendesk.com/support-suite/) (ZSS) offers businesses the ability to have natural conversations with their customers through omnichannel support using email, webchat, voice, or social messaging apps. Zendesk offers a streamlined ticketing system that values tracking and prioritizing interactions, allowing businesses to have a unified historical view of their customers.
 
-Braze offers a server-to-server integration with Zendesk, allowing you to utilize the Braze webhooks that can sync support ticket data between Braze and Zendesk.
+The Braze and Zendesk server-to-server integration allows you to utilize Braze webhooks to automate the creation of support tickets in Zendesk as a result of message engagement in user journeys in Braze. For example, after successfully implementing and testing an integration, Braze can create a support ticket from a user answering negatively to an "Enjoying our App?" in-app message, allowing your support team to follow up with the customer.  
 
-## Requirements
+## Prerequisites
 
-| Requirement | Origin | Access | Description |
-|---|---|---|---|
-| Zendesk Account & Account Information | Zendesk | https://`<your-zendesk-instance>`.zendesk.com/agent/admin | An active Zendesk Account __with admin privileges__ is required to utilize the Braze integration.<br><br>The Zendesk API token is necessary to be able to send requests from Braze to the Zendesk Ticket endpoint. |
-| Common Identifier between Braze and Zendesk (Recommended) | Braze | For more information, see our [User Profile Lifecycle][1] docs. | A [common identifier](#common-identifier) between Braze and Zendesk is recommended. |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
+| Requirement | Description |
+|---|---|
+| Zendesk account | A [Zendesk admin account](https://`<your-zendesk-instance>`.zendesk.com/agent/admin) is required to take advantage of this partnership. |
+| Zendesk API token | A Zendesk [API token][2] is required to send requests from Braze to the Zendesk ticket endpoint. |
+| Common identifier (recommended) | A [common identifier](#common-identifier) between Braze and Zendesk is recommended. |
+{: .reset-td-br-1 .reset-td-br-2}
 
-## Braze and Zendesk integration
-#### Create Zendesk tickets from Braze campaigns/Canvases
+## Integration
 
-The Braze and Zendesk integration allows you to automate the creation of support tickets in Zendesk as a result of message engagement in user journeys in Braze. For example, after successfully implementing and testing the integration, Braze can create a support ticket from a user answering negatively to an in-app message with the question "Enjoying our App?", allowing your support team to reach out and offer assistance to the customer.
-
-Complete the following steps to utilize the Braze webhook channel to send data to Zendesk.
-
-### Step 1: Create a webhook campaign or Canvas 
+### Step 1: Create your Braze webhook
 <br>
-{% tabs %}
-{% tab Campaign %}
+**Campaign**<br>To create a webhook, go to the **Campaigns** page in the Braze dashboard, under **Engagement**. From the **Create Campaign** drop-down, select **Webhook** and name your campaign.<br>
+**Canvas**<br>To create a webhook, from a new or existing Canvas, create a full or message step in the Canvas builder. Next, click the green message icon that appears and then **Webhook** from the message options.
 
-To create a webhook, go to the **Campaigns** page on the Braze dashboard, under **Engagement**. <br>From the **Create Campaign** drop-down, select **Webhook** and name your campaign.
+In your Webhook, fill out the following fields:
+- **Webhook URL**: `<your-zendesk-instance>.zendesk.com/api/v2/tickets.json`
+- **Request Body**: Raw Text
 
-{% endtab %}
-{% tab Canvas %}
+Further use cases can be handled through [Zendesk support APIs][4], which would change the `/api/v2/` endpoint accordingly at the end of the Webhook URL.
 
-To create a webhook, from a new or existing Canvas, create a full step or message step in the Canvas Builder. Next, click the green message icon that appears and then **Webhook** from the message options.
+#### Request header and method
 
-{% endtab %}
-{% endtabs %}
+Zendesk requires an HTTP Header for authorization and an HTTP method. In the **Settings** tab, replace the <email_address> with your Zendesk admin email and <api_token> with your Zendesk API token.
 
-### Step 2: Webhook settings
-To set up the webhook, first, set the content type to JSON to communicate with Zendesk, as well as add in your Authorization information:
+- **HTTP Method**: POST
+- **Request Headers**:
+  - **Authorization**: Basic {% raw %} `{{ '<email_address>/token:<api_token>' | base64_encode }}` {% endraw %}
+  - **Content-Type**: application/json
 
-1. Create a key/value pair. Set `Content-Type` as the key and its value to `application/json`.<br><br>
-2. Set `Authorization` as another key/value pair and its value as: <br /> 
-{% raw %} `Basic {{ '<email_address>/token:<api_token>' | base64_encode }}` {% endraw %}<br><br>Replace `<email_address>` with your Zendesk Admin email and `<api_token>` with the API token generated following [these instructions][2]. Please note that you must use Liquid syntax, therefore the __email address and API token should be in curly brackets__ as shown below. <br><br>![zendesk_step1][3]{: style="max-width:70%;"}
+![Zendesk HTTP header and method][3]{: style="max-width:70%;"}
 
-### Step 3: Webhook URL
+#### Request body
 
-Next, tell Braze where to send the webhook. For this ticket use case, the Webhook URL would be:
-
-`<your-zendesk-instance>.zendesk.com/api/v2/tickets.json`. 
-
-Further use cases can be handled through [Zendesk Support APIs][4], which would change the `/api/v2/` endpoint accordingly at the end of the Webhook URL.
-
-![zendesk_step2][5]{: style="max-width:70%;"}
-
-### Step 4: Webhook payload
-Next, define the ticket details like type, subject, and status in your webhook payload. Ticket details are extensible and can be customized based on the [Zendesk Ticket API][6]. To start filling out your payload, set the request body to `Raw Text`, then enter your desired fields. Please see below for an example:
+Define the ticket details like type, subject, and status in your webhook payload. Ticket details are extensible and customized based on the [Zendesk ticket API][6]. Use the following example to help structure your payload and enter your desired fields.
 
 {% raw %}
-```
+```json
 {% assign ticket_type = 'question/incident/task/problem' %} << Choose one >>
 {% assign ticket_subject = '' %}
 {% capture ticket_body %}
@@ -89,17 +76,17 @@ Next, define the ticket details like type, subject, and status in your webhook p
 ```
 {% endraw %}
 
-In the example, you can see that the first part of this payload assigns the necessary variables, as well as the ticket type for the rest of the payload. The second part carries the specific information for the ticket. 
+### Step 2: Preview your request
 
-### Step 5: Test your integration
+Your raw text will automatically highlight if it is an applicable Braze tag.
 
-In order to test your webhook, navigate to the Preview tab, and hit `Send Test`. You will then see if the call has been successful. Lastly, check if the ticket has been created on the Zendesk side.
+Preview your request in the left-hand panel or navigate to the **Test** tab, where you can select a random user, an existing user or customize your own to test your webhook.
 
-![zdfinal][7]
+Lastly, check if the ticket has been created on the Zendesk side.
 
 ## Common identifier
 
-Should you have a common identifier between Braze and Zendesk, it would be best practice to utilize this as the `requester_id`. Alternatively, if this is not the case, pass on a set of identifying attributes such as name, email address, phone number, or others.
+If you have a common identifier between Braze and Zendesk, it is recommended to utilize this as the `requester_id`, this will help unify the two sets of users. Alternatively, if this is not the case, we recommend passing a set of identifying attributes such as name, email address, phone number, or others.
 
 [1]: {{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/user_profile_lifecycle/
 [2]: https://support.zendesk.com/hc/en-us/articles/226022787-Generating-a-new-API-token-\

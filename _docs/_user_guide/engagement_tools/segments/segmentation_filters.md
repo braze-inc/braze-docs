@@ -469,4 +469,8 @@ glossaries:
     description: Allows you to filter based on if your users have opted-in to ad tracking. Ad tracking relates to the IDFA or "identifier for advertisers" assigned to all iOS devices by Apple. This identifier allows advertisers to track users and serve them targeted ads.
     tags:
       - Testing
+  - name: Invalid Phone Number
+    description: Segments your users by whether or not their phone number is invalid.
+    tags:
+      - User Attributes
 ---

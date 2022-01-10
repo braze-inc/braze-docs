@@ -26,9 +26,9 @@ __Creating a new alias-only user__ requires the `external_id` to be omitted from
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#5cf18e64-fd02-452f-8c90-9a0f7c4d0487 {% endapiref %}
 
-{% alert note %}
-A rate limit is applied to requests made to this endpoint for customers who onboarded with Braze on or after September 16, 2021. For more information, see [API Limits]({{site.baseurl}}/api/basics/#api-limits).
-{% endalert %}
+## Rate limit
+
+{% include rate_limits.md endpoint='users alias new' %}
 
 ## Request body
 
