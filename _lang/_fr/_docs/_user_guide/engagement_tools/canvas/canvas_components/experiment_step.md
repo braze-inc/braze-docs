@@ -16,9 +16,6 @@ Une étape des chemins d'expérience de Canvas attribuera aléatoirement des uti
 
 !\[Étape de l'expérience Paths\]\[0\]{: style="max-width:80%"}
 
-{% alert important %}
-Les étapes du chemin d'expérience sont actuellement en bêta. Veuillez contacter votre responsable de compte Braze si vous êtes intéressé à participer à la bêta.
-{% endalert %}
 
 ## Créer un chemin d'expérience
 
