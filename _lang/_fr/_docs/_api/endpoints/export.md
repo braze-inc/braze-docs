@@ -55,10 +55,6 @@ guide_featured_list:
     name: "GET: Liste des fiches d'actualités"
     link: /docs/api/endpoints/export/news_feed/get_news_feed_feed_cards/
     fa_icon: fas fa-stream
-  - 
-    name: "GET: Requête de numéros de téléphone non valides"
-    link: /docs/api/endpoints/export/sms/get_query_invalid_numbers/
-    fa_icon: fa-phone fas
 guide_menu_title: "Évènements personnalisés, KPI, Achats, Segments, Sessions et Exportation de données utilisateur"
 guide_menu_list:
   - 
