@@ -46,7 +46,6 @@ Les attributs suivants doivent être définis sur l'objet `ABKUser`:
 - `Ville natale`
 - `Téléphone`
 - `ID utilisateur`
-- `avatarImageURL`
 - `twitterAccountIdentifier`
 - `Sexe`
 
