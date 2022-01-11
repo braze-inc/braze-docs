@@ -26,7 +26,7 @@ Si vous voulez voir des exemples ou tester ce point de terminaison pour __SMS Su
 
 ## Limite de taux
 
-{% include rate_limits.md endpoint='default' %}
+{% include rate_limits.md endpoint='subscription status set' %}
 
 ## Corps de la requête
 
