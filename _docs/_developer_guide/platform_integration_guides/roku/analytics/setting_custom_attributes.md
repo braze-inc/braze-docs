@@ -27,7 +27,6 @@ User attributes will be assigned to the currently active user. The following def
 - `Language`
 - `HomeCity`
 - `PhoneNumber`
-- `AvatarImageUrl`
 
 **Implementation Example**<br>This is what setting a first name would look like in code:
 
