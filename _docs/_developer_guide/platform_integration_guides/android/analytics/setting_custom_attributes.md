@@ -27,14 +27,13 @@ Braze provides predefined methods for setting the following user attributes with
 - Language
 - Date of Birth
 - Email
-- Avatar Image URLs for Braze User Profiles
 - Gender
 - Home City
 - Phone Number
 - Facebook Data
 - Twitter Data
 
-All string values such as first name, last name, country, and home city are limited to 255 characters. Avatar Image URLs are limited to 1024 characters.
+All string values such as first name, last name, country, and home city are limited to 255 characters.
 
 **Implementation Example**
 This is what setting a first name would look like in code:
