@@ -63,11 +63,10 @@ Les attributs suivants sont pris en charge :
 - Numéro de téléphone
 - Langue
 - Courriel
-- URL de l'image d'avatar pour les profils d'utilisateurs Braze
 - Données Twitter
 - Données Facebook
 
-Toutes les valeurs de chaîne telles que le prénom, le nom de famille, le pays et la ville d'accueil sont limitées à 255 caractères. Les URL des images d'avatar sont limitées à 1024 caractères.
+Toutes les valeurs de chaîne telles que le prénom, le nom de famille, le pays et la ville d'accueil sont limitées à 255 caractères.
 
 #### Annuler la définition d'un attribut personnalisé
 
