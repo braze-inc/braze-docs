@@ -53,7 +53,6 @@ You can find a breakdown of how Braze accumulates data points below, but there a
 |Profile Data | Date of Birth (DOB) | Yes |
 |Profile Data | Bio | Yes |
 |Profile Data | Phone Number  | Yes |
-|Profile Data | Avatar Image URL | Yes |
 |App Usage Data |Session Start | Yes |
 |App Usage Data |Session End | Yes |
 |Custom Attributes | All Custom Attributes | Yes |

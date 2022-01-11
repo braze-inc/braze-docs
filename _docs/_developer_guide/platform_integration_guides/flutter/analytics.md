@@ -64,11 +64,10 @@ The following attributes are supported:
 - Phone Number
 - Language
 - Email
-- Avatar Image URL for Braze User Profiles
 - Twitter Data
 - Facebook Data
 
-All string values such as first name, last name, country, and home city are limited to 255 characters. Avatar Image URLs are limited to 1024 characters.
+All string values such as first name, last name, country, and home city are limited to 255 characters.
 
 #### Unsetting a custom attribute
 

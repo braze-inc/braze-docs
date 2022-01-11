@@ -58,6 +58,10 @@ Transactional emails are not subject to a rate limit. Depending on your chosen p
 {% elsif include.endpoint == "sends id create" %}
 The daily maximum number of custom send identifiers that can be created via this endpoint is 100 for a given app group. Each `send_id` and `campaign_id` combination that you create will count towards your daily limit. The response headers for any valid request include the current rate limit status, see [API rate limits]({{site.baseurl}}/api/api_limits/) for details.
 
+<!---/subscription/status/set-->
+{% elsif include.endpoint == "subscription status set" %}
+For customers who onboarded with Braze on or after January 6, 2022, we apply a rate limit of 5,000 requests per minute to this endpoint as documented in [API rate limits]({{site.baseurl}}/api/api_limits/).
+
 {% endif %}
 
 <!---Additional if statement for Messaging endpoints-->
