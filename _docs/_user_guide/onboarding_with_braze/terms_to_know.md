@@ -41,11 +41,17 @@ glossaries:
   - name: Custom Events
     description: Braze's <a href="https://www.braze.com/docs/user_guide/data_and_analytics/custom_data/custom_events/#custom-events">custom events</a> are actions taken by your users; they’re best suited for tracking high-value user interactions with your application.
   - name: Data Point
-    description: A data point is counted when a <a href="https://www.braze.com/docs/user_guide/data_and_analytics/custom_data/custom_attributes/#custom-attributes/">custom attribute</a> is set or updated (even if you’re updating it with the same value), a <a href="http://www.braze.com/docs/user_guide/data_and_analytics/custom_data/custom_events/">custom event</a> or purchase event is logged, any standard data (e.g. email, first_name, last_name, country, home_city, etc) is logged, when a session starts, and when a session ends.
+    description: A data point is counted when a <a href="https://www.braze.com/docs/user_guide/data_and_analytics/custom_data/custom_attributes/#custom-attributes/">custom attribute</a> is set or updated (even if you’re updating it with the same value), a <a href="https://www.braze.com/docs/user_guide/data_and_analytics/custom_data/custom_events/">custom event</a> or purchase event is logged, any standard data (e.g. email, first_name, last_name, country, home_city, etc) is logged, when a session starts, and when a session ends.
+  - name: Deep Linking
+    description: Connecting a message with a targeted piece of content within a website or mobile app. <a href="https://www.braze.com/docs/user_guide/personalization_and_dynamic_content/deep_linking_to_in-app_content/">Deep links</a> are used to direct customers to their next action or engagement.
   - name: Dormant Users
     description: A user is considered <a href="https://www.braze.com/docs/user_guide/data_and_analytics/user_data_collection/user_archival/#dormant-users">dormant</a> when there has been no activity in the last twelve months.
   - name: Endpoint
     description: An end of a communication channel also known as an API <a href="https://www.braze.com/docs/api/endpoints/messaging/">endpoint</a> is used within the Braze messaging API for sending and scheduling messages.
+  - name: Exception Events
+    description: <a href="https://www.braze.com/docs/user_guide/engagement_tools/canvas/create_a_canvas/exception_events/#canvas-exception-events/">Exception events</a> occur when a user has reached the desired goal and do not receive a triggered message. This ensures that the triggered message is still relevant to the user.
+  - name: Frequency Capping
+    description: An automated limit on messages to ensure users don't receive too many communications in a short period of time. <a href="https://www.braze.com/docs/user_guide/engagement_tools/campaigns/building_campaigns/rate-limiting/#frequency-capping/">Frequency capping</a> allows you to manage communication without overwhelming your audience. 
   - name: HIPAA
     description: An acronym for Health Insurance Portability and Accountability Act. Braze is <a href="https://www.braze.com/docs/developer_guide/disclosures/security_qualifications/#hipaa">HIPAA</a> compliant. HIPAA requirements involve administrative, physical, and technical security.
   - name: In-App Messages
@@ -64,10 +70,14 @@ glossaries:
     description: Any user who has a session within the last 30 days.
   - name: Multichannel Messaging
     description: Messaging a user across various mediums, such as a combination of email, web push, and mobile push notifications. <a href="https://www.braze.com/docs/developer_guide/platform_wide/platform_features/#multi-channel-messaging">Messaging channels</a> are best used in concert and with regularity to re-engage lost users, retain active users, and energize your brand ambassadors.
+  - name: Multivariate Testing
+    description: <a href="https://www.braze.com/docs/user_guide/engagement_tools/testing/multivariant_testing/#multivariate-and-ab-testing/">Multivariate testing</a> allows you to test multiple variables by comparing two or more versions of a message to assess which variant performs the best.
   - name: News Feed
     description: The <a href="http://www.braze.com/docs/user_guide/engagement_tools/news_feed/">News Feed</a> is a fully customizable in-app content feed for your users. Braze targeting and segmentation allows you to create a stream of content that is individually catered to the interests of each user for both <a href="https://www.braze.com/docs/developer_guide/platform_integration_guides/ios/news_feed/">iOS</a> and <a href="https://www.braze.com/docs/developer_guide/platform_integration_guides/android/news_feed/integration_overview/">Android</a>.
   - name: New User
     description: Braze considers a new user as anyone who has newly installed your app. Alternatively, a new user can also be defined as a user with a user ID that has not been previously identified within Braze.
+  - name: Personalization
+    description: Using technology to take into account the individual preferences and tendencies of each user when communicating with them. <a href="https://www.braze.com/docs/user_guide/personalization_and_dynamic_content/">Personalized messaging</a> helps build valuable customer experiences by tailoring to their preferences. 
   - name: Push Messages
     description: A <a href="https://www.braze.com/docs/user_guide/message_building_by_channel/push/">push</a> message, or push notification, is a notification that appears from a mobile application. Push notifications often appear as pop-up dialogs and banners for both iOS and Android.
   - name: Push Token
@@ -76,14 +86,18 @@ glossaries:
     description: Also known as <a href="https://www.braze.com/docs/user_guide/administrative/app_settings/push_ttl_settings/">Push TTL</a>, time to live refers to the period that campaigns will continue to attempt to be delivered to an offline user.
   - name: Race Condition
     description: A <a href="http://www.braze.com/docs/user_guide/engagement_tools/testing/race_conditions/">race condition</a> is a software engineering concept that describes some undesirable situation that occurs when a system tries to perform several operations simultaneously, but because of the nature of the system, the operations must be done in the correct sequence to be done correctly. <br><br>In the Braze platform, segmenting a triggered campaign on user data recorded at the time of the event may cause a race condition. This happens when a change in the user attribute on which the campaign is segmented hasn't yet been processed for the user at the time segment membership is determined and the campaign is sent and can lead to the user not receiving the campaign.
+  - name: Rate Limiting
+    description: <a href="https://www.braze.com/docs/user_guide/engagement_tools/campaigns/building_campaigns/rate-limiting/">Rate limiting</a> is the process of restricting the number of messages sent during a period of time to avoid overloading your audience.  
   - name: Tags
     description: <a href="https://www.braze.com/docs/user_guide/administrative/app_settings/tags/#tags">Tags</a> are a tool that help you categorize, organize, and sort your engagement across one or multiple campaigns.
   - name: Segmentation
     description: Dashboard <a href="https://www.braze.com/docs/user_guide/engagement_tools/segments/">Segmentation</a> allows you to create groups or extensions of users based on powerful filters of their in-app behavior, demographic data, social data, etc.
   - name: Software Development Kit (SDK)
     description: <a href="https://www.braze.com/docs/developer_guide/platform_integration_guides/sdk_primer/">SDKs</a> are integrated into iOS and Android applications and provides powerful marketing, customer support, and analytics tools. Braze offers SDK integration for both <a href="https://www.braze.com/docs/developer_guide/platform_integration_guides/ios/initial_sdk_setup/">iOS</a> and <a href="https://www.braze.com/docs/developer_guide/platform_integration_guides/android/initial_sdk_setup/android_sdk_integration/#initial-sdk-setup">Android</a>.
+  - name: Sunsetting
+    description: Sunsetting refers to the process of identifying disengaged users and ceasing active messaging to these users without them having to take any action. Creating sunset policies for your <a href="https://www.braze.com/docs/user_guide/message_building_by_channel/email/best_practices/sunset_policies/">email</a> and <a href="https://www.braze.com/docs/user_guide/message_building_by_channel/push/best_practices/sunset_policies/#sunset-policies-for-push/">push</a> messages can help curb impacts to your open rates. 
   - name: User Archival
-    description: <a href="https://www.braze.com/docs/user_guide/data_and_analytics/user_data_collection/user_archival/">User archival</a> refers to users that have been archived. At Braze this includes both inactive and dormant users.
+    description: <a href="https://www.braze.com/docs/user_guide/data_and_analytics/user_data_collection/user_archival/">User archival</a> refers to users that have been archived. At Braze, this includes both inactive and dormant users.
   - name: Webhooks
     description: <a href="https://www.braze.com/docs/user_guide/message_building_by_channel/webhooks/">Webhooks</a> allow you to trigger non-app actions such as SMS text message delivery. You can use webhooks to provide other systems and applications with real-time information. The flexibility of this feature allows you to send information to any endpoint.
 
