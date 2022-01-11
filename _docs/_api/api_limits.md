@@ -30,7 +30,7 @@ The following table lists specific API rate limits for different request types. 
 | [`/campaigns/trigger/send`][17.1] | 250 requests per minute when specifying a segment or Connected Audience. Otherwise, 250,000 requests per hour. |
 | [`/canvas/trigger/send`][17.2] | 250 requests per minute when specifying a segment or Connected Audience. Otherwise, 250,000 requests per hour. |
 | [`/sends/id/create`][18] | 100 requests per day. |
-| [`/subscription/status/set`][19] | 5000 requests per minute. |
+| [`/subscription/status/set`][19] | 5,000 requests per minute. |
 {: .reset-td-br-1 .reset-td-br-2}
 
 ## Batching API requests
