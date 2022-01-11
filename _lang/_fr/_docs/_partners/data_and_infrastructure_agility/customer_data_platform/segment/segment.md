@@ -149,7 +149,6 @@ Lorsque vous [identifiez](https://segment.com/docs/connections/destinations/cata
 | `prénom`         | `prénom`         |
 | `Nom de famille` | `nom_de famille` |
 | `anniversaire`   | `chien`          |
-| `avatar`         | `url de l'image` |
 | `Ville`          | `ville_domicile` |
 | `Pays`           | `Pays`           |
 | `Sexe`           | `Sexe`           |
