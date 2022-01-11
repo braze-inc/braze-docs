@@ -25,7 +25,7 @@ If you want to see examples or test this endpoint for __SMS Subscription Groups_
 
 ## Rate limit
 
-{% include rate_limits.md endpoint='default' %}
+{% include rate_limits.md endpoint='subscription status set' %}
 
 ## Request body
 
