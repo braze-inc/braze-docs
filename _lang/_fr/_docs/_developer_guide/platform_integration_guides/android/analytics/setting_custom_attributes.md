@@ -26,14 +26,13 @@ Braze fournit des méthodes prédéfinies pour définir les attributs d'utilisat
 - Langue
 - Date de naissance
 - Courriel
-- URL de l'image d'avatar pour les profils d'utilisateurs Braze
 - Sexe
 - Ville natale
 - Numéro de téléphone
 - Données Facebook
 - Données Twitter
 
-Toutes les valeurs de chaîne telles que le prénom, le nom de famille, le pays et la ville d'accueil sont limitées à 255 caractères. Les URL des images d'avatar sont limitées à 1024 caractères.
+Toutes les valeurs de chaîne telles que le prénom, le nom de famille, le pays et la ville d'accueil sont limitées à 255 caractères.
 
 **Exemple d'implémentation** C'est à quoi ressemblerait un prénom dans le code :
 
