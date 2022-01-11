@@ -52,7 +52,6 @@ Vous pouvez trouver une ventilation de la façon dont Braze accumule les points 
 | Données du profil                        | Date de naissance (DOB)                           | Oui                               |
 | Données du profil                        | Bio                                               | Oui                               |
 | Données du profil                        | Numéro de téléphone                               | Oui                               |
-| Données du profil                        | URL de l'image de l'avatar                        | Oui                               |
 | Données d'utilisation de l'application   | Début de la session                               | Oui                               |
 | Données d'utilisation de l'application   | Fin de la session                                 | Oui                               |
 | Attributs personnalisés                  | Tous les attributs personnalisés                  | Oui                               |
