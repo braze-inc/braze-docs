@@ -22,7 +22,6 @@ Braze fournit des méthodes prédéfinies pour définir les attributs utilisateu
 - Pays
 - Date de naissance
 - Courriel
-- URL de l'image d'avatar pour les profils d'utilisateurs Braze
 - Sexe
 - Ville natale
 - Numéro de téléphone
