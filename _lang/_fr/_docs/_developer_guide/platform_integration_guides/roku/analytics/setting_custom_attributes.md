@@ -26,7 +26,6 @@ Les attributs de l'utilisateur seront assignés à l'utilisateur actuellement ac
 - `Langue`
 - `Ville natale`
 - `Numéro de téléphone`
-- `AvatarImageUrl`
 
 **Exemple d'implémentation**<br>C'est à quoi ressemblerait un prénom dans le code :
 
