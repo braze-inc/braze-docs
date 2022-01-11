@@ -51,6 +51,31 @@ guide_featured_list:
 
 > Braze publie des informations sur les mises à jour des produits sur une cadence mensuelle, en s'alignant sur les principales versions du produit, bien que le produit soit mis à jour avec des améliorations diverses semaine à semaine. <br> <br> Pour plus d'informations sur l'une des mises à jour listées dans cette section, contactez votre responsable de compte ou [ouvrez un ticket de support][support]. Vous pouvez également consulter [nos Changelogs SDK]({{site.baseurl}}/developer_guide/platform_integration_guides/sdk_changelogs/) pour voir plus d'informations sur nos versions, mises à jour et améliorations mensuelles du SDK.
 
+# Février 2022
+
+## Étape des chemins d'expérience de Canvas
+La nouvelle Étape des chemins d'expérience de Canvas permet de suivre les performances des chemins en testant plusieurs chemins de Canvas les uns contre les autres et un groupe de contrôle à n'importe quel moment du parcours de l'utilisateur. Maintenant, vous pouvez tirer parti des analyses rassemblées ici pour déterminer quel chemin est le plus efficace. En savoir plus sur la façon de créer une [étape des chemins d'expérience]({{site.baseurl}}/user_guide/engagement_tools/canvas/canvas_components/experiment_step/).
+
+## Gestion des numéros de téléphone non valides
+Vous avez rencontré un scénario où un utilisateur a entré un numéro de téléphone invalide. Voici votre solution! Braze marque ces numéros de téléphone non valides et ne tentera pas d'envoyer d'autres communications à ces numéros. En savoir plus sur la façon dont Braze [gère les numéros de téléphone non valides]({{site.baseurl}}/user_guide/message_building_by_channel/sms/phone_numbers/user_phone_numbers/#handling-invalid-phone-numbers/).
+
+### Nouveaux points de terminaison SMS
+Vous pouvez maintenant gérer des numéros de téléphone non valides en utilisant le nouveau [Braze SMS Endpoints]({{site.baseurl}}/api/endpoints/sms/)! Fonctionnalités de cette mise à jour :
+- [GET: Interrogation ou liste de numéros de téléphone non valides]({{site.baseurl}}/api/endpoints/sms/get_query_invalid_numbers/) renvoie une liste de numéros de téléphone qui sont considérés comme « invalides » par Brésil.
+- [POST: Supprimer les numéros de téléphone non valides]({{site.baseurl}}/api/endpoints/sms/post_remove_invalid_numbers/) vous permet de supprimer les numéros de téléphone « invalides » de la liste invalide de Brase.
+
+## Limites de taux
+Les limites de taux de l'API ont été incluses pour tous les [articles Braze Endpoint]({{site.baseurl}}/api/basics/#nav_top_endpoints). Vous pouvez maintenant facilement voir les limites de taux par type de requête. Pour plus d'informations sur les limites de taux, consultez notre article sur [les limites de taux API]({{site.baseurl}}/api/api_limits/).
+
+## Nouveau point de terminaison REST
+Braze a ajouté un [nouveau point d'extrémité REST EU-02]({{site.baseurl}}/api/basics/#api-definitions).
+
+## À propos de l'e-mail
+Les messages électroniques sont un excellent moyen de se connecter avec vos clients. Pour une brève introduction sur la façon dont vous pouvez personnaliser et tirer parti des messages électroniques, consultez notre nouvel article sur [À propos de l'e-mail]({{site.baseurl}}/user_guide/message_building_by_channel/email/about/).
+
+## À propos des messages dans l'application
+Les messages intégrés fournissent un contenu enrichi à vos utilisateurs actifs dans votre application. Vous pouvez facilement vous engager auprès de vos clients actifs en créant des messages dans l'application pour des messages de vœux personnalisés ou l'adoption de fonctionnalités. Pour en savoir plus sur les avantages et les types de messages, consultez notre nouvel article sur [À propos des messages dans l'application]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/about/).
+
 ## Janvier 2022
 
 Bienvenue dans une nouvelle année !
@@ -282,35 +307,6 @@ Le partenariat Braze et [Transcend]({{site.baseurl}}/partners/data_and_infrastru
 
 [optilyz]({{site.baseurl}}/partners/message_orchestration/additional_channels/direct_mail/optilyz/) est une plate-forme d'automatisation de messagerie directe qui vous permet d'exécuter des campagnes de messagerie directe plus axées sur le client, durables et rentables. optilyz est utilisé par des centaines d'entreprises à travers l'Europe et vous permet d'intégrer des lettres, des cartes postales et les auto-mailers dans vos campagnes de marketing inter-canaux et automatiser et mieux personnaliser vos campagnes. Utilisez l'intégration optilyz et Braze webhook pour envoyer du courrier direct à vos clients.
 
-## Août 2021
-
-### Message simple de l'enquête dans l'application
-
-Utilisez le nouveau modèle de message simple Enquête dans l'application pour recueillir les attributs, les aperçus et les préférences de l'utilisateur qui alimentent votre stratégie de campagne. Par exemple, vous pouvez demander aux utilisateurs comment ils aimeraient utiliser votre application, en apprendre plus sur leurs préférences personnelles, ou même poser des questions sur leur satisfaction à l'égard d'une caractéristique particulière. Ce modèle d'enquête est pris en charge pour les applications mobiles et les navigateurs Web. Visitez notre [documentation]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/templates/simple_survey/) pour commencer.
-
-### Librairie de cas d'utilisation des liquides
-
-Vous vous demandez comment faire ça avec Liquid? Vous cherchez simplement de l'inspiration ? Consultez notre nouvelle [bibliothèque de cas d'utilisation de liquides]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/liquid_use_cases/) pour une collection de cas d'usage allant des anniversaires et anniversaires au ciblage de plateformes et plus encore.
-
-### Suivi des emails
-
-Le suivi des pixels ouverts et le suivi des clics peuvent maintenant être désactivés par profil d'utilisateur. Cette flexibilité aide les clients à soutenir les lois régionales en matière de protection de la vie privée, où un profil utilisateur individuel pourrait indiquer qu'ils ne veulent plus être suivis. Visitez notre [documentation]({{site.baseurl}}/user_guide/data_and_analytics/tracking/email_tracking/) pour en savoir plus.
-
-### Options de collecte de données SDK
-
-Apprenez-en plus sur la façon dont le SDK Braze peut être intégré pour permettre une collecte de données flexible dans notre nouvelle documentation sur [les options de collecte de données SDK]({{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/sdk_data_collection/).
-
-### Aperçu SSL
-
-En savoir plus sur SSL au Brésil, pourquoi SSL est important, et comment vous pouvez obtenir un certificat SSL dans notre nouvelle documentation [Aperçu SSL]({{site.baseurl}}/user_guide/onboarding_with_braze/email_setup/ssl/).
-
-### Points de terminaison de l'API du profil utilisateur d'Amplitude
-
-L’API de profil d’Amplitude sert les profils des utilisateurs d’Amplitude. Cela inclut les propriétés des utilisateurs, les propriétés des utilisateurs calculés, une liste des identifiants de cohortes de cohortes qui incluent l'utilisateur, et des recommandations. Reportez-vous à [points de terminaison d'API de profil d'Amplitude]({{site.baseurl}}/partners/data_and_infrastructure_agility/analytics/amplitude/amplitude_user_profile_api/) pour en savoir plus.
-
-### Point de terminaison des détails de la campagne
-
-Le point de terminaison GET [`/campaigns/details`]({{site.baseurl}}/api/endpoints/export/campaigns/get_campaign_details/) de l'API a ajouté une réponse dédiée `message` pour le canal de message intégré dans l'application. Vous trouverez de la documentation à ce sujet [ici]({{site.baseurl}}/api/endpoints/export/campaigns/get_campaign_details/#messages).
 
 <br><br>
 
