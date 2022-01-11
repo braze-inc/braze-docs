@@ -1,7 +1,7 @@
 ---
 nav_title: "Lois SMS & Règlements"
 article_title: Lois SMS & Règlements
-page_order: 1
+page_order: 2
 description: "Cet article de référence couvre les lois et règlements entourant les SMS."
 page_type: Référence
 noindex: vrai
