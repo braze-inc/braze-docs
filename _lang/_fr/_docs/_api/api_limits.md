@@ -29,6 +29,7 @@ Le tableau suivant répertorie les limites spécifiques de débit de l'API pour 
 | [`/fr/campaigns/trigger/send`][17.1]                                                     | 250 requêtes par minute lorsque vous spécifiez un segment ou une audience connectée. Sinon, 250 000 demandes par heure.                                                                                                                                                                                                                                  |
 | [`/fr/canvas/trigger/send`][17.2]                                                        | 250 requêtes par minute lorsque vous spécifiez un segment ou une audience connectée. Sinon, 250 000 demandes par heure.                                                                                                                                                                                                                                  |
 | [`/fr/sends/id/create`][18]                                                              | 100 demandes par jour.                                                                                                                                                                                                                                                                                                                                   |
+| [`/fr/subscription/status/set`][19]                                                      | 5000 demandes par minute.                                                                                                                                                                                                                                                                                                                                |
 {: .reset-td-br-1 .reset-td-br-2}
 
 ## Demande API en cours de traitement
@@ -95,3 +96,4 @@ Dans des conditions normales, le temps de cohérence de nos données est de 10 �
 [17.1]: {{site.baseurl}}/api/endpoints/messaging/send_messages/post_send_triggered_campaigns/
 [17.2]: {{site.baseurl}}/api/endpoints/messaging/send_messages/post_send_triggered_canvases/
 [18]: {{site.baseurl}}/api/endpoints/messaging/send_messages/post_create_send_ids/
+[19]: {{site.baseurl}}/api/endpoints/subscription_groups/post_update_user_subscription_group_status/
