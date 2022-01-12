@@ -27,7 +27,7 @@ Tout changement de contenu du message (y compris les titres, les corps, les imag
 
 ### Planification et audience
 
-Si vous modifiez l'heure d'envoi prévue de votre campagne, ou son public, ces changements ne seront pas reflétés dans la campagne actuelle avant la fin de la période actuelle de 24 heures.
+Si vous modifiez l'heure d'envoi prévue de votre campagne ou son public, ces changements sont reflétés dans la campagne actuelle immédiatement.
 
 ### Taux d'envoi
 
