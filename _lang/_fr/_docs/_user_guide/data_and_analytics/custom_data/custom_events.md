@@ -33,7 +33,7 @@ Voici la liste des méthodes utilisées par les différentes plates-formes pour 
 
 ## Stockage d'événements personnalisés
 
-Toutes les données stockées sur le **Profil utilisateur**, y compris les métadonnées d'événement personnalisées (première/dernière occurrence, le nombre total et X en Y sur 30 jours) sont conservés indéfiniment tant que chaque profil est actif.
+Toutes les données stockées sur le **Profil utilisateur**, y compris les métadonnées d'événement personnalisées (première/dernière occurrence, le nombre total, et X en Y sur 30 jours), sont conservés indéfiniment tant que chaque profil est actif.
 
 ## Filtres de segmentation d'événements personnalisés
 
