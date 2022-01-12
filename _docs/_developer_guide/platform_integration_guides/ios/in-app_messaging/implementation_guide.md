@@ -222,7 +222,7 @@ To set up a modal in-app message in the dashboard, you must provide a list of it
 
 ![Modal dashboard][4]
 
-In the key-value pairs, provide an `attribute_key`; this key, along with the user's selected value, will be saved to their user profile as a custom attribute. Next, add a key `view_type` with the value `picker`; this will override the load view, providing the in-app message with our custom view. User attributes sent to Braze must be handled by our custom view logic.
+In the key-value pairs, provide an `attribute_key`; this key, along with the user's selected value, will be saved to their user profile as a custom attribute. Next, add a key `view_type` with the value `picker`; this will override the load view, providing the in-app message with our custom view. User attributes sent to Braze must be handled by your custom view logic.
 
 ![Modal dashboard key-value pairs][5]{: style="max-width:65%;"}
 
@@ -355,7 +355,7 @@ Visit the [FullListViewController](https://github.com/braze-inc/braze-growth-sha
 
 To set up a custom full in-app message in the dashboard, you will need to provide a list of your tags formatted as an array of strings. 
 
-In the key-value pairs, provide an `attribute_key`; this key, along with the user's selected values, will be saved to their user profile as a custom attribute. Next, add a key `view_type` with the value `table_list`; this will override the load view, providing the in-app message with our custom view. User attributes sent to Braze must be handled by our custom view logic.
+In the key-value pairs, provide an `attribute_key`; this key, along with the user's selected values, will be saved to their user profile as a custom attribute. Next, add a key `view_type` with the value `table_list`; this will override the load view, providing the in-app message with our custom view. User attributes sent to Braze must be handled by your custom view logic.
 
 ![Full screen dashboard key-value pairs][7]{: style="max-width:65%;"}
 
