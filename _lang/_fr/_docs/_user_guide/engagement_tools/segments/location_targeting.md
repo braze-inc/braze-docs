@@ -36,4 +36,8 @@ Pour les régions circulaires, vous pouvez déplacer l'origine et ajuster le ray
 Pour les régions polygonales, vous pouvez désigner plus spécifiquement les zones que vous souhaitez inclure dans votre segment.
 
 !\[Région Polygonal 1\]\[4\]{: style="max-width:70%;"}
+
+{% alert tip %}
+Vous aimeriez profiter du ciblage de l'emplacement avec l'aide d'un partenaire de Braze ? Consultez nos [partenaires de localisation contextuels de Braze]({{site.baseurl}}/partners/message_personalization/location/) disponibles.
+{% endalert %}
 [1]: {% image_buster /assets/img_archive/createsegment2.png %} [2]: {% image_buster /assets/img_archive/filter_recent_location. ng %} [3]: {% image_buster /assets/img_archive/location_circle.png %} [4]: {% image_buster /assets/img_archive/create_polygon.png %}
