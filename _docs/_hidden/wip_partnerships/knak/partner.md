@@ -7,7 +7,7 @@ description: "The Knak integration allows you create fully-responsive emails in 
 alias: /partners/knak/
 
 page_type: partner
-search_tag: Partner
+search_tag: Knak
 hidden: true
 
 ---
@@ -31,7 +31,7 @@ In short, anybody with a Knak account and a Braze account can use Knak with Braz
 
 ## Use cases
 
-Knak is built for marketers who want to level-up their email creation for campaigns managed in Braze, with no coding or outside help required. It’s great for those who:
+Knak is built for marketers who want to level-up their email creation, with no coding or outside help required. It’s great for those who:
 - Currently use simple templates for emails, and want to up their game
 - Rely on outside agencies or developers to build emails for Braze
 - Want to take back creative control over asset creation, and get to market considerably faster
