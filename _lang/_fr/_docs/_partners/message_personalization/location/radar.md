@@ -9,11 +9,9 @@ search_tag: Partenaire
 
 # Radar
 
-> [Radar](https://www.onradar.com/) est la première plateforme de géorepérage et de suivi de localisation. La plate-forme Radar a trois produits de base : [Geofences](https://radar.io/product/geofencing), [Tracking de voyage](https://radar.io/product/trip-tracking), et [API de géo](https://radar.io/product/api). La combinaison de la plateforme d’engagement leader dans l’industrie et des capacités de géorepérage de Radar vous permet de générer des revenus et de fidéliser vos produits grâce à une vaste gamme d’expériences de produits et de services géothermiques.
+> [Radar](https://www.onradar.com/) est la première plateforme de géorepérage et de suivi de localisation. La plate-forme Radar a trois produits de base : [Geofences](https://radar.io/product/geofencing), [Tracking de voyage](https://radar.io/product/trip-tracking), et [API de géo](https://radar.io/product/api). La combinaison de la plateforme d’engagement leader dans l’industrie et des capacités de géorepérage de Radar vous permet de générer des revenus et de fidéliser vos produits grâce à une vaste gamme d’expériences de produits et de services géothermiques. Ceux-ci comprennent le suivi de la prise en charge et de la livraison, les notifications déclenchées par la localisation, la personnalisation contextuelle, la vérification de la localisation, les localisateurs de magasins, la saisie automatique des adresses, et plus encore.
 
-L'intégration de Radar et Braze vous permet d'accéder à des campagnes sophistiquées basées sur la localisation et d'enrichir votre profil utilisateur avec des données de localisation riches et de première partie.
-
-Lorsque des événements de géorepérage Radar ou de suivi de voyage sont générés, Radar enverra des événements personnalisés et des attributs utilisateur à Braze en temps réel. Vous pouvez utiliser ces événements et attributs pour déclencher des campagnes basées sur la localisation, alimenter des opérations de ramassage et de livraison du dernier kilomètre. surveiller la logistique de la flotte et de l'expédition, ou construire des segments d'utilisateurs en fonction des modèles d'emplacement.
+L'intégration de Braze et Radar vous permet d'accéder aux déclencheurs de campagne sophistiqués basés sur la localisation géographique et d'enrichir votre profil utilisateur avec des données de localisation riches et de première partie. Lorsque des événements de géorepérage du radar ou de suivi de la course sont générés, les événements personnalisés et les attributs des utilisateurs sont envoyés à Braze en temps réel. Ces événements et attributs peuvent ensuite être utilisés pour déclencher des campagnes basées sur la localisation, alimenter des opérations de ramassage du dernier kilomètre et de livraison. surveiller la logistique de la flotte et de l'expédition, ou construire des segments d'utilisateurs en fonction des modèles d'emplacement.
 
 De plus, les API de Radar Geo peuvent être mises à profit pour enrichir ou personnaliser vos campagnes de marketing via [Contenu connecté]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/connected_content/about_connected_content/).
 
@@ -47,17 +45,17 @@ Vous pouvez définir des clés API distinctes pour les environnements de test et
 
 Vous pouvez utiliser des événements personnalisés et des attributs utilisateur pour construire des segments basés sur la localisation ou déclencher des campagnes basées sur la localisation.
 
-### Segment d'utilisateurs itinérants
+### Déclencher une notification d'arrivée en magasin pour le ramassage en bordure de la bordure
 
-Envoyer une notification push à l'utilisateur lorsqu'il est arrivé dans votre magasin pour un ramassage en bordure de la courbe.
-
-![Segment Radar]({% image_buster /assets/img_archive/radar-segment.png %})
-
-### Déclencher lorsqu'un utilisateur entre dans un emplacement avec une grande confiance
-
-Envoyer une notification quand un utilisateur arrive dans votre boutique.
+Envoyez une notification push à l'utilisateur avec les instructions d'arrivée à son arrivée dans votre magasin pour un enlèvement en bordure de la rue.
 
 ![Campagne radar]({% image_buster /assets/img_archive/radar-campaign.png %})
+
+### Construire un segment d'audience des visiteurs récents de la boutique
+
+Par exemple, ciblez tous les utilisateurs qui ont visité votre boutique au cours des 7 derniers jours, qu'ils aient fait un achat ou non.
+
+![Segment Radar]({% image_buster /assets/img_archive/radar-segment.png %})
 
 ## Contenu connecté
 
