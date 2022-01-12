@@ -78,11 +78,11 @@ Sélectionnez le compte d'annonce Facebook désiré. Sous la liste déroulante _
 {% tab Create a New Audience %}
 __Créer une nouvelle audience__<br> Entrez un nom pour le nouveau public personnalisé, sélectionnez __Ajouter des utilisateurs à l'audience__ et sélectionnez les champs que vous souhaitez synchroniser avec Facebook. Ensuite, enregistrez votre audience en cliquant sur le bouton __Créer un public__ en bas de l'éditeur d'étape.
 
-!\[Facebook Sync\]\[13\]
+![Synchronisation de Facebook]({% image_buster /assets/img/fb_audience_sync/create_audience.png %})
 
 Les utilisateurs seront avertis en haut de l'éditeur d'étapes si le public est créé avec succès ou si des erreurs surviennent au cours de ce processus. Les utilisateurs peuvent également référencer ce public pour le retrait des utilisateurs plus tard dans le voyage de Canvas parce que le public a été créé en mode brouillon.
 
-!\[Facebook Sync\]\[14\]
+![Synchronisation de Facebook]({% image_buster /assets/img/fb_audience_sync/new_audience.png %})
 
 Lorsque vous lancez une toile avec un nouveau public, Braze créera le nouveau public personnalisé en lançant Canvas et ensuite en synchronisant les utilisateurs presque en temps réel au moment où ils entreront dans l'étape de l'audience Facebook.
 
@@ -90,7 +90,7 @@ Lorsque vous lancez une toile avec un nouveau public, Braze créera le nouveau p
 {% tab Sync with an Existing Audience %}
 __Synchroniser avec une Audience Existante__<br> Braze offre également la possibilité d'ajouter ou de supprimer des utilisateurs des audiences personnalisées Facebook existantes pour s'assurer que ces audiences sont à jour. Pour synchroniser avec un public existant, tapez le nom du public existant dans la liste déroulante et choisissez si vous voulez __Ajouter à l'auditoire__ ou __Retirer de l'auditoire__. Braze va alors soit ajouter ou supprimer des utilisateurs en temps quasi réel alors qu'ils entrent dans l'étape de l'Audience Facebook.
 
-!\[Facebook Sync\]\[12\]
+![Synchronisation de Facebook]({% image_buster /assets/img/fb_audience_sync/add_audience.png %})
 
 Il est important de noter que Facebook interdit de supprimer les utilisateurs des publics personnalisés où les audiences sont trop faibles (généralement moins de 1 000). En conséquence, Braze ne pourra pas synchroniser les utilisateurs pour une étape de retrait de l'audience jusqu'à ce que le public atteigne la taille du public appropriée.
 
