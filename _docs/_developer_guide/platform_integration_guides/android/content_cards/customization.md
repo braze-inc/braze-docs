@@ -630,7 +630,7 @@ For campaigns using Control Cards for A/B testing, you can use [`Card.isControl(
 
 #### Manually dismissing a Content Card
 
-You can manually log or set a Content Card as "dismissed" to Braze [for a particular card with `setIsDismissed`](https://appboy.github.io/appboy-android-sdk/javadocs/com/appboy/models/cards/Card.html#setIsDismissed-boolean-).
+You can manually log or set a Content Card as "dismissed" to Braze [for a particular card with `setIsDismissed`][57].
 
 If a card is already marked as dismissed, it cannot be marked as dismissed again.
 
@@ -674,3 +674,4 @@ This section applies to integrations which use the Braze SDK's default Content C
 [54]: https://github.com/Appboy/appboy-android-sdk/blob/master/android-sdk-ui/src/main/java/com/braze/ui/contentcards/ContentCardsFragment.java
 [55]: https://appboy.github.io/appboy-android-sdk/javadocs/com/appboy/models/cards/Card.html#isControl--
 [56]: https://github.com/Appboy/appboy-android-sdk/blob/v11.0.0/android-sdk-ui/src/main/java/com/appboy/ui/contentcards/handlers/DefaultContentCardsViewBindingHandler.java
+[57]: https://appboy.github.io/appboy-android-sdk/javadocs/com/appboy/models/cards/Card.html#setIsDismissed-boolean-

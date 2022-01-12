@@ -16,7 +16,7 @@ This article describes the different device-level properties captured when using
 
 ## Device properties
 
-By default, Braze will collect the following [device-level properties](https://appboy.github.io/appboy-android-sdk/javadocs/com/appboy/enums/DeviceKey.html) to allow device, language, and time zone-based message personalization:
+By default, Braze will collect the following [device-level properties][1] to allow device, language, and time zone-based message personalization:
 
 * AD_TRACKING_ENABLED
 * ANDROID_VERSION
@@ -29,7 +29,7 @@ By default, Braze will collect the following [device-level properties](https://a
 * RESOLUTION
 * TIMEZONE
 
-You can disable or specify the properties you wish to collect by setting them using [`BrazeConfig.Builder.setDeviceObjectAllowlistEnabled()`](https://appboy.github.io/appboy-android-sdk/javadocs/com/braze/configuration/BrazeConfig.Builder.html#setDeviceObjectAllowlistEnabled-boolean-) and [`BrazeConfig.Builder.setDeviceObjectAllowlist()`](https://appboy.github.io/appboy-android-sdk/javadocs/com/braze/configuration/BrazeConfig.Builder.html#setDeviceObjectAllowlist-java.util.EnumSet-).
+You can disable or specify the properties you wish to collect by setting them using [`BrazeConfig.Builder.setDeviceObjectAllowlistEnabled()`][2] and [`BrazeConfig.Builder.setDeviceObjectAllowlist()`][3].
 
 The following example showcases allowlisting the device object to only include the Android OS version and device locale in the device object:
 ```
@@ -40,3 +40,7 @@ The following example showcases allowlisting the device object to only include t
 By default, all fields are enabled. Note that without some properties, not all features will function properly. For instance, without the time zone, local time zone delivery will not function.
 
 To read more about the automatically collected device properties, visit our [SDK Data Collection Options]({{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/sdk_data_collection/) article. 
+
+[1]: https://appboy.github.io/appboy-android-sdk/javadocs/com/appboy/enums/DeviceKey.html
+[2]: https://appboy.github.io/appboy-android-sdk/javadocs/com/braze/configuration/BrazeConfig.Builder.html#setDeviceObjectAllowlistEnabled-boolean-
+[3]: https://appboy.github.io/appboy-android-sdk/javadocs/com/braze/configuration/BrazeConfig.Builder.html#setDeviceObjectAllowlist-java.util.EnumSet-
