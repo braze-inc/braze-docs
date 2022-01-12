@@ -25,7 +25,7 @@ Autorisation : Bearer YOUR-REST-API-KEY
 
 ```json
 {
-  "phone_number": ["12183095514","142555512"]
+  "phone_numbers": ["12183095514","142555512"]
 }
 ```
 
