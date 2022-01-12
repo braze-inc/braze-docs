@@ -20,6 +20,9 @@ The Braze and Remerge integration helps you develop robust, cross-channel lifecy
 |---|---|
 | Remerge account | A Remerge account is required to take advantage of this partnership. |
 | Remerge webhook key | This key will be provided by Remerge. |
+| Android app ID | Your unique Braze application identifier for Android (i.e. "com.example"). |
+| iOS app ID | Your unique Braze application identifier for iOS (i.e. "012345678"). |
+| Enable IDFA collection in Braze SDK | IDFA collection is optional within the Braze SDK and disabled by default. | 
 {: .reset-td-br-1 .reset-td-br-2}
 
 ## Integration
@@ -75,7 +78,7 @@ You do not have to define a request body for this webhook.
 
 ## Step 2: Preview your request
 
-Preview the message to ensure the request is rendering properly for different users. We recommend previewing and sending test requests for both Android and iOS users. If the request is successful, the API  will respond with `HTTP 204`.
+Preview the message to ensure the request is rendering properly for different users. We recommend previewing and sending test requests for both Android and iOS users. If the request is successful, the API will respond with `HTTP 204`.
 
 {% alert important %}
 Remember to save your template before leaving the page! <br>Updated webhook templates can be found in the **Saved Webhook Templates** list when creating a new [webhook campaign]({{site.baseurl}}/user_guide/message_building_by_channel/webhooks/creating_a_webhook/). 
