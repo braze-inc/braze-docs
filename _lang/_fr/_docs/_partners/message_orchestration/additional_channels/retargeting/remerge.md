@@ -15,10 +15,13 @@ L'intégration de Braze et Remerge vous aide à développer la robustesse, campa
 
 ## Pré-requis
 
-| Exigences           | Libellé                                                           |
-| ------------------- | ----------------------------------------------------------------- |
-| Compte Remerge      | Un compte Remerge est nécessaire pour profiter de ce partenariat. |
-| Clé Remerge webhook | Cette clé sera fournie par Remerge.                               |
+| Exigences                                 | Libellé                                                                                 |
+| ----------------------------------------- | --------------------------------------------------------------------------------------- |
+| Compte Remerge                            | Un compte Remerge est nécessaire pour profiter de ce partenariat.                       |
+| Clé Remerge webhook                       | Cette clé sera fournie par Remerge.                                                     |
+| Android app ID                            | Votre unique identifiant d'application Braze pour Android (c'est-à-dire "com.exemple"). |
+| ID de l'application iOS                   | Votre unique identifiant d'application Braze pour iOS (c'est-à-dire "012345678").       |
+| Activer la collection IDFA dans Braze SDK | La collection IDFA est optionnelle dans le Braze SDK et désactivée par défaut.          |
 {: .reset-td-br-1 .reset-td-br-2}
 
 ## Intégration
