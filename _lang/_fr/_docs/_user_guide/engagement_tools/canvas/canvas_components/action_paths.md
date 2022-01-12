@@ -15,6 +15,10 @@ Les chemins d'action dans Canvas vous permettent de trier vos utilisateurs en fo
 * Personnaliser les chemins de l'utilisateur en fonction d'une action spécifique
 * Conservez les utilisateurs pendant une durée donnée pour prioriser leur chemin suivant en fonction de leurs actions pendant cette période d'évaluation
 
+{% alert note %}
+Les chemins d'action sont progressivement déployés vers toutes les instances de Braze, donc il y a une chance que vous ne puissiez pas encore voir le composant Chemins d'Action dans votre Toile. Si vous souhaitez un accès immédiat, veuillez contacter votre responsable de compte Braze ou votre représentant pour la réussite de la clientèle.
+{% endalert %}
+
 ## Créer des chemins d'action
 
 !\[canvas_actionpath\]\[1\]{: style="float:right;max-width:40%;margin-left:15px;"}
