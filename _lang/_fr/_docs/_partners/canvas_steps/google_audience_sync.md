@@ -75,11 +75,11 @@ __Créer une nouvelle audience__<br> Entrez un nom pour le nouveau public person
 
 Ensuite, enregistrez votre audience en cliquant sur le bouton __Créer un public__ en bas de l'éditeur d'étape.
 
-!\[Google Sync\]\[7\]
+![Synchronisation Google]({% image_buster /assets/img/google_sync/google_sync7.png %})
 
 Les utilisateurs seront avertis en haut de l'éditeur d'étapes si le public est créé avec succès ou si des erreurs surviennent au cours de ce processus. Les utilisateurs peuvent référencer ce public pour le retrait des utilisateurs plus tard dans le voyage de Canvas parce que le public a été créé en mode brouillon.
 
-!\[Google Sync\]\[9\]
+![Synchronisation Google]({% image_buster /assets/img/google_sync/google_sync9.png %})
 
 Lorsque vous lancez une toile avec un nouveau public, Braze créera un nouveau public personnalisé lors du lancement de Canvas et par la suite synchronisera les utilisateurs en temps quasi réel au moment où ils entreront dans le pas de Google Audience.
 
@@ -92,7 +92,7 @@ __Synchroniser avec une Audience Existante__<br> Braze offre également la possi
 
 Une fois que vous avez configuré votre étape Google Audience, sélectionnez __Terminé__. Votre étape Google Audience inclura des détails sur le nouveau public.
 
-!\[Google Sync\]\[8\]
+![Synchronisation Google]({% image_buster /assets/img/google_sync/google_sync8.png %})
 
 {% endtab %}
 {% endtabs %}
@@ -141,4 +141,4 @@ Il peut prendre entre 6 et 12 heures pour qu'un public soit synchronisé sur Goo
 {% de détails que j'ai synchronisé un public sur Google, mais mes annonces ne servent pas. %}
 Vérifiez que vos audiences contiennent au moins __5 000__ utilisateurs pour vous assurer que les publicités commencent à servir.
 {% enddetails %}
-[1]: {% image_buster /assets/img/google_sync/google_sync1.png %} [2]: {% image_buster /assets/img/google_sync/google_sync2. ng %} [3]: {% image_buster /assets/img/google_sync/google_sync3.png %} [4]: {% image_buster /assets/img/google_sync/google_sync4. ng %} [6]: {% image_buster /assets/img/google_sync/google_sync6.png %} [7]: {% image_buster /assets/img/google_sync/google_sync7. ng %} [8]: {% image_buster /assets/img/google_sync/google_sync8.png %} [9]: {% image_buster /assets/img/google_sync/google_sync9.png %}
+[1]: {% image_buster /assets/img/google_sync/google_sync1.png %} [2]: {% image_buster /assets/img/google_sync/google_sync2.png %} [3]: {% image_buster /assets/img/google_sync/google_sync3. ng %} [4]: {% image_buster /assets/img/google_sync/google_sync4.png %} [6]: {% image_buster /assets/img/google_sync/google_sync6. ng %} [8]: {% image_buster /assets/img/google_sync/google_sync8.png %}
