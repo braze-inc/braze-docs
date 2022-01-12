@@ -39,9 +39,8 @@ Braze Documentation is licensed under a [Creative Commons Attribution-NonCommerc
 
 ### Before You Contribute
 1. Complete our [CLA](https://www.braze.com/docs/cla).
-2. Take the [Braze Docs Tour](https://www.braze.com/docs/tour).
-3. Check out our [Code of Conduct](https://github.com/Appboy/braze-docs/blob/develop/CODE_OF_CONDUCT.md)
-4. Check out [our Wiki](https://github.com/Appboy/braze-docs/wiki) - especially…
+2. Check out our [Code of Conduct](https://github.com/Appboy/braze-docs/blob/develop/CODE_OF_CONDUCT.md)
+3. Check out [our Wiki](https://github.com/Appboy/braze-docs/wiki) - especially…
   - The [Contributor Quick Start Guide](https://github.com/Appboy/braze-docs/wiki/Contributor-Quick-Start-Guide)
   - [Set Up Your Local Environment](https://github.com/Appboy/braze-docs/wiki/Set-Up-Your-Local-Environment)
   - [The Writing Style Guide](https://docs.google.com/document/d/e/2PACX-1vTtzHpcihaXTTYD85LoKIvYBvpCQFLr8n0BDKRDRAMEz_DnZdHJJINKL24r4JXkRUui24pl_DVxbu2T/pub)
