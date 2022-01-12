@@ -11,6 +11,8 @@ channel:
 
 En savoir plus sur les nouvelles fonctionnalités d'aperçu pour les messages personnalisés HTML In-App.
 
+{% sdk_min_versions web:2.5.0 android:8.0.0 ios:3.23.0 %}
+
 {% alert important %}
 Il s'agit d'une fonction d'opt-in. Demandez à votre équipe de compte Braze de vous donner accès dès aujourd'hui!
 {% endalert %}
@@ -107,9 +109,7 @@ Vous pouvez également suivre les nouveaux noms de boutons personnalisés - jusq
 
 Ces nouvelles fonctionnalités nécessitent la mise à jour vers la version Braze SDK suivante :
 
-* Web SDK v2.5+ [Changelog]({{site.baseurl}}/developer_guide/platform_integration_guides/web/changelog/#250)
-* iOS SDK - v3.23.0+ [Changelog]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/changelog/#3230)
-* SDK Android - v8.0.0+ [Changelog]({{site.baseurl}}/developer_guide/platform_integration_guides/android/changelog/#800)
+{% sdk_min_versions web:2.5.0 android:8.0.0 ios:3.23.0 %}
 
 {% alert warning %}
 Parce que ce type de message ne peut être reçu que par certaines versions plus récentes du SDK, les utilisateurs qui sont sur des versions SDK non supportées ne recevront pas le message.
