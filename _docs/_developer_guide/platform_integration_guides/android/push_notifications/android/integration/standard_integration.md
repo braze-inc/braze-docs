@@ -471,7 +471,7 @@ override fun createNotification(brazeNotificationPayload: BrazeNotificationPaylo
 You can return `null` from your custom `createNotification()` method to not show the notification at all, use `BrazeNotificationFactory.getInstance().createNotification()` to obtain Braze's default `notification` object for that data and modify it before display, or generate a completely separate `notification` object for display.
 
 {% alert note %}
-Braze push data keys are documented [here](https://appboy.github.io/appboy-android-sdk/javadocs/com/appboy/Constants.html).
+Braze push data keys are documented [here][78].
 {% endalert %}
 
 #### Step 2: Set your custom notification factory
@@ -660,7 +660,7 @@ val myExtra = extras.getString("my_key")
 {% endtabs %}
 
 {% alert note %}
-Braze push data keys are documented [here](https://appboy.github.io/appboy-android-sdk/javadocs/com/appboy/Constants.html).
+Braze push data keys are documented [here][78].
 {% endalert %}
 
 [5]: https://appboy.github.io/appboy-android-sdk/javadocs/com/appboy/Appboy.html#setCustomBrazeNotificationFactory-com.braze.IBrazeNotificationFactory-
@@ -702,3 +702,4 @@ Braze push data keys are documented [here](https://appboy.github.io/appboy-andro
 [75]: https://firebase.google.com/docs/reference/android/com/google/firebase/messaging/RemoteMessage
 [76]: https://developer.android.com/reference/android/app/Application
 [77]: https://appboy.github.io/appboy-android-sdk/javadocs/com/appboy/models/push/BrazeNotificationPayload.html
+[78]: https://appboy.github.io/appboy-android-sdk/javadocs/com/appboy/Constants.html
