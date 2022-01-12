@@ -6,7 +6,7 @@ hidden: true
 
 # Catalogs
 
-You can use catalogs to reference non-user data in your Braze campaigns through Liquid.
+You can use catalogs to reference non-user data in your Braze campaigns through Liquid.
 
 To do so, first import your catalog (a CSV of non-user data) into Braze, and then access that information to enrich your messages. You can bring in any type of data into a catalog. This data is typically some sort of metadata from your company such as product information for an eCommerce business, or course information for an education provider.
 
