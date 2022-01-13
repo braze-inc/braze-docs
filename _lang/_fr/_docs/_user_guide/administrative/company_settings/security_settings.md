@@ -61,7 +61,7 @@ Application de l'authentification à deux facteurs :
 
 ## Téléchargement de l'événement de sécurité
 
-Le rapport Événement Sécurité est un rapport CSV d'événements de sécurité tels que les invitations de compte, les suppressions de compte, les tentatives de connexion échouées et réussies, et d'autres activités. Pour télécharger ce rapport, cliquez sur **Télécharger le rapport** dans la section **Télécharger l'événement de sécurité**.
+Le rapport Événement Sécurité est un rapport CSV d'événements de sécurité tels que les invitations de compte, les suppressions de compte, les tentatives de connexion échouées et réussies, et d'autres activités. Pour télécharger ce rapport, cliquez sur **Télécharger le rapport** dans la section **Télécharger l'événement de sécurité**. Ce rapport ne contient que les 10 000 événements de sécurité les plus récents pour votre compte. Si vous avez besoin de données spécifiques pour un événement, veuillez contacter le support technique.
 [0]: {% image_buster /assets/img/remember_me.png %}
 
 [1]: {{site.baseurl}}/user_guide/administrative/access_braze/single_sign_on/
