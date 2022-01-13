@@ -95,11 +95,11 @@ Pour les campagnes de push livrées sur plusieurs plates-formes, la limite de ta
 
 ## Plafond de fréquence
 
-Au fur et à mesure que votre base d'utilisateurs continue de croître et que votre messagerie évolue pour inclure le cycle de vie, déclenché, transactionnel, et les campagnes de conversion, il est important d'éviter que vos notifications n'apparaissent comme des spammeurs ou comme des perturbateurs. En accordant un plus grand contrôle sur l’expérience de vos utilisateurs, le plafonnement des fréquences vous permet de créer les campagnes que vous désirez sans submerger votre public.
+Au fur et à mesure que votre base d'utilisateurs continue de croître et que votre messagerie évolue pour inclure le cycle de vie, déclenché, transactionnel, et les campagnes de conversion, il est important d'éviter que vos notifications n'apparaissent comme des spammeurs ou comme des perturbateurs. En fournissant un meilleur contrôle de l’expérience de vos utilisateurs, le plafonnement des fréquences vous permet de créer les campagnes que vous désirez sans submerger votre public.
 
 ### Aperçu des fonctionnalités {#freq-cap-feat-over}
 
-Le plafonnement de fréquence est appliqué au niveau d'envoi de la campagne ou de l'étape Canvas et peut être configuré pour chaque groupe d'applications en sélectionnant __Paramètres globaux des messages__ dans l'onglet **Engagement**. À partir de là, vous pouvez choisir ce qui suit :
+Le plafonnement de fréquence est appliqué au niveau d'envoi de la campagne ou de l'étape Canvas et peut être configuré pour chaque groupe d'applications en sélectionnant **Paramètres globaux des messages** dans l'onglet **Engagement**. À partir de là, vous pouvez choisir ce qui suit :
 
 - Quel canal de messagerie vous souhaitez capturer : push, email, SMS, webhook, ou l'un de ces quatre.
 - Combien de fois chaque utilisateur doit recevoir une campagne ou Canvas pas envoie d'un canal dans un certain laps de temps.
@@ -115,7 +115,9 @@ Chaque ligne de fréquences sera connectée à l'aide de l'opérateur `ET` , et 
 
 Il peut y avoir des campagnes, comme des messages transactionnels, que vous voulez toujours atteindre l'utilisateur, même s'ils ont déjà atteint leur limite de fréquence. Par exemple, une application de livraison peut vouloir envoyer un e-mail ou un push quand un article est distribué, quel que soit le nombre de campagnes reçues par l'utilisateur.
 
-Si vous voulez qu'une campagne particulière remplace les règles de plafonnement de fréquence, vous pouvez configurer cela dans le tableau de bord Braze en planifiant la livraison de cette campagne en basculant **le plafonnement de fréquence** sur **OFF**. Après cela, on vous demandera si vous voulez toujours que cette campagne compte dans votre limite de fréquence. Les messages qui comptent pour le plafonnement des fréquences sont inclus dans les calculs du filtre du canal intelligent. Lors de l'envoi de [campagnes API][15], qui sont souvent transactionnelles, vous aurez la possibilité de spécifier qu'une campagne devrait ignorer les règles de plafonnement de fréquence [dans la requête API][16] en définissant `override_messaging_limits` à `true`.
+Si vous voulez qu'une campagne particulière remplace les règles de plafonnement de fréquence, vous pouvez configurer cela dans le tableau de bord Braze en planifiant la livraison de cette campagne en basculant **le plafonnement de fréquence** sur **OFF**.
+
+Après cela, on vous demandera si vous voulez toujours que cette campagne compte dans votre limite de fréquence. Les messages qui comptent pour le plafonnement des fréquences sont inclus dans les calculs du filtre du canal intelligent. Lors de l'envoi de [campagnes API][15], qui sont souvent transactionnelles, vous aurez la possibilité de spécifier qu'une campagne devrait ignorer les règles de plafonnement de fréquence [dans la requête API][16] en définissant `override_messaging_limits` à `true`.
 
 Par défaut, les nouvelles campagnes et les canevas qui n'obéissent pas aux fréquences ne compteront pas non plus pour eux. Ceci est configurable pour chaque campagne et Canvas.
 
@@ -145,11 +147,11 @@ Si votre utilisateur est censé recevoir trois notifications push, deux messages
 {% endtab %}
 {% tab Example 2 %}
 
-Utilisation des règles suivantes de plafonnement des fréquences:
+Cet exemple utilise les règles suivantes de plafonnement des fréquences:
 
-![règle]({% image_buster /assets/img/standard_rules_fnfn.png %})
+![Règle]({% image_buster /assets/img/standard_rules_fnfn.png %})
 
-**Et le scénario suivant se produit :**
+**Lorsque le scénario suivant se produit :**
 
 - Un utilisateur déclenche la même campagne, `Campagne ABC` trois fois en une semaine.
 - Cet utilisateur déclenche `ABC Campagne` une fois le lundi, une fois le mercredi, et une fois le jeudi.
@@ -199,30 +201,30 @@ Les règles de fréquence par balises calculent au moment où un message est env
 
 Considérez les campagnes suivantes et les règles de fréquence par balises :
 
-__Campagnes :__
+**Campagnes**:
 
-- __Campagne A__ est une campagne de push marquée comme `promotionnelle`. Il est prévu d'envoyer à 9h00 le lundi.
-- __Campagne B__ est une campagne de push marquée comme `promotionnelle`. Il est prévu d'envoyer à 9 h le mercredi.
+- **Campagne A** est une campagne de push marquée comme `promotionnelle`. Il est prévu d'envoyer à 9h00 le lundi.
+- **Campagne B** est une campagne de push marquée comme `promotionnelle`. Il est prévu d'envoyer à 9 h le mercredi.
 
-__Capping de fréquence par règle d'étiquette :__
+**Capping de fréquence par règle d'étiquette :**
 
 - Votre utilisateur ne devrait pas recevoir plus d'une campagne de notification push par semaine avec le tag `promotion`.<br><br>
 
 | Action                                                                                                                                                                                                               | Résultat                                            |
 | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------- |
-| La balise `promotionnelle` est retirée de la __Campagne A__ _après_ que votre utilisateur a reçu le message, mais _avant_ __La campagne B a été envoyée.__                                                           | Votre utilisateur recevra __Campagne B__.           |
+| La balise `promotionnelle` est retirée de la __Campagne A__ après que votre utilisateur ait reçu le message, mais avant __La campagne B a été envoyée.__                                                             | Votre utilisateur recevra __Campagne B__.           |
 | Le tag `promotionnel` est supprimé par erreur de la __Campagne A__ après que votre utilisateur ait reçu le message. <br> Le tag est ramené à __Campagne A__ mardi avant que la __Campagne B__ ne soit envoyée. | Votre utilisateur ne recevra pas la __Campagne B__. |
 {: .reset-td-br-1 .reset-td-br-2}
 
 #### Envoi à grandes échelles
 
-Si vous envoyez plus de cent (100) messages par canal à partir de campagnes ou pas de Canvas avec un plafonnement de fréquence activé à un utilisateur spécifique au cours de la durée de votre plafonnement de fréquence par règle d'étiquette (par exemple, plus d'une semaine), la règle de plafonnement par balise peut ne pas toujours être appliquée correctement.
+Si vous envoyez plus de 100 messages par canal depuis des campagnes ou des pas de Canvas avec un plafonnement de fréquence activé à un utilisateur spécifique au cours de la durée de votre plafonnement de fréquence par règle de tag (par exemple, plus d'une semaine), la règle de plafonnement par balise peut ne pas toujours être appliquée correctement.
 
 Par exemple, si votre règle de limitation de fréquence par balise est:
 
 > Pas plus de deux campagnes e-mail ou pas de Canvas avec le tag `Promotional` à un utilisateur chaque semaine.
 
-Et vous envoyez à l'utilisateur plus de cent (100) courriels provenant de campagnes et de Canvas Steps avec des plafonds de fréquence activés au cours d'une semaine, plus de deux e-mails peuvent être envoyés à l'utilisateur.
+Et vous envoyez à l'utilisateur plus de 100 courriels depuis des campagnes et des étapes de Canvas avec des plafonds de fréquence activés au cours d'une semaine, plus de deux e-mails peuvent être envoyés à l'utilisateur.
 
 Étant donné que 100 messages par canal sont plus nombreux que ce que la plupart des marques envoient à leurs utilisateurs, il est peu probable que vous soyez affecté par cette limitation. Pour éviter cette limitation, vous pouvez définir un plafond pour le nombre maximum d'e-mails que vous souhaitez recevoir vos utilisateurs au cours d'une semaine.
 
