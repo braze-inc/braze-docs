@@ -16,11 +16,11 @@ L'intégration de Braze et Kubit vous permet d'importer des cohortes d'utilisate
 
 ## Pré-requis
 
-| Exigences                      | Origine                                                                                                                                                                                                                                                                                                                                                                   |
+| Exigences                      | Libellé                                                                                                                                                                                                                                                                                                                                                                   |
 | ------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Compte d'entreprise Kubit      | Un compte d'entreprise Kubit est requis pour profiter de ce partenariat.                                                                                                                                                                                                                                                                                                  |
 | ID d'utilisateur correspondant | Vos données clients dans Kubit et Braze doivent avoir des identifiants d'utilisateurs correspondants sur les deux plateformes. Cela inclut également les UUID anonymes. Visitez notre [documentation]({{site.baseurl}}/developer_guide/platform_integration_guides/android/analytics/setting_user_ids/) pour savoir comment Braze définit les identifiants d'utilisateur. |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
+{: .reset-td-br-1 .reset-td-br-2}
 
 ## Intégration
 
