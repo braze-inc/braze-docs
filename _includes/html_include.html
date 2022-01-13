@@ -11,6 +11,22 @@
   <link rel="canonical" {% if page.url == site.index_url %} href= "{{ site.baseurl | prepend: site.homeurl }}" {% else %} href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.homeurl }}"{% endif %}>
 
   <meta name="keywords" content="braze, docs, documentation, appboy, academy{{ page.id | replace: '_', ' ' | replace: '/', ', ' }} ">
+  
+  <script type="application/ld+json">
+  {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "url": "https://www.braze.com/docs",
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": {
+          "@type": "EntryPoint",
+          "urlTemplate": "https://www.braze.com/docs/search/?query={search_term_string}"
+        },
+        "query-input": "required name=search_term_string"
+      }
+    }
+  </script>
 
 <link href="{{site.baseurl}}/assets/css/bootstrap.css" rel="stylesheet" />
 <link type="text/css" rel="stylesheet" href="//fast.fonts.net/cssapi/34a7ffbc-6962-4ab8-b4f5-9aa2b4258efc.css"/>
