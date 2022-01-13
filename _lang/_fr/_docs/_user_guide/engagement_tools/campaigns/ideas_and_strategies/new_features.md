@@ -11,7 +11,7 @@ tool: Campagnes
 
 > Cet article de référence explique comment utiliser la plateforme Braze pour tenir vos clients au courant des nouvelles fonctionnalités et versions de votre application.
 
-Vous travaillez dur pour continuellement mettre à jour et améliorer votre application, et vous voulez que vos utilisateurs profitent de ces nouvelles fonctionnalités excitantes et de nouvelles versions d'applications.  Apprenez à enseigner aux utilisateurs les nouvelles fonctionnalités qu'ils n'ont pas encore utilisées, et les encourager à explorer l'application pour obtenir le maximum que vous avez à offrir.
+Vous travaillez dur pour continuellement mettre à jour et améliorer votre application, et vous voulez que vos utilisateurs profitent de ces nouvelles fonctionnalités excitantes et de nouvelles versions d'applications.  Apprenez à enseigner à vos utilisateurs les nouvelles fonctionnalités qu'ils n'ont pas encore utilisées, et les encourager à explorer l'application pour obtenir le maximum que vous avez à offrir.
 
 ## Pourquoi utiliser des campagnes de sensibilisation de fonctionnalités
 
@@ -25,7 +25,7 @@ Braze SDKs suit automatiquement la version _de l'application_ la plus récente d
 
 ### Numéro de version de l'application
 
-Utilisez le filtre _Numéro de version_ pour segmenter les utilisateurs par le numéro de version/build de l'application.
+Utilisez le filtre **Numéro de version** pour segmenter les utilisateurs par la version et le numéro de build de l'application.
 
 Ce filtre prend en charge les comparaisons numériques pour cibler une gamme de versions d'applications. Par exemple, vous pouvez cibler les utilisateurs dont l'application est « ci-dessous», « ci-dessus» et « égale à» version de l'application « 1. .3", qui peut être bénéfique pour promouvoir une nouvelle fonctionnalité qui nécessite une mise à niveau de l'application.
 
