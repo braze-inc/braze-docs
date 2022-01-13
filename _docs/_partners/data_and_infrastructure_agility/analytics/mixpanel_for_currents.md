@@ -12,36 +12,69 @@ tool: Currents
 
 # Mixpanel for Currents
 
-> [Mixpanel](https://mixpanel.com/) is a business analytics platform that allows you to export events from Braze to Mixpanel to perform deeper analysis. The data collected can then be used to build custom reports and measure user engagement and retention.
+> [Mixpanel](https://mixpanel.com/) is a business analytics platform that allows you to export events from Mixpanel into other platforms to perform deeper analysis. The data collected can then be used to build custom reports and measure user engagement and retention.
 
-To get started, find the following information from your Mixpanel dashboard under the `Settings > Project Settings` menu:
+The Braze and Mixpanel integration allows you to export Mixpanel Cohorts into Braze to create Braze segments that can be used to target users in future Braze campaigns or Canvases. You can also leverage Braze Currents to export your Braze events to Mixpanel to drive deeper analytics into conversions, retention, and product usage. 
 
--   Mixpanel API Secret
--   Mixpanel Token
+## Prerequisites
 
-Add this information to the Mixpanel Currents integration page on the dashboard, and press save.
+| Requirement | Description |
+|---|---|
+| Mixpanel account | A [Mixpanel account](https://mixpanel.com/) is required to take advantage of this partnership. |
+| Currents | In order to export data back into Mixpanel, you need to have [Braze Currents]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/#access-currents) set up for your account. |
+{: .reset-td-br-1 .reset-td-br-2} 
 
-![Mixpanel]({% image_buster /assets/img_archive/currents-mixpanel-edit.png %})
+## Data import integration
 
-{% alert important %}
-It's important to keep your Mixpanel API Secret and Mixpanel Token up to date; if your connector's credentials expire, the connector will stop sending events. If this persists for more than **48 hours**, the connector's events will be dropped and data will be permanently lost.
-{% endalert %}
+Use Braze and Mixpanel's partnership to configure your integration and import Mixpanel cohorts directly into Braze for retargeting, creating a full loop of data from one system to another. This allows you to perform a deeper analysis using Mixpanel and seamlessly execute your strategies using Braze.
 
-## Integration details
+Any integration you set up will count towards your account's data point volume.
+
+### Step 1: Get the Braze data import key
+
+In Braze, navigate to **Technology Partners** and select **Mixpanel**. Here, you will find the REST endpoint and generate your Braze data import key. Once generated, you can create a new key or invalidate an existing one. The data import key and the REST endpoint are used in the next step when setting up a postback in Mixpanel's dashboard.<br><br>![Mixpanel]({% image_buster /assets/img_archive/currents-mixpanel-edit.png %})
+
+### Step 2: Set up the Braze integration in Mixpanel
+
+In Mixpanel, navigate to **Data Management > Integrations.** Next, select the Braze integration tab and click **Connect**. In the prompt that appears, provide the Braze data import key and REST endpoint, and click **Continue**.
+
+![Mixpanel integration set up]({% image_buster /assets/img_archive/mixpanel2.png %}){: style="max-width:50%;"}
+
+### Step 3: Export a Mixpanel cohort to Braze
+
+In Mixpanel, navigate to **Data Management > Cohorts.** Select the cohort to send to Braze and then select **Export to Braze**. Lastly, select a one-time sync or dynamic sync. Selecting dynamic sync will sync your Braze cohort every two hours to match users in Mixpanel. 
+
+![Mixpanel cohort export]({% image_buster /assets/img_archive/mixpanel3.png %}){: style="max-width:50%;"}
+
+### Step 4: Segment users in Braze
+
+In Braze, to create a segment of these users, navigate to **Segments** under **Engagement**, name your segment, and select **Mixpanel_Cohorts** as the filter. Next, use the "includes" option and choose the cohort you created in Mixpanel. 
+
+![Mixpanel segment]({% image_buster /assets/img_archive/mixpanel1.png %})
+
+Once saved, you can reference this segment during Canvas or campaign creation in the targeting users step.
+
+## Data export integration
 
 A list of the events that can be exported from Braze to Mixpanel is below. All events sent to Mixpanel will include the user's `external_user_id` as the Mixpanel Distinct ID. At this time, Braze does not send event data for users who do not have their `external_user_id` set.
 
-You can export two types of events to Mixpanel: "Message Engagement Events" consisting of the Braze Events that are directly related to message sending, and "Customer Behavior Events" including other App or Website activity such as Sessions, Custom events, and Purchases tracked through the platform. All custom events are prefixed with `[Braze Custom Event]`. Custom event properties and purchase event properties are prefixed with `[Custom event property]` and `[Purchase property]`, respectively.
+You can export two types of events to Mixpanel: "Message Engagement Events" consisting of the Braze Events directly related to message sending, and "Customer Behavior Events" including other app or website activity such as sessions, custom events, and purchases tracked through the platform. All custom events are prefixed with `[Braze Custom Event]`. Custom event properties and purchase event properties are prefixed with `[Custom event property]` and `[Purchase property]`, respectively.
 
 Please contact your Account Manager or open a [support ticket][support] if you need access to additional event entitlements.
 
-## Mixpanel Cohort Import
+### Step 1: Get Mixpanel credentials
 
-Use Braze and Mixpanel's partnership to configure your integration and import Mixpanel cohorts directly into Braze for retargeting, creating a full loop of data from one system to another. This allows you to perform a deeper analysis using Mixpanel and seamlessly execute on your strategies using Braze.
+In your Mixpanel dashboard, click into the **Project Settings**in either a new or existing project. Here you will find the Mixpanel API secret and Mixpanel Token. These credentials will be used in the next step to create your Currents connection. 
 
-You can manage the Mixpanel Cohort Import process from the Technology Partners page in your Braze account. Any integration that you set up will count towards your account's data point volume.
+### Step 2: Create Braze Current
 
-![Mixpanel cohort import]({% image_buster /assets/img_archive/currents-mixpanel-import.png %})
+In Braze, navigate to **Currents > + Create Current > Create Mixpanel Export**. Provide an integration name, contact email, Mixpanel API secret, and Mixpanel token in the listed fields. Next, select the events you want to track; a list of available events is provided below. Lastly, click **Launch Current**
+
+![Mixpanel current]({% image_buster /assets/img_archive/mixpanel4.png %}){: style="max-width:80%;"}
+
+{% tab note %}
+Check out Mixpanel's [integration docs](https://help.mixpanel.com/hc/en-us/articles/360001243663) or this Braze [Mixpanel LAB course](https://lab.braze.com/mixpanel-integration-with-braze/339085/scorm/2u7y2e6qrldh2) to learn more. 
+{% endtab %}
 
 ## Customer behavior events
 
@@ -228,7 +261,7 @@ You can manage the Mixpanel Cohort Import process from the Technology Partners p
   "user_agent": (string) description of the user’s system and browser for the event (Email Click, Open, and MarkAsSpam events only),
   "link_id": (string) unique value generated by Braze for the URL (Email Click events only),
   "link_alias": (string) alias name set when the message was sent (Email Click events only),
-  "machine_open": (string) Indicator of whether the e-mail was opened by an automated process, such as Apple or Google mail pre-fetching. Currently "true" or null, but additional granularity (e.g. "Apple" or "Google" to indicate which process made the fetch) may be added in the future. (Email Open events only)
+  "machine_open": (string) Indicator of whether the email was opened by an automated process, such as Apple or Google mail pre-fetching. Currently "true" or null, but additional granularity (e.g. "Apple" or "Google" to indicate which process made the fetch) may be added in the future. (Email Open events only)
 }
 ```
 
@@ -489,3 +522,7 @@ Behavior for `dispatch_id` differs between Canvas and campaigns because Braze tr
 ```
 
 [support]: {{site.baseurl}}/braze_support/
+[1]: {% image_buster /assets/img_archive/mixpanel1.png %}
+[2]: {% image_buster /assets/img_archive/mixpanel2.png %}
+[3]: {% image_buster /assets/img_archive/mixpanel3.png %}
+[4]: {% image_buster /assets/img_archive/mixpanel4.png %}
