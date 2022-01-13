@@ -1,6 +1,6 @@
 ---
-nav_title: Changez votre canevas après le lancement
-article_title: Changez votre canevas après le lancement
+nav_title: Changer votre toile après le lancement
+article_title: Changer votre toile après le lancement
 page_order: 1
 description: "Cet article de référence couvre les différents aspects d'une toile qui peut être modifiée après le lancement initial."
 page_type: Référence
