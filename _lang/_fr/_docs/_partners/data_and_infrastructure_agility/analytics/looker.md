@@ -9,83 +9,69 @@ search_tag: Partenaire
 
 # Observateur
 
-> Looker, une plateforme d'intelligence d'entreprise et d'analyse de données de grande taille, vous permet d'explorer, d'analyser et de partager en temps réel des analyses métiers de façon transparente.
+> [Looker](https://looker.com/), une intelligence commerciale et une plateforme d'analyse de grandes données, vous permet d'explorer, d'analyser et de partager en temps réel des analyses métiers de manière transparente.
 
-Looker et Braze vous permettent de transformer les expériences des clients en visualisant les données du cycle de vie du client.
+L'intégration de Braze et Looker permet aux utilisateurs de Braze de tirer parti de la première partie [Looker Blocks](#looker-blocks) et [Looker Actions](#looker-actions) en signalisant l'utilisateur via l'API REST. Une fois signalés, ces utilisateurs peuvent être ajoutés aux segments de [cibler](#segment-users) futures campagnes Braze ou Canvases. Pour utiliser Looker avec Braze, nous vous recommandons d'envoyer vos données Braze à un entrepôt de données [en utilisant les courants de Braze][6], puis utilisez les Blocs Braze's Looker pour modéliser et visualiser rapidement vos données Braze dans Looker.
+
+## Pré-requis
+
+| Exigences                       | Libellé                                                                                                                                                                                                      |
+| ------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| Compte Looker                   | Un [compte Looker](https://looker.com/) est requis pour profiter de ce partenariat.                                                                                                                          |
+| Braze clé API REST              | Une clé API Braze REST avec les permissions `users.track`. <br><br> Ceci peut être créé dans le **tableau de bord Braze -> Console développeur -> Clé d'API REST -> Créer une nouvelle clé API** |
+| Point de terminaison REST Braze | Votre URL de terminaison REST. Votre point de terminaison dépendra de l'URL [Braze pour votre instance][1].                                                                                                  |
+{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
+
+#### Limitation
+
+- Ce processus ne fonctionne qu'avec les données qui n'ont pas été pivotées.
+- Actuellement, l'API est limitée à 100 000 lignes envoyées.
+- Le nombre final du drapeau d'un utilisateur peut être inférieur en raison de doublons ou de non-utilisateurs.
 
 ## Intégration
 
-Braze est partenaire avec Looker à travers les [Looker Blocks de première partie](#implementing-the-looker-blocks) et [les utilisateurs de Braze via REST API](#flagging-users-within-braze). Pour utiliser Looker avec Braze, nous vous recommandons d'envoyer vos données Braze à un entrepôt de données [en utilisant les courants de Braze][6], puis utilisez les Blocs Braze's Looker pour modéliser et visualiser rapidement vos données Braze dans Looker.
-
-Braze's Looker Blocks peut réduire le fardeau de la modélisation des données et permettre aux marketeurs d'accéder rapidement et de visualiser les données.
-
-[Voyez comment Braze utilise les courants.][1]
-
-## Blocs de Looker disponibles
+### Blocs de Looker
 
 Nos Blocs de Looker aident les clients à accéder rapidement à une vue des données granulaires que nous offrons via [courants][5]. Nos blocs fournissent des visualisations préfabriquées et la modélisation des données des courants afin que les clients de Braze puissent facilement implémenter des modèles analytiques comme la rétention, évaluer la délivrance des messages, examiner plus en détail le comportement de l'utilisateur, et plus encore.
 
-Braze dispose actuellement de deux blocs : l'Analyse de l'engagement des messages et les Blocs d'analyse des comportements des utilisateurs.
-
-| Bloquer                                       | Libellé                                                                                                                                                                                                    | Plus d'informations                                                                                                                                                                                                                                            | Code                                                                                  |
-| --------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- |
-| __Bloc Analyses d'Engagement de Message__     | Ce bloc comprend des données autour de push, courriel, messages dans l'application, webhook, fil d'actualité, conversion, entrée sur Canvas et événements d'inscription de groupe de contrôle de campagne. | [En savoir plus sur ce Bloc de Looker](https://looker.com/platform/blocks/source/message-engagement-analytics-by-braze?latest&utm_campaign=7012R000000fxfC&utm_source=other&utm_medium=email&utm_content=brazedirectreferral&utm_term=braze_direct) de Looker. | Voir le code sur [Github](https://github.com/llooker/braze_message_engagement_block). |
-| __Bloc Analyses de Comportement Utilisateur__ | Ce bloc contient des données sur les événements personnalisés, les achats, les sessions, les événements de localisation et les désinstallations.                                                           | [En savoir plus sur ce Bloc de Looker](https://looker.com/platform/blocks/source/user-behavior-analytics-by-braze?latest&utm_campaign=7012R000000fxfC&utm_source=other&utm_medium=email&utm_content=brazedirectreferral&utm_term=braze_direct) de Looker.      | Voir le code sur [Github](https://github.com/llooker/braze_retention_block).          |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4}
-
-### Implémentation des Blocs de Looker
-
 Pour implémenter les Blocs de Looker, suivez les instructions dans les fichiers README du code Github.
+- [Bloc d'analyse d'engagement de message README][2]
+- [Bloc d'analyse du comportement utilisateur README][3]
 
-- [Bloc Analytics d'engagement de message README][2]
-- [Bloc de comportement utilisateur README][3]
+Les deux intégrations supposent que votre [première intégration Braze][4], ainsi que votre intégration à Braze avec un [entrepôt de données][7]compatible Looker, est correctement configurée pour capturer et envoyer les données nécessaires.
+
 
 {% alert important %}
-  Braze a construit nos Blocs Looker en utilisant [Snowflake](https://www.snowflake.com/) comme entrepôt de données. Tandis que nous visons à ce que nos blocs fonctionnent avec le plus d'entrepôts de données possible, il peut y avoir des fonctions SQL qui diffèrent en termes de disponibilité, de syntaxe ou de comportement entre les dialectes.
+Braze a construit nos Blocs Looker en utilisant [Snowflake](https://www.snowflake.com/) comme entrepôt de données. Tandis que nous visons à ce que nos blocs fonctionnent avec le plus d'entrepôts de données possible, certaines fonctions SQL peuvent différer en termes de disponibilité, de syntaxe ou de comportement entre les dialectes.
 {% endalert %}
-
-Les deux intégrations supposent que votre [première intégration Braze][4], ainsi que votre intégration à Braze avec un [entrepôt de données][7] compatible Looker est correctement configurée pour capturer et envoyer les données nécessaires.
 
 {% alert warning %}
-Soyez conscient des différentes conventions de nommage ! Les noms personnalisés peuvent entraîner des incohérences dans les données, à moins que vous ne fassiez attention à modifier tous les noms correspondants. Si vous avez personnalisé un nom de vue/table ou de modèle, renommez chacun dans le LookML par le nom que vous avez sélectionné.
+Soyez conscient des différentes conventions de nommage ! Les noms personnalisés peuvent causer des incohérences dans les données à moins que vous ne modifiiez tous les noms correspondants. Si vous avez personnalisé un nom de vue/table ou de modèle, renommez chacun dans le LookML par le nom que vous avez sélectionné.
 {% endalert %}
 
-## Signaler les utilisateurs dans Braze
+#### Blocs disponibles
 
-__Les actions de Looker__ vous permettent de signaler les utilisateurs de Braze via le point de terminaison de l'API REST à partir d'un Looker Look. __Actions__ exige qu'une dimension soit taguée avec `braze_id`. L'Action ajoutera la valeur signalée aux utilisateurs `looker_export` attribut personnalisé.
+| Bloquer                                         | Libellé                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     |
+| ----------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Bloc d'analyse de l'engagement de message       | Ce bloc comprend des données autour de push, courriel, messages dans l'application, webhook, fil d'actualité, conversion, entrée sur Canvas et événements d'inscription de groupe de contrôle de campagne. <br><br>En savoir plus sur ce [Looker Block](https://looker.com/platform/blocks/source/message-engagement-analytics-by-braze?latest&utm_campaign=7012R000000fxfC&utm_source=other&utm_medium=email&utm_content=brazedirectreferral&utm_term=braze_direct), ou consultez le [code Github](https://github.com/llooker/braze_message_engagement_block). |
+| Bloc d'analyse du comportement de l'utilisateur | Ce bloc contient des données sur les événements personnalisés, les achats, les sessions, les événements de localisation et les désinstallations.<br><br>En savoir plus sur ce [Looker Block](https://looker.com/platform/blocks/source/user-behavior-analytics-by-braze?latest&utm_campaign=7012R000000fxfC&utm_source=other&utm_medium=email&utm_content=brazedirectreferral&utm_term=braze_direct), ou consultez le [code Github](https://github.com/llooker/braze_retention_block).                                                                          |
+{: .reset-td-br-1 .reset-td-br-2}
+
+### Actions du chercheur
+
+Les actions de Looker vous permettent de signaler les utilisateurs de Braze via le point de terminaison de l'API REST à partir d'un Looker Look. Les actions nécessitent qu'une dimension soit taguée avec `braze_id`. L'Action ajoutera la valeur signalée à l'attribut personnalisé`looker_export` de l'utilisateur.
 
 {% alert important %}
 Seuls les utilisateurs existants seront signalés. Vous ne pouvez pas utiliser Pivoted Looks lorsque vous signalez des données en Brésil.
 {% endalert %}
 
-## Mettre à jour les attributs de l'utilisateur
+#### Étape 1 : Mettre en place une action Braze Looker
 
-Optionnel, n'importe quel attribut peut également être défini en utilisant un tag de `braze[]` avec le nom de l'attribut entre le `[]` c'est-à-dire si vous voulez qu'un attribut personnalisé de `segment utilisateur` soit envoyé, alors le tag serait `braze[User Segment]`.
-- Notez ce qui suit :
-  - L'attribut ne sera envoyé que s'il est **inclus en tant que champ dans le look**.
-  - Le nom de l'attribut est sensible à la casse.
-  - Les types supportés sont : `Chaînes`, `Booléens`, `Nombres` et `Dates`.
-  - Les attributs par défaut peuvent également être définis tant qu'ils correspondent exactement au nom [des profils utilisateurs standards]({{site.baseurl}}/api/endpoints/user_data/#braze-user-profile-fields).
-  - La balise complète sera entre guillemets, donc elle devrait ressembler à des balises `: ["braze[first_name]"]`. D'autres tags peuvent également être assignés, mais seront ignorés.
-  - Des informations supplémentaires peuvent être trouvées sur [Github](https://github.com/looker/actions/tree/master/src/actions/braze)
-
-## Instructions d'installation
-
-[Vous pouvez également trouver ces instructions et des exemples de code sur Github.](https://github.com/looker/actions/tree/master/src/actions/braze)
-
-### Étape 1 : Créer une clé API REST
-
-Créez une clé d'API REST avec accès à `users.track` à partir de la [console de développeur Braze][8].
-
-!\[User/Track API\]\[11\]
-
-### Étape 2 : Configurez une action Braze Looker
-
-Configurez l'action Braze Looker avec la clé API, et [Braze REST Endpoint][9].
+Configurez une action Braze Looker avec votre clé API Braze REST et votre point de terminaison REST.
 
 !\[Braze Looker Action\]\[12\]
 
-### Étape 3 : Configurez le développement du Looker
+#### Étape 2 : Configurez le développement du Looker
 
 Dans Looker Develop, sélectionnez les vues appropriées. Ajouter `braze_id` aux cotes balise .
 
@@ -98,36 +84,29 @@ dimension: external_id {
 }
 ```
 
-### Étape 4 : Envoyer l'action Looker
+#### Étape 3 : Définir les attributs de l'utilisateur dans les tags
 
-1. Dans un aperçu avec une dimension `braze_id` sélectionnée, cliquez sur l'engrenage Paramètres ( <i class="fas fa-cog"></i> ) en haut à droite et sélectionnez `Envoyer. .`.
+Optionnellement, n'importe quel attribut peut être défini en utilisant une balise `braze[]` avec le nom de l'attribut entre parenthèses. Par exemple, si vous voulez qu'un attribut personnalisé `user_segment` soit envoyé, la balise serait `braze[user_segment]`.
+
+Notez les limitations suivantes :
+- Les attributs ne seront envoyés que s'ils sont **inclus en tant que champ dans le look**.
+- Les types pris en charge sont `Strings`, `Boolean`, `Numbers`, et `Dates`.
+- Les noms d'attributs sont sensibles à la casse.
+- Les attributs par défaut peuvent également être définis tant qu'ils correspondent exactement aux noms [du profil utilisateur standard]({{site.baseurl}}/api/endpoints/user_data/#braze-user-profile-fields).
+- La balise complète doit être formatée entre guillemets. Par exemple, `tags : ["braze[first_name]"]`. D'autres tags peuvent également être assignés, mais seront ignorés.
+- Des informations supplémentaires peuvent être trouvées sur [Github](https://github.com/looker/actions/tree/master/src/actions/braze).
+
+#### Étape 4 : Envoyer l'action Looker
+
+1. Dans un aperçu avec une dimension `braze_id` sélectionnée, cliquez sur le matériel de configuration ( <i class="fas fa-cog"></i> ) en haut à droite et sélectionnez **Envoyer. .**.
 2. Sélectionnez une action de Braze personnalisée.
-3. À partir de la liste déroulante, sélectionnez la `Clé d'utilisateur unique` appropriée pour le compte Braze (`external_id` ou `braze_id`).
+3. Sous **Clé Unique**, fournir la clé de mapping utilisateur principale pour le compte Braze (`external_id` ou `braze_id`).
 4. Donne un nom à l'exportation. Si aucun n'est fourni, `LOOKER_EXPORT` sera utilisé.
-5. Sous __Options avancées__, sélectionnez `Résultats dans le tableau` ou `Tous les résultats`
-6. Cliquez sur `Envoyer`.
+5. Sous **Options Avancées**, sélectionnez **Résultats dans le Tableau** ou **Tous les résultats** puis **Envoyez**.<br><br>! Send Looker Action][13]<br><br>Si l'exportation a été correctement envoyée, puis `LOOKER_EXPORT` devrait apparaître dans le profil de l'utilisateur comme un attribut personnalisé avec la valeur que vous avez entré dans l'action.<br><br>!\[Attribut personnalisé dans Braze à partir du regardeur\]\[14\]
 
-!\[Send Looker Action\]\[13\]
+##### Exemple d'API sortante
 
-Si l'exportation a été correctement envoyée, alors `looker_export` devrait apparaître dans le profil de l'utilisateur comme un attribut personnalisé avec la valeur que vous avez entré dans l'Action.
-
-!\[Attribute personnalisé in Braze from Looker\]\[14\]
-
-### Exportation des utilisateurs de segments par Looker
-
-Pour cibler les utilisateurs marqués, un segment Braze peut être créé qui correspond à la valeur marquée.
-
-!\[Braze Segment by Looker Export\]\[15\]
-
-### Limitation
-
-- Ce processus ne fonctionne qu'avec les données qui n'ont pas été pivotées.
-- Actuellement, l'API est limitée à 100 000 lignes envoyées.
-- Le nombre final du drapeau d'un utilisateur peut être inférieur en raison de doublons ou de non-utilisateurs.
-
-### Exemple d'API sortante
-
-_Exemple de l'API sortante qui sera envoyée au point de terminaison [/user/track/][10]._
+Ce qui suit est un exemple d'un appel d'API sortant, qui sera envoyé au point de terminaison [/users/track/][10].
 
 ```json
 {
@@ -152,6 +131,14 @@ _Exemple de l'API sortante qui sera envoyée au point de terminaison [/user/trac
    ]
 }
 ```
+
+### Utilisateurs du segment dans Braze {#segment-users}
+
+En Brésil, pour créer un segment de ces utilisateurs signalés, accédez à **Segments** sous **Engagement**, nommez votre segment, et sélectionnez **Looker_Export** comme filtre. Ensuite, utilisez l'option "Inclut la valeur" et fournissez le flag d'attribut personnalisé que vous avez assigné dans le Looker.
+
+!\[Braze Segment by Looker Export\]\[15\]
+
+Une fois enregistré, vous pouvez référencer ce segment pendant la création de Canvas ou de campagne dans l'étape des utilisateurs ciblés.
 [11]: {% image_buster /assets/img/user_track_api.png %} [12]: {% image_buster /assets/img/braze-looker-action.png %} [13]: {% image_buster /assets/img/send-looker-action. ng %} [14]: {% image_buster /assets/img/custom-attributes-looker.png %} [15]: {% image_buster /assets/img/braze_segments.png %}
 
 [1]: {{site.baseurl}}/user_guide/data_and_analytics/braze_currents/advanced_topics/how_braze_uses_currents/
@@ -161,6 +148,4 @@ _Exemple de l'API sortante qui sera envoyée au point de terminaison [/user/trac
 [5]: {{site.baseurl}}/partners/braze_currents/about/
 [6]: {{site.baseurl}}/user_guide/data_and_analytics/braze_currents/available_partners/
 [7]: https://looker.com/solutions/other-databases?latest&utm_campaign=7012R000000fxfC&utm_source=other&utm_medium=email&utm_content=brazedirectreferral&utm_term=braze_direct
-[8]: https://dashboard.braze.com/app_settings/developer_console/
-[9]: {{site.baseurl}}/developer_guide/rest_api/basics/#endpoints
 [10]: {{site.baseurl}}/developer_guide/rest_api/user_data/#user-track-request
