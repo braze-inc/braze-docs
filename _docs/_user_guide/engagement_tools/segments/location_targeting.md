@@ -6,7 +6,7 @@ page_type: tutorial
 tool: 
 - Segments
 - Location
-description: "This how-to article will walk you through how to set up Location Targeting, allowing you to segment users by location."
+description: "This how-to article will walk you through how to set up Location targeting, allowing you to segment users by location."
 
 ---
 
@@ -37,6 +37,10 @@ For circular regions, you can move the origin and adjust the location radius for
 For polygonal regions, you can more specifically designate which areas you wish to be included in your segment.
 
 ![Polygonal Region 1][4]{: style="max-width:70%;"}
+
+{% alert tip %}
+Interested in taking advantage of location targeting with the help of a Braze partner? Check out our available Braze [contextual location partners]({{site.baseurl}}/partners/message_personalization/location/).
+{% endalert %}
 
 [1]: {% image_buster /assets/img_archive/createsegment2.png %}
 [2]: {% image_buster /assets/img_archive/filter_recent_location.png %}
