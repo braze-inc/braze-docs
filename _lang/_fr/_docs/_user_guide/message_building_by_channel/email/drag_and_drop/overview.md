@@ -40,9 +40,7 @@ L'expérience d'édition par glisser & déposer est divisée en 3 sections : **P
 
 {% tabs %}
 {% tab Send Settings %}
-__Paramètres d'envoi__
-
-La section Paramètres d'envoi vous permet de configurer votre adresse de départ et de réponse et de définir la ligne de sujet ou le pré-en-tête.
+La section **Paramètres d'envoi** vous permet de configurer votre adresse de départ et de réponse et de définir la ligne de sujet ou le pré-en-tête.
 
 {% alert note %}
 Des fonctionnalités avancées apparaîtront dans la campagne ou dans le compositeur de pas de Canvas . Dans les fonctionnalités avancées, vous pouvez modifier vos paramètres CSS en ligne, définir une adresse email BCC, et entrer dans un en-tête ou des paires de valeur clé supplémentaire (si configuré).
@@ -50,9 +48,7 @@ Des fonctionnalités avancées apparaîtront dans la campagne ou dans le composi
 
 {% endtab %}
 {% tab Content %}
-__Contenus__
-
-La section Contenu contient l'éditeur. Il y a trois composants clés dans cette section.
+La section **Contenu** contient l'éditeur. Il y a trois composants clés dans cette section.
 
 - __Contenu__: Cette section comprend une série de tuiles qui représentent les différents types de contenu que vous pouvez utiliser dans votre message. D'autres seront disponibles à l'avenir. Pour les utiliser, faites simplement glisser un à l'intérieur d'un segment de ligne existant; il s'ajustera automatiquement à la largeur de la colonne. Chaque bloc a ses propres paramètres, tels que le contrôle granulaire du remplissage. Le panneau de droite passe automatiquement à un panneau de propriétés pour l'élément de contenu sélectionné.<br><br> Pour plus d'informations, voir [Propriétés de bloc de l'éditeur]({{site.baseurl}}/dnd/editor_blocks/)<br><br>
 - __Lignes__: Les lignes sont des unités de structure qui définissent la composition horizontale d'une section du message en utilisant des colonnes. L'utilisation de plus d'une colonne vous permet de mettre différents éléments de contenu côte à côte. Vous pouvez ajouter tous les éléments structurels dont vous avez besoin à votre message, quel que soit le modèle que vous avez sélectionné au démarrage.<br><br>
@@ -62,9 +58,13 @@ Ceci est très utile pour construire un message cohérent très rapidement.
 
 {% endtab %}
 {% tab Preview and Test %}
-__Aperçu & Test__
+La section **Aperçu & Test** vous permet de prévisualiser vos e-mails sur différents clients et appareils de messagerie. En prévisualisant votre campagne d'email en tant qu'utilisateur, vous pouvez vous assurer que les détails sont alignés sur toutes les plateformes.
 
-La section Aperçu & Test vous permet de prévisualiser votre e-mail en fonction de différents utilisateurs.
+{% alert important %}
+Vision de boîte de réception pour l'éditeur Drag & Drop est actuellement en accès anticipé. Veuillez contacter votre responsable de compte Braze si vous êtes intéressé à participer à un accès anticipé.
+{% endalert %}
+
+Vous pouvez également voir vos aperçus de courriel avec ces types d'utilisateurs:
 
 - __Utilisateur Aléatoire__: Braze sélectionnera aléatoirement un utilisateur dans la base de données et prévisualisera l'e-mail en fonction de ses attributs ou informations sur l'événement.
 {% alert note %}
@@ -72,12 +72,9 @@ Cet utilisateur peut ou non faire partie de vos critères de segmentation. La se
 {% endalert %}
 - __Sélectionner l'utilisateur__: Vous pouvez sélectionner un utilisateur spécifique en fonction de son adresse e-mail ou `external_id`. L'e-mail sera prévisualisé en fonction des attributs et des informations de l'événement de cet utilisateur<br><br>
 - __Utilisateur personnalisé__: Vous pouvez personnaliser un utilisateur. Braze offrira des entrées pour tous les attributs et événements disponibles. Vous pouvez entrer toutes les informations que vous souhaitez voir dans l'e-mail de prévisualisation.
+
 {% endtab %}
 {% endtabs %}
-
-{% alert note %}
-Vision de la boîte de réception est actuellement indisponible durant cette phase de test et sera disponible dans le futur
-{% endalert %}
 
 ## Détails de la création
 
