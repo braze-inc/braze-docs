@@ -196,7 +196,7 @@ curl --location --request POST 'https://rest.iad-01.braze. om/users/track' \
 --header 'Content-Type: application/json' \
 --header 'X-Braze-Bulk: true' \
 --header 'Authorization: Bearer YOUR-API-KEY-HERE' \
---data-raw '{ "attributes": [ ], "événements": [ ], "achats": [ ], "partenaire": "PARTENAIRE-NOM" }'
+--data-raw '{ "attributes": [ ], "événements": [ ], "achats": [ ] }'
 ```
 
 {% alert warning %}
