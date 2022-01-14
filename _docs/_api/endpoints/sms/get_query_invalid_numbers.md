@@ -15,6 +15,8 @@ description: "This article outlines the usage of and parameters for using the re
 
 This endpoint allows you to pull a list of phone numbers that have been deemed "invalid" within a certain time frame.
 
+{% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#81ceae19-15d1-4ac1-ad22-a6b86a92456d {% endapiref %}
+
 ## Rate limit
 
 {% include rate_limits.md endpoint='default' %}
