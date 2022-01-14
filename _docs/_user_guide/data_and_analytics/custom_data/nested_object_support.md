@@ -13,12 +13,12 @@ description: "This reference article describes nested objects for custom event p
 You can use nested objects—objects that are inside of another object—to send nested JSON data as properties of custom events and purchases. This nested data can be used for templating personalized information in messages, for triggering message sends, and for segmentation.
 
 {% alert important %}
-This feature is generally available, however triggering messages and segmenting users based on this data is in early access. For more information, please reach out to your Braze account manager.
+This feature is generally available. However, triggering messages and segmenting users based on this data is in early access. For more information, please reach out to your Braze account manager.
 {% endalert %}
 
 ## Limitations
 
-- Nested data can only be sent with [custom events]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events/) and [purchase events]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/purchase_events/). This is not yet supported with user attributes.
+- Nested data can only be sent with [custom events]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events/) and [purchase events]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/purchase_events/).
 - Event property objects that contain array or object values can have an event property payload of up to 50KB.
 - The following SDK versions support nested objects:
 
@@ -105,10 +105,10 @@ Templating in Liquid in a message triggered by the "Ordered" event:
 
 ### Message triggering
 
-To use these properties to trigger a campaign, select your custom event or purchase, and add a __Nested Property__ filter. Note that message triggering is not yet supported for in-app messages.
+To use these properties to trigger a campaign, select your custom event or purchase, and add a **Nested Property** filter. Note that message triggering is not yet supported for in-app messages.
 
 {% alert important %}
-Nested objects is generally available, however triggering messages and segmenting users based on this data is in early access. For more information, please reach out to your Braze account manager.
+Nested objects is generally available. However, triggering messages and segmenting users based on this data is in early access. For more information, please reach out to your Braze account manager.
 {% endalert %}
 
 {% tabs %}
