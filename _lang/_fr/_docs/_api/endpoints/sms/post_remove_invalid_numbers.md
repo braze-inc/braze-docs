@@ -16,6 +16,8 @@ description: "Cet article décrit l'utilisation et les paramètres pour l'utilis
 
 Ce point de terminaison vous permet de supprimer les numéros de téléphone « invalides » de la liste invalide de Brase. Ceci peut être utilisé pour revalider les numéros de téléphone après qu'ils aient été marqués comme non valides.
 
+{% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#76495aac-8c2d-4e1a-8cac-12e3856ab1d3 {% endapiref %}
+
 ## Corps de la requête
 
 ```
