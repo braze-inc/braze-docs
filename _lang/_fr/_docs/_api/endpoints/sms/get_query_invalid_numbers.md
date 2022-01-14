@@ -16,6 +16,8 @@ description: "Cet article décrit l'utilisation et les paramètres pour utiliser
 
 Ce point de terminaison vous permet de tirer une liste de numéros de téléphone qui ont été considérés comme « invalides » dans un certain laps de temps.
 
+{% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#81ceae19-15d1-4ac1-ad22-a6b86a92456d {% endapiref %}
+
 ## Limite de taux
 
 {% include rate_limits.md endpoint='default' %}
