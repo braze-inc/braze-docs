@@ -14,53 +14,81 @@ search_tag: Partner
 
 {% include video.html id="7yadPjDImxQ" align="right" %}
 
-> [Amplitude](https://amplitude.com/) is a product analytics and business intelligence platform. You can export the data events from your Braze integration to Amplitude in order to perform deep analysis of your product and marketing data.
+> [Amplitude](https://amplitude.com/) is a product analytics and business intelligence platform.
 
-To get started, find the following information from your Amplitude dashboard:
+The Braze and Amplitude integration allows you to [import Amplitude Cohorts into Braze](#data-import-integration) to create segments that can target users in future campaigns or Canvases. You can also leverage Braze Currents to [export your Braze events to Amplitude](#data-export-integration) to perform deeper analytics of your product and marketing data.
 
--   Amplitude API Key
+## Prerequisites
 
-Add this information to the Amplitude integration page on the dashboard, and press save.
+| Requirement | Description |
+|---|---|
+| Amplitude account | An [Amplitude account](https://amplitude.com/) is required to take advantage of this partnership. |
+| Currents | In order to export data back into Amplitude, you need to have [Braze Currents]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/#access-currents) set up for your account. |
+{: .reset-td-br-1 .reset-td-br-2} 
 
-![Amplitude]({% image_buster /assets/img_archive/currents-amplitude-edit.png %})
+## Data import integration
 
-{% alert warning %}
-Keep your Amplitude API Key up to date. If your connector's credentials expire, the connector will stop sending events. If this persists for more than **48 hours**, the connector's events will be dropped and data will be permanently lost.
-{% endalert %}
+Use Braze and Amplitude's partnership to import Amplitude cohorts directly into Braze for audience segmentation. This allows you to perform deep analysis using Amplitude and seamlessly execute your strategies using Braze.
 
-Amplitude's documentation is available [here](https://amplitude.zendesk.com/hc/en-us/articles/115000217351-Appboy-Amplitude-Integration#how-to-set-up-and-use-the-integration).
+Any integration you set up will count towards your account's data point volume.
 
-## Data import
+### Step 1: Get the Braze data import key
 
-Using Braze and Amplitude's deep partnership, you can configure your integration to import Amplitude cohorts directly into Braze for retargeting, creating a full loop of data from one system to another. This allows you to perform deep analysis using Amplitude and seamlessly execute on your strategies using Braze.
+In Braze, navigate to **Technology Partners** and select **Amplitude**. Here, you will find the REST endpoint and generate your Braze data import key. Once generated, you can create a new key or invalidate an existing one. The data import key and the REST endpoint are used in the next step when setting up a postback in Amplitude's dashboard.<br><br>![Ampltiude]({% image_buster /assets/img/amplitude3.png %})
 
-You can manage the Amplitude Data Import process from the Technology Partners page. Note that any integration that you setup will count towards your account's data point volume.
+### Step 2: Set up the Braze integration in Amplitude
 
-![Amplitude cohort import]({% image_buster /assets/img_archive/currents-amplitude-import.png %})
+In Amplitude, navigate to **Sources & Destinations > [project name] > Destinations > Braze**. In the prompt that appears, provide the Braze data import key and REST endpoint, and click **Save**.
 
+![Amplitude integration set up]({% image_buster /assets/img/amplitude.png %}){: style="max-width:50%;"}
 
-## Integration details
+### Step 3: Export an Amplitude cohort to Braze
 
-A list of the events that can be exported from Braze to Amplitude is below. All events sent to Amplitude will include the user's `external_user_id` as the Amplitude User ID. Braze will only send event data for users who either have their `external_user_id` set, or anonymous users who have their `device_id` set. Braze-specific event properties will be sent under the `event_properties` key in the data sent to Amplitude. The properties for each event type are listed below.
+To export users from Amplitude to Braze, first create a [cohort](https://help.amplitude.com/hc/en-us/articles/231881448-Behavioral-Cohorts) of users you wish to export. Once you have created a cohort, click **Sync to...** to export these users to Braze.
 
-You can export two types of events to Amplitude: "Message Engagement Events" consisting of the Braze Events that are directly related to message sending, and "Customer Behavior Events" including other App or Website activity such as Sessions, Custom events, and Purchases tracked through the platform. All regular events are prefixed with `[Appboy]`, and all custom events are prefixed with `[Appboy] [Custom Event]`. Custom event properties and purchase event properties are prefixed with `[Custom event property]` and `[Purchase property]`, respectively.
+#### Scheduled cohort syncs
 
-All cohorts named and imported into Braze will be prefixed with `[Amplitude]` and suffixed with their `cohort_id`. This means that a cohort named "COHORT_NAME" with the `cohort_id` "cxyzz3hz" will be titled `[Amplitude] COHORT_NAME: cxyzz3hz` in Braze filters.
+Cohort syncs can be scheduled to be performed hours or daily. Scheduled sync will only send the updated data set deltas to minimize data point usage.
+
+### Step 4: Segment users in Braze
+
+In Braze, to create a segment of these users, navigate to **Segments** under **Engagement**, name your segment, and select **Amplitude Cohorts** as the filter. Next, use the "includes" option and choose the cohort you created in Amplitude. 
+
+![Amplitude segment]({% image_buster /assets/img/amplitude2.png %})
+
+Once saved, you can reference this segment during Canvas or campaign creation in the targeting users step.
+
+## Data export integration
+
+A full list of the events that can be exported from Braze to Amplitude is shown below. All events sent to Amplitude will include the user's `external_user_id` as the Amplitude user ID. Braze will only send event data for users who have their `external_user_id` set or anonymous users who have their `device_id` set. Braze-specific event properties will be sent under the `event_properties` key in the data sent to Amplitude. The properties for each event type are listed below.
+
+You can export two types of events to Amplitude: [Message Engagement Events](#message-engagement-events) consisting of the Braze Events directly related to message sending, and [Customer Behavior Events](#customer-berhavior-events), including other app or website activity such as sessions, custom events, and purchases tracked through the platform. All regular events are prefixed with `[Appboy]`, and all custom events are prefixed with `[Appboy] [Custom Event]`. Custom event properties and purchase event properties are prefixed with `[Custom event property]` and `[Purchase property]`, respectively.
+
+All cohorts named and imported into Braze will be prefixed with `[Amplitude]` and suffixed with their `cohort_id`. This means that a cohort named "TEST_COHORT" with the `cohort_id` "abcd1234" will be titled `[Amplitude] TEST_COHORT: abcd1234` in Braze filters.
 
 Please contact your Account Manager or open a [support ticket][support] if you need access to additional event entitlements.
 
-### Scheduled cohort syncs
+### Step 1: Configure Amplitude Integration in Braze 
 
-Braze customers using Amplitude can schedule the timed cohort syncs between Amplitude and Braze. The can be set up as hourly or daily syncs of data to be sent into Braze.
+In Amplitude, locate your Amplitude export API key.
 
-{% alert important %}
-Scheduled syncs will only send deltas of the updated data set.
+{% alert warning %}
+Keep your Amplitude API Key up to date. If your connector's credentials expire, the connector will stop sending events. If this persists for more than **48 hours**, the connector's events will be dropped, and data will be permanently lost.
 {% endalert %}
 
+### Step 2: Create Braze Current
+
+In Braze, navigate to **Currents > + Create Current > Create Amplitude Export**. Provide an integration name, contact email, Amplitude export API key, and Amplitude region in the listed fields. Next, select the events you want to track; a list of available events is provided below. Lastly, click **Launch Current**
+
+![Amplitude]({% image_buster /assets/img/amplitude4.png %})
+
+{% tab note %}
+Check out Amplitude's [integration docs](https://amplitude.zendesk.com/hc/en-us/articles/115000217351-Appboy-Amplitude-Integration#how-to-set-up-and-use-the-integration) or this Braze [Amplitude LAB course](https://lab.braze.com/amplitude-integration-with-braze) to learn more. 
+{% endtab %}
 
 ## Rate limits
 
-Currents connects to Amplitude's HTTP API, which has a [Rate Limit](https://developers.amplitude.com/docs/http-api-v2#upload-limit) of 30 events/second per device and an undocumented limit of 500K events/day per device. Above these thresholds, Amplitude will throttle events that are logged through Currents. If a device in your integration is sending above this rate limit, you may experience a delay in when events from all devices will appear in Amplitude.
+Currents connect to Amplitude's HTTP API, which has a [Rate Limit](https://developers.amplitude.com/docs/http-api-v2#upload-limit) of 30 events/second per device and an undocumented limit of 500K events/day per device. Above these thresholds, Amplitude will throttle events that are logged through Currents. If a device in your integration is sending above this rate limit, you may experience a delay in when events from all devices will appear in Amplitude.
 
 Devices should not report more than 30 events/second or 500K events/day under normal circumstances, and this event pattern should only occur due to a misconfigured integration. To avoid this type of delay, ensure that your SDK integration is reporting events at a normal rate as specified in our SDK integration instructions and refrain from running automated tests that generate many events for a single device.
 
@@ -244,7 +272,7 @@ To check out some of the common Amplitude API endpoints, view our dedicated [Amp
   "user_agent": (string) description of the user’s system and browser for the event (Email Click, Open, and MarkAsSpam events only),
   "link_id": (string) unique value generated by Braze for the URL (Email Click events only),
   "link_alias": (string) alias name set when the message was sent (Email Click events only),
-  "machine_open": (string) Indicator of whether the e-mail was opened by an automated process, such as Apple or Google mail pre-fetching. Currently "true" or null, but additional granularity (e.g. "Apple" or "Google" to indicate which process made the fetch) may be added in the future. (Email Open events only)
+  "machine_open": (string) Indicator of whether the email was opened by an automated process, such as Apple or Google mail pre-fetching. Currently "true" or null, but additional granularity (e.g. "Apple" or "Google" to indicate which process made the fetch) may be added in the future. (Email Open events only)
 }
 ```
 

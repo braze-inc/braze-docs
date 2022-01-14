@@ -11,11 +11,11 @@ search_tag: Partner
 
 # Amplitude user profile API endpoints
 
-> Amplitude's User Profile API serves Amplitude user profiles. This includes user properties, computed user properties, a list of cohort IDs of cohorts that include the user, and recommendations.
+> Amplitude's user profile API serves Amplitude user profiles. This includes user properties, computed user properties, a list of cohort IDs of cohorts that include the user, and recommendations.
 
 ## Endpoint parameters
 
-The following table lays out the parameters you can use in your calls to the User Profile API, as well as the parameters you can most typically expect to see in Amplitude's responses.
+The following table lays out the parameters you can use in your calls to the user profile API, as well as the parameters you can most typically expect to see in Amplitude's responses.
 
 | Parameter | Required | Description |
 | --------- | -------- | ----------- |
