@@ -2,7 +2,7 @@
 nav_title: Jampp
 article_title: Jampp
 alias: /partners/jampp/
-description: "This article outlines the partnership between Braze and Jampp, a performance marketing platform for acquiring and retargeting mobile customers."
+description: "This article outlines the partnership between Braze and Jampp, a performance marketing platform used for acquiring and retargeting mobile customers."
 page_type: partner
 search_tag: Partner
 
@@ -10,55 +10,39 @@ search_tag: Partner
 
 # Jampp
 
-> Jampp is a performance marketing platform for acquiring and retargeting mobile customers. It combines behavioral data with predictive and programmatic technology to generate revenue for advertisers by showing personal, relevant ads that inspire consumers to purchase for the first time, or more often.
+> [Jampp](https://www.jampp.com/) is a performance marketing platform used for acquiring and retargeting mobile customers. Jampp combines behavioral data with predictive and programmatic technology to generate revenue for advertisers by showing personal, relevant ads that inspire consumers to purchase for the first time or more often.
 
-Braze customers can integrate with Jampp by configuring the Braze webhook channel to stream events into Jampp. As a result, customers can add richer data sets to their retargeting initiatives with Jampp within the mobile advertising ecosystem.
-
-## Retargeting cases
+The Braze and Jampp integration allows Braze users to sync events into Jampp via Braze webhook events. As a result, customers can add richer data sets to their retargeting initiatives within their mobile advertising ecosystems.
 
 Some examples of when you would want to retarget customers with an ad:
 - When a customer’s email or push subscription state changes.
 - How a customer interacted with a Braze messaging campaign.
 - If the customer has triggered a specific geofence.
 
-One of the best ways to accomplish this is to use Braze as well as a retargeting partner specialized in mobile, such as Jampp. You want the retargeting partner to receive automated user info from Braze using webhooks. You’ll be able to leverage Braze’s targeting and triggering abilities to send events to Jampp, which could then be used to define retargeting campaign definitions in Jampp.
-
-## Prerequisites for integration
+## Prerequisites
 
 This integration supports iOS and Android apps.
 
-Requirement   | Source | Description
---------------|--------| -----
-Android App ID | Braze | Your unique application identifier for Android (i.e. “com.example”).
-iOS App ID | Braze | Your unique application identifier for iOS (i.e. “012345678”).
-Enable IDFA Collection in Braze SDK | Braze | [IDFA Collection][4] is optional within the Braze SDK and disabled by default.
-Collection of Google Advertising ID via custom attribute | Google | Google Advertising ID collection is optional for customers and can be collected as a [custom attribute][5].
+| Requirement | Description |
+|---|---|
+| Jampp account | A [Jampp account][https://www.jampp.com/] is required to take advantage of this partnership. |
+| Android app ID | Your unique Braze application identifier for Android (i.e., "com.example"). |
+| iOS app ID | Your unique Braze application identifier for iOS (i.e. "012345678"). |
+| Enable IDFA collection in Braze SDK | IDFA collection is optional within the Braze SDK and disabled by default. | 
+| Collection of Google advertising ID via custom attribute | Google advertising ID collection is optional for customers and can be collected as a [custom attribute][5].
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
 
-{% alert important %}
-Braze does not automatically collect the device IDFA/AAID so you must store these values yourself. Please be aware that you may require user consent to collect this data.
-{% endalert %}
-
-# Integration
+## Integration
 
 ### Step 1: Create a webhook template in Braze
 
-You can create this from the `Templates & Media` section, or create a new webhook campaign in Braze.
+To create a Jampp webhook template to use in future campaigns or Canvases, navigate to the **Templates & Media** section in the Braze platform. If you would like to make a one-off Jampp webhook campaign or use an existing template, select **Webhook** in Braze when creating a new campaign.
 
-![Jampp_Webhook_Template][6]
-
-### Step 2: Fill out your template
-
-For this webhook, all data is passed on alongside the HTTP URL as query string parameters. The following parameters that need to be defined:
-
-- You’ll need to set the event name. This is to define the name of the event that will appear in your Jampp dashboard.
-- Jampp requires you to pass along your app’s unique application identifier for Android (i.e. “com.example”) and iOS (i.e. “012345678”).
-- You’ll also need to insert [Liquid][1] for the appropriate custom attribute you’re tracking the Google Advertising ID.
-
-Below is an example of what your Webhook URL might look like:
-
+In your new Webhook template, fill out the following fields:
+- **Request Body**: Raw Text
+- **Webhook URL**: 
 {% raw %}
-```
+```liquid
 {% assign event_name = 'your_jampp_event_name' %}
 {% assign android_app_id = 'your_android_app_id' %}
 {% assign iOS_app_id = 'your_iOS_app_id' %}
@@ -71,32 +55,39 @@ http://tracking.jampp.com/event?kind={{event_name}}&rnd={{rnd}}&app={% if {{most
 {% abort_message('No IDFA or AAID available') %}
 {% endif %}
 ```
-
-Elements (from sample above) to modify before sending the campaign:
-1. `{% assign event_name = 'your_jampp_event_name' %}`
-2. `{% assign android_app_id = 'your_android_app_id' %}`
-3. `{% assign iOS_app_id = 'your_iOS_app_id' %}`
-4. `&google_advertising_id={{custom_attribute.${aaid}}`
 {% endraw %}
 
-Please note that in this example the Google Advertising ID is listed as `aaid` but you will need to replace it with the custom attribute name your developers set.
+In the above webhook URL, you must:
+- Set the event name. This name will appear in your Jampp dashboard.
+- Pass your app's unique application identifier for Android (i.e. "com.example") and iOS (i.e. "012345678").
+- Insert [Liquid][1] for the appropriate custom attribute you're tracking as the Google advertising ID. Please note that the Google advertising ID is listed as `aaid` in this example, but you will need to replace it with the custom attribute name your developers set.
 
-After defining the parameters above, insert this Liquid code template into the Webhook URL field and edit as needed. You do not have to define a Request Body for this webhook. Here is the template in Braze:
+![Webhook template Jampp][2]
 
-![Webhook Template Jampp][2]
+{% alert important %}
+Braze does not automatically collect the device IDFA/AAID, so you must store these values yourself. Please be aware that you may require user consent to collect this data.
+{% endalert %}
 
 #### Request headers and method
 
-The `Content-Type` should be pre-populated as a key-value pair within the webhook template.
+The Jampp webhook requires an HTTP method and request header.
 
-![Jampp Method][3]
+- **HTTP Method**: GET
+- **Request Headers**:
+  - **Content-Type**: application/json
 
-### Step 3: Preview your request
+![Jampp method][3]
 
-To ensure the request is rendering properly for different users, use the Message Preview. A good approach is to preview the Webhook for both Android as well as iOS users. You can also send test requests for these users. If the request was successful the API responds with `HTTP 204`.
+#### Request body
+
+You do not have to define a request body for this webhook.
+
+### Step 2: Preview your request
+
+Preview the message to ensure the request is rendering properly for different users. We recommend previewing and sending test requests for both Android and iOS users. If the request is successful, the API will respond with `HTTP 204`.
 
 {% alert important %}
-Remember to save your template before leaving the page!
+Remember to save your template before leaving the page! <br>Updated webhook templates can be found in the **Saved Webhook Templates** list when creating a new [webhook campaign]({{site.baseurl}}/user_guide/message_building_by_channel/webhooks/creating_a_webhook/). 
 {% endalert %}
 
 [1]: {{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/using_liquid/#using-liquid
@@ -104,4 +95,3 @@ Remember to save your template before leaving the page!
 [3]: {% image_buster /assets/img/jampp_method.png %}
 [4]: {{site.baseurl}}/developer_guide/platform_integration_guides/ios/initial_sdk_setup/optional_idfa_collection/#optional-idfa-collection
 [5]: {{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_attributes/#custom-attribute-data-types
-[6]: {% image_buster /assets/img/jampp_webhook_template.png %}

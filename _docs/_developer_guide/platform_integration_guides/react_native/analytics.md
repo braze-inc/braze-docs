@@ -15,8 +15,6 @@ Before you start, read our [Analytics Overview][0] article to learn more about B
 
 ## Session tracking
 
-<!-- COPIED: Android/Analytics/Tracking Sessions -->
-
 The Braze SDK reports session data used by the Braze dashboard to calculate user engagement and other analytics integral to understanding your users. Based on the below session semantics, our SDK generates “start session” and “close session” data points that account for session length and session counts viewable within the Braze dashboard.
 
 To set a user ID or start a session, use the `changeUser` method, which takes a user ID parameter.
@@ -26,8 +24,6 @@ ReactAppboy.changeUser("user_id");
 ```
 
 ## Logging custom events
-
-<!-- Copied ios/android/analytics/tracking custom events -->
 
 You can record custom events in Braze to learn more about your app’s usage patterns and to segment your users by their actions in the dashboard.
 
@@ -46,8 +42,6 @@ reactAppboy.logCustomEvent("custom_event_with_properties", {
 ```
 
 ## Logging custom attributes
-
-<!-- Copied ios/android/analytics/setting custom attributes -->
 
 Braze provides methods for assigning attributes to users. You’ll be able to filter and segment your users according to these attributes on the dashboard.
 
@@ -70,11 +64,10 @@ The following attributes are supported:
 - Phone Number
 - Language
 - Email
-- Avatar Image URL for Braze User Profiles
 - Twitter Data
 - Facebook Data
 
-All string values such as first name, last name, country, and home city are limited to 255 characters. Avatar Image URLs are limited to 1024 characters.
+All string values such as first name, last name, country, and home city are limited to 255 characters.
 
 ### Custom user attributes
 
@@ -96,8 +89,6 @@ ReactAppboy.unsetCustomUserAttribute("attribute_key", function(){
 ```
 
 ## Logging purchases
-
-<!-- Copied ios/android/analytics/logging purchases -->
 
 Record in-app purchases so that you can track your revenue over time and across revenue sources, as well as segment your users by their lifetime value.
 

@@ -18,6 +18,10 @@ Use the /email/unsubscribes endpoint to return emails that have unsubscribed dur
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#d2966b81-188a-407b-ba7e-e6c252c44b4a {% endapiref %}
 
+## Rate limit
+
+{% include rate_limits.md endpoint='default' %}
+
 ## Request parameters
 
 You must provide an `end_date`, as well as either an `email` or a `start_date` .

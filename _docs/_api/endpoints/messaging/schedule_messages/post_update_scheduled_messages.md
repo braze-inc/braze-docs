@@ -18,6 +18,10 @@ The messages update schedule endpoint accepts updates to either the `schedule` o
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#f61edf74-4467-4551-b9c4-a4b8d188cd7a {% endapiref %}
 
+## Rate limit
+
+{% include rate_limits.md endpoint='default' category='message endpoints' %}
+
 ## Request body
 
 ```

@@ -8,23 +8,23 @@ description: "This reference article covers tags in the Braze dashboard, which y
 ---
 # Tags
 
-Braze tracks author, editor, date, and status information about segments, campaigns, Canvases, and News Feed cards, and gives you the ability to create tags to further organize and sort your engagement.
+Braze tracks author, editor, date, and status information about segments, campaigns, and Canvases, and gives you the ability to create tags to further organize and sort your engagement.
 
-## Campaign, segment, and News Feed card tags
+## Campaign, Canvas, and segment tags
 
-You can add tags when creating or editing a campaign, Canvas, segment, or News Feed card. Click <span style="font-size: 14px;margin-bottom: .5rem;height: 16px;width: 16px;" class="fas fa-tag" ></span>**Tags** below the engagement name and select an existing tag, or start typing to add a new tag.
+You can add tags when creating or editing a campaign, Canvas, or segment. Click <span style="font-size: 14px;margin-bottom: .5rem;height: 16px;width: 16px;" class="fas fa-tag" ></span>**Tags** below the engagement name and select an existing tag, or start typing to add a new tag.
 
 ![Campaign Creation][2]
 
-You can also add tags to multiple campaigns, Canvases, segments, or News Feed cards by selecting multiple engagements and clicking <span style="font-size: 14px;margin-bottom: .5rem;height: 16px;width: 16px;" class="fas fa-tag" ></span>**Tag As**.
+You can also add tags to multiple campaigns, Canvases, or segments by selecting multiple engagements and clicking <span style="font-size: 14px;margin-bottom: .5rem;height: 16px;width: 16px;" class="fas fa-tag" ></span>**Tag As**.
 
 ![Tagging multiple][5]
 
-The tags set on a campaign, Canvas, segment, or News Feed card are visible on the detail page below the engagement name.
+The tags set on a campaign, Canvas, or segment are visible on the detail page below the engagement name.
 
 ![Campaign Details][3]
 
-They are also visible in the list of campaigns, Canvases, segments, and News Feed cards as bubbles above the engagement name, along with status labels such as **Archived** and **Draft**.
+They are also visible in the list of campaigns, Canvases, or segments as bubbles above the engagement name, along with status labels such as **Archived** and **Draft**.
 
 ![Campaigns][4]{: style ="max-width:70%;" }
 
@@ -34,13 +34,13 @@ To filter by a tag, select the tag name in the left-hand toolbar or search for t
 
 ## Best practices {#tags-best-practices}
 
-Tags can be a useful organizational tool for keeping track of engagement tactics. You can link segments, campaigns, and News Feed cards to business objectives, funnel stages, and the like.
+Tags can be a useful organizational tool for keeping track of engagement tactics. You can link segments and campaigns to business objectives, funnel stages, and the like.
 
 Below is an example of tags an eCommerce app might find useful:
 
 ![Potential Tags][7]
 
-You can use the same tags across segments, campaigns, and News Feed cards. To efficiently rename, remove, or add tags across your dashboard, go to the **Manage Settings** page and select the **Tags** tab.
+You can use the same tags across campaigns, Canvases, and segments. To efficiently rename, remove, or add tags across your dashboard, go to the **Manage Settings** page and select the **Tags** tab.
 
 ![tags view][8]
 

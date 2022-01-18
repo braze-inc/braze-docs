@@ -88,6 +88,8 @@ If a user has dismissed all of their cards or you haven't pushed out any new upd
 | [Install Custom Image Library.]({{site.baseurl}}/developer_guide/platform_integration_guides/android/content_cards/customization/#gifs-news-content-cards) | Included in integration. | Included in Integration. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
 
+<br><br>
+
 [1]: {% image_buster /assets/img/classic-cc.png %}
 [2]: {% image_buster /assets/img/captioned-image-cc.png %}
 [3]: {% image_buster /assets/img/banner-cc.png %}

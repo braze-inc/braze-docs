@@ -23,6 +23,10 @@ If you want to see examples or test this endpoint for __SMS Subscription Groups_
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#72558b32-7dbe-4cba-bd22-a7ce513076dd {% endapiref %}
 
+## Rate limit
+
+{% include rate_limits.md endpoint='subscription status set' %}
+
 ## Request body
 
 {% tabs %}

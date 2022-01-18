@@ -8,9 +8,9 @@ description: "When scheduling a campaign, you can use Intelligent Timing to deli
 
 # Intelligent Timing
 
-For more on campaign delivery, check out our [campaign set up LAB course](http://lab.braze.com/campaign-setup-delivery-targeting-conversions)!
+> This article covers how to implement Intelligent Timing in your campaigns and Canvases. For more details on Intelligent Timing and its benefits, check out our [Intelligent Timing](https://lab.braze.com/intelligent-timing) LAB course.
 
-> When scheduling a campaign, you can use Intelligent Timing (previously Intelligent Delivery) to deliver your message to each user when Braze determines that an individual is most likely to engage (open or click). 
+When [scheduling a campaign]({{site.baseurl}}/user_guide/engagement_tools/campaigns/building_campaigns/delivery_types/), you can use Intelligent Timing (previously Intelligent Delivery) to deliver your message to each user when Braze determines that an individual is most likely to engage (open or click).
 
 Braze calculates the optimal send time based on a statistical analysis of your user’s past interactions with your messaging (on a per-channel basis) and app. To enable Intelligent Timing, select **Intelligent Timing** on the **Delivery** page when creating a scheduled delivery campaign. Note that this feature is not available for action-based and API-triggered campaigns, and not to be used with [quiet hours]({{site.baseurl}}/user_guide/intelligence/faqs/#/#can-i-use-quiet-hours-in-my-intelligent-timing-campaign), [rate-limiting]({{site.baseurl}}/user_guide/intelligence/faqs/#can-i-use-intelligent-timing-and-rate-limiting), or [IP warming]({{site.baseurl}}/user_guide/intelligence/faqs/#can-i-use-intelligent-timing-while-ip-warming) campaigns. 
 

@@ -10,35 +10,35 @@ search_tag: Partner
 
 # Remerge
 
-> Remerge is purpose-built for app retargeting at scale, arming you with tools to efficiently segment app audiences and retarget users.
+> [Remerge](https://www.remerge.io/) is purpose-built for app retargeting at scale, arming you with tools to efficiently segment app audiences and retarget users.
 
-Develop robust, cross-channel lifecycle marketing campaigns with the powers of Braze and Remerge combined—build segments on the Braze dashboard, then send via webhook to Remerge to retarget users through their mobile DSP.
+The Braze and Remerge integration helps you develop robust, cross-channel lifecycle marketing campaigns by sending user data to Remerge via webhook events to help retarget users through their mobile demand-side platform.
 
-# Remerge retargeting network
+## Prerequisites
 
-To use Remerge, configure the Braze webhook channel to connect Braze with retargeting actions. It is important to have an automatic way of enabling Braze and the retargeting system (i.e. Remerge) to have visibility of what the other system does and adapt from the other’s message. Ad retargeting is helpful if you have users who have push notifications disabled or users who haven’t opened your app recently.
+| Requirement | Description |
+|---|---|
+| Remerge account | A Remerge account is required to take advantage of this partnership. |
+| Remerge webhook key | This key will be provided by Remerge. |
+| Android app ID | Your unique Braze application identifier for Android (i.e. "com.example"). |
+| iOS app ID | Your unique Braze application identifier for iOS (i.e. "012345678"). |
+| Enable IDFA collection in Braze SDK | IDFA collection is optional within the Braze SDK and disabled by default. | 
+{: .reset-td-br-1 .reset-td-br-2}
 
-For example, An unregistered user could receive a push campaign saying “Thanks for installing our app, sign up today!” Once the user has signed up after receiving the push campaign they would receive an adapted follow-up message in a retargeted ad such as “Thanks for signing up! Here is 10% off your first order.”
+## Integration
 
-One of the best ways to accomplish this is to use Braze as well as a retargeting partner specialized in mobile, such as Remerge. You want the retargeting partner to receive automated user info from Braze using webhooks. You’ll be able to leverage Braze’s targeting and triggering abilities to send events to Remerge, which could then be used to define retargeting campaign definitions in remerge.io.
+### Step 1: Create your Braze webhook template
 
-## Request URl and body
+To create a Remerge webhook template for future campaigns or Canvases, navigate to the **Templates & Media** section in the Braze platform. If you would like to create a one-off Remerge webhook campaign or use an existing template, select **Webhook** in Braze when creating a new campaign.
 
-For this webhook, all data is passed on alongside the HTTP URL as query string parameters. There are three parameters that need to be defined:
-
-- You'll need to set the event name. This is to define the name of the event that will appear in your [remerge.io][65] dashboard
-- Remerge requires you to pass along your app's unique application identifier for Android (i.e. "com.example") and iOS (i.e. "012345678")
-- Finally, you need to define a key. This will be provided by Remerge
-
->  Braze does not automatically collect the device IDFA/AAID so you must store these values yourself. Please be aware that you may require user consent to collect this data.
-
-Below is an example of what your Webhook URL might look like:
+In your new Webhook template, fill out the following fields:
+- **Request Body**: Raw Text
+- **Webhook URL**: 
 {% raw %}
-```
+```liquid
 {% assign event_name = 'your_remerge_event_name' %} 
 {% assign android_app_id = 'your_android_app_id' %} 
 {% assign iOS_app_id = 'your_iOS_app_id' %}
-
 
 {% capture json %}{'name':'event_name','active':true,'joined':{{'now' | date: '%s' }}}{% endcapture %}
 
@@ -49,28 +49,40 @@ https://remerge.events/event?partner=braze&app_id=\{% if most_recently_used_devi
 {% endif %}
 ```
 {% endraw %}
-After defining the parameters above, insert this Liquid code template into the Webhook URL field and edit as needed. You do not have to define a Request Body for this webhook. Here is the template in Braze:
 
-![Webhook Template Remerge][67]
+In the above webhook URL, you must:
+- Use the `https://remerge.events/event` API to send your webhook events.
+- Set the event name. This name will appear in your [remerge.io][65] dashboard.
+- Pass your app's unique application identifier for Android (i.e. "com.example") and iOS (i.e. "012345678") to remerge.
+- Define a key; Remerge will provide this.
 
->  Remerge used to offer multiple endpoints depending on where your data is stored, however, they have now updated their docs with one single endpoint:
+![Webhook template remerge][67]
 
-```
-https://remerge.events/event
-```
-The old endpoints are still valid and will stay valid, however, Remerge recommends that customers switch to this new endpoint for reliability purposes.
+{% alert important %}
+Braze does not automatically collect the device IDFA/AAID, so you must store these values yourself. Please be aware that you may require user consent to collect this data.
+{% endalert %}
 
-You can find more information on Remerge's API endpoint [here][66].
+#### Request headers and method
 
-## Request headers and method
+The Remerge webhook requires an HTTP method and request header.
 
-This webhook does not require any *Request Headers*, but be sure to choose GET in the dropdown for the *HTTP Method*.
+- **HTTP Method**: GET
+- **Request Headers**:
+  - **Content-Type**: application/json
 
 ![Request Method Remerge][68]
 
-## Preview your request
+#### Request body
 
-To ensure the request is rendering properly for different users, use the Message Preview. A good approach is to preview the Webhook for both Android as well as iOS users. You can also send test requests for these users. If the request was successful the API responds with `HTTP 204`.
+You do not have to define a request body for this webhook.
+
+## Step 2: Preview your request
+
+Preview the message to ensure the request is rendering properly for different users. We recommend previewing and sending test requests for both Android and iOS users. If the request is successful, the API will respond with `HTTP 204`.
+
+{% alert important %}
+Remember to save your template before leaving the page! <br>Updated webhook templates can be found in the **Saved Webhook Templates** list when creating a new [webhook campaign]({{site.baseurl}}/user_guide/message_building_by_channel/webhooks/creating_a_webhook/). 
+{% endalert %}
 
 [65]: https://www.remerge.io/
 [66]: https://help.remerge.io/hc/en-us/articles/115003046534-Remerge-Event-Tracking-API

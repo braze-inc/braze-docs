@@ -5,7 +5,7 @@ page_order: 0
 
 # SDK 101
 
-Before you begin to integrate the Braze SDKs, you may find yourself wondering what exactly you're building and integrating. Further, you may find yourself curious about how you can customize it further to meet your needs. This article can help you answer all of your SDK questions.
+Before you begin to integrate the Braze SDKs, you may find yourself wondering what exactly you're building and integrating. Further, you may find yourself curious about how you can customize it further to meet your needs. This article can help you answer all of your SDK questions. You can also check out our [Technical Integration Checklists and Toolkits](https://lab.braze.com/technical-integration-checklists-and-toolkits/) LAB course.
 
 ## App performance
 

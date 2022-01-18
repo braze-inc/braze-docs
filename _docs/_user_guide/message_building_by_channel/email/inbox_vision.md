@@ -1,7 +1,7 @@
 ---
 nav_title: Inbox Vision
 article_title: Inbox Vision
-page_order: 5
+page_order: 6
 description: "Inbox Vision allows marketers to view their emails from the perspective of various email clients and mobile devices. This reference article covers how to set up and use Inbox Vision."
 tool:
   - Dashboard
@@ -14,6 +14,11 @@ channel:
 
 Inbox Vision allows marketers to view their emails from the perspective of various email clients and mobile devices. Access Inbox Vision from the email editor by clicking **Preview and Test**.  It also allows you to spam test from the **Spam Test** tab.
 
+{% alert important %}
+Inbox Vision for the [drag & drop editing experience]({{site.baseurl}}/user_guide/message_building_by_channel/email/drag_and_drop/overview/#editing-experience/) is currently in early access. Please contact your Braze account manager if you are interested in participating in early access.
+{% endalert %}
+
+
 ## Test your email
 
 To test your email message in Inbox Vision, click **Preview and Test** within the email composer. Braze then sends an HTML version of your email to various email clients used across the globe, which may take between two and ten minutes to complete.
@@ -22,21 +27,25 @@ Braze will then display screenshots of a sample, rendered HTML on desktops, mobi
 
 If you run an Inbox Vision test, you will also receive a code analysis and spam testing results.
 
-![inboxvision1][1]
+![Inbox Vision Overview][1]
 
 Once you make changes to a template, you will need to click **Re-Run Test** to see the effect of the changes on the previews.
 
-{% alert important %} In general, your email will not work with Inbox Vision if your email content relies on templating info such as user profile information. This is because Braze templates in an empty user when we send emails using this feature. {% endalert %}
+{% alert important %} 
+In general, your email will not work with Inbox Vision if your email content relies on templating info such as user profile information. This is because Braze templates in an empty user when we send emails using this feature. 
+{% endalert %}
 
 ## Code analysis
 
 Code analysis is a way for Braze to highlight issues that may exist with your HTML, showing the number of occurrences of each issue and providing insight into which HTML elements are not supported. This information can be found on the Inbox Vision preview page by selecting the list icon in the upper left-hand corner.
 
-![inboxvision2][2]
+![Inbox Vision Code Analysis][2]
 
-![inboxvision3][3]
+![Inbox Vision Code Analysis 2][3]
 
-{% alert note %} Sometimes the code analysis will show up faster than the preview for a particular email client. This is because we wait until the email arrives in the inbox before taking the screenshot. {% endalert %}
+{% alert note %} 
+Sometimes the code analysis will show up faster than the preview for a particular email client. This is because we wait until the email arrives in the inbox before taking the screenshot. 
+{% endalert %}
 
 ## Spam testing
 

@@ -20,6 +20,10 @@ This endpoint allows you to schedule Canvas messages (up to 90 days in advance) 
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#4bc75890-b807-405d-b226-5aca284e6b7d {% endapiref %}
 
+## Rate limit
+
+{% include rate_limits.md endpoint='default' category='message endpoints' %}
+
 ## Request body
 
 ```

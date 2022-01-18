@@ -150,7 +150,6 @@ When you [identify](https://segment.com/docs/connections/destinations/catalog/br
 | `firstName` | `first_name`
 | `lastName` | `last_name`
 | `birthday` | `dob`|
-| `avatar` | `image_url`|
 | `address.city` | `home_city`|
 | `address.country` | `country` |
 | `gender` | `gender` |

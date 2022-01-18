@@ -8,14 +8,14 @@ channel:
   - MMS
 
 guide_top_header: "SMS & MMS"
-guide_top_text: "SMS (Short Messaging Service) and MMS (Multimedia Messaging Service) offer more direct ways to reach your users and customers than most other messaging channels, as it utilizes their personal phone number to reach them. Check out the topics below to get started with Braze SMS or MMS!<br><br>Not ready for any of the topics below? Head to our <a href='/docs/user_guide/onboarding_with_braze/sms_setup/'>SMS setup</a> collection to get to know SMS at Braze. Note that SMS and MMS are __not__ available out-of-the-box and must be purchased."
+guide_top_text: "SMS (Short Messaging Service) and MMS (Multimedia Messaging Service) offer more direct ways to reach your users and customers than most other messaging channels, as it utilizes their personal phone number to reach them. Check out the topics below to get started with Braze SMS or MMS!<br><br>Not ready for any of the topics below? Head to our <a href='/docs/user_guide/onboarding_with_braze/sms_setup/'>SMS setup</a> collection to get to know SMS at Braze. <br><br>SMS and MMS are not available out-of-the-box and must be purchased. To get started with SMS and MMS, reach out to your Account Manager or Customer Success Manager."
 description: "SMS (Short Messaging Service) and MMS (Multimedia Messaging Service) offer more direct ways to reach your users and customers than most other messaging channels, as it utilizes their personal phone number to reach them."
 
 guide_featured_title: "SMS"
 guide_featured_list:
 - name: "About SMS"
   link: /docs/user_guide/message_building_by_channel/sms/about_sms/
-  fa_icon: fas fa-paint-brush
+  fa_icon: fas fa-check
 - name: "SMS Laws & Regulations"
   link: /docs/user_guide/message_building_by_channel/sms/sms_laws_and_regulations/
   fa_icon: fas fa-gavel

@@ -76,11 +76,11 @@ Enter a name for the new custom audience, select __Add Users to Audience__ and s
 
 Next, save your audience by clicking the __Create Audience__ button at the bottom of the step editor.
 
-![Google Sync][7]
+![Google Sync]({% image_buster /assets/img/google_sync/google_sync7.png %})
 
 Users will be notified at the top of the step editor if the audience is created successfully or if errors arise during this process. Users can reference this audience for user removal later in the Canvas journey because the audience was created in draft mode. 
 
-![Google Sync][9]
+![Google Sync]({% image_buster /assets/img/google_sync/google_sync9.png %})
 
 When you launch a Canvas with a new audience, Braze will create a new custom audience upon launching the Canvas and subsequently sync users in near real-time as they enter the Google Audience Step. 
 
@@ -94,7 +94,7 @@ Braze also offers the ability to either add or remove users from existing Google
 
 Once you've configured your Google Audience step, select __Done__. Your Google Audience step will include details about the new audience.
 
-![Google Sync][8]
+![Google Sync]({% image_buster /assets/img/google_sync/google_sync8.png %})
 
 {% endtab %}
 {% endtabs %}
@@ -149,6 +149,4 @@ Check that your audiences contain at least __5,000__ users to ensure that ads st
 [3]: {% image_buster /assets/img/google_sync/google_sync3.png %}
 [4]: {% image_buster /assets/img/google_sync/google_sync4.png %}
 [6]: {% image_buster /assets/img/google_sync/google_sync6.png %}
-[7]: {% image_buster /assets/img/google_sync/google_sync7.png %}
 [8]: {% image_buster /assets/img/google_sync/google_sync8.png %}
-[9]: {% image_buster /assets/img/google_sync/google_sync9.png %}

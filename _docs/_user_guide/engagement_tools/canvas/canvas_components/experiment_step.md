@@ -16,9 +16,6 @@ A Canvas Experiment Paths Step will randomly assign users to different paths (or
 
 ![Experiment Paths Step][0]{: style="max-width:80%"}
 
-{% alert important %}
-Experiment Path Steps are currently in beta. Please contact your Braze account manager if you are interested in participating in the beta.
-{% endalert %}
 
 ## Create an Experiment Paths Step
 

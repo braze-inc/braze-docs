@@ -1,6 +1,6 @@
 ---
-nav_title: Create a Content Card
-article_title: Create a Content Card
+nav_title: Creating a Content Card
+article_title: Creating a Content Card
 page_order: 0
 description: "This reference article covers how to create, compose, configure and send Content Cards using Braze campaigns and Canvases."
 tool:
@@ -195,10 +195,10 @@ You can specify multiple custom events and purchases that should remove a card f
 
 If you find you need to make changes to cards that have already been sent:
 
-1. Stop your campaign
-2. Remove active Content Cards from users' feeds
-3. Edit your campaign as needed
-4. Restart your campaign
+1. Stop your campaign.
+2. Remove active Content Cards from users' feeds.
+3. Edit your campaign as needed.
+4. Restart your campaign.
 
 [18]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/advanced_use_cases/localization/#languages-supported
 [19]: {{site.baseurl}}/user_guide/personalization_and_dynamic_content/key_value_pairs/

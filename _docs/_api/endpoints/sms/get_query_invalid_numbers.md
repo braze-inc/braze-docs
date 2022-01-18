@@ -2,11 +2,10 @@
 nav_title: "GET: Query Invalid Phone Numbers"
 article_title: "GET: Query Invalid Phone Numbers"
 search_tag: Endpoint
-page_order: 0
+page_order: 1
 layout: api_page
 page_type: reference
 description: "This article outlines the usage of and parameters for using the retrieve a List of Invalid Phone Numbers Braze endpoint."
-hidden: true
 ---
 {% api %}
 # Query or list invalid phone numbers
@@ -16,7 +15,12 @@ hidden: true
 
 This endpoint allows you to pull a list of phone numbers that have been deemed "invalid" within a certain time frame.
 
-{% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#7c2ef84f-ddf5-451a-a72c-beeabc06ad9d {% endapiref %}
+{% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#81ceae19-15d1-4ac1-ad22-a6b86a92456d {% endapiref %}
+
+## Rate limit
+
+{% include rate_limits.md endpoint='default' %}
+
 ## Request parameters
 
 You must provide either a `start_date` and an `end_date` OR `phone_numbers`.
@@ -29,7 +33,7 @@ If you provide a `start_date`, an `end_date`, and `phone_numbers`, we prioritize
 | `end_date` | Optional* | String in YYYY-MM-DD format | End date of the range to retrieve invalid phone numbers. This is treated as midnight in UTC time by the API. |
 | `limit` | Optional | Integer | Optional field to limit the number of results returned. Defaults to 100, maximum is 500. |
 | `offset` | Optional | Integer | Optional beginning point in the list to retrieve from. |
-| `phone_numbers` | Optional* | Array | If provided, we will return whether or not those phone numbers have been detected as invalid phone numbers. |
+| `phone_numbers` | Optional* | Array of Strings in e.164 format | If provided, we will return the phone number if it has been found to be invalid. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
 
 If your date range has more than the `limit` number of invalid phone numbers, you will need to make multiple API calls with increasing the `offset` each time until a call returns either fewer than `limit` or zero results.

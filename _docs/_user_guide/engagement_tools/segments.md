@@ -29,7 +29,7 @@ guide_menu_list:
     link: /docs/user_guide/engagement_tools/segments/segment_insights/
     fa_icon: fas fa-chart-pie
   - name: Segment Extension
-    link: /docs/user_guide/engagement_tools/segments/segment_extensions/
+    link: /docs/user_guide/engagement_tools/segments/segment_extension/
     fa_icon: fas fa-users
   - name: Using User Search
     link: /docs/user_guide/engagement_tools/segments/using_user_search/

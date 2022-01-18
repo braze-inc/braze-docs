@@ -1,6 +1,6 @@
 ---
-nav_title: Create an In-App Message
-article_title: Create an In-App Message
+nav_title: Creating an In-App Message
+article_title: Creating an In-App Message
 page_order: 0
 description: "You can create an in-app message using the Braze platform using campaigns, Canvas, or as an API campaign. This article will guide you through this process."
 channel:
@@ -54,7 +54,7 @@ You can find more Canvas-specific information in [In-app messages in Canvas]({{s
 
 Start by choosing which platforms should receive the message. Use this selection to limit the delivery of a campaign to a specific set of apps. You might choose __Web Browsers__ for an in-browser message encouraging users to download your mobile app to ensure they do not receive the message after already getting your app. Because platform selections are specific to each variant, you could try testing message engagement per platform!
 
-Web Email Capture and Web Modal with CSS are both unique to the Web SDK and can only be used after selecting __Web Browsers__.
+Web Modal with CSS is unique to the Web SDK and can only be used after selecting __Web Browsers__.
 
 | Platform | Message Delivery |
 |---|---|
@@ -69,7 +69,7 @@ Once you've selected a sending platform, browse the message types, layouts, and 
 
 When deciding which message type to use, you should consider how intrusive your in-app message campaign needs to be. This is a measure how much screen real estate the message will take up and how much this interrupts your customer's regular experience in your app or site. The more rich content you want to deliver, the more intrusive your message will need to be.
 
-![Graphic showing a scale of less instrusive to more intrusive, with Slider being the least intrusive, followed by Modal, and Full screen being the most intrusive]({% image_buster /assets/img_archive/iam_intrusive.png %}){: style="max-width:80%" }
+![Graphic showing a scale of less instrusive to more intrusive, with slider being the least intrusive, followed by modal, and full-screen being the most intrusive]({% image_buster /assets/img_archive/iam_intrusive.png %}){: style="max-width:80%" }
 
 ### Message types
 
@@ -148,7 +148,7 @@ These in-app messages are customizable to your needs.
     <td>This is a good option if you want all the advantages of IAMs but need additional functionality or for the appearance to stay "on brand". You can alter every little detail of the message—font, color, shape, size, buttons, etc. <br><br>Example use cases include asking users for app feedback, email capture forms, or paginated messages</td>
   </tr>
   <tr>
-    <td><a href='/docs/user_guide/message_building_by_channel/in-app_messages/customize/#email-capture-form'>Web Email Capture Form</a></td>
+    <td><a href='/docs/user_guide/message_building_by_channel/in-app_messages/customize/#email-capture-form'>Email Capture Form</a></td>
     <td>Typically used to capture the viewer’s email.</td>
     <td>N/A</td>
     <td>Must set <span style="white-space: nowrap"><code>allowUserSuppliedJavascript</code></span> initialization option to <code>true</code> for your in-app message to work.</td>
@@ -185,13 +185,13 @@ The content of the Compose tab varies based on your chosen message options in th
 |---|---|---|
 |Language | See our [full list of available languages][18]. | Click __Add Languages__ and select your desired languages from the provided list. This will insert Liquid into your message. We recommend selecting your languages before writing your content so you can fill in your text where it belongs in the Liquid. |
 |Image | __Upload Image__, __Pick a Badge__, or use __Font Awesome__. | Where applicable, click __Include Image__ or __Upload Image__ and follow the presented instructions. Each message type and platform may have its own suggested proportions and requirements - be sure to check what those are before commissioning or making an image from scratch! |
-|Button Text & On Click Behavior| Add up to two [buttons](#buttons). | You can create and edit custom button text and color. You can also add  Terms of Service Link within Web Email Capture forms.  |
+|Button Text & On Click Behavior| Add up to two [buttons](#buttons). | You can create and edit custom button text and color. You can also add  Terms of Service Link within Email Capture forms.  |
 |Device Options | Restrict send to only iOS devices. | Click __Change__ and check the box as desired. |
 |Message Close Options | __Dismiss Automatically__ or __Wait for User Swipe or Touch__. | __Dismiss Automatically__ allows you to select how many seconds the message will remain on the screen. __Wait for User Swipe or Touch__ will require a dismissal or close option.  |
 |Header & Body Text | Completely custom copy (often with custom HTML capabilities) with the options to include Liquid and other types of personalization. | Some message types do not need and therefore do not ask for headers. |
 |Position | __From Bottom of App Screen__ or __From Top of App Screen__. | This only exists in the Universal Slideup message builder.|
 |HTML & Assets | Completely custom via upload, URL, or copy and paste. | Copy and paste HTML into the available space and upload your assets via ZIP. |
-|Email Capture Input Placeholder | Custom copy. | This is used solely in the Web Email Capture Form and will direct your users to input the desired content into the space. |
+|Email Capture Input Placeholder | Custom copy. | This is used solely in the Email Capture Form and will direct your users to input the desired content into the space. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
 
 ### Additional settings
