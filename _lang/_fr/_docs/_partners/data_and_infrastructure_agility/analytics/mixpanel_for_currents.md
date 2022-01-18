@@ -13,7 +13,7 @@ tool: Courants
 
 > [Mixpanel](https://mixpanel.com/) est une plateforme d'analyse commerciale qui vous permet d'exporter des événements de Mixpanel vers d'autres plates-formes pour effectuer une analyse plus approfondie. Les données collectées peuvent ensuite être utilisées pour construire des rapports personnalisés et mesurer l'engagement et la rétention des utilisateurs.
 
-L'intégration de Braze et de Mixpanel vous permet d'exporter des Mixpanel Cohorts dans Braze pour créer des segments de Braze qui peuvent être utilisés pour cibler les utilisateurs dans de futures campagnes Braze ou Canvases. Vous pouvez également tirer parti des courants de Braze pour exporter vos événements Braze vers Mixpanel pour approfondir l'analyse des conversions, de la rétention et de l'utilisation du produit.
+L'intégration de Braze et de Mixpanel vous permet de [importer des Mixpanel Cohorts dans Braze](#data-import-integration) pour créer des segments Braze qui peuvent être utilisés pour cibler les utilisateurs dans de futures campagnes ou Canvases Braze. Vous pouvez également tirer parti des courants de Braze pour [exporter vos événements Braze vers Mixpanel](#data-export-integration) pour approfondir l'analyse des conversions, de la rétention et de l'utilisation du produit.
 
 ## Pré-requis
 
@@ -55,9 +55,9 @@ Une fois enregistré, vous pouvez référencer ce segment pendant la création d
 
 ## Intégration de l'exportation de données
 
-Une liste des événements qui peuvent être exportés de Braze vers Mixpanel est ci-dessous. Tous les événements envoyés à Mixpanel incluront `external_user_id de l'utilisateur` en tant qu'ID Distinct de Mixpanel. En ce moment, Braze n'envoie pas de données d'événement pour les utilisateurs qui n'ont pas leur `external_user_id`.
+Une liste complète des événements qui peuvent être exportés de Braze vers Mixpanel est incluse ci-dessous (#amplitude-user-profile-api-endpoints). Tous les événements envoyés à Mixpanel incluront `external_user_id de l'utilisateur` en tant qu'ID Distinct de Mixpanel. En ce moment, Braze n'envoie pas de données d'événement pour les utilisateurs qui n'ont pas leur `external_user_id`.
 
-Vous pouvez exporter deux types d'événements vers Mixpanel: "Message Engagement Events" composé des événements Braze directement liés à l'envoi de messages, et « Évènements de comportement client », y compris d'autres activités de l'application ou de site Web telles que des sessions, des événements personnalisés et des achats suivis à travers la plateforme. Tous les événements personnalisés sont préfixés par `[événement personnalisé Braze]`. Les propriétés d'événements personnalisés et l'achat de propriétés d'événements sont préfixés avec `[Propriété d'événement personnalisée]` et `[Achetez la propriété]`, respectivement.
+Vous pouvez exporter deux types d'événements vers Mixpanel: [Message Engagement Events](#message-engagement-events) composé des événements Braze directement liés à l'envoi de messages, et [Événements de comportement client](#customer-behavior-events) y compris une autre activité de l'application ou de site Web comme des sessions, des événements personnalisés et des achats suivis par la plateforme. Tous les événements personnalisés sont préfixés par `[événement personnalisé Braze]`. Les propriétés d'événements personnalisés et l'achat de propriétés d'événements sont préfixés avec `[Propriété d'événement personnalisée]` et `[Achetez la propriété]`, respectivement.
 
 Veuillez contacter votre responsable de compte ou ouvrir un [ticket d'assistance][support] si vous avez besoin d'accéder à d'autres droits d'événement.
 
