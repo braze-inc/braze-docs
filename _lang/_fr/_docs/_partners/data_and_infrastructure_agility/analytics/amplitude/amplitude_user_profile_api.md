@@ -14,7 +14,7 @@ search_tag: Partenaire
 
 ## Paramètres de terminaison
 
-Le tableau suivant définit les paramètres que vous pouvez utiliser dans vos appels vers l'API Profil de l'utilisateur, ainsi que les paramètres que vous pouvez généralement vous attendre à voir dans les réponses d'Amplitude.
+Le tableau suivant définit les paramètres que vous pouvez utiliser dans vos appels vers l'API du profil de l'utilisateur, ainsi que les paramètres que vous pouvez généralement vous attendre à voir dans les réponses d'Amplitude.
 
 | Paramètre             | Requis                                | Libellé                                                                                                                                                                                                                                                            |
 | --------------------- | ------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
