@@ -22,7 +22,7 @@ Vous pouvez ajouter jusqu'à 50 alias par requête.
 
 L'identification d'un utilisateur nécessite qu'un `external_id` soit inclus dans l'objet `aliases_to_identify`. S'il n'y a pas d'utilisateur avec ce `external_id`, le `external_id` sera simplement ajouté à l'enregistrement de l'utilisateur aliasé, et l'utilisateur sera considéré comme identifié.
 
-Par la suite, vous pouvez associer plusieurs alias utilisateurs supplémentaires avec un seul `external_id`. Lorsque ces associations suivantes sont faites, seuls les jetons push et l'historique des messages associés à l'alias de l'utilisateur sont conservés ; tous les attributs, événements ou achats seront "orphelins" et ne seront pas disponibles sur l'utilisateur identifié. One workaround is to export the aliased user's data before identification using the [`/users/export/ids` endpoint]({{site.baseurl}}/api/endpoints/export/user_data/post_user_identify/), then re-associate the attributes, events, and purchases with the identified user.
+Vous pouvez associer plusieurs alias utilisateurs supplémentaires avec un seul `external_id`. Lorsque l'une de ces associations est créée, seuls les jetons push et l'historique des messages associés à l'alias de l'utilisateur sont conservés ; tous les attributs, événements ou achats seront "orphelins" et ne seront pas disponibles sur l'utilisateur identifié. One workaround is to export the aliased user's data before identification using the [`/users/export/ids` endpoint]({{site.baseurl}}/api/endpoints/export/user_data/post_user_identify/), then re-associate the attributes, events, and purchases with the identified user.
 
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#5f74e0f7-0620-4c7b-b0a2-f5f38fdbff58 {% endapiref %}
 
