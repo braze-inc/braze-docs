@@ -12,12 +12,12 @@ description: "Cet article de référence décrit les objets imbriqués pour les 
 Vous pouvez utiliser des objets imbriqués - des objets qui sont à l'intérieur d'un autre objet - pour envoyer des données JSON imbriquées comme propriétés d'événements personnalisés et d'achats. Ces données imbriquées peuvent être utilisées pour modéliser des informations personnalisées dans les messages, pour déclencher les envois de messages et pour la segmentation.
 
 {% alert important %}
-Cette fonctionnalité est généralement disponible, mais le déclenchement des messages et la segmentation des utilisateurs sur la base de ces données sont en accès anticipé. Pour plus d'informations, veuillez contacter votre responsable de compte Braze.
+Cette fonctionnalité est généralement disponible. Cependant, le déclenchement de messages et la segmentation des utilisateurs sur la base de ces données sont en accès anticipé. Pour plus d'informations, veuillez contacter votre responsable de compte Braze.
 {% endalert %}
 
 ## Limitation
 
-- Les données imbriquées ne peuvent être envoyées qu'avec [les événements personnalisés]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events/) et [les événements d'achat]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/purchase_events/). Ceci n'est pas encore pris en charge avec les attributs de l'utilisateur.
+- Les données imbriquées ne peuvent être envoyées qu'avec [les événements personnalisés]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events/) et [les événements d'achat]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/purchase_events/).
 - Les objets de propriété événement qui contiennent des valeurs de tableau ou d'objet peuvent avoir une charge utile de propriété événement allant jusqu'à 50 Ko.
 - Les versions suivantes du SDK prennent en charge les objets imbriqués :
 
@@ -103,10 +103,10 @@ Templating in Liquid dans un message déclenché par l'événement "Ordéré" :
 
 ### Déclenchement du message
 
-Pour utiliser ces propriétés pour déclencher une campagne, sélectionnez votre événement personnalisé ou votre achat, et ajoutez un filtre __Propriété imbriquée__. Notez que le déclenchement de messages n'est pas encore pris en charge pour les messages dans l'application.
+Pour utiliser ces propriétés pour déclencher une campagne, sélectionnez votre événement personnalisé ou votre achat, et ajoutez un filtre **Propriété imbriquée**. Notez que le déclenchement de messages n'est pas encore pris en charge pour les messages dans l'application.
 
 {% alert important %}
-Les objets imbriqués sont généralement disponibles, cependant les messages déclenchants et la segmentation des utilisateurs basés sur ces données sont en accès anticipé. Pour plus d'informations, veuillez contacter votre responsable de compte Braze.
+Les objets imbriqués sont généralement disponibles. Cependant, le déclenchement de messages et la segmentation des utilisateurs sur la base de ces données sont en accès anticipé. Pour plus d'informations, veuillez contacter votre responsable de compte Braze.
 {% endalert %}
 
 {% tabs %}
