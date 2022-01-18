@@ -47,6 +47,14 @@ Après avoir téléchargé votre catalogue avec succès, le catalogue s'affiche 
 
 !\[Exemple d'ID du catalogue et des fichiers CSV associés dans une liste sous la zone de téléchargement\]\[2\]
 
+## Mise à jour d'un catalogue
+
+Si vous avez besoin de mettre à jour un catalogue existant, vous pouvez le faire en remplaçant votre catalogue par une nouvelle version. Pour ce faire, cliquez sur <i class="fas fa-sync-alt"> **Remplacer le catalogue**</i> de la page **Catalogues** et téléchargez votre nouveau CSV.
+
+!\[Remplacer le catalogue existant\]\[8\]
+
+Lorsque vous remplacez un catalogue, tous les contenus et en-têtes du catalogue seront remplacés, mais l'ID du catalogue ne changera pas. Cela vous permet de mettre à jour le contenu du catalogue sans avoir besoin d'aller dans vos messages existants et de mettre à jour les identifiants de catalogue référencés.
+
 ## Utiliser des catalogues dans un message
 
 Pour utiliser votre catalogue dans un message, vous aurez besoin de l'ID du catalogue. Pour notre exemple de scénario, l'ID du catalogue pour notre catalogue de Jeux est `6171a881759044006998ed9a`.
@@ -260,7 +268,7 @@ Les limitations suivantes s'appliquent à l'utilisation des ensembles filtrés d
 - Le tri est ascendant (`asc`) ou descendant (`desc`), par défaut à `asc`
 - La limite par défaut (nombre d'articles à retourner) est de 10
 - Limite maximale est de 100
-[1]: {% image_buster /assets/img_archive/catalog_CSV_upload.png %} [2]: {% image_buster /assets/img_archive/catalog_id. ng %} [3]: {% image_buster /assets/img_archive/catalog_image_link1.png %} [4]: {% image_buster /assets/img_archive/catalog_image_link2. ng %} [5]: {% image_buster /assets/img_archive/catalog_CSV_example.png %} [6]: {% image_buster /assets/img_archive/catalog_filtered_csv. ng %} [7]: {% image_buster /assets/img_archive/catalog_filtered_example.png %}
+[1]: {% image_buster /assets/img_archive/catalog_CSV_upload.png %} [2]: {% image_buster /assets/img_archive/catalog_id. ng %} [3]: {% image_buster /assets/img_archive/catalog_image_link1.png %} [4]: {% image_buster /assets/img_archive/catalog_image_link2. ng %} [5]: {% image_buster /assets/img_archive/catalog_CSV_example.png %} [6]: {% image_buster /assets/img_archive/catalog_filtered_csv. ng %} [7]: {% image_buster /assets/img_archive/catalog_filtered_example.png %} [8]: {% image_buster /assets/img_archive/catalog_replace.png %}
 
 [10]: {{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/using_liquid/#assigning-variables
 
