@@ -14,7 +14,7 @@ tool: Currents
 
 > [Mixpanel](https://mixpanel.com/) is a business analytics platform that allows you to export events from Mixpanel into other platforms to perform deeper analysis. The data collected can then be used to build custom reports and measure user engagement and retention.
 
-The Braze and Mixpanel integration allows you to export Mixpanel Cohorts into Braze to create Braze segments that can be used to target users in future Braze campaigns or Canvases. You can also leverage Braze Currents to export your Braze events to Mixpanel to drive deeper analytics into conversions, retention, and product usage. 
+The Braze and Mixpanel integration allows you to [import Mixpanel Cohorts into Braze](#data-import-integration) to create Braze segments that can be used to target users in future Braze campaigns or Canvases. You can also leverage Braze Currents to [export your Braze events to Mixpanel](#data-export-integration) to drive deeper analytics into conversions, retention, and product usage. 
 
 ## Prerequisites
 
@@ -56,9 +56,9 @@ Once saved, you can reference this segment during Canvas or campaign creation in
 
 ## Data export integration
 
-A list of the events that can be exported from Braze to Mixpanel is below. All events sent to Mixpanel will include the user's `external_user_id` as the Mixpanel Distinct ID. At this time, Braze does not send event data for users who do not have their `external_user_id` set.
+A full list of the events that can be exported from Braze to Mixpanel is included below(#amplitude-user-profile-api-endpoints). All events sent to Mixpanel will include the user's `external_user_id` as the Mixpanel Distinct ID. At this time, Braze does not send event data for users who do not have their `external_user_id` set.
 
-You can export two types of events to Mixpanel: "Message Engagement Events" consisting of the Braze Events directly related to message sending, and "Customer Behavior Events" including other app or website activity such as sessions, custom events, and purchases tracked through the platform. All custom events are prefixed with `[Braze Custom Event]`. Custom event properties and purchase event properties are prefixed with `[Custom event property]` and `[Purchase property]`, respectively.
+You can export two types of events to Mixpanel: [Message Engagement Events](#message-engagement-events) consisting of the Braze Events directly related to message sending, and [Customer Behavior Events](#customer-behavior-events) including other app or website activity such as sessions, custom events, and purchases tracked through the platform. All custom events are prefixed with `[Braze Custom Event]`. Custom event properties and purchase event properties are prefixed with `[Custom event property]` and `[Purchase property]`, respectively.
 
 Please contact your Account Manager or open a [support ticket][support] if you need access to additional event entitlements.
 
