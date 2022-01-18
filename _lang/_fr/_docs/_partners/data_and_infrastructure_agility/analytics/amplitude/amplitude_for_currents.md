@@ -13,49 +13,77 @@ search_tag: Partenaire
 
 {% include video.html id="7yadPjDImxQ" align="right" %}
 
-> [Amplitude](https://amplitude.com/) est une plate-forme d'analyse de produit et d'intelligence d'affaires. Vous pouvez exporter les événements de données de votre intégration à Braze vers Amplitude afin d'effectuer une analyse approfondie de vos données de produit et de marketing.
+> [Amplitude](https://amplitude.com/) est une plate-forme d'analyse de produit et d'intelligence d'affaires.
 
-Pour commencer, trouvez les informations suivantes dans votre tableau de bord Amplitude :
+L'intégration de Braze et d'Amplitude vous permet de [importer des Cohortes d'Amplitude dans Braze](#data-import-integration) pour créer des segments qui peuvent cibler les utilisateurs dans de futures campagnes ou Canvases. Vous pouvez également tirer parti des courants de Braze pour [exporter vos événements Braze vers Amplitude](#data-export-integration) pour effectuer des analyses plus approfondies de vos données de produit et de marketing.
 
--   Clé d'API d'Amplitude
+## Pré-requis
 
-Ajoutez cette information à la page d'intégration d'Amplitude sur le tableau de bord, et appuyez sur Enregistrer.
+| Exigences          | Libellé                                                                                                                                                                                      |
+| ------------------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Compte d'Amplitude | Un [compte d’amplitude](https://amplitude.com/) est requis pour profiter de ce partenariat.                                                                                                  |
+| Courants           | Afin d'exporter les données vers l'Amplitude, vous devez avoir [Braze Currents]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/#access-currents) configuré pour votre compte. |
+{: .reset-td-br-1 .reset-td-br-2}
 
-![Amplitude]({% image_buster /assets/img_archive/currents-amplitude-edit.png %})
+## Intégration de l'importation de données
+
+Utilisez le partenariat de Braze et d'Amplitude pour importer des cohortes d'Amplitude directement dans Braze pour la segmentation du public. Cela vous permet d'effectuer une analyse profonde en utilisant Amplitude et d'exécuter vos stratégies en utilisant Braze.
+
+Toute intégration que vous avez configurée comptera dans le volume de données de votre compte.
+
+### Étape 1 : Récupère la clé d'importation de données Braze
+
+Au Brésil, accédez aux **partenaires technologiques** et sélectionnez **Amplitude**. Ici, vous trouverez le point de terminaison REST et générez votre clé d'importation de données Braze. Une fois généré, vous pouvez créer une nouvelle clé ou invalider une clé existante. La clé d'importation de données et le point de terminaison REST sont utilisés à l'étape suivante lors de la configuration d'un postback dans le tableau de bord d'Amplitude.<br><br>![Ampltiude]({% image_buster /assets/img/amplitude3.png %})
+
+### Étape 2 : Mettre en place l’intégration de Braze en Amplitude
+
+Dans Amplitude, accédez à **Sources & Destinations > [nom du projet] > Destinations > Braze**. Dans l'invite qui apparaît, fournissez la clé d'importation de données Braze et le point de terminaison REST, et cliquez sur **Enregistrer**.
+
+![Intégration de l'amplitude mise en place]({% image_buster /assets/img/amplitude.png %}){: style="max-width:50%;"}
+
+### Étape 3 : Exporter une cohorte d'Amplitude vers Braze
+
+Pour exporter des utilisateurs d'Amplitude vers Brésil, créez d'abord une [cohorte](https://help.amplitude.com/hc/en-us/articles/231881448-Behavioral-Cohorts) d'utilisateurs que vous souhaitez exporter. Une fois que vous avez créé une cohorte, cliquez sur **Synchroniser vers...** pour exporter ces utilisateurs vers Braze.
+
+#### Synchronisations de cohortes planifiées
+
+Les synchronisations de cohortes peuvent être planifiées pour être effectuées des heures ou tous les jours. La synchronisation planifiée enverra uniquement les deltas du jeu de données mis à jour pour minimiser l'utilisation des points de données.
+
+### Étape 4 : Groupes d'utilisateurs dans Braze
+
+En Brésil, pour créer un segment de ces utilisateurs, naviguez vers **Segments** sous **Engagement**, nommez votre segment, et sélectionnez **Amplitude Cohorts** comme filtre. Ensuite, utilisez l'option "include" et choisissez la cohorte que vous avez créée en Amplitude.
+
+![Segment d'amplitude]({% image_buster /assets/img/amplitude2.png %})
+
+Une fois enregistré, vous pouvez référencer ce segment pendant la création de Canvas ou de campagne dans l'étape des utilisateurs ciblés.
+
+## Intégration de l'exportation de données
+
+Une liste complète des événements qui peuvent être exportés de Braze à Amplitude est affichée ci-dessous. Tous les événements envoyés à Amplitude incluront `external_user_id de l'utilisateur` comme identifiant d'utilisateur Amplitude. Braze enverra uniquement les données d'événement pour les utilisateurs qui ont leur `external_user_id` défini ou les utilisateurs anonymes qui ont leur `device_id` définis. Les propriétés d'événement spécifiques au Brésil seront envoyées sous la clé `event_properties` dans les données envoyées à Amplitude. Les propriétés de chaque type d'événement sont listées ci-dessous.
+
+Vous pouvez exporter deux types d'événements vers Amplitude: [Message Engagement Events](#message-engagement-events) composé des événements Braze directement liés à l'envoi de messages, et [Événements de comportement du client](#customer-berhavior-events), y compris une autre activité de l'application ou du site Web comme les sessions, les événements personnalisés et les achats suivis par la plateforme. Tous les événements réguliers sont préfixés par `[Appboy]`, et tous les événements personnalisés sont préfixés par `[Appboy] [Événement personnalisé]`. Les propriétés d'événements personnalisés et l'achat de propriétés d'événements sont préfixés avec `[Propriété d'événement personnalisée]` et `[Achetez la propriété]`, respectivement.
+
+Toutes les cohortes nommées et importées dans Braze seront préfixées avec `[Amplitude]` et suffixées avec leur `cohort_id`. Cela signifie qu'une cohorte nommée "TEST_COHORT" avec le `cohort_id` "abcd1234" sera intitulée `[Amplitude] TEST_COHORT: abcd1234` dans les filtres Braze.
+
+Veuillez contacter votre responsable de compte ou ouvrir un [ticket d'assistance][support] si vous avez besoin d'accéder à d'autres droits d'événement.
+
+### Étape 1 : Configurer l’intégration d’Amplitude dans Braze
+
+Dans Amplitude, localisez votre clé API d'exportation Amplitude.
 
 {% alert warning %}
 Gardez votre clé d'Amplitude API à jour. Si les identifiants de votre connecteur expirent, le connecteur arrêtera d'envoyer des événements. Si cela persiste plus de **48 heures**, les événements du connecteur seront supprimés et les données seront définitivement perdues.
 {% endalert %}
 
-La documentation d'Amplitude est disponible [ici](https://amplitude.zendesk.com/hc/en-us/articles/115000217351-Appboy-Amplitude-Integration#how-to-set-up-and-use-the-integration).
+### Étape 2 : Créer un courant de Braze
 
-## Importation des données
+En Brésil, accédez à **courants > + Créer Courant > Créer Exportation Amplitude**. Fournissez un nom d'intégration, un courriel de contact, une clé API d'exportation d'Amplitude et une région d'Amplitude dans les champs listés. Ensuite, sélectionnez les événements que vous souhaitez suivre. Une liste des événements disponibles est fournie ci-dessous. Enfin, cliquez sur **Lancer le**
 
-En utilisant le partenariat profond de Braze et Amplitude, vous pouvez configurer votre intégration pour importer des cohortes d'Amplitude directement dans Braze pour le reciblage, créer une boucle complète de données d'un système à l'autre. Cela vous permet d'effectuer une analyse profonde en utilisant Amplitude et d'exécuter de façon transparente vos stratégies en utilisant Braze.
+![Amplitude]({% image_buster /assets/img/amplitude4.png %})
 
-Vous pouvez gérer le processus d'import de données d'Amplitude à partir de la page Partenaires de technologie. Notez que toute intégration que vous configurez comptera dans le volume de données de votre compte.
-
-![Import de cohortes d'amplitude]({% image_buster /assets/img_archive/currents-amplitude-import.png %})
-
-
-## Détails de l'intégration
-
-Une liste des événements qui peuvent être exportés de Braze à Amplitude est ci-dessous. Tous les événements envoyés à Amplitude incluront `external_user_id de l'utilisateur` comme identifiant d'utilisateur Amplitude. Braze enverra uniquement les données d'événement pour les utilisateurs qui ont soit leur set `external_user_id` ou les utilisateurs anonymes qui ont leur ensemble `device_id`. Les propriétés d'événement spécifiques au Brésil seront envoyées sous la clé `event_properties` dans les données envoyées à Amplitude. Les propriétés de chaque type d'événement sont listées ci-dessous.
-
-Vous pouvez exporter deux types d'événements vers Amplitude: "Message Engagement Events" composé des événements Braze qui sont directement liés à l'envoi de messages, et « Événements de comportement client », y compris les autres activités de l'appli ou du site Web telles que les sessions, les événements personnalisés et les achats suivis à travers la plateforme. Tous les événements réguliers sont préfixés par `[Appboy]`, et tous les événements personnalisés sont préfixés par `[Appboy] [Événement personnalisé]`. Les propriétés d'événements personnalisés et l'achat de propriétés d'événements sont préfixés avec `[Propriété d'événement personnalisée]` et `[Achetez la propriété]`, respectivement.
-
-Toutes les cohortes nommées et importées dans Braze seront préfixées avec `[Amplitude]` et suffixées avec leur `cohort_id`. Cela signifie qu'une cohorte nommée "COHORT_NAME" avec le `cohort_id` "cxyzz3hz" sera intitulée `[Amplitude] COHORT_NAME: cxyzz3hz` dans les filtres Braze.
-
-Veuillez contacter votre responsable de compte ou ouvrir un [ticket d'assistance][support] si vous avez besoin d'accéder à d'autres droits d'événement.
-
-### Synchronisations de cohortes planifiées
-
-Les clients de Braze utilisant Amplitude peuvent planifier les synchronisations de cohortes chronométrées entre Amplitude et Braze. Les peut être configurés comme des synchronisations horaires ou quotidiennes de données à envoyer en Brésil.
-
-{% alert important %}
-Les synchronisations planifiées n'enverront que les deltas du jeu de données mis à jour.
-{% endalert %}
-
+{% tab note %}
+Consultez la documentation d'Amplitude [d'intégration](https://amplitude.zendesk.com/hc/en-us/articles/115000217351-Appboy-Amplitude-Integration#how-to-set-up-and-use-the-integration) ou ce cours [Amplitude LAB](https://lab.braze.com/amplitude-integration-with-braze) de Braze pour en savoir plus.
+{% endtab %}
 
 ## Limites de taux
 
@@ -243,7 +271,7 @@ Pour consulter certains des points de terminaison communs de l'API Amplitude, co
   "user_agent": (string) description du système et du navigateur de l'utilisateur pour l'événement (Email Click, Ouvrir et MarkAsSpam seulement),
   "link_id": (chaîne) valeur unique générée par Braze pour l'URL (Email Click events seulement),
   "link_alias": (chaîne) nom d'alias défini lors de l'envoi du message (Email Click events seulement),
-  "machine_open": (chaîne) Indicateur pour savoir si le courrier électronique a été ouvert par un processus automatisé, tel qu'Apple ou Google mail pre-fetching. Actuellement "vrai" ou nul, mais une granularité supplémentaire (par exemple "Apple" ou "Google" pour indiquer quel processus a fait le fetch) peut être ajoutée dans le futur. (Évènements ouverts seulement)
+  "machine_open": (chaîne) Indicateur pour savoir si le courriel a été ouvert par un processus automatisé, comme Apple ou Google mail pre-fetching. Actuellement "vrai" ou nul, mais une granularité supplémentaire (par exemple "Apple" ou "Google" pour indiquer quel processus a fait le fetch) peut être ajoutée dans le futur. (Évènements ouverts seulement)
 }
 ```
 
