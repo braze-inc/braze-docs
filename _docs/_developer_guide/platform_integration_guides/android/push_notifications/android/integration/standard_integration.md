@@ -663,8 +663,8 @@ val myExtra = extras.getString("my_key")
 Braze push data keys are documented [here][78].
 {% endalert %}
 
-[5]: https://appboy.github.io/appboy-android-sdk/javadocs/com/appboy/Appboy.html#setCustomBrazeNotificationFactory-com.braze.IBrazeNotificationFactory-
-[6]: https://appboy.github.io/appboy-android-sdk/javadocs/com/braze/IBrazeNotificationFactory.html
+[5]: https://appboy.github.io/appboy-android-sdk/kdoc/braze-android-sdk/com.appboy/-appboy/set-custom-braze-notification-factory.html
+[6]: https://appboy.github.io/appboy-android-sdk/kdoc/braze-android-sdk/com.braze/-i-braze-notification-factory/index.html
 [8]: {{site.baseurl}}/user_guide/message_building_by_channel/push/best_practices/
 [16]: {% image_buster /assets/img_archive/fcm_api_insert.png %} "FCMKey"
 [22]: {{site.baseurl}}/api/endpoints/messaging/
@@ -698,8 +698,8 @@ Braze push data keys are documented [here][78].
 [71]: https://github.com/Appboy/appboy-android-sdk/blob/master/samples/custom-broadcast/src/main/AndroidManifest.xml "AndroidManifest.xml"
 [72]: https://appboy.github.io/appboy-android-sdk/javadocs/com/braze/configuration/BrazeConfig.Builder.html#setDefaultNotificationChannelName-java.lang.String-
 [73]: https://appboy.github.io/appboy-android-sdk/javadocs/com/braze/configuration/BrazeConfig.Builder.html#setDefaultNotificationChannelDescription-java.lang.String-
-[74]: hhttps://appboy.github.io/appboy-android-sdk/javadocs/com/braze/push/BrazeFirebaseMessagingService.html#handleBrazeRemoteMessage-android.content.Context-RemoteMessage-
+[74]: hhttps://appboy.github.io/appboy-android-sdk/kdoc/braze-android-sdk/com.braze.push/-braze-firebase-messaging-service/handle-braze-remote-message.html
 [75]: https://firebase.google.com/docs/reference/android/com/google/firebase/messaging/RemoteMessage
 [76]: https://developer.android.com/reference/android/app/Application
-[77]: https://appboy.github.io/appboy-android-sdk/javadocs/com/appboy/models/push/BrazeNotificationPayload.html
-[78]: https://appboy.github.io/appboy-android-sdk/javadocs/com/appboy/Constants.html
+[77]: https://appboy.github.io/appboy-android-sdk/kdoc/braze-android-sdk/com.appboy.models.push/-braze-notification-payload/index.html
+[78]: https://appboy.github.io/appboy-android-sdk/kdoc/braze-android-sdk/com.appboy/-constants/index.html

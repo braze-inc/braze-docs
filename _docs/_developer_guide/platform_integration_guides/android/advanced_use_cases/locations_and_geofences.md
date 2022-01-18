@@ -319,5 +319,5 @@ However, note that if your application is stopped, receiving a background push w
 [3]: https://developers.google.com/android/reference/com/google/android/gms/location/package-summary
 [4]: https://github.com/Appboy/appboy-android-sdk/blob/91622eb6cd4bba2e625cc22f00ca38e6136a0596/droidboy/src/main/java/com/appboy/sample/util/RuntimePermissionUtils.java
 [10]: https://developers.google.com/android/guides/setup
-[11]: https://appboy.github.io/appboy-android-sdk/javadocs/com/appboy/Appboy.html#requestGeofences-double-double-
+[11]: https://appboy.github.io/appboy-android-sdk/kdoc/braze-android-sdk/com.appboy/-appboy/request-geofences.html
 [support]: {{site.baseurl}}/braze_support/

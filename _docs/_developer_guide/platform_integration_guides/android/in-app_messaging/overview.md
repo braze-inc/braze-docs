@@ -89,18 +89,18 @@ Please note that we currently do not support display of custom HTML in-app messa
 
 Braze's `slideup` in-app message object extends [`InAppMessageBase`][27]. Braze's `full` and `modal` type messages extend [`InAppMessageImmersiveBase`][28]. Extending one of these classes gives you the option of adding custom functionality to your locally generated in-app messages.
 
-[3]: https://appboy.github.io/appboy-android-sdk/javadocs/com/braze/models/inappmessage/IInAppMessage.html
-[8]: https://appboy.github.io/appboy-android-sdk/javadocs/com/braze/models/inappmessage/IInAppMessageImmersive.html
+[3]: https://appboy.github.io/appboy-android-sdk/kdoc/braze-android-sdk/com.braze.models.inappmessage/-i-in-app-message/index.html
+[8]: https://appboy.github.io/appboy-android-sdk/kdoc/braze-android-sdk/com.braze.models.inappmessage/-i-in-app-message-immersive/index.html
 [12]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/in-app_messaging/customization/#setting-a-custom-view-factory
 [15]: http://fortawesome.github.io/Font-Awesome/
-[27]: https://appboy.github.io/appboy-android-sdk/javadocs/com/braze/models/inappmessage/InAppMessageBase.html
-[28]: https://appboy.github.io/appboy-android-sdk/javadocs/com/braze/models/inappmessage/InAppMessageImmersiveBase.html
-[50]: https://appboy.github.io/appboy-android-sdk/javadocs/com/braze/models/inappmessage/MessageButton.html
-[51]: https://appboy.github.io/appboy-android-sdk/javadocs/com/braze/models/inappmessage/InAppMessageHtmlFull.html
-[52]: https://appboy.github.io/appboy-android-sdk/javadocs/com/braze/models/inappmessage/IInAppMessageHtml.html
+[27]: https://appboy.github.io/appboy-android-sdk/kdoc/braze-android-sdk/com.braze.models.inappmessage/-in-app-message-base/index.html
+[28]: https://appboy.github.io/appboy-android-sdk/kdoc/braze-android-sdk/com.braze.models.inappmessage/-in-app-message-immersive-base/index.html
+[50]: https://appboy.github.io/appboy-android-sdk/kdoc/braze-android-sdk/com.braze.models.inappmessage/-message-button/index.html
+[51]: https://appboy.github.io/appboy-android-sdk/kdoc/braze-android-sdk/com.braze.models.inappmessage/-in-app-message-html-full/index.html
+[52]: https://appboy.github.io/appboy-android-sdk/kdoc/braze-android-sdk/com.braze.models.inappmessage/-i-in-app-message-html/index.html
 [83]: https://www.braze.com/customers
 [84]: {{site.baseurl}}/user_guide/message_building_by_channel/push/best_practices/
-[90]: https://appboy.github.io/appboy-android-sdk/javadocs/com/braze/models/inappmessage/InAppMessageModal.html
-[91]: https://appboy.github.io/appboy-android-sdk/javadocs/com/braze/models/inappmessage/InAppMessageSlideup.html
-[92]: https://appboy.github.io/appboy-android-sdk/javadocs/com/braze/models/inappmessage/InAppMessageHtmlFull.html
+[90]: https://appboy.github.io/appboy-android-sdk/kdoc/braze-android-sdk/com.braze.models.inappmessage/-in-app-message-modal/index.html
+[91]: https://appboy.github.io/appboy-android-sdk/kdoc/braze-android-sdk/com.braze.models.inappmessage/-in-app-message-slideup/index.html
+[92]: https://appboy.github.io/appboy-android-sdk/kdoc/braze-android-sdk/com.braze.models.inappmessage/-in-app-message-html-full/index.html
 [93]: https://appboy.github.io/appboy-android-sdk/javadocs/com/braze/models/inappmessage/InAppMessageFull

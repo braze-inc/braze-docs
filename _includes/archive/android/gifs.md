@@ -169,10 +169,10 @@ class GlideIntegrationApplication : Application() {
 [gifs-61]: https://github.com/Appboy/appboy-android-sdk/tree/master/droidboy
 [gifs-64]: https://github.com/Appboy/appboy-android-sdk/tree/master/droidboy
 [gifs-65]: https://github.com/Appboy/appboy-android-sdk/tree/master/samples/glide-image-integration
-[gifs-66]: https://appboy.github.io/appboy-android-sdk/javadocs/com/appboy/Appboy.html#setImageLoader-com.braze.images.IBrazeImageLoader-
+[gifs-66]: https://appboy.github.io/appboy-android-sdk/kdoc/braze-android-sdk/com.appboy/-appboy/set-image-loader.html
 [gifs-67]: https://bumptech.github.io/glide/
-[gifs-70]: https://appboy.github.io/appboy-android-sdk/javadocs/com/braze/images/IBrazeImageLoader.html#setOffline-boolean-
-[gifs-71]: https://appboy.github.io/appboy-android-sdk/javadocs/com/braze/images/IBrazeImageLoader.html#getInAppMessageBitmapFromUrl-android.content.Context-com.braze.models.inappmessage.IInAppMessage-java.lang.String-com.braze.enums.BrazeViewBounds-
-[gifs-72]: https://appboy.github.io/appboy-android-sdk/javadocs/com/braze/images/IBrazeImageLoader.html#getPushBitmapFromUrl-android.content.Context-android.os.Bundle-java.lang.String-com.braze.enums.BrazeViewBounds-
-[gifs-73]: https://appboy.github.io/appboy-android-sdk/javadocs/com/braze/images/IBrazeImageLoader.html#renderUrlIntoCardView-android.content.Context-com.appboy.models.cards.Card-java.lang.String-android.widget.ImageView-com.braze.enums.BrazeViewBounds-
-[gifs-74]: https://appboy.github.io/appboy-android-sdk/javadocs/com/braze/images/IBrazeImageLoader.html#renderUrlIntoInAppMessageView-android.content.Context-com.braze.models.inappmessage.IInAppMessage-java.lang.String-android.widget.ImageView-com.braze.enums.BrazeViewBounds-
+[gifs-70]: https://appboy.github.io/appboy-android-sdk/kdoc/braze-android-sdk/com.braze.images/-i-braze-image-loader/set-offline.html
+[gifs-71]: https://appboy.github.io/appboy-android-sdk/kdoc/braze-android-sdk/com.braze.images/-i-braze-image-loader/get-in-app-message-bitmap-from-url.html
+[gifs-72]: https://appboy.github.io/appboy-android-sdk/kdoc/braze-android-sdk/com.braze.images/-i-braze-image-loader/get-push-bitmap-from-url.html
+[gifs-73]: https://appboy.github.io/appboy-android-sdk/kdoc/braze-android-sdk/com.braze.images/-i-braze-image-loader/render-url-into-card-view.html
+[gifs-74]: https://appboy.github.io/appboy-android-sdk/kdoc/braze-android-sdk/com.braze.images/-i-braze-image-loader/render-url-into-in-app-message-view.html

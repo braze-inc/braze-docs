@@ -335,7 +335,7 @@ Braze.getInstance(context).currentUser?.setPushNotificationSubscriptionType(push
 {% endtab %}
 {% endtabs %}
 
-[2]: https://appboy.github.io/appboy-android-sdk/javadocs/com/braze/BrazeUser.html
+[2]: https://appboy.github.io/appboy-android-sdk/kdoc/braze-android-sdk/com.braze/-braze-user/index.html
 [4]: {{site.baseurl}}/developer_guide/rest_api/user_data/#user-data
 [6]: {{site.baseurl}}/developer_guide/platform_wide/analytics_overview/#arrays
 [7]: {{site.baseurl}}/developer_guide/platform_wide/analytics_overview/#user-data-collection

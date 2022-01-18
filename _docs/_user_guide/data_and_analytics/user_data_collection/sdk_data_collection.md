@@ -67,4 +67,4 @@ If you are interested in the Minimum Integration only, and you integrate with mP
 
 {% endalert %} 
 
-[1]: https://appboy.github.io/appboy-android-sdk/javadocs/com/appboy/enums/DeviceKey.html
+[1]: https://appboy.github.io/appboy-android-sdk/kdoc/braze-android-sdk/com.appboy.enums/-device-key/index.html
