@@ -47,6 +47,14 @@ After successfully uploading your catalog, the catalog displays in a list below 
 
 ![Example catalog ID and associated CSV files in a list below the upload zone][2]
 
+## Updating a catalog
+
+If you need to update an existing catalog, you can do so by replacing your catalog with a new version. To do so, click <i class="fas fa-sync-alt"> **Replace Catalog**</i> from the **Catalogs** page and upload your new CSV.
+
+![Replace existing catalog][8]
+
+When you replace a catalog, all content and headers in the catalog will be replaced, but the catalog ID will not change. This allows you to update catalog content without needing to go into your existing messages and update the referenced catalog IDs.
+
 ## Using catalogs in a message
 
 To use your catalog in a message, you'll need the catalog ID. For our example scenario, the catalog ID for our Games catalog is `6171a881759044006998ed9a`.
@@ -270,5 +278,6 @@ The following limitations apply to using filtered sets in catalogs:
 [5]: {% image_buster /assets/img_archive/catalog_CSV_example.png %}
 [6]: {% image_buster /assets/img_archive/catalog_filtered_csv.png %}
 [7]: {% image_buster /assets/img_archive/catalog_filtered_example.png %}
+[8]: {% image_buster /assets/img_archive/catalog_replace.png %}
 
 [10]: {{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/using_liquid/#assigning-variables
