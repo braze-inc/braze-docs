@@ -24,7 +24,7 @@ $(document).ready(function () {
         select_html += ' selected="selected"';
       }
       select_html += `>${$this.text().trim()}</option>`;
-      if (dev_selected) {
+      if (exclusion_list.indexOf(dev_selected) === -1) {
         if (dev_selected !== obj_id) {
           hide(obj_id);
         } else {
