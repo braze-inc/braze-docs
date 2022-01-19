@@ -17,17 +17,15 @@ $(document).ready(function () {
   platform_objects.each(function (k) {
     var $this = $(this);
     var obj_id = $this.attr("id");
-    if (exclusion_list.indexOf(obj_id) == -1) {
+    if (exclusion_list.indexOf(obj_id) === -1) {
       platform_list.push(obj_id);
       select_html += `<option value="${obj_id}" `;
       if (dev_selected === obj_id) {
         select_html += ' selected="selected"';
       }
       select_html += `>${$this.text().trim()}</option>`;
-    }
-    if (dev_selected) {
-      if (exclusion_list.indexOf(obj_id) === -1) {
-        if (dev_selected != obj_id) {
+      if (dev_selected) {
+        if (dev_selected !== obj_id) {
           hide(obj_id);
         } else {
           show(obj_id);
