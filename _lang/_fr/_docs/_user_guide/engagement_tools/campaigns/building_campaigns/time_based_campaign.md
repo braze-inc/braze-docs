@@ -11,6 +11,8 @@ description: "Cet article de référence couvre les fonctionnalités basées sur
 
 > Cet article de référence couvre les fonctionnalités basées sur le temps pour les campagnes d'aide aux stratégies, de dépannage et de répondre à des questions courantes. Vous pouvez également consulter notre cours de LAB [Configuration de la campagne](https://lab.braze.com/campaign-setup-delivery-targeting-conversions) pour en savoir plus sur la livraison de la campagne.
 
+Lorsque vous utilisez des campagnes, vous pouvez utiliser les options de planification basées sur le temps pour atteindre votre public. Ces fonctionnalités basées sur le temps incluent les campements qui sont configurés pour la livraison planifiée et la livraison basée sur les actions.
+
 ## Livraison planifiée
 
 Cette section couvre les options de planification et de livraison basées sur le temps pour les campagnes de [Livraison planifiée]({{site.baseurl}}/user_guide/engagement_tools/campaigns/scheduling_and_organizing/delivery_types/scheduled_delivery/).
@@ -26,9 +28,9 @@ Cette section couvre les options de planification et de livraison basées sur le
 
 ### Timing Intelligent
 
-| Définition                                                                                                                                                                                                   | Fuseau horaire                                                                                                                                                                                        |
-| ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Temps optimal de l'utilisateur. Chaque utilisateur recevra la campagne au moment où il est le plus susceptible de s'engager. [En savoir plus]({{site.baseurl}}/user_guide/intelligence/intelligent_timing/). | Si vous sélectionnez **une heure spécifique** comme votre [repli]({{site.baseurl}}/user_guide/intelligence/intelligent_timing/#fallback-options), cela sera envoyé à l'heure locale de l'utilisateur. |
+| Définition                                                                                                                                                                                                   | Fuseau horaire                                                                                                                                                                                    |
+| ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Temps optimal de l'utilisateur. Chaque utilisateur recevra la campagne au moment où il est le plus susceptible de s'engager. [En savoir plus]({{site.baseurl}}/user_guide/intelligence/intelligent_timing/). | Si vous sélectionnez une heure spécifique comme votre [repli]({{site.baseurl}}/user_guide/intelligence/intelligent_timing/#fallback-options), cela sera envoyé à l'heure locale de l'utilisateur. |
 {: .reset-td-br-1 .reset-td-br-2}
 
 !\[Intelligent Timing\]\[3\]
@@ -99,7 +101,7 @@ Par exemple, supposons que vous sélectionnez "Envoyer le samedi suivant à 15h1
 
 !\[Envoyer en X jours à l'heure Y\]\[9\]
 
-Braze calcule le délai comme `jour de la semaine` + `jours du calendrier`, puis ajoute le `temps`. Par exemple, supposons que l'utilisateur exécute l'événement de déclenchement le lundi à 21h, et le délai de programmation est réglé sur "Envoyer la campagne dans 1 jour à 9h". Ce message sera envoyé mardi à 9h, parce que Braze calcule le délai comme `lundi` + `1 jour du calendrier`, puis ajoute le `9am`.
+Braze calcule le délai comme `jour de la semaine` + `jours du calendrier`, puis ajoute le `temps`. Par exemple, supposons que l'utilisateur exécute l'événement de déclenchement le lundi à 21h, et le délai de programmation est réglé sur "Envoyer la campagne dans 1 jour à 9h". Ce message sera envoyé mardi à 9h00 car Braze calcule le délai à partir de `lundi` + `1 jour calendrier` puis ajoute le `9h00`.
 
 ### Heures silencieuses
 
