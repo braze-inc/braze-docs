@@ -10,7 +10,7 @@ tool:
 
 # Campagnes utilisateur actives
 
-> Cet article discutera des avantages des campagnes d'utilisateurs actifs dans le tableau de bord de Braze, ainsi que la façon d'identifier et de contacter vos meilleurs utilisateurs. <br> <br> Savoir quels utilisateurs sont actifs, ou les utilisateurs « top » peuvent vous aider à faire des campagnes sur mesure et à récompenser ceux qui fréquentent votre plateforme.
+> Cet article discutera des avantages des campagnes d'utilisateurs actives dans le tableau de bord de Braze, ainsi que la façon d'identifier et de contacter vos meilleurs utilisateurs. <br> <br> Identifier vos utilisateurs actifs peut vous aider à créer des campagnes sur mesure et récompenser ceux qui fréquentent votre plateforme.
 
 Atteindre des utilisateurs déjà actifs de votre application peut être un outil puissant pour aider à construire une suite dédiée aux utilisateurs cohérents de l'application. Un peu de reconnaissance personnalisée de vos utilisateurs de puissance peut les transformer en évangélistes pour votre application.
 
