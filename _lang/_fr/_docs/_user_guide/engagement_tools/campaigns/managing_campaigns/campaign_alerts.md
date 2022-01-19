@@ -16,7 +16,7 @@ channel:
 
 ## Aperçu
 
-Nous voulons vous avertir lorsque quelque chose ne semble pas tout à fait attendu et vous donner la tranquillité d’esprit que le navire navigue en douceur. Les alertes sur les seuils de campagne procurent une tranquillité d'esprit — soyez les premiers à savoir si une campagne importante envoie plus ou moins de messages que vous ne vous y attendez.
+Nous voulons vous avertir lorsque quelque chose ne semble pas tout à fait attendu et vous donner la tranquillité d’esprit que le navire navigue en douceur. Les alertes sur les seuils de campagne procurent la paix d’esprit – soyez les premiers à savoir si une campagne importante envoie plus ou moins de messages que vous ne vous y attendez.
 
 Des alertes de campagne sont disponibles pour les campagnes suivantes :
 
