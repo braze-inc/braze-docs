@@ -16,7 +16,7 @@ La fonction de comportement avancement de Braze vous permet de choisir les crit�
 
 ## Avancer lorsque le message est envoyé
 
-Lorsque __Message Envoyé__ est sélectionné, les clients ne seront avancés que lors des étapes suivantes de Canvas lorsque l'une des conditions suivantes se produira :
+Lorsque **Message Envoyé** est sélectionné, les clients ne seront avancés que lors des étapes suivantes de Canvas lorsque l'une des conditions suivantes se produira :
 
 - Un e-mail a été envoyé
 - Un message push est envoyé
