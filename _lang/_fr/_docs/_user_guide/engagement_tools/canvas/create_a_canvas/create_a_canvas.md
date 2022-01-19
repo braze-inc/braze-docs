@@ -15,7 +15,7 @@ tool: Toile
 
 !\[Canvas\]\[1\]{: style="float:right;max-width:20%;margin-left:10px;margin-top:10px;margin-bottom:10px;"}
 
-Allez à la page **Canvas** , située sous la section **Engagement** , puis cliquez sur __Créer une nouvelle toile__.
+Allez à la page **Canvas** , située sous la section **Engagement** , puis cliquez sur **Créer une nouvelle toile**.
 
 ## Étape 2 : Utilisez l'assistant d'entrée pour configurer votre Canvas
 
@@ -85,19 +85,19 @@ Après avoir choisi quels paramètres vous utiliserez, ajustez ces paramètres d
 
 {% tabs local %}
   {% tab Scheduled Delivery %}
-    __Livraison planifiée__<br> Avec livraison planifiée, les utilisateurs entreront sur un calendrier temporel, de même que la façon dont vous planifiez une campagne. Vous pouvez inscrire des utilisateurs sur un Canvas dès son lancement, ou de les entrer dans votre voyage à un moment donné dans le futur, ou sur une base récurrente.
+    Avec une livraison planifiée, les utilisateurs entreront sur un calendrier temporel, de même que la façon dont vous planifiez une campagne. Vous pouvez inscrire des utilisateurs sur un Canvas dès son lancement, ou de les entrer dans votre voyage à un moment donné dans le futur, ou sur une base récurrente.
 
     ![Canvas Planning Delivery]({% image_buster /assets/img_archive/Canvas_Scheduled_Delivery.png %})
   {% endtab %}
   {% tab Action-Based Delivery %}
-    __Livraisons à l'aide d'Action-Based Delivery__<br> Avec une livraison basée sur l'action, vous pouvez choisir d'entrer des utilisateurs dans un Canvas quand ils exécutent certains déclencheurs. Les utilisateurs entreront dans votre Canvas et commenceront à recevoir des messages lorsqu'ils prendront des mesures particulières, comme ouvrir votre application, faire un achat ou déclencher un événement personnalisé. <br><br>Notez que la distribution par action n'est pas disponible pour les étapes de Canvas avec les messages dans l'application.
+    Grâce à la livraison par action, vous pouvez choisir d'entrer des utilisateurs dans un Canvas lorsqu'ils exécutent certains déclencheurs. Les utilisateurs entreront dans votre Canvas et commenceront à recevoir des messages lorsqu'ils prendront des mesures particulières, comme ouvrir votre application, faire un achat ou déclencher un événement personnalisé. <br><br>Notez que la distribution par action n'est pas disponible pour les étapes de Canvas avec les messages dans l'application.
 
     ![Canvas Action-Based Delivery]({% image_buster /assets/img_archive/Canvas_Action_Based_Delivery. ng %})
     
     Vous pouvez contrôler d'autres aspects du comportement de votre Canvas à partir de la fenêtre **Public d'entrée**, y compris des règles pour la rééligibilité et les paramètres de plafonnement des fréquences.
   {% endtab %}
   {% tab API-Triggered Delivery %}
-    __Livraisons déclenchées par l'API__<br> Vous pouvez choisir d'entrer des utilisateurs dans un Canvas via une requête API. Dans le tableau de bord, vous pouvez trouver un exemple de requête cURL qui fait cela ainsi que d'affecter des propriétés facultatives [`canvas_entry_properties`]({{site.baseurl}}/api/endpoints/messaging/send_messages/post_send_triggered_canvases/) en utilisant le [`Canvas Entry Properties Object`]({{site.baseurl}}/api/objects_filters/canvas_entry_properties_object/). <br><br>Les utilisateurs entreront dans votre Canvas et commenceront à recevoir des messages une fois qu'ils auront été ajoutés en utilisant le [`/canvas/trigger/send`]({{site.baseurl}}/api/endpoints/messaging/send_messages/post_send_triggered_canvases/) endpoint via l'API.
+    Avec la livraison déclenchée par API, vous pouvez choisir d'entrer des utilisateurs dans un Canvas via une requête API. Dans le tableau de bord, vous pouvez trouver un exemple de requête cURL qui fait cela ainsi que d'affecter des propriétés facultatives [`canvas_entry_properties`]({{site.baseurl}}/api/endpoints/messaging/send_messages/post_send_triggered_canvases/) en utilisant le [`Canvas Entry Properties Object`]({{site.baseurl}}/api/objects_filters/canvas_entry_properties_object/). <br><br>Les utilisateurs entreront dans votre Canvas et commenceront à recevoir des messages une fois qu'ils auront été ajoutés en utilisant le [`/canvas/trigger/send`]({{site.baseurl}}/api/endpoints/messaging/send_messages/post_send_triggered_canvases/) endpoint via l'API.
 
     ![Canvas API-Triggered Delivery]({% image_buster /assets/img_archive/Canvas_API_Triggered_Delivery. ng %})
     
@@ -152,7 +152,7 @@ Pour ce faire, définissez les **paramètres d'abonnement** pour envoyer ce Canv
 Avec cette configuration, n'incluez aucun filtre dans l'étape **Utilisateurs cibles** qui limitent l'audience à un seul canal (e. ., `Push Activé = True` ou `Abonnement par courriel = Opted-In`).
 {% endalert %}
 
-Si vous le désirez, indiquez les heures silencieuses (l'heure pendant laquelle vos messages ne seront pas envoyés) pour votre Canvas. Cochez **Activer les heures silencieuses** dans vos __paramètres d'envoi__. Ensuite, sélectionnez vos heures silencieuses dans l'heure locale de votre utilisateur et quelle action suivra si le message se déclenche à l'intérieur de ces heures silencieuses.
+Si vous le désirez, indiquez les heures silencieuses (l'heure pendant laquelle vos messages ne seront pas envoyés) pour votre Canvas. Cochez **Activer les heures silencieuses** dans vos **paramètres d'envoi**. Ensuite, sélectionnez vos heures silencieuses dans l'heure locale de votre utilisateur et quelle action suivra si le message se déclenche à l'intérieur de ces heures silencieuses.
 
 !\[Heures silencieures\]\[50\]
 
@@ -182,7 +182,7 @@ Par défaut, l'affectation des variantes de Canvas est verrouillée lorsque les 
 {% enddetails %}
 {% endalert %}
 
-### Modification d'une étape
+### Modifier une étape
 
 Cliquez n'importe où sur une étape, et Braze ouvrira l'interface d'édition des étapes. Les étapes peuvent être configurées pour envoyer des messages après un délai fixe (maximum de 31 jours) ou lorsqu'un utilisateur effectue une action particulière. Par exemple, vous pouvez utiliser Canvas pour configurer une campagne d'intégration de Day 1, Day 3, Day 7 avec des délais entre les messages :
 
@@ -229,7 +229,7 @@ Pour plus d'informations sur l'objet Propriétés de l'entrée de Canvas , consu
 {% tab Custom Event Properties %}
 Les propriétés d'événements personnalisés sont les propriétés que vous avez définies sur des événements et des achats personnalisés, utilisés principalement dans des campagnes de livraison basées sur des actions. Ces propriétés sont éphémères et ne peuvent être utilisées qu'au moment où elles se produisent. <br><br>Les propriétés événement ne persistent pas, donc si vous planifiez une étape de Canvas plutôt que d'utiliser une distribution basée sur des actions, vous ne seriez pas en mesure d’utiliser une propriété événementielle (comme nous ne stockons pas ces données). Vous ne pouvez pas référencer la propriété événement pour un événement qui s'est déjà produit.
 
-__Les propriétés d'événements personnalisés peuvent être référencées dans la première étape d'une toile - or seulement la première étape__!
+Les propriétés d'événements personnalisés ne peuvent être référencées que dans la première étape d'un Canvas!
 
 Pour plus d'informations sur les propriétés d'événement personnalisées, consultez notre [documentation]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events/#custom-event-properties).
 
@@ -242,13 +242,13 @@ Saviez-vous que vous pouvez inclure les noms des étapes de Canvas dans vos mess
 
 ### Ajout de nouvelles étapes
 
-Ajouter plus d'étapes en appuyant sur le bouton <i class="fas fa-plus-circle"></i> plus :
+Ajouter plus d'étapes en cliquant sur le bouton <i class="fas fa-plus-circle"></i> plus :
 
 !\[Canvas More Step\]\[17\]{: style="max-width:75%;"}
 
 ### Modification des connexions
 
-Pour déplacer une connexion entre les étapes, cliquez sur la flèche qui relie les deux étapes, et sélectionnez une étape différente. Pour rompre la connexion, cliquez sur la flèche et cliquez sur **Annuler la connexion** dans le pied de page du compositeur de Canvas .
+Pour déplacer une connexion entre les étapes, cliquez sur la flèche qui relie les deux étapes et sélectionnez une étape différente. Pour rompre la connexion, cliquez sur la flèche et cliquez sur **Annuler la connexion** dans le pied de page du compositeur de Canvas .
 
 !\[Move or break a connection between two Canvas steps\]\[2\]
 
