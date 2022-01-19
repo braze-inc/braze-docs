@@ -16,7 +16,7 @@ Campaigns sent using time-based scheduled delivery are delivered on specified da
 
 ## Option 1: Send as soon as the campaign is launched
 
-If you choose to send a message as soon as it's launched, it will begin sending as soon as you finish creating your campaign.
+If you choose to send a message as soon as it's launched, your message will begin sending as soon as you finish creating your campaign.
 
 ![Immediately][10]
 
@@ -28,7 +28,7 @@ If you plan on editing the campaign and re-sending it after viewing the test, be
 
 Scheduling a campaign for a designated time allows you to specify the days and times your campaign will send. You can send a message once, daily, weekly, or monthly at a certain time of day, as well as specify when your campaign should begin and end. This end date is inclusive, which means the last send will be on the end date. 
 
-If you choose Scheduled Delivery and don't choose to send at user local time, your campaign will send according to the time zone specified on your **Company Settings** page.
+If you select **Scheduled Delivery** and don't choose to send at user local time, your campaign will send according to the time zone specified on your **Company Settings** page.
 
 ![Designated time][9]
 
@@ -44,7 +44,7 @@ Designated time schedules are best suited for messages scheduled in advance and 
 
 ## Option 3: Intelligent Timing
 
-[Intelligent Timing][8] allows you to deliver a campaign to each user at a different time. Braze calculates each individual's time based on when that user typically engages with your app and its notifications. You can optionally specify that Intelligent Timing campaigns send only during a certain portion of the day. For instance, if you are notifying users of a promotion that ends at midnight, you may want your messages to send by 10 pm at the latest.
+[Intelligent Timing][8] allows you to deliver a campaign to each user at a different time. Braze calculates each individual's time based on when that user typically engages with your app and its notifications. You can optionally specify that Intelligent Timing campaigns send only during a certain portion of the day. For instance, if you are notifying users of a promotion that ends at midnight, you may want your messages to send by 10pm at the latest.
 
 ![Intelligent Timing][14]
 

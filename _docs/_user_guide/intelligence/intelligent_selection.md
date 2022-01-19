@@ -16,7 +16,7 @@ Intelligent Selection is a feature that analyzes the performance of a recurring 
 
 Intelligent Selection will:
 - Repeatedly look at performance data and shift campaign traffic toward winning variants gradually.
-- Ensure that more users receive your best-performing variant without sacrificing satistical confidence.
+- Ensure that more users receive your best-performing variant without sacrificing statistical confidence.
 - Rule out underperforming variants and identify high-performing variants faster than a [traditional A/B test][1].
 - Allows you to test more frequently and with greater confidence that your users will see your best message. 
 

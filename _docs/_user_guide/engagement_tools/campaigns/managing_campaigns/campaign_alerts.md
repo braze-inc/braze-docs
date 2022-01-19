@@ -18,7 +18,7 @@ channel:
 
 ## Overview
 
-We want to alert you when something doesn’t seem quite as expected and give you peace of mind that the ship is sailing smoothly. Campaign threshold alerts provide peace of mind — be the first to know if an important campaign sends more or fewer messages than you expect.
+We want to alert you when something doesn’t seem quite as expected and give you peace of mind that the ship is sailing smoothly. Campaign threshold alerts provide peace of mind—be the first to know if an important campaign sends more or fewer messages than you expect.
 
 Campaign alerts are available for the following campaigns:
 
