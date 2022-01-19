@@ -15,7 +15,7 @@ Les campagnes envoyées en fonction des délais de livraison sont livrées les j
 
 ## Option 1 : Envoyer dès que la campagne est lancée
 
-Si vous choisissez d'envoyer un message dès son lancement, il commencera à vous envoyer dès que vous aurez fini de créer votre campagne.
+Si vous choisissez d'envoyer un message dès son lancement, votre message commencera à être envoyé dès que vous aurez fini de créer votre campagne.
 
 !\[Immediately\]\[10\]
 
@@ -27,7 +27,7 @@ Si vous prévoyez de modifier la campagne et de la renvoyer après avoir consult
 
 Planifier une campagne pour une période désignée vous permet de spécifier les jours et les heures d'envoi de votre campagne. Vous pouvez envoyer un message une fois, quotidien, hebdomadaire ou mensuel à une certaine heure de la journée, ainsi que spécifier quand votre campagne doit commencer et se terminer. Cette date de fin est inclusive, ce qui signifie que le dernier envoi sera à la date de fin.
 
-Si vous choisissez la livraison planifiée et ne choisissez pas d'envoyer à l'heure locale de l'utilisateur, votre campagne sera envoyée en fonction du fuseau horaire spécifié sur votre page **Paramètres de la société**.
+Si vous sélectionnez **Livraison planifiée** et ne choisissez pas d'envoyer à l'heure locale de l'utilisateur, votre campagne sera envoyée en fonction du fuseau horaire spécifié sur votre page **Paramètres de la société**.
 
 !\[Temps désigné\]\[9\]
 
@@ -43,7 +43,7 @@ Les horaires indiqués sont mieux adaptés aux messages programmés à l'avance 
 
 ## Option 3 : Timing intelligent
 
-[Le Timing Intelligent][8] vous permet de livrer une campagne à chaque utilisateur à un moment différent. Braze calcule l'heure de chaque personne en fonction du moment où cet utilisateur s'engage généralement avec votre application et ses notifications. Vous pouvez éventuellement spécifier que les campagnes Intelligent Timing n'envoient que pendant une certaine partie de la journée. Par exemple, si vous avertissez les utilisateurs d'une promotion qui se termine à minuit, il est possible que vos messages soient envoyés au plus tard à 22 heures.
+[Le Timing Intelligent][8] vous permet de livrer une campagne à chaque utilisateur à un moment différent. Braze calcule l'heure de chaque personne en fonction du moment où cet utilisateur s'engage généralement avec votre application et ses notifications. Vous pouvez éventuellement spécifier que les campagnes Intelligent Timing n'envoient que pendant une certaine partie de la journée. Par exemple, si vous avertissez les utilisateurs d'une promotion qui se termine à minuit, il est possible que vos messages soient envoyés au plus tard à 22h.
 
 !\[Intelligent Timing\]\[14\]
 
