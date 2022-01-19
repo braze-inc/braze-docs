@@ -20,33 +20,39 @@ Attribute triggers allow you to send action-based messages when a user's subscri
 - Boolean, integer, string, or date custom attribute values change to any value.
 - Boolean, integer, or string custom attribute values change to a specific value.
 
-To start using attribute triggers, create a campaign or Canvas step and select action-based delivery. Then, select the attribute trigger that you'd like to use.
+To start using attribute triggers, create a campaign or Canvas step and select **Action-Based Delivery** as your delivery method. Then, select the attribute trigger that you'd like to use.
 
-![attribute triggers][1]
+![Attribute triggers][1]
 
 ### Update subscription status
 
-Use the `Update Subscription Status` trigger to target users when their subscription status is updated. For example, you can target users when their email or push subscription status changes to opted in, and thank them for opting in. You can also send a webhook to your systems whenever a user unsubscribes from email so that your internal systems are up to date with the latest subscription status information.
+Use the `Update Subscription Status` trigger to target users when their subscription status is updated. 
+
+For example, you can target users when their email or push subscription status changes to opted in, and thank them for opting in. You can also send a webhook to your systems whenever a user unsubscribes from email so that your internal systems are up to date with the latest subscription status information.
 
 ### Update subscription group status
 
-Use the `Update Subscription Group Status` trigger to target users when their subscription group status for email or SMS is updated. For example, you can target users with a welcome SMS message once they opt in to your program. You can also specify the source of the update to have finer control over when a message fires. 
+Use the `Update Subscription Group Status` trigger to target users when their subscription group status for email or SMS is updated. 
+
+For example, you can target users with a welcome SMS message once they opt in to your program. You can also specify the source of the update to have finer control over when a message fires. 
 
 Update sources can be REST API, preference center (email), or inbound message (SMS). For example, you may want to only send your welcome SMS when the update comes from the REST API and not an inbound message, since Braze already automatically responds to certain inbound SMS.
 
 ### Change custom attribute value
 
-#### Any new value
+#### Any new value option
 
-Use the `Change Custom Attribute Value` trigger with the `any new value` option to target users when a boolean, integer, string or date value changes to any new value. For example, target users when their number of loyalty points changes to let them know how many points they now have. In this example, let's say that a user has 85 loyalty points and you've set up a campaign to trigger when the loyalty point attribute changes to any new value. If this user's loyalty point attribute value changes to any new value (e.g 83, 84, 86, etc.) the campaign will trigger.
+Use the `Change Custom Attribute Value` trigger with the `any new value` option to target users when a boolean, integer, string or date value changes to any new value.
 
-Another example use case is a tier update notification. You might want to alert users if their loyalty tier changes. To accomplish this use case, set up a campaign that triggers off of `Change Custom Attribute Value` and set it to trigger when the custom attribute loyalty tier changes to any new value.
+For example, target users when their number of loyalty points changes to let them know how many points they now have. In this example, let's say that a user has 85 loyalty points and you've set up a campaign to trigger when the loyalty point attribute changes to any new value. If this user's loyalty point attribute value changes to any new value (e.g 83, 84, 86, etc.), then the campaign will trigger.
+
+Consider the next example use case with a tier update notification. You might want to alert users if their loyalty tier changes. To accomplish this use case, set up a campaign that triggers off of `Change Custom Attribute Value` and set it to trigger when the custom attribute loyalty tier changes to any new value.
 
 {% alert important %}
 Attribute triggers are not currently available for array attributes.
 {% endalert %}
 
-![any value][2]
+![Any new value][2]
 
 You can also use Liquid to personalize the message body with the customer's new loyalty tier and provide the customer with more information about the change.
 
@@ -59,9 +65,11 @@ Your loyalty tier was just changed to {{custom_attribute.${loyalty_tier}}}
 
 #### Specific value
 
-Use the `Change Custom Attribute Value` trigger with the `specific value` option to target users when a boolean, integer or string custom attribute changes to a specific value. For example, target users when their loyalty tier changes to the best tier. For this example, say that the best loyalty tier is Super VIP. You can set up a campaign to trigger when a user's loyalty tier custom attribute changes to `Super VIP` so that you can congratulate the user on becoming a Super VIP.
+Use the `Change Custom Attribute Value` trigger with the `specific value` option to target users when a boolean, integer, or string custom attribute changes to a specific value. 
 
-![super vip][4]
+For example, target users when their loyalty tier changes to the best tier. For this example, say that the best loyalty tier is Super VIP. You can set up a campaign to trigger when a user's loyalty tier custom attribute changes to `Super VIP` so that you can congratulate the user on becoming a Super VIP.
+
+![Super VIP example][4]
 
 {% alert important %}
 - Attribute triggers for specific custom attribute values are not available for array and date custom attributes.
