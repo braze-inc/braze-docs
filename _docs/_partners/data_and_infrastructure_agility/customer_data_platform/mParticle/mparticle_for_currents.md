@@ -23,10 +23,10 @@ To get started, you must obtain the __mParticle Server to Server Key__ and __mPa
 
 Within the mParticle dashboard, you must create one feed per platform (iOS, Android, Web). mParticle also offers an unbound feed for events such as emails, that are not connected to an app platform.  
 
-0. From your mParticle Admin account, navigate to __Inputs__ under __Setup__.<br><br>
-1. Locate __Braze__ in the mParticle __Directory__ and add the Feed Integration.<br><br>
-2. The Braze Feed Integration supports four separate feeds: iOS, Android, Web, and Unbound. You will need to create an input for each feed. You can create additional inputs from __Setup > Inputs__, on the __Feed Configurations__ tab.![mParticle Settings][1]<br><br>For each feed, under "Act as Platform" select the appropriate option from the list. If you do not see an option to select an "act-as" feed, the data will be treated as unbound, but can still be forwarded to data warehourse outputs.<br>![mParticle Settings][2]{: style="max-width:30%;"}  ![mParticle Settings][3]{: style="max-width:28%;"}<br><br>
-3. As you create each input, mParticle will provide you with a Key and Secret. Copy these credentials, making sure to note which feed each pair of credentials is for.
+1. From your mParticle Admin account, navigate to __Inputs__ under __Setup__.<br><br>
+2. Locate __Braze__ in the mParticle __Directory__ and add the Feed Integration.<br><br>
+3. The Braze Feed Integration supports four separate feeds: iOS, Android, Web, and Unbound. You will need to create an input for each feed. You can create additional inputs from __Setup > Inputs__, on the __Feed Configurations__ tab.![mParticle Settings][1]<br><br>For each feed, under "Act as Platform" select the appropriate option from the list. If you do not see an option to select an "act-as" feed, the data will be treated as unbound, but can still be forwarded to data warehourse outputs.<br>![mParticle Settings][2]{: style="max-width:30%;"}  ![mParticle Settings][3]{: style="max-width:28%;"}<br><br>
+4. As you create each input, mParticle will provide you with a Key and Secret. Copy these credentials, making sure to note which feed each pair of credentials is for.
 
 ### Finish mParticle integration
 To get started, navigate to the Braze dashboard, and select __Currents__ under Integrations. Next, create a new Current, and select __mParticle Data Export__. Here, you must select the apps you would like event tracking for, and provide the following information for each feed you created:

@@ -34,21 +34,19 @@ Tealium AudienceStream is an Omnichannel customer segmentation and real-time act
 Please note that Tealium AudienceStreams and EventStreams are batched according to Braze specifications so that our customers do not run the risk of exceeding the [/users/track]({{site.baseurl}}/api/endpoints/user_data/post_user_track/) rate limit. Please contact Braze Support or your CSM if you have any questions. 
 {% endalert %}
 
-## Set up overview
-
-1. Adhere to the requirements and prerequisites
-2. Pick your integration type
-4. Set up mappings for your integration
-5. [Test your integration](#step-3-test-your-integration) to ensure data is flowing smoothly between Braze and Tealium
-
 ## Prerequisites
 
-| Requirement| Origin| Access| Description|
-| ---| ---| ---|
-| Tealium Account & Account Information | Tealium | [https://my.tealiumiq.com/](https://my.tealiumiq.com/) | You must have an active Tealium Account with both Server and Client-Side Access to utilize their services with Braze. |
-| Install Source and Tealium Source Libraries | Tealium | [Tealium Source Libraries](https://community.tealiumiq.com/t5/Customer-Data-Hub/Data-Sources/ta-p/17933) | The origin of any data sent into Tealium, such as mobile apps, websites, or backend servers.<br><br>You must install the libraries into your app, site, or server before being able to set up a successful Tealium Connector. |
-| Braze SDK Integration | Braze | For more details regarding Braze's SDKs, please refer to our [iOS][1], [Android][2], and [Web][10] documentation | Braze must successfully be installed onto your app or site. |
+| Requirement | Description |
+| ----------- | ----------- |
+| Tealium account | A [Tealium account](https://my.tealiumiq.com/) with both server and client-side access is required to take advantage of this partnership. |
+| Installed source and Tealium source [libraries](https://community.tealiumiq.com/t5/Customer-Data-Hub/Data-Sources/ta-p/17933) | The origin of any data sent into Tealium, such as mobile apps, websites, or backend servers.<br><br>You must install the libraries into your app, site, or server before being able to set up a successful Tealium connector. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
+
+## Integration
+
+1. Pick your integration type
+2. Set up mappings for your integration
+3. [Test your integration](#step-3-test-your-integration) to ensure data is flowing smoothly between Braze and Tealium
 
 ## Choose your integration type
 

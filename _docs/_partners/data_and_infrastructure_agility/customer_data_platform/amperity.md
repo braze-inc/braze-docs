@@ -16,19 +16,19 @@ search_tag: Partner
 {% include video.html id="06G0lxaSjgk" align="right" %}
 
 Amperity supports the Braze platform by providing a unified view of your customers across its customer data platform and Braze. This integration allows you to: 
-- __Sync Amperity Segments:__ Sync segments to map Amperity user data to Braze user accounts.
-- __Unify data:__ Unify data across various Amperity supported platforms and Braze.
-- __Send Amperity data via AWS S3 Buckets to Braze:__ Use a serverless Lambda function to upload Amperity user segments to your AWS S3 bucket that will post user attribute data to Braze.
-- __Manually Upload Amperity data to Braze:__ Manually upload user CSV segments to the Braze platform through the dashboard.
+- Sync Amperity Segments: Sync segments to map Amperity user data to Braze user accounts.
+- Unify data: Unify data across various Amperity supported platforms and Braze.
+- Send Amperity data via AWS S3 Buckets to Braze: Use a serverless Lambda function to upload Amperity user segments to your AWS S3 bucket that will post user attribute data to Braze.
+- Manually Upload Amperity data to Braze: Manually upload user CSV segments to the Braze platform through the dashboard.
 
 ## Prerequisites
 
-| Requirement | Origin | Access | Description |
-| ----------- | ------ | ------ | ----------- |
-| Amperity Account | Amperity | [Amperity](https://amperity.com/request-a-demo) | An Amperity account is required to set up the Amperity-Braze integration |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
+| Requirement | Description |
+| ----------- | ----------- |
+| Amperity account | An [Amperity account](https://amperity.com/request-a-demo) is required to take advantage of this partnership. |
+{: .reset-td-br-1 .reset-td-br-2}
 
-## Braze and Amperity integration
+## Integration
 
 ### Step 1: Create Amperity user segment
 

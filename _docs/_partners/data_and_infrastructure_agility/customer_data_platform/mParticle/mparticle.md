@@ -21,9 +21,9 @@ If you're looking for information on the Currents integration with mParticle, re
 
 ## Prerequisites
 
-| Requirement| Origin| Access| Description|
-| ---| ---| ---|
-| mParticle Account & Account Information | mParticle | [https://app.mparticle.com/login](https://app.mparticle.com/login) | You must have an active mParticle Account to utilize their services with Braze. |
+| Requirement | Description |
+| ----------- | ----------- |
+| mParticle account | A [mParticle account](https://app.mparticle.com/login) is required to take advantage of this partnership. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3 .reset-td-br-4}
 
 If you want to connect your mobile and web apps to Braze, you will need to use the [embedded kit integration][5] below.
