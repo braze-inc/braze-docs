@@ -10,7 +10,7 @@ page_order: 5
 
 # Propriétés de l'entrée persistante de la toile
 
-Lorsqu'un Canvas est déclenché par un événement personnalisé, un achat ou un appel API, les clients sont maintenant en mesure d'utiliser des métadonnées à partir de l'appel API, un événement personnalisé ou un événement pour la personnalisation à chaque étape du Canvas. __Avant cette fonctionnalité, les propriétés d'entrée ne pouvaient être utilisées qu'à la première étape de Canvas__. La possibilité d’utiliser les propriétés d’entrée à travers un parcours de Canvas permet aux clients d’envoyer plus de messages organisés et de créer une expérience utilisateur très raffinée.
+Lorsqu'un Canvas est déclenché par un événement personnalisé, un achat ou un appel API, les clients sont maintenant en mesure d'utiliser des métadonnées à partir de l'appel API, un événement personnalisé ou un événement pour la personnalisation à chaque étape du Canvas. **Avant cette fonctionnalité, les propriétés d'entrée ne pouvaient être utilisées qu'à la première étape de Canvas**. La possibilité d’utiliser les propriétés d’entrée à travers un parcours de Canvas permet aux clients d’envoyer plus de messages organisés et de créer une expérience utilisateur très raffinée.
 
 {% alert important %}
 Cette fonctionnalité est actuellement en version bêta. Veuillez contacter votre responsable de compte Braze pour plus d'informations.
