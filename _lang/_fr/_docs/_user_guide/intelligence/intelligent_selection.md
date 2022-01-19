@@ -15,7 +15,7 @@ La sélection intelligente est une fonctionnalité qui analyse les performances 
 
 La sélection intelligente va :
 - Examinez à plusieurs reprises les données de performance et déplacez progressivement le trafic de campagne vers des variantes gagnantes.
-- Assurez-vous qu'un plus grand nombre d'utilisateurs reçoivent votre variante la plus performante sans sacrifier la confiance satistique.
+- Assurez-vous qu'un plus grand nombre d'utilisateurs reçoivent votre variante la plus performante sans sacrifier la confiance statistique.
 - Règle les variantes sous-performantes et identifie les variantes très performantes plus rapidement qu'un [test A/B traditionnel][1].
 - Vous permet de tester plus fréquemment et avec une plus grande confiance que vos utilisateurs verront votre meilleur message.
 
