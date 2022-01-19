@@ -35,7 +35,7 @@ $user_transition_time : 0.25s;
 
     }
 
-    a {
+    .boxes {
       color: $text-color;
       text-decoration: none;
       border-bottom-width: 0;
@@ -55,25 +55,6 @@ $user_transition_time : 0.25s;
         .user_item {
           border-color: $braze-link-color;
         }
-      }
-    }
-
-    /*Please keep the .boxes class reference available on the docs site. This class was created as a one-off class needed for a customer page. Reach out to Rod Amies with questions, if needed. - Kellie Hawks*/
-
-    .boxes {
-      color: $text-color;
-      text-decoration: none;
-      border-bottom-width: 0;
-      border-color: inherit;
-      background-color: inherit;
-      display: flex;
-      margin-bottom: 30px;
-      //width: 100%;
-      flex: 0 1 30.3%;
-      @media (min-width:  $window-medium-px) {
-        //width: 30.3%;
-        margin-right: 3%;
-        //margin-left: 1.5%;
       }
     }
 
