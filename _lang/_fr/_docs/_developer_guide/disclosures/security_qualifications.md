@@ -30,7 +30,7 @@ Tout tiers souhaitant vérifier de manière indépendante l'état de la certific
 
 !\[SOC 2 Examination\]\[2\]{: height="25%" width="25%" style="border:0px;"}
 
-_Date de dernière révision/période : 1er juillet 2019, jusqu'au 30 juin 2020_
+_Date de dernière révision/période du 1er juillet 2020 au 30 juin 2021_
 
 Braze a terminé avec succès l'examen SOC 2 de _Sécurité_, réalisée par la firme CPA indépendante [Schellman & Entreprise, LLC][8].
 
