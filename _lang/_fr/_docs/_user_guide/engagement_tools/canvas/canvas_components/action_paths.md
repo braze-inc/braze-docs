@@ -2,7 +2,7 @@
 nav_title: Étape des chemins d'action
 article_title: Étape des chemins d'action
 alias: /fr/action_paths/
-page_order: 1
+page_order: 0.1
 page_type: Référence
 description: "Cet article de référence couvre les Chemins d'Action et comment les utiliser dans vos Canvases."
 tool: Toile
@@ -12,7 +12,7 @@ tool: Toile
 
 Les chemins d'action dans Canvas vous permettent de trier vos utilisateurs en fonction de leurs actions. En utilisant les chemins d'action, vous pouvez faire ce qui suit :
 
-* Personnaliser les chemins de l'utilisateur en fonction d'une action spécifique
+* Personnaliser les chemins de l'utilisateur en fonction d'une action spécifique, y compris les événements d'engagement utilisateur et les événements personnalisés
 * Conservez les utilisateurs pendant une durée donnée pour prioriser leur chemin suivant en fonction de leurs actions pendant cette période d'évaluation
 
 {% alert note %}
@@ -21,7 +21,7 @@ Les chemins d'action sont progressivement déployés vers toutes les instances d
 
 ## Créer des chemins d'action
 
-!\[canvas_actionpath\]\[1\]{: style="float:right;max-width:40%;margin-left:15px;"}
+!\[Action Paths\]\[1\]{: style="float:right;max-width:40%;margin-left:15px;"}
 
 Pour créer des chemins d'action, ajoutez une étape à votre Canevas. Ensuite, en utilisant le menu déroulant en haut de la nouvelle étape, sélectionnez **Chemins d'action**.
 
@@ -35,7 +35,7 @@ Lorsque le **Classement** est activé, tous les utilisateurs seront tenus jusqu'
 
 ### Définir les groupes d'action
 
-Ajoutez un déclencheur ou plusieurs déclencheurs pour définir vos groupes d'action.
+Ajoutez un déclencheur ou plusieurs déclencheurs pour définir vos groupes d'action. Ici, vous pouvez sélectionner une gamme d'événements de déclenchement tels que les [événements personnalisés][2], les événements d'engagement comme les interactions avec votre application, et plus encore.
 
 Lorsque le classement **** est désactivé, les utilisateurs qui effectuent un ou plusieurs des déclencheurs avanceront immédiatement à travers le groupe d'action concerné.
 
@@ -50,4 +50,6 @@ Si les utilisateurs entrent dans un chemin d'action plusieurs fois et ont plusie
 | **Désactivé**        | * Lorsqu'une action pertinente est effectuée, Braze dédupliquera les entrées et fera avancer immédiatement l'entrée la plus précoce à travers le groupe d'action concerné. <br /> * Lorsqu'une action pertinente n'est pas effectuée, toutes les entrées avanceront à la fin de la fenêtre d'évaluation pertinente. Aucune déduplication ne se produira. |
 | **Activé**           | Toutes les inscriptions se feront à la fin de la fenêtre d'évaluation pertinente. Aucune déduplication ne se produira.                                                                                                                                                                                                                                         |
 {: .reset-td-br-1 .reset-td-br-2}
-[1]: {% image_buster /assets/img/canvas_actionpath.png %} 
+[1]: {% image_buster /assets/img/canvas_actionpath.png %}
+
+[2]: {{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events
