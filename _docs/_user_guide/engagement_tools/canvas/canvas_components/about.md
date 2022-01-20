@@ -17,7 +17,7 @@ Check out use cases below for how you can make the most out of your Canvas.
 
 ## Customizing user journeys
 
-Use [Action Pahts][1] to split your user journey based on actions and engagement events such as making a purchase. If you want to filter through and target your audiences, [Audience Paths][2] help simplify your user targeting by sending your users down different Canvas paths based on audience criteria.
+Use [Action Paths][1] to split your user journey based on actions and engagement events such as making a purchase. If you want to filter through and target your audiences, [Audience Paths][2] help simplify your user targeting by sending your users down different Canvas paths based on audience criteria.
 
 [Decision Split Steps][3] use a simple "yes or no" logic to create two mutually exclusive paths for your user journeys that are based on an action or a user attribute. This can help identify and target your user groups.
 
