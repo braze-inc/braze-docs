@@ -95,9 +95,9 @@ $(document).ready(function() {
   var partner_div = $('#partner_list');
   var basehref = 'https://homeslice.braze.com/product/alloys/partners/';
   // category, speciality, solution
-  var filter_map = ['partner_categories','partner_specialties','partner_solutions'];
+  var filter_map = ['partner_categories','partner_solutions'];
   var partner_selects = [{},{},{}];
-  var filter_select = ['partner_category','partner_specialty','partner_solutions'];
+  var filter_select = ['partner_category','partner_solutions'];
 
 
   function generate_card(cur_partner,doc_url,title = '',appendid_title = false){
@@ -117,10 +117,9 @@ $(document).ready(function() {
         }
     }
 
-    var card_speciality =  $('<h6>').html(cur_partner['partner_specialties'].join(' '));
     var card_content =  $('<div>').addClass('hover_content').append($('<p>').html(cur_partner['partner_description']));
 
-    var card_div = $('<div>').addClass('content').append(card_img).append(card_title).append(card_speciality).append(card_content);
+    var card_div = $('<div>').addClass('content').append(card_img).append(card_title).append(card_content);
     var append_html = $('<a>').attr('id','card_' + card_id).attr('href',card_url).addClass('card').append(card_div);
     return append_html;
   }
@@ -240,7 +239,6 @@ $(document).ready(function() {
         partner_hash['data'][partner_key] = alloy_data[i];
         partner_hash['search'][partner_key] = partner_key +
           alloy_data[i]['partner_description'].toLowerCase() +
-          alloy_data[i]['partner_specialties'].join(' ').toLowerCase() +
           alloy_data[i]['partner_categories'].join(' ').toLowerCase() +
           alloy_data[i]['partner_solutions'].join(' ').toLowerCase() ;
         partner_hash['sorted'].push(partner_key);
@@ -284,10 +282,6 @@ $(document).ready(function() {
         <option value="">All Categories</option>
       </select>
 
-  </div>
-      <div class="partner_filter_div"><select id="partner_specialty" class="select">
-        <option value="">All Specialties</option>
-      </select>
   </div>
       <div class="partner_filter_div"><select id="partner_solutions" class="select">
         <option value="">All Solutions</option>
