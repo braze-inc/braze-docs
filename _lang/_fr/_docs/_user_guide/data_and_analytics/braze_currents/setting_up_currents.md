@@ -5,6 +5,13 @@ page_order: 0
 page_type: tutoriel
 description: "Cet article pratique vous guide à travers le processus d'intégration et de configuration de Braze Currents."
 tool: Courants
+platform:
+  - ios
+  - android
+  - allumer
+  - web
+  - tvos
+  - roku
 ---
 
 # Mise en place des courants
