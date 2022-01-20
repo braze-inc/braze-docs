@@ -6,6 +6,13 @@ excerpt_separator: ""
 page_type: glossary
 description: "Ce glossaire énumère les différents comportements des clients et les événements des utilisateurs que Braze peut suivre et envoyer aux entrepôts de données choisis à l'aide de Courants."
 tool: Courants
+platform:
+  - ios
+  - android
+  - allumer
+  - web
+  - tvos
+  - roku
 ---
 
 Veuillez contacter votre représentant de Braze ou ouvrir un [ticket d'assistance]({{site.baseurl}}/braze_support/) si vous avez besoin d'accéder à des droits d'événement supplémentaires. Si vous ne trouvez pas ce dont vous avez besoin ci-dessous, Consultez notre [bibliothèque d'événements d'engagement de messages]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/message_engagement_events/) ou nos exemples de données [courants](https://github.com/Appboy/currents-examples/tree/master/sample-data).
