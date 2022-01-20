@@ -227,7 +227,7 @@ glossaries:
       - Reciblage
   - 
     name: Converti depuis Canvas
-    description: Segmente vos utilisateurs en fonction de s'ils ont ou non converti sur une toile spécifique.
+    description: Segmente vos utilisateurs en fonction de s'ils ont ou non converti sur une toile spécifique. Ce filtre n'inclut pas les utilisateurs qui sont dans le groupe de contrôle.
     tags:
       - Reciblage
   - 
