@@ -134,7 +134,7 @@ class MyApplication : Application() {
 The first argument instructs the listener to handle `openSession()` and `closeSession()` calls.
 The second argument instructs the listener to handle `registerInAppMessageManager()` and `unregisterInAppMessageManager()` calls.
 
-See the [javadoc][63] for more information. Please note that any non-standard manual session integration is not fully supported.
+See the [KDoc][63] for more information. Please note that any non-standard manual session integration is not fully supported.
 
 ## Step 5: Custom endpoint setup {#step-5-optional-custom-endpoint-setup}
 

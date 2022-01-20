@@ -103,4 +103,4 @@ Braze's `slideup` in-app message object extends [`InAppMessageBase`][27]. Braze'
 [90]: https://appboy.github.io/appboy-android-sdk/kdoc/braze-android-sdk/com.braze.models.inappmessage/-in-app-message-modal/index.html
 [91]: https://appboy.github.io/appboy-android-sdk/kdoc/braze-android-sdk/com.braze.models.inappmessage/-in-app-message-slideup/index.html
 [92]: https://appboy.github.io/appboy-android-sdk/kdoc/braze-android-sdk/com.braze.models.inappmessage/-in-app-message-html-full/index.html
-[93]: https://appboy.github.io/appboy-android-sdk/javadocs/com/braze/models/inappmessage/InAppMessageFull
+[93]: https://appboy.github.io/appboy-android-sdk/kdoc/braze-android-sdk/com.braze.models.inappmessage/-in-app-message-full/index.html

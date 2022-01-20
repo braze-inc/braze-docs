@@ -57,7 +57,7 @@ Braze.getInstance(context).currentUser?.setLastKnownLocation(LATITUDE_DOUBLE_VAL
 {% endtab %}
 {% endtabs %}
 
-See [here in our Javadocs][4] for more information on the `setLastKnownLocation()` method.
+See [here in our KDoc][4] for more information on the `setLastKnownLocation()` method.
 
 [1]: https://stuff.mit.edu/afs/sipb/project/android/docs/guide/topics/location/strategies.html
 [4]: https://appboy.github.io/appboy-android-sdk/kdoc/braze-android-sdk/com.braze/-braze-user/set-last-known-location.html

@@ -48,7 +48,7 @@ Refer to the [changeUser documentation][4] for more information.
 
 **Implementation Example**
 
-Full class information can be found in the [javadocs][4].
+Full class information can be found in the [KDocs][4].
 
 ## User ID integration best practices and notes
 

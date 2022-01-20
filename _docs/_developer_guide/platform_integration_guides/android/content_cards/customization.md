@@ -642,7 +642,7 @@ Disabling swipe-to-dismiss functionality is done on a per-card basis via the [`c
 
 `Card` objects may optionally carry key-value pairs as `extras`. These can be used to send data down along with a `Card` for further handling by the application.
 
-See the [Javadoc][36] for more information.
+See the [KDoc][36] for more information.
 
 {% alert note %}
 Content Cards have a maximum size limit of 2 KB for content you enter in the Braze dashboard. This includes message text, image URLs, links, and key-value pairs. Exceeding that amount will prevent the card from sending.

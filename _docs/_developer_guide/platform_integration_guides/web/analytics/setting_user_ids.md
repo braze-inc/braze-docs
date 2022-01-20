@@ -47,4 +47,4 @@ appboy.getUser().addAlias(ALIAS_NAME, ALIAS_LABEL);
 
 [1]: {{site.baseurl}}/developer_guide/rest_api/user_data/#user-data
 [2]: {{site.baseurl}}/api/endpoints/messaging/
-[4]: https://js.appboycdn.com/web-sdk/latest/doc/module-appboy.html#.changeUser "Javadocs"
+[4]: https://js.appboycdn.com/web-sdk/latest/doc/module-appboy.html#.changeUser

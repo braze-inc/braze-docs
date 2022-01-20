@@ -32,6 +32,6 @@ Braze.getInstance(context).requestContentCardsRefresh(false)
 {% endtab %}
 {% endtabs %}
 
-For more information on this method, please see [our corresponding Javadocs][1].
+For more information on this method, please see [our corresponding KDoc][1].
 
 [1]: https://appboy.github.io/appboy-android-sdk/kdoc/braze-android-sdk/com.appboy/-appboy/request-content-cards-refresh.html

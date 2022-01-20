@@ -48,7 +48,7 @@ Braze.getInstance(context).logPurchase(
 {% endtab %}
 {% endtabs %}
 
-__If the product Identifier is empty, the purchase will not be logged to Braze.__ See the [Javadoc][6] for more information.
+__If the product Identifier is empty, the purchase will not be logged to Braze.__ See the [KDoc][6] for more information.
 
 {% alert tip %}
   If you pass in a value of `10 USD`, and a quantity of `3` then that will log to the user's profile as 3 purchases of 10 dollars for a total of 30 dollars. Quantities must be less than or equal to 100. Values of purchases can be negative.
@@ -81,7 +81,7 @@ Braze.getInstance(context).logPurchase(..., purchaseProperties)
 {% endtab %}
 {% endtabs %}
 
-See the [Javadoc][6] for more information.
+See the [KDoc][6] for more information.
 
 ### Reserved keys
 

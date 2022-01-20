@@ -133,7 +133,7 @@ class MyApplication : Application() {
 {% endtab %}
 {% endtabs %}
 
-> See the [`BrazeActivityLifecycleCallbackListener`][83] constructor javadocs for more information.
+> See the [`BrazeActivityLifecycleCallbackListener`][83] constructor KDocs for more information.
 
 [34]: https://appboy.github.io/appboy-android-sdk/kdoc/braze-android-sdk/com.braze.ui.inappmessage/-braze-in-app-message-manager/index.html
 [69]: https://appboy.github.io/appboy-android-sdk/kdoc/braze-android-sdk/com.braze.ui.inappmessage/-braze-in-app-message-manager/index.html#ensureSubscribedToInAppMessageEvents-android.content.Context-

@@ -15,7 +15,7 @@ Runtime configuration is an optional way to configure your app at runtime in pla
 
 ## Example usage
 
-The configuration uses a [builder object][2] that is then built and passed to [Braze.configure()][1]. The following example uses a subset of the runtime configuration options available, see the [javadoc][1] for a complete list of available configuration options.
+The configuration uses a [builder object][2] that is then built and passed to [Braze.configure()][1]. The following example uses a subset of the runtime configuration options available, see the [KDoc][1] for a complete list of available configuration options.
 
 {% tabs %}
 {% tab JAVA %}
@@ -51,5 +51,5 @@ Braze.configure(this, brazeConfig)
 Another example can be found in our [Hello Braze sample app][3].
 
 [1]: https://appboy.github.io/appboy-android-sdk/kdoc/braze-android-sdk/com.appboy/-appboy/configure.html
-[2]: https://appboy.github.io/appboy-android-sdk/javadocs/com/braze/configuration/BrazeConfig.Builder.html
-[3]: https://github.com/Appboy/appboy-android-sdk/blob/master/samples/hello-braze/src/main/java/com/braze/helloworld/CustomApplication.java#L32
+[2]: https://appboy.github.io/appboy-android-sdk/kdoc/braze-android-sdk/com.braze.configuration/-braze-config/-builder/index.html
+[3]: https://github.com/Appboy/appboy-android-sdk/blob/master/samples/hello-braze/src/main/java/com/braze/helloworld/CustomApplication.java

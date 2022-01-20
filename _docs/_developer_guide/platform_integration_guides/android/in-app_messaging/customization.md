@@ -34,7 +34,7 @@ extras: Map<String, String>
 {% endtab %}
 {% endtabs %}
 
-See the [Javadoc][44] for more information.
+See the [KDoc][44] for more information.
 
 ## Custom styling
 
