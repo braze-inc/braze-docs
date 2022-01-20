@@ -6,27 +6,36 @@ excerpt_separator: ""
 page_type: glossary
 description: "This glossary lists the various Message Engagement Events that Braze can track and send to chosen Data Warehouses using Currents."
 tool: Currents
-platform:
-    - ios
-    - android
-    - windows8
-    - kindle
-    - android_china
-    - web
-    - tvos
-    - roku
 
 ---
 
 Please contact your Account Manager or open a [support ticket]({{site.baseurl}}/braze_support/) if you need access to additional event entitlements. If you can't find what you need below, check out our [Customer Behavior Events Library]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/customer_behavior_events/) or our [Currents sample data examples](https://github.com/Appboy/currents-examples/tree/master/sample-data).
 
-{% details Explanation of Message Engagement Event Structure %}
-<br>
+{% details Explanation of message engagement event structure and platform values %}
+
+### Event structure
+
 This event breakdown shows what type of information is generally included in a message engagement event. With a solid understanding of its components, your developers and business intelligence strategy team can use the incoming Currents event data to make data-driven reports, charts and take advantage of other valuable data metrics.
 
 ![image]({% image_buster /assets/img/message_engagement_event.png %})
 
-Message engagement events are comprised of __user specific__ properties, __campaign/canvas tracking__ properties and __event specific__ properties.
+Message engagement events are comprised of __user-specific__ properties, __campaign/canvas tracking__ properties and __event-specific__ properties.
+
+### Platform values
+
+Certain events return a `platform` value that specifies the platform of the user's device. 
+<br>The following table details the possible returned values:
+
+| User device | Platform value |
+| --- | --- |
+| iOS | `ios` |
+| Android | `android` |
+| FireTV | `kindle` |
+| Kindle | `kindle` |
+| Web | `web` |
+| tvOS | `tvos` |
+| Roku | `roku` |
+{: .reset-td-br-1 .reset-td-br-2}
 
 {% enddetails %}
 
@@ -62,7 +71,7 @@ This event occurs when Braze processes a push message for a user, communicating 
   "canvas_variation_name": (string) name of the Canvas variation the user is in if from a Canvas,
   "canvas_step_id": (string) id of the step for this message if from a Canvas,
   "canvas_step_name": (string) name of the step for this message if from a Canvas,
-  "platform": (string) platform of the device (iOS, Android, web, etc.),
+  "platform": (string) platform of the device (one of 'ios', 'android', 'web', 'kindle', 'tvos', OR 'roku'),
   "device_id": (string) id of the device that we made a delivery attempt to,
   "send_id": (string) id of the message if specified for the campaign (See Send Identifier under API Identifier Types),
   "dispatch_id": (string) id of the message dispatch (unique id for each 'transmission' sent from the Braze platform). Users who are sent a schedule message get the same dispatch_id. Action-based or API-triggered messages get a unique dispatch_id per user.,
@@ -104,7 +113,7 @@ This event occurs when a user directly clicks on the Push notification to open t
   "canvas_step_id": (string) id of the step for this message if from a Canvas,
   "canvas_step_name": (string) name of the step for this message if from a Canvas,
   "canvas_step_message_variation_id": (string) API id of the canvas step message variation this user received,
-  "platform": (string) platform of the device (iOS, Android, web, etc.),
+  "platform": (string) platform of the device (one of 'ios', 'android', 'web', 'kindle', 'tvos', OR 'roku'),
   "os_version": (string) os version of device used for the action,
   "device_model": (string) hardware model of the device,
   "device_id": (string) id of the device that we made a delivery attempt to,
@@ -151,7 +160,7 @@ This event occurs if a push was sent while the iOS app was in the foreground. Wh
   "canvas_variation_name": (string) name of the Canvas variation the user is in if from a Canvas,
   "canvas_step_id": (string) id of the step for this message if from a Canvas,
   "canvas_step_name": (string) name of the step for this message if from a Canvas,
-  "platform": (string) platform of the device (iOS, Android, web, etc.),
+  "platform": (string) platform of the device (one of 'ios', 'android', 'web', 'kindle', 'tvos', OR 'roku'),
   "device_id": (string) id of the device that we made a delivery attempt to,
   "send_id": (string) id of the message if specified for the campaign (See Send Identifier under API Identifier Types),
   "dispatch_id": (string) id of the message dispatch (unique id for each 'transmission' sent from the Braze platform). Users who are sent a schedule message get the same dispatch_id. Action-based or API-triggered messages get a unique dispatch_id per user.,
@@ -192,7 +201,7 @@ This event occurs when an error is received from either Apple Push Notification 
   "canvas_variation_name": (string) name of the Canvas variation the user is in if from a Canvas,
   "canvas_step_id": (string) id of the step for this message if from a Canvas,
   "canvas_step_name": (string) name of the step for this message if from a Canvas,
-  "platform": (string) platform of the device (iOS, Android, web, etc.),
+  "platform": (string) platform of the device (one of 'ios', 'android', 'web', 'kindle', 'tvos', OR 'roku'),
   "device_id": (string) id of the device that we made a delivery attempt to,
   "send_id": (string) id of the message if specified for the campaign (See Send Identifier under API Identifier Types),
   "dispatch_id": (string) id of the message dispatch (unique id for each 'transmission' sent from the Braze platform). Users who are sent a schedule message get the same dispatch_id. Action-based or API-triggered messages get a unique dispatch_id per user.,
@@ -597,7 +606,7 @@ This event occurs when a user views an in-app message.
   "card_id": (string) API ID of the card this in-app message comes from,
   "send_id": (string) id of the message if specified for the campaign (See Send Identifier under API Identifier Types),
   "app_id": (string) id for the app on which the user action occurred,
-  "platform": (string) platform of the device (iOS, Android, web, etc.),
+  "platform": (string) platform of the device (one of 'ios', 'android', 'web', 'kindle', 'tvos', OR 'roku'),
   "os_version": (string) os version of device used for the action,
   "device_model": (string) hardware model of the device,
   "device_id": (string) id of the device on which the event occurred,
@@ -642,7 +651,7 @@ This event occurs when a user clicks on an in-app message.
   "card_id": (string) API ID of the card this in-app message comes from,
   "send_id": (string) id of the message if specified for the campaign (See Send Identifier under API Identifier Types),
   "app_id": (string) id for the app on which the user action occurred,
-  "platform": (string) platform of the device (iOS, Android, web, etc.),
+  "platform": (string) platform of the device (one of 'ios', 'android', 'web', 'kindle', 'tvos', OR 'roku'),
   "os_version": (string) os version of device used for the action,
   "device_model": (string) hardware model of the device,
   "device_id": (string) id of the device on which the event occurred,
@@ -752,7 +761,7 @@ This event occurs when a user views a content card.
   "canvas_step_id": (string) id of the step for this message if from a Canvas,
   "canvas_step_name": (string) name of the step for this message if from a Canvas,
   "send_id": (string) id of the message if specified for the campaign (See Send Identifier under API Identifier Types),
-  "platform": (string) platform of the device (iOS, Android, web, etc.),
+  "platform": (string) platform of the device (one of 'ios', 'android', 'web', 'kindle', 'tvos', OR 'roku'),
   "os_version": (string) os version of device used for the action,
   "device_model": (string) hardware model of the device,
   "device_id": (string) id of the device on which the event occurred,
@@ -795,7 +804,7 @@ This event occurs when a user clicks a content card.
   "canvas_step_id": (string) id of the step for this message if from a Canvas,
   "canvas_step_name": (string) name of the step for this message if from a Canvas,
   "send_id": (string) id of the message if specified for the campaign (See Send Identifier under API Identifier Types),
-  "platform": (string) platform of the device (iOS, Android, web, etc.),
+  "platform": (string) platform of the device (one of 'ios', 'android', 'web', 'kindle', 'tvos', OR 'roku'),
   "os_version": (string) os version of device used for the action,
   "device_model": (string) hardware model of the device,
   "device_id": (string) id of the device on which the event occurred,
@@ -839,7 +848,7 @@ This event occurs when a user dismisses a content card.
   "canvas_step_id": (string) id of the step for this message if from a Canvas,
   "canvas_step_name": (string) name of the step for this message if from a Canvas,
   "send_id": (string) id of the message if specified for the campaign (See Send Identifier under API Identifier Types),
-  "platform": (string) platform of the device (iOS, Android, web, etc.),
+  "platform": (string) platform of the device (one of 'ios', 'android', 'web', 'kindle', 'tvos', OR 'roku'),
   "os_version": (string) os version of device used for the action,
   "device_model": (string) hardware model of the device,
   "device_id": (string) id of the device on which the event occurred,
@@ -877,7 +886,7 @@ This event occurs when a user views the News Feed.
   "timezone": (string) IANA time zone of the user at the time of the event,
   "card_id": (string) id of the card that was viewed,
   "app_id": (string) id for the app on which the user action occurred,
-  "platform": (string) platform of the device (iOS, Android, web, etc.),
+  "platform": (string) platform of the device (one of 'ios', 'android', 'web', 'kindle', 'tvos', OR 'roku'),
   "os_version": (string) os version of device used for the action,
   "device_model": (string) hardware model of the device,
   "device_id": (string) id of the device on which the event occurred
@@ -910,7 +919,7 @@ This event occurs when a user clicks the News Feed.
   "timezone": (string) IANA time zone of the user at the time of the event,
   "card_id": (string) id of the card that was clicked,
   "app_id": (string) id for the app on which the user action occurred,
-  "platform": (string) platform of the device (iOS, Android, web, etc.),
+  "platform": (string) platform of the device (one of 'ios', 'android', 'web', 'kindle', 'tvos', OR 'roku'),
   "os_version": (string) os version of device used for the action,
   "device_model": (string) hardware model of the device,
   "device_id": (string) id of the device on which the event occurred
