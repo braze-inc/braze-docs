@@ -24,6 +24,10 @@ L'identification d'un utilisateur nécessite qu'un `external_id` soit inclus dan
 
 Vous pouvez associer plusieurs alias utilisateurs supplémentaires avec un seul `external_id`. Lorsque l'une de ces associations est créée, seuls les jetons push et l'historique des messages associés à l'alias de l'utilisateur sont conservés ; tous les attributs, événements ou achats seront "orphelins" et ne seront pas disponibles sur l'utilisateur identifié. One workaround is to export the aliased user's data before identification using the [`/users/export/ids` endpoint]({{site.baseurl}}/api/endpoints/export/user_data/post_user_identify/), then re-associate the attributes, events, and purchases with the identified user.
 
+{% alert important %}
+Les champs de requête et leurs valeurs sont sensibles à la casse. Utiliser des cas différents pour référencer un `external_id` entraînera des profils dupliqués. Par exemple, "abc123" et "ABC123" sont deux `external_ids` différents.
+{% endalert %}
+
 {% apiref postman %}https://documenter.getpostman.com/view/4689407/SVYrsdsG?version=latest#5f74e0f7-0620-4c7b-b0a2-f5f38fdbff58 {% endapiref %}
 
 ## Limite de taux
