@@ -8,9 +8,7 @@ tool: Currents
 platform:
     - ios
     - android
-    - windows8
     - kindle
-    - android_china
     - web
     - tvos
     - roku
