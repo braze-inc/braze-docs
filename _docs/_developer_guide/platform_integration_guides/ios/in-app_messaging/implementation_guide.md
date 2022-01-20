@@ -346,7 +346,7 @@ Using the subclass, after a user presses submit, pass the attribute with its cor
 {% endtabs %}
 
 {% alert tip %}
-Interesting in leveraging our custom modal in-app messages to share videos across facetime? Check out our Shareplay in-app message [implementation guide]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/in-app_messaging/implementation_guide/shareplay/).
+Interesting in leveraging our custom modal in-app messages to share videos across FaceTime? Check out our SharePlay in-app message [implementation guide]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/in-app_messaging/implementation_guide/shareplay/).
 {% endalert%}
 
 ### Custom full in-app message
@@ -361,13 +361,7 @@ Visit the [FullListViewController](https://github.com/braze-inc/braze-growth-sha
 
 To set up a custom full in-app message in the dashboard, you will need to provide a list of your tags formatted as a comma-separated string. 
 
-<!---
-![Full dashboard][8]
---->
-
 In the key-value pairs, provide an `attribute_key`; this key, along with the user's selected values, will be saved to their user profile as a custom attribute. Your custom view logic must handle user attributes sent to Braze.
-
-The `extras` dictionary in the `ABKInAppMessage` object allows you to query for a `view_type` key (if any) that signals the correct view to display. It’s important to note that in-app messages are configured on a per-message basis, so custom and out-of-the-box modal views can work harmoniously.
 
 ![Full screen dashboard key-value pairs][7]{: style="max-width:65%;"}
 
