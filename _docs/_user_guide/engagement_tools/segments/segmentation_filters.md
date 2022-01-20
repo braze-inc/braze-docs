@@ -182,7 +182,7 @@ glossaries:
     tags:
       - Retargeting
   - name: Converted From Canvas
-    description: Segments your users by whether or not they have converted on a specific Canvas.
+    description: Segments your users by whether or not they have converted on a specific Canvas. This filter doesn't include users that are in the control group.
     tags:
       - Retargeting
   - name: Entered Canvas Variation
