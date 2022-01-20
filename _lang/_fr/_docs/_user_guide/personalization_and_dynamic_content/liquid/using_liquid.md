@@ -115,7 +115,7 @@ Premièrement, utilisez la balise `assigner` pour sous-situer l'attribut personn
 {% balance assignée = {{custom_attribute.${current_rewards_balance}}} %}
 ```
 
-Ensuite, nous utilisons le filtre `plus` qui combine le solde de la carte-cadeau de chaque utilisateur avec son solde de remises, signifié par `{{balance}}`.
+Ensuite, nous utilisons le filtre `plus` qui combine le solde de la carte-cadeau de chaque utilisateur avec son solde de récompense, signifié par `{{balance}}`.
 
 ```liquid
 {% balance assignée = {{custom_attribute.${current_rewards_balance}}} %}
