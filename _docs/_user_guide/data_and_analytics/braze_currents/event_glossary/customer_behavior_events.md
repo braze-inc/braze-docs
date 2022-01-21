@@ -6,24 +6,35 @@ excerpt_separator: ""
 page_type: glossary
 description: "This glossary lists the various Customer Behavior and User Events that Braze can track and send to chosen Data Warehouses using Currents."
 tool: Currents
-platform:
-    - ios
-    - android
-    - kindle
-    - web
-    - tvos
-    - roku
 ---
 
 Please contact your Braze representative or open a [support ticket]({{site.baseurl}}/braze_support/) if you need access to additional event entitlements. If you can't find what you need below, check out our [Message Engagement Events Library]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/message_engagement_events/) or our [Currents sample data examples](https://github.com/Appboy/currents-examples/tree/master/sample-data).
 
-{% details Explanation of Customer Behavior and User Event Structure %}
-<br>
-This Customer Behavior and User Events breakdown shows what type of information is generally included in a customer behavior or user event. With a solid understanding of its components, your developers and business intelligence strategy team can use the incoming Currents event data to make data-driven reports, charts and take advantage of other valuable data metrics. 
+{% details Explanation of customer behavior and user event structure and platform values %}
+
+### Event structure 
+
+This customer behavior and user events breakdown shows what type of information is generally included in a customer behavior or user event. With a solid understanding of its components, your developers and business intelligence strategy team can use the incoming Currents event data to make data-driven reports, charts and take advantage of other valuable data metrics. 
 
 ![image]({% image_buster /assets/img/customer_engagement_event.png %})
 
-Customer Behavior and User Events events are comprised of __user specific__ properties, __behavior specific__ properties, and __device specific__ properties. 
+Customer behavior and user events are comprised of __user-specific__ properties, __behavior-specific__ properties, and __device-specific__ properties. 
+
+### Platform values
+
+Certain events return a `platform` value that specifies the platform of the user's device. 
+<br>The following table details the possible returned values:
+
+| User device | Platform value |
+| --- | --- |
+| iOS | `ios` |
+| Android | `android` |
+| FireTV | `kindle` |
+| Kindle | `kindle` |
+| Web | `web` |
+| tvOS | `tvos` |
+| Roku | `roku` |
+{: .reset-td-br-1 .reset-td-br-2}
 
 {% enddetails %}
 
@@ -51,7 +62,7 @@ This event occurs when a specific custom event is triggered. Use this to track w
   "timezone": (string) IANA time zone of the user at the time of the event,
   "name": (string) name of the custom event,
   "app_id": (string) id for the app on which the user action occurred,
-  "platform": (string) platform of the device (iOS, Android, web, etc.),
+  "platform": (string) platform of the device (one of 'ios', 'android', 'web', 'kindle', 'tvos', OR 'roku'),
   "os_version": (string) os version of device used for the action,
   "device_model": (string) hardware model of the device,
   "device_id": (string) id of the device on which the event occurred,
@@ -93,7 +104,7 @@ Purchases are special custom events and come with a JSON encoded string of custo
   "currency": (string) three letter alpha ISO 4217 currency code,
   "properties": (string) JSON encoded string of the custom properties for this event,
   "app_id": (string) id for the app on which the user action occurred,
-  "platform": (string) platform of the device (iOS, Android, web, etc.),
+  "platform": (string) platform of the device (one of 'ios', 'android', 'web', 'kindle', 'tvos', OR 'roku'),
   "os_version": (string) os version of device used for the action,
   "device_model": (string) hardware model of the device,
   "device_id": (string) id of the device on which the event occurred,
@@ -132,7 +143,7 @@ When a user starts their first session, both a `FirstSession` and a `SessionStar
   "timezone": (string) IANA time zone of the user at the time of the event,
   "session_id": (string) id of the session,
   "app_id": (string) id for the app on which the user action occurred,
-  "platform": (string) platform of the device (iOS, Android, web, etc.),
+  "platform": (string) platform of the device (one of 'ios', 'android', 'web', 'kindle', 'tvos', OR 'roku'),
   "os_version": (string) os version of the device used for the action,
   "device_model": (string) hardware model of the device,
   "device_id": (string) id of the device on which the session occurred,
@@ -167,7 +178,7 @@ When a user starts their first session, both a `FirstSession` and a `SessionStar
   "time": (int) 10-digit UTC time of the event in seconds since the epoch,
   "session_id": (string) id of the session,
   "app_id": (string) id for the app on which the user action occurred,
-  "platform": (string) platform of the device (iOS, Android, web, etc.),
+  "platform": (string) platform of the device (one of 'ios', 'android', 'web', 'kindle', 'tvos', OR 'roku'),
   "os_version": (string) os version of the device used for the action,
   "device_model": (string) hardware model of the device,
   "device_id": (string) id of the device on which the session occurred
@@ -200,7 +211,7 @@ When a user starts their first session, both a `FirstSession` and a `SessionStar
   "session_id": (string) id of the session,
   "duration": (float) seconds session lasted,
   "app_id": (string) id for the app on which the user action occurred,
-  "platform": (string) platform of the device (iOS, Android, web, etc.),
+  "platform": (string) platform of the device (one of 'ios', 'android', 'web', 'kindle', 'tvos', OR 'roku'),
   "os_version": (string) os version of the device used for the action,
   "device_model": (string) hardware model of the device,
   "device_id": (string) id of the device on which the session occurred
@@ -231,7 +242,7 @@ This event is triggered when a user visits a specified location. Use this to tra
   "ll_accuracy": (float) latitude/longitude accuracy of recorded location,
   "alt_accuracy": (float) altitude accuracy of recorded location,
   "app_id": (string) id for the app on which the user action occurred,
-  "platform": (string) platform of the device (iOS, Android, web, etc.),
+  "platform": (string) platform of the device (one of 'ios', 'android', 'web', 'kindle', 'tvos', OR 'roku'),
   "os_version": (string) os version of device used for the action,
   "device_model": (string) hardware model of the device,
   "device_id": (string) id of the device on which the event occurred,
@@ -267,7 +278,7 @@ We do track other News Feed events; these are located in [Message Engagement Eve
   "external_user_id": (string) External ID of the user,
   "time": (int) 10-digit UTC time of the event in seconds since the epoch,
   "app_id": (string) id for the app on which the user action occurred,
-  "platform": (string) platform of the device (iOS, Android, web, etc.),
+  "platform": (string) platform of the device (one of 'ios', 'android', 'web', 'kindle', 'tvos', OR 'roku'),
   "os_version": (string) os version of the device used for the action,
   "device_model": (string) hardware model of the device,
   "device_id": (string) id of the device on which the event occurred
