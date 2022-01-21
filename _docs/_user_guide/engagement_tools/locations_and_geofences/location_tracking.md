@@ -27,7 +27,7 @@ Note that the accuracy of your location tracking data may be affected by whether
 
 Using location tracking data, you can set up location-based campaigns and strategies. For example, you may want to run a promotional campaign for users that live in a particular region, or exclude users in a region that has stricter regulations.
 
-See [this article][1] for more information on location targeting.
+See [Location tracking][1] for more information on location targeting.
 
 ## Hard setting the default location attribute
 
@@ -55,6 +55,10 @@ You can also leverage location tracking with some of our partners, for example:
 - [Foursquare][7]
 - [Gimbal][10]
 
+## Frequently asked questions
+
+Visit our [Locations FAQs][11] page for answers to frequently asked questions about locations.
+
 [1]: {{site.baseurl}}/user_guide/engagement_tools/segments/location_targeting/
 [2]: {{site.baseurl}}/developer_guide/platform_integration_guides/ios/analytics/location_tracking/
 [3]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/analytics/location_tracking/
@@ -65,3 +69,4 @@ You can also leverage location tracking with some of our partners, for example:
 [8]: {{site.baseurl}}/api/endpoints/user_data/post_user_track/
 [9]: {{site.baseurl}}/api/objects_filters/user_attributes_object/
 [10]: {{site.baseurl}}/partners/data_augmentation/contextual_location/gimbal/
+[11]: {{site.baseurl}}/user_guide/engagement_tools/locations_and_geofences/faqs/#locations

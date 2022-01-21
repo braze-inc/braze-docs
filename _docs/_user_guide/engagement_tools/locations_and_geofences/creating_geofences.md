@@ -20,13 +20,15 @@ Geofences are managed in the **Locations** page in the **Engagement** section. G
 
 ## Creating geofence sets manually
 
+From the **Locations** page, click **+ Create Geofence Set**.
+
 ![Geofence Location Main Screen][1]
 
-Once you have created a geofence set, you can manually add geofences by drawing them on the map. We recommend creating geofences with a radius of at least 100 meters for optimal functionality.
+Once you have created a geofence set, you can manually add geofences by drawing them on the map. We recommend creating geofences with a radius of at least 100 meters for optimal functionality. For more information on configurable options, refer to [Geofence configuration]({{site.baseurl}}/user_guide/engagement_tools/locations_and_geofences/geofence_configuration/).
 
-## Creating geofence sets via bulk upload
+## Creating geofence sets via bulk upload {#creating-geofence-sets-via-bulk-upload}
 
-Geofences may be uploaded in bulk as a GeoJSON object of type `FeatureCollection`. Each individual geofence is a `Point` geometry type in the feature collection. The properties for each feature require a `"radius"` key, and an optional `"name"` key for each geofence.
+Geofences may be uploaded in bulk as a GeoJSON object of type `FeatureCollection`. Each individual geofence is a `Point` geometry type in the feature collection. The properties for each feature require a `"radius"` key, and an optional `"name"` key for each geofence. To upload your GeoJSON, click **+ Create Geofence Set** followed by **Upload GeoJSON**.
 
 The sample below represents the correct GeoJSON for specifying two geofences: one for Braze's headquarters in NYC, and one for the Statue of Liberty south of Manhattan. We recommend uploading geofences with a radius of at least 100 meters for optimal functionality.
 
@@ -58,9 +60,11 @@ The sample below represents the correct GeoJSON for specifying two geofences: on
     }, ...
   ]
 ```
->  The "coordinates" value in the GeoJSON needs to be formatted [Longitude, Latitude]
 
->  The maximum geofence radius that may be uploaded is 100000 meters (100km/62mi).
+When creating your geofences, keep the following points in mind:
+
+- The `coordinates` value in the GeoJSON is formatted as [Longitude, Latitude].
+- The maximum geofence radius that may be uploaded is 10,0000 meters (about 100 kilometers or 62 miles).
 
 ## Using geofence events
 
@@ -68,20 +72,24 @@ Once geofences have been configured, you can use them to enhance and enrich how 
 
 ### Triggering
 
-To use geofence data as part of campaign and Canvas triggers, choose "action-based delivery" for its delivery method. next, add a trigger action of `trigger a geofence`. Finally, choose the geofence set and geofence transition event types for your message. You can also advance users through a Canvas using geofence events.
+To use geofence data as part of campaign and Canvas triggers, choose **Action-Based Delivery** for the delivery method. Next, add a trigger action of `Trigger a Geofence`. Finally, choose the geofence set and geofence transition event types for your message. You can also advance users through a Canvas using geofence events.
 
 ![action_based_geofence_trigger][2]
 
 ### Personalization
 
-To use geofence data to personalize a message, you may use the following Liquid personalization syntax:
+To use geofence data to personalize a message, you can use the following Liquid personalization syntax:
 
 {% raw %}
 * `{{event_properties.${geofence_name}}}`
-
 * `{{event_properties.${geofence_set_name}}}`
 {% endraw %}
+
+## Frequently asked questions
+
+Visit our [Geofence FAQs][3] page for answers to frequently asked questions about geofences.
 
 
 [1]: {% image_buster /assets/img_archive/locations_main_screen.png %}
 [2]: {% image_buster /assets/img_archive/action_based_geofence_trigger.png %}
+[3]: {{site.baseurl}}/user_guide/engagement_tools/locations_and_geofences/faqs/#geofences
