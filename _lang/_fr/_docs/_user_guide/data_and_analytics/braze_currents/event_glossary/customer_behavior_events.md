@@ -6,24 +6,34 @@ excerpt_separator: ""
 page_type: glossary
 description: "Ce glossaire énumère les différents comportements des clients et les événements des utilisateurs que Braze peut suivre et envoyer aux entrepôts de données choisis à l'aide de Courants."
 tool: Courants
-platform:
-  - ios
-  - android
-  - allumer
-  - web
-  - tvos
-  - roku
 ---
 
 Veuillez contacter votre représentant de Braze ou ouvrir un [ticket d'assistance]({{site.baseurl}}/braze_support/) si vous avez besoin d'accéder à des droits d'événement supplémentaires. Si vous ne trouvez pas ce dont vous avez besoin ci-dessous, Consultez notre [bibliothèque d'événements d'engagement de messages]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/message_engagement_events/) ou nos exemples de données [courants](https://github.com/Appboy/currents-examples/tree/master/sample-data).
 
-{% details Explanation of Customer Behavior and User Event Structure %}
-<br>
-Ce comportement du client et les événements de l'utilisateur indiquent quel type d'information est généralement inclus dans le comportement du client ou dans un événement de l'utilisateur. Grâce à une bonne compréhension de ses composants, vos développeurs et votre équipe de stratégie de renseignements commerciaux peuvent utiliser les données des événements entrants pour faire des rapports basés sur des données. et tirer parti d'autres indicateurs de données précieux.
+{% details Explanation of customer behavior and user event structure and platform values %}
+
+### Structure de l'événement
+
+Ce comportement du client et la ventilation des événements de l'utilisateur montrent quel type d'informations est généralement inclus dans le comportement du client ou l'événement de l'utilisateur. Grâce à une bonne compréhension de ses composants, vos développeurs et votre équipe de stratégie de renseignements commerciaux peuvent utiliser les données des événements entrants pour faire des rapports basés sur des données. et tirer parti d'autres indicateurs de données précieux.
 
 ![image]({% image_buster /assets/img/customer_engagement_event.png %})
 
-Les événements de comportement client et d'événements utilisateur sont composés de __propriétés__ spécifiques à l'utilisateur, __propriétés__ spécifiques au comportement et __propriétés spécifiques au périphérique__.
+Le comportement du client et les événements de l'utilisateur sont composés de __propriétés__ spécifiques à l'utilisateur, de __propriétés__ spécifiques au comportement et de __propriétés propres à l'appareil__.
+
+### Valeurs de la plateforme
+
+Certains événements renvoient une valeur `plate-forme` qui spécifie la plate-forme du périphérique de l'utilisateur. <br>Le tableau suivant détaille les valeurs retournées possibles :
+
+| Périphérique utilisateur | Valeur de la plateforme |
+| ------------------------ | ----------------------- |
+| iOS                      | `ios`                   |
+| Android                  | `android`               |
+| FireTV                   | `allumer`               |
+| Refroidir                | `allumer`               |
+| Web                      | `web`                   |
+| tvOS                     | `tvos`                  |
+| Roku                     | `roku`                  |
+{: .reset-td-br-1 .reset-td-br-2}
 
 {% enddetails %}
 
@@ -51,8 +61,8 @@ Cet événement se produit lorsqu'un événement personnalisé spécifique est d
   "fuseau horaire": (chaîne) IANA fuseau horaire de l'utilisateur au moment de l'événement,
   "name": (chaîne) nom de l'événement personnalisé,
   "app_id": (string) id pour l'application sur laquelle l'action de l'utilisateur s'est produite,
-  "plate-forme": (chaîne) plate-forme de l'appareil (iOS, Android, web, etc. ,
-  "os_version": (string) os version du périphérique utilisé pour l'action,
+  "platform": (chaîne) plate-forme de l'appareil (l'un des 'ios', 'android', 'web', 'kindle', 'tvos', OU 'roku'),
+  "os_version": (string) os version de l'appareil utilisé pour l'action,
   "device_model": (string) modèle matériel de l'appareil,
   "device_id": (string) id de l'appareil sur lequel l'événement s'est produit,
   "properties": (string) chaîne de caractères encodée en JSON des propriétés pour cet événement,
@@ -93,8 +103,8 @@ Les achats sont des événements spéciaux personnalisés et sont fournis avec u
   "devise" : (chaîne) alpha alpha de trois lettres ISO 4217 code de devise,
   "properties": (chaîne) chaîne encodée en JSON des propriétés personnalisées pour cet événement,
   "app_id": (string) id pour l'application sur laquelle l'action de l'utilisateur s'est produite,
-  "plate-forme": (chaîne) plate-forme de l'appareil (iOS, Android, web, etc. ,
-  "os_version": (string) os version de l'appareil utilisé pour l'action,
+  "platform": (chaîne) plate-forme de l'appareil (un des "ios", "android", "web", "kindle", 'tvos', OU 'roku'),
+  "os_version": (string) os version du périphérique utilisé pour l'action,
   "device_model": (string) modèle matériel de l'appareil,
   "device_id": (string) id de l'appareil sur lequel l'événement s'est produit,
   "ad_id": (string) identifiant publicitaire,
@@ -132,10 +142,10 @@ Quand un utilisateur démarre sa première session, un événement `FirstSession
   "fuseau horaire": (chaîne) IANA fuseau horaire de l'utilisateur au moment de l'événement,
   "session_id" : (string) id de la session,
   "app_id": (string) id pour l'application sur laquelle l'action de l'utilisateur s'est produite,
-  "plate-forme": (chaîne) plate-forme de l'appareil (iOS, Android, web, etc. ,
-  "os_version": (string) os version du périphérique utilisé pour l'action,
+  "plate-forme": (chaîne) plate-forme de l'appareil (un des 'ios', 'android', 'web', 'kindle', 'tvos', OU 'roku'),
+  "os_version": (string) os version de l'appareil utilisé pour l'action,
   "device_model": (string) modèle matériel de l'appareil,
-  "device_id": (string) id de l'appareil sur lequel la session s'est produite,
+  "device_id": (string) id du périphérique sur lequel la session s'est produite,
   "genre" : (chaîne) sexe de l'utilisateur,
   "pays": (chaîne) pays de l'utilisateur,
   "langue": (chaîne) langue de l'utilisateur,
@@ -167,9 +177,9 @@ Quand un utilisateur démarre sa première session, un événement `FirstSession
   "temps": (int) 10 chiffres heure UTC de l'événement en secondes depuis l'époque,
   "session_id": (string) id de la session,
   "app_id": (string) id de l'application sur laquelle l'action de l'utilisateur s'est produite,
-  "platform": (chaîne) plate-forme de l'appareil (iOS, Android, web, etc. ,
+  "platform": (chaîne) plate-forme de l'appareil (l'un des 'ios', 'android', 'web', 'kindle', 'tvos', OU 'roku'),
   "os_version": (string) os version de l'appareil utilisé pour l'action,
-  "device_model": (string) modèle matériel de l'appareil,
+  "device_model": (chaîne) modèle matériel de l'appareil,
   "device_id": (string) id de l'appareil sur lequel la session s'est produite
 }
 ```
@@ -200,8 +210,8 @@ Quand un utilisateur démarre sa première session, un événement `FirstSession
   "session_id": (string) id de la session,
   "duration": (float) secondes session durée,
   "app_id": (string) id pour l'application sur laquelle l'action de l'utilisateur s'est produite,
-  "plate-forme": (chaîne) plate-forme de l'appareil (iOS, Android, web, etc. ,
-  "os_version": (string) os version du périphérique utilisé pour l'action,
+  "platform": (chaîne) plate-forme de l'appareil (l'un des 'ios', 'android', 'web', 'kindle', 'tvos', OU 'roku'),
+  "os_version": (string) os version de l'appareil utilisé pour l'action,
   "device_model": (string) modèle matériel de l'appareil,
   "device_id": (string) id de l'appareil sur lequel la session s'est produite
 }
@@ -225,13 +235,13 @@ Cet événement est déclenché lorsqu'un utilisateur visite un emplacement spé
   "user_id": (string) Braze identifiant utilisateur de l'utilisateur,
   "external_user_id": (string) ID externe de l'utilisateur,
   "temps": (int) 10 chiffres heure UTC de l'événement en secondes depuis l'époque,
-  "longitude": (flottant) longitude de l'emplacement enregistré,
-  "latitude": (flottant) latitude de l'emplacement enregistré,
-  "altitude": (float) altitude de l'emplacement enregistré,
-  "ll_accuracy": précision de latitude/longitude (float) de l'emplacement enregistré,
-  "alt_accuracy": (float) altitude précision de l'emplacement enregistré,
+  "longitude": (float) longitude de l'emplacement enregistré,
+  "latitude" : (flottant) latitude de l'emplacement enregistré,
+  "altitude" : (flottant) altitude de l'emplacement enregistré,
+  "ll_accuracy": (float) latitude/longitude précision de l'emplacement enregistré,
+  "alt_accuracy": (float) précision d'altitude de l'emplacement enregistré,
   "app_id": (string) id de l'application sur laquelle l'action de l'utilisateur s'est produite,
-  "plate-forme": (chaîne) plate-forme de l'appareil (iOS, Android, web, etc. ,
+  "plate-forme": (chaîne) plate-forme de l'appareil (l'un des 'ios', 'android', 'web', 'kindle', 'tvos', OR 'roku'),
   "os_version": (string) os version de l'appareil utilisé pour l'action,
   "device_model": (string) modèle matériel de l'appareil,
   "device_id": (string) id de l'appareil sur lequel l'événement s'est produit,
@@ -267,9 +277,9 @@ Nous suivons les autres événements du flux d'actualités ; ceux-ci se trouvent
   "external_user_id": (string) ID externe de l'utilisateur,
   "temps": (int) 10 chiffres heure UTC de l'événement en secondes depuis l'époque,
   "app_id": (string) id pour l'application sur laquelle l'action de l'utilisateur s'est produite,
-  "plate-forme" : (chaîne) plate-forme de l'appareil (iOS, Android, web, etc. ,
-  "os_version": (string) os version du périphérique utilisé pour l'action,
-  "device_model": (string) modèle matériel de l'appareil,
+  "plate-forme": (chaîne) plate-forme de l'appareil (un des "ios", 'android', 'web', 'kindle', 'tvos', OU 'roku'),
+  "os_version": (string) os version de l'appareil utilisé pour l'action,
+  "device_model": (chaîne) modèle matériel de l'appareil,
   "device_id": (string) id de l'appareil sur lequel l'événement s'est produit
 }
 ```
