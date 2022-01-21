@@ -6,24 +6,34 @@ excerpt_separator: ""
 page_type: glossary
 description: "Ce glossaire répertorie les divers événements d'engagement de messages que Braze peut suivre et envoyer aux entrepôts de données choisis en utilisant les Courants."
 tool: Courants
-platform:
-  - ios
-  - android
-  - allumer
-  - web
-  - tvos
-  - roku
 ---
 
 Veuillez contacter votre responsable de compte ou ouvrir un [ticket d'assistance]({{site.baseurl}}/braze_support/) si vous avez besoin d'accéder à d'autres droits d'événement. Si vous ne trouvez pas ce dont vous avez besoin ci-dessous, Consultez notre [Librairie d'événements de comportement client]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/customer_behavior_events/) ou nos exemples de données [courants](https://github.com/Appboy/currents-examples/tree/master/sample-data).
 
-{% details Explanation of Message Engagement Event Structure %}
-<br>
+{% details Explanation of message engagement event structure and platform values %}
+
+### Structure de l'événement
+
 Cette répartition de l'événement montre quel type d'information est généralement inclus dans un événement d'engagement de messages. Grâce à une bonne compréhension de ses composants, vos développeurs et votre équipe de stratégie de renseignements commerciaux peuvent utiliser les données des événements entrants pour faire des rapports basés sur des données. et tirer parti d'autres indicateurs de données précieux.
 
 ![image]({% image_buster /assets/img/message_engagement_event.png %})
 
-Les événements d'engagement de message sont composés de __propriétés__ spécifiques à l'utilisateur, __propriétés de suivi de campagne/canvas__ et __propriétés spécifiques à l'événement__.
+Les événements d'engagement de message sont composés de __propriétés__ spécifiques à l'utilisateur, __propriétés de suivi campagne/canvas__ et __propriétés spécifiques à l'événement__.
+
+### Valeurs de la plateforme
+
+Certains événements renvoient une valeur `plate-forme` qui spécifie la plate-forme du périphérique de l'utilisateur. <br>Le tableau suivant détaille les valeurs retournées possibles :
+
+| Périphérique utilisateur | Valeur de la plateforme |
+| ------------------------ | ----------------------- |
+| iOS                      | `ios`                   |
+| Android                  | `android`               |
+| FireTV                   | `allumer`               |
+| Refroidir                | `allumer`               |
+| Web                      | `web`                   |
+| tvOS                     | `tvos`                  |
+| Roku                     | `roku`                  |
+{: .reset-td-br-1 .reset-td-br-2}
 
 {% enddetails %}
 
@@ -51,16 +61,16 @@ Cet événement se produit lorsque Braze traite un message push pour un utilisat
   "fuseau horaire": (chaîne) IANA fuseau horaire de l'utilisateur au moment de l'événement,
   "app_id": (string) id pour l'application sur laquelle l'action de l'utilisateur s'est produite,
   "campaign_id": (string) id de la campagne si à partir d'une campagne,
-  "campaign_name": (chaîne) nom de la campagne,
-  "message_variation_id": (string) id de la variation du message si une campagne,
+  "campaign_name": (string) nom de la campagne,
+  "message_variation_id": (string) id de la variation de message si une campagne,
   "canvas_id": (chaîne) id de la toile si elle provient d'un Canvas,
   "canvas_name": (chaîne) nom de la toile,
   "canvas_variation_id": (string) id de la variation de Canvas dans laquelle l'utilisateur est à partir d'un Canvas,
   "canvas_variation_name": (chaîne) nom de la variation de Canvas dans laquelle l'utilisateur est si à partir d'un Canvas,
   "canvas_step_id": (string) id de l'étape pour ce message si à partir d'un Canvas,
   "canvas_step_name": (chaîne) nom de l'étape pour ce message si à partir d'un Canvas,
-  "plate-forme": (chaîne) plate-forme de l'appareil (iOS, Android, web, etc. ,
-  "device_id": (string) id de l'appareil auquel nous avons fait une tentative de livraison,
+  "plateforme": (chaîne) plate-forme de l'appareil (l'un des 'ios', 'android', 'web', 'kindle', 'tvos', OU 'roku'),
+  "device_id": (string) id de l'appareil auquel nous avons tenté de livrer,
   "send_id": (string) id du message si spécifié pour la campagne (Voir Send Identifier under API Identifier Types),
   "dispatch_id": (string) id de l'envoi de message (id unique pour chaque 'transmission' envoyée depuis la plate-forme Braze). Les utilisateurs qui reçoivent un message de planification reçoivent le même dispatch_id. Les messages basés sur l'action ou sur l'API obtiennent un dispatch_id unique par utilisateur.
   "ad_id": (chaîne) identifiant publicitaire,
@@ -92,8 +102,8 @@ Cet événement se produit lorsqu'un utilisateur clique directement sur la notif
   "fuseau horaire": (chaîne) IANA fuseau horaire de l'utilisateur au moment de l'événement,
   "app_id": (string) id pour l'application sur laquelle l'action de l'utilisateur s'est produite,
   "campaign_id": (string) id de la campagne si à partir d'une campagne,
-  "campaign_name": (chaîne) nom de la campagne,
-  "message_variation_id": (string) id de la variation du message si une campagne,
+  "campaign_name": (string) nom de la campagne,
+  "message_variation_id": (string) id de la variation de message si une campagne,
   "canvas_id": (chaîne) id de la toile si elle provient d'un Canvas,
   "canvas_name": (chaîne) nom de la toile,
   "canvas_variation_id": (string) id de la variation de Canvas dans laquelle l'utilisateur est à partir d'un Canvas,
@@ -101,8 +111,8 @@ Cet événement se produit lorsqu'un utilisateur clique directement sur la notif
   "canvas_step_id": (string) id de l'étape pour ce message si à partir d'un Canvas,
   "canvas_step_name": (chaîne) nom de l'étape pour ce message si à partir d'un Canvas,
   "canvas_step_message_variation_id": (string) ID API de la variation du message de l'étape canvas que cet utilisateur a reçu,
-  "plate-forme": (chaîne) plate-forme de l'appareil (iOS, Android, web, etc. ,
-  "os_version": (string) os version de l'appareil utilisé pour l'action,
+  "plateforme": (chaîne) plate-forme de l'appareil (l'un des 'ios', 'android', 'web', 'kindle', 'tvos', OU 'roku'),
+  "os_version": (string) os version du périphérique utilisé pour l'action,
   "device_model": (string) modèle matériel de l'appareil,
   "device_id": (string) id de l'appareil auquel nous avons fait une tentative de livraison,
   "button_action_type": (string) Type d'action de la notification push,
@@ -140,16 +150,16 @@ Cet événement se produit si un push a été envoyé alors que l'application iO
   "fuseau horaire": (chaîne) IANA fuseau horaire de l'utilisateur au moment de l'événement,
   "app_id": (string) id pour l'application sur laquelle l'action de l'utilisateur s'est produite,
   "campaign_id": (string) id de la campagne si à partir d'une campagne,
-  "campaign_name": (chaîne) nom de la campagne,
-  "message_variation_id": (string) id de la variation du message si une campagne,
+  "campaign_name": (string) nom de la campagne,
+  "message_variation_id": (string) id de la variation de message si une campagne,
   "canvas_id": (chaîne) id de la toile si elle provient d'un Canvas,
   "canvas_name": (chaîne) nom de la toile,
   "canvas_variation_id": (string) id de la variation de Canvas dans laquelle l'utilisateur est à partir d'un Canvas,
   "canvas_variation_name": (chaîne) nom de la variation de Canvas dans laquelle l'utilisateur est si à partir d'un Canvas,
   "canvas_step_id": (string) id de l'étape pour ce message si à partir d'un Canvas,
   "canvas_step_name": (chaîne) nom de l'étape pour ce message si à partir d'un Canvas,
-  "plate-forme": (chaîne) plate-forme de l'appareil (iOS, Android, web, etc. ,
-  "device_id": (string) id de l'appareil auquel nous avons fait une tentative de livraison,
+  "plateforme": (chaîne) plate-forme de l'appareil (l'un des 'ios', 'android', 'web', 'kindle', 'tvos', OU 'roku'),
+  "device_id": (string) id de l'appareil auquel nous avons tenté de livrer,
   "send_id": (string) id du message si spécifié pour la campagne (Voir Send Identifier under API Identifier Types),
   "dispatch_id": (string) id de l'envoi de message (id unique pour chaque 'transmission' envoyée depuis la plate-forme Braze). Les utilisateurs qui reçoivent un message de planification reçoivent le même dispatch_id. Les messages basés sur l'action ou sur l'API obtiennent un dispatch_id unique par utilisateur.
   "ad_id": (chaîne) identifiant publicitaire,
@@ -181,16 +191,16 @@ Cet événement se produit quand une erreur est reçue soit par le service de no
   "fuseau horaire": (chaîne) IANA fuseau horaire de l'utilisateur au moment de l'événement,
   "app_id": (string) id pour l'application sur laquelle le bounce a eu lieu,
   "campaign_id": (string) id de la campagne si à partir d'une campagne,
-  "campaign_name": (chaîne) nom de la campagne,
-  "message_variation_id": (string) id de la variation du message si une campagne,
+  "campaign_name": (string) nom de la campagne,
+  "message_variation_id": (string) id de la variation de message si une campagne,
   "canvas_id": (chaîne) id de la toile si elle provient d'un Canvas,
   "canvas_name": (chaîne) nom de la toile,
   "canvas_variation_id": (string) id de la variation de Canvas dans laquelle l'utilisateur est à partir d'un Canvas,
   "canvas_variation_name": (chaîne) nom de la variation de Canvas dans laquelle l'utilisateur est si à partir d'un Canvas,
   "canvas_step_id": (string) id de l'étape pour ce message si à partir d'un Canvas,
   "canvas_step_name": (chaîne) nom de l'étape pour ce message si à partir d'un Canvas,
-  "plate-forme": (chaîne) plate-forme de l'appareil (iOS, Android, web, etc. ,
-  "device_id": (string) id de l'appareil auquel nous avons fait une tentative de livraison,
+  "plateforme": (chaîne) plate-forme de l'appareil (l'un des 'ios', 'android', 'web', 'kindle', 'tvos', OU 'roku'),
+  "device_id": (string) id de l'appareil auquel nous avons tenté de livrer,
   "send_id": (string) id du message si spécifié pour la campagne (Voir Send Identifier under API Identifier Types),
   "dispatch_id": (string) id de l'envoi de message (id unique pour chaque 'transmission' envoyée depuis la plate-forme Braze). Les utilisateurs qui reçoivent un message de planification reçoivent le même dispatch_id. Les messages basés sur l'action ou sur l'API obtiennent un dispatch_id unique par utilisateur.
   "ad_id": (chaîne) identifiant publicitaire,
@@ -594,8 +604,8 @@ Cet événement se produit lorsqu'un utilisateur voit un message dans l'applicat
   "card_id": (string) ID API de la carte de ce message dans l'application,
   "send_id": (string) id du message si spécifié pour la campagne (Voir Send Identifier under API Identifier Types),
   "app_id": (string) id pour l'application sur laquelle l'action de l'utilisateur s'est produite,
-  "plate-forme": (chaîne) plate-forme de l'appareil (iOS, Android, web, etc. ,
-  "os_version": (string) os version du périphérique utilisé pour l'action,
+  "plateforme": (chaîne) plate-forme de l'appareil (l'un des 'ios', 'android', 'web', 'kindle', 'tvos', OU 'roku'),
+  "os_version": (string) os version de l'appareil utilisé pour l'action,
   "device_model": (string) modèle matériel de l'appareil,
   "device_id": (string) id de l'appareil sur lequel l'événement s'est produit,
   "ad_id": (string) identifiant publicitaire,
@@ -626,12 +636,12 @@ Cet événement se produit lorsqu'un utilisateur clique sur un message dans l'ap
   "external_user_id": (string) ID externe de l'utilisateur,
   "temps": (int) 10 chiffres heure UTC de l'événement en secondes depuis l'époque,
   "fuseau horaire": (chaîne) IANA fuseau horaire de l'utilisateur au moment de l'événement,
-  "button_id" : (chaîne) index du bouton cliqué, si c'est un bouton qui a été cliqué, ou un ID de suivi du clic, si l'événement provient d'un appboyBridge. d'invocation ogClick,
-  "campaign_id": (string) id de la campagne si à partir d'une campagne,
-  "campaign_name": (string) nom de la campagne,
-  "message_variation_id": (string) id de la variation de message si une campagne,
-  "canvas_id": (chaîne) id de la toile si une toile
-  "canvas_name": (string) nom des Canvas,
+  "button_id" : (chaîne) index du bouton cliqué, si c'est un bouton qui a été cliqué, ou un ID de suivi du clic, si l'événement provient d'un appboyBridge. ogClick invocation,
+  "campaign_id": (string) id de la campagne si une campagne,
+  "campaign_name": (chaîne) nom de la campagne,
+  "message_variation_id": (string) id de la variation du message si une campagne,
+  "canvas_id": (chaîne) id de la toile si elle provient d'un Canvas,
+  "canvas_name": (chaîne) nom de la toile,
   "canvas_variation_id": (string) id de la variation de Canvas dans laquelle l'utilisateur est à partir d'un Canvas,
   "canvas_variation_name": (chaîne) nom de la variation de Canvas dans laquelle l'utilisateur est si à partir d'un Canvas,
   "canvas_step_id": (string) id de l'étape pour ce message si à partir d'un Canvas,
@@ -639,7 +649,7 @@ Cet événement se produit lorsqu'un utilisateur clique sur un message dans l'ap
   "card_id": (string) ID API de la carte de ce message dans l'application,
   "send_id": (string) id du message si spécifié pour la campagne (Voir Send Identifier under API Identifier Types),
   "app_id": (string) id pour l'application sur laquelle l'action de l'utilisateur s'est produite,
-  "plate-forme": (chaîne) plate-forme de l'appareil (iOS, Android, web, etc. ,
+  "plateforme": (chaîne) plate-forme de l'appareil (l'un des 'ios', 'android', 'web', 'kindle', 'tvos', OU 'roku'),
   "os_version": (string) os version du périphérique utilisé pour l'action,
   "device_model": (string) modèle matériel de l'appareil,
   "device_id": (string) id de l'appareil sur lequel l'événement s'est produit,
@@ -749,10 +759,10 @@ Cet événement se produit lorsqu'un utilisateur voit une fiche de contenu.
   "canvas_step_id": (string) id de l'étape pour ce message si à partir d'un Canvas,
   "canvas_step_name": (chaîne) nom de l'étape pour ce message si à partir d'un Canvas,
   "send_id": (string) id du message si spécifié pour la campagne (Voir Send Identifier under API Identifier Types),
-  "plate-forme": (chaîne) plate-forme de l'appareil (iOS, Android, web, etc. ,
+  "plateforme": (chaîne) plate-forme de l'appareil (l'un des 'ios', 'android', 'web', 'kindle', 'tvos', OU 'roku'),
   "os_version": (string) os version du périphérique utilisé pour l'action,
   "device_model": (string) modèle matériel de l'appareil,
-  "device_id": (string) id de l'appareil sur lequel l'événement s'est produit,
+  "device_id": (string) id du périphérique sur lequel l'événement s'est produit,
   "ad_id": (string) identifiant publicitaire,
   "ad_id_type": (string) Un de 'ios_idfa', 'google_ad_id', 'windows_ad_id', OU 'roku_ad_id',
   "ad_tracking_enabled": (boolean) si le suivi publicitaire est activé pour l'appareil
@@ -775,7 +785,7 @@ Cet événement se produit lorsqu'un utilisateur clique sur une fiche de contenu
 ```json
 // Content Card Click: users.messages.contentcard. lick
 {
-  "id": (string) unique id de cet événement,
+  "id": (string) id unique de cet événement,
   "user_id": (string) Braze identifiant utilisateur de l'utilisateur,
   "external_user_id": (string) ID externe de l'utilisateur,
   "temps": (int) 10 chiffres heure UTC de l'événement en secondes depuis l'époque,
@@ -792,10 +802,10 @@ Cet événement se produit lorsqu'un utilisateur clique sur une fiche de contenu
   "canvas_step_id": (string) id de l'étape pour ce message si à partir d'un Canvas,
   "canvas_step_name": (chaîne) nom de l'étape pour ce message si à partir d'un Canvas,
   "send_id": (string) id du message si spécifié pour la campagne (Voir Send Identifier under API Identifier Types),
-  "plate-forme": (chaîne) plate-forme de l'appareil (iOS, Android, web, etc. ,
+  "plateforme": (chaîne) plate-forme de l'appareil (l'un des 'ios', 'android', 'web', 'kindle', 'tvos', OU 'roku'),
   "os_version": (string) os version du périphérique utilisé pour l'action,
   "device_model": (string) modèle matériel de l'appareil,
-  "device_id": (string) id de l'appareil sur lequel l'événement s'est produit,
+  "device_id": (string) id du périphérique sur lequel l'événement s'est produit,
   "ad_id": (string) identifiant publicitaire,
   "ad_id_type": (string) Un de 'ios_idfa', 'google_ad_id', 'windows_ad_id', OU 'roku_ad_id',
   "ad_tracking_enabled": (boolean) si le suivi publicitaire est activé pour l'appareil
@@ -836,10 +846,10 @@ Cet événement se produit lorsqu'un utilisateur rejette une carte de contenu.
   "canvas_step_id": (string) id de l'étape pour ce message si à partir d'un Canvas,
   "canvas_step_name": (chaîne) nom de l'étape pour ce message si à partir d'un Canvas,
   "send_id": (string) id du message si spécifié pour la campagne (Voir Send Identifier under API Identifier Types),
-  "plate-forme": (chaîne) plate-forme de l'appareil (iOS, Android, web, etc. ,
+  "plateforme": (chaîne) plate-forme de l'appareil (l'un des 'ios', 'android', 'web', 'kindle', 'tvos', OU 'roku'),
   "os_version": (string) os version du périphérique utilisé pour l'action,
   "device_model": (string) modèle matériel de l'appareil,
-  "device_id": (string) id de l'appareil sur lequel l'événement s'est produit,
+  "device_id": (string) id du périphérique sur lequel l'événement s'est produit,
   "ad_id": (string) identifiant publicitaire,
   "ad_id_type": (string) Un de 'ios_idfa', 'google_ad_id', 'windows_ad_id', OU 'roku_ad_id',
   "ad_tracking_enabled": (boolean) si le suivi publicitaire est activé pour l'appareil
@@ -874,7 +884,7 @@ Cet événement se produit lorsqu'un utilisateur consulte le flux d'actualités.
   "fuseau horaire": (chaîne) IANA fuseau horaire de l'utilisateur au moment de l'événement,
   "card_id": (chaîne) id de la carte qui a été consultée,
   "app_id": (string) id pour l'application sur laquelle l'action de l'utilisateur s'est produite,
-  "plate-forme": (chaîne) plate-forme de l'appareil (iOS, Android, web, etc. ,
+  "platform": (chaîne) plate-forme de l'appareil (l'un des 'ios', 'android', 'web', 'kindle', 'tvos', OU 'roku'),
   "os_version": (string) os version du périphérique utilisé pour l'action,
   "device_model": (string) modèle matériel de l'appareil,
   "device_id": (string) id de l'appareil sur lequel l'événement s'est produit
@@ -900,14 +910,14 @@ Cet événement se produit lorsqu'un utilisateur clique sur le fil d'actualité.
 ```json
 // News Feed Card Click: users.messages.newsfeedcard. lick
 {
-  "id": (string) id unique de cet événement,
+  "id": (string) unique id de cet événement,
   "user_id": (string) Braze identifiant utilisateur de l'utilisateur,
   "external_user_id": (string) ID externe de l'utilisateur,
   "temps": (int) 10 chiffres heure UTC de l'événement en secondes depuis l'époque,
   "fuseau horaire": (chaîne) IANA fuseau horaire de l'utilisateur au moment de l'événement,
   "card_id" : (chaîne) id de la carte cliquée,
   "app_id": (string) id pour l'application sur laquelle l'action de l'utilisateur s'est produite,
-  "plate-forme": (chaîne) plate-forme de l'appareil (iOS, Android, web, etc. ,
+  "platform": (chaîne) plate-forme de l'appareil (l'un des 'ios', 'android', 'web', 'kindle', 'tvos', OU 'roku'),
   "os_version": (string) os version du périphérique utilisé pour l'action,
   "device_model": (string) modèle matériel de l'appareil,
   "device_id": (string) id de l'appareil sur lequel l'événement s'est produit
