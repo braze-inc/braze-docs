@@ -27,7 +27,7 @@ Notez que la précision de vos données de localisation peut être affectée par
 
 En utilisant les données de suivi de la localisation, vous pouvez configurer des campagnes et des stratégies basées sur la localisation. Par exemple, vous pouvez organiser une campagne promotionnelle pour les utilisateurs qui vivent dans une région particulière, ou exclure les utilisateurs dans une région où les réglementations sont plus strictes.
 
-Voir [cet article][1] pour plus d'informations sur le ciblage de l'emplacement.
+Consultez la section [Suivi de localisation][1] pour plus d'informations sur le ciblage de l'emplacement.
 
 ## Paramétrage difficile de l'attribut d'emplacement par défaut
 
@@ -55,6 +55,10 @@ Vous pouvez également tirer parti du suivi de la localisation avec certains de 
 - [Foursquare][7]
 - [Gimbal][10]
 
+## Foire aux questions
+
+Visitez notre page [FAQ sur les lieux][11] pour obtenir des réponses aux questions les plus fréquemment posées sur les lieux.
+
 [1]: {{site.baseurl}}/user_guide/engagement_tools/segments/location_targeting/
 [2]: {{site.baseurl}}/developer_guide/platform_integration_guides/ios/analytics/location_tracking/
 [3]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/analytics/location_tracking/
@@ -65,3 +69,4 @@ Vous pouvez également tirer parti du suivi de la localisation avec certains de 
 [8]: {{site.baseurl}}/api/endpoints/user_data/post_user_track/
 [9]: {{site.baseurl}}/api/objects_filters/user_attributes_object/
 [10]: {{site.baseurl}}/partners/data_augmentation/contextual_location/gimbal/
+[11]: {{site.baseurl}}/user_guide/engagement_tools/locations_and_geofences/faqs/#locations
