@@ -20,13 +20,15 @@ Les géorepérages sont gérés dans la page **Emplacements** dans la section **
 
 ## Création manuelle de jeux de géorepérage
 
+À partir de la page **Emplacements** , cliquez sur **+ Créer un ensemble de géorepérage**.
+
 !\[Écran principal d'emplacement Geofence\]\[1\]
 
-Une fois que vous avez créé un ensemble de géorepérages, vous pouvez ajouter manuellement des géorepérages en les dessinant sur la carte. Nous recommandons de créer des géorepérages avec un rayon d'au moins 100 mètres pour une fonctionnalité optimale.
+Une fois que vous avez créé un ensemble de géorepérages, vous pouvez ajouter manuellement des géorepérages en les dessinant sur la carte. Nous recommandons de créer des géorepérages avec un rayon d'au moins 100 mètres pour une fonctionnalité optimale. Pour plus d'informations sur les options configurables, reportez-vous à [Configuration de la géorepérage]({{site.baseurl}}/user_guide/engagement_tools/locations_and_geofences/geofence_configuration/).
 
-## Création des ensembles de géorepérage via envoi groupé
+## Création des ensembles de géorepérage via envoi groupé {#creating-geofence-sets-via-bulk-upload}
 
-Les géorepérages peuvent être téléchargés en vrac en tant qu'objet GeoJSON de type `FeatureCollection`. Chaque géorepérage individuel est un type de géométrie `point` dans la collection de fonctionnalités. Les propriétés de chaque fonctionnalité requièrent une clé `"radius"` et une clé facultative `"nom"` pour chaque géorepérage.
+Les géorepérages peuvent être téléchargés en vrac en tant qu'objet GeoJSON de type `FeatureCollection`. Chaque géorepérage individuel est un type de géométrie `point` dans la collection de fonctionnalités. Les propriétés de chaque fonctionnalité requièrent une clé `"radius"` et une clé facultative `"nom"` pour chaque géorepérage. Pour télécharger votre GeoJSON, cliquez sur **+ Créer un ensemble de géorepérage** suivi de **Télécharger GeoJSON**.
 
 L'échantillon ci-dessous représente le GeoJSON correct pour spécifier deux géoreences: un pour le siège de Braze à NYC, et un pour la Statue de la Liberté au sud de Manhattan. Nous recommandons de télécharger des géorepérages avec un rayon d'au moins 100 mètres pour une fonctionnalité optimale.
 
@@ -58,9 +60,11 @@ L'échantillon ci-dessous représente le GeoJSON correct pour spécifier deux g�
     }, ...
   ]
 ```
-> La valeur "coordonnées" dans le GeoJSON doit être formatée [Longitude, Latitude]
 
-> Le rayon maximal de géorepérage qui peut être téléchargé est de 100000 mètres (100km/62mi).
+Lors de la création de vos géofences, gardez les points suivants à l'esprit :
+
+- La valeur `coordonnées` dans le GeoJSON est formatée comme [Longitude, Latitude].
+- Le rayon maximal de géorepérage qui peut être téléchargé est de 10 0000 mètres (environ 100 kilomètres ou 62 milles).
 
 ## Utiliser les événements de géorepérage
 
@@ -68,7 +72,7 @@ Une fois les géorepérages configurés, vous pouvez les utiliser pour améliore
 
 ### Déclenchement
 
-Pour utiliser les données de géorepérage dans le cadre de la campagne et des déclencheurs de Canvan, choisissez « la livraison basée sur l'action » pour sa méthode de livraison. Ensuite, ajoute une action de déclenchement de `déclenche une zone de géorepérage`. Enfin, choisissez les types d'événements de transition de géorepérage et de géorepérage pour votre message. Vous pouvez également faire avancer les utilisateurs à travers un Canvas en utilisant des événements de géorepérage.
+Pour utiliser les données de géorepérage dans le cadre de la campagne et des déclencheurs de Canvas , choisissez **Livraison par action** pour la méthode de livraison. Ensuite, ajoutez une action de déclenchement de `Déclencher un Geofence`. Enfin, choisissez les types d'événements de transition de géorepérage et de géorepérage pour votre message. Vous pouvez également faire avancer les utilisateurs à travers un Canvas en utilisant des événements de géorepérage.
 
 !\[action_based_geofence_trigger\]\[2\]
 
@@ -78,7 +82,12 @@ Pour utiliser les données de géorepérage pour personnaliser un message, vous 
 
 {% raw %}
 * `{{event_properties.${geofence_name}}}`
-
 * `{{event_properties.${geofence_set_name}}}`
 {% endraw %}
+
+## Foire aux questions
+
+Visitez notre page [FAQ][3] de Geofence pour les réponses aux questions les plus fréquemment posées sur les géofences.
 [1]: {% image_buster /assets/img_archive/locations_main_screen.png %} [2]: {% image_buster /assets/img_archive/action_based_geofence_trigger.png %}
+
+[3]: {{site.baseurl}}/user_guide/engagement_tools/locations_and_geofences/faqs/#geofences
