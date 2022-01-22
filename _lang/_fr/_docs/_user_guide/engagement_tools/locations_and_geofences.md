@@ -1,10 +1,10 @@
 ---
-nav_title: Emplacements & Géorepérages
-article_title: Emplacements & Géorepérages
+nav_title: Emplacements et géorepérages
+article_title: Emplacements et géorepérages
 page_order: 6
-layout: dev_guide
-guide_top_header: "Emplacements & Géorepérages"
-guide_top_text: "L'ubiquité et la flexibilité de la technologie mobile permettent aux marketeurs, aux responsables de produits, et des équipes de croissance pour atteindre leurs utilisateurs partout, brouillant les lignes entre les expériences numériques et du monde réel. Avec Braze, vous pouvez créer et améliorer des relations avec vos utilisateurs en fonction de leur emplacement dans le monde réel, déblocage d'un ensemble puissant d'interactions profondément connectées :<br><br>\n- Téléchargez l'emplacement de toutes les briques et les magasins de mortiers de vos marques, et envoyer des notifications push aux utilisateurs fidèles les avertissant des promotions en magasin si elles passent à proximité. <br> \n- Téléversez l'emplacement d'un concert à venir, et envoyez un message aux utilisateurs leur disant où s'inscrire lorsqu'ils rejoignent le lieu. Ensuite, suivez un message de remerciement une heure après leur départ. <br>\n<br>Vous pouvez rassembler et utiliser les données de localisation de l'utilisateur de deux façons : <br><br>\n- Lorsqu'un utilisateur ouvre votre application, <strong>localisation</strong> capture leurs positions les plus récentes en utilisant les données de localisation GPS. Cela vous permet de voir où vos utilisateurs ont été et de segmenter ces données.<br>\n- <strong>Les géofences</strong> sont des zones géographiques virtuelles. Si un utilisateur a activé le suivi de localisation en arrière-plan, vous pouvez utiliser des géorepérages pour déclencher des campagnes en temps réel lorsqu'un utilisateur est dans un géorepérage. Les géofences ne sont disponibles que dans certains paquets Braze. Pour y accéder, veuillez contacter votre représentant de Braze."
+layout: en vedette
+guide_top_header: "Emplacements et géorepérages"
+guide_top_text: "L'ubiquité et la flexibilité de la technologie mobile permettent aux marketeurs, aux responsables de produits, et des équipes de croissance pour atteindre leurs utilisateurs partout, brouillant les lignes entre les expériences numériques et du monde réel. Reportez-vous aux articles de cette section pour en savoir plus sur le suivi de la localisation, la création de géofences, l'intégration mobile, et plus encore. <br><br>Les géofences ne sont disponibles que dans certains paquets Braze. Pour y accéder, veuillez contacter votre représentant de Braze."
 page_type: atterrissage
 tool: Localisation
 description: "Cette page d'accueil contient des articles sur les lieux et les géofences. Ici vous pouvez trouver des ressources sur le suivi d'emplacement, la création de géorepérages, l'intégration mobile, et plus encore."
@@ -32,3 +32,14 @@ guide_featured_list:
     fa_icon: fas fa-question
 ---
 
+## À propos des lieux et des géorepérages
+
+Avec Braze, vous pouvez créer et améliorer des relations avec vos utilisateurs en fonction de leur emplacement dans le monde réel, déblocage d'un ensemble puissant d'interactions profondément connectées :
+
+- Téléchargez les emplacements de tous les magasins de briques et de mortiers de vos marques, et envoyer des notifications push aux utilisateurs fidèles les avertissant des promotions en magasin si elles passent à proximité.
+- Téléchargez l'emplacement d'un prochain concert, et envoyez un message aux utilisateurs leur indiquant où s'inscrire lorsqu'ils arrivent sur le site. Ensuite, suivez un message de remerciement une heure après leur départ.
+
+Vous pouvez collecter et utiliser les données de localisation de l'utilisateur de deux façons :
+
+- Lorsqu'un utilisateur ouvre votre application, le suivi de localisation capture ses positions les plus récentes en utilisant les données de localisation GPS. Cela vous permet de voir où vos utilisateurs ont été et le segment basé sur ces données.
+- Les géofences sont des zones géographiques virtuelles. Si un utilisateur a activé le suivi de localisation en arrière-plan, vous pouvez utiliser des géorepérages pour déclencher des campagnes en temps réel lorsqu'un utilisateur est dans un géorepérage. Les géofences ne sont disponibles que dans certains paquets Braze. Pour y accéder, veuillez contacter votre représentant de Braze. <br><br>
