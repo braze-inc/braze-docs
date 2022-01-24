@@ -23,7 +23,7 @@ Any schedule will completely overwrite the one that you provided in the create s
 
 ## Rate limit
 
-{% include rate_limits.md endpoint='default' category='message endpoints' %}
+{% include rate_limits.md endpoint='default' %}
 
 ## Request body
 
