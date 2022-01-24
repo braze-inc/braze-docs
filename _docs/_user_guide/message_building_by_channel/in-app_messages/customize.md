@@ -183,7 +183,7 @@ When an end-user enters their email address to this form, the email address will
 
 In general, the logic behind the email capture form is straightforward. It will set the email address on the user profile in Braze for the user that is currently active. However, that means the behavior differs based on whether the user is identified (logged in, `changeUser` called) or not.
 
-If an anonymous user enters their email in the form and submits it, Braze adds the email address to their alias-only profile. If `changeUser` is called later on in their web journey and a new `external_id` is assigned (i.e., when a new user registers with the service), all anonymous user profile data is merged including the email address.
+If an anonymous user enters their email in the form and submits it, Braze adds the email address to their profile. If `changeUser` is called later on in their web journey and a new `external_id` is assigned (i.e., when a new user registers with the service), all anonymous user profile data is merged including the email address.
 
 If `changeUser` is called with an existing `external_id`, the anonymous user profile is orphaned and all data for that profile is lost, including the email address.
 
