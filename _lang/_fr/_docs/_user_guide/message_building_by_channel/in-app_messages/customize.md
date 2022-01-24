@@ -182,7 +182,7 @@ Lorsqu'un utilisateur final saisit son adresse e-mail dans ce formulaire, l'adre
 
 En général, la logique derrière le formulaire de saisie de courriel est simple. Il définira l'adresse e-mail sur le profil de l'utilisateur à Braze pour l'utilisateur actuellement actif. Cependant, cela signifie que le comportement diffère selon que l'utilisateur est identifié (connecté, `changeUser` appelé) ou non.
 
-Si un utilisateur anonyme entre son email dans le formulaire et le soumet, Braze ajoute l'adresse e-mail à son profil d'alias uniquement. Si `changeUser` est appelé plus tard dans leur voyage web et qu'un nouveau `external_id` est assigné (i. ., lorsqu'un nouvel utilisateur s'inscrit avec le service), toutes les données de profil d'utilisateur anonymes sont fusionnées, y compris l'adresse e-mail.
+Si un utilisateur anonyme entre son email dans le formulaire et le soumet, Braze ajoute l'adresse e-mail à son profil. Si `changeUser` est appelé plus tard dans leur voyage web et qu'un nouveau `external_id` est assigné (i. ., lorsqu'un nouvel utilisateur s'inscrit avec le service), toutes les données de profil d'utilisateur anonymes sont fusionnées, y compris l'adresse e-mail.
 
 Si `changeUser` est appelé avec un `external_id existant,`, le profil d'utilisateur anonyme est orphelin et toutes les données de ce profil sont perdues, y compris l'adresse e-mail.
 
