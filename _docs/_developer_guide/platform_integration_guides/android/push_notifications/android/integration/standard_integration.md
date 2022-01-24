@@ -51,8 +51,8 @@ To automatically register FCM registration tokens, enable automatic Firebase reg
 In your `braze.xml`:
 
 ```xml
-<bool translatable="false" name="com_appboy_firebase_cloud_messaging_registration_enabled">true</bool>
-<string translatable="false" name="com_appboy_firebase_cloud_messaging_sender_id">your_fcm_sender_id_here</string>
+<bool translatable="false" name="com_braze_firebase_cloud_messaging_registration_enabled">true</bool>
+<string translatable="false" name="com_braze_firebase_cloud_messaging_sender_id">your_fcm_sender_id_here</string>
 ```
 
 Or in your [BrazeConfig][68]:
@@ -274,8 +274,8 @@ The large and small icons pictured below are examples of properly designed icons
 - Braze allows you to configure your notification icons by specifying drawable resources in your `braze.xml`:
 
 ```xml
-<drawable name="com_appboy_push_small_notification_icon">REPLACE_WITH_YOUR_ICON</drawable>
-<drawable name="com_appboy_push_large_notification_icon">REPLACE_WITH_YOUR_ICON</drawable>
+<drawable name="com_braze_push_small_notification_icon">REPLACE_WITH_YOUR_ICON</drawable>
+<drawable name="com_braze_push_large_notification_icon">REPLACE_WITH_YOUR_ICON</drawable>
 ```
 
 Setting a small notification icon is required. __If you do not set one, Braze will default to using the application icon as the small notification icon which may look suboptimal.__
@@ -287,23 +287,23 @@ Setting a large notification icon is optional but recommended.
 - The notification icon background color can be overriden in your `braze.xml`. If the color is not specified, the default background color is the same gray Lollipop uses for system notifications. Please see the example color override below:
 
 ```xml
-<integer name="com_appboy_default_notification_accent_color">0xFFf33e3e</integer>
+<integer name="com_braze_default_notification_accent_color">0xFFf33e3e</integer>
 ```
 
 You may also optionally use a color reference, see:
 
 ```xml
-<color name="com_appboy_default_notification_accent_color">@color/my_color_here</color>
+<color name="com_braze_default_notification_accent_color">@color/my_color_here</color>
 ```
 
 ### Step 4: Add deep links
 
 #### Enabling automatic deep link opening
 
-To enable Braze to automatically open your app and any deep links when a push notification is clicked, set `com_appboy_handle_push_deep_links_automatically` to `true`, in your `braze.xml`:
+To enable Braze to automatically open your app and any deep links when a push notification is clicked, set `com_braze_handle_push_deep_links_automatically` to `true`, in your `braze.xml`:
 
 ```xml
-<bool name="com_appboy_handle_push_deep_links_automatically">true</bool>
+<bool name="com_braze_handle_push_deep_links_automatically">true</bool>
 ```
 
 This flag can also be set via [runtime configuration][65]:
@@ -377,8 +377,8 @@ Braze.configure(this, brazeConfig)
 See the equivalent configuration for your `braze.xml`. Note that the class name must be the same as returned by `Class.forName()`:
 
 ```xml
-<bool name="com_appboy_push_deep_link_back_stack_activity_enabled">true</bool>
-<string name="com_appboy_push_deep_link_back_stack_activity_class_name">your.package.name.YourMainActivity</string>
+<bool name="com_braze_push_deep_link_back_stack_activity_enabled">true</bool>
+<string name="com_braze_push_deep_link_back_stack_activity_class_name">your.package.name.YourMainActivity</string>
 ```
 
 ### Step 5: Define notification channels
@@ -549,7 +549,7 @@ Your receiver should handle intents broadcast by Braze and launch your activity 
   - A `NOTIFICATION_RECEIVED` intent will be received when a push notification arrives.
   - A `NOTIFICATION_OPENED` intent will be received when a push notification is clicked by the user.
   - An `NOTIFICATION_DELETED` intent will be received when a push notification is dismissed (swiped away) by the user.
-- The receiver should perform your custom logic for each of these cases.  If your receiver will open deep links, be sure to turn off automatic deep link opening by setting `com_appboy_handle_push_deep_links_automatically` to `false` in your `braze.xml`.
+- The receiver should perform your custom logic for each of these cases.  If your receiver will open deep links, be sure to turn off automatic deep link opening by setting `com_braze_handle_push_deep_links_automatically` to `false` in your `braze.xml`.
 
 For a detailed custom receiver example, please see the below:
 

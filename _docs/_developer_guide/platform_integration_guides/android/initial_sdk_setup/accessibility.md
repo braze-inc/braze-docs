@@ -21,7 +21,7 @@ In order to have Android Talkback/"VoiceOver" not read the contents behind an in
 {% tab braze.xml %}
 
 ```xml
-<bool name="com_appboy_device_in_app_message_accessibility_exclusive_mode_enabled">true</bool>
+<bool name="com_braze_device_in_app_message_accessibility_exclusive_mode_enabled">true</bool>
 ```
 
 {% endtab %}

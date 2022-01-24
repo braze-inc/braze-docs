@@ -40,8 +40,8 @@ Now that the libraries have been integrated, you have to create an `braze.xml` f
 ```java
     <?xml version="1.0" encoding="utf-8"?>
     <resources>
-    <string name="com_appboy_api_key">REPLACE_WITH_YOUR_API_KEY</string>
-    <string translatable="false" name="com_appboy_custom_endpoint">YOUR_CUSTOM_ENDPOINT_OR_CLUSTER</string>
+    <string name="com_braze_api_key">REPLACE_WITH_YOUR_API_KEY</string>
+    <string translatable="false" name="com_braze_custom_endpoint">YOUR_CUSTOM_ENDPOINT_OR_CLUSTER</string>
     </resources>
 ```
 
