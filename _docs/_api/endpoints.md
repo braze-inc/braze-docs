@@ -19,16 +19,8 @@ page_type: reference
 
 | Method | Endpoints |
 | --- | --- |
-| POST |
-| GET |
+| POST | [/sends/id/create][/sends/id/create]<br>[/messages/send][/messages/send]<br>[/transactional/v1/campaigns/{{CAMPAIGN_ID}}/send][/transactional/v1/campaigns/{{CAMPAIGN_ID}}/send]<br>[/campaigns/trigger/send][/campaigns/trigger/send]<br>[/canvas/trigger/send][/canvas/trigger/send] |
 {: .reset-td-br-1 .reset-td-br-2}
-
-[/sends/id/create]
-[/messages/send]
-[/transactional/v1/campaigns/{{CAMPAIGN_ID}}/send]
-[/campaigns/trigger/send]
-[/canvas/trigger/send]
-
 
 ## Schedule messages
 
