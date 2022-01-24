@@ -8,48 +8,143 @@ page_type: reference
 
 # API endpoint index
 
-| Category | Endpoints |
-| --- | --- |
-| User data | [/users/alias/new]({{site.baseurl}})<br>[/users/delete]({{site.baseurl}})<br>[/users/identify]({{site.baseurl}})<br>[/users/track]({{site.baseurl}})<br>[/users/external_ids/rename]({{site.baseurl}})<br>[/users/external_ids/remove]({{site.baseurl}})<br>[/users/export/ids]({{site.baseurl}})<br>[/users/export/segment]({{site.baseurl}})<br>[/users/export/global_control_group]({{site.baseurl}}) |
-| Send messages | [/sends/id/create]({{site.baseurl}})<br>[/messages/send]({{site.baseurl}})<br>[/transactional/v1/campaigns/{{CAMPAIGN_ID}}/send]({{site.baseurl}})<br>[/campaigns/trigger/send]({{site.baseurl}})<br>[/canvas/trigger/send]({{site.baseurl}})<br> |
-| Schedule messages | [/messages/scheduled_broadcasts]({{site.baseurl}})<br>[/messages/schedule/delete]({{site.baseurl}})<br>[/canvas/trigger/schedule/delete]({{site.baseurl}})<br>[/campaigns/trigger/schedule/delete]({{site.baseurl}})<br>[/messages/schedule/create]({{site.baseurl}})<br>[/campaigns/trigger/schedule/create]({{site.baseurl}})<br>[/canvas/trigger/schedule/create]({{site.baseurl}})<br>[/messages/schedule/update]({{site.baseurl}})<br>[/campaigns/trigger/schedule/update]({{site.baseurl}})<br>[/canvas/trigger/schedule/update]({{site.baseurl}}) |
-{: .reset-td-br-1 .reset-td-br-2}
-
-
-# API endpoint index
-
 ## User data
 
-- [/users/alias/new][1]
-- [/users/delete][1]
-- [/users/identify][1]
-- [/users/track][1]
-- [/users/external_ids/rename][1]
-- [/users/external_ids/remove][1]
-- [/users/export/ids][1]
-- [/users/export/segment][1]
-- [/users/export/global_control_group][1]
+| Method | Endpoints |
+| --- | --- |
+| POST | [/users/alias/new][/users/alias/new]<br>[/users/delete][/users/delete]<br>[/users/identify][/users/identify]<br>[/users/track][/users/track]<br>[/users/external_ids/rename][/users/external_ids/rename]<br>[/users/external_ids/remove][/users/external_ids/remove]<br>[/users/export/ids][/users/export/ids]<br>[/users/export/segment][/users/export/segment]<br>[/users/export/global_control_group][/users/export/global_control_group] |
+{: .reset-td-br-1 .reset-td-br-2}
 
-## Send messages 
+## Send messages
 
-- [/sends/id/create][1]
-- [/messages/send][1]
-- [/transactional/v1/campaigns/{{CAMPAIGN_ID}}/send][1]
-- [/campaigns/trigger/send][1]
-- [/canvas/trigger/send][1]
+| Method | Endpoints |
+| --- | --- |
+| POST |
+| GET |
+{: .reset-td-br-1 .reset-td-br-2}
+
+[/sends/id/create]
+[/messages/send]
+[/transactional/v1/campaigns/{{CAMPAIGN_ID}}/send]
+[/campaigns/trigger/send]
+[/canvas/trigger/send]
+
 
 ## Schedule messages
 
-- [/messages/scheduled_broadcasts][1]
-- [/messages/schedule/delete][1]
-- [/canvas/trigger/schedule/delete][1]
-- [/campaigns/trigger/schedule/delete][1]
-- [/messages/schedule/create][1]
-- [/campaigns/trigger/schedule/create][1]
-- [/canvas/trigger/schedule/create][1]
-- [/messages/schedule/update][1]
-- [/campaigns/trigger/schedule/update][1]
-- [/canvas/trigger/schedule/update][1]
+| Method | Endpoints |
+| --- | --- |
+| POST |
+| GET |
+{: .reset-td-br-1 .reset-td-br-2}
+
+## Subscription groups
+
+| Method | Endpoints |
+| --- | --- |
+| POST |
+| GET |
+{: .reset-td-br-1 .reset-td-br-2}
+
+## Email
+
+email and email templates
+
+| Method | Endpoints |
+| --- | --- |
+| POST |
+| GET |
+{: .reset-td-br-1 .reset-td-br-2}
+
+## Campaigns
+
+| Method | Endpoints |
+| --- | --- |
+| POST |
+| GET |
+{: .reset-td-br-1 .reset-td-br-2}
+
+## Canvas
+
+| Method | Endpoints |
+| --- | --- |
+| POST |
+| GET |
+{: .reset-td-br-1 .reset-td-br-2}
+
+## Segments
+
+| Method | Endpoints |
+| --- | --- |
+| POST |
+| GET |
+{: .reset-td-br-1 .reset-td-br-2}
+
+## Custom events
+
+| Method | Endpoints |
+| --- | --- |
+| POST |
+| GET |
+{: .reset-td-br-1 .reset-td-br-2}
+
+## Content Blocks
+
+| Method | Endpoints |
+| --- | --- |
+| POST |
+| GET |
+{: .reset-td-br-1 .reset-td-br-2}
+
+## KPI
+
+| Method | Endpoints |
+| --- | --- |
+| POST |
+| GET |
+{: .reset-td-br-1 .reset-td-br-2}
+
+## News Feed
+
+| Method | Endpoints |
+| --- | --- |
+| POST |
+| GET |
+{: .reset-td-br-1 .reset-td-br-2}
+
+## SMS
+
+| Method | Endpoints |
+| --- | --- |
+| POST |
+| GET |
+{: .reset-td-br-1 .reset-td-br-2}
+
+## Purchases
+
+| Method | Endpoints |
+| --- | --- |
+| POST |
+| GET |
+{: .reset-td-br-1 .reset-td-br-2}
 
 
-[1]: {{site.baseurl}}
+<!--- Links for user data --->
+
+[/users/alias/new]: {{site.baseurl}}/api/endpoints/user_data/post_user_alias/
+[/users/delete]: {{site.baseurl}}/api/endpoints/user_data/post_user_delete/
+[/users/identify]: {{site.baseurl}}/api/endpoints/user_data/post_user_identify/
+[/users/track]: {{site.baseurl}}/api/endpoints/user_data/post_user_track/
+[/users/external_ids/rename]: {{site.baseurl}}/api/endpoints/user_data/external_id_migration/post_external_ids_rename/
+[/users/external_ids/remove]: {{site.baseurl}}/api/endpoints/user_data/external_id_migration/post_external_ids_remove/
+[/users/export/ids]: {{site.baseurl}}/api/endpoints/export/user_data/post_users_identifier/
+[/users/export/segment]: {{site.baseurl}}/api/endpoints/export/user_data/post_users_segment/
+[/users/export/global_control_group]: {{site.baseurl}}/api/endpoints/export/user_data/post_users_global_control_group/
+
+<!--- Links for send messages --->
+
+[/sends/id/create]: {{site.baseurl}}/api/endpoints/messaging/send_messages/post_create_send_ids/ 
+[/messages/send]: {{site.baseurl}}/api/endpoints/messaging/send_messages/post_send_messages/
+[/transactional/v1/campaigns/{{CAMPAIGN_ID}}/send]: {{site.baseurl}}/api/endpoints/messaging/send_messages/post_send_transactional_message/
+[/campaigns/trigger/send]: {{site.baseurl}}/api/endpoints/messaging/send_messages/post_send_triggered_campaigns/
+[/canvas/trigger/send]: {{site.baseurl}}/api/endpoints/messaging/send_messages/post_send_triggered_canvases/
