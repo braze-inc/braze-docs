@@ -125,11 +125,11 @@ Maintenant que le jeton est enregistré, il peut être dynamiquement templé dan
 
 ## Liste blanche IP de contenu connecté
 
-Quand un message utilisant le Contenu Connecté est envoyé depuis Braze, les serveurs Braze font automatiquement des demandes de réseau à nos clients ou à des serveurs tiers pour récupérer des données.
+Quand un message utilisant le Contenu Connecté est envoyé depuis Braze, les serveurs Braze font automatiquement des demandes de réseau à nos clients ou à des serveurs tiers pour récupérer des données. Avec la liste blanche IP, vous pouvez vérifier que les requêtes de contenu connecté proviennent réellement de Braze, ajoutant une couche de sécurité supplémentaire.
 
-Avec la liste blanche IP, vous pouvez vérifier que les requêtes de contenu connecté proviennent réellement de Braze, ajoutant une couche de sécurité supplémentaire.
+Braze enverra des requêtes de contenu connecté depuis les plages IP ci-dessous. Les plages listées sont automatiquement et dynamiquement ajoutées à toutes les clés API qui ont été optées pour la liste blanche.
 
-Braze enverra des requêtes de contenu connecté depuis les plages IP ci-dessous. Braze a un ensemble réservé d'adresses IP utilisées pour tous les services, qui ne sont pas tous actifs à un moment donné.  Cela garantit que si Braze a besoin d'envoyer depuis un centre de données différent ou de faire de la maintenance, Braze peut le faire sans affecter les clients. Braze peut utiliser un, un sous-ensemble ou toutes les adresses IP listées ci-dessous lorsque vous faites des requêtes de contenu connecté.
+Braze a un ensemble réservé d'adresses IP utilisées pour tous les services, qui ne sont pas tous actifs à un moment donné.  Cela garantit que si Braze a besoin d'envoyer depuis un centre de données différent ou de faire de la maintenance, Braze peut le faire sans affecter les clients. Braze peut utiliser un, un sous-ensemble ou toutes les adresses IP listées ci-dessous lorsque vous faites des requêtes de contenu connecté.
 
 | Pour les instances `US-01`, `US-02`, `US-03`, `US-04`, `US-05`, `US-06`: |
 | ------------------------------------------------------------------------ |
