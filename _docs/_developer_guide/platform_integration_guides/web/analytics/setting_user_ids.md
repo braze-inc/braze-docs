@@ -34,7 +34,7 @@ Refer to the [changeUser documentation][4] for more information.
 
 ## Aliasing users
 
-An alias serves as an alternative unique user identifier. Use aliases to identify users along different dimensions than your core user ID:
+A [User Alias][5] serves as an alternative unique user identifier. Use aliases to identify users along different dimensions than your core user ID:
 
 * Set a consistent identifier for analytics that will follow a given user both before and after they have logged in to a mobile app or website.
 * Add the identifiers used by a third-party vendor to your Braze users in order to more easily reconcile your data externally.
@@ -48,3 +48,4 @@ appboy.getUser().addAlias(ALIAS_NAME, ALIAS_LABEL);
 [1]: {{site.baseurl}}/developer_guide/rest_api/user_data/#user-data
 [2]: {{site.baseurl}}/api/endpoints/messaging/
 [4]: https://js.appboycdn.com/web-sdk/latest/doc/module-appboy.html#.changeUser "Javadocs"
+[5]: https://www.braze.com/docs/user_guide/data_and_analytics/user_data_collection/user_profile_lifecycle/#user-aliases
