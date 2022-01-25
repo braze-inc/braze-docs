@@ -55,29 +55,7 @@ Des informations complètes sur la classe peuvent être trouvées dans le [javad
 
 ## Aliasing des utilisateurs
 
-Un alias sert d'identifiant d'utilisateur unique alternatif. Utiliser des alias pour identifier les utilisateurs avec des dimensions différentes de votre identifiant utilisateur principal :
-
-* Définissez un identifiant cohérent pour les analytiques qui suivront un utilisateur donné avant et après qu'ils se soient connectés à une application mobile ou à un site web.
-* Ajoutez les identifiants utilisés par un fournisseur tiers à vos utilisateurs de Braze afin de réconcilier plus facilement vos données en externe.
-
-Chaque alias se compose de deux parties : un _nom_ pour l'identifiant lui-même, et une _étiquette_ indiquant le type d'alias. Les utilisateurs peuvent avoir plusieurs alias avec _différentes_ étiquettes, mais un seul nom par étiquette.
-
-{% tabs %}
-{% tab JAVA %}
-
-```java
-Braze.getInstance(context).getCurrentUser().addAlias(ALIAS_NAME, ALIAS_LABEL);
-```
-
-{% endtab %}
-{% tab KOTLIN %}
-
-```kotlin
-Braze.getInstance(contexte).currentUser?.addAlias(ALIAS_NAME, ALIAS_LABEL)
-```
-
-{% endtab %}
-{% endtabs %}
+{% include archive/setting_user_ids/aliasing.md platform="Android" %}
 
 [4]: https://appboy.github.io/appboy-android-sdk/javadocs/com/appboy/Appboy.html#changeUser-java.lang.String-
 [4]: https://appboy.github.io/appboy-android-sdk/javadocs/com/appboy/Appboy.html#changeUser-java.lang.String-
