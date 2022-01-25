@@ -34,16 +34,7 @@ Refer to the [changeUser documentation][4] for more information.
 
 ## Aliasing users
 
-A [User Alias][5] serves as an alternative unique user identifier. Use aliases to identify users along different dimensions than your core user ID:
-
-* Set a consistent identifier for analytics that will follow a given user both before and after they have logged in to a mobile app or website.
-* Add the identifiers used by a third-party vendor to your Braze users in order to more easily reconcile your data externally.
-
-Each alias consists of two parts: a _name_ for the identifier itself, and a _label_ indicating the type of alias. Users can have multiple aliases with _different_ labels, but only one name per label.
-
-```javascript
-appboy.getUser().addAlias(ALIAS_NAME, ALIAS_LABEL);
-```
+{% include archive/setting_user_ids/aliasing.md platform="Web" %}
 
 [1]: {{site.baseurl}}/developer_guide/rest_api/user_data/#user-data
 [2]: {{site.baseurl}}/api/endpoints/messaging/
