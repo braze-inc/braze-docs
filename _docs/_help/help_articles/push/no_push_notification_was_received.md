@@ -9,20 +9,24 @@ channel: push
 ---
 # Missing push notifications
 
-There are a number of steps you can take to troubleshoot this issue:
+Experiencing delivery challenges with push notifications? There are a number of steps you can take to troubleshoot this issue:
 
-* [Check User Profiles](#check-user-profiles)
+* [Check Push Subscription](#check-push-subscription-status)
 * [Check Segment](#check-segment)
 * [Check Push Notification Caps](#check-push-notification-caps)
 * [Check Rate Limits](#check-rate-limits)
 * [Check Control Group Status](#check-control-group-status)
 
-
-## Check user profiles
+## Check push subscription status
 
 Check your user profile in the [Engagement][1] tab in the **User Profile** section to see if you are actively registered for push for the app group that you are testing. If you are registered for multiple apps, you will see them listed in the **Push Registered For** field:
 
 ![Push Registered For][2]
+
+You can also export the user profiles using Braze export endpoints:
+- [Users by identifier][12]
+- [Users by segment][13]
+This will return a push token object that includes push enablement information per device.
 
 ## Check segment
 
@@ -40,7 +44,7 @@ You can do this by checking [global frequency capping][4] in the dashboard. If t
 
 ## Check rate limits
 
-If you have a rate limit set for your campaign or Canvas, you might be falling out of receiving messaging due to exceeding this limit. For more information, refer to [Rate Limiting][47].
+If you have a rate limit set for your campaign or Canvas, you might be falling out of receiving messaging due to exceeding this limit. For more information, refer to [Rate Limiting][9].
 
 ## Check control group status
 
@@ -49,9 +53,18 @@ If this is a single channel campaign or a Canvas with a control group, it’s po
   1. Check the [variant distribution][6] to see if there is a control group.
   2. If so, create a segment filtering for [in campaign control group][7] then [export the segment][8] and check if your user ID is on this list.
 
+## Check for valid push token
+A push token is an identifier that senders use to target specific devices with a push notification. So, if the device does not have a valid push token, then there is no way to send a push notification to it. 
+
+## Check push notification type
+
+Check that you're using the correct type of push notification. For example, if you want to target a FireTV, then you would use a Kindle push notification, not an Android push campaign. Check out the articles below for more information on unstanding the Braze workflow for:
+- [Apple Push Notification][10]
+- [Firebase Cloud Messaging][11]
+
 Still need help? Open a [support ticket]({{site.baseurl}}/braze_support/).
 
-_Last updated on July 15, 2021_
+_Last updated on January 21, 2021_
 
 [1]: {{site.baseurl}}/user_guide/engagement_tools/segments/using_user_search/#engagement-tab
 [2]: {% image_buster /assets/img_archive/trouble1.png %}
@@ -61,4 +74,8 @@ _Last updated on July 15, 2021_
 [6]: {{site.baseurl}}/user_guide/engagement_tools/campaigns/testing_and_more/multivariate_testing/#step-5-distribute-users-among-your-variants
 [7]: {{site.baseurl}}/user_guide/engagement_tools/campaigns/ideas_and_strategies/retargeting_campaigns/#in-campaign-control-group-filter
 [8]: {{site.baseurl}}/user_guide/data_and_analytics/export_braze_data/segment_data_to_csv/#exporting-to-csv
-[47]: {{site.baseurl}}/user_guide/engagement_tools/campaigns/testing_and_more/rate-limiting/#rate-limiting
+[9]: {{site.baseurl}}/user_guide/engagement_tools/campaigns/testing_and_more/rate-limiting/#rate-limiting
+[10]: {{site.baseurl}}/developer_guide/platform_integration_guides/ios/push_notifications/troubleshooting
+[11]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/push_notifications/android/troubleshooting
+[12]: {{site.baseurl}}/api/endpoints/export/user_data/post_users_identifier
+[13]: {{site.baseurl}}/api/endpoints/export/user_data/post_users_segment

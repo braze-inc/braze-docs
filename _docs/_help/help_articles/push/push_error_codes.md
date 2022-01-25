@@ -27,7 +27,7 @@ InvalidRegistration can happen when a push token is malformed.
 
 Common failures may include:
 - People are passing Braze registration tokens manually but don’t call getToken() (i.e. they instead pass the entire instance id). <br>The token in the error message looks like &#124;ID&#124;1&#124;:[regular token].  
-- Multiple registration, people are registering with multiple services. <br>We currently expect push registration intents to arrive old-style, so if folks are registering in multiple places and we catch intents from other services we can get malformed push tokens.
+- Multiple registration: people are registering with multiple services. <br>We currently expect push registration intents to arrive old-style, so if folks are registering in multiple places and we catch intents from other services we can get malformed push tokens.
 
 ### Push bounced: NotRegistered
 NotRegistered usually means that the app has been deleted from the device (i.e. Braze's signal for Uninstall).  
