@@ -62,7 +62,7 @@ glossaries:
     description: "Une notification push qui ne réveille pas l'appareil lors de l'affichage sur l'appareil. À la place, la notification sera stockée dans la zone de notification de l'appareil."
     tags:
       - iOS
-      - Web
+      - Android
   - 
     name: "Notifications push provisoires pour iOS"
     description: "Introduit par Apple dans iOS 12, l'autorisation provisoire se produit automatiquement à l'installation des applications iOS, permettant aux marques d'envoyer des notifications silencieuses sans afficher une invite push aux utilisateurs. Lorsque le push silencieux est envoyé et visualisé dans la barre de notification de l'appareil, les utilisateurs auront la possibilité d'autoriser ou d'arrêter les notifications push."
