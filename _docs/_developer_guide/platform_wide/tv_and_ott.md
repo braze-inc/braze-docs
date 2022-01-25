@@ -86,7 +86,7 @@ Below is a list of features and messaging channels supported today.
         <tr>
             <td>Roku</td>
             <td for="data-analytics"><i class="fas fa-check text-success"></i></td>
-            <td for="iam"><i class="fas fa-times text-warning"></i></td>
+            <td for="iam"><i class="fas fa-check text-success"></i></td>
             <td for="content-cards"><i class="fas fa-times text-warning"></i></td>
             <td for="push">N/A</td>
             <td for="canvas">N/A</td>
@@ -176,9 +176,12 @@ For more information, visit the [Web Smart TV Integration Guide][8].
 
 ### Roku
 
-Use Braze's Roku SDK to collect data and analytics on your Roku users. These custom events and attributes can be used across your other channels for personalization and promotional messaging.
+Use Braze's Roku SDK to integrate with [Roku TVs](https://developer.roku.com/docs/developer-program/getting-started/roku-dev-prog.md)
 
-The ability to send In-App Messages to your Roku users is coming soon - stay tuned!
+Features include:
+
+- Data and Analytics collection for cross-channel engagement
+- In-App Messages (via Custom UI)
 
 For more information, visit the [Roku Integration Guide][3].
 
