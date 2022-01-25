@@ -51,7 +51,7 @@ Assurez-vous d'appeler cette méthode dans le fil de discussion principal de vot
 
 ## Aliasing des utilisateurs
 
-{% include archive/aliasing.md platform="iOS" %}
+{% include archive/setting_user_ids/aliasing.md platform="iOS" %}
 
 [4]: https://github.com/Appboy/appboy-ios-sdk/blob/master/AppboyKit/include/Appboy.h
 [5]: http://appboy.github.io/appboy-ios-sdk/docs/interface_appboy.html#ac8b369b40e15860b0ec18c0f4b46ac69 "changeuser"
