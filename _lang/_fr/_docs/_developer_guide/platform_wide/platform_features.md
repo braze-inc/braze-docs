@@ -47,6 +47,10 @@ La segmentation vous permet de créer des groupes d'utilisateurs basés sur des 
 
 Une fois que vous avez défini un segment, les outils de messagerie de Braze permettent la communication multicanale avec vos utilisateurs. Par exemple, envoyez une notification push et un courriel au segment d'exemple défini dans la section précédente. Les canaux de messagerie sont mieux utilisés en concert et avec régularité pour réengager les utilisateurs perdus, retenir les utilisateurs actifs et dynamiser les ambassadeurs de votre marque. De plus, vous pouvez utiliser nos options de planification avancées pour automatiser les campagnes vers des groupes spécifiques de ces utilisateurs qui vont plus loin.
 
+{% alert tip %}
+Vous pouvez utiliser Braze pour créer des campagnes de messagerie accessibles sur chaque canal. Travaillez avec vos ingénieurs pour vous assurer que vous respectez les normes d'accessibilité dans votre implémentation.
+{% endalert %}
+
 ### Cartes de contenu {#platform-features-content-cards}
 
 Avec les Cartes de Contenu, vous pouvez envoyer un très ciblé, flux dynamique de contenu riche pour vos clients directement dans les applications qu'ils aiment, sans interrompre leur expérience. De plus, les cartes de contenu prennent en charge des fonctionnalités plus personnalisées, y compris le épinglage de cartes, le rejet de carte, la livraison basée sur API, Contenu connecté, temps d'expiration de la carte personnalisée, analyse de la carte et coordination facile avec les notifications push.
