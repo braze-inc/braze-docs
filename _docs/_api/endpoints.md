@@ -6,6 +6,18 @@ description: "This page lists the available Braze endpoints."
 page_type: reference
 ---
 
+<style>
+table th:nth-child(1),
+table th:nth-child(2),
+table td:nth-child(1),
+table td:nth-child(2) {
+    max-width:150px;
+}
+table td {
+    word-break: break-word;
+}
+</style>
+
 # API endpoint index
 
 ## User data
@@ -38,7 +50,7 @@ page_type: reference
 | GET | [/subscription/status/get][/subscription/status/get]<br>[/subscription/user/status][/subscription/user/status] |
 {: .reset-td-br-1 .reset-td-br-2}
 
-## Email
+## Email and email templates
 
 | Method | Endpoints |
 | --- | --- |
