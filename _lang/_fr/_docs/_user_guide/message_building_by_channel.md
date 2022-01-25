@@ -4,7 +4,7 @@ article_title: Message de construction par canal
 page_order: 5
 layout: en vedette
 guide_top_header: "Message de construction par canal"
-guide_top_text: "Les canaux de messagerie sont des moyens de communiquer virtuellement avec vos clients par le biais de notifications push sur leur téléphone ou leur navigateur Web, courriel, messages dans l'application, et bien plus encore ! Si vous voulez en savoir plus sur ces canaux et comment les utiliser avec le Brésil, consultez les sections énumérées ci-dessous. Ou consultez nos cours LAB sur <a href='https://lab.braze.com/series/messaging-channels' target='_blank'>Chaînes de Messagerie</a>!"
+guide_top_text: "Les canaux de messagerie sont des moyens de communiquer virtuellement avec vos clients par le biais de notifications push sur leur téléphone ou leur navigateur Web, courriel, messages dans l'application, et bien plus encore ! Si vous voulez en savoir plus sur ces canaux et comment les utiliser avec le Brésil, consultez les sections énumérées ci-dessous. Ou consultez nos cours LAB sur <a href='https://lab.braze.com/series/messaging-channels' target='_blank'>Chaînes de Messagerie</a>!<br><br>Vous pouvez utiliser Braze pour créer des campagnes de messagerie accessibles sur chaque canal. Travaillez avec vos ingénieurs pour vous assurer que vous respectez les normes d'accessibilité dans votre implémentation."
 description: "Les canaux de messagerie sont des moyens de communiquer virtuellement avec vos clients par le biais de notifications push sur leur téléphone ou leur navigateur Web, courriel, messages dans l'application, et bien plus encore !"
 guide_featured_title: "Chaînes disponibles"
 guide_featured_list:
