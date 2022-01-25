@@ -100,14 +100,12 @@ Each webhook is allowed 90 seconds before it times out.
 
 ## IP whitelisting
 
-When a webhook is sent from Braze, the Braze servers make network requests to our customers or third parties servers.
+When a webhook is sent from Braze, the Braze servers make network requests to our customers or third parties servers. With IP whitelisting, you can verify that Webhooks requests are actually coming from Braze, adding an additional layer of security.
 
-With IP whitelisting, you can verify that Webhooks requests are actually coming from Braze, adding an additional layer of security.
-
-Braze will send Webhooks from the IP ranges below.
+Braze will send webhooks from the IP ranges below. The listed ranges are automatically and dynamically added to any API keys that have been opted-in for whitelisting.
 
 {% alert important %}
-  If you're making a Braze-to-Braze webhook and using whitelisting, you should whitelist all the IPs listed above, including `127.0.0.1`.
+If you're making a Braze-to-Braze webhook and using whitelisting, you should whitelist all the IPs listed below, including `127.0.0.1`.
 {% endalert %}
 
 | For Instances `US-01`, `US-02`, `US-03`, `US-04`, `US-05`, and `US-06`: |

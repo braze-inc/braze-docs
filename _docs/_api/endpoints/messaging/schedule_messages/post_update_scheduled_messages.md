@@ -20,7 +20,7 @@ The messages update schedule endpoint accepts updates to either the `schedule` o
 
 ## Rate limit
 
-{% include rate_limits.md endpoint='default' category='message endpoints' %}
+{% include rate_limits.md endpoint='default' %}
 
 ## Request body
 

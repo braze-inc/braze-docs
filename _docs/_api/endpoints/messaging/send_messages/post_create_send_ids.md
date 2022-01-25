@@ -20,7 +20,7 @@ Braze’s Send Identifier adds the ability to send messages and track message pe
 
 ## Rate limit
 
-{% include rate_limits.md endpoint='sends id create' category='message endpoints' %}
+{% include rate_limits.md endpoint='sends id create' %}
 
 ## Request body
 
