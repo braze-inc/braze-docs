@@ -13,7 +13,7 @@ Integrating with Braze is a worth-while process. But you're smart. you're __here
 
 But what you probably don't know was that you and your engineers or developers are about to go on a journey together that requires technical expertise, strategic planning, and consistent communication that will help you coordinate between the two!
 
-{% alert note %} Please note that this doesn't count for email. Check that out in the [Email Set Up Guide]({{site.baseurl}}/user_guide/onboarding_with_braze/email_setup/).{% endalert %}
+{% alert note %} Please note that the contents of this article don't apply for email. Check that out in the [Email Setup Guide]({{site.baseurl}}/user_guide/onboarding_with_braze/email_setup/).{% endalert %}
 
 ## The technical side of the integration process
 
@@ -48,8 +48,12 @@ Be sure to tell your engineers which channels you want to use to ensure that imp
 | In-App Messages | Requires SDK implementation as well as these channel-specific steps. |
 | News Feed | This works upon proper implementation and is SDK required. |
 | Push | Requires SDK implementation to provide proper handling around messaging credentials and push tokens. |
-| Email | This is an entirely different process. Check that out in [our Email Setup section]({{site.baseurl}}/user_guide/onboarding_with_braze/email_setup/). |
+| Email | This is an entirely different process. Check that out in our [Email Setup]({{site.baseurl}}/user_guide/onboarding_with_braze/email_setup/) section. |
 {: .reset-td-br-1 .reset-td-br-2}
+
+{% alert tip %}
+You can use Braze to create accessible messaging campaigns across each channel. Work with your engineers to ensure that you meet accessibility standards in your implementation.
+{% endalert %}
 
 ### Step 3: They set up your data
 
@@ -59,10 +63,10 @@ So, what do you need to do to get them this information?
 
 1. Work with your marketing team to define campaigns, goals, attributes, and events that you need to track. Define those use cases, share them with your teams.
 2. Define your Custom Data Requirements (Attributes, Events, etc.).
-3. From there, discuss [how that data should be tracked]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events/) (triggered through the SDK, etc.).
-4. Define how many [App Groups]({{site.baseurl}}/user_guide/administrative/app_settings/app_group_management/) you need. They'll need to know how to [test and configure]({{site.baseurl}}/developer_guide/platform_wide/app_group_configuration/) these.
+3. From there, discuss how that [data should be tracked]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events/) (triggered through the SDK, etc.).
+4. Define how many [app groups]({{site.baseurl}}/user_guide/administrative/app_settings/app_group_management/) you need. They'll need to know how to [test and configure]({{site.baseurl}}/developer_guide/platform_wide/app_group_configuration/) these.
 
-Once you discover all of this information, share it with your engineer. They'll take that information and implement your [Custom Data]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/pre-populating_custom_data/). You might even need to [import some users]({{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/user_import/). You should also be aware of [event naming conventions]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/event_naming_conventions/).
+Once you discover all of this information, share it with your engineer. They'll take that information and implement your [custom data]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/pre-populating_custom_data/). You might even need to [import some users]({{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/user_import/). You should also be aware of [event naming conventions]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/event_naming_conventions/).
 
 ### Step 4: They customize based on what you want
 
