@@ -99,14 +99,12 @@ Chaque webhook est autorisé 90 secondes avant son expiration.
 
 ## IP sur liste blanche
 
-Lorsqu'un webhook est envoyé depuis Braze, les serveurs Braze font des demandes de réseau à nos clients ou à des serveurs tiers.
+Lorsqu'un webhook est envoyé depuis Braze, les serveurs Braze font des demandes de réseau à nos clients ou à des serveurs tiers. Avec la whitelisting, vous pouvez vérifier que les requêtes Webhooks proviennent réellement de Braze, ajoutant une couche de sécurité supplémentaire.
 
-Avec la whitelisting, vous pouvez vérifier que les requêtes Webhooks proviennent réellement de Braze, ajoutant une couche de sécurité supplémentaire.
-
-Braze enverra des Webhooks depuis les plages IP ci-dessous.
+Braze enverra des webhooks depuis les plages IP ci-dessous. Les plages listées sont automatiquement et dynamiquement ajoutées à toutes les clés API qui ont été optées pour la liste blanche.
 
 {% alert important %}
-  Si vous faites un webhook Brase-to-Braze et que vous utilisez une liste blanche, vous devriez mettre en liste blanche toutes les adresses IP listées ci-dessus, y compris `127.0.0.1`.
+Si vous créez un webhook Braze-to-Braze et que vous utilisez une liste blanche, vous devriez ajouter toutes les adresses IP listées ci-dessous, y compris `127.0.0.1`.
 {% endalert %}
 
 | Pour les instances `US-01`, `US-02`, `US-03`, `US-04`, `US-05`et `US-06`: |
