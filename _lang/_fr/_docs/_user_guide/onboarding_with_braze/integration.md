@@ -12,7 +12,7 @@ L'intégration à Braze est un processus utile. « Mais vous êtes intelligent. 
 
 Mais ce que vous ne savez probablement pas, c'est que vous et vos ingénieurs ou vos développeurs êtes sur le point de partir ensemble pour un voyage qui nécessite une expertise technique, la planification stratégique et la communication cohérente qui vous aideront à vous coordonner entre les deux!
 
-{% alert note %} Veuillez noter que cela ne compte pas pour l'email. Vérifiez cela dans le [Guide de configuration des e-mails]({{site.baseurl}}/user_guide/onboarding_with_braze/email_setup/).{% endalert %}
+{% alert note %} Veuillez noter que le contenu de cet article ne s'applique pas à l'e-mail. Vérifiez cela dans le [Guide de configuration des e-mails]({{site.baseurl}}/user_guide/onboarding_with_braze/email_setup/).{% endalert %}
 
 ## Le côté technique du processus d'intégration
 
@@ -42,13 +42,17 @@ Braze a de nombreuses options pour entrer en contact avec vos clients/utilisateu
 
 Assurez-vous de dire à vos ingénieurs quels canaux vous voulez utiliser pour vous assurer que l'implémentation est effectuée efficacement et dans le bon ordre.
 
-| Chaîne           | Détails du produit                                                                                                                                                                 |
-| ---------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Messages In-App  | Nécessite l'implémentation du SDK ainsi que ces étapes spécifiques à chaque canal.                                                                                                 |
-| Flux d'actualité | Cela fonctionne sur une implémentation correcte et est un SDK nécessaire.                                                                                                          |
-| Pousser          | Nécessite une implémentation de SDK pour fournir une gestion adéquate des identifiants de messagerie et des jetons de push.                                                        |
-| Courriel         | Il s'agit d'un processus totalement différent. Vérifiez cela dans la section [de notre Configuration des E-mails]({{site.baseurl}}/user_guide/onboarding_with_braze/email_setup/). |
+| Chaîne           | Détails du produit                                                                                                                                                           |
+| ---------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Messages In-App  | Nécessite l'implémentation du SDK ainsi que ces étapes spécifiques à chaque canal.                                                                                           |
+| Flux d'actualité | Cela fonctionne sur une implémentation correcte et est un SDK nécessaire.                                                                                                    |
+| Pousser          | Nécessite une implémentation de SDK pour fournir une gestion adéquate des identifiants de messagerie et des jetons de push.                                                  |
+| Courriel         | Il s'agit d'un processus totalement différent. Vérifiez cela dans notre section [Configuration de l'e-mail]({{site.baseurl}}/user_guide/onboarding_with_braze/email_setup/). |
 {: .reset-td-br-1 .reset-td-br-2}
+
+{% alert tip %}
+Vous pouvez utiliser Braze pour créer des campagnes de messagerie accessibles sur chaque canal. Travaillez avec vos ingénieurs pour vous assurer que vous respectez les normes d'accessibilité dans votre implémentation.
+{% endalert %}
 
 ### Étape 3 : Ils configurent vos données
 
@@ -58,8 +62,8 @@ Alors, que faut-il faire pour obtenir ces informations ?
 
 1. Travaillez avec votre équipe de marketing pour définir des campagnes, des objectifs, des attributs et des événements que vous devez suivre. Définissez ces cas d'utilisation, partagez les avec vos équipes.
 2. Définissez vos exigences de données personnalisées (attributs, événements, etc.).
-3. À partir de là, discutez de la manière dont [ces données doivent être suivies]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events/) (déclenchées via le SDK, etc.).
-4. Définissez le nombre de [Groupes d'Applications]({{site.baseurl}}/user_guide/administrative/app_settings/app_group_management/) dont vous avez besoin. Ils auront besoin de savoir comment [tester et configurer ces éléments]({{site.baseurl}}/developer_guide/platform_wide/app_group_configuration/).
+3. À partir de là, discutez de la façon dont ces [données doivent être suivies]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events/) (déclenchées via le SDK, etc.).
+4. Définissez le nombre de [groupes d'applications]({{site.baseurl}}/user_guide/administrative/app_settings/app_group_management/) dont vous avez besoin. Ils auront besoin de savoir comment [tester et configurer ces éléments]({{site.baseurl}}/developer_guide/platform_wide/app_group_configuration/).
 
 Une fois que vous avez découvert toutes ces informations, partagez-les avec votre ingénieur. Ils prendront ces informations et mettront en œuvre vos [données personnalisées]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/pre-populating_custom_data/). Vous pourriez même avoir besoin de [importer des utilisateurs]({{site.baseurl}}/user_guide/data_and_analytics/user_data_collection/user_import/). Vous devez également être au courant des [conventions de nommage des événements]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/event_naming_conventions/).
 
