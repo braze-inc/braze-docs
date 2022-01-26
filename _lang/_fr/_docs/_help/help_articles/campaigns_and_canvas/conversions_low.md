@@ -11,21 +11,23 @@ tool:
 
 # Conversion de campagne ou de Canvas basse
 
-Vos conversions (lorsque votre utilisateur effectue une action dans le cadre de votre message que vous avez défini lors de la création de votre campagne) peuvent ne pas être aussi élevées que vous vous y attendez par rapport aux campagnes précédentes ou à vos attentes. Les conversions sont une entreprise délicate, mais elles dépendent de quelques fonctions simples sur notre plateforme : le suivi des événements et les délais de conversion.
+Les conversions se produisent lorsque votre utilisateur effectue une action dans votre message que vous avez défini lors de la création de votre campagne.
 
-Pour résoudre rapidement les problèmes, nous vous recommandons :
+Vos conversions peuvent ne pas être aussi élevées que vous ne vous attendez à ce qu'elles soient comparées aux campagnes précédentes ou à vos attentes. Les conversions sont une entreprise délicate, mais elles dépendent de quelques fonctions simples sur notre plateforme : le suivi des événements et les délais de conversion.
 
-* [Vérifier le suivi des événements](#ensure-the-event-is-tracking)
-* [Vérifier la date limite](#verify-the-deadline-to-convert)
+Pour résoudre rapidement les problèmes, nous vous recommandons de vérifier :
+
+* [Suivi des événements](#event-tracking)
+* [Échéances de conversion](#conversion-deadlines)
 
 
-## S'assurer que l'événement est en cours de suivi
+## Suivi des événements
 
 Lorsqu'une campagne déclenche un début de session ou un événement personnalisé, vous voulez vous assurer que cet événement ou la session se produit assez souvent pour déclencher le message. Vérifiez ces données sur les pages [Aperçu][1] (pour les données de session) ou [Événements personnalisés][2]:
 
 !\[Statistiques personnalisées des compteurs d'événements\]\[43\]
 
-## Vérifiez la date limite de conversion
+## Échéances de conversion
 
 Pour chaque événement de conversion que vous sélectionnez par campagne, vous avez fixé la [date limite][44]. Cela signifie que vous définissez une limite de temps dans laquelle une conversion doit avoir lieu pour qu'elle puisse être prise en compte dans chaque campagne.
 
