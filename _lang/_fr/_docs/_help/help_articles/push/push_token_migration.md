@@ -1,7 +1,7 @@
 ---
 nav_title: Migration des Push Tokens
 article_title: Migration des Push Tokens
-page_order: 1
+page_order: 2
 page_type: Solution
 description: "Cet article couvre la façon de migrer les jetons push afin que vous puissiez continuer à envoyer des messages push à vos utilisateurs après avoir basculé vers Braze."
 channel: Pousser
