@@ -102,19 +102,7 @@ Server-to-server integration does not support Braze UI features like in-app mess
 
 If you wish to use this data and these features, consider our [side-by-side]({{site.baseurl}}/partners/data_and_infrastructure_agility/customer_data_platform/tealium/#side-by-side-sdk-integration) SDK integration.
 
-### Step 1: Add a Braze connector in Tealium
-
-A connector is an integration between Tealium and another vendor used to transmit data. These connectors contain actions that represent their partner's supported APIs.
-
-1. From the left sidebar in Tealium under **Server-Side**, navigate to **EventStream > Event Connectors**. For visitor data connectors, go to **AudienceStream > Audience Connectors**.
-2. Select the blue **+ Add Connector** button to look through the connector marketplace. In the new dialogue box that appears, use the spotlight search to find the **Braze** connector.
-3. To add this connector, click the **Braze** connector tile. Once clicked, you can view the connection summary and a list of the required information, supported actions, and configuration instructions. Before configuring, you must set up a source in the next step. You will later return to this page to complete the configuration.
-
-### Step 2: Configure your connector settings
-
-The Braze Tealium connector setup comprises four steps: source, configuration, action, and summary.
-
-#### Step 2a: Set up source
+### Step 1: Set up a Source
 
 Tealium requires that you first set up a valid data source for your connector to draw from.
 1. From the left sidebar in Tealium under **Server-Side**, navigate to **Sources > Data Sources > + Add Data Source**.
@@ -132,13 +120,21 @@ Tealium requires that you first set up a valid data source for your connector to
 
 For further instruction on setting up and editing your data source, check out [Data soures](https://community.tealiumiq.com/t5/Customer-Data-Hub/Data-Sources/ta-p/17933).
 
-#### Step 2b: Configure Braze connector source
+### Step 2: Create an event connector
+
+A connector is an integration between Tealium and another vendor used to transmit data. These connectors contain actions that represent their partner's supported APIs. 
+
+1. From the left sidebar in Tealium under **Server-Side**, navigate to **EventStream > Event Connectors**.
+2. Select the blue **+ Add Connector** button to look through the connector marketplace. In the new dialogue box that appears, use the spotlight search to find the **Braze** connector.
+3. To add this connector, click the **Braze** connector tile. Once clicked, you can view the connection summary and a list of the required information, supported actions, and configuration instructions. Configuration comprises four steps: source, configuration, action, and summary.
+
+#### Source
 
 Once the source has been configured, navigate back to the Braze connector page under **EventStream > Event Connectors > + Add Conncetor > Braze**. 
 
 In the dialogue that opens, select the data source you just built, and under **Event Feed**, select **All Events** or a specific event spec, if needed. Click **Continue**.
 
-#### Step 2c: Select Braze connector
+#### Configuration
 
 Next, select **Add Connector** at the bottom of the page. You must name your connector and provide your Braze API endpoint and Braze REST API key here.
 
@@ -146,9 +142,9 @@ Next, select **Add Connector** at the bottom of the page. You must name your con
 
 If you have created a connector before, you may optionally use an existing one from the available connector list and modify it to fit your needs with the pencil icon or delete it with the trash icon. 
 
-#### Step 2d: Action
+#### Action
 
-Next, name your connector action and select an action type that will send data according to the mapping that gets configured. Here, you will map Braze attributes to Tealium attribute names. Depending on which action type you choose, there will be a varied selection of fields required by Tealium. Listed below are examples and explanations of these fields.
+Next, name your connector action and select an action type that will send data according to the mapping you configure. Here, you will map Braze attributes to Tealium attribute names. Depending on which action type you choose, there will be a varied selection of fields required by Tealium. Listed below are examples and explanations of these fields.
 
 {% alert important %}
 **Note that not all fields offered are required**. <br>If you wish to skip over a field, Tealium requires that you minimize it before continuing onto the next step.
@@ -189,7 +185,7 @@ This action allows you to delete users from the Braze dashboard.
 
 Select **Continue**.
 
-#### Step 2e: Summary
+#### Summary
 
 View the summary of the connector you created. If you would like to modify your chosen options, select **Back** to edit or **Finish** to complete.
 
@@ -197,7 +193,7 @@ View the summary of the connector you created. If you would like to modify your 
 
 Your connector now displays in the list of connectors on your Tealium home page. <br>![Connector][13]{: style="max-width:80%;"}
 
-Make sure to __Save / Publish__ your connector once finished. The actions you configured will now fire when the trigger connections are met. 
+Make sure to **Save / Publish** your connector once finished. The actions you configured will now fire when the trigger connections are met. 
 
 ### Step 3: Test your Tealium connector
 
@@ -214,15 +210,15 @@ For more detailed instructions on implementing Tealium's Trace tool, check out t
 
 There are three primary ways that you might accidentally hit data overages when integrating Braze through Tealium:
 
-#### **Insufficient data logging**
+#### Insufficient data logging
 Tealium does not send Braze deltas of user attributes. For example, if you have an EventStream action that tracks a user's first name, email, and cell phone number, Tealium will send all three attributes to Braze anytime the action is triggered. Tealium won't be looking for what changed or was updated and send only that information.<br><br> 
 **Solution**: <br>You can check your backend to assess whether an attribute has changed or not, and if so, call Tealium’s relevant methods to update the user profile. **This is what users who integrate Braze directly usually do.** <br>**OR**<br> If you don't store your own version of a user profile in your backend and can’t tell if attributes change or not, you can use AudienceStream to track user attribute changes.
 
-#### **Sending irrelevant data**
+#### Sending irrelevant data
 If you have multiple EventStreams that target the same event feed, **all actions enabled for that connector** will automatically fire anytime a single action is triggered, **this could also result in data being overwritten in Braze.**<br><br>
 **Solution**: <br>Set up a separate event specification or feed to track each action. <br>**OR**<br> Disable actions(or connectors) that you do not want to fire by using the toggles in the Tealium dashboard.
 
-#### **Initializing Braze too early**
+#### Initializing Braze too early
 Users integrating with Tealium using the Braze Web SDK tag may see a dramatic increase in their MAU. **If Braze is initialized on page load, Braze will create an anonymous profile every time a web user navigates to the website for the first time.** Some may want to only track user behavior once users have completed some action, such as "Signed In" or "Watched Video", to lower their MAU count. <br><br>
 **Solution**: <br>Set up load rules to determine exactly when and where a tag loads on your site. You can learn more about load rules and how to set them up in the [Tealium learning center](https://community.tealiumiq.com/t5/Customer-Data-Hub/Building-an-Audience/ta-p/11881).
 
