@@ -12,23 +12,23 @@ tool: Location
 
 Braze captures a user's most recent location by default via its SDK. This typically means that the "recent location" is the location from which your user most recently used your app. If you are sending Braze background location data, you may have more granular data available.
 
-If no users have available locations, there are two quick checks that may help you:
+If no users have available locations, there are two quick checks that may help you confirm:
 
-* [Confirm Data Collection](#confirm-data-collection)
-* [Confirm Data Transfer](#confirm-data-transfer)
+* [Data collection](#confirm-data-collection)
+* [Data transfer](#confirm-data-transfer)
 
-## Confirm data collection
+## Data collection
 
 Confirm that your app is collecting location data:
 
 - For iOS, this means that users opt-in to share their location data via a prompt at some point in the user journey. 
 - For Android, confirm that your app asks for fine or coarse location permissions at installation.
 
-In order to see whether user location data is being sent to Braze, use the “location available” filter. This filter will allow you to see the percentage of users for whom you have a “most recent location”.
+In order to see whether user location data is being sent to Braze, use the **Location Available** filter. This filter allows you to see the percentage of users for whom you have a “most recent location”.
 
-![trouble7][25]
+![Test location][25]
 
-## Confirm data transfer
+## Data transfer
 
 Confirm that your developers are passing location data to Braze. Normally, the passing of location data is handled automatically by the SDK once the user gives permissions, but it’s possible that your developers have disabled location tracking in Braze. More information on location tracking can be found for:
 - [Android][26]
