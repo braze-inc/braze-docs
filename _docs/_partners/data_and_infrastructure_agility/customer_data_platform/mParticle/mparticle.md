@@ -24,7 +24,7 @@ The Braze and mParticle integration allows you to seamlessly control the flow of
 
 | Requirement | Description |
 | ----------- | ----------- |
-| mParticle account | A [mParticle account](https://app.mparticle.com/login) is required to take advantage of this partnership. |
+| mParticle account | An [mParticle account](https://app.mparticle.com/login) is required to take advantage of this partnership. |
 {: .reset-td-br-1 .reset-td-br-2}
 
 ## Integration
