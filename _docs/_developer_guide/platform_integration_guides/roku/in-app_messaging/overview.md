@@ -13,13 +13,13 @@ description: "This reference article provides an overview of in-app messages, in
 
 [In-App Messages]({{site.baseurl}}/user_guide/message_building_by_channel/in-app_messages/) help you get content to your user without interrupting their day with a push notification. Customized and tailored in-app messages enhance the user experience and help your audience get the most value out of your app. With a variety of layouts and customization tools to choose from, in-app messages engage your users more than ever before.
 
-To see examples of in-app messages, check out our [Case Studies][31].
+To see examples of in-app messages, check out our [Case Studies][6].
 
 ![example][3]
 
 ## In-app message types
 
-Create an In-app message for Roku by selecting the Roku Devices platform.
+Create an In-app message for Roku by selecting __Roku Devices__.
 
 ![platform selector][4]
 
@@ -29,8 +29,13 @@ Please see our [technical documentation][5] for instructions on how to display I
 
 ![example][2]
 
+## Testing and QA
+
+The __Test Send__ feature is not supported for Roku In-app messages. To test a message, launch the campaign filtered to only your user ID.
+
 [1]: {% image_buster /assets/img/roku/Roku-In-App-Messages-Flow.png %}
 [2]: {% image_buster /assets/img/roku/Roku-In-App-Messages-Example.png %}
 [3]: {% image_buster /assets/img/roku/Docs-Imagery.png %}
 [4]: {% image_buster /assets/img/roku/1-Platform-Selector.png %}
 [5]: https://github.com/Appboy/appboy-roku-sdk#in-app-message-setup
+[6]: https://www.braze.com/customers
