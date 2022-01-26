@@ -18,9 +18,9 @@ L'intégration de Braze et Adobe CDP permet aux marques de se connecter et de ca
 
 | Exigences                       | Libellé                                                                                                                                                                                                      |
 | ------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| Compte Adobe                    | Vous devez avoir un compte Adobe actif pour utiliser leurs services avec Braze                                                                                                                               |
-| Clé d'API REST Braze            | Une clé API Braze REST avec les permissions `users.track`. <br><br> Ceci peut être créé dans le __tableau de bord Braze -> Console développeur -> Clé d'API REST -> Créer une nouvelle clé API__ |
-| Point de terminaison REST Braze | Votre URL de terminaison REST. Votre point de terminaison dépendra de l'URL de Braze pour votre instance.                                                                                                    |
+| Compte Adobe                    | Un [compte Adobe](https://account.adobe.com/) est requis pour profiter de ce partenariat.                                                                                                                    |
+| Braze clé API REST              | Une clé API Braze REST avec les permissions `users.track`. <br><br> Ceci peut être créé dans le __tableau de bord Braze -> Console développeur -> Clé d'API REST -> Créer une nouvelle clé API__ |
+| Point de terminaison REST Braze | Votre URL de terminaison REST. Votre point de terminaison dépendra de l'URL [Braze pour votre instance]({{site.baseurl}}/api/basics/#endpoints).                                                             |
 {: .reset-td-br-1 .reset-td-br-2}
 
 {% alert important %}
