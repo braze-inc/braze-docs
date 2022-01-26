@@ -20,13 +20,16 @@ Par défaut, Braze recueillera les [propriétés au niveau du périphérique](ht
 * AD_TRACKING_ACTIVÉ
 * ANDROID version
 * CARRIÈRE
-* ID de la mise en valeur du GOOGLE
 * Recommandé
 * LOCALE
 * MODEL
 * NOTIFICIATION ACTIVÉE
 * RÉSOLUTION
 * TIMEZONE
+
+{% alert note %}
+AD_TRACKING_ENABLED et TIMEZONE ne sont pas collectés s'ils sont nuls ou vides. GOOGLE_ADVERTISING_ID n'est pas collecté automatiquement par le SDK et doit être passé via `com.appboy.IAppboy.setGoogleAdvertisingId`.
+{% endalert %}
 
 Vous pouvez désactiver ou spécifier les propriétés que vous souhaitez collecter en les définissant en utilisant [`BrazeConfig.Builder. etDeviceObjectAllowlistEnabled()`](https://appboy.github.io/appboy-android-sdk/javadocs/com/braze/configuration/BrazeConfig.Builder.html#setDeviceObjectAllowlistEnabled-boolean-) et [`BrazeConfig.Builder.setDeviceObjectAllowlist()`](https://appboy.github.io/appboy-android-sdk/javadocs/com/braze/configuration/BrazeConfig.Builder.html#setDeviceObjectAllowlist-java.util.EnumSet-).
 
