@@ -15,19 +15,19 @@ search_tag: Partenaire
 {% include video.html id="06G0lxaSjgk" align="right" %}
 
 Amperity prend en charge la plateforme Braze en fournissant une vue unifiée de vos clients à travers sa plate-forme de données client et Braze. Cette intégration vous permet de :
-- __Synchroniser les segments de l'ampérité :__ Synchroniser les segments pour associer les données de l'Amperity à des comptes utilisateurs de Braze.
-- __Unifier les données :__ Unifier les données à travers diverses plateformes prises en charge par Amperity et Brésil.
-- __Envoyer des données d'Amperity via AWS S3 Buckets au Brésil :__ Utilisez une fonction Lambda sans serveur pour télécharger des segments d'utilisateurs d'Amperity sur votre seau AWS S3 qui affichera les données d'attribut utilisateur au Brésil.
-- __Télécharger manuellement les données d'Amperity au Brésil :__ Téléchargez manuellement les segments CSV de l'utilisateur sur la plateforme Braze via le tableau de bord.
+- Synchroniser les segments de l'Amperity : Synchroniser les segments pour mapper les données de l'utilisateur d'Amperity aux comptes utilisateur de Braze.
+- Données Unify : Unify data across various Amperity supported platform and Braze.
+- Envoyer des données d'Amperity via AWS S3 Buckets au Brésil : Utilisez une fonction Lambda sans serveur pour téléverser les segments des utilisateurs d'Amperity dans votre seau AWS S3 qui affichera les données des attributs utilisateurs au Brésil.
+- Téléchargez manuellement les données d'Amperity au Brésil : téléversez manuellement les segments CSV de l'utilisateur sur la plateforme Braze via le tableau de bord.
 
 ## Pré-requis
 
-| Exigences            | Origine  | Accès                                           | Libellé                                                                                 |
-| -------------------- | -------- | ----------------------------------------------- | --------------------------------------------------------------------------------------- |
-| Compte de l'Amperité | Amperité | [Amperité](https://amperity.com/request-a-demo) | Un compte d'Amperity est nécessaire pour mettre en place l'intégration d'Amperity-Braze |
-{: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
+| Exigences         | Libellé                                                                                                 |
+| ----------------- | ------------------------------------------------------------------------------------------------------- |
+| Compte d'ampérité | Un [compte d'ampérité](https://amperity.com/request-a-demo) est requis pour profiter de ce partenariat. |
+{: .reset-td-br-1 .reset-td-br-2}
 
-## Intégration de Braze et d'Amperity
+## Intégration
 
 ### Étape 1 : Créer un segment utilisateur d'ampérité
 
