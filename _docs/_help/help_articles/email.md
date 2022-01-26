@@ -3,6 +3,7 @@ page_order: 3
 nav_title: Email
 layout: dev_guide
 guide_top_header: "Email Help Articles"
+guide_top_text: "Check out the article below for steps on how to troubleshoot your Braze email campaigns. <br> Interested in the details of building personalized email messages with Braze? Check out the <a href='/docs/user_guide/message_building_by_channel/email/'>Email</a> section to learn more!"
 
 page_type: landing
 description: "This landing page is home to help articles related to common email issues."

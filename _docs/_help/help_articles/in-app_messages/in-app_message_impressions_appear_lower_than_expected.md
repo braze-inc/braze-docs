@@ -9,13 +9,13 @@ channel: in-app messages
 ---
 # Low in-app message impressions
 
-If your impressions are lower than you'd like them to be, we recommend that you:
+If your impressions are lower than you'd like them to be, we recommend that you check for:
 
-* [Check Segment](#segment-size)
-* [Check Changelogs](#segment-changelogs)
-* [Run Tests](#run-tests)
-* [Check Event Triggers](#event-triggers)
-* [Check Message Impressions](#message-impressions)
+* [Segment size](#segment-size)
+* [Changelogs](#segment-changelogs)
+* [Run tests](#run-tests)
+* [Event triggers](#event-triggers)
+* [Message impressions](#message-impressions)
 
 ## Segment size
 

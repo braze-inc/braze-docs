@@ -3,6 +3,7 @@ page_order: 4
 nav_title: In-App Messages
 layout: dev_guide
 guide_top_header: "In-App Message Help Articles"
+guide_top_text: "The help articles below provide troubleshoooting information for common issues with in-app messages. <br> For more information on customization and use cases, check out the articles in the <a href='/docs/api/basics/'>In-App Messages</a> section!"
 
 page_type: landing
 description: "This landing page is home to help articles related to common issues with in-app messages."
