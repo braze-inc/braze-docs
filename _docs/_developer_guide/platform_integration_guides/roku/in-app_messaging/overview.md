@@ -29,8 +29,8 @@ Please see our [technical documentation][5] for instructions on how to display I
 
 ![example][2]
 
-[1]: {% image_buster /assets/img/Roku In-App Messages Flow.png %}
-[2]: {% image_buster /assets/img/Roku In-App Messages Example.png %}
-[3]: {% image_buster /assets/img/Docs Imagery.png %}
+[1]: {% image_buster /assets/img/Roku-In-App-Messages-Flow.png %}
+[2]: {% image_buster /assets/img/Roku-In-App-Messages-Example.png %}
+[3]: {% image_buster /assets/img/Docs-Imagery.png %}
 [4]: {% image_buster /assets/img/1-Platform-Selector.png %}
 [5]: https://github.com/Appboy/appboy-roku-sdk#in-app-message-setup
