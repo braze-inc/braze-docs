@@ -7,8 +7,8 @@ guide_top_header: "Articles d'aide"
 guide_top_text: "Nous avons beaucoup d'articles d'aide qui peuvent vous aider à résoudre les problèmes et à révéler les dépendances dans vos campagnes. Si vous avez une suggestion pour un nouvel article d'aide, laissez vos commentaires au bas de cette page ou de tout article d'aide. Ou, vous pouvez écrire un article vous-même en allant dans le dépôt <a href='https://github.com/braze-inc/braze-docs/wiki'>Braze Docs</a> sur GitHub. <br> <br>  Choisissez parmi les sujets populaires ci-dessous ou consultez d'autres articles listés dans le panneau de navigation à votre gauche."
 page_type: atterrissage
 description: "Cette section contient des articles qui peuvent vous aider à résoudre les problèmes et révéler les dépendances dans vos campagnes."
-guide_menu_title: "Sujets populaires"
-guide_menu_list:
+guide_featured_title: "Sujets"
+guide_featured_list:
   - 
     name: Compte client
     link: /fr/docs/help/help_articles/account/
