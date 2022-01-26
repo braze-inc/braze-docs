@@ -13,9 +13,9 @@ platform: API
 Lorsque vous [supprimez un utilisateur via l'API REST de Braze]({{site.baseurl}}/api/endpoints/user_data/#user-delete-endpoint), cela se produit :
 
 - Le nombre d'utilisateurs à vie (c'est-à-dire "Utilisateurs") sera mis à jour pour tenir compte des utilisateurs nouvellement supprimés.
-- Le __profil utilisateur complet__ sera supprimé.
-- L'utilisateur supprimé __comptera toujours__ pour le pourcentage de conversion agrégé.
+- L'ensemble du profil de l'utilisateur sera supprimé.
+- L'utilisateur supprimé sera toujours compté dans le pourcentage de conversion agrégé.
 
-Cependant, le nombre d’événements personnalisés et le nombre d’achats ne seront pas mis à jour pour les utilisateurs supprimés.
+Le nombre d’événements personnalisés et le nombre d’achats ne seront pas mis à jour pour les utilisateurs supprimés.
 
 _Dernière mise à jour le 8 octobre 2019_
