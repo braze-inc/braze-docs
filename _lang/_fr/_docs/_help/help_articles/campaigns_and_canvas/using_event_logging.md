@@ -8,25 +8,25 @@ description: "Cet article d'aide décrit comment utiliser la journalisation des 
 
 # Utiliser la journalisation des événements
 
-Le journal des utilisateurs des événements vous aide à résoudre tous les problèmes liés à votre intégration à Braze.
+Le [Event User Log][1] vous aide à résoudre tous les problèmes liés à votre intégration à Braze.
 
-Deux étapes particulièrement utiles sont :
-* [Mise en place d'un profil anonyme](#setting-up-an-anonymous-profile)
-* [Configuration de la journalisation des événements](#using-event-logging)
+Deux étapes particulièrement utiles sont mises en place :
+* [Un profil anonyme](#setting-up-an-anonymous-profile)
+* [Journal des événements](#using-event-logging)
 
 ## Mise en place d'un profil anonyme
 
-Pour plus d'informations sur la mise en place d'un profil anonyme à tester au Brésil, consultez le [Journal des utilisateurs d'événements][46] ou la section [Test User][51] du Guide de l'utilisateur.
+Pour configurer un profil anonyme, consultez cet article sur [l'ajout d'utilisateurs de test][2]
 
 ## Utiliser la journalisation des événements
 
-Utilisez Event Logging pour tester à quoi ressemble un utilisateur anonyme. Cela peut également être utile lorsque l'application que vous testez ne collecte pas d'e-mail et que vous avez du mal à trouver l'ID d'utilisateur. Vous pouvez utiliser Braze avec l'adresse IP de votre appareil pour ajouter cet appareil en tant qu'utilisateur de test.
+Utilisez Event Logging pour tester à quoi ressemble un utilisateur anonyme. Cela peut être particulièrement utile pour trouver l'ID de l'utilisateur si l'application en cours de test ne collecte pas les e-mails. Vous pouvez utiliser Braze avec l'adresse IP de votre appareil pour ajouter cet appareil en tant qu'utilisateur de test.
 
-C'est un excellent moyen de trouver des utilisateurs anonymes. Vous pouvez également utiliser ces informations pour vérifier quelles données sont envoyées à Braze et vérifier les éventuelles anomalies. De ce point de vue, vous pouvez également identifier si les deltas de vos données sont envoyés à Braze. Si une adresse e-mail ou un jeton push est envoyé avec chaque événement enregistré qui indique que toutes les données sont envoyées à Braze.
+C'est un excellent moyen de trouver des utilisateurs anonymes. Vous pouvez également utiliser ces informations pour vérifier quelles données sont envoyées à Braze et vérifier s'il y a des divergences. De ce point de vue, vous pouvez identifier si les deltas de vos données sont envoyées à Braze. Si une adresse e-mail ou un jeton push est envoyé avec chaque événement enregistré, toutes les données sont envoyées à Braze.
 
 Vous avez encore besoin d'aide ? Ouvrez un ticket de support []({{site.baseurl}}/braze_support/).
 
 _Dernière mise à jour le 27 mars 2019_
 
-[46]: {{site.baseurl}}/user_guide/administrative/app_settings/developer_console/event_user_log_tab/#event-user-log-tab
-[51]: {{site.baseurl}}/user_guide/administrative/app_settings/developer_console/internal_groups_tab/#adding-test-users
+[1]: {{site.baseurl}}/user_guide/administrative/app_settings/developer_console/event_user_log_tab
+[2]: {{site.baseurl}}/user_guide/administrative/app_settings/developer_console/internal_groups_tab/#adding-test-users
