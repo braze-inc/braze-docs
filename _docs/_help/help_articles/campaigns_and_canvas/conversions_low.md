@@ -12,21 +12,23 @@ tool:
 
 # Low campaign or Canvas conversions
 
-Your conversions (when your user performs an action within your message that you defined during the creation of your campaign) might not be as high as you expect them to be when compared to previous campaigns or your expectations. Conversions are a tricky business, but they are dependent on a few simple functions in our platform: event tracking and conversion deadlines.
+Conversions occur when your user performs an action within your message that you defined during the creation of your campaign.
 
-To quickly troubleshoot why that is, we recommend that you:
+Your conversions might not be as high as you expect them to be when compared to previous campaigns or your expectations. Conversions are a tricky business, but they are dependent on a few simple functions in our platform: event tracking and conversion deadlines.
 
-* [Check Event Tracking](#ensure-the-event-is-tracking)
-* [Verify Deadline](#verify-the-deadline-to-convert)
+To quickly troubleshoot why that is, we recommend that you check:
+
+* [Event tracking](#event-tracking)
+* [Conversion deadlines](#conversion-deadlines)
 
 
-## Ensure the event is tracking
+## Event tracking
 
 When a campaign triggers a session start or custom event, you want to ensure that this event, or session is happening frequently enough to trigger the message. Check this data on the [Overview][1] (for session data) or [Custom Events][2] pages:
 
 ![Custom Event Counts Statistic][43]
 
-## Verify the deadline to convert
+## Conversion deadlines
 
 For each conversion event that you select per campaign, you set the [deadline][44]. This means you are setting a time limit within which a conversion must happen in order for it to count towards each respective campaign.
 
