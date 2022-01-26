@@ -8,7 +8,7 @@ page_type: partenaire
 search_tag: Partenaire
 tool: Courants
 ---
-
+ 
 # Mixpanel pour les courants
 
 > [Mixpanel](https://mixpanel.com/) est une plateforme d'analyse commerciale qui vous permet d'exporter des événements de Mixpanel vers d'autres plates-formes pour effectuer une analyse plus approfondie. Les données collectées peuvent ensuite être utilisées pour construire des rapports personnalisés et mesurer l'engagement et la rétention des utilisateurs.
