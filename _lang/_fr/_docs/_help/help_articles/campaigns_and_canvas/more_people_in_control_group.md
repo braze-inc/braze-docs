@@ -11,23 +11,13 @@ tool: Toile
 
 Lors de la création de votre Canvas, vous avez pu vous attendre à ce que votre public se répartisse équitablement entre votre groupe de contrôle et votre groupe de variantes, comme dans [notre exemple](#example) ci-dessous. Nous pouvons expliquer pourquoi c'est et comment le corriger !
 
-Le groupe qu'un utilisateur rejoint (soit le groupe de contrôle ou le groupe de variantes) dépend de ses paramètres. Un utilisateur entrera dans un Canevas lorsqu'il répondra à tous vos critères définis à l'étape \[Étape d'entrée\]\[1\]. Lors de la configuration de votre Canvas, vous définissez le pourcentage d'utilisateurs qui entreront dans chaque variante et le groupe de contrôle.
+Le groupe auquel un utilisateur adhère dépend de ses paramètres. Cela peut être soit le groupe de contrôle soit le groupe de variantes. Un utilisateur entrera dans un Canevas lorsqu'il répondra à tous vos critères définis à l'étape \[Étape d'entrée\]\[1\]. Lors de la configuration de votre Canvas, vous définissez le pourcentage d'utilisateurs qui entreront dans chaque variante et le groupe de contrôle.
 
-Si votre groupe de contrôle est grand par rapport à votre groupe de variantes (et ce n'est pas votre intention), nous vous recommandons de :
-
-* [Définir le statut de Push de l'entrée](#set-entry-audience-push-status)
-* [Définir le statut de l'e-mail de saisie](#set-entry-audience-email-status)
+Si votre groupe de contrôle est grand par rapport à votre groupe de variantes (et ce n'est pas votre intention), nous vous recommandons les éléments suivants :
+1. Définissez le filtre d'audience de votre entrée à "Est Push activé".
+2. Définissez le filtre d'audience de votre entrée à "est choisi ou abonné".
 
 Lors de la création d'une toile avec un groupe de contrôle, assurez-vous que tous les utilisateurs de l'audience d'entrée sont en mesure de recevoir des messages dans la toile (i. Le Canvas contient des messages push et email).
-
-## Définir le statut push de l'audience d'entrée
-
-Définissez le filtre d'audience de votre entrée à "Est Push activé".
-
-## Définir le statut de l'auditoire
-
-Définissez le filtre d'audience de votre entrée à "est choisi ou abonné".
-
 
 ## Exemple
 
