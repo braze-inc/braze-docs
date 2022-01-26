@@ -57,9 +57,12 @@ For example, let's say you wanted to send a group of users ads for new products.
 
 When users enter this Audience Paths Step, they will first be evaluated if they fall under the highest-ranked audience group, audience group 1 "Likes Big Brand Shoes". If so, they will continue to the next step defined in your Canvas. If that user did not "Like Big Brand Shoes", they will then be evaluated for the next audience group, which would be audience group 2 "Likes Big Brand", and will commence to the next Canvas step if the criteria are met. Lastly, for users that fail to fall into the previous groups, they would fall into the **Everybody Else** group and would continue onto the next Canvas step you define for that path.
 
+You can also see the performance of this step using [Canvas analytics][5].
+
 [0]: {% image_buster /assets/img/audience_path/audience_path.png %}
 [1]: {% image_buster /assets/img/audience_path/audience_path1.png %}
 [1]: {% image_buster /assets/img/audience_path/audience_path1.png %}
 [2]: {% image_buster /assets/img/audience_path/audience_path2.png %}
 [3]: {% image_buster /assets/img/audience_path/audience_path3.png %}
 [4]: {% image_buster /assets/img/audience_path/audience_path4.png %}
+[5]: {{site.baseurl}}/user_guide/engagement_tools/canvas/testing_canvases/measuring_and_testing_with_canvas_analytics/#performance-visualization
