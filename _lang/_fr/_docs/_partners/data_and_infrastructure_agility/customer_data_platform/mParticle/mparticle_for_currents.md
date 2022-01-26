@@ -11,29 +11,38 @@ search_tag: Partenaire
 
 # mParticule pour les courants
 
-{% include video.html id="Njhqwd36gZM" align="right" %}
-
 > [mParticle](https://www.mparticle.com) est une plate-forme de données client qui collecte et achemine des informations à partir de sources multiples vers une variété d'autres emplacements de votre pile marketing.
 
-Pour commencer, vous devez obtenir la __mParticle Server to Server Key__ et __mParticle Server to Server Secret__. Celles-ci peuvent être obtenues en accédant à votre tableau de bord mParticle et en créant les flux nécessaires qui permettent à mParticle de recevoir des données d'interaction Braze pour iOS, Android, et plateformes Web. Une fois obtenue, la clé et le secret doivent être ajoutés à la page d'intégration mParticules des courants de Braze.
+L'intégration de Braze et mParticle vous permet de contrôler de façon transparente le flux d'informations entre les deux systèmes. Avec les courants, vous pouvez également connecter des données à mParticle pour le rendre utilisable sur toute la pile de croissance.
 
-## Intégration des courants mParticule
-### Créer des flux
+## Pré-requis
 
-Dans le tableau de bord mParticle, vous devez créer un flux par plateforme (iOS, Android, Web). mParticle propose également un flux non lié pour des événements tels que les e-mails, qui ne sont pas connectés à une plateforme d'application.
+| Exigences                                                                       | Libellé                                                                                                                                                                                                                                                  |
+| ------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| compte mParticule                                                               | Un [compte mParticle](https://app.mparticle.com/login) est requis pour profiter de ce partenariat.                                                                                                                                                       |
+| Courants                                                                        | Afin d'exporter les données vers Mixpanel, vous devez avoir [Braze Currents]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/#access-currents) configuré pour votre compte.                                                                |
+| mParticle server à la clé de serveur<br><br>mParticle server secret | Celles-ci peuvent être obtenues en naviguant sur votre tableau de bord mParticle et en créant les [flux nécessaires](#step-1-create-feeds) qui permettent à mParticle de recevoir des données d'interaction Braze pour iOS, Android, et plateformes Web. |
+{: .reset-td-br-1 .reset-td-br-2}
 
-0. Depuis votre compte mParticle Admin, accédez à __Entrées__ sous __Configuration__.<br><br>
-1. Localisez __Braze__ dans le répertoire mParticule ____ et ajoutez l'intégration des flux.<br><br>
-2. L'intégration de Braze Feed prend en charge quatre flux distincts : iOS, Android, Web et Unbound. Vous devrez créer une entrée pour chaque flux. Vous pouvez créer des entrées supplémentaires à partir de __Configuration > Entrées__, dans l'onglet __Configurations de flux__ . \[mParticle Settings\]\[1\]<br><br>Pour chaque flux, sous "Act as Platform" sélectionnez l'option appropriée dans la liste. Si vous ne voyez pas d'option pour sélectionner un flux "act-as", les données seront traitées comme déliées, mais peut toujours être transmise aux sorties d'entrepôt de données.<br>!\[mParticle Settings\]\[2\]{: style="max-width:30%;"} !\[mParticle Settings\]\[3\]{: style="max-width:28%;"}<br><br>
-3. Au fur et à mesure que vous créez chaque entrée, mParticle vous fournira une clé et un secret. Copiez ces identifiants, en vous assurant de savoir à quel flux chaque paire d’identifiants est utilisée.
+## Intégration
 
-### Terminer l'intégration de mParticle
-Pour commencer, accédez au tableau de bord de Braze et sélectionnez __courants__ sous Intégrations. Ensuite, créez un nouveau courant et sélectionnez __mParticle Data Export Export__. Ici, vous devez sélectionner les applications pour lesquelles vous souhaitez effectuer le suivi des événements et fournir les informations suivantes pour chaque flux que vous avez créé :
+### Étape 1 : Créer des flux
 
--   mPartiticle Server to Server Key
--   mPartiticle Server to Server Secret
+Depuis votre compte administrateur mParticle, accédez à __Configuration > Entrées__. Trouvez __Braze__ dans le répertoire mParticule ____ et ajoutez l'intégration du flux.
 
-Ajoutez ces informations à la page d'intégration mParticule sur le tableau de bord, et appuyez sur __Lancer le__.
+L'intégration du flux de Braze prend en charge quatre flux distincts : iOS, Android, Web et Unbound. Le flux non lié peut être utilisé pour des événements tels que les e-mails qui ne sont pas connectés à une plate-forme. Vous devrez créer une entrée pour chaque flux principal de la plateforme. Vous pouvez créer des entrées supplémentaires à partir de __Configuration > Entrées__, dans l'onglet __Configurations de flux__.
+
+!\[mParticle Settings\]\[1\]
+
+Pour chaque flux, sous __Act as Platform__ sélectionnez la plate-forme correspondante dans la liste. Si vous ne voyez pas d'option pour sélectionner un flux __act-as__ , les données seront traitées comme non liées, mais peuvent toujours être transmises aux sorties d'entrepôt de données.
+
+!\[mParticle Settings\]\[2\]{: style="max-width:40%;"} !\[mParticle Settings\]\[3\]{: style="max-width:37%;"}
+
+Lors de la création de chaque entrée, mParticle vous fournira une clé et un secret. Copiez ces identifiants, en vous assurant de savoir à quel flux chaque paire d’identifiants est utilisée.
+
+### Étape 2 : Créer un courant
+
+En Brésil, accédez à **courants > + Créer Courant > Créer Exportation mParticule**. Fournissez un nom d'intégration, un courriel de contact et la clé API mParticle et une clé secrète mParticle pour chaque plateforme. Ensuite, sélectionnez les événements que vous souhaitez suivre. Une liste des événements disponibles est fournie ci-dessous. Enfin, cliquez sur **Lancer le**
 
 ![mParticule]({% image_buster /assets/img_archive/currents-mparticle-edit.png %})
 
@@ -43,7 +52,7 @@ Il est important de garder votre clé API mParticle et mParticle Secret Key à j
 
 Tous les événements envoyés à mParticle incluront le `external_user_id de l'utilisateur` en tant que `customerid`. En ce moment, Braze n'envoie pas de données d'événement pour les utilisateurs qui n'ont pas leur `external_user_id`.
 
-### Détails de l'intégration
+## Détails de l'intégration
 
 Vous pouvez exporter les données suivantes de Braze vers mParticle:
 
