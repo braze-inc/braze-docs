@@ -11,27 +11,38 @@ search_tag: Partenaire
 
 # Segment pour les courants
 
-{% include video.html id="RfOHfZ34hYM" align="right" %}
+> [Segment](https://segment.com) est une plate-forme de données client qui vous aide à collecter, nettoyer et activer vos données client. Cet article donnera un aperçu de la relation entre les courants de Braze et le segment et décrira les exigences et les processus de mise en œuvre et d'utilisation appropriées.
 
-> [Segment](https://segment.com) est une plate-forme de données client qui collecte et achemine des informations à partir de sources multiples vers une variété d'autres emplacements de votre pile marketing.
+L'intégration de Braze et Segment vous permet de tirer parti des courants de Braze pour exporter vos événements Braze vers Segment pour approfondir l'analyse des conversions, conservation et utilisation du produit.
 
-## Détails de l'intégration
+## Pré-requis
+
+| Exigences            | Libellé                                                                                                                                                                                                                                                                                                                                                                                                                                                                               |
+| -------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Compte de segment    | Un [compte de segment](https://app.segment.com/login) est requis pour tirer parti de ce partenariat.                                                                                                                                                                                                                                                                                                                                                                                  |
+| Destination du Braze | Vous devez avoir déjà [configuré Braze comme destination]({{site.baseurl}}/partners/data_and_infrastructure_agility/customer_data_platform/segment/segment/#connection-settings/) dans votre intégration de segment.<br><br>Cela inclut la fourniture du centre de données Braze correct et de la clé API REST dans vos [paramètres de connexion]({{site.baseurl}}/partners/data_and_infrastructure_agility/customer_data_platform/segment/segment/#connection-settings). |
+| Courants             | Afin d'exporter les données vers Mixpanel, vous devez avoir [Braze Currents]({{site.baseurl}}/user_guide/data_and_analytics/braze_currents/#access-currents) configuré pour votre compte.                                                                                                                                                                                                                                                                                             |
+{: .reset-td-br-1 .reset-td-br-2}
+
+## Intégration
 
 ### Étape 1 : Obtenir une clé d'écriture de segment
 
-1. Pour commencer, trouvez la __Segment Write Key__ dans votre tableau de bord de segment.
-2. Sur le tableau de bord de Braze, accédez à __courants__ sous __Intégrations__ et créez un __Export de données de segments__.
-3. Ajouter la clé d'écriture du segment dans le champ __clé API__.
+1. Dans le tableau de bord de votre segment, sélectionnez la source de votre segment. Ensuite, allez dans __Paramètres > Clés API__. Vous trouverez ici la __clé d'écriture du segment__.
+2. Au Brésil, accédez à **courants > + Créer des courants > Créer des segments d'exportation**.
+3. Ensuite, fournissez un nom d'intégration, un courriel de contact et une clé d'écriture de segment.
 
-!\[Segment\]\[1\]
+!\[Paramètres actuels du segment\]\[1\]
 
 {% alert warning %}
-Il est important de garder votre clé API de segment à jour. Si les identifiants de votre connecteur expirent, le connecteur arrêtera d'envoyer des événements. Si cela persiste plus de **48 heures**, les événements du connecteur seront supprimés et les données seront définitivement perdues.
+Il est important de garder votre clé à jour. Si les identifiants de votre connecteur expirent, le connecteur arrêtera d'envoyer des événements. Si cela persiste plus de **48 heures**, les événements du connecteur seront supprimés et les données seront définitivement perdues.
 {% endalert %}
 
 ### Étape 2 : Exporter les événements d'engagement de messages
 
 Ensuite, sélectionnez les événements d'engagement de message que vous souhaitez exporter. Référez-vous à la table des événements d'exportation et des propriétés listée ci-dessous. Tous les événements envoyés au segment incluront le `external_user_id de l'utilisateur` en tant que `userId`. En ce moment, Braze n'envoie pas de données d'événement pour les utilisateurs qui n'ont pas leur `external_user_id`.
+
+!\[Événements d'engagement de segments\]\[2\]
 
 Enfin, sélectionnez __Lancer le__.
 
@@ -39,14 +50,12 @@ Enfin, sélectionnez __Lancer le__.
 Si vous avez l'intention de créer plus d'un des mêmes connecteurs de courant (par exemple, deux connecteurs d'événements d'engagement de messages), ils doivent être dans différents groupes d'applications. Parce que l'intégration des courants de segment de Braze ne peut pas isoler les événements par différentes applications dans un seul groupe d'applications, si vous ne le faites pas, cela entraînera une perte inutile de données et une perte de données.
 {% endalert %}
 
-!\[Segment\]\[2\]
-
 Pour en savoir plus, visitez la documentation [Segments](https://segment.com/docs/sources/cloud-apps/appboy/).
 
 ## Configuration des données
 
 {% tabs %}
-{% tab Export Events %}
+{% tab Export events %}
 
 Vous pouvez exporter les données suivantes de Braze vers Segment:
 
@@ -89,7 +98,7 @@ Vous pouvez exporter les données suivantes de Braze vers Segment:
 {: .reset-td-br-1 .reset-td-br-2}
 
 {% endtab %}
-{% tab Export Properties %}
+{% tab Export properties %}
 
 Les propriétés suivantes seront incluses avec tous les événements Braze envoyés à Segment:
 
@@ -109,22 +118,21 @@ Les propriétés suivantes seront incluses avec tous les événements Braze envo
 
 Les propriétés suivantes seront incluses avec les événements spécifiques de Braze envoyés à Segment:
 
-| Nom de la propriété            | Type de texte          | Libellé                                                                                                                                                                                                                                                                                                                                                        |
-| ------------------------------ | ---------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `Groupe in_contrôle_in_`       | `Chaîne de caractères` | Pour les événements Canvas Entré , que l'utilisateur soit inscrit ou non dans le groupe de contrôle - toujours `true` ou `false`                                                                                                                                                                                                                               |
-| `Caractéristiques du contexte` | `Chaîne de caractères` | Pour les événements de courriel, l'adresse e-mail à laquelle l'e-mail a été envoyé.                                                                                                                                                                                                                                                                            |
-| `URL du lien`                  | `Chaîne de caractères` | Pour les événements Courriel cliqués, l'URL du lien sur lequel l'utilisateur a cliqué.                                                                                                                                                                                                                                                                         |
-| `ID du bouton`                 | `Chaîne de caractères` | Pour le message In-App Clicked events, l'index du bouton sur lequel l'utilisateur a cliqué.                                                                                                                                                                                                                                                                    |
-| `id de la carte`               | `Chaîne de caractères` | Pour les événements de la carte de flux d'actualité et de la carte de contenu, l'identifiant API de la carte.                                                                                                                                                                                                                                                  |
-| `ID de groupe d'abonnement`    | `Chaîne de caractères` | Pour les événements de changement d'état du groupe d'abonnement, l'identifiant de l'API du groupe d'abonnement.                                                                                                                                                                                                                                                |
-| `Statut de l'abonnement`       | `Chaîne de caractères` | Pour les événements changés d'état de groupe d'abonnement, le statut de l'utilisateur a été modifié, soit `abonné` ou `désabonné`.                                                                                                                                                                                                                             |
-| `Agent utilisateur`            | `Chaîne de caractères` | Pour les courriels Click, Courriel Ouvert, et Email MarkAsSpam événements, description du système de l'utilisateur et navigateur pour l'événement.                                                                                                                                                                                                             |
-| `lien_id`                      | `Chaîne de caractères` | Pour les événements de clic de courriel, valeur unique générée par Braze pour l'URL.                                                                                                                                                                                                                                                                           |
-| `link_alias`                   | `Chaîne de caractères` | Pour les événements de clic de courriel, le nom de l'alias a été défini lors de l'envoi du message.                                                                                                                                                                                                                                                            |
-| `ouvrir_machine`               | `Chaîne de caractères` | Pour les événements de messagerie ouverte, indicateur indiquant si le courrier électronique a été ouvert par un processus automatisé, comme Apple ou Google mail pré-extraction. Actuellement `vrai` ou nul, mais granularité supplémentaire (par ex. "Apple" ou "Google" pour indiquer quel processus a fait la récupération) peut être ajouté dans le futur. |
+| Nom de la propriété            | Type de texte          | Libellé                                                                                                                                                                                                                                                                                                                                           |
+| ------------------------------ | ---------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `Groupe in_contrôle_in_`       | `Chaîne de caractères` | Pour les événements Canvas Entré , que l'utilisateur soit inscrit ou non dans le groupe de contrôle - toujours `true` ou `false`                                                                                                                                                                                                                  |
+| `Caractéristiques du contexte` | `Chaîne de caractères` | Pour les événements de courriel, l'adresse e-mail à laquelle l'e-mail a été envoyé.                                                                                                                                                                                                                                                               |
+| `URL du lien`                  | `Chaîne de caractères` | Pour les événements Courriel cliqués, l'URL du lien sur lequel l'utilisateur a cliqué.                                                                                                                                                                                                                                                            |
+| `ID du bouton`                 | `Chaîne de caractères` | Pour le message In-App Clicked events, l'index du bouton sur lequel l'utilisateur a cliqué.                                                                                                                                                                                                                                                       |
+| `id de la carte`               | `Chaîne de caractères` | Pour les événements de la carte de flux d'actualité et de la carte de contenu, l'identifiant API de la carte.                                                                                                                                                                                                                                     |
+| `ID de groupe d'abonnement`    | `Chaîne de caractères` | Pour les événements de changement d'état du groupe d'abonnement, l'identifiant de l'API du groupe d'abonnement.                                                                                                                                                                                                                                   |
+| `Statut de l'abonnement`       | `Chaîne de caractères` | Pour les événements changés d'état de groupe d'abonnement, le statut de l'utilisateur a été modifié, soit `abonné` ou `désabonné`.                                                                                                                                                                                                                |
+| `Agent utilisateur`            | `Chaîne de caractères` | Pour les courriels Click, Courriel Ouvert, et Email MarkAsSpam événements, description du système de l'utilisateur et navigateur pour l'événement.                                                                                                                                                                                                |
+| `lien_id`                      | `Chaîne de caractères` | Pour les événements de clic de courriel, valeur unique générée par Braze pour l'URL.                                                                                                                                                                                                                                                              |
+| `link_alias`                   | `Chaîne de caractères` | Pour les événements de clic de courriel, le nom de l'alias a été défini lors de l'envoi du message.                                                                                                                                                                                                                                               |
+| `ouvrir_machine`               | `Chaîne de caractères` | Pour les événements de messagerie ouverte, indicateur indiquant si le courriel a été ouvert par un processus automatisé, comme Apple ou Google mail pré-extraction. Actuellement `vrai` ou nul, mais granularité supplémentaire (par ex. "Apple" ou "Google" pour indiquer quel processus a fait la récupération) peut être ajouté dans le futur. |
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3}
-
 
 {% endtab %}
 {% endtabs %}
-[1]: {% image_buster /assets/img_archive/currents-segment-edit.png %} [2]: {% image_buster /assets/img/segment/segment_currents.png %}
+[1]: {% image_buster /assets/img/segment/segment_currents1.png %} [2]: {% image_buster /assets/img/segment/segment_currents.png %}
