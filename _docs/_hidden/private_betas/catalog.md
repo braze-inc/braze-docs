@@ -6,7 +6,7 @@ hidden: true
 
 # Catalogs
 
-You can use catalogs to reference non-user data in your Braze campaigns through Liquid.
+You can use catalogs to reference non-user data in your Braze campaigns through Liquid.
 
 To do so, first import your catalog (a CSV of non-user data) into Braze, and then access that information to enrich your messages. You can bring in any type of data into a catalog. This data is typically some sort of metadata from your company such as product information for an eCommerce business, or course information for an education provider.
 
@@ -46,6 +46,14 @@ After you've created your CSV, navigate to the **Catalogs** page and upload the 
 After successfully uploading your catalog, the catalog displays in a list below the upload zone. Each catalog has an associated catalog ID—a 24 digit alphanumeric code. Keep that ID handy, you'll need it in the next step.
 
 ![Example catalog ID and associated CSV files in a list below the upload zone][2]
+
+## Updating a catalog
+
+If you need to update an existing catalog, you can do so by replacing your catalog with a new version. To do so, click <i class="fas fa-sync-alt"> **Replace Catalog**</i> from the **Catalogs** page and upload your new CSV.
+
+![Replace existing catalog][8]
+
+When you replace a catalog, all content and headers in the catalog will be replaced, but the catalog ID will not change. This allows you to update catalog content without needing to go into your existing messages and update the referenced catalog IDs.
 
 ## Using catalogs in a message
 
@@ -270,5 +278,6 @@ The following limitations apply to using filtered sets in catalogs:
 [5]: {% image_buster /assets/img_archive/catalog_CSV_example.png %}
 [6]: {% image_buster /assets/img_archive/catalog_filtered_csv.png %}
 [7]: {% image_buster /assets/img_archive/catalog_filtered_example.png %}
+[8]: {% image_buster /assets/img_archive/catalog_replace.png %}
 
 [10]: {{site.baseurl}}/user_guide/personalization_and_dynamic_content/liquid/using_liquid/#assigning-variables

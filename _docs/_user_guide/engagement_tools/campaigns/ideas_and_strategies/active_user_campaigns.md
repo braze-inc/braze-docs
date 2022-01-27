@@ -3,7 +3,7 @@ nav_title: Active User Campaigns
 article_title: Active User Campaigns
 page_order: 0
 page_type: tutorial
-description: "This how-to article describes Active User Campaigns within the Braze dashboard and the steps to create and set up one."
+description: "This how-to article describes active user campaigns within the Braze dashboard and the steps to create and set up one."
 tool: 
   - Campaigns
 
@@ -11,12 +11,12 @@ tool:
 
 # Active user campaigns
 
-> This article will discuss the benefits of Active User Campaigns within the Braze dashboard, as well as how to identify and reach out to your top users.
+> This article will discuss the benefits of active user campaigns within the Braze dashboard, as well as how to identify and reach out to your top users.
 > <br>
 > <br>
-> Knowing which users are active, or "top" users can help you make tailored campaigns and reward those who frequent your platform. 
+> Identifying your active users can help you make tailored campaigns and reward those who frequent your platform. 
 
-Reaching out to already active users of your app can be a powerful tool in helping to build a dedicated following of consistent app users. A little bit of personalized recognition of your power users can turn them into evangelists for your app.
+Reaching out to already-active users of your app can be a powerful tool in helping to build a dedicated following of consistent app users. A little bit of personalized recognition of your power users can turn them into evangelists for your app.
 
 You can also check out [our LAB course](http://lab.braze.com/quick-overview-segment-and-campaign-setup) on marketing strategy for email and recommended lifecycle campaigns!
 

@@ -116,7 +116,7 @@ First, use the `assign` tag to subsitute the custom attribute of `current_reward
 {% assign balance = {{custom_attribute.${current_rewards_balance}}} %}
 ```
 
-Next, we're using the `plus` filter combine each user's gift card balance with their reawards balance, signified by `{{balance}}`.
+Next, we're using the `plus` filter combine each user's gift card balance with their rewards balance, signified by `{{balance}}`.
 
 ```liquid
 {% assign balance = {{custom_attribute.${current_rewards_balance}}} %}

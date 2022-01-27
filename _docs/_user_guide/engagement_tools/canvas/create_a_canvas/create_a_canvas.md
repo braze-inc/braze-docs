@@ -16,7 +16,7 @@ tool: Canvas
 
 ![Canvas][1]{: style="float:right;max-width:20%;margin-left:10px;margin-top:10px;margin-bottom:10px;"}
 
-Go to the **Canvas** page, located under the **Engagement** section, then click __Create a New Canvas__.
+Go to the **Canvas** page, located under the **Engagement** section, then click **Create a New Canvas**.
 
 ## Step 2: Use the entry wizard to set up your Canvas
 
@@ -99,13 +99,11 @@ After you choose which you'll use, adjust those settings appropriately, and move
 
 {% tabs local %}
   {% tab Scheduled Delivery %}
-    __Scheduled Delivery__<br>
     With scheduled delivery, users will enter on a time schedule, similarly to how you would schedule a campaign. You can enroll users in a Canvas as soon as it is launched, or enter them into your journey at some point in the future, or on a recurring basis.
 
     ![Canvas Scheduled Delivery]({% image_buster /assets/img_archive/Canvas_Scheduled_Delivery.png %})
   {% endtab %}
   {% tab Action-Based Delivery %}
-    __Action-Based Delivery__<br>
     With action-based delivery, you can choose to enter users into a Canvas when they perform certain triggers. Users will enter your Canvas and begin receiving messages when they take particular actions, such as opening your app, making a purchase, or triggering a custom event. <br><br>Note that action-based delivery is unavailable for Canvas steps with in-app messages.
 
     ![Canvas Action-Based Delivery]({% image_buster /assets/img_archive/Canvas_Action_Based_Delivery.png %})
@@ -113,7 +111,6 @@ After you choose which you'll use, adjust those settings appropriately, and move
     You can control other aspects of your Canvas' behavior from the **Entry Audience** window, including rules for re-eligibility and frequency capping settings.
   {% endtab %}
   {% tab API-Triggered Delivery %}
-    __API-Triggered Delivery__<br>
     With API-triggered deliver, you can choose to enter users into a Canvas via an API request. In the Dashboard, you can find an example cURL request that does this as well as assign optional [`canvas_entry_properties`]({{site.baseurl}}/api/endpoints/messaging/send_messages/post_send_triggered_canvases/) using the [`Canvas Entry Properties Object`]({{site.baseurl}}/api/objects_filters/canvas_entry_properties_object/). <br><br>Users will enter your Canvas and begin receiving messages once they have been added using the [`/canvas/trigger/send`]({{site.baseurl}}/api/endpoints/messaging/send_messages/post_send_triggered_canvases/) endpoint via the API.
 
     ![Canvas API-Triggered Delivery]({% image_buster /assets/img_archive/Canvas_API_Triggered_Delivery.png %})
@@ -169,7 +166,7 @@ To do so, set the **Subscription Settings** to send this Canvas to "opted-in use
 With this configuration, don't include any filters in the **Target Users** step that limit the audience to a single channel (e.g., `Push Enabled = True` or `Email Subscription = Opted-In`).
 {% endalert %}
 
-If desired, specify Quiet Hours (the time during which your messages will not send) for your Canvas. Check **Enable Quiet Hours** in your __Send Settings__. Then, select your Quiet Hours in your user's local time and what action will follow if the message triggers inside of those Quiet Hours.
+If desired, specify Quiet Hours (the time during which your messages will not send) for your Canvas. Check **Enable Quiet Hours** in your **Send Settings**. Then, select your Quiet Hours in your user's local time and what action will follow if the message triggers inside of those Quiet Hours.
 
 ![Quiet Hours][50]
 
@@ -199,7 +196,7 @@ By default, Canvas variant assignment is locked in when users enter the Canvas, 
 {% enddetails %}
 {% endalert %}
 
-### Editing a step
+### Editing a Step
 
 Click anywhere on a Step, and Braze will open the Step editing interface. Steps can be configured to send messages after either a fixed delay (maximum of 31 days) or when a user performs a particular action. For example, you can use Canvas to configure a Day 1, Day 3, Day 7 onboarding campaign with time delays between messages:
 
@@ -246,7 +243,7 @@ For more information on the Canvas Entry Properties Object, check out our [docum
 {% tab Custom Event Properties %}
 Custom event properties are the properties set by you on custom events and purchases, used mainly in action-based delivery campaigns. These properties are ephemeral and can only be used at the time when they happen. <br><br>Event properties don’t persist, so if you are scheduling a Canvas step rather than using action-based delivery, you wouldn’t be able to use an event property (as we don’t store that data). You can't reference the event property for an event that’s already happened.
 
-__Custom event properties can be referenced in the first step of a Canvas - but only the first step__! 
+Custom event properties can be referenced only in the first step of a Canvas! 
 
 For more information on custom event properties, check out our [documentation]({{site.baseurl}}/user_guide/data_and_analytics/custom_data/custom_events/#custom-event-properties).
 
@@ -260,13 +257,13 @@ Use the `campaign.${name}` Liquid tag in Canvas to display the current Canvas st
 
 ### Adding more steps
 
-Add more Steps by pressing the <i class="fas fa-plus-circle"></i> plus button:
+Add more Steps by clicking the <i class="fas fa-plus-circle"></i> plus button:
 
 ![Canvas More Step][17]{: style="max-width:75%;"}
 
 ### Editing connections
 
-To move a connection between steps, click the arrow connecting the two steps, and select a different step. To break the connection, click the arrow and click **Cancel Connection** in the footer of the Canvas composer.
+To move a connection between steps, click the arrow connecting the two steps and select a different step. To break the connection, click the arrow and click **Cancel Connection** in the footer of the Canvas composer.
 
 ![Move or break a connection between two Canvas steps][2]
 

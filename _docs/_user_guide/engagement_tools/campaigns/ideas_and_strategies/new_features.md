@@ -12,11 +12,11 @@ tool: Campaigns
 
 > This reference article addresses how to use the Braze platform to keep your customers up to date on new features and versions of your app. 
 
-You work hard to continually update and improve your app, and you want your users to experience these exciting new features and new app versions.  Learn how to teach users about the new features they have yet to use, and encourage them to explore the app to get the most you have to offer.
+You work hard to continually update and improve your app, and you want your users to experience these exciting new features and new app versions.  Learn how to teach your users about the new features they have yet to use, and encourage them to explore the app to get the most you have to offer.
 
 ## Why use feature awareness campaigns
 
-Feature awareness campaigns are a great way to encourage users to stay engaged with your app as you continue to improve your app's functionality.  Keeping users up to date is a great way to keep them active, boost ratings and ensure user engagement.
+Feature awareness campaigns are a great way to encourage users to stay engaged with your app as you continue to improve your app's functionality.  Keeping users up to date is a great way to keep them active, boost ratings, and ensure user engagement.
 
 ## Filtering by most recent app versions
 
@@ -26,7 +26,7 @@ Braze SDKs automatically track a user's _most recent_ app version. These version
 
 ### App version number
 
-Use the _App Version Number_ filter to segment users by the app's version/build number. 
+Use the **App Version Number** filter to segment users by the app's version and build number. 
 
 This filter supports numerical comparisons to target a range of app versions. For example, you can target users whose app is "below", "above", and "equal to" app version "1.2.3", which might be beneficial to promote a new feature which requires an app upgrade.
 
