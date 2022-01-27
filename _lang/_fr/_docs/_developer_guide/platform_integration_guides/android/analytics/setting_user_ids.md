@@ -47,7 +47,7 @@ Reportez-vous à la documentation [changeUser][4] pour plus d'informations.
 
 **Exemple d'implémentation**
 
-Des informations complètes sur la classe peuvent être trouvées dans le [javadocs][4].
+Des informations complètes sur la classe peuvent être trouvées dans les [KDocs][4].
 
 ## Meilleures pratiques et notes d'intégration des identifiants utilisateur
 
@@ -57,5 +57,5 @@ Des informations complètes sur la classe peuvent être trouvées dans le [javad
 
 {% include archive/setting_user_ids/aliasing.md platform="Android" %}
 
-[4]: https://appboy.github.io/appboy-android-sdk/javadocs/com/appboy/Appboy.html#changeUser-java.lang.String-
-[4]: https://appboy.github.io/appboy-android-sdk/javadocs/com/appboy/Appboy.html#changeUser-java.lang.String-
+[4]: https://appboy.github.io/appboy-android-sdk/kdoc/braze-android-sdk/com.appboy/-appboy/change-user.html
+[4]: https://appboy.github.io/appboy-android-sdk/kdoc/braze-android-sdk/com.appboy/-appboy/change-user.html
