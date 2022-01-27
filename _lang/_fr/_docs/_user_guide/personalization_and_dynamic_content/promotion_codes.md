@@ -86,10 +86,10 @@ Pour envoyer des codes promotionnels dans des messages, cliquez sur **Copier le 
 
 !\[Promo Codes 10\]\[10\]{: style="max-width:70%"}
 
-Maintenant, en utilisant [Liquid][11], vous pouvez insérer un des codes de promotion uniques du fichier CSV téléchargé dans un message. Ce code sera marqué comme envoyé sur le backend de Braze pour s'assurer qu'aucun autre message n'envoie ce même code. Lorsqu'un extrait de code est utilisé pour une campagne multicanal ou l'étape Canvas , le même code unique sera envoyé à chaque utilisateur à travers les canaux.
+Maintenant, en utilisant [Liquid][11], vous pouvez insérer un des codes de promotion uniques du fichier CSV téléchargé dans un message. Ce code sera marqué comme envoyé sur le backend de Braze pour s'assurer qu'aucun autre message n'envoie ce même code. Lorsqu'un extrait de code est utilisé pour une campagne multicanal ou l'étape Canvas , le même code unique sera envoyé à chaque utilisateur à travers les canaux. Les codes promotionnels ne peuvent pas être envoyés dans les messages de l'application.
 
 {% alert important %}
-Les codes promotionnels ne peuvent pas être envoyés dans les messages In-App.
+S'il n'y a pas de code promotionnel disponible lors de l'envoi de tests ou de messages en direct d'une campagne qui tire dans les codes promotionnels, le message ne sera pas envoyé.
 {% endalert %}
 
 ## Déterminer combien de codes ont été utilisés
