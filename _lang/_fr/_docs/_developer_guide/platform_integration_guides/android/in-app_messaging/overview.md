@@ -39,7 +39,7 @@ Voici ce à quoi ressemblera chaque type de message dans l'application pour vos 
 
 {% tabs %}
   {% tab Slideup %}
-  [`Glisser vers le haut`](https://appboy.github.io/appboy-android-sdk/javadocs/com/braze/models/inappmessage/InAppMessageSlideup.html) Les messages dans l'application sont nommés parce qu'ils "glissent vers le haut" ou "glisser" vers le bas depuis le haut ou le bas de l'écran.  Elles couvrent une petite partie de l'écran et offrent une capacité de messagerie efficace et non intrusive.
+  [`Glisser vers le haut`][91] Les messages dans l'application sont nommés parce qu'ils "glissent vers le haut" ou "glisser" vers le bas depuis le haut ou le bas de l'écran.  Elles couvrent une petite partie de l'écran et offrent une capacité de messagerie efficace et non intrusive.
 
   <br>
 
@@ -49,7 +49,7 @@ Voici ce à quoi ressemblera chaque type de message dans l'application pour vos 
 
 {% endtab %}
 {% tab Modal %}
-[`Les messages modaux`](https://appboy.github.io/appboy-android-sdk/javadocs/com/braze/models/inappmessage/InAppMessageModal.html) dans l'application apparaissent au centre de l'écran et sont encadrés par un panneau translucide. Utile pour des messages plus critiques, ils peuvent être équipés de deux boutons permettant de cliquer sur l'action et l'analyse.
+[`Les messages modaux`][90] dans l'application apparaissent au centre de l'écran et sont encadrés par un panneau translucide. Utile pour des messages plus critiques, ils peuvent être équipés de deux boutons permettant de cliquer sur l'action et l'analyse.
 
   <br>
 
@@ -60,14 +60,14 @@ Voici ce à quoi ressemblera chaque type de message dans l'application pour vos 
 
 {% endtab %}
 {% tab Full Screen %}
-[`Complète`](https://appboy.github.io/appboy-android-sdk/javadocs/com/braze/models/inappmessage/InAppMessageFull) les messages intégrés à l'application sont utiles pour maximiser le contenu et l'impact de votre communication utilisateur.  La moitié supérieure d'un message de `plein` dans l'application contient une image et la moitié inférieure affiche du texte ainsi que jusqu'à deux boutons activés par les clics d'action et d'analyse.
+[`Complète`][93] les messages intégrés à l'application sont utiles pour maximiser le contenu et l'impact de votre communication utilisateur.  La moitié supérieure d'un message de `plein` dans l'application contient une image et la moitié inférieure affiche du texte ainsi que jusqu'à deux boutons activés par les clics d'action et d'analyse.
 
 ![Exemple complet]({% image_buster /assets/img_archive/In-App_Full.png %})
 
 
 {% endtab %}
 {% tab Custom HTML %}
-[`Les messages HTML plein`](https://appboy.github.io/appboy-android-sdk/javadocs/com/braze/models/inappmessage/InAppMessageHtmlFull.html) dans l'application sont utiles pour créer un contenu utilisateur entièrement personnalisé. Le contenu du message HTML Full in-app défini par l'utilisateur est affiché dans un {% if include.platform == "iOS" %}`WKWebView`{% elsif include.platform == "Android" %}`WebView`{% endif %} et peut éventuellement contenir d'autres contenus riches. comme les images et les polices, permettant un contrôle total de l'apparence et de la fonctionnalité du message. <br><br>Les messages dans l'application Android prennent en charge une interface JavaScript `brazeBridge` pour appeler des méthodes sur le Braze Web SDK à partir de l'intérieur de votre HTML, voir <a href="https://www.braze.com/docs/user_guide/message_building_by_channel/in-app_messages/best_practices/">Meilleures pratiques</a> pour plus de détails.
+[`Les messages HTML plein`][92] dans l'application sont utiles pour créer un contenu utilisateur entièrement personnalisé. Le contenu du message HTML Full in-app défini par l'utilisateur est affiché dans un {% if include.platform == "iOS" %}`WKWebView`{% elsif include.platform == "Android" %}`WebView`{% endif %} et peut éventuellement contenir d'autres contenus riches. comme les images et les polices, permettant un contrôle total de l'apparence et de la fonctionnalité du message. <br><br>Les messages dans l'application Android prennent en charge une interface JavaScript `brazeBridge` pour appeler des méthodes sur le Braze Web SDK à partir de l'intérieur de votre HTML, voir <a href="https://www.braze.com/docs/user_guide/message_building_by_channel/in-app_messages/best_practices/">Meilleures pratiques</a> pour plus de détails.
 
 <br>
 
@@ -88,13 +88,17 @@ Veuillez noter que nous ne prenons actuellement pas en charge l'affichage de mes
 
 Braze `slideup` de l'objet message dans l'application étend [`InAppMessageBase`][27]. Les messages de type `plein` et `modal` de Braze étendent [`InAppMessageImmersiveBase`][28]. L'extension d'une de ces classes vous donne la possibilité d'ajouter des fonctionnalités personnalisées à vos messages locaux dans l'application.
 
-[3]: https://appboy.github.io/appboy-android-sdk/javadocs/com/braze/models/inappmessage/IInAppMessage.html
-[8]: https://appboy.github.io/appboy-android-sdk/javadocs/com/braze/models/inappmessage/IInAppMessageImmersive.html
+[3]: https://appboy.github.io/appboy-android-sdk/kdoc/braze-android-sdk/com.braze.models.inappmessage/-i-in-app-message/index.html
+[8]: https://appboy.github.io/appboy-android-sdk/kdoc/braze-android-sdk/com.braze.models.inappmessage/-i-in-app-message-immersive/index.html
 [12]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/in-app_messaging/customization/#setting-a-custom-view-factory
 [15]: http://fortawesome.github.io/Font-Awesome/
-[27]: https://appboy.github.io/appboy-android-sdk/javadocs/com/braze/models/inappmessage/InAppMessageBase.html
-[28]: https://appboy.github.io/appboy-android-sdk/javadocs/com/braze/models/inappmessage/InAppMessageImmersiveBase.html
-[50]: https://appboy.github.io/appboy-android-sdk/javadocs/com/braze/models/inappmessage/MessageButton.html
-[51]: https://appboy.github.io/appboy-android-sdk/javadocs/com/braze/models/inappmessage/InAppMessageHtmlFull.html
-[52]: https://appboy.github.io/appboy-android-sdk/javadocs/com/braze/models/inappmessage/IInAppMessageHtml.html
+[27]: https://appboy.github.io/appboy-android-sdk/kdoc/braze-android-sdk/com.braze.models.inappmessage/-in-app-message-base/index.html
+[28]: https://appboy.github.io/appboy-android-sdk/kdoc/braze-android-sdk/com.braze.models.inappmessage/-in-app-message-immersive-base/index.html
+[50]: https://appboy.github.io/appboy-android-sdk/kdoc/braze-android-sdk/com.braze.models.inappmessage/-message-button/index.html
+[51]: https://appboy.github.io/appboy-android-sdk/kdoc/braze-android-sdk/com.braze.models.inappmessage/-in-app-message-html-full/index.html
+[52]: https://appboy.github.io/appboy-android-sdk/kdoc/braze-android-sdk/com.braze.models.inappmessage/-i-in-app-message-html/index.html
 [83]: https://www.braze.com/customers
+[90]: https://appboy.github.io/appboy-android-sdk/kdoc/braze-android-sdk/com.braze.models.inappmessage/-in-app-message-modal/index.html
+[91]: https://appboy.github.io/appboy-android-sdk/kdoc/braze-android-sdk/com.braze.models.inappmessage/-in-app-message-slideup/index.html
+[92]: https://appboy.github.io/appboy-android-sdk/kdoc/braze-android-sdk/com.braze.models.inappmessage/-in-app-message-html-full/index.html
+[93]: https://appboy.github.io/appboy-android-sdk/kdoc/braze-android-sdk/com.braze.models.inappmessage/-in-app-message-full/index.html
