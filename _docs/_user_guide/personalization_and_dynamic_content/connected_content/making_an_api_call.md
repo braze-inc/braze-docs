@@ -49,7 +49,7 @@ If the URL requires basic authentication, Braze can generate a basic authenticat
 
 To add a new credential, click **Add Credential**. Give your credential a name and enter the username and password.
 
-![Basic Authentication Credential Creation][35]
+![Basic Authentication Credential Creation][35]{: style="max-width:30%" }
 
 You can then use this basic authentication credential in your API calls by referencing the token's name:
 
