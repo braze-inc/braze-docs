@@ -33,7 +33,7 @@ Braze.getInstance(context).logCustomEvent(YOUR_EVENT_NAME)
 {% endtab %}
 {% endtabs %}
 
-Consultez le [Javadoc][2] pour plus d'informations.
+Consultez le [KDoc][2] pour plus d'informations.
 
 ### Ajout de propriétés
 
@@ -69,10 +69,9 @@ Les clés suivantes sont __RESERVES__ et __NE PEUT PAS__ être utilisées comme 
 - `Heure`
 - `nom_événement`
 
-Consultez le [Javadoc][6] pour plus d'informations.
+Consultez le [KDoc][6] pour plus d'informations.
 
 [Aperçu analytique]: {{site.baseurl}}/developer_guide/platform_wide/analytics_overview/#user-data-collection
-[2]: https://appboy.github.io/appboy-android-sdk/javadocs/com/appboy/Appboy.html#logCustomEvent(java.lang.String)
+[2]: https://appboy.github.io/appboy-android-sdk/kdoc/braze-android-sdk/com.appboy/-appboy/log-custom-event.html
 [3]: http://developer.android.com/reference/java/util/Date.html
-[4]: https://appboy.github.io/appboy-android-sdk/javadocs/com/braze/models/outgoing/BrazeProperties.html
-[6]: https://appboy.github.io/appboy-android-sdk/javadocs/com/appboy/Appboy.html#logCustomEvent(java.lang.String,%20com.appboy.models.outgoing.AppboyProperties)
+[4]: https://appboy.github.io/appboy-android-sdk/kdoc/braze-android-sdk/com.braze.models.outgoing/-braze-properties/index.html
