@@ -33,6 +33,6 @@ extras : Carte<String, String>
 {% endtab %}
 {% endtabs %}
 
-Consultez le [Javadoc][36] pour plus d'informations.
+Consultez le [KDoc][36] pour plus d'informations.
 
-[36]: https://appboy.github.io/appboy-android-sdk/javadocs/com/appboy/models/cards/Card.html#getExtras()
+[36]: https://appboy.github.io/appboy-android-sdk/kdoc/braze-android-sdk/com.appboy.models.cards/-card/get-extras.html
