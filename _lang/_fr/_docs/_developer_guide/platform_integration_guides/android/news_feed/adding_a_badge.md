@@ -18,7 +18,7 @@ Vous pouvez demander le nombre de cartes non lues à tout moment en appelant :
 getUnreadCardCount()
 ```
 
-Consultez le [Javadoc][17] pour plus d'informations.
+Consultez le [KDoc][17] pour plus d'informations.
 
 
-[17]: https://appboy.github.io/appboy-android-sdk/javadocs/com/appboy/events/FeedUpdatedEvent.html#getUnreadCardCount()
+[17]: https://appboy.github.io/appboy-android-sdk/kdoc/braze-android-sdk/com.appboy.events/-feed-updated-event/get-unread-card-count.html
