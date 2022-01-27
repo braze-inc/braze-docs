@@ -24,7 +24,7 @@ Toute planification écrasera complètement celle que vous avez fournie dans la 
 
 ## Limite de taux
 
-{% include rate_limits.md endpoint='default' category='message endpoints' %}
+{% include rate_limits.md endpoint='default' %}
 
 ## Corps de la requête
 
