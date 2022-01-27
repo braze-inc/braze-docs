@@ -15,10 +15,10 @@ channel:
 Vous pouvez mettre en file d'attente une mise à jour manuelle du flux d'actualités de Braze à tout moment en appelant :
 
 ```java
-Appboy.requestFeedRefresh()
+Braze.requestFeedRefresh()
 ```
 
-Consultez le [Javadoc][16] pour plus d'informations.
+Consultez le [KDoc][16] pour plus d'informations.
 
 
-[16]: https://appboy.github.io/appboy-android-sdk/javadocs/com/appboy/Appboy.html#requestFeedRefresh()
+[16]: https://appboy.github.io/appboy-android-sdk/kdoc/braze-android-sdk/com.appboy/-appboy/request-feed-refresh.html
