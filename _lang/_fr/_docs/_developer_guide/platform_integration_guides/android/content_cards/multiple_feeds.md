@@ -139,8 +139,8 @@ Ce flux personnalisé peut être utilisé comme n'importe quel autre [`ContentCa
 
 Lorsque vous créez une campagne de carte de contenu, définissez votre paire clé-valeur comme: `feed_type` > `Transactionnel` ou quel que soit le type de flux que vous désirez.
 
-[1]: https://appboy.github.io/appboy-android-sdk/javadocs/com/braze/ui/contentcards/ContentCardsFragment.html
-[2]: https://appboy.github.io/appboy-android-sdk/javadocs/com/braze/ui/contentcards/handlers/IContentCardsUpdateHandler.html
-[2]: https://appboy.github.io/appboy-android-sdk/javadocs/com/braze/ui/contentcards/handlers/IContentCardsUpdateHandler.html
-[2]: https://appboy.github.io/appboy-android-sdk/javadocs/com/braze/ui/contentcards/handlers/IContentCardsUpdateHandler.html
-[3]: https://appboy.github.io/appboy-android-sdk/javadocs/com/braze/events/ContentCardsUpdatedEvent.html
+[1]: https://appboy.github.io/appboy-android-sdk/kdoc/braze-android-sdk/com.braze.ui.contentcards/-content-cards-fragment/index.html
+[2]: https://appboy.github.io/appboy-android-sdk/kdoc/braze-android-sdk/com.braze.ui.contentcards.handlers/-i-content-cards-update-handler/index.html
+[2]: https://appboy.github.io/appboy-android-sdk/kdoc/braze-android-sdk/com.braze.ui.contentcards.handlers/-i-content-cards-update-handler/index.html
+[2]: https://appboy.github.io/appboy-android-sdk/kdoc/braze-android-sdk/com.braze.ui.contentcards.handlers/-i-content-cards-update-handler/index.html
+[3]: https://appboy.github.io/appboy-android-sdk/kdoc/braze-android-sdk/com.braze.events/-content-cards-updated-event/index.html
