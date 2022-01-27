@@ -34,7 +34,7 @@ extras: Map<String, String>
 {% endtab %}
 {% endtabs %}
 
-See the [Javadoc][44] for more information.
+See the [KDoc][44] for more information.
 
 ## Custom styling
 
@@ -651,29 +651,29 @@ The following is an example of an embedded YouTube video in an HTML snippet:
 [15]: http://fortawesome.github.io/Font-Awesome/
 [18]: http://developer.android.com/reference/android/view/View.html
 [19]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/in-app_messaging/customization/#setting-custom-listeners
-[20]: https://appboy.github.io/appboy-android-sdk/javadocs/com/appboy/ui/inappmessage/IInAppMessageAnimationFactory.html
-[21]: https://appboy.github.io/appboy-android-sdk/javadocs/com/braze/ui/inappmessage/listeners/IInAppMessageManagerListener.html
-[24]: https://appboy.github.io/appboy-android-sdk/javadocs/com/braze/ui/inappmessage/views/IInAppMessageImmersiveView.html
+[20]: https://appboy.github.io/appboy-android-sdk/kdoc/braze-android-sdk/com.appboy.ui.inappmessage/-i-in-app-message-animation-factory/index.html
+[21]: https://appboy.github.io/appboy-android-sdk/kdoc/braze-android-sdk/com.braze.ui.inappmessage.listeners/-i-in-app-message-manager-listener/index.html
+[24]: https://appboy.github.io/appboy-android-sdk/kdoc/braze-android-sdk/com.braze.ui.inappmessage.views/-i-in-app-message-immersive-view/index.html
 [25]: https://github.com/Appboy/appboy-android-sdk/blob/master/android-sdk-ui/src/main/java/com/appboy/ui/inappmessage/IInAppMessageView.java
-[34]: https://appboy.github.io/appboy-android-sdk/javadocs/com/braze/ui/inappmessage/BrazeInAppMessageManager.html
-[42]: https://appboy.github.io/appboy-android-sdk/javadocs/com/appboy/ui/inappmessage/IInAppMessageViewFactory.html
-[44]: https://appboy.github.io/appboy-android-sdk/javadocs/com/braze/models/inappmessage/IInAppMessage.html#getExtras--
-[45]: https://appboy.github.io/appboy-android-sdk/javadocs/com/braze/ui/inappmessage/InAppMessageOperation.html
+[34]: https://appboy.github.io/appboy-android-sdk/kdoc/braze-android-sdk/com.braze.ui.inappmessage/-braze-in-app-message-manager/index.html
+[42]: https://appboy.github.io/appboy-android-sdk/kdoc/braze-android-sdk/com.appboy.ui.inappmessage/-i-in-app-message-view-factory/index.html
+[44]: https://appboy.github.io/appboy-android-sdk/kdoc/braze-android-sdk/com.braze.models.inappmessage/-i-in-app-message/get-extras.html
+[45]: https://appboy.github.io/appboy-android-sdk/kdoc/braze-android-sdk/com.braze.ui.inappmessage/-in-app-message-operation/index.html
 [79]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/advanced_use_cases/font_customization/#font-customization
 [82]: https://developer.android.com/reference/android/app/Application.html#onCreate()
-[83]: https://appboy.github.io/appboy-android-sdk/javadocs/com/braze/ui/inappmessage/InAppMessageOperation.html#DISCARD
+[83]: https://appboy.github.io/appboy-android-sdk/kdoc/braze-android-sdk/com.braze.ui.inappmessage/-in-app-message-operation/index.html#DISCARD
 [84]: https://developer.android.com/guide/topics/graphics/hardware-accel.html#controlling
 [85]: https://developer.android.com/guide/topics/ui/dialogs.html
-[86]: https://appboy.github.io/appboy-android-sdk/javadocs/com/appboy/ui/inappmessage/listeners/IHtmlInAppMessageActionListener.html
-[87]: https://appboy.github.io/appboy-android-sdk/javadocs/com/appboy/ui/inappmessage/IInAppMessageViewFactory.html
-[88]: https://appboy.github.io/appboy-android-sdk/javadocs/com/appboy/ui/inappmessage/IInAppMessageViewWrapperFactory.html
-[89]: https://appboy.github.io/appboy-android-sdk/javadocs/com/braze/ui/inappmessage/DefaultInAppMessageViewWrapper.html
-[90]: https://appboy.github.io/appboy-android-sdk/javadocs/com/appboy/ui/inappmessage/IInAppMessageViewWrapper.html
-[91]: https://appboy.github.io/appboy-android-sdk/javadocs/com/braze/ui/inappmessage/InAppMessageManagerBase.html#setCustomInAppMessageViewFactory-com.braze.ui.inappmessage.IInAppMessageViewFactory-
-[92]: https://appboy.github.io/appboy-android-sdk/javadocs/com/braze/ui/inappmessage/listeners/IInAppMessageManagerListener.html#beforeInAppMessageViewOpened-android.view.View-com.braze.models.inappmessage.IInAppMessage-
-[93]: https://appboy.github.io/appboy-android-sdk/javadocs/com/braze/ui/inappmessage/listeners/IInAppMessageManagerListener.html#afterInAppMessageViewOpened-android.view.View-com.braze.models.inappmessage.IInAppMessage-
-[94]: https://appboy.github.io/appboy-android-sdk/javadocs/com/braze/ui/inappmessage/listeners/IInAppMessageManagerListener.html#beforeInAppMessageViewClosed-android.view.View-com.braze.models.inappmessage.IInAppMessage-
-[95]: https://appboy.github.io/appboy-android-sdk/javadocs/com/braze/ui/inappmessage/listeners/IInAppMessageManagerListener.html#afterInAppMessageViewClosed-com.braze.models.inappmessage.IInAppMessage-
-[96]: https://appboy.github.io/appboy-android-sdk/javadocs/com/braze/ui/inappmessage/InAppMessageManagerBase.html#setBackButtonDismissesInAppMessageView-boolean-
-[97]: https://appboy.github.io/appboy-android-sdk/javadocs/com/braze/models/inappmessage/IInAppMessageThemeable.html#enableDarkTheme--
-[98]: https://appboy.github.io/appboy-android-sdk/javadocs/com/braze/ui/inappmessage/BrazeInAppMessageManager.html#requestDisplayInAppMessage--
+[86]: https://appboy.github.io/appboy-android-sdk/kdoc/braze-android-sdk/com.appboy.ui.inappmessage.listeners/-i-html-in-app-message-action-listener/index.html
+[87]: https://appboy.github.io/appboy-android-sdk/kdoc/braze-android-sdk/com.appboy.ui.inappmessage/-i-in-app-message-view-factory/index.html
+[88]: https://appboy.github.io/appboy-android-sdk/kdoc/braze-android-sdk/com.appboy.ui.inappmessage/-i-in-app-message-view-wrapper-factory/index.html
+[89]: https://appboy.github.io/appboy-android-sdk/kdoc/braze-android-sdk/com.braze.ui.inappmessage/-default-in-app-message-view-wrapper/index.html
+[90]: https://appboy.github.io/appboy-android-sdk/kdoc/braze-android-sdk/com.appboy.ui.inappmessage/-i-in-app-message-view-wrapper/index.html
+[91]: https://appboy.github.io/appboy-android-sdk/kdoc/braze-android-sdk/com.braze.ui.inappmessage/-in-app-message-manager-base/set-custom-in-app-message-view-factory.html
+[92]: https://appboy.github.io/appboy-android-sdk/kdoc/braze-android-sdk/com.braze.ui.inappmessage.listeners/-i-in-app-message-manager-listener/index.html#beforeInAppMessageViewOpened-android.view.View-com.braze.models.inappmessage.IInAppMessage-
+[93]: https://appboy.github.io/appboy-android-sdk/kdoc/braze-android-sdk/com.braze.ui.inappmessage.listeners/-i-in-app-message-manager-listener/index.html#afterInAppMessageViewOpened-android.view.View-com.braze.models.inappmessage.IInAppMessage-
+[94]: https://appboy.github.io/appboy-android-sdk/kdoc/braze-android-sdk/com.braze.ui.inappmessage.listeners/-i-in-app-message-manager-listener/index.html#beforeInAppMessageViewClosed-android.view.View-com.braze.models.inappmessage.IInAppMessage-
+[95]: https://appboy.github.io/appboy-android-sdk/kdoc/braze-android-sdk/com.braze.ui.inappmessage.listeners/-i-in-app-message-manager-listener/index.html#afterInAppMessageViewClosed-com.braze.models.inappmessage.IInAppMessage-
+[96]: https://appboy.github.io/appboy-android-sdk/kdoc/braze-android-sdk/com.braze.ui.inappmessage/-in-app-message-manager-base/set-back-button-dismisses-in-app-message-view.html
+[97]: https://appboy.github.io/appboy-android-sdk/kdoc/braze-android-sdk/com.braze.models.inappmessage/-i-in-app-message-themeable/enable-dark-theme.html
+[98]: https://appboy.github.io/appboy-android-sdk/kdoc/braze-android-sdk/com.braze.ui.inappmessage/-braze-in-app-message-manager/index.html#requestDisplayInAppMessage--

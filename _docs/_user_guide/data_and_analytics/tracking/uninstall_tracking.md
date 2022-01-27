@@ -76,4 +76,4 @@ Uninstall statistics for campaigns are located on the Campaign Details page. For
 [6]: {% image_buster /assets/img_archive/campaign_level_uninstall_tracking.png %}
 [7]: https://www.braze.com/blog/uninstall-tracking-an-industry-look-at-its-strengths-and-limitations/
 [iOS docs]: {{site.baseurl}}/developer_guide/platform_integration_guides/ios/analytics/uninstall_tracking/
-[8]: https://appboy.github.io/appboy-android-sdk/javadocs/com/appboy/push/AppboyNotificationUtils.html#isUninstallTrackingPush-android.os.Bundle-
+[8]: https://appboy.github.io/appboy-android-sdk/kdoc/braze-android-sdk/com.braze.push/-braze-notification-utils/is-uninstall-tracking-push.html

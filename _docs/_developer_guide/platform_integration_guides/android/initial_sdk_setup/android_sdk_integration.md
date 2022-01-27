@@ -134,7 +134,7 @@ class MyApplication : Application() {
 The first argument instructs the listener to handle `openSession()` and `closeSession()` calls.
 The second argument instructs the listener to handle `registerInAppMessageManager()` and `unregisterInAppMessageManager()` calls.
 
-See the [javadoc][63] for more information. Please note that any non-standard manual session integration is not fully supported.
+See the [KDoc][63] for more information. Please note that any non-standard manual session integration is not fully supported.
 
 ## Step 5: Custom endpoint setup {#step-5-optional-custom-endpoint-setup}
 
@@ -173,7 +173,7 @@ Please see the following sections in order to enable [custom event tracking]({{s
 [38]: {% image_buster /assets/img_archive/androidstudio3.png %}
 [46]: https://developer.android.com/training/permissions/index.html
 [60]: https://github.com/Appboy/appboy-android-sdk/releases
-[63]: https://appboy.github.io/appboy-android-sdk/javadocs/com/braze/BrazeActivityLifecycleCallbackListener.html#BrazeActivityLifecycleCallbackListener-boolean-boolean-
-[64]: https://appboy.github.io/appboy-android-sdk/javadocs/com/braze/ui/inappmessage/BrazeInAppMessageManager.html#ensureSubscribedToInAppMessageEvents-android.content.Context-
+[63]: https://appboy.github.io/appboy-android-sdk/kdoc/braze-android-sdk/com.braze/-braze-activity-lifecycle-callback-listener/index.html
+[64]: https://appboy.github.io/appboy-android-sdk/kdoc/braze-android-sdk/com.braze.ui.inappmessage/-braze-in-app-message-manager/index.html#ensureSubscribedToInAppMessageEvents-android.content.Context-
 [support]: {{site.baseurl}}/braze_support/
 [71]: https://appboy.github.io/appboy-android-sdk/sdk/com/braze
