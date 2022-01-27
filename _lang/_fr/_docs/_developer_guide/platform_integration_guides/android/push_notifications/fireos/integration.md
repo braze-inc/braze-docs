@@ -154,5 +154,5 @@ Si une clé réservée de Kindle est détectée, Braze retourne le Code de Statu
 [14]: https://developer.amazon.com/public/apis/engage/device-messaging
 [29]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/advanced_use_cases/deep_linking/
 [32]: https://developer.amazon.com/appsandservices/apis/engage/device-messaging/tech-docs/04-integrating-your-app-with-adm
-[37]: https://appboy.github.io/appboy-android-sdk/javadocs/com/appboy/Appboy.html#registerPushToken-java.lang.String-
+[37]: https://appboy.github.io/appboy-android-sdk/kdoc/braze-android-sdk/com.appboy/-appboy/register-push-token.html
 [52]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/push_notifications/integration/standard_integration/#custom-handling-for-push-receipts-opens-dismissals-and-key-value-pairs
