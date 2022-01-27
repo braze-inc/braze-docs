@@ -31,4 +31,4 @@ Braze.getInstance(context).contentCardUnviewedCount
 {% endtab %}
 {% endtabs %}
 
-[1]: https://appboy.github.io/appboy-android-sdk/javadocs/com/appboy/Appboy.html#getContentCardUnviewedCount--
+[1]: https://appboy.github.io/appboy-android-sdk/kdoc/braze-android-sdk/com.appboy/-appboy/get-content-card-unviewed-count.html
