@@ -20,7 +20,7 @@ Vous pouvez afficher une liste JSON de campagnes à venir et planifiées et de C
 
 ## Limite de taux
 
-{% include rate_limits.md endpoint='default' category='message endpoints' %}
+{% include rate_limits.md endpoint='default' %}
 
 ## Paramètres de la requête
 
