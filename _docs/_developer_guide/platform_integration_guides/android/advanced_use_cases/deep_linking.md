@@ -222,6 +222,6 @@ Braze.configure(this, brazeConfig)
 [udl-3]: https://appboy.github.io/appboy-android-sdk/kdoc/braze-android-sdk/com.braze.ui/-braze-deeplink-handler/index.html
 [udl-4]: https://appboy.github.io/appboy-android-sdk/kdoc/braze-android-sdk/com.braze.ui/-braze-web-view-activity/index.html
 [udl-5]: https://appboy.github.io/appboy-android-sdk/kdoc/braze-android-sdk/com.braze/-braze/index.html#-1864418529%2FFunctions%2F-1725759721
-[udl-6]: https://appboy.github.io/appboy-android-sdk/kdoc/braze-android-sdk/com.braze.configuration/-braze-config/-builder/index.html
+[udl-6]: https://appboy.github.io/appboy-android-sdk/kdoc/braze-android-sdk/com.braze.configuration/-braze-config/-builder/set-custom-web-view-activity-class.html
 [udl-7]: https://developer.android.com/reference/android/app/Application.html#onCreate()
 [udl-8]: https://github.com/Appboy/appboy-android-sdk/blob/master/android-sdk-ui/src/main/java/com/braze/ui/BrazeWebViewActivity.java
