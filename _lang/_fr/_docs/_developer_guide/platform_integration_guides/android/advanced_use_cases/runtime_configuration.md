@@ -14,7 +14,7 @@ La configuration de l'exécution est un moyen facultatif de configurer votre app
 
 ## Exemple d'utilisation
 
-La configuration utilise un objet [builder][2] qui est ensuite construit et passé à [Braze.configure()][1]. L'exemple suivant utilise un sous-ensemble des options de configuration du runtime disponibles, voir le [javadoc][1] pour une liste complète des options de configuration disponibles.
+La configuration utilise un objet [builder][2] qui est ensuite construit et passé à [Braze.configure()][1]. L'exemple suivant utilise un sous-ensemble des options de configuration disponibles pour l'exécution, voir le [KDoc][1] pour une liste complète des options de configuration disponibles.
 
 {% tabs %}
 {% tab JAVA %}
@@ -49,10 +49,10 @@ Braze.configure(this, brazeConfig)
 
 Un autre exemple peut être trouvé dans notre [Bonjour Braze application][3].
 
-[1]: https://appboy.github.io/appboy-android-sdk/javadocs/com/appboy/Appboy.html#configure-android.content.Context-com.appboy.configuration.BrazeConfig-
+[1]: https://appboy.github.io/appboy-android-sdk/kdoc/braze-android-sdk/com.appboy/-appboy/configure.html
 
-[1]: https://appboy.github.io/appboy-android-sdk/javadocs/com/appboy/Appboy.html#configure-android.content.Context-com.appboy.configuration.BrazeConfig-
+[1]: https://appboy.github.io/appboy-android-sdk/kdoc/braze-android-sdk/com.appboy/-appboy/configure.html
 
-[1]: https://appboy.github.io/appboy-android-sdk/javadocs/com/appboy/Appboy.html#configure-android.content.Context-com.appboy.configuration.BrazeConfig-
-[2]: https://appboy.github.io/appboy-android-sdk/javadocs/com/braze/configuration/BrazeConfig.Builder.html
-[3]: https://github.com/Appboy/appboy-android-sdk/blob/master/samples/hello-braze/src/main/java/com/braze/helloworld/CustomApplication.java#L32
+[1]: https://appboy.github.io/appboy-android-sdk/kdoc/braze-android-sdk/com.appboy/-appboy/configure.html
+[2]: https://appboy.github.io/appboy-android-sdk/kdoc/braze-android-sdk/com.braze.configuration/-braze-config/-builder/index.html
+[3]: https://github.com/Appboy/appboy-android-sdk/blob/master/samples/hello-braze/src/main/java/com/braze/helloworld/CustomApplication.java
