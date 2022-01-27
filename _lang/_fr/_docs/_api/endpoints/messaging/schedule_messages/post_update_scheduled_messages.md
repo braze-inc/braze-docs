@@ -20,7 +20,7 @@ Le calendrier de mise à jour des messages accepte les mises à jour du paramèt
 
 ## Limite de taux
 
-{% include rate_limits.md endpoint='default' category='message endpoints' %}
+{% include rate_limits.md endpoint='default' %}
 
 ## Corps de la requête
 
