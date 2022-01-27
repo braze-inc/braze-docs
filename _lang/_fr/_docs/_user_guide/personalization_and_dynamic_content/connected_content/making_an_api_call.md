@@ -48,7 +48,7 @@ Si l'URL nécessite une authentification de base, Braze peut générer un identi
 
 Pour ajouter un nouvel identifiant, cliquez sur **Ajouter un identifiant**. Donnez un nom à votre identifiant et entrez le nom d'utilisateur et le mot de passe.
 
-!\[Création d'authentification basique\]\[35\]
+!\[Création d'authentification basique\]\[35\]{: style="max-width:30%" }
 
 Vous pouvez ensuite utiliser cette authentification de base dans vos appels API en référençant le nom du jeton :
 
