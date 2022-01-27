@@ -93,6 +93,6 @@ class CustomNavigator : IAppboyNavigator {
 {% endtab %}
 {% endtabs %}
 
-[udl-1]: https://appboy.github.io/appboy-android-sdk/javadocs/com/appboy/ui/actions/UriAction.html
-[udl-2]: https://appboy.github.io/appboy-android-sdk/javadocs/com/appboy/ui/AppboyNavigator.html#setAppboyNavigator-com.appboy.IAppboyNavigator-
-[udl-3]: https://appboy.github.io/appboy-android-sdk/javadocs/com/appboy/IAppboyNavigator.html
+[udl-1]: https://appboy.github.io/appboy-android-sdk/kdoc/braze-android-sdk/com.appboy.ui.actions/-uri-action/index.html
+[udl-2]: https://appboy.github.io/appboy-android-sdk/kdoc/braze-android-sdk/com.appboy.ui/-appboy-navigator/set-appboy-navigator.html
+[udl-3]: https://appboy.github.io/appboy-android-sdk/kdoc/braze-android-sdk/com.appboy/-i-appboy-navigator/index.html

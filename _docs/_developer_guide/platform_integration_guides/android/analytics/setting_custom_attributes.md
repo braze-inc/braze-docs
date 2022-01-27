@@ -19,7 +19,7 @@ Before implementation, be sure to review examples of the segmentation options af
 
 To assign attributes to your users, call the `getCurrentUser()` method on your Braze instance to get a reference to the current user of your app. Once you have a reference to the current user, you can call methods to set predefined or custom attributes.
 
-Braze provides predefined methods for setting the following user attributes within the [BrazeUser class][2]. See the [Javadocs for method specifications][2]:
+Braze provides predefined methods for setting the following user attributes within the [BrazeUser class][2]. See the [KDoc for method specifications][2]:
 
 - First Name
 - Last Name
@@ -69,7 +69,7 @@ In addition to our predefined user attribute methods, Braze also provides custom
 - Floats
 - Doubles
 
-Full method specifications for custom attributes can be found here within the [BrazeUser class within the Javadocs][2].
+Full method specifications for custom attributes can be found here within the [BrazeUser class within the KDoc][2].
 
 ### Setting custom attribute values
 
@@ -278,7 +278,7 @@ You can also use our REST API to set user attributes. To do so refer to the [Use
 
 Custom attribute keys and values have a maximum length of 255 characters.  Longer strings will be truncated to 255 characters.
 
-Full class information can be found in the [javadocs][2].
+Full class information can be found in the [KDocs][2].
 
 ## Setting up user subscriptions
 
@@ -335,7 +335,7 @@ Braze.getInstance(context).currentUser?.setPushNotificationSubscriptionType(push
 {% endtab %}
 {% endtabs %}
 
-[2]: https://appboy.github.io/appboy-android-sdk/javadocs/com/braze/BrazeUser.html
+[2]: https://appboy.github.io/appboy-android-sdk/kdoc/braze-android-sdk/com.braze/-braze-user/index.html
 [4]: {{site.baseurl}}/developer_guide/rest_api/user_data/#user-data
 [6]: {{site.baseurl}}/developer_guide/platform_wide/analytics_overview/#arrays
 [7]: {{site.baseurl}}/developer_guide/platform_wide/analytics_overview/#user-data-collection

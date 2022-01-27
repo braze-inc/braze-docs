@@ -79,13 +79,13 @@ To override this value, set `com_appboy_trigger_action_minimum_time_interval_sec
 {% endif %}
 
 [in_app_message_1]: http://appboy.github.io/appboy-ios-sdk/docs/interface_a_b_k_in_app_message_slideup.html
-[in_app_message_2]: https://appboy.github.io/appboy-android-sdk/javadocs/com/appboy/models/InAppMessageSlideup.html
+[in_app_message_2]: https://appboy.github.io/appboy-android-sdk/kdoc/braze-android-sdk/com.braze.models.inappmessage/-in-app-message-slideup/index.html
 [in_app_message_3]: http://appboy.github.io/appboy-ios-sdk/docs/interface_a_b_k_in_app_message_modal.html
-[in_app_message_4]: https://appboy.github.io/appboy-android-sdk/javadocs/com/appboy/models/InAppMessageModal.html
+[in_app_message_4]: https://appboy.github.io/appboy-android-sdk/kdoc/braze-android-sdk/com.braze.models.inappmessage/-in-app-message-modal/index.html
 [in_app_message_5]: http://appboy.github.io/appboy-ios-sdk/docs/interface_a_b_k_in_app_message_full.html
-[in_app_message_6]: https://appboy.github.io/appboy-android-sdk/javadocs/com/appboy/models/InAppMessageFull.html
+[in_app_message_6]: https://appboy.github.io/appboy-android-sdk/kdoc/braze-android-sdk/com.braze.models.inappmessage/-in-app-message-full/index.html
 [in_app_message_7]: http://appboy.github.io/appboy-ios-sdk/docs/interface_a_b_k_in_app_message_h_t_m_l_full.html
-[in_app_message_8]: https://appboy.github.io/appboy-android-sdk/javadocs/com/appboy/models/InAppMessageHtmlFull.html
+[in_app_message_8]: https://appboy.github.io/appboy-android-sdk/kdoc/braze-android-sdk/com.braze.models.inappmessage/-in-app-message-html-full/index.html
 [in_app_message_9]: {% image_buster /assets/img_archive/In-App_Slideup.png %}
 [in_app_message_10]: {% image_buster /assets/img_archive/In-App_Modal.png %}
 [in_app_message_11]: {% image_buster /assets/img_archive/In-App_Full.png %}
