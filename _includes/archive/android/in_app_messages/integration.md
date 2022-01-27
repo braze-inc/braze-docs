@@ -133,11 +133,11 @@ class MyApplication : Application() {
 {% endtab %}
 {% endtabs %}
 
-> See the [`BrazeActivityLifecycleCallbackListener`][83] constructor javadocs for more information.
+> See the [`BrazeActivityLifecycleCallbackListener`][83] constructor KDocs for more information.
 
-[34]: https://appboy.github.io/appboy-android-sdk/javadocs/com/braze/ui/inappmessage/BrazeInAppMessageManager.html
-[69]: https://appboy.github.io/appboy-android-sdk/javadocs/com/braze/ui/inappmessage/BrazeInAppMessageManager.html#ensureSubscribedToInAppMessageEvents-android.content.Context-
-[80]: https://appboy.github.io/appboy-android-sdk/javadocs/com/braze/ui/inappmessage/BrazeInAppMessageManager.html#registerInAppMessageManager-android.app.Activity-
-[81]: https://appboy.github.io/appboy-android-sdk/javadocs/com/braze/ui/inappmessage/BrazeInAppMessageManager.html#unregisterInAppMessageManager-android.app.Activity-
+[34]: https://appboy.github.io/appboy-android-sdk/kdoc/braze-android-sdk/com.braze.ui.inappmessage/-braze-in-app-message-manager/index.html
+[69]: https://appboy.github.io/appboy-android-sdk/kdoc/braze-android-sdk/com.braze.ui.inappmessage/-braze-in-app-message-manager/index.html#ensureSubscribedToInAppMessageEvents-android.content.Context-
+[80]: https://appboy.github.io/appboy-android-sdk/kdoc/braze-android-sdk/com.braze.ui.inappmessage/-braze-in-app-message-manager/index.html#registerInAppMessageManager-android.app.Activity-
+[81]: https://appboy.github.io/appboy-android-sdk/kdoc/braze-android-sdk/com.braze.ui.inappmessage/-braze-in-app-message-manager/index.html#unregisterInAppMessageManager-android.app.Activity-
 [82]: https://developer.android.com/reference/android/app/Application.html#onCreate()
-[83]: https://appboy.github.io/appboy-android-sdk/javadocs/com/braze/BrazeActivityLifecycleCallbackListener.html#BrazeActivityLifecycleCallbackListener-java.util.Set-
+[83]: https://appboy.github.io/appboy-android-sdk/kdoc/braze-android-sdk/com.braze/-braze-activity-lifecycle-callback-listener/index.html

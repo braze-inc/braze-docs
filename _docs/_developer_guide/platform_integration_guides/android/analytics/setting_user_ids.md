@@ -48,7 +48,7 @@ Refer to the [changeUser documentation][4] for more information.
 
 **Implementation Example**
 
-Full class information can be found in the [javadocs][4].
+Full class information can be found in the [KDocs][4].
 
 ## User ID integration best practices and notes
 
@@ -60,4 +60,4 @@ Full class information can be found in the [javadocs][4].
 
 [1]: {{site.baseurl}}/developer_guide/rest_api/user_data/#user-data
 [2]: {{site.baseurl}}/api/endpoints/messaging/
-[4]: https://appboy.github.io/appboy-android-sdk/javadocs/com/appboy/Appboy.html#changeUser-java.lang.String-
+[4]: https://appboy.github.io/appboy-android-sdk/kdoc/braze-android-sdk/com.appboy/-appboy/change-user.html

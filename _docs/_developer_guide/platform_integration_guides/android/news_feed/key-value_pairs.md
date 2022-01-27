@@ -34,6 +34,6 @@ extras: Map<String, String>
 {% endtab %}
 {% endtabs %}
 
-See the [Javadoc][36] for more information.
+See the [KDoc][36] for more information.
 
-[36]: https://appboy.github.io/appboy-android-sdk/javadocs/com/appboy/models/cards/Card.html#getExtras()
+[36]: https://appboy.github.io/appboy-android-sdk/kdoc/braze-android-sdk/com.appboy.models.cards/-card/get-extras.html
