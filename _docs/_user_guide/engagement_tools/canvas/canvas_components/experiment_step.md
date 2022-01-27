@@ -39,7 +39,7 @@ Optionally, you can add a description to explain to others what this Experiment 
 
 ### Step 2: Select how long to track conversions
 
-The Experiment Paths Step will record users who enter each step and convert while in the assigned path. This step will track only the **Primary Conversion** event of the Canvas. Use the input box at the bottom of the panel to enter how many days (between 1 and 30) you'd like this experiment to track conversions.
+The Experiment Paths Step will record users who enter each step and convert while in the assigned path. This step will track all conversion events specified in the Canvas setup. Use the input box at the bottom of the panel to enter how many days (between 1 and 30) you'd like this experiment to track conversions.
 
 ### Step 3: Create paths
 
