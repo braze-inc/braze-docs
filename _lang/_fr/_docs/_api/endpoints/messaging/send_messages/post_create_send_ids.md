@@ -20,7 +20,7 @@ L’identifiant d’envoi de Braze ajoute la possibilité d’envoyer des messag
 
 ## Limite de taux
 
-{% include rate_limits.md endpoint='sends id create' category='message endpoints' %}
+{% include rate_limits.md endpoint='sends id create' %}
 
 ## Corps de la requête
 
