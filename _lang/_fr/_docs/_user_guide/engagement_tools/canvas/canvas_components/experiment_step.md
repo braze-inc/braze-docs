@@ -39,7 +39,7 @@ Optionnellement, vous pouvez ajouter une description pour expliquer aux autres c
 
 ### Étape 2 : Sélectionnez le temps de suivi des conversions
 
-L'étape des chemins d'expérience enregistre les utilisateurs qui entrent dans chaque étape et les convertiront dans le chemin assigné. Cette étape ne suivra que l'événement **Primary Conversion** du Canvas. Utilisez la zone d'entrée en bas du panneau pour saisir combien de jours (entre 1 et 30) vous souhaitez que cette expérience puisse suivre les conversions.
+L'étape des chemins d'expérience enregistre les utilisateurs qui entrent dans chaque étape et les convertiront dans le chemin assigné. Cette étape permet de suivre tous les événements de conversion spécifiés dans la configuration de Canvas . Utilisez la zone d'entrée en bas du panneau pour saisir combien de jours (entre 1 et 30) vous souhaitez que cette expérience puisse suivre les conversions.
 
 ### Étape 3 : Créer des chemins
 
