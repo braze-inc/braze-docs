@@ -18,7 +18,7 @@ Avant l'implémentation, assurez-vous d'examiner les exemples d'options de segme
 
 Pour assigner des attributs à vos utilisateurs, appelez la méthode `getCurrentUser()` sur votre instance Braze pour obtenir une référence à l'utilisateur actuel de votre application. Une fois que vous avez une référence à l'utilisateur courant, vous pouvez appeler des méthodes pour définir des attributs prédéfinis ou personnalisés.
 
-Braze fournit des méthodes prédéfinies pour définir les attributs d'utilisateurs suivants dans la classe [BrazeUser][2]. Voir les [Javadocs pour les spécifications de méthodes][2]:
+Braze fournit des méthodes prédéfinies pour définir les attributs d'utilisateurs suivants dans la classe [BrazeUser][2]. Voir le [KDoc pour les spécifications de méthode][2]:
 
 - Prénom
 - Nom de famille
@@ -67,7 +67,7 @@ En plus de nos méthodes d'attribut utilisateur prédéfinies, Braze fournit ég
 - Flottant
 - Doubles
 
-Les spécifications complètes de la méthode pour les attributs personnalisés peuvent être trouvées ici dans la classe [BrazeUser dans les Javadocs][2].
+Les spécifications complètes de la méthode pour les attributs personnalisés peuvent être trouvées ici dans la classe [BrazeUser dans le KDoc][2].
 
 ### Définition des valeurs d'attributs personnalisés
 
@@ -276,7 +276,7 @@ Vous pouvez également utiliser notre API REST pour définir les attributs de l'
 
 Les clés et valeurs d'attributs personnalisés ont une longueur maximale de 255 caractères.  Les chaînes plus longues seront tronquées à 255 caractères.
 
-Des informations complètes sur la classe peuvent être trouvées dans le [javadocs][2].
+Des informations complètes sur la classe peuvent être trouvées dans les [KDocs][2].
 
 ## Mise en place des abonnements utilisateurs
 
@@ -333,12 +333,12 @@ Braze.getInstance(context).currentUser?.setPushNotificationSubscriptionType(push
 {% endtab %}
 {% endtabs %}
 
-[2]: https://appboy.github.io/appboy-android-sdk/javadocs/com/braze/BrazeUser.html
+[2]: https://appboy.github.io/appboy-android-sdk/kdoc/braze-android-sdk/com.braze/-braze-user/index.html
 
-[2]: https://appboy.github.io/appboy-android-sdk/javadocs/com/braze/BrazeUser.html
+[2]: https://appboy.github.io/appboy-android-sdk/kdoc/braze-android-sdk/com.braze/-braze-user/index.html
 
-[2]: https://appboy.github.io/appboy-android-sdk/javadocs/com/braze/BrazeUser.html
+[2]: https://appboy.github.io/appboy-android-sdk/kdoc/braze-android-sdk/com.braze/-braze-user/index.html
 
-[2]: https://appboy.github.io/appboy-android-sdk/javadocs/com/braze/BrazeUser.html
+[2]: https://appboy.github.io/appboy-android-sdk/kdoc/braze-android-sdk/com.braze/-braze-user/index.html
 [4]: {{site.baseurl}}/developer_guide/rest_api/user_data/#user-data
 [7]: {{site.baseurl}}/developer_guide/platform_wide/analytics_overview/#user-data-collection
