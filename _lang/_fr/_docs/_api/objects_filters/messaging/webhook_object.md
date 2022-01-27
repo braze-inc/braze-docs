@@ -10,6 +10,10 @@ description: "Cet article décrit l'objet Braze Webhook."
 
 # Spécification de l'objet Webhook
 
+Ce qui suit décrit l'objet Webhook Braze.
+
+En tant que meilleure pratique, Braze recommande que vous fournissiez une valeur explicite pour `Content-Type` dans le champ `request_headers` pour assurer un comportement cohérent et prévisible, car les expéditeurs et les serveurs peuvent changer au fil du temps. Si une valeur n'est pas spécifiée pour l'en-tête `Content-Type` , on sera déduit du corps de la requête.
+
 ```json
 {
   "url": (obligatoire, chaîne),
