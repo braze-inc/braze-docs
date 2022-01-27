@@ -20,7 +20,7 @@ Le point de terminaison de la suppression du planning vous permet d'annuler un m
 
 ## Limite de taux
 
-{% include rate_limits.md endpoint='default' category='message endpoints' %}
+{% include rate_limits.md endpoint='default' %}
 
 ## Corps de la requête
 
