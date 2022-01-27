@@ -38,7 +38,7 @@ Liste ci-dessous sont les données enregistrées automatiquement générées et 
 {: .reset-td-br-1 .reset-td-br-2 .reset-td-br-3  .reset-td-br-4}
 
 Tous les champs ci-dessus peuvent être désactivés pour permettre une intégration minimum:
-- Android : [champs au niveau de l'appareil](https://appboy.github.io/appboy-android-sdk/javadocs/com/appboy/enums/DeviceKey.html), [documentation de liste d'autorisation]({{site.baseurl}}/developer_guide/platform_integration_guides/android/storage/)
+- Android : [champs au niveau de l'appareil][1], [documentation de liste d'autorisation]({{site.baseurl}}/developer_guide/platform_integration_guides/android/storage/)
 - iOS : [champs de niveau périphérique](https://github.com/Appboy/appboy-ios-sdk/blob/16e893f2677af7de905b927505d4101c6fb2091d/AppboyKit/headers/AppboyKitLibrary/Appboy.h#L181), [documentation de liste autorisée]({{site.baseurl}}/developer_guide/platform_integration_guides/ios/storage/)
 - Web: [champs au niveau de l'appareil](https://js.appboycdn.com/web-sdk/2.3/doc/module-appboy.html#toc2), [documentation de liste autorisée]({{site.baseurl}}/developer_guide/platform_integration_guides/web/cookies_and_storage/#device-properties)
 
@@ -64,4 +64,6 @@ Si vous êtes intéressé par l’intégration minimale uniquement, et que vous 
 - __Plateformes mobiles__: Vous devez mettre à jour manuellement le code pour ces configurations. mParticle et Segment n'offrent pas un moyen de le faire à travers leur plateforme.
 - __Web__: L'intégration de Braze doit être effectuée nativement pour permettre la configuration minimale de l'intégration. Les gestionnaires de tags n'offrent pas un moyen de le faire à travers leur plateforme.
 
-{% endalert %} 
+{% endalert %}
+
+[1]: https://appboy.github.io/appboy-android-sdk/kdoc/braze-android-sdk/com.appboy.enums/-device-key/index.html
