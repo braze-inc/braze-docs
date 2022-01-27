@@ -20,7 +20,7 @@ Le point de terminaison des messages planifiés de suppression vous permet d'ann
 
 ## Limite de taux
 
-{% include rate_limits.md endpoint='default' category='message endpoints' %}
+{% include rate_limits.md endpoint='default' %}
 
 ## Corps de la requête
 
