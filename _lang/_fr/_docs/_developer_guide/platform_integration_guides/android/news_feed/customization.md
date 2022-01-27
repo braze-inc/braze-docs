@@ -145,9 +145,9 @@ Pour enregistrer une impression ou cliquer sur une carte, appelez [`Card.logClic
 [18]: {% image_buster /assets/img_archive/Image27Theming.png %} "Flux Android" [19]: {% image_buster /assets/img_archive/Image28Theming. ng %} "Cartes Android" [20]: {% image_buster /assets/img_archive/Image29Theming.png %} "Android Empty" [21]: {% image_buster /assets/img_archive/Image30Theming.png %} "Erreur réseau Android"
 
 
-[6]: https://appboy.github.io/appboy-android-sdk/javadocs/com/appboy/Appboy.html#logFeedDisplayed--
-[7]: https://appboy.github.io/appboy-android-sdk/javadocs/com/appboy/models/cards/Card.html#logClick--
-[8]: https://appboy.github.io/appboy-android-sdk/javadocs/com/appboy/models/cards/Card.html#logImpression--
+[6]: https://appboy.github.io/appboy-android-sdk/kdoc/braze-android-sdk/com.appboy/-appboy/log-feed-displayed.html
+[7]: https://appboy.github.io/appboy-android-sdk/kdoc/braze-android-sdk/com.appboy.models.cards/-card/log-click.html
+[8]: https://appboy.github.io/appboy-android-sdk/kdoc/braze-android-sdk/com.appboy.models.cards/-card/log-impression.html
 [9]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/news_feed/card_types/#card-types
 [37]: https://github.com/Appboy/appboy-android-sdk/blob/master/android-sdk-ui/src/main/java/com/appboy/ui/feed/listeners/IFeedClickActionListener.java
 [40]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/advanced_use_cases/font_customization/#font-customization
