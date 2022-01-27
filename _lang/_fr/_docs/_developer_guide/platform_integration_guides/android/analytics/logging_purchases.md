@@ -47,7 +47,7 @@ Braze.getInstance(context).logPurchase(
 {% endtab %}
 {% endtabs %}
 
-__Si l'identifiant du produit est vide, l'achat ne sera pas enregistré sur Brésil.__ Voir le [Javadoc][8] pour plus d'informations.
+__Si l'identifiant du produit est vide, l'achat ne sera pas enregistré sur Brésil.__ Voir le [KDoc][6] pour plus d'informations.
 
 {% alert tip %}
   Si vous passez une valeur de `10 USD`, et une quantité de `3` alors qui se connectera au profil de l'utilisateur comme 3 achats de 10 dollars pour un total de 30 dollars. La quantité doit être inférieure ou égale à 100. Les valeurs d'achat peuvent être négatives.
@@ -80,7 +80,7 @@ Braze.getInstance(context).logPurchase(..., purchaseProperties)
 {% endtab %}
 {% endtabs %}
 
-Consultez le [Javadoc][6] pour plus d'informations.
+Consultez le [KDoc][6] pour plus d'informations.
 
 ### Clés réservées
 
@@ -99,7 +99,6 @@ Vous pouvez également utiliser notre API REST pour enregistrer vos achats. Repo
 
 [1]: {{site.baseurl}}/developer_guide/rest_api/user_data/#user-data
 [3]: {{site.baseurl}}/developer_guide/platform_wide/analytics_overview/#user-data-collection
-[4]: https://appboy.github.io/appboy-android-sdk/javadocs/com/braze/models/outgoing/BrazeProperties.html
+[4]: https://appboy.github.io/appboy-android-sdk/kdoc/braze-android-sdk/com.braze.models.outgoing/-braze-properties/index.html
 [5]: http://developer.android.com/reference/java/util/Date.html
-[6]: https://appboy.github.io/appboy-android-sdk/javadocs/com/appboy/Appboy.html#logPurchase-java.lang.String-java.lang.String-java.math.BigDecimal-int-com.braze.models.outgoing.BrazeProperties-
-[8]: https://appboy.github.io/appboy-android-sdk/javadocs/com/appboy/Appboy.html#logPurchase(java.lang.String,%20java.lang.String,%20java.math.BigDecimal,%20int)
+[6]: https://appboy.github.io/appboy-android-sdk/kdoc/braze-android-sdk/com.appboy/-appboy/log-purchase.html
