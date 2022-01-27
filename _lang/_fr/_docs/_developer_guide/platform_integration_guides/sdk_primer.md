@@ -109,7 +109,7 @@ Vous pouvez soit simplement ne pas intégrer certaines parties du SDK, soit util
 
 ### SDK Android
 
-Vous pouvez utiliser [`setDeviceObjectAllowlist`](https://appboy.github.io/appboy-android-sdk/javadocs/) pour configurer pour n'envoyer qu'un sous-ensemble de clés ou de valeurs de l'objet périphérique selon une liste d'autorisations. Ceci doit être activé via `setDeviceObjectAllowlistEnabled`.
+Vous pouvez utiliser [`setDeviceObjectAllowlist`][1]pour configurer pour n'envoyer qu'un sous-ensemble de clés ou de valeurs de l'objet périphérique selon une liste d'autorisations. Ceci doit être activé via [`setDeviceObjectAllowlistEnabled`][2].
 
 {% alert important %}
 Une liste d'autorisations vide entraînera __aucune donnée de périphérique__ envoyée au Brésil.
@@ -130,3 +130,6 @@ Par défaut, tous les champs sont collectés par Braze iOS SDK.
 Le SDK de Braze est conçu pour être très bien comporté, et ne pas interférer avec les autres SDK présents dans votre application mobile. Si vous rencontrez des problèmes que vous pensez être dus à une incompatibilité avec un autre SDK mobile, veuillez contacter le support de Braze.
 
 De plus, Braze iOS SDK prend entièrement en charge les applications RubyMotion.
+
+[1]: https://appboy.github.io/appboy-android-sdk/kdoc/braze-android-sdk/com.braze.configuration/-braze-config/-builder/set-device-object-allowlist.html?query=fun%20setDeviceObjectAllowlist(deviceObjectAllowlist:%20EnumSet%3CDeviceKey%3E):%20BrazeConfig.Builder
+[2]: https://appboy.github.io/appboy-android-sdk/kdoc/braze-android-sdk/com.braze.configuration/-braze-config/-builder/set-device-object-allowlist-enabled.html?query=fun%20setDeviceObjectAllowlistEnabled(enabled:%20Boolean):%20BrazeConfig.Builder
