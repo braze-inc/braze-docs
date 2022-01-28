@@ -56,7 +56,7 @@ Si un jeton de push est déplacé vers un autre utilisateur sur le même apparei
 
 ## Détails du push {#ios-android-details}
 
-Les sections suivantes détaillent quelques différences sur la façon dont la fonction de push est gérée entre Android et iOS.
+Les sections suivantes détaillent certaines différences sur la façon dont la fonction de push est gérée entre Android, iOS et web.
 
 ### Android
 
@@ -89,7 +89,7 @@ Il y a deux états activés :
 
 Indépendamment de la réponse à l'invite opt-int, l'utilisateur reçoit un jeton de Push en arrière-plan (vous devez avoir activé "Notifications distantes" dans Xcode), vous permettant de leur envoyer une Push en mode silencieux. Si votre application est provisoirement autorisée ou si l'utilisateur a opté pour push, ils reçoivent également un jeton de premier plan, vous permettant de leur envoyer tous les types de push. Au sein de Braze, nous considérons qu'un utilisateur sur iOS qui est au premier plan activé est "push enabled", soit explicitement (niveau de l'application) soit provisoirement (niveau de l'appareil).
 
-#### État et opt-in activés
+#### État désactivé
 
 Lors de la prochaine application ouverte dans iOS, le SDK détectera que le push a été désactivé et notifiera Braze. À ce stade, Braze mettra à jour l'état push-enabled à désactivé. Lorsque vous essayez d'envoyer un push à un utilisateur, Braze sait déjà si nous avons un jeton, de sorte que les notifications ne soient envoyées qu'aux personnes qui indiquent explicitement qu'elles le veulent.
 
@@ -98,6 +98,14 @@ Lors de la prochaine application ouverte dans iOS, le SDK détectera que le push
 Dans iOS 12, Apple a introduit l'autorisation provisoire, permettant aux marques d'envoyer des notifications silencieuses aux centres de notification de leurs utilisateurs avant de s'inscrire, vous donnant la possibilité de démontrer la valeur de vos messages plus tôt. Consultez notre documentation pour en savoir plus sur l' [autorisation provisoire]({{site.baseurl}}/user_guide/message_building_by_channel/push/ios/notification_options/#provisional-push-authentication--quiet-notifications).
 
 Sur les appareils fonctionnant sous iOS 11 ou ci-dessous, vos utilisateurs doivent explicitement opter pour recevoir vos messages push. Vous devez demander si l'utilisateur souhaite recevoir des messages push de votre part.
+
+### Web
+
+Le comportement de l'abonnement push web fonctionne de la même façon que celui de mobile. Le statut d'abonnement par défaut pour les utilisateurs web une fois qu'ils ont opté pour la fonction `appboy.registerAppboyPushMessages()` est `abonné`. Ce statut par défaut est suffisant pour que vous puissiez envoyer des messages push aux utilisateurs du web. L'état `opté dans` implique qu'un utilisateur a opté explicitement pour pousser des notifications via le web, si permis. Cependant, cet opt-in explicite n'est pas nécessaire pour envoyer des push aux utilisateurs du web.
+
+Pour gérer les abonnements, vous pouvez utiliser la méthode utilisateur [`setPushNotificationSubscriptionType`](https://js.appboycdn.com/web-sdk/latest/doc/classes/appboy.user.html#setpushnotificationsubscriptiontype) pour créer une page de paramètres de préférences sur votre site, après quoi vous pouvez filtrer les utilisateurs par opt-out statut sur le tableau de bord.
+
+Si un utilisateur désactive les notifications dans son navigateur, la prochaine notification push envoyée à cet utilisateur rebondira et Braze mettra à jour le jeton de push de l'utilisateur en conséquence. Ceci est utilisé pour gérer l'éligibilité des filtres activés par push (`Background Push Activé`, `Push Activé` et `Push Activé pour l'application`). Le statut d'abonnement défini sur le profil de l'utilisateur est un paramètre de niveau utilisateur et ne change pas quand un push bounce.
 [1]: {% image_buster /assets/img/push_enablement.png %} [2]: {% image_buster /assets/img/push_changelog. ng %} [56]: {% image_buster /assets/img_archive/braze_optedin.png %} [3]: {% image_buster /assets/img/push_example.png %}
 
 [identifier]: {{site.baseurl}}/api/endpoints/export/user_data/post_users_identifier/
