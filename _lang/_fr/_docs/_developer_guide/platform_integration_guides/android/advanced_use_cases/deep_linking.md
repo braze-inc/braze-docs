@@ -14,7 +14,7 @@ description: "Cet article couvre comment implémenter le délégué universel de
 
 Le SDK Android fournit la possibilité de définir un seul objet délégué pour gérer sur mesure tous les liens profonds ouverts par Braze sur les Cartes de Contenu, messages intégrés à l'application et notifications push.
 
-Votre objet délégué devrait implémenter l'interface [`IAppboyNavigator`][udl-3] et être défini en utilisant [`AppboyNavigator.setAppboyNavigator()`][udl-2]. Dans la plupart des cas, le délégué doit être défini dans votre application `Application.onCreate()`.
+Votre objet délégué devrait implémenter l'interface [`IBrazeDeeplinkHandler`][udl-3] et être défini en utilisant [`BrazeDeeplinkHandler.setBrazeDeeplinkHandler()`][udl-2]. Dans la plupart des cas, le délégué doit être défini dans votre application `Application.onCreate()`.
 
 Ce qui suit est un exemple d'outrepasser le comportement par défaut [`UriAction`][udl-1] avec des drapeaux d'intention personnalisés et un comportement personnalisé pour les URL YouTube.
 
@@ -22,8 +22,8 @@ Ce qui suit est un exemple d'outrepasser le comportement par défaut [`UriAction
 {% tab JAVA %}
 
 ```java
-CustomNavigator de classe publique implémente IAppboyNavigator {
-  privé static final String TAG = BrazeLogger.getBrazeLogTag(CustomAppboyNavigator. lass);
+la classe publique CustomDeeplinkHandler implémente IBrazeDeeplinkHandler {
+  private static final String TAG = BrazeLogger.getBrazeLogTag(CustomDeeplinkHandler. lass);
 
   @Override
   public vide gotoNewsFeed(Contexte contextuel, NewsfeedAction newsfeedAction) {
@@ -66,9 +66,9 @@ CustomNavigator de classe publique implémente IAppboyNavigator {
 {% tab KOTLIN %}
 
 ```kotlin
-class CustomNavigator : IAppboyNavigator {
+class CustomDeeplinkHandler : IBrazeDeeplinkHandler {
 
-  outrepasser gotoNewsFeed(context: Context, newsfeedAction: NewsfeedAction) {
+  override fun gotoNewsFeed(context: Context, newsfeedAction: NewsfeedAction) {
     newsfeedAction. xecute(contexte)
   }
 
@@ -97,7 +97,7 @@ class CustomNavigator : IAppboyNavigator {
   }
 
   companion object {
-    private val TAG = BrazeLogger.getBrazeLogTag(CustomAppboyNavigator::class.java)
+    private val TAG = BrazeLogger.getBrazeLogTag(CustomDeeplinkHandler::class.java)
   }
 }
 ```
@@ -107,16 +107,15 @@ class CustomNavigator : IAppboyNavigator {
 
 ## Liaison profonde vers les paramètres de l'application
 
-Pour permettre à des liens profonds d'ouvrir directement les paramètres de votre application, vous aurez besoin d'un AppboyNavigator personnalisé. Dans l'exemple suivant, la présence d'une paire clé-valeur personnalisée appelée `open_notification_page` fera ouvrir la page de configuration de l'application.
+Pour permettre à des liens profonds d'ouvrir directement les paramètres de votre application, vous aurez besoin d'un BrazeDeeplinkHandler. Dans l'exemple suivant, la présence d'une paire clé-valeur personnalisée appelée `open_notification_page` fera ouvrir la page de configuration de l'application.
 
 {% tabs %}
 {% tab JAVA %}
 
 ```java
-
-  AppboyNavigator. etAppboyboyNavigator(new IAppboyNavigator() { 
- @Override
-  public void gotoUri(Contexte contextuel, UriAction uriAction) {
+Gestionnaire de liens de référence. etBrazeDeeplinkHandler(new IBrazeDeeplinkHandler() {
+  @Override
+  public void gotoUri(Contexte contextuel UriAction uriAction) {
     bundle final extras = uriAction. etExtras();
     si (extras. ontainsKey("open_notification_page")) {
       Intendant = new Intent();
@@ -142,7 +141,7 @@ Pour permettre à des liens profonds d'ouvrir directement les paramètres de vot
 {% tab KOTLIN %}
 
 ```kotlin
-AppboyNavigator.setAppAppboyNavigator(object : IAppboyNavigator {
+BrazeDeeplinkHandler.setBrazeDeeplinkHandler(object : IBrazeDeeplinkHandler {
   override fun gotoUri(context: Context, uriAction: UriAction) {
     val extras = uriAction. xtras
     si (extras. ontainsKey("open_notification_page")) {
@@ -217,11 +216,11 @@ Braze.configure(ceci, brazeConfig)
 [2]: {{site.baseurl}}/user_guide/message_building_by_channel/push/creating_a_push_message/#creating-a-push-message
 [2]: {{site.baseurl}}/user_guide/message_building_by_channel/push/creating_a_push_message/#creating-a-push-message
 [3]: {{site.baseurl}}/api/endpoints/messaging/
-[udl-1]: https://appboy.github.io/appboy-android-sdk/kdoc/braze-android-sdk/com.appboy.ui.actions/-uri-action/index.html
-[udl-2]: https://appboy.github.io/appboy-android-sdk/kdoc/braze-android-sdk/com.appboy.ui/-appboy-navigator/set-appboy-navigator.html
-[udl-3]: https://appboy.github.io/appboy-android-sdk/kdoc/braze-android-sdk/com.appboy/-i-appboy-navigator/index.html
-[udl-4]: https://appboy.github.io/appboy-android-sdk/kdoc/index.html
-[udl-5]: https://appboy.github.io/appboy-android-sdk/kdoc/braze-android-sdk/com.appboy/-appboy/configure.html
+[udl-1]: https://appboy.github.io/appboy-android-sdk/kdoc/braze-android-sdk/com.braze.ui.actions/-uri-action/index.html
+[udl-2]: https://appboy.github.io/appboy-android-sdk/kdoc/braze-android-sdk/com.braze.ui/-braze-deeplink-handler/set-braze-deeplink-handler.html
+[udl-3]: https://appboy.github.io/appboy-android-sdk/kdoc/braze-android-sdk/com.braze.ui/-braze-deeplink-handler/index.html
+[udl-4]: https://appboy.github.io/appboy-android-sdk/kdoc/braze-android-sdk/com.braze.ui/-braze-web-view-activity/index.html
+[udl-5]: https://appboy.github.io/appboy-android-sdk/kdoc/braze-android-sdk/com.braze/-braze/index.html#-1864418529%2FFunctions%2F-1725759721
 [udl-6]: https://appboy.github.io/appboy-android-sdk/kdoc/braze-android-sdk/com.braze.configuration/-braze-config/-builder/set-custom-web-view-activity-class.html
 [udl-6]: https://appboy.github.io/appboy-android-sdk/kdoc/braze-android-sdk/com.braze.configuration/-braze-config/-builder/set-custom-web-view-activity-class.html
 [udl-7]: https://developer.android.com/reference/android/app/Application.html#onCreate()
