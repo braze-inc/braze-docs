@@ -22,17 +22,12 @@ Lexer's segmentation, insights and audience activation and measurement capabilit
 
 ## Prerequisites
 
-This section should list what you need to complete this partnership integration. The best way to deliver this information is with a quick instructional paragraph that describes any non-technically important details or "need to know" information, like whether or not your integration will be subject to additional security checks or clearances. Then, use a chart to describe the technical requirements of the integration.
-
-<div class='alert alert-important' role='alert'><div class='alert-msg'> <b>important: </b><br />
-<p>The requirements listed below are typical requirements you might need from Braze. We recommend using the attributed titling and phrasing listed in the chart below. Be sure to adjust the descriptions and tailor them to your partnership integration.</p>
-</div></div>
-
 | Requirement | Description |
 | ----------- | ----------- |
-| Partner account | A partner account is required to take advantage of this partnership. |
-| Braze REST API key | A Braze REST API Key with `users.track` permissions. <br><br> This can be created within the __Braze Dashboard -> Developer Console -> REST API Key -> Create New API Key__ |
+| Partner account | A Lexer account is required to take advantage of this partnership. |
+| Braze REST API key | "A Braze REST API Key with users.track permissions (except for user.delete) and segment.list permissions.The permission set may change as Lexer adds support for more Braze objects, so you may either want to grant more permissions now or plan to update these permissions in the future. This can be created within the Braze Dashboard -> Developer Console -> REST API Key -> Create New API Key" |
 | Braze REST endpoint | [Your REST Endpoint URL][1]. Your endpoint will depend on the Braze URL for your instance. |
+| Amazon AWS S3 Bucket and credentials | Before beginning the integration, you must have access credentials for an AWS S3 bucket connected to your Lexer hub (this may be a bucket you create, or one that Lexer creates and manages for you). Visit Lexer documentation <link to our s3 help article> for guidance on this requirement. |
 {: .reset-td-br-1 .reset-td-br-2}
 
 ## Use cases
@@ -41,9 +36,31 @@ Use a persistently maintained operation single view of customer to deliver perso
 
 ## Integration
 
-Embed this: https://learn.lexer.io/docs/braze
+Select the Braze tile, and click **Integrate Braze**, then enter all the requested details and hit **Save Integration**.
 
+![Integrating Braze in Lexer][1]
 
+### What do I need to provide?
+1. Your braze API key and URL
+    - For information on how to obtain your API key and URL, read [here][2]
+2. Your AWS S3 Bucket credentials and details
+    - You won't need to provide this info if using a Lexer-managed s3 bucket
+    - For more info on creating the access key credentials, read [here][3]
+    - Learn more about AWS S3 bucket regions [here][4]
+    - The path should match the path you specified when [connecting your S3 bucket to Braze][5] (this can be blank if you did not specify anything in Braze)
+3. The ID of the segment you have created in Braze containing all users you wish to export to Lexer
+    - More info on working with Braze segments can be found below, and the segment ID may be found via the tab for segment editing on Braze
+    - The segment you specify lets Lexer know which users to export - if there are users you do not wish to export to Lexer, you may choose to exclude them from the segment you created in Braze
 
+### Choosing which AWS S3 option to go with - Lexer-managed vs self-managed
+Using a Lexer-managed bucket is the preferred way of connecting Braze to your Lexer hub, and will reduce the amount of set-up required by you! We'll provide the details you'll need to provide in Braze in the once-off configuration to be made. 
 
-[1]: https://www.braze.com/docs/developer_guide/rest_api/basics/#endpoints
+If you have already connected an S3 bucket to Braze and are using it for other purposes, then you will need to instead provide Lexer access to this self-managed bucket by following the steps above.
+
+This integration works by providing Lexer with your existing API token and secrets, and allowing Lexer to make these exports on your behalf. It also imports your Braze data into Lexer using these credentials and your s3 configuration, so that your data on both platforms is automatically kept synchronised.
+
+[1]: {% image_buster /assets/img/lexer/braze_integrate_screen.png %}
+[2]: https://www.braze.com/docs/api/basics/#company-secret-explanation
+[3]: https://aws.amazon.com/premiumsupport/knowledge-center/create-access-key/
+[4]: https://docs.aws.amazon.com/AmazonS3/latest/userguide/UsingBucket.html
+[5]: https://www.braze.com/docs/partners/data_and_infrastructure_agility/cloud_storage/amazon_s3/
