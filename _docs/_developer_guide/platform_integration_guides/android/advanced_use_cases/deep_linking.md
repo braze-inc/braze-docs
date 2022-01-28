@@ -15,7 +15,7 @@ description: "This article covers how to implement the universal deep linking de
 
 The Android SDK provides the ability to set a single delegate object to custom handle all deep links opened by Braze across Content Cards, in-app messages, and push notifications.
 
-Your delegate object should implement the [`IAppboyNavigator`][udl-3] interface and be set using [`AppboyNavigator.setAppboyNavigator()`][udl-2]. In most cases, the delegate should be set in your app's `Application.onCreate()`.
+Your delegate object should implement the [`IBrazeDeeplinkHandler`][udl-3] interface and be set using [`BrazeDeeplinkHandler.setBrazeDeeplinkHandler()`][udl-2]. In most cases, the delegate should be set in your app's `Application.onCreate()`.
 
 The following is an example of overriding the default [`UriAction`][udl-1] behavior with custom intent flags and custom behavior for YouTube URLs.
 
@@ -23,8 +23,8 @@ The following is an example of overriding the default [`UriAction`][udl-1] behav
 {% tab JAVA %}
 
 ```java
-public class CustomNavigator implements IAppboyNavigator {
-  private static final String TAG = BrazeLogger.getBrazeLogTag(CustomAppboyNavigator.class);
+public class CustomDeeplinkHandler implements IBrazeDeeplinkHandler {
+  private static final String TAG = BrazeLogger.getBrazeLogTag(CustomDeeplinkHandler.class);
 
   @Override
   public void gotoNewsFeed(Context context, NewsfeedAction newsfeedAction) {
@@ -67,7 +67,7 @@ public class CustomNavigator implements IAppboyNavigator {
 {% tab KOTLIN %}
 
 ```kotlin
-class CustomNavigator : IAppboyNavigator {
+class CustomDeeplinkHandler : IBrazeDeeplinkHandler {
 
   override fun gotoNewsFeed(context: Context, newsfeedAction: NewsfeedAction) {
     newsfeedAction.execute(context)
@@ -98,7 +98,7 @@ class CustomNavigator : IAppboyNavigator {
   }
 
   companion object {
-    private val TAG = BrazeLogger.getBrazeLogTag(CustomAppboyNavigator::class.java)
+    private val TAG = BrazeLogger.getBrazeLogTag(CustomDeeplinkHandler::class.java)
   }
 }
 ```
@@ -108,13 +108,13 @@ class CustomNavigator : IAppboyNavigator {
 
 ## Deep linking to app settings
 
-To allow for deep links to directly open your app's settings, you'll need a custom AppboyNavigator. In the following example, the presence of a custom key-value pair called `open_notification_page` will make the deep link open the app's settings page.
+To allow for deep links to directly open your app's settings, you'll need a custom BrazeDeeplinkHandler. In the following example, the presence of a custom key-value pair called `open_notification_page` will make the deep link open the app's settings page.
 
 {% tabs %}
 {% tab JAVA %}
 
 ```java
-AppboyNavigator.setAppboyNavigator(new IAppboyNavigator() {
+BrazeDeeplinkHandler.setBrazeDeeplinkHandler(new IBrazeDeeplinkHandler() {
   @Override
   public void gotoUri(Context context, UriAction uriAction) {
     final Bundle extras = uriAction.getExtras();
@@ -142,7 +142,7 @@ AppboyNavigator.setAppboyNavigator(new IAppboyNavigator() {
 {% tab KOTLIN %}
 
 ```kotlin
-AppboyNavigator.setAppboyNavigator(object : IAppboyNavigator {
+BrazeDeeplinkHandler.setBrazeDeeplinkHandler(object : IBrazeDeeplinkHandler {
   override fun gotoUri(context: Context, uriAction: UriAction) {
     val extras = uriAction.extras
     if (extras.containsKey("open_notification_page")) {
@@ -217,11 +217,11 @@ Braze.configure(this, brazeConfig)
 [1]: {{site.baseurl}}/developer_guide/platform_integration_guides/android/push_notifications/integration/standard_integration/#step-4-add-deep-links
 [2]: {{site.baseurl}}/user_guide/message_building_by_channel/push/creating_a_push_message/#creating-a-push-message
 [3]: {{site.baseurl}}/api/endpoints/messaging/
-[udl-1]: https://appboy.github.io/appboy-android-sdk/kdoc/braze-android-sdk/com.appboy.ui.actions/-uri-action/index.html
-[udl-2]: https://appboy.github.io/appboy-android-sdk/kdoc/braze-android-sdk/com.appboy.ui/-appboy-navigator/set-appboy-navigator.html
-[udl-3]: https://appboy.github.io/appboy-android-sdk/kdoc/braze-android-sdk/com.appboy/-i-appboy-navigator/index.html
-[udl-4]: https://appboy.github.io/appboy-android-sdk/kdoc/index.html
-[udl-5]: https://appboy.github.io/appboy-android-sdk/kdoc/braze-android-sdk/com.appboy/-appboy/configure.html
+[udl-1]: https://appboy.github.io/appboy-android-sdk/kdoc/braze-android-sdk/com.braze.ui.actions/-uri-action/index.html
+[udl-2]: https://appboy.github.io/appboy-android-sdk/kdoc/braze-android-sdk/com.braze.ui/-braze-deeplink-handler/set-braze-deeplink-handler.html
+[udl-3]: https://appboy.github.io/appboy-android-sdk/kdoc/braze-android-sdk/com.braze.ui/-braze-deeplink-handler/index.html
+[udl-4]: https://appboy.github.io/appboy-android-sdk/kdoc/braze-android-sdk/com.braze.ui/-braze-web-view-activity/index.html
+[udl-5]: https://appboy.github.io/appboy-android-sdk/kdoc/braze-android-sdk/com.braze/-braze/index.html#-1864418529%2FFunctions%2F-1725759721
 [udl-6]: https://appboy.github.io/appboy-android-sdk/kdoc/braze-android-sdk/com.braze.configuration/-braze-config/-builder/set-custom-web-view-activity-class.html
 [udl-7]: https://developer.android.com/reference/android/app/Application.html#onCreate()
 [udl-8]: https://github.com/Appboy/appboy-android-sdk/blob/master/android-sdk-ui/src/main/java/com/braze/ui/BrazeWebViewActivity.java
