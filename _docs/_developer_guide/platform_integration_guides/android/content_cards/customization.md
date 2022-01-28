@@ -20,7 +20,7 @@ Braze In-App Messages and Content Cards come with a default look and feel that m
 ```xml
   <!-- Content Cards Example -->
   <style name="Braze.ContentCards.CaptionedImage.Description">
-    <item name="android:textColor">@color/com_braze_description</item>
+    <item name="android:textColor">@color/com_appboy_description</item>
     <item name="android:textSize">15.0sp</item>
     <item name="android:includeFontPadding">false</item>
     <item name="android:paddingBottom">8.0dp</item>
@@ -28,7 +28,7 @@ Braze In-App Messages and Content Cards come with a default look and feel that m
     <item name="android:layout_marginRight">10.0dp</item>
     <item name="android:layout_marginTop">8.0dp</item>
     <item name="android:layout_width">match_parent</item>
-    <item name="android:layout_below">@id/com_braze_content_cards_captioned_image_card_title_container</item>
+    <item name="android:layout_below">@id/com_appboy_content_cards_captioned_image_card_title_container</item>
   </style>
 ```
 
@@ -67,7 +67,7 @@ This section covers customization of the [ContentCardsFragment][49] whose source
 
 If the [ContentCardsFragment][49] determines that a Content Card refresh has failed, it will display a network connection error message.
 
-A special adapter, the [AppboyEmptyContentCardsAdapter][50] replaces the standard [AppboyCardAdapter][53] to display the error message. To set the custom message itself, override the string resource `com_braze_feed_empty`.
+A special adapter, the [AppboyEmptyContentCardsAdapter][50] replaces the standard [AppboyCardAdapter][53] to display the error message. To set the custom message itself, override the string resource `com_appboy_feed_empty`.
 
 The style used to display this message can be found via [`Appboy.ContentCardsDisplay.Empty`][52] and is reproduced below.
 
