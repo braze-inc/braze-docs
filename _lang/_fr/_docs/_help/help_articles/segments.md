@@ -3,6 +3,7 @@ page_order: 6
 nav_title: Segments
 layout: dev_guide
 guide_top_header: "Articles d'aide des segments"
+guide_top_text: "Voici quelques articles rapides et instructifs sur la clarification de la logique de segmentation et des questions de filtrage. <br><br> En savoir plus sur l'utilisation de la segmentation dans vos campagnes ou vos toiles de Braze dans notre section <a href='/docs/user_guide/engagement_tools/segments'>Segments</a>."
 page_type: atterrissage
 description: "Cette page d'accueil permet d'aider les articles liés aux problèmes courants de Segments."
 tool: Segments
