@@ -3,6 +3,7 @@ page_order: 5
 nav_title: Pousser
 layout: dev_guide
 guide_top_header: "Envoyer des articles d'aide"
+guide_top_text: "Consultez les articles d'aide ci-dessous pour obtenir de l'aide concernant le dépannage des problèmes courants avec les messages push. <br><br> En savoir plus sur la façon de maximiser et de mobiliser votre public dans la section <a href='/docs/api/basics/'>Pousser</a>!"
 page_type: atterrissage
 description: "Cette page d'accueil est la page d'accueil pour aider les articles sur les problèmes courants avec les messages push."
 channel: Pousser
