@@ -30,6 +30,15 @@ $(document).ready(function() {
       });
         //showTooltip(e.trigger, fallbackMessage(e.action));
     });
-
-
+    var glassaryShare = new ClipboardJS('.glossary_share', {
+      text: function(trigger) {
+          return window.location.origin + window.location.pathname + trigger.getAttribute('data-clipboard-text');
+      }
+    });
+    glassaryShare.on('success', function(e) {
+      var dvid = '#dv_' + e.trigger.id;
+      $(dvid).html('Copied').animate({'opacity': 1},300,function(){
+        $(dvid).delay(200).animate({'opacity': 0},500)
+      });
+    });
   });

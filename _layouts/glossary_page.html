@@ -282,7 +282,7 @@ $(document).ready(function() {
       {%- assign glossary_id = glossary['name'] | slugify | downcase -%}
         <span id="filter_{{ glossary_id }}" class="term">
           <h2 id="{{ glossary_id }}"></h2>
-          <div class="content"><p class="title">{{ glossary['name'] }}</p>
+          <div class="content"><p class="title">{{ glossary['name'] }} <a class="glossary_share" data-clipboard-text="#{{ glossary_id }}" id="cp_{{glossary_id}}"><i class="fas fa-link">&nbsp;</i></a><span id="dv_cp_{{glossary_id}}"></span></p>
             {%- if glossary['image'] -%}
             <img src="{{ glossary['image'] }}" />
             {%- endif -%}
@@ -335,3 +335,4 @@ $(document).ready(function() {
   <div id="toc" ></div>
 </div>
 {%- endunless -%}
+
