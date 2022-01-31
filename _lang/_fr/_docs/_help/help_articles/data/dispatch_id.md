@@ -8,7 +8,7 @@ description: "Cet article couvre le comportement de l'ID d'expédition, y compri
 
 # Comportement de l'ID d'envoi
 
-Un `dispatch_id` est l'ID de l'envoi de message - un ID unique pour chaque "transmission" envoyée depuis Braze. Les utilisateurs qui envoient un message programmé obtiennent le même `dispatch_id`, alors que les messages déclenchés par une action ou une API recevront un `dispatch_id unique` par utilisateur.
+Un `dispatch_id` est l'ID du message dispatch-a unique ID pour chaque "transmission" envoyée depuis Braze. Les utilisateurs qui envoient un message programmé obtiennent le même `dispatch_id`, alors que les messages déclenchés par une action ou une API recevront un `dispatch_id unique` par utilisateur.
 
 {% alert important %}
 Notez que `dispatch_ids` sont par utilisateur, par campagne pour les messages déclenchés (basés sur l'action ou déclenchés par API).
