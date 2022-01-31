@@ -154,11 +154,13 @@ If you download a variant breakdown Canvas report, you'll receive two CSV files:
 
 Use charts to visualize a selected metric in your report. Charts are available for reports that feature campaigns and have at least one metric added to its columns.
 
-By default, the chart on each report will display the metric in the first column of the report. To select a different metric to graph, choose your metric from the dropdown. Any metric in your report table will be available to display in your chart. 
+![Campaign Performance chart with metric Message Sent selected][17]
 
-You will be able to graph at most 3 metrics. The units for all metrics must be the same - if you choose a rate in the first dropdown, for instance, then in the second dropdown, only rates will be available for selection. 
+By default, the chart on each report will display the metric in the first column of the report. To select a different metric to graph, choose your metric from the dropdown. Any metric in your report table will be available to display in your chart.
 
-If your chart contains only 1 metric, then it will display up to 30 campaigns, in descending order based on the metric you've selected. For example, if your chart's metric is email clicks, then your chart will display the 30 email campaigns with the most clicks, ordered from most to fewest clicks. If your report contains more than 30 campaigns, only the top 30 will be displayed in the chart. If there's more than 1 metric selected, then your graph will only display the 5 campaigns - the top 5 based on the first metric selected.
+You can graph at most three metrics. The units for all metrics must be the same—for instance, if you choose a rate in the first dropdown, then only rates will be available for selection in the second dropdown.
+
+If your chart contains only one metric, then it will display up to 30 campaigns in descending order based on the metric you've selected. For example, if your chart's metric is email clicks, then your chart will display the 30 email campaigns with the most clicks, ordered from most to fewest clicks. If your report contains more than 30 campaigns, only the top 30 will be displayed in the chart. If you select more than one metric, then your graph will only display the top five campaigns based on the first metric selected.
 
 Charts are currently not saved when you save your report.
 
@@ -175,5 +177,6 @@ Charts are currently not saved when you save your report.
 [13]: {% image_buster /assets/img/campaign_comparison/campaign_comparison2.png %}
 [14]: {% image_buster /assets/img/campaign_comparison/campaign_comparison3.png %}
 [15]: {% image_buster /assets/img/campaign_comparison/campaign_comparison_columns.png %}
+[17]: {% image_buster /assets/img/campaign_comparison/report_builder_charts.png %}
 
 [16]: {{site.baseurl}}/user_guide/data_and_analytics/report_metrics/
