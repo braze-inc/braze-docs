@@ -46,7 +46,7 @@ Bien que nous ne puissions pas vous promettre que vous n'aurez pas occasionnelle
 - Faites attention au nombre de caractères de votre SMS. Envoi involontaire de plus d'un segment pourrait provoquer des dépassements. Plus de détails [ici]({{site.baseurl}}/user_guide/message_building_by_channel/sms/campaign/segments/#segment-breakdown).
 - Calculez soigneusement vos caractères SMS pour tenir compte de Liquid ou du contenu connecté. Le compositeur de SMS Braze dans votre tableau de bord n'estime pas l'utilisation de l'une ou l'autre de ces fonctionnalités.
 - Considérez le type d'encodage que votre message utilise - si votre message utilise l'encodage GSM-7, vous pouvez généralement estimer que vous pouvez envoyer un message avec 128 caractères par segment de message. Si votre message utilise l'encodage [UCS-2](https://en.wikipedia.org/wiki/Universal_Coded_Character_Set) , vous pouvez généralement estimer que vous pouvez envoyer un message de 67 caractères par segment de message.
-- Test de test ! Testez toujours vos messages SMS avant le lancement, en particulier lorsque vous utilisez Liquid et le contenu connecté.
+- Tester, tester et tester ! Testez toujours vos messages SMS avant le lancement, en particulier lorsque vous utilisez Liquid et le contenu connecté.
 
 ### Quelles sont les meilleures pratiques d'envoi pour éviter la détection de spam pour les SMS?
 
@@ -84,7 +84,7 @@ Parmi les inconvénients de cette approche, citons :
 
 ### Comment pouvez-vous mettre en liste blanche les URLs pour les SMS?
 
-Avant d'envoyer des messages SMS contenant des URL à des utilisateurs de certains pays (par exemple, des pays de la Suède et des pays nordiques), vous devez enregistrer ces URLs auprès du transporteur. Contactez votre responsable du service à la clientèle Braze pour nous aider ; ce processus prendra environ cinq jours.
+Avant d'envoyer des messages SMS contenant des URLs aux utilisateurs de certains pays (par exemple, La Suède ou les pays nordiques), vous devez obtenir ces URLs enregistrées auprès du transporteur. Contactez votre responsable du service à la clientèle Braze pour vous aider. Ce processus prendra environ cinq jours.
 
 ### Que se passe-t-il si plusieurs utilisateurs ont le même numéro de téléphone ?
 
@@ -97,7 +97,9 @@ Braze utilisera le flux suivant pour déterminer le profil du destinataire :
 
 Si vous recevez un mot clé "START" ou "STOP" du numéro de téléphone partagé, tous les profils des utilisateurs seront abonnés et activés pour les SMS ou se désabonner.
 
-{% alert important %} Si vous étourdissez vos utilisateurs dans une toile et que vous avez des horaires différents pour chaque étape de Canvas vous pouvez envoyer un utilisateur avec le même e-mail ou téléphone en double messages. {% endalert %}
+{% alert important %}
+Si vous étourdissez vos utilisateurs dans une toile et que vous avez des horaires différents pour chaque étape de Canvas vous pouvez envoyer un utilisateur avec le même e-mail ou téléphone en double messages.
+{% endalert %}
 
 ### Les propriétés de l'évènement SMS captureront-elles des mots-clés dans une phrase ?
 
