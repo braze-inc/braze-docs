@@ -1,7 +1,7 @@
 ---
 nav_title: Rendu HTML dans les e-mails de test
 article_title: Rendu HTML dans les e-mails de test
-page_order: 0
+page_order: 1
 page_type: Solution
 description: "Cet article d'aide vous guide dans la façon de résoudre les problèmes de rendu HTML dans les courriels de test."
 channel: Email
@@ -9,7 +9,7 @@ channel: Email
 
 # Rendu HTML dans les e-mails de test
 
-Si votre [e-mail de test][37] s'arrête, nous vous recommandons de vérifier d'abord votre configuration HTML. Ensuite, vous pouvez vérifier :
+Si votre [e-mail de test][37] s'affiche, nous vous recommandons de vérifier d'abord votre configuration HTML. Ensuite, vous pouvez vérifier ce qui suit :
 
 * [Conflit d'extension](#check-conflicts)
 * [Email rendering](#check-rendering)
